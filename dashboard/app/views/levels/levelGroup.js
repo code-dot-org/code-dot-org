@@ -22,13 +22,13 @@ function initLevelGroup(
     }
   }
 
+  /**
+   * Construct an array of all the level results. When submitted it's something
+   * like this:
+   *
+   * [{"level_id":1977,"result":"0"},{"level_id":2007,"result":"3"},{"level_id":1939,"result":"2,1"}]
+   */
   window.getResult = function () {
-    // Construct an array of all the level results.
-    // When submitted it's something like this:
-    //
-    //   [{"level_id":1977,"result":"0"},{"level_id":2007,"result":"3"},{"level_id":1939,"result":"2,1"}]
-    //
-
     // Add any new results to the existing lastAttempt results.
     for (var i = 0; i < levelCount; i++) {
       var levelName = "level_" + i;
@@ -47,37 +47,21 @@ function initLevelGroup(
       lastAttempt.push({level_id: levelId, result: levelResult});
     }
 
-    var response = JSON.stringify(lastAttempt);
-
-
     var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
 
-    var result;
-    var submitted;
-
-    if (window.appOptions.level.submittable || forceSubmittable) {
-      result = true;
-      submitted = true;
-    } else {
-      result = true; // this.validateAnswers();
-      submitted = false;
-    }
-
     return {
-      "response": response,
+      "response": JSON.stringify(lastAttempt),
       "result": true,
       "errorType": null,
-      "submitted": submitted
+      "submitted": window.appOptions.level.submittable || forceSubmittable
     };
   };
 
   function nextPage() {
-    var newLocation = window.location.href.replace("/page/" + page, "/page/" + (page+1));
-    window.location.href = newLocation;
+    location.href = location.href.replace("/page/" + page, "/page/" + (page + 1));
   }
 
-  $(".nextPageButton").click($.proxy(function (event) {
-
+  $(".nextPageButton").click(function () {
     // Are we read-only?  This can be because we're a teacher OR because an answer
     // has been previously submitted.
     if (window.appOptions.readonlyWorkspace) {
@@ -107,11 +91,10 @@ function initLevelGroup(
         }
       });
     }
-  }, this));
+  });
 
   // Unsubmit button should only be available when this is a standalone level.
   $('.unsubmitButton').click(function () {
-
     var dialog = new window.Dialog({
       body:
         '<div class="modal-content no-modal-icon">' +
@@ -130,7 +113,7 @@ function initLevelGroup(
     dialogDiv.find('#continue-button').click(function () {
       $.post(window.appOptions.unsubmitUrl,
         {"_method": 'PUT', user_level: {submitted: false}},
-        function (data) {
+        function () {
           // Just reload so that the progress in the header is shown correctly.
           location.reload();
         }
@@ -141,5 +124,4 @@ function initLevelGroup(
       dialog.hide();
     });
   });
-
 }
