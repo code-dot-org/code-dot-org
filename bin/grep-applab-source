@@ -3,8 +3,11 @@ require_relative '../deployment'
 require_relative '../lib/cdo/aws/s3'
 require_relative '../shared/middleware/helpers/storage_id'
 
+MAX_THREADS = 50
+MAX_KEYS = 1000
+
 regex = ARGV[0].to_s.strip
-raise "usage: #{$0} regex" unless regex.length > 0
+raise "usage: #{$0} regex" unless !regex.empty?
 
 s3 = Aws::S3::Client.new
 marker = nil
@@ -13,22 +16,29 @@ base_dir = CDO.sources_s3_directory
 count = 0
 
 loop do
-  contents = s3.list_objects(bucket: bucket, prefix: base_dir, :max_keys=>1000, :marker=>marker).contents
-  break if contents.length == 0
+  contents = s3.list_objects(bucket: bucket, prefix: base_dir, :max_keys=>MAX_KEYS, :marker=>marker).contents
+  break if contents.empty?
   marker = contents.last.key
 
-  contents.each do |fileinfo|
-    _, app_id, channel_id, filename = %r{#{base_dir}/([^/]+)/([^/]+)/([^/]+)$}.match(fileinfo.key).to_a
-    if filename == 'main.json'
-      count += 1
-      body = s3.get_object(bucket: bucket, key: fileinfo.key)[:body].read
-      if body.include? regex
-#      source = JSON.parse(body)['source']
-#      if source =~ /#{regex}/i
-        channel = storage_encrypt_channel_id(app_id, channel_id)
-        puts "https://#{CDO.dashboard_hostname}/projects/applab/#{channel}/view"
+  contents.each_slice(MAX_THREADS) do |chunk|
+    threads = []
+    chunk.each do |fileinfo|
+      _, app_id, channel_id, filename = %r{#{base_dir}/([^/]+)/([^/]+)/([^/]+)$}.match(fileinfo.key).to_a
+      if filename == 'main.json'
+        count += 1
+        threads << Thread.new do
+          body = s3.get_object(bucket: bucket, key: fileinfo.key)[:body].read
+          if body.include? regex
+#         source = JSON.parse(body)['source']
+#         if source =~ /#{regex}/i
+            channel = storage_encrypt_channel_id(app_id, channel_id)
+            puts "https://#{CDO.dashboard_hostname}/projects/applab/#{channel}/view"
+#         end
+          end
+        end
       end
     end
+    threads.each &:join
   end
   puts "#{count} files scanned..."
 end
