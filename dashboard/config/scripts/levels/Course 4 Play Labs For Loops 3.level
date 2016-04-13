@@ -35,16 +35,15 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "never_autoplay_video": "false",
-    "maze_data": null
+    "never_autoplay_video": "false"
   },
   "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 3,
     "for_loops": 4,
     "variables": 3
-  },
-  "notes": ""
+  }
 }]]></config>
   <blocks>
     <start_blocks>

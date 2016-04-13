@@ -1,0 +1,28 @@
+name 'allthethings_embed_video'
+title 'Getting Started: A Look at Siri'
+
+
+markdown <<MARKDOWN
+Siri is a digital assistant built into Apple's iOS devices, including iPhones and iPads. Watch the advertisement for Siri, below. 
+
+<iframe width="637px" height="375px" src="https://www.youtube.com/embed/8ciagGASro0" frameborder="0" allowfullscreen></iframe>
+
+<br/>
+__Reflect on the prompts below:__ 
+
+- What types of information does Siri respond to in the video?
+- What do you think Siri is paying attention to in order to create these answers?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary but should include some of the following.
+
+Siri responds to different with different kinds of information, based on what the user says or asks. Some of the topics Siri responds to regard:
+
+- Messages (reading and sending)
+- Music
+- Traffic, maps
+- Weather
+- Conversions/calculations
+- Timers
+MARKDOWN
