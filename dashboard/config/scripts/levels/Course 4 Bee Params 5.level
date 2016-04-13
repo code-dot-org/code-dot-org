@@ -44,7 +44,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false" y="0">
+        <block type="when_run" deletable="false" movable="false" uservisible="false" y="14">
           <next>
             <block type="variables_set" inline="false">
               <title name="VAR">left</title>
@@ -112,10 +112,6 @@
           <block type="variables_get">
             <title name="VAR">right</title>
           </block>
-        </category>
-        <category name="NEW BLOCKS">
-          <block type="procedures_callnoreturn" inline="false"/>
-          <block type="parameters_get"/>
         </category>
       </xml>
     </toolbox_blocks>
