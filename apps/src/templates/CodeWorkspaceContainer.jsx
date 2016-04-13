@@ -8,6 +8,7 @@
 var Radium = require('radium');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var utils = require('../utils');
+var commonStyles = require('../commonStyles');
 
 var styles = {
   main: {
@@ -22,9 +23,6 @@ var styles = {
     right: undefined,
     left: 0,
     marginRight: 15
-  },
-  hidden: {
-    display: 'none'
   },
   codeWorkspace: {
     position: 'absolute',
@@ -78,7 +76,7 @@ var CodeWorkspaceContainer = React.createClass({
       this.props.noVisualization && styles.noVisualization,
       this.props.isRtl && styles.mainRtl,
       this.props.noVisualization && this.props.isRtl && styles.noVisualizationRtl,
-      this.props.hidden && styles.hidden
+      this.props.hidden && commonStyles.hidden
     ];
 
     return (
