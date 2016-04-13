@@ -46,7 +46,12 @@
     "never_autoplay_video": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 1,
+    "variables": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

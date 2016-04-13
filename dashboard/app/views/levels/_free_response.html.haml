@@ -1,0 +1,16 @@
+:javascript
+  function getResult() {
+    return {
+      response: $('.response').val(),
+      result: true
+    };
+  }
+
+.free-response
+  %div= render(inline: @level.markdown_instructions, type: :md)
+
+  - height = @level.height || '80'
+  %textarea.response{placeholder: @level.placeholder || 'Enter your answer here', style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}= @last_attempt
+
+= render partial: 'levels/dialog', locals: {app: 'free_response', data: @level.properties}
+= render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => @level.solution}}

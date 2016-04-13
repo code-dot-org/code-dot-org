@@ -30,7 +30,11 @@
     "markdown_instructions": "Let's take this to another level! \r\n\r\nUse loops to get me to the sunflower with the fewest loops possible."
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 5
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

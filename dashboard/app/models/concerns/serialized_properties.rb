@@ -14,6 +14,7 @@ module SerializedProperties
     init_properties
     attributes = new_attributes.stringify_keys
     new_properties = attributes.delete('properties').try(:stringify_keys!)
+
     super(attributes)
     # If the properties hash is explicitly assigned then merge its keys with existing properties
     # instead of replacing the entire hash
@@ -38,6 +39,10 @@ module SerializedProperties
 
     def serialized_attrs(*args)
       (serialized_properties[self.to_s] ||= []).concat args
+    end
+
+    def permitted_params
+      serialized_properties.values.flatten.map{ |s| s.to_s.gsub(ENCRYPTED_PROPERTY_REGEX, '') }
     end
 
     def define_methods_for_property(property_name)
