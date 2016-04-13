@@ -1,6 +1,4 @@
 module ConceptDifficulties
-  extend ActiveSupport::Concern
-
   # The set of concepts for which proficiency is computed.
   # WARNING: This list is tied to DB columns. DO NOT EDIT without a DB
   # migration.
