@@ -93,11 +93,14 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
   dropletUtils.getAllAvailableDropletBlocks(
     this.dropletTooltipManager.dropletConfig,
     this.dropletTooltipManager.codeFunctions,
-    this.autocompletePaletteApisOnly,
-    dropletUtils.IGNORE_NO_AUTOCOMPLETE_BLOCKS).forEach(function (block) {
+    this.autocompletePaletteApisOnly).forEach(function (block) {
       if (!block.dropdown ||
           (block.func !== paramInfo.funcName && block.func !== paramInfo.fullFuncName)) {
         // Not the right block or no dropdown specified
+        return;
+      }
+      if (block.noAutocomplete) {
+        // Block doesn't want autocomplete, so ignore
         return;
       }
       if (this.dropletTooltipManager.autocompletePaletteApisOnly &&
