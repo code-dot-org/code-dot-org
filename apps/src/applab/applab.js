@@ -889,6 +889,7 @@ Applab.init = function (config) {
   // Push initial level properties into the Redux store
   Applab.reduxStore.dispatch(setInitialLevelProps({
     assetUrl: studioApp.assetUrl,
+    channelId: config.channel,
     isDesignModeHidden: !!config.level.hideDesignMode,
     isEmbedView: !!config.embed,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,

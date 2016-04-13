@@ -1,5 +1,3 @@
-/* global Applab */
-
 /** @file Row of controls above the visualization. */
 
 var constants = require('./constants');
@@ -28,7 +26,7 @@ var PlaySpaceHeader = React.createClass({
 
   handleViewData: function () {
     window.open(
-      '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + Applab.channelId,
+      '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + this.props.channelId,
       '_blank');
   },
 
@@ -87,6 +85,7 @@ var PlaySpaceHeader = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
+    channelId: state.level.channelId,
     isDesignModeHidden: state.level.isDesignModeHidden,
     isShareView: state.level.isShareView,
     isViewDataButtonHidden: state.level.isViewDataButtonHidden,
