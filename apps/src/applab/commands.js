@@ -1382,6 +1382,10 @@ applabCommands.onHttpRequestEvent = function (opts) {
   }
 };
 
+/**
+ * Log the hostname and url to New Relic as a StartWebRequest event.
+ * @param {string} url
+ */
 function logWebRequest(url) {
   var a = document.createElement('a');
   a.href = url;
