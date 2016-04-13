@@ -34,6 +34,12 @@
     "video_key": "C4_variables_playlab",
     "never_autoplay_video": "true",
     "fast_get_nectar_animation": "true"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 5,
+    "variables": 5
   }
 }]]></config>
   <blocks>

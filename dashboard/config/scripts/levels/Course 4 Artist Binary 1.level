@@ -28,7 +28,14 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "images": "[{\"filename\":\"binary_grid.svg\",\"position\":[0,0]}]"
+    "images": "[{\"filename\":\"Halloween.svg\",\"position\":[0,0]}]",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1
   }
 }]]></config>
   <blocks>
@@ -236,24 +243,24 @@
           <mutation/>
           <title name="NAME">draw bit</title>
           <statement name="STACK">
-            <block type="draw_colour" inline="true" id="draw-color">
+            <block type="draw_colour" inline="true" uservisible="false" id="draw-color">
               <value name="COLOUR">
-                <block type="colour_picker">
+                <block type="colour_picker" uservisible="false">
                   <title name="COLOUR">#ffffff</title>
                 </block>
               </value>
               <next>
-                <block type="draw_width_inline">
+                <block type="draw_width_inline" uservisible="false">
                   <title name="WIDTH">25</title>
                   <next>
-                    <block type="controls_repeat">
+                    <block type="controls_repeat" uservisible="false">
                       <title name="TIMES">4</title>
                       <statement name="DO">
-                        <block type="draw_move_by_constant">
+                        <block type="draw_move_by_constant" uservisible="false">
                           <title name="DIR">moveForward</title>
                           <title name="VALUE">25</title>
                           <next>
-                            <block type="draw_turn_by_constant">
+                            <block type="draw_turn_by_constant" uservisible="false">
                               <title name="DIR">turnRight</title>
                               <title name="VALUE">90</title>
                             </block>
@@ -281,6 +288,19 @@
         </block>
         <block type="text">
           <title name="TEXT">0</title>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#000000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_blend">
+      </block>
+          </value>
         </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
@@ -327,24 +347,24 @@
           <mutation/>
           <title name="NAME">draw bit</title>
           <statement name="STACK">
-            <block type="draw_colour" inline="true" id="draw-color">
+            <block type="draw_colour" inline="true" uservisible="false" id="draw-color">
               <value name="COLOUR">
-                <block type="colour_picker">
+                <block type="colour_picker" uservisible="false">
                   <title name="COLOUR">#ffffff</title>
                 </block>
               </value>
               <next>
-                <block type="draw_width_inline">
+                <block type="draw_width_inline" uservisible="false">
                   <title name="WIDTH">25</title>
                   <next>
-                    <block type="controls_repeat">
+                    <block type="controls_repeat" uservisible="false">
                       <title name="TIMES">4</title>
                       <statement name="DO">
-                        <block type="draw_move_by_constant">
+                        <block type="draw_move_by_constant" uservisible="false">
                           <title name="DIR">moveForward</title>
                           <title name="VALUE">25</title>
                           <next>
-                            <block type="draw_turn_by_constant">
+                            <block type="draw_turn_by_constant" uservisible="false">
                               <title name="DIR">turnRight</title>
                               <title name="VALUE">90</title>
                             </block>
@@ -527,5 +547,10 @@
         </block>
       </xml>
     </solution_blocks>
+    <predraw_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </predraw_blocks>
   </blocks>
 </Artist>
