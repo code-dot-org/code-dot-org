@@ -800,6 +800,38 @@ SQL
     end
   end
 
+  # If appropriate, increases the level counts for the concept-difficulties
+  # associated with the completed level.
+  def User.track_proficiency(user_id, script_id, level_id)
+    level_concept_difficulty = LevelConceptDifficulty.where(level_id: level_id).first
+    if !level_concept_difficulty
+      return
+    end
+
+    # Exit early if a hint was used, as no proficiency is gained in this case.
+    hint_used = HintViewRequest.
+      where(user_id: user_id, script_id: script_id, level_id: level_id).
+      any?
+    if hint_used
+      return
+    end
+
+    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      user_proficiency = UserProficiency.where(user_id: user_id).first_or_create!
+      user_proficiency.last_progress_at = Time.now
+
+      ConceptDifficulties::CONCEPTS.each do |concept|
+        if level_concept_difficulty.send(concept)
+          # TODO(asher): If possible, simplify this to use direct assignment via
+          # incrementing rather than going through setting attributes.
+          user_proficiency.attributes = {"#{concept}_d#{level_concept_difficulty.send(concept)}_count" => user_proficiency.send("#{concept}_d#{level_concept_difficulty.send(concept)}_count") + 1}
+        end
+      end
+
+      user_proficiency.save!
+    end
+  end
+
   # returns whether a new level has been completed and asynchronously enqueues an operation
   # to update the level progress.
   def track_level_progress_async(script_level, new_result, submitted)
@@ -829,16 +861,21 @@ SQL
   # The synchronous handler for the track_level_progress helper.
   def User.track_level_progress_sync(user_id, level_id, script_id, new_result, submitted)
     new_level_completed = false
+    new_level_perfected = false
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_level = UserLevel.where(user_id: user_id,
-                                   level_id: level_id,
-                                   script_id: script_id).first_or_create!
+      user_level = UserLevel.
+        where(user_id: user_id, level_id: level_id, script_id: script_id).
+        first_or_create!
 
-      new_level_completed = true if !user_level.passing? && Activity.passing?(new_result) # user_level is the old result
+      new_level_completed = true if !user_level.passing? &&
+        Activity.passing?(new_result)
+      new_level_perfected = true if !user_level.perfect? &&
+        Activity.perfect?(new_result)
 
-      # update the user_level with the new attempt
+      # Update user_level with the new attempt.
       user_level.attempts += 1 unless user_level.best?
-      user_level.best_result = new_result if new_result > (user_level.best_result || -1)
+      user_level.best_result = new_result if user_level.best_result.nil? ||
+        new_result > user_level.best_result
       user_level.submitted = submitted
 
       user_level.save!
@@ -846,6 +883,10 @@ SQL
 
     if new_level_completed && script_id
       User.track_script_progress(user_id, script_id)
+    end
+
+    if new_level_perfected
+      User.track_proficiency(user_id, script_id, level_id)
     end
   end
 

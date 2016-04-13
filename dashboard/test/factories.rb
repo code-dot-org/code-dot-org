@@ -408,6 +408,17 @@ FactoryGirl.define do
     properties {{survey2016_foodstamps: "3"}}
   end
 
+  factory :hint_view_request do
+    user { create :student }
+    script { create :script }
+    level { create :level }
+  end
+
+  factory :level_concept_difficulty do
+    level { create :level }
+    repeat_loops 2
+  end
+
   factory :user_proficiency do
     user { create :student }
     sequencing_d1_count 1
