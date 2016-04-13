@@ -180,7 +180,10 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "project_template_level_name": "U3 - Simple Drawing - Rings Template"
+    "project_template_level_name": "U3 - Simple Drawing - Rings Template",
+    "instructions": "Do this",
+    "markdown_instructions": "# Draw A Rainbow\r\n\r\nWe are going to work on drawing a rainbow! \r\n\r\nIn order to do this we are going to use a new shape called ellipse\r\n\r\nEllipse is just a fancy name for oval\r\n\r\nParameters for ellipse are very similar to rectangle except x and y are for the center of the ellipse instead of left corner\r\n\r\nWe are going to draw our rainbow by hiding half the ellipse under a rectangle sneaky sneaky\r\n\r\n# Do This\r\n* Add 7 ellipses all with the same x and y position since they all have the same center\r\n* Start with the width of the first ellipse being 400, 400 and then go down by 50 in both width and height to create ellipses for each band of the rainbow\r\n* Add a rectanlge for grass\r\n\r\nend result :\r\n\r\n<img src=\"https://images.code.org/028794b8d825d5fa6130582e4271abce-image-1460574974541.15.00 PM.png\" width=200>",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"element_id\": \"#droplet_palette_block_ellipse\",\r\n  \"callout_text\": \"Use this block to draw ovals and circles\",\r\n  \"qtip_config\": {\r\n   \t\"position\": {\r\n      \"my\": \"top right\",\r\n      \"at\": \"bottom left\",\r\n      \"adjust\": {\r\n       \"x\": 0,\r\n       \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
   },
   "published": true,
   "notes": "",
