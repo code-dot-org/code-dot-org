@@ -39,6 +39,12 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "min_workspace_height": "800"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_until_while": 1,
+    "functions_with_params": 3
   }
 }]]></config>
   <blocks>

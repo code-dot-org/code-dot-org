@@ -33,6 +33,12 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 4,
+    "functions": 3
   }
 }]]></config>
   <blocks>

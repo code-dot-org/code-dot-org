@@ -673,6 +673,12 @@ en:
       PDAlg 3BGo: {}
       PDAlg 3BPlanning: {}
       PDAlg 3BWelcome: {}
+      PDAlg 3CAbout: {}
+      PDAlg 3CGathering: {}
+      PDAlg 3CGo: {}
+      PDAlg 3CPlanning: {}
+      PDAlg 3CShare Forum: {}
+      PDAlg 3CSharing: {}
       PDAlg 3CWelcome: {}
       PDAlg 4-7 Big Game: {}
       PDAlg 4-7 Contracts: {}
@@ -968,6 +974,7 @@ en:
       U3 - Conditionals - Translating Flowcharts - Chained: {}
       U3 - Conditionals - Translating Flowcharts - Else: {}
       U3 - Conditionals - Translating Flowcharts - If Statement: {}
+      U3 - Simple Drawing - Plan Personal Drawing: {}
       U3 - Simulation - Intro: {}
       U3 Simulation Updating Hypotheses: {}
       U3 Simulations Hypotheses Reflections: {}
@@ -5245,6 +5252,8 @@ en:
         'Free Response: Short description here': 'Free Response: Short description here'
       U4LXX Free Response:
         'Free Response: Short description here': 'Free Response: Short description here'
+      allthethings_embed_video:
+        'Getting Started: A Look at Siri': 'Getting Started: A Look at Siri'
       text match test:
         "(9-3)+(4*7)": "(9-3)+(4*7)"
         "(9-3)+4*7": "(9-3)+4*7"

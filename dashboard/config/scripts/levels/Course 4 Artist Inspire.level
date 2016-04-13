@@ -33,7 +33,12 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"After you complete one square, try jumping forward half of it's length before turning and making another.\",\r\n  \"hint_id\": \"Course_4_Artist_Inspire_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Each square and jump is repeated four times (using a left turn inbetween) to make a full pinwheel-like unit.\",\r\n  \"hint_id\": \"Course_4_Artist_Inspire_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Each pinwheel is also repeated four times, with a right turn of **360/sides**.\",\r\n  \"hint_id\": \"Course_4_Artist_Inspire_c\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"**Solution:**\\n![Blocks for solution](https://images.code.org/1865aaf1b4a8ba84a5e8a7408401092d-image-1440060930335.43.39.png)\",\r\n  \"hint_id\": \"Course_4_Artist_Inspire_d\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "variables": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>
