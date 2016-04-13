@@ -18,7 +18,6 @@ var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var AppLabView = require('./AppLabView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var Visualization = require('./Visualization');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
