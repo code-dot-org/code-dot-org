@@ -32,6 +32,13 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_until_while": 3,
+    "variables": 3,
+    "functions_with_params": 4
   }
 }]]></config>
   <blocks>
