@@ -6,20 +6,8 @@
  * (2) Add a query param, i.e. http://foo.com?experimentName=true or
  *     http://foo.com?experimentName=false
  * The latter approach ends up toggling the localStorage state.
- * As long as you check isEnabled once for some experiment, data for all
- * experiments will be loaded from localStorage and the query params will be
- * parsed.
- * To support a new experiment, just add it as a key in experimentList
  */
 var experiments = module.exports;
-
-// List of experiements, and their current enabled/disabled state
-var experimentList = {
-  topInstructions: false,
-  runModeIndicators: false
-};
-
-var performedLoad = false;
 
 /**
  * Checks whether provided experiment is enabled or not
@@ -27,52 +15,29 @@ var performedLoad = false;
  * @returns {bool}
  */
 experiments.isEnabled = function (key) {
-  if (!performedLoad) {
-    loadFromLocalStorage();
-    processQueryParams(window.location.search);
-    performedLoad = true;
+  var enabled;
+  var queryString = this.__TestInterface__.queryString ||
+    window.location.search;
+
+  // check query string, and update localStorage if necessary
+  var regex = new RegExp(key + '=(true|false)');
+  var match = regex.exec(queryString);
+  if (match) {
+    enabled = match[1] === 'true';
+    if (enabled) {
+      localStorage.setItem('experiments-' + key, 'true');
+    } else {
+      localStorage.removeItem('experiments-' + key);
+    }
+  } else {
+    // key no in query string, go look at local storage
+    enabled = (localStorage.getItem('experiments-' + key) === 'true');
   }
-  return experimentList[key] === true;
+
+  return enabled;
 };
 
-/**
- * Looks at query params and sees if we need to toggle the state of any of our
- * experiments
- */
-function processQueryParams(queryString) {
-  Object.keys(experimentList).forEach(function (key) {
-    var regex = new RegExp(key + '=(true|false)');
-    var match = regex.exec(queryString);
-    if (match) {
-      var val = match[1] === 'true';
-      if (val) {
-        localStorage.setItem('experiments-' + key, val);
-      } else {
-        localStorage.removeItem('experiments-' + key);
-      }
-      experimentList[key] = val;
-    }
-  });
-}
-
-/**
- * Checks local storage to see what experiments we have enabled
- */
-function loadFromLocalStorage() {
-  Object.keys(experimentList).forEach(function (key) {
-    if (localStorage.getItem('experiments-' + key) === "true") {
-      experimentList[key] = true;
-    }
-  });
-}
-
+// can be set to fake window.location.search
 experiments.__TestInterface__ = {
-  processQueryParams: processQueryParams,
-  loadFromLocalStorage: loadFromLocalStorage,
-  // reset all of our keys to false
-  reset: function () {
-    Object.keys(experimentList).forEach(function (key) {
-      experimentList[key] = false;
-    });
-  }
+  queryString: undefined
 };
