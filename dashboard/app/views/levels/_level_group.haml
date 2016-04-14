@@ -24,13 +24,10 @@
     %h2= t('heading_x_of_y', heading: data["title"], x: page.page_number, y: @pages.length)
     %br/
 
+  - parsed = JSON.parse(@last_attempt || '{}')
   - page.levels.each_with_index do |level, index|
 
-    - if @last_attempt
-      - last_attempt_entry = JSON.parse(@last_attempt).find{|item| item["level_id"]==level.id}
-      - last_attempt = last_attempt_entry["result"] if last_attempt_entry
-    - else
-      - last_attempt = ""
+    - last_attempt = parsed[level.id.to_s].try(:[], 'result')
     - level_class = level.class.to_s.underscore
 
     .level-group-number= "#{page.offset + index + 1}. "
@@ -67,7 +64,7 @@
     var app = "#{app}";
     var level = appOptions.levelPosition;
 
-    var lastAttempt = #{@last_attempt || []};
+    var lastAttempt = #{@last_attempt || {}};
 
     $(document).ready(function() {
       initLevelGroup(
