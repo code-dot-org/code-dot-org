@@ -176,7 +176,6 @@ standardConfig.categories = {
  *  by the primary dropletConfig if there is overlap between the two.
  * @param {Object} options
  * @param {boolean} options.paletteOnly ignore blocks not in codeFunctions palette
- * @param {boolean} options.ignoreNoAutocompleteBlocks ignore blocks with noAutocomplete property
  * @param {boolean} options.ignoreDocFunc don't include based on block.docFunc
  * @returns {Array<DropletBlock>}
  */
@@ -210,15 +209,7 @@ function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, opt
   });
 
   return blocks.filter(function (block) {
-    var cfBlockOverrides = codeFunctions[block.func] || {};
-    var blockNoAutocomplete = utils.valueOr(cfBlockOverrides.noAutocomplete,
-        block.noAutocomplete);
-    var passedAutocompleteCheck = !options.ignoreNoAutocompleteBlocks ||
-        !blockNoAutocomplete;
-    var passedPaletteOnlyCheck = !options.paletteOnly ||
-        block.func in codeFunctions ||
-        block.func in docFunctions;
-    return passedAutocompleteCheck && passedPaletteOnlyCheck;
+    return !options.paletteOnly || block.func in codeFunctions || block.func in docFunctions;
   }).map(function (block) {
     // We found this particular block, now override the defaults with extend
     return $.extend({}, block, codeFunctions[block.func]);
@@ -574,22 +565,16 @@ exports.generateDropletModeOptions = function (config) {
   return modeOptions;
 };
 
-exports.IGNORE_NO_AUTOCOMPLETE_BLOCKS = true;
-
 /**
  * Returns a set of all blocks
  * @param {DropletConfig|null} dropletConfig custom configuration, may be null
  * @param {codeFunctions|null} codeFunctions with block overrides, may be null
- * @param {boolean} paletteOnly filter to only those blocks that are in codeFunctions
+ * @param paletteOnly boolean: filter to only those blocks that are in codeFunctions
  *   palette, or who share documentation (via docFunc) with other blocks that are
- * @param {boolean} ignoreNoAutocompleteBlocks ignore blocks with noAutocomplete property
  * @returns {DropletBlock[]} a list of all available Droplet blocks,
  *      including the given config's blocks
  */
-exports.getAllAvailableDropletBlocks = function (dropletConfig,
-    codeFunctions,
-    paletteOnly,
-    ignoreNoAutocompleteBlocks) {
+exports.getAllAvailableDropletBlocks = function (dropletConfig, codeFunctions, paletteOnly) {
   var hasConfiguredBlocks = dropletConfig && dropletConfig.blocks;
   var configuredBlocks = hasConfiguredBlocks ? dropletConfig.blocks : [];
   if (codeFunctions && hasConfiguredBlocks) {
@@ -597,10 +582,7 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig,
         codeFunctions,
         dropletConfig,
         null,
-        {
-          paletteOnly: paletteOnly,
-          ignoreNoAutocompleteBlocks: ignoreNoAutocompleteBlocks
-        }
+        { paletteOnly: paletteOnly }
     );
   }
   return exports.dropletGlobalConfigBlocks

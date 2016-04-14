@@ -27,6 +27,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3
   }
 }]]></config>
   <blocks>

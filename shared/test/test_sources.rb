@@ -12,7 +12,8 @@ class SourcesTest < Minitest::Test
   # Delete all versions of the specified file from S3.
   def delete_all_versions(bucket, key)
     s3 = Aws::S3::Client.new
-    objects = s3.list_object_versions(bucket: bucket, prefix: key).versions.map do |version|
+    response = s3.list_object_versions(bucket: bucket, prefix: key)
+    objects = response.versions.concat(response.delete_markers).map do |version|
       {
         key: key,
         version_id: version.version_id

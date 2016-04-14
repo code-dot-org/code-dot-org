@@ -36,7 +36,11 @@
     "markdown_instructions": "Ooh, this one stings!\r\n\r\nFix the error(s) to collect all of the nectar."
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

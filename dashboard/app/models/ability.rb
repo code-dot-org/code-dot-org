@@ -70,7 +70,9 @@ class Ability
         can :manage, UserLevel do |user_level|
           !user.students.where(id: user_level.user_id).empty?
         end
-        can :read, Plc::UserCourseEnrollment
+        can :read, Plc::UserCourseEnrollment do |enrollment|
+          enrollment.user == user
+        end
         can :manage, Pd::Enrollment, teacher_id: user.id
       end
 
@@ -96,6 +98,10 @@ class Ability
           cohort.districts.any? do |district|
             district.contact_id == user.id
           end
+        end
+        can :group_view, Plc::UserCourseEnrollment
+        can :manager_view, Plc::UserCourseEnrollment do |enrollment|
+          DistrictsUsers.exists?(user: enrollment.user, district: District.where(contact: user.id).pluck(:id))
         end
       end
 

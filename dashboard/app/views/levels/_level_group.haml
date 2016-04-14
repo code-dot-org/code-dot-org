@@ -28,16 +28,20 @@
       - last_attempt = ""
     - level_class = level.class.to_s.underscore
 
-    - if level_class == "multi"
-      -# For students (or teachers doing PD), mark all answers incorrect, so we don't give anything away.
-      - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
-        - level.properties['answers'].each { |answer| answer['correct'] = false }
-      = render partial: 'levels/single_multi', locals: {index: index, number: page.offset + index + 1, standalone: false, level: level, last_attempt: last_attempt, tight_layout: true }
-    - elsif level_class == "text_match"
-      -# For students (or teachers doing PD), clear out all answers.
-      - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
-        - level.properties['answers'] = nil
-      = render partial: 'levels/single_text_match', locals: {index: index, number: page.offset + index + 1, standalone: false, level: level, last_attempt: last_attempt }
+    .level-group-number= "#{page.offset + index + 1}. "
+    .level-group-content
+      - if level_class == "multi"
+        -# For students (or teachers doing PD), mark all answers incorrect, so we don't give anything away.
+        - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
+          - level.properties['answers'].each { |answer| answer['correct'] = false }
+        = render partial: 'levels/single_multi', locals: {index: index, standalone: false, level: level, last_attempt: last_attempt, tight_layout: true }
+      - elsif level_class == "text_match"
+        -# For students (or teachers doing PD), clear out all answers.
+        - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
+          - level.properties['answers'] = nil
+        = render partial: 'levels/single_text_match', locals: {index: index, standalone: false, level: level, last_attempt: last_attempt }
+      - elsif level_class == "free_response"
+        = render partial: 'levels/free_response', locals: {index: index, level: level, last_attempt: last_attempt}
 
   - unless @script_level.nil?
     - if page.page_number < @total_page_count
