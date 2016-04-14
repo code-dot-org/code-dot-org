@@ -1,5 +1,5 @@
 - level ||= @level
-- last_attempt ||= @last_attempt
+- last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
 - index ||= nil
 
 - if index # If an index was provided we're inside a LevelGroup.
