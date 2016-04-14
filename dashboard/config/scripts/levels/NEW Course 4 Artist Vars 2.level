@@ -34,7 +34,12 @@
     "never_autoplay_video": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "variables": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -96,11 +101,13 @@
         <block type="math_number">
           <title name="NUM">???</title>
         </block>
-        <block type="variables_set" inline="false"/>
+        <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+        </block>
+        <block type="variables_get">
+          <title name="VAR">length</title>
+        </block>
         <block type="controls_repeat_ext" inline="true"/>
-        <block type="draw_move" inline="true"/>
-        <block type="variables_get"/>
-        <block type="draw_turn" inline="true"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

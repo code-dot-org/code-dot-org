@@ -1,3 +1,4 @@
 %p This is a Writing Assignment Task
 
-= simple_format(@task.assignment_description) || 'Normally the description would go here but there is none'
+
+= ActionView::Base.new.render(inline: @task.assignment_description || 'There is no assignment description', type: :md)

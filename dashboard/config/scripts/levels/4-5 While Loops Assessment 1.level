@@ -27,6 +27,12 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 4,
+    "repeat_until_while": 2
   }
 }]]></config>
   <blocks>

@@ -34,7 +34,12 @@
     "examples_required": "false",
     "fast_get_nectar_animation": "false"
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 2,
+    "functions": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -126,5 +126,7 @@ module Dashboard
       config.cache_store = :memory_store, { size: MAX_CACHED_BYTES }
     end
 
+    # turn off ActionMailer logging to avoid logging email addresses
+    ActionMailer::Base.logger = nil
   end
 end

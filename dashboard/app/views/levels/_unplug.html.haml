@@ -81,4 +81,4 @@
   :javascript
     var videoOptions = #{video.summarize(false).to_json};
     var videoHeight = #{page_width} / (16 / 9);
-    createVideoWithFallback($('.video-container'), videoOptions, #{page_width}, videoHeight);
+    window.dashboard.videos.createVideoWithFallback($('.video-container'), videoOptions, #{page_width}, videoHeight);

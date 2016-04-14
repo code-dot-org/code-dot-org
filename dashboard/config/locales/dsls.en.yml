@@ -86,6 +86,7 @@ en:
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
+      CSD U3 Variables Reassign Predict No Response: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -672,6 +673,12 @@ en:
       PDAlg 3BGo: {}
       PDAlg 3BPlanning: {}
       PDAlg 3BWelcome: {}
+      PDAlg 3CAbout: {}
+      PDAlg 3CGathering: {}
+      PDAlg 3CGo: {}
+      PDAlg 3CPlanning: {}
+      PDAlg 3CShare Forum: {}
+      PDAlg 3CSharing: {}
       PDAlg 3CWelcome: {}
       PDAlg 4-7 Big Game: {}
       PDAlg 4-7 Contracts: {}
@@ -967,6 +974,7 @@ en:
       U3 - Conditionals - Translating Flowcharts - Chained: {}
       U3 - Conditionals - Translating Flowcharts - Else: {}
       U3 - Conditionals - Translating Flowcharts - If Statement: {}
+      U3 - Simple Drawing - Plan Personal Drawing: {}
       U3 - Simulation - Intro: {}
       U3 Simulation Updating Hypotheses: {}
       U3 Simulations Hypotheses Reflections: {}
@@ -2650,6 +2658,11 @@ en:
         Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
         There are two answers here that are correct.  Looks like you can choose either one and be right.: There are two answers here that are correct.  Looks like you can choose either one and be right.
         What is 2 + 2?: What is 2 + 2?
+      CSD U3 Variables Reassign Predict Multi:
+        A 10 will be displayed. Once a variable is full you cannot put another value in it: A 10 will be displayed. Once a variable is full you cannot put another value in it
+        A 20 will be displayed. New values replace old values in a variable: A 20 will be displayed. New values replace old values in a variable
+        A 30 will be displayed. Variables grow as you add more to them: A 30 will be displayed. Variables grow as you add more to them
+        An error will be generated.: An error will be generated.
       'CSP U4L04 Assessment 1 ':
         Question: Question
         right answer: right answer
@@ -4626,6 +4639,7 @@ en:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
+      CSD U3 Variables Reassign Predict: {}
       'CSP U4L04 Assessment 2 ':
         Enter answer here: Enter answer here
         Enter prompt here: Enter prompt here
@@ -5238,6 +5252,8 @@ en:
         'Free Response: Short description here': 'Free Response: Short description here'
       U4LXX Free Response:
         'Free Response: Short description here': 'Free Response: Short description here'
+      allthethings_embed_video:
+        'Getting Started: A Look at Siri': 'Getting Started: A Look at Siri'
       text match test:
         "(9-3)+(4*7)": "(9-3)+(4*7)"
         "(9-3)+4*7": "(9-3)+4*7"

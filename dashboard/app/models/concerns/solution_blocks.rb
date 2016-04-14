@@ -41,13 +41,37 @@ module SolutionBlocks
       stripped_solution_block == strip_toolbox_block(toolbox_block)
   end
 
+  def get_solution_blocks(create_for_toolbox=true)
+    solution = Nokogiri::XML(properties['solution_blocks'])
+
+    # flatten
+    solution_blocks = solution.xpath('//block').to_a
+
+    if create_for_toolbox
+      # strip out blocks that shouldn't be in a toolbox
+      solution_blocks.reject! { |block|
+        IGNORED_SOLUTION_BLOCK_ATTRS.any? {|key, value| block.attr(key) == value}
+      }
+    end
+
+    # sanitize
+    solution_blocks.map!(&method(:strip_block))
+
+    if create_for_toolbox
+      # uniqueify and sort
+      solution_blocks = solution_blocks.to_set.to_a.sort
+    end
+
+    solution_blocks
+  end
+
   # Add blocks to the toolbox that appear in the solution, but aren't already
   # in the toolbox
   def add_missing_toolbox_blocks
     toolbox = Nokogiri::XML(properties['toolbox_blocks'])
     toolbox_blocks = toolbox.xpath('//block')
     Nokogiri::XML(properties['solution_blocks']).xpath('//block').each do |block|
-      next if IGNORED_SOLUTION_BLOCK_ATTRS.any? {|kvpair| block.attr(kvpair[0]) == kvpair[1]}
+      next if IGNORED_SOLUTION_BLOCK_ATTRS.any? {|key, value| block.attr(key) == value}
 
       next if toolbox_blocks.any? do |toolbox_block|
         blocks_match? toolbox_block, block
