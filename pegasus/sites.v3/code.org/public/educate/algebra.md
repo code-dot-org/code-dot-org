@@ -13,10 +13,10 @@ Code.org has partnered with [Bootstrap](http://www.BootstrapWorld.org) to develo
 <img style="float: right; margin-left: 10px; width: 200px" src="algebra/img/csina.png"/>
 
 ### CS in Algebra Course A
-The first 10 hour course provides students with the fundamental skills and knowledge to begin using computer programming as a tool to learn about and develop algebraic functions. Students will be introduced to a graphical programming language designed for Algebra instruction, through which they will gain a deeper understanding of the order of operations, create images with algebraic expressions, and learn a technique for creating functions called the Design Recipe. By the end of Course A students will have the tools necessary to turn word problems from their own Algebra class into functions that can be used as mini apps.
+The first 10 hour course provides students with the foundational skills and knowledge to begin using computer programming as a tool to learn about and develop algebraic functions. Students will be introduced to a graphical programming language designed for Algebra instruction, through which they will gain a deeper understanding of the order of operations, create images with algebraic expressions, and learn a technique for creating functions called the Design Recipe. By the end of Course A students will have the tools necessary to turn word problems from their own Algebra class into functions that can be used as mini apps.
 
 ### CS in Algebra Course B
-For classes that wish to go further, the second 10 hour course builds on the skills students developed in Course A through the development of a simple video game. Students will explore more advanced topics such as booleans, conditionals, and collision detection with the Pythagorean Theorem, using these concepts to build supporting functions that will eventually drive the logic in their culminating game.
+For classes that wish to go further, the second 10 hour course builds on the skills students developed in Course A through the development of a simple video game. Students will delve deeper into the intersection of Math and CS by studying topics such as boolean logic, piecewise functions, and collision detection with the Pythagorean Theorem, using these concepts to build supporting functions that will eventually drive the logic in their culminating game.
 
 ## Aligned to Standards
 Both CS in Algebra courses are aligned to Common Core Standards for Mathematics, making it possible to integrate our curriculum into the classroom smoothly. CS in Algebra is also a model implementation of Common Core Standards for Mathematical Practice, offering explicit pedagogical recommendation across all eight practice standards. Our curriculum also satisfies several of the CSTA (Computer Science Teacher's Association) standards across levels 1 (grades K-6) and 2 (grades 6-9). For more information, you can view our [complete standards alignment](/curriculum/docs/algebra/standards).
@@ -25,6 +25,113 @@ Both CS in Algebra courses are aligned to Common Core Standards for Mathematics,
 ## How do I start teaching CS in Algebra?
 
 We provide a Professional Learning Program that prepares teachers to implement Course A. Read more about the program [here](/educate/professional-learning/cs-in-algebra).
+
+## What's the difference between CS in Algebra and Bootstrap?
+
+Code.org’s CS in Algebra is an adaption of [Bootstrap’s curriculum](https://www.bootstrapworld.org). The primary goal of our modification was to merge Bootstrap’s content and pedagogy with our block-based language, online learning system, and scaffolding teaching paradigm. Additionally we have divided the original content from Bootstrap into two separate courses to simplify implementation for teachers who are concerned that they don’t have enough time for the full 20 hours. And, starting in 2016-2017, Code.org's in person professional development will focus on Course A. For schools that want to invest more in CS, Bootstrap offers a deeper curriculum that gives classrooms the flexibility of going beyond 20 hours and a longer in person professional development workshop covering 20 hours of material.  Depending on the needs of your school or classroom, each curriculum offers a different mix of pedagogy, content and curricular design:
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th width="45%"><strong>Code.org CS in Algebra</strong></th>
+      <th width="45%"><strong>Bootstrap</strong></th>
+    </tr>
+  </thead>
+  <tbody valign="top">
+    <tr>
+      <td><strong>Programming Language</strong></td>
+      <td>Block-based<br/><img src="algebra/img/blocks.png" style="width: auto; max-width: 250px"/></td>
+      <td>Text-based<br/><img src="algebra/img/text.png" style="width: auto; max-width: 250px"/></td>
+    </tr>
+    <tr>
+      <td><strong>Instructional Scaffolding</td>
+      <td>Puzzle based scaffolding for all programming lessons combined with pseudocode-based pencil and paper activities.</td>
+      <td>Pencil and paper workbook activities using the same text language students will use online.</td>
+    </tr>
+    <tr>
+      <td><strong>Activity Focus</strong></td>
+      <td>Combination of structured puzzles and open-ended problems</td>
+      <td>Completing open-ended problems</td>
+    </tr>
+    <tr>
+      <td><strong>Requires a Computer</strong></td>
+      <td>Programming puzzles require a computer. Unplugged lessons are entirely offline, and some programming activities include complementary workbook pages.</td>
+      <td>All Bootstrap activities are scaffolded by a workbook page, which can be done without a computer.</td>
+    </tr>
+    <tr>
+      <td><strong>Supporting Tools</strong></td>
+      <td>Student account creation and management
+        <br>Class progress monitor
+        <br>Solution viewer</td>
+      <td>Google login
+        <br>Solution viewer</td>
+    </tr>
+    <tr>
+      <td><strong>Supplemental Materials</strong></td>
+      <td>Lesson slide decks
+        <br>Challenge activities
+        <br>Rubrics
+        <br>Student and teacher facing videos</td>
+      <td>Lesson slide decks
+        <br>Challenge activities
+        <br>Rubrics
+        <br>Homework assignments
+        <br>Warmup Activities
+        <br>Exit slips
+        <br>Assessments
+        <br>Supplemental lessons</td>
+    </tr>
+    <tr>
+      <td><strong>Pathway for Continuing Students</strong></td>
+      <td>CS in Algebra Course B
+        <br>Bootstrap:1</td>
+      <td>Bootstrap:2
+        <br>Picturing Programs
+        <br>How to Design Programs</td>
+    </tr>
+    <tr>
+      <td><strong>Evaluation and Publication</strong></td>
+      <td>Undergoing independent evaluation</td>
+      <td>Independently evaluated with <a href="http://cs.brown.edu/%7Esk/Publications/Papers/Published/sfkf-trans-word-prob-comp-alg-bs/">published transfer results</a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Professional Development</strong></td>
+      <td>In person <a href="/educate/professional-learning/cs-in-algebra">workshops with supplemental online professional development</a> covering Course A only</td>
+      <td>In person <a href="http://www.bootstrapworld.org/workshops/">workshops</a> covering the entire course</td>
+    </tr>
+    <tr>
+      <td><strong>Curriculum Progression</strong></td>
+      <td>
+        <strong>Course A</strong> 
+        <br>Order of Operations and Circles of Evaluation
+        <br>Data types (Numbers, Strings, and Images)
+        <br>Variables
+        <br>Contracts - Domain and Range
+        <br>Defining linear functions
+        <br>The Design Recipe
+        <br>
+        <br> <strong>Course B</strong>
+        <br>Video Games and Coordinate Planes
+        <br>Functions to Animate
+        <br>Booleans and Boundary Detection
+        <br>Conditionals and Piecewise Functions
+        <br>Collision Detection and the Pythagorean Theorem</td>
+      <td>Video Games and Coordinate Planes
+        <br>Order of Operations and Circles of Evaluation
+        <br>Data types (Numbers, Strings, and Images)
+        <br>Variables
+        <br>Contracts - Domain and Range
+        <br>Defining linear functions
+        <br>The Design Recipe
+        <br>Functions to animate
+        <br>Booleans and Boundary Detection
+        <br>Conditionals and Piecewise Functions
+        <br>Collision Detection and the Pythagorean Theorem</td>
+    </tr>
+  </tbody>
+</table>
 
 ## I taught CS in Algebra in 2015-2016, how is this different?
 

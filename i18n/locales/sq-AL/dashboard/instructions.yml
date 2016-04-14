@@ -1559,7 +1559,7 @@ sq:
         Ketu eshte i njejti algoritem qe perdorem per lojen e fundit, me cfare duhet "t'i ndryshosh" faqet ne menyre qe t'a vizatosh kete pikture jashte katroreve?
       Course 4 Artist Vars 12_instruction: |-
         Le te shikojme "faqet" e ndryshueshme deri ne 5. Sa me shume faqe i shtojme ketij algoritmi, aq me i madh del i gjithe ky model! Vere qe eshte nje variabel e re e quajtur "gjatesi". Tani mund t'a perdorim ate sa here qe kemi "nje levizje perpara". Vendos "gjatesine" e ndryshueshme deri ne 75 per kete forme.
-      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the \"length\" variable, let's use a math block with the\n\"sides\" variable inside to make sure that each shape fits correctly. The\nperimeter of each polygon is 300 pixels.\\r\nNeed some hints?  Click here."
+      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the `length` variable, let's use a math block with the `sides`\nvariable inside to make sure that each shape fits correctly. The perimeter\nof each polygon is 300 pixels.\\r\nNeed some hints?  Click here."
       Course 4 Artist Vars 14_instruction: 'Loje e Lire: Shiko, algoritmi yt eshte bashkuar me nje litar tjeter. Eksperimento duke ndryshuar vlerat e variablave te tua per te formuar modele te shkelqyera.'
       Course 4 Artist Vars 2_instruction: |
         Në vend që "të ecësh përpara me 100",
@@ -2522,6 +2522,10 @@ sq:
       Overworld Avoid Monsters_instruction: |
         Running into a Creeper is a bad idea.
         Carefully move past the Creepers and reach the safety of your home.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: |
         Wood is a very important resource. Many things
         are made from it. Walk to the tree and use the “destroy block” command to
@@ -2769,6 +2773,10 @@ sq:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only

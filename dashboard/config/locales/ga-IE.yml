@@ -24,7 +24,7 @@
           future: can't be in the future
   hello: Hello world
   welcome_back: Welcome back, %{name}
-  submit: Submit
+  submit: Seol
   unsubmit: Unsubmit
   next_page: Next page
   add_teacher_form:
@@ -304,10 +304,10 @@
       for %{student_name}"
     panel:
       answer_viewer: Answer Viewer
-      student: Student
+      student: Dalta
       viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
-      section: Section
+      section: Rannán
       example: Example Solution
       example_with_number: Example Solution %{solution_number}
       submitted_on: Submitted on %{date}
@@ -391,8 +391,8 @@
     female: Female
     none: Prefer not to answer
   user_type:
-    student: Student
-    teacher: Teacher
+    student: Dalta
+    teacher: Múinteoir
   footer:
     thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
       href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
@@ -408,11 +408,13 @@
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org."
     copyright: Copyright
-    more: More
+    more: Tuilleadh
     feedback: Provide feedback
     translate: Help us translate to your language
     support: Support
@@ -493,7 +495,7 @@
       unused: Unused Levels
   upsell:
     applab:
-      title: App Lab
+      title: Saotharlann Aipeanna
       body: App Lab is a programming environment where you can make simple apps. Design
         an app, code with blocks or JavaScript to make it work, then share your app
         in seconds.
@@ -510,9 +512,9 @@
         tutorial!
     20-hour:
       title: Accelerated Course
-      body: This 20-hour course covers the core computer science and programming concepts
-        in courses 2-4. The course is designed for use with ages 10-18. Check out
-        courses 2-4 for a more complete experience!
+      body: Is cúrsa 20 uair an chloig é seo a chlúdaíonn bunchoincheapa ríomheolaíochta
+        agus ríomhchláraithe ó chúrsaí 2-4. Tá sé dírithe ar dhaltaí idir 10 agus
+        18 bliain d'aois. Féach ar chúrsaí 2-4 chun eolas níos cuimsithí a fháil!
       body_short: Learn basic computer science in an accelerated version of courses
         2-4.
     hoc2014:
@@ -527,7 +529,8 @@
       title: Star Wars
     infinity:
       title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: "Úsáid Súgradh is Dáiríre chun scéal nó cluiche a chruthú ina bhfuil carachtair
+        Disney Infinity."
     minecraft:
       title: Minecraft
       body: Explore a Minecraft world through code.
@@ -628,7 +631,7 @@
           title: Edit Code
           description: ''
         events:
-          title: Events
+          title: Teagmhais
           description: ''
         builder:
           title: Builder
@@ -638,7 +641,7 @@
           description: Wanna write your own game in less than 10 minutes? Try our
             Flappy Code tutorial!
         jigsaw:
-          title: Jigsaw
+          title: Míreanna Mearaí
           description: ''
         step:
           title: Céim
@@ -676,23 +679,23 @@
     create_a_project: 'Create a new project:'
     new: Create New
     rename: Rename
-    save: Save
-    delete: Delete
+    save: Sábháil
+    delete: Scrios
     exit: Return to Course
     my_projects: My Projects
     share: Comhroinn
     share_title: Share your project
     share_copy_link: 'Copy the link:'
     close: Close
-    more: More
-    name: Name
+    more: Tuilleadh
+    name: Ainm
     updated: Updated
     project_type: Project Type
     help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
       below to make a new Play Lab or Artist project!<br/>You can come back and work
       on your projects at any time.
     need_help: Need help getting started?
-    really_delete: Delete?
+    really_delete: Scrios?
     delete_yes: Tá
     delete_no: Níl
     saved: Sábháilte
@@ -729,7 +732,7 @@
           harassment: Threats, cyberbullying, harassement
           offensive: Offensive content
           infringement: Copyright Infringement
-          other: Other
+          other: Eile
         detail: Please provide as much detail as possible regarding the content you
           are reporting.
         acknowledge: By submitting this information, you acknowledge it will be handled

@@ -1,0 +1,47 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-11T19:45:20.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "rect": null,
+      "fill": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "markdown_instructions": "# Fill\r\n\r\nlearned in last level that code executes in order\r\n\r\nintroduce fill and being able to set color\r\n\r\nwe set colors by putting the name of a color in a string - most of the common color names you know of will work\r\n\r\nsay what the fill is before draw the shape\r\n\r\n# Do This\r\n\r\n* Change the fill of the rect to a color of choice - some you can try are : red, green, purple, black",
+    "start_blocks": "// Add code here to change the color of the rectangle\r\nrect(100, 100, 200, 200);\r\n// Add code here to change the color of the rectangle\r\nrect(200, 200, 50, 50);\r\n// Add code here to change the color of the rectangle\r\nrect(0, 0, 400, 400);\r\n// Add code here to change the color of the rectangle\r\nrect(150, 150, 100, 100);",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"element_id\": \"#droplet_palette_block_fill\",\r\n  \"callout_text\": \"Use this block to set the color of a shape\",\r\n  \"qtip_config\": {\r\n   \t\"position\": {\r\n      \"my\": \"top right\",\r\n      \"at\": \"bottom left\",\r\n      \"adjust\": {\r\n       \"x\": 0,\r\n       \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

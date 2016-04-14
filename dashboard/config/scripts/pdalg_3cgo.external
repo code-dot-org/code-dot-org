@@ -1,0 +1,24 @@
+name 'PDAlg 3CGo'
+css 'k5pd'
+skip_dialog true
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
+
+# Getting Started > Ready? Set? Go!
+
+By completing this stage, you should have:
+
+- Reviewed the course details
+- Planned your participation in this online PD
+
+In the next stage, we will:
+
+- Gather student programming artifacts and share them with your peers
+
+
+Click “Continue” below to move on.
+<br><br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

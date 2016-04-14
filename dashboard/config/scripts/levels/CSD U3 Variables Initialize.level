@@ -1,0 +1,47 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-11T13:27:25.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Initialize a Variable\r\n\r\nMost programming languages allow you to give a variable value when you create it. This is also called **initializing** a varaible, since you providing the variable an initial value.\r\n\r\nIn JavaScript this looks like `var myVariable = 10;`. You can read this as \"var myVariable gets 10\".\r\n\r\n# Do This\r\n\r\n* In the starter code a variable is created on one line and given a value on the next.\r\n* **Change the code** so that the variable is given a value at the same time it is created.\r\n* Your new code should only have **two lines** and should display a value in the console.",
+    "start_blocks": "var size;\r\nsize = 10;\r\nconsole.log(size);",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "instructions": "Predict: What will get displayed in the console?"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Gamelab>

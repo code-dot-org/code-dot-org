@@ -1,0 +1,113 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2016-03-30T00:27:48.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": {
+        "params": [
+          ""
+        ],
+        "paletteParams": [
+          ""
+        ]
+      },
+      "turnLeft": {
+        "params": [
+          ""
+        ],
+        "paletteParams": [
+          ""
+        ]
+      },
+      "penUp": null,
+      "penDown": null,
+      "functionParams_none": null,
+      "callMyFunction": null,
+      "comment": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Define a function called turnAround. Call the function and then move the turtle forward. (Click to see full instructions)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "slider_speed": "0.1",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "encrypted_examples": "OgFutPCohIyY4j1vOD0dj390mqKRlik2ZbyOOdi2qZnLYvj0juPDGe1LWbCH\n7e3l\n",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "markdown_instructions": "#Do This:\r\n**Define** a function called `turnAround` which turns the turtle around. Once you've defined the function **call** it to make sure it works as you expect and then move the turtle forward, as shown below. \r\n\r\n![](https://images.code.org/4c31307ec14cc6dfd65589f2a813120e-image-1447884881189.gif)",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "video_key": "csp_applab_functions",
+    "droplet_tooltips_disabled": "true",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "true",
+    "execute_palette_apis_only": "true",
+    "log_conditions": [
+      {
+        "entries": [
+          "turnAround"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "maxTimes": 1,
+        "message": "Make sure you define a turnAround function and call it exactly once in your program."
+      },
+      {
+        "entries": [
+          "turnLeft"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "maxTimes": 2,
+        "message": "What block do you need to call inside the turnAround function to make the turtle turnAround?  Make sure you call that block the correct number of times."
+      },
+      {
+        "entries": [
+          "moveForward"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "maxTimes": 1,
+        "message": "Make sure you move forward exactly once after turning the turtle around."
+      },
+      {
+        "entries": [
+          "turnAround",
+          "turnLeft",
+          "turnLeft",
+          "moveForward"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "maxTimes": 1,
+        "message": "You’re using the right set of blocks, but not in the right order.  Make sure your picture matches exactly with the instructions."
+      }
+    ]
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

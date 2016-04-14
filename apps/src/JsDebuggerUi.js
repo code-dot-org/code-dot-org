@@ -449,7 +449,7 @@ JsDebuggerUi.prototype.clearDebugInput = function () {
   }
 };
 
-JsDebuggerUi.prototype.onPauseContinueButton = function() {
+JsDebuggerUi.prototype.onPauseContinueButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
     // We have code and are either running or paused
@@ -465,7 +465,7 @@ JsDebuggerUi.prototype.onPauseContinueButton = function() {
   }
 };
 
-JsDebuggerUi.prototype.updatePauseUiState = function() {
+JsDebuggerUi.prototype.updatePauseUiState = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (!jsInterpreter) {
     return;
@@ -532,7 +532,7 @@ JsDebuggerUi.prototype.resetDebugControls_ = function () {
   }
 };
 
-JsDebuggerUi.prototype.onStepOverButton = function() {
+JsDebuggerUi.prototype.onStepOverButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
     jsInterpreter.paused = true;
@@ -541,7 +541,7 @@ JsDebuggerUi.prototype.onStepOverButton = function() {
   }
 };
 
-JsDebuggerUi.prototype.onStepInButton = function() {
+JsDebuggerUi.prototype.onStepInButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (!jsInterpreter) {
     this.runApp_();
@@ -553,7 +553,7 @@ JsDebuggerUi.prototype.onStepInButton = function() {
   this.updatePauseUiState();
 };
 
-JsDebuggerUi.prototype.onStepOutButton = function() {
+JsDebuggerUi.prototype.onStepOutButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
     jsInterpreter.paused = true;
@@ -572,7 +572,7 @@ function clearAllChildElements(element) {
  * Refresh the watch expressions.
  * @private
  */
-JsDebuggerUi.prototype.onWatchTimer_ = function() {
+JsDebuggerUi.prototype.onWatchTimer_ = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
 

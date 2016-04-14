@@ -31,22 +31,19 @@ var Multi = function (id, levelId, standalone, numAnswers, answers, lastAttemptS
 
   this.forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
 
-  $(document).ready($.proxy(function() {
+  $(document).ready($.proxy(function () {
     this.ready();
   }, this));
 
 };
 
 
-Multi.prototype.enableButton = function(enable)
-{
+Multi.prototype.enableButton = function (enable) {
   $("#" + this.id + ' .submitButton').attr('disabled', !enable);
 };
 
-Multi.prototype.choiceClicked = function(button)
-{
-  if (!this.submitAllowed)
-  {
+Multi.prototype.choiceClicked = function (button) {
+  if (!this.submitAllowed) {
     return;
   }
 
@@ -57,23 +54,19 @@ Multi.prototype.choiceClicked = function(button)
 };
 
 
-Multi.prototype.clickItem = function(index)
-{
+Multi.prototype.clickItem = function (index) {
   // If this button is already crossed, do nothing more.
-  if (this.crossedAnswers.indexOf(index) !== -1)
-  {
+  if (this.crossedAnswers.indexOf(index) !== -1) {
     return;
   }
 
   // If single answer, and this button is already selected, do nothing more.
-  if (this.numAnswers == 1 && $.inArray(index, this.selectedAnswers) !== -1)
-  {
+  if (this.numAnswers == 1 && $.inArray(index, this.selectedAnswers) !== -1) {
     return;
   }
 
   // If multiple answer, and this button is already selected, deselect it.
-  if (this.numAnswers > 1 && $.inArray(index, this.selectedAnswers) !== -1)
-  {
+  if (this.numAnswers > 1 && $.inArray(index, this.selectedAnswers) !== -1) {
     this.unclickItem(index);
     return;
   }
@@ -90,13 +83,11 @@ Multi.prototype.clickItem = function(index)
   this.selectedAnswers.unshift(index);
 
   // Unselect previously selected answer if there are now too many selected.
-  if (this.selectedAnswers.length > this.numAnswers)
-  {
+  if (this.selectedAnswers.length > this.numAnswers) {
     var unselectIndex = this.selectedAnswers.pop();
 
     // Although don't uncheck it if it's already crossed out.
-    if (this.crossedAnswers.indexOf(unselectIndex) === -1 )
-    {
+    if (this.crossedAnswers.indexOf(unselectIndex) === -1 ) {
       $("#" + this.id + " #unchecked_" + unselectIndex).show();
       $("#" + this.id + " #checked_" + unselectIndex).hide();
     }
@@ -105,8 +96,7 @@ Multi.prototype.clickItem = function(index)
   return true;
 };
 
-Multi.prototype.unclickItem = function(index)
-{
+Multi.prototype.unclickItem = function (index) {
   var selectedItemIndex = this.selectedAnswers.indexOf(index);
   this.selectedAnswers.splice(selectedItemIndex, 1);
 
@@ -116,12 +106,10 @@ Multi.prototype.unclickItem = function(index)
 };
 
 // called on $.ready
-Multi.prototype.ready = function()
-{
+Multi.prototype.ready = function () {
   // Are we read-only?  This can be because we're a teacher OR because an answer
   // has been previously submitted.
-  if (window.appOptions.readonlyWorkspace)
-  {
+  if (window.appOptions.readonlyWorkspace) {
     // hide the Submit buttons.
     $('.submitButton').hide();
 
@@ -131,19 +119,18 @@ Multi.prototype.ready = function()
     this.submitAllowed = false;
 
     // Are we a student viewing their own previously-submitted work?
-    if (window.appOptions.submitted)
-    {
+    if (window.appOptions.submitted) {
       // show the Unsubmit button.
       $("#" + this.id +' .unsubmitButton').show();
     }
   }
 
-  $("#" + this.id + " span.answerbutton").click($.proxy(function(event) {
+  $("#" + this.id + " .answerbutton").click($.proxy(function (event) {
     //console.log("answerbutton clicked", this.id);
     this.choiceClicked($(event.currentTarget));
   }, this));
 
-  $("#" + this.id + ' #voteform img').on('dragstart', $.proxy(function(event) {
+  $("#" + this.id + ' #voteform img').on('dragstart', $.proxy(function (event) {
     // Prevent button images from being dragged, click the button instead.
     var button = $(event.currentTarget).parent().parent().parent();
     this.choiceClicked(button);
@@ -155,18 +142,15 @@ Multi.prototype.ready = function()
 
   // If we are relying on the containing page's submission buttons/dialog, then
   // we need to provide a window.getResult function.
-  if (this.standalone)
-  {
+  if (this.standalone) {
     window.getResult = $.proxy(this.getResult, this);
   }
 
   // Pre-select previously submitted response if available.
-  if (this.lastAttemptString)
-  {
+  if (this.lastAttemptString) {
     var previousResult = this.lastAttemptString.split(',');
 
-    for (var i = 0; i < previousResult.length; i++)
-    {
+    for (var i = 0; i < previousResult.length; i++) {
       this.clickItem(parseInt(previousResult[i]));
     }
   }
@@ -177,44 +161,34 @@ Multi.prototype.ready = function()
   }
 };
 
-Multi.prototype.getCurrentAnswer = function()
-{
+Multi.prototype.getCurrentAnswer = function () {
   var answer;
 
-  if (this.numAnswers == 1)
-  {
+  if (this.numAnswers == 1) {
     answer = this.lastSelectionIndex;
-  }
-  else
-  {
+  } else {
     answer = this.selectedAnswers;
   }
 
   return answer;
 };
 
-Multi.prototype.getLevelId = function()
-{
+Multi.prototype.getLevelId = function () {
   return this.levelId;
 };
 
 // called by external result-posting code
-Multi.prototype.getResult = function()
-{
+Multi.prototype.getResult = function () {
   var answer;
   var errorType = null;
 
-  if (this.numAnswers > 1 && this.selectedAnswers.length !== this.numAnswers)
-  {
+  if (this.numAnswers > 1 && this.selectedAnswers.length !== this.numAnswers) {
     errorType = "toofew";
   }
 
-  if (this.numAnswers == 1)
-  {
+  if (this.numAnswers == 1) {
     answer = this.lastSelectionIndex;
-  }
-  else
-  {
+  } else {
     answer = this.selectedAnswers;
   }
 
@@ -222,13 +196,10 @@ Multi.prototype.getResult = function()
   var result;
   var submitted;
 
-  if (window.appOptions.level.submittable || this.forceSubmittable)
-  {
+  if (window.appOptions.level.submittable || this.forceSubmittable) {
     result = true;
     submitted = true;
-  }
-  else
-  {
+  } else {
     result = this.validateAnswers();
     submitted = false;
   }
@@ -242,11 +213,9 @@ Multi.prototype.getResult = function()
 };
 
 // This behavior should only be available when this is a standalone Multi.
-Multi.prototype.submitButtonClick = function()
-{
+Multi.prototype.submitButtonClick = function () {
   // Don't show right/wrong answers for submittable.
-  if (window.appOptions.level.submittable || this.forceSubmittable)
-  {
+  if (window.appOptions.level.submittable || this.forceSubmittable) {
     return;
   }
 
@@ -254,8 +223,7 @@ Multi.prototype.submitButtonClick = function()
   // already crossed out, then mark it as answered wrong.
   if (this.numAnswers == 1 &&
       this.crossedAnswers.indexOf(this.lastSelectionIndex) == -1 &&
-      ! this.validateAnswers())
-  {
+      ! this.validateAnswers()) {
     $("#" + this.id + " #checked_" + this.lastSelectionIndex).hide();
     $("#" + this.id + " #cross_" + this.lastSelectionIndex).show();
     this.crossedAnswers.unshift(this.lastSelectionIndex);
@@ -263,9 +231,8 @@ Multi.prototype.submitButtonClick = function()
 };
 
 // Unsubmit button should only be available when this is a standalone Multi.
-Multi.prototype.unsubmitButtonClick = function()
-{
-  var dialog = new Dialog({
+Multi.prototype.unsubmitButtonClick = function () {
+  var dialog = new window.Dialog({
     body:
       '<div class="modal-content no-modal-icon">' +
         '<p class="dialog-title">Unsubmit answer</p>' +
@@ -283,8 +250,7 @@ Multi.prototype.unsubmitButtonClick = function()
   dialogDiv.find('#continue-button').click(function () {
     $.post(window.appOptions.unsubmitUrl,
       {"_method": 'PUT', user_level: {submitted: false}},
-      function(data)
-      {
+      function (data) {
         // Just reload so that the progress in the header is shown correctly.
         location.reload();
       }
@@ -297,14 +263,10 @@ Multi.prototype.unsubmitButtonClick = function()
 };
 
 
-Multi.prototype.validateAnswers = function()
-{
-  if (this.selectedAnswers.length == this.numAnswers)
-  {
-    for (var i = 0; i < this.numAnswers; i++)
-    {
-      if (! this.answers[this.selectedAnswers[i]])
-      {
+Multi.prototype.validateAnswers = function () {
+  if (this.selectedAnswers.length == this.numAnswers) {
+    for (var i = 0; i < this.numAnswers; i++) {
+      if (! this.answers[this.selectedAnswers[i]]) {
         return false;
       }
     }

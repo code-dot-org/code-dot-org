@@ -76,7 +76,7 @@ class TablesTest < Minitest::Test
   end
 
   def test_column_types
-    columns = ['all_numbers', 'all_bools', 'all_strings', 'bools_and_nums', 'bools_and_strings', 'nums_and_bools']
+    columns = %w(all_numbers all_bools all_strings bools_and_nums bools_and_strings nums_and_bools)
     records = [
       { "all_numbers" => "1", "all_bools" => 'true', "all_strings" => 'hello', "bools_and_nums" => 'true', "bools_and_strings" => 'false', "nums_and_bools" => '3' },
       { "all_numbers" => "2", "all_bools" => 'false', "all_strings" => 'world', "bools_and_nums" => '2', "bools_and_strings" => 'ruby', "nums_and_bools" => 'true' }
@@ -87,7 +87,7 @@ class TablesTest < Minitest::Test
   end
 
   def test_coerce
-    columns = ['all_numbers', 'all_bools', 'mixed']
+    columns = %w(all_numbers all_bools mixed)
     records = [
       { "all_numbers" => "1", "all_bools" => "true", "mixed" => "true" },
       { "all_numbers" => "2", "all_bools" => "false", "mixed" => "1" },

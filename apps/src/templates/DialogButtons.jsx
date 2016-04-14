@@ -1,5 +1,5 @@
 var msg = require('../locale');
-var Lightbulb = require('./Lightbulb.jsx');
+var Lightbulb = require('./Lightbulb');
 
 var DialogButtons = React.createClass({
   propTypes: {
@@ -14,7 +14,7 @@ var DialogButtons = React.createClass({
     ok: React.PropTypes.bool,
     previousLevel: React.PropTypes.bool,
     shouldPromptForHint: React.PropTypes.bool,
-    tryAgain: React.PropTypes.string,
+    tryAgain: React.PropTypes.string
   },
 
   render: function () {

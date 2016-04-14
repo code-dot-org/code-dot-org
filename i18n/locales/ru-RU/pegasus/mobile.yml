@@ -590,6 +590,8 @@ ru-RU:
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Верно
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -613,7 +615,7 @@ ru-RU:
   dashboard_faq_k5: K-5 часто задаваемые вопросы
   dashboard_announcements: Объявления
   dashboard_announce_view_all: Посмотреть все
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: узнать больше
   dashboard_announce_hoc: "<b>15 октября, 2015</b> - Час кода приближается &mdash; каждый участвующий организатор получит подарочную карту для Amazon.com или Microsoft's Windows Store как благодарственный подарок. Присоединяйтесь к классным комнатам по всему миру 7-13 декабря."
   dashboard_announce_playlab: '<b>4 декабря 2015</b> - Час кода уже здесь! Попробуйте 50 руководств для любого возраста и любого устройства. Новинка этой недели: программируй собственные рассказы и игры в обновленных Игровой Лаборатории, Ледниковом периоде и Удивительном мире Гамбола.'

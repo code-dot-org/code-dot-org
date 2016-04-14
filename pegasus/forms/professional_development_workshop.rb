@@ -49,7 +49,7 @@ class ProfessionalDevelopmentWorkshop
     end
   end
 
-  # TODO move this to a helper
+  # TODO: Move this to a helper.
   def self.uploaded_data(name, value)
     return value if value.class == FieldError
     AWS::S3.upload_to_bucket('cdo-form-uploads', name, value)

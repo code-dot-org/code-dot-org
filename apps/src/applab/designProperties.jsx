@@ -5,8 +5,8 @@ var color = require('../color');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 
-var DeleteElementButton = require('./designElements/DeleteElementButton.jsx');
-var ElementSelect = require('./ElementSelect.jsx');
+var DeleteElementButton = require('./designElements/DeleteElementButton');
+var ElementSelect = require('./ElementSelect');
 
 var nextKey = 0;
 
@@ -21,7 +21,7 @@ var DesignProperties = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getInitialState: function() {
+  getInitialState: function () {
     return {selectedTab: TabType.PROPERTIES};
   },
 
@@ -29,11 +29,11 @@ var DesignProperties = React.createClass({
    * Handle a click on a tab, such as 'properties' or 'events'.
    * @param newTab {TabType} Tab to switch to.
    */
-  handleTabClick: function(newTab) {
+  handleTabClick: function (newTab) {
     this.setState({selectedTab: newTab});
   },
 
-  render: function() {
+  render: function () {
     if (!this.props.element || !this.props.element.parentNode) {
       return <p>{applabMsg.designWorkspaceDescription()}</p>;
     }

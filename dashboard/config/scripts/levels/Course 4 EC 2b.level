@@ -34,6 +34,13 @@
     "fast_get_nectar_animation": "true",
     "step_speed": "1",
     "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 5,
+    "repeat_until_while": 3,
+    "conditionals": 3
   }
 }]]></config>
   <blocks>

@@ -195,6 +195,7 @@
   "shareWarningsAge": "Пожалуйста укажите ваш возраст ниже и нажмите ОК для продолжения.",
   "shareWarningsMoreInfo": "Больше информации",
   "shareWarningsStoreData": "Данное приложение созданное в Code Studio содержит информацию, которая может быть доступна любому используя эту общую ссылку. Будьте внимательны, если вас просят предоставить личную информацию.",
+  "showBlock": "Get a block",
   "showBlocksHeader": "Показать блоки",
   "showCodeHeader": "Показать код",
   "showGeneratedCode": "Показать код",
@@ -229,5 +230,8 @@
   "watchVideo": "Посмотреть видео",
   "when": "когда",
   "whenRun": "При запуске",
-  "workspaceHeaderShort": "Место сбора блоков: "
+  "workspaceHeaderShort": "Место сбора блоков: ",
+  "currentVersion": "Current Version",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
+  "restoreThisVersion": "Restore this Version"
 }

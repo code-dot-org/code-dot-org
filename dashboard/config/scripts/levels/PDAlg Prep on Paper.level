@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:08.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "LESSON PREP > Thinking on paper",
+    "markdown_instructions": "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://code.org/curriculum/docs/web/k5online.css\" />\n\n### LESSON PREP > Thinking on Paper\n\n<br/>\nAs you learned in the summer PD, thinking through the Design Recipe on paper is an essential step for success, particularly when it comes to solving complex or novel problems. Print out a copy of the [Design Recipe worksheet](https://code.org/curriculum/docs/algebra/worksheets/design_recipe.pdf) and go through your chosen word problem as if you were a student.\n\n#### Put on your student hat\n\nViewing these problems as your students will can help you identify potential pain points, lack of clarity, or misconceptions. It's sometimes difficult to drop our teacher assumptions and expectations, but the more authentically you can wear your student hat, the more you will learn about the possible difficulties in your plan.\n\n#### What's tough about this problem?\n\nAfter you complete your Design Recipe on paper, think about the difficult elements of your particular word problem. Where might students stumble, and what can you do to support them in that struggle? The goal here is not necessarily to remove the struggle (as that's where we learn the most), but to prepare for it.\n<br/><br/>\n\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

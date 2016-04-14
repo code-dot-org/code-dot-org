@@ -1,6 +1,6 @@
 # Various Ruby helper methods to generate Varnish VCL from the base configuration.
 
-# TODO Find a better way of passing node configuration to Chef config helpers.
+# TODO: Find a better way of passing node configuration to Chef config helpers.
 $node_env = 'development'
 $node_name = 'default'
 

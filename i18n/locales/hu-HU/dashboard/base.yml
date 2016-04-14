@@ -25,7 +25,7 @@ hu:
   welcome_back: 'Üdv újra, %{name}'
   submit: Elküldés
   unsubmit: Visszavon
-  next_page: Next page
+  next_page: Következő oldal
   add_teacher_form:
     code:
       label: 'Tanár hozzáadása:'
@@ -341,6 +341,7 @@ hu:
     help_from_html_old: A Google, Microsoft, Facebook, és a Twitter mérnökei segítettek létrehozni ezeket a tartalmakat.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Minden jog fenntartva.<br />Star Wars&#8482; &copy; %{current_year} Disney és Lucasfilm. Minden jog fenntartva.<br />Frozen&#8482; &copy; %{current_year} Disney. Minden jog fenntartva.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Minden jog fenntartva.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Minden jog fenntartva.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Minden jog fenntartva.<br /> a Gumball csodálatos világa a Cartoon Network beejgyzett védjegye.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Minden jog fenntartva.<br />Star Wars&#8482; &copy; %{current_year} Disney és Lucasfilm. Minden jog fenntartva.<br />Frozen&#8482; &copy; %{current_year} Disney. Minden jog fenntartva.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Minden jog fenntartva.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Minden jog fenntartva.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Minden jog fenntartva.<br /> a Gumball csodálatos világa a Cartoon Network bejegyzett védjegye.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Az Amazon Web Services működteti
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, a CODE logó és az Hour of Code&reg; a Code.org védjegyei.'
     copyright: Szerzői jog
@@ -480,14 +481,14 @@ hu:
     toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Köszönöm
-    wrong_body: Thank you for submitting answers.
+    wrong_body: Köszönjük az elküldött válaszokat.
     correct_title: Köszönöm
-    correct_body: Thank you for submitting answers.
+    correct_body: Köszönjük az elküldött válaszokat.
   level_group-submittable:
     wrong_title: Köszönöm
-    wrong_body: Thank you for submitting answers.
+    wrong_body: Köszönjük az elküldött válaszokat.
     correct_title: Köszönöm
-    correct_body: Thank you for submitting answers.
+    correct_body: Köszönjük az elküldött válaszokat.
   match:
     wrong_title: Helytelen megoldás
     wrong_body: 'A megadott megoldás nem megfelelő.  Próbáld újra.'
@@ -560,7 +561,7 @@ hu:
     completed_perfect: elkészült, tökéletes
     furthest_level_attempted: a legmagasabb szint megpróbálva
     assessment: értékelés
-    submitted: submitted
+    submitted: elküldve
   studio:
     courses_working_on: Tanfolyamok, amelyeken dolgozol
     completed_courses: Teljesített tanfolyamok

@@ -195,6 +195,7 @@
   "shareWarningsAge": "Please provide your age below and click OK to continue.",
   "shareWarningsMoreInfo": "More Info",
   "shareWarningsStoreData": "This app built on Code Studio stores data that could be viewed by anyone with this sharing link, so be careful if you are asked to provide personal information.",
+  "showBlock": "Get a block",
   "showBlocksHeader": "Show Blocks",
   "showCodeHeader": "Show Code",
   "showGeneratedCode": "Show code",
@@ -229,5 +230,8 @@
   "watchVideo": "Watch the Video",
   "when": "when",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "currentVersion": "Current Version",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
+  "restoreThisVersion": "Restore this Version"
 }

@@ -1,5 +1,4 @@
 name 'U3 - Conditionals - Introducing Else'
-href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
 # Translating Flowcharts: *else* 

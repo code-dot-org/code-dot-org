@@ -120,6 +120,50 @@ When *createRecord()* is finished executing, the callback function is automatica
 
 [/tips]
 
+[advanced]
+### Advanced
+
+
+*createRecord()* has an additional optional callback function that gets called only if an error occurs when trying to create a record.  For example, when the maximum number of rows in a table is reached, the error callback will be called. 
+
+**Example: Simple survey** Collect favorite food data from friends and store it in a table.  Let user know if their answers couldn’t be logged.
+
+```
+// Collect favorite food data from friends and store it in a table.
+textInput("nameInput", "What is your name?");
+textInput("ageInput", "What is your age?");
+textInput("foodInput", "What is your favorite food?");
+button("submit", "Submit");
+
+onEvent("submit", "click", function() {
+  var favFoodData={};
+  favFoodData.name = getText("nameInput");
+  favFoodData.age = getNumber("ageInput");
+  favFoodData.food = getText("foodInput");
+  createRecord("fav_foods", favFoodData, function(record) {
+    textLabel("outputText", "Thanks!  Your responses got recorded.");
+  }, function (error, status) {
+    // Status code 403 means that the table has already reached its capacity.
+    if (status == 403) {
+      textLabel("outputText", "Sorry, it looks like our table is full.");
+    } else {
+      textLabel("outputText", "There was an error and we couldn't record your responses.");
+    }
+  }); 
+});
+```
+
+**Syntax:**
+
+```
+createRecord(table, record, function(record){
+    //onSuccess callback function code goes here
+  }, function(error, status) {
+    //onError callback function code goes here
+});
+```
+[/advanced]
+
 [bug]
 
 Found a bug in the documentation? Let us know at documentation@code.org
@@ -127,3 +171,4 @@ Found a bug in the documentation? Let us know at documentation@code.org
 [/bug]
 
 <%= view :applab_docs_common %>
+

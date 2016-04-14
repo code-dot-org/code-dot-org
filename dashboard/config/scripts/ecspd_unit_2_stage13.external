@@ -1,7 +1,6 @@
 name 'ECSPD Unit 2 Stage13'
 title 'title'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 

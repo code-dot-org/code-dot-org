@@ -1,6 +1,6 @@
 /* global dashboard, React, ReactDOM */
 
-var AbuseExclamation = require('../components/abuse_exclamation.jsx');
+var AbuseExclamation = require('../components/abuse_exclamation');
 var showProjectAdmin = require('../showProjectAdmin');
 
 /**

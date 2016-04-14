@@ -12,12 +12,11 @@ class Tutorials
     return @contents.find {|row| row[:code] == code}[:url] if @table == :beyond_tutorials
 
     api_domain = domain.gsub('csedweek.org','code.org')
-    api_domain = api_domain.gsub('al.code.org','code.org')
     api_domain = api_domain.gsub('ar.code.org','code.org')
     api_domain = api_domain.gsub('br.code.org','code.org')
-    api_domain = api_domain.gsub('eu.code.org','code.org')
     api_domain = api_domain.gsub('ro.code.org','code.org')
     api_domain = api_domain.gsub('sg.code.org','code.org')
+    api_domain = api_domain.gsub('tr.code.org','code.org')
     api_domain = api_domain.gsub('uk.code.org','code.org')
     api_domain = api_domain.gsub('za.code.org','code.org')
     "http://#{api_domain}/api/hour/begin/#{code}"
@@ -62,20 +61,6 @@ end
 
 def grads_nationwide
   DB[:cdo_state_promote].where(state_code_s: "Sum_states").first[:cs_graduates_i]
-end
-
-def us_state_from_code(code)
-  DB[:geography_us_states].where(code_s: code.to_s.strip.upcase).first
-end
-
-def us_state_code?(code)
-  !us_state_from_code(code).nil?
-end
-
-def us_state_name_from_code(code)
-  state = us_state_from_code(code)
-  return code unless state
-  state[:name_s]
 end
 
 def zip_code_from_code(code)

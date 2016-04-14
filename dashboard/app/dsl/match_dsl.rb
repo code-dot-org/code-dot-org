@@ -14,6 +14,8 @@ class MatchDSL < ContentDSL
     @hash[:answers] << answer
   end
 
+  def layout(text) @hash[:layout] = text end
+
   def i18n_strings
     strings = super[@name]
     @hash[:questions].each do |question|

@@ -1,10 +1,10 @@
 var color = require('../color');
-var AgeDropdown = require('./AgeDropdown.jsx');
+var AgeDropdown = require('./AgeDropdown');
 
 var commonMsg = require('../locale');
 
 /**
- * Dialog contents for when you visit a shared Applab page. If not signed in,
+ * Dialog contents for when you visit a shred Applab page. If not signed in,
  * it will ask your age. If the app stores data, it will also alert you to
  * that.
  */
@@ -16,7 +16,7 @@ var SharingWarnings = module.exports = React.createClass({
     handleTooYoung: React.PropTypes.func.isRequired
   },
 
-  handleOk: function() {
+  handleOk: function () {
     if (this.props.is13Plus) {
       this.props.handleClose();
       return;

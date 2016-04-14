@@ -36,7 +36,12 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Do you see a pattern in how the number of nectar changes? \",\r\n  \"hint_id\": \"notice_pattern\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Notice that the nectar goes up in steps. What kind of block can you use to do the same thing many times while counting up?\",\r\n  \"hint_id\": \"count_with_for\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "for_loops": 5,
+    "functions_with_params": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>

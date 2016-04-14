@@ -195,6 +195,7 @@
   "shareWarningsAge": "Zəhmət olmazsa, aşağıda yaşınızı daxil edin və davam etmək üçün \"Oldu\"nu klikləyin.",
   "shareWarningsMoreInfo": "Daha ətraflı",
   "shareWarningsStoreData": "\"CodeStudio\"-da hazırlanmış bu proqramda, bu paylaşım linki vasitəsilə hər-hansı bir insan tərəfindən göstərilə biləcək məlumatlar gizlənmişdir, yəni şəxsi məlumat verməyiniz istənilsə, diqqətli olun.",
+  "showBlock": "Get a block",
   "showBlocksHeader": "Blokları göstər",
   "showCodeHeader": "Kodu göstər",
   "showGeneratedCode": "Kodu göstər",
@@ -229,5 +230,8 @@
   "watchVideo": "Videoya baxın",
   "when": "nə zaman",
   "whenRun": "icra etdikdə",
-  "workspaceHeaderShort": "iş sahəsi: "
+  "workspaceHeaderShort": "iş sahəsi: ",
+  "currentVersion": "Current Version",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
+  "restoreThisVersion": "Restore this Version"
 }

@@ -14,6 +14,7 @@ theme: none
 New and unsolved problems are often pretty hard. If we want to have any chance of making something creative, useful, and clever, then we need to be willing to attack hard problems even if it means failing a few times before we succeed. 
 
 This lesson teaches that failure is not the end of a journey, but a hint for how to succeed.
+
 [summary]
 
 ## Teaching Summary

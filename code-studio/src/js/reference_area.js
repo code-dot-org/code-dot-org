@@ -1,9 +1,9 @@
-/* globals showVideoDialog */
+var showVideoDialog = require('./videos').showVideoDialog;
 
 // It would be nice if we could share this with the addClickTouchEvent in
 // apps/src/dom.js
-var addClickTouchEvent = function(element, handler) {
-  var wrapper = function(e) {
+var addClickTouchEvent = function (element, handler) {
+  var wrapper = function (e) {
     handler(e);
     e.preventDefault();
   };
@@ -20,8 +20,8 @@ module.exports = function activateReferenceAreaOnLoad() {
       return;
     }
 
-    $('.video_link').each(function() {
-      addClickTouchEvent($(this), $.proxy(function() {
+    $('.video_link').each(function () {
+      addClickTouchEvent($(this), $.proxy(function () {
         showVideoDialog({
           src: $(this).attr('data-src'),
           name: $(this).attr('data-name'),
