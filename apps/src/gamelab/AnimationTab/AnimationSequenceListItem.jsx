@@ -53,6 +53,7 @@ var AnimationSequenceListItem = React.createClass({
     assetUrl: React.PropTypes.func.isRequired,
     isSelected: React.PropTypes.bool,
     animation: React.PropTypes.object.isRequired,
+    cloneAnimation: React.PropTypes.func.isRequired,
     deleteAnimation: React.PropTypes.func.isRequired,
     selectAnimation: React.PropTypes.func.isRequired,
     setAnimationName: React.PropTypes.func.isRequired
@@ -60,6 +61,10 @@ var AnimationSequenceListItem = React.createClass({
   
   onSelect: function () {
     this.props.selectAnimation(this.props.animation.key);
+  },
+
+  cloneAnimation: function () {
+    this.props.cloneAnimation(this.props.animation.key);
   },
   
   deleteAnimation: function () {
@@ -101,7 +106,9 @@ var AnimationSequenceListItem = React.createClass({
             isSelected={this.props.isSelected}
             src={this.props.assetUrl('media/common_images/draw-east.png')} />
         {sequenceName}
-        {this.props.isSelected && <ListItemButtons onDeleteClick={this.deleteAnimation} />}
+        {this.props.isSelected && <ListItemButtons
+            onCloneClick={this.cloneAnimation}
+            onDeleteClick={this.deleteAnimation} />}
       </div>
     );
   }
@@ -112,6 +119,9 @@ module.exports = connect(function propsFromStore(state) {
   };
 }, function propsFromDispatch(dispatch) {
   return {
+    cloneAnimation: function (animationKey) {
+      dispatch(actions.cloneAnimation(animationKey));
+    },
     deleteAnimation: function (animationKey) {
       dispatch(actions.deleteAnimation(animationKey));
     },
