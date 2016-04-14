@@ -32,6 +32,7 @@ var AssetUploader = React.createClass({
             onUploadStart={this.props.onUploadStart}
             onUploadDone={this.props.onUploadDone}
             onUploadError={this.props.onUploadError}
+            endpoint="assets"
             channelId={this.props.channelId}
             typeFilter={this.props.typeFilter} />
         <button

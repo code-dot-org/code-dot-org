@@ -62,7 +62,9 @@ var AnimationPicker = React.createClass({
             onUploadStart={this.onUploadStart}
             onUploadDone={this.onUploadDone}
             onUploadError={this.onUploadError}
+            endpoint="animations"
             channelId={this.props.channelId}
+            filename="new_animation.png"
             typeFilter={this.props.typeFilter} />
         {visibleBody}
       </Dialog>

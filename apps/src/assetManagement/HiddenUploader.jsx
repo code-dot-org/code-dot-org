@@ -9,7 +9,9 @@ var HiddenUploader = React.createClass({
     onUploadStart: React.PropTypes.func.isRequired,
     onUploadDone: React.PropTypes.func.isRequired,
     onUploadError: React.PropTypes.func,
+    endpoint: React.PropTypes.oneOf(['assets', 'animations']).isRequired,
     channelId: React.PropTypes.string.isRequired,
+    filename: React.PropTypes.string,
     typeFilter: React.PropTypes.string
   },
 
@@ -18,7 +20,7 @@ var HiddenUploader = React.createClass({
 
     $(this.refs.uploader).fileupload({
       dataType: 'json',
-      url: '/v3/assets/' + props.channelId + '/',
+      url: '/v3/' + props.endpoint + '/' + props.channelId + '/' + (props.filename || ''),
       // prevent fileupload from replacing the input DOM element, which
       // React does not like
       replaceFileInput: false,
