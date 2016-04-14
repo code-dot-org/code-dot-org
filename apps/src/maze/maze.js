@@ -31,7 +31,7 @@ var api = require('./api');
 var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
-var MazeControls = require('./MazeControls');
+var StepButton = require('./StepButton');
 var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
@@ -630,7 +630,7 @@ Maze.init = function (config) {
       data: {
         visualization: require('./visualization.html.ejs')(),
         controls: React.renderToStaticMarkup(
-          <MazeControls showStepButton={level.step && !level.edit_blocks}/>
+          <StepButton showStepButton={level.step && !level.edit_blocks}/>
         ),
         extraControlRows: config.skinId === 'letters' && require('./extraControlRows.html.ejs')({
           assetUrl: studioApp.assetUrl,
