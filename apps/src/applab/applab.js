@@ -18,6 +18,7 @@ var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var AppLabView = require('./AppLabView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
@@ -669,13 +670,6 @@ Applab.init = function (config) {
                           !config.level.debuggerDisabled);
   var breakpointsEnabled = !config.level.debuggerDisabled;
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var firstControlsRow = require('./controls.html.ejs')({
-    assetUrl: studioApp.assetUrl,
-    showSlider: showSlider,
-    finishButton: (!level.isProjectLevel && !level.submittable),
-    submitButton: level.submittable && !level.submitted,
-    unsubmitButton: level.submittable && level.submitted
-  });
   var extraControlRows = '';
 
   // Construct a logging observer for interpreter events
@@ -804,19 +798,6 @@ Applab.init = function (config) {
     });
   }.bind(this);
 
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        visualization: require('./visualization.html.ejs')({
-          appWidth: Applab.appWidth,
-          appHeight: Applab.footerlessAppHeight
-        }),
-        controls: firstControlsRow
-      }
-    });
-  }.bind(this);
-
   var onMount = function () {
     studioApp.init(config);
 
@@ -908,11 +889,15 @@ Applab.init = function (config) {
   // Push initial level properties into the Redux store
   Applab.reduxStore.dispatch(setInitialLevelProps({
     assetUrl: studioApp.assetUrl,
+    channelId: config.channel,
     isDesignModeHidden: !!config.level.hideDesignMode,
     isEmbedView: !!config.embed,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isShareView: !!config.share,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
+    isProjectLevel: !!config.level.isProjectLevel,
+    isSubmittable: !!config.level.submittable,
+    isSubmitted: !!config.level.submitted,
     instructionsMarkdown: config.level.markdownInstructions,
     instructionsInTopPane: config.showInstructionsInTopPane,
     puzzleNumber: config.level.puzzle_number,
@@ -924,7 +909,6 @@ Applab.init = function (config) {
 
   Applab.reactInitialProps_ = {
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
-    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: onMount
   };
 
@@ -972,7 +956,6 @@ Applab.render = function () {
   var nextProps = $.extend({}, Applab.reactInitialProps_, {
     isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
-    onViewDataButton: Applab.onViewData,
     onScreenCreate: designMode.createScreen
   });
   ReactDOM.render(
@@ -1036,17 +1019,6 @@ Applab.toggleDivApplab = function (isVisible) {
 Applab.reset = function (first) {
   var i;
   Applab.clearEventHandlersKillTickLoop();
-
-  // Soft buttons
-  var softButtonCount = 0;
-  for (i = 0; i < Applab.softButtons_.length; i++) {
-    document.getElementById(Applab.softButtons_[i]).style.display = 'inline';
-    softButtonCount++;
-  }
-  if (softButtonCount) {
-    var softButtonsCell = document.getElementById('soft-buttons');
-    softButtonsCell.className = 'soft-buttons-' + softButtonCount;
-  }
 
   // Reset configurable variables
   Applab.message = null;
@@ -1358,12 +1330,6 @@ Applab.beginVisualizationRun = function () {
 
 Applab.feedbackImage = '';
 Applab.encodedFeedbackImage = '';
-
-Applab.onViewData = function () {
-  window.open(
-    '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + Applab.channelId,
-    '_blank');
-};
 
 /**
  * Handle code/design mode change.

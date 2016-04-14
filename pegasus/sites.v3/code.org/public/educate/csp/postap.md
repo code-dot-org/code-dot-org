@@ -89,7 +89,7 @@ For more information about how to teach this material, please refer to this <a h
       </td>
       <td>
         <ul>
-          <li>Intro to Objects - VIDEO COMING SOON</li>
+          <li>Intro to Objects <iframe width="100%" src="https://www.youtube.com/embed/ZunUF_WGMb4" frameborder="0" allowfullscreen></iframe></li>
         </ul>
       </td>
     </tr>

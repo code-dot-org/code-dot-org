@@ -1651,3 +1651,19 @@ en:
           title: Gamelab Hackathon
           description_short: Gamelab Hackathon
           description: A place to try things out in Game Lab
+        algebraPD1:
+          title: Computer Science in Algebra PD
+          description_short: Teach Algebra through Functional Programming
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Introduction to PD
+          Course Overview: Course Overview
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Evaluation Blocks: Evaluation Blocks
+          Teacher Dashboard: Teacher Dashboard
+          Preparing for in-person PD: Preparing for in-person PD
+        algebraPD3c:
+          title: Computer Science in Algebra PD
+          description_short: CS in Algebra end of year reflection
+          description: CS in Algebra end of year reflection
+          Getting Started: Getting Started
+          Sharing Student Work: Sharing Student Work

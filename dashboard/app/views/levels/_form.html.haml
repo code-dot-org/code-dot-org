@@ -27,6 +27,7 @@
     = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.is_a? Gamelab
     = render partial: 'levels/editors/dsl', locals: {f: f} if @level.is_a? DSLDefined
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
+    = render partial: 'levels/editors/free_response', locals: {f: f} if @level.is_a? FreeResponse
 
     = render partial: 'levels/editors/pixelation', locals: {f: f} if @level.is_a? Pixelation
     = render partial: 'levels/editors/text_compression', locals: {f: f} if @level.is_a? TextCompression
