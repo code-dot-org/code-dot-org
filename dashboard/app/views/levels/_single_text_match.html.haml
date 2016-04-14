@@ -20,7 +20,7 @@
 - if standalone || @script_level
   :javascript
 
-    window.levelGroup.results[#{level.id}] = new TextMatch(
+    window.levelGroup.questions[#{level.id}] = new TextMatch(
       "level_#{index}",
       #{level.id},
       #{standalone},

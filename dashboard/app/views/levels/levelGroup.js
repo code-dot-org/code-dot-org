@@ -30,9 +30,9 @@ function initLevelGroup(
    */
   window.getResult = function () {
     // Add any new results to the existing lastAttempt results.
-    var results = window.levelGroup.results;
-    Object.keys(results).forEach(function (levelId) {
-      var levelResult = results[levelId].getCurrentAnswer().toString();
+    var questions = window.levelGroup.questions;
+    Object.keys(questions).forEach(function (levelId) {
+      var levelResult = questions[levelId].getCurrentAnswer().toString();
       lastAttempt[levelId] = {result: levelResult};
     });
 
