@@ -50,27 +50,36 @@ function level(state, action) {
 }
 
 var animationsInitialState = [
-  // {
-  //   "name": "animation1",
-  //   "frameRate": 10,
-  //   "key": "animation1_key",
-  //   "version": "111111",
-  //   "frameWidth": 400,
-  //   "frameHeight": 200,
-  //   "frameCount": 8,
-  //   "framesPerRow": 5
-  // }
+  {
+    "name": "animation1",
+    "frameRate": 10,
+    "key": "animation1_key",
+    "version": "111111",
+    "frameWidth": 400,
+    "frameHeight": 200,
+    "frameCount": 8,
+    "framesPerRow": 5
+  }
 ];
 
 function animations(state, action) {
   state = state || animationsInitialState;
   
   switch (action.type) {
+    case ActionType.ADD_ANIMATION_AT:
+      return [].concat(
+          state.slice(0, action.index),
+          action.animationProps,
+          state.slice(action.index));
     case ActionType.DELETE_ANIMATION:
       return state.filter(function (animation) {
         return animation.key !== action.animationKey;
       });
     case ActionType.SET_INITIAL_ANIMATION_METADATA:
+      // ONLY FOR TESTING - REMOVE BEFORE SHIP!
+      if (action.metadata.length === 0) {
+        return animationsInitialState;
+      }
       return action.metadata;
     case ActionType.SET_ANIMATION_NAME:
       for (var i = 0; i < state.length; i++) {
