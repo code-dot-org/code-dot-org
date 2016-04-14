@@ -4,7 +4,7 @@ nav: blank
 rightbar: blank
 ---
 -authentication_required!
-
+-require 'state_abbr'
 -workshop_id = request.splat_path_info[1..-1].to_i
 -workshop = DB[:forms].where(id:workshop_id).first
 -pass unless workshop
@@ -443,8 +443,8 @@ rightbar: blank
         %div
           %select#k5-send-materials-state.form-control{name: "send_materials_state_s"}
             %option{selected: true, value: ""}
-            -DB[:geography_us_states].order(:name_s).each do |i|
-              %option{value: i[:code_s]}= i[:name_s]
+            -STATE_ABBR__WITH_DC_HASH.each_pair do |abbr, state|
+              %option{value: abbr}= state
       .form-group
         %label.control-label{for: "k5-send-materials-zip"}<
           Zip code
