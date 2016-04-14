@@ -58,4 +58,12 @@ class UserLevel < ActiveRecord::Base
 
   has_many :navigator_user_levels, through: :paired_user_levels_as_driver
   has_many :driver_user_levels, through: :paired_user_levels_as_navigator
+
+  def driver?
+    navigator_user_levels.present?
+  end
+
+  def navigator?
+    driver_user_levels.present?
+  end
 end

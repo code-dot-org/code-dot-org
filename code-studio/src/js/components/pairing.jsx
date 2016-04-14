@@ -120,6 +120,16 @@ var Pairing = React.createClass({
     });
   },
 
+  refreshUserMenu: function () {
+    $.ajax({
+      type: "GET",
+      url: '/dashboardapi/user_menu',
+      success: function (data) {
+        $('#sign_in_or_user').html(data);
+      }
+    });
+  },
+
   handleAddPartners: function (studentIds) {
     var pairings = [];
     this.selectedSection().students.map(function (student) {
@@ -139,8 +149,7 @@ var Pairing = React.createClass({
             method: 'PUT',
             dataType: 'json'})
       .done(function (result) {
-        // close dialog
-        // TODO what to do here?
+        this.refreshUserMenu();
       }.bind(this))
       .fail(function (result) {
         // TODO what to do here?
@@ -152,6 +161,19 @@ var Pairing = React.createClass({
       pairings: [],
       selectedSectionId: '',
     });
+
+    $.ajax({url: this.props.source,
+            data: JSON.stringify({pairings: []}),
+            contentType: 'application/json; charset=utf-8',
+            method: 'PUT',
+            dataType: 'json'})
+      .done(function (result) {
+        this.refreshUserMenu();
+      }.bind(this))
+      .fail(function (result) {
+        // TODO what to do here?
+      }.bind(this));
+
     event.preventDefault();
   },
 
@@ -186,8 +208,8 @@ var Pairing = React.createClass({
   renderPairingSelector: function () {
     return (
         <div style={{width: DROPDOWN_WIDTH}}>
-        <h1>Pair programming</h1>
-        <h2>Choose partners:</h2>
+        <p className="dialog_title">Pair programming</p>
+        <h1>Choose partners:</h1>
         <br/>
         <form>
         <input type="hidden" name="authenticity_token" value={this.props.csrfToken}/>
