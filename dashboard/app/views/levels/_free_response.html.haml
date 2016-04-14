@@ -2,7 +2,7 @@
 - last_attempt ||= @last_attempt
 - index ||= nil
 
-- if index
+- if index # If an index was provided we're inside a LevelGroup.
   :javascript
     window['level_#{index}'] = {
       getCurrentAnswer: function () {
@@ -12,7 +12,7 @@
         return #{level.id};
       }
     }
-- else
+- else # Otherwise we need to provide a `window.getResult` function.
   :javascript
     function getResult() {
       return {
@@ -29,5 +29,6 @@
   - height = level.height || '80'
   %textarea.response{id: "level_#{index}", placeholder: level.placeholder || 'Enter your answer here', style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
 
+-# Don't render the dialog partial if we're inside a LevelGroup.
 = render partial: 'levels/dialog', locals: {app: 'free_response', data: level.properties} unless index
 = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}
