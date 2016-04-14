@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:20.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Tell Me a Secret: Wrap Up",
+    "markdown_instructions": "List 3 characteristics of the ideal encryption scheme.\n",
+    "encrypted_solution": "nyK9q4nmmzuU28a8SScj/ixUNHVDJRcbdkY/S6BNua9Q8wxMuuxorVoKAOun\nAp+pby0S9weK88jmJtrBHv8P6Fcj043AZLqKfVUvM6H2AT2Z8nU/EMkLu66o\nuCN17duT81+u7q+m/94dnjLAR+jsSt+I4NrQOXDSZV6jlP+MY9RIavakz/vx\ndoVr2So5whJL8XONpuq58Y7Ny5LZlRVYq3745FJ/QAcAutwRNg7b9wjtHp40\nWqqYl++Ap9/64akatgcFiBJq1y0QCHhx0bqZ6KkAdnBNg+hkGVOiZX6QPEA=\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

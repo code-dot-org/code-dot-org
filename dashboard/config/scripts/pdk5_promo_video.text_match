@@ -1,8 +1,0 @@
-name 'PDK5 Promo Video'
-title 'Code Studio: Kid tested, Teacher approved'
-
-markdown <<MARKDOWN
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rNIM1fzJ8u0" frameborder="0" allowfullscreen></iframe>
-
-### What are your first impressions of Code Studio?
-MARKDOWN

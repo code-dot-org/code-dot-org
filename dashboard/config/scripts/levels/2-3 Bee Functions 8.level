@@ -35,7 +35,12 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If the puzzle seems challenging, try building your function a little at a time.  \\n\\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\",\r\n  \"hint_id\": \"2-3_Bee_Functions_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 3,
+    "functions": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

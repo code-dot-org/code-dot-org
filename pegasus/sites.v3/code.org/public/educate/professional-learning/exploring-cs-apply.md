@@ -23,7 +23,7 @@ You can apply to the Professional Learning Program for Exploring Computer Scienc
 
 ## Don't teach in a partner district?
 
-We will open the ECS Professional Learning Program to teachers from non-partner districts if there is space available.  Teachers who are selected from the wait-list will need to demonstrate a commitment to delivering the Exploring Computer Science course in their classroom during the 2016-17 school year by having a slot on their school's master schedule.
+We will open the ECS Professional Learning Program to teachers from non-partner districts if there is space available.  Teachers need to demonstrate a commitment to delivering the Exploring Computer Science course in their classroom during the 2016-17 school year by having a slot on their school's master schedule. Complete the [Single School Application](https://form.jotform.com/60746479314159) and we'll let you know if space opens up.
 
-[<button>Join the wait list</button>](https://form.jotform.com/60337734068155) &nbsp;&nbsp;[<button>Apply to be a district partner</button>](/educate/districts)
+[<button>Apply as a single school</button>](https://form.jotform.com/60746479314159) &nbsp;&nbsp;[<button>Apply to be a district partner</button>](/educate/districts)
 

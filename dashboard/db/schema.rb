@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160411090000) do
+ActiveRecord::Schema.define(version: 20160413225640) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -185,6 +185,7 @@ ActiveRecord::Schema.define(version: 20160411090000) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "section_id",      limit: 4
+    t.datetime "deleted_at"
   end
 
   add_index "followers", ["section_id"], name: "index_followers_on_section_id", using: :btree
@@ -235,6 +236,24 @@ ActiveRecord::Schema.define(version: 20160411090000) do
 
   add_index "hint_view_requests", ["script_id", "level_id"], name: "index_hint_view_requests_on_script_id_and_level_id", using: :btree
   add_index "hint_view_requests", ["user_id"], name: "index_hint_view_requests_on_user_id", using: :btree
+
+  create_table "level_concept_difficulties", force: :cascade do |t|
+    t.integer  "level_id",              limit: 4
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.integer  "sequencing",            limit: 4
+    t.integer  "debugging",             limit: 4
+    t.integer  "repeat_loops",          limit: 4
+    t.integer  "repeat_until_while",    limit: 4
+    t.integer  "for_loops",             limit: 4
+    t.integer  "events",                limit: 4
+    t.integer  "variables",             limit: 4
+    t.integer  "functions",             limit: 4
+    t.integer  "functions_with_params", limit: 4
+    t.integer  "conditionals",          limit: 4
+  end
+
+  add_index "level_concept_difficulties", ["level_id"], name: "index_level_concept_difficulties_on_level_id", using: :btree
 
   create_table "level_source_hints", force: :cascade do |t|
     t.integer  "level_source_id", limit: 4
@@ -856,6 +875,7 @@ ActiveRecord::Schema.define(version: 20160411090000) do
   add_foreign_key "authored_hint_view_requests", "scripts"
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
+  add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_proficiencies", "users"
 end

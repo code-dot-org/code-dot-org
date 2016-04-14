@@ -64,28 +64,10 @@
 #
 
 class UserProficiency < ActiveRecord::Base
+  include ConceptDifficulties
   belongs_to :user
 
   # WARNING: This class makes strong assumptions about the columns in the DB.
-
-  # The set of concepts for which proficiency is computed.
-  # WARNING: This list is tied to DB columns. DO NOT EDIT without a DB
-  # migration.
-  CONCEPTS = %w(
-    sequencing
-    debugging
-    repeat_loops
-    repeat_until_while
-    for_loops
-    events
-    variables
-    functions
-    functions_with_params
-    conditionals
-  )
-  # The maximum difficulty ranking for a concept.
-  # NOTE: This number is tied to DB columns. DO NOT EDIT without a DB migration.
-  MAXIMUM_CONCEPT_DIFFICULTY = 5
 
   # Returns the number of levels the user has shown proficiency in for the
   # indiciated concept and difficulty or higher.

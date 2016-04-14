@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:21.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Assessment: Question 2",
+    "markdown_instructions": "Knowing what you know now about frequency analysis, would you feel comfortable sending your password over the Internet using a substitution cipher?\n\nWhy or why not?\n",
+    "encrypted_solution": "kvZ7j96MmrC4+MvofnsYOTuqQ013ndciQxcQaUADxqd1bsOQyKcSisnlzLDt\noAld9KNML6+h7WLSIhnHxgkSoRg2hErsdoUf6yviRVB0fnu3DugFaIeOAxPY\nx9uxtlLX77wk1IBVt6+BPvEnd4wBDxHROpUHK+1cDZ7ZcUQnDxaCfbJhHzzF\n4pZ4JO+gKRDKQQ0X6FF9Fgz1OtNVZnjUcj1e9f7JgjzcGAMFm5WhkU6gUpx5\n5w7XZbD3izQxJ5pa35qpEFgOjtKx85DI+F8bvk/VKqPyjSIRk5eVazm0nkzA\neD/T0+RltGHECvyQ3h7j6vCKYLqKrdT2zcbpcupTQK5vcQ3UXRTMT8EarGs5\np45y37Mb+CyOr13262E5U1NgsQAfx2vw3cICVNymNRN54tbR1W4YGMWGGlpz\nQKrVVme6bjxUGnjOlDqhu4WKnBcX\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

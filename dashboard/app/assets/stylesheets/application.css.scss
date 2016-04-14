@@ -1606,17 +1606,22 @@ a.download-video {
   }
 }
 
-.text-match {
+.level-group-number {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  float: left;
+  width: 30px;
+}
+
+.level-group-content {
+  overflow: hidden;
+}
+
+.text-match, .free-response {
   p {
     font-size: 16px;
     line-height: 24px;
-  }
-  .number {
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 0px;
-    float: left;
-    width: 30px;
   }
   #markdown {
     // By default, nothing in the page body is selectable.
@@ -1629,6 +1634,7 @@ a.download-video {
 
 .external,
 .text-match,
+.free-response,
 .multi,
 .match {
   #markdown.teacher {
@@ -1657,7 +1663,7 @@ a.download-video {
   max-width: 100%;
 }
 
-.text-match #markdown.teacher {
+.text-match #markdown.teacher, .free-response #markdown.teacher {
   margin-left: 0;
   margin-right: 0;
 }
@@ -1770,13 +1776,6 @@ $information-desktop: "only screen and (min-width: 1024px)";
   p {
     font-size: 16px;
     line-height: 24px;
-  }
-  .number {
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 0px;
-    float: left;
-    width: 30px;
   }
   $multi-left-margin: 50px;
 
