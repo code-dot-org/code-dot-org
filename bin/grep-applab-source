@@ -2,9 +2,10 @@
 require_relative '../deployment'
 require_relative '../lib/cdo/aws/s3'
 require_relative '../shared/middleware/helpers/storage_id'
+require 'cdo/db'
 
 MAX_THREADS = 200
-MAX_KEYS = 1000
+LOG_INCREMENT = 1000 # Must be a multiple of MAX_THREADS
 
 if ARGV.length < 2 || ARGV.length.odd?
   $stderr.puts "usage: #{$0} <regex1> <output1>.tsv [<regex2> <output2>.tsv] ..."
@@ -32,44 +33,54 @@ commands.each do |_, filename|
 end
 
 s3 = Aws::S3::Client.new
-marker = nil
 bucket = CDO.sources_s3_bucket
 base_dir = CDO.sources_s3_directory
 count = 0
+key_not_found = 0
 
-loop do
-  contents = s3.list_objects(bucket: bucket, prefix: base_dir, :max_keys=>MAX_KEYS, :marker=>marker).contents
-  break if contents.empty?
-  marker = contents.last.key
+puts "Fetching a list of applab apps from Pegasus DB. This step may take approximately 10 minutes"
+puts "to run over ~3M rows in storage_apps in production..."
 
-  contents.each_slice(MAX_THREADS) do |chunk|
-    threads = []
-    chunk.each do |fileinfo|
-      threads << Thread.new do
-        _, owner_storage_id, channel_id, filename = %r{#{base_dir}/([^/]+)/([^/]+)/([^/]+)$}.match(fileinfo.key).to_a
-        if filename == 'main.json'
-          body = s3.get_object(bucket: bucket, key: fileinfo.key)[:body].read
-          source = JSON.parse(body)['source']
-          commands.each do |regex, filename|
-            match = source.match(regex) if source
-            if match
-              match_string = match[1] || match[0]
-              channel = storage_encrypt_channel_id(owner_storage_id, channel_id)
-              project_url = "https://#{CDO.dashboard_hostname}/projects/applab/#{channel}/view"
+# An array of pairs of storage_owner_ids and channel_ids, each representing an applab app.
+applab_channels = PEGASUS_DB[:storage_apps].grep(:value, '%applab%').map do |row|
+  [row[:storage_id], row[:id]]
+end
 
-              File.open(filename, 'a') do |file|
-                file.flock(File::LOCK_EX)
-                file << "#{owner_storage_id}\t#{match_string}\t#{project_url}\n"
-                file.flock(File::LOCK_UN)
-              end
-            end
+puts "Scanning #{applab_channels.length} source files in S3 using #{MAX_THREADS} threads..."
+
+applab_channels.each_slice(MAX_THREADS) do |chunk|
+  threads = []
+  chunk.each do |owner_storage_id, channel_id|
+    threads << Thread.new do
+      s3_filename = "#{base_dir}/#{owner_storage_id}/#{channel_id}/main.json"
+      begin
+        body = s3.get_object(bucket: bucket, key: s3_filename)[:body].read
+      rescue Aws::S3::Errors::NoSuchKey
+        key_not_found += 1
+        next
+      end
+
+      source = JSON.parse(body)['source'] if body
+      commands.each do |regex, filename|
+        match = source.match(regex) if source
+        if match
+          match_string = match[1] || match[0]
+          channel = storage_encrypt_channel_id(owner_storage_id, channel_id)
+          project_url = "https://#{CDO.dashboard_hostname}/projects/applab/#{channel}/view"
+
+          File.open(filename, 'a') do |file|
+            file.flock(File::LOCK_EX)
+            file << "#{owner_storage_id}\t#{match_string}\t#{project_url}\n"
+            file.flock(File::LOCK_UN)
           end
         end
       end
     end
-    threads.each &:join
   end
-  count += contents.length
-  puts "#{count} files scanned..."
+  threads.each &:join
+
+  count += chunk.length
+  puts "#{next_count} files scanned..." if count % LOG_INCREMENT == 0
 end
 puts "#{count} files scanned total"
+puts "#{key_not_found} keys were not found in S3 (possibly from deleted projects)"
