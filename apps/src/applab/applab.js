@@ -18,6 +18,7 @@ var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var AppLabView = require('./AppLabView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
@@ -26,6 +27,7 @@ var dropletUtils = require('../dropletUtils');
 var dropletConfig = require('./dropletConfig');
 var AppStorage = require('./appStorage');
 var constants = require('../constants');
+var experiments = require('../experiments');
 var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
 // var Hammer = utils.getHammer();
@@ -600,21 +602,6 @@ Applab.startSharedAppAfterWarnings = function () {
 };
 
 /**
- * Look at localStorage to see if we want to show instructions in the top pane.
- */
-function showInstructionsInTopPane() {
-  // enable instructions in top pane based on query param
-  if (/topInstructions=true/.test(location.search)) {
-    localStorage.setItem('showInstructionsInTopPane', true);
-  }
-  // disable instructions in top pane based on query param
-  if (/topInstructions=false/.test(location.search)) {
-    localStorage.removeItem('showInstructionsInTopPane');
-  }
-  return !!localStorage.getItem('showInstructionsInTopPane');
-}
-
-/**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
 Applab.init = function (config) {
@@ -669,13 +656,6 @@ Applab.init = function (config) {
                           !config.level.debuggerDisabled);
   var breakpointsEnabled = !config.level.debuggerDisabled;
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var firstControlsRow = require('./controls.html.ejs')({
-    assetUrl: studioApp.assetUrl,
-    showSlider: showSlider,
-    finishButton: (!level.isProjectLevel && !level.submittable),
-    submitButton: level.submittable && !level.submitted,
-    unsubmitButton: level.submittable && level.submitted
-  });
   var extraControlRows = '';
 
   // Construct a logging observer for interpreter events
@@ -781,7 +761,7 @@ Applab.init = function (config) {
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
-  config.showInstructionsInTopPane = showInstructionsInTopPane();
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructions');
 
   // Applab.initMinimal();
 
@@ -800,19 +780,6 @@ Applab.init = function (config) {
         blockCounterClass: 'block-counter-default',
         pinWorkspaceToBottom: true,
         readonlyWorkspace: Applab.reduxStore.getState().level.isReadOnlyWorkspace
-      }
-    });
-  }.bind(this);
-
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        visualization: require('./visualization.html.ejs')({
-          appWidth: Applab.appWidth,
-          appHeight: Applab.footerlessAppHeight
-        }),
-        controls: firstControlsRow
       }
     });
   }.bind(this);
@@ -908,11 +875,15 @@ Applab.init = function (config) {
   // Push initial level properties into the Redux store
   Applab.reduxStore.dispatch(setInitialLevelProps({
     assetUrl: studioApp.assetUrl,
+    channelId: config.channel,
     isDesignModeHidden: !!config.level.hideDesignMode,
     isEmbedView: !!config.embed,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isShareView: !!config.share,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
+    isProjectLevel: !!config.level.isProjectLevel,
+    isSubmittable: !!config.level.submittable,
+    isSubmitted: !!config.level.submitted,
     instructionsMarkdown: config.level.markdownInstructions,
     instructionsInTopPane: config.showInstructionsInTopPane,
     puzzleNumber: config.level.puzzle_number,
@@ -924,7 +895,6 @@ Applab.init = function (config) {
 
   Applab.reactInitialProps_ = {
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
-    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: onMount
   };
 
@@ -972,7 +942,6 @@ Applab.render = function () {
   var nextProps = $.extend({}, Applab.reactInitialProps_, {
     isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
-    onViewDataButton: Applab.onViewData,
     onScreenCreate: designMode.createScreen
   });
   ReactDOM.render(
@@ -1036,17 +1005,6 @@ Applab.toggleDivApplab = function (isVisible) {
 Applab.reset = function (first) {
   var i;
   Applab.clearEventHandlersKillTickLoop();
-
-  // Soft buttons
-  var softButtonCount = 0;
-  for (i = 0; i < Applab.softButtons_.length; i++) {
-    document.getElementById(Applab.softButtons_[i]).style.display = 'inline';
-    softButtonCount++;
-  }
-  if (softButtonCount) {
-    var softButtonsCell = document.getElementById('soft-buttons');
-    softButtonsCell.className = 'soft-buttons-' + softButtonCount;
-  }
 
   // Reset configurable variables
   Applab.message = null;
@@ -1358,12 +1316,6 @@ Applab.beginVisualizationRun = function () {
 
 Applab.feedbackImage = '';
 Applab.encodedFeedbackImage = '';
-
-Applab.onViewData = function () {
-  window.open(
-    '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + Applab.channelId,
-    '_blank');
-};
 
 /**
  * Handle code/design mode change.

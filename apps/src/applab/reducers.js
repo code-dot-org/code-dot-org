@@ -35,10 +35,14 @@ function level(state, action) {
     case ActionType.SET_INITIAL_LEVEL_PROPS:
       var allowedKeys = [
         'assetUrl',
+        'channelId',
         'isDesignModeHidden',
         'isEmbedView',
         'isReadOnlyWorkspace',
         'isShareView',
+        'isProjectLevel',
+        'isSubmittable',
+        'isSubmitted',
         'isViewDataButtonHidden',
         'instructionsMarkdown',
         'instructionsInTopPane',

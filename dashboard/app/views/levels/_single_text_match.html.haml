@@ -3,9 +3,6 @@
 
 .text-match{id: "level_#{index}"}
   .mainblock
-    - unless standalone
-      .number
-        = "#{number}. "
     = render partial: 'levels/content', locals: {app: app, data: data, source_level: level, hide_header: !standalone}
     - height = data['height'] || '80'
     %textarea.response{placeholder: data['placeholder'] ? string_or_image(app, data['placeholder']) : t(app + '.placeholder'), style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}

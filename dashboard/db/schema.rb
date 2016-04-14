@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160411090000) do
+ActiveRecord::Schema.define(version: 20160413225640) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -185,6 +185,7 @@ ActiveRecord::Schema.define(version: 20160411090000) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "section_id",      limit: 4
+    t.datetime "deleted_at"
   end
 
   add_index "followers", ["section_id"], name: "index_followers_on_section_id", using: :btree
