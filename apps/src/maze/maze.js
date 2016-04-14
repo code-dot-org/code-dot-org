@@ -31,6 +31,7 @@ var api = require('./api');
 var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var Visualization = require('./Visualization');
 var StepButton = require('./StepButton');
 var SpellingControls = require('./SpellingControls');
 var dom = require('../dom');
@@ -629,9 +630,9 @@ Maze.init = function (config) {
     return visualizationColumnEjs({
       assetUrl: studioApp.assetUrl,
       data: {
-        visualization: require('./visualization.html.ejs')(),
+        visualization: React.renderToStaticMarkup(<Visualization/>),
         controls: React.renderToStaticMarkup(
-          <StepButton showStepButton={level.step && !level.edit_blocks}/>
+          <StepButton showStepButton={!!(level.step && !level.edit_blocks)}/>
         ),
         extraControlRows: config.skinId === 'letters' && React.renderToStaticMarkup(
           <SpellingControls searchWord={level.searchWord}/>
