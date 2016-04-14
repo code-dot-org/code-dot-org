@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you figure out how to draw this shape? Edit the function to use the `sides` parameter.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "Can you figure out how to draw this shape? Edit the function to use the `sides` parameter.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -33,7 +33,8 @@
     "never_autoplay_video": "false",
     "ideal": "17"
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 5,
     "repeat_loops": 1,
@@ -188,7 +189,7 @@
         </category>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="draw_turn" inline="true">
           <title name="DIR">turnRight</title>
@@ -209,7 +210,7 @@
           </value>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
