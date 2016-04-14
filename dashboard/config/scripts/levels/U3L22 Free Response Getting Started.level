@@ -1,7 +1,8 @@
 <FreeResponse>
   <config><![CDATA[{
   "game_id": 52,
-  "created_at": "2016-04-13T21:08:34.545Z",
+  "created_at": "2016-04-13T21:08:34.000Z",
+  "level_num": "custom",
   "user_id": 0,
   "properties": {
     "title": "Permanent Data Storage: Getting Started",
