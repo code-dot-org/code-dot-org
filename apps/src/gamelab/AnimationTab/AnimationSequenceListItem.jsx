@@ -2,6 +2,8 @@
 'use strict';
 
 var _ = require('../../lodash');
+var actions = require('../actions');
+var animationTabActions = require('./actions');
 var color = require('../../color');
 var connect = require('react-redux').connect;
 var ListItemButtons = require('./ListItemButtons');
@@ -50,13 +52,23 @@ var AnimationSequenceListItem = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
     isSelected: React.PropTypes.bool,
-    sequenceName: React.PropTypes.string.isRequired
+    animation: React.PropTypes.object.isRequired,
+    selectAnimation: React.PropTypes.func.isRequired,
+    setAnimationName: React.PropTypes.func.isRequired
+  },
+  
+  onSelect: function () {
+    this.props.selectAnimation(this.props.animation.key);
+  },
+
+  onNameChange: function (event) {
+    this.props.setAnimationName(this.props.animation.key, event.target.value);
   },
 
   render: function () {
     var styles = _.merge({}, staticStyles, {
       tile: {
-        backgroundColor: this.props.isSelected ? color.purple : 'none'
+        backgroundColor: this.props.isSelected ? color.purple : 'transparent'
       }
     }, {
       tile: this.props.style
@@ -66,16 +78,20 @@ var AnimationSequenceListItem = React.createClass({
     if (this.props.isSelected) {
       sequenceName = (
         <div style={styles.nameInputWrapper}>
-          <input type="text" style={styles.nameInput} value={this.props.sequenceName} />
+          <input
+              type="text" 
+              style={styles.nameInput}
+              value={this.props.animation.name}
+              onChange={this.onNameChange} />
         </div>
       );
     } else {
-      sequenceName = <div style={styles.nameLabel}>{this.props.sequenceName}</div>;
+      sequenceName = <div style={styles.nameLabel}>{this.props.animation.name}</div>;
     }
 
 
     return (
-      <div style={styles.tile}>
+      <div style={styles.tile} onClick={this.onSelect}>
         <ListItemThumbnail
             isSelected={this.props.isSelected}
             src={this.props.assetUrl('media/common_images/draw-east.png')} />
@@ -89,4 +105,13 @@ module.exports = connect(function propsFromStore(state) {
   return {
     assetUrl: state.level.assetUrl
   };
+}, function propsFromDispatch(dispatch) {
+  return {
+    selectAnimation: function (animationKey) {
+      dispatch(animationTabActions.selectAnimation(animationKey));
+    },
+    setAnimationName: function (animationKey, newName) {
+      dispatch(actions.setAnimationName(animationKey, newName));
+    }
+  }
 })(AnimationSequenceListItem);
