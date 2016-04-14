@@ -27,6 +27,7 @@ var dropletUtils = require('../dropletUtils');
 var dropletConfig = require('./dropletConfig');
 var AppStorage = require('./appStorage');
 var constants = require('../constants');
+var experiments = require('../experiments');
 var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
 // var Hammer = utils.getHammer();
@@ -601,21 +602,6 @@ Applab.startSharedAppAfterWarnings = function () {
 };
 
 /**
- * Look at localStorage to see if we want to show instructions in the top pane.
- */
-function showInstructionsInTopPane() {
-  // enable instructions in top pane based on query param
-  if (/topInstructions=true/.test(location.search)) {
-    localStorage.setItem('showInstructionsInTopPane', true);
-  }
-  // disable instructions in top pane based on query param
-  if (/topInstructions=false/.test(location.search)) {
-    localStorage.removeItem('showInstructionsInTopPane');
-  }
-  return !!localStorage.getItem('showInstructionsInTopPane');
-}
-
-/**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
 Applab.init = function (config) {
@@ -775,7 +761,7 @@ Applab.init = function (config) {
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
-  config.showInstructionsInTopPane = showInstructionsInTopPane();
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructions');
 
   // Applab.initMinimal();
 
