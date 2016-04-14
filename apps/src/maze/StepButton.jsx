@@ -1,6 +1,6 @@
 var msg = require('./locale');
 
-var MazeControls = function (props) {
+var StepButton = function (props) {
   var classes = 'launch float-right';
   if (props.showStepButton) {
     classes += ' showStepButton';
@@ -13,8 +13,8 @@ var MazeControls = function (props) {
   );
 };
 
-MazeControls.propTypes = {
+StepButton.propTypes = {
   showStepButton: React.PropTypes.bool.isRequired
 };
 
-module.exports = MazeControls;
+module.exports = StepButton;
