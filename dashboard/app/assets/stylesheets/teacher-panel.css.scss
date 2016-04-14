@@ -144,6 +144,13 @@
         overflow: hidden;
         text-overflow: ellipsis;
         text-decoration: none;
+        .pair-programming-icon {
+          float: right;
+          line-height: 34px;
+        }
+      }
+      .name.navigator a {
+        color: $light_gray;
       }
 
       &:hover {
