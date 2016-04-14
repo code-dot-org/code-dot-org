@@ -11,6 +11,7 @@
       "noFill": null,
       "stroke": null,
       "strokeWeight": null,
+      "noStroke": null,
       "ellipse": null,
       "rect": null,
       "comment": null
@@ -39,7 +40,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "start_blocks": "// Create 7 Circles for Rings\r\n\r\n// Create a Rectangle for the Grass"
+    "start_blocks": "ellipse(200, 300, 200, 200);\r\n\r\nellipse(200, 300, 150, 150);\r\n\r\nellipse(200, 300, 100, 100);"
   },
   "published": true,
   "notes": "",
