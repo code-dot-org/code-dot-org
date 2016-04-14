@@ -27,27 +27,27 @@
   )
   = f.text_area :verification_function, rows: 10
   :javascript
-    var verificationEditor = levelbuilder.initializeCodeMirror('verification_function', 'javascript');
+    var verificationEditor = levelbuilder.initializeCodeMirror('level_verification_function', 'javascript');
 .field
   = f.label :available_blocks, 'Available Blocks in format ["bedrock", "bricks", "clay", "oreCoal", "dirtCoarse"] (will eventually be multi-select)'
   %a{style:"cursor: pointer", onclick: "availableBlocksEditor.getDoc().setValue('#{Craft::ALL_BLOCKS_ARRAY}')"}= "Insert all"
   = f.text_area :available_blocks, rows: 10
   :javascript
-    var availableBlocksEditor = levelbuilder.initializeCodeMirror('available_blocks', 'javascript');
+    var availableBlocksEditor = levelbuilder.initializeCodeMirror('level_available_blocks', 'javascript');
 
 .field
   = f.label :if_block_options, 'Override if and while ahead block dropdown options. Format: ["bedrock", "bricks", "clay", "oreCoal", "dirtCoarse"]'
   %a{style:"cursor: pointer", onclick: "ifBlocksEditor.getDoc().setValue('#{Craft::ALL_BLOCKS_ARRAY}')"}= "Insert all"
   = f.text_area :if_block_options, rows: 10
   :javascript
-    var ifBlocksEditor = levelbuilder.initializeCodeMirror('if_block_options', 'javascript');
+    var ifBlocksEditor = levelbuilder.initializeCodeMirror('level_if_block_options', 'javascript');
 
 .field
   = f.label :place_block_options, 'Override place and place ahead block dropdown options. Format: ["bedrock", "bricks", "clay", "oreCoal", "dirtCoarse"]'
   %a{style:"cursor: pointer", onclick: "placeBlocksEditor.getDoc().setValue('#{Craft::ALL_BLOCKS_ARRAY}')"}= "Insert all"
   = f.text_area :place_block_options, rows: 10
   :javascript
-    var placeBlocksEditor = levelbuilder.initializeCodeMirror('place_block_options', 'javascript');
+    var placeBlocksEditor = levelbuilder.initializeCodeMirror('level_place_block_options', 'javascript');
 %div{style: "opacity: .5"}
   .field
     = f.label :grid_width, 'Grid width (warning: do not change, only use for initial sizing)'
