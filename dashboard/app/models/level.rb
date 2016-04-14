@@ -69,7 +69,8 @@ class Level < ActiveRecord::Base
   # Rails won't natively assign one-to-one association attributes for
   # us, even though we've specified accepts_nested_attributes_for above.
   # So, we must do it manually.
-  def assign_attributes(attributes)
+  def assign_attributes(new_attributes)
+    attributes = new_attributes.stringify_keys
     concept_difficulty_attributes = attributes.delete('level_concept_difficulty')
     assign_nested_attributes_for_one_to_one_association(:level_concept_difficulty,
         concept_difficulty_attributes) if concept_difficulty_attributes
