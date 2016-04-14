@@ -1,8 +1,13 @@
+- content_for(:head) do
+  = javascript_include_tag 'js/plc'
+
 =form_for(@task, url: plc_task_path(@task)) do |f|
   .field
     = render partial: 'plc/tasks/edit/common_editable', locals: {f: f}
     = f.label :assignment_description
-    = f.text_area :assignment_description, rows: 10, style: 'width: 100%'
+    = f.text_area :assignment_description, rows: 10, style: 'width: 100%', value: @task.assignment_description
+
+    #assignment_description_preview
 
   .actions
     = f.submit 'Save'

@@ -14,7 +14,9 @@ var initializeCodeMirror = require("./initializeCodeMirror");
  *    My markdown here
  *    MARKDOWN
  *
- * Suitable for setting a DSL's markdown element
+ *    for a DSL element
+ *
+ * For a non DSL element, use initializeCodeMirror
  *
  * @param {jQuery} embeddedElement textarea element within which to embed the markdown
  * @param {string} markdownTextArea id (which will be prefixed by "level_")

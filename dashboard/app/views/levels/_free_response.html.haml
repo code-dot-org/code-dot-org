@@ -1,16 +1,34 @@
-:javascript
-  function getResult() {
-    return {
-      response: $('.response').val(),
-      result: true
-    };
-  }
+- level ||= @level
+- last_attempt ||= @last_attempt
+- index ||= nil
+
+- if index # If an index was provided we're inside a LevelGroup.
+  :javascript
+    window['level_#{index}'] = {
+      getCurrentAnswer: function () {
+        return $('#level_#{index}').val();
+      },
+      getLevelId: function () {
+        return #{level.id};
+      }
+    }
+- else # Otherwise we need to provide a `window.getResult` function.
+  :javascript
+    function getResult() {
+      return {
+        response: $('.response').val(),
+        result: true
+      };
+    }
 
 .free-response
-  %div= render(inline: @level.markdown_instructions, type: :md)
+  - if level.title.present? && !index
+    %h2= level.title
+  %div= render(inline: level.markdown_instructions, type: :md)
 
-  - height = @level.height || '80'
-  %textarea.response{placeholder: @level.placeholder || 'Enter your answer here', style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}= @last_attempt
+  - height = level.height || '80'
+  %textarea.response{id: "level_#{index}", placeholder: level.placeholder || 'Enter your answer here', style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
 
-= render partial: 'levels/dialog', locals: {app: 'free_response', data: @level.properties}
-= render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => @level.solution}}
+-# Don't render the dialog partial if we're inside a LevelGroup.
+= render partial: 'levels/dialog', locals: {app: 'free_response', data: level.properties} unless index
+= render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}
