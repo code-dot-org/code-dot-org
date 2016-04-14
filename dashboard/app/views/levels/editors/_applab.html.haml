@@ -43,7 +43,7 @@
     #{html_escape("<div xmlns='http://www.w3.org/1999/xhtml' id='divApplab'")}...)
   = f.text_area :start_html, placeholder: 'Start html', rows: 4, value: @level.start_html
   :javascript
-    levelbuilder.initializeCodeMirror('start_html', 'html');
+    levelbuilder.initializeCodeMirror('level_start_html', 'html');
 .field.examples
   = f.label :examples, 'Example solutions'
   %p
@@ -72,7 +72,7 @@
         ]
   = f.text_area 'log_conditions', placeholder: 'Insert JSON Data', rows: 4, value: @level.log_conditions ? JSON.pretty_generate(@level.log_conditions) : ''
   :javascript
-    levelbuilder.initializeCodeMirror('log_conditions', 'javascript');
+    levelbuilder.initializeCodeMirror('level_log_conditions', 'javascript');
 
 .field
   = f.label :fail_on_lint_errors
@@ -93,7 +93,7 @@
         }
   = f.text_area 'data_tables', placeholder: 'Insert JSON Data', rows: 4, value: @level.data_tables or ''
   :javascript
-    levelbuilder.initializeCodeMirror('data_tables', 'javascript');
+    levelbuilder.initializeCodeMirror('level_data_tables', 'javascript');
 
 .field
   = f.label 'Key-Value Data'
@@ -108,7 +108,7 @@
         }
   = f.text_area 'data_properties', placeholder: 'Insert JSON Key-Value Data', rows: 4, value: @level.data_properties or ''
   :javascript
-    levelbuilder.initializeCodeMirror('data_properties', 'javascript');
+    levelbuilder.initializeCodeMirror('level_data_properties', 'javascript');
 
 .field
   = f.label 'Hide View Data Button'
