@@ -4,9 +4,14 @@ var assert = testUtils.assert;
 var experiments = require('@cdo/apps/experiments');
 
 describe('experiments', function () {
+  var mockedQueryString = '';
+
+  experiments.getQueryString_ = function () {
+    return mockedQueryString;
+  };
 
   beforeEach(function () {
-    experiments.__TestInterface__.queryString = ' ';
+    mockedQueryString = ' ';
     localStorage.removeItem('experiments-topInstructions');
     localStorage.removeItem('experiments-runModeIndicators');
   });
@@ -21,11 +26,11 @@ describe('experiments', function () {
     assert.strictEqual(experiments.isEnabled('topInstructions'), false);
     assert.strictEqual(localStorage.getItem('experiments-topInstructions'), null);
 
-    experiments.__TestInterface__.queryString = '?topInstructions=true';
+    mockedQueryString = '?topInstructions=true';
     assert.strictEqual(experiments.isEnabled('topInstructions'), true);
     assert.strictEqual(localStorage.getItem('experiments-topInstructions'), 'true');
 
-    experiments.__TestInterface__.queryString = '?topInstructions=false';
+    mockedQueryString = '?topInstructions=false';
     assert.strictEqual(experiments.isEnabled('topInstructions'), false);
     assert.strictEqual(localStorage.getItem('experiments-topInstructions'), null);
   });
@@ -36,7 +41,7 @@ describe('experiments', function () {
     assert.strictEqual(experiments.isEnabled('runModeIndicators'), false);
     assert.strictEqual(localStorage.getItem('experiments-runModeIndicators'), null);
 
-    experiments.__TestInterface__.queryString = '?topInstructions=true&runModeIndicators=true';
+    mockedQueryString = '?topInstructions=true&runModeIndicators=true';
     assert.strictEqual(experiments.isEnabled('topInstructions'), true);
     assert.strictEqual(localStorage.getItem('experiments-topInstructions'), 'true');
     assert.strictEqual(experiments.isEnabled('runModeIndicators'), true);
@@ -47,7 +52,7 @@ describe('experiments', function () {
     assert.strictEqual(experiments.isEnabled('topInstructions'), false);
     assert.strictEqual(localStorage.getItem('experiments-topInstructions'), null);
 
-    experiments.__TestInterface__.queryString = '?topInstructions=true&topInstructions=false';
+    mockedQueryString = '?topInstructions=true&topInstructions=false';
     assert.strictEqual(experiments.isEnabled('topInstructions'), true);
     assert.strictEqual(localStorage.getItem('experiments-topInstructions'), 'true');
   });

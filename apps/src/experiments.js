@@ -10,14 +10,20 @@
 var experiments = module.exports;
 
 /**
+ * Get our query string. Provided as a method so that tests can mock this.
+ */
+experiments.getQueryString_ = function () {
+  return window.location.search;
+};
+
+/**
  * Checks whether provided experiment is enabled or not
  * @param {string} key - Name of experiment in question
  * @returns {bool}
  */
 experiments.isEnabled = function (key) {
   var enabled;
-  var queryString = this.__TestInterface__.queryString ||
-    window.location.search;
+  var queryString = this.getQueryString_();
 
   // check query string, and update localStorage if necessary
   var regex = new RegExp(key + '=(true|false)');
@@ -30,14 +36,9 @@ experiments.isEnabled = function (key) {
       localStorage.removeItem('experiments-' + key);
     }
   } else {
-    // key no in query string, go look at local storage
+    // key not in query string, go look at local storage
     enabled = (localStorage.getItem('experiments-' + key) === 'true');
   }
 
   return enabled;
-};
-
-// can be set to fake window.location.search
-experiments.__TestInterface__ = {
-  queryString: undefined
 };
