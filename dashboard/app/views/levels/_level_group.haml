@@ -7,7 +7,7 @@
   #{render template: 'levels/levelGroup.js', formats: [:js]}
 
   window.levelData = #{data.to_json};
-  window.levelGroup = {questions: {}};
+  window.levelGroup = {levels: {}};
 
 = render partial: 'levels/common_audio'
 

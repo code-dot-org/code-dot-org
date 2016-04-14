@@ -90,7 +90,7 @@
 -# Don't operate if we're a LevelGroup with a /level/ URL.
 - if standalone || @script_level
   :javascript
-    window.levelGroup.questions[#{level.id}] = new Multi(
+    window.levelGroup.levels[#{level.id}] = new Multi(
       "level_#{index}",
       #{level.id},
       #{standalone},
