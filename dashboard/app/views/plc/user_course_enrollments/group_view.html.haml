@@ -1,24 +1,26 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/plc', media: 'all'
+- if @user_course_enrollments.empty?
+  %p Course enrollments for the users you manage will show up here. Right now, you do not have any.
+-else
+  - @courses.each do |course|
+    - enrollments = @user_course_enrollments.where(plc_course: course)
+    - next if enrollments.empty?
 
-- @courses.each do |course|
-  - enrollments = @user_course_enrollments.where(plc_course: course)
-  - next if enrollments.empty?
+    %h3
+      Viewing progress for #{course.name}
 
-  %h3
-    Viewing progress for #{course.name}
-
-  %table
-    %thead
-      %th
-        Teacher Name
-      - course.plc_course_units.each do |course_unit|
+    %table
+      %thead
         %th
-          #{course_unit.unit_name}
-    %tbody
-      - enrollments.each do |enrollment|
-        %tr
-          %td
-            = link_to enrollment.user.name, '/plc/user_course_enrollments/manager_view/' + enrollment.id.to_s
-          - enrollment.plc_unit_assignments.each do |unit_assignment|
-            %td #{unit_assignment.status.titleize}
+          Teacher Name
+        - course.plc_course_units.each do |course_unit|
+          %th
+            #{course_unit.unit_name}
+      %tbody
+        - enrollments.each do |enrollment|
+          %tr
+            %td
+              = link_to enrollment.user.name, '/plc/user_course_enrollments/manager_view/' + enrollment.id.to_s
+            - enrollment.plc_unit_assignments.each do |unit_assignment|
+              %td #{unit_assignment.status.titleize}
