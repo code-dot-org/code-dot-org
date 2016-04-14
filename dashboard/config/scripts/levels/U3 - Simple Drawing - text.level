@@ -180,7 +180,10 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "project_template_level_name": "U3 - Simple Drawing - Road Template"
+    "project_template_level_name": "U3 - Simple Drawing - Road Template",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"element_id\": \"#droplet_palette_block_text\",\r\n  \"callout_text\": \"Use this block to add text on your drawing\",\r\n  \"qtip_config\": {\r\n   \t\"position\": {\r\n      \"my\": \"top right\",\r\n      \"at\": \"bottom left\",\r\n      \"adjust\": {\r\n       \"x\": 0,\r\n       \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n  ]",
+    "instructions": "Do This",
+    "markdown_instructions": "# Text\r\n\r\nLast step is to add text to our stop sign!\r\n\r\nWe can add text with the text block\r\n\r\nParameters- string, x, y, width, height\r\n\r\nDont forget you need to comment your code and use white space\r\n\r\n# Do This\r\n* Add text to the center of the sign\r\n* Make sure the text has no stroke and the fill is white\r\n\r\n<img src=\"https://images.code.org/86a9f34aadf57bb8e3b897b8c6ddf52e-image-1460646615062.09.59 AM.png\" width=200>"
   },
   "published": true,
   "notes": "",
