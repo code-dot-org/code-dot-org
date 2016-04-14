@@ -4,7 +4,7 @@
 
 - if index # If an index was provided we're inside a LevelGroup.
   :javascript
-    window.levelGroup.results[#{level.id}] = {
+    window.levelGroup.questions[#{level.id}] = {
       getCurrentAnswer: function () {
         return $('#level_#{index}').val();
       }
