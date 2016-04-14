@@ -59,11 +59,11 @@ var AnimationPicker = React.createClass({
           uncloseable={this.state.view === View.UPLOAD_IN_PROGRESS}>
         <HiddenUploader
             ref="uploader"
+            toUrl={'/v3/animations/' + this.props.channelId + '/new_animations.png'}
+            typeFilter={this.props.typeFilter}
             onUploadStart={this.onUploadStart}
             onUploadDone={this.onUploadDone}
-            onUploadError={this.onUploadError}
-            channelId={this.props.channelId}
-            typeFilter={this.props.typeFilter} />
+            onUploadError={this.onUploadError} />
         {visibleBody}
       </Dialog>
     );
