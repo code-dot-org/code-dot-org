@@ -29,6 +29,6 @@
   - height = level.height || '80'
   %textarea.response{id: "level_#{index}", placeholder: level.placeholder || 'Enter your answer here', style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
 
--# Don't render the dialog partial if we're inside a LevelGroup.
-= render partial: 'levels/dialog', locals: {app: 'free_response', data: level.properties} unless index
-= render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}
+  -# Don't render the dialog partial if we're inside a LevelGroup.
+  = render partial: 'levels/dialog', locals: {app: 'free_response', data: level.properties} unless index
+  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}
