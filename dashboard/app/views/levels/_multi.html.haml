@@ -1,6 +1,6 @@
 :javascript
   #{render template: 'levels/multi.js', formats: [:js]}
-  window.levelGroup = {questions: {}};
+  window.levelGroup = {levels: {}};
 
 = render partial: 'levels/single_multi', locals: {index: 0, standalone: true, level: @level, last_attempt: @last_attempt, tight_layout: false }
 
