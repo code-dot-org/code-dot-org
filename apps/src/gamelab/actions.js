@@ -2,10 +2,12 @@
  *  @see http://redux.js.org/docs/basics/Actions.html */
 'use strict';
 
+var _ = require('../lodash');
 var utils = require('../utils');
 
 /** @enum {string} */
 var ActionType = module.exports.ActionType = utils.makeEnum(
+  'ADD_ANIMATION_AT',
   'DELETE_ANIMATION',
   'SET_ANIMATION_NAME',
   'SET_INITIAL_ANIMATION_METADATA',
@@ -59,6 +61,49 @@ module.exports.setInitialAnimationMetadata = function (metadata) {
     type: ActionType.SET_INITIAL_ANIMATION_METADATA,
     metadata: metadata
   }
+};
+
+module.exports.addAnimation = function (animationProps) {
+  // TODO: Validate animationProps?
+  return function(dispatch, getState) {
+    dispatch({
+      type: ActionType.ADD_ANIMATION_AT,
+      index: getState().animations.length,
+      animationProps: animationProps
+    });
+  }
+};
+
+module.exports.cloneAnimation = function (animationKey) {
+  return function(dispatch, getState) {
+    var animations = getState().animations;
+    
+    // Track down the source animation and its index in the collection
+    var sourceIndex;
+    for (sourceIndex = 0; sourceIndex < animations.length; sourceIndex++) {
+      if (animations[sourceIndex].key === animationKey) {
+        break;
+      }
+    }
+    var sourceAnimation = animations[sourceIndex];
+    if (!sourceAnimation) {
+      throw new Error('Unable to clone animation with key "' + animationKey +
+          '": Animation not found');
+    }
+
+    // Do async work of copying the S3 asset here, then create an animation with
+    // the new key.
+    // Fake it for now.
+    dispatch({
+      type: ActionType.ADD_ANIMATION_AT,
+      index: sourceIndex + 1,
+      animationProps: _.assign({}, sourceAnimation, {
+        key: utils.createUuid(),
+        name: sourceAnimation.name + '_copy', // TODO: better generated names
+        version: "111111"
+      })
+    });
+  };
 };
 
 /**

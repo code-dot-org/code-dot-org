@@ -217,7 +217,7 @@ GameLab.prototype.init = function (config) {
   }));
 
   // Push project-sourced animation metadata into store
-  if (typeof config.initialAnimationMetadata !== undefined) {
+  if (typeof config.initialAnimationMetadata !== 'undefined') {
     this.reduxStore_.dispatch(actions.setInitialAnimationMetadata(config.initialAnimationMetadata));
   }
 

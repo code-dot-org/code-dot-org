@@ -24,11 +24,12 @@ var ListItemButtons = function (props) {
   return (
     <div style={staticStyles.root}>
       <i className="fa fa-trash-o" style={staticStyles.trash} onClick={props.onDeleteClick} />
-      <i className="fa fa-clone" />
+      <i className="fa fa-clone" onClick={props.onCloneClick} />
     </div>
   );
 };
 ListItemButtons.propTypes = {
+  onCloneClick: React.PropTypes.func/*.isRequired as soon as everything is hooked up. */,
   onDeleteClick: React.PropTypes.func/*.isRequired as soon as everything is hooked up. */
 };
 module.exports = ListItemButtons;
