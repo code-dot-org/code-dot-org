@@ -15,6 +15,7 @@
       "ellipse": null,
       "rect": null,
       "regularPolygon": null,
+      "text": null,
       "comment": null
     },
     "edit_code": true,
