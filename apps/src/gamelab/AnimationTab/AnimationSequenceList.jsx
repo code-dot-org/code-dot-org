@@ -20,17 +20,29 @@ var styles = {
 var AnimationSequenceList = function (props) {
   return (
     <ScrollableList style={styles.root} className="animation-sequence-list">
-      <AnimationSequenceListItem sequenceName="sequence01" />
-      <AnimationSequenceListItem sequenceName="sequence02" isSelected />
-      <NewListItem label="new sequence" onClick={props.onNewItemClick} />
+      {props.animations.map(function (animation) {
+        return <AnimationSequenceListItem
+            key={animation.key}
+            animation={animation}
+            isSelected={animation.key === props.selectedAnimation} />;
+      })}
+      <NewListItem
+          key="new_animation"
+          label="new sequence"
+          onClick={props.onNewItemClick} />
     </ScrollableList>
   );
 };
 AnimationSequenceList.propTypes = {
+  animations: React.PropTypes.array.isRequired,
+  selectedAnimation: React.PropTypes.string,
   onNewItemClick: React.PropTypes.func.isRequired
 };
 module.exports = connect(function propsFromState(state) {
-  return {};
+  return {
+    animations: state.animations,
+    selectedAnimation: state.animationTab.selectedAnimation
+  };
 }, function propsFromDispatch(dispatch) {
   return {
     onNewItemClick: function () {

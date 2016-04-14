@@ -4,7 +4,9 @@
 
 /** @enum {string} */
 var ActionType = module.exports.ActionType = {
+  SET_ANIMATION_NAME: 'SET_ANIMATION_NAME',
   SET_INITIAL_LEVEL_PROPS: 'SET_INITIAL_LEVEL_PROPS',
+  SET_INITIAL_ANIMATION_METADATA: 'SET_INITIAL_ANIMATION_METADATA',
   CHANGE_INTERFACE_MODE: 'CHANGE_INTERFACE_MODE'
 };
 
@@ -39,5 +41,27 @@ module.exports.setInitialLevelProps = function (props) {
   return {
     type: ActionType.SET_INITIAL_LEVEL_PROPS,
     props: props
+  };
+};
+
+/**
+ * Push full animation metadata into the store, usually on first load
+ * from the sources API.
+ * 
+ * @param {Object} metadata
+ * @returns {{type: ActionType, metadata: Object}}
+ */
+module.exports.setInitialAnimationMetadata = function (metadata) {
+  return {
+    type: ActionType.SET_INITIAL_ANIMATION_METADATA,
+    metadata: metadata
+  }
+};
+
+module.exports.setAnimationName = function (animationKey, name) {
+  return {
+    type: ActionType.SET_ANIMATION_NAME,
+    animationKey: animationKey,
+    name: name
   };
 };
