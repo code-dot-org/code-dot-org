@@ -5,6 +5,7 @@
 var _ = require('../lodash');
 var ActionType = require('./actions').ActionType;
 var animationPicker = require('./AnimationPicker/reducers').animationPicker;
+var animationTab = require('./AnimationTab/reducers').animationTab;
 var combineReducers = require('redux').combineReducers;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 
@@ -48,8 +49,53 @@ function level(state, action) {
   }
 }
 
+var animationsInitialState = [
+  {
+    "name": "animation1",
+    "frameRate": 10,
+    "key": "animation1_key",
+    "version": "111111",
+    "frameWidth": 400,
+    "frameHeight": 200,
+    "frameCount": 8,
+    "framesPerRow": 5
+  },
+  {
+    "name": "animation2",
+    "frameRate": 10,
+    "key": "animation2_key",
+    "version": "111111",
+    "frameWidth": 400,
+    "frameHeight": 200,
+    "frameCount": 8,
+    "framesPerRow": 5
+  }
+];
+
+function animations(state, action) {
+  state = state || animationsInitialState;
+  
+  switch (action.type) {
+    case ActionType.SET_INITIAL_ANIMATION_METADATA:
+      return action.metadata;
+    case ActionType.SET_ANIMATION_NAME:
+      for (var i = 0; i < state.length; i++) {
+        if (state[i].key === action.animationKey) {
+          state[i] = _.assign({}, state[i], {
+            name: action.name
+          });
+        }
+      }
+      return state.slice();
+    default:
+      return state;
+  }
+}
+
 var gamelabReducer = combineReducers({
   animationPicker: animationPicker,
+  animationTab: animationTab,
+  animations: animations,
   interfaceMode: interfaceMode,
   level: level
 });

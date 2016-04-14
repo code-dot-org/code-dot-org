@@ -216,6 +216,11 @@ GameLab.prototype.init = function (config) {
     isShareView: !!config.share
   }));
 
+  // Push project-sourced animation metadata into store
+  if (typeof config.initialAnimationMetadata !== undefined) {
+    this.reduxStore_.dispatch(actions.setInitialAnimationMetadata(config.initialAnimationMetadata));
+  }
+
   ReactDOM.render(<Provider store={this.reduxStore_}>
     <GameLabView
       generateCodeWorkspaceHtml={generateCodeWorkspaceHtmlFromEjs}
@@ -797,4 +802,12 @@ GameLab.prototype.displayFeedback_ = function () {
       sharingText: msg.shareGame()
     }
   });
+};
+
+/**
+ * Get the project's animation metadata for upload to the sources API.
+ * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
+ */
+GameLab.prototype.getAnimationMetadata = function () {
+  return this.reduxStore_.getState().animations;
 };
