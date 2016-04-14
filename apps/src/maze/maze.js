@@ -31,6 +31,7 @@ var api = require('./api');
 var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var MazeControls = require('./MazeControls');
 var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
@@ -503,8 +504,6 @@ Maze.init = function (config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
   studioApp.reset = this.reset.bind(this);
 
-  var extraControlRows = null;
-
   skin = config.skin;
   level = config.level;
 
@@ -518,10 +517,6 @@ Maze.init = function (config) {
     Maze.scale.stepSpeed = 2;
   } else if (config.skinId === 'letters') {
     Maze.wordSearch = new WordSearch(level.searchWord, level.map, Maze.drawTile);
-    extraControlRows = require('./extraControlRows.html.ejs')({
-      assetUrl: studioApp.assetUrl,
-      searchWord: level.searchWord
-    });
   }
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.cellClass = BeeCell;
@@ -634,11 +629,13 @@ Maze.init = function (config) {
       assetUrl: studioApp.assetUrl,
       data: {
         visualization: require('./visualization.html.ejs')(),
-        controls: require('./controls.html.ejs')({
+        controls: React.renderToStaticMarkup(
+          <MazeControls showStepButton={level.step && !level.edit_blocks}/>
+        ),
+        extraControlRows: config.skinId === 'letters' && require('./extraControlRows.html.ejs')({
           assetUrl: studioApp.assetUrl,
-          showStepButton: level.step && !level.edit_blocks
-        }),
-        extraControlRows: extraControlRows
+          searchWord: level.searchWord
+        })
       },
       hideRunButton: level.stepOnly && !level.edit_blocks
     });
