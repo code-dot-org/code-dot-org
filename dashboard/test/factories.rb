@@ -35,6 +35,7 @@ FactoryGirl.define do
         name 'District Contact Person'
         ops_first_name 'District'
         ops_last_name 'Person'
+        admin false
       end
     end
 
@@ -47,6 +48,11 @@ FactoryGirl.define do
       user_type User::TYPE_STUDENT
       birthday Time.zone.today - 10.years
     end
+  end
+
+  factory :districts_users do
+    district nil
+    user nil
   end
 
   factory :section do

@@ -10,12 +10,12 @@ var initializeEmbeddedMarkdownEditor = require('./initializeEmbeddedMarkdownEdit
 $(document).ready(function () {
   initializeEmbeddedMarkdownEditor(
     $('#level_dsl_text'),
-    'markdown_textarea',
+    'level_markdown_textarea',
     $('#markdown-preview'),
     'markdown');
   initializeEmbeddedMarkdownEditor(
     $('#level_dsl_text'),
-    'teacher_markdown_textarea',
+    'level_teacher_markdown_textarea',
     $('#teacher-markdown-preview'),
     'teacher_markdown');
 });

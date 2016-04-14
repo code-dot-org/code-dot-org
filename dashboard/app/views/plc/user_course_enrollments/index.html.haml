@@ -1,29 +1,32 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/plc', media: 'all'
 
-%p Hello #{current_user.name}, here is your progress for your courses
+- if @user_course_enrollments.nil? || @user_course_enrollments.empty?
+  %p Hello #{current_user.name}, your future course progress will go here
+- else
+  %p Hello #{current_user.name}, here is your progress for your courses
 
-- @user_course_enrollments.each do |user_course_enrollment|
-  %h2 #{user_course_enrollment.plc_course.name}
-  - user_course_enrollment.plc_unit_assignments.each do |enrollment_unit_assignment|
-    .outlined_section
-      %h4
-        = enrollment_unit_assignment.plc_course_unit.unit_name
-      - case enrollment_unit_assignment.status
-        - when Plc::EnrollmentUnitAssignment::START_BLOCKED
-          %p
-            This unit cannot be started yet
-        - when Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
-          %p
-            = link_to 'Click here to take the evaluation quiz for this unit', perform_evaluation_path(enrollment_unit_assignment), class: 'btn'
-        - when Plc::EnrollmentUnitAssignment::IN_PROGRESS
-          %p
-            = link_to 'Click here to view tasks, resources, and get badged', plc_enrollment_unit_assignment_path(enrollment_unit_assignment), class: 'btn'
-        - when Plc::EnrollmentUnitAssignment::COMPLETED
-          %p.fa.fa-check-circle.fa-5x{style: 'color: green; display: table; margin: auto'}
-          %p{style: 'text-align: center'}
-            #{enrollment_unit_assignment.plc_course_unit.unit_name} badge complete!
-          %p
-            = link_to "Click here to #{enrollment_unit_assignment.plc_course_unit.unit_name} resources", plc_enrollment_unit_assignment_path(enrollment_unit_assignment), class: 'btn'
+  - @user_course_enrollments.each do |user_course_enrollment|
+    %h2 #{user_course_enrollment.plc_course.name}
+    - user_course_enrollment.plc_unit_assignments.each do |enrollment_unit_assignment|
+      .outlined_section
+        %h4
+          = enrollment_unit_assignment.plc_course_unit.unit_name
+        - case enrollment_unit_assignment.status
+          - when Plc::EnrollmentUnitAssignment::START_BLOCKED
+            %p
+              This unit cannot be started yet
+          - when Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
+            %p
+              = link_to 'Click here to take the evaluation quiz for this unit', perform_evaluation_path(enrollment_unit_assignment), class: 'btn'
+          - when Plc::EnrollmentUnitAssignment::IN_PROGRESS
+            %p
+              = link_to 'Click here to view tasks, resources, and get badged', plc_enrollment_unit_assignment_path(enrollment_unit_assignment), class: 'btn'
+          - when Plc::EnrollmentUnitAssignment::COMPLETED
+            %p.fa.fa-check-circle.fa-5x{style: 'color: green; display: table; margin: auto'}
+            %p{style: 'text-align: center'}
+              #{enrollment_unit_assignment.plc_course_unit.unit_name} badge complete!
+            %p
+              = link_to "Click here to #{enrollment_unit_assignment.plc_course_unit.unit_name} resources", plc_enrollment_unit_assignment_path(enrollment_unit_assignment), class: 'btn'
+      %br
     %br
-  %br

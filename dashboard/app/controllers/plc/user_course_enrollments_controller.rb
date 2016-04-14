@@ -3,13 +3,19 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   authorize_resource only: :create
 
   def index
-    @user_course_enrollments = @user_course_enrollments.where(user: current_user)
+    @user_course_enrollments = @user_course_enrollments.where(user: current_user) if @user_course_enrollments
   end
 
   def group_view
     # This is a method to view many different people's course enrollments
     @courses = Plc::Course.all
-    @user_course_enrollments = Plc::UserCourseEnrollment.all
+
+    if current_user.admin?
+      # This should be okay with a thousand enrollments but it's really just a placeholder while we develop this
+      @user_course_enrollments = Plc::UserCourseEnrollment.all.limit(1000)
+    elsif current_user.district_contact?
+      @user_course_enrollments = Plc::UserCourseEnrollment.where(user: District.where(contact: current_user).map(&:users).flatten)
+    end
   end
 
   def manager_view

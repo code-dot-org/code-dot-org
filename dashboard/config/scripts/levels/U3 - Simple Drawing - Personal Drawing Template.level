@@ -15,6 +15,12 @@
       "ellipse": null,
       "rect": null,
       "regularPolygon": null,
+      "text": null,
+      "textAlign": null,
+      "textFont": null,
+      "textSize": null,
+      "background": null,
+      "randomNumber_min_max": null,
       "comment": null
     },
     "edit_code": true,
