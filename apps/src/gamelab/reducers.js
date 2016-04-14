@@ -50,32 +50,26 @@ function level(state, action) {
 }
 
 var animationsInitialState = [
-  {
-    "name": "animation1",
-    "frameRate": 10,
-    "key": "animation1_key",
-    "version": "111111",
-    "frameWidth": 400,
-    "frameHeight": 200,
-    "frameCount": 8,
-    "framesPerRow": 5
-  },
-  {
-    "name": "animation2",
-    "frameRate": 10,
-    "key": "animation2_key",
-    "version": "111111",
-    "frameWidth": 400,
-    "frameHeight": 200,
-    "frameCount": 8,
-    "framesPerRow": 5
-  }
+  // {
+  //   "name": "animation1",
+  //   "frameRate": 10,
+  //   "key": "animation1_key",
+  //   "version": "111111",
+  //   "frameWidth": 400,
+  //   "frameHeight": 200,
+  //   "frameCount": 8,
+  //   "framesPerRow": 5
+  // }
 ];
 
 function animations(state, action) {
   state = state || animationsInitialState;
   
   switch (action.type) {
+    case ActionType.DELETE_ANIMATION:
+      return state.filter(function (animation) {
+        return animation.key !== action.animationKey;
+      });
     case ActionType.SET_INITIAL_ANIMATION_METADATA:
       return action.metadata;
     case ActionType.SET_ANIMATION_NAME:

@@ -20,12 +20,15 @@ var staticStyles = {
 /**
  * The delete and duplicate controls beneath an animation or frame thumbnail.
  */
-var ListItemButtons = function () {
+var ListItemButtons = function (props) {
   return (
     <div style={staticStyles.root}>
-      <i className="fa fa-trash-o" style={staticStyles.trash} />
+      <i className="fa fa-trash-o" style={staticStyles.trash} onClick={props.onDeleteClick} />
       <i className="fa fa-clone" />
     </div>
   );
+};
+ListItemButtons.propTypes = {
+  onDeleteClick: React.PropTypes.func/*.isRequired as soon as everything is hooked up. */
 };
 module.exports = ListItemButtons;

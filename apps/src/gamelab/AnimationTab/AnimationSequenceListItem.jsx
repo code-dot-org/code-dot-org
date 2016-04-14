@@ -53,12 +53,17 @@ var AnimationSequenceListItem = React.createClass({
     assetUrl: React.PropTypes.func.isRequired,
     isSelected: React.PropTypes.bool,
     animation: React.PropTypes.object.isRequired,
+    deleteAnimation: React.PropTypes.func.isRequired,
     selectAnimation: React.PropTypes.func.isRequired,
     setAnimationName: React.PropTypes.func.isRequired
   },
   
   onSelect: function () {
     this.props.selectAnimation(this.props.animation.key);
+  },
+  
+  deleteAnimation: function () {
+    this.props.deleteAnimation(this.props.animation.key);
   },
 
   onNameChange: function (event) {
@@ -96,7 +101,7 @@ var AnimationSequenceListItem = React.createClass({
             isSelected={this.props.isSelected}
             src={this.props.assetUrl('media/common_images/draw-east.png')} />
         {sequenceName}
-        {this.props.isSelected && <ListItemButtons />}
+        {this.props.isSelected && <ListItemButtons onDeleteClick={this.deleteAnimation} />}
       </div>
     );
   }
@@ -107,6 +112,9 @@ module.exports = connect(function propsFromStore(state) {
   };
 }, function propsFromDispatch(dispatch) {
   return {
+    deleteAnimation: function (animationKey) {
+      dispatch(actions.deleteAnimation(animationKey));
+    },
     selectAnimation: function (animationKey) {
       dispatch(animationTabActions.selectAnimation(animationKey));
     },
