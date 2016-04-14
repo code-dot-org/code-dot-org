@@ -3,11 +3,23 @@ require_relative '../deployment'
 require_relative '../lib/cdo/aws/s3'
 require_relative '../shared/middleware/helpers/storage_id'
 
-MAX_THREADS = 50
+MAX_THREADS = 200
 MAX_KEYS = 1000
 
 regex = ARGV[0].to_s.strip
-raise "usage: #{$0} regex" unless !regex.empty?
+raise "usage: #{$0} regex > output.tsv" unless !regex.empty?
+
+# Searches all applab source code for the specified regex and prints results to a tsv file.
+# This is useful for seeing if we will break anyone's program if we change how a block works.
+#
+# The 'match' field is either the first '()' grouping in the regex if one is specified, or
+# the entire matched string otherwise.
+#
+# With 200 threads this script takes approximately 1 hour to process 800,000 source files
+# on production-console.
+
+# print tsv headers
+puts %w{owner_storage_id match project_url}.join("\t")
 
 s3 = Aws::S3::Client.new
 marker = nil
@@ -23,23 +35,23 @@ loop do
   contents.each_slice(MAX_THREADS) do |chunk|
     threads = []
     chunk.each do |fileinfo|
-      _, app_id, channel_id, filename = %r{#{base_dir}/([^/]+)/([^/]+)/([^/]+)$}.match(fileinfo.key).to_a
-      if filename == 'main.json'
-        count += 1
-        threads << Thread.new do
+      threads << Thread.new do
+        _, owner_storage_id, channel_id, filename = %r{#{base_dir}/([^/]+)/([^/]+)/([^/]+)$}.match(fileinfo.key).to_a
+        if filename == 'main.json'
           body = s3.get_object(bucket: bucket, key: fileinfo.key)[:body].read
-          if body.include? regex
-#         source = JSON.parse(body)['source']
-#         if source =~ /#{regex}/i
-            channel = storage_encrypt_channel_id(app_id, channel_id)
-            puts "https://#{CDO.dashboard_hostname}/projects/applab/#{channel}/view"
-#         end
+          source = JSON.parse(body)['source']
+          match = source.match(regex)
+          if match
+            channel = storage_encrypt_channel_id(owner_storage_id, channel_id)
+            project_url = "https://#{CDO.dashboard_hostname}/projects/applab/#{channel}/view"
+            puts "#{owner_storage_id}\t#{match[1] || match[0]}\t#{project_url}"
           end
         end
       end
     end
     threads.each &:join
   end
-  puts "#{count} files scanned..."
+  count += contents.length
+  $stderr.puts "#{count} files scanned..."
 end
-puts "#{count} files scanned total"
+$stderr.puts "#{count} files scanned total"
