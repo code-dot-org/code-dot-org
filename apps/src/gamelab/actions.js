@@ -4,6 +4,7 @@
 
 /** @enum {string} */
 var ActionType = module.exports.ActionType = {
+  DELETE_ANIMATION: 'DELETE_ANIMATION',
   SET_ANIMATION_NAME: 'SET_ANIMATION_NAME',
   SET_INITIAL_LEVEL_PROPS: 'SET_INITIAL_LEVEL_PROPS',
   SET_INITIAL_ANIMATION_METADATA: 'SET_INITIAL_ANIMATION_METADATA',
@@ -58,6 +59,24 @@ module.exports.setInitialAnimationMetadata = function (metadata) {
   }
 };
 
+/**
+ * Delete the specified animation from the project.
+ * @param {string} animationKey
+ * @returns {{type: ActionType, animationKey: string}}
+ */
+module.exports.deleteAnimation = function (animationKey) {
+  return {
+    type: ActionType.DELETE_ANIMATION,
+    animationKey: animationKey
+  };
+};
+
+/**
+ * Set the display name of the specified animation.
+ * @param {string} animationKey
+ * @param {string} name
+ * @returns {{type: ActionType, animationKey: string, name: string}}
+ */
 module.exports.setAnimationName = function (animationKey, name) {
   return {
     type: ActionType.SET_ANIMATION_NAME,
