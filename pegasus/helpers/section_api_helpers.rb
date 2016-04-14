@@ -344,7 +344,7 @@ class DashboardSection
              :secret_pictures__path___secret_picture_path).
       distinct(:student_user_id).
       where(section_id: @row[:id]).
-      where(deleted_at: nil).
+      where(users__deleted_at: nil).
       map do |row|
         row.merge({
           location: "/v2/users/#{row[:id]}",
