@@ -25,7 +25,7 @@ def replace_hostname(url)
   end
 
   # Convert http to https
-  url = url.gsub(/^http:\/\//,'https://') unless url.starts_with? 'http://localhost'
+  url = url.gsub(/^http:\/\//,'https://') unless url.start_with? 'http://localhost'
   # Convert x.y.code.org to x-y.code.org
   url.gsub(/(\w+)\.(\w+)\.code\.org/,'\1-\2.code.org')
 end
@@ -371,6 +371,10 @@ Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expec
   element_contains_text(selector, expectedText)
 end
 
+Then /^element "([^"]*)" eventually contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
+  Selenium::WebDriver::Wait.new(:timeout => 15).until { element_contains_text?(selector, expectedText) }
+end
+
 Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expectedValue|
   element_value_is(selector, expectedValue)
 end
@@ -553,28 +557,26 @@ def encrypted_cookie(user)
   CGI.escape(encrypted_data.to_s)
 end
 
-def log_in_as(user)
-  params = {
-    name: "_learn_session_#{Rails.env}",
-    value: encrypted_cookie(user)
+def log_in_as(name)
+  steps %Q{
+    Given I am on "http://studio.code.org/reset_session"
+    Then I am on "http://studio.code.org/"
+    And I wait to see "#signin_button"
+    Then I click selector "#signin_button"
+    And I wait to see ".new_user"
+    And I fill in username and password for "#{name}"
+    And I click selector "input[type=submit][value='Sign in']"
+    And I wait to see ".header_user"
   }
-  params[:secure] = true if @browser.current_url.start_with? 'https://'
 
-  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/
-    params[:domain] = '.code.org' # top level domain cookie
-  end
-
-  puts "Setting cookie: #{CGI::escapeHTML params.inspect}"
-
-  @browser.manage.delete_all_cookies
-  @browser.manage.add_cookie params
-
-  debug_cookies(@browser.manage.all_cookies)
+  # @browser.manage.delete_all_cookies
+  # @browser.manage.add_cookie params
+  #
+  # debug_cookies(@browser.manage.all_cookies)
 end
 
 Given(/^I sign in as "([^"]*)"/) do |name|
-  log_in_as(@users[name])
+  log_in_as(name)
 end
 
 Given(/^I am a (student|teacher)$/) do |user_type|
@@ -585,12 +587,23 @@ Given(/^I am a (student|teacher)$/) do |user_type|
   }
 end
 
-And(/^I create a student named "([^"]*)"$/) do |name|
+def generate_user(name)
   email = "user#{Time.now.to_i}_#{rand(1000)}@testing.xx"
   password = name + "password" # hack
+  @users ||= {}
+  @users[name] = {
+      password: password,
+      email: email
+  }
+  return email, password
+end
+
+And(/^I create a student named "([^"]*)"$/) do |name|
+  email, password = generate_user(name)
 
   steps %Q{
-    Given I am on "https://learn.code.org/users/sign_up"
+    Given I am on "http://learn.code.org/users/sign_up"
+    And I wait to see "#user_name"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
@@ -601,10 +614,11 @@ And(/^I create a student named "([^"]*)"$/) do |name|
 end
 
 And(/^I create a teacher named "([^"]*)"$/) do |name|
-  email = "user#{Time.now.to_i}_#{rand(1000)}@testing.xx"
-  password = name + "password" # hack
+  email, password = generate_user(name)
+
   steps %Q{
-    Given I am on "https://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher"
+    Given I am on "http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher"
+    And I wait to see "#user_name"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
@@ -615,8 +629,8 @@ end
 
 And(/I fill in username and password for "([^"]*)"$/) do |name|
   steps %Q{
-    And I type "#{@users[name].email}" into "#user_login"
-    And I type "#{name}password" into "#user_password"
+    And I type "#{@users[name][:email]}" into "#user_login"
+    And I type "#{@users[name][:password]}" into "#user_password"
   }
 end
 
@@ -638,13 +652,7 @@ Given(/^I manually sign in as "([^"]*)"$/) do |name|
     And I create a student named "#{name}"
     Then I am on "http://studio.code.org/"
     And I reload the page
-    Then I wait for 2 seconds
     Then I wait to see ".header_user"
-    Then I click selector "#signin_button"
-    And I wait to see ".new_user"
-    And I fill in username and password for "#{name}"
-    And I click selector "input[type=submit][value='Sign in']"
-    And I wait to see ".header_user"
   }
 end
 

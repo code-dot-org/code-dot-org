@@ -23,6 +23,12 @@ module BrowserHelpers
     text.strip.should include expectedText
   end
 
+  def element_contains_text?(selector, expectedText)
+    expectedText.gsub!('\"', '"')
+    text = @browser.execute_script("return $(\"#{selector}\").text();")
+    text.strip.include? expectedText
+  end
+
   def element_value_is(selector, expectedValue)
     value = @browser.execute_script("return $(\"#{selector}\").val();")
     value.strip.should eq expectedValue
