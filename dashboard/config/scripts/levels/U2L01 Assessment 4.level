@@ -1,7 +1,8 @@
 <FreeResponse>
   <config><![CDATA[{
   "game_id": 52,
-  "created_at": "2016-04-13T21:08:17.047Z",
+  "created_at": "2016-04-13T21:08:17.000Z",
+  "level_num": "custom",
   "user_id": 0,
   "properties": {
     "markdown_instructions": "## The Internet is for Everyone: Assessment 4\n\nExplain one challenge raised by Vint Cerf in “The Internet is for Everyone - but it won’t be if….” and give one example of it that you know about.\n",

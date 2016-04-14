@@ -1,7 +1,8 @@
 <FreeResponse>
   <config><![CDATA[{
   "game_id": 52,
-  "created_at": "2016-04-13T21:08:07.303Z",
+  "created_at": "2016-04-13T21:08:07.000Z",
+  "level_num": "custom",
   "user_id": 0,
   "properties": {
     "placeholder": "Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.",

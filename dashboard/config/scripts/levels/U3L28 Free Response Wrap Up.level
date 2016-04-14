@@ -1,7 +1,8 @@
 <FreeResponse>
   <config><![CDATA[{
   "game_id": 52,
-  "created_at": "2016-04-13T21:08:37.259Z",
+  "created_at": "2016-04-13T21:08:37.000Z",
+  "level_num": "custom",
   "user_id": 0,
   "properties": {
     "title": "While Loop Basics: Wrap Up",
