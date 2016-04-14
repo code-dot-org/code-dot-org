@@ -1,8 +1,8 @@
 /* global $ */
 
 var color = require('../color');
-var DesignToolbox = require('./DesignToolbox.jsx');
-var DesignProperties = require('./designProperties.jsx');
+var DesignToolbox = require('./DesignToolbox');
+var DesignProperties = require('./designProperties');
 
 module.exports = React.createClass({
   propTypes: {
@@ -18,7 +18,7 @@ module.exports = React.createClass({
     isDimmed: React.PropTypes.bool.isRequired
   },
 
-  render: function() {
+  render: function () {
     var styles = {
       container: {
         position: 'absolute',

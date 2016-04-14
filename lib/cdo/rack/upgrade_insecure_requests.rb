@@ -3,6 +3,7 @@
 # http://www.w3.org/TR/upgrade-insecure-requests
 
 require 'cdo/rack/process_html'
+require 'dynamic_config/dcdo'
 
 module Rack
   class UpgradeInsecureRequests < ProcessHtml
@@ -18,14 +19,15 @@ module Rack
     def initialize(app)
       super(
           app,
-          skip_if: lambda(&method(:not_ssl?)),
-          xpath: %w(img script embed iframe).map{|x|"//#{x}[@src[starts-with(.,'http://')]]"}.join(' | ')
-      ) do |nodes|
+          xpath: %w(img script embed iframe).map{|x| "//#{x}[@src[starts-with(.,'http://')]]"}.join(' | ')
+      ) do |nodes, env|
         nodes.each do |node|
           # Output the urls we're rewriting so we can update them to https
           # in our codebase.
-          puts "REWRITING: #{node}"
-          process(node)
+          if ssl?(env)
+            puts "REWRITING: #{node}"
+            process(node)
+          end
         end
       end
     end

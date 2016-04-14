@@ -42,16 +42,16 @@ end
 
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
-  steps %q{
+  steps <<-STEPS
     When I press "x-close"
     And I wait for 0.75 seconds
-  }
+  STEPS
 end
 
 When /^I close the React alert$/ do
-  steps %q{
+  steps <<-STEPS
     When I click selector ".react-alert button"
-  }
+  STEPS
 end
 
 When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
@@ -59,7 +59,7 @@ When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
 end
 
 When /^I reset the puzzle to the starting version$/ do
-  steps %q{
+  steps <<-STEPS
     Then I click selector "#versions-header"
     And I wait to see a dialog titled "Version History"
     And I see "#showVersionsModal"
@@ -70,7 +70,7 @@ When /^I reset the puzzle to the starting version$/ do
     And I click selector "button:contains(Delete Progress)"
     And I click selector "#confirm-button"
     And I wait until element "#showVersionsModal" is gone
-  }
+  STEPS
 end
 
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -151,9 +151,9 @@ When /^I press the first "([^"]*)" element$/ do |selector|
   end
 end
 
-When /^I press the "([^"]*)" button$/ do |buttonText|
+When /^I press the "([^"]*)" button$/ do |button_text|
   wait_with_short_timeout.until {
-    @button = @browser.find_element(:css, "input[value='#{buttonText}']")
+    @button = @browser.find_element(:css, "input[value='#{button_text}']")
   }
   @button.click
 end
@@ -179,18 +179,18 @@ When /^I (?:open|close) the small footer menu$/ do
   }
 end
 
-When /^I press menu item "([^"]*)"$/ do |menuItemText|
-  menu_item_selector = "ul#more-menu a:contains(#{menuItemText})"
+When /^I press menu item "([^"]*)"$/ do |menu_item_text|
+  menu_item_selector = "ul#more-menu a:contains(#{menu_item_text})"
   steps %{
     Then I wait until element "#{menu_item_selector}" is visible
     And I click selector "#{menu_item_selector}"
   }
 end
 
-When /^I select the "([^"]*)" small footer item$/ do |menuItemText|
+When /^I select the "([^"]*)" small footer item$/ do |menu_item_text|
   steps %{
     Then I open the small footer menu
-    And I press menu item "#{menuItemText}"
+    And I press menu item "#{menu_item_text}"
   }
 end
 
@@ -271,19 +271,19 @@ When /^I press delete$/ do
   @browser.execute_script(script)
 end
 
-When /^I hold key "([^"]*)"$/ do |keyCode|
-  script ="$(window).simulate('keydown',  {keyCode: $.simulate.keyCode['#{keyCode}']})"
+When /^I hold key "([^"]*)"$/ do |key_code|
+  script ="$(window).simulate('keydown',  {keyCode: $.simulate.keyCode['#{key_code}']})"
   @browser.execute_script(script)
 end
 
-When /^I type "([^"]*)" into "([^"]*)"$/ do |inputText, selector|
-  @browser.execute_script("$('" + selector + "').val('" + inputText + "')")
+When /^I type "([^"]*)" into "([^"]*)"$/ do |input_text, selector|
+  @browser.execute_script("$('" + selector + "').val('" + input_text + "')")
   @browser.execute_script("$('" + selector + "').keyup()")
   @browser.execute_script("$('" + selector + "').change()")
 end
 
-When /^I set text compression dictionary to "([^"]*)"$/ do |inputText|
-  @browser.execute_script("editor.setValue('#{inputText}')")
+When /^I set text compression dictionary to "([^"]*)"$/ do |input_text|
+  @browser.execute_script("editor.setValue('#{input_text}')")
 end
 
 Then /^I should see title "([^"]*)"$/ do |title|
@@ -321,28 +321,28 @@ end
 
 # The second regex matches strings in which all double quotes and backslashes
 # are quoted (preceded by a backslash).
-Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
-  element_has_text(selector, expectedText)
+Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
+  element_has_text(selector, expected_text)
 end
 
 Then /^I set selector "([^"]*)" text to "([^"]*)"$/ do |selector, text|
   @browser.execute_script("$(\"#{selector}\").text(\"#{text}\");")
 end
 
-Then /^element "([^"]*)" has escaped text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
+Then /^element "([^"]*)" has escaped text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
   # Add more unescaping rules here as needed.
-  expectedText.gsub!(/\\n/, "\n")
-  element_has_text(selector, expectedText)
+  expected_text.gsub!(/\\n/, "\n")
+  element_has_text(selector, expected_text)
 end
 
-Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expectedHtml|
-  element_has_html(selector, expectedHtml)
+Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expected_html|
+  element_has_html(selector, expected_html)
 end
 
-Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
+Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   steps %{
     Then I wait to see a ".dialog-title"
-    And element ".dialog-title" has text "#{expectedText}"
+    And element ".dialog-title" has text "#{expected_text}"
   }
 end
 
@@ -355,24 +355,24 @@ end
 
 # pixelation and other dashboard levels pull a bunch of hidden dialog elements
 # into the dom, so we have to check for the dialog more carefully.
-Then /^I wait to see a visible dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expectedText|
+Then /^I wait to see a visible dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   steps %{
     And I wait to see ".modal-body"
     And element ".modal-body .dialog-title" is visible
-    And element ".modal-body .dialog-title" contains text "#{expectedText}"
+    And element ".modal-body .dialog-title" contains text "#{expected_text}"
   }
 end
 
-Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, locKey|
-  element_has_i18n_text(selector, language, locKey)
+Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
+  element_has_i18n_text(selector, language, loc_key)
 end
 
-Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
-  element_contains_text(selector, expectedText)
+Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
+  element_contains_text(selector, expected_text)
 end
 
-Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expectedValue|
-  element_value_is(selector, expectedValue)
+Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expected_value|
+  element_value_is(selector, expected_value)
 end
 
 Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
@@ -380,8 +380,8 @@ Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
   value.should eq negation.nil?
 end
 
-Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expectedText|
-  element_has_attribute(selector, attribute, replace_hostname(expectedText))
+Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expected_text|
+  element_has_attribute(selector, attribute, replace_hostname(expected_text))
 end
 
 # The second regex encodes that ids should not contain spaces or quotes.
@@ -565,7 +565,7 @@ def log_in_as(user)
     params[:domain] = '.code.org' # top level domain cookie
   end
 
-  puts "Setting cookie: #{CGI::escapeHTML params.inspect}"
+  puts "Setting cookie: #{CGI.escapeHTML params.inspect}"
 
   @browser.manage.delete_all_cookies
   @browser.manage.add_cookie params
@@ -594,6 +594,22 @@ And(/^I create a (student|teacher) named "([^"]*)"$/) do |user_type, name|
     user.age = user_type == 'student' ? 16 : 21
     user.confirmed_at = Time.now
   end
+end
+
+# used for tests that touch components that are being A/B tested
+And(/^I create a student with an (even|odd) ID named "([^"]*)"$/) do |id_type, name|
+  new_user = nil
+  begin
+    new_user = User.find_or_create_by!(email: "user#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |user|
+      user.name = name
+      user.password = name + "password" # hack
+      user.user_type = 'student'
+      user.age = 16
+      user.confirmed_at = Time.now
+    end
+  end until (id_type == 'even' && new_user.id.even?) || (id_type == 'odd' && new_user.id.odd?)
+  @users ||= {}
+  @users[name] = new_user
 end
 
 And(/I fill in username and password for "([^"]*)"$/) do |name|
@@ -636,7 +652,7 @@ When(/^I sign out$/) do
 end
 
 When(/^I debug cookies$/) do
-  puts "DEBUG: url=#{CGI::escapeHTML @browser.current_url.inspect}"
+  puts "DEBUG: url=#{CGI.escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)
 end
 
@@ -731,16 +747,16 @@ Then /^I append "([^"]*)" to the URL$/ do |append|
   @browser.navigate.to "#{url}"
 end
 
-Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, className|
+Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, class_name|
   item = @browser.find_element(:css, selector)
   classes = item.attribute("class")
-  classes.include?(className).should eq true
+  classes.include?(class_name).should eq true
 end
 
-Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, className|
+Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, class_name|
   item = @browser.find_element(:css, selector)
   classes = item.attribute("class")
-  classes.include?(className).should eq false
+  classes.include?(class_name).should eq false
 end
 
 Then /^there is no horizontal scrollbar$/ do

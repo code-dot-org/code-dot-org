@@ -60,7 +60,11 @@ will reflect on what success looks like in an ECS course and how to recruit dive
 
 **Save the Dates**
 
-More Details Coming Soon!
+Monday, June 27th - Wednesday, June 29th
+<br />
+8:30am - 3:30pm
+<br />
+Breakfast and lunch will be served.
 
 **Location**
 

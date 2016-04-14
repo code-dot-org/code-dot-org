@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:03.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection on Unit 1 Day 15-16: Computer Programs and Following Directions",
+    "markdown_instructions": "You have experienced the lesson on the first day of the in-person PD and have watched a TED talk about the extent of the use of algorithms in the world. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

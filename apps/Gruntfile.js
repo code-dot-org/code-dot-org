@@ -275,6 +275,7 @@ module.exports = function (grunt) {
       ' `npm bin`/browserifyinc' +
       ' -g [ browserify-global-shim ]' +
       ' --cachefile ' + outputDir + 'browserifyinc-cache.json' +
+      ' --extension=.jsx' +
       ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]' +
       (envOptions.dev ? '' : ' -t loose-envify') +
       ' -d ' + allFilesSrc.join(' ') +
@@ -288,7 +289,7 @@ module.exports = function (grunt) {
 
   config.exec = {
     browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
-    buildColorJs: './script/build-color-js.js',
+    convertScssVars: './script/convert-scss-variables.js',
     mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : '')
   };
 
@@ -451,7 +452,7 @@ module.exports = function (grunt) {
     'checkDropletSize',
     'pseudoloc',
     'newer:messages',
-    'exec:buildColorJs',
+    'exec:convertScssVars',
     'newer:copy:src',
     'newer:copy:lib',
     'locales',
@@ -485,9 +486,9 @@ module.exports = function (grunt) {
 
   grunt.registerTask('mochaTest', [
     'newer:messages',
-    'exec:buildColorJs',
+    'exec:convertScssVars',
     'newer:copy:static',
-    'newer:concat',
+    'concat',
     'exec:mochaTest'
   ]);
 

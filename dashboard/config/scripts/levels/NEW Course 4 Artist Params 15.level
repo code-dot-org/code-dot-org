@@ -34,7 +34,15 @@
     "never_autoplay_video": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "for_loops": 1,
+    "variables": 1,
+    "functions": 1,
+    "functions_with_params": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -589,6 +597,7 @@
             <title name="VAR">i</title>
           </block>
         </category>
+        <category name="Functions" custom="PROCEDURE"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

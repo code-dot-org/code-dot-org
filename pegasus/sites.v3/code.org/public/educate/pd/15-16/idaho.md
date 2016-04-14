@@ -48,6 +48,8 @@ Boise, ID 83706](https://www.google.com/maps/place/Micron+Engineering+Center/@43
 
 The building location has changed so please carefully look at the  [BSU map here](http://code.org/files/bsu-parking.pdf). The MEC building is circled in red. All of the blue highlights indicate free street parking on Saturdays.
 
+Please remember to bring your robotics kits. If you don't have robotics kits, you should still plan to attend the workshop!
+
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger
@@ -59,7 +61,7 @@ Snacks
 <br/>
 Water
 
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
+### Phase 4: Summer Wrap-up (5 days in-person - Summer 2016) ###
 
 Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
 will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.

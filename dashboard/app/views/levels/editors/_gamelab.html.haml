@@ -24,7 +24,7 @@
         }
   = f.text_area 'data_properties', placeholder: 'Insert JSON Key-Value Data', rows: 4, value: @level.data_properties or ''
   :javascript
-    levelbuilder.initializeCodeMirror('data_properties', 'javascript');
+    levelbuilder.initializeCodeMirror('level_data_properties', 'javascript');
 
 .field
   = f.label 'Hide View Data Button'

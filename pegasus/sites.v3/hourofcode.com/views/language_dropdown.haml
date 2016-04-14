@@ -1,5 +1,5 @@
 -path = request.path_info
 -path = path[@language.length + 1..-1] if path[0..@language.length] == "/#{@language}"
 %select{onchange:"window.location.href = '/#{@country}/' + this.value + '#{path != '/' ? path : ''}';"}
-  -HOC_I18N.keys.sort.each do |language|
-    %option{value:language, selected:language==@language}= HOC_I18N[language]['language']
+  -DB[:cdo_languages].where(supported_hoc_b: 1).each do |i|
+    %option{value:i[:unique_language_s], selected:i[:unique_language_s]==@language}= i[:native_name_s]

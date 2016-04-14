@@ -11,7 +11,7 @@
   #markdown-instructions-preview
 
 :javascript
-  var mdEditor = levelbuilder.initializeCodeMirror('markdown_instructions', 'markdown', function (editor, change) {
+  var mdEditor = levelbuilder.initializeCodeMirror('level_markdown_instructions', 'markdown', function (editor, change) {
     localStorage.setItem('markdown_' + #{@level.id}, editor.getValue());
 
     $('#markdown-instructions-preview')

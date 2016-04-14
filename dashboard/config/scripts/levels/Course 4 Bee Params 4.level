@@ -34,7 +34,12 @@
     "callout_json": "[]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 3,
+    "functions_with_params": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

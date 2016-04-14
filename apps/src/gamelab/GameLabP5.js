@@ -1,6 +1,8 @@
 'use strict';
 var gameLabSprite = require('./GameLabSprite');
+var gameLabGroup = require('./GameLabGroup');
 var assetPrefix = require('../assetManagement/assetPrefix');
+var GameLabGame = require('./GameLabGame');
 
 /**
  * An instantiable GameLabP5 class that wraps p5 and p5play and patches it in
@@ -8,6 +10,7 @@ var assetPrefix = require('../assetManagement/assetPrefix');
  */
 var GameLabP5 = function () {
   this.p5 = null;
+  this.gameLabGame = null;
   this.p5decrementPreload = null;
   this.p5eventNames = [
     'mouseMoved', 'mouseDragged', 'mousePressed', 'mouseReleased',
@@ -26,6 +29,7 @@ GameLabP5.baseP5loadImage = null;
  *
  * @param {!Object} options
  * @param {!Function} options.gameLab instance of parent GameLab object
+ * @param {Number} [options.scale] Scale ratio of containing element (<1 is small)
  * @param {!Function} options.onExecutionStarting callback to run during p5 init
  * @param {!Function} options.onPreload callback to run during preload()
  * @param {!Function} options.onSetup callback to run during setup()
@@ -37,6 +41,9 @@ GameLabP5.prototype.init = function (options) {
   this.onPreload = options.onPreload;
   this.onSetup = options.onSetup;
   this.onDraw = options.onDraw;
+  this.scale = options.scale || 1;
+
+  var self = this;
 
   // Override p5.loadImage so we can modify the URL path param
   if (!GameLabP5.baseP5loadImage) {
@@ -84,128 +91,256 @@ GameLabP5.prototype.init = function (options) {
     return false;
   };
 
+  // Modify p5 to handle CSS transforms (scale) and ignore out-of-bounds
+  // positions before reporting touch coordinates
+  //
+  // NOTE: _updateNextTouchCoords() is nearly identical, but calls a modified
+  // getTouchInfo() function below that can return undefined
+  window.p5.prototype._updateNextTouchCoords = function (e) {
+    if (e.type === 'mousedown' ||
+        e.type === 'mousemove' ||
+        e.type === 'mouseup'){
+      this._setProperty('_nextTouchX', this._nextMouseX);
+      this._setProperty('_nextTouchY', this._nextMouseY);
+    } else {
+      if (this._curElement !== null) {
+        var touchInfo = getTouchInfo(this._curElement.elt, e, 0);
+
+        if (touchInfo) {
+          this._setProperty('_nextTouchX', touchInfo.x);
+          this._setProperty('_nextTouchY', touchInfo.y);
+        }
+
+        var touches = [];
+        var touchIndex = 0;
+        for (var i = 0; i < e.touches.length; i++) {
+          touchInfo = getTouchInfo(this._curElement.elt, e, i);
+          if (touchInfo) {
+            touches[touchIndex] = touchInfo;
+            touchIndex++;
+          }
+        }
+        this._setProperty('touches', touches);
+      }
+    }
+  };
+
+  // NOTE: returns undefined if the position is outside of the valid range
+  function getTouchInfo(canvas, e, i) {
+    i = i || 0;
+    var rect = canvas.getBoundingClientRect();
+    var touch = e.touches[i] || e.changedTouches[i];
+    var xPos = touch.clientX - rect.left;
+    var yPos = touch.clientY - rect.top;
+    if (xPos >= 0 && xPos < rect.width && yPos >= 0 && yPos < rect.height) {
+      return {
+        x: Math.round(xPos / self.scale),
+        y: Math.round(yPos / self.scale),
+        id: touch.identifier
+      };
+    }
+  }
+
+  // Modify p5 to handle CSS transforms (scale) and ignore out-of-bounds
+  // positions before reporting mouse coordinates
+  //
+  // NOTE: _updateNextMouseCoords() is nearly identical, but calls a modified
+  // getMousePos() function below that can return undefined
+  window.p5.prototype._updateNextMouseCoords = function (e) {
+    if (e.type === 'touchstart' ||
+        e.type === 'touchmove' ||
+        e.type === 'touchend') {
+      this._setProperty('_nextMouseX', this._nextTouchX);
+      this._setProperty('_nextMouseY', this._nextTouchY);
+    } else {
+      if (this._curElement !== null) {
+        var mousePos = getMousePos(this._curElement.elt, e);
+        if (mousePos) {
+          this._setProperty('_nextMouseX', mousePos.x);
+          this._setProperty('_nextMouseY', mousePos.y);
+        }
+      }
+    }
+    this._setProperty('winMouseX', e.pageX);
+    this._setProperty('winMouseY', e.pageY);
+  };
+
+  // NOTE: returns undefined if the position is outside of the valid range
+  function getMousePos(canvas, evt) {
+    var rect = canvas.getBoundingClientRect();
+    var xPos = evt.clientX - rect.left;
+    var yPos = evt.clientY - rect.top;
+    if (xPos >= 0 && xPos < rect.width && yPos >= 0 && yPos < rect.height) {
+      return {
+        x: Math.round(xPos / self.scale),
+        y: Math.round(yPos / self.scale)
+      };
+    }
+  }
+
   // Add new p5 methods:
-  window.p5.prototype.didMouseMove = function () {
+  window.p5.prototype.mouseDidMove = function () {
     return this.pmouseX !== this.mouseX || this.pmouseY !== this.mouseY;
   };
 
-  // Override p5.createSprite so we can replace the AABBops() function and add
-  // some new methods that are animation shortcuts
-  window.p5.prototype.createSprite = function(x, y, width, height) {
-    /*
-     * Copied code from p5play from createSprite()
-     *
-     * NOTE: this param not needed on this.Sprite() call as we're calling
-     * through the bound constructor, which prepends the first arg.
-     */
-    var s = new this.Sprite(x, y, width, height);
+  window.p5.prototype.mouseIsOver = function (sprite) {
+    if (!sprite) {
+      return false;
+    }
 
-    s.setFrame = function (frame) {
-      if (s.animation) {
-        s.animation.setFrame(frame);
-      }
-    };
+    if (!sprite.collider) {
+      sprite.setDefaultCollider();
+    }
 
-    s.nextFrame = function () {
-      if (s.animation) {
-        s.animation.nextFrame();
-      }
-    };
+    var mousePosition;
+    if (this.camera.active) {
+      mousePosition = this.createVector(this.camera.mouseX, this.camera.mouseY);
+    } else {
+      mousePosition = this.createVector(this.mouseX, this.mouseY);
+    }
 
-    s.previousFrame = function () {
-      if (s.animation) {
-        s.animation.previousFrame();
-      }
-    };
+    if (sprite.collider instanceof this.CircleCollider) {
+      return window.p5.dist(mousePosition.x, mousePosition.y, sprite.collider.center.x, sprite.collider.center.y) < sprite.collider.radius;
+    } else if (sprite.collider instanceof this.AABB) {
+      return mousePosition.x > sprite.collider.left() &&
+          mousePosition.y > sprite.collider.top() &&
+          mousePosition.x < sprite.collider.right() &&
+          mousePosition.y < sprite.collider.bottom();
+    }
 
-    s.play = function () {
-      if (s.animation) {
-        s.animation.play();
-      }
-    };
-
-    s.pause = function () {
-      if (s.animation) {
-        s.animation.stop();
-      }
-    };
-
-    s.didFrameChange = function () {
-      return s.animation ? s.animation.frameChanged : false;
-    };
-
-    s.AABBops = gameLabSprite.AABBops.bind(s, this);
-    s.depth = this.allSprites.maxDepth()+1;
-    this.allSprites.add(s);
-    return s;
+    return false;
   };
+
+  window.p5.prototype.mousePressedOver = function (sprite) {
+    return this.mouseIsPressed && this.mouseIsOver(sprite);
+  };
+
+  var styleEmpty = 'rgba(0,0,0,0)';
+
+  window.p5.Renderer2D.prototype.regularPolygon = function (sides, size, x, y, rotation) {
+    var ctx = this.drawingContext;
+    var doFill = this._doFill, doStroke = this._doStroke;
+    if (doFill && !doStroke) {
+      if (ctx.fillStyle === styleEmpty) {
+        return this;
+      }
+    } else if (!doFill && doStroke) {
+      if (ctx.strokeStyle === styleEmpty) {
+        return this;
+      }
+    }
+    if (sides < 3) {
+      return;
+    }
+    ctx.beginPath();
+    ctx.moveTo(x + size * Math.cos(rotation), y + size * Math.sin(rotation));
+    for (var i = 1; i < sides; i++) {
+      var angle = rotation + (i * 2 * Math.PI / sides);
+      ctx.lineTo(x + size * Math.cos(angle), y + size * Math.sin(angle));
+    }
+    ctx.closePath();
+    if (doFill) {
+      ctx.fill();
+    }
+    if (doStroke) {
+      ctx.stroke();
+    }
+  };
+
+  window.p5.prototype.regularPolygon = function (sides, size, x, y, rotation) {
+    if (!this._renderer._doStroke && !this._renderer._doFill) {
+      return this;
+    }
+    var args = new Array(arguments.length);
+    for (var i = 0; i < args.length; ++i) {
+      args[i] = arguments[i];
+    }
+
+    if (typeof rotation === 'undefined') {
+      rotation = -(Math.PI / 2);
+      if (0 === sides % 2) {
+        rotation += Math.PI / sides;
+      }
+    } else if (this._angleMode === this.DEGREES) {
+      rotation = this.radians(rotation);
+    }
+
+    // NOTE: only implemented for non-3D
+    if (!this._renderer.isP3D) {
+      this._validateParameters(
+        'regularPolygon',
+        args,
+        [
+          ['Number', 'Number', 'Number', 'Number'],
+          ['Number', 'Number', 'Number', 'Number', 'Number']
+        ]
+      );
+      this._renderer.regularPolygon(
+        args[0],
+        args[1],
+        args[2],
+        args[3],
+        rotation
+      );
+    }
+    return this;
+  };
+
+  window.p5.Renderer2D.prototype.shape = function () {
+    var ctx = this.drawingContext;
+    var doFill = this._doFill, doStroke = this._doStroke;
+    if (doFill && !doStroke) {
+      if (ctx.fillStyle === styleEmpty) {
+        return this;
+      }
+    } else if (!doFill && doStroke) {
+      if (ctx.strokeStyle === styleEmpty) {
+        return this;
+      }
+    }
+    var numCoords = arguments.length / 2;
+    if (numCoords < 1) {
+      return;
+    }
+    ctx.beginPath();
+    ctx.moveTo(arguments[0], arguments[1]);
+    for (var i = 1; i < numCoords; i++) {
+      ctx.lineTo(arguments[i * 2], arguments[i * 2 + 1]);
+    }
+    ctx.closePath();
+    if (doFill) {
+      ctx.fill();
+    }
+    if (doStroke) {
+      ctx.stroke();
+    }
+  };
+
+  window.p5.prototype.shape = function () {
+    if (!this._renderer._doStroke && !this._renderer._doFill) {
+      return this;
+    }
+    // NOTE: only implemented for non-3D
+    if (!this._renderer.isP3D) {
+      // TODO: call this._validateParameters, once it is working in p5.js and
+      // we understand if it can be used for var args functions like this
+      this._renderer.shape.apply(this._renderer, arguments);
+    }
+    return this;
+  };
+
+  window.p5.prototype.createGroup = function () {
+    return new this.Group();
+  };
+
+  // Override p5.createSprite so we can replace the AABBops() function and add
+  // some new methods that are animation shortcuts:
+  window.p5.prototype.createSprite = gameLabSprite.createSprite;
 
   // Override p5.Group so we can override the methods that take callback
   // parameters
   var baseGroupConstructor = window.p5.prototype.Group;
-  window.p5.prototype.Group = function () {
-    var array = baseGroupConstructor();
-
-    /*
-     * Create new helper called _groupCollideGameLab() which can be called as a
-     * stateful nativeFunc by the interpreter. This enables the native method to
-     * be called multiple times so that it can go asynchronous every time it
-     * (or any native function that it calls, such as AABBops) wants to execute
-     * a callback back into interpreter code. The interpreter state object is
-     * retrieved by calling JSInterpreter.getCurrentState().
-     *
-     * Additional properties can be set on the state object to track state
-     * across the multiple executions. If the function wants to be called again,
-     * it should set state.doneExec to false. When the function is complete and
-     * no longer wants to be called in a loop by the interpreter, it should set
-     * state.doneExec to true and return a value.
-     *
-     * Collide each member of group against the target using the given collision
-     * type.  Return true if any collision occurred.
-     * Internal use
-     *
-     * @private
-     * @method _groupCollideGameLab
-     * @param {!string} type one of 'overlap', 'collide', 'displace', 'bounce'
-     * @param {Object} target Group or Sprite
-     * @param {Function} [callback] on collision.
-     * @return {boolean} True if any collision/overlap occurred
-     */
-    function _groupCollideGameLab(type, target, callback) {
-      var state = options.gameLab.JSInterpreter.getCurrentState();
-      if (!state.__i) {
-        state.__i = 0;
-        state.__didCollide = false;
-      }
-      if (state.__i < this.size()) {
-        if (!state.__subState) {
-          // Before we call AABBops (another stateful function), hang a __subState
-          // off of state, so it can use that instead to track its state:
-          state.__subState = { doneExec: true };
-        }
-        var resultAABBops = this.get(state.__i).AABBops(type, target, callback);
-        if (state.__subState.doneExec) {
-          state.__didCollide = resultAABBops || state.__didCollide;
-          delete state.__subState;
-          state.__i++;
-        }
-        state.doneExec = false;
-      } else {
-        state.doneExec = true;
-        return state.__didCollide;
-      }
-    }
-
-    // Replace these four methods that take callback parameters to use the
-    // replaced _groupCollideGameLab() function:
-
-    array.overlap = _groupCollideGameLab.bind(array, 'overlap');
-    array.collide = _groupCollideGameLab.bind(array, 'collide');
-    array.displace = _groupCollideGameLab.bind(array, 'displace');
-    array.bounce = _groupCollideGameLab.bind(array, 'bounce');
-
-    return array;
-  };
+  window.p5.prototype.Group = gameLabGroup.Group.bind(null, baseGroupConstructor);
 
   window.p5.prototype.gamelabPreload = function () {
     this.p5decrementPreload = window.p5._getDecrementPreload.apply(this.p5, arguments);
@@ -222,6 +357,7 @@ GameLabP5.prototype.resetExecution = function () {
     this.p5.remove();
     this.p5 = null;
     this.p5decrementPreload = null;
+    this.gameLabGame = null;
   }
 
   // Important to reset these after this.p5 has been removed above
@@ -230,11 +366,20 @@ GameLabP5.prototype.resetExecution = function () {
 };
 
 /**
+ * Register a p5 event handler function. The provided function replaces the
+ * method stored on our p5 instance.
+ */
+GameLabP5.prototype.registerP5EventHandler = function (eventName, handler) {
+  this.p5[eventName] = handler;
+};
+
+/**
  * Instantiate a new p5 and start execution
  */
 GameLabP5.prototype.startExecution = function () {
   new window.p5(function (p5obj) {
       this.p5 = p5obj;
+      this.gameLabGame = new GameLabGame(p5obj);
 
       p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);
 
@@ -260,7 +405,7 @@ GameLabP5.prototype.startExecution = function () {
             time_since_last >= target_time_between_frames - epsilon) {
 
           //mandatory update values(matrixs and stack) for 3d
-          if(this._renderer.isP3D){
+          if (this._renderer.isP3D){
             this._renderer._update();
           }
 
@@ -296,7 +441,7 @@ GameLabP5.prototype.startExecution = function () {
       }.bind(p5obj);
 
       // Overload _setup function to make it two-phase
-      p5obj._setup = function() {
+      p5obj._setup = function () {
         /*
          * Copied code from p5 _setup()
          */
@@ -344,15 +489,47 @@ GameLabP5.prototype.startExecution = function () {
       }.bind(p5obj);
 
       p5obj.preload = function () {
+        // Create new camera.isActive() that maps to the readonly property:
+        p5obj.camera.isActive = function () {
+          return p5obj.camera.active;
+        };
 
-        // Call our gamelabPreload() to force _start/_setup to wait.
-        p5obj.gamelabPreload();
-        this.onPreload();
+        // Create new camera.x and camera.y properties to alias camera.position:
+        Object.defineProperty(p5obj.camera, 'x', {
+          enumerable: true,
+          get: function () {
+            return p5obj.camera.position.x;
+          },
+          set: function (value) {
+            p5obj.camera.position.x = value;
+          }
+        });
+
+        Object.defineProperty(p5obj.camera, 'y', {
+          enumerable: true,
+          get: function () {
+            return p5obj.camera.position.y;
+          },
+          set: function (value) {
+            p5obj.camera.position.y = value;
+          }
+        });
+
+        if (!this.onPreload()) {
+          // If onPreload() returns false, it means that the preload phase has
+          // not completed, so we need to grab increment p5's preloadCount by
+          // calling the gamelabPreload() method.
+
+          // Call our gamelabPreload() to force _start/_setup to wait.
+          p5obj.gamelabPreload();
+        }
       }.bind(this);
 
       p5obj.setup = function () {
-
         p5obj.createCanvas(400, 400);
+        p5obj.fill(p5obj.color(127, 127, 127));
+        p5obj.angleMode(p5obj.DEGREES);
+
         this.onSetup();
       }.bind(this);
 
@@ -365,13 +542,29 @@ GameLabP5.prototype.startExecution = function () {
 };
 
 /**
- * Called when all global code is done executing. This allows us to release
- * our "preload" count reference in p5, which means that setup() can begin.
+ * Called when the preload phase is complete. When a distinct setup() method is
+ * provided, a student's global code must finish executing before this phase is
+ * done. This allows us to release our "preload" count reference in p5, which
+ * means that setup() can begin.
  */
-GameLabP5.prototype.notifyUserGlobalCodeComplete = function () {
+GameLabP5.prototype.notifyPreloadPhaseComplete = function () {
   if (this.p5decrementPreload) {
     this.p5decrementPreload();
     this.p5decrementPreload = null;
+  }
+};
+
+GameLabP5.prototype.notifyKeyCodeDown = function (keyCode) {
+  // Synthesize an event and send it to the internal p5 handler for keydown
+  if (this.p5) {
+    this.p5._onkeydown({ which: keyCode });
+  }
+};
+
+GameLabP5.prototype.notifyKeyCodeUp = function (keyCode) {
+  // Synthesize an event and send it to the internal p5 handler for keyup
+  if (this.p5) {
+    this.p5._onkeyup({ which: keyCode });
   }
 };
 
@@ -435,6 +628,7 @@ GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
 
 GameLabP5.prototype.getCustomMarshalObjectList = function () {
   return [
+    { instance: GameLabGame },
     {
       instance: this.p5.Sprite,
       methodOpts: {
@@ -475,12 +669,15 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
   // except those on the custom marshal blocked list:
   for (var prop in this.p5) {
     if (-1 === blockedProps.indexOf(prop)) {
-      propList[prop] = [ this.p5[prop], this.p5 ];
+      propList[prop] = [this.p5[prop], this.p5];
     }
   }
 
-  // And also create a 'p5' object in the global namespace:
-  propList.p5 = [ { Vector: window.p5.Vector }, window ];
+  // Create a 'p5' object in the global namespace:
+  propList.p5 = [{ Vector: window.p5.Vector }, window];
+
+  // Create a 'Game' object in the global namespace:
+  propList.Game = [this.gameLabGame, this];
 
   return propList;
 };

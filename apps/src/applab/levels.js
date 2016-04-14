@@ -29,8 +29,6 @@ levels.custom = {
   'freePlay': true,
   'editCode': true,
   'sliderSpeed': 1,
-  'appWidth': 320,
-  'appHeight': 480,
 
   /**
    * This is the default set of functions available to us if the levelbuilder

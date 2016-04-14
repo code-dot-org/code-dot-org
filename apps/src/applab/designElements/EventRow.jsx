@@ -9,7 +9,7 @@ var EventRow = module.exports = React.createClass({
     handleInsert: React.PropTypes.func.isRequired
   },
 
-  render: function() {
+  render: function () {
     var style = {
       container: $.extend({}, rowStyle.container, rowStyle.maxWidth),
       name: {
