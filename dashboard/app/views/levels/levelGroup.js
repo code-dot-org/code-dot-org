@@ -33,18 +33,7 @@ function initLevelGroup(
     var results = window.levelGroup.results;
     Object.keys(results).forEach(function (levelId) {
       var levelResult = results[levelId].getCurrentAnswer().toString();
-      levelId = +levelId;
-
-      // But before storing, if we had a previous result for the same level,
-      // remove that from the array, since we want to overwrite that previous
-      // answer.
-      for (var j = lastAttempt.length - 1; j >= 0; j--) {
-        if (lastAttempt[j].level_id == levelId) {
-          lastAttempt.splice(j, 1);
-        }
-      }
-
-      lastAttempt.push({level_id: levelId, result: levelResult});
+      lastAttempt[levelId] = {result: levelResult};
     });
 
     var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
