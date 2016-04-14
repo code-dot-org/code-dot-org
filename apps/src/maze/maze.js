@@ -32,6 +32,7 @@ var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var StepButton = require('./StepButton');
+var SpellingControls = require('./SpellingControls');
 var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
@@ -632,10 +633,9 @@ Maze.init = function (config) {
         controls: React.renderToStaticMarkup(
           <StepButton showStepButton={level.step && !level.edit_blocks}/>
         ),
-        extraControlRows: config.skinId === 'letters' && require('./extraControlRows.html.ejs')({
-          assetUrl: studioApp.assetUrl,
-          searchWord: level.searchWord
-        })
+        extraControlRows: config.skinId === 'letters' && React.renderToStaticMarkup(
+          <SpellingControls searchWord={level.searchWord}/>
+        )
       },
       hideRunButton: level.stepOnly && !level.edit_blocks
     });
