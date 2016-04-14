@@ -559,9 +559,8 @@ StudioApp.prototype.configureAndShowInstructions_ = function (config) {
     aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
     var promptTable = document.getElementById('prompt-table');
     promptTable.className += " with-ani-gif";
-  } else {
     var wrapper = document.getElementById('ani-gif-preview-wrapper');
-    wrapper.style.display = 'none';
+    wrapper.style.display = 'inline-block';
   }
 };
 
