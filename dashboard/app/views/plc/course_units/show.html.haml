@@ -52,7 +52,9 @@
             %td
               = answer.answer
             %td
-              = answer.plc_learning_module.try(:name)
+              #{answer.plc_learning_module.try(:name)}
+              -if answer.plc_learning_module.try(:required)
+                %span.required REQUIRED
             %td
         %tr.cloneableAnswerRow
           %td
