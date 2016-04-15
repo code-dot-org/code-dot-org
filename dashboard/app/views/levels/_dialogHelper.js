@@ -103,16 +103,24 @@ window.dashboard.dialog = (function () {
       return;
     }
 
-    // Avoid multiple simultaneous submissions.
-    submitButton.attr('disabled', true);
+    var results = getResult();
+    var showConfirmationDialog = getResult().showConfirmationDialog || false;
+    if (showConfirmationDialog) {
+      showDialog(showConfirmationDialog, function () {
+        processResults(onComplete);
+      });
+    } else {
+      // Avoid multiple simultaneous submissions.
+      submitButton.attr('disabled', true);
 
-    var onComplete = function (willRedirect) {
-      if (!willRedirect) {
-        $('.submitButton').attr('disabled', false);
-      }
-    };
+      var onComplete = function (willRedirect) {
+        if (!willRedirect) {
+          $('.submitButton').attr('disabled', false);
+        }
+      };
 
-    processResults(onComplete);
+      processResults(onComplete);
+    }
   });
 
   /**
@@ -131,6 +139,7 @@ window.dashboard.dialog = (function () {
     var errorType = results.errorType;
     var testResult = results.testResult ? results.testResult : (result ? 100 : 0);
     var submitted = results.submitted || false;
+
 
     if (!result) {
       showDialog(errorType || "error");

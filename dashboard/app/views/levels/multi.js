@@ -167,14 +167,17 @@ Multi.prototype.ready = function () {
 
 Multi.prototype.getCurrentAnswer = function () {
   var answer;
+  var valid;
 
   if (this.numAnswers == 1) {
     answer = this.lastSelectionIndex;
+    valid = answer !== -1;
   } else {
     answer = this.selectedAnswers;
+    valid = answer !== -1;
   }
 
-  return answer;
+  return { response: answer, valid: valid };
 };
 
 Multi.prototype.getLevelId = function () {
