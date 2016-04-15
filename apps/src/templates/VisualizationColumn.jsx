@@ -20,9 +20,7 @@ var VisualizationColumn = React.createClass({
 
     return (
       <span>
-        <div id="visualization">
-          {this.props.visualization}
-        </div>
+        {this.props.visualization}
         {/* TODO : share with applab game buttons */}
         <ProtectedStatefulDiv id="gameButtons">
           <button id="runButton" className={runButtonClasses}>
