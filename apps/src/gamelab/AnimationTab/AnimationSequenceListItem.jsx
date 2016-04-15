@@ -3,6 +3,7 @@
 
 var _ = require('../../lodash');
 var actions = require('../actions');
+var animationsApi = require('../../clientApi').animations;
 var animationTabActions = require('./actions');
 var color = require('../../color');
 var connect = require('react-redux').connect;
@@ -50,7 +51,6 @@ var staticStyles = {
  */
 var AnimationSequenceListItem = React.createClass({
   propTypes: {
-    assetUrl: React.PropTypes.func.isRequired,
     isSelected: React.PropTypes.bool,
     animation: React.PropTypes.object.isRequired,
     cloneAnimation: React.PropTypes.func.isRequired,
@@ -104,7 +104,7 @@ var AnimationSequenceListItem = React.createClass({
       <div style={styles.tile} onClick={this.onSelect}>
         <ListItemThumbnail
             isSelected={this.props.isSelected}
-            src={this.props.assetUrl('media/common_images/draw-east.png')} />
+            src={animationsApi.basePath(this.props.animation.key + '.png')} />
         {sequenceName}
         {this.props.isSelected && <ListItemButtons
             onCloneClick={this.cloneAnimation}
@@ -114,9 +114,7 @@ var AnimationSequenceListItem = React.createClass({
   }
 });
 module.exports = connect(function propsFromStore(state) {
-  return {
-    assetUrl: state.level.assetUrl
-  };
+  return {};
 }, function propsFromDispatch(dispatch) {
   return {
     cloneAnimation: function (animationKey) {
