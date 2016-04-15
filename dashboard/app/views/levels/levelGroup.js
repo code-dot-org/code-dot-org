@@ -50,13 +50,17 @@ function initLevelGroup(
     // Construct an array of all the level results.
     // When submitted it's something like this:
     //
-    //   [{"level_id":1977,"result":"0"},{"level_id":2007,"result":"3"},{"level_id":1939,"result":"2,1"}]
+    //   [{"level_id":1977,"result":"0","valid":true},{"level_id":2007,"result":"-1","valid":false},{"level_id":1939,"result":"2,1","valid":true}]
     //
+
+    var validCount = 0;
 
     // Add any new results to the existing lastAttempt results.
     for (var i = 0; i < levelCount; i++) {
       var levelName = "level_" + i;
-      var levelResult = decodeURI(window[levelName].getCurrentAnswer().toString());
+      var currentAnswer = window[levelName].getCurrentAnswer();
+      var levelResult = currentAnswer.response.toString();
+      var valid = currentAnswer.valid;
       var levelId = window[levelName].getLevelId();
 
       // But before storing, if we had a previous result for the same level,
@@ -68,7 +72,11 @@ function initLevelGroup(
         }
       }
 
-      lastAttempt.push({level_id: levelId, result: levelResult});
+      if (valid) {
+        validCount++;
+      }
+
+      lastAttempt.push({level_id: levelId, result: levelResult, valid: valid});
     }
 
     var response = JSON.stringify(lastAttempt);
@@ -77,20 +85,26 @@ function initLevelGroup(
 
     var result;
     var submitted;
+    var showConfirmationDialog;
 
     if (window.appOptions.level.submittable || this.forceSubmittable) {
       result = true;
       submitted = true;
+
+      var completeString = (validCount == levelCount) ? "complete" : "incomplete";
+      showConfirmationDialog = "levelgroup-submit-" + completeString;
     } else {
       result = true; // this.validateAnswers();
       submitted = false;
+      showConfirmationDialog = false;
     }
 
     return {
       "response": response,
       "result": true,
       "errorType": null,
-      "submitted": submitted
+      "submitted": submitted,
+      "showConfirmationDialog": showConfirmationDialog
     };
   };
 
@@ -158,7 +172,11 @@ function initLevelGroup(
     var dialogDiv = $(dialog.div);
     dialog.show();
 
-    dialogDiv.find('#continue-button').click(function () {
+    var okButton = dialogDiv.find('#ok-button');
+    okButton.click(function () {
+      // Avoid multiple simultaneous unsubmissions.
+      okButton.attr('disabled', true);
+
       $.post(window.appOptions.unsubmitUrl,
         {"_method": 'PUT', user_level: {submitted: false}},
         function (data) {
@@ -168,7 +186,7 @@ function initLevelGroup(
       );
     });
 
-    dialogDiv.find('#again-button').click(function () {
+    dialogDiv.find('#cancel-button').click(function () {
       dialog.hide();
     });
   });

@@ -35,8 +35,9 @@ TextMatch.prototype.ready = function () {
 
 TextMatch.prototype.getCurrentAnswer = function () {
   var response = $("#" + this.id + " textarea.response").val();
+  var valid = response.length > 1;
 
-  return encodeURIComponent(response);
+  return { response: response, valid: valid };
 };
 
 TextMatch.prototype.getLevelId = function () {

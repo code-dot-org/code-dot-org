@@ -63,8 +63,8 @@
     .modal-content.no-modal-icon
       %p.dialog-title= t('level_group-submittable.unsubmit-title')
       %p.dialog-body=  t('level_group-submittable.unsubmit-body')
-      %button#again-button.secondary{style: "float: left"}= t('cancel')
-      %button#continue-button{style: "float: right"}= t('okay')
+      %button#cancel-button.secondary{style: "float: left"}= t('cancel')
+      %button#ok-button{style: "float: right"}= t('okay')
 
 - unless @script_level.nil?
   :javascript

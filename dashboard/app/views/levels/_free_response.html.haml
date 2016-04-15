@@ -6,7 +6,8 @@
   :javascript
     window['level_#{index}'] = {
       getCurrentAnswer: function () {
-        return $('#level_#{index}').val();
+        var response = $('#level_#{index}').val(),;
+        return { response: response, valid: response.length > 1 };
       },
       getLevelId: function () {
         return #{level.id};
