@@ -1,6 +1,0 @@
-owner_storage_id	match	project_url
-14	startWebRequest("https://api.openweathermap.org/data/2.5/weather?q=London,uk", function(status, type, content) {	https://staging-studio.code.org/projects/applab/pzPwVUUwUhlNqnWnVfGiPg/view
-117	startWebRequest("https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&page=computer&section=1&disablelimitreport=true", function(status, type, content) {	https://staging-studio.code.org/projects/applab/3EZQzQkm7lSVEM-VFoMEYg/view
-14	startWebRequest("https://studio.code.org/v3/shared-properties/cpsVA_vqkjEx6nXIaAOrKQ/key", function(status, type, content) {	https://staging-studio.code.org/projects/applab/9jj6HqQsxRNcrw56yFYiQQ/view
-14	startWebRequest("http://www.seattleboulderingproject.com", function(status, type, content) {	https://staging-studio.code.org/projects/applab/9jj6HqQsxRNcrw56yFYiQQ/view
-14	startWebRequest("http://api.openweathermap.org/data/2.5/weather?q=London,uk", function(status, type, content) {	https://staging-studio.code.org/projects/applab/9jj6HqQsxRNcrw56yFYiQQ/view
