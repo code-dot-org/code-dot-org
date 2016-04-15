@@ -2,6 +2,6 @@
   #{render template: 'levels/textMatch.js', formats: [:js]}
   window.levelGroup = {levels: {}};
 
-= render partial: 'levels/single_text_match', locals: {index: 0, standalone: true, level: @level, last_attempt: @last_attempt }
+= render partial: 'levels/single_text_match', locals: {standalone: true, level: @level, last_attempt: @last_attempt }
 
 = render partial: 'levels/common_audio'

@@ -1,13 +1,12 @@
 - level ||= @level
 - last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
-- index ||= nil
 - in_level_group ||= false
 
 - if in_level_group # The LevelGroup will collect results for each level.
   :javascript
     window.levelGroup.levels[#{level.id}] = {
       getCurrentAnswer: function () {
-        return $('#level_#{index}').val();
+        return $('#level_#{level.id}').val();
       }
     };
 - else # Otherwise we need to provide a `window.getResult` function.
@@ -25,7 +24,7 @@
   %div= render(inline: level.markdown_instructions, type: :md)
 
   - height = level.height || '80'
-  %textarea.response{id: "level_#{index}", placeholder: level.placeholder || 'Enter your answer here', style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
+  %textarea.response{id: "level_#{level.id}", placeholder: level.placeholder || 'Enter your answer here', style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
 
   -# Don't render the dialog partial if we're inside a LevelGroup.
   = render partial: 'levels/dialog', locals: {app: 'free_response', data: level.properties} unless in_level_group
