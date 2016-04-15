@@ -3,6 +3,7 @@
 'use strict';
 
 var _ = require('../lodash');
+var animationsApi = require('../clientApi').animations;
 var utils = require('../utils');
 
 /** @enum {string} */
@@ -79,30 +80,35 @@ module.exports.cloneAnimation = function (animationKey) {
     var animations = getState().animations;
     
     // Track down the source animation and its index in the collection
-    var sourceIndex;
-    for (sourceIndex = 0; sourceIndex < animations.length; sourceIndex++) {
-      if (animations[sourceIndex].key === animationKey) {
-        break;
-      }
-    }
-    var sourceAnimation = animations[sourceIndex];
-    if (!sourceAnimation) {
+    var sourceIndex = animations.map(function (a) { return a.key; }).indexOf(animationKey);
+    if (sourceIndex < 0) {
       throw new Error('Unable to clone animation with key "' + animationKey +
           '": Animation not found');
     }
+    var sourceAnimation = animations[sourceIndex];
+    var newAnimationKey = utils.createUuid();
 
-    // Do async work of copying the S3 asset here, then create an animation with
-    // the new key.
-    // Fake it for now.
-    dispatch({
-      type: ActionType.ADD_ANIMATION_AT,
-      index: sourceIndex + 1,
-      animationProps: _.assign({}, sourceAnimation, {
-        key: utils.createUuid(),
-        name: sourceAnimation.name + '_copy', // TODO: better generated names
-        version: "111111"
-      })
-    });
+    animationsApi.ajax(
+        'POST',
+        newAnimationKey + '.png/from/' + animationKey + '.png',
+        function success(xhr) {
+          var response = JSON.parse(xhr.responseText);
+          console.info(response);
+          dispatch({
+            type: ActionType.ADD_ANIMATION_AT,
+            index: sourceIndex + 1,
+            animationProps: _.assign({}, sourceAnimation, {
+              key: newAnimationKey,
+              name: sourceAnimation.name + '_copy', // TODO: better generated names
+              version: response.versionId
+            })
+          });
+        },
+        function error(xhr) {
+          console.error('Error copying object ' + animationKey + ': ' +
+              xhr.status + ' ' + xhr.statusText);
+          // TODO: Error state for cloning animation.
+        });
   };
 };
 
