@@ -20,7 +20,8 @@ module.exports = {
     "$": true,
     "jQuery": true,
     "React": true,
-    "ReactDOM": true
+    "ReactDOM": true,
+    "ReactDOMServer": true
   },
   "rules": {
     "array-bracket-spacing": ["error", "never"],

@@ -11,6 +11,7 @@ require('require-globify');
 var $ = require('jquery');
 var React = require('react');
 var ReactDOM = require('react-dom');
+var ReactDOMServer = require('react-dom/server');
 var Radium = require('radium');
 var _ = require('lodash');
 
@@ -25,6 +26,7 @@ var testBlockFactory = require('./testBlockFactory');
 exports.setExternalGlobals = function () {
   window.React = React;
   window.ReactDOM = ReactDOM;
+  window.ReactDOMServer = ReactDOMServer;
   window.$ = $;
   window.jQuery = $;
   window.Radium = Radium;
