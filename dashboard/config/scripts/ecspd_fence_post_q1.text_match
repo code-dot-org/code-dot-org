@@ -1,6 +1,0 @@
-name 'ECSPD Fence post Q1'
-markdown <<MARKDOWN
-## Fence Post Problem:
-
-You need to build one side of a fence that is 12 yards long. This fence will be built with fence posts and rails that connect one fence post to another. If each fence post is 1 yard away from the next fence post, how many fence posts will be needed for this side of the fence? How many fence posts will be needed for a side of a fence that is N (where N > 0) yards long?
-MARKDOWN

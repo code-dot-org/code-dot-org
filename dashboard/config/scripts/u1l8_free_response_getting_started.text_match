@@ -1,7 +1,0 @@
-name 'U1L8 Free Response Getting Started'
-title 'Getting Started: Sending Numbers '
-content1 'Respond to the following question.'
-
-markdown <<MARKDOWN
-List two or three challenges you faced when trying to send multi-bit messages using the bit-sending widget during previous classes?
-MARKDOWN
