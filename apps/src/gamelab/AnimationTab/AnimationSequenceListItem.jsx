@@ -9,18 +9,33 @@ var color = require('../../color');
 var connect = require('react-redux').connect;
 var ListItemButtons = require('./ListItemButtons');
 var ListItemThumbnail = require('./ListItemThumbnail');
+var Radium = require('radium');
 
-var staticStyles = {
+var styles = {
   tile: {
     width: '100%',
 
+    backgroundColor: 'transparent',
     borderRadius: 10,
 
     // Provide vertical padding because we flow vertically, but require
     // children to use margins horizontally.
     paddingTop: 4,
     paddingBottom: 4,
-    marginBottom: 4
+    marginBottom: 4,
+
+    ':hover': {
+      cursor: 'pointer',
+      backgroundColor: color.lighter_purple
+    }
+  },
+  selectedTile: {
+    backgroundColor: color.purple,
+
+    ':hover': {
+      cursor: 'auto',
+      backgroundColor: color.purple
+    }
   },
   nameLabel: {
     marginLeft: 4,
@@ -76,14 +91,6 @@ var AnimationSequenceListItem = React.createClass({
   },
 
   render: function () {
-    var styles = _.merge({}, staticStyles, {
-      tile: {
-        backgroundColor: this.props.isSelected ? color.purple : 'transparent'
-      }
-    }, {
-      tile: this.props.style
-    });
-
     var sequenceName;
     if (this.props.isSelected) {
       sequenceName = (
@@ -99,9 +106,14 @@ var AnimationSequenceListItem = React.createClass({
       sequenceName = <div style={styles.nameLabel}>{this.props.animation.name}</div>;
     }
 
+    var tileStyle = [
+        styles.tile,
+        this.props.isSelected && styles.selectedTile,
+        this.props.style
+    ];
 
     return (
-      <div style={styles.tile} onClick={this.onSelect}>
+      <div style={tileStyle} onClick={this.onSelect}>
         <ListItemThumbnail
             isSelected={this.props.isSelected}
             src={animationsApi.basePath(this.props.animation.key + '.png')} />
@@ -130,4 +142,4 @@ module.exports = connect(function propsFromStore(state) {
       dispatch(actions.setAnimationName(animationKey, newName));
     }
   }
-})(AnimationSequenceListItem);
+})(Radium(AnimationSequenceListItem));
