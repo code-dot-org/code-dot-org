@@ -30,10 +30,7 @@ var codegen = require('../codegen');
 var api = require('./api');
 var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var VisualizationColumn = require('../templates/VisualizationColumn');
-var Visualization = require('./Visualization');
-var StepButton = require('./StepButton');
-var SpellingControls = require('./SpellingControls');
+var MazeVisualizationColumn = require('./MazeVisualizationColumn');
 var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
@@ -627,18 +624,11 @@ Maze.init = function (config) {
   };
 
   var generateVisualizationColumnHtmlFromEjs = function () {
-    var visualization = <Visualization/>;
-    var controls = <StepButton showStepButton={!!(level.step && !level.edit_blocks)}/>;
-    var extraControls;
-    if (config.skinId === 'letters') {
-      extraControls = <SpellingControls searchWord={level.searchWord}/>;
-    }
     return ReactDOMServer.renderToStaticMarkup(
-      <VisualizationColumn
-        hideRunButton={!!(level.stepOnly && !level.edit_blocks)}
-        visualization={visualization}
-        controls={controls}
-        extraControls={extraControls}
+      <MazeVisualizationColumn
+          hideRunButton={!!(level.stepOnly && !level.edit_blocks)}
+          showStepButton={!!(level.step && !level.edit_blocks)}
+          searchWord={level.searchWord}
       />
     );
   };
