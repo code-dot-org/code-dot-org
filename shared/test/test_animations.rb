@@ -108,6 +108,48 @@ class AnimationsTest < MiniTest::Test
       assert not_found?
   end
 
+  def test_copy_animation
+    source_image_filename = randomize_filename('copy_source.png')
+    source_image_body = 'stub-source-contents'
+    dest_image_filename = randomize_filename('copy_dest.png')
+
+    # Make sure we have a clean starting point
+    delete_all_animation_versions(source_image_filename)
+    delete_all_animation_versions(dest_image_filename)
+
+    # Upload copy_source.png and check the response
+    upload(source_image_filename, source_image_body, 'image/png')
+    assert successful?
+
+    # Copy copy_source.png to copy_dest.png
+    copy(source_image_filename, dest_image_filename)
+    assert successful?, @files_api.last_response.inspect
+
+    # Get copy_dest.png and make sure it's got the source content
+    get(dest_image_filename)
+    assert_equal source_image_body, get(dest_image_filename)
+    assert_equal 'public, max-age=3600, s-maxage=1800', @files_api.last_response['Cache-Control']
+
+    delete(source_image_filename)
+    assert successful?
+
+    delete(dest_image_filename)
+    assert successful?
+  end
+
+  def test_copy_nonexistent_animation
+    source_image_filename = randomize_filename('copy_nonexistent_source.png')
+    dest_image_filename = randomize_filename('copy_nonexistent_dest.png')
+
+    # Make sure we have a clean starting point
+    delete_all_animation_versions(source_image_filename)
+    delete_all_animation_versions(dest_image_filename)
+
+    # Try to copy nonexistent source to destination
+    copy(source_image_filename, dest_image_filename)
+    assert not_found?
+  end
+
   def test_animation_versions
     filename = randomize_filename('test.png')
     delete_all_animation_versions(filename)
@@ -260,6 +302,11 @@ class AnimationsTest < MiniTest::Test
       end
       Rack::Test::UploadedFile.new(file_path, content_type)
     end
+  end
+
+  def copy(source_filename, dest_filename)
+    @files_api.post("/v3/animations/#{@channel_id}/#{dest_filename}/from/#{source_filename}")
+    @files_api.last_response.body
   end
 
   # Delete all versions of the specified file from S3, including all delete markers
