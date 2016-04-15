@@ -57,7 +57,7 @@
     "factor-bundle": "^2.5.0",
     "http-server": "^0.9.0",
     "istanbul": "^0.4.2",
-    "johnny-five": "^0.9.37",
+    "johnny-five": "bcjordan/johnny-five#with-firmata-fix",
     "mkdirp": "^0.5.1",
     "mocha": "^2.3.4",
     "mochify": "^2.15.0",
