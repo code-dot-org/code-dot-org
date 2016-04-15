@@ -77,6 +77,16 @@ Promise.all([
     commonFile: 'plc'
   })),
 
+  // Bundle for assessment JS
+  build_commands.bundle(_.extend({}, defaultOptions, {
+    filenames: [
+      'assessments/levelGroup.js',
+      'assessments/multi.js',
+      'assessments/textMatch.js'
+    ],
+    commonFile: 'assessments'
+  })),
+
   // makerlab-only dependencies for app lab
   build_commands.bundle(_.extend({}, defaultOptions, {
     filenames: [
