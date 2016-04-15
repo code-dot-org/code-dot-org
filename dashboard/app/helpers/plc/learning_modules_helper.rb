@@ -4,9 +4,9 @@ module Plc::LearningModulesHelper
   end
 
   def options_for_evaluation_answer_modules(course_unit)
-    course_unit.plc_learning_modules.order(:required, :name).map do |learning_module|
+    course_unit.plc_learning_modules.order(:required, :name).pluck(:id, :required, :name).map do |id, required, name|
       # Boo Ruby, you can't add nil to a string without choking?
-      [learning_module.name += (' - Required' if learning_module.required).to_s, learning_module.id]
+      ["#{name}#{' - Required' if required}", id]
     end
   end
 end
