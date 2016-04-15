@@ -115,12 +115,24 @@ module.exports.cloneAnimation = function (animationKey) {
 /**
  * Delete the specified animation from the project.
  * @param {string} animationKey
- * @returns {{type: ActionType, animationKey: string}}
+ * @returns {function}
  */
 module.exports.deleteAnimation = function (animationKey) {
-  return {
-    type: ActionType.DELETE_ANIMATION,
-    animationKey: animationKey
+  return function (dispatch) {
+    animationsApi.ajax(
+        'DELETE',
+        animationKey + '.png',
+        function success() {
+          dispatch({
+            type: ActionType.DELETE_ANIMATION,
+            animationKey: animationKey
+          });
+        },
+        function error(xhr) {
+          console.error('Error deleting object ' + animationKey + ': ' +
+              xhr.status + ' ' + xhr.statusText);
+          // TODO: Error state for cloning animation.
+        });
   };
 };
 
