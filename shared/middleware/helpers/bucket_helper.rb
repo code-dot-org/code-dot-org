@@ -16,6 +16,21 @@ class BucketHelper
     @s3.list_objects(bucket: @bucket, prefix: prefix).contents.map(&:size).reduce(:+).to_i
   end
 
+  def object_and_app_size(encrypted_channel_id, target_object)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+
+    app_prefix = s3_path owner_id, channel_id
+    target_object_prefix = s3_path owner_id, channel_id, target_object
+
+    objects = @s3.list_objects(bucket: @bucket, prefix: app_prefix).contents
+    target_object = objects.find { |x| x.key == target_object_prefix }
+
+    app_size = objects.map(&:size).reduce(:+).to_i
+    object_size = target_object.nil? ? nil : target_object.size.to_i
+
+    [object_size, app_size]
+  end
+
   def list(encrypted_channel_id)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     prefix = s3_path owner_id, channel_id
@@ -85,6 +100,14 @@ class BucketHelper
     @s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
 
     response
+  end
+
+  def copy(encrypted_channel_id, filename, source_filename)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+
+    key = s3_path owner_id, channel_id, filename
+    copy_source = @bucket + '/' + s3_path(owner_id, channel_id, source_filename)
+    @s3.copy_object(bucket: @bucket, key: key, copy_source: copy_source)
   end
 
   def delete(encrypted_channel_id, filename)
