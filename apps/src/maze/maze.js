@@ -623,15 +623,13 @@ Maze.init = function (config) {
     });
   };
 
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return ReactDOMServer.renderToStaticMarkup(
-      <MazeVisualizationColumn
-          hideRunButton={!!(level.stepOnly && !level.edit_blocks)}
-          showStepButton={!!(level.step && !level.edit_blocks)}
-          searchWord={level.searchWord}
-      />
-    );
-  };
+  var visualizationColumn = (
+    <MazeVisualizationColumn
+      hideRunButton={!!(level.stepOnly && !level.edit_blocks)}
+      showStepButton={!!(level.step && !level.edit_blocks)}
+      searchWord={level.searchWord}
+    />
+  );
 
   ReactDOM.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
@@ -641,7 +639,7 @@ Maze.init = function (config) {
     noVisualization: false,
     isRtl: studioApp.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
-    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
+    visualizationColumn: visualizationColumn,
     onMount: studioApp.init.bind(studioApp, config)
   }), document.getElementById(config.containerId));
 };
