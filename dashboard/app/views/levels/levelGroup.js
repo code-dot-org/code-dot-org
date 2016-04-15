@@ -25,6 +25,7 @@ function initLevelGroup(
     $('.full_container').addClass("level_group_readonly");
   }
 
+
   // Whenever an embedded level notifies us that the user has made a change,
   // check for any changes in the response set, and if so, attempt to save
   // these answers.  Saving is throttled to not occur more than once every 20
@@ -46,64 +47,38 @@ function initLevelGroup(
     lastResponse = currentResponse;
   };
 
+  /**
+   * Construct an array of all the level results. When submitted it's something
+   * like this:
+   *
+   * [{"level_id":1977,"result":"0","valid":true},
+   *  {"level_id":2007,"result":"-1","valid":false},
+   *  {"level_id":1939,"result":"2,1","valid":true}]
+   */
   window.getResult = function () {
-    // Construct an array of all the level results.
-    // When submitted it's something like this:
-    //
-    //   [{"level_id":1977,"result":"0","valid":true},{"level_id":2007,"result":"-1","valid":false},{"level_id":1939,"result":"2,1","valid":true}]
-    //
-
-    var validCount = 0;
-
     // Add any new results to the existing lastAttempt results.
-    for (var i = 0; i < levelCount; i++) {
-      var levelName = "level_" + i;
-      var currentAnswer = window[levelName].getCurrentAnswer();
+    var levels = window.levelGroup.levels;
+    var validCount = 0;
+    Object.keys(levels).forEach(function (levelId) {
+      var currentAnswer = levels[levelId].getCurrentAnswer();
       var levelResult = currentAnswer.response.toString();
       var valid = currentAnswer.valid;
-      var levelId = window[levelName].getLevelId();
-
-      // But before storing, if we had a previous result for the same level,
-      // remove that from the array, since we want to overwrite that previous
-      // answer.
-      for (var j = lastAttempt.length - 1; j >= 0; j--) {
-        if (lastAttempt[j].level_id == levelId) {
-          lastAttempt.splice(j, 1);
-        }
-      }
-
+      lastAttempt[levelId] = {result: levelResult, valid: valid};
       if (valid) {
         validCount++;
       }
-
-      lastAttempt.push({level_id: levelId, result: levelResult, valid: valid});
-    }
-
-    var response = JSON.stringify(lastAttempt);
+    });
 
     var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
 
-    var result;
-    var submitted;
-    var showConfirmationDialog;
-
-    if (window.appOptions.level.submittable || this.forceSubmittable) {
-      result = true;
-      submitted = true;
-
-      var completeString = (validCount == levelCount) ? "complete" : "incomplete";
-      showConfirmationDialog = "levelgroup-submit-" + completeString;
-    } else {
-      result = true; // this.validateAnswers();
-      submitted = false;
-      showConfirmationDialog = false;
-    }
+    var completeString = (validCount == levelCount) ? "complete" : "incomplete";
+    var showConfirmationDialog = "levelgroup-submit-" + completeString;
 
     return {
-      "response": response,
+      "response": JSON.stringify(lastAttempt),
       "result": true,
       "errorType": null,
-      "submitted": submitted,
+      "submitted": window.appOptions.level.submittable || forceSubmittable,
       "showConfirmationDialog": showConfirmationDialog
     };
   };
@@ -140,7 +115,6 @@ function initLevelGroup(
   // Called by previous/next button handlers.
   // Goes to a new page, first saving current answers if necessary.
   function gotoPage(targetPage) {
-
     // Are we read-only?  This can be because we're a teacher OR because an answer
     // has been previously submitted.
     if (window.appOptions.readonlyWorkspace) {
@@ -163,10 +137,8 @@ function initLevelGroup(
     gotoPage(currentPage-1);
   }, this));
 
-
   // Unsubmit button should only be available when this is a standalone level.
   $('.unsubmitButton').click(function () {
-
     var content = document.querySelector("#unsubmit-dialogcontent").cloneNode(true);
     var dialog = new window.Dialog({body: content});
     var dialogDiv = $(dialog.div);
@@ -179,7 +151,7 @@ function initLevelGroup(
 
       $.post(window.appOptions.unsubmitUrl,
         {"_method": 'PUT', user_level: {submitted: false}},
-        function (data) {
+        function () {
           // Just reload so that the progress in the header is shown correctly.
           location.reload();
         }
@@ -190,5 +162,4 @@ function initLevelGroup(
       dialog.hide();
     });
   });
-
 }
