@@ -8,6 +8,7 @@ var animationPicker = require('./AnimationPicker/reducers').animationPicker;
 var animationTab = require('./AnimationTab/reducers').animationTab;
 var combineReducers = require('redux').combineReducers;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
+var utils = require('../utils');
 
 function interfaceMode(state, action) {
   state = state || GameLabInterfaceMode.CODE;
@@ -49,47 +50,51 @@ function level(state, action) {
   }
 }
 
-var animationsInitialState = [
-  {
-    "name": "animation1",
-    "frameRate": 10,
-    "key": "animation1_key",
-    "version": "111111",
-    "frameWidth": 400,
-    "frameHeight": 200,
-    "frameCount": 8,
-    "framesPerRow": 5
+function animation(state, action) {
+  state = state || { key: utils.createUuid() };
+
+  switch (action.type) {
+    case ActionType.SET_ANIMATION_NAME:
+      if (state.key === action.animationKey) {
+        return _.assign({}, state, {
+          name: action.name
+        });
+      }
+      return state;
+
+    default:
+      return state;
   }
-];
+}
 
 function animations(state, action) {
-  state = state || animationsInitialState;
+  state = state || [];
   
   switch (action.type) {
+
     case ActionType.ADD_ANIMATION_AT:
       return [].concat(
           state.slice(0, action.index),
           action.animationProps,
           state.slice(action.index));
+
     case ActionType.DELETE_ANIMATION:
       return state.filter(function (animation) {
         return animation.key !== action.animationKey;
       });
+
     case ActionType.SET_INITIAL_ANIMATION_METADATA:
       // ONLY FOR TESTING - REMOVE BEFORE SHIP!
       if (action.metadata.length === 0) {
         return animationsInitialState;
       }
       return action.metadata;
+
     case ActionType.SET_ANIMATION_NAME:
-      for (var i = 0; i < state.length; i++) {
-        if (state[i].key === action.animationKey) {
-          state[i] = _.assign({}, state[i], {
-            name: action.name
-          });
-        }
-      }
-      return state.slice();
+      return state.map(function (animState) {
+        return animation(animState, action)
+      });
+
     default:
       return state;
   }

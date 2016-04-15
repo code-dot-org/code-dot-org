@@ -1,7 +1,9 @@
+var _ = require('../../lodash');
 var AnimationPickerBody = require('./AnimationPickerBody.jsx');
 var Dialog = require('../../templates/DialogComponent.jsx');
 var HiddenUploader = require('../../assetManagement/HiddenUploader.jsx');
 var styles = require('./styles');
+var utils = require('../../utils');
 
 /** @enum {string} */
 var View = {
@@ -13,7 +15,8 @@ var View = {
 var AnimationPicker = React.createClass({
   propTypes: {
     channelId: React.PropTypes.string.isRequired,
-    handleClose: React.PropTypes.func.isRequired,
+    onComplete: React.PropTypes.func.isRequired,
+    onCancel: React.PropTypes.func.isRequired,
     typeFilter: React.PropTypes.string
   },
 
@@ -25,19 +28,20 @@ var AnimationPicker = React.createClass({
     this.refs.uploader.openFileChooser();
   },
 
-  onUploadStart: function () {
-    console.log('onUploadStart');
-    this.setState({view: View.UPLOAD_IN_PROGRESS});
+  onUploadStart: function (data) {
+    this.setState({
+      view: View.UPLOAD_IN_PROGRESS,
+      originalFileName: data.files[0].name
+    });
   },
 
   onUploadDone: function (result) {
-    console.log('onUploadDone');
-    console.log(result);
-    this.setState({view: View.PICKER});
+    this.props.onComplete(_.assign(result, {
+      originalFileName: this.state.originalFileName
+    }));
   },
 
   onUploadError: function (status) {
-    console.log('onUploadError');
     console.log(status);
     this.setState({view: View.PICKER});
   },
@@ -55,7 +59,7 @@ var AnimationPicker = React.createClass({
     return (
       <Dialog
           isOpen
-          handleClose={this.props.handleClose}
+          handleClose={this.props.onCancel}
           uncloseable={this.state.view === View.UPLOAD_IN_PROGRESS}>
         <HiddenUploader
             ref="uploader"
@@ -64,7 +68,7 @@ var AnimationPicker = React.createClass({
             onUploadError={this.onUploadError}
             endpoint="animations"
             channelId={this.props.channelId}
-            filename="new_animation.png"
+            filename={utils.createUuid() + '.png'}
             typeFilter={this.props.typeFilter} />
         {visibleBody}
       </Dialog>

@@ -12,9 +12,11 @@ var AnimationPickerAction = module.exports.AnimationPickerAction = {
  * Show the animation picker
  * @returns {{type: AnimationPickerAction}}
  */
-module.exports.showAnimationPicker = function () {
+module.exports.showAnimationPicker = function (onComplete, onCancel) {
   return {
-    type: AnimationPickerAction.SHOW_ANIMATION_PICKER
+    type: AnimationPickerAction.SHOW_ANIMATION_PICKER,
+    onComplete: onComplete,
+    onCancel: onCancel
   };
 };
 
