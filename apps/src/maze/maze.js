@@ -30,6 +30,7 @@ var codegen = require('../codegen');
 var api = require('./api');
 var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var VisualizationColumn = require('../templates/VisualizationColumn');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var Visualization = require('./Visualization');
 var StepButton = require('./StepButton');
@@ -627,19 +628,20 @@ Maze.init = function (config) {
   };
 
   var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        visualization: React.renderToStaticMarkup(<Visualization/>),
-        controls: React.renderToStaticMarkup(
-          <StepButton showStepButton={!!(level.step && !level.edit_blocks)}/>
-        ),
-        extraControlRows: config.skinId === 'letters' && React.renderToStaticMarkup(
-          <SpellingControls searchWord={level.searchWord}/>
-        )
-      },
-      hideRunButton: level.stepOnly && !level.edit_blocks
-    });
+    var visualization = <Visualization/>;
+    var controls = <StepButton showStepButton={!!(level.step && !level.edit_blocks)}/>;
+    var extraControls;
+    if (config.skinId === 'letters') {
+      extraControls = <SpellingControls searchWord={level.searchWord}/>;
+    }
+    return React.renderToStaticMarkup(
+      <VisualizationColumn
+        hideRunButton={!!(level.stepOnly && !level.edit_blocks)}
+        visualization={visualization}
+        controls={controls}
+        extraControls={extraControls}
+      />
+    );
   };
 
   ReactDOM.render(React.createElement(AppView, {
