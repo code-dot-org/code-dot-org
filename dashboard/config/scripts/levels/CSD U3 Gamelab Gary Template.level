@@ -1,0 +1,56 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-14T19:45:06.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "frameRate": null,
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "strokeWeight": null,
+      "noStroke": null,
+      "arc": null,
+      "ellipse": null,
+      "line": null,
+      "rect": null,
+      "regularPolygon": null,
+      "background": null,
+      "randomNumber_min_max": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "start_blocks": "function draw() {\r\n  background('white');\r\n  noStroke();\r\n  \r\n  // Head\r\n  fill('orange');\r\n  regularPolygon(6, 150, 200, 200);\r\n  \r\n  // Randomize the width and/or height\r\n  // to simulate speech\r\n  fill('blue');\r\n  ellipse(200, 275, 100, 50);\r\n  \r\n  // Eyes\r\n  fill('white');\r\n  ellipse(160, 150, 50, 50);\r\n  ellipse(240, 150, 50, 50);\r\n  fill('black');\r\n  ellipse(160, 150, 20, 20);\r\n  ellipse(240, 150, 20, 20);\r\n  \r\n  // Eyebrows\r\n  fill('brown');\r\n  rect(130, 120, 60, 20);\r\n  rect(210, 120, 60, 20);\r\n  \r\n  // Nose\r\n  stroke('purple');\r\n  strokeWeight(8);\r\n  noFill();\r\n  arc(190, 200, 100, 50, 270, 45);\r\n  \r\n  // Mouth\r\n  noStroke();\r\n  fill('blue');\r\n}\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>
