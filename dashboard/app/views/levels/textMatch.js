@@ -1,7 +1,5 @@
-var TextMatch = function (id, levelId, standalone, answers, lastAttempt) {
+var TextMatch = function (id, standalone, answers, lastAttempt) {
   this.id = id;
-
-  this.levelId = levelId;
 
   this.standalone = standalone;
 
@@ -30,10 +28,6 @@ TextMatch.prototype.getCurrentAnswer = function () {
   var response = $("#" + this.id + " textarea.response").val();
 
   return encodeURIComponent(response);
-};
-
-TextMatch.prototype.getLevelId = function () {
-  return this.levelId;
 };
 
 TextMatch.prototype.getResult = function () {
