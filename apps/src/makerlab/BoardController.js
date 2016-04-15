@@ -59,18 +59,23 @@ BoardController.prototype.installComponentsOnInterpreter = function (codegen, js
   this.prewiredComponents = this.prewiredComponents ||
       initializeCircuitPlaygroundComponents(this.board_.io);
 
-  codegen.customMarshalObjectList = [
-    {instance: five.Led},
-    {instance: five.Led.RGB},
-    {instance: five.Button},
-    {instance: five.Switch},
-    {instance: five.Piezo},
-    {instance: five.Thermometer},
-    {instance: five.Sensor},
-    {instance: PlaygroundIO.CapTouch},
-    {instance: PlaygroundIO.Tap},
-    {instance: five.Accelerometer}
-  ];
+  var componentConstructors = {
+    Led: five.Led,
+    RGB: five.Led.RGB,
+    Button: five.Button,
+    Switch: five.Switch,
+    Piezo: five.Piezo,
+    Thermometer: five.Thermometer,
+    Sensor: five.Sensor,
+    CapTouch: PlaygroundIO.CapTouch,
+    Tap: PlaygroundIO.Tap,
+    Accelerometer: five.Accelerometer
+  };
+
+  Object.keys(componentConstructors).forEach(function (key) {
+    codegen.customMarshalObjectList.push({instance: componentConstructors[key]});
+    jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
+  });
 
   Object.keys(this.prewiredComponents).forEach(function (key) {
     jsInterpreter.createGlobalProperty(key, this.prewiredComponents[key]);
