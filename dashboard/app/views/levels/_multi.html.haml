@@ -1,6 +1,5 @@
-:javascript
-  #{render template: 'levels/multi.js', formats: [:js]}
-  window.levelGroup = {levels: {}};
+- content_for(:head) do
+  =javascript_include_tag 'js/assessments'
 
 = render partial: 'levels/single_multi', locals: {standalone: true, level: @level, last_attempt: @last_attempt, tight_layout: false }
 

@@ -1,6 +1,8 @@
 /* global appOptions, Dialog */
 
-function initLevelGroup(
+window.levelGroup = {levels: {}};
+
+window.initLevelGroup = function (
   levelCount,
   page,
   fallbackResponse,
@@ -113,4 +115,4 @@ function initLevelGroup(
       dialog.hide();
     });
   });
-}
+};

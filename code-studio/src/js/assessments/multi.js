@@ -1,6 +1,6 @@
 /* global $, Dialog, appOptions, CDOSounds */
 
-var Multi = function (id, standalone, numAnswers, answers, lastAttemptString) {
+var Multi = window.Multi = function (id, standalone, numAnswers, answers, lastAttemptString) {
 
   this.id = id;
 

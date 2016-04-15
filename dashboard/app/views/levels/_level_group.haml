@@ -1,13 +1,11 @@
 - app = 'level_group'
 - data = @level.properties
 
-:javascript
-  #{render template: 'levels/multi.js', formats: [:js]}
-  #{render template: 'levels/textMatch.js', formats: [:js]}
-  #{render template: 'levels/levelGroup.js', formats: [:js]}
+- content_for(:head) do
+  =javascript_include_tag 'js/assessments'
 
+:javascript
   window.levelData = #{data.to_json};
-  window.levelGroup = {levels: {}};
 
 = render partial: 'levels/common_audio'
 

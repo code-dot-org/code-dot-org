@@ -1,4 +1,4 @@
-var TextMatch = function (id, standalone, answers, lastAttempt) {
+var TextMatch = window.TextMatch = function (id, standalone, answers, lastAttempt) {
   this.id = id;
 
   this.standalone = standalone;
