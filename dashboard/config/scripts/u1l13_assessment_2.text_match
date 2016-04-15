@@ -1,7 +1,0 @@
-name 'U1L13 Assessment 2'
-title 'What is good compression?'
-content1 ''
-
-markdown <<MARKDOWN
-For a piece of text, what is a “good” amount of compression? Is there a way to know when you’ve compressed it the most? Explain how you would know, or why you can’t know.
-MARKDOWN

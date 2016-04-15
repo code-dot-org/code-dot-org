@@ -1,0 +1,17 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:09.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Course Structure",
+    "height": "200",
+    "placeholder": "I am going to start with Course...",
+    "markdown_instructions": "The courses use a spiraling curriculum design, in which concepts and skills are revisited in each course while delving deeper each time.\n\nEach course experience is a blend of online activities and \"unplugged\" activities, which are lessons where students learn computing concepts without a computer. The online experiences are composed of self-guided and self-paced tutorials, which use scaffolded sets of programming instructions to explore and practice algorithmic thinking. The unplugged lessons take a hands-on, often kinesthetic approach, making use of physical manipulatives to model computational concepts.\n\nEach course consists of about 18 to 20 lessons, each lasting between 25 and 45 minutes. They can be taught at a comfortable pace whether in consecutive days as a sub-unit or one day a week for 18 weeks. The content of each course builds conceptually on the previous course, so that a student can progress through all three experiences learning new concepts along the way.\n\nCode.org's K-5 curriculum aligns to CSTA Computer Science Standards and ISTE standards, while some lessons also integrate national Math, English Language Arts, and Science standards.\n\nAcross the entire K-5 curriculum, the use of *Computer Science Themes* scaffolds the development of ideas and recognizes the continual construction of knowledge:\n\n- Algorithms\n- Data\n- Abstraction\n- Computing Practice and Programming (Use of computational tools)\n- Computers and Communication Devices (Elements of computing devices and networks)\n- Community, Global, and Ethical Impacts\n\nAcross the entire K-5 curriculum, students will develop the skills of a computer scientist through the development of *Computational Thinking Practices*:\n\n- Creativity\n- Collaboration\n- Communication\n- Persistence\n- Problem Solving\n\n### Concepts Learned in each Course\n\nBy the end of **Course 1**, students will learn the following computer science concepts:\n\n- Sequence\n- Loops\n- Events\n- Debugging\n- Internet safety\n\nBy the end of **Course 2**, students will learn the following computer science concepts:\n\n- Sequence\n- Loops and nested loops\n- Conditionals\n- Introductory binary\n- Events\n- Debugging\n- Internet safety\n\nBy the end of **Course 3**, *which has a pre-requisite of Course 2*, students will learn the following computer science concepts:\n\n- Steps of computational thinking\n- Using and creating functions\n- Nested conditionals\n- While loops\n- Crowdsourcing\n- Methods of Internet data transmission\n- Digital Citizenship\n\n#### Which course is appropriate for the students you'll be working with?\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

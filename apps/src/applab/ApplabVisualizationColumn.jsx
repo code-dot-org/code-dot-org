@@ -42,7 +42,7 @@ var ApplabVisualizationColumn = React.createClass({
                 </tr>
               </tbody>
             </table>
-            <div id="ani-gif-preview-wrapper">
+            <div id="ani-gif-preview-wrapper" style={commonStyles.hidden}>
               <div id="ani-gif-preview">
               </div>
             </div>

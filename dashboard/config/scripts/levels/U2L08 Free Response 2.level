@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:19.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Router Table: Reflection",
+    "markdown_instructions": "Why do routers store information about neighbors and costs, rather than the whole path from themselves to another router? \n",
+    "encrypted_solution": "sFAu5lSpb1kPpfyhAybNcZH4k2WHCo9DLA47UVNgCyVLdl4LnefTU9ky/TLx\nK3nmtUHmYxwfeaXi9s0RP45QxPT2JKTKippvYXIyi2BKIE0p8lJdkH8qnlA5\nH8/g+fw1nijaEi6yXAGAJuU9bD/onz7LNOK983X1+UiNcBYbmkXClxqSgNF2\nLAby5hGBLtt04X0QNc7QPL5hKsfzrF769+sPOqXxAJm043Uadn7IJMMPsWeO\nH7FE1KwFN7/rHIWJeFLxYFcck1mUT3/jfLDtmBL52SIym/h8uqy0ZK69l/+a\nSUtCkRkmrcrY1DOs0C5lxy2GHzqBxsIvmBDVmLheKv1hEHoVNROHnozQWY3H\nqeg4K49r9KrLrkqVioMZQrcWZTPq1g9ZDXVdl59jng1RFqSy2rZrjwCWf2Xy\nTwdyHBPBLXO4Ngt8544k134wq10OmxIB3ex6bORqMyVArg8vIMlGWwLcUotT\ne7a/lScHVBoax1VtUO9uphrDabQG4Xnk\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>
