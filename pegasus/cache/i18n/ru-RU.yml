@@ -821,11 +821,10 @@
   dashboard_faq_k5: K-5 часто задаваемые вопросы
   dashboard_announcements: "Объявления"
   dashboard_announce_view_all: "Посмотреть все"
-  dashboard_announce_message: <b>1 февраля 2016</b> - 9 из 10 родителей хотят, чтобы
-    их дети изучали компьютерные науки, но до сих пор большинство школ не преподают
-    их. 30 января, Белый Дом объявил о планах донести компьютерные науки до каждого
-    студента в США в рамках инициативы "Компьютерные науки для Всех". We couldn't
-    be happier about the bipartisan support for computer science.
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
   dashboard_announce_button_text: "узнать больше"
   dashboard_announce_hoc: "<b>15 октября, 2015</b> - Час кода приближается &mdash;
     каждый участвующий организатор получит подарочную карту для Amazon.com или Microsoft's
@@ -1692,3 +1691,8 @@
   infinity_shortcode: inf
   playlab_shortcode: "играть"
   artist_shortcode: art
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
