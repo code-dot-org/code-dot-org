@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:38.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Hidden Images: Getting Started",
+    "markdown_instructions": "Have you ever seen hidden-image stereograms...an image hidden within what appears to be a colorful geometric pattern? See an example <a href=\"http://www.vision3d.com/sghidden.html\" target=\"_blank\"> here.\n\n</a>How do you think stereograms are created?\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:22.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Lesson 16 - Assessment 1",
+    "markdown_instructions": "What does \"computationally hard\" mean?",
+    "encrypted_solution": "GwHGKKSNy3KkP3dObc3FRd6uVQoGdH/qscvIL7+q4Pk/OZCMCiXJEbokz50D\nnwhb8V6P1qHkhtNRIkwVfn7fYcop6a14aA/djl5ejMMcv9WbBrAX3JaJs62C\n8mgXLhxtGgiw+AaxfgXeFA6t+tmoG3Onr8WaXWTmdqxgWWdwJDHhyBidnsR5\nVrHmWH9/AuM2F52fgoN+pnKYIzQVzW9xQTgCRXcBy++0au7WhB1bwMCq1TQV\n2J2+LxYaoEKWu6V/\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>
