@@ -634,7 +634,7 @@ Maze.init = function (config) {
     if (config.skinId === 'letters') {
       extraControls = <SpellingControls searchWord={level.searchWord}/>;
     }
-    return React.renderToStaticMarkup(
+    return ReactDOMServer.renderToStaticMarkup(
       <VisualizationColumn
         hideRunButton={!!(level.stepOnly && !level.edit_blocks)}
         visualization={visualization}

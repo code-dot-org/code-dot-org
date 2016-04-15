@@ -1,7 +1,7 @@
 var Visualization = require('./Visualization');
 var GameButtons = require('./GameButtons');
 var PlaySpaceHeader = require('./PlaySpaceHeader');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+var BelowVisualization = require('../templates/BelowVisualization');
 var commonStyles = require('../commonStyles');
 var connect = require('react-redux').connect;
 
@@ -27,27 +27,7 @@ var ApplabVisualizationColumn = React.createClass({
         }
         <Visualization/>
         <GameButtons/>
-        <ProtectedStatefulDiv id="belowVisualization">
-          <div id="bubble" className="clearfix">
-            <table id="prompt-table">
-              <tbody>
-                <tr>
-                  <td id="prompt-icon-cell" style={commonStyles.hidden}>
-                    <img id="prompt-icon"/>
-                  </td>
-                  <td id="prompt-cell">
-                    <p id="prompt"/>
-                    <p id="prompt2" style={commonStyles.hidden}/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div id="ani-gif-preview-wrapper" style={commonStyles.hidden}>
-              <div id="ani-gif-preview">
-              </div>
-            </div>
-          </div>
-        </ProtectedStatefulDiv>
+        <BelowVisualization/>
       </div>
     );
   }
