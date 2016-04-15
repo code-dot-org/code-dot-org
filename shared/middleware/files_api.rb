@@ -175,6 +175,33 @@ class FilesApi < Sinatra::Base
     {filename: filename, category: category, size: body.length, versionId: response.version_id}.to_json
   end
 
+  def copy_file(endpoint, encrypted_channel_id, filename, source_filename)
+    not_authorized unless owns_channel?(encrypted_channel_id)
+
+    # verify that file type is in our whitelist, and that the user-specified
+    # mime type matches what Sinatra expects for that file type.
+    file_type = File.extname(filename)
+    unsupported_media_type unless allowed_file_type?(endpoint, file_type)
+    # ignore client-specified mime type. infer it from file extension
+    # when serving assets.
+    mime_type = Sinatra::Base.mime_type(file_type)
+
+    buckets = get_bucket_impl(endpoint).new
+
+    # Get the app size and size of the source object to check app quotas
+    source_size, app_size = buckets.object_and_app_size(encrypted_channel_id, source_filename)
+    # If the source object doesn't exist, reject the request
+    not_found if source_size.nil?
+
+    quota_exceeded(endpoint, encrypted_channel_id) unless app_size + source_size < max_app_size
+    quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, source_size)
+
+    response = buckets.copy(encrypted_channel_id, filename, source_filename)
+
+    category = mime_type.split('/').first
+    {filename: filename, category: category, size: source_size, versionId: response.version_id}.to_json
+  end
+
   #
   # PUT /v3/sources/<channel-id>/<filename>?version=<version-id>
   #
@@ -233,6 +260,17 @@ class FilesApi < Sinatra::Base
     bad_request unless file[:filename] && file[:tempfile]
 
     put_file(endpoint, encrypted_channel_id, filename, file[:tempfile].read)
+  end
+
+  # POST /v3/animations/<channel-id>/<filename>/from/<source-filename>
+  #
+  # Create or replace an animation. We use this method so that IE9 can still
+  # upload by posting to an iframe.
+  #
+  post %r{/v3/(animations)/([^/]+)/([^/]+)/from/([^/]+)$} do |endpoint, encrypted_channel_id, filename, source_filename|
+    dont_cache
+    content_type 'text/plain'
+    copy_file(endpoint, encrypted_channel_id, filename, source_filename)
   end
 
   #
