@@ -99,6 +99,14 @@ class V2UserRoutesTest < Minitest::Test
         assert_equal([expected_v2_students_hash_for(FakeDashboard::STUDENT)],
                      JSON.parse(@pegasus.last_response.body))
       end
+
+      it 'returns no deleted students' do
+        with_role FakeDashboard::TEACHER_WITH_DELETED
+        @pegasus.get '/v2/students'
+        assert_equal 200, @pegasus.last_response.status
+        assert_equal [expected_v2_students_hash_for(FakeDashboard::STUDENT)],
+                     JSON.parse(@pegasus.last_response.body)
+      end
     end
 
     V2_STUDENTS_ID_KEY_LIST = V2_STUDENTS_KEY_LIST.dup.concat [:secret_picture_name,
@@ -139,6 +147,50 @@ class V2UserRoutesTest < Minitest::Test
         assert_equal 200, @pegasus.last_response.status
         assert_equal(expected_v2_students_id_hash_for(FakeDashboard::STUDENT),
                      JSON.parse(@pegasus.last_response.body))
+      end
+
+      it 'returns 403 when seeking nonexistent student' do
+        with_role FakeDashboard::ADMIN
+        @pegasus.get "/v2/students/#{FakeDashboard::UNUSED_USER_ID}"
+        assert_equal 403, @pegasus.last_response.status
+      end
+
+      it 'returns 403 when seeking deleted student' do
+        with_role FakeDashboard::ADMIN
+        @pegasus.get "/v2/students/#{FakeDashboard::DELETED_STUDENT[:id]}"
+        assert_equal 403, @pegasus.last_response.status
+      end
+    end
+
+    describe 'POST /v2/students/:id/update' do
+      NEW_STUDENT_NAME = 'Sherry Student'
+
+      it 'returns 403 "Forbidden" when signed in as another student' do
+        with_role FakeDashboard::STUDENT
+        @pegasus.post "/v2/students/#{FakeDashboard::UPDATED_STUDENT[:id]}/update",
+          {name: NEW_STUDENT_NAME}.to_json,
+          'CONTENT_TYPE' => 'application/json;charset=utf-8'
+        assert_equal 403, @pegasus.last_response.status
+      end
+
+      it 'returns 403 "Forbidden" when signed in as unconnected teacher' do
+        with_role FakeDashboard::TEACHER
+        @pegasus.post "/v2/students/#{FakeDashboard::UPDATED_STUDENT[:id]}/update",
+          {name: NEW_STUDENT_NAME}.to_json,
+          'CONTENT_TYPE' => 'application/json;charset=utf-8'
+        assert_equal 403, @pegasus.last_response.status
+      end
+
+      it 'updates student info when signed in as the teacher' do
+        with_role FakeDashboard::TEACHER_WITH_UPDATED
+        @pegasus.post "/v2/students/#{FakeDashboard::UPDATED_STUDENT[:id]}/update",
+          {name: NEW_STUDENT_NAME}.to_json,
+          'CONTENT_TYPE' => 'application/json;charset=utf-8'
+        assert_equal 200, @pegasus.last_response.status
+        assert_equal expected_v2_students_id_hash_for(
+                       FakeDashboard::UPDATED_STUDENT.merge(
+                         {name: NEW_STUDENT_NAME})),
+                     JSON.parse(@pegasus.last_response.body)
       end
     end
 
