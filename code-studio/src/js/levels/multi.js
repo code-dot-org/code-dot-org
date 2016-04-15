@@ -1,5 +1,7 @@
 /* global $, Dialog, appOptions, CDOSounds */
 
+window.levelGroup = window.levelGroup || {levels: {}};
+
 var Multi = window.Multi = function (id, standalone, numAnswers, answers, lastAttemptString) {
 
   this.id = id;

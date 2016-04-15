@@ -39,6 +39,9 @@ Promise.all([
       'levels/contract_match.jsx',
       'levels/widget.js',
       'levels/external.js',
+      'levels/multi.js',
+      'levels/textMatch.js',
+      'levels/levelGroup.js',
       'initApp/initApp.js'
     ],
     commonFile: 'code-studio-common',
@@ -75,16 +78,6 @@ Promise.all([
       'plc/task_creation.js'
     ],
     commonFile: 'plc'
-  })),
-
-  // Bundle for assessment JS
-  build_commands.bundle(_.extend({}, defaultOptions, {
-    filenames: [
-      'assessments/levelGroup.js',
-      'assessments/multi.js',
-      'assessments/textMatch.js'
-    ],
-    commonFile: 'assessments'
   })),
 
   // makerlab-only dependencies for app lab
