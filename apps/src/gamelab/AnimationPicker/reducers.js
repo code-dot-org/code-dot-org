@@ -18,8 +18,36 @@ function isShowing(state, action) {
   }
 }
 
+function onComplete(state, action) {
+  state = state || function () {};
+
+  switch (action.type) {
+    case AnimationPickerAction.SHOW_ANIMATION_PICKER:
+      return action.onComplete;
+    case AnimationPickerAction.HIDE_ANIMATION_PICKER:
+      return function () {};
+    default:
+      return state;
+  }
+}
+
+function onCancel(state, action) {
+  state = state || function () {};
+
+  switch (action.type) {
+    case AnimationPickerAction.SHOW_ANIMATION_PICKER:
+      return action.onCancel;
+    case AnimationPickerAction.HIDE_ANIMATION_PICKER:
+      return function () {};
+    default:
+      return state;
+  }
+}
+
 module.exports = {
   animationPicker: combineReducers({
-    isShowing: isShowing
+    isShowing: isShowing,
+    onComplete: onComplete,
+    onCancel: onCancel
   })
 };

@@ -1,7 +1,7 @@
 /** @file Vertical scrolling list of animation sequences */
 'use strict';
 
-var animationPickerActions = require('../AnimationPicker/actions');
+var actions = require('./actions');
 var AnimationSequenceListItem = require('./AnimationSequenceListItem');
 var connect = require('react-redux').connect;
 var NewListItem = require('./NewListItem');
@@ -46,7 +46,7 @@ module.exports = connect(function propsFromState(state) {
 }, function propsFromDispatch(dispatch) {
   return {
     onNewItemClick: function () {
-      dispatch(animationPickerActions.showAnimationPicker());
+      dispatch(actions.pickNewAnimation());
     }
   };
 })(AnimationSequenceList);
