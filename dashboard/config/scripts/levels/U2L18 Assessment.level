@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:23.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection",
+    "markdown_instructions": "How is the Wireless Hotspot problem different from another “hard” problem you saw, the Traveling Salesman problem?\n",
+    "encrypted_solution": "eDKyZvYaO2LiLkkHXPjqU7EaRu/whmP/Wlak/2iGicEZxg8XQIPiKs5kw6+d\nkMQ1Bs/MVA+9uuOdwmbnhQ/1/PE3GKWrAIHBelOFtyQjy9Z5TU69v2YYWnX8\nxfWil8+k3oQupqRwssJ7dZCJCssqZbnVJZonBzAQ4JL8aO1ndCHww1ThAR62\nzFu7av5pEDl2OoNNuGYqBjnyKxGf4637Dq2DPZNK5VeE8DfFCuTfncnuF+GK\nRNCSLaCnDoDUZXcmAH+uu9LQpx/UdV+MT1UzpEtu9PbevFNwt4O/2hROUuk4\n437njRYVeHkC90qHW1ZL5sdH0eOHWJ1XKsdm85UuG5UOLACWmTkPTlBXlJzL\nGwf/uj7kuRkRnm702BHm7FO9Oh2K7ng4py7K8ZQG6qzrIUbUuhfs4cEuLUeL\ny4Y+qSOAcnYMgbjnA2ZT8IvBe56l+5Lt2ykxAB6efgT/J/FzShDC4vxr0sBJ\nVw9mTu+SNoZepx9ePbiTnGNA/1tT7hpj3V5oJYjAzbXfrDcddPVCq7MIIwSl\nOgKcrrFY93y+PTsSAn5CJMx02qKiKfiI4JCYtRtZxL2BKBUewVtE3hBs5C17\n9Ho80++SfTK1MUqo4S3SvaQYez98cwX27aWN9hW9FwR962eGJgJ32Hwzs8Mf\nryN3xCwwLbmfRDOT5OsjXI4dFVekK5v1Xg5FgRlcowYRUuBHFPlMzodDt6nF\nFacagtlL4KD/aryN8p/Me88eFG6dXKpsMK1i7M//RkGSCK6QWjov6JNzrXuW\nU7FjNo97EJGcTqwRQLC7iH2tYA8W6lQVhESqxbZKG63G9C2CxHdds8p/K/Fx\nF9nXOHvVFjl3QtOBmc81d4XBiyLLf1128bJva2sYn38lPXKp8ZYm30N9\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

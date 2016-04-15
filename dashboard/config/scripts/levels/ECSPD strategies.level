@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:06.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Classroom Strategies Journal",
+    "height": "300",
+    "markdown_instructions": "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://staging.code.org/curriculum/docs/web/k5online.css\">\n\nThis space is your __digital journal for documenting strategies__ you've picked up during Professional Development and while teaching the course. We'll revisit this often during PD, and you should refer back to it while planning lessons to remind yourself of strategies you want to try in class. \n\n\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

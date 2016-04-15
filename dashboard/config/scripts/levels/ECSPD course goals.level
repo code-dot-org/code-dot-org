@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:02.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Documenting Your Course Goals",
+    "height": "100",
+    "markdown_instructions": "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://staging.code.org/curriculum/docs/web/k5online.css\">\n\n### Now that you know more about the ECS curriculum, let's consider your goals\n<br>\n<br>\n\n__What are your goals for your ECS class?__ *These goals will change over time, and we'll revisit this your response as we go through PD so we can check in on how we're progressing towards those goals.*\n<br><br>\n*NOTE: remember you can change the size of the text box by clicking and dragging the bottom-right corner of the box.\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>
