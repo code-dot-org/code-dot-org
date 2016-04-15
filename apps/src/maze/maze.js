@@ -31,7 +31,6 @@ var api = require('./api');
 var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var VisualizationColumn = require('../templates/VisualizationColumn');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var Visualization = require('./Visualization');
 var StepButton = require('./StepButton');
 var SpellingControls = require('./SpellingControls');
