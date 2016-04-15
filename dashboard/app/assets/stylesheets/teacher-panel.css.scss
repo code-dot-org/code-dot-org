@@ -149,7 +149,8 @@
           line-height: 34px;
         }
       }
-      .name.navigator a {
+
+      .navigator a {
         color: $light_gray;
       }
 
@@ -162,6 +163,7 @@
         background-color: $light_cyan;
         font-family: $gotham-extra-bold; font-weight: normal;
         a { color: white; }
+        .navigator a { color: $lightest_gray; }
       }
     }
   }
