@@ -3,12 +3,15 @@
 'use strict';
 
 var ActionType = require('./actions').ActionType;
+var GameLabActionType = require('../actions').ActionType;
 var combineReducers = require('redux').combineReducers;
 
 
 function selectedAnimation(state, action) {
   state = state || '';
   switch (action.type) {
+    case GameLabActionType.ADD_ANIMATION_AT:
+      return action.animationProps.key;
     case ActionType.SELECT_ANIMATION:
       return action.animationKey;
     default:
