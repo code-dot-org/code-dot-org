@@ -2,7 +2,9 @@
 - data = @level.properties
 
 - content_for(:head) do
-  =javascript_include_tag 'js/assessments'
+  =javascript_include_tag 'js/levels/levelGroup'
+  =javascript_include_tag 'js/levels/multi'
+  =javascript_include_tag 'js/levels/textMatch'
 
 :javascript
   window.levelData = #{data.to_json};
