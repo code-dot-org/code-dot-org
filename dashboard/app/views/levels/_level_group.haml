@@ -43,7 +43,7 @@
           - level.properties['answers'] = nil
         = render partial: 'levels/single_text_match', locals: {index: index, standalone: false, level: level, last_attempt: last_attempt }
       - elsif level_class == "free_response"
-        = render partial: 'levels/free_response', locals: {index: index, level: level, last_attempt: last_attempt}
+        = render partial: 'levels/free_response', locals: {index: index, in_level_group: true, level: level, last_attempt: last_attempt}
 
   - unless @script_level.nil?
     - if page.page_number < @total_page_count
