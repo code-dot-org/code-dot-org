@@ -1588,10 +1588,9 @@ en:
         Scratch Jr: Scratch Jr
     level_group:
       name:
-        PS U3 Assessment1: {}
-        Test level group by Brendan: {}
-        Test longassessment levelgroup: {}
-        Test longassessment levelgroup split: {}
+        PS U3 Assessment1 new: {}
+        Test longassessment levelgroup new: {}
+        Test longassessment levelgroup split new: {}
     match:
       2-3 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
