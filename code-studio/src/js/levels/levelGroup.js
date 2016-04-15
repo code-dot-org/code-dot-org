@@ -1,6 +1,7 @@
 /* global appOptions, Dialog */
 
-window.levelGroup = {levels: {}};
+require('./multi.js');
+require('./textMatch.js');
 
 window.initLevelGroup = function (
   levelCount,
