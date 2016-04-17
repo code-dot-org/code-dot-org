@@ -1,11 +1,12 @@
-var rowStyle = require('./rowStyle');
-
+/**
+ * A duplicate button that helps replicate elements
+ */
 var DuplicateElementButton = React.createClass({
   propTypes: {
     handleDuplicate: React.PropTypes.func.isRequired
   },
 
-  handleDuplicate: function(event) {
+  handleDuplicate: function (event) {
     this.props.handleDuplicate();
   },
 
