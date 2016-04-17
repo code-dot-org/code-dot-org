@@ -98,7 +98,7 @@ designMode.createElement = function (elementType, left, top) {
   return element;
 };
 
-designMode.attachElement = function(element) {
+designMode.attachElement = function (element) {
   var parent;
   var isScreen = $(element).hasClass('screen');
   if (isScreen) {
@@ -451,7 +451,7 @@ designMode.updateProperty = function (element, name, value) {
   }
 };
 
-designMode.onDuplicate = function(element, event) {
+designMode.onDuplicate = function (element, event) {
   var isScreen = $(element).hasClass('screen');
   if (isScreen) {
     // Not duplicating screens for now
@@ -475,7 +475,7 @@ designMode.onDuplicate = function(element, event) {
   return duplicateElement;
 };
 
-designMode.onDeletePropertiesButton = function(element, event) {
+designMode.onDeletePropertiesButton = function (element, event) {
   var isScreen = $(element).hasClass('screen');
   if ($(element.parentNode).is('.ui-resizable')) {
     element = element.parentNode;
@@ -1033,7 +1033,7 @@ designMode.addKeyboardHandlers = function () {
 
     // Check for copy and paste events
     if (event.altKey || event.ctrlKey || event.metaKey) {
-      switch(event.which) {
+      switch (event.which) {
         case KeyCodes.COPY:
           if (currentlyEditedElement) {
             // Remember the current element on the clipboard
