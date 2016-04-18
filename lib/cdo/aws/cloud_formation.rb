@@ -108,7 +108,9 @@ module AWS
           RakeUtils.with_bundle_dir(cookbooks_dir) do
             Tempfile.open('berks') do |tmp|
               RakeUtils.bundle_exec 'berks', 'package', tmp.path
-              Aws::S3::Client.new(region: CDO.aws_region).put_object(
+              client = Aws::S3::Client.new(region: CDO.aws_region,
+                                           credentials: Aws::Credentials.new(CDO.aws_access_key, CDO.aws_secret_key))
+              client.put_object(
                 bucket: S3_BUCKET,
                 key: "chef/#{BRANCH}.tar.gz",
                 body: tmp.read
