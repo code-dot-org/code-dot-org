@@ -1,11 +1,8 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
-# require_relative '../../../deployment'
+require_relative '../../../deployment'
 
 ROOT = File.expand_path('../../../..', __FILE__)
-
-$:.unshift "#{ROOT}/lib"
-$:.unshift "#{ROOT}/shared/middleware"
 
 # Set up gems listed in the Gemfile.
 ENV['BUNDLE_GEMFILE'] ||= "#{ROOT}//Gemfile"
@@ -14,6 +11,7 @@ require 'bundler/setup'
 
 # require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
+require 'cdo/hip_chat'
 
 require 'json'
 require 'yaml'
@@ -40,12 +38,6 @@ $options.maximize = nil
 $options.auto_retry = false
 $options.magic_retry = false
 $options.parallel_limit = 1
-
-class HipChat
-  def self.log(*messages)
-    puts messages.join(' ')
-  end
-end
 
 class Object
   def blank?
