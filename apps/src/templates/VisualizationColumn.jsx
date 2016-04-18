@@ -4,6 +4,11 @@ var commonStyles = require('../commonStyles');
 var GameButtons = require('./GameButtons');
 var BelowVisualization = require('./BelowVisualization');
 
+/**
+ * Generic visualization column, currently only used by Maze. Might end up
+ * makign sense to share with App Lab, or alternatively to have each app end
+ * up with their own version.
+ */
 var VisualizationColumn = React.createClass({
   propTypes: {
     hideRunButton: React.PropTypes.bool.isRequired,
@@ -17,7 +22,6 @@ var VisualizationColumn = React.createClass({
       <span>
         {this.props.visualization}
 
-        {/* TODO : share with applab game buttons */}
         <GameButtons hideRunButton={this.props.hideRunButton}>
           {this.props.controls}
         </GameButtons>

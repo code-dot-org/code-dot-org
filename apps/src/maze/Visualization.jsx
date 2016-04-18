@@ -1,6 +1,8 @@
+var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+
 var Visualization = function () {
   return (
-    <div  id="visualization">
+    <ProtectedStatefulDiv id="visualization">
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgMaze">
         <g id="look">
           <path d="M 0,-15 a 15 15 0 0 1 15 15" />
@@ -11,7 +13,7 @@ var Visualization = function () {
       <div id="capacityBubble">
         <div id="capacity"></div>
       </div>
-    </div>
+    </ProtectedStatefulDiv>
   );
 };
 module.exports = Visualization;
