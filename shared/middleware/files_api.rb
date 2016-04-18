@@ -175,6 +175,15 @@ class FilesApi < Sinatra::Base
     {filename: filename, category: category, size: body.length, versionId: response.version_id}.to_json
   end
 
+  #
+  # Create a new file from an existing source file within the specified channel.
+  #
+  # @param [String] endpoint - One of sources/assets/animations
+  # @param [String] encrypted_channel_id - Token for app channel
+  # @param [String] filename - Destination filename for file to be created
+  # @param [String] source_filename - Filename of file to be copied
+  # @return [String] JSON containing details for new file
+  #
   def copy_file(endpoint, encrypted_channel_id, filename, source_filename)
     not_authorized unless owns_channel?(encrypted_channel_id)
 

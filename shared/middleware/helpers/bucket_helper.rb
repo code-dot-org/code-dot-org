@@ -16,6 +16,14 @@ class BucketHelper
     @s3.list_objects(bucket: @bucket, prefix: prefix).contents.map(&:size).reduce(:+).to_i
   end
 
+  #
+  # Retrieve the total asset size of an app and the size of an individual object
+  # within that app with a single S3 request.
+  #
+  # @param [String] encrypted_channel_id - Token identifying app channel to read.
+  # @param [String] target_object - S3 key relative to channel of the single
+  #                 object whose size we should return.
+  # @return [[Int, Int]] size of target_object and size of entire app
   def object_and_app_size(encrypted_channel_id, target_object)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
 
@@ -102,6 +110,13 @@ class BucketHelper
     response
   end
 
+  #
+  # Copy an object within a channel, creating a new object in the channel.
+  #
+  # @param [String] encrypted_channel_id - App-identifying token
+  # @param [String] filename - Destination name for new object
+  # @param [String] source_filename - Name of object to be copied
+  # @param [Hash] S3 response from copy operation
   def copy(encrypted_channel_id, filename, source_filename)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
 
