@@ -57,18 +57,25 @@ BoardController.prototype.ensureBoardConnected = function () {
 
 BoardController.prototype.installComponentsOnInterpreter = function (codegen, jsInterpreter) {
   this.prewiredComponents = this.prewiredComponents ||
-      initializeCircuitPlaygroundComponents();
+      initializeCircuitPlaygroundComponents(this.board_.io);
 
-  codegen.customMarshalObjectList = [
-    {instance: five.Led},
-    {instance: five.Led.RGB},
-    {instance: five.Button},
-    {instance: five.Switch},
-    {instance: five.Piezo},
-    {instance: five.Thermometer},
-    {instance: five.Sensor},
-    {instance: five.Gyro}
-  ];
+  var componentConstructors = {
+    Led: five.Led,
+    RGB: five.Led.RGB,
+    Button: five.Button,
+    Switch: five.Switch,
+    Piezo: five.Piezo,
+    Thermometer: five.Thermometer,
+    Sensor: five.Sensor,
+    CapTouch: PlaygroundIO.CapTouch,
+    Tap: PlaygroundIO.Tap,
+    Accelerometer: five.Accelerometer
+  };
+
+  Object.keys(componentConstructors).forEach(function (key) {
+    codegen.customMarshalObjectList.push({instance: componentConstructors[key]});
+    jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
+  });
 
   Object.keys(this.prewiredComponents).forEach(function (key) {
     jsInterpreter.createGlobalProperty(key, this.prewiredComponents[key]);
@@ -80,7 +87,12 @@ BoardController.prototype.reset = function () {
     return;
   }
 
-  this.board_.register.forEach(function (component) {
+  var standaloneComponents = [
+    this.prewiredComponents.tap,
+    this.prewiredComponents.touch
+  ];
+
+  this.board_.register.concat(standaloneComponents).forEach(function (component) {
     try {
       if (component.state && component.state.intervalId) {
         clearInterval(component.state.intervalId);
@@ -151,7 +163,7 @@ function deviceOnPortAppearsUsable(port) {
  * Circuit Playground board.
  * @returns {Object.<String, Object>} board components
  */
-function initializeCircuitPlaygroundComponents() {
+function initializeCircuitPlaygroundComponents(io) {
   return {
     pixels: Array.from({length: 10}, function (_, index) {
       return new five.Led.RGB({
@@ -195,8 +207,12 @@ function initializeCircuitPlaygroundComponents() {
       freq: 100
     }),
 
-    gyro: new five.Gyro({
-      controller: PlaygroundIO.Gyro
-    })
+    accelerometer: new five.Accelerometer({
+      controller: PlaygroundIO.Accelerometer
+    }),
+
+    tap: new PlaygroundIO.Tap(io),
+
+    touch: new PlaygroundIO.CapTouch(io)
   };
 }
