@@ -46,11 +46,11 @@ var ShareDialogBody = React.createClass({
     event.preventDefault();
   },
 
-  clickExport: function() {
+  clickExport: function () {
     this.setState({exporting: true});
     this.props.onClickExport().then(
       this.setState.bind(this, {exporting: false}),
-      function() {
+      function () {
         this.setState({
           exporting: false,
           exportError: 'Failed to export project. Please try again later.'
