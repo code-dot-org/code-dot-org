@@ -182,7 +182,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "instructions": "DO This",
-    "markdown_instructions": "# Your Own Drawing\r\n\r\nIt is your turn to create your own drawing. You should have drawn out your plan on paper first\r\n\r\n# Do This\r\n\r\n* Create a drawing that uses:\r\n\t* rect\r\n    * ellipse\r\n    * regularPolygon\r\n    * text\r\n    * color\r\n    * fill\r\n    * stroke",
+    "markdown_instructions": "# Your Own Drawing\r\n\r\nIt is your turn to create your own drawing. You should have drawn out your plan on paper first\r\n\r\n# Do This\r\n\r\n* Create a drawing that uses:\r\n\t* rect\r\n    * ellipse\r\n    * regularPolygon\r\n    * text\r\n    * color\r\n    * fill\r\n    * stroke\r\n* Make sure to use white space and comments to make your code clear",
     "start_blocks": "// Create your drawing here"
   },
   "published": true,
