@@ -860,22 +860,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 0, user_proficiency.repeat_loops_d5_count
   end
 
-  test 'track_proficiency does nothing if hint used' do
-    level_concept_difficulty = create :level_concept_difficulty
-    hint_view_request = create :hint_view_request,
-      level_id: level_concept_difficulty.level_id
-
-    User.track_proficiency(
-      hint_view_request.user_id,
-      hint_view_request.script_id,
-      level_concept_difficulty.level_id)
-
-    user_proficiency = UserProficiency.
-      where(user_id: hint_view_request.user_id).
-      first
-    assert user_proficiency.nil?
-  end
-
   test 'track_level_progress_sync calls track_proficiency if new perfect score' do
     script_level = create :script_level
     student = create :student
@@ -902,6 +886,17 @@ class UserTest < ActiveSupport::TestCase
     User.expects(:track_proficiency).never
 
     User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 25, false)
+  end
+
+  test 'track_level_progress_sync does not call track_proficiency if hint used' do
+    script_level = create :script_level
+    student = create :student
+    create :hint_view_request, user_id: student.id,
+      level_id: script_level.level_id, script_id: script_level.script_id
+
+    User.expects(:track_proficiency).never
+
+    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, false)
   end
 
   test 'normalize_gender' do
