@@ -43,7 +43,12 @@
     "min_workspace_height": "1000",
     "never_autoplay_video": "false"
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "events": 5,
+    "variables": 5
+  }
 }]]></config>
   <blocks>
     <start_blocks>

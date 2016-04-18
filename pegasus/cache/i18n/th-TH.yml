@@ -646,6 +646,7 @@
   dashboard_navigation_all_sections: "บัญชีผู้ใช้ของนักเรียนและความคืบหน้า"
   dashboard_navigation_view_progress: "ดูความคืบหน้า"
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "เพิ่มนักเรียน"
   dashboard_navigation_manage_students: "จัดการนักเรียน"
   dashboard_navigation_lesson_plans_resources: "แผนการเรียนและแหล่งข้อมูล"
@@ -753,6 +754,18 @@
   dashboard_puzzle: "ปริศนา"
   dashboard_question: "คำถาม"
   dashboard_response: "คำตอบ"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Correct
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "สถิติที่น่าทึ่งของ Hour of Code.  ในหนึ่งสัปดาห์ "
   stats_hoc_2013_image_alt: "สถิติจาก Hour of Code ปี 2013 "
   dashboard_teacher: "ครู"
@@ -772,11 +785,10 @@
   dashboard_faq_k5: "คำถามที่พบบ่อย ของ ประถม5 ( K-5 )"
   dashboard_announcements: "ประกาศ"
   dashboard_announce_view_all: "ดูทั้งหมด"
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
   dashboard_announce_button_text: "สิ่งที่น่าเรียนรู้ยังมีอีก"
   dashboard_announce_hoc: "<b>15 ตุลาคม 2015</b> - Hour of Code กำลังมา &mdash; ทุกคนที่เข้าร่วมจะได้รับบัตรของขวัญสำหรับซื้อสินค้าใน
     Amazon.com หรือ Microsoft.com เป็นของขวัญขอบคุณ เข้าร่วมห้องเรียนทั่วโลกในระหว่างวันที่
@@ -1552,3 +1564,8 @@
   infinity_shortcode: inf
   playlab_shortcode: "เล่น"
   artist_shortcode: art
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."

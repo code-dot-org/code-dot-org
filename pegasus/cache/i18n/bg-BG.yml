@@ -668,6 +668,7 @@
   dashboard_navigation_all_sections: "Ученически акаунти и прогрес"
   dashboard_navigation_view_progress: "Преглед на напредъка"
   dashboard_navigation_view_text_responses: "Изглед на текстовите отговори"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "Добавяне на ученици"
   dashboard_navigation_manage_students: "Управление на ученици"
   dashboard_navigation_lesson_plans_resources: "Учебни планове и ресурси"
@@ -794,6 +795,18 @@
   dashboard_puzzle: "Пъзел"
   dashboard_question: "Въпрос"
   dashboard_response: "Отговор"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "Правилно"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Невероятната статистика от миналата година за Часът на
     кодирането. Само за една седмица"
   stats_hoc_2013_image_alt: "Статистика Часът на кодирането от 2013"
@@ -817,11 +830,10 @@
   dashboard_faq_k5: K-5 често задавани въпроси
   dashboard_announcements: "Съобщения"
   dashboard_announce_view_all: "Преглед на всички"
-  dashboard_announce_message: "<b> Февруари 1, 2016</b> - 9 от 10 родителя искат децата
-    им да учат компютърни науки и въпреки това в повечето училища не се изучават.
-    на 30 януари, Белият Дом обяви планове да предостави възможност за изучаване на
-    компютърни науки на всеки ученик в Америка. Не можем да сме по-щастливи от двустранната
-    подкрепа за компютърните науки."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
   dashboard_announce_button_text: "Научете повече"
   dashboard_announce_hoc: "<b>Ноември 23, 2015</b> - часът на кода 2015 идва! Присъединете
     се към класните стаи по целия свят за най-голямото обучително събитие в историята."
@@ -1662,3 +1674,8 @@
   infinity_shortcode: inf
   playlab_shortcode: "играй"
   artist_shortcode: art
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."

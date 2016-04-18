@@ -7,17 +7,19 @@ var testUtils = require('./util/testUtils');
 testUtils.setupLocales();
 
 var Bee = require('@cdo/apps/maze/bee');
+var BeeCell = require('@cdo/apps/maze/beeCell');
+var MazeMap = require('@cdo/apps/maze/mazeMap');
 var utils = require('@cdo/apps/utils');
 
 var baseLevel = {
   honeyGoal: 1,
   map: [
-    [ 0 ]
+    [0]
   ],
   flowerType: 'redWithNectar',
   startDirection: 1,
   initialDirt: [
-    [ 0 ]
+    [0]
   ]
 };
 
@@ -54,13 +56,15 @@ describe("Bee", function () {
     function validate(flowerType, mapValue, initialDirtValue, expected, msg) {
       var map = [[mapValue]];
 
-      var maze = {};
       var config = {
         level: utils.extend(baseLevel, {
           flowerType: flowerType,
           map: map,
           initialDirt: [[initialDirtValue]]
         })
+      };
+      var maze = {
+        map: MazeMap.parseFromOldValues(config.level.map, config.level.initialDirt, BeeCell)
       };
       var bee = new Bee(maze, null, config);
       assert.equal(bee.isRedFlower(0, 0), expected, msg);

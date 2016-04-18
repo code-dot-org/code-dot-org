@@ -13,6 +13,10 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "6"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3
   }
 }]]></config>
   <blocks>

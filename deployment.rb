@@ -44,7 +44,7 @@ def load_configuration()
     'build_blockly_core'          => false,
     'build_dashboard'             => true,
     'build_pegasus'               => true,
-    'build_code_studio'           => [:development].include?(rack_env),
+    'build_code_studio'           => false,
     'dcdo_table_name'             => "dcdo_#{rack_env}",
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
@@ -70,7 +70,7 @@ def load_configuration()
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
     'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
-    'partners'                    => %w(al ar br eu italia ro sg uk za),
+    'partners'                    => %w(ar br italia ro sg tr uk za),
     'pdf_port_collate'            => 8081,
     'pdf_port_markdown'           => 8081,
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
@@ -128,9 +128,9 @@ def load_configuration()
     config['pegasus_reporting_db_reader'] ||= config['reporting_db_reader'] + config['pegasus_db_name']
     config['pegasus_reporting_db_writer'] ||= config['reporting_db_writer'] + config['pegasus_db_name']
 
-    # Set AWS SDK environment variables from provided config.
-    ENV['AWS_ACCESS_KEY_ID'] ||= config['aws_access_key'] || config['s3_access_key_id']
-    ENV['AWS_SECRET_ACCESS_KEY'] ||= config['aws_secret_key'] || config['s3_secret_access_key']
+    # Set AWS SDK environment variables from provided config and standardize on aws_* attributres
+    ENV['AWS_ACCESS_KEY_ID'] ||= config['aws_access_key'] ||= config['s3_access_key_id']
+    ENV['AWS_SECRET_ACCESS_KEY'] ||= config['aws_secret_key'] ||= config['s3_secret_access_key']
     ENV['AWS_DEFAULT_REGION'] ||= config['aws_region']
   end
 end
@@ -150,6 +150,10 @@ class CDOImpl < OpenStruct
   end
 
   def canonical_hostname(domain)
+    # Allow hostname overrides
+    return CDO.override_dashboard if CDO.override_dashboard && domain == 'studio.code.org'
+    return CDO.override_pegasus if CDO.override_pegasus && domain == 'code.org'
+
     return "#{self.name}.#{domain}" if ['console', 'hoc-levels'].include?(self.name)
     return domain if rack_env?(:production)
 

@@ -650,6 +650,7 @@
   dashboard_navigation_all_sections: "მოსწავლეების ანგარიშები და პროგრესი"
   dashboard_navigation_view_progress: "პროგრესის ნახვა"
   dashboard_navigation_view_text_responses: "ტექსტური პასუხების ნახვა"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "მოსწავლეებს დამატება"
   dashboard_navigation_manage_students: "სტუდენტების მართვა"
   dashboard_navigation_lesson_plans_resources: "გაკვეთილების გეგმები და რესურსები"
@@ -775,6 +776,18 @@
   dashboard_puzzle: "თავსატეხი"
   dashboard_question: "კითხვა"
   dashboard_response: "პასუხი"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "სწორია"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "წარმოუდგენელი სტატისტიკა წინა წლის კოდის ერთი საათიდან.
     მხოლოდ ერთი კვირის განმავლობაში:"
   stats_hoc_2013_image_alt: 2013 წლის კოდის ერთი საათის სტატისტიკა
@@ -1630,3 +1643,8 @@
   infinity_shortcode: inf
   playlab_shortcode: "თამაში"
   artist_shortcode: art
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."

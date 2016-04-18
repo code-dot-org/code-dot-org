@@ -103,6 +103,7 @@ level 'allthethings_template_backed1'
 level 'allthethings_template_backed2'
 level 'allthethings_moviebot'
 level 'Applab allthethings onRecordEvent'
+level 'allthethings_embed_video'
 
 stage 'Online PD'
 level 'PDK5 Intro C'
@@ -115,5 +116,15 @@ stage 'Studio'
 level 'Resizing Test'
 
 stage 'Long assessment'
-assessment 'Test longassessment levelgroup'
-assessment 'Test longassessment levelgroup split'
+assessment 'Test longassessment levelgroup new'
+assessment 'Test longassessment levelgroup split new'
+
+stage 'Star wars'
+level 'blockly:StudioEC:js_hoc2015_event_two_items'
+level 'blockly:Studio:hoc2015_blockly_5'
+
+stage 'Minecraft'
+level 'Overworld Chop Tree - allthethings'
+
+stage 'Rich long assessment'
+assessment 'PS U3 Assessment1 new'

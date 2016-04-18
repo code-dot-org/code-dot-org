@@ -664,6 +664,7 @@
   dashboard_navigation_all_sections: "Öğrenci hesapları ve ilerleme"
   dashboard_navigation_view_progress: "İlerlemeyi Görüntüle"
   dashboard_navigation_view_text_responses: Yanıtları Görüntüle
+  dashboard_navigation_view_assessments: Değerlendirmeler
   dashboard_navigation_add_students: "Öğrenci EKle"
   dashboard_navigation_manage_students: "Öğrencileri Yönet"
   dashboard_navigation_lesson_plans_resources: Ders planları ve kaynaklar
@@ -780,11 +781,23 @@
   dashboard_progress_completed_too_many_blocks: tamamlanmadı, fazla blok var
   dashboard_progress_completed_perfect: tamamlandı, harika
   dashboard_progress_furthest_level_attempted: denenen en yüksek seviye
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: gönderildi
   dashboard_stage: kademe
   dashboard_puzzle: Bulmaca
   dashboard_question: Soru
   dashboard_response: Cevap
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Doğru
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Hour of Code''dan geçen yılın inanılmaz istatistikleri.
     Sadece bir haftada:'
   stats_hoc_2013_image_alt: Hour of Code 2013'den istatistikler
@@ -809,11 +822,10 @@
   dashboard_faq_k5: K-5 Sık Sorulan Sorular
   dashboard_announcements: Bildirimler
   dashboard_announce_view_all: Tümünü Gör
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
   dashboard_announce_button_text: Daha fazlasını öğren
   dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
@@ -951,10 +963,10 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: Uygulama Laboratuvarı
-  applab_gradelevel: Ages 13+
-  applab_shortdescription_congrats: App Lab is a programming environment where you
-    can make simple apps. Design an app, code with blocks or JavaScript to make it
-    work, then share your app in seconds
+  applab_gradelevel: 13 + Yaş grubu
+  applab_shortdescription_congrats: App Lab basit uygulamalar yapabileceğiniz bir
+    uygulama geliştirme ortamıdır. Kod blokları ya da JavaScript ile bir uygulama
+    yapın ve saniyeler içinde paylaşın
   codeorg_gradelevel: 4-104 Yaş
   codeintl_gradelevel: 4-104 Yaş
   thinkersmithspanish_gradelevel: Por todos
@@ -1305,11 +1317,10 @@
     tarafından her gün kullanılan gerçek bir programlama dilidir- bizim sürükle bırak
     araç çubuğumuz bu dilin öğrenilmesini kolaylaştırıyor. Basketbol oyunu, dans gösterisi
     ya da hareketli kart yapmayı dene! '
-  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
-    in class as a way to spark students'' interest in coding with the TI technology
-    they carry in their backpacks everyday.  Learn the basics of coding using the
-    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
-    needed!  '
+  texasinstruments_longdescription: 'Sırt çantalarında taşıdıkları teknolojileri kullanarak
+    Kodlama ile ilgilenen öğrencileri teşvik etmek için 10 dakikalık kod etkinliği
+    sınıfta kullanılabilir. TI-84&#8482 kodunu kullanarak kodlamanın temellerini öğrenin;
+    Ekleyin ve sadece 10 dakikada programların - deneyim gerektirmez!  '
   teacherled_longdescription: Now that tens of thousands of educators have tried the
     Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
     activities that teach the basics of computer science. To help teachers find inspiration,
@@ -1323,7 +1334,7 @@
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodlanabilir
   scratchjr_beyond_name: "Ön okuyucular için ScratchJR"
-  hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
+  hopscotch_beyond_name: 'Seksek: iPad''te Programlama'
   pocketcode_beyond_name: Cep kodu
   groklearning_beyond_name: Python programlama öğren
   hacketyhack_beyond_name: Ruby öğren
@@ -1519,10 +1530,10 @@
     With Hackety Hack, you''ll learn the Ruby programming language. Ruby is used for
     all kinds of programs, including desktop applications and websites. [Note: Desktop
     install required]'
-  robomind_beyond_longdescription: 'Students learn the basics of programming by controling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
+  robomind_beyond_longdescription: "Öğrenciler programlamanın temellerini öğrenerek
+    kendi sanal robotlarını kontrol etmeyi öğreniyor. Bu online kendi kontrolünde
+    kurs kısa sunumlar, filmler, testler ve otomatik destek/ipuçları ile programlama
+    egzersizlerine yardım ediyor. "
   makeschool_beyond_longdescription: Know some ObjectiveC? Learn to make an iPhone
     game in an hour! We'll guide you through the process, to code, test, and play
     your game entirely in the browser and then share it on Facebook for friends to
@@ -1649,3 +1660,8 @@
   infinity_shortcode: inf
   playlab_shortcode: oynat
   artist_shortcode: art
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."

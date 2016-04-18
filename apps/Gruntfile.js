@@ -48,70 +48,8 @@ module.exports = function (grunt) {
 
   // Parse options from environment.
   var envOptions = {
-    localize: (process.env.MOOC_LOCALIZE === '1'),
     dev: (process.env.MOOC_DEV === '1')
   };
-
-  var LOCALES = (envOptions.localize ? [
-    'ar_sa',
-    'az_az',
-    'bg_bg',
-    'bn_bd',
-    'ca_es',
-    'cs_cz',
-    'da_dk',
-    'de_de',
-    'el_gr',
-    'en_us',
-    'en_ploc',
-    'es_es',
-    'eu_es',
-    'fa_ir',
-    'fi_fi',
-    'fil_ph',
-    'fr_fr',
-    'he_il',
-    'hi_in',
-    'hr_hr',
-    'hu_hu',
-    'id_id',
-    'is_is',
-    'it_it',
-    'ja_jp',
-    'ko_kr',
-    'lt_lt',
-    'lv_lv',
-    'ms_my',
-    'nl_nl',
-    'nn_no',
-    'no_no',
-    'pl_pl',
-    'pt_br',
-    'pt_pt',
-    'ro_ro',
-    'ru_ru',
-    'sk_sk',
-    'sl_si',
-    'sq_al',
-    'sr_sp',
-    'sv_se',
-    'ta_in',
-    'th_th',
-    'tr_tr',
-    'uk_ua',
-    'ur_pk',
-    'vi_vn',
-    'zh_cn',
-    'zh_tw'
-  ] : [
-    'en_us',
-    'en_ploc'
-  ]);
-
-  // if specified will, will build en_us, en_ploc, and specified locale
-  if (process.env.MOOC_LOCALE) {
-    LOCALES.push(process.env.MOOC_LOCALE);
-  }
 
   config.clean = {
     all: ['build']
@@ -337,6 +275,7 @@ module.exports = function (grunt) {
       ' `npm bin`/browserifyinc' +
       ' -g [ browserify-global-shim ]' +
       ' --cachefile ' + outputDir + 'browserifyinc-cache.json' +
+      ' --extension=.jsx' +
       ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]' +
       (envOptions.dev ? '' : ' -t loose-envify') +
       ' -d ' + allFilesSrc.join(' ') +
@@ -350,7 +289,7 @@ module.exports = function (grunt) {
 
   config.exec = {
     browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
-    buildColorJs: './script/build-color-js.js',
+    convertScssVars: './script/convert-scss-variables.js',
     mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : '')
   };
 
@@ -513,7 +452,7 @@ module.exports = function (grunt) {
     'checkDropletSize',
     'pseudoloc',
     'newer:messages',
-    'exec:buildColorJs',
+    'exec:convertScssVars',
     'newer:copy:src',
     'newer:copy:lib',
     'locales',
@@ -547,9 +486,9 @@ module.exports = function (grunt) {
 
   grunt.registerTask('mochaTest', [
     'newer:messages',
-    'exec:buildColorJs',
+    'exec:convertScssVars',
     'newer:copy:static',
-    'newer:concat',
+    'concat',
     'exec:mochaTest'
   ]);
 

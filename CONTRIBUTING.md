@@ -9,9 +9,7 @@ You can start setting up with these next steps:
 
 1. Anyone who would like to contribute to **[Code.org](https://github.com/code-dot-org/)** projects **must read and sign the [Contributor License Agreement](https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=8eb90665-c9f7-4b06-81a5-11d12020f251)**. We can't accept pull requests from contributors who haven't yet signed the CLA.
 
-2. Get your local development build working by following our [README](README.md). Fork our repo and make sure to merge our staging branch into yours **WEEKLY** as we do update frequently.
-
-3. [Join our community development HipChat room](http://www.hipchat.com/gBebkHP6g) for help getting set up. We're happy to have you! If you want to make sure you get our attention, include an **@all** (everyone) or **@here** (everyone currently in the room) in your message.
+2. Get your local development build working by following our [SETUP](SETUP.md). Fork our repo and make sure to merge our staging branch into yours **WEEKLY** as we do update frequently.
 
 ## Code Style
 
@@ -32,7 +30,7 @@ Please test your changes before submitting them to us!
 
 ### Manual testing
 
-We support recent versions of Firefox, Chrome, Internet Explorer, Edge, iOS Safari and the Android browsers ([full list of supported browsers and versions](https://support.code.org/hc/en-us/articles/202591743)). Be sure to try your feature out in [IE9](docs/testing-ie9.md), iOS and Android if it's a risk. [BrowserStack live](http://www.browserstack.com) or [Sauce Labs manual](https://saucelabs.com/manual) let you run manual tests in these browsers remotely.
+We support recent versions of Firefox, Chrome, Internet Explorer, Edge, iOS Safari and the Android browsers ([full list of supported browsers and versions](https://support.code.org/hc/en-us/articles/202591743)). Be sure to try your feature out in [IE9](docs/testing-ie9.md), iOS and Android if it's a risk. [Sauce Labs](https://saucelabs.com/manual) or [BrowserStack live](http://www.browserstack.com) let you run manual tests in these browsers remotely.
 
 ### Unit tests
 
@@ -40,7 +38,7 @@ For dashboard changes, be sure to test your changes using `rake test`. For [apps
 
 ### UI tests
 
-Our continuous integration server regularly runs a suite of [UI tests](./dashboard/test/ui) using Selenium / Cucumber which run against many browsers via [BrowserStack Automate](https://www.browserstack.com/automate), and can also be run locally using `chromedriver`. See the [README](./dashboard/test/ui) in that folder for instructions.
+Our continuous integration server regularly runs a suite of [UI tests](./dashboard/test/ui) using Selenium / Cucumber which run against many browsers via [Sauce Labs](https://saucelabs.com/), and can also be run locally using `chromedriver`. See the [README](./dashboard/test/ui) in that folder for instructions.
 
 If your changes might affect level paths, blockly UI, or critical path site logic, be sure to test your changes with a local UI test.
 

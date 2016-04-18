@@ -11,7 +11,7 @@ ENV['RACK_ENV'] = 'test'
 class DashboardTest < Minitest::Test
   describe 'Dashboard::User' do
     before do
-      FakeDashboard::use_fake_database
+      FakeDashboard.use_fake_database
       @student = Dashboard::User.get(FakeDashboard::STUDENT[:id])
       @teacher = Dashboard::User.get(FakeDashboard::TEACHER[:id])
       @admin = Dashboard::User.get(FakeDashboard::ADMIN[:id])

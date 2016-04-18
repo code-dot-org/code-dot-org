@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:35.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "String and Substring: Assessment 3",
+    "markdown_instructions": "What is the output of this code segment?\n\n\tvar sentence = \"This sentence contains five words?\";\n\tvar spaceIndex = sentence.indexOf(\" \");\n\tvar smallerSentence = sentence.substring(spaceIndex + 1, sentence.length);\n\tconsole.log(smallerSentence);\n\n<br/>\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

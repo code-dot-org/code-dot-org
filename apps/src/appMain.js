@@ -22,7 +22,7 @@ window.__TestInterface = {
 var addReadyListener = require('./dom').addReadyListener;
 var blocksCommon = require('./blocksCommon');
 
-module.exports = function(app, levels, options) {
+module.exports = function (app, levels, options) {
 
   // If a levelId is not provided, then options.level is specified in full.
   // Otherwise, options.level overrides resolved level on a per-property basis.
@@ -69,7 +69,7 @@ module.exports = function(app, levels, options) {
     options.blocksModule.install(Blockly, blockInstallOptions);
   }
 
-  addReadyListener(function() {
+  addReadyListener(function () {
     if (options.readonly) {
       if (app.initReadonly) {
         app.initReadonly(options);

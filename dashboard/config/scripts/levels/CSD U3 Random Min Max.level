@@ -1,0 +1,45 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-11T21:23:10.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "randomNumber_max": null,
+      "randomNumber_min_max": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "start_blocks": "// Use randomNumber() to randomly return\r\n// a number in a range you define\r\nconsole.log(__);",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "markdown_instructions": "# Changing the minimum\r\n\r\nSo far we've only generated numbers from 0 up to a value we set, but what if we wanted a different minimum? For example, if we want to use `randomNumber()` to create circles that have a radius somewhere between 50 and 100 pixels, how mught we do it?\r\n\r\nIf you check out the toolbox you'll notice that the `randomNumber()` function now takes two arguments. The second argument is **optional** - meaning that if you only call `randomNumber()` with one number it will give you a random integer from 0 to that number, but if you call it with two numbers you'll get a random integer from the first to the second.\r\n\r\n# Do This\r\n\r\nUsing `console.log()` write a program that randomly returns a number in a range you define. Can you make it return negative numbers? What about both positive and negative ones?"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Gamelab>

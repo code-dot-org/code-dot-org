@@ -311,22 +311,12 @@ button.arrow:disabled {
   border: 1px solid #ddd;
 }
 
-html[dir='rtl'] #codeWorkspace {
-  right: 400px;
-  left: 0px;
-  margin-right: 15px;
-  margin-left: 0px;
+html[dir='rtl'] .editor-column {
+   right: 400px;
 }
 
-#codeWorkspace {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  left: 400px;
-  bottom: 0;
-  margin-left: 15px;
-  border: 1px solid #ddd;
-  overflow: hidden;
+.editor-column {
+  left: 400px
 }
 
 #codeWorkspace.pin_bottom {
@@ -395,6 +385,10 @@ html[dir='rtl'] #codeWorkspace {
   line-height: 400px;
 }
 
+html[dir='rtl'] div#visualizationResizeBar {
+  right: 400px;
+}
+
 #visualization {
   position: relative;
   height: 400px;
@@ -450,13 +444,13 @@ html[dir='rtl'] #codeWorkspace {
   .small-footer-base.responsive {
     max-width: $width;
   }
-  #codeWorkspace {
+  .editor-column {
     left: $width;
   }
-  html[dir='rtl'] #codeWorkspace {
+  html[dir='rtl'] .editor-column {
     right: $width;
   }
-  html[dir='rtl'] body.readonly #codeWorkspace {
+  html[dir='rtl'] body.readonly .editor-column {
     right: 0px;
   }
   div#visualizationResizeBar {
@@ -945,7 +939,6 @@ input[type="radio"] {
 }
 
 #ani-gif-preview-wrapper {
-  display: inline-block;
   vertical-align: top;
 }
 

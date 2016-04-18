@@ -189,6 +189,7 @@ module LevelsHelper
   # appropriate to the level being rendered.
   def render_app_dependencies
     use_droplet = app_options[:droplet]
+    use_makerlab = @level.game == Game.applab && @level.makerlab_enabled
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
     use_gamelab = @level.game == Game.gamelab
@@ -204,6 +205,7 @@ module LevelsHelper
                use_applab: use_applab,
                use_gamelab: use_gamelab,
                use_phaser: use_phaser,
+               use_makerlab: use_makerlab,
                hide_source: hide_source,
                static_asset_base_path: app_options[:baseUrl]
            }
@@ -330,7 +332,7 @@ module LevelsHelper
     app_options[:isLegacyShare] = true if @is_legacy_share
     app_options[:isMobile] = true if browser.mobile?
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
-    app_options[:isAdmin] = true if (@game == Game.applab && current_user && current_user.admin?)
+    app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:pinWorkspaceToBottom] = true if enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if enable_scrolling?
@@ -366,12 +368,13 @@ module LevelsHelper
   end
 
   def build_copyright_strings
-    # TODO (brent) - these would ideally also go in _javascript_strings.html right now, but it can't
-    # deal with params
+    # TODO(brent): These would ideally also go in _javascript_strings.html right now, but it can't
+    # deal with params.
     {
         :thank_you => URI.escape(I18n.t('footer.thank_you')),
         :help_from_html => I18n.t('footer.help_from_html'),
         :art_from_html => URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
+        :code_from_html => URI.escape(I18n.t('footer.code_from_html')),
         :powered_by_aws => I18n.t('footer.powered_by_aws'),
         :trademark => URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
     }
@@ -399,7 +402,7 @@ module LevelsHelper
     end
   end
 
-  def string_or_image(prefix, text)
+  def string_or_image(prefix, text, source_level = nil)
     return unless text
     path, width = text.split(',')
     if %w(.jpg .png .gif).include? File.extname(path)
@@ -430,12 +433,13 @@ module LevelsHelper
           style: 'border: none;'
         }), {class: 'aspect-ratio'})
     else
-      data_t(prefix + '.' + @level.name, text)
+      level_name = source_level ? source_level.name : @level.name
+      data_t(prefix + '.' + level_name, text)
     end
   end
 
-  def multi_t(text)
-    string_or_image('multi', text)
+  def multi_t(level, text)
+    string_or_image('multi', text, level)
   end
 
   def match_t(text)

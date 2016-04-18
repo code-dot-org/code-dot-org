@@ -1,9 +1,0 @@
-name 'U1L3 Free response reflection question'
-title 'Reflection: Sending Complex Messages'
-content1 'Complete the Lesson 3 Rubric.'
-placeholder 'Enter your reflection here.'
-
-
-markdown <<MARKDOWN
-Why would we decide to send a message in only bits rather than modifying our devices to represent more states (State C, State D, State E, …)?
-MARKDOWN

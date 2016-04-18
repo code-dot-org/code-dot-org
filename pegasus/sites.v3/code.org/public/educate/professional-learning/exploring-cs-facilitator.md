@@ -3,6 +3,8 @@ title: ECS Facilitator Program
 nav: educate_nav
 ---
 # Become an Exploring Computer Science Facilitator
+**2016 Application Update: The application process closed March 15th. We are reviewing applications and accepting facilitators on a rolling basis through April 22nd. We will update everyone of their acceptance status by April 22nd.**
+
 Code.org is looking to partner with experienced high school or college level computer science educators to deliver multiple in-person workshops to local high school teachers teaching the [Exploring Computer Science](http://www.exploringcs.org/) curriculum.
 
 The ideal ECS Facilitator is an enthusiastic supporter of computer science education, possesses a connection to Code.org’s equity-focused mission and has a strong background in the [Exploring Computer Science](http://www.exploringcs.org/) course, preferably through past teaching experience. Experience mentoring teachers and managing/hosting professional development workshops a plus. Applicants who meet the facilitator criteria who live in a region where Code.org has Professional Learning or District Partners will be prioritized for acceptance.

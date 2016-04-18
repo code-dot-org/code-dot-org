@@ -26,9 +26,10 @@ class Level < ActiveRecord::Base
   belongs_to :game
   has_and_belongs_to_many :concepts
   has_many :script_levels, dependent: :destroy
-  belongs_to :solution_level_source, :class_name => "LevelSource" # TODO do we even use this
+  belongs_to :solution_level_source, :class_name => "LevelSource" # TODO: Do we even use this?
   belongs_to :ideal_level_source, :class_name => "LevelSource" # "see the solution" link uses this
   belongs_to :user
+  has_one :level_concept_difficulty
   has_many :level_sources
   has_many :hint_view_requests
 
@@ -39,6 +40,8 @@ class Level < ActiveRecord::Base
 
   after_save :write_custom_level_file
   after_destroy :delete_custom_level_file
+
+  accepts_nested_attributes_for :level_concept_difficulty, update_only: true
 
   include StiFactory
   include SerializedProperties
@@ -61,6 +64,16 @@ class Level < ActiveRecord::Base
   # Include type in serialization.
   def serializable_hash(options=nil)
     super.merge 'type' => type
+  end
+
+  # Rails won't natively assign one-to-one association attributes for
+  # us, even though we've specified accepts_nested_attributes_for above.
+  # So, we must do it manually.
+  def assign_attributes(attributes)
+    concept_difficulty_attributes = attributes.delete('level_concept_difficulty')
+    assign_nested_attributes_for_one_to_one_association(:level_concept_difficulty,
+        concept_difficulty_attributes) if concept_difficulty_attributes
+    super(attributes)
   end
 
   def related_videos
@@ -142,8 +155,13 @@ class Level < ActiveRecord::Base
     (level_paths - written_level_paths).each { |path| File.delete path }
   end
 
+  def should_write_custom_level_file?
+    changed = changed? || (level_concept_difficulty && level_concept_difficulty.changed?)
+    changed && write_to_file? && self.published
+  end
+
   def write_custom_level_file
-    if changed? && write_to_file? && self.published
+    if should_write_custom_level_file?
       file_path = LevelLoader.level_file_path(name)
       File.write(file_path, self.to_xml)
       file_path
@@ -154,7 +172,8 @@ class Level < ActiveRecord::Base
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.send(self.type) do
         xml.config do
-          config_attributes = filter_level_attributes(self.serializable_hash.deep_dup)
+          hash = self.serializable_hash(:include => :level_concept_difficulty).deep_dup
+          config_attributes = filter_level_attributes(hash)
           xml.cdata(JSON.pretty_generate(config_attributes.as_json))
         end
       end
