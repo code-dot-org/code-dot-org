@@ -61,6 +61,9 @@ var applabConstants = require('./constants');
 var consoleApi = require('../consoleApi');
 
 var BoardController = require('../makerlab/BoardController');
+var assetPrefix = require('../assetManagement/assetPrefix');
+var assetListStore = require('../assetManagement/assetListStore');
+var download = require('../assetManagement/download');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -1003,22 +1006,44 @@ Applab.exportApp = function() {
   var html = exportProjectEjs({htmlBody: appElement.outerHTML});
   var readme = exportProjectReadmeEjs({appName: appName});
 
-  return $.when(
-    $.ajax('/assets/js/en_us/common_locale.js', {dataType: 'text'}),
-    $.ajax('/assets/js/en_us/applab_locale.js', {dataType: 'text'}),
-    $.ajax('/assets/js/applab-api.js', {dataType: 'text'}),
-    $.ajax('/assets/css/applab.css', {dataType: 'text'})
-  ).then(
+  var assetsToDownload = [
+    {url: '/assets/js/en_us/common_locale.js', zipPath: appName + 'common_locale.js'},
+    {url: '/assets/js/en_us/applab_locale.js', zipPath: appName + 'applab_locale.js'},
+    {url: '/assets/js/applab-api.js', zipPath: appName + 'applab-api.js'},
+    {url: '/assets/css/applab.css', zipPath: appName + 'applab.css'},
+  ].concat(assetListStore.list().map(function(asset) {
+    return {
+      url: assetPrefix.fixPath(asset.filename),
+      rootRelativePath: 'assets/' + asset.filename,
+      zipPath: appName + '/assets/' + asset.filename,
+      dataType: 'binary',
+    };
+  }));
+
+  function rewriteAssetUrls(data) {
+    return assetsToDownload.slice(4).reduce(function(data, assetToDownload) {
+      return data.split(assetToDownload.url).join(assetToDownload.rootRelativePath);
+    }, data);
+  }
+
+  return $.when(...assetsToDownload.map(function(assetToDownload) {
+    return download(assetToDownload.url, assetToDownload.dataType || 'text');
+  })).then(
     function(commonLocale, applabLocale, applabApi, applabCSS) {
       var zip = new JSZip();
       zip.file(appName + "/applab.js", commonLocale[0] + applabLocale[0] + applabApi[0]);
       zip.file(appName + "/applab.css", applabCSS[0]);
-      zip.file(appName + "/index.html", html);
-      zip.file(appName + "/style.css", css);
-      zip.file(appName + "/code.js", code);
+      zip.file(appName + "/index.html", rewriteAssetUrls(html));
+      zip.file(appName + "/style.css", rewriteAssetUrls(css));
+      zip.file(appName + "/code.js", rewriteAssetUrls(code));
       zip.file(appName + "/README.md", readme);
-      var blob = zip.generate({type:"blob"});
-      saveAs(blob, appName + ".zip");
+
+      Array.from(arguments).slice(4).forEach(function([data], index) {
+        zip.file(assetsToDownload[index + 4].zipPath, data, {binary: true});
+      });
+      zip.generateAsync({type:"blob"}).then(function(blob) {
+        saveAs(blob, appName + ".zip");
+      });
     },
     function() {
       logToCloud.addPageAction(logToCloud.PageAction.staticResourceFetchError, {
