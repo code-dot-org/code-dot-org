@@ -87,7 +87,7 @@
           </statement>
         </block>
         <block type="when_run" deletable="false" movable="false"/>
-        <block type="procedures_defnoreturn" editable="false">
+        <block type="procedures_defnoreturn">
           <mutation>
             <description>draw a line of squares </description>
           </mutation>
@@ -169,9 +169,9 @@
             </block>
           </value>
         </block>
-        <block type="procedures_defnoreturn" editable="false" uservisible="false">
+        <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
-            <description>draw a 6 squares next to one another 6 squares long</description>
+            <description>draw a line of squares </description>
           </mutation>
           <title name="NAME">draw a line of squares</title>
           <statement name="STACK">
@@ -231,7 +231,6 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
         <block type="procedures_callnoreturn">
           <mutation name="draw a line of squares"/>
         </block>
@@ -251,67 +250,6 @@
             </block>
           </value>
         </block>
-        <block type="procedures_defnoreturn" editable="false">
-          <mutation/>
-          <title name="NAME">draw a line of squares</title>
-          <statement name="STACK">
-            <block type="draw_width" inline="false">
-              <value name="WIDTH">
-                <block type="math_number">
-                  <title name="NUM">1</title>
-                </block>
-              </value>
-              <next>
-                <block type="controls_repeat_ext" inline="true">
-                  <value name="TIMES">
-                    <block type="math_number">
-                      <title name="NUM">12</title>
-                    </block>
-                  </value>
-                  <statement name="DO">
-                    <block type="controls_repeat_ext" inline="true">
-                      <value name="TIMES">
-                        <block type="math_number">
-                          <title name="NUM">4</title>
-                        </block>
-                      </value>
-                      <statement name="DO">
-                        <block type="draw_move" inline="true">
-                          <title name="DIR">moveForward</title>
-                          <value name="VALUE">
-                            <block type="math_number">
-                              <title name="NUM">20</title>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="draw_turn" inline="true">
-                              <title name="DIR">turnLeft</title>
-                              <value name="VALUE">
-                                <block type="math_number">
-                                  <title name="NUM">90</title>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </statement>
-                      <next>
-                        <block type="draw_move" inline="true">
-                          <title name="DIR">moveForward</title>
-                          <value name="VALUE">
-                            <block type="math_number">
-                              <title name="NUM">20</title>
-                            </block>
-                          </value>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="math_number">
@@ -323,9 +261,37 @@
     </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="procedures_defnoreturn" editable="false">
+        <block type="procedures_defnoreturn">
           <mutation/>
           <title name="NAME">draw a line of squares</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" inline="true">
+              <value name="TIMES">
+                <block type="math_number">
+                  <title name="NUM">12</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw a square 20"/>
+                  <next>
+                    <block type="jump" inline="true">
+                      <title name="DIR">jumpForward</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">20</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation/>
+          <title name="NAME">draw a square 20</title>
           <statement name="STACK">
             <block type="draw_width" inline="false">
               <value name="WIDTH">
@@ -334,45 +300,22 @@
                 </block>
               </value>
               <next>
-                <block type="controls_repeat_ext" inline="true">
-                  <value name="TIMES">
-                    <block type="math_number">
-                      <title name="NUM">12</title>
-                    </block>
-                  </value>
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
                   <statement name="DO">
-                    <block type="controls_repeat_ext" inline="true">
-                      <value name="TIMES">
+                    <block type="draw_move" inline="true">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
                         <block type="math_number">
-                          <title name="NUM">4</title>
+                          <title name="NUM">20</title>
                         </block>
                       </value>
-                      <statement name="DO">
-                        <block type="draw_move" inline="true">
-                          <title name="DIR">moveForward</title>
-                          <value name="VALUE">
-                            <block type="math_number">
-                              <title name="NUM">20</title>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="draw_turn" inline="true">
-                              <title name="DIR">turnLeft</title>
-                              <value name="VALUE">
-                                <block type="math_number">
-                                  <title name="NUM">90</title>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </statement>
                       <next>
-                        <block type="draw_move" inline="true">
-                          <title name="DIR">moveForward</title>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
                           <value name="VALUE">
                             <block type="math_number">
-                              <title name="NUM">20</title>
+                              <title name="NUM">90</title>
                             </block>
                           </value>
                         </block>
