@@ -646,9 +646,13 @@ module.exports = {
         assert.equal(newImage.length, 1);
 
         // Copy and paste the image
-        newImage.focus();
-        testUtils.createKeyEvent('keydown', designModeViz, 67, true);
-        testUtils.createKeyEvent('keydown', designModeViz, 86, true);
+        var copy = testUtils.createKeyEvent('keydown', 67, true);
+        var paste = testUtils.createKeyEvent('keydown', 86, true);
+
+        var designModeElement = document.getElementById('designModeViz');
+        designModeElement.dispatchEvent(copy);
+        designModeElement.dispatchEvent(paste);
+
         assert.equal(designModeViz.find('img').length, 2);
 
         Applab.onPuzzleComplete();

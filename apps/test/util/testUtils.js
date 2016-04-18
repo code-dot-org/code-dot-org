@@ -279,32 +279,26 @@ exports.createMouseEvent = function mouseEvent(type, clientX, clientY) {
 
 /**
  * Creates a key event of the given type with the additional parameters
- * http://stackoverflow.com/questions/596481/simulate-javascript-key-events
  * @param {string} type (keydown, keyup, keypress)
- * @param {element} viewArg
  * @param {bool} keyCodeArg
  * @param {bool} metaKeyArg
  * @param {bool} altKeyArg
  * @param {bool} shiftKeyArg
  * @param {bool} ctrlKeyArg
- * @param {number} charCodeArgs
  */
-exports.createKeyEvent = function keyEvent(type, viewArg, keyCodeArg, metaKeyArg, altKeyArg, shiftKeyArg, ctrlKeyArg, charCodeArgs) {
-  var keyboardEvent = document.createEvent("KeyboardEvent");
-  var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" : "initKeyEvent";
-  keyboardEvent[initMethod](
-    type, // event type : keydown, keyup, keypress
-    true, // bubbles
-    true, // cancelable
-    viewArg, // viewArg: should be window
-    ctrlKeyArg || false, // ctrlKeyArg
-    altKeyArg || false, // altKeyArg
-    shiftKeyArg || false, // shiftKeyArg
-    metaKeyArg || false, // metaKeyArg
-    keyCodeArg || 0, // keyCodeArg : unsigned long the virtual key code, else 0
-    charCodeArgs || 0 // charCodeArgs : unsigned long the Unicode character associated with the depressed key, else 0
-  );
-  document.dispatchEvent(keyboardEvent);
+exports.createKeyEvent = function keyEvent(type, keyCodeArg, metaKeyArg, altKeyArg, shiftKeyArg, ctrlKeyArg) {
+  // Need to use generic "Event" instead of "KeyboardEvent" because of
+  // http://stackoverflow.com/questions/961532/firing-a-keyboard-event-in-javascript#comment-44022523
+  var keyboardEvent = document.createEvent('Event');
+  keyboardEvent.initEvent(type, true, true);
+  keyboardEvent.which = keyCodeArg;
+  keyboardEvent.keyCode = keyCodeArg;
+  keyboardEvent.altKey = altKeyArg;
+  keyboardEvent.metaKey = metaKeyArg;
+  keyboardEvent.ctrlKey = ctrlKeyArg;
+  keyboardEvent.shiftKey = shiftKeyArg;
+
+  return keyboardEvent;
 };
 
 /**
