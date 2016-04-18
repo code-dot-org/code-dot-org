@@ -1,95 +1,95 @@
 "ga":
   devise:
     confirmations:
-      confirmed: Your email address was successfully confirmed.
-      send_instructions: You will receive an email with instructions about how to
-        confirm your account in a few minutes.
-      send_paranoid_instructions: If your email address exists in our database, you
-        will receive an email with instructions about how to confirm your account
-        in a few minutes.
+      confirmed: Deimhníodh do sheoladh ríomhphoist.
+      send_instructions: Gheobhaidh tú ríomhphost ina bhfuil treoracha maidir le deimhniú
+        do chuntais go luath.
+      send_paranoid_instructions: Má tá do sheoladh ríomhphoist inár mbunachar sonraí,
+        gheobhaidh tú ríomhphost ina bhfuil treoracha maidir le deimhniú do chuntais
+        go luath.
     failure:
-      already_authenticated: You are already signed in.
-      inactive: Your account was not activated yet.
-      invalid: Invalid email or password.
-      invalid_token: Invalid authentication token.
-      locked: Your account is locked.
-      not_found_in_database: Invalid email or password.
-      timeout: Your session expired, please sign in again to continue.
-      unauthenticated: You need to sign in or sign up before continuing.
-      unconfirmed: You have to confirm your account before continuing.
+      already_authenticated: Tá tú logáilte isteach cheana.
+      inactive: Níl do chuntas deimhnithe fós.
+      invalid: Seoladh ríomhphoist nó focal faire mícheart.
+      invalid_token: Ceadchomhartha neamhbhailí.
+      locked: Tá do chuntas faoi ghlas.
+      not_found_in_database: Seoladh ríomhphoist nó focal faire mícheart.
+      timeout: Chuaigh do sheisiún thar am. Caithfidh tú logáil isteach arís.
+      unauthenticated: Caithfidh tú logáil isteach nó cláraigh ar dtús.
+      unconfirmed: Caithfidh tú do chuntas a dheimhniú.
     mailer:
       confirmation_instructions:
-        subject: Code.org confirmation instructions
+        subject: Treoracha maidir le deimhniú do chuntais Code.org
       reset_password_instructions:
-        subject: Code.org reset password instructions
+        subject: Treoracha maidir le hathshocrú d'fhocail faire Code.org
       unlock_instructions:
-        subject: Unlock Instructions
+        subject: Treoracha Díghlasála
     omniauth_callbacks:
-      failure: Could not authenticate you from %{kind} because "%{reason}".
-      success: Successfully authenticated from %{kind} account.
+      failure: 'Níorbh fhéidir linn thú a dheimhniú ó %{kind} ar an ábhar seo: "%{reason}".'
+      success: D'éirigh leis an deimhniú ó chuntas %{kind}.
     passwords:
-      no_token: You can't access this page without coming from a password reset email.
-        If you do come from a password reset email, please make sure you used the
-        full URL provided.
-      send_instructions: You will receive an email with instructions about how to
-        reset your password in a few minutes.
-      send_paranoid_instructions: If your email address exists in our database, you
-        will receive a password recovery link at your email address in a few minutes.
-      updated: Your password was changed successfully. You are now signed in.
-      updated_not_active: Your password was changed successfully.
+      no_token: Ní féidir leat an leathanach seo a úsáid murar tháinig tú ó ríomhphost
+        athshocraithe. Má tháinig tú ó ríomhphost athshocraithe, bí cinnte gur úsáid
+        tú an URL iomlán a bhí ann.
+      send_instructions: Gheobhaidh tú ríomhphost ina bhfuil treoracha maidir le hathshocrú
+        d'fhocail faire go luath.
+      send_paranoid_instructions: Má tá do sheoladh ríomhphoist inár mbunachar sonraí,
+        gheobhaidh tú ríomhphost ina bhfuil treoracha maidir le hathshocrú d'fhocail
+        faire go luath.
+      updated: Athraíodh d'fhocal faire. Tá tú logáilte isteach anois.
+      updated_not_active: Athraíodh d'fhocal faire.
     registrations:
-      destroyed: Bye! Your account was successfully cancelled. We hope to see you
-        again soon.
-      signed_up: Welcome! You have signed up successfully.
-      signed_up_but_inactive: You have signed up successfully. However, we could not
-        sign you in because your account is not yet activated.
-      signed_up_but_locked: You have signed up successfully. However, we could not
-        sign you in because your account is locked.
-      signed_up_but_unconfirmed: A message with a confirmation link has been sent
-        to your email address. Please open the link to activate your account.
-      update_needs_confirmation: You updated your account successfully, but we need
-        to verify your new email address. Please check your email and click on the
-        confirm link to finalize confirming your new email address.
-      updated: You updated your account successfully.
+      destroyed: Slán! Cealaíodh do chuntas. Go n-éirí leat.
+      signed_up: Fáilte romhat! Cruthaíodh do chuntas.
+      signed_up_but_inactive: D'éirigh leis an gclárú. Ach ní raibh tú in ann logáil
+        isteach toisc nach bhfuil do chuntas deimhnithe fós.
+      signed_up_but_locked: D'éirigh leis an gclárú. Ach ní raibh tú in ann logáil
+        isteach toisc go bhfuil do chuntas faoi ghlas.
+      signed_up_but_unconfirmed: Seoladh teachtaireacht ina bhfuil nasc deimhnithe
+        chuig do sheoladh ríomhphoist. Cliceáil an nasc sin chun do chuntas a dheimhniú.
+      update_needs_confirmation: D'éirigh leat do chuntas a nuashonrú, ach caithfimid
+        do sheoladh ríomhphoist nua a dheimhniú. Féach ar do bhosca isteach agus cliceáil
+        an nasc sa teachtaireacht uainn chun do sheoladh ríomhphoist nua a dheimhniú.
+      updated: D'éirigh leat do chuntas a nuashonrú.
     sessions:
       signed_in: ''
-      signed_out: Signed out successfully.
+      signed_out: Tá tú logáilte amach anois.
     unlocks:
-      send_instructions: You will receive an email with instructions about how to
-        unlock your account in a few minutes.
-      send_paranoid_instructions: If your account exists, you will receive an email
-        with instructions about how to unlock it in a few minutes.
-      unlocked: Your account has been unlocked successfully. Please sign in to continue.
+      send_instructions: Gheobhaidh tú ríomhphost ina bhfuil treoracha maidir le díghlasáil
+        do chuntais go luath.
+      send_paranoid_instructions: Má tá do chuntas ann, gheobhaidh tú ríomhphost ina
+        bhfuil treoracha maidir lena dhíghlasáil go luath.
+      unlocked: Díghlásáladh do chuntas. Logáil isteach le dul ar aghaidh.
   errors:
     messages:
-      already_confirmed: was already confirmed, please try signing in
-      confirmation_period_expired: needs to be confirmed within %{period}, please
-        request a new one
-      expired: has expired, please request a new one
-      not_found: not found
-      not_locked: was not locked
+      already_confirmed: deimhnithe cheana, déan iarracht logáil isteach anois
+      confirmation_period_expired: "- is gá é seo a dheimhniú faoi cheann %{period},
+        ba chóir duit ceann nua a iarraidh"
+      expired: thar am, ba chóir duit ceann nua a iarraidh
+      not_found: gan aimsiú
+      not_locked: gan glasáil
       not_saved:
-        one: '1 error prohibited this %{resource} from being saved:'
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        one: 'Níor sábháladh an %{resource} seo mar gheall ar earráid amháin:'
+        other: 'Níor sábháladh an %{resource} seo mar gheall ar %{count} earráid:'
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: Seoladh cuireadh chuig %{email}.
+      invitation_token_invalid: Tá an ceadchomhartha ón chuireadh neamhbhailí!
+      updated: Socraíodh d'fhocal faire. Tá tú logáilte isteach anois.
+      no_invitations_remaining: Níl aon chuirí fágtha
+      invitation_removed: Baineadh do chuireadh.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Seol cuireadh
+        submit_button: Seol cuireadh
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Socraigh d'fhocal faire
+        submit_button: Socraigh m'fhocal faire
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
-        accept: Accept invitation
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        subject: Treoracha
+        hello: Dia dhuit a %{email}
+        someone_invited_you: Thug duine éigin cuireadh chun %{url} duit. Is féidir
+          leat glacadh leis tríd an nasc thíos.
+        accept: Glac leis an gcuireadh
+        ignore: Mura mian leat glacadh leis an gcuireadh, déan neamhaird den ríomhphost.<br
+          />Ní chruthófar cuntas ar do shon go dtí go gcliceálfaidh tú an nasc thuas
+          chun focal faire a roghnú.

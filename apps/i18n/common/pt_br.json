@@ -24,6 +24,7 @@
   "completedWithoutRecommendedBlock": "Parabéns! Você completou o desafio {puzzleNumber}. (Mas você poderia usar um bloco diferente para melhorar seu código).",
   "continue": "Continue",
   "copy": "Copiar",
+  "currentVersion": "Current Version",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -130,6 +131,7 @@
   "end": "fim",
   "errorEmptyFunctionBlockModal": "Deve haver blocos dentro de sua definição de função. Clique em \"editar\" e arraste os blocos para dentro do bloco verde.",
   "errorIncompleteBlockInFunction": "Clique em \"editar\" para verificar se não faltam blocos em sua definição de função.",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
   "errorParamInputUnattached": "Lembre-se de associar um bloco a cada parâmetro de entrada no bloco de função em sua área de trabalho.",
   "errorQuestionMarksInNumberField": "Tente substituir \"???\" por um valor.",
   "errorRequiredParamsMissing": "Crie um parâmetro para sua função clicando em \"editar\" e adicionando os parâmetros necessários. Arraste os novos blocos de parâmetro em sua definição de função.",
@@ -183,6 +185,7 @@
   "recommendedBlockContextualHintTitle": "Tente usar um bloco como esse para resolver o desafio.",
   "repeat": "repita",
   "resetProgram": "Recomeçar",
+  "restoreThisVersion": "Restore this Version",
   "rotateText": "Gire seu dispositivo.",
   "runProgram": "Executar",
   "runTooltip": "Execute o programa definido pelos blocos na área de trabalho.",
@@ -195,7 +198,7 @@
   "shareWarningsAge": "Informe abaixo sua idade e clique em OK para continuar.",
   "shareWarningsMoreInfo": "Mais informações",
   "shareWarningsStoreData": "Este aplicativo do Code Studio armazena informações que podem ser visualizadas por qualquer pessoa com este link de compartilhamento. Portanto, tenha cuidado caso seja solicitado que você forneça informações pessoais.",
-  "showBlock": "Get a block",
+  "showBlock": "Pegue um bloco",
   "showBlocksHeader": "Mostrar blocos",
   "showCodeHeader": "Mostrar código",
   "showGeneratedCode": "Mostrar código",
@@ -230,8 +233,5 @@
   "watchVideo": "Assista ao vídeo",
   "when": "quando",
   "whenRun": "quando executar",
-  "workspaceHeaderShort": "Área de trabalho: ",
-  "currentVersion": "Current Version",
-  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
-  "restoreThisVersion": "Restore this Version"
+  "workspaceHeaderShort": "Área de trabalho: "
 }

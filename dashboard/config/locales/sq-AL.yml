@@ -27,6 +27,7 @@
   submit: Dorëzo
   unsubmit: Unsubmit
   next_page: Next page
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Shto një mësues:'
@@ -742,5 +743,5 @@
           and the %{link_start_tos}Terms of Service%{link_end}
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Kerko nje ikone...
+      no_icons_found: Nuk u gjet ikona

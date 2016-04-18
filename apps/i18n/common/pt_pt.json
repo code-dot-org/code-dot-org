@@ -24,6 +24,7 @@
   "completedWithoutRecommendedBlock": "Parabéns! Concluíste o desafio {puzzleNumber}, mas podias ter usado um bloco diferente para teres um código mais eficiente.",
   "continue": "Continuar",
   "copy": "Copiar",
+  "currentVersion": "Current Version",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -130,6 +131,7 @@
   "end": "terminar",
   "errorEmptyFunctionBlockModal": "É necessário haver blocos dentro da definição da tua função. Clica em \"Editar\" e arrasta os blocos para dentro do bloco verde.",
   "errorIncompleteBlockInFunction": "Clica em \"editar\" para teres a certeza de que não há blocos a faltar dentro da definição da função.",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
   "errorParamInputUnattached": "Lembra-te de ligares um bloco a cada parâmetro de entrada no bloco da função da tua área de trabalho.",
   "errorQuestionMarksInNumberField": "Experimenta substituir \"???\" por um valor.",
   "errorRequiredParamsMissing": "Clica em \"Editar\" e adiciona os parâmetros de que precisares para criares um parâmetro para a tua função. Arrasta os blocos de parâmetros novos para dentro da definição da tua função.",
@@ -183,6 +185,7 @@
   "recommendedBlockContextualHintTitle": "Tente resolver o puzzle utilizando um bloco como este.",
   "repeat": "repita",
   "resetProgram": "Repor",
+  "restoreThisVersion": "Restore this Version",
   "rotateText": "Roda o teu dispositivo.",
   "runProgram": "Executar",
   "runTooltip": "Executa o programa definido pelos blocos na área de trabalho.",
@@ -230,8 +233,5 @@
   "watchVideo": "Vê o vídeo",
   "when": "quando",
   "whenRun": "quando executar",
-  "workspaceHeaderShort": "Espaço de trabalho: ",
-  "currentVersion": "Current Version",
-  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
-  "restoreThisVersion": "Restore this Version"
+  "workspaceHeaderShort": "Espaço de trabalho: "
 }

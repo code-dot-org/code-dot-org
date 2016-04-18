@@ -24,6 +24,7 @@
   "completedWithoutRecommendedBlock": "축하합니다! {puzzleNumber} 번 퍼즐을 해결했습니다. (하지만, 보다 강력한 다른 코드를 사용할 수도 있었습니다.)",
   "continue": "계속하기",
   "copy": "복사",
+  "currentVersion": "현재 버전",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -130,6 +131,7 @@
   "end": "끝",
   "errorEmptyFunctionBlockModal": "함수 정의 안에 블록을 추가해야 합니다. \"편집\"을 클릭한 후 녹색 블록 안으로 블록을 드래그하세요.",
   "errorIncompleteBlockInFunction": "함수 정의 안에 빠진 블록을 채우려면 \"편집\"을 클릭하세요.",
+  "errorGenericLintError": "당신의 프로그램에는 고쳐야 하는 코드편집기 경고가 포함되어 있습니다. 좀 더 알아보려면 코드편집기에서 해당 줄 번호 근처의 아이콘을 마우스로 가리키세요.",
   "errorParamInputUnattached": "작업공간에서 함수 블록의 각 파라미터 입력에 블록을 추가하는 것을 잊지마세요.",
   "errorQuestionMarksInNumberField": "\"???\"를 값으로 바꾸세요.",
   "errorRequiredParamsMissing": "\"편집\"을 클릭해서 함수에 파라미터를 만들고 필요한 파라미터를 추가해보세요. 파라미터 블록을 함수 정의문으로 드래그하면 됩니다.",
@@ -183,6 +185,7 @@
   "recommendedBlockContextualHintTitle": "퍼즐을 풀기 위해 블록을 이렇게 사용해 보세요.",
   "repeat": "반복",
   "resetProgram": "처음 상태로",
+  "restoreThisVersion": "이 버전을 복원하기",
   "rotateText": "돌리세요.",
   "runProgram": "실행",
   "runTooltip": "블록들로 작성되어있는 프로그램을 실행합니다.",
@@ -195,7 +198,7 @@
   "shareWarningsAge": "나이를 입력하고 OK를 눌러 계속 진행하세요.",
   "shareWarningsMoreInfo": "추가 정보",
   "shareWarningsStoreData": "코드 스튜디오에 내장되어있는 이 앱은 많은 사람들에게 보여질 수 있는 데이터를 저장하기 때문에 개인 정보를 묻는 질문에는 주의를 기울여주세요.",
-  "showBlock": "Get a block",
+  "showBlock": "블록 얻기",
   "showBlocksHeader": "블럭 보이기",
   "showCodeHeader": "코드 보기",
   "showGeneratedCode": "코드 보기",
@@ -230,8 +233,5 @@
   "watchVideo": "비디오 보기",
   "when": "~할 때",
   "whenRun": "실행하면",
-  "workspaceHeaderShort": "작업 영역: ",
-  "currentVersion": "Current Version",
-  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
-  "restoreThisVersion": "Restore this Version"
+  "workspaceHeaderShort": "작업 영역: "
 }

@@ -27,6 +27,7 @@
   submit: Enviar
   unsubmit: Cancelar envío
   next_page: Next page
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Agrega un profesor:'

@@ -465,6 +465,7 @@ hr:
         infinity_playlab_intro: 'Laboratorij igrara - Uvod'
         infinity_playlab_events: 'Play Lab - događaji'
         infinity_playlab_repeat_forever: 'Laboratorij igara - beskonačno ponavljanje'
+        csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: 'Introduction to Databases - Part 1'
         csp_applab_databases_2: 'Introduction to Databases - Part 2'
         csp_applab_processing_lists: Processing Lists with Loops
@@ -603,9 +604,9 @@ hr:
         Infinity_move_collide_callout: Reporduciraj zvuk kada se ovaj događaj dogodi.
         Infinity_repeat_callout: Blokove za kretanje umetni ovdje
         craft_run_button_callout: 'Klikni na "Pokreni" da isprobaš svoj program'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_drag_block_callout: 'Dovuci blok "idi" i zakači ga ispod drugog bloka'
+        craft_callout_preplaced: Stavili smo malo blokovi za početak
+        craft_inside_repeat: Ponavljanje akcije stavljanjem blokova ovdje
+        craft_callout_preplaced_house: Ovaj kod će početi graditi svoju kuću. Može li to završiti?
+        craft_what_is_iron: Meni ovo glačalo!
+        craft_callout_moveforward: Ovaj kod htijenje ček za lava, možete dodati naredbu da se krene naprijed?
