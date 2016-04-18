@@ -3,6 +3,10 @@ var msg = require('../locale');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var commonStyles = require('../commonStyles');
 
+/**
+ * A set of game buttons that consist of a run/reset button, and potentially a
+ * set of children that we expect to be additional buttons.
+ */
 var GameButtons = function (props) {
   var runButtonClasses = "launch blocklyLaunch";
   if (props.hideRunButton) {
