@@ -1,4 +1,5 @@
 @dashboard_db_access
+@as_student
 Feature: Recommended/Required Blocks Feedback
 
 # Rather than using @as_student - which creates for us a test user with
@@ -6,56 +7,8 @@ Feature: Recommended/Required Blocks Feedback
 # each scenario, replacin the arbitrary creation step with a step that
 # creates for us a user with the appropriate kind of ID for our A/B
 # tests.
-# TODO elijah - either restore the @as_student helper when the temporary
-# A/B test has concluded, or create a new helper for specifying evenness
-# of id if the tests are to be extended
-
-Scenario: Odd-ID users see block right away
-  Given I am on "http://studio.code.org/reset_session"
-
-  Then I am on "http://studio.code.org/"
-  And I set the language cookie
-  And I create a student with an odd ID named "TestStudent"
-  And I am on "http://studio.code.org/"
-  And I reload the page
-  And I wait for 2 seconds
-  And I wait to see ".header_user"
-  And I click selector "#signin_button"
-  And I wait to see ".new_user"
-  And I fill in username and password for "TestStudent"
-  And I click selector "input[type=submit][value='Sign in']"
-  And I wait to see ".header_user"
-
-  Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/3?noautoplay=true"
-  And I rotate to landscape
-  And I wait to see "#x-close"
-  And I close the dialog
-
-  When I press "runButton"
-  And I wait to see ".congrats"
-
-  Then element ".congrats" is visible
-  And element ".congrats" has text "Not quite. Try using a block you aren’t using yet."
-  And element "#feedbackBlocks" is visible
-
-  When I sign out
 
 Scenario: Attempt 2-3 Maze 1
-  Given I am on "http://studio.code.org/reset_session"
-
-  Then I am on "http://studio.code.org/"
-  And I set the language cookie
-  And I create a student with an even ID named "TestStudent"
-  And I am on "http://studio.code.org/"
-  And I reload the page
-  And I wait for 2 seconds
-  And I wait to see ".header_user"
-  And I click selector "#signin_button"
-  And I wait to see ".new_user"
-  And I fill in username and password for "TestStudent"
-  And I click selector "input[type=submit][value='Sign in']"
-  And I wait to see ".header_user"
-
   Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/3?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#x-close"
@@ -120,24 +73,7 @@ Scenario: Attempt 2-3 Maze 1
   And element "#hint-request-button" does not exist
   And element "#feedbackBlocks" does not exist
 
-  When I sign out
-
 Scenario: Solve without recommended blocks
-  Given I am on "http://studio.code.org/reset_session"
-
-  Then I am on "http://studio.code.org/"
-  And I set the language cookie
-  And I create a student with an even ID named "TestStudent"
-  And I am on "http://studio.code.org/"
-  And I reload the page
-  And I wait for 2 seconds
-  And I wait to see ".header_user"
-  And I click selector "#signin_button"
-  And I wait to see ".new_user"
-  And I fill in username and password for "TestStudent"
-  And I click selector "input[type=submit][value='Sign in']"
-  And I wait to see ".header_user"
-
   Given I am on "http://learn.code.org/s/allthethings/stage/4/puzzle/5?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#x-close"
@@ -172,5 +108,3 @@ Scenario: Solve without recommended blocks
   Then element ".congrats" is visible
   And element ".congrats" has text "Congratulations! You completed Bee."
   And element "#hint-request-button" does not exist
-
-  When I sign out
