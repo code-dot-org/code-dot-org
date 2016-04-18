@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160415003613) do
+ActiveRecord::Schema.define(version: 20160418185704) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -569,6 +569,7 @@ ActiveRecord::Schema.define(version: 20160415003613) do
     t.string   "grade",      limit: 255
     t.string   "admin_code", limit: 255
     t.string   "login_type", limit: 255, default: "email", null: false
+    t.datetime "deleted_at"
   end
 
   add_index "sections", ["code"], name: "index_sections_on_code", unique: true, using: :btree
