@@ -1,6 +1,6 @@
 # Various Ruby helper methods to generate Varnish VCL from the base configuration.
 
-# TODO Find a better way of passing node configuration to Chef config helpers.
+# TODO: Find a better way of passing node configuration to Chef config helpers.
 $node_env = 'development'
 $node_name = 'default'
 
@@ -196,7 +196,7 @@ end
 
 # Returns the hostname-specific conditional expression for the app provided.
 def if_app(app, req)
-  app == :dashboard ? (req + '.http.host ~ "(dashboard|studio).code.org$"') : nil
+  app == :dashboard ? (req + '.http.host ~ "(dashboard|studio)"') : nil
 end
 
 # Generate an "if(){} else if {} else {}" string from an array of items, conditional Proc, and a block.

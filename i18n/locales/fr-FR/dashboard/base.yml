@@ -25,6 +25,7 @@ fr:
   welcome_back: 'Bienvenue, %{name}'
   submit: Envoyer
   unsubmit: Ne plus soumettre le travail
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Ajouter un enseignant :'
@@ -349,6 +350,7 @@ fr:
     help_from_html_old: "Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué à créer cette plateforme d'apprentissage."
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Tous droits réservés. Frozen&#8482; &copy; %{current_year} Disney. Tous droits réservés. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. tous droits réservés. Le monde incroyable de Gumball est une marque déposée &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Tous droits réservés. Frozen&#8482; &copy; %{current_year} Disney. Tous droits réservés. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. tous droits réservés. Le monde incroyable de Gumball est une marque déposée &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Fourni par Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, le logo CODE ainsi que Heures de Code&reg; sont des marques commerciales de Code.org.'
     copyright: Copyright
@@ -468,7 +470,6 @@ fr:
   landing:
     prerelease: "C'est un cours  <span class='betatext'>bêta</span>. Il ne s'agit pas de la version finale du cours, le cours est susceptible d'être modifié tant que nous recevrons des commentaires à son sujet et que des améliorations seront effectuées."
     prerelease_hoc2014: "Ce tutoriel est en <span class='betatext'> version bêta</span>.  Il est susceptible d'être modifié en fonction des commentaires reçus qui apporteront des améliorations."
-    feedback: Envoyer un commentaire
     report_bug: Signaler un bogue
     support: "Obtenir de l'aide"
     support_url: //support.code.org
@@ -514,6 +515,8 @@ fr:
     placeholder: Entrez votre réponse ici
     open_response_title: Merci
     open_response_body: Merci pour ta réponse !
+    correct_title: Correct
+    correct_body: "C'est la bonne réponse."
   dialog:
     ok: OK
     startover_title: Es-tu certain(e) de vouloir recommencer ?
@@ -625,3 +628,7 @@ fr:
           other: Autres
         detail: Veuillez fournir autant de détails que possible au sujet du contenu que vous signalez.
         acknowledge: "En soumettant ces informations, vous reconnaissez qu'elles sont traitée selon les termes de la %{link_start_privacy}Politique de Confidentialité%{link_end} et des %{link_start_tos}Conditions Générales d'Utilisation%{link_end}"
+  components:
+    icon_library:
+      search_placeholder_text: Chercher pour une icône...
+      no_icons_found: Aucune icône trouvée

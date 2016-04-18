@@ -39,7 +39,7 @@ Collaboration Station - 3rd Floor<br/>
 6795 S Edmond St<br/>
 Las Vegas, NV 89118](https://www.google.com/maps/place/The+Innevation+Center/@36.066623,-115.2136283,15z/data=!4m2!3m1!1s0x0:0x4f1c35e8f68b2e74)
 
-Free parking is located in front of the building. Please park in Visitor Parking.
+Parking is free in front of the building, please park in Visitor Parking. Please remember to bring your robotics kits. If you don't have robotics kits, you should still plan to attend the workshop!
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -69,7 +69,13 @@ Breakfast and lunch will be served.
 
 **Location**
 
-More Details Coming Soon!
+[Instructional Design and Professional Learning Division<br/>
+Room: TBD<br/>
+3950 South Pecos-Mcleod<br/> 
+Las Vegas, NV 89121<br/>](https://goo.gl/maps/ZevyChXU3fC2)
+
+Parking is free and available in front of the building.
+
 
 **What do I bring to Phase 4 PD?**
 

@@ -21,7 +21,7 @@ sv-SE:
   twentyhours_heading: Prova vår Introduktionskurs i Datavetenskap
   twentyhours_text: Avslutat din första Kodtimme? Lär dig mer om grunderna i datavetenskap och programmering i den här uppföljningskursen.
   og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Gå med i <a href="http://hourofcode.com"> kodtimmen</a> <br/> 8-14 December 2014 <br/>'
   hoc2014_students: Elever
   hoc2014_try: Prova
@@ -180,7 +180,7 @@ sv-SE:
   learn_next_level: Fortsätt till nästa nivå
   learn_online: Prova andra kurser online
   learn_classes: Hitta lokala klasser
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Jag har precis gjort #HourOfCode/Timme med Kod - kolla! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -511,6 +511,7 @@ sv-SE:
   dashboard_navigation_all_sections: Elevkonton och framsteg
   dashboard_navigation_view_progress: Visa framsteg
   dashboard_navigation_view_text_responses: Visa Text svar
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Lägg till elever
   dashboard_navigation_manage_students: Hantera elever
   dashboard_navigation_lesson_plans_resources: Lektionsplaner och resurser
@@ -609,6 +610,18 @@ sv-SE:
   dashboard_puzzle: Pussel
   dashboard_question: Fråga
   dashboard_response: Svar
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Rätt
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Fantastiska fakta om förra årets Hour of Code. På bara en vecka:'
   stats_hoc_2013_image_alt: Statistik från Hour of Code 2013
   dashboard_teacher: Lärare
@@ -627,7 +640,7 @@ sv-SE:
   dashboard_faq_k5: K-5 vanliga frågor
   dashboard_announcements: Anslagstavla
   dashboard_announce_view_all: Visa alla
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: Lär dig mer
   dashboard_announce_hoc: '<b>23 November 2015</b> - Skulle du vilja få hjälp av en frivillig som brinner för datavetenskaplig utbildning under ditt Kodtimmen evenemang? Över 7 000 frivilliga vill inspirera dina elever genom att besöka ditt klassrum eller videochatta på distans. Kolla in frivillig-kartan för att kontakta frivilliga i ditt område.'
   dashboard_announce_playlab: '<b>4 december, 2015</b> - Kodtimmen är här! Prova 50 övningar för alla åldrar och alla mobila enheter. Nytt den här veckan: Koda dina egna historier och spel i nya spel-labb, Ice Age och Gumball.'

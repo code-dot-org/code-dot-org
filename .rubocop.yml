@@ -5,7 +5,6 @@ inherit_from:
 AllCops:
   Exclude:
     - 'apps/**/*'
-    - 'dashboard/scripts/**/*'
     - 'dashboard/db/**/*'
     - 'dashboard/db/*'
   DisplayCopNames: true
@@ -17,6 +16,9 @@ AllCops:
 Style/BarePercentLiterals:
   Enabled: false
 
+Style/ClosingParenthesisIndentation:
+  Enabled: false
+
 # Require trailing dots for method chaining in ruby
 # example:
 # MyObject.
@@ -24,6 +26,9 @@ Style/BarePercentLiterals:
 #   mySecondMethod()
 Style/DotPosition:
   EnforcedStyle: trailing
+
+Style/EmptyLineBetweenDefs:
+  AllowAdjacentOneLineDefs: true 
 
 Style/ExtraSpacing:
   Enabled: false
@@ -36,6 +41,9 @@ Style/IfInsideElse:
 
 Style/RedundantReturn:
   Enabled: false
+
+Style/WordArray:
+  MinSize: 5
 
 Metrics/AbcSize:
   Enabled: false

@@ -11,6 +11,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @student = create :student
     @young_student = create :young_student
     @teacher = create :teacher
+    @admin = create :admin
     @section = create :section, user_id: @teacher.id
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user_id: @teacher.id)
 
@@ -699,6 +700,28 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select '#notStarted'
     assert_select '#codeApp', 0
+  end
+
+  test 'includes makerlab javascript dependencies when makerlab level' do
+    sign_in @admin
+
+    level = create :makerlab
+    script_level = create :script_level, level: level
+
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @admin.id
+
+    assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab')
+  end
+
+  test 'excludes makerlab javascript dependencies when applab level' do
+    sign_in @admin
+
+    level = create :applab
+    script_level = create :script_level, level: level
+
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @admin.id
+
+    assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab'), false
   end
 
   test 'shows expanded teacher panel when student is chosen' do

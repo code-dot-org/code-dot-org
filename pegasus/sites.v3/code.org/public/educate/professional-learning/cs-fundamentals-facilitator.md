@@ -4,12 +4,14 @@ nav: educate_nav
 ---
 # Become a Computer Science Fundamentals Facilitator
 
+**2016 Application Update: The application process closed March 15th. We are reviewing applications and accepting facilitators on a rolling basis through April 22nd. We will update everyone of their acceptance status by April 22nd.**
+
 Code.org is looking to partner with experienced computer science educators to deliver one-day, in-person workshops to local elementary school teachers to teach computer science in a format that's fun and accessible.
 
 The ideal CS Fundamentals Facilitator is an enthusiastic supporter of computer science education, possesses a connection to Code.org’s equity-focused mission and has a strong background in the curriculum area, preferably through past teaching experience. Experience mentoring teachers and managing/hosting professional development workshops a plus. **Applicants who meet the facilitator criteria who live in a region where Code.org has Professional Learning or District Partners will be prioritized for acceptance.**
 <br /> 
 
-[<button>Apply now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1fc2CHHn1g4hUBDDXwWhlhc0JwjWVECfCxcwcsAKxJ94/pub)
+[<button>Apply now</button>](https://docs.google.com/a/code.org/forms/d/1C2oECZ04B1406j4x_7sKcRHGdPLmxILVFm463M5MigU/viewform)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1fc2CHHn1g4hUBDDXwWhlhc0JwjWVECfCxcwcsAKxJ94/pub)
 <br />
 <br />
 
@@ -34,7 +36,7 @@ Once you become an official CS Fundamentals Facilitator, you can host workshops 
 
 Before applying please carefully review the the criteria, requirements and commitments for the CS Fundamentals Facilitator program.
 
-[<button>Apply now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1fc2CHHn1g4hUBDDXwWhlhc0JwjWVECfCxcwcsAKxJ94/pub)
+[<button>Apply now</button>](https://docs.google.com/a/code.org/forms/d/1C2oECZ04B1406j4x_7sKcRHGdPLmxILVFm463M5MigU/viewform)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1fc2CHHn1g4hUBDDXwWhlhc0JwjWVECfCxcwcsAKxJ94/pub)
 
 We will review applications on a rolling basis until March 15, 2016. After that we will review applications once every 12 months. **This program is currently only operated in the US.**
 

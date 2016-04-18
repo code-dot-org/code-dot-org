@@ -46,6 +46,9 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  post '/dashboardapi/sections/transfers', to: 'transfers#create'
+  post '/api/sections/transfers', to: 'transfers#create'
+
   get '/sh/:id', to: redirect('/c/%{id}')
   get '/sh/:id/:action', to: redirect('/c/%{id}/%{action}')
 
@@ -285,25 +288,36 @@ Dashboard::Application.routes.draw do
     concerns :ops_routes
   end
 
+  get '/plc/content_creator/show_courses_and_modules', to: 'plc/content_creator#show_courses_and_modules'
+  %w(courses learning_modules tasks course_units evaluation_questions).each do |object|
+    get '/plc/' + object, to: redirect('plc/content_creator/show_courses_and_modules')
+  end
+
+  get '/plc/user_course_enrollments/group_view', to: 'plc/user_course_enrollments#group_view'
+  get '/plc/user_course_enrollments/manager_view/:id', to: 'plc/user_course_enrollments#manager_view', as: 'plc_user_course_enrollment_manager_view'
+
   namespace :plc do
+    root to: 'plc#index'
     resources :courses
     resources :learning_modules
     resources :tasks
     resources :user_course_enrollments
     resources :enrollment_task_assignments
+    resources :course_units
+    resources :enrollment_unit_assignments
+    resources :evaluation_questions
   end
 
-  get '/plc/enrollment_evaluations/:enrollment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
-  post '/plc/enrollment_evaluations/:enrollment_id/submit_evaluation', to: 'plc/enrollment_evaluations#submit_evaluation'
-
-  get '/plc/content_creator/show_courses_and_modules', to: 'plc/content_creator#show_courses_and_modules'
+  get '/plc/enrollment_evaluations/:unit_assignment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
+  post '/plc/enrollment_evaluations/:unit_assignment_id/submit_evaluation', to: 'plc/enrollment_evaluations#submit_evaluation'
 
   get '/plc/learning_modules/:id/new_learning_resource_for_module', to: 'plc/learning_modules#new_learning_resource_for_module', as: 'new_learning_resource_for_module'
 
-  post 'plc/courses/:id/submit_new_questions_and_answers', to: 'plc/courses#submit_new_questions_and_answers'
+  post '/plc/course_units/:id/submit_new_questions_and_answers', to: 'plc/course_units#submit_new_questions_and_answers'
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
+  get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
 

@@ -7,60 +7,26 @@ nav: about_nav
 
 **We are currently hiring for:**
 
-- **Curriculum Team**
- 	- [CS Curriculum Writer](#curric)
+- **Curriculum**
  	- [2016 Summer Curriculum Writing Cohort](#summercohort)
-- **Finance and Administration Team**
+- **Finance and Administration**
  	- [Financial Analyst](#finance)
-- **Outreach Team**
- 	- [District Manager - Mid Atlantic Region](#dcdm)
-- **Product and Marketing Team**
-	- [Engineering Manager / Chief Architect](#eng)
-	- [Software Engineer](#engineer)
+- **Fundraising**
+ 	- [Grant Writer (Part time)](#grant)
+- **Marketing**
+  	- [Marketing & Communications Manager](#market)
+- **Outreach**
+ 	- [District Manager - East Coast locations](#dcdm)
+- **Product**
+	- [Senior Backend Engineer / Infrastructure Lead](#backend)
 	- [UX / Visual Designer](#design)
-	- [Marketing & Communications Manager](#market)
-- **Professional Learning & Community Team**
+- **Professional Learning & Community**
 	- [VP of Professional Learning & Community](#vp)
 	- [Training and Development Specialist](#train)
 
 
 **[Working at Code.org](#info)**
 
-## <a name="curric"href="#curric">CS Curriculum Writer (Seattle, WA or Chicago, IL preferred)</a>
-
-**Job Summary:**
-
-Code.org is looking for an experienced Curriculum Writer to work with and support the goals of Code.org’s Education team through the development of computer science curriculum. We are looking for someone to help develop curriculum as a full-time, long-term assignment (a one-to-two year term). Part-time will be considered on a case-by-case basis.
-
-While each Education team member takes ownership of large parts of projects, we share work and tasks across projects to make sure all of our projects are aligned under the same philosophical model and contribute to a cohesive K-12 CS pathway.
-
-Responsibilities of the position include: 
-
-- Working closely with the Education team to design, develop, write, and “go to market” with original curricular materials (lesson plans, formative/summative assessments, and videos).
-- Planning for evaluating the effectiveness of curriculum (from both student and teacher perspectives) and making programmatic improvements.
-- Collaborating with the Product team to develop curriculum-specific technology tools and using the tools to create tutorials and projects.
-- Ability to travel up to 10% of working time 
-
-
-**Skills and Qualifications:**
-
-The ideal candidate has experience designing, developing, and writing computer science curriculum to standards; has strong leadership, writing and communications skills; is a tech-savvy self-starter who is able to multi-task and excel under pressure. 
-
-The candidate should also have: 
-
-- Comprehensive knowledge of computer science (required) 
-- Prior curriculum writing experience / activity design (required)
-- a Bachelor’s degree or higher in Education or Computer Science (preferred)
-- Recent computer science or STEM teaching experience in high school field (preferred)
-- Experience using the Understanding by Design curriculum framework (preferred)  
-- Experience with physical computing devices (eg Arduino) or robotics (preferred)
-- Experience/familiarity with Exploring Computer Science curriculum/PD (preferred) 
-- Proficiency in working with Microsoft Office and Google Docs (required) 
-
-
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-Please include lesson plan samples that are your original work, and highlight relevant experience designing, developing, or writing implement curricular materials. 
 
 ## <a name="summercohort"href="#summercohort">2016 Summer Curriculum Writing Cohort (Seattle, WA or Chicago, IL preferred)</a>
 
@@ -142,16 +108,52 @@ Candidates must be extremely detail-oriented, possess exceptional written and in
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+## <a name="grant"href="#grant">Grant Writer (Seattle, WA)</a>
+**Job Summary:**
+
+The Grant Writer plays an important role in increasing revenue for Code.org, with a focus on grant writing, and stewardship of existing Foundation and Corporate partnerships. The candidate selected for this role will develop compelling proposals that will result in funding for the immediate and long-term goals of Code.org, and also help strengthen existing relationships with the corporate and foundation sector. 
+
+This is a part-time position. Responsibilities of the position include:
+
+- Developing and writing letters of inquiry, grant proposals and reports to foundations, corporations, and other grant-making organizations; persuasively communicating the organization’s mission and programs to potential funders
+- Cultivating and growing support from existing Foundation and corporate donors, including managing the Code.org Employee Engagement program to build corporate pipeline
+- Managing ongoing donor communications, working with marketing team, and overseeing donor stewardship and recognition efforts
+- Working with Director of Finance & Administration, ensuring timely reporting on grant deliverables by managing grants calendar
+- Working with the Fundraising & Marketing Associate on prospect research, maintaining grant files, database, fundraising materials, donor acknowledgement
+- Coordinating Code.org fundraising events
+- Other duties, as assigned
+
+**Skills and Qualifications:**
+
+A Bachelor’s degree and a minimum of 5 years of relevant experience are required. 
+
+- Demonstrated ability to develop funding proposals in a clear and compelling manner and have a proven track record of success in writing six and seven figure foundation and/or corporate grants. 
+- An incredible passion for our mission and an ability to inspire others to get involved.
+- Strategic thinker, analytical and proactive.
+- Candidates must be self-motivated, detail-oriented, and highly-organized to succeed in a demanding, impact-focused, start up environment. 
+- Ability to be flexible and adaptive in a growing organization; be able to work alongside a diverse group of people. 
+- Thrive in a collaborative, team environment and also work well independently. 
+- Outstanding communication and highly developed interpersonal skills with ability to be persuasive in both written and verbal communications. 
+- Strong and thoughtful customer service orientation.
+- Experience using online databases (Foundation Center and others) and other sources to conduct research on potential funding prospects. 
+- A solid understanding of budgets as they relate to proposals and grants is required. 
+- A high level of computer literacy is required; experience in fundraising for educational programs strongly preferred. Proficiency in working with Microsoft Office and Google Docs a must.
+
+Please DO NOT apply for this position if you do not have experience in writing successful non-profit grant proposals. 
+
+Interested candidates should email a resume, cover letter, and grant writing sample (funded) outlining how your skills and experience meet the qualifications of the position, to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="dcdm"href="#dcdm"> District Manager - Mid Atlantic Region (Washington, D.C., or surrounding area)</a>
+
+## <a name="dcdm"href="#dcdm"> District Manager - East Coast locations (Boston, New York, Washington, D.C., surrounding areas)</a>
+
 **Job Summary:**
 
 Code.org is looking for a District Manager to support Code.org’s education efforts through the development, implementation, and maintenance of Code.org’s partnership model with school districts. This position is highly on focused on developing relationships and building sustainability of Computer Science in a region.
 
 Responsibilities of the position include:
 
-Outreach in Mid-Atlantic Region
+Outreach in Northeast or Mid-Atlantic Region
 
 - Recruit school districts (including schools and teachers)
 - Present Code.org partnership model
@@ -191,55 +193,26 @@ Candidates must be extremely detail-oriented, possess exceptional written and in
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="eng" href="#eng">Engineering Manager / Chief Architect (Seattle, WA)</a>
+
+## <a name="backend" href="#backend">Senior Backend Engineer / Infrastructure Lead (Seattle, WA)</a>
 
 **Job Summary:**
 
-Code.org is recruiting for an experienced Head of Engineering / Chief Architect. Full-time, salaried. Responsibilities of the position include:
+Code.org is building interactive tutorials for computer science courses starting as early as Kindergarten through 12th grade. You can see our latest tutorials at studio.code.org. With tens of millions of students using our tutorials in over 45 languages and in 180+ countries, this is an opportunity to redefine how computer science is taught, not only in the USA but worldwide.
 
-- Partnering with the Head of Product/Marketing to build a curriculum platform that reaches tens of millions of students and hundreds of thousands of classrooms
-- Set architectural direction for how Code.org's web site, services, and tutorial platform is built, and be accountable for scalability + uptime
-- Manage the Code.org engineering team (team of 12+ software engineers)
-- Hiring, career development, and mentorship of new engineers
+Code.org is recruiting for an experienced Backend Engineer to own site stability and performance, and to contribute code, infrastructure, and knowledge to increase team-wide effectiveness. Someone successful in this role will be able to collaborate, but also work independently and drive infrastructure and scale work to completion.
 
 **Skills and Qualifications:**
 
 The ideal candidate has the following qualifications:
 
 - Bachelor’s degree with a major in Computer Science
-- 10+ years as a software engineer or manager of software engineers
-- 5+ years as a manager of software engineers; past experience managing a team of at least 7 engineers
-- Full stack Web engineering experience, i.e. databases, application, front-end
-- DEEP knowledge and experience in either JavaScript OR Ruby
-- Experienced in what it takes to scale a large back-end; scalability, analytics, particularly the modern tools of the trade
-- Experience building and running a large scale consumer-focused Web service, with at least 1M users
-- Mobile development experience (iOS, Android) desired but not required
+- 5-7 years as a software engineer 
 - Experience in a fast growth start-up environment desired
+- Experience scaling web services 
+- Experience building developer infrastructure
+- Expertise in some of these technologies preferred: Ruby / Rails, JavaScript, Sinatra, SQL/Databases/MySQL, React
 
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="engineer" href="#engineer">Software Engineer (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is building interactive tutorials for computer science courses starting as early as Kindergarten through 12th grade. You can see our latest tutorials at [studio.code.org](https://studio.code.org). With tens of millions of students using our tutorials in over 45 languages and in 180+ countries, this is an opportunity to redefine how computer science is taught, not only in the USA but worldwide.
-
-**Skills and Qualifications:**
-
-- A Bachelor's degree or greater in Computer Science
-- **Minimum** of 3-5 years of experience as a software engineer working on Web sites or services
-- Experience with startup culture preferred 
-- Expertise/Experience in some of these technologies preferred
-	- Rails
-	- Ruby
-	- JavaScript
-	- Sinatra
-	- SQL/Databases/Mysql
-	- React
-	- Testing: Ruby, Selenium
-	- Angular
-
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="design" href="#design">UX / Visual Designer (Seattle, WA)</a>
 **Job Summary:**

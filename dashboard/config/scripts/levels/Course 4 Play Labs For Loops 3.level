@@ -18,7 +18,7 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "instructions": "If we count by larger numbers, we count even higher in the same amount of time. Try making the dog count from 10 up to 1000, 10 at a time.",
+    "instructions": "If we count by larger numbers, we count even higher in the same amount of time. Try making the dog count from 10 up to 1000, adding 10 at a time.",
     "ideal": "9",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -35,7 +35,14 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "maze_data": null
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "for_loops": 4,
+    "variables": 3
   }
 }]]></config>
   <blocks>
@@ -87,7 +94,7 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
@@ -125,6 +132,6 @@
           </value>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
   </blocks>
 </Studio>

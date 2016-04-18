@@ -6,7 +6,12 @@
   "browserify": {
     "transform": [
       "ejsify",
-      ["babelify", {"compact": false}]
+      ["babelify", {"compact": false}],
+      "browserify-shim"
     ]
+  },
+  "browserify-shim": {
+    "marked": "global:marked",
+    "radium": "global:Radium"
   }
 }

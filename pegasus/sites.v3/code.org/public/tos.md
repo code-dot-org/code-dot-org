@@ -64,7 +64,7 @@ You may not do any of the following while accessing or using the Services: (i) a
 
 ### Your License to Use Code.org Videos, Tutorials, Data, and APIs
 
-Code.org’s [library of videos](http://youtube.com/user/CodeOrg) may be redistributed freely on the express conditions that (1) the videos are redistributed AS-IS, (using the embedded video player provided, or download link IF provided) with attribution to Code.org (2) the videos are not incorporated into any mash-ups, (3) the videos are used for computer science education purposes, and (4) the use of the video does not constitute an endorsement of a 3rd party brand, service or product and (5) if access to such redistributed Content or Services is provided free of charge.
+Code.org’s [library of videos](http://youtube.com/user/CodeOrg) may be redistributed freely on the express conditions that (1) the videos are redistributed AS-IS, (using the embedded video player provided, or download link IF provided) with attribution to Code.org, (2) the videos are not incorporated into any mash-ups, (3) the videos are used for computer science education purposes, (4) the use of the video does not constitute an endorsement of a 3rd party brand, service or product and (5) if access to such redistributed Content or Services is provided free of charge.
 
 The celebrities and video “cast“ members appearing in Code.org tutorial videos reserve all rights to their likeness and name. By allowing you to redistribute these videos or tutorials AS-IS, Code.org does not grant any additional rights to use of the likeness or name of these individuals.
 

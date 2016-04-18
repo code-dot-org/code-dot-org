@@ -3167,6 +3167,10 @@
         ..." per riempire la notte di stelle di varie forme e dimensioni.
       Overworld Avoid Monsters_instruction: Incontrare un Creeper non è una buona
         idea. Muoviti con attenzione tra i Creeper e mettiti al sicuro a casa tua.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'Il legno è una risorsa molto importante: serve
         per costruire molte cose. Raggiungi l''albero e usa l''istruzione "distruggi"
         per abbatterlo.'
@@ -3400,6 +3404,10 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
@@ -3415,6 +3423,12 @@
       Ryan - Bee Conditionals_instruction: |
         L'ape ora desidera solo il nettare.
         Non tutti gli oggetti sono fiori, controlla sotto OGNI NUVOLA per vedere se si nasconde dietro a un fiore. Se si nasconde puoi raccogliere il nettare.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: In questo esercizio c'è una funzione chiamata
         "pattuglia" (patrol) in cui devi inserire il codice che serve per far muovere
         il gatto prima in su e poi in giù di 400 pixel.

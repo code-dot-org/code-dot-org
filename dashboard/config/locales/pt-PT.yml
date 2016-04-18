@@ -26,6 +26,7 @@
   welcome_back: Olá mais uma vez, %{name}
   submit: OK
   unsubmit: Remover submissão
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Adiciona um professor:'
@@ -307,8 +308,7 @@
     students:
       dashboard: Vá para o painel de controle do professor
     user_not_found: O professor não foi encontrado.
-    student_teacher_disassociated: "%{teacher_name} foi removido como professor de
-      %{student_name}"
+    student_teacher_disassociated: Você removeu %{teacher_name} como seu professor.
     panel:
       answer_viewer: Resposta
       student: Aluno
@@ -339,7 +339,7 @@
     title: O meu progresso
     description: No Code Studio podes encontrar os cursos online do Code.org
     lines_of_code: "%{lines_count} LINHAS DE CÓDIGO ESCRITAS POR ALUNOS"
-    lines_of_code_linebreak: "%{lines_count} LINHAS DE CÓDIGO<br/>ESCRITAS %{students_count}
+    lines_of_code_linebreak: "%{lines_count} LINHAS DE CÓDIGO<br/>ESCRITAS POR %{students_count}
       MILHÕES DE ALUNOS"
     all_courses: Visão geral dos cursos 1, 2 e 3
     lesson_plans: Planos das aulas
@@ -384,8 +384,8 @@
     heading_elementary: "<h2>Cursos de 20 horas para</h2><h1>Iniciantes (todas as
       idades)</h1>"
     heading_apps: "<h2>Diversão para</h2><h1>todos</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<h2>Pronto para o próximo passo?</h2> <h1>Ferramentas de JavaScript
+      para o ensino</h1>"
     heading_legacy: "<h2>O nosso curso acelerado para</h2><h1>Todas as idades</h1>"
     your_gallery: Galeria
     no_primary_course: Faça um curso no Code Studio
@@ -395,7 +395,7 @@
     title: Aprende no Code Studio
     description: Todos podem aprender a programar. Constrói jogos, aplicações e desenhos
       com código.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Exprimenta uma Hora de Código!
   gender:
     male: Masculino
     female: Feminino
@@ -410,21 +410,28 @@
       pelo apoio na criação do Code Studio.
     help_from_html: Agradecemos aos engenheiros da Google, da Microsoft, do Facebook
       e do Twitter que nos ajudaram a criar estes materiais.
-    help_from_html_old: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram
-      a criar estes materiais.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Todos os direitos reservados.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. Todos os direitos reservados.
+    help_from_html_old: Os engenheiros da Google, da Microsoft, do Facebook e do Twitter
+      ajudaram a criar estes materiais.
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos
+      reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm.
+      Todos os direitos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney.
+      Todos os direitos reservados.<br />Ice Age&#8482; &copy; %{current_year} 20th
+      Century Fox. Todos os direitos reservados.<br />Angry Birds&#8482; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482;
+      &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados.<br
+      />The Amazing World of Gumball é uma marca registada. &copy; 2015 Cartoon Network.
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482;
       &amp; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, o logótipo do CODE
       e a Hora de Código&reg; são marcas registadas do Code.org."
     copyright: Copyright
     more: Mais
     feedback: Fornecer feedback
-    translate: Ajuda-nos a traduzir para o teu idioma
+    translate: Traduções
     support: Suporte
     support_url: http://support.code.org
     tos_short: Termos
@@ -435,7 +442,7 @@
     built_on_code_studio: Construído no "Code Studio"
     make_my_own_app: Fazer a minha própria "app"
     how_it_works: Como funciona
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Exprimenta uma Hora de Código!
   reference_area:
     title: Precisas de ajuda?
     subtitle: Vê estes vídeos e sugestões
@@ -509,7 +516,7 @@
         in seconds.
       body_short: Design an app, code with blocks or JavaScript to make it work, then
         share your app in seconds.
-      audience: Ages 13+
+      audience: Maiores de 13 anos
       cta: Learn how
     hoc:
       title: Labirinto clássico
@@ -568,11 +575,10 @@
     prerelease_hoc2014: Este tutorial está na versão <span class='betatext'>beta</span>.
       Ele está sujeito a revisões, conforme são recebidos feedbacks e melhorias são
       feitas.
-    feedback: Enviar comentários
     report_bug: Comunicar erro
     support: Obter ajuda
     support_url: "//support.code.org"
-    help_resources: Help and Resources
+    help_resources: Ajuda e recursos
   multi:
     wrong_title: Resposta incorreta
     wrong_body: A resposta que você digitou não está correta. Tente novamente!
@@ -616,6 +622,8 @@
     placeholder: Insira sua resposta aqui
     open_response_title: Obrigado
     open_response_body: Obrigado por responderes!
+    correct_title: Certo
+    correct_body: A tua resposta está correta.
   dialog:
     ok: OK
     startover_title: Tens a certeza de que pretendes recomeçar?
@@ -653,7 +661,7 @@
           description: Quer criar seu próprio jogo em menos de 10 minutos? Experimente
             nosso tutorial sobre o Código do Flappy bird!
         jigsaw:
-          title: Quebra-cabeça
+          title: Quebra-cabeças
           description: ''
         step:
           title: Avançar
@@ -752,3 +760,7 @@
         acknowledge: Ao submeter esta informação, aceita que esta será tratada de
           acordo com os termos da nossa %{link_start_privacy}Política de Privacidade%{link_end}
           e dos %{link_start_tos}Termos de Utilização%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Procura por um ícone...
+      no_icons_found: Não foram encontrados ícones

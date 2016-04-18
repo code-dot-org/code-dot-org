@@ -21,7 +21,7 @@ id-ID:
   twentyhours_heading: Cobalah pendahuluan pelajaran ilmu Komputer
   twentyhours_text: "Selesai dengan Jam pertama 'Hour of Code? Pelajari lebih lanjut inti ilmu komputer dan konsep pemrograman di pelajaran selanjutnya."
   og_title: Setiap anak berhak atas kesempatan
-  og_description: Setiap siswa di setiap sekolah berhak atas kesempatan untuk mempelajari ilmu komputer.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Bergabung dengan <a href="http://hourofcode.com">Hour of Code</a> <br/> 8-14 Desember 2014 <br/>'
   hoc2014_students: Siswa
   hoc2014_try: Cobalah
@@ -179,7 +179,7 @@ id-ID:
   learn_next_level: Lanjut ke tingkat berikutnya
   learn_online: Coba kursus online lain
   learn_classes: Cari kelas kursus
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Aku telah mengerjakan #HourOfCode – cobalah lihat! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -513,6 +513,7 @@ id-ID:
   dashboard_navigation_all_sections: Akun dan perkembangan siswa
   dashboard_navigation_view_progress: Lihat perkembangan
   dashboard_navigation_view_text_responses: Lihat Balasan Teks
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Tambahkan murid
   dashboard_navigation_manage_students: Kelola murid
   dashboard_navigation_lesson_plans_resources: Rencana pelajaran dan sumber daya
@@ -611,6 +612,18 @@ id-ID:
   dashboard_puzzle: Teka-teki
   dashboard_question: Pertanyaan
   dashboard_response: Respon
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Benar
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Terdapat statistik yang luar biasa dari Hour of Code tahun lalu. Dalam satu minggu saja:'
   stats_hoc_2013_image_alt: Statistik Hour of Code tahun 2013
   dashboard_teacher: Guru
@@ -629,7 +642,7 @@ id-ID:
   dashboard_faq_k5: K-5 Frequently Asked Questions/pertanyaan yang sering diajukan
   dashboard_announcements: Pengumuman
   dashboard_announce_view_all: Lihat semua
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: Pelajari lebih banyak
   dashboard_announce_hoc: '<b>9 November 2015</b> - tutorial Hour of Code baru ada di sini, menampilkan film terbaru dari Star Wars: The Force Awakens. Bekerja samalah dengan Rey untuk membimbing droid baru, BB-8, melalui misi. Kemudian, bergabung dengan Leia untuk membuat dan berbagi pertandingan Anda sendiri di sebuah galaksi yang sangat jauh.'
   dashboard_announce_playlab: '<b>4 Desember 2015</b> - Jam Berkode sudah hadir! Cobalah 50 tutorial untuk setiap umur dan setiap alat. Baru di minggu ini: Kodekan cerita-ceritamu sendiri dan permainan di Play Labs yang baru, Ice Age dan Gumball.'

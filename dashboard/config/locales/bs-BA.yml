@@ -26,6 +26,7 @@
   welcome_back: Dobrodošao/la natrag, %{name}
   submit: Potvrdi
   unsubmit: Poništi objavu
+  next_page: Next page
   add_teacher_form:
     code:
       label: 'Dodaj učitelja:'
@@ -401,6 +402,8 @@
     art_from_html_old: Angry Birds &#8482; &amp; © 2009-%{current_year} Rovio Entertainment
       Ltd. (sva prava pridržana). < br / > Plants vs Zombies &#8482; &amp; © %{current_year}
       Electronic Arts Inc. (sva prava pridržana)
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Potpomognuto sa Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotip i Hour
       of Code&reg; su zaštitni znaci tvrtke Code.org."
@@ -545,7 +548,6 @@
       povratnim informacijama i napravljenim poboljšanjima.
     prerelease_hoc2014: Ovaj tutorial je u <span class='betatext'> beta fazi</span>.  Podliježe
       izmjenama u skladu s primljenim povratnim informacijama i napravljenim poboljšanjima.
-    feedback: Slanje povratnih informacija
     report_bug: Prijavi Grešku
     support: Potraži Pomoći
     support_url: "//support.code.org"
@@ -593,6 +595,8 @@
     placeholder: Ovdje unesite vaš odgovor
     open_response_title: Hvala
     open_response_body: Hvala na vašem odgovoru!
+    correct_title: Ispravno
+    correct_body: To je tačan odgovor.
   dialog:
     ok: U redu
     startover_title: Jesi li siguran/na da želiš početi iznova?
@@ -722,3 +726,7 @@
         detail: Molimo da date što više detalja u vezi sadržaja koji prijavljujete.
         acknowledge: Slanjem ove informacije, vi prihvaćate uvjete date u %{link_start_privacy}Pravilima
           Privatnosti%{link_end} i %{link_start_tos}Uvjetima Korištenja%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

@@ -2005,6 +2005,10 @@ ro:
       Overworld Avoid Monsters_instruction: |
         Intalnirea unui Vierme nu este o idee buna.
         Mergeti cu atentie pe langa ei si ajungeti in siguranta in casa.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'Lemnul este o resursa importanta. Se pot construi multe cu ajutorul lui. Mergeti la copac si utilizati blocul "Distrugeti" pentru a-l taia.'
       Overworld Chop Trees_instruction: 'Trebuie sa construim o casa inainte de apus. Este necesar mult lemn. Taie toti cei trei copaci. '
       Overworld Free Play 20x20_instruction: Felicitări! Ai finalizat toate puzzle-urile! Acum extrage, construieste si creeaza ceva unic folosind tot ceea ce ai invatat pana acum.
@@ -2205,6 +2209,10 @@ ro:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
@@ -2219,6 +2227,12 @@ ro:
         Albina vrea doar nectar acum.
         Nu toate obiectele sunt flori, așa că verifică FIECARE NOR pentru a vedea
         dacă ascunde o floare. Dacă da, atunci poți aduna nectar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Aici este o funcţie numită "patrol."
         Editeaz-o pentru a muta pisica în sus cu 400 pixeli şi apoi în jos cu 400 pixeli.

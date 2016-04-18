@@ -1,6 +1,0 @@
-name 'U3L29 Free Response Getting Started'
-title 'While Loops and Counting: Getting Started'
-
-markdown <<MARKDOWN
-***Think about gathering data from a coin flip game.*** In addition to the number of heads and tails, what other data might be interesting to gather?
-MARKDOWN

@@ -97,7 +97,7 @@ describe("DirtDrawer", function () {
     var col = 3;
     var dirtId = cellId('dirt', row, col);
 
-    beforeEach(function() {
+    beforeEach(function () {
       setGlobals();
       drawer = new DirtDrawer(dirtMap, skin.dirt);
     });

@@ -1,7 +1,6 @@
 name 'PDK5 CS Video'
 title 'Computer Science'
 css 'unplugged'
-skip_dialogue true
 markdown <<MARKDOWN
 ## What is Computer Science?
 

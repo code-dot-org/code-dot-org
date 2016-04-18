@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:31.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Mission Unsortable ",
+    "markdown_instructions": "Activity Reflection\n\n**Prompt:** \nThinking back on the \"Mission Unsortable\" activity, describe a time when one person's mission conflicted with another person's mission. \n\nWhat happened? Describe how you might modify the missions so that the problem occur.\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

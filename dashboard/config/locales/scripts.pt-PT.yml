@@ -182,12 +182,12 @@
         course4:
           description_short: O curso 4 é destinado aos alunos que já concluíram os
             cursos 2 e 3.
-          description: O Curso 4 foi elaborado para os alunos que já concluíram os
-            Cursos 2 e 3. Os alunos mergulharão mais fundo nos tópicos da programação
-            apresentados nos cursos anteriores, para obter soluções flexíveis para
-            problemas mais complexos. Ao final deste curso, os alunos vão criar histórias
-            e jogos interativos que poderão ser compartilhados com qualquer pessoa.
-            Recomendado para alunos do 4º ao 8º ano.
+          description: Curso 4 foi projetado para estudantes que concluíram os Cursos
+            2 e 3. Os alunos aprenderão a resolver quebra-cabeças com maior complexidade
+            e combinar vários conceitos, enquanto resolvem cada desafio. Após concluírem
+            este curso, os alunos terão criado programas que mostram habilidades múltiplas,
+            incluindo ciclos e funções com parâmetros. Recomendado para alunos do
+            4° ao 8° ano.
           'Artist: Variables': 'Artista: variáveis'
           'Bee: For Loops': 'Abelha: laços for'
           title: Curso 4
@@ -213,7 +213,7 @@
           Farmer Binary: 'Fazendeira: binário'
           Maze and Bee: Labirinto e abelha
           Artist Binary: 'Artista: binário'
-          description_audience: 10-18 anos de idade
+          description_audience: Dos 10 aos 18 anos
           Super Challenge - Variables: Super desafio - variáveis
           Super Challenge - For Loops: Super desafio - For Loops
           Super Challenge - Functions and Parameters: Super desafio - funções e parâmetros
@@ -369,7 +369,7 @@
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: Curso de introdução acelerada ao CS
-          description_audience: 10-18 anos de idade
+          description_audience: Dos 10 aos 18 anos
           description: Este curso de 20 horas apresenta o informática de núcleo e
             conceitos de programação. O curso é projetado para uso em salas de aula
             para os graus K-8, mas é divertido de aprender em todos os tempos.
@@ -421,10 +421,10 @@
             de 10 minutos!
           Flappy Code: Flappy Bird
         jigsaw:
-          title: Quebra-cabeça
+          title: Quebra-cabeças
           description: Experimente nosso tutorial sobre quebra-cabeça
           description_short: Experimente nosso tutorial sobre quebra-cabeça
-          Jigsaw: Quebra-cabeça
+          Jigsaw: Quebra-cabeças
         step:
           title: Avançar
           description: Etapa do tutorial
@@ -994,7 +994,7 @@
           Big Game - Collision Detection: Big Game - Collision Detection
           Free Play: Atividade livre
         allthethings:
-          Jigsaw: Quebra-cabeça
+          Jigsaw: Quebra-cabeças
           Maze: Labirinto
           Artist: Artista
           Bee: Abelha
@@ -1023,6 +1023,8 @@
           Markdown Details: Markdown Details
           Studio: Studio
           Long assessment: Long assessment
+          Star wars: Star wars
+          Minecraft: Minecraft
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Fase 2 Online: combinado de estudos de verão'
@@ -1592,13 +1594,13 @@
           title: Special Fun
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: 10-18 anos de idade
+          description_audience: Dos 10 aos 18 anos
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: 10-18 anos de idade
+          description_audience: Dos 10 aos 18 anos
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!

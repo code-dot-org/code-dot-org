@@ -6,7 +6,7 @@ module.exports.drawChart = function drawChart(percentagesByDay) {
   // Load the Visualization API and the appropriate packages, setting a callback
   // to run when the API is loaded.
   google.load('visualization', '1.0', {'packages':['corechart']});
-  google.setOnLoadCallback(function() {
+  google.setOnLoadCallback(function () {
     drawChartCallback(percentagesByDay);
   });
 };

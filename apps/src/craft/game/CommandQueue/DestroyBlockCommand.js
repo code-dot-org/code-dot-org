@@ -11,7 +11,7 @@ export default class DestroyBlockCommand extends BaseCommand {
     tick() {
         // do stuff
     }
-    
+
     begin() {
         super.begin();
         this.GameController.destroyBlock(this);

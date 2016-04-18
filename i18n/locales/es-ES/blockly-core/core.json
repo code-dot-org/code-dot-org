@@ -25,7 +25,7 @@
   "COLOUR_RGB_RED":"rojo",
   "COLOUR_RGB_TITLE":"colorear con",
   "COLOUR_RGB_TOOLTIP":"Crea un color con la cantidad especificada de rojo, verde y azul.  Todos los valores deben estar entre 0 y 100.",
-  "CONFIRM_CREATE_VARIABLE":"Create",
+  "CONFIRM_CREATE_VARIABLE":"Crear",
   "CONFIRM_DELETE_FUNCTION_MESSAGE":"¡Advertencia! ¿Está seguro que desea eliminar %1?",
   "CONFIRM_RENAME_VARIABLE":"Renombrar",
   "CONTRACT_EDITOR_HEADER":"Receta de diseño",

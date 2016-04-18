@@ -9,16 +9,44 @@ var tickWrapper = require('./tickWrapper');
 require('require-globify');
 
 var $ = require('jquery');
+var React = require('react');
+var ReactDOM = require('react-dom');
+var Radium = require('radium');
+var _ = require('lodash');
 
 exports.buildPath = function (path) {
   return __dirname + '/../../build/js/' + path;
 };
 
-var _ = require('lodash');
-
 var studioApp;
 
 var testBlockFactory = require('./testBlockFactory');
+
+exports.setExternalGlobals = function () {
+  window.React = React;
+  window.ReactDOM = ReactDOM;
+  window.$ = $;
+  window.jQuery = $;
+  window.Radium = Radium;
+
+  window.dashboard = $.extend(window.dashboard, {
+    i18n: {
+      t: function (selector) { return selector; }
+    },
+    // Right now we're just faking some of our dashboard project interactions.
+    // If this becomes insufficient, we might be able to require the project.js
+    // file from shared here.
+    project: {
+      clearHtml: function () {},
+      exceedsAbuseThreshold: function () { return false; },
+      getCurrentId: function () { return 'fake_id'; },
+      isEditing: function () { return true; }
+    }
+  });
+  window.marked = function (str) {
+    return str;
+  };
+};
 
 function setupLocale(app) {
   setupLocales();
@@ -46,7 +74,7 @@ exports.setupBlocklyFrame = function () {
   // c, n, v, p, s get added to global namespace by messageformat module, which
   // is loaded when we require our locale msg files
   studioApp = require('@cdo/apps/StudioApp').singleton;
-  studioApp.reset = function(){};
+  studioApp.reset = function (){};
 
   var blocklyAppDiv = document.getElementById('app');
   assert(blocklyAppDiv, 'blocklyAppDiv exists');
@@ -60,7 +88,7 @@ exports.setupBlocklyFrame = function () {
 /**
  * Initializes an instance of blockly for testing
  */
-exports.setupTestBlockly = function() {
+exports.setupTestBlockly = function () {
   exports.setupBlocklyFrame();
   var options = {
     assetUrl: studioApp.assetUrl

@@ -1,8 +1,8 @@
 /* globals dashboard, appOptions  */
 
 var clientState = require('./clientState');
-var StageProgress = require('./components/progress/stage_progress.jsx');
-var CourseProgress = require('./components/progress/course_progress.jsx');
+var StageProgress = require('./components/progress/stage_progress');
+var CourseProgress = require('./components/progress/course_progress');
 
 var progress = module.exports;
 
@@ -81,7 +81,7 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
   var serverProgress = progressData.levels || {};
   var currentLevelIndex = null;
 
-  var combinedProgress = stageData.levels.map(function(level, index) {
+  var combinedProgress = stageData.levels.map(function (level, index) {
     // Determine the current level index.
     // However, because long assessments can have the same level appearing
     // multiple times, just set this the first time it's determined.

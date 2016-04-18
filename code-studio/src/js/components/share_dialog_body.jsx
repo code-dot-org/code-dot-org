@@ -1,5 +1,5 @@
-var AbuseError = require('./abuse_error.jsx');
-var SendToPhone = require('./send_to_phone.jsx');
+var AbuseError = require('./abuse_error');
+var SendToPhone = require('./send_to_phone');
 
 /* global React */
 
@@ -38,7 +38,7 @@ var ShareDialogBody = React.createClass({
     };
   },
 
-  showSendToPhone: function(event) {
+  showSendToPhone: function (event) {
     this.setState({showSendToPhone: true });
     event.preventDefault();
   },

@@ -23,7 +23,7 @@ eu-ES:
   twentyhours_heading: Probatu Informatikarako sarrera
   twentyhours_text: Bukatu duzu zure Kode Ordua? Ikasi informatika eta programazio kontzeptu gehiago ondorengo jarraipen ikastaroan.
   og_title: Ume guztiek merezi dute aukera bat
-  og_description: Eskola bakoitzeko ikasle bakoitzak informatika ikasteko aukera merezi du.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Bat egin <a href="http://hourofcode.com">Kode Orduarekin</a><br/>2014ko abenduaren 8tik 14era<br/>'
   hoc2014_students: Ikasle
   hoc2014_try: Saiatu
@@ -181,7 +181,7 @@ eu-ES:
   learn_next_level: Jarraitu hurrengo mailara
   learn_online: Probatu beste online kurtsoak
   learn_classes: Bilatu gertuko klaseak
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Oraintxe #KodeOrdua egin dut - Probatu! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -502,6 +502,7 @@ eu-ES:
   dashboard_navigation_all_sections: Ikasleen kontuak eta aurrerapena
   dashboard_navigation_view_progress: Aurrerapena Ikusi
   dashboard_navigation_view_text_responses: Ikusi textu erantzunak
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Ikasleak Gehitu
   dashboard_navigation_manage_students: Ikasleak Kudeatu
   dashboard_navigation_lesson_plans_resources: Ikasgaien Plangintza eta Baliabideak
@@ -600,6 +601,18 @@ eu-ES:
   dashboard_puzzle: Ariketa
   dashboard_question: Galdera
   dashboard_response: Erantzuna
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Zuzena
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Aurreko urteko "Hour of Code" ekitaldiko estatistika harrigarriak. Astebetean bakarrik:'
   stats_hoc_2013_image_alt: 2013ko Kodearen Orduaren estatistikak
   dashboard_teacher: Irakaslea
@@ -618,7 +631,7 @@ eu-ES:
   dashboard_faq_k5: LH-5 sarri egindako galderak
   dashboard_announcements: Berriak
   dashboard_announce_view_all: Guztiak ikusi
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
   dashboard_announce_button_text: Ikasi gehiago
   dashboard_announce_hoc: "<b>2015eko Urriak 15 </b>- Kode Ordua iristen hari da &mdash; antolaketa partaide guztiak opari txartel bat jasoko dute Amazon.com edo Microsoft's Windows Strore-en berain lanagit esker moduan. Parte hartu mundu osoko klasean Abenduan 7-13 tartean."
   dashboard_announce_playlab: '<b>2015eko abenduaren 4a</b> - Kode ordua hemen da! Saiatu edozein adinetarako eta edozein gailurako 50 tutorial. Aste honetan berria: sortu istorio eta jokoak, Ice Age eta Gumball joko laborategi berrietan.'

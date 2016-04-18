@@ -102,7 +102,7 @@ class Workshop < ActiveRecord::Base
 
   def send_reminders
     automated_email_recipients.each do |recipient|
-      next unless EmailValidator::email_address?(recipient.email)
+      next unless EmailValidator.email_address?(recipient.email)
       logger.debug("Sending email reminder to #{recipient.email}")
       OpsMailer.workshop_reminder(self, recipient).deliver_now
     end
@@ -118,7 +118,7 @@ class Workshop < ActiveRecord::Base
 
   def send_exit_surveys
     automated_email_recipients.each do |recipient|
-      next unless EmailValidator::email_address?(recipient.email)
+      next unless EmailValidator.email_address?(recipient.email)
       logger.debug("Sending exit survey info to #{recipient.email}")
       OpsMailer.exit_survey_information(self, recipient).deliver_now
     end

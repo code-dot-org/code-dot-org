@@ -103,7 +103,7 @@ function wrapOnTick(app) {
  */
 function takeActionConditionally(action, condition) {
   return function () {
-    if(condition()) {
+    if (condition()) {
       action();
     }
   };

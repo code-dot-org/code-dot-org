@@ -1,6 +1,6 @@
 {
   "and": "i",
-  "animationMode": "Animation",
+  "animationMode": "Animacja",
   "backToPreviousLevel": "Wróć do poprzedniego poziomu",
   "blocklyMessage": "Blockly",
   "blocks": "bloki",
@@ -28,7 +28,7 @@
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
   "debugWatchHeader": "Watch",
-  "debugWatchNotAvailable": "<not available>",
+  "debugWatchNotAvailable": "Niedostępne.",
   "defaultTwitterText": "Sprawdź, co zrobiłem",
   "designMode": "Projekt",
   "dialogCancel": "Anuluj",
@@ -195,6 +195,7 @@
   "shareWarningsAge": "Podaj swój wiek poniżej i kliknij przycisk OK, aby kontynuować.",
   "shareWarningsMoreInfo": "Więcej informacji",
   "shareWarningsStoreData": "Ta aplikacja zbudowana na Code Studio przechowuje dane, które mogą być oglądane przez każdego, kto ma ten link, zachowaj więc ostrożność, gdy ktoś poprosi Cię o podanie danych osobowych.",
+  "showBlock": "Get a block",
   "showBlocksHeader": "Pokaż Bloki",
   "showCodeHeader": "Pokaż Kod",
   "showGeneratedCode": "Pokaż kod",
@@ -229,5 +230,8 @@
   "watchVideo": "Obejrzyj wideo",
   "when": "kiedy",
   "whenRun": "po uruchomieniu",
-  "workspaceHeaderShort": "Obszar roboczy: "
+  "workspaceHeaderShort": "Obszar roboczy: ",
+  "currentVersion": "Current Version",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
+  "restoreThisVersion": "Restore this Version"
 }

@@ -1,8 +1,8 @@
 var tiles = require('./tiles');
 var SquareType = tiles.SquareType;
 
-var Cell = function (tileType, value) {
-  
+var Cell = function (tileType, value, range) {
+
   /**
    * @type {Number}
    */
@@ -18,6 +18,11 @@ var Cell = function (tileType, value) {
    */
   this.currentValue_ = undefined;
   this.resetCurrentValue();
+
+  /**
+   * @type {Number}
+   */
+  this.range_ = isNaN(range) ? value : range;
 };
 
 module.exports = Cell;
@@ -27,7 +32,7 @@ module.exports = Cell;
  * @return {Cell}
  */
 Cell.prototype.clone = function () {
-  var newCell = new Cell(this.tileType_, this.originalValue_);
+  var newCell = new Cell(this.tileType_, this.originalValue_, this.range_);
   newCell.setCurrentValue(this.currentValue_);
   return newCell;
 };
@@ -43,7 +48,21 @@ Cell.prototype.getTile = function () {
  * @return {boolean}
  */
 Cell.prototype.isDirt = function () {
-  return this.originalValue_ !== undefined;
+  return this.currentValue_ !== undefined;
+};
+
+/**
+ * @return {boolean}
+ */
+Cell.prototype.isVariableRange = function () {
+  return this.range_ !== this.originalValue_;
+};
+
+/**
+ * @return {boolean}
+ */
+Cell.prototype.isVariable = function () {
+  return this.isVariableRange();
 };
 
 /**
@@ -65,6 +84,29 @@ Cell.prototype.resetCurrentValue = function () {
 };
 
 /**
+ * Variable cells can represent a range of possible values. This method
+ * returns an array of non-variable Cells based on this Cell's
+ * configuration.
+ * @return {Cell[]}
+ */
+Cell.prototype.getPossibleGridAssets = function () {
+  var possibilities = [];
+  if (this.isVariableRange()) {
+    // range can be greater than or less than original value
+    var min = Math.min(this.originalValue_, this.range_);
+    var max = Math.max(this.originalValue_, this.range_);
+    for (var i = min; i <= max; i++) {
+      possibilities.push(new Cell(this.tileType_, i));
+    }
+  } else {
+    possibilities.push(this);
+  }
+
+  return possibilities;
+};
+
+
+/**
  * Serializes this Cell into JSON
  * @return {Object}
  */
@@ -72,6 +114,7 @@ Cell.prototype.serialize = function () {
   return {
     tileType: this.tileType_,
     value: this.originalValue_,
+    range: this.range_
   };
 };
 
@@ -83,7 +126,8 @@ Cell.prototype.serialize = function () {
 Cell.deserialize = function (serialized) {
   return new Cell(
     serialized.tileType,
-    serialized.value
+    serialized.value,
+    serialized.range
   );
 };
 
@@ -96,7 +140,6 @@ Cell.deserialize = function (serialized) {
  * @param {String|Number} mapCell
  * @param {String|Number} initialDirtCell
  * @return {Cell}
- * @override
  */
 Cell.parseFromOldValues = function (mapCell, initialDirtCell) {
   mapCell = parseInt(mapCell);

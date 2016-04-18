@@ -28,7 +28,7 @@ var commonMsg = require('../locale');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
-var AppView = require('../templates/AppView.jsx');
+var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
@@ -82,8 +82,10 @@ Maze.scale = {
 
 var loadLevel = function () {
   // Load maps.
+  //
   // "serializedMaze" is the new way of storing maps; it's a JSON array
   // containing complex map data.
+  //
   // "map" plus optionally "levelDirt" is the old way of storing maps;
   // they are each arrays of a combination of strings and ints with
   // their own complex syntax. This way is deprecated for new levels,
@@ -131,7 +133,7 @@ var loadLevel = function () {
  * be the index of which wall tile to use for that cell.  If the cell is not a
  * wall, Maze.wallMap[y][x] is undefined.
  */
-var initWallMap = function() {
+var initWallMap = function () {
   Maze.wallMap = new Array(Maze.map.ROWS);
   for (var y = 0; y < Maze.map.ROWS; y++) {
     Maze.wallMap[y] = new Array(Maze.map.COLS);
@@ -147,29 +149,29 @@ var timeoutList = require('../timeoutList');
 // Input: Binary string representing Centre/North/West/South/East squares.
 // Output: [x, y] coordinates of each tile's sprite in tiles.png.
 var TILE_SHAPES = {
-  '10010': [4, 0],  // Dead ends
+  '10010': [4, 0], // Dead ends
   '10001': [3, 3],
   '11000': [0, 1],
   '10100': [0, 2],
-  '11010': [4, 1],  // Vertical
-  '10101': [3, 2],  // Horizontal
-  '10110': [0, 0],  // Elbows
+  '11010': [4, 1], // Vertical
+  '10101': [3, 2], // Horizontal
+  '10110': [0, 0], // Elbows
   '10011': [2, 0],
   '11001': [4, 2],
   '11100': [2, 3],
-  '11110': [1, 1],  // Junctions
+  '11110': [1, 1], // Junctions
   '10111': [1, 0],
   '11011': [2, 1],
   '11101': [1, 2],
-  '11111': [2, 2],  // Cross
-  'null0': [4, 3],  // Empty
+  '11111': [2, 2], // Cross
+  'null0': [4, 3], // Empty
   'null1': [3, 0],
   'null2': [3, 1],
   'null3': [0, 3],
   'null4': [1, 3],
 };
 
-function drawMap () {
+function drawMap() {
   var svg = document.getElementById('svgMaze');
   var x, y, k, tile;
 
@@ -299,7 +301,7 @@ function drawMap () {
       var timePerFrame = 600; // timeForAnimation / numFrames;
       var idleAnimationFrame = 0;
 
-      setInterval(function() {
+      setInterval(function () {
         if (idlePegmanIcon.getAttribute('visibility') === 'visible') {
           updatePegmanAnimation({
             idStr: 'idle',
@@ -357,14 +359,14 @@ function drawMap () {
 }
 
 // Returns true if the tile at x,y is either a wall or out of bounds
-function isWallOrOutOfBounds (col, row) {
+function isWallOrOutOfBounds(col, row) {
   return Maze.map.getTile(row, col) === SquareType.WALL ||
       Maze.map.getTile(row, col) === undefined;
 }
 
 // Return a value of '0' if the specified square is wall or out of bounds '1'
 // otherwise (empty, obstacle, start, finish).
-function isOnPathStr (x, y) {
+function isOnPathStr(x, y) {
   return isWallOrOutOfBounds(x, y) ? "0" : "1";
 }
 
@@ -383,10 +385,10 @@ function drawMapTiles(svg) {
     for (var x = 0; x < Maze.map.COLS; x++) {
       // Compute the tile index.
       tile = isOnPathStr(x, y) +
-        isOnPathStr(x, y - 1) +  // North.
-        isOnPathStr(x + 1, y) +  // West.
-        isOnPathStr(x, y + 1) +  // South.
-        isOnPathStr(x - 1, y);   // East.
+        isOnPathStr(x, y - 1) + // North.
+        isOnPathStr(x + 1, y) + // West.
+        isOnPathStr(x, y + 1) + // South.
+        isOnPathStr(x - 1, y); // East.
 
       var adjacentToPath = (tile !== '00000');
 
@@ -489,16 +491,14 @@ Maze.drawTile = function (svg, tileSheetLocation, row, col, tileId) {
  */
 function resetDirtImages(running) {
   Maze.map.forEachCell(function (cell, row, col) {
-    if (cell.isDirt()) {
-      Maze.gridItemDrawer.updateItemImage(row, col, running);
-    }
+    Maze.gridItemDrawer.updateItemImage(row, col, running);
   });
 }
 
 /**
  * Initialize Blockly and the maze.  Called on page load.
  */
-Maze.init = function(config) {
+Maze.init = function (config) {
   // replace studioApp methods with our own
   studioApp.runButtonClick = this.runButtonClick.bind(this);
   studioApp.reset = this.reset.bind(this);
@@ -533,7 +533,7 @@ Maze.init = function(config) {
 
   Maze.cachedBlockStates = [];
 
-  config.loadAudio = function() {
+  config.loadAudio = function () {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
     studioApp.loadAudio(skin.failureSound, 'failure');
@@ -561,7 +561,7 @@ Maze.init = function(config) {
     }
   };
 
-  config.afterInject = function() {
+  config.afterInject = function () {
     if (studioApp.isUsingBlockly()) {
       /**
        * The richness of block colours, regardless of the hue.
@@ -648,6 +648,9 @@ Maze.init = function(config) {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
+    hideSource: !!config.hideSource,
+    noVisualization: false,
+    isRtl: studioApp.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
     generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: studioApp.init.bind(studioApp, config)
@@ -688,17 +691,17 @@ var getPegmanFrameOffsetY = function (animationRow) {
 };
 
 /**
-  * Create sprite assets for pegman.
-  * @param options Specify different features of the pegman animation.
-  * idStr required identifier for the pegman.
-  * pegmanImage required which image to use for the animation.
-  * col which column the pegman is at.
-  * row which row the pegman is at.
-  * direction which direction the pegman is facing at.
-  * numColPegman number of the pegman in each row, default is 4.
-  * numRowPegman number of the pegman in each column, default is 1.
-  */
-var createPegmanAnimation = function(options) {
+ * Create sprite assets for pegman.
+ * @param options Specify different features of the pegman animation.
+ * idStr required identifier for the pegman.
+ * pegmanImage required which image to use for the animation.
+ * col which column the pegman is at.
+ * row which row the pegman is at.
+ * direction which direction the pegman is facing at.
+ * numColPegman number of the pegman in each row, default is 4.
+ * numRowPegman number of the pegman in each column, default is 1.
+ */
+var createPegmanAnimation = function (options) {
   var svg = document.getElementById('svgMaze');
   // Create clip path.
   var clip = document.createElementNS(SVG_NS, 'clipPath');
@@ -728,7 +731,7 @@ var createPegmanAnimation = function(options) {
   // Update pegman icon & clip path.
   if (options.col !== undefined && options.direction !== undefined) {
     var x = Maze.SQUARE_SIZE * options.col -
-      options.direction * Maze.PEGMAN_WIDTH + 1  + Maze.PEGMAN_X_OFFSET;
+      options.direction * Maze.PEGMAN_WIDTH + 1 + Maze.PEGMAN_X_OFFSET;
     img.setAttribute('x', x);
   }
   if (options.row !== undefined) {
@@ -745,7 +748,7 @@ var createPegmanAnimation = function(options) {
   * direction required which direction the pegman is facing at.
   * animationRow which row of the sprite sheet the pegman animation needs
   */
-var updatePegmanAnimation = function(options) {
+var updatePegmanAnimation = function (options) {
   var rect = document.getElementById(options.idStr + 'PegmanClipRect');
   rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
   rect.setAttribute('y', getPegmanYForRow(options.row));
@@ -762,7 +765,7 @@ var updatePegmanAnimation = function(options) {
  * Reset the maze to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-Maze.reset = function(first) {
+Maze.reset = function (first) {
   if (Maze.bee) {
     // Bee needs to reset itself and still run studioApp.reset logic
     Maze.bee.reset();
@@ -785,7 +788,7 @@ Maze.reset = function(first) {
     if (skin.danceOnLoad) {
       scheduleDance(false, danceTime);
     }
-    timeoutList.setTimeout(function() {
+    timeoutList.setTimeout(function () {
       stepSpeed = 100;
       Maze.scheduleTurn(Maze.startDirection);
     }, danceTime + 150);
@@ -891,7 +894,7 @@ function resetTiles() {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-Maze.runButtonClick = function() {
+Maze.runButtonClick = function () {
   var stepButton = document.getElementById('stepButton');
   if (stepButton) {
     stepButton.setAttribute('disabled', '');
@@ -899,7 +902,7 @@ Maze.runButtonClick = function() {
   Maze.execute(false);
 };
 
-function beginAttempt () {
+function beginAttempt() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
@@ -925,7 +928,7 @@ Maze.resetButtonClick = function () {
   reenableCachedBlockStates();
 };
 
-function reenableCachedBlockStates () {
+function reenableCachedBlockStates() {
   if (Maze.cachedBlockStates) {
     // restore moveable/deletable/editable state from before we started stepping
     Maze.cachedBlockStates.forEach(function (cached) {
@@ -941,7 +944,7 @@ function reenableCachedBlockStates () {
  * App specific displayFeedback function that calls into
  * studioApp.displayFeedback when appropriate
  */
-var displayFeedback = function() {
+var displayFeedback = function () {
   if (Maze.waitingForReport || Maze.animating_) {
     return;
   }
@@ -968,20 +971,11 @@ var displayFeedback = function() {
  * Function to be called when the service report call is complete
  * @param {object} JSON response (if available)
  */
-Maze.onReportComplete = function(response) {
+Maze.onReportComplete = function (response) {
   Maze.response = response;
   Maze.waitingForReport = false;
   studioApp.onReportComplete(response);
   displayFeedback();
-};
-
-/**
- * Helper class, passthrough to level-specific hasMultiplePossibleGrids
- * call
- * @return {boolean}
- */
-Maze.hasMultiplePossibleGrids = function () {
-  return Maze.bee && Maze.bee.hasMultiplePossibleGrids();
 };
 
 /**
@@ -990,7 +984,9 @@ Maze.hasMultiplePossibleGrids = function () {
  * during execution when running multiple trials.
  */
 Maze.prepareForExecution = function () {
-  Maze.executionInfo = new ExecutionInfo({ticks: 100});
+  Maze.executionInfo = new ExecutionInfo({
+    ticks: 100
+  });
   Maze.result = ResultType.UNSET;
   Maze.testResults = TestResults.NO_TESTS_RUN;
   Maze.waitingForReport = false;
@@ -1001,7 +997,7 @@ Maze.prepareForExecution = function () {
 /**
  * Execute the user's code.  Heaven help us...
  */
-Maze.execute = function(stepMode) {
+Maze.execute = function (stepMode) {
   beginAttempt();
   Maze.prepareForExecution();
 
@@ -1034,15 +1030,18 @@ Maze.execute = function(stepMode) {
     var runCode = !level.edit_blocks;
 
     if (runCode) {
-      if (Maze.hasMultiplePossibleGrids()) {
+      if (Maze.map.hasMultiplePossibleGrids()) {
         // If this level is a Bee level with multiple possible grids, we
         // need to run against all grids and sort them into successes
         // and failures
         var successes = [];
         var failures = [];
 
-        Maze.bee.staticGrids.forEach(function(grid, i) {
-          Maze.bee.useGridWithId(i);
+        Maze.map.staticGrids.forEach(function (grid, i) {
+          Maze.map.useGridWithId(i);
+          if (Maze.bee) {
+            Maze.bee.reset();
+          }
 
           // Run trial
           codegen.evalWith(code, {
@@ -1060,7 +1059,7 @@ Maze.execute = function(stepMode) {
           }
 
           // Reset for next trial
-          Maze.gridItemDrawer.resetClouded();
+          Maze.gridItemDrawer.reset();
           Maze.prepareForExecution();
           studioApp.reset(false);
         });
@@ -1071,7 +1070,10 @@ Maze.execute = function(stepMode) {
         // "real" state of the map. If all grids are successful,
         // randomly select any one of them.
         var i = (failures.length > 0) ? _.sample(failures) : _.sample(successes);
-        Maze.bee.useGridWithId(i);
+        Maze.map.useGridWithId(i);
+        if (Maze.bee) {
+          Maze.bee.reset();
+        }
       }
 
       codegen.evalWith(code, {
@@ -1233,7 +1235,7 @@ Maze.scheduleAnimations = function (singleStep) {
   // The reason we do this recursively instead of iteratively is that we want to
   // ensure that we finish scheduling action1 before starting to schedule
   // action2. Otherwise we get into trouble when stepSpeed is 0.
-  function scheduleSingleAnimation (index) {
+  function scheduleSingleAnimation(index) {
     if (index >= actions.length) {
       finishAnimations();
       return;
@@ -1245,7 +1247,7 @@ Maze.scheduleAnimations = function (singleStep) {
     var timeModifier = (skin.actionSpeedScale && skin.actionSpeedScale[command]) || 1;
     var timeForThisAction = Math.round(timePerAction * timeModifier);
 
-    timeoutList.setTimeout(function() {
+    timeoutList.setTimeout(function () {
       scheduleSingleAnimation(index + 1);
     }, timeForThisAction);
   }
@@ -1287,7 +1289,7 @@ Maze.scheduleAnimations = function (singleStep) {
  * @param {boolean} spotlightBlocks Whether or not we should highlight entire blocks
  * @param {integer} timePerStep How much time we have allocated before the next step
  */
-function animateAction (action, spotlightBlocks, timePerStep) {
+function animateAction(action, spotlightBlocks, timePerStep) {
   if (action.blockId) {
     studioApp.highlight(String(action.blockId), spotlightBlocks);
   }
@@ -1342,7 +1344,7 @@ function animateAction (action, spotlightBlocks, timePerStep) {
           scheduleDance(true, timePerStep);
           break;
         default:
-          timeoutList.setTimeout(function() {
+          timeoutList.setTimeout(function () {
             studioApp.playAudio('failure');
           }, stepSpeed);
           break;
@@ -1366,7 +1368,7 @@ function animateAction (action, spotlightBlocks, timePerStep) {
   }
 }
 
-function animatedMove (direction, timeForMove) {
+function animatedMove(direction, timeForMove) {
   var positionChange = tiles.directionToDxDy(direction);
   var newX = Maze.pegmanX + positionChange.dx;
   var newY = Maze.pegmanY + positionChange.dy;
@@ -1382,7 +1384,7 @@ Maze.scheduleSheetedMovement = function (start, delta, numFrames, timePerFrame,
     idStr, direction, hidePegman) {
   var pegmanIcon = document.getElementById('pegman');
   utils.range(0, numFrames - 1).forEach(function (frame) {
-    timeoutList.setTimeout(function() {
+    timeoutList.setTimeout(function () {
       if (hidePegman) {
         pegmanIcon.setAttribute('visibility', 'hidden');
       }
@@ -1402,7 +1404,7 @@ Maze.scheduleSheetedMovement = function (start, delta, numFrames, timePerFrame,
  * @param {number} endX X coordinate of the target position
  * @param {number} endY Y coordinate of the target position
  */
- function scheduleMove(endX, endY, timeForAnimation) {
+function scheduleMove(endX, endY, timeForAnimation) {
   var startX = Maze.pegmanX;
   var startY = Maze.pegmanY;
   var direction = Maze.pegmanD;
@@ -1420,11 +1422,17 @@ Maze.scheduleSheetedMovement = function (start, delta, numFrames, timePerFrame,
     var movePegmanIcon = document.getElementById('movePegman');
     timePerFrame = timeForAnimation / numFrames;
 
-    Maze.scheduleSheetedMovement({x: startX, y: startY}, {x: deltaX, y: deltaY },
+    Maze.scheduleSheetedMovement({
+        x: startX,
+        y: startY
+      }, {
+        x: deltaX,
+        y: deltaY
+      },
       numFrames, timePerFrame, 'move', direction, true);
 
     // Hide movePegman and set pegman to the end position.
-    timeoutList.setTimeout(function() {
+    timeoutList.setTimeout(function () {
       movePegmanIcon.setAttribute('visibility', 'hidden');
       pegmanIcon.setAttribute('visibility', 'visible');
       Maze.displayPegman(endX, endY, tiles.directionToFrame(direction));
@@ -1437,7 +1445,7 @@ Maze.scheduleSheetedMovement = function (start, delta, numFrames, timePerFrame,
     numFrames = 4;
     timePerFrame = timeForAnimation / numFrames;
     utils.range(1, numFrames).forEach(function (frame) {
-      timeoutList.setTimeout(function() {
+      timeoutList.setTimeout(function () {
         Maze.displayPegman(
           startX + deltaX * frame / numFrames,
           startY + deltaY * frame / numFrames,
@@ -1471,7 +1479,7 @@ Maze.scheduleTurn = function (endDirection) {
   var startDirection = Maze.pegmanD;
   var deltaDirection = endDirection - startDirection;
   utils.range(1, numFrames).forEach(function (frame) {
-    timeoutList.setTimeout(function() {
+    timeoutList.setTimeout(function () {
       Maze.displayPegman(
         Maze.pegmanX,
         Maze.pegmanY,
@@ -1483,7 +1491,7 @@ Maze.scheduleTurn = function (endDirection) {
 /**
  * Replace the tiles surrounding the obstacle with broken tiles.
  */
-Maze.updateSurroundingTiles = function(obstacleY, obstacleX, brokenTiles) {
+Maze.updateSurroundingTiles = function (obstacleY, obstacleX, brokenTiles) {
   var tileCoords = [
     [obstacleY - 1, obstacleX - 1],
     [obstacleY - 1, obstacleX],
@@ -1509,7 +1517,7 @@ Maze.updateSurroundingTiles = function(obstacleY, obstacleX, brokenTiles) {
  * Schedule the animations and sounds for a failed move.
  * @param {boolean} forward True if forward, false if backward.
  */
-Maze.scheduleFail = function(forward) {
+Maze.scheduleFail = function (forward) {
   var dxDy = tiles.directionToDxDy(Maze.pegmanD);
   var deltaX = dxDy.dx;
   var deltaY = dxDy.dy;
@@ -1551,15 +1559,20 @@ Maze.scheduleFail = function(forward) {
         }
         // animate our sprite sheet
         var timePerFrame = 100;
-        Maze.scheduleSheetedMovement({x: Maze.pegmanX, y: Maze.pegmanY},
-          {x: deltaX, y: deltaY }, numFrames, timePerFrame, 'wall',
+        Maze.scheduleSheetedMovement({
+            x: Maze.pegmanX,
+            y: Maze.pegmanY
+          }, {
+            x: deltaX,
+            y: deltaY
+          }, numFrames, timePerFrame, 'wall',
           Direction.NORTH, true);
         setTimeout(function () {
           document.getElementById('wallPegman').setAttribute('visibility', 'hidden');
         }, numFrames * timePerFrame);
       } else {
         // active our gif
-        timeoutList.setTimeout(function() {
+        timeoutList.setTimeout(function () {
           wallAnimationIcon.setAttribute('x',
             Maze.SQUARE_SIZE * (Maze.pegmanX + 0.5 + deltaX * 0.5) -
             wallAnimationIcon.getAttribute('width') / 2);
@@ -1573,20 +1586,20 @@ Maze.scheduleFail = function(forward) {
         }, stepSpeed / 2);
       }
     }
-    timeoutList.setTimeout(function() {
+    timeoutList.setTimeout(function () {
       Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, frame);
     }, stepSpeed);
-    timeoutList.setTimeout(function() {
+    timeoutList.setTimeout(function () {
       Maze.displayPegman(Maze.pegmanX + deltaX / 4, Maze.pegmanY + deltaY / 4,
-       frame);
+        frame);
       studioApp.playAudio('failure');
     }, stepSpeed * 2);
-    timeoutList.setTimeout(function() {
+    timeoutList.setTimeout(function () {
       Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, frame);
     }, stepSpeed * 3);
 
     if (skin.wallPegmanAnimation) {
-      timeoutList.setTimeout(function() {
+      timeoutList.setTimeout(function () {
         var pegmanIcon = document.getElementById('pegman');
         pegmanIcon.setAttribute('visibility', 'hidden');
         updatePegmanAnimation({
@@ -1607,7 +1620,7 @@ Maze.scheduleFail = function(forward) {
     obsIcon.setAttributeNS(
         'http://www.w3.org/1999/xlink', 'xlink:href',
         skin.obstacleAnimation);
-    timeoutList.setTimeout(function() {
+    timeoutList.setTimeout(function () {
       Maze.displayPegman(Maze.pegmanX + deltaX / 2,
                          Maze.pegmanY + deltaY / 2,
                          frame);
@@ -1615,7 +1628,7 @@ Maze.scheduleFail = function(forward) {
 
     // Replace the objects around obstacles with broken objects
     if (skin.largerObstacleAnimationTiles) {
-      timeoutList.setTimeout(function() {
+      timeoutList.setTimeout(function () {
         Maze.updateSurroundingTiles(
             targetY, targetX, skin.largerObstacleAnimationTiles);
       }, stepSpeed);
@@ -1626,11 +1639,11 @@ Maze.scheduleFail = function(forward) {
       var svgMaze = document.getElementById('svgMaze');
       var pegmanIcon = document.getElementById('pegman');
 
-      timeoutList.setTimeout(function() {
+      timeoutList.setTimeout(function () {
         pegmanIcon.setAttribute('visibility', 'hidden');
       }, stepSpeed * 2);
     }
-    timeoutList.setTimeout(function() {
+    timeoutList.setTimeout(function () {
       studioApp.playAudio('failure');
     }, stepSpeed);
   }
@@ -1639,7 +1652,7 @@ Maze.scheduleFail = function(forward) {
 /**
  * Set the tiles to be transparent gradually.
  */
-function setTileTransparent () {
+function setTileTransparent() {
   var tileId = 0;
   for (var y = 0; y < Maze.map.ROWS; y++) {
     for (var x = 0; x < Maze.map.COLS; x++) {
@@ -1702,16 +1715,16 @@ function scheduleDance(victoryDance, timeAlloted) {
   }
 
   var danceSpeed = timeAlloted / 5;
-  timeoutList.setTimeout(function() {
+  timeoutList.setTimeout(function () {
     Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, 18);
   }, danceSpeed);
-  timeoutList.setTimeout(function() {
+  timeoutList.setTimeout(function () {
     Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, 20);
   }, danceSpeed * 2);
-  timeoutList.setTimeout(function() {
+  timeoutList.setTimeout(function () {
     Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, 18);
   }, danceSpeed * 3);
-  timeoutList.setTimeout(function() {
+  timeoutList.setTimeout(function () {
     Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, 20);
   }, danceSpeed * 4);
 
@@ -1736,7 +1749,7 @@ function scheduleDance(victoryDance, timeAlloted) {
  * @param {number} y Vertical grid (or fraction thereof).
  * @param {number} frame Direction (0 - 15) or dance (16 - 17).
  */
-Maze.displayPegman = function(x, y, frame) {
+Maze.displayPegman = function (x, y, frame) {
   var pegmanIcon = document.getElementById('pegman');
   pegmanIcon.setAttribute('x',
     x * Maze.SQUARE_SIZE - frame * Maze.PEGMAN_WIDTH + 1 + Maze.PEGMAN_X_OFFSET);
@@ -1747,10 +1760,14 @@ Maze.displayPegman = function(x, y, frame) {
   clipRect.setAttribute('y', pegmanIcon.getAttribute('y'));
 };
 
-var scheduleDirtChange = function(options) {
+var scheduleDirtChange = function (options) {
   var col = Maze.pegmanX;
   var row = Maze.pegmanY;
-  Maze.map.setValue(row, col, Maze.map.getValue(row, col) + options.amount);
+
+  // cells that started as "flat" will be undefined
+  var previousValue = Maze.map.getValue(row, col) || 0;
+
+  Maze.map.setValue(row, col, previousValue + options.amount);
   Maze.gridItemDrawer.updateItemImage(row, col, true);
   studioApp.playAudio(options.sound);
 };
@@ -1758,7 +1775,7 @@ var scheduleDirtChange = function(options) {
 /**
  * Schedule to add dirt at pegman's current position.
  */
-Maze.scheduleFill = function() {
+Maze.scheduleFill = function () {
   scheduleDirtChange({
     amount: 1,
     sound: 'fill'
@@ -1768,7 +1785,7 @@ Maze.scheduleFill = function() {
 /**
  * Schedule to remove dirt at pegman's current location.
  */
-Maze.scheduleDig = function() {
+Maze.scheduleDig = function () {
   scheduleDirtChange({
     amount: -1,
     sound: 'dig'
@@ -1780,7 +1797,7 @@ Maze.scheduleDig = function() {
  * in the specified direction.
  * @param {!Direction} d Direction (0 - 3).
  */
-Maze.scheduleLook = function(d) {
+Maze.scheduleLook = function (d) {
   var x = Maze.pegmanX;
   var y = Maze.pegmanY;
   switch (d) {
@@ -1820,21 +1837,21 @@ Maze.scheduleLook = function(d) {
  * @param {!Element} path Element to make appear.
  * @param {number} delay Milliseconds to wait before making wave appear.
  */
-Maze.scheduleLookStep = function(path, delay) {
-  timeoutList.setTimeout(function() {
+Maze.scheduleLookStep = function (path, delay) {
+  timeoutList.setTimeout(function () {
     path.style.display = 'inline';
-    window.setTimeout(function() {
+    window.setTimeout(function () {
       path.style.display = 'none';
     }, stepSpeed * 2);
   }, delay);
 };
 
-function atFinish () {
+function atFinish() {
   return !Maze.finish_ ||
       (Maze.pegmanX == Maze.finish_.x && Maze.pegmanY == Maze.finish_.y);
 }
 
-function isDirtCorrect () {
+function isDirtCorrect() {
   for (var row = 0; row < Maze.map.ROWS; row++) {
     for (var col = 0; col < Maze.map.COLS; col++) {
       if (Maze.map.isDirt(row, col) && Maze.map.getValue(row, col) !== 0) {
@@ -1848,7 +1865,7 @@ function isDirtCorrect () {
 /**
  * Check whether all goals have been accomplished
  */
-Maze.checkSuccess = function() {
+Maze.checkSuccess = function () {
   var finished;
   if (!atFinish()) {
     finished = false;

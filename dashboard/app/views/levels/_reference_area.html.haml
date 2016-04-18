@@ -1,5 +1,3 @@
-= javascript_include_tag 'levels/reference_area'
-
 #reference_area.reference_area
   - if current_user && (current_user.teacher? || current_user.admin?) && @level.ideal_level_source_id && @script && @level && @script_level && !@script.hide_solutions?
     .solution_link

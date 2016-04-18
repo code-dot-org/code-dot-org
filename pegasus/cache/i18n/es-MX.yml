@@ -680,6 +680,7 @@
   dashboard_navigation_all_sections: Cuentas de estudiantes y sus progresos
   dashboard_navigation_view_progress: Ver progreso
   dashboard_navigation_view_text_responses: Ver Respuestas de Texto
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Añadir alumnos
   dashboard_navigation_manage_students: Administrar alumnos
   dashboard_navigation_lesson_plans_resources: Planificaciones de lecciones y recursos
@@ -802,6 +803,18 @@
   dashboard_puzzle: Rompecabezas
   dashboard_question: Pregunta
   dashboard_response: Respuesta
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Correcto
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Increíbles estadísticas de la Hora del Código del año pasado.
     En sólo una semana:'
   stats_hoc_2013_image_alt: Estadísticas de Hora del Código del 2013
@@ -1702,3 +1715,8 @@
   infinity_shortcode: inf
   playlab_shortcode: ejecutar
   artist_shortcode: art
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."

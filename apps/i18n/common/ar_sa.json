@@ -1,6 +1,6 @@
 {
   "and": "و",
-  "animationMode": "Animation",
+  "animationMode": "الرسوم المتحركة",
   "backToPreviousLevel": "العودة إلى المستوى السابق",
   "blocklyMessage": "بلوكلي",
   "blocks": "مربعات برمجية",
@@ -27,8 +27,8 @@
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
-  "debugWatchHeader": "Watch",
-  "debugWatchNotAvailable": "<not available>",
+  "debugWatchHeader": "شاهد",
+  "debugWatchNotAvailable": "<غير متوفر>",
   "defaultTwitterText": "انظر ما الذي صنعته",
   "designMode": "تصميم",
   "dialogCancel": "إلغاء",
@@ -195,6 +195,7 @@
   "shareWarningsAge": "الرجاء تعبئة عمرك أدناه ثم اضغط حسنا للمتابعة.",
   "shareWarningsMoreInfo": "المزيد من المعلومات",
   "shareWarningsStoreData": "هذا التطبيق تم بنائه في استوديو التعليمات البرمجية و يمكن مشاهدته من قبل أي شخص لديه هذا الرابط, لذا كن حذرا إذا طلب منك تقديم معلومات شخصية.",
+  "showBlock": "Get a block",
   "showBlocksHeader": "إظهار المربعات البرمجية",
   "showCodeHeader": "إظهار الكود البرمجي",
   "showGeneratedCode": "إظهار الكود البرمجي",
@@ -229,5 +230,8 @@
   "watchVideo": "شاهد الفيديو",
   "when": "عندما",
   "whenRun": "عند التشغيل",
-  "workspaceHeaderShort": "مساحة العمل: "
+  "workspaceHeaderShort": "مساحة العمل: ",
+  "currentVersion": "Current Version",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
+  "restoreThisVersion": "Restore this Version"
 }
