@@ -55,8 +55,9 @@ window.apps = {
         if (appOptions.level.isProjectLevel) {
           return;
         }
-        if (appOptions.channel) {
-          // Don't send the levelSource or image to Dashboard for channel-backed levels.
+        if (appOptions.channel && !appOptions.level.edit_blocks) {
+          // Don't send the levelSource or image to Dashboard for channel-backed levels,
+          // unless we are actually editing blocks and not really completing a level
           // (The levelSource is already stored in the channels API.)
           delete report.program;
           delete report.image;
