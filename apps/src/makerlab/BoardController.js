@@ -154,8 +154,19 @@ function getDevicePort() {
   }.bind(this));
 }
 
+/**
+ * Returns whether the given descriptor's serialport is potentially an Arduino
+ * device.
+ *
+ * Based on logic in johnny-five lib/board.js, match ports that Arduino cares
+ * about, like: ttyUSB#, cu.usbmodem#, COM#
+ *
+ * @param {Object} port node-serial compatible serialport info object
+ * @returns {boolean} whether this is potentially an Arduino device
+ */
 function deviceOnPortAppearsUsable(port) {
-  return port.comName.match(/usbmodem/);
+  var comNameRegex = /usb|acm|^com/i;
+  return !!port.comName.match(comNameRegex);
 }
 
 /**
@@ -216,3 +227,8 @@ function initializeCircuitPlaygroundComponents(io) {
     touch: new PlaygroundIO.CapTouch(io)
   };
 }
+
+BoardController.__testonly__ = {
+  deviceOnPortAppearsUsable: deviceOnPortAppearsUsable,
+  getDevicePort: getDevicePort
+};
