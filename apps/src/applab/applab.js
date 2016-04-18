@@ -989,7 +989,7 @@ function extractCSSFromHTML(el) {
   return css.join('\n');
 }
 
-Applab.exportApp = function() {
+Applab.exportApp = function () {
   var code = studioApp.editor.getValue();
   var holder = document.createElement('div');
   holder.innerHTML = designMode.serializeToLevelHtml();
@@ -1011,7 +1011,7 @@ Applab.exportApp = function() {
     {url: '/assets/js/en_us/applab_locale.js', zipPath: appName + 'applab_locale.js'},
     {url: '/assets/js/applab-api.js', zipPath: appName + 'applab-api.js'},
     {url: '/assets/css/applab.css', zipPath: appName + 'applab.css'},
-  ].concat(assetListStore.list().map(function(asset) {
+  ].concat(assetListStore.list().map(function (asset) {
     return {
       url: assetPrefix.fixPath(asset.filename),
       rootRelativePath: 'assets/' + asset.filename,
@@ -1021,15 +1021,15 @@ Applab.exportApp = function() {
   }));
 
   function rewriteAssetUrls(data) {
-    return assetsToDownload.slice(4).reduce(function(data, assetToDownload) {
+    return assetsToDownload.slice(4).reduce(function (data, assetToDownload) {
       return data.split(assetToDownload.url).join(assetToDownload.rootRelativePath);
     }, data);
   }
 
-  return $.when(...assetsToDownload.map(function(assetToDownload) {
+  return $.when(...assetsToDownload.map(function (assetToDownload) {
     return download(assetToDownload.url, assetToDownload.dataType || 'text');
   })).then(
-    function(commonLocale, applabLocale, applabApi, applabCSS) {
+    function (commonLocale, applabLocale, applabApi, applabCSS) {
       var zip = new JSZip();
       zip.file(appName + "/applab.js", commonLocale[0] + applabLocale[0] + applabApi[0]);
       zip.file(appName + "/applab.css", applabCSS[0]);
@@ -1038,14 +1038,14 @@ Applab.exportApp = function() {
       zip.file(appName + "/code.js", rewriteAssetUrls(code));
       zip.file(appName + "/README.md", readme);
 
-      Array.from(arguments).slice(4).forEach(function([data], index) {
+      Array.from(arguments).slice(4).forEach(function ([data], index) {
         zip.file(assetsToDownload[index + 4].zipPath, data, {binary: true});
       });
-      zip.generateAsync({type:"blob"}).then(function(blob) {
+      zip.generateAsync({type:"blob"}).then(function (blob) {
         saveAs(blob, appName + ".zip");
       });
     },
-    function() {
+    function () {
       logToCloud.addPageAction(logToCloud.PageAction.staticResourceFetchError, {
         app: 'applab'
       }, 1/100);

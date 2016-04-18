@@ -12,7 +12,7 @@ var applabCommands = require('./commands');
 var api = require('./api');
 
 // TODO: remove the below two monkey patches.
-window.Applab.JSInterpreter = {getNearestUserCodeLine: function() {return 0;}};
+window.Applab.JSInterpreter = {getNearestUserCodeLine: function () {return 0;}};
 
 window.Applab.callCmd = function (cmd) {
   var retVal = false;
