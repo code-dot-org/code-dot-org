@@ -5,7 +5,9 @@ require_relative '../shared/middleware/helpers/storage_id'
 require 'cdo/db'
 
 MAX_THREADS = 200
-LOG_INCREMENT = 1000 # Must be a multiple of MAX_THREADS
+# Log to the command line every time this many source files are processed.
+# Must be a multiple of MAX_THREADS.
+LOG_INCREMENT = 1000
 
 if ARGV.length < 2 || ARGV.length.odd?
   $stderr.puts "usage: #{$0} <regex1> <output1>.tsv [<regex2> <output2>.tsv] ..."
@@ -16,11 +18,14 @@ end
 # This is useful for seeing if we will break anyone's program if we change how a block works.
 # Multiple regex-filename pairs can be specified to avoid having to run the script multiple times.
 #
-# The 'match' field is either the first '()' grouping in the regex if one is specified, or
-# the entire matched string otherwise.
+# The 'match' field is either the entire matched string, or an array of capture groups if any capture
+# groups are specified (see String.scan docs for details).
 #
-# With 200 threads on production-console, this script should take approximately 1 hour to
+# With 200 threads on production-console, this script takes approximately 1 hour to
 # find and process 500K applab projects.
+#
+# To avoid losing your work when your ssh session times out, this script can be run using nohup:
+# nohup bin/grep-applab-source regex1 file1 regex2 file2 &
 
 # a list of pairs of regexes and filenames, e.g. [[regex1, filename1], [regex2, filename2]]
 commands = ARGV.map(&:to_s).map(&:strip).each_slice(2).to_a.map do |regex, filename|
@@ -72,8 +77,8 @@ applab_channels.each_slice(MAX_THREADS) do |chunk|
             file << "#{owner_storage_id}\t#{match}\t#{project_url}\n"
             file.flock(File::LOCK_UN)
           end
-        end if source
-      end
+        end
+      end if source
     end
   end
   threads.each &:join
