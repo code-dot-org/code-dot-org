@@ -800,19 +800,11 @@ SQL
     end
   end
 
-  # If appropriate, increases the level counts for the concept-difficulties
-  # associated with the completed level.
+  # Increases the level counts for the concept-difficulties associated with the
+  # completed level.
   def User.track_proficiency(user_id, script_id, level_id)
     level_concept_difficulty = LevelConceptDifficulty.where(level_id: level_id).first
     if !level_concept_difficulty
-      return
-    end
-
-    # Exit early if a hint was used, as no proficiency is gained in this case.
-    hint_used = HintViewRequest.
-      where(user_id: user_id, script_id: script_id, level_id: level_id).
-      any?
-    if hint_used
       return
     end
 
@@ -821,10 +813,9 @@ SQL
       user_proficiency.last_progress_at = Time.now
 
       ConceptDifficulties::CONCEPTS.each do |concept|
-        if level_concept_difficulty.send(concept)
-          # TODO(asher): If possible, simplify this to use direct assignment via
-          # incrementing rather than going through setting attributes.
-          user_proficiency.attributes = {"#{concept}_d#{level_concept_difficulty.send(concept)}_count" => user_proficiency.send("#{concept}_d#{level_concept_difficulty.send(concept)}_count") + 1}
+        difficulty_number = level_concept_difficulty.send(concept)
+        if !difficulty_number.nil?
+          user_proficiency.increment_level_count(concept, difficulty_number)
         end
       end
 
@@ -870,7 +861,10 @@ SQL
       new_level_completed = true if !user_level.passing? &&
         Activity.passing?(new_result)
       new_level_perfected = true if !user_level.perfect? &&
-        Activity.perfect?(new_result)
+        Activity.perfect?(new_result) &&
+        HintViewRequest.
+          where(user_id: user_id, script_id: script_id, level_id: level_id).
+          empty?
 
       # Update user_level with the new attempt.
       user_level.attempts += 1 unless user_level.best?
