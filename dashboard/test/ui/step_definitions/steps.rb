@@ -101,6 +101,11 @@ Then /^check that I am on "([^"]*)"$/ do |url|
   @browser.current_url.should eq url
 end
 
+Then /^I wait until current URL contains "([^"]*)"$/ do |url|
+  url = replace_hostname(url)
+  wait_with_timeout.until { @browser.current_url.include? url }
+end
+
 Then /^check that the URL contains "([^"]*)"$/i do |url|
   url = replace_hostname(url)
   @browser.current_url.should include url
@@ -617,6 +622,7 @@ And(/^I create a student named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password_confirmation"
     And I type "16" into "#user_age"
     And I click selector "input[type=submit][value='Sign up']"
+    And I am on "http://code.org/"
   }
 end
 
@@ -631,6 +637,7 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I click selector "input[type=submit][value='Sign up']"
+    And I am on "http://code.org/"
   }
 end
 
@@ -680,7 +687,9 @@ Given(/^I manually sign in as "([^"]*)"$/) do |name|
 end
 
 When(/^I sign out$/) do
-  steps 'When I am on "http://studio.code.org/users/sign_out"'
+  steps %Q{
+    When I am on "http://studio.code.org/users/sign_out"
+  }
 end
 
 When(/^I debug cookies$/) do
