@@ -35,7 +35,8 @@ var OSX_DEFAULT_PORTS = [
     "locationId": "",
     "vendorId": "0x0",
     "productId": "0x0"
-  }];
+  }
+];
 
 var FLORA_PORTS = [
   {
@@ -55,7 +56,8 @@ var FLORA_PORTS = [
     "locationId": "",
     "vendorId": "0x239a",
     "productId": "0x8004"
-  }];
+  }
+];
 
 var REDBOARD_PORTS = [
   {
