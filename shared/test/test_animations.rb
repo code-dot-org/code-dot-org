@@ -98,14 +98,14 @@ class AnimationsTest < MiniTest::Test
   end
 
   def test_nonexistent_animation
-      filename = randomize_filename('nonexistent.png')
-      delete_all_animation_versions(filename)
+    filename = randomize_filename('nonexistent.png')
+    delete_all_animation_versions(filename)
 
-      delete(filename) # Not a no-op - creates a delete marker
-      assert successful?
+    delete(filename) # Not a no-op - creates a delete marker
+    assert successful?
 
-      get(filename)
-      assert not_found?
+    get(filename)
+    assert not_found?
   end
 
   def test_copy_animation
