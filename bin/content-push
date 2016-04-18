@@ -14,7 +14,7 @@ end
 
 def check_changes
   puts `git status`
-  print "Should I commit and push all of these unstaged and untracked files? [Y/n] "
+  print "Should I commit and push all of these unstaged and untracked files in pegasus and dashboard? [Y/n] "
   input = gets.chomp
   if input == '' || input[0].downcase == 'y'
     puts "Cool!"
@@ -27,7 +27,8 @@ end
 
 def commit_changes(name)
   branchname = `git rev-parse --abbrev-ref HEAD`.strip
-  puts `git add -A .`
+  puts `git add -A pegasus`
+  puts `git add -A dashboard`
   puts `git commit -m "#{branchname} content changes (-#{name})"`
   puts `git push`
 end
