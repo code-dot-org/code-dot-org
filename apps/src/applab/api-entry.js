@@ -5,6 +5,7 @@
 window.React = require('react');
 window.ReactDOM = require('react-dom');
 window.$ = require('jquery');
+window.Radium = require('radium');
 
 window.Applab = require('./applab');
 var applabCommands = require('./commands');
