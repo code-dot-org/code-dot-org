@@ -1,5 +1,6 @@
 name 'CSD-U3-SFLP Variables'
 href 'path/to/html/in/asset/folder'
+css 'unplugged'
 markdown <<MARKDOWN
 ## Unit 3: Lesson 03 - Variables
 
