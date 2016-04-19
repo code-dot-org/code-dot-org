@@ -167,7 +167,7 @@ class AnimationsTest < FilesApiTestBase
     assert successful?
 
     # List versions.
-    versions = list_versions(filename)
+    versions = list_animation_versions(filename)
     assert successful?
     assert_equal 2, versions.count
 
@@ -196,7 +196,7 @@ class AnimationsTest < FilesApiTestBase
     assert successful?
 
     # Make sure only one version exists
-    versions = list_versions(filename)
+    versions = list_animation_versions(filename)
     assert successful?
     assert_equal 1, versions.count
     assert_equal new_version_id, versions[0]['versionId']
@@ -213,12 +213,11 @@ class AnimationsTest < FilesApiTestBase
   private
 
   def list_animations
-    list_objects('animations', @channel_id)
+    list_objects 'animations', @channel_id
   end
 
-  def list_versions(filename)
-    get "/v3/animations/#{@channel_id}/#{filename}/versions"
-    JSON.parse(last_response.body)
+  def list_animation_versions(filename)
+    list_object_versions 'animations', @channel_id, filename
   end
 
   def get_object(filename, body = '', headers = {})
