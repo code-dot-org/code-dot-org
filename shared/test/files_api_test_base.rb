@@ -104,6 +104,11 @@ class FilesApiTestBase < Minitest::Test
     JSON.parse(last_response.body)
   end
 
+  def get_object_version(endpoint, channel_id, filename, version_id, body = '', headers = {})
+    get "/v3/#{endpoint}/#{channel_id}/#{filename}?version=#{version_id}", body, headers
+    last_response.body
+  end
+
   def successful?
     last_response.successful?
   end
