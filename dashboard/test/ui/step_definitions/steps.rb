@@ -563,6 +563,7 @@ def encrypted_cookie(user)
 end
 
 def log_in_as(name)
+  @browser.manage.delete_all_cookies
   steps %Q{
     Given I am on "http://studio.code.org/reset_session"
     Then I am on "http://studio.code.org/"
@@ -573,18 +574,6 @@ def log_in_as(name)
     And I click selector "input[type=submit][value='Sign in']"
     And I wait to see ".header_user"
   }
-
-  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/
-    params[:domain] = '.code.org' # top level domain cookie
-  end
-
-  puts "Setting cookie: #{CGI::escapeHTML params.inspect}"
-
-  @browser.manage.delete_all_cookies
-  @browser.manage.add_cookie params
-
-  debug_cookies(@browser.manage.all_cookies)
 end
 
 Given(/^I sign in as "([^"]*)"/) do |name|
@@ -595,7 +584,6 @@ Given(/^I am a (student|teacher)$/) do |user_type|
   random_name = "Test#{user_type.capitalize} " + SecureRandom.base64
   steps %Q{
     And I create a #{user_type} named "#{random_name}"
-    And I sign in as "#{random_name}"
   }
 end
 
