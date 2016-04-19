@@ -8,7 +8,7 @@ var HINT_REQUEST_PLACEMENT = {
 };
 
 // Types of blocks that do not count toward displayed block count. Used
-// by FeedbackUtils.blockSHouldBeCounted_
+// by FeedbackUtils.blockShouldBeCounted_
 var UNCOUNTED_BLOCK_TYPES = ["draw_colour", "alpha"];
 
 /**
