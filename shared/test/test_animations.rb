@@ -283,25 +283,6 @@ class AnimationsTest < FilesApiTestBase
     last_response.body
   end
 
-  # Delete all versions of the specified file from S3, including all delete markers
-  def delete_all_versions(bucket, key)
-    s3 = Aws::S3::Client.new
-    response = s3.list_object_versions(bucket: bucket, prefix: key)
-    objects = response.versions.concat(response.delete_markers).map do |version|
-      {
-          key: key,
-          version_id: version.version_id
-      }
-    end
-    s3.delete_objects(
-        bucket: bucket,
-        delete: {
-            objects: objects,
-            quiet: true
-        }
-    ) if objects.any?
-  end
-
   def delete_all_animation_versions(filename)
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/1/#{filename}")
   end

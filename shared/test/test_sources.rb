@@ -2,25 +2,6 @@ require_relative 'files_api_test_base'
 
 class SourcesTest < FilesApiTestBase
 
-  # Delete all versions of the specified file from S3.
-  def delete_all_versions(bucket, key)
-    s3 = Aws::S3::Client.new
-    response = s3.list_object_versions(bucket: bucket, prefix: key)
-    objects = response.versions.concat(response.delete_markers).map do |version|
-      {
-        key: key,
-        version_id: version.version_id
-      }
-    end
-    s3.delete_objects(
-      bucket: bucket,
-      delete: {
-        objects: objects,
-        quiet: true
-      }
-    ) if objects.any?
-  end
-
   def test_source_versions
     post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel = last_response.location.split('/').last
