@@ -1,4 +1,4 @@
-require_relative 'files_api_test_base'
+require_relative 'files_api_test_base' # Must be required first to establish load paths
 
 class AnimationsTest < FilesApiTestBase
 

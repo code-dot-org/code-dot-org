@@ -1,7 +1,7 @@
+require_relative 'test_helper' # Must be required first to establish load paths
 require 'mocha/mini_test'
 require 'files_api'
 require 'channels_api'
-require_relative 'test_helper'
 
 class FilesApiTestBase < Minitest::Test
   include Rack::Test::Methods
