@@ -67,7 +67,7 @@ module BlocklyHelpers
   end
 
   def modal_dialog_visible
-    @browser.execute_script("return $('#modalEditorClose :visible').length != 0;")
+    @browser.execute_script("return $('#modalContainer').is(':visible');")
   end
 end
 
