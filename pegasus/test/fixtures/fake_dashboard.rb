@@ -68,7 +68,7 @@ module FakeDashboard
   # test with a transaction so the changes do not affect other tests (unfortuantely
   # we cannot make this automatic yet):
   #
-  #   db.transaction(:rollback => :always) do
+  #   Dashboard.db.transaction(:rollback => :always) do
   #     ...test stuff here...
   #   end
   #
