@@ -14,14 +14,15 @@ class SourcesTest < FilesApiTestBase
   def test_source_versions
     # Upload a source file.
     filename = 'test.js'
-    delete_all_versions('cdo-v3-sources', "sources_test/1/1/#{filename}")
     file_data = 'abc 123'
-    put "/v3/sources/#{@channel}/#{filename}", file_data, 'CONTENT_TYPE' => 'text/javascript'
+    file_headers = { 'CONTENT_TYPE' => 'text/javascript' }
+    delete_all_versions('cdo-v3-sources', "sources_test/1/1/#{filename}")
+    put_source(filename, file_data, file_headers)
     assert successful?
 
     # Overwrite it.
     new_file_data = 'def 456'
-    put "/v3/sources/#{@channel}/#{filename}", new_file_data, 'CONTENT_TYPE' => 'text/javascript'
+    put_source(filename, new_file_data, file_headers)
     assert successful?
 
     # Delete it.
@@ -46,9 +47,10 @@ class SourcesTest < FilesApiTestBase
   def test_replace_version
     # Upload a source file.
     filename = 'replace_me.js'
-    delete_all_versions('cdo-v3-sources', "sources_test/1/1/#{filename}")
     file_data = 'version 1'
-    put "/v3/sources/#{@channel}/#{filename}", file_data, 'CONTENT_TYPE' => 'text/javascript'
+    file_headers = { 'CONTENT_TYPE' => 'text/javascript' }
+    delete_all_versions('cdo-v3-sources', "sources_test/1/1/#{filename}")
+    put_source(filename, file_data, file_headers)
     assert successful?
     response = JSON.parse(last_response.body)
 
@@ -64,6 +66,10 @@ class SourcesTest < FilesApiTestBase
   end
 
   private
+
+  def put_source(filename, body, headers)
+    put_object 'sources', @channel, filename, body, headers
+  end
 
   def list_source_versions(filename)
     list_object_versions 'sources', @channel, filename
