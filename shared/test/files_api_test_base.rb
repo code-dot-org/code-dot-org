@@ -103,6 +103,10 @@ class FilesApiTestBase < Minitest::Test
     put "/v3/#{endpoint}/#{channel_id}/#{filename}", body, headers
   end
 
+  def delete_object(endpoint, channel_id, filename)
+    delete "/v3/#{endpoint}/#{channel_id}/#{filename}"
+  end
+
   def list_object_versions(endpoint, channel_id, filename)
     get "/v3/#{endpoint}/#{channel_id}/#{filename}/versions"
     JSON.parse(last_response.body)
@@ -113,8 +117,8 @@ class FilesApiTestBase < Minitest::Test
     last_response.body
   end
 
-  def delete_object(endpoint, channel_id, filename)
-    delete "/v3/#{endpoint}/#{channel_id}/#{filename}"
+  def put_object_version(endpoint, channel_id, filename, version_id, body = '', headers = {})
+    put "/v3/#{endpoint}/#{channel_id}/#{filename}?version=#{version_id}", body, headers
   end
 
   def successful?

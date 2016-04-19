@@ -56,7 +56,7 @@ class SourcesTest < FilesApiTestBase
 
     # Overwrite it, specifying the same version.
     new_file_data = 'version 2'
-    put "/v3/sources/#{@channel}/#{filename}?version=#{response['versionId']}", new_file_data, 'CONTENT_TYPE' => 'text/javascript'
+    put_source_version(filename, response['versionId'], new_file_data, file_headers)
     assert successful?
 
     # List versions.
@@ -71,6 +71,10 @@ class SourcesTest < FilesApiTestBase
     put_object 'sources', @channel, filename, body, headers
   end
 
+  def delete_source(filename)
+    delete_object 'sources', @channel, filename
+  end
+
   def list_source_versions(filename)
     list_object_versions 'sources', @channel, filename
   end
@@ -79,7 +83,7 @@ class SourcesTest < FilesApiTestBase
     get_object_version 'sources', @channel, filename, version_id
   end
 
-  def delete_source(filename)
-    delete_object 'sources', @channel, filename
+  def put_source_version(filename, version_id, body, headers)
+    put_object_version 'sources', @channel, filename, version_id, body, headers
   end
 end
