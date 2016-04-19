@@ -3,6 +3,7 @@
 'use strict';
 
 var redux = require('redux');
+var reduxThunk = require('redux-thunk').default;
 if (process.env.NODE_ENV !== "production") {
   var createLogger = require('redux-logger');
 }
@@ -11,10 +12,9 @@ if (process.env.NODE_ENV !== "production") {
  * Creates a store configured for use the way we want for Code.org.
  * @see http://redux.js.org/docs/api/createStore.html
  * @param {!function} reducer
- * @param {?} [initialState] optionally give the store an initial state.
  * @return {Store} Configured Redux store, ready for use.
  */
-module.exports = function createStore(reducer, initialState) {
+module.exports = function createStore(reducer) {
 
   // You have to manually enable debugging here, both to keep the logger out
   // of production bundles, and because it causes a lot of console noise and
@@ -32,11 +32,11 @@ module.exports = function createStore(reducer, initialState) {
         window.devToolsExtension() :
         function (f) { return f; };
 
-    return redux.createStore(reducer, initialState, redux.compose(
-        redux.applyMiddleware(reduxLogger),
+    return redux.createStore(reducer, redux.compose(
+        redux.applyMiddleware(reduxThunk, reduxLogger),
         devTools
     ));
   }
 
-  return redux.createStore(reducer, initialState);
+  return redux.createStore(reducer, redux.applyMiddleware(reduxThunk));
 };
