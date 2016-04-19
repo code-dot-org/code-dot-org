@@ -12,6 +12,7 @@ module BrowserHelpers
   end
 
   def element_has_i18n_text(selector, language, loc_key)
+    require_rails_env
     loc_key.gsub!('\"', '"')
     text = @browser.execute_script("return $(\"#{selector}\").text();")
     text.should eq I18n.t loc_key, locale: language
