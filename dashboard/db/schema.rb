@@ -308,8 +308,8 @@ ActiveRecord::Schema.define(version: 20160418210000) do
   add_index "levels", ["game_id"], name: "index_levels_on_game_id", using: :btree
 
   create_table "levels_script_levels", id: false, force: :cascade do |t|
-    t.integer "level_id",        limit: 4
-    t.integer "script_level_id", limit: 4
+    t.integer "level_id",        limit: 4, null: false
+    t.integer "script_level_id", limit: 4, null: false
   end
 
   add_index "levels_script_levels", ["level_id"], name: "index_levels_script_levels_on_level_id", using: :btree
