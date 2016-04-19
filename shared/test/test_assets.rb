@@ -1,18 +1,8 @@
-require 'mocha/mini_test'
-require_relative 'test_helper'
-
-require 'files_api'
-require 'channels_api'
 require 'helpers/asset_bucket'
+require_relative 'files_api_test_base'
 require_relative 'spy_newrelic_agent'
 
-class AssetsTest < Minitest::Test
-  include Rack::Test::Methods
-  include SetupTest
-
-  def build_rack_mock_session
-    @session = Rack::MockSession.new(ChannelsApi.new(FilesApi), 'studio.code.org')
-  end
+class AssetsTest < FilesApiTestBase
 
   def setup
     # Ensure the s3 path starts empty.

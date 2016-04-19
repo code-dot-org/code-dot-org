@@ -1,14 +1,6 @@
-require_relative 'test_helper'
-require 'files_api'
-require 'channels_api'
+require_relative 'files_api_test_base'
 
-class SourcesTest < Minitest::Test
-  include Rack::Test::Methods
-  include SetupTest
-
-  def build_rack_mock_session
-    @session = Rack::MockSession.new(ChannelsApi.new(FilesApi), 'studio.code.org')
-  end
+class SourcesTest < FilesApiTestBase
 
   # Delete all versions of the specified file from S3.
   def delete_all_versions(bucket, key)
