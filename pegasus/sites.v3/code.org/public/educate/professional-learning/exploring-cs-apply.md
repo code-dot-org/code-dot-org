@@ -10,10 +10,7 @@ We welcome teachers to sign up for the Exploring Computer Science (ECS) Professi
 
 The ECS professional learning program is open to teachers in partner districts who are interested in teaching the course. Check to see if your district has partnered to make ECS available in your region for the 2016-2017 school year. If you live in Idaho, Indiana, Utah, or Virginia, your district is covered by a statewide partnership. Click on the icon in your state to apply.
 
-<br/> 
-<br/>
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=z3jxShb6X1IM.khZ1NwyRM_3Y" width="640" height="480"></iframe>
-
+<%= view :district_dropdown %>
 
 ## Teach in a partner district?
 
