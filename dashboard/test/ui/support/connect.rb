@@ -57,7 +57,7 @@ def saucelabs_browser
       browser = Selenium::WebDriver.for(:remote,
                                         url: url,
                                         desired_capabilities: capabilities,
-                                        http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
+                                        http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5 * 60}) # iOS takes more time
     rescue StandardError
       raise if retries >= MAX_CONNECT_RETRIES
       puts 'Failed to get browser, retrying...'
@@ -76,8 +76,8 @@ def saucelabs_browser
   end
 
   # let's allow much longer timeouts when searching for an element
-  browser.manage.timeouts.implicit_wait = 2.minutes
-  browser.send(:bridge).setScriptTimeout(1.minute * 1000)
+  browser.manage.timeouts.implicit_wait = 2 * 60
+  browser.send(:bridge).setScriptTimeout(1 * 60 * 1000)
 
   browser
 end
