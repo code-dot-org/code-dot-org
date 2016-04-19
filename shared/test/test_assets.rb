@@ -33,7 +33,7 @@ class AssetsTest < FilesApiTestBase
     assert_fileinfo_equal(actual_image_info, file_infos[0])
     assert_fileinfo_equal(actual_sound_info, file_infos[1])
 
-    get_object(channel_id, image_filename)
+    get_asset(channel_id, image_filename)
     assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
     delete_object(channel_id, image_filename)
@@ -55,9 +55,9 @@ class AssetsTest < FilesApiTestBase
     # file extension case insensitivity
     _, filename = post_file(channel_id, 'filename.JPG', 'stub-contents', 'application/jpeg')
     assert successful?
-    get_object(channel_id, filename)
+    get_asset(channel_id, filename)
     assert successful?
-    get_object(channel_id, filename.gsub(/JPG$/, 'jpg'))
+    get_asset(channel_id, filename.gsub(/JPG$/, 'jpg'))
     assert not_found?
     delete_object(channel_id, filename)
     assert successful?
@@ -69,7 +69,7 @@ class AssetsTest < FilesApiTestBase
     delete_object(channel_id, 'nonexistent.jpg')
     assert successful?
 
-    get_object(channel_id, 'nonexistent.jpg')
+    get_asset(channel_id, 'nonexistent.jpg')
     assert not_found?
 
     delete_channel(channel_id)
@@ -83,7 +83,7 @@ class AssetsTest < FilesApiTestBase
     _, first_asset = post_file(channel_id, 'asset1.jpg', 'stub-image-contents', 'image/jpeg')
     _, second_asset = post_file(channel_id, 'asset2.jpg', 'stub-image-contents', 'image/jpeg')
 
-    result = get_object(channel_id, first_asset)
+    result = get_asset(channel_id, first_asset)
     assert_equal 'stub-image-contents', result
 
     assert_equal 0, asset_bucket.get_abuse_score(channel_id, first_asset)
@@ -95,7 +95,7 @@ class AssetsTest < FilesApiTestBase
     assert_equal 10, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # make sure we didnt blow away contents
-    result = get_object(channel_id, first_asset)
+    result = get_asset(channel_id, first_asset)
     assert_equal 'stub-image-contents', result
 
     # increment
@@ -123,7 +123,7 @@ class AssetsTest < FilesApiTestBase
     assert_equal 0, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # make sure we didnt blow away contents
-    result = get_object(channel_id, first_asset)
+    result = get_asset(channel_id, first_asset)
     assert_equal 'stub-image-contents', result
     FilesApi.any_instance.unstub(:admin?)
 
@@ -138,12 +138,12 @@ class AssetsTest < FilesApiTestBase
     _, asset_name = post_file(channel_id, 'abusive_asset.jpg', 'stub-image-contents', 'image/jpeg')
 
     # owner can view
-    get_object(channel_id, asset_name)
+    get_asset(channel_id, asset_name)
     assert successful?
 
     # non-owner can view
     with_session(:non_owner) do
-      get_object(channel_id, asset_name)
+      get_asset(channel_id, asset_name)
       assert successful?
     end
 
@@ -151,19 +151,19 @@ class AssetsTest < FilesApiTestBase
     patch_abuse(channel_id, 10)
 
     # owner can view
-    get_object(channel_id, asset_name)
+    get_asset(channel_id, asset_name)
     assert successful?
 
     # non-owner cannot view
     with_session(:non_owner) do
-      get_object(channel_id, asset_name)
+      get_asset(channel_id, asset_name)
       refute successful?
     end
 
     # admin can view
     with_session(:admin) do
       FilesApi.any_instance.stubs(:admin?).returns(true)
-      get_object(channel_id, asset_name)
+      get_asset(channel_id, asset_name)
       assert successful?
       FilesApi.any_instance.unstub(:admin?)
     end
@@ -171,7 +171,7 @@ class AssetsTest < FilesApiTestBase
     # teacher can view
     with_session(:teacher) do
       FilesApi.any_instance.stubs(:teaches_student?).returns(true)
-      get_object(channel_id, asset_name)
+      get_asset(channel_id, asset_name)
       assert successful?
       FilesApi.any_instance.unstub(:teaches_student?)
     end
@@ -233,7 +233,7 @@ class AssetsTest < FilesApiTestBase
     assert successful?, 'Owner can add a file'
 
     with_session(:non_owner) do
-      get_object(owner_channel_id, filename)
+      get_asset(owner_channel_id, filename)
       assert successful?, 'Non-owner can read a file'
 
       post_object(owner_channel_id, file)
@@ -318,25 +318,25 @@ class AssetsTest < FilesApiTestBase
     file, filename = create_uploaded_file('test.png', 'version 1', 'image/png')
 
     post channel, file
-    get_object channel, filename
+    get_asset channel, filename
     v1_last_modified = last_response.headers['Last-Modified']
 
     # We can't Timecop here because the last-modified time needs to change on the server.
     sleep 1 if VCR.current_cassette.recording?
 
     post channel, file
-    get_object channel, filename, '', 'HTTP_IF_MODIFIED_SINCE' => v1_last_modified
+    get_asset channel, filename, '', 'HTTP_IF_MODIFIED_SINCE' => v1_last_modified
     assert_equal 200, last_response.status
     v2_last_modified = last_response.headers['Last-Modified']
 
-    get_object channel, filename, '', 'HTTP_IF_MODIFIED_SINCE' => v2_last_modified
+    get_asset channel, filename, '', 'HTTP_IF_MODIFIED_SINCE' => v2_last_modified
     assert_equal 304, last_response.status
   end
 
   def test_invalid_mime_type_returns_unsupported_media_type
     channel = create_channel
 
-    get_object channel, 'filewithinvalidmimetype.asdasdas%25dasdasd'
+    get_asset channel, 'filewithinvalidmimetype.asdasdas%25dasdasd'
 
     assert_equal 415, last_response.status # 415 = Unsupported media type
   end
@@ -348,6 +348,10 @@ class AssetsTest < FilesApiTestBase
     list_objects 'assets', channel_id
   end
 
+  def get_asset(channel_id, filename, body = '', headers = {})
+    get_object 'assets', channel_id, filename, body, headers
+  end
+
   def post_object(channel_id, uploaded_file)
     body = { files: [uploaded_file] }
     post("/v3/assets/#{channel_id}/", body, 'CONTENT_TYPE' => 'multipart/form-data').body
@@ -355,11 +359,6 @@ class AssetsTest < FilesApiTestBase
 
   def patch_abuse(channel_id, abuse_score)
     patch("/v3/assets/#{channel_id}/?abuse_score=#{abuse_score}").body
-  end
-
-  def get_object(channel_id, filename, body = '', headers = {})
-    get "/v3/assets/#{channel_id}/#{filename}", body, headers
-    last_response.body
   end
 
   def delete_object(channel_id, filename)

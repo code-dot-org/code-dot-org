@@ -94,6 +94,11 @@ class FilesApiTestBase < Minitest::Test
     JSON.parse(last_response.body)
   end
 
+  def get_object(endpoint, channel_id, filename, body = '', headers = {})
+    get "/v3/#{endpoint}/#{channel_id}/#{filename}", body, headers
+    last_response.body
+  end
+
   def list_object_versions(endpoint, channel_id, filename)
     get "/v3/#{endpoint}/#{channel_id}/#{filename}/versions"
     JSON.parse(last_response.body)

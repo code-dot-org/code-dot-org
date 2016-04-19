@@ -50,7 +50,7 @@ class AnimationsTest < FilesApiTestBase
     assert_fileinfo_equal(actual_cat_image_info, file_infos[0])
     assert_fileinfo_equal(actual_dog_image_info, file_infos[1])
 
-    get_object(dog_image_filename)
+    get_animation(dog_image_filename)
     assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
     delete_object(dog_image_filename)
@@ -85,10 +85,10 @@ class AnimationsTest < FilesApiTestBase
     upload(filename, 'stub-contents', 'application/png')
     assert successful?
 
-    get_object(filename)
+    get_animation(filename)
     assert successful?
 
-    get_object(different_case_filename)
+    get_animation(different_case_filename)
     assert not_found?
 
     delete_object(filename)
@@ -102,7 +102,7 @@ class AnimationsTest < FilesApiTestBase
     delete_object(filename) # Not a no-op - creates a delete marker
     assert successful?
 
-    get_object(filename)
+    get_animation(filename)
     assert not_found?
   end
 
@@ -124,8 +124,8 @@ class AnimationsTest < FilesApiTestBase
     assert successful?
 
     # Get copy_dest.png and make sure it's got the source content
-    get_object(dest_image_filename)
-    assert_equal source_image_body, get_object(dest_image_filename)
+    get_animation(dest_image_filename)
+    assert_equal source_image_body, get_animation(dest_image_filename)
     assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
     delete_object(source_image_filename)
@@ -220,9 +220,8 @@ class AnimationsTest < FilesApiTestBase
     list_object_versions 'animations', @channel_id, filename
   end
 
-  def get_object(filename, body = '', headers = {})
-    get "/v3/animations/#{@channel_id}/#{filename}", body, headers
-    last_response.body
+  def get_animation(filename, body = '', headers = {})
+    get_object 'animations', @channel_id, filename, body, headers
   end
 
   def get_version(filename, version_id)
