@@ -106,18 +106,8 @@ class FilesApi < Sinatra::Base
   # Read a file. Optionally get a specific version instead of the most recent.
   #
   get %r{/v3/(animations|assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
-    case endpoint
-    when 'animations'
-      cache_one_hour
-    when 'assets'
-      cache_one_hour
-    when 'sources'
-      dont_cache
-    else
-      not_found
-    end
-
     buckets = get_bucket_impl(endpoint).new
+    set_object_cache_duration buckets.cache_duration_seconds
 
     type = File.extname(filename)
     not_found if type.empty?
@@ -134,6 +124,18 @@ class FilesApi < Sinatra::Base
     not_found if abuse_score > 0 && !can_view_abusive_assets?(encrypted_channel_id)
 
     result[:body]
+  end
+
+  #
+  # Set appropriate cache headers for making the retrieved object cached
+  # for the given number of seconds
+  # @param [Int] duration_seconds
+  def set_object_cache_duration(duration_seconds)
+    if duration_seconds == 0
+      dont_cache
+    else
+      cache_for duration_seconds
+    end
   end
 
   def put_file(endpoint, encrypted_channel_id, filename, body)

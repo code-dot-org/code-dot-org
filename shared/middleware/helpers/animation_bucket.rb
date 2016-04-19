@@ -13,4 +13,8 @@ class AnimationBucket < BucketHelper
     %w(.png)
   end
 
+  def cache_duration_seconds
+    3600
+  end
+
 end

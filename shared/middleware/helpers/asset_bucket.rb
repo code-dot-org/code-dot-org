@@ -12,4 +12,8 @@ class AssetBucket < BucketHelper
     %w(.jpg .jpeg .gif .png .mp3)
   end
 
+  def cache_duration_seconds
+    3600
+  end
+
 end
