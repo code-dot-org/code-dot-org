@@ -136,6 +136,11 @@ class BucketHelper
     key = s3_path owner_id, channel_id, filename
     copy_source = @bucket + '/' + s3_path(owner_id, channel_id, source_filename)
     @s3.copy_object(bucket: @bucket, key: key, copy_source: copy_source)
+
+    # TODO (bbuchanan)
+    # Handle abuse_score metadata for animations.
+    # When copying an object, should also copy its abuse_score metadata.
+    # https://www.pivotaltracker.com/story/show/117949241
   end
 
   def delete(encrypted_channel_id, filename)
