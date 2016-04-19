@@ -112,7 +112,8 @@ export default {
     })).then(
       function (commonLocale, applabLocale, applabApi, applabCSS) {
         var zip = new JSZip();
-        zip.file(appName + "/applab.js", commonLocale[0] + applabLocale[0] + applabApi[0]);
+        zip.file(appName + "/applab.js",
+                 [commonLocale[0], applabLocale[0], applabApi[0]].join('\n'));
         zip.file(appName + "/applab.css", applabCSS[0]);
         zip.file(appName + "/index.html", rewriteAssetUrls(html));
         zip.file(appName + "/style.css", rewriteAssetUrls(css));
