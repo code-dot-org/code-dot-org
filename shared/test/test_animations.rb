@@ -3,18 +3,22 @@ require 'files_api'
 require 'channels_api'
 
 class AnimationsTest < MiniTest::Test
+  include Rack::Test::Methods
   include SetupTest
+
+  def build_rack_mock_session
+    @session = Rack::MockSession.new(ChannelsApi.new(FilesApi), 'studio.code.org')
+  end
 
   def setup
     @random = Random.new(0)
-    @channels_api, @files_api = init_apis
-    @channel_id = create_channel(@channels_api)
+    @channel_id = create_channel
     ensure_aws_credentials
   end
 
   def teardown
     assert_empty JSON.parse(list_animations) # Require that tests delete the assets they upload
-    delete_channel(@channels_api, @channel_id)
+    delete_channel(@channel_id)
     @channel_id = nil
   end
 
@@ -52,13 +56,13 @@ class AnimationsTest < MiniTest::Test
     assert_fileinfo_equal(actual_cat_image_info, file_infos[0])
     assert_fileinfo_equal(actual_dog_image_info, file_infos[1])
 
-    get(dog_image_filename)
-    assert_equal 'public, max-age=3600, s-maxage=1800', @files_api.last_response['Cache-Control']
+    get_object(dog_image_filename)
+    assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
-    delete(dog_image_filename)
+    delete_object(dog_image_filename)
     assert successful?
 
-    delete(cat_image_filename)
+    delete_object(cat_image_filename)
     assert successful?
   end
 
@@ -74,7 +78,7 @@ class AnimationsTest < MiniTest::Test
     upload(mismatched_filename, 'stub-contents', 'application/gif')
     assert successful?
 
-    delete(mismatched_filename)
+    delete_object(mismatched_filename)
     assert successful?
   end
 
@@ -87,13 +91,13 @@ class AnimationsTest < MiniTest::Test
     upload(filename, 'stub-contents', 'application/png')
     assert successful?
 
-    get(filename)
+    get_object(filename)
     assert successful?
 
-    get(different_case_filename)
+    get_object(different_case_filename)
     assert not_found?
 
-    delete(filename)
+    delete_object(filename)
     assert successful?
   end
 
@@ -101,10 +105,10 @@ class AnimationsTest < MiniTest::Test
     filename = randomize_filename('nonexistent.png')
     delete_all_animation_versions(filename)
 
-    delete(filename) # Not a no-op - creates a delete marker
+    delete_object(filename) # Not a no-op - creates a delete marker
     assert successful?
 
-    get(filename)
+    get_object(filename)
     assert not_found?
   end
 
@@ -123,17 +127,17 @@ class AnimationsTest < MiniTest::Test
 
     # Copy copy_source.png to copy_dest.png
     copy(source_image_filename, dest_image_filename)
-    assert successful?, @files_api.last_response.inspect
-
-    # Get copy_dest.png and make sure it's got the source content
-    get(dest_image_filename)
-    assert_equal source_image_body, get(dest_image_filename)
-    assert_equal 'public, max-age=3600, s-maxage=1800', @files_api.last_response['Cache-Control']
-
-    delete(source_image_filename)
     assert successful?
 
-    delete(dest_image_filename)
+    # Get copy_dest.png and make sure it's got the source content
+    get_object(dest_image_filename)
+    assert_equal source_image_body, get_object(dest_image_filename)
+    assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+
+    delete_object(source_image_filename)
+    assert successful?
+
+    delete_object(dest_image_filename)
     assert successful?
   end
 
@@ -157,7 +161,7 @@ class AnimationsTest < MiniTest::Test
     # Create an animation file
     v1_file_data = 'stub-v1-body'
     upload(filename, v1_file_data, 'image/png')
-    assert successful?, @files_api.last_response.inspect
+    assert successful?
 
     # Overwrite it.
     v2_file_data = 'stub-v2-body'
@@ -165,7 +169,7 @@ class AnimationsTest < MiniTest::Test
     assert successful?
 
     # Delete it.
-    delete(filename)
+    delete_object(filename)
     assert successful?
 
     # List versions.
@@ -178,7 +182,7 @@ class AnimationsTest < MiniTest::Test
     assert_equal v2_file_data, get_version(filename, versions.first['versionId'])
 
     # Check cache headers
-    assert_equal 'public, max-age=3600, s-maxage=1800', @files_api.last_response['Cache-Control']
+    assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
   end
 
   def test_replace_animation_version
@@ -189,12 +193,12 @@ class AnimationsTest < MiniTest::Test
     v1_file_data = 'stub-v1-body'
     upload(filename, v1_file_data, 'image/png')
     assert successful?
-    original_version_id = JSON.parse(@files_api.last_response.body)['versionId']
+    original_version_id = JSON.parse(last_response.body)['versionId']
 
     # Overwrite it, specifying the same version
     v2_file_data = 'stub-v2-body'
     upload_version(filename, original_version_id, v2_file_data, 'image/png')
-    new_version_id = JSON.parse(@files_api.last_response.body)['versionId']
+    new_version_id = JSON.parse(last_response.body)['versionId']
     assert successful?
 
     # Make sure only one version exists
@@ -209,29 +213,15 @@ class AnimationsTest < MiniTest::Test
     # Make sure that one version has the newest content
     assert_equal v2_file_data, get_version(filename, new_version_id)
 
-    delete(filename)
+    delete_object(filename)
   end
 
   private
 
-  # Initialize test sessions for ChannelsApi and FilesApi
-  def init_apis
-    channels_api = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, 'studio.code.org'))
-
-    # Make sure the animations api has the same storage id cookie used by the channels api.
-    channels_api.get '/v3/channels'
-    cookies = channels_api.last_response.headers['Set-Cookie']
-    files_mock_session = Rack::MockSession.new(FilesApi, "studio.code.org")
-    files_mock_session.cookie_jar.merge(cookies)
-    files_api = Rack::Test::Session.new(files_mock_session)
-
-    [channels_api, files_api]
-  end
-
   def ensure_aws_credentials
     list_animations
-    credentials_missing = !@files_api.last_response.successful? &&
-        @files_api.last_response.body.index('Aws::Errors::MissingCredentialsError')
+    credentials_missing = !last_response.successful? &&
+        last_response.body.index('Aws::Errors::MissingCredentialsError')
     credentials_msg = <<-TEXT.gsub(/^\s+/, '').chomp
       Aws::Errors::MissingCredentialsError: if you are running these tests locally,
       follow these instructions to configure your AWS credentials and try again:
@@ -248,36 +238,38 @@ class AnimationsTest < MiniTest::Test
     flunk credentials_msg if credentials_missing
   end
 
-  def create_channel(channels_api)
-    channels_api.post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    channels_api.last_response.location.split('/').last
+  def create_channel
+    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    last_response.location.split('/').last
   end
 
-  def delete_channel(channels_api, channel_id)
-    channels_api.delete "/v3/channels/#{channel_id}"
-    assert channels_api.last_response.successful?
+  def delete_channel(channel_id)
+    delete "/v3/channels/#{channel_id}"
+    assert last_response.successful?
   end
 
   def list_animations
-    @files_api.get("/v3/animations/#{@channel_id}").body
+    get "/v3/animations/#{@channel_id}"
+    last_response.body
   end
 
   def list_versions(filename)
-    response = @files_api.get "/v3/animations/#{@channel_id}/#{filename}/versions"
-    JSON.parse(response.body)
+    get "/v3/animations/#{@channel_id}/#{filename}/versions"
+    JSON.parse(last_response.body)
   end
 
-  def get(filename, body = '', headers = {})
-    @files_api.get "/v3/animations/#{@channel_id}/#{filename}", body, headers
-    @files_api.last_response.body
+  def get_object(filename, body = '', headers = {})
+    get "/v3/animations/#{@channel_id}/#{filename}", body, headers
+    last_response.body
   end
 
   def get_version(filename, version_id)
-    @files_api.get("/v3/animations/#{@channel_id}/#{filename}?version=#{version_id}").body
+    get "/v3/animations/#{@channel_id}/#{filename}?version=#{version_id}"
+    last_response.body
   end
 
-  def delete(filename)
-    @files_api.delete "/v3/animations/#{@channel_id}/#{filename}"
+  def delete_object(filename)
+    delete "/v3/animations/#{@channel_id}/#{filename}"
   end
 
   def upload(filename, contents, content_type)
@@ -289,8 +281,8 @@ class AnimationsTest < MiniTest::Test
     query_params = version_id.nil? ? '' : "?version=#{version_id}"
 
     body = { files: [create_uploaded_file(filename, contents, content_type)] }
-    @files_api.post(url + query_params, body, 'CONTENT_TYPE' => content_type)
-    @files_api.last_response.body
+    post url + query_params, body, 'CONTENT_TYPE' => content_type
+    last_response.body
   end
 
   def create_uploaded_file(filename, contents, content_type)
@@ -305,8 +297,8 @@ class AnimationsTest < MiniTest::Test
   end
 
   def copy(source_filename, dest_filename)
-    @files_api.put("/v3/animations/#{@channel_id}/#{dest_filename}?src=#{CGI.escape(source_filename)}")
-    @files_api.last_response.body
+    put "/v3/animations/#{@channel_id}/#{dest_filename}?src=#{CGI.escape(source_filename)}"
+    last_response.body
   end
 
   # Delete all versions of the specified file from S3, including all delete markers
@@ -333,15 +325,15 @@ class AnimationsTest < MiniTest::Test
   end
 
   def successful?
-    @files_api.last_response.successful?
+    last_response.successful?
   end
 
   def not_found?
-    @files_api.last_response.not_found?
+    last_response.not_found?
   end
 
   def unsupported_media_type?
-    @files_api.last_response.status == 415
+    last_response.status == 415
   end
 
   def assert_fileinfo_equal(expected, actual)
