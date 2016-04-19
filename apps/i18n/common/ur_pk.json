@@ -24,6 +24,7 @@
   "completedWithoutRecommendedBlock": "مبارک ہو! آپ نے پزل {puzzleNumber} مکمل کر لیا ہے۔ (لیکن مضبوط کوڈ کے لیے آپ مختلف بلاک استعمال کرسکتے ہیں۔)",
   "continue": "جاری رکھیے",
   "copy": "کاپی",
+  "currentVersion": "Current Version",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -130,6 +131,7 @@
   "end": "اختتام",
   "errorEmptyFunctionBlockModal": "آپ کے فنکشن ڈیفینیشن کے اندر بلاکس کی ضرورت ہوگی۔ \"ایڈٹ\" پر کلک کریں اور گرین بلاک میں اپنا بلاک ڈریگ کریں۔",
   "errorIncompleteBlockInFunction": "\"ایڈٹ\" پر کلک کریں تاکہ یقینی اطمینان ہوجائے کہ آپ کے فنکشن ڈیفینیشن کے اندر کوئی بھی متعلقہ بلاکس لاپتہ نہیں ہیں۔",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
   "errorParamInputUnattached": "اپنی ورک اسپیس میں فنکشن بلاک پر ہر ایک پیرامیٹر اِن-پُٹ کے لیے ایک بلاک اٹیچ کرنا یاد رکھیں۔",
   "errorQuestionMarksInNumberField": "\"???\" کو کسی ویلیو سے تبدیل کرنے کی کوشش کریں۔",
   "errorRequiredParamsMissing": "\"ایڈٹ\" پر کلکنگ کرتے ہوئے اپنے فنکشن کے پیرامیٹر کری-ایٹ کریں اور ضروری پیرامیٹرز شامل کریں۔ فنکشن ڈیفینیشن میں نئے پیرامیٹر بلاکس ڈریگ کریں۔",
@@ -183,6 +185,7 @@
   "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
   "repeat": "دوبارہ",
   "resetProgram": "ری-سیٹ کریں",
+  "restoreThisVersion": "Restore this Version",
   "rotateText": "اپنی ڈیوائس کو گھمائیے۔",
   "runProgram": "رَن کریں",
   "runTooltip": "ورک اسپیس میں بلاک کے ذریعے وضع کردہ پروگرام رَن کریں۔",
@@ -230,8 +233,5 @@
   "watchVideo": "ویڈیو دیکھیں",
   "when": "کب",
   "whenRun": "جب رن ہو تو",
-  "workspaceHeaderShort": "ورک اسپیس ",
-  "currentVersion": "Current Version",
-  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
-  "restoreThisVersion": "Restore this Version"
+  "workspaceHeaderShort": "ورک اسپیس "
 }

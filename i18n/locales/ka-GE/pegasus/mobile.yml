@@ -614,6 +614,7 @@ ka-GE:
   dashboard_announcements: განცხადებები
   dashboard_announce_view_all: ყველას ნახვა
   dashboard_announce_message: '<b>2016 წლის 29 თებერვალი</b> - ვორქშოპის მონაწილეთა 90% ჩვენს პროგრამას აფასებს, როგორც საუკეთესოს პროფესიონალური ზრდისთვის. მოთხოვნის გამო, კომპიუტერული მეცნიერების პროფესიული შესწავლის პროგრამას რამდენიმე ადგილი დავამატეთ. დარეგისტრირდით <u>31 მარტამდე</u> და დაიკავეთ თქვენი ადგილი.'
+  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
   dashboard_announce_button_text: გაიგეთ მეტი
   dashboard_announce_hoc: '<b>2015, 9 ნოემბერი</b> - აი, კოდის ერთი საათის ახალი ტუტორიალი, რომელიც მომავალ ვარსკვლავურ ომება ეხება. იმუშავეთ რეისთან ერთად და მართეთ ახალი დროიდი BB-8. შემდეგ კი შექმენით შორეულ გალაქტიკაში თქვენი საკუთარი თამაში ლეიასთან ერთად.'
   dashboard_announce_playlab: '<b>2015 წლის 4 დეკემბერი</b> - კოდის ერთი საათი დაიწყო! გამოსცადეთ 50 ტუტორიალი ნებისმიერი ასაკისა და მოწყობილობისთვის. ამ კვირის სიახლე: დაწერეთ კოდი თქვენი საკუთარი ისტორიებისა და თამაშებისთვის თამაშების ახალ ლაბორატორიებში: გამყინვარების პერიოდი და გამბოლი.'

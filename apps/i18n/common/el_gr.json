@@ -24,6 +24,7 @@
   "completedWithoutRecommendedBlock": "Συγχαρητήρια! Ολοκλήρωσες το Παζλ {puzzleNumber}. (Αλλά θα μπορούσες να χρησιμοποιήσεις ένα μπλοκ για καλύτερο κώδικα.)",
   "continue": "Συνέχεια",
   "copy": "Αντιγραφή",
+  "currentVersion": "Current Version",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -130,6 +131,7 @@
   "end": "τέλος",
   "errorEmptyFunctionBlockModal": "Πρέπει να εισάγετε κάποια μπλοκ μέσα στον ορισμό της συνάρτησης. Κάντε κλικ στο κουμπί \"Επεξεργασία\" και σύρετε τα μπλοκς μέσα στο πράσινο μπλοκ.",
   "errorIncompleteBlockInFunction": "Κάντε κλικ στο κουμπί \"Επεξεργασία\" για να βεβαιωθείτε ότι δε λείπει κάποιο μπλοκ μέσα στον ορισμό της συνάρτησης.",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
   "errorParamInputUnattached": "Θυμηθείτε να ενώσετε ένα μπλοκ σε κάθε παράμετρο εισόδου στο μπλοκ της συνάρτησης στο χώρο εργασίας σας.",
   "errorQuestionMarksInNumberField": "Δοκιμάστε να αντικαταστήσετε τα ερωτηματικά με μια τιμή.",
   "errorRequiredParamsMissing": "Δημιουργήστε μια παράμετρο για τη συνάρτησή σας κάνοντας κλικ στο \"Επεξεργασία\" και προσθέτοντας τις απαραίτητες παραμέτρους. Σύρετε τα νέα μπλοκ παραμέτρων μέσα στον ορισμό της συνάρτησής σας.",
@@ -183,6 +185,7 @@
   "recommendedBlockContextualHintTitle": "Δοκιμάστε να χρησιμοποιήσετε ένα μπλοκ σαν αυτό για να λύσετε τον γρίφο.",
   "repeat": "επανάλαβε",
   "resetProgram": "Επαναφορά",
+  "restoreThisVersion": "Restore this Version",
   "rotateText": "Περιστρέψτε τη συσκευή σας.",
   "runProgram": "Εκτέλεση",
   "runTooltip": "Τρέξτε το πρόγραμμα που ορίζεται από τα μπλοκ στο χώρο εργασίας.",
@@ -230,8 +233,5 @@
   "watchVideo": "Δείτε το βίντεο",
   "when": "όταν",
   "whenRun": "όταν εκτελείται",
-  "workspaceHeaderShort": "Χώρος εργασίας: ",
-  "currentVersion": "Current Version",
-  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
-  "restoreThisVersion": "Restore this Version"
+  "workspaceHeaderShort": "Χώρος εργασίας: "
 }

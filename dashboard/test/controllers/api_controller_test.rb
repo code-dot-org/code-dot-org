@@ -153,7 +153,7 @@ class ApiControllerTest < ActionController::TestCase
     # student_1 has an assessment
     create(:activity, user: @student_1, level: level1,
            level_source: create(:level_source, level: level1,
-            data: "[{\"level_id\": #{sub_level1.id},\"result\":\"This is a free response\"},{\"level_id\": #{sub_level2.id},\"result\":\"0\"},{\"level_id\": #{sub_level3.id},\"result\":\"1\"},{\"level_id\":#{sub_level4.id},\"result\":\"-1\"}]"
+            data: %Q({"#{sub_level1.id}":{"result":"This is a free response"},"#{sub_level2.id}":{"result":"0"},"#{sub_level3.id}":{"result":"1"},"#{sub_level4.id}":{"result":"-1"}})
             ))
 
     updated_at = Time.now

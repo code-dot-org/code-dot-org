@@ -30,8 +30,8 @@
   twentyhours_text: Klaar met je eerste 'Hour of Code'? Leer meer over Informatica
     en programmeerconcepten in deze vervolgcursus.
   og_title: Ieder kind verdient een kans
-  og_description: Elke leerling op elke school verdient de kans om te leren werken
-    met computers.
+  og_description: Elke leerling op elke school moet de kans krijgen om te leren programmeren.
+    Dit verandert alles.
   hoc2014_heading: Doe mee met de <a href="http://hourofcode.com">Hour of Code</a><br
     />8 - 14 december 2014<br/>
   hoc2014_students: Leerlingen
@@ -832,6 +832,11 @@
     problem in computer science. Code Studio teachers are leading the way in educating
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: Leer meer
   dashboard_announce_hoc: "<b>15 oktober 2015</b> - het Uur Code komt &mdash; elke
     deelnemende organisator ontvangt een kadokaart van Amazon.com of Microsofts Windows-winkel
@@ -1686,8 +1691,3 @@
   infinity_shortcode: inf
   playlab_shortcode: afspelen
   artist_shortcode: art
-  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
-    (or a teacher you know) want to join a nationwide community of educators working
-    to change the face of computer science education? We'll be accepting applications
-    from middle and high school teachers in our partner districts for our year-long
-    Exploring Computer Science Professional Learning Program until April 22nd."

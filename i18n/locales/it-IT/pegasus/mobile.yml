@@ -658,7 +658,8 @@ it-IT:
   dashboard_faq_k5: Domande frequenti FAQ K-5
   dashboard_announcements: Annunci
   dashboard_announce_view_all: Visualizza tutto
-  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
+  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
   dashboard_announce_button_text: Ulteriori informazioni
   dashboard_announce_hoc: "<b>15 Ottobre 2015</b> - l'Ora del Codice 2015 sta arrivando! Ogni organizzatore di un evento dell'Ora del Codice riceverà un buono acquisto di Amazon.com o di Microsoft's Windows Store come regalo di ringraziamento. Unisciti agli studenti di tutto il mondo nella settimana 7-13 dicembre 2015."
   dashboard_announce_playlab: "<b>4 Dicembre, 2015</b> - L'Ora del Codice è qua! Prova uno dei 50 corsi per tutte le età e tutti i dispositivi. Novità della settimana: programma le tue storie e i tuoi giochi con i nuovi corsi del Laboratorio: L'Era Glaciale e Gumball."

@@ -26,6 +26,7 @@ th:
   submit: ส่ง
   unsubmit: Unsubmit
   next_page: Next page
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'เพิ่มครู:'
@@ -626,5 +627,5 @@ th:
         acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: ค้นหาไอคอน...
+      no_icons_found: ไม่พบไอคอน

@@ -186,7 +186,7 @@ class ApiController < ApplicationController
         level_results = []
 
         script_level.level.levels.each do |level|
-          level_response = response_parsed.find{|r| r["level_id"] == level.id}
+          level_response = response_parsed[level.id.to_s]
 
           if level_response
             level_result = {}

@@ -85,7 +85,7 @@
   congratulations_on_completing_course4: Congratulations on completing Course 4
   congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
     Course
-  congrats_next_tutorials_title: Coba tutorial ini berikutnya
+  congrats_next_tutorials_title: Lulus ke tingkat berikutnya
   congrats_next_tutorials_desc: Cobalah yang lebih pendek, tutorial 1 jam ini atau
     mencoba <a href="%{current_path}/next"> mitra tutorial</a>.
   get_a_certificate_of_achievement: Ambil sertifikat prestasi
@@ -839,6 +839,11 @@
     problem in computer science. Code Studio teachers are leading the way in educating
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: Pelajari lebih banyak
   dashboard_announce_hoc: "<b>9 November 2015</b> - tutorial Hour of Code baru ada
     di sini, menampilkan film terbaru dari Star Wars: The Force Awakens. Bekerja samalah
@@ -1722,8 +1727,3 @@
   infinity_shortcode: inf
   playlab_shortcode: mainkan
   artist_shortcode: art
-  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
-    (or a teacher you know) want to join a nationwide community of educators working
-    to change the face of computer science education? We'll be accepting applications
-    from middle and high school teachers in our partner districts for our year-long
-    Exploring Computer Science Professional Learning Program until April 22nd."
