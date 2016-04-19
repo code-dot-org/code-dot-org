@@ -10,22 +10,6 @@ class AssetsTest < FilesApiTestBase
     @random = Random.new(0)
   end
 
-  # Delete all objects in the specified path from S3.
-  def delete_all_objects(bucket, prefix)
-    raise "Not a test path: #{prefix}" unless prefix.include?('test')
-    s3 = Aws::S3::Client.new
-    objects = s3.list_objects(bucket: bucket, prefix: prefix).contents.map do |object|
-      { key: object.key }
-    end
-    s3.delete_objects(
-      bucket: bucket,
-      delete: {
-        objects: objects,
-        quiet: true
-      }
-    ) if objects.any?
-  end
-
   def test_assets
     channel_id = create_channel
 

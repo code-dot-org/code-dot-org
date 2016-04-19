@@ -25,4 +25,39 @@ class FilesApiTestBase < Minitest::Test
     assert last_response.successful?
   end
 
+  # Delete all objects in the specified path from S3.
+  def delete_all_objects(bucket, prefix)
+    raise "Not a test path: #{prefix}" unless prefix.include?('test')
+    s3 = Aws::S3::Client.new
+    objects = s3.list_objects(bucket: bucket, prefix: prefix).contents.map do |object|
+      { key: object.key }
+    end
+    s3.delete_objects(
+        bucket: bucket,
+        delete: {
+            objects: objects,
+            quiet: true
+        }
+    ) if objects.any?
+  end
+
+  # Delete all versions of the specified file from S3, including all delete markers
+  def delete_all_versions(bucket, key)
+    s3 = Aws::S3::Client.new
+    response = s3.list_object_versions(bucket: bucket, prefix: key)
+    objects = response.versions.concat(response.delete_markers).map do |version|
+      {
+          key: key,
+          version_id: version.version_id
+      }
+    end
+    s3.delete_objects(
+        bucket: bucket,
+        delete: {
+            objects: objects,
+            quiet: true
+        }
+    ) if objects.any?
+  end
+
 end
