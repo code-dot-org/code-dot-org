@@ -47,7 +47,7 @@ var Dialog = React.createClass({
         <div className="modal-backdrop in" onClick={this.closeDialog}></div>
         <div tabIndex="-1" className="modal dash_modal in" ref="dialog" onKeyDown={this.closeOnEscape}>
           <div className="modal-body dash_modal_body">
-            {this.props.uncloseable || <div id="x-close" className="x-close" onClick={this.closeDialog}></div>}
+            {!this.props.uncloseable && <div id="x-close" className="x-close" onClick={this.closeDialog}></div>}
             {this.props.children}
           </div>
         </div>
