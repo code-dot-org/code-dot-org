@@ -205,7 +205,6 @@ Artist.prototype.init = function (config) {
     this.avatarHeight = 51;
   }
 
-  var iconPath = 'media/turtle/' + (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
 
@@ -223,7 +222,9 @@ Artist.prototype.init = function (config) {
     });
   }.bind(this);
 
-  var visualizationColumn = <ArtistVisualizationColumn/>;
+  var iconPath = '/blockly/media/turtle/' +
+    (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
+  var visualizationColumn = <ArtistVisualizationColumn iconPath={iconPath}/>;
 
   ReactDOM.render(React.createElement(AppView, {
     assetUrl: this.studioApp_.assetUrl,

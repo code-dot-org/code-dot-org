@@ -10,8 +10,6 @@ var styles = {
   }
 };
 
-// TODO - iconPath is different sometimes
-
 var ArtistVisualizationColumn = function (props) {
   return (
     <span>
@@ -19,7 +17,6 @@ var ArtistVisualizationColumn = function (props) {
       <GameButtons hideRunButton={false}>
         <div id="slider-cell">
           <svg id="slider"
-               xmlns="http://www.w3.org/2000/svg"
                version="1.1"
                width="150"
                height="50">
@@ -28,7 +25,7 @@ var ArtistVisualizationColumn = function (props) {
                 <rect width="26" height="12" x="5" y="14" />
               </clipPath>
               <image
-                  xlinkHref="/blockly/media/turtle/icons.png"
+                  xlinkHref={props.iconPath}
                   height="42"
                   width="84"
                   x="-21"
@@ -39,7 +36,7 @@ var ArtistVisualizationColumn = function (props) {
                 <rect width="26" height="16" x="120" y="10" />
               </clipPath>
               <image
-                  xlinkHref="/blockly/media/turtle/icons.png"
+                  xlinkHref={props.iconPath}
                   height="42"
                   width="84"
                   x="120"
@@ -61,6 +58,7 @@ var ArtistVisualizationColumn = function (props) {
 };
 
 ArtistVisualizationColumn.propTypes = {
+  iconPath: React.PropTypes.string.isRequired
 };
 
 module.exports = ArtistVisualizationColumn;
