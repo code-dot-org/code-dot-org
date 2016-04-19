@@ -268,18 +268,6 @@ class AnimationsTest < FilesApiTestBase
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/1/#{filename}")
   end
 
-  def successful?
-    last_response.successful?
-  end
-
-  def not_found?
-    last_response.not_found?
-  end
-
-  def unsupported_media_type?
-    last_response.status == 415
-  end
-
   def assert_fileinfo_equal(expected, actual)
     assert_equal(Hash, actual.class)
     assert_equal(expected['filename'], actual['filename'])
