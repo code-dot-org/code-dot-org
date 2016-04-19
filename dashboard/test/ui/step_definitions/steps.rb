@@ -1,5 +1,3 @@
-# require File.expand_path('../../../../config/environment.rb', __FILE__)
-
 DEFAULT_WAIT_TIMEOUT = 2 * 60 # 2 minutes
 SHORT_WAIT_TIMEOUT = 30 # 30 seconds
 
@@ -562,8 +560,7 @@ def encrypted_cookie(user)
   CGI.escape(encrypted_data.to_s)
 end
 
-def log_in_as(name)
-  @browser.manage.delete_all_cookies
+Given(/^I sign in as "([^"]*)"/) do |name|
   steps %Q{
     Given I am on "http://studio.code.org/reset_session"
     Then I am on "http://studio.code.org/"
@@ -574,10 +571,6 @@ def log_in_as(name)
     And I click selector "input[type=submit][value='Sign in']"
     And I wait to see ".header_user"
   }
-end
-
-Given(/^I sign in as "([^"]*)"/) do |name|
-  log_in_as(name)
 end
 
 Given(/^I am a (student|teacher)$/) do |user_type|
@@ -660,24 +653,8 @@ Given(/^I sign in as a (student|teacher)$/) do |user_type|
   }
 end
 
-# Signs in as name by filling in username/password fields. If name does not
-# already exist, creates a new student account for name in the db first.
-Given(/^I manually sign in as "([^"]*)"$/) do |name|
-  steps %Q{
-    Given I am on "http://studio.code.org/reset_session"
-    Then I am on "http://studio.code.org/"
-    And I set the language cookie
-    And I create a student named "#{name}"
-    Then I am on "http://studio.code.org/"
-    And I reload the page
-    Then I wait to see ".header_user"
-  }
-end
-
 When(/^I sign out$/) do
-  steps %Q{
-    When I am on "http://studio.code.org/users/sign_out"
-  }
+  steps 'When I am on "http://studio.code.org/users/sign_out"'
 end
 
 When(/^I debug cookies$/) do
