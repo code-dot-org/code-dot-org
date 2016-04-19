@@ -6,27 +6,31 @@ class SourcesTest < FilesApiTestBase
     @channel = create_channel
   end
 
+  def teardown
+    delete_channel(@channel)
+    @channel = nil
+  end
+
   def test_source_versions
     # Upload a source file.
     filename = 'test.js'
     delete_all_versions('cdo-v3-sources', "sources_test/1/1/#{filename}")
     file_data = 'abc 123'
     put "/v3/sources/#{@channel}/#{filename}", file_data, 'CONTENT_TYPE' => 'text/javascript'
-    assert last_response.successful?
+    assert successful?
 
     # Overwrite it.
     new_file_data = 'def 456'
     put "/v3/sources/#{@channel}/#{filename}", new_file_data, 'CONTENT_TYPE' => 'text/javascript'
-    assert last_response.successful?
+    assert successful?
 
     # Delete it.
     delete "/v3/sources/#{@channel}/#{filename}"
-    assert last_response.successful?
+    assert successful?
 
     # List versions.
-    get "/v3/sources/#{@channel}/#{filename}/versions"
-    assert last_response.successful?
-    versions = JSON.parse(last_response.body)
+    versions = list_source_versions(filename)
+    assert successful?
     assert_equal 2, versions.count
 
     # Get the first and second version.
@@ -45,18 +49,24 @@ class SourcesTest < FilesApiTestBase
     delete_all_versions('cdo-v3-sources', "sources_test/1/1/#{filename}")
     file_data = 'version 1'
     put "/v3/sources/#{@channel}/#{filename}", file_data, 'CONTENT_TYPE' => 'text/javascript'
-    assert last_response.successful?
+    assert successful?
     response = JSON.parse(last_response.body)
 
     # Overwrite it, specifying the same version.
     new_file_data = 'version 2'
     put "/v3/sources/#{@channel}/#{filename}?version=#{response['versionId']}", new_file_data, 'CONTENT_TYPE' => 'text/javascript'
-    assert last_response.successful?
+    assert successful?
 
     # List versions.
     get "/v3/sources/#{@channel}/#{filename}/versions"
-    assert last_response.successful?
+    assert successful?
     versions = JSON.parse(last_response.body)
     assert_equal 1, versions.count
+  end
+
+  private
+
+  def list_source_versions(filename)
+    list_object_versions 'sources', @channel, filename
   end
 end

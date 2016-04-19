@@ -345,7 +345,7 @@ class AssetsTest < FilesApiTestBase
   private
 
   def list_assets(channel_id)
-    list_objects('assets', channel_id)
+    list_objects 'assets', channel_id
   end
 
   def post_object(channel_id, uploaded_file)
