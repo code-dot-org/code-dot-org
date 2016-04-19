@@ -163,9 +163,7 @@ Jigsaw.init = function (config) {
   var generateVisualizationColumnHtmlFromEjs = function () {
     return visualizationColumnEjs({
       assetUrl: studioApp.assetUrl,
-      data: {
-        controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl})
-      }
+      data: { }
     });
   };
 
