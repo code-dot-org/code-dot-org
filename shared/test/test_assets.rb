@@ -348,18 +348,6 @@ class AssetsTest < FilesApiTestBase
   # Methods below this line are test utilities, not actual tests
   private
 
-  def ensure_aws_credentials(channel_id)
-    list_objects(channel_id)
-    credentials_missing = !last_response.successful? &&
-      last_response.body.index('Aws::Errors::MissingCredentialsError')
-    credentials_msg = <<-TEXT.gsub(/^\s+/, '').chomp
-      Aws::Errors::MissingCredentialsError: if you are running these tests locally,
-      follow these instructions to configure your AWS credentials and try again:
-      http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html
-    TEXT
-    flunk credentials_msg if credentials_missing
-  end
-
   def post_object(channel_id, uploaded_file)
     body = { files: [uploaded_file] }
     post("/v3/assets/#{channel_id}/", body, 'CONTENT_TYPE' => 'multipart/form-data').body

@@ -5,7 +5,7 @@ class AnimationsTest < FilesApiTestBase
   def setup
     @random = Random.new(0)
     @channel_id = create_channel
-    ensure_aws_credentials
+    ensure_aws_credentials(@channel_id)
   end
 
   def endpoint_under_test
@@ -14,7 +14,8 @@ class AnimationsTest < FilesApiTestBase
 
   def teardown
     # Require that tests delete the assets they upload
-    assert_empty list_objects(@channel_id)
+    get "v3/animations/#{@channel_id}"
+    assert_empty JSON.parse(last_response.body)
     delete_channel(@channel_id)
     @channel_id = nil
   end
@@ -214,26 +215,6 @@ class AnimationsTest < FilesApiTestBase
   end
 
   private
-
-  def ensure_aws_credentials
-    list_objects(@channel_id)
-    credentials_missing = !last_response.successful? &&
-        last_response.body.index('Aws::Errors::MissingCredentialsError')
-    credentials_msg = <<-TEXT.gsub(/^\s+/, '').chomp
-      Aws::Errors::MissingCredentialsError: if you are running these tests locally,
-      follow these instructions to configure your AWS credentials and try again:
-      http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html
-    TEXT
-  rescue Aws::S3::Errors::InvalidAccessKeyId
-    credentials_missing = true
-    credentials_msg = <<-TEXT.gsub(/^\s+/, '').chomp
-      Aws::S3::Errors::InvalidAccessKeyId: Make sure your AWS credentials are set in your locals.yml.
-      If you don't have AWS credentials, follow these instructions to configure your AWS credentials and try again:
-      http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html
-    TEXT
-  ensure
-    flunk credentials_msg if credentials_missing
-  end
 
   def list_versions(filename)
     get "/v3/animations/#{@channel_id}/#{filename}/versions"
