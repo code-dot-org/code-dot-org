@@ -1,7 +1,8 @@
 class AddLevelsToScriptLevel < ActiveRecord::Migration
   def up
-    create_table :levels_script_levels, :id => false do |t|
-      t.references :level, :script_level
+    create_join_table :levels, :script_levels do |t|
+      t.index :level_id
+      t.index :script_level_id
     end
 
     ScriptLevel.class_eval do
