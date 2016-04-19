@@ -3,6 +3,12 @@ require 'cgi'
 require 'httparty'
 require_relative '../../../../deployment'
 
+class Object
+  def blank?
+    respond_to?(:empty?) ? !!empty? : !self
+  end
+end
+
 $browser_configs = JSON.load(open("browsers.json"))
 
 MAX_CONNECT_RETRIES = 3
