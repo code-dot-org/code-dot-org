@@ -166,7 +166,7 @@ function getDevicePort() {
  */
 function deviceOnPortAppearsUsable(port) {
   var comNameRegex = /usb|acm|^com/i;
-  return !!port.comName.match(comNameRegex);
+  return comNameRegex.test(port.comName);
 }
 
 /**
