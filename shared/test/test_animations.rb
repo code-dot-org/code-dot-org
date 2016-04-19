@@ -305,7 +305,7 @@ class AnimationsTest < MiniTest::Test
   end
 
   def copy(source_filename, dest_filename)
-    @files_api.post("/v3/animations/#{@channel_id}/#{dest_filename}/from/#{source_filename}")
+    @files_api.put("/v3/animations/#{@channel_id}/#{dest_filename}?src=#{CGI.escape(source_filename)}")
     @files_api.last_response.body
   end
 
