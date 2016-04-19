@@ -1,6 +1,40 @@
 var commonStyles = require('../commonStyles');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 
+/**
+ * A table of inputs and expected outputs that is only used by Calc.
+ */
+var InputOutputTable = function (props) {
+  return (
+    <div id="input-table">
+      <table>
+        <tbody>
+          <tr>
+            <th>Input</th>
+            <th>Output</th>
+          </tr>
+          {props.data.map(function (item, index) {
+            return (
+              <tr key={index}>
+                <td>{item[0]}</td>
+                <td>{item[1]}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+InputOutputTable.propTypes = {
+  data: React.PropTypes.arrayOf(
+    React.PropTypes.arrayOf(React.PropTypes.number)
+  ).isRequired
+};
+
+/**
+ * The area below our visualization that is share dby all apps.
+ */
 var BelowVisualization = function (props) {
   return (
     <ProtectedStatefulDiv id="belowVisualization">
@@ -19,7 +53,7 @@ var BelowVisualization = function (props) {
           </tbody>
         </table>
 
-        {/* TODO - other apps have data.inputOutputTable here */}
+        {props.inputOutputTable && <InputOutputTable data={props.inputOutputTable}/>}
 
         <div id="ani-gif-preview-wrapper" style={commonStyles.hidden}>
           <div id="ani-gif-preview">
@@ -29,5 +63,12 @@ var BelowVisualization = function (props) {
     </ProtectedStatefulDiv>
   );
 };
+
+BelowVisualization.propTypes = {
+  inputOutputTable: React.PropTypes.arrayOf(
+    React.PropTypes.arrayOf(React.PropTypes.number)
+  )
+};
+
 
 module.exports = BelowVisualization;
