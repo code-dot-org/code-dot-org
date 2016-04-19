@@ -25,7 +25,7 @@ var CalcVisualizationColumn = function (props) {
 CalcVisualizationColumn.propTypes = {
   inputOutputTable: React.PropTypes.arrayOf(
     React.PropTypes.arrayOf(React.PropTypes.number)
-  ).isRequired
+  )
 };
 
 module.exports = CalcVisualizationColumn;
