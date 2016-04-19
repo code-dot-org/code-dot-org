@@ -25,7 +25,7 @@ class SourcesTest < FilesApiTestBase
     assert successful?
 
     # Delete it.
-    delete "/v3/sources/#{@channel}/#{filename}"
+    delete_source(filename)
     assert successful?
 
     # List versions.
@@ -71,5 +71,9 @@ class SourcesTest < FilesApiTestBase
 
   def get_source_version(filename, version_id)
     get_object_version 'sources', @channel, filename, version_id
+  end
+
+  def delete_source(filename)
+    delete_object 'sources', @channel, filename
   end
 end

@@ -53,10 +53,10 @@ class AnimationsTest < FilesApiTestBase
     get_animation(dog_image_filename)
     assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
-    delete_object(dog_image_filename)
+    delete_animation(dog_image_filename)
     assert successful?
 
-    delete_object(cat_image_filename)
+    delete_animation(cat_image_filename)
     assert successful?
   end
 
@@ -72,7 +72,7 @@ class AnimationsTest < FilesApiTestBase
     upload(mismatched_filename, 'stub-contents', 'application/gif')
     assert successful?
 
-    delete_object(mismatched_filename)
+    delete_animation(mismatched_filename)
     assert successful?
   end
 
@@ -91,7 +91,7 @@ class AnimationsTest < FilesApiTestBase
     get_animation(different_case_filename)
     assert not_found?
 
-    delete_object(filename)
+    delete_animation(filename)
     assert successful?
   end
 
@@ -99,7 +99,7 @@ class AnimationsTest < FilesApiTestBase
     filename = randomize_filename('nonexistent.png')
     delete_all_animation_versions(filename)
 
-    delete_object(filename) # Not a no-op - creates a delete marker
+    delete_animation(filename) # Not a no-op - creates a delete marker
     assert successful?
 
     get_animation(filename)
@@ -128,10 +128,10 @@ class AnimationsTest < FilesApiTestBase
     assert_equal source_image_body, get_animation(dest_image_filename)
     assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
-    delete_object(source_image_filename)
+    delete_animation(source_image_filename)
     assert successful?
 
-    delete_object(dest_image_filename)
+    delete_animation(dest_image_filename)
     assert successful?
   end
 
@@ -163,7 +163,7 @@ class AnimationsTest < FilesApiTestBase
     assert successful?
 
     # Delete it.
-    delete_object(filename)
+    delete_animation(filename)
     assert successful?
 
     # List versions.
@@ -207,7 +207,7 @@ class AnimationsTest < FilesApiTestBase
     # Make sure that one version has the newest content
     assert_equal v2_file_data, get_animation_version(filename, new_version_id)
 
-    delete_object(filename)
+    delete_animation(filename)
   end
 
   private
@@ -228,8 +228,8 @@ class AnimationsTest < FilesApiTestBase
     get_object_version 'animations', @channel_id, filename, version_id
   end
 
-  def delete_object(filename)
-    delete "/v3/animations/#{@channel_id}/#{filename}"
+  def delete_animation(filename)
+    delete_object 'animations', @channel_id, filename
   end
 
   def upload(filename, contents, content_type)
