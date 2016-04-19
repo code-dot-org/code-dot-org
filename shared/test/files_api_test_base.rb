@@ -109,6 +109,10 @@ class FilesApiTestBase < Minitest::Test
     last_response.body
   end
 
+  def delete_object(endpoint, channel_id, filename)
+    delete "/v3/#{endpoint}/#{channel_id}/#{filename}"
+  end
+
   def successful?
     last_response.successful?
   end
