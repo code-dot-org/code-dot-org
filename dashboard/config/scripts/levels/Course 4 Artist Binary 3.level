@@ -17,7 +17,7 @@
     "use_contract_editor": "false",
     "free_play": "false",
     "impressive": "false",
-    "instructions": "Can you draw this pattern by looping a three digit binary string?",
+    "instructions": "Can you draw this pattern by looping just three binary digits (0s and 1s)?",
     "embed": "false",
     "disable_sharing": "false",
     "contract_highlight": "false",
@@ -281,32 +281,34 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" deletable="false" movable="false" uservisible="false">
           <next>
-            <block type="variables_set" inline="false">
+            <block type="variables_set" inline="false" uservisible="false">
               <title name="VAR">bit</title>
               <value name="VALUE">
-                <block type="math_number">
+                <block type="math_number" uservisible="false">
                   <title name="NUM">0</title>
                 </block>
               </value>
-              <next>
-                <block type="controls_repeat">
-                  <title name="TIMES">21</title>
-                  <statement name="DO">
-                    <block type="procedures_callnoreturn" inline="true">
-                      <mutation name="draw">
-                        <arg name="binary"/>
-                      </mutation>
-                      <value name="ARG0">
-                        <block type="text">
-                          <title name="TEXT">001</title>
-                        </block>
-                      </value>
+            </block>
+          </next>
+        </block>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">21</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn" inline="true">
+                  <mutation name="draw">
+                    <arg name="binary"/>
+                  </mutation>
+                  <value name="ARG0">
+                    <block type="text">
+                      <title name="TEXT">001</title>
                     </block>
-                  </statement>
+                  </value>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>
@@ -481,24 +483,24 @@
           <mutation/>
           <title name="NAME">draw bit</title>
           <statement name="STACK">
-            <block type="draw_colour" inline="true" id="draw-color">
+            <block type="draw_colour" inline="true" uservisible="false" id="draw-color">
               <value name="COLOUR">
-                <block type="colour_picker">
+                <block type="colour_picker" uservisible="false">
                   <title name="COLOUR">#ffffff</title>
                 </block>
               </value>
               <next>
-                <block type="draw_width_inline">
+                <block type="draw_width_inline" uservisible="false">
                   <title name="WIDTH">25</title>
                   <next>
-                    <block type="controls_repeat">
+                    <block type="controls_repeat" uservisible="false">
                       <title name="TIMES">4</title>
                       <statement name="DO">
-                        <block type="draw_move_by_constant">
+                        <block type="draw_move_by_constant" uservisible="false">
                           <title name="DIR">moveForward</title>
                           <title name="VALUE">25</title>
                           <next>
-                            <block type="draw_turn_by_constant">
+                            <block type="draw_turn_by_constant" uservisible="false">
                               <title name="DIR">turnRight</title>
                               <title name="VALUE">90</title>
                             </block>
