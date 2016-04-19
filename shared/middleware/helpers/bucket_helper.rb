@@ -18,6 +18,11 @@ class BucketHelper
     []
   end
 
+  # How long an object retrieved from this bucket should be cached
+  def cache_duration_seconds
+    0
+  end
+
   def app_size(encrypted_channel_id)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     prefix = s3_path owner_id, channel_id

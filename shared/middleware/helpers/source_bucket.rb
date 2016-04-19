@@ -12,4 +12,8 @@ class SourceBucket < BucketHelper
     %w(.js .xml .txt .json)
   end
 
+  def cache_duration_seconds
+    0
+  end
+
 end
