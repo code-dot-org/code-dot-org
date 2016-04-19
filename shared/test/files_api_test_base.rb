@@ -13,12 +13,6 @@ class FilesApiTestBase < Minitest::Test
     @session = Rack::MockSession.new(ChannelsApi.new(FilesApi), 'studio.code.org')
   end
 
-  # Your test class should override this method to test its own endpoint:
-  # "/v3/<endpoint>/..."
-  def endpoint_under_test
-    flunk 'Subclass must provide endpoint_under_test'
-  end
-
   # Create a new channel
   # @return [String] the new encrypted channel ID
   def create_channel
@@ -75,8 +69,8 @@ class FilesApiTestBase < Minitest::Test
     assert_equal(expected['size'], actual['size'])
   end
 
-  def ensure_aws_credentials(channel_id)
-    list_objects(channel_id)
+  def ensure_aws_credentials(endpoint, channel_id)
+    list_objects(endpoint, channel_id)
     credentials_missing = !last_response.successful? &&
         last_response.body.index('Aws::Errors::MissingCredentialsError')
     credentials_msg = <<-TEXT.gsub(/^\s+/, '').chomp
@@ -95,8 +89,8 @@ class FilesApiTestBase < Minitest::Test
     flunk credentials_msg if credentials_missing
   end
 
-  def list_objects(channel_id)
-    get "/v3/#{endpoint_under_test}/#{channel_id}"
+  def list_objects(endpoint, channel_id)
+    get "/v3/#{endpoint}/#{channel_id}"
     JSON.parse(last_response.body)
   end
 

@@ -5,11 +5,7 @@ class AnimationsTest < FilesApiTestBase
   def setup
     @random = Random.new(0)
     @channel_id = create_channel
-    ensure_aws_credentials(@channel_id)
-  end
-
-  def endpoint_under_test
-    'animations'
+    ensure_aws_credentials('animations', @channel_id)
   end
 
   def teardown
@@ -50,7 +46,7 @@ class AnimationsTest < FilesApiTestBase
     }
     assert_fileinfo_equal(expected_cat_image_info, actual_cat_image_info)
 
-    file_infos = list_objects(@channel_id)
+    file_infos = list_animations
     assert_fileinfo_equal(actual_cat_image_info, file_infos[0])
     assert_fileinfo_equal(actual_dog_image_info, file_infos[1])
 
@@ -215,6 +211,10 @@ class AnimationsTest < FilesApiTestBase
   end
 
   private
+
+  def list_animations
+    list_objects('animations', @channel_id)
+  end
 
   def list_versions(filename)
     get "/v3/animations/#{@channel_id}/#{filename}/versions"
