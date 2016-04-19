@@ -1141,7 +1141,7 @@ function displayEquation(parentId, name, tokenList, line, markClass, leftAlign) 
     var transform = Blockly.getRelativeXY(parent.childNodes[0]);
     xPadding = parseFloat(transform.x) - firstTokenLen;
   } else {
-    xPadding = (CANVAS_WIDTH - g.getBoundingClientRect().width) / 2;
+    xPadding = (CANVAS_WIDTH - g.getBBox().width) / 2;
   }
   var yPos = (line * LINE_HEIGHT);
   g.setAttribute('transform', 'translate(' + xPadding + ', ' + yPos + ')');
