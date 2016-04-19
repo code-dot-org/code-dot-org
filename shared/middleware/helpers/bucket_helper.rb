@@ -10,6 +10,14 @@ class BucketHelper
     @s3 = Aws::S3::Client.new
   end
 
+  def allowed_file_type?(extension)
+    allowed_file_types.include? extension.downcase
+  end
+
+  def allowed_file_types
+    []
+  end
+
   def app_size(encrypted_channel_id)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     prefix = s3_path owner_id, channel_id
