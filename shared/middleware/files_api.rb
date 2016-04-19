@@ -25,20 +25,7 @@ class FilesApi < Sinatra::Base
   end
 
   def allowed_file_type?(endpoint, extension)
-    case endpoint
-    when 'animations'
-      # Only allow specific image types to be uploaded by users.
-      # Only png for now, will expand support in the future
-      %w(.png).include? extension.downcase
-    when 'assets'
-      # Only allow specific image and sound types to be uploaded by users.
-      %w(.jpg .jpeg .gif .png .mp3).include? extension.downcase
-    when 'sources'
-      # Only allow JavaScript and Blockly XML source files.
-      %w(.js .xml .txt .json).include? extension
-    else
-      not_found
-    end
+    get_bucket_impl(endpoint).new.allowed_file_type?(extension)
   end
 
   def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
