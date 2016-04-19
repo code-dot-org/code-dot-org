@@ -26,6 +26,7 @@ zh:
   submit: 提交
   unsubmit: 未提交
   next_page: 下一页
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: '添加一个老师:'

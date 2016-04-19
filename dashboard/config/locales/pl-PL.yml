@@ -25,7 +25,8 @@
   welcome_back: Witaj z powrotem, %{name}
   submit: Wyślij
   unsubmit: Nieprzesłane
-  next_page: Next page
+  next_page: Następna strona
+  heading_x_of_y: "%{heading} (strona %{x} z%{y})"
   add_teacher_form:
     code:
       label: 'Dodaj nauczyciela:'
@@ -425,8 +426,8 @@
       &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone.
       < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon
       Network.
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
-      GNU LGPL 2.1</a>.
+    code_from_html: Code.org używa p5.play, który posiada licencje <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
+      LGPL 2.1</a>.
     powered_by_aws: Zasilany przez Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, logo CODE i Hour
       of Code&reg; są znakami handlowymi Code.org."
@@ -759,5 +760,5 @@
           of Service%{link_end}
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Szukaj ikony...
+      no_icons_found: Nie odnaleziono ikon

@@ -24,6 +24,7 @@
   "completedWithoutRecommendedBlock": "Tebrikler! {puzzleNumber} numaralı bulmacayı çözdünüz. (Ama daha güçlü kodlar kullanarakta yapabilirsiniz.)",
   "continue": "Devam Et",
   "copy": "Kopyala",
+  "currentVersion": "Geçerli sürüm",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -130,6 +131,7 @@
   "end": "son",
   "errorEmptyFunctionBlockModal": "Fonksiyon tanımının içinde bloklara ihtiyacın var. \"Düzenle\" butonuna tıkla ve blokları yeşil bloğun içine sürükle.",
   "errorIncompleteBlockInFunction": "Fonksiyon tanımının içinde eksik blokların kalıp kalmadığından emin olmak için \"düzenle\" butonuna tıkla.",
+  "errorGenericLintError": "Programınız yazım hatası bulundurmakta ve bu düzeltilmeli. Satır numaraları simgesinin üzerine gelerek hatanın ne olduğunu öğren.",
   "errorParamInputUnattached": "Çalışma alanında bulunan fonksiyon bloğundaki her parametre girdisine bir blok eklemeyi unutma.",
   "errorQuestionMarksInNumberField": "\"???\" kısmını bir değerle değiştirmeyi deneyin.",
   "errorRequiredParamsMissing": "\"Düzenle\" butonuna tıklayarak ve gerekli parametreleri ekleyecek fonksiyonun için bir parametre yarat. Yeni parametre bloğunu, fonksiyon tanımının içine sürükle.",
@@ -183,6 +185,7 @@
   "recommendedBlockContextualHintTitle": "Bulmacayı çözmek için bunun gibi bir blok kullanmayı deneyin.",
   "repeat": "bu işlemleri",
   "resetProgram": "Yeniden başla",
+  "restoreThisVersion": "Bu sürümü geri yükle",
   "rotateText": "Cihazınızı döndürün.",
   "runProgram": "Çalıştır",
   "runTooltip": "Çalişma alaninda bloklar tarafından tanımlanmış bir program çalıştır.",
@@ -195,7 +198,7 @@
   "shareWarningsAge": "Lütfen yaşınızı aşağıya giriniz ve devam etmek için TAMAM'a tıklayınız.",
   "shareWarningsMoreInfo": "Daha fazla bilgi",
   "shareWarningsStoreData": "Code Studio'da oluşturulmuş bu Uygulamada, bu paylaşım linki vasıtasıyla herhangi bir kişi tarafın görüntülenebilecek veriler saklanmaktadır, dolayısıyla eğer kişisel bilgileri vermeniz isteniyorsa dikkatli olunuz.\n",
-  "showBlock": "Get a block",
+  "showBlock": "Blok al",
   "showBlocksHeader": "Bloklarını göster",
   "showCodeHeader": "Kodu Görüntüle",
   "showGeneratedCode": "Kodu Görüntüle",
@@ -230,8 +233,5 @@
   "watchVideo": "Videoyu İzle",
   "when": "Ne zaman",
   "whenRun": "Çalıştığı zaman",
-  "workspaceHeaderShort": "Çalışma alanı: ",
-  "currentVersion": "Current Version",
-  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
-  "restoreThisVersion": "Restore this Version"
+  "workspaceHeaderShort": "Çalışma alanı: "
 }

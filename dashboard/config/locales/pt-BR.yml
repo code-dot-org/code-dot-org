@@ -27,6 +27,7 @@
   submit: Enviar
   unsubmit: Cancelar envio
   next_page: Próxima página
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Adicionar professor:'
@@ -430,8 +431,8 @@
       Rovio Entertainment Ltd. Todos os direitos reservados. Plants vs. Zombies&#8482;
       &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados. O
       Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
-      GNU LGPL 2.1</a>.
+    code_from_html: Code.org usa p5.play, que é licenciado sob <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      a GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE
       e Hora do Código&reg; são marcas registradas da Code.org."

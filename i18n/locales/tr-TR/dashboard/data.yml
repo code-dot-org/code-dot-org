@@ -105,7 +105,7 @@ tr:
         StudioEC: Oyun Laboratuvarı
         Applab: Uygulama Laboratuvarı
         NetSim: İnternet Simülatörü
-        Custom: Aktör
+        Custom: Sanatçı
         CustomStudio: Oyun Laboratuvarı
     trophy:
       name:
@@ -409,7 +409,7 @@ tr:
         C2_artist_intro: 'Ressam: Giriş'
         C2_zuck_repeat_loop: Labirent Döngüleri
         C2_artist_loops: Aktör Döngüleri
-        C2_artist_debugging: Aktör Ayıklama
+        C2_artist_debugging: Sanatçı Hata Ayıklama
         C2_bee_loops: Arı Döngüleri
         C2_bee_debugging: Arı Ayıklama
         C2_bee_conditionals: Arı Koşullandırmaları
@@ -468,6 +468,7 @@ tr:
         infinity_playlab_intro: 'Oyun Laboratuvarı - Giriş'
         infinity_playlab_events: 'Oyun Laboratuvarı - Olaylar'
         infinity_playlab_repeat_forever: 'Oyun Laboratuvarı - Sonsuz Döngü'
+        csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: 'Introduction to Databases - Part 1'
         csp_applab_databases_2: 'Introduction to Databases - Part 2'
         csp_applab_processing_lists: Processing Lists with Loops

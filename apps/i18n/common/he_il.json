@@ -24,6 +24,7 @@
   "completedWithoutRecommendedBlock": "מזל טוב! השלמת את הפאזל {puzzleNumber}. (אך באפשרותך להשתמש בבלוקים שונים עבור קוד חזק יותר)",
   "continue": "המשך",
   "copy": "העתק",
+  "currentVersion": "Current Version",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -130,6 +131,7 @@
   "end": "סוף",
   "errorEmptyFunctionBlockModal": "צריכים להיות בלוקים בתוך הגדרת הפונקציה שלך. לחץ על \"עריכה\" וגרור את הבלוקים שבתוך הבלוק הירוק.",
   "errorIncompleteBlockInFunction": "לחץ על \"ערוך\" כדי לוודא שאין לך בלוקים חסרים בתוך הגדרת הפונקציה שלך.",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
   "errorParamInputUnattached": "זכור להצמיד בלוק לכל פרמטר קלט שבבלוק הפונקציה בסביבת העבודה שלך.",
   "errorQuestionMarksInNumberField": "נסה להחליף \"???\" בערך כלשהו.",
   "errorRequiredParamsMissing": "תיצור פרמטר לפונקציה שלך ע\"י לחיצה על \"עריכה\" והוספת הפרמטים הנחוצים. גרור את בלוק הפרמטר החדש אל תוך הגדרת הפונקציה שלך.",
@@ -183,6 +185,7 @@
   "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
   "repeat": "חזור על",
   "resetProgram": "אפס",
+  "restoreThisVersion": "Restore this Version",
   "rotateText": "סובב את המכשיר שלך.",
   "runProgram": "הרץ",
   "runTooltip": "הפעל את התוכנית המוגדרת על-ידי הבלוקים בסביבת העבודה.",
@@ -230,8 +233,5 @@
   "watchVideo": "צפה בסרטון",
   "when": "מתי",
   "whenRun": "התחל ריצה",
-  "workspaceHeaderShort": "סביבת העבודה: ",
-  "currentVersion": "Current Version",
-  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
-  "restoreThisVersion": "Restore this Version"
+  "workspaceHeaderShort": "סביבת העבודה: "
 }

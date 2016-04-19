@@ -24,6 +24,7 @@
   "completedWithoutRecommendedBlock": "Čestitamo! Završili ste Zagonetku {puzzleNumber}. (Ali bi mogli upotrijebiti drugačiji blok za bolji kod.)",
   "continue": "Nastavi",
   "copy": "Copy",
+  "currentVersion": "Current Version",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -130,6 +131,7 @@
   "end": "kraj",
   "errorEmptyFunctionBlockModal": "Moraš staviti blokove unutar definicije funkcije. Klikni na \"uredi\" i dovuci blokove unutar zelenog bloka.",
   "errorIncompleteBlockInFunction": "Klikni na \"uredi\" da budeš siguran da nijedan blok ne nedostaje unutar tvoje definicije funkcije.",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
   "errorParamInputUnattached": "Sjeti se da prikačiš blok za svaki unos parametra na blok funkcije na svojoj radnoj površini.",
   "errorQuestionMarksInNumberField": "Pokušaj zamijeniti \"???\" sa nekom vrijednošću.",
   "errorRequiredParamsMissing": "Napravi parametar za svoju funkciju tako da što ćeš kliknuti na \"uredi\" i dodati neophodne parametre. Dovuci nove blokove parametara u svoju definiciju funkcije.",
@@ -183,6 +185,7 @@
   "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
   "repeat": "ponovi",
   "resetProgram": "Resetuj",
+  "restoreThisVersion": "Restore this Version",
   "rotateText": "Okreni svoj uređaj.",
   "runProgram": "Pokreni",
   "runTooltip": "Pokreni program određen blokovima na radnom prostoru.",
@@ -230,8 +233,5 @@
   "watchVideo": "Pogledaj Video",
   "when": "kada",
   "whenRun": "pri pokretanju",
-  "workspaceHeaderShort": "Radni prostor: ",
-  "currentVersion": "Current Version",
-  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
-  "restoreThisVersion": "Restore this Version"
+  "workspaceHeaderShort": "Radni prostor: "
 }

@@ -755,6 +755,7 @@
         infinity_playlab_intro: "Лаборатория игр - введение"
         infinity_playlab_events: "Лаборатория игр - события"
         infinity_playlab_repeat_forever: "Лаборатория игр - повторять бесконечно"
+        csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
         csp_applab_processing_lists: Processing Lists with Loops

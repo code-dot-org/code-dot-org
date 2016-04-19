@@ -26,7 +26,8 @@
   welcome_back: "Καλώς ήρθες, %{name}"
   submit: "Υποβολή"
   unsubmit: "Ανακλήθηκε"
-  next_page: Next page
+  next_page: "Επόμενη σελίδα"
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: "Προσθέστε ένα δάσκαλο:"
@@ -609,14 +610,14 @@
     toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: "Ευχαριστούμε"
-    wrong_body: Thank you for submitting answers.
+    wrong_body: "Ευχαριστούμε που υπέβαλες απαντήσεις."
     correct_title: "Ευχαριστούμε"
-    correct_body: Thank you for submitting an answer
+    correct_body: "Ευχαριστούμε που υπέβαλες απαντήσεις."
   level_group-submittable:
     wrong_title: "Ευχαριστούμε"
-    wrong_body: Thank you for submitting answers.
+    wrong_body: "Ευχαριστούμε που υπέβαλες απαντήσεις."
     correct_title: "Ευχαριστούμε"
-    correct_body: Thank you for submitting answers.
+    correct_body: "Ευχαριστούμε που υπέβαλες απαντήσεις."
   match:
     wrong_title: "Λανθασμένη λύση"
     wrong_body: "Η λύση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε
@@ -704,7 +705,7 @@
     completed_perfect: "ολοκληρώθηκε, τέλειο"
     furthest_level_attempted: "τελευταίο επίπεδο επιχειρήθηκε"
     assessment: "αξιολόγηση"
-    submitted: submitted
+    submitted: "Υποβλήθηκε"
   studio:
     courses_working_on: "Μαθήματα τα οποία παρακολουθείτε"
     completed_courses: "Μαθήματα που ολοκληρώσατε"

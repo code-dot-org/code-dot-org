@@ -26,6 +26,7 @@ fr:
   submit: Envoyer
   unsubmit: Ne plus soumettre le travail
   next_page: Next page
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Ajouter un enseignant :'

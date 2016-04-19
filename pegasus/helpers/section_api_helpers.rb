@@ -9,8 +9,9 @@ class DashboardStudent
   def self.fetch_user_students(user_id)
     Dashboard.db[:users].
       join(:followers, :student_user_id=>:users__id).
+      join(Sequel.as(:users, :users_students), :id=>:followers__student_user_id).
+      where(followers__user_id: user_id, users_students__deleted_at: nil).
       select(*fields).
-      where(followers__user_id: user_id).
       all
   end
 
@@ -50,22 +51,29 @@ class DashboardStudent
     return unless user && (user.followed_by?(id) || user.admin?)
 
     row = Dashboard.db[:users].
+      where(users__id: id, users__deleted_at: nil).
       left_outer_join(:secret_pictures, id: :secret_picture_id).
       select(*fields,
              :secret_pictures__name___secret_picture_name,
              :secret_pictures__path___secret_picture_path,
             ).
-      where(users__id: id).
       server(:default).
       first
+
+    if row.nil?
+      return
+    end
 
     row.merge(age: birthday_to_age(row[:birthday]))
   end
 
   def self.update_if_allowed(params, dashboard_user_id)
-    return unless Dashboard.db[:followers].
-      where(student_user_id: params[:id],
-            user_id: dashboard_user_id)
+    user_to_update = Dashboard.db[:users].
+      where(id: params[:id], deleted_at: nil)
+    return if user_to_update.empty?
+    return if Dashboard.db[:followers].
+      where(student_user_id: params[:id], user_id: dashboard_user_id).
+      empty?
 
     fields = {updated_at: DateTime.now}
     fields[:name] = params[:name] unless params[:name].nil_or_empty?
@@ -75,9 +83,7 @@ class DashboardStudent
     # TODO: Only save birthday if age changed.
     fields.merge!(random_secrets) if params[:secrets].to_s == 'reset'
 
-    rows_updated = Dashboard.db[:users].
-      where(id: params[:id]).
-      update(fields)
+    rows_updated = user_to_update.update(fields)
     return nil unless rows_updated > 0
 
     fetch_if_allowed(params[:id], dashboard_user_id)
@@ -256,13 +262,13 @@ class DashboardSection
 
   def self.fetch_if_allowed(id, user_id)
     # TODO: Allow caller to specify fields that they want because the
-    # recursion is getting a bit out of control (eg. you don't want to
+    # joins are getting a bit out of control (eg. you don't want to
     # get all the students passwords when we get the list of sections).
 
     return nil unless row = Dashboard.db[:sections].
       join(:users, :id=>:user_id).
-      select(*fields).
       where(sections__id: id).
+      select(*fields).
       first
 
     section = self.new(row)
