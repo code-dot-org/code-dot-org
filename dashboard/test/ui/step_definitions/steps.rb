@@ -545,21 +545,6 @@ And(/^I set the language cookie$/) do
   debug_cookies(@browser.manage.all_cookies)
 end
 
-def encrypted_cookie(user)
-  key_generator = ActiveSupport::KeyGenerator.new(CDO.dashboard_secret_key_base, iterations: 1000)
-
-  encryptor = ActiveSupport::MessageEncryptor.new(
-    key_generator.generate_key('encrypted cookie'),
-    key_generator.generate_key('signed encrypted cookie')
-  )
-
-  cookie = {'warden.user.user.key' => [[user.id], user.authenticatable_salt]}
-
-  encrypted_data = encryptor.encrypt_and_sign(cookie)
-
-  CGI.escape(encrypted_data.to_s)
-end
-
 Given(/^I sign in as "([^"]*)"/) do |name|
   steps %Q{
     Given I am on "http://studio.code.org/reset_session"
