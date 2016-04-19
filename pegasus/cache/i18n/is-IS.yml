@@ -825,6 +825,11 @@
     problem in computer science. Code Studio teachers are leading the way in educating
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: Læra meira
   dashboard_announce_hoc: "<b>23. nóvember 2015</b> - Viltu fá sjálfboðaliða sem hefur
     brennandi áhuga á menntun á sviði tölvunarfræði til að hjálpa til við þína Klukkustund
@@ -1655,8 +1660,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spila
   artist_shortcode: art
-  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
-    (or a teacher you know) want to join a nationwide community of educators working
-    to change the face of computer science education? We'll be accepting applications
-    from middle and high school teachers in our partner districts for our year-long
-    Exploring Computer Science Professional Learning Program until April 22nd."

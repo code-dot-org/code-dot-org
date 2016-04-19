@@ -214,7 +214,8 @@ And /^I hover over the screen at xpos ([\d]+) and ypos ([\d]+)$/ do |xpos, ypos|
 
   script += %Q{
     var visualization = $("#visualizationOverlay");
-    var scale = getScale(visualization[0]);
+    var transform = window.getComputedStyle(visualization[0]).transform;
+    var scale = parseFloat(/matrix\\(([^,]*),/.exec(transform)[1]);
     var x = visualization.offset().left + (#{xpos} * scale);
     var y = visualization.offset().top + (#{ypos} * scale);
     var mousemove = createMouseEvent('mousemove', x, y);
