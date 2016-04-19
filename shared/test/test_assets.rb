@@ -360,16 +360,6 @@ class AssetsTest < FilesApiTestBase
   # Methods below this line are test utilities, not actual tests
   private
 
-  def create_channel
-    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    last_response.location.split('/').last
-  end
-
-  def delete_channel(channel_id)
-    delete "/v3/channels/#{channel_id}"
-    assert last_response.successful?
-  end
-
   def ensure_aws_credentials(channel_id)
     list(channel_id)
     credentials_missing = !last_response.successful? &&
