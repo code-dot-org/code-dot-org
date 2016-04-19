@@ -36,7 +36,7 @@ var ArtistAPI = require('./api');
 var apiJavascript = require('./apiJavascript');
 var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var ArtistVisualizationColumn = require('./ArtistVisualizationColumn');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var Slider = require('../slider');
@@ -223,15 +223,7 @@ Artist.prototype.init = function (config) {
     });
   }.bind(this);
 
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: this.studioApp_.assetUrl,
-      data: {
-        visualization: '',
-        controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl, iconPath: iconPath})
-      }
-    });
-  }.bind(this);
+  var visualizationColumn = <ArtistVisualizationColumn/>;
 
   ReactDOM.render(React.createElement(AppView, {
     assetUrl: this.studioApp_.assetUrl,
@@ -241,7 +233,7 @@ Artist.prototype.init = function (config) {
     noVisualization: false,
     isRtl: this.studioApp_.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
-    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
+    visualizationColumn: visualizationColumn,
     onMount: this.studioApp_.init.bind(this.studioApp_, config)
   }), document.getElementById(config.containerId));
 };
