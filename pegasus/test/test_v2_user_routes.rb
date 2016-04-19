@@ -182,7 +182,7 @@ class V2UserRoutesTest < Minitest::Test
 
       it 'updates student info when signed in as the teacher' do
         with_role FakeDashboard::TEACHER
-        db.transaction(rollback: :always) do
+        Dashboard.db.transaction(rollback: :always) do
           @pegasus.post "/v2/students/#{FakeDashboard::STUDENT[:id]}/update",
             {name: NEW_NAME}.to_json,
             'CONTENT_TYPE' => 'application/json;charset=utf-8'
