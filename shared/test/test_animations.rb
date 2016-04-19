@@ -216,20 +216,24 @@ class AnimationsTest < FilesApiTestBase
     list_objects 'animations', @channel_id
   end
 
-  def list_animation_versions(filename)
-    list_object_versions 'animations', @channel_id, filename
-  end
-
   def get_animation(filename)
     get_object 'animations', @channel_id, filename
+  end
+
+  def delete_animation(filename)
+    delete_object 'animations', @channel_id, filename
+  end
+
+  def list_animation_versions(filename)
+    list_object_versions 'animations', @channel_id, filename
   end
 
   def get_animation_version(filename, version_id)
     get_object_version 'animations', @channel_id, filename, version_id
   end
 
-  def delete_animation(filename)
-    delete_object 'animations', @channel_id, filename
+  def delete_all_animation_versions(filename)
+    delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/1/#{filename}")
   end
 
   def upload(filename, contents, content_type)
@@ -259,10 +263,6 @@ class AnimationsTest < FilesApiTestBase
   def copy(source_filename, dest_filename)
     put "/v3/animations/#{@channel_id}/#{dest_filename}?src=#{CGI.escape(source_filename)}"
     last_response.body
-  end
-
-  def delete_all_animation_versions(filename)
-    delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/1/#{filename}")
   end
 
   def randomize_filename(filename)

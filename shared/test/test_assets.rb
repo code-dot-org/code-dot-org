@@ -6,7 +6,7 @@ class AssetsTest < FilesApiTestBase
 
   def setup
     # Ensure the s3 path starts empty.
-    delete_all_objects('cdo-v3-assets', 'assets_test/1/1')
+    delete_all_assets('assets_test/1/1')
     @random = Random.new(0)
   end
 
@@ -182,7 +182,7 @@ class AssetsTest < FilesApiTestBase
 
   def test_assets_copy_all
     # This test creates 2 channels
-    delete_all_objects('cdo-v3-assets', 'assets_test/1/2')
+    delete_all_assets('assets_test/1/2')
     src_channel_id = create_channel
     dest_channel_id = create_channel
 
@@ -354,6 +354,10 @@ class AssetsTest < FilesApiTestBase
 
   def delete_asset(channel_id, filename)
     delete_object 'assets', channel_id, filename
+  end
+
+  def delete_all_assets(bucket)
+    delete_all_objects(CDO.assets_s3_bucket, bucket)
   end
 
   def post_object(channel_id, uploaded_file)
