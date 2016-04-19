@@ -194,11 +194,6 @@ def format_duration(total_seconds)
   "%.1d:%.2d minutes" % [minutes, seconds]
 end
 
-# Kind of hacky way to determine if we have access to the database
-# (for example, to create users) on the domain/environment that we are
-# testing.
-# require File.expand_path('../../../config/environment.rb', __FILE__)
-
 if ENV['RAILS_ENV'] != 'development'
   $options.pegasus_db_access = true if $options.pegasus_domain =~ /(localhost|ngrok)/
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /(localhost|ngrok)/
