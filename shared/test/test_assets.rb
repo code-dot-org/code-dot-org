@@ -370,13 +370,6 @@ class AssetsTest < FilesApiTestBase
     AssetBucket.new.copy_files(src_channel_id, dest_channel_id).to_json
   end
 
-  def assert_fileinfo_equal(expected, actual)
-    assert_equal(Hash, actual.class)
-    assert_equal(expected['filename'], actual['filename'])
-    assert_equal(expected['category'], actual['category'])
-    assert_equal(expected['size'], actual['size'])
-  end
-
   def create_uploaded_file(filename, contents, content_type)
     basename = [filename.split('.')[0], '.' + filename.split('.')[1]]
     temp_filename = basename[0] + @random.bytes(10).unpack('H*')[0] + basename[1]

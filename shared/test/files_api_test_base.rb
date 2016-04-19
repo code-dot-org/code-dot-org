@@ -68,6 +68,13 @@ class FilesApiTestBase < Minitest::Test
     ) if objects.any?
   end
 
+  def assert_fileinfo_equal(expected, actual)
+    assert_equal(Hash, actual.class)
+    assert_equal(expected['filename'], actual['filename'])
+    assert_equal(expected['category'], actual['category'])
+    assert_equal(expected['size'], actual['size'])
+  end
+
   def ensure_aws_credentials(channel_id)
     list_objects(channel_id)
     credentials_missing = !last_response.successful? &&
