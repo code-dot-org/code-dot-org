@@ -8,8 +8,13 @@ class AnimationsTest < FilesApiTestBase
     ensure_aws_credentials
   end
 
+  def endpoint_under_test
+    'animations'
+  end
+
   def teardown
-    assert_empty JSON.parse(list_animations) # Require that tests delete the assets they upload
+    # Require that tests delete the assets they upload
+    assert_empty list_objects(@channel_id)
     delete_channel(@channel_id)
     @channel_id = nil
   end
@@ -44,7 +49,7 @@ class AnimationsTest < FilesApiTestBase
     }
     assert_fileinfo_equal(expected_cat_image_info, actual_cat_image_info)
 
-    file_infos = JSON.parse(list_animations)
+    file_infos = list_objects(@channel_id)
     assert_fileinfo_equal(actual_cat_image_info, file_infos[0])
     assert_fileinfo_equal(actual_dog_image_info, file_infos[1])
 
@@ -211,7 +216,7 @@ class AnimationsTest < FilesApiTestBase
   private
 
   def ensure_aws_credentials
-    list_animations
+    list_objects(@channel_id)
     credentials_missing = !last_response.successful? &&
         last_response.body.index('Aws::Errors::MissingCredentialsError')
     credentials_msg = <<-TEXT.gsub(/^\s+/, '').chomp
@@ -228,11 +233,6 @@ class AnimationsTest < FilesApiTestBase
     TEXT
   ensure
     flunk credentials_msg if credentials_missing
-  end
-
-  def list_animations
-    get "/v3/animations/#{@channel_id}"
-    last_response.body
   end
 
   def list_versions(filename)

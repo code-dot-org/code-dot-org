@@ -10,6 +10,10 @@ class AssetsTest < FilesApiTestBase
     @random = Random.new(0)
   end
 
+  def endpoint_under_test
+    'assets'
+  end
+
   def test_assets
     channel_id = create_channel
 
@@ -29,7 +33,7 @@ class AssetsTest < FilesApiTestBase
     expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
     assert_fileinfo_equal(expected_sound_info, actual_sound_info)
 
-    file_infos = JSON.parse(list(channel_id))
+    file_infos = list_objects(channel_id)
     assert_fileinfo_equal(actual_image_info, file_infos[0])
     assert_fileinfo_equal(actual_sound_info, file_infos[1])
 
@@ -63,7 +67,7 @@ class AssetsTest < FilesApiTestBase
     assert last_response.successful?
 
     # invalid files are not uploaded, and other added files were deleted
-    file_infos = JSON.parse(list(channel_id))
+    file_infos = list_objects(channel_id)
     assert_equal 0, file_infos.length
 
     delete_object(channel_id, 'nonexistent.jpg')
@@ -200,7 +204,7 @@ class AssetsTest < FilesApiTestBase
     expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
 
     copy_file_infos = JSON.parse(copy_all(src_channel_id, dest_channel_id))
-    dest_file_infos = JSON.parse(list(dest_channel_id))
+    dest_file_infos = list_objects(dest_channel_id)
 
     assert_fileinfo_equal(expected_image_info, copy_file_infos[1])
     assert_fileinfo_equal(expected_sound_info, copy_file_infos[0])
@@ -266,7 +270,7 @@ class AssetsTest < FilesApiTestBase
     delete_object(channel_id, added_filename1)
     delete_object(channel_id, added_filename2)
 
-    assert (JSON.parse(list(channel_id)).empty?), "No unexpected assets were written to storage."
+    assert (list_objects(channel_id).empty?), "No unexpected assets were written to storage."
 
     delete_channel(channel_id)
     FilesApi.any_instance.unstub(:max_file_size)
@@ -304,7 +308,7 @@ class AssetsTest < FilesApiTestBase
       delete_object(channel_id, filetodelete1)
       delete_object(channel_id, filetodelete2)
 
-      assert (JSON.parse(list(channel_id)).empty?), "No unexpected assets were written to storage."
+      assert (list_objects(channel_id).empty?), "No unexpected assets were written to storage."
       delete_channel(channel_id)
     end
     FilesApi.any_instance.unstub(:max_file_size)
@@ -345,7 +349,7 @@ class AssetsTest < FilesApiTestBase
   private
 
   def ensure_aws_credentials(channel_id)
-    list(channel_id)
+    list_objects(channel_id)
     credentials_missing = !last_response.successful? &&
       last_response.body.index('Aws::Errors::MissingCredentialsError')
     credentials_msg = <<-TEXT.gsub(/^\s+/, '').chomp
@@ -354,10 +358,6 @@ class AssetsTest < FilesApiTestBase
       http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html
     TEXT
     flunk credentials_msg if credentials_missing
-  end
-
-  def list(channel_id)
-    get("/v3/assets/#{channel_id}").body
   end
 
   def post_object(channel_id, uploaded_file)

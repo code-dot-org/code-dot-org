@@ -60,4 +60,13 @@ class FilesApiTestBase < Minitest::Test
     ) if objects.any?
   end
 
+  def endpoint_under_test
+    flunk 'Subclass must provide endpoint_under_test'
+  end
+
+  def list_objects(channel_id)
+    get "/v3/#{endpoint_under_test}/#{channel_id}"
+    JSON.parse(last_response.body)
+  end
+
 end
