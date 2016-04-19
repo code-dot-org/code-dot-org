@@ -93,4 +93,16 @@ class FilesApiTestBase < Minitest::Test
     JSON.parse(last_response.body)
   end
 
+  def successful?
+    last_response.successful?
+  end
+
+  def not_found?
+    last_response.not_found?
+  end
+
+  def unsupported_media_type?
+    last_response.status == 415
+  end
+
 end

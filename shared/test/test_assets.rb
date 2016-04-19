@@ -41,40 +41,40 @@ class AssetsTest < FilesApiTestBase
     assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
     delete_object(channel_id, image_filename)
-    assert last_response.successful?
+    assert successful?
 
     delete_object(channel_id, sound_filename)
-    assert last_response.successful?
+    assert successful?
 
     # unsupported media type
     post_file(channel_id, 'filename.exe', 'stub-contents', 'application/x-msdownload')
-    assert_equal 415, last_response.status
+    assert unsupported_media_type?
 
     # mismatched file extension and mime type
     _, mismatched_filename = post_file(channel_id, 'filename.jpg', 'stub-contents', 'application/gif')
-    assert last_response.successful?
+    assert successful?
     delete_object(channel_id, mismatched_filename)
-    assert last_response.successful?
+    assert successful?
 
     # file extension case insensitivity
     _, filename = post_file(channel_id, 'filename.JPG', 'stub-contents', 'application/jpeg')
-    assert last_response.successful?
+    assert successful?
     get_object(channel_id, filename)
-    assert last_response.successful?
+    assert successful?
     get_object(channel_id, filename.gsub(/JPG$/, 'jpg'))
-    assert last_response.not_found?
+    assert not_found?
     delete_object(channel_id, filename)
-    assert last_response.successful?
+    assert successful?
 
     # invalid files are not uploaded, and other added files were deleted
     file_infos = list_objects(channel_id)
     assert_equal 0, file_infos.length
 
     delete_object(channel_id, 'nonexistent.jpg')
-    assert last_response.successful?
+    assert successful?
 
     get_object(channel_id, 'nonexistent.jpg')
-    assert last_response.not_found?
+    assert not_found?
 
     delete_channel(channel_id)
   end
@@ -109,20 +109,20 @@ class AssetsTest < FilesApiTestBase
 
     # set to be the same
     patch_abuse(channel_id, 20)
-    assert last_response.successful?
+    assert successful?
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, first_asset)
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # non-admin can't decrement
     patch_abuse(channel_id, 0)
-    refute last_response.successful?
+    refute successful?
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, first_asset)
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # admin can decrement
     FilesApi.any_instance.stubs(:admin?).returns(true)
     patch_abuse(channel_id, 0)
-    assert last_response.successful?
+    assert successful?
     assert_equal 0, asset_bucket.get_abuse_score(channel_id, first_asset)
     assert_equal 0, asset_bucket.get_abuse_score(channel_id, second_asset)
 
@@ -143,12 +143,12 @@ class AssetsTest < FilesApiTestBase
 
     # owner can view
     get_object(channel_id, asset_name)
-    assert last_response.successful?
+    assert successful?
 
     # non-owner can view
     with_session(:non_owner) do
       get_object(channel_id, asset_name)
-      assert last_response.successful?
+      assert successful?
     end
 
     # set abuse
@@ -156,19 +156,19 @@ class AssetsTest < FilesApiTestBase
 
     # owner can view
     get_object(channel_id, asset_name)
-    assert last_response.successful?
+    assert successful?
 
     # non-owner cannot view
     with_session(:non_owner) do
       get_object(channel_id, asset_name)
-      refute last_response.successful?
+      refute successful?
     end
 
     # admin can view
     with_session(:admin) do
       FilesApi.any_instance.stubs(:admin?).returns(true)
       get_object(channel_id, asset_name)
-      assert last_response.successful?
+      assert successful?
       FilesApi.any_instance.unstub(:admin?)
     end
 
@@ -176,7 +176,7 @@ class AssetsTest < FilesApiTestBase
     with_session(:teacher) do
       FilesApi.any_instance.stubs(:teaches_student?).returns(true)
       get_object(channel_id, asset_name)
-      assert last_response.successful?
+      assert successful?
       FilesApi.any_instance.unstub(:teaches_student?)
     end
 
@@ -234,17 +234,17 @@ class AssetsTest < FilesApiTestBase
     file, filename = create_uploaded_file(basename, body, content_type)
 
     post_object(owner_channel_id, file)
-    assert last_response.successful?, 'Owner can add a file'
+    assert successful?, 'Owner can add a file'
 
     with_session(:non_owner) do
       get_object(owner_channel_id, filename)
-      assert last_response.successful?, 'Non-owner can read a file'
+      assert successful?, 'Non-owner can read a file'
 
       post_object(owner_channel_id, file)
       assert last_response.client_error?, 'Non-owner cannot write a file'
 
       delete_object(owner_channel_id, filename)
-      refute last_response.successful?, 'Non-owner cannot delete a file'
+      refute successful?, 'Non-owner cannot delete a file'
     end
 
     delete_object(owner_channel_id, filename)
@@ -259,10 +259,10 @@ class AssetsTest < FilesApiTestBase
     assert last_response.client_error?, "Error when file is larger than max file size."
 
     _, added_filename1 = post_file(channel_id, "file2.jpg", "1234", 'image/jpeg')
-    assert last_response.successful?, "First small file upload is successful."
+    assert successful?, "First small file upload is successful."
 
     _, added_filename2 = post_file(channel_id, "file3.jpg", "5678", 'image/jpeg')
-    assert last_response.successful?, "Second small file upload is successful."
+    assert successful?, "Second small file upload is successful."
 
     post_file(channel_id, "file4.jpg", "ABCD", 'image/jpeg')
     assert last_response.client_error?, "Error when exceeding max app size."
@@ -289,12 +289,12 @@ class AssetsTest < FilesApiTestBase
       assert_assets_custom_metric 1, 'FileTooLarge'
 
       _, filetodelete1 = post_file(channel_id, "file2.jpg", "1234", 'image/jpeg')
-      assert last_response.successful?, "First small file upload is successful."
+      assert successful?, "First small file upload is successful."
 
       assert_assets_custom_metric 1, 'FileTooLarge', 'still only one custom metric recorded'
 
       _, filetodelete2 = post_file(channel_id, "file3.jpg", "5678", 'image/jpeg')
-      assert last_response.successful?, "Second small file upload is successful."
+      assert successful?, "Second small file upload is successful."
 
       assert_assets_custom_metric 2, 'QuotaCrossedHalfUsed'
       assert_assets_custom_event 1, 'QuotaCrossedHalfUsed'
