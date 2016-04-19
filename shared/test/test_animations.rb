@@ -230,16 +230,6 @@ class AnimationsTest < FilesApiTestBase
     flunk credentials_msg if credentials_missing
   end
 
-  def create_channel
-    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    last_response.location.split('/').last
-  end
-
-  def delete_channel(channel_id)
-    delete "/v3/channels/#{channel_id}"
-    assert last_response.successful?
-  end
-
   def list_animations
     get "/v3/animations/#{@channel_id}"
     last_response.body
