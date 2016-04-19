@@ -67,8 +67,7 @@ class V2UserRoutesTest < Minitest::Test
 
     # Keys included in each student object returned by the /v2/students endpoint
     V2_STUDENTS_KEY_LIST = [:id, :name, :username, :email, :hashed_email, :gender,
-                            :birthday, :prize_earned, :total_lines, :secret_words,
-                            :total_lines]
+                            :birthday, :prize_earned, :total_lines, :secret_words]
     def expected_v2_students_hash_for(user)
       {}.tap do |expect|
         V2_STUDENTS_KEY_LIST.each do |key|
