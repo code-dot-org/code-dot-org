@@ -7,8 +7,16 @@ class FilesApiTestBase < Minitest::Test
   include Rack::Test::Methods
   include SetupTest
 
+  # Special method used by Rack::Test to define what a test session looks like.
+  # In turn, it automatically provides get, put, last_response, and other methods.
   def build_rack_mock_session
     @session = Rack::MockSession.new(ChannelsApi.new(FilesApi), 'studio.code.org')
+  end
+
+  # Your test class should override this method to test its own endpoint:
+  # "/v3/<endpoint>/..."
+  def endpoint_under_test
+    flunk 'Subclass must provide endpoint_under_test'
   end
 
   # Create a new channel
@@ -60,8 +68,24 @@ class FilesApiTestBase < Minitest::Test
     ) if objects.any?
   end
 
-  def endpoint_under_test
-    flunk 'Subclass must provide endpoint_under_test'
+  def ensure_aws_credentials(channel_id)
+    list_objects(channel_id)
+    credentials_missing = !last_response.successful? &&
+        last_response.body.index('Aws::Errors::MissingCredentialsError')
+    credentials_msg = <<-TEXT.gsub(/^\s+/, '').chomp
+      Aws::Errors::MissingCredentialsError: if you are running these tests locally,
+      follow these instructions to configure your AWS credentials and try again:
+      http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html
+    TEXT
+  rescue Aws::S3::Errors::InvalidAccessKeyId
+    credentials_missing = true
+    credentials_msg = <<-TEXT.gsub(/^\s+/, '').chomp
+      Aws::S3::Errors::InvalidAccessKeyId: Make sure your AWS credentials are set in your locals.yml.
+      If you don't have AWS credentials, follow these instructions to configure your AWS credentials and try again:
+      http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html
+    TEXT
+  ensure
+    flunk credentials_msg if credentials_missing
   end
 
   def list_objects(channel_id)
