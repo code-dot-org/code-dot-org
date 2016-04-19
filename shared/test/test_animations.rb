@@ -1,14 +1,6 @@
-require_relative 'test_helper'
-require 'files_api'
-require 'channels_api'
+require_relative 'files_api_test_base'
 
-class AnimationsTest < MiniTest::Test
-  include Rack::Test::Methods
-  include SetupTest
-
-  def build_rack_mock_session
-    @session = Rack::MockSession.new(ChannelsApi.new(FilesApi), 'studio.code.org')
-  end
+class AnimationsTest < FilesApiTestBase
 
   def setup
     @random = Random.new(0)
