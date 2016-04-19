@@ -259,15 +259,15 @@ class FilesApi < Sinatra::Base
     put_file(endpoint, encrypted_channel_id, filename, file[:tempfile].read)
   end
 
-  # POST /v3/animations/<channel-id>/<filename>/from/<source-filename>
+  # PUT /v3/animations/<channel-id>/<filename>?src=<source-filename>
   #
   # Create or replace an animation. We use this method so that IE9 can still
   # upload by posting to an iframe.
   #
-  post %r{/v3/(animations)/([^/]+)/([^/]+)/from/([^/]+)$} do |endpoint, encrypted_channel_id, filename, source_filename|
+  put %r{/v3/(animations)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type 'text/plain'
-    copy_file(endpoint, encrypted_channel_id, filename, source_filename)
+    copy_file(endpoint, encrypted_channel_id, filename, request.GET['src'])
   end
 
   #
