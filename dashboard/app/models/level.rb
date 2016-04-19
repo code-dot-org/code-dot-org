@@ -253,7 +253,8 @@ class Level < ActiveRecord::Base
   # on that level.
   def channel_backed?
     return false if self.try(:is_project_level)
-    self.project_template_level || self.game == Game.applab || self.game == Game.gamelab || self.game == Game.pixelation
+    free_response_upload = is_a?(FreeResponse) && allow_user_uploads
+    self.project_template_level || self.game == Game.applab || self.game == Game.gamelab || self.game == Game.pixelation || free_response_upload
   end
 
   def key
