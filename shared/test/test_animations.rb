@@ -268,13 +268,6 @@ class AnimationsTest < FilesApiTestBase
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/1/#{filename}")
   end
 
-  def assert_fileinfo_equal(expected, actual)
-    assert_equal(Hash, actual.class)
-    assert_equal(expected['filename'], actual['filename'])
-    assert_equal(expected['category'], actual['category'])
-    assert_equal(expected['size'], actual['size'])
-  end
-
   def randomize_filename(filename)
     basename = [filename.split('.')[0], '.' + filename.split('.')[1]]
     basename[0] + '_' + @random.bytes(10).unpack('H*')[0] + basename[1]
