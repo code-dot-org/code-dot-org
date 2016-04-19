@@ -26,6 +26,7 @@ en:
   submit: crwdns35673:0crwdne35673:0
   unsubmit: crwdns56122:0crwdne56122:0
   next_page: crwdns56247:0crwdne56247:0
+  heading_x_of_y: 'crwdns56275:0%{heading}crwdnd56275:0%{x}crwdnd56275:0%{y}crwdne56275:0'
   add_teacher_form:
     code:
       label: crwdns23429:0crwdne23429:0

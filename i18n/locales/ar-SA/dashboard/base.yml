@@ -26,6 +26,7 @@ ar:
   submit: تسجيل
   unsubmit: عدم تقديم
   next_page: الصفحة التالية
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'إضافة معلِّماً:'
@@ -625,5 +626,5 @@ ar:
         acknowledge: 'عند تقديم هذه المعلومات, تُقرّ بأنها سوف يتم التعامل معها وفقا للشروط الموجودة في %{link_start_privacy} سياسة الخصوصية %{link_end} و %{link_start_tos}شروط الاستخدام%{link_end}'
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: ابحث عن أيقونة...
+      no_icons_found: لم توجد أيقونات

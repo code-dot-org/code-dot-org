@@ -26,6 +26,7 @@
   submit: Insturen
   unsubmit: Intrekken
   next_page: Volgende pagina
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Voeg een leraar toe:'
@@ -427,8 +428,8 @@
       Entertainment Ltd. Alle rechten voorbehouden. Plants vs. Zombies&#8482; &copy;
       %{current_year} Electronic Arts Inc. Alle rechten voorbehouden. The Amazing
       World of Gumball is handelsmerk en &copy; 2015 Cartoon Network.
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
-      GNU LGPL 2.1</a>.
+    code_from_html: Code.org maakt gebruik van p5.play, onder de licentie <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
+      LGPL 2.1</a>.
     powered_by_aws: Aangedreven door Amazon webservices
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, het CODE logo en
       Hour of Code&reg; zijn handelsmerken van Code.org."

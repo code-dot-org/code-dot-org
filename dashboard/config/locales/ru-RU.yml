@@ -26,7 +26,8 @@
   welcome_back: "С возвращением, %{name}"
   submit: "Отправить"
   unsubmit: "Снять подтверждение"
-  next_page: Next page
+  next_page: "Следующая страница"
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: "Добавить учителя:"
@@ -415,7 +416,8 @@
       Ltd. Все права защищены. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
       Arts Inc. Все права защищены. Удивительный мир Гамбола является торговой маркой
       и &copy; 2015 Cartoon Network.
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+    code_from_html: Code.org использует p5.play, который лицензируется на условиях
+      <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
     powered_by_aws: "Создано с помощью Amazon Web Services"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE и Hour
@@ -678,7 +680,7 @@
     completed_perfect: "Завершено, отлично"
     furthest_level_attempted: "запрошен слишком высокий уровень"
     assessment: "оценка"
-    submitted: submitted
+    submitted: "Представленный"
   studio:
     courses_working_on: "Курсы, в процессе изучения"
     completed_courses: "Завершенные курсы"

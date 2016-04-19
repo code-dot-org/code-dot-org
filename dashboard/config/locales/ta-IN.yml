@@ -27,6 +27,7 @@
   submit: "சமர்ப்பிக்க"
   unsubmit: Unsubmit
   next_page: Next page
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Add a teacher:'
@@ -610,7 +611,7 @@
     startover_title: Are you sure you want to start over?
     startover_body: This will reset the puzzle to its start state and reset all the
       data you've added or changed.
-    startover_ok: Start Over
+    startover_ok: "மீண்டும் துவங்கு"
     startover_cancel: "ரத்து செய்"
   time:
     hour: 1 hour

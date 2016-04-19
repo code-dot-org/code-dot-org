@@ -993,8 +993,8 @@
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that
-          is less than, equal to or greater than a number, THEN do something.
+        text: Dit is een voorwaardelijk blok. Het zegt ALS de nektar of honing minder
+          dan, gelijk aan of meer dan een bepaald getal is DAN iets doen.
       2:
         image: notes/C2_bee_conditionals_2.png
         text: This is useful when we don't know how much nectar or honey to get, as
@@ -1007,8 +1007,8 @@
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
-        text: This is the binary bracelets lesson. We are going to code our initials
-          on a bracelet we can wear and show all our friends!
+        text: Dit is de binaire armband les. We gaan onze initialen op een armband
+          coderen die we kunnen dragen en aan onze vrienden kunnen laten zien!
       2:
         image: notes/C2_binary_bracelets_2.png
         text: Binair is een manier om informatie weer te geven met behulp van slechts
@@ -1033,8 +1033,8 @@
     C2_conditionals_with_cards:
       1:
         image: notes/C2_conditionals_with_cards_1.png
-        text: This lesson is called conditionals with cards. Every day you make decisions
-          based on what you see and hear.
+        text: Deze les heet conditionele kaarten. Elke dag maak je beslissingen op
+          basis van wat je hoort en ziet.
       2:
         image: notes/C2_conditionals_with_cards_2.png
         text: I want to walk to the park but first I have to decide whether I should
@@ -1326,9 +1326,10 @@
     C3_artist_functions:
       1:
         image: notes/C3_artist_functions_1.png
-        text: One of the great things in computer programming is once you've taught
-          a computer how to do an action, you can call that function again. You give
-          it a name and then you can call it. That's really like extending the language.
+        text: Een van de fantastische dingen in program,eren is dat als je een computer
+          hebt geleerd om een bepaalde actie uit te voeren, je die functie opnieuw
+          kunt aanroepen. Je kunt deze een naam geven die je vervolgens kunt aanroepen.
+          Het is alsof je de taal uitbreidt.
       2:
         image: notes/C3_artist_functions_2.png
         text: In the program we built, we learned how to draw a square by moving and
@@ -1380,8 +1381,8 @@
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that
-          is less than, equal to or greater than a number, THEN do something.
+        text: Dit is een voorwaardelijk blok. Het zegt ALS de nektar of honing minder
+          dan, gelijk aan of meer dan een bepaald getal is DAN iets doen.
       2:
         image: notes/C3_bee_conditionals_2.png
         text: This is useful when we don't know how much nectar or honey to get, as
@@ -1446,12 +1447,12 @@
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
-        text: You're going to be creating your very own bounce game that you'll be
-          able to share with your friends! How cool!
+        text: Je gaat je eigen bounce-spelletje maken dat je kunt delen met je vrienden!.
+          Hoe cool!
       2:
         image: notes/C3_bounce_2.png
-        text: To get started, we have to link up the paddle controls to the arrow
-          keys on our keyboard.
+        text: Om te beginnen moeten we de batjes aasluiten op de pijltjes toetsen
+          van ons toetsenbord.
       3:
         image: notes/C3_bounce_3.png
         text: We can do this by linking the when left arrow block to the move left
@@ -1841,9 +1842,10 @@
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
-        text: One of the great things in computer programming is once you've taught
-          a computer how to do an action, you can call that function again. You give
-          it a name and then you can call it. That's really like extending the language.
+        text: Een van de fantastische dingen in program,eren is dat als je een computer
+          hebt geleerd om een bepaalde actie uit te voeren, je die functie opnieuw
+          kunt aanroepen. Je kunt deze een naam geven die je vervolgens kunt aanroepen.
+          Het is alsof je de taal uitbreidt.
       2:
         image: notes/C4_function_edit_2.png
         text: In the program we built, we learned how to draw a square by moving and

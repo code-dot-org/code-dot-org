@@ -26,6 +26,7 @@ es:
   submit: Enviar
   unsubmit: NO enviado
   next_page: Siguiente pagina
+  heading_x_of_y: '%{heading} (página %{x} de %{y})'
   add_teacher_form:
     code:
       label: 'Agregar un maestro:'
@@ -345,7 +346,7 @@ es:
     help_from_html_old: Ingenieros de Google, Microsoft, Facebook y Twitter han ayudado a crear este material.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos los derechos reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney y Lucasfilm. Todos los derechos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney. Todos los derechos reservados.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Todos los derechos reservados..<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos los derechos reservados.<br />Plants contra Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos los derechos reservados.<br />The Amazing World of Gumball es trademark y &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos los derechos reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney y Lucasfilm. Todos los derechos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney. Todos los derechos reservados.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Todos los derechos reservados..<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos los derechos reservados.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos los derechos reservados.<br />The Amazing World of Gumball es marca registrada y &copy; 2015 Cartoon Network.'
-    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
+    code_from_html: 'Code.org utiliza p5.play, con la licencia <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, el logotipo de CODE y el de Hora de Código &reg; son marcas registradas de Code.org.'
     copyright: Derechos de autor
@@ -624,5 +625,5 @@ es:
         acknowledge: 'Al enviar esta información, usted reconoce que se tratarán de un acuerdo con los términos de %{link_start_privacy}Privacy Policy%{link_end}%y de%{link_start_tos}Terminos de Servicio%{link_end}'
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Busca un ícono...
+      no_icons_found: No se encontraron íconos
