@@ -25,8 +25,7 @@
     "disable_examples": "false",
     "free_play": "false",
     "impressive": "false",
-    "disable_sharing": "false",
-    "project_template_level_name": "Ryan Doily Step 1"
+    "disable_sharing": "false"
   },
   "published": true,
   "notes": "",
@@ -34,6 +33,11 @@
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="draw_move" inline="true">

@@ -27,9 +27,12 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "images": "[{\"filename\":\"binary_grid.svg\",\"position\":[0,0]}]"
+    "images": "[{\"filename\":\"binary_grid.svg\",\"position\":[0,0]}]",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 2,
     "repeat_loops": 2
@@ -266,7 +269,7 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" deletable="false" movable="false" uservisible="false" y="14">
           <next>
             <block type="variables_set" inline="false">
               <title name="VAR">bit</title>
@@ -275,23 +278,25 @@
                   <title name="NUM">0</title>
                 </block>
               </value>
-              <next>
-                <block type="controls_repeat">
-                  <title name="TIMES">11</title>
-                  <statement name="DO">
-                    <block type="procedures_callnoreturn" inline="true">
-                      <mutation name="draw">
-                        <arg name="binary"/>
-                      </mutation>
-                      <value name="ARG0">
-                        <block type="text">
-                          <title name="TEXT">110010</title>
-                        </block>
-                      </value>
+            </block>
+          </next>
+        </block>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">11</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn" inline="true">
+                  <mutation name="draw">
+                    <arg name="binary"/>
+                  </mutation>
+                  <value name="ARG0">
+                    <block type="text">
+                      <title name="TEXT">110010</title>
                     </block>
-                  </statement>
+                  </value>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>
