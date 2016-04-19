@@ -28,8 +28,8 @@ module FakeDashboard
     id: 7, name: 'Temporary Teacher', user_type: 'teacher', admin: false
   }
   USERS = [
-    STUDENT, TEACHER, ADMIN, FACILITATOR, SELF_STUDENT, UPDATED_STUDENT,
-    DELETED_STUDENT, TEACHER_WITH_DELETED
+    STUDENT, TEACHER, ADMIN, FACILITATOR, SELF_STUDENT, DELETED_STUDENT,
+    TEACHER_WITH_DELETED
   ]
 
   #
