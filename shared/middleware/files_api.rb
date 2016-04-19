@@ -24,10 +24,6 @@ class FilesApi < Sinatra::Base
     end
   end
 
-  def allowed_file_type?(endpoint, extension)
-    get_bucket_impl(endpoint).new.allowed_file_type?(extension)
-  end
-
   def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
     return true if admin? || new_score.nil?
 
@@ -121,12 +117,14 @@ class FilesApi < Sinatra::Base
       not_found
     end
 
+    buckets = get_bucket_impl(endpoint).new
+
     type = File.extname(filename)
     not_found if type.empty?
-    unsupported_media_type unless allowed_file_type?(endpoint, type)
+    unsupported_media_type unless buckets.allowed_file_type?(type)
     content_type type
 
-    result = get_bucket_impl(endpoint).new.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
+    result = buckets.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
     not_found if result[:status] == 'NOT_FOUND'
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
@@ -143,15 +141,16 @@ class FilesApi < Sinatra::Base
 
     file_too_large(endpoint) unless body.length < max_file_size
 
+    buckets = get_bucket_impl(endpoint).new
+
     # verify that file type is in our whitelist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
     file_type = File.extname(filename)
-    unsupported_media_type unless allowed_file_type?(endpoint, file_type)
+    unsupported_media_type unless buckets.allowed_file_type?(file_type)
     # ignore client-specified mime type. infer it from file extension
     # when serving assets.
     mime_type = Sinatra::Base.mime_type(file_type)
 
-    buckets = get_bucket_impl(endpoint).new
     app_size = buckets.app_size(encrypted_channel_id)
 
     quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < max_app_size
@@ -174,15 +173,15 @@ class FilesApi < Sinatra::Base
   def copy_file(endpoint, encrypted_channel_id, filename, source_filename)
     not_authorized unless owns_channel?(encrypted_channel_id)
 
+    buckets = get_bucket_impl(endpoint).new
+
     # verify that file type is in our whitelist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
     file_type = File.extname(filename)
-    unsupported_media_type unless allowed_file_type?(endpoint, file_type)
+    unsupported_media_type unless buckets.allowed_file_type?(file_type)
     # ignore client-specified mime type. infer it from file extension
     # when serving assets.
     mime_type = Sinatra::Base.mime_type(file_type)
-
-    buckets = get_bucket_impl(endpoint).new
 
     # Get the app size and size of the source object to check app quotas
     source_size, app_size = buckets.object_and_app_size(encrypted_channel_id, source_filename)
