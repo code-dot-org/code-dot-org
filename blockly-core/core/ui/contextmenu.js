@@ -60,7 +60,7 @@ Blockly.ContextMenu.show = function(e, options) {
     menuItem.setEnabled(option.enabled);
     if (option.enabled) {
       var evtHandlerCapturer = function(callback) {
-        return function() { Blockly.doCommand(callback); };
+        return function() { callback() };
       };
       goog.events.listen(menuItem, goog.ui.Component.EventType.ACTION,
                          evtHandlerCapturer(option.callback));
@@ -133,16 +133,6 @@ Blockly.ContextMenu.optionToDom_ = function(text) {
   var textNode = document.createTextNode(text);
   textElement.appendChild(textNode);
   return gElement;
-};
-
-/**
- * Hide the context menu.
- */
-Blockly.ContextMenu.hide = function() {
-  if (Blockly.ContextMenu.visible) {
-    Blockly.ContextMenu.svgGroup.style.display = 'none';
-    Blockly.ContextMenu.visible = false;
-  }
 };
 
 /**
