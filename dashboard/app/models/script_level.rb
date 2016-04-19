@@ -11,6 +11,7 @@
 #  position   :integer
 #  assessment :boolean
 #  level_id   :integer
+#  properties :text(65535)
 #
 # Indexes
 #
