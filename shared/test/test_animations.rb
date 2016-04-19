@@ -172,8 +172,8 @@ class AnimationsTest < FilesApiTestBase
     assert_equal 2, versions.count
 
     # Get the first and second version.
-    assert_equal v1_file_data, get_version(filename, versions.last['versionId'])
-    assert_equal v2_file_data, get_version(filename, versions.first['versionId'])
+    assert_equal v1_file_data, get_animation_version(filename, versions.last['versionId'])
+    assert_equal v2_file_data, get_animation_version(filename, versions.first['versionId'])
 
     # Check cache headers
     assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
@@ -205,7 +205,7 @@ class AnimationsTest < FilesApiTestBase
     refute_equal original_version_id, new_version_id
 
     # Make sure that one version has the newest content
-    assert_equal v2_file_data, get_version(filename, new_version_id)
+    assert_equal v2_file_data, get_animation_version(filename, new_version_id)
 
     delete_object(filename)
   end
@@ -220,13 +220,12 @@ class AnimationsTest < FilesApiTestBase
     list_object_versions 'animations', @channel_id, filename
   end
 
-  def get_animation(filename, body = '', headers = {})
-    get_object 'animations', @channel_id, filename, body, headers
+  def get_animation(filename)
+    get_object 'animations', @channel_id, filename
   end
 
-  def get_version(filename, version_id)
-    get "/v3/animations/#{@channel_id}/#{filename}?version=#{version_id}"
-    last_response.body
+  def get_animation_version(filename, version_id)
+    get_object_version 'animations', @channel_id, filename, version_id
   end
 
   def delete_object(filename)

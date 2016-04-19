@@ -34,10 +34,10 @@ class SourcesTest < FilesApiTestBase
     assert_equal 2, versions.count
 
     # Get the first and second version.
-    get "/v3/sources/#{@channel}/#{filename}?version=#{versions.last['versionId']}"
-    assert_equal file_data, last_response.body
-    get "/v3/sources/#{@channel}/#{filename}?version=#{versions.first['versionId']}"
-    assert_equal new_file_data, last_response.body
+    first_version = get_source_version(filename, versions.last['versionId'])
+    assert_equal file_data, first_version
+    second_version = get_source_version(filename, versions.first['versionId'])
+    assert_equal new_file_data, second_version
 
     # Check cache headers
     assert_equal 'private, must-revalidate, max-age=0', last_response['Cache-Control']
@@ -58,9 +58,8 @@ class SourcesTest < FilesApiTestBase
     assert successful?
 
     # List versions.
-    get "/v3/sources/#{@channel}/#{filename}/versions"
+    versions = list_source_versions(filename)
     assert successful?
-    versions = JSON.parse(last_response.body)
     assert_equal 1, versions.count
   end
 
@@ -68,5 +67,9 @@ class SourcesTest < FilesApiTestBase
 
   def list_source_versions(filename)
     list_object_versions 'sources', @channel, filename
+  end
+
+  def get_source_version(filename, version_id)
+    get_object_version 'sources', @channel, filename, version_id
   end
 end
