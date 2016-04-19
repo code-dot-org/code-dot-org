@@ -815,6 +815,11 @@
     আমরা আমাদের হাই স্কুলে কম্পিউটার বিজ্ঞানের জন্য পেশাগত শিখন প্রোগ্রামে একটি একটি
     সীমিত সংখ্যক স্থান যোগ করছি। আপনার স্থান নিশ্চিত করতে <u>মার্চ ৩১<u> এর মধ্যে
     আবেদন করুন।"
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: "আরও জানুন"
   dashboard_announce_hoc: "<b>নভেম্বর ২৩, ২০১৫</b> - এক ঘন্টার কোড অনুষ্ঠানের সময়
     আপনি কি কম্পিউটার বিজ্ঞান বিষয়ে উত্সাহী স্বেচ্ছাসেবকের সাহায্য চান? ৭০০০ এর ও
@@ -1654,8 +1659,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "খেলুন"
   artist_shortcode: art
-  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
-    (or a teacher you know) want to join a nationwide community of educators working
-    to change the face of computer science education? We'll be accepting applications
-    from middle and high school teachers in our partner districts for our year-long
-    Exploring Computer Science Professional Learning Program until April 22nd."
