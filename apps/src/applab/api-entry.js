@@ -10,6 +10,7 @@ window.Radium = require('radium');
 window.Applab = require('./applab');
 var applabCommands = require('./commands');
 var api = require('./api');
+var appStorage = require('./appStorage');
 
 // TODO: remove the below two monkey patches.
 window.Applab.JSInterpreter = {getNearestUserCodeLine: function () {return 0;}};
@@ -22,6 +23,14 @@ window.Applab.callCmd = function (cmd) {
   return retVal;
 };
 
-for (var key in api) {
+// Expose api functions globally
+for (let key in api) {
   window[key] = api[key];
+}
+
+// disable appStorage
+for (let key in appStorage) {
+  appStorage[key] = function () {
+    console.error("Data APIs are not available outside of code studio.");
+  };
 }
