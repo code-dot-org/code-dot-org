@@ -16,7 +16,7 @@ class SourcesTest < FilesApiTestBase
     filename = 'test.js'
     file_data = 'abc 123'
     file_headers = { 'CONTENT_TYPE' => 'text/javascript' }
-    delete_all_versions('cdo-v3-sources', "sources_test/1/1/#{filename}")
+    delete_all_source_versions(filename)
     put_source(filename, file_data, file_headers)
     assert successful?
 
@@ -49,7 +49,7 @@ class SourcesTest < FilesApiTestBase
     filename = 'replace_me.js'
     file_data = 'version 1'
     file_headers = { 'CONTENT_TYPE' => 'text/javascript' }
-    delete_all_versions('cdo-v3-sources', "sources_test/1/1/#{filename}")
+    delete_all_source_versions(filename)
     put_source(filename, file_data, file_headers)
     assert successful?
     response = JSON.parse(last_response.body)
@@ -85,5 +85,9 @@ class SourcesTest < FilesApiTestBase
 
   def put_source_version(filename, version_id, body, headers)
     put_object_version 'sources', @channel, filename, version_id, body, headers
+  end
+
+  def delete_all_source_versions(filename)
+    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/1/#{filename}")
   end
 end
