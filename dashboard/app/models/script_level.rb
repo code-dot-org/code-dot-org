@@ -36,6 +36,7 @@ class ScriptLevel < ActiveRecord::Base
     Script.get_from_cache(script_id)
   end
 
+  # TODO(ram): stop using and delete these four convenience methods
   def level
     levels[0]
   end
