@@ -21,7 +21,7 @@ de-DE:
   twentyhours_heading: 'Teste unseren "Einführung in die Informatik"-Kurs'
   twentyhours_text: 'Du hast deine erste "Hour of Code" beendet? Erlerne weitere Informatik- und Programmierkonzepte in diesem Folgekurs.'
   og_title: Jedes Kind verdient eine Gelegenheit
-  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
+  og_description: Jeder Schüler in jeder Schule verdient die Chance, Informatik zu studieren. Das verändert alles.
   hoc2014_heading: 'Nimm an der <a href="http://hourofcode.com">Hour of Code</a> <br/>8.-14. Dezember 2014  teil<br/>'
   hoc2014_students: Schüler
   hoc2014_try: Versuche es
@@ -70,7 +70,7 @@ de-DE:
   view_unit: \n
   make_app: \n
   congrats_guest_speaker_title: Einen Gastredner für Ihren Unterricht finden
-  congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
+  congrats_guest_speaker_desc: Jetzt, da ihre SchülerInnen den Informatik-Kurs abgeschlossen haben, sollten Sie dies feiern und mit Dingen in Verbindung bringen, die es in der realen Welt gibt und einen Gast-Redner in ihren Unterricht einladen. Dazu können Sie unsere Freiwilligen-Karte verwenden, um regionale Freiwillige zu finden, die Sie gerne im Unterricht besuchen. Sie können aber auch nach Städten suchen, in den es Informatikstudenten oder technische Experten gibt, die gerne aus der Ferne über Video-Chat ihre Schüler weiter inspirieren.
   congrats_guest_speaker_cta: Finde einen Gastsprecher
   congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
@@ -638,7 +638,8 @@ de-DE:
   dashboard_faq_k5: Häufig gestellte Fragen zur Grundschule
   dashboard_announcements: Ankündigungen
   dashboard_announce_view_all: Alle anzeigen
-  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
+  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
   dashboard_announce_button_text: Erfahre mehr
   dashboard_announce_hoc: '<b>9. November 2015</b> - Eine neue Hour of Code Anleitung ist erschienen, präsentiert durch den bevorstehenden Film: Star Wars: Das Erwachen der Macht. Arbeite zusammen mit Rey um den neuen Droiden, BB-8, durch seine Mission zu leiten. Dann triff Leia, um dein eigenes Spiel in einer weit, weit entfernten Galaxie zu erstellen und zu teilen.'
   dashboard_announce_playlab: '<b>4. Dezember 2015</b> - "Hour of Code" ist da! Erkunde 50 Übungen, es spielt keine Rolle wie alt du bist oder welches Gerät du benutzt. Diese Woche neu: Programmiere deine eigenen Geschichten und Spiele in neuen Spielelaboren, Ice Age und Gumball.'

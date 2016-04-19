@@ -623,6 +623,7 @@ bn-BD:
   dashboard_announcements: ঘোষণা
   dashboard_announce_view_all: সব দেখুন
   dashboard_announce_message: '<b>২৯ ফেব্রুয়ারি, ২০১৬</b>- কর্মশালায় অংশগ্রহণকারীদের ৯০% আমাদের প্রোগ্রামকে সবচেয়ে ভাল পেশাদারী উন্নয়ন কর্মশালা বলেছেন। চাহিদার কারণে, আমরা আমাদের হাই স্কুলে কম্পিউটার বিজ্ঞানের জন্য পেশাগত শিখন প্রোগ্রামে একটি একটি সীমিত সংখ্যক স্থান যোগ করছি। আপনার স্থান নিশ্চিত করতে <u>মার্চ ৩১<u> এর মধ্যে আবেদন করুন।'
+  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
   dashboard_announce_button_text: আরও জানুন
   dashboard_announce_hoc: '<b>নভেম্বর ২৩, ২০১৫</b> - এক ঘন্টার কোড অনুষ্ঠানের সময় আপনি কি কম্পিউটার বিজ্ঞান বিষয়ে উত্সাহী স্বেচ্ছাসেবকের সাহায্য চান? ৭০০০ এর ও বেশি স্বেচ্ছাসেবক আপনার ছাত্রদের ক্লাসে যেয়ে বা ভিডিও আলাপের মাধ্যমে অনুপ্রানিত করার চেষ্টা করছে। আপনার এলাকার স্বেচ্ছাসেবকদের সাথে যোগাযোগ করতে স্বেচ্ছাসেবক মানচিত্র দেখুন।'
   dashboard_announce_playlab: '<b>ডিসেম্বর ৪, ২০১৫</b> - এক ঘন্টার কোড এখন এখানে! সব বয়সের এবং প্রতিটি ডিভাইসের জন্য উপযোগী ৫০ টি টিউটোরিয়াল চেষ্টা করে দেখুন। এই সপ্তাহে নতুন: আপনার নিজের গল্প এবং গেমের কোড করুন নতুন প্লে ল্যাব, বরফ যুগ ও গামবলে।'

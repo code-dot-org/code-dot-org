@@ -26,6 +26,7 @@ is:
   submit: Senda inn
   unsubmit: Afturkalla innsendingu
   next_page: Næsta síða
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Bæta við kennara:'

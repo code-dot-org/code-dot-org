@@ -2794,167 +2794,167 @@
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
-          Minecraft.
+        text: Em dic Jens Bergensten però em coneixen com Jeb. Jo sóc el desenvolupador
+          cap de Minecraft, aquí a Mojang a Estocolm. Crec que era als onze o dotze
+          anys que vaig començar a programar perquè volia fer jocs. Un dels amics
+          del meu pare em va dir que per a fer jocs cal aprendre a programar. Així
+          és com vaig començar. M'agrada dissenyar i imaginar l'arquitectura dels
+          jocs. Això és el que realment m'agrada de Minecraft.
       2:
         image: notes/mc_intro_2.JPG
-        text: Over the next hour, you're going to learn the basics of computer science
-          by programming Alex or Steve to move through a simulated piece of a Minecraft
-          world.
+        text: Durant la següent hora, aprendràs els conceptes bàsics d'informàtica
+          programant l'Àlex o l'Steve per moure's per una part simulada d'un món de
+          Minecraft.
       3:
         image: notes/mc_intro_3.JPG
-        text: Traditional programming is usually in text but today we'll use Blockly,
-          a system which uses visual blocks that you can drag and drop to write programs.
-          Under the hood, you're creating Javascript code.
+        text: La programació tradicional es fa normalment en text però avui farem
+          servir Blockly, un sistema que utilitza blocs visuals que pot arrossegar
+          i deixar anar per escriure programes. Sota el capó, estaràs creant codi
+          en Javascript.
       4:
         image: notes/mc_intro_4.JPG
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
+        text: Els conceptes que aprendràs són els que programadors d'ordinadors utilitzen
+          cada dia són la base de la informàtica. Aquí a Mojang utilitzem aquests
+          mateixos conceptes per fer que el Minecraft funcioni.
       5:
         image: notes/mc_intro_5.JPG
-        text: Before you start, you'll pick your character. I'm going to choose Alex.
-          Let's build code for a program that will help her move around the screen.
+        text: Abans de començar, triaràs el teu personatge. Jo triaré l'Àlex. Farem
+          codi per a un programa que l'ajudarà a moure's per la pantalla.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
+        text: La pantalla es divideix en tres parts. A l'esquerra hi ha l'espai del
+          joc on el programa s'executarà. Les instruccions per a cada nivell estan
+          escrites a sota.
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: La zona central conté la caixa d'eines i cada un d'aquests blocs és
+          una comanda que dirigeix les accions de l'Àlex.
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: L'espai blanc a la dreta s'anomena l'espai de treball i aquí és on construirem
+          el nostre programa.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: Si arrosseguem el bloc "avança()" al nostre espai de treball i fem clic
+          a "executa", què passa? L'Àlex es mou cap endavant un espai.
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: I què passa si volem fer alguna cosa després que ella s'ha mogut cap
+          endavant un espai? Podem afegir un altre bloc al nostre programa. Triaré
+          el bloc "gira a la dreta()" i l'arrossegaré sota el bloc "avança()" fins
+          que aparegui aquesta línia taronja. Llavors el deixaré anar i els dos blocs
+          quedaran junts. Quan premem "executa" una altra vegada, l'Àlex durà a terme
+          les ordres que s'apilen de dalt a baix en el nostre espai de treball.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: Si alguna vegada vols suprimir un bloc, simplement arrossega'l de la
+          pila a la caixa d'eines.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: 'Per desfer els canvis i tornar a l''inici del nivell, usa el botó de
+          "torna a començar" a la part superior dreta de l''àrea de treball. Una cosa
+          més: veus el petit triangle en els blocs de gir? En el moment que vegis
+          aquests triangles significa que pots escollir una opció diferent. Comencem
+          a programar!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: Sóc Lydia hiverns, directora de marca de Mojang i hem fet un petit joc
+          anomenat Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: My favorite thing to do in Minecraft is explore. I love adventuring
-          in caves and seeing what I can find. As someone who isn't a programmer,
-          I'm really excited to go through the Minecraft lesson and actually learn
-          some coding myself.
+        text: El que més m'agrada al Minecraft és explorar. M'encanta entrar en coves
+          i veure què hi puc trobar. Com algú que no és un programador, estic molt
+          emocionada d'avançar en la lliçó de Minecraft i aprendre a programar.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
+        text: L'últim nivell necessitava un munt de blocs "avança()". Seria més fàcil
+          si es pogués dir a l'ordinador que fes l'ordre "avança()" quatre o cinc
+          vegades. Per sort per a nosaltres, els ordinadors són realment bons en repetir
+          ordres amb bucles de repetició.
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: Al programar el Minecraft utilitzem bucles de repetició per ubicar tots
+          els materials inicials per crear un món nou. Això són milers i milers de
+          blocs. També utilitzem bucles en punts més simples, per exemple per fer
+          moure els peus de l'Àlex endevant i enrere al caminar. Els bucles de repetició
+          són una part potent de la programació.
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: La nit s'acosta així que en el pròxim parell de nivells construirem
+          una casa per estar segurs. Usarem el bloc "repeteix" per fer-ho més fàcil.
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: Per construir un mur de casa nostra podem dir a l'Àlex que avanci i
+          col. loqui tauler quatre vegades, o bé podem dir-li que avanci i posi un
+          tauló, i després usar el bloc "repeteix()" perquè dugui a terme l'acció
+          diverses vegades. Ara farem clic en el bloc de repetició i li direm quantes
+          vegades volem realitzar aquesta acció. Ara construirem la nostra casa abans
+          no caigui la nit! Passa-t'ho bé.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: Ara coneixerem si les declaracions "si". Les declaracions "si" són una
+          part fonamental de l'aprendre a programar. Ajuden a l'ordinador a prendre
+          decisions.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: Tots els ordinadors utilitzen declaracions "si", incloent-hi el meu
+          telèfon. Per exemple, quan desbloquejo el meu telèfon s'executa algun codi
+          que diu que si he introduït la contrasenya correctament, llavors es desbloquegi
+          el telèfon. En cas contrari, es mostra un missatge d'error.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: Pots usar les declaracions "si" del teu codi per fer que l'Steve i l'Àlex
+          reaccionin a què vegin en el món. Per exemple, si hi ha una roca davant
+          d'ells, poden girar esquerra. O girar a la dreta si es veuen davant d'un
+          arbre.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: En aquest cas, no volem caure a la lava. És fàcil fer un pla per la
+          lava. Es pot veure a la pantalla. Però què passa amb la lava que no podem
+          veure sota la pedra?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
+        text: Després d'excavar la pedra, haurem de comprovar si hi ha lava abans
+          de seguir endavant. Si hi ha lava, voldrem col·locar una pedra davant del
+          nostre personatge abans de poder avançar. Així podem avançar amb seguretat.
+          És temps d'excavar! I recorda usar la declaració "si" per vigilar on trepitges.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Felicitats! Acabes d'aprendre els fonaments bàsics d'informàtica.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Ara pots utilitzar aquests blocs per construir la teva pròpia creació.
+          No hi ha cap més instrucció ni nivell per resoldre. Pots construir tot allò
+          que vulguis. Tu tries.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of
-          torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!"
+        text: "[estudiants parlant] Ara va de debò. Tisores. He fet una L amb torxes.
+          He fet una A amb taulers de bedoll. Funciona, funciona. Hem construït una
+          casa amb llana!"
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Quan hagis acabat la teva creació, triar compartir per obtenir un enllaç
+          per compartir-ho amb els teus amics. Diverteix-te!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Felicitats! Acabes d'aprendre els fonaments bàsics d'informàtica.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Ara pots utilitzar aquests blocs per construir la teva pròpia creació.
+          No hi ha cap més instrucció ni nivell per resoldre. Pots construir tot allò
+          que vulguis. Tu tries.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of
-          torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!"
+        text: "[estudiants parlant] Ara va de debò. Tisores. He fet una L amb torxes.
+          He fet una A amb taulers de bedoll. Funciona, funciona. Hem construït una
+          casa amb llana!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Ara pots construir el que vulguis. Diverteix-te!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
@@ -2985,8 +2985,8 @@
           of code.
       6:
         image: notes/gumball_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: L'espai blanc a la dreta s'anomena l'espai de treball i aquí és on construirem
+          el nostre programa.
       7:
         image: notes/gumball_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run
@@ -3069,8 +3069,8 @@
           of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: L'espai blanc a la dreta s'anomena l'espai de treball i aquí és on construirem
+          el nostre programa.
       7:
         image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run

@@ -639,7 +639,8 @@ da-DK:
   dashboard_faq_k5: K-5 Ofte stillede spørgsmål
   dashboard_announcements: Meddelelser
   dashboard_announce_view_all: Vis alle
-  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
+  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
   dashboard_announce_button_text: Lær mere
   dashboard_announce_hoc: '<b>23 November 2015</b> - Ønsker du en frivillig, som er dedikeret i datalogi uddannelse, til at hjælpe dig under din Hour of Code? Over 7.000 frivillige ønsker at inspirere dine elever ved at besøge dit klasseværelse eller videochatte. Tjek kortet over frivillige for at kontakte frivillige i dit område.'
   dashboard_announce_playlab: '<b>4. December 2015</b> - The Hour of Code er her! Prøv 50 tutorials for alle aldre, og enhver enhed. Nyt i denne uge: Kod dine egne historier og spil i nye Spil-Labs, Ice Age og Gumball.'

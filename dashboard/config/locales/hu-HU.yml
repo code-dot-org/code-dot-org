@@ -27,6 +27,7 @@
   submit: Elküldés
   unsubmit: Visszavon
   next_page: Következő oldal
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Tanár hozzáadása:'
@@ -418,8 +419,8 @@
       Entertainment Ltd. Minden jog fenntartva.<br />Plants vs. Zombies&#8482; &copy;
       %{current_year} Electronic Arts Inc. Minden jog fenntartva.<br /> a Gumball
       csodálatos világa a Cartoon Network bejegyzett védjegye.
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
-      GNU LGPL 2.1</a>.
+    code_from_html: A Code.org p5.play-t használ, amelyet <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      a GNU LGPL 2.1</a> licenc véd.
     powered_by_aws: Az Amazon Web Services működteti
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, a CODE logó és az
       Hour of Code&reg; a Code.org védjegyei."
@@ -510,8 +511,8 @@
       body: Az App Lab egy programozási környezet egyszerű alkalmazásokra. Tervezd
         meg, kódolj blokkokkal vagy JavaScript-el hogy működjön, majd oszd meg másodpercek
         alatt.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
+      body_short: Tervezz egy alkalmazást, kódolj elemekből vagy JavaScript-ben, majd
+        oszd meg néhány másodperc alatt.
       audience: Kor 13+
       cta: Ismerd meg hogyan
     hoc:
@@ -754,5 +755,5 @@
           szabályoknak%{link_end} megfelelően kezeljük
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Keress egy ikont...
+      no_icons_found: Nem találhatók ikonok

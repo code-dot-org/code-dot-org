@@ -108,11 +108,11 @@ zh-CN:
   third_party_appinv_btn_curriculum: 下载 App Inventor 2 课程
   third_party_appinv_btn_forum: App Inventor 2 论坛
   third_party_appinv_btn_site: 访问 App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
-  third_party_codehs_btn_try: Intro CS Learn More for Schools
-  third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
+  third_party_codehs_desc: HS代码编程介绍的基石与短片，示例代码和大量的编程练习，使编码的乐趣和适合初学者使用。对于学校和教师CodeHS提供课程，教师工具和PD 。对于个别学生，你可以得到你沿着导师的网络的方式所需要的帮助。
+  third_party_codehs_btn_try: 介绍CS了解更多的学校
+  third_party_codecademy_desc: '我们是从下到上重新思考教育。该网站已经重新考虑几乎一切 - 电子商务，社交网络，医疗保健等。我们正在建设世界需要教育 - 第一个真正的净母语教育。'
   third_party_codecademy_btn_curriculum: 下载 Codecademy 课程
-  third_party_codecademy_btn_site: Visit Codecademy
+  third_party_codecademy_btn_site: 访问代码学院
   third_party_organization: 组织
   third_party_curriculum: 课程
   third_party_pricing: 定价
@@ -122,12 +122,12 @@ zh-CN:
   third_party_cost_free_399: 免费试用，每间教室399美元
   third_party_cost_free_2: 免费试用，每位学生2美元
   third_party_cost_free_10: 免费试用，每月9.99美元
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
+  third_party_desc_5_4to8: 大约有五节课，成绩朝四到八个面向
+  third_party_desc_10to12_kto3: 最多10-12 课，为幼儿园-3年级设计
+  third_party_desc_11_kto5: 你制杖吗
+  third_party_desc_10to12_kto5: 你持盾吗
+  third_party_desc_40_4to8: 你捡币吗
+  third_party_desc_dozens_kto8: 不，我撒币
   third_party_desc_10to15_3to12: 'Between 10 & 15 lessons, geared toward grades 3-12'
   third_party_desc_25to40_3to12: 'From 25 - 40 lessons, intended for grades 3-12'
   third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
@@ -613,7 +613,8 @@ zh-CN:
   dashboard_faq_k5: K-5 组的常见问题
   dashboard_announcements: 公告
   dashboard_announce_view_all: 查看全部
-  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
+  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
   dashboard_announce_button_text: 了解详情
   dashboard_announce_hoc: '<b>2015 年 11 月 23 日</b>-在你发起的编程一小时活动期间，你是否需要一名热衷于计算机科学教育的志愿者提供帮助？逾7,000 名志愿者正在寻找通过参与您的课堂或远程视频聊天的形式激发你学生的潜质。查看你所在地区的志愿者分布地图并取得的联系。'
   dashboard_announce_playlab: '<b>2015 年 12 月 4 日</b>-编程一小时就在这里！面向所有年龄段、通过所有类型的设备尝试 50 节教程。本周新内容：在全新的游戏实验室里用冰河世纪和陶阿甘编写你自己的代码故事和游戏。'

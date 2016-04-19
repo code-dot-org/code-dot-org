@@ -1007,7 +1007,7 @@ it:
         text: "Ma c'è di più per creare un magnifico cattura sole che seguire dei passi precisi. A volte vogliamo essere creativi e cambiare il colore delle cose che stiamo usando. Possiamo creare ogni cattura sole uno diverso dall'altro se usiamo per ciascuno colori diversi."
       4:
         image: notes/C3_functional_suncatchers_4.png
-        text: Your suncatcher will be uniquely yours when you learn to think of the beads as variables which is a word that means a placeholder for information that can change. Have fun creating beautiful suncatchers using functions and variables!
+        text: 'Il tuo suncatcher sarà proprio tuo solo quando imparerai a pensare alle perle come variabili: tale parola indica un segnaposto destinato per informazioni che possono cambiare. Divertiti a creare belle Giveaway utilizzando funzioni e variabili!'
     C3_internet:
       1:
         image: notes/C3_internet_1.png
@@ -1205,17 +1205,17 @@ it:
         text: Questa lezione è chiamata algoritmo Tangram. Un tangram è un puzzle con sette pezzi che possono essere messi insieme per realizzare altre forme. Si utilizzerà un algoritmo per spiegare al vostro compagno come mettere insieme il puzzle.
       2:
         image: notes/C4_unplugged_algorithms_2.png
-        text: An algorithm is just a of list steps that you can take to complete a task. We use them every day with things like shopping lists and recipes. If you keep an algorithm simple, there are lots of ways to interpret it and whoever performs that algorithm might not get exactly what you wanted. If you want to make sure that everyone ends up with the exact same thing, then your algorithm will need to be detailed and very specific.
+        text: Un algoritmo non è altro che una lista di azioni che puoi compiere per completare un compito. Li usiamo ogni giorno per cose come liste della spesa o ricette. Se il tuo algoritmo è semplice, allora esistono molti modi diversi di interpretarlo e chi lo esegue potrebbe non ottenere esattamente quello che volevi tu. Se vuoi essere sicuro che ognuno ottenga esattamente la stessa cosa, allora il tuo algoritmo deve essere dettagliato e molto specifico.
       3:
         image: notes/C4_unplugged_algorithms_3.png
         text: "Sto usando oggi un algoritmo per la realizzazione di un dipinto. Ho voluto provare a fare un dipinto di alcuni lupi, ma io non sono un pittore esperto. Fortunatamente per le persone come me, c'è da dipingere basandosi su dei numeri. Ci sono quaranta colori e la tavola riporta lettere e numeri che indicano quale colore usare per dipingere ogni sezione. Dipingere usando i numeri mi consenete di usare i colori corretti e mi indica dove."
       4:
         image: notes/C4_unplugged_algorithms_4.png
-        text: "It's very specific so I'm able to follow directions and the painting will come out looking awesome. It's a great algorithm. If the instructions weren't specific enough, my wolves wouldn't look as good. When you really want something to turn out exactly the way that you planned it, it's best to be extremely precise."
+        text: È molto specifico quindi sono in grado di seguire le indicazioni e il dipinto risulterà meraviglioso. È un ottimo algoritmo. Se le istruzioni non fossero state abbastanza specifiche, i miei lupi non sarebbero venuti così bene. Quando si vuole che qualcosa diventi esattamente come la si è pianificata, è meglio essere estremamente precisi.
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
-        text: "Each team, the person who's instructing that's the person who's holding the paper, has to figure out what their off symbol is going to be and what their on symbol is going to be. In binary, it's kind of like an alphabet with two letters. Like having A and B be your entire alphabet but you've got a 0 and a 1."
+        text: "In ogni squadra, colui che sta istruendo chi ha in mano la carta, deve capire quale sia il simbolo off e quale sia il proprio simbolo in realtá. In formato binario, è un po' come avere a che fare con un alfabeto con due lettere. Come avere A e B per alfabeto, solo che si chiamano 0 e un 1."
       2:
         image: notes/C4_unplugged_binary_2.png
         text: "Il modo più comune di utilizzare il codice binario è in un'istruzione if ... then ... (se ... allora ...). È un classico della programmazione. Il programma viene eseguito e ci dice se qualcosa è true (vero), allora procedi. O se non lo è, fa' qualcos'altro. Cosa succede se si desidera fare qualcosa di forse un po' più complicato? Al posto di un'istruzione if ... then ... , puoi voler trattare un'immagine o un suono al computer."
@@ -1453,7 +1453,7 @@ it:
         text: "Discuss as a class or in small groups about their favorite lessons. Once you take a look back at everything you've learned, this is where your students' creativity can shine. Split them into groups and have them create an unplugged lesson of their own. Assign each group a key concept, like functions or algorithms and have lots of craft materials on hand for them to use. Have each group present their new unplugged activity or even set aside another day to do a few of the student created activities."
       3:
         image: notes/unplug11_3.png
-        text: "From everyone here at Code.org, we hope you've had a TON of fun during this course. And whether your dream is to create the best new app, use programming to help cure diseases, or you just want to be a stellar problem-solver, this course was the first step in achieving those dreams."
+        text: Tutti qui a Code.org speriamo che tu ti sia divertito un sacco durante questo corso. E se il tuo sogno è quello di creare la nuova app più bella, usare la programmazione per curare malattie, o vuoi solo essere un problem-solver stellare, questo corso è stato il primo passo per realizzare quei sogni.
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
