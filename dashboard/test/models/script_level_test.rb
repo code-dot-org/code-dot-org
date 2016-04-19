@@ -21,10 +21,13 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 1, @script_level.position
   end
 
-  test "should not destroy when related level is destroyed" do
+  test "should destroy when all related levels are destroyed" do
     @script_level = create(:script_level)
-    @script_level.level.destroy
+    @script_level.levels << create(:level)
+    @script_level.levels[1].destroy
     assert ScriptLevel.exists?(@script_level.id)
+    @script_level.levels[0].destroy
+    assert_not ScriptLevel.exists?(@script_level.id)
   end
 
   test "destroying should not destroy related level" do

@@ -312,6 +312,9 @@ ActiveRecord::Schema.define(version: 20160418210000) do
     t.integer "script_level_id", limit: 4
   end
 
+  add_index "levels_script_levels", ["level_id"], name: "index_levels_script_levels_on_level_id", using: :btree
+  add_index "levels_script_levels", ["script_level_id"], name: "index_levels_script_levels_on_script_level_id", using: :btree
+
   create_table "pd_attendances", force: :cascade do |t|
     t.integer  "pd_session_id", limit: 4, null: false
     t.integer  "teacher_id",    limit: 4, null: false

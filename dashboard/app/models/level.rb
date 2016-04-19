@@ -34,6 +34,7 @@ class Level < ActiveRecord::Base
   has_many :hint_view_requests
 
   before_validation :strip_name
+  before_destroy :remove_empty_script_levels
 
   validates_length_of :name, within: 1..70
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> { where.not(user_id: nil) }
@@ -278,6 +279,14 @@ class Level < ActiveRecord::Base
 
   def strip_name
     self.name = name.to_s.strip unless name.nil?
+  end
+
+  def remove_empty_script_levels
+    script_levels.each do |script_level|
+      if script_level.levels.length == 1 && script_level.levels[0] == self
+        script_level.destroy
+      end
+    end
   end
 
   def self.cache_find(id)

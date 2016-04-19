@@ -416,7 +416,6 @@ class Script < ActiveRecord::Base
         chapter: (chapter += 1),
         assessment: assessment
       }
-      ScriptLevel.find_by(script_level_attributes)
       script_level = script.script_levels.detect{|sl|
         script_level_attributes.all?{ |k, v| sl.send(k) == v } &&
           sl.levels == [level]
