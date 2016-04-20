@@ -1,9 +1,11 @@
 require_relative 'files_api_test_base' # Must be required first to establish load paths
+require_relative 'files_api_test_helper'
 
 class SourcesTest < FilesApiTestBase
 
   def setup
     @channel = create_channel
+    @api = FilesApiTestHelper.new(current_session, 'sources', @channel)
   end
 
   def teardown
@@ -17,12 +19,12 @@ class SourcesTest < FilesApiTestBase
     file_data = 'abc 123'
     file_headers = { 'CONTENT_TYPE' => 'text/javascript' }
     delete_all_source_versions(filename)
-    put_source(filename, file_data, file_headers)
+    @api.put_object(filename, file_data, file_headers)
     assert successful?
 
     # Overwrite it.
     new_file_data = 'def 456'
-    put_source(filename, new_file_data, file_headers)
+    @api.put_object(filename, new_file_data, file_headers)
     assert successful?
 
     # Delete it.
@@ -50,7 +52,7 @@ class SourcesTest < FilesApiTestBase
     file_data = 'version 1'
     file_headers = { 'CONTENT_TYPE' => 'text/javascript' }
     delete_all_source_versions(filename)
-    put_source(filename, file_data, file_headers)
+    @api.put_object(filename, file_data, file_headers)
     assert successful?
     response = JSON.parse(last_response.body)
 
@@ -66,10 +68,6 @@ class SourcesTest < FilesApiTestBase
   end
 
   private
-
-  def put_source(filename, body, headers)
-    put_object 'sources', @channel, filename, body, headers
-  end
 
   def delete_source(filename)
     delete_object 'sources', @channel, filename
