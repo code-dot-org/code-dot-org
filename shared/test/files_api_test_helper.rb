@@ -3,6 +3,10 @@
 # When you create it, give it the Rack::Test session you want to make requests
 # as.  If you do a new session, you'll have to create a new helper.
 #
+# See Also: FilesApiTestBase. If you're changing common test setup or adding
+# a utility that doesn't require access to the current Rack Test Session, you
+# should consider making your change there, not here.
+#
 # Example:
 #   api = FilesApiTestHelper.new(current_session, 'sources', channel_id)
 #   api.get_object('myfile.txt')
