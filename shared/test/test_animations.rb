@@ -174,8 +174,8 @@ class AnimationsTest < FilesApiTestBase
     assert_equal 2, versions.count
 
     # Get the first and second version.
-    assert_equal v1_file_data, get_animation_version(filename, versions.last['versionId'])
-    assert_equal v2_file_data, get_animation_version(filename, versions.first['versionId'])
+    assert_equal v1_file_data, @api.get_object_version(filename, versions.last['versionId'])
+    assert_equal v2_file_data, @api.get_object_version(filename, versions.first['versionId'])
 
     # Check cache headers
     assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
@@ -207,7 +207,7 @@ class AnimationsTest < FilesApiTestBase
     refute_equal original_version_id, new_version_id
 
     # Make sure that one version has the newest content
-    assert_equal v2_file_data, get_animation_version(filename, new_version_id)
+    assert_equal v2_file_data, @api.get_object_version(filename, new_version_id)
 
     @api.delete_object(filename)
   end
@@ -216,10 +216,6 @@ class AnimationsTest < FilesApiTestBase
 
   def post_animation_file(filename, file_contents, content_type)
     post_file 'animations', @channel_id, filename, file_contents, content_type
-  end
-
-  def get_animation_version(filename, version_id)
-    get_object_version 'animations', @channel_id, filename, version_id
   end
 
   def post_animation_file_version(filename, version_id, file_contents, content_type)

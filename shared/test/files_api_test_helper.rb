@@ -49,6 +49,11 @@ class FilesApiTestHelper
     JSON.parse(last_response.body)
   end
 
+  def get_object_version(filename, version_id, body = '', headers = {})
+    get "/v3/#{@endpoint}/#{@channel_id}/#{filename}?version=#{version_id}", body, headers
+    last_response.body
+  end
+
   def ensure_aws_credentials
     list_objects
     credentials_missing = !last_response.successful? &&

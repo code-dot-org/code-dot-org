@@ -80,11 +80,6 @@ class FilesApiTestBase < Minitest::Test
     post_object endpoint, channel_id, filename, body, headers
   end
 
-  def get_object_version(endpoint, channel_id, filename, version_id, body = '', headers = {})
-    get "/v3/#{endpoint}/#{channel_id}/#{filename}?version=#{version_id}", body, headers
-    last_response.body
-  end
-
   def put_object_version(endpoint, channel_id, filename, version_id, body = '', headers = {})
     put "/v3/#{endpoint}/#{channel_id}/#{filename}?version=#{version_id}", body, headers
     last_response.body
