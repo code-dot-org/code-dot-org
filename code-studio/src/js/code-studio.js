@@ -18,8 +18,6 @@ var activateReferenceAreaOnLoad = require('./reference_area');
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
-// TODO (brent) - should be temporary, but need for renderToStaticMarkup
-window.ReactDOMServer = require('react-dom/server');
 window.Radium = require('radium');
 
 // TODO (bbuchanan): Stop including these components in a global way, just
