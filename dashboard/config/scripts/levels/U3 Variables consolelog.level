@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-04-11T14:53:49.000Z",
+  "created_at": "2016-04-20T15:40:11.000Z",
   "level_num": "custom",
   "user_id": 106,
   "properties": {
@@ -12,12 +12,14 @@
       "declareNoAssign_x": null,
       "assign_x": null,
       "randomNumber_min_max": null,
+      "write": null,
       "console.log": null
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Variables and Random Drawing\r\n\r\nVariables can be used to **store a randomly generated value** that you want to use many times in your program.\r\n\r\n# Do This\r\n\r\n* Assign size a **random number between 1 and 200**.\r\n* **Run the program multiple times**\r\n* **Discuss with a neighbor:** Can you explain why the program always drawing a square?",
-    "start_blocks": "var size;\r\n//Assign 'size' a random number between 1 and 200\r\nrect(200,200,size,size);\r\n//Run the program multiple times",
+    "instructions": "Use the write block to display the value of size",
+    "markdown_instructions": "# Console.log\r\n\r\nThe **Debug Console** is an area below your code. Your user will never see the debug console. It is useful for **displaying information only you want to see, especially while debugging your program**.\r\n\r\nThe `console.log` command can be used with **numbers, text, and the labels of a variable**, and will display the information provided on a new line in the Debug Console.\r\n\r\n```\r\nvar size = 100;\r\nconsole.log(\"The value of size is\"); //displays this text on a line\r\nconsole.log(size);                   //displays the value of size (100)\r\n```\r\n\r\n# Do This\r\n\r\n* **Use the `console.log` command** to display the random value currently stored in `size`",
+    "start_blocks": "var size = randomNumber(1,200);\r\nconsole.log(\"The value of size is\");\r\n// Add another console.log command to display the value of size\r\nrect(200, 200, size, size);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -35,12 +37,11 @@
     "disable_examples": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
-    "free_play": "true",
+    "free_play": "false",
     "text_mode_at_start": "false",
     "submittable": "false",
-    "hide_view_data_button": "true",
-    "debugger_disabled": "false",
-    "instructions": "Change the value \"size\" initialized to make a larger square."
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false"
   },
   "published": true,
   "notes": "",
