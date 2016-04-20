@@ -29,11 +29,11 @@ var AssetUploader = React.createClass({
       <span>
         <HiddenUploader
             ref="uploader"
+            toUrl={'/v3/assets/' + this.props.channelId + '/'}
+            typeFilter={this.props.typeFilter}
             onUploadStart={this.props.onUploadStart}
             onUploadDone={this.props.onUploadDone}
-            onUploadError={this.props.onUploadError}
-            channelId={this.props.channelId}
-            typeFilter={this.props.typeFilter} />
+            onUploadError={this.props.onUploadError} />
         <button
             onClick={this.fileUploadClicked}
             className="share"
