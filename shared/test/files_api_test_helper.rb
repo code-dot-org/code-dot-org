@@ -51,6 +51,11 @@ class FilesApiTestHelper
     post_object filename, body, headers
   end
 
+  def copy_object(source_filename, dest_filename)
+    put "/v3/#{@endpoint}/#{@channel_id}/#{dest_filename}?src=#{CGI.escape(source_filename)}"
+    last_response.body
+  end
+
   def delete_object(filename)
     delete "/v3/#{@endpoint}/#{@channel_id}/#{filename}"
   end

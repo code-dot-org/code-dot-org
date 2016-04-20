@@ -122,7 +122,7 @@ class AnimationsTest < FilesApiTestBase
     assert successful?
 
     # Copy copy_source.png to copy_dest.png
-    copy(source_image_filename, dest_image_filename)
+    @api.copy_object(source_image_filename, dest_image_filename)
     assert successful?
 
     # Get copy_dest.png and make sure it's got the source content
@@ -146,7 +146,7 @@ class AnimationsTest < FilesApiTestBase
     delete_all_animation_versions(dest_image_filename)
 
     # Try to copy nonexistent source to destination
-    copy(source_image_filename, dest_image_filename)
+    @api.copy_object(source_image_filename, dest_image_filename)
     assert not_found?
   end
 
@@ -216,11 +216,6 @@ class AnimationsTest < FilesApiTestBase
 
   def delete_all_animation_versions(filename)
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/1/#{filename}")
-  end
-
-  def copy(source_filename, dest_filename)
-    put "/v3/animations/#{@channel_id}/#{dest_filename}?src=#{CGI.escape(source_filename)}"
-    last_response.body
   end
 
   def randomize_filename(filename)
