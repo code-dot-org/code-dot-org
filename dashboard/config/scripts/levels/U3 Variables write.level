@@ -1,0 +1,57 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-20T15:15:03.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "rect": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "randomNumber_min_max": null,
+      "text": null,
+      "textAlign": null,
+      "textSize": null,
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "noStroke": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Use the write block to display the value of size",
+    "markdown_instructions": "# Writing a variable's value\r\n\r\nUsing a variable's label will allow you to **use that variable's current value in your program**. Combining this with the `text` command allows you to **display a variable's value on the screen**.\r\n\r\n```\r\nvar size = 10;\r\ntext(size, 20, 20, 100, 100);\r\n```\r\n\r\n# Do This\r\n\r\n* **Use the `text` command** to display the random value currently stored in `size`",
+    "start_blocks": "var size = randomNumber(1,200);\r\n//Use the text command to display the value in size here\r\nrect(200, 200, size, size);",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

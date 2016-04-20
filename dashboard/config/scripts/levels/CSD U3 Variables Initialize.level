@@ -10,12 +10,12 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "console.log": null
+      "rect": null
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Initialize a Variable\r\n\r\nMost programming languages allow you to give a variable value when you create it. This is also called **initializing** a varaible, since you providing the variable an initial value.\r\n\r\nIn JavaScript this looks like `var myVariable = 10;`. You can read this as \"var myVariable gets 10\".\r\n\r\n# Do This\r\n\r\n* In the starter code a variable is created on one line and given a value on the next.\r\n* **Change the code** so that the variable is given a value at the same time it is created.\r\n* Your new code should only have **two lines** and should display a value in the console.",
-    "start_blocks": "var size;\r\nsize = 10;\r\nconsole.log(size);",
+    "markdown_instructions": "# Using a Variable's Value\r\n\r\nThis program creates a variable called `size`. You will need to **assign it a value**. It will then be used to set the size of a square on the screen.\r\n\r\n# Do This\r\n\r\n* **Assign the variable `size` a value** and run the program to see how its value is used\r\n* **Change the value** and rerun the program to see how it affects the output of your program.",
+    "start_blocks": "var size;\r\n//Assign the value of size below\r\n\r\nrect(200, 200, size, size);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -41,7 +41,9 @@
     "instructions": "Predict: What will get displayed in the console?"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

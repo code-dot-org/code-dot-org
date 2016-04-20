@@ -99,7 +99,7 @@ Each of these activities can either be used alone or with other computer science
     </tr>
   </thead>
   
-  <% lessons.each_with_index do |lesson, index| 
+   <% lessons.each_with_index do |lesson, index|
   %>
   
   
