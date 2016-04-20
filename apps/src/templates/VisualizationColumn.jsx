@@ -1,12 +1,9 @@
-var msg = require('../locale');
-var commonStyles = require('../commonStyles');
-
 var GameButtons = require('./GameButtons');
 var BelowVisualization = require('./BelowVisualization');
 
 /**
  * Generic visualization column, currently only used by Maze. Might end up
- * makign sense to share with App Lab, or alternatively to have each app end
+ * making sense to share with App Lab, or alternatively to have each app end
  * up with their own version.
  */
 var VisualizationColumn = React.createClass({
