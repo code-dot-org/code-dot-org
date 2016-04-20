@@ -41,6 +41,7 @@ levels.custom = utils.extend(levels.sandbox, {
   ],
   codeFunctions: {
     // Game Lab
+    "draw": null,
     "fill": null,
     "noFill": null,
     "stroke": null,
@@ -206,14 +207,7 @@ levels.custom = utils.extend(levels.sandbox, {
     "callMyFunction_n": null,
     "return": null
   },
-  startBlocks: [
-    'function setup() {',
-    '  ',
-    '}',
-    'function draw() {',
-    '  ',
-    '}',
-    ''].join('\n'),
+  startBlocks: null,
 });
 
 levels.ec_sandbox = utils.extend(levels.custom, {
