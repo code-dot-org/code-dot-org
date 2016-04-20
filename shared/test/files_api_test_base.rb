@@ -80,10 +80,6 @@ class FilesApiTestBase < Minitest::Test
     post_object endpoint, channel_id, filename, body, headers
   end
 
-  def delete_object(endpoint, channel_id, filename)
-    delete "/v3/#{endpoint}/#{channel_id}/#{filename}"
-  end
-
   def list_object_versions(endpoint, channel_id, filename)
     get "/v3/#{endpoint}/#{channel_id}/#{filename}/versions"
     JSON.parse(last_response.body)

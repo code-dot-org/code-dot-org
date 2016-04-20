@@ -37,10 +37,10 @@ class AssetsTest < FilesApiTestBase
     api.get_object(image_filename)
     assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
-    delete_asset(channel_id, image_filename)
+    api.delete_object(image_filename)
     assert successful?
 
-    delete_asset(channel_id, sound_filename)
+    api.delete_object(sound_filename)
     assert successful?
 
     # unsupported media type
@@ -50,7 +50,7 @@ class AssetsTest < FilesApiTestBase
     # mismatched file extension and mime type
     _, mismatched_filename = post_asset_file(channel_id, 'filename.jpg', 'stub-contents', 'application/gif')
     assert successful?
-    delete_asset(channel_id, mismatched_filename)
+    api.delete_object(mismatched_filename)
     assert successful?
 
     # file extension case insensitivity
@@ -60,14 +60,14 @@ class AssetsTest < FilesApiTestBase
     assert successful?
     api.get_object(filename.gsub(/JPG$/, 'jpg'))
     assert not_found?
-    delete_asset(channel_id, filename)
+    api.delete_object(filename)
     assert successful?
 
     # invalid files are not uploaded, and other added files were deleted
     file_infos = api.list_objects
     assert_equal 0, file_infos.length
 
-    delete_asset(channel_id, 'nonexistent.jpg')
+    api.delete_object('nonexistent.jpg')
     assert successful?
 
     api.get_object('nonexistent.jpg')
@@ -129,8 +129,8 @@ class AssetsTest < FilesApiTestBase
     assert_equal 'stub-image-contents', result
     FilesApi.any_instance.unstub(:admin?)
 
-    delete_asset(channel_id, first_asset)
-    delete_asset(channel_id, second_asset)
+    api.delete_object(first_asset)
+    api.delete_object(second_asset)
     delete_channel(channel_id)
   end
 
@@ -183,7 +183,7 @@ class AssetsTest < FilesApiTestBase
       FilesApi.any_instance.unstub(:teaches_student?)
     end
 
-    delete_asset(channel_id, asset_name)
+    api.delete_object(asset_name)
     delete_channel(channel_id)
   end
 
@@ -192,6 +192,7 @@ class AssetsTest < FilesApiTestBase
     delete_all_assets('assets_test/1/2')
     src_channel_id = create_channel
     dest_channel_id = create_channel
+    src_api = FilesApiTestHelper.new(current_session, 'assets', src_channel_id)
     dest_api = FilesApiTestHelper.new(current_session, 'assets', dest_channel_id)
 
     image_filename = 'çat.jpg'
@@ -219,16 +220,17 @@ class AssetsTest < FilesApiTestBase
     assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, image_filename)
     assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, sound_filename)
 
-    delete_asset(src_channel_id, URI.encode(image_filename))
-    delete_asset(src_channel_id, sound_filename)
-    delete_asset(dest_channel_id, URI.encode(image_filename))
-    delete_asset(dest_channel_id, sound_filename)
+    src_api.delete_object(URI.encode(image_filename))
+    src_api.delete_object(sound_filename)
+    dest_api.delete_object(URI.encode(image_filename))
+    dest_api.delete_object(sound_filename)
     delete_channel(src_channel_id)
     delete_channel(dest_channel_id)
   end
 
   def test_assets_auth
     owner_channel_id = create_channel
+    api = FilesApiTestHelper.new(current_session, 'assets', owner_channel_id)
 
     basename = 'dog.jpg'
     body = 'stub-image-contents'
@@ -248,11 +250,11 @@ class AssetsTest < FilesApiTestBase
       post_asset(owner_channel_id, file)
       assert last_response.client_error?, 'Non-owner cannot write a file'
 
-      delete_asset(owner_channel_id, filename)
+      non_owner_api.delete_object(filename)
       refute successful?, 'Non-owner cannot delete a file'
     end
 
-    delete_asset(owner_channel_id, filename)
+    api.delete_object(filename)
   end
 
   def test_assets_quota
@@ -273,8 +275,8 @@ class AssetsTest < FilesApiTestBase
     post_asset_file(channel_id, "file4.jpg", "ABCD", 'image/jpeg')
     assert last_response.client_error?, "Error when exceeding max app size."
 
-    delete_asset(channel_id, added_filename1)
-    delete_asset(channel_id, added_filename2)
+    api.delete_object(added_filename1)
+    api.delete_object(added_filename2)
 
     assert api.list_objects.empty?, "No unexpected assets were written to storage."
 
@@ -312,8 +314,8 @@ class AssetsTest < FilesApiTestBase
       assert_assets_custom_metric 3, 'QuotaExceeded'
       assert_assets_custom_event 2, 'QuotaExceeded'
 
-      delete_asset(channel_id, filetodelete1)
-      delete_asset(channel_id, filetodelete2)
+      api.delete_object(filetodelete1)
+      api.delete_object(filetodelete2)
 
       assert api.list_objects.empty?, "No unexpected assets were written to storage."
       delete_channel(channel_id)
@@ -372,10 +374,6 @@ class AssetsTest < FilesApiTestBase
     basename = [filename.split('.')[0], '.' + filename.split('.')[1]]
     temp_filename = basename[0] + @random.bytes(10).unpack('H*')[0] + basename[1]
     [create_uploaded_file(temp_filename, file_contents, content_type), temp_filename]
-  end
-
-  def delete_asset(channel_id, filename)
-    delete_object 'assets', channel_id, filename
   end
 
   def delete_all_assets(bucket)

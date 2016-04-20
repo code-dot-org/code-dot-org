@@ -28,7 +28,7 @@ class SourcesTest < FilesApiTestBase
     assert successful?
 
     # Delete it.
-    delete_source(filename)
+    @api.delete_object(filename)
     assert successful?
 
     # List versions.
@@ -68,10 +68,6 @@ class SourcesTest < FilesApiTestBase
   end
 
   private
-
-  def delete_source(filename)
-    delete_object 'sources', @channel, filename
-  end
 
   def list_source_versions(filename)
     list_object_versions 'sources', @channel, filename
