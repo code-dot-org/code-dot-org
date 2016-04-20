@@ -40,6 +40,10 @@ class FilesApiTestHelper
     last_response.body
   end
 
+  def delete_object(filename)
+    delete "/v3/#{@endpoint}/#{@channel_id}/#{filename}"
+  end
+
   def ensure_aws_credentials
     list_objects
     credentials_missing = !last_response.successful? &&

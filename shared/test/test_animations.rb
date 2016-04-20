@@ -55,10 +55,10 @@ class AnimationsTest < FilesApiTestBase
     @api.get_object(dog_image_filename)
     assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
-    delete_animation(dog_image_filename)
+    @api.delete_object(dog_image_filename)
     assert successful?
 
-    delete_animation(cat_image_filename)
+    @api.delete_object(cat_image_filename)
     assert successful?
   end
 
@@ -74,7 +74,7 @@ class AnimationsTest < FilesApiTestBase
     post_animation_file(mismatched_filename, 'stub-contents', 'application/gif')
     assert successful?
 
-    delete_animation(mismatched_filename)
+    @api.delete_object(mismatched_filename)
     assert successful?
   end
 
@@ -93,7 +93,7 @@ class AnimationsTest < FilesApiTestBase
     @api.get_object(different_case_filename)
     assert not_found?
 
-    delete_animation(filename)
+    @api.delete_object(filename)
     assert successful?
   end
 
@@ -101,7 +101,7 @@ class AnimationsTest < FilesApiTestBase
     filename = randomize_filename('nonexistent.png')
     delete_all_animation_versions(filename)
 
-    delete_animation(filename) # Not a no-op - creates a delete marker
+    @api.delete_object(filename) # Not a no-op - creates a delete marker
     assert successful?
 
     @api.get_object(filename)
@@ -130,10 +130,10 @@ class AnimationsTest < FilesApiTestBase
     assert_equal source_image_body, @api.get_object(dest_image_filename)
     assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
-    delete_animation(source_image_filename)
+    @api.delete_object(source_image_filename)
     assert successful?
 
-    delete_animation(dest_image_filename)
+    @api.delete_object(dest_image_filename)
     assert successful?
   end
 
@@ -165,7 +165,7 @@ class AnimationsTest < FilesApiTestBase
     assert successful?
 
     # Delete it.
-    delete_animation(filename)
+    @api.delete_object(filename)
     assert successful?
 
     # List versions.
@@ -209,17 +209,13 @@ class AnimationsTest < FilesApiTestBase
     # Make sure that one version has the newest content
     assert_equal v2_file_data, get_animation_version(filename, new_version_id)
 
-    delete_animation(filename)
+    @api.delete_object(filename)
   end
 
   private
 
   def post_animation_file(filename, file_contents, content_type)
     post_file 'animations', @channel_id, filename, file_contents, content_type
-  end
-
-  def delete_animation(filename)
-    delete_object 'animations', @channel_id, filename
   end
 
   def list_animation_versions(filename)
