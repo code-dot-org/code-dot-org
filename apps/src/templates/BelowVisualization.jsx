@@ -2,7 +2,7 @@ var commonStyles = require('../commonStyles');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 
 /**
- * A table of inputs and expected outputs that is only used by Calc.
+ * A table of inputs and expected outputs that is only used by Calc and Studio.
  */
 var InputOutputTable = function (props) {
   return (
