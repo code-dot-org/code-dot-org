@@ -52,10 +52,6 @@ module.exports.createSprite = function (x, y, width, height) {
     s.shapeColor = colorString;
   };
 
-  s.setColorRGB = function () {
-    s.shapeColor = p5Inst.color.apply(p5Inst, arguments);
-  };
-
   s.destroy = function () {
     s.remove();
   };
@@ -135,6 +131,7 @@ module.exports.createSprite = function (x, y, width, height) {
 
   s.shapeColor = this.color(127, 127, 127);
   s.AABBops = AABBops.bind(s, this);
+  s.bounceOff = s.AABBops.bind(s, 'bounceOff');
   s.isTouching = isTouching.bind(s, this);
   s.depth = this.allSprites.maxDepth()+1;
   this.allSprites.add(s);
@@ -251,9 +248,11 @@ var AABBops = function (p5Inst, type, target, callback) {
               callback.call(this, this, other);
           }
         }
-      else if(type === 'collide' || type === 'bounce')
+      else if(type === 'collide' || type === 'bounce' || type == 'bounceOff')
         {
           displacement = createVector(0, 0);
+
+          var otherImmovable = other.immovable || type === 'bounceOff';
 
           //if the sum of the speed is more than the collider i may
           //have a tunnelling problem
@@ -344,7 +343,7 @@ var AABBops = function (p5Inst, type, target, callback) {
             if(displacement.y > 0)
               this.touching.top = true;
 
-            if(type === 'bounce')
+            if(type === 'bounce' || type === 'bounceOff')
             {
               if (this.collider instanceof CircleCollider && other.collider instanceof CircleCollider) {
                 var dx1 = p5.Vector.sub(this.position, other.position);
@@ -354,7 +353,7 @@ var AABBops = function (p5Inst, type, target, callback) {
                 var m1 = 0, m2 = 0;
                 if (this.immovable) {
                   m2 = 2;
-                } else if (other.immovable) {
+                } else if (otherImmovable) {
                   m1 = 2;
                 } else {
                   m1 = 2 * other.mass / totalMass;
@@ -366,7 +365,7 @@ var AABBops = function (p5Inst, type, target, callback) {
                 this.velocity.sub(newVel1.mult(this.restitution));
                 other.velocity.sub(newVel2.mult(other.restitution));
               } else {
-                if(other.immovable)
+                if(otherImmovable)
                 {
                   newVelX1 = -this.velocity.x+other.velocity.x;
                   newVelY1 = -this.velocity.y+other.velocity.y;
@@ -396,7 +395,7 @@ var AABBops = function (p5Inst, type, target, callback) {
 
                   }
 
-                  if(!other.immovable)
+                  if(!otherImmovable)
                     other.velocity.x = newVelX2*other.restitution;
 
                 }
@@ -407,7 +406,7 @@ var AABBops = function (p5Inst, type, target, callback) {
                   if(!this.immovable)
                     this.velocity.y = newVelY1*this.restitution;
 
-                  if(!other.immovable)
+                  if(!otherImmovable)
                     other.velocity.y = newVelY2*other.restitution;
                 }
               }
