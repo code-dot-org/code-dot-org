@@ -29,7 +29,7 @@ class AnimationsTest < FilesApiTestBase
     delete_all_animation_versions(cat_image_filename)
 
     # Upload dog.png and check the response
-    response = post_animation_file(dog_image_filename, dog_image_body, 'image/png')
+    response = @api.post_file(dog_image_filename, dog_image_body, 'image/png')
     actual_dog_image_info = JSON.parse(response)
     expected_dog_image_info = {
       'filename' => dog_image_filename,
@@ -39,7 +39,7 @@ class AnimationsTest < FilesApiTestBase
     assert_fileinfo_equal(expected_dog_image_info, actual_dog_image_info)
 
     # Upload cat.png and check the response
-    response = post_animation_file(cat_image_filename, cat_image_body, 'image/png')
+    response = @api.post_file(cat_image_filename, cat_image_body, 'image/png')
     actual_cat_image_info = JSON.parse(response)
     expected_cat_image_info = {
       'filename' =>  cat_image_filename,
@@ -63,7 +63,7 @@ class AnimationsTest < FilesApiTestBase
   end
 
   def test_unsupported_media_type
-    post_animation_file('executable.exe', 'stub-contents', 'application/x-msdownload')
+    @api.post_file('executable.exe', 'stub-contents', 'application/x-msdownload')
     assert unsupported_media_type?
   end
 
@@ -71,7 +71,7 @@ class AnimationsTest < FilesApiTestBase
     mismatched_filename = randomize_filename('mismatchedmimetype.png')
     delete_all_animation_versions(mismatched_filename)
 
-    post_animation_file(mismatched_filename, 'stub-contents', 'application/gif')
+    @api.post_file(mismatched_filename, 'stub-contents', 'application/gif')
     assert successful?
 
     @api.delete_object(mismatched_filename)
@@ -84,7 +84,7 @@ class AnimationsTest < FilesApiTestBase
     delete_all_animation_versions(filename)
     delete_all_animation_versions(different_case_filename)
 
-    post_animation_file(filename, 'stub-contents', 'application/png')
+    @api.post_file(filename, 'stub-contents', 'application/png')
     assert successful?
 
     @api.get_object(filename)
@@ -118,7 +118,7 @@ class AnimationsTest < FilesApiTestBase
     delete_all_animation_versions(dest_image_filename)
 
     # Upload copy_source.png and check the response
-    post_animation_file(source_image_filename, source_image_body, 'image/png')
+    @api.post_file(source_image_filename, source_image_body, 'image/png')
     assert successful?
 
     # Copy copy_source.png to copy_dest.png
@@ -156,12 +156,12 @@ class AnimationsTest < FilesApiTestBase
 
     # Create an animation file
     v1_file_data = 'stub-v1-body'
-    post_animation_file(filename, v1_file_data, 'image/png')
+    @api.post_file(filename, v1_file_data, 'image/png')
     assert successful?
 
     # Overwrite it.
     v2_file_data = 'stub-v2-body'
-    post_animation_file(filename, v2_file_data, 'image/png')
+    @api.post_file(filename, v2_file_data, 'image/png')
     assert successful?
 
     # Delete it.
@@ -187,7 +187,7 @@ class AnimationsTest < FilesApiTestBase
 
     # Create an animation file
     v1_file_data = 'stub-v1-body'
-    post_animation_file(filename, v1_file_data, 'image/png')
+    @api.post_file(filename, v1_file_data, 'image/png')
     assert successful?
     original_version_id = JSON.parse(last_response.body)['versionId']
 
@@ -213,10 +213,6 @@ class AnimationsTest < FilesApiTestBase
   end
 
   private
-
-  def post_animation_file(filename, file_contents, content_type)
-    post_file 'animations', @channel_id, filename, file_contents, content_type
-  end
 
   def post_animation_file_version(filename, version_id, file_contents, content_type)
     post_file_version 'animations', @channel_id, filename, version_id, file_contents, content_type
