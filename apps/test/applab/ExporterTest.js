@@ -10,7 +10,7 @@ var Exporter = require('@cdo/apps/applab/Exporter');
 describe('The Exporter,', function () {
   var zipPromise, server;
 
-  before(function () {
+  beforeEach(function () {
     server = sinon.fakeServerWithClock.create();
     server.respondWith('/assets/js/en_us/common_locale.js', 'common_locale.js content');
     server.respondWith('/assets/js/en_us/applab_locale.js', 'applab_locale.js content');
@@ -18,8 +18,35 @@ describe('The Exporter,', function () {
     server.respondWith('/assets/css/applab.css', 'applab.css content');
   });
 
-  after(function () {
+  afterEach(function () {
     server.restore();
+  });
+
+  describe("when assets can't be fetched,", function () {
+    beforeEach(function () {
+      server.respondWith('/assets/js/en_us/common_locale.js', [500, {}, ""]);
+    });
+
+    it("should reject the promise with an error", function (done) {
+      zipPromise = Exporter.exportAppToZip(
+        'my-app',
+        'console.log("hello");',
+        `<div>
+          <div class="screen" tabindex="1" id="screen1">
+            <input type="text" id="nameInput"/>
+            <button id="clickMeButton" style="background-color: red;">Click Me!</button>
+          </div>
+        </div>`
+      );
+      server.respond();
+      zipPromise.then(function () {
+        assert.fail('Expected zipPromise not to resolve');
+        done();
+      }, function (error) {
+        assert.equal(error.message, 'failed to fetch assets');
+        done();
+      });
+    });
   });
 
   describe("when exporting,", function () {
@@ -55,7 +82,7 @@ describe('The Exporter,', function () {
             });
             done();
           }, done);
-      });
+      }, done);
     });
 
     describe("will produce a zip file, which", function () {

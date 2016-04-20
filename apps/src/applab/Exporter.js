@@ -129,7 +129,7 @@ export default {
         logToCloud.addPageAction(logToCloud.PageAction.staticResourceFetchError, {
           app: 'applab'
         }, 1/100);
-        deferred.reject("failed to fetch assets :(");
+        deferred.reject(new Error("failed to fetch assets"));
       }
     );
 
