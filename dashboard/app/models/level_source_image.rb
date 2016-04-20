@@ -53,11 +53,11 @@ class LevelSourceImage < ActiveRecord::Base
   # Adds a frame to an image blob and uploads it to s3.
   # @param [String] image An image blob.
   def upload_framed_image(image)
-    if level_source.level.try(:skin) == 'anna' || level_source.level.try(:skin) == 'elsa'
-      frame_image_filename = "app/assets/images/blank_sharing_drawing_#{level_source.level.skin}.png"
+    frame_image_filename = if level_source.level.try(:skin) == 'anna' || level_source.level.try(:skin) == 'elsa'
+      "app/assets/images/blank_sharing_drawing_#{level_source.level.skin}.png"
     else
-      frame_image_filename = "app/assets/images/blank_sharing_drawing.png"
-    end
+      "app/assets/images/blank_sharing_drawing.png"
+                           end
 
     begin
       framed_image = ImageLib.overlay_image(:background_url => Rails.root.join(frame_image_filename),

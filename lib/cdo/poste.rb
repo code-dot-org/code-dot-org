@@ -110,11 +110,11 @@ module Poste2
     url_id = @@url_cache[href]
     return url_id if url_id
 
-    if url = POSTE_DB[:poste_urls].where(hash: hash, url: href).first
-      url_id = url[:id]
+    url_id = if url = POSTE_DB[:poste_urls].where(hash: hash, url: href).first
+      url[:id]
     else
-      url_id = POSTE_DB[:poste_urls].insert(hash: hash, url: href)
-    end
+      POSTE_DB[:poste_urls].insert(hash: hash, url: href)
+             end
 
     @@url_cache[href] = url_id
   end

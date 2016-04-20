@@ -141,13 +141,13 @@ class HomeControllerTest < ActionController::TestCase
       get :index
       assert_response :success
 
-      if script.name == 'hourofcode'
-        url = "http://test.host/hoc"
+      url = if script.name == 'hourofcode'
+        "http://test.host/hoc"
       elsif script.flappy?
-        url = "http://test.host/flappy"
+        "http://test.host/flappy"
       else
-        url = "http://test.host/s/#{CGI.escape(script.to_param).gsub('+', '%20')}"
-      end
+        "http://test.host/s/#{CGI.escape(script.to_param).gsub('+', '%20')}"
+            end
       assert_select "a[href^='#{url}']" # continue link
       assert_select 'h3', I18n.t("data.script.name.#{script.name}.title") # script title
     end

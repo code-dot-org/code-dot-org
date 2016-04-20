@@ -29,8 +29,8 @@ class FrequentUnsuccessfulLevelSource < ActiveRecord::Base
     # least freq_cutoff times with non-optimal test results.  If game_name
     # was specified, limit the query to the named game.
     game_id = game_name && Game.where('name = ?', game_name).first.id
-    if game_id
-      query = "select a.level_source_id, a.level_id, count(*) as num_of_attempts
+    query = if game_id
+      "select a.level_source_id, a.level_id, count(*) as num_of_attempts
          from activities a, levels l
          where a.level_id = l.id and l.game_id = #{game_id}
             and a.test_result <= #{Activity::MAXIMUM_NONOPTIMAL_RESULT}
@@ -38,13 +38,13 @@ class FrequentUnsuccessfulLevelSource < ActiveRecord::Base
          having num_of_attempts >= #{freq_cutoff}
          order by num_of_attempts DESC"
     else
-      query = "select level_source_id, level_id, count(*) as num_of_attempts
+      "select level_source_id, level_id, count(*) as num_of_attempts
          from activities
          where test_result <= #{Activity::MAXIMUM_NONOPTIMAL_RESULT}
          group by level_source_id
          having num_of_attempts >= #{freq_cutoff}
          order by num_of_attempts DESC"
-    end
+            end
 
     # Execute the query, adding level_sources to the model if they are
     # standardized (do not contain an xmlns attribute).  The active column

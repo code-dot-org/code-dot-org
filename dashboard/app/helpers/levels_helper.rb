@@ -114,11 +114,11 @@ module LevelsHelper
       callout_hash = callout.attributes
       callout_hash.delete('localization_key')
       callout_text = data_t('callout.text', callout.localization_key)
-      if callout_text.nil?
-        callout_hash['localized_text'] = callout.callout_text
+      callout_hash['localized_text'] = if callout_text.nil?
+        callout.callout_text
       else
-        callout_hash['localized_text'] = callout_text
-      end
+        callout_text
+                                       end
       callout_hash
     end
   end
@@ -170,18 +170,18 @@ module LevelsHelper
       view_options(authored_hint_view_requests_url: authored_hint_view_requests_path(format: :json))
     end
 
-    if @level.is_a? Blockly
-      @app_options = blockly_options
+    @app_options = if @level.is_a? Blockly
+      blockly_options
     elsif @level.is_a? DSLDefined
-      @app_options = dsl_defined_options
+      dsl_defined_options
     elsif @level.is_a? Widget
-      @app_options = widget_options
+      widget_options
     elsif @level.unplugged?
-      @app_options = unplugged_options
+      unplugged_options
     else
       # currently, all levels are Blockly or DSLDefined except for Unplugged
-      @app_options = view_options.camelize_keys
-    end
+      view_options.camelize_keys
+                   end
     @app_options
   end
 

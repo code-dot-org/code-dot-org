@@ -100,13 +100,13 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def summarize
-    if level.unplugged?
-      kind = 'unplugged'
+    kind = if level.unplugged?
+      'unplugged'
     elsif assessment
-      kind = 'assessment'
+      'assessment'
     else
-      kind = 'puzzle'
-    end
+      'puzzle'
+           end
 
     summary = {
         id: level.id,

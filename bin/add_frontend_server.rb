@@ -150,12 +150,12 @@ def determine_unique_name_for_instance_zone(ssh_username, frontend_name, determi
   Net::SSH.start('gateway.code.org', ssh_username) do |ssh|
     retry_index = 0
     while retry_index < 50
-      if frontend_name
-        name = "#{frontend_name}#{retry_index == 0 ? '' : retry_index.to_s}"
+      name = if frontend_name
+        "#{frontend_name}#{retry_index == 0 ? '' : retry_index.to_s}"
       else
-        name = "frontend-#{@options['prefix'] ? @options['prefix'] + '-' : ''}#{determined_instance_zone[-1, 1] +
+        "frontend-#{@options['prefix'] ? @options['prefix'] + '-' : ''}#{determined_instance_zone[-1, 1] +
             (instance_count + 1 + retry_index).to_s}"
-      end
+             end
 
       # Collect the names of all of the AWS instances.
       aws_instance_names = Set.new do |names|
