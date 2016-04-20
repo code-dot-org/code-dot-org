@@ -88,7 +88,3 @@ get '/v2/sections/:id/teachers' do |id|
   content_type :json
   JSON.pretty_generate(section.to_owner_hash[:teachers])
 end
-
-get '/v2/sections/:id/login_cards' do |id|
-
-end
