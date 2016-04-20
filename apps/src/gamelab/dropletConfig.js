@@ -341,8 +341,8 @@ module.exports.categories = {
     blocks: []
   },
   Input: {
-    color: 'green',
-    rgb: COLOR_GREEN,
+    color: 'cyan',
+    rgb: COLOR_CYAN,
     blocks: []
   },
   Advanced: {
