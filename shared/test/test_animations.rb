@@ -7,7 +7,7 @@ class AnimationsTest < FilesApiTestBase
     @random = Random.new(0)
     @channel_id = create_channel
     @api = FilesApiTestHelper.new(current_session, 'animations', @channel_id)
-    ensure_aws_credentials('animations', @channel_id)
+    @api.ensure_aws_credentials
   end
 
   def teardown
@@ -48,7 +48,7 @@ class AnimationsTest < FilesApiTestBase
     }
     assert_fileinfo_equal(expected_cat_image_info, actual_cat_image_info)
 
-    file_infos = list_animations
+    file_infos = @api.list_objects
     assert_fileinfo_equal(actual_cat_image_info, file_infos[0])
     assert_fileinfo_equal(actual_dog_image_info, file_infos[1])
 
@@ -213,10 +213,6 @@ class AnimationsTest < FilesApiTestBase
   end
 
   private
-
-  def list_animations
-    list_objects 'animations', @channel_id
-  end
 
   def post_animation_file(filename, file_contents, content_type)
     post_file 'animations', @channel_id, filename, file_contents, content_type
