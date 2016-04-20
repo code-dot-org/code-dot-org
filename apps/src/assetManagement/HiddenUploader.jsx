@@ -1,6 +1,8 @@
 /** @file Hidden file input with interface for handling uploads. */
 'use strict';
 
+var commonStyles = require('../commonStyles');
+
 /**
  * A hidden file input providing upload functionality with event hooks.
  */
@@ -52,7 +54,7 @@ var HiddenUploader = React.createClass({
     return <input
         ref="uploader"
         type="file"
-        style={{display: 'none'}}
+        style={commonStyles.hidden}
         accept={(this.props.typeFilter || '*') + '/*'}/>;
   }
 });
