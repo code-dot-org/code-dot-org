@@ -19,6 +19,7 @@ class FilesApiTestHelper
     @session = session
     @endpoint = endpoint
     @channel_id = channel_id
+    @random = Random.new(0)
   end
 
   def current_session
@@ -100,6 +101,14 @@ class FilesApiTestHelper
       end
       Rack::Test::UploadedFile.new(file_path, content_type)
     end
+  end
+
+  # Like create_uploaded_file, but generates a temporary filename based on the
+  # provided filename and returns it along with the created file.
+  def create_temp_file(filename, file_contents, content_type)
+    basename = [filename.split('.')[0], '.' + filename.split('.')[1]]
+    temp_filename = basename[0] + @random.bytes(10).unpack('H*')[0] + basename[1]
+    [create_uploaded_file(temp_filename, file_contents, content_type), temp_filename]
   end
 
   def ensure_aws_credentials
