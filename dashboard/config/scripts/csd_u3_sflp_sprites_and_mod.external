@@ -1,0 +1,26 @@
+name 'CSD-U3-SFLP Sprites and Mod'
+href 'path/to/html/in/asset/folder'
+css 'unplugged'
+markdown <<MARKDOWN
+## Unit 3: Lesson 05 - Sprites and Mod
+
+# Background
+
+Blah Blah
+
+# Lesson
+
+* Blah
+* Blah
+* Blah
+
+# Vocab
+
+* blah blah
+
+# Resources
+* Activity Guide: <a href="https://drive.google.com/open?id=1_Dkh33G7NTrnlAR0kD8UJZ9A2xFO_ICIJeDrxm-S6e4">Simple Drawings in Game Lab</a>
+* Activity Guide: <a href="https://drive.google.com/open?id=17-rj7SWbn1Nb0IQl-o-4h3VlS1kjId8T0o6HUGojglA">Plan Your Drawing</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

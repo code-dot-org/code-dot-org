@@ -333,6 +333,7 @@ FactoryGirl.define do
 
   factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
     resource_url nil
+    icon nil
   end
 
   factory :plc_script_completion_task, parent: :plc_task, class: 'Plc::ScriptCompletionTask' do

@@ -19,7 +19,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "use_modal_function_editor": "true",
-    "instructions": "Here's a function called \"jump\" that causes your main character to jump up 100 pixels. Use the jump function to collect all of the flags.",
+    "instructions": "Here's a function called `jump` that causes your main character to jump up 100 pixels. Run the program and use the jump function to collect all of the flags by moving the dog with the arrow keys.",
     "embed": "false",
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",
@@ -29,7 +29,7 @@
       "rightButton",
       "upButton"
     ],
-    "markdown_instructions": "Here's a function called `jump` that causes your main character to jump up 100 pixels. Use the jump function to collect all of the flags.",
+    "markdown_instructions": "Here's a function called `jump` that causes your main character to jump up 100 pixels. \r\n\r\nRun the program and use the jump function to collect all of the flags by moving the dog with the arrow keys.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -44,6 +44,7 @@
     "min_workspace_height": "600"
   },
   "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 1,
     "events": 1

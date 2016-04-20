@@ -7,15 +7,12 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
-      "declareAssign_x": null,
-      "declareNoAssign_x": null,
-      "assign_x": null,
-      "console.log": null
+      "declareNoAssign_x": null
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Your first variable\r\n\r\nThere are really only 3 things you can do with a variable, and we're about to do all 3!\r\n\r\n* **Create a variable**: using the `var` command will create a variable with whatever name you like\r\n* **Change a variable's value**: using the `=` or \"gets\" command\r\n* **Use a variable's value**: use the variable's name in your program where you'd like to use the value it holds\r\n\r\n# Do This\r\n\r\n* Create a new variable with a **name of your choosing**\r\n* Use the \"gets\" command to give it a value\r\n* Use the `console.log` command to display its value in the console.",
-    "start_blocks": "var size;\r\nsize = 10;\r\nconsole.log(size);",
+    "markdown_instructions": "# Your first variable\r\n\r\nThe `var` command **creates a new variable**. You only need to use it once with each variable you create.\r\n\r\n# Do This\r\n\r\n* Create a new variable with a **name of your choosing**, as shown in the starter code.",
+    "start_blocks": "var size;\r\n// create a variable of your own on the line below",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -38,10 +35,12 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "instructions": "Create your own variable, give it a value, and display that value in the console."
+    "instructions": "Create your own variable "
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

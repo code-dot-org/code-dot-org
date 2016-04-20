@@ -92,16 +92,17 @@
   get_a_certificate_of_achievement: "دریافت گواهی موفقیت"
   view_course: View course
   view_unit: View unit
-  make_app: Make an app
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  make_app: "یک نرم افزار درست کن"
+  congrats_guest_speaker_title: "برای کلاست یک سخنران مهمان پیدا کن"
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
     real world by inviting a guest speaker to your classroom. You can use our map
     of volunteers to contact local volunteers to visit your classroom, or search in
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_title: Use your new skills with these apps and websites
+  congrats_guest_speaker_cta: "یک سنخنران مهمان پیدا کن"
+  congrats_third_party_title: "مهارتهای جدیدت را با این نرم افزارها و وب سایتها استفاده
+    کن"
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -112,9 +113,9 @@
   third_party_platform_all: 'Platform: Web, iPad & Android'
   third_party_platform_mobile: 'Platform: iPad & Android'
   third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
+  third_party_price_varies: "قیمت: برنامه ها متفاوت هستند"
+  third_party_price_free: "قیمت: مجانی"
+  third_party_price_299: "قیمت: 2.99 دلار/دانلود"
   third_party_price_individual: 'Individual Price: Free Trial & $25/month'
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
@@ -835,6 +836,11 @@
     problem in computer science. Code Studio teachers are leading the way in educating
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: "بیشتر بیاموزید"
   dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
@@ -1482,7 +1488,7 @@
   groklearning_beyond_shortdescription: "مقدمه اساسی به برنامه نویسی پایتون"
   hacketyhack_beyond_shortdescription: "روبی را از پایه یاد بگیرید"
   robomind_beyond_shortdescription: "کدنویسی برای ربات مجازی"
-  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
+  makeschool_beyond_shortdescription: "یاد بگیرید تا بازی آیفون را در یک ساعت بسازید"
   appinventor_beyond_shortdescription: "برنامه خودت را بساز( فقط آندروید)"
   touchdevelop_beyond_shortdescription: "برنامه های موبایل را مستقیمآ روی موبایل و
     \ تبلت و کامپیوتر برنامه نویسی کنید"
@@ -1566,11 +1572,11 @@
   robomind_beyond_longdescription: "دانش آموزان اصول اولیه ی برنامه نویسی را با کنترل
     ربات مجازی خودشان می آموزند. دوره ی آنلاین با ارائه های کوتاه، فیلم ها، امتحانات
     و هدایت/راهنمایی های اتوماتیک برای کمک در تمرینات برنامه نویسی بسیار کامل است. "
-  makeschool_beyond_longdescription: Know some ObjectiveC? Learn to make an iPhone
-    game in an hour! We'll guide you through the process, to code, test, and play
-    your game entirely in the browser and then share it on Facebook for friends to
-    try! No prior iPhone development experience is required. You must understand what
-    variables, methods, and objects are.
+  makeschool_beyond_longdescription: "کمی C شیئ گرا می دانید؟ در یک ساعت یاد بگیرید
+    که یک بازی آی فون بسازید! ما شما را در این فرآیند هدایت خواهیم کرد تا ،کد بنویسید،
+    تست کنید، و بازیتان را تماما در مرورگر بازی کنید و سپس آن را در فیس بوک به اشتراک
+    بگذارید تا دوستان امتحانش کنند! نیاز به هیچ تجربه ی توسعه ی آی فون نیست. شما باید
+    بفهمید که متغیر ها، روشها، و اشیا چه هستند."
   appinventor_beyond_longdescription: "ویدئو های آموزشی سریع، و سرگرم کننده شما را
     در مسیر ساخت سه برنامه ی ساده برای تلفن اندروید یا تبلتتان هدایت می کنند. این
     ساعت کد نویسی، طراحی شده برای مبتدیان و کارشناسان شما را قبل از این که بدانید
@@ -1693,8 +1699,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "بازی کن"
   artist_shortcode: art
-  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
-    (or a teacher you know) want to join a nationwide community of educators working
-    to change the face of computer science education? We'll be accepting applications
-    from middle and high school teachers in our partner districts for our year-long
-    Exploring Computer Science Professional Learning Program until April 22nd."
