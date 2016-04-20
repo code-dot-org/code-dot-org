@@ -92,7 +92,7 @@ class AssetsTest < FilesApiTestBase
     assert_equal 0, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # set abuse score
-    patch_abuse(channel_id, 10)
+    api.patch_abuse(10)
     assert_equal 10, asset_bucket.get_abuse_score(channel_id, first_asset)
     assert_equal 10, asset_bucket.get_abuse_score(channel_id, second_asset)
 
@@ -101,25 +101,25 @@ class AssetsTest < FilesApiTestBase
     assert_equal 'stub-image-contents', result
 
     # increment
-    patch_abuse(channel_id, 20)
+    api.patch_abuse(20)
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, first_asset)
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # set to be the same
-    patch_abuse(channel_id, 20)
+    api.patch_abuse(20)
     assert successful?
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, first_asset)
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # non-admin can't decrement
-    patch_abuse(channel_id, 0)
+    api.patch_abuse(0)
     refute successful?
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, first_asset)
     assert_equal 20, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # admin can decrement
     FilesApi.any_instance.stubs(:admin?).returns(true)
-    patch_abuse(channel_id, 0)
+    api.patch_abuse(0)
     assert successful?
     assert_equal 0, asset_bucket.get_abuse_score(channel_id, first_asset)
     assert_equal 0, asset_bucket.get_abuse_score(channel_id, second_asset)
@@ -152,7 +152,7 @@ class AssetsTest < FilesApiTestBase
     end
 
     # set abuse
-    patch_abuse(channel_id, 10)
+    api.patch_abuse(10)
 
     # owner can view
     api.get_object(asset_name)
@@ -203,7 +203,7 @@ class AssetsTest < FilesApiTestBase
 
     _, image_filename = post_asset_file(src_api, image_filename, image_body, 'image/jpeg')
     _, sound_filename = post_asset_file(src_api, sound_filename, sound_body, 'audio/mpeg')
-    patch_abuse(src_channel_id, 10)
+    src_api.patch_abuse(10)
 
     expected_image_info = {'filename' =>  image_filename, 'category' =>  'image', 'size' =>  image_body.length}
     expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
@@ -378,10 +378,6 @@ class AssetsTest < FilesApiTestBase
 
   def delete_all_assets(bucket)
     delete_all_objects(CDO.assets_s3_bucket, bucket)
-  end
-
-  def patch_abuse(channel_id, abuse_score)
-    patch("/v3/assets/#{channel_id}/?abuse_score=#{abuse_score}").body
   end
 
   def copy_all(src_channel_id, dest_channel_id)
