@@ -4,10 +4,7 @@ var rowStyle = require('./rowStyle');
 var elementUtils = require('./elementUtils');
 var utils = require('../../utils');
 
-var LockState = {
-  LOCKED: 'LOCKED',
-  UNLOCKED: 'UNLOCKED'
-};
+var LockState = utils.makeEnum('LOCKED', 'UNLOCKED');
 
 var PropertyRow = React.createClass({
   propTypes: {
