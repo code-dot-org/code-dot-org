@@ -35,6 +35,11 @@ class FilesApiTestHelper
     last_response.body
   end
 
+  def put_object(filename, body = '', headers = {})
+    put "/v3/#{@endpoint}/#{@channel_id}/#{filename}", body, headers
+    last_response.body
+  end
+
   def ensure_aws_credentials
     list_objects
     credentials_missing = !last_response.successful? &&

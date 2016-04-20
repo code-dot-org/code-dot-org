@@ -69,11 +69,6 @@ class FilesApiTestBase < Minitest::Test
     assert_equal(expected['size'], actual['size'])
   end
 
-  def put_object(endpoint, channel_id, filename, body = '', headers = {})
-    put "/v3/#{endpoint}/#{channel_id}/#{filename}", body, headers
-    last_response.body
-  end
-
   def post_object(endpoint, channel_id, filename, body = '', headers = {})
     post "/v3/#{endpoint}/#{channel_id}/#{filename}", body, headers
     last_response.body
