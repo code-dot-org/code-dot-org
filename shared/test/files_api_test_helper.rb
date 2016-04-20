@@ -70,6 +70,17 @@ class FilesApiTestHelper
     last_response.body
   end
 
+  def post_object_version(filename, version_id, body = '', headers = {})
+    post "/v3/#{@endpoint}/#{@channel_id}/#{filename}?version=#{version_id}", body, headers
+    last_response.body
+  end
+
+  def post_file_version(filename, version_id, file_contents, content_type)
+    body = { files: [create_uploaded_file(filename, file_contents, content_type)] }
+    headers = { 'CONTENT_TYPE' => content_type }
+    post_object_version filename, version_id, body, headers
+  end
+
   def create_uploaded_file(filename, file_contents, content_type)
     Dir.mktmpdir do |dir|
       file_path = "#{dir}/#{filename}"

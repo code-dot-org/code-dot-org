@@ -237,7 +237,7 @@ class AssetsTest < FilesApiTestBase
     content_type = 'image/jpeg'
 
     # post_asset_file create a new file/temp filename, so we post twice using the same file here instead
-    file, filename = create_asset_file(basename, body, content_type)
+    file, filename = create_asset_file(api, basename, body, content_type)
 
     post_asset(api, file)
     assert successful?, 'Owner can add a file'
@@ -329,7 +329,7 @@ class AssetsTest < FilesApiTestBase
     channel = create_channel
     api = FilesApiTestHelper.new(current_session, 'assets', channel)
 
-    file, filename = create_asset_file('test.png', 'version 1', 'image/png')
+    file, filename = create_asset_file(api, 'test.png', 'version 1', 'image/png')
 
     post channel, file
     api.get_object filename
@@ -365,15 +365,15 @@ class AssetsTest < FilesApiTestBase
   end
 
   def post_asset_file(api, filename, file_contents, content_type)
-    file, tmp_filename = create_asset_file(filename, file_contents, content_type)
+    file, tmp_filename = create_asset_file(api, filename, file_contents, content_type)
     response = post_asset(api, file)
     [response, tmp_filename]
   end
 
-  def create_asset_file(filename, file_contents, content_type)
+  def create_asset_file(api, filename, file_contents, content_type)
     basename = [filename.split('.')[0], '.' + filename.split('.')[1]]
     temp_filename = basename[0] + @random.bytes(10).unpack('H*')[0] + basename[1]
-    [create_uploaded_file(temp_filename, file_contents, content_type), temp_filename]
+    [api.create_uploaded_file(temp_filename, file_contents, content_type), temp_filename]
   end
 
   def delete_all_assets(bucket)
