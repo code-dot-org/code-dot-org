@@ -14,8 +14,7 @@ class AssetsTest < FilesApiTestBase
   def test_assets
     channel_id = create_channel
     api = FilesApiTestHelper.new(current_session, 'assets', channel_id)
-
-    ensure_aws_credentials('assets', channel_id)
+    api.ensure_aws_credentials
 
     image_body = 'stub-image-contents'
     response, image_filename = post_asset_file(channel_id, 'dog.jpg', image_body, 'image/jpeg')
@@ -31,7 +30,7 @@ class AssetsTest < FilesApiTestBase
     expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
     assert_fileinfo_equal(expected_sound_info, actual_sound_info)
 
-    file_infos = list_assets(channel_id)
+    file_infos = api.list_objects
     assert_fileinfo_equal(actual_image_info, file_infos[0])
     assert_fileinfo_equal(actual_sound_info, file_infos[1])
 
@@ -65,7 +64,7 @@ class AssetsTest < FilesApiTestBase
     assert successful?
 
     # invalid files are not uploaded, and other added files were deleted
-    file_infos = list_assets(channel_id)
+    file_infos = api.list_objects
     assert_equal 0, file_infos.length
 
     delete_asset(channel_id, 'nonexistent.jpg')
@@ -193,6 +192,7 @@ class AssetsTest < FilesApiTestBase
     delete_all_assets('assets_test/1/2')
     src_channel_id = create_channel
     dest_channel_id = create_channel
+    dest_api = FilesApiTestHelper.new(current_session, 'assets', dest_channel_id)
 
     image_filename = 'çat.jpg'
     image_body = 'stub-image-contents'
@@ -208,7 +208,7 @@ class AssetsTest < FilesApiTestBase
     expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
 
     copy_file_infos = JSON.parse(copy_all(src_channel_id, dest_channel_id))
-    dest_file_infos = list_assets(dest_channel_id)
+    dest_file_infos = dest_api.list_objects
 
     assert_fileinfo_equal(expected_image_info, copy_file_infos[1])
     assert_fileinfo_equal(expected_sound_info, copy_file_infos[0])
@@ -259,6 +259,7 @@ class AssetsTest < FilesApiTestBase
     FilesApi.any_instance.stubs(:max_file_size).returns(5)
     FilesApi.any_instance.stubs(:max_app_size).returns(10)
     channel_id = create_channel
+    api = FilesApiTestHelper.new(current_session, 'assets', channel_id)
 
     post_asset_file(channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
     assert last_response.client_error?, "Error when file is larger than max file size."
@@ -275,7 +276,7 @@ class AssetsTest < FilesApiTestBase
     delete_asset(channel_id, added_filename1)
     delete_asset(channel_id, added_filename2)
 
-    assert (list_assets(channel_id).empty?), "No unexpected assets were written to storage."
+    assert api.list_objects.empty?, "No unexpected assets were written to storage."
 
     delete_channel(channel_id)
     FilesApi.any_instance.unstub(:max_file_size)
@@ -287,6 +288,7 @@ class AssetsTest < FilesApiTestBase
     FilesApi.any_instance.stubs(:max_app_size).returns(10)
     CDO.stub(:newrelic_logging, true) do
       channel_id = create_channel
+      api = FilesApiTestHelper.new(current_session, 'assets', channel_id)
 
       post_asset_file(channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
       assert last_response.client_error?, "Error when file is larger than max file size."
@@ -313,7 +315,7 @@ class AssetsTest < FilesApiTestBase
       delete_asset(channel_id, filetodelete1)
       delete_asset(channel_id, filetodelete2)
 
-      assert (list_assets(channel_id).empty?), "No unexpected assets were written to storage."
+      assert api.list_objects.empty?, "No unexpected assets were written to storage."
       delete_channel(channel_id)
     end
     FilesApi.any_instance.unstub(:max_file_size)
@@ -353,10 +355,6 @@ class AssetsTest < FilesApiTestBase
 
   # Methods below this line are test utilities, not actual tests
   private
-
-  def list_assets(channel_id)
-    list_objects 'assets', channel_id
-  end
 
   def post_asset(channel_id, uploaded_file)
     body = { files: [uploaded_file] }

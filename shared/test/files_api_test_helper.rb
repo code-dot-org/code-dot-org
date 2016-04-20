@@ -25,9 +25,34 @@ class FilesApiTestHelper
     @session
   end
 
+  def list_objects
+    get "/v3/#{@endpoint}/#{@channel_id}"
+    JSON.parse(last_response.body)
+  end
+
   def get_object(filename, body = '', headers = {})
     get "/v3/#{@endpoint}/#{@channel_id}/#{filename}", body, headers
     last_response.body
+  end
+
+  def ensure_aws_credentials
+    list_objects
+    credentials_missing = !last_response.successful? &&
+        last_response.body.index('Aws::Errors::MissingCredentialsError')
+    credentials_msg = <<-TEXT.gsub(/^\s+/, '').chomp
+      Aws::Errors::MissingCredentialsError: if you are running these tests locally,
+      follow these instructions to configure your AWS credentials and try again:
+      http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html
+    TEXT
+  rescue Aws::S3::Errors::InvalidAccessKeyId
+    credentials_missing = true
+    credentials_msg = <<-TEXT.gsub(/^\s+/, '').chomp
+      Aws::S3::Errors::InvalidAccessKeyId: Make sure your AWS credentials are set in your locals.yml.
+      If you don't have AWS credentials, follow these instructions to configure your AWS credentials and try again:
+      http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html
+    TEXT
+  ensure
+    flunk credentials_msg if credentials_missing
   end
 
 end
