@@ -16,14 +16,14 @@ class AssetsTest < FilesApiTestBase
     ensure_aws_credentials('assets', channel_id)
 
     image_body = 'stub-image-contents'
-    response, image_filename = post_file(channel_id, 'dog.jpg', image_body, 'image/jpeg')
+    response, image_filename = post_asset_file(channel_id, 'dog.jpg', image_body, 'image/jpeg')
 
     actual_image_info = JSON.parse(response)
     expected_image_info = {'filename' => image_filename, 'category' => 'image', 'size' => image_body.length}
     assert_fileinfo_equal(expected_image_info, actual_image_info)
 
     sound_body = 'stub-sound-contents'
-    response, sound_filename = post_file(channel_id, 'woof.mp3', sound_body, 'audio/mpeg')
+    response, sound_filename = post_asset_file(channel_id, 'woof.mp3', sound_body, 'audio/mpeg')
 
     actual_sound_info = JSON.parse(response)
     expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
@@ -43,17 +43,17 @@ class AssetsTest < FilesApiTestBase
     assert successful?
 
     # unsupported media type
-    post_file(channel_id, 'filename.exe', 'stub-contents', 'application/x-msdownload')
+    post_asset_file(channel_id, 'filename.exe', 'stub-contents', 'application/x-msdownload')
     assert unsupported_media_type?
 
     # mismatched file extension and mime type
-    _, mismatched_filename = post_file(channel_id, 'filename.jpg', 'stub-contents', 'application/gif')
+    _, mismatched_filename = post_asset_file(channel_id, 'filename.jpg', 'stub-contents', 'application/gif')
     assert successful?
     delete_asset(channel_id, mismatched_filename)
     assert successful?
 
     # file extension case insensitivity
-    _, filename = post_file(channel_id, 'filename.JPG', 'stub-contents', 'application/jpeg')
+    _, filename = post_asset_file(channel_id, 'filename.JPG', 'stub-contents', 'application/jpeg')
     assert successful?
     get_asset(channel_id, filename)
     assert successful?
@@ -80,8 +80,8 @@ class AssetsTest < FilesApiTestBase
     asset_bucket = AssetBucket.new
 
     # create a couple assets without an abuse score
-    _, first_asset = post_file(channel_id, 'asset1.jpg', 'stub-image-contents', 'image/jpeg')
-    _, second_asset = post_file(channel_id, 'asset2.jpg', 'stub-image-contents', 'image/jpeg')
+    _, first_asset = post_asset_file(channel_id, 'asset1.jpg', 'stub-image-contents', 'image/jpeg')
+    _, second_asset = post_asset_file(channel_id, 'asset2.jpg', 'stub-image-contents', 'image/jpeg')
 
     result = get_asset(channel_id, first_asset)
     assert_equal 'stub-image-contents', result
@@ -135,7 +135,7 @@ class AssetsTest < FilesApiTestBase
   def test_viewing_abusive_assets
     channel_id = create_channel
 
-    _, asset_name = post_file(channel_id, 'abusive_asset.jpg', 'stub-image-contents', 'image/jpeg')
+    _, asset_name = post_asset_file(channel_id, 'abusive_asset.jpg', 'stub-image-contents', 'image/jpeg')
 
     # owner can view
     get_asset(channel_id, asset_name)
@@ -192,8 +192,8 @@ class AssetsTest < FilesApiTestBase
     sound_filename = 'woof.mp3'
     sound_body = 'stub-sound-contents'
 
-    _, image_filename = post_file(src_channel_id, image_filename, image_body, 'image/jpeg')
-    _, sound_filename = post_file(src_channel_id, sound_filename, sound_body, 'audio/mpeg')
+    _, image_filename = post_asset_file(src_channel_id, image_filename, image_body, 'image/jpeg')
+    _, sound_filename = post_asset_file(src_channel_id, sound_filename, sound_body, 'audio/mpeg')
     patch_abuse(src_channel_id, 10)
 
     expected_image_info = {'filename' =>  image_filename, 'category' =>  'image', 'size' =>  image_body.length}
@@ -226,17 +226,17 @@ class AssetsTest < FilesApiTestBase
     body = 'stub-image-contents'
     content_type = 'image/jpeg'
 
-    # post_file create a new file/temp filename, so we post twice using the same file here instead
-    file, filename = create_uploaded_file(basename, body, content_type)
+    # post_asset_file create a new file/temp filename, so we post twice using the same file here instead
+    file, filename = create_asset_file(basename, body, content_type)
 
-    post_object(owner_channel_id, file)
+    post_asset(owner_channel_id, file)
     assert successful?, 'Owner can add a file'
 
     with_session(:non_owner) do
       get_asset(owner_channel_id, filename)
       assert successful?, 'Non-owner can read a file'
 
-      post_object(owner_channel_id, file)
+      post_asset(owner_channel_id, file)
       assert last_response.client_error?, 'Non-owner cannot write a file'
 
       delete_asset(owner_channel_id, filename)
@@ -251,16 +251,16 @@ class AssetsTest < FilesApiTestBase
     FilesApi.any_instance.stubs(:max_app_size).returns(10)
     channel_id = create_channel
 
-    post_file(channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
+    post_asset_file(channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
     assert last_response.client_error?, "Error when file is larger than max file size."
 
-    _, added_filename1 = post_file(channel_id, "file2.jpg", "1234", 'image/jpeg')
+    _, added_filename1 = post_asset_file(channel_id, "file2.jpg", "1234", 'image/jpeg')
     assert successful?, "First small file upload is successful."
 
-    _, added_filename2 = post_file(channel_id, "file3.jpg", "5678", 'image/jpeg')
+    _, added_filename2 = post_asset_file(channel_id, "file3.jpg", "5678", 'image/jpeg')
     assert successful?, "Second small file upload is successful."
 
-    post_file(channel_id, "file4.jpg", "ABCD", 'image/jpeg')
+    post_asset_file(channel_id, "file4.jpg", "ABCD", 'image/jpeg')
     assert last_response.client_error?, "Error when exceeding max app size."
 
     delete_asset(channel_id, added_filename1)
@@ -279,23 +279,23 @@ class AssetsTest < FilesApiTestBase
     CDO.stub(:newrelic_logging, true) do
       channel_id = create_channel
 
-      post_file(channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
+      post_asset_file(channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
       assert last_response.client_error?, "Error when file is larger than max file size."
 
       assert_assets_custom_metric 1, 'FileTooLarge'
 
-      _, filetodelete1 = post_file(channel_id, "file2.jpg", "1234", 'image/jpeg')
+      _, filetodelete1 = post_asset_file(channel_id, "file2.jpg", "1234", 'image/jpeg')
       assert successful?, "First small file upload is successful."
 
       assert_assets_custom_metric 1, 'FileTooLarge', 'still only one custom metric recorded'
 
-      _, filetodelete2 = post_file(channel_id, "file3.jpg", "5678", 'image/jpeg')
+      _, filetodelete2 = post_asset_file(channel_id, "file3.jpg", "5678", 'image/jpeg')
       assert successful?, "Second small file upload is successful."
 
       assert_assets_custom_metric 2, 'QuotaCrossedHalfUsed'
       assert_assets_custom_event 1, 'QuotaCrossedHalfUsed'
 
-      post_file(channel_id, "file4.jpg", "ABCD", 'image/jpeg')
+      post_asset_file(channel_id, "file4.jpg", "ABCD", 'image/jpeg')
       assert last_response.client_error?, "Error when exceeding max app size."
 
       assert_assets_custom_metric 3, 'QuotaExceeded'
@@ -315,7 +315,7 @@ class AssetsTest < FilesApiTestBase
   def test_asset_last_modified
     channel = create_channel
 
-    file, filename = create_uploaded_file('test.png', 'version 1', 'image/png')
+    file, filename = create_asset_file('test.png', 'version 1', 'image/png')
 
     post channel, file
     get_asset channel, filename
@@ -352,6 +352,24 @@ class AssetsTest < FilesApiTestBase
     get_object 'assets', channel_id, filename, body, headers
   end
 
+  def post_asset(channel_id, uploaded_file)
+    body = { files: [uploaded_file] }
+    headers = { 'CONTENT_TYPE' => 'multipart/form-data' }
+    post_object 'assets', channel_id, '', body, headers
+  end
+
+  def post_asset_file(channel_id, filename, file_contents, content_type)
+    file, tmp_filename = create_asset_file(filename, file_contents, content_type)
+    response = post_asset(channel_id, file)
+    [response, tmp_filename]
+  end
+
+  def create_asset_file(filename, file_contents, content_type)
+    basename = [filename.split('.')[0], '.' + filename.split('.')[1]]
+    temp_filename = basename[0] + @random.bytes(10).unpack('H*')[0] + basename[1]
+    [create_uploaded_file(temp_filename, file_contents, content_type), temp_filename]
+  end
+
   def delete_asset(channel_id, filename)
     delete_object 'assets', channel_id, filename
   end
@@ -360,36 +378,12 @@ class AssetsTest < FilesApiTestBase
     delete_all_objects(CDO.assets_s3_bucket, bucket)
   end
 
-  def post_object(channel_id, uploaded_file)
-    body = { files: [uploaded_file] }
-    post("/v3/assets/#{channel_id}/", body, 'CONTENT_TYPE' => 'multipart/form-data').body
-  end
-
   def patch_abuse(channel_id, abuse_score)
     patch("/v3/assets/#{channel_id}/?abuse_score=#{abuse_score}").body
   end
 
   def copy_all(src_channel_id, dest_channel_id)
     AssetBucket.new.copy_files(src_channel_id, dest_channel_id).to_json
-  end
-
-  def create_uploaded_file(filename, contents, content_type)
-    basename = [filename.split('.')[0], '.' + filename.split('.')[1]]
-    temp_filename = basename[0] + @random.bytes(10).unpack('H*')[0] + basename[1]
-    Dir.mktmpdir do |dir|
-      file_path = "#{dir}/#{temp_filename}"
-      File.open(file_path, 'w') do |file|
-        file.write(contents)
-        file.rewind
-      end
-      [Rack::Test::UploadedFile.new(file_path, content_type), temp_filename]
-    end
-  end
-
-  def post_file(channel_id, filename, contents, content_type)
-    file, tmp_filename = create_uploaded_file(filename, contents, content_type)
-    response = post_object(channel_id, file)
-    [response, tmp_filename]
   end
 
   def assert_assets_custom_metric(index, metric_type, length_msg = nil, expected_value = 1)

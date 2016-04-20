@@ -27,7 +27,7 @@ class AnimationsTest < FilesApiTestBase
     delete_all_animation_versions(cat_image_filename)
 
     # Upload dog.png and check the response
-    response = upload(dog_image_filename, dog_image_body, 'image/png')
+    response = post_animation_file(dog_image_filename, dog_image_body, 'image/png')
     actual_dog_image_info = JSON.parse(response)
     expected_dog_image_info = {
       'filename' => dog_image_filename,
@@ -37,7 +37,7 @@ class AnimationsTest < FilesApiTestBase
     assert_fileinfo_equal(expected_dog_image_info, actual_dog_image_info)
 
     # Upload cat.png and check the response
-    response = upload(cat_image_filename, cat_image_body, 'image/png')
+    response = post_animation_file(cat_image_filename, cat_image_body, 'image/png')
     actual_cat_image_info = JSON.parse(response)
     expected_cat_image_info = {
       'filename' =>  cat_image_filename,
@@ -61,7 +61,7 @@ class AnimationsTest < FilesApiTestBase
   end
 
   def test_unsupported_media_type
-    upload('executable.exe', 'stub-contents', 'application/x-msdownload')
+    post_animation_file('executable.exe', 'stub-contents', 'application/x-msdownload')
     assert unsupported_media_type?
   end
 
@@ -69,7 +69,7 @@ class AnimationsTest < FilesApiTestBase
     mismatched_filename = randomize_filename('mismatchedmimetype.png')
     delete_all_animation_versions(mismatched_filename)
 
-    upload(mismatched_filename, 'stub-contents', 'application/gif')
+    post_animation_file(mismatched_filename, 'stub-contents', 'application/gif')
     assert successful?
 
     delete_animation(mismatched_filename)
@@ -82,7 +82,7 @@ class AnimationsTest < FilesApiTestBase
     delete_all_animation_versions(filename)
     delete_all_animation_versions(different_case_filename)
 
-    upload(filename, 'stub-contents', 'application/png')
+    post_animation_file(filename, 'stub-contents', 'application/png')
     assert successful?
 
     get_animation(filename)
@@ -116,7 +116,7 @@ class AnimationsTest < FilesApiTestBase
     delete_all_animation_versions(dest_image_filename)
 
     # Upload copy_source.png and check the response
-    upload(source_image_filename, source_image_body, 'image/png')
+    post_animation_file(source_image_filename, source_image_body, 'image/png')
     assert successful?
 
     # Copy copy_source.png to copy_dest.png
@@ -154,12 +154,12 @@ class AnimationsTest < FilesApiTestBase
 
     # Create an animation file
     v1_file_data = 'stub-v1-body'
-    upload(filename, v1_file_data, 'image/png')
+    post_animation_file(filename, v1_file_data, 'image/png')
     assert successful?
 
     # Overwrite it.
     v2_file_data = 'stub-v2-body'
-    upload(filename, v2_file_data, 'image/png')
+    post_animation_file(filename, v2_file_data, 'image/png')
     assert successful?
 
     # Delete it.
@@ -185,13 +185,13 @@ class AnimationsTest < FilesApiTestBase
 
     # Create an animation file
     v1_file_data = 'stub-v1-body'
-    upload(filename, v1_file_data, 'image/png')
+    post_animation_file(filename, v1_file_data, 'image/png')
     assert successful?
     original_version_id = JSON.parse(last_response.body)['versionId']
 
     # Overwrite it, specifying the same version
     v2_file_data = 'stub-v2-body'
-    upload_version(filename, original_version_id, v2_file_data, 'image/png')
+    post_animation_file_version(filename, original_version_id, v2_file_data, 'image/png')
     new_version_id = JSON.parse(last_response.body)['versionId']
     assert successful?
 
@@ -220,6 +220,10 @@ class AnimationsTest < FilesApiTestBase
     get_object 'animations', @channel_id, filename
   end
 
+  def post_animation_file(filename, file_contents, content_type)
+    post_file 'animations', @channel_id, filename, file_contents, content_type
+  end
+
   def delete_animation(filename)
     delete_object 'animations', @channel_id, filename
   end
@@ -232,32 +236,12 @@ class AnimationsTest < FilesApiTestBase
     get_object_version 'animations', @channel_id, filename, version_id
   end
 
+  def post_animation_file_version(filename, version_id, file_contents, content_type)
+    post_file_version 'animations', @channel_id, filename, version_id, file_contents, content_type
+  end
+
   def delete_all_animation_versions(filename)
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/1/#{filename}")
-  end
-
-  def upload(filename, contents, content_type)
-    upload_version(filename, nil, contents, content_type)
-  end
-
-  def upload_version(filename, version_id, contents, content_type)
-    url = "/v3/animations/#{@channel_id}/#{filename}"
-    query_params = version_id.nil? ? '' : "?version=#{version_id}"
-
-    body = { files: [create_uploaded_file(filename, contents, content_type)] }
-    post url + query_params, body, 'CONTENT_TYPE' => content_type
-    last_response.body
-  end
-
-  def create_uploaded_file(filename, contents, content_type)
-    Dir.mktmpdir do |dir|
-      file_path = "#{dir}/#{filename}"
-      File.open(file_path, 'w') do |file|
-        file.write(contents)
-        file.rewind
-      end
-      Rack::Test::UploadedFile.new(file_path, content_type)
-    end
   end
 
   def copy(source_filename, dest_filename)

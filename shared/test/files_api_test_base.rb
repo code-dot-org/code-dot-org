@@ -101,6 +101,18 @@ class FilesApiTestBase < Minitest::Test
 
   def put_object(endpoint, channel_id, filename, body = '', headers = {})
     put "/v3/#{endpoint}/#{channel_id}/#{filename}", body, headers
+    last_response.body
+  end
+
+  def post_object(endpoint, channel_id, filename, body = '', headers = {})
+    post "/v3/#{endpoint}/#{channel_id}/#{filename}", body, headers
+    last_response.body
+  end
+
+  def post_file(endpoint, channel_id, filename, file_contents, content_type)
+    body = { files: [ create_uploaded_file(filename, file_contents, content_type) ] }
+    headers = { 'CONTENT_TYPE' => content_type }
+    post_object endpoint, channel_id, filename, body, headers
   end
 
   def delete_object(endpoint, channel_id, filename)
@@ -119,6 +131,18 @@ class FilesApiTestBase < Minitest::Test
 
   def put_object_version(endpoint, channel_id, filename, version_id, body = '', headers = {})
     put "/v3/#{endpoint}/#{channel_id}/#{filename}?version=#{version_id}", body, headers
+    last_response.body
+  end
+
+  def post_object_version(endpoint, channel_id, filename, version_id, body = '', headers = {})
+    post "/v3/#{endpoint}/#{channel_id}/#{filename}?version=#{version_id}", body, headers
+    last_response.body
+  end
+
+  def post_file_version(endpoint, channel_id, filename, version_id, file_contents, content_type)
+    body = { files: [ create_uploaded_file(filename, file_contents, content_type) ] }
+    headers = { 'CONTENT_TYPE' => content_type }
+    post_object_version endpoint, channel_id, filename, version_id, body, headers
   end
 
   def successful?
@@ -131,6 +155,17 @@ class FilesApiTestBase < Minitest::Test
 
   def unsupported_media_type?
     last_response.status == 415
+  end
+
+  def create_uploaded_file(filename, file_contents, content_type)
+    Dir.mktmpdir do |dir|
+      file_path = "#{dir}/#{filename}"
+      File.open(file_path, 'w') do |file|
+        file.write(file_contents)
+        file.rewind
+      end
+      Rack::Test::UploadedFile.new(file_path, content_type)
+    end
   end
 
 end
