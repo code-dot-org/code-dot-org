@@ -84,10 +84,6 @@ function animations(state, action) {
       });
 
     case ActionType.SET_INITIAL_ANIMATION_METADATA:
-      // ONLY FOR TESTING - REMOVE BEFORE SHIP!
-      if (action.metadata.length === 0) {
-        return animationsInitialState;
-      }
       return action.metadata;
 
     case ActionType.SET_ANIMATION_NAME:
