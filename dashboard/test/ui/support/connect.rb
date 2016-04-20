@@ -2,12 +2,7 @@ require 'selenium/webdriver'
 require 'cgi'
 require 'httparty'
 require_relative '../../../../deployment'
-
-class Object
-  def blank?
-    respond_to?(:empty?) ? !!empty? : !self
-  end
-end
+require 'active_support/core_ext/object/blank'
 
 $browser_configs = JSON.load(open("browsers.json"))
 

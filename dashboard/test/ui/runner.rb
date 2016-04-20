@@ -21,6 +21,8 @@ require 'colorize'
 require 'open3'
 require 'parallel'
 
+require 'active_support/core_ext/object/blank'
+
 ENV['BUILD'] = `git rev-parse --short HEAD`
 
 $options = OpenStruct.new
@@ -38,12 +40,6 @@ $options.maximize = nil
 $options.auto_retry = false
 $options.magic_retry = false
 $options.parallel_limit = 1
-
-class Object
-  def blank?
-    respond_to?(:empty?) ? !!empty? : !self
-  end
-end
 
 # start supporting some basic command line filtering of which browsers we run against
 opt_parser = OptionParser.new do |opts|
