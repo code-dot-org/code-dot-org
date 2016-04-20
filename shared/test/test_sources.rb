@@ -37,9 +37,9 @@ class SourcesTest < FilesApiTestBase
     assert_equal 2, versions.count
 
     # Get the first and second version.
-    first_version = get_source_version(filename, versions.last['versionId'])
+    first_version = @api.get_object_version(filename, versions.last['versionId'])
     assert_equal file_data, first_version
-    second_version = get_source_version(filename, versions.first['versionId'])
+    second_version = @api.get_object_version(filename, versions.first['versionId'])
     assert_equal new_file_data, second_version
 
     # Check cache headers
@@ -68,10 +68,6 @@ class SourcesTest < FilesApiTestBase
   end
 
   private
-
-  def get_source_version(filename, version_id)
-    get_object_version 'sources', @channel, filename, version_id
-  end
 
   def put_source_version(filename, version_id, body, headers)
     put_object_version 'sources', @channel, filename, version_id, body, headers
