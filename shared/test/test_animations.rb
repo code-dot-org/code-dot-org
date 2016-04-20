@@ -193,7 +193,7 @@ class AnimationsTest < FilesApiTestBase
 
     # Overwrite it, specifying the same version
     v2_file_data = 'stub-v2-body'
-    post_animation_file_version(filename, original_version_id, v2_file_data, 'image/png')
+    @api.post_file_version(filename, original_version_id, v2_file_data, 'image/png')
     new_version_id = JSON.parse(last_response.body)['versionId']
     assert successful?
 
@@ -213,10 +213,6 @@ class AnimationsTest < FilesApiTestBase
   end
 
   private
-
-  def post_animation_file_version(filename, version_id, file_contents, content_type)
-    post_file_version 'animations', @channel_id, filename, version_id, file_contents, content_type
-  end
 
   def delete_all_animation_versions(filename)
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/1/#{filename}")
