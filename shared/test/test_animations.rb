@@ -169,7 +169,7 @@ class AnimationsTest < FilesApiTestBase
     assert successful?
 
     # List versions.
-    versions = list_animation_versions(filename)
+    versions = @api.list_object_versions(filename)
     assert successful?
     assert_equal 2, versions.count
 
@@ -198,7 +198,7 @@ class AnimationsTest < FilesApiTestBase
     assert successful?
 
     # Make sure only one version exists
-    versions = list_animation_versions(filename)
+    versions = @api.list_object_versions(filename)
     assert successful?
     assert_equal 1, versions.count
     assert_equal new_version_id, versions[0]['versionId']
@@ -216,10 +216,6 @@ class AnimationsTest < FilesApiTestBase
 
   def post_animation_file(filename, file_contents, content_type)
     post_file 'animations', @channel_id, filename, file_contents, content_type
-  end
-
-  def list_animation_versions(filename)
-    list_object_versions 'animations', @channel_id, filename
   end
 
   def get_animation_version(filename, version_id)
