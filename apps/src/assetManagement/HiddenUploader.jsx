@@ -6,11 +6,11 @@
  */
 var HiddenUploader = React.createClass({
   propTypes: {
+    toUrl: React.PropTypes.string.isRequired,
+    typeFilter: React.PropTypes.string,
     onUploadStart: React.PropTypes.func.isRequired,
     onUploadDone: React.PropTypes.func.isRequired,
-    onUploadError: React.PropTypes.func,
-    channelId: React.PropTypes.string.isRequired,
-    typeFilter: React.PropTypes.string
+    onUploadError: React.PropTypes.func
   },
 
   componentDidMount: function () {
@@ -18,7 +18,7 @@ var HiddenUploader = React.createClass({
 
     $(this.refs.uploader).fileupload({
       dataType: 'json',
-      url: '/v3/assets/' + props.channelId + '/',
+      url: this.props.toUrl,
       // prevent fileupload from replacing the input DOM element, which
       // React does not like
       replaceFileInput: false,
@@ -30,7 +30,9 @@ var HiddenUploader = React.createClass({
         props.onUploadDone(data.result);
       },
       error: function (e, data) {
-        props.onUploadError(e.status);
+        if (props.onUploadError) {
+          props.onUploadError(e.status);
+        }
       }
     });
   },
@@ -45,7 +47,8 @@ var HiddenUploader = React.createClass({
 
   render: function () {
     // NOTE: IE9 will ignore accept, which means on this browser we can end
-    // up uploading files that dont match typeFilter
+    // up uploading files that don't match typeFilter; for this reason, the
+    // server should also validate allowed file types.
     return <input
         ref="uploader"
         type="file"
