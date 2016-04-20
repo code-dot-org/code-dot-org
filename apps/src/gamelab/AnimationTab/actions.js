@@ -4,11 +4,10 @@
 
 var animationPickerActions = require('../AnimationPicker/actions');
 var gamelabActions = require('../actions');
+var utils = require('../../utils');
 
 /** @enum {string} */
-var ActionType = module.exports.ActionType = {
-  SELECT_ANIMATION: 'SELECT_ANIMATION'
-};
+var ActionType = module.exports.ActionType = utils.makeEnum('SELECT_ANIMATION');
 
 module.exports.pickNewAnimation = function () {
   return function (dispatch, getState) {

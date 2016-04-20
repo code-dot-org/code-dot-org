@@ -6,11 +6,11 @@ var styles = require('./styles');
 var utils = require('../../utils');
 
 /** @enum {string} */
-var View = {
-  PICKER: 'PICKER',
-  UPLOAD_IN_PROGRESS: 'UPLOAD_IN_PROGRESS',
-  ERROR: 'ERROR'
-};
+var View = utils.makeEnum(
+  'PICKER',
+  'UPLOAD_IN_PROGRESS',
+  'ERROR'
+);
 
 var AnimationPicker = React.createClass({
   propTypes: {
