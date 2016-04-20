@@ -58,7 +58,7 @@ class SourcesTest < FilesApiTestBase
 
     # Overwrite it, specifying the same version.
     new_file_data = 'version 2'
-    put_source_version(filename, response['versionId'], new_file_data, file_headers)
+    @api.put_object_version(filename, response['versionId'], new_file_data, file_headers)
     assert successful?
 
     # List versions.
@@ -68,10 +68,6 @@ class SourcesTest < FilesApiTestBase
   end
 
   private
-
-  def put_source_version(filename, version_id, body, headers)
-    put_object_version 'sources', @channel, filename, version_id, body, headers
-  end
 
   def delete_all_source_versions(filename)
     delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/1/#{filename}")
