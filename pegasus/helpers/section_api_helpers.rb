@@ -359,24 +359,24 @@ class DashboardSection
 
   def students()
     @students ||= Dashboard.db[:followers].
-    join(:users, id: :student_user_id).
-    left_outer_join(:secret_pictures, id: :secret_picture_id).
-    select(Sequel.as(:student_user_id, :id),
-           *DashboardStudent.fields,
-           :secret_pictures__name___secret_picture_name,
-           :secret_pictures__path___secret_picture_path).
-    # NOTE: Using distinct(:student_user_id) is not supported by the sqlite test
-    # environment.
-    distinct.select(:student_user_id).
-    where(section_id: @row[:id]).
-    where(users__deleted_at: nil).
-    map do |row|
-      row.merge({
-        location: "/v2/users/#{row[:id]}",
-        age: DashboardStudent.birthday_to_age(row[:birthday]),
-        completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
-      })
-    end
+      join(:users, id: :student_user_id).
+      left_outer_join(:secret_pictures, id: :secret_picture_id).
+      select(Sequel.as(:student_user_id, :id),
+             *DashboardStudent.fields,
+             :secret_pictures__name___secret_picture_name,
+             :secret_pictures__path___secret_picture_path).
+      # NOTE: Using distinct(:student_user_id) is not supported by the sqlite test
+      # environment.
+      distinct.select(:student_user_id).
+      where(section_id: @row[:id]).
+      where(users__deleted_at: nil).
+      map do |row|
+        row.merge({
+          location: "/v2/users/#{row[:id]}",
+          age: DashboardStudent.birthday_to_age(row[:birthday]),
+          completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
+        })
+      end
   end
 
   def teacher?(user_id)
