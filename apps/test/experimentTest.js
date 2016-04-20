@@ -41,7 +41,7 @@ describe('experiments', function () {
     );
   });
 
-  it('can return a list of all enabled experiments', function() {
+  it('can return a list of all enabled experiments', function () {
     assert.isArray(experiments.getEnabledExperiments());
     assert.lengthOf(experiments.getEnabledExperiments(), 0);
     experiments.setEnabled('awesome-feature', true);
@@ -87,7 +87,6 @@ describe('experiments', function () {
 
     beforeEach(function () {
       localStorage.removeItem('experiments-topInstructions');
-      localStorage.removeItem('experiments-runModeIndicators');
     });
 
     it('can load whitelisted experiments from deprecated storage', function () {
@@ -108,15 +107,6 @@ describe('experiments', function () {
 
       mockedQueryString = '?topInstructions=false';
       assert.strictEqual(experiments.isEnabled('topInstructions'), false);
-    });
-
-    it('can toggle multiple experiments with query parameters', function () {
-      assert.strictEqual(experiments.isEnabled('topInstructions'), false);
-      assert.strictEqual(experiments.isEnabled('runModeIndicators'), false);
-
-      mockedQueryString = '?topInstructions=true&runModeIndicators=true';
-      assert.strictEqual(experiments.isEnabled('topInstructions'), true);
-      assert.strictEqual(experiments.isEnabled('runModeIndicators'), true);
     });
   });
 

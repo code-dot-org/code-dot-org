@@ -11,7 +11,7 @@ var queryString = require('query-string');
 var experiments = module.exports;
 // TODO(pcardune): remove OLD_KEY_WHITELIST when whitelisted experiments have
 // shipped
-var OLD_KEY_WHITELIST = ['topInstructions', 'runModeIndicators'];
+var OLD_KEY_WHITELIST = ['topInstructions'];
 var STORAGE_KEY = 'experimentsList';
 
 /**
