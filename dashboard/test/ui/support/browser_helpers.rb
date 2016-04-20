@@ -24,10 +24,10 @@ module BrowserHelpers
     text.strip.should include expected_text
   end
 
-  def element_contains_text?(selector, expectedText)
-    expectedText.gsub!('\"', '"')
+  def element_contains_text?(selector, expected_text)
+    expected_text.gsub!('\"', '"')
     text = @browser.execute_script("return $(\"#{selector}\").text();")
-    text.strip.include? expectedText
+    text.strip.include? expected_text
   end
 
   def element_value_is(selector, expected_value)
