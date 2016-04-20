@@ -3,6 +3,14 @@ require 'mocha/mini_test'
 require 'files_api'
 require 'channels_api'
 
+#
+# Base class for tests against the FilesApi (which include SourcesTest,
+# AssetsTest, AnimationsTest) which provides some useful common setup and
+# utilities for testing that API.
+#
+# See also: FilesApiTestHelper, which is a simplified interface for making test
+# requests against the API.  If you find yourself constructing a /v3/<endpoint>
+# url in your function, it should probably go in that class, not here.
 class FilesApiTestBase < Minitest::Test
   include Rack::Test::Methods
   include SetupTest
