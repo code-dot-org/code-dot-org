@@ -69,17 +69,6 @@ class FilesApiTestBase < Minitest::Test
     assert_equal(expected['size'], actual['size'])
   end
 
-  def post_object(endpoint, channel_id, filename, body = '', headers = {})
-    post "/v3/#{endpoint}/#{channel_id}/#{filename}", body, headers
-    last_response.body
-  end
-
-  def post_file(endpoint, channel_id, filename, file_contents, content_type)
-    body = { files: [create_uploaded_file(filename, file_contents, content_type)] }
-    headers = { 'CONTENT_TYPE' => content_type }
-    post_object endpoint, channel_id, filename, body, headers
-  end
-
   def post_object_version(endpoint, channel_id, filename, version_id, body = '', headers = {})
     post "/v3/#{endpoint}/#{channel_id}/#{filename}?version=#{version_id}", body, headers
     last_response.body

@@ -40,6 +40,17 @@ class FilesApiTestHelper
     last_response.body
   end
 
+  def post_object(filename, body = '', headers = {})
+    post "/v3/#{@endpoint}/#{@channel_id}/#{filename}", body, headers
+    last_response.body
+  end
+
+  def post_file(filename, file_contents, content_type)
+    body = { files: [create_uploaded_file(filename, file_contents, content_type)] }
+    headers = { 'CONTENT_TYPE' => content_type }
+    post_object filename, body, headers
+  end
+
   def delete_object(filename)
     delete "/v3/#{@endpoint}/#{@channel_id}/#{filename}"
   end
@@ -57,6 +68,17 @@ class FilesApiTestHelper
   def put_object_version(filename, version_id, body = '', headers = {})
     put "/v3/#{@endpoint}/#{@channel_id}/#{filename}?version=#{version_id}", body, headers
     last_response.body
+  end
+
+  def create_uploaded_file(filename, file_contents, content_type)
+    Dir.mktmpdir do |dir|
+      file_path = "#{dir}/#{filename}"
+      File.open(file_path, 'w') do |file|
+        file.write(file_contents)
+        file.rewind
+      end
+      Rack::Test::UploadedFile.new(file_path, content_type)
+    end
   end
 
   def ensure_aws_credentials
