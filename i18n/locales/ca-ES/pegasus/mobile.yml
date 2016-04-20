@@ -23,7 +23,7 @@ ca-ES:
   twentyhours_heading: "Prova el nostre curs d'introducció a la programació"
   twentyhours_text: Heu acabat la primera Hora del Codi? Apreneu més informàtica i programació en el curs següent.
   og_title: Cada nen mereix oportunitat
-  og_description: "Cada alumne de cada escola mereix l'oportunitat d'estudiar informàtica."
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Uniu-vos a<a href="http://hourofcode.com">Hora del Codi</a><br/>Desembre 8 - 14, 2014<br/>'
   hoc2014_students: Alumnes
   hoc2014_try: Proveu-ho
@@ -182,7 +182,7 @@ ca-ES:
   learn_next_level: Continua al següent nivell
   learn_online: Prova altres cursos online
   learn_classes: Troba classes locals
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Acabo de fer la #HourOfCode - Fes-ho! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -511,6 +511,7 @@ ca-ES:
   dashboard_navigation_all_sections: Comptes i progrés dels alumnes
   dashboard_navigation_view_progress: Veure el progrés
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Afegeix estudiants
   dashboard_navigation_manage_students: Gestiona els alumnes
   dashboard_navigation_lesson_plans_resources: Plans docents i recursos
@@ -604,10 +605,23 @@ ca-ES:
   dashboard_progress_completed_too_many_blocks: completat, massa blocs
   dashboard_progress_completed_perfect: completat, perfecte
   dashboard_progress_furthest_level_attempted: nivell més alt intentat
+  dashboard_progress_submitted: submitted
   dashboard_stage: etapa
   dashboard_puzzle: Puzzle
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Correcte
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Increïbles estadístiques d'Hora de Codi de l'any passat. En només una setmana:"
   stats_hoc_2013_image_alt: "Estadístiques de 2013 d'Hora de Codi"
   dashboard_teacher: Mestre
@@ -627,7 +641,8 @@ ca-ES:
   dashboard_faq_k5: Preguntes freqüents sobre K-5
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
+  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
   dashboard_announce_button_text: Aprèn més
   dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'

@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\n<img src=\"https://images.code.org/69f1c2b415f907c86aaa6ed2534c3682-image-1442870371171.13.38.png\" width=\"250px\"/>\r\n\r\n**Challenge Level:** Use what you've learned in this stage and others to figure out how to make the drawing above.  \r\n<br/>\r\n\r\n<h4 class=\"hint\">\r\n<details>\r\n<summary><b>Hints</b></summary>\r\n\t<br/><br/>\r\n\t<h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #1</b></summary>\r\n    \t<br/>\r\n    \tPart of understanding how to use functions is figuring out which ones you need, and which ones you don't. \r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #2</b></summary>\r\n    \t<br/>\r\n    \tUse a `for loop`, then use its counter variable inside of a nested `repeat` loop. \r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #3</b></summary>\r\n    \t<br/>\r\n    \tEach iteration, you should draw a square then jump forward.\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n     <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #3</b></summary>\r\n    \t<br/>\r\n    \tYou will need to turn left by 90 degrees outside of your `repeat`, but still inside the `for loop`.\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n\r\n</details>\r\n</h4>\r\n\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>\r\n",
+    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\n<img src=\"https://images.code.org/69f1c2b415f907c86aaa6ed2534c3682-image-1442870371171.13.38.png\" width=\"250px\"/>\r\n\r\n**Challenge Level:** Use what you've learned in this stage and others to figure out how to make the drawing above.  \r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -31,7 +31,18 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "permitted_errors": "0"
+    "permitted_errors": "0",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Part of understanding how to use functions is figuring out which ones you need, and which ones you don't.\",\r\n  \"hint_id\": \"Course_4_Artist_Functions_challenge_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Use a `for loop`, then use its counter variable inside of a nested `repeat` loop.\",\r\n  \"hint_id\": \"Course_4_Artist_Functions_challenge_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Each iteration, you should draw a square then jump forward.\",\r\n  \"hint_id\": \"Course_4_Artist_Functions_challenge_c\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You will need to turn left by 90 degrees outside of your `repeat`, but still inside the `for loop`.\",\r\n  \"hint_id\": \"Course_4_Artist_Functions_challenge_d\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Course_4_Artist_Functions_challenge_1\",\r\n  \"callout_text\": \"Notice that we've sorted all of blocks and put them behind categories to keep things tidy.  Click here to find all of the blocks that you need.\",\r\n  \"element_id\": \"[id=':3.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 2,
+    "for_loops": 3,
+    "variables": 3,
+    "functions": 3
   }
 }]]></config>
   <blocks>

@@ -36,7 +36,7 @@ for file in $(find $orig_dir -name 'en_us.json'); do
       # Copy files from i18n/locales to apps
       for file in $(find $loc_dir -name $app'.json'); do
         relname=${file#$loc_dir}
-        ruby ../i18n/code.org/lib/merge-all-locales.rb "json" $en_dir$relname $file $orig_dir${relname%.json}/${js_locale}.json
+        ruby ../bin/i18n-codeorg/lib/merge-all-locales.rb "json" $en_dir$relname $file $orig_dir${relname%.json}/${js_locale}.json
       done
     done
   fi

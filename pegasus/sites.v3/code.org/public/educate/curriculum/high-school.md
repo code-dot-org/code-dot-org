@@ -6,6 +6,18 @@ nav: educate_nav
 # High School 
 For high schools, we offer two years of Computer Science courses for beginners: Exploring Computer Science and AP Computer Science Principles. If you want to go even further with your students, the third party resources below provide additional courses in programming, AP Computer Science A,  algebra, and more.
 
+# Exploring Computer Science
+
+<img src="<%= CDO.shared_image_url("courses/logo_ecs.png") %>">
+
+Leveraging years of research by the [National Science Foundation](http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503582&org=CISE), a team from UCLA has developed Exploring Computer Science, a nationally recognized introductory computer science course that includes curriculum, professional development, and [assessments built by SRI International](http://pact.sri.com/resources.html). Code.org offers a program to support version 5 of the ECS curriculum, which is composed of six instructional units with lessons that are designed to promote an inquiry-based approach to teaching and learning foundational concepts in computer science, while building students' computational practices and problem solving skills. The professional learning experience for version 5 of ECS is based on three major pillars: computer science content/concepts, inquiry, and equity.
+
+Download the [ECS version 5 curriculum overview](/files/ecs-curriculum-overview.pdf) and find other resources at [exploringcs.org](http://www.exploringcs.org/).
+
+<img src="<%= CDO.code_org_url("/images/testimonials/fit-750/exploring-cs-testimonial.png") %>">
+
+[<button>Learn more about professional learning</button>](/educate/professional-learning/exploring-cs)
+
 # Computer Science Principles
 
 <iframe width="600" height="337" src="https://www.youtube.com/embed/HoKRZRI9IDk" frameborder="0" allowfullscreen></iframe>
@@ -29,18 +41,10 @@ Computer Science Discoveries is a full-year introductory computer science survey
 
 [<button>Learn more about curriculum</button>](/educate/csd)
 
-# Exploring Computer Science
+# Computer Science Fundamentals - Accelerated
+Code.org offers a four course [Computer Science Fundamentals](https://studio.code.org) progression for elementary school students. If your students have not already taken all of these courses, the 20-hour accelerated course covers the core concepts from the first four courses at an accelerated pace designed for students ages 10-18. This can be worked into a high school school after-school program or as a unit in a technology or programming class.
 
-<img src="<%= CDO.shared_image_url("courses/logo_ecs.png") %>">
-
-Leveraging years of research by the [National Science Foundation](http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503582&org=CISE), a team from UCLA has developed Exploring Computer Science, a nationally recognized introductory computer science course that includes curriculum, professional development, and [assessments built by SRI International](http://pact.sri.com/resources.html). Code.org offers a program to support version 5 of the ECS curriculum, which is composed of six instructional units with lessons that are designed to promote an inquiry-based approach to teaching and learning foundational concepts in computer science, while building students' computational practices and problem solving skills. The professional learning experience for version 5 of ECS is based on three major pillars: computer science content/concepts, inquiry, and equity.
-
-Download the [ECS version 5 curriculum overview](/files/ecs-curriculum-overview.pdf) and find other resources at [exploringcs.org](http://www.exploringcs.org/).
-
-<img src="<%= CDO.code_org_url("/images/testimonials/fit-750/exploring-cs-testimonial.png") %>">
-
-[<button>Learn more about professional learning</button>](/educate/professional-learning/exploring-cs)
-
+[<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
 
 # 3rd Party resources for high school CS
 

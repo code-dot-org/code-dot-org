@@ -476,6 +476,7 @@ $default-modal-width: 640px;
     .modal-image {
       margin-top: -100px;
       float: left;
+      position: relative;
     }
   }
 }
@@ -1605,7 +1606,23 @@ a.download-video {
   }
 }
 
-.text-match {
+.level-group-number {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  float: left;
+  width: 30px;
+}
+
+.level-group-content {
+  overflow: hidden;
+}
+
+.text-match, .free-response {
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
   #markdown {
     // By default, nothing in the page body is selectable.
     // On text-match levels there may be a reason to paste part of the
@@ -1617,6 +1634,7 @@ a.download-video {
 
 .external,
 .text-match,
+.free-response,
 .multi,
 .match {
   #markdown.teacher {
@@ -1645,7 +1663,7 @@ a.download-video {
   max-width: 100%;
 }
 
-.text-match #markdown.teacher {
+.text-match #markdown.teacher, .free-response #markdown.teacher {
   margin-left: 0;
   margin-right: 0;
 }
@@ -1751,48 +1769,125 @@ $information-tablet-tall: "only screen and (min-width: 768px) and (max-width: 10
 $information-desktop: "only screen and (min-width: 1024px)";
 
 .multi {
-
   margin: auto;
-
   h2 {
     text-align: center;
   }
-
-  .question {
-    float: left;
-    @media #{$information-phone-narrow} {
-    }
-    @media #{$information-phone-wide} {
-    }
-    @media #{$information-tablet-tall} {
-      width: 35%;
-    }
-    @media #{$information-desktop} {
-      width: 35%;
-    }
+  p {
+    font-size: 16px;
+    line-height: 24px;
   }
   $multi-left-margin: 50px;
-  .answers {
-    float: left;
-    margin-left: $multi-left-margin;
-    @media #{$information-phone-narrow} {
+
+  // The tight layout is designed for a full-width layout that tends to
+  // vertically stack every element, rather than going for side-by-side elements.
+  &.tight {
+
+    // A piece of instructional content (image, text, markdown)
+    .question .content {
+      float: left;
+      clear: both;
+      @media #{$information-phone-narrow} {
+      }
+      @media #{$information-phone-wide} {
+      }
+      @media #{$information-tablet-tall} {
+        width: 55%;
+      }
+      @media #{$information-desktop} {
+        width: 55%;
+      }
     }
-    @media #{$information-phone-wide} {
-    }
-    @media #{$information-tablet-tall} {
-      width: 55%;
-    }
-    @media #{$information-desktop} {
-      width: 55%;
-    }
-    &.question-content-blank {
-      width: calc(100% - #{$multi-left-margin});
-    }
+
+    // A plain-text question.
     .multi-question {
-      width: 90%;
-      font-size: 17px;
+      float: left;
+      width: calc(100% - #{$multi-left-margin});
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    // The block of answers.
+    .answers {
+      float: left;
+      clear: both;
+      width: calc(100% - #{$multi-left-margin});
+      &.question-content-blank {
+        width: calc(100% - #{$multi-left-margin});
+      }
+    }
+
+    // A single answer button.
+    .answerbutton {
+      clear: both;
+      margin-left: $multi-left-margin;
     }
   }
+
+  // The default layout is designed to fit a single multi with a side-by-side
+  // layout when the screen is wide, and then stacking vertically for narrow
+  // devices.
+  &.default {
+
+    // The block containing all instructional content (image, text, markdown).
+    .question {
+      float: left;
+      @media #{$information-phone-narrow} {
+      }
+      @media #{$information-phone-wide} {
+      }
+      @media #{$information-tablet-tall} {
+        width: 35%;
+      }
+      @media #{$information-desktop} {
+        width: 35%;
+      }
+    }
+
+    // A plain-text question.
+    .multi-question {
+      float: left;
+      font-size: 16px;
+      line-height: 24px;
+
+      @media #{$information-tablet-tall} {
+        margin-left: $multi-left-margin;
+      }
+      @media #{$information-desktop} {
+        margin-left: $multi-left-margin;
+      }
+    }
+
+    // The block of answers.
+    .answers {
+      float: left;
+      margin-left: $multi-left-margin;
+      @media #{$information-phone-narrow} {
+      }
+      @media #{$information-phone-wide} {
+      }
+      @media #{$information-tablet-tall} {
+        width: 55%;
+      }
+      @media #{$information-desktop} {
+        width: 55%;
+      }
+      &.question-content-blank {
+        width: calc(100% - #{$multi-left-margin});
+      }
+    }
+
+    // A single answer button.
+    .answerbutton {
+      margin-top: 15px;
+      margin-right: 15px;
+      padding-left: 10px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
   .mainblock {
     margin-left: 0px;
     img {
@@ -1806,6 +1901,9 @@ $information-desktop: "only screen and (min-width: 1024px)";
   input {
     margin-top: 12px;
   }
+  .answerbutton {
+    white-space: nowrap;
+  }
   .item-radio {
     display: inline-block;
     float: left;
@@ -1817,7 +1915,6 @@ $information-desktop: "only screen and (min-width: 1024px)";
   }
   .item-mark {
     display: inline-block;
-    float: left;
     text-align: right;
     padding-right: 10px;
     box-sizing: border-box;
@@ -1826,18 +1923,11 @@ $information-desktop: "only screen and (min-width: 1024px)";
   .item-label {
     display: inline-block;
     text-align: left;
-    float: left;
+    vertical-align: top;
+    white-space: normal;
     label {
-      font-size: 15px;
+      font-size: 14px;
     }
-  }
-  .answerbutton {
-    margin-top: 15px;
-    margin-right: 15px;
-    padding-left: 10px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 }
 
@@ -1860,6 +1950,7 @@ $modal-no-icon-gap: 22px;
     font-size: 24px;
     color: $purple;
   }
+
   .congrats {
     font-size: 27px;
     line-height: 30px;
@@ -1976,7 +2067,8 @@ $modal-no-icon-gap: 22px;
 .modal-image {
   width: $modal-image-width;
   height: auto;
-  margin-top: -60px;
+  margin-top: -75px;
+  position: absolute;
   html[dir=rtl] & {
     float: right;
     -webkit-transform: scaleX(-1);
@@ -1996,7 +2088,7 @@ $modal-no-icon-gap: 22px;
 .modal-content.markdown-instructions-container {
   margin-left: $modal-no-icon-gap;
   margin-right: $modal-no-icon-gap;
-  margin-top: 10px;
+  /*margin-top: 10px;*/
   margin-bottom: 15px;
   float: left;
   padding: 0 0 15px;
@@ -2006,7 +2098,7 @@ $modal-no-icon-gap: 22px;
 }
 
 .modal-content.instructions-container {
-  margin: 0 10px 20px 20px;
+  margin: 15px 10px 20px 20px;
 
   button {
     margin: 0;
@@ -2028,6 +2120,7 @@ $modal-no-icon-gap: 22px;
 
 .markdown-level-header-text {
   margin-left: $modal-image-width + $modal-image-margin-gap;
+  margin-top: 15px;
   font-weight: normal;
   line-height: 27px;
   font-size: 24px;

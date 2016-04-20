@@ -2,34 +2,33 @@
 http_interactions:
 - request:
     method: put
-    uri: https://cdo-build-package.s3.amazonaws.com/test-package/fake-hash.tar.gz
+    uri: https://cdo-build-package.s3.amazonaws.com/test-package/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.tar.gz
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAPXWs1YAA+3TTQrCMBCG4RwlF1CSNj/HkSBKqy0Vk+D1jXRTNxaE+APv
-        s5nFJMzA8O2ncezTrguxE7WowjnzqNpbtawzrYVunDXetq2zQummfBBSVdto
-        IccUrlKKWz8Mr96t9f/UMZwPm6rXxy+bcrrktD3FijNW81/C/px/bXxD/j9h
-        vv+3twAAAAAAAAAAAAAAAMC77pjwm3AAKAAA
+        H4sIANaZBVcAA+3TQWrDMBCFYR3FJygaeSR5TlMkYZOUhJTaptev225CFw20
+        uKHwf5tZjEAPpNcu5/NxeTyU+eD24jcp6fuUHP31/CDeOwnZSy+aQ3JeJGfv
+        Or9boivrvJSXrnOvx9Ppu3O39v/U2FffVIMNU5MmamWqk7bBLE3VgoZcRpVR
+        k1q1XltRi2ZS8xBDHWK8d378zmVdntfl4Wne8Y5b/d+2X/uv28+i/3/g8/3v
+        nQIAAAAAAAAAAAAAAAA/9QZV2C22ACgAAA==
     headers:
       X-Amz-Acl:
       - public-read
       Expect:
       - 100-continue
       Content-Md5:
-      - svfhVyg+lSGmL6sPRHl9+w==
-      Date:
-      - Thu, 04 Feb 2016 22:55:49 GMT
+      - gSyUQJ07gi6vxihfW3Ixhw==
       Content-Length:
-      - '162'
+      - '205'
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 04 Feb 2016 22:55:50 GMT
+      - Wed, 06 Apr 2016 23:20:56 GMT
       Etag:
-      - '"b2f7e157283e9521a62fab0f44797dfb"'
+      - '"812c94409d3b822eafc6285f5b723187"'
       Content-Length:
       - '0'
       Server:
@@ -38,40 +37,43 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Thu, 04 Feb 2016 22:55:49 GMT
+  recorded_at: Wed, 06 Apr 2016 23:20:55 GMT
 - request:
     method: get
-    uri: https://cdo-build-package.s3.amazonaws.com/test-package/fake-hash.tar.gz
+    uri: https://cdo-build-package.s3.amazonaws.com/test-package/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.tar.gz
     body:
-      encoding: US-ASCII
+      encoding: ASCII-8BIT
       string: ''
-    headers: {}
+    headers:
+      Content-Length:
+      - '0'
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 04 Feb 2016 22:55:50 GMT
+      - Wed, 06 Apr 2016 23:20:56 GMT
       Last-Modified:
-      - Thu, 04 Feb 2016 22:55:50 GMT
+      - Wed, 06 Apr 2016 23:20:56 GMT
       Etag:
-      - '"b2f7e157283e9521a62fab0f44797dfb"'
+      - '"812c94409d3b822eafc6285f5b723187"'
       Accept-Ranges:
       - bytes
       Content-Type:
       - ''
       Content-Length:
-      - '162'
+      - '205'
       Server:
       - AmazonS3
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAPXWs1YAA+3TTQrCMBCG4RwlF1CSNj/HkSBKqy0Vk+D1jXRTNxaE+APv
-        s5nFJMzA8O2ncezTrguxE7WowjnzqNpbtawzrYVunDXetq2zQummfBBSVdto
-        IccUrlKKWz8Mr96t9f/UMZwPm6rXxy+bcrrktD3FijNW81/C/px/bXxD/j9h
-        vv+3twAAAAAAAAAAAAAAAMC77pjwm3AAKAAA
+        H4sIANaZBVcAA+3TQWrDMBCFYR3FJygaeSR5TlMkYZOUhJTaptev225CFw20
+        uKHwf5tZjEAPpNcu5/NxeTyU+eD24jcp6fuUHP31/CDeOwnZSy+aQ3JeJGfv
+        Or9boivrvJSXrnOvx9Ppu3O39v/U2FffVIMNU5MmamWqk7bBLE3VgoZcRpVR
+        k1q1XltRi2ZS8xBDHWK8d378zmVdntfl4Wne8Y5b/d+2X/uv28+i/3/g8/3v
+        nQIAAAAAAAAAAAAAAAA/9QZV2C22ACgAAA==
     http_version: 
-  recorded_at: Thu, 04 Feb 2016 22:55:50 GMT
+  recorded_at: Wed, 06 Apr 2016 23:20:55 GMT
 recorded_with: VCR 3.0.0

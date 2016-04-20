@@ -31,6 +31,12 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2
   }
 }]]></config>
   <blocks>
@@ -57,13 +63,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <recommended_blocks>
-      <xml>
-        <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="3-10">4</title>
-        </block>
-      </xml>
-    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

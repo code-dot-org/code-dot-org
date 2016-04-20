@@ -41,8 +41,12 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "examples_required": "false",
-    "maze_data": null
+    "examples_required": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 1
   }
 }]]></config>
   <blocks>

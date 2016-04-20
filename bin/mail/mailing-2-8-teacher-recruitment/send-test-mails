@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+template_name = ARGV[0]
+unless template_name
+  puts 'Usage: send-test-mails template_name'
+  puts '  where template_name has an associated template_name.md in pegasus/emails'
+  exit
+end
+
+template_file = File.join('../../../pegasus/emails', "#{template_name}.md")
+raise "Missing email template #{template_file}" unless File.exist? template_file
+
+`../send-to-mailing-list #{template_name} test-params.csv`

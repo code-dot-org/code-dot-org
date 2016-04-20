@@ -6,17 +6,10 @@ end
 apt_package 'nginx'
 
 run_unicorn = '/run/unicorn'
-directory run_unicorn do
-  user node[:current_user]
-  group node[:current_user]
-  # Ensure directory is created before app-services are (re)loaded.
-  %w(dashboard pegasus).each do |app|
-    subscribes :create, "service[#{app}]", :before
-  end
-end
-
 %w(dashboard pegasus).each do |app|
   socket_path = File.join run_unicorn, "#{app}.sock"
+  # Ensure stale socket-files are cleaned up
+  # (in case OS doesn't automatically remove them, e.g., due to an aborted process)
   file socket_path do
     action :delete
     not_if { ::File.socket?(socket_path) }
@@ -37,6 +30,7 @@ cert = ssl_certificate 'cdo-nginx' do
     chain_source 'attribute'
     source 'attribute'
   end
+  notifies :reload, 'service[nginx]'
 end
 
 template '/etc/nginx/nginx.conf' do
@@ -47,7 +41,7 @@ template '/etc/nginx/nginx.conf' do
   variables ssl_key: cert.key_path,
     ssl_cert: cert.chain_combined_path,
     run_dir: run_unicorn
-  notifies :reload, 'service[nginx]', :delayed
+  notifies :reload, 'service[nginx]', :immediately
 end
 
 service 'nginx' do

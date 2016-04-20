@@ -11,6 +11,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @student = create :student
     @young_student = create :young_student
     @teacher = create :teacher
+    @admin = create :admin
     @section = create :section, user_id: @teacher.id
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user_id: @teacher.id)
 
@@ -122,7 +123,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
-  test 'project template level sets start blocks' do
+  test 'project template level sets start blocks when defined' do
     template_level = create :level
     template_level.start_blocks = '<xml/>'
     template_level.save!
@@ -141,7 +142,25 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal '<xml/>', app_options[:level]['startBlocks']
   end
 
-  test 'project template level sets start html' do
+  test 'project template level does not set start blocks when not defined' do
+    template_level = create :level
+    template_level.save!
+
+    real_level = create :level
+    real_level.project_template_level_name = template_level.name
+    real_level.start_blocks = "<shouldnot:override/>"
+    real_level.save!
+
+    sl = create :script_level, level: real_level
+    get :show, script_id: sl.script, stage_id: '1', id: '1'
+
+    assert_response :success
+    # start blocks comes from real_level not project_level
+    app_options = assigns(:level).blockly_options
+    assert_equal '<shouldnot:override/>', app_options[:level]['startBlocks']
+  end
+
+  test 'project template level sets start html when defined' do
     template_level = create :applab
     template_level.start_html = '<div><label id="label1">expected html</label></div>'
     template_level.save!
@@ -160,7 +179,25 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal '<div><label id="label1">expected html</label></div>', app_options[:level]['startHtml']
   end
 
-  test 'project template level sets toolbox blocks' do
+  test 'project template level does not set start html when not defined' do
+    template_level = create :applab
+    template_level.save!
+
+    real_level = create :applab
+    real_level.project_template_level_name = template_level.name
+    real_level.start_html = '<div><label id="label1">real_level html</label></div>'
+    real_level.save!
+
+    sl = create :script_level, level: real_level
+    get :show, script_id: sl.script, stage_id: '1', id: '1'
+
+    assert_response :success
+    # start html comes from real_level not project_level
+    app_options = assigns(:level).blockly_options
+    assert_equal '<div><label id="label1">real_level html</label></div>', app_options[:level]['startHtml']
+  end
+
+  test 'project template level sets toolbox blocks when defined' do
     template_level = create :level
     template_level.toolbox_blocks = '<xml><toolbox/></xml>'
     template_level.save!
@@ -177,6 +214,24 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     # toolbox blocks comes from project_level not real_level
     app_options = assigns(:level).blockly_options
     assert_equal '<xml><toolbox/></xml>', app_options[:level]['toolbox']
+  end
+
+  test 'project template level does not set toolbox blocks when not defined' do
+    template_level = create :level
+    template_level.save!
+
+    real_level = create :level
+    real_level.project_template_level_name = template_level.name
+    real_level.toolbox_blocks = "<shouldnot:override/>"
+    real_level.save!
+
+    sl = create :script_level, level: real_level
+    get :show, script_id: sl.script, stage_id: '1', id: '1'
+
+    assert_response :success
+    # toolbox blocks comes from real_level not project_level
+    app_options = assigns(:level).blockly_options
+    assert_equal '<shouldnot:override/>', app_options[:level]['toolbox']
   end
 
   test 'should show video in twenty hour script level' do
@@ -699,6 +754,28 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select '#notStarted'
     assert_select '#codeApp', 0
+  end
+
+  test 'includes makerlab javascript dependencies when makerlab level' do
+    sign_in @admin
+
+    level = create :makerlab
+    script_level = create :script_level, level: level
+
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @admin.id
+
+    assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab')
+  end
+
+  test 'excludes makerlab javascript dependencies when applab level' do
+    sign_in @admin
+
+    level = create :applab
+    script_level = create :script_level, level: level
+
+    get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @admin.id
+
+    assert_select 'script[src=?]', ActionController::Base.helpers.javascript_path('js/makerlab'), false
   end
 
   test 'shows expanded teacher panel when student is chosen' do

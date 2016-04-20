@@ -33,6 +33,8 @@ module Dashboard
 
       config.middleware.insert_after Rack::Cache, Rack::Whitelist::Upstream,
         HttpCache.config(rack_env)[:dashboard]
+
+      Rails.application.routes.default_url_options[:port] = CDO.dashboard_port
     end
 
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
@@ -124,5 +126,7 @@ module Dashboard
       config.cache_store = :memory_store, { size: MAX_CACHED_BYTES }
     end
 
+    # turn off ActionMailer logging to avoid logging email addresses
+    ActionMailer::Base.logger = nil
   end
 end

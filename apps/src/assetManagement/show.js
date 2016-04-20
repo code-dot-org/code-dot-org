@@ -1,7 +1,6 @@
-/* global Dialog, dashboard, Applab */
-// TODO (josh) - don't pass `Dialog` into `createModalDialog`.
+/* global dashboard */
 
-var AssetManager = require('./AssetManager.jsx');
+var ImagePicker = require('./ImagePicker');
 var studioApp = require('../StudioApp').singleton;
 
 /**
@@ -11,7 +10,7 @@ var studioApp = require('../StudioApp').singleton;
  * @param typeFilter {String} The type of assets to show and allow to be
  *   uploaded.
  */
-module.exports = function(assetChosen, typeFilter) {
+module.exports = function (assetChosen, typeFilter) {
   var codeDiv = document.createElement('div');
   var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
   var dialog = studioApp.createModalDialog({
@@ -19,7 +18,7 @@ module.exports = function(assetChosen, typeFilter) {
     defaultBtnSelector: 'again-button',
     id: 'manageAssetsModal'
   });
-  ReactDOM.render(React.createElement(AssetManager, {
+  ReactDOM.render(React.createElement(ImagePicker, {
     typeFilter: typeFilter,
     channelId: dashboard.project.getCurrentId(),
     uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),

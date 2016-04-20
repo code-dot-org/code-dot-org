@@ -214,11 +214,7 @@ uk:
       4-5 Artist For Loops 13_instruction: 'Модель починається без циклу "для" та містить дуже багато блоків. Використай блок "для", щоб завершити спіраль. Підказка: остання лінія має довжину 250 пікселів.'
       4-5 Artist For Loops 14_instruction: 'Хтось почав писати код, але потім зрозумів, що має бути простіший спосіб! Використай блок "для", щоб змінити блоки та завершити трикутну спіраль. (Підказка: остання лінія має довжину 300 пікселів.'
       4-5 Artist For Loops 15_instruction: 'Хтось почав писати код, але потім зрозумів, що має бути швидший спосіб! Використай блок "для", щоб змінити блоки та завершити шестикутну спіраль. (Підказка: остання лінія має довжину 200 пікселів.'
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+      4-5 Artist For Loops 2_instruction: 'Це блок "для". Замість того, щоб друкувати 1,2,3...10, блок "для" може повторювати блоки, розміщені всередині, та перелічувати послідовні числа. Розмісти число 10 у розділі "до" блоку "для".'
       4-5 Artist For Loops 3_instruction: 'Як ми можемо рахувати від 1 до 50? Відредагуй блок "для".'
       4-5 Artist For Loops 4_instruction: 'Заповни блок "для" так, що він рахував по черзі від 1 до 10.'
       4-5 Artist For Loops 6_instruction: |-
@@ -272,7 +268,7 @@ uk:
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
       4-5 Bee Conditionals 2_instruction: "Бджола хоче збирати лише нектар. Пам'ятай, що не всі об'єкти є квітами, тож спершу перевіряй кожну хмаринку, щоб побачити, чи приховує вона квітку. Якщо так, то можна збирати нектар."
-      4-5 Bee Conditionals 3_instruction: Тепер Бджола хоче лише робити мед. Перевіряй, щоб робити мед лише у стільниках.
+      4-5 Bee Conditionals 3_instruction: Тепер я просто хочу робити мед. Деякі з цих хмаринок мають всередині стільники. Перевір під кожною хмаринкою!
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
@@ -335,7 +331,6 @@ uk:
       4-5 Maze 9_instruction: 'Створи цикл блоком "повторювати доки".'
       4-5 Maze Assessment 1_instruction: 'Оцінювання: Дістанься соняшника.'
       4-5 Maze Conditionals 1_instruction: Використовуй блок повторення, щоб провести зомбі до соняшника.
-      4-5 Maze Conditionals 10_instruction: Зможеш додати ще 3 блоки, щоб допомогти мені пройти складніший лабіринт? Якщо все зроблено правильно, я зможу проходити по довільному кривому шляху будь-якої довжини.
       4-5 Maze Conditionals 2_instruction: Використовуй блок повторення, щоб провести зомбі до соняшника.
       4-5 Maze Conditionals 3_instruction: 'Блок "якщо" дає змогу самостійно вирішувати, коли повертати. Підказка: потрібно додати всього лише один блок, але досліди, як ми його налаштували, щоб можна було зробити це самостійно наступного разу.'
       4-5 Maze Conditionals 4_instruction: 'Гаразд, це схоже на попереднє завдання, але тобі треба згадати, як ми використовували блоки "якщо" і "повторити" разом.'
@@ -1091,6 +1086,89 @@ uk:
       Course1BeePuzzle12_instruction: Збери три нектару, а потім зроби два меду
       Course1MazeAssessment1_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\\r\nMove one way, then\nanother to get me to the pig."
+      CSD Hackathon Pt 1_instruction: (Click to see full instructions)
+      CSD Hackathon Pt 2_instruction: (Click to see full instructions)
+      CSD Hackathon Week 1_instruction: (Click to see full instructions)
+      CSD Hackathon Week 2_instruction: (Click to see full instructions)
+      CSD U3 Background Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Background Experiment_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Experiment_instruction: |
+        Try using some of the other shape
+        functions you've learned in the draw loop. What happens when you use randomNumber()
+        to generate some of the inputs?You'll want to stop and discuss with the class
+        before moving on.
+      CSD U3 Frame Rate_instruction: "Slow down Gamelab Gary's animation with frameRate()"
+      CSD U3 Random Animation_instruction: |
+        Use randomNumber() to animate Gary's
+        mouth.
+      CSD U3 Random Color_instruction: |
+        Could you use randomNumber() to pick random
+        colors as well? Try setting one or more of the channels in the rgb block with
+        a random number. What should the maximum value be?
+      CSD U3 Random Intro_instruction: |
+        What do you think this code will do when
+        it is run? Make a prediction, then run this code 5 - 10 times, recording the
+        output each time. Share your results with your neighbor.
+      CSD U3 Random Width Height_instruction: |
+        Pick a shape function and use calls
+        to randomNumber() in place of one or more of the parameters. Maker sure you
+        run it a few times so you can see the effect of randomization.
+      CSD U3 Simple Drawing - Animation 2_instruction: |
+        Use randomNumber() on the
+        x position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Animation_instruction: |
+        Use randomNumber() on the x
+        position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Background_instruction: |
+        Put all of your code into
+        a draw() loop and then add set the background to blue with the background()
+        block.
+      CSD U3 Variable Arithmetic pt2_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variable Arithmetic_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variable Incrementation pt2_instruction: |
+        Predict: What two numbers
+        will be displayed in the console?
+      CSD U3 Variable Incrementation_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variables Initialize_instruction: |
+        Predict: What will get displayed
+        in the console?
+      CSD U3 Variables Intro_instruction: |
+        Create your own variable, give it a value,
+        and display that value in the console.
+      CSD U3 Variables Random_instruction: |
+        Predict: What will get displayed in the
+        console?
+      CSD U3 Variables Reassign pt2_instruction: |
+        Predict: What will get displayed
+        in the console?
+      CSD U3 Variables Reassign_instruction: |
+        Predict: What will get displayed in
+        the console?
+      CSD U3 Variables Square Random Loop_instruction: |
+        Change the value "size"
+        initialized to make a larger square.
+      CSD U3 Variables Square Random_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variables Square_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1442,7 +1520,7 @@ uk:
       K-1 Bee Loops 10_instruction: Збери весь нектар та зроби мед.
       K-1 Bee Loops 11_instruction: Збери весь нектар та мед!
       K-1 Bee Loops 12_instruction: Збери весь нектар та мед.
-      K-1 Bee Loops 2_instruction: Використай цикл, щоб пересуватись, а потім збери нектар і зроби мед!
+      K-1 Bee Loops 2_instruction: 'Використай цикл "повторити", щоб пересуватись, а потім збери нектар і зроби мед!'
       K-1 Bee Loops 3_instruction: Використай цикли, щоб зібрати нектар і зробити мед!
       K-1 Bee Loops 4_instruction: Використай цикли, щоб зібрати нектар, зробити мед і рухатися!
       K-1 Bee Loops 5_instruction: Використай цикли, щоб зібрати нектар і мед!
@@ -1539,6 +1617,8 @@ uk:
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
+      Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -1776,6 +1856,10 @@ uk:
       Overworld Avoid Monsters_instruction: |
         Налетіти на Плазуна - погана ідея.
         Обережно пробирайся повз Плазунів та доберись до безпеки свого дому.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: 'Деревина - важливий ресурс. З неї виготовляють багато речей. Підійди до дерева і скористайся командою "знищити блок", щоб зрубати його.'
       Overworld Chop Trees_instruction: Нам потрібно збудувати будинок до заходу сонця. Для цього потрібно багато деревини. Зрубай 3 дерева.
       Overworld Free Play 20x20_instruction: Вітання! Вирішено останнє завдання! Тепер добувай, будуй, створюй щось унікальне, використовуючи все вивчене.
@@ -1976,10 +2060,20 @@ uk:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: 'Ці хмари мене нервують! У деяких хмарках всередині є квіти, а деякі - порожні. Потрібно перевірити кожну хмарку, і добувати нектар лише з квітів.'
       Quantum Bee_instruction: 'Фіолетові квіти можуть мати 1 або 0 нектарів, але не відомо скільки саме! Обережно - не збирай нектар з квітки, якщо його там немає. Перевір, чи нектар рівний 1 за допомогою блоку "якщо".'
       Ryan - 4-5 Bee Conditionals 2_instruction: "Зараз бджолі потрібен тільки нектар. Не всі об'єкти є квітами, тож перевіряй під кожною хмаринкою, чи приховує вона квітку. Якщо так, то можна збирати нектар."
       Ryan - Bee Conditionals_instruction: "Бджола хоче збирати лише нектар. Пам'ятай, що не всі об'єкти є квітами, тож спершу перевіряй кожну хмаринку, щоб побачити, чи приховує вона квітку. Якщо так, то можна збирати нектар."
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: 'Ось функції, яка називається "патрулювати." Зміни її так, щоб перемістити кішку на 400 пікселів вгору, а потім на 400 пікселів вниз.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
@@ -2061,6 +2155,7 @@ uk:
       template test_instruction: "what's up"
       Test Play Lab_instruction: This is a test play lab level.
       test_sarah_instruction: hi hi
+      Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat keeps using the `fill` block until the ground is even?  "
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
@@ -2286,7 +2381,7 @@ uk:
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -2611,6 +2706,18 @@ uk:
       U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\\r\n"
       U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
       U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
+      U3 - Simple Drawing - Comments_instruction: Do this
+      U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
+      U3 - Simple Drawing - No Fill_instruction: Do this
+      U3 - Simple Drawing - Order of Blocks_instruction: Do this
+      U3 - Simple Drawing - Personal Drawing_instruction: DO This
+      U3 - Simple Drawing - Rectangle_instruction: Do This
+      U3 - Simple Drawing - regular polygon_instruction: Do this
+      U3 - Simple Drawing - Road Ellipse_instruction: Do This
+      U3 - Simple Drawing - Road Rects and Color_instruction: Do This
+      U3 - Simple Drawing - Stroke and Stroke Weight_instruction: Do this
+      U3 - Simple Drawing - text_instruction: Do This
+      U3 - Simple Drawing - X and Y values_instruction: Do This
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -2860,8 +2967,9 @@ uk:
         Free Play! Use what you learned
         from loops and random to make your own little scene. Have fun.
       U3L07 - introSquare_instruction: |
-        Use a loop to draw a square. (Click to see
-        full instructions)
+        Use a loop to draw a square. Then add another
+        loop to draw many squares each one rotated some amount. (Click to see full
+        instructions)
       U3L07 - loopsWithRandom_instruction: |
         Increase the number of iterations to
         fill the screen with white. (Click to see full instructions)
@@ -3135,8 +3243,10 @@ uk:
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

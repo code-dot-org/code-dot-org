@@ -10,10 +10,10 @@
   %div
   .field
     = f.label :name
-    = f.text_field :name, :autofocus => true
+    = f.text_field :name, autofocus: true, maxlength: 255
   .field
     = f.label :email
-    = f.email_field :email, placeholder: '***encrypted***', autocomplete: 'off'
+    = f.email_field :email, placeholder: '***encrypted***', autocomplete: 'off', maxlength: 255
   - if devise_mapping.confirmable? && resource.pending_reconfirmation?
     %div
       Currently waiting confirmation for: #{resource.unconfirmed_email}
@@ -24,19 +24,19 @@
       = f.label :username
       = f.object.username
   %div
-    = f.label :password
+    = f.label :password, maxlength: 255
     %em= t('user.new_password_hint')
     %br/
-    = f.password_field :password, :autocomplete => "off"
+    = f.password_field :password, autocomplete: 'off', maxlength: 255
   %div
     = f.label :password_confirmation
-    = f.password_field :password_confirmation, autocomplete: 'off'
+    = f.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
   - if f.object.encrypted_password.present?
     %div
       = f.label :current_password
       %em= t('user.current_password_hint')
       %br/
-      = f.password_field :current_password
+      = f.password_field :current_password, maxlength: 255
   - if !resource.teacher?
     .field
       = f.label t('signup_form.gender')
@@ -47,10 +47,10 @@
   - if resource.teacher?
     .field
       = f.label :school
-      = f.text_field :school, class: 'input-xlarge'
+      = f.text_field :school, class: 'input-xlarge', maxlength: 255
     .field
       = f.label :full_address
-      = f.text_area :full_address, class: 'input-xxlarge', rows: 4
+      = f.text_area :full_address, class: 'input-xxlarge', rows: 4, maxlength: 1024
     = f.hidden_field :age, value: "21"
   .field
     = f.label t('signup_form.user_type')
@@ -67,7 +67,7 @@
 
 :javascript
   $( ".edit_user" ).on("submit", function(e){
-    hashEmail({ email_selector: '#user_email',
-                hashed_email_selector: '#user_hashed_email',
-                age_selector: '#user_age'});
+    window.dashboard.hashEmail({ email_selector: '#user_email',
+      hashed_email_selector: '#user_hashed_email',
+      age_selector: '#user_age'});
   });

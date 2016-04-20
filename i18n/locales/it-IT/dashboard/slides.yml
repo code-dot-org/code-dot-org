@@ -658,7 +658,7 @@ it:
       4:
         image: notes/C2_artist_intro_4.png
         text: |-
-          L'altro blocco che c'è in questo esercizio dice "gira a destra di 90 gradi". Quando usi questo blocco "gira a destra" l'artista ruota a destra. Puoi fare dei tentativi per capire di quanto far girare l'artista. Questo disegno rappresenta una rotazione a sinistra di 90 gradi.
+          Gli altri due blocchi in questo esercizio dicono "gira a destra di 90 gradi" e "gira a sinistra di 90 gradi". Quando usi il blocco "gira a destra" l'artista ruota a destra. Puoi fare dei tentativi per capire di quanto far girare l'artista. L'angolo è misurato rispetto al percorso davanti all'artista. In questo disegno la linea verso l'alto è ciò che disegna l'artista andando avanti dopo aver fatto una rotazione a sinistra di 90 gradi al termine della linea orizzontale.
       5:
         image: notes/C2_artist_intro_5.png
         text: E questo disegno rappresenta una rotazione a sinistra di 120 gradi. Ricorda, puoi modificare il numero dei pixel e dei gradi cliccando sui triangolini con la punta verso il basso accanto a loro. Divertiti a disegnare con il tuo artista!
@@ -822,16 +822,16 @@ it:
     C2_relay_programming:
       1:
         image: notes/C2_relay_programming_1.png
-        text: "Today we're going to do relay programming. It's all about programming under pressure and debugging the mistakes that sometimes happen when you work really quickly or in teams. We'll use graph paper programming to simulate coding, and use relay races to simulate having a deadline."
+        text: Oggi si svolgerà una staffetta di programmazione. Si tratta di programmare sotto pressione e correggere gli errori che talvolta vengono commessi quando lavori davvero velocemente o in team. Useremo la carta millimetrata per simulare il codice e faremo una staffetta per simulare le scadenze.
       2:
         image: notes/C2_relay_programming_2.png
-        text: "In relay programming, teams will be racing to finish a graph paper program. You have to check your teammate's work, or debug it, fix it if there's a mistake, add your arrow, and run back and tag your teammate."
+        text: Nella programmazione a staffetta, le squadre gareggeranno a chi finisce il programma per primo. Dovrai controllare il lavoro dei tuoi compagni e debuggarlo, correggere gli errori se presenti; aggiungi la tua freccia e torna indietro a taggare il tuo compagno.
       3:
         image: notes/C2_relay_programming_3.png
         text: "I programmatori usano moltissimo il debug per trovare e correggere eventuali errori nei loro algoritmi o codici. Esistono diversi metodi per rintracciare gli errori. Uno dei più semplici è quello di controllare l'algoritmo passaggio dopo passaggio fino a trovare il problema, e risolverlo."
       4:
         image: notes/C2_relay_programming_4.png
-        text: "Here, I'm trying to do a back handspring, but I keep falling off. I walk through each part, step by step, and realize where my mistake was. My coach showed me I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position, and I stuck it! I was really glad I debugged my back  handspring. We figured it out! Debugging is finding and fixing problems. Nice, good job!"
+        text: "Qui, sto cercando di fare un salto mortale all'indietro, ma continuo a cadere. Rieprcorro ogni momento, passo dopo passo, e mi rendo conto di quale sia stato il mio errore. Il mio allenatore mi ha mostrato che non stavo mettendo le mani sulla trave in modo corretto. Così ho provato un altro salto mortale all'indietro sulla trave con una nuova posizione della mano, e ce l'ho fatta! Sono stato davvero felice di aver corretto gli errori [debug] del mio salto mortale all'indietro. L'abbiamo capito! Debug è trovare e risolvere i problemi. Bello, buon lavoro!"
     C2_zuck_repeat_loop:
       1:
         image: notes/C2_zuck_repeat_loop_1.png
@@ -872,7 +872,7 @@ it:
       4:
         image: notes/C3_artist_intro_4.png
         text: |-
-          L'altro blocco che c'è in questo esercizio dice "gira a destra di 90 gradi". Quando usi questo blocco "gira a destra" l'artista ruota a destra. Puoi fare dei tentativi per capire di quanto far girare l'artista. Questo disegno rappresenta una rotazione a sinistra di 90 gradi.
+          Gli altri due blocchi in questo esercizio dicono "gira a destra di 90 gradi" e "gira a sinistra di 90 gradi". Quando usi il blocco "gira a destra" l'artista ruota a destra. Puoi fare dei tentativi per capire di quanto far girare l'artista. L'angolo è misurato rispetto al percorso davanti all'artista. In questo disegno la linea verso l'alto è ciò che disegna l'artista andando avanti dopo aver fatto una rotazione a sinistra di 90 gradi al termine della linea orizzontale.
       5:
         image: notes/C3_artist_intro_5.png
         text: E questo disegno rappresenta una rotazione a sinistra di 120 gradi. Ricorda, puoi modificare il numero dei pixel e dei gradi cliccando sui triangolini con la punta verso il basso accanto a loro. Divertiti a disegnare con il tuo artista!
@@ -969,7 +969,8 @@ it:
         text: "Quando vedi un film, ogni secondo del film sono 24 immagini individuali, le chiamiamo fotogrammi. Ognuna di queste immagini dev'essere creata, raffigurata ed unita insieme alle altre. Io e il mio gruppo, siamo tutti sviluppatori di software. Lavoriamo tutti insieme per creare un pezzo del software che crea realmente un' immagine, crea l'immagine finale che vedi sullo schermo. E' uno strumento che gli artisti ed altri sviluppatori possono usare come parte del loro lavoro di gruppo e del loro processo per essere in grado di creare le immagini che vogliono sullo schermo."
       4:
         image: notes/C3_crowdsourcing_4.png
-        text: "For example, in Finding Nemo, when Crush and Squirt and all their friends are flying through the East Australian Current. You're seeing images of water flowing by, you're seeing the colors on the back of the turtle, you're seeing the sides of the fish. All of those things are generated through math and computer programs that we write, that we then give to the artist and they take that to create that final image and tweak it and make it look beautiful and look fun."
+        text: |-
+          Ad esempio, in "Alla ricerca di Nemo", quando Crush, Squirt e tutti i loro amici stanno volando attraverso la corrente australiana orientale, si vede un flusso d'acqua che scorre, si vedono i colori sulla parte posteriore della tartaruga, si vedono i lati del pesce. Tutte queste cose vengono generate grazie alla matematica e ai programmi informatici che scriviamo, dati al creativo al fine di creare l'immagine finale e modificarla in modo che sembri bella e divertente.
     C3_dice_race:
       1:
         image: notes/C3_dice_race_1.png
@@ -997,7 +998,7 @@ it:
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
-        text: "This lesson is functional suncatchers. You'll be creating these pretty suncatchers using functions. There are several steps in creating one of these suncatchers. Some of the steps you have to repeat many times."
+        text: Questa lezione è funzionale alla creazione di cristalli multicolore. Sono immagini carine che si creano usando funzioni. Ci sono diversi passaggi nella creazione di uno di questi cristalli. Alcuni dei passaggi vanno ripetuti diverse volte.
       2:
         image: notes/C3_functional_suncatchers_2.png
         text: Il primo passo è semplificare il processo per creare un cattura sole è capire cosa dobbiamo far ripetere di continuo. Possiamo raggruppare questi passi in ciò che chiamiamo funzione.
@@ -1006,7 +1007,7 @@ it:
         text: "Ma c'è di più per creare un magnifico cattura sole che seguire dei passi precisi. A volte vogliamo essere creativi e cambiare il colore delle cose che stiamo usando. Possiamo creare ogni cattura sole uno diverso dall'altro se usiamo per ciascuno colori diversi."
       4:
         image: notes/C3_functional_suncatchers_4.png
-        text: Your suncatcher will be uniquely yours when you learn to think of the beads as variables which is a word that means a placeholder for information that can change. Have fun creating beautiful suncatchers using functions and variables!
+        text: 'Il tuo suncatcher sarà proprio tuo solo quando imparerai a pensare alle perle come variabili: tale parola indica un segnaposto destinato per informazioni che possono cambiare. Divertiti a creare belle Giveaway utilizzando funzioni e variabili!'
     C3_internet:
       1:
         image: notes/C3_internet_1.png
@@ -1204,20 +1205,20 @@ it:
         text: Questa lezione è chiamata algoritmo Tangram. Un tangram è un puzzle con sette pezzi che possono essere messi insieme per realizzare altre forme. Si utilizzerà un algoritmo per spiegare al vostro compagno come mettere insieme il puzzle.
       2:
         image: notes/C4_unplugged_algorithms_2.png
-        text: An algorithm is just a of list steps that you can take to complete a task. We use them every day with things like shopping lists and recipes. If you keep an algorithm simple, there are lots of ways to interpret it and whoever performs that algorithm might not get exactly what you wanted. If you want to make sure that everyone ends up with the exact same thing, then your algorithm will need to be detailed and very specific.
+        text: Un algoritmo non è altro che una lista di azioni che puoi compiere per completare un compito. Li usiamo ogni giorno per cose come liste della spesa o ricette. Se il tuo algoritmo è semplice, allora esistono molti modi diversi di interpretarlo e chi lo esegue potrebbe non ottenere esattamente quello che volevi tu. Se vuoi essere sicuro che ognuno ottenga esattamente la stessa cosa, allora il tuo algoritmo deve essere dettagliato e molto specifico.
       3:
         image: notes/C4_unplugged_algorithms_3.png
         text: "Sto usando oggi un algoritmo per la realizzazione di un dipinto. Ho voluto provare a fare un dipinto di alcuni lupi, ma io non sono un pittore esperto. Fortunatamente per le persone come me, c'è da dipingere basandosi su dei numeri. Ci sono quaranta colori e la tavola riporta lettere e numeri che indicano quale colore usare per dipingere ogni sezione. Dipingere usando i numeri mi consenete di usare i colori corretti e mi indica dove."
       4:
         image: notes/C4_unplugged_algorithms_4.png
-        text: "It's very specific so I'm able to follow directions and the painting will come out looking awesome. It's a great algorithm. If the instructions weren't specific enough, my wolves wouldn't look as good. When you really want something to turn out exactly the way that you planned it, it's best to be extremely precise."
+        text: È molto specifico quindi sono in grado di seguire le indicazioni e il dipinto risulterà meraviglioso. È un ottimo algoritmo. Se le istruzioni non fossero state abbastanza specifiche, i miei lupi non sarebbero venuti così bene. Quando si vuole che qualcosa diventi esattamente come la si è pianificata, è meglio essere estremamente precisi.
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
-        text: "Each team, the person who's instructing that's the person who's holding the paper, has to figure out what their off symbol is going to be and what their on symbol is going to be. In binary, it's kind of like an alphabet with two letters. Like having A and B be your entire alphabet but you've got a 0 and a 1."
+        text: "In ogni squadra, colui che sta istruendo chi ha in mano la carta, deve capire quale sia il simbolo off e quale sia il proprio simbolo in realtá. In formato binario, è un po' come avere a che fare con un alfabeto con due lettere. Come avere A e B per alfabeto, solo che si chiamano 0 e un 1."
       2:
         image: notes/C4_unplugged_binary_2.png
-        text: "The most common way you use binary is in an if statement. It's a classic thing from programming. The program runs along and it says if something is true, then do this. Or it's not true and you do something else. What if you want to do something maybe a little more complicated. Instead an if statement, you want to work with something like an image or a sound in a computer."
+        text: "Il modo più comune di utilizzare il codice binario è in un'istruzione if ... then ... (se ... allora ...). È un classico della programmazione. Il programma viene eseguito e ci dice se qualcosa è true (vero), allora procedi. O se non lo è, fa' qualcos'altro. Cosa succede se si desidera fare qualcosa di forse un po' più complicato? Al posto di un'istruzione if ... then ... , puoi voler trattare un'immagine o un suono al computer."
       3:
         image: notes/C4_unplugged_binary_3.png
         text: "Un computer conosce solo il codice binario ma un'immagine, non è binaria, non si tratta di zeri e uno. Come fare allora a farlo? Ecco un esempio con questa bella foto. Ora una foto è sostanzialmente un insieme di informazioni. Tutte le informazioni possono essere codificate in binario in un modo o in un altro, devi solo capire come farlo."
@@ -1452,7 +1453,7 @@ it:
         text: "Discuss as a class or in small groups about their favorite lessons. Once you take a look back at everything you've learned, this is where your students' creativity can shine. Split them into groups and have them create an unplugged lesson of their own. Assign each group a key concept, like functions or algorithms and have lots of craft materials on hand for them to use. Have each group present their new unplugged activity or even set aside another day to do a few of the student created activities."
       3:
         image: notes/unplug11_3.png
-        text: "From everyone here at Code.org, we hope you've had a TON of fun during this course. And whether your dream is to create the best new app, use programming to help cure diseases, or you just want to be a stellar problem-solver, this course was the first step in achieving those dreams."
+        text: Tutti qui a Code.org speriamo che tu ti sia divertito un sacco durante questo corso. E se il tuo sogno è quello di creare la nuova app più bella, usare la programmazione per curare malattie, o vuoi solo essere un problem-solver stellare, questo corso è stato il primo passo per realizzare quei sogni.
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG

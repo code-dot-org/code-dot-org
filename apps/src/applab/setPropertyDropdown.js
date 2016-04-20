@@ -1,7 +1,7 @@
 /**
  * This file manages logic for the dropdown used in our setProperty block
  */
-var _ = require('lodash');
+var _ = require('../lodash');
 var library = require('./designElements/library');
 var ElementType = library.ElementType;
 
@@ -212,7 +212,7 @@ function getFirstSetPropertyParam(block, editor) {
       return textToken.value;
     }
     token = token.next;
-  } while(token);
+  } while (token);
   return null;
 }
 

@@ -3,6 +3,7 @@ title: CSP Facilitator Program
 nav: educate_nav
 ---
 # Become a Computer Science Principles Facilitator
+**2016 Application Update: The application process closed March 15th. We are reviewing applications and accepting facilitators on a rolling basis through April 22nd. We will update everyone of their acceptance status by April 22nd.**
 
 Code.org is looking to partner with experienced high school or college-level computer science educators to deliver multiple in-person workshops to local high school teachers teaching our year-long [Computer Science Principles](https://code.org/educate/csp) course. Facilitators apply and are accepted to a two-year train-the-trainer program.
 
@@ -10,7 +11,7 @@ The ideal CSP Facilitator is an enthusiastic supporter of computer science educa
 <br/>
 <br/>
 
-[<button>Apply now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
+[<button>Apply now</button>](https://docs.google.com/a/code.org/forms/d/1C2oECZ04B1406j4x_7sKcRHGdPLmxILVFm463M5MigU/viewform)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
 <br/>
 <br/>
 
@@ -29,7 +30,7 @@ Before applying please carefully review the the [criteria, requirements and comm
 <br/>
 <br/>
 
-[<button>Apply now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
+[<button>Apply now</button>](https://docs.google.com/a/code.org/forms/d/1C2oECZ04B1406j4x_7sKcRHGdPLmxILVFm463M5MigU/viewform)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
 <br/>
 <br/>
 

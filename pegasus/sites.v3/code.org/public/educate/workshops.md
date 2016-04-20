@@ -10,11 +10,10 @@ Click on your state to find the details for your workshop.
 
 - **[Arizona](#az)**<br/>
 - **[California](#ca)**<br/>
-- **[Florida](#fl)**<Br/>
 - **[Illinois](#il)**<br/>
 - **[Maryland](#md)**<br/>
-- **[North Carolina](#nc)**<br/>
 - **[Texas](#tx)**<br/>
+- **[Washington](#wa)**<br/>
 
 
 ________________
@@ -42,7 +41,7 @@ During the second phase of our professional learning program, you will have an o
 Monday, June 6 - Friday, June 10<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
@@ -63,7 +62,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
@@ -100,7 +99,7 @@ During the second phase of our professional learning program, you will have an o
 Monday, June 20 - Friday, June 24<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
@@ -117,7 +116,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
@@ -144,15 +143,16 @@ During the second phase of our professional learning program, you will have an o
 Monday, July 11 - Friday, July 15<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
 **Location**
 
-TBD
-
-*More information coming soon*<br/>
+[Liberty Elementary<br/>
+Room TBD<br/>
+9631 Hayes St<br/>
+Riverside, CA 92503](https://goo.gl/maps/gefbQ8Wn4wA2)
 
 
 **What do I bring to my workshop?**
@@ -161,7 +161,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
@@ -188,7 +188,7 @@ During the second phase of our professional learning program, you will have an o
 Monday, August 8 - Friday, August 12<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
@@ -205,108 +205,13 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
-</br>
-</br>
-
-
-[**Back to the top**](#top)
-________________
-<a id="fl"></a>
-<br/>
-<br/>
-
-## Florida
-
-- **[Broward/Miami](#miami)**<br/>
-- **[Palm Beach](#palm)**<br/>
-- **[NE Florida](#ne)**<Br/>
-
-<a id="miami"></a>
-### Broward/Miami ECS
-
-
-#### Phase 1: Online Introduction (~2 hours)
-
-The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
-
-Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
-
-#### Phase 2: Summer Study (5 days in-person)
-
-During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
-
-**Save the dates**
-
-Monday, June 13 - Friday, June 17<br/>
-8:30am - 3:30pm<br/>
-
-Note: Teachers will be released at 1:30pm on Friday.<br/>
-
-Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
-
-**Location**
-
-TBD
-
-*More information coming soon*<br/> 
-
-**What do I bring to my workshop?**
-
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
 
 [**Back to the top**](#top)
 
-
-<a id="ne"></a>
-### NE Florida ECS
-
-
-#### Phase 1: Online Introduction (~2 hours)
-
-The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
-
-Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
-
-#### Phase 2: Summer Study (5 days in-person)
-
-During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
-
-**Save the dates**
-
-Monday, June 27 - Friday, July 1<br/>
-8:30am - 3:30pm<br/>
-
-Note: Teachers will be released at 1:30pm on Friday.<br/>
-
-Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
-
-**Location**
-
-TBD
-
-*More information coming soon*<br/>
-
-
-**What do I bring to my workshop?**
-
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop and charger
-</br>
-</br>
-
-
-[**Back to the top**](#top)
 
 ________________
 <a id="il"></a>
@@ -342,15 +247,16 @@ Group 2:<br/>
 Monday, August 8 - Friday, August 12<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
 **Location**
 
-TBD
-
-*More information coming soon*<br/>
+[DePaul University<br/> 
+CDM Room 924<br/>
+243 S. Wabash Ave<br/> 
+Chicago, IL 60604](https://goo.gl/maps/bR98ad2SfVk)
 
  
 **What do I bring to my workshop?**
@@ -359,7 +265,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
@@ -440,9 +346,11 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-TBD
+[Google Conference Center<br/>
+320 N Morgan St<br/>
+Chicago, IL 60607](https://goo.gl/maps/YbVvZGgSzbz)
 
-*More information coming soon*<br/>
+*Parking and transportation information coming soon*<br/>
 
 
 **What do I bring to my workshop?**<br/>
@@ -464,7 +372,7 @@ ________________
 
 ## Maryland
 
-### DC Area ECS
+### Silver Spring ECS
 
 
 #### Phase 1: Online Introduction (~2 hours)
@@ -482,16 +390,18 @@ During the second phase of our professional learning program, you will have an o
 Monday, June 27 - Friday, July 1<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
 **Location**
 
+[Thomas Edison High School of Technology<br/>
+Room 2206<br/>
+12501 Dalewood Drive<br/>
+Silver Spring, MD 20906](https://goo.gl/maps/dE1KJVGR3Tv)
 
-TBD
-
-*More information coming soon*<br/>
+Free parking is available in front of the building.
 
 
 **What do I bring to my workshop?**
@@ -500,61 +410,13 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
 
 [**Back to the top**](#top)
 
-________________
-<a id="nc"></a>
-<br/>
-<br/>
-
-## North Carolina
-
-### Durham ECS
-
-
-#### Phase 1: Online Introduction (~2 hours)
-
-The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
-
-Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
-
-#### Phase 2: Summer Study (5 days in-person)
-
-During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
-
-**Save the dates**
-
-Monday, July 18 - Friday, July 22<br/>
-8:30am - 3:30pm<br/>
-
-Note: Teachers will be released at 1:30pm on Friday.<br/>
-
-Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
-
-**Location**
-
-TBD
-
-*More information coming soon*<br/>
-
-
-**What do I bring to my workshop?**
-
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop and charger
-</br>
-</br>
-
-
-[**Back to the top**](#top)
 
 ________________
 <a id="tx"></a>
@@ -585,7 +447,7 @@ During the second phase of our professional learning program, you will have an o
 Monday, July 25 - Friday, July 29<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
@@ -602,7 +464,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
@@ -625,10 +487,10 @@ During the second phase of our professional learning program, you will have an o
 
 **Save the dates**
 
-Monday, July 25 - Friday, July 29<br/>
+Monday, July 11 - Friday, July 15<br/>
 8:30am - 3:30pm<br/>
 
-Note: Teachers will be released at 1:30pm on Friday.<br/>
+Note: The workshop ends at 1:30pm on Friday.<br/>
 
 Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 
@@ -645,9 +507,60 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop and charger
+Laptop and charger (optional)
 </br>
 </br>
 
 
 [**Back to the top**](#top)
+
+________________
+<a id="wa"></a>
+<br/>
+<br/>
+## Washington
+
+### Everett Area ECS
+
+
+#### Phase 1: Online Introduction (~2 hours)
+
+The first phase of our professional learing program is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
+
+Your Phase 1: Online Introduction should be completed before attending your Phase 2: Summer Study in-person workshop.
+
+#### Phase 2: Summer Study (5 days in-person)
+
+During the second phase of our professional learning program, you will have an opportunity to dive into ECS with other teachers, learning first hand about the three pillars of inquiry, equity, and CS content. During this 5-day workshop, you will have opportunities to both teach and learn activities from the curriculum, while looking ahead and preparing to implement the course in your own school.
+
+**Save the dates**
+
+Monday, August 1 - Friday, August 5<br/>
+8:30am - 3:30pm<br/>
+
+Note: The workshop ends at 1:30pm on Friday.<br/>
+
+Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
+
+**Location**
+
+Everett, WA
+
+
+*More information coming soon*<br/>
+
+ 
+
+**What do I bring to my workshop?**
+
+Water Bottle
+<br />
+Snacks
+<br />
+Laptop and charger (optional)
+</br>
+</br>
+
+
+[**Back to the top**](#top)
+

@@ -1,0 +1,30 @@
+name 'CSD-U3-SFLP Simple Drawing'
+href 'path/to/html/in/asset/folder'
+css 'unplugged'
+markdown <<MARKDOWN
+## Unit 3: Lesson 01 - Drawing in Game Lab
+
+# Background
+
+Welcome to Game Lab! Game lab allows you to draw interactive games and animations. The basis of games is animations as they create the look of motion on a 2D screen. Therefore we are going to start by learning about animations and progress to learning how to make them into games. In order to create animations we must first learn how to draw static images. So in this lesson we will be learning how to draw simple scenes with basic shapes. 
+
+# Lesson
+
+* Practice placement of shapes on a coordinate plane
+* Learn how to draw with the basic shapes of rectangles and ellipses
+* Learn how to change the fill and outline color of shapes
+* Draw a rainbow scene
+* Draw a road scene
+* Plan out your drawing on paper
+* Create your own drawing
+
+# Vocab
+
+* Program - blah blah
+
+# Resources
+* Activity Guide: <a href="https://drive.google.com/open?id=1_Dkh33G7NTrnlAR0kD8UJZ9A2xFO_ICIJeDrxm-S6e4">Simple Drawings in Game Lab</a>
+* Activity Guide: <a href="https://drive.google.com/open?id=17-rj7SWbn1Nb0IQl-o-4h3VlS1kjId8T0o6HUGojglA">Plan Your Drawing</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

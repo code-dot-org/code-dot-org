@@ -26,6 +26,8 @@
   welcome_back: "კარგია, რომ დაბრუნდით, %{name}"
   submit: "გაგზავნა"
   unsubmit: "ჩაბარების გაუქმება"
+  next_page: Next page
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: "მასწავლებლის დამატება:"
@@ -260,10 +262,10 @@
       finished_hoc: მე დავასრულე ჩემი "კოდის ერთი საათი"
       sign_in_to_save: "დარეგისტრირება და პროგრესის შენახვა"
       free_play:
-        playlab: "აპლიკაციის შექმნა"
+        playlab: "აპლიკაციის შექმნა თამაშების ლაბორატორიაში"
         artist: "დახატეთ რამე"
         calculate: Calculate Something
-        applab: "აპლიკაციის შექმნა"
+        applab: "აპლიკაციის შექმნა აპლიკაციების ლაბორატორიაში"
     user:
       classroom: "მასწავლებლის მთავარი გვერდი"
       district_dashboard: "განყოფილების მართვის პანელი"
@@ -416,6 +418,8 @@
       უფლება დაცულია. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
       Arts Inc. ყველა უფლება დაცულია. The Amazing World of Gumball არის სავაჭრო ნიშანი
       &copy; 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: "შექმნილია Amazon Web Services დახმარებით"
     trademark: "&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, CODE ლოგო
       და Hour of Code&reg; Code.org-ის სავაჭრო ნიშნებია."
@@ -505,17 +509,17 @@
       body: "აპლიკაციების ლაბორატორია არის პროგრამირების გარემო, სადაც მარტივი აპლიკაციების
         შექმნა შეგიძლიათ. შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით
         შემდეგ კი გაუზიარეთ იგი სხვებს."
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
+      body_short: "შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით, შემდეგ
+        კი გაუზიარეთ იგი მეგობრებს."
       audience: "ასაკი 13+"
       cta: "ისწავლეთ, როგორ"
     hoc:
-      title: "კლასიკური ლაბირინთი"
+      title: "ლაბირინთი"
       body: "სცადეთ პროგრამირების საფუძვლების სწავლა. ეს შანსი უკვე მილიონებმა გამოიყენეს."
     flappy:
       title: Flappy კოდი
       body: გინდათ, თქვენი საკუთარი თამაში დაწეროთ 10 წუთში? ნახეთ ჩვენი ტუტორიალი
-        "Flappy Code"!
+        "Flappy კოდი"!
     20-hour:
       title: "დაჩქარებული კურსი"
       body: "ეს ოცსაათიანი კურსი შეიცავს კომპიუტერული მეცნიერებისა და პროგრამირების
@@ -529,7 +533,7 @@
       title: "გალერეა"
       body: "ნახეთ ჩვენი მომხმარებლების მეირ შექნილი აპლიკაციებისა და სურათების გალერეა"
     frozen:
-      title: '"გაყინული"'
+      title: "გაყინული"
     starwars:
       title: "ვარსკვლავური ომები"
     infinity:
@@ -560,9 +564,8 @@
       არ არის საბოლოო ვარიანტი, კურსი გაუმჯობესდება მიღებული უკუკავშირის საფუძველზე."
     prerelease_hoc2014: "ეს არის ტუტორიალის <span class='betatext'>ბეტა-ვერსია</span>.
       რაც იმას ნიშნავს, რომ ჩვენ მას გავაუმჯობესებთ მიღებული უკუკავშირის საფუძველზე."
-    feedback: "უკუკავშირი"
     report_bug: "შეცდომის შესახებ შეტყობინება"
-    support: "დახმარების მიღება"
+    support: "დახმარება მჭირდება"
     support_url: "//support.code.org"
     help_resources: "დახმარება და რესურსები"
   multi:
@@ -579,6 +582,16 @@
     correct_body: "მადლობა პასუხისთვის."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "მადლობა"
+    wrong_body: "მადლობა პასუხისთვის"
+    correct_title: "მადლობა"
+    correct_body: "მადლობა პასუხისთვის"
+  level_group-submittable:
+    wrong_title: "მადლობა"
+    wrong_body: "მადლობა პასუხისთვის"
+    correct_title: "მადლობა"
+    correct_body: "მადლობა პასუხისთვის"
   match:
     wrong_title: "არასწორი გადაწყვეტაა"
     wrong_body: "პასუხი, რომელიც თქვენ შეიყვანეთ, არასწორია. სცადეთ თავიდან!"
@@ -598,9 +611,8 @@
     placeholder: "შეიყვანეთ პასუხი აქ"
     open_response_title: "მადლობა"
     open_response_body: "მადლობა პასუხისთვის!"
-  level_group:
-    correct_title: "მადლობა"
-    correct_body: Thank you for submitting an answer
+    correct_title: "სწორია"
+    correct_body: "ეს პასუხი სწორია."
   dialog:
     ok: OK
     startover_title: "დარწმუნებული ხართ, რომ ხელახლა დაწყება გსურთ?"
@@ -635,7 +647,7 @@
         flappy:
           title: Flappy კოდი
           description: გინდათ, თქვენი საკუთარი თამაში დაწეროთ 10 წუთში? ნახეთ ჩვენი
-            ტუტორიალი "Flappy Code"!
+            ტუტორიალი "Flappy კოდი"!
         jigsaw:
           title: "ფაზლი"
           description: ''
@@ -662,7 +674,8 @@
     completed_too_many_blocks: "დასრულებულია, ბლოკი ძალიან ბევრია"
     completed_perfect: "დასრულებულია, იდეალურად"
     furthest_level_attempted: "ეს დონე ძალიან მაღალია"
-    assessment: "შეფასება"
+    assessment: "ტესტი"
+    submitted: "ჩაბარებულია"
   studio:
     courses_working_on: "მიმდინარე კურსები"
     completed_courses: "დასრულებული კურსები"
@@ -688,7 +701,7 @@
     help_text: "აირჩიეთ <strong>აპლიკაციის გაკეთება</strong> ან <strong>დახატეთ რამე</strong>
       და შექმენით ახალი პროექტი აპლიკაციების ლაბორატორიაში ან სამხატვროში!<br/> დაბრუნება
       და პროექტებზე მუშაობა ნებისმიერ დროს შეგეძლებათ."
-    need_help: "გჭირდებათ დახმარება დასაწყებად?"
+    need_help: "თქვენი ახალი პროექტის დასაწყებად სცადეთ ეს კურსები – გამოგადგებათ"
     really_delete: "წავშალოთ?"
     delete_yes: "დიახ"
     delete_no: "არა"
@@ -731,3 +744,7 @@
         acknowledge: "ამ ინფორმაციის გამოგზავნისას თქვენ აცნობიერებთ, რომ ის დამუშავდება
           %{link_start_privacy}კონფიდენციალურობის პოლიტიკისა%{link_end} და %{link_start_tos}სერვისის
           პირობების%{link_end} თანახმად"
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class ScriptLevelTest < ActiveSupport::TestCase
+  include Rails.application.routes.url_helpers
+
   def setup
     @script_level = create(:script_level)
     @script_level2 = create(:script_level)
@@ -55,14 +57,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
     sl2 = create(:script_level, stage: sl.stage, script: sl.script)
 
     summary = sl.summarize
-    assert_match Regexp.new('/s/bogus_script_[0-9]+/stage/1/puzzle/1'), summary[:url]
+    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus_script_[0-9]+/stage/1/puzzle/1$"), summary[:url]
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
     assert_equal 'puzzle', summary[:kind]
     assert_equal 1, summary[:title]
 
     summary = sl2.summarize
-    assert_match Regexp.new('/s/bogus_script_[0-9]+/stage/1/puzzle/2'), summary[:url]
+    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus_script_[0-9]+/stage/1/puzzle/2$"), summary[:url]
     assert_equal false, summary[:next]
     assert_equal 2, summary[:position]
     assert_equal 'puzzle', summary[:kind]
@@ -71,7 +73,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'summarize with custom route' do
     summary = Script.hoc_2014_script.script_levels.first.summarize
-    assert_equal '/hoc/1', summary[:url]  # Make sure we use the canonical /hoc/1 URL.
+    assert_equal "#{root_url.chomp('/')}/hoc/1", summary[:url]  # Make sure we use the canonical /hoc/1 URL.
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
     assert_equal 'puzzle', summary[:kind]

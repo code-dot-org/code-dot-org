@@ -25,6 +25,8 @@
   welcome_back: "%{name}، خوش آمدید"
   submit: "ارسال کنید"
   unsubmit: Unsubmit
+  next_page: Next page
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: "افزودن یک معلم:"
@@ -407,6 +409,8 @@
     art_from_html_old: "پرنده های خشمگین &#8482;&amp;&copy; 2009-%{current_year} کمپانی
       سرگرمی روویو. تمامی حقوق محفوظ است.<br />گیاهان در برابر زامبی ها&#8482;&amp;&copy;%{current_year}
       شرکت هنرهای الکترونیک. تمامی حقوق محفوظ است"
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: "قدرت گرفته شده توسط وب سرویس های آمازون"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, لوگوی کد نویسی و
       ساعت کد نویسی &reg; علائم تجاری Code.org هستند."
@@ -555,7 +559,6 @@
       نبوده بر مبنای بازخورد دریافت شده مورد تجدید نظر واقع شده و بهتر می گردد."
     prerelease_hoc2014: "این آموزش <span class='betatext'> در مرحله بتا</span> است.
       \ بر اساس بازخورد دریافت شده مورد بهینه سازی قرار گرفته."
-    feedback: "دادن بازخورد"
     report_bug: "گزارش اشکال"
     support: "کمک گرفتن"
     support_url: support.code.org
@@ -574,6 +577,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting answers.
+    correct_title: Thank you
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Thank you
+    wrong_body: Thank you for submitting answers.
+    correct_title: Thank you
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: "راه‌حل نادرست"
     wrong_body: "راه‌حلی که شما وارد کرده‌اید صحیح نیست. لطفا دوباره امتحان کنید!"
@@ -593,9 +606,8 @@
     placeholder: "پاسخ خود را اینجا وارد کنید"
     open_response_title: "متشکرم"
     open_response_body: "برای پاسختان سپاسگزارم!"
-  level_group:
-    correct_title: Thank you
-    correct_body: Thank you for submitting an answer
+    correct_title: Correct
+    correct_body: That is the correct answer.
   dialog:
     ok: "باشه"
     startover_title: "آیا مطمئنی که می خواهی دوباره شروع کنی؟"
@@ -661,6 +673,7 @@
     completed_perfect: "تکمیل, کامل"
     furthest_level_attempted: "تلاش برای دسترسی به سطح دسترسی خارج از محدوده "
     assessment: "ارزیابی"
+    submitted: submitted
   studio:
     courses_working_on: "دوره های شما در حال کار بر روی"
     completed_courses: "دوره های تکمیل شده"
@@ -730,3 +743,7 @@
         acknowledge: "با ارسال این اطلاعات، شما می پذیرید که مطابق با سیاست %{link_start_privacy}
           حفظ حریم شخصی %{link_end} و %{link_start_tos} شرایط سرویس %{link_end} با
           موضوع برخورد می شود."
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

@@ -1,10 +1,10 @@
 var assetsApi = require('../clientApi').assets;
-var AssetThumbnail = require('./AssetThumbnail.jsx');
+var AssetThumbnail = require('./AssetThumbnail');
 
 /**
  * A single row in the AssetManager, describing one asset.
  */
-module.exports = React.createClass({
+var AssetRow = React.createClass({
   propTypes: {
     name: React.PropTypes.string.isRequired,
     type: React.PropTypes.oneOf(['image', 'audio', 'video']).isRequired,
@@ -108,3 +108,4 @@ module.exports = React.createClass({
     );
   }
 });
+module.exports = AssetRow;

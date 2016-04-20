@@ -64,7 +64,18 @@ class ScriptLevelsController < ApplicationController
     configure_caching(@script)
     load_script_level
 
-    if request.path != (canonical_path = build_script_level_path(@script_level))
+    # In the case of the puzzle_page, send it through to be included in the
+    # generation of the script level path.
+    extra_params = {}
+    if @script_level.long_assessment?
+      if params[:puzzle_page]
+        extra_params[:puzzle_page] = params[:puzzle_page]
+      else
+        extra_params[:puzzle_page] = 1
+      end
+    end
+
+    if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
       redirect_to canonical_path, status: :moved_permanently
       return
@@ -168,7 +179,7 @@ class ScriptLevelsController < ApplicationController
 
     user = User.find(params[:user_id])
 
-    # TODO this should use cancan/authorize
+    # TODO: This should use cancan/authorize.
     if user.student_of?(current_user)
       @user = user
       @user_level = @user.user_level_for(@script_level)
@@ -179,7 +190,7 @@ class ScriptLevelsController < ApplicationController
     if params[:section_id]
       section = Section.find(params[:section_id])
 
-      # TODO this should use cancan/authorize
+      # TODO: This should use cancan/authorize.
       if section.user == current_user
         @section = section
       end
@@ -195,6 +206,12 @@ class ScriptLevelsController < ApplicationController
     @stage = @script_level.stage
 
     load_level_source
+
+    if @level.try(:pages)
+      puzzle_page = params[:puzzle_page] || 1
+      @pages = [@level.pages[puzzle_page.to_i - 1]]
+      @total_page_count = @level.pages.count
+    end
 
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level.id)
 

@@ -1,7 +1,6 @@
 name 'PDK5 Teacher Dashboard 4'
 title 'Course Progress'
 css 'unplugged'
-skip_dialogue true
 markdown <<MARKDOWN
 
 <img align="left" src="http://staging.code.org/images/teacher-dashboard/lesson-plans.png" height="200" width="250" hspace="20" vspace="20">

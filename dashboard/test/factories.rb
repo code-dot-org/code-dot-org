@@ -1,98 +1,4 @@
 FactoryGirl.define do
-  factory :level_group do
-    game_id 1
-    name "MyString"
-    created_at "2016-02-19 20:19:50"
-    updated_at "2016-02-19 20:19:50"
-    level_num "MyString"
-    ideal_level_source_id 1
-    solution_level_source_id 1
-    user_id 1
-    properties "MyText"
-    type ""
-    md5 "MyString"
-    published false
-  end
-
-  factory :plc_written_submission_task, parent: :plc_task, class: 'Plc::WrittenAssignmentTask' do
-    assignment_description nil
-  end
-
-  factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
-    resource_url nil
-  end
-
-  factory :plc_script_completion_task, parent: :plc_task, class: 'Plc::ScriptCompletionTask' do
-    script_id nil
-  end
-
-  factory :plc_evaluation_answer, :class => 'Plc::EvaluationAnswer' do
-    answer "MyString"
-    plc_evaluation_question nil
-    plc_task nil
-  end
-
-  factory :plc_evaluation_question, :class => 'Plc::EvaluationQuestion' do
-    question "MyString"
-    plc_course nil
-  end
-
-  factory :written_enrollment_task_assignment, parent: :plc_enrollment_task_assignment, class: 'Plc::WrittenEnrollmentTaskAssignment' do
-    submission nil
-  end
-
-  factory :plc_enrollment_task_assignment, :class => 'Plc::EnrollmentTaskAssignment' do
-    status "MyString"
-    plc_enrollment_module_assignment nil
-    plc_task nil
-  end
-  factory :plc_enrollment_module_assignment, :class => 'Plc::EnrollmentModuleAssignment' do
-    plc_user_course_enrollment nil
-    plc_learning_module nil
-  end
-  factory :plc_user_course_enrollment, :class => 'Plc::UserCourseEnrollment' do
-    status "MyString"
-    plc_course nil
-    user nil
-  end
-
-  factory :plc_task, :class => 'Plc::Task' do
-    name "MyString"
-    plc_learning_module nil
-  end
-
-  factory :plc_learning_module, :class => 'Plc::LearningModule' do
-    name "MyString"
-  end
-  factory :plc_course, :class => 'Plc::Course' do
-    name "MyString"
-  end
-
-  factory :user_professional_learning_course_enrollment do
-    user nil
-    professional_learning_course nil
-  end
-
-  factory :survey_result do
-    user { create :teacher }
-    properties {{survey2016_ethnicity_asian: "1"}}
-    properties {{survey2016_foodstamps: "3"}}
-  end
-
-  factory :professional_learning_course do
-    name "Some course"
-  end
-
-  factory :professional_learning_module do
-    name "Some module"
-    learning_module_type "Some learning module type"
-  end
-
-  factory :professional_learning_task do
-    name "Some task"
-    professional_learning_module nil
-  end
-
   factory :user do
     birthday Date.new(1991, 03, 14)
     sequence(:email) { |n| "testuser#{n}@example.com.xx" }
@@ -110,6 +16,7 @@ FactoryGirl.define do
     factory :teacher do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 03, 14)
+      admin false
       factory :facilitator do
         name 'Facilitator Person'
         after(:create) do |facilitator|
@@ -117,21 +24,35 @@ FactoryGirl.define do
           facilitator.save
         end
       end
+      factory :workshop_organizer do
+        name 'Workshop Organizer Person'
+        after(:create) do |workshop_organizer|
+          workshop_organizer.permission = 'workshop_organizer'
+          workshop_organizer.save
+        end
+      end
       factory :district_contact do
         name 'District Contact Person'
         ops_first_name 'District'
         ops_last_name 'Person'
+        admin false
       end
     end
 
     factory :student do
       user_type User::TYPE_STUDENT
+      admin false
     end
 
     factory :young_student do
       user_type User::TYPE_STUDENT
       birthday Time.zone.today - 10.years
     end
+  end
+
+  factory :districts_users do
+    district nil
+    user nil
   end
 
   factory :section do
@@ -217,8 +138,14 @@ FactoryGirl.define do
     game {Game.applab}
   end
 
+  factory :makerlab, :parent => Level, :class => Applab do
+    game {Game.applab}
+    properties{{makerlab_enabled: true}}
+  end
+
   factory :multi, :parent => Level, :class => Applab do
-    game {Game.multi}
+    game {create(:game, app: "multi")}
+    properties{{question: 'question text', answers: [{text: 'text1', correct: true}], questions: [{text: 'text2'}], options: {hide_submit: false}}}
   end
 
   factory :level_source do
@@ -248,6 +175,10 @@ FactoryGirl.define do
 
   factory :script_level do
     script
+
+    trait :assessment do
+      assessment true
+    end
 
     stage do |script_level|
       create(:stage, script: script_level.script)
@@ -355,7 +286,7 @@ FactoryGirl.define do
   factory :district do
     sequence(:name) { |n| "District #{n}" }
     location 'Panem'
-    contact {create(:district_contact).tap{|dc|dc.permission = 'district_contact'}}
+    contact {create(:district_contact).tap{|dc| dc.permission = 'district_contact'}}
   end
 
   factory :workshop do
@@ -381,5 +312,145 @@ FactoryGirl.define do
     teacher {create :teacher}
 
     status 'present'
+  end
+
+  factory :plc_enrollment_unit_assignment, :class => 'Plc::EnrollmentUnitAssignment' do
+    plc_user_course_enrollment nil
+    plc_course_unit nil
+    status Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
+  end
+
+  factory :plc_course_unit, :class => 'Plc::CourseUnit' do
+    plc_course {create(:plc_course)}
+    unit_name "MyString"
+    unit_description "MyString"
+    unit_order 1
+  end
+
+  factory :plc_written_submission_task, parent: :plc_task, class: 'Plc::WrittenAssignmentTask' do
+    assignment_description nil
+  end
+
+  factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
+    resource_url nil
+    icon nil
+  end
+
+  factory :plc_script_completion_task, parent: :plc_task, class: 'Plc::ScriptCompletionTask' do
+    script_id nil
+  end
+
+  factory :plc_evaluation_answer, :class => 'Plc::EvaluationAnswer' do
+    answer "MyString"
+    plc_evaluation_question nil
+    plc_learning_module nil
+  end
+
+  factory :plc_evaluation_question, :class => 'Plc::EvaluationQuestion' do
+    question "MyString"
+    plc_course_unit nil
+  end
+
+  factory :written_enrollment_task_assignment, parent: :plc_enrollment_task_assignment, class: 'Plc::WrittenEnrollmentTaskAssignment' do
+    submission nil
+  end
+
+  factory :plc_enrollment_task_assignment, :class => 'Plc::EnrollmentTaskAssignment' do
+    status "MyString"
+    plc_enrollment_module_assignment nil
+    plc_task nil
+  end
+
+  factory :plc_enrollment_module_assignment, :class => 'Plc::EnrollmentModuleAssignment' do
+    plc_enrollment_unit_assignment nil
+    plc_learning_module nil
+  end
+
+  factory :plc_user_course_enrollment, :class => 'Plc::UserCourseEnrollment' do
+    status "MyString"
+    plc_course nil
+    user nil
+  end
+
+  factory :plc_task, :class => 'Plc::Task' do
+    name "MyString"
+    plc_learning_modules []
+  end
+
+  factory :plc_learning_module, :class => 'Plc::LearningModule' do
+    name "MyString"
+    plc_course_unit {create(:plc_course_unit)}
+  end
+  factory :plc_course, :class => 'Plc::Course' do
+    name "MyString"
+  end
+
+  factory :user_professional_learning_course_enrollment do
+    user nil
+    professional_learning_course nil
+  end
+
+  factory :professional_learning_course do
+    name "Some course"
+  end
+
+  factory :professional_learning_module do
+    name "Some module"
+    learning_module_type "Some learning module type"
+  end
+
+  factory :professional_learning_task do
+    name "Some task"
+    professional_learning_module nil
+  end
+
+  factory :level_group do
+    game {create(:game, app: "level_group")}
+    properties{{title: 'title', pages: [{levels: ['level1', 'level2']}, {levels: ['level3']}]}}
+  end
+
+  factory :survey_result do
+    user { create :teacher }
+    properties {{survey2016_ethnicity_asian: "1"}}
+    properties {{survey2016_foodstamps: "3"}}
+  end
+
+  factory :user_proficiency do
+    user { create :student }
+    sequencing_d1_count 1
+    repeat_loops_d2_count 2
+    repeat_loops_d4_count 3
+    conditionals_d5_count 4
+  end
+
+  factory :pd_workshop, class: 'Pd::Workshop' do
+    organizer {create(:workshop_organizer)}
+    workshop_type Pd::Workshop::TYPES.first
+    course Pd::Workshop::COURSES.first
+    capacity 10
+  end
+
+  factory :pd_session, class: 'Pd::Session' do
+    association :workshop, factory: :pd_workshop
+    start {DateTime.now.utc}
+    self.send(:end, DateTime.now.utc + 6.hours)
+  end
+
+  factory :pd_enrollment, class: 'Pd::Enrollment' do
+    association :workshop, factory: :pd_workshop
+    sequence(:name) { |n| "Workshop Participant #{n} " }
+    sequence(:email) { |n| "testuser#{n}@example.com.xx" }
+  end
+
+  factory :pd_attendance, class: 'Pd::Attendance' do
+    association :session, factory: :pd_session
+    teacher {create :teacher}
+  end
+
+  factory :pd_district_payment_term, class: 'Pd::DistrictPaymentTerm' do
+    district {create :district}
+    course Pd::Workshop::COURSES.first
+    rate_type Pd::DistrictPaymentTerm::RATE_TYPES.first
+    rate 10
   end
 end

@@ -54,7 +54,7 @@ $(window).load(function () {
    * @returns {Function} new function with the given arguments pre-set as the
    *                     defaults (curried)
    */
-  var curry = function(fn) {
+  var curry = function (fn) {
     var args = Array.prototype.slice.call(arguments, 1);
 
     return function () {
@@ -99,7 +99,7 @@ $(window).load(function () {
       return this.state.domainTypes;
     },
     nextUniqueID_: 0,
-    grabUniqueID: function() {
+    grabUniqueID: function () {
       return (this.nextUniqueID_++);
     },
     getInitialState: function () {
@@ -208,7 +208,7 @@ $(window).load(function () {
   });
 
   var TypeChooser = React.createClass({
-    selectmenuChange: function(selectChange) {
+    selectmenuChange: function (selectChange) {
       this.props.onTypeChange(selectChange.target.value);
     },
     render: function () {

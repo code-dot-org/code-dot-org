@@ -444,11 +444,9 @@
         se dió cuenta de que debe haber una forma más rápida! Usa un bloque "para"
         para reemplazar los bloques y completar la espiral triangular. (Pista: la
         última línea es de 200 píxeles.)'
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+      4-5 Artist For Loops 2_instruction: Este es un bloque "para". En lugar de escribir
+        1,2,3... 10, el bloque 'para' puede repetir los bloques en su interior y cuentan
+        los números. Coloque el número 10 en la sección "a" del bloque "para".
       4-5 Artist For Loops 3_instruction: ¿Cómo podemos contar del 1 al 50? Edita
         el bloque "para".
       4-5 Artist For Loops 4_instruction: Completa el bloque "para" de modo que cuente
@@ -683,9 +681,6 @@
       4-5 Maze Assessment 1_instruction: 'Evaluzción: Llega hasta el girasol.'
       4-5 Maze Conditionals 1_instruction: Utiliza el bloque repetir para llevar al
         zombie hasta el girasol.
-      4-5 Maze Conditionals 10_instruction: "¿Puedes agregar sólo tres bloques para
-        ayudarme a resolver un laberinto más complejo? si lo haces correctamente,
-        puedo caminar cualquier camino curvo sin importar la longitud."
       4-5 Maze Conditionals 2_instruction: Utiliza el bloque repetir para llevar al
         zombie hasta el girasol.
       4-5 Maze Conditionals 3_instruction: 'Utiliza el bloque "if" para dejarme decidir
@@ -1985,6 +1980,89 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
+      CSD U3 Background Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Background Experiment_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Experiment_instruction: |
+        Try using some of the other shape
+        functions you've learned in the draw loop. What happens when you use randomNumber()
+        to generate some of the inputs?You'll want to stop and discuss with the class
+        before moving on.
+      CSD U3 Frame Rate_instruction: Slow down Gamelab Gary's animation with frameRate()
+      CSD U3 Random Animation_instruction: |
+        Use randomNumber() to animate Gary's
+        mouth.
+      CSD U3 Random Color_instruction: |
+        Could you use randomNumber() to pick random
+        colors as well? Try setting one or more of the channels in the rgb block with
+        a random number. What should the maximum value be?
+      CSD U3 Random Intro_instruction: |
+        What do you think this code will do when
+        it is run? Make a prediction, then run this code 5 - 10 times, recording the
+        output each time. Share your results with your neighbor.
+      CSD U3 Random Width Height_instruction: |
+        Pick a shape function and use calls
+        to randomNumber() in place of one or more of the parameters. Maker sure you
+        run it a few times so you can see the effect of randomization.
+      CSD U3 Simple Drawing - Animation 2_instruction: |
+        Use randomNumber() on the
+        x position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Animation_instruction: |
+        Use randomNumber() on the x
+        position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Background_instruction: |
+        Put all of your code into
+        a draw() loop and then add set the background to blue with the background()
+        block.
+      CSD U3 Variable Arithmetic pt2_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variable Arithmetic_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variable Incrementation pt2_instruction: |
+        Predict: What two numbers
+        will be displayed in the console?
+      CSD U3 Variable Incrementation_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variables Initialize_instruction: |
+        Predict: What will get displayed
+        in the console?
+      CSD U3 Variables Intro_instruction: |
+        Create your own variable, give it a value,
+        and display that value in the console.
+      CSD U3 Variables Random_instruction: |
+        Predict: What will get displayed in the
+        console?
+      CSD U3 Variables Reassign pt2_instruction: |
+        Predict: What will get displayed
+        in the console?
+      CSD U3 Variables Reassign_instruction: |
+        Predict: What will get displayed in
+        the console?
+      CSD U3 Variables Square Random Loop_instruction: |
+        Change the value "size"
+        initialized to make a larger square.
+      CSD U3 Variables Square Random_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variables Square_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2604,6 +2682,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2966,6 +3046,10 @@
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: Encontrarse con un creeper no es buena
         idea. Pásalos con cuidado y entra en tu casa.
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: La madera es un recurso importante porque puedes
         construir muchas cosas con ella. Camina hacia el árbol y usa el comando "destruir
         bloque" para talarlo.
@@ -3197,6 +3281,10 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: Estas nubes me están molestando! Algunas de
         las nubes tienen flores dentro, y otras no. Debo comprobar cada nube y obtener
         el néctar sólo de las flores.
@@ -3210,6 +3298,12 @@
       Ryan - Bee Conditionals_instruction: La abeja sólo quiere néctar ahora. No todos
         los objetos son flores, así que mira debajo de TODAS LAS NUBES para verlo
         si esta escondiendo una flor. Si es así, puedes coger néctar.
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: Aquí hay una función denominada "patrulla".
         Edítela para mover el Gato hacia arriba 400 píxeles y luego hacia abajo 400
         píxeles.
@@ -3326,6 +3420,9 @@
       template test_instruction: what up
       Test Play Lab_instruction: This is a test play lab level.
       test_sarah_instruction: hi
+      Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
+        many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
+        keeps using the `fill` block until the ground is even?  "
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
@@ -3575,7 +3672,7 @@
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -3935,6 +4032,18 @@
       U3 - Search Terms - 6_instruction: |
         Print out the cities that are in California
         or have a population of 2,000,000. (Click to see full instructions)\r
+      U3 - Simple Drawing - Comments_instruction: Do this
+      U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
+      U3 - Simple Drawing - No Fill_instruction: Do this
+      U3 - Simple Drawing - Order of Blocks_instruction: Do this
+      U3 - Simple Drawing - Personal Drawing_instruction: DO This
+      U3 - Simple Drawing - Rectangle_instruction: Do This
+      U3 - Simple Drawing - regular polygon_instruction: Do this
+      U3 - Simple Drawing - Road Ellipse_instruction: Do This
+      U3 - Simple Drawing - Road Rects and Color_instruction: Do This
+      U3 - Simple Drawing - Stroke and Stroke Weight_instruction: Do this
+      U3 - Simple Drawing - text_instruction: Do This
+      U3 - Simple Drawing - X and Y values_instruction: Do This
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -4188,8 +4297,9 @@
         Free Play! Use what you learned
         from loops and random to make your own little scene. Have fun.
       U3L07 - introSquare_instruction: |
-        Use a loop to draw a square. (Click to see
-        full instructions)
+        Use a loop to draw a square. Then add another
+        loop to draw many squares each one rotated some amount. (Click to see full
+        instructions)
       U3L07 - loopsWithRandom_instruction: |
         Increase the number of iterations to
         fill the screen with white. (Click to see full instructions)
@@ -4469,8 +4579,10 @@
         of the last level, you can copy your code from that level into\nhere if you
         prefer. \n"
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

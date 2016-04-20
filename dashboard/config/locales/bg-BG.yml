@@ -26,6 +26,8 @@
   welcome_back: "Добре дошли отново, %{name}"
   submit: "Изпрати"
   unsubmit: "Не е добавено"
+  next_page: "Следваща страница"
+  heading_x_of_y: "%{heading} (page %{x} на %{y})"
   add_teacher_form:
     code:
       label: "Добавете учител:"
@@ -418,6 +420,8 @@
       запазени. Растения срещу зомбита &#8482; © %{current_year} Electronic Arts Инк.
       Всички права запазени. Невероятният свят на Гъмбол е запазена марка и © 2015
       Картун Нетуърк.
+    code_from_html: Code.org използва p5.play, който е лицензиран под <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      GNU LGPL 2.1</a>.
     powered_by_aws: "Създадено с Amazon Web Services"
     trademark: "&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, the CODE
       logo и Hour of Code&reg; са търговски марки на Code.org."
@@ -567,7 +571,6 @@
       че не е окончателната версия на курса и е предмет на преразглеждане и подобрения."
     prerelease_hoc2014: "Този урок е в <span class='betatext'> бета версия</span>.
       \ Това означава, че е предмет на преразглеждане и подобрения."
-    feedback: "Дайте обратна връзка"
     report_bug: "Доклад за бъгове"
     support: "Получаване на помощ"
     support_url: "//support.code.org"
@@ -586,6 +589,16 @@
     correct_body: "Благодаря Ви, че подадохте отговор."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "Благодаря"
+    wrong_body: "Благодаря Ви, че подадохте отговор"
+    correct_title: "Благодаря"
+    correct_body: "Благодаря Ви, че подадохте отговор"
+  level_group-submittable:
+    wrong_title: "Благодаря"
+    wrong_body: "Благодаря Ви, че подадохте отговор"
+    correct_title: "Благодаря"
+    correct_body: "Благодаря Ви, че подадохте отговор"
   match:
     wrong_title: "Неправилно решение"
     wrong_body: "Решението, което сте въвели не е правилно.  Моля опитайте отново!"
@@ -605,9 +618,8 @@
     placeholder: "Въведете отговора си тук"
     open_response_title: "Благодаря"
     open_response_body: "Благодаря за вашия отговор!"
-  level_group:
-    correct_title: "Благодаря"
-    correct_body: "Благодаря Ви, че подадохте отговор"
+    correct_title: "Правилно"
+    correct_body: "Това е верният отговор."
   dialog:
     ok: OK
     startover_title: "Наистина ли искате да започнете отначало?"
@@ -673,6 +685,7 @@
     completed_perfect: "завършено, перфектно"
     furthest_level_attempted: "последното пробвано ниво"
     assessment: "Оценка"
+    submitted: "предоставени"
   studio:
     courses_working_on: "Курсове, върху които работите"
     completed_courses: "Завършени курсове"
@@ -747,3 +760,7 @@
         acknowledge: "С подаването на тази информация, Вие се съгласявате, че тя ще
           бъде третирана съобразно условията на %{link_start_privacy}Privacy Policy%{link_end}
           и %{link_start_tos}Terms на Service%{link_end}"
+  components:
+    icon_library:
+      search_placeholder_text: "Търси икона..."
+      no_icons_found: "Няма намерени икони"

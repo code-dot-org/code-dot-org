@@ -21,7 +21,7 @@ el-GR:
   twentyhours_heading: Δοκιμάστε την εισαγωγή μας στη Σειρά Μαθημάτων Επιστήμης των Υπολογιστών
   twentyhours_text: Τελειώσατε την πρώτη σας Ώρα του Κώδικα; Μάθετε περισσότερα για τα βασικά της επιστήμης της πληροφορικής και έννοιες προγραμματισμού στο ακόλουθο μάθημα.
   og_title: Κάθε παιδί δικαιούται μία ευκαιρία
-  og_description: Κάθε μαθητής σε κάθε σχολείο αξίζει μια ευκαιρία να σπυδάσει την επιιστήμη των υπολογιστών.
+  og_description: Κάθε μαθητής σε κάθε σχολείο αξίζει μια ευκαιρία να σπυδάσει την επιιστήμη των υπολογιστών. Αλλάζει τα πάντα.
   hoc2014_heading: 'Συμμετάσχετε στην <a href="http://hourofcode.com"> Ώρα του Κώδικα</a><br/>8-14 Δεκεμβρίου 2014<br/>'
   hoc2014_students: Μαθητές
   hoc2014_try: Δοκιμάστε το
@@ -179,7 +179,7 @@ el-GR:
   learn_next_level: Δοκιμάστε ένα άλλο μάθημα στο Code Studio
   learn_online: Δοκιμάστε τα άλλα μαθήματα online
   learn_classes: Βρείτε τάξεις κοντά σας
-  hoc_is_here: 'Η τελευταία Εβδομάδα Εκπαίδευσης στην Επιστήμη των Υπολογιστών έχει φτασει τα 50 εκατομμύρια μαθητές.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: 'Μάθετε την επιστήμη των υπολογιστών. Αυτό αλλάζει τα πάντα.  https://youtu.be/xJqSu1IbcHg.'
   just_did_hoc: 'Μόλις ολοκλήρωσα την Ώρα του Κώδικα (#HourOfCode) - ελέγξτε το! @codeorg'
   just_did_course1: 'Μόλις τελειώσα το Μάθημα 1 - Ελεγξέ το! @codeorg'
   just_did_course2: 'Μόλις τελειώσα το Μάθημα 2 - Ελεγξέ το! @codeorg'
@@ -344,7 +344,7 @@ el-GR:
   starwars_javascript_description: Χρησιμοποιήσε πακέτα «σύρε και άφησε» και Javascript.
   starwars_javascript_specs: Μόνο Αγγλικά | Σύγχρονα προγράμματα περιήγησης | Ηλικίες 11+
   starwars_javascript_start_button: Δοκίμασε τώρα
-  starwars_blocks_title: Πακέτα
+  starwars_blocks_title: Μπλοκς
   starwars_blocks_description: Χρησιμοποίησε πακέτα «σύρε και άφησε».
   starwars_blocks_specs: Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης, έξυπνα κινητά, ταμπλέτες | Ηλικίες 6-10
   starwars_blocks_start_button: Δοκιμάστε τώρα
@@ -353,7 +353,7 @@ el-GR:
   starwars_help_translate: Βοήθησέ μας να μεταφράσουμε
   starwars_platform_text: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
   mc_name: Η Ώρα του Κώδικα με το Minecraft
-  mc_longdescription: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή τον Άλεξ σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft.
+  mc_longdescription: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή την Άλεξ σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft.
   mc_shortdescription: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή τον Άλεξ σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft.
   mc_gradelevel: Ηλικίες 6+
   mc_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
@@ -487,6 +487,7 @@ el-GR:
   dashboard_navigation_all_sections: Λογαριασμοί μαθητών και Πρόοδος
   dashboard_navigation_view_progress: Προβολή προόδου
   dashboard_navigation_view_text_responses: Προβολή Αποκρίσεων Κειμένου
+  dashboard_navigation_view_assessments: Αξιολογήσεις
   dashboard_navigation_add_students: Προσθήκη μαθητών
   dashboard_navigation_manage_students: Διαχείριση μαθητών
   dashboard_navigation_lesson_plans_resources: Σχέδια μαθήματος και Πόροι
@@ -580,10 +581,23 @@ el-GR:
   dashboard_progress_completed_too_many_blocks: ολοκληρώθηκε, πάρα πολλά μπλοκ
   dashboard_progress_completed_perfect: ολοκληρώθηκε, τέλειο
   dashboard_progress_furthest_level_attempted: τελευταίο επίπεδο επιχειρήθηκε
+  dashboard_progress_submitted: Υποβλήθηκε
   dashboard_stage: Επίπεδο
   dashboard_puzzle: Παζλ
   dashboard_question: Ερώτηση
   dashboard_response: Απάντηση
+  dashboard_correctness: Ορθότητα
+  dashboard_correctness_free_response: Δωρεάν απάντηση
+  dashboard_correctness_unsubmitted: Ανακλήθηκε
+  dashboard_correctness_correct: Σωστό
+  dashboard_correctness_incorrect: Εσφαλμένο
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Κατάσταση
+  dashboard_multi_correct: '# η πολλαπλή επιλογή είναι σωστή'
+  dashboard_multi_count: '# πολλαπλή επιλογή'
+  dashboard_multi_correct_percent: '% της πολλαπλής επιλογής σωστά'
+  dashboard_submission_timestamp: Ημενρομηνία και ώρα υποβολής
   stats_hoc_2013_heading: 'Απίστευτα στατιστικά από την περσινή ώρα του κώδικα. Σε μία εβδομάδα μόνο:'
   stats_hoc_2013_image_alt: Στατιστικά στοιχεία από την ώρα του κώδικα του 2013
   dashboard_teacher: Καθηγητής
@@ -602,7 +616,8 @@ el-GR:
   dashboard_faq_k5: Συχνές ερωτήσεις για το επίπεδο πρωτοβάθμιας εκπαίδευσης (K-5)
   dashboard_announcements: Ανακοινώσεις
   dashboard_announce_view_all: Προβολή όλων
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
+  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
   dashboard_announce_button_text: Μάθετε περισσότερα
   dashboard_announce_hoc: "<b>15 Οκτωβρίου 2015</b> - Η Ώρα του Κώδικα πλησιάζει &mdash; κάθε συμμετέχον διοργανωτής θα λάβει μια κάρτα δώρου για το Amazon.com ή το Microsoft's Windows Store ως ευχαριστήριο δώρο. Εγγραφείτε σε τάξεις σε όλο τον κόσμο κατά την περίοδο 7-13 Δεκεμβρίου."
   dashboard_announce_playlab: '<b> 4 Δεκέμβρη, 2015 </b> - Η Ωρα του Κώδικα έφτασε! Δοκιμάστε τα 50 σεμινάρια για κάθε ηλικία και κάθε συσκευή. Νέα τελευταίας εβδομάδας: Προγραμμάτισε της δικές σου ιστορίες και παιχνίδια στο Play Lab! Δες πως μπορείς να προγραμματίσεις τα παιχίδια Ιce Age και Gumball.'

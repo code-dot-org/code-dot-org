@@ -675,6 +675,7 @@
   dashboard_navigation_all_sections: "حساب کاربری دانش‌ آموزان و پیشرفت آنها"
   dashboard_navigation_view_progress: "نمایش پیشرفت"
   dashboard_navigation_view_text_responses: "مشاهده متن پاسخ"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "افزودن دانش آموز"
   dashboard_navigation_manage_students: "مدیریت دانش آموزان"
   dashboard_navigation_lesson_plans_resources: "برنامه‌ها و منابع درس"
@@ -793,10 +794,23 @@
   dashboard_progress_completed_perfect: "تکمیل, کامل"
   dashboard_progress_furthest_level_attempted: "تلاش برای دسترسی به سطح دسترسی خارج
     از محدوده "
+  dashboard_progress_submitted: submitted
   dashboard_stage: "مرحله"
   dashboard_puzzle: "پازل"
   dashboard_question: "سوال"
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Correct
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "آمار باور نکردنی از سال گذشته ساعت کدنويسي. تنها در یک
     هفته:"
   stats_hoc_2013_image_alt: "وضعیت کد نویسی در سال 2013"
@@ -822,11 +836,15 @@
   dashboard_faq_k5: "پرسش های متداول پیش از دبستان"
   dashboard_announcements: "اطلاعیه‌ها"
   dashboard_announce_view_all: "مشاهده همه"
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: "بیشتر بیاموزید"
   dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's

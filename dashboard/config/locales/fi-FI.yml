@@ -26,6 +26,8 @@
   welcome_back: Tervetuloa takaisin, %{name}
   submit: Jatka
   unsubmit: Peruuta lähetys
+  next_page: Seuraava sivu
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Lisää opettaja:'
@@ -397,6 +399,8 @@
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Toimii Amazon Web Services -palvelun päällä
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org."
@@ -486,7 +490,7 @@
         in seconds.
       body_short: Design an app, code with blocks or JavaScript to make it work, then
         share your app in seconds.
-      audience: Ages 13+
+      audience: Ikäryhmille 13+
       cta: Learn how
     hoc:
       title: Klassinen sokkelo
@@ -540,7 +544,6 @@
       versioita reaktiona saatuun palautteeseen.
     prerelease_hoc2014: Tämä opetusohjelma on <span class='betatext'>beta</span>.
       Sitä muutetaan palautteen mukaisesti sen parantamiseksi.
-    feedback: Anna palautetta
     report_bug: Raportoi ongelma
     support: Katso ohjeet
     support_url: "//support.code.org"
@@ -554,11 +557,21 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Kiitos
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: Kiitos vastauksestasi.
     correct_title: Kiitos
-    correct_body: Thank you for submitting an answer.
+    correct_body: Kiitos vastauksestasi.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Kiitos
+    wrong_body: Kiitos vastauksistasi.
+    correct_title: Kiitos
+    correct_body: Kiitos vastauksistasi.
+  level_group-submittable:
+    wrong_title: Kiitos
+    wrong_body: Kiitos vastauksistasi.
+    correct_title: Kiitos
+    correct_body: Kiitos vastauksistasi.
   match:
     wrong_title: Väärä vastaus
     wrong_body: Antamasi ratkaisu ei ole oikea. Yritä uudestaan!
@@ -578,9 +591,8 @@
     placeholder: Kirjoita vastauksesi tähän
     open_response_title: Kiitos
     open_response_body: Kiitos vastauksestasi!
-  level_group:
-    correct_title: Kiitos
-    correct_body: Thank you for submitting an answer
+    correct_title: Oikein
+    correct_body: Tämä on oikea vastaus.
   dialog:
     ok: OK
     startover_title: Oletko varma, että haluat aloittaa alusta?
@@ -643,6 +655,7 @@
     completed_perfect: valmis, täydellinen
     furthest_level_attempted: vaikein taso jota yritetty
     assessment: arviointi
+    submitted: lähetetty
   studio:
     courses_working_on: Kurssit, joita työstät
     completed_courses: Valmiit kurssit
@@ -710,3 +723,7 @@
           josta raportoit.
         acknowledge: Toimittamalla nämä tiedot huomioit, että niitä käsitellään %{link_start_privacy}Yksityisyyskäytännön%{link_end}
           ja %{link_end}Palvelukuvauksen%{link_start_tos} mukaisesti
+  components:
+    icon_library:
+      search_placeholder_text: Etsitään kuvaketta...
+      no_icons_found: Kuvakkeita ei löytynyt

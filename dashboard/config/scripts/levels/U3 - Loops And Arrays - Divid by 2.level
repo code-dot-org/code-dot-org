@@ -67,9 +67,11 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "var myArray = [];\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\n\r\nconsole.log(\"Original Array: \" + myArray);\r\n\r\n// You code goes here\r\n\r\nconsole.log(\"Final Array: \" + myArray);",
+    "start_blocks": "var myArray = [];\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\n\r\nconsole.log(\"Original Array: \" + myArray);\r\n\r\n// Your code goes here\r\n\r\nconsole.log(\"Final Array: \" + myArray);",
     "encrypted_examples": "MauTtk4pBGuxoUpu9PqOFA/gVZujO1Xu/tprQ3YQkU3LNacGt7zrZMEbViYE\n6u48\n"
-  }
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

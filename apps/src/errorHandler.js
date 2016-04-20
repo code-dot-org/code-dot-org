@@ -1,13 +1,8 @@
 var annotationList = require('./acemode/annotationList');
 var logToCloud = require('./logToCloud');
+var utils = require('./utils');
 
-var ErrorLevel = {
-  WARNING: 'WARNING',
-  ERROR: 'ERROR'
-};
-
-// Rate at which we log errors to the cloud
-var ERROR_LOG_RATE = 1 / 20;
+var ErrorLevel = utils.makeEnum('WARNING', 'ERROR');
 
 /**
  * Method that will do appropriate console/debug logging for the current app.
@@ -43,16 +38,16 @@ function outputError(warning, level, lineNum) {
   }
 
   // Send up to New Relic if it meets our sampling rate
-  if (level === ErrorLevel.ERROR && Math.random() < ERROR_LOG_RATE) {
+  if (level === ErrorLevel.ERROR) {
     logToCloud.addPageAction(logToCloud.PageAction.UserJavaScriptError, {
       error: warning
-    });
+    }, 1 / 20);
   }
 }
 
-function handleError(opts, message) {
+function handleError(opts, message, status) {
   if (opts.onError) {
-    opts.onError.call(null, message);
+    opts.onError.call(null, message, status);
   } else {
     logMethod(message);
   }

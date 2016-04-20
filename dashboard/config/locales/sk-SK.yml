@@ -26,6 +26,8 @@
   welcome_back: Vitajte späť, %{name}
   submit: Odoslať
   unsubmit: Neodoslať
+  next_page: Next page
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Pridať učiteľa:'
@@ -413,6 +415,8 @@
       Birds &#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Všetky práva vyhradené.
       Plants vs. Zombies &#8482; © %{current_year} Electronic Arts Inc. Všetky práva
       vyhradené. The Amazing World of Gumball je ochranná známka © 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Poháňaný službami Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org®, CODElogo a Hour of Code
       ® sú ochranné známky Code.org."
@@ -557,7 +561,6 @@
       a vylepšení, ktoré sú vykonané.
     prerelease_hoc2014: Tento tutoriál je v <span class='betatext'> beta verzii</span>
       a je predmetom revízie na základe pripomienok a vylepšení, ktoré sú vykonané.
-    feedback: Poskytnúť spätnú väzbu
     report_bug: Nahlásiť chybu
     support: Získať pomoc
     support_url: support.code.org
@@ -576,6 +579,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "Ďakujeme"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "Ďakujeme"
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: "Ďakujeme"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "Ďakujeme"
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Nesprávne riešenie
     wrong_body: Zadané riešenie nie je správne.  Prosím skúste to znova!
@@ -595,9 +608,8 @@
     placeholder: Zadajte vašu odpoveď
     open_response_title: Vďaka
     open_response_body: "Ďakujeme za Vašu reakciu!"
-  level_group:
-    correct_title: "Ďakujeme"
-    correct_body: Thank you for submitting an answer
+    correct_title: Správne
+    correct_body: To je správna odpoveď.
   dialog:
     ok: ok
     startover_title: Naozaj chceš začať odznova?
@@ -661,6 +673,7 @@
     completed_perfect: dokončené, super
     furthest_level_attempted: najvyššia dosiahnutá úroveň
     assessment: ocenenie
+    submitted: submitted
   studio:
     courses_working_on: Kurzy na ktorých pracujete
     completed_courses: Absolvované kurzy
@@ -728,3 +741,7 @@
         acknowledge: Odoslaním týchto informácií, beriete na vedomie, sa bude zaobchádzať
           v súlade s podmienkami %{link_start_privacy}Ochrana súkromia%{link_end}
           a %{link_start_tos}Podmienky používania%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

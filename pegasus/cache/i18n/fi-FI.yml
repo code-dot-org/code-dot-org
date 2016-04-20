@@ -652,6 +652,7 @@
   dashboard_navigation_all_sections: Oppilaiden tunnukset ja edistyminen
   dashboard_navigation_view_progress: Tarkastele etenemistä
   dashboard_navigation_view_text_responses: Näytä tekstin vastaukset
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Lisää oppilaita
   dashboard_navigation_manage_students: Hallinnoi oppilaita
   dashboard_navigation_lesson_plans_resources: Tuntisuunnitelmat ja resurssit
@@ -764,10 +765,23 @@
   dashboard_progress_completed_too_many_blocks: valmis, liian monta lohkoa
   dashboard_progress_completed_perfect: valmis, täydellinen
   dashboard_progress_furthest_level_attempted: vaikein taso jota yritetty
+  dashboard_progress_submitted: lähetetty
   dashboard_stage: Taso
   dashboard_puzzle: Tehtävä
   dashboard_question: Kysymys
   dashboard_response: Vastaus
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Oikein
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Uskomattomia tilastoja viime vuoden Koodaustunnista. Vain
     yhdessä viikossa:'
   stats_hoc_2013_image_alt: Tilastoja vuoden 2013 Koodaustunnista
@@ -789,11 +803,15 @@
   dashboard_faq_k5: Esi- ja alakoulu, usein kysyttyjä kysymyksiä
   dashboard_announcements: Ilmoituksia
   dashboard_announce_view_all: Näytä kaikki
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: Lue lisää
   dashboard_announce_hoc: "<b>9. Marraskuuta 2015</b> - Uusi Kooditunti-harjoitus
     on täällä, teemanaan elokuva Star Wars: The Force Awakens. Auta Rey:tä opastamaan
@@ -932,7 +950,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: Sovelluksien laboratorio
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Ikäryhmille 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds

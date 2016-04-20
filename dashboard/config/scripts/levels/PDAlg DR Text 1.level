@@ -1,0 +1,14 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:08.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "markdown_instructions": "Here's the same contract from the last page. What could you ask this student to help them identify and correct their error?\n\n### Question\n\nIf you have a budget in dollars, can you write a function `treats` that returns the number of treats you could afford at 50 cents each?\n\n### Contract\n\n`treats: Number Number -> Number`\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

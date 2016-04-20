@@ -30,8 +30,8 @@
   twentyhours_text: "Закончил свой первый  Час Кода? Узнай больше об информатике и
     концепциях программирования в следующем курсе."
   og_title: "Каждый ребенок заслуживает возможность"
-  og_description: "Каждый студент в любой школе заслуживает возможность изучения компьютерных
-    наук."
+  og_description: "Каждый студент в каждой школе заслуживает возможность изучения
+    компьютерных наук. Это меняет все."
   hoc2014_heading: Участвуйте в <a href="http://hourofcode.com">Часе Кода</a> <br/>
     8-14 декабря 2014 г. <br/>
   hoc2014_students: "Ученики"
@@ -662,6 +662,7 @@
   dashboard_navigation_all_sections: "Учетные записи и прогресс студента"
   dashboard_navigation_view_progress: "Просмотр хода выполнения"
   dashboard_navigation_view_text_responses: "Просмотр текстовых ответов"
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: "Добавить Учеников"
   dashboard_navigation_manage_students: "Управление Учениками"
   dashboard_navigation_lesson_plans_resources: "Планы уроков и ресурсы"
@@ -780,10 +781,23 @@
   dashboard_progress_completed_too_many_blocks: "Завершено, слишком много блоков"
   dashboard_progress_completed_perfect: "Завершено, отлично"
   dashboard_progress_furthest_level_attempted: "запрошен слишком высокий уровень"
+  dashboard_progress_submitted: "Представленный"
   dashboard_stage: "Этап"
   dashboard_puzzle: "Головоломка"
   dashboard_question: "Вопрос"
   dashboard_response: "Ответ"
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: "Верно"
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Невероятная статистика с прошлогоднего Часа Кода. Всего
     за одну неделю:"
   stats_hoc_2013_image_alt: "Статистика с Часа Кода 2013 года"
@@ -807,11 +821,15 @@
   dashboard_faq_k5: K-5 часто задаваемые вопросы
   dashboard_announcements: "Объявления"
   dashboard_announce_view_all: "Посмотреть все"
-  dashboard_announce_message: <b>1 февраля 2016</b> - 9 из 10 родителей хотят, чтобы
-    их дети изучали компьютерные науки, но до сих пор большинство школ не преподают
-    их. 30 января, Белый Дом объявил о планах донести компьютерные науки до каждого
-    студента в США в рамках инициативы "Компьютерные науки для Всех". We couldn't
-    be happier about the bipartisan support for computer science.
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: "узнать больше"
   dashboard_announce_hoc: "<b>15 октября, 2015</b> - Час кода приближается &mdash;
     каждый участвующий организатор получит подарочную карту для Amazon.com или Microsoft's

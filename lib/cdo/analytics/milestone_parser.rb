@@ -14,7 +14,7 @@ require 'fileutils'
 
 class MilestoneParser
   # Ignore milestone logs in these host paths
-  IGNORE_HOSTS = %w(console daemon production-daemon staging test levelbuilder-staging levelbuilder-development development react)
+  IGNORE_HOSTS = %w(console daemon production-daemon staging test levelbuilder-staging levelbuilder-development development react adhoc)
 
   MILESTONE_CACHE = pegasus_dir('cache', 'milestone-cache.json')
   MILESTONE_CACHE_V2 = pegasus_dir('cache', 'milestone-cache_v2.json')
@@ -33,8 +33,8 @@ class MilestoneParser
     cache_file = MILESTONE_CACHE_V2
     FileUtils.cp(MILESTONE_CACHE, cache_file) unless File.file?(cache_file)
     cache = File.file?(cache_file) ? JSON.parse(IO.read(cache_file)) : {}
-    parser = self.new(cache, AWS::S3::create_client)
-    parser.count.tap{|_|IO.write MILESTONE_CACHE_V2, JSON.pretty_generate(parser.cache)}
+    parser = self.new(cache, AWS::S3.create_client)
+    parser.count.tap{|_| IO.write MILESTONE_CACHE_V2, JSON.pretty_generate(parser.cache)}
   end
 
   def initialize(cache, s3_client)

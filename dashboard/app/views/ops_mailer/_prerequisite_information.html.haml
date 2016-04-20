@@ -1,4 +1,4 @@
-- if workshop.phase == 2 && workshop.program_type.to_i != 6
+- if workshop.phase_short_name == WorkshopConstants::PHASE_2 && workshop.program_type_short_name != WorkshopConstants::CA
   %h2
     Complete Phase 1: Online Introduction
   %p
@@ -16,8 +16,8 @@
     %li
       Payment: To be paid, you must complete all the circles in your Code Studio progress bar for the phase and program. Completion is indicated by a green circle (see example below). You will be paid once ALL portions of this PD segment are completed.
 - else
-  - if workshop.program_type.to_i == 3 || workshop.program_type.to_i == 4
-    - if workshop.phase == 8
+  - if workshop.program_type_short_name == WorkshopConstants::ECS || workshop.program_type_short_name == WorkshopConstants::CSP
+    - if workshop.phase_short_name == WorkshopConstants::PHASE_4
       %h2
         Complete all 5 parts of Phase 3 Online
       %p
@@ -34,8 +34,8 @@
               The number of stages/levels may differ from the above image.
         %li
           Payment: To be paid, you must complete all the circles in your Code Studio progress bar for the phase and program. Completion is indicated by a green circle (see example below). You will be paid once ALL portions of this PD segment are completed.
-  - if workshop.program_type.to_i == 1 || workshop.program_type.to_i == 2
-    - if workshop.phase == 4
+  - if workshop.program_type_short_name == WorkshopConstants::CS_IN_S || workshop.program_type_short_name == WorkshopConstants::CS_IN_A
+    - if workshop.phase_short_name == WorkshopConstants::PHASE_3A
       %h2
         Complete Phase 3 Online part 1
       %p
@@ -52,20 +52,20 @@
               The number of stages/levels may differ from the above image.
         %li
           Payment: To be paid, you must complete all the circles in your Code Studio progress bar for the phase and program. Completion is indicated by a green circle (see example below). You will be paid once ALL portions of this PD segment are completed.
-    - if workshop.phase == 5
-      %h2
-        Complete Phase 3 Online Part 3
-      %p
-        You must complete part 3 of your Phase 3 online activity prior to attending your Phase 3: Part B in-person workshop. Here are some tips to successfully complete your online PD:
-      %ul
-        %li
-          %p
-            Check your progress in Code Studio by clicking the orange button in the top-right corner and selecting Code Studio from the drop down. Then select the PD course you are enrolled in.
-          %p
-            Here’s what a successful online PD looks like. All the progress circles are green.
-          %img{src:"#{image_url}", style:'width: 600px'}
-          %p
-            %em
-              The number of stages/levels may differ from the above image.
-        %li
-          Payment: To be paid, you must complete all the circles in your Code Studio progress bar for the phase and program. Completion is indicated by a green circle (see example below). You will be paid once ALL portions of this PD segment are completed.
+  - if workshop.program_type_short_name == WorkshopConstants::CS_IN_S && workshop.phase_short_name == WorkshopConstants::PHASE_3B
+    %h2
+      Complete Phase 3 Online Part 3
+    %p
+      You must complete part 3 of your Phase 3 online activity prior to attending your Phase 3: Part B in-person workshop. Here are some tips to successfully complete your online PD:
+    %ul
+      %li
+        %p
+          Check your progress in Code Studio by clicking the orange button in the top-right corner and selecting Code Studio from the drop down. Then select the PD course you are enrolled in.
+        %p
+          Here’s what a successful online PD looks like. All the progress circles are green.
+        %img{src:"#{image_url}", style:'width: 600px'}
+        %p
+          %em
+            The number of stages/levels may differ from the above image.
+      %li
+        Payment: To be paid, you must complete all the circles in your Code Studio progress bar for the phase and program. Completion is indicated by a green circle (see example below). You will be paid once ALL portions of this PD segment are completed.

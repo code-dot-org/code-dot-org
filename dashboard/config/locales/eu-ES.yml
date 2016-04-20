@@ -26,6 +26,8 @@
   welcome_back: Ongi etorria berriro, %{name}
   submit: Bidali
   unsubmit: Bidalketa ezeztatu
+  next_page: Next page
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Irakaslea gehitu:'
@@ -420,6 +422,8 @@
       &copy; %{current_year} Electronic Arts Inc. Eskubide guztiak erreserbatuta.
       The Amazing World of Gumball marka erregistratua da eta &copy; 2015 Cartoon
       Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Amazon Web Servicesek sostengatua
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg; CODE logoa eta Kode
       Ordua&reg; Code.org-ren marka bereziak dira."
@@ -567,7 +571,6 @@
       hobekuntzak egingo direla.
     prerelease_hoc2014: Tutorial hau <span class='betatext'>beta</span> bertsioa da.
       Iruzkinak iritsi ahala berrikusi eta hobekuntzak egingo dira.
-    feedback: Bidali iruzkina
     report_bug: Akatsa jakinarazi
     support: Lortu laguntza
     support_url: "//support.code.org"
@@ -586,6 +589,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Mila esker
+    wrong_body: Thank you for submitting answers.
+    correct_title: Mila esker
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Mila esker
+    wrong_body: Thank you for submitting answers.
+    correct_title: Mila esker
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Soluzio okerra
     wrong_body: Soluzioa ez da zuzena. Saiatu berriro!
@@ -605,9 +618,8 @@
     placeholder: Idatzi hemen zure erantzuna
     open_response_title: Eskerrik asko
     open_response_body: Eskerrik asko zure erantzunagatik!
-  level_group:
-    correct_title: Mila esker
-    correct_body: Thank you for submitting an answer
+    correct_title: Zuzena
+    correct_body: Erantzun zuzena.
   dialog:
     ok: Ongi
     startover_title: Ziur al zaude berriro hasi nahi duzula?
@@ -671,6 +683,7 @@
     completed_perfect: burutua, bikain
     furthest_level_attempted: saiatutako maila altuena
     assessment: ebaluazioa
+    submitted: submitted
   studio:
     courses_working_on: Parte hartzen ari zaren kurtsoak
     completed_courses: Bukatutako kurtsoak
@@ -740,3 +753,7 @@
         acknowledge: Informazio hau bidaliz, %{link_start_privacy}Pibatutasun Politika%{link_end}
           eta %{link_start_tos}Zerbitzuaren Baldintzak%{link_end} adierazitako terminoetan
           erabiliko dela onartzen duzu
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

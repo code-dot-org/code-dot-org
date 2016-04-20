@@ -8,6 +8,8 @@
 #  plc_task_id                         :integer
 #  created_at                          :datetime         not null
 #  updated_at                          :datetime         not null
+#  type                                :string(255)
+#  properties                          :text(65535)
 #
 # Indexes
 #
@@ -21,16 +23,35 @@ class Plc::EnrollmentTaskAssignment < ActiveRecord::Base
 
   validates :plc_enrollment_module_assignment, presence: true
 
-  after_update :check_course_completion
+  after_update :check_unit_completion
 
   include SerializedProperties
   include StiFactory
+
+  TASK_STATUS_STATES = [
+      NOT_STARTED = 'not_started',
+      IN_PROGRESS = 'in_progress',
+      COMPLETED = 'completed'
+  ]
 
   def complete_assignment!
     update!(status: :completed)
   end
 
-  def check_course_completion
-    plc_enrollment_module_assignment.plc_user_course_enrollment.check_for_course_completion
+  def check_unit_completion
+    plc_enrollment_module_assignment.plc_enrollment_unit_assignment.check_for_unit_completion
+  end
+
+  def get_icon_and_style
+    return plc_task.try(:icon), '' if plc_task.try(:icon)
+
+    case status
+      when NOT_STARTED
+        return 'fa-circle-o', 'color: black'
+      when IN_PROGRESS
+        return 'fa-adjust', 'color: darkgoldenrod'
+      when COMPLETED
+        return 'fa-check-circle', 'color: green'
+    end
   end
 end

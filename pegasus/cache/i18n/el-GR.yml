@@ -32,7 +32,7 @@
     μάθημα."
   og_title: "Κάθε παιδί δικαιούται μία ευκαιρία"
   og_description: "Κάθε μαθητής σε κάθε σχολείο αξίζει μια ευκαιρία να σπυδάσει την
-    επιιστήμη των υπολογιστών."
+    επιιστήμη των υπολογιστών. Αλλάζει τα πάντα."
   hoc2014_heading: Συμμετάσχετε στην <a href="http://hourofcode.com"> Ώρα του Κώδικα</a><br/>8-14
     Δεκεμβρίου 2014<br/>
   hoc2014_students: "Μαθητές"
@@ -274,8 +274,7 @@
   learn_next_level: "Δοκιμάστε ένα άλλο μάθημα στο Code Studio"
   learn_online: "Δοκιμάστε τα άλλα μαθήματα online"
   learn_classes: "Βρείτε τάξεις κοντά σας"
-  hoc_is_here: "Η τελευταία Εβδομάδα Εκπαίδευσης στην Επιστήμη των Υπολογιστών έχει
-    φτασει τα 50 εκατομμύρια μαθητές.  https://youtu.be/Ofze6CWUCx8."
+  hoc_is_here: "Μάθετε την επιστήμη των υπολογιστών. Αυτό αλλάζει τα πάντα.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: "Μόλις ολοκλήρωσα την Ώρα του Κώδικα (#HourOfCode) - ελέγξτε το! @codeorg"
   just_did_course1: "Μόλις τελειώσα το Μάθημα 1 - Ελεγξέ το! @codeorg"
   just_did_course2: "Μόλις τελειώσα το Μάθημα 2 - Ελεγξέ το! @codeorg"
@@ -474,7 +473,7 @@
   starwars_javascript_specs: "Μόνο Αγγλικά | Σύγχρονα προγράμματα περιήγησης | Ηλικίες
     11+"
   starwars_javascript_start_button: "Δοκίμασε τώρα"
-  starwars_blocks_title: "Πακέτα"
+  starwars_blocks_title: "Μπλοκς"
   starwars_blocks_description: "Χρησιμοποίησε πακέτα «σύρε και άφησε»."
   starwars_blocks_specs: "Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης, έξυπνα
     κινητά, ταμπλέτες | Ηλικίες 6-10"
@@ -484,7 +483,7 @@
   starwars_help_translate: "Βοήθησέ μας να μεταφράσουμε"
   starwars_platform_text: "Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες"
   mc_name: "Η Ώρα του Κώδικα με το Minecraft"
-  mc_longdescription: "Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή τον
+  mc_longdescription: "Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή την
     Άλεξ σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft."
   mc_shortdescription: "Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή τον
     Άλεξ σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft."
@@ -710,6 +709,7 @@
   dashboard_navigation_all_sections: "Λογαριασμοί μαθητών και Πρόοδος"
   dashboard_navigation_view_progress: "Προβολή προόδου"
   dashboard_navigation_view_text_responses: "Προβολή Αποκρίσεων Κειμένου"
+  dashboard_navigation_view_assessments: "Αξιολογήσεις"
   dashboard_navigation_add_students: "Προσθήκη μαθητών"
   dashboard_navigation_manage_students: "Διαχείριση μαθητών"
   dashboard_navigation_lesson_plans_resources: "Σχέδια μαθήματος και Πόροι"
@@ -838,10 +838,23 @@
   dashboard_progress_completed_too_many_blocks: "ολοκληρώθηκε, πάρα πολλά μπλοκ"
   dashboard_progress_completed_perfect: "ολοκληρώθηκε, τέλειο"
   dashboard_progress_furthest_level_attempted: "τελευταίο επίπεδο επιχειρήθηκε"
+  dashboard_progress_submitted: "Υποβλήθηκε"
   dashboard_stage: "Επίπεδο"
   dashboard_puzzle: "Παζλ"
   dashboard_question: "Ερώτηση"
   dashboard_response: "Απάντηση"
+  dashboard_correctness: "Ορθότητα"
+  dashboard_correctness_free_response: "Δωρεάν απάντηση"
+  dashboard_correctness_unsubmitted: "Ανακλήθηκε"
+  dashboard_correctness_correct: "Σωστό"
+  dashboard_correctness_incorrect: "Εσφαλμένο"
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: "Κατάσταση"
+  dashboard_multi_correct: "# η πολλαπλή επιλογή είναι σωστή"
+  dashboard_multi_count: "# πολλαπλή επιλογή"
+  dashboard_multi_correct_percent: "% της πολλαπλής επιλογής σωστά"
+  dashboard_submission_timestamp: "Ημενρομηνία και ώρα υποβολής"
   stats_hoc_2013_heading: "Απίστευτα στατιστικά από την περσινή ώρα του κώδικα. Σε
     μία εβδομάδα μόνο:"
   stats_hoc_2013_image_alt: "Στατιστικά στοιχεία από την ώρα του κώδικα του 2013"
@@ -867,12 +880,15 @@
   dashboard_faq_k5: "Συχνές ερωτήσεις για το επίπεδο πρωτοβάθμιας εκπαίδευσης (K-5)"
   dashboard_announcements: "Ανακοινώσεις"
   dashboard_announce_view_all: "Προβολή όλων"
-  dashboard_announce_message: "<b>Η προθεσμία λήγει αυτή την Παρασκευή και εξακολουθούμε
-    να έχουμε μερικές ελεύθερες θέσεις για καθηγητές δευτεροβάθμιας εκπαίδευσης στις
-    συνεργαζόμενες συνοικίες.</b> Εγγραφείτε τώρα για να γίνετε μέλος στο ιδιαίτερα
-    αξιολογημένο πρόγραμμα επαγγελματικής μάθησης και να μάθετε να διδάξετε τις αρχές
-    της επιστήμης υπολογιστών AP. Ως τμήμα του προγράμματος μπορείτε να πάρετε δωρεάν
-    ταξίδι στο TeacherCon αυτό το καλοκαίρι και συνεχή υποστήριξη για όλο το χρόνο."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: "Μάθετε περισσότερα"
   dashboard_announce_hoc: "<b>15 Οκτωβρίου 2015</b> - Η Ώρα του Κώδικα πλησιάζει &mdash;
     κάθε συμμετέχον διοργανωτής θα λάβει μια κάρτα δώρου για το Amazon.com ή το Microsoft's

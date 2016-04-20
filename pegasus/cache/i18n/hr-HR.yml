@@ -656,6 +656,7 @@
   dashboard_navigation_all_sections: Učenički računi i napredak
   dashboard_navigation_view_progress: Prikaz napretka
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Dodavanje učenika
   dashboard_navigation_manage_students: Upravljanje učenicima
   dashboard_navigation_lesson_plans_resources: Nastavni planovi i resursi
@@ -768,10 +769,23 @@
   dashboard_progress_completed_too_many_blocks: dovršeno, previše blokova
   dashboard_progress_completed_perfect: dovršeno, savršeno
   dashboard_progress_furthest_level_attempted: pokušaj posljednjeg nivoa
+  dashboard_progress_submitted: submitted
   dashboard_stage: Nivo
   dashboard_puzzle: Zadatak
   dashboard_question: Pitanje
   dashboard_response: Odgovor
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Ispravno
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Nevjerojatna statistika prošlogodišnjeg Sata Kodiranja.
     U samo jednom tjednu:'
   stats_hoc_2013_image_alt: Statistika Sata Kodiranja 2013
@@ -793,11 +807,15 @@
   dashboard_faq_k5: K-5 Često postavljana pitanja
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: Doznaj više
   dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's

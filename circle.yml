@@ -11,6 +11,7 @@ machine:
   environment:
     RAILS_ENV: test
     RACK_ENV: test
+    SPROCKETS_DERAILLEUR_WORKER_COUNT: 2 # CircleCI build VMs have a memory limit of 4G
   services:
     - docker
 dependencies:
@@ -52,6 +53,7 @@ database:
     - 'echo "Skipping database phase (already ran)."'
 test:
   override:
+    - bundle exec rake lint:javascript
     # Run tests only for changed sub-projects, unless [test all] in commit
     - bundle exec rake circle:run_tests['[test all]']:
         timeout:

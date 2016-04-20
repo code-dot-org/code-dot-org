@@ -1,10 +1,10 @@
 {
-  "continue": "Continue",
-  "nextLevel": "Congratulations! You have completed this puzzle.",
-  "no": "No",
-  "numBlocksNeeded": "This puzzle can be solved with %1 blocks.",
-  "reinfFeedbackMsg": "You can press the \"Try Again\" button to go back to playing your game.",
-  "share": "Share",
-  "shareGame": "Share your game:",
-  "yes": "Yes"
+  "continue": "Ar aghaidh",
+  "nextLevel": "Comhghairdeas! Chríochnaigh tú an dúshlán seo.",
+  "no": "Níl",
+  "numBlocksNeeded": "Is féidir an dúshlán seo a chríochnú le %1 bloc.",
+  "reinfFeedbackMsg": "Is féidir leat an cnaipe \"Bain triail eile as\" a chliceáil chun filleadh ar do chluiche.",
+  "share": "Comhroinn",
+  "shareGame": "Comhroinn do chluiche:",
+  "yes": "Tá"
 }

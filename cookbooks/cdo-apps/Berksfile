@@ -10,7 +10,9 @@ metadata
   mysql
   ruby
   nginx
-).map{|x|"cdo-#{x}"}.
+  nodejs
+  java-7
+).map{|x| "cdo-#{x}"}.
   push('sudo-user').
   each do |dep|
   cookbook dep, path: "../#{dep}"

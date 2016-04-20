@@ -26,6 +26,8 @@
   welcome_back: Tere tulemast tagasi, %{name}
   submit: Esita
   unsubmit: Võta vastus tagasi
+  next_page: Next page
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Lisa õpetaja:'
@@ -410,6 +412,8 @@
       Ltd. Kõik õigused kaitstud. Plants vs. Zombies&#8482; &copy; %{current_year}
       Electronic Arts Inc. Kõik õigused kaitstud. The Amazing World of Gumball on
       kaubamärk ja &copy; 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Amazoni poolt toetatud
     trademark: "&copy;Code.org,%{current_year}. Code.org&reg;, CODE-i logo ja KoodiTund&reg;
       on Code.org kaubamärgid."
@@ -556,7 +560,6 @@
       ja parandused on tehtud.
     prerelease_hoc2014: See õpetus on <span class='betatext'> Beta</span>.  Tuleb
       läbi vaadata, kui on saabunud tagasiside ja parandused on tehtud.
-    feedback: Anna tagasisidet
     report_bug: Raporteeri veast
     support: Abi saamine
     support_url: "//support.code.org"
@@ -575,6 +578,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Aitäh
+    wrong_body: Thank you for submitting answers.
+    correct_title: Aitäh
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Aitäh
+    wrong_body: Thank you for submitting answers.
+    correct_title: Aitäh
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Vale lahendus
     wrong_body: Sinu poolt sisestatud lahendus ei ole õige. Palun proovi uuesti!
@@ -594,9 +607,8 @@
     placeholder: Sisesta siia oma vastus
     open_response_title: Tänud
     open_response_body: Täname vastuse eest!
-  level_group:
-    correct_title: Aitäh
-    correct_body: Thank you for submitting an answer
+    correct_title: "Õige"
+    correct_body: See on õige vastus.
   dialog:
     ok: Olgu
     startover_title: Oled sa kindel et tahad uuesti alustada?
@@ -659,6 +671,7 @@
     completed_perfect: tehtud, suurepärane
     furthest_level_attempted: kõige viimane tase proovitud
     assessment: hinnang
+    submitted: submitted
   studio:
     courses_working_on: Kursused, millega töötate
     completed_courses: Lõpetatud kursused
@@ -727,3 +740,7 @@
         acknowledge: Selle informatsiooni esitamisel nõustute, et seda käsitletakse
           vastavalt %{link_start_privacy} privaatsuse tingimustele %{link_end}ja %{link_start_tos}
           kasutajatingimustele %{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

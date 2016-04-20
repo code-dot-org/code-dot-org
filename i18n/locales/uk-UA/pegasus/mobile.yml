@@ -21,7 +21,7 @@ uk-UA:
   twentyhours_heading: Спробуйте наш курс вступу до інформатики
   twentyhours_text: "Завершили свою першу Годину Коду? Дізнайтеся більше про основні поняття комп'ютерних наук та програмування на подальших курсах."
   og_title: Кожна дитина заслуговує на можливість
-  og_description: Кожен учень у кожній школі заслуговує на те, щоб мати можливість вивчати інформатику.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Приєднуйтеся до <a href="http://hourofcode.com">Години коду</a> <br/> 8-14 грудня 2014 року <br/>'
   hoc2014_students: Учні
   hoc2014_try: Спробувати
@@ -179,7 +179,7 @@ uk-UA:
   learn_next_level: Продовжити до наступного рівня
   learn_online: Спробуйте інші курси онлайн
   learn_classes: Знайти місцеві класи
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Я щойно завершив #HourOfCode - подивіться, що це! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -526,6 +526,7 @@ uk-UA:
   dashboard_navigation_all_sections: Облікові записи учнів та їх прогрес
   dashboard_navigation_view_progress: Перегляд прогресу
   dashboard_navigation_view_text_responses: Переглянути тексти відповідей
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Додати учнів
   dashboard_navigation_manage_students: Керування учнями
   dashboard_navigation_lesson_plans_resources: Плани уроків та ресурси
@@ -619,10 +620,23 @@ uk-UA:
   dashboard_progress_completed_too_many_blocks: завершено, забагато блоків
   dashboard_progress_completed_perfect: виконано, ідеально
   dashboard_progress_furthest_level_attempted: останній відкритий рівень
+  dashboard_progress_submitted: надіслано
   dashboard_stage: Етап
   dashboard_puzzle: Завдання
   dashboard_question: Питання
   dashboard_response: Відповідь
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Правильно
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Неймовірна статистика з минулорічної Години коду. Лише за тиждень:'
   stats_hoc_2013_image_alt: Статистика Години коду 2013 року
   dashboard_teacher: Вчитель
@@ -641,7 +655,8 @@ uk-UA:
   dashboard_faq_k5: K-5 запитання й відповіді
   dashboard_announcements: Оголошення
   dashboard_announce_view_all: Переглянути всі
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
+  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
   dashboard_announce_button_text: Дізнайтеся більше
   dashboard_announce_hoc: "<b>23 листопада 2015</b> - Хочете допомогти інформатичній освіті протягом Години коду? Більше 7000 волонтерів вже збираються надихати учнів, відвідавши клас чи взявши участь у відео-чаті. Перегляньте карту, щоб зв'язатися з місцевими волонтерами."
   dashboard_announce_playlab: '<b>4 грудня 2015</b> - Година коду вже тут! Спробуйте наші 50 підручників для будь-якого віку та пристрою. Новинка цього тижня: закодуйте власні історії та ігри у новій Ігровій лабораторії, Льодовиковому періоді та Гамболі.'
@@ -758,7 +773,7 @@ uk-UA:
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   applab_name: App Lab
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Вік 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: Вік 4-104
   codeintl_gradelevel: Вік 4-104

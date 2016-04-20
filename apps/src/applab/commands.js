@@ -16,7 +16,8 @@ var errorHandler = require('../errorHandler');
 var ErrorLevel = errorHandler.ErrorLevel;
 var applabTurtle = require('./applabTurtle');
 var ChangeEventHandler = require('./ChangeEventHandler');
-var colors = require('../sharedJsxStyles').colors;
+var color = require('../color');
+var logToCloud = require('../logToCloud');
 
 var OPTIONAL = true;
 
@@ -241,8 +242,8 @@ applabCommands.button = function (opts) {
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
   newButton.style.position = 'relative';
-  newButton.style.color = colors.white;
-  newButton.style.backgroundColor = colors.teal;
+  newButton.style.color = color.white;
+  newButton.style.backgroundColor = color.applab_button_teal;
 
   return Boolean(newButton.appendChild(textNode) &&
     Applab.activeScreen().appendChild(newButton));
@@ -874,8 +875,8 @@ applabCommands.dropdown = function (opts) {
   }
   newSelect.id = opts.elementId;
   newSelect.style.position = 'relative';
-  newSelect.style.color = colors.white;
-  newSelect.style.backgroundColor = colors.teal;
+  newSelect.style.color = color.white;
+  newSelect.style.backgroundColor = color.applab_button_teal;
 
   return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
@@ -884,7 +885,7 @@ applabCommands.getAttribute = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var element = document.getElementById(opts.elementId);
   var attribute = String(opts.attribute);
-  return divApplab.contains(element) ? element[attribute] : false;
+  return divApplab.contains(element) ? String(element[attribute]) : false;
 };
 
 // Whitelist of HTML Element attributes which can be modified, to
@@ -1184,7 +1185,7 @@ function setSize_(elementId, width, height) {
   }
 }
 
-applabCommands.setProperty = function(opts) {
+applabCommands.setProperty = function (opts) {
   apiValidateDomIdExistence(opts, 'setProperty', 'id', opts.elementId, true);
   apiValidateType(opts, 'setProperty', 'property', opts.property, 'string');
 
@@ -1381,9 +1382,25 @@ applabCommands.onHttpRequestEvent = function (opts) {
   }
 };
 
+/**
+ * Log the hostname and url to New Relic as a StartWebRequest event.
+ * @param {string} url
+ */
+function logWebRequest(url) {
+  var a = document.createElement('a');
+  a.href = url;
+  var hostname = a.hostname;
+
+  logToCloud.addPageAction(logToCloud.PageAction.StartWebRequest, {
+    hostname: hostname,
+    url: url
+  });
+}
+
 applabCommands.startWebRequest = function (opts) {
   apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
   apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
+  logWebRequest(opts.url);
   var req = new XMLHttpRequest();
   req.onreadystatechange = applabCommands.onHttpRequestEvent.bind(req, opts);
   req.open('GET', opts.url, true);
@@ -1449,13 +1466,13 @@ applabCommands.createRecord = function (opts) {
   AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
 };
 
-applabCommands.handleCreateRecord = function(opts, record) {
+applabCommands.handleCreateRecord = function (opts, record) {
   if (opts.onSuccess) {
     opts.onSuccess.call(null, record);
   }
 };
 
-applabCommands.getKeyValue = function(opts) {
+applabCommands.getKeyValue = function (opts) {
   // PARAMNAME: getKeyValue: callback vs. callbackFunction
   apiValidateType(opts, 'getKeyValue', 'key', opts.key, 'string');
   apiValidateType(opts, 'getKeyValue', 'callback', opts.onSuccess, 'function');
@@ -1465,30 +1482,30 @@ applabCommands.getKeyValue = function(opts) {
   AppStorage.getKeyValue(opts.key, onSuccess, onError);
 };
 
-applabCommands.handleReadValue = function(opts, value) {
+applabCommands.handleReadValue = function (opts, value) {
   if (opts.onSuccess) {
     opts.onSuccess.call(null, value);
   }
 };
 
-applabCommands.getKeyValueSync = function(opts) {
+applabCommands.getKeyValueSync = function (opts) {
   apiValidateType(opts, 'getKeyValueSync', 'key', opts.key, 'string');
   var onSuccess = handleGetKeyValueSync.bind(this, opts);
   var onError = handleGetKeyValueSyncError.bind(this, opts);
   AppStorage.getKeyValue(opts.key, onSuccess, onError);
 };
 
-var handleGetKeyValueSync = function(opts, value) {
+var handleGetKeyValueSync = function (opts, value) {
   opts.callback(value);
 };
 
-var handleGetKeyValueSyncError = function(opts, message) {
+var handleGetKeyValueSyncError = function (opts, message) {
   // Call callback with no value parameter (sync func will return undefined)
   opts.callback();
   Applab.log(message);
 };
 
-applabCommands.setKeyValue = function(opts) {
+applabCommands.setKeyValue = function (opts) {
   // PARAMNAME: setKeyValue: callback vs. callbackFunction
   apiValidateType(opts, 'setKeyValue', 'key', opts.key, 'string');
   apiValidateType(opts, 'setKeyValue', 'value', opts.value, 'primitive');
@@ -1499,13 +1516,13 @@ applabCommands.setKeyValue = function(opts) {
   AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
-applabCommands.handleSetKeyValue = function(opts) {
+applabCommands.handleSetKeyValue = function (opts) {
   if (opts.onSuccess) {
     opts.onSuccess.call(null);
   }
 };
 
-applabCommands.setKeyValueSync = function(opts) {
+applabCommands.setKeyValueSync = function (opts) {
   apiValidateType(opts, 'setKeyValueSync', 'key', opts.key, 'string');
   apiValidateType(opts, 'setKeyValueSync', 'value', opts.value, 'primitive');
   var onSuccess = handleSetKeyValueSync.bind(this, opts);
@@ -1513,12 +1530,12 @@ applabCommands.setKeyValueSync = function(opts) {
   AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
-var handleSetKeyValueSync = function(opts) {
+var handleSetKeyValueSync = function (opts) {
   // Return 'true' to indicate the setKeyValueSync succeeded
   opts.callback(true);
 };
 
-var handleSetKeyValueSyncError = function(opts, message) {
+var handleSetKeyValueSyncError = function (opts, message) {
   // Return 'false' to indicate the setKeyValueSync failed
   opts.callback(false);
   Applab.log(message);
@@ -1541,7 +1558,7 @@ applabCommands.readRecords = function (opts) {
   AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
 };
 
-applabCommands.handleReadRecords = function(opts, records) {
+applabCommands.handleReadRecords = function (opts, records) {
   if (opts.onSuccess) {
     opts.onSuccess.call(null, records);
   }
@@ -1571,7 +1588,7 @@ applabCommands.updateRecord = function (opts) {
   AppStorage.updateRecord(opts.table, opts.record, onComplete, onError);
 };
 
-applabCommands.handleUpdateRecord = function(opts, record, success) {
+applabCommands.handleUpdateRecord = function (opts, record, success) {
   if (opts.onComplete) {
     opts.onComplete.call(null, record, success);
   }
@@ -1601,7 +1618,7 @@ applabCommands.deleteRecord = function (opts) {
   AppStorage.deleteRecord(opts.table, opts.record, onComplete, onError);
 };
 
-applabCommands.handleDeleteRecord = function(opts, success) {
+applabCommands.handleDeleteRecord = function (opts, success) {
   if (opts.onComplete) {
     opts.onComplete.call(null, success);
   }

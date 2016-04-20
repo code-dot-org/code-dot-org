@@ -682,6 +682,7 @@
   dashboard_navigation_all_sections: Contas e progreso do alumno
   dashboard_navigation_view_progress: Exhibir progreso
   dashboard_navigation_view_text_responses: Ver respostas de texto
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Engadir alumnas/os
   dashboard_navigation_manage_students: Administrar as alumnas/os
   dashboard_navigation_lesson_plans_resources: Plans e recursos da clase
@@ -802,10 +803,23 @@
   dashboard_progress_completed_too_many_blocks: concluído, moitos bloques
   dashboard_progress_completed_perfect: concluído, perfecto
   dashboard_progress_furthest_level_attempted: tentativa para o nivel máis avanzado
+  dashboard_progress_submitted: submitted
   dashboard_stage: Etapa
   dashboard_puzzle: Quebracabeza
   dashboard_question: Pregunta
   dashboard_response: Resposta
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Certo
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Estatísticas incríbeis da Hora do Código do ano pasado.
     En só unha semana:'
   stats_hoc_2013_image_alt: Estatísticas da Hora do Código de 2013
@@ -829,11 +843,15 @@
   dashboard_faq_k5: Preguntas frecuentes sobre Primaria
   dashboard_announcements: Anuncios
   dashboard_announce_view_all: Ver todos
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: Aprende máis
   dashboard_announce_hoc: "<b>23 de novembro 2015</b> -Gostarías de ter un informártico
     para te axudar durante a hora do Código? Máis de 7.000 voluntarios procuran motivar

@@ -81,6 +81,11 @@ class AdminReportsController < ApplicationController
       @ethnicities.each_value do |count|
         @ethnic_count += count
       end
+      @foodstamps_count = @foodstamps_count.to_i
+      respond_to do |format|
+        format.html
+        format.csv { return diversity_survey_csv }
+      end
     end
   end
 
@@ -316,6 +321,70 @@ class AdminReportsController < ApplicationController
     end
 
     return row_arrays
+  end
+
+  # Returns an array of arrays, each inner array including the raw responses to
+  # the diversity survey.
+  def diversity_survey_raw_responses
+    header = [
+      "Response ID",
+      "American Indian",
+      "Asian",
+      "Black",
+      "Hispanic",
+      "Native",
+      "White",
+      "Other",
+      "Foodstamps",
+      "System Student Count",
+    ]
+    raw_responses = [header]
+
+    SurveyResult.all.each do |response|
+      this_response = [response['id']]
+
+      data = response['properties']
+      this_response << (data.key?('survey2016_ethnicity_american_indian') ?
+        data['survey2016_ethnicity_american_indian'].to_i : nil)
+      this_response << (data.key?('survey2016_ethnicity_asian') ?
+        data['survey2016_ethnicity_asian'].to_i : nil)
+      this_response << (data.key?('survey2016_ethnicity_black') ?
+        data['survey2016_ethnicity_black'].to_i : nil)
+      this_response << (data.key?('survey2016_ethnicity_hispanic') ?
+        data['survey2016_ethnicity_hispanic'].to_i : nil)
+      this_response << (data.key?('survey2016_ethnicity_native') ?
+        data['survey2016_ethnicity_native'].to_i : nil)
+      this_response << (data.key?('survey2016_ethnicity_white') ?
+        data['survey2016_ethnicity_white'].to_i : nil)
+      this_response << (data.key?('survey2016_ethnicity_other') ?
+        data['survey2016_ethnicity_other'].to_i : nil)
+
+      this_response << (data.key?('survey2016_foodstamps') ?
+        data['survey2016_foodstamps'].to_i : nil)
+
+      teachers_student_count = Follower.
+        where(user_id: response['user_id']).
+        joins('INNER JOIN users ON users.id = followers.student_user_id').
+        where('users.last_sign_in_at IS NOT NULL').
+        distinct.
+        count(:student_user_id)
+      this_response << teachers_student_count
+
+      raw_responses << this_response
+    end
+
+    raw_responses
+  end
+
+  def diversity_survey_csv
+    send_data(
+      CSV.generate do |csv|
+        diversity_survey_raw_responses().each do |response|
+          csv << response
+        end
+        csv
+      end,
+      :type => 'text/csv')
   end
 
   def level_answers_csv

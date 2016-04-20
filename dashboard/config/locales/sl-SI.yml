@@ -25,6 +25,8 @@
   welcome_back: Dobrodošel/a nazaj, %{name}
   submit: Pošlji
   unsubmit: Unsubmit
+  next_page: Next page
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Dodaj učitelja/ico:'
@@ -401,6 +403,8 @@
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. Vse pravice pridržane.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. Vse pravice pridržane.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Podprto s strani Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, logotip CODE in Hour
       of Code&reg; sta blagovni znamki Code.org."
@@ -544,7 +548,6 @@
       končna različica in ga bomo z vašo pomočjo še izboljševali.
     prerelease_hoc2014: Ta priročnik je <span class='betatext'>beta</span>.  To pomeni,
       da ni končna različica in ga bomo z vašo pomočjo še izboljševali.
-    feedback: Tvoje mnenje
     report_bug: Sporoči napako
     support: Pomoč
     support_url: "//support.code.org"
@@ -563,6 +566,16 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Hvala
+    wrong_body: Thank you for submitting answers.
+    correct_title: Hvala
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Hvala
+    wrong_body: Thank you for submitting answers.
+    correct_title: Hvala
+    correct_body: Thank you for submitting answers.
   match:
     wrong_title: Nepravilna rešitev
     wrong_body: Rešitev, ki si jo vnesel, ni pravilna.  Prosim, poskusi znova!
@@ -582,9 +595,8 @@
     placeholder: Vnesite vaš odgovor tukaj
     open_response_title: Hvala
     open_response_body: Hvala za vaš odgovor!
-  level_group:
-    correct_title: Hvala
-    correct_body: Thank you for submitting an answer
+    correct_title: Pravilno
+    correct_body: To je pravilen odgovor.
   dialog:
     ok: Vredu
     startover_title: Si prepričan, da želiš začeti znova?
@@ -646,6 +658,7 @@
     completed_perfect: dokončano, odlično
     furthest_level_attempted: poskusili ste najvišji nivo
     assessment: ocenjevanje
+    submitted: submitted
   studio:
     courses_working_on: Tečaji, ki jih še nisi dokončal/a
     completed_courses: Tečaji, ki si jih dokončal/a
@@ -714,3 +727,7 @@
         acknowledge: By submitting this information, you acknowledge it will be handled
           in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
           and the %{link_start_tos}Terms of Service%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found
