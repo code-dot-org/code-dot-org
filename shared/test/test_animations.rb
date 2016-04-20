@@ -19,9 +19,9 @@ class AnimationsTest < FilesApiTestBase
   end
 
   def test_upload_animations
-    dog_image_filename = randomize_filename('dog.png')
+    dog_image_filename = @api.randomize_filename('dog.png')
     dog_image_body = 'stub-dog-contents'
-    cat_image_filename = randomize_filename('cat.png')
+    cat_image_filename = @api.randomize_filename('cat.png')
     cat_image_body = 'stub-cat-contents'
 
     # Make sure we have a clean starting point
@@ -68,7 +68,7 @@ class AnimationsTest < FilesApiTestBase
   end
 
   def test_allow_mismatched_mime_type
-    mismatched_filename = randomize_filename('mismatchedmimetype.png')
+    mismatched_filename = @api.randomize_filename('mismatchedmimetype.png')
     delete_all_animation_versions(mismatched_filename)
 
     @api.post_file(mismatched_filename, 'stub-contents', 'application/gif')
@@ -79,7 +79,7 @@ class AnimationsTest < FilesApiTestBase
   end
 
   def test_extension_case_sensitivity
-    filename = randomize_filename('casesensitive.PNG')
+    filename = @api.randomize_filename('casesensitive.PNG')
     different_case_filename = filename.gsub(/PNG$/, 'png')
     delete_all_animation_versions(filename)
     delete_all_animation_versions(different_case_filename)
@@ -98,7 +98,7 @@ class AnimationsTest < FilesApiTestBase
   end
 
   def test_nonexistent_animation
-    filename = randomize_filename('nonexistent.png')
+    filename = @api.randomize_filename('nonexistent.png')
     delete_all_animation_versions(filename)
 
     @api.delete_object(filename) # Not a no-op - creates a delete marker
@@ -109,9 +109,9 @@ class AnimationsTest < FilesApiTestBase
   end
 
   def test_copy_animation
-    source_image_filename = randomize_filename('copy_source.png')
+    source_image_filename = @api.randomize_filename('copy_source.png')
     source_image_body = 'stub-source-contents'
-    dest_image_filename = randomize_filename('copy_dest.png')
+    dest_image_filename = @api.randomize_filename('copy_dest.png')
 
     # Make sure we have a clean starting point
     delete_all_animation_versions(source_image_filename)
@@ -138,8 +138,8 @@ class AnimationsTest < FilesApiTestBase
   end
 
   def test_copy_nonexistent_animation
-    source_image_filename = randomize_filename('copy_nonexistent_source.png')
-    dest_image_filename = randomize_filename('copy_nonexistent_dest.png')
+    source_image_filename = @api.randomize_filename('copy_nonexistent_source.png')
+    dest_image_filename = @api.randomize_filename('copy_nonexistent_dest.png')
 
     # Make sure we have a clean starting point
     delete_all_animation_versions(source_image_filename)
@@ -151,7 +151,7 @@ class AnimationsTest < FilesApiTestBase
   end
 
   def test_animation_versions
-    filename = randomize_filename('test.png')
+    filename = @api.randomize_filename('test.png')
     delete_all_animation_versions(filename)
 
     # Create an animation file
@@ -182,7 +182,7 @@ class AnimationsTest < FilesApiTestBase
   end
 
   def test_replace_animation_version
-    filename = randomize_filename('replaceme.png')
+    filename = @api.randomize_filename('replaceme.png')
     delete_all_animation_versions(filename)
 
     # Create an animation file
@@ -216,11 +216,6 @@ class AnimationsTest < FilesApiTestBase
 
   def delete_all_animation_versions(filename)
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/1/#{filename}")
-  end
-
-  def randomize_filename(filename)
-    basename = [filename.split('.')[0], '.' + filename.split('.')[1]]
-    basename[0] + '_' + @random.bytes(10).unpack('H*')[0] + basename[1]
   end
 
 end
