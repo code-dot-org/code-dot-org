@@ -14,11 +14,9 @@ var AnimationPickerAction = module.exports.AnimationPickerAction = utils.makeEnu
  * Show the animation picker
  * @returns {{type: AnimationPickerAction}}
  */
-module.exports.showAnimationPicker = function (onComplete, onCancel) {
+module.exports.showAnimationPicker = function () {
   return {
-    type: AnimationPickerAction.SHOW_ANIMATION_PICKER,
-    onComplete: onComplete,
-    onCancel: onCancel
+    type: AnimationPickerAction.SHOW_ANIMATION_PICKER
   };
 };
 

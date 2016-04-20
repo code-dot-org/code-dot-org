@@ -46,7 +46,7 @@ module.exports = connect(function propsFromState(state) {
 }, function propsFromDispatch(dispatch) {
   return {
     onNewItemClick: function () {
-      dispatch(actions.pickNewAnimation());
+      dispatch(actions.beginPickingAnimation());
     }
   };
 })(AnimationSequenceList);

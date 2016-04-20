@@ -2,35 +2,51 @@
  *  @see http://redux.js.org/docs/basics/Actions.html */
 'use strict';
 
-var animationPickerActions = require('../AnimationPicker/actions');
 var gamelabActions = require('../actions');
 var utils = require('../../utils');
 
 /** @enum {string} */
-var ActionType = module.exports.ActionType = utils.makeEnum('SELECT_ANIMATION');
+var ActionType = module.exports.ActionType = utils.makeEnum(
+  'BEGIN_PICKING_ANIMATION',
+  'FINISH_PICKING_ANIMATION',
+  'CANCEL_PICKING_ANIMATION',
+  'SELECT_ANIMATION'
+);
 
-module.exports.pickNewAnimation = function () {
+var AnimationPickerDestination = module.exports.AnimationPickerDestination = utils.makeEnum(
+  'NEW_ANIMATION',
+  'ADD_FRAMES'
+);
+
+module.exports.beginPickingAnimation = function () {
+  return {
+    type: ActionType.BEGIN_PICKING_ANIMATION,
+    destination: AnimationPickerDestination.NEW_ANIMATION 
+  };
+};
+
+module.exports.finishPickingAnimation = function (result) {
   return function (dispatch, getState) {
-    dispatch(animationPickerActions.showAnimationPicker(function onComplete(result) {
-      console.log(result);
-      dispatch(animationPickerActions.hideAnimationPicker());
+    var destination = getState().animationTab.animationPickerFlow.destination;
+    if (destination === AnimationPickerDestination.NEW_ANIMATION) {
       dispatch(gamelabActions.addAnimation({
         key: result.filename.replace(/\.png$/i, ''),
         name: result.originalFileName,
         size: result.size,
         version: result.versionId
-        // TODO: Populate image metadata as appropriate
-        // May require some awesome preprocessing.
-        // "frameRate": 10,
-        // "frameWidth": 400,
-        // "frameHeight": 200,
-        // "frameCount": 8,
-        // "framesPerRow": 5
       }));
-    }, function onCancel() {
-      dispatch(animationPickerActions.hideAnimationPicker());
-    }));
-  };
+    } else if (destination === AnimationPickerDestination.ADD_FRAMES) {
+      // TODO (bbuchanan): Implement after integrating Piskel
+    }
+    
+    dispatch({ type: ActionType.FINISH_PICKING_ANIMATION });
+  }
+};
+
+module.exports.cancelPickingAnimation = function () {
+  return {
+    type: ActionType.CANCEL_PICKING_ANIMATION
+  }
 };
 
 /**
