@@ -2,8 +2,8 @@ var msg = require('./locale');
 
 var StepButton = function (props) {
   var classes = 'launch float-right';
-  if (props.showStepButton) {
-    classes += ' showStepButton';
+  if (!props.showStepButton) {
+    classes += ' hide';
   }
   return (
     <button id="stepButton" className={classes}>
