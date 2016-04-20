@@ -16,7 +16,7 @@
           - when Plc::EnrollmentUnitAssignment::START_BLOCKED
             %p
               This unit cannot be started yet
-          - when Plc::EnrollmentUnitAssignment::PENDING_EVALUATION, Plc::EnrollmentUnitAssignment::REVIEWING_ASSIGNMENTS
+          - when Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
             %p
               = link_to 'Click here to take the evaluation quiz for this unit', perform_evaluation_path(enrollment_unit_assignment), class: 'btn'
           - when Plc::EnrollmentUnitAssignment::IN_PROGRESS
