@@ -3,7 +3,6 @@ var GameButtons = require('../templates/GameButtons');
 var CompletionButton = require('./CompletionButton');
 var PlaySpaceHeader = require('./PlaySpaceHeader');
 var BelowVisualization = require('../templates/BelowVisualization');
-var commonStyles = require('../commonStyles');
 var connect = require('react-redux').connect;
 
 /**

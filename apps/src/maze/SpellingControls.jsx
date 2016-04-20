@@ -1,8 +1,9 @@
 var msg = require('./locale');
+var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 
 var SpellingControls = function (props) {
   return (
-    <div id="spelling-table-wrapper">
+    <ProtectedStatefulDiv id="spelling-table-wrapper">
       <table id="spelling-table" className="float-right">
         <tbody>
           <tr>
@@ -25,7 +26,7 @@ var SpellingControls = function (props) {
           </tr>
         </tbody>
       </table>
-    </div>
+    </ProtectedStatefulDiv>
   );
 };
 

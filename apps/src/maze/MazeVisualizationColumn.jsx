@@ -1,6 +1,3 @@
-var msg = require('../locale');
-var commonStyles = require('../commonStyles');
-
 var Visualization = require('./Visualization');
 var StepButton = require('./StepButton');
 var SpellingControls = require('./SpellingControls');
