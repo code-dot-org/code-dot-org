@@ -27,6 +27,7 @@
   submit: Send
   unsubmit: Trekk tilbake
   next_page: Next page
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Legg til ein lærar:'

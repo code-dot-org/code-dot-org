@@ -772,7 +772,7 @@
   dashboard_progress_completed_too_many_blocks: "аяқталды, тым көп бөлімдер"
   dashboard_progress_completed_perfect: "аяқталды, тамаша"
   dashboard_progress_furthest_level_attempted: "жетілген ең жоғарғы деңгей"
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: "жіберілді"
   dashboard_stage: "Деңгей"
   dashboard_puzzle: "Басқатырғыш"
   dashboard_question: "Сұрақ"
@@ -815,6 +815,11 @@
     problem in computer science. Code Studio teachers are leading the way in educating
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: "толығырақ білу"
   dashboard_announce_hoc: "<b>30 қыркүйек, 2015</b> - 2015 жылғы Код Жазу Сағаты жақында
     басталады! Бүкіләлемдік тарихи оқу шарасына қатыс."
@@ -958,7 +963,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: "Қосымшалар Лабораториясы"
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: 13+ жастағылар үшін
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
@@ -1668,8 +1673,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "ойнау"
   artist_shortcode: art
-  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
-    (or a teacher you know) want to join a nationwide community of educators working
-    to change the face of computer science education? We'll be accepting applications
-    from middle and high school teachers in our partner districts for our year-long
-    Exploring Computer Science Professional Learning Program until April 22nd."

@@ -581,7 +581,7 @@ kk-KZ:
   dashboard_progress_completed_too_many_blocks: аяқталды, тым көп бөлімдер
   dashboard_progress_completed_perfect: аяқталды, тамаша
   dashboard_progress_furthest_level_attempted: жетілген ең жоғарғы деңгей
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: жіберілді
   dashboard_stage: Деңгей
   dashboard_puzzle: Басқатырғыш
   dashboard_question: Сұрақ
@@ -616,7 +616,8 @@ kk-KZ:
   dashboard_faq_k5: 5-сынып оқушыларының жиі қоятын сұрақтары
   dashboard_announcements: Хабарландыру
   dashboard_announce_view_all: Барлығын көру
-  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
+  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
   dashboard_announce_button_text: толығырақ білу
   dashboard_announce_hoc: '<b>30 қыркүйек, 2015</b> - 2015 жылғы Код Жазу Сағаты жақында басталады! Бүкіләлемдік тарихи оқу шарасына қатыс.'
   dashboard_announce_playlab: '<b>4 желтоқсан 2015 жыл</b> - Бағдарламалау сағаты осы жерде! Кез келген жасқа және құрылғыға арналған 50 нұсқаулықтарды қарап көріңіз. Апта жаңалығы: жаңғыртылған Ойындар Лабороториясы, Мұз дәуірі, және Гамболдың таңғажайып әлемінде өзіңнің жеке ойындарың мен әңгімелеріңді бағдарламала.'
@@ -733,7 +734,7 @@ kk-KZ:
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   applab_name: Қосымшалар Лабораториясы
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: 13+ жастағылар үшін
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: Жас аралығы 4-14
   codeintl_gradelevel: Жас аралығы 4-14

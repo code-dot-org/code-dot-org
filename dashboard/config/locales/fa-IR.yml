@@ -26,6 +26,7 @@
   submit: "ارسال کنید"
   unsubmit: "ثبت نشده"
   next_page: "صفحه بعد"
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: "افزودن یک معلم:"

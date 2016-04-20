@@ -26,6 +26,7 @@ uk:
   submit: Надіслати
   unsubmit: Відкликати
   next_page: Next page
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Додати учителя:'

@@ -41,6 +41,7 @@ levels.custom = utils.extend(levels.sandbox, {
   ],
   codeFunctions: {
     // Game Lab
+    "draw": null,
     "fill": null,
     "noFill": null,
     "stroke": null,
@@ -77,16 +78,17 @@ levels.custom = utils.extend(levels.sandbox, {
     "setSpeed": null,
     "getDirection": null,
     "getSpeed": null,
+    "isTouching": null,
     "destroy": null,
     "pointTo": null,
     "bounce": null,
+    "bounceOff": null,
     "collide": null,
     "displace": null,
     "overlap": null,
     "changeAnimation": null,
     "setCollider": null,
     "setColor": null,
-    "setColorRGB": null,
     "setVelocity": null,
     "sprite.height": null,
     "sprite.width": null,
@@ -116,7 +118,9 @@ levels.custom = utils.extend(levels.sandbox, {
     "clear": null,
     "contains": null,
     "get": null,
+    "group.isTouching": null,
     "group.bounce": null,
+    "group.bounceOff": null,
     "group.collide": null,
     "group.displace": null,
     "group.overlap": null,
@@ -125,7 +129,6 @@ levels.custom = utils.extend(levels.sandbox, {
     "destroyEach": null,
     "pointToEach": null,
     "setColorEach": null,
-    "setColorRGBEach": null,
     "setColliderEach": null,
     "setDepthEach": null,
     "setHeightEach": null,
@@ -204,14 +207,7 @@ levels.custom = utils.extend(levels.sandbox, {
     "callMyFunction_n": null,
     "return": null
   },
-  startBlocks: [
-    'function setup() {',
-    '  ',
-    '}',
-    'function draw() {',
-    '  ',
-    '}',
-    ''].join('\n'),
+  startBlocks: null,
 });
 
 levels.ec_sandbox = utils.extend(levels.custom, {

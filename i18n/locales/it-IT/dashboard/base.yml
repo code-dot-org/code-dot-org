@@ -26,6 +26,7 @@ it:
   submit: Invia
   unsubmit: "Annulla l'invio"
   next_page: Pagina successiva
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Aggiungi un insegnante:'
