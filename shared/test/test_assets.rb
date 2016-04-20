@@ -1,4 +1,5 @@
 require_relative 'files_api_test_base' # Must be required first to establish load paths
+require_relative 'files_api_test_helper'
 require 'helpers/asset_bucket'
 require_relative 'spy_newrelic_agent'
 
@@ -12,6 +13,7 @@ class AssetsTest < FilesApiTestBase
 
   def test_assets
     channel_id = create_channel
+    api = FilesApiTestHelper.new(current_session, 'assets', channel_id)
 
     ensure_aws_credentials('assets', channel_id)
 
@@ -33,7 +35,7 @@ class AssetsTest < FilesApiTestBase
     assert_fileinfo_equal(actual_image_info, file_infos[0])
     assert_fileinfo_equal(actual_sound_info, file_infos[1])
 
-    get_asset(channel_id, image_filename)
+    api.get_object(image_filename)
     assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
     delete_asset(channel_id, image_filename)
@@ -55,9 +57,9 @@ class AssetsTest < FilesApiTestBase
     # file extension case insensitivity
     _, filename = post_asset_file(channel_id, 'filename.JPG', 'stub-contents', 'application/jpeg')
     assert successful?
-    get_asset(channel_id, filename)
+    api.get_object(filename)
     assert successful?
-    get_asset(channel_id, filename.gsub(/JPG$/, 'jpg'))
+    api.get_object(filename.gsub(/JPG$/, 'jpg'))
     assert not_found?
     delete_asset(channel_id, filename)
     assert successful?
@@ -69,7 +71,7 @@ class AssetsTest < FilesApiTestBase
     delete_asset(channel_id, 'nonexistent.jpg')
     assert successful?
 
-    get_asset(channel_id, 'nonexistent.jpg')
+    api.get_object('nonexistent.jpg')
     assert not_found?
 
     delete_channel(channel_id)
@@ -77,13 +79,14 @@ class AssetsTest < FilesApiTestBase
 
   def test_set_abuse_score
     channel_id = create_channel
+    api = FilesApiTestHelper.new(current_session, 'assets', channel_id)
     asset_bucket = AssetBucket.new
 
     # create a couple assets without an abuse score
     _, first_asset = post_asset_file(channel_id, 'asset1.jpg', 'stub-image-contents', 'image/jpeg')
     _, second_asset = post_asset_file(channel_id, 'asset2.jpg', 'stub-image-contents', 'image/jpeg')
 
-    result = get_asset(channel_id, first_asset)
+    result = api.get_object(first_asset)
     assert_equal 'stub-image-contents', result
 
     assert_equal 0, asset_bucket.get_abuse_score(channel_id, first_asset)
@@ -95,7 +98,7 @@ class AssetsTest < FilesApiTestBase
     assert_equal 10, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # make sure we didnt blow away contents
-    result = get_asset(channel_id, first_asset)
+    result = api.get_object(first_asset)
     assert_equal 'stub-image-contents', result
 
     # increment
@@ -123,7 +126,7 @@ class AssetsTest < FilesApiTestBase
     assert_equal 0, asset_bucket.get_abuse_score(channel_id, second_asset)
 
     # make sure we didnt blow away contents
-    result = get_asset(channel_id, first_asset)
+    result = api.get_object(first_asset)
     assert_equal 'stub-image-contents', result
     FilesApi.any_instance.unstub(:admin?)
 
@@ -134,16 +137,18 @@ class AssetsTest < FilesApiTestBase
 
   def test_viewing_abusive_assets
     channel_id = create_channel
+    api = FilesApiTestHelper.new(current_session, 'assets', channel_id)
 
     _, asset_name = post_asset_file(channel_id, 'abusive_asset.jpg', 'stub-image-contents', 'image/jpeg')
 
     # owner can view
-    get_asset(channel_id, asset_name)
+    api.get_object(asset_name)
     assert successful?
 
     # non-owner can view
     with_session(:non_owner) do
-      get_asset(channel_id, asset_name)
+      non_owner_api = FilesApiTestHelper.new(current_session, 'assets', channel_id)
+      non_owner_api.get_object(asset_name)
       assert successful?
     end
 
@@ -151,27 +156,30 @@ class AssetsTest < FilesApiTestBase
     patch_abuse(channel_id, 10)
 
     # owner can view
-    get_asset(channel_id, asset_name)
+    api.get_object(asset_name)
     assert successful?
 
     # non-owner cannot view
     with_session(:non_owner) do
-      get_asset(channel_id, asset_name)
+      non_owner_api = FilesApiTestHelper.new(current_session, 'assets', channel_id)
+      non_owner_api.get_object(asset_name)
       refute successful?
     end
 
     # admin can view
     with_session(:admin) do
+      admin_api = FilesApiTestHelper.new(current_session, 'assets', channel_id)
       FilesApi.any_instance.stubs(:admin?).returns(true)
-      get_asset(channel_id, asset_name)
+      admin_api.get_object(asset_name)
       assert successful?
       FilesApi.any_instance.unstub(:admin?)
     end
 
     # teacher can view
     with_session(:teacher) do
+      teacher_api = FilesApiTestHelper.new(current_session, 'assets', channel_id)
       FilesApi.any_instance.stubs(:teaches_student?).returns(true)
-      get_asset(channel_id, asset_name)
+      teacher_api.get_object(asset_name)
       assert successful?
       FilesApi.any_instance.unstub(:teaches_student?)
     end
@@ -233,7 +241,8 @@ class AssetsTest < FilesApiTestBase
     assert successful?, 'Owner can add a file'
 
     with_session(:non_owner) do
-      get_asset(owner_channel_id, filename)
+      non_owner_api = FilesApiTestHelper.new(current_session, 'assets', owner_channel_id)
+      non_owner_api.get_object(filename)
       assert successful?, 'Non-owner can read a file'
 
       post_asset(owner_channel_id, file)
@@ -314,29 +323,30 @@ class AssetsTest < FilesApiTestBase
 
   def test_asset_last_modified
     channel = create_channel
+    api = FilesApiTestHelper.new(current_session, 'assets', channel)
 
     file, filename = create_asset_file('test.png', 'version 1', 'image/png')
 
     post channel, file
-    get_asset channel, filename
+    api.get_object filename
     v1_last_modified = last_response.headers['Last-Modified']
 
     # We can't Timecop here because the last-modified time needs to change on the server.
     sleep 1 if VCR.current_cassette.recording?
 
     post channel, file
-    get_asset channel, filename, '', 'HTTP_IF_MODIFIED_SINCE' => v1_last_modified
+    api.get_object filename, '', 'HTTP_IF_MODIFIED_SINCE' => v1_last_modified
     assert_equal 200, last_response.status
     v2_last_modified = last_response.headers['Last-Modified']
 
-    get_asset channel, filename, '', 'HTTP_IF_MODIFIED_SINCE' => v2_last_modified
+    api.get_object filename, '', 'HTTP_IF_MODIFIED_SINCE' => v2_last_modified
     assert_equal 304, last_response.status
   end
 
   def test_invalid_mime_type_returns_unsupported_media_type
-    channel = create_channel
+    api = FilesApiTestHelper.new(current_session, 'assets', create_channel)
 
-    get_asset channel, 'filewithinvalidmimetype.asdasdas%25dasdasd'
+    api.get_object 'filewithinvalidmimetype.asdasdas%25dasdasd'
 
     assert_equal 415, last_response.status # 415 = Unsupported media type
   end
@@ -346,10 +356,6 @@ class AssetsTest < FilesApiTestBase
 
   def list_assets(channel_id)
     list_objects 'assets', channel_id
-  end
-
-  def get_asset(channel_id, filename, body = '', headers = {})
-    get_object 'assets', channel_id, filename, body, headers
   end
 
   def post_asset(channel_id, uploaded_file)

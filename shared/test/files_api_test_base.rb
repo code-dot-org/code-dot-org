@@ -94,11 +94,6 @@ class FilesApiTestBase < Minitest::Test
     JSON.parse(last_response.body)
   end
 
-  def get_object(endpoint, channel_id, filename, body = '', headers = {})
-    get "/v3/#{endpoint}/#{channel_id}/#{filename}", body, headers
-    last_response.body
-  end
-
   def put_object(endpoint, channel_id, filename, body = '', headers = {})
     put "/v3/#{endpoint}/#{channel_id}/#{filename}", body, headers
     last_response.body

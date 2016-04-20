@@ -1,10 +1,12 @@
 require_relative 'files_api_test_base' # Must be required first to establish load paths
+require_relative 'files_api_test_helper'
 
 class AnimationsTest < FilesApiTestBase
 
   def setup
     @random = Random.new(0)
     @channel_id = create_channel
+    @api = FilesApiTestHelper.new(current_session, 'animations', @channel_id)
     ensure_aws_credentials('animations', @channel_id)
   end
 
@@ -50,7 +52,7 @@ class AnimationsTest < FilesApiTestBase
     assert_fileinfo_equal(actual_cat_image_info, file_infos[0])
     assert_fileinfo_equal(actual_dog_image_info, file_infos[1])
 
-    get_animation(dog_image_filename)
+    @api.get_object(dog_image_filename)
     assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
     delete_animation(dog_image_filename)
@@ -85,10 +87,10 @@ class AnimationsTest < FilesApiTestBase
     post_animation_file(filename, 'stub-contents', 'application/png')
     assert successful?
 
-    get_animation(filename)
+    @api.get_object(filename)
     assert successful?
 
-    get_animation(different_case_filename)
+    @api.get_object(different_case_filename)
     assert not_found?
 
     delete_animation(filename)
@@ -102,7 +104,7 @@ class AnimationsTest < FilesApiTestBase
     delete_animation(filename) # Not a no-op - creates a delete marker
     assert successful?
 
-    get_animation(filename)
+    @api.get_object(filename)
     assert not_found?
   end
 
@@ -124,8 +126,8 @@ class AnimationsTest < FilesApiTestBase
     assert successful?
 
     # Get copy_dest.png and make sure it's got the source content
-    get_animation(dest_image_filename)
-    assert_equal source_image_body, get_animation(dest_image_filename)
+    @api.get_object(dest_image_filename)
+    assert_equal source_image_body, @api.get_object(dest_image_filename)
     assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
     delete_animation(source_image_filename)
@@ -214,10 +216,6 @@ class AnimationsTest < FilesApiTestBase
 
   def list_animations
     list_objects 'animations', @channel_id
-  end
-
-  def get_animation(filename)
-    get_object 'animations', @channel_id, filename
   end
 
   def post_animation_file(filename, file_contents, content_type)
