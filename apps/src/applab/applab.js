@@ -923,6 +923,10 @@ Applab.render = function () {
 };
 
 // Expose on Applab object for use in code-studio
+Applab.canExportApp = function () {
+  return experiments.isEnabled('applab-export');
+};
+
 Applab.exportApp = function () {
   return Exporter.exportApp(
     // TODO: find another way to get this info that doesn't rely on globals.
