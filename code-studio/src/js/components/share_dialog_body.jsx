@@ -30,7 +30,7 @@ var ShareDialogBody = React.createClass({
 
     onClickPopup: React.PropTypes.func.isRequired,
     onClickClose: React.PropTypes.func.isRequired,
-    onClickExport: React.PropTypes.func.isRequired,
+    onClickExport: React.PropTypes.func,
   },
 
   getInitialState: function () {
@@ -109,7 +109,7 @@ var ShareDialogBody = React.createClass({
     }
 
     var exportButton;
-    if (this.props.appType === 'applab') {
+    if (this.props.onClickExport && this.props.appType === 'applab') {
       var spinner = this.state.exporting ? <i className="fa fa-spinner fa-spin"></i> : null;
       // TODO: Make this use a nice UI component from somewhere.
       var alert = this.state.exportError ? (
