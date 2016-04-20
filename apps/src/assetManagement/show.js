@@ -1,6 +1,6 @@
 /* global dashboard */
 
-var ImagePicker = require('./ImagePicker');
+var ImagePicker = dashboard.ImagePicker;
 var studioApp = require('../StudioApp').singleton;
 
 /**

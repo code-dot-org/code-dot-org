@@ -1,7 +1,7 @@
 var AssetManager = require('./AssetManager');
-var color = require('../color');
+var color = require('@cdo/apps/color');
 var IconLibrary = window.dashboard.IconLibrary;
-var ICON_PREFIX = require('../applab/constants').ICON_PREFIX;
+var ICON_PREFIX = require('@cdo/apps/applab/constants').ICON_PREFIX;
 
 /**
  * A component for managing hosted assets.
@@ -87,3 +87,6 @@ var ImagePicker = React.createClass({
   }
 });
 module.exports = ImagePicker;
+
+window.dashboard = window.dashboard || {};
+window.dashboard.ImagePicker = ImagePicker;
