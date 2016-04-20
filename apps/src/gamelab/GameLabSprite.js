@@ -248,7 +248,7 @@ var AABBops = function (p5Inst, type, target, callback) {
               callback.call(this, this, other);
           }
         }
-      else if(type === 'collide' || type === 'bounce')
+      else if(type === 'collide' || type === 'bounce' || type == 'bounceOff')
         {
           displacement = createVector(0, 0);
 
@@ -343,7 +343,7 @@ var AABBops = function (p5Inst, type, target, callback) {
             if(displacement.y > 0)
               this.touching.top = true;
 
-            if(type === 'bounce')
+            if(type === 'bounce' || type === 'bounceOff')
             {
               if (this.collider instanceof CircleCollider && other.collider instanceof CircleCollider) {
                 var dx1 = p5.Vector.sub(this.position, other.position);
