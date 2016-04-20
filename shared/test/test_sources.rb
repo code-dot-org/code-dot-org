@@ -32,7 +32,7 @@ class SourcesTest < FilesApiTestBase
     assert successful?
 
     # List versions.
-    versions = list_source_versions(filename)
+    versions = @api.list_object_versions(filename)
     assert successful?
     assert_equal 2, versions.count
 
@@ -62,16 +62,12 @@ class SourcesTest < FilesApiTestBase
     assert successful?
 
     # List versions.
-    versions = list_source_versions(filename)
+    versions = @api.list_object_versions(filename)
     assert successful?
     assert_equal 1, versions.count
   end
 
   private
-
-  def list_source_versions(filename)
-    list_object_versions 'sources', @channel, filename
-  end
 
   def get_source_version(filename, version_id)
     get_object_version 'sources', @channel, filename, version_id
