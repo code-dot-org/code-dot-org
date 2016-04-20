@@ -4,7 +4,6 @@ require_relative 'files_api_test_helper'
 class AnimationsTest < FilesApiTestBase
 
   def setup
-    @random = Random.new(0)
     @channel_id = create_channel
     @api = FilesApiTestHelper.new(current_session, 'animations', @channel_id)
     @api.ensure_aws_credentials
