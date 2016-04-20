@@ -17,12 +17,6 @@ levels.sandbox =  {
   scale: {
     'snapRadius': 2
   },
-  softButtons: [
-    'leftButton',
-    'rightButton',
-    'downButton',
-    'upButton'
-  ],
   freePlay: true,
   toolbox:
     tb(blockOfType('gamelab_foo')),
@@ -33,12 +27,6 @@ levels.sandbox =  {
 // Base config for levels created via levelbuilder
 levels.custom = utils.extend(levels.sandbox, {
   editCode: true,
-  softButtons: [
-    'leftButton',
-    'rightButton',
-    'downButton',
-    'upButton'
-  ],
   codeFunctions: {
     // Game Lab
     "draw": null,
@@ -207,6 +195,7 @@ levels.custom = utils.extend(levels.sandbox, {
     "callMyFunction_n": null,
     "return": null
   },
+  showDPad: true,
   startBlocks: null,
 });
 
