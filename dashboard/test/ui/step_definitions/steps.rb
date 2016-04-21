@@ -99,6 +99,11 @@ Then /^check that I am on "([^"]*)"$/ do |url|
   @browser.current_url.should eq url
 end
 
+Then /^I wait until I am on "([^"]*)"$/ do |url|
+  url = replace_hostname(url)
+  wait_with_timeout.until { @browser.current_url == url }
+end
+
 Then /^I wait until current URL contains "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   wait_with_timeout.until { @browser.current_url.include? url }
@@ -588,7 +593,7 @@ And(/^I create a student named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password_confirmation"
     And I type "16" into "#user_age"
     And I click selector "input[type=submit][value='Sign up']"
-    And I am on "http://code.org/"
+    And I wait until I am on "http://studio.code.org/"
   }
 end
 
@@ -603,38 +608,14 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I click selector "input[type=submit][value='Sign up']"
-    And I am on "http://code.org/"
+    And I wait until I am on "http://code.org/teacher-dashboard#/"
   }
-end
-
-# can be used for tests that touch components that are being A/B tested
-And(/^I create a student with an (even|odd) ID named "([^"]*)"$/) do |id_type, name|
-  new_user = nil
-  begin
-    new_user = User.find_or_create_by!(email: "user#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |user|
-      user.name = name
-      user.password = name + "password" # hack
-      user.user_type = 'student'
-      user.age = 16
-      user.confirmed_at = Time.now
-    end
-  end until (id_type == 'even' && new_user.id.even?) || (id_type == 'odd' && new_user.id.odd?)
-  @users ||= {}
-  @users[name] = new_user
 end
 
 And(/I fill in username and password for "([^"]*)"$/) do |name|
   steps %Q{
     And I type "#{@users[name][:email]}" into "#user_login"
     And I type "#{@users[name][:password]}" into "#user_password"
-  }
-end
-
-Given(/^I sign in as a (student|teacher)$/) do |user_type|
-  steps %Q{
-    Given I am on "http://learn.code.org/"
-    And I am a #{user_type}
-    And I am on "http://learn.code.org/users/sign_in"
   }
 end
 
