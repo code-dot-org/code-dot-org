@@ -23,14 +23,15 @@
     %h2= level.title
   %div= render(inline: level.markdown_instructions, type: :md)
 
-  %script{src: asset_path('js/fileupload/jquery.iframe-transport.js')}
-  %script{src: asset_path('js/fileupload/jquery.fileupload.js')}
-  %p#free-response-upload
-  :javascript
-    dashboard.project.getCurrentId = function () {
-      return appOptions.channel;
-    };
-    ReactDOM.render(React.createElement(dashboard.Attachments, {}), document.querySelector('#free-response-upload'));
+  - if level.allow_user_uploads
+    %script{src: asset_path('js/fileupload/jquery.iframe-transport.js')}
+    %script{src: asset_path('js/fileupload/jquery.fileupload.js')}
+    %p#free-response-upload
+    :javascript
+      dashboard.project.getCurrentId = function () {
+        return appOptions.channel;
+      };
+      ReactDOM.render(React.createElement(dashboard.Attachments, {}), document.querySelector('#free-response-upload'));
 
   - height = level.height || '80'
   %textarea.response{id: "level_#{index}", placeholder: level.placeholder || 'Enter your answer here', style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
