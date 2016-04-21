@@ -26,4 +26,8 @@ class Plc::CourseUnit < ActiveRecord::Base
   def get_all_possible_learning_resources
     plc_learning_modules.map(&:plc_tasks).flatten.select{ |task| task.class == Plc::LearningResourceTask }
   end
+
+  def get_required_learning_module_ids
+    plc_learning_modules.where(required: true).pluck(:id)
+  end
 end

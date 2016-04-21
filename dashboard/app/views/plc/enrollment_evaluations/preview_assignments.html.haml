@@ -8,8 +8,8 @@ You will be assigned these modules
 %br
 You can change your course enrollment here
 = form_tag(action: 'confirm_assignments') do
-  - options = course_unit.plc_learning_modules.pluck(:name, :required, :id).map {|name, required, id| ["#{name}#{' - Required' if required}", id]}
-  = select_tag 'learning_module_ids', options_for_select(options, selected: @enrolled_modules.pluck(:id), disabled: course_unit.plc_learning_modules.where(required: true).pluck(:id)), {multiple: true, size: [options.size, 25].min, style: 'width: 100%'}
+  - options = options_with_learning_module_names_and_required_tag(course_unit)
+  = select_tag 'learning_module_ids', options_for_select(options, selected: @enrolled_modules.pluck(:id), disabled: course_unit.get_required_learning_module_ids),
+    {multiple: true, size: learning_modules_select_size(options), style: 'width: 100%'}
 
-  = hidden_field_tag('learning_module_list')
   = submit_tag('Confirm Module Selections', id: 'confirm_assignments')

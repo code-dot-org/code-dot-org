@@ -1,5 +1,5 @@
 class Plc::EnrollmentEvaluationsController < ApplicationController
-  before_action :authorize_and_check_unit_state
+  before_action :authorize_for_this_unit
 
   def perform_evaluation
     plc_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
@@ -26,19 +26,15 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
     modules_to_enroll_in = Plc::LearningModule.where(id: params[:learning_module_ids])
     enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
 
-    if modules_to_enroll_in.where.not(plc_course_unit: enrollment_unit_assignment.plc_course_unit).any?
-      redirect_to controller: :enrollment_evaluations, action: :perform_evaluation, unit_assignment_id: enrollment_unit_assignment.id
-    else
-      enrollment_unit_assignment.enroll_user_in_unit_with_learning_modules(modules_to_enroll_in)
-      redirect_to controller: :enrollment_unit_assignments, action: :show, id: enrollment_unit_assignment.id
-    end
+    enrollment_unit_assignment.enroll_user_in_unit_with_learning_modules(modules_to_enroll_in)
+    redirect_to controller: :enrollment_unit_assignments, action: :show, id: enrollment_unit_assignment.id
   end
 
   private
-  def authorize_and_check_unit_state
+  def authorize_for_this_unit
     plc_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
     authorize! :read, plc_unit_assignment.plc_user_course_enrollment
 
-    raise 'Cannot do evaluation actions when unit is in progress' unless Plc::EnrollmentUnitAssignment::PENDING_EVALUATION == plc_unit_assignment.status
+    #Eventually, logic for only allowing evaluations for units that haven't been started go here
   end
 end

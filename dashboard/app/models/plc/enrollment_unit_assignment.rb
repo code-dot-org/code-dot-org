@@ -40,6 +40,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
       learning_modules |=  self.plc_course_unit.plc_learning_modules.where(required: true)
 
       learning_modules.each do |learning_module|
+        # Ensure that the learning module is associated with this course unit
         next unless learning_module.plc_course_unit == self.plc_course_unit
 
         module_assignment = Plc::EnrollmentModuleAssignment.find_or_create_by(plc_enrollment_unit_assignment: self, plc_learning_module: learning_module)

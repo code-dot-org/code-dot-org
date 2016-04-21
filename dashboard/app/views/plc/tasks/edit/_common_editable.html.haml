@@ -2,6 +2,6 @@
 = f.text_field :name
 = f.label :learning_modules
 - options = options_for_plc_task_learning_modules
-= f.select :plc_learning_module_ids, options_for_select(options, @task.plc_learning_modules.pluck(:id)), {}, {multiple: true, size: [options.size, 25].min, style: 'width: 100%'}
+= f.select :plc_learning_module_ids, options_for_select(options, @task.plc_learning_modules.pluck(:id)), {}, {multiple: true, size: learning_modules_select_size(options), style: 'width: 100%'}
 = f.label :type
 = f.label @task.class.titleized_task_type
