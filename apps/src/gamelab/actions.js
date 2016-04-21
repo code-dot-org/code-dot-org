@@ -76,6 +76,7 @@ module.exports.addAnimation = function (animationProps) {
       index: getState().animations.length,
       animationProps: animationProps
     });
+    // TODO: Save project after adding an animation?
   };
 };
 
@@ -137,6 +138,7 @@ module.exports.deleteAnimation = function (animationKey) {
             type: ActionType.DELETE_ANIMATION,
             animationKey: animationKey
           });
+          // TODO: Save project after deleting an animation?
         },
         function error(xhr) {
           dispatch(reportError(

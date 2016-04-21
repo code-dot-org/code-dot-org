@@ -4,6 +4,7 @@
 
 var _ = require('../lodash');
 var ActionType = require('./actions').ActionType;
+var animationPicker = require('./AnimationPicker/index').reducer;
 var animationTab = require('./AnimationTab/reducers').animationTab;
 var combineReducers = require('redux').combineReducers;
 var errorDialogStack = require('./ErrorDialogStack').reducer;
@@ -97,6 +98,7 @@ function animations(state, action) {
 }
 
 var gamelabReducer = combineReducers({
+  animationPicker: animationPicker,
   animationTab: animationTab,
   animations: animations,
   errorDialogStack: errorDialogStack,
