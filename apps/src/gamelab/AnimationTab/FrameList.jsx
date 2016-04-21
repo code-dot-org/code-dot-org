@@ -15,7 +15,7 @@ var styles = {
  * Vertical scrolling list of animation frames for the selected animation.
  * This component should be unique within the animation tab.
  */
-var AnimationFrameList = function () {
+var FrameList = function () {
   return (
     <ScrollableList style={styles.root} className="animation-frame-list">
       <AnimationFrameListItem index={1} />
@@ -27,4 +27,4 @@ var AnimationFrameList = function () {
     </ScrollableList>
   );
 };
-module.exports = AnimationFrameList;
+module.exports = FrameList;
