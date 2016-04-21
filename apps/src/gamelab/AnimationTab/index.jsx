@@ -87,5 +87,5 @@ module.exports = connect(function propsFromStore(state) {
     onAnimationPickerCancel: function () {
       dispatch(actions.cancelPickingAnimation());
     }
-  }
+  };
 })(AnimationTab);
