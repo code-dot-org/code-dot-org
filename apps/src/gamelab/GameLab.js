@@ -154,11 +154,10 @@ GameLab.prototype.init = function (config) {
   config.appMsg = msg;
 
   var showFinishButton = !this.level.isProjectLevel;
-  var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
   var areBreakpointsEnabled = true;
   var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: this.studioApp_.assetUrl,
-    finishButton: finishButtonFirstLine && showFinishButton
+    finishButton: showFinishButton
   });
   var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
     showButtons: true,
@@ -205,6 +204,11 @@ GameLab.prototype.init = function (config) {
     config.unusedConfig = this.gameLabP5.p5specialFunctions;
 
     this.studioApp_.init(config);
+
+    var finishButton = document.getElementById('finishButton');
+    if (finishButton) {
+      dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
+    }
 
     this.debugger_.initializeAfterDomCreated({
       defaultStepSpeed: 1
@@ -453,6 +457,12 @@ GameLab.prototype.runButtonClick = function () {
   }
   this.studioApp_.attempts++;
   this.execute();
+
+  // Enable the Finish button if is present:
+  var shareCell = document.getElementById('share-cell');
+  if (shareCell) {
+    shareCell.className = 'share-cell-enabled';
+  }
 };
 
 function p5KeyCodeFromArrow(idBtn) {
