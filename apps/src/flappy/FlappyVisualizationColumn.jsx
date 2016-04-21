@@ -4,7 +4,7 @@ var GameButtons = require('../templates/GameButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 
-var FlappyVisualizationColumn = function (props) {
+var FlappyVisualizationColumn = function () {
   return (
     <span>
       <ProtectedStatefulDiv id="visualization">
@@ -21,9 +21,6 @@ var FlappyVisualizationColumn = function (props) {
       <BelowVisualization/>
     </span>
   );
-};
-
-FlappyVisualizationColumn.propTypes = {
 };
 
 module.exports = FlappyVisualizationColumn;

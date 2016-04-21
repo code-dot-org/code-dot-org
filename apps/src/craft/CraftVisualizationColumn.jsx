@@ -4,7 +4,7 @@ var GameButtons = require('../templates/GameButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 
-var CraftVisualizationColumn = function (props) {
+var CraftVisualizationColumn = function () {
   return (
     <span>
       <ProtectedStatefulDiv id="visualization">
@@ -23,9 +23,6 @@ var CraftVisualizationColumn = function (props) {
       <BelowVisualization/>
     </span>
   );
-};
-
-CraftVisualizationColumn.propTypes = {
 };
 
 module.exports = CraftVisualizationColumn;

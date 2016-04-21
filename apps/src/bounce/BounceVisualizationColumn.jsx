@@ -6,7 +6,7 @@ var ArrowButtons = require('../templates/ArrowButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 
-var BounceVisualizationColumn = function (props) {
+var BounceVisualizationColumn = function () {
   return (
     <span>
       <ProtectedStatefulDiv id="visualization">
@@ -29,9 +29,6 @@ var BounceVisualizationColumn = function (props) {
       <BelowVisualization/>
     </span>
   );
-};
-
-BounceVisualizationColumn.propTypes = {
 };
 
 module.exports = BounceVisualizationColumn;
