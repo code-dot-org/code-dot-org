@@ -3,6 +3,12 @@ var color = require('@cdo/apps/color');
 var IconLibrary = window.dashboard.IconLibrary;
 var ICON_PREFIX = require('@cdo/apps/applab/constants').ICON_PREFIX;
 
+var extensionFilter = {
+  image: '.jpg, .jpeg, .gif, .png',
+  sound: '.mp3',
+  document: '.jpg, .jpeg, .gif, .png, .pdf'
+};
+
 /**
  * A component for managing hosted assets.
  */
@@ -72,7 +78,7 @@ var ImagePicker = React.createClass({
     var body = !this.props.assetChosen || this.state.mode === 'files' ?
       <AssetManager
         assetChosen={this.props.assetChosen}
-        typeFilter={this.props.typeFilter}
+        allowedExtensions={extensionFilter[this.props.typeFilter]}
         channelId={this.props.channelId}
         uploadsEnabled={this.props.uploadsEnabled}/> :
       <IconLibrary assetChosen={this.getAssetNameWithPrefix}/>;

@@ -4,6 +4,7 @@ var defaultIcons = {
   image: 'fa fa-picture-o',
   audio: 'fa fa-music',
   video: 'fa fa-video-camera',
+  pdf: 'fa fa-file-pdf-o',
   unknown: 'fa fa-question'
 };
 
@@ -26,7 +27,7 @@ var assetIconStyle = {
 var AssetThumbnail = React.createClass({
   propTypes: {
     name: React.PropTypes.string.isRequired,
-    type: React.PropTypes.oneOf(['image', 'audio', 'video']).isRequired
+    type: React.PropTypes.oneOf(['image', 'audio', 'video', 'pdf']).isRequired
   },
 
   render: function () {

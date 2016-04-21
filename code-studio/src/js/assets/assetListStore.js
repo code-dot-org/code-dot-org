@@ -17,9 +17,13 @@ module.exports = {
     return assets.slice();
   },
 
-  list: function (typeFilter) {
-    return typeFilter ? assets.filter(function (asset) {
-      return asset.category === typeFilter;
+  list: function (allowedExtensions) {
+    return allowedExtensions ? assets.filter(function (asset) {
+      var match = asset.filename.match(/\.[^.]+$/);
+      if (match) {
+        var extension = match[0];
+        return allowedExtensions.split(', ').indexOf(extension) > -1;
+      }
     }) : assets.slice();
   }
 };

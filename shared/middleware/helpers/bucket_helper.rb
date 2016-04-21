@@ -22,7 +22,12 @@ class BucketHelper
     @s3.list_objects(bucket: @bucket, prefix: prefix).contents.map do |fileinfo|
       filename = %r{#{prefix}(.+)$}.match(fileinfo.key)[1]
       mime_type = Sinatra::Base.mime_type(File.extname(filename))
-      category = mime_type.split('/').first  # e.g. 'image' or 'audio'
+
+      if mime_type == 'application/pdf'
+        category = 'pdf'
+      else
+        category = mime_type.split('/').first  # e.g. 'image' or 'audio'
+      end
       {filename: filename, category: category, size: fileinfo.size}
     end
   end
