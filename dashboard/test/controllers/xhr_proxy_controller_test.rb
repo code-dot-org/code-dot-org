@@ -4,9 +4,8 @@ require_relative '../../../shared/test/spy_newrelic_agent'
 require 'test_helper'
 
 class XhrProxyControllerTest < ActionController::TestCase
-  XHR_REDIRECT_URI = 'https://www.example.com/foo/a1b2'
-  XHR_URI = 'https://www.example.com/foo?a=1&b=2'
-  BAD_DOMAIN_URI = 'https://ip-192.168.0.1.ec2.internal/my/secret/api'
+  XHR_REDIRECT_URI = 'https://www.wikipedia.org/bar/a1b2'
+  XHR_URI = 'https://www.wikipedia.org/foo?a=1&b=2'
   XHR_DATA = '{"key1":"value1", "key2":2, "obj":{"x":3, "y":4}}'
   XHR_CONTENT_TYPE = 'application/json'
   CHANNEL_ID = $stub_encrypted_channel_id
@@ -72,9 +71,25 @@ class XhrProxyControllerTest < ActionController::TestCase
     assert_response 400
   end
 
-  test "should fail with ec2.internal URI" do
-    stub_request(:get, BAD_DOMAIN_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
-    get :get, u: BAD_DOMAIN_URI, c: CHANNEL_ID
+  test "should fail with ec2.internal hostname suffix" do
+    url = 'https://ip-192.168.0.1.ec2.internal/my/secret/api'
+    stub_request(:get, url).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
+    get :get, u: url, c: CHANNEL_ID
+    assert_response 400
+  end
+
+  # Make sure regexp is properly escaped
+  test "should fail with wikipediaXorg hostname suffix" do
+    url = 'https://www.wikipediaXorg/foo?a=1&b=2'
+    stub_request(:get, url).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
+    get :get, u: url, c: CHANNEL_ID
+    assert_response 400
+  end
+
+  test "should fail with wikipedia.org.evil hostname suffix" do
+    url = 'https://www.wikipedia.org.evil/foo?a=1&b=2'
+    stub_request(:get, url).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
+    get :get, u: url, c: CHANNEL_ID
     assert_response 400
   end
 
