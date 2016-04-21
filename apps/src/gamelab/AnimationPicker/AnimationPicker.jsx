@@ -54,7 +54,7 @@ var AnimationPicker = React.createClass({
     if (!this.props.visible) {
       return null;
     }
-    
+
     return (
       <Dialog
           isOpen

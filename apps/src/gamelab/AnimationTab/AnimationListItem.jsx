@@ -61,7 +61,7 @@ var styles = {
 };
 
 /**
- * A single list item representing an animation.  Displays an animated 
+ * A single list item representing an animation.  Displays an animated
  * thumbnail, along with the animation name and (if currently selected)
  * controls for deleting or duplicating the animation.
  */

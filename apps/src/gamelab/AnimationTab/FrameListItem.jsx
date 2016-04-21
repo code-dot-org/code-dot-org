@@ -18,9 +18,9 @@ var staticStyles = {
 };
 
 /**
- * Single list item in the FrameList, representing a single frame of the 
- * selected animation.  Displays a thumbnail of the frame with the frame index 
- * overlaid, and if selected also shows controls for deleting or duplicating 
+ * Single list item in the FrameList, representing a single frame of the
+ * selected animation.  Displays a thumbnail of the frame with the frame index
+ * overlaid, and if selected also shows controls for deleting or duplicating
  * the frame.
  */
 var FrameListItem = React.createClass({

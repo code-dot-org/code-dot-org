@@ -39,7 +39,7 @@ describe('AnimationPicker', function () {
         expect(newState.goal).to.equal(Goal.NEW_ANIMATION);
 
         state = {};
-        var newState = reducer(state, show(Goal.NEW_FRAME));
+        newState = reducer(state, show(Goal.NEW_FRAME));
         expect(newState).not.to.equal(state);
         expect(newState.goal).to.equal(Goal.NEW_FRAME);
       });
