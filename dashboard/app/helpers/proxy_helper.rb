@@ -3,7 +3,7 @@ require 'uri'
 
 # Helper which fetches the specified URL, optionally caching and following redirects.
 module ProxyHelper
-  def render_proxied_url(location, allowed_content_types:, expiry_time:, infer_content_type:, redirect_limit: 5)
+  def render_proxied_url(location, allowed_content_types:, allowed_hostname_suffixes:, expiry_time:, infer_content_type:, redirect_limit: 5)
     if redirect_limit == 0
       render_error_response 500, 'Redirect loop'
       return
@@ -13,7 +13,7 @@ module ProxyHelper
     # tying up Rails thread.
     url = URI.parse(location)
 
-    raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
+    raise URI::InvalidURIError.new if url.host.nil? || url.port.nil? || !allowed_hostname?(url, allowed_hostname_suffixes)
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
     uri = url.request_uri.empty? ? '/' : url.request_uri
@@ -36,6 +36,7 @@ module ProxyHelper
       render_proxied_url(
           media['location'],
           allowed_content_types: allowed_content_types,
+          allowed_hostname_suffixes: allowed_hostname_suffixes,
           expiry_time: expiry_time,
           infer_content_type: infer_content_type,
           redirect_limit: redirect_limit - 1)
@@ -60,6 +61,17 @@ module ProxyHelper
   end
 
   private
+
+  # Returns true if the url's hostname ends in one of the allowed suffixes.
+  # If allowed_hostname_suffixes is nil, all hostnames are allowed.
+  def allowed_hostname?(url, allowed_hostname_suffixes)
+    return true unless allowed_hostname_suffixes
+    return false unless url.hostname
+
+    allowed_hostname_suffixes.find do |suffix|
+      url.hostname.downcase.match(Regexp.new("#{Regexp.escape(suffix)}$"))
+    end
+  end
 
   # Renders an error response with the given HTTP status, setting headers to
   # ensure that the response will not be cached by clients or proxies.

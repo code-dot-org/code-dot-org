@@ -16,6 +16,21 @@ class XhrProxyController < ApplicationController
 
   ALLOWED_CONTENT_TYPES = Set.new(['application/json', 'text/json', 'text/javascript'])
 
+  # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
+  ALLOWED_HOSTNAME_SUFFIXES = %w(
+    api.data.gov
+    api.randomuser.me
+    api.zippopotam.us
+    apidev.accuweather.com
+    code.org
+    data.cityofchicago.org
+    googleapis.com
+    query.yahooapis.com
+    noaa.gov
+    rhcloud.com
+    wikipedia.org
+  )
+
   # How long the content is allowed to be cached
   EXPIRY_TIME = 1.minute
 
@@ -44,6 +59,7 @@ class XhrProxyController < ApplicationController
     render_proxied_url(
         url,
         allowed_content_types: ALLOWED_CONTENT_TYPES,
+        allowed_hostname_suffixes: ALLOWED_HOSTNAME_SUFFIXES,
         expiry_time: EXPIRY_TIME,
         infer_content_type: false)
   end
