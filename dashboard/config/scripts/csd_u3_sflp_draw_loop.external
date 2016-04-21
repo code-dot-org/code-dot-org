@@ -1,0 +1,27 @@
+name 'CSD-U3-SFLP Draw Loop'
+href 'path/to/html/in/asset/folder'
+css 'unplugged'
+markdown <<MARKDOWN
+## Unit 3: Lesson 02 - Draw Loop and Random
+
+# Background
+
+BLAH BLAH BLAH
+
+# Lesson
+
+* This
+* That
+* Something else
+
+# Vocab
+
+* Word 1
+* Word 2
+
+# Resources
+* Type: Name - description.<br>
+<iframe width="480" height="270" src="https://www.tbd.com" frameborder="0" allowfullscreen></iframe>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

@@ -29,8 +29,8 @@
   twentyhours_text: Terminou sua primeira Hora do Código? Aprenda mais sobre a ciência
     da computação e seus conceitos nesse curso.
   og_title: Toda criança deve ter uma oportunidade
-  og_description: Todos os alunos, em todas as escolas, devem ter a oportunidade de
-    aprender ciência da computação.
+  og_description: Cada aluno em cada escola merece a oportunidade de estudar ciência
+    da computação. Isso muda tudo.
   hoc2014_heading: Participe da <a href="http://hourofcode.com">Hora do código</a><br/>de
     8 a 14 de dezembro de 2014<br/>
   hoc2014_students: Alunos
@@ -94,10 +94,11 @@
   congrats_guest_speaker_title: Convide um orador para a sua sala de aula
   congrats_guest_speaker_desc: Agora que os seus alunos acabaram um curso de programação,
     considere celebrar e relacionar o curso com coisas que eles podem construir no
-    mundo real através de um orador convidado à sua turma. pude usar o seu mapa de
-    voluntários para contactar voluntários locais ou procurar estudantes de informática
-    ou profissionais técnicos, de qualquer outra cidade, e que estejam prontos a inspirar
-    os seus alunos remotamente via vídeo chat.
+    mundo real através de um palestrante convidado à sua turma. Você pode usar o nosso
+    mapa de voluntários para contactar voluntários locais para visitar sua aula, ou
+    procurar estudantes de informática ou profissionais técnicos, de qualquer outra
+    cidade, e que estejam prontos para inspirar os seus alunos remotamente via vídeo
+    chat.
   congrats_guest_speaker_cta: Encontre um palestrante convidado
   congrats_third_party_title: Use os seus novos conhecimentos com estas apps e websites
   third_party_gradelevel_kto8: Alunos do Ensino Fundamental
@@ -683,7 +684,7 @@
   dashboard_navigation_all_sections: Contas e progresso do aluno
   dashboard_navigation_view_progress: Exibir progresso
   dashboard_navigation_view_text_responses: Ver respostas dissertativas
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments: Avaliações
   dashboard_navigation_add_students: Adicionar alunos
   dashboard_navigation_manage_students: Gerenciar alunos
   dashboard_navigation_lesson_plans_resources: Planos e recursos da aula
@@ -812,10 +813,12 @@
   dashboard_question: Pergunta
   dashboard_response: Resposta
   dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_free_response: Resposta livre
+  dashboard_correctness_unsubmitted: Envio cancelado
   dashboard_correctness_correct: Correto
-  dashboard_correctness_incorrect: Incorrect
+  dashboard_correctness_incorrect: Incorreto
+  dashboard_submission_submitted: Enviado
+  dashboard_submission_in_progress: Em progresso
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -842,11 +845,15 @@
   dashboard_faq_k5: Perguntas frequentes do Ensino Fundamental
   dashboard_announcements: Anúncios
   dashboard_announce_view_all: Ver todos
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: Saiba mais
   dashboard_announce_hoc: "<b>9 de novembro 2015</b> - Um novo tutorial da Hora do
     Código está disponível, trazendo o novo filme de Star Wars: O Despertar da Força.
@@ -984,7 +991,7 @@
   course4_name: Curso 4
   accelerated_name: Curso acelerado
   cspunit3_name: CS Principles Unit 3
-  cspunit3_gradelevel: Grades 9-12
+  cspunit3_gradelevel: Alunos do 9° ano ao Ensino Médio
   cspunit3_shortdescription_congrats: Esta unidade introduz os conceitos fundamentais
     de programação de computadores, que ajudam na habilidade de criar ricos aplicativos
     interativos. Esse curso usa JavaScript como linguagem de programação, e o Laboratório
@@ -993,9 +1000,9 @@
     de programação.
   applab_name: Laboratório de Aplicativo
   applab_gradelevel: A partir de 13 anos
-  applab_shortdescription_congrats: App Lab is a programming environment where you
-    can make simple apps. Design an app, code with blocks or JavaScript to make it
-    work, then share your app in seconds
+  applab_shortdescription_congrats: App Lab é um ambiente de programação onde você
+    pode fazer simples aplicativos. Projetar uma aplicação, codificar com blocos ou
+    JavaScript para fazê-los funcionar, compartilhar seu aplicativo em minutos.
   codeorg_gradelevel: De 4 a 104 anos
   codeintl_gradelevel: De 4 a 104 anos
   thinkersmithspanish_gradelevel: Todas as idades

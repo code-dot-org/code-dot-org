@@ -16,6 +16,7 @@ FactoryGirl.define do
     factory :teacher do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 03, 14)
+      admin false
       factory :facilitator do
         name 'Facilitator Person'
         after(:create) do |facilitator|
@@ -23,21 +24,35 @@ FactoryGirl.define do
           facilitator.save
         end
       end
+      factory :workshop_organizer do
+        name 'Workshop Organizer Person'
+        after(:create) do |workshop_organizer|
+          workshop_organizer.permission = 'workshop_organizer'
+          workshop_organizer.save
+        end
+      end
       factory :district_contact do
         name 'District Contact Person'
         ops_first_name 'District'
         ops_last_name 'Person'
+        admin false
       end
     end
 
     factory :student do
       user_type User::TYPE_STUDENT
+      admin false
     end
 
     factory :young_student do
       user_type User::TYPE_STUDENT
       birthday Time.zone.today - 10.years
     end
+  end
+
+  factory :districts_users do
+    district nil
+    user nil
   end
 
   factory :section do
@@ -271,7 +286,7 @@ FactoryGirl.define do
   factory :district do
     sequence(:name) { |n| "District #{n}" }
     location 'Panem'
-    contact {create(:district_contact).tap{|dc|dc.permission = 'district_contact'}}
+    contact {create(:district_contact).tap{|dc| dc.permission = 'district_contact'}}
   end
 
   factory :workshop do
@@ -302,11 +317,11 @@ FactoryGirl.define do
   factory :plc_enrollment_unit_assignment, :class => 'Plc::EnrollmentUnitAssignment' do
     plc_user_course_enrollment nil
     plc_course_unit nil
-    status Plc::EnrollmentUnitAssignment::START_BLOCKED
+    status Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
   end
 
   factory :plc_course_unit, :class => 'Plc::CourseUnit' do
-    plc_course nil
+    plc_course {create(:plc_course)}
     unit_name "MyString"
     unit_description "MyString"
     unit_order 1
@@ -318,6 +333,7 @@ FactoryGirl.define do
 
   factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
     resource_url nil
+    icon nil
   end
 
   factory :plc_script_completion_task, parent: :plc_task, class: 'Plc::ScriptCompletionTask' do
@@ -358,11 +374,12 @@ FactoryGirl.define do
 
   factory :plc_task, :class => 'Plc::Task' do
     name "MyString"
-    plc_learning_module nil
+    plc_learning_modules []
   end
 
   factory :plc_learning_module, :class => 'Plc::LearningModule' do
     name "MyString"
+    plc_course_unit {create(:plc_course_unit)}
   end
   factory :plc_course, :class => 'Plc::Course' do
     name "MyString"
@@ -396,5 +413,44 @@ FactoryGirl.define do
     user { create :teacher }
     properties {{survey2016_ethnicity_asian: "1"}}
     properties {{survey2016_foodstamps: "3"}}
+  end
+
+  factory :user_proficiency do
+    user { create :student }
+    sequencing_d1_count 1
+    repeat_loops_d2_count 2
+    repeat_loops_d4_count 3
+    conditionals_d5_count 4
+  end
+
+  factory :pd_workshop, class: 'Pd::Workshop' do
+    organizer {create(:workshop_organizer)}
+    workshop_type Pd::Workshop::TYPES.first
+    course Pd::Workshop::COURSES.first
+    capacity 10
+  end
+
+  factory :pd_session, class: 'Pd::Session' do
+    association :workshop, factory: :pd_workshop
+    start {DateTime.now.utc}
+    self.send(:end, DateTime.now.utc + 6.hours)
+  end
+
+  factory :pd_enrollment, class: 'Pd::Enrollment' do
+    association :workshop, factory: :pd_workshop
+    sequence(:name) { |n| "Workshop Participant #{n} " }
+    sequence(:email) { |n| "testuser#{n}@example.com.xx" }
+  end
+
+  factory :pd_attendance, class: 'Pd::Attendance' do
+    association :session, factory: :pd_session
+    teacher {create :teacher}
+  end
+
+  factory :pd_district_payment_term, class: 'Pd::DistrictPaymentTerm' do
+    district {create :district}
+    course Pd::Workshop::COURSES.first
+    rate_type Pd::DistrictPaymentTerm::RATE_TYPES.first
+    rate 10
   end
 end

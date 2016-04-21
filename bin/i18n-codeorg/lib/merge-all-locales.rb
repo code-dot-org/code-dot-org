@@ -43,7 +43,7 @@ new_translation_path = ARGV[2]
 prev_translation_path = ARGV[3]
 
 # is this a new file being translated?
-if (File.exist?(en_translation_path) && File.exist?(new_translation_path) && !File.exist?(prev_translation_path))
+if File.exist?(en_translation_path) && File.exist?(new_translation_path) && !File.exist?(prev_translation_path)
   FileUtils.copy(new_translation_path, prev_translation_path)
 end
 

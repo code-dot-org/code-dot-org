@@ -4,7 +4,7 @@ var xml = require('./xml');
  * Create the xml for a level's toolbox
  * @param {string} blocks The xml of the blocks to go in the toolbox
  */
-exports.createToolbox = function(blocks) {
+exports.createToolbox = function (blocks) {
   return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
 };
 
@@ -13,7 +13,7 @@ exports.createToolbox = function(blocks) {
  * @param {string} type The type of the block
  * @param {Object.<string,string>} [titles] Dictionary of titles mapping name to value
  */
-exports.blockOfType = function(type, titles) {
+exports.blockOfType = function (type, titles) {
   var titleText = '';
   if (titles) {
     for (var key in titles) {
@@ -55,7 +55,7 @@ exports.blocksFromList = function (types) {
 /**
  * Create the xml for a category in a toolbox
  */
-exports.createCategory = function(name, blocks, custom) {
+exports.createCategory = function (name, blocks, custom) {
   return '<category name="' + name + '"' +
           (custom ? ' custom="' + custom + '"' : '') +
           '>' + blocks + '</category>';
@@ -80,7 +80,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
 
   blockly.Blocks[name] = {
     helpUrl: helpUrl,
-    init: function() {
+    init: function () {
       // Note: has a fixed HSV.  Could make this customizable if need be
       this.setHSV(184, 1.00, 0.74);
       var input = this.appendDummyInput();
@@ -96,7 +96,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
     }
   };
 
-  generator[name] = function() {
+  generator[name] = function () {
     // Generate JavaScript for putting dirt on to a tile.
     return functionName + '(\'block_id_' + this.id + '\');\n';
   };
@@ -107,7 +107,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
  * @param blockDOM {Element}
  * @returns {*}
  */
-exports.domToBlock = function(blockDOM) {
+exports.domToBlock = function (blockDOM) {
   return Blockly.Xml.domToBlock(Blockly.mainBlockSpace, blockDOM);
 };
 
@@ -117,7 +117,7 @@ exports.domToBlock = function(blockDOM) {
  * @param blockDOMString
  * @returns {*}
  */
-exports.domStringToBlock = function(blockDOMString) {
+exports.domStringToBlock = function (blockDOMString) {
   return exports.domToBlock(xml.parseElement(blockDOMString).firstChild);
 };
 

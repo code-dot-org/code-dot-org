@@ -781,6 +781,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: "სწორია"
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -813,6 +815,11 @@
     90% ჩვენს პროგრამას აფასებს, როგორც საუკეთესოს პროფესიონალური ზრდისთვის. მოთხოვნის
     გამო, კომპიუტერული მეცნიერების პროფესიული შესწავლის პროგრამას რამდენიმე ადგილი
     დავამატეთ. დარეგისტრირდით <u>31 მარტამდე</u> და დაიკავეთ თქვენი ადგილი."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: "გაიგეთ მეტი"
   dashboard_announce_hoc: "<b>2015, 9 ნოემბერი</b> - აი, კოდის ერთი საათის ახალი ტუტორიალი,
     რომელიც მომავალ ვარსკვლავურ ომება ეხება. იმუშავეთ რეისთან ერთად და მართეთ ახალი

@@ -17,12 +17,6 @@ levels.sandbox =  {
   scale: {
     'snapRadius': 2
   },
-  softButtons: [
-    'leftButton',
-    'rightButton',
-    'downButton',
-    'upButton'
-  ],
   freePlay: true,
   toolbox:
     tb(blockOfType('gamelab_foo')),
@@ -35,6 +29,7 @@ levels.custom = utils.extend(levels.sandbox, {
   editCode: true,
   codeFunctions: {
     // Game Lab
+    "draw": null,
     "fill": null,
     "noFill": null,
     "stroke": null,
@@ -71,15 +66,17 @@ levels.custom = utils.extend(levels.sandbox, {
     "setSpeed": null,
     "getDirection": null,
     "getSpeed": null,
-    "remove": null,
+    "isTouching": null,
+    "destroy": null,
+    "pointTo": null,
     "bounce": null,
+    "bounceOff": null,
     "collide": null,
     "displace": null,
     "overlap": null,
     "changeAnimation": null,
     "setCollider": null,
     "setColor": null,
-    "setColorRGB": null,
     "setVelocity": null,
     "sprite.height": null,
     "sprite.width": null,
@@ -105,18 +102,21 @@ levels.custom = utils.extend(levels.sandbox, {
     // Groups
     "var group = createGroup": null,
     "add": null,
-    "group.remove": null,
+    "remove": null,
     "clear": null,
     "contains": null,
     "get": null,
+    "group.isTouching": null,
     "group.bounce": null,
+    "group.bounceOff": null,
     "group.collide": null,
     "group.displace": null,
     "group.overlap": null,
     "maxDepth": null,
     "minDepth": null,
+    "destroyEach": null,
+    "pointToEach": null,
     "setColorEach": null,
-    "setColorRGBEach": null,
     "setColliderEach": null,
     "setDepthEach": null,
     "setHeightEach": null,
@@ -195,14 +195,8 @@ levels.custom = utils.extend(levels.sandbox, {
     "callMyFunction_n": null,
     "return": null
   },
-  startBlocks: [
-    'function setup() {',
-    '  ',
-    '}',
-    'function draw() {',
-    '  ',
-    '}',
-    ''].join('\n'),
+  showDPad: true,
+  startBlocks: null,
 });
 
 levels.ec_sandbox = utils.extend(levels.custom, {

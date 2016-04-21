@@ -200,7 +200,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test 'migrates old flappy levels' do
-    old_source = %q(
+    old_source = <<-XML
       <xml>
         <block type="flappy_whenRunButtonClick" deletable="false">
           <next>
@@ -212,9 +212,9 @@ class LevelSourcesControllerTest < ActionController::TestCase
           </next>
         </block>
       </xml>
-    )
+    XML
 
-    new_source = %q(
+    new_source = <<-XML
       <xml>
         <block type="when_run" deletable="false">
           <next>
@@ -226,7 +226,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
           </next>
         </block>
       </xml>
-    )
+    XML
 
     flappy_level = create :level, game: Game.find_by_name(Game::FLAPPY)
     level_source = create :level_source, level: flappy_level, data: old_source

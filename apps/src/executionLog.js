@@ -15,7 +15,7 @@ module.exports.getResultsFromLog = function (logConditions, executionLog) {
     testResult: TestResults.ALL_PASS,
   };
   logConditions.forEach(function (condition, index) {
-    var testResult = TestResults.LEVEL_INCOMPLETE_FAIL;
+    var testResult = TestResults.LOG_CONDITION_FAIL;
     var exact;
 
     /*

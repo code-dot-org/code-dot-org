@@ -6,13 +6,14 @@
  */
 
 var Radium = require('radium');
-var ProtectedStatefulDiv = require('./ProtectedStatefulDiv.jsx');
+var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var utils = require('../utils');
+var commonStyles = require('../commonStyles');
 
 var styles = {
   main: {
     position: 'absolute',
-    // left gets set externally
+    // left gets set externally :(
     // top is set in render
     right: 0,
     bottom: 0,
@@ -22,9 +23,6 @@ var styles = {
     right: undefined,
     left: 0,
     marginRight: 15
-  },
-  hidden: {
-    display: 'none'
   },
   codeWorkspace: {
     position: 'absolute',
@@ -57,6 +55,14 @@ var CodeWorkspaceContainer = React.createClass({
     onSizeChange: React.PropTypes.func
   },
 
+  /**
+   * Called externally
+   * @returns {number} The height of the rendered contents in pixels
+   */
+  getContentHeight: function () {
+    return $(ReactDOM.findDOMNode(this)).height();
+  },
+
   componentDidUpdate: function (prevProps) {
     if (this.props.onSizeChange && this.props.topMargin !== prevProps.topMargin) {
       this.props.onSizeChange();
@@ -70,7 +76,7 @@ var CodeWorkspaceContainer = React.createClass({
       this.props.noVisualization && styles.noVisualization,
       this.props.isRtl && styles.mainRtl,
       this.props.noVisualization && this.props.isRtl && styles.noVisualizationRtl,
-      this.props.hidden && styles.hidden
+      this.props.hidden && commonStyles.hidden
     ];
 
     return (

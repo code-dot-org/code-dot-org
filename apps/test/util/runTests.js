@@ -50,7 +50,10 @@ exec(command, function (err, stdout, stderr) {
 
   var globs = [
     './test/*.js',
+    './test/applab/*.js',
     './test/calc/*.js',
+    './test/craft/*.js',
+    './test/gamelab/*.js',
     './test/netsim/*.js'
   ];
 
@@ -70,6 +73,7 @@ exec(command, function (err, stdout, stderr) {
   mochify(globs.join(' '), {
     grep: grep,
     debug: process.env.mocha_debug,
+    extension: ['.jsx'],
     invert: process.env.mocha_invert,
     reporter : 'spec',
     timeout: 14000,

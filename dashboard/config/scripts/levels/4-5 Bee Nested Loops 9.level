@@ -32,7 +32,12 @@
     "fast_get_nectar_animation": "true",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":1,\"range\":3},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":1,\"range\":3},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":1,\"range\":3},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]"
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 3,
+    "repeat_until_while": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

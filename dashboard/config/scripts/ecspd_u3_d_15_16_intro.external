@@ -1,6 +1,5 @@
 name 'ECSPD U3 D 15-16 Intro'
 
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 3 Day 15-16: HTML and CSS – Tables, Lists, Menus 
 

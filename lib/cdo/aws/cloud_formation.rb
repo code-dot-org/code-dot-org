@@ -5,6 +5,7 @@ require 'json'
 require 'yaml'
 require 'erb'
 require 'tempfile'
+require 'base64'
 
 # Manages application-specific configuration and deployment of AWS CloudFront distributions.
 module AWS
@@ -13,14 +14,21 @@ module AWS
     # Hard-coded values for our CloudFormation template.
 
     DOMAIN = 'cdn-code.org'
-    STACK_NAME = "#{rack_env}-#{RakeUtils.git_branch}"
+    BRANCH = ENV['branch'] || RakeUtils.git_branch
+    # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.
+    # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
+    STACK_NAME_INVALID_REGEX = /[^[:alnum:]-]/
+    STACK_NAME = "#{rack_env}-#{BRANCH}".gsub(STACK_NAME_INVALID_REGEX, '-')
+
     # Fully qualified domain name
-    FQDN = "#{STACK_NAME}.#{DOMAIN}"
+    FQDN = "#{STACK_NAME}.#{DOMAIN}".downcase
     SSH_KEY_NAME = 'server_access_key'
     IMAGE_ID = 'ami-df0607b5'
     INSTANCE_TYPE = 'c4.xlarge'
     SSH_IP = '0.0.0.0/0'
     S3_BUCKET = 'cdo-dist'
+
+    STACK_ERROR_LINES = 250
 
     # Use AWS Certificate Manager for ELB and CloudFront SSL certificates.
     ACM_REGION = 'us-east-1'
@@ -100,9 +108,11 @@ module AWS
           RakeUtils.with_bundle_dir(cookbooks_dir) do
             Tempfile.open('berks') do |tmp|
               RakeUtils.bundle_exec 'berks', 'package', tmp.path
-              Aws::S3::Client.new(region: CDO.aws_region).put_object(
+              client = Aws::S3::Client.new(region: CDO.aws_region,
+                                           credentials: Aws::Credentials.new(CDO.aws_access_key, CDO.aws_secret_key))
+              client.put_object(
                 bucket: S3_BUCKET,
-                key: "chef/#{RakeUtils.git_branch}.tar.gz",
+                key: "chef/#{BRANCH}.tar.gz",
                 body: tmp.read
               )
             end
@@ -134,14 +144,31 @@ module AWS
             break if event.timestamp < start_time
           end
           events.reject { |event| event.resource_status_reason.nil? }.sort_by(&:timestamp).each do |event|
-            puts "#{event.timestamp}- #{event.logical_resource_id} [#{event.resource_status}]: #{event.resource_status_reason}"
+            CDO.log.info "#{event.timestamp}- #{event.logical_resource_id} [#{event.resource_status}]: #{event.resource_status_reason}"
+            if (match = event.resource_status_reason.match /with UniqueId (?<instance>i-\w+)/)
+              instance = match[:instance]
+              CDO.log.info "Printing the last #{STACK_ERROR_LINES} lines to help debug the instance failure.."
+              CDO.log.info "To get full console output, run `aws ec2 get-console-output --instance-id #{instance} | jq -r .Output`."
+              ec2 = Aws::EC2::Client.new
+              lines = Base64.decode64(ec2.get_console_output(instance_id: instance).output).lines
+              CDO.log.info lines[-[lines.length,STACK_ERROR_LINES].min..-1].join
+            end
+          end
+          if action == :create
+            CDO.log.info 'Cleaning up failed stack creation...'
+            self.delete
           end
           return
         end
         CDO.log.info "\nStack #{action} complete."
+        CDO.log.info "Don't forget to clean up AWS resources by running `rake adhoc:stop` after you're done testing your instance!" if action == :create
       end
 
       def json_template(cdn_enabled:)
+        unless system("git ls-remote --exit-code 'https://github.com/code-dot-org/code-dot-org.git' #{BRANCH} > /dev/null")
+          raise 'Current branch needs to be pushed to GitHub with the same name, otherwise deploy will fail.
+To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
+        end
         template_string = File.read(aws_dir('cloudformation', 'cloud_formation_adhoc_standalone.yml.erb'))
         @@local_variables = OpenStruct.new(
           local_mode: !!CDO.chef_local_mode,
@@ -149,7 +176,7 @@ module AWS
           ssh_key_name: SSH_KEY_NAME,
           image_id: IMAGE_ID,
           instance_type: INSTANCE_TYPE,
-          branch: RakeUtils.git_branch,
+          branch: BRANCH,
           region: CDO.aws_region,
           environment: rack_env,
           ssh_ip: SSH_IP,

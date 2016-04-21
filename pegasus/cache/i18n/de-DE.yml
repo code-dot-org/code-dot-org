@@ -30,8 +30,8 @@
   twentyhours_text: Du hast deine erste "Hour of Code" beendet? Erlerne weitere Informatik-
     und Programmierkonzepte in diesem Folgekurs.
   og_title: Jedes Kind verdient eine Gelegenheit
-  og_description: In jeder Schule sollten die Schüler die Gelegenheit haben Informatik
-    zu lernen.
+  og_description: Jeder Schüler in jeder Schule verdient die Chance, Informatik zu
+    studieren. Das verändert alles.
   hoc2014_heading: Nimm an der <a href="http://hourofcode.com">Hour of Code</a> <br/>8.-14.
     Dezember 2014  teil<br/>
   hoc2014_students: Schüler
@@ -97,12 +97,13 @@
   view_unit: "\\n"
   make_app: "\\n"
   congrats_guest_speaker_title: Einen Gastredner für Ihren Unterricht finden
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
+  congrats_guest_speaker_desc: Jetzt, da ihre SchülerInnen den Informatik-Kurs abgeschlossen
+    haben, sollten Sie dies feiern und mit Dingen in Verbindung bringen, die es in
+    der realen Welt gibt und einen Gast-Redner in ihren Unterricht einladen. Dazu
+    können Sie unsere Freiwilligen-Karte verwenden, um regionale Freiwillige zu finden,
+    die Sie gerne im Unterricht besuchen. Sie können aber auch nach Städten suchen,
+    in den es Informatikstudenten oder technische Experten gibt, die gerne aus der
+    Ferne über Video-Chat ihre Schüler weiter inspirieren.
   congrats_guest_speaker_cta: Finde einen Gastsprecher
   congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
@@ -789,7 +790,7 @@
   dashboard_progress_completed_too_many_blocks: abgeschlossen, zu viele Blöcke
   dashboard_progress_completed_perfect: Abgeschlossen, perfekt
   dashboard_progress_furthest_level_attempted: Höchste Ebene versucht
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: eingereicht
   dashboard_stage: Bühne
   dashboard_puzzle: Aufgabe
   dashboard_question: Frage
@@ -799,6 +800,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Richtig
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -826,11 +829,15 @@
   dashboard_faq_k5: Häufig gestellte Fragen zur Grundschule
   dashboard_announcements: Ankündigungen
   dashboard_announce_view_all: Alle anzeigen
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: Erfahre mehr
   dashboard_announce_hoc: "<b>9. November 2015</b> - Eine neue Hour of Code Anleitung
     ist erschienen, präsentiert durch den bevorstehenden Film: Star Wars: Das Erwachen
@@ -975,7 +982,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: App-Labor
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Ab 13 Jahren
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds

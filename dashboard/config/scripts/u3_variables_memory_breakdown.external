@@ -1,5 +1,4 @@
 name 'U3-Variables-Memory Breakdown'
-href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
 # Variables - The Mental Model

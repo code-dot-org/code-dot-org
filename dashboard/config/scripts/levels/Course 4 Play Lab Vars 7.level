@@ -41,11 +41,15 @@
     "timeout_after_when_run": "false",
     "markdown_instructions": "Nice, now let's make sure this game isn't too easy to play!  \r\n\r\nAny time Dog (actor 1) gets hit by yellow hearts from Cat (actor 2), you should lose a point. \r\n\r\nStart with 10 points so it's not too hard. Let your score drop down from 10 to 0 to pass the level.",
     "min_workspace_height": "900",
-    "never_autoplay_video": "false",
-    "maze_data": null
+    "never_autoplay_video": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "events": 2,
+    "variables": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

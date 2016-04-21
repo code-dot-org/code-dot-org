@@ -91,7 +91,7 @@
     <a href="%{current_path}/next"> партньорските предложения</a>.
   get_a_certificate_of_achievement: "Получете сертификат за постижение"
   view_course: "Преглед на курса"
-  view_unit: View unit
+  view_unit: "Преглед на частта"
   make_app: "Направи приложение"
   congrats_guest_speaker_title: "Намери гост-лектор за твоята класна стая"
   congrats_guest_speaker_desc: "Сега след като твоите студенти завършиха курса по
@@ -102,7 +102,8 @@
     по компютърни науки или специалисти по компютърни технологии, които са готови
     да вдъхновяват вашите студенти от разстояние, чрез видео чат."
   congrats_guest_speaker_cta: "Намери гост-лектор"
-  congrats_third_party_title: Use your new skills with these apps and websites
+  congrats_third_party_title: "Използвайте новите си умения с тези приложения и уеб
+    сайтове"
   third_party_gradelevel_kto8: "Класове K-8"
   third_party_gradelevel_kto2: "Класове K-2"
   third_party_gradelevel_2to8: "Класове 2-8"
@@ -790,7 +791,7 @@
   dashboard_progress_completed_too_many_blocks: "завършено, но с повече блокове"
   dashboard_progress_completed_perfect: "завършено, перфектно"
   dashboard_progress_furthest_level_attempted: "последното пробвано ниво"
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: "предоставени"
   dashboard_stage: "Етап"
   dashboard_puzzle: "Пъзел"
   dashboard_question: "Въпрос"
@@ -800,6 +801,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: "Правилно"
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -828,11 +831,15 @@
   dashboard_faq_k5: K-5 често задавани въпроси
   dashboard_announcements: "Съобщения"
   dashboard_announce_view_all: "Преглед на всички"
-  dashboard_announce_message: "<b> Февруари 1, 2016</b> - 9 от 10 родителя искат децата
-    им да учат компютърни науки и въпреки това в повечето училища не се изучават.
-    на 30 януари, Белият Дом обяви планове да предостави възможност за изучаване на
-    компютърни науки на всеки ученик в Америка. Не можем да сме по-щастливи от двустранната
-    подкрепа за компютърните науки."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: "Научете повече"
   dashboard_announce_hoc: "<b>Ноември 23, 2015</b> - часът на кода 2015 идва! Присъединете
     се към класните стаи по целия свят за най-голямото обучително събитие в историята."

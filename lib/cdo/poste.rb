@@ -18,7 +18,7 @@ module Poste
     decrypter = OpenSSL::Cipher::Cipher.new 'AES-128-CBC'
     decrypter.decrypt
     decrypter.pkcs5_keyivgen(CDO.poste_secret, '8 octets')
-    plain = decrypter.update Base64::urlsafe_decode64(encrypted)
+    plain = decrypter.update Base64.urlsafe_decode64(encrypted)
     plain << decrypter.final
   end
 
@@ -32,7 +32,7 @@ module Poste
     encrypter.pkcs5_keyivgen(CDO.poste_secret, '8 octets')
     encrypted = encrypter.update(plain.to_s)
     encrypted << encrypter.final
-    Base64::urlsafe_encode64(encrypted)
+    Base64.urlsafe_encode64(encrypted)
   end
 
   def self.encrypt_id(id)
@@ -101,7 +101,7 @@ module Poste2
 
   # Returns true if address is a valid email address.
   def self.email_address?(address)
-    EmailValidator::email_address?(address)
+    EmailValidator.email_address?(address)
   end
 
   def self.find_or_create_url(href)
@@ -216,8 +216,8 @@ module Poste2
       subject = mail.subject.to_s
       body = mail.body.to_s
 
-      recipient = Poste2::ensure_recipient(mail.to.first, ip_address: '127.0.0.1')
-      Poste2::send_message('dashboard', recipient, body: body, subject: subject, from: sender)
+      recipient = Poste2.ensure_recipient(mail.to.first, ip_address: '127.0.0.1')
+      Poste2.send_message('dashboard', recipient, body: body, subject: subject, from: sender)
     end
 
   end

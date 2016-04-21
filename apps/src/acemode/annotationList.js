@@ -52,6 +52,15 @@ module.exports = {
   },
 
   /**
+   * Return the array of lintAnnotations
+   *
+   * @returns {!Array} annotations from most recent linting pass
+   */
+  getJSLintAnnotations: function () {
+    return lintAnnotations;
+  },
+
+  /**
    * @param {string} level
    * @param {number} lineNumber One index line number
    * @param {string} text Error string

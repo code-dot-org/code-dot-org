@@ -28,9 +28,9 @@ var commonMsg = require('../locale');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
-var AppView = require('../templates/AppView.jsx');
+var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var MazeVisualizationColumn = require('./MazeVisualizationColumn');
 var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
@@ -503,8 +503,6 @@ Maze.init = function (config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
   studioApp.reset = this.reset.bind(this);
 
-  var extraControlRows = null;
-
   skin = config.skin;
   level = config.level;
 
@@ -518,10 +516,6 @@ Maze.init = function (config) {
     Maze.scale.stepSpeed = 2;
   } else if (config.skinId === 'letters') {
     Maze.wordSearch = new WordSearch(level.searchWord, level.map, Maze.drawTile);
-    extraControlRows = require('./extraControlRows.html.ejs')({
-      assetUrl: studioApp.assetUrl,
-      searchWord: level.searchWord
-    });
   }
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.cellClass = BeeCell;
@@ -629,29 +623,23 @@ Maze.init = function (config) {
     });
   };
 
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        visualization: require('./visualization.html.ejs')(),
-        controls: require('./controls.html.ejs')({
-          assetUrl: studioApp.assetUrl,
-          showStepButton: level.step && !level.edit_blocks
-        }),
-        extraControlRows: extraControlRows
-      },
-      hideRunButton: level.stepOnly && !level.edit_blocks
-    });
-  };
+  var visualizationColumn = (
+    <MazeVisualizationColumn
+      hideRunButton={!!(level.stepOnly && !level.edit_blocks)}
+      showStepButton={!!(level.step && !level.edit_blocks)}
+      searchWord={level.searchWord}
+    />
+  );
 
   ReactDOM.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
+    hideSource: !!config.hideSource,
     noVisualization: false,
     isRtl: studioApp.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
-    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
+    visualizationColumn: visualizationColumn,
     onMount: studioApp.init.bind(studioApp, config)
   }), document.getElementById(config.containerId));
 };
@@ -747,7 +735,7 @@ var createPegmanAnimation = function (options) {
   * direction required which direction the pegman is facing at.
   * animationRow which row of the sprite sheet the pegman animation needs
   */
-var updatePegmanAnimation = function(options) {
+var updatePegmanAnimation = function (options) {
   var rect = document.getElementById(options.idStr + 'PegmanClipRect');
   rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
   rect.setAttribute('y', getPegmanYForRow(options.row));
@@ -1288,7 +1276,7 @@ Maze.scheduleAnimations = function (singleStep) {
  * @param {boolean} spotlightBlocks Whether or not we should highlight entire blocks
  * @param {integer} timePerStep How much time we have allocated before the next step
  */
-function animateAction (action, spotlightBlocks, timePerStep) {
+function animateAction(action, spotlightBlocks, timePerStep) {
   if (action.blockId) {
     studioApp.highlight(String(action.blockId), spotlightBlocks);
   }
@@ -1343,7 +1331,7 @@ function animateAction (action, spotlightBlocks, timePerStep) {
           scheduleDance(true, timePerStep);
           break;
         default:
-          timeoutList.setTimeout(function() {
+          timeoutList.setTimeout(function () {
             studioApp.playAudio('failure');
           }, stepSpeed);
           break;
@@ -1367,7 +1355,7 @@ function animateAction (action, spotlightBlocks, timePerStep) {
   }
 }
 
-function animatedMove (direction, timeForMove) {
+function animatedMove(direction, timeForMove) {
   var positionChange = tiles.directionToDxDy(direction);
   var newX = Maze.pegmanX + positionChange.dx;
   var newY = Maze.pegmanY + positionChange.dy;
@@ -1619,7 +1607,7 @@ Maze.scheduleFail = function (forward) {
     obsIcon.setAttributeNS(
         'http://www.w3.org/1999/xlink', 'xlink:href',
         skin.obstacleAnimation);
-    timeoutList.setTimeout(function() {
+    timeoutList.setTimeout(function () {
       Maze.displayPegman(Maze.pegmanX + deltaX / 2,
                          Maze.pegmanY + deltaY / 2,
                          frame);

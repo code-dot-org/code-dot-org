@@ -30,8 +30,8 @@
   twentyhours_text: Klaar met je eerste 'Hour of Code'? Leer meer over Informatica
     en programmeerconcepten in deze vervolgcursus.
   og_title: Ieder kind verdient een kans
-  og_description: Elke leerling op elke school verdient de kans om te leren werken
-    met computers.
+  og_description: Elke leerling op elke school moet de kans krijgen om te leren programmeren.
+    Dit verandert alles.
   hoc2014_heading: Doe mee met de <a href="http://hourofcode.com">Hour of Code</a><br
     />8 - 14 december 2014<br/>
   hoc2014_students: Leerlingen
@@ -790,7 +790,7 @@
   dashboard_progress_completed_too_many_blocks: voltooid, teveel blokken
   dashboard_progress_completed_perfect: voltooid, perfect
   dashboard_progress_furthest_level_attempted: verste niveau geprobeerd
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: verstuurd
   dashboard_stage: niveau
   dashboard_puzzle: puzzel
   dashboard_question: Vraag
@@ -800,6 +800,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Juist
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -826,11 +828,15 @@
   dashboard_faq_k5: K-5 Veelgestelde vragen
   dashboard_announcements: Aankondigingen
   dashboard_announce_view_all: Alles weergeven
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: Leer meer
   dashboard_announce_hoc: "<b>15 oktober 2015</b> - het Uur Code komt &mdash; elke
     deelnemende organisator ontvangt een kadokaart van Amazon.com of Microsofts Windows-winkel
@@ -968,7 +974,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: App Lab
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Leeftijd 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds

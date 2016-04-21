@@ -18,7 +18,6 @@ nav: plp_playbook_nav
 ________________
 <a id="online"></a>
 <br/>
-<br/>
 
 
 ### **Examples for Online Support**
@@ -35,7 +34,6 @@ This FAQ from previous workshops should NOT be used to answer your teacher's que
 ________________
 <a id="support"></a>
 <br/>
-<br/>
 
 
 ### **Professional Learning at Code.org**
@@ -43,18 +41,18 @@ ________________
 #### About the Programs ####
 **Curriculum Overviews** provide additional information about the course to teachers who might be interested in enrolling in the program.
 
-CS in Algebra - Coming soon!<br/>
-[CS in Science](https://www.dropbox.com/s/w26x522k8gs4p1e/Code.orgCSinScience_1_pager_030716.pdf?dl=0) <br/>
-[Exploring CS](https://www.dropbox.com/s/qijdf4pu4etrvn2/Code.org%20ECS_1-pager_030216_v5.pdf?dl=0)<br/>
-[CS Princples](https://www.dropbox.com/s/ujpfi18rcfycpll/Code.orgCSP_1-pager_03082016.pdf?dl=0)
+- CS in Algebra - Coming soon!<br/>
+- [CS in Science](https://www.dropbox.com/s/w26x522k8gs4p1e/Code.orgCSinScience_1_pager_030716.pdf?dl=0) <br/>
+- [Exploring CS](https://www.dropbox.com/s/qijdf4pu4etrvn2/Code.org%20ECS_1-pager_030216_v5.pdf?dl=0)<br/>
+- [CS Princples](https://www.dropbox.com/s/ujpfi18rcfycpll/Code.orgCSP_1-pager_03082016.pdf?dl=0)
 
 
 **Program Overviews** provide a deeper look at the details of our professional learning offerings for teachers, and are used for outlining the structure and flow of the program the teacher is enrolling in.
 
-CS in Algebra - Coming Soon!  
-[Cs in Science](https://www.dropbox.com/s/7qxe09uxxmsumtx/2016_welcome_CSinScience_031816_v3.pdf?dl=0)<br/>
-[Exploring CS](https://www.dropbox.com/s/na6um5intbw4c8w/2016_welcome_ECS_031816_v5.pdf?dl=0)<br/>
-[CS Princples](https://www.dropbox.com/s/pl3uzvc1dripydc/2016_CSP%20welcome_031816_v3.pdf?dl=0)<br/>
+- CS in Algebra - Coming Soon!  
+- [Cs in Science](https://www.dropbox.com/s/7qxe09uxxmsumtx/2016_welcome_CSinScience_031816_v3.pdf?dl=0)<br/>
+- [Exploring CS](https://www.dropbox.com/s/na6um5intbw4c8w/2016_welcome_ECS_031816_v5.pdf?dl=0)<br/>
+- [CS Princples](https://www.dropbox.com/s/pl3uzvc1dripydc/2016_CSP%20welcome_031816_v3.pdf?dl=0)<br/>
 
 #### Online Modules ####
 Online course modules will be assigned to you through [Code Studio](https://studio.code.org). Need help logging in or checking if you've completed a module? See our videos below.
@@ -70,7 +68,6 @@ Checking your progress in Code Stuido - Video Coming Soon!
 ________________
 <a id="technology"></a>
 <br/>
-<br/>
 
 ### **Technology in Classroom**
 
@@ -82,16 +79,14 @@ The following guidelines will need to be met for teachers to be able to particip
 
 Please review each of these sites for the general guidlines for whitelisting:
 
-[Teacher Participtaion Guidelines](/educate/it) <br/>
+[Teacher Participation Guidelines](/educate/it) <br/>
 [Classroom Requirements for Teaching](/educate/pd/supports) <br/>
-[Receiving Code.org Newsletter Guidelines](http://mailchimp.com/about/ips/?_ga=1.79156244.163239085.1437758796) <br/>
 
 The following email addresses should also be whitelisted:
 
-[teacher@code.org](teacher@code.org)<br/>
-[hadi_partovi@code.org](hadi_partovi@code.org)<br/>
+teacher@code.org<br/>
+hadi_partovi@code.org<br/>
 amazonses.com <br/>
-mail221.suw14.mcdlv.net<br/>
 
 Should a district contact you with issues regarding technology, please email us at partner@code.org.
 
@@ -100,7 +95,6 @@ Should a district contact you with issues regarding technology, please email us 
 
 ________________
 <a id="privacy"></a>
-<br/>
 <br/>
 
 ### **Privacy Policy**
