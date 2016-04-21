@@ -6,6 +6,7 @@ var _ = require('../lodash');
 var AnimationTab = require('./AnimationTab/index');
 var connect = require('react-redux').connect;
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper');
+var ErrorDialogStack = require('./ErrorDialogStack');
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 var GameLabVisualizationHeader = require('./GameLabVisualizationHeader');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
@@ -74,6 +75,7 @@ var GameLabView = React.createClass({
       <ConnectedStudioAppWrapper>
         {this.renderCodeMode()}
         {this.renderAnimationMode()}
+        <GameLabErrorDialogStack/>
       </ConnectedStudioAppWrapper>
     );
   }
@@ -85,3 +87,19 @@ module.exports = connect(function propsFromStore(state) {
     isShareView: state.level.isShareView
   };
 })(GameLabView);
+
+/** Connect the error dialog stack for this part of the application */
+var GameLabErrorDialogStack = connect(
+  function propsFromStore(state) {
+    return {
+      errors: state.errorDialogStack
+    }
+  },
+  function propsFromDispatch(dispatch) {
+    return {
+      dismissError: function () {
+        dispatch(ErrorDialogStack.actions.dismissError())
+      }
+    }
+  }
+)(ErrorDialogStack);
