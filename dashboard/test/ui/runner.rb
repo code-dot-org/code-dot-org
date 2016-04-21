@@ -190,10 +190,10 @@ def format_duration(total_seconds)
   "%.1d:%.2d minutes" % [minutes, seconds]
 end
 
-if ENV['RAILS_ENV'] == 'development'
+if ENV['RAILS_ENV'] != 'development'
   $options.pegasus_db_access = true if $options.pegasus_domain =~ /(localhost|ngrok)/
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /(localhost|ngrok)/
-elsif ENV['RAILS_ENV'] == 'test'
+elsif ENV['RAILS_ENV'] != 'test'
   $options.pegasus_db_access = true if $options.pegasus_domain =~ /test/
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /test/
 end
