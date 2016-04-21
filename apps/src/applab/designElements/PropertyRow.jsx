@@ -4,10 +4,7 @@ var rowStyle = require('./rowStyle');
 var elementUtils = require('./elementUtils');
 var utils = require('../../utils');
 
-var LockState = {
-  LOCKED: 'LOCKED',
-  UNLOCKED: 'UNLOCKED'
-};
+var LockState = utils.makeEnum('LOCKED', 'UNLOCKED');
 
 var PropertyRow = React.createClass({
   propTypes: {
@@ -38,7 +35,7 @@ var PropertyRow = React.createClass({
     });
   },
 
-  isIdAvailable: function(value) {
+  isIdAvailable: function (value) {
     if (value === this.props.initialValue) {
       return true;
     }
@@ -54,7 +51,7 @@ var PropertyRow = React.createClass({
     return elementUtils.isIdAvailable(value, options);
   },
 
-  handleChangeInternal: function(event) {
+  handleChangeInternal: function (event) {
     var value = event.target.value;
     var isValidValue = !this.props.isIdRow || this.isIdAvailable(value);
     this.setValue(value, isValidValue);
@@ -85,14 +82,14 @@ var PropertyRow = React.createClass({
     }
   },
 
-  onIdRowBlur: function() {
+  onIdRowBlur: function () {
     if (!this.state.isValidValue) {
       var value = this.props.initialValue;
       this.setValue(value);
     }
   },
 
-  render: function() {
+  render: function () {
     var idRowStyle = $.extend({}, rowStyle.container, rowStyle.maxWidth, {
       backgroundColor: color.light_purple,
       paddingBottom: 10

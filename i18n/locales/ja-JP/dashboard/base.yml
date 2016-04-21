@@ -25,7 +25,8 @@ ja:
   welcome_back: 'Welcome Back, %{name}'
   submit: 送信
   unsubmit: 取り消す
-  next_page: Next page
+  next_page: 次のページ
+  heading_x_of_y: '%{heading} (%{y} ページ中 %{x} ページ目)'
   add_teacher_form:
     code:
       label: 先生を追加：
@@ -347,6 +348,7 @@ ja:
     help_from_html_old: Google・Microsoft・Facebook・Twitterのエンジニアがこのチュートリアルを作るのを手伝いました。
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo　と　Hour of Code&reg; は Code.org の商標です'
     copyright: 著作権
@@ -625,5 +627,5 @@ ja:
         acknowledge: 'この情報を送信することにより、報告された内容は %{link_start_privacy}個人情報保護方針%{link_end} および %{link_start_tos}利用規約%{link_end}に基づき、処理されることに同意したとみなされます。'
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: アイコンの検索..
+      no_icons_found: アイコンが見つかりませんでした。

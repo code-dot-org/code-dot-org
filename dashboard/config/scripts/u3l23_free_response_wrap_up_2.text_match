@@ -1,6 +1,0 @@
-name 'U3L23 Free Response Wrap Up 2'
-title 'Natural Language Processing'
-
-markdown <<MARKDOWN
-"Age Bot" is a personal assistant that gives information about age-related milestones in a person's life. Write an algorithm so Age Bot can answer the question "What is the voting age in the United States?"
-MARKDOWN

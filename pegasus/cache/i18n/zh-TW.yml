@@ -668,6 +668,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: "正確"
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -691,11 +693,15 @@
   dashboard_faq_k5: "五年級課程的常見問題"
   dashboard_announcements: "公告"
   dashboard_announce_view_all: "全部查看"
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: "瞭解更多資訊"
   dashboard_announce_hoc: "<b>2015 年 11 月 9 日</b>-全新的一小時程式設計教學課程，以即將上映的電影星際大戰：原力覺醒。與雷伊一同指導新的BB-8機器人完成所有的任務。然後，在遙不可及的銀河系中，加入萊婭來建立並共享你的遊戲。"
   dashboard_announce_playlab: |
@@ -1059,9 +1065,7 @@
   kodableunplugged_longdescription: "使用普通紙的設計，fuzzFamily Frenzy教導 5 歲以上的孩子的程式設計邏輯。老師應解釋這個遊戲，然後學生作伴來完成一個簡單的障礙課程。"
   projguts_longdescription: 這次"不插電"活動由一群學生玩不同版本的剪刀 / 石頭 / 布的遊戲，以協助學生學習如何建模與模擬運作原理，並查看結果作為不同的建模實驗。
   hourofcode_longdescription: "新的 code.org/hoc 的預留位置"
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
+  frozen_longdescription: "讓我們使用程式碼加入安娜(Anna)和愛莎(Elsa)一同探索神奇而美麗的冰。"
   starwars_longdescription: "學習用程式控制機器人，並在遙遠的銀河系中創造你自己的星際大戰遊戲"
   playlab_longdescription: "創建一個故事或讓與發揮實驗室的遊戲!使動物，海盜，僵屍，忍者，和更多的角色移動，發出的聲音，得分，和甚至投擲火球!"
   monstercoding_longdescription: 怪物軟體公司出品的神秘島編程任務提供了充滿樂趣的自我冒險，可以教導孩子們幾個重要的程式設計概念。裡頭將會有之前教給孩子們的每個程式積木，像是

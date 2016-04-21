@@ -26,6 +26,7 @@ en:
   submit: crwdns35673:0crwdne35673:0
   unsubmit: crwdns56122:0crwdne56122:0
   next_page: crwdns56247:0crwdne56247:0
+  heading_x_of_y: 'crwdns56275:0%{heading}crwdnd56275:0%{x}crwdnd56275:0%{y}crwdne56275:0'
   add_teacher_form:
     code:
       label: crwdns23429:0crwdne23429:0
@@ -338,6 +339,7 @@ en:
     help_from_html_old: crwdns45345:0crwdne45345:0
     art_from_html: 'crwdns55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdne55877:0'
     art_from_html_old: 'crwdns55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdne55878:0'
+    code_from_html: crwdns56267:0crwdne56267:0
     powered_by_aws: crwdns24789:0crwdne24789:0
     trademark: 'crwdns45294:0%{current_year}crwdne45294:0'
     copyright: crwdns45295:0crwdne45295:0

@@ -27,6 +27,7 @@
   submit: Dorëzo
   unsubmit: Unsubmit
   next_page: Next page
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Shto një mësues:'
@@ -410,6 +411,8 @@
     art_from_html_old: Zogj të nevrikosur&#8482;&#8482;&amp;&copy; 2009 %{current_year}  Zbavitje
       Rivio Ltd. Të drejtat e rezervuara.<br />Bimë dhe Xombi &#8482;&amp;&copy;%{current_year}
       Artet Elektronike Inc. Të drejtat e rezervuara
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Mundësuar nga Amazon Web Services
     trademark: "&copy;Code.org%{current_year}Code.org&reg; logoja e Kodit dhe Ora
       e Kodit&reg;  janë marka tregtare të Code.org."
@@ -740,5 +743,5 @@
           and the %{link_start_tos}Terms of Service%{link_end}
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Kerko nje ikone...
+      no_icons_found: Nuk u gjet ikona

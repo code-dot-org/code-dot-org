@@ -1,5 +1,5 @@
-var MarkdownInstructions = require('./MarkdownInstructions.jsx');
-var NonMarkdownInstructions = require('./NonMarkdownInstructions.jsx');
+var MarkdownInstructions = require('./MarkdownInstructions');
+var NonMarkdownInstructions = require('./NonMarkdownInstructions');
 
 var Instructions = React.createClass({
 
@@ -28,6 +28,7 @@ var Instructions = React.createClass({
     if (this.props.renderedMarkdown) {
       instructions = (
         <MarkdownInstructions
+          ref="instructionsMarkdown"
           renderedMarkdown={this.props.renderedMarkdown}
           markdownClassicMargins={this.props.markdownClassicMargins}
           inTopPane={this.props.inTopPane}

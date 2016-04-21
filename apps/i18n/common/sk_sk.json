@@ -24,6 +24,7 @@
   "completedWithoutRecommendedBlock": "Gratulujeme! Dokončili ste Puzzle {puzzleNumber}. (Môžete použiť rôzne bloky kódu pre náročnejší kód.)",
   "continue": "Pokračovať",
   "copy": "Kopírovať",
+  "currentVersion": "Current Version",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -130,6 +131,7 @@
   "end": "koniec",
   "errorEmptyFunctionBlockModal": "V tvojej definícii funkcie musia byť nejaké bloky. Klikni na \"upraviť\" a presuň bloky do vnútra zeleného bloku.",
   "errorIncompleteBlockInFunction": "Kliknite na tlačidlo \"upraviť\" aby ste sa uistili, že nemáte žiadne chýbajúce bloky vnútri funkcie.",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
   "errorParamInputUnattached": "Nezabudni pripojiť blok na každý vstupný parameter na funkčný blok v tvojom pracovnom priestore.",
   "errorQuestionMarksInNumberField": "Skús vymeniť \"???\" za hodnotu.",
   "errorRequiredParamsMissing": "Vytvor parameter pre tvoju funkciu kliknutím na tlačítko \"upraviť\" a pridaj potrebné parametre. Presuň nové parametrové bloky do tvojej definície funkcie.",
@@ -183,6 +185,7 @@
   "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
   "repeat": "opakovať",
   "resetProgram": "Obnoviť",
+  "restoreThisVersion": "Restore this Version",
   "rotateText": "Otoč svoj prístroj.",
   "runProgram": "Spustiť",
   "runTooltip": "Spustiť program definovaný blokmi v pracovnom priestore.",
@@ -195,6 +198,7 @@
   "shareWarningsAge": "Prosím zadajte sem svoj vek a pre pokračovanie kliknite na tlačidlo OK.",
   "shareWarningsMoreInfo": "Viac informácii",
   "shareWarningsStoreData": "Táto aplikácia, postavená na Code Studio ukladá údaje, ktoré môžu byť videné s kýmkoľvek kto zdieľa tento odkaz, takže buďte opatrní, ak budete požiadaní o poskytnutie osobných informácií.",
+  "showBlock": "Get a block",
   "showBlocksHeader": "Ukáž Bloky",
   "showCodeHeader": "Zobraziť kód",
   "showGeneratedCode": "Zobraziť kód",
@@ -229,6 +233,5 @@
   "watchVideo": "Pozrieť video",
   "when": "keď",
   "whenRun": "pri spustení",
-  "workspaceHeaderShort": "Pracovná plocha: ",
-  "showBlock": "Get a block"
+  "workspaceHeaderShort": "Pracovná plocha: "
 }

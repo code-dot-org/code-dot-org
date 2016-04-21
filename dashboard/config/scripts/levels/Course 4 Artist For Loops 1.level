@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw this triangle that is 50 pixels wide. Hint: use a repeat block.",
+    "instructions": "Use a repeat block to draw this triangle that is 50 pixels wide.",
     "x": "175",
     "y": "225",
     "start_direction": "90",
@@ -22,7 +22,7 @@
     "embed": "false",
     "use_contract_editor": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Draw this triangle that is 50 pixels wide. \r\n\r\n*Hint: use a repeat block.*\r\n\r\n<h5>**More on Angles**</h5>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)",
+    "markdown_instructions": "Use a repeat block to draw this triangle that is 50 pixels wide.\r\n\r\n<h5>**More on Angles**</h5>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -30,7 +30,14 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "examples_required": "false"
+    "examples_required": "false",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2
   }
 }]]></config>
   <blocks>
@@ -84,7 +91,7 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="pick_one">
           <statement name="PICK">
@@ -131,7 +138,7 @@
           </statement>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

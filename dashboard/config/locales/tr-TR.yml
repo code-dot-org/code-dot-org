@@ -26,7 +26,8 @@
   welcome_back: Hoş geldiniz %{name}
   submit: Gönder
   unsubmit: Gönderme
-  next_page: Next page
+  next_page: Sonraki Sayfa
+  heading_x_of_y: "%{heading} (sayfa %{x}, %{y})"
   add_teacher_form:
     code:
       label: "Öğretmen ekleyin:"
@@ -408,6 +409,8 @@
       Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.
     art_from_html_old: |
       Minecraft&#8482; &copy; %{current_year} Microsoft. Tüm hakları saklıdır. Star Wars&#8482; &copy; %{current_year} Disney ve Lucasfilm. Tüm hakları saklıdır. Dondurulmuş&#8482; &copy; %{current_year} Disney. Tüm hakları saklıdır. Buz çağı&#8482; &copy; %{current_year} 20th Century Fox. Tüm hakları saklıdır. Kızgın kuşlar&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tüm hakları saklıdır. Mutant vs. Zombiler&#8482; &copy; %{current_year} Electronic Arts Inc. Tüm hakları saklıdır. The Amazing World of Gumball is trademark ve &copy; 2015 Cartoon Network.
+    code_from_html: Code.org p5.play, <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      GNU LGPL 2.1</a> altında lisanslı kullanır.
     powered_by_aws: Amazon Web Services tarafından desteklenmektedir
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo ve Kod
       Saati&reg; Code.org'un ticari markalarıdır."

@@ -158,8 +158,8 @@ describe("Function.prototype.inherits", function () {
   });
 });
 
-describe("utils", function() {
-  it("can debounce a repeated function call", function() {
+describe("utils", function () {
+  it("can debounce a repeated function call", function () {
     var counter = 0;
     var incrementCounter = function () { counter++; };
     var debounced = _.debounce(incrementCounter, 2000, true);
@@ -171,7 +171,7 @@ describe("utils", function() {
     incrementCounter();
     assert(counter === 2);
   });
-  it("can remove quotes from a string", function() {
+  it("can remove quotes from a string", function () {
     assert(utils.stripQuotes("t'e's't'") === "test");
     assert(utils.stripQuotes('t"e"s"t"') === "test");
     assert(utils.stripQuotes('test') === "test");
@@ -600,6 +600,28 @@ describe('utils.unescapeText', function () {
     assert.equal(expected, unescapeText(input));
   });
 
+  it('Adds line break for divs with attributes', function () {
+    var input, expected;
+
+    input = 'Line 1<div style="line-height: 10.8px;">Line 2</div>';
+    expected = [
+      'Line 1',
+      'Line 2'
+    ].join('\n');
+    assert.equal(expected, unescapeText(input), 'div with attribute');
+  });
+
+  it('Does not add leading newline for span-wrapped leading line', function () {
+    var input, expected;
+
+    input = '<span>Line1</span><div>Line2</div>';
+    expected = [
+      'Line1',
+      'Line2'
+    ].join('\n');
+    assert.equal(expected, unescapeText(input), 'first line span');
+  });
+
   it('If input starts with <div> treats that as the first line', function () {
     var input = '<div>Line 1</div><div>Line 2</div>';
     var expected = [
@@ -702,5 +724,48 @@ describe('utils.unescapeText', function () {
         });
       });
     });
+  });
+});
+
+describe('utils.makeEnum', function () {
+  var makeEnum = utils.makeEnum;
+  it('builds a key:"key" enum object from its arguments', function () {
+    var Seasons = makeEnum('SPRING', 'SUMMER', 'FALL', 'WINTER');
+    assert.deepEqual(Seasons, {
+      SPRING: 'SPRING',
+      SUMMER: 'SUMMER',
+      FALL: 'FALL',
+      WINTER: 'WINTER'
+    });
+  });
+
+  it('returns an empty object when given no arguments', function () {
+    var TheVoid = makeEnum();
+    assert.deepEqual(TheVoid, {});
+  });
+
+  it('attempts to coerce arguments to string', function () {
+    var Coerced = makeEnum(undefined, null, 3.14, {});
+    assert.deepEqual(Coerced, {
+      'undefined': 'undefined',
+      'null': 'null',
+      '3.14': '3.14',
+      '[object Object]': '[object Object]'
+    });
+  });
+
+  it('throws if a duplicate key occurs', function () {
+    assert.throws(function () {
+      makeEnum('twins', 'twins');
+    });
+  });
+
+  it('freezes returned object if Object.freeze is available', function () {
+    var ColdThings = makeEnum('snow', 'ice', 'vacuum');
+    if (Object.freeze) {
+      assert.throws(function () {
+        ColdThings['sorbet'] = 'sorbet';
+      });
+    }
   });
 });

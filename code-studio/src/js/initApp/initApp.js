@@ -1,5 +1,5 @@
 // TODO (brent) - way too many globals
-/* global script_path, Dialog, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, showVideoDialog, ga, digestManifest*/
+/* global script_path, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, ga*/
 
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
@@ -9,6 +9,8 @@ var userAgentParser = require('./userAgentParser');
 var clientState = require('../clientState');
 var createCallouts = require('../callouts');
 var reporting = require('../reporting');
+var Dialog = require('../dialog');
+var showVideoDialog = require('../videos').showVideoDialog;
 
 window.dashboard = window.dashboard || {};
 window.dashboard.project = project;
@@ -35,7 +37,7 @@ window.apps = {
       Dialog: Dialog,
       cdoSounds: CDOSounds,
       position: {blockYCoordinateInterval: 25},
-      onInitialize: function() {
+      onInitialize: function () {
         createCallouts(this.level.callouts || this.callouts);
         if (userAgentParser.isChrome34()) {
           chrome34Fix.fixup();
@@ -43,18 +45,19 @@ window.apps = {
         if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab' || appOptions.app === 'gamelab') {
           $('#clear-puzzle-header').hide();
           // Only show Version History button if the user owns this project
-          if (project.isOwner()) {
+          if (project.isEditable()) {
             $('#versions-header').show();
           }
         }
         $(document).trigger('appInitialized');
       },
-      onAttempt: function(report) {
+      onAttempt: function (report) {
         if (appOptions.level.isProjectLevel) {
           return;
         }
-        if (appOptions.channel) {
-          // Don't send the levelSource or image to Dashboard for channel-backed levels.
+        if (appOptions.channel && !appOptions.level.edit_blocks) {
+          // Don't send the levelSource or image to Dashboard for channel-backed levels,
+          // unless we are actually editing blocks and not really completing a level
           // (The levelSource is already stored in the channels API.)
           delete report.program;
           delete report.image;
@@ -83,10 +86,10 @@ window.apps = {
           clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, response.timestamp, lastSavedProgram);
         }
       },
-      onResetPressed: function() {
+      onResetPressed: function () {
         reporting.cancelReport();
       },
-      onContinue: function() {
+      onContinue: function () {
         var lastServerResponse = reporting.getLastServerResponse();
         if (lastServerResponse.videoInfo) {
           showVideoDialog(lastServerResponse.videoInfo);
@@ -94,13 +97,13 @@ window.apps = {
           window.location.href = lastServerResponse.nextRedirect;
         }
       },
-      backToPreviousLevel: function() {
+      backToPreviousLevel: function () {
         var lastServerResponse = reporting.getLastServerResponse();
         if (lastServerResponse.previousLevelRedirect) {
           window.location.href = lastServerResponse.previousLevelRedirect;
         }
       },
-      showInstructionsWrapper: function(showInstructions) {
+      showInstructionsWrapper: function (showInstructions) {
         // Always skip all pre-level popups on share levels or when configured thus
         if (this.share || appOptions.level.skipInstructionsPopup) {
           return;
@@ -156,7 +159,7 @@ window.apps = {
 
   // Set up projects, skipping blockly-specific steps. Designed for use
   // by levels of type "external".
-  setupProjectsExternal: function() {
+  setupProjectsExternal: function () {
     if (!window.dashboard) {
       throw new Error('Assume existence of window.dashboard');
     }

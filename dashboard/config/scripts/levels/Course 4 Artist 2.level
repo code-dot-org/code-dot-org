@@ -33,7 +33,11 @@
     "never_autoplay_video": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -66,8 +70,6 @@
             <block type="colour_random"/>
           </value>
         </block>
-        <block type="draw_move_by_constant"/>
-        <block type="draw_turn_by_constant"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>
@@ -85,11 +87,11 @@
                 <block type="controls_repeat">
                   <title name="TIMES">4</title>
                   <statement name="DO">
-                    <block type="draw_move_by_constant">
+                    <block type="draw_move_by_constant" deletable="false">
                       <title name="DIR">moveForward</title>
                       <title name="VALUE">300</title>
                       <next>
-                        <block type="draw_turn_by_constant">
+                        <block type="draw_turn_by_constant" deletable="false">
                           <title name="DIR">turnRight</title>
                           <title name="VALUE">90</title>
                         </block>

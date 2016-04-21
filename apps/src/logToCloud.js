@@ -1,9 +1,12 @@
-var PageAction = {
-  DropletTransitionError: 'DropletTransitionError',
-  SanitizedLevelHtml: 'SanitizedLevelHtml',
-  UserJavaScriptError: 'UserJavaScriptError',
-  RunButtonClick: 'RunButtonClick'
-};
+var utils = require('./utils');
+
+var PageAction = utils.makeEnum(
+  'DropletTransitionError',
+  'SanitizedLevelHtml',
+  'UserJavaScriptError',
+  'RunButtonClick',
+  'StartWebRequest'
+);
 
 var MAX_FIELD_LENGTH = 4095;
 

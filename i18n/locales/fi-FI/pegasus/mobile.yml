@@ -604,7 +604,7 @@ fi-FI:
   dashboard_progress_completed_too_many_blocks: valmis, liian monta lohkoa
   dashboard_progress_completed_perfect: valmis, täydellinen
   dashboard_progress_furthest_level_attempted: vaikein taso jota yritetty
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: lähetetty
   dashboard_stage: Taso
   dashboard_puzzle: Tehtävä
   dashboard_question: Kysymys
@@ -614,6 +614,8 @@ fi-FI:
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Oikein
   dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
   dashboard_status: Status
   dashboard_multi_correct: '# multiple choice correct'
   dashboard_multi_count: '# multiple choice'
@@ -637,7 +639,8 @@ fi-FI:
   dashboard_faq_k5: 'Esi- ja alakoulu, usein kysyttyjä kysymyksiä'
   dashboard_announcements: Ilmoituksia
   dashboard_announce_view_all: Näytä kaikki
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
+  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
   dashboard_announce_button_text: Lue lisää
   dashboard_announce_hoc: '<b>9. Marraskuuta 2015</b> - Uusi Kooditunti-harjoitus on täällä, teemanaan elokuva Star Wars: The Force Awakens. Auta Rey:tä opastamaan uutta droidia, BB-8:aa, joukossa tehtäviä. Sitten, yhdessä Leian kanssa, luo ja jaa oma, kaukaiseen galaksiin sijoittuva, pelisi.'
   dashboard_announce_playlab: '<b>4. joulukuuta 2015</b> - Koodauskoodi on täällä! 50 harjoitusta kaikenikäisille ja kaikille eri laitteille. Uutta tällä viikolla: Ohjelmoi omia tarinoita ja pelejä Pelilabrassa, tai Ice Age- ja Gumball-maailmoissa.'
@@ -754,7 +757,7 @@ fi-FI:
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   applab_name: Sovelluksien laboratorio
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Ikäryhmille 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: 4-104-vuotiaille
   codeintl_gradelevel: 4-104-vuotiaille

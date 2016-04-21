@@ -103,7 +103,7 @@ Scenario:
   And element ".congrats" is visible
   And I see no difference for "maze feedback with blocks"
 
-  Then I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/1/lang/ar-sa?noautoplay=true"
+  Then I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/1/lang/ar-sa"
   And I rotate to landscape
   And I close the dialog
   And I wait to see "#runButton"
@@ -210,6 +210,8 @@ Examples:
   | http://studio.code.org/                                           | logged in studio homepage  |
   | http://studio.code.org/s/allthethings                             | logged in script progress  |
   | https://studio.code.org/s/allthethings/stage/13/puzzle/3?noautoplay=true | embedded blocks     |
+  | http://learn.code.org/s/course4/stage/1/puzzle/1                  | unplugged video level |
+  | http://learn.code.org/s/allthethings/stage/18/puzzle/14           | embed video |
 
 Scenario Outline: Logged out simple page view without instructions dialog
   Given I am on "http://learn.code.org/"

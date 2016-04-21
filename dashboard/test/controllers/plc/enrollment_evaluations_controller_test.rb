@@ -43,7 +43,7 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     @answer5_1 = create(:plc_evaluation_answer, answer: 'What do you mean, an African or European Swallow', plc_evaluation_question: @question5, plc_learning_module: @module2)
     @answer5_2 = create(:plc_evaluation_answer, answer: '15 m/s', plc_evaluation_question: @question5, plc_learning_module: nil)
 
-    @user = create :admin
+    @user = create :teacher
     sign_in(@user)
 
     @enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @course)
@@ -92,6 +92,7 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
   private
   def do_expected_answers_yield_expected_module_enrollments(answers, expected_module_enrollments)
     post :submit_evaluation, unit_assignment_id: @unit_assignment.id, answerModuleList: answers
+    assert_redirected_to plc_enrollment_unit_assignment_path(@unit_assignment)
     @unit_assignment.reload
     assert_equal expected_module_enrollments.map(&:id).sort, @enrollment.plc_module_assignments.all.map(&:plc_learning_module_id).sort
   end

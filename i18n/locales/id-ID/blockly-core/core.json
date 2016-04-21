@@ -25,7 +25,7 @@
   "COLOUR_RGB_RED":"merah",
   "COLOUR_RGB_TITLE":"warnai dengan",
   "COLOUR_RGB_TOOLTIP":"Buat warna dengan kombinasi merah, hijau, dan biru yang ditentukan. Semua nilai harus diantara 0 dan 100.",
-  "CONFIRM_CREATE_VARIABLE":"Create",
+  "CONFIRM_CREATE_VARIABLE":"Buat",
   "CONFIRM_DELETE_FUNCTION_MESSAGE":"Perhatian! Apakah anda yakin ingin menghapus %1?",
   "CONFIRM_RENAME_VARIABLE":"Ubah Nama",
   "CONTRACT_EDITOR_HEADER":"Resep Desain",

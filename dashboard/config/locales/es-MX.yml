@@ -26,7 +26,8 @@
   welcome_back: Bienvenido, %{name}
   submit: Enviar
   unsubmit: No enviar
-  next_page: Next page
+  next_page: Siguiente pagina
+  heading_x_of_y: "%{heading} (página %{x} de %{y})"
   add_teacher_form:
     code:
       label: 'Agregar un maestro:'
@@ -432,6 +433,8 @@
       />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos
       los derechos reservados.<br />The Amazing World of Gumball es marca registrada
       y &copy; 2015 Cartoon Network.
+    code_from_html: Code.org utiliza p5.play, con la licencia <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
+      LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, el logotipo de CODE
       y hora de Código &reg; son marcas registradas de Code.org."
@@ -768,5 +771,5 @@
           y de los %{link_start_tos}terminos de servicio %{link_end}
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Busca un ícono...
+      no_icons_found: No se encontraron íconos

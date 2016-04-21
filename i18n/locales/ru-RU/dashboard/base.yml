@@ -25,7 +25,8 @@ ru:
   welcome_back: 'С возвращением, %{name}'
   submit: Отправить
   unsubmit: Снять подтверждение
-  next_page: Next page
+  next_page: Следующая страница
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Добавить учителя:'
@@ -340,6 +341,7 @@ ru:
     help_from_html_old: При создании данных материалов нам помогали инженеры из компаний Google, Microsoft, Facebook, и Twitter.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Все права защищены.<br />Звёздные Войны&#8482; &copy; %{current_year} Disney и Lucasfilm. Все права защищены.<br />Frozen&#8482; &copy; %{current_year} Disney. Все права защищены.<br />Ледниковый период&#8482; &copy; %{current_year} 20th Century Fox. Все права защищены.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Все права защищены.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Все права защищены.<br />Удивительный мир Гамбола является торговой маркой и &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Все права защищены. Звёздные Войны&#8482; &copy; %{current_year} Disney и Lucasfilm. Все права защищены. Frozen&#8482; &copy; %{current_year} Disney. Все права защищены. Ледниковый период&#8482; &copy; %{current_year} 20th Century Fox. Все права защищены. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Все права защищены. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Все права защищены. Удивительный мир Гамбола является торговой маркой и &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org использует p5.play, который лицензируется на условиях <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: Создано с помощью Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE и Hour of Code&reg; являются товарными знаками Code.org.'
     copyright: Авторское право
@@ -559,7 +561,7 @@ ru:
     completed_perfect: Завершено, отлично
     furthest_level_attempted: запрошен слишком высокий уровень
     assessment: оценка
-    submitted: submitted
+    submitted: Представленный
   studio:
     courses_working_on: Курсы, в процессе изучения
     completed_courses: Завершенные курсы

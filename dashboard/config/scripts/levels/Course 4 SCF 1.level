@@ -32,6 +32,12 @@
     "impressive": "true",
     "never_autoplay_video": "false",
     "permitted_errors": "0"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 4,
+    "functions": 5
   }
 }]]></config>
   <blocks>

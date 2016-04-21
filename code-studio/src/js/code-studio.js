@@ -16,21 +16,18 @@ require('./consoleShim')(window);
 var Sounds = require('./Sounds');
 var activateReferenceAreaOnLoad = require('./reference_area');
 
-require('./videos');
-
 window.React = require('react');
 window.ReactDOM = require('react-dom');
 window.Radium = require('radium');
 
 // TODO (bbuchanan): Stop including these components in a global way, just
 //                   require them specifically where needed.
-require('./components/abuse_error.jsx');
-require('./components/report_abuse_form.jsx');
-require('./components/send_to_phone.jsx');
-require('./components/share_dialog.jsx');
-require('./components/small_footer.jsx');
-require('./components/GridEditor.jsx');
-require('./components/IconLibrary.jsx');
+require('./components/abuse_error');
+require('./components/report_abuse_form');
+require('./components/send_to_phone');
+require('./components/small_footer');
+require('./components/GridEditor');
+require('./components/IconLibrary');
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
@@ -49,6 +46,11 @@ window.dashboard.utils ={
   debounce: _.debounce
 };
 window.dashboard.header = require('./header');
+window.dashboard.videos = require('./videos');
+
+// usages: _dialogHelper.js, frequency.js, text-compression.js, levelGroup.js, multi.js
+// arguably each of the above files belongs in code-studio
+window.Dialog = require('./dialog');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in new relic.
@@ -64,14 +66,14 @@ window.onerror = function (msg, url, ln) {
 
 // Prevent escape from canceling page loads.
 var KEY_ESCAPE = 27;
-$(document).keydown(function(e) {
+$(document).keydown(function (e) {
   if (e.keyCode === KEY_ESCAPE) {
     e.stopPropagation();
     e.preventDefault();
   }
 });
 
-setTimeout(function() {
+setTimeout(function () {
   $('#codeApp .slow_load').show();
 }, 10000);
 

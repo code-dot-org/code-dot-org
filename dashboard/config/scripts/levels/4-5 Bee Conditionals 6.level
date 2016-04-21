@@ -34,7 +34,12 @@
     "markdown_instructions": "I am not sure how much nectar this flower has, but I know it has either 1, 2, or 3 nectar. \r\n\r\nCombine the conditional blocks (`if` and/or `if/else`) to only get as much nectar as the flower has. \r\n\r\nRemember, the amount of nectar can change each time you run the puzzle!"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "repeat_loops": 1,
+    "conditionals": 5
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -137,8 +142,8 @@
                   <statement name="DO">
                     <block type="bee_ifNectarAmount">
                       <title name="ARG1">nectarRemaining</title>
-                      <title name="OP">==</title>
-                      <title name="ARG2">3</title>
+                      <title name="OP">&gt;</title>
+                      <title name="ARG2">0</title>
                       <statement name="DO">
                         <block type="maze_nectar"/>
                       </statement>

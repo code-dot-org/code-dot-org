@@ -130,7 +130,7 @@ class ApiController < ApplicationController
     load_section
     load_script
 
-    text_response_script_levels = @script.script_levels.includes(:level).where('levels.type' => TextMatch)
+    text_response_script_levels = @script.script_levels.includes(:level).where('levels.type' => [TextMatch, FreeResponse])
 
     data = @section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
@@ -186,7 +186,7 @@ class ApiController < ApplicationController
         level_results = []
 
         script_level.level.levels.each do |level|
-          level_response = response_parsed.find{|r| r["level_id"] == level.id}
+          level_response = response_parsed[level.id.to_s]
 
           if level_response
             level_result = {}

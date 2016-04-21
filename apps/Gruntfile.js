@@ -275,6 +275,7 @@ module.exports = function (grunt) {
       ' `npm bin`/browserifyinc' +
       ' -g [ browserify-global-shim ]' +
       ' --cachefile ' + outputDir + 'browserifyinc-cache.json' +
+      ' --extension=.jsx' +
       ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]' +
       (envOptions.dev ? '' : ' -t loose-envify') +
       ' -d ' + allFilesSrc.join(' ') +
@@ -487,7 +488,7 @@ module.exports = function (grunt) {
     'newer:messages',
     'exec:convertScssVars',
     'newer:copy:static',
-    'newer:concat',
+    'concat',
     'exec:mochaTest'
   ]);
 

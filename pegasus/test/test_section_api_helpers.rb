@@ -16,12 +16,12 @@ class SectionApiHelperTest < Minitest::Test
   describe SectionHelpers do
     describe 'random code' do
       it 'does not generate the same code twice' do
-        codes = 10.times.map { SectionHelpers::random_code }
+        codes = 10.times.map { SectionHelpers.random_code }
         assert_equal 10, codes.uniq.length
       end
 
       it 'does not generate vowels' do
-        codes = 10.times.map { SectionHelpers::random_code }
+        codes = 10.times.map { SectionHelpers.random_code }
         assert codes.grep(/[AEIOU]/).empty?
       end
     end

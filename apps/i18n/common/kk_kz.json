@@ -24,6 +24,7 @@
   "completedWithoutRecommendedBlock": "Құттықтаймыз! Сіз соңғы {puzzleNumber} кезңді аяқтадыңыз",
   "continue": "Жалғастыру",
   "copy": "Көшіру",
+  "currentVersion": "Current Version",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -130,6 +131,7 @@
   "end": "соңы",
   "errorEmptyFunctionBlockModal": "Функция анықтамасының ішінде блоктар болуы қажет. \"Өңдеу\" басыңыз және жасыл блок ішіне блоктарды алып келіңіз.",
   "errorIncompleteBlockInFunction": "Функция анықтамасының ішінде жетіспейтін блоктардың бар немесе жоқтығын тексеру үшін \"Өңдеу\" басыңыз.",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
   "errorParamInputUnattached": "Жұмыс аумағындағы қызмет атқарушы блоктағы әрбір кіріс параметрлеріне блок қосуды ұмытпаңыз",
   "errorQuestionMarksInNumberField": "\"???\" мәнмен орын ауыстыруға тырысыңыз.",
   "errorRequiredParamsMissing": "\"Өңдеу\" басу арқылы сіздің функцияңых үшін параметр құру. Параметрлердің жаңа блоктарын функция анықтамасына алып келіңіз.",
@@ -183,6 +185,7 @@
   "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
   "repeat": "қайтала",
   "resetProgram": "қалпына келтіру",
+  "restoreThisVersion": "Restore this Version",
   "rotateText": "Құрылғыны бұрыңыз",
   "runProgram": "Қосу",
   "runTooltip": "Жұмыс  орнындағы блоктармен анықталған бағдарламаны қосу",
@@ -195,6 +198,7 @@
   "shareWarningsAge": "Жасыңызды еңгізіңіз және жалғастыру үшін OK түймесін басыңыз.",
   "shareWarningsMoreInfo": "Толығырақ ақпарат",
   "shareWarningsStoreData": "Бұл бағдарлама Code Studio-да жасалған. Сақталған ақпарат сілтемесі бар кез келген адамға қол жетімді болады. Сондықтан, жеке ақпарат сұралган жағдайда мұқият болыңыз.",
+  "showBlock": "Get a block",
   "showBlocksHeader": "Блоктарды көрсету",
   "showCodeHeader": "Кодты көрсету",
   "showGeneratedCode": "Кодты көрсету",
@@ -229,6 +233,5 @@
   "watchVideo": "Бейнематериалды көру",
   "when": "кезде",
   "whenRun": "қосу кезінде",
-  "workspaceHeaderShort": "Жұмыс аумағы: ",
-  "showBlock": "Get a block"
+  "workspaceHeaderShort": "Жұмыс аумағы: "
 }

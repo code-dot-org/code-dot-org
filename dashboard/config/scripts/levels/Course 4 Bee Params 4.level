@@ -34,7 +34,12 @@
     "callout_json": "[]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 3,
+    "functions_with_params": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -225,8 +230,18 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
+        <block type="procedures_callnoreturn" inline="false">
+          <mutation name="get 3 nectar">
+            <arg name="direction"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="variables_get">
+              <title name="VAR">???</title>
+            </block>
+          </value>
+        </block>
         <block type="controls_repeat">
-          <title name="TIMES">2</title>
+          <title name="TIMES">???</title>
         </block>
       </xml>
     </recommended_blocks>

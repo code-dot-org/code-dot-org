@@ -9,7 +9,7 @@ var PlaygroundIO = require('playground-io');
 require("babelify/polyfill"); // required for Promises in IE / Phantom
 
 /** @const {string} */
-var CHROME_APP_ID = 'himpmjbkjeenflliphlaaeggkkanoglo';
+var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
 
 var BoardController = module.exports = function () {
   ChromeSerialPort.extensionId = CHROME_APP_ID;
@@ -57,18 +57,25 @@ BoardController.prototype.ensureBoardConnected = function () {
 
 BoardController.prototype.installComponentsOnInterpreter = function (codegen, jsInterpreter) {
   this.prewiredComponents = this.prewiredComponents ||
-      initializeCircuitPlaygroundComponents();
+      initializeCircuitPlaygroundComponents(this.board_.io);
 
-  codegen.customMarshalObjectList = [
-    {instance: five.Led},
-    {instance: five.Led.RGB},
-    {instance: five.Button},
-    {instance: five.Switch},
-    {instance: five.Piezo},
-    {instance: five.Thermometer},
-    {instance: five.Sensor},
-    {instance: five.Gyro}
-  ];
+  var componentConstructors = {
+    Led: five.Led,
+    RGB: five.Led.RGB,
+    Button: five.Button,
+    Switch: five.Switch,
+    Piezo: five.Piezo,
+    Thermometer: five.Thermometer,
+    Sensor: five.Sensor,
+    CapTouch: PlaygroundIO.CapTouch,
+    Tap: PlaygroundIO.Tap,
+    Accelerometer: five.Accelerometer
+  };
+
+  Object.keys(componentConstructors).forEach(function (key) {
+    codegen.customMarshalObjectList.push({instance: componentConstructors[key]});
+    jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
+  });
 
   Object.keys(this.prewiredComponents).forEach(function (key) {
     jsInterpreter.createGlobalProperty(key, this.prewiredComponents[key]);
@@ -80,7 +87,12 @@ BoardController.prototype.reset = function () {
     return;
   }
 
-  this.board_.register.forEach(function (component) {
+  var standaloneComponents = [
+    this.prewiredComponents.tap,
+    this.prewiredComponents.touch
+  ];
+
+  this.board_.register.concat(standaloneComponents).forEach(function (component) {
     try {
       if (component.state && component.state.intervalId) {
         clearInterval(component.state.intervalId);
@@ -142,8 +154,19 @@ function getDevicePort() {
   }.bind(this));
 }
 
+/**
+ * Returns whether the given descriptor's serialport is potentially an Arduino
+ * device.
+ *
+ * Based on logic in johnny-five lib/board.js, match ports that Arduino cares
+ * about, like: ttyUSB#, cu.usbmodem#, COM#
+ *
+ * @param {Object} port node-serial compatible serialport info object
+ * @returns {boolean} whether this is potentially an Arduino device
+ */
 function deviceOnPortAppearsUsable(port) {
-  return port.comName.match(/usbmodem/);
+  var comNameRegex = /usb|acm|^com/i;
+  return comNameRegex.test(port.comName);
 }
 
 /**
@@ -151,7 +174,7 @@ function deviceOnPortAppearsUsable(port) {
  * Circuit Playground board.
  * @returns {Object.<String, Object>} board components
  */
-function initializeCircuitPlaygroundComponents() {
+function initializeCircuitPlaygroundComponents(io) {
   return {
     pixels: Array.from({length: 10}, function (_, index) {
       return new five.Led.RGB({
@@ -195,8 +218,17 @@ function initializeCircuitPlaygroundComponents() {
       freq: 100
     }),
 
-    gyro: new five.Gyro({
-      controller: PlaygroundIO.Gyro
-    })
+    accelerometer: new five.Accelerometer({
+      controller: PlaygroundIO.Accelerometer
+    }),
+
+    tap: new PlaygroundIO.Tap(io),
+
+    touch: new PlaygroundIO.CapTouch(io)
   };
 }
+
+BoardController.__testonly__ = {
+  deviceOnPortAppearsUsable: deviceOnPortAppearsUsable,
+  getDevicePort: getDevicePort
+};

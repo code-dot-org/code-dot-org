@@ -12,6 +12,7 @@
 #  grade      :string(255)
 #  admin_code :string(255)
 #  login_type :string(255)      default("email"), not null
+#  deleted_at :datetime
 #
 # Indexes
 #
@@ -78,7 +79,7 @@ class Section < ActiveRecord::Base
 
   def unused_random_code
     loop do
-      code = SectionHelpers::random_code
+      code = SectionHelpers.random_code
       return code unless Section.exists?(code: code)
     end
   end

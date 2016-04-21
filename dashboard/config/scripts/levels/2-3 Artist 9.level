@@ -34,7 +34,10 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"This diamond is really just a square turned 45 degrees.\",\r\n  \"hint_id\": \"2-3_Artist_9_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Don't forget to turn the artist left by 45 degrees before you start drawing your square!\",\r\n  \"hint_id\": \"2-3_Artist_9_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
