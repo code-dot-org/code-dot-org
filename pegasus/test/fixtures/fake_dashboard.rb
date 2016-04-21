@@ -49,16 +49,20 @@ module FakeDashboard
   TEACHER_SECTIONS = [
       {id: 150001, user_id: TEACHER[:id], name: 'Fake Section A'},
       {id: 150002, user_id: TEACHER[:id], name: 'Fake Section B'},
-      {id: 150003, user_id: TEACHER_WITH_DELETED[:id], name: 'Fake Section C'},
+      {id: 150003, user_id: TEACHER_WITH_DELETED[:id], name: 'Fake Section C',
+        deleted_at: '2015-01-01 12:34:56'},
+      {id: 150004, user_id: TEACHER_WITH_DELETED[:id], name: 'Fake Section D'},
   ]
 
   #
   # Fake Data: Followers
   #
   FOLLOWERS = [
-      {user_id: TEACHER[:id], student_user_id: STUDENT[:id]},
-      {user_id: TEACHER_WITH_DELETED[:id], student_user_id: STUDENT[:id]},
-      {user_id: TEACHER_WITH_DELETED[:id], student_user_id: DELETED_STUDENT[:id]},
+      {user_id: TEACHER[:id], student_user_id: STUDENT[:id], section_id: 150001},
+      {user_id: TEACHER_WITH_DELETED[:id], student_user_id: DELETED_STUDENT[:id],
+        section_id: 150004},
+      {user_id: TEACHER_WITH_DELETED[:id], student_user_id: SELF_STUDENT[:id],
+        section_id: 150004, deleted_at: '2016-01-01 00:01:02'},
   ]
 
   # Overrides the current database with a procedure that, given a query,
