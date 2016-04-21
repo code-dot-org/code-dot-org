@@ -1880,6 +1880,10 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     textModeAtStart: config.level.textModeAtStart
   });
 
+  if (config.level.paletteCategoryAtStart) {
+    this.editor.changePaletteGroup(config.level.paletteCategoryAtStart);
+  }
+
   this.editor.aceEditor.setShowPrintMargin(false);
 
   // Init and define our custom ace mode:
