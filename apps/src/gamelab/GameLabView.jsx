@@ -3,7 +3,7 @@
 'use strict';
 
 var _ = require('../lodash');
-var AnimationTab = require('./AnimationTab/index');
+var AnimationTab = require('./AnimationTab/AnimationTab');
 var connect = require('react-redux').connect;
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper');
 var ConnectedErrorDialogStack = require('./ErrorDialogStack').ConnectedErrorDialogStack;
