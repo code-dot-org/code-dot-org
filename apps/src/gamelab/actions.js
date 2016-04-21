@@ -19,12 +19,15 @@ var ActionType = module.exports.ActionType = utils.makeEnum(
 /**
  * Change the interface mode between Code Mode and the Animation Tab
  * @param {!GameLabInterfaceMode} interfaceMode
- * @returns {{type: ActionType, interfaceMode: GameLabInterfaceMode}}
+ * @returns {function}
  */
 module.exports.changeInterfaceMode = function (interfaceMode) {
-  return {
-    type: ActionType.CHANGE_INTERFACE_MODE,
-    interfaceMode: interfaceMode
+  return function (dispatch) {
+    $(window).trigger('appModeChanged');
+    dispatch({
+      type: ActionType.CHANGE_INTERFACE_MODE,
+          interfaceMode: interfaceMode
+    });
   };
 };
 
