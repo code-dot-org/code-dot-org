@@ -1,17 +1,9 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 require_relative '../../../deployment'
-
-ROOT = File.expand_path('../../../..', __FILE__)
-
-# Set up gems listed in the Gemfile.
-ENV['BUNDLE_GEMFILE'] ||= "#{ROOT}//Gemfile"
-require 'bundler'
-require 'bundler/setup'
-
+require 'cdo/hip_chat'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
-require 'cdo/hip_chat'
 
 require 'json'
 require 'yaml'
@@ -19,9 +11,6 @@ require 'optparse'
 require 'ostruct'
 require 'colorize'
 require 'open3'
-require 'parallel'
-
-require 'active_support/core_ext/object/blank'
 
 ENV['BUILD'] = `git rev-parse --short HEAD`
 
@@ -190,10 +179,15 @@ def format_duration(total_seconds)
   "%.1d:%.2d minutes" % [minutes, seconds]
 end
 
-if ENV['RAILS_ENV'] == 'development'
+# Kind of hacky way to determine if we have access to the database
+# (for example, to create users) on the domain/environment that we are
+# testing.
+require File.expand_path('../../../config/environment.rb', __FILE__)
+
+if Rails.env.development?
   $options.pegasus_db_access = true if $options.pegasus_domain =~ /(localhost|ngrok)/
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /(localhost|ngrok)/
-elsif ENV['RAILS_ENV'] == 'test'
+elsif Rails.env.test?
   $options.pegasus_db_access = true if $options.pegasus_domain =~ /test/
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /test/
 end
@@ -209,7 +203,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   browser_name = browser['name'] || 'UnknownBrowser'
   test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
 
-  if $options.pegasus_domain =~ /test/ && ENV['RAILS_ENV'] != 'development' && RakeUtils.git_updates_available?
+  if $options.pegasus_domain =~ /test/ && !Rails.env.development? && RakeUtils.git_updates_available?
     message = "Killing <b>dashboard</b> UI tests (changes detected)"
     HipChat.log message, color: 'yellow'
     raise Parallel::Kill
@@ -395,7 +389,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
 
     message += "<br/><i>rerun: bundle exec ./runner.rb -c #{browser_name} -f #{feature} #{'--eyes' if $options.run_eyes_tests} --html</i>"
     HipChat.log message, color: 'red'
-    HipChat.developers short_message, color: 'red' if ENV['RAILS_ENV'] == 'test'
+    HipChat.developers short_message, color: 'red' if Rails.env.test?
   end
   result_string =
     if scenario_count == 0
