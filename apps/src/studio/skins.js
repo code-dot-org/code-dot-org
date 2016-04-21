@@ -1668,12 +1668,10 @@ exports.load = function (assetUrl, id) {
   skin.dropdownThumbnailHeight = 50;
   skin.preloadAssets = true;
 
-  // Offset & dimensions of a rectangle in collidable in which wall collisions occur.
-  // For isometric-style rendering, this would normally be the feet.
+  // Offset for the rectangle in collidable in which wall collisions occur.
+  // Default to no offset here and allow other skins to override.
   skin.wallCollisionRectOffsetX = 0;
   skin.wallCollisionRectOffsetY = 0;
-  skin.wallCollisionRectWidth  = 0;
-  skin.wallCollisionRectHeight = 0;
 
   skin.setSpritePrefix = msg.setSprite();
 
