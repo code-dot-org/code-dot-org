@@ -3,7 +3,7 @@
 
 var actions = require('./actions');
 var AnimationFrameList = require('./AnimationFrameList');
-var AnimationPicker = require('../AnimationPicker/index');
+var ConnectedAnimationPicker = require('../AnimationPicker/index').ConnectedAnimationPicker;
 var AnimationSequenceList = require('./AnimationSequenceList');
 var connect = require('react-redux').connect;
 var GameLabVisualizationHeader = require('../GameLabVisualizationHeader');
@@ -36,10 +36,7 @@ var styles = {
  */
 var AnimationTab = React.createClass({
   propTypes: {
-    channelId: React.PropTypes.string.isRequired,
-    isAnimationPickerShowing: React.PropTypes.bool.isRequired,
-    onAnimationPickerComplete: React.PropTypes.func.isRequired,
-    onAnimationPickerCancel: React.PropTypes.func.isRequired
+    channelId: React.PropTypes.string.isRequired
   },
 
   render: function () {
@@ -65,27 +62,14 @@ var AnimationTab = React.createClass({
             </div>
           </div>
         </ResizablePanes>
-        {this.props.isAnimationPickerShowing &&
-        <AnimationPicker
-            onComplete={this.props.onAnimationPickerComplete}
-            onCancel={this.props.onAnimationPickerCancel}
-            channelId={this.props.channelId}/>}
+        <ConnectedAnimationPicker channelId={this.props.channelId}/>
       </div>
     );
   }
 });
 
 module.exports = connect(function propsFromStore(state) {
-  return {
-    isAnimationPickerShowing: state.animationTab.animationPickerFlow.isPickerShowing
-  };
+  return {};
 }, function propsFromDispatch(dispatch) {
-  return {
-    onAnimationPickerComplete: function (result) {
-      dispatch(actions.finishPickingAnimation(result));
-    },
-    onAnimationPickerCancel: function () {
-      dispatch(actions.cancelPickingAnimation());
-    }
-  };
+  return {};
 })(AnimationTab);

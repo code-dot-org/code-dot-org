@@ -3,10 +3,8 @@
 'use strict';
 
 var ActionType = require('./actions').ActionType;
-var animationPicker = require('../AnimationPicker/reducers').animationPicker;
 var GameLabActionType = require('../actions').ActionType;
 var combineReducers = require('redux').combineReducers;
-
 
 function selectedAnimation(state, action) {
   state = state || '';
@@ -20,30 +18,7 @@ function selectedAnimation(state, action) {
   }
 }
 
-var animationPickerFlowInitialState = {
-  isPickerShowing: false
-};
-
-function animationPickerFlow(state, action) {
-  state = state || animationPickerFlowInitialState;
-  switch (action.type) {
-    case ActionType.BEGIN_PICKING_ANIMATION:
-      return {
-        isPickerShowing: true,
-        destination: action.destination
-      };
-    case ActionType.FINISH_PICKING_ANIMATION:
-      return animationPickerFlowInitialState;
-    case ActionType.CANCEL_PICKING_ANIMATION:
-      return animationPickerFlowInitialState;
-    default:
-      return state;
-  }
-}
-
 var animationTab = combineReducers({
-  animationPicker: animationPicker,
-  animationPickerFlow: animationPickerFlow,
   selectedAnimation: selectedAnimation
 });
 
