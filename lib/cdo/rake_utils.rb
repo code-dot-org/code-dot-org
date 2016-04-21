@@ -239,43 +239,6 @@ module RakeUtils
     new_fetchable_url
   end
 
-  # Returns true if file is different from the committed version in git.
-  def self.file_changed_from_git?(file)
-    !`git status --porcelain #{file}`.strip.empty?
-  end
-
-  # Returns true if any files changed in this branch
-  def self.changed_in_branch_or_local?(branch, glob_patterns)
-    files_changed_branch_or_local(branch).any? do |file_path|
-      glob_patterns.any? do |glob|
-        File.fnmatch(glob, file_path)
-      end
-    end
-  end
-
-  def self.files_changed_branch_or_local(base_branch)
-    files_changed_locally.concat(files_changed_in_branch(base_branch)).uniq
-  end
-
-  def self.files_changed_in_branch(base_branch)
-    branch_commit = `git merge-base HEAD refs/remotes/origin/#{base_branch}`.strip
-    `git diff-tree HEAD #{branch_commit} --name-only`.split("\n")
-  end
-
-  def self.files_changed_locally
-    `git diff --cached --name-only`.split("\n").
-        concat(`git diff --name-only`.split("\n")).uniq
-  end
-
-  def self.circle_commit_contains(string)
-    message = circle_commit_message
-    message.include?(string)
-  end
-
-  def self.circle_commit_message
-    `git log --format=%B -n 1 $CIRCLE_SHA1`.strip
-  end
-
   # Whether this is a local or adhoc environment where we should install npm and create
   # a local database.
   def self.local_environment?
