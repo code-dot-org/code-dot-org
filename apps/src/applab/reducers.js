@@ -6,7 +6,7 @@ var ActionType = require('./actions').ActionType;
 var combineReducers = require('redux').combineReducers;
 var constants = require('./constants');
 var ApplabInterfaceMode = constants.ApplabInterfaceMode;
-var instructions = require('./instructions');
+var instructions = require('../redux/instructions');
 
 function currentScreenId(state, action) {
   state = state || null;
