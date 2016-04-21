@@ -92,8 +92,8 @@ module.exports.cloneAnimation = function (animationKey) {
     var newAnimationKey = utils.createUuid();
 
     animationsApi.ajax(
-        'POST',
-        newAnimationKey + '.png/from/' + animationKey + '.png',
+        'PUT',
+        newAnimationKey + '.png?src=' + animationKey + '.png',
         function success(xhr) {
           var response = JSON.parse(xhr.responseText);
           console.info(response);
