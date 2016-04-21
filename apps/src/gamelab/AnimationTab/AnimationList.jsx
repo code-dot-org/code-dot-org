@@ -14,12 +14,11 @@ var styles = {
 };
 
 /**
- * Vertical scrolling list of animation sequences associated with the
- * project.
+ * Vertical scrolling list of animations associated with the project.
  */
-var AnimationSequenceList = function (props) {
+var AnimationList = function (props) {
   return (
-    <ScrollableList style={styles.root} className="animation-sequence-list">
+    <ScrollableList style={styles.root} className="animation-list">
       {props.animations.map(function (animation) {
         return <AnimationListItem
             key={animation.key}
@@ -33,7 +32,7 @@ var AnimationSequenceList = function (props) {
     </ScrollableList>
   );
 };
-AnimationSequenceList.propTypes = {
+AnimationList.propTypes = {
   animations: React.PropTypes.array.isRequired,
   selectedAnimation: React.PropTypes.string,
   onNewItemClick: React.PropTypes.func.isRequired
@@ -49,4 +48,4 @@ module.exports = connect(function propsFromState(state) {
       dispatch(AnimationPicker.actions.show(AnimationPicker.Goal.NEW_ANIMATION));
     }
   };
-})(AnimationSequenceList);
+})(AnimationList);

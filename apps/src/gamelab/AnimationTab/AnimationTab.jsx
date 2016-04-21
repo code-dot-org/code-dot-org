@@ -4,7 +4,7 @@
 var actions = require('./actions');
 var FrameList = require('./FrameList');
 var ConnectedAnimationPicker = require('../AnimationPicker/AnimationPicker').ConnectedAnimationPicker;
-var AnimationSequenceList = require('./AnimationSequenceList');
+var AnimationList = require('./AnimationList');
 var connect = require('react-redux').connect;
 var GameLabVisualizationHeader = require('../GameLabVisualizationHeader');
 var ResizablePanes = require('./ResizablePanes');
@@ -17,7 +17,7 @@ var styles = {
     left: 0,
     right: 0
   },
-  sequencesColumn: {
+  animationsColumn: {
     flex: '0 0 150px' // sets initial width
   },
   framesColumn: {
@@ -43,9 +43,9 @@ var AnimationTab = React.createClass({
     return (
       <div>
         <ResizablePanes style={styles.root}>
-          <div id='sequences-column' style={styles.sequencesColumn}>
+          <div id='animations-column' style={styles.animationsColumn}>
             <GameLabVisualizationHeader />
-            <AnimationSequenceList />
+            <AnimationList />
           </div>
           <div id='frames-column' style={styles.framesColumn}>
             <div className="purple-header workspace-header">

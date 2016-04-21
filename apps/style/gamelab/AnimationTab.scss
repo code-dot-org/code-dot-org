@@ -1,11 +1,11 @@
 @import "color";
 
-#sequences-column, #frames-column, #editor-column {
+#animations-column, #frames-column, #editor-column {
   display: flex;
   flex-direction: column;
 }
 
-#sequences-column {
+#animations-column {
   min-width: 150px;
   max-width: 300px;
 }
@@ -21,7 +21,7 @@
   border: solid thin $light_purple;
 }
 
-.animation-sequence-list {
+.animation-list {
   border: solid thin $light_purple;
   border-right: none;
   background-color: $white;
