@@ -12,6 +12,12 @@ var GameLabVisualizationColumn = function (props) {
         </div>
       </ProtectedStatefulDiv>
       <GameButtons hideRunButton={false}>
+        <div id="studio-dpad" className="studio-dpad-none">
+          <button id="studio-dpad-button" className="arrow">
+            <img src="/blockly/media/1x1.gif" className="dpad-btn icon21"/>
+          </button>
+        </div>
+
         <div id="soft-buttons" className="soft-buttons-none">
           <button id="leftButton" disabled className="arrow">
             <img src="/blockly/media/1x1.gif" className="left-btn icon21"/>
