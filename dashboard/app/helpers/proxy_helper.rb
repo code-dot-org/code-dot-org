@@ -3,8 +3,6 @@ require 'uri'
 
 # Helper which fetches the specified URL, optionally caching and following redirects.
 module ProxyHelper
-  include DomainHelper
-
   def render_proxied_url(location, allowed_content_types:, expiry_time:, infer_content_type:, redirect_limit: 5)
     if redirect_limit == 0
       render_error_response 500, 'Redirect loop'
@@ -15,10 +13,7 @@ module ProxyHelper
     # tying up Rails thread.
     url = URI.parse(location)
 
-    # Require a valid URL with a valid top-level domain. This protects us from
-    # the proxy being used to directly access our infrastructure via internal
-    # AWS hostnames or IP addresses.
-    raise URI::InvalidURIError.new if url.host.nil? || url.port.nil? || !valid_top_level_domain?(url.host)
+    raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
     uri = url.request_uri.empty? ? '/' : url.request_uri

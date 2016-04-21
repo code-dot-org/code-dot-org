@@ -72,7 +72,7 @@ class XhrProxyControllerTest < ActionController::TestCase
     assert_response 400
   end
 
-  test "should fail with bad top level domain" do
+  test "should fail with ec2.internal URI" do
     stub_request(:get, BAD_DOMAIN_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
     get :get, u: BAD_DOMAIN_URI, c: CHANNEL_ID
     assert_response 400
