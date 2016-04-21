@@ -190,10 +190,10 @@ def format_duration(total_seconds)
   "%.1d:%.2d minutes" % [minutes, seconds]
 end
 
-if ENV['RAILS_ENV'] != 'development'
+if rack_env?(:development)
   $options.pegasus_db_access = true if $options.pegasus_domain =~ /(localhost|ngrok)/
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /(localhost|ngrok)/
-elsif ENV['RAILS_ENV'] != 'test'
+elsif rack_env?(:test)
   $options.pegasus_db_access = true if $options.pegasus_domain =~ /test/
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /test/
 end
@@ -209,7 +209,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   browser_name = browser['name'] || 'UnknownBrowser'
   test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
 
-  if $options.pegasus_domain =~ /test/ && ENV['RAILS_ENV'] != 'development' && RakeUtils.git_updates_available?
+  if $options.pegasus_domain =~ /test/ && rack_env?(:development) && RakeUtils.git_updates_available?
     message = "Killing <b>dashboard</b> UI tests (changes detected)"
     HipChat.log message, color: 'yellow'
     raise Parallel::Kill
@@ -395,7 +395,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
 
     message += "<br/><i>rerun: bundle exec ./runner.rb -c #{browser_name} -f #{feature} #{'--eyes' if $options.run_eyes_tests} --html</i>"
     HipChat.log message, color: 'red'
-    HipChat.developers short_message, color: 'red' if ENV['RAILS_ENV'] == 'test'
+    HipChat.developers short_message, color: 'red' if rack_env?(:test)
   end
   result_string =
     if scenario_count == 0
