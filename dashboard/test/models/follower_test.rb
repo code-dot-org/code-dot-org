@@ -2,24 +2,23 @@ require 'test_helper'
 
 class FollowerTest < ActiveSupport::TestCase
   setup do
-    # TODO: Put this in test_helper.
-    @laurel = create(:teacher)
-    @laurel_section_1 = create(:section, user: @laurel)
-    @laurel_section_2 = create(:section, user: @laurel)
-
-    # add a few students to a section
-    create(:follower, section: @laurel_section_1)
-    create(:follower, section: @laurel_section_1)
-
-    @chris = create(:teacher)
-    @chris_section = create(:section, user: @chris)
-
-    # student without section or teacher
-    @student = create(:user)
+    @teacher = create(:teacher)
+    @student = create(:student)
+    @section = create(:section, user: @teacher)
   end
 
-  test "cannot follow yourself" do
-    follower = Follower.create(user_id: @laurel.id, student_user_id: @laurel.id, section: @laurel_section_1)
+  test 'cannot follow yourself' do
+    follower = Follower.create(
+      user_id: @teacher.id, student_user_id: @teacher.id, section: @section)
     assert !follower.valid?
+  end
+
+  test 'deleted followers are soft-deleted' do
+    follower = Follower.create(
+      user_id: @teacher.id, student_user_id: @student.id, section: @section)
+    follower.destroy
+
+    assert_equal 0, Follower.count
+    assert_equal 1, Follower.with_deleted.count
   end
 end
