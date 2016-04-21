@@ -4,12 +4,12 @@
 var _ = require('../../lodash');
 var actions = require('../actions');
 var animationsApi = require('../../clientApi').animations;
-var animationTabActions = require('./actions');
 var color = require('../../color');
 var connect = require('react-redux').connect;
 var ListItemButtons = require('./ListItemButtons');
 var ListItemThumbnail = require('./ListItemThumbnail');
 var Radium = require('radium');
+var selectAnimation = require('./animationTabModule').actions.selectAnimation;
 
 var styles = {
   tile: {
@@ -137,7 +137,7 @@ module.exports = connect(function propsFromStore(state) {
       dispatch(actions.deleteAnimation(animationKey));
     },
     selectAnimation: function (animationKey) {
-      dispatch(animationTabActions.selectAnimation(animationKey));
+      dispatch(selectAnimation(animationKey));
     },
     setAnimationName: function (animationKey, newName) {
       dispatch(actions.setAnimationName(animationKey, newName));

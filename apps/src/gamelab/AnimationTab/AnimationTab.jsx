@@ -1,11 +1,9 @@
 /** @file Root of the animation editor interface mode for GameLab */
 'use strict';
 
-var actions = require('./actions');
 var FrameList = require('./FrameList');
 var AnimationPicker = require('../AnimationPicker/AnimationPicker');
 var AnimationList = require('./AnimationList');
-var connect = require('react-redux').connect;
 var GameLabVisualizationHeader = require('../GameLabVisualizationHeader');
 var ResizablePanes = require('./ResizablePanes');
 
@@ -67,9 +65,4 @@ var AnimationTab = React.createClass({
     );
   }
 });
-
-module.exports = connect(function propsFromStore(state) {
-  return {};
-}, function propsFromDispatch(dispatch) {
-  return {};
-})(AnimationTab);
+module.exports = AnimationTab;
