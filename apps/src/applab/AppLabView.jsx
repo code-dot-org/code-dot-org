@@ -4,6 +4,7 @@
 var _ = require('../lodash');
 var connect = require('react-redux').connect;
 var actions = require('./actions');
+var instructions = require('./instructions');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper');
@@ -195,10 +196,10 @@ module.exports = connect(function propsFromStore(state) {
 }, function propsFromDispatch(dispatch) {
   return {
     setInstructionsHeight: function (height) {
-      dispatch(actions.setInstructionsHeight(height));
+      dispatch(instructions.setInstructionsHeight(height));
     },
     setInstructionsMaxHeight: function (maxHeight) {
-      dispatch(actions.setInstructionsMaxHeight(maxHeight));
+      dispatch(instructions.setInstructionsMaxHeight(maxHeight));
     }
   };
 }
