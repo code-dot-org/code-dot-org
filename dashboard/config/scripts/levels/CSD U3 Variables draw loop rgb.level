@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-04-11T15:01:39.000Z",
+  "created_at": "2016-04-21T19:00:59.000Z",
   "level_num": "custom",
   "user_id": 106,
   "properties": {
@@ -29,8 +29,9 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Random Values and the Draw Loop\r\n\r\nIn the last level you should have **made a prediction** about the difference between two programs. They are both available here, with the second one commented out.\r\n\r\n# Do This\r\n\r\n* Run the first program\r\n* **Comment out** the first program and **uncomment** the second program\r\n* Run the second program\r\n* **Compare what you observed to your prediction. Discuss the results with a neighbor**",
-    "start_blocks": "// Run this program. Then comment it out,\r\n// uncomment the program below and run that\r\n// one to compare.\r\n\r\nvar size = randomNumber(10,30);\r\nfunction draw(){\r\n  background(\"white\");\r\n  rect(200,200,size,size);\r\n}\r\n\r\n/*\r\nvar size;\r\nfunction draw(){\r\n  background(\"white\");\r\n  size = randomNumber(10,30);\r\n  rect(200,200,size,size);\r\n}\r\n*/",
+    "instructions": "Assign the variables x1 and y1 random values inside the draw loop and use them to control where the square is drawn.",
+    "markdown_instructions": "# Using variables in the draw loop\r\n\r\nNow try randomizing the `red`, `green`, and `blue` variables. Try setting their values to random numbers **before the draw loop** or **inside the draw loop** like you did with `x1` and `y1` in the previous level.  \r\n\r\n# Do This\r\n\r\n* Randomize the values of `red`, `green`, and `blue`, changing some **before the draw loop** and some **inside the draw loop**\r\n* Find a visual effect you really like and share with a neighbor before moving on",
+    "start_blocks": "var x1;\r\nvar y1;\r\nvar red = 100;\r\nvar green = 200;\r\nvar blue = 50;\r\nvar size;\r\n\r\nnoStroke();\r\n\r\nfunction draw(){\r\n  //assign x1 and y1 random values here\r\n  size = randomNumber(0,30);\r\n  \r\n  //Update the ellipse commands to use your\r\n  //randomly generated values of x1 and y1\r\n  //rather than just 200, 200\r\n  fill(red,green,blue,50);\r\n  ellipse(200,200,50,50);\r\n  fill(red,green,blue,100);\r\n  ellipse(200,200,size,size);\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -51,9 +52,8 @@
     "free_play": "true",
     "text_mode_at_start": "false",
     "submittable": "false",
-    "hide_view_data_button": "true",
-    "debugger_disabled": "false",
-    "instructions": "Test your predictions from the last level."
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false"
   },
   "published": true,
   "notes": "",
