@@ -177,7 +177,7 @@ namespace :build do
   tasks << :pegasus if CDO.build_pegasus
   tasks << :start_varnish if CDO.build_dashboard || CDO.build_pegasus
   task :all => tasks
-
 end
+
 desc 'Builds everything.'
 task :build => ['build:all']
