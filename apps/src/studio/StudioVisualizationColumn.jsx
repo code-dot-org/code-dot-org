@@ -10,9 +10,6 @@ var StudioVisualizationColumn = function (props) {
     <span>
       <ProtectedStatefulDiv id="visualization">
         <svg version="1.1" id="svgStudio"/>
-        <div id="capacityBubble">
-          <div id="capacity"/>
-        </div>
       </ProtectedStatefulDiv>
       <GameButtons hideRunButton={false}>
         <ArrowButtons/>
