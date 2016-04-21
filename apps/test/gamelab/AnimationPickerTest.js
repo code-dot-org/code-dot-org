@@ -1,10 +1,10 @@
-var AnimationPicker = require('@cdo/apps/gamelab/AnimationPicker/AnimationPicker');
+var animationPickerModule = require('@cdo/apps/gamelab/AnimationPicker/animationPickerModule');
 var expect = require('chai').expect;
-var Goal = AnimationPicker.Goal;
+var Goal = animationPickerModule.Goal;
 
 describe('AnimationPicker', function () {
   describe('reducer', function () {
-    var reducer = AnimationPicker.reducer;
+    var reducer = animationPickerModule.reducer;
     var initialState = {
       visible: false,
       goal: null,
@@ -23,7 +23,7 @@ describe('AnimationPicker', function () {
     });
 
     describe('action: show', function () {
-      var show = AnimationPicker.actions.show;
+      var show = animationPickerModule.actions.show;
 
       it('sets state to visible if state was not visible', function () {
         var state = {};
@@ -52,7 +52,7 @@ describe('AnimationPicker', function () {
     });
 
     describe('action: hide', function () {
-      var hide = AnimationPicker.actions.hide;
+      var hide = animationPickerModule.actions.hide;
 
       it('sets state to not visible if state was visible', function () {
         var state = { visible: true };
@@ -70,7 +70,7 @@ describe('AnimationPicker', function () {
     });
 
     describe('action: beginUpload', function () {
-      var beginUpload = AnimationPicker.actions.beginUpload;
+      var beginUpload = animationPickerModule.actions.beginUpload;
 
       it('sets uploadInProgress', function () {
         var newState = reducer(initialState, beginUpload('filename.png'));
@@ -87,7 +87,7 @@ describe('AnimationPicker', function () {
     });
 
     describe('action: handleUploadError', function () {
-      var handleUploadError = AnimationPicker.actions.handleUploadError;
+      var handleUploadError = animationPickerModule.actions.handleUploadError;
 
       it('unsets uploadInProgress', function () {
         var state = { uploadInProgress: true };

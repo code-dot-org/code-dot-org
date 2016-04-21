@@ -3,7 +3,7 @@
 
 var actions = require('./actions');
 var FrameList = require('./FrameList');
-var ConnectedAnimationPicker = require('../AnimationPicker/AnimationPicker').ConnectedAnimationPicker;
+var AnimationPicker = require('../AnimationPicker/AnimationPicker');
 var AnimationList = require('./AnimationList');
 var connect = require('react-redux').connect;
 var GameLabVisualizationHeader = require('../GameLabVisualizationHeader');
@@ -62,7 +62,7 @@ var AnimationTab = React.createClass({
             </div>
           </div>
         </ResizablePanes>
-        <ConnectedAnimationPicker channelId={this.props.channelId}/>
+        <AnimationPicker channelId={this.props.channelId}/>
       </div>
     );
   }
