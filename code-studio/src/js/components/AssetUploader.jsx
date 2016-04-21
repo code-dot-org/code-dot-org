@@ -6,7 +6,7 @@ var AssetUploader = React.createClass({
     onUploadStart: React.PropTypes.func.isRequired,
     onUploadDone: React.PropTypes.func.isRequired,
     channelId: React.PropTypes.string.isRequired,
-    typeFilter: React.PropTypes.string,
+    allowedExtensions: React.PropTypes.string,
     uploadsEnabled: React.PropTypes.bool.isRequired
   },
 
@@ -46,14 +46,15 @@ var AssetUploader = React.createClass({
 
   render: function () {
     // NOTE: IE9 will ignore accept, which means on this browser we can end
-    // up uploading files that dont match typeFilter
+    // up uploading files that don't match allowedExtensions. These will be
+    // rejected by the files_api with "415 Unsupported Media Type".
     return (
       <span>
         <input
             ref="uploader"
             type="file"
             style={{display: 'none'}}
-            accept={(this.props.typeFilter || '*') + '/*'}/>
+            accept={(this.props.allowedExtensions || '*')}/>
         <button
             onClick={this.fileUploadClicked}
             className="share"

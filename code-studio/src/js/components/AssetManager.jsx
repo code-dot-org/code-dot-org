@@ -24,7 +24,7 @@ function getErrorMessage(status) {
 var AssetManager = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func,
-    typeFilter: React.PropTypes.string,
+    allowedExtensions: React.PropTypes.string,
     channelId: React.PropTypes.string.isRequired,
     uploadsEnabled: React.PropTypes.bool.isRequired
   },
@@ -49,7 +49,7 @@ var AssetManager = React.createClass({
   onAssetListReceived: function (xhr) {
     assetListStore.reset(JSON.parse(xhr.responseText));
     if (this.isMounted()) {
-      this.setState({assets: assetListStore.list(this.props.typeFilter)});
+      this.setState({assets: assetListStore.list(this.props.allowedExtensions)});
     }
   },
 
@@ -73,7 +73,7 @@ var AssetManager = React.createClass({
   onUploadDone: function (result) {
     assetListStore.add(result);
     this.setState({
-      assets: assetListStore.list(this.props.typeFilter),
+      assets: assetListStore.list(this.props.allowedExtensions),
       statusMessage: 'File "' + result.filename + '" successfully uploaded!'
     });
   },
@@ -94,7 +94,7 @@ var AssetManager = React.createClass({
     var uploadButton = <div>
       <AssetUploader
         uploadsEnabled={this.props.uploadsEnabled}
-        typeFilter={this.props.typeFilter}
+        allowedExtensions={this.props.allowedExtensions}
         channelId={this.props.channelId}
         onUploadStart={this.onUploadStart}
         onUploadDone={this.onUploadDone}
@@ -107,7 +107,7 @@ var AssetManager = React.createClass({
     var assetList;
     // If `this.state.assets` is null, the asset list is still loading. If it's
     // empty, the asset list has loaded and there are no assets in the current
-    // channel (matching the `typeFilter`, if one was provided).
+    // channel (matching the `allowedExtensions`, if any were provided).
     if (this.state.assets === null) {
       assetList = (
         <div style={{margin: '1em 0', textAlign: 'center'}}>

@@ -163,7 +163,11 @@ class FilesApi < Sinatra::Base
     quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
 
-    category = mime_type.split('/').first
+    if mime_type == 'application/pdf'
+      category = 'pdf'
+    else
+      category = mime_type.split('/').first
+    end
     {filename: filename, category: category, size: body.length, versionId: response.version_id}.to_json
   end
 
