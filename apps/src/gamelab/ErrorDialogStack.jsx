@@ -1,6 +1,7 @@
 /** @file Renders error dialogs in sequence, given a stack of errors */
 'use strict';
 
+var connect = require('react-redux').connect;
 var Dialog = require('../templates/DialogComponent.jsx');
 
 /**
@@ -26,44 +27,34 @@ var ErrorDialogStack = React.createClass({
 });
 module.exports = ErrorDialogStack;
 
-/** @enum {string} */
-var ActionType = module.exports.ActionType = {
-  'REPORT_ERROR': 'REPORT_ERROR',
-  'DISMISS_ERROR': 'DISMISS_ERROR'
-};
+/** Provide a connected version for general use. */
+ErrorDialogStack.ConnectedErrorDialogStack = connect(
+  function propsFromStore(state) {
+    return {
+      errors: state.errorDialogStack
+    }
+  },
+  function propsFromDispatch(dispatch) {
+    return {
+      dismissError: function () {
+        dispatch(ErrorDialogStack.actions.dismissError())
+      }
+    }
+  }
+)(ErrorDialogStack);
 
-module.exports.actions = {};
+ErrorDialogStack.actions = {};
+var REPORT_ERROR = 'ErrorDialogStack/REPORT_ERROR';
+var DISMISS_ERROR = 'ErrorDialogStack/DISMISS_ERROR';
 
-/**
- * Push an error onto the stack, for immediate display.
- * @param {!string} message
- * @returns {{type: ActionType, message: string}}
- */
-module.exports.actions.reportError = function (message) {
-  return {
-    type: ActionType.REPORT_ERROR,
-    message: message
-  };
-};
-
-/**
- * Remove the top (first) error from the stack.
- * @returns {{type: ActionType}}
- */
-module.exports.actions.dismissError = function () {
-  return {
-    type: ActionType.DISMISS_ERROR
-  };
-};
-
-module.exports.reducer = function errorDialogStack(state, action) {
+ErrorDialogStack.reducer = function errorDialogStack(state, action) {
   state = state || [];
   switch (action.type) {
-    case ActionType.REPORT_ERROR:
+    case REPORT_ERROR:
       return [{
         message: action.message
       }].concat(state);
-    case ActionType.DISMISS_ERROR:
+    case DISMISS_ERROR:
       if (state.length > 0) {
         return state.slice(1);
       }
@@ -71,4 +62,26 @@ module.exports.reducer = function errorDialogStack(state, action) {
     default:
       return state;
   }
+};
+
+/**
+ * Push an error onto the stack, for immediate display.
+ * @param {!string} message
+ * @returns {{type: string, message: string}}
+ */
+ErrorDialogStack.actions.reportError = function (message) {
+  return {
+    type: REPORT_ERROR,
+    message: message
+  };
+};
+
+/**
+ * Remove the top (first) error from the stack.
+ * @returns {{type: string}}
+ */
+ErrorDialogStack.actions.dismissError = function () {
+  return {
+    type: DISMISS_ERROR
+  };
 };
