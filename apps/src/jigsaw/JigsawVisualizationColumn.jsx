@@ -5,7 +5,7 @@ var BelowVisualization = require('../templates/BelowVisualization');
  * For jigsaw, this all ends up being hidden, but StudioApp still has expectation
  * about certain elements existing
  */
-var JigsawVisualizationColumn = function (props) {
+var JigsawVisualizationColumn = function () {
   return (
     <span>
       <div id="visualization">
@@ -14,9 +14,6 @@ var JigsawVisualizationColumn = function (props) {
       <BelowVisualization/>
     </span>
   );
-};
-
-JigsawVisualizationColumn.propTypes = {
 };
 
 module.exports = JigsawVisualizationColumn;
