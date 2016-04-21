@@ -497,6 +497,10 @@ SQL
     Activity.where(user_id: self.id, level_id: level.id).order('id desc').first
   end
 
+  def last_attempt_for_any(levels)
+    Activity.where(user_id: self.id, level_id: levels.map(&:id)).order('id desc').first
+  end
+
   def average_student_trophies
     User.connection.select_value(<<SQL)
 select coalesce(avg(num), 0)

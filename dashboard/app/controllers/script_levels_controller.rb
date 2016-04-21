@@ -199,9 +199,28 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
+  def select_level
+    # If there's only one level in this scriptlevel, use that
+    return @script_level.levels[0] if @script_level.levels.length == 1
+
+    # If they've tried at least one level before, use the most recently attempted
+    last_attempt = @user.last_attempt_for_any(@script_level.levels)
+    return last_attempt.level if last_attempt
+
+    # Otherwise return the active level with the lowest id. Active defaults to true
+    return @script_level.levels.min_by(&:id) unless @script_level.properties
+
+    properties = JSON.parse(@script_level.properties)
+    @script_level.levels.sort_by(&:id).each do |level|
+      return level unless properties[level.name] && properties[level.name]['active'] == false
+    end
+
+    raise "No active levels found for scriptlevel #{@script_level.id}"
+  end
+
   def present_level
     # All database look-ups should have already been cached by Script::script_cache_from_db
-    @level = @script_level.level
+    @level = select_level
     @game = @level.game
     @stage = @script_level.stage
 

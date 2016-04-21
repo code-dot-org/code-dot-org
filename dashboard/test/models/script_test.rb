@@ -47,10 +47,10 @@ class ScriptTest < ActiveSupport::TestCase
     script_id = scripts[0].script_levels[4].script_id
     script_level_id = scripts[0].script_levels[4].id
 
-    parsed_script = ScriptDSL.parse_file(@script_file)[0][:stages].map{|stage| stage[:levels]}.flatten
+    parsed_script = ScriptDSL.parse_file(@script_file)[0][:stages].map{|stage| stage[:scriptlevels]}.flatten
 
     # Set different level name in tested script
-    parsed_script[4]['name'] = "Level 1"
+    parsed_script[4][:levels][0]['name'] = "Level 1"
 
     # Set different 'trophies' and 'hidden' options from defaults in Script.setup
     options = {name: File.basename(@script_file, ".script"), trophies: true, hidden: false}
@@ -201,7 +201,7 @@ class ScriptTest < ActiveSupport::TestCase
                      "stage 'Stage1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename')
 
     script = Script.add_script({name: 'test script'},
-                               script_data[:stages].map{|stage| stage[:levels]}.flatten)
+                               script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
 
     assert_equal 'Studio', script.script_levels[1].level.game.name
     assert_equal '100', script.script_levels[1].level.level_num

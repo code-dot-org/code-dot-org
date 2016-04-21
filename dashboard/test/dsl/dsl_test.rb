@@ -22,17 +22,32 @@ class DslTest < ActiveSupport::TestCase
         stages: [
           {
               stage: 'Stage1',
-              levels: [
-                  {name: 'Level 1', stage: 'Stage1'},
-                  {name: 'Level 2', stage: 'Stage1'},
-                  {name: 'Level 3', stage: 'Stage1'}
+              scriptlevels: [
+                  {
+                      levels: [{name: 'Level 1'}],
+                      stage: 'Stage1'
+                  },
+                  {
+                      levels: [{name: 'Level 2'}],
+                      stage: 'Stage1'
+                  },
+                  {
+                      levels: [{name: 'Level 3'}],
+                      stage: 'Stage1'
+                  }
               ]
           },
           {
               stage: 'Stage2',
-              levels: [
-                  {name: 'Level 4', stage: 'Stage2'},
-                  {name: 'Level 5', stage: 'Stage2'}
+              scriptlevels: [
+                  {
+                      levels: [{name: 'Level 4'}],
+                      stage: 'Stage2'
+                  },
+                  {
+                      levels: [{name: 'Level 5'}],
+                      stage: 'Stage2'
+                  }
               ]
           }
         ],
@@ -139,6 +154,34 @@ class DslTest < ActiveSupport::TestCase
         pd: false
     }
 
+    assert_equal expected, output
+  end
+
+  test 'test Script DSL with level variants' do
+    input_dsl = "
+stage 'Stage1'
+level 'Level 1'
+variants
+level 'Level 2a'
+active false
+level 'Level 2b'
+endvariants
+level 'Level 3'
+"
+    expected = {
+      :id=>nil,
+      :stages=>[
+        {:stage=>"Stage1", :scriptlevels=>[
+          {:levels=>[{:name=>"Level 1"}], :stage=>"Stage1"},
+          {:levels=>[{:name=>"Level 2a"},
+                     {:name=>"Level 2b"}],
+           :stage=>"Stage1",
+           :properties=>{"Level 2b"=>{:active=>false}}},
+          {:levels=>[{:name=>"Level 3"}], :stage=>"Stage1"}]}],
+      :hidden=>true, :trophies=>false, :wrapup_video=>nil,
+      :login_required=>false, admin_required: false, :pd=>false}
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
   end
 
