@@ -41,10 +41,31 @@ function animationPickerFlow(state, action) {
   }
 }
 
+function errorStack(state, action) {
+  state = state || [];
+  switch (action.type) {
+    case ActionType.REPORT_ERROR:
+      return [{
+        message: action.message
+      }].concat(state);
+    case ActionType.DISMISS_ERROR:
+      if (state.length > 0) {
+        return state.slice(1);
+      }
+      return state;
+    default:
+      return state;
+  }
+}
+
 var animationTab = combineReducers({
   animationPicker: animationPicker,
   animationPickerFlow: animationPickerFlow,
+  errorStack: errorStack,
   selectedAnimation: selectedAnimation
 });
 
-module.exports = { animationTab: animationTab };
+module.exports = {
+  animationTab: animationTab,
+  errorStack: errorStack
+};

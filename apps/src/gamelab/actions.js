@@ -4,6 +4,7 @@
 
 var _ = require('../lodash');
 var animationsApi = require('../clientApi').animations;
+var animationTabActions = require('./AnimationTab/actions');
 var utils = require('../utils');
 
 /** @enum {string} */
@@ -82,11 +83,16 @@ module.exports.cloneAnimation = function (animationKey) {
   return function (dispatch, getState) {
     var animations = getState().animations;
 
+    var onCloneError = function (errorMessage) {
+      dispatch(animationTabActions.reportError(
+          'Error copying object ' + animationKey + ': ' + errorMessage));
+    };
+
     // Track down the source animation and its index in the collection
     var sourceIndex = animations.map(function (a) { return a.key; }).indexOf(animationKey);
     if (sourceIndex < 0) {
-      throw new Error('Unable to clone animation with key "' + animationKey +
-          '": Animation not found');
+      onCloneError('Animation not found');
+      return;
     }
     var sourceAnimation = animations[sourceIndex];
     var newAnimationKey = utils.createUuid();
@@ -95,22 +101,23 @@ module.exports.cloneAnimation = function (animationKey) {
         'PUT',
         newAnimationKey + '.png?src=' + animationKey + '.png',
         function success(xhr) {
-          var response = JSON.parse(xhr.responseText);
-          console.info(response);
-          dispatch({
-            type: ActionType.ADD_ANIMATION_AT,
-            index: sourceIndex + 1,
-            animationProps: _.assign({}, sourceAnimation, {
-              key: newAnimationKey,
-              name: sourceAnimation.name + '_copy', // TODO: better generated names
-              version: response.versionId
-            })
-          });
+          try {
+            var response = JSON.parse(xhr.responseText);
+            dispatch({
+              type: ActionType.ADD_ANIMATION_AT,
+              index: sourceIndex + 1,
+              animationProps: _.assign({}, sourceAnimation, {
+                key: newAnimationKey,
+                name: sourceAnimation.name + '_copy', // TODO: better generated names
+                version: response.versionId
+              })
+            });
+          } catch (e) {
+            onCloneError(e.message);
+          }
         },
         function error(xhr) {
-          console.error('Error copying object ' + animationKey + ': ' +
-              xhr.status + ' ' + xhr.statusText);
-          // TODO: Error state for cloning animation.
+          onCloneError(xhr.status + ' ' + xhr.statusText);
         });
   };
 };
@@ -132,9 +139,9 @@ module.exports.deleteAnimation = function (animationKey) {
           });
         },
         function error(xhr) {
-          console.error('Error deleting object ' + animationKey + ': ' +
-              xhr.status + ' ' + xhr.statusText);
-          // TODO: Error state for cloning animation.
+          dispatch(animationTabActions.reportError(
+              'Error deleting object ' + animationKey + ': ' +
+              xhr.status + ' ' + xhr.statusText))
         });
   };
 };
