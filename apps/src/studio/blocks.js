@@ -790,6 +790,77 @@ exports.install = function (blockly, blockInstallOptions) {
       name: 'setSpritePosition'});
   };
 
+  blockly.Blocks.studio_addFlag = {
+    // Block for adding a flag at a specified position
+    helpUrl: '',
+    init: function () {
+      var dropdown;
+      if (allowSpritesOutsidePlayspace) {
+        dropdown = new blockly.FieldDropdown(this.VALUES_EXTENDED);
+        dropdown.setValue(this.VALUES_EXTENDED[4][1]); // default to top-left
+      } else {
+        dropdown = new blockly.FieldDropdown(this.VALUES);
+        dropdown.setValue(this.VALUES[1][1]); // default to top-left
+      }
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle('add flag');
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip('TODO write a tooltip');
+    }
+  };
+
+  // 9 possible positions in playspace (+ random):
+  blockly.Blocks.studio_addFlag.VALUES =
+      [[msg.positionRandom(), RANDOM_VALUE],
+       [msg.positionTopLeft(), Position.TOPLEFT.toString()],
+       [msg.positionTopCenter(), Position.TOPCENTER.toString()],
+       [msg.positionTopRight(), Position.TOPRIGHT.toString()],
+       [msg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
+       [msg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
+       [msg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
+       [msg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
+       [msg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
+       [msg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]];
+
+  // Still a slightly reduced set of 17 out of 25 possible positions (+ random):
+  blockly.Blocks.studio_addFlag.VALUES_EXTENDED =
+      [[msg.positionRandom(), RANDOM_VALUE],
+       [msg.positionOutTopLeft(), Position.OUTTOPLEFT.toString()],
+       [msg.positionOutTopRight(), Position.OUTTOPRIGHT.toString()],
+       [msg.positionTopOutLeft(), Position.TOPOUTLEFT.toString()],
+       [msg.positionTopLeft(), Position.TOPLEFT.toString()],
+       [msg.positionTopCenter(), Position.TOPCENTER.toString()],
+       [msg.positionTopRight(), Position.TOPRIGHT.toString()],
+       [msg.positionTopOutRight(), Position.TOPOUTRIGHT.toString()],
+       [msg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
+       [msg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
+       [msg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
+       [msg.positionBottomOutLeft(), Position.BOTTOMOUTLEFT.toString()],
+       [msg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
+       [msg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
+       [msg.positionBottomRight(), Position.BOTTOMRIGHT.toString()],
+       [msg.positionBottomOutRight(), Position.BOTTOMOUTRIGHT.toString()],
+       [msg.positionOutBottomLeft(), Position.OUTBOTTOMLEFT.toString()],
+       [msg.positionOutBottomRight(), Position.OUTBOTTOMRIGHT.toString()]];
+
+  generator.studio_addFlag = function () {
+    var value = this.getTitleValue('VALUE');
+    if (value === RANDOM_VALUE) {
+      var possibleValues =
+        _(this.VALUES)
+          .map(function (item) { return item[1]; })
+          .without(RANDOM_VALUE, HIDDEN_VALUE, CLICK_VALUE);
+      value = 'Studio.random([' + possibleValues + '])';
+    }
+    return 'Studio.addFlag(\'block_id_' + this.id + '\', ' + value + ');\n';
+  };
+
+
   blockly.Blocks.studio_setSpriteXY = {
     // Block for jumping a sprite to specific XY location.
     helpUrl: '',

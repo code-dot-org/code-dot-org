@@ -91,6 +91,12 @@ exports.setSpritePosition = function (id, spriteIndex, value) {
   });
 };
 
+exports.addFlag = function (id, value) {
+  Studio.queueCmd(id, 'addFlag', {
+    'value': Number(value)
+  });
+};
+
 exports.setSpriteXY = function (id, spriteIndex, xpos, ypos) {
   Studio.queueCmd(id, 'setSpriteXY', {
     'spriteIndex': spriteIndex,
