@@ -5,7 +5,7 @@ var ICON_PREFIX = require('@cdo/apps/applab/constants').ICON_PREFIX;
 
 var extensionFilter = {
   image: '.jpg, .jpeg, .gif, .png',
-  sound: '.mp3',
+  audio: '.mp3',
   document: '.jpg, .jpeg, .gif, .png, .pdf'
 };
 
@@ -67,7 +67,8 @@ var ImagePicker = React.createClass({
       <p className="dialog-title">Choose Assets</p> :
       <p className="dialog-title">Manage Assets</p>;
 
-    if (this.props.assetChosen) {
+    var imageTypeFilter = !this.props.typeFilter || this.props.typeFilter === 'image';
+    if (this.props.assetChosen && imageTypeFilter) {
       modeSwitch = <div>
         <p onClick={this.setFileMode} style={styles.fileModeToggle}>My Files</p>
         <p onClick={this.setIconMode} style={styles.iconModeToggle}>Icons</p>
