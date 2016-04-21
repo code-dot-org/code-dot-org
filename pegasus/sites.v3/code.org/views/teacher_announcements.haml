@@ -1,5 +1,4 @@
-- cta_url = "http://teacherblog.code.org/post/142713594479/new-feature-move-your-students-to-another-section"
-- second_cta = CDO.code_org_url("/educate/professional-learning/exploring-cs")
+- cta_url = CDO.code_org_url("/curriculum/unplugged")
 
 %div.teacher-announce
   %a.announce-heading-link{:href=>"http://teacherblog.code.org/"}
@@ -11,18 +10,9 @@
   %div.announce-content
     %a{:href=>cta_url}
       %div.content-img-container
-        %img.content-img{:src=>"/images/fit-300/teacher-dashboard/student.jpg"}
+        %img.content-img{:src=>"/images/fill-300x200/teacher-dashboard/unplugged.png"}
     %div.content-text
       = I18n.t(:dashboard_announce_message)
     %div{style: "float: right; margin-top: 25px;"}
       %a{:href=>cta_url}
         %button= I18n.t(:dashboard_announce_button_text)
-  %div.announce-content
-    %a{:href=>second_cta}
-      %div.content-img-container
-        %img.content-img{:src=>"/images/fit-300/teacher-dashboard/ecs-teacher.jpg"}
-    %div.content-text
-      = I18n.t(:dashboard_announce_message_second)
-  %div.announce-learn-more
-    %a{:href=>second_cta}
-      %button= I18n.t(:dashboard_announce_button_text)
