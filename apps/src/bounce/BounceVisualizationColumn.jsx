@@ -10,9 +10,6 @@ var BounceVisualizationColumn = function (props) {
     <span>
       <div id="visualization">
         <svg version="1.1" id="svgBounce"/>
-        <div id="capacityBubble">
-          <div id="capacity"/>
-        </div>
       </div>
       <GameButtons hideRunButton={false}>
         <ArrowButtons/>
