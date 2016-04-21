@@ -2,7 +2,7 @@ var assets = [];
 
 module.exports = {
   reset: function (list) {
-    assets = list.slice();
+    return assets = list.slice();
   },
 
   add: function (asset) {
