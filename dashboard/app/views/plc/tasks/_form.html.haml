@@ -11,7 +11,8 @@
     = f.text_field :name
     = f.label :learning_module_id
     - options = options_for_plc_task_learning_modules
-    = f.select :plc_learning_module_ids, options_for_select(options, @task.plc_learning_modules.map(&:id)), {}, {multiple: true, size: [options.size, 25].min, style: 'width: 100%'}
+    = f.select :plc_learning_module_ids, options_for_select(options, @task.plc_learning_modules.map(&:id)), {},
+      {multiple: true, size: learning_module_option_size(options), style: 'width: 100%'}
     = f.label :type
     = f.select :type, options_for_select(options_for_plc_tasks, @task.type)
 
