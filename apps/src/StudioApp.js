@@ -24,7 +24,6 @@ var DialogButtons = require('./templates/DialogButtons');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
-var assetListStore = require('./assetManagement/assetListStore');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var copyrightStrings;
@@ -282,7 +281,7 @@ StudioApp.prototype.init = function (config) {
 
     // Pre-populate asset list
     assetsApi.ajax('GET', '', function (xhr) {
-      assetListStore.reset(JSON.parse(xhr.responseText));
+      dashboard.assets.listStore.reset(JSON.parse(xhr.responseText));
     }, function () {
       // Unable to load asset list
     });

@@ -34,7 +34,7 @@ var ImagePicker = React.createClass({
     var isFileMode = this.state.mode === 'files';
     var styles = {
       root: {
-        margin: "0 0 0 -10px"
+        margin: "0 0 0 5px"
       },
       fileModeToggle: {
         float: 'left',

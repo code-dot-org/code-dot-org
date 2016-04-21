@@ -1,7 +1,7 @@
 var assetsApi = require('@cdo/apps/clientApi').assets;
 var AssetRow = require('./AssetRow');
 var AssetUploader = require('./AssetUploader');
-var assetListStore = require('@cdo/apps/assetManagement/assetListStore');
+var assetListStore = require('../assets/assetListStore');
 
 var errorMessages = {
   403: 'Quota exceeded. Please delete some files and try again.',
