@@ -1,15 +1,23 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-01-26T20:31:53.000Z",
+  "created_at": "2016-04-20T19:28:30.785Z",
   "level_num": "custom",
-  "user_id": 4,
+  "user_id": 155,
   "properties": {
     "skin": "gamelab",
+    "code_functions": {
+      "drawSprites": null,
+      "var sprite = createSprite": null,
+      "background": null,
+      "x": null,
+      "y": null,
+      "sprite.height": null,
+      "sprite.width": null
+    },
     "edit_code": true,
     "embed": "false",
     "is_k1": "false",
-    "is_project_level": "true",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -30,8 +38,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
-    "start_blocks": "function draw() {\r\n  \r\n}\r\n"
+    "debugger_disabled": "false"
   },
   "published": true,
   "notes": "",
