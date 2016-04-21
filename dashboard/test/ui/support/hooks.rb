@@ -13,7 +13,7 @@ After('@stop_after_failure') do |scenario|
 end
 
 Before('@as_student') do
-  steps 'Given I create a student named "TestStudent"'
+  steps 'Given I manually sign in as "TestStudent"'
 end
 
 After('@as_student') do
