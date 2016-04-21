@@ -198,6 +198,7 @@ class Studio < Grid
     </value>
   </block>
   <block type="studio_setSpritePosition" />
+  <block type="studio_addFlag" />
   <block type="studio_setSpriteXY" inline="true">
     <value name="XPOS">
       <block type="math_number">
