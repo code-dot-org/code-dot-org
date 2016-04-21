@@ -10,7 +10,7 @@ var ActionType = module.exports.ActionType = utils.makeEnum(
 );
 
 /**
- * Select an animation in the animation sequence list.
+ * Select an animation in the animation list.
  * @param {!string} animationKey
  * @returns {{type: ActionType, animationFilename: string}}
  */

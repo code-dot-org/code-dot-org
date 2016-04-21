@@ -1,4 +1,4 @@
-/** A single list item representing an animation sequence. */
+/** A single list item representing an animation. */
 'use strict';
 
 var _ = require('../../lodash');
@@ -61,9 +61,9 @@ var styles = {
 };
 
 /**
- * A single list item representing an animation sequence.  Displays an
- * animated thumbnail of the sequence, along with the sequence name and
- * (if currently selected) controls for deleting or duplicating the sequence.
+ * A single list item representing an animation.  Displays an animated 
+ * thumbnail, along with the animation name and (if currently selected)
+ * controls for deleting or duplicating the animation.
  */
 var AnimationListItem = React.createClass({
   propTypes: {
@@ -92,9 +92,9 @@ var AnimationListItem = React.createClass({
   },
 
   render: function () {
-    var sequenceName;
+    var animationName;
     if (this.props.isSelected) {
-      sequenceName = (
+      animationName = (
         <div style={styles.nameInputWrapper}>
           <input
               type="text"
@@ -104,7 +104,7 @@ var AnimationListItem = React.createClass({
         </div>
       );
     } else {
-      sequenceName = <div style={styles.nameLabel}>{this.props.animation.name}</div>;
+      animationName = <div style={styles.nameLabel}>{this.props.animation.name}</div>;
     }
 
     var tileStyle = [
@@ -118,7 +118,7 @@ var AnimationListItem = React.createClass({
         <ListItemThumbnail
             isSelected={this.props.isSelected}
             src={animationsApi.basePath(this.props.animation.key + '.png')} />
-        {sequenceName}
+        {animationName}
         {this.props.isSelected && <ListItemButtons
             onCloneClick={this.cloneAnimation}
             onDeleteClick={this.deleteAnimation} />}
