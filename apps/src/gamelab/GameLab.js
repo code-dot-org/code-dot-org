@@ -160,7 +160,7 @@ GameLab.prototype.init = function (config) {
   var onMount = function () {
     config.loadAudio = this.loadAudio_.bind(this);
     config.afterInject = this.afterInject_.bind(this, config);
-    config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);
+    config.afterEditorReady = this.afterEditorReady_.bind(this, true);
 
     // Store p5specialFunctions in the unusedConfig array so we don't give warnings
     // about these functions not being called:
@@ -185,11 +185,7 @@ GameLab.prototype.init = function (config) {
   }));
 
   var showFinishButton = !this.level.isProjectLevel;
-  var areBreakpointsEnabled = true;
-  var firstControlsRow = require('./controls.html.ejs')({
-    assetUrl: this.studioApp_.assetUrl,
-    finishButton: showFinishButton
-  });
+  var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
   var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
     showButtons: true,
     showConsole: true,
