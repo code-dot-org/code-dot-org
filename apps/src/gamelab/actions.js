@@ -56,7 +56,7 @@ module.exports.setInitialLevelProps = function (props) {
 /**
  * Push full animation metadata into the store, usually on first load
  * from the sources API.
- * 
+ *
  * @param {Object} metadata
  * @returns {{type: ActionType, metadata: Object}}
  */
@@ -64,24 +64,24 @@ module.exports.setInitialAnimationMetadata = function (metadata) {
   return {
     type: ActionType.SET_INITIAL_ANIMATION_METADATA,
     metadata: metadata
-  }
+  };
 };
 
 module.exports.addAnimation = function (animationProps) {
   // TODO: Validate animationProps?
-  return function(dispatch, getState) {
+  return function (dispatch, getState) {
     dispatch({
       type: ActionType.ADD_ANIMATION_AT,
       index: getState().animations.length,
       animationProps: animationProps
     });
-  }
+  };
 };
 
 module.exports.cloneAnimation = function (animationKey) {
-  return function(dispatch, getState) {
+  return function (dispatch, getState) {
     var animations = getState().animations;
-    
+
     // Track down the source animation and its index in the collection
     var sourceIndex = animations.map(function (a) { return a.key; }).indexOf(animationKey);
     if (sourceIndex < 0) {

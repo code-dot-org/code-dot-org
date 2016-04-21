@@ -21,7 +21,7 @@ var AnimationPickerDestination = module.exports.AnimationPickerDestination = uti
 module.exports.beginPickingAnimation = function () {
   return {
     type: ActionType.BEGIN_PICKING_ANIMATION,
-    destination: AnimationPickerDestination.NEW_ANIMATION 
+    destination: AnimationPickerDestination.NEW_ANIMATION
   };
 };
 
@@ -38,15 +38,15 @@ module.exports.finishPickingAnimation = function (result) {
     } else if (destination === AnimationPickerDestination.ADD_FRAMES) {
       // TODO (bbuchanan): Implement after integrating Piskel
     }
-    
+
     dispatch({ type: ActionType.FINISH_PICKING_ANIMATION });
-  }
+  };
 };
 
 module.exports.cancelPickingAnimation = function () {
   return {
     type: ActionType.CANCEL_PICKING_ANIMATION
-  }
+  };
 };
 
 /**

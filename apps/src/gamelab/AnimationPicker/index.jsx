@@ -74,5 +74,5 @@ module.exports = connect(function propsFromStore(state) {
     onUploadError: function (status) {
       dispatch(actions.displayError(status));
     }
-  }
+  };
 })(AnimationPicker);

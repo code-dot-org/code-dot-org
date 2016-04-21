@@ -73,7 +73,7 @@ var AnimationSequenceListItem = React.createClass({
     selectAnimation: React.PropTypes.func.isRequired,
     setAnimationName: React.PropTypes.func.isRequired
   },
-  
+
   onSelect: function () {
     this.props.selectAnimation(this.props.animation.key);
   },
@@ -81,7 +81,7 @@ var AnimationSequenceListItem = React.createClass({
   cloneAnimation: function () {
     this.props.cloneAnimation(this.props.animation.key);
   },
-  
+
   deleteAnimation: function () {
     this.props.deleteAnimation(this.props.animation.key);
   },
@@ -96,7 +96,7 @@ var AnimationSequenceListItem = React.createClass({
       sequenceName = (
         <div style={styles.nameInputWrapper}>
           <input
-              type="text" 
+              type="text"
               style={styles.nameInput}
               value={this.props.animation.name}
               onChange={this.onNameChange} />
@@ -141,5 +141,5 @@ module.exports = connect(function propsFromStore(state) {
     setAnimationName: function (animationKey, newName) {
       dispatch(actions.setAnimationName(animationKey, newName));
     }
-  }
+  };
 })(Radium(AnimationSequenceListItem));

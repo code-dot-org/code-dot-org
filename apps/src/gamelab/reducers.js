@@ -68,7 +68,7 @@ function animation(state, action) {
 
 function animations(state, action) {
   state = state || [];
-  
+
   switch (action.type) {
 
     case ActionType.ADD_ANIMATION_AT:
@@ -87,7 +87,7 @@ function animations(state, action) {
 
     case ActionType.SET_ANIMATION_NAME:
       return state.map(function (animState) {
-        return animation(animState, action)
+        return animation(animState, action);
       });
 
     default:
