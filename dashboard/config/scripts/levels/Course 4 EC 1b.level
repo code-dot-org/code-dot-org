@@ -25,11 +25,13 @@
     "start_direction": "1",
     "step_mode": "1",
     "ideal": "10",
-    "step_speed": "2",
+    "step_speed": "1",
     "instructions": "No rules. No clues. Just the challenge!",
-    "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!"
+    "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!",
+    "maze_data": null
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 5,
     "repeat_until_while": 4,
