@@ -3,7 +3,7 @@
 
 var actions = require('./actions');
 var AnimationFrameList = require('./AnimationFrameList');
-var ConnectedAnimationPicker = require('../AnimationPicker/index').ConnectedAnimationPicker;
+var ConnectedAnimationPicker = require('../AnimationPicker/AnimationPicker').ConnectedAnimationPicker;
 var AnimationSequenceList = require('./AnimationSequenceList');
 var connect = require('react-redux').connect;
 var GameLabVisualizationHeader = require('../GameLabVisualizationHeader');

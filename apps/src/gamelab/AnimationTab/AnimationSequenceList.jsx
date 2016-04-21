@@ -1,7 +1,7 @@
 /** @file Vertical scrolling list of animation sequences */
 'use strict';
 
-var AnimationPicker = require('../AnimationPicker/index');
+var AnimationPicker = require('../AnimationPicker/AnimationPicker');
 var AnimationSequenceListItem = require('./AnimationSequenceListItem');
 var connect = require('react-redux').connect;
 var NewListItem = require('./NewListItem');
