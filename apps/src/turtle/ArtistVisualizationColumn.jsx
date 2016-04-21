@@ -3,6 +3,7 @@ var commonStyles = require('../commonStyles');
 
 var GameButtons = require('../templates/GameButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
+var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 
 var styles = {
   invisible: {
@@ -13,7 +14,7 @@ var styles = {
 var ArtistVisualizationColumn = function (props) {
   return (
     <span>
-      <div id="visualization"/>
+      <ProtectedStatefulDiv id="visualization"/>
       <GameButtons hideRunButton={false}>
         <div id="slider-cell">
           <svg id="slider"

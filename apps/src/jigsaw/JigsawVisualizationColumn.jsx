@@ -1,6 +1,3 @@
-var msg = require('../locale');
-var commonStyles = require('../commonStyles');
-
 var GameButtons = require('../templates/GameButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
 
