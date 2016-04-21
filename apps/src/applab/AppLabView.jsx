@@ -3,7 +3,6 @@
 
 var _ = require('../lodash');
 var connect = require('react-redux').connect;
-var actions = require('./actions');
 var instructions = require('../redux/instructions');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
@@ -157,9 +156,6 @@ var AppLabView = React.createClass({
 
   render: function () {
     var topPaneHeight = this.topPaneHeight();
-    var codeWorkspaceContainerStyle = {
-      top: topPaneHeight
-    };
 
     return (
       <ConnectedStudioAppWrapper>
