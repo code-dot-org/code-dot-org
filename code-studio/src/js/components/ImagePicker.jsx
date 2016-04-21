@@ -1,6 +1,6 @@
 var AssetManager = require('./AssetManager');
 var color = require('@cdo/apps/color');
-var IconLibrary = window.dashboard.IconLibrary;
+var IconLibrary = require('./IconLibrary');
 var ICON_PREFIX = require('@cdo/apps/applab/constants').ICON_PREFIX;
 
 var extensionFilter = {
