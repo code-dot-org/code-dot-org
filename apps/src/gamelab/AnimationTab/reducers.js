@@ -3,6 +3,7 @@
 'use strict';
 
 var ActionType = require('./actions').ActionType;
+var animationPicker = require('../AnimationPicker/reducers').animationPicker;
 var GameLabActionType = require('../actions').ActionType;
 var combineReducers = require('redux').combineReducers;
 
@@ -41,6 +42,7 @@ function animationPickerFlow(state, action) {
 }
 
 var animationTab = combineReducers({
+  animationPicker: animationPicker,
   animationPickerFlow: animationPickerFlow,
   selectedAnimation: selectedAnimation
 });
