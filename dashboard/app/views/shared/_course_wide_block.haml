@@ -79,8 +79,11 @@
         .courseblock-span4.heading
           %h3= t("upsell.#{id}.title")
           .smalltext= t("upsell.#{id}.body_short")
-        .audiencebar.smalltext.audience= t("upsell.#{id}.audience")
-        .bottombar.smalltext.trynow= t("home.try_now")
+        - if current_user
+          .audiencebar.smalltext.audience= t("upsell.#{id}.audience")
+          .bottombar.smalltext.trynow= t("home.try_now")
+        - else
+          .bottombar.smalltext.audience= t("upsell.#{id}.audience")
 
 - elsif id == Script::ARTIST_NAME || id == Script::PLAYLAB_NAME
 
