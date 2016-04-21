@@ -1,4 +1,4 @@
-var AnimationPicker = require('@cdo/apps/gamelab/AnimationPicker/index');
+var AnimationPicker = require('@cdo/apps/gamelab/AnimationPicker/AnimationPicker');
 var expect = require('chai').expect;
 var Goal = AnimationPicker.Goal;
 
