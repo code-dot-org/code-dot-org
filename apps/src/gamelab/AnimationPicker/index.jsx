@@ -3,6 +3,7 @@ var actions = require('./actions');
 var AnimationPickerBody = require('./AnimationPickerBody.jsx');
 var connect = require('react-redux').connect;
 var Dialog = require('../../templates/DialogComponent.jsx');
+var gamelabMsg = require('../locale');
 var HiddenUploader = require('../../assetManagement/HiddenUploader.jsx');
 var styles = require('./styles');
 var utils = require('../../utils');
@@ -36,9 +37,9 @@ var AnimationPicker = React.createClass({
     if (this.props.currentView === View.PICKER) {
       return <AnimationPickerBody onUploadClick={this.onUploadClick} />;
     } else if (this.props.currentView === View.UPLOAD_IN_PROGRESS) {
-      return <h1 style={styles.title}>Uploading...</h1>;
+      return <h1 style={styles.title}>{gamelabMsg.animationPicker_uploading()}</h1>;
     } else if (this.props.currentView === View.ERROR) {
-      return <h1>Error: {this.props.status}</h1>;
+      return <h1>{gamelabMsg.animationPicker_error({ message: this.props.status })}</h1>;
     }
   },
 
