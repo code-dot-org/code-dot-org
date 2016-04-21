@@ -2,7 +2,7 @@
 'use strict';
 
 var actions = require('./actions');
-var AnimationFrameList = require('./AnimationFrameList');
+var FrameList = require('./FrameList');
 var ConnectedAnimationPicker = require('../AnimationPicker/AnimationPicker').ConnectedAnimationPicker;
 var AnimationSequenceList = require('./AnimationSequenceList');
 var connect = require('react-redux').connect;
@@ -51,7 +51,7 @@ var AnimationTab = React.createClass({
             <div className="purple-header workspace-header">
               <span>Frames</span>
             </div>
-            <AnimationFrameList />
+            <FrameList />
           </div>
           <div id='editor-column'>
             <div className="purple-header workspace-header">
