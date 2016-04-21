@@ -140,28 +140,35 @@ standardConfig.blocks = [
 
 standardConfig.categories = {
   Control: {
+    id: 'control',
     color: 'blue',
     rgb: COLOR_BLUE,
     blocks: []
   },
   Math: {
+    id: 'math',
     color: 'orange',
     rgb: COLOR_ORANGE,
     blocks: []
   },
   Variables: {
+    id: 'variables',
     color: 'purple',
     rgb: COLOR_PURPLE,
     blocks: []
   },
   Functions: {
+    id: 'functions',
     color: 'green',
     rgb: COLOR_GREEN,
     blocks: []
   },
   // create blank category in case level builders want to move all blocks here
   // (which will cause the palette header to disappear)
-  '' : { 'blocks': [] },
+  '' : {
+    id: 'default',
+    blocks: []
+  },
 };
 
 /**
