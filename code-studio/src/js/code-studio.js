@@ -28,6 +28,7 @@ require('./components/send_to_phone');
 require('./components/small_footer');
 require('./components/GridEditor');
 require('./components/ImagePicker');
+require('./components/Attachments');
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748

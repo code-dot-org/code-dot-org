@@ -37,7 +37,6 @@ var AssetManager = React.createClass({
   },
 
   componentWillMount: function () {
-    // TODO: Use Dave's client api when it's finished.
     assetsApi.ajax('GET', '', this.onAssetListReceived, this.onAssetListFailure);
   },
 
