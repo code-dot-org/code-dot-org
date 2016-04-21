@@ -6,7 +6,7 @@ Scenario: Save Artist Project
   And I rotate to landscape
   And I wait to see "#runButton"
   And element "#runButton" is visible
-  And element ".project_updated_at" contains text "Saved"
+  And element ".project_updated_at" eventually contains text "Saved"
   Then I open the topmost blockly category "Brushes"
   And I drag block matching selector "#draw-color" to block matching selector "#when_run"
   Then I click selector ".project_share"
@@ -31,7 +31,7 @@ Scenario: Applab Flow
   # looks like we have add_code_to_editor
   And I wait to see "#runButton"
   And element "#runButton" is visible
-  And element ".project_updated_at" contains text "Saved"
+  And element ".project_updated_at" eventually contains text "Saved"
   And I click selector ".project_edit"
   And I type "Code Ninja" into "input.project_name"
   And I click selector ".project_save"
