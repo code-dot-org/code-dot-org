@@ -40,20 +40,30 @@ var Attachments = React.createClass({
     }
   },
 
+  showAssetManager: function () {
+    dashboard.assets.showAssetManager(null, 'document', this.setState.bind(this, {loaded: true}));
+  },
+
   render: function () {
     var attachmentList = <span style={{fontSize: '0.8em'}}>Loading...</span>;
     if (this.state.loaded) {
       attachmentList = assetListStore.list().map(function (asset) {
         var url = '/v3/assets/' + dashboard.project.getCurrentId() + '/' + asset.filename;
-        return <a style={styles.attachment} href={url}>{asset.filename}</a>;
+        return <a key={asset.filename} style={styles.attachment} href={url} target='_blank'>{asset.filename}</a>;
       });
     }
 
     return (
-      <div>
-        <input style={styles.button} className='btn btn-default' type='button' value='Add/Remove Attachments'/>
+      <span>
+        <input
+          style={styles.button}
+          className='btn btn-default'
+          type='button'
+          value='Add/Remove Attachments'
+          onClick={this.showAssetManager}
+        />
         {attachmentList}
-      </div>
+      </span>
     );
   }
 });
