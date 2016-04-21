@@ -42,7 +42,8 @@ var styles = {
     marginRight: 4,
     marginTop: 4,
     textAlign: 'center',
-    userSelect: 'none'
+    userSelect: 'none',
+    overflow: 'hidden'
   },
   nameInputWrapper: {
     marginLeft: 5,
