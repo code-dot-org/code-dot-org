@@ -185,6 +185,9 @@ GameLab.prototype.init = function (config) {
   }));
 
   var showFinishButton = !this.level.isProjectLevel;
+  var areBreakpointsEnabled = true;
+
+  var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
   var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
     showButtons: true,
