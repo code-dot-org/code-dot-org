@@ -141,7 +141,7 @@ module.exports.deleteAnimation = function (animationKey) {
         function error(xhr) {
           dispatch(reportError(
               'Error deleting object ' + animationKey + ': ' +
-              xhr.status + ' ' + xhr.statusText))
+              xhr.status + ' ' + xhr.statusText));
         });
   };
 };

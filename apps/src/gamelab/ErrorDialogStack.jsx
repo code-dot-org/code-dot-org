@@ -17,7 +17,7 @@ var ErrorDialogStack = React.createClass({
     if (this.props.errors.length === 0) {
       return null;
     }
-    
+
     return (
       <Dialog isOpen handleClose={this.props.dismissError}>
         <h1>{this.props.errors[0].message}</h1>
@@ -32,14 +32,14 @@ ErrorDialogStack.ConnectedErrorDialogStack = connect(
   function propsFromStore(state) {
     return {
       errors: state.errorDialogStack
-    }
+    };
   },
   function propsFromDispatch(dispatch) {
     return {
       dismissError: function () {
-        dispatch(ErrorDialogStack.actions.dismissError())
+        dispatch(ErrorDialogStack.actions.dismissError());
       }
-    }
+    };
   }
 )(ErrorDialogStack);
 
