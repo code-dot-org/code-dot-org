@@ -1,9 +1,9 @@
-var ErrorDialogStack = require('@cdo/apps/gamelab/ErrorDialogStack');
+var errorDialogStackModule = require('@cdo/apps/gamelab/errorDialogStackModule');
 var expect = require('chai').expect;
 
 describe('ErrorDialogStack', function () {
   describe('reducer', function () {
-    var reducer = ErrorDialogStack.reducer;
+    var reducer = errorDialogStackModule.reducer;
 
     it('has empty array as default state', function () {
       expect(reducer(undefined, {})).to.deep.equal([]);
@@ -15,7 +15,7 @@ describe('ErrorDialogStack', function () {
     });
 
     describe('action: reportError', function () {
-      var reportError = ErrorDialogStack.actions.reportError;
+      var reportError = errorDialogStackModule.actions.reportError;
 
       it('pushes an error object onto the stack', function () {
         var state = [];
@@ -38,7 +38,7 @@ describe('ErrorDialogStack', function () {
     });
 
     describe('action: DISMISS_ERROR', function () {
-      var dismissError = ErrorDialogStack.actions.dismissError;
+      var dismissError = errorDialogStackModule.actions.dismissError;
 
       it('removes the first error object from the stack', function () {
         var state = [

@@ -4,7 +4,7 @@
 
 var _ = require('../lodash');
 var animationsApi = require('../clientApi').animations;
-var reportError = require('./ErrorDialogStack').actions.reportError;
+var reportError = require('./errorDialogStackModule').actions.reportError;
 var utils = require('../utils');
 
 /** @enum {string} */
