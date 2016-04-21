@@ -23,7 +23,7 @@ var staticStyles = {
  * with the frame index overlaid, and if selected also shows controls for
  * deleting or duplicating the frame.
  */
-var AnimationFrameListItem = React.createClass({
+var FrameListItem = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
     index: React.PropTypes.number.isRequired,
@@ -52,4 +52,4 @@ module.exports = connect(function propsFromStore(state) {
   return {
     assetUrl: state.level.assetUrl
   };
-})(AnimationFrameListItem);
+})(FrameListItem);
