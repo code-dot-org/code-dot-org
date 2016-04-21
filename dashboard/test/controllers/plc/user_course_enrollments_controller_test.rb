@@ -14,6 +14,11 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'invalid email address' do
+    post :create, user_email: 'invalid', plc_course_id: @plc_course.id
+    assert_redirected_to new_plc_user_course_enrollment_path
+  end
+
   test "should create plc_user_course_enrollment" do
     @user_course_enrollment.destroy
 
