@@ -1,76 +1,78 @@
 var _ = require('../../lodash');
+var actions = require('./actions');
 var AnimationPickerBody = require('./AnimationPickerBody.jsx');
+var connect = require('react-redux').connect;
 var Dialog = require('../../templates/DialogComponent.jsx');
 var HiddenUploader = require('../../assetManagement/HiddenUploader.jsx');
 var styles = require('./styles');
 var utils = require('../../utils');
-
-/** @enum {string} */
-var View = utils.makeEnum(
-  'PICKER',
-  'UPLOAD_IN_PROGRESS',
-  'ERROR'
-);
+var View = require('./actions').View;
 
 var AnimationPicker = React.createClass({
   propTypes: {
     channelId: React.PropTypes.string.isRequired,
+    typeFilter: React.PropTypes.string,
+    currentView: React.PropTypes.string.isRequired,
+    originalFileName: React.PropTypes.string,
+    status: React.PropTypes.string,
     onComplete: React.PropTypes.func.isRequired,
     onCancel: React.PropTypes.func.isRequired,
-    typeFilter: React.PropTypes.string
-  },
-
-  getInitialState: function () {
-    return {view: View.PICKER};
+    onUploadStart: React.PropTypes.func.isRequired,
+    onUploadError: React.PropTypes.func.isRequired
   },
 
   onUploadClick: function () {
     this.refs.uploader.openFileChooser();
   },
 
-  onUploadStart: function (data) {
-    this.setState({
-      view: View.UPLOAD_IN_PROGRESS,
-      originalFileName: data.files[0].name
-    });
-  },
-
   onUploadDone: function (result) {
     this.props.onComplete(_.assign(result, {
-      originalFileName: this.state.originalFileName
+      originalFileName: this.props.originalFileName
     }));
   },
 
-  onUploadError: function (status) {
-    console.log(status);
-    this.setState({view: View.PICKER});
+  renderVisibleBody: function () {
+    var visibleBody;
+    if (this.props.currentView === View.PICKER) {
+      return <AnimationPickerBody onUploadClick={this.onUploadClick} />;
+    } else if (this.props.currentView === View.UPLOAD_IN_PROGRESS) {
+      return <h1 style={styles.title}>Uploading...</h1>;
+    } else if (this.props.currentView === View.ERROR) {
+      return <h1>Error: {this.props.status}</h1>;
+    }
   },
 
   render: function () {
-    var visibleBody;
-    if (this.state.view === View.PICKER) {
-      visibleBody = <AnimationPickerBody onUploadClick={this.onUploadClick} />;
-    } else if (this.state.view === View.UPLOAD_IN_PROGRESS) {
-      visibleBody = <h1 style={styles.title}>Uploading...</h1>;
-    } else if (this.state.view === View.ERROR) {
-      visibleBody = <h1>Error!</h1>;
-    }
-
     return (
       <Dialog
           isOpen
           handleClose={this.props.onCancel}
-          uncloseable={this.state.view === View.UPLOAD_IN_PROGRESS}>
+          uncloseable={this.props.currentView === View.UPLOAD_IN_PROGRESS}>
         <HiddenUploader
             ref="uploader"
             toUrl={'/v3/animations/' + this.props.channelId + '/' + utils.createUuid() + '.png'}
             typeFilter={this.props.typeFilter}
-            onUploadStart={this.onUploadStart}
+            onUploadStart={this.props.onUploadStart}
             onUploadDone={this.onUploadDone}
-            onUploadError={this.onUploadError} />
-        {visibleBody}
+            onUploadError={this.props.onUploadError} />
+        {this.renderVisibleBody()}
       </Dialog>
     );
   }
 });
-module.exports = AnimationPicker;
+module.exports = connect(function propsFromStore(state) {
+  return {
+    currentView: state.animationTab.animationPicker.currentView,
+    originalFileName: state.animationTab.animationPicker.originalFileName,
+    status: state.animationTab.animationPicker.status
+  };
+}, function propsFromDispatch(dispatch) {
+  return {
+    onUploadStart: function (data) {
+      dispatch(actions.beginUpload(data.files[0].name));
+    },
+    onUploadError: function (status) {
+      dispatch(actions.displayError(status));
+    }
+  }
+})(AnimationPicker);

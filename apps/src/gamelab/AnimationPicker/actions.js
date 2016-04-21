@@ -5,27 +5,40 @@
 var utils = require('../../utils');
 
 /** @enum {string} */
-var AnimationPickerAction = module.exports.AnimationPickerAction = utils.makeEnum(
-  'SHOW_ANIMATION_PICKER',
-  'HIDE_ANIMATION_PICKER'
+var ActionType = module.exports.ActionType = utils.makeEnum(
+  'BEGIN_UPLOAD',
+  'DISPLAY_ERROR',
+  'RESET_ANIMATION_PICKER'
+);
+
+/** @enum {string} */
+module.exports.View = utils.makeEnum(
+    'PICKER',
+    'UPLOAD_IN_PROGRESS',
+    'ERROR'
 );
 
 /**
- * Show the animation picker
- * @returns {{type: AnimationPickerAction}}
+ * Change the Animation Picker back to its default state.
+ * Useful each time you open it.
+ * @returns {{type: ActionType}}
  */
-module.exports.showAnimationPicker = function () {
+module.exports.reset = function () {
   return {
-    type: AnimationPickerAction.SHOW_ANIMATION_PICKER
+    type: ActionType.RESET_ANIMATION_PICKER
   };
 };
 
-/**
- * Hide the animation picker
- * @returns {{type: AnimationPickerAction}}
- */
-module.exports.hideAnimationPicker = function () {
+module.exports.beginUpload = function (originalFileName) {
   return {
-    type: AnimationPickerAction.HIDE_ANIMATION_PICKER
+    type: ActionType.BEGIN_UPLOAD,
+    originalFileName: originalFileName
+  };
+};
+
+module.exports.displayError = function (status) {
+  return {
+    type: ActionType.DISPLAY_ERROR,
+    status: status
   };
 };

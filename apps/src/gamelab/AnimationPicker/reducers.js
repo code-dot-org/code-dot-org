@@ -2,24 +2,35 @@
  *  @see http://redux.js.org/docs/basics/Reducers.html */
 'use strict';
 
-var AnimationPickerAction = require('./actions').AnimationPickerAction;
-var combineReducers = require('redux').combineReducers;
+var actions = require('./actions');
+var ActionType = actions.ActionType;
+var View = actions.View;
 
-function isShowing(state, action) {
-  state = state || false;
-
-  switch (action.type) {
-    case AnimationPickerAction.SHOW_ANIMATION_PICKER:
-      return true;
-    case AnimationPickerAction.HIDE_ANIMATION_PICKER:
-      return false;
-    default:
-      return state;
-  }
-}
+var initialAnimationPickerState = {
+  currentView: View.PICKER
+};
 
 module.exports = {
-  animationPicker: combineReducers({
-    isShowing: isShowing,
-  })
+  animationPicker: function (state, action) {
+    state = state || initialAnimationPickerState;
+    switch (action.type) {
+      case ActionType.RESET_ANIMATION_PICKER:
+        return initialAnimationPickerState;
+
+      case ActionType.BEGIN_UPLOAD:
+        return {
+          currentView: View.UPLOAD_IN_PROGRESS,
+          originalFileName: action.originalFileName
+        };
+
+      case ActionType.DISPLAY_ERROR:
+        return {
+          currentView: View.ERROR,
+          status: action.status
+        };
+
+      default:
+        return state;
+    }
+  }
 };
