@@ -120,7 +120,7 @@ class V2SectionRoutesTest < Minitest::Test
     describe 'GET /v2/sections/:id' do
       it 'returns section for teacher' do
         with_role FakeDashboard::TEACHER
-        @pegasus.get '/v2/sections/150001'
+        @pegasus.get "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}"
         assert_equal 200, @pegasus.last_response.status
         assert_equal ({
             "id"=>150001,
@@ -138,7 +138,7 @@ class V2SectionRoutesTest < Minitest::Test
 
       it 'returns section for admin' do
         with_role FakeDashboard::ADMIN
-        @pegasus.get '/v2/sections/150001'
+        @pegasus.get "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}"
         assert_equal 200, @pegasus.last_response.status
         assert_equal ({
             "id"=>150001,
@@ -156,13 +156,13 @@ class V2SectionRoutesTest < Minitest::Test
 
       it 'returns 403 "Forbidden" when not signed in' do
         with_role nil
-        @pegasus.get '/v2/sections/150001'
+        @pegasus.get "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}"
         assert_equal 403, @pegasus.last_response.status
       end
 
       it 'returns 403 "Forbidden" for unconnected teacher' do
         with_role FakeDashboard::TEACHER_WITH_DELETED
-        @pegasus.get '/v2/sections/150001'
+        @pegasus.get "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}"
         assert_equal 403, @pegasus.last_response.status
       end
 
@@ -172,11 +172,106 @@ class V2SectionRoutesTest < Minitest::Test
     end
 
     describe 'POST /v2/sections/:id/delete' do
-      # TODO(asher).
+      it 'soft-deletes a section and all followers' do
+        with_role FakeDashboard::TEACHER
+        Dashboard.db.transaction(rollback: :always) do
+          @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}/delete"
+          assert_equal 204, @pegasus.last_response.status
+          assert Dashboard.db[:sections].
+            where(id: FakeDashboard::SECTION_NORMAL[:id]).
+            exclude(deleted_at: nil).
+            any?
+          assert_equal 1, Dashboard.db[:followers].
+            where(section_id: FakeDashboard::SECTION_NORMAL[:id]).
+            exclude(deleted_at: nil).
+            count
+        end
+      end
+
+      it 'does not update already deleted followers' do
+        with_role FakeDashboard::TEACHER_WITH_DELETED
+        Dashboard.db.transaction(rollback: :always) do
+          before_timestamp = Dashboard.db[:followers].
+            where(user_id: FakeDashboard::TEACHER_WITH_DELETED[:id],
+                  student_user_id: FakeDashboard::SELF_STUDENT[:id]).
+            select_map(:deleted_at)
+          @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_DELETED_FOLLOWERS[:id]}/delete"
+          assert_equal 204, @pegasus.last_response.status
+          after_timestamp = Dashboard.db[:followers].
+            where(user_id: FakeDashboard::TEACHER_WITH_DELETED[:id],
+                  student_user_id: FakeDashboard::SELF_STUDENT[:id]).
+            select_map(:deleted_at)
+          assert_equal before_timestamp, after_timestamp
+        end
+      end
+
+      it 'returns 403 "Forbidden" when not signed in' do
+        with_role nil
+        @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}/delete"
+        assert_equal 403, @pegasus.last_response.status
+      end
+
+      it 'returns 403 "Forbidden" when deleting another teachers section' do
+        with_role FakeDashboard::TEACHER_WITH_DELETED
+        @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}/delete"
+        assert_equal 403, @pegasus.last_response.status
+      end
+
+      it 'returns 403 "Forbidden" when deleting a deleted section' do
+        with_role FakeDashboard::TEACHER_WITH_DELETED
+        @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_DELETED[:id]}/delete"
+        assert_equal 403, @pegasus.last_response.status
+      end
     end
 
     describe 'POST /v2/sections/:id/update' do
-      # TODO(asher).
+      NEW_NAME = 'Updated Section'
+
+      it 'returns 403 "Forbidden" when not signed in' do
+        with_role nil
+        @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}/update",
+           {name: NEW_NAME}.to_json,
+           'CONTENT_TYPE' => 'application/json;charset=utf-8'
+        assert_equal 403, @pegasus.last_response.status
+      end
+
+      it 'returns 403 "Forbidden" as admin' do
+        with_role FakeDashboard::ADMIN
+        @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}/update",
+           {name: NEW_NAME}.to_json,
+           'CONTENT_TYPE' => 'application/json;charset=utf-8'
+        assert_equal 403, @pegasus.last_response.status
+      end
+
+      it 'updates' do
+        with_role FakeDashboard::TEACHER
+        Dashboard.db.transaction(rollback: :always) do
+          @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}/update",
+             {name: NEW_NAME}.to_json,
+             'CONTENT_TYPE' => 'application/json;charset=utf-8'
+          assert_equal 200, @pegasus.last_response.status
+          assert_equal ({
+              "id"=>150001,
+              "location"=>"/v2/sections/150001",
+              "name"=>NEW_NAME,
+              "login_type"=>"email",
+              "grade"=>nil,
+              "code"=>nil,
+              "course"=>nil,
+              "teachers"=>[{"id"=>2, "location"=>"/v2/users/2"}],
+              "students"=>[{"student_user_id"=>1, "location"=>"/v2/users/", "age"=>nil, "completed_levels_count"=>0}]
+            }),
+            JSON.parse(@pegasus.last_response.body)
+        end
+      end
+
+      it 'returns 403 "Forbidden" when updating deleted section' do
+        with_role FakeDashboard::TEACHER_WITH_DELETED
+        @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_DELETED[:id]}/update",
+           {name: NEW_NAME}.to_json,
+           'CONTENT_TYPE' => 'application/json;charset=utf-8'
+        assert_equal 403, @pegasus.last_response.status
+      end
     end
 
     # Stubs the user ID for the duration of the test to match the ID of the

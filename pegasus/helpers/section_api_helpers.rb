@@ -265,7 +265,8 @@ class DashboardSection
     time_now = Time.now
 
     Dashboard.db.transaction do
-      Dashboard.db[:followers].where(section_id: id).update(deleted_at: time_now)
+      Dashboard.db[:followers].where(section_id: id, deleted_at: nil).
+        update(deleted_at: time_now)
       Dashboard.db[:sections].where(id: id).update(deleted_at: time_now)
     end
 
