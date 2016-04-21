@@ -65,7 +65,7 @@ var styles = {
  * animated thumbnail of the sequence, along with the sequence name and
  * (if currently selected) controls for deleting or duplicating the sequence.
  */
-var AnimationSequenceListItem = React.createClass({
+var AnimationListItem = React.createClass({
   propTypes: {
     isSelected: React.PropTypes.bool,
     animation: React.PropTypes.object.isRequired,
@@ -143,4 +143,4 @@ module.exports = connect(function propsFromStore(state) {
       dispatch(actions.setAnimationName(animationKey, newName));
     }
   };
-})(Radium(AnimationSequenceListItem));
+})(Radium(AnimationListItem));

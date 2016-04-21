@@ -2,7 +2,7 @@
 'use strict';
 
 var AnimationPicker = require('../AnimationPicker/AnimationPicker');
-var AnimationSequenceListItem = require('./AnimationSequenceListItem');
+var AnimationListItem = require('./AnimationListItem');
 var connect = require('react-redux').connect;
 var NewListItem = require('./NewListItem');
 var ScrollableList = require('./ScrollableList');
@@ -21,7 +21,7 @@ var AnimationSequenceList = function (props) {
   return (
     <ScrollableList style={styles.root} className="animation-sequence-list">
       {props.animations.map(function (animation) {
-        return <AnimationSequenceListItem
+        return <AnimationListItem
             key={animation.key}
             animation={animation}
             isSelected={animation.key === props.selectedAnimation} />;
