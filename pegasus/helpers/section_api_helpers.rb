@@ -21,11 +21,10 @@ class DashboardStudent
   end
 
   def self.create(params)
-    name = params[:name].to_s
-    name = 'New Student' if name.empty?
-
-    params[:gender] = nil unless valid_gender?(params[:gender])
-    params[:birthday] = age_to_birthday(params[:age]) if age_to_birthday(params[:age])
+    name = params[:name].to_s.present? ? params[:name].to_s : 'New Student'
+    gender = valid_gender?(params[:gender]) ? params[:gender] : nil
+    birthday = age_to_birthday(params[:age]) ?
+      age_to_birthday(params[:age]) : params[:birthday]
 
     created_at = DateTime.now
 
@@ -33,8 +32,8 @@ class DashboardStudent
       name: name,
       user_type: 'student',
       provider: 'sponsored',
-      gender: params[:gender],
-      birthday: params[:birthday],
+      gender: gender,
+      birthday: birthday,
       created_at: created_at,
       updated_at: created_at,
       username: UserHelpers.generate_username(Dashboard.db[:users], name)
@@ -218,18 +217,13 @@ class DashboardSection
   def self.create(params)
     return nil unless params[:user] && params[:user][:user_type] == 'teacher'
 
-    name = params[:name].to_s
-    name = 'New Section' if name.empty?
-
-    params[:login_type] = 'email' if params[:login_type].to_s == 'none'
-    params[:login_type] = 'word' unless valid_login_type?(params[:login_type].to_s)
-
-    params[:grade] = nil unless valid_grade?(params[:grade].to_s)
-
-    if params[:course] && valid_course_id?(params[:course][:id])
-      params[:script_id] = params[:course][:id].to_i
-    end
-
+    name = params[:name].to_s.present? ? params[:name].to_s : 'New Section'
+    login_type = 
+      params[:login_type].to_s == 'none' ? 'email' : params[:login_type].to_s
+    login_type = 'word' unless valid_login_type(login_type)
+    grade = valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil
+    script_id = params[:course] && valid_course_id?(params[:course][:id] ?
+      params[:course][:id].to_i : params[:script_id]
     created_at = DateTime.now
 
     row = nil
@@ -238,9 +232,9 @@ class DashboardSection
       row = Dashboard.db[:sections].insert({
         user_id: params[:user][:id],
         name: name,
-        login_type: params[:login_type],
-        grade: params[:grade],
-        script_id: params[:script_id],
+        login_type: login_type,
+        grade: grade,
+        script_id: script_id,
         code: SectionHelpers.random_code,
         created_at: created_at,
         updated_at: created_at,
