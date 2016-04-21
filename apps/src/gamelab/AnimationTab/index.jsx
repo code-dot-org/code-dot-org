@@ -6,7 +6,6 @@ var AnimationFrameList = require('./AnimationFrameList');
 var AnimationPicker = require('../AnimationPicker/index');
 var AnimationSequenceList = require('./AnimationSequenceList');
 var connect = require('react-redux').connect;
-var ErrorDialogStack = require('../ErrorDialogStack');
 var GameLabVisualizationHeader = require('../GameLabVisualizationHeader');
 var ResizablePanes = require('./ResizablePanes');
 
@@ -71,7 +70,6 @@ var AnimationTab = React.createClass({
             onComplete={this.props.onAnimationPickerComplete}
             onCancel={this.props.onAnimationPickerCancel}
             channelId={this.props.channelId}/>}
-        <ConnectedErrorDialogStack />
       </div>
     );
   }
@@ -91,19 +89,3 @@ module.exports = connect(function propsFromStore(state) {
     }
   };
 })(AnimationTab);
-
-/** Connect the error dialog stack for this part of the application */
-var ConnectedErrorDialogStack = connect(
-    function propsFromStore(state) {
-      return {
-        errorStack: state.animationTab.errorStack
-      }
-    },
-    function propsFromDispatch(dispatch) {
-      return {
-        dismissError: function () {
-          dispatch(actions.dismissError())
-        }
-      }
-    }
-)(ErrorDialogStack);

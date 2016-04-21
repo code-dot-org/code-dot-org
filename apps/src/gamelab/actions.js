@@ -4,7 +4,7 @@
 
 var _ = require('../lodash');
 var animationsApi = require('../clientApi').animations;
-var animationTabActions = require('./AnimationTab/actions');
+var reportError = require('./ErrorDialogStack').actions.reportError;
 var utils = require('../utils');
 
 /** @enum {string} */
@@ -84,7 +84,7 @@ module.exports.cloneAnimation = function (animationKey) {
     var animations = getState().animations;
 
     var onCloneError = function (errorMessage) {
-      dispatch(animationTabActions.reportError(
+      dispatch(reportError(
           'Error copying object ' + animationKey + ': ' + errorMessage));
     };
 
@@ -139,7 +139,7 @@ module.exports.deleteAnimation = function (animationKey) {
           });
         },
         function error(xhr) {
-          dispatch(animationTabActions.reportError(
+          dispatch(reportError(
               'Error deleting object ' + animationKey + ': ' +
               xhr.status + ' ' + xhr.statusText))
         });

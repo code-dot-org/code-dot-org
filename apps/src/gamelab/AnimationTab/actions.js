@@ -10,8 +10,6 @@ var ActionType = module.exports.ActionType = utils.makeEnum(
   'BEGIN_PICKING_ANIMATION',
   'FINISH_PICKING_ANIMATION',
   'CANCEL_PICKING_ANIMATION',
-  'REPORT_ERROR',
-  'DISMISS_ERROR',
   'SELECT_ANIMATION'
 );
 
@@ -48,19 +46,6 @@ module.exports.finishPickingAnimation = function (result) {
 module.exports.cancelPickingAnimation = function () {
   return {
     type: ActionType.CANCEL_PICKING_ANIMATION
-  };
-};
-
-module.exports.reportError = function (message) {
-  return {
-    type: ActionType.REPORT_ERROR,
-    message: message
-  };
-};
-
-module.exports.dismissError = function (message) {
-  return {
-    type: ActionType.DISMISS_ERROR
   };
 };
 
