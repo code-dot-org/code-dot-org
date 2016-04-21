@@ -1,7 +1,7 @@
 /* global dashboard */
 
 var ImagePicker = dashboard.ImagePicker;
-var studioApp = require('../StudioApp').singleton;
+var Dialog = require('../dialog');
 
 /**
  * Display the "Manage Assets" modal.
@@ -13,9 +13,8 @@ var studioApp = require('../StudioApp').singleton;
 module.exports = function (assetChosen, typeFilter) {
   var codeDiv = document.createElement('div');
   var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
-  var dialog = studioApp.createModalDialog({
-    contentDiv: codeDiv,
-    defaultBtnSelector: 'again-button',
+  var dialog = new Dialog({
+    body: codeDiv,
     id: 'manageAssetsModal'
   });
   ReactDOM.render(React.createElement(ImagePicker, {

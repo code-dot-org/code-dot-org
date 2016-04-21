@@ -27,7 +27,6 @@ require('./components/report_abuse_form');
 require('./components/send_to_phone');
 require('./components/small_footer');
 require('./components/GridEditor');
-require('./components/IconLibrary');
 require('./components/ImagePicker');
 
 // Prevent callstack exceptions when opening multiple dialogs
@@ -48,6 +47,7 @@ window.dashboard.utils ={
 };
 window.dashboard.header = require('./header');
 window.dashboard.videos = require('./videos');
+window.dashboard.assets = require('./assets');
 
 // usages: _dialogHelper.js, frequency.js, text-compression.js, levelGroup.js, multi.js
 // arguably each of the above files belongs in code-studio

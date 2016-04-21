@@ -1,7 +1,8 @@
+/* global dashboard */
+
 var msg = require('./locale');
 var api = require('./apiJavascript.js');
 var consoleApi = require('../consoleApi');
-var showAssetManager = require('../assetManagement/show');
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
 
 var COLOR_LIGHT_GREEN = '#D3E965';
@@ -31,7 +32,7 @@ exports.injectGameLab = function (gamelab) {
 
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
-  showAssetManager(callback, typeFilter);
+  dashboard.assets.showAssetManager(callback, typeFilter);
 }
 
 module.exports.blocks = [
