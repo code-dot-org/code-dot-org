@@ -88,7 +88,6 @@ namespace :test do
 end
 task test: ['test:changed']
 
-
 def run_tests_if_changed(identifier, changed_globs)
   base_branch = GitUtils.current_branch_base
   if GitUtils.changed_in_branch_or_local?(base_branch, changed_globs)
