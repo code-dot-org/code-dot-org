@@ -21,7 +21,7 @@ module AWS
     STACK_NAME = "#{rack_env}-#{BRANCH}".gsub(STACK_NAME_INVALID_REGEX, '-')
 
     # Fully qualified domain name
-    FQDN = "#{STACK_NAME}.#{DOMAIN}"
+    FQDN = "#{STACK_NAME}.#{DOMAIN}".downcase
     SSH_KEY_NAME = 'server_access_key'
     IMAGE_ID = 'ami-df0607b5'
     INSTANCE_TYPE = 'c4.xlarge'
