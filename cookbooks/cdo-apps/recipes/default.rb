@@ -8,6 +8,7 @@ include_recipe 'omnibus_updater'
 
 include_recipe 'apt'
 include_recipe 'sudo-user'
+include_recipe 'cdo-networking'
 
 # These packages are used by Gems we install via Bundler.
 
