@@ -16,13 +16,20 @@ var AppView = React.createClass({
     hideSource: React.PropTypes.bool.isRequired,
     noVisualization: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
-    generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
+    generateCodeWorkspaceHtml: React.PropTypes.func,
+    codeWorkspace: React.PropTypes.element,
+    // TODO - remove generateVisualizationColumnHtml once its used everywhere
     generateVisualizationColumnHtml: React.PropTypes.func,
     visualizationColumn: React.PropTypes.element,
     customProp: function (props, propName, componentName) {
       if (!props.generateVisualizationColumnHtml && !props.visualizationColumn) {
         return new Error('must pass either generateVisualizationColumnHtml or ' +
           'visualizationColumn to AppView');
+      }
+
+      if (!props.generateCodeWorkspaceHtml && !props.codeWorkspace) {
+        return new Error('must pass either generateCodeWorkspaceHtml or ' +
+          'codeWorkspace to AppView');
       }
     },
     onMount: React.PropTypes.func.isRequired
@@ -49,7 +56,8 @@ var AppView = React.createClass({
             hidden={this.props.hideSource}
             noVisualization={this.props.noVisualization}
             isRtl={this.props.isRtl}
-            generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}/>
+            generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}
+            codeWorkspace={this.props.codeWorkspace}/>
       </StudioAppWrapper>
     );
   }

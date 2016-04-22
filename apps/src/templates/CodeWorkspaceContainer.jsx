@@ -51,8 +51,16 @@ var CodeWorkspaceContainer = React.createClass({
     hidden: React.PropTypes.bool,
     isRtl: React.PropTypes.bool.isRequired,
     noVisualization: React.PropTypes.bool.isRequired,
-    generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
-    onSizeChange: React.PropTypes.func
+    generateCodeWorkspaceHtml: React.PropTypes.func,
+    codeWorkspace: React.PropTypes.element,
+    onSizeChange: React.PropTypes.func,
+
+    customProp: function (props, propName, componentName) {
+      if (!props.generateCodeWorkspaceHtml && !props.codeWorkspace) {
+        return new Error('must pass either generateCodeWorkspaceHtml or ' +
+          'codeWorkspace');
+      }
+    }
   },
 
   /**
@@ -84,9 +92,11 @@ var CodeWorkspaceContainer = React.createClass({
         <ProtectedStatefulDiv
             id="codeWorkspace"
             style={styles.codeWorkspace}>
-          <ProtectedStatefulDiv
+          {this.props.generateCodeWorkspaceHtml && <ProtectedStatefulDiv
               id="codeWorkspaceWrapper"
               contentFunction={this.props.generateCodeWorkspaceHtml}/>
+          }
+          {this.props.codeWorkspace}
           <ProtectedStatefulDiv id="designWorkspace" style={styles.hidden}/>
         </ProtectedStatefulDiv>
       </div>

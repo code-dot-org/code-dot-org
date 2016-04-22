@@ -29,7 +29,7 @@ var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
 var AppView = require('../templates/AppView');
-var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var CodeWorkspace = require('../templates/CodeWorkspace');
 var MazeVisualizationColumn = require('./MazeVisualizationColumn');
 var dom = require('../dom');
 var utils = require('../utils');
@@ -609,25 +609,20 @@ Maze.init = function (config) {
     }
   };
 
-  var generateCodeWorkspaceHtmlFromEjs = function () {
-    return codeWorkspaceEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        localeDirection: studioApp.localeDirection(),
-        blockUsed: undefined,
-        idealBlockNumber: undefined,
-        editCode: level.editCode,
-        blockCounterClass: 'block-counter-default',
-        readonlyWorkspace: config.readonlyWorkspace
-      }
-    });
-  };
-
   var visualizationColumn = (
     <MazeVisualizationColumn
       hideRunButton={!!(level.stepOnly && !level.edit_blocks)}
       showStepButton={!!(level.step && !level.edit_blocks)}
       searchWord={level.searchWord}
+    />
+  );
+
+  var codeWorkspace = (
+    <CodeWorkspace
+      localeDirection={studioApp.localeDirection()}
+      editCode={level.editCode}
+      blockCounterClass="block-counter-default"
+      readonlyWorkspace={config.readonlyWorkspace}
     />
   );
 
@@ -638,7 +633,7 @@ Maze.init = function (config) {
     hideSource: !!config.hideSource,
     noVisualization: false,
     isRtl: studioApp.isRtl(),
-    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    codeWorkspace: codeWorkspace,
     visualizationColumn: visualizationColumn,
     onMount: studioApp.init.bind(studioApp, config)
   }), document.getElementById(config.containerId));
