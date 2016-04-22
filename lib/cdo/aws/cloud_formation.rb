@@ -6,6 +6,7 @@ require 'yaml'
 require 'erb'
 require 'tempfile'
 require 'base64'
+require 'uglifier'
 
 # Manages application-specific configuration and deployment of AWS CloudFront distributions.
 module AWS
@@ -192,6 +193,7 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
           azs: azs,
           s3_bucket: S3_BUCKET,
           file: method(:file),
+          js: method(:js),
           subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}}.to_json,
           public_subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}}.to_json,
           lambda: method(:lambda)
@@ -200,11 +202,10 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
         YAML.load(erb_output).to_json
       end
 
-      # Input filename, output ERB-processed file contents in CloudFormation JSON-compatible syntax (using Fn::Join operator).
-      def file(filename, vars={})
+      # Input string, output ERB-processed file contents in CloudFormation JSON-compatible syntax (using Fn::Join operator).
+      def source(str, vars={})
         local_vars = @@local_variables.dup
         vars.each { |k, v| local_vars[k] = v }
-        str = File.read(aws_dir('cloudformation', filename))
         lines = erb_eval(str, local_vars).each_line.map do |line|
           # Support special %{"Key": "Value"} syntax for inserting Intrinsic Functions into processed file contents.
           line.split(/(%{.*})/).map do |x|
@@ -212,6 +213,27 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
           end
         end.flatten
         {'Fn::Join' => ['', lines]}.to_json
+      end
+
+      # Inline a file into a CloudFormation template.
+      def file(filename, vars={})
+        str = File.read(aws_dir('cloudformation', filename))
+        source(str, vars)
+      end
+
+      # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-zipfile
+      LAMBDA_ZIPFILE_MAX = 4096
+
+      # Inline a javascript file into a CloudFormation template for a Lambda function resource.
+      # Raises an error if the minified file is too large.
+      # Use UglifyJS to compress code if `uglify` parameter is set.
+      def js(filename, uglify=true)
+        str = File.read(aws_dir('cloudformation', filename))
+        str = Uglifier.compile(str) if uglify
+        if str.length > LAMBDA_ZIPFILE_MAX
+          raise "Length of JavaScript file '#{filename}' (#{str.length}) cannot exceed #{LAMBDA_ZIPFILE_MAX} characters."
+        end
+        source(str)
       end
 
       # Helper function to call a Lambda-function-based AWS::CloudFormation::CustomResource.

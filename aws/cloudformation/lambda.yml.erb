@@ -8,7 +8,7 @@ Resources:
       Description: 'Implements the "Refer to Resources in Another Stack" layered-architecture pattern. Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/walkthrough-custom-resources-lambda-cross-stack-ref.html'
       FunctionName: LookupStackOutputs
       Code:
-        ZipFile: <%=file.call('stack-xref.js')%>
+        ZipFile: <%=js.call('stack-xref.js')%>
       Handler: index.handler
       Runtime: nodejs
       Timeout: 30
@@ -38,7 +38,7 @@ Resources:
       Description: 'Takes an AWS CloudFormation stack name and instance id and returns the AMI ID. Ref: https://blogs.aws.amazon.com/application-management/post/Tx38Z5CAM5WWRXW'
       FunctionName: AMIManager
       Code:
-        ZipFile: <%=file.call('ami-manager.js')%>
+        ZipFile: <%=js.call('ami-manager.js')%>
       Handler: index.handler
       Runtime: nodejs
       Timeout: 300
