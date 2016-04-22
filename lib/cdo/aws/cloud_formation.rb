@@ -192,8 +192,8 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
           azs: azs,
           s3_bucket: S3_BUCKET,
           file: method(:file),
-          subnets: azs.map{|az|{'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}}.to_json,
-          public_subnets: azs.map{|az|{'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}}.to_json,
+          subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}}.to_json,
+          public_subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}}.to_json,
           lambda: method(:lambda)
         )
         erb_output = erb_eval(template_string)
@@ -208,7 +208,7 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
         lines = erb_eval(str, local_vars).each_line.map do |line|
           # Support special %{"Key": "Value"} syntax for inserting Intrinsic Functions into processed file contents.
           line.split(/(%{.*})/).map do |x|
-            x.match(/%{.*}/) ? JSON.parse(x.gsub(/%({.*})/, '\1')) : x
+            x =~ /%{.*}/ ? JSON.parse(x.gsub(/%({.*})/, '\1')) : x
           end
         end.flatten
         {'Fn::Join' => ['', lines]}.to_json
