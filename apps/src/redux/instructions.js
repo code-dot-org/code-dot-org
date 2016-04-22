@@ -6,7 +6,6 @@
  */
 var _ = require('../lodash');
 
-var SET_INSTRUCTIONS_IN_TOP_PANE = 'instructions/SET_INSTRUCTIONS_IN_TOP_PANE';
 var TOGGLE_INSTRUCTIONS_COLLAPSED = 'instructions/TOGGLE_INSTRUCTIONS_COLLAPSED';
 var SET_INSTRUCTIONS_HEIGHT = 'instructions/SET_INSTRUCTIONS_HEIGHT';
 var SET_INSTRUCTIONS_MAX_HEIGHT = 'instructions/SET_INSTRUCTIONS_MAX_HEIGHT';
@@ -15,19 +14,11 @@ var instructionsInitialState = {
   collapsed: false,
   // represents the uncollapsed height
   height: 300,
-  maxHeight: 0,
-  inTopPane: false
+  maxHeight: 0
 };
 
 module.exports.default = function reducer(state, action) {
   state = state || instructionsInitialState;
-
-  if (action.type === SET_INSTRUCTIONS_IN_TOP_PANE &&
-      action.inTopPane !== state.inTopPane) {
-    return _.assign({}, state, {
-      inTopPane: action.inTopPane
-    });
-  }
 
   if (action.type === TOGGLE_INSTRUCTIONS_COLLAPSED) {
     return _.assign({}, state, {
