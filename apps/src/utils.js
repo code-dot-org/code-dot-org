@@ -12,7 +12,6 @@ if (typeof define === 'function' && typeof define.amd === 'object' && define.amd
 
 // get lodash
 var _ = require('./lodash');
-var Hammer = require('./hammer');
 
 // undo hackery
 if (typeof define === 'function' && savedAmd) {
@@ -22,11 +21,7 @@ if (typeof define === 'function' && savedAmd) {
 
 exports.getLodash = function () {
   return _;
-};
-
-exports.getHammer = function () {
-  return Hammer;
-};
+};  
 
 exports.shallowCopy = function (source) {
   var result = {};
