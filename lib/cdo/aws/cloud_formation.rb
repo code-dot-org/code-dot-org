@@ -12,13 +12,14 @@ module AWS
   class CloudFormation
 
     # Hard-coded values for our CloudFormation template.
+    TEMPLATE = ENV['TEMPLATE'] || 'cloud_formation_adhoc_standalone.yml.erb'
 
     DOMAIN = 'cdn-code.org'
     BRANCH = ENV['branch'] || RakeUtils.git_branch
     # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
     STACK_NAME_INVALID_REGEX = /[^[:alnum:]-]/
-    STACK_NAME = "#{rack_env}-#{BRANCH}".gsub(STACK_NAME_INVALID_REGEX, '-')
+    STACK_NAME = (ENV['STACK_NAME'] || "#{rack_env}-#{BRANCH}").gsub(STACK_NAME_INVALID_REGEX, '-')
 
     # Fully qualified domain name
     FQDN = "#{STACK_NAME}.#{DOMAIN}".downcase
@@ -129,7 +130,7 @@ module AWS
       end
 
       def wait_for_stack(action, start_time)
-        CDO.log.info "Stack #{action} requested, waiting for instance provisioning to complete..."
+        CDO.log.info "Stack #{action} requested, waiting for provisioning to complete..."
         begin
           cfn.wait_until("stack_#{action}_complete".to_sym, stack_name: STACK_NAME) do |w|
             w.max_attempts = 360 # 1 hour
@@ -169,7 +170,9 @@ module AWS
           raise 'Current branch needs to be pushed to GitHub with the same name, otherwise deploy will fail.
 To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
         end
-        template_string = File.read(aws_dir('cloudformation', 'cloud_formation_adhoc_standalone.yml.erb'))
+        template_string = File.read(aws_dir('cloudformation', TEMPLATE))
+        availability_zones = Aws::EC2::Client.new.describe_availability_zones.availability_zones.map(&:zone_name)
+        azs = availability_zones.map { |zone| zone[-1].upcase }
         @@local_variables = OpenStruct.new(
           local_mode: !!CDO.chef_local_mode,
           stack_name: STACK_NAME,
@@ -184,21 +187,56 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
           cdn_enabled: cdn_enabled,
           domain: DOMAIN,
           subdomain: FQDN,
-          availability_zone: Aws::EC2::Client.new.describe_availability_zones.availability_zones.first.zone_name,
+          availability_zone: availability_zones.first,
+          availability_zones: availability_zones,
+          azs: azs,
           s3_bucket: S3_BUCKET,
-          file: method(:file)
+          file: method(:file),
+          subnets: azs.map{|az|{'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}}.to_json,
+          public_subnets: azs.map{|az|{'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}}.to_json,
+          lambda: method(:lambda)
         )
-        YAML.load(erb_eval(template_string)).to_json
+        erb_output = erb_eval(template_string)
+        YAML.load(erb_output).to_json
       end
 
       # Input filename, output ERB-processed file contents in CloudFormation JSON-compatible syntax (using Fn::Join operator).
-      def file(filename)
+      def file(filename, vars={})
+        local_vars = @@local_variables.dup
+        vars.each { |k, v| local_vars[k] = v }
         str = File.read(aws_dir('cloudformation', filename))
-        {'Fn::Join' => ["", erb_eval(str).each_line.to_a]}.to_json
+        lines = erb_eval(str, local_vars).each_line.map do |line|
+          # Support special %{"Key": "Value"} syntax for inserting Intrinsic Functions into processed file contents.
+          line.split(/(%{.*})/).map do |x|
+            x.match(/%{.*}/) ? JSON.parse(x.gsub(/%({.*})/, '\1')) : x
+          end
+        end.flatten
+        {'Fn::Join' => ['', lines]}.to_json
       end
 
-      def erb_eval(str)
-        ERB.new(str).result(@@local_variables.instance_eval{binding})
+      # Helper function to call a Lambda-function-based AWS::CloudFormation::CustomResource.
+      # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html
+      def lambda(function_name, properties={})
+        depends_on = properties.delete(:DependsOn)
+        custom_resource = {
+          Type: properties.delete('Type') || "Custom::#{function_name}",
+          Properties: {
+            ServiceToken: {'Fn::Join' => [':',[
+              'arn:aws:lambda',
+              {Ref: 'AWS::Region'},
+              {Ref: 'AWS::AccountId'},
+              'function',
+              function_name
+            ]]}
+          }.merge(properties)
+        }
+        custom_resource['DependsOn'] = depends_on if depends_on
+        custom_resource.to_json
+      end
+
+      def erb_eval(str, local_vars=nil)
+        local_vars ||= @@local_variables
+        ERB.new(str, nil, '-').result(local_vars.instance_eval{binding})
       end
 
     end
