@@ -32,8 +32,6 @@ Resources:
         Timeout: PT60M
     Properties:
       ImageId: <%=image_id%>
-      SecurityGroupIds: [Ref: WebServerSecurityGroup]
-      SubnetId: {'Fn::GetAtt': [VPC, PublicSubnet<%=azs.first%>]}
       InstanceType: <%=instance_type%>
       IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
       KeyName: <%=ssh_key_name%>
@@ -45,6 +43,11 @@ Resources:
             VolumeType: gp2
       UserData:
         Fn::Base64: <%=file.call('bootstrap.sh.erb')%>
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: true
+          DeviceIndex: 0
+          GroupSet: [Ref: WebServerSecurityGroup]
+          SubnetId: {'Fn::GetAtt': [VPC, PublicSubnet<%=azs.first%>]}
 <%
   %w(Dashboard Pegasus).each do |app|
     app_domain = "#{app == 'Pegasus' ? '' : (app.downcase + '-')}#{subdomain}";
