@@ -64,7 +64,7 @@ CodeWorkspace.propTypes = {
   localeDirection: React.PropTypes.oneOf(['rtl', 'ltr']).isRequired,
   editCode: React.PropTypes.bool.isRequired,
   readonlyWorkspace: React.PropTypes.bool.isRequired,
-  extraControlRows: React.PropTypes.string, // TODO - dangerously set html?
+  extraControlRows: React.PropTypes.element
 };
 
 module.exports = CodeWorkspace;
