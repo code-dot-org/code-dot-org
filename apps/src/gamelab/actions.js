@@ -27,7 +27,7 @@ module.exports.changeInterfaceMode = function (interfaceMode) {
     $(window).trigger('appModeChanged');
     dispatch({
       type: ActionType.CHANGE_INTERFACE_MODE,
-          interfaceMode: interfaceMode
+      interfaceMode: interfaceMode
     });
   };
 };
