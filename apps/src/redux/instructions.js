@@ -1,3 +1,9 @@
+/**
+ * A duck module for instructions, particularly instructions that we show in
+ * the top pane above the code workspace. This module contains both the actions
+ * that are required for this feature, and the reducer that sets state based
+ * off of those actions.
+ */
 var _ = require('../lodash');
 
 var SET_INSTRUCTIONS_IN_TOP_PANE = 'instructions/SET_INSTRUCTIONS_IN_TOP_PANE';
@@ -57,6 +63,7 @@ module.exports.toggleInstructionsCollapsed = function () {
 
 /**
  * Set the height of the instructions panel
+ * @param {number} height - Height of instructions pane
  */
 module.exports.setInstructionsHeight = function (height) {
   return {
@@ -67,6 +74,8 @@ module.exports.setInstructionsHeight = function (height) {
 
 /**
  * Set the max height of the instructions panel
+ * @param {number} maxHeight - Don't let user drag instructions pane to be
+ *   larger than this number.
  */
 module.exports.setInstructionsMaxHeight = function (maxHeight) {
   return {

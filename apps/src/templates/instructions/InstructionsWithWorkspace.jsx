@@ -15,19 +15,22 @@ var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
  */
 var InstructionsWithWorkspace = React.createClass({
   propTypes: {
+    generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
+
+    // props provided via connect
     showInstructions: React.PropTypes.bool.isRequired,
     instructionsCollapsed: React.PropTypes.bool.isRequired,
     instructionsHeight: React.PropTypes.number.isRequired,
     instructionsMaxHeight: React.PropTypes.number.isRequired,
-
-    generateCodeWorkspaceHtml: React.PropTypes.func.isRequired
+    setInstructionsHeight: React.PropTypes.func.isRequired,
+    setInstructionsMaxHeight: React.PropTypes.func.isRequired,
   },
 
   getInitialState() {
     // only used so that we can rerender when resized
     return {
-      width: undefined,
-      height: undefined
+      windowWidth: undefined,
+      windowHeight: undefined
     };
   },
 
