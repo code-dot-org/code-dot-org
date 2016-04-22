@@ -259,6 +259,43 @@ button.arrow:disabled {
   background-color: #C7C7C7;
 }
 
+$dpad-red: #F78183;
+
+#studio-dpad {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -5px;
+  -webkit-touch-callout: none;
+  &.studio-dpad-none {
+    display: none;
+  }
+}
+
+#studio-dpad-button {
+  display: inline;
+  margin: 5px;
+  &.active {
+    background: $dpad-red;
+    border: 1px solid $dpad-red;
+  }
+  &.left {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  &.right {
+    margin-left: 10px;
+    margin-right: 0;
+  }
+  &.up {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  &.down {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
 #soft-buttons {
   display: inline-block;
   vertical-align: top;
