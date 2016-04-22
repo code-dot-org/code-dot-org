@@ -20,7 +20,7 @@ class TransfersController < ApplicationController
       current_section_code = params[:current_section_code]
     else
       render json: {
-        error: I18n.t('move_students.section_code_not_entered', current_section_code: current_section_code)
+        error: I18n.t('move_students.section_code_not_entered')
       }, status: :bad_request
       return
     end
@@ -57,7 +57,7 @@ class TransfersController < ApplicationController
       stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section]
     else
       render json: {
-        error: I18n.t('move_students.stay_enrolled_not_entered', stay_enrolled: stay_enrolled_in_current_section)
+        error: I18n.t('move_students.stay_enrolled_not_entered')
       }, status: :bad_request
       return
     end
@@ -66,7 +66,7 @@ class TransfersController < ApplicationController
       student_ids = params[:student_ids].split(',').map(&:to_i)
     else
       render json: {
-        error: I18n.t('move_students.student_ids_not_entered', student_ids: student_ids)
+        error: I18n.t('move_students.student_ids_not_entered')
       }, status: :bad_request
       return
     end
