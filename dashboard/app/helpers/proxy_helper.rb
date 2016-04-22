@@ -13,7 +13,11 @@ module ProxyHelper
     # tying up Rails thread.
     url = URI.parse(location)
 
-    raise URI::InvalidURIError.new if url.host.nil? || url.port.nil? || !allowed_hostname?(url, allowed_hostname_suffixes)
+    raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
+    if !allowed_hostname?(url, allowed_hostname_suffixes)
+      render_error_response 400, "Hostname '#{url.host}' is not in the list of allowed hostnames."
+      return
+    end
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
     path = (url.path.empty?) ? '/' : url.path
