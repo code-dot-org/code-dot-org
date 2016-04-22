@@ -461,11 +461,9 @@ GameLab.prototype.runButtonClick = function () {
   this.execute();
 
   // Enable the Finish button if is present:
-  with (this.studioApp_) {
-    var shareCell = document.getElementById('share-cell');
-    if (shareCell) {
-      shareCell.className = 'share-cell-enabled';
-    }
+  var shareCell = document.getElementById('share-cell');
+  if (shareCell) {
+    shareCell.className = 'share-cell-enabled';
   }
 };
 
