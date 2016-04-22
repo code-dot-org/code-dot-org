@@ -29,7 +29,6 @@ var AppStorage = require('./appStorage');
 var constants = require('../constants');
 var experiments = require('../experiments');
 var _ = utils.getLodash();
-// var Hammer = utils.getHammer();
 var apiTimeoutList = require('../timeoutList');
 var designMode = require('./designMode');
 var applabTurtle = require('./applabTurtle');
