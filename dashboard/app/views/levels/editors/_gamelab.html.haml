@@ -3,6 +3,24 @@
   = boolean_check_box f, :text_mode_at_start
 
 .field
+  = f.label :palette_category_at_start
+  = f.select :palette_category_at_start, options_for_select(@level.class.palette_categories, @level.palette_category_at_start), {include_blank: true}
+
+.field
+  = f.label :show_d_pad
+  = boolean_check_box f, :show_d_pad
+
+.field
+  = f.label :soft_buttons, 'Controls buttons'
+  %p
+    Select
+    %a.select_all{href: '#'} all
+    \/
+    %a.select_none{href: '#'} none
+    (shift-click or cmd-click to select multiple). Arrow buttons to display below the game canvas.
+  = f.collection_select :soft_buttons, soft_button_options, :value, :name, {selected: @level.soft_buttons}, {multiple: true}
+
+.field
   = f.label :submittable, 'Submittable'
   %p
     If checked, students with teachers can "submit" a solution for
