@@ -99,8 +99,7 @@ GameLabP5.prototype.init = function (options) {
   window.p5.prototype._updateNextTouchCoords = function (e) {
     if (e.type === 'mousedown' ||
         e.type === 'mousemove' ||
-        e.type === 'mouseup' ||
-        e.type === 'dragover'){ /* NOTE: cpirich: modified p5 to add dragover */
+        e.type === 'mouseup'){
       this._setProperty('_nextTouchX', this._nextMouseX);
       this._setProperty('_nextTouchY', this._nextMouseY);
     } else {
