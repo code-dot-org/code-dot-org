@@ -105,6 +105,9 @@ opt_parser = OptionParser.new do |opts|
   opts.on("-n", "--parallel ParallelLimit", String, "Maximum number of browsers to run in parallel (default is 1)") do |p|
     $options.parallel_limit = p.to_i
   end
+  opts.on("--db", String, "Run scripts requiring DB access regardless of environment (otherwise restricted to development/test).") do |p|
+    $options.force_db_access = true
+  end
   opts.on("-V", "--verbose", "Verbose") do
     $options.verbose = true
   end
@@ -190,7 +193,10 @@ def format_duration(total_seconds)
   "%.1d:%.2d minutes" % [minutes, seconds]
 end
 
-if rack_env?(:development)
+if $options.force_db_access
+  $options.pegasus_db_access = true
+  $options.dashboard_db_access = true
+elsif rack_env?(:development)
   $options.pegasus_db_access = true if $options.pegasus_domain =~ /(localhost|ngrok)/
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /(localhost|ngrok)/
 elsif rack_env?(:test)
