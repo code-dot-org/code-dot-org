@@ -1008,7 +1008,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   };
   var contentDiv = ReactDOM.render(
     <div>
-      {options.headerText && <p class="dialog-title">{options.headerText}</p>}
+      {options.headerText && <p className="dialog-title">{options.headerText}</p>}
       {options.bodyText && <p>{options.bodyText}</p>}
       {options.prompt && <input
           style={textBoxStyle}
