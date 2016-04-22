@@ -1,4 +1,10 @@
+/**
+ * @file AWS Lambda Custom Resource function to manage automatic AMI creation.
+ * @see {@link https://blogs.aws.amazon.com/application-management/post/Tx38Z5CAM5WWRXW|Faster Auto Scaling in AWS CloudFormation Stacks with Lambda-backed Custom Resources}
+ */
+
 var response = require('cfn-response');
+
 /** Takes an AWS CloudFormation stack name and instance id and returns the newly-created AMI ID. **/
 exports.handler = function (event, context) {
   console.log("REQUEST RECEIVED:\n", JSON.stringify(event));
