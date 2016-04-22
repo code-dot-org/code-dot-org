@@ -37,7 +37,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
       plc_module_assignments.destroy_all
 
       # Make sure the required learning modules are included here
-      learning_modules |=  self.plc_course_unit.plc_learning_modules.where(required: true)
+      learning_modules |=  self.plc_course_unit.plc_learning_modules.required
 
       learning_modules.each do |learning_module|
         # Ensure that the learning module is associated with this course unit

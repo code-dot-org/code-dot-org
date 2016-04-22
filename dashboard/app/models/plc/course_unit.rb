@@ -28,6 +28,6 @@ class Plc::CourseUnit < ActiveRecord::Base
   end
 
   def get_required_learning_module_ids
-    plc_learning_modules.where(required: true).pluck(:id)
+    plc_learning_modules.required.pluck(:id)
   end
 end
