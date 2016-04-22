@@ -621,7 +621,6 @@ Maze.init = function (config) {
     <CodeWorkspace
       localeDirection={studioApp.localeDirection()}
       editCode={level.editCode}
-      blockCounterClass="block-counter-default"
       readonlyWorkspace={config.readonlyWorkspace}
     />
   );
