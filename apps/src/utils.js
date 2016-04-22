@@ -422,26 +422,3 @@ exports.trySetLocalStorage = function (item, value) {
     return false;
   }
 };
-
-/**
- * Generates a simple enum object
- * @example
- *   var Seasons = enum('SPRING', 'SUMMER', 'FALL', 'WINTER');
- *   Seasons.SPRING == 'SPRING';
- *   Seasons.SUMMER == 'SUMMER';
- *   // etc...
- */
-exports.makeEnum = function () {
-  var result = {}, key;
-  for (var i = 0; i < arguments.length; i++) {
-    key = String(arguments[i]);
-    if (result[key]) {
-      throw new Error('Key "' + key + '" occurred twice while constructing enum');
-    }
-    result[key] = key;
-  }
-  if (Object.freeze) {
-    Object.freeze(result);
-  }
-  return result;
-};
