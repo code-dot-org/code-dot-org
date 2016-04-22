@@ -9,9 +9,8 @@ var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
-var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
-var _ = utils.getLodash();
+var _ = require('../lodash');
 var dropletConfig = require('./dropletConfig');
 var JsDebuggerUi = require('../JsDebuggerUi');
 var JSInterpreter = require('../JSInterpreter');
@@ -25,6 +24,7 @@ var errorHandler = require('../errorHandler');
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
+var experiments = require('../experiments');
 
 var actions = require('./actions');
 var createStore = require('../redux');
@@ -153,6 +153,10 @@ GameLab.prototype.init = function (config) {
   config.dropletConfig = dropletConfig;
   config.appMsg = msg;
 
+  // Provide a way for us to have top pane instructions disabled by default, but
+  // able to turn them on.
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructions');
+
   var showFinishButton = !this.level.isProjectLevel;
   var areBreakpointsEnabled = true;
   var firstControlsRow = require('./controls.html.ejs')({
@@ -218,7 +222,11 @@ GameLab.prototype.init = function (config) {
   this.reduxStore_.dispatch(actions.setInitialLevelProps({
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
-    isShareView: !!config.share
+    isShareView: !!config.share,
+    instructionsMarkdown: config.level.markdownInstructions,
+    instructionsInTopPane: config.showInstructionsInTopPane,
+    puzzleNumber: config.level.puzzle_number,
+    stageTotal: config.level.stage_total,
   }));
 
   ReactDOM.render(<Provider store={this.reduxStore_}>
