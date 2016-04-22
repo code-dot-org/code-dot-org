@@ -1,6 +1,6 @@
+@no_circle
 Feature: Hour of Code and Frozen tutorial in Spanish and Portuguese
 
-@no_circle
 Scenario: HoC tutorial in Spanish
   Given I am on "http://learn.code.org/hoc/15/lang/es"
   And I rotate to landscape
