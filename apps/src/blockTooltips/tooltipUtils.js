@@ -1,8 +1,7 @@
 /* global ace */
 'use strict';
 
-var utils = require('../utils');
-var _ = utils.getLodash();
+var _ = require('../lodash');
 
 /**
  * @typedef {Object} parameterSlotInfo

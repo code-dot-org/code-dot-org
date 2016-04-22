@@ -5,8 +5,7 @@ var spriteActions = require('./spriteActions');
 var Direction = constants.Direction;
 var Emotions = constants.Emotions;
 var NextTurn = constants.NextTurn;
-var utils = require('../utils');
-var _ = utils.getLodash();
+var utils = require('../utils'); // Provides Function.prototype.inherits
 var StudioAnimation = require('./StudioAnimation');
 var StudioSpriteSheet = require('./StudioSpriteSheet');
 
