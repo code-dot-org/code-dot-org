@@ -70,7 +70,7 @@ class UserProficiency < ActiveRecord::Base
   # WARNING: This class makes strong assumptions about the columns in the DB.
 
   # Returns the number of levels the user has shown proficiency in for the
-  # indiciated concept and difficulty or higher.
+  # indicated concept and difficulty or higher.
   def get_level_count(concept, difficulty_number)
     return 0 if !CONCEPTS.include? concept
     return 0 if !(1..MAXIMUM_CONCEPT_DIFFICULTY).cover? difficulty_number
@@ -81,6 +81,13 @@ class UserProficiency < ActiveRecord::Base
       num_levels += self.send(field_name).to_i
     end
     return num_levels
+  end
+
+  # Increments the number of levels the user has shown proficiency in for the
+  # indicated concept and difficulty.
+  def increment_level_count(concept, difficulty_number)
+    field_name = "#{concept}_d#{difficulty_number}_count"
+    self.attributes = {field_name => self.send(field_name).to_i + 1}
   end
 
   # As of April 2015, we define a user as having basic proficiency if they have
