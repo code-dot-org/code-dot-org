@@ -25,6 +25,7 @@ class Follower < ActiveRecord::Base
   # WARNING: Though ActiveRecord scopes to non-(soft)-deleted users
   #   automatically, this does not happen in MySQL-land or pegasus-land.
   acts_as_paranoid
+  validates_as_paranoid
 
   belongs_to :user
   belongs_to :student_user, foreign_key: "student_user_id", class_name: User
