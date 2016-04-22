@@ -7,7 +7,7 @@ var ActionType = require('./actions').ActionType;
 var animationPicker = require('./AnimationPicker/animationPickerModule').default;
 var animationTab = require('./AnimationTab/animationTabModule').reducer;
 var combineReducers = require('redux').combineReducers;
-var errorDialogStack = require('./errorDialogStackModule').reducer;
+var errorDialogStack = require('./errorDialogStackModule').default;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 var utils = require('../utils');
 

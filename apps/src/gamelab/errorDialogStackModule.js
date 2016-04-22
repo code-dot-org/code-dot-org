@@ -4,7 +4,7 @@
 var REPORT_ERROR = 'ErrorDialogStack/REPORT_ERROR';
 var DISMISS_ERROR = 'ErrorDialogStack/DISMISS_ERROR';
 
-exports.reducer = function errorDialogStack(state, action) {
+exports.default = function reducer(state, action) {
   state = state || [];
   switch (action.type) {
     case REPORT_ERROR:
@@ -21,14 +21,12 @@ exports.reducer = function errorDialogStack(state, action) {
   }
 };
 
-var actions = exports.actions = {};
-
 /**
  * Push an error onto the stack, for immediate display.
  * @param {!string} message
  * @returns {{type: string, message: string}}
  */
-actions.reportError = function (message) {
+exports.reportError = function (message) {
   return {
     type: REPORT_ERROR,
     message: message
@@ -39,7 +37,7 @@ actions.reportError = function (message) {
  * Remove the top (first) error from the stack.
  * @returns {{type: string}}
  */
-actions.dismissError = function () {
+exports.dismissError = function () {
   return {
     type: DISMISS_ERROR
   };
