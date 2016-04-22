@@ -68,6 +68,7 @@ class Gamelab < Blockly
     <<-JSON.strip_heredoc.chomp
       {
         // Game Lab
+        "draw": null,
         "fill": null,
         "noFill": null,
         "stroke": null,
