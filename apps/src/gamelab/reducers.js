@@ -9,6 +9,7 @@ var animationTab = require('./AnimationTab/animationTabModule').default;
 var combineReducers = require('redux').combineReducers;
 var errorDialogStack = require('./errorDialogStackModule').default;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
+var instructions = require('../redux/instructions');
 var utils = require('../utils');
 
 function interfaceMode(state, action) {
@@ -36,7 +37,11 @@ function level(state, action) {
       var allowedKeys = [
         'assetUrl',
         'isEmbedView',
-        'isShareView'
+        'isShareView',
+        'instructionsMarkdown',
+        'instructionsInTopPane',
+        'puzzleNumber',
+        'stageTotal'
       ];
       Object.keys(action.props).forEach(function (key) {
         if (-1 === allowedKeys.indexOf(key)) {
@@ -103,7 +108,8 @@ var gamelabReducer = combineReducers({
   animations: animations,
   errorDialogStack: errorDialogStack,
   interfaceMode: interfaceMode,
-  level: level
+  level: level,
+  instructions: instructions.default
 });
 
 module.exports = { gamelabReducer: gamelabReducer };

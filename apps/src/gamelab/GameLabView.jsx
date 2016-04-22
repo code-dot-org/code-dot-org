@@ -10,7 +10,8 @@ var ErrorDialogStack = require('./ErrorDialogStack');
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 var GameLabVisualizationHeader = require('./GameLabVisualizationHeader');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var CodeWorkspaceContainer = require('../templates/CodeWorkspaceContainer');
+var InstructionsWithWorkspace = require('../templates/instructions/InstructionsWithWorkspace');
+
 
 /**
  * Top-level React wrapper for GameLab
@@ -51,11 +52,8 @@ var GameLabView = React.createClass({
           <ProtectedStatefulDiv contentFunction={this.props.generateVisualizationColumnHtml} />
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <CodeWorkspaceContainer
-            topMargin={0}
-            noVisualization={false}
-            isRtl={false}
-            generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}/>
+        <InstructionsWithWorkspace
+          generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}/>
       </div>
     );
   },

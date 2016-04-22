@@ -86,7 +86,6 @@ The following email addresses should also be whitelisted:
 
 teacher@code.org<br/>
 hadi_partovi@code.org<br/>
-amazonses.com <br/>
 
 Should a district contact you with issues regarding technology, please email us at partner@code.org.
 
