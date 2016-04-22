@@ -4,8 +4,8 @@
  */
 'use strict';
 
-var utils = require('../utils');
-var _ = utils.getLodash();
+require('../utils'); // Provides Function.prototype.inherits
+var _ = require('../lodash');
 var i18n = require('./locale');
 var NetSimPanel = require('./NetSimPanel');
 var markup = require('./NetSimRemoteNodeSelectionPanel.html.ejs');
@@ -13,6 +13,7 @@ var NodeType = require('./NetSimConstants').NodeType;
 var NetSimGlobals = require('./NetSimGlobals');
 var NetSimUtils = require('./NetSimUtils');
 var NetSimRouterNode = require('./NetSimRouterNode');
+require('../utils'); // Provides Function.prototype.inherits
 
 /**
  * Apply a very small debounce to lobby buttons to avoid doing extra work
