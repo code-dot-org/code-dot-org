@@ -1,3 +1,10 @@
+/**
+ * @file AWS Lambda Custom Resource function to manage CloudFormation stack cross-references,
+ *       enabling a layered or service-oriented architecture by creating related AWS resources
+ *       in individual stacks instead of including all resources in a single stack.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/walkthrough-custom-resources-lambda-cross-stack-ref.html|Walkthrough: Refer to Resources in Another Stack}
+ */
+
 var response = require('cfn-response');
 function parseJson(str) {
   try {
