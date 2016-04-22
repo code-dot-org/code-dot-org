@@ -3,7 +3,7 @@ var expect = require('chai').expect;
 
 describe('ErrorDialogStack', function () {
   describe('reducer', function () {
-    var reducer = errorDialogStackModule.reducer;
+    var reducer = errorDialogStackModule.default;
 
     it('has empty array as default state', function () {
       expect(reducer(undefined, {})).to.deep.equal([]);
@@ -15,7 +15,7 @@ describe('ErrorDialogStack', function () {
     });
 
     describe('action: reportError', function () {
-      var reportError = errorDialogStackModule.actions.reportError;
+      var reportError = errorDialogStackModule.reportError;
 
       it('pushes an error object onto the stack', function () {
         var state = [];
@@ -38,7 +38,7 @@ describe('ErrorDialogStack', function () {
     });
 
     describe('action: DISMISS_ERROR', function () {
-      var dismissError = errorDialogStackModule.actions.dismissError;
+      var dismissError = errorDialogStackModule.dismissError;
 
       it('removes the first error object from the stack', function () {
         var state = [
