@@ -2,13 +2,11 @@
  *  @see http://redux.js.org/docs/basics/Actions.html */
 'use strict';
 
-var utils = require('../../utils');
-
 /** @enum {string} */
-var AnimationPickerAction = module.exports.AnimationPickerAction = utils.makeEnum(
-  'SHOW_ANIMATION_PICKER',
-  'HIDE_ANIMATION_PICKER'
-);
+var AnimationPickerAction = module.exports.AnimationPickerAction = {
+  SHOW_ANIMATION_PICKER: 'SHOW_ANIMATION_PICKER',
+  HIDE_ANIMATION_PICKER: 'HIDE_ANIMATION_PICKER'
+};
 
 /**
  * Show the animation picker
