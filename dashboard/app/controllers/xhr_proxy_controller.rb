@@ -14,7 +14,12 @@ require 'set'
 class XhrProxyController < ApplicationController
   include ProxyHelper
 
-  ALLOWED_CONTENT_TYPES = Set.new(['application/json', 'text/json', 'text/javascript'])
+  ALLOWED_CONTENT_TYPES = Set.new(%w(
+    application/json
+    text/javascript
+    text/json
+    text/plain
+  ))
 
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(

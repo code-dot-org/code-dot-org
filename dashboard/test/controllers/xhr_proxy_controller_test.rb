@@ -71,6 +71,12 @@ class XhrProxyControllerTest < ActionController::TestCase
     assert_response 400
   end
 
+  test "should succeed on text/plain content type" do
+    stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: 'text/plain'})
+    get :get, u: XHR_URI, c: CHANNEL_ID
+    assert_response 200
+  end
+
   test "should fail with ec2.internal hostname suffix" do
     url = 'https://ip-192.168.0.1.ec2.internal/my/secret/api'
     stub_request(:get, url).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
