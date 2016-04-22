@@ -23,6 +23,12 @@
 require 'cdo/section_helpers'
 
 class Section < ActiveRecord::Base
+  # Deleted sections are soft-deleted, documentation at
+  # https://github.com/rubysherpas/paranoia
+  # WARNING: Though ActiveRecord scopes to non-(soft)-deleted users
+  #   automatically, this does not happen in MySQL-land or pegasus-land.
+  acts_as_paranoid
+
   belongs_to :user
 
   has_many :followers, dependent: :restrict_with_error

@@ -67,4 +67,11 @@ class SectionTest < ActiveSupport::TestCase
     assert !Section.exists?(section.id)
   end
 
+  test 'deleted sections are soft-deleted' do
+    section = create(:section)
+    section.destroy
+
+    assert_equal 0, Section.count
+    assert_equal 1, Section.with_deleted.count
+  end
 end
