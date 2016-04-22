@@ -37,7 +37,7 @@ describe('ErrorDialogStack', function () {
       });
     });
 
-    describe('action: DISMISS_ERROR', function () {
+    describe('action: dismissError', function () {
       var dismissError = errorDialogStackModule.dismissError;
 
       it('removes the first error object from the stack', function () {
