@@ -46,10 +46,9 @@ var CodeWorkspace = function (props) {
             </span>
             <div id="blockCounter">
               <div id="blockUsed" className='block-counter-default'>
-                {props.blockUsed}
               </div>
               <span> / </span>
-              <span id="idealBlockNumber">{props.idealBlockNumber}</span>
+              <span id="idealBlockNumber"></span>
               <span>{" " + msg.blocks()}</span>
             </div>
           </div>
