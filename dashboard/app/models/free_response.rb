@@ -30,6 +30,7 @@ class FreeResponse < Level
     encrypted_solution
     skip_dialog
     skip_sound
+    submittable
   )
 
   before_validation do
