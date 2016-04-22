@@ -29,7 +29,7 @@ var levels = require('./levels');
 var codegen = require('../codegen');
 var api = require('./api');
 var AppView = require('../templates/AppView');
-var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var CodeWorkspace = require('../templates/CodeWorkspace');
 var EvalVisualizationColumn = require('./EvalVisualizationColumn');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
@@ -150,19 +150,13 @@ Eval.init = function (config) {
     }
   };
 
-  var generateCodeWorkspaceHtmlFromEjs = function () {
-    return codeWorkspaceEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        localeDirection: studioApp.localeDirection(),
-        blockUsed : undefined,
-        idealBlockNumber : undefined,
-        editCode: level.editCode,
-        blockCounterClass : 'block-counter-default',
-        readonlyWorkspace: config.readonlyWorkspace
-      }
-    });
-  };
+  var codeWorkspace = (
+    <CodeWorkspace
+      localeDirection={studioApp.localeDirection()}
+      editCode={!!level.editCode}
+      readonlyWorkspace={!!config.readonlyWorkspace}
+    />
+  );
 
   ReactDOM.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
@@ -171,7 +165,7 @@ Eval.init = function (config) {
     hideSource: !!config.hideSource,
     noVisualization: false,
     isRtl: studioApp.isRtl(),
-    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    codeWorkspace: codeWorkspace,
     visualizationColumn: <EvalVisualizationColumn/>,
     onMount: studioApp.init.bind(studioApp, config)
   }), document.getElementById(config.containerId));
