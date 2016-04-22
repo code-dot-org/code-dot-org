@@ -10,6 +10,7 @@ env:
   node: true
   mocha: true
 
+parser: babel-eslint
 parserOptions:
   sourceType: module
   ecmaFeatures:
@@ -24,32 +25,35 @@ globals:
 
 rules:
   array-bracket-spacing:
-    - error
+    - 2
     - never
   brace-style:
-    - error
+    - 2
     - 1tbs
     - allowSingleLine: true
-  comma-dangle: off
-  curly: error
+  comma-dangle: 0
+  curly: 2
   dot-location:
-    - error
+    - 2
     - property
-  eol-last: error
-  keyword-spacing: error
-  no-array-constructor: error
-  no-console: off
-  no-empty: off
-  no-eval: error
-  no-extra-boolean-cast: off
-  no-implicit-globals: error
-  no-new-object: error
-  no-trailing-spaces: error
-  no-undef: error
-  no-unused-vars: off
-  no-with: error
-  object-curly-spacing: off
-  semi: error
+  eol-last: 2
+#  keyword-spacing: 2
+  no-array-constructor: 2
+  no-console: 0
+  no-empty: 0
+  no-eval: 2
+  no-extra-boolean-cast: 0
+#  no-implicit-globals: 2
+  no-new-object: 2
+  no-trailing-spaces: 2
+  no-undef: 2
+  no-unused-vars: 0
+  no-with: 2
+  object-curly-spacing: 0
+  semi: 2
+  space-after-keywords: 2
   space-before-function-paren:
-    - error
+    - 2
     - { anonymous: always, named: never }
+  space-before-keywords: 2
+  space-return-throw-case: 2
