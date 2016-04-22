@@ -9,7 +9,7 @@ var connect = require('react-redux').connect;
 var ListItemButtons = require('./ListItemButtons');
 var ListItemThumbnail = require('./ListItemThumbnail');
 var Radium = require('radium');
-var selectAnimation = require('./animationTabModule').actions.selectAnimation;
+var selectAnimation = require('./animationTabModule').selectAnimation;
 
 var styles = {
   tile: {
