@@ -3,7 +3,7 @@
  */
 'use strict';
 
-require('../utils');
+require('../utils'); // Provides Function.prototype.inherits
 var NetSimConstants = require('./NetSimConstants');
 var NetSimVizNode = require('./NetSimVizNode');
 
