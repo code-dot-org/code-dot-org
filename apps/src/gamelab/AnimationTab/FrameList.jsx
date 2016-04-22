@@ -1,12 +1,14 @@
 /** @file Vertical scrolling list of animation frames. */
 'use strict';
 
+var color = require('../../color');
 var FrameListItem = require('./FrameListItem');
 var NewListItem = require('./NewListItem');
 var ScrollableList = require('./ScrollableList');
 
 var styles = {
   root: {
+    backgroundColor: color.white,
     flex: '1 0 0'
   }
 };
@@ -17,7 +19,7 @@ var styles = {
  */
 var FrameList = function () {
   return (
-    <ScrollableList style={styles.root} className="animation-frame-list">
+    <ScrollableList style={styles.root}>
       <FrameListItem index={1} />
       <FrameListItem index={2} />
       <FrameListItem index={3} isSelected />
