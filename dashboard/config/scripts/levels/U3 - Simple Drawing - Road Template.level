@@ -16,7 +16,8 @@
       "rect": null,
       "regularPolygon": null,
       "text": null,
-      "comment": null
+      "comment": null,
+      "color": null
     },
     "edit_code": true,
     "embed": "false",

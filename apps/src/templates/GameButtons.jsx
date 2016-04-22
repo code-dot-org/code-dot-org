@@ -1,13 +1,21 @@
 var msg = require('../locale');
 
-var CompletionButton = require('./CompletionButton');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var commonStyles = require('../commonStyles');
 
+/**
+ * A set of game buttons that consist of a run/reset button, and potentially a
+ * set of children that we expect to be additional buttons.
+ */
 var GameButtons = function (props) {
+  var runButtonClasses = "launch blocklyLaunch";
+  if (props.hideRunButton) {
+    runButtonClasses += " invisible";
+  }
+
   return (
     <ProtectedStatefulDiv id="gameButtons">
-      <button id="runButton" className="launch blocklyLaunch">
+      <button id="runButton" className={runButtonClasses}>
         <div>{msg.runProgram()}</div>
         <img src="/blockly/media/1x1.gif" className="run26"/>
       </button>
@@ -16,9 +24,13 @@ var GameButtons = function (props) {
         <img src="/blockly/media/1x1.gif" className="reset26"/>
       </button>
       {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
-      <CompletionButton/>
+      {props.children}
     </ProtectedStatefulDiv>
   );
+};
+
+GameButtons.propTypes = {
+  hideRunButton: React.PropTypes.bool
 };
 
 module.exports = GameButtons;
