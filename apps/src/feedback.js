@@ -28,7 +28,7 @@ module.exports = FeedbackUtils;
 
 var trophy = require('./templates/trophy.html.ejs');
 var utils = require('./utils');
-var _ = utils.getLodash();
+var _ = require('./lodash');
 var codegen = require('./codegen');
 var msg = require('./locale');
 var dom = require('./dom');

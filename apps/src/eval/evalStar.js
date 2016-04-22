@@ -1,5 +1,6 @@
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
+require('../utils'); // Provides Function.prototype.inherits
 
 var EvalStar = function (pointCount, inner, outer, style, color) {
   evalUtils.ensureNumber(pointCount);

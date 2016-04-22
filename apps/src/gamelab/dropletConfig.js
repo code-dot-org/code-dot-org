@@ -36,12 +36,13 @@ function chooseAsset(typeFilter, callback) {
 
 module.exports.blocks = [
   // Game Lab
+  {func: 'draw', block: 'function draw() {}', expansion: 'function draw() {\n  __;\n}', category: 'Game Lab', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/draw" },
   {func: 'loadImage', category: 'Game Lab', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], type: 'either', dropdown: { 0: function () { return getAssetDropdown('image'); } }, assetTooltip: { 0: chooseAsset.bind(null, 'image') }, customDocURL: "http://p5js.org/reference/#/p5/loadImage" },
   {func: 'var img = loadImage', category: 'Game Lab', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/loadImage" },
   {func: 'image', category: 'Game Lab', paletteParams: ['image','srcX','srcY','srcW','srcH','x','y','w','h'], params: ["img", "0", "0", "img.width", "img.height", "0", "0", "img.width", "img.height"], noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/image" },
-  {func: 'fill', category: 'Game Lab', paletteParams: ['color'], params: ['"yellow"'], customDocURL: "http://p5js.org/reference/#/p5/fill" },
+  {func: 'fill', category: 'Game Lab', paletteParams: ['color'], params: ['"yellow"'], dropdown: { 0: ['"yellow"', 'color(255, 0, 0)', 'color(255, 0, 0, 127)'] }, customDocURL: "http://p5js.org/reference/#/p5/fill" },
   {func: 'noFill', category: 'Game Lab', customDocURL: "http://p5js.org/reference/#/p5/noFill" },
-  {func: 'stroke', category: 'Game Lab', paletteParams: ['color'], params: ['"blue"'], customDocURL: "http://p5js.org/reference/#/p5/stroke" },
+  {func: 'stroke', category: 'Game Lab', paletteParams: ['color'], params: ['"blue"'], dropdown: { 0: ['"blue"', 'color(255, 0, 0)', 'color(255, 0, 0, 127)'] }, customDocURL: "http://p5js.org/reference/#/p5/stroke" },
   {func: 'strokeWeight', category: 'Game Lab', paletteParams: ['size'], params: ["3"], customDocURL: "http://p5js.org/reference/#/p5/strokeWeight" },
   {func: 'color', category: 'Game Lab', paletteParams: ['r','g','b'], params: ["255", "255", "255"], type: 'value', customDocURL: "http://p5js.org/reference/#/p5/color" },
   {func: 'noStroke', category: 'Game Lab', customDocURL: "http://p5js.org/reference/#/p5/noStroke" },
@@ -58,7 +59,7 @@ module.exports.blocks = [
   {func: 'textFont', category: 'Game Lab', paletteParams: ['font'], params: ['"Arial"'], customDocURL: "http://p5js.org/reference/#/p5/textFont" },
   {func: 'textSize', category: 'Game Lab', paletteParams: ['pixels'], params: ["12"], customDocURL: "http://p5js.org/reference/#/p5/textSize" },
   {func: 'drawSprites', category: 'Game Lab', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-updateSprites" },
-  {func: 'background', category: 'Game Lab', paletteParams: ['color'], params: ['"white"'], customDocURL: "http://p5js.org/reference/#/p5/background" },
+  {func: 'background', category: 'Game Lab', paletteParams: ['color'], params: ['"white"'], dropdown: { 0: ['"white"', 'color(255, 0, 0)', 'color(255, 0, 0, 127)'] }, customDocURL: "http://p5js.org/reference/#/p5/background" },
   {func: 'allSprites', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#prop-allSprites" },
   {func: 'Game.allSprites', category: 'Game Lab', type: 'readonlyproperty' },
   /* disabled since we aren't suggesting these global properties be used - commenting these out prevents droplet from turning 'width' and 'height' into blocks when referenced as locals or parameters */
@@ -115,7 +116,7 @@ module.exports.blocks = [
   {func: 'play', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.play' },
   {func: 'previousFrame', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.previousFrame' },
   {func: 'setCollider', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['type','x','y','w','h'], params: ['"rectangle"', "0", "0", "20", "20"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setCollider', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-setCollider" },
-  {func: 'setColor', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['color'], params: ['"blue"'], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setColor' },
+  {func: 'setColor', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['color'], params: ['"blue"'], dropdown: { 0: ['"blue"', 'color(255, 0, 0)', 'color(255, 0, 0, 127)'] }, tipPrefix: spriteMethodPrefix, modeOptionName: '*.setColor' },
   {func: 'setFrame', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['frame'], params: ["0"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setFrame' },
   {func: 'setVelocity', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['x','y'], params: ["1", "1"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setVelocity', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-setVelocity" },
   {func: 'sprite.height', category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.height', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-height" },
@@ -220,7 +221,7 @@ getWidth()
   {func: 'minDepth', blockPrefix: groupBlockPrefix, category: 'Groups', tipPrefix: groupMethodPrefix, modeOptionName: '*.minDepth', type: 'value', customDocURL: "http://p5play.molleindustria.org/docs/classes/Group.html#method-minDepth" },
   {func: 'destroyEach', blockPrefix: groupBlockPrefix, category: 'Groups', tipPrefix: groupMethodPrefix, modeOptionName: '*.destroyEach' },
   {func: 'pointToEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['x','y'], params: ["200", "200"], tipPrefix: groupMethodPrefix, modeOptionName: '*.pointToEach' },
-  {func: 'setColorEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['color'], params: ['"blue"'], tipPrefix: groupMethodPrefix, modeOptionName: '*.setColorEach' },
+  {func: 'setColorEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['color'], params: ['"blue"'], dropdown: { 0: ['"blue"', 'color(255, 0, 0)', 'color(255, 0, 0, 127)'] }, tipPrefix: groupMethodPrefix, modeOptionName: '*.setColorEach' },
   {func: 'setColliderEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['type','x','y','w','h'], params: ['"rectangle"', "0", "0", "20", "20"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setColliderEach' },
   {func: 'setDepthEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['depth'], params: ["1"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setDepthEach' },
   {func: 'setHeightEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['height'], params: ["50"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setHeightEach' },
@@ -315,36 +316,43 @@ pointToEach(x, y)
 
 module.exports.categories = {
   'Game Lab': {
+    id: 'gamelab',
     color: 'yellow',
     rgb: COLOR_YELLOW,
     blocks: []
   },
   Sprites: {
+    id: 'sprites',
     color: 'red',
     rgb: COLOR_RED,
     blocks: []
   },
   Animations: {
+    id: 'animations',
     color: 'red',
     rgb: COLOR_RED,
     blocks: []
   },
   Groups: {
+    id: 'groups',
     color: 'red',
     rgb: COLOR_RED,
     blocks: []
   },
   Data: {
+    id: 'data',
     color: 'lightgreen',
     rgb: COLOR_LIGHT_GREEN,
     blocks: []
   },
   Input: {
-    color: 'green',
-    rgb: COLOR_GREEN,
+    id: 'input',
+    color: 'cyan',
+    rgb: COLOR_CYAN,
     blocks: []
   },
   Advanced: {
+    id: 'advanced',
     color: 'blue',
     rgb: COLOR_BLUE,
     blocks: []

@@ -9,9 +9,8 @@ var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
-var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
-var _ = utils.getLodash();
+var _ = require('../lodash');
 var dropletConfig = require('./dropletConfig');
 var JsDebuggerUi = require('../JsDebuggerUi');
 var JSInterpreter = require('../JSInterpreter');
@@ -77,6 +76,7 @@ var GameLab = function () {
   this.eventHandlers = {};
   this.Globals = {};
   this.btnState = {};
+  this.dPadState = {};
   this.currentCmdQueue = null;
   this.interpreterStarted = false;
   this.globalCodeRunsDuringPreload = false;
@@ -153,11 +153,10 @@ GameLab.prototype.init = function (config) {
   config.appMsg = msg;
 
   var showFinishButton = !this.level.isProjectLevel;
-  var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
   var areBreakpointsEnabled = true;
   var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: this.studioApp_.assetUrl,
-    finishButton: finishButtonFirstLine && showFinishButton
+    finishButton: showFinishButton
   });
   var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
     showButtons: true,
@@ -205,6 +204,11 @@ GameLab.prototype.init = function (config) {
 
     this.studioApp_.init(config);
 
+    var finishButton = document.getElementById('finishButton');
+    if (finishButton) {
+      dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
+    }
+
     this.debugger_.initializeAfterDomCreated({
       defaultStepSpeed: 1
     });
@@ -247,6 +251,12 @@ GameLab.prototype.afterInject_ = function (config) {
         this.onArrowButtonUp.bind(this, ArrowIds[btn]));
     dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
         this.onArrowButtonDown.bind(this, ArrowIds[btn]));
+  }
+  if (this.level.showDPad) {
+    dom.addMouseUpTouchEvent(document.getElementById('studio-dpad-button'),
+        this.resetDPad.bind(this));
+    dom.addMouseDownTouchEvent(document.getElementById('studio-dpad-button'),
+        this.onDPadButtonDown.bind(this));
   }
   document.addEventListener('mouseup', this.onMouseUp.bind(this), false);
 
@@ -334,6 +344,11 @@ GameLab.prototype.reset = function (ignore) {
   }
   if (softButtonCount) {
     $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonCount);
+  }
+
+  if (this.level.showDPad) {
+    $('#studio-dpad').removeClass('studio-dpad-none');
+    this.resetDPad();
   }
 };
 
@@ -441,6 +456,12 @@ GameLab.prototype.runButtonClick = function () {
   }
   this.studioApp_.attempts++;
   this.execute();
+
+  // Enable the Finish button if is present:
+  var shareCell = document.getElementById('share-cell');
+  if (shareCell) {
+    shareCell.className = 'share-cell-enabled';
+  }
 };
 
 function p5KeyCodeFromArrow(idBtn) {
@@ -471,6 +492,84 @@ GameLab.prototype.onArrowButtonUp = function (buttonId, e) {
   this.gameLabP5.notifyKeyCodeUp(p5KeyCodeFromArrow(buttonId));
 };
 
+GameLab.prototype.onDPadButtonDown = function (e) {
+  this.dPadState = {};
+  this.dPadState.boundHandler = this.onDPadMouseMove.bind(this);
+  document.body.addEventListener('mousemove', this.dPadState.boundHandler);
+  this.dPadState.touchEventName = dom.getTouchEventName('mousemove');
+  if (this.dPadState.touchEventName) {
+    document.body.addEventListener(this.dPadState.touchEventName,
+        this.dPadState.boundHandler);
+  }
+  this.dPadState.startingX = e.clientX;
+  this.dPadState.startingY = e.clientY;
+  this.dPadState.previousX = e.clientX;
+  this.dPadState.previousY = e.clientY;
+
+  $('#studio-dpad-button').addClass('active');
+
+  e.preventDefault();  // Stop normal events so we see mouseup later.
+};
+
+var DPAD_DEAD_ZONE = 3;
+
+GameLab.prototype.onDPadMouseMove = function (e) {
+  var dPadButton = $('#studio-dpad-button');
+  var self = this;
+
+  function notifyKeyHelper(keyCode, cssClass, start, prev, cur, invert) {
+    if (invert) {
+      start *= -1;
+      prev *= -1;
+      cur *= -1;
+    }
+    start -= DPAD_DEAD_ZONE;
+
+    if (cur < start) {
+      if (prev >= start) {
+        self.gameLabP5.notifyKeyCodeDown(keyCode);
+        dPadButton.addClass(cssClass);
+      }
+    } else if (prev < start) {
+      self.gameLabP5.notifyKeyCodeUp(keyCode);
+      dPadButton.removeClass(cssClass);
+    }
+  }
+
+  notifyKeyHelper(window.p5.prototype.LEFT_ARROW, 'left',
+      this.dPadState.startingX, this.dPadState.previousX, e.clientX, false);
+  notifyKeyHelper(window.p5.prototype.RIGHT_ARROW, 'right',
+      this.dPadState.startingX, this.dPadState.previousX, e.clientX, true);
+  notifyKeyHelper(window.p5.prototype.UP_ARROW, 'up',
+      this.dPadState.startingY, this.dPadState.previousY, e.clientY, false);
+  notifyKeyHelper(window.p5.prototype.DOWN_ARROW, 'down',
+      this.dPadState.startingY, this.dPadState.previousY, e.clientY, true);
+
+  this.dPadState.previousX = e.clientX;
+  this.dPadState.previousY = e.clientY;
+};
+
+GameLab.prototype.resetDPad = function () {
+  if (this.dPadState.boundHandler) {
+    // Fake a final mousemove back at the original starting position, which
+    // will reset buttons back to "up":
+    this.onDPadMouseMove({
+      clientX: this.dPadState.startingX,
+      clientY: this.dPadState.startingY,
+    });
+
+    document.body.removeEventListener('mousemove', this.dPadState.boundHandler);
+    if (this.dPadState.touchEventName) {
+      document.body.removeEventListener(this.dPadState.touchEventName,
+          this.dPadState.boundHandler);
+    }
+
+    $('#studio-dpad-button').removeClass('active');
+
+    this.dPadState = {};
+  }
+};
+
 GameLab.prototype.onMouseUp = function (e) {
   // Reset all arrow buttons on "global mouse up" - this handles the case where
   // the mouse moved off the arrow button and was released somewhere else
@@ -481,6 +580,8 @@ GameLab.prototype.onMouseUp = function (e) {
       this.gameLabP5.notifyKeyCodeUp(p5KeyCodeFromArrow(buttonId));
     }
   }
+
+  this.resetDPad();
 };
 
 GameLab.prototype.evalCode = function (code) {

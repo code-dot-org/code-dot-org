@@ -4,7 +4,7 @@ title: Professional Learning Partner Virtual Playbook
 
 <link type="text/css" rel="stylesheet" href="/css/educate.css" />
 
-<%= view :educate_box, item: {title_s: 'Branding and Teacher Communications', description_t: "Coming Soon!"} %>
+<%= view :educate_box, item: {title_s: 'Branding and Teacher Communications', description_t: "Find examples of emails your teachers will receive, and tips on how to write an email of your own.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/communications"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Community Building', description_t: "Coming Soon!"} %>
 
