@@ -100,31 +100,13 @@ Each of these activities can either be used alone or with other computer science
   </thead>
   
    <% lessons.each_with_index do |lesson, index|
-    	# Get the course number formatted well
-     
-     theCourse = lesson[:courseNum_s]
- 
-	case theCourse
-	when "course1"
-	    theCourse = "Course 1, Lesson "
-	when "course2"
-	    theCourse = "Course 2, Lesson "
-	when "course3"
-	    theCourse = "Course 3, Lesson "
-	when "course4"
-	    theCourse = "Course 4, Lesson "
-	when "20-hour"
-	    theCourse = "Accelerated Course, Lesson "
-	else
-	    theCourse = ""
-	end
   %>
+  
   
   <tbody>
     <tr>
       <td rowspan="2" style="color: white; border:1px solid white; text-align: center;"><%= lesson[:mainConcept_s] %></td>
-      <td style="border:1px solid #999999;"> <h3><a href="<%= lesson[:lessonURL_t] %>"><%= lesson[:name_t] %></a></h3>
-      	<div style="font-size: 11px; line-height: 120%;"><%= "<b>" + theCourse + lesson[:lessonNum_s] + "<br/> (age " + lesson[:age_s] +") </b>" %><br/><br/></div>
+      <td style="border:1px solid #999999;"> <h3><a href="<%= lesson[:lessonURL_t] %>"><%= lesson[:name_t] %></a><br/></h3>
      	<div style="font-size: 12px; line-height: 110%;"><%= lesson[:overview_t] %><br/><br/></div>
         <a href="<%= lesson[:lessonPlan_t] %>">Lesson Plan</a> 
         <%	if lesson[:teacherVid_t].present? %>

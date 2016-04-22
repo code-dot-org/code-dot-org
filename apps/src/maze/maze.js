@@ -30,7 +30,7 @@ var codegen = require('../codegen');
 var api = require('./api');
 var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var MazeVisualizationColumn = require('./MazeVisualizationColumn');
+var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
@@ -503,6 +503,8 @@ Maze.init = function (config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
   studioApp.reset = this.reset.bind(this);
 
+  var extraControlRows = null;
+
   skin = config.skin;
   level = config.level;
 
@@ -516,6 +518,10 @@ Maze.init = function (config) {
     Maze.scale.stepSpeed = 2;
   } else if (config.skinId === 'letters') {
     Maze.wordSearch = new WordSearch(level.searchWord, level.map, Maze.drawTile);
+    extraControlRows = require('./extraControlRows.html.ejs')({
+      assetUrl: studioApp.assetUrl,
+      searchWord: level.searchWord
+    });
   }
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.cellClass = BeeCell;
@@ -623,13 +629,20 @@ Maze.init = function (config) {
     });
   };
 
-  var visualizationColumn = (
-    <MazeVisualizationColumn
-      hideRunButton={!!(level.stepOnly && !level.edit_blocks)}
-      showStepButton={!!(level.step && !level.edit_blocks)}
-      searchWord={level.searchWord}
-    />
-  );
+  var generateVisualizationColumnHtmlFromEjs = function () {
+    return visualizationColumnEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        visualization: require('./visualization.html.ejs')(),
+        controls: require('./controls.html.ejs')({
+          assetUrl: studioApp.assetUrl,
+          showStepButton: level.step && !level.edit_blocks
+        }),
+        extraControlRows: extraControlRows
+      },
+      hideRunButton: level.stepOnly && !level.edit_blocks
+    });
+  };
 
   ReactDOM.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
@@ -639,7 +652,7 @@ Maze.init = function (config) {
     noVisualization: false,
     isRtl: studioApp.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
-    visualizationColumn: visualizationColumn,
+    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
     onMount: studioApp.init.bind(studioApp, config)
   }), document.getElementById(config.containerId));
 };

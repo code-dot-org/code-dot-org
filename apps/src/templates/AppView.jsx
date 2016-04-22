@@ -17,14 +17,7 @@ var AppView = React.createClass({
     noVisualization: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
-    generateVisualizationColumnHtml: React.PropTypes.func,
-    visualizationColumn: React.PropTypes.element,
-    customProp: function (props, propName, componentName) {
-      if (!props.generateVisualizationColumnHtml && !props.visualizationColumn) {
-        return new Error('must pass either generateVisualizationColumnHtml or ' +
-          'visualizationColumn to AppView');
-      }
-    },
+    generateVisualizationColumnHtml: React.PropTypes.func.isRequired,
     onMount: React.PropTypes.func.isRequired
   },
 
@@ -39,9 +32,8 @@ var AppView = React.createClass({
           isEmbedView={this.props.isEmbedView}
           isShareView={this.props.isShareView}>
         <div id="visualizationColumn">
-          {this.props.generateVisualizationColumnHtml && <ProtectedStatefulDiv
-            contentFunction={this.props.generateVisualizationColumnHtml} />}
-          {this.props.visualizationColumn}
+          <ProtectedStatefulDiv
+            contentFunction={this.props.generateVisualizationColumnHtml} />
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
         <CodeWorkspaceContainer
