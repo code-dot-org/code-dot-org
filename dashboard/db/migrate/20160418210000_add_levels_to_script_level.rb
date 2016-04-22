@@ -15,13 +15,9 @@ class AddLevelsToScriptLevel < ActiveRecord::Migration
         scriptlevel.save
       end
     end
-
-    remove_column :script_levels, :level_id
   end
 
   def down
-    add_reference :script_levels, :level
-
     ScriptLevel.class_eval do
       belongs_to :new_level, class_name: "Level", foreign_key: "level_id"
     end
