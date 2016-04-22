@@ -4,7 +4,7 @@ var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
 var codegen = require('../codegen');
 var api = require('./api');
-var utils = require('../utils');
+var utils = require('../utils'); // Provides Function.prototype.inherits
 
 
 /**
