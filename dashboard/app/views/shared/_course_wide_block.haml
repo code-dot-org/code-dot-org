@@ -58,6 +58,33 @@
           .bottombar.smalltext.audience= audience
         = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
 
+-elsif id == 'unplugged' && view == 'large'
+  - url = CDO.code_org_url("/curriculum/unplugged")
+  .courseblock-span6.courseblock-wide-large
+    =link_to url do
+      .courseblock-span2.imgspan
+        %img{src: CDO.code_org_url('/images/fit-150x100/unplugged.png')}
+      .courseblock-span4.heading
+        %h3= t("upsell.#{id}.title")
+        %h4= t("upsell.#{id}.audience")
+        .smalltext= t("upsell.#{id}.body")
+
+-elsif id == 'unplugged' && view == 'small'
+  - url = CDO.code_org_url("/curriculum/unplugged")
+  - if current_user ? height = 150 : height = 120
+    .courseblock-span6.courseblock-wide-small{style: "min-height: #{height}px;"}
+      =link_to url do
+        .courseblock-span2.imgspan
+          %img{src: CDO.code_org_url('/images/fit-150x100/unplugged.png')}
+        .courseblock-span4.heading
+          %h3= t("upsell.#{id}.title")
+          .smalltext= t("upsell.#{id}.body_short")
+        - if current_user
+          .audiencebar.smalltext.audience= t("upsell.#{id}.audience")
+          .bottombar.smalltext.trynow= t("home.try_now")
+        - else
+          .bottombar.smalltext.audience= t("upsell.#{id}.audience")
+
 - elsif id == Script::ARTIST_NAME || id == Script::PLAYLAB_NAME
 
   - url = script_reset_url(id)
