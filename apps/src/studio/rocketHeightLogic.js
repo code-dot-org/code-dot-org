@@ -3,6 +3,7 @@ var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
 var codegen = require('../codegen');
 var api = require('./api');
+require('../utils'); // Provides Function.prototype.inherits
 
 /**
  * Custom logic for the Rocket Height levels
