@@ -2,11 +2,13 @@
  *  @see http://redux.js.org/docs/basics/Actions.html */
 'use strict';
 
+var utils = require('../utils');
+
 /** @enum {string} */
-var ActionType = module.exports.ActionType = {
-  SET_INITIAL_LEVEL_PROPS: 'SET_INITIAL_LEVEL_PROPS',
-  CHANGE_INTERFACE_MODE: 'CHANGE_INTERFACE_MODE'
-};
+var ActionType = module.exports.ActionType = utils.makeEnum(
+  'SET_INITIAL_LEVEL_PROPS',
+  'CHANGE_INTERFACE_MODE'
+);
 
 /**
  * Change the interface mode between Code Mode and the Animation Tab
