@@ -4,6 +4,7 @@
 var FrameList = require('./FrameList');
 var AnimationPicker = require('../AnimationPicker/AnimationPicker');
 var AnimationList = require('./AnimationList');
+var color = require('../../color');
 var GameLabVisualizationHeader = require('../GameLabVisualizationHeader');
 var ResizablePanes = require('./ResizablePanes');
 
@@ -16,10 +17,25 @@ var styles = {
     right: 0
   },
   animationsColumn: {
-    flex: '0 0 150px' // sets initial width
+    display: 'flex',
+    flexDirection: 'column',
+    flex: '0 0 150px', // sets initial width
+    minWidth: 150,
+    maxWidth: 300
   },
   framesColumn: {
-    flex: '0 0 250px' // sets initial width
+    display: 'flex',
+    flexDirection: 'column',
+    flex: '0 0 250px', // sets initial width
+    minWidth: 150,
+    maxWidth: 300,
+    border: 'solid thin ' + color.light_purple,
+    borderRight: 'none'
+  },
+  editorColumn: {
+    display: 'flex',
+    flexDirection: 'column',
+    border: 'solid thin ' + color.light_purple
   },
   editorRegion: {
     flex: '1 0',
@@ -41,17 +57,17 @@ var AnimationTab = React.createClass({
     return (
       <div>
         <ResizablePanes style={styles.root}>
-          <div id='animations-column' style={styles.animationsColumn}>
+          <div style={styles.animationsColumn}>
             <GameLabVisualizationHeader />
             <AnimationList />
           </div>
-          <div id='frames-column' style={styles.framesColumn}>
+          <div style={styles.framesColumn}>
             <div className="purple-header workspace-header">
               <span>Frames</span>
             </div>
             <FrameList />
           </div>
-          <div id='editor-column'>
+          <div style={styles.editorColumn}>
             <div className="purple-header workspace-header">
               <span>Workspace</span>
             </div>
