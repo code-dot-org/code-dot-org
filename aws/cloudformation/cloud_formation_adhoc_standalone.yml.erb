@@ -27,7 +27,6 @@ Resources:
       VpcId: {'Fn::GetAtt': [VPC, VpcId]}
   WebServer:
     Type: AWS::EC2::Instance
-    DependsOn: Internet
     CreationPolicy:
       ResourceSignal:
         Timeout: PT60M
