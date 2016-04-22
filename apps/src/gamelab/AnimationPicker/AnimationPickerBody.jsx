@@ -3,32 +3,28 @@
 
 var AnimationPickerListItem = require('./AnimationPickerListItem.jsx');
 var AnimationPickerSearchBar = require('./AnimationPickerSearchBar.jsx');
-var color = require('../../color');
+var gamelabMsg = require('../locale');
 var Radium = require('radium');
 var ScrollableList = require('../AnimationTab/ScrollableList.jsx');
-
-var styles = {
-  title: {
-    color: color.purple,
-    textAlign: 'center',
-    margin: 0,
-    fontSize: '140%',
-    lineHeight: '140%'
-  }
-};
+var styles = require('./styles');
 
 var AnimationPickerBody = React.createClass({
+  propTypes: {
+    onUploadClick: React.PropTypes.func.isRequired
+  },
+
   render: function () {
     return <div>
-      <h1 style={styles.title}>Animation library</h1>
+      <h1 style={styles.title}>{gamelabMsg.animationPicker_title()}</h1>
       <AnimationPickerSearchBar />
       <ScrollableList style={{maxHeight: 400}}> {/* TODO: Is this maxHeight appropriate? */}
         <AnimationPickerListItem
-            label="Draw your own"
+            label={gamelabMsg.animationPicker_drawYourOwn()}
             icon="pencil" />
         <AnimationPickerListItem
-            label="Upload image"
-            icon="upload" />
+            label={gamelabMsg.animationPicker_uploadImage()}
+            icon="upload"
+            onClick={this.props.onUploadClick} />
         <AnimationPickerListItem
             label="asterisk_circle (9)" />
         <AnimationPickerListItem
