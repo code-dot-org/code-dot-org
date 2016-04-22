@@ -40,10 +40,10 @@ template '/etc/init.d/cdo-newrelic' do
   mode '0777'
   action :create
   only_if { node['cdo-newrelic']['api-key'] }
-  notifies :reload, 'service[cdo-newrelic]'
+  notifies :restart, 'service[cdo-newrelic]'
 end
 
 service 'cdo-newrelic' do
-  supports restart: true, reload: true, status: true
+  supports restart: true, status: true
   action [:enable, :start]
 end
