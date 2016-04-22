@@ -40,7 +40,7 @@ DEPENDENCIES
   chef-client (~> 4.2.0)
   ixgbevf
     git: git://github.com/wjordan/chef-ixgbevf.git
-    revision: d574281965490249d195169af065bcde85e5d6a6
+    revision: 969318033aecd49dbbd57d9dafd03a84959d7736
     branch: cdo
   ntp (~> 1.8.6)
   omnibus_updater
