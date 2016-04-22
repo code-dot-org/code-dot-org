@@ -273,6 +273,7 @@ $dpad-red: #F78183;
 
 #studio-dpad-button {
   display: inline;
+  border-radius: 21px;
   margin: 5px;
   &.active {
     background: $dpad-red;

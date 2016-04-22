@@ -35,9 +35,6 @@
           - course_pair.each do |user_script|
             = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
 
-  - else # no logged in user
-    = render partial: 'home/sign_in_buttons'
-
   = render partial: 'home/all_courses'
 
   - if current_user && !current_user.teacher? && Gatekeeper.allows('logged_in_studio_homepage', default: true)
