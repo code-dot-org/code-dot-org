@@ -3,13 +3,17 @@
 
 var animationPickerModule = require('../AnimationPicker/animationPickerModule');
 var AnimationListItem = require('./AnimationListItem');
+var color = require('../../color');
 var connect = require('react-redux').connect;
 var NewListItem = require('./NewListItem');
 var ScrollableList = require('./ScrollableList');
 
 var styles = {
   root: {
-    flex: '1 0 0'
+    flex: '1 0 0',
+    border: 'solid thin ' + color.light_purple,
+    borderRight: 'none',
+    backgroundColor: color.white
   }
 };
 
@@ -18,7 +22,7 @@ var styles = {
  */
 var AnimationList = function (props) {
   return (
-    <ScrollableList style={styles.root} className="animation-list">
+    <ScrollableList style={styles.root}>
       {props.animations.map(function (animation) {
         return <AnimationListItem
             key={animation.key}
