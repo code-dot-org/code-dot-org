@@ -6,9 +6,8 @@ let testUtils = require('../util/testUtils');
 testUtils.setupLocale('calc');
 
 let LevelModel = require('@cdo/apps/craft/game/LevelMVC/LevelModel.js');
-import utils from '@cdo/apps/utils';
 
-let _ = utils.getLodash();
+let _ = require('@cdo/apps/lodash');
 
 let makePlane = (n, type) => _.range(n).map(() => type);
 let blankPlane = () => makePlane(100, '');
