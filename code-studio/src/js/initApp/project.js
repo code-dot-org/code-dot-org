@@ -344,7 +344,7 @@ var projects = module.exports = {
   getStandaloneApp: function () {
     switch (appOptions.app) {
       case 'applab':
-        return 'applab';
+        return appOptions.level.makerlabEnabled ? 'makerlab' : 'applab';
       case 'gamelab':
         return 'gamelab';
       case 'turtle':
@@ -542,7 +542,9 @@ var projects = module.exports = {
       var url = projects.appToProjectUrl();
       if (url === '/projects/algebra_game') {
         this.setName('Big Game Template');
-      } else if (url === '/projects/applab' || url === '/projects/gamelab') {
+      } else if (url === '/projects/applab' ||
+          url === '/projects/makerlab' ||
+          url === '/projects/gamelab') {
         this.setName('My Project');
       }
     }
