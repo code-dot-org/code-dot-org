@@ -12,7 +12,6 @@ var $ = require('jquery');
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Radium = require('radium');
-var _ = require('lodash');
 
 exports.buildPath = function (path) {
   return __dirname + '/../../build/js/' + path;

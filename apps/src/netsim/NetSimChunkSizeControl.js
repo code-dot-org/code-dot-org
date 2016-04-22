@@ -6,6 +6,7 @@
 
 var i18n = require('./locale');
 var NetSimSlider = require('./NetSimSlider');
+require('../utils'); // Provides Function.prototype.inherits
 
 /**
  * Generator and controller for chunk size slider/selector
