@@ -105,7 +105,7 @@ opt_parser = OptionParser.new do |opts|
   opts.on("-n", "--parallel ParallelLimit", String, "Maximum number of browsers to run in parallel (default is 1)") do |p|
     $options.parallel_limit = p.to_i
   end
-  opts.on("--db", String, "Run scripts requiring DB access regardless of environment (otherwise restricted to development/test).") do |p|
+  opts.on("--db", String, "Run scripts requiring DB access regardless of environment (otherwise restricted to development/test).") do
     $options.force_db_access = true
   end
   opts.on("-V", "--verbose", "Verbose") do
