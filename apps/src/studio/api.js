@@ -91,17 +91,24 @@ exports.setSpritePosition = function (id, spriteIndex, value) {
   });
 };
 
-exports.addFlag = function (id, value) {
-  Studio.queueCmd(id, 'addFlag', {
-    'value': Number(value)
-  });
-};
-
 exports.setSpriteXY = function (id, spriteIndex, xpos, ypos) {
   Studio.queueCmd(id, 'setSpriteXY', {
     'spriteIndex': spriteIndex,
     'x': Number(xpos),
     'y': Number(ypos)
+  });
+};
+
+exports.addGoal = function (id, value) {
+  Studio.queueCmd(id, 'addGoal', {
+    'value': Number(value)
+  });
+};
+
+exports.addGoalXY = function (id, x, y) {
+  Studio.queueCmd(id, 'addGoal', {
+    'x': Number(x),
+    'y': Number(y)
   });
 };
 

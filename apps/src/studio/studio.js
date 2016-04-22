@@ -516,34 +516,31 @@ Studio.drawGoal = function (i, goal) {
       utils.valueOr(skin.goalRenderOffsetY, 0));
 
   // Add finish markers.
-  var finishClipPath = document.createElementNS(SVG_NS, 'clipPath');
-  finishClipPath.setAttribute('id', 'finishClipPath' + i);
-  var finishClipRect = document.createElementNS(SVG_NS, 'rect');
-  finishClipRect.setAttribute('id', 'finishClipRect' + i);
-  finishClipRect.setAttribute('width', spriteWidth);
-  finishClipRect.setAttribute('height', spriteHeight);
-  finishClipPath.appendChild(finishClipRect);
+  goal.clipPath = document.createElementNS(SVG_NS, 'clipPath');
+  goal.clipPath.setAttribute('id', 'finishClipPath' + i);
+  goal.clipRect = document.createElementNS(SVG_NS, 'rect');
+  goal.clipRect.setAttribute('id', 'finishClipRect' + i);
+  goal.clipRect.setAttribute('width', spriteWidth);
+  goal.clipRect.setAttribute('height', spriteHeight);
+  goal.clipPath.appendChild(goal.clipRect);
   // Safari workaround: Clip paths work better when descendant of an SVGGElement.
-  spriteLayer.appendChild(finishClipPath);
+  spriteLayer.appendChild(goal.clipPath);
 
-  var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
-  spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
-  spriteFinishMarker.setAttribute('width', spritesheetWidth);
-  spriteFinishMarker.setAttribute('height', spritesheetHeight);
+  goal.marker = document.createElementNS(SVG_NS, 'image');
+  goal.marker.setAttribute('id', 'spriteFinish' + i);
+  goal.marker.setAttribute('width', spritesheetWidth);
+  goal.marker.setAttribute('height', spritesheetHeight);
   if (!skin.disableClipRectOnGoals) {
-    spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
+    goal.marker.setAttribute('clip-path', 'url(#goal.clipPath' + i + ')');
   }
-  spriteFinishMarker.setAttribute('x', goal.x + offsetX);
-  spriteFinishMarker.setAttribute('y', goal.y + offsetY);
-  spriteFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
+  goal.marker.setAttribute('x', goal.x + offsetX);
+  goal.marker.setAttribute('y', goal.y + offsetY);
+  goal.marker.setAttributeNS('http://www.w3.org/1999/xlink',
       'xlink:href', Studio.getGoalAssetFromSkin());
-  spriteFinishMarker.setAttribute('opacity', 1);
-  finishClipRect.setAttribute('x', goal.x + offsetX);
-  finishClipRect.setAttribute('y', goal.y + offsetY);
-  svg.appendChild(spriteFinishMarker);
-
-  goal.marker = spriteFinishMarker;
-  goal.clipRect = finishClipRect;
+  goal.marker.setAttribute('opacity', 1);
+  goal.clipRect.setAttribute('x', goal.x + offsetX);
+  goal.clipRect.setAttribute('y', goal.y + offsetY);
+  svg.appendChild(goal.marker);
 };
 
 /** @type {ImageFilter} */
@@ -2397,7 +2394,7 @@ Studio.resetGoalSprites = function () {
   for (i = 0; i < Studio.dynamicSpriteGoals_.length; i++) {
     goal = Studio.dynamicSpriteGoals_[i];
     goal.marker.parentNode.removeChild(goal.marker);
-    goal.clipRect.parentNode.removeChild(goal.clipRect);
+    goal.clipPath.parentNode.removeChild(goal.clipPath);
   }
   Studio.dynamicSpriteGoals_ = [];
 };
@@ -3482,8 +3479,6 @@ Studio.animateGoals = function () {
   // animation is significantly out of sync.
   var animationOffset = 7;
 
-
-  //"TODO animate dynamic goals"
   Studio.allGoals_().forEach(function (goal, i) {
     // Keep animating the goal unless it's finished and we're not fading out.
     if (!goal.finished || goal.startFadeTime) {
@@ -3757,13 +3752,13 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.setSpritePosition(cmd.opts);
       break;
-    case 'addFlag':
-      studioApp.highlight(cmd.id);
-      Studio.addFlag(cmd.opts);
-      break;
     case 'setSpriteXY':
       studioApp.highlight(cmd.id);
       Studio.setSpriteXY(cmd.opts);
+      break;
+    case 'addGoal':
+      studioApp.highlight(cmd.id);
+      Studio.addGoal(cmd.opts);
       break;
     case 'playSound':
       studioApp.highlight(cmd.id);
@@ -5170,26 +5165,6 @@ Studio.setSpritePosition = function (opts) {
   sprite.setDirection(Direction.NONE);
 };
 
-Studio.addFlag = function (opts) {
-  if (opts.value) {
-    var spriteWidth = utils.valueOr(skin.goalSpriteWidth, Studio.MARKER_WIDTH);
-    var sprite = { width : spriteWidth };
-    // fill in .x and .y from the constants.Position value in opts.value
-    opts.x = xFromPosition(sprite, opts.value);
-    opts.y = yFromPosition(sprite, opts.value);
-  }
-
-  var goal = {
-    finished: false,
-    x: opts.x,
-    y: opts.y
-  };
-
-  Studio.drawGoal(Studio.allGoals_().length, goal);
-  Studio.dynamicSpriteGoals_.push(goal);
-  sortDrawOrder();
-};
-
 Studio.setSpriteXY = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   var x = opts.x - sprite.width / 2;
@@ -5205,6 +5180,28 @@ Studio.setSpriteXY = function (opts) {
   sprite.displayY = sprite.y = y;
   // Reset to "no direction" so no turn animation will take place
   sprite.setDirection(Direction.NONE);
+};
+
+Studio.addGoal = function (opts) {
+  if (opts.value) {
+    var sprite = {
+      width : utils.valueOr(skin.goalSpriteWidth, Studio.MARKER_WIDTH),
+      height : utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT),
+    };
+    // fill in .x and .y from the constants.Position value in opts.value
+    opts.x = xFromPosition(sprite, opts.value);
+    opts.y = yFromPosition(sprite, opts.value);
+  }
+
+  var goal = {
+    finished: false,
+    x: opts.x,
+    y: opts.y
+  };
+
+  Studio.drawGoal(Studio.allGoals_().length, goal);
+  Studio.dynamicSpriteGoals_.push(goal);
+  sortDrawOrder();
 };
 
 Studio.getPlayspaceBoundaries = function (sprite) {
