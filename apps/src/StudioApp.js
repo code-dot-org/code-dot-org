@@ -5,9 +5,10 @@ var color = require('./color');
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
 var dropletUtils = require('./dropletUtils');
-var _ = utils.getLodash();
+var _ = require('./lodash');
 var dom = require('./dom');
 var constants = require('./constants.js');
+var KeyCodes = constants.KeyCodes;
 var msg = require('./locale');
 var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
@@ -1880,6 +1881,10 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     textModeAtStart: config.level.textModeAtStart
   });
 
+  if (config.level.paletteCategoryAtStart) {
+    this.editor.changePaletteGroup(config.level.paletteCategoryAtStart);
+  }
+
   this.editor.aceEditor.setShowPrintMargin(false);
 
   // Init and define our custom ace mode:
@@ -2004,6 +2009,34 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   this.editor.on('palettetoggledone', function (e) {
     // Reposition callouts after block/text toggle (in case they need to move)
     $('.cdo-qtips').qtip('reposition', null, false);
+  });
+
+  // Prevent the backspace key from navigating back. Make sure it's still
+  // allowed on other elements.
+  // Based on http://stackoverflow.com/a/2768256/2506748
+  $(document).on('keydown', function (event) {
+    var doPrevent = false;
+    if (event.keyCode !== KeyCodes.BACKSPACE) {
+      return;
+    }
+    var d = event.srcElement || event.target;
+    if ((d.tagName.toUpperCase() === 'INPUT' && (
+        d.type.toUpperCase() === 'TEXT' ||
+        d.type.toUpperCase() === 'PASSWORD' ||
+        d.type.toUpperCase() === 'FILE' ||
+        d.type.toUpperCase() === 'EMAIL' ||
+        d.type.toUpperCase() === 'SEARCH' ||
+        d.type.toUpperCase() === 'NUMBER' ||
+        d.type.toUpperCase() === 'DATE' )) ||
+        d.tagName.toUpperCase() === 'TEXTAREA') {
+      doPrevent = d.readOnly || d.disabled;
+    } else {
+      doPrevent = !d.isContentEditable;
+    }
+
+    if (doPrevent) {
+      event.preventDefault();
+    }
   });
 
   if (this.instructionsDialog) {

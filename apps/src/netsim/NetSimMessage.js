@@ -3,7 +3,7 @@
  */
 'use strict';
 
-var utils = require('../utils');
+var utils = require('../utils'); // Provides Function.prototype.inherits
 var NetSimEntity = require('./NetSimEntity');
 var DataConverters = require('./DataConverters');
 var base64ToBinary = DataConverters.base64ToBinary;
