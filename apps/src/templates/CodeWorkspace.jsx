@@ -45,7 +45,7 @@ var CodeWorkspace = function (props) {
               {props.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort()}
             </span>
             <div id="blockCounter">
-              <div id="blockUsed" className={props.blockCounterClass}>
+              <div id="blockUsed" className='block-counter-default'>
                 {props.blockUsed}
               </div>
               <span> / </span>
@@ -67,7 +67,6 @@ CodeWorkspace.PropTypes = {
   readonlyWorkspace: React.PropTypes.bool.isRequired,
   pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
   // extraControlRows: , // TODO - dangerously set html?
-  blockCounterClass: React.PropTypes.string.isRequired
 };
 
 module.exports = CodeWorkspace;
