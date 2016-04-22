@@ -25,7 +25,7 @@ var initialState = {
   uploadError: null
 };
 
-exports.reducer = function (state, action) {
+exports.default = function reducer(state, action) {
   state = state || initialState;
   switch (action.type) {
     case SHOW:
@@ -57,8 +57,6 @@ exports.reducer = function (state, action) {
   }
 };
 
-var actions = exports.actions = {};
-
 /**
  * Display the AnimationPicker modal dialog (reset to initial state).
  * @param {!AnimationPicker.Goal} goal - whether we intend to turn the selected
@@ -66,7 +64,7 @@ var actions = exports.actions = {};
  * @returns {{type: string, goal: AnimationPicker.Goal }}
  * @throws {TypeError} if a valid goal is not provided
  */
-actions.show = function (goal) {
+exports.show = function (goal) {
   if ([Goal.NEW_ANIMATION, Goal.NEW_FRAME].indexOf(goal) === -1) {
     throw new TypeError('Must provide a valid goal');
   }
@@ -77,7 +75,7 @@ actions.show = function (goal) {
  * Hide the AnimationPicker modal dialog (resetting its state).
  * @returns {{type: string}}
  */
-actions.hide = function () {
+exports.hide = function () {
   return { type: HIDE };
 };
 
@@ -86,7 +84,7 @@ actions.hide = function () {
  * @param {!string} filename
  * @returns {{type: string, filename: string}}
  */
-actions.beginUpload = function (filename) {
+exports.beginUpload = function (filename) {
   return {
     type: BEGIN_UPLOAD,
     filename: filename
@@ -100,7 +98,7 @@ actions.beginUpload = function (filename) {
  * @param {!{filename: string, result: number, versionId: string}} result
  * @returns {function}
  */
-actions.handleUploadComplete = function (result) {
+exports.handleUploadComplete = function (result) {
   return function (dispatch, getState) {
     var state = getState().animationPicker;
     var goal = state.goal;
@@ -115,7 +113,7 @@ actions.handleUploadComplete = function (result) {
     } else if (goal === Goal.NEW_FRAME) {
       // TODO (bbuchanan): Implement after integrating Piskel
     }
-    dispatch(actions.hide());
+    dispatch(exports.hide());
   };
 };
 
@@ -124,7 +122,7 @@ actions.handleUploadComplete = function (result) {
  * @param {!string} status
  * @returns {{type: string, status: string}}
  */
-actions.handleUploadError = function (status) {
+exports.handleUploadError = function (status) {
   return {
     type: HANDLE_UPLOAD_ERROR,
     status: status

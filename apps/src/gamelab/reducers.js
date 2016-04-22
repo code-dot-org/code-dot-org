@@ -4,7 +4,7 @@
 
 var _ = require('../lodash');
 var ActionType = require('./actions').ActionType;
-var animationPicker = require('./AnimationPicker/animationPickerModule').reducer;
+var animationPicker = require('./AnimationPicker/animationPickerModule').default;
 var animationTab = require('./AnimationTab/animationTabModule').reducer;
 var combineReducers = require('redux').combineReducers;
 var errorDialogStack = require('./errorDialogStackModule').reducer;
