@@ -380,7 +380,7 @@ Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expec
 end
 
 Then /^element "([^"]*)" eventually contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
-  Selenium::WebDriver::Wait.new(:timeout => 15).until { element_contains_text?(selector, expected_text) }
+  wait_with_timeout(15).until { element_contains_text?(selector, expected_text) }
 end
 
 Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expected_value|
@@ -620,7 +620,10 @@ And(/I fill in username and password for "([^"]*)"$/) do |name|
 end
 
 When(/^I sign out$/) do
-  steps 'When I am on "http://studio.code.org/users/sign_out"'
+  steps %Q{
+    And I am on "http://studio.code.org/users/sign_out"
+    And I wait until current URL contains "http://code.org/"
+  }
 end
 
 When(/^I debug cookies$/) do

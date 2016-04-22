@@ -133,6 +133,9 @@ After do |_s|
   unless @browser.nil?
     # clear session state (or get a new browser)
     if slow_browser?
+      unless @browser.current_url.include?('studio')
+        steps 'Then I am on "http://studio.code.org/"'
+      end
       @browser.execute_script 'sessionStorage.clear()'
     else
       @browser.quit unless @browser.nil?
