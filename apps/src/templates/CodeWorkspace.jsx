@@ -11,7 +11,7 @@ var styles = {
 var CodeWorkspace = function (props) {
   return (
     <span>
-      <div id="headers" dir={props.localeDirection}>
+      <ProtectedStatefulDiv id="headers" dir={props.localeDirection}>
         <div id="codeModeHeaders">
           <div id="toolbox-header" className="workspace-header">
             <i id="hide-toolbox-icon" style={commonStyles.hidden} className="fa fa-chevron-circle-right"/>
@@ -53,8 +53,8 @@ var CodeWorkspace = function (props) {
             </div>
           </div>
         </div>
-      </div>
-      {props.editCode && <div id="codeTextbox"/>}
+      </ProtectedStatefulDiv>
+      {props.editCode && <ProtectedStatefulDiv id="codeTextbox"/>}
       {props.extraControlRows}
     </span>
   );

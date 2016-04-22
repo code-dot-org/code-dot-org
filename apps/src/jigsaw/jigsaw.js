@@ -10,7 +10,6 @@
 var studioApp = require('../StudioApp').singleton;
 var skins = require('../skins');
 var AppView = require('../templates/AppView');
-var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var CodeWorkspace = require('../templates/CodeWorkspace');
 var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');
 var dom = require('../dom');
