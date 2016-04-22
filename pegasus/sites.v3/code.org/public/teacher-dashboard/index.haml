@@ -795,8 +795,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
           assessment.status = assessment.submitted ? "submitted" : "in_progress";
 
           // Don't show a timestamp for non-submittted assessments.
-          if (!assessment.submitted)
-          {
+          if (!assessment.submitted) {
             assessment.timestamp = null;
           }
 

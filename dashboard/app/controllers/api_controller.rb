@@ -203,14 +203,8 @@ class ApiController < ApplicationController
               student_result = level_response["result"].split(",").sort.join(",")
               multi_count += 1
 
-              student_result_values = []
               # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
-              student_result.split(',').each do |result|
-                student_result_values << multi_answer_characters[result.to_i]
-              end
-              viewable_student_result = student_result_values.join(', ')
-
-              level_result[:student_result] = viewable_student_result
+              level_result[:student_result] = student_result.split(',').map{ |k| multi_answer_characters[k.to_i] }.join(', ')
 
               if student_result == "-1"
                 level_result[:student_result] = ""

@@ -103,7 +103,6 @@ window.dashboard.dialog = (function () {
       return;
     }
 
-    var results = getResult();
     var showConfirmationDialog = getResult().showConfirmationDialog || false;
     if (showConfirmationDialog) {
       showDialog(showConfirmationDialog, function () {

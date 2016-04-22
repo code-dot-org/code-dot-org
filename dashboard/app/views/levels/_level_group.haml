@@ -70,7 +70,7 @@
 
 - unless @script_level.nil?
   :javascript
-    var levelCount = #{@pages[0].levels.length};
+    var levelCount = #{@total_level_count};
     var page = #{current_page || -1};
 
     var fallbackResponse = #{@fallback_response.to_json};
