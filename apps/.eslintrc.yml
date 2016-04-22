@@ -1,0 +1,14 @@
+# This config only defines globals available especially
+# in apps.  See the root .eslintrc.yml for linting rules.
+globals:
+  Blockly: true
+  Phaser: true
+  Studio: true
+  Maze: true
+  Turtle: true
+  Bounce: true
+  Eval: true
+  Flappy: true
+  Applab: true
+  Calc: true
+  Jigsaw: true
