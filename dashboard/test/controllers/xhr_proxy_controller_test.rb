@@ -24,6 +24,14 @@ class XhrProxyControllerTest < ActionController::TestCase
     assert_equal XHR_DATA, response.body
   end
 
+  test "should handle query parameters" do
+    url = 'https://www.googleapis.com/freebase/v1/search?query=ada&filter=(any%20type:/people/person%20type:/location/citytown)'
+    stub_request(:get, url).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
+    get :get, u: url, c: CHANNEL_ID
+    assert_response :success
+    assert_equal XHR_DATA, response.body
+  end
+
   test "should log to newrelic" do
     CDO.stubs(:newrelic_logging).returns(true) do
       stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
