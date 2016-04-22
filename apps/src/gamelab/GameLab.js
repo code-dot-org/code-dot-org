@@ -7,7 +7,8 @@ var codegen = require('../codegen');
 var api = require('./api');
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
-var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+var CodeWorkspace = require('../templates/CodeWorkspace');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = require('../lodash');
@@ -185,31 +186,13 @@ GameLab.prototype.init = function (config) {
   }));
 
   var showFinishButton = !this.level.isProjectLevel;
-  var areBreakpointsEnabled = true;
-
-  var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
-  var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
+  var extraControlRowsHtml = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
     showButtons: true,
     showConsole: true,
     showWatch: true,
   });
-
-  var generateCodeWorkspaceHtmlFromEjs = function () {
-    return codeWorkspaceEjs({
-      assetUrl: this.studioApp_.assetUrl,
-      data: {
-        localeDirection: this.studioApp_.localeDirection(),
-        extraControlRows: extraControlRows,
-        blockUsed : undefined,
-        idealBlockNumber : undefined,
-        editCode: this.level.editCode,
-        blockCounterClass : 'block-counter-default',
-        pinWorkspaceToBottom: true,
-        readonlyWorkspace: config.readonlyWorkspace
-      }
-    });
-  }.bind(this);
+  var extraControlRows = <ProtectedStatefulDiv dangerouslySetInnerHTML={{ __html : extraControlRowsHtml }} />;
 
   this.reduxStore_.dispatch(actions.setInitialLevelProps({
     assetUrl: this.studioApp_.assetUrl,
@@ -226,9 +209,18 @@ GameLab.prototype.init = function (config) {
     this.reduxStore_.dispatch(actions.setInitialAnimationMetadata(config.initialAnimationMetadata));
   }
 
+  var codeWorkspace = (
+    <CodeWorkspace
+      localeDirection={this.studioApp_.localeDirection()}
+      editCode={!!config.level.editCode}
+      readonlyWorkspace={!!config.readonlyWorkspace}
+      extraControlRows={extraControlRows}
+    />
+  );
+
   ReactDOM.render(<Provider store={this.reduxStore_}>
     <GameLabView
-      generateCodeWorkspaceHtml={generateCodeWorkspaceHtmlFromEjs}
+      codeWorkspace={codeWorkspace}
       showFinishButton={finishButtonFirstLine && showFinishButton}
       onMount={onMount} />
   </Provider>, document.getElementById(config.containerId));
