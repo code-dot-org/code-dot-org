@@ -67,6 +67,7 @@ BoardController.prototype.installComponentsOnInterpreter = function (codegen, js
     Piezo: five.Piezo,
     Thermometer: five.Thermometer,
     Sensor: five.Sensor,
+    Pin: five.Pin,
     CapTouch: PlaygroundIO.CapTouch,
     Tap: PlaygroundIO.Tap,
     Accelerometer: five.Accelerometer
@@ -185,16 +186,6 @@ function initializeCircuitPlaygroundComponents(io) {
 
     led: new five.Led(13),
 
-    buttonL: new five.Button('4', {
-      isPullup: true,
-      invert: true
-    }),
-
-    buttonR: new five.Button('19', {
-      isPullup: true,
-      invert: true
-    }),
-
     toggle: new five.Switch('21'),
 
     piezo: new five.Piezo({
@@ -213,18 +204,26 @@ function initializeCircuitPlaygroundComponents(io) {
       freq: 100
     }),
 
-    sound: new five.Sensor({
-      pin: "A4",
-      freq: 100
-    }),
-
     accelerometer: new five.Accelerometer({
       controller: PlaygroundIO.Accelerometer
     }),
 
     tap: new PlaygroundIO.Tap(io),
 
-    touch: new PlaygroundIO.CapTouch(io)
+    touch: new PlaygroundIO.CapTouch(io),
+
+    /**
+     * Must initialize sound sensor BEFORE left button, otherwise left button
+     * will not respond to input.
+     */
+    sound: new five.Sensor({
+      pin: "A4",
+      freq: 100
+    }),
+
+    buttonL: new five.Button('4'),
+
+    buttonR: new five.Button('19')
   };
 }
 
