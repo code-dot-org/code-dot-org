@@ -1,5 +1,3 @@
-var utils = require('../utils');
-
 module.exports = {
   FOOTER_HEIGHT: 30,
   APP_WIDTH: 320,
@@ -8,5 +6,8 @@ module.exports = {
   ICON_PREFIX: 'icon://',
   ICON_PREFIX_REGEX: new RegExp('^icon://'),
   NEW_SCREEN: "New screen...",
-  ApplabInterfaceMode: utils.makeEnum('CODE', 'DESIGN')
+  ApplabInterfaceMode: {
+    CODE: 'CODE',
+    DESIGN: 'DESIGN'
+  }
 };
