@@ -10,7 +10,7 @@ var styles = {
 
 var CodeWorkspace = function (props) {
   return (
-    <span>
+    <span id="codeWorkspaceWrapper">
       <ProtectedStatefulDiv id="headers" dir={props.localeDirection}>
         <div id="codeModeHeaders">
           <div id="toolbox-header" className="workspace-header">

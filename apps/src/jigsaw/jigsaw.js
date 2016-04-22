@@ -149,7 +149,6 @@ Jigsaw.init = function (config) {
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
-
   var codeWorkspace = (
     <CodeWorkspace
       localeDirection={studioApp.localeDirection()}
