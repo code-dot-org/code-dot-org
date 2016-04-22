@@ -16,19 +16,19 @@ module ProxyHelper
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil? || !allowed_hostname?(url, allowed_hostname_suffixes)
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
-    uri = url.request_uri.empty? ? '/' : url.request_uri
-    query = url.query  || ''
+    path = (url.path.empty?) ? '/' : url.path
+    query = url.query || ''
 
     # Limit how long we're willing to wait.
     http.open_timeout = 3
     http.read_timeout = 3
 
     # Get the media.
-    media = http.request_get(uri + '?' + query)
+    media = http.request_get(path + '?' + query)
 
     # generate content-type from file name if we weren't given one
-    if media.content_type.nil? && infer_content_type
-      media.content_type = Rack::Mime.mime_type(File.extname(url.path))
+    if media.content_type.nil?
+      media.content_type = Rack::Mime.mime_type(File.extname(path))
     end
 
     if media.is_a? Net::HTTPRedirection
