@@ -59,11 +59,8 @@ Blockly.ContextMenu.show = function(e, options) {
     menu.addItem(menuItem);
     menuItem.setEnabled(option.enabled);
     if (option.enabled) {
-      var evtHandlerCapturer = function(callback) {
-        return function() { callback() };
-      };
       goog.events.listen(menuItem, goog.ui.Component.EventType.ACTION,
-                         evtHandlerCapturer(option.callback));
+                         option.callback);
     }
   }
   goog.events.listen(menu, goog.ui.Component.EventType.ACTION,
