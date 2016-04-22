@@ -29,10 +29,7 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   # POST /plc/user_course_enrollments.json
   def create
     user = User.find_by_email_or_hashed_email(user_course_enrollment_params[:user_email])
-    if user.nil?
-      redirect_to action: :new
-      return
-    end
+    redirect_to action: :new if user.nil?
 
     @user_course_enrollment = Plc::UserCourseEnrollment.find_or_create_by(user: user,
                                                                      plc_course_id: user_course_enrollment_params[:plc_course_id])

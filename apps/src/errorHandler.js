@@ -1,8 +1,10 @@
 var annotationList = require('./acemode/annotationList');
 var logToCloud = require('./logToCloud');
-var utils = require('./utils');
 
-var ErrorLevel = utils.makeEnum('WARNING', 'ERROR');
+var ErrorLevel = {
+  WARNING: 'WARNING',
+  ERROR: 'ERROR'
+};
 
 /**
  * Method that will do appropriate console/debug logging for the current app.

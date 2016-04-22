@@ -4,18 +4,13 @@ require_relative '../helper_modules/dashboard'
 require 'cdo/section_helpers'
 
 # TODO: Change the APIs below to check logged in user instead of passing in a user id
-# TODO(asher): Though the APIs below mostly respect soft-deletes, edge cases may
-#   remain (e.g., if the user making the API call is soft-deleted). Fix these
-#   and make the API more consistent in its edge case handling.
 class DashboardStudent
 
-  # Returns all users who are followers of the user with ID user_id.
   def self.fetch_user_students(user_id)
     Dashboard.db[:users].
       join(:followers, :student_user_id=>:users__id).
       join(Sequel.as(:users, :users_students), :id=>:followers__student_user_id).
-      where(followers__user_id: user_id, followers__deleted_at: nil).
-      where(users_students__deleted_at: nil).
+      where(followers__user_id: user_id, users_students__deleted_at: nil).
       select(*fields).
       all
   end
@@ -78,7 +73,6 @@ class DashboardStudent
     return if user_to_update.empty?
     return if Dashboard.db[:followers].
       where(student_user_id: params[:id], user_id: dashboard_user_id).
-      where(deleted_at: nil).
       empty?
 
     fields = {updated_at: DateTime.now}
@@ -254,20 +248,13 @@ class DashboardSection
     row
   end
 
-  # Soft deletes both the section with ID `id` and all associated followers
-  # relationships.
   def self.delete_if_owner(id, user_id)
-    row = Dashboard.db[:sections].
-      where(id: id, user_id: user_id, deleted_at: nil).
-      first
+    row = Dashboard.db[:sections].where(id: id).and(user_id: user_id).first
     return nil unless row
 
-    time_now = Time.now
-
     Dashboard.db.transaction do
-      Dashboard.db[:followers].where(section_id: id, deleted_at: nil).
-        update(deleted_at: time_now)
-      Dashboard.db[:sections].where(id: id).update(deleted_at: time_now)
+      Dashboard.db[:followers].where(section_id: id).delete
+      Dashboard.db[:sections].where(id: id).delete
     end
 
     row
@@ -280,7 +267,7 @@ class DashboardSection
 
     return nil unless row = Dashboard.db[:sections].
       join(:users, :id=>:user_id).
-      where(sections__id: id, sections__deleted_at: nil).
+      where(sections__id: id).
       select(*fields).
       first
 
@@ -293,7 +280,7 @@ class DashboardSection
     return nil unless row = Dashboard.db[:sections].
       join(:users, :id=>:user_id).
       select(*fields).
-      where(sections__id: id, sections__deleted_at: nil).
+      where(sections__id: id).
       first
 
     section = self.new(row)
@@ -302,24 +289,19 @@ class DashboardSection
   end
 
   def self.fetch_user_sections(user_id)
-    return if user_id.nil?
-
     Dashboard.db[:sections].
       join(:users, :id=>:user_id).
       select(*fields).
-      where(sections__user_id: user_id, sections__deleted_at: nil).
+      where(user_id: user_id).
       map{|row| self.new(row).to_owner_hash}
   end
 
   def self.fetch_student_sections(student_id)
-    return if student_id.nil?
-
     Dashboard.db[:sections].
       select(*fields).
       join(:followers, :section_id=>:id).
       join(:users, :id=>:student_user_id).
       where(student_user_id: student_id).
-      where(sections__deleted_at: nil, followers__deleted_at: nil).
       map{|row| self.new(row).to_member_hash}
   end
 
@@ -366,9 +348,7 @@ class DashboardSection
              *DashboardStudent.fields,
              :secret_pictures__name___secret_picture_name,
              :secret_pictures__path___secret_picture_path).
-      # NOTE: Using distinct(:student_user_id) is not supported by the sqlite test
-      # environment.
-      distinct.select(:student_user_id).
+      distinct(:student_user_id).
       where(section_id: @row[:id]).
       where(users__deleted_at: nil).
       map do |row|
@@ -433,7 +413,8 @@ class DashboardSection
     end
 
     rows_updated = Dashboard.db[:sections].
-      where(id: section_id, user_id: user_id, deleted_at: nil).
+      where(id: section_id).
+      and(user_id: user_id).
       update(fields)
     return nil unless rows_updated > 0
 
@@ -462,7 +443,7 @@ class DashboardUserScript
       import([:user_id, :script_id],
              Dashboard.db[:followers].
                select(:student_user_id, script_id.to_s).
-               where(section_id: section_id, deleted_at: nil))
+               where(section_id: section_id))
   end
 
   def self.assign_script_to_users(script_id, user_ids)
