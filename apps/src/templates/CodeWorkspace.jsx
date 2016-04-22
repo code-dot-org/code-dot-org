@@ -56,17 +56,16 @@ var CodeWorkspace = function (props) {
         </div>
       </div>
       {props.editCode && <div id="codeTextbox"/>}
-      {props.pinWorkspaceToBottom && props.extraControlRows}
+      {props.extraControlRows}
     </span>
   );
 };
 
-CodeWorkspace.PropTypes = {
+CodeWorkspace.propTypes = {
   localeDirection: React.PropTypes.oneOf(['rtl', 'ltr']).isRequired,
   editCode: React.PropTypes.bool.isRequired,
   readonlyWorkspace: React.PropTypes.bool.isRequired,
-  pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
-  // extraControlRows: , // TODO - dangerously set html?
+  extraControlRows: React.PropTypes.string, // TODO - dangerously set html?
 };
 
 module.exports = CodeWorkspace;

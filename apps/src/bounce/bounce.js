@@ -781,8 +781,8 @@ Bounce.init = function (config) {
   var codeWorkspace = (
     <CodeWorkspace
       localeDirection={studioApp.localeDirection()}
-      editCode={level.editCode}
-      readonlyWorkspace={config.readonlyWorkspace}
+      editCode={!!level.editCode}
+      readonlyWorkspace={!!config.readonlyWorkspace}
     />
   );
 
