@@ -4,7 +4,7 @@ var Goal = animationPickerModule.Goal;
 
 describe('AnimationPicker', function () {
   describe('reducer', function () {
-    var reducer = animationPickerModule.reducer;
+    var reducer = animationPickerModule.default;
     var initialState = {
       visible: false,
       goal: null,
@@ -23,7 +23,7 @@ describe('AnimationPicker', function () {
     });
 
     describe('action: show', function () {
-      var show = animationPickerModule.actions.show;
+      var show = animationPickerModule.show;
 
       it('sets state to visible if state was not visible', function () {
         var state = {};
@@ -52,7 +52,7 @@ describe('AnimationPicker', function () {
     });
 
     describe('action: hide', function () {
-      var hide = animationPickerModule.actions.hide;
+      var hide = animationPickerModule.hide;
 
       it('sets state to not visible if state was visible', function () {
         var state = { visible: true };
@@ -70,7 +70,7 @@ describe('AnimationPicker', function () {
     });
 
     describe('action: beginUpload', function () {
-      var beginUpload = animationPickerModule.actions.beginUpload;
+      var beginUpload = animationPickerModule.beginUpload;
 
       it('sets uploadInProgress', function () {
         var newState = reducer(initialState, beginUpload('filename.png'));
@@ -87,7 +87,7 @@ describe('AnimationPicker', function () {
     });
 
     describe('action: handleUploadError', function () {
-      var handleUploadError = animationPickerModule.actions.handleUploadError;
+      var handleUploadError = animationPickerModule.handleUploadError;
 
       it('unsets uploadInProgress', function () {
         var state = { uploadInProgress: true };
