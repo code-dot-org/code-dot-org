@@ -1,4 +1,4 @@
-var _ = require('lodash');
+var _ = require('@cdo/apps/lodash');
 require('require-globify');
 
 module.exports = {
