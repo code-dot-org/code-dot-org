@@ -24,6 +24,7 @@ var errorHandler = require('../errorHandler');
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
+var experiments = require('../experiments');
 
 var actions = require('./actions');
 var createStore = require('../redux');
@@ -152,6 +153,10 @@ GameLab.prototype.init = function (config) {
   config.dropletConfig = dropletConfig;
   config.appMsg = msg;
 
+  // Provide a way for us to have top pane instructions disabled by default, but
+  // able to turn them on.
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructions');
+
   var showFinishButton = !this.level.isProjectLevel;
   var areBreakpointsEnabled = true;
   var firstControlsRow = require('./controls.html.ejs')({
@@ -217,7 +222,11 @@ GameLab.prototype.init = function (config) {
   this.reduxStore_.dispatch(actions.setInitialLevelProps({
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
-    isShareView: !!config.share
+    isShareView: !!config.share,
+    instructionsMarkdown: config.level.markdownInstructions,
+    instructionsInTopPane: config.showInstructionsInTopPane,
+    puzzleNumber: config.level.puzzle_number,
+    stageTotal: config.level.stage_total,
   }));
 
   // Push project-sourced animation metadata into store
