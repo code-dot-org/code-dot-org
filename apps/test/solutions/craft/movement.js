@@ -3,9 +3,8 @@ var TestResults = require('@cdo/apps/constants.js').TestResults;
 import blockUtils from '@cdo/apps/block_utils';
 testUtils.setupLocale('craft');
 import craftMsg from '@cdo/apps/craft/locale';
-import utils from '@cdo/apps/utils';
 
-let _ = utils.getLodash();
+let _ = require('@cdo/apps/lodash');
 
 let blankPlane = _.range(100).map(function () {
   return "";

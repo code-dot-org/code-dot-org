@@ -156,6 +156,9 @@ check out Code.org’s [live events for teachers](http://www.eventbrite.com/o/co
 ## Spread the word! 
 Use [this email](/educate/k5/resources) or share this [one-pager](/educate/k5/k5onepager.pdf) with teachers, principals and district administrators. 
 
+## Don't have computers?
+No problem. You can still teach the fundamentals of computer science without any computers or devices. Try using these [unplugged lessons](/curriculum/unplugged) in your classroom as a stand-alone course or as complementary lessons for any computer science course.
+
 ## 3rd Party resources for elementary school CS
 
 [](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)

@@ -195,7 +195,6 @@ levels.custom = utils.extend(levels.sandbox, {
     "callMyFunction_n": null,
     "return": null
   },
-  showDPad: true,
   startBlocks: null,
 });
 

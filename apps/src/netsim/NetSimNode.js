@@ -3,7 +3,7 @@
  */
 'use strict';
 
-require('../utils');
+require('../utils'); // Provides Function.prototype.inherits
 var i18n = require('./locale');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimWire = require('./NetSimWire');

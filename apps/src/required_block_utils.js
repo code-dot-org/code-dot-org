@@ -1,10 +1,8 @@
 /* global Text */
 
 var xml = require('./xml');
-var blockUtils = require('./block_utils');
-var utils = require('./utils');
 var msg = require('./locale');
-var _ = utils.getLodash();
+var _ = require('./lodash');
 
 /**
  * Create the textual XML for a math_number block.

@@ -316,36 +316,43 @@ pointToEach(x, y)
 
 module.exports.categories = {
   'Game Lab': {
+    id: 'gamelab',
     color: 'yellow',
     rgb: COLOR_YELLOW,
     blocks: []
   },
   Sprites: {
+    id: 'sprites',
     color: 'red',
     rgb: COLOR_RED,
     blocks: []
   },
   Animations: {
+    id: 'animations',
     color: 'red',
     rgb: COLOR_RED,
     blocks: []
   },
   Groups: {
+    id: 'groups',
     color: 'red',
     rgb: COLOR_RED,
     blocks: []
   },
   Data: {
+    id: 'data',
     color: 'lightgreen',
     rgb: COLOR_LIGHT_GREEN,
     blocks: []
   },
   Input: {
+    id: 'input',
     color: 'cyan',
     rgb: COLOR_CYAN,
     blocks: []
   },
   Advanced: {
+    id: 'advanced',
     color: 'blue',
     rgb: COLOR_BLUE,
     blocks: []
