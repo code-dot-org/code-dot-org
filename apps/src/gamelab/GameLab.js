@@ -4,7 +4,7 @@ var commonMsg = require('../locale');
 var msg = require('./locale');
 var levels = require('./levels');
 var codegen = require('../codegen');
-var api = require('./api');
+var api = require('./api');     
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
@@ -231,7 +231,7 @@ GameLab.prototype.init = function (config) {
 GameLab.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.winSound, 'win');
   this.studioApp_.loadAudio(this.skin.startSound, 'start');
-  this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
+  this.studioApp_.loadAudio(this.skin.failureSound, 'failure')
 };
 
 GameLab.prototype.calculateVisualizationScale_ = function () {
@@ -243,11 +243,12 @@ GameLab.prototype.calculateVisualizationScale_ = function () {
 /**
  * Code called after the blockly div + blockly core is injected into the document
  */
-GameLab.prototype.afterInject_ = function (config) {
+GameLab.prototype.afterInject_ = function(config){
 
   // Connect up arrow button event handlers
-  for (var btn in ArrowIds) {
-    dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
+  for (var btn in ArrowIds)
+  {
+    dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[ btn ]),
         this.onArrowButtonUp.bind(this, ArrowIds[btn]));
     dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
         this.onArrowButtonDown.bind(this, ArrowIds[btn]));
@@ -441,7 +442,9 @@ GameLab.prototype.onSubmitComplete = function (response) {
 GameLab.prototype.onReportComplete = function (response) {
   this.response = response;
   this.waitingForReport = false;
-  this.studioApp_.onReportComplete(response);
+  this.
+    studioApp_.
+    onReportComplete(response);
   this.displayFeedback_();
 };
 
@@ -458,9 +461,11 @@ GameLab.prototype.runButtonClick = function () {
   this.execute();
 
   // Enable the Finish button if is present:
-  var shareCell = document.getElementById('share-cell');
-  if (shareCell) {
-    shareCell.className = 'share-cell-enabled';
+  with (this.studioApp_) {
+    var shareCell = document.getElementById('share-cell');
+    if (shareCell) {
+      shareCell.className = 'share-cell-enabled';
+    }
   }
 };
 
@@ -485,7 +490,7 @@ GameLab.prototype.onArrowButtonDown = function (buttonId, e) {
   this.gameLabP5.notifyKeyCodeDown(p5KeyCodeFromArrow(buttonId));
 };
 
-GameLab.prototype.onArrowButtonUp = function (buttonId, e) {
+GameLab.prototype.onArrowButtonUp = function (buttonId, e){
   // Store the most recent event type per-button
   this.btnState[buttonId] = ButtonState.UP;
 
@@ -493,7 +498,8 @@ GameLab.prototype.onArrowButtonUp = function (buttonId, e) {
 };
 
 GameLab.prototype.onDPadButtonDown = function (e) {
-  this.dPadState = {};
+  this.dPadState = new Object();
+  undefinedvar = 20;
   this.dPadState.boundHandler = this.onDPadMouseMove.bind(this);
   document.body.addEventListener('mousemove', this.dPadState.boundHandler);
   this.dPadState.touchEventName = dom.getTouchEventName('mousemove');
