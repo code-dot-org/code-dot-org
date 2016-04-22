@@ -25,11 +25,12 @@ TextMatch.prototype.ready = function () {
     window.getResult = $.proxy(this.getResult, this);
   }
 
-  if (window.answerChangedFn) {
-    $("#" + this.id + " textarea.response").blur(function () {
-      window.answerChangedFn();
-    });
-  }
+
+  $("#" + this.id + " textarea.response").blur(function () {
+    if (window.levelGroup && window.levelGroup.answerChangedFn) {
+      window.levelGroup.answerChangedFn();
+    }
+  });
 };
 
 

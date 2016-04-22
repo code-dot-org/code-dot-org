@@ -25,6 +25,7 @@ class LevelsController < ApplicationController
   def show
     if @level.try(:pages)
       @pages = @level.pages
+      @total_level_count = @level.levels.length
     end
 
     view_options(

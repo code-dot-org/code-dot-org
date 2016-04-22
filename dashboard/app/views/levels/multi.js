@@ -52,8 +52,8 @@ Multi.prototype.choiceClicked = function (button) {
 
   this.clickItem(index);
 
-  if (window.answerChangedFn) {
-    window.answerChangedFn();
+  if (window.levelGroup && window.levelGroup.answerChangedFn) {
+    window.levelGroup.answerChangedFn();
   }
 };
 
@@ -167,17 +167,14 @@ Multi.prototype.ready = function () {
 
 Multi.prototype.getCurrentAnswer = function () {
   var answer;
-  var valid;
 
   if (this.numAnswers == 1) {
     answer = this.lastSelectionIndex;
-    valid = answer !== -1;
   } else {
     answer = this.selectedAnswers;
-    valid = answer !== -1;
   }
 
-  return { response: answer, valid: valid };
+  return { response: answer, valid: answer !== -1 };
 };
 
 Multi.prototype.getLevelId = function () {

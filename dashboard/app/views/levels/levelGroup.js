@@ -25,7 +25,6 @@ function initLevelGroup(
     $('.full_container').addClass("level_group_readonly");
   }
 
-
   // Whenever an embedded level notifies us that the user has made a change,
   // check for any changes in the response set, and if so, attempt to save
   // these answers.  Saving is throttled to not occur more than once every 20
@@ -34,15 +33,17 @@ function initLevelGroup(
   // edge").  Any pending throttled calls are cancelled when we go to a new page
   // and save for that reason.
 
-  this.throttledSaveAnswers =
+  window.getResult = getResult;
+
+  var throttledSaveAnswers =
     window.dashboard.utils.throttle(saveAnswers, 20 * 1000, {'leading': true, 'trailing': true});
 
-  var lastResponse = null;
+  var lastResponse = window.getResult().response;
 
-  window.answerChangedFn = function () {
+  window.levelGroup.answerChangedFn = function () {
     var currentResponse = window.getResult().response;
-    if (lastResponse !== null && lastResponse !== currentResponse) {
-      this.throttledSaveAnswers();
+    if (lastResponse !== currentResponse) {
+      throttledSaveAnswers();
     }
     lastResponse = currentResponse;
   };
@@ -51,23 +52,26 @@ function initLevelGroup(
    * Construct an array of all the level results. When submitted it's something
    * like this:
    *
-   * [{"level_id":1977,"result":"0","valid":true},
-   *  {"level_id":2007,"result":"-1","valid":false},
-   *  {"level_id":1939,"result":"2,1","valid":true}]
+   * {"1977": {"result": "0", "valid": true},
+   *  "2007": {"result": "-1", "valid": false},
+   *  "1939": {"result": "2,1", "valid": true}}
    */
-  window.getResult = function () {
+  function getResult() {
     // Add any new results to the existing lastAttempt results.
     var levels = window.levelGroup.levels;
-    var validCount = 0;
     Object.keys(levels).forEach(function (levelId) {
       var currentAnswer = levels[levelId].getCurrentAnswer();
       var levelResult = currentAnswer.response.toString();
       var valid = currentAnswer.valid;
       lastAttempt[levelId] = {result: levelResult, valid: valid};
-      if (valid) {
-        validCount++;
-      }
     });
+
+    var validCount = 0;
+    for (var level in lastAttempt) {
+      if (lastAttempt[level].valid) {
+        validCount ++;
+      }
+    }
 
     var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
 
@@ -81,7 +85,7 @@ function initLevelGroup(
       "submitted": window.appOptions.level.submittable || forceSubmittable,
       "showConfirmationDialog": showConfirmationDialog
     };
-  };
+  }
 
   // Called by gotoPage and checkForChanges to save current answers.
   // Calls the completeFn function when transmission is complete.
@@ -89,7 +93,6 @@ function initLevelGroup(
     var results = window.getResult();
     var response = results.response;
     var result = results.result;
-    var errorType = results.errorType;
     var submitted = appOptions.submitted;
 
     window.dashboard.reporting.sendReport({
@@ -122,20 +125,20 @@ function initLevelGroup(
     } else {
       // Submit what we have, and when that's done, go to the next page of the
       // long assessment.  Cancel any pending throttled attempts at saving state.
-      this.throttledSaveAnswers.cancel();
+      throttledSaveAnswers.cancel();
       saveAnswers(function () {
         changePage(targetPage);
       });
     }
   }
 
-  $(".nextPageButton").click($.proxy(function (event) {
+  $(".nextPageButton").click(function (event) {
     gotoPage(currentPage+1);
-  }, this));
+  });
 
-  $(".previousPageButton").click($.proxy(function (event) {
+  $(".previousPageButton").click(function (event) {
     gotoPage(currentPage-1);
-  }, this));
+  });
 
   // Unsubmit button should only be available when this is a standalone level.
   $('.unsubmitButton').click(function () {
