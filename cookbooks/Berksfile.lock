@@ -72,7 +72,7 @@ GRAPH
   cdo-java-7 (0.1.0)
     build-essential (>= 0.0.0)
   cdo-mysql (0.1.1)
-  cdo-newrelic (0.1.0)
+  cdo-newrelic (0.1.1)
     apt (>= 0.0.0)
   cdo-nginx (0.0.8)
     apt (>= 0.0.0)
