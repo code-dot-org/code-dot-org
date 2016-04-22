@@ -16,10 +16,6 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
   def preview_assignments
     @enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
     @enrolled_modules = Plc::LearningModule.where(id: params[:enrolled_modules].split(','))
-
-    if @enrolled_modules.where.not(plc_course_unit: @enrollment_unit_assignment.plc_course_unit).any?
-      redirect_to controller: :enrollment_evaluations, action: :perform_evaluation, unit_assignment_id: @enrollment_unit_assignment.id
-    end
   end
 
   def confirm_assignments

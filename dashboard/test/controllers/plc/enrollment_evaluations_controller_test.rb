@@ -107,29 +107,6 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "Cannot do actions on an enrollment that is not pending_evaluation" do
-    (Plc::EnrollmentUnitAssignment::UNIT_STATUS_STATES - [Plc::EnrollmentUnitAssignment::PENDING_EVALUATION]).each do |status|
-      @unit_assignment = create(:plc_enrollment_unit_assignment, plc_user_course_enrollment: @enrollment,
-                              plc_course_unit: @course_unit, status: status)
-
-      assert_raises RuntimeError do
-        get :perform_evaluation, unit_assignment_id: @unit_assignment.id
-      end
-
-      assert_raises RuntimeError do
-        post :submit_evaluation, unit_assignment_id: @unit_assignment.id, answer_module_list: [@answer1_1]
-      end
-
-      assert_raises RuntimeError do
-        get :preview_assignments, unit_assignment_id: @unit_assignment.id, enrolled_modules: "#{@module1.id},#{@module2.id}"
-      end
-
-      assert_raises RuntimeError do
-        post :confirm_assignments, unit_assignment_id: @unit_assignment.id, learning_module_ids: [@module1.id, @module2.id]
-      end
-    end
-  end
-
   private
   def do_expected_answers_yield_expected_module_enrollments(answers, expected_module_enrollments)
     post :submit_evaluation, unit_assignment_id: @unit_assignment.id, answer_module_list: answers
