@@ -20,12 +20,6 @@
 # Join table defining student-teacher relationships for Users
 # (student_user is the student, user is the teacher)
 class Follower < ActiveRecord::Base
-  # Deleted followers are soft-deleted, documentation at
-  # https://github.com/rubysherpas/paranoia
-  # WARNING: Though ActiveRecord scopes to non-(soft)-deleted users
-  #   automatically, this does not happen in MySQL-land or pegasus-land.
-  acts_as_paranoid
-
   belongs_to :user
   belongs_to :student_user, foreign_key: "student_user_id", class_name: User
   belongs_to :section
