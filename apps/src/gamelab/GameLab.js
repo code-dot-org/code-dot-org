@@ -8,7 +8,7 @@ var api = require('./api');
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = require('../lodash');
 var dropletConfig = require('./dropletConfig');
@@ -157,12 +157,35 @@ GameLab.prototype.init = function (config) {
   // able to turn them on.
   config.showInstructionsInTopPane = experiments.isEnabled('topInstructions');
 
-  var showFinishButton = !this.level.isProjectLevel;
-  var areBreakpointsEnabled = true;
-  var firstControlsRow = require('./controls.html.ejs')({
+  var onMount = function () {
+    config.loadAudio = this.loadAudio_.bind(this);
+    config.afterInject = this.afterInject_.bind(this, config);
+    config.afterEditorReady = this.afterEditorReady_.bind(this, true);
+
+    // Store p5specialFunctions in the unusedConfig array so we don't give warnings
+    // about these functions not being called:
+    config.unusedConfig = this.gameLabP5.p5specialFunctions;
+
+    this.studioApp_.init(config);
+
+    var finishButton = document.getElementById('finishButton');
+    if (finishButton) {
+      dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
+    }
+
+    this.debugger_.initializeAfterDomCreated({
+      defaultStepSpeed: 1
+    });
+  }.bind(this);
+
+  this.reduxStore_.dispatch(actions.setInitialLevelProps({
     assetUrl: this.studioApp_.assetUrl,
-    finishButton: showFinishButton
-  });
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share
+  }));
+
+  var showFinishButton = !this.level.isProjectLevel;
+  var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
   var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
     showButtons: true,
     showConsole: true,
@@ -185,40 +208,6 @@ GameLab.prototype.init = function (config) {
     });
   }.bind(this);
 
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: this.studioApp_.assetUrl,
-      data: {
-        visualization: require('./visualization.html.ejs')(),
-        controls: firstControlsRow,
-        extraControlRows: extraControlRows,
-        pinWorkspaceToBottom: true,
-        readonlyWorkspace: config.readonlyWorkspace
-      }
-    });
-  }.bind(this);
-
-  var onMount = function () {
-    config.loadAudio = this.loadAudio_.bind(this);
-    config.afterInject = this.afterInject_.bind(this, config);
-    config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);
-
-    // Store p5specialFunctions in the unusedConfig array so we don't give warnings
-    // about these functions not being called:
-    config.unusedConfig = this.gameLabP5.p5specialFunctions;
-
-    this.studioApp_.init(config);
-
-    var finishButton = document.getElementById('finishButton');
-    if (finishButton) {
-      dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
-    }
-
-    this.debugger_.initializeAfterDomCreated({
-      defaultStepSpeed: 1
-    });
-  }.bind(this);
-
   this.reduxStore_.dispatch(actions.setInitialLevelProps({
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
@@ -237,7 +226,7 @@ GameLab.prototype.init = function (config) {
   ReactDOM.render(<Provider store={this.reduxStore_}>
     <GameLabView
       generateCodeWorkspaceHtml={generateCodeWorkspaceHtmlFromEjs}
-      generateVisualizationColumnHtml={generateVisualizationColumnHtmlFromEjs}
+      showFinishButton={finishButtonFirstLine && showFinishButton}
       onMount={onMount} />
   </Provider>, document.getElementById(config.containerId));
 };
