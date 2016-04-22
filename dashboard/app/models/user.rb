@@ -861,7 +861,7 @@ SQL
       new_level_completed = true if !user_level.passing? &&
         Activity.passing?(new_result)
       new_level_perfected = true if !user_level.perfect? &&
-        Activity.perfect?(new_result) &&
+        new_result == 100 &&
         HintViewRequest.
           where(user_id: user_id, script_id: script_id, level_id: level_id).
           empty?
