@@ -63,6 +63,8 @@ end
 
 include_recipe 'cdo-repository'
 
+include_recipe 'cdo-apps::workers'
+
 %w(dashboard pegasus).each do |app|
   node.override['cdo-secrets']["#{app}_port"] = node['cdo-apps'][app]['port']
 end
