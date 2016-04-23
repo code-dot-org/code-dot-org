@@ -15,7 +15,7 @@ module ProxyHelper
 
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
     if !allowed_hostname?(url, allowed_hostname_suffixes)
-      render_error_response 400, "Hostname '#{url.host}' is not in the list of allowed hostnames." \
+      render_error_response 400, "Hostname '#{url.host}' is not in the list of allowed hostnames. " \
           "The list of allowed hostname suffixes is: #{allowed_hostname_suffixes.join(', ')}."
       return
     end
