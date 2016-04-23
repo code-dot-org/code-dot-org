@@ -13,11 +13,6 @@ module RakeUtils
     system_status_output__ "#{command} 2>&1"
   end
 
-  def self.system_with_stdout__(command)
-    CDO.log.info command
-    system_status_output__ command
-  end
-
   def self.system_status_output__(command)
     output = `#{command}`
     status = $?.exitstatus
@@ -56,15 +51,6 @@ module RakeUtils
       raise error, error.message, CDO.filter_backtrace([output])
     end
     status
-  end
-
-  def self.system_stdout(*args)
-    command = command_(*args)
-    status, output = system_with_stdout__ command
-    unless status == 0
-      error = RuntimeError.new("'#{command}' returned #{status}")
-      raise error, error.message, CDO.filter_backtrace([output])
-    end
   end
 
   def self.exec_in_background(command)

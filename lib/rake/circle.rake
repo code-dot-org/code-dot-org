@@ -1,4 +1,5 @@
 require 'cdo/rake_utils'
+require 'cdo/circle_utils'
 require 'cdo/git_utils'
 
 namespace :circle do
@@ -19,14 +20,14 @@ namespace :circle do
     if GitUtils.circle_commit_contains?(run_ui_tests_tag)
       HipChat.log "Commit message: '#{GitUtils.circle_commit_message}' contains #{run_ui_tests_tag}, running UI tests."
       RakeUtils.exec_in_background 'RACK_ENV=test RAILS_ENV=test ./bin/dashboard-server'
-      RakeUtils.system_stdout 'wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz'
-      RakeUtils.system_stdout 'tar -xzf sc-latest-linux.tar.gz'
+      CircleUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz'
+      CircleUtils.system_stream_output 'tar -xzf sc-latest-linux.tar.gz'
       Dir.chdir(Dir.glob('sc-*-linux')[0]) do
         RakeUtils.exec_in_background './bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY'
       end
-      RakeUtils.system_stdout 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
+      CircleUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
       Dir.chdir('dashboard/test/ui') do
-        RakeUtils.system_stdout 'bundle exec ./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --circle --parallel 40 --retry_count 4 --html'
+        CircleUtils.system_stream_output 'bundle exec ./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --circle --parallel 30 --retry_count 4 --html'
       end
     else
       HipChat.log "Commit message: '#{GitUtils.circle_commit_message}' does not contain #{run_ui_tests_tag}, skipping UI tests."
