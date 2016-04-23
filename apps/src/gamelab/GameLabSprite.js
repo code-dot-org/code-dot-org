@@ -15,6 +15,10 @@ module.exports.createSprite = function () {
     x = arguments[1];
     y = arguments[2];
     animation = p5Inst.projectAnimations[animationName];
+    if (typeof animation === 'undefined') {
+      throw new Error('Unable to find an animation named "' + animationName +
+          '".  Please make sure the animation exists.');
+    }
     firstFrame = animation.images[0];
     width = firstFrame.width;
     height = firstFrame.height;
