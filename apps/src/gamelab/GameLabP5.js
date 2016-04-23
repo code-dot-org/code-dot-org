@@ -48,9 +48,11 @@ GameLabP5.prototype.init = function (options) {
   // Override p5.loadImage so we can modify the URL path param
   if (!GameLabP5.baseP5loadImage) {
     GameLabP5.baseP5loadImage = window.p5.prototype.loadImage;
-    window.p5.prototype.loadImage = function (path, successCallback, failureCallback) {
-      path = assetPrefix.fixPath(path);
-      return GameLabP5.baseP5loadImage.call(this, path, successCallback, failureCallback);
+    window.p5.prototype.loadImage = function (path) {
+      // Make sure to pass all arguments through to loadImage, which can get
+      // wrapped and take additional arguments during preload.
+      arguments[0] = assetPrefix.fixPath(path);
+      return GameLabP5.baseP5loadImage.apply(this, arguments);
     };
   }
 
