@@ -1,5 +1,6 @@
 'use strict';
 
+var animationsApi = require('../clientApi').animations;
 var commonMsg = require('../locale');
 var msg = require('./locale');
 var levels = require('./levels');
@@ -744,6 +745,23 @@ GameLab.prototype.onP5ExecutionStarting = function () {
  * @return {Boolean} whether or not the preload has completed
  */
 GameLab.prototype.onP5Preload = function () {
+  var p5 = this.gameLabP5.p5;
+  // Preload project animations:
+  p5.projectAnimations = {};
+  var animationMetadata = this.reduxStore_.getState().animations;
+  animationMetadata.forEach(function (animation) {
+    // Note: loadImage is automatically wrapped during preload so that it
+    //       causes a preload-count increment/decrement pair.  No manual
+    //       tracking is required.
+    var image = p5.loadImage(
+        animationsApi.basePath(animation.key + '.png'),
+        function onSuccess() {
+          // Hard-coded to single-frame for now.
+          var spriteSheet = p5.loadSpriteSheet(image, image.width, image.height, 1);
+          p5.projectAnimations[animation.name] = p5.loadAnimation(spriteSheet);
+        });
+  });
+
   this.initInterpreter();
   // And execute the interpreter for the first time:
   if (this.JSInterpreter && this.JSInterpreter.initialized()) {

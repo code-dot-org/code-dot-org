@@ -4,7 +4,26 @@ module.exports.injectJSInterpreter = function (jsi) {
   jsInterpreter = jsi;
 };
 
-module.exports.createSprite = function (x, y, width, height) {
+module.exports.createSprite = function () {
+  var x, y, width, height;
+  var animationName, animation, firstFrame;
+  var p5Inst = this;
+
+  if (typeof arguments[0] === 'string') {
+    // Do special initialization pattern here
+    animationName = arguments[0];
+    x = arguments[1];
+    y = arguments[2];
+    animation = p5Inst.projectAnimations[animationName];
+    firstFrame = animation.images[0];
+    width = firstFrame.width;
+    height = firstFrame.height;
+  } else {
+    x = arguments[0];
+    y = arguments[1];
+    width = arguments[2];
+    height = arguments[3];
+  }
   /*
    * Copied code from p5play from createSprite()
    *
@@ -12,7 +31,6 @@ module.exports.createSprite = function (x, y, width, height) {
    * through the bound constructor, which prepends the first arg.
    */
   var s = new this.Sprite(x, y, width, height);
-  var p5Inst = this;
 
   s.setFrame = function (frame) {
     if (s.animation) {
@@ -135,6 +153,13 @@ module.exports.createSprite = function (x, y, width, height) {
   s.isTouching = isTouching.bind(s, this);
   s.depth = this.allSprites.maxDepth()+1;
   this.allSprites.add(s);
+
+  // Attach animation and select it
+  if (typeof animationName === 'string') {
+    s.addAnimation(animationName, animation);
+    s.changeAnimation(animationName);
+  }
+
   return s;
 };
 
