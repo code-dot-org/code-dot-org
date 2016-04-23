@@ -32,6 +32,7 @@ var createStore = require('../redux');
 var gamelabReducer = require('./reducers').gamelabReducer;
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
+var utils = require('../utils');
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -748,8 +749,7 @@ GameLab.prototype.onP5Preload = function () {
   var p5 = this.gameLabP5.p5;
   // Preload project animations:
   p5.projectAnimations = {};
-  var animationMetadata = this.reduxStore_.getState().animations;
-  animationMetadata.forEach(function (animation) {
+  this.getAnimationMetadata().forEach(function (animation) {
     // Note: loadImage is automatically wrapped during preload so that it
     //       causes a preload-count increment/decrement pair.  No manual
     //       tracking is required.
@@ -927,4 +927,13 @@ GameLab.prototype.displayFeedback_ = function () {
  */
 GameLab.prototype.getAnimationMetadata = function () {
   return this.reduxStore_.getState().animations;
+};
+
+GameLab.prototype.getAnimationDropdown = function () {
+  return this.getAnimationMetadata().map(function (animation) {
+    return {
+      text: utils.quote(animation.name),
+      display: utils.quote(animation.name)
+    };
+  });
 };
