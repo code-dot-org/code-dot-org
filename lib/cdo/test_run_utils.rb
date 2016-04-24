@@ -2,6 +2,13 @@ require_relative './rake_utils'
 require_relative '../../deployment'
 require 'cdo/hip_chat'
 
+def format_duration(total_seconds)
+  total_seconds = total_seconds.to_i
+  minutes = (total_seconds / 60).to_i
+  seconds = total_seconds - (minutes * 60)
+  "%.1d:%.2d minutes" % [minutes, seconds]
+end
+
 def with_hipchat_logging(name)
   start_time = Time.now
   HipChat.log "Running #{name}..."
