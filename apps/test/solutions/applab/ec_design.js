@@ -646,8 +646,8 @@ module.exports = {
         assert.equal(newImage.length, 1);
 
         // Copy and paste the image
-        var copy = testUtils.createKeyEvent('keydown', 67, true);
-        var paste = testUtils.createKeyEvent('keydown', 86, true);
+        var copy = testUtils.createKeyEvent('keydown', {which: 67, altKey: true});
+        var paste = testUtils.createKeyEvent('keydown', {which: 86, altKey: true});
 
         var designModeElement = document.getElementById('designModeViz');
         designModeElement.dispatchEvent(copy);
