@@ -1044,7 +1044,10 @@ designMode.addKeyboardHandlers = function () {
           // Paste the clipboard element with updated position and ID
           if (clipboardElement) {
             var duplicateElement = designMode.onDuplicate(clipboardElement);
-            clipboardElement = duplicateElement.cloneNode(true);
+            // For now, screens can't be duplicated, so duplicate element could be null
+            if (duplicateElement) {
+              clipboardElement = duplicateElement.cloneNode(true);
+            }
           }
           break;
         default:
