@@ -280,23 +280,18 @@ exports.createMouseEvent = function mouseEvent(type, clientX, clientY) {
 /**
  * Creates a key event of the given type with the additional parameters
  * @param {string} type (keydown, keyup, keypress)
- * @param {bool} keyCodeArg
- * @param {bool} metaKeyArg
- * @param {bool} altKeyArg
- * @param {bool} shiftKeyArg
- * @param {bool} ctrlKeyArg
+ * @param {obj} keyConfig
  */
-exports.createKeyEvent = function keyEvent(type, keyCodeArg, metaKeyArg, altKeyArg, shiftKeyArg, ctrlKeyArg) {
+exports.createKeyEvent = function keyEvent(type, keyConfig) {
   // Need to use generic "Event" instead of "KeyboardEvent" because of
   // http://stackoverflow.com/questions/961532/firing-a-keyboard-event-in-javascript#comment-44022523
-  var keyboardEvent = document.createEvent('Event');
-  keyboardEvent.initEvent(type, true, true);
-  keyboardEvent.which = keyCodeArg;
-  keyboardEvent.keyCode = keyCodeArg;
-  keyboardEvent.altKey = altKeyArg;
-  keyboardEvent.metaKey = metaKeyArg;
-  keyboardEvent.ctrlKey = ctrlKeyArg;
-  keyboardEvent.shiftKey = shiftKeyArg;
+  var keyboardEvent = new Event(type);
+  keyboardEvent.which = keyConfig.which;
+  keyboardEvent.keyCode = keyConfig.keyCode;
+  keyboardEvent.altKey = keyConfig.altKey;
+  keyboardEvent.metaKey = keyConfig.metaKey;
+  keyboardEvent.ctrlKey = keyConfig.ctrlKey;
+  keyboardEvent.shiftKey = keyConfig.shiftKey;
 
   return keyboardEvent;
 };
