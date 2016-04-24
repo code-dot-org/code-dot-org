@@ -609,7 +609,14 @@ module.exports = {
         // Duplicate the image
         var imageDuplicateButton = $('#designWorkspaceBody').find('button:contains(Duplicate)')[0];
         ReactTestUtils.Simulate.click(imageDuplicateButton);
-        assert.equal(designModeViz.find('img').length, 2);
+
+        // Assert position and ID
+        var images = designModeViz.find('img');
+        assert.equal(images.length, 2);
+        var image2 = images[1];
+        assert.equal(parseInt(image2.style.left), 10);
+        assert.equal(parseInt(image2.style.top), 10);
+        assert.equal(image2.id, 'design_image2');
 
         // Add a chart
         testUtils.dragToVisualization('CHART', 0, 0);
@@ -620,6 +627,14 @@ module.exports = {
         var chartDuplicateButton = $('#designWorkspaceBody').find('button:contains(Duplicate)')[0];
         ReactTestUtils.Simulate.click(chartDuplicateButton);
         assert.equal(designModeViz.find('.chart').length, 2);
+
+        // Assert position and ID
+        var charts = designModeViz.find('.chart');
+        assert.equal(charts.length, 2);
+        var chart2 = charts[1];
+        assert.equal(parseInt(chart2.style.left), 10);
+        assert.equal(parseInt(chart2.style.top), 10);
+        assert.equal(chart2.id, 'design_chart2');
 
         Applab.onPuzzleComplete();
       },
@@ -653,7 +668,25 @@ module.exports = {
         designModeElement.dispatchEvent(copy);
         designModeElement.dispatchEvent(paste);
 
-        assert.equal(designModeViz.find('img').length, 2);
+        // Assert position and ID
+        var images = designModeViz.find('img');
+        assert.equal(images.length, 2);
+        var image2 = images[1];
+        assert.equal(parseInt(image2.style.left), 10);
+        assert.equal(parseInt(image2.style.top), 10);
+        assert.equal(image2.id, 'design_image2');
+
+        // Copy and paste again
+        designModeElement.dispatchEvent(copy);
+        designModeElement.dispatchEvent(paste);
+
+        // Assert position and ID
+        images = designModeViz.find('img');
+        assert.equal(images.length, 3);
+        var image3 = images[2];
+        assert.equal(parseInt(image3.style.left), 20);
+        assert.equal(parseInt(image3.style.top), 20);
+        assert.equal(image3.id, 'design_image3');
 
         Applab.onPuzzleComplete();
       },
