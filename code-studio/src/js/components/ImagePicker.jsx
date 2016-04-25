@@ -94,6 +94,3 @@ var ImagePicker = React.createClass({
   }
 });
 module.exports = ImagePicker;
-
-window.dashboard = window.dashboard || {};
-window.dashboard.ImagePicker = ImagePicker;
