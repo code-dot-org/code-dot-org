@@ -105,20 +105,20 @@ export default {
       }, data);
     }
 
-    var deferred = $.Deferred();
+    var zip = new JSZip();
+    zip.file(appName + "/README.md", readme);
+    zip.file(appName + "/index.html", rewriteAssetUrls(html));
+    zip.file(appName + "/style.css", rewriteAssetUrls(css));
+    zip.file(appName + "/code.js", rewriteAssetUrls(code));
 
+    var deferred = $.Deferred();
     $.when(...assetsToDownload.map(function (assetToDownload) {
       return download(assetToDownload.url, assetToDownload.dataType || 'text');
     })).then(
-      function (commonLocale, applabLocale, applabApi, applabCSS) {
-        var zip = new JSZip();
+      function ([commonLocale], [applabLocale], [applabApi], [applabCSS]) {
         zip.file(appName + "/applab.js",
-                 [commonLocale[0], applabLocale[0], applabApi[0]].join('\n'));
-        zip.file(appName + "/applab.css", applabCSS[0]);
-        zip.file(appName + "/index.html", rewriteAssetUrls(html));
-        zip.file(appName + "/style.css", rewriteAssetUrls(css));
-        zip.file(appName + "/code.js", rewriteAssetUrls(code));
-        zip.file(appName + "/README.md", readme);
+                 [commonLocale, applabLocale, applabApi].join('\n'));
+        zip.file(appName + "/applab.css", applabCSS);
 
         Array.from(arguments).slice(4).forEach(function ([data], index) {
           zip.file(assetsToDownload[index + 4].zipPath, data, {binary: true});
