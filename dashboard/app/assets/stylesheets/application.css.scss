@@ -1781,7 +1781,7 @@ div.mini_gallery_activity {
   }
 }
 
-.assessment_readonly {
+.submitted_readonly {
   background-color: $lightest_gray;
 }
 
@@ -2155,11 +2155,9 @@ $modal-no-icon-gap: 22px;
   }
 }
 
-#levelgroup-submit-incomplete-dialogcontent{
-  overflow: hidden;
-}
-
-#levelgroup-submit-complete-dialogcontent{
+#levelgroup-submit-incomplete-dialogcontent,
+#levelgroup-submit-complete-dialogcontent,
+#unsubmit-dialogcontent {
   overflow: hidden;
 }
 
