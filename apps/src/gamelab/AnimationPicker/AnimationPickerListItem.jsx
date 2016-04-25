@@ -61,6 +61,8 @@ var AnimationPickerListItem = function (props) {
             width={THUMBNAIL_SIZE}
             height={THUMBNAIL_SIZE}
             sourceUrl={props.sourceUrl}
+            sourceWidth={props.sourceWidth}
+            sourceHeight={props.sourceHeight}
             frameWidth={props.frameWidth}
             frameHeight={props.frameHeight}
             frameCount={props.frameCount}
@@ -77,6 +79,8 @@ AnimationPickerListItem.propTypes = {
   label: React.PropTypes.string.isRequired,
   icon: React.PropTypes.string,
   sourceUrl: React.PropTypes.string,
+  sourceWidth: React.PropTypes.number,
+  sourceHeight: React.PropTypes.number,
   frameWidth: React.PropTypes.number,
   frameHeight: React.PropTypes.number,
   frameCount: React.PropTypes.number,
