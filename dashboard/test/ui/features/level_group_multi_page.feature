@@ -43,6 +43,8 @@ Scenario: Submit three pages.
   # Submit the long assessment
   And I press ".submitButton:first" using jQuery
   And I wait to see ".modal"
+  And I press ".modal #ok-button" using jQuery
+  And I wait for 5 seconds
 
   # Go back to the first page to see that correct options are selected.
   Then I am on "http://learn.code.org/s/allthethings/stage/22/puzzle/2/page/1?noautoplay=true&force_submittable=true"

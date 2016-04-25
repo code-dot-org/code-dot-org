@@ -1,56 +1,16 @@
-<%
-require 'cdo/aws/cloudfront'
-require 'aws-sdk'
-%>
+<% require 'cdo/aws/cloudfront' -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
 Resources:
-  VPC:
-    Type: AWS::EC2::VPC
-    Properties:
-      CidrBlock: 10.0.0.0/24
-      EnableDnsHostnames: true
-  SubnetA:
-    Type: AWS::EC2::Subnet
-    Properties:
-      VpcId: {Ref: VPC}
-      CidrBlock: 10.0.0.0/26
-      AvailabilityZone: '<%=availability_zone%>'
-      MapPublicIpOnLaunch: true
-  InternetGateway:
-    Type: AWS::EC2::InternetGateway
-  Internet:
-    Type: AWS::EC2::VPCGatewayAttachment
-    Properties:
-      VpcId: {Ref: VPC}
-      InternetGatewayId: {Ref: InternetGateway}
-  PublicRouteTable:
-    Type: AWS::EC2::RouteTable
-    Properties:
-      VpcId: {Ref: VPC}
-  PublicRoute:
-    Type: AWS::EC2::Route
-    DependsOn: Internet
-    Properties:
-      RouteTableId: {Ref: PublicRouteTable}
-      DestinationCidrBlock: 0.0.0.0/0
-      GatewayId: {Ref: InternetGateway}
-  SubnetRouteAssociation:
-    Type: AWS::EC2::SubnetRouteTableAssociation
-    Properties:
-      RouteTableId: {Ref: PublicRouteTable}
-      SubnetId: {Ref: SubnetA}
-  ElasticLoadBalancer:
+  VPC: <%= lambda.call 'LookupStackOutputs', StackName: 'VPC' %>
+  IAM: <%= lambda.call 'LookupStackOutputs', StackName: 'IAM' %>
+  LoadBalancer:
     Type: AWS::ElasticLoadBalancing::LoadBalancer
-    DependsOn: Internet
-    Metadata:
-      Comment1: Configure the Load Balancer with a simple health check and cookie-based stickiness
-      Comment2: Use install path for healthcheck to avoid redirects - ELB healthcheck does not handle 302 return codes
     Properties:
       CrossZone: true
-      SecurityGroups: [Ref: ELBSecurityGroup]
-      Subnets: [Ref: SubnetA]
+      SecurityGroups: ['Fn::GetAtt': [VPC, ELBSecurityGroup]]
+      Subnets: <%=public_subnets%>
       LBCookieStickinessPolicy:
         - PolicyName: CookieBasedPolicy
           CookieExpirationPeriod: 30
@@ -62,7 +22,7 @@ Resources:
         - LoadBalancerPort: 443
           InstancePort: 80
           Protocol: HTTPS
-          SSLCertificateId: <%=elb_cert%>
+          SSLCertificateId: <%=certificate_arn%>
           PolicyNames: [CookieBasedPolicy]
       HealthCheck:
         Target: HTTP:80/health_check.php
@@ -73,68 +33,74 @@ Resources:
       ConnectionDrainingPolicy:
         Enabled: true
         Timeout: 60
-  ELBSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
+# Nonce value for AMI resources. Change this value to generate a new base AMI on the next CloudFormation update.
+<% ami = '2' -%>
+  AMIComplete<%=ami%>:
+    Type: AWS::CloudFormation::WaitCondition
+    DependsOn: AMI
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: PT40M
+        Count: 1
+  WebServerAMI<%=ami%>:
+    Type: AWS::EC2::Instance
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: PT40M
+        Count: 1
     Properties:
-      GroupDescription: Enable HTTP[S] access from the public Internet, HTTP downstream.
-      VpcId: {Ref: VPC}
-      SecurityGroupIngress:
-        - IpProtocol: tcp
-          FromPort: 80
-          ToPort: 80
-          CidrIp: 0.0.0.0/0
-        - IpProtocol: tcp
-          FromPort: 443
-          ToPort: 443
-          CidrIp: 0.0.0.0/0
-      SecurityGroupEgress:
-        - IpProtocol: tcp
-          FromPort: 80
-          ToPort: 80
-          CidrIp: 0.0.0.0/0
-  WebServerSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      GroupDescription: Enable HTTP access via port 80 locked down to the load balancer + SSH access
-      SecurityGroupIngress:
-        - IpProtocol: tcp
-          FromPort: 80
-          ToPort: 80
-          SourceSecurityGroupId: {Ref: ELBSecurityGroup}
-        - IpProtocol: tcp
-          FromPort: 22
-          ToPort: 22
-          CidrIp: <%=ssh_ip%>
-      VpcId: {Ref: VPC}
+      ImageId: <%=image_id%>
+      InstanceType: m4.10xlarge
+      IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
+      SecurityGroupIds: ['Fn::GetAtt': [VPC, FrontendSecurityGroup]]
+      SubnetId: {'Fn::GetAtt': [VPC, Subnet<%=azs.first%>]}
+      KeyName: <%=ssh_key_name%>
+      InstanceInitiatedShutdownBehavior: terminate
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: 64
+            VolumeType: gp2
+      UserData:
+        Fn::Base64: <%=file.call('ami_bootstrap.sh.erb',
+          create_id: "WebServerAMI#{ami}",
+          complete_id: "AMIComplete#{ami}",
+          node_name: 'fe-${INSTANCE_ID}',
+          run_list: 'role[front-end]') %>
+  AMI: <%= lambda.call 'AMIManager',
+    DependsOn: "WebServerAMI#{ami}",
+    StackName: {Ref: 'AWS::StackName' },
+    Region: {Ref: 'AWS::Region' },
+    InstanceId: {Ref: "WebServerAMI#{ami}" } %>
   WebServer:
     Type: AWS::AutoScaling::AutoScalingGroup
-    DependsOn: Internet
     CreationPolicy:
       ResourceSignal:
         Timeout: PT60M
         Count: 2
     UpdatePolicy:
       AutoScalingRollingUpdate:
-        MaxBatchSize: 1
-        MinInstancesInService: 1
+        MaxBatchSize: 2
+        MinInstancesInService: 2
         PauseTime: PT60M
         WaitOnResourceSignals: true
     Properties:
-      VPCZoneIdentifier: [Ref: SubnetA]
+      VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: LaunchConfig}
       MinSize: 1
-      MaxSize: 5
+      MaxSize: 12
       DesiredCapacity: 2
       HealthCheckType: ELB
       HealthCheckGracePeriod: 4000
-      LoadBalancerNames: [Ref: ElasticLoadBalancer]
+      LoadBalancerNames: [Ref: LoadBalancer]
   LaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration
+    DependsOn: AMIComplete<%=ami%>
     Properties:
-      ImageId: <%=image_id%>
+      ImageId: {"Fn::GetAtt": [AMI, ImageId]}
       InstanceType: <%=instance_type%>
-      IamInstanceProfile: {Ref: RootInstanceProfile}
-      SecurityGroups: [Ref: WebServerSecurityGroup]
+      IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
+      SecurityGroups: ['Fn::GetAtt': [VPC, FrontendSecurityGroup]]
       KeyName: <%=ssh_key_name%>
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -142,61 +108,35 @@ Resources:
             VolumeSize: 64
             VolumeType: gp2
       UserData:
-        Fn::Base64: <%=file.call('bootstrap.sh.erb')%>
-  RootRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Statement:
-          - Effect: Allow
-            Principal:
-              Service: [ec2.amazonaws.com]
-            Action: ['sts:AssumeRole']
-      Path: '/'
-  RolePolicies:
-    Type: AWS::IAM::Policy
-    Properties:
-      PolicyName: s3
-      PolicyDocument:
-        Statement:
-          Effect: Allow
-          Action: ['s3:GetObject']
-          Resource: 'arn:aws:s3:::<%=s3_bucket%>/*'
-      Roles: [Ref: RootRole]
-  RootInstanceProfile:
-    Type: AWS::IAM::InstanceProfile
-    Properties:
-      Path: '/'
-      Roles: [Ref: RootRole]
-  PegasusCDN:
-    Type: AWS::CloudFront::Distribution
-    Properties:
-      DistributionConfig: <%=AWS::CloudFront.config_cloudformation(:pegasus, "origin-#{subdomain}", ["pegasus-#{subdomain}"], cloudfront_cert, true)%>
-  DashboardCDN:
-    Type: AWS::CloudFront::Distribution
-    Properties:
-      DistributionConfig: <%=AWS::CloudFront.config_cloudformation(:dashboard, "origin-#{subdomain}", ["dashboard-#{subdomain}"], cloudfront_cert, true)%>
-  PegasusDNS:
+        Fn::Base64: <%=file.call('chef_role_bootstrap.sh.erb', resource_id: 'WebServer', node_name: 'fe-${INSTANCE_ID}', run_list: 'role[front-end]')%>
+<%
+  %w(Dashboard Pegasus).each do |app|
+    app_domain = "#{app == 'Dashboard' ? 'dashboard-' : ''}#{subdomain}"
+-%>
+  <%=app%>DNS:
     Type: AWS::Route53::RecordSetGroup
     Properties:
       HostedZoneName: <%=domain%>.
       RecordSets:
-        - Name: "pegasus-<%=subdomain%>"
+        - Name: <%=app_domain%>
           Type: A
           AliasTarget:
-            DNSName: {'Fn::GetAtt': [PegasusCDN, DomainName]}
+<%   if cdn_enabled -%>
+            DNSName: {'Fn::GetAtt': [<%=app%>CDN, DomainName]}
             HostedZoneId: Z2FDTNDATAQYW2 # static ID for cloudfront aliases
-  DashboardDNS:
-    Type: AWS::Route53::RecordSetGroup
+<%   else -%>
+            DNSName: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneName]}
+            HostedZoneId: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneNameID]}
+<%   end -%>
+<%   if cdn_enabled -%>
+  <%=app%>CDN:
+    Type: AWS::CloudFront::Distribution
     Properties:
-      HostedZoneName: <%=domain%>.
-      RecordSets:
-        - Name: "dashboard-<%=subdomain%>"
-          Type: A
-          AliasTarget:
-            DNSName: {'Fn::GetAtt': [DashboardCDN, DomainName]}
-            HostedZoneId: Z2FDTNDATAQYW2 # static ID for cloudfront aliases
-  LoadBalancerDNS:
+      DistributionConfig: <%=AWS::CloudFront.config_cloudformation(app.downcase.to_sym, "origin-#{subdomain}", [app_domain])%>
+<%   end -%>
+<% end -%>
+<% if cdn_enabled%>
+  OriginDNS:
     Type: AWS::Route53::RecordSetGroup
     Properties:
       HostedZoneName: <%=domain%>.
@@ -204,12 +144,13 @@ Resources:
         - Name: "origin-<%=subdomain%>"
           Type: A
           AliasTarget:
-            HostedZoneId: {'Fn::GetAtt': [ElasticLoadBalancer, CanonicalHostedZoneNameID]}
-            DNSName: {'Fn::GetAtt': [ElasticLoadBalancer, CanonicalHostedZoneName]}
+            HostedZoneId: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneNameID]}
+            DNSName: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneName]}
+<% end -%>
 Outputs:
   DashboardURL:
     Value: "https://dashboard-<%=subdomain%>"
     Description: Dashboard URL
   PegasusURL:
-    Value: "https://pegasus-<%=subdomain%>"
+    Value: "https://<%=subdomain%>"
     Description: Pegasus URL

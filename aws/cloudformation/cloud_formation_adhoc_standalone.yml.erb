@@ -5,41 +5,8 @@ require 'cdo/aws/cloudfront'
 AWSTemplateFormatVersion: 2010-09-09
 Description: Standalone Code.org application on a single EC2 instance<%=cdn_enabled ? ' over CloudFront CDN' : ''%>.
 Resources:
-  VPC:
-    Type: AWS::EC2::VPC
-    Properties:
-      CidrBlock: 10.0.0.0/24
-      EnableDnsHostnames: true
-  SubnetA:
-    Type: AWS::EC2::Subnet
-    Properties:
-      VpcId: {Ref: VPC}
-      CidrBlock: 10.0.0.0/26
-      AvailabilityZone: '<%=availability_zone%>'
-      MapPublicIpOnLaunch: true
-  InternetGateway:
-    Type: AWS::EC2::InternetGateway
-  Internet:
-    Type: AWS::EC2::VPCGatewayAttachment
-    Properties:
-      VpcId: {Ref: VPC}
-      InternetGatewayId: {Ref: InternetGateway}
-  PublicRouteTable:
-    Type: AWS::EC2::RouteTable
-    Properties:
-      VpcId: {Ref: VPC}
-  PublicRoute:
-    Type: AWS::EC2::Route
-    DependsOn: Internet
-    Properties:
-      RouteTableId: {Ref: PublicRouteTable}
-      DestinationCidrBlock: 0.0.0.0/0
-      GatewayId: {Ref: InternetGateway}
-  SubnetRouteAssociation:
-    Type: AWS::EC2::SubnetRouteTableAssociation
-    Properties:
-      RouteTableId: {Ref: PublicRouteTable}
-      SubnetId: {Ref: SubnetA}
+  VPC: <%= lambda.call 'LookupStackOutputs', StackName: 'VPC' %>
+  IAM: <%= lambda.call 'LookupStackOutputs', StackName: 'IAM' %>
   WebServerSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -57,19 +24,16 @@ Resources:
           FromPort: 22
           ToPort: 22
           CidrIp: <%=ssh_ip%>
-      VpcId: {Ref: VPC}
+      VpcId: {'Fn::GetAtt': [VPC, VpcId]}
   WebServer:
     Type: AWS::EC2::Instance
-    DependsOn: Internet
     CreationPolicy:
       ResourceSignal:
         Timeout: PT60M
     Properties:
       ImageId: <%=image_id%>
-      SecurityGroupIds: [Ref: WebServerSecurityGroup]
-      SubnetId: {Ref: SubnetA}
       InstanceType: <%=instance_type%>
-      IamInstanceProfile: {Ref: RootInstanceProfile}
+      IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
       KeyName: <%=ssh_key_name%>
       Tags: [{Key: Name, Value: <%=stack_name%>}]
       BlockDeviceMappings:
@@ -79,30 +43,11 @@ Resources:
             VolumeType: gp2
       UserData:
         Fn::Base64: <%=file.call('bootstrap.sh.erb')%>
-  RootRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Statement:
-          - Effect: Allow
-            Principal: {Service: [ec2.amazonaws.com]}
-            Action: ['sts:AssumeRole']
-      Path: '/'
-      Policies:
-        - PolicyName: instance
-          PolicyDocument:
-            Statement:
-              - Effect: Allow
-                Action: ['s3:GetObject']
-                Resource: 'arn:aws:s3:::<%=s3_bucket%>/*'
-              - Effect: Allow
-                Action: ['cloudformation:SignalResource']
-                Resource: '*'
-  RootInstanceProfile:
-    Type: AWS::IAM::InstanceProfile
-    Properties:
-      Path: '/'
-      Roles: [Ref: RootRole]
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: true
+          DeviceIndex: 0
+          GroupSet: [Ref: WebServerSecurityGroup]
+          SubnetId: {'Fn::GetAtt': [VPC, PublicSubnet<%=azs.first%>]}
 <%
   %w(Dashboard Pegasus).each do |app|
     app_domain = "#{app == 'Pegasus' ? '' : (app.downcase + '-')}#{subdomain}";

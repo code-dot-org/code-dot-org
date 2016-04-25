@@ -14,7 +14,7 @@ var levelbuilderOverrides = require('./levelbuilderOverrides');
 var MusicController = require('../MusicController');
 var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var CraftVisualizationColumn = require('./CraftVisualizationColumn');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -249,19 +249,6 @@ Craft.init = function (config) {
     });
   };
 
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        visualization: require('./visualization.html.ejs')(),
-        controls: require('./controls.html.ejs')({
-          assetUrl: studioApp.assetUrl,
-          shareable: config.level.shareable
-        })
-      }
-    });
-  };
-
   var onMount = function () {
     studioApp.init($.extend({}, config, {
       forceInsertTopBlock: 'when_run',
@@ -338,7 +325,7 @@ Craft.init = function (config) {
     noVisualization: false,
     isRtl: studioApp.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
-    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
+    visualizationColumn: <CraftVisualizationColumn/>,
     onMount: onMount
   }), document.getElementById(config.containerId));
 };
