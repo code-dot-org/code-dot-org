@@ -46,9 +46,8 @@ class Plc::EnrollmentTaskAssignment < ActiveRecord::Base
     return plc_task.try(:icon), '' if plc_task.try(:icon)
 
     case status
-      # Need to move these statuses to some constant eventually - will address with next checkin
       when NOT_STARTED
-        return 'fa-circle-o', ''
+        return 'fa-circle-o', 'color: black'
       when IN_PROGRESS
         return 'fa-adjust', 'color: darkgoldenrod'
       when COMPLETED

@@ -29,7 +29,8 @@
   twentyhours_text: "¿Terminaste tu primera Hora de Código? Conoce más sobre informática
     y conceptos de programación en este curso de seguimiento."
   og_title: Todos los niños merecen oportunidades
-  og_description: Cada estudiante en cada escuela merece estudiar en computadoras.
+  og_description: Cada estudiante en cada escuela merece la oportunidad de estudiar
+    ciencias computacionales. Lo está cambiando todo.
   hoc2014_heading: Unete a <a href="http://hourofcode.com">Hora del Código</a><br/>Diciembre
     8 - 14, 2014<br/>
   hoc2014_students: Alumnos
@@ -251,8 +252,7 @@
   learn_next_level: Continuar al siguiente nivel
   learn_online: Pruebe otros cursos en línea
   learn_classes: Encontrar clases cerca de ti
-  hoc_is_here: 'En esta última Semana de la Informática, la #HoraDelCódigo ha llegado
-    a 50 millones de estudiantes. https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: Aprende ciencias computacionales. Lo está cambiando todo. https://youtu.be/xJqSu1IbcHg.
   just_did_hoc: Yo he terminado the HourofCode - Dale un vistazo! @codeorg
   just_did_course1: Acabo de terminar el Curso 1 - echa un vistazo! @codeorg
   just_did_course2: Acabo de terminar el Curso 2 - échale un vistazo! @codeorg
@@ -680,7 +680,7 @@
   dashboard_navigation_all_sections: Cuentas de estudiantes y sus progresos
   dashboard_navigation_view_progress: Ver progreso
   dashboard_navigation_view_text_responses: Ver Respuestas de Texto
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments: Evaluaciones
   dashboard_navigation_add_students: Añadir alumnos
   dashboard_navigation_manage_students: Administrar alumnos
   dashboard_navigation_lesson_plans_resources: Planificaciones de lecciones y recursos
@@ -803,18 +803,18 @@
   dashboard_puzzle: Rompecabezas
   dashboard_question: Pregunta
   dashboard_response: Respuesta
-  dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness: Rectitud
+  dashboard_correctness_free_response: Respuesta libre
+  dashboard_correctness_unsubmitted: No enviado
   dashboard_correctness_correct: Correcto
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
-  dashboard_status: Status
-  dashboard_multi_correct: "# multiple choice correct"
-  dashboard_multi_count: "# multiple choice"
-  dashboard_multi_correct_percent: "% multiple choice correct"
-  dashboard_submission_timestamp: Submission timestamp
+  dashboard_correctness_incorrect: Incorrecto
+  dashboard_submission_submitted: Enviado
+  dashboard_submission_in_progress: En progreso
+  dashboard_status: Estado
+  dashboard_multi_correct: "# opción múltiple correcta"
+  dashboard_multi_count: "# opción múltiple"
+  dashboard_multi_correct_percent: "% opción múltiple correcta"
+  dashboard_submission_timestamp: Marca de tiempo del envío
   stats_hoc_2013_heading: 'Increíbles estadísticas de la Hora del Código del año pasado.
     En sólo una semana:'
   stats_hoc_2013_image_alt: Estadísticas de Hora del Código del 2013
@@ -844,6 +844,12 @@
     Debido a la demanda, hemos añadido un número limitado de lugares a nuestro Programa
     de Aprendizaje Profesional para la Ciencia de la Computación de escuela secundaria.
     Aplicar hasta el <u>31 de Marzo</u> para asegurar su lugar."
+  dashboard_announce_message_second: "<strong>Cerrando aplicaciones de fase uno</strong>
+    - ¿Quieres (o un profesor que conozcas) aprender cómo enseñar un año completo
+    de introducción a las ciencias computacionales a nivel universidad, que los estudiantes
+    amarán? No necesitas ninguna experiencia anterior para unirte a nuestros talleres
+    gratuitos del curso Explorando las Ciencias Computacionales. Regístrate antes
+    del 22 de Abril. "
   dashboard_announce_button_text: Aprende más
   dashboard_announce_hoc: "<b>15 de Octubre, 2015</b> - Se viene la Hora de Código
     &mdash; cada organizador que participe recibirá una tarjeta de regalo de Amazon.com
@@ -1715,8 +1721,3 @@
   infinity_shortcode: inf
   playlab_shortcode: ejecutar
   artist_shortcode: art
-  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
-    (or a teacher you know) want to join a nationwide community of educators working
-    to change the face of computer science education? We'll be accepting applications
-    from middle and high school teachers in our partner districts for our year-long
-    Exploring Computer Science Professional Learning Program until April 22nd."

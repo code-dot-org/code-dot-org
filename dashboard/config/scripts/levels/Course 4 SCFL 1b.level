@@ -26,10 +26,12 @@
     "step_mode": "1",
     "ideal": "13",
     "step_speed": "2",
-    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\n**For Loops Super Challenge:** Can you get Skrat to his acorn using as few blocks as possible?\r\n\r\n<h4 class=\"hint\">\r\n<details>\r\n<summary><b>Hints</b></summary>\r\n\t<br/><br/>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #1</b></summary>\r\n    \t<br/>\r\n    \tTry using a `for loop`.\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n\t<h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #2</b></summary>\r\n    \t<br/>\r\n        Take a look at this option for movement:  \r\n    \t<img src=\"https://images.code.org/9960beb96573c3c2667ace856b38133a-image-1446176325832.38.12.png\" width=\"350px\"/>\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Solution</b></summary>\r\n    \t<br/>\r\n    \t<br/>\r\n    \t<img src=\"https://images.code.org/e63805bea9b73fc6fb657ba8af0a0e3d-image-1446176325833.36.54.png\" width=\"450px\"/>\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n</details>\r\n</h4>",
-    "instructions": "Can you get Skrat to his acorn using as few blocks as possible?"
+    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\n**For Loops Super Challenge:** Can you get Skrat to his acorn using as few blocks as possible?\r\n",
+    "instructions": "Can you get Skrat to his acorn using as few blocks as possible?",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try using a `for loop`.\",\r\n  \"hint_id\": \"Course_4_SCFL_1b_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Take a look at this option for movement:  \\n   ![](https://images.code.org/9960beb96573c3c2667ace856b38133a-image-1446176325832.38.12.png)\",\r\n  \"hint_id\": \"Course_4_SCFL_1b_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"**Solution:**![Solution](https://images.code.org/e63805bea9b73fc6fb657ba8af0a0e3d-image-1446176325833.36.54.png)\",\r\n  \"hint_id\": \"Course_4_SCFL_1b_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 5,
     "repeat_loops": 4,

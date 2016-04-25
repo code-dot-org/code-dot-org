@@ -321,6 +321,21 @@ def storage_id(_)
   SecureRandom.hex
 end
 
+$stub_encrypted_channel_id = 'STUB_CHANNEL_ID-1234'
+def storage_encrypt_channel_id(_)
+  $stub_encrypted_channel_id
+end
+
+$stub_channel_owner = 33
+$stub_channel_id = 44
+# stubbing storage_decrypt is inappropriate access, but
+# allows storage_decrypt_channel_id to throw the right
+# errors if the input is malformed and keeps us from
+# having to access the Pegasus DB from Dashboard tests.
+def storage_decrypt(encrypted)
+  "#{$stub_channel_owner}:#{$stub_channel_id}"
+end
+
 # A fake slogger implementation that captures the records written to it.
 class FakeSlogger
   attr_reader :records

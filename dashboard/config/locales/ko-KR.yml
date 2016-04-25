@@ -26,6 +26,7 @@
   submit: "제출하기"
   unsubmit: "제출 취소"
   next_page: Next page
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: "선생님 추가:"

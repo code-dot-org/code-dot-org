@@ -27,6 +27,7 @@
   submit: "បញ្ជូន"
   unsubmit: Unsubmit
   next_page: Next page
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: "បន្ថែម​គ្រូ​ម្នាក់៖"

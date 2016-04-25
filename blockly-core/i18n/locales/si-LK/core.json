@@ -25,7 +25,7 @@
   "COLOUR_RGB_RED": "රතූ",
   "COLOUR_RGB_TITLE": "වර්ණ ගන්වන්න",
   "COLOUR_RGB_TOOLTIP": "නිරූපිත තරමින් රතු, කොල හා නිල් වර්ණ භාවිත කරමින් වර්ණයක් තනන්න. සියලු අගයන් 0 ත් 100 යත් අතර තිබිය යුතුය.",
-  "CONFIRM_CREATE_VARIABLE": "Create",
+  "CONFIRM_CREATE_VARIABLE": "තනන්න",
   "CONFIRM_DELETE_FUNCTION_MESSAGE": "අවවාදයයි! ඔබ %1 මකාදමන බවට තහවුරු කරනවාද?",
   "CONFIRM_RENAME_VARIABLE": "Rename",
   "CONTRACT_EDITOR_HEADER": "නිර්මාණ වට්ටෝරුව",

@@ -24,6 +24,7 @@
   "completedWithoutRecommendedBlock": "Gratulerer! Du har fullført oppgave {puzzleNumber}. (Men du kan bruke en annen blokk for sterkere kode.)",
   "continue": "Fortsett",
   "copy": "Kopier",
+  "currentVersion": "Current Version",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -130,6 +131,7 @@
   "end": "slutt",
   "errorEmptyFunctionBlockModal": "Det må være blokker inni funksjonsdefinisjonen din. Klikk \"Rediger\" og dra blokker inn i den grønne blokken.",
   "errorIncompleteBlockInFunction": "Klikk \"Rediger\" for å sørge for at du ikke mangler noen blokker inni funksjonsdefinisjonen din.",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
   "errorParamInputUnattached": "Husk å feste en blokk til hver av innverdiene på funksjonsblokken i arbeidsområdet.",
   "errorQuestionMarksInNumberField": "Prøv å erstatte \"???\" med en verdi!",
   "errorRequiredParamsMissing": "Lag en parameter for funksjonen din ved å klikke \"Rediger\" og legge til de nødvendige parameterne. Dra de nye parameterblokkene til funksjonsdefinisjonen.",
@@ -183,6 +185,7 @@
   "recommendedBlockContextualHintTitle": "Prøv å bruke en blokk som dette for å løse gåten.",
   "repeat": "gjenta",
   "resetProgram": "Nullstill",
+  "restoreThisVersion": "Restore this Version",
   "rotateText": "Roter enheten din.",
   "runProgram": "Kjør",
   "runTooltip": "Kjør programmet definert av blokkene i arbeidsområdet.",
@@ -230,8 +233,5 @@
   "watchVideo": "Se videoen",
   "when": "når",
   "whenRun": "når den kjører",
-  "workspaceHeaderShort": "Arbeidsområde: ",
-  "currentVersion": "Current Version",
-  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
-  "restoreThisVersion": "Restore this Version"
+  "workspaceHeaderShort": "Arbeidsområde: "
 }

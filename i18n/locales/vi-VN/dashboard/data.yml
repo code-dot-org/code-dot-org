@@ -331,10 +331,10 @@ vi:
         studio_playlab_8: Bạn có thể thêm một khối để ghi thêm điểm và một khối để phát ra âm thanh khi con Kì lân chạy xung quanh Thật sĩ, và sau đó di chuyển ông ấy cùng mũi tên cho đến khi bạn ghi điểm không?
         studio_playlab_9: Thiết lập hình nền cho các cuộc xâm lược ngoài hành tinh và giúp Spacebot bắt được người ngoài hành tinh nhanh hơn bằng cách thay đổi tốc độ của nó. Sau đó di chuyển anh ấy với các phím mũi tên để giúp Spacebot và cảnh báo những người khác
         studio_playlab_10: 'Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại của họ.'
-        studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_iceage_hello2: 'Manny (actor 1) found Sid (actor 2) and wants to invite him on the adventure. Help them greet each other by using the the "actor say" block twice.'
-        studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
-        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_iceage_hello1: 'Sid muốn tập hợp tất cả mọi người một chuyến phiêu lưu mới. Bạn có thể giúp cậu ấy nói "Xin chào" bằng cách kéo các khối "nói" vào khu vực làm việc và gõ từ "xin chào" bên trong?'
+        studio_iceage_hello2: 'Manny (nhân vật 1) tìm thấy Sid (nhân vật 2) và muốn mời anh ta vào cuộc phiêu lưu. Giúp họ chào nhau bằng cách sử dụng khối "nhân vật nói" hai lần.'
+        studio_iceage_move_to_flag: 'Scrat đang tìm kiếm acorn của mình!  Giúp cậu ấy đi tới cuối 200 pixels bằng cách sử dụng  khối "di chuyển".'
+        studio_iceage_move_to_actor: 'Diego (nhân vật 1) đang tìm kiếm Manny (nhân vật 2). Giúp Diego di chuyển 200 điểm ảnh xuống để Manny sử dụng khối "di chuyển nhân vật". Tiếp theo, kết nối một khối với sự kiện "khi nhân vật chạm" để phát âm thanh khi họ tìm thấy nhau.'
         studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
         studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
         studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
@@ -482,6 +482,7 @@ vi:
         infinity_playlab_intro: 'Phòng trò chơi - Giới thiệu'
         infinity_playlab_events: Sự kiện Phòng Trò Chơi
         infinity_playlab_repeat_forever: Phòng Trò Chơi lặp lại mãi mãi
+        csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: 'Introduction to Databases - Part 1'
         csp_applab_databases_2: 'Introduction to Databases - Part 2'
         csp_applab_processing_lists: Processing Lists with Loops

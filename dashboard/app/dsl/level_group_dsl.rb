@@ -6,6 +6,7 @@ class LevelGroupDSL < BaseDSL
     @description_short = nil
     @description = nil
     @hash[:pages] = []
+    @hash[:options] = {skip_dialog: true, skip_sound: true}
     @current_page_level_names = []
     @level_names = []
     @i18n_strings = Hash.new({})

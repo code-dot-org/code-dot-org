@@ -2,15 +2,14 @@
  *  @see http://redux.js.org/docs/basics/Actions.html */
 'use strict';
 
+var utils = require('../utils');
+
 /** @enum {string} */
-var ActionType = module.exports.ActionType = {
-  CHANGE_SCREEN: 'CHANGE_SCREEN',
-  SET_INITIAL_LEVEL_PROPS: 'SET_INITIAL_LEVEL_PROPS',
-  CHANGE_INTERFACE_MODE: 'CHANGE_INTERFACE_MODE',
-  TOGGLE_INSTRUCTIONS_COLLAPSED: 'TOGGLE_INSTRUCTIONS_COLLAPSED',
-  SET_INSTRUCTIONS_HEIGHT: 'SET_INSTRUCTIONS_HEIGHT',
-  SET_INSTRUCTIONS_MAX_HEIGHT: 'SET_INSTRUCTIONS_MAX_HEIGHT'
-};
+var ActionType = module.exports.ActionType = utils.makeEnum(
+  'CHANGE_SCREEN',
+  'SET_INITIAL_LEVEL_PROPS',
+  'CHANGE_INTERFACE_MODE'
+);
 
 /**
  * Push lots of view properties of the level into the store.
@@ -63,34 +62,5 @@ module.exports.changeScreen = function (screenId) {
   return {
     type: ActionType.CHANGE_SCREEN,
     screenId: screenId
-  };
-};
-
-/**
- * Toggles whether instructions are currently collapsed.
- */
-module.exports.toggleInstructionsCollapsed = function () {
-  return {
-    type: ActionType.TOGGLE_INSTRUCTIONS_COLLAPSED
-  };
-};
-
-/**
- * Set the height of the instructions panel
- */
-module.exports.setInstructionsHeight = function (height) {
-  return {
-    type: ActionType.SET_INSTRUCTIONS_HEIGHT,
-    height: height
-  };
-};
-
-/**
- * Set the max height of the instructions panel
- */
-module.exports.setInstructionsMaxHeight = function (maxHeight) {
-  return {
-    type: ActionType.SET_INSTRUCTIONS_MAX_HEIGHT,
-    maxHeight: maxHeight
   };
 };

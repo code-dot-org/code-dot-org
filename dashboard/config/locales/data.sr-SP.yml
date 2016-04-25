@@ -729,6 +729,7 @@
         infinity_playlab_intro: Play Lab - Introduction
         infinity_playlab_events: Play Lab - Events
         infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
         csp_applab_processing_lists: Processing Lists with Loops
@@ -777,13 +778,13 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
-        starwars_typing: 'Star Wars: Building a Galaxy with Code - JavaScript'
-        starwars_events: 'Star Wars: Building a Galaxy with Code - Events'
-        starwars_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
-        starwars_blocks_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
-        starwars_blocks_events: 'Star Wars: Building a Galaxy with Code - Events'
-        starwars_blocks_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
+        starwars_intro: "Ратови Звезда: Изгради галаксије кôдом"
+        starwars_typing: "Ратови Звезда: Изгради галаксије кôдом"
+        starwars_events: "Ратови Звезда: Изгради галаксије кôдом"
+        starwars_congrats: "Ратови Звезда: Изгради галаксије кôдом"
+        starwars_blocks_intro: "Ратови Звезда: Изгради галаксије кôдом"
+        starwars_blocks_events: "Ратови Звезда: Изгради галаксије кôдом"
+        starwars_blocks_congrats: "Ратови Звезда: Изгради галаксије кôдом"
         mc_intro: "Мајнкрафт - увод"
         mc_repeat: "Мајнкрафт - понављај"
         mc_if_statements: Мајнкрафт - "ако" команда

@@ -315,7 +315,7 @@ fa:
         studio_playlab_10: بازی خودتان را بسازید. وقتی کارتان تمام شد، روی پایان کلیک کنید تا به دوستانتان اجازه دهید داستان شما را روی موبایلشان امتحان کنند.
         studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
         studio_iceage_hello2: 'Manny (actor 1) found Sid (actor 2) and wants to invite him on the adventure. Help them greet each other by using the the "actor say" block twice.'
-        studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
+        studio_iceage_move_to_flag: 'اسکرات یه دنبال بلوط خود است! با بلوک "حرکت" به او کمک کنید به 200 پیکسل آخر برود.'
         studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
         studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
         studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
@@ -464,6 +464,7 @@ fa:
         infinity_playlab_intro: 'آزمایشگاه بازی - معرفی'
         infinity_playlab_events: 'آزمایشگته بازی - رویداد ها'
         infinity_playlab_repeat_forever: 'آزمایشگاه بازی - حلقه ی تکرار برای همیشه'
+        csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: 'Introduction to Databases - Part 1'
         csp_applab_databases_2: 'Introduction to Databases - Part 2'
         csp_applab_processing_lists: Processing Lists with Loops
@@ -606,5 +607,5 @@ fa:
         craft_callout_preplaced: "We've put some blocks here to get you started"
         craft_inside_repeat: Repeat actions by placing blocks in here
         craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_what_is_iron: این آهن را استخراج کنید!
+        craft_callout_moveforward: این کد برای گدازه (مواد مذاب) بررسی خواهد شد، می توانید برای حرکت به جلو یک دستور اضافه کنید؟

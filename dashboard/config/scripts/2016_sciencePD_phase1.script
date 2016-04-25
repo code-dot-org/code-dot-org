@@ -1,0 +1,83 @@
+title 'Computer Science in Science PD 2016-2017'
+description "In Partnership with Project GUTS"
+description_short "In Partnership with Project GUTS"
+login_required 'true'
+pd 'true'
+
+stage 'Introduction to PD'
+level 'sciPD Intro'
+level 'PDECS tour'
+level 'sciPD preQ p1 16-17'
+level 'PDAlg commitment'
+level 'sciPD commitment match'
+level 'sciPD attendance commitment'
+
+stage 'What to Expect'
+level 'sciPD what to expect'
+level 'sciPD intro video'
+level 'sciPD expectations'
+level 'sciPD meet and greet'
+level 'AlgPD Break'
+
+stage 'Introduction to Complex Adaptive Systems'
+level 'sciPD complex adaptive video'
+level 'sciPD complex adaptive 1'
+level 'sciPD complex adaptive 2'
+level 'sciPD complex adaptive forum'
+
+stage 'Introduction to Computational Science'
+level 'sciPD intro to CS video'
+level 'sciPD intro to CS 1'
+level 'sciPD intro to CS 2'
+level 'sciPD intro to CS forum'
+
+stage 'Agent Based Modeling of Complex Adaptive Systems'
+level 'sciPD agent based video'
+level 'sciPD agent based 1'
+level 'sciPD agent based 2'
+level 'sciPD agent based forum'
+
+stage 'Using Computer Models in Science'
+level 'sciPD computer models video'
+level 'sciPD computer models 1'
+level 'sciPD computer models 2'
+level 'sciPD computer models forum'
+
+stage 'Using Models in the Classroom'
+level 'sciPD class models video'
+level 'sciPD class models 1'
+level 'sciPD class models 2'
+level 'sciPD class models forum'
+
+stage 'Dispositions and Classroom Culture'
+level 'sciPD culture video'
+level 'sciPD culture 1'
+level 'sciPD culture 2'
+level 'sciPD culture forum'
+
+stage 'Computational Thinking And The Framework For K-12 Science Education'
+level 'sciPD framework video'
+level 'sciPD framework 1'
+level 'sciPD framework 2'
+level 'sciPD framework forum'
+
+stage 'Introduction to StarLogo Nova'
+level 'sciPD StarLogo intro video'
+level 'sciPD StarLogo intro 1'
+level 'sciPD StarLogo intro 2'
+level 'sciPD StarLogo intro 3'
+level 'sciPD StarLogo intro 4'
+
+stage 'The Tutorial'
+level 'sciPD StarLogo tutorial 1'
+level 'sciPD StarLogo tutorial 2'
+level 'sciPD StarLogo tutorial 3'
+level 'sciPD StarLogo tutorial 4'
+level 'sciPD StarLogo tutorial 5'
+level 'sciPD StarLogo tutorial 6'
+level 'sciPD StarLogo tutorial 7'
+level 'sciPD StarLogo tutorial 8'
+
+stage 'Post-Survey'
+level 'sciPD finish'
+
