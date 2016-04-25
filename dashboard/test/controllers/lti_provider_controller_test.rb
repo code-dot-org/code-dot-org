@@ -137,7 +137,7 @@ class LtiProviderControllerTest < ActionController::TestCase
       lti_post :sso, params
     end
 
-    assert_redirected_to 'http://test.host/users/sign_up' 
+    assert_redirected_to 'http://test.host/users/sign_up'
     assert_match /email missing/, session['flash'].to_s
   end
 
@@ -153,7 +153,7 @@ class LtiProviderControllerTest < ActionController::TestCase
       lti_post :sso, params
     end
 
-    assert_redirected_to 'http://test.host/users/sign_up' 
+    assert_redirected_to 'http://test.host/users/sign_up'
     assert_match /launch request outside of time window/, session['flash'].to_s
   end
 end
