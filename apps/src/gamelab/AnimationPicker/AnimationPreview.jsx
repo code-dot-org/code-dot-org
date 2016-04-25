@@ -1,7 +1,13 @@
 /** @file Render a gallery image/spritesheet as an animated preview */
 
+/**
+ * Render an animated preview of a spritesheet at a given size, scaled with
+ * a fixed aspect ratio to fit.
+ */
 var AnimationPreview = React.createClass({
   propTypes: {
+    width: React.PropTypes.number.isRequired,
+    height: React.PropTypes.number.isRequired,
     sourceUrl: React.PropTypes.string.isRequired,
     frameWidth: React.PropTypes.number.isRequired,
     frameHeight: React.PropTypes.number.isRequired,
@@ -33,13 +39,18 @@ var AnimationPreview = React.createClass({
   },
 
   render: function () {
-    var xOffset = -this.props.frameWidth * this.state.currentFrame;
+    var xScale = this.props.width / this.props.frameWidth;
+    var yScale = this.props.height / this.props.frameHeight;
+    var scale = Math.min(Math.min(xScale, yScale), 1);
+
+    var xOffset = -this.props.frameWidth * scale * this.state.currentFrame;
     var style = {
       backgroundImage: "url('" + this.props.sourceUrl + "')",
       backgroundRepeat: 'no-repeat',
+      backgroundSize: this.props.frameWidth * scale * this.props.frameCount,
       backgroundPosition: xOffset + 'px 0px',
-      width: this.props.frameWidth,
-      height: this.props.frameHeight
+      width: this.props.frameWidth * scale,
+      height: this.props.frameHeight * scale
     };
     return <img src="/blockly/media/1x1.gif" style={style}/>;
   }
