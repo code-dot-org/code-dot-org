@@ -86,12 +86,11 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     checkResultForBlocks({
       result: TestResults.EMPTY_FUNCTION_BLOCK_FAIL,
       blockXml: '<xml>' +
-                  '<block type="when_run"><next>' +
-                    '<block type="procedures_defnoreturn">' +
-                      '<mutation/>' +
-                      '<title name="NAME">do something</title>' +
-                    '</block>' +
-                  '</next></block>' +
+                  '<block type="when_run"><next></next></block>' +
+                  '<block type="procedures_defnoreturn">' +
+                    '<mutation/>' +
+                    '<title name="NAME">do something</title>' +
+                  '</block>' +
                 '</xml>'
     });
   });
@@ -100,15 +99,14 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
       blockXml: '<xml>' +
-                  '<block type="when_run"><next>' +
-                    '<block type="procedures_defnoreturn">' +
-                      '<mutation/>' +
-                      '<title name="NAME">do something</title>' +
-                      '<statement name="STACK">' +
-                        '<block type="text_print"></block>' +
-                      '</statement>' +
-                    '</block>' +
-                  '</next></block>' +
+                  '<block type="when_run"><next></next></block>' +
+                  '<block type="procedures_defnoreturn">' +
+                    '<mutation/>' +
+                    '<title name="NAME">do something</title>' +
+                    '<statement name="STACK">' +
+                      '<block type="text_print"></block>' +
+                    '</statement>' +
+                  '</block>' +
                 '</xml>'
     });
   });
