@@ -33,7 +33,7 @@ var AnimationPickerBody = React.createClass({
             frameHeight={158}
             frameCount={7}
             frameRate={15}
-            label="ghost_standing"/>
+            label="ghost_standing (7)"/>
         <AnimationPickerListItem
             sourceUrl={'/blockly/media/gamelab/library/platform.png'}
             sourceWidth={200}
@@ -42,7 +42,7 @@ var AnimationPickerBody = React.createClass({
             frameHeight={73}
             frameCount={3}
             frameRate={15}
-            label="platform"/>
+            label="platform (3)"/>
       </ScrollableList>
     </div>;
   }
