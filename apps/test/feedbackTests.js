@@ -57,7 +57,7 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     checkResultForBlocks({
       result: TestResults.EMPTY_BLOCK_FAIL,
       blockXml: '<xml>' +
-                  '<block type="when_run"><next>' + 
+                  '<block type="when_run"><next>' +
                     '<block type="controls_repeat">' +
                       '<title name="TIMES">4</title>' +
                     '</block>' +
@@ -70,7 +70,7 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
       blockXml: '<xml>' +
-                  '<block type="when_run"><next>' + 
+                  '<block type="when_run"><next>' +
                     '<block type="controls_repeat">' +
                       '<title name="TIMES">4</title>' +
                       '<statement name="DO">' +
@@ -86,7 +86,7 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     checkResultForBlocks({
       result: TestResults.EMPTY_FUNCTION_BLOCK_FAIL,
       blockXml: '<xml>' +
-                  '<block type="when_run"><next>' + 
+                  '<block type="when_run"><next>' +
                     '<block type="procedures_defnoreturn">' +
                       '<mutation/>' +
                       '<title name="NAME">do something</title>' +
@@ -100,7 +100,7 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
       blockXml: '<xml>' +
-                  '<block type="when_run"><next>' + 
+                  '<block type="when_run"><next>' +
                     '<block type="procedures_defnoreturn">' +
                       '<mutation/>' +
                       '<title name="NAME">do something</title>' +
@@ -607,5 +607,160 @@ describe("getMissingBlocks_ tests", function () {
         }
       });
     });
+  });
+});
+
+describe("getCountableBlocks_", function () {
+  var blocks = require('@cdo/apps/turtle/blocks');
+  var blockInstallOptions = {
+    skin: {
+      assetUrl: function (str) {
+        return str;
+      }
+    },
+    isK1: false
+  };
+  var studioApp;
+
+  // create our environment
+  beforeEach(function () {
+    testUtils.setupTestBlockly();
+    blocks.install(Blockly, blockInstallOptions);
+    studioApp = testUtils.getStudioAppSingleton();
+  });
+
+  var countBlocks = function (xml) {
+    studioApp.loadBlocks(xml);
+    return studioApp.feedback_.getCountableBlocks_().length;
+  };
+
+  it("does not count disabled blocks", function () {
+    var count = countBlocks('<xml><block type="text_print" disabled="true"></block></xml>');
+    assert.equal(0, count);
+  });
+
+  it("does not count draw_colour or alpha blocks or their children", function () {
+    var count;
+
+    count = countBlocks('<xml><block type="draw_colour"></block></xml>');
+    assert.equal(0, count);
+
+    count = countBlocks('<xml><block type="alpha"></block></xml>');
+    assert.equal(0, count);
+
+    count = countBlocks('<xml>' +
+        '<block type="alpha">' +
+          '<value name="VALUE">' +
+            '<block type="math_number">' +
+              '<title name="NUM">100</title>' +
+            '</block>' +
+          '</value>' +
+        '</block>' +
+      '</xml>');
+    assert.equal(0, count);
+
+    count = countBlocks('<xml>' +
+        '<block type="draw_colour">' +
+          '<value name="COLOUR">' +
+            '<block type="colour_picker">' +
+              '<title name="COLOUR">#ff0000</title>' +
+            '</block>' +
+          '</value>' +
+        '</block>' +
+      '</xml>');
+    assert.equal(0, count);
+  });
+
+  it("counts all other blocks", function () {
+    var count;
+
+    count = countBlocks('<xml>' +
+        '<block type="controls_repeat">' +
+          '<title name="TIMES">4</title>' +
+          '<statement name="DO">' +
+            '<block type="text_print"></block>' +
+          '</statement>' +
+        '</block>' +
+      '</xml>');
+    assert.equal(2, count);
+
+    count = countBlocks('<xml>' +
+        '<block type="procedures_defnoreturn">' +
+          '<mutation/>' +
+          '<title name="NAME">do something</title>' +
+        '</block>' +
+      '</xml>');
+    assert.equal(3, count);
+
+    count = countBlocks('<xml>' +
+        '<block type="procedures_defnoreturn">' +
+          '<mutation/>' +
+          '<title name="NAME">do something</title>' +
+          '<statement name="STACK">' +
+            '<block type="text_print"></block>' +
+          '</statement>' +
+        '</block>' +
+      '</xml>');
+    assert.equal(5, count);
+
+    count = countBlocks('<xml>' +
+      ' <block type="variables_set">' +
+      '   <title name="VAR">length</title>' +
+      '   <value name="VALUE">' +
+      '     <block type="math_number">' +
+      '       <title name="NUM">50</title>' +
+      '     </block>' +
+      '   </value>' +
+      '   <next>' +
+      '     <block type="controls_repeat_ext">' +
+      '       <value name="TIMES">' +
+      '         <block type="math_number">' +
+      '           <title name="NUM">100</title>' +
+      '         </block>' +
+      '       </value>' +
+      '       <statement name="DO">' +
+      '         <block type="controls_repeat_ext">' +
+      '           <value name="TIMES">' +
+      '             <block type="math_number">' +
+      '               <title name="NUM">3</title>' +
+      '             </block>' +
+      '           </value>' +
+      '           <statement name="DO">' +
+      '             <block type="draw_move">' +
+      '               <title name="DIR">moveForward</title>' +
+      '               <value name="VALUE">' +
+      '                 <block type="variables_get">' +
+      '                   <title name="VAR">length</title>' +
+      '                 </block>' +
+      '               </value>' +
+      '               <next>' +
+      '                 <block type="draw_turn">' +
+      '                   <title name="DIR">turnLeft</title>' +
+      '                   <value name="VALUE">' +
+      '                     <block type="math_number">' +
+      '                       <title name="NUM">120</title>' +
+      '                     </block>' +
+      '                   </value>' +
+      '                 </block>' +
+      '               </next>' +
+      '             </block>' +
+      '           </statement>' +
+      '           <next>' +
+      '             <block type="draw_move">' +
+      '               <title name="DIR">moveForward</title>' +
+      '               <value name="VALUE">' +
+      '                 <block type="variables_get">' +
+      '                   <title name="VAR">length</title>' +
+      '                 </block>' +
+      '               </value>' +
+      '             </block>' +
+      '           </next>' +
+      '         </block>' +
+      '       </statement>' +
+      '     </block>' +
+      '   </next>' +
+      ' </block>' +
+      '</xml>');
+    assert.equal(17, count);
   });
 });

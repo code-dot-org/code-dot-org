@@ -37,6 +37,9 @@ Dashboard::Application.routes.draw do
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
 
+  # XHR proxying
+  get 'xhr', to: 'xhr_proxy#get', format: false
+
   get 'sections/new', to: redirect_to_teacher_dashboard
   get 'sections/:id/edit', to: redirect_to_teacher_dashboard
 

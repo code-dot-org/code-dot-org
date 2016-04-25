@@ -36,11 +36,11 @@ var ArtistAPI = require('./api');
 var apiJavascript = require('./apiJavascript');
 var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var ArtistVisualizationColumn = require('./ArtistVisualizationColumn');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var Slider = require('../slider');
-var _ = utils.getLodash();
+var _ = require('../lodash');
 var dropletConfig = require('./dropletConfig');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
@@ -205,7 +205,6 @@ Artist.prototype.init = function (config) {
     this.avatarHeight = 51;
   }
 
-  var iconPath = 'media/turtle/' + (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
 
@@ -223,15 +222,9 @@ Artist.prototype.init = function (config) {
     });
   }.bind(this);
 
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: this.studioApp_.assetUrl,
-      data: {
-        visualization: '',
-        controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl, iconPath: iconPath})
-      }
-    });
-  }.bind(this);
+  var iconPath = '/blockly/media/turtle/' +
+    (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
+  var visualizationColumn = <ArtistVisualizationColumn iconPath={iconPath}/>;
 
   ReactDOM.render(React.createElement(AppView, {
     assetUrl: this.studioApp_.assetUrl,
@@ -241,7 +234,7 @@ Artist.prototype.init = function (config) {
     noVisualization: false,
     isRtl: this.studioApp_.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
-    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
+    visualizationColumn: visualizationColumn,
     onMount: this.studioApp_.init.bind(this.studioApp_, config)
   }), document.getElementById(config.containerId));
 };

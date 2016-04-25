@@ -808,11 +808,15 @@
   dashboard_faq_k5: Pogosta vprašanja, prva petletka
   dashboard_announcements: Obvestila
   dashboard_announce_view_all: Poglej vse
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: Več o tem
   dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
@@ -887,7 +891,7 @@
     do vseh vaj, nadgradite brskalnik v <a href="http://browsehappy.com/" target="_blank">
     sodoben spletni brskalnik.</a>
   mobile_devices: Vaje za mobilne naprave
-  frozen_name: Code with Anna and Elsa
+  frozen_name: Frozen (Ledeno kraljestvo) z Ano in Elso
   starwars_name: 'Star Wars: Building a Galaxy with Code'
   codeorg_name: Klasičen labirint
   codeintl_name: Klasičen labirint
@@ -1271,9 +1275,8 @@
     kako deluje modeliranje in simulacija, tako da skupina učencev igra različne različice
     igre kamen / papir / škarje, in opazuje izide kot poskuse za različne modele.
   hourofcode_longdescription: Prostor za novi code.org/hoc
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
+  frozen_longdescription: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju
+    čarabnosti in lepote ledu.
   starwars_longdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_longdescription: Ustvarite zgodbo ali igro z Play Labom! Ustvarite živali,

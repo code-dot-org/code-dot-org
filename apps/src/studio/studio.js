@@ -18,7 +18,7 @@ var api = require('./api');
 var blocks = require('./blocks');
 var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var StudioVisualizationColumn = require('./StudioVisualizationColumn');
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Sprite = require('./Sprite');
@@ -30,9 +30,9 @@ var SamBatLogic = require('./samBatLogic');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
-var _ = utils.getLodash();
+var _ = require('../lodash');
 var dropletConfig = require('./dropletConfig');
-var Hammer = utils.getHammer();
+var Hammer = require('../hammer');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var annotationList = require('../acemode/annotationList');
@@ -1795,17 +1795,6 @@ Studio.init = function (config) {
   window.addEventListener("keydown", Studio.onKey, false);
   window.addEventListener("keyup", Studio.onKey, false);
 
-  var showFinishButton = !level.isProjectLevel;
-  var finishButtonFirstLine = _.isEmpty(level.softButtons);
-  var firstControlsRow = require('./controls.html.ejs')({
-    assetUrl: studioApp.assetUrl,
-    finishButton: finishButtonFirstLine && showFinishButton
-  });
-  var extraControlRows = require('./extraControlRows.html.ejs')({
-    assetUrl: studioApp.assetUrl,
-    finishButton: !finishButtonFirstLine && showFinishButton
-  });
-
   var levelTracks = [];
   if (level.music && skin.musicMetadata) {
     levelTracks = skin.musicMetadata.filter(function (trackMetadata) {
@@ -1974,17 +1963,9 @@ Studio.init = function (config) {
     });
   };
 
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        visualization: require('./visualization.html.ejs')(),
-        controls: firstControlsRow,
-        extraControlRows: extraControlRows,
-        inputOutputTable: level.inputOutputTable
-      }
-    });
-  };
+  var visualizationColumn = <StudioVisualizationColumn
+    finishButton={!level.isProjectLevel}
+    inputOutputTable={level.inputOutputTable}/>;
 
   var onMount = function () {
     studioApp.init(config);
@@ -2012,7 +1993,7 @@ Studio.init = function (config) {
     noVisualization: false,
     isRtl: studioApp.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
-    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
+    visualizationColumn: visualizationColumn,
     onMount: onMount
   }), document.getElementById(config.containerId));
 };

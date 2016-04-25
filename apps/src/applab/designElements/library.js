@@ -1,5 +1,4 @@
 var utils = require('../../utils');
-var _ = utils.getLodash();
 var elementUtils = require('./elementUtils');
 
 /**
@@ -13,20 +12,20 @@ var nextElementIdMap = {};
  * @readonly
  * @enum {string}
  */
-var ElementType = {
-  BUTTON: 'BUTTON',
-  LABEL: 'LABEL',
-  TEXT_INPUT: 'TEXT_INPUT',
-  CHECKBOX: 'CHECKBOX',
-  DROPDOWN: 'DROPDOWN',
-  RADIO_BUTTON: 'RADIO_BUTTON',
-  TEXT_AREA: 'TEXT_AREA',
-  IMAGE: 'IMAGE',
-  CANVAS: 'CANVAS',
-  SCREEN: 'SCREEN',
-  CHART: 'CHART',
-  SLIDER: 'SLIDER'
-};
+var ElementType = utils.makeEnum(
+  'BUTTON',
+  'LABEL',
+  'TEXT_INPUT',
+  'CHECKBOX',
+  'DROPDOWN',
+  'RADIO_BUTTON',
+  'TEXT_AREA',
+  'IMAGE',
+  'CANVAS',
+  'SCREEN',
+  'CHART',
+  'SLIDER'
+);
 
 var elements = {};
 elements[ElementType.BUTTON] = require('./button');

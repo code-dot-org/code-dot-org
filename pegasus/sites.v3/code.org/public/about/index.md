@@ -44,7 +44,7 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 | Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(fetch_hoc_metrics['started']) %> served. 49% female) |
 | Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org). |
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled. |
-| Prep new CS teachers | We've prepared 25,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate).|
+| Prep new CS teachers | We've prepared 27,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate).|
 | Change school district curriculum | We've partnered with [100 of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a district partner](/educate/districts).|
 | Set up policies to support CS | Policy changed in [17 states](/action) including CA, NY, FL, IL, OH.|
 | Go global | Our courses are available in 45+ languages, used in all 180+ countries. |
@@ -58,7 +58,7 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 <br/>
 
 ## More information, history, and philosophy
-In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) promoting computer science. This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
+In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) promoting computer science. This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
 
 To support our goal, we do work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes.
 

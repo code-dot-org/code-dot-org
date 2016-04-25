@@ -1,0 +1,6 @@
+source 'https://supermarket.chef.io'
+
+metadata
+
+# Not yet published to Supermarket: https://github.com/PaytmLabs/chef-ixgbevf/issues/1
+cookbook 'ixgbevf', github: 'wjordan/chef-ixgbevf', branch: 'cdo'

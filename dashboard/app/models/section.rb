@@ -12,6 +12,7 @@
 #  grade      :string(255)
 #  admin_code :string(255)
 #  login_type :string(255)      default("email"), not null
+#  deleted_at :datetime
 #
 # Indexes
 #
