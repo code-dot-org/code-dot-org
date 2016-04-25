@@ -1761,9 +1761,11 @@ div.mini_gallery_activity {
   padding: 10px;
 }
 
-.level_group_buttons {
-  display: inline-block;
+.previousPageButton {
+  margin-right: 5px;
+}
 
+.buttons.submittable {
   .submitButton {
     border-color: $purple;
     background-color: $purple;
@@ -1779,7 +1781,7 @@ div.mini_gallery_activity {
   }
 }
 
-.level_group_readonly {
+.assessment_readonly {
   background-color: $lightest_gray;
 }
 
