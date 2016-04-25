@@ -1,6 +1,6 @@
 /* global dashboard */
 
-var ImagePicker = dashboard.ImagePicker;
+var ImagePicker = require('../components/ImagePicker');
 var Dialog = require('../dialog');
 
 /**
