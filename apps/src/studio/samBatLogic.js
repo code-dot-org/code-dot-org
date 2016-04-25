@@ -5,6 +5,7 @@ var Position = studioConstants.Position;
 var KeyCodes = require('../constants').KeyCodes;
 var codegen = require('../codegen');
 var api = require('./api');
+require('../utils'); // Provides Function.prototype.inherits
 
 /**
  * Custom logic for the Sam the Bat levels

@@ -23,3 +23,27 @@ template '/etc/newrelic/nrsysmond.cfg' do
   mode '640'
   notifies :restart, "service[newrelic-sysmond]", :immediately
 end
+
+template '/etc/init.d/cdo-newrelic' do
+  source 'newrelic_init.sh.erb'
+  user 'root'
+  group 'root'
+  variables({
+    # Allows newrelic.rb to be referenced by the startup/shutdown service hook.
+    newrelic_rb: run_context.cookbook_collection['cdo-newrelic'].library_filenames.first,
+    env: {
+      NEWRELIC_API_KEY: node['cdo-newrelic']['api-key'],
+      ENABLED_ALERT_POLICY_ID: node['cdo-newrelic']['enabled_alert_policy_id'],
+      DISABLED_ALERT_POLICY_ID: node['cdo-newrelic']['disabled_alert_policy_id']
+    }
+  })
+  mode '0777'
+  action :create
+  only_if { node['cdo-newrelic']['api-key'] }
+  notifies :restart, 'service[cdo-newrelic]'
+end
+
+service 'cdo-newrelic' do
+  supports restart: true, status: true
+  action [:enable, :start]
+end

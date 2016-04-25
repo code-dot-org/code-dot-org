@@ -28,7 +28,7 @@ module.exports = FeedbackUtils;
 
 var trophy = require('./templates/trophy.html.ejs');
 var utils = require('./utils');
-var _ = utils.getLodash();
+var _ = require('./lodash');
 var codegen = require('./codegen');
 var msg = require('./locale');
 var dom = require('./dom');
@@ -1008,7 +1008,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   };
   var contentDiv = ReactDOM.render(
     <div>
-      {options.headerText && <p class="dialog-title">{options.headerText}</p>}
+      {options.headerText && <p className="dialog-title">{options.headerText}</p>}
       {options.bodyText && <p>{options.bodyText}</p>}
       {options.prompt && <input
           style={textBoxStyle}

@@ -1,5 +1,5 @@
 var utils = require('./utils');
-var _ = utils.getLodash();
+var _ = require('./lodash');
 var requiredBlockUtils = require('./required_block_utils');
 var studioApp = require('./StudioApp').singleton;
 var authoredHintUtils = require('./authoredHintUtils');

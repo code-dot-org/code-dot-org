@@ -1,14 +1,18 @@
 /** @file Top-level view for GameLab */
+/* global dashboard */
 'use strict';
 
 var _ = require('../lodash');
-var AnimationTab = require('./AnimationTab/index');
+var AnimationTab = require('./AnimationTab/AnimationTab');
 var connect = require('react-redux').connect;
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper');
+var ErrorDialogStack = require('./ErrorDialogStack');
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 var GameLabVisualizationHeader = require('./GameLabVisualizationHeader');
+var GameLabVisualizationColumn = require('./GameLabVisualizationColumn');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var CodeWorkspaceContainer = require('../templates/CodeWorkspaceContainer');
+var InstructionsWithWorkspace = require('../templates/instructions/InstructionsWithWorkspace');
+
 
 /**
  * Top-level React wrapper for GameLab
@@ -19,8 +23,15 @@ var GameLabView = React.createClass({
     isEmbedView: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
-    generateVisualizationColumnHtml: React.PropTypes.func.isRequired,
+    showFinishButton: React.PropTypes.bool.isRequired,
     onMount: React.PropTypes.func.isRequired
+  },
+
+  getChannelId: function () {
+    if (dashboard && dashboard.project) {
+      return dashboard.project.getCurrentId();
+    }
+    return undefined;
   },
 
   componentDidMount: function () {
@@ -39,21 +50,18 @@ var GameLabView = React.createClass({
       <div style={codeModeStyle}>
         <div id="visualizationColumn">
           {this.shouldShowHeader() && <GameLabVisualizationHeader />}
-          <ProtectedStatefulDiv contentFunction={this.props.generateVisualizationColumnHtml} />
+          <GameLabVisualizationColumn finishButton={this.props.showFinishButton}/>
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <CodeWorkspaceContainer
-            topMargin={0}
-            noVisualization={false}
-            isRtl={false}
-            generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}/>
+        <InstructionsWithWorkspace
+          generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}/>
       </div>
     );
   },
 
   renderAnimationMode: function () {
     return this.props.interfaceMode === GameLabInterfaceMode.ANIMATION ?
-        <AnimationTab /> :
+        <AnimationTab channelId={this.getChannelId()} /> :
         undefined;
   },
 
@@ -66,6 +74,7 @@ var GameLabView = React.createClass({
       <ConnectedStudioAppWrapper>
         {this.renderCodeMode()}
         {this.renderAnimationMode()}
+        <ErrorDialogStack/>
       </ConnectedStudioAppWrapper>
     );
   }

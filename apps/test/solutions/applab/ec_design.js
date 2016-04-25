@@ -1,6 +1,6 @@
 var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants').TestResults;
-var _ = require('lodash');
+var _ = require('@cdo/apps/lodash');
 var $ = require('jquery');
 var ReactTestUtils = require('react-addons-test-utils');
 
