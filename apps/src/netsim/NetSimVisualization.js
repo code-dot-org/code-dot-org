@@ -3,8 +3,7 @@
  */
 'use strict';
 
-var utils = require('../utils');
-var _ = utils.getLodash();
+var _ = require('../lodash');
 var visualizationMarkup = require('./NetSimVisualization.html.ejs');
 var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimWire = require('./NetSimWire');

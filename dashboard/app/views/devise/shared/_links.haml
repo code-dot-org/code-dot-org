@@ -5,7 +5,7 @@
   %br/
 - if devise_mapping.registerable? && controller_name != 'registrations'
   = t('auth.notyet_signedup')
-  = link_to t('nav.user.signup'), root_path(resource_name)
+  = link_to t('nav.user.signup'), new_user_registration_path
   %br/
   %br/
 - if devise_mapping.recoverable? && controller_name != 'passwords'

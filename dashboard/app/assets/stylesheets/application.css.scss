@@ -1761,6 +1761,28 @@ div.mini_gallery_activity {
   padding: 10px;
 }
 
+.level_group_buttons {
+  display: inline-block;
+
+  .submitButton {
+    border-color: $purple;
+    background-color: $purple;
+    color: white;
+    background-image: none;
+  }
+
+  .unsubmitButton {
+    border-color: $light_purple;
+    background-color: $light_purple;
+    color: white;
+    background-image: none;
+  }
+}
+
+.level_group_readonly {
+  background-color: $lightest_gray;
+}
+
 /* multiple choice */
 
 $information-phone-narrow: "only screen and  (max-width: 320px)";
@@ -2050,7 +2072,7 @@ $modal-no-icon-gap: 22px;
   line-height: 20px;
 }
 
-#again-button {
+#again-button, #cancel-button {
   background-color: $green;
   color: white;
   margin-left: 0px;
@@ -2129,6 +2151,14 @@ $modal-no-icon-gap: 22px;
   &.no-modal-icon {
     margin-left: $modal-no-icon-gap;
   }
+}
+
+#levelgroup-submit-incomplete-dialogcontent{
+  overflow: hidden;
+}
+
+#levelgroup-submit-complete-dialogcontent{
+  overflow: hidden;
 }
 
 #feedbackBlocks {
