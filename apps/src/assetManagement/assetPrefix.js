@@ -30,6 +30,8 @@ module.exports.init = function (config) {
  */
 module.exports.fixPath = function (filename) {
 
+  // TODO (brad): Add support for gallery:// URLs here?
+  // TODO (brad): _Move_ support for icon:// URLs here?
   if (ABSOLUTE_REGEXP.test(filename)) {
     // We want to be able to handle the case where our filename contains a
     // space, i.e. "www.example.com/images/foo bar.png", even though this is a

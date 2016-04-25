@@ -58,6 +58,8 @@ var AnimationPickerListItem = function (props) {
     <div style={styles.root} onClick={props.onClick}>
       <div style={thumbnailStyle}>
         {props.sourceUrl && <AnimationPreview
+            width={THUMBNAIL_SIZE}
+            height={THUMBNAIL_SIZE}
             sourceUrl={props.sourceUrl}
             frameWidth={props.frameWidth}
             frameHeight={props.frameHeight}
