@@ -49,7 +49,7 @@ class LtiProviderControllerTest < ActionController::TestCase
     assert_equal user.id, session['warden.user.user.key'].first.first
   end
 
-  test "LTI sign-in with new email creates new account" do
+  test "LTI sign-in with new email and no :role, creates new Student account" do
     params = lti_consumer_params(
       'f10ee9fc082219227976f2c1603a3d77',
       'dc3872a4b605f1f36242a837172ce2c0', method_name,
@@ -60,13 +60,14 @@ class LtiProviderControllerTest < ActionController::TestCase
       lti_post :sso, params
     end
 
+    # Role not specified so create Student user, 8 years old
     user = User.last
     assert_equal 'Cat Hat', user.name
-    assert_equal 'cat@hat.com', user.email
+    assert_equal User.hash_email('cat@hat.com'), user.hashed_email
     assert_equal User::TYPE_STUDENT, user.user_type
+    assert_equal 8, user.age
 
-    # LTI does not typically send age nor gender
-    assert_equal nil, user.age
+    # LTI does not typically send gender
     assert_equal nil, user.gender
   end
 
@@ -82,10 +83,48 @@ class LtiProviderControllerTest < ActionController::TestCase
       lti_post :sso, params
     end
 
+    # Teachers are defined to be 21 years old, emails are stored
     user = User.last
     assert_equal 'Cat Hat', user.name
     assert_equal 'cat@hat.com', user.email
     assert_equal User::TYPE_TEACHER, user.user_type
+    assert_equal "21+", user.age
+  end
+
+  test "LTI sign-in can also handle multiple LTI roles" do
+    params = lti_consumer_params(
+      'f10ee9fc082219227976f2c1603a3d77',
+      'dc3872a4b605f1f36242a837172ce2c0', method_name,
+      lis_person_contact_email_primary: 'cat@hat.com',
+      lis_person_name_full: 'Cat Hat',
+      roles: 'Instructor, TeachingAssistant, ContentDeveloper')
+
+    assert_creates(User) do
+      lti_post :sso, params
+    end
+
+    user = User.last
+    assert_equal 'Cat Hat', user.name
+    assert_equal 'cat@hat.com', user.email
+    assert_equal User::TYPE_TEACHER, user.user_type
+  end
+
+  test "LTI sign-in can also handle multiple Learner roles (edge case)" do
+    params = lti_consumer_params(
+      'f10ee9fc082219227976f2c1603a3d77',
+      'dc3872a4b605f1f36242a837172ce2c0', method_name,
+      lis_person_contact_email_primary: 'cat@hat.com',
+      lis_person_name_full: 'Cat Hat',
+      roles: 'Learner,Learner')
+
+    assert_creates(User) do
+      lti_post :sso, params
+    end
+
+    user = User.last
+    assert_equal 'Cat Hat', user.name
+    assert_equal User.hash_email('cat@hat.com'), user.hashed_email
+    assert_equal User::TYPE_STUDENT, user.user_type
   end
 
   test "LTI sign-in with no email does not sign in" do
@@ -98,9 +137,23 @@ class LtiProviderControllerTest < ActionController::TestCase
       lti_post :sso, params
     end
 
-    assert_redirected_to 'http://test.host/users/sign_up'
-
+    assert_redirected_to 'http://test.host/users/sign_up' 
     assert_match /email missing/, session['flash'].to_s
   end
 
+  test "LTI sign-in with bad oauth_timestamp does not sign in" do
+    params = lti_consumer_params(
+      'f10ee9fc082219227976f2c1603a3d77',
+      'dc3872a4b605f1f36242a837172ce2c0', method_name,
+      oauth_timestamp: Time.now.to_i - 6.minutes,
+      lis_person_contact_email_primary: 'cat@hat.com',
+      lis_person_name_full: 'Cat Hat')
+
+    assert_does_not_create(User) do
+      lti_post :sso, params
+    end
+
+    assert_redirected_to 'http://test.host/users/sign_up' 
+    assert_match /launch request outside of time window/, session['flash'].to_s
+  end
 end
