@@ -1,0 +1,3 @@
+#!/bin/sh
+
+./send-to-mailing-list __TEMPLATE_TBD__  ./us-contacts-remainder.csv

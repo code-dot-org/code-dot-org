@@ -35,7 +35,7 @@ end
 def process_command_line(argv=ARGV)
   {
     csv: nil,
-    limit: 100000,
+    limit: nil,
     start: 0,
     template: nil,
     threads: 4,

@@ -26,7 +26,7 @@ def output_csv(out_path, columns, rows)
 end
 
 csv_path = ARGV[0]
-sample_sizes = ARGV[1..-1].map(&:to_i)
+sample_sizes = ARGV[1..-1].map(&:to_f)
 
 input_rows = CSV.read(csv_path)
 
