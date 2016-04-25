@@ -11,7 +11,9 @@ var ScrollableList = require('./ScrollableList');
 var styles = {
   root: {
     flex: '1 0 0',
-    border: 'solid thin ' + color.light_purple,
+    borderTop: 'solid thin ' + color.light_purple,
+    borderBottom: 'solid thin ' + color.light_purple,
+    borderLeft: 'solid thin ' + color.light_purple,
     borderRight: 'none',
     backgroundColor: color.white
   }
