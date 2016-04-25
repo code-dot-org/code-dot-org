@@ -19,25 +19,46 @@ var AnimationPreview = React.createClass({
 
   getInitialState: function () {
     return {
-      currentFrame: 0,
-      timeout: null
+      currentFrame: 0
     };
   },
 
   componentDidMount: function () {
-    var advanceFrame = function () {
-      this.setState({
-        currentFrame: (this.state.currentFrame + 1) % this.props.frameCount,
-        timeout: setTimeout(advanceFrame, 1000/this.props.frameRate)
-      });
+    this.advanceFrame_ = function () {
+      this.setState({ currentFrame: (this.state.currentFrame + 1) % this.props.frameCount });
+      this.timeout_ = setTimeout(this.advanceFrame_, 1000/this.props.frameRate);
     }.bind(this);
-    advanceFrame();
+    this.advanceFrame_();
   },
 
   componentWillUnmount: function () {
-    if (this.state.timeout) {
-      clearTimeout(this.state.timeout);
+    if (this.timeout_) {
+      clearTimeout(this.timeout_);
     }
+  },
+
+  onMouseOver: function (event) {
+    if (this.timeout_) {
+      clearTimeout(this.timeout_);
+    }
+
+    document.addEventListener('mousemove', this.onMouseMove);
+    this.scrub(event);
+  },
+
+  onMouseMove: function (event) {
+    this.scrub(event);
+  },
+
+  scrub: function (event) {
+    var rect = this.refs.root.getBoundingClientRect();
+    var progress = Math.min(0.999, Math.max(0, (event.clientX - rect.left) / rect.width));
+    this.setState({ currentFrame: Math.floor(progress * this.props.frameCount) });
+  },
+
+  onMouseOut: function () {
+    document.removeEventListener('mousemove', this.onMouseMove);
+    this.advanceFrame_();
   },
 
   render: function () {
@@ -48,6 +69,10 @@ var AnimationPreview = React.createClass({
 
     var xOffset = -this.props.frameWidth * scale * (this.state.currentFrame % framesPerRow);
     var yOffset = -this.props.frameHeight * scale * Math.floor(this.state.currentFrame / framesPerRow);
+    var containerStyle = {
+      width: this.props.width,
+      height: this.props.height
+    };
     var imageStyle = {
       width: this.props.frameWidth * scale,
       height: this.props.frameHeight * scale,
@@ -57,7 +82,15 @@ var AnimationPreview = React.createClass({
       backgroundSize: this.props.sourceWidth * scale,
       backgroundPosition: xOffset + 'px ' + yOffset + 'px',
     };
-    return <img src="/blockly/media/1x1.gif" style={imageStyle}/>;
+    return (
+      <div
+          ref="root"
+          style={containerStyle}
+          onMouseOver={this.onMouseOver}
+          onMouseOut={this.onMouseOut}>
+        <img src="/blockly/media/1x1.gif" style={imageStyle}/>
+      </div>
+    );
   }
 });
 module.exports = AnimationPreview;
