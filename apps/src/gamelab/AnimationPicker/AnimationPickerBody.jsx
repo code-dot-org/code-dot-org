@@ -26,25 +26,12 @@ var AnimationPickerBody = React.createClass({
             icon="upload"
             onClick={this.props.onUploadClick} />
         <AnimationPickerListItem
-            label="asterisk_circle (9)" />
-        <AnimationPickerListItem
-            label="asterisk_circle (9)" />
-        <AnimationPickerListItem
-            label="asterisk_circle (9)" />
-        <AnimationPickerListItem
-            label="asterisk_circle (9)" />
-        <AnimationPickerListItem
-            label="asterisk_circle (9)" />
-        <AnimationPickerListItem
-            label="asterisk_circle (9)" />
-        <AnimationPickerListItem
-            label="asterisk_circle (9)" />
-        <AnimationPickerListItem
-            label="asterisk_circle (9)" />
-        <AnimationPickerListItem
-            label="asterisk_circle (9)" />
-        <AnimationPickerListItem
-            label="asterisk_circle (9)" />
+            sourceUrl={'/blockly/media/gamelab/library/ghost_standing.png'}
+            frameWidth={72}
+            frameHeight={158}
+            frameCount={7}
+            frameRate={15}
+            label="ghost_standing"/>
       </ScrollableList>
     </div>;
   }
