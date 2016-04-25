@@ -131,7 +131,7 @@ Blockly.BlockSvgUnused.prototype.render = function(svgGroup) {
   this.frameGroup_.setAttribute('style', 'opacity: 0; transition: opacity 2s;');
 
   setTimeout(function () {
-    this.frameGroup_.setAttribute('style', 'opacity: 0.8; transition: opacity 2s;');
+    this.frameGroup_ && this.frameGroup_.setAttribute('style', 'opacity: 0.8; transition: opacity 2s;');
   }.bind(this), 2000);
 
   this.bindClickEvent();
