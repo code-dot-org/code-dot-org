@@ -72,11 +72,6 @@ var ShareDialogBody = React.createClass({
     var twitterShareUrl = "https://twitter.com/intent/tweet?url=" + this.props.encodedShareUrl +
       "&amp;text=Check%20out%20what%20I%20made%20@codeorg&amp;hashtags=HourOfCode&amp;related=codeorg";
 
-    var horzPadding = {
-      paddingLeft: 1,
-      paddingRight: 1
-    };
-
     var abuseStyle = {
       border: '1px solid',
       borderRadius: 10,
@@ -153,14 +148,17 @@ var ShareDialogBody = React.createClass({
             {this.props.closeText}
           </button>
           <div className="social-buttons">
-            <a href={facebookShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)} style={horzPadding}>
+            <a id="sharing-phone" href="" onClick={this.showSendToPhone}>
+              <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
+              Send to phone
+            </a>
+            <a href={facebookShareUrl}
+               target="_blank"
+               onClick={this.props.onClickPopup.bind(this)}>
               <i className="fa fa-facebook"></i>
             </a>
-            <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)} style={horzPadding}>
+            <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)}>
               <i className="fa fa-twitter"></i>
-            </a>
-            <a id="sharing-phone" href="" style={horzPadding} onClick={this.showSendToPhone}>
-              <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
             </a>
           </div>
           {exportButton}

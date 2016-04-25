@@ -625,22 +625,35 @@ $default-modal-width: 640px;
 
   .social-buttons a {
     display: inline-block;
+    background: $purple;
+    color: white;
+    border-radius: 5px;
+    margin-right: 8px;
+    font-size: larger;
     &:hover, & {
       text-decoration: none;
     }
     i {
-      display: table-cell;
+      border-radius: 5px;
       width: 45px;
       height: 45px;
-      border-radius: 5px;
-      background: $purple;
-      color: white;
+      line-height: 45px;
       text-align: center;
       vertical-align: middle;
       font-size: 24pt;
       &:hover {
         box-shadow: 2px 2px 5px $light_gray;
       }
+
+      &.fa-facebook {
+        background-color: #3b5998;
+      }
+      &.fa-twitter {
+        background-color: #00aced;
+      }
+    }
+    span {
+      padding-right: 10px;
     }
   }
 }
