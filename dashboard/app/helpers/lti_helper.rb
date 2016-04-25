@@ -1,32 +1,21 @@
 
 module LtiHelper
 
-  def windows_complex_password
-    # Take away # to avoid possible &# combo ...
-    # specials = "~!@\$%^&*+=?".chars.to_a
+  #
+  # LTI role can be blank, one, or multiple (comma separated).
+  # https://www.imsglobal.org/specs/ltiv1p0/implementation-guide#toc-19
+  #
+  # e.g. "Instructor, TeachingAssistant, ContentDeveloper"
+  #
+  def lti_role_to_user_type(roles)
+    return User::TYPE_STUDENT if roles.blank?
 
-    numbers  = (0..9).to_a
-    [0, 1].each{ |ambiguous_character|
-      numbers.delete ambiguous_character
-    }
-
-    alpha = ('a'..'z').to_a + ('A'..'Z').to_a
-    %w{A E I O U a e i o u l}.each{ |ambiguous_character|
-      alpha.delete ambiguous_character
-    }
-
-    characters = (alpha + numbers)
-    password = Random.new.rand(7..11).times.map{characters.sample}
-
-    # remove special chars for now...
-    #
-    # password << specials.sample unless
-    #   password.join =~ Regexp.new(Regexp.escape(specials.join))
-
-    password << numbers.sample unless
-      password.join =~ Regexp.new(Regexp.escape(numbers.join))
-
-    password.shuffle.join
+    arr = roles.downcase.split(',').uniq.compact
+    if arr.length == 1 && arr.include?('learner')
+      User::TYPE_STUDENT
+    else
+      User::TYPE_TEACHER
+    end
   end
 
   #
@@ -35,6 +24,12 @@ module LtiHelper
   # ===========================================================
   #
   def lti_signin_and_redirect(params, redirect_url)
+    if params[:oauth_consumer_key].blank?
+      redirect_to new_user_registration_path,
+        alert: "Sorry, launch request must specify :oauth_consumer_key"
+      return
+    end
+
     consumer_key = params[:oauth_consumer_key]
     consumer_secret = OauthCredentials.get_secret(consumer_key)
     if consumer_secret.blank?
@@ -45,10 +40,14 @@ module LtiHelper
 
     provider = IMS::LTI::ToolProvider.new(consumer_key, consumer_secret, params)
     if provider.valid_request?(request)
-      delta = Time.now.to_i - params[:oauth_timestamp].to_i
+      if params[:oauth_timestamp].blank?
+        redirect_to new_user_registration_path,
+          alert: "Sorry, launch request must specify :oauth_timestamp"
+        return
+      end
 
-      # 5 minute window
-      if delta.abs > 60 * 5
+      delta = Time.now.to_i - params[:oauth_timestamp].to_i
+      if delta.abs > 5.minutes
         redirect_to new_user_registration_path,
           alert: "Sorry, launch request outside of time window [#{delta.abs}]"
         return
@@ -57,16 +56,13 @@ module LtiHelper
       if user_signed_in?
         redirect_to redirect_url
       else
-        # expected LTI params from tool consumer
-        # see:
-        # https://www.imsglobal.org/learning-tools-interoperability-sso-mechanism
+        #expected LTI params from tool consumer
+        #see:
+        #https://www.imsglobal.org/learning-tools-interoperability-sso-mechanism
         #
-        # first_name = params[:lis_person_name_given]
-        # last_name  = params[:lis_person_name_family]
         email      = params[:lis_person_contact_email_primary]
         full_name  = params[:lis_person_name_full]
-
-        full_name = email if full_name.blank?
+        full_name  = email.split('@').first if full_name.blank?
 
         if email.blank?
           redirect_to new_user_registration_path,
@@ -74,30 +70,26 @@ module LtiHelper
           return
         end
 
-        user = User.find_by_email(email)
+        user = User.find_by_email_or_hashed_email(email)
         if user.nil?
-          password = windows_complex_password
+          password = SecureRandom.uuid  # password will never be seen by user...
+          user_type = lti_role_to_user_type(params[:roles])
 
-          if params[:roles] && params[:roles].downcase == "instructor"
-            user_type = User::TYPE_TEACHER
-          else
-            user_type = User::TYPE_STUDENT
-          end
+          # Age is not part of the LTI basic launch data.  Use similar
+          # strategy as Clever sign-in. Make sure email gets hidden in the end
+          # for Students...
+          age = ((user_type == User::TYPE_TEACHER) ? 21 : 8)
 
-          uu = User.new(email: email,
-                        password: password,
-                        password_confirmation: password,
-                        name: full_name,
-                        user_type: user_type)
+          user = User.new(email: email,
+                          password: password, password_confirmation: password,
+                          name: full_name, age: age, user_type: user_type)
 
-          uu.skip_confirmation!
-          uu.skip_reconfirmation!
-
-          # force save without age/birthday
-          uu.save(:validate => false)
+          user.skip_confirmation!
+          user.skip_reconfirmation!
+          user.save
 
           User.uncached do
-            user = User.find_by_email(email)
+            user = User.find_by_email_or_hashed_email(email)
           end
         end
 
@@ -115,5 +107,4 @@ module LtiHelper
         alert: "Sorry, bad LTI request. Please contact your LMS admin."
     end
   end
-
 end
