@@ -27,11 +27,22 @@ var AnimationPickerBody = React.createClass({
             onClick={this.props.onUploadClick} />
         <AnimationPickerListItem
             sourceUrl={'/blockly/media/gamelab/library/ghost_standing.png'}
+            sourceWidth={504}
+            sourceHeight={158}
             frameWidth={72}
             frameHeight={158}
             frameCount={7}
             frameRate={15}
             label="ghost_standing"/>
+        <AnimationPickerListItem
+            sourceUrl={'/blockly/media/gamelab/library/platform.png'}
+            sourceWidth={200}
+            sourceHeight={219}
+            frameWidth={200}
+            frameHeight={73}
+            frameCount={3}
+            frameRate={15}
+            label="platform"/>
       </ScrollableList>
     </div>;
   }
