@@ -1,5 +1,6 @@
 var AbuseError = require('./abuse_error');
 var SendToPhone = require('./send_to_phone');
+var AdvancedShareOptions = require('./AdvancedShareOptions');
 
 /* global React */
 
@@ -103,24 +104,9 @@ var ShareDialogBody = React.createClass({
         appType={this.props.appType}/>;
     }
 
-    var exportButton;
+    var advancedOptions;
     if (this.props.onClickExport && this.props.appType === 'applab') {
-      var spinner = this.state.exporting ? <i className="fa fa-spinner fa-spin"></i> : null;
-      // TODO: Make this use a nice UI component from somewhere.
-      var alert = this.state.exportError ? (
-        <div className="alert fade in">
-          {this.state.exportError}
-        </div>
-      ) : null;
-      exportButton = (
-        <div>
-          <a className="export-button" onClick={this.clickExport}>
-            {spinner}
-            Export project
-          </a>
-          {alert}
-        </div>
-      );
+      advancedOptions = <AdvancedShareOptions onClickExport={this.props.onClickExport} />;
     }
 
     return (
@@ -139,14 +125,6 @@ var ShareDialogBody = React.createClass({
               value={this.props.shareUrl}
               style={{cursor: 'copy', width: 465}}/>
           </div>
-          {/* Awkward that this is called continue-button, when text is
-              close, but id is (unfortunately) used for styling */}
-          <button
-              id="continue-button"
-              style={{float: 'right'}}
-              onClick={this.props.onClickClose}>
-            {this.props.closeText}
-          </button>
           <div className="social-buttons">
             <a id="sharing-phone" href="" onClick={this.showSendToPhone}>
               <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
@@ -161,7 +139,16 @@ var ShareDialogBody = React.createClass({
               <i className="fa fa-twitter"></i>
             </a>
           </div>
-          {exportButton}
+          {advancedOptions}
+          {/* Awkward that this is called continue-button, when text is
+              close, but id is (unfortunately) used for styling */}
+          <button
+              id="continue-button"
+              style={{position: 'absolute', right: 0, bottom: 10}}
+              onClick={this.props.onClickClose}>
+            {this.props.closeText}
+          </button>
+
           {sendToPhone}
         </div>
       </div>
