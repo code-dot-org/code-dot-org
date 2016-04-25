@@ -12,10 +12,20 @@ PEGASUS_USAGE = 400 * 1024
 PEGASUS_DASHBOARD_RATIO = 0.5.to_f
 MEMORY_RATIO = 0.8.to_f
 
-varnish_storage_gb = node['cdo-varnish']['storage'].match(/malloc,(\d+[,.]?\d*)G/)
-varnish_overhead = (varnish_storage_gb ? varnish_storage_gb[1].to_f : 0.5.to_f) * 2 * 1024 * 1024
-total_memory_kb = node['memory']['total'].to_i
+# Parse Varnish storage backend allocation from existing Chef attribute.
+# Syntax: https://www.varnish-cache.org/docs/trunk/users-guide/storage-backends.html#storage-backends
+varnish_storage_gb = node['cdo-varnish']['storage'].match(/malloc,(\d+[,.]?\d*)([KkMmGgTt])?/)
+varnish_suffix_map = {b: 1.0/1024, k: 1, m: 1024, g: 1024*1024, t: 1024*1024*1024}
+varnish_overhead = varnish_storage_gb ?
+  varnish_storage_gb[1].to_f *
+    varnish_suffix_map[(varnish_storage_gb[2] || 'b').downcase.to_sym] :
+  0.5.to_f
 
+# "approximately 1k of memory per object, used for various internal structures, is included in the actual storage as well."
+# 2x reflects real usage observation (8GB observed memory usage when 'malloc,4g' is set).
+varnish_overhead *= 2
+
+total_memory_kb = node['memory']['total'].to_i
 dashboard_workers = node['cpu']['total'].to_i
 pegasus_workers = node['cpu']['total'].to_i * PEGASUS_DASHBOARD_RATIO
 

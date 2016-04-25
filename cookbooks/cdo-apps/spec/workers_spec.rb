@@ -18,9 +18,10 @@ describe 'cdo-apps::workers' do
     ChefSpec::SoloRunner.new do |node|
       node.automatic['memory']['total'] = "#{(memory * 1024 * 1024)}kB"
       node.automatic['cpu']['total'] = cpu
-      node.override['cdo-varnish']['storage'] = "malloc,#{varnish}G"
+      node.override['cdo-varnish']['storage'] = "malloc,#{varnish}#{varnish_suffix}"
     end.converge(described_recipe)
   end
+  let(:varnish_suffix) {'G'}
   let(:varnish) { 0 }
   let(:node) { chef_run.node }
 
@@ -35,4 +36,14 @@ describe 'cdo-apps::workers' do
   run_test 'c3.8xlarge',    32, 60, 32,  16, 4
   # memory-bound next-gen front-end (with current conservative calculations)
   run_test 'c4.8xlarge',    36, 60, 33,  16, 4
+
+  context 'varnish mebibyte suffix' do
+    let(:varnish_suffix){'M'}
+    run_test 'varnish using mebibytes', 32, 8, 4, 2, 1024
+  end
+
+  context 'varnish no suffix' do
+    let(:varnish_suffix){''}
+    run_test 'varnish using bytes', 32, 8, 4, 2, 1024 * 1024 * 1024
+  end
 end
