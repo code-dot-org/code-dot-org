@@ -50,7 +50,9 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
   // Do not warn when these attributes are removed.
   var ignoredAttributes = [
     'pmbx_context',   // Used by Chrome plugins such as Bitdefender Wallet.
-    'kl_vkbd_parsed'  // Origin unknown. Assumed to be a plugin of some kind.
+    'kl_vkbd_parsed', // Origin unknown. Assumed to be a plugin of some kind.
+    'vk_16761',       // Origin unknown.
+    'abp'             // adblock plus plugin.
   ];
 
   var processed = sanitize(unsafe, {
@@ -114,8 +116,9 @@ module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
   var standardAttributes = ['id', 'class', 'data-*', 'height', 'style',  'title', 'width'];
   // <i> could allow people to covertly specify font awesome icons, which seems ok
   var tagsWithStandardAttributes = [
-    'b', 'canvas', 'em', 'font', 'i', 'label', 'select', 'span', 'table', 'td', 'th',
-    'tr', 'u'
+    'b', 'br', 'canvas', 'em', 'font', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr',
+    'i', 'label', 'li', 'ol', 'option', 'p', 'span', 'strong', 'table', 'td', 'th',
+    'tr', 'u', 'ul'
   ];
   var defaultAttributesMap = {};
   tagsWithStandardAttributes.forEach(function (tag) {
@@ -129,6 +132,7 @@ module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
     div: standardAttributes.concat(['contenteditable', 'data-canonical-image-url', 'tabindex', 'xmlns']),
     img: standardAttributes.concat(['data-canonical-image-url', 'src']),
     input: standardAttributes.concat(['autocomplete', 'checked', 'max', 'min', 'name', 'placeholder', 'step', 'type', 'value']),
+    select: standardAttributes.concat(['multiple', 'size'])
   };
   var tagsWithCustomAttributes = Object.keys(customAttributesMap);
 
