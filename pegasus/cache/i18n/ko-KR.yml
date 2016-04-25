@@ -718,11 +718,11 @@
   dashboard_announce_message: "<b>2016년 2월 29일</b> - 워크숍 참석자의 90%가 최고의 전문 개발 프로그램으로
     우리의 프로그램을 선정하였습니다. 수요로 인하여, 우리는 컴퓨터 과학을 위한 고등학교 전문 학습 프로그램 지점의 개수 제한을 늘렸습니다. 여러분의
     지점을 확정하기 위해 <u>3월 31일</u>까지 지원하세요."
-  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
-    (or a teacher you know) want to join a nationwide community of educators working
-    to change the face of computer science education? We'll be accepting applications
-    from middle and high school teachers in our partner districts for our year-long
-    Exploring Computer Science Professional Learning Program until April 22nd."
+  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you
+    (or a teacher you know) want to learn how to teach a full year introductory high
+    school computer science class students will love? You don't need any prior experience
+    to join our free workshops for our Exploring Computer Science course. Sign up
+    by April 22nd. "
   dashboard_announce_button_text: "더 알아보기"
   dashboard_announce_hoc: "<b>2015년 11월 23일</b> - 곧 개봉할 영화 Star Wars: The Force Awakens을
     소재로 만든 새로운 Hour of Code 튜토리얼이 여기 있습니다. 레이와 함께 새로운 드로이드, Bb-8을 움직여 함께 임무를 수행하세요.
@@ -1412,3 +1412,33 @@
   infinity_shortcode: inf
   playlab_shortcode: "실행"
   artist_shortcode: art
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
+  dashboard_sections_close: Close
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.

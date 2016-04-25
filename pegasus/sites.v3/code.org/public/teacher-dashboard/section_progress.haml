@@ -10,7 +10,7 @@ content-type: text/ng-template
   = I18n.t('dashboard_landing_loading')
 
 %div{'ng-show' => 'progressLoadedFirst'}
-  View progress in:
+  = I18n.t('dashboard_progress_view')
   %select{"ng-model" => "course_id", "ng-options"=>"k*1 as v for (k, v) in course_list", 'ng-change' => 'changeProgress(course_id)'}
 
 %h3 {{progress.script.name}}
