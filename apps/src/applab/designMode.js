@@ -459,10 +459,17 @@ designMode.onDuplicate = function (element, event) {
   }
 
   var duplicateElement = element.cloneNode(true);
+  var dupLeft = parseInt(element.style.left, 10) + 10;
+  var dupTop = parseInt(element.style.top, 10) + 10;
+  var dupWidth = parseInt(element.style.width, 10);
+  var dupHeight = parseInt(element.style.height, 10);
+
+  // Ensure the position of the duplicate element is within the bounds of the container
+  var position = enforceContainment(dupLeft, dupTop, dupWidth, dupHeight);
 
   // Change the ID and location of the duplicate element
-  duplicateElement.style.left = appendPx(parseInt(element.style.left, 10) + 10);
-  duplicateElement.style.top = appendPx(parseInt(element.style.top, 10) + 10);
+  duplicateElement.style.left = appendPx(position.left);
+  duplicateElement.style.top = appendPx(position.top);
 
   var elementType = elementLibrary.getElementType(element);
   elementUtils.setId(duplicateElement, elementLibrary.getUnusedElementId(elementType.toLowerCase()));
@@ -766,20 +773,14 @@ function makeDraggable(jqueryElements) {
         newTop = gridUtils.snapToGridSize(newTop);
 
         // containment
-        var container = $('#designModeViz');
-        var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
-        var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
-        newLeft = Math.min(newLeft, maxLeft);
-        newLeft = Math.max(newLeft, 0);
-        newTop = Math.min(newTop, maxTop);
-        newTop = Math.max(newTop, 0);
+        var position = enforceContainment(newLeft, newTop, ui.helper.outerWidth(true), ui.helper.outerHeight(true));
 
-        ui.position.left = newLeft;
-        ui.position.top = newTop;
+        ui.position.left = position.left;
+        ui.position.top = position.top;
 
         elm.css({
-          top: newTop,
-          left: newLeft
+          top: position.top,
+          left: position.left
         });
 
         designMode.renderDesignWorkspace(elm[0]);
@@ -813,6 +814,22 @@ function makeDraggable(jqueryElements) {
 
     elm.css('position', 'static');
   });
+}
+
+/**
+ * Provide coordinates for the element that are enforced within the container space.
+ */
+function enforceContainment(left, top, width, height) {
+  var container = $('#designModeViz');
+  var maxLeft = container.outerWidth() - width;
+  var maxTop = container.outerHeight() - height;
+
+  var newLeft = Math.min(left, maxLeft);
+  newLeft = Math.max(newLeft, 0);
+  var newTop = Math.min(top, maxTop);
+  newTop = Math.max(newTop, 0);
+
+  return {'left': newLeft, 'top': newTop};
 }
 
 /**
