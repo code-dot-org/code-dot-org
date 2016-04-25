@@ -4,7 +4,7 @@
  */
 'use strict';
 
-var utils = require('../utils');
+var utils = require('../utils'); // Provides Function.prototype.inherits
 var i18n = require('./locale');
 var NetSimConstants = require('./NetSimConstants');
 var NetSimUtils = require('./NetSimUtils');
@@ -19,7 +19,7 @@ var Packet = require('./Packet');
 var DataConverters = require('./DataConverters');
 var NetSimNodeFactory = require('./NetSimNodeFactory');
 
-var _ = utils.getLodash();
+var _ = require('../lodash');
 
 var serializeNumber = NetSimUtils.serializeNumber;
 var deserializeNumber = NetSimUtils.deserializeNumber;

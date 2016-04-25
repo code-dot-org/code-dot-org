@@ -101,6 +101,7 @@
     "react-redux": "^4.4.0",
     "redux": "^3.3.1",
     "redux-logger": "^2.6.1",
+    "redux-thunk": "^2.0.1",
     "require-globify": "1.2.1",
     "rgbcolor": "0.0.4",
     "sanitize-html": "^1.11.3",
@@ -113,6 +114,7 @@
     "which": "1.1.1"
   },
   "dependencies": {
+    "query-string": "4.1.0",
     "react-color": "^2.0.0"
   }
 }

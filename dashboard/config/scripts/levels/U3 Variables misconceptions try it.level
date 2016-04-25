@@ -1,0 +1,57 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-20T17:20:33.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "rect": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "randomNumber_min_max": null,
+      "text": null,
+      "textAlign": null,
+      "textSize": null,
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "noStroke": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Test out your predictions from the previous level.",
+    "markdown_instructions": "# Test Your Predictions\r\n\r\nIf you haven't already, **make a prediction for the output of each of the 4 programs**.\r\n\r\n# Do This\r\n\r\n* Run this program and examine the results\r\n* Compare the results to your predictions\r\n\r\n**With a partner talk through:**\r\n* Whether your predictions matched the output\r\n* Why you think you see the output you do\r\n* Any misconceptions you might need to avoid in the future.",
+    "start_blocks": "console.log(\"**********************\");\r\nconsole.log(\"Beginning Program 1\");\r\nvar age;\r\nconsole.log(age);\r\n\r\nconsole.log(\"**********************\");\r\nconsole.log(\"Beginning Program 2\");\r\nvar items = 20;\r\nitems = 10;\r\nconsole.log(items);\r\n\r\n\r\nconsole.log(\"**********************\");\r\nconsole.log(\"Beginning Program 3\");\r\nvar width = 20;\r\nconsole.log(width);\r\nwidth = 10;\r\nconsole.log(items);\r\n\r\nconsole.log(\"**********************\");\r\nconsole.log(\"Beginning Program 4\");\r\nvar score = randomNumber(10,20);\r\nconsole.log(score);\r\nconsole.log(score);",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

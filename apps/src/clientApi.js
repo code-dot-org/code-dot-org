@@ -3,6 +3,7 @@
 // TODO: The client API should be instantiated with the channel ID, instead of grabbing it from the `dashboard.project` global.
 
 module.exports = {
+  animations: clientApi('animations'),
   assets: clientApi('assets'),
   sources: clientApi('sources')
 };

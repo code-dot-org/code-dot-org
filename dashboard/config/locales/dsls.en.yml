@@ -87,8 +87,15 @@ en:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
       CSD U3 Variables Reassign Predict No Response: {}
+      CSD U3 Variables STOP misconceptions: {}
+      CSD U3 Variables STOP misconceptions prediction: {}
+      CSD U3 Variables STOP showing value: {}
+      CSD U3 Variables STOP using value: {}
+      CSD U3 Variables console write: {}
+      CSD Variables STOP variables in draw loop: {}
       CSD-U3-SFLP Draw Loop: {}
       CSD-U3-SFLP Simple Drawing: {}
+      CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
@@ -1444,6 +1451,8 @@ en:
       sciPD p3 intro:
         CS in Science Introduction to Phase 3 PD: CS in Science Introduction to Phase 3 PD
       sciPD preQ:
+        Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
+      sciPD preQ p1 16-17:
         Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
       sciPD what to expect:
         What to Expect: What to Expect

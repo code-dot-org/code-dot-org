@@ -1,5 +1,5 @@
 var DirtDrawer = require('./dirtDrawer');
-require('../utils');
+require('../utils'); // Provides Function.prototype.inherits
 
 var cellId = require('./mazeUtils').cellId;
 

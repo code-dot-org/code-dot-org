@@ -1,33 +1,6 @@
 /* global define */
 'use strict';
 
-var savedAmd;
-
-// Do some hackery to make it so that lodash doesn't think it's being loaded
-// via require js
-if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
-  savedAmd = define.amd;
-  define.amd = false;
-}
-
-// get lodash
-var _ = require('./lodash');
-var Hammer = require('./hammer');
-
-// undo hackery
-if (typeof define === 'function' && savedAmd) {
-  define.amd = savedAmd;
-  savedAmd = null;
-}
-
-exports.getLodash = function () {
-  return _;
-};
-
-exports.getHammer = function () {
-  return Hammer;
-};
-
 exports.shallowCopy = function (source) {
   var result = {};
   for (var prop in source) {
@@ -421,4 +394,27 @@ exports.trySetLocalStorage = function (item, value) {
   } catch (e) {
     return false;
   }
+};
+
+/**
+ * Generates a simple enum object
+ * @example
+ *   var Seasons = enum('SPRING', 'SUMMER', 'FALL', 'WINTER');
+ *   Seasons.SPRING == 'SPRING';
+ *   Seasons.SUMMER == 'SUMMER';
+ *   // etc...
+ */
+exports.makeEnum = function () {
+  var result = {}, key;
+  for (var i = 0; i < arguments.length; i++) {
+    key = String(arguments[i]);
+    if (result[key]) {
+      throw new Error('Key "' + key + '" occurred twice while constructing enum');
+    }
+    result[key] = key;
+  }
+  if (Object.freeze) {
+    Object.freeze(result);
+  }
+  return result;
 };
