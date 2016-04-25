@@ -1,5 +1,7 @@
 /** @file Render a gallery image/spritesheet as an animated preview */
 
+var MARGIN_PX = 2;
+
 /**
  * Render an animated preview of a spritesheet at a given size, scaled with
  * a fixed aspect ratio to fit.
@@ -24,11 +26,11 @@ var AnimationPreview = React.createClass({
   },
 
   componentDidMount: function () {
-    this.advanceFrame_ = function () {
+    this.scheduleNextFrame_ = function () {
       this.setState({ currentFrame: (this.state.currentFrame + 1) % this.props.frameCount });
-      this.timeout_ = setTimeout(this.advanceFrame_, 1000/this.props.frameRate);
+      this.timeout_ = setTimeout(this.scheduleNextFrame_, 1000/this.props.frameRate);
     }.bind(this);
-    this.advanceFrame_();
+    this.scheduleNextFrame_();
   },
 
   componentWillUnmount: function () {
@@ -58,12 +60,12 @@ var AnimationPreview = React.createClass({
 
   onMouseOut: function () {
     document.removeEventListener('mousemove', this.onMouseMove);
-    this.advanceFrame_();
+    this.scheduleNextFrame_();
   },
 
   render: function () {
-    var xScale = this.props.width / this.props.frameWidth;
-    var yScale = this.props.height / this.props.frameHeight;
+    var xScale = (this.props.width - 2 * MARGIN_PX) / this.props.frameWidth;
+    var yScale = (this.props.height - 2 * MARGIN_PX) / this.props.frameHeight;
     var scale = Math.min(Math.min(xScale, yScale), 1);
     var framesPerRow = Math.floor(this.props.sourceWidth / this.props.frameWidth);
 
@@ -74,13 +76,16 @@ var AnimationPreview = React.createClass({
       height: this.props.height
     };
     var imageStyle = {
-      width: this.props.frameWidth * scale,
-      height: this.props.frameHeight * scale,
-      marginTop: (this.props.height - this.props.frameHeight * scale) / 2,
+      width: this.props.frameWidth * scale - 2,
+      height: this.props.frameHeight * scale - 2,
+      marginTop: MARGIN_PX + (this.props.height - this.props.frameHeight * scale) / 2,
+      marginLeft: MARGIN_PX,
+      marginRight: MARGIN_PX,
+      marginBottom: MARGIN_PX,
       backgroundImage: "url('" + this.props.sourceUrl + "')",
       backgroundRepeat: 'no-repeat',
       backgroundSize: this.props.sourceWidth * scale,
-      backgroundPosition: xOffset + 'px ' + yOffset + 'px',
+      backgroundPosition: xOffset + 'px ' + yOffset + 'px'
     };
     return (
       <div
