@@ -48,14 +48,6 @@
   - unless @script_level.nil?
     = render partial: 'levels/dialog', locals: {app: app, data: data, previous_button: page.page_number > 1, next_button: page.page_number < @total_page_count}
 
-.dialog-contents{style: "display: none"}
-  #unsubmit-dialogcontent{style: "overflow:hidden"}
-    .modal-content.no-modal-icon
-      %p.dialog-title= t('level_group-submittable.unsubmit-title')
-      %p.dialog-body=  t('level_group-submittable.unsubmit-body')
-      %button#cancel-button.secondary{style: "float: left"}= t('cancel')
-      %button#ok-button{style: "float: right"}= t('okay')
-
 - unless @script_level.nil?
   :javascript
     var levelCount = #{@total_level_count};
