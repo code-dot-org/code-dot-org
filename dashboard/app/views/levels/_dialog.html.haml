@@ -2,10 +2,13 @@
 - app, data = %i(app data).map{ |x| local_assigns[x] }
 
 - unless app == 'external'
-  .buttons
+  -# level_group might have a Previous button immediately to the left of Submit.
+  - button_class = app == 'level_group' ? 'level_group_buttons' : 'buttons'
+  %div{class: button_class}
     %a.btn.btn-large.btn-primary.next-stage.submitButton
       =t('submit')
-.clear
+- unless app == "level_group"
+  .clear
 %div{style: 'display: none;'}
   #error-dialogcontent
     .modal-content.no-modal-icon.scrollable-element
@@ -90,6 +93,20 @@
       #buttons
         %button#ok-button{style: 'float: right;'}
           =t('ok')
+
+  #levelgroup-submit-incomplete-dialogcontent
+    .modal-content.no-modal-icon
+      %p.dialog-title= t('level_group-submittable.submit-incomplete-title')
+      %p.dialog-body=  t('level_group-submittable.submit-incomplete-body')
+      %button#cancel-button.secondary{style: "float: left"}= t('cancel')
+      %button#ok-button{style: "float: right"}= t('okay')
+
+  #levelgroup-submit-complete-dialogcontent
+    .modal-content.no-modal-icon
+      %p.dialog-title= t('level_group-submittable.submit-complete-title')
+      %p.dialog-body=  t('level_group-submittable.submit-complete-body')
+      %button#cancel-button.secondary{style: "float: left"}= t('cancel')
+      %button#ok-button{style: "float: right"}= t('okay')
 
 :ruby
   dialogOptions = {

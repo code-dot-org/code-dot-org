@@ -21,7 +21,7 @@
 - @pages.each do |page|
 
   - unless data["title"].blank?
-    %h2= t('heading_x_of_y', heading: data["title"], x: page.page_number, y: @pages.length)
+    %h2= t('heading_x_of_y', heading: data["title"], x: page.page_number, y: @level.pages.length)
     %br/
 
   - parsed = JSON.parse(@last_attempt || '{}')
@@ -46,17 +46,31 @@
         = render partial: 'levels/free_response', locals: {index: index, level: level, last_attempt: last_attempt}
 
   - unless @script_level.nil?
+    - if page.page_number > 1
+      %a.btn.btn-large.btn-primary.previousPageButton
+        =t('previous_page')
+      &nbsp;
+      &nbsp;
     - if page.page_number < @total_page_count
       %a.btn.btn-large.btn-primary.nextPageButton
         =t('next_page')
     - else
       = render partial: 'levels/dialog', locals: {app: app, data: data}
-      %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
-        =t('unsubmit')
+      .level_group_buttons
+        %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
+          =t('unsubmit')
+
+.dialog-contents{style: "display: none"}
+  #unsubmit-dialogcontent{style: "overflow:hidden"}
+    .modal-content.no-modal-icon
+      %p.dialog-title= t('level_group-submittable.unsubmit-title')
+      %p.dialog-body=  t('level_group-submittable.unsubmit-body')
+      %button#cancel-button.secondary{style: "float: left"}= t('cancel')
+      %button#ok-button{style: "float: right"}= t('okay')
 
 - unless @script_level.nil?
   :javascript
-    var levelCount = #{@pages[0].levels.length};
+    var levelCount = #{@total_level_count};
     var page = #{current_page || -1};
 
     var fallbackResponse = #{@fallback_response.to_json};

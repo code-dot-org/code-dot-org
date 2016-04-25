@@ -10,7 +10,8 @@ level 'PS U3 Q1-4'
 level 'PS U3 Q1-5'
 page
 level 'PS U3 Q1-6'
-level 'PS U3 Q1-7'
+level 'PS U3 Q1-7'         # TextMatch
+level 'ECSPD your goals'   # FreeResponse
 page
 level 'PS U3 Q1-8'
 level 'PS U3 Q1-9'
