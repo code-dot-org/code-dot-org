@@ -108,6 +108,17 @@ describe('experiments', function () {
       mockedQueryString = '?topInstructions=false';
       assert.strictEqual(experiments.isEnabled('topInstructions'), false);
     });
+
+    it('can persistently turn off an experiment that had previously been on', function () {
+      localStorage.setItem('experiments-topInstructions', true);
+
+      mockedQueryString = '?topInstructions=false';
+      assert.strictEqual(experiments.isEnabled('topInstructions'), false);
+
+      mockedQueryString = '';
+      assert.strictEqual(experiments.isEnabled('topInstructions'), false);
+
+    });
   });
 
 });
