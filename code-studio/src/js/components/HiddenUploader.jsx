@@ -57,3 +57,6 @@ var HiddenUploader = React.createClass({
   }
 });
 module.exports = HiddenUploader;
+
+window.dashboard = window.dashboard || {};
+window.dashboard.HiddenUploader = HiddenUploader;
