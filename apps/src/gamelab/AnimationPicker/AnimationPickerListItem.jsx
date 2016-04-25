@@ -1,6 +1,7 @@
 /** @file A clickable item in the scroll area of the animation picker */
 'use strict';
 
+var AnimationPreview = require('./AnimationPreview');
 var color = require('../../color');
 var Radium = require('radium');
 
@@ -56,6 +57,12 @@ var AnimationPickerListItem = function (props) {
   return (
     <div style={styles.root} onClick={props.onClick}>
       <div style={thumbnailStyle}>
+        {props.sourceUrl && <AnimationPreview
+            sourceUrl={props.sourceUrl}
+            frameWidth={props.frameWidth}
+            frameHeight={props.frameHeight}
+            frameCount={props.frameCount}
+            frameRate={props.frameRate}/>}
         {props.icon && <i className={"fa fa-" + props.icon} />}
       </div>
       <div style={labelStyle}>
@@ -67,6 +74,11 @@ var AnimationPickerListItem = function (props) {
 AnimationPickerListItem.propTypes = {
   label: React.PropTypes.string.isRequired,
   icon: React.PropTypes.string,
+  sourceUrl: React.PropTypes.string,
+  frameWidth: React.PropTypes.number,
+  frameHeight: React.PropTypes.number,
+  frameCount: React.PropTypes.number,
+  frameRate: React.PropTypes.number,
   onClick: React.PropTypes.func
 };
 module.exports = Radium(AnimationPickerListItem);
