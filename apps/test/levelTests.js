@@ -12,7 +12,6 @@
 var path = require('path');
 var assert = require('chai').assert;
 var $ = require('jquery');
-var React = require('react');
 var sinon = require('sinon');
 require('jquery-ui');
 var tickWrapper = require('./util/tickWrapper');

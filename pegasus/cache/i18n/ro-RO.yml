@@ -30,6 +30,7 @@
     de bază și conceptele programării în cadrul cursului următor.
   og_title: Fiecare copil merită o portunitate
   og_description: Fiecare student în fiecare școală merită o șansă de a studia informatica.
+    Schimba totul.
   hoc2014_heading: Alătură-te <a href="http://hourofcode.com"> Orei de cod</a> <br/>
     8-14 decembrie, 2014 <br/>
   hoc2014_students: Elevi
@@ -78,19 +79,19 @@
   congratulations_volunteer: 'Felicitari: acum, ca ai incercat Ora de Programare,
     <a href="https://code.org/volunteer">înscrie-te pentru a face voluntariat intr-o
     clasa</a> si pentru a ajuta elevii sa invete o Ora de Programare!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course1: Felicitări pentru finalizarea %{course}
+  congratulations_on_completing_course2: Felicitări pentru finalizarea %{course}
+  congratulations_on_completing_course3: Felicitări pentru finalizarea %{course}
+  congratulations_on_completing_course4: Felicitări pentru finalizarea %{course}
+  congratulations_on_completing_accelerated: Felicitări pentru finalizarea Cursului
+    Accelerat
   congrats_next_tutorials_title: Mai departe incercati aceste tutoriale
   congrats_next_tutorials_desc: Încercați aceste tutoriale mai scurte, de 1 oră sau
     încercaţi un <a href="%{current_path}/next"> partener tutorial</a>.
   get_a_certificate_of_achievement: Obţine un certificat de realizare
-  view_course: View course
-  view_unit: View unit
-  make_app: Make an app
+  view_course: Vizualizare curs
+  view_unit: Vizualizare Lectie
+  make_app: Creează o aplicatie
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
@@ -101,7 +102,7 @@
   congrats_guest_speaker_cta: Find a guest speaker
   congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
+  third_party_gradelevel_kto2: Note K-2
   third_party_gradelevel_2to8: Grades 2-8
   third_party_gradelevel_4to12: Grades 4-12
   third_party_gradelevel_5to12: Grades 5-12
@@ -798,7 +799,7 @@
   dashboard_progress_completed_too_many_blocks: finalizat, prea multe blocuri
   dashboard_progress_completed_perfect: finalizat, perfect
   dashboard_progress_furthest_level_attempted: cel mai îndepărtat nivel încercat
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: transmise
   dashboard_stage: Etapă
   dashboard_puzzle: Puzzle
   dashboard_question: "Întrebare"
@@ -838,11 +839,15 @@
   dashboard_faq_k5: "Întrebări frecvente - clasele primare"
   dashboard_announcements: Anunțuri
   dashboard_announce_view_all: Vizualizare toate
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
+  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
+    (or a teacher you know) want to join a nationwide community of educators working
+    to change the face of computer science education? We'll be accepting applications
+    from middle and high school teachers in our partner districts for our year-long
+    Exploring Computer Science Professional Learning Program until April 22nd."
   dashboard_announce_button_text: Află mai mult
   dashboard_announce_hoc: "<b>30 Septembrie 2015</b> - Ora de Cod 2015 se apropie!
     Alatura-te claselor din toata lumea din cadrul celui mai mare eveniment didactic
@@ -983,7 +988,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: Laboratului Aplicației
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Vârste 13 +
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds

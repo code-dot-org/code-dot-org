@@ -65,7 +65,7 @@
     "node-sass": "^3.4.2",
     "object-assign": "^4.0.1",
     "phantomjs-prebuilt": "^2.1.3",
-    "playground-io": "bcjordan/playground-io#more-components",
+    "playground-io": "bcjordan/playground-io#tap-cap-touch",
     "radium": "^0.17.1",
     "recursive-readdir-sync": "^1.0.6",
     "sass-lint": "^1.4.0",

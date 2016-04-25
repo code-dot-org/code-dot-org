@@ -1,40 +1,45 @@
 var actions = require('@cdo/apps/gamelab/actions');
+var createStore = require('@cdo/apps/redux');
 var expect = require('chai').expect;
 var GameLabInterfaceMode = require('@cdo/apps/gamelab/constants').GameLabInterfaceMode;
 var gamelabReducer = require('@cdo/apps/gamelab/reducers').gamelabReducer;
 
 describe('gamelabReducer', function () {
-  var defaultState;
+  var store;
+  var initialState;
   var CODE = GameLabInterfaceMode.CODE;
   var ANIMATION = GameLabInterfaceMode.ANIMATION;
 
   beforeEach(function () {
-    defaultState = gamelabReducer(undefined, {});
+    store = createStore(gamelabReducer);
+    initialState = store.getState();
   });
 
   it('has expected default state', function () {
-    expect(defaultState.interfaceMode).to.equal(CODE);
-    expect(defaultState.level).to.be.an.object;
-    expect(defaultState.level.assetUrl).to.be.a.function;
-    expect(defaultState.level.isEmbedView).to.be.undefined;
-    expect(defaultState.level.isShareView).to.be.undefined;
+    expect(initialState.interfaceMode).to.equal(CODE);
+    expect(initialState.level).to.be.an.object;
+    expect(initialState.level.assetUrl).to.be.a.function;
+    expect(initialState.level.isEmbedView).to.be.undefined;
+    expect(initialState.level.isShareView).to.be.undefined;
   });
 
   describe('action: changeInterfaceMode', function () {
     var changeInterfaceMode = actions.changeInterfaceMode;
 
     it('returns original object when already in given mode', function () {
-      expect(defaultState.interfaceMode).to.equal(CODE);
-      var newState = gamelabReducer(defaultState, changeInterfaceMode(CODE));
-      expect(newState).to.equal(defaultState);
+      expect(initialState.interfaceMode).to.equal(CODE);
+      store.dispatch(changeInterfaceMode(CODE));
+      var newState = store.getState();
+      expect(newState).to.equal(initialState);
       expect(newState.interfaceMode).to.equal(CODE);
     });
 
     it('returns a new object when in a new mode', function () {
-      expect(defaultState.interfaceMode).to.equal(CODE);
-      var newState = gamelabReducer(defaultState, changeInterfaceMode(ANIMATION));
-      expect(newState).to.not.equal(defaultState);
+      expect(initialState.interfaceMode).to.equal(CODE);
+      store.dispatch(changeInterfaceMode(ANIMATION));
+      var newState = store.getState();
       expect(newState.interfaceMode).to.equal(ANIMATION);
+      expect(newState).to.not.equal(initialState);
     });
   });
 
@@ -43,32 +48,32 @@ describe('gamelabReducer', function () {
 
     it('allows setting assetUrl', function () {
       var newAssetUrlFunction = function () {};
-      expect(defaultState.level.assetUrl).to.not.equal(newAssetUrlFunction);
-      var newState = gamelabReducer(defaultState, setInitialLevelProps({
+      expect(initialState.level.assetUrl).to.not.equal(newAssetUrlFunction);
+      store.dispatch(setInitialLevelProps({
         assetUrl: newAssetUrlFunction
       }));
-      expect(newState.level.assetUrl).to.equal(newAssetUrlFunction);
+      expect(store.getState().level.assetUrl).to.equal(newAssetUrlFunction);
     });
 
     it('allows setting isEmbedView', function () {
-      expect(defaultState.level.isEmbedView).to.be.undefined;
-      var newState = gamelabReducer(defaultState, setInitialLevelProps({
+      expect(initialState.level.isEmbedView).to.be.undefined;
+      store.dispatch(setInitialLevelProps({
         isEmbedView: false
       }));
-      expect(newState.level.isEmbedView).to.be.false;
+      expect(store.getState().level.isEmbedView).to.be.false;
     });
 
     it('allows setting isShareView', function () {
-      expect(defaultState.level.isShareView).to.be.undefined;
-      var newState = gamelabReducer(defaultState, setInitialLevelProps({
+      expect(initialState.level.isShareView).to.be.undefined;
+      store.dispatch(setInitialLevelProps({
         isShareView: true
       }));
-      expect(newState.level.isShareView).to.be.true;
+      expect(store.getState().level.isShareView).to.be.true;
     });
 
     it('does not allow setting other properties', function () {
       expect(function () {
-        gamelabReducer(defaultState, setInitialLevelProps({
+        store.dispatch(setInitialLevelProps({
           theAnswer: 42
         }));
       }).to.throw(Error, /Property "theAnswer" may not be set using the SET_INITIAL_LEVEL_PROPS action./);

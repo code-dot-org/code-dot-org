@@ -641,7 +641,8 @@ cs-CZ:
   dashboard_faq_k5: K-5, nejčastější dotazy
   dashboard_announcements: Oznámení
   dashboard_announce_view_all: Zobrazit vše
-  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
+  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
   dashboard_announce_button_text: Zjisti více
   dashboard_announce_hoc: '<b>15. října 2015</b> - Hodina kódu se blíží &mdash; každý zúčastněný organizátor obdrží dárkovou kartu na Amazon.com nebo Microsoft Windows Store jako dárek. Připojte se učebny po celém světě během prosince 7-13.'
   dashboard_announce_playlab: '<b>4. Prosince 2015</b> Hodinový kód je zde! Zkus 50 návodů pro každou dobu a zařízení. Novinka týdne: Programuj tvůj vlastní příběh a hry v nových herních laboratořích, Doba Ledová a Gumball.'

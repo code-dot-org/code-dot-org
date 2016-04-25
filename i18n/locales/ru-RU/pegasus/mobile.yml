@@ -21,7 +21,7 @@ ru-RU:
   twentyhours_heading: 'Попробуй наш курс: введение в информатику'
   twentyhours_text: 'Закончил свой первый  Час Кода? Узнай больше об информатике и концепциях программирования в следующем курсе.'
   og_title: Каждый ребенок заслуживает возможность
-  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
+  og_description: Каждый студент в каждой школе заслуживает возможность изучения компьютерных наук. Это меняет все.
   hoc2014_heading: 'Участвуйте в <a href="http://hourofcode.com">Часе Кода</a> <br/> 8-14 декабря 2014 г. <br/>'
   hoc2014_students: Ученики
   hoc2014_try: Попробуйте его
@@ -580,7 +580,7 @@ ru-RU:
   dashboard_progress_completed_too_many_blocks: Завершено, слишком много блоков
   dashboard_progress_completed_perfect: Завершено, отлично
   dashboard_progress_furthest_level_attempted: запрошен слишком высокий уровень
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: Представленный
   dashboard_stage: Этап
   dashboard_puzzle: Головоломка
   dashboard_question: Вопрос
@@ -615,7 +615,8 @@ ru-RU:
   dashboard_faq_k5: K-5 часто задаваемые вопросы
   dashboard_announcements: Объявления
   dashboard_announce_view_all: Посмотреть все
-  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
+  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
   dashboard_announce_button_text: узнать больше
   dashboard_announce_hoc: "<b>15 октября, 2015</b> - Час кода приближается &mdash; каждый участвующий организатор получит подарочную карту для Amazon.com или Microsoft's Windows Store как благодарственный подарок. Присоединяйтесь к классным комнатам по всему миру 7-13 декабря."
   dashboard_announce_playlab: '<b>4 декабря 2015</b> - Час кода уже здесь! Попробуйте 50 руководств для любого возраста и любого устройства. Новинка этой недели: программируй собственные рассказы и игры в обновленных Игровой Лаборатории, Ледниковом периоде и Удивительном мире Гамбола.'

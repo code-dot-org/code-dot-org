@@ -63,7 +63,7 @@ id-ID:
   congratulations_on_completing_course3: Congratulations on completing Course 3
   congratulations_on_completing_course4: Congratulations on completing Course 4
   congratulations_on_completing_accelerated: Congratulations on completing the Accelerated Course
-  congrats_next_tutorials_title: Coba tutorial ini berikutnya
+  congrats_next_tutorials_title: Lulus ke tingkat berikutnya
   congrats_next_tutorials_desc: 'Cobalah yang lebih pendek, tutorial 1 jam ini atau mencoba <a href="%{current_path}/next"> mitra tutorial</a>.'
   get_a_certificate_of_achievement: Ambil sertifikat prestasi
   view_course: View course
@@ -642,7 +642,8 @@ id-ID:
   dashboard_faq_k5: K-5 Frequently Asked Questions/pertanyaan yang sering diajukan
   dashboard_announcements: Pengumuman
   dashboard_announce_view_all: Lihat semua
-  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
+  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
   dashboard_announce_button_text: Pelajari lebih banyak
   dashboard_announce_hoc: '<b>9 November 2015</b> - tutorial Hour of Code baru ada di sini, menampilkan film terbaru dari Star Wars: The Force Awakens. Bekerja samalah dengan Rey untuk membimbing droid baru, BB-8, melalui misi. Kemudian, bergabung dengan Leia untuk membuat dan berbagi pertandingan Anda sendiri di sebuah galaksi yang sangat jauh.'
   dashboard_announce_playlab: '<b>4 Desember 2015</b> - Jam Berkode sudah hadir! Cobalah 50 tutorial untuk setiap umur dan setiap alat. Baru di minggu ini: Kodekan cerita-ceritamu sendiri dan permainan di Play Labs yang baru, Ice Age dan Gumball.'

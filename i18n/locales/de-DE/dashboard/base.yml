@@ -26,6 +26,7 @@ de:
   submit: Absenden
   unsubmit: Zurücknehmen
   next_page: Nächste Seite
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Lehrer hinzufügen:'
@@ -348,7 +349,7 @@ de:
     help_from_html_old: Entwickler von Google, Microsoft, Facebook und Twitter haben geholfen diese Materialien zu erstellen.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Alle Rechte vorbehalten.<br />Star Wars&#8482; &copy; %{current_year} Disney und Lucasfilm. Alle Rechte vorbehalten.<br />Frozen&#8482; &copy; %{current_year} Disney. Alle Rechte vorbehalten.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Alle Rechte vorbehalten.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Alle Rechte vorbehalten.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten.<br />Die fantastische Welt von Gumball ist Warenzeichen and &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft &#8482; &copy; %{current_year} Microsoft. Alle Rechte vorbehalten. Star Wars &#8482; &copy; %{current_year} Disney und Lucasfilm. Alle Rechte vorbehalten. Frozen &#8482; &copy; %{current_year} Disney. Alle Rechte vorbehalten. Ice Age &#8482; &copy; %{current_year} 20th Century Fox. Alle Rechte vorbehalten. Angry Birds &#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Alle Rechte vorbehalten. Plants vs Zombies &#8482; &copy; %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten. Die erstaunliche Welt von Gumball ist Warenzeichen und &copy; 2015 Cartoon Network.'
-    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
+    code_from_html: 'Code.org nutzt p5.play, das unter <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">der GNU LGPL 2.1</a> lizensiert ist.'
     powered_by_aws: Betrieben von Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, das CODE Logo und Hour of Code&reg; sind eingetragene Marken der Code.org.'
     copyright: Copyright
@@ -471,7 +472,7 @@ de:
     report_bug: Fehler melden
     support: Hilfe erhalten
     support_url: //support.code.org
-    help_resources: Help and Resources
+    help_resources: Hilfe und Ressourcen
   multi:
     wrong_title: Falsche Antwort
     wrong_body: Die Antwort, die du eingegeben hast, ist nicht korrekt. Bitte versuche es erneut!

@@ -1,4 +1,9 @@
 {
+  "animationPicker_drawYourOwn": "Draw your own",
+  "animationPicker_error": "Error: {message}",
+  "animationPicker_title": "Animation Library",
+  "animationPicker_uploadImage": "Upload image",
+  "animationPicker_uploading": "Uploading...",
   "dropletBlock_Game.width_description": "The width of the drawing canvas.",
   "dropletBlock_Game.height_description": "The height of the drawing canvas.",
   "dropletBlock_createSprite_description": "Creates a sprite at the initial specified position with the given placeholder dimensions.",

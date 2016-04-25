@@ -21,7 +21,7 @@ nl-NL:
   twentyhours_heading: Probeer onze introductiecursus Informatica
   twentyhours_text: "Klaar met je eerste 'Hour of Code'? Leer meer over Informatica en programmeerconcepten in deze vervolgcursus."
   og_title: Ieder kind verdient een kans
-  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
+  og_description: Elke leerling op elke school moet de kans krijgen om te leren programmeren. Dit verandert alles.
   hoc2014_heading: 'Doe mee met de <a href="http://hourofcode.com">Hour of Code</a><br />8 - 14 december 2014<br/>'
   hoc2014_students: Leerlingen
   hoc2014_try: Probeer het
@@ -641,7 +641,8 @@ nl-NL:
   dashboard_faq_k5: K-5 Veelgestelde vragen
   dashboard_announcements: Aankondigingen
   dashboard_announce_view_all: Alles weergeven
-  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
+  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
   dashboard_announce_button_text: Leer meer
   dashboard_announce_hoc: '<b>15 oktober 2015</b> - het Uur Code komt &mdash; elke deelnemende organisator ontvangt een kadokaart van Amazon.com of Microsofts Windows-winkel als een bedankje. Doe mee met klassen over de hele wereld tijdens 7-13 December.'
   dashboard_announce_playlab: '<b>4 December 2015</b> - de Hour of Code is hier! 50 lessen voor elke leeftijd en elk device proberen. Nieuw deze week: uw eigen verhalen en spelletjes maken met de speel labs Ice Age en Gumball.'
