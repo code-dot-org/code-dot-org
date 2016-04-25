@@ -6,6 +6,7 @@ var color = require('../../color');
 var Radium = require('radium');
 
 var THUMBNAIL_SIZE = 105;
+var THUMBNAIL_BORDER_WIDTH = 1;
 
 var styles = {
   root: {
@@ -19,7 +20,7 @@ var styles = {
     height: THUMBNAIL_SIZE,
     borderStyle: 'solid',
     borderColor: color.light_gray,
-    borderWidth: 1.5,
+    borderWidth: THUMBNAIL_BORDER_WIDTH,
     borderRadius: 12,
     cursor: 'pointer'
   },
@@ -36,7 +37,9 @@ var styles = {
   },
   label: {
     marginTop: 3,
-    fontSize: '90%'
+    fontSize: '90%',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden'
   },
   labelIcon: {
     fontStyle: 'italic'
@@ -58,8 +61,8 @@ var AnimationPickerListItem = function (props) {
     <div style={styles.root} onClick={props.onClick}>
       <div style={thumbnailStyle}>
         {props.sourceUrl && <AnimationPreview
-            width={THUMBNAIL_SIZE}
-            height={THUMBNAIL_SIZE}
+            width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+            height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
             sourceUrl={props.sourceUrl}
             sourceWidth={props.sourceWidth}
             sourceHeight={props.sourceHeight}
