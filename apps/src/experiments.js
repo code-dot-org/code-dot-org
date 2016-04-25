@@ -38,6 +38,9 @@ experiments.setEnabled = function (key, shouldEnable) {
     allEnabled.push(key);
   } else if (allEnabled.indexOf(key) >= 0 && !shouldEnable) {
     allEnabled.splice(allEnabled.indexOf(key), 1);
+    if (OLD_KEY_WHITELIST.indexOf(key) >= 0) {
+      localStorage.removeItem('experiments-' + key);
+    }
   } else {
     return;
   }
