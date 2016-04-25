@@ -34,9 +34,9 @@ experiments.getEnabledExperiments = function () {
 
 experiments.setEnabled = function (key, shouldEnable) {
   var allEnabled = this.getEnabledExperiments();
-  if (!allEnabled.includes(key) && shouldEnable) {
+  if (allEnabled.indexOf(key) < 0 && shouldEnable) {
     allEnabled.push(key);
-  } else if (allEnabled.includes(key) && !shouldEnable) {
+  } else if (allEnabled.indexOf(key) >= 0 && !shouldEnable) {
     allEnabled.splice(allEnabled.indexOf(key), 1);
   } else {
     return;
@@ -50,7 +50,7 @@ experiments.setEnabled = function (key, shouldEnable) {
  * @returns {bool}
  */
 experiments.isEnabled = function (key) {
-  var enabled = this.getEnabledExperiments().includes(key);
+  var enabled = this.getEnabledExperiments().indexOf(key) >= 0;
   var query = queryString.parse(this.getQueryString_());
 
   var enableQuery = query['enableExperiments'];
@@ -59,7 +59,7 @@ experiments.isEnabled = function (key) {
 
   if (enableQuery) {
     var experimentsToEnable = enableQuery.split(',');
-    if (experimentsToEnable.includes(key)) {
+    if (experimentsToEnable.indexOf(key) >= 0) {
       enabled = true;
       this.setEnabled(key, true);
     }
@@ -67,13 +67,13 @@ experiments.isEnabled = function (key) {
 
   if (disableQuery) {
     var experimentsToDisable = disableQuery.split(',');
-    if (experimentsToDisable.includes(key)) {
+    if (experimentsToDisable.indexOf(key) >= 0) {
       enabled = false;
       this.setEnabled(key, false);
     }
   }
 
-  if (OLD_KEY_WHITELIST.includes(key) && deprecatedKeyQuery) {
+  if (OLD_KEY_WHITELIST.indexOf(key) >= 0 && deprecatedKeyQuery) {
     enabled = deprecatedKeyQuery === 'true';
     this.setEnabled(key, enabled);
   }
