@@ -18,6 +18,17 @@ class BucketHelper
     []
   end
 
+  # Ignore client-specified mime type. Infer it from file extension when serving
+  # assets.
+  def category_from_file_type(extension)
+    mime_type = Sinatra::Base.mime_type(extension)
+    if mime_type == 'application/pdf'
+      'pdf'
+    else
+      mime_type.split('/').first
+    end
+  end
+
   # How long an object retrieved from this bucket should be cached
   def cache_duration_seconds
     0
@@ -57,13 +68,8 @@ class BucketHelper
     prefix = s3_path owner_id, channel_id
     @s3.list_objects(bucket: @bucket, prefix: prefix).contents.map do |fileinfo|
       filename = %r{#{prefix}(.+)$}.match(fileinfo.key)[1]
-      mime_type = Sinatra::Base.mime_type(File.extname(filename))
+      category = category_from_file_type(File.extname(filename))
 
-      if mime_type == 'application/pdf'
-        category = 'pdf'
-      else
-        category = mime_type.split('/').first  # e.g. 'image' or 'audio'
-      end
       {filename: filename, category: category, size: fileinfo.size}
     end
   end
