@@ -894,6 +894,18 @@ Blockly.Block.prototype.showContextMenu_ = function(e) {
       }
     };
     options.push(movableOption);
+
+    // next connection disabled
+    var nextConnectionDisabledOption = {
+      text: this.nextConnectionDisabled_ ?
+          "Enable Next Connection" : "Disable Next Connection",
+      enabled: true,
+      callback: function () {
+        block.setNextConnectionDisabled(!block.nextConnectionDisabled_);
+        Blockly.ContextMenu.hide();
+      }
+    };
+    options.push(nextConnectionDisabledOption);
   }
 
   // Allow the block to add or modify options.
@@ -1487,9 +1499,10 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
  */
 Blockly.Block.prototype.setNextConnectionDisabled = function(disabled) {
   this.nextConnectionDisabled_ = disabled;
-  if (this.nextConnectionDisabled_ === true) {
-    this.setNextStatement(false);
+  if (this.nextConnection && disabled) {
+    this.nextConnection.disconnect();
   }
+  this.setNextStatement(!disabled);
 };
 
 /**
