@@ -48,7 +48,7 @@ Blockly.BlockSvgUnused.prototype.initChildren = function () {
     x: -FRAME_MARGIN_SIDE,
     y: -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT),
     fill: '#e7e8ea',
-    stroke: '#ffb81d',
+    stroke: '#c6cacd',
     rx: 15,
     ry:15
   }, this.frameGroup_);
@@ -56,7 +56,7 @@ Blockly.BlockSvgUnused.prototype.initChildren = function () {
   this.frameHeader_ = Blockly.createSvgElement('rect', {
     x: -FRAME_MARGIN_SIDE,
     y: -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT),
-    fill: '#ffb81d',
+    fill: '#c6cacd',
     rx: 15,
     ry:15,
     'clip-path': 'url(#frameClip' + this.block_.id + ')'
@@ -127,6 +127,12 @@ Blockly.BlockSvgUnused.prototype.render = function(svgGroup) {
   goog.dom.removeNode(this.frameGroup_);
   var groupRect = svgGroup.getBoundingClientRect();
   goog.dom.insertChildAt(svgGroup, this.frameGroup_, 0);
+
+  this.frameGroup_.setAttribute('style', 'opacity: 0; transition: opacity 2s;');
+
+  setTimeout(function () {
+    this.frameGroup_.setAttribute('style', 'opacity: 0.8; transition: opacity 2s;');
+  }.bind(this), 2000);
 
   this.bindClickEvent();
 
