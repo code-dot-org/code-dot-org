@@ -182,20 +182,25 @@ class DashboardSection
     valid_grades.include? grade
   end
 
-  @@valid_course_cache = nil
-  def self.valid_courses
+  @@course_cache = {}
+  def self.valid_courses(user_id)
+    # admins can see all courses, even those marked hidden
+    course_cache_key = Dashboard.admin?(user_id) ? "all" : "valid"
+
     # only do this query once because in prod we only change courses
     # when deploying (technically this isn't true since we are in
     # pegasus and courses are owned by dashboard...)
-    return @@valid_course_cache unless @@valid_course_cache.nil?
+    return @@course_cache[course_cache_key] if @@course_cache.key?(course_cache_key)
 
     # don't crash when loading environment before database has been created
     return {} unless (Dashboard.db[:scripts].count rescue nil)
 
+    where_clause = Dashboard.admin?(user_id) ? "" : "hidden = 0"
+
     # cache result if we have to actually run the query
-    @@valid_course_cache = Hash[
+    @@course_cache[course_cache_key] = Hash[
          Dashboard.db[:scripts].
-           where("hidden = 0").
+           where(where_clause).
            select(:id, :name).
            all.
            map do |course|
