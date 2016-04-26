@@ -1480,6 +1480,10 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
   }
 };
 
+Blockly.Block.prototype.isNextConnectionDisabled = function() {
+  return this.nextConnectionDisabled_;
+};
+
 /**
  * Set whether this block should allow for succeeding connections.
  * Called by Xml.domToBlock, primarily used as a passthrough to
