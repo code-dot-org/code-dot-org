@@ -67,12 +67,12 @@ describe("Puzzle Rating Utils", function () {
 
   describe('submitCachedPuzzleRatings', function () {
     var postCount, originalAjax;
-    beforeEach(function (){
+    beforeEach( function (){
       postCount = 0;
       originalAjax = $.ajax;
     });
 
-    afterEach(function() {
+    afterEach( function () {
       $.ajax = originalAjax;
     });
 
