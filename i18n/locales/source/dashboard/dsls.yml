@@ -86,6 +86,17 @@ en:
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
+      CSD U3 Variables Reassign Predict No Response: {}
+      CSD U3 Variables STOP misconceptions: {}
+      CSD U3 Variables STOP misconceptions prediction: {}
+      CSD U3 Variables STOP showing value: {}
+      CSD U3 Variables STOP using value: {}
+      CSD U3 Variables console write: {}
+      CSD Variables STOP variables in draw loop: {}
+      CSD-U3-SFLP Draw Loop: {}
+      CSD-U3-SFLP Simple Drawing: {}
+      CSD-U3-SFLP Sprites and Mod: {}
+      CSD-U3-SFLP Variables: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -672,6 +683,13 @@ en:
       PDAlg 3BGo: {}
       PDAlg 3BPlanning: {}
       PDAlg 3BWelcome: {}
+      PDAlg 3CAbout: {}
+      PDAlg 3CGathering: {}
+      PDAlg 3CGo: {}
+      PDAlg 3CPlanning: {}
+      PDAlg 3CShare Forum: {}
+      PDAlg 3CSharing: {}
+      PDAlg 3CWelcome: {}
       PDAlg 4-7 Big Game: {}
       PDAlg 4-7 Contracts: {}
       PDAlg 4-7 Variables: {}
@@ -966,6 +984,7 @@ en:
       U3 - Conditionals - Translating Flowcharts - Chained: {}
       U3 - Conditionals - Translating Flowcharts - Else: {}
       U3 - Conditionals - Translating Flowcharts - If Statement: {}
+      U3 - Simple Drawing - Plan Personal Drawing: {}
       U3 - Simulation - Intro: {}
       U3 Simulation Updating Hypotheses: {}
       U3 Simulations Hypotheses Reflections: {}
@@ -1433,6 +1452,8 @@ en:
         CS in Science Introduction to Phase 3 PD: CS in Science Introduction to Phase 3 PD
       sciPD preQ:
         Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
+      sciPD preQ p1 16-17:
+        Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
       sciPD what to expect:
         What to Expect: What to Expect
       sciPD2 SLN explore:
@@ -1579,10 +1600,10 @@ en:
         Scratch Jr: Scratch Jr
     level_group:
       name:
-        PS U3 Assessment1: 
-        Test level group by Brendan: 
-        Test longassessment levelgroup: 
-        Test longassessment levelgroup split: 
+        CSP Culminating Assessment: {}
+        PS U3 Assessment1 new: {}
+        Test longassessment levelgroup new: {}
+        Test longassessment levelgroup split new: {}
     match:
       2-3 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
@@ -2649,6 +2670,231 @@ en:
         Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
         There are two answers here that are correct.  Looks like you can choose either one and be right.: There are two answers here that are correct.  Looks like you can choose either one and be right.
         What is 2 + 2?: What is 2 + 2?
+      CB_Question_1:
+        2 times as many values can be represented.: 2 times as many values can be represented.
+        2^32 times as many values can be represented.: 2^32 times as many values can be represented.
+        32 times as many values can be represented.: 32 times as many values can be represented.
+        32^2 times as many values can be represented.: 32^2 times as many values can be represented.
+      CB_Question_10:
+        Better late than never.: Better late than never.
+        Hello. Better late than never: Hello. Better late than never
+        Hello. Better late than never.: Hello. Better late than never.
+        Hello. Is anyone there?: Hello. Is anyone there?
+        Is anyone there?: Is anyone there?
+      CB_Question_11:
+        When the problem can be solved in a reasonable time and an approximate solution is acceptable: When the problem can be solved in a reasonable time and an approximate solution is acceptable
+        When the problem can be solved in a reasonable time and an exact solution is needed: When the problem can be solved in a reasonable time and an exact solution is needed
+        When the problem cannot be solved in a reasonable time and an approximate solution is acceptable: When the problem cannot be solved in a reasonable time and an approximate solution is acceptable
+        When the problem cannot be solved in a reasonable time and an exact solution is needed: When the problem cannot be solved in a reasonable time and an exact solution is needed
+      CB_Question_12:
+        I and II: I and II
+        I only: I only
+        II only: II only
+        Neither I nor II: Neither I nor II
+      CB_Question_13:
+        Algorithm A always calculates the correct average, but Algorithm B does not.: Algorithm A always calculates the correct average, but Algorithm B does not.
+        Algorithm B always calculates the correct average, but Algorithm A does not.: Algorithm B always calculates the correct average, but Algorithm A does not.
+        Both Algorithm A and Algorithm B always calculate the correct average.: Both Algorithm A and Algorithm B always calculate the correct average.
+        Neither Algorithm A nor Algorithm B calculates the correct average.: Neither Algorithm A nor Algorithm B calculates the correct average.
+      CB_Question_14:
+        <img src="https://images.code.org/00f79fe34f512a4c168e5e2b094a6b41-image-1461454050857.PNG">: <img src="https://images.code.org/00f79fe34f512a4c168e5e2b094a6b41-image-1461454050857.PNG">
+        <img src="https://images.code.org/4368fc059bdddba9000d5b8956c74481-image-1461454060908.PNG">: <img src="https://images.code.org/4368fc059bdddba9000d5b8956c74481-image-1461454060908.PNG">
+        <img src="https://images.code.org/96714b5aa4f23f482aa003a73d197ba7-image-1461454053774.PNG">: <img src="https://images.code.org/96714b5aa4f23f482aa003a73d197ba7-image-1461454053774.PNG">
+        <img src="https://images.code.org/d93101c8ba4542112e351f2c9ad6390b-image-1461454056322.PNG">: <img src="https://images.code.org/d93101c8ba4542112e351f2c9ad6390b-image-1461454056322.PNG">
+      CB_Question_15:
+        Approximately how many miles did the animal travel in one week?: Approximately how many miles did the animal travel in one week?
+        Do the movement patterns of the animal vary according to the weather?: Do the movement patterns of the animal vary according to the weather?
+        Does the animal travel in groups with other tracked animals?: Does the animal travel in groups with other tracked animals?
+        In what geographic locations does the animal typically travel?: In what geographic locations does the animal typically travel?
+      CB_Question_16:
+        <img src="https://images.code.org/30af21f04bf077f19c05acf26747f281-image-1461454973664.PNG">: <img src="https://images.code.org/30af21f04bf077f19c05acf26747f281-image-1461454973664.PNG">
+        <img src="https://images.code.org/44d34760736cb918ec15e20566af5523-image-1461454960496.PNG">: <img src="https://images.code.org/44d34760736cb918ec15e20566af5523-image-1461454960496.PNG">
+        <img src="https://images.code.org/4e51af4d6bd924fe15d82aaa8ff2654d-image-1461454965539.PNG">: <img src="https://images.code.org/4e51af4d6bd924fe15d82aaa8ff2654d-image-1461454965539.PNG">
+        <img src="https://images.code.org/be3dd88e835cc39163b07f9996f52dc7-image-1461454977406.PNG">: <img src="https://images.code.org/be3dd88e835cc39163b07f9996f52dc7-image-1461454977406.PNG">
+      CB_Question_17:
+        Nothing is displayed; the program results in an infinite loop.: Nothing is displayed; the program results in an infinite loop.
+        The number 0 is displayed.: The number 0 is displayed.
+        The number 10 is displayed.: The number 10 is displayed.
+        The number 6 is displayed.: The number 6 is displayed.
+      CB_Question_18:
+        Data compression is only useful for files being transmitted over the Internet.: Data compression is only useful for files being transmitted over the Internet.
+        Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.: Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.
+        Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.: Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.
+        There are trade-offs involved in choosing a compression technique for storing and transmitting data.: There are trade-offs involved in choosing a compression technique for storing and transmitting data.
+      CB_Question_19:
+        "(OnFloor1 AND callTo2) OR (onFloor2 AND callTo1)": "(OnFloor1 AND callTo2) OR (onFloor2 AND callTo1)"
+        "(onFloor1 AND callTo2) AND (onFloor2 AND callTo1)": "(onFloor1 AND callTo2) AND (onFloor2 AND callTo1)"
+        "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)"
+        "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)"
+      CB_Question_2:
+        ? First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot; <br>Last, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
+        : First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot; <br>Last, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
+        ? First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
+        : First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
+        ? First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot;  <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
+        : First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot;  <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
+        ? First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
+        : First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
+      CB_Question_20:
+        about.example.com: about.example.com
+        example.co.uk: example.co.uk
+        example.com.org: example.com.org
+        example.org: example.org
+      CB_Question_21:
+        An algorithm that, given of list of integers, displays only the negative integers in the list: An algorithm that, given of list of integers, displays only the negative integers in the list
+        An algorithm that, given of list of integers, displays the number of even integers in the list: An algorithm that, given of list of integers, displays the number of even integers in the list
+        An algorithm that, given of list of integers, displays the sum of the integers in the list: An algorithm that, given of list of integers, displays the sum of the integers in the list
+        An algorithm that, given two integers, displays the greater of the two integers: An algorithm that, given two integers, displays the greater of the two integers
+      CB_Question_22:
+        <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG" width=350>: <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG" width=350>
+        <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=350>: <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=350>
+        <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">: <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">
+        <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">: <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">
+      CB_Question_2temp:
+        '': ''
+        "(OnFloor1 AND callTo2) OR (onFloor2 AND callTo1)": "(OnFloor1 AND callTo2) OR (onFloor2 AND callTo1)"
+        "(onFloor1 AND callTo2) AND (onFloor2 AND callTo1)": "(onFloor1 AND callTo2) AND (onFloor2 AND callTo1)"
+        "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)"
+        "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)"
+        2^32 times as many values can be represented.: 2^32 times as many values can be represented.
+        32 times as many values can be represented.: 32 times as many values can be represented.
+        32^2 times as many values can be represented.: 32^2 times as many values can be represented.
+        <img src="https://images.code.org/00f79fe34f512a4c168e5e2b094a6b41-image-1461454050857.PNG">: <img src="https://images.code.org/00f79fe34f512a4c168e5e2b094a6b41-image-1461454050857.PNG">
+        <img src="https://images.code.org/0de0c4e2cda244de13e4f19a9bebb050-image-1461452432706.PNG">: <img src="https://images.code.org/0de0c4e2cda244de13e4f19a9bebb050-image-1461452432706.PNG">
+        <img src="https://images.code.org/0e3157c8246380d3532d66ecd6d956d2-image-1461452438337.PNG">: <img src="https://images.code.org/0e3157c8246380d3532d66ecd6d956d2-image-1461452438337.PNG">
+        <img src="https://images.code.org/30af21f04bf077f19c05acf26747f281-image-1461454973664.PNG">: <img src="https://images.code.org/30af21f04bf077f19c05acf26747f281-image-1461454973664.PNG">
+        <img src="https://images.code.org/4368fc059bdddba9000d5b8956c74481-image-1461454060908.PNG">: <img src="https://images.code.org/4368fc059bdddba9000d5b8956c74481-image-1461454060908.PNG">
+        <img src="https://images.code.org/43aabf471cc0e6d71145e6d25b73f311-image-1461450860910.PNG">: <img src="https://images.code.org/43aabf471cc0e6d71145e6d25b73f311-image-1461450860910.PNG">
+        <img src="https://images.code.org/44d34760736cb918ec15e20566af5523-image-1461454960496.PNG">: <img src="https://images.code.org/44d34760736cb918ec15e20566af5523-image-1461454960496.PNG">
+        <img src="https://images.code.org/4a158d464dcaf49e4d0d7a93a776a9ce-image-1461450922059.PNG">: <img src="https://images.code.org/4a158d464dcaf49e4d0d7a93a776a9ce-image-1461450922059.PNG">
+        <img src="https://images.code.org/4d37b920cb896f266c55de47cfe446a8-image-1461452436002.PNG">: <img src="https://images.code.org/4d37b920cb896f266c55de47cfe446a8-image-1461452436002.PNG">
+        <img src="https://images.code.org/4e51af4d6bd924fe15d82aaa8ff2654d-image-1461454965539.PNG">: <img src="https://images.code.org/4e51af4d6bd924fe15d82aaa8ff2654d-image-1461454965539.PNG">
+        <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG" width=300>: <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG" width=300>
+        <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG">: <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG">
+        <img src="https://images.code.org/8ff706d9e361250b48562ee85868062e-image-1461450837040.PNG">: <img src="https://images.code.org/8ff706d9e361250b48562ee85868062e-image-1461450837040.PNG">
+        <img src="https://images.code.org/96714b5aa4f23f482aa003a73d197ba7-image-1461454053774.PNG">: <img src="https://images.code.org/96714b5aa4f23f482aa003a73d197ba7-image-1461454053774.PNG">
+        <img src="https://images.code.org/9af0bf7af6603aa6e849fb9644f4e294-image-1461450901827.PNG">: <img src="https://images.code.org/9af0bf7af6603aa6e849fb9644f4e294-image-1461450901827.PNG">
+        <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=300>: <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=300>
+        <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG">: <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG">
+        <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">: <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">
+        <img src="https://images.code.org/be3dd88e835cc39163b07f9996f52dc7-image-1461454977406.PNG">: <img src="https://images.code.org/be3dd88e835cc39163b07f9996f52dc7-image-1461454977406.PNG">
+        <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">: <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">
+        <img src="https://images.code.org/d93101c8ba4542112e351f2c9ad6390b-image-1461454056322.PNG">: <img src="https://images.code.org/d93101c8ba4542112e351f2c9ad6390b-image-1461454056322.PNG">
+        <img src="https://images.code.org/ee285e4616611888a116c4c3e13e4d7c-image-1461452440288.PNG">: <img src="https://images.code.org/ee285e4616611888a116c4c3e13e4d7c-image-1461452440288.PNG">
+        A: A
+        Algorithm A always calculates the correct average, but Algorithm B does not.: Algorithm A always calculates the correct average, but Algorithm B does not.
+        Algorithm B always calculates the correct average, but Algorithm A does not.: Algorithm B always calculates the correct average, but Algorithm A does not.
+        An algorithm that, given of list of integers, displays only the negative integers in the list: An algorithm that, given of list of integers, displays only the negative integers in the list
+        An algorithm that, given of list of integers, displays the number of even integers in the list: An algorithm that, given of list of integers, displays the number of even integers in the list
+        An algorithm that, given of list of integers, displays the sum of the integers in the list: An algorithm that, given of list of integers, displays the sum of the integers in the list
+        An algorithm that, given two integers, displays the greater of the two integers: An algorithm that, given two integers, displays the greater of the two integers
+        Approximately how many miles did the animal travel in one week?: Approximately how many miles did the animal travel in one week?
+        Backing up data: Backing up data
+        Better late than never.: Better late than never.
+        Both Algorithm A and Algorithm B always calculate the correct average.: Both Algorithm A and Algorithm B always calculate the correct average.
+        Computer simulations can only be built after the real-world object or system has been created.: Computer simulations can only be built after the real-world object or system has been created.
+        Computer simulations only run on very powerful computers that are not available to the public.: Computer simulations only run on very powerful computers that are not available to the public.
+        Computer simulations usually make some simplifying assumptions about the real-world object or system being modeled.: Computer simulations usually make some simplifying assumptions about the real-world object or system being modeled.
+        Data compression is only useful for files being transmitted over the Internet.: Data compression is only useful for files being transmitted over the Internet.
+        Deleting entries from data: Deleting entries from data
+        Do the movement patterns of the animal vary according to the weather?: Do the movement patterns of the animal vary according to the weather?
+        Does the animal travel in groups with other tracked animals?: Does the animal travel in groups with other tracked animals?
+        ? First, change all occurrences of &quot; goats &quot; to &quot; sheep. &quot;  <br> Then, change all occurrences of sheep to goats.
+        : First, change all occurrences of &quot; goats &quot; to &quot; sheep. &quot;  <br> Then, change all occurrences of sheep to goats.
+        ? First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot; <br>Last, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
+        : First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot; <br>Last, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
+        ? First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
+        : First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
+        ? First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot;  <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
+        : First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot;  <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
+        ? First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
+        : First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
+        First, change all occurrences of goats to sheep. <br> Then, change all occurrences of sheep to goats.: First, change all occurrences of goats to sheep. <br> Then, change all occurrences of sheep to goats.
+        First, change all occurrences of goats to sheep. Then, change all occurrences of sheep to goats.: First, change all occurrences of goats to sheep. Then, change all occurrences of sheep to goats.
+        Hello. Better late than never: Hello. Better late than never
+        Hello. Is anyone there?: Hello. Is anyone there?
+        I and II: I and II
+        I only: I only
+        II only: II only
+        In what geographic locations does the animal typically travel?: In what geographic locations does the animal typically travel?
+        Input <code>A</code> must be false: Input <code>A</code> must be false
+        Input A can be either true or false: Input A can be either true or false
+        Input A must be false: Input A must be false
+        Input A must be true: Input A must be true
+        Is anyone there?: Is anyone there?
+        It is difficult to change input parameters or conditions when using computer simulations.: It is difficult to change input parameters or conditions when using computer simulations.
+        L: L
+        Neither Algorithm A nor Algorithm B calculates the correct average.: Neither Algorithm A nor Algorithm B calculates the correct average.
+        Neither I nor II: Neither I nor II
+        Nothing is displayed; the program results in an infinite loop.: Nothing is displayed; the program results in an infinite loop.
+        Question: Question
+        Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.: Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.
+        Searching through data: Searching through data
+        Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.: Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.
+        Sorting data: Sorting data
+        The number 0 is displayed.: The number 0 is displayed.
+        The number 10 is displayed.: The number 10 is displayed.
+        The number 6 is displayed.: The number 6 is displayed.
+        There are trade-offs involved in choosing a compression technique for storing and transmitting data.: There are trade-offs involved in choosing a compression technique for storing and transmitting data.
+        There is no possible value of input A that will cause the circuit to have the output true.: There is no possible value of input A that will cause the circuit to have the output true.
+        To determine the time of day that the site is most active: To determine the time of day that the site is most active
+        To determine the topics that many users are posting about: To determine the topics that many users are posting about
+        To determine the users who post messages most frequently: To determine the users who post messages most frequently
+        To determine which posts from a particular user have received the greatest number of comments: To determine which posts from a particular user have received the greatest number of comments
+        V: V
+        When the problem can be solved in a reasonable time and an approximate solution is acceptable: When the problem can be solved in a reasonable time and an approximate solution is acceptable
+        When the problem can be solved in a reasonable time and an exact solution is needed: When the problem can be solved in a reasonable time and an exact solution is needed
+        When the problem cannot be solved in a reasonable time and an approximate solution is acceptable: When the problem cannot be solved in a reasonable time and an approximate solution is acceptable
+        When the problem cannot be solved in a reasonable time and an exact solution is needed: When the problem cannot be solved in a reasonable time and an exact solution is needed
+        Y: Y
+        about.example.com: about.example.com
+        example.co.uk: example.co.uk
+        example.com.org: example.com.org
+        example.org: example.org
+        https://images.code.org/43aabf471cc0e6d71145e6d25b73f311-image-1461450860910.PNG: https://images.code.org/43aabf471cc0e6d71145e6d25b73f311-image-1461450860910.PNG
+        https://images.code.org/4a158d464dcaf49e4d0d7a93a776a9ce-image-1461450922059.PNG: https://images.code.org/4a158d464dcaf49e4d0d7a93a776a9ce-image-1461450922059.PNG
+        https://images.code.org/8ff706d9e361250b48562ee85868062e-image-1461450837040.PNG: https://images.code.org/8ff706d9e361250b48562ee85868062e-image-1461450837040.PNG
+        https://images.code.org/9af0bf7af6603aa6e849fb9644f4e294-image-1461450901827.PNG: https://images.code.org/9af0bf7af6603aa6e849fb9644f4e294-image-1461450901827.PNG
+      CB_Question_3:
+        A: A
+        L: L
+        V: V
+        Y: Y
+      CB_Question_4:
+        Input A can be either true or false: Input A can be either true or false
+        Input A must be false: Input A must be false
+        Input A must be true: Input A must be true
+        There is no possible value of input A that will cause the circuit to have the output true.: There is no possible value of input A that will cause the circuit to have the output true.
+      CB_Question_5:
+        <img src="https://images.code.org/43aabf471cc0e6d71145e6d25b73f311-image-1461450860910.PNG">: <img src="https://images.code.org/43aabf471cc0e6d71145e6d25b73f311-image-1461450860910.PNG">
+        <img src="https://images.code.org/4a158d464dcaf49e4d0d7a93a776a9ce-image-1461450922059.PNG">: <img src="https://images.code.org/4a158d464dcaf49e4d0d7a93a776a9ce-image-1461450922059.PNG">
+        <img src="https://images.code.org/8ff706d9e361250b48562ee85868062e-image-1461450837040.PNG">: <img src="https://images.code.org/8ff706d9e361250b48562ee85868062e-image-1461450837040.PNG">
+        <img src="https://images.code.org/9af0bf7af6603aa6e849fb9644f4e294-image-1461450901827.PNG">: <img src="https://images.code.org/9af0bf7af6603aa6e849fb9644f4e294-image-1461450901827.PNG">
+      CB_Question_6:
+        Computer simulations can only be built after the real-world object or system has been created.: Computer simulations can only be built after the real-world object or system has been created.
+        Computer simulations only run on very powerful computers that are not available to the public.: Computer simulations only run on very powerful computers that are not available to the public.
+        Computer simulations usually make some simplifying assumptions about the real-world object or system being modeled.: Computer simulations usually make some simplifying assumptions about the real-world object or system being modeled.
+        It is difficult to change input parameters or conditions when using computer simulations.: It is difficult to change input parameters or conditions when using computer simulations.
+      CB_Question_7:
+        To determine the time of day that the site is most active: To determine the time of day that the site is most active
+        To determine the topics that many users are posting about: To determine the topics that many users are posting about
+        To determine the users who post messages most frequently: To determine the users who post messages most frequently
+        To determine which posts from a particular user have received the greatest number of comments: To determine which posts from a particular user have received the greatest number of comments
+      CB_Question_8:
+        <img src="https://images.code.org/0de0c4e2cda244de13e4f19a9bebb050-image-1461452432706.PNG">: <img src="https://images.code.org/0de0c4e2cda244de13e4f19a9bebb050-image-1461452432706.PNG">
+        <img src="https://images.code.org/0e3157c8246380d3532d66ecd6d956d2-image-1461452438337.PNG">: <img src="https://images.code.org/0e3157c8246380d3532d66ecd6d956d2-image-1461452438337.PNG">
+        <img src="https://images.code.org/4d37b920cb896f266c55de47cfe446a8-image-1461452436002.PNG">: <img src="https://images.code.org/4d37b920cb896f266c55de47cfe446a8-image-1461452436002.PNG">
+        <img src="https://images.code.org/ee285e4616611888a116c4c3e13e4d7c-image-1461452440288.PNG">: <img src="https://images.code.org/ee285e4616611888a116c4c3e13e4d7c-image-1461452440288.PNG">
+      CB_Question_9:
+        Backing up data: Backing up data
+        Deleting entries from data: Deleting entries from data
+        Searching through data: Searching through data
+        Sorting data: Sorting data
+      CSD U3 Variables Reassign Predict Multi:
+        A 10 will be displayed. Once a variable is full you cannot put another value in it: A 10 will be displayed. Once a variable is full you cannot put another value in it
+        A 20 will be displayed. New values replace old values in a variable: A 20 will be displayed. New values replace old values in a variable
+        A 30 will be displayed. Variables grow as you add more to them: A 30 will be displayed. Variables grow as you add more to them
+        An error will be generated.: An error will be generated.
       'CSP U4L04 Assessment 1 ':
         Question: Question
         right answer: right answer
@@ -3205,7 +3451,6 @@ en:
       PS U3 Q1-1:
         Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer.
         Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
-        Statements about programming languages: Statements about programming languages
         The number of defined words in a programming language is about the same as the number of words in a natural language.: The number of defined words in a programming language is about the same as the number of words in a natural language.
         There are typically many possible ways to interpret an instruction written in a programming language.: There are typically many possible ways to interpret an instruction written in a programming language.
       PS U3 Q1-2:
@@ -3254,6 +3499,11 @@ en:
         Parameters change the order of operations within a function.: Parameters change the order of operations within a function.
         Parameters determine the number of times the function will run.: Parameters determine the number of times the function will run.
         Why are parameters useful when programming?: Why are parameters useful when programming?
+      PS U3-bakertest:
+        These are my instructions. <h1>how's this!</h1>: These are my instructions. <h1>how's this!</h1>
+        description here: description here
+        foo: foo
+        title: title
       Play Lab Rocket 6:
         Rocket Multiple Choice: Rocket Multiple Choice
         rocket-height(seconds)  = seconds * 48: rocket-height(seconds)  = seconds * 48
@@ -4625,614 +4875,16 @@ en:
         Enter answer here: Enter answer here
         Enter prompt here: Enter prompt here
         Enter title here: Enter title here
-      CSPPD PD goals:
-        Documenting Your PD Goals: Documenting Your PD Goals
-      CSPPD course goals:
-        Documenting Your Course Goals: Documenting Your Course Goals
-      CSPPD impact in program:
-        Impact of Computing: Impact of Computing
-      CSPPD materials question1:
-        CSP curricular materials: CSP curricular materials
-        ? 'We just talked about the types of materials available through the Code.org CSP curriculum, including teacher lesson plans, widgets, widget tutorial videos, concept videos, teaching tips videos, and student-facing activities. Which of these materials are you most excited to have access to? Which are you most uncertain about? '
-        : 'We just talked about the types of materials available through the Code.org CSP curriculum, including teacher lesson plans, widgets, widget tutorial videos, concept videos, teaching tips videos, and student-facing activities. Which of these materials are you most excited to have access to? Which are you most uncertain about? '
-      CSPPD program overlap:
-        Relationship between Curriculum and PD: Relationship between Curriculum and PD
-      CSPPD strategies:
-        Classroom Strategies Journal: Classroom Strategies Journal
-      CSPPD2 PT activity: {}
-      CSPPD2 share protocol: {}
-      CSPPD3-u2 pick a challenge: {}
-      CSPPD3-u2 submit forum link: {}
-      CSPPD3-u3 pick a challenge: {}
-      CSPPD3-u3 submit forum link: {}
-      CSPPD3-u4 submit forum link: {}
-      CSPPD3-u5 submit forum link: {}
-      ECSPD Fence post Q1: {}
-      ECSPD Handshake Q1: {}
-      ECSPD Online U1D1-2 Assessment 1:
-        What is a Computer?: What is a Computer?
-      ECSPD Online U1D1-2 Reflection:
-        'Reflections on Unit 1 Day 1-2: What is a Computer?': 'Reflections on Unit 1 Day 1-2: What is a Computer?'
-      ECSPD Online U1D10 Reflection:
-        'Reflection on Unit 1 Day 10: Telling a Story with Data': 'Reflection on Unit 1 Day 10: Telling a Story with Data'
-        ? You have experienced the lesson both online and on the first day of the in-person PD. Additionally, you have watched a TED talk about the representation of data. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
-        : You have experienced the lesson both online and on the first day of the in-person PD. Additionally, you have watched a TED talk about the representation of data. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
-      ECSPD Online U1D11-14 Reflection:
-        'Reflection on Unit 1 Day 11-14: Data, Modeling, and Design': 'Reflection on Unit 1 Day 11-14: Data, Modeling, and Design'
-      ECSPD Online U1D15-16 Reflection:
-        'Reflection on Unit 1 Day 15-16: Computer Programs and Following Directions': 'Reflection on Unit 1 Day 15-16: Computer Programs and Following Directions'
-        ? You have experienced the lesson on the first day of the in-person PD and have watched a TED talk about the extent of the use of algorithms in the world. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
-        : You have experienced the lesson on the first day of the in-person PD and have watched a TED talk about the extent of the use of algorithms in the world. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
-      ECSPD Online U1D17-19 Assessment:
-        ? Take some time to look over the lesson and the unplugged activity. Think about your classroom and the space you have available to run the Turing Test Activity. How are you planning to set up your classroom to best facilitate the Turing Test Activity?
-        : Take some time to look over the lesson and the unplugged activity. Think about your classroom and the space you have available to run the Turing Test Activity. How are you planning to set up your classroom to best facilitate the Turing Test Activity?
-        What is Intelligence?: What is Intelligence?
-      ECSPD Online U1D17-19 Reflection:
-        'Reflections on Unit 1 Day 17-19: What is Intelligence?': 'Reflections on Unit 1 Day 17-19: What is Intelligence?'
-        ? This is the last lesson in the unit. How does it combine what was covered previously in the unit? Now that you have taken time to examine this lesson, what have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
-        : This is the last lesson in the unit. How does it combine what was covered previously in the unit? Now that you have taken time to examine this lesson, what have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
-      ECSPD Online U1D3-4 Reflection:
-        'Reflections on Unit 1 Day 3-4: Buying a Computer': 'Reflections on Unit 1 Day 3-4: Buying a Computer'
-        ? 'You have experienced part of this lesson online and studied the components of computers. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level. '
-        : 'You have experienced part of this lesson online and studied the components of computers. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level. '
-      ECSPD Online U1D5-7 Reflection:
-        'Reflections on Unit 1 Day 5-7: Searching and Web 2.0': 'Reflections on Unit 1 Day 5-7: Searching and Web 2.0'
-        ? You have experienced this lesson in person and have examined additional resources online. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
-        : You have experienced this lesson in person and have examined additional resources online. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
-      ECSPD Online U1D8-9 Assessment:
-        Impact of Computers and Communication: Impact of Computers and Communication
-        ? List three points either from the articles or the lesson plan that you would want to discuss with your class. Describe one strategy you plan to use to facilitate discussion.
-        : List three points either from the articles or the lesson plan that you would want to discuss with your class. Describe one strategy you plan to use to facilitate discussion.
-      ECSPD Online U1D8-9 Reflection:
-        'Reflections on Unit 1 Day 8-9: Impact of Computers and Communication': 'Reflections on Unit 1 Day 8-9: Impact of Computers and Communication'
-        ? You have experienced part of this lesson online and have read a few articles regarding the impact of computers and the internet on communication. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
-        : You have experienced part of this lesson online and have read a few articles regarding the impact of computers and the internet on communication. What have you learned that you can take back to your classroom? Use this space to record your ideas for this lesson. You will have a chance to share your ideas and questions in a forum in the following level.
-      ECSPD Online U1Reflection: {}
-      ECSPD PD goals:
-        Documenting Your PD Goals: Documenting Your PD Goals
-      ECSPD Personal Problem Solving Strategies: {}
-      ECSPD course goals:
-        Documenting Your Course Goals: Documenting Your Course Goals
-      ECSPD impact in program:
-        Impact of Computing: Impact of Computing
-      ECSPD program overlap:
-        Relationship between Curriculum and PD: Relationship between Curriculum and PD
-      ECSPD strategies:
-        Classroom Strategies Journal: Classroom Strategies Journal
-      ECSPD your goals:
-        Documenting Your Goals: Documenting Your Goals
-      ECSPD3-u5 pick a challenge: {}
-      ECSPD3-u5 submit: {}
-      ECSPD3-u5 submit forum link: {}
-      ECSPD3-u6 pick a challenge: {}
-      ECSPD3-u6 submit forum link: {}
-      ECSU2 Challenge Submission: {}
-      ECSU3 Challenge Submission: {}
-      ECSU4 Challenge Submission fin: {}
-      Glossary O:
-        ? 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
-        : 'Example: Call out conditional statements. If you line up in for recess in under 1 minute, then we can spend 10 extra minutes out on the playground.'
-      Matt Test Level:
-        Sending Bits:Getting Started: Sending Bits:Getting Started
-      Open text response example:
-        I loved it because...: I loved it because...
-        Open text response example: Open text response example
-      PDAlg Classroom Culture 2:
-        Facilitating a positive learning environment in your computer science classroom: Facilitating a positive learning environment in your computer science classroom
-        In my classroom, I want to...: In my classroom, I want to...
-      PDAlg DR Text 1:
-        Here's the same contract from the last page. What could you ask this student to help them identify and correct their error?: Here's the same contract from the last page. What could you ask this student to help them identify and correct their error?
-      PDAlg Prep on Paper:
-        LESSON PREP > Thinking on paper: LESSON PREP > Thinking on paper
-      PDAlg course goals:
-        Documenting Your Course Goals: Documenting Your Course Goals
-      PDK5 Challenges:
-        Biggest Challenges: Biggest Challenges
-      PDK5 Classroom Culture 2:
-        Facilitating a positive learning environment in your computer science classroom: Facilitating a positive learning environment in your computer science classroom
-        In my classroom, I want to...: In my classroom, I want to...
-      PDK5 Course Descriptions:
-        Course Structure: Course Structure
-        I am going to start with Course...: I am going to start with Course...
-      PDK5 Difficulty:
-        Degree of Difficulty: Degree of Difficulty
-        Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
-        Your thoughts here: Your thoughts here
-      PDK5 Foundation:
-        Computer Science as a Foundational Skill: Computer Science as a Foundational Skill
-        Do you see computer science as a foundational skill for your students? Why or why not?: Do you see computer science as a foundational skill for your students? Why or why not?
-        Your thoughts here: Your thoughts here
-      PDK5 Goals:
-        Goals for using Code.org in your Classroom: Goals for using Code.org in your Classroom
-      PDK5 Impact 1:
-        Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?: Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?
-        Impact for students: Impact for students
-        Your thoughts here: Your thoughts here
-      PDK5 Impact 2:
-        Connections to other Subjects: Connections to other Subjects
-        Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.: Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.
-        Your thoughts here: Your thoughts here
-      PDK5 Impact 3:
-        ? Does learning about computer science help students grow into the kind of citizens you are preparing them to be? Explain why or why not.
-        : Does learning about computer science help students grow into the kind of citizens you are preparing them to be? Explain why or why not.
-        Real-world applications for Students: Real-world applications for Students
-        Your thoughts here: Your thoughts here
-      PDK5 Loops 2:
-        The Importance of Loops: The Importance of Loops
-      PDK5 Problem Solving:
-        I could integrate this in my classroom by...: I could integrate this in my classroom by...
-        Problem Solving Methods: Problem Solving Methods
-      PDK5 Promo Video:
-        'Code Studio: Kid tested, Teacher approved': 'Code Studio: Kid tested, Teacher approved'
-      PDK5 Promo Video 2:
-        'Code Studio: Kid Tested, Teacher Approved!': 'Code Studio: Kid Tested, Teacher Approved!'
-        My first impressions of Code Studio are...: My first impressions of Code Studio are...
-      PDK5 Strategies O:
-        'I think teaching computer science will be different than teaching other subjects in these ways: ...': 'I think teaching computer science will be different than teaching other subjects in these ways: ...'
-        Strategies for Teaching Computer Science: Strategies for Teaching Computer Science
-      PDK5 Test5:
-        Big Test: Big Test
       PS U3 Q1-7:
         Enter answer here: Enter answer here
         Enter prompt here: Enter prompt here
-      Test Free Response Assessment Question:
-        Enter your reflection here: Enter your reflection here
-        ? Imagine that you have to send a list of 10 numbers to friend in binary using the bit-sending widget. The numbers are all between 0 and 100. Describe the issues or problems that you and your friend would encounter in trying to do this. How would you address these problem?
-        : Imagine that you have to send a list of 10 numbers to friend in binary using the bit-sending widget. The numbers are all between 0 and 100. Describe the issues or problems that you and your friend would encounter in trying to do this. How would you address these problem?
-        Sending Numbers Free Response: Sending Numbers Free Response
-      Test Markdown level:
-        Enter prompt here: Enter prompt here
-        Enter title here: Enter title here
-      Trent Test Level:
-        Enter title here: Enter title here
-      U1L1 - FR computer science word association:
-        'Word Association: Computer Science Principles': 'Word Association: Computer Science Principles'
-      U1L10 Assessment Free Response:
-        'Assessment: Encoding Text': 'Assessment: Encoding Text'
-      U1L10 Journal Free Response:
-        'Free Response: Encoding Text': 'Free Response: Encoding Text'
-        Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
-      U1L11 Collaboration Reflection:
-        'Reflection: Sending Formatted Text': 'Reflection: Sending Formatted Text'
-        What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?: What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
-      U1L11 Reflection Free Response:
-        'Reflection: Sending Formatted Text': 'Reflection: Sending Formatted Text'
-        Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
-      U1L12 Reflection Free Response:
-        'Reflection: Data Storage': 'Reflection: Data Storage'
-        Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
       U1L13 - Assess Text Compression reverse process:
         Act as the computer!: Act as the computer!
         the big bug bit the bull but the bull bit the big bug back: the big bug bit the bull but the bull bit the big bug back
         the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
-      U1L13 Assess Text Compression amount:
-        Is this a good compression rate?: Is this a good compression rate?
-      U1L13 Assessment 1:
-        Why Compress?: Why Compress?
-      U1L13 Assessment 2:
-        What is good compression?: What is good compression?
-      U1L13 Reflection 1:
-        'Reflection: Text Compression': 'Reflection: Text Compression'
-        What made compressing text hard to do?: What made compressing text hard to do?
-      U1L13 Reflection 2:
-        Describe the thinking process you used in solving this challenge.: Describe the thinking process you used in solving this challenge.
-        'Reflection: Text Compression': 'Reflection: Text Compression'
-      U1L13 Reflection Free Response:
-        'Conclusion 3: Text Compression': 'Conclusion 3: Text Compression'
-        'If you send a compressed segment of text would your friend will be able to read it?  ': 'If you send a compressed segment of text would your friend will be able to read it?  '
-      U1L14 - Assessment 2:
-        'Assessment: Encoding B&W Images': 'Assessment: Encoding B&W Images'
-      U1L14 Assessment 1:
-        'Assessment: Encoding B&W Images': 'Assessment: Encoding B&W Images'
-        'What are the largest dimensions (width and height) of an image we can make with the pixelation widget? ': 'What are the largest dimensions (width and height) of an image we can make with the pixelation widget? '
-      U1L16 Reflection Free Response:
-        'Reflection: Encoding Complex data': 'Reflection: Encoding Complex data'
-        Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
-      U1L2 Free response assessment question:
-        'Assessment: Sending Binary Messages': 'Assessment: Sending Binary Messages'
-        Enter your response here.: Enter your response here.
-      U1L2 Free response reflection question:
-        Enter your reflection here.: Enter your reflection here.
-        'Reflection: Sending Binary Messages': 'Reflection: Sending Binary Messages'
-      U1L3 Free Response:
-        Enter your reflection here: Enter your reflection here
-        ? How did collaboration impact the development of your protocol? What challenges did working in a group present and in what ways did it positively impact your final product?
-        : How did collaboration impact the development of your protocol? What challenges did working in a group present and in what ways did it positively impact your final product?
-        'Reflection: Sending Complex Messages': 'Reflection: Sending Complex Messages'
-      U1L3 Free response reflection question:
-        Complete the Lesson 3 Rubric.: Complete the Lesson 3 Rubric.
-        Enter your reflection here.: Enter your reflection here.
-        'Reflection: Sending Complex Messages': 'Reflection: Sending Complex Messages'
-      U1L4 Free Response Reflection:
-        Enter your reflection here.: Enter your reflection here.
-        Reflect on this lesson: Reflect on this lesson
-      U1L4 Free response reflection question:
-        'Assessment: Coordination and Binary Messages': 'Assessment: Coordination and Binary Messages'
-        Complete the Lesson 2 Rubric.: Complete the Lesson 2 Rubric.
-        Enter your reflection here.: Enter your reflection here.
-      U1L5 Free Response Assessment:
-        Complete the rubric for Lesson 5. Then respond to this prompt using approximately 100 words.: Complete the rubric for Lesson 5. Then respond to this prompt using approximately 100 words.
-        Free Response Assessment: Free Response Assessment
-      U1L5 Free Response Lesson Review:
-        Complete these three sentences.: Complete these three sentences.
-        Lesson Review: Lesson Review
-      U1L6 Free Response Assessment:
-        'Assessment: Number Systems': 'Assessment: Number Systems'
-      U1L6 Free Response Reflection:
-        'Reflection: Number Systems': 'Reflection: Number Systems'
-      U1L7 Free Response Assessment:
-        'Assessment: Binary Numbers': 'Assessment: Binary Numbers'
-      U1L7 Free Response Reflection:
-        'Reflect on your learning in this lesson. In the space below, enter:': 'Reflect on your learning in this lesson. In the space below, enter:'
-        'Reflection: Binary Numbers': 'Reflection: Binary Numbers'
-      U1L8 Free Response Getting Started:
-        'Getting Started: Sending Numbers ': 'Getting Started: Sending Numbers '
-        Respond to the following question.: Respond to the following question.
-      U1L8 Free Response Reflection:
-        'Reflection: Sending Numbers ': 'Reflection: Sending Numbers '
-      U1L8 Free Response2:
-        How did collaboration play a role in the creation of your protocol?: How did collaboration play a role in the creation of your protocol?
-        'Sending Numbers:  Reflection': 'Sending Numbers:  Reflection'
-      U1L9 Free Response Assessment:
-        'Reflection: Real-World Numbers ': 'Reflection: Real-World Numbers '
-      U2L01 Assessment 4: {}
-      U2L02 Assessment 5:
-        Even with a good protocol, what are some privacy and security challenges while playing battleship on the Internet Simulator?: Even with a good protocol, what are some privacy and security challenges while playing battleship on the Internet Simulator?
-        'The Need For Addressing: Assessment 3': 'The Need For Addressing: Assessment 3'
-      U2L02 Assessment1:
-        'The Need for Addressing: Question 1': 'The Need for Addressing: Question 1'
-      U2L02 Assessment2:
-        'The Need for Addressing: Security Concerns': 'The Need for Addressing: Security Concerns'
-      U2L02 Free Response Getting Started:
-        'The Need for Addressing: Getting Started': 'The Need for Addressing: Getting Started'
-      U2L02 Free Response Reflection:
-        'The Need for Addressing: Reflection': 'The Need for Addressing: Reflection'
-      U2L04 Assessment2:
-        'Routers and Redundancy: Question 4': 'Routers and Redundancy: Question 4'
-      U2L04 Assessment3:
-        'Routers and Redundancy: Question 5': 'Routers and Redundancy: Question 5'
-      U2L04 Free Response Wrap Up:
-        'Routers and Addresses: Wrap Up': 'Routers and Addresses: Wrap Up'
-      U2L05 Reflection 1:
-        Enter your reflection here.: Enter your reflection here.
-        'Packets: Reflection': 'Packets: Reflection'
       U2L07 Assessment4:
         '43': '43'
         Question 4: Question 4
-      U2L07 Assessment5:
-        Question 5: Question 5
-      U2L08 Assessment 0: {}
-      U2L08 Free Response 1:
-        'Router Table: Reflection': 'Router Table: Reflection'
-      U2L08 Free Response 2:
-        'Router Table: Reflection': 'Router Table: Reflection'
-      U2L08 Free Response 3:
-        'Router Table: Reflection': 'Router Table: Reflection'
-      U2L09 Assessment2:
-        'Assessment: Question 2': 'Assessment: Question 2'
-      U2L09 Free Response Wrap Up:
-        'The Need for DNS: Wrap Up': 'The Need for DNS: Wrap Up'
-      U2L10 Assessment3:
-        Assessment Question 3: Assessment Question 3
-      U2L10 Free Response Getting Started:
-        'DNS in the Real World: Getting Started': 'DNS in the Real World: Getting Started'
-      U2L10 Free Response Wrap Up:
-        'DNS in the Real World: Wrap Up': 'DNS in the Real World: Wrap Up'
-      U2L11 Free Response:
-        'HTTP and Abstraction on the Internet: Free Response': 'HTTP and Abstraction on the Internet: Free Response'
-      U2L13 Assessment1:
-        'Assessment: Question 1': 'Assessment: Question 1'
-      U2L13 Assessment2:
-        'Assessment: Question 2': 'Assessment: Question 2'
-      U2L13 Free Response Getting Started:
-        'Tell Me a Secret: Getting Started': 'Tell Me a Secret: Getting Started'
-      U2L13 Free Response Wrap Up:
-        'Tell Me a Secret: Wrap Up': 'Tell Me a Secret: Wrap Up'
-      U2L14 Assessment2:
-        'Assessment: Question 3': 'Assessment: Question 3'
-        ? "Using the Vigenere cipher, does the length of the key matter? \nFor example, if one key is length 5 and another is 20, does one produce a “better” encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning."
-        : "Using the Vigenere cipher, does the length of the key matter? \nFor example, if one key is length 5 and another is 20, does one produce a “better” encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning."
-      U2L14 Free Response Getting Started:
-        'Cracking the Code: Getting Started': 'Cracking the Code: Getting Started'
-      U2L14 Free Response Wrap Up:
-        'Assessment: Question 2': 'Assessment: Question 2'
-      U2L15 Assessment2:
-        'Assessment: Question 2': 'Assessment: Question 2'
-      U2L15 Free Response Getting Started:
-        'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
-      U2L15 Free Response Wrap Up:
-        'Encryption Algorithms: Wrap Up': 'Encryption Algorithms: Wrap Up'
-      U2L16 Free Response Assessment 3:
-        Assessment 3: Assessment 3
-        Enter answer here: Enter answer here
-        Why are computationally-hard problems important in encryption strategies?: Why are computationally-hard problems important in encryption strategies?
-      U2L16 Free Response assessment 2:
-        Lesson 16 - Assessment 2: Lesson 16 - Assessment 2
-        What do people do who need solutions to large computationally-hard problems?: What do people do who need solutions to large computationally-hard problems?
-      U2L16 Free response assessment 1:
-        Lesson 16 - Assessment 1: Lesson 16 - Assessment 1
-        What does "computationally hard" mean?: What does "computationally hard" mean?
-      U2L17 Assessment 1:
-        Assessment Question 1: Assessment Question 1
-        Describe what it means for a problem to be “computationally hard.”: Describe what it means for a problem to be “computationally hard.”
-      U2L17 Assessment 2:
-        Assessment Question 2: Assessment Question 2
-        What strategies do people use to solve large computationally-hard problems?: What strategies do people use to solve large computationally-hard problems?
-      U2L17 Free Response Getting Started:
-        'Hard Problems: Getting Started': 'Hard Problems: Getting Started'
-        What kinds of problems do you think are “computationally hard"?: What kinds of problems do you think are “computationally hard"?
-      U2L17 Free Response Wrap Up:
-        'Hard Problems: Wrap Up': 'Hard Problems: Wrap Up'
-        ? If the TSP is unsolvable for finding an exact solution, how do you think package delivery companies optimize their delivery routes?
-        : If the TSP is unsolvable for finding an exact solution, how do you think package delivery companies optimize their delivery routes?
-      U2L18 Assessment:
-        Reflection: Reflection
-      U2L18 FR why is asymmetric encryption useful:
-        Asymmetric Encryption - why is it useful?: Asymmetric Encryption - why is it useful?
-      U2L18 Free Response Assessment 1:
-        Asymmetric Encryption Assessment 1: Asymmetric Encryption Assessment 1
-        ? In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why asymmetric encryption is useful
-        : In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why asymmetric encryption is useful
-      U2L18 Free Response Assessment 3:
-        Asymmetric Encryption Assessment 3: Asymmetric Encryption Assessment 3
-        List other examples of one-way functions. Can you think of a one-way function in real life?: List other examples of one-way functions. Can you think of a one-way function in real life?
-      U2L18 Free Response Getting Started:
-        Assessment 3: Assessment 3
-      U2L18 Free Response Wrap Up:
-        'One Way Functions: Wrap Up': 'One Way Functions: Wrap Up'
-      U2L19 Assessment:
-        'Assessment: Modulo and one-way functions': 'Assessment: Modulo and one-way functions'
-      U2L19 Free Response Getting Started:
-        'Public Key Crypto: The Modulo Operation': 'Public Key Crypto: The Modulo Operation'
-      U2L19 Free Response Wrap Up:
-        'Public Key Crypto: Why is it safe?': 'Public Key Crypto: Why is it safe?'
-      U2L20 - Free Response - exploited technology: {}
-      U2L20 Free Response Getting Started:
-        'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
-      U2L20 Free Response Wrap Up: {}
-      U2L20 Free Response Wrap Up 2: {}
-      U2L3 Assessment 4:
-        'Inventing an Addressing Protocol: Question 3': 'Inventing an Addressing Protocol: Question 3'
-        Why does it not make sense for users to be identified by their real names on the Internet?: Why does it not make sense for users to be identified by their real names on the Internet?
-      U2L3 Free Response Getting Started:
-        'Invent an Addressing Protocol: Getting Started': 'Invent an Addressing Protocol: Getting Started'
-      U2L3 Free Response Wrap Up:
-        'Invent an Addressing Protocol: Wrap Up': 'Invent an Addressing Protocol: Wrap Up'
-      U2L4 Free Response Getting Started:
-        'Routers and Addresses: Getting Started': 'Routers and Addresses: Getting Started'
-      U2L9 Free Response Getting Started:
-        'The Need for DNS: Getting Started': 'The Need for DNS: Getting Started'
-      U3 - Arrays - Wrap Up 1: {}
-      U3 - Arrays - Wrap Up 2: {}
-      U3- Keys - Code Refactoring Exit Ticket: {}
-      U3L01 Assessment1:
-        'Free Response: Interpreting Instructions': 'Free Response: Interpreting Instructions'
-      U3L01 Assessment3:
-        'Free Response: Programming Language Features': 'Free Response: Programming Language Features'
-      U3L01 Free Response Getting Started:
-        Why Programming and Programming Languages?: Why Programming and Programming Languages?
-      U3L01 Free Response Wrap Up:
-        Why Programming? Wrap Up: Why Programming? Wrap Up
-      U3L02 Assessment:
-        'Free Response: Efficiency in the Real World': 'Free Response: Efficiency in the Real World'
-      U3L02 Free Response Getting Started:
-        'Free Response: Why Limit to 4 Commands?': 'Free Response: Why Limit to 4 Commands?'
-      U3L02 Free Response Wrap Up:
-        'Reflection: Programming with Simple Commands': 'Reflection: Programming with Simple Commands'
-      U3L03 Free Response Getting Started:
-        'Creating Procedures Part 1: Getting Started': 'Creating Procedures Part 1: Getting Started'
-      U3L03 Free Response Reflection:
-        Free Response Reflection: Free Response Reflection
-      U3L03 Free Response Wrap Up:
-        'Reflection: Why Functions?': 'Reflection: Why Functions?'
-      U3L04 Assessment1:
-        'Free Response: Top-Down Design': 'Free Response: Top-Down Design'
-      U3L04 Free Response Getting Started:
-        'Creating Procedures Part 2: Getting Started': 'Creating Procedures Part 2: Getting Started'
-      U3L04 Free Response Reflection:
-        Free Response Reflection: Free Response Reflection
-      U3L04 Free Response Wrap Up:
-        'Free Response: Abstraction to Manage Complexity': 'Free Response: Abstraction to Manage Complexity'
-      U3L05 Assessment2:
-        Programming Efficiency Question 2: Programming Efficiency Question 2
-      U3L05 Assessment3:
-        Programming Efficiency Question 3: Programming Efficiency Question 3
-      U3L05 Assessment4:
-        Programming Efficiency Question 4: Programming Efficiency Question 4
-      U3L05 Free Response Getting Started:
-        'Programming Efficiency: Getting Started': 'Programming Efficiency: Getting Started'
-      U3L05 Free Response Reflection:
-        'Programming Efficiency: Reflection': 'Programming Efficiency: Reflection'
-      U3L06 Assessment:
-        'Free Response: Function Parameters': 'Free Response: Function Parameters'
-      U3L06 Free Response Getting Started:
-        APIs and Function Parameters: APIs and Function Parameters
-      U3L06 Free Response Reflection:
-        Free Response Reflection: Free Response Reflection
-      U3L06 Free Response Wrap Up:
-        APIs and Function Parameters Wrap Up: APIs and Function Parameters Wrap Up
-      U3L07 Free Response Getting Started:
-        'Looping and Random Numbers: Getting Started': 'Looping and Random Numbers: Getting Started'
-      U3L07 Free Response Reflection:
-        'Reflection: Looping and Random Numbers': 'Reflection: Looping and Random Numbers'
-      U3L08 Assessment2:
-        'Free Response: Functions with Parameters': 'Free Response: Functions with Parameters'
-      U3L08 Free Response Getting Started:
-        'Functions with Parameters: Getting Started': 'Functions with Parameters: Getting Started'
-      U3L08 Free Response Wrap Up:
-        'Functions with Parameters: Wrap Up': 'Functions with Parameters: Wrap Up'
-      U3L09 Free Response Getting Started:
-        'Scene Design Part 1: Plan': 'Scene Design Part 1: Plan'
-      U3L09 Free Response Wrap Up:
-        'Scene Design Part 1: Plan': 'Scene Design Part 1: Plan'
-      U3L10 Free Response Getting Started:
-        'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
-      U3L10 Free Response Wrap Up:
-        'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
-      U3L11 Free Response Getting Started:
-        'Scene Design Part 3 Reflection: Getting Started': 'Scene Design Part 3 Reflection: Getting Started'
-      U3L11 Free Response Reflection:
-        'Scene Design Part 3: Reflection': 'Scene Design Part 3: Reflection'
-      U3L12 - Reflection - Mission Unsortable:
-        Activity Reflection: Activity Reflection
-        'Mission Unsortable ': 'Mission Unsortable '
-      U3L12 Free Response Getting Started:
-        'Getting Started: Events Unplugged': 'Getting Started: Events Unplugged'
-        Respond to the following prompt: Respond to the following prompt
-      U3L12 Free Response Reflection:
-        'Reflection: Mission Unsortable': 'Reflection: Mission Unsortable'
-      U3L13 Free Response Getting Started:
-        Buttons on the Screen - Getting Started: Buttons on the Screen - Getting Started
-      U3L13 Free Response Reflection:
-        'Free Response: Event-Driven Programming Wrap-Up': 'Free Response: Event-Driven Programming Wrap-Up'
-      U3L14 - Journal Favorite Event:
-        Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.: Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.
-        'Reflection: Events': 'Reflection: Events'
-      U3L15 spot the difference variable debugging:
-        'Free response: Spot and Fix the Bug': 'Free response: Spot and Fix the Bug'
-      U3L16 Assessment Free Response:
-        'Beyond Buttons: Assessment': 'Beyond Buttons: Assessment'
-      U3L16 Free Response Getting Started:
-        Beyond Buttons Getting Started: Beyond Buttons Getting Started
-      U3L16 Free Response Wrap Up:
-        Beyond Buttons Wrap Up: Beyond Buttons Wrap Up
-      U3L18 Free Response Wrap Up:
-        Controlling Memory and Program Flow Wrap Up: Controlling Memory and Program Flow Wrap Up
-      U3L19 - final prompt:
-        Final writing prompt: Final writing prompt
-        Respond to your teacher's prompt below: Respond to your teacher's prompt below
-      U3L2 Free Response Reflection:
-        Free Response Reflection: Free Response Reflection
-      U3L20 Assessment4:
-        Conditional Basics Question 4: Conditional Basics Question 4
-      U3L20 Assessment5:
-        Conditional Basics Question 5: Conditional Basics Question 5
-      U3L20 Assessment6:
-        Conditional Basics Question 6: Conditional Basics Question 6
-      U3L20 Assessment7:
-        Conditional Basics Question 7: Conditional Basics Question 7
-      U3L20 Assessment8:
-        Conditional Basics Question 8: Conditional Basics Question 8
-      U3L20 Free Response Getting Started:
-        'Getting Started: Conditional Basics': 'Getting Started: Conditional Basics'
-      U3L20 Free Response Wrap Up:
-        'Wrap Up: Conditional Basics': 'Wrap Up: Conditional Basics'
-      U3L21 Assessment Wrap Up:
-        More Variables Wrap Up: More Variables Wrap Up
-      U3L22 Assessment:
-        Permanent Data Storage Assessment: Permanent Data Storage Assessment
-      U3L22 Free Response Getting Started:
-        'Permanent Data Storage: Getting Started': 'Permanent Data Storage: Getting Started'
-      U3L22 Reflection:
-        The Clicker Game with Permanent Data Storage: The Clicker Game with Permanent Data Storage
-      U3L23 Free Response Getting Started:
-        'Getting Started: A Look at Siri': 'Getting Started: A Look at Siri'
-      U3L23 Free Response Wrap Up:
-        'Free Response: Natural Language Processing': 'Free Response: Natural Language Processing'
-      U3L23 Free Response Wrap Up 2:
-        Natural Language Processing: Natural Language Processing
-      U3L24 Assessment 3:
-        Prove it works!: Prove it works!
-      U3L25 Assessment:
-        'Compound Conditionals: Assessment': 'Compound Conditionals: Assessment'
-      U3L25 Free Response 1:
-        'String and Substring: Assessment 3': 'String and Substring: Assessment 3'
-      U3L25 Free Response 2:
-        'String and Substring: Assessment 2': 'String and Substring: Assessment 2'
-      U3L25 Free Response 3:
-        'Free Response: String and Substring': 'Free Response: String and Substring'
-      U3L25 Free Response Getting Started:
-        'Compound Conditionals: Getting Started': 'Compound Conditionals: Getting Started'
-      U3L25 Free Response Wrap Up:
-        'Compound Conditionals: Wrap Up': 'Compound Conditionals: Wrap Up'
-      U3L26 Free Response Getting Started:
-        'String and Substring: Getting Started': 'String and Substring: Getting Started'
-      U3L26 Free Response Wrap Up:
-        'String and Substring: Assessment 1': 'String and Substring: Assessment 1'
-      U3L27 Assessment1:
-        Digital Assistant Reflection 1: Digital Assistant Reflection 1
-      U3L27 Assessment2:
-        Digital Assistant Reflection 2: Digital Assistant Reflection 2
-      U3L27 Assessment3:
-        'Digital Assistant Reflection 3 ': 'Digital Assistant Reflection 3 '
-      U3L27 Free Response Getting Started:
-        'Digital Assistant: Getting Started': 'Digital Assistant: Getting Started'
-      U3L28 Free Response Getting Started:
-        'While Loops Basics: Getting Started': 'While Loops Basics: Getting Started'
-      U3L28 Free Response Wrap Up:
-        'While Loop Basics: Wrap Up': 'While Loop Basics: Wrap Up'
-      U3L29 Free Response Getting Started:
-        'While Loops and Counting: Getting Started': 'While Loops and Counting: Getting Started'
-      U3L29 Free Response Wrap Up:
-        'While Loops and Counting: Wrap Up': 'While Loops and Counting: Wrap Up'
-      U3L30 Free Response Getting Started:
-        'Arrays: Getting Started': 'Arrays: Getting Started'
-      U3L30 Free Response Wrap Up:
-        'Arrays: Wrap Up': 'Arrays: Wrap Up'
-      U3L31 Assessment1:
-        'Photo Album: Question 1': 'Photo Album: Question 1'
-      U3L31 Assessment2:
-        'Photo Album: Question 2': 'Photo Album: Question 2'
-      U3L31 Assessment3:
-        'Photo Album: Question 3': 'Photo Album: Question 3'
-      U3L31 Free Response Getting Started:
-        'Photo Album: Getting Started': 'Photo Album: Getting Started'
-      U3L32 Free Response Getting Started:
-        'Images are Arrays: Getting Started': 'Images are Arrays: Getting Started'
-      U3L33 Free Response Getting Started:
-        'Altering Images: Getting Started': 'Altering Images: Getting Started'
-      U3L34 Free Response Getting Started:
-        'Hidden Images: Getting Started': 'Hidden Images: Getting Started'
-      U4L01 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L02 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L03 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L04 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L05 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L06 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L07 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L08 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L09 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L10 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L11 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L12 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L13 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L14 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L15 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L16 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L17 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L18 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L19 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L20 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L21 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L22 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L23 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4L24 Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
-      U4LXX Free Response:
-        'Free Response: Short description here': 'Free Response: Short description here'
       text match test:
         "(9-3)+(4*7)": "(9-3)+(4*7)"
         "(9-3)+4*7": "(9-3)+4*7"

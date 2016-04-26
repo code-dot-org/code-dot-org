@@ -19,10 +19,8 @@ nav: about_nav
  	- [District Manager - East Coast locations](#dcdm)
 - **Product**
 	- [Senior Backend Engineer / Infrastructure Lead](#backend)
-	- [Software Engineer (Full time or Part time)](#engineer)
 	- [UX / Visual Designer](#design)
 - **Professional Learning & Community**
-	- [VP of Professional Learning & Community](#vp)
 	- [Training and Development Specialist](#train)
 
 
@@ -215,29 +213,6 @@ The ideal candidate has the following qualifications:
 - Expertise in some of these technologies preferred: Ruby / Rails, JavaScript, Sinatra, SQL/Databases/MySQL, React
 
 
-## <a name="engineer" href="#engineer">Software Engineer (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is building interactive tutorials for computer science courses starting as early as Kindergarten through 12th grade. You can see our latest tutorials at [studio.code.org](https://studio.code.org). With tens of millions of students using our tutorials in over 45 languages and in 180+ countries, this is an opportunity to redefine how computer science is taught, not only in the USA but worldwide.
-
-**Skills and Qualifications:**
-
-- A Bachelor's degree or greater in Computer Science
-- **Minimum** of 3-5 years of experience as a software engineer working on Web sites or services
-- Experience with startup culture preferred 
-- Expertise/Experience in some of these technologies preferred
-	- Rails
-	- Ruby
-	- JavaScript
-	- Sinatra
-	- SQL/Databases/Mysql
-	- React
-	- Testing: Ruby, Selenium
-	- Angular
-
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
 ## <a name="design" href="#design">UX / Visual Designer (Seattle, WA)</a>
 **Job Summary:**
 
@@ -308,41 +283,6 @@ The ideal candidate has the following qualifications:
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>. Please include a writing sample, blog, or social media account. 
 
-## <a name="vp"href="#vp">VP of Professional Learning & Community  (Seattle, WA)</a>
-
-**Job Summary:**
-
-This critical senior management role would lead an integrated team responsible for ensuring a high-quality professional learning and professional development (PD) experience for Code.org’s K-12 partner teachers, schools, districts, and local organizations. 
-
-The primary responsibility of this role is to manage a team working to establish a nationwide network of facilitators and professional learning organizations, and to use this local PD capacity to train 100,000 in-service teachers to begin teaching computer science. 
-
-Responsibilities of this job include:
-
-- Ensure cross-team alignment of workflows with Professional Learning & Community, Product, District Outreach, and Curriculum Development teams
-- Oversee the implementation of all Professional Learning & Community program activities
-- Supervise the creation and management of high-level relationships with external partners
-- Develop a culture of efficiencies through the development of standardized, automated, and/or streamlined processes, including driving technical automation projects in collaboration with the engineering team
-- Utilize data to inform program improvements
-
-**Skills and Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- Bachelor’s degree (minimum) with 5+ years senior management experience, skilled in managing cross-functional teams
-- Demonstrated successful project management leadership in the scaling of a national program
-- Experience and aptitude for managing complex projects and relationships to realize successful project outcomes
-- Professional demeanor, possessing excellent communication, organizational, project management and interpersonal skills
-- Must be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team
-- A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must
-
-Additional desired strengths include:
-
-- Experience in developing or delivering online/asynchronous professional development and/or managing train-the-trainer models 
-- Experience in a fast growth start-up environment 
-- Understanding of and passion for equity in computer science and K-12 education
-
- 
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="train"href="#train">Training and Development Specialist (Seattle, WA)</a>
