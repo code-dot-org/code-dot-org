@@ -2,7 +2,7 @@
 - app, data = %i(app data).map{ |x| local_assigns[x] }
 
 - unless app == 'external'
-  .buttons{class: @level.properties['submittable'] ? 'submittable' : nil}
+  .buttons{class: @level.properties['submittable'] == 'true' ? 'submittable' : nil}
     - if local_assigns[:previous_button]
       %a.btn.btn-large.btn-primary.previousPageButton
         =t('previous_page')
