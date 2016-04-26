@@ -1,0 +1,54 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-26T15:47:13.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "console.log": null
+    },
+    "show_d_pad": "true",
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Use console.log to display the results of each expression. Then create your own.",
+    "markdown_instructions": "# Do This\r\n\r\n* Place each expression inside of a `console.log` command to display their results\r\n* What other expressions can you make? Try writing 3 of your own.\r\n",
+    "start_blocks": "// Place each expression inside of a console.log statement\r\n1 + 2;\r\n3 * 4 * 5;\r\n(1 + 9) / (4 - 2);\r\n\r\n// Add your own expressions on the lines below\r\n\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>
