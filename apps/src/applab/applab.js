@@ -44,6 +44,7 @@ var logToCloud = require('../logToCloud');
 var DialogButtons = require('../templates/DialogButtons');
 var executionLog = require('../executionLog');
 var annotationList = require('../acemode/annotationList');
+var Exporter = require('./Exporter');
 
 var createStore = require('../redux');
 var Provider = require('react-redux').Provider;
@@ -919,6 +920,20 @@ Applab.render = function () {
       <AppLabView {...nextProps} />
     </Provider>,
     Applab.reactMountPoint_);
+};
+
+// Expose on Applab object for use in code-studio
+Applab.canExportApp = function () {
+  return experiments.isEnabled('applab-export');
+};
+
+Applab.exportApp = function () {
+  return Exporter.exportApp(
+    // TODO: find another way to get this info that doesn't rely on globals.
+    window.dashboard && window.dashboard.project.getCurrentName() || 'my-app',
+    studioApp.editor.getValue(),
+    designMode.serializeToLevelHtml()
+  );
 };
 
 /**
