@@ -833,14 +833,8 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for adding a goal flag at a specified position
     helpUrl: '',
     init: function () {
-      var dropdown;
-      if (allowSpritesOutsidePlayspace) {
-        dropdown = new blockly.FieldDropdown(this.VALUES_EXTENDED);
-        dropdown.setValue(this.VALUES_EXTENDED[4][1]); // default to top-left
-      } else {
-        dropdown = new blockly.FieldDropdown(this.VALUES);
-        dropdown.setValue(this.VALUES[1][1]); // default to top-left
-      }
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.addGoal());
@@ -854,7 +848,6 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_addGoal.VALUES = POSITION_VALUES;
-  blockly.Blocks.studio_addGoal.VALUES_EXTENDED = POSITION_VALUES_EXTENDED;
 
   generator.studio_addGoal = function () {
     var value = this.getTitleValue('VALUE');
