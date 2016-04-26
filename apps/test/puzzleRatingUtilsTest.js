@@ -66,9 +66,14 @@ describe("Puzzle Rating Utils", function () {
   });
 
   describe('submitCachedPuzzleRatings', function () {
-    var postCount;
-    beforeEach(function (){
+    var postCount, originalAjax;
+    beforeEach( function (){
       postCount = 0;
+      originalAjax = $.ajax;
+    });
+
+    afterEach( function () {
+      $.ajax = originalAjax;
     });
 
     it('can submit multiple ratings', function () {

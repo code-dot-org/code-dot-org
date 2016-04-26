@@ -189,6 +189,13 @@ window.apps = {
       }
       return source;
     },
+    setInitialAnimationMetadata: function (animationMetadata) {
+      appOptions.initialAnimationMetadata = animationMetadata;
+    },
+    getAnimationMetadata: function () {
+      return appOptions.getAnimationMetadata &&
+          appOptions.getAnimationMetadata();
+    }
   },
 
   // Initialize the Blockly or Droplet app.
