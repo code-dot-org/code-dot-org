@@ -1499,7 +1499,7 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
  */
 Blockly.Block.prototype.setNextConnectionDisabled = function(disabled) {
   this.nextConnectionDisabled_ = disabled;
-  if (this.nextConnection && disabled) {
+  if (disabled && this.nextConnection && this.nextConnection.targetConnection) {
     this.nextConnection.disconnect();
   }
   this.setNextStatement(!disabled);
