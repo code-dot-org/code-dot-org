@@ -1516,27 +1516,26 @@ Artist.prototype.getFeedbackImage_ = function (width, height) {
     // For frozen skins, show everything - including background,
     // characters, and pattern - along with drawing.
     this.ctxFeedback.globalCompositeOperation = 'copy';
-    this.ctxFeedback.drawImage(this.ctxDisplay, 0, 0,
+    this.ctxFeedback.drawImage(this.ctxDisplay.canvas, 0, 0,
         this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
-    return this.ctxFeedback.canvas;
-  }
+  } else {
+    // Draw the images layer.
+    if (!this.level.discardBackground) {
+      this.ctxFeedback.globalCompositeOperation = 'source-over';
+      this.ctxFeedback.drawImage(this.ctxImages.canvas, 0, 0,
+          this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
+    }
 
-  // Draw the images layer.
-  if (!this.level.discardBackground) {
+    // Draw the predraw layer.
     this.ctxFeedback.globalCompositeOperation = 'source-over';
-    this.ctxFeedback.drawImage(this.ctxImages.canvas, 0, 0,
+    this.ctxFeedback.drawImage(this.ctxPredraw.canvas, 0, 0,
+        this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
+
+    // Draw the user layer.
+    this.ctxFeedback.globalCompositeOperation = 'source-over';
+    this.ctxFeedback.drawImage(this.ctxScratch.canvas, 0, 0,
         this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
   }
-
-  // Draw the predraw layer.
-  this.ctxFeedback.globalCompositeOperation = 'source-over';
-  this.ctxFeedback.drawImage(this.ctxPredraw.canvas, 0, 0,
-      this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
-
-  // Draw the user layer.
-  this.ctxFeedback.globalCompositeOperation = 'source-over';
-  this.ctxFeedback.drawImage(this.ctxScratch.canvas, 0, 0,
-      this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
 
   // Save the canvas as a png
   var image = this.ctxFeedback.canvas.toDataURL("image/png");
