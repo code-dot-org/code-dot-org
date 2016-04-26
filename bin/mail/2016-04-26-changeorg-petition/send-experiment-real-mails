@@ -1,0 +1,14 @@
+#!/bin/sh
+
+./send-to-mailing-list 4-22-petition-congress-1a-no  ./us-contacts-experiment-1.csv
+./send-to-mailing-list 4-22-petition-congress-1a-yes ./us-contacts-experiment-2.csv
+./send-to-mailing-list 4-22-petition-congress-1b-no  ./us-contacts-experiment-3.csv
+./send-to-mailing-list 4-22-petition-congress-1b-yes ./us-contacts-experiment-4.csv
+./send-to-mailing-list 4-22-petition-congress-2a-no  ./us-contacts-experiment-5.csv
+./send-to-mailing-list 4-22-petition-congress-2a-yes ./us-contacts-experiment-6.csv
+./send-to-mailing-list 4-22-petition-congress-2b-no  ./us-contacts-experiment-7.csv
+./send-to-mailing-list 4-22-petition-congress-2b-yes ./us-contacts-experiment-8.csv
+./send-to-mailing-list 4-22-petition-congress-3a-no  ./us-contacts-experiment-9.csv
+./send-to-mailing-list 4-22-petition-congress-3a-yes ./us-contacts-experiment-10.csv
+./send-to-mailing-list 4-22-petition-congress-3b-no  ./us-contacts-experiment-11.csv
+./send-to-mailing-list 4-22-petition-congress-3b-yes ./us-contacts-experiment-12.csv
