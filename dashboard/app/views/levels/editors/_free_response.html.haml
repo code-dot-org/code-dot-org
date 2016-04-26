@@ -14,3 +14,7 @@
   = f.label :solution
   %p Optional solution markdown to display to teachers.
   = f.text_area :solution, rows: 20
+.field
+  = f.label :allow_user_uploads
+  %p Let users upload files as solutions.
+  = boolean_check_box(f, :allow_user_uploads)

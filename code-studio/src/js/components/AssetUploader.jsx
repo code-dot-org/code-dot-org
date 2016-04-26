@@ -12,7 +12,7 @@ var AssetUploader = React.createClass({
     onUploadDone: React.PropTypes.func.isRequired,
     onUploadError: React.PropTypes.func,
     channelId: React.PropTypes.string.isRequired,
-    typeFilter: React.PropTypes.string,
+    allowedExtensions: React.PropTypes.string,
     uploadsEnabled: React.PropTypes.bool.isRequired
   },
 
@@ -30,7 +30,7 @@ var AssetUploader = React.createClass({
         <HiddenUploader
             ref="uploader"
             toUrl={'/v3/assets/' + this.props.channelId + '/'}
-            typeFilter={this.props.typeFilter}
+            allowedExtensions={this.props.allowedExtensions}
             onUploadStart={this.props.onUploadStart}
             onUploadDone={this.props.onUploadDone}
             onUploadError={this.props.onUploadError} />
