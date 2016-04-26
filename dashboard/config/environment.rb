@@ -1,4 +1,6 @@
 # Load the Rails application.
+ENV['RAILS_ENV'] = ENV['RACK_ENV'] = 'adhoc'
+
 require File.expand_path('../application', __FILE__)
 
 # Force UTF-8 Encodings.
