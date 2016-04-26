@@ -79,6 +79,11 @@ Resources:
             VolumeType: gp2
       UserData:
         Fn::Base64: <%=file.call('bootstrap.sh.erb')%>
+  WebServerEIP:
+    Type: AWS::EC2::EIP
+    Properties:
+      InstanceId: {Ref: WebServer}
+      Domain: vpc
   RootRole:
     Type: AWS::IAM::Role
     Properties:
@@ -144,7 +149,7 @@ Resources:
       ServiceToken: {'Fn::GetAtt': [CloudFrontProperties, Arn]}
 <%  else%>
           TTL: 60
-          ResourceRecords: [{'Fn::GetAtt':[WebServer, PublicIp]}]
+          ResourceRecords: [Ref: WebServerEIP]
 <%  end%>
 <%end %>
 <%  if cdn_enabled%>
@@ -156,7 +161,7 @@ Resources:
         - Name: "origin-<%=subdomain%>"
           Type: A
           TTL: 60
-          ResourceRecords: [{'Fn::GetAtt':[WebServer, PublicIp]}]
+          ResourceRecords: [Ref: WebServerEIP]
   # TODO remove once CloudFormation adds support for CloudFront ACM.
   CloudFrontProperties:
     Type: AWS::Lambda::Function

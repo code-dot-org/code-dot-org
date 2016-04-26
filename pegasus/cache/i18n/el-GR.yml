@@ -880,10 +880,12 @@
   dashboard_faq_k5: "Συχνές ερωτήσεις για το επίπεδο πρωτοβάθμιας εκπαίδευσης (K-5)"
   dashboard_announcements: "Ανακοινώσεις"
   dashboard_announce_view_all: "Προβολή όλων"
-  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
-    problem in computer science. Code Studio teachers are leading the way in educating
-    underrepresented minorities. Our annual survey shows record diversity in your
-    classrooms! Check out the numbers."
+  dashboard_announce_message: "<b>Η προθεσμία λήγει αυτή την Παρασκευή και εξακολουθούμε
+    να έχουμε μερικές ελεύθερες θέσεις για καθηγητές δευτεροβάθμιας εκπαίδευσης στις
+    συνεργαζόμενες συνοικίες.</b> Εγγραφείτε τώρα για να γίνετε μέλος στο ιδιαίτερα
+    αξιολογημένο πρόγραμμα επαγγελματικής μάθησης και να μάθετε να διδάξετε τις αρχές
+    της επιστήμης υπολογιστών AP. Ως τμήμα του προγράμματος μπορείτε να πάρετε δωρεάν
+    ταξίδι στο TeacherCon αυτό το καλοκαίρι και συνεχή υποστήριξη για όλο το χρόνο."
   dashboard_announce_button_text: "Μάθετε περισσότερα"
   dashboard_announce_hoc: "<b>15 Οκτωβρίου 2015</b> - Η Ώρα του Κώδικα πλησιάζει &mdash;
     κάθε συμμετέχον διοργανωτής θα λάβει μια κάρτα δώρου για το Amazon.com ή το Microsoft's
@@ -1813,8 +1815,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "παίξε"
   artist_shortcode: art
-  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
-    (or a teacher you know) want to join a nationwide community of educators working
-    to change the face of computer science education? We'll be accepting applications
-    from middle and high school teachers in our partner districts for our year-long
-    Exploring Computer Science Professional Learning Program until April 22nd."

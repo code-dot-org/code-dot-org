@@ -22,35 +22,62 @@ function initLevelGroup(
     }
   }
 
-  /**
-   * Construct an array of all the level results. When submitted it's something
-   * like this:
-   *
-   * [{"level_id":1977,"result":"0"},{"level_id":2007,"result":"3"},{"level_id":1939,"result":"2,1"}]
-   */
   window.getResult = function () {
+    // Construct an array of all the level results.
+    // When submitted it's something like this:
+    //
+    //   [{"level_id":1977,"result":"0"},{"level_id":2007,"result":"3"},{"level_id":1939,"result":"2,1"}]
+    //
+
     // Add any new results to the existing lastAttempt results.
-    var levels = window.levelGroup.levels;
-    Object.keys(levels).forEach(function (levelId) {
-      var levelResult = levels[levelId].getCurrentAnswer().toString();
-      lastAttempt[levelId] = {result: levelResult};
-    });
+    for (var i = 0; i < levelCount; i++) {
+      var levelName = "level_" + i;
+      var levelResult = window[levelName].getCurrentAnswer().toString();
+      var levelId = window[levelName].getLevelId();
+
+      // But before storing, if we had a previous result for the same level,
+      // remove that from the array, since we want to overwrite that previous
+      // answer.
+      for (var j = lastAttempt.length - 1; j >= 0; j--) {
+        if (lastAttempt[j].level_id == levelId) {
+          lastAttempt.splice(j, 1);
+        }
+      }
+
+      lastAttempt.push({level_id: levelId, result: levelResult});
+    }
+
+    var response = JSON.stringify(lastAttempt);
+
 
     var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
 
+    var result;
+    var submitted;
+
+    if (window.appOptions.level.submittable || this.forceSubmittable) {
+      result = true;
+      submitted = true;
+    } else {
+      result = true; // this.validateAnswers();
+      submitted = false;
+    }
+
     return {
-      "response": JSON.stringify(lastAttempt),
+      "response": response,
       "result": true,
       "errorType": null,
-      "submitted": window.appOptions.level.submittable || forceSubmittable
+      "submitted": submitted
     };
   };
 
   function nextPage() {
-    location.href = location.href.replace("/page/" + page, "/page/" + (page + 1));
+    var newLocation = window.location.href.replace("/page/" + page, "/page/" + (page+1));
+    window.location.href = newLocation;
   }
 
-  $(".nextPageButton").click(function () {
+  $(".nextPageButton").click($.proxy(function (event) {
+
     // Are we read-only?  This can be because we're a teacher OR because an answer
     // has been previously submitted.
     if (window.appOptions.readonlyWorkspace) {
@@ -80,10 +107,11 @@ function initLevelGroup(
         }
       });
     }
-  });
+  }, this));
 
   // Unsubmit button should only be available when this is a standalone level.
   $('.unsubmitButton').click(function () {
+
     var dialog = new window.Dialog({
       body:
         '<div class="modal-content no-modal-icon">' +
@@ -102,7 +130,7 @@ function initLevelGroup(
     dialogDiv.find('#continue-button').click(function () {
       $.post(window.appOptions.unsubmitUrl,
         {"_method": 'PUT', user_level: {submitted: false}},
-        function () {
+        function (data) {
           // Just reload so that the progress in the header is shown correctly.
           location.reload();
         }
@@ -113,4 +141,5 @@ function initLevelGroup(
       dialog.hide();
     });
   });
+
 }
