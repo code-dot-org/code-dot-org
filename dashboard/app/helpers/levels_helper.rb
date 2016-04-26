@@ -228,7 +228,7 @@ module LevelsHelper
     app_options
   end
 
-  # Options hash for Multi/Match/FreeResponse/etc levels
+  # Options hash for Multi/Match/FreeResponse/TextMatch/ContractMatch/External/LevelGroup levels
   def question_options
     app_options = {}
 
