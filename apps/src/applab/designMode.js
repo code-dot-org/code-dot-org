@@ -3,7 +3,6 @@
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var DesignWorkspace = require('./DesignWorkspace');
-var showAssetManager = require('../assetManagement/show');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
@@ -993,7 +992,7 @@ designMode.renderDesignWorkspace = function (element) {
     onDuplicate: designMode.onDuplicate.bind(this, element),
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
     onInsertEvent: designMode.onInsertEvent.bind(this),
-    handleManageAssets: showAssetManager,
+    handleManageAssets: dashboard.assets.showAssetManager,
     isDimmed: Applab.running
   };
   ReactDOM.render(React.createElement(DesignWorkspace, props), designWorkspace);
