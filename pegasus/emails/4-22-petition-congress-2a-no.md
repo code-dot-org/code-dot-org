@@ -3,24 +3,21 @@ from: 'Hadi Partovi <hadi_partovi@code.org>'
 subject: "An unprecedented group unites for computer science"
 ---
 
-Whether you’ve supported Code.org as a teacher, parent, or volunteer, or if you’ve just tried one Hour of Code, today you’re part of a historic moment for education in America.
- 
-[An unprecedented group of over 90 of America’s greatest leaders](http://bit.ly/computersciencepetition) have joined in a bipartisan message: to ask Congress to support computer science in our schools. Not just tech leaders like Mark Zuckerberg or Bill Gates, but 27 governors, education leaders, and CEOs of America’s top retailers, airlines, manufacturers, and more.
+Whether you’ve supported Code.org as a teacher, parent, or volunteer, or you’ve just tried one Hour of Code, today you’re part of a historic moment for education in America.
+
+An unprecedented group of [over 90 of America’s greatest leaders](http://bit.ly/computersciencepetition) have joined in a bipartisan message: to ask Congress to support computer science in our schools. Support comes not just from tech leaders such as Mark Zuckerberg, Tim Cook, and Bill Gates, but includes republican and democratic governors in 27 states, education leaders, CEOs of America’s top retailers, airlines, manufacturers, and more are calling on Congress to support this movement.
 
 I can’t remember the last time I saw [a list like this](http://bit.ly/computersciencepetition) unite on any issue. It’s especially refreshing in today’s age of divided politics.
  
-Why? Because this is the most bipartisan idea in America. Computer science has become fundamental for every field of study, for individual opportunity, and for national growth. It’s time our schools offered students a chance to learn it.
+Why? Because this is the most bipartisan idea in America. Computer science has become fundamental for ***every*** field of study, for individual opportunity, and for national growth. It’s time our schools offered students a chance to learn it.
+
+*Polls show 90% of Americans agree on this, but nothing will happen unless our voices are heard. Your representatives must hear **from you**.*
  
-Polls show 90% of Americans agree on this, but nothing will happen unless our voices are heard. Your representatives must hear from you.
- 
-I’ve dedicated my life to this issue, and I’m asking your help.
+I’ve dedicated my life to this issue, and I’m asking for your help.
  
 [Please, see the amazing list of leaders and what they have to say, and add your name too.](http://bit.ly/computersciencepetition)
  
 Together we can change the world, for all our children.
-
-Thank you,
-Hadi Partovi, Code.org
 
 Thank you,
 <br/>

@@ -9,7 +9,7 @@ Whether you’ve supported Code.org as a teacher, parent, or volunteer, or you�
 <a href="http://bit.ly/computersciencepetition"><img src="https://staging.code.org/images/petitioncaptions.png" width="100%"></a>
 </br>
 
-An unprecedented group of [over 90 of America’s greatest leaders](http://bit.ly/computersciencepetition) have joined in a bipartisan message: to ask Congress to support computer science in our schools. Support comes not just from tech leaders such as Mark Zuckerberg, Tim Cook, and Bill Gates, but includes republican and democratic governors in 27 states, education leaders, CEOs of America’s top retailers, airlines, manufacturers, and more are calling on Congress to support this movement.
+An unprecedented group of [over 90 of America’s greatest leaders](http://bit.ly/computersciencepetition) have joined in a bipartisan message: to ask Congress to support computer science in our schools. 
 
 I can’t remember the last time I saw [a list like this](http://bit.ly/computersciencepetition) unite on any issue. It’s especially refreshing in today’s age of divided politics.
  
