@@ -511,6 +511,11 @@ gl-ES:
   dashboard_action_remove_confirm: Excluír?
   dashboard_action_done: Feito
   dashboard_action_required: obrigatorio
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Páxina inicial do profesor
   dashboard_navigation_section_student_progress: Contas e progreso do alumno
   dashboard_navigation_section_teacher_progress: O progreso do teu curso
@@ -528,6 +533,17 @@ gl-ES:
   dashboard_navigation_view_stats: Ver estatísticas
   dashboard_navigation_section: 'Clase: %{section_name}'
   dashboard_navigation_student: 'Alumno: %{student_name}'
+  dashboard_progress_not_started: non iniciado
+  dashboard_progress_in_progress: en progreso
+  dashboard_progress_not_completed: non concluído
+  dashboard_progress_completed_too_many_blocks: concluído, moitos bloques
+  dashboard_progress_completed_perfect: concluído, perfecto
+  dashboard_progress_furthest_level_attempted: tentativa para o nivel máis avanzado
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nova sección
   dashboard_sections_jumbotron_instruction: Crea novas seccións e agrega alumnos. As seccións axudan na organización dos alumnos en grupos menores para que poidas seguir o seu progreso e administrar as súas contas.
   dashboard_sections_table_section: Sección
@@ -543,6 +559,19 @@ gl-ES:
   dashboard_sections_secret_none: 'Se quixeses que os teus alumnos administren as súas propias contas, incluíndo os seus contrasinais, escolle o tipo secreto <b>ningún</b>.'
   dashboard_sections_print_secrets: Podes imprimir unha folla con tarxetas contendo as informacións da conta para distribuír individualmente aos teus alumnos.
   dashboard_sections_switch_section: 'Trocar de sección:'
+  dashboard_sections_close: Pechar
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Engadir alumnas/os
   dashboard_students_add_students: Agregar varios alumnas/os
   dashboard_students_add_multiple: 'Teclea ou apega os nomes dos teus alumnos, un por liña:'
@@ -609,13 +638,6 @@ gl-ES:
   dashboard_login_picture: Imaxe
   dashboard_login_none: E-mail
   dashboard_new_password: novo contrasinal
-  dashboard_progress_not_started: non iniciado
-  dashboard_progress_in_progress: en progreso
-  dashboard_progress_not_completed: non concluído
-  dashboard_progress_completed_too_many_blocks: concluído, moitos bloques
-  dashboard_progress_completed_perfect: concluído, perfecto
-  dashboard_progress_furthest_level_attempted: tentativa para o nivel máis avanzado
-  dashboard_progress_submitted: submitted
   dashboard_stage: Etapa
   dashboard_puzzle: Quebracabeza
   dashboard_question: Pregunta
@@ -650,11 +672,8 @@ gl-ES:
   dashboard_faq_k5: Preguntas frecuentes sobre Primaria
   dashboard_announcements: Anuncios
   dashboard_announce_view_all: Ver todos
-  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
-  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
+  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
   dashboard_announce_button_text: Aprende máis
-  dashboard_announce_hoc: '<b>23 de novembro 2015</b> -Gostarías de ter un informártico para te axudar durante a hora do Código? Máis de 7.000 voluntarios procuran motivar os teus estudantes visitando a túa clase ou mediante vídeo-conferencia. Bota un ollo ao mapa de voluntarios para contactar voluntarios na túa zona.'
-  dashboard_announce_playlab: '<b>4 de decembro de 2015</b> - A Hora do Código chegou! Proba 50 titoriais para todas as idades e dispositivos. Novidades desta semana: programa as túas propias historias e xogos en novos laboratorios, coa Era do Xeo e Gumball.'
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de decembro!'
   code_sign_up: Inscríbete para participar durante a Semana da Educación en informática
   learn_more: Proba agora

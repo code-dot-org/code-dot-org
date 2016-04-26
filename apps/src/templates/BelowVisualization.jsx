@@ -1,10 +1,17 @@
 var commonStyles = require('../commonStyles');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
+var InputOutputTable = require('./InputOutputTable');
 
+/**
+ * The area below our visualization that is share dby all apps.
+ */
 var BelowVisualization = function (props) {
   return (
     <ProtectedStatefulDiv id="belowVisualization">
-      <div id="bubble" className="clearfix">
+      <div
+          id="bubble"
+          className="clearfix"
+          style={props.instructionsInTopPane ? commonStyles.hidden : undefined}>
         <table id="prompt-table">
           <tbody>
             <tr>
@@ -19,7 +26,7 @@ var BelowVisualization = function (props) {
           </tbody>
         </table>
 
-        {/* TODO - other apps have data.inputOutputTable here */}
+        {props.inputOutputTable && <InputOutputTable data={props.inputOutputTable}/>}
 
         <div id="ani-gif-preview-wrapper" style={commonStyles.hidden}>
           <div id="ani-gif-preview">
@@ -29,5 +36,13 @@ var BelowVisualization = function (props) {
     </ProtectedStatefulDiv>
   );
 };
+
+BelowVisualization.propTypes = {
+  inputOutputTable: React.PropTypes.arrayOf(
+    React.PropTypes.arrayOf(React.PropTypes.number)
+  ),
+  instructionsInTopPane: React.PropTypes.bool
+};
+
 
 module.exports = BelowVisualization;

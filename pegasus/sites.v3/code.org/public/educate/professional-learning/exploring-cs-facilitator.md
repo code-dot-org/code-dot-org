@@ -3,7 +3,7 @@ title: ECS Facilitator Program
 nav: educate_nav
 ---
 # Become an Exploring Computer Science Facilitator
-**2016 Application Update: The application process closed March 15th. We are reviewing applications and accepting facilitators on a rolling basis through April 22nd. We will update everyone of their acceptance status by April 22nd.**
+**2016 Application Update: The application process closed March 15th. We are reviewing applications and accepting facilitators on a rolling basis through April 29nd. We will update everyone of their acceptance status by April 29nd.**
 
 Code.org is looking to partner with experienced high school or college level computer science educators to deliver multiple in-person workshops to local high school teachers teaching the [Exploring Computer Science](http://www.exploringcs.org/) curriculum.
 

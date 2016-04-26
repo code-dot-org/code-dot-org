@@ -25,7 +25,10 @@ en:
   welcome_back: 'crwdns3633:0%{name}crwdne3633:0'
   submit: crwdns35673:0crwdne35673:0
   unsubmit: crwdns56122:0crwdne56122:0
+  previous_page: crwdns56442:0crwdne56442:0
   next_page: crwdns56247:0crwdne56247:0
+  cancel: crwdns56443:0crwdne56443:0
+  okay: crwdns56444:0crwdne56444:0
   heading_x_of_y: 'crwdns56275:0%{heading}crwdnd56275:0%{x}crwdnd56275:0%{y}crwdne56275:0'
   add_teacher_form:
     code:
@@ -444,6 +447,11 @@ en:
     minecraft:
       title: crwdns51940:0crwdne51940:0
       body: crwdns51941:0crwdne51941:0
+    unplugged:
+      title: crwdns56445:0crwdne56445:0
+      audience: crwdns56446:0crwdne56446:0
+      body: crwdns56447:0crwdne56447:0
+      body_short: crwdns56448:0crwdne56448:0
   gallery:
     students_drew_these_with_code: crwdns5091:0crwdne5091:0
     students_made_these_with_code: crwdns20426:0crwdne20426:0
@@ -487,6 +495,12 @@ en:
     wrong_body: crwdns56224:0crwdne56224:0
     correct_title: crwdns56225:0crwdne56225:0
     correct_body: crwdns56226:0crwdne56226:0
+    unsubmit-title: crwdns56449:0crwdne56449:0
+    unsubmit-body: crwdns56450:0crwdne56450:0
+    submit-incomplete-title: crwdns56451:0crwdne56451:0
+    submit-incomplete-body: crwdns56452:0crwdne56452:0
+    submit-complete-title: crwdns56453:0crwdne56453:0
+    submit-complete-body: crwdns56454:0crwdne56454:0
   match:
     wrong_title: crwdns5098:0crwdne5098:0
     wrong_body: crwdns5099:0crwdne5099:0

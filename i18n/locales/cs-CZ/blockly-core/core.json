@@ -25,7 +25,7 @@
   "COLOUR_RGB_RED":"červená",
   "COLOUR_RGB_TITLE":"vybarvit s",
   "COLOUR_RGB_TOOLTIP":"Vytvoř barvu se zadaným množstvím červené, zelené a modré.  Všechny hodnoty musí být mezi 0 a 100.",
-  "CONFIRM_CREATE_VARIABLE":"Create",
+  "CONFIRM_CREATE_VARIABLE":"Vytvořit",
   "CONFIRM_DELETE_FUNCTION_MESSAGE":"Varování! Opravdu chceš odstranit %1?",
   "CONFIRM_RENAME_VARIABLE":"Přejmenovat",
   "CONTRACT_EDITOR_HEADER":"Návrh návodu",
