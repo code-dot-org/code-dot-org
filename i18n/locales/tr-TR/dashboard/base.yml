@@ -25,7 +25,10 @@ tr:
   welcome_back: 'Hoş geldiniz %{name}'
   submit: Gönder
   unsubmit: Gönderme
+  previous_page: Previous page
   next_page: Sonraki Sayfa
+  cancel: İptal
+  okay: Tamam
   heading_x_of_y: '%{heading} (sayfa %{x}, %{y})'
   add_teacher_form:
     code:
@@ -453,6 +456,11 @@ tr:
     minecraft:
       title: Minecraft
       body: Kod aracılığıyla Minecraft dünyasını keşfedin.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Öğrenciler kod ile bunu çizdiler!
     students_made_these_with_code: Öğrenciler bunları kod ile yaptı!
@@ -496,6 +504,12 @@ tr:
     wrong_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
     correct_title: Teşekkür ederiz
     correct_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Yanlış çözüm
     wrong_body: 'Girdiğiniz çözüm doğru değil.  Lütfen tekrar deneyin!'

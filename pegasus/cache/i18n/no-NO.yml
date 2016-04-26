@@ -645,6 +645,11 @@
   dashboard_action_remove_confirm: Fjerne?
   dashboard_action_done: Ferdig
   dashboard_action_required: obligatorisk
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Lærar heimeside
   dashboard_navigation_section_student_progress: Elevkontoar og framgang
   dashboard_navigation_section_teacher_progress: Fremdriften din
@@ -662,6 +667,18 @@
   dashboard_navigation_view_stats: Vis statistikk
   dashboard_navigation_section: 'Seksjon: %{section_name}'
   dashboard_navigation_student: 'Elev: %{student_name}'
+  dashboard_progress_not_started: ikkje starta
+  dashboard_progress_in_progress: pågår
+  dashboard_progress_not_completed: ikkje fullført
+  dashboard_progress_completed_too_many_blocks: fullført, for mange blokker
+  dashboard_progress_completed_perfect: Perfekt fullført
+  dashboard_progress_furthest_level_attempted: høyeste nivå forsøkt
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Ny seksjon
   dashboard_sections_jumbotron_instruction: Opprett nye inndelingar og legg til elevar.
     Seksjonar hjelper deg med å organisere elevar i mindre grupper, slik at du kan
@@ -684,6 +701,26 @@
   dashboard_sections_print_secrets: Du kan deretter skrive ut eit ark med kort som
     inneheld kontoinformasjon som du kan distribuere individuelt til elevane.
   dashboard_sections_switch_section: 'Bytt seksjon:'
+  dashboard_sections_close: Lukk
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Legg til elev
   dashboard_students_add_students: Legg til fleire elevar
   dashboard_students_add_multiple: 'Skriv eller lim inn namna på elevane dine, ein
@@ -761,13 +798,6 @@
   dashboard_login_picture: Bilde
   dashboard_login_none: E-post
   dashboard_new_password: nytt passord
-  dashboard_progress_not_started: ikkje starta
-  dashboard_progress_in_progress: pågår
-  dashboard_progress_not_completed: ikkje fullført
-  dashboard_progress_completed_too_many_blocks: fullført, for mange blokker
-  dashboard_progress_completed_perfect: Perfekt fullført
-  dashboard_progress_furthest_level_attempted: høyeste nivå forsøkt
-  dashboard_progress_submitted: submitted
   dashboard_stage: Nivå
   dashboard_puzzle: Oppgåve
   dashboard_question: Spørsmål
@@ -809,18 +839,7 @@
     problem in computer science. Code Studio teachers are leading the way in educating
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
-  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you
-    (or a teacher you know) want to learn how to teach a full year introductory high
-    school computer science class students will love? You don't need any prior experience
-    to join our free workshops for our Exploring Computer Science course. Sign up
-    by April 22nd. "
   dashboard_announce_button_text: Lær meir
-  dashboard_announce_hoc: "<b>9 November 2015</b> - en ny time av koden tutorial er
-    her, med kommende film Star Wars: The Force våkner. Arbeide med Rey å veilede
-    nye droid, BB-8, gjennom et oppdrag. Deretter delta Leia for å opprette og dele
-    dine egne spill i en galakse langt, langt borte."
-  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
   code_hoc_coming: Kodetimen er her - 8.- 14. desember!
   code_sign_up: Registrer deg for å delta i Kodeveka (CS Education Week)
   learn_more: Lær meir
@@ -951,7 +970,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: App Lab
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Minstealder 13 år
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds

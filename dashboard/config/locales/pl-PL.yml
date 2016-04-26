@@ -25,7 +25,10 @@
   welcome_back: Witaj z powrotem, %{name}
   submit: Wyślij
   unsubmit: Nieprzesłane
+  previous_page: Previous page
   next_page: Następna strona
+  cancel: Anuluj
+  okay: OK
   heading_x_of_y: "%{heading} (strona %{x} z%{y})"
   add_teacher_form:
     code:
@@ -553,6 +556,15 @@
     minecraft:
       title: Minecraft
       body: Odkrywaj świat Minecraft poprzez kodowanie.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: Uczniowie narysowali to z pomocą kodu!
     students_made_these_with_code: Uczniowie wykonali to z pomocą kodu!
@@ -603,6 +615,15 @@
     wrong_body: Dziękujemy za wysłanie odpowiedzi.
     correct_title: Dziękujemy
     correct_body: Dziękujemy za wysłanie odpowiedzi.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Niepoprawne rozwiązanie
     wrong_body: Wprowadzone przez Ciebie rozwiązanie nie jest poprawne. Spróbuj ponownie!
