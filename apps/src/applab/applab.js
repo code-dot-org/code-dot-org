@@ -508,7 +508,11 @@ Applab.onTick = function () {
   queueOnTick();
 
   if (Applab.JSInterpreter) {
-    Applab.JSInterpreter.executeInterpreter(Applab.tickCount === 1);
+    // FF timing bug with prompt can result in us trying to executeInterpreter
+    // while we're already inside an execution. This blocks that.
+    if (Applab.JSInterpreter.executeLoopDepth === 0) {
+      Applab.JSInterpreter.executeInterpreter(Applab.tickCount === 1);
+    }
   } else {
     Applab.executeNativeJS();
   }
