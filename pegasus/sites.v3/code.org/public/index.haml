@@ -36,7 +36,7 @@ social:
 
   #petitionexpand{style: "display: none"}
     %script{:src=>"/js/jquery.placeholder.js"}
-    - if request.location.country_code == 'US' || (rack_env != :production && request.location.country_code == 'RD')
+    - if request.locale == 'en-US'
       = view :congress_link
     - else
       - if DB[:cdo_homepage].where(type_s: "petition")
