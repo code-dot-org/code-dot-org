@@ -5,8 +5,7 @@ var PageAction = utils.makeEnum(
   'SanitizedLevelHtml',
   'UserJavaScriptError',
   'RunButtonClick',
-  'StartWebRequest',
-  'StaticResourceFetchError'
+  'StartWebRequest'
 );
 
 var MAX_FIELD_LENGTH = 4095;
