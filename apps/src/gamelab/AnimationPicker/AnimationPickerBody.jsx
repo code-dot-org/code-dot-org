@@ -26,6 +26,15 @@ var AnimationPickerBody = React.createClass({
             icon="upload"
             onClick={this.props.onUploadClick} />
         <AnimationPickerListItem
+            sourceUrl={'/blockly/media/gamelab/library/asterisk_circle.png'}
+            sourceWidth={396}
+            sourceHeight={378}
+            frameWidth={132}
+            frameHeight={126}
+            frameCount={9}
+            frameRate={15}
+            label="asterisk_circle (9)"/>
+        <AnimationPickerListItem
             sourceUrl={'/blockly/media/gamelab/library/ghost_standing.png'}
             sourceWidth={504}
             sourceHeight={158}
