@@ -5,6 +5,9 @@ class CreatePairedUserLevels < ActiveRecord::Migration
       t.integer :navigator_user_level_id
 
       t.timestamps null: false
+
+      t.index :driver_user_level_id
+      t.index :navigator_user_level_id
     end
   end
 end

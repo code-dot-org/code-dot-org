@@ -314,6 +314,9 @@ ActiveRecord::Schema.define(version: 20160418185704) do
     t.datetime "updated_at",                        null: false
   end
 
+  add_index "paired_user_levels", ["driver_user_level_id"], name: "index_paired_user_levels_on_driver_user_level_id", using: :btree
+  add_index "paired_user_levels", ["navigator_user_level_id"], name: "index_paired_user_levels_on_navigator_user_level_id", using: :btree
+
   create_table "pd_attendances", force: :cascade do |t|
     t.integer  "pd_session_id", limit: 4, null: false
     t.integer  "teacher_id",    limit: 4, null: false
