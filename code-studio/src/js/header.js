@@ -183,10 +183,7 @@ function shareProject() {
       abuseContact: i18n.t('project.abuse.contact_us'),
       channelId: dashboard.project.getCurrentId(),
       appType: dashboard.project.getStandaloneApp(),
-      onClickPopup: popupWindow,
-      // TODO: Can I not proliferate the use of global references to Applab somehow?
-      onClickExport: window.Applab && window.Applab.canExportApp() ?
-        window.Applab.exportApp : null,
+      onClickPopup: popupWindow
     });
     ReactDOM.render(dialog, dialogDom);
   });
