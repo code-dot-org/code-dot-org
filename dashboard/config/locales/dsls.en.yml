@@ -92,6 +92,8 @@ en:
       CSD U3 Variables STOP showing value: {}
       CSD U3 Variables STOP using value: {}
       CSD U3 Variables console write: {}
+      CSD U3 Variables2 SFLP: {}
+      CSD U3 Variables2 STOP intro expressions: {}
       CSD Variables STOP variables in draw loop: {}
       CSD-U3-SFLP Draw Loop: {}
       CSD-U3-SFLP Simple Drawing: {}
@@ -503,6 +505,7 @@ en:
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: An exploration of Growth Mindset
         What is Growth Mindset?: What is Growth Mindset?
+      ECSPD1 pre survey: {}
       ECSPD3-u5 about: {}
       ECSPD3-u5 challenge details: {}
       ECSPD3-u5 challenge inside: {}

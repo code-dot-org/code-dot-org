@@ -1,0 +1,48 @@
+title 'Computer Science in Algebra Facilitator Pre Work'
+description "Teach Algebra through Functional Programming"
+description_short "Teach Algebra through Functional Programming"
+login_required 'true'
+pd 'true'
+
+stage 'Introduction to PD'
+level 'PDAlg Intro'
+level 'PDECS tour'
+
+stage 'Course Overview'
+level 'PDAlg Curriculum Overview'
+level 'PDAlg Scope'
+level 'PDAlg Implementation'
+level 'PDAlg Course Goals'
+level 'PDAlg Attitude Survey'
+level 'AlgPD Break'
+
+stage 'Why Computer Science belongs in Algebra'
+level 'PDAlg functions'
+level 'PDAlg hard video'
+level 'PDAlg functional'
+
+stage 'Evaluation Blocks'
+level 'PDAlg Blocks Video'
+level 'Calc Circles of Eval 1'
+level 'Calc Circles of Eval 2'
+level 'Calc Circles of Eval 3'
+level 'Calc Circles of Eval 5'
+level 'Calc Circles of Eval 6'
+level 'Calc Circles of Eval 7'
+level 'Calc Circles of Eval 8'
+level 'Calc Circles of Eval 9'
+level 'Calc Circles of Eval Free Play'
+
+#stage 'Computer Science Pedagogy'
+#level 'PDK5 Strategies O'
+#level 'PDK5 Pair Programming 1'
+#level 'PDK5 Pair programming match'
+#level 'PDK5 Problem solving'
+#level 'PDK5 Classroom Culture C'
+#level 'PDK5 Classroom Culture 2'
+#level 'PDK5 Strategies F'
+
+stage 'Teacher Dashboard'
+level 'PDK5 Teacher Dashboard 1'
+level 'PDK5 Teacher Dashboard 2'
+level 'PDAlg Teacher Dashboard'
