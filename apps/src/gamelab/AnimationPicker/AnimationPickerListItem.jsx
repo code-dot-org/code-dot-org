@@ -22,7 +22,10 @@ var styles = {
     borderColor: color.light_gray,
     borderWidth: THUMBNAIL_BORDER_WIDTH,
     borderRadius: 12,
-    cursor: 'pointer'
+    cursor: 'pointer',
+    ':hover': {
+      borderColor: color.purple
+    }
   },
   thumbnailIcon: {
     color: color.white,
