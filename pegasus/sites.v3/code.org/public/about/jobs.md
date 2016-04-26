@@ -19,7 +19,6 @@ nav: about_nav
  	- [District Manager - East Coast locations](#dcdm)
 - **Product**
 	- [Senior Backend Engineer / Infrastructure Lead](#backend)
-	- [Software Engineer (Full time or Part time)](#engineer)
 	- [UX / Visual Designer](#design)
 - **Professional Learning & Community**
 	- [VP of Professional Learning & Community](#vp)
@@ -214,29 +213,6 @@ The ideal candidate has the following qualifications:
 - Experience building developer infrastructure
 - Expertise in some of these technologies preferred: Ruby / Rails, JavaScript, Sinatra, SQL/Databases/MySQL, React
 
-
-## <a name="engineer" href="#engineer">Software Engineer (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is building interactive tutorials for computer science courses starting as early as Kindergarten through 12th grade. You can see our latest tutorials at [studio.code.org](https://studio.code.org). With tens of millions of students using our tutorials in over 45 languages and in 180+ countries, this is an opportunity to redefine how computer science is taught, not only in the USA but worldwide.
-
-**Skills and Qualifications:**
-
-- A Bachelor's degree or greater in Computer Science
-- **Minimum** of 3-5 years of experience as a software engineer working on Web sites or services
-- Experience with startup culture preferred 
-- Expertise/Experience in some of these technologies preferred
-	- Rails
-	- Ruby
-	- JavaScript
-	- Sinatra
-	- SQL/Databases/Mysql
-	- React
-	- Testing: Ruby, Selenium
-	- Angular
-
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="design" href="#design">UX / Visual Designer (Seattle, WA)</a>
 **Job Summary:**
