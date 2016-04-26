@@ -1,3 +1,3 @@
 #!/bin/sh
 
-../send-to-mailing-list __TEMPLATE_TBD__ ../mailing-common/test-params-us.csv
+../send-to-mailing-list 4-22-petition-congress-3b-no ../mailing-common/test-params-us.csv
