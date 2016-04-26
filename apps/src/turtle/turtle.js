@@ -657,6 +657,10 @@ Artist.prototype.display = function () {
   this.ctxDisplay.globalCompositeOperation = 'source-over';
   this.ctxDisplay.drawImage(this.ctxImages.canvas, 0, 0);
 
+  // Draw the predraw layer.
+  this.ctxDisplay.globalCompositeOperation = 'source-over';
+  this.ctxDisplay.drawImage(this.ctxPredraw.canvas, 0, 0);
+
   // Draw the answer layer.
   if (this.skin.id == "anna" || this.skin.id == "elsa") {
     this.ctxDisplay.globalAlpha = 0.4;
@@ -665,10 +669,6 @@ Artist.prototype.display = function () {
   }
   this.ctxDisplay.drawImage(this.ctxAnswer.canvas, 0, 0);
   this.ctxDisplay.globalAlpha = 1;
-
-  // Draw the predraw layer.
-  this.ctxDisplay.globalCompositeOperation = 'source-over';
-  this.ctxDisplay.drawImage(this.ctxPredraw.canvas, 0, 0);
 
   // Draw the pattern layer.
   this.ctxDisplay.globalCompositeOperation = 'source-over';
@@ -1323,14 +1323,6 @@ Artist.prototype.isCorrect_ = function (pixelErrors, permittedErrors) {
  * this.studioApp_.displayFeedback when appropriate
  */
 Artist.prototype.displayFeedback_ = function () {
-  var feedbackImageCanvas;
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
-    // For frozen skins, show background and characters along with drawing
-    feedbackImageCanvas = this.ctxDisplay;
-  } else {
-    feedbackImageCanvas = this.ctxScratch;
-  }
-
   var level = this.level;
 
   this.studioApp_.displayFeedback({
@@ -1340,7 +1332,7 @@ Artist.prototype.displayFeedback_ = function () {
     message: this.message,
     response: this.response,
     level: level,
-    feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png"),
+    feedbackImage: this.getFeedbackImage_(180, 180),
     // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
     showingSharing: !level.disableSharing && (level.freePlay || level.impressive),
     // impressive levels are already saved
@@ -1492,7 +1484,7 @@ Artist.prototype.checkAnswer = function () {
   // Get the canvas data for feedback.
   if (this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL &&
     !isFrozen && (level.freePlay || level.impressive)) {
-    reportData.image = this.getFeedbackImage_();
+    reportData.image = this.getFeedbackImage_().split(',')[1];
   }
 
   this.studioApp_.report(reportData);
@@ -1505,20 +1497,55 @@ Artist.prototype.checkAnswer = function () {
   // The call to displayFeedback() will happen later in onReportComplete()
 };
 
-Artist.prototype.getFeedbackImage_ = function () {
-  var feedbackImageCanvas;
+Artist.prototype.getFeedbackImage_ = function (width, height) {
+
+  var origWidth = this.ctxFeedback.canvas.width;
+  var origHeight = this.ctxFeedback.canvas.height;
+
+  this.ctxFeedback.canvas.width = width || origWidth;
+  this.ctxFeedback.canvas.height = height || origHeight;
+
+  // Clear the feedback layer
+  var style = this.ctxFeedback.fillStyle;
+  this.ctxFeedback.fillStyle = color.white;
+  this.ctxFeedback.clearRect(0, 0, this.ctxFeedback.canvas.width,
+    this.ctxFeedback.canvas.height);
+  this.ctxFeedback.fillStyle = style;
+
   if (this.skin.id == "anna" || this.skin.id == "elsa") {
-    feedbackImageCanvas = this.ctxDisplay;
-  } else {
-    feedbackImageCanvas = this.ctxScratch;
+    // For frozen skins, show everything - including background,
+    // characters, and pattern - along with drawing.
+    this.ctxFeedback.globalCompositeOperation = 'copy';
+    this.ctxFeedback.drawImage(this.ctxDisplay, 0, 0,
+        this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
+    return this.ctxFeedback.canvas;
   }
 
-  // Copy the user layer
-  this.ctxFeedback.globalCompositeOperation = 'copy';
-  this.ctxFeedback.drawImage(feedbackImageCanvas.canvas, 0, 0, 154, 154);
-  var feedbackCanvas = this.ctxFeedback.canvas;
-  return encodeURIComponent(
-      feedbackCanvas.toDataURL("image/png").split(',')[1]);
+  // Draw the images layer.
+  if (!this.level.discardBackground) {
+    this.ctxFeedback.globalCompositeOperation = 'source-over';
+    this.ctxFeedback.drawImage(this.ctxImages.canvas, 0, 0,
+        this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
+  }
+
+  // Draw the predraw layer.
+  this.ctxFeedback.globalCompositeOperation = 'source-over';
+  this.ctxFeedback.drawImage(this.ctxPredraw.canvas, 0, 0,
+      this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
+
+  // Draw the user layer.
+  this.ctxFeedback.globalCompositeOperation = 'source-over';
+  this.ctxFeedback.drawImage(this.ctxScratch.canvas, 0, 0,
+      this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
+
+  // Save the canvas as a png
+  var image = this.ctxFeedback.canvas.toDataURL("image/png");
+
+  // Restore the canvas' original size
+  this.ctxFeedback.canvas.width = origWidth;
+  this.ctxFeedback.canvas.height = origHeight;
+
+  return image;
 };
 
 // Helper for creating canvas elements.
