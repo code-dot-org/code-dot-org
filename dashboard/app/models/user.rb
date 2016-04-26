@@ -893,13 +893,10 @@ SQL
       User.track_script_progress(user_id, script_id)
     end
 
-<<<<<<< HEAD
-    user_level
-=======
     if new_level_perfected
       User.track_proficiency(user_id, script_id, level_id)
     end
->>>>>>> staging
+    user_level
   end
 
   def User.handle_async_op(op)
