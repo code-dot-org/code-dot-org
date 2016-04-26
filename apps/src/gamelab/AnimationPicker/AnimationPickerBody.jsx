@@ -62,6 +62,24 @@ var AnimationPickerBody = React.createClass({
             frameRate={15}
             label="asterisk_stretching (8)"/>
         <AnimationPickerListItem
+            sourceUrl={'/blockly/media/gamelab/library/box.png'}
+            sourceWidth={198}
+            sourceHeight={118}
+            frameWidth={66}
+            frameHeight={118}
+            frameCount={3}
+            frameRate={15}
+            label="box (3)"/>
+        <AnimationPickerListItem
+            sourceUrl={'/blockly/media/gamelab/library/bubbly.png'}
+            sourceWidth={82}
+            sourceHeight={520}
+            frameWidth={82}
+            frameHeight={130}
+            frameCount={4}
+            frameRate={15}
+            label="bubbly (4)"/>
+        <AnimationPickerListItem
             sourceUrl={'/blockly/media/gamelab/library/ghost_standing.png'}
             sourceWidth={504}
             sourceHeight={158}
