@@ -122,7 +122,6 @@ class Gamelab < Blockly
         "collide": null,
         "displace": null,
         "overlap": null,
-        "changeAnimation": null,
         "setAnimation": null,
         "setCollider": null,
         "setColor": null,
