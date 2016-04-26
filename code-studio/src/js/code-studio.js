@@ -54,7 +54,7 @@ window.dashboard.videos = require('./videos');
 window.Dialog = require('./dialog');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
-// script error and a url, throw that so that we have the info in new relic.
+// script error and a url, throw that so that we have the info in New Relic.
 var windowOnError = window.onerror;
 window.onerror = function (msg, url, ln) {
   if (/^Script error/.test(msg) && url) {
