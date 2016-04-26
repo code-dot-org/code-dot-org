@@ -1,0 +1,40 @@
+{
+  "name": "omnibus_updater",
+  "description": "Chef omnibus package updater and installer",
+  "long_description": "OmnibusUpdater\n==============\n\nUpdate your omnibus! This cookbook can install the omnibus\nChef package into your system if you are currently running\nvia gem install, and it can keep your omnibus install up\nto date.\n\nSupports\n========\n\n- redhat\n- centos\n- amazon\n- scientific\n- oracle\n- debian\n- ubuntu\n- mac_os_x\n- solaris\n\nUsage\n=====\n\nAdd the recipe to your run list and specify what version should\nbe installed on the node:\n\n`knife node run_list add recipe[omnibus_updater]`\n\nIn your role you'll likely want to set the version. It defaults\nto nothing, and will install the latest..\n\n```\noverride_attributes(\n  :omnibus_updater => {\n    :version => '11.4.0'\n  }\n)\n```\n\nIt can also uninstall Chef from the system Ruby installation\nif you tell it to:\n\n```\noverride_attributes(\n  :omnibus_updater => {\n    :remove_chef_system_gem => true\n  }\n)\n```\n\nFeatures\n========\n\nLatest Version\n--------------\n\nForce installation of the latest version regardless of value stored in version\nattribute by setting the `force_latest` attribute.\n\nRestarting Chef Client\n------------\n\nBy default, the Chef Client run will be terminated (killed) when an upgrade is performed.\nThis behavior can be disabled by setting `:kill_chef_on_upgrade` to false.\n\nTwo kill modes are supported by the `upgrade_behavior` attribute:\n\n* If set to `'kill'` (default for interval-based chef-client runs), the run will be aborted.\n  When using this behavior, it is recommended to set `:restart_chef_service` to true if the\n  long-running Chef process is managed as an OS service.\n* If set to `'exec'` (default for non-interval runs), the run will be restarted by\n  re-`exec`ing chef-client directly within the current process.\n  This allows the run to complete seamlessly without errors being bubbled up the stack.\n  You can customize the command that is exec'd by setting the `exec_command` attribute.\n  The default for `exec_command` is `$0` (the original command used to call chef-client).\n* If set to anything else, an error is raised.\n\nRestart chef-client Service\n---------------------------\n\nUse the `restart_chef_service` attribute to restart chef-client if you have it running as a service.\n\nPrerelease\n--------\n\nPrereleases can be installed via the auto-installation using `prerelease` attribute.\n\nDisable\n-------\n\nIf you want to disable the updater you can set the `disabled`\nattribute to true. This might be useful if the cookbook is added\nto a role but should then be skipped for example on a Chef server.\n\nPrevent Downgrade\n-----------------\n\nIf you want to prevent the updater from downgrading chef on a node, you\ncan set the `prevent_downgrade` attribute to true.  This can be useful\nfor testing new versions manually.  Note that the `always_download`\nattribute takes precedence if set.\n\nInfos\n=====\n\n* Repo: https://github.com/hw-cookbooks/omnibus_updater\n* IRC: Freenode @ #heavywater\n* Cookbook: http://ckbk.it/omnibus_updater\n",
+  "maintainer": "Chris Roberts",
+  "maintainer_email": "chrisroberts.code@gmail.com",
+  "license": "Apache 2.0",
+  "platforms": {
+    "redhat": ">= 0.0.0",
+    "centos": ">= 0.0.0",
+    "amazon": ">= 0.0.0",
+    "scientific": ">= 0.0.0",
+    "oracle": ">= 0.0.0",
+    "debian": ">= 0.0.0",
+    "ubuntu": ">= 0.0.0",
+    "mac_os_x": ">= 0.0.0",
+    "solaris": ">= 0.0.0"
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "2.0.0",
+  "source_url": "",
+  "issues_url": ""
+}

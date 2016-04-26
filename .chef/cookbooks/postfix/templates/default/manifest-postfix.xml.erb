@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
+<!--
+#
+# CDDL HEADER START
+#
+# The contents of this file are subject to the terms of the
+# Common Development and Distribution License (the "License").
+# You may not use this file except in compliance with the License.
+#
+# You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+# or http://www.opensolaris.org/os/licensing.
+# See the License for the specific language governing permissions
+# and limitations under the License.
+#
+# When distributing Covered Code, include this CDDL HEADER in each
+# file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+# If applicable, add the following below this CDDL HEADER, with the
+# fields enclosed by brackets "[]" replaced with your own identifying
+# information: Portions Copyright [yyyy] [name of copyright owner]
+#
+# CDDL HEADER END
+#
+-->
+
+<service_bundle type="manifest" name="SFEpostfix:postfix">
+    <service name="network/smtp/postfix" type="service" version="1">
+        <create_default_instance enabled="false" />
+        <single_instance />
+        <dependency name="network" grouping="require_all" restart_on="error" type="service">
+            <service_fmri value="svc:/milestone/network:default" />
+        </dependency>
+
+        <dependency name="filesystem-local" grouping="require_all" restart_on="error" type="service">
+            <service_fmri value="svc:/system/filesystem/local" />
+        </dependency>
+
+        <dependency name="name-services" grouping="require_all" restart_on="refresh" type="service">
+            <service_fmri value="svc:/milestone/name-services" />
+        </dependency>
+
+        <dependency name="system-log" grouping="optional_all" restart_on="error" type="service">
+            <service_fmri value="svc:/system/system-log" />
+        </dependency>
+
+        <!--
+        If autofs is enabled, wait for it to get users" home
+        directories.
+        -->
+        <dependency name="autofs" grouping="optional_all" restart_on="error" type="service">
+                <service_fmri value="svc:/system/filesystem/autofs" />
+        </dependency>
+
+        <dependent name="postfix_multi-user" grouping="optional_all" restart_on="none">
+            <service_fmri value="svc:/milestone/multi-user" />
+        </dependent>
+
+        <exec_method type="method" name="start"
+            exec="/opt/omni/sbin/postfix start"
+            timeout_seconds="180" />
+
+        <exec_method type="method" name="stop"
+            exec="/opt/omni/sbin/postfix stop"
+            timeout_seconds="60" />
+
+        <exec_method type="method" name="restart"
+            exec="/opt/omni/sbin/postfix reload"
+            timeout_seconds="60" />
+
+        <stability value="Unstable" />
+
+        <template>
+            <common_name>
+                <loctext xml:lang="C">
+                Postfix Mailserver
+                </loctext>
+            </common_name>
+
+            <documentation>
+                <manpage title="postfix" section="1" manpath="/usr/local/man" />
+            </documentation>
+        </template>
+    </service>
+</service_bundle>

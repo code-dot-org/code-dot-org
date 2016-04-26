@@ -1,0 +1,9 @@
+{
+  "run_list": [
+    "apt",
+    "cdo-mysql::server",
+    "cdo-apps"
+  ],
+  "chef_environment": "adhoc",
+  "name": "cdo-adhoc"
+}

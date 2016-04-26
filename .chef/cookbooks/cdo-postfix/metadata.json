@@ -1,0 +1,33 @@
+{
+  "name": "cdo-postfix",
+  "description": "Installs/Configures cdo-postfix",
+  "long_description": "# cdo-postfix \n\nInstalls and configures Postfix mail server using an Amazon SES account.\n\nWraps the official [`postfix`](https://github.com/chef-cookbooks/postfix) cookbook for the heavy lifting.\n\nFor a typical Amazon SES setup, just set `node['cdo-postfix']['username']` and `node['cdo-postfix']['password']`\nattributes to the account's values, and postfix should be configured correctly.\n\nFor origins other than `code.org`, overwrite the `node['cdo-postfix']['origin']` default to the proper value.\n",
+  "maintainer": "Code.org",
+  "maintainer_email": "will@code.org",
+  "license": "All rights reserved",
+  "platforms": {
+  },
+  "dependencies": {
+    "apt": ">= 0.0.0",
+    "postfix": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.2.0",
+  "source_url": "",
+  "issues_url": ""
+}

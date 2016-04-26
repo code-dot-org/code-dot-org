@@ -1,0 +1,42 @@
+{
+  "name": "seven_zip",
+  "description": "Installs/Configures the 7-zip file archiver",
+  "long_description": "[![Cookbook Version](http://img.shields.io/cookbook/v/seven_zip.svg)](https://supermarket.chef.io/cookbooks/seven_zip)\n[![Build Status](https://secure.travis-ci.org/daptiv/seven_zip.svg?branch=master)](http://travis-ci.org/daptiv/seven_zip)\n\nseven_zip Cookbook\n==============\n[7-Zip](http://www.7-zip.org/) is a file archiver with a high compression ratio. This cookbook installs the full 7-zip suite of tools (GUI and CLI). This cookbook replaces the older [7-zip cookbook](https://github.com/sneal/7-zip).\n\n\nRequirements\n------------\n### Platforms\n- Windows XP\n- Windows Vista\n- Windows Server 2003 R2\n- Windows 7\n- Windows Server 2008 (R1, R2)\n- Windows 8, 8.1\n- Windows Server 2012 (R1, R2)\n\n### Chef\n- Chef >= 11.6\n\n### Cookbooks\n- windows\n\n\nAttributes\n----------\n- (optional) `node['seven_zip']['home']` - specify location for 7-zip installation.\n- (optional) `node['seven_zip']['syspath']` - if true, adds 7-zip directory to system path.\n\nResource/Provider\n-----------------\n### seven_zip_archive\n\nExtracts a 7-zip compatible archive (iso, zip, 7z etc) to the specified destination directory.\n\n#### Actions\n- `:extract` - Extract a 7-zip compatible archive\n\n#### Attribute Parameters\n- `path` - Name attribute. The destination to extract to.\n- `source` - The file path to the archive to extract.\n- `overwrite` - Defaults to false. If true, the destination files will be overwritten.\n- `checksum` - The archive file checksum.\n\n#### Examples\nExtract 7-zip source files to `C:\\seven_zip_source`.\n\n```ruby\nseven_zip_archive 'seven_zip_source' do\n  path      'C:\\seven_zip_source'\n  source    'http://www.7-zip.org/a/7z1514-src.7z'\n  overwrite true\n  checksum  '3713aed72728eae8f6649e4803eba0b3676785200c76df6269034c520df4bbd5'\nend\n```\n\nUsage\n-----\n### default\nDownloads and installs 7-zip.\n\nLicense & Authors\n-----------------\n- Author:: Seth Chisamore (<schisamo@chef.io>)\n- Author:: Shawn Neal (<sneal@sneal.net>)\n\n```text\nCopyright:: 2011-2016, Chef Software, Inc.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n```\n",
+  "maintainer": "Shawn Neal",
+  "maintainer_email": "sneal@sneal.net",
+  "license": "Apache 2.0",
+  "platforms": {
+    "windows": ">= 0.0.0"
+  },
+  "dependencies": {
+    "windows": ">= 1.2.2"
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "2.0.0",
+  "source_url": "",
+  "issues_url": "",
+  "privacy": false
+}

@@ -1,0 +1,32 @@
+{
+  "name": "sudo-user",
+  "description": "A fabulous new cookbook",
+  "long_description": "",
+  "maintainer": "YOUR_COMPANY_NAME",
+  "maintainer_email": "YOUR_EMAIL",
+  "license": "none",
+  "platforms": {
+  },
+  "dependencies": {
+    "ohai": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.0",
+  "source_url": "",
+  "issues_url": ""
+}

@@ -1,0 +1,26 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: centos6
+    driver_config:
+      box: boxcutter/centos67
+  - name: centos7
+    driver_config:
+      box: boxcutter/centos71
+  - name: ubuntu1404
+    driver_config:
+      box: boxcutter/ubuntu1404
+  - name: debian81
+    driver_config:
+      box: boxcutter/debian81
+
+suites:
+  - name: default
+    run_list: 
+      - recipe[ixgbevf::default]
+    attributes:

@@ -1,0 +1,36 @@
+---
+driver_plugin: vagrant
+platforms:
+- name: ubuntu-14.04
+  driver_config:
+    require_chef_omnibus: '11.14'
+    box: ubuntu1404
+- name: ubuntu-12.04
+  driver_config:
+    require_chef_omnibus: '11.14'
+    box: ubuntu1204
+- name: ubuntu-10.04
+  driver_config:
+    require_chef_omnibus: '11.14'
+    box: ubuntu1004
+- name: centos-7.0
+  driver_config:
+    require_chef_omnibus: '11.14'
+    box: centos70
+- name: centos-6.4
+  driver_config:
+    require_chef_omnibus: '11.14'
+    box: centos64
+- name: centos-5.8
+  driver_config:
+    require_chef_omnibus: '11.14'
+    box: centos58
+suites:
+- name: default
+  run_list:
+  - recipe[omnibus_updater_test::default]
+  #- recipe[minitest-handler]
+- name: upgrade
+  run_list:
+  - recipe[omnibus_updater_test::version_upgrade]
+  #- recipe[minitest-handler]

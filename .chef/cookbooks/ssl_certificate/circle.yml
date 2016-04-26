@@ -1,0 +1,18 @@
+machine:
+  services:
+  - docker
+  ruby:
+    version: 2.2.2
+  environment:
+    TESTS: (centos-6|debian-[67]) (debian-8|oraclelinux-6) ubuntu-1[24]04 (ubuntu-1504|scientific-6)
+
+dependencies:
+  override:
+  - bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3 --without='doc style unit integration_vagrant integration_cloud':
+      timeout: 900
+
+test:
+  override:
+  - TESTS=(${TESTS// / }) ; bundle exec rake "integration:docker[${TESTS[$CIRCLE_NODE_INDEX]}]":
+      parallel: true
+      timeout: 900

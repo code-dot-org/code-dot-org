@@ -1,0 +1,28 @@
+chefdata:
+  image: tianon/true
+  volumes:
+    - ./.chef:/tmp/chef
+    - ./cookbooks/cdo-apps/test/environments:/tmp/chef/environments
+    - ./.chef/cookbooks:/tmp/chef/cookbooks
+
+CDO:
+  image: "pickettd/code-dot-org:0.5"
+  volumes:
+    - .:/home/ubuntu/adhoc
+  volumes_from:
+    - chefdata
+#    - chef
+  ports:
+    - "3000:3000"
+  environment:
+    - RAILS_ENV=adhoc
+    - RACK_ENV=adhoc
+    - LANG=en_US.UTF-8
+    - LANGUAGE=en_US.UTF-8
+    - LC_ALL=en_US.UTF-8
+  user: ubuntu
+  command: "/home/ubuntu/adhoc/start.sh"
+#
+#
+  #entrypoint: "/opt/chef/bin/chef-client"
+  #command: "-c /tmp/chef/zero.rb -z -j /tmp/chef/first-boot.json"

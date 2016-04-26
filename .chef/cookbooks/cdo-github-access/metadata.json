@@ -1,0 +1,31 @@
+{
+  "name": "cdo-github-access",
+  "description": "Installs/Configures cdo-github-access",
+  "long_description": "# cdo-github-access\n\nInstalls the SSH keys and configuration required for an instance to access our GitHub repositories.\n",
+  "maintainer": "Code.org",
+  "maintainer_email": "geoffrey@code.org",
+  "license": "All rights reserved",
+  "platforms": {
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.1",
+  "source_url": "",
+  "issues_url": ""
+}

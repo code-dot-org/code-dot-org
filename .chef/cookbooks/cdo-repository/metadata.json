@@ -1,0 +1,32 @@
+{
+  "name": "cdo-repository",
+  "description": "Installs/Configures cdo-repository",
+  "long_description": "# cdo-repository\n\nInstalls our repository based on the environment.\n",
+  "maintainer": "Code.org",
+  "maintainer_email": "will@code.org",
+  "license": "All rights reserved",
+  "platforms": {
+  },
+  "dependencies": {
+    "cdo-github-access": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.2.1",
+  "source_url": "",
+  "issues_url": ""
+}

@@ -1,0 +1,5 @@
+[push]
+	default = simple
+[user]
+	name = Continuous Integration
+	email = dev@code.org

@@ -1,0 +1,36 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+
+# If you add new platforms below, include them in the .travis.yml file matrix
+platforms:
+- name: centos-6
+- name: debian-6
+  run_list: recipe[apt]
+- name: debian-7
+  run_list: recipe[apt]
+- name: debian-8
+  run_list: recipe[apt]
+- name: oraclelinux-6
+  driver_config:
+    platform: rhel
+- name: ubuntu-12.04
+  run_list: recipe[apt]
+- name: ubuntu-14.04
+  run_list: recipe[apt]
+- name: ubuntu-15.04
+  run_list: recipe[apt]
+# Requires AUFS with CONFIG_AUFS_XATTR support.
+# Issue https://github.com/docker/docker/issues/6980:
+# error: unpacking of archive failed on file /usr/sbin/suexec: cpio:
+# cap_set_file failed - Operation not supported
+# - name: centos-7
+# - name: fedora-20
+# - name: fedora-21
+
+# Non-official images
+- name: scientific-6.6
+  driver_config:
+    image: ringo/scientific:6.6
+    platform: rhel
