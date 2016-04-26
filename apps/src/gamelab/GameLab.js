@@ -8,7 +8,7 @@ var api = require('./api');
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = require('../lodash');
 var dropletConfig = require('./dropletConfig');
@@ -24,6 +24,7 @@ var errorHandler = require('../errorHandler');
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
+var experiments = require('../experiments');
 
 var actions = require('./actions');
 var createStore = require('../redux');
@@ -152,51 +153,14 @@ GameLab.prototype.init = function (config) {
   config.dropletConfig = dropletConfig;
   config.appMsg = msg;
 
-  var showFinishButton = !this.level.isProjectLevel;
-  var areBreakpointsEnabled = true;
-  var firstControlsRow = require('./controls.html.ejs')({
-    assetUrl: this.studioApp_.assetUrl,
-    finishButton: showFinishButton
-  });
-  var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
-    showButtons: true,
-    showConsole: true,
-    showWatch: true,
-  });
-
-  var generateCodeWorkspaceHtmlFromEjs = function () {
-    return codeWorkspaceEjs({
-      assetUrl: this.studioApp_.assetUrl,
-      data: {
-        localeDirection: this.studioApp_.localeDirection(),
-        extraControlRows: extraControlRows,
-        blockUsed : undefined,
-        idealBlockNumber : undefined,
-        editCode: this.level.editCode,
-        blockCounterClass : 'block-counter-default',
-        pinWorkspaceToBottom: true,
-        readonlyWorkspace: config.readonlyWorkspace
-      }
-    });
-  }.bind(this);
-
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: this.studioApp_.assetUrl,
-      data: {
-        visualization: require('./visualization.html.ejs')(),
-        controls: firstControlsRow,
-        extraControlRows: extraControlRows,
-        pinWorkspaceToBottom: true,
-        readonlyWorkspace: config.readonlyWorkspace
-      }
-    });
-  }.bind(this);
+  // Provide a way for us to have top pane instructions disabled by default, but
+  // able to turn them on.
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructions');
 
   var onMount = function () {
     config.loadAudio = this.loadAudio_.bind(this);
     config.afterInject = this.afterInject_.bind(this, config);
-    config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);
+    config.afterEditorReady = this.afterEditorReady_.bind(this, true);
 
     // Store p5specialFunctions in the unusedConfig array so we don't give warnings
     // about these functions not being called:
@@ -220,10 +184,49 @@ GameLab.prototype.init = function (config) {
     isShareView: !!config.share
   }));
 
+  var showFinishButton = !this.level.isProjectLevel;
+  var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
+  var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
+    showButtons: true,
+    showConsole: true,
+    showWatch: true,
+  });
+
+  var generateCodeWorkspaceHtmlFromEjs = function () {
+    return codeWorkspaceEjs({
+      assetUrl: this.studioApp_.assetUrl,
+      data: {
+        localeDirection: this.studioApp_.localeDirection(),
+        extraControlRows: extraControlRows,
+        blockUsed : undefined,
+        idealBlockNumber : undefined,
+        editCode: this.level.editCode,
+        blockCounterClass : 'block-counter-default',
+        pinWorkspaceToBottom: true,
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  }.bind(this);
+
+  this.reduxStore_.dispatch(actions.setInitialLevelProps({
+    assetUrl: this.studioApp_.assetUrl,
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    instructionsMarkdown: config.level.markdownInstructions,
+    instructionsInTopPane: config.showInstructionsInTopPane,
+    puzzleNumber: config.level.puzzle_number,
+    stageTotal: config.level.stage_total,
+  }));
+
+  // Push project-sourced animation metadata into store
+  if (typeof config.initialAnimationMetadata !== 'undefined') {
+    this.reduxStore_.dispatch(actions.setInitialAnimationMetadata(config.initialAnimationMetadata));
+  }
+
   ReactDOM.render(<Provider store={this.reduxStore_}>
     <GameLabView
       generateCodeWorkspaceHtml={generateCodeWorkspaceHtmlFromEjs}
-      generateVisualizationColumnHtml={generateVisualizationColumnHtmlFromEjs}
+      showFinishButton={finishButtonFirstLine && showFinishButton}
       onMount={onMount} />
   </Provider>, document.getElementById(config.containerId));
 };
@@ -898,4 +901,12 @@ GameLab.prototype.displayFeedback_ = function () {
       sharingText: msg.shareGame()
     }
   });
+};
+
+/**
+ * Get the project's animation metadata for upload to the sources API.
+ * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
+ */
+GameLab.prototype.getAnimationMetadata = function () {
+  return this.reduxStore_.getState().animations;
 };

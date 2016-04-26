@@ -5,6 +5,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 ---
 - authentication_required!
 - forbidden! unless dashboard_user[:user_type] == 'teacher'
+- error_string_none_selected = I18n.t('dashboard_error_none_selected')
+- error_string_other_section = I18n.t('dashboard_error_other_section')
 
 %link(rel='stylesheet' type='text/css' href='/css/learn_tabs.css')
 %link(rel='stylesheet' type='text/css' href='/style.css')
@@ -427,9 +429,9 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
       params['stay_enrolled_in_current_section'] = $scope.getStayEnrolledInCurrentSection();
 
       if (!params['student_ids']) {
-        displayError("You didn't select any students to move. Please select at least one student.");
+        displayError("#{error_string_none_selected}");
       } else if (isOwnSection($scope.manuallySelectedSectionCode)) {
-        displayError("If you're moving students between your own sections, select your section from the dropdown. Only select \"Other Section\" to move your students to a different teacher's section.");
+        displayError("#{error_string_other_section}");
       } else {
         sectionsService.moveStudents(params, {}).$promise.then(
           function success(response) {
@@ -793,6 +795,11 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
             assessment.multi_correct_percent = assessment.multi_correct / assessment.multi_count * 100;
           }
           assessment.status = assessment.submitted ? "submitted" : "in_progress";
+
+          // Don't show a timestamp for non-submittted assessments.
+          if (!assessment.submitted) {
+            assessment.timestamp = null;
+          }
 
           // Each LevelGroup's result has a list of the results for the levels in that order.
           // Because angular's nested iterators are kind of funky when trying to generate a table,

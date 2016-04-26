@@ -22,7 +22,7 @@ fr-FR:
   twentyhours_heading: Essaie notre introduction au cours de Programmation Informatique
   twentyhours_text: "Tu as fini ta première heure de programmation ? Apprend encore plus sur les concepts fondamentaux de l'informatique dans la suite ce cours."
   og_title: Chaque enfant mérite sa chance
-  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
+  og_description: "Chaque élève de chaque école mérite d'avoir la chance d'étudier l'informatique. Ça change tout."
   hoc2014_heading: |-
     Rejoignez<a href="http://hourofcode.com"> l'heure de Code</a> <br/> le 8-14 décembre 2014 <br/>
   hoc2014_students: Élèves
@@ -62,35 +62,35 @@ fr-FR:
   congratulations: Félicitations!
   congratulations_on_completing_hoc: Félicitations, tu as terminé une Heure de Code !
   congratulations_volunteer: 'Félicitations : maintenant que vous avez essayé Une Heure de Code, <a href="https://code.org/volunteer"> inscrivez-vous pour faire du bénévolat dans une salle de classe</a> et aider les élèves à apprendre avec une Heure de Code !'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated Course
+  congratulations_on_completing_course1: Félicitations, tu as complété le cours N°1 !
+  congratulations_on_completing_course2: Félicitations, tu as complété le cours N°2 !
+  congratulations_on_completing_course3: Félicitations, tu as complété le cours N°3 !
+  congratulations_on_completing_course4: Félicitations, tu as complété le cours N°4 !
+  congratulations_on_completing_accelerated: Félicitations, tu as complété le cours accéléré !
   congrats_next_tutorials_title: Essayez ensuite ces tutoriels
   congrats_next_tutorials_desc: |-
     Essaye ces tutoriels plus courts d'une durée d'une heure ou essaye un <a href="%{current_path}/next"> tutoriel partenaire</a>.
   get_a_certificate_of_achievement: Obtenir un certificat de réussite
-  view_course: View course
+  view_course: Voir le cours
   view_unit: View unit
-  make_app: Make an app
+  make_app: Faire une application
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
   congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
+  third_party_gradelevel_kto8: "De l'école maternelle jusqu'en 4ème"
+  third_party_gradelevel_kto2: "De l'école maternelle jusqu'au CE1"
+  third_party_gradelevel_2to8: "Du CE1 jusqu'en 4ème"
+  third_party_gradelevel_4to12: "Du CM1 jusqu'en terminale"
+  third_party_gradelevel_5to12: "Du CM2 jusqu'en terminale"
+  third_party_gradelevel_6plus: 6ème ou plus
+  third_party_gradelevel_8plus: 4ème ou plus
   third_party_platform_all: 'Platform: Web, iPad & Android'
   third_party_platform_mobile: 'Platform: iPad & Android'
   third_party_platform_web: 'Platform: Web'
   third_party_price_varies: 'Price: Plans vary'
   third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
+  third_party_price_299: 'Prix : 2.99$ par téléchargement'
   third_party_price_individual: 'Individual Price: Free Trial & $25/month'
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
@@ -116,20 +116,20 @@ fr-FR:
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
   third_party_codehs_btn_try: Intro CS Learn More for Schools
   third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_codecademy_btn_curriculum: Téléchargez le curriculum de Codecademy
+  third_party_codecademy_btn_site: Visitez Codecademy
+  third_party_organization: Organisation
   third_party_curriculum: "Programme d'études"
-  third_party_pricing: Pricing
-  third_party_cost_free: Free for students and teachers
-  third_party_cost_5permonth: $5/month per class
-  third_party_cost_299: $2.99/download
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
+  third_party_pricing: Prix
+  third_party_cost_free: Gratuit pour les étudiants et les enseignants
+  third_party_cost_5permonth: 5$ par mois pour chaque classe
+  third_party_cost_299: 2.99$/téléchargement
+  third_party_cost_free_399: "Gratuit à l'essai, puis 399$/classe"
+  third_party_cost_free_2: "Gratuit à l'essai, puis 2$/élève"
+  third_party_cost_free_10: "Gratuit à l'essai, puis 9.99$/mois"
+  third_party_desc_5_4to8: "Approximativement 5 leçons, du CM1 jusqu'en 4ème"
+  third_party_desc_10to12_kto3: "Approximativement 10 à 12 leçons, de l'école maternelle au CE2"
+  third_party_desc_11_kto5: "Approximativement 11 leçons, de l'école maternelle au CM2"
   third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
   third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
   third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
@@ -194,7 +194,7 @@ fr-FR:
   twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Apprendre une Heure de Code
   beyond_hoc: "Au delà d'Une heure"
-  what_gender: De quel sexe êtes vous ?
+  what_gender: Es-tu un garçon ou une fille ?
   girl: Fille
   boy: Garçon
   help_recruit_coders: Aide-nous à recruter plus de programmeurs dans ton équipe !
@@ -504,6 +504,11 @@ fr-FR:
   dashboard_action_remove_confirm: Voulez-vous vraiment supprimer ?
   dashboard_action_done: Terminé
   dashboard_action_required: Obligatoire
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: "Page d'accueil de l'enseignant"
   dashboard_navigation_section_student_progress: "Comptes et progression de l'élève"
   dashboard_navigation_section_teacher_progress: Votre progression de cours
@@ -521,6 +526,17 @@ fr-FR:
   dashboard_navigation_view_stats: Voir les statistiques
   dashboard_navigation_section: 'Section : %{section_name}'
   dashboard_navigation_student: 'Élève : %{student_name}'
+  dashboard_progress_not_started: pas commencé
+  dashboard_progress_in_progress: en cours
+  dashboard_progress_not_completed: pas terminé
+  dashboard_progress_completed_too_many_blocks: terminé, trop de blocs
+  dashboard_progress_completed_perfect: terminé, parfait
+  dashboard_progress_furthest_level_attempted: le plus haut niveau tenté
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nouvelle section
   dashboard_sections_jumbotron_instruction: Créez de nouvelles sections et ajoutez-y vos élèves. Les sections vous aident à organiser les étudiants en petits groupes pour suivre leur progression et gérer leurs comptes.
   dashboard_sections_table_section: Section
@@ -536,6 +552,19 @@ fr-FR:
   dashboard_sections_secret_none: 'Si vous souhaitez que vos élèves gèrent eux-mêmes leur compte, en choisissant leur propre mot de passe, choisissez <b>aucun</b> secret.'
   dashboard_sections_print_secrets: Vous pouvez ensuite imprimer une feuille de cartes contenant les informations de compte à distribuer individuellement à vos élèves.
   dashboard_sections_switch_section: 'Changer de section :'
+  dashboard_sections_close: Fermer
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Ajouter un élève
   dashboard_students_add_students: Ajouter plusieurs élèves
   dashboard_students_add_multiple: 'Entrez ou collez le nom de vos élèves, un par ligne :'
@@ -602,13 +631,6 @@ fr-FR:
   dashboard_login_picture: Image
   dashboard_login_none: E-mail
   dashboard_new_password: nouveau mot de passe
-  dashboard_progress_not_started: pas commencé
-  dashboard_progress_in_progress: en cours
-  dashboard_progress_not_completed: pas terminé
-  dashboard_progress_completed_too_many_blocks: terminé, trop de blocs
-  dashboard_progress_completed_perfect: terminé, parfait
-  dashboard_progress_furthest_level_attempted: le plus haut niveau tenté
-  dashboard_progress_submitted: submitted
   dashboard_stage: étape
   dashboard_puzzle: Puzzle
   dashboard_question: Question
@@ -643,11 +665,8 @@ fr-FR:
   dashboard_faq_k5: 'GS - CM2 Questions Fréquemment Posées'
   dashboard_announcements: Annonces
   dashboard_announce_view_all: Voir tous
-  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
-  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
+  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
   dashboard_announce_button_text: Pour en savoir plus
-  dashboard_announce_hoc: '<b>15 octobre 2015</b> - Une Heure de Code arrive &mdash; chaque organisateur participant recevra une carte-cadeau Amazon.com ou Microsoft Windows Store comme cadeau de remerciement. Rejoignez les salles de classe dans le monde entier du 7 au 13 décembre.'
-  dashboard_announce_playlab: "<b>4 décembre 2015</b> - l'heure du Code est ici ! Essayez 50 tutoriels pour tous les âges et tous les appareils. Nouveauté de la semaine : coder vos propres histoires et des jeux à nouveau jouer Labs, période glaciaire et Gumball."
   code_hoc_coming: "L'Heure de Code est ici — du 8 au 14 décembre !"
   code_sign_up: "Enregistre-toi pour participer à la Semaine de l'Éducation de l'Informatique"
   learn_more: En savoir plus

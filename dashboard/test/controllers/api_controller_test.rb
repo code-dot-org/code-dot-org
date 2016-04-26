@@ -180,8 +180,8 @@ class ApiControllerTest < ActionController::TestCase
         "timestamp"=>updated_at.utc.to_s,
         "level_results"=>[
           {"student_result"=>"This is a free response", "correct"=>"free_response"},
-          {"student_result"=>"0", "correct"=>"correct"},
-          {"student_result"=>"1", "correct"=>"incorrect"},
+          {"student_result"=>"A", "correct"=>"correct"},
+          {"student_result"=>"B", "correct"=>"incorrect"},
           {"student_result"=>"", "correct"=>"unsubmitted"}]
         }
       ]

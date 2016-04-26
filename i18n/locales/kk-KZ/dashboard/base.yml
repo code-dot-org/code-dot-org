@@ -25,7 +25,10 @@ kk:
   welcome_back: 'Қайта оралуыңызбен, %{name}'
   submit: Жіберу
   unsubmit: Жібермеу
+  previous_page: Previous page
   next_page: Келесі бет
+  cancel: Болдырмау
+  okay: Жақсы
   heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
@@ -451,6 +454,11 @@ kk:
     minecraft:
       title: Minecraft
       body: Код арқылы Minecraft әлемінде саяхаттаңыз.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Оқушылар кодпен бірге суретін салады!
     students_made_these_with_code: Оқушылар кодын жазады!
@@ -494,6 +502,12 @@ kk:
     wrong_body: Жауаптарың үшін рақмет.
     correct_title: Рахмет
     correct_body: Жауаптарың үшін рақмет.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Дұрыс емес шешім
     wrong_body: Сіз еңгізген жауап дұрыс емес. Қайталап көріңіз!
@@ -625,5 +639,5 @@ kk:
         acknowledge: 'Сіз бұл хабарламаны жіберу арқылы %{link_start_privacy}Құпиялылық Саясаты%{link_end} және %{link_start_tos}Қызмет көрсету шарттары%{link_end} аясында қаралатынына келісесіз бе?'
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Белгі іздеу...
+      no_icons_found: Белгі табылмады

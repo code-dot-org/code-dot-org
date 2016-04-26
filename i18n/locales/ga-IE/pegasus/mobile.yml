@@ -515,6 +515,11 @@ ga-IE:
   dashboard_action_remove_confirm: Bain?
   dashboard_action_done: Déanta
   dashboard_action_required: riachtanach
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Leathanach baile do mhúinteoirí
   dashboard_navigation_section_student_progress: Cuntais agus Dul Chun Cinn na nDaltaí
   dashboard_navigation_section_teacher_progress: Do Dhul Chun Cinn
@@ -532,6 +537,17 @@ ga-IE:
   dashboard_navigation_view_stats: Staitisticí
   dashboard_navigation_section: 'Rannán: %{section_name}'
   dashboard_navigation_student: 'Dalta: %{student_name}'
+  dashboard_progress_not_started: gan tosú
+  dashboard_progress_in_progress: idir lámha
+  dashboard_progress_not_completed: gan críochnú
+  dashboard_progress_completed_too_many_blocks: críochnaithe, an iomarca blocanna
+  dashboard_progress_completed_perfect: críochnaithe, foirfe
+  dashboard_progress_furthest_level_attempted: an leibhéal is airde
+  dashboard_progress_submitted: seolta
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Rannán nua
   dashboard_sections_jumbotron_instruction: Cruthaigh rannáin nua agus cuir daltaí leo. Le rannáin, is féidir do chuid daltaí a eagrú i ngrúpaí níos lú, sa chaoi go mbeidh sé níos éasca an dul chun cinn atá déanta acu a leanúint agus na cuntais a bhainistiú.
   dashboard_sections_table_section: Rannán
@@ -547,6 +563,19 @@ ga-IE:
   dashboard_sections_secret_none: 'Más mian leat cead a thabhairt do na daltaí a gcuntas féin a bhainistiú agus a bhfocal faire féin a shocrú, roghnaigh an cineál <b>faic</b>.'
   dashboard_sections_print_secrets: Ansin beidh tú in ann cárta ar a bhfuil na sonraí cuntais a phriontáil agus a thabhairt do na daltaí ceann ar cheann.
   dashboard_sections_switch_section: 'Athraigh an rannán:'
+  dashboard_sections_close: Dún
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Cuir dalta leis
   dashboard_students_add_students: Cuir daltaí leis
   dashboard_students_add_multiple: 'Clóscríobh nó greamaigh ainmneacha na ndaltaí isteach, ceann amháin ar gach líne:'
@@ -613,13 +642,6 @@ ga-IE:
   dashboard_login_picture: Pictiúr
   dashboard_login_none: Ríomhphost
   dashboard_new_password: focal faire nua
-  dashboard_progress_not_started: gan tosú
-  dashboard_progress_in_progress: idir lámha
-  dashboard_progress_not_completed: gan críochnú
-  dashboard_progress_completed_too_many_blocks: críochnaithe, an iomarca blocanna
-  dashboard_progress_completed_perfect: críochnaithe, foirfe
-  dashboard_progress_furthest_level_attempted: an leibhéal is airde
-  dashboard_progress_submitted: seolta
   dashboard_stage: Céim
   dashboard_puzzle: Dúshlán
   dashboard_question: Ceist
@@ -655,10 +677,7 @@ ga-IE:
   dashboard_announcements: Fógraí
   dashboard_announce_view_all: Féach uile
   dashboard_announce_message: '<b>Gné nua</b> - Anois is féidir leat daltaí a bhogadh idir rannáin de do chuid féin, nó go dtí rannán ag múinteoir eile.'
-  dashboard_announce_message_second: "<b>Spriocdháta do chéim a haon</b> - An bhfuil aithne agat ar mhúinteoir dara leibhéal ar mhaith leis/léi cúrsa bliana amháin ar bhuntús na ríomheolaíochta a mhúineadh? Nó b'fhéidir go bhfuil suim agatsa féin ann? Níl aon taithí de dhíth chun páirt a ghlacadh i gceardlann saor in aisce faoinár gcúrsa Taiscéalaíocht na Ríomheolaíochta. Spriocdháta 22 Aibreán. "
   dashboard_announce_button_text: Tuilleadh eolais
-  dashboard_announce_hoc: '<b>23 Samhain 2015</b> - Ar mhaith leat cuireadh a thabhairt do shaorálaí atá díograiseach i dtaobh na ríomheolaíochta chun cabhrú leat le linn An Uair Chódála? Tá níos mó ná 7,000 saorálaí againn ag lorg deiseanna chun daltaí a spreagadh trí chuairt a thabhairt ar do sheomra ranga nó físchomhrá a dhéanamh leo. Féach ar léarscáil na saorálaithe le dul i dteagmháil le duine éigin i do cheantar féin.'
-  dashboard_announce_playlab: '<b>4 Nollaig 2015</b> - Tá an Uair Chódála anseo! Bain triail as 50 cúrsa teagaisc do gach duine ar gach gléas. Úrnua an tseachtain seo: Códáil scéalta agus cluichí i gcúrsaí nua Súgradh is Dáiríre: Ice Age agus Gumball.'
   code_hoc_coming: 'Tá an Uair Chódála anseo - 8-14 Nollaig!'
   code_sign_up: Cláraigh chun páirt a ghlacadh le linn Sheachtain an Oideachais Ríomheolaíochta
   learn_more: Bain triail as anois

@@ -1,0 +1,49 @@
+#!/bin/bash -x
+# UserData bootstrap script for CloudFormation stack instances.
+# This script bootstraps, creates an AMI, then shuts itself down to save resources.
+
+# Modify cloud-init to re-run bootstrap script every time instance restarts.
+# Ref: http://stackoverflow.com/a/10455027
+sed -i 's/scripts-user$/\[scripts-user, always\]/' /etc/cloud/cloud.cfg
+
+# Bootstrap prerequisites
+apt-get update
+apt-get -y install python3-pip curl
+test "$(pip3 show awscli)" || pip3 install awscli
+
+STACK=<%=stack_name%>
+REGION=<%=region%>
+S3_BUCKET=<%=s3_bucket%>
+ENVIRONMENT=<%=environment%>
+RUN_LIST=<%=run_list%>
+INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+NODE_NAME=<%=node_name%>
+
+sudo -u ubuntu bash -c "aws s3 cp s3://${S3_BUCKET}/chef/bootstrap.sh - | sudo bash -s -- <%=local_mode ? '-z' : ''%> -n ${NODE_NAME} -r ${RUN_LIST} -e ${ENVIRONMENT}"
+[ $? -eq 0 ] && STATUS=SUCCESS || STATUS=FAILURE
+
+aws cloudformation signal-resource \
+  --stack-name ${STACK} \
+  --logical-resource-id <%=create_id%> \
+  --unique-id ${INSTANCE_ID} \
+  --status ${STATUS} \
+  --region ${REGION} \
+  || true
+
+WAIT_CMD="aws ec2 wait image-available \
+  --filters Name=tag:cloudformation:amimanager:stack-name,Values=${STACK} \
+  --region ${REGION}"
+# aws-cli has hardcoded waiter timeouts (15 sec/attempt, max 40 = 10 min), so we need a dumb loop to extend the timeout.
+# Ref https://github.com/aws/aws-cli/issues/1295
+# AMI creation can take up to 40 minutes with our current application size.
+for i in $(seq 1 10); do ${WAIT_CMD} && break; done
+
+aws cloudformation signal-resource \
+  --stack-name ${STACK} \
+  --logical-resource-id <%=complete_id%> \
+  --unique-id ${INSTANCE_ID} \
+  --status ${STATUS} \
+  --region ${REGION} \
+  || true
+
+shutdown -h now

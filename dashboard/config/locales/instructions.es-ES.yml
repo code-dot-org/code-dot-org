@@ -699,7 +699,12 @@
       4-5 Maze 7_instruction: Estimada persona. Yo zombie. Debe...llegar...al girasol.
       4-5 Maze 8_instruction: Utiliza el bloque "repeat" para llevar al zombie hasta
         el girasol. (¡Evadiendo a los chompers!)
-      4-5 Maze 9_instruction: Crear un lazo en el bloque "repetir hasta".
+      4-5 Maze 9_instruction: |-
+        Ahora te presentamos el nuevo bloque llamado Repetir Hasta = "Repeat Until" \r
+        \r
+        Este crea un ciclo hasta que el Zombie llegue al girasol. \r
+        \r
+        Este nuevo bloque te ayuda a solucionar el ejercicio con menos bloques.
       4-5 Maze Assessment 1_instruction: |
         Evaluzción: LLega hasta el girasol.
       4-5 Maze Conditionals 1_instruction: Utiliza el bloque repetir hasta para llevar
@@ -1761,10 +1766,9 @@
       Course 4 EC 1b_instruction: Sin reglas. Sin pistas. ¡Sólo el desafío!
       Course 4 EC 2a_instruction: "**Reto Extremo:** No Reglas. No Pistas. Solo el
         reto!"
-      Course 4 EC 2b_instruction: "**Reto Extremo:** No Reglas. No Pistas. Solo el
-        reto!"
-      Course 4 EC 2c_instruction: "**Reto Extremo:** No Reglas. No Pistas. Solo el
-        reto!"
+      Course 4 EC 2b_instruction: Sin reglas. Sin pistas. ¡Sólo el desafío!
+      Course 4 EC 2c_instruction: Sin reglas. Sin pistas. ¡Sólo el desafío!
+      Course 4 EC 2d_instruction: Sin reglas. Sin pistas. ¡Sólo el desafío!
       Course 4 EC 3_instruction: 'Utiliza lo que aprendiste en la lección anterior
         para dibujar una imagen como esta. Nota: El código se vuelve más simple si
         incorporas parámetros. '
@@ -2028,6 +2032,9 @@
       CSD U3 Random Animation_instruction: |
         Use randomNumber() to animate Gary's
         mouth.
+      CSD U3 Random Choice_instruction: |
+        Use the randomNumber() block to generate
+        either 0 or 1
       CSD U3 Random Color_instruction: |
         Could you use randomNumber() to pick random
         colors as well? Try setting one or more of the channels in the rgb block with
@@ -2036,6 +2043,9 @@
         What do you think this code will do when
         it is run? Make a prediction, then run this code 5 - 10 times, recording the
         output each time. Share your results with your neighbor.
+      CSD U3 Random Min Max_instruction: |
+        Using console.log() write a program that
+        randomly returns a number in a range you define.
       CSD U3 Random Width Height_instruction: |
         Pick a shape function and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -2050,6 +2060,7 @@
         Put all of your code into
         a draw() loop and then add set the background to blue with the background()
         block.
+      CSD U3 Simple Drawing - Personal Animation_instruction: DO This
       CSD U3 Variable Arithmetic pt2_instruction: |
         Predict: What two numbers will
         be displayed in the console?
@@ -2062,30 +2073,50 @@
       CSD U3 Variable Incrementation_instruction: |
         Predict: What two numbers will
         be displayed in the console?
+      CSD U3 Variables CHALLENGE gamelab gary_instruction: |
+        Use variables to animate
+        Game Lab Gary
+      CSD U3 Variables draw loop newVars_instruction: |
+        Extend this project to create
+        your own random art visualization with variables.
+      CSD U3 Variables draw loop rgb_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
+      CSD U3 Variables draw loop xy_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
       CSD U3 Variables Initialize_instruction: |
         Predict: What will get displayed
         in the console?
       CSD U3 Variables Intro_instruction: |
         Create your own variable, give it a value,
         and display that value in the console.
+      CSD U3 Variables random drawing exemplar_instruction: |
+        Check out this example
+        randomized drawing.
       CSD U3 Variables Random_instruction: |
         Predict: What will get displayed in the
         console?
       CSD U3 Variables Reassign pt2_instruction: |
-        Predict: What will get displayed
-        in the console?
+        Create and assign a new variable
+        in a single line.
       CSD U3 Variables Reassign_instruction: |
         Predict: What will get displayed in
         the console?
       CSD U3 Variables Square Random Loop_instruction: |
-        Change the value "size"
-        initialized to make a larger square.
+        Test your predictions from
+        the last level.
       CSD U3 Variables Square Random_instruction: |
         Change the value "size" initialized
         to make a larger square.
       CSD U3 Variables Square_instruction: |
         Change the value "size" initialized
         to make a larger square.
+      CSD U3 Variables use value rect_instruction: |
+        Predict: What will get displayed
+        in the console?
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -3327,6 +3358,9 @@
       Ryan Doily Step 2_instruction: |
         Now you need to turn and repeat it 20 times!
         How many degrees do you turn to get 360 after 20 iterations?
+      Ryan Doily Step 3_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: Aquí hay una función denominada "patrulla".
         Edítela para mover el Gato hacia arriba 400 píxeles y luego hacia abajo 400
         píxeles.
@@ -4171,6 +4205,15 @@
         back a default response.
       U3 full clicker demo_instruction: Clicker game - Try it out!
       U3 mehal's clone_instruction: Try out a demo of the Digital Assistant!
+      U3 Variables consolelog_instruction: |
+        Use the write block to display the value
+        of size
+      U3 Variables misconceptions try it_instruction: |
+        Test out your predictions
+        from the previous level.
+      U3 Variables write_instruction: |
+        Use the write block to display the value of
+        size
       U3- Variables - Assign Random For Turtle Draw_instruction: |
         Try writing the
         same code in text mode.
