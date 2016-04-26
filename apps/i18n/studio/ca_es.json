@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "You need to get 20 Mouse Droids. Use the \"add a Mouse Droid\" command inside the \"when get Mouse Droid\" event to add two or more Mouse Droids every time you get one.",
   "failedMultiplyCharactersTimeoutGotSome": "Congratulations, you added code to make Mouse Droids. You can go to the next puzzle or try again to get 20 Mouse Droids. Try making it easier by adding more of them! (Press and hold the keys on your keyboard (or screen) to move faster.)",
   "failedChangeSettingTimeout": "Arriba a tres Pilots Rebels per seguir endavant.",
-  "failedChangeSettingSettings": "Fes el joc al teu gust. Per passar aquest nivell has de canviar el teu droide i la seva velocitat."
+  "failedChangeSettingSettings": "Fes el joc al teu gust. Per passar aquest nivell has de canviar el teu droide i la seva velocitat.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }
