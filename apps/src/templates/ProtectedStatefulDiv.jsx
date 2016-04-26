@@ -1,5 +1,7 @@
 'use strict';
 
+var Radium = require('radium');
+
 /**
  * A div DOM element that will never update its contents and will throw an
  * exception if it is ever unmounted, enforcing that it must always be rendered
@@ -31,4 +33,4 @@ var ProtectedStatefulDiv = React.createClass({
     return <div {...this.props} ref="root"></div>;
   }
 });
-module.exports = ProtectedStatefulDiv;
+module.exports = Radium(ProtectedStatefulDiv);
