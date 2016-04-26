@@ -39,30 +39,6 @@ var AnimationPreview = React.createClass({
     }
   },
 
-  onMouseOver: function (event) {
-    if (this.timeout_) {
-      clearTimeout(this.timeout_);
-    }
-
-    document.addEventListener('mousemove', this.onMouseMove);
-    this.scrub(event);
-  },
-
-  onMouseMove: function (event) {
-    this.scrub(event);
-  },
-
-  scrub: function (event) {
-    var rect = this.refs.root.getBoundingClientRect();
-    var progress = Math.min(0.999, Math.max(0, (event.clientX - rect.left) / rect.width));
-    this.setState({ currentFrame: Math.floor(progress * this.props.frameCount) });
-  },
-
-  onMouseOut: function () {
-    document.removeEventListener('mousemove', this.onMouseMove);
-    this.scheduleNextFrame_();
-  },
-
   render: function () {
     var xScale = (this.props.width - 2 * MARGIN_PX) / this.props.frameWidth;
     var yScale = (this.props.height - 2 * MARGIN_PX) / this.props.frameHeight;
@@ -88,11 +64,7 @@ var AnimationPreview = React.createClass({
       backgroundPosition: xOffset + 'px ' + yOffset + 'px'
     };
     return (
-      <div
-          ref="root"
-          style={containerStyle}
-          onMouseOver={this.onMouseOver}
-          onMouseOut={this.onMouseOut}>
+      <div ref="root" style={containerStyle}>
         <img src="/blockly/media/1x1.gif" style={imageStyle}/>
       </div>
     );
