@@ -2018,3 +2018,28 @@
           Animation: "Анимация"
           Draw Loop and Random: Draw Loop and Random
           Variables: "Променливи"
+          Sprite Properties and Mod: Sprite Properties and Mod
+        2016_sciencePD_phase1:
+          title: Computer Science in Science PD 2016-2017
+          description_short: In Partnership with Project GUTS
+          description: In Partnership with Project GUTS
+          Introduction to PD: "Въведение в PD"
+          What to Expect: "Какво да очаквате"
+          Introduction to Complex Adaptive Systems: "Въведение в сложни адаптивни
+            системи"
+          Introduction to Computational Science: "Въведение в компютърната наука"
+          Agent Based Modeling of Complex Adaptive Systems: "Моделиране на базата
+            на сложни адаптивни системи"
+          Using Computer Models in Science: "Използване на компютърни модели в науката"
+          Using Models in the Classroom: "Използване на модели в класната стая"
+          Dispositions and Classroom Culture: "Мерки и култура в класната стая"
+          Computational Thinking And The Framework For K-12 Science Education: "Изчислително
+            мислене и рамката за К-12 образование по науки"
+          Introduction to StarLogo Nova: "Въведение в StarLogo Nova"
+          The Tutorial: "Урок"
+          Post-Survey: "След изследването"
+        TEMP CSD Unit 3:
+          title: " TEMP CSD Unit 3 - Interactive Games and Animations"
+          description_short: "Програмиране"
+          description: ''
+          Drawing in Game Lab: Drawing in Game Lab

@@ -500,6 +500,11 @@ nl-NL:
   dashboard_action_remove_confirm: Verwijder?
   dashboard_action_done: Voltooid
   dashboard_action_required: verplicht
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Startpagina voor de leerkracht
   dashboard_navigation_section_student_progress: Leerlingaccounts en vooruitgang
   dashboard_navigation_section_teacher_progress: De vooruitgang van je cursus
@@ -517,6 +522,17 @@ nl-NL:
   dashboard_navigation_view_stats: Statistieken Bekijken
   dashboard_navigation_section: 'groep: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
+  dashboard_progress_not_started: niet gestart
+  dashboard_progress_in_progress: wordt uitgevoerd
+  dashboard_progress_not_completed: niet voltooid
+  dashboard_progress_completed_too_many_blocks: voltooid, teveel blokken
+  dashboard_progress_completed_perfect: voltooid, perfect
+  dashboard_progress_furthest_level_attempted: verste niveau geprobeerd
+  dashboard_progress_submitted: verstuurd
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nieuw onderdeel
   dashboard_sections_jumbotron_instruction: 'Maak nieuwe groepen aan en voeg er studenten aan toe. Groepen helpen u met het verdelen van studenten in kleinere groepen, zodat u makkelijker hun vorderingen kunt bijhouden en hun accounts  beheren.'
   dashboard_sections_table_section: Groep
@@ -532,6 +548,19 @@ nl-NL:
   dashboard_sections_secret_none: 'Als je wilt dat uw leerlingen hun eigen account beheren, met begrip van het kiezen van hun eigen wachtwoord en een geheim type van <b>niks</b>.'
   dashboard_sections_print_secrets: U kan dan een vel printen met kaarten et accmountgegevens van uw individuele leerlingen, die u kunt ronddelen.
   dashboard_sections_switch_section: 'switch groep:'
+  dashboard_sections_close: Afsluiten
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Voeg leerling toe
   dashboard_students_add_students: Voeg meerdere leerlingen toe
   dashboard_students_add_multiple: 'Typ of plak hier de namen van uw studenten, één per regel:'
@@ -600,13 +629,6 @@ nl-NL:
   dashboard_login_picture: Beeld
   dashboard_login_none: E-mail
   dashboard_new_password: Nieuw wachtwoord
-  dashboard_progress_not_started: niet gestart
-  dashboard_progress_in_progress: wordt uitgevoerd
-  dashboard_progress_not_completed: niet voltooid
-  dashboard_progress_completed_too_many_blocks: voltooid, teveel blokken
-  dashboard_progress_completed_perfect: voltooid, perfect
-  dashboard_progress_furthest_level_attempted: verste niveau geprobeerd
-  dashboard_progress_submitted: verstuurd
   dashboard_stage: niveau
   dashboard_puzzle: puzzel
   dashboard_question: Vraag
@@ -641,11 +663,8 @@ nl-NL:
   dashboard_faq_k5: K-5 Veelgestelde vragen
   dashboard_announcements: Aankondigingen
   dashboard_announce_view_all: Alles weergeven
-  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
-  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
+  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
   dashboard_announce_button_text: Leer meer
-  dashboard_announce_hoc: '<b>15 oktober 2015</b> - het Uur Code komt &mdash; elke deelnemende organisator ontvangt een kadokaart van Amazon.com of Microsofts Windows-winkel als een bedankje. Doe mee met klassen over de hele wereld tijdens 7-13 December.'
-  dashboard_announce_playlab: '<b>4 December 2015</b> - de Hour of Code is hier! 50 lessen voor elke leeftijd en elk device proberen. Nieuw deze week: uw eigen verhalen en spelletjes maken met de speel labs Ice Age en Gumball.'
   code_hoc_coming: 'Het Uur Code is hier - van 8 -14 december!'
   code_sign_up: Meld u aan om deel te nemen tijdens de CS Onderwijs Week
   learn_more: Probeer nu
