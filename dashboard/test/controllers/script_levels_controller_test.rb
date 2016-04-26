@@ -151,7 +151,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.start_blocks = "<shouldnot:override/>"
     real_level.save!
 
-    sl = create :script_level, level: real_level
+    sl = create :script_level, levels: [real_level]
     get :show, script_id: sl.script, stage_id: '1', id: '1'
 
     assert_response :success
@@ -188,7 +188,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.start_html = '<div><label id="label1">real_level html</label></div>'
     real_level.save!
 
-    sl = create :script_level, level: real_level
+    sl = create :script_level, levels: [real_level]
     get :show, script_id: sl.script, stage_id: '1', id: '1'
 
     assert_response :success
@@ -225,7 +225,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.toolbox_blocks = "<shouldnot:override/>"
     real_level.save!
 
-    sl = create :script_level, level: real_level
+    sl = create :script_level, levels: [real_level]
     get :show, script_id: sl.script, stage_id: '1', id: '1'
 
     assert_response :success
