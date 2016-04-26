@@ -128,7 +128,8 @@ Scenario: Applab Instructions in Top Pane
   And I wait to see "#runButton"
   And I see no difference for "top instructions enabled on embed level"
 
-  Then execute JavaScript expression "window.localStorage.removeItem('experiments-topInstructions')"
+  Then I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9?topInstructions=false"
+  And I wait to see "#runButton"
 
   When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9"
   And I wait to see "#runButton"
@@ -154,5 +155,6 @@ Scenario: Applab Instructions Resize
   And I see no difference for "big instructions"
   Then I drag the visualization grippy by -200 pixels
   And I see no difference for "small visualization"
-  Then execute JavaScript expression "window.localStorage.removeItem('experiments-topInstructions')"
+  Then I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9?topInstructions=false"
+  And I wait to see "#runButton"
   Then I close my eyes
