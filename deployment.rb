@@ -36,6 +36,7 @@ def load_configuration()
   env = local_config['env'] || global_config['env'] || ENV['RACK_ENV'] || ENV['RAILS_ENV'] || 'development'
 
   rack_env = env.to_sym
+  rack_env = 'adhoc' if rack_env == 'static-hoc'
 
   {
     'app_servers'                 => {},
