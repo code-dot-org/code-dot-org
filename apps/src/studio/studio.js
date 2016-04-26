@@ -335,7 +335,7 @@ var drawMap = function () {
 
   if (Studio.spriteGoals_) {
     for (i = 0; i < Studio.spriteGoals_.length; i++) {
-      Studio.drawGoal(i, Studio.spriteGoals_[i]);
+      Studio.createGoalElements(i, Studio.spriteGoals_[i]);
     }
   }
   Studio.applyGoalEffect();
@@ -480,7 +480,17 @@ Studio.allGoals_ = function () {
   return Studio.spriteGoals_.concat(Studio.dynamicSpriteGoals_);
 };
 
-Studio.drawGoal = function (i, goal) {
+/**
+ * Creates DOM elements for the given goal, and augments the goal object
+ * with pointers to those elements.
+ * Note that if this method is called after the initialization step, it
+ * will likely need to be followed with a call to sortDrawOrder.
+ *
+ * @param {number} i - a unique identifier, used to create ids for
+ *        created elements
+ * @param {object} goal
+ */
+Studio.createGoalElements = function (i, goal) {
   var svg = document.getElementById('svgStudio');
   var spriteLayer = document.getElementById('backgroundLayer');
 
@@ -5199,7 +5209,7 @@ Studio.addGoal = function (opts) {
     y: opts.y
   };
 
-  Studio.drawGoal(Studio.allGoals_().length, goal);
+  Studio.createGoalElements(Studio.allGoals_().length, goal);
   Studio.dynamicSpriteGoals_.push(goal);
   sortDrawOrder();
 };
