@@ -673,6 +673,11 @@
   dashboard_action_remove_confirm: Excluir?
   dashboard_action_done: Feito
   dashboard_action_required: obrigatório
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Página inicial do professor
   dashboard_navigation_section_student_progress: Contas e progresso do aluno
   dashboard_navigation_section_teacher_progress: Seu progresso no curso
@@ -691,6 +696,18 @@
   dashboard_navigation_view_stats: Ver estatísticas
   dashboard_navigation_section: 'Turma: %{section_name}'
   dashboard_navigation_student: 'Aluno: %{student_name}'
+  dashboard_progress_not_started: não iniciado
+  dashboard_progress_in_progress: em progresso
+  dashboard_progress_not_completed: não concluído
+  dashboard_progress_completed_too_many_blocks: concluído, muitos blocos
+  dashboard_progress_completed_perfect: concluído, perfeito
+  dashboard_progress_furthest_level_attempted: tentativa para o nível mais avançado
+  dashboard_progress_submitted: enviado
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nova turma
   dashboard_sections_jumbotron_instruction: Crie novas turmas e adicione alunos a
     elas. As turmas ajudam na organização dos alunos em grupos menores para que você
@@ -714,6 +731,26 @@
   dashboard_sections_print_secrets: Você pode imprimir uma folha com cartões contendo
     as informações da conta para distribuir individualmente para seus alunos.
   dashboard_sections_switch_section: 'Trocar de turma:'
+  dashboard_sections_close: Fechar
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Adicionar aluno
   dashboard_students_add_students: Adicionar vários alunos
   dashboard_students_add_multiple: 'Digite ou cole os nomes dos seus alunos, um por
@@ -801,13 +838,6 @@
   dashboard_login_picture: Imagem
   dashboard_login_none: E-mail
   dashboard_new_password: nova senha
-  dashboard_progress_not_started: não iniciado
-  dashboard_progress_in_progress: em progresso
-  dashboard_progress_not_completed: não concluído
-  dashboard_progress_completed_too_many_blocks: concluído, muitos blocos
-  dashboard_progress_completed_perfect: concluído, perfeito
-  dashboard_progress_furthest_level_attempted: tentativa para o nível mais avançado
-  dashboard_progress_submitted: enviado
   dashboard_stage: Fase
   dashboard_puzzle: Desafio
   dashboard_question: Pergunta
@@ -849,21 +879,7 @@
     problem in computer science. Code Studio teachers are leading the way in educating
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
-  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you
-    (or a teacher you know) want to learn how to teach a full year introductory high
-    school computer science class students will love? You don't need any prior experience
-    to join our free workshops for our Exploring Computer Science course. Sign up
-    by April 22nd. "
   dashboard_announce_button_text: Saiba mais
-  dashboard_announce_hoc: "<b>9 de novembro 2015</b> - Um novo tutorial da Hora do
-    Código está disponível, trazendo o novo filme de Star Wars: O Despertar da Força.
-    Trabalhe junto com Rey para guiar o novo androide, BB-8, em uma missão. Então,
-    junte-se a Leia para criar e compartilhar seu próprio jogo em uma galáxia muito,
-    muito distante."
-  dashboard_announce_playlab: "<b>4 de dezembro de 2015</b> - A Hora do Código chegou!
-    Experimente 50 tutoriais para todas as idades e dispositivos. Novidades desta
-    semana: programe suas próprias histórias e jogos em novos laboratórios, com A
-    Era do Gelo e Gumball."
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação

@@ -648,6 +648,11 @@
   dashboard_action_remove_confirm: Heqje?
   dashboard_action_done: Përfunduar
   dashboard_action_required: e domosdoshme
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Faqja kryesore e mësuesit
   dashboard_navigation_section_student_progress: Llogaritë dhe Ecuria e Studentit
   dashboard_navigation_section_teacher_progress: Ecuria e Kursit Tënd
@@ -665,6 +670,18 @@
   dashboard_navigation_view_stats: Shiko Statistikat
   dashboard_navigation_section: 'Seksioni: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
+  dashboard_progress_not_started: nuk është nisur
+  dashboard_progress_in_progress: Në punë e sipër
+  dashboard_progress_not_completed: e papërfunduar
+  dashboard_progress_completed_too_many_blocks: i përfunduar, me shumë blloqe
+  dashboard_progress_completed_perfect: i përfunduar, në mënyrë perfekte
+  dashboard_progress_furthest_level_attempted: përpjekja e nivelit më të largët
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Seksion i ri
   dashboard_sections_jumbotron_instruction: Krijo seksione të reja dhe shto studentë
     në to. Seksionet të ndihmojnë për të organizuar studentët në grupe më të vogla
@@ -691,6 +708,26 @@
     informacione të llogarive të studenteve te tu dhe t'ua shpërndash atyre në menyrë
     individuale.
   dashboard_sections_switch_section: 'Ndrysho seksionin:'
+  dashboard_sections_close: Mbyll
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Shto studentë
   dashboard_students_add_students: Shto studentë të shumëfishtë
   dashboard_students_add_multiple: 'Shkruaj emrat e studentëve të tu, një për çdo
@@ -776,13 +813,6 @@
   dashboard_login_picture: Figurë
   dashboard_login_none: Email
   dashboard_new_password: fjalëkalim i ri
-  dashboard_progress_not_started: nuk është nisur
-  dashboard_progress_in_progress: Në punë e sipër
-  dashboard_progress_not_completed: e papërfunduar
-  dashboard_progress_completed_too_many_blocks: i përfunduar, me shumë blloqe
-  dashboard_progress_completed_perfect: i përfunduar, në mënyrë perfekte
-  dashboard_progress_furthest_level_attempted: përpjekja e nivelit më të largët
-  dashboard_progress_submitted: submitted
   dashboard_stage: Fazë
   dashboard_puzzle: Enigmë
   dashboard_question: Question
@@ -826,17 +856,7 @@
     problem in computer science. Code Studio teachers are leading the way in educating
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
-  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you
-    (or a teacher you know) want to learn how to teach a full year introductory high
-    school computer science class students will love? You don't need any prior experience
-    to join our free workshops for our Exploring Computer Science course. Sign up
-    by April 22nd. "
   dashboard_announce_button_text: Mëso më shumë
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
-  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
   code_hoc_coming: Ora e Kodimit është këtu - Dhjetor 8-14!
   code_sign_up: Rregjistrohu për të marrë pjesë në Javën Edukative për SHK
   learn_more: Mëso më Shumë
