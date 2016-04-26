@@ -4,7 +4,6 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
 @import 'color';
 @import 'mixins';
 @import "../JsDebuggerUi.scss";
-@import "./AnimationTab.scss";
 @import "./ResizablePanes.scss";
 
 #divGameLab {
@@ -39,6 +38,9 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
 .stop {
   background-position: -21px -21px;
   margin-right: 3px;
+}
+.dpad-btn {
+  background-position: -21px -63px;
 }
 .left-btn {
   background-position: -21px -42px;

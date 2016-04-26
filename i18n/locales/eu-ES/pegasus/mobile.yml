@@ -492,6 +492,11 @@ eu-ES:
   dashboard_action_remove_confirm: Kendu?
   dashboard_action_done: Egina
   dashboard_action_required: beharrezkoa
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Irakaslearen hasiera-orria
   dashboard_navigation_section_student_progress: Ikasleen kontu eta aurrerapena
   dashboard_navigation_section_teacher_progress: Zure lorpena ikastaroan
@@ -509,6 +514,17 @@ eu-ES:
   dashboard_navigation_view_stats: Estatistikak Ikusi
   dashboard_navigation_section: 'Atala: %{section_name}'
   dashboard_navigation_student: 'Ikaslea: %{student_name}'
+  dashboard_progress_not_started: hasi gabe
+  dashboard_progress_in_progress: bidean
+  dashboard_progress_not_completed: osatu gabea
+  dashboard_progress_completed_too_many_blocks: burutua, baina bloke gehiegi daude
+  dashboard_progress_completed_perfect: burutua, bikain
+  dashboard_progress_furthest_level_attempted: saiatutako maila altuena
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Atal berria
   dashboard_sections_jumbotron_instruction: Sekzio berriak sortu eta ikasleak gehitu bertara. Sekzioak ikasleak talde txikiagoetan antolatzen laguntzen dizu, horrela, beraien progresua ikusi eta bere kontuak administratu ditzazkezu.
   dashboard_sections_table_section: Atala
@@ -524,6 +540,19 @@ eu-ES:
   dashboard_sections_secret_none: 'Ikasle bakoitzak bere kontua administratzea nahi baduzu, bakoitzak bere pasahitza aukeratzea adibidez, aukeratu mota sekretu bat <b> ezer </b> erabiliz.'
   dashboard_sections_print_secrets: Horren ondoren kontuaren datuekin txartelak inprimitu beharko dira geroago ikasleei banatzeko.
   dashboard_sections_switch_section: 'Atala aldatu:'
+  dashboard_sections_close: Itxi
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Ikaslea gehitu
   dashboard_students_add_students: Ikasleak gehitu
   dashboard_students_add_multiple: 'Idatzi edo itsasi zure ikasleen izenak, lerro bakoitzeko bat:'
@@ -590,13 +619,6 @@ eu-ES:
   dashboard_login_picture: Irudia
   dashboard_login_none: E-posta
   dashboard_new_password: pasahitz berria
-  dashboard_progress_not_started: hasi gabe
-  dashboard_progress_in_progress: bidean
-  dashboard_progress_not_completed: osatu gabea
-  dashboard_progress_completed_too_many_blocks: burutua, baina bloke gehiegi daude
-  dashboard_progress_completed_perfect: burutua, bikain
-  dashboard_progress_furthest_level_attempted: saiatutako maila altuena
-  dashboard_progress_submitted: submitted
   dashboard_stage: Maila
   dashboard_puzzle: Ariketa
   dashboard_question: Galdera
@@ -631,10 +653,8 @@ eu-ES:
   dashboard_faq_k5: LH-5 sarri egindako galderak
   dashboard_announcements: Berriak
   dashboard_announce_view_all: Guztiak ikusi
-  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
   dashboard_announce_button_text: Ikasi gehiago
-  dashboard_announce_hoc: "<b>2015eko Urriak 15 </b>- Kode Ordua iristen hari da &mdash; antolaketa partaide guztiak opari txartel bat jasoko dute Amazon.com edo Microsoft's Windows Strore-en berain lanagit esker moduan. Parte hartu mundu osoko klasean Abenduan 7-13 tartean."
-  dashboard_announce_playlab: '<b>2015eko abenduaren 4a</b> - Kode ordua hemen da! Saiatu edozein adinetarako eta edozein gailurako 50 tutorial. Aste honetan berria: sortu istorio eta jokoak, Ice Age eta Gumball joko laborategi berrietan.'
   code_hoc_coming: Kode-ordua iritsi da-Abenduak 8-14!
   code_sign_up: Izena eman Informatikaren Ikaskuntzaren Astean parte hartzeko
   learn_more: Gehiago ikasi

@@ -185,10 +185,6 @@
             </block>
           </value>
         </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE">89</title>
-        </block>
       </xml>
     </recommended_blocks>
     <solution_blocks>

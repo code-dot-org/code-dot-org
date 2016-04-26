@@ -182,7 +182,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "instructions": "Do This",
-    "markdown_instructions": "# Clouds and Sun\r\n\r\nNext we are going to add the clouds and sun to our picture\r\n\r\nIt will look like this:\r\n\r\n<img src=\"https://images.code.org/c3a26070e316d0fda19caba59af710ba-image-1460644884454.41.10 AM.png\" width=200>\r\n\r\n** Insert Drawing of locations for this stuff **\r\n\r\n# Do This\r\n* Add ellipses for clouds and the sun\r\n* Make sure there is no outline on the clouds and sun (hint if you put it at the top it should already happen )\r\n* Set the colors of the clouds and sun "
+    "markdown_instructions": "# Clouds and Sun\r\n\r\nNext we are going to add the clouds and sun to our picture. Here is an example of what your work could look like at the end of level but use some creativity as you create your sun and clouds.\r\n\r\n<img src=\"https://images.code.org/c3a26070e316d0fda19caba59af710ba-image-1460644884454.41.10 AM.png\" width=200>\r\n\r\n# Do This\r\n* Add ellipses for clouds and the sun.\r\n* Make sure there is no outline on the clouds and sun\r\n* Set the colors of the clouds and sun. "
   },
   "published": true,
   "notes": "",

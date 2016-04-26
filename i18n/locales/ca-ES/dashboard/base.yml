@@ -25,7 +25,11 @@ ca:
   welcome_back: 'Benvingut de nou, %{name}'
   submit: Envia
   unsubmit: Unsubmit
+  previous_page: Previous page
   next_page: Next page
+  cancel: Cancel·lar
+  okay: "D'acord"
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Afegeix un mestre:'
@@ -458,6 +462,11 @@ ca:
     minecraft:
       title: Minecraft
       body: Explore a Minecraft world through code.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Els estudiants van dibuixar això amb codi!
     students_made_these_with_code: Els estudiants van fer això amb codi!
@@ -501,6 +510,12 @@ ca:
     wrong_body: Thank you for submitting answers.
     correct_title: Gràcies
     correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Solució incorrecta
     wrong_body: 'La solució que has introduït no és correcta.  Si us plau, intenta-ho de nou!'
@@ -632,5 +647,5 @@ ca:
         acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Buscar una icona...
+      no_icons_found: Cap icona trobada

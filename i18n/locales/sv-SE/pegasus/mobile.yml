@@ -501,6 +501,11 @@ sv-SE:
   dashboard_action_remove_confirm: Ta bort?
   dashboard_action_done: Klart
   dashboard_action_required: obligatorisk
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Lärare hemsida
   dashboard_navigation_section_student_progress: Elevkonton och framsteg
   dashboard_navigation_section_teacher_progress: Dina kurser
@@ -518,6 +523,17 @@ sv-SE:
   dashboard_navigation_view_stats: Visa statistik
   dashboard_navigation_section: 'Avsnitt: %{section_name}'
   dashboard_navigation_student: 'Elev: %{student_name}'
+  dashboard_progress_not_started: inte startat
+  dashboard_progress_in_progress: pågående
+  dashboard_progress_not_completed: Ej avklarad
+  dashboard_progress_completed_too_many_blocks: Avklarad med för många block
+  dashboard_progress_completed_perfect: Avklarad perfekt
+  dashboard_progress_furthest_level_attempted: försökt nå bortersta nivån
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Ny sektion
   dashboard_sections_jumbotron_instruction: Skapa nya grupper och lägg till elever i dem. Sektionerna hjälper dig att organisera elever i mindre grupper så att du kan följa deras framsteg och hantera deras konton.
   dashboard_sections_table_section: Grupp
@@ -533,6 +549,19 @@ sv-SE:
   dashboard_sections_secret_none: 'Om du vill ha dina elever att hantera sina egna konton, inklusive att välja sina egna lösenord, välj en hemlig typ av <b>ingen</b>.'
   dashboard_sections_print_secrets: Du kan skriva ut ett ark med kort som innehåller kontoinformation ska distribueras till dina elever individuellt.
   dashboard_sections_switch_section: 'Byt sektion:'
+  dashboard_sections_close: Avsluta
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Lägg till student
   dashboard_students_add_students: Lägga till flera elever
   dashboard_students_add_multiple: 'Skriv eller klistra in namnen på dina elever, en per rad:'
@@ -599,13 +628,6 @@ sv-SE:
   dashboard_login_picture: Bild
   dashboard_login_none: E-post
   dashboard_new_password: nytt lösenord
-  dashboard_progress_not_started: inte startat
-  dashboard_progress_in_progress: pågående
-  dashboard_progress_not_completed: Ej avklarad
-  dashboard_progress_completed_too_many_blocks: Avklarad med för många block
-  dashboard_progress_completed_perfect: Avklarad perfekt
-  dashboard_progress_furthest_level_attempted: försökt nå bortersta nivån
-  dashboard_progress_submitted: submitted
   dashboard_stage: nivå
   dashboard_puzzle: Pussel
   dashboard_question: Fråga
@@ -640,10 +662,8 @@ sv-SE:
   dashboard_faq_k5: K-5 vanliga frågor
   dashboard_announcements: Anslagstavla
   dashboard_announce_view_all: Visa alla
-  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
   dashboard_announce_button_text: Lär dig mer
-  dashboard_announce_hoc: '<b>23 November 2015</b> - Skulle du vilja få hjälp av en frivillig som brinner för datavetenskaplig utbildning under ditt Kodtimmen evenemang? Över 7 000 frivilliga vill inspirera dina elever genom att besöka ditt klassrum eller videochatta på distans. Kolla in frivillig-kartan för att kontakta frivilliga i ditt område.'
-  dashboard_announce_playlab: '<b>4 december, 2015</b> - Kodtimmen är här! Prova 50 övningar för alla åldrar och alla mobila enheter. Nytt den här veckan: Koda dina egna historier och spel i nya spel-labb, Ice Age och Gumball.'
   code_hoc_coming: Kodtimmen är här – 8-14 december!
   code_sign_up: 'Registrera dig för att kunna delta i CS utbildnings- vecka'
   learn_more: Prova nu

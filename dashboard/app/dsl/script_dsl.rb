@@ -52,6 +52,10 @@ class ScriptDSL < BaseDSL
     @concepts = items
   end
 
+  def level_concept_difficulty(json)
+    @level_concept_difficulty = json ? JSON.parse(json) : {}
+  end
+
   string :skin
 
   string :video_key_for_next_level
@@ -66,6 +70,7 @@ class ScriptDSL < BaseDSL
       :stage => @stage,
       :skin => @skin,
       :concepts => @concepts.join(','),
+      :level_concept_difficulty => @level_concept_difficulty || {},
       :video_key => @video_key_for_next_level
     }.merge(properties).select{|_, v| v.present? }
     @video_key_for_next_level = nil

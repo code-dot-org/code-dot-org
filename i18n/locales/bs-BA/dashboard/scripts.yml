@@ -931,6 +931,7 @@ bs:
           Long assessment: Long assessment
           Star wars: Star wars
           Minecraft: Minecraft
+          Rich long assessment: Rich long assessment
         algebraPD2b:
           title: Računarstvo u Algebri Profesionalni Razvoj
           description: Predaji Funkcionalno Programiranje kroz Algebru
@@ -1648,3 +1649,157 @@ bs:
           title: Gamelab Hackathon
           description_short: Gamelab Hackathon
           description: A place to try things out in Game Lab
+        algebraPD1:
+          title: Računarstvo u Algebri Profesionalni Razvoj
+          description_short: Teach Algebra through Functional Programming
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Uvod u Profesionalni Razvoj
+          Course Overview: Course Overview
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Evaluation Blocks: Blokovi Izvršenja
+          Teacher Dashboard: Nadzorna Ploča za Nastavnike
+          Preparing for in-person PD: Preparing for in-person PD
+        algebraPD3c:
+          title: Računarstvo u Algebri Profesionalni Razvoj
+          description_short: CS in Algebra end of year reflection
+          description: CS in Algebra end of year reflection
+          Getting Started: Getting Started
+          Sharing Student Work: Sharing Student Work
+        csp1:
+          title: 'CS Principles Unit 1 - The Internet'
+          description_short: Internet
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
+          Personal Innovations: Personal Innovations
+          Sending Binary Messages: Slanje Binarnih Poruka
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages with the Internet Simulator
+          Sending Bits in the Real World: Slanje Bita u Stvarnom Svijetu
+          Number Systems: Brojčani Sistemi
+          Binary Numbers: Binarni Brojevi
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          The Internet: Internet
+          The Need for Addressing: The Need for Addressing
+          Invent an Addressing Protocol: Invent an Addressing Protocol
+          Routers and Redundancy: Routers and Redundancy
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
+          Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
+          Algorithms Detour - How Routers Learn: 'Algorithms Detour - How Routers Learn'
+          The Need for DNS: The Need for DNS
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Practice PT - The Internet and Society: 'Practice PT - The Internet and Society'
+        csp2:
+          title: 'CS Principles Unit 2 - Digital Information'
+          description_short: Digital Information
+          description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          Bytes and File Sizes: Bytes and File Sizes
+          Text Compression: Text Compression
+          Encoding B&W Images: 'Encoding B&W Images'
+          Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
+          Encode a Complex Thing: Encode a Complex Thing
+          Intro to Data: Intro to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: 'Practice PT - Tell a Data Story'
+        csp3:
+          title: 'CSP Unit 3 - Programming'
+          description_short: Programming
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          The Need For Programming Languages: The Need For Programming Languages
+          The Need for Algorithms: The Need for Algorithms
+          Creativity in Algorithms: Creativity in Algorithms
+          Using Simple Commands: Using Simple Commands
+          Creating Functions: Kreiranje Funkcija
+          Functions and Top-Down Design: Functions and Top-Down Design
+          APIs and Function Parameters: APIs and Function Parameters
+          Creating functions with Parameters: Creating functions with Parameters
+          Looping and Random Numbers: Looping and Random Numbers
+          Practice PT - Design a Digital Scene: 'Practice PT - Design a Digital Scene'
+        csp4:
+          title: 'CS Principles Unit 4 - Big Data and Privacy'
+          description_short: Big Data and Privacy
+          description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
+          Identifying People with Data: Identifying People with Data
+          The Cost of Free: The Cost of Free
+          Tell Me a Secret - Encrypting Text: 'Tell Me a Secret - Encrypting Text'
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Public Key Crypto: Public Key Crypto
+          Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
+          Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
+        csp5:
+          title: 'CS Principles Unit 5 - Building Apps'
+          description_short: Building Apps
+          description: 'This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools. '
+          Events Unplugged: Events Unplugged
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Introducing Design Mode: Introducing Design Mode
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistants: Introduction to Digital Assistants
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: Dok petlje
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
+        csp6:
+          title: 'CS Principles Unit 6 - Performance Tasks'
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+        CSDU3-Draft:
+          title: ' TEMP CSD Unit 3 - Interactive Games and Animations'
+          description_short: Programming
+          description: Temp place to work on U3 of Disco
+          Drawing in Game Lab: Drawing in Game Lab
+          Animation: Animation
+          Draw Loop and Random: Draw Loop and Random
+          Variables: Varijable
+          Sprite Properties and Mod: 'Sprite Properties and Mod'
+        2016_sciencePD_phase1:
+          title: Computer Science in Science PD 2016-2017
+          description_short: In Partnership with Project GUTS
+          description: In Partnership with Project GUTS
+          Introduction to PD: Uvod u Profesionalni Razvoj
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        TEMP CSD Unit 3:
+          title: ' TEMP CSD Unit 3 - Interactive Games and Animations'
+          description_short: Programming
+          description: ""
+          Drawing in Game Lab: Drawing in Game Lab

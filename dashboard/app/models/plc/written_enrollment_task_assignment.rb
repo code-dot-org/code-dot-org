@@ -33,7 +33,7 @@ class Plc::WrittenEnrollmentTaskAssignment < Plc::EnrollmentTaskAssignment
       when NOT_STARTED
         return 'fa-circle-o', 'color: black'
       when IN_PROGRESS
-        return 'fa-adjust', 'color: goldenrod'
+        return 'fa-adjust', 'color: darkgoldenrod'
       when REVIEW_REJECTED
         return 'fa-exclamation-circle', 'color: red'
       when COMPLETED

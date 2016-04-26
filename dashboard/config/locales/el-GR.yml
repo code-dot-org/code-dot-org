@@ -26,7 +26,11 @@
   welcome_back: "Καλώς ήρθες, %{name}"
   submit: "Υποβολή"
   unsubmit: "Ανακλήθηκε"
-  next_page: Next page
+  previous_page: Previous page
+  next_page: "Επόμενη σελίδα"
+  cancel: "Άκυρο"
+  okay: "Εντάξει"
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: "Προσθέστε ένα δάσκαλο:"
@@ -564,6 +568,15 @@
     minecraft:
       title: Minecraft
       body: "Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα."
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: "Οι μαθητές τα σχεδίασαν αυτά με κώδικα!"
     students_made_these_with_code: "Οι μαθητές τα δημιούργησαν αυτά με κώδικα!"
@@ -609,14 +622,23 @@
     toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: "Ευχαριστούμε"
-    wrong_body: Thank you for submitting answers.
+    wrong_body: "Ευχαριστούμε που υπέβαλες απαντήσεις."
     correct_title: "Ευχαριστούμε"
-    correct_body: Thank you for submitting an answer
+    correct_body: "Ευχαριστούμε που υπέβαλες απαντήσεις."
   level_group-submittable:
     wrong_title: "Ευχαριστούμε"
-    wrong_body: Thank you for submitting answers.
+    wrong_body: "Ευχαριστούμε που υπέβαλες απαντήσεις."
     correct_title: "Ευχαριστούμε"
-    correct_body: Thank you for submitting answers.
+    correct_body: "Ευχαριστούμε που υπέβαλες απαντήσεις."
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: "Λανθασμένη λύση"
     wrong_body: "Η λύση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε
@@ -704,7 +726,7 @@
     completed_perfect: "ολοκληρώθηκε, τέλειο"
     furthest_level_attempted: "τελευταίο επίπεδο επιχειρήθηκε"
     assessment: "αξιολόγηση"
-    submitted: submitted
+    submitted: "Υποβλήθηκε"
   studio:
     courses_working_on: "Μαθήματα τα οποία παρακολουθείτε"
     completed_courses: "Μαθήματα που ολοκληρώσατε"

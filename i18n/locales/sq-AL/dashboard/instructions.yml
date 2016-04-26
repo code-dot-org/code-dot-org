@@ -1647,15 +1647,10 @@ sq:
       Course 4 Binary 8_instruction: 'Mund të plotësosh pjesën më të madhe të këtij imazhi duke futur në një cikël një numër binar 5 bit - me pas do të nevojitet një numër tjetër 4 bit për të gjetur këndin e djathtë poshtë.'
       Course 4 EC 1a_instruction: No rules. No clues. Just the challenge!
       Course 4 EC 1b_instruction: No rules. No clues. Just the challenge!
-      Course 4 EC 2a_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
-      Course 4 EC 2b_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
-      Course 4 EC 2c_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
+      Course 4 EC 2a_instruction: No rules. No clues. Just the challenge!
+      Course 4 EC 2b_instruction: No rules. No clues. Just the challenge!
+      Course 4 EC 2c_instruction: No rules. No clues. Just the challenge!
+      Course 4 EC 2d_instruction: No rules. No clues. Just the challenge!
       Course 4 EC 3_instruction: |
         Use what you learned in the previous level to draw
         an image like this. Note: The code becomes more simple if you incorporate
@@ -1691,7 +1686,7 @@ sq:
         one.
       Course 4 Play Lab Params 7_instruction: "Shiko në kodin që të është dhënë për të parë nëse \nmund të zbulosh çfarë bënë secili bllok. \\r\n\\r\nKur të mbarosh, përdor\nshigjetat për të kontrolluar Qenin dhe për të mledhur të gjithë flamujt."
       Course 4 Play Lab Params 8_instruction: 'Përdor një bllok "kur preket" për të dërguar Qenin pas në pjesën e sipërme-majtas VETËM NËSE Qeni prek ndonjë nga aktorët.'
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function \"score_points.\"\\r\n\\r\nEdit\nthe function so that a \"points\" parameter is added to the \"player_score\"\nvariable. \\r\n\\r\nThe variable \"player_score\" should increase each time\nDog tags Cat with hearts, and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith hearts, and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: |
         Kësaj here nuk ke pse të shkruash ndonjë
         kod, thjesht shtyp "Lesho" për të luajtur lojën! Në këtë lojë, ti je Qeni i cili 
@@ -1796,6 +1791,110 @@ sq:
       CSD Hackathon Pt 2_instruction: (Click to see full instructions)
       CSD Hackathon Week 1_instruction: (Click to see full instructions)
       CSD Hackathon Week 2_instruction: (Click to see full instructions)
+      CSD U3 Background Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Background Experiment_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Experiment_instruction: |
+        Try using some of the other shape
+        functions you've learned in the draw loop. What happens when you use randomNumber()
+        to generate some of the inputs?You'll want to stop and discuss with the class
+        before moving on.
+      CSD U3 Frame Rate_instruction: "Slow down Gamelab Gary's animation with frameRate()"
+      CSD U3 Random Animation_instruction: |
+        Use randomNumber() to animate Gary's
+        mouth.
+      CSD U3 Random Choice_instruction: |
+        Use the randomNumber() block to generate
+        either 0 or 1
+      CSD U3 Random Color_instruction: |
+        Could you use randomNumber() to pick random
+        colors as well? Try setting one or more of the channels in the rgb block with
+        a random number. What should the maximum value be?
+      CSD U3 Random Intro_instruction: |
+        What do you think this code will do when
+        it is run? Make a prediction, then run this code 5 - 10 times, recording the
+        output each time. Share your results with your neighbor.
+      CSD U3 Random Min Max_instruction: |
+        Using console.log() write a program that
+        randomly returns a number in a range you define.
+      CSD U3 Random Width Height_instruction: |
+        Pick a shape function and use calls
+        to randomNumber() in place of one or more of the parameters. Maker sure you
+        run it a few times so you can see the effect of randomization.
+      CSD U3 Simple Drawing - Animation 2_instruction: |
+        Use randomNumber() on the
+        x position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Animation_instruction: |
+        Use randomNumber() on the x
+        position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Background_instruction: |
+        Put all of your code into
+        a draw() loop and then add set the background to blue with the background()
+        block.
+      CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Variable Arithmetic pt2_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variable Arithmetic_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variable Incrementation pt2_instruction: |
+        Predict: What two numbers
+        will be displayed in the console?
+      CSD U3 Variable Incrementation_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variables CHALLENGE gamelab gary_instruction: |
+        Use variables to animate
+        Game Lab Gary
+      CSD U3 Variables draw loop newVars_instruction: |
+        Extend this project to create
+        your own random art visualization with variables.
+      CSD U3 Variables draw loop rgb_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
+      CSD U3 Variables draw loop xy_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
+      CSD U3 Variables Initialize_instruction: |
+        Predict: What will get displayed
+        in the console?
+      CSD U3 Variables Intro_instruction: 'Create your own variable '
+      CSD U3 Variables random drawing exemplar_instruction: |
+        Check out this example
+        randomized drawing.
+      CSD U3 Variables Random_instruction: |
+        Predict: What will get displayed in the
+        console?
+      CSD U3 Variables Reassign pt2_instruction: |
+        Create and assign a new variable
+        in a single line.
+      CSD U3 Variables Reassign_instruction: |
+        Predict: What will get displayed in
+        the console?
+      CSD U3 Variables Square Random Loop_instruction: |
+        Test your predictions from
+        the last level.
+      CSD U3 Variables Square Random_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variables Square_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variables use value rect_instruction: |
+        Predict: What will get displayed
+        in the console?
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -2066,14 +2165,8 @@ sq:
         se me çfarë numri të zëvendësosh pikëpyetjet për të vizatuar një rreth?
       frozen cross rotate dense_instruction: 'Le ta përsërisim atë 90 herë! Sa herë hyn 90 tek 360? Ndihmë: Është një numër vërtet i vogël.'
       frozen cross rotate_instruction: Tani përpiqu të përsërisësh atë 10 herë. Sa gradë duhet të kthehesh midis çdo vije?
-      frozen cross_instruction: |
-        Wrap a “Repeat” block around these commands to create
-        a plus sign. Did you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using another “Repeat"
-        block to repeat a parallelogram 4 times, turning right by 90 degrees between
-        each parallelogram.
+      frozen cross_instruction: 'Përdor bllokun "Repeat" për të krijuar një shenjë plusi. A e vure re që Elsa mund të lëvizë para dhe mbrapa?'
+      frozen diamond mini snowflake_instruction: 'A e dije që çdo flok dëbore ka formë të ndryshme nga njëra-tjetra? Le të krijojmë një flok dëbore të ri duke përdorur bllokun "Repeat" për të përsëritur një paralelogram 4 herë, duke u kthyer djathtas me 90 gradë ndërmjet çdo paralelogrami.'
       frozen diamond snowflake_instruction: Tani le të krijojmë një flok dëbore të ri duke përodrur bllokun repeat për të përsëritur një paralelogram 10 herë, duke u kthyer djathtas me 36 gradë ndërmjet secilit.
       frozen diamond_instruction: |
         Use a repeat around these blocks to create a parallelogram.
@@ -2800,6 +2893,9 @@ sq:
       Ryan Doily Step 2_instruction: |
         Now you need to turn and repeat it 20 times!
         How many degrees do you turn to get 360 after 20 iterations?
+      Ryan Doily Step 3_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Këtu është një funksion që quhet "patrol".
         Ndryshoje atë që të lëvizësh macen 400 piksela lart dhe 400 piksela posht.
@@ -2899,6 +2995,7 @@ sq:
       template test_instruction: "what's up"
       Test Play Lab_instruction: This is a test play lab level.
       test_sarah_instruction: hi hi
+      Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat keeps using the `fill` block until the ground is even?  "
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
@@ -3449,6 +3546,18 @@ sq:
       U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\\r\n"
       U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
       U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
+      U3 - Simple Drawing - Comments_instruction: Do this
+      U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
+      U3 - Simple Drawing - No Fill_instruction: Do this
+      U3 - Simple Drawing - Order of Blocks_instruction: Do this
+      U3 - Simple Drawing - Personal Drawing_instruction: DO This
+      U3 - Simple Drawing - Rectangle_instruction: Do This
+      U3 - Simple Drawing - regular polygon_instruction: Do this
+      U3 - Simple Drawing - Road Ellipse_instruction: Do This
+      U3 - Simple Drawing - Road Rects and Color_instruction: Do This
+      U3 - Simple Drawing - Stroke and Stroke Weight_instruction: Do this
+      U3 - Simple Drawing - text_instruction: Do This
+      U3 - Simple Drawing - X and Y values_instruction: Do This
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -3552,6 +3661,15 @@ sq:
         back a default response.
       U3 full clicker demo_instruction: 'Clicker game - Try it out!'
       U3 mehal's clone_instruction: Try out a demo of the Digital Assistant!
+      U3 Variables consolelog_instruction: |
+        Use the write block to display the value
+        of size
+      U3 Variables misconceptions try it_instruction: |
+        Test out your predictions
+        from the previous level.
+      U3 Variables write_instruction: |
+        Use the write block to display the value of
+        size
       U3- Variables - Assign Random For Turtle Draw_instruction: |
         Try writing the
         same code in text mode.
@@ -3698,8 +3816,9 @@ sq:
         Free Play! Use what you learned
         from loops and random to make your own little scene. Have fun.
       U3L07 - introSquare_instruction: |
-        Use a loop to draw a square. (Click to see
-        full instructions)
+        Use a loop to draw a square. Then add another
+        loop to draw many squares each one rotated some amount. (Click to see full
+        instructions)
       U3L07 - loopsWithRandom_instruction: |
         Increase the number of iterations to
         fill the screen with white. (Click to see full instructions)

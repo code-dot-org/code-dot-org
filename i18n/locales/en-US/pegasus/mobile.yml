@@ -473,6 +473,11 @@ en-US:
   dashboard_action_remove_confirm: crwdns27795:0crwdne27795:0
   dashboard_action_done: crwdns7793:0crwdne7793:0
   dashboard_action_required: crwdns7794:0crwdne7794:0
+  dashboard_assessments_view: crwdns56489:0crwdne56489:0
+  dashboard_assessments_none: crwdns56490:0crwdne56490:0
+  dashboard_filter_by_stage: crwdns56491:0crwdne56491:0
+  dashboard_filter_all: crwdns56492:0crwdne56492:0
+  dashboard_download_csv: crwdns56493:0crwdne56493:0
   dashboard_navigation_home_page: crwdns7795:0crwdne7795:0
   dashboard_navigation_section_student_progress: crwdns25905:0crwdne25905:0
   dashboard_navigation_section_teacher_progress: crwdns25906:0crwdne25906:0
@@ -490,6 +495,17 @@ en-US:
   dashboard_navigation_view_stats: crwdns20167:0crwdne20167:0
   dashboard_navigation_section: 'crwdns7800:0%{section_name}crwdne7800:0'
   dashboard_navigation_student: 'crwdns7801:0%{student_name}crwdne7801:0'
+  dashboard_progress_not_started: crwdns35467:0crwdne35467:0
+  dashboard_progress_in_progress: crwdns35468:0crwdne35468:0
+  dashboard_progress_not_completed: crwdns27939:0crwdne27939:0
+  dashboard_progress_completed_too_many_blocks: crwdns27940:0crwdne27940:0
+  dashboard_progress_completed_perfect: crwdns27941:0crwdne27941:0
+  dashboard_progress_furthest_level_attempted: crwdns27942:0crwdne27942:0
+  dashboard_progress_submitted: crwdns56220:0crwdne56220:0
+  dashboard_progress_view: crwdns56494:0crwdne56494:0
+  dashboard_progress_student_in_script: 'crwdns56495:0%{student_name}crwdnd56495:0%{script_name}crwdne56495:0'
+  dashboard_responses_view: crwdns56496:0crwdne56496:0
+  dashboard_responses_none: crwdns56497:0crwdne56497:0
   dashboard_sections_new_section: crwdns7802:0crwdne7802:0
   dashboard_sections_jumbotron_instruction: crwdns7803:0crwdne7803:0
   dashboard_sections_table_section: crwdns7804:0crwdne7804:0
@@ -505,6 +521,19 @@ en-US:
   dashboard_sections_secret_none: crwdns7813:0crwdne7813:0
   dashboard_sections_print_secrets: crwdns7814:0crwdne7814:0
   dashboard_sections_switch_section: crwdns7815:0crwdne7815:0
+  dashboard_sections_close: crwdns56498:0crwdne56498:0
+  dashboard_sections_move_students_desc: crwdns56499:0crwdne56499:0
+  dashboard_sections_one_per_teacher: crwdns56500:0crwdne56500:0
+  dashboard_sections_move_to_section: crwdns56501:0crwdne56501:0
+  dashboard_sections_enter_code: crwdns56502:0crwdne56502:0
+  dashboard_sections_code_placeholder: crwdns56503:0crwdne56503:0
+  dashboard_sections_other_section: crwdns56504:0crwdne56504:0
+  dashboard_sections_both_sections: crwdns56505:0crwdne56505:0
+  dashboard_sections_yes_both: crwdns56506:0crwdne56506:0
+  dashboard_sections_no_move: crwdns56507:0crwdne56507:0
+  dashboard_sections_move_students: crwdns56508:0crwdne56508:0
+  dashboard_error_none_selected: crwdns56509:0crwdne56509:0
+  dashboard_error_other_section: crwdns56510:0crwdne56510:0
   dashboard_students_add_student: crwdns7816:0crwdne7816:0
   dashboard_students_add_students: crwdns7817:0crwdne7817:0
   dashboard_students_add_multiple: crwdns7818:0crwdne7818:0
@@ -571,13 +600,6 @@ en-US:
   dashboard_login_picture: crwdns20752:0crwdne20752:0
   dashboard_login_none: crwdns20753:0crwdne20753:0
   dashboard_new_password: crwdns18197:0crwdne18197:0
-  dashboard_progress_not_started: crwdns35467:0crwdne35467:0
-  dashboard_progress_in_progress: crwdns35468:0crwdne35468:0
-  dashboard_progress_not_completed: crwdns27939:0crwdne27939:0
-  dashboard_progress_completed_too_many_blocks: crwdns27940:0crwdne27940:0
-  dashboard_progress_completed_perfect: crwdns27941:0crwdne27941:0
-  dashboard_progress_furthest_level_attempted: crwdns27942:0crwdne27942:0
-  dashboard_progress_submitted: crwdns56220:0crwdne56220:0
   dashboard_stage: crwdns50088:0crwdne50088:0
   dashboard_puzzle: crwdns50089:0crwdne50089:0
   dashboard_question: crwdns50090:0crwdne50090:0
@@ -614,8 +636,6 @@ en-US:
   dashboard_announce_view_all: crwdns50093:0crwdne50093:0
   dashboard_announce_message: crwdns56188:0crwdne56188:0
   dashboard_announce_button_text: crwdns55869:0crwdne55869:0
-  dashboard_announce_hoc: crwdns50094:0crwdne50094:0
-  dashboard_announce_playlab: crwdns55290:0crwdne55290:0
   code_hoc_coming: crwdns25713:0crwdne25713:0
   code_sign_up: crwdns23315:0crwdne23315:0
   learn_more: crwdns23316:0crwdne23316:0

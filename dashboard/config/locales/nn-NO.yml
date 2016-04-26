@@ -26,7 +26,11 @@
   welcome_back: Velkommen tilbake, %{name}
   submit: Send
   unsubmit: Trekk tilbake
-  next_page: Next page
+  previous_page: Previous page
+  next_page: Neste side
+  cancel: Avbryt
+  okay: OK
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Legg til en lærer:'
@@ -509,8 +513,8 @@
         in seconds.
       body_short: Design an app, code with blocks or JavaScript to make it work, then
         share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      audience: Minstealder 13 år
+      cta: Lær hvordan
     hoc:
       title: Klassisk labyrint
       body: Prøv de grunnleggende konseptene i datavitenskap. Mange millioner har
@@ -543,6 +547,15 @@
     minecraft:
       title: Minecraft
       body: Utforsk en Minecraft-verden gjennom kode.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: Elever tegnet disse ved å kode.
     students_made_these_with_code: Elever laget disse ved å kode.
@@ -578,9 +591,9 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Tusen takk
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: Tusen takk for svar.
     correct_title: Tusen takk
-    correct_body: Thank you for submitting an answer.
+    correct_body: Tusen takk for svar.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
@@ -593,6 +606,15 @@
     wrong_body: Thank you for submitting answers.
     correct_title: Tusen takk
     correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Feil løsning
     wrong_body: Løsningen du har angitt er ikke riktig.  Prøv på nytt!
@@ -744,5 +766,5 @@
           og %{link_start_tos}Bruksvillkår%{link_end}
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Søk etter et ikon...
+      no_icons_found: Ingen ikon funnet

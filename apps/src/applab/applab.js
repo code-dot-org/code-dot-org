@@ -28,9 +28,7 @@ var dropletConfig = require('./dropletConfig');
 var AppStorage = require('./appStorage');
 var constants = require('../constants');
 var experiments = require('../experiments');
-var KeyCodes = constants.KeyCodes;
-var _ = utils.getLodash();
-// var Hammer = utils.getHammer();
+var _ = require('../lodash');
 var apiTimeoutList = require('../timeoutList');
 var designMode = require('./designMode');
 var applabTurtle = require('./applabTurtle');
@@ -46,6 +44,7 @@ var logToCloud = require('../logToCloud');
 var DialogButtons = require('../templates/DialogButtons');
 var executionLog = require('../executionLog');
 var annotationList = require('../acemode/annotationList');
+var Exporter = require('./Exporter');
 
 var createStore = require('../redux');
 var Provider = require('react-redux').Provider;
@@ -827,34 +826,6 @@ Applab.init = function (config) {
     }
 
     if (level.editCode) {
-      // Prevent the backspace key from navigating back. Make sure it's still
-      // allowed on other elements.
-      // Based on http://stackoverflow.com/a/2768256/2506748
-      $(document).on('keydown', function (event) {
-        var doPrevent = false;
-        if (event.keyCode !== KeyCodes.BACKSPACE) {
-          return;
-        }
-        var d = event.srcElement || event.target;
-        if ((d.tagName.toUpperCase() === 'INPUT' && (
-            d.type.toUpperCase() === 'TEXT' ||
-            d.type.toUpperCase() === 'PASSWORD' ||
-            d.type.toUpperCase() === 'FILE' ||
-            d.type.toUpperCase() === 'EMAIL' ||
-            d.type.toUpperCase() === 'SEARCH' ||
-            d.type.toUpperCase() === 'NUMBER' ||
-            d.type.toUpperCase() === 'DATE' )) ||
-            d.tagName.toUpperCase() === 'TEXTAREA') {
-          doPrevent = d.readOnly || d.disabled;
-        } else {
-          doPrevent = !d.isContentEditable;
-        }
-
-        if (doPrevent) {
-          event.preventDefault();
-        }
-      });
-
       setupReduxSubscribers(Applab.reduxStore);
 
       designMode.addKeyboardHandlers();
@@ -949,6 +920,20 @@ Applab.render = function () {
       <AppLabView {...nextProps} />
     </Provider>,
     Applab.reactMountPoint_);
+};
+
+// Expose on Applab object for use in code-studio
+Applab.canExportApp = function () {
+  return experiments.isEnabled('applab-export');
+};
+
+Applab.exportApp = function () {
+  return Exporter.exportApp(
+    // TODO: find another way to get this info that doesn't rely on globals.
+    window.dashboard && window.dashboard.project.getCurrentName() || 'my-app',
+    studioApp.editor.getValue(),
+    designMode.serializeToLevelHtml()
+  );
 };
 
 /**

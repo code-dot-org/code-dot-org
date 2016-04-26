@@ -25,7 +25,11 @@ tr:
   welcome_back: 'Hoş geldiniz %{name}'
   submit: Gönder
   unsubmit: Gönderme
-  next_page: Next page
+  previous_page: Previous page
+  next_page: Sonraki Sayfa
+  cancel: İptal
+  okay: Tamam
+  heading_x_of_y: '%{heading} (sayfa %{x}, %{y})'
   add_teacher_form:
     code:
       label: 'Öğretmen ekleyin:'
@@ -347,7 +351,7 @@ tr:
     art_from_html_old: |
       Minecraft&#8482; &copy; %{current_year} Microsoft. Tüm hakları saklıdır. Star Wars&#8482; &copy; %{current_year} Disney ve Lucasfilm. Tüm hakları saklıdır. Dondurulmuş&#8482; &copy; %{current_year} Disney. Tüm hakları saklıdır. Buz çağı&#8482; &copy; %{current_year} 20th Century Fox. Tüm hakları saklıdır. Kızgın kuşlar&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tüm hakları saklıdır. Mutant vs. Zombiler&#8482; &copy; %{current_year} Electronic Arts Inc. Tüm hakları saklıdır. The Amazing World of Gumball is trademark ve &copy; 2015 Cartoon Network.
       
-    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
+    code_from_html: 'Code.org p5.play, <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a> altında lisanslı kullanır.'
     powered_by_aws: Amazon Web Services tarafından desteklenmektedir
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo ve Kod Saati&reg; Code.org'un ticari markalarıdır."
     copyright: Telif Hakkı
@@ -452,6 +456,11 @@ tr:
     minecraft:
       title: Minecraft
       body: Kod aracılığıyla Minecraft dünyasını keşfedin.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Öğrenciler kod ile bunu çizdiler!
     students_made_these_with_code: Öğrenciler bunları kod ile yaptı!
@@ -495,6 +504,12 @@ tr:
     wrong_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
     correct_title: Teşekkür ederiz
     correct_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Yanlış çözüm
     wrong_body: 'Girdiğiniz çözüm doğru değil.  Lütfen tekrar deneyin!'

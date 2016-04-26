@@ -31,7 +31,8 @@
     "disable_examples": "false",
     "disable_sharing": "false",
     "impressive": "false",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Remember that the code from the last puzzle was:\\n\\n![](https://images.code.org/e5c7492f509dd41efe2888c7e7895c28-image-1461177002636.29.02.png)\",\r\n  \"hint_id\": \"2-3_Artist_Loops_New_11_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
   "notes": "",

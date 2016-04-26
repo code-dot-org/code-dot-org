@@ -25,7 +25,11 @@ pl:
   welcome_back: 'Witaj z powrotem, %{name}'
   submit: Wyślij
   unsubmit: Nieprzesłane
-  next_page: Next page
+  previous_page: Previous page
+  next_page: Następna strona
+  cancel: Anuluj
+  okay: OK
+  heading_x_of_y: '%{heading} (strona %{x} z%{y})'
   add_teacher_form:
     code:
       label: 'Dodaj nauczyciela:'
@@ -346,7 +350,7 @@ pl:
     help_from_html_old: Inżynierowie z Google, Microsoft, Facebook i Twitter pomogli utworzyć te materiały.
     art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon Network.'
-    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
+    code_from_html: 'Code.org używa p5.play, który posiada licencje <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: Zasilany przez Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, logo CODE i Hour of Code&reg; są znakami handlowymi Code.org.'
     copyright: Prawa autorskie
@@ -451,6 +455,11 @@ pl:
     minecraft:
       title: Minecraft
       body: Odkrywaj świat Minecraft poprzez kodowanie.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Uczniowie narysowali to z pomocą kodu!
     students_made_these_with_code: Uczniowie wykonali to z pomocą kodu!
@@ -494,6 +503,12 @@ pl:
     wrong_body: Dziękujemy za wysłanie odpowiedzi.
     correct_title: Dziękujemy
     correct_body: Dziękujemy za wysłanie odpowiedzi.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Niepoprawne rozwiązanie
     wrong_body: Wprowadzone przez Ciebie rozwiązanie nie jest poprawne. Spróbuj ponownie!
@@ -625,5 +640,5 @@ pl:
         acknowledge: 'Przesyłając te informacje, potwierdzasz, że będą one wykorzystane zgodnie z warunkami %{link_start_privacy}Privacy Policy%{link_end} i %{link_start_tos}Terms of Service%{link_end}'
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Szukaj ikony...
+      no_icons_found: Nie odnaleziono ikon

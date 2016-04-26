@@ -1,28 +1,28 @@
 "tr":
   data:
     instructions:
-      2-3 Artist 1 new_instruction: Merhaba,ben bir ressamım.Benim herhangi bir şey
-        çizmem için kod yazabilirsin?Bir kaç kod bloğu kullanarak benim resim içine
-        gri çizgiler çizmemi sağla.(Her çizgi 100 pixel uzunluğunda olmalı.)
+      2-3 Artist 1 new_instruction: Merhaba, ben bir sanatçıyım. Benim herhangi bir
+        şey çizmem için kod yazabilirsin? Bir kaç kod bloğu kullanarak benim resim
+        içine gri çizgiler çizmemi sağla.(Her çizgi 100 pixel uzunluğunda olmalı.)
       2-3 Artist 11_instruction: 'Bir sekizgen yaparak dur işareti ver.8 kenarın her
         biri 100 pixel uzunluğunda olacak.Kaç derece döndür melisin? (İpucu:360 bölü
         8 kaçtır?) '
-      2-3 Artist 12_instruction: "Gözü tamamlamak için daire çiz. \n\\r\nAktör her
+      2-3 Artist 12_instruction: "Gözü tamamlamak için daire çiz. \n\\r\nSanatçı her
         döngüde 1 derece döner. Çemberi tamamlamak için kaç defa tekrarlamam gerekiyor
-        180?, 350? 500?"
+        180?, 360? 500?"
       2-3 Artist 2 new_instruction: 'Bu evde yarısı tamamlanmış bir duvar var. Her
         duvar 100 ama tamamlanmamış duvar sadece 50. Duvarı tamamlayın. '
       2-3 Artist 2_instruction: 'Bu evin yarısı tamamlanmış bir duvarı var. Her kenarı
         100 birim; fakat yarım tamamlanmış duvarı sadece 50 birim. Duvarı tamamlayın. '
       2-3 Artist 3.4_instruction: |
-        Zıpla bloğu ressamı çizim yapmadan ilerletir.
+        Zıpla bloğu sanatçıyı çizim yapmadan ilerletir.
         Hem zıpla hem de çiz bloğunu kullanarak çizgileri birleştirin.
       2-3 Artist 3_instruction: Bu şapka 100 piksel yüksekliğinde.Yüksekliği 70 piksel
         daha az olan bir şapka çiz.
       2-3 Artist 3new_instruction: Kırmızı şapka 100 piksel uzunluğundadır. 70 piksel
         daha kısa olan siyah bir şapka çizerek tamamla. Siyah şapkanın genişliği 50
         pikseldir.
-      2-3 Artist 4_instruction: Kedi için bu evi tamamlamama yardım et.
+      2-3 Artist 4_instruction: Bu evi kedi için tamamlamama yardım et.
       2-3 Artist 5_instruction: Sadece 3 blok kullanarak aynı evi çizmek için bu kodu
         "kez tekrar et" bloğuyla değiştirin.
       2-3 Artist 6_instruction: Bu evin bir çatıya ihtiyacı var!Bir üçgen çiz. İpucu:Üç
@@ -64,8 +64,9 @@
          C gibi görünmesini sağlayabilir misin?
       2-3 Artist Debugging 8_instruction: Benim fırıldağım bitmedi. Bitirmek için
         kaç kez tekrarlamam gerek?
-      2-3 Artist Debugging 9_instruction: 'Kök için bu kod yanlış. İpucu: Açı 60 derece
-        kapalı.'
+      2-3 Artist Debugging 9_instruction: |
+        Birşey kapalı!
+        Kök için bu kod yanlış. Sanatçının kökü doğru şekilde dolaşmasını sağlaya bilirmisin?
       2-3 Artist Debugging Assessment 1_instruction: 'Bu şekil çok küçük. Büyütebilir
         misin? İpucu: Her tarafı 75 pikselden daha uzun olmalı.'
       2-3 Artist Free Play_instruction: Serbest çizim! İstediğiniz herhangi bir şey
@@ -772,10 +773,10 @@
       Artist - Nested Loops 9_instruction: Draw the teeth in the alligator's mouth!
       Artist - Nested Loops Assessment 1_instruction: Tasarımı tamamlamak için iç
         içe geçmiş bir döngü kullanmayı deneyin.
-      Auto Open Function Editor_instruction: "You can call functions from inside\nother
-        functions! Using your \"shape\" function as a base, create 3 house shapes\neach
-        20 pixels larger than the last starting at 50 pixels in length. Using\na counter
-        loop might be helpful. \n"
+      Auto Open Function Editor_instruction: 'Fonksiyonları başka fonksiyonlar içinden
+        çağırabilirsiniz! Şekil "Shape" fonksiyonunu temel olarak kullanarak 3 ev
+        çizin. İlk ev 50 piksel ve her seferinde 20 piksel daha büyük. Şununla tekrarla
+        döngüsü yardımcı olabilir. '
       Bee Recommended Blocks test_instruction: Mor çiçekler 1 veya 0 nektara sahip
         olabilir, ama hangisi olduğunu bilmiyorsun! Mor çiçekte nektar yoksa toplamamaya
         dikkat et. "Eğer" bloğunu kullanarak nektarın 1'e eşit olup olmadığını kontrol
@@ -1219,67 +1220,49 @@
         İpucunu tekrar görmek için bas.
         \r
         İşte ilginç bir şekil çizen kod. Her seferinde biraz dönerek bu şekli tekrarlarsan ne olur? Bu şekildeki dönüşler 420 dereceye kadar sürüyor. Artist çizimi bitirdiğinde ilk bakış açısından farklı bir yere bakıyor olacak. İlk bakış açısından 60 derece daha sağda.
-      Course 4 Artist 11_instruction: |
-        Now for a challenge!  Feel free to use trial
-        and error. You are not expected to get the image perfect the first time.   Want
-        to see more hints?  Click here!
-      Course 4 Artist 12_instruction: |-
-        Want a second peek at the inspiration design
-        or the hints?  Click here!\r
-        \r
-        Otherwise, make a design all your own!
+      Course 4 Artist 11_instruction: "Şimdi bir meydan okuma!  Deneme yanılma kullanmaktan
+        çekinmeyin. Ilk seferde mükemmel olsun beklenmiyor.   Daha fazla ipuçları
+        görmek ister misin?  Buraya tıklayın!"
+      Course 4 Artist 12_instruction: "İlham alınan tasarıma veya ipuçlarına göz gezdirmek
+        ister misin?  Tıklayınız! \\r \\r aksi halde, kendi tasarımınızı yapın!"
       Course 4 Artist 13_instruction: Oynamaya devam ediyor musun? Burada istediğin
-        şekilde bir şeyler yaratabileceğin boş tuval var!
+        şekilde bir şeyler yarata bileceğin boş tuval var!
       Course 4 Artist 2_instruction: Bu kodu döngü kullanarak kareyi çizebilir misin?
       Course 4 Artist 20_instruction: Oynamaya devam ediyor musun? Burada istediğin
         yere istediğin şekilde bir şeyler yaratabileceğin boş tuval var!
       Course 4 Artist 3_instruction: Bu kodu çalıştırdığında ne olacak anlamaya çalış
         (Çalıştır tuşu ile test edebilirsin). Aynı kodu Tekrarla bloğu ile yeterince
         tekrarlayarak çizimi tamamla.
-      Course 4 Artist 4_instruction: |
-        How many degrees are in a circle?  Fill in
-        the repeat block with that number to create a circle of colors.
-      Course 4 Artist 5_instruction: |
-        Draw the other half of this design so it's
-        symmetrical. The triangles are equilateral and are 50 pixels long. Hint: You
-        may have to run the code several times to figure out all of the blocks that
-        need to be added.
-      Course 4 Artist 6_instruction: "Complete the code to draw these triangles.  \\r\n\\r\nEach\nequilateral
-        triangle has sides of 100 pixels. "
-      Course 4 Artist 7_instruction: "Now nest this loop inside another loop to draw\n10
-        triangles. This is called a nested loop. Hint: All 10 triangles complete\na
-        360 degree rotation.  \n"
+      Course 4 Artist 4_instruction: Dairede kaç derece var? Tekrarla  bloğu içini
+        doldur ve renk çemberi oluşturun.
+      Course 4 Artist 5_instruction: 'Simetrik olacak şekilde diğer yarısını çizin.
+        Üçgenler eşkenar ve 50 piksel uzunluğunda. İpucu: Kullanmanız gereken bütün
+        bloklara karar vermek için birkaç kez çalıştırmanız gerekebilir.'
+      Course 4 Artist 6_instruction: "Bu üçgenleri çizmek için kodu tamamlayın.   \\r\n\\r\nHer
+        bir eşkenar üçgen 100 piksel uzunluğunda. "
+      Course 4 Artist 7_instruction: 'Bu döngüyü başka bir döngü içine koyarak 10
+        üçgen çizin. Buna iç içe döngü denir. İpucu: 10 üçgenin dönüşü toplam 360
+        derece olmaktadır.  '
       Course 4 Artist 8_instruction: Bütün kodu döngüleyerek güneş çizebilr misin.
-      Course 4 Artist 8a_instruction: |
-        Remember this shape?  Now we're going to
-        let you build it without giving you any blocks to start!
+      Course 4 Artist 8a_instruction: Bu şekli hatırlıyor musun?  Şimdi herhangi bir
+        blok vermeden sizin baştan oluşturmanıza izin vereceğiz!
       Course 4 Artist 9_instruction: |
-        Loop this design 10 times and make sure to
-        turn between each shape that's drawn. \r
+        Bu tasarımı 10 kes tekrarlayın v her çizimde dönmeyi unutmayın \r
       Course 4 Artist Binary 1_instruction: |-
-        Here's a function that takes a binary
-        string of 1's and 0's and instructs the artist to follow them from left
-        to right, top to bottom.  The artist will fill-in the squares when it sees
-        a 1 and ignore the square when it sees a 0. \r
+        Bu fonksiyon 1 ve 0 dan oluşan ikili diziyi alır ve sanatçının bunu soldan sağa ve üstten alta  doğru uygulamasını sağlar. Sanatçı 1 görünce kareyi doldurur ve 0 görünce boş bırakır. \r
         \r
-        Run this code to see how
-        the artist uses binary to draw this pattern.
+        Bu kodu çalıştırın ve nasıl bir desen çizdiğini görün.
       Course 4 Artist Binary 1a_instruction: |-
-        Here's a function that takes a binary
-        string of 1's and 0's and instructs the artist to follow them from left
-        to right, top to bottom.  The artist will fill-in the squares when it sees
-        a 1 and ignore the square when it sees a 0. \r
+        Bu fonksiyon 1 ve 0 dan oluşan ikili diziyi alır ve sanatçının bunu soldan sağa ve üstten alta  doğru uygulamasını sağlar. Sanatçı 1 görünce kareyi doldurur ve 0 görünce boş bırakır. \r
         \r
-        Run this code to see how
-        the artist uses binary to draw this pattern.
-      Course 4 Artist Binary 2_instruction: Bu ikili dizgilerinden hangisini 8 defa
+        Bu kodu çalıştırın ve nasıl bir desen çizdiğini görün.
+      Course 4 Artist Binary 2_instruction: Bu ikili dizilerinden hangisini 8 defa
         kullanarak çizimi yapabilirsin?
-      Course 4 Artist Binary 3_instruction: Bu deseni çizmek için 3 basamaklı dizgeyi
-        döngü de kullanabilirmisin?
-      Course 4 Artist Binary 4_instruction: |
-        Each binary string represents one row
-        of this picture. Can you rearrange them so it draws a smiley face instead
-        of a frowny face?
+      Course 4 Artist Binary 3_instruction: Bu deseni çizmek için 3 basamaklı diziyi
+        döngü de kullanabilir misin?
+      Course 4 Artist Binary 4_instruction: Her ikili dize bu resmin bir satırını
+        temsil eder. Gülen surat yerine asık bir surat çizmek için yeniden düzenleyebilir
+        misin?
       Course 4 Artist Binary 5_instruction: Hangi 6 basamaklı ikili dizgi 11 kez tekrarlandığında
         bu resim oluşacak?
       Course 4 Artist Binary 6_instruction: Bu şekli tamamlamak için gerekli en kısa
@@ -1288,124 +1271,85 @@
       Course 4 Artist Binary Free Play 2_instruction: Serbest zaman. İstediğini çize
         bilmen için boş bir sayfa. İyi eğlenceler!
       Course 4 Artist Binary Free Play 2a_instruction: |-
-        Here's a higher resolution
-        canvas to draw on - 16 pixels by 16 pixels!\r
+        İşte yüksek çözünürlükte çizmek için bir tuval-16x16 \r
         \r
-        See what happens when we
-        start to get creative with the bits?
+        İkililerle yaratıcı olmaya başlayınca bakalım ne oluyor?
       Course 4 Artist Binary Free Play 2b_instruction: "İpuçlarını görmek için burayı
         tıklatın."
       Course 4 Artist Binary Free Play_instruction: 'Serbest çizim: Ne istersen çizebilirsin!'
-      Course 4 Artist Binary pre1_instruction: |-
-        Binary is a way of representing information
-        using only two options.  Here, we're going to use the options "off" (represented
-        by the number 0) and "on" (represented by the number 1).  \r
-        \r
-        We've
-        provided you with a grid of "pixels" that you can walk through and make
-        designs by turning on only certain squares.  Can you have the artist draw
-        "01010101" in binary in the first row?
-      Course 4 Artist Binary ryan_instruction: |-
-        Binary is a way of representing information
-        using only two options.  Here, we're going to use the options "off" (represented
-        by the number 0) and "on" (represented by the number 1).  \r
-        \r
-        We've
-        provided you with a grid of "pixels" that you can walk through and make
-        designs by turning on only certain squares.  Can you have the artist draw
-        "01010101" in binary in the first row?
+      Course 4 Artist Binary pre1_instruction: İkili sadece iki seçeneği kullanarak
+        bilgileri gösteren bir yoldur.  Burada,  "kapalı" seçeneğini (sayı 0 ile gösterilir)
+        ve "açık" (sayı 1 ile gösterilir) seçeneğini kullanacağız.  \r \r  Yalnızca
+        belirli kareleri üzerinde çevirerek tasarımlar yapmak için bir kılavuz ile
+        sağladık.  "01010101" ikili diziyi ilk satırda çizebilr miyim?
+      Course 4 Artist Binary ryan_instruction: İkili sadece iki seçeneği kullanarak
+        bilgileri gösteren bir yoldur.  Burada,  "kapalı" seçeneğini (sayı 0 ile gösterilir)
+        ve "açık" (sayı 1 ile gösterilir) seçeneğini kullanacağız.  \r \r  Yalnızca
+        belirli kareleri üzerinde çevirerek tasarımlar yapmak için bir kılavuz ile
+        sağladık.  "01010101" ikili diziyi ilk satırda çizebilr miyim?
       Course 4 Artist For  Functions 10_instruction: Hadi hızlanalım biraz, "Kare
         çiz" fonksiyonunu kullanarak bir yıldız şekli çizebilir misin? İyi şanslar!
       Course 4 Artist For  Functions 11_instruction: Hadi hızlanalım biraz, "Kare
         çiz" fonksiyonunu kullanarak bir yıldız şekli çizebilir misin? İyi şanslar!
       Course 4 Artist For Loops 1_instruction: 'Bu üçgeni 50 piksel genişliğinde çiz.
         İpucu: Tekrar bloğu kullan.'
-      Course 4 Artist For Loops 10_instruction: |
-        Free Play Time! Have fun drawing
-        whatever you like with the blocks you have learned how to use
-      Course 4 Artist For Loops 11_instruction: |
-        Remember back in a previous stage
-        when we used a variable to control the number of sides in a shape? We are
-        going to do the same thing with the "counter" variable now. This pattern
-        starts with a triangle and adds one side at a time until it draws a decagon
-        (10 sides). Each side should be 100 pixels long. Hint: 360 divided by the
-        number of sides a shape has is the number of degrees you'll need to turn.
-      Course 4 Artist For Loops 11a_instruction: |-
-        Let's put it all together!  Using
-        your knowledge of "for loops" and the "counter", create this drawing where
-        each shape has two more sides than the last.  Make sure that each side is
-        10 times as long as the number of sides in the polygon.\r
-        \r
-        Very little
-        of the code has been provided for you.
-      Course 4 Artist For Loops 12_instruction: "That looked pretty cool, but now\nI'd
-        like to draw each shape next to the last one. This time each side is\n20 pixels.
-        Use a jump block to jump forward 40 pixels after each shape. \n"
-      Course 4 Artist For Loops 13_instruction: |
-        Hmmm, those shapes are getting bigger
-        every time! Didn't we already solve this problem with variables? How can
-        we use the counter variable to make the sides smaller as there are more of
-        them? Instead of moving forward by a set amount, try moving forward (100 /
-        counter) pixels.
-      Course 4 Artist For Loops 14_instruction: |
-        If you turn a little bit more or
-        less than you normally would for a shape, it creates a neat effect. Try using
-        some of the code from the last level, but turning 89 degrees to create this
-        twisted square spiral.
-      Course 4 Artist For Loops 15_instruction: |
-        Free Play: Try making some drawings
-        of your own using "for loops". We've added a few useful variables for you
-        as well.
+      Course 4 Artist For Loops 10_instruction: Serbest oyun zamanı! Kullanmayı öğrendiğin
+        bloklarla ne isterseniz çizin. iyi eğlenceler
+      Course 4 Artist For Loops 11_instruction: 'Bir önceki aşamada şeklin kenar sayısını
+        kontrol etmek için değişken kullanmıştık. Şimdi aynıo şeyi "sayaç" değişkeni
+        ile yapacağız. Bu desen üçgen ile başlıyor ve her seferinde bir kenar daha
+        ekleyerek ongen ile bitiyor. İpucu: 360 bölü kenar sayısı kaç derece dönmen
+        gerektiğini verecektir.'
+      Course 4 Artist For Loops 11a_instruction: "Hepsini biraraya koyalım. Kere tekrarla
+        döngüsü ve sayaç kullanarak her seferinde iki fazla kenarı olan şekil çizin.
+        \nBir miktar kod hazır olarak size verildi.\n"
+      Course 4 Artist For Loops 12_instruction: 'Gayet hoş görünüyor. Şimdi her bir
+        şekli diğerinin yanına çizeceğim. Şimdi kenarlar 20 piksel uzunluğunda. Her
+        bir şekilden sonra 40 piksel atla. '
+      Course 4 Artist For Loops 13_instruction: Hımm şekiller her seferinde daha büyük
+        oluyor. Sayaç değişkenini kullanarak kenarları daha küçük nasıl çizerim? belli
+        miktara ilerlemek yerine 100/kenar? sayısı kadar piksel ilerlemeyi deneyelim.
+      Course 4 Artist For Loops 14_instruction: Eğer her seferinde biraz daha fazla
+        yada az dönerseniz hoş bir etki oluşturur. Önceki seviyedeki aynı kodu kullanın
+        fakat bu sefer 89 derece dönün ve bu sarmal kareyi çizin.
+      Course 4 Artist For Loops 15_instruction: 'Serbest oyun: Şununla say (for) döngüsü
+        kullanarak kendi çizimini yap. Kullanışlı birkaç değişken ekledik.'
       Course 4 Artist For Loops 2_instruction: 'Üçgen çizmek için şununla say döngüsü
         içine kod koy. Döngü 10 ar 10 ar  50 den  100 e kadar  sayacaktır.  Not: "Çalıştır"
         tuşuna basmadan koda bakın.'
       Course 4 Artist For Loops 3_instruction: |
-        Use the last puzzle as a reference
-        to complete this one.  The smallest triangle has 20 pixel sides, the largest
-        has 200 pixel sides, and each triangle is 20 pixels larger than the last.
-      Course 4 Artist For Loops 4_instruction: "How would you modify what you've\nlearned
-        to draw these squares? They start at 15 pixels long, the largest is\n300 pixels
-        long, and each square is 15 pixels larger than the last. \n"
-      Course 4 Artist For Loops 5_instruction: "Good job on the last puzzle! Let's\nuse
-        that \"counter\" variable block again to draw this cool picture. \n"
+        Son bulmaca bunu tamamlamak için bir başvuru olarak kullanın.  En küçük üçgenin 20 piksel kenarı vardır, en büyük 200 piksel kenarı vardır ve her üçgen öncekinden 20 piksel daha büyüktür.
+      Course 4 Artist For Loops 4_instruction: 'Bu kareleri çizmek için nasıl değişiklikler
+        yaparsın. 15 piksel uzunluğunda kenarla başlar ve en büyüğü 300 piksel olan
+        üçgenlerden oluşur. Her üçgen bir öncekinden 15 piksel daha büyük. '
+      Course 4 Artist For Loops 5_instruction: "İyi iş çıkarttın. Şimdi sayaç değişkenini
+        tekrar kullanarak bu güzel şekli çizelim. "
       Course 4 Artist For Loops 6_instruction: Serbest oyun! Döngü kullanarak kendi
         istediğin bir desen oluştur.
       Course 4 Artist For Loops 6a_instruction: Bir önceki aşamadaki koda üç ufak
         değişiklik yaparak bu çizimi yapabilirsin!
-      Course 4 Artist For Loops 7_instruction: |
-        What happens if you remove the "Repeat
-        3" from this algorithm, keeping the "move" and "turn" blocks in the for
-        loop? In this spiraling triangle, each side is 20 pixels longer than the last.
-      Course 4 Artist For Loops 8_instruction: |-
-        Just one little change to the code
-        from the last image can create this drawing. Can you figure out what that
-        change is?\r
-        \r
-        Hint:  You need to remove something!
-      Course 4 Artist For Loops 8a_instruction: |
-        Just one little change to the code
-        from the last image can create this image. Can you figure out what that change
-        is?
+      Course 4 Artist For Loops 7_instruction: Bu algoritmadan Tekrarla 3 bloğunu
+        çıkartırsan ne olur? Bu spiral üçgende her kenar bir öncekinden 20 piksel
+        daha uzun.
+      Course 4 Artist For Loops 8_instruction: |
+        Sadece küçük bir kod değişikliğiyle bu çizimi oluşturmak mümkün. Neyin değişeceğini görebildin mi?
+        İpucu: Bir şeyleri çıkartman gerekiyor!
+      Course 4 Artist For Loops 8a_instruction: Sadece küçük bir kod değişikliğiyle
+        bu çizimi oluşturmak mümkün. Neyin değişeceğini görebildin mi?
       Course 4 Artist For Loops 9_instruction: Bir sarmal yapabilir misin? 1'den 75
         e kadar ilerle ve her seferinde bir artır.
       Course 4 Artist For Loops Challenge_instruction: |-
-        Can you figure out how to
-        use all of the things you've learned to create this image?\r
+        Öğrendiğin şeyleri kullanarak bu görüntüyü nasıl oluşturacağını çözebildin mi?\r
         \r
-        Need a
-        hint? Click here.
+        Yardıma mı ihtiyacın var? Buraya tıkla.
       Course 4 Artist For Loops inspire_instruction: |-
-        Free-Play Inspiration: You've
-        now learned everything you need to know to make a pattern like this! If this
-        picture inspires you, try to make something similar. Otherwise, create something
-        all your own.\r
+        Serbest ilham zamanı. Bu deseni oluşturmak için gerekli herşeyi öğrendin. Eğer bu resim ilham veriyorsa benzer birşeyler yapmaya çalış. Yoksa kendi tasarımını yap.\r
         \r
-        Need a hint? Click here.
+        İpucu ister misin? Buraya tıkla.
       Course 4 Artist Functions 1_instruction: Bir döngü kullanarak 100 piksel uzunluğunda
         olan bir kare çizebilir misin?
-      Course 4 Artist Functions 10_instruction: |
-        Which block do you need to add to
-        get the triangle to sit on top of the square?
+      Course 4 Artist Functions 10_instruction: Kare üstünde üçgen oturtmak için hangi
+        bloğa ihtiyacın var?
       Course 4 Artist Functions 11_instruction: Küp çizen bu kodu iyice incele- bu
         kodu "Küp çiz" fonksiyonu içine taşıyabilir misin?
       Course 4 Artist Functions 12.1_instruction: Haydi bir her bir kenarı 20 piksel
@@ -1415,74 +1359,55 @@
       Course 4 Artist Functions 13.1_instruction: |
         Şimdi "Sağ üste atla" isimli bir fonksiyon yapalım. Bu fonksiyon aktörü sekizgenin sağ üst kısmına götürsün.
         İpucu: Sağ üst köşeye gitmek için sekizgenin 3/8 i kadar ilerleyelim.
-      Course 4 Artist Functions 13_instruction: |
-        Check it out we have a new function
-        called "draw a line of squares". Feel free to take a look inside the function
-        block to see how we built it. Click on "Run" when your are ready for the
-        next puzzle.
-      Course 4 Artist Functions 14.1_instruction: |
-        Now, let's make a function called
-        "jump to upper right" that moves the artist to the top-right of the octagon
-        that you just drew so we can finish this pattern.
-      Course 4 Artist Functions 14_instruction: |
-        You're doing great! Let's use
-        your new "Draw a line of squares" function to draw a Square shape. Remember
-        each square is 40 pixels in length.
-      Course 4 Artist Functions 15_instruction: |
-        Let's Step it up a little, can
-        you draw a star shape using the "draw a line of squares" function? Good
-        luck! Hint: you may have to turn 144 degrees
-      Course 4 Artist Functions 2_instruction: |
-        Can you draw 3 squares 20 pixels
-        apart from one another? Hint: each square is 100 pixels in size
+      Course 4 Artist Functions 13_instruction: Karelerden çizgi çiz "draw a line
+        of square" fonksiyonunu inceleyelim. Fonksiyonun içini inceleyip nasıl oluşturduğumuzu
+        gör. Çalıştır düğmesine bas ve bir sonraki bulmaca için hazır ol.
+      Course 4 Artist Functions 14.1_instruction: Şimdi sağ üst köşeye atla "jump
+        to upper right" isimli fonksiyonu yazalım. Bu fonksiyon çizdiğimiz sekizgenin
+        sağ üst kısmına gelsin.
+      Course 4 Artist Functions 14_instruction: Harikasın! Karelerden çizgi çiz fonksiyonunu
+        kullanarak kare şekli çizelim. Karenin her bir kenarı 40 piksel.
+      Course 4 Artist Functions 15_instruction: 'Biraz hızlanalım. Karelerden çizgi
+        çiz fonksiyonu ile yıldız çizebilir misin? İyi şanslar! İpucu: 144 derece
+        dönebilirsin'
+      Course 4 Artist Functions 2_instruction: 'Birbirinden 20 piksel mesafede üç
+        kare çizebilir misin? İpucu: Her bir kare 100 piksel genişliğinde'
       Course 4 Artist Functions 3_instruction: |
-        Using the "draw a square" function
-        block, can you draw this picture? Hint: each square is 120 pixels apart.\r
-      Course 4 Artist Functions 4_instruction: |
-        Are you ready to create your own
-        "Function Block"? Click on the "Functions" block in the tool box, name
-        it "draw a triangle", then create a triangle as you have done before with
-        the Action and Loops blocks. Then click on the Save and Close in the upper
-        right hand corner. Hint: Create a triangle that is 100 pixels in length. Good
-        luck!
-      Course 4 Artist Functions 5 OLD_instruction: |
-        Let's try to use our two functions
-        to draw a house - what needs to be fixed in this code to draw the house properly?
+        Kare çiz fonksiyonunu kullanarak bu resmi çizebilir misin? İpucu: Her bir kare 120 piksel uzaklıkta. \r
+      Course 4 Artist Functions 4_instruction: 'Kendi "Fonksiyon Bloğunu" oluşturmaya
+        hazır mısın? Araç kutusunda, fonksiyona tıkla. "üçgen çiz" ismi ver, ve daha
+        önce kıllandığın blokları ve döngüyü kullanarak üçgen çizen kodu yaz. Sonra
+        Kaydet''e tıklatın ve sağ üst köşedeki kapat düğmesine basın. İpucu: 100 piksel
+        uzunluğunda olan bir üçgen oluşturun. İyi şanslar!'
+      Course 4 Artist Functions 5 OLD_instruction: Oluşturduğumuz iki fonksiyonla
+        ev çizelim. Evi düzgün çizmek için kodda neyin düzeltilmesi gerekiyor?
       Course 4 Artist Functions 5_instruction: |
-        Using the "draw a square" function
-        block, can you draw this picture? Hint: each square is 120 pixels apart.\r
-      Course 4 Artist Functions 6_instruction: |
-        Which block do you need to add to
-        get the triangle to sit on top of the square?
+        Kare çiz fonksiyonunu kullanarak bu resmi çizebilir misin? İpucu: Her bir kare 120 piksel uzaklıkta. \r
+      Course 4 Artist Functions 6_instruction: Kare üstünde üçgen oturtmak için hangi
+        bloğa ihtiyacın var?
       Course 4 Artist Functions 7_instruction: '"Kare" fonksiyonunu kullanarak karelerden
         çizgi oluşturabilir misin? Her kare 40 piksel uzunluğunda.'
-      Course 4 Artist Functions 8_instruction: "Are you getting the hang of how to\nuse
-        function blocks? Let's modify this square so that it is 200 pixels in\nsize.
-        Hint: click on \"edit\" to change the size of the \"draw a square\"\nfunction
-        editor. Remember to click on \"save and close\" to get out of the\nfunction
-        editor. \n"
-      Course 4 Artist Functions 9_instruction: |
-        We have given you most of the code
-        to create a function. However there seems to be something missing. Can you
-        make this function block complete?
+      Course 4 Artist Functions 8_instruction: 'Fonksiyon bloklarının nasıl kullanılacağına
+        alıştın mı? Hadi bu kareyi 200 piksel boyutunda olacak şekilde değiştirin.
+        İpucu: Kare çiz "draw a square" fonksiyonu üzerindeki "Düzenle" bağlantısını
+        tıklayın. Bittiğinde kapat düğmesine basmayı unutmayın. '
+      Course 4 Artist Functions 9_instruction: Fonksiyon oluşturmak için gerekli kodun
+        çoğunu verdik. Bu fonksiyon bloğunu tamalayabilirmisin?
       Course 4 Artist Functions challenge_instruction: "İpucunu tekrar görmek için
         burayı tıklayın."
       Course 4 Artist Functions Inspiration_instruction: "İpucunu tekrar görmek için
         burayı tıklayın."
       Course 4 Artist Functions inspire_instruction: "İlham alınan resmi görmek için
         buraya tıklayın."
-      Course 4 Artist Inspire_instruction: |-
-        Want a second peek at the inspiration
-        design or the hints?  Click here!\r
-        \r
-        Otherwise, make a design all your
-        own!
+      Course 4 Artist Inspire_instruction: "İlham alınan tasarıma veya ipuçlarına
+        göz gezdirmek ister misin?  Tıklayınız! \\r \\r aksi halde, kendi tasarımınızı
+        yapın!"
       Course 4 Artist Params 1_instruction: Bir kenarı 50 piksel olan kare fonksiyonu
         yazalım
-      Course 4 Artist Params 10_instruction: "You can call functions from inside\nother
-        functions! Using your \"shape\" function as a base, create 3 house shapes\neach
-        20 pixels larger than the last starting at 50 pixels in length. Using\na counter
-        loop might be helpful. \n"
+      Course 4 Artist Params 10_instruction: 'Fonksiyonları başka fonksiyonlar içinden
+        çağırabilirsiniz! Şekil "Shape" fonksiyonunu temel olarak kullanarak 3 ev
+        çizin. İlk ev 50 piksel ve her seferinde 20 piksel daha büyük. Şununla tekrarla
+        döngüsü yardımcı olabilir. '
       Course 4 Artist Params 11_instruction: |
         How about a function called "pinwheel"
         that takes three parameters - "sides," "length" and "repeat." You can
@@ -1515,98 +1440,62 @@
         misin? Kare ve üçgen 100 piksel altıgen 75 pikseldir. '
       Course 4 Artist Params 8_instruction: |
         Bu şekli nasıl çizebileceğini anladın mı? İpucu olarak 6 kenarı olan altıgen fonksiyonu yarat.
-      Course 4 Artist Params 9_instruction: |
-        Do you remember when we used the counter
-        loop but removed a loop within? Let's have some fun and use the "draw a
-        shape" function with "sides" and "length" parameters. Can you re create
-        these shapes? The square counter should be 5/100/5, the triangle counter should
-        be 10/100/10 and the hexagon is 2/100/2.
-      Course 4 Artist Var 9_instruction: |
-        Here's the algorithm to draw a triangle,
-        modify it so it uses the "sides" variable instead. Replace the number 3
-        with the "sides" variable. Hint: remember to use the "set sides to" block.
-      Course 4 Artist Vars 1_instruction: |-
-        Let's draw an equilateral triangle. \r
-        \r
-        It
-        has to be exactly 100 pixels long on each side.
-      Course 4 Artist Vars 10_instruction: |
-        Here's an algorithm that draws a triangle
-        out of smaller triangles. Can you modify it so that it uses the "sides"
-        variable to draw each triangle? Look through the code, and every time you
-        see the number 3, replace it with your "sides" variable. Remember to use
-        the "set sides" block.
-      Course 4 Artist Vars 11_instruction: |
-        Here’s more complicated code using the
-        same concepts from the last puzzle - what should you set the "sides" variable
-        to in order to draw this picture made of squares?
-      Course 4 Artist Vars 12_instruction: |
-        Let's set the "sides" variable to
-        5. The more sides we add to this algorithm, the bigger this whole pattern
-        gets! Notice that there is another variable called "length". We can now
-        use that wherever we have a "move forward." Set the "length" variable
-        to 75 for this shape.
-      Course 4 Artist Vars 13_instruction: |-
-        When a shape has lots of sides, each
-        side needs to be shorter if you want the whole pattern to fit on the screen.
-        \r
-        Let's recreate the algorithm for this amazing pattern, but instead of
-        manually setting the `length` variable, let's use a math block with the `sides`
-        variable inside to make sure that each shape fits correctly. The perimeter
-        of each polygon is 300 pixels.\r
-        Need some hints?  Click here.
+      Course 4 Artist Params 9_instruction: "Sayaç döngü kullanıldığımızda iç döngüyü
+        kaldırdığımızı hatırlıyor musun? \nHadi biraz eğlenelim ve \"taraf\" ve \"uzunluk\"
+        parametreleri ile şekil çiz \"draw a shape\" fonksiyonunu kullanın. Bu şekilleri
+        yeniden oluşturabilir misin? Kare sayacı 5/100/5 olmalı, üçgen sayacı 10/100/10
+        olmalı ve altıgen 2/100/2.\n"
+      Course 4 Artist Var 9_instruction: 'İşte üçgen çizmek için algoritma. Bunu güncelle
+        ve kenarlar"sides" değişkenini kullanmasını sağla. 3 sayısını sides değişkeni
+        ile değiştir. İpucu: "Set sides" bloğu ile değişkene değer atamayı unutma.'
+      Course 4 Artist Vars 1_instruction: Bir eşkenar üçgen çizelim. \r \r Her bir
+        kenar tam 100 piksel olmalı.
+      Course 4 Artist Vars 10_instruction: İşte küçük üçgenler dışında bir üçgen çizen
+        bir algoritma. Her üçgen çizmek için "sides" değişkenini kullanacak şekilde
+        değiştirebilir misin? Kod içinde 3 ü arayın ve gördüğünüz her yerde "taraf"
+        değişkeni ile değiştirin. "set sides" bloğunu kullanmayı unutmayın.
+      Course 4 Artist Vars 11_instruction: Bir önceki kodda kullanılan kavramlarla
+        daha karmaşık bir program. Bu çizimi yapmak için kenarlar "sides" değişkenine
+        kaç ataman gerekiyor?
+      Course 4 Artist Vars 12_instruction: Kenarlar "sides" değişkenine 5 atayalım.
+        Ne kadar büyük değer atarsak desen o kadar büyük olur. Uzunluk "length" değişkeni
+        de var. Bu şekil length değişkenine için 75 atayalım.
+      Course 4 Artist Vars 13_instruction: "Çok kenarlı bir şekilse şeklin ekrana
+        sığması için kenarlarının daha kısa olması lazım.\nBu harika desen için algoritma
+        oluşturalım. Length değişkenine sabit bir değer atayacağımıza sides değişkeni
+        üzerinde işlem yapıp hesaplayalım. Çokgenin etrafı 300 piksel olmalı. \nİpucu
+        lazım mı? buraya tıkla.\n"
       Course 4 Artist Vars 14_instruction: |-
-        Free Play: Check it out! Now your algorithm
-        is nested within one more loop. Experiment with changing the values of your
-        two variables to draw cool patterns.\r
+        Serbest oyun: Kontrol et! Şimdi algoritman bir döngüye daha sokulmuş. Değişkenlerinin değerlerini değiştirerek güzel bir şekil çizmeye çalış..\r
         \r
-        For even more effect, try playing
-        with color!  Use random colors inside loops to see how it changes your design.
-      Course 4 Artist Vars 2_instruction: |
-        Instead of using "move forward by 150,"
-        the "move" block is now referencing a variable called "length." Can you
-        set "length" to 150 to draw this new triangle?
-      Course 4 Artist Vars 3_instruction: "Here's a loop that draws a square, but\nsomething's
-        missing. Can you fix it so that it uses the variable \"length\"\nto figure
-        out how long each side should be? \n"
-      Course 4 Artist Vars 4_instruction: |
-        Now I want to make a rectangle that is
-        twice as tall as it is wide. We've got a variable called "width" that needs
-        to be set to 100. Can you use the math blocks to complete the code?
+        Daha fazla etki için renklerle rastgele oynamayı dene.
+      Course 4 Artist Vars 2_instruction: '"İleriye taşı 150" yerine "ileriye taşı"
+        bloğu uzunluk "length" değişkeni kullanıyor. uzunluk "length" değişkenine
+        150 atayıp bu üçgeni çizebilir misin?'
+      Course 4 Artist Vars 3_instruction: 'Kare çizen bir döngü fakat bir şey eksik.
+        Uzunluk "length" değişkeninin kullanarak eksiği düzeltebilir misin? '
+      Course 4 Artist Vars 4_instruction: Şimdi iki kat geniş kadar uzun bir dikdörtgen
+        yapmak istiyorum. Genişlik "width" değişkeninine 100 atanmış olması gerekiyor.
+        Kodu tamamlayabilmek için matematik bloklarını kullanabilir misin?
       Course 4 Artist Vars 5_instruction: '"kenar" değişkenini kullanarak döngünün
         kaç defa çalışması gerektiğini belirle.'
       Course 4 Artist Vars 6_instruction: |-
-        Here’s some code that can draw any regular
-        polygon. There’s a new variable called sides that is set to 4. Can you use
-        the sides variable (along with the math block) to turn the right amount regardless
-        of how many sides there are in the polygon?\r
+        Düzenli bir poligon çizen bir kod parçası. Kenar "sides" değişkenine 4 atanmış. sides değişkenini ve matematik bloklarını kullanarak her bir çokgen de ne kadar döneceğini hesaplayabilir misin?
         \r
-        Click here to go back to
-        the hint!
-      Course 4 Artist Vars 7_instruction: |-
-        Use what you learned in the last puzzle
-        to create this hexagon using the "sides" variable.\r
         \r
-        See how you could
-        change just one value to draw a triangle,  square, pentagon, or octagon?
-      Course 4 Artist Vars 8_instruction: |
-        Free Play: Experiment with the number
-        of sides this shape has. Can you change the algorithm so that the overall
-        size of the shape stays the same, no matter how many sides it has? Hint: If
-        you divide your starting length by the number of sides, the length of each
-        side will get shorter as the number of sides gets higher.
-      Course 4 Artist Vars 9_instruction: |
-        Modify this algorithm so it uses the "sides"
-        variable instead of a fixed number to draw a triangle. Don't forget to use
-        the "set sides to" block.
-      Course 4 Bee 1_instruction: |-
-        The bee can't tell what's under the cloud! \r
-        \r
-        Use
-        the `if` block to check whether there is a flower under the cloud. \r
-        \r
-        Get
-        nectar one time, ONLY if there is a flower.
+        ipucuna dönmek için buraya bas!
+      Course 4 Artist Vars 7_instruction: Bir önceki bulmacada öğrendiklerini kullanarak
+        ve kenar sayısı"sides" değişkenine değer atayarak altıgeni oluştur?
+      Course 4 Artist Vars 8_instruction: 'Serbest oyun: bu şeklin kenar sayılarıyla
+        oyna. Kenar sayısı kaç olursa olsun çevre uzunluğu aynı kalacak şekilde bir
+        algoritma oluşturabilir misin? İpucu: Toplam çevre uzunluğunu kenar sayısına
+        böle bilirsin. Böylece kenar sayısı arttıkça kenar uzunluğu azalır.'
+      Course 4 Artist Vars 9_instruction: Bu algoritmada sabit sayı yerine kenarlar
+        "sides" değişkeni kullanarak üçgen çiz. "set sides" bloğunu değer aktarmak
+        için kullanmayı unutma.
+      Course 4 Bee 1_instruction: Arı bulut altında ne olduğunu bilemez! \r \r 'eğer'
+        bloğu kullanarak bulut altında çiçek olup olmadığını denetleyin. \r \r çiçek
+        var ise sadece bir kez nektar alın.
       Course 4 Bee 2_instruction: Eğer/değilse bloklarını kullanarak nesnenin çiçek
         yada petek olduğunu kontrol et. Çiçek ise nektar al değilse bal yap!
       Course 4 Bee 3_instruction: Bilinmeyen nesne çiçek yada petek. B sefer eğer/değilse
@@ -1620,123 +1509,90 @@
         nektarı toplamak için kodu tamamla.
       Course 4 Bee 6_instruction: Mor çiçekte 3, 2 yada 1 nektar olabilir. eğer/değilse-eğer/değilse
         durumu kullanarak bilinmeyen miktarda nektarı toplamak için kodu tamamla.
-      Course 4 Bee 7_instruction: |
-        Use everything you have learned so far to collect
-        all the nectar. The purple flower may have either 3, 2, or 1 nectar.
+      Course 4 Bee 7_instruction: "Şimdiye kadar öğrendiğin her şeyi kullanarak bütün
+        nektarları topla. Mor çiçekte 3, 2 yada 1 nektar olabilir."
       Course 4 Bee For Loops 1_instruction: Döngü kullanarak her bir çiçekten nektar
         al.
-      Course 4 Bee For Loops 10_instruction: |
-        If your loop is counting down, the
-        increment is subtracted from your counter variable each loop. What should
-        your increment be to collect 9, then 6, and then 3 nectar?
+      Course 4 Bee For Loops 10_instruction: Eğer döngünüz geriye doğru sayıyorsa
+        counter değişkeni her seferinde çıkartılır.), 6 ve 3 nektar toplamak için
+        incerement değişkeni kaç olmalıdır?
       Course 4 Bee For Loops 11_instruction: Bu döngüdeki sorun ne? Düzeltip arının
         bütün nektarı toplamasını sağla.
-      Course 4 Bee For Loops 2_instruction: |
-        Here's a new kind of loop, called the
-        "for" loop. This particular for loop will count from 1 to 5 by 1, and run
-        the contents of the loop each time it counts. Help the Bee get the nectar.
-      Course 4 Bee For Loops 3_instruction: |
-        You can solve this puzzle by using a
-        for loop to count from 1 to 3 by 1. Now let's go get some nectar!
-      Course 4 Bee For Loops 4_instruction: |
-        Collect all of the nectar from these
-        flowers. I wonder if there's an easier way to do this...
-      Course 4 Bee For Loops 5_instruction: "Ah, the for loop makes this much easier!\nUsing
-        the \"counter\" variable from the for loop to loop the \"get nectar\"\nblock
-        the same number of times as the loop. Whew! That's a lot of loops.\nAll the
-        code you need it there, take a look at how it is put together then\nclick
-        on Run and see how it works. \n"
-      Course 4 Bee For Loops 6_instruction: |
-        You can also use a for loop to count
-        down. Try gathering this nectar by counting down from 5 to 1 by 1.
+      Course 4 Bee For Loops 2_instruction: İşte bununla say "for" şeklinde yeni bir
+        döngü çeşidi. Bu döngü 1 den 5 e kadar 1 er 1 er sayacak ve döngünün içini
+        çalıştıracak. Arının nektar toplamasına yardımcı ol.
+      Course 4 Bee For Loops 3_instruction: Bu bulmacayı 1 den 3 e kadar sayan döngü
+        ile çözebilir misin? Haydi biraz nektar toplayalım!
+      Course 4 Bee For Loops 4_instruction: Bu çiçeklerdeki bütün nektarları toplayalım.
+        Acaba daha kolay yolu varmıdır...
+      Course 4 Bee For Loops 5_instruction: 'Ah For döngüsü işi daha kolay yapıyor.
+        Sayaç "counter" depişkeninin kullanarak get nektar bloğunu tekrarlıyoruz.
+        Vayy. Çok fazla döngü. Gerekli bütün kod burada. İncele ve çalıştır düğmesi
+        ile çalıştırıp gör. '
+      Course 4 Bee For Loops 6_instruction: Bununla tekrarla "For" döngülerinde geriye
+        doğruda sayabilirsiniz. 5 ten geriye doğru 1 e kadar sayarak nektarları toplayın.
       Course 4 Bee For Loops 7_instruction: '"Sayaç" değişkenini döngüde kullanarak
         yatay olarak ne kadar ilerleneceğini belirle.'
       Course 4 Bee For Loops 8_instruction: Döngü kullanarak hareketleri ve nektar
         almayı başarabilir misin?
-      Course 4 Bee For Loops 9_instruction: |
-        The last number in your for loop is
-        called the "increment,"  and each time the loop is run the counter variable
-        changes by the increment. Try collecting these flowers using an increment
-        of 2.
+      Course 4 Bee For Loops 9_instruction: Döngüdeki son sayı artış "increment" olarak
+        adlandırılır. Her döngüde sayaç değeri bu miktarda değiştirilir. Bu çiçeklerisayacı
+        ikişer artırarak toplayın.
       Course 4 Bee Loops 5 NEW_instruction: Burada üç çiçek vardır. Tekrarla bloğu
         ile 3 defa tekrarlayarak daha az satır kod ile nektar toplayabilirsiniz.
-      Course 4 Bee Loops 5a NEW_instruction: |
-        Now, use loops to help the bee collect
-        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
-        you get there, don't forget to make honey!
-      Course 4 Bee Params 1_instruction: |
-        Use the function "get 3 nectar" which
-        turns, moves to collect the nectar, and then returns to the original location.
-        Write a sequence to collect all of the nectar using "get 3 nectar."
+      Course 4 Bee Loops 5a NEW_instruction: "Şimdi döngü kullanarak bütün nektarları
+        toplayın ve peteğe ulaşın. Oraya ulaştığında bal yapmayı unutmayın!"
+      Course 4 Bee Params 1_instruction: '"get 3 nectar" yani üç nektar al fonksiyonunu
+        kullanın ilerleyin nektar alın ve başlangıç yerine geri dönün'
       Course 4 Bee Params 2_instruction: ' "3 nektar al" işlevini değiştirin ve sağa
         döneceğime sola dönmemi sağlayın.'
-      Course 4 Bee Params 3 (copy 1)_instruction: |
-        Now there are flowers on both
-        sides! Maybe you can use a parameter so that the same function works for flowers
-        on either side. I've added a parameter called "direction" to the function.
-        If the "direction" parameter equals 0 I should turn left, if it's 1 I should
-        turn right.
-      Course 4 Bee Params 3_instruction: "Now there are flowers on both sides! We've\nadded
-        variables called \"left\" and \"right\" for you to use, and added a\nparameter
-        called \"direction\" to \"get 3 nectar\". Edit \"get 3 nectar\"\nso that the
-        bee turns the correct direction when the variables \"left\" or\n\"right\"
-        are passed into the function.  \n"
+      Course 4 Bee Params 3 (copy 1)_instruction: Şimdi her iki tarafta çiçekler var.
+        Parametre kullanarak her iki taraftaki çiçekler için fonksiyonun çalışmasını
+        sağlayabilirsin. Yön"direction" parametresini ekledik. direction 0 ise sola
+        1 ise sağa dönecek.
+      Course 4 Bee Params 3_instruction: 'Şimdi her iki tarafta çiçekler var. Sol
+        "Left" ve Sağ "Right" isimli iki değişken tanımladık. Ayrıca "Get 3 nectar"
+        fonksiyonu için yön"direction" parametresi ekledik. Fonksiyonu güncelleyin
+        ve arı left ve rigth değişkenine göre dönüp nektarı alsın.  '
       Course 4 Bee Params 4 (copy 1)_instruction: Yeni fonksiyonu kullanarak bütün
         çiçekleri topla. Unutma 0 = sol ve 1= sağ.
-      Course 4 Bee Params 4 - Two WhenRun_instruction: |
-        Try using your new function
-        to collect all of the flowers. Remember to use the left and right variables.
-      Course 4 Bee Params 4 backup_instruction: |
-        Wouldn't it be nice if we could
-        collect all of these nectars with the a single function? Try adding a new
-        parameter to your function called "nectars" to control the amount of nectar
-        to collect. You'll probably want to rename the function too!
-      Course 4 Bee Params 4_instruction: |
-        Try using your new function to collect
-        nectar from all of the flowers. Remember to use the left and right variables.
+      Course 4 Bee Params 4 - Two WhenRun_instruction: Yeni fonksiyonu kullanarak
+        bütün nektarları topla. sol "left" ve sağ "right" değişkenlerini kullanmayı
+        unutma.
+      Course 4 Bee Params 4 backup_instruction: Bütün nektarları tek bir fonksiyonla
+        alsak iyi olmaz mıydı? Nektar miktarı "nectars" parametresi ekleyerek toplanacak
+        nektar miktarını kontrol edin. Fonksiyonun adını da değiştirebilirsiniz!
+      Course 4 Bee Params 4_instruction: Yeni fonksiyonu kullanarak bütün nektarları
+        topla. sol "left" ve sağ "right" değişkenlerini kullanmayı unutma.
       Course 4 Bee Params 5_instruction: Sıfırdan başlayalım - "5 nektar kazan" isminde
         ve yön parametreli bir fonksiyon yazabilir misin?
       Course 4 Bee Params 6 (copy 1)_instruction: "Şimdi yeni yazdığınız fonksiyonu
         kullanarak nektarları toplayın."
-      Course 4 Bee Params 6_instruction: |
-        Wouldn't it be nice if we could collect
-        all of these nectars with the a single function? Try adding a new parameter
-        to your function called "nectar units" to control the amount of nectar to
-        collect. You'll probably want to rename the function too!
+      Course 4 Bee Params 6_instruction: Bütün nektarları tek bir fonksiyonla alsak
+        iyi olmaz mıydı? Nektar miktarı "nectars" parametresi ekleyerek toplanacak
+        nektar miktarını kontrol edin. Fonksiyonun adını da değiştirebilirsiniz!
       Course 4 Bee Params 7 (copy 1)_instruction: "Şimdi yeni yazdığınız fonksiyonu
         kullanarak nektarları toplayın."
       Course 4 Bee Params 7_instruction: "Şimdi yeni yazdığınız fonksiyonu kullanarak
         nektarları toplayın."
-      Course 4 Bee Params 8 Clone 2_instruction: |
-        Oooh, now there's honey to deal
-        with too! How could you update your function to either get nectar or make
-        honey.
-      Course 4 Bee Params 8 clone 3_instruction: |
-        Oooh, now there's honey to deal
-        with too! How could you update your function to either get nectar or make
-        honey.
-      Course 4 Bee Params 8 Clone_instruction: |
-        Oooh, now there's honey to deal
-        with too! How could you update your function to either get nectar or make
-        honey.
-      Course 4 Bee Params 8 new_instruction: |
-        Oooh, now there's honey to deal with
-        too! How could you update your function to either get nectar or make honey.
-      Course 4 Bee Params 8_instruction: |
-        Challenge: Now there's honey to deal with
-        too! Rewrite your function to use both the number of honey units and the number
-        of nectar units.  How would you use those numbers to decide what you should
-        do?
+      Course 4 Bee Params 8 Clone 2_instruction: Balda yapmak gerekiyor. Fonksiyonu
+        değiştirerek nektar al yada bal yap şekline getir.
+      Course 4 Bee Params 8 clone 3_instruction: Balda yapmak gerekiyor. Fonksiyonu
+        değiştirerek nektar al yada bal yap şekline getir.
+      Course 4 Bee Params 8 Clone_instruction: Balda yapmak gerekiyor. Fonksiyonu
+        değiştirerek nektar al yada bal yap şekline getir.
+      Course 4 Bee Params 8 new_instruction: Balda yapmak gerekiyor. Fonksiyonu değiştirerek
+        nektar al yada bal yap şekline getir.
+      Course 4 Bee Params 8_instruction: Balda yapmak gerekiyor. Fonksiyonu değiştirerek
+        parametre kadar nektar al yada bal yap şekline getir?
       Course 4 Bee Params Ex_instruction: "Şimdi yeni yazdığınız fonksiyonu kullanarak
         nektarları toplayın."
-      Course 4 Binary 1_instruction: |
-        Here's a function that takes a binary string
-        of 1's and 0's and instructs the farmer to turn on the go from left to right,
-        top to bottom, turning on the squares where the number has a zero. Run the
-        code provided to see how the farmers uses binary to draw an image.
-      Course 4 Binary 2_instruction: |
-        What binary string could you loop 8 times to
-        draw this image? Hint: the number "1" fills a hole.
+      Course 4 Binary 1_instruction: |-
+        Bu fonksiyon 1 ve 0 dan oluşan ikili diziyi alır ve çiftçinin bunu soldan sağa ve üstten alta doğru uygulamasını sağlar. çiftçi 0 görünce döner. \r
+        \r
+        Bu kodu çalıştırın ve çiftçinin nasıl bir resim çizdiğini görün.
+      Course 4 Binary 2_instruction: 'Hangi ikili diziyi 8 kere tekrar edersiniz bu
+        görüntü oluğur. İpucu: 1 deliği doldurur.'
       Course 4 Binary 3_instruction: Bu deseni döngğde ikili dizgiyi kullanarak çizebilir
         misin?
       Course 4 Binary 5 (copy 1)_instruction: Hangi ikili dizgiyi 10 defa tekrar ettiğimizde
@@ -1749,18 +1605,17 @@
         bu görüntüyü oluştururuz?
       Course 4 Binary 7_instruction: Hangi ikili dizgiyi 10 defa tekrar ettiğimizde
         bu görüntüyü oluştururuz?
-      Course 4 Binary 8_instruction: |
-        You can complete the most of this image by
-        looping a 5 bit binary number - then you'll need one more 4 bit number to
-        get the bottom right-hand corner.
+      Course 4 Binary 8_instruction: Bu görüntünün çoğunu 5 bit ikili dizisini 5 defa
+        tekrarlayarak oluşturabilir misin? Sonra 4 bitlik bir dizi ile sağ alt köşeyi
+        tamamlaya bilirsin.
       Course 4 EC 1a_instruction: Kural yok. İpucu yok. Haydi bakalım!
       Course 4 EC 1b_instruction: Kural yok. İpucu yok. Haydi bakalım!
       Course 4 EC 2a_instruction: "**Sana meydan okunuyor. İpucu yok. Haydi bakalım!"
-      Course 4 EC 2b_instruction: "**Sana meydan okunuyor. İpucu yok. Haydi bakalım!"
-      Course 4 EC 2c_instruction: "**Sana meydan okunuyor. İpucu yok. Haydi bakalım!"
-      Course 4 EC 3_instruction: "Use what you learned in the previous level to draw\nan
-        image like this. Note: The code becomes more simple if you incorporate\nparameters.
-        \n"
+      Course 4 EC 2b_instruction: Kural yok. İpucu yok. Haydi bakalım!
+      Course 4 EC 2c_instruction: Kural yok. İpucu yok. Haydi bakalım!
+      Course 4 EC 2d_instruction: Kural yok. İpucu yok. Haydi bakalım!
+      Course 4 EC 3_instruction: 'Bir önceki seviyede öğrendiklerini kullanarak bu
+        görüntüyü çiz. Parametre kullanırsan kod daha basit hale gelir. '
       Course 4 EC 3a_instruction: Sana meydan okunuyor. İpucu yok. Haydi bakalım!
       Course 4 Maze 1_instruction: Kızgın kuşu domuzcuğa ulaştır!
       Course 4 Maze 2_instruction: Bombadan kaçının!
@@ -1773,148 +1628,101 @@
         misin?
       Course 4 Play Lab For Loops 2_instruction: "Şimdi 1 den 100 e kadar tek sayıları
         sayalım."
-      Course 4 Play Lab Params 1_instruction: |
-        Here's a function called "jump"
-        that causes your main character to jump up 100 pixels. Use the jump function
-        to collect all of the flags.
-      Course 4 Play Lab Params 10_instruction: "We've added one last function for\nyou.
-        \\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction
-        only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
-        \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to
-        move to the next puzzle. "
-      Course 4 Play Lab Params 2_instruction: |-
-        Now we've got flags that are too
-        high for our current jump! Let's use both the "up" and "down" arrows
-        so that we can have multiple jump heights.  \r
-        \r
-        We need to add a parameter
-        to our jump function called "height".  The up arrow should cause the dog
-        to jump 200 pixels and the down arrow should make it jump only 100 pixels.
-        \r
-        \r
-        Hint: You will need to click "edit" on the jump function and update
-        it so that it uses the "height" parameter.
-      Course 4 Play Lab Params 3_instruction: "We have added another parameter to\nthe
-        jump function so that we can use it with other actors. Each actor is represented\nby
-        a number, starting from one. Edit the \"jump\" function so that it uses\nthe
-        \"actor\" parameter to make the correct character jump. \n"
-      Course 4 Play Lab Params 4_instruction: |
-        Here's a function called "patrol."
-        Edit it to move Cat up 400 pixels and then down 400 pixels.
-      Course 4 Play Lab Params 5_instruction: |
-        Edit the the "patrol" function to
-        add an "actor" parameter, so that we can call it for each of the actors
-        on the screen. Remember, the actors correspond to numbers 1, 2, and 3.
-      Course 4 Play Lab Params 6_instruction: |
-        Add another parameter called "speed"
-        to the "patrol" function. Try using a "set speed" block with the new "speed"
-        parameter to help Penguin get both flags before the other sprites even get
-        one.
-      Course 4 Play Lab Params 7_instruction: |-
-        Let's have some fun! Look at the
-        code provided to see if you can figure out what each block does.  \r
-        \r
-        When
-        you're done, use the arrow keys to control Dog and collect all of the flags.
-      Course 4 Play Lab Params 8_instruction: |
-        Use a "when actor touches" block
-        to send Dog back to the top-left ONLY if Dog touches any of the other actors.
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut
-        most of the code is hidden. There’s a new function \"score_points.\"\\r\n\\r\nEdit\nthe
-        function so that a \"points\" parameter is added to the \"player_score\"\nvariable.
-        \\r\n\\r\nThe variable \"player_score\" should increase each time\nDog tags
-        Cat with hearts, and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen
-        you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
-        on to the next puzzle. "
-      Course 4 Play Lab Vars 1_instruction: |
-        This time you don't have to write any
-        code, just hit "Run" to play the game! In this game, you're the dog who
-        is trying to collect more flags than the cat. Use the down arrow to control
-        the dog. Press "Finish" when you're done playing.
-      Course 4 Play Lab Vars 2_instruction: |
-        The race in that last puzzle wasn't
-        very fair! Change the `dog_speed` variable to make sure you can collect more
-        flags than Cat. The first to collect 10 flags wins!
-      Course 4 Play Lab Vars 3_instruction: |
-        Use the left and right arrows to move,
-        and the up arrow to jump. See if you can collect all of the flags.
-      Course 4 Play Lab Vars 4_instruction: |
-        Now we're using a variable called "height"
-        to control how high the dog can jump. Update the "height" variable so that
-        the dog can jump high enough to reach all the flags.
-      Course 4 Play Lab Vars 5_instruction: "Let's build a game! First we'll need\na
-        score. Rebuild the code that you saw in the last level to set the score\nto
-        10. \n"
-      Course 4 Play Lab Vars 6 (copy 1)_instruction: |
-        Cool, now we've got our score
-        variable, but how are we going to make it useful? How about adding to your
-        score variable each time you hit the enemy with a fireball? Use the "when
-        actor 2 touches anything" event to trigger an update to your score when your
-        fireballs hit the cat. You can increment the score by setting score = score
-        + 1. Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 6_instruction: |-
-        Use the right arrow to shoot hearts.\r
-        \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a heart. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
-      Course 4 Play Lab Vars 7_instruction: |
-        Nice, now let's make sure this game
-        isn't too easy to play. Any time Dog (actor 1) gets hit by yellow hearts
-        from Cat (actor 2), you should lose a point. Start with 10 points so it's
-        not too hard. Let your score drop down from 10 to 0 to pass the level.
-      Course 4 Play Lab Vars 8 (copy 1)_instruction: |
-        Alright, one last thing for
-        this game - let's set it up so the player can win (or lose). Use a forever
-        loop to check the value of score - if score is ever greater that 20, make
-        the enemy vanish. If the score is every less than 0, make the player vanish.
-        Click "Finish" when the game works like you'd like it to.
-      Course 4 Play Lab Vars 8_instruction: |
-        Let's set up this game so the Dog can
-        win (or lose). Use a forever loop to check the value of score - if score is
-        ever greater that 20, make the enemy (the Cat) vanish. If the score is ever
-        less than 0, make the player (the Dog) vanish. Click "Finish" when the game
-        works like you'd like it to.
+      Course 4 Play Lab Params 1_instruction: Zıpla "jump" fonksiyonu tanımlandı.
+        ana oyuncuyu 100 piksel zıplatıyor. Bu fonksiyonu kullan ve köpeğin bütün
+        bayrakları toplamasını sağla.
+      Course 4 Play Lab Params 10_instruction: "Sizin için son bir fonksiyon ekledik.\nEğer
+        bloğu kullan ve oyuncunun puanı belirli bir sayıyı geçince üst seviye \"level_up\"
+        fonksiyonunu çağır.\nOyunu oyna ve 4 seviye geçmesini sağla. \n"
+      Course 4 Play Lab Params 2_instruction: |
+        Bizim atlayacağımızdan daha yüksek bayraklar var. Yukarı ve aşağı  ok tuşlarını kullanalım ve birden fazla seviye zıplama yapalım.
+        Yükseklik "height" parametresini zıpla "jump" fonksiyonuna ekleyelim. Yukarı ok köpeğin 200 piksel, aşağı ok 100 piksel zıplamasını sağlasın.
+        İpucu: Fonksiyon üzerinde düzenle tuşuna basın "height" parametresini ekleyin.
+      Course 4 Play Lab Params 3_instruction: 'Zıpla "Jump" fonkssiyonuna hangi oyuncunun
+        zıplamasını belirten bir parametre daha ekledik. Her bir oyuncu bir sayı ile
+        belirtiliyor. Düzenle ile fonksiyonu ilgili aktörün zıplamasını sağlayacak
+        şekilde değiştir. '
+      Course 4 Play Lab Params 4_instruction: Devriye "patrol" isimli fonksiyonumuz
+        var. Güncelle ve kedinin 400 piksel yukarı ve sonra 400 piksel aşağı hareket
+        etmesini sağla.
+      Course 4 Play Lab Params 5_instruction: Devriye "patrol" fonksiyonunu düzenle
+        ve oyuncu "actor" parametresi ekle. Böylece her bir oyuncuyu için kullanabiliriz.
+        Oyuncular 1, 2, 3 diye numaralandırılmış.
+      Course 4 Play Lab Params 6_instruction: Devriye "patrol" fonkisyonuna hız "speed"
+        parametresi ekle. "ayarla hız" bloğunu kullanarak penguenin diğerlerinden
+        önce her iki bayrağı almasını sağla.
+      Course 4 Play Lab Params 7_instruction: Eğlence zamanı. kodu incele ve her bir
+        bloğun ne yaptığına bak. bitirdiğinde ok tuşları ile köpeğin bütün bayrakları
+        toplamasını sağla.
+      Course 4 Play Lab Params 8_instruction: '"aktör zamanında dokunur" bloğunu kullan
+        ve köpeği başka bir oyuncuya dokunursa sol üst köşeye gönder.'
+      Course 4 Play Lab Params 9_instruction: "Önceki aşamadaki oyunumuz fakat kodlar
+        saklanmış. Puan al \"score points\" fonksiyonu yeni.\nFonksiyonu düzenle ve
+        puan \"points\" parametresi ekle ve oyuncu puanı \"player_Score\" değişkenine
+        eklensin. player_score değişkeni köpek kediye kalp verdiğinde artsın fakat
+        kedi köpeğe  kalp verdiğinde azalsın.\nNot: Çalıştır tuşuna bas ve oyna, köpek
+        6 puan kazandığında sonraki seviyeye geçebilrisin. \n"
+      Course 4 Play Lab Vars 1_instruction: Bu sefer kod yazman gerekmiyor. Sadece
+        çalıştır düğmesine bas ve oyunu oyna! Bu oyunda köpek kediden fazla bayrak
+        toplamak istiyor. aşağı tuşu ile köpeği kontrol et. Oyunun bitince bitiş tuşuna
+        bas.
+      Course 4 Play Lab Vars 2_instruction: "Önceki oyundaki bulmaca adil değildi.
+        dog_speed değişkeni ile hızı değiştirerek köpeğin kediden fazla bayrak toplamasını
+        sağla. Önce 10 bayrak toplayan kazanır!"
+      Course 4 Play Lab Vars 3_instruction: Sol ve sağ ok tuşlarıyla hareket ettirin.
+        Yukarı ok tuşu ile zıplatın. bütün bayrakları toplaya bilecekmisin.
+      Course 4 Play Lab Vars 4_instruction: Height yükseklik değişkeni köpeğin ne
+        kadar zıplayacağını kontrol ediyor. Bu değişkeni güncelleyerek köpeğin bayrağa
+        ulaşmasını sağla.
+      Course 4 Play Lab Vars 5_instruction: 'Oyun yaratalım! Önce puan gerekli. Bir
+        önceki seviyede gördüğün kodu yeniden düzenle ve puanı 10 yap. '
+      Course 4 Play Lab Vars 6 (copy 1)_instruction: Harika, şimdi bizim Puan değişkenimiz
+        var, ama nasıl yararlı hale getireceğiz? Ne dersin,ateş topu ile düşman vurduğumuzda
+        puan artıralım? Oyuncu 2 dokunduğunda bloğu kullanın. puanı puan = puan +
+        1. Puanınızı (teker teker artırarak) 10 a kadar getirin.
+      Course 4 Play Lab Vars 6_instruction: Sağ ok tuşu ile kalp fırlatabilirsin.
+        Oyunumuzda bunlarla puan kazanacağız. Köpek kediyi kalp ile vurduğunda puan
+        "points" değişkenine 1 ekliyoruz. "Oyuncu dokunduğu zaman" olayını kullan
+        ve puanı güncelle. Değişkeninizi points=points+1 diye artıra bilirsiniz. Puanınızı
+        10 yapın (birer birer arttırarak) ve seviyeyi geçin.
+      Course 4 Play Lab Vars 7_instruction: Güzel şimdi bu oyunu zorlaştıralım. Köpek
+        kediden sarı kalp alırsa puan kaybetsin. 10 puan ile başlayın. Puan 0 olduğunda
+        bir sonraki seviyeye geçebilirsin.
+      Course 4 Play Lab Vars 8 (copy 1)_instruction: Bu oyun için son bir şey daha.
+        Oyuncunun kazanabileceği yada kaybedebileceği şekilde düzenleyelim. Eğer 20
+        den fazla puanı olursa düşmanı yok etsin. Eğer 0 dan düşük olursa oyuncu yok
+        olsun. Oyun istediğin gibi çalıştığında bitir düğmesine bas.
+      Course 4 Play Lab Vars 8_instruction: Oyuncunun kazanabileceği yada kaybedebileceği
+        şekilde düzenleyelim. Eğer 20 den fazla puanı olursa düşmanı(kedi) yok etsin.
+        Eğer 0 dan düşük olursa oyuncu(köpek) yok olsun. Oyun istediğin gibi çalıştığında
+        bitir düğmesine bas.
       Course 4 Play Lab Vars 9_instruction: "Serbest Oyun zamanı! Bu aşamada kullandığın
         bütün değişkenler ve birkaç tane exta burada.  \n\\r\n\\r\nAraç kutunda organize
         etmen gereken çok fazla blok var!  \nHer bir parçayı ilgili kategori içine
         koyduk. biraz dikkatini verip herşeyi keşvet. İncelemeyi bitirince tekrarla,
         değişkenler ve olaylar kullanarak hikayeni oluştur.\nİpucu: Çalışma alanındaki
         tüm komutları görmek için kaydır."
-      Course 4 Play Lab Vars_instruction: |
-        Alright, one last thing for this game
-        - let's set it up so the player can win (or lose). Use a forever loop to
-        check the value of score - if score is ever greater that 20, make the emeny
-        vanish. If the score is every less than 0, make the player vanish.
-      Course 4 Play Labs For Loops 1_instruction: |
-        Let's make the dog speak every
-        number from 1 to 100. Use a for loop and the counter block to speak the counter
-        variable each time the loop is run.
+      Course 4 Play Lab Vars_instruction: Bu oyun için son bir şey daha. Oyuncunun
+        kazanabileceği yada kaybedebileceği şekilde düzenleyelim. Eğer 20 den fazla
+        puanı olursa düşmanı yok etsin. Eğer 0 dan düşük olursa oyuncu yok olsun.
+      Course 4 Play Labs For Loops 1_instruction: Köpeğin 1 den 100 e kadar bütün
+        sayıları saymasını sağlayalım. For döngüsü kullanalım ve köpek her döngüde
+        sayaç "counter" değişkenini söylesin.
       Course 4 Play Labs For Loops 2_instruction: "Şimdi 1 den 100 e kadar tek sayıları
         sayalım."
-      Course 4 Play Labs For Loops 3_instruction: |
-        If we count by larger numbers,
-        we count even higher in the same amount of time. Try making the dog count
-        from 10 up to 1000, 10 at a time.
-      Course 4 Play Labs For Loops 4_instruction: |
-        Changing the increment can be
-        helpful, but we're still counting linearly (each number is the same distance
-        from the last) What if I wanted to count exponentially? Without changing the
-        settings in this for loop, can you count 1, 4, 9 , 16, 25... (counter squared)?
-      Course 4 Play Labs For Loops 4a_instruction: |-
-        Now, let's blend the variables
-        from Stage 7 together with your "counter" variable to make some magic happen.   \r
-        \r
-        In
-        this puzzle, Dog will count from 0 to 1000 by "increment".  Set the "increment"
-        variable to 10 at the beginning of your code to see what happens.
-      Course 4 Play Labs For Loops 5_instruction: |
-        In the last stage we counted the
-        square of each number. Try changing "counter ^ 2" to "counter ^ 3" to
-        count the cube of each number (1, 8, 27, 64, 125, 216, 343…)
+      Course 4 Play Labs For Loops 3_instruction: Yüksek sayılarla sayarsak daha yüksek
+        sayıya kadar sayabiliriz. Onar onar 10 dan 1000 e kadar saymasını sağla.
+      Course 4 Play Labs For Loops 4_instruction: Artışı değiştirmek faydalı olabilir.
+        Fakat hala düzenli bir şekilde sayıyoruz. Üstsel saymak istesek ne yapardık?
+        Döngüyü değiştirmeden 1, 4, 9, 16, 25... (sayacın karesi) şeklinde sayabilir
+        miyiz?
+      Course 4 Play Labs For Loops 4a_instruction: "Şimdi aşama 7 deki değişkenlerle
+        sayaç\"counter\" değişkenini birleştirelim ne oluyor. \nBu bulmacada köpek
+        1 den 1000 e kadar sayacak increment değerini başta 10 yapalım ve ne olduğunu
+        görelim.\n"
+      Course 4 Play Labs For Loops 5_instruction: Bir önceki aşamada her sayının karesi
+        kadar saydık. Şimdi counter^3 yani sayının kütü şeklinde sayalım (1, 8, 27,
+        64, 125, 216, 343..)
       Course 4 Play Labs For Loops 5a_instruction: |-
         In this puzzle, Dog will be your
         time keeper.\r
@@ -1928,63 +1736,38 @@
         \r
         Run the loop a couple of times, clicking Dog before
         each one.
-      Course 4 Play Labs For Loops 6_instruction: |
-        You may recall that a prime number
-        is any whole number that is only divisible by itself and 1. Use the "is_prime"
-        function to speak out only the prime numbers from 1 to 100.
-      Course 4 Play Labs For Loops 6a_instruction: |-
-        Dog will still keep time by counting
-        with our "for loop" by "increment", but this time, we will add The Wizard
-        into the mix.  Can you change the code so that "increment" goes up by two
-        each time The Wizard is clicked?\r
-        \r
-        Watch out!  The Wizard moves quickly!
+      Course 4 Play Labs For Loops 6_instruction: Asal sayı sadece kendine ve 1 e
+        bölünebilen sayıdır. Asalmı"is_prime" fonksiyonunu kullanarak 1 den 100 e
+        kadar asal sayıları söyleyelim.
+      Course 4 Play Labs For Loops 6a_instruction: Köpek hala for döngüsü ile ve increment
+        değişkeni ile sayıyor. Fakat bu sefer sihirbazı dahil edeceğiz. Kodu değiştirerek
+        sihirbaz her tıklandığında increment değişkeninin ili artmasını sağla!
       Course 4 Play Labs For Loops 7_instruction: Döngü kullanarak 4, 7, 10, 13, 16,
         19, 22, 25 şeklinde saymamı sağlayabilir misin?
-      Course 4 Play Labs For Loops 7a_instruction: |-
-        Now we're getting somewhere!  What
-        if we start counting how many times we can click The Wizard before Dog gets
-        to 30?  \r
-        \r
-        Finish adding blocks to The Wizard so that every time he's
-        clicked the variable "clicked" increases by one. You can ignore "increment"
-        for now.\r
-        \r
-        Dog will start counting when you click "Run".
-      Course 4 Play Labs For Loops 8_instruction: |-
-        Now, help the actors move as they
-        count.  \r
-        \r
-        Dog should move and count by adding 2 (counter + 2) each time.  Cat
-        will move and count by multiplying by 2 (counter * 2)  each time. Penguin
-        will move and count to the power of 2 (counter ^ 2) each time.  Who will reach
-        their flag first?
-      Course 4 Play Labs For Loops 8a_instruction: |-
-        To finish our game, we need to
-        bring back the "increment" variable!    Let's tie it to the level of the
-        game.\r
-        \r
-        1) Keep track of the number of times The Wizard is clicked.\r
-        2)
-        If The Wizard is clicked at least 10 times before Dog counts to 30, raise
-        "increment" by 1 and start again.\r
-        3) If The Wizard does not get clicked
-        at least 10 times, the game is over.
-      Course 4 SCF 1_instruction: |
-        Use the suggested functions to draw four rows
-        of hexagons. Notice how our even numbered rows are shifted to the right?
+      Course 4 Play Labs For Loops 7a_instruction: |
+        Şimdi bir yerlere varmaya başladık.  Peki ya köpek 30'a gelmeden önce Sihirbazı kaç kez tıklata bilirsiniz saybilir misin? tıklanma "clicked" değişkeni her tıklandığında bir artsın. Şimdilik increment değişkenini unutabilirsin.
+        Çalıştır tuşuna bastığında köpek saymaya başlar.
+      Course 4 Play Labs For Loops 8_instruction: "Şimdi oyuncular hareket ettikçe
+        sayıyorlar. Köpek her ilerlediğinde iki arttırsın (counter+2). Kedi ise sayacı
+        çarpsın (counter*2). Penguen sayacın karesini alsın (counter^2).. Kim daha
+        önce bayrağa erişir?"
+      Course 4 Play Labs For Loops 8a_instruction: "Oyunu bitirmek için increment
+        değişkenine yine ihtiyacımız var. 1. Sihirbazın kaç kere tıklandığını say.
+        \n2. eğer köpek 30 a kadar saymadan sihirbaz 10 defa tıklanırsa increment
+        değişkenini 1 arttır. \n3. Eğer sihirbaz en az 10 kere tıklanmadıysa oyun
+        biter.\n"
+      Course 4 SCF 1_instruction: "Önerilen fonksiyonları kullanarak 4 satır altıgen
+        çiz. Çift sayılı satırların sağa kayık olduğuna dikkat edin?"
       Course 4 SCF 1a_instruction: En az sayıda blok ile bütün nektarları toplayabilir
         misin?
       Course 4 SCF 1b_instruction: En az sayıda blok ile bütün nektarları toplayabilir
         misin?
-      Course 4 SCF 2_instruction: "Use what you learned in the previous level to\ndraw
-        an image like this. Note: The code becomes more simple if you incorporate\nparameters.
-        \n"
+      Course 4 SCF 2_instruction: 'Böyle resim çizmek için önceki düzeyde öğrendiklerini
+        kullanın. Not: Parametreleri dahil ederseniz kod daha basit hale gelir. '
       Course 4 SCF 3 Fail 1_instruction: Nasıl yapılacağını çözdünmü...
       Course 4 SCF 3 Fail 2_instruction: Nasıl yapılacağını çözdünmü...
-      Course 4 SCF 3_instruction: "Use what you learned in the previous level to\ndraw
-        an image like this. Note: The code becomes more simple if you incorporate\nparameters.
-        \n"
+      Course 4 SCF 3_instruction: 'Böyle resim çizmek için önceki düzeyde öğrendiklerini
+        kullanın. Not: Parametreleri dahil ederseniz kod daha basit hale gelir. '
       Course 4 SCFL 1_instruction: Bu bulmacayı en az sayıda blok kullanarak tamamla.
       Course 4 SCFL 1a_instruction: Scrat ı meşe palamuduna en az sayıda blok kullanarak
         ulaştırabilir misin?
@@ -2000,30 +1783,20 @@
       Course 4 SCFL 6_instruction: Tek bir döngüyle bu çizimi yapabilir misin?
       Course 4 SCFL 7_instruction: Sanatçı dalgaları yakalamak istiyor. Bu çizime
         tekrar yaratabilir misin?
-      Course 4 SCFP 1_instruction: |
-        Create a function with parameters that allows
-        the artist to jump backward and forward by x pixels, and also up and down
-        by y pixels (using positive and negative numbers).
+      Course 4 SCFP 1_instruction: Sanatçının x piksel ileri geri ve y piksel yukarı
+        ve aşağı zıplamasını sağlayan bir fonksiyon yazın.(pozitif ve negatif sayıları
+        kullanın).
       Course 4 SCV 1_instruction: Yönergeleri yeniden görüntülemek için burayı tıklatın.
       Course 4 SCV 2_instruction: Yönergeleri yeniden görüntülemek için burayı tıklatın.
-      Course 4 SCV 3_instruction: |-
-        Now for a game of tag!  Tag Cat to get 2 points.
-        Tag Penguin to get 3 points.  Get exactly 10 points to win!\r
-        But be careful,
-        when Cat and Penguin tag each other, they take points away.\r
-        \r
-        Add the
-        blocks necessary to make this game work the way it's been explained.  How
-        will you get Dog to move in all directions using the arrow keys?  How will
-        you add points when Dog tags Cat or Penguin?  How will you subtract points
-        when Cat and Penguin touch?
+      Course 4 SCV 3_instruction: |
+        Şimdi etiket oyunu. Kediyi etiketle 2 puan al. Pengueni etiketle 3 puan al. Kazanmak için 10 puan al. Kedi ile penguen birbirini etiketler ise puanları kaybeder.
+        Gerekli blokları ekleyerek oyunu açıklandığı şekilde kurgula. Köpeğin ok tuşları ile her yöne ilerlemesini nasıl sağlayacaksın? Köpek penguen veya kediyi etiketlediğinde nasıl puan ekleyeceksin? eğer kedi pengueni etiketler ise nasıl puan çıkaracaksın?
       Course 4 SCV 4_instruction: Bu bulmacayı en az sayıda blok kullanarak tamamla.
       Course 4 SCV 5_instruction: Bu bulmacayı en az sayıda blok kullanarak tamamla.
       Course 4 SCV 6_instruction: Yönergeleri yeniden görüntülemek için burayı tıklatın.
-      Course 4 SCVP 1_instruction: |
-        Create a function with parameters that allows
-        the artist to jump backward and forward by x pixels, and also up and down
-        by y pixels (using positive and negative numbers).
+      Course 4 SCVP 1_instruction: Sanatçının x piksel ileri geri ve y piksel yukarı
+        ve aşağı zıplamasını sağlayan bir fonksiyon yazın.(pozitif ve negatif sayıları
+        kullanın).
       Course 4 Variables Assessment_instruction: Be şekli kenarlar için değişken kullanarak
         yapabilir misin? Her bir kenar 50 piksel uzunluğunda olmalıdır.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
@@ -2039,6 +1812,112 @@
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
+      CSD U3 Background Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Background Experiment_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Experiment_instruction: |
+        Try using some of the other shape
+        functions you've learned in the draw loop. What happens when you use randomNumber()
+        to generate some of the inputs?You'll want to stop and discuss with the class
+        before moving on.
+      CSD U3 Frame Rate_instruction: Slow down Gamelab Gary's animation with frameRate()
+      CSD U3 Random Animation_instruction: |
+        Use randomNumber() to animate Gary's
+        mouth.
+      CSD U3 Random Choice_instruction: |
+        Use the randomNumber() block to generate
+        either 0 or 1
+      CSD U3 Random Color_instruction: |
+        Could you use randomNumber() to pick random
+        colors as well? Try setting one or more of the channels in the rgb block with
+        a random number. What should the maximum value be?
+      CSD U3 Random Intro_instruction: |
+        What do you think this code will do when
+        it is run? Make a prediction, then run this code 5 - 10 times, recording the
+        output each time. Share your results with your neighbor.
+      CSD U3 Random Min Max_instruction: |
+        Using console.log() write a program that
+        randomly returns a number in a range you define.
+      CSD U3 Random Width Height_instruction: |
+        Pick a shape function and use calls
+        to randomNumber() in place of one or more of the parameters. Maker sure you
+        run it a few times so you can see the effect of randomization.
+      CSD U3 Simple Drawing - Animation 2_instruction: |
+        Use randomNumber() on the
+        x position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Animation_instruction: |
+        Use randomNumber() on the x
+        position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Background_instruction: |
+        Put all of your code into
+        a draw() loop and then add set the background to blue with the background()
+        block.
+      CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Variable Arithmetic pt2_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variable Arithmetic_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variable Incrementation pt2_instruction: |
+        Predict: What two numbers
+        will be displayed in the console?
+      CSD U3 Variable Incrementation_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variables CHALLENGE gamelab gary_instruction: |
+        Use variables to animate
+        Game Lab Gary
+      CSD U3 Variables draw loop newVars_instruction: |
+        Extend this project to create
+        your own random art visualization with variables.
+      CSD U3 Variables draw loop rgb_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
+      CSD U3 Variables draw loop xy_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
+      CSD U3 Variables Initialize_instruction: |
+        Predict: What will get displayed
+        in the console?
+      CSD U3 Variables Intro_instruction: |
+        Create your own variable, give it a value,
+        and display that value in the console.
+      CSD U3 Variables random drawing exemplar_instruction: |
+        Check out this example
+        randomized drawing.
+      CSD U3 Variables Random_instruction: |
+        Predict: What will get displayed in the
+        console?
+      CSD U3 Variables Reassign pt2_instruction: |
+        Create and assign a new variable
+        in a single line.
+      CSD U3 Variables Reassign_instruction: |
+        Predict: What will get displayed in
+        the console?
+      CSD U3 Variables Square Random Loop_instruction: |
+        Test your predictions from
+        the last level.
+      CSD U3 Variables Square Random_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variables Square_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variables use value rect_instruction: |
+        Predict: What will get displayed
+        in the console?
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2341,16 +2220,14 @@
       Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: "Şimdi herbirini çizdikten sonra
         18 derece bırakacağınız 20 tane çember oluşturun."
-      frozen circle function with parameter_instruction: |
-        Here's a ”Create circle”
-        block that can make circles of different sizes. Can you use this to create
-        a small circle of size 5 and a larger circle of size 10?
-      frozen circle function_instruction: |
-        Use the new “Create a circle” block to
-        create 10 overlapping circles. Don't forget to jump forward between circles.
-      frozen circle_instruction: |
-        A circle is a special shape. Can you figure out
-        what number to replace the question marks with to draw a circle?
+      frozen circle function with parameter_instruction: '"Çember oluştur" "create
+        circle" bloğuyla farklı büyüklüklerde çemberler oluşturabilirsiniz. Bunu 5
+        birim ve 10 birimlik çemberler çizmek için kullanır mısınız?'
+      frozen circle function_instruction: 10 tane üst üste çember oluşturmak için
+        "Çember oluştur" yani "Create a circle"bloğunu kullanın. Çemberler arasında
+        ileri zıplamayı unutmayın.
+      frozen circle_instruction: "Çember özel bir şekildir. Bir çember çizmek için
+        soru işareti yerine kaç gelmesi gerektiğini bulabilir misiniz?"
       frozen cross rotate dense_instruction: 'Bu işlemi 90 kez tekrarlayalım! Kaç
         kere de 90''dan 360''a varılır? İpucu: cevabı gerçekten çok küçük bir sayı.'
       frozen cross rotate_instruction: "Şimdi, bu işlemi 10 kez deneyerek tekrarlayınız.
@@ -2375,9 +2252,8 @@
       frozen perpendicular_instruction: Haydi şimdi nasıl birbirine 90 derece açılı
         2 çizgi oluşturacağımıza bakalım. Dönme bloğunun yanısıra hareket bloğunu
         da kullanman gerekecek.
-      frozen snowflake branch_instruction: |
-        Try using the ”Create a snowflake branch”
-        block to create three branches, which starts to look like a snowflake.
+      frozen snowflake branch_instruction: Üç tane dal oluşturmak için "Kar taneciği
+        dalı oluştur" bloğunu deneyin gitgide kar taneciğine benziyor.
       frozen snowflake full_instruction: "Şimdi çok güzel bir kar taneciği yapmak
         için 8 kere tekrar edin!"
       frozen snowflower_instruction: Karmaşık kar tanecikleri aslında basit şekillerle
@@ -2397,12 +2273,10 @@
       Infinity_catch_instruction: Ok tuşlarını kullanarak Elsa nın Annaya yetişmesini
         sağlayabilir misin?
       Infinity_finale_instruction: Kendi zevkinize göre bir şey yarat ve paylaş!
-      Infinity_move_collide_instruction: |
-        Hiro is "actor 1".  Move him right to
-        Baymax, and play a sound when they touch.
-      Infinity_move_directions_instruction: |
-        Baymax is "actor 2".  Add Move blocks
-        and then move Baymax using the arrows.  Make him touch the two other characters.
+      Infinity_move_collide_instruction: Hiro Oyuncu 1. Onu sağa baymax a  doğru ilerlet
+        ve dokunduğunda ses çıkart.
+      Infinity_move_directions_instruction: Baymax oyuncu 2 dir. Yeni bloklar ekleyerek
+        baymax ı ok tuşları ile etrafta  gezdir. Her iki oyuncuyada dokunmasını sağla.
       Infinity_move_right_instruction: Hiro "aktör 1" dir.  İlerle aktör 1 sağa bloğunu
         kullanarak  Baymax a dokun.
       Infinity_repeat_instruction: '"Sonsuza kadar tekrarla" bloğunu kullanarak Anna''nın
@@ -2411,17 +2285,15 @@
         demesini sağla.
       Infinity_shoot_instruction: '"Baymax" ikinci aktör. Baymaxın Hero ya roket atmasını
         sağlayın.'
-      Infinity_shoot_directions_instruction: |
-        Hiro is "actor 3".  Make Hiro throw
-        a projectile to each of the four characters.  Wait one second between each
-        throw.
+      Infinity_shoot_directions_instruction: Hiro oyuncu 3 tür. Hironun diğer dört
+        karaktere roket fırlatmasını sağla. Her bir atıştan sonra 1 saniye bekle.
       Infinity_test_instruction: This is a test Infinity level.
       Infinity_touch_faster_instruction: Daha fazla kartanesine dokun!
       Infinity_touch_four_instruction: Anna yı yukarı, aşağı, sağ ve sol hareket ettirerek
         dört kar tanesine de dokun.
-      Infinity_touch_score_instruction: |
-        Make Anna score a point when she touches
-        a snowflake.  Then click "Run" and steer her to touch each snowflake once.
+      Infinity_touch_score_instruction: Annanın kar tanesine dokunduğu zaman puan
+        kazanmasını sağla.  Sonra çalıştır tuşuna bas ve onun kar tanesine bir defa
+        dokunmasını sağla.
       jessie-test_instruction: Lots of instructions
       Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Yukarıya kısa bir çizgi ve sağa uzun
@@ -2514,16 +2386,13 @@
       K-1 Bee Loops Assessment 2_instruction: Bal yapmak için nektar topla. Döngüleri
         kullan!
       K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
-      K-1 Building a Foundation Assessment_instruction: |
-        Build a three level pyramid,
-        there are no other directions, so just play with the pieces until you get
-        it!
+      K-1 Building a Foundation Assessment_instruction: "Üç seviye piramit oluşturun.
+        Çizimi yapana kadar denemeye devam edin!"
       k-1 maze 1_instruction: Beni domuza götürmek için batı yönünde ilerletebilir
         misin?
       K-1 Maze 10_instruction: Beni domuza götürmek için TNT'nin etrafından dolaş!
-      K-1 Maze 11_instruction: |
-        Trace the path and lead me to the silly pig. Avoid
-        TNT or the feathers will fly! Hint: He's South of me.
+      K-1 Maze 11_instruction: 'Yolu takip et ve beni sersem domuza götür. Patlayıcılardan
+        uzak dur yoksa bu tüylerim havaya uçacak! İpucu: benim güneyimde.'
       K-1 Maze 2_instruction: Beni domuza götürmek için doğuya ilerle!
       K-1 Maze 3_instruction: Beni domuza götürmek için güneye ilerle!
       K-1 Maze 4_instruction: Beni domuza götürmek için kuzeye ilerle!
@@ -2792,217 +2661,160 @@
         100 piksel uzunluğunda olan bir kare çizebilir misin?'
       NEW Course 4 Artist Functions 10.1_instruction: Bir önceki bulmacada yazdığın
         fonksiyonu kullanarak bu deseni çiz.
-      NEW Course 4 Artist Functions 10_instruction: |
-        Click "edit" to fill out the
-        blocks in the function definition to make a 40 pixel square.
+      NEW Course 4 Artist Functions 10_instruction: Düzenle düğmesine bas ve 40 piksel
+        uzunluğunda kare yap.
       NEW Course 4 Artist Functions 11_instruction: |
-        Now we want to create a new
-        function called "draw a line of squares" that draws six squares all in a
-        row.  Can you build this function using the "draw a square 20" function
-        that we've already created? Note: See that we've changed the pen to be much
-        thinner. Click "edit" on the  the "draw a square 20" function to see how!\r
+        Şimdi karelerden çizgi çiz "draw a line of square" isimli 6 tane kare çizen bir fonksiyon yazalım. Bu fonksiyonu "draw a square 20" fonksiyonunu kullanarak yapabilir misin? Not: düzenle tuşuna bas ve kalemi daha ince yaptığımızı gör
       NEW Course 4 Artist Functions 12_instruction: '"Kareden çizgi çiz " fonksiyonunu
         kullanarak şekildeki deseni çiz'
-      NEW Course 4 Artist Functions 13_instruction: |
-        Can you draw a star shape using
-        the "draw a line of squares" function? Hint: Edit the "draw a line of squares"
-        function so that you don't have to call it twice.  Notice, you'll have to
-        move forward a certain number of pixels and turn 144 degrees.
+      NEW Course 4 Artist Functions 13_instruction: '"Draw a lines of square" fonksiyonunu
+        kullanarak yıldız çizebilir misin? İpucu: fonksiyonu düzenleyerek iki kere
+        çağırmaktan kurtul. Belirli bir miktar ilerleyip 144 derece dönmen gerekecek.'
       NEW Course 4 Artist Functions 14_instruction: Eğlence Zamanı!
-      NEW Course 4 Artist Functions 2_instruction: |
-        Can you draw 3 squares 20 pixels
-        apart from one another? Hint: each square is 100 pixels in size
-      NEW Course 4 Artist Functions 3_instruction: |
-        Here is a new type of Block.
-        It is called a "Function" block. Click "edit" then fill it with the code
-        for drawing a square with 100 pixel sides. When you're done editing the function,
-        click "Close" to go back to your program.
-      NEW Course 4 Artist Functions 4_instruction: |
-        Use the "draw a square" function
-        to draw this pattern. Hint: You will have to use a "turn right by 120 degrees"
-        block after each square.
-      NEW Course 4 Artist Functions 5_instruction: |
-        How did the "draw a square"
-        block know what commands to run? Click on "edit" in the "draw a square"
-        function block. The blocks in the function editor are the definition that
-        make up "draw a square." When you're done looking around, click "Save
-        and Close" and then "Run."
+      NEW Course 4 Artist Functions 2_instruction: 'Birbirinden 20 piksel mesafede
+        üç kare çizebilir misin? İpucu: Her bir kare 100 piksel genişliğinde'
+      NEW Course 4 Artist Functions 3_instruction: Burada fonksiyon isimli yeni bir
+        blok var. "Düzenle" yi tıklayın sonra 100 piksel kenarlara sahip bir kare
+        çizmek için kodu ile doldurun. Bittiğinde programına gitmek için "Kapat"'ı
+        tıklatın.
+      NEW Course 4 Artist Functions 4_instruction: Bu deseni çizmek için "bir kare
+        çizin" işlevini kullanın. İpucu 120 derece döndürün.
+      NEW Course 4 Artist Functions 5_instruction: '"draw a square" fonksiyonu hangi
+        komutları işleteceğini nasıl biliyor? Fonksiyon üzerinde düzenle düğmesine
+        bas. Fonksiyon düzenleyici içinde kare çizme ile ilgili bloklar var. İncelemeniz
+        bittiğinde kaydet ve kapat tuşuna basın. Sonra çalıştırın'
       NEW Course 4 Artist Functions 6_instruction: |
-        Using the "draw a square" function
-        block, can you draw this picture? Hint: each square is 20 pixels apart.\r
-      NEW Course 4 Artist Functions 7_instruction: "Are you getting the hang of how\nto
-        use function blocks? Let's modify this square so that it is 200 pixels\nin
-        size. Hint: click on \"edit\" to enter the \"draw a square\" function editor.\nRemember
-        to click on \"Close\" to get out of the function editor. \n"
-      NEW Course 4 Artist Functions 8_instruction: |
-        We have created a new function
-        for you called "draw a triangle".  Can you edit the function definition
-        to draw a triangle with 100 pixel sides?
+        Kare çiz fonksiyonunu kullanarak bu resmi çizebilir misin? İpucu: Her bir kare 120 piksel uzaklıkta. \r
+      NEW Course 4 Artist Functions 7_instruction: 'Fonksiyon bloklarının nasıl kullanılacağına
+        alıştın mı? Hadi bu kareyi 200 piksel boyutunda olacak şekilde değiştirin.
+        İpucu: Kare çiz "draw a square" fonksiyonu üzerindeki "Düzenle" bağlantısını
+        tıklayın. Bittiğinde kapat düğmesine basmayı unutmayın. '
+      NEW Course 4 Artist Functions 8_instruction: Sizin için "draw a triangle adı
+        verilen yeni bir fonksiyon oluşturduk.  100 piksel kenarları olacak bir üçgen
+        çizmek için fonksiyonu düzenleyebilir misin?
       NEW Course 4 Artist Functions 9_instruction: Bu sadece bir blok ekleyerek çözebilir
         misiniz?
       NEW Course 4 Artist Functions inspire_instruction: "İlham alınan resmi görmek
         için buraya tıklayın."
       New Course 4 Artist Functions Level 4_instruction: '"Kare Çiz" fonksiyonunu
         kullanarak bu deseni oluştur.'
-      NEW Course 4 Artist Params 1_instruction: |
-        Let's define this function to draw
-        a square with 50 pixel sides. Click "edit" to get started.
-      NEW Course 4 Artist Params 10_instruction: "Create a \"draw a hexagon\" function\nblock
-        with a length parameter. Hint: This hexagon has sides that are 100 pixels\nin
-        length. \n"
+      NEW Course 4 Artist Params 1_instruction: Hadi 50 piksel kenarlara sahip bir
+        kare çizmek için bu fonksiyon tanımlayın. Başlamak için "Düzenle" seçeneğini
+        tıklatın.
+      NEW Course 4 Artist Params 10_instruction: '"Draw a hexagon" fonksiyonunu uzunluk
+        "length" parametresi ile yaratalım. İpucu: Bu altıgen 100 piksel uzunluğunda
+        kenarları vardır. '
       NEW Course 4 Artist Params 11_instruction: Bu çekli çizebilir misin? "Kenar"
         parametresini kullanacak şekilde fonksiyonu güncelle.
-      NEW Course 4 Artist Params 12_instruction: |
-        Can you complete this drawing?
-        The sides of all the shapes are 100 pixels long.
-      NEW Course 4 Artist Params 12a_instruction: |
-        This image is similar to the last.
-        Can you use a "for loop" with your function to make this design?
-      NEW Course 4 Artist Params 13_instruction: |-
-        Let's edit this "draw a polygon"
-        function. It already has a "sides" parameter. Now, let's add a "length"
-        parameter. \r
-        Hint: The perimeter of each shape is 200 pixels long. Do you
-        remember the equation to make shapes the same size when they have a different
-        number of sides?
-      NEW Course 4 Artist Params 14_instruction: |
-        Edit "draw a spiral edge" to
-        use "length" and "sides" parameters, then recreate these shapes.
-      NEW Course 4 Artist Params 15_instruction: |
-        Freeplay: Here are the functions
-        you've written, and some more for you to play with. Draw something awesome!
-        Play with the pen width to see how different your drawings look!
+      NEW Course 4 Artist Params 12_instruction: Bu çizim tamamlayabilirsiniz? Tüm
+        şekillerin kenarları 100 pikseldir.
+      NEW Course 4 Artist Params 12a_instruction: Bu son görüntü ile benzerdir. For
+        döngüsü ile bu tasarımı yapabilir misin?
+      NEW Course 4 Artist Params 13_instruction: |
+        "Draw a polygon" fonksiyonunu güncelleyelim. Kenarlar"Sides" parametresi zaten var. Uzunluk "length" parametresi ekleyelim.
+        İpucu: Her bir şeklin kenarları 200 piksel. Farklı sayıda kenara sahip bütün şekillerin çevresini aynı yapacak denklemi hatırlıyor musun?
+      NEW Course 4 Artist Params 14_instruction: '"draw a spiral edge" fonksiyonunu
+        güncelleyerek uzunluk "length" ve kenarlar "sides" parametreleri ekleyin ve
+        sonra bu şekilleri oluşturun.'
+      NEW Course 4 Artist Params 15_instruction: 'Serbest Zaman: Yazdığınız fonksiyonlar
+        ve ektra birkaç tanesi burada. Harika bir şeyler çiz! Kalem ucu ile oyna be
+        çizimin ne kadar farklı olabildiğini gör!'
       NEW Course 4 Artist Params 2_instruction: '"50 piksel kenarlı bir üçgen çiz"
         fonksiyonunu sıfırdan yaz'
       NEW Course 4 Artist Params 3_instruction: |
-        Now let's use the function to draw
-        5 triangles in a row. Hint: each triangle is 30 pixels apart.\r
-      NEW Course 4 Artist Params 4_instruction: |
-        Do you notice anything different
-        about these function blocks? Click “Run” to see what happens.
-      NEW Course 4 Artist Params 5_instruction: "Fill in the ??? in the length parameter\ninput
-        block. Hint: The pentagon has 100 pixel sides. \n"
-      NEW Course 4 Artist Params 6_instruction: |
-        Fill in the "length" parameter
-        to draw these shapes by replacing the "???" with the right numbers. The
-        square and triangle have 100 pixels sides while each side of the hexagon is
-        75 pixels long.
-      NEW Course 4 Artist Params 7_instruction: |
-        Can you complete this drawing? Hint:
-        The sides of each triangle are 25 pixels larger than the last.  The first
-        triangle has 25 pixel sides.
-      NEW Course 4 Artist Params 8_instruction: |
-        The code for this triangle function
-        is broken. Can you edit the function to fix it, and then make triangles of
-        length 25, 50, and 75?
-      NEW Course 4 Artist Params 9_instruction: |
-        Click "edit" to fill in the function
-        definition of "draw a square" and add a parameter. It should take a length
-        parameter, just like the triangle. This time, draw 3 squares: 25, 50 and 75
-        pixels in length, each 100 pixels apart.
-      NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow
-        learned everything you need to know to make a pattern like this! If this\npicture
-        inspires you, try to make something similar. Otherwise, create something\nall
-        your own.\\r\n \\r\nWant to know how our inspiration pattern was made? "
-      NEW Course 4 Artist Vars 1.5_instruction: "Take a look at the code, can you\nsee
-        how the \"set length\" block and \"length\" block works together? Click\non
-        \"Run\" to see it in action. \n"
+        Fonksiyonu kullanarak 5 üçgen çizelim. İpucu: her üçgen birbirinden 30 piksel uzaklıkta
+      NEW Course 4 Artist Params 4_instruction: Bu fonksiyon bloklarında farklılık
+        gördünüz mü? Çalıştırın ve ne olacağını görün.
+      NEW Course 4 Artist Params 5_instruction: 'Length parametresindeki ??? kısmını
+        doldur. İpucu: Beşgenin kenarları 100 piksel uzunluğundadır. '
+      NEW Course 4 Artist Params 6_instruction: Length parametresindeki "???" kısmını
+        doğru şekilde doldurarak şekli çiz. Üçgen ve kare 100 piksel kenarlara sahiptir.
+        Beşgen ise 75 piksel.
+      NEW Course 4 Artist Params 7_instruction: 'Bu çizimi tamalayabilirmisin? İpucu:
+        Üçgenin kenarları bir öncekinden 25 piksel daha uzundur. İlk üçgenin kanarları
+        25 pikseldir.'
+      NEW Course 4 Artist Params 8_instruction: Bu üçgen çizme fonksiyonu hatalıdır.
+        Bu fonksiyonu düzenleyerek düzeltebilir misin? Sonra kenar uzunluğu 25, 50
+        ve 75 olan üçgen çizebilir misin?
+      NEW Course 4 Artist Params 9_instruction: Kare çiz "draw a square" fonksiyonunu
+        düzenle ve parametre ekle. Uzunluk "Length" parametresi alsın. Bu defa 25,
+        50 ve 75 piksel uzunluğunda 3 üçgen çiz. Aralarında 100 piksel mesafe olsun.
+      NEW Course 4 Artist Params inspire_instruction: "Serbest ilham zamanı. Bu deseni
+        oluşturmak için gerekli herşeyi öğrendin. Eğer bu resim ilham veriyorsa benzer
+        birşeyler yapmaya çalış. Yoksa kendi tasarımını yap.\\r\n\\r\nİlham alınan
+        tasarımın kodunu görmek ister misin? "
+      NEW Course 4 Artist Vars 1.5_instruction: 'Kodu incele. uzunluğu ayarla "set
+        length" bloğu ve uzunluk"length" bloğu nasıl birlikte kullanılır incele. Çalıştır
+        tuşuna bas ve olanı gör. '
       NEW Course 4 Artist Vars 12_instruction: "Şimdi bir önceki algoritmayı tekrar
         yaratarak kenar uzunlukları 150 olan beşgen çiz."
-      NEW Course 4 Artist Vars 2.5_instruction: "Take a look at the code, can you\nsee
-        how the \"set length\" block and \"length\" block works together? Click\non
-        \"Run\" to see it in action. \n"
+      NEW Course 4 Artist Vars 2.5_instruction: 'Kodu incele. uzunluğu ayarla "set
+        length" bloğu ve uzunluk"length" bloğu nasıl birlikte kullanılır incele. Çalıştır
+        tuşuna bas ve olanı gör. '
       NEW Course 4 Artist Vars 2_instruction: |
-        Drag a number block to both the `set
-        length` block and the `repeat _ times` block to draw a set of 50 pixel triangles.
-      NEW Course 4 Artist Vars 4 5_instruction: |
-        Awesome job on the last puzzle,
-        let's try it again this time let's make this cool design with with 60 pixel
-        hexagon's.
-      NEW Course 4 Artist Vars 4_instruction: |-
-        Let's try it again! \r
-        \r
-        Can you
-        set the `length` variable to 60 to make this cool design with hexagons?
-      NEW Course 4 Artist Vars 6_instruction: |-
-        Draw this pattern of pentagons with
-        100 pixel sides by setting the right value for `length` and dropping the `length`
-        variable into all of the the correct places. \r
-        \r
-        See how you only have
-        to set the value for `length` once, and the code uses the right value everywhere?
+        Sayı bloğunu çekerek uzunluğu ayarla "set length" ve tekrarla "repeat_times" değerlerine değer aktar ve 50 piksel uzunluğunda üçgenler çiz.
+      NEW Course 4 Artist Vars 4 5_instruction: Süper iş çıkarttın. Şimdi tekrar deneyelim
+        ve 60 piksel genişliğinde altıgen çizelim.
+      NEW Course 4 Artist Vars 4_instruction: Tekrar dene!. Uzunluk "length" değerini
+        60 yapıp hoş bir altıgen çizebilir misin?
+      NEW Course 4 Artist Vars 6_instruction: |
+        Beşgenlerden oluşan bir desen oluşturabilir misiniz. Kenarları için length değişkenini 100 piksele ayarla. Sonra length değişkenini bütün gerekli yerlerde kullan.
+        Değişkenin değerinin bir defa ayarlandıktan sonra defalarca nasıl kullanıldığını gör.
       NEW Course 4 Bee For Loops 1_instruction: Döngü kullanarak her bir çiçekten
         nektar al.
       NEW Course 4 Bee For Loops 10_instruction: '"Sayaç" değişkenini döngüde kullanarak
         yatay olarak ne kadar ilerleneceğini belirle.'
-      NEW Course 4 Bee For Loops 10a_instruction: |
-        Ready for a challenge?  Take what
-        you've learned about loops and try to solve this problem. Remember: You may
-        have to run your solution multiple times before you figure out all of the
-        steps.
+      NEW Course 4 Bee For Loops 10a_instruction: 'Hazır mısın? Döngüler hakkından
+        öğrendiklerini kullanarak bu problemi çöz. Unutma: Sonuca ulaşmak için çözümünü
+        birkaç defa çalıştırman gerekebilir.'
       NEW Course 4 Bee For Loops 11_instruction: Döngü kullanarak hareketleri ve nektar
         almayı başarabilir misin?
-      NEW Course 4 Bee For Loops 2_instruction: |
-        Add the code necessary to make sure
-        the bee collects all the nectar. Look at how much code you need for this puzzle!
-        (We'll learn a simpler way in the next puzzle.)
-      NEW Course 4 Bee For Loops 3_instruction: "Ah, the \"for loop\" makes this\nmuch
-        easier! All the code you need is here, take a look at how it is put together\nthen
-        click \"Run\" to see how it works. \n"
+      NEW Course 4 Bee For Loops 2_instruction: Nekrar toplamak için gerekli kodları
+        ekle. Bu bulmaca için ne kadar kod yazman gerektiğini gör. (Bir sonraki bulmacada
+        daha basit yöntemi öğreneceğiz)
+      NEW Course 4 Bee For Loops 3_instruction: For döngüsü bu işe çok daha kolay
+        yapar! Bütün kod burada bak ve incele. Sonra Çalıştır tuşuna bas ve nasıl
+        çalıştığını gör.
       NEW Course 4 Bee For Loops 4 4_instruction: Şimdi sayaç (counter) kadar ilerlemeliyiz.
         Sonra sayaç (counter) kadar nektar alalım. Problemi çözmek için "tekrarla"
         döngüsü kullanabilir misin?
       NEW Course 4 Bee For Loops 4_instruction: "?? ifadesini değiştirerek en çok
         sayıda nektarı toplamasını sağla. "
-      NEW Course 4 Bee For Loops 5 5_instruction: |
-        Are you getting the hang of using
-        the "for loop"? Let's help the bee get the rest of the nectar.
-      NEW Course 4 Bee For Loops 5_instruction: |
-        You can also use a "for loop"
-        to count down. Try gathering this nectar by counting down from 5 to 1 by 1.
-      NEW Course 4 Bee For Loops 6_instruction: |
-        The last number in your for loop
-        is called the "increment". Each time the loop is run, the counter variable
-        changes by the value of the increment. Try collecting these flowers using
-        an increment of 2.
-      NEW Course 4 Bee For Loops 7_instruction: |-
-        Now, let's combine the "counter"
-        variable with a math block! How can you use the "counter" variable to navigate
-        this garden with the fewest number of blocks possible? What do you need to
-        do to collect 3, 6, 9, 12, 15 nectar this time? The secret is in the "counter"
-        variable!\r
-        \r
-        Remember: If your loop is counting up, the increment is added
-        to your "counter" variable each time through.
-      NEW Course 4 Bee For Loops 8_instruction: |
-        You've got this! What should your
-        increment be to collect 3, 6, 9, 12, 15 nectar?
-      NEW Course 4 Bee For Loops 9_instruction: |
-        If your loop is counting down, the
-        increment is subtracted from your counter variable each loop. What should
-        your increment be to collect 15, then 12, then 9, 6, 3 nectar?
-      NEW Course 4 Bee For Loops 95_instruction: |
-        Take a look at each piece of the
-        "for loop" that you have just created.  Can you figure out which numbers
-        you need to double to solve this puzzle? Why does it work?
+      NEW Course 4 Bee For Loops 5 5_instruction: For döngüleri kullanmak alışkanlık
+        oldu. Arının kalan nektarları toplamasına yardımcı ol.
+      NEW Course 4 Bee For Loops 5_instruction: Bununla tekrarla "For" döngülerinde
+        geriye doğruda sayabilirsiniz. 5 ten geriye doğru 1 e kadar sayarak nektarları
+        toplayın.
+      NEW Course 4 Bee For Loops 6_instruction: Döngüdeki son sayı artış "increment"
+        olarak adlandırılır. Her döngüde sayaç değeri bu miktarda değiştirilir. Bu
+        çiçekleri sayacı ikişer artırarak toplayın.
+      NEW Course 4 Bee For Loops 7_instruction: "Şimdi counter değişkeninin matematik
+        blokları ile birleştirelim! Counter değişkeninin kullanarak ve en az sayıda
+        blok kullanarak bahçede dolaşabilir misin? Yapman gereken 3, 6, 9, 12 ve 15
+        nektar toplamak. İşin sırrı sayaç \"counter\" değişkeninde dir. \nUnutma:
+        Sayaç değeri artıyorsa, her döngüde artış miktarı counter değişkenine eklenir.\n"
+      NEW Course 4 Bee For Loops 8_instruction: Bunu anladın! 3, 6, 9, 12, ve 15 nektar
+        toplamak için ne kadar arttırmak gerekir?
+      NEW Course 4 Bee For Loops 9_instruction: Eğer döngünüz geriye doğru sayıyorsa
+        counter değişkeni her seferinde çıkartılır.), 15, 12, 9, 6 ve 3 nektar toplamak
+        için incerement değişkeni kaç olmalıdır?
+      NEW Course 4 Bee For Loops 95_instruction: Yarattığın for döngüsü koduna bak.
+        Buradaki hangi değeri iki katına çıkarttığında bu bulmacayı çöze bileceksin?
       NEW Course 4 Play Lab Params 11_instruction: 'Bu eğlence zamanı, araç kutundaki
         bütün bloklarla eğlen. '
-      NEW Course 4 Play Lab Params 5 5_instruction: |
-        Let's try that again, but with
-        less help. What do you need to edit this time to make the actors patrol?
+      NEW Course 4 Play Lab Params 5 5_instruction: Yeniden deneyelim. Bu sefer daha
+        az yardımla. Aktörün gezinmesi için ne yapman gerekir?
       NEW Course 4 Play Lab Vars 4 5_instruction: Bu kodun ne yapacağını düşünüyorsun?
         "Çalıştır" tuşuna bas ve neler olduğunu gör
-      NEW Course 4 Play Labs For Loops 7a_instruction: |
-        Using what you learned so
-        far, can you have Dinosaur take a step forward every time Penguin counts?
+      NEW Course 4 Play Labs For Loops 7a_instruction: "Şimdiye kadar öğrendiklerini
+        kullanarak, Penguen her saydığında dinazorun ilerlemesini sağlaya bilirmisin?"
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Bu eğlence zamanı,
         araç kutundaki bütün bloklarla eğlen. '
-      NEW Course 4 Play Labs For Loops 8a_instruction: "Challenge: How would you\nuse
-        the \"for loop\" to get every actor to go around and say their actor number,\nthen
-        vanish from the screen? \n"
-      New Play Lab Project_instruction: |
-        Create your own story or game! Your code
-        is saved as a project you can return to at any time.
+      NEW Course 4 Play Labs For Loops 8a_instruction: 'Sana meydan okunuyor: For
+        (Şununla tekrarla) döngüsü kullan ve aktör numarasını söyle ve aktör ekrandan
+        kaybolsun? '
+      New Play Lab Project_instruction: Kendi oyununu yarat!. Yazdığın program proje
+        olarak saklanacak ve istediğin zaman dönüp bakabileceksin.
       Ninjacat Demo B (copy 1)_instruction: |
         \r
         Let’s begin by exploring a simple
@@ -3282,27 +3094,27 @@
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
         get nectar from the flowers.
-      Quantum Bee_instruction: |
-        Purple flowers may have either 1 or 0 nectar, but
-        you don't know which one! Be careful not to collect nectar from a purple
-        flower if it doesn't have any. Check if the nectar is equal to 1 by using
-        the if block.
+      Quantum Bee_instruction: Mor çiçekler 1 veya 0 nektara sahip olabilir, ama hangisi
+        olduğunu bilmiyorsun! Mor çiçekte nektar yoksa toplamamaya dikkat et. "Eğer"
+        bloğunu kullanarak nektarın 1'e eşit olup olmadığını kontrol et.
       Ryan - 4-5 Bee Conditionals 2_instruction: Arı sadece nektar istiyor. Bütün
         nesneler çiçek değil bu sebeple her bulutun altını çiçek mi diye kontrol ediniz.
         Eğer çiçekse nektar alın.
-      Ryan - Bee Conditionals_instruction: |
-        The bee only wants nectar right now.
-        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
-        is hiding a flower. If it is, then you can gather nectar.
+      Ryan - Bee Conditionals_instruction: Arı sadece nektar istiyor. Bütün nesneler
+        çiçek değil bu sebeple her bulutun altını çiçek mi diye kontrol ediniz. Eğer
+        çiçekse nektar alın.
       Ryan Doily Step 1_instruction: |
         Now we're going to draw a doily step by step.
         First, draw a square.
       Ryan Doily Step 2_instruction: |
         Now you need to turn and repeat it 20 times!
         How many degrees do you turn to get 360 after 20 iterations?
-      Ryan Test Locked Blocks_instruction: |
-        Here's a function called "patrol."
-        Edit it to move Cat up 400 pixels and then down 400 pixels.
+      Ryan Doily Step 3_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
+      Ryan Test Locked Blocks_instruction: Devriye "patrol" isimli fonksiyonumuz var.
+        Güncelle ve kedinin 400 piksel yukarı ve sonra 400 piksel aşağı hareket etmesini
+        sağla.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse
         an \"if\" statement to program your game to call the \"level_up\"\nfunction
         only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
@@ -3368,61 +3180,55 @@
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the acorn try to use this
         new block.
-      scrat 18_instruction: '"If-else" (Eğer-diğer) bloğu bir koşulu kontrol eder
-        ve ya ilk işi ya da diğer işi yapar. Beni palamuda ulaştırmak için bu yeni
-        bloğu kullan.'
+      scrat 18_instruction: '"Eğer-Değilse" bloğu koşulu kontrol eder ve birini ya
+        da diğerini yapar. Meşe palamuduna ulaşmam için bu yeni bloğu kullanın.'
       scrat 19 (copy 1)_instruction: |
         One more practice of the "if-else" block,
         can you get it right on your first try?
-      scrat 19_instruction: '"If-else" bloğuyla bir alıştırma daha yapalım, ilk denemende
-        doğru yapabilir misin?'
+      scrat 19_instruction: Eğer/değilse bloğu ile bir uygulama daha. İlk denemen
+        de doğru yapabilir misin?
       scrat 20_instruction: Sadece 3 blok ekleyerek daha karmaşık bir labirenti çözmeme
         yardım eder misin? Eğer doğru yaparsan, ne kadar uzun olursa olsun dolambaçlı
         yollardan yürüyebilirim. Çabuk! Buz eriyor!
       SpecialFrozenLevel_instruction: Resmen bir usta sanatçı haline geldiniz! Kış
         harikalar diyarı yaratın.
-      Standalone_Artist_1_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
+      Standalone_Artist_1_instruction: Sanatçıya hoş geldiniz! İlk olarak, sağa dön
+        ve ilerle bloklarını kullanarak basit bir kare yapmayı dene. Her kenarı 100
+        piksel olmalı.
       Standalone_Artist_2_instruction: 120 ve 60 derecelik açılar ile 150 piksellik
         uzun kenarları kullanarak bu elması çiz.
       Standalone_Artist_3_instruction: Bu altıgeni 100 piksellik kenarlar ile 60 derecelik
         dönüşler kullanarak çizebilir misin?
       Standalone_Artist_4_instruction: "Şimdi yeni bir döngü bloğun var. Komutlardan
         bazılarını yineleyecek. Bu komutları 6 kez döndürürsen ne olur?"
-      Standalone_Artist_5.5_instruction: |
-        Notice how we simplified the diamond code
-        by turning it into a loop. You can loop that whole sequence 12 times to draw
-        the flower. Hint: You'll need to turn 30 degrees after your diamond loop
-        so you don't keep drawing over the same diamond.
-      Standalone_Artist_5_instruction: |
-        How many times do you need to loop this diamond
-        to draw the flower?
-      Standalone_Artist_6_instruction: |
-        Loop this hexagon code 6 times to create
-        the design. How many degrees will you need to turn each time? Hint: divide
-        the number of degrees in a circle by the number of times you are looping.
+      Standalone_Artist_5.5_instruction: 'Döngüde dönmek için elmas kodlamayı ne kadar
+        basitleştirdiğimize dikkat et. Çiçeği çizmek için bütün diziyi 12 kez döndürebilirsin.
+        İpucu: Aynı elması tekrar çizmemek için elmas döngüsünü yaptıktan sonra 30
+        derece çevirmen lazım.'
+      Standalone_Artist_5_instruction: Elmaslar ile çiçek için bu döngüyü kaç kez
+        tekrarlaman lazım?
+      Standalone_Artist_6_instruction: 'Tasarım oluşturmak için bu altıgen kodu 6
+        kez döndür. Her seferinde kaç derece çevirmen lazım? İpucu: Açıların sayısını
+        döngü sayısına böl.'
       Standalone_Artist_7_instruction: 'Fonksiyon, kendini tekrarlamandan kaçınmanı
         sağlayan farklı bir programlama aracıdır. Bu fonksiyon çiçek çizebilir, yani
         çiçek çizmek istediğin zaman bunu kullanabilirsin. Çiçekleri çizmek için bunu
         ve yeni atlama bloğunu kullan. İpucu: Çiçekler 150 piksel arayla durmaktalar'
-      Standalone_Artist_8_instruction: |
-        Here's a function called "Draw a shape"
-        that we've programmed to draw hexagons. Run the code to see what it does
-        and then experiment with the function to see what happens. Can you make it
-        draw a pattern of squares, triangles, or octagons?
-      Standalone_Artist_9_instruction: |
-        Now go ahead and make whatever picture you'd
-        like! You've even got an empty function that you can make do whatever you
-        want!
-      Standalone_Artist_v2_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
+      Standalone_Artist_8_instruction: İşte altıgenleri çizmek için programladığımız
+        ve "Şekil Çiz" diye adlandırdığımız bir fonksiyon. Ne olduğunu görmek ve fonksiyonlar
+        nelere yapılabileceğini denemek için kodu çalıştırın. Kare, üçgen veya sekizgenlerden
+        desen yapabilir misin?
+      Standalone_Artist_9_instruction: "Şimdi devam et ve istediğin her türlü resmi
+        yap! Hata ne istiyorsan yapabileceğin bir fonksiyonun bile var!"
+      Standalone_Artist_v2_instruction: Sanatçıya hoş geldiniz! İlk olarak, sağa dön
+        ve ilerle bloklarını kullanarak basit bir kare yapmayı dene. Her kenarı 100
+        piksel olmalı.
       template test_instruction: what up
       Test Play Lab_instruction: This is a test play lab level.
       test_sarah_instruction: hi
+      Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
+        many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
+        keeps using the `fill` block until the ground is even?  "
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
@@ -4032,6 +3838,18 @@
       U3 - Search Terms - 6_instruction: |
         Print out the cities that are in California
         or have a population of 2,000,000. (Click to see full instructions)\r
+      U3 - Simple Drawing - Comments_instruction: Do this
+      U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
+      U3 - Simple Drawing - No Fill_instruction: Do this
+      U3 - Simple Drawing - Order of Blocks_instruction: Do this
+      U3 - Simple Drawing - Personal Drawing_instruction: DO This
+      U3 - Simple Drawing - Rectangle_instruction: Do This
+      U3 - Simple Drawing - regular polygon_instruction: Do this
+      U3 - Simple Drawing - Road Ellipse_instruction: Do This
+      U3 - Simple Drawing - Road Rects and Color_instruction: Do This
+      U3 - Simple Drawing - Stroke and Stroke Weight_instruction: Do this
+      U3 - Simple Drawing - text_instruction: Do This
+      U3 - Simple Drawing - X and Y values_instruction: Do This
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -4137,6 +3955,15 @@
         back a default response.
       U3 full clicker demo_instruction: Clicker game - Try it out!
       U3 mehal's clone_instruction: Try out a demo of the Digital Assistant!
+      U3 Variables consolelog_instruction: |
+        Use the write block to display the value
+        of size
+      U3 Variables misconceptions try it_instruction: |
+        Test out your predictions
+        from the previous level.
+      U3 Variables write_instruction: |
+        Use the write block to display the value of
+        size
       U3- Variables - Assign Random For Turtle Draw_instruction: |
         Try writing the
         same code in text mode.
@@ -4285,8 +4112,9 @@
         Free Play! Use what you learned
         from loops and random to make your own little scene. Have fun.
       U3L07 - introSquare_instruction: |
-        Use a loop to draw a square. (Click to see
-        full instructions)
+        Use a loop to draw a square. Then add another
+        loop to draw many squares each one rotated some amount. (Click to see full
+        instructions)
       U3L07 - loopsWithRandom_instruction: |
         Increase the number of iterations to
         fill the screen with white. (Click to see full instructions)

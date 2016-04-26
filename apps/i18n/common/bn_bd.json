@@ -24,6 +24,7 @@
   "completedWithoutRecommendedBlock": "অভিনন্দন! আপনি ধাঁধা {puzzleNumber} সম্পন্ন করছেন। (কিন্তু আপনি শক্তিশালী কোড জন্য একটি ভিন্ন ব্লক ব্যবহার করতে পারেন।)",
   "continue": "চালিয়ে যান",
   "copy": "কপি",
+  "currentVersion": "Current Version",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -130,6 +131,7 @@
   "end": "শেষ",
   "errorEmptyFunctionBlockModal": "আপনার ফাংশন সংজ্ঞা ভিতরে ব্লক থাকতে হবে। \"সম্পাদনা\" ক্লিক করুন করুন এবং  সবুজ ব্লক ভিতরে ব্লক টানুন।",
   "errorIncompleteBlockInFunction": "আপনার ফাংশন সংজ্ঞা ভিতরে কোনো ব্লক অনুপস্থিত আছে কি না তা নিশ্চিত করতে \"সম্পাদনা\" ক্লিক করুন।",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
   "errorParamInputUnattached": "আপনার কর্মক্ষেত্র ফাংশন ব্লক প্রতিটি প্যারামিটার ইনপুট একটি ব্লক সংযুক্ত করতে খেয়াল রাখুন।",
   "errorQuestionMarksInNumberField": "\"???\" একটি মান সঙ্গে প্রতিস্থাপন কর।",
   "errorRequiredParamsMissing": "\"সম্পাদনা\" ক্লিক করে প্রয়োজনীয় প্যারামিটার যুক্ত করে আপনার ফাংশনের জন্য প্যারামিটার তৈরি করুন। আপনার ফাংশন সংজ্ঞা মধ্যে নতুন প্যারামিটার ব্লক টেনে আনুন।",
@@ -183,6 +185,7 @@
   "recommendedBlockContextualHintTitle": "এই মত একটি ব্লক ব্যবহার পাজল সমাধান করার চেষ্টা করুন।",
   "repeat": "পুনরাই",
   "resetProgram": "পুনরায় সেট করুন",
+  "restoreThisVersion": "Restore this Version",
   "rotateText": "আপনার ডিভাইস ঘুরান।",
   "runProgram": "চালান",
   "runTooltip": "কর্মক্ষেত্রে থাকা ব্লক দ্বারা সংজ্ঞায়িত প্রোগ্রাম চালান।",
@@ -230,8 +233,5 @@
   "watchVideo": "ভিডিও দেখুন",
   "when": "যখন",
   "whenRun": "চালানোর সময়",
-  "workspaceHeaderShort": "কর্মপরিসর:",
-  "currentVersion": "Current Version",
-  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
-  "restoreThisVersion": "Restore this Version"
+  "workspaceHeaderShort": "কর্মপরিসর:"
 }

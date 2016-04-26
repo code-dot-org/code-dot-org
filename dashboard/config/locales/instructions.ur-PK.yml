@@ -1136,7 +1136,7 @@
       4-5 While Loops 8_instruction: |2
          There is a really deep hole and a really large
         pile of dirt.  How many shovelfuls of dirt need to be moved around to make
-        the ground flat?  Hint: Use the while loop for both.
+        the ground flat?
       4-5 While Loops Assessment 1_instruction: |
         There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat.
@@ -1729,7 +1729,7 @@
         you loop 8 times to draw this image?
       Course 4 Artist Binary 3_instruction: |
         Can you draw this pattern by looping
-        a three digit binary string?
+        just three binary digits (0s and 1s)?
       Course 4 Artist Binary 4_instruction: |
         Each binary string represents one row
         of this picture. Can you rearrange them so it draws a smiley face instead
@@ -1781,23 +1781,21 @@
         can you draw a Star shape using the "Draw a Square Line" function? Good
         luck!
       Course 4 Artist For Loops 1_instruction: |
-        Draw this triangle that is 50 pixels
-        wide. Hint: use a repeat block.
+        Use a repeat block to draw this triangle
+        that is 50 pixels wide.
       Course 4 Artist For Loops 10_instruction: |
         Free Play Time! Have fun drawing
         whatever you like with the blocks you have learned how to use
-      Course 4 Artist For Loops 11_instruction: |
-        Remember back in a previous stage
-        when we used a variable to control the number of sides in a shape? We are
-        going to do the same thing with the "counter" variable now. This pattern
-        starts with a triangle and adds one side at a time until it draws a decagon
-        (10 sides). Each side should be 100 pixels long. Hint: 360 divided by the
-        number of sides a shape has is the number of degrees you'll need to turn.
+      Course 4 Artist For Loops 11_instruction: "Remember back in a previous stage\nwhen
+        we used a variable to control the number of sides in a shape? We are\ngoing
+        to do the same thing with the `counter` variable now. This pattern starts\nwith
+        a triangle and adds one side at a time until it draws a decagon (10 sides).\nEach
+        side should be 100 pixels long. \n"
       Course 4 Artist For Loops 11a_instruction: |-
         Let's put it all together!  Using
-        your knowledge of "for loops" and the "counter", create this drawing where
-        each shape has two more sides than the last.  Make sure that each side is
-        10 times as long as the number of sides in the polygon.\r
+        your knowledge of `for` loops and the `counter` variable, create this drawing
+        where each shape has two more sides than the last.  Make sure that each side
+        is 10 times as long as the number of sides in the polygon.\r
         \r
         Very little
         of the code has been provided for you.
@@ -2167,9 +2165,9 @@
         all the nectar on it's way to the honeycomb with as few blocks as possible.  When
         you get there, don't forget to make honey!
       Course 4 Bee Params 1_instruction: |
-        Use the function "get 3 nectar" which
-        turns, moves to collect the nectar, and then returns to the original location.
-        Write a sequence to collect all of the nectar using "get 3 nectar."
+        Write a sequence to collect all of the
+        nectar using `get 3 nectar` which turns, moves to collect the nectar, and
+        then returns to the original location.
       Course 4 Bee Params 2_instruction: |
         Modify the "get 3 nectar" function so
         it makes me turn right instead of left to the flowers.
@@ -2279,6 +2277,7 @@
       Course 4 EC 2c_instruction: |
         **Extreme Challenge:**  No rules. No clues. Just
         the challenge!
+      Course 4 EC 2d_instruction: No rules. No clues. Just the challenge!
       Course 4 EC 3_instruction: "Use what you learned in the previous level to draw\nan
         image like this. Note: The code becomes more simple if you incorporate\nparameters.
         \n"
@@ -2301,15 +2300,16 @@
         This time, let's try counting
         the odd numbers from 1 to 100.
       Course 4 Play Lab Params 1_instruction: |
-        Here's a function called "jump"
-        that causes your main character to jump up 100 pixels. Use the jump function
-        to collect all of the flags.
+        Here's a function called `jump` that
+        causes your main character to jump up 100 pixels. Run the program and use
+        the jump function to collect all of the flags by moving the dog with the arrow
+        keys.
       Course 4 Play Lab Params 10_instruction: "We've added one last function for\nyou.
         \\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction
         only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
-        \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to
-        move to the next puzzle. "
-      Course 4 Play Lab Params 2_instruction: |-
+        \"player_score\" > 6\\r\n\\r\nPlay the game, and make it to level 3\nto move
+        to the next puzzle. "
+      Course 4 Play Lab Params 2_instruction: |
         Now we've got flags that are too
         high for our current jump! Let's use both the "up" and "down" arrows
         so that we can have multiple jump heights.  \r
@@ -2317,17 +2317,15 @@
         We need to add a parameter
         to our jump function called "height".  The up arrow should cause the dog
         to jump 200 pixels and the down arrow should make it jump only 100 pixels.
-        \r
-        \r
-        Hint: You will need to click "edit" on the jump function and update
-        it so that it uses the "height" parameter.
       Course 4 Play Lab Params 3_instruction: "We have added another parameter to\nthe
         jump function so that we can use it with other actors. Each actor is represented\nby
         a number, starting from one. Edit the \"jump\" function so that it uses\nthe
         \"actor\" parameter to make the correct character jump. \n"
-      Course 4 Play Lab Params 4_instruction: |
-        Here's a function called "patrol."
-        Edit it to move Cat up 400 pixels and then down 400 pixels.
+      Course 4 Play Lab Params 4_instruction: |-
+        Here's a function called `patrol`.
+        \r
+        \r
+        Edit `patrol` to move Cat up 400 pixels and then down 400 pixels.
       Course 4 Play Lab Params 5_instruction: |
         Edit the the "patrol" function to
         add an "actor" parameter, so that we can call it for each of the actors
@@ -2340,17 +2338,18 @@
       Course 4 Play Lab Params 7_instruction: |-
         Let's have some fun! Look at the
         code provided to see if you can figure out what each block does.  \r
-        \r
         When
-        you're done, use the arrow keys to control Dog and collect all of the flags.
+        you're done, use the arrow keys to control Dog and collect all of the flags.\r
+        NOTE:
+        You don't need to make any changes to the program
       Course 4 Play Lab Params 8_instruction: |
-        Use a "when actor touches" block
+        Use the `when actor touches` block
         to send Dog back to the top-left ONLY if Dog touches any of the other actors.
       Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut
-        most of the code is hidden. There’s a new function \"score_points.\"\\r\n\\r\nEdit\nthe
-        function so that a \"points\" parameter is added to the \"player_score\"\nvariable.
-        \\r\n\\r\nThe variable \"player_score\" should increase each time\nDog tags
-        Cat with hearts, and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen
+        most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe
+        function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe
+        variable `player_score` should increase each time Dog tags Cat\nwith hearts,
+        and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen
         you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
         on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: |
@@ -2424,15 +2423,15 @@
         vanish. If the score is every less than 0, make the player vanish.
       Course 4 Play Labs For Loops 1_instruction: |
         Let's make the dog speak every
-        number from 1 to 100. Use a for loop and the counter block to speak the counter
-        variable each time the loop is run.
+        number from 1 to 100. Use a `for` loop and the counter block to speak the
+        counter variable each time the loop is run.
       Course 4 Play Labs For Loops 2_instruction: |
         This time, let's try counting
-        the odd numbers from 1 to 100.
+        only the odd numbers from 1 to 100.
       Course 4 Play Labs For Loops 3_instruction: |
         If we count by larger numbers,
         we count even higher in the same amount of time. Try making the dog count
-        from 10 up to 1000, 10 at a time.
+        from 10 up to 1000, adding 10 at a time.
       Course 4 Play Labs For Loops 4_instruction: |
         Changing the increment can be
         helpful, but we're still counting linearly (each number is the same distance
@@ -2587,6 +2586,112 @@
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
+      CSD U3 Background Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Background Experiment_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Experiment_instruction: |
+        Try using some of the other shape
+        functions you've learned in the draw loop. What happens when you use randomNumber()
+        to generate some of the inputs?You'll want to stop and discuss with the class
+        before moving on.
+      CSD U3 Frame Rate_instruction: Slow down Gamelab Gary's animation with frameRate()
+      CSD U3 Random Animation_instruction: |
+        Use randomNumber() to animate Gary's
+        mouth.
+      CSD U3 Random Choice_instruction: |
+        Use the randomNumber() block to generate
+        either 0 or 1
+      CSD U3 Random Color_instruction: |
+        Could you use randomNumber() to pick random
+        colors as well? Try setting one or more of the channels in the rgb block with
+        a random number. What should the maximum value be?
+      CSD U3 Random Intro_instruction: |
+        What do you think this code will do when
+        it is run? Make a prediction, then run this code 5 - 10 times, recording the
+        output each time. Share your results with your neighbor.
+      CSD U3 Random Min Max_instruction: |
+        Using console.log() write a program that
+        randomly returns a number in a range you define.
+      CSD U3 Random Width Height_instruction: |
+        Pick a shape function and use calls
+        to randomNumber() in place of one or more of the parameters. Maker sure you
+        run it a few times so you can see the effect of randomization.
+      CSD U3 Simple Drawing - Animation 2_instruction: |
+        Use randomNumber() on the
+        x position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Animation_instruction: |
+        Use randomNumber() on the x
+        position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Background_instruction: |
+        Put all of your code into
+        a draw() loop and then add set the background to blue with the background()
+        block.
+      CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Variable Arithmetic pt2_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variable Arithmetic_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variable Incrementation pt2_instruction: |
+        Predict: What two numbers
+        will be displayed in the console?
+      CSD U3 Variable Incrementation_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variables CHALLENGE gamelab gary_instruction: |
+        Use variables to animate
+        Game Lab Gary
+      CSD U3 Variables draw loop newVars_instruction: |
+        Extend this project to create
+        your own random art visualization with variables.
+      CSD U3 Variables draw loop rgb_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
+      CSD U3 Variables draw loop xy_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
+      CSD U3 Variables Initialize_instruction: |
+        Predict: What will get displayed
+        in the console?
+      CSD U3 Variables Intro_instruction: |
+        Create your own variable, give it a value,
+        and display that value in the console.
+      CSD U3 Variables random drawing exemplar_instruction: |
+        Check out this example
+        randomized drawing.
+      CSD U3 Variables Random_instruction: |
+        Predict: What will get displayed in the
+        console?
+      CSD U3 Variables Reassign pt2_instruction: |
+        Create and assign a new variable
+        in a single line.
+      CSD U3 Variables Reassign_instruction: |
+        Predict: What will get displayed in
+        the console?
+      CSD U3 Variables Square Random Loop_instruction: |
+        Test your predictions from
+        the last level.
+      CSD U3 Variables Square Random_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variables Square_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variables use value rect_instruction: |
+        Predict: What will get displayed
+        in the console?
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -3394,31 +3499,28 @@
         blocks in the function definition to make a 40 pixel square.
       NEW Course 4 Artist Functions 11_instruction: |
         Now we want to create a new
-        function called "draw a line of squares" that draws six squares all in a
-        row.  Can you build this function using the "draw a square 20" function
-        that we've already created? Note: See that we've changed the pen to be much
-        thinner. Click "edit" on the  the "draw a square 20" function to see how!\r
+        function called `draw a line of squares` that draws six squares all in a row.  Can
+        you build this function using this `draw a square 20` function that we created
+        for you?
       NEW Course 4 Artist Functions 12_instruction: |
-        Use the "draw a line of squares"
-        function from the last puzzle to draw this pattern."
-      NEW Course 4 Artist Functions 13_instruction: |
-        Can you draw a star shape using
-        the "draw a line of squares" function? Hint: Edit the "draw a line of squares"
-        function so that you don't have to call it twice.  Notice, you'll have to
-        move forward a certain number of pixels and turn 144 degrees.
+        Use the `draw a line of squares`
+        function from the last puzzle to draw this pattern.
+      NEW Course 4 Artist Functions 13_instruction: "Can you draw a star shape using\nthe
+        `draw a line of squares` function?  \n"
       NEW Course 4 Artist Functions 14_instruction: 'Free Play time! '
       NEW Course 4 Artist Functions 2_instruction: |
         Can you draw 3 squares 20 pixels
-        apart from one another? Hint: each square is 100 pixels in size
-      NEW Course 4 Artist Functions 3_instruction: |
+        apart from one another? Each square is 100 pixels in size.
+      NEW Course 4 Artist Functions 3_instruction: |-
         Here is a new type of Block.
-        It is called a "Function" block. Click "edit" then fill it with the code
-        for drawing a square with 100 pixel sides. When you're done editing the function,
-        click "Close" to go back to your program.
+        It is called a `function` block. Click "edit" then fill it with the code
+        for drawing a square with 100 pixel sides. \r
+        \r
+        When you're done editing
+        the function, click "Close" to go back to your program.
       NEW Course 4 Artist Functions 4_instruction: |
-        Use the "draw a square" function
-        to draw this pattern. Hint: You will have to use a "turn right by 120 degrees"
-        block after each square.
+        Use the `draw a square` function
+        to draw this pattern.
       NEW Course 4 Artist Functions 5_instruction: |
         How did the "draw a square"
         block know what commands to run? Click on "edit" in the "draw a square"
@@ -3430,8 +3532,8 @@
         block, can you draw this picture? Hint: each square is 20 pixels apart.\r
       NEW Course 4 Artist Functions 7_instruction: "Are you getting the hang of how\nto
         use function blocks? Let's modify this square so that it is 200 pixels\nin
-        size. Hint: click on \"edit\" to enter the \"draw a square\" function editor.\nRemember
-        to click on \"Close\" to get out of the function editor. \n"
+        size. Click on \"edit\" to enter the `draw a square` function editor. Remember\nto
+        click on \"Close\" to get out of the function editor. \n"
       NEW Course 4 Artist Functions 8_instruction: |
         We have created a new function
         for you called "draw a triangle".  Can you edit the function definition
@@ -3448,9 +3550,9 @@
       NEW Course 4 Artist Params 1_instruction: |
         Let's define this function to draw
         a square with 50 pixel sides. Click "edit" to get started.
-      NEW Course 4 Artist Params 10_instruction: "Create a \"draw a hexagon\" function\nblock
-        with a length parameter. Hint: This hexagon has sides that are 100 pixels\nin
-        length. \n"
+      NEW Course 4 Artist Params 10_instruction: "Create a `draw a hexagon` function\nblock
+        with a length parameter. This hexagon has sides that are 100 pixels\nin length.
+        \n"
       NEW Course 4 Artist Params 11_instruction: |
         Can you figure out how to draw
         this shape? Edit the function to use the "sides" parameter.
@@ -3459,14 +3561,14 @@
         The sides of all the shapes are 100 pixels long.
       NEW Course 4 Artist Params 12a_instruction: |
         This image is similar to the last.
-        Can you use a "for loop" with your function to make this design?
+        Can you use a `for` loop with your function to make this design?
       NEW Course 4 Artist Params 13_instruction: |-
         Let's edit this "draw a polygon"
         function. It already has a "sides" parameter. Now, let's add a "length"
         parameter. \r
-        Hint: The perimeter of each shape is 200 pixels long. Do you
-        remember the equation to make shapes the same size when they have a different
-        number of sides?
+        The perimeter of each shape is 200 pixels long. Do you remember
+        the equation to make shapes the same size when they have a different number
+        of sides?
       NEW Course 4 Artist Params 14_instruction: |
         Edit "draw a spiral edge" to
         use "length" and "sides" parameters, then recreate these shapes.
@@ -3475,25 +3577,25 @@
         you've written, and some more for you to play with. Draw something awesome!
         Play with the pen width to see how different your drawings look!
       NEW Course 4 Artist Params 2_instruction: |
-        Create a “draw a triangle" function
-        with 50 pixels sides from scratch
+        Create a `draw a triangle` function
+        from scratch that makes a triangle with  50 pixel sides.
       NEW Course 4 Artist Params 3_instruction: |
         Now let's use the function to draw
-        5 triangles in a row. Hint: each triangle is 30 pixels apart.\r
+        5 triangles in a row. Each triangle is 30 pixels apart.\r
       NEW Course 4 Artist Params 4_instruction: |
         Do you notice anything different
         about these function blocks? Click “Run” to see what happens.
-      NEW Course 4 Artist Params 5_instruction: "Fill in the ??? in the length parameter\ninput
-        block. Hint: The pentagon has 100 pixel sides. \n"
+      NEW Course 4 Artist Params 5_instruction: "Replace the `???` in the `length`\nparameter
+        input block. The pentagon has 100 pixel sides. \n"
       NEW Course 4 Artist Params 6_instruction: |
         Fill in the "length" parameter
         to draw these shapes by replacing the "???" with the right numbers. The
         square and triangle have 100 pixels sides while each side of the hexagon is
         75 pixels long.
       NEW Course 4 Artist Params 7_instruction: |
-        Can you complete this drawing? Hint:
-        The sides of each triangle are 25 pixels larger than the last.  The first
-        triangle has 25 pixel sides.
+        Can you complete this drawing? The
+        sides of each triangle are 25 pixels larger than the last.  The first triangle
+        has 25 pixel sides.
       NEW Course 4 Artist Params 8_instruction: |
         The code for this triangle function
         is broken. Can you edit the function to fix it, and then make triangles of
@@ -3544,8 +3646,8 @@
       NEW Course 4 Bee For Loops 10a_instruction: |
         Ready for a challenge?  Take what
         you've learned about loops and try to solve this problem. Remember: You may
-        have to run your solution multiple times before you figure out all of the
-        steps.
+        have to run through solutions multiple times before you figure out all of
+        the steps.
       NEW Course 4 Bee For Loops 11_instruction: |
         Can you use the loop variable to
         control movement and nectar collection?
@@ -3932,6 +4034,9 @@
       Ryan Doily Step 2_instruction: |
         Now you need to turn and repeat it 20 times!
         How many degrees do you turn to get 360 after 20 iterations?
+      Ryan Doily Step 3_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Here's a function called "patrol."
         Edit it to move Cat up 400 pixels and then down 400 pixels.
@@ -4064,6 +4169,9 @@
       template test_instruction: what up
       Test Play Lab_instruction: This is a test play lab level.
       test_sarah_instruction: hi
+      Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
+        many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
+        keeps using the `fill` block until the ground is even?  "
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
@@ -4673,6 +4781,18 @@
       U3 - Search Terms - 6_instruction: |
         Print out the cities that are in California
         or have a population of 2,000,000. (Click to see full instructions)\r
+      U3 - Simple Drawing - Comments_instruction: Do this
+      U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
+      U3 - Simple Drawing - No Fill_instruction: Do this
+      U3 - Simple Drawing - Order of Blocks_instruction: Do this
+      U3 - Simple Drawing - Personal Drawing_instruction: DO This
+      U3 - Simple Drawing - Rectangle_instruction: Do This
+      U3 - Simple Drawing - regular polygon_instruction: Do this
+      U3 - Simple Drawing - Road Ellipse_instruction: Do This
+      U3 - Simple Drawing - Road Rects and Color_instruction: Do This
+      U3 - Simple Drawing - Stroke and Stroke Weight_instruction: Do this
+      U3 - Simple Drawing - text_instruction: Do This
+      U3 - Simple Drawing - X and Y values_instruction: Do This
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -4778,6 +4898,15 @@
         back a default response.
       U3 full clicker demo_instruction: Clicker game - Try it out!
       U3 mehal's clone_instruction: Try out a demo of the Digital Assistant!
+      U3 Variables consolelog_instruction: |
+        Use the write block to display the value
+        of size
+      U3 Variables misconceptions try it_instruction: |
+        Test out your predictions
+        from the previous level.
+      U3 Variables write_instruction: |
+        Use the write block to display the value of
+        size
       U3- Variables - Assign Random For Turtle Draw_instruction: |
         Try writing the
         same code in text mode.
@@ -4926,8 +5055,9 @@
         Free Play! Use what you learned
         from loops and random to make your own little scene. Have fun.
       U3L07 - introSquare_instruction: |
-        Use a loop to draw a square. (Click to see
-        full instructions)
+        Use a loop to draw a square. Then add another
+        loop to draw many squares each one rotated some amount. (Click to see full
+        instructions)
       U3L07 - loopsWithRandom_instruction: |
         Increase the number of iterations to
         fill the screen with white. (Click to see full instructions)

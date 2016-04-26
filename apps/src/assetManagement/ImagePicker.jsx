@@ -1,6 +1,6 @@
 var AssetManager = require('./AssetManager');
 var color = require('../color');
-var IconLibrary = window.dashboard.IconLibrary;
+var IconLibrary = window.dashboard && window.dashboard.IconLibrary;
 var ICON_PREFIX = require('../applab/constants').ICON_PREFIX;
 
 /**

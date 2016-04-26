@@ -21,7 +21,7 @@ cs-CZ:
   twentyhours_heading: Vyzkoušej si náš kurz Úvod do Informatiky
   twentyhours_text: 'Dokončil jsi svou první Hodinu kódu? Nauč se více o informatice a programovacích pojmech v  následujícím kurzu.'
   og_title: Každé dítě si zaslouží příležitost
-  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
+  og_description: Každý student v každé škole si zaslouží možnost studovat informatiku. Ta mění vše.
   hoc2014_heading: 'Připojte se k <a href="http://hourofcode.com">Hodině kódu</a> <br/> 8. až 14. prosince 2014 <br/>'
   hoc2014_students: Studenti
   hoc2014_try: Zkuste to
@@ -80,12 +80,12 @@ cs-CZ:
   third_party_gradelevel_5to12: Grades 5-12
   third_party_gradelevel_6plus: Grades 6+
   third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
+  third_party_platform_all: 'Platforma: Web, iPad & Android'
+  third_party_platform_mobile: 'Platforma: iPad & Android'
+  third_party_platform_web: 'Platforma: Web'
+  third_party_price_varies: 'Cena: Plány se liší'
+  third_party_price_free: 'Cena: Zdarma'
+  third_party_price_299: 'Cena: $2.99/stažení'
   third_party_price_individual: 'Individual Price: Free Trial & $25/month'
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
@@ -502,6 +502,11 @@ cs-CZ:
   dashboard_action_remove_confirm: Odstranit?
   dashboard_action_done: Hotovo
   dashboard_action_required: požadováno
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Učitelská domovská stránka
   dashboard_navigation_section_student_progress: Studentské účty a pokrok
   dashboard_navigation_section_teacher_progress: Váš pokrok kurzem
@@ -519,6 +524,17 @@ cs-CZ:
   dashboard_navigation_view_stats: Zobrazit statistiky
   dashboard_navigation_section: 'Sekce: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
+  dashboard_progress_not_started: není zahájeno
+  dashboard_progress_in_progress: rozpracováno
+  dashboard_progress_not_completed: nedokončeno
+  dashboard_progress_completed_too_many_blocks: dokončeno, až příliš mnoho bloků
+  dashboard_progress_completed_perfect: dokončeno, perfektní
+  dashboard_progress_furthest_level_attempted: pokus o další úroveň
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nová sekce
   dashboard_sections_jumbotron_instruction: Vytvoř nové oddíly a přidejte do nich studenty. Sekce pomáhají organizovat studenty do menších skupin, můžete sledovat jejich postup a spravovat jejich účty.
   dashboard_sections_table_section: Sekce
@@ -534,6 +550,19 @@ cs-CZ:
   dashboard_sections_secret_none: 'Pokud chcete, aby si vaši studenti spravovali své účty, včetně vlastního hesla, zvolte tajný typ <b>žádný</b>.'
   dashboard_sections_print_secrets: Můžete si poté vytisknout stránku s kartičkami, obsahujícími informace o individuálních účtech, které si vaši studenti rozdělí.
   dashboard_sections_switch_section: 'Přepnout sekci:'
+  dashboard_sections_close: Zavřít
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Přidat studenta
   dashboard_students_add_students: Přidat více studentů
   dashboard_students_add_multiple: 'Zadejte nebo vložte jména vašich studentů, jeden na řádek:'
@@ -600,13 +629,6 @@ cs-CZ:
   dashboard_login_picture: Obrázek
   dashboard_login_none: E-mail
   dashboard_new_password: nové heslo
-  dashboard_progress_not_started: není zahájeno
-  dashboard_progress_in_progress: rozpracováno
-  dashboard_progress_not_completed: nedokončeno
-  dashboard_progress_completed_too_many_blocks: dokončeno, až příliš mnoho bloků
-  dashboard_progress_completed_perfect: dokončeno, perfektní
-  dashboard_progress_furthest_level_attempted: pokus o další úroveň
-  dashboard_progress_submitted: submitted
   dashboard_stage: Fáze
   dashboard_puzzle: Hádanka
   dashboard_question: Dotaz
@@ -641,10 +663,8 @@ cs-CZ:
   dashboard_faq_k5: K-5, nejčastější dotazy
   dashboard_announcements: Oznámení
   dashboard_announce_view_all: Zobrazit vše
-  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
   dashboard_announce_button_text: Zjisti více
-  dashboard_announce_hoc: '<b>15. října 2015</b> - Hodina kódu se blíží &mdash; každý zúčastněný organizátor obdrží dárkovou kartu na Amazon.com nebo Microsoft Windows Store jako dárek. Připojte se učebny po celém světě během prosince 7-13.'
-  dashboard_announce_playlab: '<b>4. Prosince 2015</b> Hodinový kód je zde! Zkus 50 návodů pro každou dobu a zařízení. Novinka týdne: Programuj tvůj vlastní příběh a hry v nových herních laboratořích, Doba Ledová a Gumball.'
   code_hoc_coming: 'Hodina kód je zde - prosinec 8-14!'
   code_sign_up: Přihlaste se k účasti během týdne vzdělávání CS
   learn_more: Další informace

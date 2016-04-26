@@ -25,7 +25,11 @@
   welcome_back: "%{name} 님, 어서오세요. "
   submit: "제출하기"
   unsubmit: "제출 취소"
+  previous_page: Previous page
   next_page: Next page
+  cancel: "취소"
+  okay: "알겠어"
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: "선생님 추가:"
@@ -489,6 +493,15 @@
     minecraft:
       title: "마인크래프트"
       body: "코드를 이용해 마인크래프트 월드를 탐험해보세요."
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: "학생들이 그린 작품!"
     students_made_these_with_code: "학생들이 만든 작품!"
@@ -536,6 +549,15 @@
     wrong_body: "답변 주셔서 감사 합니다."
     correct_title: "고마워"
     correct_body: "답변 주셔서 감사 합니다."
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: "정답이 아닌 답안"
     wrong_body: "정답이 아닙니다. 다시 시도해 보세요."

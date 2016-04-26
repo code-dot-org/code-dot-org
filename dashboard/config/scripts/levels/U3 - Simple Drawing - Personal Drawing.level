@@ -182,7 +182,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "instructions": "DO This",
-    "markdown_instructions": "# Your Own Drawing\r\n\r\nIt is your turn to create your own drawing. You should have drawn out your plan on paper first\r\n\r\n# Do This\r\n\r\n* Create a drawing that uses:\r\n\t* rect\r\n    * ellipse\r\n    * regularPolygon\r\n    * text\r\n    * color\r\n    * fill\r\n    * stroke",
+    "markdown_instructions": "# Your Own Drawing\r\n\r\nIt is your turn to create your own drawing. You should have drawn out your plan on paper first\r\n\r\n# Do This\r\nAs a reminder make sure you hit the objectives:\r\n\r\n* Creates an identifiable and named object or design (i.e. no random splatters of shapes)\r\n* Uses at least 10 shapes or text items (rect, ellipse, regularPolygon, text)\r\n* Uses at least 4 different color fills\r\n* Uses at least 2 different color outlines\r\n* Contains at least 3 different logical blocks of code with comments\r\n",
     "start_blocks": "// Create your drawing here"
   },
   "published": true,

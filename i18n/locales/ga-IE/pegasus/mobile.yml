@@ -1,22 +1,22 @@
 ga-IE:
   hour_of_code: An Uair Chódála
-  hello: Hello world
+  hello: Dia dhuit a dhomhain
   select_language: Roghnaigh do theanga le do thoil
   en: Ríomheolaíocht
-  computer_science_edweek: Seachtain Oideachas Ríomhaireachta
+  computer_science_edweek: Seachtain an Oideachais Ríomheolaíochta
   csedweek_dates: 8-14 Nollaig 2014
   csedweek_banner_hoc: |-
-    Tá <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">An Uair Códála </a> ag teacht. Glaotar ar gach múinteoir agus eagraí, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">pleanáil d'uair códála</a>
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">An múinteoir ríomhaireachta tú? Féach le haghaidh acmhainní eile ó Sheachtain Oideachas Eolaíocht Ríomhaireachta</a>'
-  n_have_learned_an_hoc: '<h1>Triail </h1><h2>An Uair Códála</h2><h3>Freastalaithe ar # </h3>'
+    Tá <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">An Uair Chódála </a> ag teacht go luath. Glaotar ar gach múinteoir agus ar gach eagraí, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">d'uair chódála a phleanáil</a>
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">An múinteoir ríomhaireachta tú? Féach ar acmhainní eile ó Sheachtain an Oideachais Ríomheolaíochta</a>'
+  n_have_learned_an_hoc: '<h1>Bain triail as </h1><h2>An Uair Chódála</h2><h3># códálaí</h3>'
   anybody_can_learn: Is féidir le héinne foghlaim.
   learn_now: Foghlaim Anois
-  petition_message: Ba cheart go mbeadh an deis ag gach dalta i ngach scoil ríomheolaíocht a fhoghlaim
+  petition_message: Ba cheart go mbeadh an deis ag gach dalta i ngach scoil an ríomheolaíocht a fhoghlaim
   petition_sign_message: "Má aontaíonn tú, sínigh d'ainm. Téir le # eile."
   petition_sign_message_support: "Má aontaíonn tú linn, sínigh d'ainm. Téir le # eile."
   petition_join_others: 'Téir le # eile'
   name: Ainm
-  email: Email
+  email: Seoladh ríomhphoist
   zipcode: Cód poist nó tír
   submit: Seol
   twentyhours_heading: Bain triail as ár gcúrsa Buntús na Ríomheolaíochta
@@ -29,31 +29,31 @@ ga-IE:
   hoc2014_teachers: Múinteoirí
   hoc2014_host: Óstáil an Uair Chódála
   hoc2014_everyone: Gach Duine
-  hoc2014_support: 'Tacaigh leis &#x25BE;'
+  hoc2014_support: 'Tacaigh léi &#x25BE;'
   hoc2014_whatishoc: Cad é An Uair Chódála?
   csedweek_map_header: 'Ócáidí #CSEdWeek / Uair Chódála ar fud an domhain'
-  csedweek_map_signup: "Cláraigh d'imeacht"
+  csedweek_map_signup: "Cláraigh d'imeacht féin"
   csedweek_map_search_placeholder: Cuardaigh ócáidí Uair Chódála
   csedweek_map_search_search: Cuardaigh
   csedweek_map_search_reset: Tosaigh arís
   csedweek_map_legend_title: Eochair Eolais
   csedweek_map_legend_event: Ócáid Uair Chódála
   csedweek_map_legend_cs_tech_jam: Ócáid Speisialta
-  cded_sign_up: Sign up
+  cded_sign_up: Cláraigh
   cded_try_it: Bain triail as
   twentyhours_trynow: Bain triail as anois
-  california_heading: Iarr ar do scoil ríomheolaíocht a mhúineadh
-  california_text: "Is féidir le haon mhúinteoir ár gcuid <a href='http://studio.code.org/'>gcúrsaí saor in aisce</a> a mhúineadh. Is féidir le haon bhunscoil <a href='http://code.org/educate/k5'>an ríomheolaíocht a mhúineadh</a>. Iarr ar do scoil dara leibhéal <a href='http://code.org/educate/districts'>dul i gcomhar linn."
+  california_heading: Iarr ar do scoil an ríomheolaíocht a mhúineadh
+  california_text: "Is féidir le haon mhúinteoir ár gcuid <a href='http://studio.code.org/'>cúrsaí saor in aisce</a> a mhúineadh. Is féidir le haon bhunscoil <a href='http://code.org/educate/k5'>an ríomheolaíocht a mhúineadh</a>. Iarr ar do scoil dara leibhéal <a href='http://code.org/educate/districts'>dul i gcomhar linn."
   california_button: Tuilleadh Eolais
   flappy_heading: '"Flappy Birthday", a Code.org!'
   flappy_text: 'Bliain amháin slánaithe ag Code.org.<br/><br/> Déan ceiliúradh linn agus scríobh do chluiche <b>Flappy</b> féin. Códáil do chuid rialacha féin, agus comhroinn le cairde é!'
-  view_english_site: An suíomh i mBéarla
+  view_english_site: An suíomh seo i mBéarla
   non_english_tutorials: 'Cúrsaí teagaisc ar fáil i dteangacha éagsúla:'
   write_your_first_program: Scríobh do chéad ríomhchlár
   learn_cs_concepts: 'Foghlaim buntús na ríomheolaíochta trí ríomhchlárú "tarraingt is scaoileadh". Is cúrsa teagaisc é seo, cosúil le cluiche, ina bhfuil físléachtaí ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies. Foghlaim lúba, coinníollacha, agus algartaim shimplí.'
   all_ages: Ó liath go leanbh
   beginner: Tosaitheoir
-  n_participants: líon rannpháirtithe
+  n_participants: '# rannpháirtí'
   go: Ar aghaidh
   thank_you_: Go raibh maith agat!
   congratulations: Comhghairdeas!
@@ -65,13 +65,13 @@ ga-IE:
   congratulations_on_completing_course4: Comhghairdeas as Cúrsa 4 a chríochnú
   congratulations_on_completing_accelerated: Comhghairdeas as an gCúrsa Luathaithe a chríochnú
   congrats_next_tutorials_title: Téigh ar aghaidh go dtí an chéad leibhéal eile
-  congrats_next_tutorials_desc: 'Bain triail as na gearrchúrsaí teagaisc uair a chloig seo, nó <a href="%{current_path}/next">cúrsa céile</a>.'
+  congrats_next_tutorials_desc: 'Bain triail as na gearrchúrsaí teagaisc uair an chloig seo, nó <a href="%{current_path}/next">cúrsa beirte</a>.'
   get_a_certificate_of_achievement: Faigh teastas rannpháirtíochta
   view_course: Féach ar an gcúrsa
   view_unit: Féach ar aonad
   make_app: Déan aip
   congrats_guest_speaker_title: Aimsigh aoichainteoir do do sheomra ranga
-  congrats_guest_speaker_desc: "Agus cúrsa ríomheolaíochta déanta ag do chuid daltaí, ba chóir duit ceiliúradh a dhéanamh agus ceangal leis na rudaí is féidir leo a dhéanamh sa saol, trí chuireadh a thabhairt d'aoichainteoir. Is féidir ár léarscáil a úsáid chun saorálaí áitiúil a aimsiú, nó déan cuardach in aon chathair chun teacht ar mhic léinn ríomheolaíochta nó saineolaithe teicniúla i gcéin a spreagfaidh do chuid daltaí trí fhíschomhrá."
+  congrats_guest_speaker_desc: "Agus cúrsa ríomheolaíochta déanta ag do chuid daltaí, ba chóir duit ceiliúradh a dhéanamh agus ceangal leis na rudaí is féidir leo a dhéanamh sa saol, trí chuireadh a thabhairt d'aoichainteoir. Is féidir ár léarscáil a úsáid chun saorálaí áitiúil a aimsiú, nó déan cuardach in aon chathair chun teacht ar mhic léinn ríomheolaíochta nó ar shaineolaithe teicniúla i gcéin a spreagfaidh do chuid daltaí trí fhíschomhrá."
   congrats_guest_speaker_cta: Aimsigh aoichainteoir
   congrats_third_party_title: Úsáid na scileanna nua atá agat leis na haipeanna seo agus leis na suímh Ghréasáin seo
   third_party_gradelevel_kto8: Aois 5-13
@@ -89,36 +89,36 @@ ga-IE:
   third_party_price_299: 'Praghas: $2.99/íoslódáil'
   third_party_price_individual: 'Praghas do Dhuine Aonair: Triail Saor in Aisce ansin $25/mí'
   third_party_price_school: 'Praghas do Scoil: Pleananna Saor in Aisce agus Leagan Proifisiúnta $2500+'
-  third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
-  third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
+  third_party_tynker_desc: Is éard atá in Tynker ná ardán ríomhaireachta a chabhraíonn le daoine óga smaointeoireacht ríomhaireachtúil agus scileanna ríomhchlárúcháin a fhorbairt ar bhealach samhlaíoch sultmhar sothuigthe. Soláthraíonn Tynker teanga ríomhchláraithe ghrafach, cúrsaí idirghníomhacha féinluais, agus ceachtanna bunaithe ar chluichí, chun buntús an ríomhchláraithe a mhúineadh, agus spiorad na nuálaíochta a spreagadh sna daltaí.
+  third_party_tynker_btn_curriculum: Bain triail as Curaclam Tynker do Luathléitheoirí
   third_party_tynker_btn_site: Tabhair Cuairt ar Tynker
-  third_party_scratchjr_desc: 'Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.'
+  third_party_scratchjr_desc: "Is éard atá in Scratch Jr. ná bunteanga ríomhchlárúcháin a chuireann ar chumas páistí óga (5-7 mbliana d'aois) scéalta agus cluichí idirghníomhacha a chruthú. Cuireann na páistí blocanna grafacha le chéile chun carachtair a rialú agus a thabhairt orthu bogadh, léim, damhsa a dhéanamh, nó amhrán a ghabháil. Is féidir leis na páistí carachtair a athrú in eagarthóir péinteála, fuaimeanna nó fiú a nguth féin a thaifead, grianghraif dá gcuid féin a úsáid, ansin beocht a chur sna carachtair leis an blocanna ríomhchláraithe."
   third_party_scratchjr_btn_curriculum: Íoslódáil Curaclam Scratch Jr.
   third_party_scratchjr_btn_site: Tabhair Cuairt ar Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
+  third_party_scratch_desc: In Scratch, is féidir scéalta idirghníomhacha, cluichí, agus beochaintí a chruthú agus a chomhroinnt le daoine eile sa bpobal ar líne. Cabhraíonn Scratch le daoine óga smaointeoireacht chruthaitheach, réasúnú córasach, agus comhoibriú a fhoghlaim — scileanna riachtanacha don saol ag tús an 21ú haois.
   third_party_scratch_btn_curriculum: Íoslódáil Curaclam Scratch
   third_party_scratch_btn_forum: Fóram Scratch do Mhúinteoirí
   third_party_scratch_btn_site: Tabhair Cuairt ar Scratch
-  third_party_lightbot_desc: In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
+  third_party_lightbot_desc: In Lightbot, tugann daltaí orduithe do róbat le puzail a réiteach. Is féidir an cluiche a imirt i mbrabhsálaí (Seinnteoir Flash de dhíth), nó ar ghléasanna Android nó iOS. Imríonn na daltaí na bunleibhéil in Lightbot. Foghlaimeoidh siad conas is féidir treoracha a thabhairt don ríomhaire mar shraith orduithe simplí, agus faoin phróiseas ginearálta ríomhchlárúcháín.
+  third_party_lightbot_btn_curriculum: Íoslódáil Curaclam Lightbot
   third_party_lightbot_btn_site: Tabhair cuairt ar Lightbot
-  third_party_khan_desc: 'Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!'
+  third_party_khan_desc: Foghlaim conas is féidir pictiúir, beochaintí, agus cluichí a dhearadh le JavaScript agus ProcessingJS, nó leathanaigh Ghréasáin a dhéanamh le HTML agus CSS. Beidh tú in ann do chuid tograí a fhoilsiú, tograí déanta ag daoine eile a scrúdú, agus foghlaim óna chéile!
   third_party_khan_btn_learn: Foghlaim an ríomheolaíocht le Khan Academy
   third_party_khan_btn_forum: Fóram na Ríomheolaíochta Khan Academy
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that allows everyone, even novices, to start programming and build fully functional apps for Android devices. Newcomers to App Inventor can have their first app up and running in an hour or less, and can program more complex apps in significantly less time than with more traditional, text-based languages.
+  third_party_appinv_desc: Is uirlis ríomhchlárúcháin bunaithe ar bhlocanna é MIT App Inventor. Leis an uirlis seo, is féidir le héinne, fiú deargthosaitheoir, ríomhchláir a scríobh agus aipeanna iomlána Android a chruthú. Is minic go mbíonn núíosach App Inventor in ann a chéad aip a dhéanamh as an nua i gceann uair an chloig, nó níos lú. Agus is féidir aipeanna casta a scríobh i bhfad níos tapúla ná mar is féidir le teangacha traidisiúnta téacsbhunaithe.
   third_party_appinv_btn_curriculum: Íoslódáil Curaclam App Inventor 2
   third_party_appinv_btn_forum: Fóram App Inventor 2
   third_party_appinv_btn_site: Tabhair cuairt ar App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
-  third_party_codehs_btn_try: Intro CS Learn More for Schools
-  third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
+  third_party_codehs_desc: Múineann CodeHS buntús an ríomhchlárúcháin trí ghearrfhíseáin, cód samplach, agus go leor ceachtanna ríomhchláraithe atá sultmhar agus simplí. Soláthraíonn CodeHS curaclam, forbairt ghairmiúil, agus uirlisí do scoileanna agus do mhúinteoirí. Is féidir le daoine atá ag foghlaim ina n-aonar cúnamh a fháil ó líonra mór teagascóirí.
+  third_party_codehs_btn_try: 'Buntús na Ríomheolaíochta: Tuilleadh Eolais'
+  third_party_codecademy_desc: 'Táimid ag déanamh athsmaoinimh ar oideachas ó bhonn go scolb. Tá cruth nua ar an saol mar gheall ar an nGréasán - tráchtáil, líonrú sóisialta, cúram sláinte, agus níos mó. Táimid ag tógáil an oideachais a theastaíonn ón domhan - an chéad chóras oideachais ar an líonra ó dhúchas.'
   third_party_codecademy_btn_curriculum: Íoslódáil Curaclam Codeacademy
   third_party_codecademy_btn_site: Tabhair cuairt ar Codeacademy
   third_party_organization: Eagraíocht
   third_party_curriculum: Curaclam
   third_party_pricing: Praghsanna
-  third_party_cost_free: Free for students and teachers
-  third_party_cost_5permonth: $5/month per class
+  third_party_cost_free: Saor in aisce do dhaltaí agus do mhúinteoirí
+  third_party_cost_5permonth: $5/mí/rang
   third_party_cost_299: $2.99/íoslódáil
   third_party_cost_free_399: Triail saor in aisce, $399/seomra ranga
   third_party_cost_free_2: Triail saor in aisce, $2/dalta
@@ -136,18 +136,18 @@ ga-IE:
   third_party_desc_20_4to12: Níos mó ná 20 ceacht, dírithe ar aois 9-18
   enter_valid_age: Cuir aois bhailí isteach
   enter_valid_email: Cuir seoladh ríomhphoist bailí isteach
-  get_a_certificate_message: "We'll send you a certificate and information about how to <a href='/learn/beyond'>Learn beyond an Hour</a>"
-  get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
+  get_a_certificate_message: "Seolfaimid teastas chugat, chomh maith le heolas faoi <a href='/learn/beyond'>Fhoghlaim thar an Uair Chódála</a>"
+  get_a_certificate_message_after: "Cliceáil an teastas chun é a íoslódáil nó a phriontáil. Anois, lean ar aghaidh lenár <a href='http://studio.code.org'>gcúrsaí eile</a>, nó féach tuilleadh roghanna le <a href='/learn/beyond'>Foghlaim thar an Uair Chódála</a>."
   thanks_for_submitting: Go raibh maith agat!
-  if_you_enjoyed: 'If you enjoyed learning, ask friends to try it too!  We want the whole world to learn.'
+  if_you_enjoyed: Má bhain tú taitneamh as, iarr ar chairde triail a bhaint as freisin! Ba mhaith linn an saol ar fad a mhúineadh.
   personalize_certificate: "Cuir d'ainm ar do theastas"
-  share_achievement: Share your achievement
+  share_achievement: Comhroinn a bhfuil déanta agat
   beyond_hour_message: "Lean ort leis <a href='http://studio.code.org'>na cúrsaí eile atá againn</a>, nó <a href='/learn/beyond'>Foghlaim thar Uair an Chloig</a>."
   leaderboards_for_hoc: 'An Uair Chódála: Barr an Tábla'
   support_url: http://support.code.org/
   country: Tír
   city: Cathair
-  gender: Gender
+  gender: Inscne
   boys: Buachaillí
   girls: Cailíní
   give_my_hour: "Tabhair m'Uair do:"
@@ -165,7 +165,7 @@ ga-IE:
   participant_parent: Tuismitheoir
   participant_educator: Múinteoir
   participant_engineer: Innealtóir Bogearraí
-  participant_other: None of the Above
+  participant_other: Ceann ar bith díobh thuasluaite
   print_all: Priontáil uile
   print_ice_art: "Priontáil d'obair ealaíne oighir"
   create_art_with_zombie: nó déan ealaín ardleibhéil le zombaí
@@ -180,7 +180,7 @@ ga-IE:
   learn_next_level: Bain triail as cúrsa eile sa Stiúideo Códála
   learn_online: Bain triail as cúrsaí eile ar líne
   learn_classes: Cuardaigh ranganna áitiúla
-  hoc_is_here: Foghlaim an ríomheolaíocht. Tá sí ag foghlaim an tsaoil. https://youtu.be/xJqSu1IbcHg.
+  hoc_is_here: Foghlaim an ríomheolaíocht. Tá sí ag athrú an tsaoil. https://youtu.be/xJqSu1IbcHg.
   just_did_hoc: 'Rinne mé #HourOfCode - bain triail as! @codeorg'
   just_did_course1: 'Táim tar éis Cúrsa 1 a chríochnú - bain triail as! @codeorg'
   just_did_course2: 'Táim tar éis Cúrsa 2 a chríochnú - bain triail as! @codeorg'
@@ -190,16 +190,16 @@ ga-IE:
   twitter_teach_cs: 'Aontaíonn naonúr as gach deichniúr - ba chóir do scoileanna ríomheolaíocht a mhúineadh. http://youtu.be/nKIu9yen5nc. Féach https://code.org/.'
   learn_hoc: Foghlaim Uair Chódála
   beyond_hoc: Thar Uair an Chloig
-  what_gender: What gender are you?
+  what_gender: An cailín nó buachaill thú?
   girl: Cailín
   boy: Buachaill
   help_recruit_coders: "Cabhraigh linn tuilleadh códálaithe a earcú do d'fhoireann!"
   help_recruit: Cabhraigh linn tuilleadh códálaithe a earcú!
-  lines_of_code: 'NÍOS MÓ NÁ <b># LÍNTE CÓID</b> SCRÍOFA GO DTÍ SEO.'
-  lines_of_code_alt: '<b>#</b> LÍNTE CÓID SCRÍOFA AG DALTAÍ'
-  who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
+  lines_of_code: 'NÍOS MÓ NÁ <b># LÍNE CHÓID</b> SCRÍOFA GO DTÍ SEO.'
+  lines_of_code_alt: '<b>#</b> LÍNE CHÓID SCRÍOFA AG DALTAÍ'
+  who_has_done_hoc: Cé a rinne an Uair Chódála? @codeorg
   hoc_leaderboards: 'An Uair Chódála: Barr na dTáblaí'
-  students_and_lines: 'Tá an Uair Chódála déanta ag %{students} dalta agus scríobhadar %{lines} líne chóid.'
+  students_and_lines: 'Tá an Uair Chódála déanta ag %{students} dalta a scríobh %{lines} líne chóid.'
   start_hoc: Tosaigh an Uair Chódála anois
   contact_form_topic_press: Nuachtáin/meáin (agallaimh nó léachtaí)
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Múinteoir'
@@ -211,7 +211,7 @@ ga-IE:
   studiobar_elementary_body: Trí chúrsa nua don 1ú-5ú bliain
   studiobar_hoc_title: An Uair Chódála
   studiobar_hoc_body: Foghlaim an chódáil le Angry Birds
-  studiobar_flappy_title: Flappy Code
+  studiobar_flappy_title: Cód Flappy
   studiobar_flappy_body: Déan do chluiche Flappy féin agus comhroinn é
   studiobar_teacher_title: Dírithe ar mhúinteoirí
   studiobar_teacher_body: Tabhair an Stiúideo Códála isteach i do sheomra ranga
@@ -277,42 +277,42 @@ ga-IE:
   homepage_hero_text_stat_students: '#student_count dalta cláraithe leis an Stiúideo Códála'
   homepage_hero_text_stat_served: 'An Uair Chódála: #served códálaí'
   homepage_slot_text_hoc: An Uair Chódála
-  homepage_slot_text_frozen: Frozen le Anna agus Elsa
+  homepage_slot_text_frozen: Frozen in éindí le hAnna agus Elsa
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: Na cúrsaí teagaisc go léir
   homepage_slot_text_course4: Cúrsa 4
   homepage_slot_text_shop: Siopa
-  homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_slot_text_flappy: Cód Flappy
+  homepage_action_text_hoc: Ba chóir do gach dalta Uair Chódála a dhéanamh.
   homepage_action_text_num_served: '# códálaí'
   homepage_action_text_join_us: Bí linn
-  homepage_action_text_sign_up: Sign up
+  homepage_action_text_sign_up: Cláraigh
   homepage_action_text_try_it: Bain triail as
   homepage_action_text_volunteers: Teastaíonn saorálaithe teicniúla uainn
   homepage_action_text_codevideo: Féach ar an bhfíseán
   homepage_action_text_teachervideo: Féach ar an bhfíseán
-  homepage_action_text_girlvideo: Spreag cailín
+  homepage_action_text_girlvideo: Cuir misneach ar chailín
   homepage_action_text_learn: Tosaigh ag foghlaim
   homepage_action_text_signpetition: Sínigh an achainí
   homepage_signpetition_dropdown: 'Aontaím &#x25BE;'
   homepage_diversity_pledge: "Tabhair d'fhíor leis an éagsúlacht"
   homepage_banner_text_prizes: 'Tá an Uair Chódála ag teacht arís, 7-13 Nollaig. '
   homepage_banner_link_prizes: 'Glac páirt san ócáid fhoghlamtha is mó riamh. '
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
+  homepage_banner_text_main: Code.org agus The College Board i gcomhar le chéile chun ilghnéitheacht sa ríomheolaíocht a fheabhsú.
   homepage_banner_text_link: Tuilleadh eolais
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Tuilleadh eolais
   homepage_banner_20k_teachers: 20,000 múinteoir a rinne traenáil agus atá ag múineadh na ríomheolaíochta sa seomra ranga anois.
   homepage_banner_20k_teachers_link: Tuilleadh eolais
   homepage_slot_text_title_hoc: An Uair Chódála
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Is féidir le héinne foghlaim. Tosaigh inniu
   homepage_slot_text_link_hoc: Bain triail as an Uair Chódála
   homepage_slot_text_link_host: Óstáil Uair Chódála
   homepage_slot_text_link_hocserved: '# códálaí'
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
+  homepage_solot_text_link_volunteer: Bí i do shaorálaí don Uair Chódála
   homepage_slot_text_title_students: Daltaí
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students: Na cúrsaí teagaisc go léir
+  homepage_slot_text_blurb_students_courses: Na cúrsaí go léir atá againn
   homepage_slot_text_link_codestudio: Bain triail as an Stiúideo Códála
   homepage_slot_text_link_local: Aimsigh rang áitiúil
   homepage_slot_text_link_othercourses: Cúrsaí eile ar líne
@@ -322,15 +322,15 @@ ga-IE:
   homepage_slot_text_link_middle: Meánscoil
   homepage_slot_text_link_high: Scoil dara leibhéal
   homepage_slot_text_link_k5: Cúrsaí do bhunscoileanna
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_link_fullcurriculum: An curaclam iomlán
+  homepage_slot_text_link_pd: Forbairt ghairmiúil
   homepage_slot_text_title_advocates: Tacadóirí
-  homepage_slot_text_blurb_advocates: Support diversity in computing
+  homepage_slot_text_blurb_advocates: Tacaigh leis an ilghnéitheacht sa ríomhaireacht
   homepage_slot_text_link_stats: Féach na staitisticí
   homepage_slot_text_link_buy: Glac páirt
-  homepage_slot_text_link_donate: Make a donation
+  homepage_slot_text_link_donate: Tabhair bronntanas
   homepage_header_codestudio: Tionscadail a rinne daltaí sa Stiúideo Códála
-  homepage_header_donors: Code.org thanks its supporters
+  homepage_header_donors: Tá Code.org fíorbhuíoch dá thacadóirí
   homepage_donors_seall: Féach uile
   homepage_donors_donate: Bronn
   contact_form_topic_student: Is dalta mé
@@ -370,11 +370,11 @@ ga-IE:
   class_submission_level_college: Scoil tríú leibhéal
   class_submission_level_vocational: Gairmscoil
   class_submission_languages_other: Teanga(cha) eile
-  inspirational_videos_more: 'Tuilleadh <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">físeán spreagúil</a> ó dhaoine mór-le-rá agus ceiliúráin'
+  inspirational_videos_more: 'Tuilleadh <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">físeán spreagúil</a> ó dhaoine mór-le-rá agus ó cheiliúráin'
   playlab_choose_theme: 'Roghnaigh téama do "Súgradh is Dáiríre"'
   playlab_classic_title: Clasaiceach
   playlab_gumball_title: Saol Iontach Gumball
-  playlab_iceage_title: 'Ice Age - Le teacht go luath'
+  playlab_iceage_title: 'Ice Age - Ag teacht go luath'
   playlab_iceage_title_live: Ice Age
   starwars_subtitle: Réaltra a Thógáil le Cód
   starwars_javascript_title: JavaScript
@@ -390,31 +390,31 @@ ga-IE:
   starwars_help_translate: Cabhraigh leis an aistriúchán
   starwars_platform_text: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
   mc_name: An Uair Chódála Minecraft
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+  mc_longdescription: Úsáid blocanna cóid le dul ar eachtra le Steve nó Alex sa domhan Minecraft seo.
+  mc_shortdescription: Úsáid blocanna cóid le dul ar eachtra le Steve nó Alex sa domhan Minecraft seo.
   mc_gradelevel: Aois 6-106
   mc_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
   mc_specs: Go leor teangacha | Brabhsálaithe nua-aimseartha agus táibléid | Aois 6-106
   minecraft_subtitle: An Uair Chódála Minecraft
   volunteer_engineer_submission_title: Bí i do shaorálaí agus spreag daltaí
-  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers need volunteers.<br>%{num_volunteers} volunteers have signed up. Join them.'
-  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_subtitle_generic: 'Beidh 100,000 múinteoir ag óstáil An Uair Chódála ina seomra ranga i mbliana, 7-13 Mí na Nollag, 2015. Cabhraigh leo! '
+  volunteer_engineer_submission_subtitle_specific: 'Tá %{num_teachers} múinteoir ag lorg cúnaimh ó shaorálaithe.<br>Tá %{num_volunteers} saorálaí tar éis clárú. Bí leo!'
+  volunteer_engineer_submission_intro_background: Is éard atá san Uair Chódála ná gluaiseacht dhomhanda le rún na milliúin dalta ar fud an domhain a spreagadh chun triail a bhaint as an ríomheolaíocht. Glac páirt le linn Seachtain na Ríomheolaíochta, 7-13 Mí na Nollag.
   volunteer_engineer_submission_intro_recruit: |-
-    Teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
-  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
-  volunteer_engineer_submission_intro_links: 'Are you a teacher looking for volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
-  volunteer_engineer_submission_update_information: Update your information
-  volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
+    Ba bhreá le go leor múinteoirí dul i dteagmháil le saorálaí atá <span style="font-family: 'Gotham 7r', sans-serif;">díograiseach i dtaobh na ríomheolaíochta</span> chun cabhrú sa seomra ranga, nó a bheadh in ann <span style="font-family: 'Gotham 7r', sans-serif;">daltaí a spreagadh</span> faoi na rudaí is féidir a dhéanamh le scileanna ríomhaireachta (mar shampla trí fhíschomhrá).
+  volunteer_engineer_submission_intro_signup: 'Líon isteach na réimsí seo a leanas más mac léinn ríomheolaíochta nó innealtóir bogearraí gairmiúil thú. Is gá na réimsí marcáilte le <span class="form-required-field">*</span> a líonadh isteach.'
+  volunteer_engineer_submission_intro_links: 'An múinteoir thú? An bhfuil tú ag lorg cúnaimh ó shaorálaí? Cuardaigh na saorálaithe go léir ar an <a href="%{volunteer_local}">léarscáil</a> atá againn.'
+  volunteer_engineer_submission_update_information: "Nuashonraigh d'fhaisnéis phearsanta"
+  volunteer_engineer_submission_header_shared: Eolas comhroinnte le múinteoirí ar léarscáil na saorálaithe
   volunteer_engineer_submission_field_name: Ainm
   volunteer_engineer_submission_field_name_placeholder: Ainm Iomlán
   volunteer_engineer_submission_field_company: Comhlacht (nó Ollscoil)
   volunteer_engineer_submission_field_company_placeholder: Comhlacht (nó Ollscoil)
-  volunteer_engineer_submission_field_experience_level: Experience level
+  volunteer_engineer_submission_field_experience_level: Taithí
   volunteer_engineer_submission_field_location: Áit
-  volunteer_engineer_submission_field_location_desc: Your location will be used to allow teachers to search for nearby volunteers and will be shown as a pin on the map. If you are concerned about privacy, please use your work/school address or your city only.
+  volunteer_engineer_submission_field_location_desc: "Baintear úsáid as d'áit chónaithe chun cuidiú le múinteoirí teacht ar shaorálaithe i ngar dóibh. Má tá imní ort faoin phríobháideachas, bain úsáid as do sheoladh ollscoile/oibre nó fiú do chathair amháin."
   volunteer_engineer_submission_field_location_placeholder: Cód poist, cathair agus stát/contae/tír, nó seoladh poist
-  volunteer_engineer_submission_field_location_flexibility: I can volunteer by... (select all that apply)
+  volunteer_engineer_submission_field_location_flexibility: Is féidir liom... (roghnaigh gach ceann a bhaineann leat)
   volunteer_engineer_submission_checkbox_after_hoc: Ba mhaith liom a bheith i mo shaorálaí ó cheann ceann na bliana
   volunteer_engineer_submission_field_time_commitment: Gealltanas ama
   volunteer_engineer_submission_field_linkedin: Próifíl LinkedIn
@@ -423,15 +423,15 @@ ga-IE:
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/ainm
   volunteer_engineer_submission_field_description: Cur Síos
   volunteer_engineer_submission_field_description_desc: Déan cur síos ar an taithí nó cúlra teicniúil atá agat, agus conas ba mhaith leat cabhrú le múinteoirí áitiúla.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation. If you speak language(s) other than English, be sure to include it here.
-  volunteer_engineer_submission_header_private: Information kept private and never shared
-  volunteer_engineer_submission_field_email: Email address
-  volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
-  volunteer_engineer_submission_field_email_placeholder: Email address
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
+  volunteer_engineer_submission_field_description_placeholder: Cur síos ar an taithí atá agat. Má tá teanga(cha) eile seachas Béarla agat, inis dúinn anseo.
+  volunteer_engineer_submission_header_private: Faisnéis phríobháideach nach bhfoilseofar riamh
+  volunteer_engineer_submission_field_email: Seoladh ríomhphoist
+  volunteer_engineer_submission_field_email_desc: Ní fhoilseoimid do sheoladh ríomhphoist riamh, ach seolfaimid iarratais ó mhúinteoirí chugat.
+  volunteer_engineer_submission_field_email_placeholder: Seoladh ríomhphoist
+  volunteer_engineer_submission_final_paragraph: "Cuirfimid ar léarscáil thú atá dírithe ar mhúinteoirí atá ag lorg saorálaithe don Uair Chódála nó d'obair dheonach eile. Ní fhoilseoimid do sheoladh ríomhphoist ná do sheoladh baile RIAMH. Ach beidh múinteoirí in ann teacht ar gach faisnéis eile (d'áit chónaithe gharbh ina measc) go poiblí."
+  volunteer_engineer_submission_checkbox_contact: 'Tugaim cead do mhúinteoirí dul i dteagmháil liom maidir le hobair dheonach (Nóta: ní fhoilseoimid do sheoladh ríomhphoist riamh)'
   volunteer_engineer_submission_submit: Seol
-  volunteer_engineer_submission_thankyou: 'Thank you for signing up to volunteer. Teachers will be using <a href="%{url}">this map</a> to search for and contact volunteers like you.'
+  volunteer_engineer_submission_thankyou: 'Go raibh maith agat as clárú mar shaorálaí. Bainfidh múinteoirí úsáid as <a href="%{url}">an léarscáil seo</a> chun teacht ar shaorálaithe cosúil leatsa.'
   volunteer_engineer_submission_commitment_uncertain: Nílim cinnte
   volunteer_engineer_submission_commitment_one_hr_per_week: Uair amháin sa tseachtain
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 huaire an chloig sa tseachtain
@@ -441,11 +441,11 @@ ga-IE:
   volunteer_engineer_submission_commitment_monthly: Cúpla uair an chloig sa mhí
   volunteer_engineer_submission_commitment_weekly: Cúpla uair an chloig sa tseachtain
   volunteer_engineer_submission_commitment_more: Tuilleadh
-  volunteer_engineer_submission_location_flexibility_onsite: visiting on-site at a school (1-2 hours in a classroom or a school assembly)
-  volunteer_engineer_submission_location_flexibility_remote: 'having a Q&A with students remotely (via short video conference)'
-  volunteer_engineer_submission_location_flexibility_curriculum: contributing to open-source curriculum projects
+  volunteer_engineer_submission_location_flexibility_onsite: cuairt a thabhairt ar scoil (1-2 uair an chloig i seomra ranga nó i dtionól scoile)
+  volunteer_engineer_submission_location_flexibility_remote: ceisteanna ó dhaltaí a fhreagairt (trí fhíschomhrá)
+  volunteer_engineer_submission_location_flexibility_curriculum: cabhrú le tograí a bhaineann le curaclam oscailte
   volunteer_engineer_submission_experience_unspecified: Gan sonrú
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_experience_tech_company: Oibrí i gcomhlacht teicneolaíochta ach ní innealtóir mé
   volunteer_engineer_submission_experience_university_student_or_researcher: Mac/iníon léinn ollscoile sa ríomheolaíocht
   volunteer_engineer_submission_experience_software_professional: Innealtóir bogearraí nó saineolaí teicniúil
   volunteer_engineer_submission_distance_8: 5 mhíle
@@ -456,14 +456,14 @@ ga-IE:
   volunteer_engineer_submission_num_volunteers_10: 10 saorálaí
   volunteer_engineer_submission_num_volunteers_25: 25 saorálaí
   volunteer_engineer_submission_num_volunteers_50: 50 saorálaí
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: "I'm looking for a mentor to help prepare me for coding with my students"
-  petition_age: Age
-  dashboard_landing_title: Teacher Home Page
-  dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
+  volunteer_engineer_submission_type_task_onsite: Ba mhaith liom thú cuairt a thabhairt ar mo sheomra ranga chun cúnamh teicniúil a sholáthar agus na daltaí a spreagadh
+  volunteer_engineer_submission_type_task_remote: Ba mhaith liom thú físchomhrá a dhéanamh agus óráid spreagúil a thabhairt do na daltaí
+  volunteer_engineer_submission_type_task_mentor: Tá mé ag lorg meantóra chun cabhrú liom an chódáil a mhúineadh do na daltaí
+  petition_age: Aois
+  dashboard_landing_title: Leathanach Baile do Mhúinteoirí
+  dashboard_landing_welcome: Fáilte go dtí an painéal úrnua do mhúinteoirí.
   dashboard_landing_video: Féach ar an bhfíseán seo
-  dashboard_landing_watch_video: for a tour of the new features!
+  dashboard_landing_watch_video: le gnéithe nua an tsuímh a fheiceáil!
   dashboard_landing_view_as_student: Féach ar an suíomh seo mar dhalta
   dashboard_landing_students_title: Do chuid daltaí
   dashboard_landing_students_manage: Bainistigh do chuid daltaí
@@ -471,38 +471,39 @@ ga-IE:
   dashboard_landing_new_beta: Úrnua! Bain triail as na cúrsaí béite dírithe ar dhaltaí bunscoile.
   dashboard_landing_new_k5courses: Úrnua! Bain triail as na cúrsaí dírithe ar dhaltaí bunscoile.
   dashboard_landing_useful_links: Nascanna úsáideacha eile
-  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video office hours.
-  dashboard_landing_print_certificates: Print certificates for students who finish this course
-  dashboard_landing_educator_blog: Read about news and updates to our materials at our Educator Blog
-  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
-  dashboard_landing_video_player: Test our new video player at your school
-  dashboard_landing_progress_title: Main class progress
-  dashboard_landing_progress_biggest: This is the progress for your biggest section.
-  dashboard_landing_view_progress: 'View Progress for %{biggest_section}'
-  dashboard_landing_print_progress: Print progress
+  dashboard_landing_office_hours: Cuir ceist go pearsanta! Tabhair cuairt ar na huaireanta oifige go míosúil.
+  dashboard_landing_print_certificates: Priontáil teastais do na daltaí a chríochnaigh an cúrsa
+  dashboard_landing_educator_blog: Nuacht agus fógraí maidir le hábhar nua ar ár mblag le haghaidh múinteoirí
+  dashboard_landing_smart_hints: Cabhraigh linn leideanna cliste a chur leis na cúrsaí ar Code.org
+  dashboard_landing_video_player: Bain triail as ár seinnteoir nua físeán i do scoil
+  dashboard_landing_progress_title: Dul chun cinn an phríomhranga
+  dashboard_landing_progress_biggest: "Seo é dul chun cinn an ranga is mó s'agat."
+  dashboard_landing_view_progress: 'Dul chun cinn déanta ag %{biggest_section}'
+  dashboard_landing_print_progress: Dul chun cinn a phriontáil
   dashboard_landing_available_title: Cúrsaí le fáil
-  dashboard_landing_available_courses: Here are the courses currently available for you and your students.
-  dashboard_landing_more_tutorials: Ar mhaith leat níos mó cúrsaí teagaisc?
-  dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
+  dashboard_landing_available_courses: Seo iad na cúrsaí atá ar fáil duit agus do do chuid daltaí faoi láthair.
+  dashboard_landing_more_tutorials: Ar mhaith leat níos mó cúrsaí teagaisc a fheiceáil?
+  dashboard_landing_more_tutorials_desc: |-
+    Tá tuilleadh cúrsaí teagaisc ar fáil ó <a href="/learn/beyond">eagraíochtaí comhpháirtíochta.</a> Foghlaim códáil le róbait, déan d'aip féin, nó bain triail as teangacha ríomhaireachta eile, mar shampla C++, Ruby, nó Python!
   dashboard_hoc_courses: An Uair Chódála ó liath go leanbh
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
-  dashboard_hoc_courses_desc_and_cta: 'Try these short, one-hour tutorials with your students. <a href="https://hourofcode.com">Join the Hour of Code movement</a> during Computer Science Education Week.'
+  dashboard_hoc_courses_desc: Bain triail as na cúrsaí teagaisc ar feadh uair an chloig le do chuid daltaí!
+  dashboard_hoc_courses_desc_and_cta: 'Bain triail as na cúrsaí teagaisc ar feadh uair an chloig le do chuid daltaí! <a href="https://hourofcode.com">Glac páirt san Uair Chódála</a> le linn Sheachtain an Oideachais Ríomheolaíochta.'
   dashboard_k5_courses: Cúrsaí 20 uair an chloig don bhunscoil
-  dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
+  dashboard_k5_courses_desc: 'Sna cúrsaí seo, gheobhaidh tú ceachtanna féinluais féintreoraithe ar líne, chomh maith le gníomhaíochtaí "díphlugáilte" nach dteastaíonn ríomhaire ar chor ar bith. Tá timpeall is 20 ceacht i ngach cúrsa is féidir a chur i bhfeidhm mar aonad amháin, nó thar seimeastar amháin. Is féidir le páistí naíscoile gan cumas léitheoireachta acu fós páirt a ghlacadh freisin. Eagraímid ceardlanna forbartha gairmiúla den chéad scoth timpeall na Stát Aontaithe, go hiomlán saor ó chostas. <a href="/professional-development-workshops">Aimsigh ceardlann i ngar duit féin!</a>'
   dashboard_middle_courses: Cúrsaí 20 uair an chloig don meánscoil
-  dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
-  dashboard_high_courses: Year-long High School Courses
-  dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
-  dashboard_course_csina: Computer Science in Algebra
-  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation.
+  dashboard_middle_courses_desc: 'Úsáideann ár gcuraclam don meánscoil an ríomheolaíocht agus an chódáil mar uirlisí chun coincheapa na heolaíochta agus na matamaitice sa meánscoil a mhúineadh. Chun clárú le ceardlanna forbartha gairmiúla, cuir iarratas isteach le <a href="/educate/districts">comhpháirtíocht a bhunú</a> idir do scoilcheantar agus Code.org.'
+  dashboard_high_courses: Cúrsaí Bliana sa scoil dara leibhéal
+  dashboard_high_courses_desc: 'Cabhraíonn an clár seo le scoileanna dara leibhéal cúrsaí bliana sa ríomheolaíocht a chur ar fáil trí chúrsaí traenála sa réimse nua seo a sholáthar do mhúinteoirí. Chun clárú le ceardlanna forbartha gairmiúla, cuir iarratas isteach le <a href="/educate/districts">comhpháirtíocht a bhunú</a> idir do scoilcheantar agus Code.org.'
+  dashboard_course_csina: An Ríomheolaíocht in Ailgéabar
+  dashboard_course_csina_desc: Tá Code.org ag obair i gcomhar le Bootstrap ar churaclam a mhúineann coincheapa ailgéabracha agus geoiméadracha tríd an ríomhchlárú.
+  dashboard_course_csins: An Ríomheolaíocht san Eolaíocht
+  dashboard_course_csins_desc: Tá Code.org ag obair i gcomhar le Project GUTS ar churaclam a bhaineann úsáid as an samhaltú agus as an ionsamhlú le buntús na ríomheolaíochta a mhúineadh.
   dashboard_course_ecs: Taiscéalaíocht na Ríomheolaíochta
-  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
+  dashboard_course_ecs_desc: 'Is éard atá i "Taiscéalaíocht na Ríomheolaíochta" ná cúrsa bliana ina bhfuil 6 aonad: Idirghníomhaíocht Duine-Ríomhaire, Réiteach Fadhbanna, Dearadh Gréasáin, Ríomhchlárú, Ríomhaireacht agus Anailísiú Sonraí, agus Róbaitic.'
   dashboard_course_csp: Foras Feasa ar an Ríomheolaíocht AP®
-  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable course that explores the foundational ideas of computing.
+  dashboard_course_csp_desc: Chruthaigh Code.org dianchúrsa mealltach sothuigthe a thaiscéalann buntús na ríomheolaíochta.
   dashboard_landing_loading: Á lódáil...
-  dashboard_action_edit: Edit
+  dashboard_action_edit: Eagar
   dashboard_action_save: Sábháil
   dashboard_action_save_all: Sábháil uile
   dashboard_action_cancel: Cealaigh
@@ -514,16 +515,21 @@ ga-IE:
   dashboard_action_remove_confirm: Bain?
   dashboard_action_done: Déanta
   dashboard_action_required: riachtanach
-  dashboard_navigation_home_page: Teacher home page
-  dashboard_navigation_section_student_progress: Student Accounts and Progress
-  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
+  dashboard_navigation_home_page: Leathanach baile do mhúinteoirí
+  dashboard_navigation_section_student_progress: Cuntais agus Dul Chun Cinn na nDaltaí
+  dashboard_navigation_section_teacher_progress: Do Dhul Chun Cinn
   dashboard_navigation_section_lesson_plans: Pleananna Ceachta agus Acmhainní
   dashboard_navigation_section_community: Cabhair agus Pobal
   dashboard_navigation_section_pd: Forbairt Ghairmiúil
   dashboard_navigation_section_speakers: 'Aoichainteoirí <br/> Ríomheolaíochta'
-  dashboard_navigation_all_sections: Student Accounts and Progress
+  dashboard_navigation_all_sections: Cuntais agus Dul Chun Cinn na nDaltaí
   dashboard_navigation_view_progress: Féach Dul Chun Cinn
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: Féach na Freagraí Téacs
   dashboard_navigation_view_assessments: Measúnuithe
   dashboard_navigation_add_students: Cuir Daltaí Leis
   dashboard_navigation_manage_students: Bainistigh Daltaí
@@ -531,55 +537,79 @@ ga-IE:
   dashboard_navigation_view_stats: Staitisticí
   dashboard_navigation_section: 'Rannán: %{section_name}'
   dashboard_navigation_student: 'Dalta: %{student_name}'
+  dashboard_progress_not_started: gan tosú
+  dashboard_progress_in_progress: idir lámha
+  dashboard_progress_not_completed: gan críochnú
+  dashboard_progress_completed_too_many_blocks: críochnaithe, an iomarca blocanna
+  dashboard_progress_completed_perfect: críochnaithe, foirfe
+  dashboard_progress_furthest_level_attempted: an leibhéal is airde
+  dashboard_progress_submitted: seolta
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Rannán nua
-  dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
+  dashboard_sections_jumbotron_instruction: Cruthaigh rannáin nua agus cuir daltaí leo. Le rannáin, is féidir do chuid daltaí a eagrú i ngrúpaí níos lú, sa chaoi go mbeidh sé níos éasca an dul chun cinn atá déanta acu a leanúint agus na cuntais a bhainistiú.
   dashboard_sections_table_section: Rannán
-  dashboard_sections_table_secret: Login Type
-  dashboard_sections_table_grade: Grade
+  dashboard_sections_table_secret: Cineál Seisiúin
+  dashboard_sections_table_grade: Bliain
   dashboard_sections_table_course: Cúrsa
   dashboard_sections_table_students: Daltaí
   dashboard_sections_table_code: Cód an Rannáin
   dashboard_sections_name: Ainm an Rannáin
-  dashboard_sections_choose_secret: 'If you would like to provide accounts to your students, choose a secret type of <b>word</b> or <b>picture</b> for that section.'
-  dashboard_sections_secret_word: 'A <b>word</b> allows you to set a secret word for each student.'
-  dashboard_sections_secret_picture: "A <b>picture</b> allows you to set a secret picture for each student, ideal for younger students who can't yet type."
-  dashboard_sections_secret_none: 'If you would like your students to manage their own accounts, including choosing their own passwords, choose a secret type of <b>none</b>.'
-  dashboard_sections_print_secrets: You may then print a sheet of cards containing account information to be distributed to your students individually.
-  dashboard_sections_switch_section: 'Switch section:'
+  dashboard_sections_choose_secret: 'Más mian leat cuntais a thabhairt do na daltaí sa rannán, roghnaigh <b>focal</b> nó <b>pictiúr</b> rúnda i gcomhair an rannáin sin.'
+  dashboard_sections_secret_word: 'Má roghnaíonn tú <b>focal</b>, beidh tú ábalta focal rúnda a shocrú do gach dalta.'
+  dashboard_sections_secret_picture: 'Má roghnaíonn tú <b>pictiúr</b>, beidh tú ábalta pictiúr rúnda a shocrú do gach dalta, rud níos oiriúnaí do dhaltaí níos óige gan cumas clóscríofa acu.'
+  dashboard_sections_secret_none: 'Más mian leat cead a thabhairt do na daltaí a gcuntas féin a bhainistiú agus a bhfocal faire féin a shocrú, roghnaigh an cineál <b>faic</b>.'
+  dashboard_sections_print_secrets: Ansin beidh tú in ann cárta ar a bhfuil na sonraí cuntais a phriontáil agus a thabhairt do na daltaí ceann ar cheann.
+  dashboard_sections_switch_section: 'Athraigh an rannán:'
+  dashboard_sections_close: Dún
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Cuir dalta leis
-  dashboard_students_add_students: Add multiple students
-  dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
-  dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
+  dashboard_students_add_students: Cuir daltaí leis
+  dashboard_students_add_multiple: 'Clóscríobh nó greamaigh ainmneacha na ndaltaí isteach, ceann amháin ar gach líne:'
+  dashboard_students_new_section: 'Chruthaigh tú rannán nua! Anois bain úsáid as na cnaipí <b>Cuir dalta leis</b> agus <b>Cuir daltaí leis</b> le do chuid daltaí a chur leis an rannán.'
   dashboard_students_placeholder_name: Ainm an Dalta
   dashboard_students_name: Ainm
   dashboard_students_progress: Dul chun cinn
-  dashboard_students_age: Age
-  dashboard_students_gender: Gender
-  dashboard_students_male: Male
-  dashboard_students_female: Female
+  dashboard_students_age: Aois
+  dashboard_students_gender: Inscne
+  dashboard_students_male: Fireannach
+  dashboard_students_female: Baineannach
   dashboard_students_secret: Rún
-  dashboard_students_password: Password
+  dashboard_students_password: Focal faire
   dashboard_students_username: 'Ainm úsáideora: %{student_username}'
   dashboard_students_email: 'Seoladh ríomhphoist: %{student_email}'
   dashboard_students_completed_levels: Leibhéil Chríochnaithe
   dashboard_students_total_lines: Línte Cóid
   dashboard_students_show_secret: Taispeáin an rún
-  dashboard_students_auto_generated: Auto-generated
-  dashboard_students_reset_secret: Reset secret
-  dashboard_students_reset_password: Reset password
-  dashboard_students_share_section: "Share this section's sign in page with your students:"
-  dashboard_students_print_info: "Print out cards with your students' login information."
+  dashboard_students_auto_generated: Ginte go huathoibríoch
+  dashboard_students_reset_secret: Athshocraigh an rún
+  dashboard_students_reset_password: Athshocraigh an focal faire
+  dashboard_students_share_section: 'Tabhair an leathanach logáil isteach do na daltaí sa rannán seo:'
+  dashboard_students_print_info: Priontáil cártaí ar a bhfuil sonraí cuntais na ndaltaí.
   dashboard_students_secret_picture_title: Pictiúr Rúnda
-  dashboard_students_secret_picture: 'This section uses <b>picture</b> as its secret type.  It means that each of your students has a secret picture used in place of a password to sign in.  Students should use the sign in web address given above to sign in.'
-  dashboard_students_reset_picture: "You may reset a student's secret picture at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret picture will be generated for that student to use when they sign in."
+  dashboard_students_secret_picture: 'Baineann an rannán seo úsáid as <b>pictiúir rúnda</b>. Ciallaíonn sé seo go bhfuil pictiúr rúnda ag gach dalta in ionad focail fhaire lena logáil isteach. Ba chóir do na daltaí an seoladh Gréasáin thuas a úsáid chun logáil isteach.'
+  dashboard_students_reset_picture: 'Is féidir leat an pictiúr rúnda ag aon dalta a athshocrú am ar bith trí <b>Taispeáin an rún</b> a roghnú, ansin <b>Athshocraigh an rún</b>. Déanfar pictiúr rúnda nua don dalta sin.'
   dashboard_students_secret_word_title: Focal Rúnda
-  dashboard_students_secret_word: 'This section uses <b>word</b> as its secret type.  It means that each of your students has a pair of secret words used in place of a password to sign in.  Students should use the sign in web address given above to sign in.'
-  dashboard_students_reset_word: "You may reset a student's secret words at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret words will be generated for that student to use when they sign in. "
-  dashboard_students_join_link: Tell your students to create their own accounts and join your section at
-  dashboard_students_no_email: "If your students do not have email addresses, or you would like to create accounts for them, change this section's secret type to <b>word</b> or <b>picture</b>."
+  dashboard_students_secret_word: 'Baineann an rannán seo úsáid as <b>focail rúnda</b>. Ciallaíonn sé seo go bhfuil focal rúnda ag gach dalta in ionad focail fhaire lena logáil isteach. Ba chóir do na daltaí an seoladh Gréasáin thuas a úsáid chun logáil isteach.'
+  dashboard_students_reset_word: 'Is féidir leat an focal rúnda ag aon dalta a athshocrú am ar bith trí <b>Taispeáin an rún</b> a roghnú, ansin <b>Athshocraigh an rún</b>. Déanfar péire nua focal don dalta sin. '
+  dashboard_students_join_link: Inis do na daltaí a gcuntas féin a chruthú agus a dhul le do rannán ag
+  dashboard_students_no_email: 'Mura bhfuil seoltaí ríomphoist ag na daltaí, nó más mian leat cuntais a chruthú ar a son, athraigh cineál an rannáin seo go <b>focal</b> nó <b>pictiúr</b>.'
   dashboard_students_print_page: Priontáil an leathanach seo
   dashboard_students_url: URL
-  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Click here</a> for our privacy document that can be shared or printed for your students.'
+  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Cliceáil anseo</a> chun ár bpolasaí príobháideachais a íoslódáil agus a chomhroinnt le do chuid daltaí.'
   dashboard_curriculum_k5_title: Acmhainní do mhúinteoirí bunscoile
   dashboard_curriculum_middle_title: Acmhainní do mhúinteoirí meánscoile
   dashboard_curriculum_high_title: Acmhainní do mhúinteoirí dara leibhéil
@@ -599,42 +629,35 @@ ga-IE:
   dashboard_glossary: Gluais
   dashboard_classroom_strategies: Straitéisí Seomra Ranga do Mhúinteoirí
   dashboard_debugging: 'Dífhabhtú:'
-  dashboard_puzzle_solving: 'Puzzle-solving:'
+  dashboard_puzzle_solving: 'Réiteach fadhbanna:'
   dashboard_student_worksheet: bileog oibre do dhaltaí
   dashboard_teacher_worksheet: bileog oibre do mhúinteoirí
-  dashboard_curriculum_csina: 'An Ríomheolaíocht in Ailgéabar:'
-  dashboard_curriculum_csins: 'An Ríomheolaíocht in Eolaíocht:'
+  dashboard_curriculum_csina: 'An Ríomheolaíocht san Ailgéabar:'
+  dashboard_curriculum_csins: 'An Ríomheolaíocht san Eolaíocht:'
   dashboard_curriculum_csp: 'Foras Feasa ar an Ríomheolaíocht AP®:'
   dashboard_curriculum_ecs: 'Taiscéalaíocht na Ríomheolaíochta:'
   dashboard_grade_k: Naíscoil
   dashboard_grade_other: Eile
   dashboard_login_word: Focal
   dashboard_login_picture: Pictiúr
-  dashboard_login_none: Email
+  dashboard_login_none: Ríomhphost
   dashboard_new_password: focal faire nua
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
-  dashboard_progress_not_completed: gan críochnú
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
-  dashboard_progress_submitted: submitted
-  dashboard_stage: Stage
-  dashboard_puzzle: Puzzle
+  dashboard_stage: Céim
+  dashboard_puzzle: Dúshlán
   dashboard_question: Ceist
   dashboard_response: Freagra
   dashboard_correctness: Cirte
   dashboard_correctness_free_response: Freagra saor
   dashboard_correctness_unsubmitted: Gan seoladh
-  dashboard_correctness_correct: Correct
+  dashboard_correctness_correct: Ceart
   dashboard_correctness_incorrect: Mícheart
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
+  dashboard_submission_submitted: Seolta
+  dashboard_submission_in_progress: Idir lámha
   dashboard_status: Stádas
   dashboard_multi_correct: '# ceist ilroghnach cheart'
   dashboard_multi_count: '# ceist ilroghnach'
   dashboard_multi_correct_percent: '% ceist ilroghnach cheart'
-  dashboard_submission_timestamp: Submission timestamp
+  dashboard_submission_timestamp: Stampa ama na hiarrachta
   stats_hoc_2013_heading: 'Staitisticí dochreidte ón Uair Chódála anuraidh. Le linn seachtaine amháin:'
   stats_hoc_2013_image_alt: Staitisticí ón Uair Chódála 2013
   dashboard_teacher: Múinteoir
@@ -644,39 +667,37 @@ ga-IE:
   dashboard_sections_password_question: 'Cén sórt "focal faire" a úsáidfidh na daltaí?'
   dashboard_sections_picture_account_creation: Pictiúr a thugann Code.org dóibh
   dashboard_sections_word_account_creation: Focal simplí a thugann Code.org dóibh
-  dashboard_sections_sign_in_question: Where do students sign-in?
-  dashboard_sections_sign_in_unique: 'Unique web-page listed on "Manage Students" tab'
+  dashboard_sections_sign_in_question: Cá logálfaidh na daltaí isteach?
+  dashboard_sections_sign_in_unique: 'Leathanach Gréasáin uathúil ar an gcluaisín "Bainistigh Daltaí"'
   dashboard_sections_sign_in_main: 'http://code.org agus cliceáil "Logáil isteach"'
   dashboard_sections_password_account_creation: Gnáthfhocal faire a roghnóidh an dalta
-  dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."
+  dashboard_sections_login_type_explanation: 'Tugann an tábla seo eolas duit faoi na modhanna slándála éagsúla: <b>pictiúr, focal, nó ríomhphost</b>.'
   dashboard_faq: Ceisteanna Coitianta
   dashboard_faq_k5: 'Bunscoil: Ceisteanna Coitianta'
   dashboard_announcements: Fógraí
-  dashboard_announce_view_all: View all
-  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_view_all: Féach uile
+  dashboard_announce_message: '<b>Gné nua</b> - Anois is féidir leat daltaí a bhogadh idir rannáin de do chuid féin, nó go dtí rannán ag múinteoir eile.'
   dashboard_announce_button_text: Tuilleadh eolais
-  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
-  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: 'Tá an Uair Chódála anseo - 8-14 Nollaig!'
-  code_sign_up: Sign up to participate during CS Education Week
+  code_sign_up: Cláraigh chun páirt a ghlacadh le linn Sheachtain an Oideachais Ríomheolaíochta
   learn_more: Bain triail as anois
-  learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
-  learn_sign_up_button: Sign up
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_sign_up_description: Cláraigh chun páirt a ghlacadh san Uair Chódála le linn Sheachtain an Oideachais Ríomheolaíochta
+  learn_sign_up_button: Cláraigh
+  learn_videos_watch: Féach ar an bhfíseán spreagúil seo i do sheomra ranga
+  learn_videos_show: Cuir an físeán spreagúil seo ar taispeáint i do rang
+  learn_videos_before_hoc: Féach ar fhíseán spreagúil sula ndéanfaidh tú an Uair Chódála
   learn_educator_resources_description: Foghlaim conas an Uair Chódála a mhúineadh
   learn_educator_resources_button: Acmhainní do mhúinteoirí
   learn_are_you_educator: 'An múinteoir thú? Foghlaim <a href="http://hourofcode.com/resources/how-to">conas an Uair Chódála a mhúineadh</a>'
-  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
-  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
-  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator, while supplies last'
-  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
-  hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
-  hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Aimsigh saorálaí áitiúil</a> chun cabhrú leat le linn an Uair Chódála'
+  learn_teacher_led_lesson_plans: 'Beidh tú spreagtha go mór ag <a href="https://code.org/teacher-led">pleananna ceachta don Uair Chódála faoi stiúir múinteoirí eile</a>'
+  learn_how_to_hoc: 'Léigh <a href="https://hourofcode.com/how-to">ár lámhleabhar</a> le foghlaim conas An Uair Chódála a mhúineadh'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Tuilleadh eolais</a> faoi dhuaiseanna do mhúinteoirí, chomh fada agus a bheidh siad ar fáil'
+  learn_inspirational_videos: 'Taispeáin <a href="https://code.org/educate/inspire">na físeáin spreagúla seo</a> i do sheomra ranga'
+  hoc2014_try_new_tutorials: Bain triail as na cúrsaí teagaisc nua don Uair Chódála
+  hoc2014_try_new_tutorial: Bain triail as an gcúrsa teagaisc nua don Uair Chódála (béite)
   hoc2014_try_scrat: Angry Birds, PvZ, agus Scrat
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  hoc2014_try_frozen: An tEalaíontóir, le hAnna agus Elsa ó Frozen
   carousel_heading_codeorg: Cúrsaí teagaisc ó Code.org
   carousel_heading_codeorg_any_device: Cúrsaí teagaisc ó Code.org (ar aon ghléas)
   carousel_heading_3rd_party: Cúrsaí teagaisc ó eagraíochtaí eile
@@ -694,12 +715,12 @@ ga-IE:
   carousel_heading_beyond_languages: Cúrsaí teagaisc a mhúineann teangacha ríomhchláraithe eile
   carousel_heading_apps_games: Déan do chluiche nó aip féin
   carousel_heading_university: Cúrsaí ollscoile ar líne
-  carousel_heading_webpages: Learn to make web pages
-  carousel_heading_robots: Learn to program with robots
-  carousel_heading_ide: Platforms popular among teachers
+  carousel_heading_webpages: Foghlaim le leathanaigh Ghréasáin a chruthú
+  carousel_heading_robots: Foghlaim an ríomhchlárúchán le róbait
+  carousel_heading_ide: Ardáin a thaitníonn le múinteoirí
   educator_notes: Nótaí do Mhúinteoirí
-  teach_led_lesson_plans: Teacher Led Lesson Plans
-  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
+  teach_led_lesson_plans: Ceachtanna faoi cheannas múinteoirí
+  learn_footer_all_tutorials: 'Féach <a href="https://code.org/educate/allhourofcode">liosta cuimsitheach de chúrsaí teagaisc don Uair Chódála</a>. <a href="https://hourofcode.com/tutorial-guidelines">Cliceáil anseo</a> chun teacht ar na critéir agus ar na treoirlínte a bhaineann le cúrsaí teagaisc.'
   how_to_teach_hoc: Conas an Uair Chódála a mhúineadh
   more_resources_educators: Tuilleadh acmhainní do mhúinteoirí
   beyond_submission: Ar mhaith leat do chúrsa teagaisc féin a sholáthar do Thar Uair an Chloig? Léigh na critéir agus líon an fhoirm isteach.
@@ -709,12 +730,12 @@ ga-IE:
   previous: Siar
   next: Ar Aghaidh
   older_systems: Cúrsaí teagaisc ó eagraíochtaí eile a fheidhmíonn ar chórais níos sine
-  older_systems_subheading: 'These should work on older Web browsers. To access all tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern Web browser.</a>'
-  mobile_devices: Partner tutorials for mobile devices
+  older_systems_subheading: 'Is dócha go bhfeidhmeoidh na cúrsaí seo i mbrabhsálaithe níos sine. Ba chóir duit <a href="http://browsehappy.com/" target="_blank">brabhsálaí nua-aimseartha</a> a shuiteáil chun na cúrsaí go léir a dhéanamh.'
+  mobile_devices: Cúrsaí teagaisc ó eagraíochtaí eile do ghléasanna soghluaiste
   frozen_name: Códáil in éindí le hAnna agus Elsa
   starwars_name: 'Star Wars: Tóg do Réaltra Féin le Cód'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Cathair Ghríobháin Chlasaiceach
+  codeintl_name: Cathair Ghríobháin Chlasaiceach
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Bunchúrsa JavaScript
   khanes_name: Bunchúrsa JavaScript
@@ -723,55 +744,55 @@ ga-IE:
   khanfr_name: Bunchúrsa JavaScript
   khanpl_name: Bunchúrsa JavaScript
   tynker_name: Tóg do chluiche féin
-  scratch_name: Get creative with coding
+  scratch_name: Bí cruthaitheach leis an ríomhchlárú
   lightbot_name: Lightbot
   thinkersmith_name: Mo Chairde Róbatacha
   condcards_name: Coinníollacha le Cártaí
   lightbotintl_name: Lightbot
-  codehs_name: Foghlaim an Chódáil leis an Madra Karel
+  codehs_name: Foghlaim an Chódáil le Karel an Madra
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
   codeavengers_name: Cruthaigh cluiche le JavaScript
-  processing_name: Drawing with Code
-  robomind_name: Program a virtual robot
-  groklearning_name: Eliza the Chatterbot Doctor
-  quorum_name: Accessible programming (with screenreader support)
-  codespark_name: The Foos (pre-readers welcome)
-  kodable_name: Kodable (pre-readers welcome)
+  processing_name: Líníocht le Cód
+  robomind_name: Bí i gceannas ar róbat fíorúil
+  groklearning_name: Eilís an Dochtúir Cainteach
+  quorum_name: Ríomhchlárú inrochtana (le léitheoir scáileáin)
+  codespark_name: Na Fúnna (fáilte roimh réamhléitheoirí)
+  kodable_name: Kodable (fáilte roimh réamhléitheoirí)
   tynkerapp_name: 'Tynker - ar tháibléid'
-  robomindnl_name: Program a virtual robot
+  robomindnl_name: Bí i gceannas ar róbat fíorúil
   flappy_name: Déan cluiche Flappy
   bitsbox_name: 'Bitsbox - cruthaigh cluiche'
   makeschool_name: Tóg cluiche iPhone i do bhrabhsálaí!
   touchdevelop_name: TouchDevelop
-  appinventor_name: AppInventor Hour of Code
+  appinventor_name: Uair Chódála AppInventor
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Cloch, Páipéar, Siosúr
-  hourofcode_name: Classic Maze
+  hourofcode_name: Cathair Ghríobháin Chlasaiceach
   playlab_name: Súgradh is Dáiríre
-  infinity_name: Infinity Play Lab
+  infinity_name: 'Infinity: Súgradh is Dáiríre'
   artist_name: Ealaíontóir
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
+  monstercoding_name: Tóraíocht Códála ar an Oileán Mistéireach
+  allcancode_name: Rith a Mharcó!
   csfirst_name: CS First
   boxisland_name: Oileán na mBoscaí
   codesters_name: Codesters
   texasinstruments_name: 10 Nóiméad Códála
-  teacherled_name: Teacher Led Lesson Plans
+  teacherled_name: Ceachtanna faoi cheannas múinteoirí
   course1_name: Cúrsa 1
   course2_name: Cúrsa 2
   course3_name: Cúrsa 3
   course4_name: Cúrsa 4
-  accelerated_name: Accelerated Course
+  accelerated_name: Cúrsa Luathaithe
   cspunit3_name: 'Foras Feasa ar an Ríomheolaíocht: Aonad 3'
   cspunit3_gradelevel: Blianta 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   applab_name: Saotharlann Aipeanna
-  applab_gradelevel: Ages 13+
-  applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
+  applab_gradelevel: Aois 13+
+  applab_shortdescription_congrats: "Is timpeallacht ríomhchláraithe é App Lab lenar féidir aipeanna simplí a chruthú. Dear d'aip, scríobh le blocanna nó le JavaScript í, ansin foilsigh an aip ar an toirt"
   codeorg_gradelevel: Aois 4-104
   codeintl_gradelevel: Aois 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -850,7 +871,7 @@ ga-IE:
   processing_platformtext: Brabhsálaithe nua-aimseartha
   robomind_platformtext: Brabhsálaithe nua-aimseartha, Gréasán soghluaiste
   groklearning_platformtext: Brabhsálaithe nua-aimseartha
-  quorum_platformtext: Modern web browsers. Screen-readers supported
+  quorum_platformtext: Brabhsálaithe nua-aimseartha. Tacaíocht do léitheoirí scáileáin
   codespark_platformtext: iOS, Android (nó brabhsálaí)
   kodable_platformtext: iPad
   tynkerapp_platformtext: Táibléid iPad, Android
@@ -871,130 +892,129 @@ ga-IE:
   monstercoding_platformtext: Brabhsálaithe nua-aimseartha, iOS, Android
   allcancode_platformtext: Brabhsálaithe nua-aimseartha, iOS
   csfirst_platformtext: Brabhsálaithe nua-aimseartha
-  boxisland_platformtext: Andoid, iOS
+  boxisland_platformtext: Android, iOS
   codesters_platformtext: Brabhsálaithe nua-aimseartha
   texasinstruments_platformtext: Áireamháin TI
   teacherled_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
-  codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  codeorg_shortdescription: Foghlaim an ríomhchlárú le Mark Zuckerberg agus Angry Birds!
+  codeintl_shortdescription: Foghlaim an ríomhchlárú le Mark Zuckerberg agus Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: Learn to draw in JavaScript
-  khanes_shortdescription: Learn to draw in JavaScript
-  khanpt_shortdescription: Learn to draw in JavaScript
-  khanhe_shortdescription: Learn to draw in JavaScript
-  khanfr_shortdescription: Learn to draw in JavaScript
-  khanpl_shortdescription: Learn to draw in JavaScript
-  tynker_shortdescription: Learn to code by solving fun puzzles and build your own mobile games.
-  scratch_shortdescription: Create interactive games, stories, and animations.
-  lightbot_shortdescription: Program Lightbot to solve puzzles using procedures and loops!
-  thinkersmith_shortdescription: Unplugged tutorial for a group with no devices
+  khan_shortdescription: Foghlaim an líníocht in JavaScript
+  khanes_shortdescription: Foghlaim an líníocht in JavaScript
+  khanpt_shortdescription: Foghlaim an líníocht in JavaScript
+  khanhe_shortdescription: Foghlaim an líníocht in JavaScript
+  khanfr_shortdescription: Foghlaim an líníocht in JavaScript
+  khanpl_shortdescription: Foghlaim an líníocht in JavaScript
+  tynker_shortdescription: Foghlaim an chódáil trí phuzail a réiteach agus cluichí soghluaiste a thógáil.
+  scratch_shortdescription: Cruthaigh cluichí, scéalta, agus beochaintí idirghníomhacha.
+  lightbot_shortdescription: Réitigh puzail le feidhmeanna agus le lúba in Lightbot!
+  thinkersmith_shortdescription: Cúrsa díphlugáilte le haghaidh grúpaí nach bhfuil gléasanna acu
   condcards_shortdescription: Foghlaim algartaim le deic cártaí
   lightbotintl_shortdescription: Cluiche a mhúineann coincheapa códála
-  codehs_shortdescription: Start coding with Karel the Dog, a fun and visual intro to programming!
-  codecademy_shortdescription: Learn JavaScript programming, in a web-browser
-  codecombat_shortdescription: Defeat ogres to learn Python or JavaScript in this epic programming game!
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
-  codeavengers_shortdescription: Learn JavaScript programming, in a web-browser
-  processing_shortdescription: A one hour tutorial in the Processing languages
-  robomind_shortdescription: Scríobh cód le haghaidh róbait fhíorúil
-  groklearning_shortdescription: |-
-    Teach "Eliza" the chatbot to fool your friends into thinking she's human!
-  quorum_shortdescription: Join Mary on a guided tour as she learns the Quorum programming language.
-  codespark_shortdescription: The Foos is a fun, kid-friendly game to learn about programming.
-  kodable_shortdescription: A fun iPad game to teach computer programming concepts
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
-  robomindnl_shortdescription: Scríobh cód le haghaidh róbait fhíorúil
-  flappy_shortdescription: 'Make your own game - Flappy Bird, Shark, or Submarine'
-  bitsbox_shortdescription: Code a series of apps to play and share, using real JavaScript.
-  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach your monster new moves!
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
-  appinventor_shortdescription: Make your own app! (Android-only)
+  codehs_shortdescription: Tosaigh amach ag códáil le Karel an Madra, bunchúrsa radharcach ríomhchláraithe!
+  codecademy_shortdescription: Foghlaim ríomhchlárú in JavaScript, i do bhrabhsálaí
+  codecombat_shortdescription: Faigh an lámh in uachtar ar ghruagaigh sa gcluiche eipiciúil seo agus foghlaim Python nó JavaScript san am céanna!
+  codemonkey_shortdescription: Scríobhann na daltaí ríomhchlár a rialaíonn moncaí ag gabháil bananaí.
+  codeavengers_shortdescription: Foghlaim ríomhchlárú in JavaScript, i do bhrabhsálaí
+  processing_shortdescription: Cúrsa teagaisc uair an chloig sa teanga Processing
+  robomind_shortdescription: Scríobh cód a rialaíonn róbat fíorúil
+  groklearning_shortdescription: An féidir le hEilís an róbat comhrá dallamullóg a chur ar chairde gur neach daonna í seachas ríomhaire?
+  quorum_shortdescription: Téigh i gcomhar le Máire ar thuras treoraithe mar a fhoghlaimíonn sí an teanga ríomhchlárúcháin Quorum.
+  codespark_shortdescription: Is cluiche sultmhar é Na Fúnna, dírithe ar pháistí ar mhaith leo an ríomhchlárú a fhoghlaim.
+  kodable_shortdescription: Cluiche sultmhar ar an iPad a mhúineann bunchoincheapa an ríomhchláraithe
+  tynkerapp_shortdescription: 'Foghlaim an ríomhchlárú trí phuzail shultmhara a réiteach. '
+  robomindnl_shortdescription: Scríobh cód a rialaíonn róbat fíorúil
+  flappy_shortdescription: 'Déan do chluiche féin - Flappy Bird, Siorc, nó Fomhuireán'
+  bitsbox_shortdescription: Scríobh sraith aipeanna le himirt agus le foilsiú, in JavaScript féin.
+  makeschool_shortdescription: Déan do chluiche iPhone féin! Foghlaim trí chód a scríobh a mhúineann gothaí nua don arracht!
+  touchdevelop_shortdescription: 'Réitigh fadhbanna, cruthaigh cluichí, agus foghlaim an chódáil, gach uile rud ar do ghuthán póca. '
+  appinventor_shortdescription: "Déan d'aip féin! (Android amháin)"
   blockly_shortdescription: Íoslódáil comhad ZIP le foghlaim as líne
-  thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
+  thinkersmith2_shortdescription: Foghlaim cén chaoi a mbaineann an ríomhaire úsáid as 0anna agus 1anna chun sonraí a stóráil
   kodableunplugged_shortdescription: 'Ceacht sultmhar "díphlugáilte"'
-  projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
-  hourofcode_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  frozen_shortdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+  projguts_shortdescription: Bain triail as samhaltú agus as ionsamhlú trí chluiche cloch/páipéar/siosúr
+  hourofcode_shortdescription: Foghlaim an ríomhchlárú le Mark Zuckerberg agus Angry Birds!
+  frozen_shortdescription: Gabh le hAnna agus Elsa mar a thaiscéalann siad draíocht agus áilleacht an oighir.
   starwars_shortdescription: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
   playlab_shortdescription: Cruthaigh scéal nó cluiche le Súgradh is Dáiríre!
   infinity_shortdescription: Úsáid Súgradh is Dáiríre chun scéal nó cluiche a chruthú ina bhfuil carachtair Disney Infinity.
   artist_shortdescription: Tarraing pictiúir iontacha leis an Ealaíontóir!
-  monsterocding_shortdescription: A colorful self-guided programming adventure for children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming language.
-  csfirst_shortdescription: Animate a story about two characters on the ocean. Add your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using Python.
+  monsterocding_shortdescription: Eachtra ildaite féintreoraithe sa ríomhchlárú, dírithe ar pháistí.
+  allcancode_shortdescription: Tumchluiche a úsáideann teanga radharcach chun Marcó a threorú.
+  csfirst_shortdescription: Cruthaigh scéal beoite faoi bheirt charachtar ar muir. Cuir do stíl féin leis!
+  boxisland_shortdescription: Turas códála ar Oileán na mBoscaí in éineacht le Hiro cóir.
+  codesters_shortdescription: Cruthaigh cluichí, beochaintí, agus obair ealaíne le Python.
   texasinstruments_shortdescription: 'Foghlaim códáil shimplí leis an áireamhán TI-84&#8482; Plus.'
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with these lesson plans.
-  course2_shortdescription_congrats: For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
-  course3_shortdescription_congrats: Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
-  course4_shortdescription_congrats: Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
+  teacherled_shortdescription: "B'fhéidir go spreagfaidh na pleananna ceachta seo thú chun d'ócáid féin a eagrú don Uair Chódála."
+  course2_shortdescription_congrats: Tá an cúrsa seo dírithe ar dhaltaí a bhfuil bunchumas léitheoireachta acu, agus tógann sé ar an ábhar ó Chúrsa 1. Cruthóidh na daltaí ríomhchláir chun fadhbanna a réiteach, agus forbróidh siad cluichí nó scéalta is féidir leo a chomhroinnt. Molta do bhlianta 2-5.
+  course3_shortdescription_congrats: "An bhfuil tú réidh don chéad leibhéal eile? Déanfaidh na daltaí staidéar níos doimhe ar thopaicí a d'fhoghlaim siad i gcúrsaí roimhe seo, chun réitigh níos solúbtha a thabhairt ar fhadhbanna níos casta. Ag deireadh an chúrsa, cruthóidh na daltaí cluichí agus scéalta idirghníomhacha is féidir a chomhroinnt le héinne. Dírithe ar aois 9-10."
+  course4_shortdescription_congrats: "An bhfuil tú réidh dul ar aghaidh? Déanfaidh na daltaí staidéar níos doimhe ar thopaicí a d'fhoghlaim siad i gcúrsaí roimhe seo, chun réitigh níos solúbtha a thabhairt ar fhadhbanna níos casta. Ag deireadh an chúrsa, cruthóidh na daltaí cluichí agus scéalta idirghníomhacha is féidir a chomhroinnt le héinne. Dírithe ar aois 9-13."
   codeorg_longdescription: 'Foghlaim buntús na ríomheolaíochta trí ríomhchlárú "tarraingt is scaoileadh". Is cúrsa teagaisc féintreoraithe é seo, cosúil le cluiche, ina bhfuil físléachtaí ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies. Foghlaim lúba, coinníollacha, agus algartaim shimplí. Ar fáil i 34 teanga.'
   codeintl_longdescription: 'Foghlaim buntús na ríomheolaíochta trí ríomhchlárú "tarraingt is scaoileadh". Is cúrsa teagaisc féintreoraithe é seo, cosúil le cluiche, ina bhfuil físléachtaí ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies. Foghlaim lúba, coinníollacha, agus algartaim shimplí. Ar fáil i 34 teanga.'
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
-  khan_longdescription: Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!
-  khanes_longdescription: Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!
-  khanpt_longdescription: Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!
-  khanhe_longdescription: Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!
-  khanfr_longdescription: Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!
-  khanpl_longdescription: Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!
-  tynker_longdescription: Build your own games and share with friends! Solve fun coding puzzles and learn programming concepts in each level. Personalize games with animated characters, multiple levels and rich props. Make your games realistic using physics. See the code as visual blocks or JavaScript. Take your games mobile on iPads and Android tablets. Over a dozen fun activities to choose from!
-  scratch_longdescription: 'With Scratch, you can create your own interactive games, stories, animations &mdash; and share them with your friends. Get started by animating your name, creating a holiday card, or making a pong game.'
-  lightbot_longdescription: Guide Lightbot to light up all the blue tiles! Lightbot is a puzzle game that uses programming game mechanics to let players gain a practical understanding of basic coding. Learn to sequence instructions, write procedures, and utilize loops to solve levels. Ideal for all ages.
-  thinkersmith_longdescription: 'Using a pre-defined "Robot Vocabulary" students will figure out how to guide each other to accomplish specific tasks without discussing them first. This lesson teaches children the connection between symbols and actions, as well as the invaluable skill of debugging. "My Robotic Friends" works best as a group activity and includes a teacher workbook for classroom use.'
-  condcards_longdescription: 'Learn about algorithms and conditional statements in this "unplugged" activity using a deck of cards. Students do this activity in teams, and need one deck of cards per team.'
-  lightbotintl_longdescription: Learn core programming logic, starting from super-basic programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence commands, identify patterns, use procedures, and utilize loops!
-  codehs_longdescription: 'Giving commands to a computer, which is what programming is all about, is just like giving commands to a dog. Learn how to code with Karel the Dog&mdash;a fun, accessible, and visual introduction to programming that teaches fundamental concepts like commands and functions to absolute beginners. Tutorial is student-directed but teachers can sign up to access teacher tools and track student success!'
-  codecademy_longdescription: "Codecademy is an interactive, student-guided introduction to the basics of CS through JavaScript that's used by tens of millions of students around the world. We've prepared a no-hassle Hour of Code experience with accompanying quizzes, slides, and a completed project for students at the end."
-  codecombat_longdescription: Defeat ogres to learn Python or JavaScript in this epic programming game!
-  codemonkey_longdescription: 'CodeMonkey is an online game that teaches coding in a real programming language! Students program a monkey to catch bananas while it gets slightly more complicated on each level. They get star scores on each solution and can share it in a single click. '
-  codeavengers_longdescription: 'Build a 2 player 2D top-down game with JavaScript in 10 short tasks. Then continue learning some basics of programming (variables and if statements) as you create a Quiz to share with friends. Along the way  earn points and badges as you compete to reach the top of the class leaderboard.'
-  processing_longdescription: An introduction to programming in the context of the visual arts using the Processing programming language. Short video lessons introduce coding exercises that lead to designing an interactive drawing program
-  robomind_longdescription: 'Students learn the basics of programming by controlling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
+  khan_longdescription: Foghlaim bunphrionsabail an ríomhchláraithe in JavaScript agus déan líníochtaí taitneamhacha le do chód. Déan as do stuaim féin é, nó in éineacht le do rang!
+  khanes_longdescription: Foghlaim bunphrionsabail an ríomhchláraithe in JavaScript agus déan líníochtaí taitneamhacha le do chód. Déan as do stuaim féin é, nó in éineacht le do rang!
+  khanpt_longdescription: Foghlaim bunphrionsabail an ríomhchláraithe in JavaScript agus déan líníochtaí taitneamhacha le do chód. Déan as do stuaim féin é, nó in éineacht le do rang!
+  khanhe_longdescription: Foghlaim bunphrionsabail an ríomhchláraithe in JavaScript agus déan líníochtaí taitneamhacha le do chód. Déan as do stuaim féin é, nó in éineacht le do rang!
+  khanfr_longdescription: Foghlaim bunphrionsabail an ríomhchláraithe in JavaScript agus déan líníochtaí taitneamhacha le do chód. Déan as do stuaim féin é, nó in éineacht le do rang!
+  khanpl_longdescription: Foghlaim bunphrionsabail an ríomhchláraithe in JavaScript agus déan líníochtaí taitneamhacha le do chód. Déan as do stuaim féin é, nó in éineacht le do rang!
+  tynker_longdescription: Cruthaigh do chluichí féin agus comhroinn le cairde iad! Réitigh dúshláin chódála agus foghlaim bunchoincheapa an ríomhchláraithe ag gach leibhéal. Cuir carachtair bheoite, leibhéil éagsúla, agus fearais shaibhre leis na cluichí. Féach ar an mbunchód mar bhlocanna radharcacha nó mar chód JavaScript. Déan cluichí soghluaiste ar iPad nó ar tháibléid Android. Níos mó ná dosaen gníomhaíocht sultmhar ar fáil!
+  scratch_longdescription: "Le Scratch, is féidir leat cluichí, scéalta, agus beochaintí idirghníomhacha a chruthú &mdash; agus iad a chomhroinnt le cairde freisin. I dtosach báire, déan iarracht beochan a dhéanamh as d'ainm, cárta beannachta a chruthú, nó cluiche Pong a dhearadh."
+  lightbot_longdescription: "Úsáid Lightbot chun na tíleanna gorma go léir a lasadh! Is éard atá in Lightbot ná puzal a thugann tuiscint phraiticiúil ar an ríomhchlárú d'imreoirí trí chluichí a chur i bhfeidhm. Foghlaim le treoracha a chur in ord, feidhmeanna a scríobh, agus lúba a úsáid chun na leibhéil éagsúla a réiteach. Oiriúnach do chách ó liath go leanbh."
+  thinkersmith_longdescription: 'Tabharfaidh na daltaí treoracha dá chéile, ag baint úsáide as stór focal réamhshocraithe do "Róbait", chun tascanna simplí a chur i gcrích gan iad a phlé roimh ré. Foghlaimeoidh na daltaí an ceangal idir siombailí agus gníomhartha, chomh maith le dífhabhtú, scil ríthábhachtach sa ríomhchlárú. Is éifeachtaí an ghníomhaíocht seo i ngrúpaí, agus tagann sé le leabhar oibre do mhúinteoirí.'
+  condcards_longdescription: 'Téigh i dtaithí ar algartaim agus ar choinníollacha sa ghníomhaíocht "díphlugáilte" seo a úsáideann deic cártaí. Déanann na daltaí an ghníomhaíocht i ngrúpaí, le deic amháin ag gach grúpa.'
+  lightbotintl_longdescription: "Foghlaim an loighic bhunúsach a úsáidtear sa ríomhchlárú, ag tosú leis an mbunleibhéal, do pháistí 4+ bliana d'aois, ar iOS nó Android (nó i mbrabhsálaí Gréasáin). Rachaidh tú i dtaithí ar orduithe a chur san ord ceart, patrúin a aithint, agus úsáid a bhaint as feidhmeanna agus lúba!"
+  codehs_longdescription: 'Is éard atá sa ríomhchlárú ná orduithe a thabhairt do ríomhaire, go díreach mar a thugtar orduithe do mhadra. Foghlaim an chódáil le Karel an Madra &mdash; bunchúrsa sultmhar sothuigthe a mhúineann bunchoincheapa cosúil le horduithe agus feidhmeanna do dheargthosaitheoirí. Cúrsa féintreoraithe atá ann, ach is féidir le múinteoirí clárú freisin chun teacht ar acmhainní breise agus dul chun cinn na ndaltaí a leanúint!'
+  codecademy_longdescription: "Is éard atá sa Codeacademy ná bunchúrsa idirghníomhach féintreoraithe ar an ríomheolaíocht sa teanga JavaScript, atá in úsáid ag na milliúin dalta ar fud an domhain. D'ullmhaigh muid Uair Chódála atá an-éasca a eagrú, in éineacht le scrúduithe, sleamhnáin, agus togra iomlán ag deireadh an chúrsa."
+  codecombat_longdescription: Faigh an lámh in uachtar ar ghruagaigh sa gcluiche eipiciúil seo agus foghlaim Python nó JavaScript san am céanna!
+  codemonkey_longdescription: 'Is éard atá in CodeMonkey ná cluiche ar líne a mhúineann an chódáil i dteanga ríomhchlárúcháin forleathan! Scríobhann na daltaí ríomhchlár a rialaíonn moncaí ag gabháil bananaí, agus éiríonn sé níos dúshlánaí ar gach leibhéal. Tugtar réaltaí do na daltaí tar éis gach leibhéal, agus is féidir iad a chomhroinnt le clic amháin. '
+  codeavengers_longdescription: 'Tóg cluiche beirte 2T le radharc anuas in JavaScript trí 10 dtasc simplí a dhéanamh. Ansin, foghlaim bunchoincheapa ríomhchláraithe (athróga agus coinníollacha) trí Quiz a chruthú agus a chomhroinnt le cairde. Gheobhaidh tú pointí agus suaitheantais i rith an ama - déan do dhícheall barr an tábla i do sheomra ranga a bhaint amach!'
+  processing_longdescription: Bunchúrsa ar an ríomhchlárú i gcomhthéacs na n-amharcealaíon leis an teanga Processing. Féachann na daltaí ar ghearrfhíseáin a mhíníonn na ceachtanna códála. Faoi cheann an chúrsa, cruthóidh siad clár idirghníomhach líníochta
+  robomind_longdescription: 'Foghlaimíonn na daltaí buntús an ríomhchlárúcháin trí chód a scríobh a rialaíonn róbat fíorúil. Cúrsa ar líne atá ann, iomlán ann féin, ina bhfuil físeáin, scannáin, quizeanna, agus treoracha/leideanna uathoibríocha a chabhraíonn leis na ceachtanna códála. '
   groklearning_longdescription: |-
-    Use the programming language Python to build a chatbot called "Eliza" to act as a robot psychotherapist. You'll teach Eliza how to talk and the right thing to say. Can she fool your friends into thinking she's a human not a computer?
-  quorum_longdescription: This tutorial is accessible for the visually-impaired, and works with screenreaders. Join Mary on a tour as she joins a biology lab as a programmer and learns the Quorum programming language. This tutorial is student-guided with online example activities.
-  codespark_longdescription: 'The Foos is a fun and kid-friendly way to learn about computer programming.  Program cute characters to solve puzzles and bring a virtual world to life.  The game is "word free" so all can play!'
-  kodable_longdescription: Kodable is a self-guided iPad game that introduces kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
-  robomindnl_longdescription: 'Students learn the basics of programming by controlling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
-  flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
-  bitsbox_longdescription: "Customize your very own virtual tablet, then code a series of apps to play and share. Simple walkthroughs make it possible for even young kids to program real JavaScript, and the more advanced you are the further you'll go."
-  makeschool_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
-  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
-  appinventor_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.
-  blockly_longdescription: 'Got PCs with slow (or non-existent) internet access? Download the Blockly tutorials that were the precursor of the Code.org tutorials - a single 3MB ZIP file can be loaded onto any computer or used off a memory stick'
-  thinkersmith2_longdescription: Students learn about representing and storing letters in binary, as functions of on and off. At the end, the class gets to encode their own initials to take home with them.
-  kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily Frenzy is an introduction to programming logic for kids 5 and up. A teacher should explain the game, then students program a partner to complete a simple obstacle course. '
-  projguts_longdescription: 'This "unplugged" activity helps students learn how modeling and simulation works by having a group of students play different versions of the Rock / Paper / Scissors game, and see the results as different modeling experiments.'
-  hourofcode_longdescription: Placeholder for new code.org/hoc
+    Bain úsáid as an teanga Python chun róbat comhrá darb ainm "Eilís" a scríobh a ligeann uirthi gur síciteiripeoir í. Tabharfaidh tú cumas cainte d'Eilís, agus múinfidh tú di rudaí oiriúnacha le rá. An féidir léi dallamullóg a chur ar chairde gur neach daonna í seachas ríomhaire?
+  quorum_longdescription: Feidhmíonn an cúrsa teagaisc seo le léitheoirí scáileáin, agus dá bharr sin bheadh sé oiriúnach do dhaoine lagamhairc. Téigh i gcomhar le Máire mar a thosaíonn sí post nua i saotharlann bitheolaíochta mar ríomhchláraitheoir agus mar a fhoghlaimíonn sí an teanga Quorum. Cúrsa féintreoraithe é seo, le gníomhaíochtaí samplacha ar líne.
+  codespark_longdescription: Is éard atá sna Fúnna ná bunchúrsa ar an ríomhchlárú a thaitníonn go mór le páistí. Is féidir carachtair ghleoite a rialú, puzail a réiteach, agus domhan fíorúil a bheochan. Níl aon fhocail sa gcluiche (pictiúir amháin) agus dá bharr sin tá sé oiriúnach do pháistí óga freisin!
+  kodable_longdescription: "Is éard atá in Kodable ná cluiche féintreoraithe ar an iPad a mhúineann buntús an ríomhchláraithe do pháistí 5+ bliana d'aois. Is féidir le páistí Kodable a úsáid ina n-aonar, ach tá sé níos fearr le múinteoir nó tuismitheoir."
+  tynkerapp_longdescription: Foghlaim an ríomhchlárú trí phuzail shultmhara a réiteach. Cruthaigh cluichí agus scéalta go héasca le grafaicí téamaithe, níos mó ná 10 bpaca cluiche, agus carachtair inathraithe. Ní gá ceangal leis an Idirlíon, ach má tá tú ceangailte, is féidir do chluichí agus do scéalta a fhoilsiú ar an Idirlíon, más mian leat.
+  robomindnl_longdescription: 'Foghlaimíonn na daltaí buntús an ríomhchlárúcháin trí chód a scríobh a rialaíonn róbat fíorúil. Cúrsa ar líne atá ann, iomlán ann féin, ina bhfuil físeáin, scannáin, quizeanna, agus treoracha/leideanna uathoibríocha a chabhraíonn leis na ceachtanna códála. '
+  flappy_longdescription: 'Úsáid ríomhchlárú "tarraingt-is-scaoileadh" chun cluiche Flappy Bird a chruthú, agus cuir do chuma féin air (mar shampla, le siorc nó daidí na Nollag in ionad an éin). Ansin cuir an cluiche ar do ghuthán le clic amháin.'
+  bitsbox_longdescription: Cuir táibléad fíorúil in oiriúint duit féin, ansin códáil sraith aipeanna le himirt agus le foilsiú. Le cúrsaí teagaisc céim ar chéim, is féidir fiú le páistí óga cód JavaScript a scríobh, agus beidh na daltaí níos sine in ann leibhéil níos airde a bhaint amach.
+  makeschool_longdescription: "Foghlaim an chódáil trí chluiche iPhone a scríobh i dteanga úrnua darb ainm Swift atá oiriúnach do thosaitheoirí. Cruthaigh cluiche beoga cosúil le Pokémon, agus scríobh cód a mhúineann gothaí nua d'arracht. Foghlaimeoidh tú conas is féidir athróga, feidhmeanna, agus réada a úsáid chun cabhrú leis an arracht an bua a bhaint amach!"
+  touchdevelop_longdescription: 'Leis an eagarthóir intadhaill, cruthóidh tú ealaín picteilíní, réiteoidh tú dúshlán an bhéir, agus déanfaidh tú do chluiche Flappy féin. '
+  appinventor_longdescription: "Tógfaidh tú trí aip shimplí do ghléasanna Android, le cúnamh ó ghearrfhíseáin shiamsúla. Tá an Uair Chódála seo dírithe ar thosaitheoirí chomh maith le saineolaithe, agus beidh tú ag tógáil d'aipeanna féin roimh i bhfad. Nach mbeadh sé go breá d'aipeanna féin a chomhroinnt le cairde?! Tá na gníomhaíochta seo oiriúnach d'fhoghlaimeoirí ina n-aonar, nó do mhúinteoirí agus a ranganna."
+  blockly_longdescription: 'Nach bhfuil ach seanríomhairí agat? Nó ríomhairí gan ceangal Idirlín ar chor ar bith (nó ceangal an-mhall)? Is féidir na cúrsaí teagaisc Blockly go léir - na cinn a bhí ar an bhfód roimh Code.org - a íoslódáil i gcomhad amháin (3MB) agus a chur ar aon ríomhaire nó a úsáid ar chipín cuimhne'
+  thinkersmith2_longdescription: Foghlaimíonn na daltaí conas is féidir litreacha a léiriú agus a stóráil mar chód dénártha, sraith giotán múchta nó lasta. Ag deireadh an chúrsa, déanann gach dalta ionchódú ar thúslitreacha a ainm len é a thabhairt abhaile.
+  kodableunplugged_longdescription: "Is éard atá sa fuzzFamily Frenzy ná gníomhaíocht a mhúineann loighic an ríomhchláraithe, dírithe ar pháistí ar a laghad 5 bliana d'aois, agus beartaithe le déanamh ar ghnáthpháipéar. Ba chóir don mhúinteoir an cluiche a mhíniú ar dtus, ansin tugann na daltaí orduithe do chomhpháirtí le bac-chúrsa simplí a chríochnú. "
+  projguts_longdescription: 'Sa ghníomhaíocht "dhíphlugáilte" seo, rachaidh na daltaí i dtaithí ar shamhaltú agus ar ionsamhlú. Imreoidh grúpaí daltaí leaganacha éagsúla den chluiche Cloch/Páipéar/Siosúr, agus anailís a dhéanamh ar na torthaí mar thurgnaimh ionsamhlaithe.'
+  hourofcode_longdescription: Ionadchoinneálaí don code.org/hoc nua
   frozen_longdescription: Gabh le hAnna agus Elsa mar a thaiscéalann siad draíocht agus áilleacht an oighir. Cruthóidh tú calóga sneachta agus patrúin le do scátaí oighir agus déanfaidh tú tírdhreach álainn geimhridh is féidir a chomhroinnt le cairde!
   starwars_longdescription: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
-  allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
-  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flair. Use code to tell the story you want to tell!
-  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
-  codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
-  texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "
-  teacherled_longdescription: Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans.
-  codeorg_beyond_name: Intro Computer Science (grades K-8)
-  khan_beyond_name: Learn computer programming
-  tynker_beyond_name: Learn programming at home
-  scratch_beyond_name: Get creative with coding
+  playlab_longdescription: Cruthaigh scéal nó cluiche le Súgradh is Dáiríre! Is féidir ainmhithe, foghlaithe mara, zombaithe, ninjanna, agus go leor carachtar eile a dhéanamh, fuaimeanna a sheinm, pointí a scóráil, agus fiú meallta tine a chaitheamh!
+  monstercoding_longdescription: 'Is éard atá sa Tóraíocht Códála ar an Oileán Mistéireach le Monster Coding ná eachtra thaitneamhach fhéintreoraithe a mhúineann bunchoincheapa an ríomhchláraithe do pháistí. Cuireann gach ceacht blocbhunaithe leis an gceann roimhe, agus baineann siad úsáid as grafaicí beoite ildaite agus as treoracha fuaime chun na coincheapa seo a mhúineadh: Feidhmeanna, Luachanna Boole, Lúba, Ráitis If/Else, agus Eagair.'
+  allcancode_longdescription: 'Imríonn na daltaí cluiche eachtraíochta bunaithe ar scéal nuachumtha. Tugann siad orduithe céim ar chéim do Mharcó - an príomhcharachtar - trí gach leibhéal, ag baint úsáide as an teanga radharcach ríomhchláraithe a úsáidtear san Uair Chódála. Foghlaimíonn siad roinnt bunchoincheapa gan é a thabhairt faoi deara: orduithe a chur i ndiaidh a chéile, lúba, agus coinníollacha.'
+  csfirst_longdescription: Cruthaigh scéal faoi bheirt charachtar ar muir. Beoigh an t-uisce, agus leag amach an radharc de réir do stíle féin. Bain úsáid as cód chun do scéal féin a dhéanamh!
+  boxisland_longdescription: Tabhair cuairt ar Oileán na mBoscaí agus cabhraigh le Hiro na cloga scaipthe san fhásach a bhailiú! Sa chúrsa teagaisc seo, gheobhaidh tú buneolas ar algartaim, seichimh, lúba, agus coinníollacha!
+  codesters_longdescription: 'Cruthaigh cluichí, beochaintí, agus obair ealaíne le Python. Nuair a bheidh tú críochnaithe, comhroinn le cairde iad! Scríobh ríomhchláir i bPython, teanga ríomhchlárúcháin atá in úsáid i gcomhlachtaí ar fud an domhain. Tá sé an-éasca a fhoghlaim lenár mbosca uirlisí tarraingt-is-scaoileadh! Cruthaigh cluiche cispheile, damhsa nua, nó cárta beannachta beoite! '
+  texasinstruments_longdescription: 'Is féidir na gníomhaíochtaí "10 Nóiméad Códála" a úsáid sa seomra ranga chun suim sa chódáil a spreagadh i measc na ndaltaí, ag baint úsáide as teicneolaíocht a iompraíonn siad ina mála droma chuile lá. Foghlaim códáil leis an TI-84&#8482; Plus - ní thógann sé ach 10 nóiméad le tosú, agus níl aon taithí de dhíth!  '
+  teacherled_longdescription: Agus an Uair Chódála déanta sna mílte mílte seomra ranga anois, tá go leor múinteoirí ag tnúth le gníomhaíochtaí níos cruthaithí níos solúbtha chun buntús na ríomheolaíochta a mhúineadh. Mar acmhainn do mhúinteoirí a bhfuil seantaithí acu ar an Uair Chódála, bhailíomar pleananna ceachta agus gníomhaíochtaí uair an chloig ó mhúinteoirí a bhaineann le réimsí ábhair éagsúla.
+  codeorg_beyond_name: Buntús na Ríomheolaíochta (bunscoil agus meánscoil)
+  khan_beyond_name: Foghlaim ríomhchlárú
+  tynker_beyond_name: Foghlaim ríomhchlárú sa mbaile
+  scratch_beyond_name: Bí cruthaitheach leis an ríomhchlárú
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
-  scratchjr_beyond_name: ScratchJR for pre-readers
-  hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
+  scratchjr_beyond_name: ScratchJR i gcomhair réamhléitheoirí
+  hopscotch_beyond_name: 'Hopscotch: Ríomhchlárú ar an iPad'
   pocketcode_beyond_name: Pocket Code
   groklearning_beyond_name: Foghlaim Python
   hacketyhack_beyond_name: Foghlaim Ruby
-  robomind_beyond_name: Program a virtual robot
+  robomind_beyond_name: Bí i gceannas ar róbat fíorúil
   makeschool_beyond_name: Tóg cluiche iPhone i do bhrabhsálaí!
-  appinventor_beyond_name: AppInventor Hour of Code
+  appinventor_beyond_name: Uair Chódála AppInventor
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: Foghlaim an Chódáil leis an Madra Karel
+  codehs_beyond_name: Foghlaim an Chódáil le Karel an Madra
   udemy_beyond_name: Ranganna Ríomhchláraithe Ar Líne
   lynda_beyond_name: Ranganna Ríomhchláraithe Ar Líne
   edx_beyond_name: Harvard CS50
@@ -1005,14 +1025,14 @@ ga-IE:
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: Foghlaim HTML
-  codeavengers_beyond_name: Learn to Code Websites
+  codeavengers_beyond_name: Foghlaim le suímh Ghréasáin a chruthú
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
   arduino_beyond_name: Arduino le Sparkfun
-  processing_beyond_name: Déan ríomhchlárú le Processing
+  processing_beyond_name: Ríomhchlárú le Processing
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: Aois 4-104
@@ -1063,10 +1083,10 @@ ga-IE:
   hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: Aip Shoghluaiste
   groklearning_beyond_platformtext: Brabhsálaithe nua-aimseartha
-  hacketyhack_beyond_platformtext: Desktop install
+  hacketyhack_beyond_platformtext: Suiteáil ar an ríomhaire
   robomind_beyond_platformtext: Brabhsálaithe nua-aimseartha, Gréasán soghluaiste
   makeschool_beyond_platformtext: Brabhsálaithe nua-aimseartha
-  appinventor_beyond_platformtext: Brabhsálaithe nua-aimseartha agus Android
+  appinventor_beyond_platformtext: Brabhsálaí nua-aimseartha agus Android
   touchdevelop_beyond_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, gach gléas
   codehs_beyond_platformtext: Brabhsálaithe nua-aimseartha (airgead riachtanach)
   udemy_beyond_platformtext: Ar an nGréasán
@@ -1077,95 +1097,95 @@ ga-IE:
   teachingtree_beyond_platformtext: Ar an nGréasán
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: Desktop install
+  kidsruby_beyond_platformtext: Suiteáil ar an ríomhaire
   w3schools_beyond_platformtext: Brabhsálaithe nua-aimseartha
   codeavengers_beyond_platformtext: Brabhsálaithe nua-aimseartha
   mozilla_beyond_platformtext: Brabhsálaithe nua-aimseartha
   codecombat_beyond_platformtext: Ar an nGréasán (Firefox, Chrome, Safari, IE9+)
   codea_beyond_platformtext: iPad
-  lego_beyond_platformtext: Robot purchase
-  finch_beyond_platformtext: Robot purchase
-  arduino_beyond_platformtext: Web browser, then Kit purchase
+  lego_beyond_platformtext: Róbat a cheannach
+  finch_beyond_platformtext: Róbat a cheannach
+  arduino_beyond_platformtext: Brabhsálaí, agus trealamh a cheannach
   processing_beyond_platformtext: Brabhsálaithe nua-aimseartha
-  alice_beyond_platformtext: Windows or Mac (install required)
-  sphero_beyond_platformtext: Robot purchase
-  codeorg_beyond_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  khan_beyond_shortdescription: Learn to draw in JavaScript
-  tynker_beyond_shortdescription: A fun and engaging course for children in grades 4-8
-  scratch_beyond_shortdescription: Create interactive games, stories, and animations.
+  alice_beyond_platformtext: Windows nó Mac (is gá suiteáil)
+  sphero_beyond_platformtext: Róbat a cheannach
+  codeorg_beyond_shortdescription: Foghlaim an ríomhchlárú le Mark Zuckerberg agus Angry Birds!
+  khan_beyond_shortdescription: Foghlaim an líníocht in JavaScript
+  tynker_beyond_shortdescription: "Cúrsa mealltach sultmhar dírithe ar pháistí 9-13 bliain d'aois"
+  scratch_beyond_shortdescription: Cruthaigh cluichí, scéalta, agus beochaintí idirghníomhacha.
   lightbot_beyond_shortdescription: Cluiche a mhúineann coincheapa códála
-  codecademy_beyond_shortdescription: Learn JavaScript programming, in a web-browser
-  kodable_beyond_shortdescription: A fun iPad game to teach computer programming concepts
-  scratchjr_beyond_shortdescription: 'Create interactive stories and games using ScratchJr. '
-  hopscotch_beyond_shortdescription: Learn visual programming on an iPad
-  pocketcode_beyond_shortdescription: Create a game on your smartphone and share with friends to try!
-  groklearning_beyond_shortdescription: Basic intro to python programming
-  hacketyhack_beyond_shortdescription: Learn Ruby from the ground up
-  robomind_beyond_shortdescription: Scríobh cód le haghaidh róbait fhíorúil
-  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
-  appinventor_beyond_shortdescription: Make your own app! (Android-only)
-  touchdevelop_beyond_shortdescription: Code mobile apps directly on your phone, tablet or laptop
-  codehs_beyond_shortdescription: Learn JavaScript programming with a fun visual environment
-  udemy_beyond_shortdescription: Dozens of online programming courses
-  lynda_beyond_shortdescription: Dozens of online programming courses
-  edx_beyond_shortdescription: The most popular class at Harvard
+  codecademy_beyond_shortdescription: Foghlaim ríomhchlárú in JavaScript, i do bhrabhsálaí
+  kodable_beyond_shortdescription: Cluiche sultmhar ar an iPad a mhúineann bunchoincheapa an ríomhchláraithe
+  scratchjr_beyond_shortdescription: 'Cruthaigh scéalta agus cluichí idirghníomhacha le ScratchJr. '
+  hopscotch_beyond_shortdescription: Foghlaim ríomhchlárú radharcach ar iPad
+  pocketcode_beyond_shortdescription: Cruthaigh cluiche ar do ghuthán cliste agus comhroinn le cairde é!
+  groklearning_beyond_shortdescription: Bunchúrsa Python
+  hacketyhack_beyond_shortdescription: Foghlaim Ruby ón talamh aníos
+  robomind_beyond_shortdescription: Scríobh cód a rialaíonn róbat fíorúil
+  makeschool_beyond_shortdescription: Déan cluiche iPhone i gceann uair an chloig
+  appinventor_beyond_shortdescription: "Déan d'aip féin! (Android amháin)"
+  touchdevelop_beyond_shortdescription: Códáil aipeanna soghluaiste go díreach ar do ghuthán, ar tháibléad, nó ar ríomhaire glúine
+  codehs_beyond_shortdescription: Foghlaim ríomhchlárú in JavaScript i dtimpeallacht thaitneamhach radharcach
+  udemy_beyond_shortdescription: Cuid mhór cúrsaí ríomhchláraithe ar líne
+  lynda_beyond_shortdescription: Cuid mhór cúrsaí ríomhchláraithe ar líne
+  edx_beyond_shortdescription: An rang a bhfuil an tóir is mó air in Ollscoil Harvard
   coursera_beyond_shortdescription: Tosaigh le CS101
   udacity_beyond_shortdescription: Tosaigh le CS101
-  teachingtree_beyond_shortdescription: 'Online Knowledge: Rapid and Unconstrained'
-  kodu_beyond_shortdescription: Design a 3D game world
-  cargobot_beyond_shortdescription: Program a robot arm on your iPad
-  kidsruby_beyond_shortdescription: Learn to program using Ruby
-  w3schools_beyond_shortdescription: Learn to make web sites
-  codeavengers_beyond_shortdescription: Learn to code games and websites
-  mozilla_beyond_shortdescription: Create and share web pages
-  codecombat_beyond_shortdescription: Play a game and learn JavaScript to win
+  teachingtree_beyond_shortdescription: 'Eolas ar líne: Sciobtha agus Scaoilte'
+  kodu_beyond_shortdescription: Dear domhan cluiche 3T
+  cargobot_beyond_shortdescription: Scríobh ríomhchlár ar an iPad le géag róbait a rialú
+  kidsruby_beyond_shortdescription: Foghlaim an ríomhchlárú le Ruby
+  w3schools_beyond_shortdescription: Foghlaim le suímh Ghréasáin a chruthú
+  codeavengers_beyond_shortdescription: Foghlaim le cluichí agus suímh Ghréasáin a chódáil
+  mozilla_beyond_shortdescription: Cruthaigh agus comhroinn leathanaigh Ghréasáin
+  codecombat_beyond_shortdescription: Imir cluiche agus foghlaim JavaScript leis an mbua a bhaint amach
   codea_beyond_shortdescription: Déan aipeanna ar do iPad
-  lego_beyond_shortdescription: Build and program a robot
-  finch_beyond_shortdescription: A robot for computer science education
-  arduino_beyond_shortdescription: "Learn Arduino with Sparkfun's Digital Sandbox."
+  lego_beyond_shortdescription: Tóg agus códáil róbat
+  finch_beyond_shortdescription: Róbat le haghaidh oideachais ríomheolaíochta
+  arduino_beyond_shortdescription: Foghlaim Arduino leis an mBosca Gainimh Digiteach ó Sparkfun.
   processing_beyond_shortdescription: Foghlaim an teanga Processing
   alice_beyond_shortdescription: Múin an ríomhchlárú i dtimpeallacht 3T
-  sphero_beyond_shortdescription: SPRK lessons give kids a fun crash course in programming robots while sharpening skills in math and science.
-  codeorg_beyond_longdescription: 'Learn the basic concepts of Computer Science with drag and drop programming. 3 full courses, each consists of 15-20 lessons that blend "unplugged" classroom activities interspersed with game-like, self-directed tutorials starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, basic algorithms, functions, and variables.'
-  khan_beyond_longdescription: Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!
-  tynker_beyond_longdescription: 'Tynker makes it fun & easy to learn programming. It makes it visual. Kids build games and mobile apps by arranging blocks of code. It removes the need to know programming syntax. Kids transform ideas into animated stories and math art right away. It promotes progressive learning. As kids learn fundamentals, Tynker introduces more advanced concepts including syntax driven programming.'
-  scratch_beyond_longdescription: 'With Scratch, you can create your own interactive games, stories, animations &mdash; and share them with your friends. Get started by animating your name, creating a holiday card, or making a pong game.'
-  lightbot_beyond_longdescription: Learn core programming logic, starting from super-basic programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence commands, identify patterns, use procedures, and utilize loops!
-  codecademy_beyond_longdescription: "Codecademy is an interactive, student-guided introduction to the basics of CS through JavaScript that's used by tens of millions of students around the world. We've prepared a no-hassle Hour of Code experience with accompanying quizzes, slides, and a completed project for students at the end."
-  kodable_beyond_longdescription: Kodable is a self-guided iPad game that introduces kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
-  scratchjr_beyond_longdescription: ScratchJr is an introductory programming language that enables young children to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing
-  hopscotch_beyond_longdescription: Student-guided tutorial on the iPad using the Hopscotch programming language. Students will build games and apps for their iPad on their iPad. Students can work individually or with friends (up to 3 per iPad).
-  pocketcode_beyond_longdescription: Create your own game on your smart phone with Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with friends and other users to try!
-  groklearning_beyond_longdescription: "An introductory course using the programming language Python for people with no programming experience. Our unique mix of introductory content and challenges will bring you to a thorough understanding of Python and programming itself. We've taught this content to students of varying ages from diverse backgrounds and we're sure it'll suit you too."
-  hacketyhack_beyond_longdescription: "Hackety Hack will teach you the absolute basics of programming from the ground up. No previous programming experience is needed! With Hackety Hack, you'll learn the Ruby programming language. Ruby is used for all kinds of programs, including desktop applications and websites. [Note: Desktop install required]"
-  robomind_beyond_longdescription: 'Students learn the basics of programming by controling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
-  makeschool_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
-  appinventor_beyond_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.
-  touchdevelop_beyond_longdescription: TouchDevelop lets you create apps on iPad, iPhone, Android, PC, Mac, Windows Phone. Our touch-friendly editor makes coding fun, even on your phone or tablet!
-  codehs_beyond_longdescription: 'Learn the basics of programming with Karel the Dog, a fun, accessible and visual introduction to coding, where giving commands to a computer is just like giving commands to a dog. This tutorial is great if led by a teacher, but can also be done independently. [Note: payment is required]'
-  udemy_beyond_longdescription: "Whether you've never seen a line of code or you code for a living, Udemy has a course for you, taught by professional instructors. [Note: payment is required]"
-  lynda_beyond_longdescription: 'Learn how to code, create, and build web applications, from the foundations of object-oriented programming in C and C++, to how to write Java. Our developer tutorials can help you learn to develop and create mobile apps, work with PHP and MySQL databases, get started with the statistical processing language R, and much more. [Note: payment is required]'
-  edx_beyond_longdescription: "CS50x is Harvard College's introduction to the intellectual enterprises of computer science and the art of programming for majors and non-majors alike, with or without prior programming experience. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, PHP, and JavaScript plus SQL, CSS, and HTML. The on-campus version of CS50x is Harvard's second-largest course."
-  coursera_beyond_longdescription: "Stanford's CS 101 class taught by Nick Parlante (FREE!). CS101 teaches the essential ideas of Computer Science for a zero-prior-experience audience. Play and experiment with short bits of code to bring to life to the power and limitations of computers. CS101 also provides a general background on computers today: what is a computer, what is hardware, what is software, what is the internet. No previous experience is required other than the ability to use a web browser."
-  udacity_beyond_longdescription: In this course you will learn key concepts in computer science and learn how to write your own computer programs in the context of building a web crawler. There is no prior programming knowledge needed for this course. Beginners are welcome! At the end of this course, you will have learned key concepts in computer science and enough programming to be able to write Python programs to solve problems on your own. This course will prepare you to move on to intermediate-level computing courses.
-  teachingtree_beyond_longdescription: TeachingTree is an open platform that lets anybody organize educational content. Our goal is for students to quickly access the exact clips they need in order to learn individual concepts. Everyone is encouraged to help by adding videos or tagging concepts.
-  kodu_beyond_longdescription: Kodu lets kids create games on the PC and XBox via a simple visual programming language. Kodu can be used to teach creativity, problem solving, storytelling, as well as programming. Anyone can use Kodu to make a game, young children as well as adults with no design or programming skills. Kodu for the PC is available to download for free. Kodu for the XBox is also available in the USA on the XBox Marketplace, in the Indie Games channel for about $5.
-  cargobot_beyond_longdescription: Cargo-Bot is a puzzle game where you teach a robot how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles, haunting music and stunning retina graphics. You can even record your solutions and share them on YouTube to show your friends.
-  kidsruby_beyond_longdescription: "Have fun and make games, or hack your homework using Ruby! Just tell your parents or teachers you're learning Ruby programming... ;). Free and works on any computer. [Note: Desktop install required]"
-  w3schools_beyond_longdescription: Learn to create websites on your own computer. Learn the server basics in less than a day. Learn to add databases to your website
-  codeavengers_beyond_longdescription: Learn how to program games, apps and websites. Designed by experts with perfect level of difficulty for beginners, easy to understand instructions and great help when you need it. Our HTML, CSS and JavaScript courses include code challenges and revision games that make learning fun and effective for all ages.
-  mozilla_beyond_longdescription: Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike.
-  codecombat_beyond_longdescription: Play as a Wizard using code (spells) to control your heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn JavaScript in this HTML 5 web game for complete beginners.
-  codea_beyond_longdescription: "Codea for iPad lets you create games and simulations &mdash; or just about any visual idea you have. Turn your thoughts into interactive creations that make use of iPad features like Multi-Touch and the accelerometer. We think Codea is the most beautiful code editor you'll use, and it's easy. Codea is designed to let you touch your code. Want to change a number? Just tap and drag it. How about a color, or an image? Tapping will bring up visual editors that let you choose exactly what you want."
-  lego_beyond_longdescription: Create small, customizable and programmable robots using LEGO pieces.
-  finch_beyond_longdescription: "The Finch is a new robot for computer science education. Its design is the result of a four year study at Carnegie Mellon's CREATE lab. The Finch is designed to support an engaging introduction to the art of programming. It has support for over a dozen programming languages and environments, including several environments appropriate for students as young as eight years old. The Finch was designed to allow students to write richly interactive programs."
-  arduino_beyond_longdescription: Arduino is a popular platform designed to allow artists and designers to work with real sensors, LEDs, buzzers, and more. The Sparkfun Virtual Sandbox will teach you real Arduino code right in your browser.
-  processing_beyond_longdescription: Processing is a programming language, development environment, and online community. Since 2001, Processing has promoted software literacy within the visual arts and visual literacy within technology. Initially created to serve as a software sketchbook and to teach computer programming fundamentals within a visual context, Processing evolved into a development tool for professionals. Today, there are tens of thousands of students, artists, designers, researchers, and hobbyists who use Processing for learning, prototyping, and production.
-  alice_beyond_longdescription: Using an innovative programming environment to support the creation of 3D animations, the Alice Project provides tools and materials for teaching and learning computational thinking, problem solving, and computer programming across a spectrum of ages and grade levels.
-  sphero_beyond_longdescription: "Whether you're an educator or a parent, SPRK lessons give kids a fun crash course in programming robots while sharpening their skills in math and science."
+  sphero_beyond_shortdescription: Is éard atá sna ceachtanna SPRK ná dianchúrsa ríomhchláraithe le róbait a ghéaraíonn scileanna na bpáistí sa matamaitic agus san eolaíocht ag an am céanna.
+  codeorg_beyond_longdescription: 'Foghlaim buntús na ríomheolaíochta trí ríomhchlárú "tarraingt is scaoileadh". Trí chúrsa iomlán atá ann, le 15-20 ceacht i ngach cúrsa a mheascann gníomhaíochtaí "díphlugáilte" sa seomra ranga le cúrsaí teagaisc féintreoraithe, cosúil le cluichí, ina bhfuil físléachtaí ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies. Foghlaim lúba, coinníollacha, algartaim shimplí, feidhmeanna agus athróga.'
+  khan_beyond_longdescription: Foghlaim bunphrionsabail an ríomhchláraithe in JavaScript agus déan líníochtaí taitneamhacha le do chód. Déan as do stuaim féin é, nó in éineacht le do rang!
+  tynker_beyond_longdescription: Beidh an-chraic agat ag foghlaim an ríomhchláraithe le Tynker. Cúrsa radharcach atá ann. Tógann na páistí aipeanna soghluaiste trí bhlocanna cóid a shocrú ar an scáileán. Ní gá comhréir teanga ríomhchláraithe a fhoghlaim. Is féidir le páistí a gcuid smaointe a thiontú go scéalta idirghníomhacha nó ealaín mhatamaiticiúil láithreach. Cuireann sé foghlaim chéimnitheach chun cinn. Tar éis do na páistí buneolas a fháil, tugann Tynker coincheapa níos airde isteach, mar shampla comhréir teangacha ríomhchláraithe.
+  scratch_beyond_longdescription: "Le Scratch, is féidir leat cluichí, scéalta, agus beochaintí idirghníomhacha a chruthú &mdash; agus iad a chomhroinnt le cairde freisin. I dtosach báire, déan iarracht beochan a dhéanamh as d'ainm, cárta beannachta a chruthú, nó cluiche Pong a dhearadh."
+  lightbot_beyond_longdescription: "Foghlaim an loighic bhunúsach a úsáidtear sa ríomhchlárú, ag tosú leis an mbunleibhéal, do pháistí 4+ bliana d'aois, ar iOS nó Android (nó i mbrabhsálaí Gréasáin). Rachaidh tú i dtaithí ar orduithe a chur san ord ceart, patrúin a aithint, agus úsáid a bhaint as feidhmeanna agus lúba!"
+  codecademy_beyond_longdescription: "Is éard atá sa Codeacademy ná bunchúrsa idirghníomhach féintreoraithe ar an ríomheolaíocht sa teanga JavaScript, atá in úsáid ag na milliúin dalta ar fud an domhain. D'ullmhaigh muid Uair Chódála atá an-éasca a eagrú, in éineacht le scrúduithe, sleamhnáin, agus togra iomlán ag deireadh an chúrsa."
+  kodable_beyond_longdescription: "Is éard atá in Kodable ná cluiche féintreoraithe ar an iPad a mhúineann buntús an ríomhchláraithe do pháistí 5+ bliana d'aois. Is féidir le páistí Kodable a úsáid ina n-aonar, ach tá sé níos fearr le múinteoir nó tuismitheoir."
+  scratchjr_beyond_longdescription: Is éard atá in ScratchJr ná teanga ríomhchlárúcháin a ligeann do pháistí óga scéalta agus cluichí idirghníomhacha a chruthú. Cuireann siad blocanna grafacha le chéile chun tabhairt ar charachtair bogadh, léim, damhsa a dhéanamh, nó amhráin a ghabháil
+  hopscotch_beyond_longdescription: Cúrsa teagaisc féintreoraithe ar an iPad sa teanga ríomhchlárúcháin Hopscotch. Cruthóidh na daltaí cluichí agus aipeanna don iPad ar an iPad. Is féidir leo an obair a dhéanamh ina n-aonar, nó in éineacht le cairde (suas le triúr ar iPad amháin).
+  pocketcode_beyond_longdescription: Cruthaigh do chluiche féin ar do ghuthán cliste le Pocket Code! Cabhraigh le Stiofán an Spéirthumadóir na beartáin a sheachadadh. Beidh tú in ann an cluiche a chomhroinnt le cairde!
+  groklearning_beyond_longdescription: "Búnchúrsa a úsáideann an teanga Python, dírithe ar dhaoine nach bhfuil aon taithí acu ar an ríomhchlárú. Gheobhaidh tú tuiscint iomlán ar Python agus ar an ríomhchlárú go ginearálta trí mheascán speisialta d'ábhar simplí agus dúshláin. Tá an t-ábhar seo múinte againn do go leor daltaí d'aoiseanna éagsúla agus ó chúlraí éagsúla, agus táimid cinnte go dtaitneoidh sé leat freisin."
+  hacketyhack_beyond_longdescription: 'Múineann Hackety Hack bunphrionsabail an ríomhchláraithe ón talamh aníos. Níl aon taithí de dhíth! Foghlaimeoidh tú an teanga ríomhchláraithe Ruby, teanga a úsáidtear i ngach saghas ríomhchláir, feidhmchláir ar an ríomhaire agus suímh Ghréasáin ina measc. [Nóta: is gá bogearra a shuiteáil]'
+  robomind_beyond_longdescription: 'Foghlaimíonn na daltaí buntús an ríomhchlárúcháin trí chód a scríobh a rialaíonn róbat fíorúil. Cúrsa ar líne atá ann, iomlán ann féin, ina bhfuil físeáin, scannáin, quizeanna, agus treoracha/leideanna uathoibríoch a chabhraíonn leis na ceachtanna códála. '
+  makeschool_beyond_longdescription: 'Roinnt eolais agat ar ObjectiveC? Foghlaim conas cluiche iPhone a chruthú i gceann uair an chloig! Treoróimid tríd an bpróiseas iomlán thú: códáil, tástáil, agus imirt an chluiche go hiomlán sa mbrabhsálaí, ansin é a chomhroinnt le cairde ar Facebook. Is cuma mura bhfuil aon taithí agat ar fhorbairt aipeanna iPhone, ach caithfidh tú bunchoincheapa ríomhchláraithe a thuiscint: athróga, feidhmeanna, agus réada.'
+  appinventor_beyond_longdescription: "Tógfaidh tú trí aip shimplí do ghléasanna Android, le cúnamh ó ghearrfhíseáin shiamsúla. Tá an Uair Chódála seo dírithe ar thosaitheoirí chomh maith le saineolaithe, agus beidh tú ag tógáil d'aipeanna féin roimh i bhfad. Nach mbeadh sé go breá d'aipeanna féin a chomhroinnt le cairde?! Tá na gníomhaíochta seo oiriúnach d'fhoghlaimeoirí ina n-aonar, nó do mhúinteoirí agus a ranganna."
+  touchdevelop_beyond_longdescription: Le TouchDevelop is féidir leat aipeanna a chruthú ar iPad, iPhone, Android, ríomhairí Windows nó Mac, nó guthán Windows. Beidh an-chraic agat ag ríomhchlárú lenár n-eagarthóir intadhaill, fiú ar do ghuthán nó ar do tháibléad!
+  codehs_beyond_longdescription: 'Foghlaim buntús an ríomhchlárúcháin in éineacht le Karel an Madra, cúrsa taitneamhach sothuigthe. Tugtar orduithe do ríomhaire go díreach mar a thugtar orduithe do mhadra. Oibríonn an cúrsa teagaisc seo go maith nuair a bhíonn múinteoir i gceannas air, ach is féidir é a dhéanamh go neamhspleách freisin. [Nóta: baineann costas leis]'
+  udemy_beyond_longdescription: 'Is cuma an deargthosaitheoir nó innealtóir bogearraí gairmiúil thú, tá cúrsaí ag Udemy a thaitneoidh leat, faoi stiúir múinteoirí gairmiúla. [Nóta: baineann costas leo]'
+  lynda_beyond_longdescription: 'Foghlaim le feidhmchláir Ghréasáin a chódáil, a thógáil, agus a fhoilsiú, ó bhunús an ríomhchláraithe bunaithe ar oibiachtaí in C++ go ríomhchlárú in Java. Tá cúrsaí teagaisc againn atá dírithe ar fhorbróirí ar mhaith leo aipeanna soghluaiste a fhorbairt, obair a dhéanamh le PHP agus bunachair sonraí MySQL, an teanga próiseála staitisticiúla R a úsáid, agus go leor eile. [Nóta: baineann costas leo]'
+  edx_beyond_longdescription: 'Is bunchúrsa ar na dúshláin intleachtacha sa ríomheolaíocht agus ar ealaín an ríomhchláraithe é CS50x in Ollscoil Harvard. Tá fáilte roimh chách, mic léinn agus iníonacha léinn nach bhfuil an ríomheolaíocht mar phríomhábhar acu san áireamh. I measc na dtopaicí: teibiú, algartaim, struchtúir sonraí, imchochlú, bainistíocht acmhainní, slándáil, innealtóireacht bogearraí, agus forbairt Ghréasáin. Déantar staidéar ar theangacha C, PHP, agus JavaScript, chomh maith le SQL, CSS, agus HTML. Is é CS50x an dara cúrsa is mó ar champas Harvard.'
+  coursera_beyond_longdescription: 'An rang CS 101 in Ollscoil Stanford, faoi stiúir Nick Parlante (SAOR IN AISCE!). Múineann CS 101 buntús na ríomheolaíochta do lucht éisteachta nach bhfuil aon taithí acu. Déan súgradh agus turgnamh le blúirí beaga cóid chun láidreachtaí agus laigí an ríomhaire a thaispeáint. Tugann CS101 buneolas ar an ríomhaireacht sa lá atá inniu freisin: cad is ríomhaire ann? Crua-earraí? Bogearraí? An tIdirlíon? Níl aon taithí de dhíth seachas a bheith ábalta brabhsálaí Gréasáin a úsáid.'
+  udacity_beyond_longdescription: Sa chúrsa seo, foghlaimeoidh tú coincheapa tábhachtacha sa ríomheolaíocht agus conas do ríomhchláir féin a scríobh, i gcomhthéacs damhán alla Gréasáin (crúbadán) a thógáil. Níl aon taithí ar ríomhchlárú de dhíth chun an cúrsa seo a dhéanamh. Fáilte roimh thosaitheoirí! Tar éis duit an cúrsa a chríochnú, beidh tú in ann ríomhchláir Python a scríobh chun fadhbanna a réiteach as do stuaim féin. Beidh tú ullmhaithe do chúrsaí ríomhaireachta ag an meánleibhéal.
+  teachingtree_beyond_longdescription: "Is éard atá in TeachingTree ná ardán oscailte a ligeann d'éinne ábhar múinteoireachta a eagrú. An sprioc atá againn ná cabhrú le daltaí teacht ar na físeáin fhoirfe le haon choincheap a fhoghlaim. Tá fáilte roimh chách físeáin nua a chur leis, nó coincheapa a chlibeáil."
+  kodu_beyond_longdescription: 'Le Kodu, is féidir le páistí cluichí a chruthú don ríomhaire nó do XBox le teanga shimplí radharcach. Foghlaimíonn siad an chruthaitheacht, an scéalaíocht, agus conas fadhbanna a réiteach, chomh maith leis an ríomhchlárú. Is féidir le héinne cluiche a scríobh le Kodu, páistí óga agus daoine fásta freisin, fiú mura bhfuil aon scileanna deartha nó ríomhchláraithe acu. Tá Kodu ar fáil le híoslódáil ar do ríomhaire saor in aisce. Tá Kodu ar XBox ar fáil sna Stáit Aontaithe sa Margadh XBox (cainéal na gcluichí "Indie") ar chostas íseal, timpeall $5.'
+  cargobot_beyond_longdescription: Sa chluiche Cargo-Bot, múineann tú do róbat an dóigh le crátaí a bhogadh. Nach simplí é sin? Gheobhaidh tú 36 puzal thar a bheith cliste, ceol atmaisféarach, agus grafaicí reitine fíorálainn. Tar éis duit puzal a réiteach, is féidir leat físeán a dhéanamh de agus é a chomhroinnt le cairde ar YouTube.
+  kidsruby_beyond_longdescription: "Bíodh píosa craic agat, scríobh cluiche, nó déan d'obair bhaile leis an teanga Ruby! Inis do do thuismitheoirí go bhfuil tú ag foghlaim an ríomhchláraithe... ;) Tá sé saor in aisce, agus feidhmíonn sé ar aon ríomhaire. [Nóta: is gá bogearraí a shuiteáil]"
+  w3schools_beyond_longdescription: Foghlaim conas is féidir suíomh Gréasáin a chruthú ar do ríomhaire féin, freastalaithe a chur ar bun, agus bunachair sonraí a chur le do shuíomh
+  codeavengers_beyond_longdescription: Foghlaim conas cluichí, aipeanna, agus suímh Ghréasáin a chruthú. Tá na cúrsaí go léir deartha ag saineolaithe, dírithe ar thosaitheoirí, le treoracha intuigthe agus cúnamh iontach más gá. Gheobhaidh tú dúshláin chódála agus cluichí sna cúrsaí HTML, CSS, agus JavaScript atá éifeachtach agus taitneamhach do dhaoine ó liath go leanbh.
+  mozilla_beyond_longdescription: Tá sé thar a bheith éasca do leathanaigh Ghréasáin féin a chruthú agus a fhoilsiú le Thimble. Scríobh HTML agus CSS go díreach i do bhrabhsálaí, cuir in eagar é, agus faigh réamhamharc air láithreach bonn. Foilsigh na tograí atá déanta agat le clic amháin. Foirfe do thosaitheoirí agus do shaineolaithe freisin.
+  codecombat_beyond_longdescription: Imir mar dhraoi agus bain úsáid as cód (draíocht) chun na laochra a rialú, cathracha gríobháin a éalú, gruagaigh a chloí, agus cairde a tharrtháil! Foghlaim JavaScript sa gcluiche HTML 5 seo, dírithe ar dheargthosaitheoirí.
+  codea_beyond_longdescription: Le Codea ar an iPad, is féidir leat cluichí nó ionsamhlúcháin nó fiú beagnach aon smaoineamh radharcach atá agat a chruthú. Déan aipeanna idirghníomhacha a úsáideann gnéithe speisialta an iPad, mar shampla gothaí iltadhaill nó an méadar luasghéaraithe. Creidimid gurb é Codea an t-eagarthóir cóid is áille atá ann, agus tá sé an-éasca freisin. Dhearamar é sa chaoi go mbeidh tú in ann do chód a theagmháil. Ar mhaith leat uimhir a athrú? Tapáil agus tarraing í. Cad faoi dhath nó íomhá a athrú? Tapáil agus gheobhaidh tú eagarthóir radharcach a ligeann duit an dath beacht atá uait a roghnú.
+  lego_beyond_longdescription: Cruthaigh róbait bheaga in-saincheaptha in-ríomhchláraithe as píosaí LEGO.
+  finch_beyond_longdescription: "Is róbat nua le haghaidh oideachais ríomheolaíochta é an Finch. Tháinig dearadh an Finch as togra ceithre bliana sa saotharlann CREATE in Ollscoil Carnegie Mellon. Cruthaíodh an Finch mar chuid de bhunchúrsa mealltach ar ealaín an ríomhchláraithe. Tacaíonn sé le go leor teangacha agus timpeallachtaí ríomhchláraithe, roinnt acu oiriúnach do dhaltaí chomh hóg le hocht mbliana d'aois. Dearadh an Finch sa chaoi go mbeadh ar chumas na ndaltaí ríomhchláir idirghníomhacha le comhéadain saibhre a scríobh."
+  arduino_beyond_longdescription: "Is ardán móréilimh é Arduino a ligeann d'ealaíontóirí agus do dhearthóirí obair a dhéanamh le braiteoirí, LEDanna, dordánaithe, agus araile. Múineann Sparkfun Virtual Sandbox cód Arduino duit go díreach i do bhrabhsálaí."
+  processing_beyond_longdescription: Is éard atá in Processing ná teanga ríomhchlárúcháin, timpeallacht forbartha, agus comhphobal ar líne. Tá litearthacht ar bhogearraí sna hamharcealaíona agus amharclitearthacht sa teicneolaíocht á gcur chun cinn ag an gcomhphobal Processing ó 2001. Cruthaíodh Processing i dtús báire mar shórt leabhar sceitseála leictreonach, agus mar uirlis chun buntús an ríomhchláraithe a mhúineadh i gcomhthéacs radharcach. Sa lá atá inniu, baineann forbróirí gairmiúla úsáid as Processing, chomh maith le go leor daltaí, ealaíontóirí, taighdeoirí, agus amaitéarach a úsáideann é chun fréamhshamhla agus córais táirgthe a dhéanamh.
+  alice_beyond_longdescription: Is éard atá san Alice Project ná timpeallacht nuálach ríomhchláraithe a thacaíonn le beochan 3T. Soláthraíonn sé uirlisí agus ábhar múinteoireachta lenar féidir smaointeoireacht ríomhaireachtúil, réiteach fadhbanna, agus ríomhchlárú a mhúineadh do pháistí de gach aois.
+  sphero_beyond_longdescription: Is cuma an múinteoir nó tuismitheoir thú, tugann na ceachtanna SPRK dianchúrsa ríomhchláraithe le róbait do pháistí a ghéaraíonn a scileanna sa matamaitic agus san eolaíocht ag an am céanna.
   compatibility_https_header: Ba chóir duit HTTPS a chumasú le haghaidh code.org.
-  compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_https_message: "Le do shlándáil a chosaint, athróidh an suíomh seo ó HTTP go HTTPS ar %{https_date}. Ní bheidh tú in ann cuairt a thabhairt ar http://code.org tar éis an dáta seo. <a href='%{it_requirements_url}'>Cliceáil anseo</a> chun tuilleadh eolais a fháil faoi úsáid HTTPS ar Code.org."
+  compatibility_https_hide_this_warning: Folaigh an rabhadh seo
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

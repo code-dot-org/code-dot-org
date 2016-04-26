@@ -30,7 +30,13 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "start_blocks": "function draw() {\r\n  \r\n}\r\n",
+    "show_d_pad": "true"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

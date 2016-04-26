@@ -25,7 +25,11 @@ fi:
   welcome_back: 'Tervetuloa takaisin, %{name}'
   submit: Jatka
   unsubmit: Peruuta lähetys
-  next_page: Next page
+  previous_page: Previous page
+  next_page: Seuraava sivu
+  cancel: Peru
+  okay: Selvä
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Lisää opettaja:'
@@ -431,7 +435,7 @@ fi:
       title: Sovelluksien laboratorio
       body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
       body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
-      audience: Ages 13+
+      audience: Ikäryhmille 13+
       cta: Learn how
     hoc:
       title: Klassinen sokkelo
@@ -459,6 +463,11 @@ fi:
     minecraft:
       title: Minecraft
       body: Tutki Minecraft-maailmaa koodin kautta.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Oppilaat piirsivät nämä koodilla!
     students_made_these_with_code: Oppilaat tekivät nämä koodilla!
@@ -487,21 +496,27 @@ fi:
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Kiitos
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: Kiitos vastauksestasi.
     correct_title: Kiitos
-    correct_body: Thank you for submitting an answer.
+    correct_body: Kiitos vastauksestasi.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Kiitos
-    wrong_body: Thank you for submitting answers.
+    wrong_body: Kiitos vastauksistasi.
     correct_title: Kiitos
-    correct_body: Thank you for submitting answers.
+    correct_body: Kiitos vastauksistasi.
   level_group-submittable:
     wrong_title: Kiitos
-    wrong_body: Thank you for submitting answers.
+    wrong_body: Kiitos vastauksistasi.
     correct_title: Kiitos
-    correct_body: Thank you for submitting answers.
+    correct_body: Kiitos vastauksistasi.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Väärä vastaus
     wrong_body: Antamasi ratkaisu ei ole oikea. Yritä uudestaan!
@@ -574,7 +589,7 @@ fi:
     completed_perfect: valmis, täydellinen
     furthest_level_attempted: vaikein taso jota yritetty
     assessment: arviointi
-    submitted: submitted
+    submitted: lähetetty
   studio:
     courses_working_on: Kurssit, joita työstät
     completed_courses: Valmiit kurssit
@@ -633,5 +648,5 @@ fi:
         acknowledge: 'Toimittamalla nämä tiedot huomioit, että niitä käsitellään %{link_start_privacy}Yksityisyyskäytännön%{link_end} ja %{link_end}Palvelukuvauksen%{link_start_tos} mukaisesti'
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Etsitään kuvaketta...
+      no_icons_found: Kuvakkeita ei löytynyt

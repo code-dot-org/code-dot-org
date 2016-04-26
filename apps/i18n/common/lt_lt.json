@@ -1,6 +1,6 @@
 {
   "and": "ir",
-  "animationMode": "Animation",
+  "animationMode": "Animacija",
   "backToPreviousLevel": "Grįžti į ankstesnį lygį",
   "blocklyMessage": "Blockly",
   "blocks": "blokeliai",
@@ -24,10 +24,11 @@
   "completedWithoutRecommendedBlock": "Sveikiname! Tu pabaigei galvosūkį {puzzleNumber}. (Bet galėjai panaudoti kitokius blokelius geresniam kodui sukurti.)",
   "continue": "Tęsti",
   "copy": "Kopijuoti",
+  "currentVersion": "Dabartinė versija",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
-  "debugWatchHeader": "Watch",
+  "debugWatchHeader": "Žiūrėti",
   "debugWatchNotAvailable": "<not available>",
   "defaultTwitterText": "Pažiūrėkite, ką aš sukūriau",
   "designMode": "Dizainas",
@@ -130,6 +131,7 @@
   "end": "pabaiga",
   "errorEmptyFunctionBlockModal": "Tavo kuriamoje komandoje turi būti veiksmų. Spustelk \"taisyti\" ir įkelk veiksmų į žalią bloką.",
   "errorIncompleteBlockInFunction": "Spustelk \"taisyti\", kad įsitikintum, ar tavo kuriamoje komandoje netrūksta veiksmų.",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
   "errorParamInputUnattached": "Naudodamas sukurtą komandą, neužmiršk duoti jai reikalingų duomenų - argumentų. Prikabink reikšmes prie atitinkmų komandos vietų.",
   "errorQuestionMarksInNumberField": "Pabandyk pakeisti \"???\" kokia nors reikšme.",
   "errorRequiredParamsMissing": "Norėdamas perduoti komandai duomenis, turi juos aprašyti - spausk \"redaguoti\" ir pridėk reikiamus argumentų laukelius. Nutempk \"naujų argumentų\" laukelius į kuriamos  komandos bloką.",
@@ -183,6 +185,7 @@
   "recommendedBlockContextualHintTitle": "Norėdama(-s) išspręsti galvosūkį, pabandyk blokelį panaudoti štai taip.",
   "repeat": "kartok",
   "resetProgram": "Iš naujo",
+  "restoreThisVersion": "Restore this Version",
   "rotateText": "Pasuk savo įrenginį.",
   "runProgram": "Paleisti",
   "runTooltip": "Paleisk programą, naudodamasis blokeliais.",
@@ -230,8 +233,5 @@
   "watchVideo": "Peržiūrėk šį vaizdo įrašą",
   "when": "kada",
   "whenRun": "paleidus",
-  "workspaceHeaderShort": "Darbo laukas: ",
-  "currentVersion": "Current Version",
-  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
-  "restoreThisVersion": "Restore this Version"
+  "workspaceHeaderShort": "Darbo laukas: "
 }

@@ -1,0 +1,17 @@
+name 'PS U3 Assessment1 new'
+title 'Test Assessment 1'
+submittable 'true'
+
+page
+level 'PS U3 Q1-1'
+level 'PS U3 Q1-2'
+level 'PS U3 Q1-3'
+level 'PS U3 Q1-4'
+level 'PS U3 Q1-5'
+page
+level 'PS U3 Q1-6'
+level 'PS U3 Q1-7'         # TextMatch
+level 'ECSPD your goals'   # FreeResponse
+page
+level 'PS U3 Q1-8'
+level 'PS U3 Q1-9'

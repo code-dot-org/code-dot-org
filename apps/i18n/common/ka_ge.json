@@ -24,6 +24,7 @@
   "completedWithoutRecommendedBlock": "გილოცავთ! თქვენ დასრულეთ თავსატეხი {puzzleNumber}. (მაგრამ უფრო კარგი კოდი გამოვიდოდა, თუ სხვა ბლოკს გამოიყენებდით)",
   "continue": "გაგრძელება",
   "copy": "კოპირება",
+  "currentVersion": "Current Version",
   "debugConsoleHeader": "Debug Console",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
@@ -130,6 +131,7 @@
   "end": "დასრულება",
   "errorEmptyFunctionBlockModal": "თქვენი ფუნქციის განმარტებაში საჭიროა იყოს ბლოკი. დააჭირეთ \"ჩასწორებას\" და გადაიტანეთ ბლოკები მწვანე ბლოკში.",
   "errorIncompleteBlockInFunction": "დააჭირეთ \"ჩასწორებას\", რათა დარწმუნდეთ, რომ ფუნქციის განმარტებაში ბლოკები არ გამოგრჩენიათ.",
+  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
   "errorParamInputUnattached": "არ დაგავიწყდეთ, რომ სამუშაო სივრცეში ფუნქციის ბლოკის თითოეული შემავალი მონაცემის პარამეტრს ბლოკი დაუკავშიროთ.",
   "errorQuestionMarksInNumberField": "სცადეთ შეცვალოთ \"???\" რამე მნიშვნელობით.",
   "errorRequiredParamsMissing": "შექმენით პარამეტრი თქვენი ფუქნციისთვის \"ჩასწორებაზე\" დაჭერით და საჭირო პარამეტრების დამატებით. გადაიტანეთ ახალი პარამეტრის ბლოკები თქვენი ფუნქციის განსაზღვრებაში.",
@@ -183,6 +185,7 @@
   "recommendedBlockContextualHintTitle": "თავსატეხის ამოსახსნელად სცადეთ მსგავსი ბლოკის გამოყენება.",
   "repeat": "გაიმეორეთ",
   "resetProgram": "თავიდან",
+  "restoreThisVersion": "Restore this Version",
   "rotateText": "მოაბრუნეთ თქვენი მოწყობილობა.",
   "runProgram": "გაშვება",
   "runTooltip": "გაუშვით ბლოკებით განსაზღვრული პროგრამა სამუშაო სივრცეში.",
@@ -230,8 +233,5 @@
   "watchVideo": "უყურეთ ვიდეოს",
   "when": "როდის",
   "whenRun": "გაშვებისას",
-  "workspaceHeaderShort": "სამუშაო სივრცე: ",
-  "currentVersion": "Current Version",
-  "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
-  "restoreThisVersion": "Restore this Version"
+  "workspaceHeaderShort": "სამუშაო სივრცე: "
 }

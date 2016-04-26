@@ -1,6 +1,6 @@
 var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants').TestResults;
-var _ = require('lodash');
+var _ = require('@cdo/apps/lodash');
 var $ = require('jquery');
 var ReactTestUtils = require('react-addons-test-utils');
 
@@ -523,8 +523,6 @@ module.exports = {
         assert.equal($('#designModeViz .textArea').first().prop('innerHTML'),
           'I said hey-hey-hey-hey<div>What\'s going on?</div>');
 
-
-
         Applab.onPuzzleComplete();
       },
       expected: {
@@ -583,6 +581,158 @@ module.exports = {
         var deleteButton = $('#designWorkspaceBody').find('button:contains(Delete)')[0];
         ReactTestUtils.Simulate.click(deleteButton);
         assert.equal(designModeViz.find('img').length, 0);
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: "exercise duplicate button on elements",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+
+        // Switch to design mode
+        var designModeButton = $('#designModeButton');
+        designModeButton.click();
+
+        // Add an image
+        testUtils.dragToVisualization('IMAGE', 0, 0);
+        var designModeViz = $('#designModeViz');
+        var newImage = designModeViz.find('img');
+        assert.equal(newImage.length, 1);
+
+        // Duplicate the image
+        var imageDuplicateButton = $('#designWorkspaceBody').find('button:contains(Duplicate)')[0];
+        ReactTestUtils.Simulate.click(imageDuplicateButton);
+
+        // Assert position and ID
+        var images = designModeViz.find('img');
+        assert.equal(images.length, 2);
+        var image2 = images[1];
+        assert.equal(parseInt(image2.style.left), 10);
+        assert.equal(parseInt(image2.style.top), 10);
+        assert.equal(image2.id, 'design_image2');
+
+        // Add a chart
+        testUtils.dragToVisualization('CHART', 0, 0);
+        var newChart = designModeViz.find('.chart');
+        assert.equal(newChart.length, 1);
+
+        // Duplicate the chart
+        var chartDuplicateButton = $('#designWorkspaceBody').find('button:contains(Duplicate)')[0];
+        ReactTestUtils.Simulate.click(chartDuplicateButton);
+        assert.equal(designModeViz.find('.chart').length, 2);
+
+        // Assert position and ID
+        var charts = designModeViz.find('.chart');
+        assert.equal(charts.length, 2);
+        var chart2 = charts[1];
+        assert.equal(parseInt(chart2.style.left), 10);
+        assert.equal(parseInt(chart2.style.top), 10);
+        assert.equal(chart2.id, 'design_chart2');
+
+        // Add a button at the edge of the container
+        var maxLeft = designModeViz.outerWidth();
+        var maxTop = designModeViz.outerHeight();
+
+        // Relies on default button dimensions (80px width, 30px height)
+        testUtils.dragToVisualization('BUTTON', maxLeft - 80, maxTop - 30);
+
+        var newButton = designModeViz.find('button');
+        assert.equal(newButton.length, 1);
+
+        // Duplicate the button
+        var buttonDuplicateButton = $('#designWorkspaceBody').find('button:contains(Duplicate)')[0];
+        ReactTestUtils.Simulate.click(buttonDuplicateButton);
+        assert.equal(designModeViz.find('button').length, 2);
+
+        // Test containment in design mode area by asserting position and ID
+        // Should be the same as the original button
+        var buttons = designModeViz.find('button');
+        assert.equal(buttons.length, 2);
+        var button2 = buttons[1];
+        assert.equal(parseInt(button2.style.left), maxLeft - 80);
+        assert.equal(parseInt(button2.style.top), maxTop - 30);
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: "exercise copy paste button on elements",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+
+        // Switch to design mode
+        var designModeButton = $('#designModeButton');
+        designModeButton.click();
+
+        // Add an image
+        testUtils.dragToVisualization('IMAGE', 0, 0);
+        var designModeViz = $('#designModeViz');
+        var newImage = designModeViz.find('img');
+        assert.equal(newImage.length, 1);
+
+        // Copy and paste the image
+        var copy = testUtils.createKeyEvent('keydown', {which: 67, altKey: true});
+        var paste = testUtils.createKeyEvent('keydown', {which: 86, altKey: true});
+
+        var designModeElement = document.getElementById('designModeViz');
+        designModeElement.dispatchEvent(copy);
+        designModeElement.dispatchEvent(paste);
+
+        // Assert position and ID
+        var images = designModeViz.find('img');
+        assert.equal(images.length, 2);
+        var image2 = images[1];
+        assert.equal(parseInt(image2.style.left), 10);
+        assert.equal(parseInt(image2.style.top), 10);
+        assert.equal(image2.id, 'design_image2');
+
+        // Copy and paste again
+        designModeElement.dispatchEvent(copy);
+        designModeElement.dispatchEvent(paste);
+
+        // Assert position and ID
+        images = designModeViz.find('img');
+        assert.equal(images.length, 3);
+        var image3 = images[2];
+        assert.equal(parseInt(image3.style.left), 20);
+        assert.equal(parseInt(image3.style.top), 20);
+        assert.equal(image3.id, 'design_image3');
+
+        // Add a button at the edge of the container
+        var maxLeft = designModeViz.outerWidth();
+        var maxTop = designModeViz.outerHeight();
+
+        // Relies on default button dimensions (80px width, 30px height)
+        testUtils.dragToVisualization('BUTTON', maxLeft - 80, maxTop - 30);
+
+        var newButton = designModeViz.find('button');
+        assert.equal(newButton.length, 1);
+        newButton[0].focus();
+
+        // Copy and paste
+        designModeElement.dispatchEvent(copy);
+        designModeElement.dispatchEvent(paste);
+
+        // Test containment in design mode area by asserting position and ID
+        // Should be the same as the original button
+        var buttons = designModeViz.find('button');
+        assert.equal(buttons.length, 2);
+        var button2 = buttons[1];
+        assert.equal(parseInt(button2.style.left), maxLeft - 80);
+        assert.equal(parseInt(button2.style.top), maxTop - 30);
 
         Applab.onPuzzleComplete();
       },
