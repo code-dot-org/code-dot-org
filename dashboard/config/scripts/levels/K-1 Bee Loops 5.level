@@ -34,7 +34,8 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "false"
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 3
@@ -54,18 +55,11 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-6">???</title>
         </block>
-      </xml>
-    </required_blocks>
-    <recommended_blocks>
-      <xml>
-        <block type="maze_moveEast"/>
-        <block type="maze_nectar"/>
-        <block type="maze_honey"/>
       </xml>
     </recommended_blocks>
     <solution_blocks>

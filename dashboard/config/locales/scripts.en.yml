@@ -1784,6 +1784,7 @@ en:
           Draw Loop and Random: Draw Loop and Random
           Variables: Variables
           " Sprite Properties and Mod": " Sprite Properties and Mod"
+          Expressions and Reassignment: Expressions and Reassignment
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -1805,3 +1806,9 @@ en:
           description_short: Programming
           description: ''
           Drawing in Game Lab: Drawing in Game Lab
+        CSF_Secret_Sample:
+          title: Secret Sample
+          description_short: This is a secret...shhhhh
+          description: Test of new educational philosophy
+          description_audience: Ages 8-18
+          Computational Thinking: Computational Thinking
