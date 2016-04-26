@@ -35,6 +35,15 @@ var AnimationPickerBody = React.createClass({
             frameRate={15}
             label="asterisk_circle (9)"/>
         <AnimationPickerListItem
+            sourceUrl={'/blockly/media/gamelab/library/asterisk_explode.png'}
+            sourceWidth={684}
+            sourceHeight={474}
+            frameWidth={171}
+            frameHeight={158}
+            frameCount={11}
+            frameRate={15}
+            label="asterisk_explode (11)"/>
+        <AnimationPickerListItem
             sourceUrl={'/blockly/media/gamelab/library/ghost_standing.png'}
             sourceWidth={504}
             sourceHeight={158}
