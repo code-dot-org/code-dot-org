@@ -1,3 +1,5 @@
 #!/bin/sh
 
-./send-to-mailing-list __TEMPLATE_TBD__  ./us-contacts-remainder.csv
+# 830590 total recipients
+
+./send-to-mailing-list --limit 850000 __TEMPLATE_TBD__  ./us-contacts-remainder.csv
