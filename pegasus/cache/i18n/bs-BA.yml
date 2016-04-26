@@ -644,6 +644,11 @@
   dashboard_action_remove_confirm: Ukloniti?
   dashboard_action_done: Završeno
   dashboard_action_required: neophodno
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Početna stranica za nastavnika
   dashboard_navigation_section_student_progress: Računi i Napredak Studenata
   dashboard_navigation_section_teacher_progress: Napredak u Vašem Kursu
@@ -661,6 +666,18 @@
   dashboard_navigation_view_stats: Prikaži Statistiku
   dashboard_navigation_section: 'Odjeljenje: %{section_name}'
   dashboard_navigation_student: 'Učenik: %{student_name}'
+  dashboard_progress_not_started: nije započeto
+  dashboard_progress_in_progress: u toku
+  dashboard_progress_not_completed: nije dovršeno
+  dashboard_progress_completed_too_many_blocks: dovršeno, previše blokova
+  dashboard_progress_completed_perfect: dovršeno, savršeno
+  dashboard_progress_furthest_level_attempted: pokušaj posljednjeg nivoa
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Novo Odjeljenje
   dashboard_sections_jumbotron_instruction: Napravi nova odjeljenja i dodajte učenike
     u njih. Odjeljenja vam pomažu organizirati učenike u manje grupe tako da možete
@@ -684,6 +701,26 @@
   dashboard_sections_print_secrets: Možeš onda ispisati list s karticama koje sadrže
     informacije o računu učenika i podijeliti ih učenicima.
   dashboard_sections_switch_section: 'Promijeni odjeljenje:'
+  dashboard_sections_close: Zatvori
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Dodaj učenika
   dashboard_students_add_students: Dodaj više učenika
   dashboard_students_add_multiple: 'Upiši ili zalijepi imena svojih učenika, jedno
@@ -763,13 +800,6 @@
   dashboard_login_picture: Slika
   dashboard_login_none: Email
   dashboard_new_password: nova šifra
-  dashboard_progress_not_started: nije započeto
-  dashboard_progress_in_progress: u toku
-  dashboard_progress_not_completed: nije dovršeno
-  dashboard_progress_completed_too_many_blocks: dovršeno, previše blokova
-  dashboard_progress_completed_perfect: dovršeno, savršeno
-  dashboard_progress_furthest_level_attempted: pokušaj posljednjeg nivoa
-  dashboard_progress_submitted: submitted
   dashboard_stage: Nivo
   dashboard_puzzle: Zadatak
   dashboard_question: Pitanje
@@ -811,18 +841,7 @@
     problem in computer science. Code Studio teachers are leading the way in educating
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
-  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you
-    (or a teacher you know) want to learn how to teach a full year introductory high
-    school computer science class students will love? You don't need any prior experience
-    to join our free workshops for our Exploring Computer Science course. Sign up
-    by April 22nd. "
   dashboard_announce_button_text: Nauči više
-  dashboard_announce_hoc: "<b>Novembar 9, 2015</b>- Novi Sat Kodiranja tutorijal je
-    ovdje predstavljajući nadolazeći film Ratova Zvijezda: Buđenje Sile. Radi zajedno
-    sa Ray da bi upravljao/la novim droidom, BB-8, kroz misiju. Onda se pridruži Leia
-    u pravljenju i dijeljenju tvoje vlastite igre u galaksiji daleko, daleko."
-  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
   code_hoc_coming: Sat Kodiranja je ovdje - 8. - 14. Decembra!
   code_sign_up: Prijavite se za sudjelovanje u Sedmici Edukacije o Računarstvu
   learn_more: 'Nauči još '

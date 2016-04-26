@@ -25,7 +25,10 @@ ne:
   welcome_back: 'Welcome back, %{name}'
   submit: Submit
   unsubmit: Unsubmit
+  previous_page: Previous page
   next_page: Next page
+  cancel: Cancel
+  okay: 'ओके '
   heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
@@ -453,6 +456,11 @@ ne:
     minecraft:
       title: Minecraft
       body: Explore a Minecraft world through code.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -496,6 +504,12 @@ ne:
     wrong_body: Thank you for submitting answers.
     correct_title: धन्यवाद
     correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Incorrect solution
     wrong_body: "The solution you've entered is not correct.  Please try again!"

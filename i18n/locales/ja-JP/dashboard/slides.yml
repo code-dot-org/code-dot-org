@@ -383,7 +383,7 @@ ja:
         text: 「言う」ブロックをドラッグして「実行した時」ブロックにくっつけて、「こんにちは」と入力することによって「こんにちは」と’話すペンギンになります。私たちはまた「右へ動く」と「左へ動く」ブロックを使うことによってペンギンを動かすこともできます。ブロックを配置したら’実行’ボタンを押すとあなたがプログラミングした結果が見られます。
       6:
         image: notes/playlab_intro_6.png
-        text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
+        text: 'では、はじめてみよう。おわるまでに、たのしくなったり、かなしくなったり、ポイントをためたり、火の玉をなげたり、あいても じぶんも  けしたり できたりして あそべる いろんなキャラクターで じぶんのゲームをつくることができるようになるよ。'
     playlab_events:
       1:
         image: notes/playlab_events_1.png

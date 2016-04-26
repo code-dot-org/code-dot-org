@@ -26,10 +26,10 @@ var ApplabVisualizationColumn = React.createClass({
             onScreenCreate={this.props.onScreenCreate} />
         }
         <Visualization/>
-        <GameButtons>
+        <GameButtons instructionsInTopPane={this.props.instructionsInTopPane}>
           <CompletionButton/>
         </GameButtons>
-        <BelowVisualization/>
+        <BelowVisualization instructionsInTopPane={this.props.instructionsInTopPane}/>
       </div>
     );
   }
@@ -38,5 +38,6 @@ var ApplabVisualizationColumn = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isReadOnlyWorkspace: state.level.isReadOnlyWorkspace,
+    instructionsInTopPane: state.level.instructionsInTopPane
   };
 })(ApplabVisualizationColumn);

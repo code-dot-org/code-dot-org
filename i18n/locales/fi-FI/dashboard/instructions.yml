@@ -188,9 +188,7 @@ fi:
       2-3 Maze 7_instruction: Auta minut vihreän ilkiön luo! (Varo TNT:tä)
       2-3 Maze 8_instruction: Hoida minut tuon possun luo!
       2-3 Maze 9_instruction: Auta minut vihreän ilkiön luo! (Varo TNT:tä)
-      2-3 Maze Loops 1_instruction: |
-        Can you get me to the pig using 5 of the same
-        kind of blocks?
+      2-3 Maze Loops 1_instruction: Saatko vietyä minut sian luo käyttämällä viittä samanlaista palikkaa?
       2-3 Maze Loops 17_instruction: Vie minut auringonkukan luo!
       2-3 Maze Loops 18_instruction: Vie minut auringonkukan luo!
       2-3 Maze Loops 19_instruction: Vie minut auringonkukan luo!
@@ -242,22 +240,12 @@ fi:
         Viimeisen viivan pituus on 250 pikseliä.
       4-5 Artist For Loops 14_instruction: 'Joku aloitti koodin, mutta tajusi että on oltava nopeampikin tapa! Käytä "for" lohkoa korvaamaan lohkot ja tee kolmiomainen spiraali valmiiksi. (Vihje: viimeisen viivan pituus on 300 pikseliä.)'
       4-5 Artist For Loops 15_instruction: 'Joku aloitti koodin, mutta tajusi että on oltava nopeampikin tapa! Käytä "for" lohkoa korvaamaan lohkot ja tee kuusikulmainen spiraali valmiiksi. (Vihje: viimeisen viivan pituus on 200 pikseliä.)'
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+      4-5 Artist For Loops 2_instruction: 'Tämä on "for"-lohko. Sen sijaan, että kirjoittaisit numerot 1,2,3,...10 näppäimillä, "for"- lohko voi toistaa sen sisällä olevat palikat ja laskea numerot puolestasi. Laita numero 10 "for"-lohkon "to"-osioon.'
       4-5 Artist For Loops 3_instruction: 'Kuinka voimme laskea 1:stä 50:een? Muokkaa "for" lohkoa.'
       4-5 Artist For Loops 4_instruction: 'Täydennä "for" lohko niin että se laskee 1:stä 10:een askelpituudella 1.'
       4-5 Artist For Loops 6_instruction: 'Piirrä neliöitä, joiden sivut ovat 50, 60, 70, 80, ja 90 pikseliä. Sinun tarvitsee käyttää "piirrä neliö" -toimintoa viisi kertaa.'
-      4-5 Artist For Loops 7_instruction: |
-        Draw the same squares but use a "count
-        with" block to change the sizes. Place the "counter" block in the "draw
-        a square" function. Hint: It's in the Variables category.
-      4-5 Artist For Loops 8_instruction: |
-        Can you complete the program by placing
-        the blocks inside a "for" block that counts from 10 to 200 by 10? You can
-        find the "for" block in the Loops category.
+      4-5 Artist For Loops 7_instruction: 'Piirrä samat ruudut, mutta käytä "count with" -palikkaa, jotta voit muuttaa kokoa. Aseta "laskija"-palikka "Piirrä nelikulmio"-funktioon. Vihje: Se on variaabeliluokassa.'
+      4-5 Artist For Loops 8_instruction: 'Voit saattaa tehtävän valmiiksi asettamalla palikat "for"-palikan sisään, se laskee 10:stä 200:aan 10-askelin. Löydät "for"-palikan silmukoiden luokasta.'
       4-5 Artist For Loops 9_instruction: Nämä ympyrät ovat kokoa 5, 10, 15, 20, 25, 30 ja 35. Piirrä ympyrät käyttäen for-lohkoa.
       4-5 Artist Free Draw 1_instruction: Vapaa piirto! Piirrä mitä ikinä oletkaan insproitunut luomaan.
       4-5 Artist Functions 1_instruction: 'Käytä "toista" silmukkaa piirtääksesi kolmion.'
@@ -267,121 +255,62 @@ fi:
       4-5 Artist Functions 11_instruction: 'Tämä "piirrä kuusikulmio" funktio käyttää "piirrä kolmio" funktiota. Tee kuusikulmiofunktio loppuun. (Vihje: kuusikulmiossa on 6 sivua, joista kaikki ovat 100 pikseliä pitkiä.)'
       4-5 Artist Functions 12_instruction: 'Täydennä "piirrä aaltoja" funktio. Jokainen aalto koostuu yhdestä ylemmästä ja yhdestä alemmasta aallosta. Vihje: piirrä 5 sinistä aaltoa.'
       4-5 Artist Functions 13 Free play_instruction: Tässä on joitain toimintoja joilla voit piirtää planeettoja, tähtiä, raketteja ja robotteja. Käytä niitä miten ikinä haluat kuviin jotka voit jakaa ystävien kanssa.
-      4-5 Artist Functions 14 Free play_instruction: |
-        Here, we've provided you with
-        several functions.  Use them any way you like inside of one or more loops
-        to make pictures that you can share with your friends. Click 'Run' to see
-        an example.
-      4-5 Artist Functions 15 Assessment_instruction: |
-        Assessment:  Use the "draw
-        a square" function to create the squares.  The squares are 50, 100, and 150
-        pixels.
+      4-5 Artist Functions 14 Free play_instruction: "Ole hyvä, tarjoamme tässä useita funktioita. Voit käyttää niitä haluamallasi tavalla yhden tai useamman silmukan sisällä tehdäksesi kuvia, joita voit jakaa ystäviesi kanssa. Klikkaa 'run', niin näet esimerkin."
+      4-5 Artist Functions 15 Assessment_instruction: 'Tehtävä: "Piirrä nelikulmio" -funktiota tehdäksesi nelikulmioita. Nelikulmiot ovat 50, 100 ja 150 pikseliä.'
       4-5 Artist Functions 2a_instruction: 'Laita seuraavaksi nämä lohkot uuteen funktioon "piirrä pieni kolmio" ja kutsu funktiota.'
       4-5 Artist Functions 2b_instruction: 'Luo seuraavaksi funktio "piirrä pieni kolmio" käyttäen annettuja lohkoja.'
-      4-5 Artist Functions 3_instruction: |
-        Now create the functions "draw a medium
-        triangle" and "draw a large triangle". The "draw a small triangle" function
-        is done for you. The triangles have side lengths of 50 (small), 100 (medium),
-        and 150 (large). 
-      4-5 Artist Functions 4_instruction: |
-        This new "draw a triangle" function
-        has a parameter and can do the work of all three functions before. Draw the
-        same triangles using this new function.
+      4-5 Artist Functions 3_instruction: 'Luo funktiot "Piirrä keskikokoinen kolmio" ja "Piirrä suuri kolmio". "Piirrä pieni kolmio" on jo tehty valmiiksi. Kolmioiden sivujen npituudet ovat 50 (pieni), 100 (keskikokoinen) ja 150 (suuri). '
+      4-5 Artist Functions 4_instruction: 'Tässä uudessa "piirrä kolmio" -funktiossa on yksi parametri ja se tekee samat asiat kuin aikaisemmat kolme funktiota. Piirrä samat kolmiot uuden funktion avulla.'
       4-5 Artist Functions 5_instruction: 'Osaatko muuttaa "piirrä kolmio"-funktion "piirrä neliö"-funktioksi muuttaaksesi piirustusta?'
-      4-5 Artist Functions 6_instruction: |
-        Use the "draw a square" and "draw a
-        triangle functions" to draw a house. (Hint: The square's sides are 200 pixels)
-      4-5 Artist Functions 6b_instruction: |
-        Use the draw a square and triangle functions
-        along with other blocks to create a house by adding them to the 'draw a house"
-        function and calling it.
-      4-5 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        houses that are 100 pixels and 50 pixels. The two houses are separated by
-        50 pixels.
-      4-5 Artist Functions 8_instruction: |
-        The "draw a flower" function has a parameter
-        that allows you to set the stem height.  Set it to 200 and see what happens.
-      4-5 Artist Functions 9_instruction: |
-        Draw these 3 flowers. The first one's
-        height is 100 and the next flower is always 50 pixels more than the height
-        of the previous one. The flowers are also 100 pixels apart.
+      4-5 Artist Functions 6_instruction: 'Piirrä talo käyttämällä "piirrä neliö" - ja "piirrä kolmio" -funktioita. (Vihje: neliön sivut ovat 200 pikseliä)'
+      4-5 Artist Functions 6b_instruction: 'Käytä "piirrä neliö" - ja "piirrä kolmio" -funktioita yhdessä toisten palikoiden kanssa ja tee talo lisäämällä ne "piirrä talo" -funktioon ja calling it.'
+      4-5 Artist Functions 7_instruction: 'Käytä "piirrä talo" -funktiota ja piirrä talot, jotka ovat 100 ja 50 kuvapistettä. Talojen välissä on 50 kuvapistettä.'
+      4-5 Artist Functions 8_instruction: '"Piirrä kukka" -funktiolla on parametri, jonka avulla voit määrätä varren korkeuden. Aseta se 200:aan ja katso, mitä tapahtuu.'
+      4-5 Artist Functions 9_instruction: Piirrä nämä 3 kukkaa. Ensimmäisen korkeus on 100 ja seuraava kukka on aina 50 kuvapistettä korkeampi kuin edellinen. Kukat ovat 100 kuvapisteen päässä toisistaan.
       4-5 Artist Patterns 1_instruction: Osaatko piirtää tämän neliön käyttämällä silmukkaa? Jokainen sivu on 20 pikseliä pitkä.
       4-5 Artist Patterns 10_instruction: 'Tämä koodi piirtää kaksi riviä kuusikulmioita - toista koko juttu silmukassa 4 kertaa piirtääksesi koko hunajakennon. Vihje: Sinun täytyy hypätä takaisin 120 pikseliä ulommassa silmukassa varmistaaksesi ettei taiteilija vahingossa piirrä ruudun ulkopuolelle.'
-      4-5 Artist Patterns 11_instruction: |
-        How many times do you need to loop this
-        to draw a half circle? 
+      4-5 Artist Patterns 11_instruction: 'Kuinka monta kertaa sinun pitää toistaa tämä, että voit piirtää puoliympyrän ? '
       4-5 Artist Patterns 12_instruction: Mitä tapahtuu, jos kopioit tämän silmukan ja käännät vasemmalle oiken sijaan? Osaatko toistaa tuon piirtääksesi aallon?
-      4-5 Artist Patterns 13_instruction: "Now let's loop that whole thing four\ntimes to create this picture frame. Watch out for the corners - you can't\njust turn 90 degrees! \\r\n\\r\nIf looping a 3 degree turn 60 times makes a\nhalf circle, which of these blocks of code will make an additional quarter\ncircle for the corners?"
-      4-5 Artist Patterns 2_instruction: |
-        If you place your square loop inside another
-        loop, we call that a nested loop. What do you need to add as an outer loop
-        to make sure all 15 squares line up next to each other?
-      4-5 Artist Patterns 3_instruction: |
-        Now let's go one level deeper! We've
-        nested that whole block of code into another loop, but you need to get the
-        artist back in place to draw the next line. Which of these code blocks can
-        you place at the end of the outermost loop to draw the whole grid?
+      4-5 Artist Patterns 13_instruction: "Kerrataanpa koko juttu neljä kertaa, jotta saadaan kehykset tähän piirustukseen. Ole tarkkaavainen kulmissa, et voi vain kääntyä 90 astetta!\\r\n\\r Jos 3 asteen silmukka pitää toistaa 60 kertaa, jotta saa puoliympyrän, millä näistä koodipalikoista saa aikaan kulmaan neljännesympyrän?"
+      4-5 Artist Patterns 2_instruction: Jos neliösilmukka laitetaan toisen silmukan sisään, sitä kutsutaan sisäkkäiseksi silmukaksi. Mitä on lisättävä ulommaiseksi silmukaksi, jotta varmistetaan, että kaikki 15 neliötä asettuvat suoraan jonoon?
+      4-5 Artist Patterns 3_instruction: Mennäänpä tasoa syvemmälle! Olemme laittaneet kokonaisen koodipalikan toisen silmukan sisään, mutta nyt on saatava taiteilija paikalle piirtämään seuraava viiva. Mikä näistä koodipalikoista pitää laittaa ulommaisimman silmukan loppuun, jotta saadaan piirrettyä kokonainen ristikko?
       4-5 Artist Patterns 4_instruction: Tällä timantilla on 50 pikselin sivut ja 120 ja 60 asteen kulmat. Käytä silmukkaa piirtääksesi sen.
       4-5 Artist Patterns 5.5_instruction: Kuinka monta kertaa sinun tarvitsee toistaa tämä piirtääksesi täyden ruudukon timantteja?
-      4-5 Artist Patterns 5_instruction: "Repeat this code to make a row of 6 diamonds.\n\\r\n\\r\nNotice that we changed our diamond code to repeat 3 times instead\nof 2 - why do you think that is?\\r\n"
-      4-5 Artist Patterns 6_instruction: |
-        How many times do you need to repeat this
-        block to draw the full grid of diamonds?
-      4-5 Artist Patterns 7_instruction: |
-        Let's modify the code from the last puzzle
-        to make this more complex pattern. Notice how the diamonds overlap now, try
-        changing the first "jump backwards" from 100 to 50 (half as far) - now how
-        far should the artist go in the second "jump backwards"?
-      4-5 Artist Patterns 8_instruction: |
-        Use a loop to draw this hexagon with 40
-        pixel sides and 60 degree angles.
-      4-5 Artist Patterns 9.5_instruction: |
-        Let's loop this code to draw two rows
-        of hexagons. Notice how our second row is shifted to the right.
-      4-5 Artist Patterns 9_instruction: "Now repeat this code 3 times and draw the\nwhole row. \\r\n\\r\nEach hexagon is 80 pixels wide from the furthest points\nleft to right."
-      4-5 Artist Patterns Free Play_instruction: |
-        Free play - try your hand at making
-        a pattern of your own!
-      4-5 Bee Conditionals - FC Test_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      4-5 Artist Patterns 5_instruction: "Toista tämä koodi ja tee 6 timantin rivi.\n\\r\n\\r\nHuomaa, että timanttikoodia on muutettu. Se toistaa 3 kertaa 2 kerran sijaan - minkähän takia niin käy?\\r\n"
+      4-5 Artist Patterns 6_instruction: Kuinka monta kertaa tämä palikka täytyy toistaa, jotta saadaan piirretyksi täysi timanttiruudukko?
+      4-5 Artist Patterns 7_instruction: "Muokataanpa edellisen tehtävän koodia, jotta saadaan tästä monimutkaisempi malli. Huomaa, kuinka timantit menevät nyt osittain päällekkäin. Yritä muuttaa ensimmäistä 'hyppyä taaksepäin' sadasta viiteenkymmeneen (puoliksi niin kauas). Kuinka kauas taiteilijan pitäisi mennä toisella 'hypyllä taaksepäin'?"
+      4-5 Artist Patterns 8_instruction: Käytä silmukkaa ja piirrä tämä kuusikulmio, jossa on 40 kuvapisteen sivut ja 60 asteen kulmat.
+      4-5 Artist Patterns 9.5_instruction: Tehdäänpä tähän koodiin silmukka, että saamme piirrettyä kaksi riviä kuusikulmioita. Huomaa, kuinka toinen rivimme on siirtynyt oikealle.
+      4-5 Artist Patterns 9_instruction: "Toista tämä koodi 3 kertaa ja piirrä kokonainen rivi.\\r\n\\r\nJokainen kuusikulmio on 80 kuvapistettä mitattuna äärimmäisestä pisteestä vasemmalla oikean reunan äärimmäiseen pisteeseen."
+      4-5 Artist Patterns Free Play_instruction: 'Vapaa peli - koeta piirtää oma kuvio!'
+      4-5 Bee Conditionals - FC Test_instruction: Mehiläinen haluaa mettä juuri nyt. Kaikki kohteet eivat ole kukkkia, tarkistapa siis JOKAISEN PILVEN alta, ettei siellä piileskele kukkaa. Jos löydät kukan, voit kerätä meden.
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: |
-        This cloud is blocking my view! Check
-        to see if there's a flower under the cloud, and only get nectar if there's
-        a flower. Be careful, it can change!
+      4-5 Bee Conditionals 1_instruction: En näe, koska pilvi on edessä! Katso, onko pilven alla kukka. Jos löydät kukan, voit kerätä meden. Ole varovainen, se voi muuttua!
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: "More clouds! \\r\n\\r\nCheck underneath\nevery cloud to see if it is hiding a flower before you get nectar.  \\r\n\\r\nRemember:\nNot all clouds hide the same thing!"
-      4-5 Bee Conditionals 3_instruction: |
-        Now I just want to make honey. Some of
-        these clouds might have honeycombs under them. Be sure to check each cloud!
+      4-5 Bee Conditionals 2_instruction: "Lisää pilviä!\\r\n\\r\nTarkista jokainen pilvi, jotta tiedät, onko sen alla kukka. Jos löydät kukan, voit kerätä meden.\\r\n\\r\nMuista:\nKaikki pilvet eivät piilottelee samaa asiaa!"
+      4-5 Bee Conditionals 3_instruction: Nyt haluan tehdä hunajaa. Joidenkin näiden pilvien alla voi olla hunajakennoja. Tarkista jokainen pilvi!
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 4_instruction: |
-        Sometimes this cloud covers a flower,
-        and sometimes it covers a honeycomb! Use the if/else block to collect nectar
-        if it is a flower, else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 5_instruction: "There will be either a flower or a honeycomb\nunder each of those clouds!\\r\n\\r\nUse the `if/else` block to collect nectar\nif there is a flower.\\r\nOtherwise, make honey (because there is a honeycomb)."
+      4-5 Bee Conditionals 4_instruction: Joskus pilvi peittää kukan, joskus hunajakennon! Jos löydät kukan, käytä jos/muuten -palikkaa kerätäksesi mettä tai muuten-palikkaa tehdäksesi hunajaa (koska löysit hunajakennon).
+      4-5 Bee Conditionals 5_instruction: "Noiden pilvien alta löytyy joko kukka tai hunajakenno!\\r\n\\r\nJos löydät kukan, käytä 'jos/muuten' -palikkaa kerätäksesi mettä.\\r\nMuussa tapauksessa, tee hunajaa (koska pilven alla on hunajakenno)."
       4-5 Bee Conditionals 6 (copy 1)_instruction: |
         This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
-      4-5 Bee Conditionals 6_instruction: "I am not sure how much nectar this flower\nhas, but I know it has either 1, 2, or 3 nectar. \\r\n\\r\nCombine the conditional\nblocks (`if` and/or `if/else`) to only get as much nectar as the flower has.\n\\r\n\\r\nRemember, the amount of nectar can change each time you run the puzzle!"
-      4-5 Bee Conditionals 7_instruction: "These flowers can have 3, 2, or 1 nectar.\n\\r\n\\r\nComplete the `check purple flower` function and use it to collect\nall of the nectar at the flowers."
-      4-5 Bee Conditionals 8_instruction: "Write the function for `check flower make\nhoney`. \\r\n\\r\nYour function should check if the purple flower has 3, 2,\nor 1 nectar and get all of the nectar. \\r\nThen, move forward and make honey."
-      4-5 Bee Conditionals Assessment 1_instruction: "**Assessment:** This cloud\nis either hiding a flower with one nectar or a honeycomb that needs one honey.  \\r\n\\r\nComplete\nthe `get nectar or make honey` function, then call it to collect the nectar\nor honey. \\r\n"
-      4-5 Bee Debugging 1_instruction: "These blocks are really bugging me. \\r\n\\r\nCan\nyou fix them?"
+      4-5 Bee Conditionals 6_instruction: "En ole varma, kuinka paljon mettä tässä kukassa on, mutta tiedän, että sillä on 1, 2 tai 3 mettä.\\r\n\\r\nYhdistä vaihtoehtoiset palikat ('jos' ja/tai 'jos/muuten') saadaksesi kaiken kukan meden talteen.\n\\r\n\\r\nMuista, meden määrä voi muuttua joka kerta, kun suoritat tehtävää!"
+      4-5 Bee Conditionals 7_instruction: "Näillä kukilla voi olla 3, 2 tai 1 mettä.\n\\r\n\\r\nTee valmiiksi 'tarkasta violetti kukka' -funktio ja käytä sitä kerätessäsi kukkien kaiken meden talteen."
+      4-5 Bee Conditionals 8_instruction: "Kirjoita funktio ' tarkista kukka, tee hunajaa'.\\r\n\\r\nFunktiosi pitäisi tarkistaa, onko kukalla 3, 2 vai 1 mettä ja kerätä kaikki mesi.\\r\nMene sitten eteenpäin ja tee hunajaa."
+      4-5 Bee Conditionals Assessment 1_instruction: "Tehtävä: Tämä pilvi joko piilottelee kukkaa, jossa on yksi mesi tai sellaista hunajakennoa, joka tarvitsee yhden hunajan.\\r\n\\r\nTäydennä 'hae mesi tai tee hunajaa' -funktio, pyydä sitten sitä keräämään mesi tai hunaja.\\r\n"
+      4-5 Bee Debugging 1_instruction: "Nämä palikat todellakin häiritsevät minua.\\r\n\\r\nOsaatko korjata ne?"
       4-5 Bee Debugging 10_instruction: Etsi virheet ja korjata ne.
       4-5 Bee Debugging 11_instruction: Laskeeko tämä oikein?
       4-5 Bee Debugging 2_instruction: Auttaa mehiläistä saamaan mettä ja tekemään hunajaa.
@@ -390,9 +319,7 @@ fi:
       4-5 Bee Debugging 5_instruction: Jotakin ei ole tässä oikein...
       4-5 Bee Debugging 6_instruction: Violetissa kukassa on tuntematon määrä mettä. Korjaa lohkot siten, että kaikki mesi saadaan kerättyä.
       4-5 Bee Debugging 7_instruction: Funktiosta puuttuu jotain...
-      4-5 Bee Debugging 8_instruction: |
-        This function is fine, but it isn't used
-        properly.
+      4-5 Bee Debugging 8_instruction: Tämä funktio on kunnossa, mutta sitä ei käytetä kunnolla.
       4-5 Bee Debugging 9_instruction: Miksi mehiläinen ei tee tarpeeksi hunajaa?
       4-5 Bee Debugging Assessment 1_instruction: 'Arviointi: Korjaa koodi.'
       4-5 Bee Nested Loops 1_instruction: Käytä silmukkaa kerätäksesi kaikki mesi.
@@ -409,19 +336,15 @@ fi:
       4-5 Bee Nested Loops 9_instruction: |
         Collect all of the nectar from these flowers
         by nesting a while loop inside a repeat.
-      4-5 Bee Nested Loops Assessment 1_instruction: |
-        **Assessment:** Collect all
-        of the nectar and make all of the honey using loops.
-      4-5 Bee Nested Loops Rows_instruction: |
-        Gather nectar from the rows of flowers!
-        Use a nested loop.
+      4-5 Bee Nested Loops Assessment 1_instruction: 'Tehtävä: Kerää kaikki mesi ja tee kaikki hunaja käyttämällä silmukoita.'
+      4-5 Bee Nested Loops Rows_instruction: Kerää mesi kukkariveistä! Käytä sisäkkäistä silmukkaa.
       4-5 Maze 1 (copy 1)_instruction: Hyvä ihminen. Minä zombi. Täytyy… päästä…auringonkukalle.
       4-5 Maze 1_instruction: Hyvä hminen. Minä zombi. Täytyy.. päästä.. auringonkukalle.
       4-5 Maze 10_instruction: Pääsetkö auringonkukan luo käyttämällä vain neljää lohkoa?
       4-5 Maze 11_instruction: Pääsetkö auringonkukan luo käyttämällä vain kuutta lohkoa?
       4-5 Maze 12_instruction: Ok, tämä on hiukan erilainen. Voitko tehdä sen käyttämällä vain kuutta lohkoa?
       4-5 Maze 13_instruction: Hoida minut tuon possun luo!
-      4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
+      4-5 Maze 14_instruction: "Vie minut possun luo! Käytä 'toista kunnes' -palikkaa."
       4-5 Maze 2 (copy 1)_instruction: Saa zombi auringonkukan luokse, mutta vältä ahmijaa!
       4-5 Maze 2_instruction: Saa zombie auringonkukan luo, mutta vältä ahmijaa!
       4-5 Maze 3 (copy 1)_instruction: Täytyy.. päästä... auringonkukalle.
@@ -433,82 +356,44 @@ fi:
       4-5 Maze 6 (copy 1)_instruction: Pystytkö selvittämään pulman käyttämällä pienimmän mahdollisen määrän lohkoja?
       4-5 Maze 6_instruction: Pystytkö selvittämään pulman käyttämällä pienimmän mahdollisen määrän lohkoja?
       4-5 Maze 7_instruction: Hyvä hminen. Minä zombi. Täytyy.. päästä.. auringonkukalle.
-      4-5 Maze 8_instruction: "Get the zombie to the sunflower using as few blocks\nas you can.  \\r\n(Avoid the chompers!)"
-      4-5 Maze 9_instruction: "Now we have a new block called `repeat until`.  \\r\nThis\nwill let us keep looping commands until the zombie gets the sunflower.  \\r\n\\r\nUse\nthe new `repeat until` block to solve this puzzle in as few commands as possible."
+      4-5 Maze 8_instruction: "Käytä mahdollisimman vähän palikoita ja vie zombie auringonkukan luo.\\r\n(Vältä ahmijoita!)"
+      4-5 Maze 9_instruction: "Meillä on uusi palikka, 'toista kunnes'.\\r\nSen kanssa voimme toistaa käskyjä kunnes zombie pääsee auringonkukan luo.\\r\n\\r\nKäytä uutta 'toista kunnes' -palikkaa tämän tehtävän ratkaisemiseen niin vähillä käskyillä kuin mahdollista."
       4-5 Maze Assessment 1_instruction: 'Tehtävä: Mene auringonkukan luo.'
-      4-5 Maze Conditionals 1_instruction: |
-        Use the `repeat until` block to get the
-        zombie to the sunflower.
-      4-5 Maze Conditionals 2_instruction: |
-        Use the `repeat until` block to get the
-        zombie to the sunflower.
-      4-5 Maze Conditionals 3_instruction: "Use the `if` block to help me decide\nwhen to turn. \\r\n"
-      4-5 Maze Conditionals 4_instruction: |
-        Ok, solve this one just like the last
-        puzzle, but you need to remember how you used the `if` and `repeat until`
-        blocks together.
+      4-5 Maze Conditionals 1_instruction: "Käytä 'toista kunnes' -palikkaa ja vie zombie auringonkukan luo."
+      4-5 Maze Conditionals 2_instruction: "Käytä 'toista kunnes' -palikkaa ja vie zombie auringonkukan luo."
+      4-5 Maze Conditionals 3_instruction: "Käytä 'jos'-palikkaa ja auta minua päättämään milloin käännyt.\\r\n"
+      4-5 Maze Conditionals 4_instruction: "Ok, ratkaise tämä tehtävä samoin kuin edellinen. Sinun on muistettava, kuinka käytit 'jos' ja 'toista kunnes'-palikoita yhdessä."
       4-5 Maze Conditionals 5_instruction: 'Tahtoo auringonkukan! Käytä "jos"-lohkoa viedäksesi minut sinne käyttäen mahdollisimman pientä määrää lohkoja.'
       4-5 Maze Conditionals 6_instruction: 'Tahtoo auringonkukan! Käytä "jos"-lohkoa viedäksesi minut sinne käyttäen mahdollisimman pientä määrää lohkoja.'
-      4-5 Maze Conditionals 7_instruction: |
-        The solution to this puzzle isn't very
-        different, but watch out for the chompers!
-      4-5 Maze Conditionals 8_instruction: "The `if/else` block checks a condition,\nand then does one thing OR another. \\r\n\\r\nUse this new block to get me to\nthe sunflower."
-      4-5 Maze Conditionals 9_instruction: "One more practice puzzle with the `if/else`\nblock!\\r\n\\r\nTrace it with your finger to see if you can figure it out on\nyour first try."
-      4-5 Maze Conditionals Assessment 1_instruction: |
-        **Assessment:** Use a `repeat
-        until` and an `if/else` block to get me to the sunflower in as few blocks
-        as possible.
+      4-5 Maze Conditionals 7_instruction: Tämän tehtävän ratkaisu ei ole kovin erilainen, mutta varo ahmijoita!
+      4-5 Maze Conditionals 8_instruction: "'Jos/muuten' -palikka tarkistaa ehdon, ja sitten se tekee yhden asian TAI toisen.\\r\n\\r\nKäytä tätä uutta palikkaa ja vie minut auringonkukan luo."
+      4-5 Maze Conditionals 9_instruction: "Vielä yksi harjoitustehtävä 'jos/muuten' -palikalla!\\r\n\\r\nKulje sitä pitkin sormellasi ja kokeile, saatko sen oikein sen ensi yrittämällä."
+      4-5 Maze Conditionals Assessment 1_instruction: "Tehtävä: Käytä 'toista kunnes' ja 'jos/muuten' -palikoita ja vie minut auringonkukan luo. Käytä mahdollisimman vähiä palikoita."
       4-5 Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
-      4-5 Nested Loops 10_instruction: |
-        Draw the last row of stars on this flag by
-        looping the provided blocks. The stars are 50 pixels apart, but remember that
-        the stars themselves are 30 pixels wide.
-      4-5 Nested Loops 11_instruction: |
-        Can you draw these 10 squares of this sidewalk
-        using a nested loop? Each square is 30 pixels.
-      4-5 Nested Loops 12_instruction: |
-        Can you draw these 36 triangles using a nested
-        loop?
-      4-5 Nested Loops 2_instruction: |
-        Now nest this loop inside another loop to
-        draw 10 triangles.  This is called a "nested" loop.  
+      4-5 Nested Loops 10_instruction: Piirrä tähän lippuun viimeinen tähtirivi toistamalla annettuja palikoita. Tähdet ovat 50 kuvapisteen päässä toisistaan, mutta muista, ett tähdet ovat 30 kuvapistettä leveitä.
+      4-5 Nested Loops 11_instruction: Osaatko piirtää tämän jalkakäytävän 10 neliötä käyttäen sisäkkäistä silmukkaa? Jokainen neliö on 30 kuvapistettä.
+      4-5 Nested Loops 12_instruction: Osaatko piirtää nämä 36 kolmiota käyttäen sisäkkäistä silmukkaa?
+      4-5 Nested Loops 2_instruction: 'Laita tämä silmukka toisen silmukan sisään ja piirrä 10 kolmiota. Tätä kutsutaan sisäkkäiseksi silmukaksi.  '
       4-5 Nested Loops 3_instruction: "Create a sun by nesting the starter code in\nanother loop.\\r\n\\r\nTo get this cool design with a hollow center, you'll\nneed to jump forward by the length of the triangle before turning."
-      4-5 Nested Loops 5_instruction: Loop the given code to create a windmill.
+      4-5 Nested Loops 5_instruction: Liitä annettu koodi silmukkaan. Tee tuulimylly.
       4-5 Nested Loops 6_instruction: |
         Can you draw a hexagon by looping the triangle
         code?
-      4-5 Nested Loops 7_instruction: "Loop this design 10 times. \\r\n\\r\nHow much\ndo you have to turn each time you loop?"
-      4-5 Nested Loops 8_instruction: "Loop this shape 6 times. \\r\n\\r\nHow much\ndo you have to turn each time you loop? "
-      4-5 Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
-      4-5 Nested Loops Assessment 1_instruction: |
-        Assessment: Use a nested loop to
-        complete the design.
-      4-5 While Loops 1_instruction: |
-        Move me to the hole and fill it with two shovelfuls
-        of dirt, using the `fill` block.
-      4-5 While Loops 2_instruction: |
-        Move me to the pile of dirt and remove it with
-        5 shovel scoops, using the `remove 1` block.
-      4-5 While Loops 3_instruction: "Use as few blocks as possible to complete this\npuzzle!  \\r\n\\r\nMove me to the pile and remove all the dirt, then move to\nthe hole and fill it completely."
-      4-5 While Loops 4_instruction: "Wow, look at that! \\r\n\\r\nI don't know how\nmany shovelfuls of dirt this hole needs.  \\r\nCan you write a program that\nkeeps using the `fill` block until the ground is even?  "
-      4-5 While Loops 5_instruction: |
-        Wow, now there are two deep holes! Can you
-        write a program that fills them both until the ground is even?
-      4-5 While Loops 6_instruction: |
-        Wow, now there is a large pile of dirt! Can
-        you write a program that removes all of it so the ground is even?
-      4-5 While Loops 7_instruction: |
-        Wow, now there are three piles of dirt! Can
-        you write a program that removes each of them until the ground is even?
-      4-5 While Loops 8_instruction: |2
-         There is a really deep hole and a really large
-        pile of dirt.  How many shovelfuls of dirt need to be moved around to make
-        the ground flat?  Hint: Use the while loop for both.
-      4-5 While Loops Assessment 1_instruction: |
-        There are a lot of holes and piles.  Help
-        me to fill and remove them to make the ground flat.
+      4-5 Nested Loops 7_instruction: "Toista tämä kuvio 10 kertaa.\\r\n\\r\nKuinka monta astetta sinun on käännyttävä joka toistolla?"
+      4-5 Nested Loops 8_instruction: "Toista tämä kuvio 6 kertaa.\\r\n\\r\nKuinka monta astetta sinun on käännyttävä joka toistolla? "
+      4-5 Nested Loops 9_instruction: Piirrä alligaattorin suuhun hampaat!
+      4-5 Nested Loops Assessment 1_instruction: 'Tehtävä: Piirrä kuvio valmiiksi. Käytä sisäkkäistä silmukkaa.'
+      4-5 While Loops 1_instruction: "Liikuta minut kuoppaan ja täytä se kahdella multalapiollisella, käytä 'täytä'-palikkaa."
+      4-5 While Loops 2_instruction: "Liikuta minut multakasan luo. Poista kasa kauhomalla lapiolla 5 kertaa. Käytä 'poista1'-palikkaa."
+      4-5 While Loops 3_instruction: "Tee tämä tehtävä käyttämällä niin vähän palikoita kuin mahdollista!\\r\n\\r\nLiikuta minut kasan luo ja poista kaikki multa, siirry sitten kuopan luo ja täytä se kokonaan."
+      4-5 While Loops 4_instruction: "Vau, katsohan!\\r\n\\r\nEn tiedä, kuinka monta multalapiollista tähän kuoppaan tarvitaan.\\r\nOsaatko kirjoittaa ohjelman, joka käyttää 'täytä'-palikkaa, kunnes maa on tasainen?  "
+      4-5 While Loops 5_instruction: Vau, nyt tässä on kaksi syvää kuoppaa! Osaatko kirjoittaa ohjelman, joka täyttää ne molemmat, kunnes maa on tasainen?
+      4-5 While Loops 6_instruction: Vau, nyt edessäsi on iso multakasa. Osaatko kirjoittaa ohjelman, joka poistaa sen kaiken niin, että maasta tulee tasainen?
+      4-5 While Loops 7_instruction: Vau, nyt multakasoja on kolme! Osaatko kirjoittaa ohjelman, joka poistaa niistä jokaisen, kunnes maa on tasainen?
+      4-5 While Loops 8_instruction: " Nyt edessäsi on todella syvä kuoppa ja tosi suuri multakasa. Kuinka monta lapiollista multaa pitää siirtää, jotta maa olisi tasainen? Vinkki: Käytä molempiin 'niin kauan kuin' -silmukkaa."
+      4-5 While Loops Assessment 1_instruction: Kuoppia ja kasoja on paljon. Auta minua täyttämään ja poistamaan ne niin, että maasta tulee tasainen.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -575,19 +460,13 @@ fi:
         Loop this design 6 times. How much do
         you have to turn each time you loop? (Hint: What is 360 divided by 6?)
       Artist - Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
-      Artist - Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete
-        the design.
+      Artist - Nested Loops Assessment 1_instruction: Tee kuvio valmiiksi. Käytä sisäkkäistä silmukkaa.
       Auto Open Function Editor_instruction: |
         You can call functions from inside
         other functions! Using your "shape" function as a base, create 3 house shapes
         each 20 pixels larger than the last starting at 50 pixels in length. Using
         a counter loop might be helpful. 
-      Bee Recommended Blocks test_instruction: |
-        Purple flowers may have either 1
-        or 0 nectar, but you don't know which one! Be careful not to collect nectar
-        from a purple flower if it doesn't have any. Check if the nectar is equal
-        to 1 by using the if block.
+      Bee Recommended Blocks test_instruction: "Violeteilla kukilla on joko 1 tai 0 mettä, mutta sitä ei voi tietää! Varo, ettet kerää mettä violetista kukasta, jos sillä ei ole mettä. Tarkista, että meden määrä on 1 käyttämällä 'jos-palikkaa."
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -740,12 +619,8 @@ fi:
         Build a three level pyramid,
         there are no other directions, so just play with the pieces until you get
         it!
-      Busy Bee 2_instruction: |
-        This bee has a lot of work to do! Do you notice any
-        patterns that you can use to simplify your code?
-      Busy Bee_instruction: |
-        This bee has a lot of work to do! Do you notice any
-        patterns that you can use to simplify your code?
+      Busy Bee 2_instruction: Tällä mehiläisellä on paljon puuhaa! Huomaatko malleja, joiden avulla voi yksinkertaistaa koodia?
+      Busy Bee_instruction: Tällä mehiläisellä on paljon puuhaa! Huomaatko malleja, joiden avulla voi yksinkertaistaa koodia?
       C3-Farmer While Loops 1_instruction: |
         Move me to the hole and fill it with
         two shovelfuls of dirt, using the "fill" block.
@@ -1011,13 +886,9 @@ fi:
       Course 2 Bee Loops 4_instruction: |
         What happens if you loop this sequence 3
         times? Don't forget to make the honey at the end!
-      Course 2 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
-      Course 4 2_instruction: |
-        The bee only wants nectar right now. Remember, not
-        all objects are flowers, so check to gather nectar only at flowers.
-      Course 4 Artist 1_instruction: |
-        Help me draw a box. (Each line is 200 pixels
-        long) 
+      Course 2 Maze Loops 1_instruction: Osaatko viedä minut possun luo käyttämällä 5 palikkaa?
+      Course 4 2_instruction: Juuri nyt mehiläinen haluaa vain mettä. Muista, kaikki esineet eivät ole kukkia, joten tarkista, että keräät mettä vain kukista.
+      Course 4 Artist 1_instruction: 'Auta minua laatikon piirtämisessa. (Jokainen viiva on 200 kuvapistettä pitkä) '
       Course 4 Artist 10_instruction: "Click here to see the full instructions again!\\r\n\\r\nHere\nis the code for an interesting shape.  What happens when you repeat it multiple\ntimes, turning between each iteration?   Notice that the turns in this shape\nadd up to 420 degrees, which means that when your artist is done drawing,\nit will be facing a different direction than when you started.  That new direction\nis exactly 60 degrees to the right of where you began."
       Course 4 Artist 11_instruction: |
         Now for a challenge!  Feel free to use trial
@@ -1064,7 +935,7 @@ fi:
         you loop 8 times to draw this image?
       Course 4 Artist Binary 3_instruction: |
         Can you draw this pattern by looping
-        a three digit binary string?
+        just three binary digits (0s and 1s)?
       Course 4 Artist Binary 4_instruction: |
         Each binary string represents one row
         of this picture. Can you rearrange them so it draws a smiley face instead
@@ -1417,9 +1288,9 @@ fi:
         all the nectar on it's way to the honeycomb with as few blocks as possible.  When
         you get there, don't forget to make honey!
       Course 4 Bee Params 1_instruction: |
-        Use the function "get 3 nectar" which
-        turns, moves to collect the nectar, and then returns to the original location.
-        Write a sequence to collect all of the nectar using "get 3 nectar."
+        Write a sequence to collect all of the
+        nectar using `get 3 nectar` which turns, moves to collect the nectar, and
+        then returns to the original location.
       Course 4 Bee Params 2_instruction: |
         Modify the "get 3 nectar" function so
         it makes me turn right instead of left to the flowers.
@@ -1521,15 +1392,10 @@ fi:
         get the bottom right-hand corner.
       Course 4 EC 1a_instruction: No rules. No clues. Just the challenge!
       Course 4 EC 1b_instruction: No rules. No clues. Just the challenge!
-      Course 4 EC 2a_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
-      Course 4 EC 2b_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
-      Course 4 EC 2c_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
+      Course 4 EC 2a_instruction: No rules. No clues. Just the challenge!
+      Course 4 EC 2b_instruction: No rules. No clues. Just the challenge!
+      Course 4 EC 2c_instruction: No rules. No clues. Just the challenge!
+      Course 4 EC 2d_instruction: No rules. No clues. Just the challenge!
       Course 4 EC 3_instruction: |
         Use what you learned in the previous level to draw
         an image like this. Note: The code becomes more simple if you incorporate
@@ -1549,19 +1415,18 @@ fi:
         This time, let's try counting
         the odd numbers from 1 to 100.
       Course 4 Play Lab Params 1_instruction: |
-        Here's a function called "jump"
-        that causes your main character to jump up 100 pixels. Use the jump function
-        to collect all of the flags.
-      Course 4 Play Lab Params 10_instruction: "We've added one last function for\nyou. \\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
-      Course 4 Play Lab Params 2_instruction: "Now we've got flags that are too\nhigh for our current jump! Let's use both the \"up\" and \"down\" arrows\nso that we can have multiple jump heights.  \\r\n\\r\nWe need to add a parameter\nto our jump function called \"height\".  The up arrow should cause the dog\nto jump 200 pixels and the down arrow should make it jump only 100 pixels.\n\\r\n\\r\nHint: You will need to click \"edit\" on the jump function and update\nit so that it uses the \"height\" parameter."
+        Here's a function called `jump` that
+        causes your main character to jump up 100 pixels. Run the program and use
+        the jump function to collect all of the flags by moving the dog with the arrow
+        keys.
+      Course 4 Play Lab Params 10_instruction: "We've added one last function for\nyou. \\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it to level 3\nto move to the next puzzle. "
+      Course 4 Play Lab Params 2_instruction: "Now we've got flags that are too\nhigh for our current jump! Let's use both the \"up\" and \"down\" arrows\nso that we can have multiple jump heights.  \\r\n\\r\nWe need to add a parameter\nto our jump function called \"height\".  The up arrow should cause the dog\nto jump 200 pixels and the down arrow should make it jump only 100 pixels.\n"
       Course 4 Play Lab Params 3_instruction: |
         We have added another parameter to
         the jump function so that we can use it with other actors. Each actor is represented
         by a number, starting from one. Edit the "jump" function so that it uses
         the "actor" parameter to make the correct character jump. 
-      Course 4 Play Lab Params 4_instruction: |
-        Here's a function called "patrol."
-        Edit it to move Cat up 400 pixels and then down 400 pixels.
+      Course 4 Play Lab Params 4_instruction: "Here's a function called `patrol`.\n\\r\n\\r\nEdit `patrol` to move Cat up 400 pixels and then down 400 pixels."
       Course 4 Play Lab Params 5_instruction: |
         Edit the the "patrol" function to
         add an "actor" parameter, so that we can call it for each of the actors
@@ -1571,11 +1436,11 @@ fi:
         to the "patrol" function. Try using a "set speed" block with the new "speed"
         parameter to help Penguin get both flags before the other sprites even get
         one.
-      Course 4 Play Lab Params 7_instruction: "Let's have some fun! Look at the\ncode provided to see if you can figure out what each block does.  \\r\n\\r\nWhen\nyou're done, use the arrow keys to control Dog and collect all of the flags."
+      Course 4 Play Lab Params 7_instruction: "Let's have some fun! Look at the\ncode provided to see if you can figure out what each block does.  \\r\nWhen\nyou're done, use the arrow keys to control Dog and collect all of the flags.\\r\nNOTE:\nYou don't need to make any changes to the program"
       Course 4 Play Lab Params 8_instruction: |
-        Use a "when actor touches" block
+        Use the `when actor touches` block
         to send Dog back to the top-left ONLY if Dog touches any of the other actors.
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function \"score_points.\"\\r\n\\r\nEdit\nthe function so that a \"points\" parameter is added to the \"player_score\"\nvariable. \\r\n\\r\nThe variable \"player_score\" should increase each time\nDog tags Cat with hearts, and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith hearts, and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: |
         This time you don't have to write any
         code, just hit "Run" to play the game! In this game, you're the dog who
@@ -1749,6 +1614,9 @@ fi:
       CSD U3 Random Animation_instruction: |
         Use randomNumber() to animate Gary's
         mouth.
+      CSD U3 Random Choice_instruction: |
+        Use the randomNumber() block to generate
+        either 0 or 1
       CSD U3 Random Color_instruction: |
         Could you use randomNumber() to pick random
         colors as well? Try setting one or more of the channels in the rgb block with
@@ -1757,6 +1625,9 @@ fi:
         What do you think this code will do when
         it is run? Make a prediction, then run this code 5 - 10 times, recording the
         output each time. Share your results with your neighbor.
+      CSD U3 Random Min Max_instruction: |
+        Using console.log() write a program that
+        randomly returns a number in a range you define.
       CSD U3 Random Width Height_instruction: |
         Pick a shape function and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -1771,6 +1642,7 @@ fi:
         Put all of your code into
         a draw() loop and then add set the background to blue with the background()
         block.
+      CSD U3 Simple Drawing - Personal Animation_instruction: DO This
       CSD U3 Variable Arithmetic pt2_instruction: |
         Predict: What two numbers will
         be displayed in the console?
@@ -1783,30 +1655,48 @@ fi:
       CSD U3 Variable Incrementation_instruction: |
         Predict: What two numbers will
         be displayed in the console?
+      CSD U3 Variables CHALLENGE gamelab gary_instruction: |
+        Use variables to animate
+        Game Lab Gary
+      CSD U3 Variables draw loop newVars_instruction: |
+        Extend this project to create
+        your own random art visualization with variables.
+      CSD U3 Variables draw loop rgb_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
+      CSD U3 Variables draw loop xy_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
       CSD U3 Variables Initialize_instruction: |
         Predict: What will get displayed
         in the console?
-      CSD U3 Variables Intro_instruction: |
-        Create your own variable, give it a value,
-        and display that value in the console.
+      CSD U3 Variables Intro_instruction: 'Create your own variable '
+      CSD U3 Variables random drawing exemplar_instruction: |
+        Check out this example
+        randomized drawing.
       CSD U3 Variables Random_instruction: |
         Predict: What will get displayed in the
         console?
       CSD U3 Variables Reassign pt2_instruction: |
-        Predict: What will get displayed
-        in the console?
+        Create and assign a new variable
+        in a single line.
       CSD U3 Variables Reassign_instruction: |
         Predict: What will get displayed in
         the console?
       CSD U3 Variables Square Random Loop_instruction: |
-        Change the value "size"
-        initialized to make a larger square.
+        Test your predictions from
+        the last level.
       CSD U3 Variables Square Random_instruction: |
         Change the value "size" initialized
         to make a larger square.
       CSD U3 Variables Square_instruction: |
         Change the value "size" initialized
         to make a larger square.
+      CSD U3 Variables use value rect_instruction: |
+        Predict: What will get displayed
+        in the console?
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -2915,10 +2805,7 @@ fi:
         you don't know which one! Be careful not to collect nectar from a purple
         flower if it doesn't have any. Check if the nectar is equal to 1 by using
         the if block.
-      Ryan - 4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      Ryan - 4-5 Bee Conditionals 2_instruction: Mehiläinen haluaa mettä juuri nyt. Kaikki kohteet eivat ole kukkkia, tarkistapa siis JOKAISEN PILVEN alta, ettei siellä piileskele kukkaa. Jos löydät kukan, voit kerätä meden.
       Ryan - Bee Conditionals_instruction: |
         The bee only wants nectar right now.
         Not all objects are flowers, so check underneath EVERY CLOUD to see if it
@@ -2927,6 +2814,9 @@ fi:
         Now we're going to draw a doily step by step.
         First, draw a square.
       Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
+      Ryan Doily Step 3_instruction: |
         Now you need to turn and repeat it 20 times!
         How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
@@ -3711,6 +3601,15 @@ fi:
         back a default response.
       U3 full clicker demo_instruction: 'Clicker game - Try it out!'
       U3 mehal's clone_instruction: Try out a demo of the Digital Assistant!
+      U3 Variables consolelog_instruction: |
+        Use the write block to display the value
+        of size
+      U3 Variables misconceptions try it_instruction: |
+        Test out your predictions
+        from the previous level.
+      U3 Variables write_instruction: |
+        Use the write block to display the value of
+        size
       U3- Variables - Assign Random For Turtle Draw_instruction: |
         Try writing the
         same code in text mode.

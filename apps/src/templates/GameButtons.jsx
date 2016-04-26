@@ -3,6 +3,15 @@ var msg = require('../locale');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var commonStyles = require('../commonStyles');
 
+var styles = {
+  instructionsInTopPane: {
+    // common.scss provides an :after selector that ends up adding 18px of height
+    // to gameButtons. We want to get rid of that when we have don't have
+    // instructions below game buttons
+    marginBottom: -18
+  }
+};
+
 /**
  * A set of game buttons that consist of a run/reset button, and potentially a
  * set of children that we expect to be additional buttons.
@@ -14,7 +23,9 @@ var GameButtons = function (props) {
   }
 
   return (
-    <ProtectedStatefulDiv id="gameButtons">
+    <ProtectedStatefulDiv
+        id="gameButtons"
+        style={props.instructionsInTopPane ? styles.instructionsInTopPane : undefined}>
       <button id="runButton" className={runButtonClasses}>
         <div>{msg.runProgram()}</div>
         <img src="/blockly/media/1x1.gif" className="run26"/>
@@ -30,7 +41,8 @@ var GameButtons = function (props) {
 };
 
 GameButtons.propTypes = {
-  hideRunButton: React.PropTypes.bool
+  hideRunButton: React.PropTypes.bool,
+  instructionsInTopPane: React.PropTypes.bool
 };
 
 module.exports = GameButtons;
