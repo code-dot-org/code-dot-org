@@ -596,7 +596,7 @@ And(/^I create a (student|teacher) named "([^"]*)"$/) do |user_type, name|
   end
 end
 
-# can be used for tests that touch components that are being A/B tested
+# used for tests that touch components that are being A/B tested
 And(/^I create a student with an (even|odd) ID named "([^"]*)"$/) do |id_type, name|
   new_user = nil
   begin

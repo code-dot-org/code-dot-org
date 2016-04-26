@@ -253,7 +253,12 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
           return requestMatchesFeedback;
         });
 
-    if (alreadySeen) {
+    var isABTestingHintButton;
+    if (options.response && options.response.abtests) {
+      isABTestingHintButton = options.response.abtests.hint_button;
+    }
+
+    if (alreadySeen || isABTestingHintButton) {
       // Remove "Show hint" button.  Making it invisible isn't enough,
       // because it will still take up space.
       hintRequestButton.parentNode.removeChild(hintRequestButton);
