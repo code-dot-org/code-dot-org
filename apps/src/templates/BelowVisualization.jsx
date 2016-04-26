@@ -8,7 +8,10 @@ var InputOutputTable = require('./InputOutputTable');
 var BelowVisualization = function (props) {
   return (
     <ProtectedStatefulDiv id="belowVisualization">
-      <div id="bubble" className="clearfix">
+      <div
+          id="bubble"
+          className="clearfix"
+          style={props.instructionsInTopPane ? commonStyles.hidden : undefined}>
         <table id="prompt-table">
           <tbody>
             <tr>
@@ -37,7 +40,8 @@ var BelowVisualization = function (props) {
 BelowVisualization.propTypes = {
   inputOutputTable: React.PropTypes.arrayOf(
     React.PropTypes.arrayOf(React.PropTypes.number)
-  )
+  ),
+  instructionsInTopPane: React.PropTypes.bool
 };
 
 
