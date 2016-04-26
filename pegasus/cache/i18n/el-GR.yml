@@ -699,6 +699,11 @@
   dashboard_action_remove_confirm: "Κατάργηση;"
   dashboard_action_done: "Ολοκληρώθηκε"
   dashboard_action_required: "απαιτείται"
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: "Αρχική Σελίδα Εκπαιδευτή"
   dashboard_navigation_section_student_progress: "Λογαριασμοί μαθητών και Πρόοδος"
   dashboard_navigation_section_teacher_progress: "Πρόοδος του τμήματός σας"
@@ -716,6 +721,18 @@
   dashboard_navigation_view_stats: "Εμφάνιση στατιστικών"
   dashboard_navigation_section: "Τμήμα: %{section_name}"
   dashboard_navigation_student: "Μαθητής: %{student_name}"
+  dashboard_progress_not_started: "δεν έχει ξεκινήσει"
+  dashboard_progress_in_progress: "σε εξέλιξη"
+  dashboard_progress_not_completed: "δεν έχει ολοκληρωθεί"
+  dashboard_progress_completed_too_many_blocks: "ολοκληρώθηκε, πάρα πολλά μπλοκ"
+  dashboard_progress_completed_perfect: "ολοκληρώθηκε, τέλειο"
+  dashboard_progress_furthest_level_attempted: "τελευταίο επίπεδο επιχειρήθηκε"
+  dashboard_progress_submitted: "Υποβλήθηκε"
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: "Νέα ενότητα"
   dashboard_sections_jumbotron_instruction: "Δημιουργήστε νέες ενότητες και προσθέστε
     σε αυτές μαθητές. Οι ενότητες σας βοηθήσουν να οργανώσετε τους μαθητές σε μικρότερες
@@ -743,6 +760,26 @@
     καρτών που περιέχει τα στοιχεία του λογαριασμού που θα διανεμηθεί στους μαθητές
     σας χωριστά."
   dashboard_sections_switch_section: "Αλλαγή ενότητας:"
+  dashboard_sections_close: "Κλείσιμο"
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: "Προσθήκη μαθητή"
   dashboard_students_add_students: "Προσθήκη πολλών μαθητών"
   dashboard_students_add_multiple: "Πληκτρολογήστε ή επικολλήστε τα ονόματα των μαθητών
@@ -832,13 +869,6 @@
   dashboard_login_picture: "Εικόνα"
   dashboard_login_none: "Ηλεκτρονικό ταχυδρομείο"
   dashboard_new_password: "νέος κωδικός"
-  dashboard_progress_not_started: "δεν έχει ξεκινήσει"
-  dashboard_progress_in_progress: "σε εξέλιξη"
-  dashboard_progress_not_completed: "δεν έχει ολοκληρωθεί"
-  dashboard_progress_completed_too_many_blocks: "ολοκληρώθηκε, πάρα πολλά μπλοκ"
-  dashboard_progress_completed_perfect: "ολοκληρώθηκε, τέλειο"
-  dashboard_progress_furthest_level_attempted: "τελευταίο επίπεδο επιχειρήθηκε"
-  dashboard_progress_submitted: "Υποβλήθηκε"
   dashboard_stage: "Επίπεδο"
   dashboard_puzzle: "Παζλ"
   dashboard_question: "Ερώτηση"
@@ -884,20 +914,7 @@
     problem in computer science. Code Studio teachers are leading the way in educating
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
-  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you
-    (or a teacher you know) want to learn how to teach a full year introductory high
-    school computer science class students will love? You don't need any prior experience
-    to join our free workshops for our Exploring Computer Science course. Sign up
-    by April 22nd. "
   dashboard_announce_button_text: "Μάθετε περισσότερα"
-  dashboard_announce_hoc: "<b>15 Οκτωβρίου 2015</b> - Η Ώρα του Κώδικα πλησιάζει &mdash;
-    κάθε συμμετέχον διοργανωτής θα λάβει μια κάρτα δώρου για το Amazon.com ή το Microsoft's
-    Windows Store ως ευχαριστήριο δώρο. Εγγραφείτε σε τάξεις σε όλο τον κόσμο κατά
-    την περίοδο 7-13 Δεκεμβρίου."
-  dashboard_announce_playlab: "<b> 4 Δεκέμβρη, 2015 </b> - Η Ωρα του Κώδικα έφτασε!
-    Δοκιμάστε τα 50 σεμινάρια για κάθε ηλικία και κάθε συσκευή. Νέα τελευταίας εβδομάδας:
-    Προγραμμάτισε της δικές σου ιστορίες και παιχνίδια στο Play Lab! Δες πως μπορείς
-    να προγραμματίσεις τα παιχίδια Ιce Age και Gumball."
   code_hoc_coming: "Η ώρα του κώδικα έφτασε  - 8-14 Δεκεμβρίου!"
   code_sign_up: "Εγγραφείτε για να συμμετάσχετε κατά τη διάρκεια της εκπαιδευτικής
     εβδομάδας για την Επιστήμη της Πληροφορικής"
