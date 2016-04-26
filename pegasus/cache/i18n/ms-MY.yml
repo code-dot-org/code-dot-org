@@ -651,6 +651,11 @@
   dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Selesai
   dashboard_action_required: diperlukan
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Laman Utama Guru
   dashboard_navigation_section_student_progress: Akaun pelajar dan kemajuan
   dashboard_navigation_section_teacher_progress: Your Course Progress
@@ -668,6 +673,18 @@
   dashboard_navigation_view_stats: Lihat Statistik
   dashboard_navigation_section: 'Seksyen: %{section_name}'
   dashboard_navigation_student: 'Pelajar: %{student_name}'
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_completed: belum selesai
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Seksyen baru
   dashboard_sections_jumbotron_instruction: Hasilkan seksyen baru dan tambah pelajar-pelajar
     kepadanya. Seksyen membantu anda menguruskan pelajar-pelajar ke dalam kumpulan-kumpulan
@@ -692,6 +709,26 @@
   dashboard_sections_print_secrets: You may then print a sheet of cards containing
     account information to be distributed to your students individually.
   dashboard_sections_switch_section: 'Tukar seksyen:'
+  dashboard_sections_close: Close
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Tambah pelajar
   dashboard_students_add_students: Tambah lebih pelajar
   dashboard_students_add_multiple: 'Taip atau salin nama pelajar anda, satu nama setiap
@@ -769,13 +806,6 @@
   dashboard_login_picture: Gambar
   dashboard_login_none: E-mel
   dashboard_new_password: Kata laluan baru
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
-  dashboard_progress_not_completed: belum selesai
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
-  dashboard_progress_submitted: submitted
   dashboard_stage: peringkat
   dashboard_puzzle: Teka-teki
   dashboard_question: Question
@@ -816,17 +846,7 @@
     problem in computer science. Code Studio teachers are leading the way in educating
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
-  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you
-    (or a teacher you know) want to learn how to teach a full year introductory high
-    school computer science class students will love? You don't need any prior experience
-    to join our free workshops for our Exploring Computer Science course. Sign up
-    by April 22nd. "
   dashboard_announce_button_text: Ketahui lebih lanjut
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
-  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Ketahui lebih lanjut

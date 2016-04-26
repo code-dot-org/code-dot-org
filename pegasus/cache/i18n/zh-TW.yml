@@ -24,7 +24,7 @@
   twentyhours_heading: "試試看我們的資訊科學課程簡介"
   twentyhours_text: "完成您的第一個小時的程式設計課程了嗎？在此後續課程中你可以瞭解更多資訊科學和程式設計的核心觀念。"
   og_title: "每個孩子都應該得到機會"
-  og_description: "每個學校的每個學生都應有機會學習電腦科學。"
+  og_description: "每位在學的學生都應該要有機會學習電腦科學，這會改變現在進行中的一切事物。"
   hoc2014_heading: 加入<a href="http://hourofcode.com">一小時的程式設計課程</a> <br/>，2014 年 12
     月 8 日至 14 日 <br/>
   hoc2014_students: "學生"
@@ -78,78 +78,51 @@
   view_unit: "查看單元"
   make_app: "製作一個App"
   congrats_guest_speaker_title: "給特別的演講者一個教室。"
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
+  congrats_guest_speaker_desc: "你的學生完成了電腦科學課程的話，喝采一下，並且試著邀請他成為一個客座講者到你的教室，讓他的經驗連結到真實的世界中。你可以使用我們的志願者地圖來連繫當地的志願者去參訪你的教室，或者搜尋一下任何城市中的電腦科學學生，或專業技術人員，透過遠端視訊的方式，激發啟發你的學生。"
   congrats_guest_speaker_cta: "尋找一位特約講者"
-  congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
+  congrats_third_party_title: "利用你的新技能來使用這些程式和網站。"
+  third_party_gradelevel_kto8: 8年級
+  third_party_gradelevel_kto2: 2年級
+  third_party_gradelevel_2to8: 2-8年級
+  third_party_gradelevel_4to12: 4-12年級
+  third_party_gradelevel_5to12: 5-12年級
+  third_party_gradelevel_6plus: 6年級以上
+  third_party_gradelevel_8plus: 8年級以上
+  third_party_platform_all: "平台：網頁、ipad和Android"
+  third_party_platform_mobile: "平台：ipad和Android"
+  third_party_platform_web: "平台：網頁"
   third_party_price_varies: "價格:視方案決定"
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_free: "價格：免費"
+  third_party_price_299: "價格：$2.99/下載"
+  third_party_price_individual: "個別價格 ︰ 免費試用 & 25 美元/月"
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
-  third_party_tynker_desc: Tynker's creative computing platform helps children develop
-    computational thinking and programming skills in a fun, intuitive and imaginative
-    way. Our innovative visual programming language, interactive self-paced courses,
-    and game-based programming activities provide an easy introduction to programming,
-    and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
-    games, and animations and share your creations with others in the online community.
-    Scratch helps young people learn to think creatively, reason systematically, and
-    work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
-  third_party_lightbot_desc: In Lightbot, students must program a robot with commands
-    to solve puzzles. Students may play the game in the Browser (requires Flash Player),
-    or on Android or iOS devices. Students play the initial set of “Basic” levels
-    in Lightbot. They will learn how to tell a computer what to do with a series of
-    basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
-  third_party_khan_desc: Learn how to program drawings, animations, and games using
-    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
-    can share whatever you create, explore what others have created and learn from
-    each other!
-  third_party_khan_btn_learn: Learn CS with Khan Academy
-  third_party_khan_btn_forum: Khan Academy CS Forum
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
-    allows everyone, even novices, to start programming and build fully functional
-    apps for Android devices. Newcomers to App Inventor can have their first app up
-    and running in an hour or less, and can program more complex apps in significantly
-    less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with
-    short videos, example code, and lots of programming exercises that make coding
-    fun and accessible for beginners. With CodeHS, you can get the help that every
-    new programmer needs to work through problems and keep learning. Our tutors are
-    everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
+  third_party_tynker_desc: Tynker 的創意電腦計算平臺，透過樂趣，直觀和富有想像力的方式，來培育電腦計算思維以及程式設計技巧。我們創新的視覺化程式設計語言，互動式自學課程，和以遊戲為基礎的程式設計活動可以提供簡單易懂的程式設計介紹，使孩童更具創新和創造能力。
+  third_party_tynker_btn_curriculum: "初次閱讀者的 Tynker 課程"
+  third_party_tynker_btn_site: "參訪 Tynker"
+  third_party_scratchjr_desc: Scratch Jr是讓幼童 （5-7 歲） 能夠創建他們自己的互動故事和遊戲的引導性程式語言。幼童只需抓取扣合圖形程式設計塊，就能使角色移動，跳、
+    跳舞和唱歌。兒童可以用繪圖編輯器修改角色，加入他們自己的聲音和音效，甚至插入自己的照片 — — 然後使用程式設計塊來讓他們的角色活靈活現地動起來
+  third_party_scratchjr_btn_curriculum: "下載Scratch. Jr課程"
+  third_party_scratchjr_btn_site: "參訪 Scratch Jr."
+  third_party_scratch_desc: "使用Scratch, 你可以撰寫自己的互動故事、遊戲和動畫程式，並分享你的創作給社群的其他人。Scratch協助年輕朋友學習如何有創意的思考、系統化的理性思維和協作的工作。這是21世紀生活中必要技能。"
+  third_party_scratch_btn_curriculum: "下載Scratch課程"
+  third_party_scratch_btn_forum: Scratch教育者論壇
+  third_party_scratch_btn_site: "參訪 Scratch"
+  third_party_lightbot_desc: 在Lightbot中，學生們必須撰寫機器人程式來解決難題。學生們會在瀏覽器中 （需要 Flash Player），或在
+    Android 或 iOS 設備上玩遊戲。學生們會從 Lightbot 中初始的"基本"級別開始遊戲。他們將學會如何告訴電腦執行一系列的基本命令，並因此體驗到編寫電腦程式後所發生的歷程。
+  third_party_lightbot_btn_curriculum: "下載 Lightbot 課程"
+  third_party_lightbot_btn_site: "參訪 Lightbot"
+  third_party_khan_desc: "學習如何使用使用 JavaScript & ProcessingJS來進行編寫繪圖、 動畫和遊戲程式，或學習如何用
+    HTML 和 CSS建立網頁。你可以分享你創造的、或者探索別人的創作並從他人身上互相學習 ！"
+  third_party_khan_btn_learn: "從Khan學院學習CS"
+  third_party_khan_btn_forum: Khan 學院 CS 論壇
+  third_party_appinv_desc: MIT（麻省理工學院）Inventor App是使用程式設計塊為介面的程式設計工具，該工具允許每個人，甚至新手，開始著手撰寫程式和建構功能齊全的應用程式在Android
+    設備上。MIT APP Inventor新手可以有設計在一個或小於一個小時內的時間，完成他們第一個應用程式，並可以比用更傳統的、 基於文本的語言程式用更少的時間建立更複雜的應用程式。
+  third_party_appinv_btn_curriculum: "下載App Inventor 2 課程"
+  third_party_appinv_btn_forum: App Inventor 2論壇
+  third_party_appinv_btn_site: "參訪App Inventor 2"
+  third_party_codehs_desc: CodeHS 介紹了程式積木相關視頻短片、 代碼範例和大量的程式設計練習，讓初學者操作學習編碼時能更富樂趣與無障礙。
+    CodeHS 也提供學校與教師課程，教學工具和專業的開發。個別的學習者，你可以從網路導師中獲得所需的協助或指導。
+  third_party_codehs_btn_try: "介紹更多CS的 學習"
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
@@ -550,6 +523,11 @@
   dashboard_action_remove_confirm: "刪除？"
   dashboard_action_done: "完成"
   dashboard_action_required: "必須的"
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: "教師主頁"
   dashboard_navigation_section_student_progress: "學生戶口及進度"
   dashboard_navigation_section_teacher_progress: "您的課程進度"
@@ -567,6 +545,18 @@
   dashboard_navigation_view_stats: "檢視統計資料"
   dashboard_navigation_section: "分區： %{section_name}"
   dashboard_navigation_student: "學生： %{student_name}"
+  dashboard_progress_not_started: "未開始"
+  dashboard_progress_in_progress: "進行中"
+  dashboard_progress_not_completed: "未完成"
+  dashboard_progress_completed_too_many_blocks: "完成，但使用過多積木"
+  dashboard_progress_completed_perfect: "完美完成"
+  dashboard_progress_furthest_level_attempted: "嘗試到的最遠關卡"
+  dashboard_progress_submitted: "已提交"
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: "新增一堂課"
   dashboard_sections_jumbotron_instruction: "建立新課程區段，並新增學生資料。課程區段可協助您將學生分成更小的群組，以便您可以追蹤他們的進度和管理他們的帳戶。"
   dashboard_sections_table_section: "班級"
@@ -583,6 +573,26 @@
   dashboard_sections_secret_none: "如果您想讓學生去管理他們自己的帳戶，包括選擇他們自己的密碼，選擇的 <b>無</b> 通關密錀的類型。"
   dashboard_sections_print_secrets: "您可以列印一張包含各帳戶資訊的小卡，再個別分發給學生。"
   dashboard_sections_switch_section: "切換課程區段："
+  dashboard_sections_close: "退出"
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: "新增學生"
   dashboard_students_add_students: "增加多名學生"
   dashboard_students_add_multiple: "輸入或貼上您的學生姓名，一位學生一行："
@@ -652,13 +662,6 @@
   dashboard_login_picture: "通關圖片"
   dashboard_login_none: "電子郵件"
   dashboard_new_password: "新密碼"
-  dashboard_progress_not_started: "未開始"
-  dashboard_progress_in_progress: "進行中"
-  dashboard_progress_not_completed: "未完成"
-  dashboard_progress_completed_too_many_blocks: "完成，但使用過多積木"
-  dashboard_progress_completed_perfect: "完美完成"
-  dashboard_progress_furthest_level_attempted: "嘗試到的最遠關卡"
-  dashboard_progress_submitted: "已提交"
   dashboard_stage: "階段"
   dashboard_puzzle: "關卡"
   dashboard_question: "問題 "
@@ -697,16 +700,7 @@
     problem in computer science. Code Studio teachers are leading the way in educating
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
-  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you
-    (or a teacher you know) want to learn how to teach a full year introductory high
-    school computer science class students will love? You don't need any prior experience
-    to join our free workshops for our Exploring Computer Science course. Sign up
-    by April 22nd. "
   dashboard_announce_button_text: "瞭解更多資訊"
-  dashboard_announce_hoc: "<b>2015 年 11 月 9 日</b>-全新的一小時程式設計教學課程，以即將上映的電影星際大戰：原力覺醒。與雷伊一同指導新的BB-8機器人完成所有的任務。然後，在遙不可及的銀河系中，加入萊婭來建立並共享你的遊戲。"
-  dashboard_announce_playlab: |
-    <b>2015年12月4日</b> -- Hour of Code來了！試試這50個適合每個年齡層、每個裝置的教學課程。
-    本週最新：用「遊戲實驗室」、「冰原歷險記」和「陶阿甘」來設計你自己的故事和遊戲。
   code_hoc_coming: "代碼小時就在這裡 — — 12 月 8-14 ！"
   code_sign_up: "註冊參與電腦科學教育週"
   learn_more: "快來試試"

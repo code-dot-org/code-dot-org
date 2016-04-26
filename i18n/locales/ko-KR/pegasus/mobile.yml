@@ -474,6 +474,11 @@ ko-KR:
   dashboard_action_remove_confirm: 삭제할까요?
   dashboard_action_done: 완료
   dashboard_action_required: 필수 항목
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: 교사 홈페이지
   dashboard_navigation_section_student_progress: 학생 계정 및 진도
   dashboard_navigation_section_teacher_progress: 나의 학습 진도
@@ -484,13 +489,24 @@ ko-KR:
   dashboard_navigation_all_sections: 학생 계정 및 진도
   dashboard_navigation_view_progress: 진도 보기
   dashboard_navigation_view_text_responses: 텍스트 응답 보기
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments: 평가 점수
   dashboard_navigation_add_students: 학생 추가
   dashboard_navigation_manage_students: 학생 관리
   dashboard_navigation_lesson_plans_resources: 수업 계획 및 자료
   dashboard_navigation_view_stats: 상태보기
   dashboard_navigation_section: '섹션: %{section_name}'
   dashboard_navigation_student: '학생: %{student_name}'
+  dashboard_progress_not_started: 시작 안됨
+  dashboard_progress_in_progress: 진행 중
+  dashboard_progress_not_completed: 완료되지 않음
+  dashboard_progress_completed_too_many_blocks: 완료되었지만, 너무 많은 블럭들을 사용함
+  dashboard_progress_completed_perfect: 완료
+  dashboard_progress_furthest_level_attempted: 시도한 가장 높은 레벨
+  dashboard_progress_submitted: 제출됨
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: 새 섹션
   dashboard_sections_jumbotron_instruction: 새로운 섹션을 만들고 학생을 추가합니다. 섹션은 학생들을 모다 작은 모둠으로 구성할 수 있게 하여 학생들의 계정에 따라 진도를 추적할 수 있습니다.
   dashboard_sections_table_section: 섹션
@@ -506,6 +522,19 @@ ko-KR:
   dashboard_sections_secret_none: '학생들이 자신들의 비번등을 포함한 자기 계정에 대해서 관리하기를 원하는 경우, 비밀보호를 <b>없음</b> 으로 설정하세요.'
   dashboard_sections_print_secrets: 그 다음에 학생들 개인별로 줄 수 있는 계정 정보가 담긴 카드를 인쇄할 수 있습니다.
   dashboard_sections_switch_section: '섹션 바꾸기:'
+  dashboard_sections_close: 닫기
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: 학생 추가
   dashboard_students_add_students: 여러 학생 추가
   dashboard_students_add_multiple: 학생들의 이름을 한 줄에 하나씩 입력하거나 붙여넣기 하세요.
@@ -572,18 +601,11 @@ ko-KR:
   dashboard_login_picture: 그림
   dashboard_login_none: 이메일
   dashboard_new_password: 새 비밀번호
-  dashboard_progress_not_started: 시작 안됨
-  dashboard_progress_in_progress: 진행 중
-  dashboard_progress_not_completed: 완료되지 않음
-  dashboard_progress_completed_too_many_blocks: 완료되었지만, 너무 많은 블럭들을 사용함
-  dashboard_progress_completed_perfect: 완료
-  dashboard_progress_furthest_level_attempted: 시도한 가장 높은 레벨
-  dashboard_progress_submitted: 제출됨
   dashboard_stage: 단계
   dashboard_puzzle: 퍼즐
   dashboard_question: 질문
   dashboard_response: 응답
-  dashboard_correctness: Correctness
+  dashboard_correctness: 정확도
   dashboard_correctness_free_response: Free response
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: 정답
@@ -614,10 +636,7 @@ ko-KR:
   dashboard_announcements: 공시사항
   dashboard_announce_view_all: 모두 보기
   dashboard_announce_message: '<b>2016년 2월 29일</b> - 워크숍 참석자의 90%가 최고의 전문 개발 프로그램으로 우리의 프로그램을 선정하였습니다. 수요로 인하여, 우리는 컴퓨터 과학을 위한 고등학교 전문 학습 프로그램 지점의 개수 제한을 늘렸습니다. 여러분의 지점을 확정하기 위해 <u>3월 31일</u>까지 지원하세요.'
-  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
   dashboard_announce_button_text: 더 알아보기
-  dashboard_announce_hoc: '<b>2015년 11월 23일</b> - 곧 개봉할 영화 Star Wars: The Force Awakens을 소재로 만든 새로운 Hour of Code 튜토리얼이 여기 있습니다. 레이와 함께 새로운 드로이드, Bb-8을 움직여 함께 임무를 수행하세요. 그리고나서 여러분이 만든 게임을 은하계멀리 멀리 공유하세요.'
-  dashboard_announce_playlab: '<b>2015년 12월 4일</b> - Hour of Code 가 돌아왔습니다! 모든 나이와 장치에서 가능한 50개의 튜토리얼들을 해보세요. 이번 주 최신: 새로운 Play Labs, 아이스 에이지, 검볼에서 자신만의 이야기들과 게임들을 만들어보세요.'
   code_hoc_coming: 'Hour of Code 가 여기있습니다. - 12월8일-14일!'
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
   learn_more: 지금 해보기
