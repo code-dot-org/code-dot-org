@@ -12,6 +12,7 @@ metadata
   nginx
   nodejs
   java-7
+  networking
 ).map{|x| "cdo-#{x}"}.
   push('sudo-user').
   each do |dep|
@@ -20,3 +21,6 @@ end
 
 # See https://github.com/hw-cookbooks/omnibus_updater/pull/105 for details on this branch.
 cookbook 'omnibus_updater', github: 'wjordan/omnibus_updater', branch: 'mixlib-install'
+
+# Not yet published to Supermarket: https://github.com/PaytmLabs/chef-ixgbevf/issues/1
+cookbook 'ixgbevf', github: 'wjordan/chef-ixgbevf', branch: 'cdo'

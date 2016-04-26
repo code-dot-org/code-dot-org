@@ -114,6 +114,7 @@
     "which": "1.1.1"
   },
   "dependencies": {
+    "query-string": "4.1.0",
     "react-color": "^2.0.0"
   }
 }
