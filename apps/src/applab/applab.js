@@ -1674,7 +1674,7 @@ Applab.updateProperty = function (element, property, value) {
 };
 
 Applab.isCrosshairAllowed = function () {
-  return !Applab.isReadOnlyView && !Applab.isRunning();
+  return !Applab.isRunning();
 };
 
 Applab.showRateLimitAlert = function () {
