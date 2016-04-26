@@ -518,6 +518,11 @@ it-IT:
   dashboard_action_remove_confirm: Eliminare?
   dashboard_action_done: Fatto
   dashboard_action_required: obbligatorio
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: "Cruscotto di Controllo dell'insegnante"
   dashboard_navigation_section_student_progress: Gestione delle classi e degli studenti
   dashboard_navigation_section_teacher_progress: I tuoi progressi
@@ -535,6 +540,17 @@ it-IT:
   dashboard_navigation_view_stats: Guarda le statistiche
   dashboard_navigation_section: 'Classe: %{section_name}'
   dashboard_navigation_student: 'Studente: %{student_name}'
+  dashboard_progress_not_started: non avviato
+  dashboard_progress_in_progress: in corso
+  dashboard_progress_not_completed: non completato
+  dashboard_progress_completed_too_many_blocks: completato, ma usando troppi blocchi
+  dashboard_progress_completed_perfect: completato in modo perfetto
+  dashboard_progress_furthest_level_attempted: esercizio più avanzato che è stato provato
+  dashboard_progress_submitted: inviato
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nuova classe
   dashboard_sections_jumbotron_instruction: Crea nuove classi e aggiungici studenti. Le classi ti aiutano a organizzare gli studenti in gruppi più piccoli, così è possibile controllare i loro progressi e gestire i loro account.
   dashboard_sections_table_section: Classe
@@ -550,6 +566,19 @@ it-IT:
   dashboard_sections_secret_none: 'Se vuoi che i tuoi studenti gestiscano i propri account, anche scegliendo la propria password, imposta il tipo di password a <b>email</b>.'
   dashboard_sections_print_secrets: Dopo puoi stampare un insieme di schede contenenti le informazioni degli account di ognuno dei tuoi studenti.
   dashboard_sections_switch_section: 'Cambia classe:'
+  dashboard_sections_close: Chiudi
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Aggiungi uno studente
   dashboard_students_add_students: Aggiungi più studenti
   dashboard_students_add_multiple: 'Scrivi o incolla i nomi dei tuoi studenti, uno per riga:'
@@ -616,13 +645,6 @@ it-IT:
   dashboard_login_picture: Immagine
   dashboard_login_none: Indirizzo di posta elettronica
   dashboard_new_password: nuova password
-  dashboard_progress_not_started: non avviato
-  dashboard_progress_in_progress: in corso
-  dashboard_progress_not_completed: non completato
-  dashboard_progress_completed_too_many_blocks: completato, ma usando troppi blocchi
-  dashboard_progress_completed_perfect: completato in modo perfetto
-  dashboard_progress_furthest_level_attempted: esercizio più avanzato che è stato provato
-  dashboard_progress_submitted: inviato
   dashboard_stage: Lezione
   dashboard_puzzle: Esercizio
   dashboard_question: Domanda
@@ -658,11 +680,8 @@ it-IT:
   dashboard_faq_k5: Domande frequenti FAQ K-5
   dashboard_announcements: Annunci
   dashboard_announce_view_all: Visualizza tutto
-  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
-  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
+  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
   dashboard_announce_button_text: Ulteriori informazioni
-  dashboard_announce_hoc: "<b>15 Ottobre 2015</b> - l'Ora del Codice 2015 sta arrivando! Ogni organizzatore di un evento dell'Ora del Codice riceverà un buono acquisto di Amazon.com o di Microsoft's Windows Store come regalo di ringraziamento. Unisciti agli studenti di tutto il mondo nella settimana 7-13 dicembre 2015."
-  dashboard_announce_playlab: "<b>4 Dicembre, 2015</b> - L'Ora del Codice è qua! Prova uno dei 50 corsi per tutte le età e tutti i dispositivi. Novità della settimana: programma le tue storie e i tuoi giochi con i nuovi corsi del Laboratorio: L'Era Glaciale e Gumball."
   code_hoc_coming: "L'Ora del Codice è qui: 8-14 Dicembre!"
   code_sign_up: "Iscriviti per partecipare durante la Settimana di Educazione all'Informatica"
   learn_more: Ulteriori informazioni

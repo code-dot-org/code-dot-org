@@ -630,6 +630,7 @@ en:
       Course 4 EC 2a_instruction: crwdns51033:0crwdne51033:0
       Course 4 EC 2b_instruction: crwdns51034:0crwdne51034:0
       Course 4 EC 2c_instruction: crwdns51035:0crwdne51035:0
+      Course 4 EC 2d_instruction: crwdns56455:0crwdne56455:0
       Course 4 EC 3_instruction: crwdns51036:0crwdne51036:0
       Course 4 EC 3a_instruction: crwdns51037:0crwdne51037:0
       Course 4 Maze 1_instruction: crwdns30808:0crwdne30808:0
@@ -712,24 +713,33 @@ en:
       CSD U3 Draw Loop Experiment_instruction: crwdns56280:0crwdne56280:0
       CSD U3 Frame Rate_instruction: crwdns56281:0crwdne56281:0
       CSD U3 Random Animation_instruction: crwdns56282:0crwdne56282:0
+      CSD U3 Random Choice_instruction: crwdns56456:0crwdne56456:0
       CSD U3 Random Color_instruction: crwdns56283:0crwdne56283:0
       CSD U3 Random Intro_instruction: crwdns56284:0crwdne56284:0
+      CSD U3 Random Min Max_instruction: crwdns56457:0crwdne56457:0
       CSD U3 Random Width Height_instruction: crwdns56285:0crwdne56285:0
       CSD U3 Simple Drawing - Animation 2_instruction: crwdns56286:0crwdne56286:0
       CSD U3 Simple Drawing - Animation_instruction: crwdns56287:0crwdne56287:0
       CSD U3 Simple Drawing - Background_instruction: crwdns56288:0crwdne56288:0
+      CSD U3 Simple Drawing - Personal Animation_instruction: crwdns56458:0crwdne56458:0
       CSD U3 Variable Arithmetic pt2_instruction: crwdns56289:0crwdne56289:0
       CSD U3 Variable Arithmetic_instruction: crwdns56290:0crwdne56290:0
       CSD U3 Variable Incrementation pt2_instruction: crwdns56291:0crwdne56291:0
       CSD U3 Variable Incrementation_instruction: crwdns56292:0crwdne56292:0
+      CSD U3 Variables CHALLENGE gamelab gary_instruction: crwdns56459:0crwdne56459:0
+      CSD U3 Variables draw loop newVars_instruction: crwdns56460:0crwdne56460:0
+      CSD U3 Variables draw loop rgb_instruction: crwdns56461:0crwdne56461:0
+      CSD U3 Variables draw loop xy_instruction: crwdns56462:0crwdne56462:0
       CSD U3 Variables Initialize_instruction: crwdns56293:0crwdne56293:0
       CSD U3 Variables Intro_instruction: crwdns56294:0crwdne56294:0
+      CSD U3 Variables random drawing exemplar_instruction: crwdns56463:0crwdne56463:0
       CSD U3 Variables Random_instruction: crwdns56295:0crwdne56295:0
       CSD U3 Variables Reassign pt2_instruction: crwdns56296:0crwdne56296:0
       CSD U3 Variables Reassign_instruction: crwdns56297:0crwdne56297:0
       CSD U3 Variables Square Random Loop_instruction: crwdns56298:0crwdne56298:0
       CSD U3 Variables Square Random_instruction: crwdns56299:0crwdne56299:0
       CSD U3 Variables Square_instruction: crwdns56300:0crwdne56300:0
+      CSD U3 Variables use value rect_instruction: crwdns56464:0crwdne56464:0
       CSP Data Unit - Counting Multiple Things_instruction: crwdns49703:0crwdne49703:0
       CSP Data Unit -Counting Records - Easy Way_instruction: crwdns49704:0crwdne49704:0
       CSP Data Unit -Counting Records - Hard Way_instruction: crwdns49705:0crwdne49705:0
@@ -1138,6 +1148,7 @@ en:
       Ryan - Bee Conditionals_instruction: crwdns55791:0crwdne55791:0
       Ryan Doily Step 1_instruction: crwdns56252:0crwdne56252:0
       Ryan Doily Step 2_instruction: crwdns56253:0crwdne56253:0
+      Ryan Doily Step 3_instruction: crwdns56465:0crwdne56465:0
       Ryan Test Locked Blocks_instruction: crwdns50669:0crwdne50669:0
       Ryan's clone of C4S15P10_instruction: crwdns49720:0crwdne49720:0
       Sam the Butterfly 1 (copy 1)_instruction: crwdns34665:0crwdne34665:0
@@ -1399,6 +1410,9 @@ en:
       U3 Digital_instruction: crwdns51172:0crwdne51172:0
       U3 full clicker demo_instruction: crwdns51173:0crwdne51173:0
       U3 mehal's clone_instruction: crwdns54294:0crwdne54294:0
+      U3 Variables consolelog_instruction: crwdns56466:0crwdne56466:0
+      U3 Variables misconceptions try it_instruction: crwdns56467:0crwdne56467:0
+      U3 Variables write_instruction: crwdns56468:0crwdne56468:0
       U3- Variables - Assign Random For Turtle Draw_instruction: crwdns50689:0crwdne50689:0
       U3- Variables - Changing the Value_instruction: crwdns50690:0crwdne50690:0
       U3- Variables - Create And Assign_instruction: crwdns50691:0crwdne50691:0
