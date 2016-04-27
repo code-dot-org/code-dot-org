@@ -35,7 +35,7 @@ var codegen = require('../codegen');
 var ArtistAPI = require('./api');
 var apiJavascript = require('./apiJavascript');
 var AppView = require('../templates/AppView');
-var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var CodeWorkspace = require('../templates/CodeWorkspace');
 var ArtistVisualizationColumn = require('./ArtistVisualizationColumn');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
@@ -208,19 +208,13 @@ Artist.prototype.init = function (config) {
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
 
-  var generateCodeWorkspaceHtmlFromEjs = function () {
-    return codeWorkspaceEjs({
-      assetUrl: this.studioApp_.assetUrl,
-      data: {
-        localeDirection: this.studioApp_.localeDirection(),
-        blockUsed : undefined,
-        idealBlockNumber : undefined,
-        editCode: this.level.editCode,
-        blockCounterClass : 'block-counter-default',
-        readonlyWorkspace: config.readonlyWorkspace
-      }
-    });
-  }.bind(this);
+  var codeWorkspace = (
+    <CodeWorkspace
+      localeDirection={this.studioApp_.localeDirection()}
+      editCode={!!config.level.editCode}
+      readonlyWorkspace={!!config.readonlyWorkspace}
+    />
+  );
 
   var iconPath = '/blockly/media/turtle/' +
     (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
@@ -233,7 +227,7 @@ Artist.prototype.init = function (config) {
     hideSource: !!config.hideSource,
     noVisualization: false,
     isRtl: this.studioApp_.isRtl(),
-    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    codeWorkspace: codeWorkspace,
     visualizationColumn: visualizationColumn,
     onMount: this.studioApp_.init.bind(this.studioApp_, config)
   }), document.getElementById(config.containerId));
