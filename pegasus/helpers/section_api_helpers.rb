@@ -21,7 +21,7 @@ class DashboardStudent
   end
 
   def self.create(params)
-    name = params[:name].to_s.present? ? params[:name].to_s : 'New Student'
+    name = !params[:name].to_s.empty? ? params[:name].to_s : 'New Student'
     gender = valid_gender?(params[:gender]) ? params[:gender] : nil
     birthday = age_to_birthday(params[:age]) ?
       age_to_birthday(params[:age]) : params[:birthday]
@@ -217,7 +217,7 @@ class DashboardSection
   def self.create(params)
     return nil unless params[:user] && params[:user][:user_type] == 'teacher'
 
-    name = params[:name].to_s.present? ? params[:name].to_s : 'New Section'
+    name = !params[:name].to_s.empty? ? params[:name].to_s : 'New Section'
     login_type =
       params[:login_type].to_s == 'none' ? 'email' : params[:login_type].to_s
     login_type = 'word' unless valid_login_type?(login_type)
