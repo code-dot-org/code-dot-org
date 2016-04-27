@@ -17,9 +17,9 @@ var apiBlockly = require('./apiBlockly');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var AppLabView = require('./AppLabView');
-var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var CodeWorkspace = require('../templates/CodeWorkspace');
+var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
 var dom = require('../dom');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
@@ -654,7 +654,7 @@ Applab.init = function (config) {
                           !config.level.debuggerDisabled);
   var breakpointsEnabled = !config.level.debuggerDisabled;
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var extraControlRows = '';
+  var extraControlRows;
 
   // Construct a logging observer for interpreter events
   if (!config.hideSource) {
@@ -663,10 +663,11 @@ Applab.init = function (config) {
 
   if (showDebugButtons || showDebugConsole) {
     debuggerUi = new JsDebuggerUi(Applab.runButtonClick);
-    extraControlRows = debuggerUi.getMarkup(studioApp.assetUrl, {
+    var extraControlRowsHtml = debuggerUi.getMarkup(studioApp.assetUrl, {
       showButtons: showDebugButtons,
       showConsole: showDebugConsole
     });
+    extraControlRows = <ProtectedStatefulDiv dangerouslySetInnerHTML={{ __html : extraControlRowsHtml }} />;
   }
 
   config.loadAudio = function () {
@@ -766,22 +767,6 @@ Applab.init = function (config) {
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
 
-  var generateCodeWorkspaceHtmlFromEjs = function () {
-    return codeWorkspaceEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        localeDirection: studioApp.localeDirection(),
-        extraControlRows: extraControlRows,
-        blockUsed: undefined,
-        idealBlockNumber: undefined,
-        editCode: level.editCode,
-        blockCounterClass: 'block-counter-default',
-        pinWorkspaceToBottom: true,
-        readonlyWorkspace: Applab.reduxStore.getState().level.isReadOnlyWorkspace
-      }
-    });
-  }.bind(this);
-
   var onMount = function () {
     studioApp.init(config);
 
@@ -863,8 +848,19 @@ Applab.init = function (config) {
   Applab.reduxStore.dispatch(changeInterfaceMode(
     Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
+
+  // TODO - move into AppLabView and put necessary props into store
+  var codeWorkspace = (
+    <CodeWorkspace
+      localeDirection={studioApp.localeDirection()}
+      editCode={!!config.level.editCode}
+      readonlyWorkspace={Applab.reduxStore.getState().level.isReadOnlyWorkspace}
+      extraControlRows={extraControlRows}
+    />
+  );
+
   Applab.reactInitialProps_ = {
-    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    codeWorkspace: codeWorkspace,
     onMount: onMount
   };
 
