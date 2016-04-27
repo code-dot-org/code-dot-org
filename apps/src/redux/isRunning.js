@@ -15,7 +15,7 @@ module.exports.default = function (state, action) {
 /**
  * @param {boolean} isRunning - Whether the app is currently running or not.
  */
-module.exports.toggleRunning = function (isRunning) {
+module.exports.setIsRunning = function (isRunning) {
   return {
     type: TOGGLE_RUNNING,
     isRunning: isRunning

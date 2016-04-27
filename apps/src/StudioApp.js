@@ -830,7 +830,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
     throw "Unexpected input";
   }
 
-  this.reduxStore_.dispatch(isRunning.toggleRunning(!showRun));
+  this.reduxStore_.dispatch(isRunning.setIsRunning(!showRun));
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
