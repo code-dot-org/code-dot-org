@@ -4,7 +4,7 @@
  */
 'use strict';
 
-require('../utils');
+require('../utils'); // Provides Function.prototype.inherits
 var NetSimEntity = require('./NetSimEntity');
 var ArgumentUtils = require('./ArgumentUtils');
 

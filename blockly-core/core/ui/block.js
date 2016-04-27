@@ -67,8 +67,8 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.rendered = false;
   this.disabled = false;
   this.tooltip = '';
-  // Disabling block context menus for code.org
-  this.contextMenu = false;
+
+  this.contextMenu = true;
 
   this.parentBlock_ = null;
   this.childBlocks_ = [];
@@ -663,8 +663,10 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
 
   if (Blockly.isRightButton(e)) {
     // Right-click.
-    // Unlike google Blockly, we don't want to show a context menu
-    //this.showContextMenu_(e);
+    // Only show context menus for level editors
+    if (Blockly.editBlocks) {
+      this.showContextMenu_(e);
+    }
   } else if (!this.isMovable() || !this.canDisconnectFromParent()) {
     // Allow unmovable blocks to be selected and context menued, but not
     // dragged.  Let this event bubble up to document, so the blockSpace may be
@@ -824,59 +826,6 @@ Blockly.Block.prototype.showContextMenu_ = function(e) {
     }
     options.push(duplicateOption);
 
-    if (Blockly.Comment && !this.collapsed_) {
-      // Option to add/remove a comment.
-      var commentOption = {enabled: true};
-      if (this.comment) {
-        commentOption.text = Blockly.Msg.REMOVE_COMMENT;
-        commentOption.callback = function() {
-          block.setCommentText(null);
-        };
-      } else {
-        commentOption.text = Blockly.Msg.ADD_COMMENT;
-        commentOption.callback = function() {
-          block.setCommentText('');
-        };
-      }
-      options.push(commentOption);
-    }
-
-    // Option to make block inline.
-    if (!this.collapsed_) {
-      for (var i = 0; i < this.inputList.length; i++) {
-        if (this.inputList[i].type == Blockly.INPUT_VALUE) {
-          // Only display this option if there is a value input on the block.
-          var inlineOption = {enabled: true};
-          inlineOption.text = this.inputsInline ? Blockly.Msg.EXTERNAL_INPUTS :
-                                                  Blockly.Msg.INLINE_INPUTS;
-          inlineOption.callback = function() {
-            block.setInputsInline(!block.inputsInline);
-          };
-          options.push(inlineOption);
-          break;
-        }
-      }
-    }
-
-    if (Blockly.collapse) {
-      // Option to collapse/expand block.
-      if (this.collapsed_) {
-        var expandOption = {enabled: true};
-        expandOption.text = Blockly.Msg.EXPAND_BLOCK;
-        expandOption.callback = function() {
-          block.setCollapsed(false);
-        };
-        options.push(expandOption);
-      } else {
-        var collapseOption = {enabled: true};
-        collapseOption.text = Blockly.Msg.COLLAPSE_BLOCK;
-        collapseOption.callback = function() {
-          block.setCollapsed(true);
-        };
-        options.push(collapseOption);
-      }
-    }
-
     // Option to disable/enable block.
     var disableOption = {
       text: this.disabled ?
@@ -907,14 +856,57 @@ Blockly.Block.prototype.showContextMenu_ = function(e) {
     options.push(deleteOption);
   }
 
-  // Option to get help.
-  var url = goog.isFunction(this.helpUrl) ? this.helpUrl() : this.helpUrl;
-  var helpOption = {enabled: !!url};
-  helpOption.text = Blockly.Msg.HELP;
-  helpOption.callback = function() {
-    block.showHelp_();
-  };
-  options.push(helpOption);
+  // Block-editor-only options
+  // Do not need to be localized
+  if (Blockly.editBlocks) {
+    // uservisible
+    var userVisibleOption = {
+      text: this.userVisible_ ?
+          "Make Invisible to Users" : "Make Visible to Users",
+      enabled: true,
+      callback: function() {
+        block.setUserVisible(!block.isUserVisible());
+        Blockly.ContextMenu.hide();
+      }
+    };
+    options.push(userVisibleOption);
+
+    // deletable
+    var deletableOption = {
+      text: this.deletable_ ?
+          "Make Undeletable to Users" : "Make Deletable to Users",
+      enabled: true,
+      callback: function() {
+        block.setDeletable(!block.isDeletable());
+        Blockly.ContextMenu.hide();
+      }
+    };
+    options.push(deletableOption);
+
+    // movable
+    var movableOption = {
+      text: this.movable_ ?
+          "Make Immovable to Users" : "Make Movable to Users",
+      enabled: true,
+      callback: function() {
+        block.setMovable(!block.isMovable());
+        Blockly.ContextMenu.hide();
+      }
+    };
+    options.push(movableOption);
+
+    // next connection disabled
+    var nextConnectionDisabledOption = {
+      text: this.nextConnectionDisabled_ ?
+          "Enable Next Connection" : "Disable Next Connection",
+      enabled: true,
+      callback: function () {
+        block.setNextConnectionDisabled(!block.nextConnectionDisabled_);
+        Blockly.ContextMenu.hide();
+      }
+    };
+    options.push(nextConnectionDisabledOption);
+  }
 
   // Allow the block to add or modify options.
   if (this.customContextMenu && !block.isInFlyout) {
@@ -1507,9 +1499,10 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
  */
 Blockly.Block.prototype.setNextConnectionDisabled = function(disabled) {
   this.nextConnectionDisabled_ = disabled;
-  if (this.nextConnectionDisabled_ === true) {
-    this.setNextStatement(false);
+  if (disabled && this.nextConnection && this.nextConnection.targetConnection) {
+    this.nextConnection.disconnect();
   }
+  this.setNextStatement(!disabled);
 };
 
 /**

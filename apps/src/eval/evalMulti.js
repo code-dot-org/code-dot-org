@@ -1,5 +1,6 @@
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
+require('../utils'); // Provides Function.prototype.inherits
 
 var EvalMulti = function (image1, image2) {
   evalUtils.ensureType(image1, EvalImage);

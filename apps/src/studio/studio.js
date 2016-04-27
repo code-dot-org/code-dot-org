@@ -18,7 +18,7 @@ var api = require('./api');
 var blocks = require('./blocks');
 var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var StudioVisualizationColumn = require('./StudioVisualizationColumn');
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Sprite = require('./Sprite');
@@ -30,9 +30,9 @@ var SamBatLogic = require('./samBatLogic');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
-var _ = utils.getLodash();
+var _ = require('../lodash');
 var dropletConfig = require('./dropletConfig');
-var Hammer = utils.getHammer();
+var Hammer = require('../hammer');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var annotationList = require('../acemode/annotationList');
@@ -333,54 +333,9 @@ var drawMap = function () {
     }
   }
 
-  var goalOverride = utils.valueOr(level.goalOverride, {});
-  var numFrames = 1;
-  if (goalOverride.goalAnimation && skin.animatedGoalFrames) {
-    numFrames = skin.animatedGoalFrames;
-  }
-
-  // Calculate the dimensions of the spritesheet & the sprite itself that's rendered
-  // out of it.  Precedence order is skin.goalSpriteWidth/Height, goalOverride.imageWidth/Height,
-  // and then Studio.MARKER_WIDTH/HEIGHT.
-  //
-  // Legacy levels might specify goalOverride.imageWidth/Height which are dimensions
-  // of the entire spritesheet, and rely upon studio's default MARKER_WIDTH/HEIGHT which
-  // are dimensions of the sprite itself.
-  // Newer levels might specify skin.goalSpriteWith/Height which are the dimensions of the
-  // sprite itself.  The dimensions of the spritesheet are calculated using skin.animatedGoalFrames.
-  // The fallback dimensions of both spritesheet and sprite are studio's default
-  // MARKER_WIDTH/HEIGHT.
-
-  var spritesheetWidth = skin.goalSpriteWidth ? (skin.goalSpriteWidth * numFrames) :
-    utils.valueOr(goalOverride.imageWidth, Studio.MARKER_WIDTH);
-  var spritesheetHeight = skin.goalSpriteHeight ? skin.goalSpriteHeight :
-    utils.valueOr(goalOverride.imageHeight, Studio.MARKER_HEIGHT);
-
-  var spriteWidth = utils.valueOr(skin.goalSpriteWidth, Studio.MARKER_WIDTH);
-  var spriteHeight = utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT);
-
   if (Studio.spriteGoals_) {
     for (i = 0; i < Studio.spriteGoals_.length; i++) {
-      // Add finish markers.
-
-      var finishClipPath = document.createElementNS(SVG_NS, 'clipPath');
-      finishClipPath.setAttribute('id', 'finishClipPath' + i);
-      var finishClipRect = document.createElementNS(SVG_NS, 'rect');
-      finishClipRect.setAttribute('id', 'finishClipRect' + i);
-      finishClipRect.setAttribute('width', spriteWidth);
-      finishClipRect.setAttribute('height', spriteHeight);
-      finishClipPath.appendChild(finishClipRect);
-      // Safari workaround: Clip paths work better when descendant of an SVGGElement.
-      spriteLayer.appendChild(finishClipPath);
-
-      var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
-      spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
-      spriteFinishMarker.setAttribute('width', spritesheetWidth);
-      spriteFinishMarker.setAttribute('height', spritesheetHeight);
-      if (!skin.disableClipRectOnGoals) {
-        spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
-      }
-      svg.appendChild(spriteFinishMarker);
+      Studio.createGoalElements(i, Studio.spriteGoals_[i]);
     }
   }
   Studio.applyGoalEffect();
@@ -521,6 +476,83 @@ function overlappingTest(x1, x2, xVariance, y1, y2, yVariance) {
   return (Math.abs(x1 - x2) < xVariance) && (Math.abs(y1 - y2) < yVariance);
 }
 
+Studio.allGoals_ = function () {
+  return Studio.spriteGoals_.concat(Studio.dynamicSpriteGoals_);
+};
+
+/**
+ * Creates DOM elements for the given goal, and augments the goal object
+ * with pointers to those elements.
+ * Note that if this method is called after the initialization step, it
+ * will likely need to be followed with a call to sortDrawOrder.
+ *
+ * @param {number} i - a unique identifier, used to create ids for
+ *        created elements
+ * @param {object} goal
+ */
+Studio.createGoalElements = function (i, goal) {
+  var svg = document.getElementById('svgStudio');
+  var spriteLayer = document.getElementById('backgroundLayer');
+
+  var goalOverride = utils.valueOr(level.goalOverride, {});
+  var numFrames = 1;
+  if (goalOverride.goalAnimation && skin.animatedGoalFrames) {
+    numFrames = skin.animatedGoalFrames;
+  }
+
+  // Calculate the dimensions of the spritesheet & the sprite itself that's rendered
+  // out of it.  Precedence order is skin.goalSpriteWidth/Height, goalOverride.imageWidth/Height,
+  // and then Studio.MARKER_WIDTH/HEIGHT.
+  //
+  // Legacy levels might specify goalOverride.imageWidth/Height which are dimensions
+  // of the entire spritesheet, and rely upon studio's default MARKER_WIDTH/HEIGHT which
+  // are dimensions of the sprite itself.
+  // Newer levels might specify skin.goalSpriteWith/Height which are the dimensions of the
+  // sprite itself.  The dimensions of the spritesheet are calculated using skin.animatedGoalFrames.
+  // The fallback dimensions of both spritesheet and sprite are studio's default
+  // MARKER_WIDTH/HEIGHT.
+
+  var spritesheetWidth = skin.goalSpriteWidth ? (skin.goalSpriteWidth * numFrames) :
+    utils.valueOr(goalOverride.imageWidth, Studio.MARKER_WIDTH);
+  var spritesheetHeight = skin.goalSpriteHeight ? skin.goalSpriteHeight :
+    utils.valueOr(goalOverride.imageHeight, Studio.MARKER_HEIGHT);
+
+  var spriteWidth = utils.valueOr(skin.goalSpriteWidth, Studio.MARKER_WIDTH);
+  var spriteHeight = utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT);
+
+  var offsetX = utils.valueOr(goalOverride.goalRenderOffsetX,
+      utils.valueOr(skin.goalRenderOffsetX, 0));
+  var offsetY = utils.valueOr(goalOverride.goalRenderOffsetY,
+      utils.valueOr(skin.goalRenderOffsetY, 0));
+
+  // Add finish markers.
+  goal.clipPath = document.createElementNS(SVG_NS, 'clipPath');
+  goal.clipPath.setAttribute('id', 'finishClipPath' + i);
+  goal.clipRect = document.createElementNS(SVG_NS, 'rect');
+  goal.clipRect.setAttribute('id', 'finishClipRect' + i);
+  goal.clipRect.setAttribute('width', spriteWidth);
+  goal.clipRect.setAttribute('height', spriteHeight);
+  goal.clipPath.appendChild(goal.clipRect);
+  // Safari workaround: Clip paths work better when descendant of an SVGGElement.
+  spriteLayer.appendChild(goal.clipPath);
+
+  goal.marker = document.createElementNS(SVG_NS, 'image');
+  goal.marker.setAttribute('id', 'spriteFinish' + i);
+  goal.marker.setAttribute('width', spritesheetWidth);
+  goal.marker.setAttribute('height', spritesheetHeight);
+  if (!skin.disableClipRectOnGoals) {
+    goal.marker.setAttribute('clip-path', 'url(#goal.clipPath' + i + ')');
+  }
+  goal.marker.setAttribute('x', goal.x + offsetX);
+  goal.marker.setAttribute('y', goal.y + offsetY);
+  goal.marker.setAttributeNS('http://www.w3.org/1999/xlink',
+      'xlink:href', Studio.getGoalAssetFromSkin());
+  goal.marker.setAttribute('opacity', 1);
+  goal.clipRect.setAttribute('x', goal.x + offsetX);
+  goal.clipRect.setAttribute('y', goal.y + offsetY);
+  svg.appendChild(goal.marker);
+};
+
 /** @type {ImageFilter} */
 var goalFilterEffect = null;
 
@@ -529,21 +561,15 @@ var goalFilterEffect = null;
  * in the level.
  */
 Studio.applyGoalEffect = function () {
-  if (!Studio.spriteGoals_) {
-    return;
-  }
-
   if (!goalFilterEffect) {
     var svg = document.getElementById('svgStudio');
     goalFilterEffect = ImageFilterFactory.makeFilterOfType(skin.goalEffect, svg);
   }
 
-  var spriteFinishMarker;
-  for (var i = 0; i < Studio.spriteGoals_.length; i++) {
-    spriteFinishMarker = document.getElementById('spriteFinish' + i);
-    if (goalFilterEffect) {
-      goalFilterEffect.applyTo(spriteFinishMarker);
-    }
+  if (goalFilterEffect) {
+    Studio.allGoals_().forEach(function (goal) {
+      goalFilterEffect.applyTo(goal.marker);
+    });
   }
 };
 
@@ -552,15 +578,13 @@ Studio.applyGoalEffect = function () {
  * in the level.
  */
 Studio.removeGoalEffect = function () {
-  if (!Studio.spriteGoals_ || !goalFilterEffect) {
+  if (!goalFilterEffect) {
     return;
   }
 
-  var spriteFinishMarker;
-  for (var i = 0; i < Studio.spriteGoals_.length; i++) {
-    spriteFinishMarker = document.getElementById('spriteFinish' + i);
-    goalFilterEffect.removeFrom(spriteFinishMarker);
-  }
+  Studio.allGoals_().forEach(function (goal) {
+    goalFilterEffect.removeFrom(goal.marker);
+  });
 };
 
 /**
@@ -901,14 +925,13 @@ function sortDrawOrder() {
   }
 
   // Add goals.
-  for (i = 0; i < Studio.spriteGoals_.length; i++) {
-    var goalHeight = skin.goalCollisionRectHeight || Studio.MARKER_HEIGHT;
-
+  var goalHeight = skin.goalCollisionRectHeight || Studio.MARKER_HEIGHT;
+  Studio.allGoals_().forEach(function (goal) {
     drawArray.push({
-      element: document.getElementById('spriteFinish' + i),
-      y: Studio.spriteGoals_[i].y + goalHeight
+      element: goal.marker,
+      y: goal.y + goalHeight
     });
-  }
+  });
 
   // Now sort everything by y.
   drawArray = _.sortBy(drawArray, 'y');
@@ -1759,6 +1782,9 @@ Studio.init = function (config) {
   Studio.tiles = [];
   Studio.tilesDrawn = false;
 
+  Studio.spriteGoals_ = [];
+  Studio.dynamicSpriteGoals_ = [];
+
   Studio.cloudStep = 0;
 
   Studio.clearEventHandlersKillTickLoop();
@@ -1794,17 +1820,6 @@ Studio.init = function (config) {
 
   window.addEventListener("keydown", Studio.onKey, false);
   window.addEventListener("keyup", Studio.onKey, false);
-
-  var showFinishButton = !level.isProjectLevel;
-  var finishButtonFirstLine = _.isEmpty(level.softButtons);
-  var firstControlsRow = require('./controls.html.ejs')({
-    assetUrl: studioApp.assetUrl,
-    finishButton: finishButtonFirstLine && showFinishButton
-  });
-  var extraControlRows = require('./extraControlRows.html.ejs')({
-    assetUrl: studioApp.assetUrl,
-    finishButton: !finishButtonFirstLine && showFinishButton
-  });
 
   var levelTracks = [];
   if (level.music && skin.musicMetadata) {
@@ -1974,17 +1989,9 @@ Studio.init = function (config) {
     });
   };
 
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        visualization: require('./visualization.html.ejs')(),
-        controls: firstControlsRow,
-        extraControlRows: extraControlRows,
-        inputOutputTable: level.inputOutputTable
-      }
-    });
-  };
+  var visualizationColumn = <StudioVisualizationColumn
+    finishButton={!level.isProjectLevel}
+    inputOutputTable={level.inputOutputTable}/>;
 
   var onMount = function () {
     studioApp.init(config);
@@ -2012,7 +2019,7 @@ Studio.init = function (config) {
     noVisualization: false,
     isRtl: studioApp.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
-    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
+    visualizationColumn: visualizationColumn,
     onMount: onMount
   }), document.getElementById(config.containerId));
 };
@@ -2349,27 +2356,38 @@ Studio.reset = function (first) {
  */
 Studio.resetGoalSprites = function () {
   Studio.touchAllGoalsEventFired = false;
-  for (var i = 0; i < Studio.spriteGoals_.length; i++) {
+
+  var goalOverride = utils.valueOr(level.goalOverride, {});
+  var offsetX = utils.valueOr(goalOverride.goalRenderOffsetX,
+      utils.valueOr(skin.goalRenderOffsetX, 0));
+  var offsetY = utils.valueOr(goalOverride.goalRenderOffsetY,
+      utils.valueOr(skin.goalRenderOffsetY, 0));
+
+  var goal, i;
+
+  for (i = 0; i < Studio.spriteGoals_.length; i++) {
+    goal = Studio.spriteGoals_[i];
+
     // Mark each finish as incomplete.
-    Studio.spriteGoals_[i].finished = false;
-    Studio.spriteGoals_[i].startFadeTime = null;
+    goal.finished = false;
+    goal.startFadeTime = null;
 
     // Move the finish icons into position.
-    var goalOverride = utils.valueOr(level.goalOverride, {});
-    var offsetX = utils.valueOr(goalOverride.goalRenderOffsetX,
-        utils.valueOr(skin.goalRenderOffsetX, 0));
-    var offsetY = utils.valueOr(goalOverride.goalRenderOffsetY,
-        utils.valueOr(skin.goalRenderOffsetY, 0));
-    var spriteFinishIcon = document.getElementById('spriteFinish' + i);
-    spriteFinishIcon.setAttribute('x', Studio.spriteGoals_[i].x + offsetX);
-    spriteFinishIcon.setAttribute('y', Studio.spriteGoals_[i].y + offsetY);
-    spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
+    goal.marker.setAttribute('x', goal.x + offsetX);
+    goal.marker.setAttribute('y', goal.y + offsetY);
+    goal.marker.setAttributeNS('http://www.w3.org/1999/xlink',
         'xlink:href', Studio.getGoalAssetFromSkin());
-    spriteFinishIcon.setAttribute('opacity', 1);
-    var finishClipRect = document.getElementById('finishClipRect' + i);
-    finishClipRect.setAttribute('x', Studio.spriteGoals_[i].x + offsetX);
-    finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y + offsetY);
+    goal.marker.setAttribute('opacity', 1);
+    goal.clipRect.setAttribute('x', goal.x + offsetX);
+    goal.clipRect.setAttribute('y', goal.y + offsetY);
   }
+
+  for (i = 0; i < Studio.dynamicSpriteGoals_.length; i++) {
+    goal = Studio.dynamicSpriteGoals_[i];
+    goal.marker.parentNode.removeChild(goal.marker);
+    goal.clipPath.parentNode.removeChild(goal.clipPath);
+  }
+  Studio.dynamicSpriteGoals_ = [];
 };
 
 /** @returns {string} URL of the asset to use for goal objects */
@@ -3452,18 +3470,14 @@ Studio.animateGoals = function () {
   // animation is significantly out of sync.
   var animationOffset = 7;
 
-  for (var i = 0; i < Studio.spriteGoals_.length; i++) {
-    var goal = Studio.spriteGoals_[i];
+  Studio.allGoals_().forEach(function (goal, i) {
     // Keep animating the goal unless it's finished and we're not fading out.
     if (!goal.finished || goal.startFadeTime) {
-      var goalSprite = document.getElementById('spriteFinish' + i);
-      var goalClipRect = document.getElementById('finishClipRect' + i);
-
       if (animate) {
-        var baseX = parseInt(goalClipRect.getAttribute('x'), 10);
+        var baseX = parseInt(goal.clipRect.getAttribute('x'), 10);
         var frame = (i * animationOffset + Math.floor(elapsed / frameDuration)) % numFrames;
 
-        goalSprite.setAttribute('x', baseX - frame * frameWidth);
+        goal.marker.setAttribute('x', baseX - frame * frameWidth);
       }
 
       if (fade) {
@@ -3477,11 +3491,11 @@ Studio.animateGoals = function () {
             goal.startFadeTime = null;
           }
 
-          goalSprite.setAttribute('opacity', opacity);
+          goal.marker.setAttribute('opacity', opacity);
         }
       }
     }
-  }
+  });
 };
 
 
@@ -3732,6 +3746,10 @@ Studio.callCmd = function (cmd) {
     case 'setSpriteXY':
       studioApp.highlight(cmd.id);
       Studio.setSpriteXY(cmd.opts);
+      break;
+    case 'addGoal':
+      studioApp.highlight(cmd.id);
+      Studio.addGoal(cmd.opts);
       break;
     case 'playSound':
       studioApp.highlight(cmd.id);
@@ -5155,6 +5173,28 @@ Studio.setSpriteXY = function (opts) {
   sprite.setDirection(Direction.NONE);
 };
 
+Studio.addGoal = function (opts) {
+  if (opts.value) {
+    var sprite = {
+      width : utils.valueOr(skin.goalSpriteWidth, Studio.MARKER_WIDTH),
+      height : utils.valueOr(skin.goalSpriteHeight, Studio.MARKER_HEIGHT),
+    };
+    // fill in .x and .y from the constants.Position value in opts.value
+    opts.x = xFromPosition(sprite, opts.value);
+    opts.y = yFromPosition(sprite, opts.value);
+  }
+
+  var goal = {
+    finished: false,
+    x: opts.x,
+    y: opts.y
+  };
+
+  Studio.createGoalElements(Studio.allGoals_().length, goal);
+  Studio.dynamicSpriteGoals_.push(goal);
+  sortDrawOrder();
+};
+
 Studio.getPlayspaceBoundaries = function (sprite) {
   var boundaries;
 
@@ -5382,7 +5422,7 @@ Studio.allGoalsVisited = function () {
   var finishedGoals = 0;
 
   // Can't visit all goals if we don't have any
-  if (Studio.spriteGoals_.length === 0) {
+  if (Studio.allGoals_().length === 0) {
     return false;
   }
 
@@ -5391,8 +5431,7 @@ Studio.allGoalsVisited = function () {
     return false;
   }
 
-  for (i = 0; i < Studio.spriteGoals_.length; i++) {
-    var goal = Studio.spriteGoals_[i];
+  Studio.allGoals_().forEach(function (goal) {
     if (!goal.finished) {
       if (protagonistSprite) {
         var wasGoalFinished = goal.finished;
@@ -5440,14 +5479,13 @@ Studio.allGoalsVisited = function () {
         if (level.goalOverride && level.goalOverride.successImage) {
           successAsset = skin[level.goalOverride.successImage];
         }
-        var spriteFinishIcon = document.getElementById('spriteFinish' + i);
-        spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
+        goal.marker.setAttributeNS('http://www.w3.org/1999/xlink',
           'xlink:href', successAsset);
       }
     }
-  }
+  });
 
-  var retVal = finishedGoals === Studio.spriteGoals_.length;
+  var retVal = finishedGoals === Studio.allGoals_().length;
 
   if (retVal && !Studio.touchAllGoalsEventFired) {
     Studio.touchAllGoalsEventFired = true;
@@ -5582,7 +5620,7 @@ Studio.checkProgressConditions = function () {
 
 var checkFinished = function () {
 
-  var hasGoals = Studio.spriteGoals_.length !== 0;
+  var hasGoals = Studio.allGoals_().length !== 0;
   var achievedGoals = Studio.allGoalsVisited();
   var progressConditionResult = Studio.checkProgressConditions();
   var hasSuccessCondition = level.goal && level.goal.successCondition ? true : false;

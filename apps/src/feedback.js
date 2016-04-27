@@ -7,6 +7,10 @@ var HINT_REQUEST_PLACEMENT = {
   RIGHT: 2  // Hint request button is on right.
 };
 
+// Types of blocks that do not count toward displayed block count. Used
+// by FeedbackUtils.blockShouldBeCounted_
+var UNCOUNTED_BLOCK_TYPES = ["draw_colour", "alpha"];
+
 /**
  * Bag of utility functions related to building and displaying feedback
  * to students.
@@ -24,7 +28,7 @@ module.exports = FeedbackUtils;
 
 var trophy = require('./templates/trophy.html.ejs');
 var utils = require('./utils');
-var _ = utils.getLodash();
+var _ = require('./lodash');
 var codegen = require('./codegen');
 var msg = require('./locale');
 var dom = require('./dom');
@@ -253,12 +257,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
           return requestMatchesFeedback;
         });
 
-    var isABTestingHintButton;
-    if (options.response && options.response.abtests) {
-      isABTestingHintButton = options.response.abtests.hint_button;
-    }
-
-    if (alreadySeen || isABTestingHintButton) {
+    if (alreadySeen) {
       // Remove "Show hint" button.  Making it invisible isn't enough,
       // because it will still take up space.
       hintRequestButton.parentNode.removeChild(hintRequestButton);
@@ -1009,7 +1008,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   };
   var contentDiv = ReactDOM.render(
     <div>
-      {options.headerText && <p class="dialog-title">{options.headerText}</p>}
+      {options.headerText && <p className="dialog-title">{options.headerText}</p>}
       {options.bodyText && <p>{options.bodyText}</p>}
       {options.prompt && <input
           style={textBoxStyle}
@@ -1182,16 +1181,40 @@ FeedbackUtils.prototype.getUserBlocks_ = function () {
 };
 
 /**
- * Get countable blocks in the program, namely any that are not disabled.
+ * Determine if a given block should count toward the displayed lines of
+ * code. A valid block is one that is enabled, not of one of the
+ * discounted block types, and not a child of one of the discounted
+ * block types.
+ * @param {Object} block
+ * @return {boolean}
+ */
+FeedbackUtils.blockShouldBeCounted_ = function (block) {
+  // disabled blocks are not counted
+  if (block.disabled) {
+    return false;
+  }
+
+  // blocks that are of one of the uncounted block types are not
+  // counted, and neither are any of their children
+  while (block !== null) {
+    if (UNCOUNTED_BLOCK_TYPES.indexOf(block.type) > -1) {
+      return false;
+    }
+    block = block.getSurroundParent();
+  }
+
+  return true;
+};
+
+/**
+ * Get countable blocks in the program
  * These are used when determined the number of blocks relative to the ideal
  * block count.
  * @return {Array<Object>} The blocks.
  */
 FeedbackUtils.prototype.getCountableBlocks_ = function () {
   var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
-  var blocks = allBlocks.filter(function (block) {
-    return !block.disabled;
-  });
+  var blocks = allBlocks.filter(FeedbackUtils.blockShouldBeCounted_);
   return blocks;
 };
 

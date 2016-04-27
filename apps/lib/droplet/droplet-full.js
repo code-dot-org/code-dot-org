@@ -2,7 +2,7 @@
  * Copyright (c) 2016 Anthony Bau.
  * MIT License.
  *
- * Date: 2016-04-06
+ * Date: 2016-04-21
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
@@ -4130,6 +4130,7 @@ function objectToString(o) {
 module.exports = require("./lib/_stream_passthrough.js")
 
 },{"./lib/_stream_passthrough.js":14}],20:[function(require,module,exports){
+(function (process){
 exports = module.exports = require('./lib/_stream_readable.js');
 exports.Stream = require('stream');
 exports.Readable = exports;
@@ -4137,8 +4138,12 @@ exports.Writable = require('./lib/_stream_writable.js');
 exports.Duplex = require('./lib/_stream_duplex.js');
 exports.Transform = require('./lib/_stream_transform.js');
 exports.PassThrough = require('./lib/_stream_passthrough.js');
+if (!process.browser && process.env.READABLE_STREAM === 'disable') {
+  module.exports = require('stream');
+}
 
-},{"./lib/_stream_duplex.js":13,"./lib/_stream_passthrough.js":14,"./lib/_stream_readable.js":15,"./lib/_stream_transform.js":16,"./lib/_stream_writable.js":17,"stream":23}],21:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./lib/_stream_duplex.js":13,"./lib/_stream_passthrough.js":14,"./lib/_stream_readable.js":15,"./lib/_stream_transform.js":16,"./lib/_stream_writable.js":17,"_process":11,"stream":23}],21:[function(require,module,exports){
 module.exports = require("./lib/_stream_transform.js")
 
 },{"./lib/_stream_transform.js":16}],22:[function(require,module,exports){
@@ -7795,7 +7800,7 @@ Editor.prototype.setPalette = function(paletteGroups) {
   ref1 = this.paletteGroups;
   fn1 = (function(_this) {
     return function(paletteGroup, i) {
-      var clickHandler, data, expansion, k, len1, newBlock, newPaletteBlocks, paletteGroupBlocks, paletteGroupHeader, ref2, updatePalette;
+      var clickHandler, data, expansion, k, len1, newBlock, newPaletteBlocks, paletteGroupHeader, ref2, updatePalette;
       if (i % 2 === 0) {
         paletteHeaderRow = document.createElement('div');
         paletteHeaderRow.className = 'droplet-palette-header-row';
@@ -7804,8 +7809,11 @@ Editor.prototype.setPalette = function(paletteGroups) {
           paletteHeaderRow.style.height = 0;
         }
       }
-      paletteGroupHeader = document.createElement('div');
+      paletteGroupHeader = paletteGroup.header = document.createElement('div');
       paletteGroupHeader.className = 'droplet-palette-group-header';
+      if (paletteGroup.id) {
+        paletteGroupHeader.id = 'droplet-palette-group-header-' + paletteGroup.id;
+      }
       paletteGroupHeader.innerText = paletteGroupHeader.textContent = paletteGroupHeader.textContent = paletteGroup.name;
       if (paletteGroup.color) {
         paletteGroupHeader.className += ' ' + paletteGroup.color;
@@ -7824,20 +7832,9 @@ Editor.prototype.setPalette = function(paletteGroups) {
           id: data.id
         });
       }
-      paletteGroupBlocks = newPaletteBlocks;
+      paletteGroup.parsedBlocks = newPaletteBlocks;
       updatePalette = function() {
-        var ref3;
-        _this.currentPaletteGroup = paletteGroup.name;
-        _this.currentPaletteBlocks = paletteGroupBlocks;
-        _this.currentPaletteMetadata = paletteGroupBlocks;
-        if ((ref3 = _this.currentPaletteGroupHeader) != null) {
-          ref3.className = _this.currentPaletteGroupHeader.className.replace(/\s[-\w]*-selected\b/, '');
-        }
-        _this.currentPaletteGroupHeader = paletteGroupHeader;
-        _this.currentPaletteIndex = i;
-        _this.currentPaletteGroupHeader.className += ' droplet-palette-group-header-selected';
-        _this.rebuildPalette();
-        return _this.fireEvent('selectpalette', [paletteGroup.name]);
+        return _this.changePaletteGroup(paletteGroup);
       };
       clickHandler = function() {
         return updatePalette();
@@ -7855,6 +7852,32 @@ Editor.prototype.setPalette = function(paletteGroups) {
   }
   this.resizePalette();
   return this.resizePaletteHighlight();
+};
+
+Editor.prototype.changePaletteGroup = function(group) {
+  var curGroup, i, j, len, paletteGroup, ref1, ref2;
+  ref1 = this.paletteGroups;
+  for (i = j = 0, len = ref1.length; j < len; i = ++j) {
+    curGroup = ref1[i];
+    if (group === curGroup || group === curGroup.id || group === curGroup.name) {
+      paletteGroup = curGroup;
+      break;
+    }
+  }
+  if (!paletteGroup) {
+    return;
+  }
+  this.currentPaletteGroup = paletteGroup.name;
+  this.currentPaletteBlocks = paletteGroup.parsedBlocks;
+  this.currentPaletteMetadata = paletteGroup.parsedBlocks;
+  if ((ref2 = this.currentPaletteGroupHeader) != null) {
+    ref2.className = this.currentPaletteGroupHeader.className.replace(/\s[-\w]*-selected\b/, '');
+  }
+  this.currentPaletteGroupHeader = paletteGroup.header;
+  this.currentPaletteIndex = i;
+  this.currentPaletteGroupHeader.className += ' droplet-palette-group-header-selected';
+  this.rebuildPalette();
+  return this.fireEvent('selectpalette', [paletteGroup.name]);
 };
 
 hook('mousedown', 6, function(point, event, state) {

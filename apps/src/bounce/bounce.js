@@ -16,7 +16,7 @@ var codegen = require('../codegen');
 var api = require('./api');
 var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var BounceVisualizationColumn = require('./BounceVisualizationColumn');
 var dom = require('../dom');
 var Hammer = require('../hammer');
 var utils = require('../utils');
@@ -785,16 +785,6 @@ Bounce.init = function (config) {
     });
   };
 
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        visualization: require('./visualization.html.ejs')(),
-        controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl}),
-      }
-    });
-  };
-
   var onMount = function () {
     studioApp.init(config);
 
@@ -810,7 +800,7 @@ Bounce.init = function (config) {
     noVisualization: false,
     isRtl: studioApp.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
-    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
+    visualizationColumn: <BounceVisualizationColumn/>,
     onMount: onMount
   }), document.getElementById(config.containerId));
 };

@@ -8,6 +8,8 @@ DEPENDENCIES
     path: ../cdo-java-7
   cdo-mysql
     path: ../cdo-mysql
+  cdo-networking
+    path: ../cdo-networking
   cdo-nginx
     path: ../cdo-nginx
   cdo-nodejs
@@ -22,6 +24,10 @@ DEPENDENCIES
     path: ../cdo-secrets
   cdo-varnish
     path: ../cdo-varnish
+  ixgbevf
+    git: git://github.com/wjordan/chef-ixgbevf.git
+    revision: d574281965490249d195169af065bcde85e5d6a6
+    branch: cdo
   omnibus_updater
     git: git://github.com/wjordan/omnibus_updater.git
     revision: 3fee5dda5a8deb323c81cfb6ed027e8d2ab87614
@@ -39,11 +45,12 @@ GRAPH
     windows (>= 0.0.0)
   build-essential (2.3.1)
     7-zip (>= 0.0.0)
-  cdo-apps (0.2.19)
+  cdo-apps (0.2.21)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     cdo-java-7 (>= 0.0.0)
     cdo-mysql (>= 0.0.0)
+    cdo-networking (>= 0.0.0)
     cdo-nginx (>= 0.0.0)
     cdo-nodejs (>= 0.0.0)
     cdo-postfix (>= 0.0.0)
@@ -57,6 +64,8 @@ GRAPH
   cdo-java-7 (0.1.0)
     build-essential (>= 0.0.0)
   cdo-mysql (0.1.1)
+  cdo-networking (0.1.0)
+    ixgbevf (>= 0.0.0)
   cdo-nginx (0.0.8)
     apt (>= 0.0.0)
     ssl_certificate (>= 0.0.0)
@@ -74,6 +83,9 @@ GRAPH
   chef_handler (1.3.0)
   homebrew (2.1.0)
     build-essential (>= 2.1.2)
+  ixgbevf (0.1.2)
+    apt (>= 0.0.0)
+    yum-epel (>= 0.0.0)
   nodejs (2.4.4)
     apt (>= 0.0.0)
     ark (>= 0.0.0)

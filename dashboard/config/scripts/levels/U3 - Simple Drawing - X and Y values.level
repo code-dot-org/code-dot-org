@@ -33,10 +33,11 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "markdown_instructions": "# X and Y Position\r\n\r\nUpper Left corner 0,0\r\n\r\nThis is not the math coordinate plane\r\n\r\nx across top - y down side (not negative values)\r\n\r\n\r\n\r\n# Do This\r\n\r\n* Change the x and y position so the rectangle is in the lower left corner",
-    "callout_json": "[\r\n{\r\n  \"localization_key\": \"\",\r\n  \"element_id\": \".droplet-gutter-line:nth-of-type(1)\",\r\n  \"callout_text\": \"Change the x and y parameters of rect to move it\",\r\n  \"qtip_config\": {\r\n   \t\"position\": {\r\n      \"my\": \"top right\",\r\n      \"at\": \"center center\",\r\n      \"adjust\": {\r\n       \"x\": 0,\r\n       \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "markdown_instructions": "# X and Y Position\r\n\r\nCoordinate Plane in Game Lab\r\n* Width is 400\r\n* Height is 400\r\n* Top Left Corner is (0,0)\r\n* X gets bigger across\r\n* Y gets bigger going down\r\n* All values of x and y on the screen are positive\r\n\r\nWe saw on the previous level that the drawing area is 400 by 400. You may have also noticed that the x and y position of the top left corner is (0,0).  The coordinate plane used in computer science is a little different than the one in math.  The top left corner is (0,0) and x gets bigger as you go across and y gets bigger as you go down. All the values on the screen are positive x and y values.\r\n\r\nThe first two parameters of `rect` control its x and y position. The x and y position of a rectangle is specified by the upper left corner of the rectangle. \r\n\r\n# Do This\r\n\r\nThere is already a rectangle added for you. Your job is to move it to the lower left corner. \r\n\r\n* ONLY change the x and y position so the rectangle is in the lower left corner\r\n\r\n<img src=\"https://images.code.org/70f4ce3f9362d8dbb361e36906617d32-image-1460733825166.23.26 AM.png\" width=200>",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Change the x and y parameters of rect to move it\",\r\n  \"element_id\": \".droplet-gutter-line:nth-of-type(1)\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": null,\r\n    \"adjust\": {\r\n     \"x\": 150,\r\n     \"y\": 20\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions": "Do This",
-    "start_blocks": "rect(200, 200, 100, 100);"
+    "start_blocks": "rect(50, 50, 100, 100);",
+    "show_d_pad": "false"
   },
   "published": true,
   "notes": "",

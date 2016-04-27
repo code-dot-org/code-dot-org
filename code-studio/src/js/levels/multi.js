@@ -51,6 +51,10 @@ Multi.prototype.choiceClicked = function (button) {
   window.CDOSounds.play('click');
 
   this.clickItem(index);
+
+  if (window.levelGroup && window.levelGroup.answerChangedFn) {
+    window.levelGroup.answerChangedFn();
+  }
 };
 
 
@@ -170,7 +174,7 @@ Multi.prototype.getCurrentAnswer = function () {
     answer = this.selectedAnswers;
   }
 
-  return answer;
+  return { response: answer, valid: answer !== -1 };
 };
 
 // called by external result-posting code

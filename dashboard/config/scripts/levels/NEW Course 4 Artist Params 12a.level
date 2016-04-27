@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "This image is similar to the last. Can you use a \"for loop\" with your function to make this design?",
+    "instructions": "This image is similar to the last. Can you use a `for` loop with your function to make this design?",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -22,7 +22,7 @@
     "y": "150",
     "ideal": "17",
     "slider_speed": ".5",
-    "markdown_instructions": "This image is similar to the last. Can you use a `for loop` with your function to make this design?\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "This image is similar to the last.  \r\n\r\nCan you use a `for` loop with your function to make this design?\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -33,7 +33,8 @@
     "examples_required": "false",
     "never_autoplay_video": "false"
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 5,
     "repeat_until_while": 3,
@@ -239,9 +240,6 @@
         </category>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml/>
-    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

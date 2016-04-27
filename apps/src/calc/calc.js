@@ -29,7 +29,7 @@ var skins = require('../skins');
 var levels = require('./levels');
 var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var CalcVisualizationColumn = require('./CalcVisualizationColumn');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
@@ -213,18 +213,7 @@ Calc.init = function (config) {
     });
   };
 
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        visualization: require('./visualization.html.ejs')(),
-        controls: require('./controls.html.ejs')({
-          assetUrl: studioApp.assetUrl
-        }),
-        inputOutputTable: level.inputOutputTable
-      }
-    });
-  };
+  var visualizationColumn = <CalcVisualizationColumn inputOutputTable={level.inputOutputTable}/>;
 
   ReactDOM.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
@@ -234,7 +223,7 @@ Calc.init = function (config) {
     noVisualization: false,
     isRtl: studioApp.isRtl(),
     generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
-    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
+    visualizationColumn: visualizationColumn,
     onMount: studioApp.init.bind(studioApp, config)
   }), document.getElementById(config.containerId));
 };
@@ -1141,7 +1130,7 @@ function displayEquation(parentId, name, tokenList, line, markClass, leftAlign) 
     var transform = Blockly.getRelativeXY(parent.childNodes[0]);
     xPadding = parseFloat(transform.x) - firstTokenLen;
   } else {
-    xPadding = (CANVAS_WIDTH - g.getBoundingClientRect().width) / 2;
+    xPadding = (CANVAS_WIDTH - g.getBBox().width) / 2;
   }
   var yPos = (line * LINE_HEIGHT);
   g.setAttribute('transform', 'translate(' + xPadding + ', ' + yPos + ')');

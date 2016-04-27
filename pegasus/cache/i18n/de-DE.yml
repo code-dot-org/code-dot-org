@@ -30,8 +30,8 @@
   twentyhours_text: Du hast deine erste "Hour of Code" beendet? Erlerne weitere Informatik-
     und Programmierkonzepte in diesem Folgekurs.
   og_title: Jedes Kind verdient eine Gelegenheit
-  og_description: In jeder Schule sollten die Schüler die Gelegenheit haben Informatik
-    zu lernen.
+  og_description: Jeder Schüler in jeder Schule verdient die Chance, Informatik zu
+    studieren. Das verändert alles.
   hoc2014_heading: Nimm an der <a href="http://hourofcode.com">Hour of Code</a> <br/>8.-14.
     Dezember 2014  teil<br/>
   hoc2014_students: Schüler
@@ -97,12 +97,13 @@
   view_unit: "\\n"
   make_app: "\\n"
   congrats_guest_speaker_title: Einen Gastredner für Ihren Unterricht finden
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
+  congrats_guest_speaker_desc: Jetzt, da ihre SchülerInnen den Informatik-Kurs abgeschlossen
+    haben, sollten Sie dies feiern und mit Dingen in Verbindung bringen, die es in
+    der realen Welt gibt und einen Gast-Redner in ihren Unterricht einladen. Dazu
+    können Sie unsere Freiwilligen-Karte verwenden, um regionale Freiwillige zu finden,
+    die Sie gerne im Unterricht besuchen. Sie können aber auch nach Städten suchen,
+    in den es Informatikstudenten oder technische Experten gibt, die gerne aus der
+    Ferne über Video-Chat ihre Schüler weiter inspirieren.
   congrats_guest_speaker_cta: Finde einen Gastsprecher
   congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
@@ -658,6 +659,11 @@
   dashboard_action_remove_confirm: Entfernen?
   dashboard_action_done: Fertig
   dashboard_action_required: benötigt
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Lehrer-Hauptseite
   dashboard_navigation_section_student_progress: Schülerkonten und Fortschritt
   dashboard_navigation_section_teacher_progress: Dein Kursfortschritt
@@ -675,6 +681,18 @@
   dashboard_navigation_view_stats: Statistik ansehen
   dashboard_navigation_section: 'Bereich: %{section_name}'
   dashboard_navigation_student: 'Schüler: %{student_name}'
+  dashboard_progress_not_started: Nicht gestartet
+  dashboard_progress_in_progress: In Bearbeitung
+  dashboard_progress_not_completed: Nicht erfüllt
+  dashboard_progress_completed_too_many_blocks: abgeschlossen, zu viele Blöcke
+  dashboard_progress_completed_perfect: Abgeschlossen, perfekt
+  dashboard_progress_furthest_level_attempted: Höchste Ebene versucht
+  dashboard_progress_submitted: eingereicht
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Neuer Bereich
   dashboard_sections_jumbotron_instruction: Erstelle neue Bereiche und füge Schüler
     hinzu. Abschnitte helfen Dir Schüler zu organisieren und in kleinere Gruppen aufzuteilen,
@@ -698,6 +716,26 @@
   dashboard_sections_print_secrets: Du kannst dann die Kontoinformationen für alle
     Schüler ausdrucken und somit individuell verteilen.
   dashboard_sections_switch_section: 'Bereich wechseln:'
+  dashboard_sections_close: Schliessen
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Schüler hinzufügen
   dashboard_students_add_students: Mehrere Schüler hinzufügen
   dashboard_students_add_multiple: 'Füge die Namen Deiner Schüler ein, einer pro Zeile:'
@@ -783,13 +821,6 @@
   dashboard_login_picture: Bild
   dashboard_login_none: E-Mail
   dashboard_new_password: Neues Passwort
-  dashboard_progress_not_started: Nicht gestartet
-  dashboard_progress_in_progress: In Bearbeitung
-  dashboard_progress_not_completed: Nicht erfüllt
-  dashboard_progress_completed_too_many_blocks: abgeschlossen, zu viele Blöcke
-  dashboard_progress_completed_perfect: Abgeschlossen, perfekt
-  dashboard_progress_furthest_level_attempted: Höchste Ebene versucht
-  dashboard_progress_submitted: eingereicht
   dashboard_stage: Bühne
   dashboard_puzzle: Aufgabe
   dashboard_question: Frage
@@ -833,15 +864,6 @@
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
   dashboard_announce_button_text: Erfahre mehr
-  dashboard_announce_hoc: "<b>9. November 2015</b> - Eine neue Hour of Code Anleitung
-    ist erschienen, präsentiert durch den bevorstehenden Film: Star Wars: Das Erwachen
-    der Macht. Arbeite zusammen mit Rey um den neuen Droiden, BB-8, durch seine Mission
-    zu leiten. Dann triff Leia, um dein eigenes Spiel in einer weit, weit entfernten
-    Galaxie zu erstellen und zu teilen."
-  dashboard_announce_playlab: '<b>4. Dezember 2015</b> - "Hour of Code" ist da! Erkunde
-    50 Übungen, es spielt keine Rolle wie alt du bist oder welches Gerät du benutzt.
-    Diese Woche neu: Programmiere deine eigenen Geschichten und Spiele in neuen Spielelaboren,
-    Ice Age und Gumball.'
   code_hoc_coming: '"The Hour of Code" ist da - 8.-14. Dezember!'
   code_sign_up: Melde dich an, um an der Woche der Informatik teilzunehmen
   learn_more: Erfahre mehr
@@ -1691,8 +1713,33 @@
   infinity_shortcode: inf
   playlab_shortcode: spielen
   artist_shortcode: art
-  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
-    (or a teacher you know) want to join a nationwide community of educators working
-    to change the face of computer science education? We'll be accepting applications
-    from middle and high school teachers in our partner districts for our year-long
-    Exploring Computer Science Professional Learning Program until April 22nd."
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
+  dashboard_sections_close: Close
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.

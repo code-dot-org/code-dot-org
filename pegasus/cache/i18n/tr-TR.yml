@@ -29,7 +29,8 @@
   twentyhours_text: "İlk Kod Saati'ni bitirdin mi? Bir sonraki kursta daha fazla bilgisayar
     bilimleri ve programlama kavramlarını öğrenebilirsin."
   og_title: Her çocuk uygun fırsatı hak ediyor
-  og_description: Okullarda her öğrenci bilgisayar bilimini okumayı hak ediyor.
+  og_description: Her okulda bütün öğrenciler bilgisayar bilimi çalışma fırsatına
+    kavuşuyor. Bu her şeyi değiştirir.
   hoc2014_heading: <a href="http://hourofcode.com">Kodlama Saatine </a><br/> katılın  8
     - 14 Aralık, 2014<br/>
   hoc2014_students: "Öğrenciler"
@@ -252,8 +253,7 @@
   learn_next_level: Bir sonraki seviyeye devam et
   learn_online: Diğer online kurslarımızı deneyin
   learn_classes: Yerel sınıfları bulun
-  hoc_is_here: 'Geçtiğimiz Bilgisayar Bilimleri Eğitim Haftasında yapılan #KodSaati
-    etkinliği 50 milyon öğrenciye ulaşmıştır. Linkten izleyebilirsiniz: https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: Bilgisayar bilimini öğrenin. En önemli şey değişimdir. https://youtu.be/xJqSu1IbcHg.
   just_did_hoc: "#HourOfCode yeni yaptım - @codeorg u kontrol edin"
   just_did_course1: Ders1'i yeni bitirdim.@codeorg ile kontrol et
   just_did_course2: Ders2'yi yeni bitirdim. @codeorg ile kontrol et
@@ -482,12 +482,9 @@
     on milyonlarca öğrenciye erişen ve bir saatliğine bilgisayar bilimleri eğitimi
     veren küresel bir hareket. Lütfen 7-13 Aralık tarihlerinde gerçekleşecek olan
     Bilgisayar Bilimleri Eğitimi Haftasına katılın.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
-    computer science education</span> who can help in the classroom, or for somebody
-    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
-    students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat).'
+  volunteer_engineer_submission_intro_recruit: "Öğretmenler sınıfta veya hangi görüntülü
+    sohbet ile bilgisayar bilimi konusunda yardımcı olabilecek ve Bilgisayar Bilimleri
+    Eğitimi hakkında tutkulu kişileri arıyor."
   volunteer_engineer_submission_intro_signup: Bir bilgisayar bilimleri öğrencisi veya
     yazılım profesyonel iseniz lütfen aşağıdaki bilgileri girin. <span class="form-required-field">
     *</span> ile işaretlenmiş alanların doldurulması zorunludur.
@@ -624,10 +621,9 @@
     Bu amaçla düzenlenen ülkenizdeki profesyonel <a href="/educate/districts"> çalıştaylara
     </a> başvurabilirsiniz.
   dashboard_high_courses: Yıllık Lise Dersleri
-  dashboard_high_courses_desc: Our high school program helps school districts offer
-    full-year computer science classes by preparing existing teaching staff to offer
-    this new field. To register for professional development workshops, apply for
-    a <a href="/educate/districts">district-wide partnership</a> with Code.org.
+  dashboard_high_courses_desc: Bizim lise programı okul bölgelerindeki mevcut öğretmenleri
+    hazırlayacak tam yıl bilgisayar bilim dersleri sunuyor. Profesyonel gelişim atölyeleri
+    için kayıt <a href="/educate/districts"> olun. </a> Code.org ile ortak uygulanır.
   dashboard_course_csina: Cebirde Bilgisayar Bilimi
   dashboard_course_csina_desc: Code.org Bootstrap işbirliği ile bilgisayar programlama
     ile cebirsel ve geometrik kavramları öğreten müfredat geliştirmiştir.
@@ -635,9 +631,9 @@
   dashboard_course_csins_desc: Code.org GUTS Projesi işbirliği ile modelleme ve simülasyon
     yöntemleri kullanarak bilgisayar bilimine giriş kavramlarını geliştirmeye başlamıştır.
   dashboard_course_ecs: Bilgisayar Bilimlerini Keşfedin
-  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
-    of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
-    Computing and Data Analysis, and Robotics.'
+  dashboard_course_ecs_desc: 'Bilgisayar bilimlerinde ki 6 önemli iş sahası şunlardır:
+    İnsan-bilgisayar etkileşimi, proglem çözme, web tasarım, programlama, robotik,
+    bilgisayar ve veri analizi.'
   dashboard_course_csp: AP® Bilgisayar Bilimi İlkeleri
   dashboard_course_csp_desc: Code.org titiz, ilgi çekici ve anlaşılır bir şekilde
     bilgisayar bilimlerinin keşfedilmesi için kurslar tasarlamıştır.
@@ -654,6 +650,11 @@
   dashboard_action_remove_confirm: Kaldırılsın mı?
   dashboard_action_done: Bitti
   dashboard_action_required: gerekli
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: "Öğretmen Ana Sayfa"
   dashboard_navigation_section_student_progress: "Öğrenci hesapları ve ilerleme"
   dashboard_navigation_section_teacher_progress: Ders Gelişiminiz
@@ -671,6 +672,18 @@
   dashboard_navigation_view_stats: "İstatistikleri görüntüle"
   dashboard_navigation_section: 'Bölüm: %{section_name}'
   dashboard_navigation_student: "Öğrenci: %{student_name}"
+  dashboard_progress_not_started: Başlatılmadı
+  dashboard_progress_in_progress: "İşlem devam ediyor"
+  dashboard_progress_not_completed: tamamlanmadı
+  dashboard_progress_completed_too_many_blocks: tamamlanmadı, fazla blok var
+  dashboard_progress_completed_perfect: tamamlandı, harika
+  dashboard_progress_furthest_level_attempted: denenen en yüksek seviye
+  dashboard_progress_submitted: gönderildi
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Yeni bölüm
   dashboard_sections_jumbotron_instruction: Yeni bölümler oluşturun ve onlara öğrenciler
     ekleyin. Bölümler öğrencileri daha küçük gruplara ayırmanızı sağlar böylece öğrencilerin
@@ -695,6 +708,26 @@
   dashboard_sections_print_secrets: Daha sonra, öğrencilerinize dağıtılmak üzere,
     üzerinde hesap bilgileri bulunan kartların çıktısını yazdırabilirsiniz.
   dashboard_sections_switch_section: 'Bölüm değşitir:'
+  dashboard_sections_close: Kapat
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: "Öğrenci Ekle"
   dashboard_students_add_students: Birden fazla öğrenci Ekle
   dashboard_students_add_multiple: 'Yazın veya öğrencilerinzin isimlerini, her satırda
@@ -775,29 +808,22 @@
   dashboard_login_picture: Resim
   dashboard_login_none: E-posta
   dashboard_new_password: yeni şifre
-  dashboard_progress_not_started: Başlatılmadı
-  dashboard_progress_in_progress: "İşlem devam ediyor"
-  dashboard_progress_not_completed: tamamlanmadı
-  dashboard_progress_completed_too_many_blocks: tamamlanmadı, fazla blok var
-  dashboard_progress_completed_perfect: tamamlandı, harika
-  dashboard_progress_furthest_level_attempted: denenen en yüksek seviye
-  dashboard_progress_submitted: gönderildi
   dashboard_stage: kademe
   dashboard_puzzle: Bulmaca
   dashboard_question: Soru
   dashboard_response: Cevap
-  dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness: Doğruluk
+  dashboard_correctness_free_response: Serbest cevap
+  dashboard_correctness_unsubmitted: Gönderilmemiş
   dashboard_correctness_correct: Doğru
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
-  dashboard_status: Status
-  dashboard_multi_correct: "# multiple choice correct"
-  dashboard_multi_count: "# multiple choice"
-  dashboard_multi_correct_percent: "% multiple choice correct"
-  dashboard_submission_timestamp: Submission timestamp
+  dashboard_correctness_incorrect: Yanlış
+  dashboard_submission_submitted: Gönderildi
+  dashboard_submission_in_progress: Devam ediyor
+  dashboard_status: durum
+  dashboard_multi_correct: "# çoklu seçim"
+  dashboard_multi_count: "Çoktan Seçmeli"
+  dashboard_multi_correct_percent: "# çoklu seçim"
+  dashboard_submission_timestamp: Gönderme Zamanı
   stats_hoc_2013_heading: 'Hour of Code''dan geçen yılın inanılmaz istatistikleri.
     Sadece bir haftada:'
   stats_hoc_2013_image_alt: Hour of Code 2013'den istatistikler
@@ -822,16 +848,10 @@
   dashboard_faq_k5: K-5 Sık Sorulan Sorular
   dashboard_announcements: Bildirimler
   dashboard_announce_view_all: Tümünü Gör
-  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
-    problem in computer science. Code Studio teachers are leading the way in educating
-    underrepresented minorities. Our annual survey shows record diversity in your
-    classrooms! Check out the numbers."
+  dashboard_announce_message: "<b>4 Nisan 2016</b> - hepimiz Bilgisayar Biliminde
+    bir çeşitlilik sorun olduğunu biliyorum. Kod Studio azınlıklara kod eğitmek için
+    öncülük edecek. Bizim yıllık araştırmamız çeşitliği göstermektedir."
   dashboard_announce_button_text: Daha fazlasını öğren
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
-  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
   code_hoc_coming: Kod Saati burada - Aralık 8-14!
   code_sign_up: CS Education Week' e katılmak için kaydolun.
   learn_more: Daha Fazla Bilgi Edinin
@@ -847,8 +867,8 @@
     Saati'ni nasıl öğreteceğinizi öğrenin</a>
   learn_find_volunteer: Kod Zamanı süresince yardım edecek<a href="https://code.org/volunteer/local">Yerel
     bir gönüllü bulun</a>
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
+  learn_teacher_led_lesson_plans: <a href="https://code.org/teacher-led"> öğretmen
+    liderliğinde hazırlana ders planlarıile ilham alın
   learn_how_to_hoc: Kod Saati'ni öğretmek için<a href="https://hourofcode.com/how-to">nasıl
     yapılır rehberimizi</a> takip edin
   learn_hoc_prizes: Eğiticilere sunulan ödüller hakkında <a href="https://hourofcode.com/prizes">daha
@@ -882,10 +902,10 @@
   carousel_heading_ide: "Öğretmenler arasında popüler platformlar"
   educator_notes: Eğitimci notları
   teach_led_lesson_plans: "Öğretmenler Ders Planlarını Hazırlar"
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
-    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
-    here.</a>
+  learn_footer_all_tutorials: <a href="https://code.org/educate/allhourofcode"> adresinden
+    detatylı kod saati listesine</a> bakın. Kod saati eğitmlerini siteye koyma kriterleri
+    görmek ve gönderme yönergeleri için <a href="https://hourofcode.com/tutorial-guidelines">
+    tıklayınız.</a>
   how_to_teach_hoc: Bir Kod Saati Nasıl Öğretilir
   more_resources_educators: "Öğretmenler ve eğitimciler için daha fazla kaynak"
   beyond_submission: '"Bir Saat"i aşan eğitim programları mı göndermek istiyorsunuz?
@@ -942,7 +962,7 @@
   hourofcode_name: Klasik Labirent
   playlab_name: Oyun Laboratuvarı
   infinity_name: Sınırsız oyun laboratuarı
-  artist_name: Aktör
+  artist_name: Sanatçı
   monstercoding_name: Gizemli Ada Kodlama Macerası
   allcancode_name: "Çalış Maco!"
   csfirst_name: "Öncelikle CS"
@@ -955,7 +975,7 @@
   course3_name: Kurs 3
   course4_name: Ders 4
   accelerated_name: Hızlandırılmış Kurs
-  cspunit3_name: CS Principles Unit 3
+  cspunit3_name: Bilgisayar Bilimleri İlkeleri Ünite 3
   cspunit3_gradelevel: 9-12. Sınıflar
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
@@ -1133,25 +1153,26 @@
     bir oyun.
   csfirst_shortdescription: Okyanustaki iki karakter hakkında bir hikaye canlandırın-oluşturun.
     Kendi tarzınızı ekleyin!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  boxisland_shortdescription: Cesur Hiro ile kutu adasında kodlama yolculuğuna çık.
   codesters_shortdescription: Python kullanarak, kendi oyununuzu, animasyonunuzu ve
     sanat eserinizi oluşturun.
-  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
-    calculator.
+  texasinstruments_shortdescription: TI-84 kullanarak temel kodlama öğrenmek için
+    T1-84 hesap makinesi.
   teacherled_shortdescription: Kendi Kod Saati olayınızı tasarlamak için bu ders planlarından
     ilham alın.
-  course2_shortdescription_congrats: For students with basic reading skills, this
-    course builds on Course 1. Students will create programs to solve problems and
-    develop interactive games or stories they can share. Recommended for grades 2-5.
-  course3_shortdescription_congrats: Ready for the next level? Students will delve
-    deeper into programming topics introduced in previous courses to find flexible
-    solutions to more complex problems. By the end of this course, students create
-    interactive stories and games they can share with anyone. Recommended for grades
-    4-5.
-  course4_shortdescription_congrats: Ready to go further? Students will delve deeper
-    into programming topics introduced in previous courses to find flexible solutions
-    to more complex problems. By the end of this course, students create interactive
-    stories and games they can share with anyone. Recommended for grades 4-8.
+  course2_shortdescription_congrats: Temel okuma becerileri olan öğrenciler için.
+    Bu ders ders 1 üzerine devam eder. Öğrencilerin program oluşturarak problem çözecek,
+    etkileşimli oyunlar ya da hikaye geliştirecektir. 2-5 sınıflar için önerilir.
+  course3_shortdescription_congrats: Bir sonraki seviyeye hazırmısın? Öğrenciler,
+    daha karmaşık sorunlar için bulunan esnek çözümleri uygulamak için önceki derste
+    öğrendikleri programlama konularını daha çok inceleyecekler. Dersin sonunda, öğrenciler,
+    herhangi birisiyle paylaşabilecekleri interaktif hikaye ve oyun oluşturabilecekler.
+    4 ve 5. sınıflar için önerilir.
+  course4_shortdescription_congrats: Bir sonraki seviyeye hazır mısın? Öğrenciler,
+    daha karmaşık sorunlar için bulunan esnek çözümleri uygulamak için önceki derste
+    öğrendikleri programlama konularını daha çok inceleyecekler. Dersin sonunda, öğrenciler,
+    herhangi birisiyle paylaşabilecekleri interaktif hikaye ve oyun oluşturabilecekler.
+    4 ve 5. sınıflar için önerilir.
   codeorg_longdescription: Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit
     kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler
     Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten
@@ -1225,9 +1246,9 @@
     ile 10 kısa görevde hazırlayın. Bazı temel programlamaları ( değişkenler ve if
     yönergesini) bir quiz oluşturarak ve arkadaşlarınızla paylaşarak öğrenmeye devam
     edin. Bu arada puanlar ve rozetler kazanarak sınıfınız en iyisi olmaya çalışın.
-  processing_longdescription: An introduction to programming in the context of the
-    visual arts using the Processing programming language. Short video lessons introduce
-    coding exercises that lead to designing an interactive drawing program
+  processing_longdescription: Processing programlama dili ile görsel sanat kullanarak
+    programlama öğreniliyor. Kısa videolar kodlama çalışmalarını tanıtacak ve size
+    etkileşimli çizim programı tasarlatacak
   robomind_longdescription: "Öğrenciler programlamanın temellerini öğrenerek kendi
     sanal robotlarını kontrol etmeyi öğreniyor.Bu online kendi kontrolünde kurs kısa
     sunumlar,filmler,testler ve otomatik destek/ipuçları ile programlama egzersizlerine
@@ -1236,20 +1257,19 @@
     psikoterapist gibi davranan bir chat botu dizayn et.Elizaya nasıl konuşacağını
     ve doğru şeyleri nasıl söyleyeceğini sen öğreteceksin.Acaba arkadaşlarının onun
     gerçek insan olduğunu  düşünmelerini başarabilecek mi?
-  quorum_longdescription: This tutorial is accessible for the visually-impaired, and
-    works with screenreaders. Join Mary on a tour as she joins a biology lab as a
-    programmer and learns the Quorum programming language. This tutorial is student-guided
-    with online example activities.
+  quorum_longdescription: Bu tanıtım ekran okuyucu kullanan görme engelliler için
+    hazırlanmıştır. Mary ye katılın ve biyoloji labaratuarında Quorum programlama
+    dili ile programlama öğrenin. Bu faaliyet öğrenci güdümlü uygulama örnekleri ile
+    ilerler.
   codespark_longdescription: The Foos, programlama öğrenmenin eğlenceli ve çocuk-dostu
     bir yoludur. Sevimli karakterleri yapbozları çözmeleri için programlayın ve görsel
     dünyayı canlandırın. Oyun tamamen "kelimesiz" ki böylece herkes oynayabilsin!
   kodable_longdescription: Kodable, 5 yaş üstü çocukları programlamanın temelleriyle
     tanıştıran bir kendin-yönlendir İpad oyunudur. Yakınlarda bir öğretmenin ya da
     ebeveny olması size bağlıdır ancak gerekli değildir.
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily
-    build games and stories using with themed graphics, 10+ game-kits and customizable
-    characters. No Internet connectivity required. You can also access your creations
-    on the web.
+  tynkerapp_longdescription: Kodlama bulmacaları ile programlamayı öğren. Kolayca
+    oyun yada hikaye yarat. 10+ oyun kitleri ve karakterleri. İnternet bağlantısı
+    istemez. Yarattığın programlara web den de erişebilirsin.
   robomindnl_longdescription: "Öğrenciler programlamanın temellerini öğrenerek kendi
     sanal robotlarını kontrol etmeyi öğreniyor.Bu online kendi kontrolünde kurs kısa
     sunumlar,filmler,testler ve otomatik destek/ipuçları ile programlama egzersizlerine
@@ -1258,35 +1278,31 @@
     yapabilirsiniz. Hatta çok basit değişiklikler ile tamamen farklı görselliğe sahip
     programlara (Rahat Köpek Balığı vb.) dönüştürebilirsiniz. Oyunu telefonunuza bir
     tıkla indir.
-  bitsbox_longdescription: Customize your very own virtual tablet, then code a series
-    of apps to play and share. Simple walkthroughs make it possible for even young
-    kids to program real JavaScript, and the more advanced you are the further you'll
-    go.
-  makeschool_longdescription: Learn to code by making an iPhone game using a brand
-    new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
-    action game and write code to teach your monster new moves. You will learn how
-    to use variables, methods, and objects to help your monster win!
+  bitsbox_longdescription: Kendi sanal tabletini kişiselleştir. Sonra oynayacağın
+    uygulamaları kodla ve paylaş. İzlenecek yolu takip ederek küçük çocuklar bile
+    program yazabilir. Gerçek Java Script. Siz ilerledikçe daha gelişmiş konular.
+  makeschool_longdescription: Swift adında yeni ve acemi dostu programlama dili kullanarak
+    İphone oyunu yapmayı öğren!Pok&eacute;mon'dan esinlenerek aksiyon oyunu yarat
+    ve canavarına yeni hareketler öğretmek için kod yaz.Canavarının kazanmasına yardım
+    etmek içinobjeleri,metodları ve değişkenleri nasıl kullanacağını öğreneceksin!
   touchdevelop_longdescription: 'Dokunmatik dostu editör sana piksel sanatı yaratırken,ayı
     bulmacası çözerken veya kendi zoplayan kuş oyununu yaparken kılavuzluk edecek. '
-  appinventor_longdescription: Entertaining, quick video tutorials walk you through
-    building three simple apps for your Android phone or tablet. Designed for novices
-    and experts alike, this hour of code will get you ready to start building your
-    own apps before you know it. Imagine sharing your own app creations with your
-    friends! These activities are suitable for individuals and for teachers leading
-    classes.
-  blockly_longdescription: Got PCs with slow (or non-existent) internet access? Download
-    the Blockly tutorials that were the precursor of the Code.org tutorials - a single
-    3MB ZIP file can be loaded onto any computer or used off a memory stick
-  thinkersmith2_longdescription: Students learn about representing and storing letters
-    in binary, as functions of on and off. At the end, the class gets to encode their
-    own initials to take home with them.
-  kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily
-    Frenzy is an introduction to programming logic for kids 5 and up. A teacher should
-    explain the game, then students program a partner to complete a simple obstacle
-    course. '
-  projguts_longdescription: This "unplugged" activity helps students learn how modeling
-    and simulation works by having a group of students play different versions of
-    the Rock / Paper / Scissors game, and see the results as different modeling experiments.
+  appinventor_longdescription: Eğlenceli, hızlı video eğitimleri size Android telefon
+    veya tablet için üç basit uygulama oluşturmaya doğru yürütür. Yeni başlayanlar
+    ve de uzmanlar için tasarlanmış bu kod saati ile farkına bile varmadan kendi uygulamalarını
+    inşa edebilirsin. Uygulamalarınızı arkadaşlarınızla paylaştığınız hayal edin!
+    Bu etkinlikler öğrenciler ve sınıfta öğreten öğretmenler için uygundur.
+  blockly_longdescription: PC si yavaş ve internet erişimi olmayan var mı? bloky yi
+    code.org dan indirebilirsiniz. 3MB bir ZIP dosyası
+  thinkersmith2_longdescription: "Öğrenciler harflerim ikili şekilde depolanması konusunda
+    bilgi edinecek. Dersin sonunda öğrenciler kendi isimlerinin baş harfini kodlayacak."
+  kodableunplugged_longdescription: 'Düz kağıt ile kullanılmak üzere tasarlanmış olan
+    fuzzFamily Frenzy, 5 yaş ve üstü çocuklara programlama mantığı oluşturma için
+    kullanılabilir. Bir öğretmen Oyunu açıklamalı, o zaman öğrenciler ortaklaşa sorunu
+    çözmeye çalışır. '
+  projguts_longdescription: Bu bağımsız "unplugged" etkinliğinde bir grup öğrenci
+    Kağıt/taş/makas oyununun farklı bir versiyonunu kullanacak ve modelleme ve simülasyon
+    çalışmalarını öğrenecek. Sonuçları görüp farklı modelleri deneyecekler.
   hourofcode_longdescription: Yeni code.org/hoc için placeholder
   frozen_longdescription: Hadi kod kullanarak sihri ve buzun güzelliğini keşfedecek
     olan Anna ve Elsa'ya katıl. Buz kayağı ve kış harikalar diyarı gibi kar taneleri
@@ -1296,22 +1312,18 @@
   playlab_longdescription: Oyun Laboratuvarını kullanarak bir hikâye yaz ya da bir
     oyun yap! Hayvanlar, korsanlar, zombiler, ninjalar ve daha çok karakter ekle ve
     hareket ettir, ateş topu bile firlatabilirsin!
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
-    offers a fun filled self guided adventure that teaches several key programming
-    concepts to children. Each block based activity builds on the previous, introducing
-    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
-  allcancode_longdescription: Students play an adventure game based on an original
-    story. They guide Marco - the main character - through each level by giving him
-    step-by-step instructions in the form of the visual programming language used
-    by the Hour of Code. They get introduced to sequencing commands, iteration and
-    conditions without even noticing it.
-  csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
-    you want to tell!
-  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
-    clocks scattered in the wilderness! In this tutorial you will learn the basics
-    of algorithms, sequences, loops and conditionals!
+  monstercoding_longdescription: Gizemli ada kodlama macerası, eğlenceli bir macera
+    ile temel programlama kavramlarını öğretir. Faaliyetler fonksiyonları, Boole değerleri,
+    döngüleri, Eğer/değilse komutunu ve dizileri için çocuklar renkli animasyonlu
+    grafikler, ses yönergeleri kullanarak öğretir.
+  allcancode_longdescription: "Öğrenciler özgün bir hikaye dayalı bir macera oyunu
+    oynar. Marco - ana karakter - rehberliğinde kodlama süresince görsel programlama
+    dili hakkında adım adım yönergeler verilir. Öğrenciler fark etmeden, sıralama
+    komutları, yineleme ve koşulları tanıtır."
+  csfirst_longdescription: Denizde iki karakter hakkında bir hikaye oluştur. Suya
+    animasyon kat ve sahneyi özelleştirebilir. Hikayeni anlatmak için kodu kullanın!
+  boxisland_longdescription: Hiro ile Kutu adasında bir yolculuğa çık ve dağınık tüm
+    saatleri topla! Bu eğitimde algoritmaları, dizileri, döngüler ve koşulları öğreneceksiniz!
   codesters_longdescription: 'Python kullanarak kendi oyunlarını, animasyonlarını
     ve çizimlerini yap. Yaptığın zaman arkadaşlarınla paylaş! Python programı, şirketler
     tarafından her gün kullanılan gerçek bir programlama dilidir- bizim sürükle bırak
@@ -1321,11 +1333,9 @@
     Kodlama ile ilgilenen öğrencileri teşvik etmek için 10 dakikalık kod etkinliği
     sınıfta kullanılabilir. TI-84&#8482 kodunu kullanarak kodlamanın temellerini öğrenin;
     Ekleyin ve sadece 10 dakikada programların - deneyim gerektirmez!  '
-  teacherled_longdescription: Now that tens of thousands of educators have tried the
-    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
-    activities that teach the basics of computer science. To help teachers find inspiration,
-    we collected and curated one-hour teacher-led lesson and activity plans designed
-    for different subject areas for Hour of Code veterans.
+  teacherled_longdescription: Eğitimciler onbinlerce saat kodu denedi. Şimdi bilgisayar
+    bilimi temellerini öğrenmek ve daha yaratıcı faaliyetler için hazırsınız. 1 saatlik
+    öğretmen eşliğinde yapılacak bir ders hazırladık.
   codeorg_beyond_name: Bilgisayar Bilimlerine giriş (K-8. sınıflar)
   khan_beyond_name: Bilgisayar programlama öğrenin
   tynker_beyond_name: Evde programlama öğren
@@ -1525,77 +1535,65 @@
     ile programlamaya giriş dersi. Hazırladığımız içerik sayesinde Python programlama
     dilini anlayacak kendini programlamaya başlıyacaksınız. Bu içeriği farklı yaşlardaki
     öğrencilerinize öğretin göreceksinizki onlar için harika bir deneyim olacak.
-  hacketyhack_beyond_longdescription: 'Hackety Hack will teach you the absolute basics
-    of programming from the ground up. No previous programming experience is needed!
-    With Hackety Hack, you''ll learn the Ruby programming language. Ruby is used for
-    all kinds of programs, including desktop applications and websites. [Note: Desktop
-    install required]'
+  hacketyhack_beyond_longdescription: Hackrty Hack size bilgisayar biliminin temellerini
+    anlatacak. Ön deneyime ihtiyaç yok. Ruby programlama dilini öğreneceksiniz. Ruby
+    masaüstü ve web uygulamaları için kullanılabilir
   robomind_beyond_longdescription: "Öğrenciler programlamanın temellerini öğrenerek
     kendi sanal robotlarını kontrol etmeyi öğreniyor. Bu online kendi kontrolünde
     kurs kısa sunumlar, filmler, testler ve otomatik destek/ipuçları ile programlama
     egzersizlerine yardım ediyor. "
-  makeschool_beyond_longdescription: Know some ObjectiveC? Learn to make an iPhone
-    game in an hour! We'll guide you through the process, to code, test, and play
-    your game entirely in the browser and then share it on Facebook for friends to
-    try! No prior iPhone development experience is required. You must understand what
-    variables, methods, and objects are.
-  appinventor_beyond_longdescription: Entertaining, quick video tutorials walk you
-    through building three simple apps for your Android phone or tablet. Designed
-    for novices and experts alike, this hour of code will get you ready to start building
-    your own apps before you know it. Imagine sharing your own app creations with
-    your friends! These activities are suitable for individuals and for teachers leading
-    classes.
+  makeschool_beyond_longdescription: ObjectiveC biliyor musun? Bir saat içinde iPhone
+    oyunu yapmayı öğrenin! Kodlama, test ve tarayıcıda denemek ve arkadaşlarınla Facebook'ta
+    Paylaşma sürecinde size rehberlik edilecek! Değişkenler, fonksiyonlar ve nesneleri
+    anlamak gerekir.
+  appinventor_beyond_longdescription: Eğlenceli, hızlı video eğitimleri size Android
+    telefon veya tablet için üç basit uygulama oluşturmaya doğru yürütür. Yeni başlayanlar
+    ve de uzmanlar için tasarlanmış bu kod saati ile farkına bile varmadan kendi uygulamalarını
+    inşa edebilirsin. Uygulamalarınızı arkadaşlarınızla paylaştığınız hayal edin!
+    Bu etkinlikler öğrenciler ve sınıfta öğreten öğretmenler için uygundur.
   touchdevelop_beyond_longdescription: TouchDevelop senin İpad,İPhone,Android,PC,Mac
     ve Windows Telefon için uygulamalar yapmana izin verir.Bizim dost canlısı editörümüz
     touch kodlamayı eğlenceli hale getiriyor hatta telefonun veya tabletinde bile!
-  codehs_beyond_longdescription: 'Learn the basics of programming with Karel the Dog,
-    a fun, accessible and visual introduction to coding, where giving commands to
-    a computer is just like giving commands to a dog. This tutorial is great if led
-    by a teacher, but can also be done independently. [Note: payment is required]'
-  udemy_beyond_longdescription: 'Whether you''ve never seen a line of code or you
-    code for a living, Udemy has a course for you, taught by professional instructors.
-    [Note: payment is required]'
+  codehs_beyond_longdescription: Köpek karel ile programlamayı öğren. Köpeğe emir
+    verir gibi bilgisayara emir ver. Bu dersi öğretmen eşliğinde yaparsanız daha iyi
+    olur. bağımsız da yapılabilir
+  udemy_beyond_longdescription: 'Kodlama için gerekli her kavram için Udemy de size
+    profesyonel eğitmenler tarafından öğretilen bir ders vardır. [Not: ödeme gereklidir]'
   lynda_beyond_longdescription: 'C ve C++ daki nesne-yönelimli programlamanın başından,
     nasıl Java yazıldığına kadar olan kod yazma, oluşturma ve web uygulamaları yapılandırmanın
     nasıl yapıldığını öğrenin. Mobil uygulamaları öğrenme, geliştirme ve oluşturmada,
     PHP ve MySQL veri tabanlarıyla çalışmada, istatistiksel işleme dili R''a başlamada
     ve daha birçok konuda geliştirici derslerimiz size yardımcı olabilir. [Not: ödeme
     gereklidir]'
-  edx_beyond_longdescription: CS50x is Harvard College's introduction to the intellectual
-    enterprises of computer science and the art of programming for majors and non-majors
-    alike, with or without prior programming experience. Topics include abstraction,
-    algorithms, data structures, encapsulation, resource management, security, software
-    engineering, and web development. Languages include C, PHP, and JavaScript plus
-    SQL, CSS, and HTML. The on-campus version of CS50x is Harvard's second-largest
-    course.
-  coursera_beyond_longdescription: 'Stanford''s CS 101 class taught by Nick Parlante
-    (FREE!). CS101 teaches the essential ideas of Computer Science for a zero-prior-experience
-    audience. Play and experiment with short bits of code to bring to life to the
-    power and limitations of computers. CS101 also provides a general background on
-    computers today: what is a computer, what is hardware, what is software, what
-    is the internet. No previous experience is required other than the ability to
-    use a web browser.'
-  udacity_beyond_longdescription: In this course you will learn key concepts in computer
-    science and learn how to write your own computer programs in the context of building
-    a web crawler. There is no prior programming knowledge needed for this course.
-    Beginners are welcome! At the end of this course, you will have learned key concepts
-    in computer science and enough programming to be able to write Python programs
-    to solve problems on your own. This course will prepare you to move on to intermediate-level
-    computing courses.
-  teachingtree_beyond_longdescription: TeachingTree is an open platform that lets
-    anybody organize educational content. Our goal is for students to quickly access
-    the exact clips they need in order to learn individual concepts. Everyone is encouraged
-    to help by adding videos or tagging concepts.
-  kodu_beyond_longdescription: Kodu lets kids create games on the PC and XBox via
-    a simple visual programming language. Kodu can be used to teach creativity, problem
-    solving, storytelling, as well as programming. Anyone can use Kodu to make a game,
-    young children as well as adults with no design or programming skills. Kodu for
-    the PC is available to download for free. Kodu for the XBox is also available
-    in the USA on the XBox Marketplace, in the Indie Games channel for about $5.
-  cargobot_beyond_longdescription: Cargo-Bot is a puzzle game where you teach a robot
-    how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles,
-    haunting music and stunning retina graphics. You can even record your solutions
-    and share them on YouTube to show your friends.
+  edx_beyond_longdescription: CS50x Harvard College'nın üst düzey elemanlara bilgisayar
+    bilimi ve programlama öğretmek için giriş seviyesindedir. Konular soyutlama, algoritmalar,
+    veri yapıları, kapsülleme, kaynak yönetimi, güvenlik, yazılım mühendisliği ve
+    web geliştirme içerir. C, PHP ve JavaScript plus SQL, CSS ve HTML içerir. Harvard'ın
+    en büyük ikinci dersidir.
+  coursera_beyond_longdescription: 'Stanford''ın CS 101 sınıfı (ücretsiz!) Nick Parlante
+    tarafından öğretiliyor. CS101 bilgisayar bilimi temel fikirlerini öğretir. Kod
+    ile oyna ve dene ve bilgisayarın güçlü ve zayıf yönlerini gör. CS101 Ayrıca bilgisayarlar
+    hakkında genel bir arka plan sunar: bilgisayar, donanım, yazılım ve internet nedir
+    onları anlatır. ön deneyim beklenmiyor sadece bir web tarayıcısı kullanabilmek
+    gereklidir.'
+  udacity_beyond_longdescription: Bu ders bilgisayar bilimleri anahtar kavramları
+    öğreneceksiniz ve bir web Gezgini bağlamında kendi bilgisayar programlarınızı
+    yazma konusunda bilgi edinin. Bu ders için önceden bir programlama bilgisine ihtiyaç
+    yoktur. Yeni başlayanlar gelebilir! Bu dersin sonunda, bilgisayar bilimi ve kendi
+    sorunlarınızı çözmek için Python programları yazabilecek şekilde programlama kavramlarını
+    öğrenmiş olacaksın. Bu kurs Orta düzey bilgisayar kurslar için hazırlayacak.
+  teachingtree_beyond_longdescription: TeachingTree herkesin eğitici içerik oluşturmasını
+    sağlayan açık bir platformdur. Amacımız öğrencilere yüzeysel kavramları öğretmektir.
+    Herkesi video ve etiket eklemeye teşvik ediyoruz.
+  kodu_beyond_longdescription: Kodu çocuklara üstünde görsel programlama dili ile
+    PC ve XBox boyunları oluşturmayı sağlar. Kodu yaratıcılık, sorun çözme, hikaye
+    anlatımı, hem de programlama öğretmek için kullanılabilir. Genç çocukların yanı
+    sıra yetişkinlerde ön bir kodlama yada tasarım tecrübesi olmadan Kodu kullanabilir.
+    Kodu PC için ücretsiz indirilebilir. XBox için ABD'de yaklaşık 5 $ ücret karşılığında
+    XBox Pazarda mevcuttur.
+  cargobot_beyond_longdescription: Cargo-Bot robotlara sandıkları hareket ettirmeyi
+    öğreten bir bulmaca oyunudur. Basit, değil mi? 36 zeki bulmaca, müzik ve çarpıcı
+    grafik. Çözümlerinizi kaydedin ve arkadaşlarınızla YouTube'da paylaşın.
   kidsruby_beyond_longdescription: Eğlenin ve oyun yapın yada Ruby kullanarak ev ödevinizi
     hackle!Sadece ebeveynlerine veya öğretmenlerine Ruby programlama öğrenddiğini
     söyle... ;).Bedava ve her bilgisayarda çalışıyor.[Not:Masaüstü yüklemesi gerektirir.]
@@ -1608,60 +1606,84 @@
     olacak şekilde, konunun uzmanları tarafından tasarlanmıştır. HTML, CSS ve JavaScript
     kurslarımız, her yaş için etkin ve eğlenceli bir şekilde öğrenmeyi sağlayacak
     gözden geçirme oyunları ve kod testleri içermektedir.
-  mozilla_beyond_longdescription: Thimble makes it ridiculously simple to create and
-    share your own web pages. Write and edit HTML and CSS right in your browser, then
-    instantly preview your work. Host and share your finished projects with a single
-    click. Perfect for beginners and experts alike.
+  mozilla_beyond_longdescription: Thimble kendi web sayfalarını oluşturma ve paylaşmayı
+    acayipkolaylaştırır.  HTML ve CSS kodlarını doğrudan tarayıcınızda düzenleyin,
+    sonra çalışma anında önizleyin. Tamamlanmış projelerinizi tek bir tıklama ile
+    paylaşın. Yeni başlayanlar ve uzmanlar için idealdir.
   codecombat_beyond_longdescription: Bir büyücü olarak oyna ,kod(büyüler) kullanarak
     kendi kahramanını yönet, labirentte gezin,canavarları yen,düşmanlarını atlat ve
     dostlarını kurtar.Tamamen yeni başlayanlar için olan HTML 5 internet oyununda
     JavaScript öğren.
-  codea_beyond_longdescription: Codea for iPad lets you create games and simulations
-    &mdash; or just about any visual idea you have. Turn your thoughts into interactive
-    creations that make use of iPad features like Multi-Touch and the accelerometer.
-    We think Codea is the most beautiful code editor you'll use, and it's easy. Codea
-    is designed to let you touch your code. Want to change a number? Just tap and
-    drag it. How about a color, or an image? Tapping will bring up visual editors
-    that let you choose exactly what you want.
+  codea_beyond_longdescription: Koduna iPad için Java Oyunlar ve simülasyonlar oluşturmayı
+    sağlar. Düşüncelerinizi Multi-Touch ve accelerometer gibi etkileşimli özelliklere
+    açın. Codea nın kullanacağınız en güzelve en kolay kod editörü olduğunu düşünüyorum.
+    Codea kodunuzu dokunmanız için tasarlanmıştır. Bir sayı değiştirmek mi istiyorsunuz?
+    Sadece dokunun ve sürükleyin. renk veya bir resim? Dokunarak tam olarak ne istediğinizi
+    seçmenize izin veren görsel editörler getirecek.
   lego_beyond_longdescription: LEGO parçaları kullanarak küçük, özelleştirilebilir
     ve programlanabilir robotlar yaratın.
-  finch_beyond_longdescription: The Finch is a new robot for computer science education.
-    Its design is the result of a four year study at Carnegie Mellon's CREATE lab.
-    The Finch is designed to support an engaging introduction to the art of programming.
-    It has support for over a dozen programming languages and environments, including
-    several environments appropriate for students as young as eight years old. The
-    Finch was designed to allow students to write richly interactive programs.
-  arduino_beyond_longdescription: Arduino is a popular platform designed to allow
-    artists and designers to work with real sensors, LEDs, buzzers, and more. The
-    Sparkfun Virtual Sandbox will teach you real Arduino code right in your browser.
-  processing_beyond_longdescription: Processing is a programming language, development
-    environment, and online community. Since 2001, Processing has promoted software
-    literacy within the visual arts and visual literacy within technology. Initially
-    created to serve as a software sketchbook and to teach computer programming fundamentals
-    within a visual context, Processing evolved into a development tool for professionals.
-    Today, there are tens of thousands of students, artists, designers, researchers,
-    and hobbyists who use Processing for learning, prototyping, and production.
-  alice_beyond_longdescription: Using an innovative programming environment to support
-    the creation of 3D animations, the Alice Project provides tools and materials
-    for teaching and learning computational thinking, problem solving, and computer
-    programming across a spectrum of ages and grade levels.
+  finch_beyond_longdescription: Finch bilgisayar bilim eğitimi için yeni bir robottur.
+    Carnegie Mellon'ın laboratuarındaki bir dört yıllık çalışmanın sonucudur. Finch
+    sanata giriş ve programlamayı desteklemek için tasarlanmıştır. Bir düzine programlama
+    dilini destekler ve sekiz yaşın ve üzerindeki genç öğrenciler için uygundur. Finch
+    öğrencilerin interaktif programlar yazmasına izin vermek için tasarlanmıştır.
+  arduino_beyond_longdescription: Arduino, sanatçılar ve tasarımcılar için gerçek
+    sensörler, LED, buzzers ve daha fazlası ile çalışmak için tasarlanmış popüler
+    bir platformdur. Sparkfun Virtual Sandbox gerçek Arduino kodunu doğrudan tarayıcınızda
+    kullanmanızı öğretecektir.
+  processing_beyond_longdescription: Processing bir programlama dilidir. 2001 yılından
+    bu yana, işleme yazılımı okuma-yazma içinde Görsel Sanatlar ve teknoloji içinde
+    Görsel Okuryazarlık teşvik etmiştir. Başlangıçta bilgisayar programlama temellerini
+    görsel bir bağlam içinde öğretmek için oluşturulmuştu. Sonrada profesyoneller
+    için bir geliştirme aracına dönüştü. Bugün onbinlerce öğrenci, sanatçı, tasarımcı
+    ve araştırmacı öğrenme, prototip ve üretim için kullanıyor.
+  alice_beyond_longdescription: Alice projesi 3D animasyonlar oluşturulmasını desteklemek
+    için yenilikçi bir programlama ortamı kullanır. Bu proje sağladığı araç ve gereçleri
+    ile sayısal düşünme, problem çözme ve bilgisayar programlamayı her yaş yelpazesinde
+    öğrenciler için öğrenme sağlar.
   sphero_beyond_longdescription: "Öğretmen veya ebeveyn olun,SPRK dersleri çocukların
     matematik ve fen yeteneklerini geliştirirken eğlenceli robot çarpışma dersi vermektedir."
   compatibility_https_header: Lütfen HTTPS'i etkinleştirin.
-  compatibility_https_message: To increase security, we are switching to HTTPS on
-    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-    here</a> to learn how to enable HTTPS for Code.org.
+  compatibility_https_message: Güvenliği artırmak için biz %{https_date}. tarihinde
+    HTTPS e geçiyoruz. Bu tarihten sonra Code.org erişmek mümkün olmayacaktır. nasıl
+    Code.org için HTTPS in nasıl etkinleştirileceği hakkında bilgiler için <a href='%{it_requirements_url}'>
+    burayı tıklatın</a>.
   compatibility_https_hide_this_warning: Bu uyarıyı gizle
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: kanat çırp
+  flappy_shortcode: kanat çırpmak
   infinity_shortcode: inf
   playlab_shortcode: oynat
   artist_shortcode: art
-  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
-    (or a teacher you know) want to join a nationwide community of educators working
-    to change the face of computer science education? We'll be accepting applications
-    from middle and high school teachers in our partner districts for our year-long
-    Exploring Computer Science Professional Learning Program until April 22nd."
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
+  dashboard_sections_close: Close
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.

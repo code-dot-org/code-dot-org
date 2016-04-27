@@ -423,19 +423,6 @@ exports.install = function (blockly, blockInstallOptions) {
     getVars: function () {
       return [this.getTitleValue('VAR')];
     },
-    customContextMenu: function (options) {
-      var option = {enabled: true};
-      var name = this.getTitleValue('VAR');
-      option.text = blockly.Msg.VARIABLES_SET_CREATE_GET.replace('%1', name);
-      var xmlTitle = document.createElement('title');
-      xmlTitle.appendChild(document.createTextNode(name));
-      xmlTitle.setAttribute('name', 'VAR');
-      var xmlBlock = document.createElement('block');
-      xmlBlock.appendChild(xmlTitle);
-      xmlBlock.setAttribute('type', 'variables_get_counter');
-      option.callback = blockly.ContextMenu.callbackFactory(this, xmlBlock);
-      options.push(option);
-    },
     // serialize the counter variable name to xml so that it can be used across
     // different locales
     mutationToDom: function () {

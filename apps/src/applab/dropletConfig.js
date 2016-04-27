@@ -1,7 +1,8 @@
+/* global dashboard */
+
 var api = require('./api');
 var dontMarshalApi = require('./dontMarshalApi');
 var consoleApi = require('../consoleApi');
-var showAssetManager = require('../assetManagement/show.js');
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
 var ChartApi = require('./ChartApi');
 var elementUtils = require('./designElements/elementUtils');
@@ -14,7 +15,7 @@ var DEFAULT_HEIGHT = (480 - applabConstants.FOOTER_HEIGHT).toString();
 
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
-  showAssetManager(callback, typeFilter);
+  dashboard.assets.showAssetManager(callback, typeFilter);
 }
 
 var COLOR_LIGHT_GREEN = '#D3E965';
@@ -111,7 +112,7 @@ module.exports.blocks = [
   {func: 'setAlpha', parent: dontMarshalApi, category: 'Canvas', paletteParams: ['imgData','x','y','a'], params: ["imgData", "0", "0", "255"], dontMarshal: true },
   {func: 'setRGB', parent: dontMarshalApi, category: 'Canvas', paletteParams: ['imgData','x','y','r','g','b'], params: ["imgData", "0", "0", "255", "255", "255"], dontMarshal: true },
 
-  {func: 'startWebRequest', parent: api, category: 'Data', paletteParams: ['url','callback'], params: ['"http://api.openweathermap.org/data/2.5/weather?q=London,uk"', "function(status, type, content) {\n  \n}"] },
+  {func: 'startWebRequest', parent: api, category: 'Data', paletteParams: ['url','callback'], params: ['"https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&page=computer&section=1&disablelimitreport=true"', "function(status, type, content) {\n  \n}"] },
   {func: 'setKeyValue', parent: api, category: 'Data', paletteParams: ['key','value','callback'], params: ['"key"', '"value"', "function () {\n  \n}"] },
   {func: 'setKeyValueSync', parent: api, category: 'Data', paletteParams: ['key','value'], params: ['"key"', '"value"'], nativeIsAsync: true, noAutocomplete: true },
   {func: 'getKeyValue', parent: api, category: 'Data', paletteParams: ['key','callback'], params: ['"key"', "function (value) {\n  \n}"] },

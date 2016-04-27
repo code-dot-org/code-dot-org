@@ -13,23 +13,12 @@ class FilesApi < Sinatra::Base
 
   def get_bucket_impl(endpoint)
     case endpoint
+    when 'animations'
+      AnimationBucket
     when 'assets'
       AssetBucket
     when 'sources'
       SourceBucket
-    else
-      not_found
-    end
-  end
-
-  def allowed_file_type?(endpoint, extension)
-    case endpoint
-    when 'assets'
-      # Only allow specific image and sound types to be uploaded by users.
-      %w(.jpg .jpeg .gif .png .mp3).include? extension.downcase
-    when 'sources'
-      # Only allow JavaScript and Blockly XML source files.
-      %w(.js .xml .txt .json).include? extension
     else
       not_found
     end
@@ -94,17 +83,17 @@ class FilesApi < Sinatra::Base
   end
 
   helpers do
-    %w(core.rb bucket_helper.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb).each do |file|
+    %w(core.rb bucket_helper.rb animation_bucket.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
   end
 
   #
-  # GET /v3/(assets|sources)/<channel-id>
+  # GET /v3/(animations|assets|sources)/<channel-id>
   #
   # List filenames and sizes.
   #
-  get %r{/v3/(assets|sources)/([^/]+)$} do |endpoint, encrypted_channel_id|
+  get %r{/v3/(animations|assets|sources)/([^/]+)$} do |endpoint, encrypted_channel_id|
     dont_cache
     content_type :json
 
@@ -112,26 +101,20 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # GET /v3/(assets|sources)/<channel-id>/<filename>?version=<version-id>
+  # GET /v3/(animations|assets|sources)/<channel-id>/<filename>?version=<version-id>
   #
   # Read a file. Optionally get a specific version instead of the most recent.
   #
-  get %r{/v3/(assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
-    case endpoint
-    when 'assets'
-      cache_one_hour
-    when 'sources'
-      dont_cache
-    else
-      not_found
-    end
+  get %r{/v3/(animations|assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+    buckets = get_bucket_impl(endpoint).new
+    set_object_cache_duration buckets.cache_duration_seconds
 
     type = File.extname(filename)
     not_found if type.empty?
-    unsupported_media_type unless allowed_file_type?(endpoint, type)
+    unsupported_media_type unless buckets.allowed_file_type?(type)
     content_type type
 
-    result = get_bucket_impl(endpoint).new.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
+    result = buckets.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
     not_found if result[:status] == 'NOT_FOUND'
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
@@ -143,36 +126,79 @@ class FilesApi < Sinatra::Base
     result[:body]
   end
 
+  #
+  # Set appropriate cache headers for making the retrieved object cached
+  # for the given number of seconds
+  # @param [Int] duration_seconds
+  def set_object_cache_duration(duration_seconds)
+    if duration_seconds == 0
+      dont_cache
+    else
+      cache_for duration_seconds
+    end
+  end
+
   def put_file(endpoint, encrypted_channel_id, filename, body)
     not_authorized unless owns_channel?(encrypted_channel_id)
 
     file_too_large(endpoint) unless body.length < max_file_size
 
+    buckets = get_bucket_impl(endpoint).new
+
     # verify that file type is in our whitelist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
     file_type = File.extname(filename)
-    unsupported_media_type unless allowed_file_type?(endpoint, file_type)
-    # ignore client-specified mime type. infer it from file extension
-    # when serving assets.
-    mime_type = Sinatra::Base.mime_type(file_type)
+    unsupported_media_type unless buckets.allowed_file_type?(file_type)
+    category = buckets.category_from_file_type(file_type)
 
-    buckets = get_bucket_impl(endpoint).new
     app_size = buckets.app_size(encrypted_channel_id)
 
     quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < max_app_size
     quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
 
-    category = mime_type.split('/').first
     {filename: filename, category: category, size: body.length, versionId: response.version_id}.to_json
   end
 
   #
-  # PUT /v3/(assets|sources)/<channel-id>/<filename>?version=<version-id>
+  # Create a new file from an existing source file within the specified channel.
+  #
+  # @param [String] endpoint - One of sources/assets/animations
+  # @param [String] encrypted_channel_id - Token for app channel
+  # @param [String] filename - Destination filename for file to be created
+  # @param [String] source_filename - Filename of file to be copied
+  # @return [String] JSON containing details for new file
+  #
+  def copy_file(endpoint, encrypted_channel_id, filename, source_filename)
+    not_authorized unless owns_channel?(encrypted_channel_id)
+
+    buckets = get_bucket_impl(endpoint).new
+
+    # verify that file type is in our whitelist, and that the user-specified
+    # mime type matches what Sinatra expects for that file type.
+    file_type = File.extname(filename)
+    unsupported_media_type unless buckets.allowed_file_type?(file_type)
+    category = buckets.category_from_file_type(file_type)
+
+    # Get the app size and size of the source object to check app quotas
+    source_size, app_size = buckets.object_and_app_size(encrypted_channel_id, source_filename)
+    # If the source object doesn't exist, reject the request
+    not_found if source_size.nil?
+
+    quota_exceeded(endpoint, encrypted_channel_id) unless app_size + source_size < max_app_size
+    quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, source_size)
+
+    response = buckets.copy(encrypted_channel_id, filename, source_filename)
+
+    {filename: filename, category: category, size: source_size, versionId: response.version_id}.to_json
+  end
+
+  #
+  # PUT /v3/sources/<channel-id>/<filename>?version=<version-id>
   #
   # Create or replace a file. Optionally overwrite a specific version.
   #
-  put %r{/v3/sources/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
+  put %r{/v3/(sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
@@ -182,7 +208,7 @@ class FilesApi < Sinatra::Base
     # header.
     body = request.body.read
 
-    put_file('sources', encrypted_channel_id, filename, body)
+    put_file(endpoint, encrypted_channel_id, filename, body)
   end
 
   # POST /v3/assets/<channel-id>/
@@ -206,12 +232,44 @@ class FilesApi < Sinatra::Base
     put_file('assets', encrypted_channel_id, file[:filename], file[:tempfile].read)
   end
 
+  # POST /v3/animations/<channel-id>/<filename>?version=<version-id>
   #
-  # PATCH /v3/(assets|sources)/<channel-id>?abuse_score=<abuse_score>
+  # Create or replace an animation. We use this method so that IE9 can still
+  # upload by posting to an iframe.
+  #
+  post %r{/v3/(animations)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+    dont_cache
+    # though this is JSON data, we're making the POST request via iframe
+    # form submission. IE9 will try to download the response if we have
+    # content_type json
+    content_type 'text/plain'
+
+    bad_request unless request.POST['files'] && request.POST['files'][0]
+
+    file = request.POST['files'][0]
+
+    bad_request unless file[:filename] && file[:tempfile]
+
+    put_file(endpoint, encrypted_channel_id, filename, file[:tempfile].read)
+  end
+
+  # PUT /v3/animations/<channel-id>/<filename>?src=<source-filename>
+  #
+  # Create or replace an animation. We use this method so that IE9 can still
+  # upload by posting to an iframe.
+  #
+  put %r{/v3/(animations)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+    dont_cache
+    content_type 'text/plain'
+    copy_file(endpoint, encrypted_channel_id, filename, request.GET['src'])
+  end
+
+  #
+  # PATCH /v3/(animations|assets|sources)/<channel-id>?abuse_score=<abuse_score>
   #
   # Update all assets for the given channelId to have the provided abuse score
   #
-  patch %r{/v3/(assets|sources)/([^/]+)/$} do |endpoint, encrypted_channel_id|
+  patch %r{/v3/(animations|assets|sources)/([^/]+)/$} do |endpoint, encrypted_channel_id|
     dont_cache
 
     abuse_score = request.GET['abuse_score']
@@ -229,11 +287,11 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # DELETE /v3/(assets|sources)/<channel-id>/<filename>
+  # DELETE /v3/(animations|assets|sources)/<channel-id>/<filename>
   #
   # Delete a file.
   #
-  delete %r{/v3/(assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  delete %r{/v3/(animations|assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
 
     owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
@@ -244,31 +302,31 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # GET /v3/sources/<channel-id>/<filename>/versions
+  # GET /v3/(animations|sources)/<channel-id>/<filename>/versions
   #
   # List versions of the given file.
   # NOTE: Not yet implemented for assets.
   #
-  get %r{/v3/sources/([^/]+)/([^/]+)/versions$} do |encrypted_channel_id, filename|
+  get %r{/v3/(animations|sources)/([^/]+)/([^/]+)/versions$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
-    SourceBucket.new.list_versions(encrypted_channel_id, filename).to_json
+    get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename).to_json
   end
 
   #
-  # PUT /v3/sources/<channel-id>/<filename>/restore?version=<version-id>
+  # PUT /v3/(animations|sources)/<channel-id>/<filename>/restore?version=<version-id>
   #
   # Copies the given version of the file to make it the current revision.
   # NOTE: Not yet implemented for assets.
   #
-  put %r{/v3/sources/([^/]+)/([^/]+)/restore$} do |encrypted_channel_id, filename|
+  put %r{/v3/(animations|sources)/([^/]+)/([^/]+)/restore$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
     owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     not_authorized unless owner_id == storage_id('user')
 
-    SourceBucket.new.restore_previous_version(encrypted_channel_id, filename, request.GET['version']).to_json
+    get_bucket_impl(endpoint).new.restore_previous_version(encrypted_channel_id, filename, request.GET['version']).to_json
   end
 end

@@ -69,7 +69,8 @@ class Level < ActiveRecord::Base
   # Rails won't natively assign one-to-one association attributes for
   # us, even though we've specified accepts_nested_attributes_for above.
   # So, we must do it manually.
-  def assign_attributes(attributes)
+  def assign_attributes(new_attributes)
+    attributes = new_attributes.stringify_keys
     concept_difficulty_attributes = attributes.delete('level_concept_difficulty')
     assign_nested_attributes_for_one_to_one_association(:level_concept_difficulty,
         concept_difficulty_attributes) if concept_difficulty_attributes
@@ -111,6 +112,10 @@ class Level < ActiveRecord::Base
 
   # Overriden by different level types.
   def self.flower_types
+  end
+
+  # Overriden by different level types.
+  def self.palette_categories
   end
 
   def self.custom_levels
@@ -252,7 +257,8 @@ class Level < ActiveRecord::Base
   # on that level.
   def channel_backed?
     return false if self.try(:is_project_level)
-    self.project_template_level || self.game == Game.applab || self.game == Game.gamelab || self.game == Game.pixelation
+    free_response_upload = is_a?(FreeResponse) && allow_user_uploads
+    self.project_template_level || self.game == Game.applab || self.game == Game.gamelab || self.game == Game.pixelation || free_response_upload
   end
 
   def key

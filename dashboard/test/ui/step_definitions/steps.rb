@@ -528,8 +528,8 @@ And(/^I set the language cookie$/) do
     value: 'en'
   }
 
-  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/
+  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
+      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
     params[:domain] = '.code.org' # top level domain cookie
   end
 
@@ -560,8 +560,8 @@ def log_in_as(user)
   }
   params[:secure] = true if @browser.current_url.start_with? 'https://'
 
-  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/
+  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
+      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
     params[:domain] = '.code.org' # top level domain cookie
   end
 
@@ -596,7 +596,7 @@ And(/^I create a (student|teacher) named "([^"]*)"$/) do |user_type, name|
   end
 end
 
-# used for tests that touch components that are being A/B tested
+# can be used for tests that touch components that are being A/B tested
 And(/^I create a student with an (even|odd) ID named "([^"]*)"$/) do |id_type, name|
   new_user = nil
   begin

@@ -4,7 +4,6 @@
 
 var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants').TestResults;
-var _ = require('lodash');
 
 // take advantage of the fact that we expose the filesystem via
 // localhost:8001
@@ -199,12 +198,63 @@ module.exports = {
       },
     },
     {
+      description: "html sanitization allows whitelisted tags and attributes",
+      timeout: 20000,
+      editCode: true,
+      xml: '' +
+      'write(\'' +
+      '<div id="container">' +
+      '  <img id="image" src="' + imageUrl + '">' +
+      '  <h1 id="header1">heading</h1>' +
+      '  <h6 id="header1">heading</h6>' +
+      '  <hr>' +
+      '  <select id="dropdown1" size="2" multiple="true">' +
+      '    <option>Option 1</option>' +
+      '    <option>Option 2</option>' +
+      '  </select>' +
+      '  <a href="https://code.org/images/logo.png">logo</a>' +
+      '</div>' +
+      '\')\n;',
+
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          // Element.outerHTML undoes some of the cosmetic changes made by the sanitizer.
+          var expectedHtml = '' +
+            '<div id="container">' +
+            '  <img id="image" src="' + imageUrl + '">' +
+            '  <h1 id="header1">heading</h1>' +
+            '  <h6 id="header1">heading</h6>' +
+            '  <hr>' +
+            '  <select id="dropdown1" size="2" multiple="true">' +
+            '    <option>Option 1</option>' +
+            '    <option>Option 2</option>' +
+            '  </select>' +
+            '  <a href="https://code.org/images/logo.png">logo</a>' +
+            '</div>';
+          assert.equal($('#divApplab #container')[0].outerHTML, expectedHtml, 'container has unexpected outerHTML');
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
       description: "cosmetic changes in html sanitization do not cause warnings",
       timeout: 20000,
       editCode: true,
       xml: '' +
       'write(\'' +
-        '<div id="container">' +
+        '<div id="container" abp="228">' +
         '<img id="image1" src="">' +
         '<img id="image2" src="' + imageUrl + '" />' +
         '</div>' +

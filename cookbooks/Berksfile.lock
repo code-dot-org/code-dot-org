@@ -15,6 +15,8 @@ DEPENDENCIES
     path: cdo-java-7
   cdo-mysql
     path: cdo-mysql
+  cdo-networking
+    path: cdo-networking
   cdo-newrelic
     path: cdo-newrelic
   cdo-nginx
@@ -36,6 +38,10 @@ DEPENDENCIES
   cdo-varnish
     path: cdo-varnish
   chef-client (~> 4.2.0)
+  ixgbevf
+    git: git://github.com/wjordan/chef-ixgbevf.git
+    revision: 969318033aecd49dbbd57d9dafd03a84959d7736
+    branch: cdo
   ntp (~> 1.8.6)
   omnibus_updater
     git: git://github.com/wjordan/omnibus_updater.git
@@ -51,11 +57,12 @@ GRAPH
     seven_zip (>= 0.0.0)
     windows (>= 0.0.0)
   build-essential (2.1.3)
-  cdo-apps (0.2.19)
+  cdo-apps (0.2.21)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     cdo-java-7 (>= 0.0.0)
     cdo-mysql (>= 0.0.0)
+    cdo-networking (>= 0.0.0)
     cdo-nginx (>= 0.0.0)
     cdo-nodejs (>= 0.0.0)
     cdo-postfix (>= 0.0.0)
@@ -72,7 +79,9 @@ GRAPH
   cdo-java-7 (0.1.0)
     build-essential (>= 0.0.0)
   cdo-mysql (0.1.1)
-  cdo-newrelic (0.1.0)
+  cdo-networking (0.1.0)
+    ixgbevf (>= 0.0.0)
+  cdo-newrelic (0.1.2)
     apt (>= 0.0.0)
   cdo-nginx (0.0.8)
     apt (>= 0.0.0)
@@ -99,6 +108,9 @@ GRAPH
   cron (1.7.4)
   homebrew (2.0.5)
     build-essential (>= 2.1.2)
+  ixgbevf (0.1.2)
+    apt (>= 0.0.0)
+    yum-epel (>= 0.0.0)
   logrotate (1.9.2)
   nodejs (2.4.4)
     apt (>= 0.0.0)

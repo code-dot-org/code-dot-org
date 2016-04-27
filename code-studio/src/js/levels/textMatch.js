@@ -24,12 +24,21 @@ TextMatch.prototype.ready = function () {
   if (this.standalone) {
     window.getResult = $.proxy(this.getResult, this);
   }
+
+
+  $("#" + this.id + " textarea.response").blur(function () {
+    if (window.levelGroup && window.levelGroup.answerChangedFn) {
+      window.levelGroup.answerChangedFn();
+    }
+  });
 };
+
 
 TextMatch.prototype.getCurrentAnswer = function () {
   var response = $("#" + this.id + " textarea.response").val();
+  var valid = response.length > 1;
 
-  return encodeURIComponent(response);
+  return { response: response, valid: valid };
 };
 
 TextMatch.prototype.getResult = function () {
