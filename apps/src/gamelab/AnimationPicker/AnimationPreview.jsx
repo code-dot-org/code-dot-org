@@ -25,18 +25,31 @@ var AnimationPreview = React.createClass({
     };
   },
 
-  componentDidMount: function () {
-    this.scheduleNextFrame_ = function () {
-      this.setState({ currentFrame: (this.state.currentFrame + 1) % this.props.frameCount });
-      this.timeout_ = setTimeout(this.scheduleNextFrame_, 1000/this.props.frameRate);
-    }.bind(this);
-    this.scheduleNextFrame_();
-  },
-
   componentWillUnmount: function () {
     if (this.timeout_) {
       clearTimeout(this.timeout_);
     }
+  },
+
+  onMouseOver: function () {
+    this.advanceFrame();
+  },
+
+  onMouseOut: function () {
+    this.stopAndResetAnimation();
+  },
+
+  advanceFrame: function () {
+    this.setState({ currentFrame: (this.state.currentFrame + 1) % this.props.frameCount });
+    this.timeout_ = setTimeout(this.advanceFrame, 1000 / this.props.frameRate);
+  },
+
+  stopAndResetAnimation: function () {
+    if (this.timeout_) {
+      clearTimeout(this.timeout_);
+      this.timeout_ = undefined;
+    }
+    this.setState({ currentFrame: 0 });
   },
 
   render: function () {
@@ -64,7 +77,11 @@ var AnimationPreview = React.createClass({
       backgroundPosition: xOffset + 'px ' + yOffset + 'px'
     };
     return (
-      <div ref="root" style={containerStyle}>
+      <div
+          ref="root"
+          style={containerStyle}
+          onMouseOver={this.onMouseOver}
+          onMouseOut={this.onMouseOut}>
         <img src="/blockly/media/1x1.gif" style={imageStyle}/>
       </div>
     );
