@@ -614,23 +614,33 @@ $default-modal-width: 640px;
   background: $light_gray;
 }
 
-#project-share .social-buttons a {
-  display: inline-block;
-  &:hover, & {
-    text-decoration: none;
+#project-share {
+
+  .export-button {
+    color: $dark_color;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
   }
-  i {
-    display: table-cell;
-    width: 45px;
-    height: 45px;
-    border-radius: 5px;
-    background: $purple;
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 24pt;
-    &:hover {
-      box-shadow: 2px 2px 5px $light_gray;
+
+  .social-buttons a {
+    display: inline-block;
+    &:hover, & {
+      text-decoration: none;
+    }
+    i {
+      display: table-cell;
+      width: 45px;
+      height: 45px;
+      border-radius: 5px;
+      background: $purple;
+      color: white;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 24pt;
+      &:hover {
+        box-shadow: 2px 2px 5px $light_gray;
+      }
     }
   }
 }
@@ -1668,6 +1678,10 @@ a.download-video {
   margin-right: 0;
 }
 
+#free-response-upload {
+  overflow: hidden;
+}
+
 #current-script-levels, #all-levels {
   min-height: 50px;
   li {
@@ -1761,9 +1775,11 @@ div.mini_gallery_activity {
   padding: 10px;
 }
 
-.level_group_buttons {
-  display: inline-block;
+.previousPageButton {
+  margin-right: 5px;
+}
 
+.buttons.submittable {
   .submitButton {
     border-color: $purple;
     background-color: $purple;
@@ -1779,7 +1795,7 @@ div.mini_gallery_activity {
   }
 }
 
-.level_group_readonly {
+.submitted_readonly {
   background-color: $lightest_gray;
 }
 
@@ -2153,11 +2169,9 @@ $modal-no-icon-gap: 22px;
   }
 }
 
-#levelgroup-submit-incomplete-dialogcontent{
-  overflow: hidden;
-}
-
-#levelgroup-submit-complete-dialogcontent{
+#levelgroup-submit-incomplete-dialogcontent,
+#levelgroup-submit-complete-dialogcontent,
+#unsubmit-dialogcontent {
   overflow: hidden;
 }
 

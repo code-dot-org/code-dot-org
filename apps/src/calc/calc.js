@@ -28,7 +28,7 @@ var calcMsg = require('./locale');
 var skins = require('../skins');
 var levels = require('./levels');
 var AppView = require('../templates/AppView');
-var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var CodeWorkspace = require('../templates/CodeWorkspace');
 var CalcVisualizationColumn = require('./CalcVisualizationColumn');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
@@ -199,20 +199,13 @@ Calc.init = function (config) {
     }
   };
 
-  var generateCodeWorkspaceHtmlFromEjs = function () {
-    return codeWorkspaceEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        localeDirection: studioApp.localeDirection(),
-        blockUsed : undefined,
-        idealBlockNumber : undefined,
-        editCode: level.editCode,
-        blockCounterClass : 'block-counter-default',
-        readonlyWorkspace: config.readonlyWorkspace
-      }
-    });
-  };
-
+  var codeWorkspace = (
+    <CodeWorkspace
+      localeDirection={studioApp.localeDirection()}
+      editCode={!!level.editCode}
+      readonlyWorkspace={!!config.readonlyWorkspace}
+    />
+  );
   var visualizationColumn = <CalcVisualizationColumn inputOutputTable={level.inputOutputTable}/>;
 
   ReactDOM.render(React.createElement(AppView, {
@@ -222,7 +215,7 @@ Calc.init = function (config) {
     hideSource: !!config.hideSource,
     noVisualization: false,
     isRtl: studioApp.isRtl(),
-    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    codeWorkspace: codeWorkspace,
     visualizationColumn: visualizationColumn,
     onMount: studioApp.init.bind(studioApp, config)
   }), document.getElementById(config.containerId));
