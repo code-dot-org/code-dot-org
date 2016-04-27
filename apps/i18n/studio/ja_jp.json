@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "20匹のマウスドロイドをつかまえてください。\"when get Mouse Droid\"（マウスドロイドをつかまえた時）イベントの中の \"add a Mouse Droid\"（マウスドロイドを１匹追加）コマンドをつかって、1匹つかまえるたびに、２匹(または2匹以上) のマウスドロイドが追加されるようにしましょう。",
   "failedMultiplyCharactersTimeoutGotSome": "おめでとうございます。マウスドロイドをつくるコードが追加されました。次のパズルへすすむか、または20匹のマウスドロイドをつかまえるパズルに再ちょうせんしてください。より多くのマウスドロイドを追加すると、ゲームが簡単になります。はやく動くには、キーボード (またはスクリーン) のやじるしを押しつづけてください。",
   "failedChangeSettingTimeout": "上へ動く3つの反乱軍パイロットを取得します。",
-  "failedChangeSettingSettings": "あなだだけのゲームをつくりましょう。この章を終わらせるには、ドロイドを変えてスピードを設定してください。"
+  "failedChangeSettingSettings": "あなだだけのゲームをつくりましょう。この章を終わらせるには、ドロイドを変えてスピードを設定してください。",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }
