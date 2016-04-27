@@ -45,7 +45,7 @@ var DialogButtons = require('../templates/DialogButtons');
 var executionLog = require('../executionLog');
 var annotationList = require('../acemode/annotationList');
 
-var createStore = require('../redux');
+var createStore = require('../redux').createStore;
 var Provider = require('react-redux').Provider;
 var rootReducer = require('./reducers').rootReducer;
 var actions = require('./actions');
