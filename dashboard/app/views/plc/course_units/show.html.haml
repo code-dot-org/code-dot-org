@@ -61,7 +61,7 @@
           %td
             = text_field_tag ''
           %td
-            = select_tag '', options_for_select(options_for_evaluation_answer_modules(@course_unit)), include_blank: ''
+            = select_tag '', options_for_select(options_with_learning_module_names_and_required_tag(@course_unit)), include_blank: ''
           %td
         %tr.new_answer_button_row{question_id: question.id}
           %td
