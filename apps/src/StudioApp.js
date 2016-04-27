@@ -28,6 +28,7 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var assetListStore = require('./assetManagement/assetListStore');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
+var isRunning = require('./redux/isRunning');
 var copyrightStrings;
 
 /**
@@ -193,6 +194,18 @@ var StudioApp = function () {
    */
   this.wireframeShare = false;
 
+  /**
+   * Redux store that might be provided by the app. Initially give it an empty
+   * interface so that we can assume existence.
+   */
+  this.reduxStore_ = {
+    getState: function () {
+      return {};
+    },
+    dispatch: function () {
+    }
+  };
+
   this.onAttempt = undefined;
   this.onContinue = undefined;
   this.onResetPressed = undefined;
@@ -260,6 +273,8 @@ StudioApp.prototype.init = function (config) {
   if (!config) {
     config = {};
   }
+
+  this.reduxStore_ = config.reduxStore || this.reduxStore_;
 
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
@@ -819,6 +834,8 @@ StudioApp.prototype.toggleRunReset = function (button) {
   if (button !== 'run' && button !== 'reset') {
     throw "Unexpected input";
   }
+
+  this.reduxStore_.dispatch(isRunning.toggleRunning());
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
