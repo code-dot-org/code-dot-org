@@ -1,6 +1,9 @@
 /* global appOptions, Dialog */
 
-function initLevelGroup(
+require('./multi.js');
+require('./textMatch.js');
+
+window.initLevelGroup = function (
   levelCount,
   currentPage,
   fallbackResponse,
@@ -123,4 +126,4 @@ function initLevelGroup(
   $(".previousPageButton").click(function (event) {
     gotoPage(currentPage-1);
   });
-}
+};
