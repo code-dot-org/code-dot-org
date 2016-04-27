@@ -31,6 +31,7 @@ class FreeResponse < Level
     allow_user_uploads
     skip_dialog
     skip_sound
+    submittable
   )
 
   before_validation do
