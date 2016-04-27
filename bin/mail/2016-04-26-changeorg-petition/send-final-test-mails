@@ -1,0 +1,3 @@
+#!/bin/sh
+
+../send-to-mailing-list 4-22-petition-congress-3b-no ../mailing-common/test-params-us.csv

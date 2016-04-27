@@ -1,0 +1,27 @@
+name 'CSD U3 Variables2 SFLP'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 04 - Expressions and Reassignment
+
+# Background
+
+Common mathematical operations like **addition, subtraction, multiplication, and division** can be used in most programming languages. These operations can be combined to form **expressions** which your computer can evaluate to arrive at a single value. By combining expressions with what you already know about variables it is possible to much more closely control the way your animations move and act
+
+# Lesson
+
+* **Video:** "Variables Reassignment"
+* **Skill-building:** Creating and assigning variables
+* **Guided Project:** Build a Randomized Art project
+* **Extension:** Animate a Character
+
+# Vocab
+
+* **Expression:** [[need to develop authoritative definition]]
+
+# Resources
+* Type: Name - description.<br>
+<iframe width="480" height="270" src="https://www.youtube.com/embed/G41G_PEWFjE?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
