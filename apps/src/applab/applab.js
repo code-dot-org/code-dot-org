@@ -761,7 +761,7 @@ Applab.init = function (config) {
   // able to turn them on.
   config.showInstructionsInTopPane = experiments.isEnabled('topInstructions');
 
-  // Applab.initMinimal();
+  config.reduxStore = Applab.reduxStore;
 
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
