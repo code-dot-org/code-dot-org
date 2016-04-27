@@ -36,6 +36,7 @@ var applabCommands = require('./commands');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var JsDebuggerUi = require('../JsDebuggerUi');
+var JsDebugger = require('../templates/JsDebugger');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var VisualizationOverlay = require('./VisualizationOverlay');
@@ -664,11 +665,12 @@ Applab.init = function (config) {
 
   if (showDebugButtons || showDebugConsole) {
     debuggerUi = new JsDebuggerUi(Applab.runButtonClick);
-    var extraControlRowsHtml = debuggerUi.getMarkup(studioApp.assetUrl, {
-      showButtons: showDebugButtons,
-      showConsole: showDebugConsole
-    });
-    extraControlRows = <ProtectedStatefulDiv dangerouslySetInnerHTML={{ __html : extraControlRowsHtml }} />;
+    extraControlRows = (
+      <JsDebugger
+          debugButtons={showDebugButtons}
+          debugConsole={showDebugConsole}
+          debugWatch={false}/>
+    );
   }
 
   config.loadAudio = function () {

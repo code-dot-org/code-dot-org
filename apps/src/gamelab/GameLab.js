@@ -14,6 +14,7 @@ var dropletUtils = require('../dropletUtils');
 var _ = require('../lodash');
 var dropletConfig = require('./dropletConfig');
 var JsDebuggerUi = require('../JsDebuggerUi');
+var JsDebugger = require('../templates/JsDebugger');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
@@ -187,12 +188,12 @@ GameLab.prototype.init = function (config) {
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
-  var extraControlRowsHtml = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
-    showButtons: true,
-    showConsole: true,
-    showWatch: true,
-  });
-  var extraControlRows = <ProtectedStatefulDiv dangerouslySetInnerHTML={{ __html : extraControlRowsHtml }} />;
+  var extraControlRows = (
+    <JsDebugger
+        debugButtons={true}
+        debugConsole={true}
+        debugWatch={true}/>
+  );
 
   this.reduxStore_.dispatch(actions.setInitialLevelProps({
     assetUrl: this.studioApp_.assetUrl,
