@@ -79,24 +79,6 @@ var JsDebuggerUi = module.exports = function (runApp) {
 };
 
 /**
- * Generate DOM element markup from a jsx file for the debug area.
- * @param {!function} assetUrl - Helper for getting asset URLs.
- * @param {!Object} options
- * @param {!boolean} options.showButtons - Whether to show the debug buttons
- * @param {!boolean} options.showConsole - Whether to show the debug console
- * @param {!boolean} options.showWatch - Whether to show the debug watch area
- * @returns {string} of HTML markup to be embedded in CodeWorkspace
- */
-JsDebuggerUi.prototype.getMarkup = function (assetUrl, options) {
-  return React.renderToStaticMarkup(
-    <JsDebugger
-        debugButtons={!!options.showButtons}
-        debugConsole={!!options.showConsole}
-        debugWatch={!!options.showWatch}/>
-  );
-};
-
-/**
  * Attach the debugger to a particular JSInterpreter instance.  Reinitializes
  * the UI state and begins listening for interpreter events.
  * @param {JSInterpreter} jsInterpreter

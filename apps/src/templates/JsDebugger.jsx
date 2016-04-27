@@ -2,6 +2,12 @@ var i18n = require('../locale');
 var commonStyles = require('../commonStyles');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 
+var styles = {
+  noPadding: {
+    padding: 0
+  }
+};
+
 var DebugConsole = function (props) {
   var classes = 'debug-console';
   if (!props.debugButtons) {
@@ -87,7 +93,7 @@ var JsDebugger = function (props) {
         <div id="clear-console-header" className="workspace-header workspace-header-button">
           <span>
             <i className="fa fa-eraser"/>
-            Clear
+            <span style={styles.noPadding}>Clear</span>
           </span>
         </div>
         {/* possible we could one day have a common slider-cell component */}
