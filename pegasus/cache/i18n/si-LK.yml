@@ -720,7 +720,7 @@
     section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
-  dashboard_sections_move_students: Move students
+  dashboard_sections_move_students: Move Students
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -1663,33 +1663,12 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
-  dashboard_download_csv: Download CSV
-  dashboard_progress_view: 'View progress in:'
-  dashboard_progress_student_in_script: Progress information for %{student_name} in
-    %{script_name}
-  dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
-  dashboard_sections_close: Close
-  dashboard_sections_move_students_desc: Select students to move to a new section.
-    Moving students will not clear their progress.
-  dashboard_sections_one_per_teacher: Students can only be in one section for each
-    teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
-  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
-    section AND the new section
-  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
-    only.
-  dashboard_sections_move_students: Move Students
-  dashboard_error_none_selected: You didn't select any students to move. Please select
-    at least one student.
-  dashboard_error_other_section: If you're moving students between your own sections,
-    select your section from the dropdown. Only select 'Other Section' to move your
-    students to a different teacher's section.
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
