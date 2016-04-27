@@ -1,0 +1,156 @@
+<% require 'cdo/aws/cloudfront' -%>
+---
+AWSTemplateFormatVersion: 2010-09-09
+Description: AWS CloudFormation Template for Code.org application
+Resources:
+  VPC: <%= lambda.call 'LookupStackOutputs', StackName: 'VPC' %>
+  IAM: <%= lambda.call 'LookupStackOutputs', StackName: 'IAM' %>
+  LoadBalancer:
+    Type: AWS::ElasticLoadBalancing::LoadBalancer
+    Properties:
+      CrossZone: true
+      SecurityGroups: ['Fn::GetAtt': [VPC, ELBSecurityGroup]]
+      Subnets: <%=public_subnets%>
+      LBCookieStickinessPolicy:
+        - PolicyName: CookieBasedPolicy
+          CookieExpirationPeriod: 30
+      Listeners:
+        - LoadBalancerPort: 80
+          InstancePort: 80
+          Protocol: HTTP
+          PolicyNames: [CookieBasedPolicy]
+        - LoadBalancerPort: 443
+          InstancePort: 80
+          Protocol: HTTPS
+          SSLCertificateId: <%=certificate_arn%>
+          PolicyNames: [CookieBasedPolicy]
+      HealthCheck:
+        Target: HTTP:80/health_check.php
+        HealthyThreshold: 2
+        UnhealthyThreshold: 5
+        Interval: 10
+        Timeout: 5
+      ConnectionDrainingPolicy:
+        Enabled: true
+        Timeout: 60
+# Nonce value for AMI resources. Change this value to generate a new base AMI on the next CloudFormation update.
+<% ami = '2' -%>
+  AMIComplete<%=ami%>:
+    Type: AWS::CloudFormation::WaitCondition
+    DependsOn: AMI
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: PT40M
+        Count: 1
+  WebServerAMI<%=ami%>:
+    Type: AWS::EC2::Instance
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: PT40M
+        Count: 1
+    Properties:
+      ImageId: <%=image_id%>
+      InstanceType: m4.10xlarge
+      IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
+      SecurityGroupIds: ['Fn::GetAtt': [VPC, FrontendSecurityGroup]]
+      SubnetId: {'Fn::GetAtt': [VPC, Subnet<%=azs.first%>]}
+      KeyName: <%=ssh_key_name%>
+      InstanceInitiatedShutdownBehavior: terminate
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: 64
+            VolumeType: gp2
+      UserData:
+        Fn::Base64: <%=file.call('ami_bootstrap.sh.erb',
+          create_id: "WebServerAMI#{ami}",
+          complete_id: "AMIComplete#{ami}",
+          node_name: 'fe-${INSTANCE_ID}',
+          run_list: 'role[front-end]') %>
+  AMI: <%= lambda.call 'AMIManager',
+    DependsOn: "WebServerAMI#{ami}",
+    StackName: {Ref: 'AWS::StackName' },
+    Region: {Ref: 'AWS::Region' },
+    InstanceId: {Ref: "WebServerAMI#{ami}" } %>
+  WebServer:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: PT60M
+        Count: 2
+    UpdatePolicy:
+      AutoScalingRollingUpdate:
+        MaxBatchSize: 2
+        MinInstancesInService: 2
+        PauseTime: PT60M
+        WaitOnResourceSignals: true
+    Properties:
+      VPCZoneIdentifier: <%=subnets%>
+      LaunchConfigurationName: {Ref: LaunchConfig}
+      MinSize: 1
+      MaxSize: 12
+      DesiredCapacity: 2
+      HealthCheckType: ELB
+      HealthCheckGracePeriod: 4000
+      LoadBalancerNames: [Ref: LoadBalancer]
+  LaunchConfig:
+    Type: AWS::AutoScaling::LaunchConfiguration
+    DependsOn: AMIComplete<%=ami%>
+    Properties:
+      ImageId: {"Fn::GetAtt": [AMI, ImageId]}
+      InstanceType: <%=instance_type%>
+      IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
+      SecurityGroups: ['Fn::GetAtt': [VPC, FrontendSecurityGroup]]
+      KeyName: <%=ssh_key_name%>
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: 64
+            VolumeType: gp2
+      UserData:
+        Fn::Base64: <%=file.call('chef_role_bootstrap.sh.erb', resource_id: 'WebServer', node_name: 'fe-${INSTANCE_ID}', run_list: 'role[front-end]')%>
+<%
+  %w(Dashboard Pegasus).each do |app|
+    app_domain = "#{app == 'Dashboard' ? 'dashboard-' : ''}#{subdomain}"
+-%>
+  <%=app%>DNS:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneName: <%=domain%>.
+      RecordSets:
+        - Name: <%=app_domain%>
+          Type: A
+          AliasTarget:
+<%   if cdn_enabled -%>
+            DNSName: {'Fn::GetAtt': [<%=app%>CDN, DomainName]}
+            HostedZoneId: Z2FDTNDATAQYW2 # static ID for cloudfront aliases
+<%   else -%>
+            DNSName: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneName]}
+            HostedZoneId: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneNameID]}
+<%   end -%>
+<%   if cdn_enabled -%>
+  <%=app%>CDN:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig: <%=AWS::CloudFront.config_cloudformation(app.downcase.to_sym, "origin-#{subdomain}", [app_domain])%>
+<%   end -%>
+<% end -%>
+<% if cdn_enabled%>
+  OriginDNS:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneName: <%=domain%>.
+      RecordSets:
+        - Name: "origin-<%=subdomain%>"
+          Type: A
+          AliasTarget:
+            HostedZoneId: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneNameID]}
+            DNSName: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneName]}
+<% end -%>
+Outputs:
+  DashboardURL:
+    Value: "https://dashboard-<%=subdomain%>"
+    Description: Dashboard URL
+  PegasusURL:
+    Value: "https://<%=subdomain%>"
+    Description: Pegasus URL

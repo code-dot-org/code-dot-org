@@ -66,13 +66,18 @@ describe("Puzzle Rating Utils", function () {
   });
 
   describe('submitCachedPuzzleRatings', function () {
-    var postCount;
-    beforeEach(function(){
+    var postCount, originalAjax;
+    beforeEach( function (){
       postCount = 0;
+      originalAjax = $.ajax;
+    });
+
+    afterEach(function () {
+      $.ajax = originalAjax;
     });
 
     it('can submit multiple ratings', function () {
-      $.ajax = function(opts) {
+      $.ajax = function (opts) {
         postCount++;
         opts.complete();
       };
@@ -86,7 +91,7 @@ describe("Puzzle Rating Utils", function () {
 
     it('only removes the ratings that have been submitted', function () {
       var complete;
-      $.ajax = function(opts) {
+      $.ajax = function (opts) {
         postCount++;
         complete = opts.complete;
       };

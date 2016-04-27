@@ -18,12 +18,27 @@ var DirtDrawer = module.exports = function (map, dirtAsset) {
   };
 };
 
+
+/**
+ * Intentional noop function; BeeItemDrawer needs to be able to reset
+ * between runs, so we implement a shared reset function so that we can
+ * call Maze.gridItemDrawer.reset() blindly. Overridden by BeeItemDrawer
+ */
+DirtDrawer.prototype.reset = function () {};
+
 /**
  * Update the image at the given row,col by determining the spriteIndex for the
  * current value
  */
 DirtDrawer.prototype.updateItemImage = function (row, col, running) {
-  var val = this.map_.getValue(row, col);
+  var val = this.map_.getValue(row, col) || 0;
+
+  // If the cell is a variable cell and we are not currently running,
+  // draw it as either a max-height pile or a max-depth pit.
+  if (this.map_.getVariableCell(row, col).isVariable() && !running) {
+    val = (val < 0) ? -11 : 11;
+  }
+
   this.updateImageWithIndex_('dirt', row, col, this.dirtImageInfo_,
     spriteIndexForDirt(val));
 };
@@ -54,7 +69,7 @@ DirtDrawer.prototype.updateImageWithIndex_ = function (prefix, row, col, imageIn
   }
 };
 
-function createImage (prefix, row, col, imageInfo) {
+function createImage(prefix, row, col, imageInfo) {
   var pegmanElement = document.getElementsByClassName('pegman-location')[0];
   var svg = document.getElementById('svgMaze');
 
@@ -87,12 +102,12 @@ function createImage (prefix, row, col, imageInfo) {
  * Given a dirt value, returns the index of the sprite to use in our spritesheet.
  * Returns -1 if we want to display no sprite.
  */
- function spriteIndexForDirt (val) {
+function spriteIndexForDirt(val) {
   var spriteIndex;
 
   if (val === 0) {
     spriteIndex = -1;
-  } else if(val < -DIRT_MAX) {
+  } else if (val < -DIRT_MAX) {
     spriteIndex = 0;
   } else if (val < 0) {
     spriteIndex = DIRT_MAX + val + 1;

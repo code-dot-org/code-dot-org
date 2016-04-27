@@ -1,19 +1,25 @@
 class Plc::EnrollmentEvaluationsController < ApplicationController
   def perform_evaluation
-    authorize! :read, Plc::Course
-    plc_user_course_enrollment = Plc::UserCourseEnrollment.find(params[:enrollment_id])
-    @questions = plc_user_course_enrollment.plc_course.plc_evaluation_questions
-    @course = plc_user_course_enrollment.plc_course
+    authorize! :read, Plc::UserCourseEnrollment
+    plc_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
+
+    if plc_unit_assignment.status != Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
+      raise "Cannot perform evaluation - unit assignment is in state #{plc_unit_assignment.status}"
+    end
+
+    @questions = plc_unit_assignment.plc_course_unit.plc_evaluation_questions
+    @course_unit = plc_unit_assignment.plc_course_unit
   end
 
   def submit_evaluation
-    authorize! :read, Plc::Course
-    question_responses = params[:answerTaskList].split(',')
-    user_professional_learning_course_enrollment = Plc::UserCourseEnrollment.find(params[:enrollment_id])
+    authorize! :read, Plc::UserCourseEnrollment
+    question_responses = params[:answerModuleList].split(',')
+    enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
 
-    modules_to_enroll_in = Plc::Task.where(id: question_responses).map(&:plc_learning_module)
+    modules_to_enroll_in = Plc::LearningModule.where(id: question_responses)
 
-    user_professional_learning_course_enrollment.enroll_user_in_course_with_learning_modules(modules_to_enroll_in)
-    redirect_to controller: :user_course_enrollments, action: :show, id: params[:enrollment_id]
+    enrollment_unit_assignment.enroll_user_in_unit_with_learning_modules(modules_to_enroll_in)
+    enrollment_unit_assignment.update(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
+    redirect_to controller: :enrollment_unit_assignments, action: :show, id: enrollment_unit_assignment.id
   end
 end

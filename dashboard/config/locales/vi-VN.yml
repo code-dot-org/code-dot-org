@@ -25,6 +25,11 @@
   welcome_back: Chào mừng trở lại, %{name}
   submit: Chấp nhận
   unsubmit: Ngưng gửi
+  previous_page: Previous page
+  next_page: Trang tiếp theo
+  cancel: Huỷ
+  okay: "Đồng ý"
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Thêm một giáo viên:'
@@ -384,8 +389,8 @@
     heading_elementary: "<h2>các khóa học 20 giờ cho</h2> <h1>Người nhập môn (mọi
       lứa tuổi)</h1>"
     heading_apps: "<h2>Thú vị cho</h2><h1>Tất cả mọi người</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<h2>Sẵn sàng cho bước tiếp theo?</h2> <h1>Công cụ JavaScript cho
+      học sinh trung học</h1>"
     heading_legacy: "<h2>Khóa học cơ bản của chúng tôi</h2><h1>Mọi lứa tuổi</h1>"
     your_gallery: Bộ sưu tập
     no_primary_course: Hãy thử một khóa học ở Code Studio
@@ -429,6 +434,8 @@
       Ltd. Bản Quyền Đã Được Bảo Hộ. Plants vs. Zombies&#8482; &copy; %{current_year}
       Electronic Arts Inc. Bản Quyền Đã Được Bảo Hộ. The Amazing World of Gumball
       là thương hiệu và &copy; 2015 Cartoon Network.
+    code_from_html: Code.org sử dụng p5.play, được cấp phép theo <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      GNU LGPL 2.1</a>.
     powered_by_aws: "Được tài trợ bởi Amazon Web Services"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, biểu tượng CODE và
       Giờ Lập Trình &reg; là nhãn hiệu của Code.org."
@@ -518,13 +525,13 @@
   upsell:
     applab:
       title: Phòng thí nghiệm ứng dụng
-      body: App Lab is a programming environment where you can make simple apps. Design
-        an app, code with blocks or JavaScript to make it work, then share your app
-        in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      body: App Lab là một môi trường lập trình mà bạn có thể tạo ra các ứng dụng
+        đơn giản. Thiết kế một ứng dụng, lập trình bằng các khối hoặc JavaScript,
+        và chia sẻ ứng dụng của bạn trong vài giây.
+      body_short: Thiết kế một ứng dụng, lập trình bằng các khối hoặc JavaScript,
+        và chia sẻ ứng dụng của bạn trong vài giây.
+      audience: Lứa tuổi 13 +
+      cta: Học cách làm
     hoc:
       title: Mê cung cổ điển
       body: Hãy thử những lớp khoa học máy tính că bản. Hàng triệu người đã thử học
@@ -558,6 +565,15 @@
     minecraft:
       title: Minecraft
       body: Khám phá thế giới Minecraft thông qua mã.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: Các học sinh/sinh viên đã vẽ chúng bằng cách lập
       trình!
@@ -583,11 +599,10 @@
     prerelease_hoc2014: Lớp học này là  <span class='betatext'>phiên bản beta</span>.
       Nó có thể được sửa đổi từ việc thu nhận thông tin phản hồi và thực hiện các
       cải tiến.
-    feedback: Gửi ý kiến phản hồi
     report_bug: Báo cáo lỗi
     support: Nhận trợ giúp
     support_url: "//support.code.org"
-    help_resources: Help and Resources
+    help_resources: Trợ giúp và tài nguyên
   multi:
     wrong_title: Câu trả lời không chính xác
     wrong_body: Câu trả lời mà bạn đã nhập không chính xác.  Xin vui lòng thử lại!
@@ -597,11 +612,30 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Cảm ơn bạn
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: Cảm ơn bạn đã gửi câu trả lời.
     correct_title: Cảm ơn bạn
-    correct_body: Thank you for submitting an answer.
+    correct_body: Cảm ơn bạn đã gửi câu trả lời.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Cảm ơn bạn
+    wrong_body: Cảm ơn bạn đã gửi câu trả lời.
+    correct_title: Cảm ơn bạn
+    correct_body: Cảm ơn bạn đã gửi câu trả lời.
+  level_group-submittable:
+    wrong_title: Cảm ơn bạn
+    wrong_body: Cảm ơn bạn đã gửi câu trả lời.
+    correct_title: Cảm ơn bạn
+    correct_body: Cảm ơn bạn đã gửi câu trả lời.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Cách giải chưa chính xác
     wrong_body: Cách giải bạn đã nhập chưa chính xác. Xin vui lòng thử lại!
@@ -622,9 +656,8 @@
     placeholder: Nhập câu trả lời của bạn ở đây
     open_response_title: Xin cảm ơn
     open_response_body: Cảm ơn câu trả lời của bạn!
-  level_group:
-    correct_title: Cảm ơn bạn
-    correct_body: Thank you for submitting an answer
+    correct_title: Chính xác
+    correct_body: "Đó là câu trả lời chính xác."
   dialog:
     ok: "Đồng ý"
     startover_title: Bạn có chắc bạn muốn bắt đầu lại?
@@ -690,6 +723,7 @@
     completed_perfect: hoàn thành, hoàn hảo
     furthest_level_attempted: "đã cố gắng ở mức độ cao nhất"
     assessment: "đánh giá"
+    submitted: "đã gửi"
   studio:
     courses_working_on: Các khóa học bạn đang tiến hành
     completed_courses: Hoàn thành khóa học
@@ -763,3 +797,7 @@
         acknowledge: Bằng việc gửi thông tin này, bạn xác nhận nó sẽ bị xử lý theo
           quy định của các điều khoản của %{link_start_privacy}Privacy Policy%{link_end}
           và %{link_start_tos}Terms Service%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Tìm kiếm một biểu tượng...
+      no_icons_found: Không tìm thấy biểu tượng nào

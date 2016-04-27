@@ -1,4 +1,4 @@
-/* globals appOptions, lastServerResponse, Dialog, getResult, CDOSounds, sendReport, showVideoDialog */
+/* globals appOptions, Dialog, getResult, CDOSounds, showVideoDialog, dashboard */
 
 /*
  * This file contains general logic for displaying modal dialogs and handling
@@ -19,6 +19,7 @@ window.dashboard.dialog = (function () {
   });
 
   function dialogHidden() {
+    var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
     if (dialogType === "success" && lastServerResponse.nextRedirect) {
       window.location.href = lastServerResponse.nextRedirect;
     }
@@ -40,7 +41,7 @@ window.dashboard.dialog = (function () {
 
     // Use our prefabricated dialog content.
     var content = document.querySelector("#" + type + "-dialogcontent").cloneNode(true);
-    var dialog = new Dialog({
+    var dialog = new window.Dialog({
       body: content,
       onHidden: dialogHidden,
       autoResizeScrollableElement: appOptions.dialog.autoResizeScrollableElement
@@ -102,16 +103,23 @@ window.dashboard.dialog = (function () {
       return;
     }
 
-    // Avoid multiple simultaneous submissions.
-    submitButton.attr('disabled', true);
+    var showConfirmationDialog = getResult().showConfirmationDialog || false;
+    if (showConfirmationDialog) {
+      showDialog(showConfirmationDialog, function () {
+        processResults(onComplete);
+      });
+    } else {
+      // Avoid multiple simultaneous submissions.
+      submitButton.attr('disabled', true);
 
-    var onComplete = function(willRedirect) {
-      if (!willRedirect) {
-        $('.submitButton').attr('disabled', false);
-      }
-    };
+      var onComplete = function (willRedirect) {
+        if (!willRedirect) {
+          $('.submitButton').attr('disabled', false);
+        }
+      };
 
-    processResults(onComplete);
+      processResults(onComplete);
+    }
   });
 
   /**
@@ -131,6 +139,7 @@ window.dashboard.dialog = (function () {
     var testResult = results.testResult ? results.testResult : (result ? 100 : 0);
     var submitted = results.submitted || false;
 
+
     if (!result) {
       showDialog(errorType || "error");
       if (!appOptions.dialog.skipSound) {
@@ -142,7 +151,7 @@ window.dashboard.dialog = (function () {
       }
     }
 
-    sendReport({
+    window.dashboard.reporting.sendReport({
       program: response,
       fallbackResponse: appOptions.dialog.fallbackResponse,
       callback: appOptions.dialog.callback,
@@ -153,14 +162,14 @@ window.dashboard.dialog = (function () {
       testResult: testResult,
       submitted: submitted,
       onComplete: function () {
+        var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
         var willRedirect = !!lastServerResponse.nextRedirect;
         if (onComplete) {
           onComplete(willRedirect);
         }
 
-        if (lastServerResponse.videoInfo)
-        {
-          showVideoDialog(lastServerResponse.videoInfo);
+        if (lastServerResponse.videoInfo) {
+          window.dashboard.videos.showVideoDialog(lastServerResponse.videoInfo);
         } else if (lastServerResponse.nextRedirect) {
           if (appOptions.dialog.shouldShowDialog) {
             showDialog("success");

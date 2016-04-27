@@ -1,17 +1,11 @@
 /**
  * @overview UI slider used to change maximum packet length.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
-
- maxlen: 120
- */
 'use strict';
 
 var i18n = require('./locale');
 var NetSimSlider = require('./NetSimSlider');
+require('../utils'); // Provides Function.prototype.inherits
 
 /**
  * Generator and controller for packet size slider/selector

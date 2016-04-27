@@ -1,10 +1,9 @@
 var assert = require('chai').assert;
-var _ = require('lodash');
 var testCollectionUtils = require('./testCollectionUtils');
 
 var cb;
 
-module.exports = function(testCollection, testData, dataItem, done) {
+module.exports = function (testCollection, testData, dataItem, done) {
   cb = done;
   var data = dataItem();
   var app = testCollection.app;
@@ -69,7 +68,7 @@ function StubDialog(options) {
   this.options = options;
 }
 
-StubDialog.prototype.show = function() {
+StubDialog.prototype.show = function () {
   if (this.options.body) {
     // Examine content of the feedback in future tests?
     // console.log(this.options.body.innerHTML);
@@ -82,12 +81,12 @@ StubDialog.prototype.show = function() {
   if (Blockly.mainBlockSpace) {
     Blockly.mainBlockSpace.clear();
   }
-  if(done) {
+  if (done) {
     done();
   }
 };
 
-StubDialog.prototype.hide = function() {
+StubDialog.prototype.hide = function () {
 };
 
 // Hack to compile files into browserify. Don't call this function!
@@ -102,10 +101,11 @@ function ಠ_ಠ() {
   require('@cdo/apps/calc/main');
   require('@cdo/apps/bounce/main');
   require('@cdo/apps/applab/main');
+  require('@cdo/apps/gamelab/main');
   require('@cdo/apps/craft/main');
 }
 
-function runLevel (app, skinId, level, onAttempt, testData) {
+function runLevel(app, skinId, level, onAttempt, testData) {
   require('@cdo/apps/' + app + '/main');
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
@@ -125,7 +125,7 @@ function runLevel (app, skinId, level, onAttempt, testData) {
     containerId: 'app',
     Dialog: StubDialog,
     isAdmin: true,
-    onInitialize: function() {
+    onInitialize: function () {
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already
       var timeout = 0;
@@ -150,7 +150,7 @@ function runLevel (app, skinId, level, onAttempt, testData) {
   });
 }
 
-function setAppSpecificGlobals (app) {
+function setAppSpecificGlobals(app) {
   // app specific hacks
   switch (app.toLowerCase()) {
     case 'calc':

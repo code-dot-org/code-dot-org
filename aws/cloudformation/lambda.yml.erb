@@ -1,0 +1,71 @@
+---
+AWSTemplateFormatVersion: 2010-09-09
+Description: 'Lambda layer for functions used in CloudFormation Custom Resources.'
+Resources:
+  LookupStackOutputs:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: 'Implements the "Refer to Resources in Another Stack" layered-architecture pattern. Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/walkthrough-custom-resources-lambda-cross-stack-ref.html'
+      FunctionName: LookupStackOutputs
+      Code:
+        ZipFile: <%=js.call('stack-xref.js')%>
+      Handler: index.handler
+      Runtime: nodejs
+      Timeout: 30
+      Role: {'Fn::GetAtt': [LookupStackExecutionRole, Arn]}
+  LookupStackExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: ['sts:AssumeRole']
+            Effect: Allow
+            Principal: {Service: [lambda.amazonaws.com]}
+      Path: '/'
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: ["logs:CreateLogGroup","logs:CreateLogStream","logs:PutLogEvents"]
+                Resource: "arn:aws:logs:*:*:*"
+              - Effect: Allow
+                Action: ["cloudformation:DescribeStacks"]
+                Resource: "*"
+  AMIManager:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: 'Takes an AWS CloudFormation stack name and instance id and returns the AMI ID. Ref: https://blogs.aws.amazon.com/application-management/post/Tx38Z5CAM5WWRXW'
+      FunctionName: AMIManager
+      Code:
+        ZipFile: <%=js.call('ami-manager.js')%>
+      Handler: index.handler
+      Runtime: nodejs
+      Timeout: 300
+      Role: {'Fn::GetAtt': [AMIManagerRole, Arn]}
+  AMIManagerRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: ['sts:AssumeRole']
+            Effect: Allow
+            Principal: {Service: [lambda.amazonaws.com]}
+      Path: '/'
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: ["logs:CreateLogGroup","logs:CreateLogStream","logs:PutLogEvents"]
+                Resource: "arn:aws:logs:*:*:*"
+              - Effect: Allow
+                Action: ["ec2:CreateImage", "ec2:DeregisterImage", "ec2:DescribeImages", "ec2:CreateTags"]
+                Resource: "*"
+Outputs:
+  LookupStackOutputs:
+    Value: {'Fn::GetAtt': [LookupStackOutputs, Arn]}
+    Description: ServiceToken for LookupStackOutputs Lambda function
+  AMIManager:
+    Value: {'Fn::GetAtt': [AMIManager, Arn]}
+    Description: ServiceToken for AMIManager Lambda function

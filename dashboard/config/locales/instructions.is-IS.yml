@@ -419,11 +419,9 @@
       4-5 Artist For Loops 15_instruction: 'Það er til betri lausn til að ljúka þessum
         kóða! Notaðu "frá" kubb í stað þessara kubba og ljúktu við sexhyrningaspíralinn.
         (Vísbending: Lengd síðustu línunnar er 200 dílar.)'
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+      4-5 Artist For Loops 2_instruction: Þetta er "frá" kubbur. Í stað þess að skrifa
+        1,2,3... 10, getum við látið "frá" kubb telja, og um leið endurtaka  kubbana
+        innan í sér. Settu töluna 10 í "til" hluta kubbsins.
       4-5 Artist For Loops 3_instruction: Hvernig getum við talið frá 1 til 50? Breyttu
         "frá" kubbnum.
       4-5 Artist For Loops 4_instruction: Ljúktu við "frá" kubbinn svo að hann telji
@@ -642,9 +640,6 @@
       4-5 Maze Assessment 1_instruction: 'Mat: Náðu til sólblómsins.'
       4-5 Maze Conditionals 1_instruction: Notaðu "endurtaka þar til" kubb til að
         koma uppvakningnum til sólblómsins.
-      4-5 Maze Conditionals 10_instruction: Getur þú bætt við bara 3 kubbum svo ég
-        geti ratað í flóknara völundarhúsi? Ef þú gerir það rétt, get ég ratað slóðir
-        sem beygja sama hversu langar þær eru.
       4-5 Maze Conditionals 2_instruction: Notaðu "endurtaka þar til" kubb til að
         koma uppvakningnum til sólblómsins.
       4-5 Maze Conditionals 3_instruction: 'Notaðu "ef" kubbinn til að láta mig ákveða
@@ -1537,10 +1532,9 @@
       Course 4 EC 1b_instruction: Engar reglur. Engar vísbendingar. Bara áskorunin!
       Course 4 EC 2a_instruction: "**Ýkt áskorun:** Engar reglur. Engar vísbendingar.
         Bara áskorunin!"
-      Course 4 EC 2b_instruction: "**Ýkt áskorun:** Engar reglur. Engar vísbendingar.
-        Bara áskorunin!"
-      Course 4 EC 2c_instruction: "**Ýkt áskorun:** Engar reglur. Engar vísbendingar.
-        Bara áskorunin!"
+      Course 4 EC 2b_instruction: Engar reglur. Engar vísbendingar. Bara áskorunin!
+      Course 4 EC 2c_instruction: Engar reglur. Engar vísbendingar. Bara áskorunin!
+      Course 4 EC 2d_instruction: Engar reglur. Engar vísbendingar. Bara áskorunin!
       Course 4 EC 3_instruction: 'Notaðu það sem þú lærðir í síðasta borði til að
         teikna svona mynd. Athugasemd: Kóðinn verður einfaldari ef þú notar stika. '
       Course 4 EC 3a_instruction: "**Ýkt áskorun:** Engar reglur. Engar vísbendingar.
@@ -1749,6 +1743,116 @@
       Course1MazeAssessment2_instruction: |-
         Þetta er próf!\r
         Færðu mig í eina átt, svo í aðra, til að ég nái svíninu.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
+      CSD U3 Background Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Background Experiment_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Experiment_instruction: |
+        Try using some of the other shape
+        functions you've learned in the draw loop. What happens when you use randomNumber()
+        to generate some of the inputs?You'll want to stop and discuss with the class
+        before moving on.
+      CSD U3 Frame Rate_instruction: Slow down Gamelab Gary's animation with frameRate()
+      CSD U3 Random Animation_instruction: |
+        Use randomNumber() to animate Gary's
+        mouth.
+      CSD U3 Random Choice_instruction: |
+        Use the randomNumber() block to generate
+        either 0 or 1
+      CSD U3 Random Color_instruction: |
+        Could you use randomNumber() to pick random
+        colors as well? Try setting one or more of the channels in the rgb block with
+        a random number. What should the maximum value be?
+      CSD U3 Random Intro_instruction: |
+        What do you think this code will do when
+        it is run? Make a prediction, then run this code 5 - 10 times, recording the
+        output each time. Share your results with your neighbor.
+      CSD U3 Random Min Max_instruction: |
+        Using console.log() write a program that
+        randomly returns a number in a range you define.
+      CSD U3 Random Width Height_instruction: |
+        Pick a shape function and use calls
+        to randomNumber() in place of one or more of the parameters. Maker sure you
+        run it a few times so you can see the effect of randomization.
+      CSD U3 Simple Drawing - Animation 2_instruction: |
+        Use randomNumber() on the
+        x position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Animation_instruction: |
+        Use randomNumber() on the x
+        position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Background_instruction: |
+        Put all of your code into
+        a draw() loop and then add set the background to blue with the background()
+        block.
+      CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Variable Arithmetic pt2_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variable Arithmetic_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variable Incrementation pt2_instruction: |
+        Predict: What two numbers
+        will be displayed in the console?
+      CSD U3 Variable Incrementation_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variables CHALLENGE gamelab gary_instruction: |
+        Use variables to animate
+        Game Lab Gary
+      CSD U3 Variables draw loop newVars_instruction: |
+        Extend this project to create
+        your own random art visualization with variables.
+      CSD U3 Variables draw loop rgb_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
+      CSD U3 Variables draw loop xy_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
+      CSD U3 Variables Initialize_instruction: |
+        Predict: What will get displayed
+        in the console?
+      CSD U3 Variables Intro_instruction: |
+        Create your own variable, give it a value,
+        and display that value in the console.
+      CSD U3 Variables random drawing exemplar_instruction: |
+        Check out this example
+        randomized drawing.
+      CSD U3 Variables Random_instruction: |
+        Predict: What will get displayed in the
+        console?
+      CSD U3 Variables Reassign pt2_instruction: |
+        Create and assign a new variable
+        in a single line.
+      CSD U3 Variables Reassign_instruction: |
+        Predict: What will get displayed in
+        the console?
+      CSD U3 Variables Square Random Loop_instruction: |
+        Test your predictions from
+        the last level.
+      CSD U3 Variables Square Random_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variables Square_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variables use value rect_instruction: |
+        Predict: What will get displayed
+        in the console?
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2271,6 +2375,8 @@
         eru venjulega ekki í boði? Við skulum rukka 10.000 kr. fyrir sérpöntuð álegg.
       Luigi's Pizza 4_instruction: 'Frjáls æfing: Hvernig væri hægt að gera kostnaðarfall
         Luigi enn gagnlegra?'
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: Allar breytur og föll byrja hér sem innantómir
         stúfar. Hver þraut mun fást við að skilgreina nokkra í einu og þannig smám
         saman auka við virknina.
@@ -2593,6 +2699,10 @@
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: "Það er ekki góð hugmynd að rekast á laumupúka.
         \nFarðu varlega framhjá þeim til að komast í öryggi heimilisins.\n"
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: Viður er mjög mikilvægt hráefni. Alls konar
         hlutir eru búnir til úr viði. Gakktu að trénu og notaðu "eyða blokk" skipunina
         til að höggva það niður.
@@ -2815,21 +2925,31 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
         get nectar from the flowers.
-      Quantum Bee_instruction: |
-        Purple flowers may have either 1 or 0 nectar, but
-        you don't know which one! Be careful not to collect nectar from a purple
-        flower if it doesn't have any. Check if the nectar is equal to 1 by using
-        the if block.
+      Quantum Bee_instruction: Fjólublá blóm geta haft annað hvort 1 eða 0 af blómasafa,
+        en þú veist ekki hvort! Gættu þess að safna ekki blómasafa ef blóm hefur ekki
+        safa. Athugaðu hvort safinn sé 1 með því að nota ef kubbinn.
       Ryan - 4-5 Bee Conditionals 2_instruction: "Þessa stundina vill býflugan bara
         blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT
         SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa."
       Ryan - Bee Conditionals_instruction: Nú vill býflugan bara blómasafa. Hlutur
         er ekki endilega blóm, svo það verður að skoða undir HVERT SKÝ til að sjá
         hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
+      Ryan Doily Step 1_instruction: Nú ætlum við að teikna dúllu skref fyrir skref.
+        Teiknaðu fyrst ferning.
+      Ryan Doily Step 2_instruction: |
+        Nú þarftu að snúa og endurtaka hann 20 sinnum!
+        Um hve margar gráður á að snúa til að fá 360 eftir 20 endurtekningar?
+      Ryan Doily Step 3_instruction: |
+        Nú þarftu að snúa og endurtaka hann 20 sinnum!
+        Um hve margar gráður á að snúa til að fá 360 eftir 20 endurtekningar?
       Ryan Test Locked Blocks_instruction: Hér er fallið "rása". Breyttu því svo að
         Köttur færist upp 400 díla og svo niður 400.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse
@@ -2935,6 +3055,9 @@
       template test_instruction: what up
       Test Play Lab_instruction: This is a test play lab level.
       test_sarah_instruction: hi
+      Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
+        many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
+        keeps using the `fill` block until the ground is even?  "
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
@@ -3184,7 +3307,7 @@
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -3544,6 +3667,18 @@
       U3 - Search Terms - 6_instruction: |
         Print out the cities that are in California
         or have a population of 2,000,000. (Click to see full instructions)\r
+      U3 - Simple Drawing - Comments_instruction: Do this
+      U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
+      U3 - Simple Drawing - No Fill_instruction: Do this
+      U3 - Simple Drawing - Order of Blocks_instruction: Do this
+      U3 - Simple Drawing - Personal Drawing_instruction: DO This
+      U3 - Simple Drawing - Rectangle_instruction: Do This
+      U3 - Simple Drawing - regular polygon_instruction: Do this
+      U3 - Simple Drawing - Road Ellipse_instruction: Do This
+      U3 - Simple Drawing - Road Rects and Color_instruction: Do This
+      U3 - Simple Drawing - Stroke and Stroke Weight_instruction: Do this
+      U3 - Simple Drawing - text_instruction: Do This
+      U3 - Simple Drawing - X and Y values_instruction: Do This
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -3649,6 +3784,15 @@
         back a default response.
       U3 full clicker demo_instruction: Clicker game - Try it out!
       U3 mehal's clone_instruction: Try out a demo of the Digital Assistant!
+      U3 Variables consolelog_instruction: |
+        Use the write block to display the value
+        of size
+      U3 Variables misconceptions try it_instruction: |
+        Test out your predictions
+        from the previous level.
+      U3 Variables write_instruction: |
+        Use the write block to display the value of
+        size
       U3- Variables - Assign Random For Turtle Draw_instruction: |
         Try writing the
         same code in text mode.
@@ -3781,8 +3925,9 @@
         þú hefur lært um lykkjur og handahóf til að búa til eigin sviðsmynd. Góða
         skemmtun.
       U3L07 - introSquare_instruction: |
-        Use a loop to draw a square. (Click to see
-        full instructions)
+        Use a loop to draw a square. Then add another
+        loop to draw many squares each one rotated some amount. (Click to see full
+        instructions)
       U3L07 - loopsWithRandom_instruction: |
         Increase the number of iterations to
         fill the screen with white. (Click to see full instructions)
@@ -4052,8 +4197,10 @@
         of the last level, you can copy your code from that level into\nhere if you
         prefer. \n"
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

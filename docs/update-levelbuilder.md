@@ -3,33 +3,15 @@ This .md file should only contain information which is specific to Code.org engi
 
 # How to update level builder
 
-## To update levelbuilder to match staging:
+## To update levelbuilder to match test:
 
-1. On GitHub, open a pull request from `staging` into `levelbuilder`, link: [levelbuilder...staging](https://github.com/code-dot-org/code-dot-org/compare/levelbuilder...staging?expand=1)
-  1. Or in your local repository:
-    - `git checkout levelbuilder`
-    - `git pull origin levelbuilder` To make sure you're up-to-date.
-    - `git pull origin staging` To fetch and merge `staging` directly into `levelbuilder`.
-    - You'll likely get "both modified" merge conflicts in `dashboard/public/apps-package/*`, `blockly-core/build_output/blockly_compressed.js` and `blockly-core/build_output/blockly_uncompressed.js`. We don't need staging's copies of these build products - they're out of date and about to be rebuilt anyway, so do:
-      1. `git checkout --ours blockly-core/build_output/blockly_compressed.js blockly-core/build_output/blockly_uncompressed.js`
-      1. `git add blockly-core/build_output/blockly_compressed.js blockly-core/build_output/blockly_uncompressed.js`
-      1. `git checkout --ours dashboard/public/apps-package`
-      1. `git add dashboard/public/apps-package`
-      1. Fix remaining merge conficts, if any.
-      1. `git commit`
-    - `git push`
-1. Wait for levelbuilder to deploy.
+1. On GitHub, open a pull request from `test` into `levelbuilder`, link: [levelbuilder...test](https://github.com/code-dot-org/code-dot-org/compare/levelbuilder...test?expand=1)
+1. Click the "Merge pull request" button and watch the "levelbuilder" room in Hipchat to make sure the build succeeds. If anything breaks, see the "Did it break section" below.
 
 ## To commit changes from levelbuilder into staging:
 
-1. Integrate `staging` into `levebuilder` as described above; wait for levelbuilder finish deploying.
-1. `ssh levelbuilder-staging` from gateway
-1. `cd levelbuilder`
-1. `git branch` **If it doesn't say `levelbuilder` get the dev-of-the-week and/or Will.**
-1. `git add --all dashboard`
-1. `git commit -m "levelbuilder changes committed by YOUR NAME HERE"`
-1. `git push`
-1. On GitHub, open a pull request from `levelbuilder` into `staging`. link: https://github.com/code-dot-org/code-dot-org/compare/staging...levelbuilder
+1. `ssh -t gateway.code.org ssh -t levelbuilder-staging levelbuilder/bin/content-push`
+1. On GitHub, open a pull request from `levelbuilder` into `staging`. link: [staging...levelbuilder](https://github.com/code-dot-org/code-dot-org/compare/staging...levelbuilder)
 2. Click the "Merge pull request" button and watch the "Staging" room in Hipchat to make sure the build succeeds. If anything breaks, see the "Did it break section" below. 
 
 # Did it break?

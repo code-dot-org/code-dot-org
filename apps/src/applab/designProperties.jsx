@@ -1,11 +1,13 @@
 /* global $*/
 
 var applabMsg = require('./locale');
+var color = require('../color');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 
-var DeleteElementButton = require('./designElements/DeleteElementButton.jsx');
-var ElementSelect = require('./ElementSelect.jsx');
+var DeleteElementButton = require('./designElements/DeleteElementButton');
+var ElementSelect = require('./ElementSelect');
+var DuplicateElementButton = require('./designElements/DuplicateElementButton');
 
 var nextKey = 0;
 
@@ -16,11 +18,12 @@ var DesignProperties = React.createClass({
     handleChange: React.PropTypes.func.isRequired,
     onChangeElement: React.PropTypes.func.isRequired,
     onDepthChange: React.PropTypes.func.isRequired,
+    onDuplicate: React.PropTypes.func.isRequired,
     onDelete: React.PropTypes.func.isRequired,
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getInitialState: function() {
+  getInitialState: function () {
     return {selectedTab: TabType.PROPERTIES};
   },
 
@@ -28,11 +31,11 @@ var DesignProperties = React.createClass({
    * Handle a click on a tab, such as 'properties' or 'events'.
    * @param newTab {TabType} Tab to switch to.
    */
-  handleTabClick: function(newTab) {
+  handleTabClick: function (newTab) {
     this.setState({selectedTab: newTab});
   },
 
-  render: function() {
+  render: function () {
     if (!this.props.element || !this.props.element.parentNode) {
       return <p>{applabMsg.designWorkspaceDescription()}</p>;
     }
@@ -63,20 +66,28 @@ var DesignProperties = React.createClass({
       onInsertEvent: this.props.onInsertEvent
     });
 
+    var duplicateButton;
+    var isScreen = (elementType == elementLibrary.ElementType.SCREEN);
+    // For now, limit duplication to just non-screen elements
+    if (!isScreen) {
+      duplicateButton = (<DuplicateElementButton
+        handleDuplicate={this.props.onDuplicate}/>);
+    }
+
     var deleteButton;
-    var element = this.props.element;
     // First screen is not deletable
     var isOnlyScreen = elementType === elementLibrary.ElementType.SCREEN &&
         elementUtils.getScreens().length === 1;
+
     if (!isOnlyScreen) {
       deleteButton = (<DeleteElementButton
-        shouldConfirm={elementType === elementLibrary.ElementType.SCREEN}
+        shouldConfirm={isScreen}
         handleDelete={this.props.onDelete}/>);
     }
 
     var tabHeight = 35;
-    var borderColor = '#c6cacd';
-    var bgColor = '#e7e8ea';
+    var borderColor = color.lighter_gray;
+    var bgColor = color.lightest_gray;
 
     // Diagram of how tabs outlines are drawn. 'x' represents solid border.
     // '-' and '|' represent no border.
@@ -208,6 +219,7 @@ var DesignProperties = React.createClass({
                in inputs don't update correctly. */}
             <div key={key}>
               {propertiesElement}
+              {duplicateButton}
               {deleteButton}
             </div>
           </div>

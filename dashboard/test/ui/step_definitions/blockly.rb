@@ -174,16 +174,16 @@ Then(/^block "([^"]*)" has (not )?been deleted$/) do |block_id, negation|
   end
 end
 
-Then /^block "([^"]*)" has class "(.*?)"$/ do |block_id, className|
+Then /^block "([^"]*)" has class "(.*?)"$/ do |block_id, class_name|
   item = @browser.find_element(:css, "g[block-id='#{get_block_id(block_id)}']")
   classes = item.attribute("class")
-  classes.include?(className).should eq true
+  classes.include?(class_name).should eq true
 end
 
-Then /^block "([^"]*)" doesn't have class "(.*?)"$/ do |block_id, className|
+Then /^block "([^"]*)" doesn't have class "(.*?)"$/ do |block_id, class_name|
   item = @browser.find_element(:css, "g[block-id='#{get_block_id(block_id)}']")
   classes = item.attribute("class")
-  classes.include?(className).should eq false
+  classes.include?(class_name).should eq false
 end
 
 Then /^the modal function editor is closed$/ do
@@ -206,6 +206,6 @@ When(/^I set block "([^"]*)" to have a value of "(.*?)" for title "(.*?)"$/) do 
 
 end
 
-When(/^"(.+)" refers to block "(.+)"$/) do |blockAlias, block_id|
-  add_block_alias(blockAlias, block_id)
+When(/^"(.+)" refers to block "(.+)"$/) do |block_alias, block_id|
+  add_block_alias(block_alias, block_id)
 end

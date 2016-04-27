@@ -34,7 +34,12 @@
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"range\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"range\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 3,
+    "conditionals": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -82,65 +87,33 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
-              <title name="TIMES">4</title>
-              <statement name="DO">
-                <block type="maze_moveForward"/>
-              </statement>
+            <block type="maze_moveForward">
               <next>
-                <block type="bee_ifNectarAmount">
-                  <title name="ARG1">nectarRemaining</title>
-                  <title name="OP">==</title>
-                  <title name="ARG2">1</title>
+                <block type="controls_repeat">
+                  <title name="TIMES">3</title>
                   <statement name="DO">
-                    <block type="maze_nectar"/>
-                  </statement>
-                  <next>
-                    <block type="maze_turn">
-                      <title name="DIR">turnLeft</title>
+                    <block type="controls_repeat">
+                      <title name="TIMES">3</title>
+                      <statement name="DO">
+                        <block type="maze_moveForward"/>
+                      </statement>
                       <next>
-                        <block type="controls_repeat">
-                          <title name="TIMES">3</title>
+                        <block type="bee_ifNectarAmount">
+                          <title name="ARG1">nectarRemaining</title>
+                          <title name="OP">==</title>
+                          <title name="ARG2">1</title>
                           <statement name="DO">
-                            <block type="maze_moveForward"/>
+                            <block type="maze_nectar"/>
                           </statement>
                           <next>
-                            <block type="bee_ifNectarAmount">
-                              <title name="ARG1">nectarRemaining</title>
-                              <title name="OP">==</title>
-                              <title name="ARG2">1</title>
-                              <statement name="DO">
-                                <block type="maze_nectar"/>
-                              </statement>
-                              <next>
-                                <block type="maze_turn">
-                                  <title name="DIR">turnLeft</title>
-                                  <next>
-                                    <block type="controls_repeat">
-                                      <title name="TIMES">3</title>
-                                      <statement name="DO">
-                                        <block type="maze_moveForward"/>
-                                      </statement>
-                                      <next>
-                                        <block type="bee_ifNectarAmount">
-                                          <title name="ARG1">nectarRemaining</title>
-                                          <title name="OP">==</title>
-                                          <title name="ARG2">1</title>
-                                          <statement name="DO">
-                                            <block type="maze_nectar"/>
-                                          </statement>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnLeft</title>
                             </block>
                           </next>
                         </block>
                       </next>
                     </block>
-                  </next>
+                  </statement>
                 </block>
               </next>
             </block>

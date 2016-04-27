@@ -15,6 +15,8 @@
     .projects-table-wrapper.center
       = render partial: 'projects/links'
 
+      %div.loading{'ng-show' => 'projects.length === 0'}
+
       %table.projects{'ng-show' => 'projects.length > 0'}
         %colgroup
           %col{width: "250"}

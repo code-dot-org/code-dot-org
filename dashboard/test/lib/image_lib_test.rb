@@ -8,7 +8,7 @@ class ImageLibTest < ActiveSupport::TestCase
     bg_url =  test_image_path('blank_sharing_drawing_anna.png')
     fg_blob = test_image('foreground_overlay.png').to_blob
 
-    framed_image = ImageLib::overlay_image({
+    framed_image = ImageLib.overlay_image({
         background_url: bg_url,
         foreground_blob: fg_blob})
 
@@ -47,13 +47,13 @@ class ImageLibTest < ActiveSupport::TestCase
   def test_to_png_for_png
     original_png = File.read('test/fixtures/artist_image_1.png', binmode: true)
 
-    assert_equal original_png, ImageLib::to_png(original_png)
+    assert_equal original_png, ImageLib.to_png(original_png)
   end
 
   def test_to_png_for_jpg
     original_jpg = File.read('test/fixtures/playlab_image.jpg', binmode: true)
 
-    png = ImageLib::to_png(original_jpg)
+    png = ImageLib.to_png(original_jpg)
 
     tmp_path = '/tmp/image.png'
     File.open(tmp_path, 'wb') do |file|

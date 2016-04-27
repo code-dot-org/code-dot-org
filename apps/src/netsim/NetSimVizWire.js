@@ -1,15 +1,9 @@
 /**
  * @overview Wires in the visualization.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
-require('../utils');
+require('../utils'); // Provides Function.prototype.inherits
 var jQuerySvgElement = require('./NetSimUtils').jQuerySvgElement;
 var NetSimVizElement = require('./NetSimVizElement');
 var tweens = require('./tweens');

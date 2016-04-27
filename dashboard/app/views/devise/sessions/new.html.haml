@@ -55,8 +55,8 @@
   });
 
   $( "#new_user" ).on("submit", function(e){
-    hashEmail({ email_selector: '#user_login',
-                hashed_email_selector: '#user_hashed_email'});
+    window.dashboard.hashEmail({ email_selector: '#user_login',
+      hashed_email_selector: '#user_hashed_email'});
 
     dashboard.clientState.reset();
   });

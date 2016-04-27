@@ -4,6 +4,7 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
 @import 'color';
 @import 'mixins';
 @import "../JsDebuggerUi.scss";
+@import "./ResizablePanes.scss";
 
 #divGameLab {
   overflow: hidden;
@@ -23,7 +24,6 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
   width: 21px;
   background-image: url("#{$root}icons.png");
   background-size: 42px 147px;
-  margin-bottom: -3px;
 }
 .code {
   background-position: -21px 0px;
@@ -39,12 +39,15 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
   background-position: -21px -21px;
   margin-right: 3px;
 }
+.dpad-btn {
+  background-position: -21px -63px;
+}
 .left-btn {
   background-position: -21px -42px;
   margin-right: 3px;
 }
 .right-btn {
-  background-position: -21px -63px;
+  background-position: -21px -126px;
   margin-right: 3px;
 }
 .up-btn {

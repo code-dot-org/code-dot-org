@@ -25,6 +25,11 @@ gl:
   welcome_back: 'Ola outra vez, %{name}'
   submit: Enviar
   unsubmit: Cancelar envío
+  previous_page: Previous page
+  next_page: Next page
+  cancel: Cancelar
+  okay: De acordo
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Agrega un profesor:'
@@ -345,6 +350,7 @@ gl:
     help_from_html_old: Engeñeiros da Google, Microsoft, Facebook e Twitter axudaron a crear estes materiais.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os dereitos reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Todos os dereitos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney. Todos os dereitos reservados.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Todos os dereitos reservados.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball é marca rexistrada e &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. Todos os dereitos reservados. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Todos os dereitos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os dereitos reservados. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os dereitos reservados. The Amazing World of Gumball é marca rexistrada e &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Sostido por Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE e Hora do Código&reg; son marcas rexistradas da Code.org.'
     copyright: Dereitos de Autor
@@ -449,6 +455,11 @@ gl:
     minecraft:
       title: Minecraft
       body: Explora un mundo Minecraft através do código.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Os alumnos crearon isto con programación!
     students_made_these_with_code: Os alumnos crearon isto con programación!
@@ -464,7 +475,6 @@ gl:
   landing:
     prerelease: "Este curso está na súa versión <span class='betatext'>beta</span>. Isto significa que esta non é a versión final do curso, e está suxeito a revisións segundo imos recibindo comentarios e se fan melloras."
     prerelease_hoc2014: "Este titorial está na versión <span class='betatext'>beta</span>. Está suxeito a revisións segundo imos recibindo comentarios e se fan melloras."
-    feedback: Enviar comentarios
     report_bug: Comunicar erro
     support: Obter axuda
     support_url: //support.code.org
@@ -483,6 +493,22 @@ gl:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Graciñas
+    wrong_body: Thank you for submitting answers.
+    correct_title: Graciñas
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Graciñas
+    wrong_body: Thank you for submitting answers.
+    correct_title: Graciñas
+    correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Solución incorrecta
     wrong_body: A súa solución non é correcta. Tente novamente!
@@ -500,9 +526,8 @@ gl:
     placeholder: Insira a súa resposta aquí
     open_response_title: Graciñas
     open_response_body: Graciñas por responderes!
-  level_group:
-    correct_title: Graciñas
-    correct_body: Thank you for submitting an answer
+    correct_title: Certo
+    correct_body: A túa resposta é correcta.
   dialog:
     ok: OK
     startover_title: Estás seguro de que queres empezar de novo?
@@ -556,6 +581,7 @@ gl:
     completed_perfect: concluído, perfecto
     furthest_level_attempted: tentativa para o nivel máis avanzado
     assessment: avaliación
+    submitted: submitted
   studio:
     courses_working_on: Cursos que vostede está a facer
     completed_courses: Cursos concluídos
@@ -612,3 +638,7 @@ gl:
           other: Outros
         detail: Por favor forneza todos os detalles sobre o contido que está a reportar.
         acknowledge: 'Ao enviar esta información, acepta que esta será tratada de acordo cos termos da nosa %{link_start_privacy}Política de Privacidade%{link_end} e dos %{link_start_tos}Termos de Utilización%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

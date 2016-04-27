@@ -4,16 +4,10 @@
  * @see NetSimClientNode for the controller used for other client nodes
  *      in the simulation.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
-var utils = require('../utils');
-var _ = utils.getLodash();
+require('../utils'); // Provides Function.prototype.inherits
+var _ = require('../lodash');
 var i18n = require('./locale');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimEntity = require('./NetSimEntity');
@@ -26,6 +20,7 @@ var ObservableEvent = require('../ObservableEvent');
 var logger = NetSimLogger.getSingleton();
 var NetSimConstants = require('./NetSimConstants');
 var NetSimGlobals = require('./NetSimGlobals');
+require('../utils'); // Provides Function.prototype.inherits
 
 var MessageGranularity = NetSimConstants.MessageGranularity;
 
@@ -520,7 +515,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function () {
   } else if (!mutualConnectionRow && !this.myRemoteClient) {
     // The client we're trying to connect to might have connected to
     // someone else; check if they did and if so, stop trying to connect
-    myConnectionTargetWireRow = _.find(wireRows, function(row) {
+    myConnectionTargetWireRow = _.find(wireRows, function (row) {
       return row.localNodeID === myWire.remoteNodeID &&
           row.remoteNodeID !== myWire.localNodeID;
     }.bind(this));

@@ -1,7 +1,5 @@
-/*jshint -W086 */
-
 var DirtDrawer = require('./dirtDrawer');
-require('../utils');
+require('../utils'); // Provides Function.prototype.inherits
 
 var cellId = require('./mazeUtils').cellId;
 
@@ -37,12 +35,21 @@ BeeItemDrawer.inherits(DirtDrawer);
 module.exports = BeeItemDrawer;
 
 /**
+ * Generic reset function, shared by DirtDrawer so that we can call
+ * Maze.gridItemDrawer.reset() blindly.
+ * @override
+ */
+BeeItemDrawer.prototype.reset = function () {
+  this.resetClouded();
+};
+
+/**
  * Resets our tracking of clouded/revealed squares. Used on
  * initialization and also to reset the drawer between randomized
  * conditionals runs.
  */
 BeeItemDrawer.prototype.resetClouded = function () {
-  this.clouded_ = this.bee_.currentStaticGrid.map(function (row) {
+  this.clouded_ = this.map_.currentStaticGrid.map(function (row) {
     return [];
   });
 };
@@ -116,7 +123,7 @@ BeeItemDrawer.prototype.updateCounter_ = function (prefix, row, col, counterText
   counterElement.firstChild.nodeValue = counterText;
 };
 
-function createText (prefix, row, col, counterText) {
+function createText(prefix, row, col, counterText) {
   var pegmanElement = document.getElementsByClassName('pegman-location')[0];
   var svg = document.getElementById('svgMaze');
 
@@ -221,7 +228,7 @@ BeeItemDrawer.prototype.getPegmanElement_ = function () {
 /**
  * Show the cloud icon.
  */
-BeeItemDrawer.prototype.showCloud_ = function(row, col) {
+BeeItemDrawer.prototype.showCloud_ = function (row, col) {
   var cloudImageInfo  = {
     href: this.skin_.cloud,
     unclippedWidth: 50
@@ -235,7 +242,7 @@ BeeItemDrawer.prototype.showCloud_ = function(row, col) {
 /**
  * Hide the cloud icon, and display the cloud hiding animation.
  */
-BeeItemDrawer.prototype.hideCloud_ = function(row, col) {
+BeeItemDrawer.prototype.hideCloud_ = function (row, col) {
   var cloudElement = document.getElementById(cellId('cloud', row, col));
   if (cloudElement) {
     cloudElement.setAttribute('visibility', 'hidden');
@@ -247,7 +254,7 @@ BeeItemDrawer.prototype.hideCloud_ = function(row, col) {
 /**
  * Create the cloud animation element, and perform the animation if necessary
  */
-BeeItemDrawer.prototype.displayCloudAnimation_ = function(row, col, animate) {
+BeeItemDrawer.prototype.displayCloudAnimation_ = function (row, col, animate) {
   var id = cellId('cloudAnimation', row, col);
 
   var cloudAnimation = document.getElementById(id);

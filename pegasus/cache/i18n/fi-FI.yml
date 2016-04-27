@@ -642,6 +642,11 @@
   dashboard_action_remove_confirm: Poista?
   dashboard_action_done: Valmis
   dashboard_action_required: vaaditaan
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Opettajan päänäyttö
   dashboard_navigation_section_student_progress: Oppilaiden tunnukset ja edistyminen
   dashboard_navigation_section_teacher_progress: Sinun kurssisi edistyminen
@@ -652,12 +657,25 @@
   dashboard_navigation_all_sections: Oppilaiden tunnukset ja edistyminen
   dashboard_navigation_view_progress: Tarkastele etenemistä
   dashboard_navigation_view_text_responses: Näytä tekstin vastaukset
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Lisää oppilaita
   dashboard_navigation_manage_students: Hallinnoi oppilaita
   dashboard_navigation_lesson_plans_resources: Tuntisuunnitelmat ja resurssit
   dashboard_navigation_view_stats: Tarkastele tilastoja
   dashboard_navigation_section: 'Ryhmä: %{section_name}'
   dashboard_navigation_student: 'Oppilas: %{student_name}'
+  dashboard_progress_not_started: ei aloitettu
+  dashboard_progress_in_progress: käynnissä
+  dashboard_progress_not_completed: kesken
+  dashboard_progress_completed_too_many_blocks: valmis, liian monta lohkoa
+  dashboard_progress_completed_perfect: valmis, täydellinen
+  dashboard_progress_furthest_level_attempted: vaikein taso jota yritetty
+  dashboard_progress_submitted: lähetetty
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Uusi ryhmä
   dashboard_sections_jumbotron_instruction: Luo uusia ryhmiä ja lisää opiskelijoita
     niihin. Ryhmät auttavat sinua organisoimaan oppilaat pienempiin ryhmiin niin että
@@ -681,6 +699,26 @@
   dashboard_sections_print_secrets: Voit tulostaa tunnustiedot sisältävät kortit jaettavaksi
     kullekin oppilaalle.
   dashboard_sections_switch_section: 'Vaihda ryhmää:'
+  dashboard_sections_close: Sulje
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Lisää oppilaita
   dashboard_students_add_students: Lisää useita oppilaita
   dashboard_students_add_multiple: 'Lisää oppilaidesi nimet, yksi kullekin riville:'
@@ -758,16 +796,22 @@
   dashboard_login_picture: Kuva
   dashboard_login_none: Sähköposti
   dashboard_new_password: uusi salasana
-  dashboard_progress_not_started: ei aloitettu
-  dashboard_progress_in_progress: käynnissä
-  dashboard_progress_not_completed: kesken
-  dashboard_progress_completed_too_many_blocks: valmis, liian monta lohkoa
-  dashboard_progress_completed_perfect: valmis, täydellinen
-  dashboard_progress_furthest_level_attempted: vaikein taso jota yritetty
   dashboard_stage: Taso
   dashboard_puzzle: Tehtävä
   dashboard_question: Kysymys
   dashboard_response: Vastaus
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Oikein
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Uskomattomia tilastoja viime vuoden Koodaustunnista. Vain
     yhdessä viikossa:'
   stats_hoc_2013_image_alt: Tilastoja vuoden 2013 Koodaustunnista
@@ -789,19 +833,11 @@
   dashboard_faq_k5: Esi- ja alakoulu, usein kysyttyjä kysymyksiä
   dashboard_announcements: Ilmoituksia
   dashboard_announce_view_all: Näytä kaikki
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
   dashboard_announce_button_text: Lue lisää
-  dashboard_announce_hoc: "<b>9. Marraskuuta 2015</b> - Uusi Kooditunti-harjoitus
-    on täällä, teemanaan elokuva Star Wars: The Force Awakens. Auta Rey:tä opastamaan
-    uutta droidia, BB-8:aa, joukossa tehtäviä. Sitten, yhdessä Leian kanssa, luo ja
-    jaa oma, kaukaiseen galaksiin sijoittuva, pelisi."
-  dashboard_announce_playlab: "<b>4. joulukuuta 2015</b> - Koodauskoodi on täällä!
-    50 harjoitusta kaikenikäisille ja kaikille eri laitteille. Uutta tällä viikolla:
-    Ohjelmoi omia tarinoita ja pelejä Pelilabrassa, tai Ice Age- ja Gumball-maailmoissa."
   code_hoc_coming: Koodaustunti on täällä - 8.-14. Joulukuuta!
   code_sign_up: Liity osallistuaksesi tietojenkäsittelytieteen opetusviikon aikana
   learn_more: Lisätietoja
@@ -932,7 +968,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: Sovelluksien laboratorio
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Ikäryhmille 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
@@ -1626,3 +1662,33 @@
   infinity_shortcode: inf
   playlab_shortcode: pelaa
   artist_shortcode: art
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
+  dashboard_sections_close: Close
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.

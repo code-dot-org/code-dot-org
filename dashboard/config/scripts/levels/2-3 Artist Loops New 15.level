@@ -33,7 +33,11 @@
     "never_autoplay_video": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -82,7 +86,7 @@
         <block type="draw_line_style_pattern">
           <title name="VALUE">DEFAULT</title>
         </block>
-        <block type="turtle_stamp">
+        <block type="sticker">
           <title name="VALUE">Elephant</title>
         </block>
       </xml>

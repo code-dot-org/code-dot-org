@@ -1,9 +1,5 @@
 /* global trackEvent */
 
-/*jshint -W061 */
-// We use eval in our code, this allows it.
-// @see https://jslinterrors.com/eval-is-evil
-
 'use strict';
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
@@ -16,9 +12,9 @@ var dom = require('../dom');
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
 var MusicController = require('../MusicController');
-var AppView = require('../templates/AppView.jsx');
+var AppView = require('../templates/AppView');
 var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var CraftVisualizationColumn = require('./CraftVisualizationColumn');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -132,7 +128,7 @@ Craft.init = function (config) {
   config.level.disableFinalStageMessage = true;
 
   // Return the version of Internet Explorer (8+) or undefined if not IE.
-  var getIEVersion = function() {
+  var getIEVersion = function () {
     return document.documentMode;
   };
 
@@ -160,7 +156,7 @@ Craft.init = function (config) {
           showInstructions();
         });
       } else if (config.level.showPopupOnLoad === 'houseLayoutSelection') {
-        Craft.showHouseSelectionPopup(function(selectedHouse) {
+        Craft.showHouseSelectionPopup(function (selectedHouse) {
           trackEvent('Minecraft', 'ChoseHouse', selectedHouse);
           if (!levelConfig.edit_blocks) {
             $.extend(config.level, houseLevels[selectedHouse]);
@@ -189,7 +185,7 @@ Craft.init = function (config) {
 
   var levelTracks = [];
   if (Craft.level.songs && MUSIC_METADATA) {
-    levelTracks = MUSIC_METADATA.filter(function(trackMetadata) {
+    levelTracks = MUSIC_METADATA.filter(function (trackMetadata) {
       return Craft.level.songs.indexOf(trackMetadata.name) !== -1;
     });
   }
@@ -241,7 +237,7 @@ Craft.init = function (config) {
       break;
   }
 
-  var renderCodeWorkspace = function () {
+  var generateCodeWorkspaceHtmlFromEjs = function () {
     return codeWorkspaceEjs({
       assetUrl: studioApp.assetUrl,
       data: {
@@ -249,19 +245,6 @@ Craft.init = function (config) {
         editCode: config.level.editCode,
         blockCounterClass: 'block-counter-default',
         readonlyWorkspace: config.readonlyWorkspace
-      }
-    });
-  };
-
-  var renderVisualizationColumn = function () {
-    return visualizationColumnEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        visualization: require('./visualization.html.ejs')(),
-        controls: require('./controls.html.ejs')({
-          assetUrl: studioApp.assetUrl,
-          shareable: config.level.shareable
-        })
       }
     });
   };
@@ -322,7 +305,7 @@ Craft.init = function (config) {
           interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
     }
 
-    interfaceImagesToLoad.forEach(function(url) {
+    interfaceImagesToLoad.forEach(function (url) {
       preloadImage(url);
     });
 
@@ -338,13 +321,16 @@ Craft.init = function (config) {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
-    renderCodeWorkspace: renderCodeWorkspace,
-    renderVisualizationColumn: renderVisualizationColumn,
+    hideSource: !!config.hideSource,
+    noVisualization: false,
+    isRtl: studioApp.isRtl(),
+    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    visualizationColumn: <CraftVisualizationColumn/>,
     onMount: onMount
   }), document.getElementById(config.containerId));
 };
 
-var preloadImage = function(url) {
+var preloadImage = function (url) {
   var img = new Image();
   img.src = url;
 };
@@ -476,6 +462,7 @@ Craft.initializeAppLevel = function (levelConfig) {
     gridDimensions: levelConfig.gridWidth && levelConfig.gridHeight ?
         [levelConfig.gridWidth, levelConfig.gridHeight] :
         null,
+    // eslint-disable-next-line no-eval
     verificationFunction: eval('[' + levelConfig.verificationFunction + ']')[0] // TODO(bjordan): add to utils
   });
 };
@@ -541,7 +528,7 @@ Craft.foldInArray = function (arrayA, arrayB) {
 
 Craft.foldInCustomHouseBlocks = function (houseBlockMap, levelConfig) {
   var planesToCustomize = [levelConfig.groundPlane, levelConfig.actionPlane];
-  planesToCustomize.forEach(function(plane) {
+  planesToCustomize.forEach(function (plane) {
     for (var i = 0; i < plane.length; i++) {
       var item = plane[i];
       if (item.match(/house/)) {
@@ -708,7 +695,7 @@ Craft.executeUserCode = function () {
     var playerInventoryTypes = JSON.parse(window.localStorage.getItem('craftPlayerInventory')) || [];
 
     var newInventorySet = {};
-    attemptInventoryTypes.concat(playerInventoryTypes).forEach(function(type) {
+    attemptInventoryTypes.concat(playerInventoryTypes).forEach(function (type) {
       newInventorySet[type] = true;
     });
 
@@ -753,6 +740,7 @@ Craft.reportResult = function (success) {
         feedbackType: testResultType,
         response: response,
         level: Craft.initialConfig.level,
+        defaultToContinue: Craft.shouldDefaultToContinue(testResultType),
         appStrings: {
           reinfFeedbackMsg: craftMsg.reinfFeedbackMsg(),
           nextLevelMsg: craftMsg.nextLevelMsg({
@@ -768,6 +756,18 @@ Craft.reportResult = function (success) {
   });
 };
 
+/**
+ * Whether pressing "x" or pressing the backdrop of the "level completed" dialog
+ * should default to auto-advancing to the next level.
+ * @param {string} testResultType TestResults type of this level completion
+ * @returns {boolean} whether to continue
+ */
+Craft.shouldDefaultToContinue = function (testResultType) {
+  var isFreePlay = testResultType === TestResults.FREE_PLAY;
+  var isSuccess = testResultType > TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
+  return isSuccess && !isFreePlay;
+};
+
 Craft.replayTextForResult = function (testResultType) {
   if (testResultType === TestResults.FREE_PLAY) {
     return craftMsg.keepPlayingButton();
@@ -777,4 +777,3 @@ Craft.replayTextForResult = function (testResultType) {
     return craftMsg.replayButton();
   }
 };
-

@@ -1,4 +1,4 @@
-"pt":
+"pt-BR":
   errors:
     messages:
       not_saved: 'Corrija os seguintes erros:'
@@ -26,6 +26,11 @@
   welcome_back: Bem-vindo de volta, %{name}
   submit: Enviar
   unsubmit: Cancelar envio
+  previous_page: Previous page
+  next_page: Próxima página
+  cancel: Cancelar
+  okay: Ok
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Adicionar professor:'
@@ -269,10 +274,10 @@
       finished_hoc: Terminei minha Hora do Código
       sign_in_to_save: Entre para salvar o progresso
       free_play:
-        playlab: Crie um aplicativo
+        playlab: Crie um aplicativo Play Lab
         artist: Desenhe alguma coisa
         calculate: Calculate Something
-        applab: Crie um aplicativo
+        applab: Crie um aplicativo Play Lab
     user:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
@@ -384,8 +389,8 @@
     heading_elementary: "<h2>Cursos de 20 horas sobre</h2><h1>Fundamentos de Ciência
       da Computação (todas as idades)</h1>"
     heading_apps: "<h2>Diversão para</h2><h1>todos</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<h2>Pronto para o próximo passo?</h2> <h1>Ferramentas JavaScript
+      para o Ensino Médio</h1>"
     heading_legacy: "<h2>Nosso curso acelerado para</h2><h1>todas as idades</h1>"
     your_gallery: Galeria
     no_primary_course: Faça um curso no Code Studio
@@ -429,6 +434,8 @@
       Rovio Entertainment Ltd. Todos os direitos reservados. Plants vs. Zombies&#8482;
       &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados. O
       Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.
+    code_from_html: Code.org usa p5.play, que é licenciado sob <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      a GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE
       e Hora do Código&reg; são marcas registradas da Code.org."
@@ -515,13 +522,13 @@
   upsell:
     applab:
       title: Laboratório de Aplicativo
-      body: App Lab is a programming environment where you can make simple apps. Design
-        an app, code with blocks or JavaScript to make it work, then share your app
-        in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
+      body: App Lab é um ambiente de programação onde você pode fazer simples aplicativos.
+        Projetar uma aplicação, codificar com blocos ou JavaScript para fazê-los funcionar,
+        compartilhar seu aplicativo em minutos.
+      body_short: Projetar uma aplicação, codificar com blocks ou JavaScript para
+        fazê-lo funcionar, e compartilhar seu aplicativo em segundos.
       audience: A partir de 13 anos
-      cta: Learn how
+      cta: Aprenda como
     hoc:
       title: Labirinto clássico
       body: Experimente as noções básicas de ciência da computação. Milhões de pessoas
@@ -556,6 +563,15 @@
     minecraft:
       title: Minecraft
       body: Explore o mundo de Minecraft usando códigos.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!
@@ -579,11 +595,10 @@
     prerelease_hoc2014: Este tutorial está na versão <span class='betatext'>beta</span>.
       Ele está sujeito a revisões, conforme são recebidos feedbacks e melhorias são
       feitas.
-    feedback: Dar feedback
     report_bug: Reportar erro
     support: Obter ajuda
     support_url: "//support.code.org"
-    help_resources: Help and Resources
+    help_resources: Ajuda e recursos
   multi:
     wrong_title: Resposta incorreta
     wrong_body: A resposta que você digitou não está correta. Tente novamente!
@@ -593,11 +608,30 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Obrigado
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: Obrigado por enviar uma resposta.
     correct_title: Obrigado
-    correct_body: Thank you for submitting an answer.
+    correct_body: Obrigado por enviar uma resposta.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Obrigado
+    wrong_body: Obrigado por enviar uma resposta
+    correct_title: Obrigado
+    correct_body: Obrigado por enviar uma resposta
+  level_group-submittable:
+    wrong_title: Obrigado
+    wrong_body: Obrigado por enviar uma resposta
+    correct_title: Obrigado
+    correct_body: Obrigado por enviar uma resposta
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Solução incorreta
     wrong_body: Sua solução não está correta. Tente novamente!
@@ -617,9 +651,8 @@
     placeholder: Insira sua resposta aqui
     open_response_title: Obrigado
     open_response_body: Obrigado pela sua resposta!
-  level_group:
-    correct_title: Obrigado
-    correct_body: Thank you for submitting an answer
+    correct_title: Correto
+    correct_body: Essa é a resposta correta.
   dialog:
     ok: OK
     startover_title: Tem certeza de que deseja começar do início?
@@ -684,6 +717,7 @@
     completed_perfect: concluído, perfeito
     furthest_level_attempted: tentativa para o nível mais avançado
     assessment: avaliação
+    submitted: enviado
   studio:
     courses_working_on: Cursos que você está fazendo
     completed_courses: Cursos concluídos
@@ -752,3 +786,7 @@
         acknowledge: Ao enviar essas informações você reconhece que elas serão tratadas
           de acordo com a %{link_start_privacy}Política de Privacidade%{link_end}
           e os %{link_start_tos}Termos de Serviço%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Procure por um ícone...
+      no_icons_found: Nenhum ícone foi encontrado

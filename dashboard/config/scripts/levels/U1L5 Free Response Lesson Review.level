@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:15.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Lesson Review",
+    "markdown_instructions": "Complete these three sentences.\n\nThree big ideas from the lesson today are _____ and _____ and _____ . \nBut the most important or interesting thing I learned today is _____. \n\nAt the beginning of the class, I thought _______ but now i know _______.\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

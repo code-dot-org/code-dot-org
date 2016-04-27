@@ -14,6 +14,7 @@ theme: none
 New and unsolved problems are often pretty hard. If we want to have any chance of making something creative, useful, and clever, then we need to be willing to attack hard problems even if it means failing a few times before we succeed. 
 
 This lesson teaches that failure is not the end of a journey, but a hint for how to succeed.
+
 [summary]
 
 ## Teaching Summary
@@ -295,7 +296,6 @@ Use these activities to enhance student learning. They can be used as outside of
 
 <a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

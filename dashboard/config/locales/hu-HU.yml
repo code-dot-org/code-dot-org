@@ -26,6 +26,11 @@
   welcome_back: "Üdv újra, %{name}"
   submit: Elküldés
   unsubmit: Visszavon
+  previous_page: Previous page
+  next_page: Következő oldal
+  cancel: Mégsem
+  okay: Oké
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Tanár hozzáadása:'
@@ -417,6 +422,8 @@
       Entertainment Ltd. Minden jog fenntartva.<br />Plants vs. Zombies&#8482; &copy;
       %{current_year} Electronic Arts Inc. Minden jog fenntartva.<br /> a Gumball
       csodálatos világa a Cartoon Network bejegyzett védjegye.
+    code_from_html: A Code.org p5.play-t használ, amelyet <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      a GNU LGPL 2.1</a> licenc véd.
     powered_by_aws: Az Amazon Web Services működteti
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, a CODE logó és az
       Hour of Code&reg; a Code.org védjegyei."
@@ -507,8 +514,8 @@
       body: Az App Lab egy programozási környezet egyszerű alkalmazásokra. Tervezd
         meg, kódolj blokkokkal vagy JavaScript-el hogy működjön, majd oszd meg másodpercek
         alatt.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
+      body_short: Tervezz egy alkalmazást, kódolj elemekből vagy JavaScript-ben, majd
+        oszd meg néhány másodperc alatt.
       audience: Kor 13+
       cta: Ismerd meg hogyan
     hoc:
@@ -542,6 +549,15 @@
     minecraft:
       title: Minecraft
       body: Fedezd fel a Minecraft világát kódokkal.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: Diákok rajzolták ezeket a kódot.
     students_made_these_with_code: Ezeket diákok készítették kódolással!
@@ -565,7 +581,6 @@
     prerelease_hoc2014: Ez a tananyag <span class='betatext'> béta állapotban van</span>.
       A visszajelzések beérkezése után felülvizsgálat alá kerül, és további fejlesztés
       várható.
-    feedback: Visszajelzés küldése
     report_bug: Hiba bejelentése
     support: Segítség kérés
     support_url: "//support.code.org"
@@ -584,6 +599,25 @@
     correct_body: Köszönjük hogy elküldtél egy választ.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Köszönöm
+    wrong_body: Köszönjük az elküldött válaszokat.
+    correct_title: Köszönöm
+    correct_body: Köszönjük az elküldött válaszokat.
+  level_group-submittable:
+    wrong_title: Köszönöm
+    wrong_body: Köszönjük az elküldött válaszokat.
+    correct_title: Köszönöm
+    correct_body: Köszönjük az elküldött válaszokat.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Helytelen megoldás
     wrong_body: A megadott megoldás nem megfelelő.  Próbáld újra.
@@ -603,9 +637,8 @@
     placeholder: Itt add meg a válaszod
     open_response_title: Köszönjük
     open_response_body: Köszönjük a választ!
-  level_group:
-    correct_title: Köszönöm
-    correct_body: Thank you for submitting an answer
+    correct_title: Helyes
+    correct_body: Ez a helyes válasz.
   dialog:
     ok: OK
     startover_title: Biztosan újra szeretnéd kezdeni?
@@ -670,6 +703,7 @@
     completed_perfect: elkészült, tökéletes
     furthest_level_attempted: a legmagasabb szint megpróbálva
     assessment: "értékelés"
+    submitted: elküldve
   studio:
     courses_working_on: Tanfolyamok, amelyeken dolgozol
     completed_courses: Teljesített tanfolyamok
@@ -740,3 +774,7 @@
         acknowledge: Az alábbi információk megadásával tudomásul veszed, hogy azokat
           az %{link_start_privacy}Adatvédelmi szabályzatnak%{link_end} és a %{link_start_tos}Felhasználói
           szabályoknak%{link_end} megfelelően kezeljük
+  components:
+    icon_library:
+      search_placeholder_text: Keress egy ikont...
+      no_icons_found: Nem találhatók ikonok

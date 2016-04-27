@@ -1,7 +1,0 @@
-name 'ECSPD Handshake Q1'
-
-markdown <<MARKDOWN
-## Handshake Problem #1:
-
-Assume there are 20 people in a room, including you. You must shake hands with everyone else in the room. How many hands will you shake? If there are N (where N>0) people in the room, how many hands will you shake?
-MARKDOWN

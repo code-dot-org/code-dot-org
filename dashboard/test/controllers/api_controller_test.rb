@@ -53,6 +53,29 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal script, assigns(:script)
   end
 
+  test "should get assessments for section with default script" do
+    get :section_assessments, section_id: @section.id
+    assert_response :success
+
+    assert_equal Script.twenty_hour_script, assigns(:script)
+  end
+
+  test "should get assessments for section with section script" do
+    get :section_assessments, section_id: @flappy_section.id
+    assert_response :success
+
+    assert_equal Script.get_from_cache(Script::FLAPPY_NAME), assigns(:script)
+  end
+
+  test "should get assessments for section with specific script" do
+    script = Script.find_by_name('algebra')
+
+    get :section_assessments, section_id: @section.id, script_id: script.id
+    assert_response :success
+
+    assert_equal script, assigns(:script)
+  end
+
   test "should get text_responses for section with script with text response" do
     script = create :script
 
@@ -112,10 +135,72 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal expected_response, JSON.parse(@response.body)
   end
 
+  test "should get assessments for section with script with level_group assessment" do
+    script = create :script
+
+    sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
+    sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
+    sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
+    sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
+
+    # create 2 level_group levels
+    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level1.properties['title'] =  'Long assessment 1'
+    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
+    level1.save!
+    create :script_level, script: script, level: level1, assessment: true
+
+    # student_1 has an assessment
+    create(:activity, user: @student_1, level: level1,
+           level_source: create(:level_source, level: level1,
+            data: %Q({"#{sub_level1.id}":{"result":"This is a free response"},"#{sub_level2.id}":{"result":"0"},"#{sub_level3.id}":{"result":"1"},"#{sub_level4.id}":{"result":"-1"}})
+            ))
+
+    updated_at = Time.now
+
+    create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at
+
+    get :section_assessments, section_id: @section.id, script_id: script.id
+    assert_response :success
+
+    assert_equal script, assigns(:script)
+
+    # all these are translation missing because we don't actually generate i18n files in tests
+
+    expected_response =
+      [
+       {"student"=>{"id"=>@student_1.id, "name"=>@student_1.name},
+        "stage"=>"translation missing: en-us.data.script.name.#{script.name}.title",
+        "puzzle"=>1,
+        "question"=>"Long assessment 1",
+        "url"=>"http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
+        "multi_correct"=>1,
+        "multi_count"=>3,
+        "submitted"=>true,
+        "timestamp"=>updated_at.utc.to_s,
+        "level_results"=>[
+          {"student_result"=>"This is a free response", "correct"=>"free_response"},
+          {"student_result"=>"A", "correct"=>"correct"},
+          {"student_result"=>"B", "correct"=>"incorrect"},
+          {"student_result"=>"", "correct"=>"unsubmitted"}]
+        }
+      ]
+    assert_equal expected_response, JSON.parse(@response.body)
+  end
+
   test "should get text_responses for section with script without text response" do
     script = Script.find_by_name('course1')
 
     get :section_text_responses, section_id: @section.id, script_id: script.id
+    assert_response :success
+
+    assert_equal script, assigns(:script)
+  end
+
+  test "should get assessments for section with script without assessment" do
+    script = Script.find_by_name('course1')
+
+    get :section_assessments, section_id: @section.id, script_id: script.id
     assert_response :success
 
     assert_equal script, assigns(:script)
@@ -195,7 +280,6 @@ class ApiControllerTest < ActionController::TestCase
     get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
     assert_response :success
     body = JSON.parse(response.body)
-    puts body
     assert_equal({}, body)
     assert_equal([{
                       application: :dashboard,

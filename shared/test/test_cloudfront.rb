@@ -23,6 +23,7 @@ class TestCloudFront < Minitest::Test
       }
     }
   end
+
   def teardown
     Aws.config[:stub_responses] = @old_stub_responses
   end
@@ -71,7 +72,7 @@ STR
       }
     )
     Aws.config[:cloudfront][:stub_responses][:list_distributions] =
-      distribution_list [ distribution_summary ]
+      distribution_list [distribution_summary]
     assert_output (<<STR) { AWS::CloudFront.create_or_update }
 pegasus distribution updated!
 dashboard distribution updated!

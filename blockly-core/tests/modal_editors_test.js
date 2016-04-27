@@ -106,6 +106,8 @@ var USER_CREATED_PROCEDURE =
   '</block>' +
 '</xml>';
 
+var defaultSimpleDialog = null;
+
 function initializeFunctionEditor(opt_functionDefinitionXML) {
   Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
   Blockly.hasTrashcan = true;
@@ -149,6 +151,18 @@ function cleanupFunctionEditor() {
   Blockly.functionEditor.hideIfOpen();
 }
 
+function setCustomSimpleDialog(func) {
+  if (!defaultSimpleDialog) {
+    defaultSimpleDialog = Blockly.customSimpleDialog;
+  }
+  Blockly.customSimpleDialog = func;
+}
+
+function resetCustomSimpleDialog() {
+  Blockly.customSimpleDialog = defaultSimpleDialog;
+  defaultSimpleDialog = null;
+}
+
 function test_functionEditorDoesntBumpBlocksInMainBlockspace() {
   var container = Blockly.Test.initializeBlockSpaceEditor();
 
@@ -187,8 +201,7 @@ function test_initializeFunctionEditor() {
   assertEquals(false, definitionBlock.shouldBeGrayedOut());
   assertEquals(false, definitionBlock.isDeletable());
   assertEquals(false, definitionBlock.isEditable());
-  assertEquals(false,
-      goog.style.isElementShown(goog.dom.getElementByClass('svgTextButton')));
+  assertFalse(goog.style.isElementShown(goog.dom.getElementByClass('svgTextButton')));
 
   cleanupFunctionEditor();
   goog.dom.removeNode(container);
@@ -203,16 +216,19 @@ function test_functionEditor_deleteButton() {
       Blockly.mainBlockSpace.findFunction('test-usercreated-function'));
   assertNotNull('Function editor has delete button',
       goog.dom.getElementByClass('svgTextButton'));
+  assert('Delete button is visible',
+      goog.style.isElementShown(goog.dom.getElementByClass('svgTextButton')));
   assertEquals('Delete button says "Delete"', 'Delete',
       goog.dom.getElementByClass('svgTextButton').textContent);
 
   // Skip confirmation dialog
-  Blockly.customSimpleDialog = function(e) {e.onCancel();};
+  setCustomSimpleDialog(function(e) {e.onCancel();});
   Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
 
   assertNull('Function no longer exists',
       Blockly.mainBlockSpace.findFunction('test-usercreated-function'));
 
+  resetCustomSimpleDialog();
   cleanupFunctionEditor();
   goog.dom.removeNode(container);
 }
@@ -240,6 +256,33 @@ function test_functionEditor_renameParam() {
   goog.dom.removeNode(container);
 }
 
+function test_functionEditor_useSimpleDialogForParamRenaming() {
+  var container = Blockly.Test.initializeBlockSpaceEditor();
+  initializeFunctionEditor(PROCEDURE_WITH_PARAM);
+  openFunctionEditor('procedure with param 1');
+  var dialogCreated = false;
+  setCustomSimpleDialog(function(config) {
+    dialogCreated = true;
+    config.onCancel('new_x');
+  });
+
+  Blockly.fireTestClickSequence(
+      document.querySelector('.blocklyUndraggable .blocklyArrow'));
+  var renameOption = document.querySelectorAll('.goog-menuitem-content')[0];
+  assertEquals('Rename parameter...', renameOption.textContent);
+  Blockly.fireTestClickSequence(renameOption);
+
+  assert(dialogCreated);
+  var paramsUsed = getParametersUsedInFunctionEditor();
+  assertContains('Renamed to new_x', 'new_x', paramsUsed);
+  assertContains('Does not change other parameter', 'y', paramsUsed);
+  assertNotContains('No more old parameter', 'x', paramsUsed);
+
+  resetCustomSimpleDialog();
+  cleanupFunctionEditor();
+  goog.dom.removeNode(container);
+}
+
 function test_functionEditor_deleteParam() {
   var container = Blockly.Test.initializeBlockSpaceEditor();
   initializeFunctionEditor(PROCEDURE_WITH_PARAM);
@@ -250,6 +293,32 @@ function test_functionEditor_deleteParam() {
   assertNotContains('Parameter deleted', 'x', paramsUsed);
   assertContains('Still has other parameter', 'y', paramsUsed);
 
+
+  cleanupFunctionEditor();
+  goog.dom.removeNode(container);
+}
+
+function test_functionEditor_useSimpleDialogForParamDeletion() {
+  var container = Blockly.Test.initializeBlockSpaceEditor();
+  initializeFunctionEditor(PROCEDURE_WITH_PARAM);
+  openFunctionEditor('procedure with param 1');
+  var dialogCreated = false;
+  setCustomSimpleDialog(function(config) {
+    dialogCreated = true;
+    config.onCancel();
+  });
+
+  Blockly.fireTestClickSequence(
+      document.querySelector('.blocklyUndraggable .blocklyArrow'));
+  var deleteOption = document.querySelectorAll('.goog-menuitem-content')[1];
+  assertEquals('Delete parameter...', deleteOption.textContent);
+  Blockly.fireTestClickSequence(deleteOption);
+
+  assert(dialogCreated);
+  var paramsUsed = getParametersUsedInFunctionEditor();
+  assertEquals('One parameter left', 1, paramsUsed.length);
+
+  resetCustomSimpleDialog();
   cleanupFunctionEditor();
   goog.dom.removeNode(container);
 }
@@ -269,6 +338,19 @@ function test_contractEditor_add_examples() {
   var callBlock = firstExample.getInputTargetBlock(
       Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
   assertFalse(callBlock.canDisconnectFromParent());
+  contractEditor.hideIfOpen();
+  goog.dom.removeNode(container);
+}
+
+function test_contractEditor_deleteButton_notVisibleForPrewritten() {
+  var singleDefinitionString = SINGLE_DEFINITION_FILLED;
+  var container = initializeWithContractEditor(singleDefinitionString);
+  var contractEditor = Blockly.contractEditor;
+  contractEditor.autoOpenWithLevelConfiguration({
+    autoOpenFunction: 'functional-function'
+  });
+  assertFalse('Delete button is not visible',
+      goog.style.isElementShown(goog.dom.getElementByClass('svgTextButton')));
   contractEditor.hideIfOpen();
   goog.dom.removeNode(container);
 }
@@ -319,6 +401,12 @@ function test_contractEditor_new_function_button() {
   assertNotNull(definitionBlock);
   assertEquals('functional_definition', definitionBlock.type);
   assertEquals('Has two examples', 2, Blockly.contractEditor.exampleBlocks.length);
+  assertNotNull('Contract editor has delete button',
+      goog.dom.getElementByClass('svgTextButton'));
+  assert('Delete button is visible',
+      goog.style.isElementShown(goog.dom.getElementByClass('svgTextButton')));
+  assertEquals('Delete button says "Delete"', 'Delete',
+      goog.dom.getElementByClass('svgTextButton').textContent);
 
   Blockly.contractEditor.hideIfOpen();
   goog.dom.removeNode(container);
@@ -497,18 +585,19 @@ function test_contractEditor_new_function_button_then_delete() {
   assertFalse(acceptDialogTriggered);
   assertFalse(rejectDialogTriggered);
 
-  Blockly.customSimpleDialog = instantRejectDialog;
+  setCustomSimpleDialog(instantRejectDialog);
   Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
 
   assertTrue(rejectDialogTriggered);
   beforeDeletionAssertions();
 
-  Blockly.customSimpleDialog = instantAcceptDialog;
+  setCustomSimpleDialog(instantAcceptDialog)
   Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
 
   assertTrue(acceptDialogTriggered);
   afterDeletionAssertions();
 
+  resetCustomSimpleDialog();
   contractEditor.hideIfOpen();
   goog.dom.removeNode(container);
 }

@@ -1,5 +1,5 @@
 /* global $ */
-var colors = require('../sharedJsxStyles').colors;
+var color = require('../color');
 
 /**
  * Simple boot-strapped style alert.
@@ -7,8 +7,9 @@ var colors = require('../sharedJsxStyles').colors;
 var Alert = React.createClass({
   propTypes: {
     children: React.PropTypes.element.isRequired,
-    type: React.PropTypes.oneOf("error", "warning").isRequired,
-    onClose: React.PropTypes.func.isRequired
+    type: React.PropTypes.oneOf(["error", "warning"]).isRequired,
+    onClose: React.PropTypes.func.isRequired,
+    sideMargin: React.PropTypes.number,
   },
 
   render: function () {
@@ -17,19 +18,19 @@ var Alert = React.createClass({
         position: 'relative',
         zIndex: 1000,
         marginTop: 20,
-        marginLeft: 50,
-        marginRight: 50
+        marginLeft: this.props.sideMargin || 50,
+        marginRight: this.props.sideMargin || 50
       },
       typeSpecific: {
         error: {
-          borderColor: colors.bootstrap.errorBorder,
-          backgroundColor: colors.bootstrap.errorBackground,
-          color: colors.bootstrap.errorText
+          borderColor: color.bootstrap_error_border,
+          backgroundColor: color.bootstrap_error_background,
+          color: color.bootstrap_error_text
         },
         warning: {
-          borderColor: colors.bootstrap.warningBorder,
-          backgroundColor: colors.bootstrap.warningBackground,
-          color: 'black'
+          borderColor: color.bootstrap_warning_border,
+          backgroundColor: color.bootstrap_warning_background,
+          color: color.black
         },
       },
       child: {
@@ -52,7 +53,7 @@ var Alert = React.createClass({
         fontSize: 20,
         fontWeight: 'bold',
         lineHeight: '20px',
-        color: 'black',
+        color: color.black,
         textShadow: '0 1px 0 white',
         opacity: 0.2,
         position: 'relative',
@@ -66,8 +67,8 @@ var Alert = React.createClass({
     return (
       <div style={styles.main}>
         <div style={childStyle}>
-          <button style={styles.closeButton}>
-            <span onClick={this.props.onClose}>&times;</span>
+          <button style={styles.closeButton} onClick={this.props.onClose}>
+            <span>&times;</span>
           </button>
           {this.props.children}
         </div>

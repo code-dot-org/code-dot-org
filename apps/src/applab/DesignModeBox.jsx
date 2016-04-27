@@ -1,7 +1,8 @@
 /* global $ */
 
-var DesignToolbox = require('./DesignToolbox.jsx');
-var DesignProperties = require('./designProperties.jsx');
+var color = require('../color');
+var DesignToolbox = require('./DesignToolbox');
+var DesignProperties = require('./designProperties');
 
 module.exports = React.createClass({
   propTypes: {
@@ -11,20 +12,21 @@ module.exports = React.createClass({
     handleChange: React.PropTypes.func.isRequired,
     onChangeElement: React.PropTypes.func.isRequired,
     onDepthChange: React.PropTypes.func.isRequired,
+    onDuplicate: React.PropTypes.func.isRequired,
     onDelete: React.PropTypes.func.isRequired,
     onInsertEvent: React.PropTypes.func.isRequired,
     isToolboxVisible: React.PropTypes.bool.isRequired,
     isDimmed: React.PropTypes.bool.isRequired
   },
 
-  render: function() {
+  render: function () {
     var styles = {
       container: {
         position: 'absolute',
         width: '100%',
         top: 30,
         bottom: 0,
-        backgroundColor: 'white',
+        backgroundColor: color.white,
         boxSizing: 'border-box',
         borderLeft: '1px solid gray',
         borderRight: '1px solid gray',
@@ -68,6 +70,7 @@ module.exports = React.createClass({
             handleChange={this.props.handleChange}
             onChangeElement={this.props.onChangeElement}
             onDepthChange={this.props.onDepthChange}
+            onDuplicate={this.props.onDuplicate}
             onDelete={this.props.onDelete}
             onInsertEvent={this.props.onInsertEvent}/>
         </div>

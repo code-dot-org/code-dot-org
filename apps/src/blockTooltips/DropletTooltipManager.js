@@ -12,7 +12,7 @@ var dropletUtils = require('../dropletUtils');
  * Store for finding tooltips for blocks
  * @constructor
  */
-function DropletTooltipManager(appMsg, dropletConfig, codeFunctions, autocompletePaletteApisOnly) {
+function DropletTooltipManager(appMsg, dropletConfig, codeFunctions, autocompletePaletteApisOnly, Dialog) {
   /**
    * App-specific strings (to override common msg)
    * @type {Object.<String, Function>}
@@ -66,6 +66,8 @@ function DropletTooltipManager(appMsg, dropletConfig, codeFunctions, autocomplet
    * @private
    */
   this.dropletAutocompleteParameterTooltipManager_ = new DropletAutocompleteParameterTooltipManager(this);
+
+  this.Dialog = Dialog;
 }
 
 /**
@@ -124,7 +126,7 @@ DropletTooltipManager.prototype.showDocFor = function (functionName) {
   }
 
   $('.tooltipstered').tooltipster('hide');
-  var dialog = new window.Dialog({
+  var dialog = new this.Dialog({
     body: $('<iframe>')
       .addClass('markdown-instructions-container')
       .width('100%')

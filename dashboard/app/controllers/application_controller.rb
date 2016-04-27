@@ -180,7 +180,7 @@ class ApplicationController < ActionController::Base
 
     unless options[:solved?]
       # Call method to generate hint and related attributes, copying results into response.
-      hint_details = ExperimentActivity::determine_hint({
+      hint_details = ExperimentActivity.determine_hint({
                                                          level_source: options[:level_source],
                                                          current_user: current_user,
                                                          enable_external_hints: Rails.env.production?,

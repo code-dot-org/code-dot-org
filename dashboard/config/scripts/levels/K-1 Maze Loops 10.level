@@ -27,6 +27,11 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "markdown_instructions": "Get me to the pig!   \r\nUsing the `repeat` loop will make it much easier."
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 3
   }
 }]]></config>
   <blocks>

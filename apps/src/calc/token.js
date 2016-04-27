@@ -58,13 +58,7 @@ Token.prototype.renderToParent = function (element, xPos, markClass) {
 
   element.appendChild(text);
 
-  // FF doesnt have offsetWidth
-  // getBoundingClientRect undercalculates width on iPad
-  if (text.offsetWidth !== undefined) {
-    textLength = text.offsetWidth;
-  } else {
-    textLength = text.getBoundingClientRect().width;
-  }
+  textLength = text.getBBox().width;
 
   text.setAttribute('x', xPos);
   if (this.marked_ && markClass) {

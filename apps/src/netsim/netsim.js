@@ -2,23 +2,17 @@
  * @overview Internet Simulator app for Code.org.
  *           This file is the main entry point for the Internet Simulator.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
-*/
 /* global -Blockly */
-/* global sendReport */
+/* global dashboard */
 /* global confirm */
 'use strict';
 
 var utils = require('../utils');
-var _ = utils.getLodash();
+var _ = require('../lodash');
 var i18n = require('./locale');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
-var NetSimView = require('./NetSimView.jsx');
+var NetSimView = require('./NetSimView');
 var page = require('./page.html.ejs');
 var NetSimAlert = require('./NetSimAlert');
 var NetSimConstants = require('./NetSimConstants');
@@ -166,7 +160,7 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
  */
-NetSim.prototype.init = function(config) {
+NetSim.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error("NetSim requires a StudioApp");
   }
@@ -224,7 +218,7 @@ NetSim.prototype.init = function(config) {
    */
   this.reportingInfo_ = config.report;
 
-  var renderCodeApp = function () {
+  var generateCodeAppHtmlFromEjs = function () {
     return page({
       data: {
         visualization: '',
@@ -261,7 +255,7 @@ NetSim.prototype.init = function(config) {
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
-    renderCodeApp: renderCodeApp,
+    generateCodeAppHtml: generateCodeAppHtmlFromEjs,
     onMount: onMount
   }), document.getElementById(config.containerId));
 };
@@ -1000,7 +994,7 @@ var netsimDebouncedResizeFooter = _.debounce(function () {
  * Should be bound against StudioApp instance.
  * @private
  */
-NetSim.onResizeOverride_ = function() {
+NetSim.onResizeOverride_ = function () {
   var div = document.getElementById('appcontainer');
   var divParent = div.parentNode;
   var parentStyle = window.getComputedStyle(divParent);
@@ -1297,7 +1291,7 @@ NetSim.prototype.completeLevelAndContinue = function () {
   // Avoid multiple simultaneous submissions.
   $('.submitButton').attr('disabled', true);
 
-  sendReport({
+  window.dashboard.reporting.sendReport({
     fallbackResponse: this.reportingInfo_.fallback_response,
     callback: this.reportingInfo_.callback,
     app: 'netsim',

@@ -34,7 +34,12 @@
     "examples_required": "false",
     "fast_get_nectar_animation": "false"
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 1,
+    "functions": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -157,6 +162,13 @@
         </category>
       </xml>
     </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="procedures_callnoreturn">
+          <mutation name="get 3 nectar"/>
+        </block>
+      </xml>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="procedures_defnoreturn" editable="false">

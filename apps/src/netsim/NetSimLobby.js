@@ -5,16 +5,10 @@
  * @see NetSimRemoteNodeSelectionPanel for implementation of the actual
  *      lobby table.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var utils = require('../utils');
-var _ = utils.getLodash();
+var _ = require('../lodash');
 var i18n = require('./locale');
 var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimClientNode = require('./NetSimClientNode');

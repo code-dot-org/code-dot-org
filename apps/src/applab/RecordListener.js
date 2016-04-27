@@ -26,7 +26,7 @@ var RecordListener = module.exports = function () {
  * processing the last batch of data for that table.
  * @type {number}
  */
-var RECORD_INTERVAL = 5000; // 5 seconds
+var RECORD_INTERVAL = 3000; // 3 seconds
 
 var EventType = {
   CREATE: 'create',
@@ -177,7 +177,7 @@ TableHandler.prototype.handleFetchRecords_ = function (req) {
  * @returns {IdToJsonMap}
  * @private
  */
-TableHandler.buildIdToJsonMap_ = function(records) {
+TableHandler.buildIdToJsonMap_ = function (records) {
   var idToJsonMap = {};
   for (var i = 0; i < records.length; i++) {
     var record = records[i];
@@ -186,7 +186,7 @@ TableHandler.buildIdToJsonMap_ = function(records) {
   return idToJsonMap;
 };
 
-TableHandler.reportEvents_ = function(records, oldIdToJsonMap, newIdToJsonMap, callback) {
+TableHandler.reportEvents_ = function (records, oldIdToJsonMap, newIdToJsonMap, callback) {
   // Look for 'create' and 'update' events.
   for (var i = 0; i < records.length; i++) {
     var record = records[i];
@@ -208,7 +208,7 @@ TableHandler.reportEvents_ = function(records, oldIdToJsonMap, newIdToJsonMap, c
   }
 };
 
-TableHandler.prototype.reset = function() {
+TableHandler.prototype.reset = function () {
   if (this.timeoutId_) {
     window.clearTimeout(this.timeoutId_);
   }

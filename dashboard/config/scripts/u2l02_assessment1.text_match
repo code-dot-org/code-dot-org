@@ -1,6 +1,0 @@
-name 'U2L02 Assessment1'
-title 'The Need for Addressing: Question 1'
-
-markdown <<MARKDOWN
-Why was it necessary to include the sender's and recipient’s names in the NetSim version of Battleship, but not in the face-to-face game?
-MARKDOWN

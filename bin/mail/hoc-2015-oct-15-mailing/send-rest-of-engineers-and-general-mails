@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# the send-to-mailing-list script had a 20k recipient limit the first
+# time I tried to send these. Argh.
+
+# ubuntu@production-daemon:~/production/bin/mail/hoc-2015-oct-15-mailing$ wc -l engineers-deduped.csv
+# 113203 engineers-deduped.csv
+
+./send-to-mailing-list 10-15-hoc-engineers hoc-2015-oct-15-mailing/engineers-deduped.csv --start 20000 --limit 100000
+
+# I didn't make this mistake for the general list but I did for the
+# general ab tests so I'll just send them the final one.
+
+# ubuntu@production-daemon:~/production/bin/mail/hoc-2015-oct-15-mailing$ wc -l general-deduped-test-1.csv
+# ubuntu@production-daemon:~/production/bin/mail/hoc-2015-oct-15-mailing$ wc -l general-deduped-test*.csv
+#  37998 general-deduped-test-1.csv
+#  37998 general-deduped-test-2.csv
+#  37998 general-deduped-test-3.csv
+#  37998 general-deduped-test-4.csv
+
+
+./send-to-mailing-list 10-19-hoc-general-final hoc-2015-oct-15-mailing/general-deduped-test-1.csv --start 20000 --limit 100000
+./send-to-mailing-list 10-19-hoc-general-final hoc-2015-oct-15-mailing/general-deduped-test-2.csv --start 20000 --limit 100000
+./send-to-mailing-list 10-19-hoc-general-final hoc-2015-oct-15-mailing/general-deduped-test-3.csv --start 20000 --limit 100000
+./send-to-mailing-list 10-19-hoc-general-final hoc-2015-oct-15-mailing/general-deduped-test-4.csv --start 20000 --limit 100000

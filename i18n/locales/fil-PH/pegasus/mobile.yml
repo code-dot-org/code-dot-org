@@ -21,7 +21,7 @@ fil-PH:
   twentyhours_heading: Subukan ang aming Intro sa kurso ng Computer Science
   twentyhours_text: Tapos ka na sa iyong unang Hour of Code? Matuto pa ng ibang computer science at mga programming concept sa follow-up na kurso na ito.
   og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: 'Sumali sa <a href="http://hourofcode.com">Hour of Code</a><br/>December 8 - 14, 2014<br/>'
   hoc2014_students: Mga mag-aaral
   hoc2014_try: Subukan mo
@@ -181,7 +181,7 @@ fil-PH:
   learn_next_level: Magpatuloy sa sunod ne level
   learn_online: Subukan ang ibang pang mga kurso online
   learn_classes: Hanapin ang lokal na mga klase
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'Sinubukan ko ang #HourOfCode - subukan ito! @codeorg'
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -515,6 +515,11 @@ fil-PH:
   dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Tapos na
   dashboard_action_required: kinakailangan
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Home page ng teacher
   dashboard_navigation_section_student_progress: Mga Account at Progress ng mga Estudyante
   dashboard_navigation_section_teacher_progress: Ang Iyong Progreso sa Kurso
@@ -525,12 +530,24 @@ fil-PH:
   dashboard_navigation_all_sections: Mga Account at Progress ng mga Estudyante
   dashboard_navigation_view_progress: Tingnan ang Progress
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Magdagdag ng Estudyante
   dashboard_navigation_manage_students: I-manage ang mga Estudyante
   dashboard_navigation_lesson_plans_resources: Mga Lesson Plan at mga Resource
   dashboard_navigation_view_stats: Tingnan ang mga Stat
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_completed: hindi natapos
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Bagong section
   dashboard_sections_jumbotron_instruction: Gumawa ng bagong mga section at magdagdag ng mga estudyante dito. Ang mga section ay tumutulong para ma-organize ang mga estudyante sa mas maliit na mga grupo upang makita ang progreso at ma-manage ang kanilang mga account.
   dashboard_sections_table_section: Bahagi
@@ -546,6 +563,19 @@ fil-PH:
   dashboard_sections_secret_none: 'Kung nais mong i-manage ng iyong mga mag-aaral ang kanilang sariling mga account, kabilang ang pagpili ng kanilang sariling mga password, pumili ng isang lihim na uri ng <b>none</b>.'
   dashboard_sections_print_secrets: Pagkatapos ay maaari mo i-print ang isang sheet ng mga baraha na naglalaman ng impormasyon ng account upang ibahagi sa iyong mga mag-aaral nang paisa-isa.
   dashboard_sections_switch_section: 'Magpalit ng section:'
+  dashboard_sections_close: Close
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Magdagdag ng estudyante
   dashboard_students_add_students: Magdagdag ng maraming estudyante
   dashboard_students_add_multiple: 'I-type o i-paste ang mga pangalan ng iyong mga mag-aaral, isa sa bawat linya:'
@@ -612,16 +642,22 @@ fil-PH:
   dashboard_login_picture: Picture
   dashboard_login_none: Email
   dashboard_new_password: bagong password
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
-  dashboard_progress_not_completed: hindi natapos
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
   dashboard_stage: Yugto
   dashboard_puzzle: Palaisipan
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Tama
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Mga di kapani-paniwalang numero mula sa Hour of Code nung isang taon. Sa isang linggo lang ay:'
   stats_hoc_2013_image_alt: Mga stat mula sa 2013 Hour of Code
   dashboard_teacher: Teacher
@@ -640,10 +676,8 @@ fil-PH:
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
   dashboard_announce_button_text: Matuto nang higit pa
-  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
-  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: 'Ang Hour of Code ay andito na - Disyembre 08-14!'
   code_sign_up: Mag-sign up upang lumahok sa CS Edukasyon Week
   learn_more: Dagdagan ang Kaalaman

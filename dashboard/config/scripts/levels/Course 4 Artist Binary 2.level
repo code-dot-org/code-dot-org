@@ -28,6 +28,11 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "images": "[{\"filename\":\"binary_grid.svg\",\"position\":[0,0]}]"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
   }
 }]]></config>
   <blocks>

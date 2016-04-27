@@ -706,8 +706,7 @@ ru:
     C2_graph_paper:
       1:
         image: notes/C2_graph_paper_1.png
-        text: |-
-          This lesson is called "Graph Paper Programming" and it's all about algorithms. Today we're going to learn how to write programs that show each other how to recreate simple black and white images, using only hand drawn arrows.
+        text: Этот урок называется «Программирование на Миллиметровке» (бумага с координатной сеткой), и это все об алгоритмах. Сегодня мы будем учиться как писать программы, которые показывают друг другу как воссоздать простые черно-белые изображения, используя только нарисованные стрелки.
       2:
         image: notes/C2_graph_paper_2.png
         text: Алгоритм — список инструкции для завершения задачи. Мы будем следовать этому набору инструкций, чтобы сделать чашу. Алгоритмы действительно полезны, когда нужно, чтобы кто-то еще понял, как что-то сделать.
@@ -979,7 +978,7 @@ ru:
         text: In this example, your goal is to get zombie to the sunflower. We could use five move forward blocks or we could tell the computer to move forward and repeat five times using the one repeat block.
       2:
         image: notes/C3_maze_level_4_2.png
-        text: This saves time and makes it way easier. To use it, just put the move forward block inside the repeat block. Hit run and the zombie will move forward five times to the yummy sunflower.
+        text: Это экономит время и упрощает задачу. Чтобы сделать это, необходимо блок движения вперед переместить в блок повтора. После запуска зомби сделают пять движений вперед к вкусному подсолнуху.
     C3_playlab_create_game:
       1:
         image: notes/C3_playlab_create_game_1.png
@@ -1000,10 +999,10 @@ ru:
     C4_bee_conditional:
       1:
         image: notes/C4_bee_conditional_1.png
-        text: "This is the conditional block. It says if you're at the flower or the honeycomb, then do something. This is useful when we don't know how much honey or nectar to get as we see here with this question mark."
+        text: Это блок условия. Он определяет, на цветке вы или на соте, затем совершается действие. Это полезно в случае, если неизвестно, сколько меда или нектара мы видим под этим знаком вопроса.
       2:
         image: notes/C4_bee_conditional_2.png
-        text: "In this example, we're going to say, if it's a flower, get all the nectar and then use another one to say, if it's a honeycomb, make honey. Ta-dah!"
+        text: Например, при условии, что это цветок, мы собираем весь нектар, а затем используем другой блок с условием, что это сота, и собираем мед. Та-даам!
     C4_conditionals:
       1:
         image: notes/C4_conditionals_1.png

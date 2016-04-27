@@ -680,9 +680,6 @@
       4-5 Maze Assessment 1_instruction: "Оценяване: Стигни до слънчогледа."
       4-5 Maze Conditionals 1_instruction: "Използвайте блока за повторение, за да
         заведете зомбито до слънчогледа."
-      4-5 Maze Conditionals 10_instruction: "Можеш ли да добавиш само 3 блока, за
-        да ми помогнеш да разгадая един по-сложен лабиринт? Ако го направиш правилно,
-        аз ще мога да вървя по всяка крива пътека, независимо колко е дълга."
       4-5 Maze Conditionals 2_instruction: "Използвайте блока за повторение, за да
         заведете зомбито до слънчогледа."
       4-5 Maze Conditionals 3_instruction: 'Използвай "Ако" блок, за да ми позволиш
@@ -1242,12 +1239,8 @@
         обекти са цветя, така че проверете цветята за събиране на нектар."
       Course 4 Artist 1_instruction: "Помогнете ми да завърша моята кутия. (Всеки
         ред е дълъг 200 пиксела) "
-      Course 4 Artist 10_instruction: "Щракнете тук, за да видите съветите отново!
-        \\r \\r Тук е кодът за създаване на интересна форма.  Какво се случва, когато
-        го повтаряте?   При завоите в тази форма се добавят до 420 градуса, което
-        означава, че когато вашият художник  прави чертеж, той ще бъде е с различна
-        посока от първоначалната.  Тази нова посока е точно 60 градуса вдясно от мястото,
-        където сте започнали."
+      Course 4 Artist 10_instruction: "Сега е време за импровизации! Забавлявайте
+        се и направете това, което Ви харесва. "
       Course 4 Artist 11_instruction: "Сега е време за  предизвикателство!  Ето един
         дизайн, който използва само блокове, които вече са показали.  Можеш ли да
         разбереш как да го пресъздадеш без никаква допълнителна информация?  Съвет:
@@ -1271,7 +1264,7 @@
         че да е симетричен. Триъгълниците са равностранни и с дължина  на страната
         50 пиксела."
       Course 4 Artist 6_instruction: "Попълнете кода, за да начертаете тези триъгълници.
-        Съвет: 3 триъгълници за 360 градуса завъртане. Колко пъти 3 се съдържа в 360?"
+        Съвет: 3 триъгълници за 360 градуса завъртане."
       Course 4 Artist 7_instruction: "Сега, внесете този цикъл в друг, за да начертаете
         10 триъгълници.  Това се нарича вложен цикъл.  Съвет: Всички 10 триъгълници
         образуват окръжност от 360 градуса.  "
@@ -1697,10 +1690,9 @@
       Course 4 EC 1b_instruction: "Няма правила. Само предизвикателство!"
       Course 4 EC 2a_instruction: "** Екстремно предизвикателство: ** Няма правила.
         \ Само предизвикателство!"
-      Course 4 EC 2b_instruction: "** Екстремно предизвикателство: ** Няма правила.
-        \ Само предизвикателство!"
-      Course 4 EC 2c_instruction: "** Екстремно предизвикателство: ** Няма правила.
-        \ Само предизвикателство!"
+      Course 4 EC 2b_instruction: "Няма правила. Само предизвикателство!"
+      Course 4 EC 2c_instruction: "Няма правила. Само предизвикателство!"
+      Course 4 EC 2d_instruction: "Няма правила. Само предизвикателство!"
       Course 4 EC 3_instruction: "Използвайте това, което научихте в предишното ниво,
         за да нарисувате изображение като това. Забележка: Кодът става по-опростем,
         ако включите параметри. "
@@ -1719,15 +1711,13 @@
         нечетните числа от 1 до 100."
       Course 4 Play Lab Params 1_instruction: Това е функция, наречена "скок", която
         кара вашия герой да скочи 100 пиксела. Използвайте я, за да съберете знамената.
-      Course 4 Play Lab Params 10_instruction: 'Добавихме още една функция за Вас.
-        \r \r Използвайте "Ако" декларация да програмирате играта си да извиква функцията
-        "level_up", само когато "player_score" става по-голям от определен брой. \r
-        \r за пример: Трябват ти "player_score" > 6\r \r Играй играта и за да преминеш
-        ниво 4 трябва да спечелиш нужния брой точки. '
-      Course 4 Play Lab Params 2_instruction: |-
-        Сега, знамената са високи за достигане! Нека сложим нов параметър към нашата функция "скок", наречен "височина'.\r
-        \r Стрелката нагоре трябва да скочи 200 пиксела, но стрелката надолу ще скача 100 пиксела. Щракнете на "редактирай" във функцията 'скок" и промени така, че да използва параметъра за височина вместо просто да скача 100 пиксела.\r
-        \r Съвет: Трябва да кликнеш на "редактиране" във функцията за "скок" и да я актуализираш, за да използва параметър "височина".
+      Course 4 Play Lab Params 10_instruction: |
+        Добавихме функция за вас. Програмирайте вашата игра да отвори фyнкцията  "едно ниво по- нагоре" ако " играча има >10 точки". Ако преминете 4-то ниво, може да се преместите на следващия пъзел.
+      Course 4 Play Lab Params 2_instruction: Сега, знамената са високи за достигане!
+        Нека сложим нов параметър към нашата функция "скок", наречен "височина'. Стрелката
+        нагоре трябва да скочи 200 пиксела, но стрелката надолу ще скача 100 пиксела.
+        Щракнете на "редактирай" във функцията 'скок" и промени така, че да използва
+        параметъра за височина вместо просто да скача 100 пиксела.
       Course 4 Play Lab Params 3_instruction: 'Хайде да добавим нов параметър във
         функцията "скок", така че да я използваме с други актьори. Всеки актьор е
         представен с номер, започващ от 1. Редактирайте функцията ''скок" така, че
@@ -1741,10 +1731,8 @@
         на "патрул" функцията. Опитайте да използвате "Задаване скорост" блок с нов
         параметър "скорост", за да помогнете на пингвина да стигне двете знамена,
         преди другите дори да достигнат едно.
-      Course 4 Play Lab Params 7_instruction: "Нека се позабавляваме! Погледнете предоставения
-        код, за да видите дали можете да разберете какво всеки блок прави.  \\r \\r
-        Когато сте готови, използвайте клавишите със стрелки за контрол на кучето
-        и съберете всички знамена."
+      Course 4 Play Lab Params 7_instruction: "Използвайте стрелките на клавиатурата,
+        за да контролирате Кучето и съберете всички знамена."
       Course 4 Play Lab Params 8_instruction: Използвайте блока " когато докосва",
         за да изпратите Кучето обратно в горния ляв ъгъл, ако то докосне някои от
         актьорите.
@@ -1925,6 +1913,116 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
+      CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
+      CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
+      CSD U3 Background Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Background Experiment_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Experiment_instruction: |
+        Try using some of the other shape
+        functions you've learned in the draw loop. What happens when you use randomNumber()
+        to generate some of the inputs?You'll want to stop and discuss with the class
+        before moving on.
+      CSD U3 Frame Rate_instruction: Slow down Gamelab Gary's animation with frameRate()
+      CSD U3 Random Animation_instruction: |
+        Use randomNumber() to animate Gary's
+        mouth.
+      CSD U3 Random Choice_instruction: |
+        Use the randomNumber() block to generate
+        either 0 or 1
+      CSD U3 Random Color_instruction: |
+        Could you use randomNumber() to pick random
+        colors as well? Try setting one or more of the channels in the rgb block with
+        a random number. What should the maximum value be?
+      CSD U3 Random Intro_instruction: |
+        What do you think this code will do when
+        it is run? Make a prediction, then run this code 5 - 10 times, recording the
+        output each time. Share your results with your neighbor.
+      CSD U3 Random Min Max_instruction: |
+        Using console.log() write a program that
+        randomly returns a number in a range you define.
+      CSD U3 Random Width Height_instruction: |
+        Pick a shape function and use calls
+        to randomNumber() in place of one or more of the parameters. Maker sure you
+        run it a few times so you can see the effect of randomization.
+      CSD U3 Simple Drawing - Animation 2_instruction: |
+        Use randomNumber() on the
+        x position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Animation_instruction: |
+        Use randomNumber() on the x
+        position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Background_instruction: |
+        Put all of your code into
+        a draw() loop and then add set the background to blue with the background()
+        block.
+      CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Variable Arithmetic pt2_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variable Arithmetic_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variable Incrementation pt2_instruction: |
+        Predict: What two numbers
+        will be displayed in the console?
+      CSD U3 Variable Incrementation_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variables CHALLENGE gamelab gary_instruction: |
+        Use variables to animate
+        Game Lab Gary
+      CSD U3 Variables draw loop newVars_instruction: |
+        Extend this project to create
+        your own random art visualization with variables.
+      CSD U3 Variables draw loop rgb_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
+      CSD U3 Variables draw loop xy_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
+      CSD U3 Variables Initialize_instruction: |
+        Predict: What will get displayed
+        in the console?
+      CSD U3 Variables Intro_instruction: |
+        Create your own variable, give it a value,
+        and display that value in the console.
+      CSD U3 Variables random drawing exemplar_instruction: |
+        Check out this example
+        randomized drawing.
+      CSD U3 Variables Random_instruction: |
+        Predict: What will get displayed in the
+        console?
+      CSD U3 Variables Reassign pt2_instruction: |
+        Create and assign a new variable
+        in a single line.
+      CSD U3 Variables Reassign_instruction: |
+        Predict: What will get displayed in
+        the console?
+      CSD U3 Variables Square Random Loop_instruction: |
+        Test your predictions from
+        the last level.
+      CSD U3 Variables Square Random_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variables Square_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variables use value rect_instruction: |
+        Predict: What will get displayed
+        in the console?
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2537,6 +2635,8 @@
       Luigi's Pizza 4_instruction: |
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
+      Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2902,6 +3002,10 @@
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: "Тичането по пълзящи растения е лоша идея.
         Внимателно се придвижете покрай шиповете и достигнете безопасно до дома."
+      Overworld Chop Tree - allthethings_instruction: |
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the “destroy block”
+        command to chop it down.
       Overworld Chop Tree_instruction: Дървесината е много важен ресурс. Много неща
         са направени от нея. Отидете до дървото и използвайте командата "унищожи блок",
         за да го отрежете.
@@ -3133,6 +3237,10 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      PS Log test - Define and use turnAround_instruction: |
+        Define a function called
+        turnAround. Call the function and then move the turtle forward. (Click to
+        see full instructions)
       Quantum Bee - Ryan_instruction: |
         These clouds are bugging me! Some of the clouds
         have flowers inside, and some don't. I should check each cloud, and only
@@ -3147,6 +3255,15 @@
       Ryan - Bee Conditionals_instruction: "Пчелата иска само нектар сега. Не всички
         обекти под облачетата са цветя, така че направете проверка и събирайте нектар
         само от цветята."
+      Ryan Doily Step 1_instruction: |
+        Now we're going to draw a doily step by step.
+        First, draw a square.
+      Ryan Doily Step 2_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
+      Ryan Doily Step 3_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: "Тази функция се нарича \"патрул\". \nРедактирайте
         я, за да преместите котката с 400 пиксела нагоре или надолу.\n"
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse
@@ -3264,6 +3381,9 @@
       template test_instruction: what up
       Test Play Lab_instruction: This is a test play lab level.
       test_sarah_instruction: hi
+      Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
+        many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
+        keeps using the `fill` block until the ground is even?  "
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
@@ -3512,7 +3632,7 @@
       U3 - Conditionals - Combine AND OR and NOT_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
-        weekend and the user is under 18. (Click to see full instrucitons.
+        weekend and the user is under 18. (Click to see full instructions.)
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
         that uses AND and OR to display "Sleep in!" if it's the weekend and the
@@ -3872,6 +3992,18 @@
       U3 - Search Terms - 6_instruction: |
         Print out the cities that are in California
         or have a population of 2,000,000. (Click to see full instructions)\r
+      U3 - Simple Drawing - Comments_instruction: Do this
+      U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
+      U3 - Simple Drawing - No Fill_instruction: Do this
+      U3 - Simple Drawing - Order of Blocks_instruction: Do this
+      U3 - Simple Drawing - Personal Drawing_instruction: DO This
+      U3 - Simple Drawing - Rectangle_instruction: Do This
+      U3 - Simple Drawing - regular polygon_instruction: Do this
+      U3 - Simple Drawing - Road Ellipse_instruction: Do This
+      U3 - Simple Drawing - Road Rects and Color_instruction: Do This
+      U3 - Simple Drawing - Stroke and Stroke Weight_instruction: Do this
+      U3 - Simple Drawing - text_instruction: Do This
+      U3 - Simple Drawing - X and Y values_instruction: Do This
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -3977,6 +4109,15 @@
         back a default response.
       U3 full clicker demo_instruction: Clicker game - Try it out!
       U3 mehal's clone_instruction: Try out a demo of the Digital Assistant!
+      U3 Variables consolelog_instruction: |
+        Use the write block to display the value
+        of size
+      U3 Variables misconceptions try it_instruction: |
+        Test out your predictions
+        from the previous level.
+      U3 Variables write_instruction: |
+        Use the write block to display the value of
+        size
       U3- Variables - Assign Random For Turtle Draw_instruction: |
         Try writing the
         same code in text mode.
@@ -4125,8 +4266,9 @@
         Free Play! Use what you learned
         from loops and random to make your own little scene. Have fun.
       U3L07 - introSquare_instruction: |
-        Use a loop to draw a square. (Click to see
-        full instructions)
+        Use a loop to draw a square. Then add another
+        loop to draw many squares each one rotated some amount. (Click to see full
+        instructions)
       U3L07 - loopsWithRandom_instruction: |
         Increase the number of iterations to
         fill the screen with white. (Click to see full instructions)
@@ -4406,8 +4548,10 @@
         of the last level, you can copy your code from that level into\nhere if you
         prefer. \n"
       U3L16 - intro getText_instruction: |
-        Add text input UI elements for name and
-        age. (Click to see full instructions)
+        Add an event handler to the Submit button
+        so that when the button is clicked it will display the name entered in the
+        text box to the console.  Use getText to get the value out of the text box.
+        (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)

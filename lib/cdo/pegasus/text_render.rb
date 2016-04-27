@@ -63,6 +63,7 @@ module TextRender
     def initialize(template)
       @engine = ERB.new(template)
     end
+
     def result(binding=nil)
       @engine.result(binding)
     end
@@ -83,6 +84,7 @@ module TextRender
     def initialize(template)
       @engine = Haml::Engine.new(template)
     end
+
     def result(binding=nil)
       @engine.render(binding)
     end
@@ -119,6 +121,16 @@ module TextRender
         end
         full_document
       end
+
+      def preprocess(full_document)
+        wrap_details_tags_in_divs(full_document)
+      end
+
+      def wrap_details_tags_in_divs(full_document)
+        full_document.
+            gsub(/<details>/, "\n<div><details>").
+            gsub(/<\/details>/, "</details></div>\n")
+      end
     end
 
     def initialize(template)
@@ -130,6 +142,7 @@ module TextRender
         space_after_headers: true
       )
     end
+
     def result(binding=nil)
       @engine.render(@template.result(binding))
     end
@@ -157,6 +170,7 @@ module TextRender
         space_after_headers: true,
       )
     end
+
     def result(binding=nil)
       @engine.render(@template.result(binding))
     end
@@ -173,6 +187,7 @@ module TextRender
     def initialize(template)
       @template = ErbEngine.new(template)
     end
+
     def result(binding=nil)
       YAML.load(@template.result(binding))
     end

@@ -27,11 +27,61 @@ class LevelGroup < DSLDefined
   def dsl_default
     <<ruby
 name 'unique level name here'
-title 'title'
-description 'description here'
+title 'title of the assessment here'
+submittable 'true'
+
+page
 level 'level1'
 level 'level2'
+
+page
+level 'level 3'
+level 'level 4'
 ruby
+  end
+
+  # Returns a flattened array of all the Levels in this LevelGroup, in order.
+  def levels
+    level_names = []
+    properties["pages"].each do |page|
+      page["levels"].each do |page_level_name|
+        level_names << page_level_name
+      end
+    end
+
+    Level.where(name: level_names)
+  end
+
+  class LevelGroupPage
+    def initialize(page_properties, page_number, offset)
+      @levels = []
+      page_properties["levels"].each do |level_name|
+        level = Level.find_by_name(level_name)
+        @levels << level
+      end
+      @offset = offset
+      @page_number = page_number
+    end
+
+    attr_reader :levels
+    attr_reader :page_number
+    attr_reader :offset
+  end
+
+  # Returns an array of pages LevelGroupPage objects, each of which contains:
+  #   levels: an array of Levels.
+  #   page_number: the 1-based page number (corresponding to the /page/X URL).
+  #   page_offset: the count of questions occurring on prior pages.
+
+  def pages
+    offset = 0
+    page_count = 0
+    @pages ||= properties['pages'].map do |page|
+      page_count += 1
+      page_object = LevelGroupPage.new(page, page_count, offset)
+      offset += page_object.levels.count
+      page_object
+    end
   end
 
 end

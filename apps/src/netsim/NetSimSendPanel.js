@@ -3,15 +3,9 @@
  *           which is used to transmit packets.
  * @see NetSimPacketEditor which is used extensively here.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
-var utils = require('../utils');
+var utils = require('../utils'); // Provides Function.prototype.inherits
 var i18n = require('./locale');
 var markup = require('./NetSimSendPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
@@ -296,7 +290,7 @@ NetSimSendPanel.prototype.removePacket_ = function (packet) {
   // Remove from DOM
   var updateLayout = this.netsim_.updateLayout.bind(this.netsim_);
   packet.getRoot()
-      .slideUp('fast', function() {
+      .slideUp('fast', function () {
         $(this).remove();
         updateLayout();
       });

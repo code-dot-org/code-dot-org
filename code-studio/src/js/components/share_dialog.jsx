@@ -1,5 +1,5 @@
-var ShareDialogBody = require('./share_dialog_body.jsx');
-var Dialog = require('./dialog.jsx');
+var ShareDialogBody = require('./share_dialog_body');
+var Dialog = require('@cdo/apps/templates/DialogComponent');
 
 /**
  * Share Dialog used by projects
@@ -19,6 +19,7 @@ var ShareDialog = React.createClass({
     channelId: React.PropTypes.string.isRequired,
     appType: React.PropTypes.string.isRequired,
     onClickPopup: React.PropTypes.func.isRequired,
+    onClickExport: React.PropTypes.func,
   },
 
   getInitialState: function () {
@@ -51,14 +52,10 @@ var ShareDialog = React.createClass({
           appType={this.props.appType}
           onClickPopup={this.props.onClickPopup}
           onClickClose={this.close}
+          onClickExport={this.props.onClickExport}
           />
       </Dialog>
     );
   }
 });
 module.exports = ShareDialog;
-
-// TODO - ShareDialog is placed on dashboard namespace since it's used by header.js,
-// code that should probably eventually move into code-studio
-window.dashboard = window.dashboard || {};
-window.dashboard.ShareDialog = ShareDialog;

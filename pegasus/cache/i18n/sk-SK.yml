@@ -649,6 +649,11 @@
   dashboard_action_remove_confirm: Odstrániť?
   dashboard_action_done: Hotovo
   dashboard_action_required: požadované
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Domovská stránka učiteľa
   dashboard_navigation_section_student_progress: "Študentské účty a pokrok"
   dashboard_navigation_section_teacher_progress: Pokrok tvojho kurzu
@@ -659,12 +664,25 @@
   dashboard_navigation_all_sections: "Študentské účty a pokrok"
   dashboard_navigation_view_progress: Zobraziť pokrok
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Pridať Študentov
   dashboard_navigation_manage_students: Správa Študentov
   dashboard_navigation_lesson_plans_resources: Plány hodín a Materiály
   dashboard_navigation_view_stats: Zobraziť Štatistiky
   dashboard_navigation_section: 'Sekcia: %{section_name}'
   dashboard_navigation_student: "Študent: %{student_name}"
+  dashboard_progress_not_started: nezačal
+  dashboard_progress_in_progress: v procese
+  dashboard_progress_not_completed: nedokončené
+  dashboard_progress_completed_too_many_blocks: dokončené, príliš veľa blokov
+  dashboard_progress_completed_perfect: dokončené, super
+  dashboard_progress_furthest_level_attempted: najvyššia dosiahnutá úroveň
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nová sekcia
   dashboard_sections_jumbotron_instruction: Vytvorte nové oddiely a pridajte do nich
     študentov. Sekcie pomáhajú organizovať študentov do menších skupín, môžete sledovať
@@ -688,6 +706,26 @@
   dashboard_sections_print_secrets: Potom si môžete vytlačiť stránku s kartičkami,
     obsahujúcimi informácie o individuálnych účtoch a rozdať ich vašim študentom.
   dashboard_sections_switch_section: 'Prepnúť sekciu:'
+  dashboard_sections_close: Zatvoriť
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Pridať študenta
   dashboard_students_add_students: Pridať viacerých študentov
   dashboard_students_add_multiple: 'Zadajte nebo vložte mená vašich študentov, jedno
@@ -767,16 +805,22 @@
   dashboard_login_picture: Obrázok
   dashboard_login_none: E-mail
   dashboard_new_password: nové heslo
-  dashboard_progress_not_started: nezačal
-  dashboard_progress_in_progress: v procese
-  dashboard_progress_not_completed: nedokončené
-  dashboard_progress_completed_too_many_blocks: dokončené, príliš veľa blokov
-  dashboard_progress_completed_perfect: dokončené, super
-  dashboard_progress_furthest_level_attempted: najvyššia dosiahnutá úroveň
   dashboard_stage: Etapa
   dashboard_puzzle: "Úloha"
   dashboard_question: Otázka
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: Správne
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Neuveriteľná štatistika z minuloročnej Hodiny Kódu. Behom
     jediného týždňa:'
   stats_hoc_2013_image_alt: "Štatistika z Hodiny Kódu 2013"
@@ -799,17 +843,11 @@
   dashboard_faq_k5: "Často kladené otázky – prvý stupeň"
   dashboard_announcements: Oznámenia
   dashboard_announce_view_all: View all
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
-    their children to learn computer science and still most schools don't teach it.
-    On January 30, the White House announced plans to bring computer science to every
-    student in the United States with the Computer Science for All initiative. We
-    couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
   dashboard_announce_button_text: Dozvedieť sa viac
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
-  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
   code_hoc_coming: Hodina kódu je tu - 8.-14. december!
   code_sign_up: Prihláste sa k účasti počas "CS Education Week"
   learn_more: "Ďalšie informácie"
@@ -1640,3 +1678,33 @@
   infinity_shortcode: inf
   playlab_shortcode: hrať
   artist_shortcode: art
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
+  dashboard_sections_close: Close
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.

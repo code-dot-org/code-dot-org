@@ -1,10 +1,4 @@
 /** @file Creates and controls an SVG overlay on the app visualization. */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var constants = require('../constants');
@@ -124,7 +118,6 @@ VisualizationOverlay.prototype.onSvgMouseMove_ = function (event) {
 
   this.mousePos_.x = event.clientX;
   this.mousePos_.y = event.clientY;
-  this.mouseoverApplabControlId_ = this.getMouseoverApplabControlId_(event.target);
   var draggingElement = $(".ui-draggable-dragging");
   if (draggingElement.length) {
     // If we're dragging an element, use our util method to determine the right
@@ -134,6 +127,10 @@ VisualizationOverlay.prototype.onSvgMouseMove_ = function (event) {
     this.mousePos_.y = point.top;
   } else {
     this.mousePos_ = this.mousePos_.matrixTransform(this.screenSpaceToAppSpaceTransform_);
+  }
+
+  if (this.shouldShowCrosshair_()) {
+    this.mouseoverApplabControlId_ = this.getMouseoverApplabControlId_(event.target);
   }
 
   if (this.ownElement_.parentNode) {
@@ -201,21 +198,22 @@ VisualizationOverlay.prototype.getMouseoverApplabControlId_ = function (eventTar
  * Determines whether an element is a resize handle. The criteria we're using here are:
  * 1) The element has a screen element as its ancestor
  * AND
- * 2) It either doesn't have an id OR it has the 'ui-resizable-handle' class
+ * 2) It has the 'ui-resizable-handle' class
  * @param {HTMLElement} element
  * @returns {boolean} True if element is a resize handle
  * @private
  * @static
  */
 VisualizationOverlay.isResizeHandle_ = function (element) {
-  return ($(element).parents('div.screen').length > 0 ) &&
-      (!element.id || $(element).hasClass('.ui-resizable-handle'));
+  return $(element).parents('div.screen').length > 0 &&
+      $(element).hasClass('ui-resizable-handle');
 };
 
 /**
  * Given a resize handle element, find the actual ui control it's associated with
  * @param {HTMLElement} resizeHandleElement
- * @returns {HTMLELement} The UI control element assocaited with the resize handle. Or null if none exists.
+ * @returns {HTMLElement} The UI control element associated with the resize
+ *          handle, or null if none exists.
  * @private
  * @static
  */

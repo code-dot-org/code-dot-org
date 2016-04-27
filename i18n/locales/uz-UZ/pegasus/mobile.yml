@@ -22,7 +22,7 @@ uz-UZ:
   twentyhours_heading: Informatika kursiga kirish darsini sinab ko‘ring
   twentyhours_text: Ilk Dasturlash soatini tugatdingizmi? Quyidagi kurslar orqali informatika va dasturlash asoslarini o‘rganing.
   og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: '8-14 dekabr 2014-yilda o‘tkaziladigan <a href="http://hourofcode.com">Dasturlash soatiga</a><br/> qo‘shiling<br/>'
   hoc2014_students: Students
   hoc2014_try: Sinab ko‘ring
@@ -180,7 +180,7 @@ uz-UZ:
   learn_next_level: Boshqa Dasturlash studiyasi kursini sinab ko‘ring
   learn_online: Boshqa kurslarni onlayn tarzda sinab ko‘ring
   learn_classes: Mahalliy darslar toping
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: "Men #HourOfCode'ni o‘tdim - siz ham sinab ko‘ring! @codeorg"
   just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
   just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
@@ -514,6 +514,11 @@ uz-UZ:
   dashboard_action_remove_confirm: Ko‘chirasizmi?
   dashboard_action_done: Bajarildi
   dashboard_action_required: zarur
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: O‘qituvchining bosh sahifasi
   dashboard_navigation_section_student_progress: Student Accounts and Progress
   dashboard_navigation_section_teacher_progress: Your Course Progress
@@ -524,12 +529,24 @@ uz-UZ:
   dashboard_navigation_all_sections: Student Accounts and Progress
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: O‘quvchilarni qo‘shing
   dashboard_navigation_manage_students: O‘quvchilarni boshqarish
   dashboard_navigation_lesson_plans_resources: Dars rejasi va materiallari
   dashboard_navigation_view_stats: Statistika
   dashboard_navigation_section: 'Bo‘lim: %{section_name}'
   dashboard_navigation_student: 'O‘quvchi: %{student_name}'
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_completed: not completed
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Yangi bo‘lim
   dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
   dashboard_sections_table_section: Section
@@ -545,6 +562,19 @@ uz-UZ:
   dashboard_sections_secret_none: 'If you would like your students to manage their own accounts, including choosing their own passwords, choose a secret type of <b>none</b>.'
   dashboard_sections_print_secrets: You may then print a sheet of cards containing account information to be distributed to your students individually.
   dashboard_sections_switch_section: 'Switch section:'
+  dashboard_sections_close: Close
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: "Talaba qo'shish"
   dashboard_students_add_students: Add multiple students
   dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
@@ -611,16 +641,22 @@ uz-UZ:
   dashboard_login_picture: Picture
   dashboard_login_none: Elektron pochta
   dashboard_new_password: new password
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
   dashboard_stage: Pog`ona
   dashboard_puzzle: Jumboq
   dashboard_question: Savol
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: To‘g‘ri
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   dashboard_teacher: "O'qituvchi"
@@ -639,10 +675,8 @@ uz-UZ:
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: Barini ko‘rish
-  dashboard_announce_message: '<b>February 29, 2016</b> - 90% of workshop attendees ranked our program as the best professional development ever. Due to demand, we added a limited number of spots to our high school Professional Learning Program for computer science. Apply by <u>March 31</u> to ensure your spot.'
+  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
   dashboard_announce_button_text: Ko‘proq bilish
-  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
-  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Hoziroq sinang

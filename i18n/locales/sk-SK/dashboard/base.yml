@@ -25,6 +25,11 @@ sk:
   welcome_back: 'Vitajte späť, %{name}'
   submit: Odoslať
   unsubmit: Neodoslať
+  previous_page: Previous page
+  next_page: Next page
+  cancel: Zrušiť
+  okay: Dobre
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Pridať učiteľa:'
@@ -344,6 +349,7 @@ sk:
     help_from_html_old: Kolegovia z Google, Microsoft-u, Facebook-u a Twitter-u pomoholi vytvoriť tento tutoriál.
     art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Všetky práva vyhradené. < br / > Star Wars &#8482; © %{current_year} Disney a Lucasfilm. Všetky práva vyhradené. < br / > Frozen &#8482; © %{current_year} Disney. Všetky práva vyhradené. < br / > Doba ľadová &#8482; © %{current_year} 20th Century Fox. Všetky práva vyhradené. < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Všetky práva vyhradené. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Všetky práva vyhradené. < br / > The Amazing World of Gumball je ochranná známka a © 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft &#8482; © %{current_year} Microsoft. Všetky práva vyhradené. Star Wars &#8482; © %{current_year} Disney a Lucasfilm. Všetky práva vyhradené. Frozen&#8482; © %{current_year} Disney. Všetky práva vyhradené. Ice Age &#8482; © %{current_year} 20th Century Fox. Všetky práva vyhradené. Angry Birds &#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Všetky práva vyhradené. Plants vs. Zombies &#8482; © %{current_year} Electronic Arts Inc. Všetky práva vyhradené. The Amazing World of Gumball je ochranná známka © 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Poháňaný službami Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org®, CODElogo a Hour of Code ® sú ochranné známky Code.org.'
     copyright: Autorské práva
@@ -448,6 +454,11 @@ sk:
     minecraft:
       title: Minecraft
       body: Preskúmajte Minecraft svet prostredníctvom kódu.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Študenti toto nakreslil s pomocou kódu!
     students_made_these_with_code: Študenti vytvorili toto s pomocou kódu!
@@ -463,7 +474,6 @@ sk:
   landing:
     prerelease: "Tento kurz je v <span class='betatext'> beta verzii</span>.  To znamená, že to nie je Finálna verzia kurzu a je predmetom revízie na základe pripomienok a vylepšení, ktoré sú vykonané."
     prerelease_hoc2014: "Tento tutoriál je v <span class='betatext'> beta verzii</span> a je predmetom revízie na základe pripomienok a vylepšení, ktoré sú vykonané."
-    feedback: Poskytnúť spätnú väzbu
     report_bug: Nahlásiť chybu
     support: Získať pomoc
     support_url: support.code.org
@@ -482,6 +492,22 @@ sk:
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Ďakujeme
+    wrong_body: Thank you for submitting answers.
+    correct_title: Ďakujeme
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Ďakujeme
+    wrong_body: Thank you for submitting answers.
+    correct_title: Ďakujeme
+    correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Nesprávne riešenie
     wrong_body: 'Zadané riešenie nie je správne.  Prosím skúste to znova!'
@@ -499,9 +525,8 @@ sk:
     placeholder: Zadajte vašu odpoveď
     open_response_title: Vďaka
     open_response_body: Ďakujeme za Vašu reakciu!
-  level_group:
-    correct_title: Ďakujeme
-    correct_body: Thank you for submitting an answer
+    correct_title: Správne
+    correct_body: To je správna odpoveď.
   dialog:
     ok: ok
     startover_title: Naozaj chceš začať odznova?
@@ -555,6 +580,7 @@ sk:
     completed_perfect: dokončené, super
     furthest_level_attempted: najvyššia dosiahnutá úroveň
     assessment: ocenenie
+    submitted: submitted
   studio:
     courses_working_on: Kurzy na ktorých pracujete
     completed_courses: Absolvované kurzy
@@ -611,3 +637,7 @@ sk:
           other: Ostatné
         detail: Uveďte čo najviac podrobností ohľadom obsahu ktorý nahlasujete.
         acknowledge: 'Odoslaním týchto informácií, beriete na vedomie, sa bude zaobchádzať v súlade s podmienkami %{link_start_privacy}Ochrana súkromia%{link_end} a %{link_start_tos}Podmienky používania%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Hľadajte ikonu...
+      no_icons_found: Nenašli sa žiadne ikony

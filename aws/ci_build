@@ -1,0 +1,130 @@
+#!/usr/bin/env ruby
+#
+# CI_BUILD is the core command in our polling-based continuous deployment system. It checks for upstream
+# commits on the current branch.
+#
+# If no changes are detected it exits silently.
+#
+# If changes are detected, CI_BUILD fetches them, gets the commit messages for them (written out as
+# the temp file 'rebuild') and displays them in chat as a purple "build started" message. Then
+# CI_BUILD invokes CI_BUILD.RAKE to run the build using dependency-based build rules.
+#
+# NOTE: When the build starts a BUILD-STARTED file is created, and this file is deleted when the
+#   build script finishes. This file is NOT deleted if the build system itself is broken and the
+#   presence of this file will cause the system to attempt to pull and rebuild constantly over and
+#   over until it succeeds. This may happen often, but it is probably a safeguard to keep around because
+#   in the rare cases where the build scripts are damaged, this ensures the machines can be restored simply
+#   by checking in a fix (vs. needing to SSH to the machine and fix manually).
+#
+# NOTE: running `touch build-started` (or running the `bin/start-build` script)
+# is an easy way to force a rebuild without needing to make a commit.
+#
+require_relative '../deployment'
+require 'cdo/rake_utils'
+require 'cdo/hip_chat'
+require 'cdo/only_one'
+require 'mail'
+
+STARTED = 'build-started'
+
+def format_duration(total_seconds)
+  total_seconds = total_seconds.to_i
+  minutes = (total_seconds / 60).to_i
+  seconds = total_seconds - (minutes * 60)
+  "%.1d:%.2d minutes" % [minutes, seconds]
+end
+
+def capture_stdout
+  old_stdout = $stdout
+  $stdout = StringIO.new('', 'w')
+  yield
+  $stdout.string
+ensure
+  $stdout = old_stdout
+end
+
+def build()
+  Dir.chdir(deploy_dir) do
+    return 0 unless RakeUtils.git_updates_available? || File.file?(STARTED) || !CDO.daemon
+    FileUtils.touch STARTED
+
+    RakeUtils.git_fetch
+    count = RakeUtils.git_update_count
+    RakeUtils.git_pull if count > 0
+    count = [1, count].max
+
+    log = `git log --pretty=format:"%h %s (%an)" -n #{count}`
+    IO.write(deploy_dir('rebuild'), log)
+
+    HipChat.log "https://github.com/code-dot-org/code-dot-org/commit/#{`git rev-parse HEAD`}", message_format: 'text', color: 'purple'
+
+    # Ensure updated Gemfile.lock dependencies are installed.
+    RakeUtils.bundle_install
+
+    # Run `sudo chef-client` to ensure that the deploy respect updates to the Chef config
+    # (e.g. the cdo-servers attribute describing which servers to deploy).
+    Dir.chdir(aws_dir) do
+      # Ensure the chef cookbooks are up to date.
+      RakeUtils.rake '--rakefile', 'ci_build.rake', 'chef_update'
+      RakeUtils.system 'sudo', 'chef-client'
+    end
+
+    status = 0
+    Dir.chdir(aws_dir) do
+      status = begin
+        RakeUtils.rake '--rakefile', 'ci_build.rake', *ARGV
+      rescue => e
+        CDO.backtrace e
+      end
+    end
+
+    FileUtils.rm STARTED if File.file?(STARTED)
+
+    status
+  end
+end
+
+def main()
+  start_time = Time.now.to_i
+  # Run the build command and exit if it didn't do anything.
+  status = 0
+  log = capture_stdout do
+    begin
+      status = build
+    rescue => e
+      status = "Error: #{e.message}\n#{CDO.backtrace e}"
+    end
+  end
+  return status if status == 0 && log.empty?
+
+  Dir.chdir(deploy_dir) do
+    commit_url = "https://github.com/code-dot-org/code-dot-org/commit/#{RakeUtils.git_revision}"
+    # Notify the HipChat channels about what happened.
+    projects = ARGV.join(' ')
+    projects = 'websites' if projects.empty?
+    time_message = " 🕐 #{format_duration(Time.now.to_i - start_time)}"
+    if status == 0
+      message = "<b>#{projects}</b> built." + time_message
+
+      HipChat.log message, color: 'green'
+
+      HipChat.developers message, color: 'green'
+      HipChat.developers commit_url, color: 'gray', message_format: 'text'
+    else
+      message = "<b>#{projects}</b> failed to build!" + time_message
+
+      HipChat.log message, color: 'red'
+      HipChat.log "/quote #{log}", color: 'gray', message_format: 'text' unless log.empty?
+      HipChat.log "/quote #{status}", color: 'gray', message_format: 'text' unless status.is_a?(String) && status.empty?
+
+      HipChat.developers message, color: 'red', notify: 1
+      HipChat.developers commit_url, color: 'gray', message_format: 'text'
+    end
+  end
+
+  # Return the same output and status code that BUILD returned.
+  puts log
+  status
+end
+
+main() if only_one_running?(__FILE__)

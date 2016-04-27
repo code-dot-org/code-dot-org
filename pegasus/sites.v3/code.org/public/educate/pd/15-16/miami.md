@@ -27,13 +27,7 @@ Milestone complete!
 Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-**Save the dates:**
-
-Quarter 1: Saturday, September 19, 2015
-
-Quarter 2: Saturday, November 14, 2015
-
-Quarter 3: Saturday, January 30, 2016
+**Save the date:**
 
 Quarter 4: Saturday, May 7, 2016
 
@@ -61,7 +55,33 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-More info coming soon!
+Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
+will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
+
+
+**Save the Dates**
+
+Monday, June 13th - Wednesday, June 17th
+<br />
+8:30am - 3:30pm
+<br />
+
+Breakfast and lunch will be served.
+
+**Location**
+
+TBD
+
+**What do I bring to my Phase 4 Workshop?**
+
+Exploring Computer Science binder with curriculum 
+<br />
+Green Code.org journal 
+<br />
+Laptop and Charger<br/>
+Snacks<br/>
+Water Bottle
+<br />
 
 [**Back to the top**](#top)
 
@@ -76,80 +96,15 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
-
 Milestone Complete!
-
-
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
-
-**Save the dates:**
-
-Semester 1: Saturday, September 19, 2015 
-
-Semester 2: Saturday, January 30, 2016 
-
-8:00am - 4:00pm<br/>
-Breakfast and lunch will be served. 
-
-**January 30th Location**
-
-[3280 South Miami Ave<br/>
-Miami Fl, 33129 ](https://www.google.com/maps/place/3280+S+Miami+Ave,+Miami,+FL+33129/@25.7475713,-80.2142076,17z/data=!3m1!4b1!4m2!3m1!1s0x88d9b65d35bae2af:0x557bf56002bafcf7)
-
-In the Teen Tech Center and the Executive Conference Room
-
-Across the street from Vizcaya. Parking is free and we will have signage indicating were to go in the building.
-
-
-**What to bring to Phase 3 bi-yearly sessions:**
-
-Laptop and Charger
-<br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
+Milestone Complete!
 
 [**Back to the top**](#top)
-<a id="counsleor-admin"></a>
 
-## Counselors and Administrators
-
-Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching.
-
-####Administrators####
-
-**Save the date**
-
-Thursday, January 28th, 2015<br/> 
-Time TBD<br/>
-
-**Location**
-
-[Venture Hive<br/>
-1010 NE 2nd Ave<br/>
-Miami, FL 33132](https://www.google.com/maps/place/Venture+Hive/@25.7841796,-80.1911146,15z/data=!4m2!3m1!1s0x0:0x1f3f68bb617468c0?sa=X&ved=0CGwQ_BIwC2oVChMIo925hqKYyQIVAzSICh2SiQ9f)
-
-This is a weekday, so parking will be $5 at the venue. Please carpool or use public transportation to get to the site. 
-
-####Counselors####
-
-**Save the date**
-
-Wednesday, January 27th, 2015<br/> 
-Time TBD
-
-**Location**
-
-[Venture Hive<br/>
-1010 NE 2nd Ave<br/>
-Miami, FL 33132](https://www.google.com/maps/place/Venture+Hive/@25.7841796,-80.1911146,15z/data=!4m2!3m1!1s0x0:0x1f3f68bb617468c0?sa=X&ved=0CGwQ_BIwC2oVChMIo925hqKYyQIVAzSICh2SiQ9f)
-
-This is a weekday, so parking will be $5 at the venue. Please carpool or use public transportation to get to the site. 
+ 
 
 
 ----------

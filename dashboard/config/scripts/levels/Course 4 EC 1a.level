@@ -25,9 +25,16 @@
     "start_direction": "0",
     "step_mode": "1",
     "ideal": "9",
-    "step_speed": "2",
+    "step_speed": "1",
     "instructions": "No rules. No clues. Just the challenge!",
     "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 5,
+    "for_loops": 5,
+    "variables": 3
   }
 }]]></config>
   <blocks>

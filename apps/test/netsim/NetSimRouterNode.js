@@ -1,16 +1,10 @@
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 /* global describe, beforeEach, it */
 
-var _ = require('lodash');
 var testUtils = require('../util/testUtils');
 var NetSimTestUtils = require('../util/netsimTestUtils');
-var utils = require('@cdo/apps/utils');
+var _ = require('@cdo/apps/lodash');
+var utils = require('@cdo/apps/utils'); // Provides String.prototype.repeat
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var NetSimConstants = require('@cdo/apps/netsim/NetSimConstants');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
@@ -358,7 +352,7 @@ describe("NetSimRouterNode", function () {
     it("returns null for error and a NetSimRouterNode when router is found", function () {
       routerID = routerA.entityID;
 
-      NetSimRouterNode.get(routerID, testShard, function(_err, _result) {
+      NetSimRouterNode.get(routerID, testShard, function (_err, _result) {
         err = _err;
         result = _result;
       });

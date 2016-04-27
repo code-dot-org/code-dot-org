@@ -635,7 +635,7 @@
   "stopSpriteN":"sustabdyk veikėją {spriteIndex}",
   "stopTooltip":"Sustabdo veikėją.",
   "throwSprite":"mesk",
-  "throwSpriteN":"veikėjau {spriteIndex} mesk",
+  "throwSpriteN":"veikėjas {spriteIndex} meta",
   "throwTooltip":"Nurodytas veikėjas išmeta objektą (pvz, ugnies kamuolį).",
   "vanish":"išnyk",
   "vanishActorN":"panaikink veikėją {spriteIndex}",

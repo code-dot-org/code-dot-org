@@ -1,52 +1,34 @@
 /** @file Row of controls above the visualization. */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 
 var constants = require('./constants');
 var msg = require('../locale');
-var ScreenSelector = require('./ScreenSelector.jsx');
-var ToggleGroup = require('./ToggleGroup.jsx');
-var ViewDataButton = require('./ViewDataButton.jsx');
+var utils = require('../utils');
+var actions = require('./actions');
+var connect = require('react-redux').connect;
+var ScreenSelector = require('./ScreenSelector');
+var ToggleGroup = require('../templates/ToggleGroup');
+var ViewDataButton = require('./ViewDataButton');
 
-var Mode = constants.MODE;
+var ApplabInterfaceMode = constants.ApplabInterfaceMode;
 
 var PlaySpaceHeader = React.createClass({
   propTypes: {
-    hideToggle: React.PropTypes.bool.isRequired,
-    hideViewDataButton: React.PropTypes.bool.isRequired,
-    startInDesignMode: React.PropTypes.bool.isRequired,
-    activeScreenId: React.PropTypes.string,
+    channelId: React.PropTypes.string.isRequired,
+    isDesignModeHidden: React.PropTypes.bool.isRequired,
+    isEditingProject: React.PropTypes.bool.isRequired,
+    isShareView: React.PropTypes.bool.isRequired,
+    isViewDataButtonHidden: React.PropTypes.bool.isRequired,
+    interfaceMode: React.PropTypes.oneOf([ApplabInterfaceMode.CODE, ApplabInterfaceMode.DESIGN]).isRequired,
     screenIds: React.PropTypes.array.isRequired,
-    onDesignModeButton: React.PropTypes.func.isRequired,
-    onCodeModeButton: React.PropTypes.func.isRequired,
-    onViewDataButton: React.PropTypes.func.isRequired,
     onScreenChange: React.PropTypes.func.isRequired,
-    onScreenCreate: React.PropTypes.func.isRequired
+    onScreenCreate: React.PropTypes.func.isRequired,
+    onInterfaceModeChange: React.PropTypes.func.isRequired
   },
 
-  getInitialState: function () {
-    return {
-      mode: this.props.startInDesignMode ? Mode.DESIGN :  Mode.CODE
-    };
-  },
-
-  handleSetMode: function (newMode) {
-    if (this.state.mode === newMode) {
-      return;
-    }
-    if (newMode === Mode.CODE) {
-      this.props.onCodeModeButton();
-    } else {
-      this.props.onDesignModeButton();
-    }
-
-    this.setState({
-      mode: newMode
-    });
+  handleViewData: function () {
+    window.open(
+      '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + this.props.channelId,
+      '_blank');
   },
 
   handleScreenChange: function (evt) {
@@ -60,21 +42,20 @@ var PlaySpaceHeader = React.createClass({
   render: function () {
     var leftSide, rightSide;
 
-    if (!this.props.hideToggle) {
+    if (!this.shouldHideToggle()) {
       leftSide = (
-        <ToggleGroup selected={this.state.mode} onChange={this.handleSetMode}>
-          <button id='codeModeButton' value={Mode.CODE}>{msg.codeMode()}</button>
-          <button id='designModeButton' value={Mode.DESIGN}>{msg.designMode()}</button>
+        <ToggleGroup selected={this.props.interfaceMode} onChange={this.props.onInterfaceModeChange}>
+          <button id='codeModeButton' value={ApplabInterfaceMode.CODE}>{msg.codeMode()}</button>
+          <button id='designModeButton' value={ApplabInterfaceMode.DESIGN}>{msg.designMode()}</button>
         </ToggleGroup>
       );
     }
 
-    if (this.state.mode === Mode.CODE && !this.props.hideViewDataButton) {
-      rightSide = <ViewDataButton onClick={this.props.onViewDataButton} />;
-    } else if (this.state.mode === Mode.DESIGN) {
+    if (this.props.interfaceMode === ApplabInterfaceMode.CODE && !this.shouldHideViewDataButton()) {
+      rightSide = <ViewDataButton onClick={this.handleViewData} />;
+    } else if (this.props.interfaceMode === ApplabInterfaceMode.DESIGN) {
       rightSide = <ScreenSelector
           screenIds={this.props.screenIds}
-          activeScreenId={this.props.activeScreenId}
           onChange={this.handleScreenChange} />;
     }
 
@@ -90,6 +71,34 @@ var PlaySpaceHeader = React.createClass({
         </table>
       </div>
     );
+  },
+
+  shouldHideToggle: function () {
+    return this.props.isShareView || this.props.isDesignModeHidden;
+  },
+
+  shouldHideViewDataButton: function () {
+    return this.props.isViewDataButtonHidden ||
+        this.props.isDesignModeHidden ||
+        this.props.isShareView ||
+        !this.props.isEditingProject;
   }
 });
-module.exports = PlaySpaceHeader;
+module.exports = connect(function propsFromStore(state) {
+  return {
+    channelId: state.level.channelId,
+    isDesignModeHidden: state.level.isDesignModeHidden,
+    isShareView: state.level.isShareView,
+    isViewDataButtonHidden: state.level.isViewDataButtonHidden,
+    interfaceMode: state.interfaceMode
+  };
+}, function propsFromDispatch(dispatch) {
+  return {
+    onScreenChange: function (screenId) {
+      dispatch(actions.changeScreen(screenId));
+    },
+    onInterfaceModeChange: function (mode) {
+      dispatch(actions.changeInterfaceMode(mode));
+    }
+  };
+})(PlaySpaceHeader);

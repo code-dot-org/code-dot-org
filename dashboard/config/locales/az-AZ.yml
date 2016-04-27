@@ -26,6 +26,11 @@
   welcome_back: Bir daha xoş gəldiniz, %{name}
   submit: Göndər
   unsubmit: Unsubmit
+  previous_page: Previous page
+  next_page: Next page
+  cancel: "İmtina et"
+  okay: Oldu
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Müəllim əlavə edin:'
@@ -34,7 +39,7 @@
         6 letter code like "ABCDEF".
     submit: Müəllim əlavə edin
   add_hint_form:
-    placeholder: Please enter your hint here
+    placeholder: Xahiş olunur ip-ucunu bura daxil edesiniz
     submit: Məsləhət əlavə et
   appname: Code.org
   stage: mərhələ
@@ -84,15 +89,15 @@
     teacher_educator_guide: Təhsil işçisi üçün göstərişlərə baxın
     teacher_pitch: '"Code.org" üçün müəllim qeydiyyatı'
     teacher_title: Müəllim kimi qeydiyyatdan keçin
-    student_pitch: Student sign up for Code.org
-    student_title: Student sign up
+    student_pitch: Code.org üçün tələbə qeydiyyatı
+    student_title: "Şagird qeydiyyatı"
     school_name: Məktəbin Adı (vacib deyil)
     school_address: Məktəbin ünvanı (vacib deyil)
     address_placeholder: "ünvan, şəhər, vilayət, poçt indeksi"
     gender: Cins (vacib deyil)
     birthday: Ad günü (vacib deyil)
     age: Yaşınız
-    user_type: Are you a student or teacher?
+    user_type: Siz tələbəsiniz ya müəllim?
     submit: Qeydiyyatdan keçin
     teacher: Müəllimsiniz?
     valid_username: Olar!
@@ -108,8 +113,8 @@
       ünvanları bizim onlarla əlaqə saxlaya biləcəyimiz formada saxlanmır.
     teacher_terms: Mən "Code.org" <a href='http://code.org/tos'>xidmət şərtləri</a>nə
       tabe olmağımı qəbul edirəm.
-    additional_information: We need some additional information to continue signing
-      you up.
+    additional_information: Qeydiyyatı davam etdirmək üçün bəzi əlavə məlumatlara
+      ehtiyacımız var.
   signin_form:
     title: Artıq hesabınız var? Daxil olun
     login: E-poçt və ya istifadəçi adı
@@ -118,13 +123,13 @@
     submit: Daxil olun
   signin:
     try_heading: Qeydiyyatdan keçmədən özünüzü proqramlaşdırmada sınamaq istəyirsiniz?
-    try_hoc: Try one Hour of Code first
-    try_20hours: Try our 20 hour Intro to Computer Science
+    try_hoc: "Əvvəlcə Hour of Code yoxlayın"
+    try_20hours: Bizim 20 saatliq İnformatikaya Giriş-i yoxlayın
   signinsection:
     welcome: Welcome to %{section_name}
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    name: Adınızı seçin
+    picture: "İndi isə gizli şəkilinizi seçin"
+    words: "İndi isə gizli sözünüzü daxil edin"
     login: Daxil olun
   password:
     reset_form:
@@ -414,6 +419,8 @@
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. Bütün hüquqları qorunur.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. Bütün hüquqları qorunur
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org."
@@ -539,6 +546,15 @@
     minecraft:
       title: Minecraft
       body: Explore a Minecraft world through code.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: "Şagirdlər bunları kod yazmaqla edib!"
@@ -561,7 +577,6 @@
       is received and improvements are made.
     prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
       is subject to revision as feedback is received and improvements are made.
-    feedback: Rəy verin
     report_bug: Report Bug
     support: Kömək istə
     support_url: "//support.code.org"
@@ -580,6 +595,25 @@
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Təşəkkür
+    wrong_body: Thank you for submitting answers.
+    correct_title: Təşəkkür
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Təşəkkür
+    wrong_body: Thank you for submitting answers.
+    correct_title: Təşəkkür
+    correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Yanlış həll
     wrong_body: Daxil etdiyiniz həll yanlışdır. Lütfən, bir daha cəhd edin!
@@ -599,9 +633,8 @@
     placeholder: Cavabınızı buraya daxil edin
     open_response_title: Thanks
     open_response_body: Thanks for your response!
-  level_group:
-    correct_title: Təşəkkür
-    correct_body: Thank you for submitting an answer
+    correct_title: Düzgün
+    correct_body: Bu düzgün cavabdır.
   dialog:
     ok: Oldu
     startover_title: Yenidən başlamaq istədiyinizə əminsiniz?
@@ -667,6 +700,7 @@
     completed_perfect: tamamlanıb, əladır
     furthest_level_attempted: furthest level attempted
     assessment: qiymətləndirilir
+    submitted: submitted
   studio:
     courses_working_on: "Üzərində işlədiyiniz kurslar"
     completed_courses: Tamamlanmış kurslar
@@ -736,3 +770,7 @@
         acknowledge: By submitting this information, you acknowledge it will be handled
           in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
           and the %{link_start_tos}Terms of Service%{link_end}
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found

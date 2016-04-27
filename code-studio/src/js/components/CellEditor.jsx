@@ -51,6 +51,9 @@ var CellEditor = React.createClass({
         <label htmlFor="value">Value:</label>
         <input type="number" name="value" value={values.value} onChange={this.handleChange} />
 
+        <label htmlFor="range">Range (defaults to value):</label>
+        <input type="number" name="range" value={values.range} disabled={values.featureType === 'undefined'} onChange={this.handleChange} />
+
       </form>
     );
   },

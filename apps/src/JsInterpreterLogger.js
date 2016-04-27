@@ -1,10 +1,4 @@
 /** @file Observes a JSInterpreter and logs to the designated browser console. */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var Observer = require('./Observer');

@@ -2,6 +2,7 @@
 #
 # Helper methods for the analyze_hoc_activity cron job.
 #
+require File.expand_path('../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 require 'cdo/properties'
 

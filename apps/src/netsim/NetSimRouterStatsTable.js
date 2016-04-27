@@ -1,12 +1,6 @@
 /**
  * @overview UI component displaying router stats on the "Router" tab.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var markup = require('./NetSimRouterStatsTable.html.ejs');

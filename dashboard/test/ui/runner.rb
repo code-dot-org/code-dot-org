@@ -382,7 +382,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info}#{rerun_info})"
 
     if $options.html
-      link = "https://test-studio.code.org/ui_test/" + html_output_filename
+      link = "https://#{CDO.dashboard_hostname}/ui_test/" + html_output_filename
       message += " <a href='#{link}'>☁ html output</a>"
     end
     short_message = message

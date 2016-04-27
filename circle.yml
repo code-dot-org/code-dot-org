@@ -3,6 +3,7 @@ machine:
     version: 2.2.3
   environment:
     RAILS_ENV: test
+    SPROCKETS_DERAILLEUR_WORKER_COUNT: 2 # CircleCI build VMs have a memory limit of 4G
   services:
     - docker
 dependencies:
@@ -37,6 +38,7 @@ database:
               dashboard
 test:
     override:
+        - bundle exec rake lint:javascript
         - bundle exec rake test:
             pwd:
                 pegasus
@@ -46,9 +48,6 @@ test:
         - ./test.sh:
             pwd:
                 apps
-        - npm run lint:
-            pwd:
-                code-studio
         - npm test:
             pwd:
                 code-studio

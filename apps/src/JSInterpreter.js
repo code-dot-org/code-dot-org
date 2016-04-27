@@ -1,10 +1,3 @@
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
-
 var codegen = require('./codegen');
 var ObservableEvent = require('./ObservableEvent');
 var utils = require('./utils');
@@ -20,12 +13,14 @@ var utils = require('./utils');
  * @param {function} [options.shouldRunAtMaxSpeed]
  * @param {number} [options.maxInterpreterStepsPerTick]
  * @param {Object} [options.customMarshalGlobalProperties]
+ * @param {boolean} [options.logExecution] if true, executionLog[] be populated
  */
 var JSInterpreter = module.exports = function (options) {
   this.studioApp = options.studioApp;
-  this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function() { return true; };
+  this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function () { return true; };
   this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
   this.customMarshalGlobalProperties = options.customMarshalGlobalProperties || {};
+  this.customMarshalBlockedProperties = options.customMarshalBlockedProperties || [];
 
   // Publicly-exposed events that anyone with access to the JSInterpreter can
   // observe and respond to.
@@ -51,6 +46,8 @@ var JSInterpreter = module.exports = function (options) {
   this.executeLoopDepth = 0;
   this.callExpressionSeenAtDepth = [];
   this.stoppedAtBreakpointRows = [];
+  this.logExecution = options.logExecution;
+  this.executionLog = [];
 };
 
 /**
@@ -91,8 +88,20 @@ JSInterpreter.prototype.parse = function (options) {
     codegen.createNativeFunctionFromInterpreterFunction = function (intFunc) {
       return function () {
         if (self.initialized()) {
-          self.queueEvent(intFunc, arguments);
-          
+
+          // Convert arguments to array in fastest way possible and avoid
+          // "Bad value context for arguments variable" de-optimization
+          // http://jsperf.com/array-with-and-without-length/5
+          var args = new Array(arguments.length);
+          for (var i = 0; i < arguments.length; i++) {
+            args[i] = arguments[i];
+          }
+
+          self.eventQueue.push({
+            fn: intFunc,
+            arguments: args
+          });
+
           if (self.executeLoopDepth === 0) {
             // Execute the interpreter and if a return value is sent back from the
             // interpreter's event handler, pass that back in the native world
@@ -115,11 +124,15 @@ JSInterpreter.prototype.parse = function (options) {
     self.interpreter = interpreter;
     // Store globalScope on JSInterpreter
     self.globalScope = scope;
-    // Override Interpreter's get/set Property functions with JSInterpreter
+    // Override Interpreter's get/has/set Property functions with JSInterpreter
     interpreter.getProperty = self.getProperty.bind(
         self,
         interpreter,
         interpreter.getProperty);
+    interpreter.hasProperty = self.hasProperty.bind(
+        self,
+        interpreter,
+        interpreter.hasProperty);
     // Store this for later because we need to bypass our overriden function
     // in createGlobalProperty()
     self.baseSetProperty = interpreter.setProperty;
@@ -159,11 +172,8 @@ JSInterpreter.prototype.parse = function (options) {
     // Return value will be stored as this.interpreter inside the supplied
     // initFunc() (other code in initFunc() depends on this.interpreter, so
     // we can't wait until the constructor returns)
-    /* jshint nonew:false */
     new window.Interpreter(options.code, initFunc);
-    /* jshint nonew:true */
-  }
-  catch(err) {
+  } catch (err) {
     this.executionError = err;
     this.handleError();
   }
@@ -242,17 +252,6 @@ JSInterpreter.prototype.nativeSetCallbackRetVal = function (retVal) {
           "slider to its maximum value)");
     }
   }
-};
-
-/**
- * Queue an event to be fired in the interpreter. The nativeArgs are optional.
- * The function must be an interpreter function object (not native).
- */
-JSInterpreter.prototype.queueEvent = function (interpreterFunc, nativeArgs) {
-  this.eventQueue.push({
-    'fn': interpreterFunc,
-    'arguments': nativeArgs ? Array.prototype.slice.call(nativeArgs) : []
-  });
 };
 
 /**
@@ -493,6 +492,9 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     if (inUserCode && unwindingAfterStep) {
       this.replaceStoppedAtBreakpointRowForScope(currentScope, userCodeRow);
     }
+    if (this.logExecution) {
+      this.logStep_();
+    }
     this.executionError = safeStepInterpreter(this);
     if (!this.executionError && this.interpreter.stateStack.length) {
       var state = this.interpreter.stateStack[0], nodeType = state.node.type;
@@ -590,6 +592,103 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
 };
 
 /**
+ * Checks to the see if the character offset is from the user code range.
+ *
+ * @param {number} offset index of a character from program
+ * @return {boolean} true if the character offset is in user code.
+ * @private
+ */
+JSInterpreter.prototype.isOffsetInUserCode_ = function (offset) {
+  if (typeof offset === 'undefined' || typeof this.codeInfo === 'undefined') {
+    return false;
+  }
+  var start = offset - this.codeInfo.userCodeStartOffset;
+
+  return start >= 0 && start < this.codeInfo.userCodeLength;
+};
+
+/**
+ * Convert MemberExpression node to a string
+ *
+ * @param {!Object} node supplied by acorn parse.
+ * @return {string} Name.
+ * @private
+ */
+JSInterpreter.getMemberExpressionName_ = function (node) {
+  var objectString;
+  switch (node.object.type) {
+    case "MemberExpression":
+      objectString = this.getMemberExpressionName_(node.object);
+      break;
+    case "Identifier":
+      objectString = node.object.name;
+      break;
+    default:
+      throw "Unexpected MemberExpression node object type: " + node.object.type;
+  }
+  var propString;
+  switch (node.property.type) {
+    case "Identifier":
+      propString = "." + node.property.name;
+      break;
+    case "Literal":
+      propString = "[" + node.property.value + "]";
+      break;
+    default:
+      throw "Unexpected MemberExpression node property type: " + node.object.type;
+  }
+  return objectString + propString;
+};
+
+/**
+ * If necessary, add information to the executionLog about the upcoming
+ * interpreter step operation.
+ *
+ * @private
+ */
+JSInterpreter.prototype.logStep_ = function () {
+  var state = this.interpreter.stateStack[0];
+  var node = state.node;
+
+  if (!this.isOffsetInUserCode_(node.start)) {
+    return;
+  }
+
+  // Log call and new expressions just before we step into a function (after the
+  // last argument has been processed). (NOTE: as a result, a single stateful
+  // async function call may appear multiple times in the log)
+  if ((node.type === "CallExpression" || node.type === "NewExpression") &&
+      state.doneCallee_ &&
+      !state.doneExec &&
+      !node.arguments[state.n_ || 0]) {
+    switch (node.callee.type) {
+      case "Identifier":
+        this.executionLog.push(node.callee.name + ':' + node.arguments.length);
+        break;
+      case "MemberExpression":
+        this.executionLog.push(JSInterpreter.getMemberExpressionName_(node.callee) +
+            ':' + node.arguments.length);
+        break;
+      default:
+        throw "Unexpected callee node property type: " + node.object.type;
+    }
+  } else if (node.type === "ForStatement") {
+    var mode = state.mode || 0;
+    switch (mode) {
+      case codegen.ForStatementMode.INIT:
+        this.executionLog.push("[forInit]");
+        break;
+      case codegen.ForStatementMode.TEST:
+        this.executionLog.push("[forTest]");
+        break;
+      case codegen.ForStatementMode.UPDATE:
+        this.executionLog.push("[forUpdate]");
+        break;
+    }
+  }
+};
+
+/**
  * Helper that wraps some error preprocessing before we notify observers that
  * an execution error has occurred. Operates on the current error that is
  * already saved as this.executionError
@@ -650,6 +749,9 @@ JSInterpreter.prototype.getProperty = function (
       (obj === this.globalScope &&
           (!!(nativeParent = this.customMarshalGlobalProperties[name])))) {
     var value;
+    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+      return baseGetProperty.call(interpreter, obj, name);
+    }
     if (obj.isCustomMarshal) {
       value = obj.data[name];
     } else {
@@ -668,6 +770,38 @@ JSInterpreter.prototype.getProperty = function (
 };
 
 /**
+ * Wrapper to Interpreter's hasProperty (extended for custom marshaling)
+ *
+ * Does the named property exist on a data object.
+ * @param {!Object} interpeter Interpreter instance.
+ * @param {!Function} baseHasProperty Original hasProperty() implementation.
+ * @param {!Object} obj Data object.
+ * @param {*} name Name of property.
+ * @return {boolean} True if property exists.
+ */
+JSInterpreter.prototype.hasProperty = function (
+    interpreter,
+    baseHasProperty,
+    obj,
+    name) {
+  name = name.toString();
+  var nativeParent;
+  if (obj.isCustomMarshal ||
+      (obj === this.globalScope &&
+          (!!(nativeParent = this.customMarshalGlobalProperties[name])))) {
+    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+      return baseHasProperty.call(interpreter, obj, name);
+    } else if (obj.isCustomMarshal) {
+      return name in obj.data;
+    } else {
+      return name in nativeParent;
+    }
+  } else {
+    return baseHasProperty.call(interpreter, obj, name);
+  }
+};
+
+/**
  * Wrapper to Interpreter's setProperty (extended for custom marshaling)
  *
  * Set a property value on a data object.
@@ -679,7 +813,7 @@ JSInterpreter.prototype.getProperty = function (
  * @param {boolean} opt_fixed Unchangeable property if true.
  * @param {boolean} opt_nonenum Non-enumerable property if true.
  */
-JSInterpreter.prototype.setProperty = function(
+JSInterpreter.prototype.setProperty = function (
     interpreter,
     baseSetProperty,
     obj,
@@ -690,9 +824,17 @@ JSInterpreter.prototype.setProperty = function(
   name = name.toString();
   var nativeParent;
   if (obj.isCustomMarshal) {
+    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+      return baseSetProperty.call(
+          interpreter, obj, name, value, opt_fixed, opt_nonenum);
+    }
     obj.data[name] = codegen.marshalInterpreterToNative(interpreter, value);
   } else if (obj === this.globalScope &&
       (!!(nativeParent = this.customMarshalGlobalProperties[name]))) {
+    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+      return baseSetProperty.call(
+          interpreter, obj, name, value, opt_fixed, opt_nonenum);
+    }
     nativeParent[name] = codegen.marshalInterpreterToNative(interpreter, value);
   } else {
     return baseSetProperty.call(
@@ -813,6 +955,74 @@ JSInterpreter.prototype.createGlobalProperty = function (name, value, parent) {
 };
 
 /**
+ * Slightly modified version of interpreter's getValueFromScope. Does not
+ * throw an exception that can be caught by the interpreted program.
+ */
+JSInterpreter.prototype.getValueFromScope = function (name) {
+  var scope = this.interpreter.getScope();
+  while (scope) {
+    if (this.interpreter.hasProperty(scope, name)) {
+      return this.interpreter.getProperty(scope, name);
+    }
+    scope = scope.parentScope;
+  }
+  throw new ReferenceError('Unknown identifier: ' + name);
+};
+
+/**
+ * Returns an interpreter object representing a specific node (parsed by acorn
+ * for the purpose of displaying a watch value).
+ * @private
+ */
+JSInterpreter.prototype.getWatchValueFromNode_ = function (node) {
+  if (node.type === 'MemberExpression') {
+    return this.getValueFromMemberExpression_(node);
+  } else if (node.type === 'Identifier') {
+    return this.getValueFromScope(node.name);
+  } else {
+    throw new Error("Invalid");
+  }
+};
+
+/**
+ * Returns an interpreter object representing the member expression.
+ * @private
+ */
+JSInterpreter.prototype.getValueFromMemberExpression_ = function (expression) {
+  var object = this.getWatchValueFromNode_(expression.object);
+
+  if (expression.property.type === 'Identifier') {
+    return this.interpreter.getValue([object, expression.property.name]);
+  } else if (expression.property.type === 'Literal') {
+    return this.interpreter.getValue(
+        [object, this.interpreter.createPrimitive(expression.property.value)]);
+  }
+};
+
+/**
+ * Evaluate watch expression based on current scope.
+ */
+JSInterpreter.prototype.evaluateWatchExpression = function (watchExpression) {
+  var value;
+  try {
+    var ast = window.acorn.parse(watchExpression);
+    if (ast.type === 'Program' &&
+        ast.body[0].type === 'ExpressionStatement') {
+      value = this.getWatchValueFromNode_(ast.body[0].expression);
+    } else {
+      throw new Error("Invalid");
+    }
+  } catch (err) {
+    if (err instanceof Error) {
+      return err;
+    } else {
+      return new Error(err);
+    }
+  }
+  return codegen.marshalInterpreterToNative(this.interpreter, value);
+};
+
+/**
  * Returns the interpreter function object corresponding to 'funcName' if a
  * function with that name is found in the interpreter's global scope.
  */
@@ -828,7 +1038,7 @@ JSInterpreter.prototype.findGlobalFunction = function (funcName) {
  * in the interpreter's global scope. Built-in global functions are excluded.
  */
 JSInterpreter.prototype.getGlobalFunctionNames = function () {
-  var builtInExclusionList = [ "eval", "getCallback", "setCallbackRetVal" ];
+  var builtInExclusionList = ["eval", "getCallback", "setCallbackRetVal"];
 
   var names = [];
   for (var objName in this.globalScope.properties) {
@@ -899,11 +1109,15 @@ JSInterpreter.prototype.evalInCurrentScope = function (expression) {
     evalInterpreter[prop] = this.interpreter[prop];
   }, this);
 
-  // Patch getProperty and setProperty to enable custom marshalling
+  // Patch getProperty, hasProperty, and setProperty to enable custom marshalling
   evalInterpreter.getProperty = this.getProperty.bind(
       this,
       evalInterpreter,
       evalInterpreter.getProperty);
+  evalInterpreter.hasProperty = this.hasProperty.bind(
+      this,
+      evalInterpreter,
+      evalInterpreter.hasProperty);
   evalInterpreter.setProperty = this.setProperty.bind(
       this,
       evalInterpreter,

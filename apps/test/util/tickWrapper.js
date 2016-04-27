@@ -1,5 +1,5 @@
 /* global Promise */
-var _ = require('lodash');
+var _ = require('@cdo/apps/lodash');
 require("babelify/polyfill"); // required for Promises in IE / Phantom
 
 /**
@@ -103,7 +103,7 @@ function wrapOnTick(app) {
  */
 function takeActionConditionally(action, condition) {
   return function () {
-    if(condition()) {
+    if (condition()) {
       action();
     }
   };

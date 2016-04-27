@@ -26,6 +26,11 @@
   welcome_back: "С возвращением, %{name}"
   submit: "Отправить"
   unsubmit: "Снять подтверждение"
+  previous_page: Previous page
+  next_page: "Следующая страница"
+  cancel: "Отмена"
+  okay: "Хорошо"
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: "Добавить учителя:"
@@ -414,6 +419,9 @@
       Ltd. Все права защищены. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
       Arts Inc. Все права защищены. Удивительный мир Гамбола является торговой маркой
       и &copy; 2015 Cartoon Network.
+    code_from_html: Code.org использует p5.play, который лицензируется на условиях
+      <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      GNU LGPL 2.1</a>.
     powered_by_aws: "Создано с помощью Amazon Web Services"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE и Hour
       of Code&reg; являются товарными знаками Code.org."
@@ -537,6 +545,15 @@
     minecraft:
       title: Minecraft
       body: "Изучайте мир Minecraft через программный код."
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: "Ученики нарисовали это с помощью кода!"
     students_made_these_with_code: "Сделано учениками с помощью кода!"
@@ -560,7 +577,6 @@
       полученных отзывов."
     prerelease_hoc2014: "Этот учебник находится в <span class='betatext'> бета-версии</span>.
       \ Он подлежит пересмотру для получения обратной связи и улучшений."
-    feedback: "Оставить отзыв"
     report_bug: "Сообщить об ошибке"
     support: "Получить помощь"
     support_url: support.code.org
@@ -580,6 +596,25 @@
     correct_body: "Спасибо за ответ."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "Спасибо"
+    wrong_body: "Спасибо за ответ"
+    correct_title: "Спасибо"
+    correct_body: "Спасибо за ответ"
+  level_group-submittable:
+    wrong_title: "Спасибо"
+    wrong_body: "Спасибо за ответ"
+    correct_title: "Спасибо"
+    correct_body: "Спасибо за ответ"
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: "Неправильное решение"
     wrong_body: "Твоё решение неверно.  Пожалуйста, попробуй еще раз!"
@@ -600,9 +635,8 @@
     placeholder: "Внеси сюда свой ответ"
     open_response_title: "Спасибо"
     open_response_body: "Спасибо за ваш ответ!"
-  level_group:
-    correct_title: "Спасибо"
-    correct_body: "Спасибо за ответ"
+    correct_title: "Верно"
+    correct_body: "Это правильный ответ."
   dialog:
     ok: "Продолжить"
     startover_title: "Вы уверены, что хотите начать заново?"
@@ -667,6 +701,7 @@
     completed_perfect: "Завершено, отлично"
     furthest_level_attempted: "запрошен слишком высокий уровень"
     assessment: "оценка"
+    submitted: "Представленный"
   studio:
     courses_working_on: "Курсы, в процессе изучения"
     completed_courses: "Завершенные курсы"
@@ -738,3 +773,7 @@
         acknowledge: "Отправляя эту информацию, вы признаёте, что она будет обрабатываться
           в соответствии с %{link_start_privacy}Правилами конфиденциальности%{link_end}
           и %{link_start_tos}Условиями использования%{link_end}"
+  components:
+    icon_library:
+      search_placeholder_text: "Искать значок..."
+      no_icons_found: "Значёк не найден"

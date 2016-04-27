@@ -2,7 +2,7 @@
  * Copyright (c) 2016 Anthony Bau.
  * MIT License.
  *
- * Date: 2016-03-08
+ * Date: 2016-04-21
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
@@ -4130,6 +4130,7 @@ function objectToString(o) {
 module.exports = require("./lib/_stream_passthrough.js")
 
 },{"./lib/_stream_passthrough.js":14}],20:[function(require,module,exports){
+(function (process){
 exports = module.exports = require('./lib/_stream_readable.js');
 exports.Stream = require('stream');
 exports.Readable = exports;
@@ -4137,8 +4138,12 @@ exports.Writable = require('./lib/_stream_writable.js');
 exports.Duplex = require('./lib/_stream_duplex.js');
 exports.Transform = require('./lib/_stream_transform.js');
 exports.PassThrough = require('./lib/_stream_passthrough.js');
+if (!process.browser && process.env.READABLE_STREAM === 'disable') {
+  module.exports = require('stream');
+}
 
-},{"./lib/_stream_duplex.js":13,"./lib/_stream_passthrough.js":14,"./lib/_stream_readable.js":15,"./lib/_stream_transform.js":16,"./lib/_stream_writable.js":17,"stream":23}],21:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./lib/_stream_duplex.js":13,"./lib/_stream_passthrough.js":14,"./lib/_stream_readable.js":15,"./lib/_stream_transform.js":16,"./lib/_stream_writable.js":17,"_process":11,"stream":23}],21:[function(require,module,exports){
 module.exports = require("./lib/_stream_transform.js")
 
 },{"./lib/_stream_transform.js":16}],22:[function(require,module,exports){
@@ -4527,6 +4532,7 @@ function base64DetectIncompleteChar(buffer) {
     'sgmldeclaration',
     'doctype',
     'comment',
+    'opentagstart',
     'attribute',
     'opentag',
     'closetag',
@@ -5203,6 +5209,7 @@ function base64DetectIncompleteChar(buffer) {
       tag.ns = parent.ns
     }
     parser.attribList.length = 0
+    emitNode(parser, 'onopentagstart', tag)
   }
 
   function qname (name, attribute) {
@@ -5487,6 +5494,9 @@ function base64DetectIncompleteChar(buffer) {
     }
     if (chunk === null) {
       return end(parser)
+    }
+    if (typeof chunk === 'object') {
+      chunk = chunk.toString()
     }
     var i = 0
     var c = ''
@@ -6630,7 +6640,6 @@ Editor.prototype.redrawHighlights = function() {
     });
     this.maskFloatingPaths(this.draggingBlock.getDocument());
   }
-  this.redrawCursors();
   return this.redrawLassoHighlight();
 };
 
@@ -7261,10 +7270,12 @@ hook('mousedown', 4, function(point, event, state) {
     if ((hitTestBlock.addButtonRect != null) && hitTestBlock.addButtonRect.contains(mainPoint)) {
       line = this.mode.handleButton(str, 'add-button', hitTestResult.getReader());
       this.populateBlock(hitTestResult, line);
+      this.redrawMain();
       return state.consumedHitTest = true;
     } else if ((hitTestBlock.subtractButtonRect != null) && hitTestBlock.subtractButtonRect.contains(mainPoint)) {
       line = this.mode.handleButton(str, 'subtract-button', hitTestResult.getReader());
       this.populateBlock(hitTestResult, line);
+      this.redrawMain();
       return state.consumedHitTest = true;
     }
   }
@@ -7394,7 +7405,7 @@ hook('mousemove', 1, function(point, event, state) {
   }
 });
 
-Editor.prototype.getClosestDroppableBlock = function(mainPoint) {
+Editor.prototype.getClosestDroppableBlock = function(mainPoint, isDebugMode) {
   var best, min, testPoints;
   best = null;
   min = Infinity;
@@ -7409,7 +7420,7 @@ Editor.prototype.getClosestDroppableBlock = function(mainPoint) {
   }, (function(_this) {
     return function(point) {
       var distance;
-      if (!((point.acceptLevel === helper.DISCOURAGE) && !event.shiftKey)) {
+      if (!((point.acceptLevel === helper.DISCOURAGE) && !isDebugMode)) {
         distance = mainPoint.from(point);
         distance.y *= 2;
         distance = distance.magnitude();
@@ -7423,13 +7434,13 @@ Editor.prototype.getClosestDroppableBlock = function(mainPoint) {
   return best;
 };
 
-Editor.prototype.getClosestDroppableBlockFromPosition = function(position) {
+Editor.prototype.getClosestDroppableBlockFromPosition = function(position, isDebugMode) {
   var mainPoint;
   if (!this.currentlyUsingBlocks) {
     return null;
   }
   mainPoint = this.trackerPointToMain(position);
-  return this.getClosestDroppableBlock(mainPoint);
+  return this.getClosestDroppableBlock(mainPoint, isDebugMode);
 };
 
 Editor.prototype.getAcceptLevel = function(drag, drop) {
@@ -7458,7 +7469,7 @@ hook('mousemove', 0, function(point, event, state) {
   if (this.draggingBlock != null) {
     position = new this.draw.Point(point.x + this.draggingOffset.x, point.y + this.draggingOffset.y);
     if (this.draggingBlock.expansion) {
-      expansionText = this.draggingBlock.expansion(this.getClosestDroppableBlockFromPosition(position));
+      expansionText = this.draggingBlock.expansion(this.getClosestDroppableBlockFromPosition(position, event.shiftKey));
       if (expansionText !== this.draggingBlock.lastExpansionText) {
         newBlock = parseBlock(this.mode, expansionText);
         newBlock.lastExpansionText = expansionText;
@@ -7499,7 +7510,7 @@ hook('mousemove', 0, function(point, event, state) {
         this.dragReplacing = true;
       } else {
         this.dragReplacing = false;
-        dropBlock = this.getClosestDroppableBlock(mainPoint);
+        dropBlock = this.getClosestDroppableBlock(mainPoint, event.shiftKey);
       }
       if (dropBlock !== this.lastHighlight) {
         this.redrawHighlights();
@@ -7722,8 +7733,7 @@ hook('mouseup', 0, function(point, event, state) {
     this.draggingOffset = null;
     this.lastHighlight = null;
     this.clearDrag();
-    this.redrawMain();
-    return this.redrawHighlights();
+    return this.redrawMain();
   }
 });
 
@@ -7790,7 +7800,7 @@ Editor.prototype.setPalette = function(paletteGroups) {
   ref1 = this.paletteGroups;
   fn1 = (function(_this) {
     return function(paletteGroup, i) {
-      var clickHandler, data, expansion, k, len1, newBlock, newPaletteBlocks, paletteGroupBlocks, paletteGroupHeader, ref2, updatePalette;
+      var clickHandler, data, expansion, k, len1, newBlock, newPaletteBlocks, paletteGroupHeader, ref2, updatePalette;
       if (i % 2 === 0) {
         paletteHeaderRow = document.createElement('div');
         paletteHeaderRow.className = 'droplet-palette-header-row';
@@ -7799,8 +7809,11 @@ Editor.prototype.setPalette = function(paletteGroups) {
           paletteHeaderRow.style.height = 0;
         }
       }
-      paletteGroupHeader = document.createElement('div');
+      paletteGroupHeader = paletteGroup.header = document.createElement('div');
       paletteGroupHeader.className = 'droplet-palette-group-header';
+      if (paletteGroup.id) {
+        paletteGroupHeader.id = 'droplet-palette-group-header-' + paletteGroup.id;
+      }
       paletteGroupHeader.innerText = paletteGroupHeader.textContent = paletteGroupHeader.textContent = paletteGroup.name;
       if (paletteGroup.color) {
         paletteGroupHeader.className += ' ' + paletteGroup.color;
@@ -7819,20 +7832,9 @@ Editor.prototype.setPalette = function(paletteGroups) {
           id: data.id
         });
       }
-      paletteGroupBlocks = newPaletteBlocks;
+      paletteGroup.parsedBlocks = newPaletteBlocks;
       updatePalette = function() {
-        var ref3;
-        _this.currentPaletteGroup = paletteGroup.name;
-        _this.currentPaletteBlocks = paletteGroupBlocks;
-        _this.currentPaletteMetadata = paletteGroupBlocks;
-        if ((ref3 = _this.currentPaletteGroupHeader) != null) {
-          ref3.className = _this.currentPaletteGroupHeader.className.replace(/\s[-\w]*-selected\b/, '');
-        }
-        _this.currentPaletteGroupHeader = paletteGroupHeader;
-        _this.currentPaletteIndex = i;
-        _this.currentPaletteGroupHeader.className += ' droplet-palette-group-header-selected';
-        _this.rebuildPalette();
-        return _this.fireEvent('selectpalette', [paletteGroup.name]);
+        return _this.changePaletteGroup(paletteGroup);
       };
       clickHandler = function() {
         return updatePalette();
@@ -7850,6 +7852,32 @@ Editor.prototype.setPalette = function(paletteGroups) {
   }
   this.resizePalette();
   return this.resizePaletteHighlight();
+};
+
+Editor.prototype.changePaletteGroup = function(group) {
+  var curGroup, i, j, len, paletteGroup, ref1, ref2;
+  ref1 = this.paletteGroups;
+  for (i = j = 0, len = ref1.length; j < len; i = ++j) {
+    curGroup = ref1[i];
+    if (group === curGroup || group === curGroup.id || group === curGroup.name) {
+      paletteGroup = curGroup;
+      break;
+    }
+  }
+  if (!paletteGroup) {
+    return;
+  }
+  this.currentPaletteGroup = paletteGroup.name;
+  this.currentPaletteBlocks = paletteGroup.parsedBlocks;
+  this.currentPaletteMetadata = paletteGroup.parsedBlocks;
+  if ((ref2 = this.currentPaletteGroupHeader) != null) {
+    ref2.className = this.currentPaletteGroupHeader.className.replace(/\s[-\w]*-selected\b/, '');
+  }
+  this.currentPaletteGroupHeader = paletteGroup.header;
+  this.currentPaletteIndex = i;
+  this.currentPaletteGroupHeader.className += ' droplet-palette-group-header-selected';
+  this.rebuildPalette();
+  return this.fireEvent('selectpalette', [paletteGroup.name]);
 };
 
 hook('mousedown', 6, function(point, event, state) {
@@ -8562,7 +8590,7 @@ Editor.prototype.resizeLassoCanvas = function() {
 
 Editor.prototype.clearLassoSelection = function() {
   this.lassoSelection = null;
-  return this.redrawMain();
+  return this.redrawHighlights();
 };
 
 hook('mousedown', 0, function(point, event, state) {
@@ -8705,7 +8733,7 @@ hook('mouseup', 0, function(point, event, state) {
     }
     this.lassoSelectAnchor = null;
     this.clearLassoSelectCanvas();
-    this.redrawMain();
+    this.redrawHighlights();
   }
   return this.lassoSelectionDocument = null;
 });
@@ -8785,7 +8813,6 @@ Editor.prototype.setCursor = function(destination, validate, direction) {
   this.correctCursor();
   this.redrawMain();
   this.highlightFlashShow();
-  this.redrawHighlights();
   if (this.cursorAtSocket()) {
     if (((ref1 = this.getCursor()) != null ? ref1.id : void 0) in this.extraMarks) {
       delete this.extraMarks[typeof focus !== "undefined" && focus !== null ? focus.id : void 0];

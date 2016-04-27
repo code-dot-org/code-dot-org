@@ -25,6 +25,11 @@ id:
   welcome_back: 'Selamat datang kembali, %{name}'
   submit: Kirim
   unsubmit: Unsubmit
+  previous_page: Previous page
+  next_page: Halamat berikutnya
+  cancel: Batal
+  okay: Oke
+  heading_x_of_y: '%{heading} (halaman %{x} dari %{y})'
   add_teacher_form:
     code:
       label: 'Tambahkan seorang guru:'
@@ -322,7 +327,7 @@ id:
     heading_hoc2014: '<h2>The Hour of Code untuk</h2><h1>Segala Usia</h1>'
     heading_elementary: '<h2>20 jam kursus untuk</h2><h1>Pemula (segala usia)</h1>'
     heading_apps: '<h2>Menyenagkan bagi</h2><h1>Semua orang</h1>'
-    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
+    heading_tools: '<h2>Siap dengan langkah berikutnya?</h2><h1>JavaScript Tools untuk SMA</h1>'
     heading_legacy: '<h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>'
     your_gallery: Galeri
     no_primary_course: Coba kursus di Code Studio
@@ -345,6 +350,7 @@ id:
     help_from_html_old: Para insinyur dari Google, Microsoft, Facebook, dan Twitter turut membantu dalam pembuatan materi-materi ini.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Hak Cipta Dilindungi.<br />Star Wars &#8482; &copy; %{current_year} Disney dan Lucasfilm. Hak Cipta Dilindungi.<br />Frozen&#8482; &copy; %{current_year} Disney. Hak Cipta Dilindungi.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Hak Cipta Dilindungi.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Hak Cipta Dilindungi.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Hak Cipta Dilindungi.<br />The Amazing World of Gumball adalah merek dagang dan &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Hak Cipta Dilindungi. Star Wars &#8482; &copy; %{current_year} Disney dan Lucasfilm. Hak Cipta Dilindungi. Frozen&#8482; &copy; %{current_year} Disney. Hak Cipta Dilindungi. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Hak Cipta Dilindungi. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Hak Cipta Dilindungi. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Hak Cipta Dilindungi. The Amazing World of Gumball adalah merek dagang dan &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org menggunakan p5.play, yang berlisensi <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: Didukung oleh Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; adalah merk dagang dari Code.org.'
     copyright: Hak cipta
@@ -419,10 +425,10 @@ id:
   upsell:
     applab:
       title: Laboratorium Aplikasi
-      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      body: App Lab adalah sebuah lingkungan programming dimana kamu dapat membuat aplikasi-aplikasi sederhana. Desain sebuah aplikasi, mengode dengan blok atau JavaScript agar aplikasi tersebut dapat bekerja, kemudian bagikan aplikasi kamu dalam hitungan detik.
+      body_short: Desain sebuah aplikasi, kode dengan blok atau JavaScript agar aplikasi tersebut dapat bekerja, kemudian bagikan aplikasimu dalam hitungan detik.
+      audience: Usia 13+
+      cta: Pelajari caranya
     hoc:
       title: Labirin klasik
       body: Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.
@@ -449,6 +455,11 @@ id:
     minecraft:
       title: Minecraft
       body: Jelajahi dunia Minecraft melalui kode.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Siswa-siswa telah menggambar ini dengan kode!
     students_made_these_with_code: Siswa membuat ini dengan kode program!
@@ -464,11 +475,10 @@ id:
   landing:
     prerelease: "Kursus ini dalam <span class='betatext'>beta</span>.  Ini bukan berarti sebuah kursus final dan ditujukan untuk revisi saat usulan diterima dan pengembangan dibuat."
     prerelease_hoc2014: "Pedoman ini adalah dalam <span class='betatext'>versi beta</span>. Pedoman ini dapat direvisi seiring diterimanya masukan dan dibuatnya perbaikan."
-    feedback: Berikan usulan
     report_bug: Laporkan kesalahan
     support: Dapatkan bantuan
     support_url: //support.code.org
-    help_resources: Help and Resources
+    help_resources: Bantuan dan Sumber Daya
   multi:
     wrong_title: Jawaban Salah
     wrong_body: Jawaban yang anda masukkan salah. Silakan coba lagi!
@@ -478,11 +488,27 @@ id:
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Terima kasih
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: Terima kasih telah memberikan jawabannya.
     correct_title: Terima kasih
-    correct_body: Thank you for submitting an answer.
+    correct_body: Terima kasih telah memberikan jawabannya.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Terima kasih
+    wrong_body: Terima kasih telah memberikan jawaban
+    correct_title: Terima kasih
+    correct_body: Terima kasih telah memberikan jawaban
+  level_group-submittable:
+    wrong_title: Terima kasih
+    wrong_body: Terima kasih telah memberikan jawaban
+    correct_title: Terima kasih
+    correct_body: Terima kasih telah memberikan jawaban
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Solusi yang salah
     wrong_body: Solusi yang anda masukkan salah, Coba Lagi!
@@ -500,9 +526,8 @@ id:
     placeholder: Masukkan jawaban Anda di sini
     open_response_title: Terima kasih
     open_response_body: Terima kasih atas responmu!
-  level_group:
-    correct_title: Terima kasih
-    correct_body: Thank you for submitting an answer
+    correct_title: Benar
+    correct_body: Itu jawaban yang benar.
   dialog:
     ok: Oke!
     startover_title: Kamu yakin ingin memulainya dari awal?
@@ -556,6 +581,7 @@ id:
     completed_perfect: selesai, sempurna
     furthest_level_attempted: tingkat terjauh yang dicoba
     assessment: penilaian
+    submitted: terkirim
   studio:
     courses_working_on: Kursus yang sedang Anda kerjakan
     completed_courses: Kursus yang telah diselesaikan
@@ -612,3 +638,7 @@ id:
           other: Lain
         detail: Harap memberikan sedetail mungkin mengenai konten yang Anda laporkan.
         acknowledge: 'Dengan mengirimkan informasi ini, Anda mengakui ini akan di tangani sesuai dengan syarat %{link_start_privacy} kebijakan privasi%{link_end}dan%{link_start_tos}Syarat Layanantautan%{link_end}'
+  components:
+    icon_library:
+      search_placeholder_text: Cari sebuah ikon...
+      no_icons_found: Ikon tidak ditemukan

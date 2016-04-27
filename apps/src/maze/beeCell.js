@@ -9,6 +9,7 @@
  * not static but can in fact be randomized between runs.
  */
 
+require('../utils'); // Provides Function.prototype.inherits
 var Cell = require('./cell');
 
 var tiles = require('./tiles');
@@ -22,7 +23,7 @@ var BeeCell = function (tileType, featureType, value, cloudType, flowerColor, ra
     range = undefined;
   }
 
-  Cell.call(this, tileType, value);
+  Cell.call(this, tileType, value, range);
 
   /**
    * @type {Number}
@@ -38,11 +39,6 @@ var BeeCell = function (tileType, featureType, value, cloudType, flowerColor, ra
    * @type {Number}
    */
   this.cloudType_ = cloudType;
-
-  /**
-   * @type {Number}
-   */
-  this.range_ = (range && range > value) ? range : value;
 };
 
 BeeCell.inherits(Cell);
@@ -138,9 +134,10 @@ BeeCell.prototype.isVariableCloud = function () {
 /**
  * @return {boolean}
  */
-BeeCell.prototype.isVariableRange = function () {
-  return this.range_ && this.range_ > this.originalValue_;
+BeeCell.prototype.isVariable = function () {
+  return this.isVariableRange() || this.isVariableCloud();
 };
+
 
 /**
  * Variable cells can represent multiple possible kinds of grid assets,
@@ -148,6 +145,7 @@ BeeCell.prototype.isVariableRange = function () {
  * method returns an array of non-variable BeeCells based on this BeeCell's
  * configuration.
  * @return {BeeCell[]}
+ * @override
  */
 BeeCell.prototype.getPossibleGridAssets = function () {
   var possibilities = [];
