@@ -12,8 +12,4 @@
 
 class Plc::WrittenAssignmentTask < Plc::Task
   serialized_attrs %w(assignment_description)
-
-  def self.task_assignment_type
-    Plc::WrittenEnrollmentTaskAssignment
-  end
 end
