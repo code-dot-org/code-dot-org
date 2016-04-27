@@ -530,6 +530,7 @@ ActiveRecord::Schema.define(version: 20160426210000) do
     t.integer  "level_id",   limit: 4
   end
 
+  add_index "script_levels", ["level_id"], name: "index_script_levels_on_level_id", using: :btree
   add_index "script_levels", ["script_id"], name: "index_script_levels_on_script_id", using: :btree
   add_index "script_levels", ["stage_id"], name: "index_script_levels_on_stage_id", using: :btree
 
