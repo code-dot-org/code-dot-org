@@ -82,7 +82,7 @@ GRAPH
   cdo-mysql (0.1.1)
   cdo-networking (0.1.0)
     ixgbevf (>= 0.0.0)
-  cdo-newrelic (0.1.2)
+  cdo-newrelic (0.1.3)
     apt (>= 0.0.0)
   cdo-nginx (0.0.8)
     apt (>= 0.0.0)

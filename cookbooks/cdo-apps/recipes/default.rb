@@ -11,7 +11,8 @@ include_recipe 'sudo-user'
 include_recipe 'cdo-networking'
 
 # Set hostname to the Chef node name (via chef_hostname cookbook)
-hostname node.name
+HOSTNAME_INVALID_CHAR = /[^[:alnum:]-]/
+hostname node.name.downcase.gsub(HOSTNAME_INVALID_CHAR, '-')
 
 # These packages are used by Gems we install via Bundler.
 

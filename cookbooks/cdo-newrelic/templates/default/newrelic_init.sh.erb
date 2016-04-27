@@ -12,17 +12,16 @@
 
 <%= @env ? @env.map{|k,v|"export #{k}=#{v}"}.join("\n") : '' %>
 NEWRELIC_RB=<%=@newrelic_rb%>
-SERVER_NAME=<%=node.name%>
 STATUS_FILE=/run/cdo-newrelic
 
 case "$1" in
   start|restart|force-reload)
-    /opt/chef/embedded/bin/ruby -r${NEWRELIC_RB} -e "puts NewRelicClient.new.enable_alerts('${SERVER_NAME}')" \
+    /opt/chef/embedded/bin/ruby -r${NEWRELIC_RB} -e "puts NewRelicClient.new.enable_alerts('$(hostname)')" \
       && touch ${STATUS_FILE}
     exit $?
   ;;
   stop)
-    /opt/chef/embedded/bin/ruby -r${NEWRELIC_RB} -e "puts NewRelicClient.new.disable_alerts('${SERVER_NAME}')" \
+    /opt/chef/embedded/bin/ruby -r${NEWRELIC_RB} -e "puts NewRelicClient.new.disable_alerts('$(hostname)')" \
       && rm -f ${STATUS_FILE}
     exit $?
   ;;
