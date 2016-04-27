@@ -1,4 +1,4 @@
-var maze_locale = {lc:{"en":function(n){return n===1?"one":"other"},"bn":function(n){return n===1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"ms":function(n){return "other"},"ta":function(n){return n===1?"one":"other"},"zh":function(n){return "other"},"ar":function(n){
+var maze_locale = {lc:{"ar":function(n){
   if (n === 0) {
     return 'zero';
   }
@@ -15,7 +15,7 @@ var maze_locale = {lc:{"en":function(n){return n===1?"one":"other"},"bn":functio
     return 'many';
   }
   return 'other';
-},"bg":function(n){return n===1?"one":"other"},"ca":function(n){return n===1?"one":"other"},"cs":function(n){
+},"en":function(n){return n===1?"one":"other"},"bg":function(n){return n===1?"one":"other"},"bn":function(n){return n===1?"one":"other"},"ca":function(n){return n===1?"one":"other"},"cs":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -23,7 +23,7 @@ var maze_locale = {lc:{"en":function(n){return n===1?"one":"other"},"bn":functio
     return 'few';
   }
   return 'other';
-},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
+},"da":function(n){return n===1?"one":"other"},"de":function(n){return n===1?"one":"other"},"el":function(n){return n===1?"one":"other"},"es":function(n){return n===1?"one":"other"},"et":function(n){return n===1?"one":"other"},"eu":function(n){return n===1?"one":"other"},"fa":function(n){return "other"},"fi":function(n){return n===1?"one":"other"},"fil":function(n){return n===0||n==1?"one":"other"},"fr":function(n){return Math.floor(n)===0||Math.floor(n)==1?"one":"other"},"ga":function(n){return n==1?"one":(n==2?"two":"other")},"gl":function(n){return n===1?"one":"other"},"he":function(n){return n===1?"one":"other"},"hi":function(n){return n===0||n==1?"one":"other"},"hr":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -55,7 +55,7 @@ var maze_locale = {lc:{"en":function(n){return n===1?"one":"other"},"bn":functio
     return 'one';
   }
   return 'other';
-},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"mt":function(n){
+},"mk":function(n){return (n%10)==1&&n!=11?"one":"other"},"mr":function(n){return n===1?"one":"other"},"ms":function(n){return "other"},"mt":function(n){
   if (n == 1) {
     return 'one';
   }
@@ -134,7 +134,7 @@ var maze_locale = {lc:{"en":function(n){return n===1?"one":"other"},"bn":functio
     return 'many';
   }
   return 'other';
-},"sv":function(n){return n===1?"one":"other"},"th":function(n){return "other"},"tr":function(n){return n===1?"one":"other"},"uk":function(n){
+},"sv":function(n){return n===1?"one":"other"},"ta":function(n){return n===1?"one":"other"},"th":function(n){return "other"},"tr":function(n){return n===1?"one":"other"},"uk":function(n){
   if ((n % 10) == 1 && (n % 100) != 11) {
     return 'one';
   }
@@ -147,7 +147,7 @@ var maze_locale = {lc:{"en":function(n){return n===1?"one":"other"},"bn":functio
     return 'many';
   }
   return 'other';
-},"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"}},
+},"ur":function(n){return n===1?"one":"other"},"vi":function(n){return "other"},"zh":function(n){return "other"}},
 c:function(d,k){if(!d)throw new Error("MessageFormat: Data required for '"+k+"'.")},
 n:function(d,k,o){if(isNaN(d[k]))throw new Error("MessageFormat: '"+k+"' isn't a number.");return d[k]-(o||0)},
 v:function(d,k){maze_locale.c(d,k);return d[k]},
@@ -171,8 +171,9 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillStack":function(d){return "llena la pila de "+maze_locale.v(d,"shovelfuls")+" agujeros"},
 "fillSquare":function(d){return "llena el cuadrado"},
 "fillTooltip":function(d){return "Colocar 1 unidad de tierra"},
-"finalLevel":function(d){return "¡ Felicidades! Ha resuelto el rompecabezas final."},
+"finalLevel":function(d){return "¡Felicitaciones! Ha resuelto el rompecabezas final."},
 "flowerEmptyError":function(d){return "La flor en la que estás no tiene más néctar."},
+"didNotCollectEverything":function(d){return "Asegúrate de no olvidarte del néctar y la miel!"},
 "get":function(d){return "obtener"},
 "heightParameter":function(d){return "altura"},
 "holePresent":function(d){return "hay un agujero"},
@@ -182,14 +183,14 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "honeycombFullError":function(d){return "Este panal no tiene espacio para guardar más miel."},
 "ifCode":function(d){return "si"},
 "ifInRepeatError":function(d){return "Necesitas un bloque \"si\" dentro de un bloque \"repetir\". Si tienes problemas, prueba el nivel anterior otra vez para ver cómo funcionaba."},
-"ifPathAhead":function(d){return "si hay un camino delante"},
-"ifTooltip":function(d){return "Si hay un camino en la dirección especificada, hacer algunas acciones."},
-"ifelseTooltip":function(d){return "Si hay un camino en la dirección especificada, hacer el primer bloque de acciones. De lo contrario, hacer el segundo bloque de acciones."},
-"ifFlowerTooltip":function(d){return "si hay alguna flor/panal en la dirección especificada, entonces haz algunas acciones."},
+"ifPathAhead":function(d){return "si hay un camino adelante"},
+"ifTooltip":function(d){return "Si hay un camino en la dirección especificada, realizar algunas acciones."},
+"ifelseTooltip":function(d){return "Si hay un camino en la dirección especificada, realizar el primer bloque de acciones. De lo contrario, realizar el segundo bloque de acciones."},
+"ifFlowerTooltip":function(d){return "si hay alguna flor o algún panal en la dirección especificada, entonces realiza algunas acciones."},
 "ifOnlyFlowerTooltip":function(d){return "Si existe una flor en la dirección especificada, realiza algunas acciones."},
-"ifelseFlowerTooltip":function(d){return "si hay una flor/panal en la dirección especificada, entonces haz el primer bloque de acciones. Si no, haz el segundo bloque de acciones."},
+"ifelseFlowerTooltip":function(d){return "si hay una flor o un panal en la dirección especificada, entonces realiza el primer bloque de acciones. Si no, realiza el segundo bloque de acciones."},
 "insufficientHoney":function(d){return "Necesitas hacer la cantidad correcta de miel."},
-"insufficientNectar":function(d){return "Necesitas recoger la candidad correcta de néctar."},
+"insufficientNectar":function(d){return "Necesitas recoger la cantidad correcta de néctar."},
 "make":function(d){return "hacer"},
 "moveBackward":function(d){return "retroceder"},
 "moveEastTooltip":function(d){return "Muéveme un espacio al Este."},
@@ -202,7 +203,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "nectar":function(d){return "obtener néctar"},
 "nectarRemaining":function(d){return "néctar"},
 "nectarTooltip":function(d){return "Obtener néctar de una flor"},
-"nextLevel":function(d){return "¡Felicidades! Has completado este puzzle."},
+"nextLevel":function(d){return "¡Felicitaciones! Has completado este rompecabezas."},
 "no":function(d){return "No"},
 "noPathAhead":function(d){return "el camino está bloqueado"},
 "noPathLeft":function(d){return "no hay camino a la izquierda"},
@@ -222,7 +223,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "removeSquare":function(d){return "eliminar cuadrado"},
 "repeatCarefullyError":function(d){return "Para resolver esto, piensa cuidadosamente acerca del patrón de dos movimientos y un giro para ponerlo dentro del bloque \"repetir\". Es correcto hacer un giro extra, al final."},
 "repeatUntil":function(d){return "repetir hasta"},
-"repeatUntilBlocked":function(d){return "mientras haya camino delante"},
+"repeatUntilBlocked":function(d){return "mientras haya camino adelante"},
 "repeatUntilFinish":function(d){return "repetir hasta terminar"},
 "step":function(d){return "Paso"},
 "totalHoney":function(d){return "total de miel"},
