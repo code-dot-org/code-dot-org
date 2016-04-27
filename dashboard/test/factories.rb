@@ -351,10 +351,6 @@ FactoryGirl.define do
     plc_course_unit nil
   end
 
-  factory :written_enrollment_task_assignment, parent: :plc_enrollment_task_assignment, class: 'Plc::WrittenEnrollmentTaskAssignment' do
-    submission nil
-  end
-
   factory :plc_enrollment_task_assignment, :class => 'Plc::EnrollmentTaskAssignment' do
     status "MyString"
     plc_enrollment_module_assignment nil
