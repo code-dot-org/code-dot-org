@@ -21,8 +21,22 @@ var AnimationPreview = React.createClass({
 
   getInitialState: function () {
     return {
-      currentFrame: 0
+      currentFrame: 0,
+      framesPerRow: 1,
+      scaledSourceWidth: 0,
+      scaledFrameWidth: 0,
+      scaledFrameHeight: 0,
+      extraTopMargin: 0,
+      wrappedSourceUrl: ''
     };
+  },
+
+  componentWillMount: function () {
+    this.precalculateRenderProps(this.props);
+  },
+
+  componentWillReceiveProps: function (nextProps) {
+    this.precalculateRenderProps(nextProps);
   },
 
   componentWillUnmount: function () {
@@ -52,30 +66,55 @@ var AnimationPreview = React.createClass({
     this.setState({ currentFrame: 0 });
   },
 
-  render: function () {
-    var xScale = (this.props.width - 2 * MARGIN_PX) / this.props.frameWidth;
-    var yScale = (this.props.height - 2 * MARGIN_PX) / this.props.frameHeight;
-    var scale = Math.min(Math.min(xScale, yScale), 1);
+  precalculateRenderProps: function (nextProps) {
     var framesPerRow = Math.floor(this.props.sourceWidth / this.props.frameWidth);
+    var innerWidth = nextProps.width - 2 * MARGIN_PX;
+    var innerHeight = nextProps.height - 2 * MARGIN_PX;
+    var xScale = innerWidth / nextProps.frameWidth;
+    var yScale = innerHeight / nextProps.frameHeight;
+    var scale = Math.min(1, Math.min(xScale, yScale));
+    var scaledFrameHeight = nextProps.frameHeight * scale;
+    this.setState({
+      framesPerRow: framesPerRow,
+      scaledSourceWidth: nextProps.sourceWidth * scale,
+      scaledFrameWidth: nextProps.frameWidth * scale,
+      scaledFrameHeight: scaledFrameHeight,
+      extraTopMargin: Math.ceil((innerHeight - scaledFrameHeight) / 2),
+      wrappedSourceUrl: "url('" + this.props.sourceUrl + "')"
+    });
+  },
 
-    var xOffset = -this.props.frameWidth * scale * (this.state.currentFrame % framesPerRow);
-    var yOffset = -this.props.frameHeight * scale * Math.floor(this.state.currentFrame / framesPerRow);
+  render: function () {
+    var currentFrame = this.state.currentFrame;
+    var framesPerRow = this.state.framesPerRow;
+    var scaledFrameWidth = this.state.scaledFrameWidth;
+    var scaledFrameHeight = this.state.scaledFrameHeight;
+    var scaledSourceWidth = this.state.scaledSourceWidth;
+    var extraTopMargin = this.state.extraTopMargin;
+    var wrappedSourceUrl = this.state.wrappedSourceUrl;
+
+    var row = Math.floor(currentFrame / framesPerRow);
+    var column = currentFrame % framesPerRow;
+    var xOffset = -scaledFrameWidth * column;
+    var yOffset = -scaledFrameHeight * row;
+
     var containerStyle = {
       width: this.props.width,
       height: this.props.height
     };
     var imageStyle = {
-      width: this.props.frameWidth * scale - 2,
-      height: this.props.frameHeight * scale - 2,
-      marginTop: MARGIN_PX + (this.props.height - this.props.frameHeight * scale) / 2,
+      width: scaledFrameWidth,
+      height: scaledFrameHeight,
+      marginTop: MARGIN_PX + extraTopMargin,
       marginLeft: MARGIN_PX,
       marginRight: MARGIN_PX,
       marginBottom: MARGIN_PX,
-      backgroundImage: "url('" + this.props.sourceUrl + "')",
+      backgroundImage: wrappedSourceUrl,
       backgroundRepeat: 'no-repeat',
-      backgroundSize: this.props.sourceWidth * scale,
+      backgroundSize: scaledSourceWidth,
       backgroundPosition: xOffset + 'px ' + yOffset + 'px'
     };
+
     return (
       <div
           ref="root"
