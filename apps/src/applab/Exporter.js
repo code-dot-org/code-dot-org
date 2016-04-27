@@ -5,7 +5,6 @@
 var JSZip = require('jszip/dist/jszip.min');
 var saveAs = require('filesaver.js').saveAs;
 
-var assetListStore = require('../assetManagement/assetListStore');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var download = require('../assetManagement/download');
 var elementLibrary = require('./designElements/library');
@@ -94,7 +93,8 @@ export default {
       {url: '/assets/js/en_us/applab_locale.js', zipPath: appName + 'applab_locale.js'},
       {url: '/assets/js/applab-api.js', zipPath: appName + 'applab-api.js'},
       {url: '/assets/css/applab.css', zipPath: appName + 'applab.css'},
-    ].concat(assetListStore.list().map(function (asset) {
+      /* global dashboard */
+    ].concat(dashboard.assets.listStore.list().map(function (asset) {
       return {
         url: assetPrefix.fixPath(asset.filename),
         rootRelativePath: 'assets/' + asset.filename,
