@@ -1,5 +1,6 @@
-// TODO - can/should this duck module contain other state too?
-
+/**
+ * This duck module tracks whether the current app is running or not.
+ */
 var TOGGLE_RUNNING = 'isRunning/TOGGLE_RUNNING';
 
 module.exports.default = function (state, action) {
@@ -11,6 +12,9 @@ module.exports.default = function (state, action) {
   return nextState;
 };
 
+/**
+ * @param {boolean} isRunning - Whether the app is currently running or not.
+ */
 module.exports.toggleRunning = function (isRunning) {
   return {
     type: TOGGLE_RUNNING,
