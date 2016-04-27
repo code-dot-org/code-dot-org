@@ -1,3 +1,5 @@
+/* global dashboard */
+
 // TODO(pcardune): Stop using the already packaged/minified version of jszip in
 // favor just plain jszip. Due to a bug in (probably) browserify, we need to use
 // the minified version. See this comment for more details:
@@ -93,7 +95,6 @@ export default {
       {url: '/assets/js/en_us/applab_locale.js', zipPath: appName + 'applab_locale.js'},
       {url: '/assets/js/applab-api.js', zipPath: appName + 'applab-api.js'},
       {url: '/assets/css/applab.css', zipPath: appName + 'applab.css'},
-      /* global dashboard */
     ].concat(dashboard.assets.listStore.list().map(function (asset) {
       return {
         url: assetPrefix.fixPath(asset.filename),
