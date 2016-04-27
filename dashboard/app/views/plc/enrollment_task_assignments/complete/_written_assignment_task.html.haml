@@ -7,7 +7,7 @@
       = simple_format(@enrollment_task_assignment.plc_task.assignment_description)
   %p
     = f.label :writing
-    = f.text_area :submission, rows: 10, style: 'width: 100%'
+    -# TODO: render FreeResponse
 
   .actions
     = f.submit 'Submit'
