@@ -17,7 +17,7 @@ class Plc::TasksControllerTest < ActionController::TestCase
     [
         [Plc::LearningResourceTask, {resource_url: 'Some url', icon: 'Some icon class'}],
         [Plc::ScriptCompletionTask, {script_id: '1'}],
-        [Plc::WrittenAssignmentTask, {assignment_description: 'Tell me how you really feel'}]
+        [Plc::WrittenAssignmentTask, {level_id: '0'}]
 
     ].each do |task_type, task_params|
       @controller = Plc::TasksController.new
