@@ -21,7 +21,7 @@ Scenario: Submit three pages.
 
   And I press ".nextPageButton" using jQuery
   And I wait for 1 second
-  And I wait to see ".level-group-content:nth(0)"
+  And I wait to see ".level-group-content"
   And check that the URL contains "/page/2"
   And element ".level-group-content:nth(0) .multi-question" contains text "Which step should go"
 
@@ -32,7 +32,7 @@ Scenario: Submit three pages.
 
   And I press ".nextPageButton" using jQuery
   And I wait for 1 second
-  And I wait to see ".level-group-content:nth(0)"
+  And I wait to see ".level-group-content"
   And check that the URL contains "/page/3"
   And element ".level-group-content:nth(0) .multi-question" contains text "Which repeat block"
 

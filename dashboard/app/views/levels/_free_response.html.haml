@@ -12,7 +12,7 @@
     };
 
     $(document).ready(function() {
-      $("textarea#level_#{index}.response").blur(function () {
+      $("textarea#level_#{level.id}.response").blur(function () {
         if (window.levelGroup && window.levelGroup.answerChangedFn) {
           window.levelGroup.answerChangedFn();
         }
