@@ -36,7 +36,6 @@ var applabCommands = require('./commands');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var JsDebuggerUi = require('../JsDebuggerUi');
-var JsDebugger = require('../templates/JsDebugger');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var VisualizationOverlay = require('./VisualizationOverlay');
