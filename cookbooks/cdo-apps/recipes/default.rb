@@ -10,6 +10,9 @@ include_recipe 'apt'
 include_recipe 'sudo-user'
 include_recipe 'cdo-networking'
 
+# Set hostname to the Chef node name (via chef_hostname cookbook)
+hostname node.name
+
 # These packages are used by Gems we install via Bundler.
 
 # Used by image resizing and certificate generation.
