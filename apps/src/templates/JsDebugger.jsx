@@ -1,3 +1,5 @@
+var connect = require('react-redux').connect;
+
 var i18n = require('../locale');
 var commonStyles = require('../commonStyles');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
@@ -147,4 +149,10 @@ JsDebugger.propTypes = {
   debugWatch: React.PropTypes.bool.isRequired
 };
 
-module.exports = JsDebugger;
+module.exports = connect(function propsFromStore(state) {
+  return {
+    debugButtons: state.level.showDebugButtons,
+    debugConsole: state.level.showDebugConsole,
+    debugWatch: state.level.showDebugWatch
+  };
+})(JsDebugger);
