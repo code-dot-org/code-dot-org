@@ -899,6 +899,17 @@ class UserTest < ActiveSupport::TestCase
     User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, false)
   end
 
+  test 'track_level_progress_sync does not call track_proficiency if authored hint used' do
+    script_level = create :script_level
+    student = create :student
+    AuthoredHintViewRequest.create(user_id: student.id,
+      level_id: script_level.level_id, script_id: script_level.script_id)
+
+    User.expects(:track_proficiency).never
+
+    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, false)
+  end
+
   test 'normalize_gender' do
     assert_equal 'f', User.normalize_gender('f')
     assert_equal 'm', User.normalize_gender('m')

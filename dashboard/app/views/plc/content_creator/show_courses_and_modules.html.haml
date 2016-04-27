@@ -13,6 +13,7 @@
         - course_unit.plc_learning_modules.each do |learning_module|
           %li{style: 'margin-left: 10px; list-style: circle;'}
             = link_to learning_module.name, learning_module
+    %br
   .new_link
     = link_to 'Add new course', new_plc_course_path, class: 'btn'
 

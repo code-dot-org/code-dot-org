@@ -72,7 +72,7 @@ describe("Puzzle Rating Utils", function () {
       originalAjax = $.ajax;
     });
 
-    afterEach( function () {
+    afterEach(function () {
       $.ajax = originalAjax;
     });
 
