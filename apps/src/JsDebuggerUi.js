@@ -84,7 +84,7 @@ var JsDebuggerUi = module.exports = function (runApp) {
  * @param {!boolean} options.showButtons - Whether to show the debug buttons
  * @param {!boolean} options.showConsole - Whether to show the debug console
  * @param {!boolean} options.showWatch - Whether to show the debug watch area
- * @returns {string} of HTML markup to be embedded in CodeWorkspace
+ * @returns {string} of HTML markup to be embedded in codeWorkspace.html.ejs
  */
 JsDebuggerUi.prototype.getMarkup = function (assetUrl, options) {
   return require('./JsDebuggerUi.html.ejs')({
@@ -596,3 +596,4 @@ JsDebuggerUi.prototype.onWatchTimer_ = function () {
     }
   }
 };
+

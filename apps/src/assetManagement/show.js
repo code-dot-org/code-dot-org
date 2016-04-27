@@ -1,7 +1,7 @@
 /* global dashboard */
 
-var ImagePicker = require('../components/ImagePicker');
-var Dialog = require('../dialog');
+var ImagePicker = require('./ImagePicker');
+var studioApp = require('../StudioApp').singleton;
 
 /**
  * Display the "Manage Assets" modal.
@@ -9,15 +9,14 @@ var Dialog = require('../dialog');
  *   "Choose" button in the UI only appears if this optional param is provided.
  * @param typeFilter {String} The type of assets to show and allow to be
  *   uploaded.
- * @param onClose {Function} Called when the user closes the asset manager.
  */
-module.exports = function (assetChosen, typeFilter, onClose) {
+module.exports = function (assetChosen, typeFilter) {
   var codeDiv = document.createElement('div');
   var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
-  var dialog = new Dialog({
-    body: codeDiv,
-    id: 'manageAssetsModal',
-    onHidden: onClose
+  var dialog = studioApp.createModalDialog({
+    contentDiv: codeDiv,
+    defaultBtnSelector: 'again-button',
+    id: 'manageAssetsModal'
   });
   ReactDOM.render(React.createElement(ImagePicker, {
     typeFilter: typeFilter,

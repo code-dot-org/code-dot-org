@@ -1,8 +1,7 @@
-/* global dashboard */
-
 var api = require('./api');
 var dontMarshalApi = require('./dontMarshalApi');
 var consoleApi = require('../consoleApi');
+var showAssetManager = require('../assetManagement/show.js');
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
 var ChartApi = require('./ChartApi');
 var elementUtils = require('./designElements/elementUtils');
@@ -15,7 +14,7 @@ var DEFAULT_HEIGHT = (480 - applabConstants.FOOTER_HEIGHT).toString();
 
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
-  dashboard.assets.showAssetManager(callback, typeFilter);
+  showAssetManager(callback, typeFilter);
 }
 
 var COLOR_LIGHT_GREEN = '#D3E965';

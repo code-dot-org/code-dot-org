@@ -1,5 +1,5 @@
 var actions = require('@cdo/apps/gamelab/actions');
-var createStore = require('@cdo/apps/redux').createStore;
+var createStore = require('@cdo/apps/redux');
 var expect = require('chai').expect;
 var GameLabInterfaceMode = require('@cdo/apps/gamelab/constants').GameLabInterfaceMode;
 var gamelabReducer = require('@cdo/apps/gamelab/reducers').gamelabReducer;

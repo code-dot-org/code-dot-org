@@ -149,7 +149,9 @@ class FilesApi < Sinatra::Base
     # mime type matches what Sinatra expects for that file type.
     file_type = File.extname(filename)
     unsupported_media_type unless buckets.allowed_file_type?(file_type)
-    category = buckets.category_from_file_type(file_type)
+    # ignore client-specified mime type. infer it from file extension
+    # when serving assets.
+    mime_type = Sinatra::Base.mime_type(file_type)
 
     app_size = buckets.app_size(encrypted_channel_id)
 
@@ -157,6 +159,7 @@ class FilesApi < Sinatra::Base
     quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
 
+    category = mime_type.split('/').first
     {filename: filename, category: category, size: body.length, versionId: response.version_id}.to_json
   end
 
@@ -178,7 +181,9 @@ class FilesApi < Sinatra::Base
     # mime type matches what Sinatra expects for that file type.
     file_type = File.extname(filename)
     unsupported_media_type unless buckets.allowed_file_type?(file_type)
-    category = buckets.category_from_file_type(file_type)
+    # ignore client-specified mime type. infer it from file extension
+    # when serving assets.
+    mime_type = Sinatra::Base.mime_type(file_type)
 
     # Get the app size and size of the source object to check app quotas
     source_size, app_size = buckets.object_and_app_size(encrypted_channel_id, source_filename)
@@ -190,6 +195,7 @@ class FilesApi < Sinatra::Base
 
     response = buckets.copy(encrypted_channel_id, filename, source_filename)
 
+    category = mime_type.split('/').first
     {filename: filename, category: category, size: source_size, versionId: response.version_id}.to_json
   end
 

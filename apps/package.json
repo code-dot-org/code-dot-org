@@ -23,13 +23,13 @@
   "browserify": {
     "transform": [
       "require-globify",
-      "browserify-shim"
+      "browserify-shim",
+      "browserify-global-shim"
     ]
   },
   "browserify-global-shim": {
     "react": "React",
-    "react-dom": "ReactDOM",
-    "radium": "Radium"
+    "react-dom": "ReactDOM"
   },
   "browserify-shim": {
     "blockly": {
@@ -38,7 +38,8 @@
     "johnny-five": "global:JohnnyFive",
     "playground-io": "global:PlaygroundIO",
     "chrome-serialport": "global:ChromeSerialport",
-    "marked": "global:marked"
+    "marked": "global:marked",
+    "radium": "global:Radium"
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
@@ -114,8 +115,6 @@
   },
   "dependencies": {
     "query-string": "4.1.0",
-    "filesaver.js": "0.2.0",
-    "jszip": "3.0.0",
     "react-color": "^2.0.0"
   }
 }

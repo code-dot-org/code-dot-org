@@ -31,7 +31,6 @@ class Artist < Blockly
     free_play
     permitted_errors
     impressive
-    discard_background
     shapeways_url
     disable_sharing
   )

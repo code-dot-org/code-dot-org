@@ -7,8 +7,7 @@ var codegen = require('../codegen');
 var api = require('./api');
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var CodeWorkspace = require('../templates/CodeWorkspace');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = require('../lodash');
@@ -28,7 +27,7 @@ var dom = require('../dom');
 var experiments = require('../experiments');
 
 var actions = require('./actions');
-var createStore = require('../redux').createStore;
+var createStore = require('../redux');
 var gamelabReducer = require('./reducers').gamelabReducer;
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
@@ -187,12 +186,27 @@ GameLab.prototype.init = function (config) {
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
-  var extraControlRowsHtml = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
+  var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
     showButtons: true,
     showConsole: true,
     showWatch: true,
   });
-  var extraControlRows = <ProtectedStatefulDiv dangerouslySetInnerHTML={{ __html : extraControlRowsHtml }} />;
+
+  var generateCodeWorkspaceHtmlFromEjs = function () {
+    return codeWorkspaceEjs({
+      assetUrl: this.studioApp_.assetUrl,
+      data: {
+        localeDirection: this.studioApp_.localeDirection(),
+        extraControlRows: extraControlRows,
+        blockUsed : undefined,
+        idealBlockNumber : undefined,
+        editCode: this.level.editCode,
+        blockCounterClass : 'block-counter-default',
+        pinWorkspaceToBottom: true,
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  }.bind(this);
 
   this.reduxStore_.dispatch(actions.setInitialLevelProps({
     assetUrl: this.studioApp_.assetUrl,
@@ -209,18 +223,9 @@ GameLab.prototype.init = function (config) {
     this.reduxStore_.dispatch(actions.setInitialAnimationMetadata(config.initialAnimationMetadata));
   }
 
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={this.studioApp_.localeDirection()}
-      editCode={!!config.level.editCode}
-      readonlyWorkspace={!!config.readonlyWorkspace}
-      extraControlRows={extraControlRows}
-    />
-  );
-
   ReactDOM.render(<Provider store={this.reduxStore_}>
     <GameLabView
-      codeWorkspace={codeWorkspace}
+      generateCodeWorkspaceHtml={generateCodeWorkspaceHtmlFromEjs}
       showFinishButton={finishButtonFirstLine && showFinishButton}
       onMount={onMount} />
   </Provider>, document.getElementById(config.containerId));
@@ -739,8 +744,6 @@ GameLab.prototype.onP5ExecutionStarting = function () {
  * @return {Boolean} whether or not the preload has completed
  */
 GameLab.prototype.onP5Preload = function () {
-  this.gameLabP5.preloadAnimations(this.getAnimationMetadata());
-
   this.initInterpreter();
   // And execute the interpreter for the first time:
   if (this.JSInterpreter && this.JSInterpreter.initialized()) {
@@ -906,13 +909,4 @@ GameLab.prototype.displayFeedback_ = function () {
  */
 GameLab.prototype.getAnimationMetadata = function () {
   return this.reduxStore_.getState().animations;
-};
-
-GameLab.prototype.getAnimationDropdown = function () {
-  return this.getAnimationMetadata().map(function (animation) {
-    return {
-      text: utils.quote(animation.name),
-      display: utils.quote(animation.name)
-    };
-  });
 };
