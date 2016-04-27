@@ -1,7 +1,7 @@
-var TextMatch = function (id, levelId, standalone, answers, lastAttempt) {
-  this.id = id;
+window.levelGroup = window.levelGroup || {levels: {}};
 
-  this.levelId = levelId;
+var TextMatch = window.TextMatch = function (id, standalone, answers, lastAttempt) {
+  this.id = id;
 
   this.standalone = standalone;
 
@@ -39,10 +39,6 @@ TextMatch.prototype.getCurrentAnswer = function () {
   var valid = response.length > 1;
 
   return { response: response, valid: valid };
-};
-
-TextMatch.prototype.getLevelId = function () {
-  return this.levelId;
 };
 
 TextMatch.prototype.getResult = function () {

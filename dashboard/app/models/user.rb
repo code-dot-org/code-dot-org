@@ -864,6 +864,9 @@ SQL
         new_result == 100 &&
         HintViewRequest.
           where(user_id: user_id, script_id: script_id, level_id: level_id).
+          empty? &&
+        AuthoredHintViewRequest.
+          where(user_id: user_id, script_id: script_id, level_id: level_id).
           empty?
 
       # Update user_level with the new attempt.

@@ -1,7 +1,7 @@
 - data = level.properties
 - app = 'text_match'
 
-.text-match{id: "level_#{index}"}
+.text-match{id: "level_#{level.id}"}
   .mainblock
     = render partial: 'levels/content', locals: {app: app, data: data, source_level: level, hide_header: !standalone}
     - height = data['height'] || '80'
@@ -21,8 +21,7 @@
   :javascript
 
     window.levelGroup.levels[#{level.id}] = new TextMatch(
-      "level_#{index}",
-      #{level.id},
+      "level_#{level.id}",
       #{standalone},
       #{data['answers'] || []},
       #{last_attempt.to_json}

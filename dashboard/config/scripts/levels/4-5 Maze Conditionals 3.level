@@ -28,7 +28,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "instructions": "Use the `if` block to help me decide when to turn. \r\n"
+    "instructions": "Use the `if` block to help me decide when to turn. \r\n",
+    "maze_data": null
   },
   "published": true,
   "notes": "",
@@ -69,13 +70,13 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_if">
           <title name="DIR">isPathLeft</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

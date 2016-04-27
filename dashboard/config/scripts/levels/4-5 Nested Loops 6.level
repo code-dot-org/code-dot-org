@@ -96,15 +96,11 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">6</title>
-        </block>
-      </xml>
-    </required_blocks>
     <recommended_blocks>
       <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
         <block type="pick_one">
           <statement name="PICK">
             <block type="draw_turn_by_constant">
