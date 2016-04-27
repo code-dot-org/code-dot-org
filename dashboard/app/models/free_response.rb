@@ -28,10 +28,8 @@ class FreeResponse < Level
     height
     placeholder
     encrypted_solution
-    allow_user_uploads
     skip_dialog
     skip_sound
-    submittable
   )
 
   before_validation do

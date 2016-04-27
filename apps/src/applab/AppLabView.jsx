@@ -16,7 +16,7 @@ var AppLabView = React.createClass({
     screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
 
-    codeWorkspace: React.PropTypes.element.isRequired,
+    generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
     onMount: React.PropTypes.func.isRequired
   },
 
@@ -35,7 +35,7 @@ var AppLabView = React.createClass({
             id="visualizationResizeBar"
             className="fa fa-ellipsis-v" />
         <InstructionsWithWorkspace
-          codeWorkspace={this.props.codeWorkspace}/>
+          generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}/>
       </ConnectedStudioAppWrapper>
     );
   }

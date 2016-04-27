@@ -20,6 +20,7 @@ class ProjectsController < ApplicationController
     },
     gamelab: {
       name: 'New Game Lab Project',
+      admin_required: true,
       login_required: true
     },
     makerlab: {

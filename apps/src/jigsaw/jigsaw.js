@@ -10,7 +10,7 @@
 var studioApp = require('../StudioApp').singleton;
 var skins = require('../skins');
 var AppView = require('../templates/AppView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');
 var dom = require('../dom');
 
@@ -149,13 +149,16 @@ Jigsaw.init = function (config) {
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={studioApp.localeDirection()}
-      editCode={!!level.editCode}
-      readonlyWorkspace={!!config.readonlyWorkspace}
-    />
-  );
+  var generateCodeWorkspaceHtmlFromEjs = function () {
+    return codeWorkspaceEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        localeDirection: studioApp.localeDirection(),
+        editCode: level.editCode,
+        blockCounterClass: 'block-counter-default'
+      }
+    });
+  };
 
   var onMount = function () {
     studioApp.init(config);
@@ -181,7 +184,7 @@ Jigsaw.init = function (config) {
     hideSource: !!config.hideSource,
     noVisualization: true,
     isRtl: studioApp.isRtl(),
-    codeWorkspace: codeWorkspace,
+    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
     visualizationColumn: <JigsawVisualizationColumn/>,
     onMount: onMount
   }), document.getElementById(config.containerId));
