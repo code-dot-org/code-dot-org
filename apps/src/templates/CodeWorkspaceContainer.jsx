@@ -55,7 +55,7 @@ var CodeWorkspaceContainer = React.createClass({
     hidden: React.PropTypes.bool,
     isRtl: React.PropTypes.bool.isRequired,
     noVisualization: React.PropTypes.bool.isRequired,
-    generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
+    codeWorkspace: React.PropTypes.element.isRequired,
     onSizeChange: React.PropTypes.func
   },
 
@@ -88,9 +88,7 @@ var CodeWorkspaceContainer = React.createClass({
         <ProtectedStatefulDiv
             id="codeWorkspace"
             style={styles.codeWorkspace}>
-          <ProtectedStatefulDiv
-              id="codeWorkspaceWrapper"
-              contentFunction={this.props.generateCodeWorkspaceHtml}/>
+          {this.props.codeWorkspace}
           <ProtectedStatefulDiv id="designWorkspace" style={styles.hidden}/>
         </ProtectedStatefulDiv>
       </div>
