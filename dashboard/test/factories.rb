@@ -380,6 +380,7 @@ FactoryGirl.define do
   factory :plc_learning_module, :class => 'Plc::LearningModule' do
     name "MyString"
     plc_course_unit {create(:plc_course_unit)}
+    module_type Plc::LearningModule::CONTENT_MODULE
   end
   factory :plc_course, :class => 'Plc::Course' do
     name "MyString"
