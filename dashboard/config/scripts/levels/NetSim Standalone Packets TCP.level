@@ -56,9 +56,14 @@
     "default_router_memory": "Infinity",
     "default_random_drop_chance": ".1",
     "markdown_instructions": "# Packets and Making a Reliable Internet\r\n\r\nMessages on the Internet can take many paths to get to their destination, and sometimes along the way the message gets dropped. In this version of the Internet Simulator:\r\n\r\n- There is a 10% chance of a packet being dropped\r\n- Multiple packets may take different paths to the destination\r\n- The default max packet size is set to 6 additional characters\r\n\r\nYour teacher will hand out more specific instructions for this activity.",
-    "router_expects_packet_header": "[\"toAddress\", \"fromAddress\", \"packetIndex\",\"packetCount\"]",
-    "client_initial_packet_header": "[\"toAddress\", \"fromAddress\", \"packetIndex\",\"packetCount\"]",
-    "examples_required": "false"
+    "router_expects_packet_header": "[\"toAddress\", \"fromAddress\"]",
+    "client_initial_packet_header": "[\"toAddress\", \"fromAddress\"]",
+    "examples_required": "false",
+    "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

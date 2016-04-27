@@ -28,7 +28,8 @@
     "examples_required": "false",
     "markdown_instructions": "The `if/else` block checks a condition, and then does one thing OR another. \r\n\r\nUse this new block to get me to the sunflower.",
     "never_autoplay_video": "false",
-    "step_speed": "1"
+    "step_speed": "1",
+    "maze_data": null
   },
   "published": true,
   "notes": "",
@@ -69,13 +70,13 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_ifElse">
           <title name="DIR">isPathForward</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

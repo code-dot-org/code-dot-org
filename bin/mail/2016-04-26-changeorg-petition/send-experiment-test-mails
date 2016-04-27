@@ -1,0 +1,14 @@
+#!/bin/sh
+
+../send-to-mailing-list 4-22-petition-congress-1a-no  ../mailing-common/test-params-us.csv
+../send-to-mailing-list 4-22-petition-congress-1a-yes ../mailing-common/test-params-us.csv
+../send-to-mailing-list 4-22-petition-congress-1b-no  ../mailing-common/test-params-us.csv
+../send-to-mailing-list 4-22-petition-congress-1b-yes ../mailing-common/test-params-us.csv
+../send-to-mailing-list 4-22-petition-congress-2a-no  ../mailing-common/test-params-us.csv
+../send-to-mailing-list 4-22-petition-congres.s-2a-yes ../mailing-common/test-params-us.csv
+../send-to-mailing-list 4-22-petition-congress-2b-no  ../mailing-common/test-params-us.csv
+../send-to-mailing-list 4-22-petition-congress-2b-yes ../mailing-common/test-params-us.csv
+../send-to-mailing-list 4-22-petition-congress-3a-no  ../mailing-common/test-params-us.csv
+../send-to-mailing-list 4-22-petition-congress-3a-yes ../mailing-common/test-params-us.csv
+../send-to-mailing-list 4-22-petition-congress-3b-no  ../mailing-common/test-params-us.csv
+../send-to-mailing-list 4-22-petition-congress-3b-yes ../mailing-common/test-params-us.csv
