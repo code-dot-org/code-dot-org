@@ -444,9 +444,9 @@ class User < ActiveRecord::Base
     user_levels.where(script: stage.script, level: levels).pluck(:level_id, :best_result).to_h
   end
 
-  def user_level_for(script_level)
+  def user_level_for(script_level, level)
     user_levels.find_by(script_id: script_level.script_id,
-                        level_id: script_level.level_id)
+                        level_id: level.id)
   end
 
   def next_unpassed_progression_level(script)
