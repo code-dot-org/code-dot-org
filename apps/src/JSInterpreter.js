@@ -43,7 +43,7 @@ var JSInterpreter = module.exports = function (options) {
   this.executionError = null;
   this.nextStep = StepType.RUN;
   this.maxValidCallExpressionDepth = 0;
-  this.executeLoopDepth = 0;
+  this.isExecuting = false;
   this.callExpressionSeenAtDepth = [];
   this.stoppedAtBreakpointRows = [];
   this.logExecution = options.logExecution;
@@ -102,7 +102,7 @@ JSInterpreter.prototype.parse = function (options) {
             arguments: args
           });
 
-          if (self.executeLoopDepth === 0) {
+          if (!self.isExecuting) {
             // Execute the interpreter and if a return value is sent back from the
             // interpreter's event handler, pass that back in the native world
 
@@ -368,7 +368,11 @@ var INTERSTITIAL_NODES = {
  * Execute the interpreter
  */
 JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallbackReturn) {
-  this.executeLoopDepth++;
+  if (this.isExecuting) {
+    console.error('Attempt to call executeInterpreter while already executing ignored');
+    return;
+  }
+  this.isExecuting = true;
   this.runUntilCallbackReturn = runUntilCallbackReturn;
   if (runUntilCallbackReturn) {
     delete this.lastCallbackRetVal;
@@ -579,7 +583,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
       if (this.executionError) {
         this.handleError(inUserCode ? (userCodeRow + 1) : undefined);
       }
-      this.executeLoopDepth--;
+      this.isExecuting = false;
       return;
     }
   }
@@ -588,7 +592,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     // code may not be selected in the editor, so do it now:
     this.selectCurrentCode();
   }
-  this.executeLoopDepth--;
+  this.isExecuting = false;
 };
 
 /**

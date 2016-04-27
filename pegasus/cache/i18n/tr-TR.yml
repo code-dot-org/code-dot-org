@@ -650,6 +650,11 @@
   dashboard_action_remove_confirm: Kaldırılsın mı?
   dashboard_action_done: Bitti
   dashboard_action_required: gerekli
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: "Öğretmen Ana Sayfa"
   dashboard_navigation_section_student_progress: "Öğrenci hesapları ve ilerleme"
   dashboard_navigation_section_teacher_progress: Ders Gelişiminiz
@@ -667,6 +672,18 @@
   dashboard_navigation_view_stats: "İstatistikleri görüntüle"
   dashboard_navigation_section: 'Bölüm: %{section_name}'
   dashboard_navigation_student: "Öğrenci: %{student_name}"
+  dashboard_progress_not_started: Başlatılmadı
+  dashboard_progress_in_progress: "İşlem devam ediyor"
+  dashboard_progress_not_completed: tamamlanmadı
+  dashboard_progress_completed_too_many_blocks: tamamlanmadı, fazla blok var
+  dashboard_progress_completed_perfect: tamamlandı, harika
+  dashboard_progress_furthest_level_attempted: denenen en yüksek seviye
+  dashboard_progress_submitted: gönderildi
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Yeni bölüm
   dashboard_sections_jumbotron_instruction: Yeni bölümler oluşturun ve onlara öğrenciler
     ekleyin. Bölümler öğrencileri daha küçük gruplara ayırmanızı sağlar böylece öğrencilerin
@@ -691,6 +708,26 @@
   dashboard_sections_print_secrets: Daha sonra, öğrencilerinize dağıtılmak üzere,
     üzerinde hesap bilgileri bulunan kartların çıktısını yazdırabilirsiniz.
   dashboard_sections_switch_section: 'Bölüm değşitir:'
+  dashboard_sections_close: Kapat
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: "Öğrenci Ekle"
   dashboard_students_add_students: Birden fazla öğrenci Ekle
   dashboard_students_add_multiple: 'Yazın veya öğrencilerinzin isimlerini, her satırda
@@ -771,13 +808,6 @@
   dashboard_login_picture: Resim
   dashboard_login_none: E-posta
   dashboard_new_password: yeni şifre
-  dashboard_progress_not_started: Başlatılmadı
-  dashboard_progress_in_progress: "İşlem devam ediyor"
-  dashboard_progress_not_completed: tamamlanmadı
-  dashboard_progress_completed_too_many_blocks: tamamlanmadı, fazla blok var
-  dashboard_progress_completed_perfect: tamamlandı, harika
-  dashboard_progress_furthest_level_attempted: denenen en yüksek seviye
-  dashboard_progress_submitted: gönderildi
   dashboard_stage: kademe
   dashboard_puzzle: Bulmaca
   dashboard_question: Soru
@@ -821,20 +851,7 @@
   dashboard_announce_message: "<b>4 Nisan 2016</b> - hepimiz Bilgisayar Biliminde
     bir çeşitlilik sorun olduğunu biliyorum. Kod Studio azınlıklara kod eğitmek için
     öncülük edecek. Bizim yıllık araştırmamız çeşitliği göstermektedir."
-  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you
-    (or a teacher you know) want to learn how to teach a full year introductory high
-    school computer science class students will love? You don't need any prior experience
-    to join our free workshops for our Exploring Computer Science course. Sign up
-    by April 22nd. "
   dashboard_announce_button_text: Daha fazlasını öğren
-  dashboard_announce_hoc: "<b>23 Kasım 2015</b> - Kod saati sırasında yardımcı olabilecek
-    Bilgisayar Bilimleri Eğitim hakkında tutkulu bir gönüllüler istiyorum? 7.000 gönüllü
-    öğrencilerin sınıfına gidip veya uzaktan video ile sohbet ziyaret ederek ilham
-    verecek kişiler için arıyoruz. Bölgenizdeki Gönüllüleri görmek için gönüllü haritasına
-    göz atın."
-  dashboard_announce_playlab: "<b>4 Aralık 2015</b> - İşte Code saat ! 50 ders her
-    yaş ve her aygıt için uygun. Bu hafta yeni: Kendi hikayelerini ve oyunlarını oluştur
-    : oyun Labaratuarı, buz devri ve Gumball."
   code_hoc_coming: Kod Saati burada - Aralık 8-14!
   code_sign_up: CS Education Week' e katılmak için kaydolun.
   learn_more: Daha Fazla Bilgi Edinin
@@ -1636,7 +1653,7 @@
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: kanat çırp
+  flappy_shortcode: kanat çırpmak
   infinity_shortcode: inf
   playlab_shortcode: oynat
   artist_shortcode: art

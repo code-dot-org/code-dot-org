@@ -3,7 +3,6 @@
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var DesignWorkspace = require('./DesignWorkspace');
-var showAssetManager = require('../assetManagement/show');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
@@ -21,6 +20,8 @@ var ICON_PREFIX = applabConstants.ICON_PREFIX;
 var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
 
 var currentlyEditedElement = null;
+var clipboardElement = null;
+
 var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
 
 /**
@@ -92,7 +93,11 @@ designMode.activeScreen = function () {
  */
 designMode.createElement = function (elementType, left, top) {
   var element = elementLibrary.createElement(elementType, left, top);
+  designMode.attachElement(element);
+  return element;
+};
 
+designMode.attachElement = function (element) {
   var parent;
   var isScreen = $(element).hasClass('screen');
   if (isScreen) {
@@ -106,8 +111,6 @@ designMode.createElement = function (elementType, left, top) {
     makeDraggable($(element));
   }
   designMode.editElementProperties(element);
-
-  return element;
 };
 
 designMode.editElementProperties = function (element) {
@@ -173,26 +176,6 @@ designMode.onPropertyChange = function (element, name, value) {
   designMode.updateProperty(element, name, value);
   designMode.editElementProperties(element);
 };
-
-/**
- * Create a data-URI with the image data of the given icon glyph.
- * @param value {string} An icon identifier of the format "icon://fa-icon-name".
- * @param element {Element}
- * @return {string}
- */
-function renderIconToString(value, element) {
-  var canvas = document.createElement('canvas');
-  canvas.width = canvas.height = 400;
-  var ctx = canvas.getContext('2d');
-  ctx.font = '300px FontAwesome, serif';
-  ctx.textBaseline = 'middle';
-  ctx.textAlign = 'center';
-  ctx.fillStyle = element.getAttribute('data-icon-color');
-  var regex = new RegExp('^' + ICON_PREFIX + 'fa-');
-  var unicode = '0x' + dashboard.iconsUnicode[value.replace(regex, '')];
-  ctx.fillText(String.fromCharCode(unicode), 200, 200);
-  return canvas.toDataURL();
-}
 
 /**
  * After handling properties generically, give elementLibrary a chance
@@ -282,7 +265,7 @@ designMode.updateProperty = function (element, name, value) {
       };
 
       if (ICON_PREFIX_REGEX.test(value)) {
-        element.style.backgroundImage = 'url(' + renderIconToString(value, element) + ')';
+        element.style.backgroundImage = 'url(' + assetPrefix.renderIconToString(value, element) + ')';
         fitImage();
         break;
       }
@@ -296,7 +279,6 @@ designMode.updateProperty = function (element, name, value) {
         backgroundImage.onload = fitImage;
       }
       break;
-
     case 'screen-image':
       element.setAttribute('data-canonical-image-url', value);
 
@@ -305,17 +287,16 @@ designMode.updateProperty = function (element, name, value) {
       var height = parseInt(element.style.height, 10);
       element.style.backgroundSize = width + 'px ' + height + 'px';
 
-      var url = ICON_PREFIX_REGEX.test(value) ? renderIconToString(value, element) : assetPrefix.fixPath(value);
+      var url = ICON_PREFIX_REGEX.test(value) ? assetPrefix.renderIconToString(value, element) : assetPrefix.fixPath(value);
       element.style.backgroundImage = 'url(' + url + ')';
 
       break;
-
     case 'picture':
       originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
 
       if (ICON_PREFIX_REGEX.test(value)) {
-        element.src = renderIconToString(value, element);
+        element.src = assetPrefix.renderIconToString(value, element);
         break;
       }
 
@@ -447,6 +428,37 @@ designMode.updateProperty = function (element, name, value) {
   if (!handled) {
     throw "unknown property name " + name;
   }
+};
+
+designMode.onDuplicate = function (element, event) {
+  var isScreen = $(element).hasClass('screen');
+  if (isScreen) {
+    // Not duplicating screens for now
+    return;
+  }
+
+  var duplicateElement = element.cloneNode(true);
+  var dupLeft = parseInt(element.style.left, 10) + 10;
+  var dupTop = parseInt(element.style.top, 10) + 10;
+  var dupWidth = parseInt(element.style.width, 10);
+  var dupHeight = parseInt(element.style.height, 10);
+
+  // Ensure the position of the duplicate element is within the bounds of the container
+  var position = enforceContainment(dupLeft, dupTop, dupWidth, dupHeight);
+
+  // Change the ID and location of the duplicate element
+  duplicateElement.style.left = appendPx(position.left);
+  duplicateElement.style.top = appendPx(position.top);
+
+  var elementType = elementLibrary.getElementType(element);
+  elementUtils.setId(duplicateElement, elementLibrary.getUnusedElementId(elementType.toLowerCase()));
+
+  // Attach the duplicate element and then focus on it
+  designMode.attachElement(duplicateElement);
+  duplicateElement.focus();
+  designMode.editElementProperties(duplicateElement);
+
+  return duplicateElement;
 };
 
 designMode.onDeletePropertiesButton = function (element, event) {
@@ -740,20 +752,14 @@ function makeDraggable(jqueryElements) {
         newTop = gridUtils.snapToGridSize(newTop);
 
         // containment
-        var container = $('#designModeViz');
-        var maxLeft = container.outerWidth() - ui.helper.outerWidth(true);
-        var maxTop = container.outerHeight() - ui.helper.outerHeight(true);
-        newLeft = Math.min(newLeft, maxLeft);
-        newLeft = Math.max(newLeft, 0);
-        newTop = Math.min(newTop, maxTop);
-        newTop = Math.max(newTop, 0);
+        var position = enforceContainment(newLeft, newTop, ui.helper.outerWidth(true), ui.helper.outerHeight(true));
 
-        ui.position.left = newLeft;
-        ui.position.top = newTop;
+        ui.position.left = position.left;
+        ui.position.top = position.top;
 
         elm.css({
-          top: newTop,
-          left: newLeft
+          top: position.top,
+          left: position.left
         });
 
         designMode.renderDesignWorkspace(elm[0]);
@@ -787,6 +793,22 @@ function makeDraggable(jqueryElements) {
 
     elm.css('position', 'static');
   });
+}
+
+/**
+ * Provide coordinates for the element that are enforced within the container space.
+ */
+function enforceContainment(left, top, width, height) {
+  var container = $('#designModeViz');
+  var maxLeft = container.outerWidth() - width;
+  var maxTop = container.outerHeight() - height;
+
+  var newLeft = Math.min(left, maxLeft);
+  newLeft = Math.max(newLeft, 0);
+  var newTop = Math.min(top, maxTop);
+  newTop = Math.max(newTop, 0);
+
+  return {'left': newLeft, 'top': newTop};
 }
 
 /**
@@ -967,9 +989,10 @@ designMode.renderDesignWorkspace = function (element) {
     handleChange: designMode.onPropertyChange.bind(this, element),
     onChangeElement: designMode.editElementProperties.bind(this),
     onDepthChange: designMode.onDepthChange,
+    onDuplicate: designMode.onDuplicate.bind(this, element),
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
     onInsertEvent: designMode.onInsertEvent.bind(this),
-    handleManageAssets: showAssetManager,
+    handleManageAssets: dashboard.assets.showAssetManager,
     isDimmed: Applab.running
   };
   ReactDOM.render(React.createElement(DesignWorkspace, props), designWorkspace);
@@ -1003,12 +1026,38 @@ designMode.addKeyboardHandlers = function () {
     if (!Applab.isInDesignMode() || Applab.isRunning()) {
       return;
     }
+
+    // Check for copy and paste events
+    if (event.altKey || event.ctrlKey || event.metaKey) {
+      switch (event.which) {
+        case KeyCodes.COPY:
+          if (currentlyEditedElement) {
+            // Remember the current element on the clipboard
+            clipboardElement = currentlyEditedElement.cloneNode(true);
+          }
+          break;
+        case KeyCodes.PASTE:
+          // Paste the clipboard element with updated position and ID
+          if (clipboardElement) {
+            var duplicateElement = designMode.onDuplicate(clipboardElement);
+            // For now, screens can't be duplicated, so duplicate element could be null
+            if (duplicateElement) {
+              clipboardElement = duplicateElement.cloneNode(true);
+            }
+          }
+          break;
+        default:
+          return;
+      }
+    }
+
     if (!currentlyEditedElement || $(currentlyEditedElement).hasClass('screen')) {
       return;
     }
 
     var current, property, newValue;
 
+    // Check for keys that change element properties
     switch (event.which) {
       case KeyCodes.LEFT:
         current = parseInt(currentlyEditedElement.style.left, 10);
@@ -1034,6 +1083,7 @@ designMode.addKeyboardHandlers = function () {
         return;
     }
     designMode.onPropertyChange(currentlyEditedElement, property, newValue);
+
   });
 };
 

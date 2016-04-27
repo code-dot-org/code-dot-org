@@ -1,0 +1,8 @@
+pd 'true'
+title 'ECS: Phase 1 PD'
+description 'Two hour introduction to your Professional Learning Program for the ECS Version 5 curriculum'
+description_short 'Introduction to the Code.org ECS Version 5 Program'
+login_required 'true'
+
+stage 'Getting Started'
+level 'ECSPD1 pre survey'

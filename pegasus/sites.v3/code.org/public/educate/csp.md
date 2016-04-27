@@ -28,8 +28,16 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 
 <div style="clear: both;"></div>
 
-## Code.org's CS Principles Curriculum
-Check back often as batches of lessons will be released on a rolling basis. The resources are distributed under a Creative Commons Attribution NonCommerical ShareAlike License see our [Terms of Service](https://code.org/tos).
+## Code.org's AP CS Principles Curriculum
+
+<img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge"> Starting in the 2016-17 school year Code.org is recognized by the College Board as an endorsed provider of curriculum and professional development for AP® Computer Science Principles (AP CSP). This endorsement affirms that all components of Code.org CSP’s offerings are aligned to the AP Curriculum Framework standards and the AP CSP assessment. Using an endorsed provider affords schools access to resources including an AP CSP syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach AP CSP.
+
+ * [Code.org 2016-17 AP CSP Endorsed Syllabus ID #1648108v1](/files/CSPSyllabusApril2016.pdf)
+ <br>
+ 
+ *Note: The course materials on this page (see below) still reflect the sequence of 2015-16 pilot course syllabus. Though largely the same, the new sequence and other small changes will be updated to reflect the 2016 AP Endorsed syllabus soon.*
+
+The resources are distributed under a Creative Commons Attribution NonCommerical ShareAlike License see our [Terms of Service](https://code.org/tos).
 
 ### <a name="features"></a>Features
 
@@ -78,8 +86,15 @@ Check back often.  The video library is growing every week!
 Several documents describe the overarching themes and direction of the course.
 
 - [One-pager](/files/programs/CSP_1-pager_final.pdf)
-- [Curriculum Syllabus and Overview](/files/CSPSyllabusJan2016.pdf) (rev. Jan. 2016)
+- **New** [2016 AP Endorsed Syllabus and Overview](/files/CSPSyllabusApril2016.pdf)
+  - *Note: The course materials on this page still reflect the sequence of 2015-16 pilot course syllabus. The sequence and other small changes will be updated to reflect the 2016 AP Endorsed syllabus soon. Reference: [2015-16 Pilot Syllabus and Overview](/files/CSPSyllabusJan2016.pdf) (rev. Jan. 2016)*
 - [Professional development overview](/files/CSPPDoverview.pdf)
+
+
+
+
+
+
 
 
 ## <a name="lessons"></a>Lessons
@@ -109,11 +124,13 @@ We have forums for educators to discuss and trade ideas about CSP and talk about
 
 #### How can I access answer keys? 
 Any teacher can apply for Code Studio access to protected teacher-only materials (answer keys, etc) through <strong><a href = "https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform" target="_blank">this form</a></strong>.
-<br>
+
+<br />
 
 #### How can I communicate with other teachers who are using the curriculum? 
 Check out our forum at <a href ="forum.code.org" target=_blank>http://forum.code.org</a>. There you'll find a space for general CSP discussion as well as unit- and lesson-specific threads.
-<br>
+
+<br />
 
 #### When will lessons be published?
 

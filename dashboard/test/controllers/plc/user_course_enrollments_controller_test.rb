@@ -6,6 +6,8 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     sign_in(@user)
     @plc_course = create :plc_course
     @user_course_enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @plc_course)
+    @course_unit = create(:plc_course_unit, plc_course: @plc_course)
+    @enrollment_unit_assignment = create(:plc_enrollment_unit_assignment, plc_course_unit: @course_unit, plc_user_course_enrollment: @user_course_enrollment)
     @district_contact = create :district_contact
   end
 
@@ -33,6 +35,14 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to plc_user_course_enrollments_path
+  end
+
+  test 'Enrollment is viewable in all possible enrollment states' do
+    Plc::EnrollmentUnitAssignment::UNIT_STATUS_STATES.each do |status|
+      @enrollment_unit_assignment.update!(status: status)
+
+      get :index
+    end
   end
 
   test 'Admins can access course and group view and manager view' do
