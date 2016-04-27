@@ -30,34 +30,18 @@ var ShareDialogBody = React.createClass({
     appType: React.PropTypes.string.isRequired,
 
     onClickPopup: React.PropTypes.func.isRequired,
-    onClickClose: React.PropTypes.func.isRequired,
-    onClickExport: React.PropTypes.func,
+    onClickClose: React.PropTypes.func.isRequired
   },
 
   getInitialState: function () {
     return {
-      showSendToPhone: false,
-      exporting: false,
-      exportError: null,
+      showSendToPhone: false
     };
   },
 
   showSendToPhone: function (event) {
     this.setState({showSendToPhone: true });
     event.preventDefault();
-  },
-
-  clickExport: function () {
-    this.setState({exporting: true});
-    this.props.onClickExport().then(
-      this.setState.bind(this, {exporting: false}),
-      function () {
-        this.setState({
-          exporting: false,
-          exportError: 'Failed to export project. Please try again later.'
-        });
-      }.bind(this)
-    );
   },
 
   render: function () {
@@ -148,6 +132,17 @@ var ShareDialogBody = React.createClass({
               onClick={this.props.onClickClose}>
             {this.props.closeText}
           </button>
+          <div className="social-buttons">
+            <a href={facebookShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)} style={horzPadding}>
+              <i className="fa fa-facebook"></i>
+            </a>
+            <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)} style={horzPadding}>
+              <i className="fa fa-twitter"></i>
+            </a>
+            <a id="sharing-phone" href="" style={horzPadding} onClick={this.showSendToPhone}>
+              <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
+            </a>
+          </div>
 
           {sendToPhone}
         </div>

@@ -1,0 +1,39 @@
+<%
+var msg = require('../locale');
+%>
+<div id="headers" dir="<%= data.localeDirection %>">
+  <div id="codeModeHeaders">
+    <div id="toolbox-header" class="workspace-header">
+      <i id="hide-toolbox-icon" style="display:none;" class="fa fa-chevron-circle-right"></i>
+      <span><%= data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() %></span>
+    </div>
+    <div id="show-toolbox-header" class="workspace-header" style="display:none;">
+      <i id="show-toolbox-icon" class="fa fa-chevron-circle-right"></i>
+      <span><%= msg.showToolbox() %></span>
+    </div>
+    <div id="show-code-header" class="workspace-header workspace-header-button"><span><img src="<%= assetUrl('media/applab/blocks_glyph.gif') %>" class="blocks-glyph" /><i class="fa fa-code"></i><%= msg.showCodeHeader() %></span></div>
+    <% if (!data.readonlyWorkspace) { %>
+      <div id="clear-puzzle-header" class="workspace-header workspace-header-button"><span><i class="fa fa-undo"></i><%= msg.clearPuzzle() %></span></div>
+    <% } %>
+    <div id="versions-header" class="workspace-header workspace-header-button"><span><i class="fa fa-clock-o"></i><%= msg.showVersionsHeader() %></span></div>
+    <div id="workspace-header" class="workspace-header">
+      <span id="workspace-header-span">
+        <%= data.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort() %>
+      </span>
+      <div id="blockCounter">
+        <div id="blockUsed" class=<%= data.blockCounterClass %>>
+          <%= data.blockUsed %>
+        </div>
+        <span>/</span>
+        <span id="idealBlockNumber"><%= data.idealBlockNumber %></span>
+        <span> <%= msg.blocks() %></span>
+      </div>
+    </div>
+  </div>
+</div>
+<% if (data.editCode) { %>
+  <div id="codeTextbox"></div>
+<% } %>
+<% if (data.pinWorkspaceToBottom && data.extraControlRows) { %>
+  <%- data.extraControlRows %>
+<% } %>

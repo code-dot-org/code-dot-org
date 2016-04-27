@@ -934,7 +934,6 @@ en:
           Star wars: Star wars
           Minecraft: Minecraft
           Rich long assessment: Rich long assessment
-          Free Response: Free Response
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1813,6 +1812,7 @@ en:
           description: Test of new educational philosophy
           description_audience: Ages 8-18
           Computational Thinking: Computational Thinking
+          Sample Stage: Sample Stage
         ECSPD1:
           title: 'ECS: Phase 1 PD'
           description_short: Introduction to the Code.org ECS Version 5 Program

@@ -30,12 +30,8 @@ var styles = {
     right: 0,
     bottom: 0,
     top: 0,
-    borderBottomStyle: 'none',
-    borderRightStyle: 'none',
-    borderLeftStyle: 'none',
-    borderTopWidth: 1,
-    borderTopStyle: 'solid',
-    borderTopColor: '#ddd',
+    border: 'none',
+    borderTop: '1px solid #ddd',
     overflow: 'hidden',
     zIndex: 0
   },
@@ -55,7 +51,7 @@ var CodeWorkspaceContainer = React.createClass({
     hidden: React.PropTypes.bool,
     isRtl: React.PropTypes.bool.isRequired,
     noVisualization: React.PropTypes.bool.isRequired,
-    codeWorkspace: React.PropTypes.element.isRequired,
+    generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
     onSizeChange: React.PropTypes.func
   },
 
@@ -88,7 +84,9 @@ var CodeWorkspaceContainer = React.createClass({
         <ProtectedStatefulDiv
             id="codeWorkspace"
             style={styles.codeWorkspace}>
-          {this.props.codeWorkspace}
+          <ProtectedStatefulDiv
+              id="codeWorkspaceWrapper"
+              contentFunction={this.props.generateCodeWorkspaceHtml}/>
           <ProtectedStatefulDiv id="designWorkspace" style={styles.hidden}/>
         </ProtectedStatefulDiv>
       </div>

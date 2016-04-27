@@ -15,7 +15,7 @@ var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
 var AppView = require('../templates/AppView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
+var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
 var BounceVisualizationColumn = require('./BounceVisualizationColumn');
 var dom = require('../dom');
 var Hammer = require('../hammer');
@@ -771,20 +771,26 @@ Bounce.init = function (config) {
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
+  var generateCodeWorkspaceHtmlFromEjs = function () {
+    return codeWorkspaceEjs({
+      assetUrl: studioApp.assetUrl,
+      data: {
+        localeDirection: studioApp.localeDirection(),
+        blockUsed: undefined,
+        idealBlockNumber: undefined,
+        editCode: level.editCode,
+        blockCounterClass: 'block-counter-default',
+        readonlyWorkspace: config.readonlyWorkspace
+      }
+    });
+  };
+
   var onMount = function () {
     studioApp.init(config);
 
     var finishButton = document.getElementById('finishButton');
     dom.addClickTouchEvent(finishButton, Bounce.onPuzzleComplete);
   };
-
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={studioApp.localeDirection()}
-      editCode={!!level.editCode}
-      readonlyWorkspace={!!config.readonlyWorkspace}
-    />
-  );
 
   ReactDOM.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
@@ -793,7 +799,7 @@ Bounce.init = function (config) {
     hideSource: !!config.hideSource,
     noVisualization: false,
     isRtl: studioApp.isRtl(),
-    codeWorkspace: codeWorkspace,
+    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
     visualizationColumn: <BounceVisualizationColumn/>,
     onMount: onMount
   }), document.getElementById(config.containerId));

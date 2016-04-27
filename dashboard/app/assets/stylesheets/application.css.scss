@@ -614,13 +614,10 @@ $default-modal-width: 640px;
   background: $light_gray;
 }
 
-#project-share {
-
-  .export-button {
-    color: $dark_color;
-    cursor: pointer;
-    margin-top: 10px;
-    display: block;
+#project-share .social-buttons a {
+  display: inline-block;
+  &:hover, & {
+    text-decoration: none;
   }
 
   .social-buttons a {
@@ -1691,10 +1688,6 @@ a.download-video {
   margin-right: 0;
 }
 
-#free-response-upload {
-  overflow: hidden;
-}
-
 #current-script-levels, #all-levels {
   min-height: 50px;
   li {
@@ -1788,11 +1781,9 @@ div.mini_gallery_activity {
   padding: 10px;
 }
 
-.previousPageButton {
-  margin-right: 5px;
-}
+.level_group_buttons {
+  display: inline-block;
 
-.buttons.submittable {
   .submitButton {
     border-color: $purple;
     background-color: $purple;
@@ -1808,7 +1799,7 @@ div.mini_gallery_activity {
   }
 }
 
-.submitted_readonly {
+.level_group_readonly {
   background-color: $lightest_gray;
 }
 
@@ -2182,9 +2173,11 @@ $modal-no-icon-gap: 22px;
   }
 }
 
-#levelgroup-submit-incomplete-dialogcontent,
-#levelgroup-submit-complete-dialogcontent,
-#unsubmit-dialogcontent {
+#levelgroup-submit-incomplete-dialogcontent{
+  overflow: hidden;
+}
+
+#levelgroup-submit-complete-dialogcontent{
   overflow: hidden;
 }
 

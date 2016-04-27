@@ -5960,9 +5960,6 @@ Blockly.Xml.blockToDom = function(block, ignoreChildBlocks) {
   if(!block.isUserVisible()) {
     element.setAttribute("uservisible", false)
   }
-  if(block.isNextConnectionDisabled()) {
-    element.setAttribute("next_connection_disabled", true)
-  }
   if(/^procedures_def/.test(block.type) && block.userCreated) {
     element.setAttribute("usercreated", true)
   }
@@ -15188,12 +15185,7 @@ Blockly.Block.prototype.showContextMenu_ = function(e) {
       block.setMovable(!block.isMovable());
       Blockly.ContextMenu.hide()
     }};
-    options.push(movableOption);
-    var nextConnectionDisabledOption = {text:this.nextConnectionDisabled_ ? "Enable Next Connection" : "Disable Next Connection", enabled:true, callback:function() {
-      block.setNextConnectionDisabled(!block.nextConnectionDisabled_);
-      Blockly.ContextMenu.hide()
-    }};
-    options.push(nextConnectionDisabledOption)
+    options.push(movableOption)
   }
   if(this.customContextMenu && !block.isInFlyout) {
     this.customContextMenu(options)
@@ -15534,15 +15526,11 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
     this.svg_ && this.render()
   }
 };
-Blockly.Block.prototype.isNextConnectionDisabled = function() {
-  return this.nextConnectionDisabled_
-};
 Blockly.Block.prototype.setNextConnectionDisabled = function(disabled) {
   this.nextConnectionDisabled_ = disabled;
-  if(disabled && (this.nextConnection && this.nextConnection.targetConnection)) {
-    this.nextConnection.disconnect()
+  if(this.nextConnectionDisabled_ === true) {
+    this.setNextStatement(false)
   }
-  this.setNextStatement(!disabled)
 };
 Blockly.Block.prototype.isCurrentlyBeingDragged = function() {
   return Blockly.selected === this && Blockly.Block.isFreelyDragging()
