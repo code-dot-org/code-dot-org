@@ -790,13 +790,9 @@ Applab.init = function (config) {
 
 
   // TODO - move into AppLabView and put necessary props into store
-  // TODO - showDebugger can be derived from connect
   var codeWorkspace = (
     <Provider store={Applab.reduxStore}>
-      <ConnectedCodeWorkspace
-          editCode={true}
-          showDebugger={showDebugButtons || showDebugConsole}
-      />
+      <ConnectedCodeWorkspace/>
     </Provider>
   );
 
