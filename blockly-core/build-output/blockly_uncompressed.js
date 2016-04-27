@@ -5960,6 +5960,9 @@ Blockly.Xml.blockToDom = function(block, ignoreChildBlocks) {
   if(!block.isUserVisible()) {
     element.setAttribute("uservisible", false)
   }
+  if(block.isNextConnectionDisabled()) {
+    element.setAttribute("next_connection_disabled", true)
+  }
   if(/^procedures_def/.test(block.type) && block.userCreated) {
     element.setAttribute("usercreated", true)
   }
@@ -15530,6 +15533,9 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
   if(opt_renderAfterVisible && (userVisible && this.childBlocks_.length === 0)) {
     this.svg_ && this.render()
   }
+};
+Blockly.Block.prototype.isNextConnectionDisabled = function() {
+  return this.nextConnectionDisabled_
 };
 Blockly.Block.prototype.setNextConnectionDisabled = function(disabled) {
   this.nextConnectionDisabled_ = disabled;

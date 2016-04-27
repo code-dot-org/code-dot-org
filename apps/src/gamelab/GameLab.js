@@ -28,7 +28,7 @@ var dom = require('../dom');
 var experiments = require('../experiments');
 
 var actions = require('./actions');
-var createStore = require('../redux');
+var createStore = require('../redux').createStore;
 var gamelabReducer = require('./reducers').gamelabReducer;
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
@@ -739,6 +739,8 @@ GameLab.prototype.onP5ExecutionStarting = function () {
  * @return {Boolean} whether or not the preload has completed
  */
 GameLab.prototype.onP5Preload = function () {
+  this.gameLabP5.preloadAnimations(this.getAnimationMetadata());
+
   this.initInterpreter();
   // And execute the interpreter for the first time:
   if (this.JSInterpreter && this.JSInterpreter.initialized()) {
@@ -904,4 +906,13 @@ GameLab.prototype.displayFeedback_ = function () {
  */
 GameLab.prototype.getAnimationMetadata = function () {
   return this.reduxStore_.getState().animations;
+};
+
+GameLab.prototype.getAnimationDropdown = function () {
+  return this.getAnimationMetadata().map(function (animation) {
+    return {
+      text: utils.quote(animation.name),
+      display: utils.quote(animation.name)
+    };
+  });
 };

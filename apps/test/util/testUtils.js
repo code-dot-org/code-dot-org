@@ -42,7 +42,19 @@ exports.setExternalGlobals = function () {
       isEditing: function () { return true; }
     },
     assets: {
-      showAssetManager: function () {}
+      showAssetManager: function () {},
+      listStore: {
+        reset() {},
+        add() {
+          return [];
+        },
+        remove() {
+          return [];
+        },
+        list() {
+          return [];
+        },
+      },
     }
   });
   window.marked = function (str) {
