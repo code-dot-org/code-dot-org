@@ -15,7 +15,7 @@ Scenario: Loading the level
 
 Scenario: Submit anything, unsubmit, be able to resubmit.
   # First, submit something.
-  And I set selector ".free-response > textarea" text to "sample response"
+  And I type "sample response" into ".free-response > textarea"
   And I press ".submitButton" using jQuery
   And I wait for 5 seconds
 
