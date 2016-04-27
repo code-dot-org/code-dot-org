@@ -541,7 +541,7 @@ Studio.createGoalElements = function (i, goal) {
   goal.marker.setAttribute('width', spritesheetWidth);
   goal.marker.setAttribute('height', spritesheetHeight);
   if (!skin.disableClipRectOnGoals) {
-    goal.marker.setAttribute('clip-path', 'url(#goal.clipPath' + i + ')');
+    goal.marker.setAttribute('clip-path', 'url(#' + goal.clipPath.id + ')');
   }
   goal.marker.setAttribute('x', goal.x + offsetX);
   goal.marker.setAttribute('y', goal.y + offsetY);
