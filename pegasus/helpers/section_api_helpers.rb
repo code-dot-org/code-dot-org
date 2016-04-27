@@ -183,9 +183,9 @@ class DashboardSection
   end
 
   @@course_cache = {}
-  def self.valid_courses(user_id)
+  def self.valid_courses(user_id = nil)
     # admins can see all courses, even those marked hidden
-    course_cache_key = Dashboard.admin?(user_id) ? "all" : "valid"
+    course_cache_key = (user_id && Dashboard.admin?(user_id)) ? "all" : "valid"
 
     # only do this query once because in prod we only change courses
     # when deploying (technically this isn't true since we are in
@@ -201,7 +201,7 @@ class DashboardSection
     @@course_cache[course_cache_key] = Hash[
          Dashboard.db[:scripts].
            where(where_clause).
-           select(:id, :name).
+           select(:id, :name, :hidden).
            all.
            map do |course|
              name = course[:name]
@@ -210,6 +210,7 @@ class DashboardSection
              elsif name == ScriptConstants::HOC_NAME
                name = ScriptConstants::HOC_TEACHER_DASHBOARD_NAME
              end
+             name += " *" if course[:hidden]
              [course[:id], name]
            end
         ]
