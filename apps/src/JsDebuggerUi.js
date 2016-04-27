@@ -9,6 +9,7 @@ var JSInterpreter = require('./JSInterpreter');
 var Observer = require('./Observer');
 var Slider = require('./slider');
 var utils = require('./utils');
+var JsDebugger = require('./templates/JsDebugger');
 
 var KeyCodes = constants.KeyCodes;
 var StepType = JSInterpreter.StepType;
@@ -78,7 +79,7 @@ var JsDebuggerUi = module.exports = function (runApp) {
 };
 
 /**
- * Generate DOM element markup from an ejs file for the debug area.
+ * Generate DOM element markup from a jsx file for the debug area.
  * @param {!function} assetUrl - Helper for getting asset URLs.
  * @param {!Object} options
  * @param {!boolean} options.showButtons - Whether to show the debug buttons
@@ -87,12 +88,12 @@ var JsDebuggerUi = module.exports = function (runApp) {
  * @returns {string} of HTML markup to be embedded in CodeWorkspace
  */
 JsDebuggerUi.prototype.getMarkup = function (assetUrl, options) {
-  return require('./JsDebuggerUi.html.ejs')({
-    assetUrl: assetUrl,
-    debugButtons: options.showButtons,
-    debugConsole: options.showConsole,
-    debugWatch: options.showWatch
-  });
+  return React.renderToStaticMarkup(
+    <JsDebugger
+        debugButtons={!!options.showButtons}
+        debugConsole={!!options.showConsole}
+        debugWatch={!!options.showWatch}/>
+  );
 };
 
 /**
