@@ -44,6 +44,7 @@
   },
   "//": "ejsify is a dependency of apps/src; we declare it here rather than in apps/src/package.json so we can continue to avoid needing to npm install that module.",
   "devDependencies": {
+    "babel-eslint": "^5.0.4",
     "babelify": "^6.3.0",
     "browserify": "^12.0.1",
     "browserify-shim": "^3.8.12",
@@ -53,7 +54,7 @@
     "commander": "^2.9.0",
     "ejsify": "1.0.0",
     "envify": "^3.4.0",
-    "eslint": "^2.3.0",
+    "eslint": "^1.10.0",
     "factor-bundle": "^2.5.0",
     "http-server": "^0.9.0",
     "istanbul": "^0.4.2",

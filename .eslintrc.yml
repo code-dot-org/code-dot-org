@@ -1,0 +1,59 @@
+# This is the primary JavaScript linting rules for the entire
+# project.  In a few places, some of these rules are extended
+# or overridden for a particular subset of the project.  See
+# other .eslintrc.yml files for those rules.
+root: true
+extends: eslint:recommended
+
+env:
+  browser: true
+  node: true
+  mocha: true
+
+parser: babel-eslint
+parserOptions:
+  sourceType: module
+  ecmaFeatures:
+    jsx: true
+    modules: true
+
+globals:
+  $: true
+  jQuery: true
+  React: true
+  ReactDOM: true
+
+rules:
+  array-bracket-spacing:
+    - 2
+    - never
+  brace-style:
+    - 2
+    - 1tbs
+    - allowSingleLine: true
+  comma-dangle: 0
+  curly: 2
+  dot-location:
+    - 2
+    - property
+  eol-last: 2
+#  keyword-spacing: 2
+  no-array-constructor: 2
+  no-console: 0
+  no-empty: 0
+  no-eval: 2
+  no-extra-boolean-cast: 0
+#  no-implicit-globals: 2
+  no-new-object: 2
+  no-trailing-spaces: 2
+  no-undef: 2
+  no-unused-vars: 0
+  no-with: 2
+  object-curly-spacing: 0
+  semi: 2
+  space-after-keywords: 2
+  space-before-function-paren:
+    - 2
+    - { anonymous: always, named: never }
+  space-before-keywords: 2
+  space-return-throw-case: 2
