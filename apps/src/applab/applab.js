@@ -44,8 +44,9 @@ var logToCloud = require('../logToCloud');
 var DialogButtons = require('../templates/DialogButtons');
 var executionLog = require('../executionLog');
 var annotationList = require('../acemode/annotationList');
+var Exporter = require('./Exporter');
 
-var createStore = require('../redux');
+var createStore = require('../redux').createStore;
 var Provider = require('react-redux').Provider;
 var rootReducer = require('./reducers').rootReducer;
 var actions = require('./actions');
@@ -762,7 +763,7 @@ Applab.init = function (config) {
   // able to turn them on.
   config.showInstructionsInTopPane = experiments.isEnabled('topInstructions');
 
-  // Applab.initMinimal();
+  config.reduxStore = Applab.reduxStore;
 
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
@@ -915,6 +916,20 @@ Applab.render = function () {
       <AppLabView {...nextProps} />
     </Provider>,
     Applab.reactMountPoint_);
+};
+
+// Expose on Applab object for use in code-studio
+Applab.canExportApp = function () {
+  return experiments.isEnabled('applab-export');
+};
+
+Applab.exportApp = function () {
+  return Exporter.exportApp(
+    // TODO: find another way to get this info that doesn't rely on globals.
+    window.dashboard && window.dashboard.project.getCurrentName() || 'my-app',
+    studioApp.editor.getValue(),
+    designMode.serializeToLevelHtml()
+  );
 };
 
 /**
