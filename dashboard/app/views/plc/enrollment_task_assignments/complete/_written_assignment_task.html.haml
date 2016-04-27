@@ -4,7 +4,7 @@
   %p
     %strong Assignment description:
     %p
-      = simple_format(@enrollment_task_assignment.plc_task.assignment_description)
+      Level #{@enrollment_task_assignment.plc_task.level_id}
   %p
     = f.label :writing
     -# TODO: render FreeResponse

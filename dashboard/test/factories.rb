@@ -328,7 +328,7 @@ FactoryGirl.define do
   end
 
   factory :plc_written_submission_task, parent: :plc_task, class: 'Plc::WrittenAssignmentTask' do
-    assignment_description nil
+    level_id nil
   end
 
   factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
