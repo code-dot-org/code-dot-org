@@ -198,8 +198,6 @@ class Studio < Grid
     </value>
   </block>
   <block type="studio_setSpritePosition" />
-  <block type="studio_addGoal" />
-  <block type="studio_addGoalXY" />
   <block type="studio_setSpriteXY" inline="true">
     <value name="XPOS">
       <block type="math_number">
