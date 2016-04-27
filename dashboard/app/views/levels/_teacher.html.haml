@@ -79,7 +79,7 @@
             - @section.students.order(:name).each do |student|
               - active = 'active' if @user && student.id == @user.id
               %tr.section-student{class: active}
-                - status = activity_css_class(student.user_level_for(@script_level).try(:best_result))
+                - status = activity_css_class(student.user_level_for(@script_level, @level).try(:best_result))
                 %td
                   .level_link{class: status}
                     - if @level.unplugged?

@@ -402,6 +402,7 @@ class Script < ActiveRecord::Base
 
     # Overwrites current script levels
     script.script_levels = raw_script_levels.map do |raw_script_level|
+      pp raw_script_level
       raw_script_level.symbolize_keys!
 
       assessment = false
@@ -566,7 +567,7 @@ class Script < ActiveRecord::Base
                        professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course], # default false
                        student_of_admin_required: script_data[:student_of_admin_required].nil? ? false : script_data[:student_of_admin_required], # default false
           }
-        }, script_data[:stages].map { |stage| stage[:levels] }.flatten)
+        }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten)
         Script.update_i18n(i18n)
       end
     rescue StandardError => e

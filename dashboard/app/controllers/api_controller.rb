@@ -178,7 +178,7 @@ class ApiController < ApplicationController
 
         response_parsed = JSON.parse(response)
 
-        user_level = student.user_level_for(script_level)
+        user_level = student.user_level_for(script_level, script_level.level)
 
         # Summarize some key data.
         multi_count = 0

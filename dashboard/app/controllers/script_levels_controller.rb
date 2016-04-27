@@ -157,7 +157,7 @@ class ScriptLevelsController < ApplicationController
       @last_activity = current_user.last_attempt(@level)
       level_source = @last_activity.try(:level_source)
 
-      user_level = current_user.user_level_for(@script_level)
+      user_level = current_user.user_level_for(@script_level, @level)
       if user_level && user_level.submitted?
         level_view_options(submitted: true)
         level_view_options(unsubmit_url: url_for(user_level))
@@ -203,9 +203,12 @@ class ScriptLevelsController < ApplicationController
     # If there's only one level in this scriptlevel, use that
     return @script_level.levels[0] if @script_level.levels.length == 1
 
-    # If they've tried at least one level before, use the most recently attempted
-    last_attempt = @user.last_attempt_for_any(@script_level.levels)
-    return last_attempt.level if last_attempt
+    # If they've tried at least one variant before, use the most recently attempted
+    # (unless overridden by a force_reload query string param)
+    if current_user && !params[:force_reload]
+      last_attempt = current_user.last_attempt_for_any(@script_level.levels)
+      return last_attempt.level if last_attempt
+    end
 
     # Otherwise return the active level with the lowest id. Active defaults to true
     return @script_level.levels.min_by(&:id) unless @script_level.properties
@@ -233,7 +236,10 @@ class ScriptLevelsController < ApplicationController
       @total_level_count = @level.levels.length
     end
 
-    @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level.id)
+    @callback = milestone_script_level_url(
+      user_id: current_user.try(:id) || 0,
+      script_level_id: @script_level.id,
+      level_id: @level.id)
 
     view_options(
       full_width: true,
@@ -243,8 +249,8 @@ class ScriptLevelsController < ApplicationController
 
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {
-      success: milestone_response(script_level: @script_level, solved?: true),
-      failure: milestone_response(script_level: @script_level, solved?: false)
+      success: milestone_response(script_level: @script_level, level: @level, solved?: true),
+      failure: milestone_response(script_level: @script_level, level: @level, solved?: false)
     }
     render 'levels/show', formats: [:html]
   end
