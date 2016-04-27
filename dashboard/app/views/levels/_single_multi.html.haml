@@ -5,7 +5,7 @@
 
 - layout_class = use_tight_layout ? "tight" : "default"
 
-.multi{id: "level_#{index}", class: layout_class}
+.multi{id: "level_#{level.id}", class: layout_class}
   - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?
   - if question_content_blank
     - question_content_class = nil
@@ -91,8 +91,7 @@
 - if standalone || @script_level
   :javascript
     window.levelGroup.levels[#{level.id}] = new Multi(
-      "level_#{index}",
-      #{level.id},
+      "level_#{level.id}",
       #{standalone},
       "#{data['type']}" == "multi2" ? 2 : 1,
       #{data['answers'].map {|answer| answer['correct']}},
