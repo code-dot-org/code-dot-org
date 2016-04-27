@@ -17,7 +17,7 @@ var apiBlockly = require('./apiBlockly');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var AppLabView = require('./AppLabView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
+var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var dom = require('../dom');
@@ -782,6 +782,7 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: false,
+    localeDirection: studioApp.localeDirection()
   }));
 
   Applab.reduxStore.dispatch(changeInterfaceMode(
@@ -789,13 +790,14 @@ Applab.init = function (config) {
 
 
   // TODO - move into AppLabView and put necessary props into store
+  // TODO - showDebugger can be derived from connect
   var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={studioApp.localeDirection()}
-      editCode={!!config.level.editCode}
-      readonlyWorkspace={Applab.reduxStore.getState().level.isReadOnlyWorkspace}
-      showDebugger={showDebugButtons || showDebugConsole}
-    />
+    <Provider store={Applab.reduxStore}>
+      <ConnectedCodeWorkspace
+          editCode={true}
+          showDebugger={showDebugButtons || showDebugConsole}
+      />
+    </Provider>
   );
 
   Applab.reactInitialProps_ = {
@@ -898,10 +900,7 @@ Applab.clearEventHandlersKillTickLoop = function () {
  * @returns {boolean}
  */
 Applab.isRunning = function () {
-  // We are _always_ running in share mode.
-  // TODO: (bbuchanan) Needs a better condition. Tracked in bug:
-  //      https://www.pivotaltracker.com/story/show/105022102
-  return !!($('#resetButton').is(':visible') || studioApp.share);
+  return Applab.reduxStore.getState().isRunning;
 };
 
 /**
@@ -1053,6 +1052,7 @@ Applab.runButtonClick = function () {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
+
   studioApp.toggleRunReset('reset');
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);

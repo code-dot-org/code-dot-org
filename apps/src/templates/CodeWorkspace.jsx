@@ -1,7 +1,11 @@
+var Radium = require('radium');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var JsDebugger = require('./JsDebugger');
 var msg = require('../locale');
 var commonStyles = require('../commonStyles');
+var styleConstants = require('../styleConstants');
+var color = require('../color');
+var experiments = require('../experiments');
 
 var styles = {
   noPadding: {
@@ -10,10 +14,19 @@ var styles = {
 };
 
 var CodeWorkspace = function (props) {
+  var runModeIndicators = experiments.isEnabled('runModeIndicators');
   return (
     <span id="codeWorkspaceWrapper">
-      <ProtectedStatefulDiv id="headers" dir={props.localeDirection}>
-        <div id="codeModeHeaders">
+      <div
+          id="headers"
+          dir={props.localeDirection}
+          style={[
+            commonStyles.purpleHeader,
+            props.readonlyWorkspace && commonStyles.purpleHeaderReadOnly,
+            runModeIndicators && props.isRunning && commonStyles.purpleHeaderRunning
+          ]}
+      >
+        <ProtectedStatefulDiv id="codeModeHeaders">
           <div id="toolbox-header" className="workspace-header">
             <i id="hide-toolbox-icon" style={commonStyles.hidden} className="fa fa-chevron-circle-right"/>
             <span>{props.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}</span>
@@ -53,8 +66,8 @@ var CodeWorkspace = function (props) {
               <span>{" " + msg.blocks()}</span>
             </div>
           </div>
-        </div>
-      </ProtectedStatefulDiv>
+        </ProtectedStatefulDiv>
+      </div>
       {props.editCode && <ProtectedStatefulDiv id="codeTextbox"/>}
       {props.showDebugger && <JsDebugger/>}
     </span>
@@ -68,4 +81,4 @@ CodeWorkspace.propTypes = {
   showDebugger: React.PropTypes.bool
 };
 
-module.exports = CodeWorkspace;
+module.exports = Radium(CodeWorkspace);
