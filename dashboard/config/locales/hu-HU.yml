@@ -26,7 +26,11 @@
   welcome_back: "Üdv újra, %{name}"
   submit: Elküldés
   unsubmit: Visszavon
+  previous_page: Previous page
   next_page: Következő oldal
+  cancel: Mégsem
+  okay: Oké
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Tanár hozzáadása:'
@@ -418,8 +422,8 @@
       Entertainment Ltd. Minden jog fenntartva.<br />Plants vs. Zombies&#8482; &copy;
       %{current_year} Electronic Arts Inc. Minden jog fenntartva.<br /> a Gumball
       csodálatos világa a Cartoon Network bejegyzett védjegye.
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
-      GNU LGPL 2.1</a>.
+    code_from_html: A Code.org p5.play-t használ, amelyet <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      a GNU LGPL 2.1</a> licenc véd.
     powered_by_aws: Az Amazon Web Services működteti
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, a CODE logó és az
       Hour of Code&reg; a Code.org védjegyei."
@@ -510,8 +514,8 @@
       body: Az App Lab egy programozási környezet egyszerű alkalmazásokra. Tervezd
         meg, kódolj blokkokkal vagy JavaScript-el hogy működjön, majd oszd meg másodpercek
         alatt.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
+      body_short: Tervezz egy alkalmazást, kódolj elemekből vagy JavaScript-ben, majd
+        oszd meg néhány másodperc alatt.
       audience: Kor 13+
       cta: Ismerd meg hogyan
     hoc:
@@ -545,6 +549,15 @@
     minecraft:
       title: Minecraft
       body: Fedezd fel a Minecraft világát kódokkal.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: Diákok rajzolták ezeket a kódot.
     students_made_these_with_code: Ezeket diákok készítették kódolással!
@@ -596,6 +609,15 @@
     wrong_body: Köszönjük az elküldött válaszokat.
     correct_title: Köszönöm
     correct_body: Köszönjük az elküldött válaszokat.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Helytelen megoldás
     wrong_body: A megadott megoldás nem megfelelő.  Próbáld újra.
@@ -754,5 +776,5 @@
           szabályoknak%{link_end} megfelelően kezeljük
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Keress egy ikont...
+      no_icons_found: Nem találhatók ikonok

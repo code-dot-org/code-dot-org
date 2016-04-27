@@ -99,7 +99,8 @@ GameLabP5.prototype.init = function (options) {
   window.p5.prototype._updateNextTouchCoords = function (e) {
     if (e.type === 'mousedown' ||
         e.type === 'mousemove' ||
-        e.type === 'mouseup'){
+        e.type === 'mouseup' ||
+        e.type === 'dragover'){ /* NOTE: cpirich: modified p5 to add dragover */
       this._setProperty('_nextTouchX', this._nextMouseX);
       this._setProperty('_nextTouchY', this._nextMouseY);
     } else {
@@ -217,7 +218,7 @@ GameLabP5.prototype.init = function (options) {
 
   var styleEmpty = 'rgba(0,0,0,0)';
 
-  window.p5.Renderer2D.prototype.regularPolygon = function (sides, size, x, y, rotation) {
+  window.p5.Renderer2D.prototype.regularPolygon = function (x, y, sides, size, rotation) {
     var ctx = this.drawingContext;
     var doFill = this._doFill, doStroke = this._doStroke;
     if (doFill && !doStroke) {
@@ -247,7 +248,7 @@ GameLabP5.prototype.init = function (options) {
     }
   };
 
-  window.p5.prototype.regularPolygon = function (sides, size, x, y, rotation) {
+  window.p5.prototype.regularPolygon = function (x, y, sides, size, rotation) {
     if (!this._renderer._doStroke && !this._renderer._doFill) {
       return this;
     }

@@ -505,6 +505,11 @@ is-IS:
   dashboard_action_remove_confirm: Fjarlægja?
   dashboard_action_done: Búið
   dashboard_action_required: nauðsynlegt
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Heimasíða kennara
   dashboard_navigation_section_student_progress: Reikningar og árangur nemenda
   dashboard_navigation_section_teacher_progress: Námskeiðsframvinda þín
@@ -524,6 +529,17 @@ is-IS:
   dashboard_navigation_view_stats: Skoða tölfræði
   dashboard_navigation_section: 'Hópur: %{section_name}'
   dashboard_navigation_student: 'Nemandi: %{student_name}'
+  dashboard_progress_not_started: ekki byrjað
+  dashboard_progress_in_progress: í vinnslu
+  dashboard_progress_not_completed: ólokið
+  dashboard_progress_completed_too_many_blocks: lokið, of margir kubbar
+  dashboard_progress_completed_perfect: lokið, fullkomið
+  dashboard_progress_furthest_level_attempted: hæsti unninn áfangi
+  dashboard_progress_submitted: sent inn
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nýr hópur
   dashboard_sections_jumbotron_instruction: Búa til nýja hópa og bæta nemendum í þá. Með því að skipta nemendum í hópa er auðveldara að fylgjast með framgangi námsins og sjá um reikninga þeirra.
   dashboard_sections_table_section: Hópur
@@ -539,6 +555,19 @@ is-IS:
   dashboard_sections_secret_none: 'Ef þú vilt láta nemendur sjá um sinn eigin aðgang, þar á meðal að velja sér leyniorð, skaltu velja <b>ekkert</b> sem tegund leyndarmáls.'
   dashboard_sections_print_secrets: Þú getur síðan prentað spjöld með aðgangsupplýsingum til að úthluta til einstakra nemenda.
   dashboard_sections_switch_section: 'Skipta um hóp:'
+  dashboard_sections_close: Loka
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Bæta við nemanda
   dashboard_students_add_students: Bæta við mörgum nemendum
   dashboard_students_add_multiple: 'Ritaðu eða límdu nöfn nemenda þinna, eitt í hverja línu:'
@@ -605,13 +634,6 @@ is-IS:
   dashboard_login_picture: Mynd
   dashboard_login_none: Netfang
   dashboard_new_password: nýtt leyniorð
-  dashboard_progress_not_started: ekki byrjað
-  dashboard_progress_in_progress: í vinnslu
-  dashboard_progress_not_completed: ólokið
-  dashboard_progress_completed_too_many_blocks: lokið, of margir kubbar
-  dashboard_progress_completed_perfect: lokið, fullkomið
-  dashboard_progress_furthest_level_attempted: hæsti unninn áfangi
-  dashboard_progress_submitted: sent inn
   dashboard_stage: Áfangi
   dashboard_puzzle: Þraut
   dashboard_question: Spurning
@@ -646,10 +668,8 @@ is-IS:
   dashboard_faq_k5: Algengar spurningar grunnskólastigs
   dashboard_announcements: Tilkynningar
   dashboard_announce_view_all: Skoða allt
-  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
   dashboard_announce_button_text: Læra meira
-  dashboard_announce_hoc: '<b>23. nóvember 2015</b> - Viltu fá sjálfboðaliða sem hefur brennandi áhuga á menntun á sviði tölvunarfræði til að hjálpa til við þína Klukkustund kóðunar? Meira en 7.000 sjálfboðaliðar eru tilbúnir að veita nemendum hvatningu með því að heimsækja bekkinn þinn eða spjalla á netinu. Skoðaðu liðveislukortið til að ná sambandi við sjálfboðaliða á þínu svæði.'
-  dashboard_announce_playlab: '<b>4. desember 2015</b> - Klukkustund kóðunar er hér! Prófaðu 50 kennslustundir fyrir alla aldurshópa og öll tæki. Nýtt þessa viku: Kóðaðu þínar eigin sögur og leiki í nýjum Leikjasmiðjum, Ísöld og Gumball.'
   code_hoc_coming: 'Klukkustund kóðunar er komin - 8. - 14. desember!'
   code_sign_up: Skráðu þig til að taka þátt í viku menntunarátaks í tölvunarfræði
   learn_more: Prófaðu núna

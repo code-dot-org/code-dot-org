@@ -25,7 +25,11 @@ id:
   welcome_back: 'Selamat datang kembali, %{name}'
   submit: Kirim
   unsubmit: Unsubmit
-  next_page: Next page
+  previous_page: Previous page
+  next_page: Halamat berikutnya
+  cancel: Batal
+  okay: Oke
+  heading_x_of_y: '%{heading} (halaman %{x} dari %{y})'
   add_teacher_form:
     code:
       label: 'Tambahkan seorang guru:'
@@ -346,7 +350,7 @@ id:
     help_from_html_old: Para insinyur dari Google, Microsoft, Facebook, dan Twitter turut membantu dalam pembuatan materi-materi ini.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Hak Cipta Dilindungi.<br />Star Wars &#8482; &copy; %{current_year} Disney dan Lucasfilm. Hak Cipta Dilindungi.<br />Frozen&#8482; &copy; %{current_year} Disney. Hak Cipta Dilindungi.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Hak Cipta Dilindungi.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Hak Cipta Dilindungi.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Hak Cipta Dilindungi.<br />The Amazing World of Gumball adalah merek dagang dan &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Hak Cipta Dilindungi. Star Wars &#8482; &copy; %{current_year} Disney dan Lucasfilm. Hak Cipta Dilindungi. Frozen&#8482; &copy; %{current_year} Disney. Hak Cipta Dilindungi. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Hak Cipta Dilindungi. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Hak Cipta Dilindungi. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Hak Cipta Dilindungi. The Amazing World of Gumball adalah merek dagang dan &copy; 2015 Cartoon Network.'
-    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
+    code_from_html: 'Code.org menggunakan p5.play, yang berlisensi <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: Didukung oleh Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; adalah merk dagang dari Code.org.'
     copyright: Hak cipta
@@ -451,6 +455,11 @@ id:
     minecraft:
       title: Minecraft
       body: Jelajahi dunia Minecraft melalui kode.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Siswa-siswa telah menggambar ini dengan kode!
     students_made_these_with_code: Siswa membuat ini dengan kode program!
@@ -494,6 +503,12 @@ id:
     wrong_body: Terima kasih telah memberikan jawaban
     correct_title: Terima kasih
     correct_body: Terima kasih telah memberikan jawaban
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Solusi yang salah
     wrong_body: Solusi yang anda masukkan salah, Coba Lagi!
@@ -625,5 +640,5 @@ id:
         acknowledge: 'Dengan mengirimkan informasi ini, Anda mengakui ini akan di tangani sesuai dengan syarat %{link_start_privacy} kebijakan privasi%{link_end}dan%{link_start_tos}Syarat Layanantautan%{link_end}'
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Cari sebuah ikon...
+      no_icons_found: Ikon tidak ditemukan

@@ -25,7 +25,11 @@ ar:
   welcome_back: 'أهلاً بكم من جديد، %{name}'
   submit: تسجيل
   unsubmit: عدم تقديم
+  previous_page: Previous page
   next_page: الصفحة التالية
+  cancel: إلغاء
+  okay: حسناً
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'إضافة معلِّماً:'
@@ -451,6 +455,11 @@ ar:
     minecraft:
       title: Minecraft
       body: استكشف عالم Minecraft عن طريق الكود.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: قام الطلبة برسم هؤلاء باستخدام البرمجة (الكود)!
     students_made_these_with_code: قام الطلبة بصنع هؤلاء باستخدام البرمجة (الكود)!
@@ -494,6 +503,12 @@ ar:
     wrong_body: شكرا لك على تقديم إجابة
     correct_title: شكراً
     correct_body: شكرا لك على تقديم إجابة
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: الحل غير صحيح
     wrong_body: 'الحل الذي قمت بإدخاله غير صحيح.  الرجاء المحاولة مرة أخرى!'
@@ -625,5 +640,5 @@ ar:
         acknowledge: 'عند تقديم هذه المعلومات, تُقرّ بأنها سوف يتم التعامل معها وفقا للشروط الموجودة في %{link_start_privacy} سياسة الخصوصية %{link_end} و %{link_start_tos}شروط الاستخدام%{link_end}'
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: ابحث عن أيقونة...
+      no_icons_found: لم توجد أيقونات

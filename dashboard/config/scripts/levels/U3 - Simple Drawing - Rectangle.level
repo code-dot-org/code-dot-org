@@ -13,6 +13,12 @@
           "0",
           "200",
           "200"
+        ],
+        "paletteParams": [
+          "x",
+          "y",
+          "width",
+          "height"
         ]
       }
     },
@@ -35,15 +41,15 @@
     "disable_examples": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
-    "free_play": "false",
+    "free_play": "true",
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "markdown_instructions": "# Rectanlges\r\n\r\nWelcome to Game Lab!  Game Lab allows you to create interactive games and animations!\r\n\r\nWe are going to start off with drawing with shapes and build up to games over time.\r\n\r\nThe first shape we are going to use is the rectangle. \r\n\r\nCheck out the Toolbox and find the rectanlge block. You can drag it out into the Workspace.\r\n\r\nExplain the width and height parameters.\r\n\r\n# Do This\r\n\r\n* Add a rect block in the Workspace\r\n* Run the program to see what happens\r\n* Change the parameters of rect so that covers the whole game area",
+    "markdown_instructions": "# Rectanlges\r\n\r\nWelcome to Game Lab!  Game Lab allows you to create interactive games and animations!\r\n\r\nWe are going to start with drawing shapes and build up to games over time. In class you already practiced the basics of drawing shapes. We are just going to translate that to the computer. Check out the game area on the left. This is where we will run our programs. It has a width of 400 and a height of 400. \r\n\r\nThe first shape we are going to use is the rectangle. The block for rectangles is <img src=\"https://images.code.org/ca2ee87eb2c6484e714016a6ce007a8c-image-1460731303027.41.18 AM.png\" width=200>. As you can see there are 4 openings in the rect block. These values control some element of the way the shape is drawn.\r\n\r\n# Do This\r\n\r\n* Add a `rect` command to the workspace. \r\n* Run the program to see what happens. Notice that it draws a rectangle in the upper left corner.\r\n* Change the width and height of the `rect` so that it fills the whole screen.",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"element_id\": \"#droplet_palette_block_rect\",\r\n  \"callout_text\": \"Use this block to draw a rectangle\",\r\n  \"qtip_config\": {\r\n   \t\"position\": {\r\n      \"my\": \"top right\",\r\n      \"at\": \"bottom left\",\r\n      \"adjust\": {\r\n       \"x\": 0,\r\n       \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"\",\r\n  \"element_id\": \".droplet-gutter-line:nth-of-type(1)\",\r\n  \"callout_text\": \"Add your blocks here to write your program\",\r\n  \"qtip_config\": {\r\n   \t\"position\": {\r\n      \"my\": \"bottom left\",\r\n      \"at\": \"center center\",\r\n      \"adjust\": {\r\n       \"x\": 0,\r\n       \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "start_blocks": "// Add a rectangle here",
-    "instructions": "Do This"
+    "instructions": "Do This",
+    "start_blocks": "// Add your code to draw a rectangle here"
   },
   "published": true,
   "notes": "",

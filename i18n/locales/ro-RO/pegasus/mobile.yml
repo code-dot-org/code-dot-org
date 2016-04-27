@@ -21,7 +21,7 @@ ro-RO:
   twentyhours_heading: Încearcă Cursul nostru de Introducere în Informatică
   twentyhours_text: Ai terminat prima ta Oră de Cod? Învață mai multe despre informatica de bază și conceptele programării în cadrul cursului următor.
   og_title: Fiecare copil merită o portunitate
-  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
+  og_description: Fiecare student în fiecare școală merită o șansă de a studia informatica. Schimba totul.
   hoc2014_heading: 'Alătură-te <a href="http://hourofcode.com"> Orei de cod</a> <br/> 8-14 decembrie, 2014 <br/>'
   hoc2014_students: Elevi
   hoc2014_try: Încearcă
@@ -58,23 +58,23 @@ ro-RO:
   congratulations: Felicitări!
   congratulations_on_completing_hoc: Felicitări pentru finalizarea unei Ore de Cod
   congratulations_volunteer: 'Felicitari: acum, ca ai incercat Ora de Programare, <a href="https://code.org/volunteer">înscrie-te pentru a face voluntariat intr-o clasa</a> si pentru a ajuta elevii sa invete o Ora de Programare!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated Course
+  congratulations_on_completing_course1: 'Felicitări pentru finalizarea %{course}'
+  congratulations_on_completing_course2: 'Felicitări pentru finalizarea %{course}'
+  congratulations_on_completing_course3: 'Felicitări pentru finalizarea %{course}'
+  congratulations_on_completing_course4: 'Felicitări pentru finalizarea %{course}'
+  congratulations_on_completing_accelerated: Felicitări pentru finalizarea Cursului Accelerat
   congrats_next_tutorials_title: Mai departe incercati aceste tutoriale
   congrats_next_tutorials_desc: 'Încercați aceste tutoriale mai scurte, de 1 oră sau încercaţi un <a href="%{current_path}/next"> partener tutorial</a>.'
   get_a_certificate_of_achievement: Obţine un certificat de realizare
-  view_course: View course
-  view_unit: View unit
-  make_app: Make an app
+  view_course: Vizualizare curs
+  view_unit: Vizualizare Lectie
+  make_app: Creează o aplicatie
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
   congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
+  third_party_gradelevel_kto2: Note K-2
   third_party_gradelevel_2to8: Grades 2-8
   third_party_gradelevel_4to12: Grades 4-12
   third_party_gradelevel_5to12: Grades 5-12
@@ -498,6 +498,11 @@ ro-RO:
   dashboard_action_remove_confirm: Șterge?
   dashboard_action_done: Gata
   dashboard_action_required: necesar
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Pagina de pornire a profesorului
   dashboard_navigation_section_student_progress: Conturile elevilor şi progresul lor
   dashboard_navigation_section_teacher_progress: Progresul tău la curs
@@ -515,6 +520,17 @@ ro-RO:
   dashboard_navigation_view_stats: Vizualizare statistici
   dashboard_navigation_section: 'Sectiunea: %{section_name}'
   dashboard_navigation_student: 'Elev: %{student_name}'
+  dashboard_progress_not_started: Neînceput
+  dashboard_progress_in_progress: în curs de desfăşurare
+  dashboard_progress_not_completed: nefinalizat
+  dashboard_progress_completed_too_many_blocks: finalizat, prea multe blocuri
+  dashboard_progress_completed_perfect: finalizat, perfect
+  dashboard_progress_furthest_level_attempted: cel mai îndepărtat nivel încercat
+  dashboard_progress_submitted: transmise
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Secţiune nouă
   dashboard_sections_jumbotron_instruction: Creează secţiuni noi şi adaugă la ele elevi. Secțiunile te ajută să organizezi elevii în grupuri mai mici, astfel încât să poţi urmări progresul lor şi să le gestionezi conturile.
   dashboard_sections_table_section: Secţiune
@@ -530,6 +546,19 @@ ro-RO:
   dashboard_sections_secret_none: 'Dacă dorești ca elevii tăi să își gestioneze propriile conturi, inclusiv alegerea propriilor parole, alege ca tip secret <b>nici unul</b>.'
   dashboard_sections_print_secrets: Atunci poți tipări o foaie de carduri care conţin informaţii despre cont, pentru a fi distribuite individual elevilor.
   dashboard_sections_switch_section: 'Comutare secţiune:'
+  dashboard_sections_close: Închide
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Adăugare elev
   dashboard_students_add_students: Adăugare mai mulți elevi
   dashboard_students_add_multiple: 'Tastează sau adaugă cu "paste" numele elevilor tăi, câte unul pe linie:'
@@ -596,13 +625,6 @@ ro-RO:
   dashboard_login_picture: Poză
   dashboard_login_none: E-mail
   dashboard_new_password: parolă nouă
-  dashboard_progress_not_started: Neînceput
-  dashboard_progress_in_progress: în curs de desfăşurare
-  dashboard_progress_not_completed: nefinalizat
-  dashboard_progress_completed_too_many_blocks: finalizat, prea multe blocuri
-  dashboard_progress_completed_perfect: finalizat, perfect
-  dashboard_progress_furthest_level_attempted: cel mai îndepărtat nivel încercat
-  dashboard_progress_submitted: submitted
   dashboard_stage: Etapă
   dashboard_puzzle: Puzzle
   dashboard_question: Întrebare
@@ -637,10 +659,8 @@ ro-RO:
   dashboard_faq_k5: 'Întrebări frecvente - clasele primare'
   dashboard_announcements: Anunțuri
   dashboard_announce_view_all: Vizualizare toate
-  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
   dashboard_announce_button_text: Află mai mult
-  dashboard_announce_hoc: '<b>30 Septembrie 2015</b> - Ora de Cod 2015 se apropie! Alatura-te claselor din toata lumea din cadrul celui mai mare eveniment didactic din istorie.'
-  dashboard_announce_playlab: '<b>4 Decembrie 2015</b>-Ora de cod este aici! Incearca 50 de tutoriale pentru orice varsta sau device. Nou saptamana aceasta: Programeaza-ti propiile povesti sau jocuri in noul Play Lab, Epoca de Gheata si Gumball.'
   code_hoc_coming: 'Ora de Programare este aici: 8-14 decembrie!'
   code_sign_up: Înscrieţi-vă pentru a participa în timpul CS Education Week (”Săptămâna Informaticii în Educaţie”)
   learn_more: Află mai mult
@@ -754,7 +774,7 @@ ro-RO:
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   applab_name: Laboratului Aplicației
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Vârste 13 +
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: Vârste între 4-104 ani
   codeintl_gradelevel: Vârste între 4-104 ani

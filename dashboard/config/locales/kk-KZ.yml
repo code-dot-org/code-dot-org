@@ -26,13 +26,17 @@
   welcome_back: "Қайта оралуыңызбен, %{name}"
   submit: "Жіберу"
   unsubmit: "Жібермеу"
-  next_page: Next page
+  previous_page: Previous page
+  next_page: "Келесі бет"
+  cancel: "Болдырмау"
+  okay: "Жақсы"
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: "Мұғалімді қосу:"
       placeholder: "Бөлім Коды (ABCDEF)"
-      instructions: Сізбен бөліскен сіздін мұғаліміңіз деген код жазыңыз. 6 әріптен
-        тұратын код сияқты яғни "ABCDEF".
+      instructions: Мұғалімің бөліскен кодты жаз. Ол "ABCDEF" сияқты 6 әріптен тұратын
+        код.
     submit: "Мұғалімді қосу"
   add_hint_form:
     placeholder: "Өтінеміз, мұнда көмек сөзін қосыңыз"
@@ -373,8 +377,7 @@
     heading_elementary: "<h2>20 сағаттық курс</h2><h1>Информатика пәні негіздерінен
       (барлық жастағылар үшін)</h1>"
     heading_apps: "<h1>Барлығына</h1><h2>қызықты</h2>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<h2>Келесі қадамға дайынсын ба?</h2><h1>Жоғары сынып үшін құралдар</h1>"
     heading_legacy: "<h2>Біздің жеделдетілген курстарымыз</h2><h1>Барлық жастағыларға
       арналған</h1>"
     your_gallery: "Галерея"
@@ -421,8 +424,8 @@
       />Өсімдіктер Зомбилерге қарсы&#8482; &copy; %{current_year} Electronic Arts
       Inc. Барлық құқықтар қорғалған.<br />Гамболаның таңғажайып әлемі сауда белгісі
       болып табылады және &copy; 2015 Cartoon Network.
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
-      GNU LGPL 2.1</a>.
+    code_from_html: Code.org, <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
+      LGPL 2.1</a> лицензияланған p5.play қолданады.
     powered_by_aws: Amazon Web Services серверінде жұмыс істейді
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE логотипі және
       Код Жазу Сағаты&reg; Code.org сауда белгісі болып табылады."
@@ -510,13 +513,11 @@
   upsell:
     applab:
       title: "Қосымшалар Лабораториясы"
-      body: App Lab is a programming environment where you can make simple apps. Design
-        an app, code with blocks or JavaScript to make it work, then share your app
-        in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      body: App Lab онай қосымшалар жасау үшін бағдарламалау ортасы. Код блоктары
+        немесе JavaScript арқылы бір қосымша жаса да бөлес.
+      body_short: "Код блоктары немесе JavaScript арқылы бір қосымша жаса да бөлес."
+      audience: 13+ жастағылар үшін
+      cta: "Қалай жасауды үйрең"
     hoc:
       title: "Классикалық лабиринт"
       body: "Информатика пәні негіздерін оқыңыз. Миллиондаған адам байқап көрді."
@@ -548,6 +549,15 @@
     minecraft:
       title: Minecraft
       body: "Код арқылы Minecraft әлемінде саяхаттаңыз."
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: "Оқушылар кодпен бірге суретін салады!"
     students_made_these_with_code: "Оқушылар кодын жазады!"
@@ -573,7 +583,7 @@
     report_bug: "Қате туралы хабарлау"
     support: "Көмек Сұрау"
     support_url: "//support.code.org"
-    help_resources: Help and Resources
+    help_resources: "Көмек және ресурстар"
   multi:
     wrong_title: "Дұрыс емес жауап"
     wrong_body: "Сіз еңгізген жауап дұрыс емес. Қайталап көріңіз!"
@@ -583,21 +593,30 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: "Рахмет"
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: "Жауабың үшін рақмет."
     correct_title: "Рахмет"
-    correct_body: Thank you for submitting an answer.
+    correct_body: "Жауабың үшін рақмет."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: "Рахмет"
-    wrong_body: Thank you for submitting answers.
+    wrong_body: "Жауаптарың үшін рақмет."
     correct_title: "Рахмет"
-    correct_body: Thank you for submitting an answer
+    correct_body: "Жауаптарың үшін рақмет."
   level_group-submittable:
     wrong_title: "Рахмет"
-    wrong_body: Thank you for submitting answers.
+    wrong_body: "Жауаптарың үшін рақмет."
     correct_title: "Рахмет"
-    correct_body: Thank you for submitting answers.
+    correct_body: "Жауаптарың үшін рақмет."
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: "Дұрыс емес шешім"
     wrong_body: "Сіз еңгізген жауап дұрыс емес. Қайталап көріңіз!"
@@ -683,7 +702,7 @@
     completed_perfect: "аяқталды, тамаша"
     furthest_level_attempted: "жетілген ең жоғарғы деңгей"
     assessment: "баға"
-    submitted: submitted
+    submitted: "жіберілді"
   studio:
     courses_working_on: "Сіз жұмыс жасап жатқан курстар"
     completed_courses: "Аяқталған курстар"
@@ -709,7 +728,7 @@
     help_text: "Жаңа Ойын Лабораториясын немесе Кейіпкер жобасын құру үшін <strong>Қосымша
       Жасау</strong> немесе <strong>Кез келген нәрсе Салуға</strong> шертіңіз!<br/>Сіз
       кез келген уақытта жобаңызға қайта оралып, жұмысыңызды жалғастыра аласыз."
-    need_help: "Жұмыс жасауды бастау жайында сұрағыңыз бар ма?"
+    need_help: "Жаңа жобаңды бастау үшін, осы курстарды қарап шық"
     really_delete: "Өшіру?"
     delete_yes: "Иә"
     delete_no: "Жоқ"
@@ -754,5 +773,5 @@
           аясында қаралатынына келісесіз бе?"
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: "Белгі іздеу..."
+      no_icons_found: "Белгі табылмады"

@@ -26,7 +26,11 @@
   welcome_back: Bem-vindo de volta, %{name}
   submit: Enviar
   unsubmit: Cancelar envio
+  previous_page: Previous page
   next_page: Próxima página
+  cancel: Cancelar
+  okay: Ok
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Adicionar professor:'
@@ -430,8 +434,8 @@
       Rovio Entertainment Ltd. Todos os direitos reservados. Plants vs. Zombies&#8482;
       &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados. O
       Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
-      GNU LGPL 2.1</a>.
+    code_from_html: Code.org usa p5.play, que é licenciado sob <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      a GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE
       e Hora do Código&reg; são marcas registradas da Code.org."
@@ -559,6 +563,15 @@
     minecraft:
       title: Minecraft
       body: Explore o mundo de Minecraft usando códigos.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!
@@ -610,6 +623,15 @@
     wrong_body: Obrigado por enviar uma resposta
     correct_title: Obrigado
     correct_body: Obrigado por enviar uma resposta
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Solução incorreta
     wrong_body: Sua solução não está correta. Tente novamente!

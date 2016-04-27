@@ -25,7 +25,11 @@ zh:
   welcome_back: '歡迎回來，%{name}'
   submit: 送出
   unsubmit: 不提交
+  previous_page: Previous page
   next_page: Next page
+  cancel: 取消
+  okay: OK！
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 增加一位老師：
@@ -453,6 +457,11 @@ zh:
     minecraft:
       title: 當個創世神
       body: 使用程式來探索創世神的世界
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: 學生用程式畫出這些圖案 ！
     students_made_these_with_code: 學生們使用程式碼做了這些內容！
@@ -496,6 +505,12 @@ zh:
     wrong_body: 感謝您提交的答案
     correct_title: 謝謝
     correct_body: 感謝您提交的答案
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: 不正確的解決方案
     wrong_body: 您的解決方案不正確。請再試一次 ！

@@ -12,7 +12,6 @@ var $ = require('jquery');
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Radium = require('radium');
-var _ = require('lodash');
 
 exports.buildPath = function (path) {
   return __dirname + '/../../build/js/' + path;
@@ -41,6 +40,9 @@ exports.setExternalGlobals = function () {
       exceedsAbuseThreshold: function () { return false; },
       getCurrentId: function () { return 'fake_id'; },
       isEditing: function () { return true; }
+    },
+    assets: {
+      showAssetManager: function () {}
     }
   });
   window.marked = function (str) {
@@ -276,6 +278,25 @@ exports.createMouseEvent = function mouseEvent(type, clientX, clientY) {
     evt.button = { 0:1, 1:4, 2:2 }[evt.button] || evt.button;
   }
   return evt;
+};
+
+/**
+ * Creates a key event of the given type with the additional parameters
+ * @param {string} type (keydown, keyup, keypress)
+ * @param {obj} keyConfig
+ */
+exports.createKeyEvent = function keyEvent(type, keyConfig) {
+  // Need to use generic "Event" instead of "KeyboardEvent" because of
+  // http://stackoverflow.com/questions/961532/firing-a-keyboard-event-in-javascript#comment-44022523
+  var keyboardEvent = new Event(type);
+  keyboardEvent.which = keyConfig.which;
+  keyboardEvent.keyCode = keyConfig.keyCode;
+  keyboardEvent.altKey = keyConfig.altKey;
+  keyboardEvent.metaKey = keyConfig.metaKey;
+  keyboardEvent.ctrlKey = keyConfig.ctrlKey;
+  keyboardEvent.shiftKey = keyConfig.shiftKey;
+
+  return keyboardEvent;
 };
 
 /**

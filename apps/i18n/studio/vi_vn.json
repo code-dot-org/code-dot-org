@@ -128,8 +128,8 @@
   "dropletBlock_endGame_param0": "loại",
   "dropletBlock_endGame_param0_description": "Cho dù trò chơi giành chiến thắng hoặc thua ('thắng', 'thua').",
   "dropletBlock_whenDown_description": "Chức năng này thực hiện khi nhấn nút xuống.",
-  "dropletBlock_whenGetCharacter_description": "This function executes when the droid gets any character.",
-  "dropletBlock_whenGetStormtrooper_description": "This function executes when the droid gets Stormtrooper characters.",
+  "dropletBlock_whenGetCharacter_description": "Hàm này thực hiện khi droid lấy bất kì kí tự nào.",
+  "dropletBlock_whenGetStormtrooper_description": "Hàm này thực hiện khi droid lấy được kí tự Stormtrooper.",
   "dropletBlock_whenGetRebelPilot_description": "This function executes when the droid gets Rebel Pilot characters.",
   "dropletBlock_whenGetPufferPig_description": "This function executes when the droid gets Puffer Pig characters.",
   "dropletBlock_whenGetMynock_description": "This function executes when the droid gets Mynock characters.",
@@ -138,7 +138,7 @@
   "dropletBlock_whenGetProbot_description": "This function executes when the droid gets Probot characters.",
   "dropletBlock_whenLeft_description": "This function executes when the left button is pressed.",
   "dropletBlock_whenRight_description": "This function executes when the right button is pressed.",
-  "dropletBlock_whenTouchCharacter_description": "This function executes when the character touches any character.",
+  "dropletBlock_whenTouchCharacter_description": "Hàm này chạy khi droid chạm vào bất kỳ ký tự nào.",
   "dropletBlock_whenTouchObstacle_description": "This function executes when the character touches any obstacle.",
   "dropletBlock_whenTouchStormtrooper_description": "This function executes when the droid touches Stormtrooper characters.",
   "dropletBlock_whenTouchRebelPilot_description": "This function executes when the droid touches Rebel Pilot characters.",
@@ -187,7 +187,7 @@
   "hoc2015_change_setting_instructions2": "Use the new commands to change your droid and its speed.  Then, get the Rebel Pilots [rebelpilot].",
   "hoc2015_event_free_instructions": "\"You're on your own now, R2-D2.\"",
   "hoc2015_event_free_instructions2": "You have all the tools you need now to create your own puzzle. Feel free to explore and play with all the different Commands and Events. When you're done, press the Finish button to continue.",
-  "iceAge": "Ice Age!",
+  "iceAge": "Kỷ băng hà!",
   "incrementPlayerScore": "điểm số ghi được",
   "itemIAProjectile1": "hearts",
   "itemIAProjectile2": "boulder",
@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "You need to get 20 Mouse Droids. Use the \"add a Mouse Droid\" command inside the \"when get Mouse Droid\" event to add two or more Mouse Droids every time you get one.",
   "failedMultiplyCharactersTimeoutGotSome": "Congratulations, you added code to make Mouse Droids. You can go to the next puzzle or try again to get 20 Mouse Droids. Try making it easier by adding more of them! (Press and hold the keys on your keyboard (or screen) to move faster.)",
   "failedChangeSettingTimeout": "Get three Rebel Pilots to move on.",
-  "failedChangeSettingSettings": "Make the game your own. To pass this puzzle, you need to change your droid and set its speed."
+  "failedChangeSettingSettings": "Make the game your own. To pass this puzzle, you need to change your droid and set its speed.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }

@@ -30,8 +30,8 @@
   twentyhours_text: Bạn đã học xong khóa học MỘT TIẾNG LẬP TRÌNH? Hãy học tiếp các
     khóa học về khoa học máy tính và lập trình tiếp theo của chúng tôi.
   og_title: Mỗi đứa trẻ xứng đáng có được cơ hội
-  og_description: Mỗi học sinh/sinh viên xứng đáng có được cơ hội học công nghệ thông
-    tin.
+  og_description: Tất cả học sinh ở mọi trường xứng đáng có cơ hội học ngành khoa
+    học máy tính. Khoa học máy tính có thể thay đổi mọi thứ.
   hoc2014_heading: Tham gia <a href="http://hourofcode.com">Giờ Mã</a> <br/> từ mùng
     8 đến 14 tháng 12, 2014 <br/>
   hoc2014_students: học viên
@@ -118,7 +118,7 @@
   third_party_platform_all: 'Hệ điều hành: Web, iPad & Android'
   third_party_platform_mobile: 'Nền tảng: iPad & Android'
   third_party_platform_web: 'Nền tảng: Web'
-  third_party_price_varies: 'Price: Plans vary'
+  third_party_price_varies: 'Giá: tùy gói (kế hoạch/ chương trình)'
   third_party_price_free: 'Giá: miễn phí'
   third_party_price_299: 'Giá: $2.99/1 lượt tải về'
   third_party_price_individual: 'Giá cá nhân: Thử nghiệm miễn phí & 25 $/ tháng'
@@ -128,21 +128,22 @@
     way. Our innovative visual programming language, interactive self-paced courses,
     and game-based programming activities provide an easy introduction to programming,
     and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
+  third_party_tynker_btn_curriculum: 'Thử dùng khóa học của Tynker cho những độc giả
+    nhỏ '
+  third_party_tynker_btn_site: Vào tynker
   third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
     that enables young children (ages 5-7) to create their own interactive stories
     and games. Children snap together graphical programming blocks to make characters
     move, jump, dance, and sing. Children can modify characters in the paint editor,
     add their own voices and sounds, even insert photos of themselves - then use the
     programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
+  third_party_scratchjr_btn_curriculum: Tải về  Scratch Jr. Curriculum
   third_party_scratchjr_btn_site: Visit Scratch Jr.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories,
     games, and animations and share your creations with others in the online community.
     Scratch helps young people learn to think creatively, reason systematically, and
     work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
+  third_party_scratch_btn_curriculum: Tải về Scratch Jr. Curriculum
   third_party_scratch_btn_forum: Scratch Educator Forum
   third_party_scratch_btn_site: Visit Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
@@ -156,7 +157,7 @@
     JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
     can share whatever you create, explore what others have created and learn from
     each other!
-  third_party_khan_btn_learn: Learn CS with Khan Academy
+  third_party_khan_btn_learn: Học khoa học máy tính với học viện Khan
   third_party_khan_btn_forum: Khan Academy CS Forum
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
     allows everyone, even novices, to start programming and build fully functional
@@ -178,28 +179,29 @@
     native education.
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
   third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_organization: Tổ chức
   third_party_curriculum: Chương trình
-  third_party_pricing: Pricing
-  third_party_cost_free: Free
-  third_party_cost_5permonth: "$5/month per class"
-  third_party_cost_299: "$2.99/download"
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
-    K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
-    K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
+  third_party_pricing: Học phí
+  third_party_cost_free: Miễn phí cho mọi học sinh và giáo viên
+  third_party_cost_5permonth: 5$/tháng/lớp
+  third_party_cost_299: 2,99$/lượt tải
+  third_party_cost_free_399: Dùng thử miễn phí, 300$/lớp học
+  third_party_cost_free_2: Dùng thử miễn phí, 2$/học sinh
+  third_party_cost_free_10: Dùng thử miễn phí, 9,99$/tháng
+  third_party_desc_5_4to8: Có khoảng 5 bài giảng, dành cho học sinh lớp 4 - 8
+  third_party_desc_10to12_kto3: Khoàng 10 - 12 bài giảng, dành cho lớp K-3
+  third_party_desc_11_kto5: Khoàng 11 bài giảng, dành cho học sinh lớp K-5
+  third_party_desc_10to12_kto5: Khoàng 10 - 12 bài giảng, dành cho học sinh lớp K-5
+  third_party_desc_40_4to8: Khoàng 40 bài giảng, dành cho học sinh lớp 4 đến lớp 8
   third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
-  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
-  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
-  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
+  third_party_desc_10to15_3to12: Từ 10 đến 15 bài giảng, dành cho học sinh lớp 3 đến
+    lớp 12
+  third_party_desc_25to40_3to12: Từ 25 đến 40 bài giảng, dành cho học sinh lớp 3 đến
+    lớp 12
+  third_party_desc_20_2to8: Khoảng 20 bài giảng, dành cho học sinh lớp 2 đến lớp 8
+  third_party_desc_7to22_5to12: Từ 7 đến 22 bài giảng, dành cho học sinh lớp 5 đến
+    lớp 12
+  third_party_desc_20_4to12: Hơn 20 bài học luôn sẵn sàng cho các bé từ 4 đến 12 tuổi
   enter_valid_age: Vui lòng chọn tuổi hợp lệ
   enter_valid_email: Vui lòng nhập một địa chỉ email hợp lệ
   get_a_certificate_message: Chúng tôi sẽ gửi cho bạn một Giấy Chứng Nhận và Thông
@@ -253,16 +255,17 @@
   learn_next_level: Tiếp tục đến cấp độ tiếp theo
   learn_online: Thử các khóa học trực tuyến khác
   learn_classes: Tìm một lớp học tại địa phương
-  hoc_is_here: "#HourOfCode là ở đây - kiểm tra nó xem! @codeorg"
+  hoc_is_here: Hãy học khoa học máy tính, ta có thể thay đổi mọi thứ. Truy cập https://youtu.be/xJqSu1IbcHg
+    để biết thêm chi tiết.
   just_did_hoc: 'Tôi chỉ cần làm #HourOfCode - kiểm tra nó xem! @codeorg'
-  just_did_course1: I just finished Course 1 - check it out! @codeorg
-  just_did_course2: I just finished Course 2 - check it out! @codeorg
-  just_did_course3: I just finished Course 3 - check it out! @codeorg
-  just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_course1: Mình vừa hoàn thành khóa 1 tại @codeorg, xem thử đi
+  just_did_course2: Mình vừa hoàn thành khóa 2 tại @codeorg, xem thử đi
+  just_did_course3: Mình vừa hoàn thành khóa 3 tại @codeorg, xem thử đi
+  just_did_course4: Mình vừa hoàn thành khóa 4 tại @codeorg, xem thử đi
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
-  twitter_teach_cs: Tại sao không thêm các trường dạy khoa học máy tính? Chúng tôi
-    có cải thiện điều này. http://youtu.be/nKIu9yen5nc. Truy cập vào http://code.org/
-    để tìm hiểu thêm.
+  twitter_teach_cs: |
+    Cứ 10 người thì có 9 người đồng ý "các trường học nên dạy khoa học máy tính".
+    http://youtu.be/nKIu9yen5nc. Truy cập vào trang web: https://code.org/.
   learn_hoc: Học một Giờ lập trình
   beyond_hoc: Ngoài một giờ
   what_gender: Giới tính của bạn là gì?
@@ -368,8 +371,8 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Tìm hiểu thêm
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
+  homepage_banner_20k_teachers: 20000 giáo viên đã được đào tạo và giờ họ đang dạy
+    khoa học máy tính.
   homepage_banner_20k_teachers_link: Tìm hiểu thêm
   homepage_slot_text_title_hoc: Giờ của mã
   homepage_slot_text_blurb_hoc: Ai cũng có thể học. Ngay hôm nay
@@ -379,13 +382,13 @@
   homepage_solot_text_link_volunteer: Tình nguyện viên cho Hour of Code
   homepage_slot_text_title_students: học viên
   homepage_slot_text_blurb_students: Khám phá tất cả các bài hướng dẫn của chúng tôi
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Tìm hiểu các khóa học của chúng tôi
   homepage_slot_text_link_codestudio: Thử Code Studio
   homepage_slot_text_link_local: Tìm lớp ở địa phương
   homepage_slot_text_link_othercourses: Các khoá trực tuyến khác
   homepage_slot_text_title_educators: Nhà giáo
   homepage_slot_text_blurb_educators: Dạy các học viên của bạn
-  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_elementary: Trường trung học cơ sở
   homepage_slot_text_link_middle: Trung học cơ sở
   homepage_slot_text_link_high: Trung học phổ thông
   homepage_slot_text_link_k5: Các khoá cho cấp tiểu học
@@ -439,8 +442,8 @@
   class_submission_level_college: "Đại học và cao đẳng"
   class_submission_level_vocational: Dạy nghề
   class_submission_languages_other: Ngôn ngữ khác
-  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
-    videos</a> by role models and celebrities
+  inspirational_videos_more: Tìm hiểu thêm <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">các
+    video truyền cảm hứng</a> bởi mô hình vai trò
   playlab_choose_theme: Chọn chủ đề cho Play Lab của bạn
   playlab_classic_title: Cổ điển
   playlab_gumball_title: Gumball
@@ -607,7 +610,7 @@
   dashboard_landing_progress_title: Tiến độ lớp chính
   dashboard_landing_progress_biggest: "Đây là tiến độ cho phần bạn học nhiều nhất."
   dashboard_landing_view_progress: Xem tiến độ cho %{biggest_section}
-  dashboard_landing_print_progress: Print progress
+  dashboard_landing_print_progress: Quá trình in
   dashboard_landing_available_title: Các khóa học có sẵn
   dashboard_landing_available_courses: Dưới đây là các khóa học hiện có sẵn cho bạn
     và học sinh của bạn.
@@ -621,7 +624,7 @@
   dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
     students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
     during Computer Science Education Week.
-  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_k5_courses: Khóa học 20 giờ dành cho K-5
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
     consists of about 20 lessons that may be implemented as one unit or over the course
@@ -642,7 +645,7 @@
   dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
     curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
+  dashboard_course_csins: Khoa học máy tính đối với khoa học
   dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
     an introduction to computer science concepts within the context of modeling and
     simulation.
@@ -666,6 +669,11 @@
   dashboard_action_remove_confirm: Loại bỏ?
   dashboard_action_done: Hoàn thành
   dashboard_action_required: yêu cầu
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Trang chủ giáo viên
   dashboard_navigation_section_student_progress: Tài khoản sinh viên và Tiến độ
   dashboard_navigation_section_teacher_progress: Tiến trình khóa học của bạn
@@ -676,14 +684,26 @@
   dashboard_navigation_all_sections: Tài khoản sinh viên và Tiến độ
   dashboard_navigation_view_progress: Xem tiến trình
   dashboard_navigation_view_text_responses: View Text Responses
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments: Phương pháp đánh giá
   dashboard_navigation_add_students: Thêm sinh viên
   dashboard_navigation_manage_students: Quản lý sinh viên
   dashboard_navigation_lesson_plans_resources: Kế hoạch bài học và tài nguyên
   dashboard_navigation_view_stats: Xem thống kê
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
-  dashboard_sections_new_section: New section
+  dashboard_progress_not_started: chưa bắt đầu
+  dashboard_progress_in_progress: trong tiến trình
+  dashboard_progress_not_completed: chưa hoàn thành
+  dashboard_progress_completed_too_many_blocks: hoàn thành, quá nhiều mảnh gép
+  dashboard_progress_completed_perfect: hoàn thành, hoàn hảo
+  dashboard_progress_furthest_level_attempted: "đã cố gắng ở mức độ cao nhất"
+  dashboard_progress_submitted: "đã gửi"
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
+  dashboard_sections_new_section: Thêm bài mới
   dashboard_sections_jumbotron_instruction: Create new sections and add students to
     them. Sections help you organize students into smaller groups so you can track
     their progress and manage their accounts.
@@ -706,6 +726,26 @@
   dashboard_sections_print_secrets: You may then print a sheet of cards containing
     account information to be distributed to your students individually.
   dashboard_sections_switch_section: 'Switch section:'
+  dashboard_sections_close: "Đóng"
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Thêm học sinh
   dashboard_students_add_students: Thêm nhiều học sinh
   dashboard_students_add_multiple: 'Gõ hoặc dán tên của các học sinh, mỗi tên một
@@ -785,24 +825,17 @@
   dashboard_login_picture: Hình ảnh
   dashboard_login_none: "Địa chỉ email"
   dashboard_new_password: Mật khẩu mới
-  dashboard_progress_not_started: chưa bắt đầu
-  dashboard_progress_in_progress: trong tiến trình
-  dashboard_progress_not_completed: chưa hoàn thành
-  dashboard_progress_completed_too_many_blocks: hoàn thành, quá nhiều mảnh gép
-  dashboard_progress_completed_perfect: hoàn thành, hoàn hảo
-  dashboard_progress_furthest_level_attempted: "đã cố gắng ở mức độ cao nhất"
-  dashboard_progress_submitted: submitted
   dashboard_stage: giai đoạn
   dashboard_puzzle: Câu đố
-  dashboard_question: Question
-  dashboard_response: Response
-  dashboard_correctness: Correctness
+  dashboard_question: Câu hỏi
+  dashboard_response: Trả lời
+  dashboard_correctness: Chính xác
   dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_unsubmitted: Chưa gửi lên
   dashboard_correctness_correct: Chính xác
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
+  dashboard_correctness_incorrect: Không đúng
+  dashboard_submission_submitted: "Đã gửi lên"
+  dashboard_submission_in_progress: "Đang thực hiện ..."
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -829,17 +862,12 @@
   dashboard_faq: Câu hỏi thường gặp
   dashboard_faq_k5: Câu thường hỏi tiểu học
   dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
+  dashboard_announce_view_all: Tất cả
   dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
     problem in computer science. Code Studio teachers are leading the way in educating
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
   dashboard_announce_button_text: Tìm hiểu thêm
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
-  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
   code_hoc_coming: Giờ lập trình là ở đây - ngày 8-14 tháng 12!
   code_sign_up: "Đăng ký để tham gia trong tuần giáo dục Khoa học máy tính"
   learn_more: Tìm hiểu thêm
@@ -972,7 +1000,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   applab_name: Phòng thí nghiệm ứng dụng
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: Lứa tuổi 13 +
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
@@ -1131,8 +1159,8 @@
   hourofcode_shortdescription: Học mã lập trình với  Mark Zuckerberg và Angry Birds!
   frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice.
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortdescription: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars
+    của riêng bạn trong một thiên hà xa xôi.
   playlab_shortdescription: Tạo ra một câu chuyện hoặc làm cho một trò chơi với phòng
     thí nghiệm trò chơi!
   infinity_shortdescription: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện
@@ -1297,8 +1325,8 @@
     sự kỳ diệu và vẻ đẹp của băng. Bạn sẽ tạo ra bông tuyết và các mẫu như bạn trượt
     băng  và làm cho một thế giới thần tiên mùa đông mà sau đó bạn có thể chia sẻ
     với bạn bè của bạn!
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_longdescription: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars
+    của riêng bạn trong một thiên hà xa xôi.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
     pirates, zombies, ninjas, and many more characters move, make sounds, score points,
     and even throw fireballs!
@@ -1662,8 +1690,33 @@
   infinity_shortcode: inf
   playlab_shortcode: Bắt đầu chơi
   artist_shortcode: art
-  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
-    (or a teacher you know) want to join a nationwide community of educators working
-    to change the face of computer science education? We'll be accepting applications
-    from middle and high school teachers in our partner districts for our year-long
-    Exploring Computer Science Professional Learning Program until April 22nd."
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
+  dashboard_sections_close: Close
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.

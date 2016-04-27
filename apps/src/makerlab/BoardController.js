@@ -57,18 +57,26 @@ BoardController.prototype.ensureBoardConnected = function () {
 
 BoardController.prototype.installComponentsOnInterpreter = function (codegen, jsInterpreter) {
   this.prewiredComponents = this.prewiredComponents ||
-      initializeCircuitPlaygroundComponents();
+      initializeCircuitPlaygroundComponents(this.board_.io);
 
-  codegen.customMarshalObjectList = [
-    {instance: five.Led},
-    {instance: five.Led.RGB},
-    {instance: five.Button},
-    {instance: five.Switch},
-    {instance: five.Piezo},
-    {instance: five.Thermometer},
-    {instance: five.Sensor},
-    {instance: five.Gyro}
-  ];
+  var componentConstructors = {
+    Led: five.Led,
+    RGB: five.Led.RGB,
+    Button: five.Button,
+    Switch: five.Switch,
+    Piezo: five.Piezo,
+    Thermometer: five.Thermometer,
+    Sensor: five.Sensor,
+    Pin: five.Pin,
+    CapTouch: PlaygroundIO.CapTouch,
+    Tap: PlaygroundIO.Tap,
+    Accelerometer: five.Accelerometer
+  };
+
+  Object.keys(componentConstructors).forEach(function (key) {
+    codegen.customMarshalObjectList.push({instance: componentConstructors[key]});
+    jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
+  });
 
   Object.keys(this.prewiredComponents).forEach(function (key) {
     jsInterpreter.createGlobalProperty(key, this.prewiredComponents[key]);
@@ -80,7 +88,12 @@ BoardController.prototype.reset = function () {
     return;
   }
 
-  this.board_.register.forEach(function (component) {
+  var standaloneComponents = [
+    this.prewiredComponents.tap,
+    this.prewiredComponents.touch
+  ];
+
+  this.board_.register.concat(standaloneComponents).forEach(function (component) {
     try {
       if (component.state && component.state.intervalId) {
         clearInterval(component.state.intervalId);
@@ -142,8 +155,19 @@ function getDevicePort() {
   }.bind(this));
 }
 
+/**
+ * Returns whether the given descriptor's serialport is potentially an Arduino
+ * device.
+ *
+ * Based on logic in johnny-five lib/board.js, match ports that Arduino cares
+ * about, like: ttyUSB#, cu.usbmodem#, COM#
+ *
+ * @param {Object} port node-serial compatible serialport info object
+ * @returns {boolean} whether this is potentially an Arduino device
+ */
 function deviceOnPortAppearsUsable(port) {
-  return port.comName.match(/usbmodem/);
+  var comNameRegex = /usb|acm|^com/i;
+  return comNameRegex.test(port.comName);
 }
 
 /**
@@ -151,7 +175,7 @@ function deviceOnPortAppearsUsable(port) {
  * Circuit Playground board.
  * @returns {Object.<String, Object>} board components
  */
-function initializeCircuitPlaygroundComponents() {
+function initializeCircuitPlaygroundComponents(io) {
   return {
     pixels: Array.from({length: 10}, function (_, index) {
       return new five.Led.RGB({
@@ -161,16 +185,6 @@ function initializeCircuitPlaygroundComponents() {
     }),
 
     led: new five.Led(13),
-
-    buttonL: new five.Button('4', {
-      isPullup: true,
-      invert: true
-    }),
-
-    buttonR: new five.Button('19', {
-      isPullup: true,
-      invert: true
-    }),
 
     toggle: new five.Switch('21'),
 
@@ -190,13 +204,30 @@ function initializeCircuitPlaygroundComponents() {
       freq: 100
     }),
 
+    accelerometer: new five.Accelerometer({
+      controller: PlaygroundIO.Accelerometer
+    }),
+
+    tap: new PlaygroundIO.Tap(io),
+
+    touch: new PlaygroundIO.CapTouch(io),
+
+    /**
+     * Must initialize sound sensor BEFORE left button, otherwise left button
+     * will not respond to input.
+     */
     sound: new five.Sensor({
       pin: "A4",
       freq: 100
     }),
 
-    gyro: new five.Gyro({
-      controller: PlaygroundIO.Gyro
-    })
+    buttonL: new five.Button('4'),
+
+    buttonR: new five.Button('19')
   };
 }
+
+BoardController.__testonly__ = {
+  deviceOnPortAppearsUsable: deviceOnPortAppearsUsable,
+  getDevicePort: getDevicePort
+};

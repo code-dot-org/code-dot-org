@@ -162,7 +162,7 @@ vi:
           description_short: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
         course4:
           description_short: Sinh viên tham gia khóa học 4 cần phải hoàn thành các khóa học 2 và 3.
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: Khóa học 4 được thiết kế cho những học sinh đã hoàn thành khóa học 2 và 3. Học sinh sẽ học cách giải các câu đố với sự phức tạp tăng lên cũng như tìm hiểu làm thế nào để kết hợp một số khái niệm khi giải quyết các thách thức. Khi hoàn tất khóa học này, học sinh sẽ tạo ra chương trình sử dụng nhiều kỹ năng, bao gồm vòng lặp, hàm có tham số. Khuyến nghị cho lớp 4-8.
           "Artist: Variables": 'Nghệ sĩ: biến'
           "Bee: For Loops": 'Ong: Cho vòng'
           title: Khóa học 4
@@ -188,9 +188,9 @@ vi:
           Maze and Bee: Mê cung và ong
           Artist Binary: Nghệ sĩ nhị phân
           description_audience: Lứa tuổi 10 + (sau khóa học 3)
-          Super Challenge - Variables: 'Super Challenge - Variables'
-          Super Challenge - For Loops: 'Super Challenge - For Loops'
-          Super Challenge - Functions and Parameters: 'Super Challenge - Functions and Parameters'
+          Super Challenge - Variables: 'Siêu thách thức - Biến số'
+          Super Challenge - For Loops: 'Siêu thách thức: Vòng lặp For'
+          Super Challenge - Functions and Parameters: 'Siêu thách thức: Hàm và tham số'
           Extreme Challenge - Comprehensive: 'Extreme Challenge - Comprehensive'
         Course4pre:
           title: Khóa học 4 điều kiện tiên quyết
@@ -941,6 +941,7 @@ vi:
           Long assessment: Long assessment
           Star wars: Star wars
           Minecraft: Minecraft
+          Rich long assessment: Rich long assessment
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
@@ -1454,8 +1455,8 @@ vi:
           Spring 2016: Spring 2016
         iceage:
           title: Ice Age Play Lab
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          description: Create a story or make a game with Ice Age Play Lab!
+          description_short: Tạo ra một câu chuyện hoặc làm cho một trò chơi với Ice Age Play Lab!
+          description: Tạo ra một câu chuyện hoặc làm cho một trò chơi với Ice Age Play Lab!
           Ice Age Play Lab: Ice Age Play Lab
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
@@ -1474,7 +1475,7 @@ vi:
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
-          description_short: Programming
+          description_short: Lập trình
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           While Loop Basics: While Loop Basics
           While Loops_ Counting Flips: While Loops_ Counting Flips
@@ -1508,18 +1509,18 @@ vi:
           Challenge Overview: Challenge Overview
         gumball:
           title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
+          description_short: Tạo ra một câu chuyện hoặc làm cho một trò chơi với Ice Age Play Lab!
+          description: Tạo ra một câu chuyện hoặc làm cho một trò chơi với Ice Age Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          title: 'Star Wars: Xây dựng một Thiên Hà bằng lập trình'
+          description_short: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars của riêng bạn trong một thiên hà xa xôi.
+          description: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars của riêng bạn trong một thiên hà xa xôi.
           Hour of Code 2015: Giờ lập trình 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          title: 'Star Wars: Xây dựng một Thiên Hà bằng lập trình'
+          description_short: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars của riêng bạn trong một thiên hà xa xôi.
+          description: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars của riêng bạn trong một thiên hà xa xôi.
           Hour of Code 2015: Giờ lập trình 2015
         minecraft:
           title: Minecraft
@@ -1658,3 +1659,157 @@ vi:
           title: Gamelab Hackathon
           description_short: Gamelab Hackathon
           description: A place to try things out in Game Lab
+        algebraPD1:
+          title: Computer Science in Algebra PD
+          description_short: Teach Algebra through Functional Programming
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Introduction to PD
+          Course Overview: Course Overview
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Evaluation Blocks: Các khối đánh giá
+          Teacher Dashboard: Teacher Dashboard
+          Preparing for in-person PD: Preparing for in-person PD
+        algebraPD3c:
+          title: Computer Science in Algebra PD
+          description_short: CS in Algebra end of year reflection
+          description: CS in Algebra end of year reflection
+          Getting Started: Getting Started
+          Sharing Student Work: Sharing Student Work
+        csp1:
+          title: 'CS Principles Unit 1 - The Internet'
+          description_short: Internet
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
+          Personal Innovations: Personal Innovations
+          Sending Binary Messages: Sending Binary Messages
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages with the Internet Simulator
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          The Internet: Internet
+          The Need for Addressing: The Need for Addressing
+          Invent an Addressing Protocol: Invent an Addressing Protocol
+          Routers and Redundancy: Routers and Redundancy
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
+          Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
+          Algorithms Detour - How Routers Learn: 'Algorithms Detour - How Routers Learn'
+          The Need for DNS: The Need for DNS
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Practice PT - The Internet and Society: 'Practice PT - The Internet and Society'
+        csp2:
+          title: 'CS Principles Unit 2 - Digital Information'
+          description_short: Digital Information
+          description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          Bytes and File Sizes: Bytes and File Sizes
+          Text Compression: Text Compression
+          Encoding B&W Images: 'Encoding B&W Images'
+          Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
+          Encode a Complex Thing: Encode a Complex Thing
+          Intro to Data: Intro to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: 'Practice PT - Tell a Data Story'
+        csp3:
+          title: 'CSP Unit 3 - Programming'
+          description_short: Lập trình
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          The Need For Programming Languages: The Need For Programming Languages
+          The Need for Algorithms: The Need for Algorithms
+          Creativity in Algorithms: Creativity in Algorithms
+          Using Simple Commands: Using Simple Commands
+          Creating Functions: Tạo ra hàm
+          Functions and Top-Down Design: Functions and Top-Down Design
+          APIs and Function Parameters: APIs and Function Parameters
+          Creating functions with Parameters: Creating functions with Parameters
+          Looping and Random Numbers: Looping and Random Numbers
+          Practice PT - Design a Digital Scene: 'Practice PT - Design a Digital Scene'
+        csp4:
+          title: 'CS Principles Unit 4 - Big Data and Privacy'
+          description_short: Big Data and Privacy
+          description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
+          Identifying People with Data: Identifying People with Data
+          The Cost of Free: The Cost of Free
+          Tell Me a Secret - Encrypting Text: 'Tell Me a Secret - Encrypting Text'
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Public Key Crypto: Public Key Crypto
+          Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
+          Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
+        csp5:
+          title: 'CS Principles Unit 5 - Building Apps'
+          description_short: Building Apps
+          description: 'This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools. '
+          Events Unplugged: Events Unplugged
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Introducing Design Mode: Introducing Design Mode
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistants: Introduction to Digital Assistants
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: 'Vòng lặp "trong khi"'
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
+        csp6:
+          title: 'CS Principles Unit 6 - Performance Tasks'
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+        CSDU3-Draft:
+          title: ' TEMP CSD Unit 3 - Interactive Games and Animations'
+          description_short: Lập trình
+          description: Temp place to work on U3 of Disco
+          Drawing in Game Lab: Drawing in Game Lab
+          Animation: Hình ảnh động
+          Draw Loop and Random: Draw Loop and Random
+          Variables: Các biến
+          Sprite Properties and Mod: 'Sprite Properties and Mod'
+        2016_sciencePD_phase1:
+          title: Computer Science in Science PD 2016-2017
+          description_short: In Partnership with Project GUTS
+          description: In Partnership with Project GUTS
+          Introduction to PD: Introduction to PD
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        TEMP CSD Unit 3:
+          title: ' TEMP CSD Unit 3 - Interactive Games and Animations'
+          description_short: Lập trình
+          description: ""
+          Drawing in Game Lab: Drawing in Game Lab

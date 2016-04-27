@@ -187,111 +187,74 @@
         bông hoa và làm mật ong. Sử dụng một vòng lặp.
       2-3 Bee Conditionals 4_instruction: Giúp tôi thu thập tất cả mật hoa từ những
         bông hoa và dùng chúng để làm mật ong.
-      2-3 Bee Conditionals 5_instruction: |-
-        Be careful not to collect nectar from
-        a purple flower if it doesn't have any. \r
-        You must first check if the nectar
-        is equal to 1 using the `if nectar` block.
-      2-3 Bee Conditionals 6_instruction: |
-        Check this flower with an "if" block
-        to see if there is any nectar available.
-      2-3 Bee Conditionals 7_instruction: |
-        Collect nectar from each flower only if
-        it has any.
-      2-3 Bee Conditionals 8_instruction: |
-        This field has red and purple flowers.
-        Red flowers have a known nectar amount, but purple flower nectar is unknown.
-        Collect all the nectar.
-      2-3 Bee Conditionals 9_instruction: Collect all the nectar from each flower.
-      2-3 Bee Conditionals Assessment 1_instruction: |
-        Assessment: Collect all of
-        the nectar. Be careful not to try to collect nectar from a purple flower if
-        it doesn't have any.
-      2-3 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar.
-      2-3 Bee Debugging 10_instruction: |-
-        This puzzle is making me loopy! \r
-        Fix
-        the error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 2_instruction: |-
-        Can you find the problem here?\r
-        Fix the
-        error(s) to collect all of the nectar.
+      2-3 Bee Conditionals 5_instruction: Hãy cẩn thận không thu thập phấn hoa từ
+        một bông hoa tím nếu nó không có phấn. Trước tiên, bạn phải kiểm tra nếu phấn
+        hoa bằng 1 sử dụng khối lệnh "nếu phấn hoa/mật hoa".
+      2-3 Bee Conditionals 6_instruction: Kiểm tra bông hoa này với một khối lệnh
+        "nếu" để xem nếu có phấn hoa không.
+      2-3 Bee Conditionals 7_instruction: Thu thập phấn hoa từ các bông hoa nếu nó
+        có phấn.
+      2-3 Bee Conditionals 8_instruction: Cánh đồng này có cả hoa đỏ và hao tím. Ta
+        biết trước lượng phấn của hoa đỏ, nhưng không biết trước lượng phấn của hoa
+        tím.
+      2-3 Bee Conditionals 9_instruction: Thu thập tất cả phấn hoa từ từng bông.
+      2-3 Bee Conditionals Assessment 1_instruction: 'Bài tập: thu thật tất cả phấn
+        hoa. Cẩn thận không thu thập phấn hoa từ những bông hoa tím không có mật.'
+      2-3 Bee Debugging 1_instruction: Các khối lệnh cần phải được sửa lỗi. Hãy sửa
+        (các) lỗi để thu thập tất cả phấn hoa.
+      2-3 Bee Debugging 10_instruction: Trò chơi này sử dụng nhiều lệnh lặp. Hãy sửa
+        lỗi để thu thập tất cả các phấn hoa và tạo ra mật ong.
+      2-3 Bee Debugging 2_instruction: Bạn có thể tìm ra lỗi ở đây không? Hãy sửa
+        lỗi để thu thập tất cả phấn hoa.
       2-3 Bee Debugging 3_instruction: |-
-        Ooh, this one stings!\r
+        Có nhiều hoa đẹp quá!\r
         \r
-        Fix the error(s)
-        to collect all of the nectar.
-      2-3 Bee Debugging 4_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 5_instruction: |-
-        That flower looks tasty! \r
-        \r
-        Fix the
-        error(s) to collect all of the nectar.  You can now use both run and step.
+        Sửa lỗi để lấy được hết phấn hoa.
+      2-3 Bee Debugging 4_instruction: Các khối lệnh cần phải được sửa lỗi. Hãy sửa
+        (các) lỗi để thu thập tất cả phấn hoa.
+      2-3 Bee Debugging 5_instruction: Hoa trông ngon quá! \r \r sửa chữa lỗi đã để
+        thu thập tất cả phấn hoa.  Bây giờ, bạn có thể sử dụng cả chạy và bước.
       2-3 Bee Debugging 6_instruction: |-
-        What a sweet challenge!\r
+        Thật là một thách thức ngọt ngào!\r
         \r
-        Fix the error(s)
-        to collect all of the nectar.
-      2-3 Bee Debugging 7_instruction: |
-        Fix the error(s) to collect all of the nectar
-        and make all of the honey.
+        Sửa lỗi để lấy được hết phấn hoa.
+      2-3 Bee Debugging 7_instruction: Sửa tất cả các lỗi để con ong lấy được phấn
+        hoa và tạo mật.
       2-3 Bee Debugging 8_instruction: |-
-        So many beautiful flowers!\r
+        Có nhiều hoa đẹp quá!\r
         \r
-        Fix the
-        error(s) to collect all of the nectar.
+        Sửa lỗi để lấy được hết phấn hoa.
       2-3 Bee Debugging 9_instruction: |-
-        "Bee" patient with this one!\r
+        Hãy cẩn thận!\r
         \r
-        You
-        will need to fix a couple of things in this program to collect all of the
-        nectar and make all of the honey.
-      2-3 Bee Debugging Assessment 1_instruction: |-
-        Assessment:  Now it's time to
-        show what you know!\r
-        \r
-        Fix the error(s) to collect all of the nectar and
-        make all of the honey.
-      2-3 Bee Functions 1_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 2 nectar" function to collect the nectar from each
-        flower.
-      2-3 Bee Functions 10_instruction: |-
-        Purple flowers change between either 1 or
-        0 nectar each time you run the puzzle.   \r
-        \r
-        Create a function that collects
-        nectar only from purple flowers that have nectar.
-      2-3 Bee Functions 2_instruction: |-
-        Functions are blocks of code that perform
-        a task.  \r
-        \r
-        Use the `get 5` function to get 5 nectars at a time.
-      2-3 Bee Functions 3_instruction: Collect all the nectar from each flower.
+        Hãy sửa lỗi chương trình sau để con ong lấy được hết phấn hoa và tạo mật.
+      2-3 Bee Debugging Assessment 1_instruction: 'Bài tập: Bây giờ là lúc thể hiện
+        những gì bạn biết! \r \r sửa lỗi để thu thập tất cả phấn hoa hoa và làm tất
+        cả mật ong.'
+      2-3 Bee Functions 1_instruction: Hàm là khối mã thực hiện một nhiệm vụ. Sử dụng
+        Hàm "lấy 2 mật hoa" để thu thập mật hoa từ mỗi hoa.
+      2-3 Bee Functions 10_instruction: Hoa màu tím thay đổi lượng phấn hoa từ 1 thành
+        0 hoặc từ 0 thành 1 mỗi khi bạn chạy trò chơi.   \r \r tạo ra một hàm thu
+        thập phấn hoa chỉ tf các bông hoa màu tím mà có phấn.
+      2-3 Bee Functions 2_instruction: Hàm là khối lệnh thực hiện một nhiệm vụ.  \r
+        \r sử dụng hàm 'lấy 5' để lấy  5 phấn hoa một lần.
+      2-3 Bee Functions 3_instruction: Thu thập tất cả phấn hoa từ từng bông.
       2-3 Bee Functions 4_instruction: |-
         The `move and get nectar` function turns
         the bee, collects nectar, and then returns the bee to where it started.  \r
         \r
         Use
         the function to collect all of the nectar.
-      2-3 Bee Functions 5_instruction: |
-        There is now more nectar at the flowers.
-        Edit the given function so that it collects 4 nectars and use it to collect
-        all of the nectar from the flowers.
-      2-3 Bee Functions 6_instruction: |
-        Now use the same function to collect nectar
-        from the three flowers.
-      2-3 Bee Functions 7_instruction: |
-        The flowers are now further away. Edit the
-        given function and use it to collect all of the nectar from the flowers.
-      2-3 Bee Functions 8_instruction: |
-        Create your own function that gets 7 nectar,
-        moves forward, and makes 7 honey. Use the function to collect nectar at each
-        flower and make honey at each honeycomb.
+      2-3 Bee Functions 5_instruction: Bây giờ hoa có nhiều phấn hơn. Chỉnh sửa hàm
+        đã cho để nó có thể thu thập 4 phấn hoa và sử dụng nó để thu thập tất cả phấn
+        hoa từ các bông hoa.
+      2-3 Bee Functions 6_instruction: Bây giờ, sử dụng cùng hàm đó để thu thập phấn
+        hoa từ 3 bông hoa.
+      2-3 Bee Functions 7_instruction: Các bông hoa hiện đang xa quá. Hãy sửa hàm
+        sau và giúp ong lấy được phấn hoa.
+      2-3 Bee Functions 8_instruction: Bạn hãy tự tạo 1 hàm để lấy 7 phấn hoa, di
+        chuyển, và tạo 7 mật ong. Sử dụng hàm bạn tạo để thu thập phấn hoa từ từng
+        bông hoa và tạo mật ong ở từng tổ ong.
       2-3 Bee Functions 9_instruction: |
         Create your own function that goes down a
         path, gets nectar, makes honey, and then returns the bee to the top of the
@@ -1002,7 +965,7 @@
       4-5 While Loops 8_instruction: |2
          There is a really deep hole and a really large
         pile of dirt.  How many shovelfuls of dirt need to be moved around to make
-        the ground flat?  Hint: Use the while loop for both.
+        the ground flat?
       4-5 While Loops Assessment 1_instruction: |
         There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat.
@@ -1595,7 +1558,7 @@
         you loop 8 times to draw this image?
       Course 4 Artist Binary 3_instruction: |
         Can you draw this pattern by looping
-        a three digit binary string?
+        just three binary digits (0s and 1s)?
       Course 4 Artist Binary 4_instruction: |
         Each binary string represents one row
         of this picture. Can you rearrange them so it draws a smiley face instead
@@ -1647,23 +1610,21 @@
         can you draw a Star shape using the "Draw a Square Line" function? Good
         luck!
       Course 4 Artist For Loops 1_instruction: |
-        Draw this triangle that is 50 pixels
-        wide. Hint: use a repeat block.
+        Use a repeat block to draw this triangle
+        that is 50 pixels wide.
       Course 4 Artist For Loops 10_instruction: |
         Free Play Time! Have fun drawing
         whatever you like with the blocks you have learned how to use
-      Course 4 Artist For Loops 11_instruction: |
-        Remember back in a previous stage
-        when we used a variable to control the number of sides in a shape? We are
-        going to do the same thing with the "counter" variable now. This pattern
-        starts with a triangle and adds one side at a time until it draws a decagon
-        (10 sides). Each side should be 100 pixels long. Hint: 360 divided by the
-        number of sides a shape has is the number of degrees you'll need to turn.
+      Course 4 Artist For Loops 11_instruction: "Remember back in a previous stage\nwhen
+        we used a variable to control the number of sides in a shape? We are\ngoing
+        to do the same thing with the `counter` variable now. This pattern starts\nwith
+        a triangle and adds one side at a time until it draws a decagon (10 sides).\nEach
+        side should be 100 pixels long. \n"
       Course 4 Artist For Loops 11a_instruction: |-
         Let's put it all together!  Using
-        your knowledge of "for loops" and the "counter", create this drawing where
-        each shape has two more sides than the last.  Make sure that each side is
-        10 times as long as the number of sides in the polygon.\r
+        your knowledge of `for` loops and the `counter` variable, create this drawing
+        where each shape has two more sides than the last.  Make sure that each side
+        is 10 times as long as the number of sides in the polygon.\r
         \r
         Very little
         of the code has been provided for you.
@@ -2026,9 +1987,9 @@
         all the nectar on it's way to the honeycomb with as few blocks as possible.  When
         you get there, don't forget to make honey!
       Course 4 Bee Params 1_instruction: |
-        Use the function "get 3 nectar" which
-        turns, moves to collect the nectar, and then returns to the original location.
-        Write a sequence to collect all of the nectar using "get 3 nectar."
+        Write a sequence to collect all of the
+        nectar using `get 3 nectar` which turns, moves to collect the nectar, and
+        then returns to the original location.
       Course 4 Bee Params 2_instruction: |
         Modify the "get 3 nectar" function so
         it makes me turn right instead of left to the flowers.
@@ -2137,6 +2098,7 @@
       Course 4 EC 2c_instruction: |
         **Extreme Challenge:**  No rules. No clues. Just
         the challenge!
+      Course 4 EC 2d_instruction: No rules. No clues. Just the challenge!
       Course 4 EC 3_instruction: "Use what you learned in the previous level to draw\nan
         image like this. Note: The code becomes more simple if you incorporate\nparameters.
         \n"
@@ -2159,15 +2121,16 @@
         This time, let's try counting
         the odd numbers from 1 to 100.
       Course 4 Play Lab Params 1_instruction: |
-        Here's a function called "jump"
-        that causes your main character to jump up 100 pixels. Use the jump function
-        to collect all of the flags.
+        Here's a function called `jump` that
+        causes your main character to jump up 100 pixels. Run the program and use
+        the jump function to collect all of the flags by moving the dog with the arrow
+        keys.
       Course 4 Play Lab Params 10_instruction: "We've added one last function for\nyou.
         \\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction
         only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
-        \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to
-        move to the next puzzle. "
-      Course 4 Play Lab Params 2_instruction: |-
+        \"player_score\" > 6\\r\n\\r\nPlay the game, and make it to level 3\nto move
+        to the next puzzle. "
+      Course 4 Play Lab Params 2_instruction: |
         Now we've got flags that are too
         high for our current jump! Let's use both the "up" and "down" arrows
         so that we can have multiple jump heights.  \r
@@ -2175,17 +2138,15 @@
         We need to add a parameter
         to our jump function called "height".  The up arrow should cause the dog
         to jump 200 pixels and the down arrow should make it jump only 100 pixels.
-        \r
-        \r
-        Hint: You will need to click "edit" on the jump function and update
-        it so that it uses the "height" parameter.
       Course 4 Play Lab Params 3_instruction: "We have added another parameter to\nthe
         jump function so that we can use it with other actors. Each actor is represented\nby
         a number, starting from one. Edit the \"jump\" function so that it uses\nthe
         \"actor\" parameter to make the correct character jump. \n"
-      Course 4 Play Lab Params 4_instruction: |
-        Here's a function called "patrol."
-        Edit it to move Cat up 400 pixels and then down 400 pixels.
+      Course 4 Play Lab Params 4_instruction: |-
+        Here's a function called `patrol`.
+        \r
+        \r
+        Edit `patrol` to move Cat up 400 pixels and then down 400 pixels.
       Course 4 Play Lab Params 5_instruction: |
         Edit the the "patrol" function to
         add an "actor" parameter, so that we can call it for each of the actors
@@ -2198,17 +2159,18 @@
       Course 4 Play Lab Params 7_instruction: |-
         Let's have some fun! Look at the
         code provided to see if you can figure out what each block does.  \r
-        \r
         When
-        you're done, use the arrow keys to control Dog and collect all of the flags.
+        you're done, use the arrow keys to control Dog and collect all of the flags.\r
+        NOTE:
+        You don't need to make any changes to the program
       Course 4 Play Lab Params 8_instruction: |
-        Use a "when actor touches" block
+        Use the `when actor touches` block
         to send Dog back to the top-left ONLY if Dog touches any of the other actors.
       Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut
-        most of the code is hidden. There’s a new function \"score_points.\"\\r\n\\r\nEdit\nthe
-        function so that a \"points\" parameter is added to the \"player_score\"\nvariable.
-        \\r\n\\r\nThe variable \"player_score\" should increase each time\nDog tags
-        Cat with hearts, and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen
+        most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe
+        function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe
+        variable `player_score` should increase each time Dog tags Cat\nwith hearts,
+        and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen
         you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
         on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: |
@@ -2282,15 +2244,15 @@
         vanish. If the score is every less than 0, make the player vanish.
       Course 4 Play Labs For Loops 1_instruction: |
         Let's make the dog speak every
-        number from 1 to 100. Use a for loop and the counter block to speak the counter
-        variable each time the loop is run.
+        number from 1 to 100. Use a `for` loop and the counter block to speak the
+        counter variable each time the loop is run.
       Course 4 Play Labs For Loops 2_instruction: |
         This time, let's try counting
-        the odd numbers from 1 to 100.
+        only the odd numbers from 1 to 100.
       Course 4 Play Labs For Loops 3_instruction: |
         If we count by larger numbers,
         we count even higher in the same amount of time. Try making the dog count
-        from 10 up to 1000, 10 at a time.
+        from 10 up to 1000, adding 10 at a time.
       Course 4 Play Labs For Loops 4_instruction: |
         Changing the increment can be
         helpful, but we're still counting linearly (each number is the same distance
@@ -2445,6 +2407,112 @@
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 2_instruction: "(Click to see full instructions)"
+      CSD U3 Background Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Background Experiment_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Experiment_instruction: |
+        Try using some of the other shape
+        functions you've learned in the draw loop. What happens when you use randomNumber()
+        to generate some of the inputs?You'll want to stop and discuss with the class
+        before moving on.
+      CSD U3 Frame Rate_instruction: Slow down Gamelab Gary's animation with frameRate()
+      CSD U3 Random Animation_instruction: |
+        Use randomNumber() to animate Gary's
+        mouth.
+      CSD U3 Random Choice_instruction: |
+        Use the randomNumber() block to generate
+        either 0 or 1
+      CSD U3 Random Color_instruction: |
+        Could you use randomNumber() to pick random
+        colors as well? Try setting one or more of the channels in the rgb block with
+        a random number. What should the maximum value be?
+      CSD U3 Random Intro_instruction: |
+        What do you think this code will do when
+        it is run? Make a prediction, then run this code 5 - 10 times, recording the
+        output each time. Share your results with your neighbor.
+      CSD U3 Random Min Max_instruction: |
+        Using console.log() write a program that
+        randomly returns a number in a range you define.
+      CSD U3 Random Width Height_instruction: |
+        Pick a shape function and use calls
+        to randomNumber() in place of one or more of the parameters. Maker sure you
+        run it a few times so you can see the effect of randomization.
+      CSD U3 Simple Drawing - Animation 2_instruction: |
+        Use randomNumber() on the
+        x position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Animation_instruction: |
+        Use randomNumber() on the x
+        position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Background_instruction: |
+        Put all of your code into
+        a draw() loop and then add set the background to blue with the background()
+        block.
+      CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Variable Arithmetic pt2_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variable Arithmetic_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variable Incrementation pt2_instruction: |
+        Predict: What two numbers
+        will be displayed in the console?
+      CSD U3 Variable Incrementation_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variables CHALLENGE gamelab gary_instruction: |
+        Use variables to animate
+        Game Lab Gary
+      CSD U3 Variables draw loop newVars_instruction: |
+        Extend this project to create
+        your own random art visualization with variables.
+      CSD U3 Variables draw loop rgb_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
+      CSD U3 Variables draw loop xy_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
+      CSD U3 Variables Initialize_instruction: |
+        Predict: What will get displayed
+        in the console?
+      CSD U3 Variables Intro_instruction: |
+        Create your own variable, give it a value,
+        and display that value in the console.
+      CSD U3 Variables random drawing exemplar_instruction: |
+        Check out this example
+        randomized drawing.
+      CSD U3 Variables Random_instruction: |
+        Predict: What will get displayed in the
+        console?
+      CSD U3 Variables Reassign pt2_instruction: |
+        Create and assign a new variable
+        in a single line.
+      CSD U3 Variables Reassign_instruction: |
+        Predict: What will get displayed in
+        the console?
+      CSD U3 Variables Square Random Loop_instruction: |
+        Test your predictions from
+        the last level.
+      CSD U3 Variables Square Random_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variables Square_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variables use value rect_instruction: |
+        Predict: What will get displayed
+        in the console?
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -2759,21 +2827,17 @@
         thì thành 360? Gợi ý: Nó là một số rất nhỏ.'
       frozen cross rotate_instruction: |
         Bây giờ hãy thử lặp lại 10 lần. Bạn cần xoay bao nhiêu độ giữa mỗi đường?
-      frozen cross_instruction: |
-        Wrap a “Repeat” block around these commands to create
-        a plus sign. Did you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using another “Repeat"
-        block to repeat a parallelogram 4 times, turning right by 90 degrees between
-        each parallelogram.
+      frozen cross_instruction: Sử dụng khối "Lặp lại" để tạo ta một dấu cộng. Bạn
+        có nhận thấy rằng Elsa có thể di chuyển lên và xuống?
+      frozen diamond mini snowflake_instruction: Bạn có biết mỗi bông tuyết là một
+        hình khác nhau? Hãy tạo một bông tuyết mới bằng cách dùng khối "Lặp lại" để
+        lặp lại hình bình hành 4 lần, xoay phải 90 độ giữa các hình.
       frozen diamond snowflake_instruction: Bây giờ, hãy tạo một bông tuyết mới bằng
         cách sử dụng khối lặp lại để lặp lại hình bình hành 10 lần, xoay phải 36 độ
         giữa mỗi hình.
-      frozen diamond_instruction: |
-        Use a repeat around these blocks to create a parallelogram.
-        It's just like a rectangle but has different angles. This one has 60 degree
-        and 120 degree angles instead of all 90 degree angles.
+      frozen diamond_instruction: Sử dụng lặp lại xung quanh các khối để tạo ra một
+        hình bình hành. Nó giống như một hình chữ nhật nhưng có góc độ khác nhau.
+        Một góc 60 độ và 120 độ có thay vì tất cả các góc 90 độ.
       frozen freeplay_instruction: Bạn đã chính thức trở thành một nghệ sĩ bậc thầy!
         Tạo một Xứ sở thần tiên vào mùa đông.
       frozen line_instruction: Xin chào! Tôi là Elsa ở Arendelle. Hãy giúp tôi tạo
@@ -3231,30 +3295,27 @@
         blocks in the function definition to make a 40 pixel square.
       NEW Course 4 Artist Functions 11_instruction: |
         Now we want to create a new
-        function called "draw a line of squares" that draws six squares all in a
-        row.  Can you build this function using the "draw a square 20" function
-        that we've already created? Note: See that we've changed the pen to be much
-        thinner. Click "edit" on the  the "draw a square 20" function to see how!\r
+        function called `draw a line of squares` that draws six squares all in a row.  Can
+        you build this function using this `draw a square 20` function that we created
+        for you?
       NEW Course 4 Artist Functions 12_instruction: |
-        Use the "draw a line of squares"
-        function from the last puzzle to draw this pattern."
-      NEW Course 4 Artist Functions 13_instruction: |
-        Can you draw a star shape using
-        the "draw a line of squares" function? Hint: Edit the "draw a line of squares"
-        function so that you don't have to call it twice.  Notice, you'll have to
-        move forward a certain number of pixels and turn 144 degrees.
+        Use the `draw a line of squares`
+        function from the last puzzle to draw this pattern.
+      NEW Course 4 Artist Functions 13_instruction: "Can you draw a star shape using\nthe
+        `draw a line of squares` function?  \n"
       NEW Course 4 Artist Functions 14_instruction: 'Free Play time! '
       NEW Course 4 Artist Functions 2_instruction: 'Bạn có thể vẽ 3 hình vuông 20
         điểm ảnh khác nhau? Gợi ý: mỗi ô vuông chứa 100 điểm ảnh'
-      NEW Course 4 Artist Functions 3_instruction: |
+      NEW Course 4 Artist Functions 3_instruction: |-
         Here is a new type of Block.
-        It is called a "Function" block. Click "edit" then fill it with the code
-        for drawing a square with 100 pixel sides. When you're done editing the function,
-        click "Close" to go back to your program.
+        It is called a `function` block. Click "edit" then fill it with the code
+        for drawing a square with 100 pixel sides. \r
+        \r
+        When you're done editing
+        the function, click "Close" to go back to your program.
       NEW Course 4 Artist Functions 4_instruction: |
-        Use the "draw a square" function
-        to draw this pattern. Hint: You will have to use a "turn right by 120 degrees"
-        block after each square.
+        Use the `draw a square` function
+        to draw this pattern.
       NEW Course 4 Artist Functions 5_instruction: |
         How did the "draw a square"
         block know what commands to run? Click on "edit" in the "draw a square"
@@ -3266,8 +3327,8 @@
         block, can you draw this picture? Hint: each square is 20 pixels apart.\r
       NEW Course 4 Artist Functions 7_instruction: "Are you getting the hang of how\nto
         use function blocks? Let's modify this square so that it is 200 pixels\nin
-        size. Hint: click on \"edit\" to enter the \"draw a square\" function editor.\nRemember
-        to click on \"Close\" to get out of the function editor. \n"
+        size. Click on \"edit\" to enter the `draw a square` function editor. Remember\nto
+        click on \"Close\" to get out of the function editor. \n"
       NEW Course 4 Artist Functions 8_instruction: |
         We have created a new function
         for you called "draw a triangle".  Can you edit the function definition
@@ -3284,9 +3345,9 @@
       NEW Course 4 Artist Params 1_instruction: |
         Let's define this function to draw
         a square with 50 pixel sides. Click "edit" to get started.
-      NEW Course 4 Artist Params 10_instruction: "Create a \"draw a hexagon\" function\nblock
-        with a length parameter. Hint: This hexagon has sides that are 100 pixels\nin
-        length. \n"
+      NEW Course 4 Artist Params 10_instruction: "Create a `draw a hexagon` function\nblock
+        with a length parameter. This hexagon has sides that are 100 pixels\nin length.
+        \n"
       NEW Course 4 Artist Params 11_instruction: |
         Can you figure out how to draw
         this shape? Edit the function to use the "sides" parameter.
@@ -3295,14 +3356,14 @@
         The sides of all the shapes are 100 pixels long.
       NEW Course 4 Artist Params 12a_instruction: |
         This image is similar to the last.
-        Can you use a "for loop" with your function to make this design?
+        Can you use a `for` loop with your function to make this design?
       NEW Course 4 Artist Params 13_instruction: |-
         Let's edit this "draw a polygon"
         function. It already has a "sides" parameter. Now, let's add a "length"
         parameter. \r
-        Hint: The perimeter of each shape is 200 pixels long. Do you
-        remember the equation to make shapes the same size when they have a different
-        number of sides?
+        The perimeter of each shape is 200 pixels long. Do you remember
+        the equation to make shapes the same size when they have a different number
+        of sides?
       NEW Course 4 Artist Params 14_instruction: |
         Edit "draw a spiral edge" to
         use "length" and "sides" parameters, then recreate these shapes.
@@ -3314,12 +3375,12 @@
         cạnh 50 pixels" từ đầu
       NEW Course 4 Artist Params 3_instruction: |
         Now let's use the function to draw
-        5 triangles in a row. Hint: each triangle is 30 pixels apart.\r
+        5 triangles in a row. Each triangle is 30 pixels apart.\r
       NEW Course 4 Artist Params 4_instruction: |
         Do you notice anything different
         about these function blocks? Click “Run” to see what happens.
-      NEW Course 4 Artist Params 5_instruction: "Fill in the ??? in the length parameter\ninput
-        block. Hint: The pentagon has 100 pixel sides. \n"
+      NEW Course 4 Artist Params 5_instruction: "Replace the `???` in the `length`\nparameter
+        input block. The pentagon has 100 pixel sides. \n"
       NEW Course 4 Artist Params 6_instruction: |
         Fill in the "length" parameter
         to draw these shapes by replacing the "???" with the right numbers. The
@@ -3378,8 +3439,8 @@
       NEW Course 4 Bee For Loops 10a_instruction: |
         Ready for a challenge?  Take what
         you've learned about loops and try to solve this problem. Remember: You may
-        have to run your solution multiple times before you figure out all of the
-        steps.
+        have to run through solutions multiple times before you figure out all of
+        the steps.
       NEW Course 4 Bee For Loops 11_instruction: |
         Can you use the loop variable to
         control movement and nectar collection?
@@ -3497,27 +3558,21 @@
         bằng cách sử dụng tất cả những gì bạn đã học được.
       Overworld Free Play_instruction: Cảnh này là của bạn để chơi trò chơi. Xây gì
         là lựa chọn của bạn.
-      Overworld House Frame - A_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame - C_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame B_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame B2_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame C_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame Chosen_instruction: |
-        Build the rest of your house from
-        any material you'd like. The "repeat" command will come in handy.
+      Overworld House Frame - A_instruction: Hãy xây ngôi nhà của riêng chúng ta!
+        Nơi này trông tốt đấy. Hãy xây khung nhà trên các khối đất.
+      Overworld House Frame - C_instruction: Hãy xây ngôi nhà của riêng chúng ta!
+        Nơi này trông tốt đấy. Hãy xây khung nhà trên các khối đất.
+      Overworld House Frame B_instruction: Một bức tường được hoàn tất, hãy xây dựng
+        phần còn lại của ngôi nhà bằng cách làm theo các kế hoạch sàn nhà của bạn!
+        Bạn sẽ phải lặp lại bản thân khá nhiều ở đây.
+      Overworld House Frame B2_instruction: Một bức tường được hoàn tất, hãy xây dựng
+        phần còn lại của ngôi nhà bằng cách làm theo các kế hoạch sàn nhà của bạn!
+        Bạn sẽ phải lặp lại bản thân khá nhiều ở đây.
+      Overworld House Frame C_instruction: Một bức tường được hoàn tất, hãy xây dựng
+        phần còn lại của ngôi nhà bằng cách làm theo các kế hoạch sàn nhà của bạn!
+        Bạn sẽ phải lặp lại bản thân khá nhiều ở đây.
+      Overworld House Frame Chosen_instruction: Xây dựng phần còn lại của căn nhà
+        của bạn từ bất kỳ tài liệu nào bạn muốn. Bộ chỉ huy "lặp lại" sẽ có ích.
       Overworld House Frame_instruction: Hãy xây ngôi nhà của riêng chúng ta! Nơi
         này trông tốt đấy. Hãy xây khung nhà trên các khối đất.
       Overworld Minecart Track_instruction: Bạn đã quay trở lại mặt đất với rất nhiều
@@ -3751,6 +3806,9 @@
       Ryan Doily Step 2_instruction: |
         Now you need to turn and repeat it 20 times!
         How many degrees do you turn to get 360 after 20 iterations?
+      Ryan Doily Step 3_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: |
         Here's a function called "patrol."
         Edit it to move Cat up 400 pixels and then down 400 pixels.
@@ -3876,6 +3934,9 @@
       template test_instruction: what up
       Test Play Lab_instruction: This is a test play lab level.
       test_sarah_instruction: hi
+      Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
+        many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
+        keeps using the `fill` block until the ground is even?  "
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
@@ -4485,6 +4546,18 @@
       U3 - Search Terms - 6_instruction: |
         Print out the cities that are in California
         or have a population of 2,000,000. (Click to see full instructions)\r
+      U3 - Simple Drawing - Comments_instruction: Do this
+      U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
+      U3 - Simple Drawing - No Fill_instruction: Do this
+      U3 - Simple Drawing - Order of Blocks_instruction: Do this
+      U3 - Simple Drawing - Personal Drawing_instruction: DO This
+      U3 - Simple Drawing - Rectangle_instruction: Do This
+      U3 - Simple Drawing - regular polygon_instruction: Do this
+      U3 - Simple Drawing - Road Ellipse_instruction: Do This
+      U3 - Simple Drawing - Road Rects and Color_instruction: Do This
+      U3 - Simple Drawing - Stroke and Stroke Weight_instruction: Do this
+      U3 - Simple Drawing - text_instruction: Do This
+      U3 - Simple Drawing - X and Y values_instruction: Do This
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -4590,6 +4663,15 @@
         back a default response.
       U3 full clicker demo_instruction: Clicker game - Try it out!
       U3 mehal's clone_instruction: Try out a demo of the Digital Assistant!
+      U3 Variables consolelog_instruction: |
+        Use the write block to display the value
+        of size
+      U3 Variables misconceptions try it_instruction: |
+        Test out your predictions
+        from the previous level.
+      U3 Variables write_instruction: |
+        Use the write block to display the value of
+        size
       U3- Variables - Assign Random For Turtle Draw_instruction: |
         Try writing the
         same code in text mode.
@@ -4738,8 +4820,9 @@
         Free Play! Use what you learned
         from loops and random to make your own little scene. Have fun.
       U3L07 - introSquare_instruction: |
-        Use a loop to draw a square. (Click to see
-        full instructions)
+        Use a loop to draw a square. Then add another
+        loop to draw many squares each one rotated some amount. (Click to see full
+        instructions)
       U3L07 - loopsWithRandom_instruction: |
         Increase the number of iterations to
         fill the screen with white. (Click to see full instructions)
@@ -5696,6 +5779,6 @@
       Underground Mining Coal_instruction: Bạn sẽ tìm thấy các nguồn tài nguyên giá
         trị nhất dưới mặt đất, nhưng có thể rất tối. Hãy đặt ít nhất 2 cây đuốc đào
         ít nhất 2 khối than.
-      Underground Test Level_instruction: Collect all of the minerals!
+      Underground Test Level_instruction: Thu thập tất cả các khoáng vật!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

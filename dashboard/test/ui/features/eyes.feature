@@ -105,9 +105,6 @@ Scenario:
 
   Then I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/1/lang/ar-sa"
   And I rotate to landscape
-  # noautoplay doesn't work with the language redirect, so we have to close the
-  # video dialog and the instructions
-  And I close the dialog
   And I close the dialog
   And I wait to see "#runButton"
   And I see no difference for "maze RTL"

@@ -17,10 +17,10 @@
             öğrenin'
           'Maze: Sequence': 'Labirent: Sıra'
           'Maze: Debugging': 'Labirent: Ayıklama'
-          'Artist 1: Intro': 'Aktör 1: Giriş'
-          Artists 2: Aktör 2
-          Spelling Bee: Bilge Arı
-          Spelling Bee not blockly: Bilge Arı bloklu değil
+          'Artist 1: Intro': 'Sanatçı 1: Giriş'
+          Artists 2: Sanatçı 2
+          Spelling Bee: Heceleme Yarışması
+          Spelling Bee not blockly: Heceleme yarışması blok ile değil
           'Bee 1: Intro': 'Arı 1: Giriş'
           'Maze 2: Loops': 'Labirent 2: Döngüler'
           'Bee 2: Loops': 'Arı 2: Döngüler'
@@ -28,7 +28,7 @@
           K-1 Flappy: K-1 Salınım
           Flappy non blockly: Bloksuz salınma
           title: Ders 1
-          Artist 2: Aktör 2
+          Artist 2: Sanatçı 2
           Happy Maps: Mutlu Haritalar
           Move it, Move it: Oynat, Oynat
           'Real-life Algorithms: Plant a Seed': 'Gerçek-yaşam Algoritmaları: Bir Tohum
@@ -55,7 +55,7 @@
           The Maze: Labirent
           Suzi: Suzi
           The Artist: Sanatçı
-          Artist Debugging: Aktör Ayıklama
+          Artist Debugging: Sanatçı Hata Ayıklama
           Bounce: Sıçrama
           'Studio: Create a Story': 'Oyun Laboratuvarı: Bir Hikaye Oluşturun'
           Artist Loops: Aktör Döngüleri
@@ -64,7 +64,7 @@
           title: Ders 2
           Bee Loops: Arı Döngüleri
           Artist Functions: Aktör Fonksiyonları
-          The Artist Debugging: Aktör Ayıklama
+          The Artist Debugging: Aktör Hata Ayıklama
           Bee Debugging: Arı Ayıklama
           Bee Functions: Arı Fonksiyonları
           Maze Loops: Labirent Döngüleri
@@ -87,9 +87,9 @@
           'Artist: Loops': 'Aktör: Döngüler'
           'Bee: Loops': 'Arı: Döngüler'
           'Bee: Debugging': 'Arı: Ayıklama'
-          'Artist: Debugging': 'Aktör: Ayıklama'
+          'Artist: Debugging': 'Sanatçı: Hata Ayıklama'
           'Bee: Conditionals': 'Arı: Koşullandırıcılar'
-          'Artist: Sequence2': 'Aktör: Sıra2'
+          'Artist: Sequence2': 'Sanatçı: Seri 2'
           'Maze: Sequence2': 'Labirent: Sıra2'
           'Artist: Nested Loops': 'Aktör: Yerleştirilmiş Döngüler'
           description_audience: 6 yaş ve üstü (okuma becerisi gerekir)
@@ -100,17 +100,17 @@
           The Artist: Sanatçı
           title: Kurs 3
           Artist Functions: Aktör Fonksiyonları
-          Artist For Loops: Döngüler İçin Aktör
-          Artist Nested Loops: Aktörle Yerleştirilmiş Döngüler
+          Artist For Loops: 'Sanatçı: For Döngüleri'
+          Artist Nested Loops: Sanatçı İç içe Döngüler
           Bee Conditionals: Arı Koşullandırmaları
           Bee Nested Loops: Arıya Yerleştirilmiş Döngüler
           Bee Debuggin: Arı Ayıklama
           Bee Debugging: Arı Ayıklama
           Bee Functions: Arı Fonksiyonları
-          Artist Functions with Params: Parametreli Aktör Fonksiyonları
+          Artist Functions with Params: Sanatçı Parametreli Fonksiyonlar
           Bounce: Sıçrama
           Maze Conditionals: Labirent Koşullandırıcıları
-          Artist Functions with Parameters: Parametreli Aktör Fonksiyonları
+          Artist Functions with Parameters: 'Sanatçı: Fonksiyonlar ve Parametreler'
           Computational Thinking: Sayısal Düşünme
           Functional Suncatchers: Fonksiyonel Güneş Avcıları
           Songwriting Parameters: Müzik yazarlığı parametreleri
@@ -118,7 +118,7 @@
           Internet: "İnternet"
           Crowdsourcing: Kalabalık Kaynaklandırma 'Crowdsourcing'
           Digital Citizenship: Sayısal Vatandaşlık
-          Farmer - While Loops: "Çiftçi - While Döngüleri"
+          Farmer - While Loops: "Çiftçi - Süresince Döngüleri"
           description: Ders 3, Ders 2'yi alan öğrenciler için tasarlanmıştır. Öğrenciler,
             daha karmaşık sorunlar için bulunan esnek çözümleri uygulamak için önceki
             derste öğrendikleri programlama konularını daha çok inceleyecekler. Dersin
@@ -126,22 +126,22 @@
             hikaye ve oyun oluşturabilecekler. 4 ve 5. sınıflar için önerilir.
           'Studio: Create a Game': 'Oyun Laboratuvarı: Bir Oyun Oluşturmak'
           Maze: Labirent
-          Artist: Aktör
-          'Artist: Functions': 'Aktör: Fonksiyonlar'
+          Artist: Sanatçı
+          'Artist: Functions': 'Sanatçı: Fonksiyonlar'
           'Bee: Functions': 'Arı: Fonksiyonlar'
           'Bee: Conditionals': 'Arı: Koşullandırıcılar'
-          'Maze: Conditionals': 'Labirent: Koşullandırıcılar'
+          'Maze: Conditionals': 'Labirent: Koşullar'
           'Artist: Nested Loops': 'Aktör: Yerleştirilmiş Döngüler'
           'Farmer: While Loops': "Çiftçi: While Döngüleri"
           'Bee: Nested Loops': 'Arı: Yerleştirilmiş Döngüler'
           'Bee: Debugging': 'Arı: Ayıklama'
           Maze2: Labirent2
-          Artist2: Aktör2
-          'Artist: Functions2': 'Aktör: Fonksiyonlar2'
+          Artist2: Sanatçı 2
+          'Artist: Functions2': 'Sanatçı: Fonksiyonlar2'
           'Bee: Functions2': 'Arı: Fonksiyonlar2'
-          'Bee: Conditionals2': 'Arı: Koşullandırıcılar2'
-          'Maze: Conditionals2': 'Labirent: Koşullandırıcılar2'
-          'Artist: Nested Loops2': 'Aktör: Yerleştirilmiş Döngüler2'
+          'Bee: Conditionals2': 'Arı: Koşullar2'
+          'Maze: Conditionals2': 'Labirent: Koşullar2'
+          'Artist: Nested Loops2': Sanatçı İç içe Döngüler
           'Farmer: While Loops2': "Çiftçi: While Döngüleri2"
           'Bee: Nested Loops2': 'Arı: Yerleştirilmiş Döngüler2'
           'Bee: Debugging2': 'Arı: Ayıklama2'
@@ -171,16 +171,16 @@
           description: Hadi kod kullanarak sihri ve buzun güzelliğini keşfedecek olan
             Anna ve Elsa'ya katıl. Buz kayağı ve kış harikalar diyarı gibi kar taneleri
             ve desenler oluşturacaksın sonra bunları arkadaşlarınla paylaşabileceksin!
-          Artist: Aktör
+          Artist: Sanatçı
           description_short: Buzun büyüsü ve güzelliğini keşfetmek için Anna ve Elsa'ya
             katılıp kodlama yapalım.
         course4:
           description_short: Ders 4'ü alan öğrenciler Ders 2 ve 3'ü almış olmalıdır.
-          description: Ders 4, Ders 3 ve Ders 2'yi alan öğrenciler için tasarlanmıştır.
-            Öğrenciler, daha karmaşık sorunlar için bulunan esnek çözümleri uygulamak
-            için önceki derste öğrendikleri programlama konularını daha çok inceleyecekler.
-            Dersin sonunda, öğrenciler, herhangi birisiyle paylaşabilecekleri interaktif
-            hikaye ve oyun oluşturabilecekler. 4-8. sınıflar için önerilir.
+          description: Ders 4, ders 2 ve 3'ü almış öğrenciler için tasarlanmıştır.
+            Öğrenciler çeşitli kavramları öğrenmeyi sorun çözme ile birleştirip öğrenecek.
+            Yeni kavramlarla birlikte daha zor problemler çözülecek. Bu ders tamamlandığı
+            zaman, öğrencilerin döngüler ve fonksiyonları parametrelerle de dahil
+            olmak üzere birden çok beceri kazanacak. 4-8 sınıflar için önerilir.
           'Artist: Variables': 'Sanatçı: Değişkenler'
           'Bee: For Loops': 'Arı: For Döngüleri'
           title: Ders 4
@@ -192,9 +192,9 @@
           'Bee: Functions with Parameters': 'Arı: Fonksiyonlar ve Parametreler'
           'Artist: For Loops': 'Sanatçı: For Döngüleri'
           'Play Lab: For Loops': 'Oyun Laboratuvarı: For Döngüleri'
-          'Artist: Functions': 'Aktör: Fonksiyonlar'
+          'Artist: Functions': 'Sanatçı: Fonksiyonlar'
           'Unplugged: Tangrams': 'Unplugged: Tangramlar'
-          Artist: Aktör
+          Artist: Sanatçı
           Bee: Arı
           'Unplugged: Envelope Variables': 'Bağımsız: Fişteki Değişkenler'
           'Unplugged: Madlibs': 'Bağımsız: Madlibs'
@@ -212,7 +212,7 @@
           Super Challenge - For Loops: Süper Yarış - Döngüler İçin
           Super Challenge - Functions and Parameters: Süper Yarış - Fonksiyonlar ve
             Parametreler
-          Extreme Challenge - Comprehensive: Extreme Challenge - Comprehensive
+          Extreme Challenge - Comprehensive: Aşırı zorluk - kapsamlı
         Course4pre:
           title: Ders 4 Ön Koşulu
           description_short: Ders 2 ve 3'ü almamış öğrenciler için kavramların artırılması.
@@ -225,7 +225,7 @@
           'Artist: Nested Loops': 'Aktör: Yerleştirilmiş Döngüler'
           'Farmer: While Loops': "Çiftçi: While Döngüleri"
           'Bee: Nested Loops': 'Arı: Yerleştirilmiş Döngüler'
-          'Artist: Functions': 'Aktör: Fonksiyonlar'
+          'Artist: Functions': 'Sanatçı: Fonksiyonlar'
           'Bee: Debugging': 'Arı: Ayıklama'
         usability:
           Intro: Giriş
@@ -270,8 +270,7 @@
           'Eval: Boolean Operators': 'Eval: Boolean Operatörleri'
           'Play Lab: Booleans': 'Play Lab: Boolean Değerleri'
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Büyük Oyun)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Şartlar ve
-            Parçalı Fonksiyonlar'
+          'Unplugged: Conditionals and Piecewise Functions': Koşullar ve Parçalı Fonksiyonlar
           'Eval: Conditionals': Koşullar
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Kaza
             Algılama ve Mesafe Formülü'
@@ -365,8 +364,8 @@
           description: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını
             tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama
             her yaştan öğrenmek için eğlencelidir.
-          description_short: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4.
+          description_short: Bu ders 2, 3 ve 4 de öğretilen 20 saatlik ders temel
+            bilgisayar bilimi ve programlama kavramlarını içerir.
           Introduction to Computer Science: Bilgisayar Bilimlerine Giriş
           The Maze: Labirent
           Computational Thinking: Sayısal Düşünme
@@ -424,7 +423,8 @@
           Step: Adım
         Hour of Code:
           title: Kodlama Saati 2013
-          description: ''
+          description: Angry Birds, Plants vs. Zombies karakterlerini ve Buz Devrinden
+            sincap Scrat ile birlikte bilgisayar biliminin temel yapısını dene!
           description_short: Birçok eğlenceli karakterler ile birlikte bilgisayar
             biliminin temel öğelerini dene!
           Hour of Code 2013: Kodlama Saati 2013
@@ -470,7 +470,7 @@
           'Artist: Nested Loops': 'Aktör: Yerleştirilmiş Döngüler'
           'Farmer: While Loops': "Çiftçi: While Döngüleri"
           'Bee: Nested Loops': 'Arı: Yerleştirilmiş Döngüler'
-          'Artist: Functions': 'Aktör: Fonksiyonlar'
+          'Artist: Functions': 'Sanatçı: Fonksiyonlar'
           'Bee: Debugging': 'Arı: Ayıklama'
         cspunit1:
           title: CSP Unit 1
@@ -535,9 +535,8 @@
           'Eval: Boolean Operators': 'Eval: Boolean Operatörleri'
           'Play Lab: Booleans': 'Play Lab: Boolean Değerleri'
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Büyük Oyun)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Şartlar ve
-            Parçalı Fonksiyonlar'
-          'Eval: Conditionals': 'Eval: Şartlar'
+          'Unplugged: Conditionals and Piecewise Functions': Koşullar ve Parçalı Fonksiyonlar
+          'Eval: Conditionals': 'Eval: koşullar'
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Kaza
             Algılama ve Mesafe Formülü'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Kaza Algılama (Büyük
@@ -984,7 +983,7 @@
         allthethings:
           Jigsaw: Yapboz
           Maze: Labirent
-          Artist: Aktör
+          Artist: Sanatçı
           Bee: Arı
           PlayLab: PlayLab
           Farmer: Farmer
@@ -1013,6 +1012,7 @@
           Long assessment: Long assessment
           Star wars: Star wars
           Minecraft: Minecraft
+          Rich long assessment: Rich long assessment
         algebraPD2b:
           title: Algebra PD'de Bilgisayar Bilimi
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
@@ -1027,7 +1027,7 @@
           Defining Functions: Fonksiyonlar Tanımlama
           Rocket-Height: Rocket-Height
           Booleans: Boolean Değerleri
-          'Eval: Conditionals': 'Eval: Şartlar'
+          'Eval: Conditionals': 'Eval: koşullar'
           Next Steps: Sonraki Adımlar
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
@@ -1148,7 +1148,7 @@
           Defining Functions: Fonksiyonlar Tanımlama
           Rocket-Height: Rocket-Height
           Booleans: Boolean Değerleri
-          'Eval: Conditionals': 'Eval: Şartlar'
+          'Eval: Conditionals': 'Eval: koşullar'
           Next Steps: Sonraki Adımlar
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
@@ -1596,8 +1596,9 @@
           Spring 2016: Spring 2016
         iceage:
           title: Buz Devri Oyun Laboratuvarı
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          description: Create a story or make a game with Ice Age Play Lab!
+          description_short: Buz devri Oyun Laboratuvarı ile hikaye yarat veya oyun
+            yap!
+          description: Buz devri Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
           Ice Age Play Lab: Buz Devri Oyun Laboratuvarı
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
@@ -1819,9 +1820,8 @@
           'Eval: Boolean Operators': 'Eval: Boolean Operatörleri'
           'Play Lab: Booleans': 'Play Lab: Boolean Değerleri'
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Büyük Oyun)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Şartlar ve
-            Parçalı Fonksiyonlar'
-          'Eval: Conditionals': 'Eval: Şartlar'
+          'Unplugged: Conditionals and Piecewise Functions': Koşullar ve Parçalı Fonksiyonlar
+          'Eval: Conditionals': 'Eval: koşullar'
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Kaza
             Algılama ve Mesafe Formülü'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Kaza Algılama (Büyük
@@ -1831,3 +1831,187 @@
           title: Gamelab Hackathon
           description_short: Gamelab Hackathon
           description: A place to try things out in Game Lab
+        algebraPD1:
+          title: Algebra PD'de Bilgisayar Bilimi
+          description_short: Teach Algebra through Functional Programming
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Kişisel Geliştirme Giriş
+          Course Overview: Course Overview
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in
+            Algebra
+          Evaluation Blocks: Değerlendirme Blokları
+          Teacher Dashboard: Teacher Dashboard
+          Preparing for in-person PD: Preparing for in-person PD
+        algebraPD3c:
+          title: Algebra PD'de Bilgisayar Bilimi
+          description_short: CS in Algebra end of year reflection
+          description: CS in Algebra end of year reflection
+          Getting Started: Getting Started
+          Sharing Student Work: Sharing Student Work
+        csp1:
+          title: CS Principles Unit 1 - The Internet
+          description_short: "İnternet"
+          description: This unit explores the technical challenges and questions that
+            arise from the need to represent digital information in computers and
+            transfer it between people and computational devices. The unit then explores
+            the structure and design of the internet and the implications of those
+            design decisions.
+          Personal Innovations: Personal Innovations
+          Sending Binary Messages: "İkili Mesajları Gönderiyor"
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages
+            with the Internet Simulator
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Sayı Sistemleri
+          Binary Numbers: "İkili Sayılar"
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          The Internet: "İnternet"
+          The Need for Addressing: The Need for Addressing
+          Invent an Addressing Protocol: Invent an Addressing Protocol
+          Routers and Redundancy: Routers and Redundancy
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
+            Tree
+          Algorithms Detour - Shortest Path: Algorithms Detour - Shortest Path
+          Algorithms Detour - How Routers Learn: Algorithms Detour - How Routers Learn
+          The Need for DNS: The Need for DNS
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Practice PT - The Internet and Society: Practice PT - The Internet and Society
+        csp2:
+          title: CS Principles Unit 2 - Digital Information
+          description_short: Digital Information
+          description: This unit further explores the ways that digital information
+            is encoded, represented and manipulated. Being able to digitally manipulate
+            data, visualize it, and identify patterns, trends and possible meanings
+            are important practical skills that computer scientists do every day.
+            Understanding where data comes from, having intuitions about what could
+            be learned or extracted from it, and being able to use computational tools
+            to manipulate data and communicate about it are the primary skills addressed
+            in the unit.
+          Bytes and File Sizes: Bytes and File Sizes
+          Text Compression: Text Compression
+          Encoding B&W Images: Encoding B&W Images
+          Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
+          Encode a Complex Thing: Encode a Complex Thing
+          Intro to Data: Intro to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
+        csp3:
+          title: CSP Unit 3 - Programming
+          description_short: Programlama
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
+          The Need For Programming Languages: The Need For Programming Languages
+          The Need for Algorithms: The Need for Algorithms
+          Creativity in Algorithms: Creativity in Algorithms
+          Using Simple Commands: Using Simple Commands
+          Creating Functions: Oluşturma Fonksiyonları
+          Functions and Top-Down Design: Functions and Top-Down Design
+          APIs and Function Parameters: APIs and Function Parameters
+          Creating functions with Parameters: Creating functions with Parameters
+          Looping and Random Numbers: Looping and Random Numbers
+          Practice PT - Design a Digital Scene: Practice PT - Design a Digital Scene
+        csp4:
+          title: CS Principles Unit 4 - Big Data and Privacy
+          description_short: Big Data and Privacy
+          description: The data-rich world we live in introduces many complex questions
+            related to public policy, law, ethics and societal impact. The goals of
+            this unit are to develop a well-rounded and balanced view about data in
+            the world, including the positive and negative effects of it, and to understand
+            the basics of how and why modern encryption works.
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
+          Identifying People with Data: Identifying People with Data
+          The Cost of Free: The Cost of Free
+          Tell Me a Secret - Encrypting Text: Tell Me a Secret - Encrypting Text
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Public Key Crypto: Public Key Crypto
+          Practice PT - Propose an Innovation: Practice PT - Propose an Innovation
+          Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
+        csp5:
+          title: CS Principles Unit 5 - Building Apps
+          description_short: Building Apps
+          description: 'This unit continues the introduction of foundational concepts
+            of computer programming, which unlocks the ability to make rich, interactive
+            apps. This course uses JavaScript as the programming language, and App
+            Lab as the programming environment to build apps, but the concepts learned
+            in these lessons span all programming languages and tools. '
+          Events Unplugged: Events Unplugged
+          Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Introducing Design Mode: Introducing Design Mode
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistants: Introduction to Digital Assistants
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: While(...durumunda) Döngüleri
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
+        csp6:
+          title: CS Principles Unit 6 - Performance Tasks
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Create
+            and Explore Performance Tasks.
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+        CSDU3-Draft:
+          title: " TEMP CSD Unit 3 - Interactive Games and Animations"
+          description_short: Programlama
+          description: Temp place to work on U3 of Disco
+          Drawing in Game Lab: Drawing in Game Lab
+          Animation: Animasyon
+          Draw Loop and Random: Draw Loop and Random
+          Variables: Değişkenler
+          Sprite Properties and Mod: Sprite Properties and Mod
+        2016_sciencePD_phase1:
+          title: Computer Science in Science PD 2016-2017
+          description_short: In Partnership with Project GUTS
+          description: In Partnership with Project GUTS
+          Introduction to PD: Kişisel Geliştirme Giriş
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
+            Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
+            Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational
+            Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        TEMP CSD Unit 3:
+          title: " TEMP CSD Unit 3 - Interactive Games and Animations"
+          description_short: Programlama
+          description: ''
+          Drawing in Game Lab: Drawing in Game Lab

@@ -474,6 +474,11 @@ ka-GE:
   dashboard_action_remove_confirm: წავშალოთ?
   dashboard_action_done: მზადაა
   dashboard_action_required: აუცილებელია
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: მასწავლებლის მთავარი გვერდი
   dashboard_navigation_section_student_progress: მოსწავლეების ანგარიშები და პროგრესი
   dashboard_navigation_section_teacher_progress: თქვენი კურსის პროგრესი
@@ -491,6 +496,17 @@ ka-GE:
   dashboard_navigation_view_stats: სტატისტიკის ნახვა
   dashboard_navigation_section: 'განყოფილება: %{section_name}'
   dashboard_navigation_student: 'მოსწავლე: %{student_name}'
+  dashboard_progress_not_started: არ არის დაწყებული
+  dashboard_progress_in_progress: დაწყებულია
+  dashboard_progress_not_completed: არაა დასრულებული
+  dashboard_progress_completed_too_many_blocks: დასრულებულია, ბლოკი ძალიან ბევრია
+  dashboard_progress_completed_perfect: დასრულებულია, იდეალურად
+  dashboard_progress_furthest_level_attempted: ეს დონე ძალიან მაღალია
+  dashboard_progress_submitted: ჩაბარებულია
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: ახალი განყოფილება
   dashboard_sections_jumbotron_instruction: 'შექმენით ახალი განყოფილება და დაამატეთ მასში სტუდენტები. განყოფილებები გეხმარებათ დაჰყოთ მოსწავლეები უფრო პატარა ჯგუფებად - ასე მათ პროგრესს უკეთ დააკვირდებით.'
   dashboard_sections_table_section: სექცია
@@ -506,6 +522,19 @@ ka-GE:
   dashboard_sections_secret_none: 'თუ გინდათ, რომ თქვენმა მოსწავლეებმა დამოუკიდებლად მართონ თავიანთი ანგარიშები, მათ შორის, თავად აირჩიონ პაროლი, აირჩიეთ უსაფრთხოების დონე <b>ნულოვანი</b>.'
   dashboard_sections_print_secrets: შემდეგ შეგიძლიათ ამობეჭდოთ ბარათები ანგარიშების ინფორმაციით და დაურიგოთ ისინი თქვენს მოსწავლეებს.
   dashboard_sections_switch_section: 'განყოფილების გადართვა:'
+  dashboard_sections_close: დახურვა
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: მოსწავლის დამატება
   dashboard_students_add_students: რამდენიმე მოსწავლის დამატება
   dashboard_students_add_multiple: 'ჩაწერეთ მოსწავლეების სახელები, თითო ხაზზე თითო:'
@@ -572,13 +601,6 @@ ka-GE:
   dashboard_login_picture: სურათი
   dashboard_login_none: ელექტრონული ფოსტა
   dashboard_new_password: ახალი პაროლი
-  dashboard_progress_not_started: არ არის დაწყებული
-  dashboard_progress_in_progress: დაწყებულია
-  dashboard_progress_not_completed: არაა დასრულებული
-  dashboard_progress_completed_too_many_blocks: დასრულებულია, ბლოკი ძალიან ბევრია
-  dashboard_progress_completed_perfect: დასრულებულია, იდეალურად
-  dashboard_progress_furthest_level_attempted: ეს დონე ძალიან მაღალია
-  dashboard_progress_submitted: ჩაბარებულია
   dashboard_stage: ეტაპი
   dashboard_puzzle: თავსატეხი
   dashboard_question: კითხვა
@@ -615,8 +637,6 @@ ka-GE:
   dashboard_announce_view_all: ყველას ნახვა
   dashboard_announce_message: '<b>2016 წლის 29 თებერვალი</b> - ვორქშოპის მონაწილეთა 90% ჩვენს პროგრამას აფასებს, როგორც საუკეთესოს პროფესიონალური ზრდისთვის. მოთხოვნის გამო, კომპიუტერული მეცნიერების პროფესიული შესწავლის პროგრამას რამდენიმე ადგილი დავამატეთ. დარეგისტრირდით <u>31 მარტამდე</u> და დაიკავეთ თქვენი ადგილი.'
   dashboard_announce_button_text: გაიგეთ მეტი
-  dashboard_announce_hoc: '<b>2015, 9 ნოემბერი</b> - აი, კოდის ერთი საათის ახალი ტუტორიალი, რომელიც მომავალ ვარსკვლავურ ომება ეხება. იმუშავეთ რეისთან ერთად და მართეთ ახალი დროიდი BB-8. შემდეგ კი შექმენით შორეულ გალაქტიკაში თქვენი საკუთარი თამაში ლეიასთან ერთად.'
-  dashboard_announce_playlab: '<b>2015 წლის 4 დეკემბერი</b> - კოდის ერთი საათი დაიწყო! გამოსცადეთ 50 ტუტორიალი ნებისმიერი ასაკისა და მოწყობილობისთვის. ამ კვირის სიახლე: დაწერეთ კოდი თქვენი საკუთარი ისტორიებისა და თამაშებისთვის თამაშების ახალ ლაბორატორიებში: გამყინვარების პერიოდი და გამბოლი.'
   code_hoc_coming: 'გვიახლოვდება კოდის ერთი საათი - დეკემბრის 8-დან 14-მდე!'
   code_sign_up: დარეგისტრირდით და მიიღეთ მონაწილეობა CS განათლების კვირეულში
   learn_more: სცადეთ ახლა

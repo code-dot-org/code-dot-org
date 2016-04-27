@@ -255,7 +255,10 @@ de:
       4-5 Artist Patterns 1_instruction: |
         Kannst du dieses Quadrat zeichen, indem du eine Schleife benutzt?
         Jede Seite ist 20 Pixel lang.
-      4-5 Artist Patterns 10_instruction: 'Dieser Code zeichnet zwei Spalten Sechsecke - wiederhole das ganze 4 Mal per Schleife und zeichne das ganze Wabenwerk. Hinweis: Du musst in deiner äußeren Schleife 120 Pixel zurückspringen um sicherzustellen, dass der Künstler nicht außerhalb des Bildschirms zeichnet.'
+      4-5 Artist Patterns 10_instruction: |
+        Dieser Code zeichnet zwei Spalten Sechsecke - wiederhole das ganze 4 Mal per Schleife und zeichne das ganze Wabenwerk.
+        Hinweis: Du musst in deiner äußeren Schleife 120 Pixel zurückspringen um sicherzustellen, dass der Künstler nicht außerhalb des Bildschirms zeichnet
+        
       4-5 Artist Patterns 11_instruction: 'Wie oft muss die Schleife durchlaufen werden, damit ein Halbkreis gezeichnet wird? Hinweis: Wenn ein Kreis 360 Grad hat und jeder Schleifendurchlauf eine Verschiebung um 3 Grad bewirkt, wie oft muss die Schleife dann durchlaufen werden, damit ein Vollkreis gezeichnet wird?'
       4-5 Artist Patterns 12_instruction: Wenn du die Schleife kopierst und eine Rechtsdrehung anstelle einer Linksdrehung ausführst, was passiert dann? Kannst du das wiederholen, um eine Welle zu zeichnen?
       4-5 Artist Patterns 13_instruction: 'Jetzt wollen wir das ganze vier mal durchlufen lassen und so den Bilderrahmen machen. Pass auf die Ecken auf - du kannst nicht einfach eine 90- Grad- Drehung machen! Wenn eine Verschiebung um 3 Grad, 60 mal ausgeführt, einen Halbkreis erzeugt, welcher dieser Code- Bausteine erzeugt dann einen Viertelkreis für die Ecken?'
@@ -1046,8 +1049,9 @@ de:
       Course 4 EC 1a_instruction: Keine Regeln, keine Hinweise. Du kannst es schaffen!
       Course 4 EC 1b_instruction: Keine Regeln, keine Hinweise. Du kannst es schaffen!
       Course 4 EC 2a_instruction: '**Extrem-Herausforderung:** Es gibt keine Regeln oder Hinweise, nur die Aufgabe.'
-      Course 4 EC 2b_instruction: '**Extrem-Herausforderung:** Es gibt keine Regeln oder Hinweise, nur die Aufgabe.'
-      Course 4 EC 2c_instruction: '**Extrem-Herausforderung:** Es gibt keine Regeln oder Hinweise, nur die Aufgabe.'
+      Course 4 EC 2b_instruction: Keine Regeln, keine Hinweise. Du kannst es schaffen!
+      Course 4 EC 2c_instruction: Keine Regeln, keine Hinweise. Du kannst es schaffen!
+      Course 4 EC 2d_instruction: Keine Regeln, keine Hinweise. Du kannst es schaffen!
       Course 4 EC 3_instruction: 'Jetzt kannst du mit dem bisher gelernten ein solches Bild zeichnen. Beachte, dass der Code einfacher wird, wenn du mit Parametern arbeitest. '
       Course 4 EC 3a_instruction: "Jetzt wird's schwer! Keine Regeln, keine Hinweise. Du kannst es schaffen!"
       Course 4 Maze 1_instruction: Bring den Angry Bird zum Schwein!
@@ -1135,6 +1139,110 @@ de:
       CSD Hackathon Pt 2_instruction: (Click to see full instructions)
       CSD Hackathon Week 1_instruction: (Click to see full instructions)
       CSD Hackathon Week 2_instruction: (Click to see full instructions)
+      CSD U3 Background Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Background Experiment_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Discuss_instruction: |
+        Here's a program that looks pretty
+        similar to what you've been writing, but may behave quite differently. You'll
+        want to stop and discuss with the class before moving on.
+      CSD U3 Draw Loop Experiment_instruction: |
+        Try using some of the other shape
+        functions you've learned in the draw loop. What happens when you use randomNumber()
+        to generate some of the inputs?You'll want to stop and discuss with the class
+        before moving on.
+      CSD U3 Frame Rate_instruction: "Slow down Gamelab Gary's animation with frameRate()"
+      CSD U3 Random Animation_instruction: |
+        Use randomNumber() to animate Gary's
+        mouth.
+      CSD U3 Random Choice_instruction: |
+        Use the randomNumber() block to generate
+        either 0 or 1
+      CSD U3 Random Color_instruction: |
+        Could you use randomNumber() to pick random
+        colors as well? Try setting one or more of the channels in the rgb block with
+        a random number. What should the maximum value be?
+      CSD U3 Random Intro_instruction: |
+        What do you think this code will do when
+        it is run? Make a prediction, then run this code 5 - 10 times, recording the
+        output each time. Share your results with your neighbor.
+      CSD U3 Random Min Max_instruction: |
+        Using console.log() write a program that
+        randomly returns a number in a range you define.
+      CSD U3 Random Width Height_instruction: |
+        Pick a shape function and use calls
+        to randomNumber() in place of one or more of the parameters. Maker sure you
+        run it a few times so you can see the effect of randomization.
+      CSD U3 Simple Drawing - Animation 2_instruction: |
+        Use randomNumber() on the
+        x position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Animation_instruction: |
+        Use randomNumber() on the x
+        position and width of your cloud ellipses to introduce a bit of animation.
+      CSD U3 Simple Drawing - Background_instruction: |
+        Put all of your code into
+        a draw() loop and then add set the background to blue with the background()
+        block.
+      CSD U3 Simple Drawing - Personal Animation_instruction: DO This
+      CSD U3 Variable Arithmetic pt2_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variable Arithmetic_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variable Incrementation pt2_instruction: |
+        Predict: What two numbers
+        will be displayed in the console?
+      CSD U3 Variable Incrementation_instruction: |
+        Predict: What two numbers will
+        be displayed in the console?
+      CSD U3 Variables CHALLENGE gamelab gary_instruction: |
+        Use variables to animate
+        Game Lab Gary
+      CSD U3 Variables draw loop newVars_instruction: |
+        Extend this project to create
+        your own random art visualization with variables.
+      CSD U3 Variables draw loop rgb_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
+      CSD U3 Variables draw loop xy_instruction: |
+        Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn.
+      CSD U3 Variables Initialize_instruction: |
+        Predict: What will get displayed
+        in the console?
+      CSD U3 Variables Intro_instruction: 'Create your own variable '
+      CSD U3 Variables random drawing exemplar_instruction: |
+        Check out this example
+        randomized drawing.
+      CSD U3 Variables Random_instruction: |
+        Predict: What will get displayed in the
+        console?
+      CSD U3 Variables Reassign pt2_instruction: |
+        Create and assign a new variable
+        in a single line.
+      CSD U3 Variables Reassign_instruction: |
+        Predict: What will get displayed in
+        the console?
+      CSD U3 Variables Square Random Loop_instruction: |
+        Test your predictions from
+        the last level.
+      CSD U3 Variables Square Random_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variables Square_instruction: |
+        Change the value "size" initialized
+        to make a larger square.
+      CSD U3 Variables use value rect_instruction: |
+        Predict: What will get displayed
+        in the console?
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1752,8 +1860,8 @@ de:
       NEW Course 4 Artist Functions 7_instruction: |
         Are you getting the hang of how
         to use function blocks? Let's modify this square so that it is 200 pixels
-        in size. Hint: click on "edit" to enter the "draw a square" function editor.
-        Remember to click on "Close" to get out of the function editor. 
+        in size. Click on "edit" to enter the `draw a square` function editor. Remember
+        to click on "Close" to get out of the function editor. 
       NEW Course 4 Artist Functions 8_instruction: 'Wir haben eine neue Funktion namens "Zeichne ein Dreieck" erstellt. Kannst du die Funktionsdefinition bearbeiten um ein Dreieck mit Seiten von 100 Pixel zu zeichnen?'
       NEW Course 4 Artist Functions 9_instruction: Löse das Problem, indem du nur einen Baustein hinzufügst.
       NEW Course 4 Artist Functions inspire_instruction: Klicke hier, und lasse dich noch einmal von dem Bild insprieren.
@@ -1762,8 +1870,8 @@ de:
         Let's define this function to draw
         a square with 50 pixel sides. Click "edit" to get started.
       NEW Course 4 Artist Params 10_instruction: |
-        Create a "draw a hexagon" function
-        block with a length parameter. Hint: This hexagon has sides that are 100 pixels
+        Create a `draw a hexagon` function
+        block with a length parameter. This hexagon has sides that are 100 pixels
         in length. 
       NEW Course 4 Artist Params 11_instruction: |
         Can you figure out how to draw
@@ -1773,7 +1881,7 @@ de:
         Die Seiten aller Formen sind 100 Pixel lang.
       NEW Course 4 Artist Params 12a_instruction: |
         This image is similar to the last.
-        Can you use a "for loop" with your function to make this design?
+        Can you use a `for` loop with your function to make this design?
       NEW Course 4 Artist Params 13_instruction: "Wir ändern die \"draw a polygon\"-Funktion. Sie besitzt bereits einen \"sides\"-Parameter, jetzt fügen wir noch einen \"length\"-Parameter hinzu.\\r\nHinweis: Jede der geometrischen Figuren hat einen Umfang von 200 Pixeln. Kannst du dich noch an die Gleichung erinnern mit der jede Figur die gleich groß wird, auch bei unterschiedlicher Seitenanzahl?"
       NEW Course 4 Artist Params 14_instruction: |
         Edit "draw a spiral edge" to
@@ -1783,24 +1891,24 @@ de:
         you've written, and some more for you to play with. Draw something awesome!
         Play with the pen width to see how different your drawings look!
       NEW Course 4 Artist Params 2_instruction: |
-        Create a “draw a triangle" function
-        with 50 pixels sides from scratch
-      NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw\n5 triangles in a row. Hint: each triangle is 30 pixels apart.\\r\n"
+        Create a `draw a triangle` function
+        from scratch that makes a triangle with  50 pixel sides.
+      NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw\n5 triangles in a row. Each triangle is 30 pixels apart.\\r\n"
       NEW Course 4 Artist Params 4_instruction: |
         Do you notice anything different
         about these function blocks? Click “Run” to see what happens.
       NEW Course 4 Artist Params 5_instruction: |
-        Fill in the ??? in the length parameter
-        input block. Hint: The pentagon has 100 pixel sides. 
+        Replace the `???` in the `length`
+        parameter input block. The pentagon has 100 pixel sides. 
       NEW Course 4 Artist Params 6_instruction: |
         Fill in the "length" parameter
         to draw these shapes by replacing the "???" with the right numbers. The
         square and triangle have 100 pixels sides while each side of the hexagon is
         75 pixels long.
       NEW Course 4 Artist Params 7_instruction: |
-        Can you complete this drawing? Hint:
-        The sides of each triangle are 25 pixels larger than the last.  The first
-        triangle has 25 pixel sides.
+        Can you complete this drawing? The
+        sides of each triangle are 25 pixels larger than the last.  The first triangle
+        has 25 pixel sides.
       NEW Course 4 Artist Params 8_instruction: |
         The code for this triangle function
         is broken. Can you edit the function to fix it, and then make triangles of
@@ -2139,6 +2247,9 @@ de:
       Ryan Doily Step 2_instruction: |
         Now you need to turn and repeat it 20 times!
         How many degrees do you turn to get 360 after 20 iterations?
+      Ryan Doily Step 3_instruction: |
+        Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?
       Ryan Test Locked Blocks_instruction: 'Ändere die Funktion "patrol" so, dass die Katze sich 400 Pixel auf- und abwärts bewegt.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample: \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
@@ -2224,10 +2335,7 @@ de:
         the flower. Hint: You'll need to turn 30 degrees after your diamond loop
         so you don't keep drawing over the same diamond.
       Standalone_Artist_5_instruction: Wie oft musst du diese Raute wiederholen, um eine Blume zu zeichnen?
-      Standalone_Artist_6_instruction: |
-        Loop this hexagon code 6 times to create
-        the design. How many degrees will you need to turn each time? Hint: divide
-        the number of degrees in a circle by the number of times you are looping.
+      Standalone_Artist_6_instruction: 'Wiederhole diesen Sechseck-Code sechs Mal um das Muster zu malen. Um wieviel Grad musst du dich jeweils drehen? Tipp: Teile die Anzahl der Grad eines Kreises durch die Anzahl deiner Wiederholungen.'
       Standalone_Artist_7_instruction: |
         A function is another programming tool to
         help you avoid repeating yourself. This function draws a flower, so you can
@@ -2246,6 +2354,7 @@ de:
       template test_instruction: "what's up"
       Test Play Lab_instruction: This is a test play lab level.
       test_sarah_instruction: hi hi
+      Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat keeps using the `fill` block until the ground is even?  "
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
@@ -2796,6 +2905,18 @@ de:
       U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\\r\n"
       U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
       U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
+      U3 - Simple Drawing - Comments_instruction: Do this
+      U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
+      U3 - Simple Drawing - No Fill_instruction: Do this
+      U3 - Simple Drawing - Order of Blocks_instruction: Do this
+      U3 - Simple Drawing - Personal Drawing_instruction: DO This
+      U3 - Simple Drawing - Rectangle_instruction: Do This
+      U3 - Simple Drawing - regular polygon_instruction: Do this
+      U3 - Simple Drawing - Road Ellipse_instruction: Do This
+      U3 - Simple Drawing - Road Rects and Color_instruction: Do This
+      U3 - Simple Drawing - Stroke and Stroke Weight_instruction: Do this
+      U3 - Simple Drawing - text_instruction: Do This
+      U3 - Simple Drawing - X and Y values_instruction: Do This
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -2899,6 +3020,15 @@ de:
         back a default response.
       U3 full clicker demo_instruction: 'Clicker game - Try it out!'
       U3 mehal's clone_instruction: Try out a demo of the Digital Assistant!
+      U3 Variables consolelog_instruction: |
+        Use the write block to display the value
+        of size
+      U3 Variables misconceptions try it_instruction: |
+        Test out your predictions
+        from the previous level.
+      U3 Variables write_instruction: |
+        Use the write block to display the value of
+        size
       U3- Variables - Assign Random For Turtle Draw_instruction: |
         Try writing the
         same code in text mode.
@@ -3045,8 +3175,9 @@ de:
         Free Play! Use what you learned
         from loops and random to make your own little scene. Have fun.
       U3L07 - introSquare_instruction: |
-        Use a loop to draw a square. (Click to see
-        full instructions)
+        Use a loop to draw a square. Then add another
+        loop to draw many squares each one rotated some amount. (Click to see full
+        instructions)
       U3L07 - loopsWithRandom_instruction: |
         Increase the number of iterations to
         fill the screen with white. (Click to see full instructions)

@@ -54,7 +54,7 @@ var AnimationPickerListItem = function (props) {
   ];
 
   return (
-    <div style={styles.root}>
+    <div style={styles.root} onClick={props.onClick}>
       <div style={thumbnailStyle}>
         {props.icon && <i className={"fa fa-" + props.icon} />}
       </div>
@@ -66,6 +66,7 @@ var AnimationPickerListItem = function (props) {
 };
 AnimationPickerListItem.propTypes = {
   label: React.PropTypes.string.isRequired,
-  icon: React.PropTypes.string
+  icon: React.PropTypes.string,
+  onClick: React.PropTypes.func
 };
 module.exports = Radium(AnimationPickerListItem);

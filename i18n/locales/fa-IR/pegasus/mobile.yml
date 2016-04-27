@@ -68,11 +68,11 @@ fa-IR:
   get_a_certificate_of_achievement: دریافت گواهی موفقیت
   view_course: View course
   view_unit: View unit
-  make_app: Make an app
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  make_app: یک نرم افزار درست کن
+  congrats_guest_speaker_title: برای کلاست یک سخنران مهمان پیدا کن
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_title: Use your new skills with these apps and websites
+  congrats_guest_speaker_cta: یک سنخنران مهمان پیدا کن
+  congrats_third_party_title: مهارتهای جدیدت را با این نرم افزارها و وب سایتها استفاده کن
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -83,9 +83,9 @@ fa-IR:
   third_party_platform_all: 'Platform: Web, iPad & Android'
   third_party_platform_mobile: 'Platform: iPad & Android'
   third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
+  third_party_price_varies: 'قیمت: برنامه ها متفاوت هستند'
+  third_party_price_free: 'قیمت: مجانی'
+  third_party_price_299: 'قیمت: 2.99 دلار/دانلود'
   third_party_price_individual: 'Individual Price: Free Trial & $25/month'
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
@@ -500,6 +500,11 @@ fa-IR:
   dashboard_action_remove_confirm: حذف شود؟
   dashboard_action_done: انجام شد
   dashboard_action_required: اجباری
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: صفحه اصلی معلم
   dashboard_navigation_section_student_progress: حساب کاربری دانش‌ آموزان و پیشرفت آنها
   dashboard_navigation_section_teacher_progress: پیشرفت دوره ی شما
@@ -517,6 +522,17 @@ fa-IR:
   dashboard_navigation_view_stats: مشاهده وضعیت
   dashboard_navigation_section: 'بخش: %{section_name}'
   dashboard_navigation_student: 'دانش آموز: %{student_name}'
+  dashboard_progress_not_started: شروع نشده
+  dashboard_progress_in_progress: در حال اجرا
+  dashboard_progress_not_completed: تکمیل نشده است
+  dashboard_progress_completed_too_many_blocks: تکمیل شده ، با بلوک های زیادی
+  dashboard_progress_completed_perfect: تکمیل, کامل
+  dashboard_progress_furthest_level_attempted: 'تلاش برای دسترسی به سطح دسترسی خارج از محدوده '
+  dashboard_progress_submitted: ثبت شده
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: بخش تازه
   dashboard_sections_jumbotron_instruction: ایجاد بخش های جدید و افزودن دانش آموزان به آنها. بخش ها به شما کمک میکنند دانش آموزان را در گروه های کوچکتر سازماندهی کنید تا شما بتوانید پیشرفت آنهای را پیگیری و حساب کاربری آنها را مدیریت نمایید.
   dashboard_sections_table_section: بخش
@@ -532,6 +548,19 @@ fa-IR:
   dashboard_sections_secret_none: 'اگر می خواهید دانش آموزان شما توانایی مدیریت حساب کاربری خود، از جمله انتخاب کلمه عبور خود را داشته باشند، گزینه سرّی <b>هیچ کدام</b> را انتخاب کنید.'
   dashboard_sections_print_secrets: سپس شما میتوانید یک ورق از کارت های حاوی اطلاعات حساب کاربری را چاپ کنید و به صورت جداگانه بین دانش آموزان خود توزیع نمایید.
   dashboard_sections_switch_section: بخش تعویض
+  dashboard_sections_close: ببند
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: افزودن دانش آموز
   dashboard_students_add_students: اضافه کردن چند دانش آموز
   dashboard_students_add_multiple: 'نامهای دانش آموزان خود را تایپ یا جای گذاری نمایید، فقط یک نام در هر خط:'
@@ -598,13 +627,6 @@ fa-IR:
   dashboard_login_picture: عکس
   dashboard_login_none: ایمیل
   dashboard_new_password: گذرواژه‌ی تازه
-  dashboard_progress_not_started: شروع نشده
-  dashboard_progress_in_progress: در حال اجرا
-  dashboard_progress_not_completed: تکمیل نشده است
-  dashboard_progress_completed_too_many_blocks: تکمیل شده ، با بلوک های زیادی
-  dashboard_progress_completed_perfect: تکمیل, کامل
-  dashboard_progress_furthest_level_attempted: 'تلاش برای دسترسی به سطح دسترسی خارج از محدوده '
-  dashboard_progress_submitted: ثبت شده
   dashboard_stage: مرحله
   dashboard_puzzle: پازل
   dashboard_question: سوال
@@ -639,10 +661,8 @@ fa-IR:
   dashboard_faq_k5: پرسش های متداول پیش از دبستان
   dashboard_announcements: اطلاعیه‌ها
   dashboard_announce_view_all: مشاهده همه
-  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
   dashboard_announce_button_text: بیشتر بیاموزید
-  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
-  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: 'ساعت کد نویسی اینجاست - 8 تا 14 دسامبر!'
   code_sign_up: ثبت نام کنید برای شرکت کردن تو هفته ی آموزش علوم کامپیوتر
   learn_more: بیشتر یاد بگیرید
@@ -1086,7 +1106,7 @@ fa-IR:
   groklearning_beyond_shortdescription: مقدمه اساسی به برنامه نویسی پایتون
   hacketyhack_beyond_shortdescription: روبی را از پایه یاد بگیرید
   robomind_beyond_shortdescription: کدنویسی برای ربات مجازی
-  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
+  makeschool_beyond_shortdescription: یاد بگیرید تا بازی آیفون را در یک ساعت بسازید
   appinventor_beyond_shortdescription: برنامه خودت را بساز( فقط آندروید)
   touchdevelop_beyond_shortdescription: 'برنامه های موبایل را مستقیمآ روی موبایل و  تبلت و کامپیوتر برنامه نویسی کنید'
   codehs_beyond_shortdescription: یادگیری برنامه نویسی جاوا اسکریپت با یک محیط بصری سرگرم کننده
@@ -1123,7 +1143,7 @@ fa-IR:
   groklearning_beyond_longdescription: یک دوره مقدماتی با استفاده از زبان برنامه نویسی پیتون برای افراد بدون هیچ تجربه ی برنامه نویسی. ترکیب بی نظیر محتوای آموزش مقدماتی و چالش ها ی ما شما را به درک کاملی از پیتون و خود برنامه نویسی می رساند. ما این محتوا را به دانش آموزان با سنین متفاوت با پیش زمینه های متفاوت تدریس کرده ایم و مطمئنیم که برای شما هم مناسب خواهد بود.
   hacketyhack_beyond_longdescription: 'Hackety Hack اصول اساسی برنامه نویسی را از ابتدا به شما آموزش خواهد داد. هیچ تجربه ی برنامه نویسی نیاز نیست! با Hackety Hack، شما زبان برنامه نویسی روبی را خواهید آموخت. روبی برای تمام انواع برنامه ها، از جمله برنامه ها ی desktop و وب سایت ها استفاده می شود. [نکته: نصب Desktop لازم است]'
   robomind_beyond_longdescription: 'دانش آموزان اصول اولیه ی برنامه نویسی را با کنترل ربات مجازی خودشان می آموزند. دوره ی آنلاین با ارائه های کوتاه، فیلم ها، امتحانات و هدایت/راهنمایی های اتوماتیک برای کمک در تمرینات برنامه نویسی بسیار کامل است. '
-  makeschool_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
+  makeschool_beyond_longdescription: کمی C شیئ گرا می دانید؟ در یک ساعت یاد بگیرید که یک بازی آی فون بسازید! ما شما را در این فرآیند هدایت خواهیم کرد تا ،کد بنویسید، تست کنید، و بازیتان را تماما در مرورگر بازی کنید و سپس آن را در فیس بوک به اشتراک بگذارید تا دوستان امتحانش کنند! نیاز به هیچ تجربه ی توسعه ی آی فون نیست. شما باید بفهمید که متغیر ها، روشها، و اشیا چه هستند.
   appinventor_beyond_longdescription: ویدئو های آموزشی سریع، و سرگرم کننده شما را در مسیر ساخت سه برنامه ی ساده برای تلفن اندروید یا تبلتتان هدایت می کنند. این ساعت کد نویسی، طراحی شده برای مبتدیان و کارشناسان شما را قبل از این که بدانید برای ساختن برنامه های خودتان آماده خواهد کرد. تصور کنید برنامه های ساخته شده توسط خودتان را با دوستانتان به اشتراک بگذارید! این فعالیت ها برای افراد و همچنین معلمانی که کلاس را هدایت می کنند مناسب هستند.
   touchdevelop_beyond_longdescription: TouchDeveop به شما اجازه می دهد برنامه ها را روی آی پد، آی فون، اندروید، کامپیوتر شخصی، مک، ویندوز فون ایجاد کنید. ویرایشگر سازگار با لمس ما کد نویسی را حتی روی تلفن همراه یا تبلتتان، جالب می کند!
   codehs_beyond_longdescription: 'اصول اولیه ی برنامه نویسی را با کارل سگه بیاموزید، مقدمه ای جالب، قابل دسترسی و بصری بر کد نویسی، که در آن دادن دستورات به یک کامپیوتر درست شبیه دادن دستورات به یک سگ است. این آموزش اگر توسط یک معلم هدایت شود عالی است، اما می تواند به طور مستقل هم انجام شود. [توجه: نیاز به پرداخت پول دارد]'

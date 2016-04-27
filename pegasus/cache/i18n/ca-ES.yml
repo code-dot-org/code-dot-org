@@ -652,6 +652,11 @@
   dashboard_action_remove_confirm: Esborrar?
   dashboard_action_done: Fet
   dashboard_action_required: obligatori
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Pàgina d'inici de mestre
   dashboard_navigation_section_student_progress: Comptes i progrés dels alumnes
   dashboard_navigation_section_teacher_progress: El progrés del curs
@@ -669,6 +674,18 @@
   dashboard_navigation_view_stats: Veure estadístiques
   dashboard_navigation_section: 'Secció: %{section_name}'
   dashboard_navigation_student: 'Alumne: %{student_name}'
+  dashboard_progress_not_started: no començat
+  dashboard_progress_in_progress: En curs
+  dashboard_progress_not_completed: no finalitzat
+  dashboard_progress_completed_too_many_blocks: completat, massa blocs
+  dashboard_progress_completed_perfect: completat, perfecte
+  dashboard_progress_furthest_level_attempted: nivell més alt intentat
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nova secció
   dashboard_sections_jumbotron_instruction: Crea noves seccions i afegeix-hi alumnes.
     Les seccions t'ajuden a organitzar els estudiants en grups més petits de manera
@@ -693,6 +710,26 @@
   dashboard_sections_print_secrets: Pots imprimir un full de targetes on hi ha la
     informació del compte per repartir als teus alumnes individualment.
   dashboard_sections_switch_section: 'Canvia de secció:'
+  dashboard_sections_close: Tancar
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Afegeix alumne
   dashboard_students_add_students: Afegiu múltiples alumnes
   dashboard_students_add_multiple: 'Escriu o enganxa els noms dels teus alumnes, un
@@ -777,13 +814,6 @@
   dashboard_login_picture: Imatge
   dashboard_login_none: Email
   dashboard_new_password: Nova contrasenya
-  dashboard_progress_not_started: no començat
-  dashboard_progress_in_progress: En curs
-  dashboard_progress_not_completed: no finalitzat
-  dashboard_progress_completed_too_many_blocks: completat, massa blocs
-  dashboard_progress_completed_perfect: completat, perfecte
-  dashboard_progress_furthest_level_attempted: nivell més alt intentat
-  dashboard_progress_submitted: submitted
   dashboard_stage: etapa
   dashboard_puzzle: Puzzle
   dashboard_question: Question
@@ -828,11 +858,6 @@
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
   dashboard_announce_button_text: Aprèn més
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
-  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
   code_hoc_coming: L'hora del Codi és aquí - 8-14 de desembre!
   code_sign_up: Inscriure's a participar durant la setmana de l'educació CS
   learn_more: Més informació
@@ -1691,8 +1716,33 @@
   infinity_shortcode: inf
   playlab_shortcode: reprodueix
   artist_shortcode: art
-  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
-    (or a teacher you know) want to join a nationwide community of educators working
-    to change the face of computer science education? We'll be accepting applications
-    from middle and high school teachers in our partner districts for our year-long
-    Exploring Computer Science Professional Learning Program until April 22nd."
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
+  dashboard_sections_close: Close
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.

@@ -25,7 +25,11 @@ ro:
   welcome_back: 'Bine ai revenit, %{name}'
   submit: Trimite
   unsubmit: Retrage
-  next_page: Next page
+  previous_page: Previous page
+  next_page: Pagina următoare
+  cancel: Anulează
+  okay: Bine
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Adaugă un profesor:'
@@ -322,7 +326,7 @@ ro:
     heading_hoc2014: '<h2>Ora de Programare pentru</h2><h1>toate vârstele</h1>'
     heading_elementary: '<h2>cursuri de 20 ore pentru</h2><h1>începători(toate vârstele)</h1>'
     heading_apps: '<h2>Distracţie pentru</h2><h1>Toată lumea</h1>'
-    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
+    heading_tools: '<h2>Gata pentru următorul pas?</h2> <h1>Instrumente JavaScript pentru liceu</h1>'
     heading_legacy: '<h2>Cursul nostru intensiv pentru</h2><h1>Toate vârstele</h1>'
     your_gallery: Galerie
     no_primary_course: Încearcă un curs cu Atelierul de programare
@@ -343,9 +347,9 @@ ro:
     thank_you: 'Mulțumim la <a href="https://code.org/about/donors">donatorii</a>,<a href="https://code.org/about/partners">partenerii</a>,<a href="https://code.org/about/team">echipa extinsă</a>,producătorilor de imagine, și<a href="https://code.org/about/advisors">consilierii educaționali</a>Pentru sprijinul lor în creearea Atelierului de programare.'
     help_from_html: Inginerii de la Google, Microsoft, Facebook şi Twitter au ajutat la crearea acestui tutorial.
     help_from_html_old: Inginerii de la Google, Microsoft, Facebook şi Twitter au ajutat la crearea acestor materiale.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
+    art_from_html: 'Minecraft &#8482; &copy;%{current_year} Microsoft. Toate drepturile rezervate.< br / >Star Wars &#8482; &copy;%{current_year} Disney şi Lucasfilm. Toate drepturile rezervate.< br / >Frozen&#8482; &copy; %{current_year} Disney. Toate drepturile rezervate.< br / >Ice Age &#8482; &copy; %{current_year} 20th Century Fox. Toate drepturile rezervate.< br / >Angry Birds &#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Toate drepturile rezervate.< br / >Plants vs. Zombies &#8482; &copy; %{current_year} Electronic Arts Inc Toate drepturile rezervate. < br / >The Amazing World of Gumball este marca înregistrată &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft &#8482; &copy; %{current_year} Microsoft. Toate drepturile rezervate. Star Wars &#8482; &copy; %{current_year} Disney şi Lucasfilm. Toate drepturile rezervate. Congelate &#8482; &copy; %{current_year} Disney. Toate drepturile rezervate. Ice Age &#8482; &copy; %{current_year} 20th Century Fox. Toate drepturile rezervate. Supărat de păsări &#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Toate drepturile rezervate. Plante vs zombi &#8482; &copy; %{current_year} Electronic Arts Inc Toate drepturile rezervate. The Amazing World of Gumball este marca înregistrată &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org foloseşte p5.play, care este licenţiat sub <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: Susținut de Amazon Web Services
     trademark: '&copy;Code.org, %{current_year}. Code.org&reg;, logo-ul CODE şi Hour of Code&reg; sunt mărci comerciale ale Code.org.'
     copyright: Drept de autor
@@ -420,10 +424,10 @@ ro:
   upsell:
     applab:
       title: Laboratului Aplicației
-      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      body: App Lab este un mediu de programare în care poți creea aplicații simple. Proiectează o aplicație, programează cu blocuri sau JavaScript pentru a o face să funcționeze, apoi partajează aplicația în doar câteva secunde.
+      body_short: Proiectează o aplicație, programează cu blocuri sau JavaScript pentru a o face să funcționeze, apoi partajează aplicația în doar câteva secunde.
+      audience: Vârste 13 +
+      cta: Află cum
     hoc:
       title: Labirint Clasic
       body: Încearcă bazele programarii. Milioane de oameni au încercat.
@@ -450,6 +454,11 @@ ro:
     minecraft:
       title: Minecraft
       body: Exploreaza o lume Minecraft prin cod.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
     students_made_these_with_code: Elevii au creat acestea cu secvențe de cod!
@@ -468,7 +477,7 @@ ro:
     report_bug: Raporteazã eroare
     support: Obţine ajutor
     support_url: //support.code.org
-    help_resources: Help and Resources
+    help_resources: Ajutor şi resurse
   multi:
     wrong_title: Răspuns incorect
     wrong_body: 'Răspunsul introdus nu este corect.  Te rugăm să încerci din nou!'
@@ -478,21 +487,27 @@ ro:
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Mulţumesc
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: Îți mulțumim pentru trimiterea răspunsului tău.
     correct_title: Mulţumesc
-    correct_body: Thank you for submitting an answer.
+    correct_body: Îți mulțumim pentru trimiterea răspunsului tău.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Mulţumesc
-    wrong_body: Thank you for submitting answers.
+    wrong_body: Îți mulțumim pentru trimiterea răspunsului tău.
     correct_title: Mulţumesc
-    correct_body: Thank you for submitting answers.
+    correct_body: Îți mulțumim pentru trimiterea răspunsului tău.
   level_group-submittable:
     wrong_title: Mulţumesc
-    wrong_body: Thank you for submitting answers.
+    wrong_body: Îți mulțumim pentru trimiterea răspunsului tău.
     correct_title: Mulţumesc
-    correct_body: Thank you for submitting answers.
+    correct_body: Îți mulțumim pentru trimiterea răspunsului tău.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Soluţie incorectă
     wrong_body: 'Soluţia introdusă nu este corectă.  Te rugăm să încerci din nou!'
@@ -565,7 +580,7 @@ ro:
     completed_perfect: finalizat, perfect
     furthest_level_attempted: cel mai îndepărtat nivel încercat
     assessment: evaluare
-    submitted: submitted
+    submitted: transmise
   studio:
     courses_working_on: Cursurile pe care le studiezi
     completed_courses: Cursuri terminate
@@ -624,5 +639,5 @@ ro:
         acknowledge: 'Prin trimiterea acestor informaţii, sunteţi de acord că acesta vor fi gestionate în conformitate cu termenii %{link_start_privacy}Politicii de confidențialitate%{link_end} și %{link_start_tos}Termenii și condițiile de utilizare a serviciilor%{link_end}'
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Cauta o icoana...
+      no_icons_found: Nu s-au găsit icoane

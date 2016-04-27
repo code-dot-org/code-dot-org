@@ -5,115 +5,125 @@ require('./textMatch.js');
 
 window.initLevelGroup = function (
   levelCount,
-  page,
+  currentPage,
   fallbackResponse,
   callback,
   app,
   level,
   lastAttempt) {
 
-  // Are we read-only?  This can be because we're a teacher OR because an answer
-  // has been previously submitted.
-  if (window.appOptions.readonlyWorkspace) {
-    // hide the Submit button.
-    $('.submitButton').hide();
+  // Whenever an embedded level notifies us that the user has made a change,
+  // check for any changes in the response set, and if so, attempt to save
+  // these answers.  Saving is throttled to not occur more than once every 20
+  // seconds, and is done as soon as possible ("leading edge"), as well as at
+  // the end of a 20 second period if a change was made before then ("trailing
+  // edge").  Any pending throttled calls are cancelled when we go to a new page
+  // and save for that reason.
 
-    // Are we a student viewing their own previously-submitted work?
-    if (window.appOptions.submitted) {
-      // show the Unsubmit button.
-      $('.unsubmitButton').show();
+  window.getResult = getResult;
+
+  var throttledSaveAnswers =
+    window.dashboard.utils.throttle(saveAnswers, 20 * 1000, {'leading': true, 'trailing': true});
+
+  var lastResponse = window.getResult().response;
+
+  window.levelGroup.answerChangedFn = function () {
+    var currentResponse = window.getResult().response;
+    if (lastResponse !== currentResponse) {
+      throttledSaveAnswers();
     }
-  }
+    lastResponse = currentResponse;
+  };
 
   /**
    * Construct an array of all the level results. When submitted it's something
    * like this:
    *
-   * [{"level_id":1977,"result":"0"},{"level_id":2007,"result":"3"},{"level_id":1939,"result":"2,1"}]
+   * {"1977": {"result": "0", "valid": true},
+   *  "2007": {"result": "-1", "valid": false},
+   *  "1939": {"result": "2,1", "valid": true}}
    */
-  window.getResult = function () {
+  function getResult() {
     // Add any new results to the existing lastAttempt results.
     var levels = window.levelGroup.levels;
     Object.keys(levels).forEach(function (levelId) {
-      var levelResult = levels[levelId].getCurrentAnswer().toString();
-      lastAttempt[levelId] = {result: levelResult};
+      var currentAnswer = levels[levelId].getCurrentAnswer();
+      var levelResult = currentAnswer.response.toString();
+      var valid = currentAnswer.valid;
+      lastAttempt[levelId] = {result: levelResult, valid: valid};
     });
 
+    var validCount = 0;
+    for (var level in lastAttempt) {
+      if (lastAttempt[level].valid) {
+        validCount ++;
+      }
+    }
+
     var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
+
+    var completeString = (validCount == levelCount) ? "complete" : "incomplete";
+    var showConfirmationDialog = "levelgroup-submit-" + completeString;
 
     return {
       "response": JSON.stringify(lastAttempt),
       "result": true,
       "errorType": null,
-      "submitted": window.appOptions.level.submittable || forceSubmittable
+      "submitted": window.appOptions.level.submittable || forceSubmittable,
+      "showConfirmationDialog": showConfirmationDialog
     };
-  };
-
-  function nextPage() {
-    location.href = location.href.replace("/page/" + page, "/page/" + (page + 1));
   }
 
-  $(".nextPageButton").click(function () {
+  // Called by gotoPage and checkForChanges to save current answers.
+  // Calls the completeFn function when transmission is complete.
+  function saveAnswers(completeFn) {
+    var results = window.getResult();
+    var response = results.response;
+    var result = results.result;
+    var submitted = appOptions.submitted;
+
+    window.dashboard.reporting.sendReport({
+      program: response,
+      fallbackResponse: fallbackResponse,
+      callback: callback,
+      app: app,
+      level: level,
+      result: result,
+      pass: result,
+      testResult: result ? 100 : 0,
+      submitted: submitted,
+      onComplete: completeFn
+    });
+  }
+
+  // Called by gotoPage when it's ready to actually change the page.
+  function changePage(targetPage) {
+    var newLocation = window.location.href.replace("/page/" + currentPage, "/page/" + targetPage);
+    window.location.href = newLocation;
+  }
+
+  // Called by previous/next button handlers.
+  // Goes to a new page, first saving current answers if necessary.
+  function gotoPage(targetPage) {
     // Are we read-only?  This can be because we're a teacher OR because an answer
     // has been previously submitted.
     if (window.appOptions.readonlyWorkspace) {
-      nextPage();
+      changePage(targetPage);
     } else {
       // Submit what we have, and when that's done, go to the next page of the
-      // long assessment.
-
-      var results = window.getResult();
-      var response = results.response;
-      var result = results.result;
-      var errorType = results.errorType;
-      var submitted = appOptions.submitted;
-
-      window.dashboard.reporting.sendReport({
-        program: response,
-        fallbackResponse: fallbackResponse,
-        callback: callback,
-        app: app,
-        level: level,
-        result: result,
-        pass: result,
-        testResult: result ? 100 : 0,
-        submitted: submitted,
-        onComplete: function () {
-          nextPage();
-        }
+      // long assessment.  Cancel any pending throttled attempts at saving state.
+      throttledSaveAnswers.cancel();
+      saveAnswers(function () {
+        changePage(targetPage);
       });
     }
+  }
+
+  $(".nextPageButton").click(function (event) {
+    gotoPage(currentPage+1);
   });
 
-  // Unsubmit button should only be available when this is a standalone level.
-  $('.unsubmitButton').click(function () {
-    var dialog = new window.Dialog({
-      body:
-        '<div class="modal-content no-modal-icon">' +
-          '<p class="dialog-title">Unsubmit answer</p>' +
-          '<p class="dialog-body">' +
-          'This will unsubmit your previous answers.' +
-          '</p>' +
-          '<button id="continue-button">Okay</button>' +
-          '<button id="cancel-button">Cancel</button>' +
-        '</div>'
-    });
-
-    var dialogDiv = $(dialog.div);
-    dialog.show();
-
-    dialogDiv.find('#continue-button').click(function () {
-      $.post(window.appOptions.unsubmitUrl,
-        {"_method": 'PUT', user_level: {submitted: false}},
-        function () {
-          // Just reload so that the progress in the header is shown correctly.
-          location.reload();
-        }
-      );
-    });
-
-    dialogDiv.find('#cancel-button').click(function () {
-      dialog.hide();
-    });
+  $(".previousPageButton").click(function (event) {
+    gotoPage(currentPage-1);
   });
 };

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160413225640) do
+ActiveRecord::Schema.define(version: 20160418185704) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -444,9 +444,10 @@ ActiveRecord::Schema.define(version: 20160413225640) do
 
   create_table "plc_learning_modules", force: :cascade do |t|
     t.string   "name",               limit: 255
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-    t.integer  "plc_course_unit_id", limit: 4,   null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
+    t.integer  "plc_course_unit_id", limit: 4,                   null: false
+    t.boolean  "required",                       default: false, null: false
   end
 
   add_index "plc_learning_modules", ["plc_course_unit_id"], name: "index_plc_learning_modules_on_plc_course_unit_id", using: :btree
@@ -568,6 +569,7 @@ ActiveRecord::Schema.define(version: 20160413225640) do
     t.string   "grade",      limit: 255
     t.string   "admin_code", limit: 255
     t.string   "login_type", limit: 255, default: "email", null: false
+    t.datetime "deleted_at"
   end
 
   add_index "sections", ["code"], name: "index_sections_on_code", unique: true, using: :btree

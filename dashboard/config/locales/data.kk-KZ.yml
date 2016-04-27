@@ -520,7 +520,7 @@
         studio_iceage_hello1: Сид бариін жаңа шытырман оқиғаға шақырғысы келеді. "Айту"
           блогын қолданып ішіне "сәлем" сөзін жасып, Сидке "сәлем" деп айтуға көмектесе
           аласын ба?
-        studio_iceage_hello2: Сид(Кейіпкер 1) Манниді((Кейіпкер 2) тауып алды және
+        studio_iceage_hello2: Сид (Кейіпкер 1) Манниді (Кейіпкер 2) тауып алды және
           оны шытырман оқиғаға шақырғысы келеді. Оларға "Кейіпкер соле" блогын екі
           рет қолдана отырып бір біріне сәлем беруге көмектес.
         studio_iceage_move_to_flag: Скрат өз жанғағын іздеуде. Оған соңгы 200 пиксель
@@ -734,6 +734,7 @@
         infinity_playlab_intro: "Ойын Лабораториясы - Кіріспе"
         infinity_playlab_events: "Ойын Лабораториясы - Оқиғалар"
         infinity_playlab_repeat_forever: "Ойын Лабораториясы – Шексіз Қайталау"
+        csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
         csp_applab_processing_lists: Processing Lists with Loops

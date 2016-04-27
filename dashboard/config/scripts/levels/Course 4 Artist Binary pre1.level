@@ -20,7 +20,7 @@
     "instructions": "Binary is a way of representing information using only two options.  Here, we're going to use the options \"off\" (represented by the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on only certain squares.  Can you have the artist draw \"01010101\" in binary in the first row?",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Binary is a way of representing information using only two options.  Here, we're going to use the options \"off\" (represented by the number 0) and \"on\" (represented by the number 1).   \r\n\r\nWe've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on only certain squares.  Can you have the artist draw \"01010101\" in binary in the first row?",
+    "markdown_instructions": "Binary is a way of representing information using only two options.  Here, we're going to use the options \"off\" (represented by the number 0) and \"on\" (represented by the number 1).   \r\n\r\nWe've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on only certain squares.  \r\n\r\n**Can you have the artist draw \"01010101\" in binary in the first row?**",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -33,7 +33,8 @@
     "examples_required": "false",
     "permitted_errors": "0"
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 2
   }

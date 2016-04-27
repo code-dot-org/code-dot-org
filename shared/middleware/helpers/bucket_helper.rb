@@ -10,10 +10,57 @@ class BucketHelper
     @s3 = Aws::S3::Client.new
   end
 
+  def allowed_file_type?(extension)
+    allowed_file_types.include? extension.downcase
+  end
+
+  def allowed_file_types
+    []
+  end
+
+  # Ignore client-specified mime type. Infer it from file extension when serving
+  # assets.
+  def category_from_file_type(extension)
+    mime_type = Sinatra::Base.mime_type(extension)
+    if mime_type == 'application/pdf'
+      'pdf'
+    else
+      mime_type.split('/').first
+    end
+  end
+
+  # How long an object retrieved from this bucket should be cached
+  def cache_duration_seconds
+    0
+  end
+
   def app_size(encrypted_channel_id)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     prefix = s3_path owner_id, channel_id
     @s3.list_objects(bucket: @bucket, prefix: prefix).contents.map(&:size).reduce(:+).to_i
+  end
+
+  #
+  # Retrieve the total asset size of an app and the size of an individual object
+  # within that app with a single S3 request.
+  #
+  # @param [String] encrypted_channel_id - Token identifying app channel to read.
+  # @param [String] target_object - S3 key relative to channel of the single
+  #                 object whose size we should return.
+  # @return [[Int, Int]] size of target_object and size of entire app
+  def object_and_app_size(encrypted_channel_id, target_object)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+
+    app_prefix = s3_path owner_id, channel_id
+    target_object_prefix = s3_path owner_id, channel_id, target_object
+
+    objects = @s3.list_objects(bucket: @bucket, prefix: app_prefix).contents
+    target_object = objects.find { |x| x.key == target_object_prefix }
+
+    app_size = objects.map(&:size).reduce(:+).to_i
+    object_size = target_object.nil? ? nil : target_object.size.to_i
+
+    [object_size, app_size]
   end
 
   def list(encrypted_channel_id)
@@ -21,8 +68,8 @@ class BucketHelper
     prefix = s3_path owner_id, channel_id
     @s3.list_objects(bucket: @bucket, prefix: prefix).contents.map do |fileinfo|
       filename = %r{#{prefix}(.+)$}.match(fileinfo.key)[1]
-      mime_type = Sinatra::Base.mime_type(File.extname(filename))
-      category = mime_type.split('/').first  # e.g. 'image' or 'audio'
+      category = category_from_file_type(File.extname(filename))
+
       {filename: filename, category: category, size: fileinfo.size}
     end
   end
@@ -85,6 +132,25 @@ class BucketHelper
     @s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
 
     response
+  end
+
+  #
+  # Copy an object within a channel, creating a new object in the channel.
+  #
+  # @param [String] encrypted_channel_id - App-identifying token
+  # @param [String] filename - Destination name for new object
+  # @param [String] source_filename - Name of object to be copied
+  # @param [Hash] S3 response from copy operation
+  def copy(encrypted_channel_id, filename, source_filename)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+
+    key = s3_path owner_id, channel_id, filename
+    copy_source = @bucket + '/' + s3_path(owner_id, channel_id, source_filename)
+    @s3.copy_object(bucket: @bucket, key: key, copy_source: copy_source)
+
+    # TODO: (bbuchanan) Handle abuse_score metadata for animations.
+    # When copying an object, should also copy its abuse_score metadata.
+    # https://www.pivotaltracker.com/story/show/117949241
   end
 
   def delete(encrypted_channel_id, filename)

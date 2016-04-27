@@ -29,8 +29,8 @@
   twentyhours_text: Terminou sua primeira Hora do Código? Aprenda mais sobre a ciência
     da computação e seus conceitos nesse curso.
   og_title: Toda criança deve ter uma oportunidade
-  og_description: Todos os alunos, em todas as escolas, devem ter a oportunidade de
-    aprender ciência da computação.
+  og_description: Cada aluno em cada escola merece a oportunidade de estudar ciência
+    da computação. Isso muda tudo.
   hoc2014_heading: Participe da <a href="http://hourofcode.com">Hora do código</a><br/>de
     8 a 14 de dezembro de 2014<br/>
   hoc2014_students: Alunos
@@ -94,10 +94,11 @@
   congrats_guest_speaker_title: Convide um orador para a sua sala de aula
   congrats_guest_speaker_desc: Agora que os seus alunos acabaram um curso de programação,
     considere celebrar e relacionar o curso com coisas que eles podem construir no
-    mundo real através de um orador convidado à sua turma. pude usar o seu mapa de
-    voluntários para contactar voluntários locais ou procurar estudantes de informática
-    ou profissionais técnicos, de qualquer outra cidade, e que estejam prontos a inspirar
-    os seus alunos remotamente via vídeo chat.
+    mundo real através de um palestrante convidado à sua turma. Você pode usar o nosso
+    mapa de voluntários para contactar voluntários locais para visitar sua aula, ou
+    procurar estudantes de informática ou profissionais técnicos, de qualquer outra
+    cidade, e que estejam prontos para inspirar os seus alunos remotamente via vídeo
+    chat.
   congrats_guest_speaker_cta: Encontre um palestrante convidado
   congrats_third_party_title: Use os seus novos conhecimentos com estas apps e websites
   third_party_gradelevel_kto8: Alunos do Ensino Fundamental
@@ -672,6 +673,11 @@
   dashboard_action_remove_confirm: Excluir?
   dashboard_action_done: Feito
   dashboard_action_required: obrigatório
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Página inicial do professor
   dashboard_navigation_section_student_progress: Contas e progresso do aluno
   dashboard_navigation_section_teacher_progress: Seu progresso no curso
@@ -683,13 +689,25 @@
   dashboard_navigation_all_sections: Contas e progresso do aluno
   dashboard_navigation_view_progress: Exibir progresso
   dashboard_navigation_view_text_responses: Ver respostas dissertativas
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments: Avaliações
   dashboard_navigation_add_students: Adicionar alunos
   dashboard_navigation_manage_students: Gerenciar alunos
   dashboard_navigation_lesson_plans_resources: Planos e recursos da aula
   dashboard_navigation_view_stats: Ver estatísticas
   dashboard_navigation_section: 'Turma: %{section_name}'
   dashboard_navigation_student: 'Aluno: %{student_name}'
+  dashboard_progress_not_started: não iniciado
+  dashboard_progress_in_progress: em progresso
+  dashboard_progress_not_completed: não concluído
+  dashboard_progress_completed_too_many_blocks: concluído, muitos blocos
+  dashboard_progress_completed_perfect: concluído, perfeito
+  dashboard_progress_furthest_level_attempted: tentativa para o nível mais avançado
+  dashboard_progress_submitted: enviado
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nova turma
   dashboard_sections_jumbotron_instruction: Crie novas turmas e adicione alunos a
     elas. As turmas ajudam na organização dos alunos em grupos menores para que você
@@ -713,6 +731,26 @@
   dashboard_sections_print_secrets: Você pode imprimir uma folha com cartões contendo
     as informações da conta para distribuir individualmente para seus alunos.
   dashboard_sections_switch_section: 'Trocar de turma:'
+  dashboard_sections_close: Fechar
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Adicionar aluno
   dashboard_students_add_students: Adicionar vários alunos
   dashboard_students_add_multiple: 'Digite ou cole os nomes dos seus alunos, um por
@@ -800,24 +838,17 @@
   dashboard_login_picture: Imagem
   dashboard_login_none: E-mail
   dashboard_new_password: nova senha
-  dashboard_progress_not_started: não iniciado
-  dashboard_progress_in_progress: em progresso
-  dashboard_progress_not_completed: não concluído
-  dashboard_progress_completed_too_many_blocks: concluído, muitos blocos
-  dashboard_progress_completed_perfect: concluído, perfeito
-  dashboard_progress_furthest_level_attempted: tentativa para o nível mais avançado
-  dashboard_progress_submitted: enviado
   dashboard_stage: Fase
   dashboard_puzzle: Desafio
   dashboard_question: Pergunta
   dashboard_response: Resposta
   dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_free_response: Resposta livre
+  dashboard_correctness_unsubmitted: Envio cancelado
   dashboard_correctness_correct: Correto
   dashboard_correctness_incorrect: Incorreto
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
+  dashboard_submission_submitted: Enviado
+  dashboard_submission_in_progress: Em progresso
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -849,15 +880,6 @@
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
   dashboard_announce_button_text: Saiba mais
-  dashboard_announce_hoc: "<b>9 de novembro 2015</b> - Um novo tutorial da Hora do
-    Código está disponível, trazendo o novo filme de Star Wars: O Despertar da Força.
-    Trabalhe junto com Rey para guiar o novo androide, BB-8, em uma missão. Então,
-    junte-se a Leia para criar e compartilhar seu próprio jogo em uma galáxia muito,
-    muito distante."
-  dashboard_announce_playlab: "<b>4 de dezembro de 2015</b> - A Hora do Código chegou!
-    Experimente 50 tutoriais para todas as idades e dispositivos. Novidades desta
-    semana: programe suas próprias histórias e jogos em novos laboratórios, com A
-    Era do Gelo e Gumball."
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
@@ -985,7 +1007,7 @@
   course4_name: Curso 4
   accelerated_name: Curso acelerado
   cspunit3_name: CS Principles Unit 3
-  cspunit3_gradelevel: Grades 9-12
+  cspunit3_gradelevel: Alunos do 9° ano ao Ensino Médio
   cspunit3_shortdescription_congrats: Esta unidade introduz os conceitos fundamentais
     de programação de computadores, que ajudam na habilidade de criar ricos aplicativos
     interativos. Esse curso usa JavaScript como linguagem de programação, e o Laboratório
@@ -994,9 +1016,9 @@
     de programação.
   applab_name: Laboratório de Aplicativo
   applab_gradelevel: A partir de 13 anos
-  applab_shortdescription_congrats: App Lab is a programming environment where you
-    can make simple apps. Design an app, code with blocks or JavaScript to make it
-    work, then share your app in seconds
+  applab_shortdescription_congrats: App Lab é um ambiente de programação onde você
+    pode fazer simples aplicativos. Projetar uma aplicação, codificar com blocos ou
+    JavaScript para fazê-los funcionar, compartilhar seu aplicativo em minutos.
   codeorg_gradelevel: De 4 a 104 anos
   codeintl_gradelevel: De 4 a 104 anos
   thinkersmithspanish_gradelevel: Todas as idades
@@ -1729,8 +1751,33 @@
   infinity_shortcode: inf
   playlab_shortcode: jogue
   artist_shortcode: art
-  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
-    (or a teacher you know) want to join a nationwide community of educators working
-    to change the face of computer science education? We'll be accepting applications
-    from middle and high school teachers in our partner districts for our year-long
-    Exploring Computer Science Professional Learning Program until April 22nd."
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
+  dashboard_sections_close: Close
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.

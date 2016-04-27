@@ -30,8 +30,8 @@
   twentyhours_text: Selesai dengan Jam pertama 'Hour of Code? Pelajari lebih lanjut
     inti ilmu komputer dan konsep pemrograman di pelajaran selanjutnya.
   og_title: Setiap anak berhak atas kesempatan
-  og_description: Setiap siswa di setiap sekolah berhak atas kesempatan untuk mempelajari
-    ilmu komputer.
+  og_description: Setiap siswa di setiap sekolah layak mendapatkan kesempatan untuk
+    belajar ilmu komputer. Ini mengubah segalanya.
   hoc2014_heading: Bergabung dengan <a href="http://hourofcode.com">Hour of Code</a>
     <br/> 8-14 Desember 2014 <br/>
   hoc2014_students: Siswa
@@ -79,86 +79,86 @@
   congratulations_volunteer: 'Selamat: bahwa sekarang Anda telah mencoba Hour of Code,
     <a href="https://code.org/volunteer">silahkan daftar untuk menjadi relawan di
     kelas</a> dan membantu siswa belajar Hour of Code!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
-  congrats_next_tutorials_title: Coba tutorial ini berikutnya
+  congratulations_on_completing_course1: Selamat atas penyelesaian Kursus 1
+  congratulations_on_completing_course2: Selamat atas penyelesaian Kursus 2
+  congratulations_on_completing_course3: Selamat atas penyelesaian Kursus 3
+  congratulations_on_completing_course4: Selamat atas penyelesaian Kursus 4
+  congratulations_on_completing_accelerated: Selamat atas menyelesaikan Kursus Akselerasi
+  congrats_next_tutorials_title: Lulus ke tingkat berikutnya
   congrats_next_tutorials_desc: Cobalah yang lebih pendek, tutorial 1 jam ini atau
     mencoba <a href="%{current_path}/next"> mitra tutorial</a>.
   get_a_certificate_of_achievement: Ambil sertifikat prestasi
-  view_course: View course
-  view_unit: View unit
-  make_app: Make an app
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  view_course: Lihat Kursus
+  view_unit: Lihat unit
+  make_app: Membuat aplikasi
+  congrats_guest_speaker_title: Tumukan pembicara tamu untuk kelas Anda
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
     real world by inviting a guest speaker to your classroom. You can use our map
     of volunteers to contact local volunteers to visit your classroom, or search in
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
+  congrats_guest_speaker_cta: Temukan pembicara tamu
+  congrats_third_party_title: Gunakan keterampilan baru dengan aplikasi dan situs
+    web ini
+  third_party_gradelevel_kto8: Kelas 8
+  third_party_gradelevel_kto2: Kelas 2
+  third_party_gradelevel_2to8: Kelas 2-8
+  third_party_gradelevel_4to12: Kelas 4-12
+  third_party_gradelevel_5to12: Kelas 5-12
+  third_party_gradelevel_6plus: Kelas 6+
+  third_party_gradelevel_8plus: Kelas 8+
   third_party_platform_all: 'Platform: Web, iPad & Android'
   third_party_platform_mobile: 'Platform: iPad & Android'
   third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
+  third_party_price_varies: 'Harga: Bervariasi'
+  third_party_price_free: 'Harga: Gratis'
+  third_party_price_299: 'Harga: $2.99/unduhan'
+  third_party_price_individual: 'Harga Perorangan: Gratis Coba & $25/ bulan'
+  third_party_price_school: 'Harga Sekolah: Gratis & Pro di $2500 +'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
     computational thinking and programming skills in a fun, intuitive and imaginative
     way. Our innovative visual programming language, interactive self-paced courses,
     and game-based programming activities provide an easy introduction to programming,
     and empower children to innovate and create.
   third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
+  third_party_tynker_btn_site: Kunjungi Tynker
   third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
     that enables young children (ages 5-7) to create their own interactive stories
     and games. Children snap together graphical programming blocks to make characters
     move, jump, dance, and sing. Children can modify characters in the paint editor,
     add their own voices and sounds, even insert photos of themselves - then use the
     programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratchjr_btn_curriculum: Unduh Scratch Jr. Curriculum
+  third_party_scratchjr_btn_site: Kunjungi Scratch Jr.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories,
     games, and animations and share your creations with others in the online community.
     Scratch helps young people learn to think creatively, reason systematically, and
     work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
+  third_party_scratch_btn_curriculum: Unduk Kurikulum Scratch
+  third_party_scratch_btn_forum: Forum Pengajar Scratch
+  third_party_scratch_btn_site: Kunjungan Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
     to solve puzzles. Students may play the game in the Browser (requires Flash Player),
     or on Android or iOS devices. Students play the initial set of “Basic” levels
     in Lightbot. They will learn how to tell a computer what to do with a series of
     basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_lightbot_btn_curriculum: Unduh Kurikulum Lightbot
+  third_party_lightbot_btn_site: Kunjungi Lightbot
   third_party_khan_desc: Learn how to program drawings, animations, and games using
     JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
     can share whatever you create, explore what others have created and learn from
     each other!
-  third_party_khan_btn_learn: Learn CS with Khan Academy
-  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_khan_btn_learn: Belajar CS bersama Khan Academy
+  third_party_khan_btn_forum: Forum CS Khan Academy
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
     allows everyone, even novices, to start programming and build fully functional
     apps for Android devices. Newcomers to App Inventor can have their first app up
     and running in an hour or less, and can program more complex apps in significantly
     less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_appinv_btn_curriculum: Unduh Kurikulum App Inventor 2
+  third_party_appinv_btn_forum: Forum App Inventor 2
+  third_party_appinv_btn_site: Kunjungi App Inventor 2
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with
     short videos, example code, and lots of programming exercises that make coding
     fun and accessible for beginners. With CodeHS, you can get the help that every
@@ -170,12 +170,12 @@
     and more. We are building the education the world needs - the first truly net
     native education.
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_codecademy_btn_site: Kunjungi Codecademy
+  third_party_organization: Organisasi
   third_party_curriculum: Kurikulum
-  third_party_pricing: Pricing
-  third_party_cost_free: Free
-  third_party_cost_5permonth: "$5/month per class"
+  third_party_pricing: Harga
+  third_party_cost_free: Gratis untuk siswa dan guru
+  third_party_cost_5permonth: "$5/ bulan per kelas"
   third_party_cost_299: "$2.99/download"
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
@@ -385,7 +385,7 @@
   homepage_slot_text_link_othercourses: Kursus daring lainnya
   homepage_slot_text_title_educators: Pendidik
   homepage_slot_text_blurb_educators: Ajari siswa Anda
-  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_elementary: Sekolah dasar
   homepage_slot_text_link_middle: Sekolah Menengah Pertama
   homepage_slot_text_link_high: Sekolah Menengah Umum
   homepage_slot_text_link_k5: Kursus untuk kelas K-5
@@ -667,6 +667,11 @@
   dashboard_action_remove_confirm: Hapus?
   dashboard_action_done: Selesai
   dashboard_action_required: diperlukan
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Beranda guru
   dashboard_navigation_section_student_progress: Akun dan perkembangan siswa
   dashboard_navigation_section_teacher_progress: Kemajuan studi Anda
@@ -677,13 +682,25 @@
   dashboard_navigation_all_sections: Akun dan perkembangan siswa
   dashboard_navigation_view_progress: Lihat perkembangan
   dashboard_navigation_view_text_responses: Lihat Balasan Teks
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments: Penilaian
   dashboard_navigation_add_students: Tambahkan murid
   dashboard_navigation_manage_students: Kelola murid
   dashboard_navigation_lesson_plans_resources: Rencana pelajaran dan sumber daya
   dashboard_navigation_view_stats: Lihat Statistik
   dashboard_navigation_section: 'Bagian: %{section_name}'
   dashboard_navigation_student: 'Murid: %{student_name}'
+  dashboard_progress_not_started: belum dimulai
+  dashboard_progress_in_progress: sedang berlangsung
+  dashboard_progress_not_completed: belum selesai
+  dashboard_progress_completed_too_many_blocks: selesai, terlalu banyak blok
+  dashboard_progress_completed_perfect: selesai, sempurna
+  dashboard_progress_furthest_level_attempted: tingkat terjauh yang dicoba
+  dashboard_progress_submitted: terkirim
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Kelompok baru
   dashboard_sections_jumbotron_instruction: Buatlah kelompok baru dan tambahkan murid
     di dalamnya. Kelompok dapat membagi murid-murid menjadi kelompok yang lebih kecil
@@ -708,6 +725,26 @@
   dashboard_sections_print_secrets: Anda kemudian dapat memprint kartu yang berisi
     informasi akun untuk dibagikan kepada masing-masing siswa-siswi.
   dashboard_sections_switch_section: 'Beralih bagian:'
+  dashboard_sections_close: Tutup
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Tambahkan siswa
   dashboard_students_add_students: Tambahkan beberapa siswa
   dashboard_students_add_multiple: 'Ketik atau sisipkan nama siswa Anda, satu siswa
@@ -788,27 +825,20 @@
   dashboard_login_picture: Gambar
   dashboard_login_none: email
   dashboard_new_password: Kata sandi baru
-  dashboard_progress_not_started: belum dimulai
-  dashboard_progress_in_progress: sedang berlangsung
-  dashboard_progress_not_completed: belum selesai
-  dashboard_progress_completed_too_many_blocks: selesai, terlalu banyak blok
-  dashboard_progress_completed_perfect: selesai, sempurna
-  dashboard_progress_furthest_level_attempted: tingkat terjauh yang dicoba
-  dashboard_progress_submitted: terkirim
   dashboard_stage: Tahap
   dashboard_puzzle: Teka-teki
   dashboard_question: Pertanyaan
   dashboard_response: Respon
-  dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
+  dashboard_correctness: Kebenaran
+  dashboard_correctness_free_response: Respon gratis
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Benar
-  dashboard_correctness_incorrect: Incorrect
+  dashboard_correctness_incorrect: Salah
   dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
+  dashboard_submission_in_progress: Sedang berlangsung
   dashboard_status: Status
-  dashboard_multi_correct: "# multiple choice correct"
-  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct: "# pilihan ganda yang benar"
+  dashboard_multi_count: "# pilihan ganda"
   dashboard_multi_correct_percent: "% multiple choice correct"
   dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Terdapat statistik yang luar biasa dari Hour of Code tahun
@@ -840,14 +870,6 @@
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
   dashboard_announce_button_text: Pelajari lebih banyak
-  dashboard_announce_hoc: "<b>9 November 2015</b> - tutorial Hour of Code baru ada
-    di sini, menampilkan film terbaru dari Star Wars: The Force Awakens. Bekerja samalah
-    dengan Rey untuk membimbing droid baru, BB-8, melalui misi. Kemudian, bergabung
-    dengan Leia untuk membuat dan berbagi pertandingan Anda sendiri di sebuah galaksi
-    yang sangat jauh."
-  dashboard_announce_playlab: "<b>4 Desember 2015</b> - Jam Berkode sudah hadir! Cobalah
-    50 tutorial untuk setiap umur dan setiap alat. Baru di minggu ini: Kodekan cerita-ceritamu
-    sendiri dan permainan di Play Labs yang baru, Ice Age dan Gumball."
   code_hoc_coming: Hour of Code hadir disini - 8-14 Desember!
   code_sign_up: Daftarlah untuk ikut serta dalam Pekan Edukasi Ilmu Komputer
   learn_more: Pelajari lebih banyak
@@ -1722,8 +1744,33 @@
   infinity_shortcode: inf
   playlab_shortcode: mainkan
   artist_shortcode: art
-  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
-    (or a teacher you know) want to join a nationwide community of educators working
-    to change the face of computer science education? We'll be accepting applications
-    from middle and high school teachers in our partner districts for our year-long
-    Exploring Computer Science Professional Learning Program until April 22nd."
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
+  dashboard_sections_close: Close
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.

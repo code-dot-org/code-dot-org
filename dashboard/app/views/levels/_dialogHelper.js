@@ -18,6 +18,35 @@ window.dashboard.dialog = (function () {
     }
   });
 
+  // Are we read-only?  This can be because we're a teacher OR because an answer
+  // has been previously submitted.
+  if (appOptions.readonlyWorkspace) {
+    // hide the Submit button.
+    $('.submitButton').hide();
+
+    // Are we a student viewing their own previously-submitted work?
+    if (appOptions.submitted) {
+      // show the Unsubmit button.
+      $('.unsubmitButton').show();
+    }
+
+    // Set the entire page background to be light grey.
+    $('.full_container').addClass('submitted_readonly');
+  }
+
+  // Unsubmit button should only be available when this is a standalone level.
+  $('.unsubmitButton').click(function () {
+    showDialog('unsubmit', function () {
+      $.post(window.appOptions.unsubmitUrl,
+        {"_method": 'PUT', user_level: {submitted: false}},
+        function () {
+          // Just reload so that the progress in the header is shown correctly.
+          location.reload();
+        }
+      );
+    });
+  });
+
   function dialogHidden() {
     var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
     if (dialogType === "success" && lastServerResponse.nextRedirect) {
@@ -103,16 +132,23 @@ window.dashboard.dialog = (function () {
       return;
     }
 
-    // Avoid multiple simultaneous submissions.
-    submitButton.attr('disabled', true);
+    var showConfirmationDialog = getResult().showConfirmationDialog || false;
+    if (showConfirmationDialog) {
+      showDialog(showConfirmationDialog, function () {
+        processResults(onComplete);
+      });
+    } else {
+      // Avoid multiple simultaneous submissions.
+      submitButton.attr('disabled', true);
 
-    var onComplete = function (willRedirect) {
-      if (!willRedirect) {
-        $('.submitButton').attr('disabled', false);
-      }
-    };
+      var onComplete = function (willRedirect) {
+        if (!willRedirect) {
+          $('.submitButton').attr('disabled', false);
+        }
+      };
 
-    processResults(onComplete);
+      processResults(onComplete);
+    }
   });
 
   /**
@@ -131,6 +167,7 @@ window.dashboard.dialog = (function () {
     var errorType = results.errorType;
     var testResult = results.testResult ? results.testResult : (result ? 100 : 0);
     var submitted = results.submitted || false;
+
 
     if (!result) {
       showDialog(errorType || "error");

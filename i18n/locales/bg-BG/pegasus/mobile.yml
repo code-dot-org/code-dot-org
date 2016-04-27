@@ -21,7 +21,7 @@ bg-BG:
   twentyhours_heading: Опитайте нашите въвеждащи курсове по компютърни науки
   twentyhours_text: Завършихте ли първия Час на кодиране? Научете повече за основните понятия в компютърните науки и програмиране в този следващ курс.
   og_title: Всяко дете заслужава възможност
-  og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
+  og_description: Всеки ученик във всяко училище заслужава възможност да учи компютърни науки.
   hoc2014_heading: 'Присъединете се към <a href="http://hourofcode.com"> Часът на кодирането</a> <br/>на 8-14 декември 2014 г. <br/>'
   hoc2014_students: Ученици
   hoc2014_try: Опитайте го
@@ -67,12 +67,12 @@ bg-BG:
   congrats_next_tutorials_desc: 'Опитайте тези кратки, едночасови уроци или пробвайте <a href="%{current_path}/next"> партньорските предложения</a>.'
   get_a_certificate_of_achievement: Получете сертификат за постижение
   view_course: Преглед на курса
-  view_unit: View unit
+  view_unit: Преглед на частта
   make_app: Направи приложение
   congrats_guest_speaker_title: Намери гост-лектор за твоята класна стая
   congrats_guest_speaker_desc: Сега след като твоите студенти завършиха курса по компютърни науки, помислете за празнуване и го свържете с неща, които могат да направят в реалния свят, като ги поканите за гост-лектор във вашата класна стая. Можете да използвате нашата карта на доброволците за да се свържете с местни доброволци които да посетят вашата класна стая, или потърсете в който и да е град студенти по компютърни науки или специалисти по компютърни технологии, които са готови да вдъхновяват вашите студенти от разстояние, чрез видео чат.
   congrats_guest_speaker_cta: Намери гост-лектор
-  congrats_third_party_title: Use your new skills with these apps and websites
+  congrats_third_party_title: Използвайте новите си умения с тези приложения и уеб сайтове
   third_party_gradelevel_kto8: Класове K-8
   third_party_gradelevel_kto2: Класове K-2
   third_party_gradelevel_2to8: Класове 2-8
@@ -474,6 +474,11 @@ bg-BG:
   dashboard_action_remove_confirm: Премахване?
   dashboard_action_done: Готово
   dashboard_action_required: изисквания
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Начална страница на учителя
   dashboard_navigation_section_student_progress: Ученически акаунти и прогрес
   dashboard_navigation_section_teacher_progress: Прогреса Ви в курса
@@ -491,6 +496,17 @@ bg-BG:
   dashboard_navigation_view_stats: Преглед на статистиката
   dashboard_navigation_section: 'Раздел: %{section_name}'
   dashboard_navigation_student: 'Ученик: %{student_name}'
+  dashboard_progress_not_started: не е стартиран
+  dashboard_progress_in_progress: в ход
+  dashboard_progress_not_completed: не е завършено
+  dashboard_progress_completed_too_many_blocks: завършено, но с повече блокове
+  dashboard_progress_completed_perfect: завършено, перфектно
+  dashboard_progress_furthest_level_attempted: последното пробвано ниво
+  dashboard_progress_submitted: предоставени
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Нов раздел
   dashboard_sections_jumbotron_instruction: Създайте нови раздели и добавете ученици към тях. Разделите ще Ви помогнат да организирате учениците в по-малки групи, така че да можете да следите напредъка им и да управлявате техните акаунти.
   dashboard_sections_table_section: Раздел
@@ -506,6 +522,19 @@ bg-BG:
   dashboard_sections_secret_none: 'Ако искате вашите ученици да управляват своите акаунти сами, включително и изборът на парола, изберете </b>без<b>.'
   dashboard_sections_print_secrets: След това може да разпечатате на листове информацията за акаунтите и да ги раздадете на учениците си.
   dashboard_sections_switch_section: 'Преминаване към раздел:'
+  dashboard_sections_close: Затваряне
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Добавяне на ученик
   dashboard_students_add_students: Добавяне на няколко ученика
   dashboard_students_add_multiple: 'Въведете или поставете имената на вашите ученици, по едно име на ред:'
@@ -572,13 +601,6 @@ bg-BG:
   dashboard_login_picture: Картина
   dashboard_login_none: Имейл
   dashboard_new_password: нова парола
-  dashboard_progress_not_started: не е стартиран
-  dashboard_progress_in_progress: в ход
-  dashboard_progress_not_completed: не е завършено
-  dashboard_progress_completed_too_many_blocks: завършено, но с повече блокове
-  dashboard_progress_completed_perfect: завършено, перфектно
-  dashboard_progress_furthest_level_attempted: последното пробвано ниво
-  dashboard_progress_submitted: submitted
   dashboard_stage: Етап
   dashboard_puzzle: Пъзел
   dashboard_question: Въпрос
@@ -613,10 +635,8 @@ bg-BG:
   dashboard_faq_k5: K-5 често задавани въпроси
   dashboard_announcements: Съобщения
   dashboard_announce_view_all: Преглед на всички
-  dashboard_announce_message: '<b>April 4, 2016</b> - We all know there is a diversity problem in computer science. Code Studio teachers are leading the way in educating underrepresented minorities. Our annual survey shows record diversity in your classrooms! Check out the numbers.'
+  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
   dashboard_announce_button_text: Научете повече
-  dashboard_announce_hoc: '<b>Ноември 23, 2015</b> - часът на кода 2015 идва! Присъединете се към класните стаи по целия свят за най-голямото обучително събитие в историята.'
-  dashboard_announce_playlab: '<b>4 декември 2015 г.</b> -Hour of Code е тук! Опитайте тези 50 урока за всяка възраст и всяко устройство. Новото тази седмица: Програмирай свои собствени истории и игри в новата Игрална лаборатория, Ледена епоха и Гъмбол.'
   code_hoc_coming: 'Часът на кода е тук - декември 8-14!'
   code_sign_up: Регистрирайте се за участие по време на CS седмицата на образованието
   learn_more: Научете повече

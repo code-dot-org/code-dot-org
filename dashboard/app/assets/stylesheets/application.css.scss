@@ -1668,6 +1668,10 @@ a.download-video {
   margin-right: 0;
 }
 
+#free-response-upload {
+  overflow: hidden;
+}
+
 #current-script-levels, #all-levels {
   min-height: 50px;
   li {
@@ -1759,6 +1763,30 @@ div.mini_gallery_activity {
   font-family: $gotham-regular;
   font-weight: normal;
   padding: 10px;
+}
+
+.previousPageButton {
+  margin-right: 5px;
+}
+
+.buttons.submittable {
+  .submitButton {
+    border-color: $purple;
+    background-color: $purple;
+    color: white;
+    background-image: none;
+  }
+
+  .unsubmitButton {
+    border-color: $light_purple;
+    background-color: $light_purple;
+    color: white;
+    background-image: none;
+  }
+}
+
+.submitted_readonly {
+  background-color: $lightest_gray;
 }
 
 /* multiple choice */
@@ -2050,7 +2078,7 @@ $modal-no-icon-gap: 22px;
   line-height: 20px;
 }
 
-#again-button {
+#again-button, #cancel-button {
   background-color: $green;
   color: white;
   margin-left: 0px;
@@ -2129,6 +2157,12 @@ $modal-no-icon-gap: 22px;
   &.no-modal-icon {
     margin-left: $modal-no-icon-gap;
   }
+}
+
+#levelgroup-submit-incomplete-dialogcontent,
+#levelgroup-submit-complete-dialogcontent,
+#unsubmit-dialogcontent {
+  overflow: hidden;
 }
 
 #feedbackBlocks {

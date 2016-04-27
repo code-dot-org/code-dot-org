@@ -248,16 +248,16 @@
           tôi, chú sóc Scrat.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: This block looks the same as the "if" block, but there's an extra part
-          at the bottom that says "else". If I put a "move forward" block where it
-          says "do" and a "turn left" block where it says "else", that means Scrat
-          the squirrel will move forward if there's a path ahead. If there's not a
-          path ahead, Scrat will turn left.
+        text: Khối này trông giống như khối "if", nhưng có một phần phụ phía dưới
+          cùng đó nói "else". nếu tôi đặt khối "move forward" nơi mà nó nói "do" và
+          một khối "turn left" nơi mà nó nói "else". điều đó có nghĩa là con sóc Scrat
+          sẽ di chuyển tiến về phía trước nếu đó có một đường phía trước. còn nếu
+          không có đường phía trước, Scrat sẽ rẽ trái.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: It's making a decision and doing one of the two actions based on that
-          decision. And just like "if" blocks, you can put "if-else" blocks inside
-          "repeat" blocks.
+        text: nó thực hiện một quyết định và làm một trong hai hành động dựa trên
+          quyết định đó. and cũng giống như khối "if", bạn có thể đặt khối "if-else"
+          bên trong khối "repeat.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
         text: Giờ chúng ta hãy giúp chú sóc Scrat lấy được quả hạch đó!
@@ -274,9 +274,9 @@
           trên cùng.
       3:
         image: notes/stage13_3.jpg
-        text: The blocks that go inside the definition tell us what it does. So this
-          function definition is called "fill 5" and it's made up of a "repeat" block
-          and a "fill" block.
+        text: các khối mà đi bên trong định nghĩa cho chúng ta biết những gì mà nó
+          làm. vì thế định nghĩa chức năng được gọi là "fill5" và nó tạo thành khối
+          "rêpat" và khối "fill".
       4:
         image: notes/stage13_4.jpg
         text: Định nghĩa ngồi trên không gian làm việc, nhưng người nông dân của chúng
@@ -308,9 +308,9 @@
           hơn và hơn nữa rồi bạn có thễ chuyển các hành động mỗi lần một chút.
       3:
         image: notes/stage11_3.jpg
-        text: In this example, our "counter" loop says "count with counter from 50
-          to 90 by 10" and inside it, we have our "draw a square" block. Drag the
-          "counter" block from the "Variables" section into the "length" spot.
+        text: trong ví dụ này, vòng lặp "counter" của chúng ta nói rằng "count with
+          counter from 50 to 90 by 10" và bên trong nó, chúng ta có khối "draw a square".
+          kéo khối "counter" từ phần "variables" vào trong vị trí "length".
       4:
         image: notes/stage11_4.jpg
         text: Có nghĩa là họa sĩ của chúng ta sẽ đi vẽ một hình vuông có cạnh dài
@@ -327,36 +327,37 @@
           độ dài khác nhau?
       3:
         image: notes/stage15_3.jpg
-        text: We could write all that code out by hand or we can use a function with
-          parameters.
+        text: chúng ta có thể viết tất cả mã ra bằng tay hoặc chúng ta có thể sử dụng
+          một hàm với các tham số.
       4:
         image: notes/stage15_4.jpg
-        text: To do this, click the blue star on the "draw a triangle" function definition.
-          Then drag "input name" into the "input" block.
+        text: để làm được điều này, nhấp chuột vào ngôi sao màu xanh trên định nghĩa
+          hàm "draw a triangle". sau đó kéo "input name" vào trong khối "input".
       5:
         image: notes/stage15_5.jpg
-        text: Then if you write "length" in the spot where it says "x" and press "Enter"
-          you'll create a length input for your function.
+        text: Sau đó, nếu bạn viết "length" tại chỗ nơi được nói là "x" và nhấn "Enter"
+          bạn sẽ tạo một đầu vào độ dài cho hàm của bạn.
       6:
         image: notes/stage15_6.jpg
-        text: Then click on the star. Now, you want to click on the variables category
-          and drag the "length" block into the "move forward" block of your function
-          definition. And drag away the old number block.
+        text: Sau đó nhấp chuộc vào ngôi sau. bây giờ, bạn muốn nhấp chuột vào loại
+          biến và kéo khối "length" vào trong khối "move forward" của định nghĩa hàm
+          của bạn. và kéo ra xa khối số cũ.
       7:
         image: notes/stage15_7.jpg
-        text: To use your function with parameters, click on the functions category
-          and drag out your "draw a triangle with length" function.
+        text: để sử dụng hàm của bạn với các tham số, nhấp chuột vào loại hàm và kéo
+          ra ngoài hàm "draw a triangle with length" của bạn.
       8:
         image: notes/stage15_8.jpg
-        text: Now you can use the math block to input different numbers to draw triangles
-          of different sizes.
+        text: bây giờ bạn có thể sử dụng khối toán học để đặt đầu vào các số khác
+          nhau để vẽ các hình tam giác có kích thước khác nhau.
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: Congratulations! With the last puzzle you solved, you just wrote code
-          that can tell ANY robot how to find it's way through a non-branching maze
-          or tunnel of any length, whether it's a zombie, a bird, a mars rover, or
-          even a self-driving car.
+        text: Chúc mừng! Với câu đố cuối cùng bạn giải quyết được, bạn chỉ cần viết
+          các đoạn mã từ đó có thể nói cho bất kỳ con robot làm thế nào để tìm thấy
+          con đường của nó thông qua một mê cung không phân nhánh hay hầm với chiều
+          dài bất kỳ, cho dù đó là một chú zombie, một con chim, một chiếc xe dò đường
+          trên sao Hỏa, hoặc thậm chí là một chiếc xe hơi tự lái.
       2:
         image: notes/hoc6_2.jpg
         text: Các khái niệm cơ bản bạn sử dụng ở trung tâm của mọi chương trình hoặc
@@ -381,147 +382,153 @@
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use
-          code to join Anna and Elsa as they explore the magic and beauty of ice.
+        text: Xin chào, tên tôi là Lyndsey. Tôi làm mô hình ,khắc phục các lỗi, và
+          viết ứng dụng của riêng tôi. Hãy sử dụng đoạn mã để tham gia vào thế giới
+          của Anna và Elsa cùng họ khám phá sự kỳ diệu và vẻ đẹp của băng tuyết.
       2:
         image: notes/frozen1_2.jpg
-        text: You'll create snowflakes and patterns as you ice skate and make a winter
-          wonderland that you can then share with your friends.
+        text: Bạn sẽ tạo ra các bông tuyết , các mẫu như giầy trượt băng và tạo ra
+          một sứ sở thần tiên mùa đông sau đó bạn có thể chia sẻ với bạn bè của bạn.
       3:
         image: notes/frozen1_3.jpg
-        text: In the next hour, you're going to learn the basics of how to code. Traditional
-          programming is usually in text, but we'll use Blockly, which uses visual
-          blocks that you can drag and drop to write programs. This is how even university
-          students learn the basics. Under the hood, you're still creating code.
+        text: Trong những giờ tiếp theo, bạn sẽ tìm hiểu làm thế nào để lập trình
+          một cách cơ bản. Lập trình truyền thống thường là các đoạn câu lệnh ngắn,
+          nhưng chúng ta sẽ sử dụng các khối mã,bằng cách sử dụng các hình khối mà
+          bạn có thể kéo và thả để viết chương trình. Đây chính là cách cơ bản để
+          sinh viên học. Nhưng thực chất bạn vẫn đang học tạo ra các dòng mã
       4:
         image: notes/frozen1_4.jpg
-        text: A program is a set of instructions that tells a computer what to do.
-          Let's build a code, or a program, that will help Elsa create a simple line.
-          We will use this later to create more complex patterns.
+        text: Một chương trình là một tập hợp các chỉ dẫn để nói cho máy tính biết
+          phải làm gì. Hãy xây dựng một đoạn mã, hoặc một chương trình, mà sẽ giúp
+          đỡ Elsa tạo ra một con đường đơn giản. Chúng tôi sẽ sử dụng nó sau này để
+          tạo ra các mô hình phức tạp hơn.
       5:
         image: notes/frozen1_5.jpg
-        text: Your screen is split into three main parts. On the left, is the ice
-          surface where you'll run your program. The instructions for each level are
-          written right below the surface.
+        text: Màn hình của bạn được chia thành ba phần chính. Bên trái, là bề mặt
+          băng nơi bạn sẽ chạy chương trình của bạn. Các chỉ dẫn cho mỗi cấp độ được
+          viết ngay bên dưới bề mặt.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action
-          that Elsa and Anna can do.
+        text: "Ở giữa là hộp công cụ, và mỗi khối là một hành động mà Elsa và Anna
+          có thể làm."
       7:
         image: notes/frozen1_7.jpg
-        text: The white space on the right is called the workspace, and this is where
-          we'll build our program. To move around the ice surface, you'll use the
-          "Move Forward" block.
+        text: 'Khoảng trắng ở phía bên phải được gọi là workspace, và đây là nơi chúng
+          ta sẽ xây dựng chương trình của chúng ta. Để di chuyển xung quanh trên bề
+          mặt băng, bạn sẽ sử dụng khối "Di chuyển về phía trước" '
       8:
         image: notes/frozen1_8.jpg
-        text: Here, the "Move Forward" block says, "move forward by 100 pixels." When
-          we press "Run", what happens? Elsa moves forward a certain amount on the
-          screen, 100 pixels in fact! Pixels are basically very tiny squares on your
-          computer screen.
+        text: Ở đây, khối "Di chuyển về phía trước" nói, "di chuyển về phía trước
+          100 điểm ảnh." Khi chúng tôi nhấn "Chạy", điều gì sẽ xảy ra? Elsa di chuyển
+          về phía trước một số khoảng cách nhất định trên màn hình, 100 điểm ảnh trong
+          thực tế! Điểm ảnh về cơ bản là một hình vuông nhỏ trên màn hình máy tính
+          của bạn.
       9:
         image: notes/frozen1_9.jpg
-        text: The other block we have in this puzzle says "turn right by 90 degrees."
-          And when we use this "Turn Right" block, that makes Elsa turn a certain
-          amount. You can play around with how far you want Elsa to turn. The angle
-          is measured from the path ahead of Elsa. So, this is a 90 degree turn. And
-          this is a 120 degree turn.
+        text: Với các khối khác, trong câu đố này chúng ta chúng ta nói "qua phải
+          90 độ". Khi chúng ta sử dụng khối "quay phải", điều đó làm cho Elsa quay
+          một khoảng cách nhất định. Bạn có thể cho quay xung quanh với một khoảng
+          bao xa bạn muốn Elsa quay. Các góc được đo từ con đường phía trước của Elsa.
+          Vì vậy đây là quay 90 độ. Và đây là quay 120 độ.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking
-          the arrows next to them.
+        text: Hãy nhớ rằng, bạn có thể thay đổi số lượng điểm ảnh và góc độ bằng cách
+          nhấp vào mũi tên bên cạnh chúng.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: Hi, I’m Paola! Computers are really good at repeating actions. You can
-          count to 10, 20, or 100. But a computer can count to a billion or a trillion.
-          It won't get bored and it will only take a few seconds. Whether it's counting,
-          or drawing, or anything--computers can repeat things hundreds or even billions
-          of times.
+        text: Hi, I 'm Paola! Máy vi tính có thực sự tốt khi hành động lặp đi lặp
+          lại. Bạn có thể đếm đến 10, 20, hoặc 100. Nhưng một máy tính có thể đếm
+          đến một tỷ hoặc một nghìn tỷ. Nó sẽ không cảm thấy chán nản và chỉ mất một
+          vài giây. Cho dù nó đếm, hoặc vẽ, hoặc làm bất cứ điều gì - máy tính có
+          thể lặp lại điều đó hàng trăm hoặc thậm chí hàng tỷ lần.
       2:
         image: notes/frozen2_2.jpg
-        text: In programming, we call this a loop. A loop is how you repeat your code
-          over and over again. For the next puzzle, your goal is to help Anna create
-          a square with the "Repeat" block.
+        text: Trong chương trình, chúng tôi gọi đây là một vòng lặp. Một vòng lặp
+          là làm thế nào bạn lặp lại mã của bạn nhiều lần. Đối với các câu đố tiếp
+          theo, mục tiêu của bạn là giúp Anna tạo ra một hình vuông với khối "Lặp
+          lại".
       3:
         image: notes/frozen2_3.jpg
-        text: Any blocks of code you put inside the "Repeat" block will be repeated
-          in sequence, as many times as you want.
+        text: Bất kỳ khối mã bạn đặt bên trong khối "Lặp lại" sẽ được lặp lại theo
+          thứ tự, như số lần như bạn muốn.
       4:
         image: notes/frozen2_4.jpg
-        text: To draw a square, you can use the "Move Forward" and "Turn Right" block
-          4 times. But the easier way is to tell the computer to "Move Forward" and
-          "Turn Right by 90 degrees" once, and then tell it to repeat this pair of
-          actions 4 times. To do that, you need to put the "Move Forward" and "Turn
-          Right" block inside a "Repeat" block.
+        text: Để vẽ một hình vuông, bạn có thể sử dụng khối "Di chuyển về phía trước"
+          và "Quay phải" 4 lần. Nhưng có một cách dễ dàng hơn là nói với máy tính
+          "Di chuyển về phía trước" và "Quay phải 90 độ" một lần, và sau đó nói với
+          nó để lặp lại cặp hành động này 4 lần. Để làm điều đó, bạn cần phải đặt
+          khối "Di chuyển về phía trước" và "Quay phải" bên trong một khối "Lặp lại".
       5:
         image: notes/frozen2_5.jpg
-        text: Remember, you can change the number in the "Repeat" block to anything,
-          and it will repeat what's inside the block that many times.
+        text: Hãy nhớ rằng, bạn có thể thay đổi số trong khối "Lặp lại" chọn bất cứ
+          số gì, và nó sẽ lặp lại số trong khối đó từng đấy lần.
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
-          in college.
+        text: Xin chào, tôi là Chris Bosh. Tôi là một cầu thủ bóng rổ chuyên nghiệp,
+          và tôi viết mã trong trường cao đẳng.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define
-          new commands. Most computer languages have only about 100 words or commands.
-          And really, the art and magic is in defining your own new words out of these
-          building blocks.
+        text: Một trong những khái niệm quan trọng nhất trong khoa học máy tính là
+          làm thế nào để xác định các lệnh mới. Hầu hết các ngôn ngữ máy tính đã chỉ
+          khoảng 100 từ hoặc câu lệnh. Và thực sự, nghệ thuật và ma thuật là việc
+          định nghĩa các khối mới thuộc về bạn khác những khối được xây dựng.
       3:
         image: notes/frozen3_3.jpg
-        text: Once you've taught a computer how to do an action once using this sequence
-          of commands, you can make up your own name for that action so it's easy
-          to repeat it later. When you define your own command and give it a name,
-          that's called a function.
+        text: Một khi bạn đã dạy một máy tính làm thế nào để làm một hành động một
+          lần bằng cách sử dụng dãy lệnh này, bạn có thể tạo 1 tên riêng cho hành
+          động đó. Vì vậy ta dễ dàng lặp lại hành động đó sau này. Khi bạn định nghĩa
+          các lệnh của riêng bạn và đặt tên cho nó, ta gọi đó là hàm.
       4:
         image: notes/frozen3_4.jpg
-        text: Hi, I’m Jess. When programming with blocks, you would use functions
-          if there are a set of actions you would like to use lots of times. For example,
-          you've written code to create a square.
+        text: Xin chào, Tôi là Jess. Khi lập trình với các khối, bạn sẽ sử dụng hàm
+          nếu có một tập các hành động bạn muốn sử dụng nhiều lần. Ví dụ, bạn đã viết
+          mã để tạo ra một hình vuông.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'Bạn có thể định nghĩa nó như là một hàm với tên "tạo ra một hình vuông." '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple
-          squares.
+        text: Bây giờ bạn có một khối mới mà bạn có thể sử dụng nhiều lần để tạo ra
+          nhiều hình vuông.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns.
-          In the next puzzle, the code you recently wrote to make a circle is available
-          to you as a new function that can make circles of different sizes. Can you
-          use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: Rất nhiều hình đơn giản có thể được sử dụng để tạo ra các hình phức
+          tạp hơn. Trong trò chơi tiếp theo, mã bạn đã viết mới đây để tạo một vòng
+          tròn sẽ được dùng để định nghĩa 1 hàm mới mà có thể tạo hình tròn với kích
+          thước khác nhau. Bạn có thể sử dụng nó để giúp Elsa tạo ra các hình phức
+          tạp và xinh đẹp trong tuyết?
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: We're going to create games using Play Lab. Good games have a story,
-          and every story has actors. We'll learn how to make our actors like witches,
-          alinens, and animals speak, move, and interact with each other. By the end
-          of this tutorial, you can build a game from scratch and share it with your
-          friends.
+        text: Chúng ta sẽ tạo ra trò chơi bằng cách sử dụng Play Lab. Một trò chơi
+          hay cần có cốt truyện, và mọi trò chơi cần có nhân vật. Chúng ta có thể
+          học cách xây dựng nhân vật như phù thuỷ, công chúa, giọng nói của các con
+          thú, chuyển động, nói chuyện. Ở cuối bài học này, bạn có thể làm 1 trò chơi
+          từ đầu tới cuối và chia sẻ với bạn bè.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space
-          where your program will run. The instructions for each level are written
-          below.
+        text: Màn hình của bạn được chia thành ba phần chính. Ở bên trái là không
+          gian chương trình sẽ chạy. Các lệnh cho từng cấp độ được viết bên dưới.
       3:
         image: notes/playlab_intro_3.png
-        text: The middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace and this is
-          where we'll build our program.
+        text: Khu vực giữa là hộp công cụ, và mỗi khối là 1 lệnh. Không gian màu trắng
+          bên phải được gọi là không gian làm việc và đây là nơi chúng ta sẽ xây dựng
+          chương trình của mình.
       4:
         image: notes/playlab_intro_4.png
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line, and then they'll snap together.
+        text: Để bắt đầu, bạn sẽ cần liên kết các khối với khối màu cam "khi chạy".
+          Bạn có thể liên kết nhiều khối với nhau bằng cách kéo chúng cho đến khi
+          bạn nhìn thấy đường màu vàng, và sau đó chúng sẽ nối liền với nhau.
       5:
         image: notes/playlab_intro_5.png
-        text: In this first puzzle, our actor is a penguin and we'll be making it
-          say "Hello!" by dragging the say block out, linking it to the when run block,
-          and typing in "Hello." We can also make the penguin move by using the move
-          right and move left blocks. Once you have your blocks in place, hit the
-          run button to see what you've programmed.
+        text: Trong trò chơi đầu tiên, nhân vật của chúng ta là chim cánh cụt và chúng
+          ta sẽ làm cho nó nói "Xin chào!" bằng cách kéo các khối nói ra, liên kết
+          với khối "khi chạy" và gõ vào "Xin chào." Chúng ta cũng có thể di chuyển
+          chim cánh cụt bằng cách sử dụng khối đi sang phải và đi sang trái. Khi bạn
+          đã có các khối đúng vị trí, nhấn nút Chạy để xem những gì bạn đã lập trình
+          được.
       6:
         image: notes/playlab_intro_6.png
         text: Get started and by the end, you'll be able to create your own game with
@@ -531,13 +538,14 @@
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: Now, we're going to learn about something that all game programmers
-          use everyday. They're called events. An event tells your program to listen
-          for when something happens. When that thing happens, it performs an action.
+        text: Bây giờ, chúng ta sẽ tìm hiểu về một số thứ mà tất cả các lập trình
+          viên trò chơi sử dụng hàng ngày. Đó là sự kiện. Một sự kiện nói chương trình
+          của bạn lắng nghe khi một điều gì đó xảy ra. Khi nó xảy ra, ta thực hiện
+          1 hành động.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button,
-          or a tap on the screen.
+        text: 'Một số ví dụ về các sự kiện là: đang lắng nghe cho một nhấp chuột,
+          phím mũi tên hoặc phím tab được nhấn.'
       3:
         image: notes/playlab_events_3.png
         text: Here, we're going to make the space bot greet the earthlings when a

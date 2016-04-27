@@ -26,7 +26,11 @@
   welcome_back: Willkommen zurück, %{name}
   submit: Absenden
   unsubmit: Zurücknehmen
+  previous_page: Previous page
   next_page: Nächste Seite
+  cancel: Abbrechen
+  okay: Okay
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Lehrer hinzufügen:'
@@ -428,8 +432,8 @@
       Entertainment Ltd. Alle Rechte vorbehalten. Plants vs Zombies &#8482; &copy;
       %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten. Die erstaunliche
       Welt von Gumball ist Warenzeichen und &copy; 2015 Cartoon Network.
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
-      GNU LGPL 2.1</a>.
+    code_from_html: Code.org nutzt p5.play, das unter <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">der
+      GNU LGPL 2.1</a> lizensiert ist.
     powered_by_aws: Betrieben von Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, das CODE Logo und
       Hour of Code&reg; sind eingetragene Marken der Code.org."
@@ -557,6 +561,15 @@
     minecraft:
       title: Minecraft
       body: Erkunde eine Minecraft-Welt mit Hilfe von Code.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: Schüler haben folgendes mit Code gezeichnet!
     students_made_these_with_code: Schüler haben diesen Code gemacht!
@@ -583,7 +596,7 @@
     report_bug: Fehler melden
     support: Hilfe erhalten
     support_url: "//support.code.org"
-    help_resources: Help and Resources
+    help_resources: Hilfe und Ressourcen
   multi:
     wrong_title: Falsche Antwort
     wrong_body: Die Antwort, die du eingegeben hast, ist nicht korrekt. Bitte versuche
@@ -609,6 +622,15 @@
     wrong_body: Vielen Dank für das Einsenden Ihrer Fragen.
     correct_title: Vielen Dank
     correct_body: Vielen Dank für das Einsenden Ihrer Fragen.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Falsche Lösung
     wrong_body: Die Lösung, die du eingegeben hast, ist nicht korrekt. Bitte versuche

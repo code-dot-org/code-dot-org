@@ -333,6 +333,7 @@ FactoryGirl.define do
 
   factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
     resource_url nil
+    icon nil
   end
 
   factory :plc_script_completion_task, parent: :plc_task, class: 'Plc::ScriptCompletionTask' do
@@ -412,6 +413,17 @@ FactoryGirl.define do
     user { create :teacher }
     properties {{survey2016_ethnicity_asian: "1"}}
     properties {{survey2016_foodstamps: "3"}}
+  end
+
+  factory :hint_view_request do
+    user { create :student }
+    script { create :script }
+    level { create :level }
+  end
+
+  factory :level_concept_difficulty do
+    level { create :level }
+    repeat_loops 2
   end
 
   factory :user_proficiency do

@@ -7,8 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
-      "rect": null,
-      "fill": null
+      "rect": null
     },
     "edit_code": true,
     "embed": "false",
@@ -34,7 +33,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "markdown_instructions": "# Order of Code Matters\r\n\r\norder of code matters!\r\n\r\nthings are drawn on the screen in the order they are written from top to bottom\r\n\r\nwhen you want something at the back it needs to be at the top and when you want something to be at the front you need to draw it last\r\n\r\n# Do This\r\n\r\n* Change the orders of the blocks so that the image looks like: DO NOT CHANGE THE PARAMETERS\r\n\r\n<img src=\"https://images.code.org/a1ec5dedb9a6d3ab89afac7f984ac6bc-image-1460495402153.09.31 PM.png\" width=200>",
+    "markdown_instructions": "# Order of Code Matters\r\n\r\nThe order of the blocks of code matters. Computer code is read from top to bottom in order. The computer will do the step on the first line, then the second line and so on. This means that when you want soemthign at the back of your picture it should be at the top of the program and when you want something at the front of your picture it should be at the bottom of the lines of code.\r\n\r\n# Do This\r\nWe have started you off with 4 rectangles of different sizes and locations. \r\n<img src=\"https://images.code.org/a1ec5dedb9a6d3ab89afac7f984ac6bc-image-1460495402153.09.31 PM.png\" width=200 align=\"right\">\r\n\r\n* **DON'T change the values for the rectangles.**\r\n* Change the orders of the blocks so that the image looks the one on the right. \r\n\r\n\r\n\r\n",
     "start_blocks": "rect(100, 100, 200, 200);\r\nrect(50, 50, 300, 300);\r\nrect(0, 0, 400, 400);\r\nrect(150, 150, 100, 100);",
     "callout_json": "[\r\n{\r\n  \"localization_key\": \"\",\r\n  \"element_id\": \".droplet-gutter-line:nth-of-type(1)\",\r\n  \"callout_text\": \"Reorder the blocks\",\r\n  \"qtip_config\": {\r\n   \t\"position\": {\r\n      \"my\": \"top right\",\r\n      \"at\": \"center center\",\r\n      \"adjust\": {\r\n       \"x\": 0,\r\n       \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions": "Do this"

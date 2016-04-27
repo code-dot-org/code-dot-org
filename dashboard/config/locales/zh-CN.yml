@@ -25,7 +25,11 @@
   welcome_back: "欢迎回来，%{name}"
   submit: "提交"
   unsubmit: "未提交"
+  previous_page: Previous page
   next_page: "下一页"
+  cancel: "取消"
+  okay: "好吧"
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: "添加一个老师:"
@@ -474,6 +478,15 @@
     minecraft:
       title: "我的世界"
       body: "用代码来探索《我的世界》。"
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: "学生使用代码画了这些图案!"
     students_made_these_with_code: "学生使用代码做了这些内容!"
@@ -517,6 +530,15 @@
     wrong_body: "感谢您提交答案。"
     correct_title: "谢谢你"
     correct_body: "感谢您提交答案。"
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: "不正确的解决方案"
     wrong_body: "您输入的解决方案不正确。请再试一次 ！"

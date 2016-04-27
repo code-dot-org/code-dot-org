@@ -25,7 +25,7 @@
   "COLOUR_RGB_RED":"czerwony",
   "COLOUR_RGB_TITLE":"pomaluj",
   "COLOUR_RGB_TOOLTIP":"Utwórz kolor z określoną ilość czerwonego, zielonego i niebieskiego.  Wszystkie wartości muszą być między 0 i 100.",
-  "CONFIRM_CREATE_VARIABLE":"Twórz",
+  "CONFIRM_CREATE_VARIABLE":"Stwórz",
   "CONFIRM_DELETE_FUNCTION_MESSAGE":"Ostrzeżenie! Czy na pewno chcesz usunąć %1?",
   "CONFIRM_RENAME_VARIABLE":"Zmień nazwę",
   "CONTRACT_EDITOR_HEADER":"Przepis na projekt",

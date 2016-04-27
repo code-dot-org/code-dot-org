@@ -118,18 +118,13 @@
   third_party_appinv_btn_curriculum: "下载 App Inventor 2 课程"
   third_party_appinv_btn_forum: App Inventor 2 论坛
   third_party_appinv_btn_site: "访问 App Inventor 2"
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with
-    short videos, example code, and lots of programming exercises that make coding
-    fun and accessible for beginners. With CodeHS, you can get the help that every
-    new programmer needs to work through problems and keep learning. Our tutors are
-    everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codecademy_desc: We are rethinking education from the bottom up. The
-    web has rethought nearly everything - commerce, social networking, healthcare,
-    and more. We are building the education the world needs - the first truly net
-    native education.
+  third_party_codehs_desc: HS代码编程介绍的基石与短片，示例代码和大量的编程练习，使编码的乐趣和适合初学者使用。对于学校和教师CodeHS提供课程，教师工具和PD
+    。对于个别学生，你可以得到你沿着导师的网络的方式所需要的帮助。
+  third_party_codehs_btn_try: "介绍CS了解更多的学校"
+  third_party_codecademy_desc: "我们是从下到上重新思考教育。该网站已经重新考虑几乎一切 - 电子商务，社交网络，医疗保健等。我们正在建设世界需要教育
+    - 第一个真正的净母语教育。"
   third_party_codecademy_btn_curriculum: "下载 Codecademy 课程"
-  third_party_codecademy_btn_site: Visit Codecademy
+  third_party_codecademy_btn_site: "访问代码学院"
   third_party_organization: "组织"
   third_party_curriculum: "课程"
   third_party_pricing: "定价"
@@ -139,14 +134,12 @@
   third_party_cost_free_399: "免费试用，每间教室399美元"
   third_party_cost_free_2: "免费试用，每位学生2美元"
   third_party_cost_free_10: "免费试用，每月9.99美元"
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
-    K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
-    K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
+  third_party_desc_5_4to8: "大约有五节课，成绩朝四到八个面向"
+  third_party_desc_10to12_kto3: "最多10-12 课，为幼儿园-3年级设计"
+  third_party_desc_11_kto5: "你制杖吗"
+  third_party_desc_10to12_kto5: "你持盾吗"
+  third_party_desc_40_4to8: "你捡币吗"
+  third_party_desc_dozens_kto8: "不，我撒币"
   third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
   third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
   third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
@@ -510,6 +503,11 @@
   dashboard_action_remove_confirm: "移除？"
   dashboard_action_done: "完成"
   dashboard_action_required: "必填"
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: "教师主页"
   dashboard_navigation_section_student_progress: "学生账户和进度"
   dashboard_navigation_section_teacher_progress: "您的课程进度"
@@ -527,6 +525,18 @@
   dashboard_navigation_view_stats: "查看统计"
   dashboard_navigation_section: "学习小组：%{section_name}"
   dashboard_navigation_student: "学生：%{student_name}"
+  dashboard_progress_not_started: "未开始"
+  dashboard_progress_in_progress: "正在进行"
+  dashboard_progress_not_completed: "未完成"
+  dashboard_progress_completed_too_many_blocks: "完成，使用太多块"
+  dashboard_progress_completed_perfect: "完美完成"
+  dashboard_progress_furthest_level_attempted: "尝试过最远的关卡"
+  dashboard_progress_submitted: "已提交"
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: "新的学习小组"
   dashboard_sections_jumbotron_instruction: "创建新的学习小组并为其添加学生。学习小组可以帮助您以小组为单位来管理学生，以便您跟踪他们的进度和管理他们的帐户。"
   dashboard_sections_table_section: "单元"
@@ -543,6 +553,26 @@
   dashboard_sections_secret_none: "如果您希望您的学生自主管理他们自己的账户，包括选择他们自己的密码，请选择<b>无</b>加密类型。"
   dashboard_sections_print_secrets: "然后您可以打印一叠包含账户信息的卡片以单独分发给您的学生们。"
   dashboard_sections_switch_section: "切换学习小组"
+  dashboard_sections_close: "关闭"
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: "添加学生"
   dashboard_students_add_students: "添加多位学生"
   dashboard_students_add_multiple: "输入或粘贴学生的名字，每行一个："
@@ -612,13 +642,6 @@
   dashboard_login_picture: "图片"
   dashboard_login_none: "电子邮件"
   dashboard_new_password: "新密码"
-  dashboard_progress_not_started: "未开始"
-  dashboard_progress_in_progress: "正在进行"
-  dashboard_progress_not_completed: "未完成"
-  dashboard_progress_completed_too_many_blocks: "完成，使用太多块"
-  dashboard_progress_completed_perfect: "完美完成"
-  dashboard_progress_furthest_level_attempted: "尝试过最远的关卡"
-  dashboard_progress_submitted: "已提交"
   dashboard_stage: "阶段"
   dashboard_puzzle: "关卡"
   dashboard_question: "问题"
@@ -658,10 +681,6 @@
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
   dashboard_announce_button_text: "了解详情"
-  dashboard_announce_hoc: "<b>2015 年 11 月 23 日</b>-在你发起的编程一小时活动期间，你是否需要一名热衷于计算机科学教育的志愿者提供帮助？逾7,000
-    名志愿者正在寻找通过参与您的课堂或远程视频聊天的形式激发你学生的潜质。查看你所在地区的志愿者分布地图并取得的联系。"
-  dashboard_announce_playlab: "<b>2015 年 12 月 4 日</b>-编程一小时就在这里！面向所有年龄段、通过所有类型的设备尝试
-    50 节教程。本周新内容：在全新的游戏实验室里用冰河世纪和陶阿甘编写你自己的代码故事和游戏。"
   code_hoc_coming: "代码小时就在这里 — — 12 月 8-14 ！"
   code_sign_up: "注册以便在计算机科学教育周期间参加"
   learn_more: "现在就试试"
@@ -1236,8 +1255,33 @@
   infinity_shortcode: inf
   playlab_shortcode: "玩"
   artist_shortcode: art
-  dashboard_announce_message_second: "<b>Final round of applications</b> - Do you
-    (or a teacher you know) want to join a nationwide community of educators working
-    to change the face of computer science education? We'll be accepting applications
-    from middle and high school teachers in our partner districts for our year-long
-    Exploring Computer Science Professional Learning Program until April 22nd."
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
+  dashboard_sections_close: Close
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
