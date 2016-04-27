@@ -26,7 +26,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "instructions": "Ok, solve this one just like the last puzzle, but you need to remember how you used the `if` and `repeat until` blocks together."
+    "instructions": "Ok, solve this one just like the last puzzle, but you need to remember how you used the `if` and `repeat until` blocks together.",
+    "maze_data": null
   },
   "published": true,
   "notes": "",
@@ -55,14 +56,14 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_forever"/>
         <block type="maze_if">
           <title name="DIR">isPathRight</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

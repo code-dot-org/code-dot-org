@@ -9,22 +9,6 @@ function initLevelGroup(
   level,
   lastAttempt) {
 
-  // Are we read-only?  This can be because we're a teacher OR because an answer
-  // has been previously submitted.
-  if (window.appOptions.readonlyWorkspace) {
-    // hide the Submit button.
-    $('.submitButton').hide();
-
-    // Are we a student viewing their own previously-submitted work?
-    if (window.appOptions.submitted) {
-      // show the Unsubmit button.
-      $('.unsubmitButton').show();
-    }
-
-    // Set the entire page background to be light grey.
-    $('.full_container').addClass("level_group_readonly");
-  }
-
   // Whenever an embedded level notifies us that the user has made a change,
   // check for any changes in the response set, and if so, attempt to save
   // these answers.  Saving is throttled to not occur more than once every 20
@@ -138,31 +122,5 @@ function initLevelGroup(
 
   $(".previousPageButton").click(function (event) {
     gotoPage(currentPage-1);
-  });
-
-  // Unsubmit button should only be available when this is a standalone level.
-  $('.unsubmitButton').click(function () {
-    var content = document.querySelector("#unsubmit-dialogcontent").cloneNode(true);
-    var dialog = new window.Dialog({body: content});
-    var dialogDiv = $(dialog.div);
-    dialog.show();
-
-    var okButton = dialogDiv.find('#ok-button');
-    okButton.click(function () {
-      // Avoid multiple simultaneous unsubmissions.
-      okButton.attr('disabled', true);
-
-      $.post(window.appOptions.unsubmitUrl,
-        {"_method": 'PUT', user_level: {submitted: false}},
-        function () {
-          // Just reload so that the progress in the header is shown correctly.
-          location.reload();
-        }
-      );
-    });
-
-    dialogDiv.find('#cancel-button').click(function () {
-      dialog.hide();
-    });
   });
 }

@@ -8,7 +8,7 @@ class Plc::TasksController < ApplicationController
 
   # GET /plc/tasks/new
   def new
-    @task.plc_learning_module_ids = [params[:plc_learning_module_id]]
+    @task.plc_learning_modules = Plc::LearningModule.where(id: params[:plc_learning_module_id])
     @task.type = params[:type]
   end
 

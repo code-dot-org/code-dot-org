@@ -1668,6 +1668,10 @@ a.download-video {
   margin-right: 0;
 }
 
+#free-response-upload {
+  overflow: hidden;
+}
+
 #current-script-levels, #all-levels {
   min-height: 50px;
   li {
@@ -1761,9 +1765,11 @@ div.mini_gallery_activity {
   padding: 10px;
 }
 
-.level_group_buttons {
-  display: inline-block;
+.previousPageButton {
+  margin-right: 5px;
+}
 
+.buttons.submittable {
   .submitButton {
     border-color: $purple;
     background-color: $purple;
@@ -1779,7 +1785,7 @@ div.mini_gallery_activity {
   }
 }
 
-.level_group_readonly {
+.submitted_readonly {
   background-color: $lightest_gray;
 }
 
@@ -2153,11 +2159,9 @@ $modal-no-icon-gap: 22px;
   }
 }
 
-#levelgroup-submit-incomplete-dialogcontent{
-  overflow: hidden;
-}
-
-#levelgroup-submit-complete-dialogcontent{
+#levelgroup-submit-incomplete-dialogcontent,
+#levelgroup-submit-complete-dialogcontent,
+#unsubmit-dialogcontent {
   overflow: hidden;
 }
 
