@@ -9,7 +9,6 @@ var JSInterpreter = require('./JSInterpreter');
 var Observer = require('./Observer');
 var Slider = require('./slider');
 var utils = require('./utils');
-var JsDebugger = require('./templates/JsDebugger');
 
 var KeyCodes = constants.KeyCodes;
 var StepType = JSInterpreter.StepType;

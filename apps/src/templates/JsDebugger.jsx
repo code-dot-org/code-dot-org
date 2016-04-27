@@ -45,17 +45,17 @@ var DebugButtons = function () {
   return (
     <div id="debug-commands" className="debug-commands">
       <div id="debug-buttons">
-        <span> </span>
+        {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
         <button id="pauseButton" className="debugger_button">
           <img src="/blockly/media/1x1.gif" className="pause-btn icon21"/>
           {i18n.pause()}
         </button>
-        <span> </span>
+        {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
         <button id="continueButton" className="debugger_button">
           <img src="/blockly/media/1x1.gif" className="continue-btn icon21"/>
           {i18n.continue()}
         </button>
-        <span> </span>
+        {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
         <button id="stepOverButton" className="debugger_button">
           <img src="/blockly/media/1x1.gif" className="step-over-btn icon21"/>
           {i18n.stepOver()}
@@ -65,7 +65,7 @@ var DebugButtons = function () {
           <img src="/blockly/media/1x1.gif" className="step-out-btn icon21"/>
           {i18n.stepOut()}
         </button>
-        <span> </span>
+        {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
         <button id="stepInButton" className="debugger_button">
           <img src="/blockly/media/1x1.gif" className="step-in-btn icon21"/>
           {i18n.stepIn()}
@@ -89,12 +89,58 @@ var DebugWatch = function (props) {
 };
 
 /**
+ * Slider for modifying speed. Ideall we will eventually have a common component
+ * used here and by turtle.
+ */
+var Slider = function (props) {
+  return (
+    <div id="slider-cell" style={props.style}>
+      <svg id="speed-slider"
+           version="1.1"
+           width="150"
+           height="28">
+        {/*<!-- Slow icon. -->*/}
+        <clipPath id="slowClipPath">
+          <rect
+              width={26}
+              height={12}
+              x={5}
+              y={6} />
+        </clipPath>
+        <image xlinkHref="/blockly/media/turtle_icons.png"
+            height={42}
+            width={84}
+            x={-21}
+            y={-18}
+            clipPath="url(#slowClipPath)" />
+        {/*<!-- Fast icon. -->*/}
+        <clipPath id="fastClipPath">
+          <rect
+              width={26}
+              height={16}
+              x={120}
+              y={2} />
+        </clipPath>
+        <image
+            xlinkHref="/blockly/media/turtle_icons.png"
+            height={42}
+            width={84}
+            x={120}
+            y={-19}
+            clipPath="url(#fastClipPath)" />
+      </svg>
+    </div>
+  );
+};
+
+/**
  * The parent JsDebugger component.
  */
 var JsDebugger = function (props) {
   var sliderStyle = {
     marginLeft: props.debugButtons ? 0 : 40
   };
+
   return (
     <ProtectedStatefulDiv id="debug-area">
       <div id="debugResizeBar" className="fa fa-ellipsis-h"></div>
@@ -115,43 +161,7 @@ var JsDebugger = function (props) {
             <span style={styles.noPadding}>Clear</span>
           </span>
         </div>
-        {/* possible we could one day have a common slider-cell component */}
-        <div id="slider-cell" style={sliderStyle}>
-          <svg id="speed-slider"
-               version="1.1"
-               width="150"
-               height="28">
-            {/*<!-- Slow icon. -->*/}
-            <clipPath id="slowClipPath">
-              <rect
-                  width={26}
-                  height={12}
-                  x={5}
-                  y={6} />
-            </clipPath>
-            <image xlinkHref="/blockly/media/turtle_icons.png"
-                height={42}
-                width={84}
-                x={-21}
-                y={-18}
-                clipPath="url(#slowClipPath)" />
-            {/*<!-- Fast icon. -->*/}
-            <clipPath id="fastClipPath">
-              <rect
-                  width={26}
-                  height={16}
-                  x={120}
-                  y={2} />
-            </clipPath>
-            <image
-                xlinkHref="/blockly/media/turtle_icons.png"
-                height={42}
-                width={84}
-                x={120}
-                y={-19}
-                clipPath="url(#fastClipPath)" />
-          </svg>
-        </div>
+        <Slider style={sliderStyle}/>
       </div>
       {props.debugButtons && <DebugButtons/>}
       {props.debugConsole && <DebugConsole debugButtons={props.debugButtons} debugWatch={props.debugWatch}/>}

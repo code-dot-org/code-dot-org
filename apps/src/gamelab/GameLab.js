@@ -14,7 +14,6 @@ var dropletUtils = require('../dropletUtils');
 var _ = require('../lodash');
 var dropletConfig = require('./dropletConfig');
 var JsDebuggerUi = require('../JsDebuggerUi');
-var JsDebugger = require('../templates/JsDebugger');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
