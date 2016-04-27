@@ -14,7 +14,7 @@ var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
 var AppView = require('../templates/AppView');
-var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var CodeWorkspace = require('../templates/CodeWorkspace');
 var FlappyVisualizationColumn = require('./FlappyVisualizationColumn');
 var dom = require('../dom');
 var constants = require('./constants');
@@ -576,26 +576,20 @@ Flappy.init = function (config) {
     config.blockArrangement.flappy_whenClick.y = row2;
   }
 
-  var generateCodeWorkspaceHtmlFromEjs = function () {
-    return codeWorkspaceEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        localeDirection: studioApp.localeDirection(),
-        blockUsed: undefined,
-        idealBlockNumber: undefined,
-        editCode: level.editCode,
-        blockCounterClass: 'block-counter-default',
-        readonlyWorkspace: config.readonlyWorkspace
-      }
-    });
-  };
-
   var onMount = function () {
     studioApp.init(config);
 
     var rightButton = document.getElementById('rightButton');
     dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
   };
+
+  var codeWorkspace = (
+    <CodeWorkspace
+      localeDirection={studioApp.localeDirection()}
+      editCode={!!level.editCode}
+      readonlyWorkspace={!!config.readonlyWorkspace}
+    />
+  );
 
   ReactDOM.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
@@ -604,7 +598,7 @@ Flappy.init = function (config) {
     hideSource: !!config.hideSource,
     noVisualization: false,
     isRtl: studioApp.isRtl(),
-    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    codeWorkspace: codeWorkspace,
     visualizationColumn: <FlappyVisualizationColumn/>,
     onMount: onMount
   }), document.getElementById(config.containerId));

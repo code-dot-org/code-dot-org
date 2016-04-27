@@ -3,12 +3,6 @@ var assert = testUtils.assert;
 testUtils.setupLocales('applab');
 testUtils.setExternalGlobals();
 
-// used in design mode
-window.Applab = {
-  appWidth: 320,
-  appHeight: 480
-};
-
 var Applab = require('@cdo/apps/applab/applab');
 var RecordListener = require('@cdo/apps/applab/RecordListener');
 var designMode = require('@cdo/apps/applab/designMode');
