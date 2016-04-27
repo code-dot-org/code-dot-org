@@ -1,7 +1,12 @@
-var JSZip = require('jszip');
+/* global dashboard */
+
+// TODO(pcardune): Stop using the already packaged/minified version of jszip in
+// favor just plain jszip. Due to a bug in (probably) browserify, we need to use
+// the minified version. See this comment for more details:
+// https://github.com/code-dot-org/code-dot-org/pull/8071#issuecomment-214931393
+var JSZip = require('jszip/dist/jszip.min');
 var saveAs = require('filesaver.js').saveAs;
 
-var assetListStore = require('../assetManagement/assetListStore');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var download = require('../assetManagement/download');
 var elementLibrary = require('./designElements/library');
@@ -90,7 +95,7 @@ export default {
       {url: '/assets/js/en_us/applab_locale.js', zipPath: appName + 'applab_locale.js'},
       {url: '/assets/js/applab-api.js', zipPath: appName + 'applab-api.js'},
       {url: '/assets/css/applab.css', zipPath: appName + 'applab.css'},
-    ].concat(assetListStore.list().map(function (asset) {
+    ].concat(dashboard.assets.listStore.list().map(function (asset) {
       return {
         url: assetPrefix.fixPath(asset.filename),
         rootRelativePath: 'assets/' + asset.filename,

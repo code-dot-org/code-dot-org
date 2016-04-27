@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# 830590 total recipients
+
+../send-to-mailing-list --limit 850000 4-22-petition-congress-3b-no ./us-contacts-remainder.csv

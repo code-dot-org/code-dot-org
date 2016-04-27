@@ -32,7 +32,8 @@
     "impressive": "false",
     "disable_sharing": "false"
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 3
@@ -54,13 +55,13 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-6">???</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

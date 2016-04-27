@@ -313,6 +313,8 @@ Dashboard::Application.routes.draw do
 
   get '/plc/enrollment_evaluations/:unit_assignment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
   post '/plc/enrollment_evaluations/:unit_assignment_id/submit_evaluation', to: 'plc/enrollment_evaluations#submit_evaluation'
+  get '/plc/enrollment_evaluations/:unit_assignment_id/preview_assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
+  post '/plc/enrollment_evaluations/:unit_assignment_id/confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments'
 
   get '/plc/learning_modules/:id/new_learning_resource_for_module', to: 'plc/learning_modules#new_learning_resource_for_module', as: 'new_learning_resource_for_module'
 

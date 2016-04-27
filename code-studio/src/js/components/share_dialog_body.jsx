@@ -1,5 +1,6 @@
 var AbuseError = require('./abuse_error');
 var SendToPhone = require('./send_to_phone');
+var AdvancedShareOptions = require('./AdvancedShareOptions');
 
 /* global React */
 
@@ -72,11 +73,6 @@ var ShareDialogBody = React.createClass({
     var twitterShareUrl = "https://twitter.com/intent/tweet?url=" + this.props.encodedShareUrl +
       "&amp;text=Check%20out%20what%20I%20made%20@codeorg&amp;hashtags=HourOfCode&amp;related=codeorg";
 
-    var horzPadding = {
-      paddingLeft: 1,
-      paddingRight: 1
-    };
-
     var abuseStyle = {
       border: '1px solid',
       borderRadius: 10,
@@ -108,24 +104,9 @@ var ShareDialogBody = React.createClass({
         appType={this.props.appType}/>;
     }
 
-    var exportButton;
+    var advancedOptions;
     if (this.props.onClickExport && this.props.appType === 'applab') {
-      var spinner = this.state.exporting ? <i className="fa fa-spinner fa-spin"></i> : null;
-      // TODO: Make this use a nice UI component from somewhere.
-      var alert = this.state.exportError ? (
-        <div className="alert fade in">
-          {this.state.exportError}
-        </div>
-      ) : null;
-      exportButton = (
-        <div>
-          <a className="export-button" onClick={this.clickExport}>
-            {spinner}
-            Export project
-          </a>
-          {alert}
-        </div>
-      );
+      advancedOptions = <AdvancedShareOptions onClickExport={this.props.onClickExport} />;
     }
 
     return (
@@ -144,26 +125,30 @@ var ShareDialogBody = React.createClass({
               value={this.props.shareUrl}
               style={{cursor: 'copy', width: 465}}/>
           </div>
+          <div className="social-buttons">
+            <a id="sharing-phone" href="" onClick={this.showSendToPhone}>
+              <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
+              Send to phone
+            </a>
+            <a href={facebookShareUrl}
+               target="_blank"
+               onClick={this.props.onClickPopup.bind(this)}>
+              <i className="fa fa-facebook"></i>
+            </a>
+            <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)}>
+              <i className="fa fa-twitter"></i>
+            </a>
+          </div>
+          {advancedOptions}
           {/* Awkward that this is called continue-button, when text is
               close, but id is (unfortunately) used for styling */}
           <button
               id="continue-button"
-              style={{float: 'right'}}
+              style={{position: 'absolute', right: 0, bottom: 10}}
               onClick={this.props.onClickClose}>
             {this.props.closeText}
           </button>
-          <div className="social-buttons">
-            <a href={facebookShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)} style={horzPadding}>
-              <i className="fa fa-facebook"></i>
-            </a>
-            <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)} style={horzPadding}>
-              <i className="fa fa-twitter"></i>
-            </a>
-            <a id="sharing-phone" href="" style={horzPadding} onClick={this.showSendToPhone}>
-              <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
-            </a>
-          </div>
-          {exportButton}
+
           {sendToPhone}
         </div>
       </div>

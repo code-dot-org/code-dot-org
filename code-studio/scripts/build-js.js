@@ -39,6 +39,10 @@ Promise.all([
       'levels/contract_match.jsx',
       'levels/widget.js',
       'levels/external.js',
+      'levels/multi.js',
+      'levels/textMatch.js',
+      'levels/levelGroup.js',
+      'levels/dialogHelper.js',
       'initApp/initApp.js'
     ],
     commonFile: 'code-studio-common',
@@ -70,8 +74,8 @@ Promise.all([
   // Have a bundle for plc stuff - no sense in expanding this to everything yet
   build_commands.bundle(_.extend({}, defaultOptions, {
     filenames: [
-      'plc/perform_evaluation.js',
       'plc/evaluation_creation.js',
+      'plc/perform_evaluation.js',
       'plc/task_creation.js'
     ],
     commonFile: 'plc'

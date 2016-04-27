@@ -1,7 +1,8 @@
+/* global dashboard */
+
 var msg = require('./locale');
 var api = require('./apiJavascript.js');
 var consoleApi = require('../consoleApi');
-var showAssetManager = require('../assetManagement/show');
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
 
 var COLOR_LIGHT_GREEN = '#D3E965';
@@ -24,14 +25,16 @@ var groupBlockPrefix = 'group.';
 var animBlockPrefix = 'anim.';
 
 var gameLab;
+var getAnimationDropdown;
 
 exports.injectGameLab = function (gamelab) {
   gameLab = gamelab;
+  getAnimationDropdown = gameLab.getAnimationDropdown.bind(gameLab);
 };
 
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
-  showAssetManager(callback, typeFilter);
+  dashboard.assets.showAssetManager(callback, typeFilter);
 }
 
 module.exports.blocks = [
@@ -104,7 +107,8 @@ module.exports.blocks = [
   {func: 'collide', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['target'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.collide', type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-collide" },
   {func: 'displace', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['target'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.displace', type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-displace" },
   {func: 'overlap', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['target'], params: ["group"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.overlap', type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-overlap" },
-  {func: 'changeAnimation', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label'], params: ['"anim1"'], tipPrefix: spriteMethodPrefix, modeOptionName: '*.changeAnimation', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-changeAnimation" },
+  {func: 'changeAnimation', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label'], params: ['"anim1"'], tipPrefix: spriteMethodPrefix, modeOptionName: '*.changeAnimation', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-changeAnimation" },
+  {func: 'setAnimation', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label'], params: ['"anim1"'], dropdown: { 0: function () { return getAnimationDropdown(); } }, tipPrefix: spriteMethodPrefix, modeOptionName: '*.setAnimation'},
   {func: 'changeImage', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['label'], params: ['"img1"'], tipPrefix: spriteMethodPrefix, modeOptionName: '*.changeImage', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-changeImage" },
   {func: 'frameDidChange', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.frameDidChange', type: 'value' },
   {func: 'attractionPoint', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['speed','x','y'], params: ["1", "200", "200"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.attractionPoint', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-attractionPoint" },
