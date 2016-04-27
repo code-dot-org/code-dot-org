@@ -22,4 +22,10 @@ class Plc::LearningModule < ActiveRecord::Base
 
   validates_presence_of :plc_course_unit_id
   attr_readonly :plc_course_unit_id
+
+  scope :required, -> { where(required: true)}
+
+  def name_with_required_tag
+    "#{name}#{' - Required' if required}"
+  end
 end

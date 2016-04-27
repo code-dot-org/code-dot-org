@@ -24,6 +24,8 @@ var OPTIONAL = true;
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 
+var ICON_PREFIX_REGEX = require('./constants').ICON_PREFIX_REGEX;
+
 var applabCommands = module.exports;
 
 /**
@@ -258,7 +260,12 @@ applabCommands.image = function (opts) {
   apiValidateType(opts, 'image', 'url', opts.src, 'string');
 
   var newImage = document.createElement("img");
-  newImage.src = assetPrefix.fixPath(opts.src);
+  if (ICON_PREFIX_REGEX.test(opts.src)) {
+    newImage.src = assetPrefix.renderIconToString(opts.src, newImage);
+    newImage.width = newImage.height = 200;
+  } else {
+    newImage.src = assetPrefix.fixPath(opts.src);
+  }
   newImage.setAttribute('data-canonical-image-url', opts.src);
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
