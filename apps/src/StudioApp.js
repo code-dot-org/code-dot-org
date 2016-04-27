@@ -28,6 +28,7 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var assetListStore = require('./assetManagement/assetListStore');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
+var redux = require('./redux');
 var isRunning = require('./redux/isRunning');
 var copyrightStrings;
 
@@ -198,13 +199,7 @@ var StudioApp = function () {
    * Redux store that might be provided by the app. Initially give it an empty
    * interface so that we can assume existence.
    */
-  this.reduxStore_ = {
-    getState: function () {
-      return {};
-    },
-    dispatch: function () {
-    }
-  };
+  this.reduxStore_ = null;
 
   this.onAttempt = undefined;
   this.onContinue = undefined;
@@ -274,7 +269,7 @@ StudioApp.prototype.init = function (config) {
     config = {};
   }
 
-  this.reduxStore_ = config.reduxStore || this.reduxStore_;
+  this.reduxStore_ = config.reduxStore || redux.createFakeStore();
 
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
