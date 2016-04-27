@@ -9,12 +9,14 @@ class AddLevelsToScriptLevel < ActiveRecord::Migration
       belongs_to :old_level, class_name: "Level", foreign_key: "level_id"
     end
 
-    ScriptLevel.all.each do |scriptlevel|
-      unless scriptlevel.old_level.nil?
-        scriptlevel.levels << scriptlevel.old_level
-        scriptlevel.save
+    ScriptLevel.all.each do |script_level|
+      if script_level.old_level
+        script_level.levels << script_level.old_level
+        script_level.save!
       end
     end
+
+    change_column_null :script_levels, :level_id, true
   end
 
   def down
@@ -22,12 +24,15 @@ class AddLevelsToScriptLevel < ActiveRecord::Migration
       belongs_to :new_level, class_name: "Level", foreign_key: "level_id"
     end
 
-    ScriptLevel.all.each do |scriptlevel|
-      unless scriptlevel.levels.empty?
-        scriptlevel.new_level = scriptlevel.levels.first
-        scriptlevel.save
+    ScriptLevel.all.each do |script_level|
+      unless script_level.levels.empty?
+        script_level.new_level = script_level.levels.first
+        script_level.save!
       end
     end
+
+    change_column_null :script_levels, :level_id, false
+
     drop_table :levels_script_levels
   end
 end

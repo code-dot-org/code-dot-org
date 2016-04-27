@@ -3,7 +3,6 @@
 # Table name: script_levels
 #
 #  id         :integer          not null, primary key
-#  level_id   :integer          not null
 #  script_id  :integer          not null
 #  chapter    :integer
 #  created_at :datetime
@@ -11,6 +10,7 @@
 #  stage_id   :integer
 #  position   :integer
 #  assessment :boolean
+#  level_id   :integer
 #
 # Indexes
 #
