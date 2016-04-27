@@ -1,3 +1,8 @@
+/**
+ * A React component for our JavaScript debugger UI. Returns a connected component
+ * so this can only be used in cases where we have a redux store.
+ */
+
 var connect = require('react-redux').connect;
 
 var i18n = require('../locale');
@@ -10,6 +15,9 @@ var styles = {
   }
 };
 
+/**
+ * The console for our debugger UI
+ */
 var DebugConsole = function (props) {
   var classes = 'debug-console';
   if (!props.debugButtons) {
@@ -30,6 +38,9 @@ var DebugConsole = function (props) {
   );
 };
 
+/**
+ * Buttons for stepping through code.
+ */
 var DebugButtons = function () {
   return (
     <div id="debug-commands" className="debug-commands">
@@ -64,6 +75,9 @@ var DebugButtons = function () {
   );
 };
 
+/**
+ * A watch window for our debugger.
+ */
 var DebugWatch = function (props) {
   var classes = 'debug-watch';
   if (!props.debugButtons) {
@@ -74,6 +88,9 @@ var DebugWatch = function (props) {
   );
 };
 
+/**
+ * The parent JsDebugger component.
+ */
 var JsDebugger = function (props) {
   var sliderStyle = {
     marginLeft: props.debugButtons ? 0 : 40
