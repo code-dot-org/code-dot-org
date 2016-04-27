@@ -28,7 +28,7 @@ var dom = require('../dom');
 var experiments = require('../experiments');
 
 var actions = require('./actions');
-var createStore = require('../redux');
+var createStore = require('../redux').createStore;
 var gamelabReducer = require('./reducers').gamelabReducer;
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
