@@ -12,4 +12,8 @@
 
 class Plc::WrittenAssignmentTask < Plc::Task
   serialized_attrs %w(level_id)
+
+  def level
+    Level.find(level_id) if level_id
+  end
 end
