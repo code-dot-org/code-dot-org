@@ -27,9 +27,11 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "maze_data": null
   },
   "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 1
@@ -71,15 +73,12 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
       </xml>
-    </required_blocks>
-    <recommended_blocks>
-      <xml/>
     </recommended_blocks>
     <solution_blocks>
       <xml>
