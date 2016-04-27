@@ -1,13 +1,11 @@
 - app = 'level_group'
 - data = @level.properties
 
-:javascript
-  #{render template: 'levels/multi.js', formats: [:js]}
-  #{render template: 'levels/textMatch.js', formats: [:js]}
-  #{render template: 'levels/levelGroup.js', formats: [:js]}
+- content_for(:head) do
+  =javascript_include_tag 'js/levels/levelGroup'
 
+:javascript
   window.levelData = #{data.to_json};
-  window.levelGroup = {levels: {}};
 
 = render partial: 'levels/common_audio'
 
@@ -36,37 +34,17 @@
         -# For students (or teachers doing PD), mark all answers incorrect, so we don't give anything away.
         - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
           - level.properties['answers'].each { |answer| answer['correct'] = false }
-        = render partial: 'levels/single_multi', locals: {index: index, standalone: false, level: level, last_attempt: last_attempt, tight_layout: true }
+        = render partial: 'levels/single_multi', locals: {standalone: false, level: level, last_attempt: last_attempt, tight_layout: true}
       - elsif level_class == "text_match"
         -# For students (or teachers doing PD), clear out all answers.
         - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
           - level.properties['answers'] = nil
-        = render partial: 'levels/single_text_match', locals: {index: index, standalone: false, level: level, last_attempt: last_attempt }
+        = render partial: 'levels/single_text_match', locals: {standalone: false, level: level, last_attempt: last_attempt }
       - elsif level_class == "free_response"
-        = render partial: 'levels/free_response', locals: {index: index, level: level, last_attempt: last_attempt}
+        = render partial: 'levels/free_response', locals: {in_level_group: true, level: level, last_attempt: last_attempt}
 
   - unless @script_level.nil?
-    - if page.page_number > 1
-      %a.btn.btn-large.btn-primary.previousPageButton
-        =t('previous_page')
-      &nbsp;
-      &nbsp;
-    - if page.page_number < @total_page_count
-      %a.btn.btn-large.btn-primary.nextPageButton
-        =t('next_page')
-    - else
-      = render partial: 'levels/dialog', locals: {app: app, data: data}
-      .level_group_buttons
-        %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
-          =t('unsubmit')
-
-.dialog-contents{style: "display: none"}
-  #unsubmit-dialogcontent{style: "overflow:hidden"}
-    .modal-content.no-modal-icon
-      %p.dialog-title= t('level_group-submittable.unsubmit-title')
-      %p.dialog-body=  t('level_group-submittable.unsubmit-body')
-      %button#cancel-button.secondary{style: "float: left"}= t('cancel')
-      %button#ok-button{style: "float: right"}= t('okay')
+    = render partial: 'levels/dialog', locals: {app: app, data: data, previous_button: page.page_number > 1, next_button: page.page_number < @total_page_count}
 
 - unless @script_level.nil?
   :javascript

@@ -1,0 +1,16 @@
+name 'ECSPD1 pre survey' 
+css 'unplugged' 
+
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+## Program Pre-Survey
+
+Welcome to the Code.org Online Introduction to Exploring Computer Science! Before we get started, please take a couple of minutes and complete this pre-survey, which will help us improve our program to meet the needs of the teachers like you.
+
+<h1><a href="https://docs.google.com/forms/d/1_uixBiV6uZeeX7lrjVK02oDZoAqAjG8I-gWaxA23nHY/viewform" target="_blank">Click here to access the pre-survey.</a></h1> 
+<br>
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

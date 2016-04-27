@@ -49,6 +49,11 @@ module.exports = {
     }
 
     for (var prop in value) {
+      // New relic doesnt handle booleans. Make them strings.
+      if (typeof value[prop] === 'boolean') {
+        value[prop] = value[prop].toString();
+      }
+
       if (typeof value[prop] === 'string') {
         value[prop] = value[prop].substring(0, MAX_FIELD_LENGTH);
       }

@@ -934,6 +934,7 @@ en:
           Star wars: Star wars
           Minecraft: Minecraft
           Rich long assessment: Rich long assessment
+          Free Response: Free Response
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1784,6 +1785,7 @@ en:
           Draw Loop and Random: Draw Loop and Random
           Variables: Variables
           " Sprite Properties and Mod": " Sprite Properties and Mod"
+          Expressions and Reassignment: Expressions and Reassignment
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -1805,3 +1807,23 @@ en:
           description_short: Programming
           description: ''
           Drawing in Game Lab: Drawing in Game Lab
+        CSF_Secret_Sample:
+          title: Secret Sample
+          description_short: This is a secret...shhhhh
+          description: Test of new educational philosophy
+          description_audience: Ages 8-18
+          Computational Thinking: Computational Thinking
+        ECSPD1:
+          title: 'ECS: Phase 1 PD'
+          description_short: Introduction to the Code.org ECS Version 5 Program
+          description: Two hour introduction to your Professional Learning Program for the ECS Version 5 curriculum
+          Getting Started: Getting Started
+        algebraFacilitator:
+          title: Computer Science in Algebra Facilitator Pre Work
+          description_short: Teach Algebra through Functional Programming
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Introduction to PD
+          Course Overview: Course Overview
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Evaluation Blocks: Evaluation Blocks
+          Teacher Dashboard: Teacher Dashboard

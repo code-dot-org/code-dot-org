@@ -1,7 +1,13 @@
 var AssetManager = require('./AssetManager');
-var color = require('../color');
-var IconLibrary = window.dashboard && window.dashboard.IconLibrary;
-var ICON_PREFIX = require('../applab/constants').ICON_PREFIX;
+var color = require('@cdo/apps/color');
+var IconLibrary = require('./IconLibrary');
+var ICON_PREFIX = require('@cdo/apps/applab/constants').ICON_PREFIX;
+
+var extensionFilter = {
+  image: '.jpg, .jpeg, .gif, .png',
+  audio: '.mp3',
+  document: '.jpg, .jpeg, .gif, .png, .pdf'
+};
 
 /**
  * A component for managing hosted assets.
@@ -34,7 +40,7 @@ var ImagePicker = React.createClass({
     var isFileMode = this.state.mode === 'files';
     var styles = {
       root: {
-        margin: "0 0 0 -10px"
+        margin: "0 0 0 5px"
       },
       fileModeToggle: {
         float: 'left',
@@ -61,7 +67,8 @@ var ImagePicker = React.createClass({
       <p className="dialog-title">Choose Assets</p> :
       <p className="dialog-title">Manage Assets</p>;
 
-    if (this.props.assetChosen) {
+    var imageTypeFilter = !this.props.typeFilter || this.props.typeFilter === 'image';
+    if (this.props.assetChosen && imageTypeFilter) {
       modeSwitch = <div>
         <p onClick={this.setFileMode} style={styles.fileModeToggle}>My Files</p>
         <p onClick={this.setIconMode} style={styles.iconModeToggle}>Icons</p>
@@ -72,7 +79,7 @@ var ImagePicker = React.createClass({
     var body = !this.props.assetChosen || this.state.mode === 'files' ?
       <AssetManager
         assetChosen={this.props.assetChosen}
-        typeFilter={this.props.typeFilter}
+        allowedExtensions={extensionFilter[this.props.typeFilter]}
         channelId={this.props.channelId}
         uploadsEnabled={this.props.uploadsEnabled}/> :
       <IconLibrary assetChosen={this.getAssetNameWithPrefix}/>;

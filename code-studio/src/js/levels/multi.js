@@ -1,10 +1,10 @@
 /* global $, Dialog, appOptions, CDOSounds */
 
-var Multi = function (id, levelId, standalone, numAnswers, answers, lastAttemptString) {
+window.levelGroup = window.levelGroup || {levels: {}};
+
+var Multi = window.Multi = function (id, standalone, numAnswers, answers, lastAttemptString) {
 
   this.id = id;
-
-  this.levelId = levelId;
 
   // Whether this multi is the only puzzle on a page, or part of a group of them.
   this.standalone = standalone;
@@ -175,10 +175,6 @@ Multi.prototype.getCurrentAnswer = function () {
   }
 
   return { response: answer, valid: answer !== -1 };
-};
-
-Multi.prototype.getLevelId = function () {
-  return this.levelId;
 };
 
 // called by external result-posting code
