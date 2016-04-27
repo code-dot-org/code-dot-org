@@ -3,6 +3,8 @@
 - use_tight_layout = data['layout'] == "tight" || tight_layout
 - force_wrap_layout = data['layout'] == "wrap"
 
+- multi_answer_characters = ("A".."Z").to_a
+
 - layout_class = use_tight_layout ? "tight" : "default"
 
 .multi{id: "level_#{level.id}", class: layout_class}
@@ -67,7 +69,12 @@
             .item-mark{id: "cross_#{i}", style: 'display: none;'}
               .fa{class: cross_class}
             .item-label
-              %label{style: "height: #{height}"}!= multi_t(level, answer['text'])
+              %label{style: "height: #{height}"}
+                - unless standalone
+                  %span.item-answer-letter
+                    ="#{multi_answer_characters[i]}. "
+                    &nbsp;
+                %span!= multi_t(level, answer['text'])
           - if use_tight_layout && !force_wrap_layout
             %br/
 
