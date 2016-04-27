@@ -1093,14 +1093,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 }
 
 #headers, .purple-header {
-  height: $workspace-headers-height;
-  background-color: $purple;
-  overflow-y: hidden;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
   #show-toolbox-icon, #hide-toolbox-icon {
     position: absolute;
     top: 0;
