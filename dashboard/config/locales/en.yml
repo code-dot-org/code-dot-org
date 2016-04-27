@@ -299,6 +299,8 @@ en:
       example_with_number: 'Example Solution %{solution_number}'
       submitted_on: 'Submitted on:'
       unsubmit: 'Unsubmit'
+      driver: 'Driver'
+      navigator: 'Navigator'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
