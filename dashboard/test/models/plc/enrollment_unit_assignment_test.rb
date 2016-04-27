@@ -30,7 +30,5 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     assert_equal @learning_module2, module_assignments.second.plc_learning_module
     assert_equal @task2, task_assignments.second.plc_task
     assert_equal @required_learning_module, module_assignments.third.plc_learning_module
-
-    assert_equal Plc::WrittenEnrollmentTaskAssignment, task_assignments.second.class
   end
 end
