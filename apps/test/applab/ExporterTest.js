@@ -1,7 +1,9 @@
-/* global Promise */
+/* global Promise dashboard */
 var sinon = require('sinon');
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
+var assetPrefix = require('@cdo/apps/assetManagement/assetPrefix');
+
 testUtils.setupLocales('applab');
 testUtils.setExternalGlobals();
 
@@ -16,10 +18,20 @@ describe('The Exporter,', function () {
     server.respondWith('/assets/js/en_us/applab_locale.js', 'applab_locale.js content');
     server.respondWith('/assets/js/applab-api.js', 'applab-api.js content');
     server.respondWith('/assets/css/applab.css', 'applab.css content');
+
+    assetPrefix.init({channel: 'some-channel-id'});
+
+    sinon.stub(dashboard.assets.listStore, 'list').returns([
+      {filename: 'foo.png'},
+      {filename: 'bar.png'},
+    ]);
+    server.respondWith('/v3/assets/some-channel-id/foo.png', 'foo.png content');
+    server.respondWith('/v3/assets/some-channel-id/bar.png', 'bar.png content');
   });
 
   afterEach(function () {
     server.restore();
+    dashboard.assets.listStore.list.restore();
   });
 
   describe("when assets can't be fetched,", function () {
@@ -58,6 +70,7 @@ describe('The Exporter,', function () {
         `<div>
           <div class="screen" tabindex="1" id="screen1">
             <input type="text" id="nameInput"/>
+            <img src="/v3/assets/some-channel-id/foo.png"/>
             <button id="clickMeButton" style="background-color: red;">Click Me!</button>
           </div>
         </div>`
@@ -132,6 +145,17 @@ describe('The Exporter,', function () {
 
       it("should contain a README.md file", function () {
         assert.property(zipFiles, 'my-app/README.md');
+      });
+
+      it("should contain the assets files used by the project", function () {
+        assert.property(zipFiles, 'my-app/assets/foo.png');
+        assert.property(zipFiles, 'my-app/assets/bar.png');
+      });
+
+      it("should rewrite urls in html to point to the correct asset files", function () {
+        var el = document.createElement('html');
+        el.innerHTML = zipFiles['my-app/index.html'];
+        assert.equal(el.querySelector("img").getAttribute('src'), 'assets/foo.png');
       });
     });
 
