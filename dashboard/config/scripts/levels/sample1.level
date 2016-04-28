@@ -28,8 +28,7 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "step_speed": "1",
-    "markdown_instructions": "Our adventurer wants to collect gems.  But she can only use 3 blocks to get them.  \r\n\r\nCan you help her grab as many as she can using just 3 blocks?",
-    "maze_data": null
+    "markdown_instructions": "Our adventurer wants to collect gems.  But she can only use 3 blocks to get them.  \r\n\r\nCan you help her grab as many as she can using just 3 blocks?"
   },
   "published": true,
   "notes": "This is a sample of the first introduction to new blocks...exploration style!\r\n\r\nTo be successful, this needs:\r\n- Try vs Finish buttons\r\n- Ability to deny submission when block count is over\r\n- Assign better hover text",
