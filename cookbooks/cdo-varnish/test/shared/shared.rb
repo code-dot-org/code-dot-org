@@ -414,6 +414,34 @@ module HttpCacheTest
         refute_nil get_header(response, 'Set-Cookie')
       end
 
+      it 'Does not strip cookies from assets in v3/assets path' do
+        url = build_url 'v3/assets', 'image.png'
+        cookie = 'hour_of_code' # whitelisted for this path
+        text = 'Hello World!'
+        text_cookie = 'Hello Cookie!'
+        mock_response url, text, {}, {'Set-Cookie' => "#{cookie}=cookie_value; path=/"}
+        mock_response url, text_cookie, {'Cookie' => "#{cookie}=cookie_value;"}, {'Set-Cookie' => "#{cookie}=cookie_value2; path=/"}
+
+        # Does not strip request cookie or response cookie
+        response = proxy_request url, {}, {"#{cookie}" => 'cookie_value'}
+        assert_equal text_cookie, last_line(response)
+        refute_nil get_header(response, 'Set-Cookie')
+      end
+
+      it 'Does not strip cookies from assets in v3/animations path' do
+        url = build_url 'v3/animations', 'image.png'
+        cookie = 'hour_of_code' # whitelisted for this path
+        text = 'Hello World!'
+        text_cookie = 'Hello Cookie!'
+        mock_response url, text, {}, {'Set-Cookie' => "#{cookie}=cookie_value; path=/"}
+        mock_response url, text_cookie, {'Cookie' => "#{cookie}=cookie_value;"}, {'Set-Cookie' => "#{cookie}=cookie_value2; path=/"}
+
+        # Does not strip request cookie or response cookie
+        response = proxy_request url, {}, {"#{cookie}" => 'cookie_value'}
+        assert_equal text_cookie, last_line(response)
+        refute_nil get_header(response, 'Set-Cookie')
+      end
+
       it 'caches individually on whitelisted cookie values' do
         url = build_url 10
         cookie = 'hour_of_code' # whitelisted for this path
