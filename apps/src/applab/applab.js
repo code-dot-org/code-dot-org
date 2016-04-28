@@ -803,6 +803,7 @@ Applab.init = function (config) {
 
   Applab.reactInitialProps_ = {
     codeWorkspace: codeWorkspace,
+    hideSource: !!config.hideSource,
     onMount: onMount
   };
 
