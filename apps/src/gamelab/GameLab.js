@@ -179,11 +179,8 @@ GameLab.prototype.init = function (config) {
 
   config.reduxStore = this.reduxStore_;
 
-<<<<<<< HEAD
   var breakpointsEnabled = !config.level.debuggerDisabled;
 
-=======
->>>>>>> run mode indicators for gamelab
   var onMount = function () {
     config.loadAudio = this.loadAudio_.bind(this);
     config.afterInject = this.afterInject_.bind(this, config);
