@@ -1,16 +1,24 @@
+- level ||= @level
+- last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
+- in_level_group ||= false
+
 %link{rel: 'stylesheet', href: asset_path('blockly/css/common.css')}
 %script{src: asset_path('js/levels/external.js')}
 :javascript
-  var options = #{@level.properties['options'].to_json}
-  function getResult() {
-    return {
-      response: 'ok',
-      result: true
-    };
-  }
-= render partial: 'levels/content', locals: {app: 'external', data: @level.properties, content_class: @level.properties['options'].try(:[], 'css')}
+  var options = #{level.properties['options'].to_json}
+
+- unless in_level_group
+  :javascript
+    function getResult() {
+      return {
+        response: 'ok',
+        result: true
+      };
+    }
+
+= render partial: 'levels/content', locals: {app: 'external', data: level.properties, content_class: level.properties['options'].try(:[], 'css')}
 
 .external
-  = render partial: 'levels/teacher_markdown', locals: {data: @level.properties}
+  = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
 
-= render partial: 'levels/dialog', locals: {app: 'external', data: @level.properties}
+= render partial: 'levels/dialog', locals: {app: 'external', data: level.properties}
