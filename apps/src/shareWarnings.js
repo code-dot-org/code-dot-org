@@ -69,6 +69,8 @@ exports.checkSharedAppWarnings = function (options) {
   var is13Plus = options.isSignedIn || localStorage.getItem('is13Plus') === "true";
   var showStoreDataAlert = (options.hasDataAPIs && options.hasDataAPIs()) &&
       !hasSeenDataAlert(options.channelId);
+  // Ensure the property is true or false and not undefined.
+  showStoreDataAlert = !!showStoreDataAlert;
 
   var modal = document.createElement('div');
   document.body.appendChild(modal);

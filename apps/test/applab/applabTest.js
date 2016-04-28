@@ -8,6 +8,7 @@ var RecordListener = require('@cdo/apps/applab/RecordListener');
 var designMode = require('@cdo/apps/applab/designMode');
 var applabCommands = require('@cdo/apps/applab/commands');
 var constants = require('@cdo/apps/applab/constants');
+var shareWarnings = require('@cdo/apps/shareWarnings');
 
 function setupVizDom() {
   // Create a sample DOM to test against
@@ -340,40 +341,59 @@ describe('startSharedAppAfterWarnings', function () {
 
   describe('is13plus', function () {
     it('is true if user is signed in', function () {
-      Applab.user = { isSignedIn: true };
-      var component = Applab.startSharedAppAfterWarnings();
+      var component = shareWarnings.checkSharedAppWarnings({
+        channelId: 'current_channel',
+        isSignedIn: true
+      });
       assert.equal(component.props.is13Plus, true);
     });
 
     it('is true if user is not signed in but has local storage set', function () {
-      Applab.user = { isSignedIn: false };
       localStorage.setItem('is13Plus', 'true');
-      var component = Applab.startSharedAppAfterWarnings();
+      var component = shareWarnings.checkSharedAppWarnings({
+        channelId: 'current_channel'
+      });
       assert.equal(component.props.is13Plus, true);
     });
 
     it('is false if user is not signed in and has no local storage set', function () {
-      Applab.user = { isSignedIn: false };
-      var component = Applab.startSharedAppAfterWarnings();
+      var component = shareWarnings.checkSharedAppWarnings({
+        channelId: 'current_channel'
+      });
       assert.equal(component.props.is13Plus, false);
     });
   });
 
   describe('showStoreDataAlert', function () {
     it('is true if user has viewed no channels', function () {
-      var component = Applab.startSharedAppAfterWarnings();
+      var component = shareWarnings.checkSharedAppWarnings({
+        channelId: 'current_channel',
+        hasDataAPIs: function () {
+          return Applab.hasDataStoreAPIs(Applab.getCode());
+        }
+      });
       assert.equal(component.props.showStoreDataAlert, true);
     });
 
     it('is true if user has viewed only other channels', function () {
       localStorage.setItem('dataAlerts', JSON.stringify(['other_channel']));
-      var component = Applab.startSharedAppAfterWarnings();
+      var component = shareWarnings.checkSharedAppWarnings({
+        channelId: 'current_channel',
+        hasDataAPIs: function () {
+          return Applab.hasDataStoreAPIs(Applab.getCode());
+        }
+      });
       assert.equal(component.props.showStoreDataAlert, true);
     });
 
     it('is false if user has viewed this channel', function () {
       localStorage.setItem('dataAlerts', JSON.stringify(['other_channel', 'current_channel']));
-      var component = Applab.startSharedAppAfterWarnings();
+      var component = shareWarnings.checkSharedAppWarnings({
+        channelId: 'current_channel',
+        hasDataAPIs: function () {
+          return Applab.hasDataStoreAPIs(Applab.getCode());
+        }
+      });
       assert.equal(component.props.showStoreDataAlert, false);
     });
 
@@ -381,26 +401,40 @@ describe('startSharedAppAfterWarnings', function () {
       Applab.getCode = function () {
         return 'asdf';
       };
-      var component = Applab.startSharedAppAfterWarnings();
+      var component = shareWarnings.checkSharedAppWarnings({
+        channelId: 'current_channel',
+        hasDataAPIs: function () {
+          return Applab.hasDataStoreAPIs(Applab.getCode());
+        }
+      });
       assert.equal(component.props.showStoreDataAlert, false);
     });
   });
 
   it('sets is13Plus to true on close', function () {
-    var component = Applab.startSharedAppAfterWarnings();
+    var component = shareWarnings.checkSharedAppWarnings({
+      channelId: 'current_channel'
+    });
     component.props.handleClose();
     assert.strictEqual(localStorage.getItem('is13Plus'), 'true');
   });
 
   it('sets is13Plus to false on too young', function () {
-    var component = Applab.startSharedAppAfterWarnings();
+    var component = shareWarnings.checkSharedAppWarnings({
+      channelId: 'current_channel'
+    });
     component.props.handleTooYoung();
     assert.strictEqual(localStorage.getItem('is13Plus'), 'false');
   });
 
   it('adds our channelId on close', function () {
     localStorage.setItem('dataAlerts', JSON.stringify(['other_channel']));
-    var component = Applab.startSharedAppAfterWarnings();
+    var component = shareWarnings.checkSharedAppWarnings({
+      channelId: 'current_channel',
+      hasDataAPIs: function () {
+        return Applab.hasDataStoreAPIs(Applab.getCode());
+      }
+    });
     component.props.handleClose();
     assert.strictEqual(localStorage.getItem('dataAlerts'),
       JSON.stringify(['other_channel', 'current_channel']));
