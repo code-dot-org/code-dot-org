@@ -69,97 +69,120 @@ var styles = {
   }
 };
 
-var CodeWorkspace = function (props) {
-  var runModeIndicators = experiments.isEnabled('runModeIndicators');
+var CodeWorkspace = React.createClass({
+  propTypes: {
+    localeDirection: React.PropTypes.oneOf(['rtl', 'ltr']).isRequired,
+    editCode: React.PropTypes.bool.isRequired,
+    readonlyWorkspace: React.PropTypes.bool.isRequired,
+    showDebugger: React.PropTypes.bool,
+    isRunning: React.PropTypes.bool
+  },
 
-  var chevronStyle = [
-    commonStyles.hidden,
-    styles.chevron,
-    runModeIndicators && props.isRunning && styles.runningChevron
-  ];
+  shouldComponentUpdate: function (nextProps) {
+    // This component is current semi-protected. We don't want to completely
+    // disallow rerendering, since that would prevent us from being able to
+    // update styles. However, we do want to prevent property changes that would
+    // change the DOM structure.
+    Object.keys(nextProps).forEach(function (key) {
+      // isRunning only affects style, and can be updated
+      if (key === 'isRunning') {
+        return;
+      }
 
-  var headerButtonStyle = [
-    styles.workspaceHeaderButton,
-    runModeIndicators && props.isRunning && styles.workspaceHeaderButtonRunning
-  ];
+      if (nextProps[key] !== this.props[key]) {
+        throw new Error('Attempting to change key ' + key + ' in CodeWorkspace');
+      }
+    }.bind(this));
 
-  // TODO - are there places that should have ProtectedStatefulDiv
+    // Should be no need to update unless we have runModeIndicators enabled
+    return experiments.isEnabled('runModeIndicators');
+  },
 
-  return (
-    <span id="codeWorkspaceWrapper">
-      <div
-          id="headers"
-          dir={props.localeDirection}
-          style={[
-            commonStyles.purpleHeader,
-            props.readonlyWorkspace && commonStyles.purpleHeaderReadOnly,
-            runModeIndicators && props.isRunning && commonStyles.purpleHeaderRunning
-          ]}
-      >
-        <div id="codeModeHeaders">
-          <div id="toolbox-header" style={styles.workspaceHeader}>
-            <i id="hide-toolbox-icon" style={chevronStyle} className="fa fa-chevron-circle-right"/>
-            <span>{props.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}</span>
-          </div>
-          <div id="show-toolbox-header" style={[styles.workspaceHeader, commonStyles.hidden]}>
-            <i id="show-toolbox-icon" styles={styles.headerIcon} className="fa fa-chevron-circle-right"/>
-            <span>{msg.showToolbox()}</span>
-          </div>
-          <div
-              id="show-code-header"
-              key="show-code-header"
-              style={[styles.workspaceHeader, headerButtonStyle]}>
-            <span style={styles.headerButtonSpan}>
-              <img src="/blockly/media/applab/blocks_glyph.gif" style={styles.blocksGlyph} />
-              <i className="fa fa-code" style={[styles.bold, styles.headerButtonIcon]}/>
-              <span style={styles.noPadding}>{msg.showCodeHeader()}</span>
-            </span>
-          </div>
-          {!props.readonlyWorkspace &&
-          <div
-              id="clear-puzzle-header"
-              key="clear-puzzle-header"
-              style={[styles.workspaceHeader, headerButtonStyle]}>
-            <span style={styles.headerButtonSpan}>
-              <i className="fa fa-undo" style={styles.headerButtonIcon}/>
-              <span style={styles.noPadding}>{msg.clearPuzzle()}</span>
-            </span>
-          </div>
-          }
-          <div
-              id="versions-header"
-              key="versions-header"
-              style={[styles.workspaceHeader, headerButtonStyle]}>
-            <span style={styles.headerButtonSpan}>
-              <i className="fa fa-clock-o" style={styles.headerButtonIcon}/>
-              <span style={styles.noPadding}>{msg.showVersionsHeader()}</span>
-            </span>
-          </div>
-          <div id="workspace-header" style={styles.workspaceHeader}>
-            <span id="workspace-header-span">
-              {props.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort()}
-            </span>
-            <div id="blockCounter">
-              <div id="blockUsed" className='block-counter-default'>
+  render: function () {
+    var props = this.props;
+
+    var runModeIndicators = experiments.isEnabled('runModeIndicators');
+
+    var chevronStyle = [
+      commonStyles.hidden,
+      styles.chevron,
+      runModeIndicators && props.isRunning && styles.runningChevron
+    ];
+
+    var headerButtonStyle = [
+      styles.workspaceHeaderButton,
+      runModeIndicators && props.isRunning && styles.workspaceHeaderButtonRunning
+    ];
+
+    return (
+      <span id="codeWorkspaceWrapper">
+        <div
+            id="headers"
+            dir={props.localeDirection}
+            style={[
+              commonStyles.purpleHeader,
+              props.readonlyWorkspace && commonStyles.purpleHeaderReadOnly,
+              runModeIndicators && props.isRunning && commonStyles.purpleHeaderRunning
+            ]}
+        >
+          <div id="codeModeHeaders">
+            <div id="toolbox-header" style={styles.workspaceHeader}>
+              <i id="hide-toolbox-icon" style={chevronStyle} className="fa fa-chevron-circle-right"/>
+              <span>{props.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}</span>
+            </div>
+            <div id="show-toolbox-header" style={[styles.workspaceHeader, commonStyles.hidden]}>
+              <i id="show-toolbox-icon" styles={styles.headerIcon} className="fa fa-chevron-circle-right"/>
+              <span>{msg.showToolbox()}</span>
+            </div>
+            <div
+                id="show-code-header"
+                key="show-code-header"
+                style={[styles.workspaceHeader, headerButtonStyle]}>
+              <span style={styles.headerButtonSpan}>
+                <img src="/blockly/media/applab/blocks_glyph.gif" style={styles.blocksGlyph} />
+                <i className="fa fa-code" style={[styles.bold, styles.headerButtonIcon]}/>
+                <span style={styles.noPadding}>{msg.showCodeHeader()}</span>
+              </span>
+            </div>
+            {!props.readonlyWorkspace &&
+            <div
+                id="clear-puzzle-header"
+                key="clear-puzzle-header"
+                style={[styles.workspaceHeader, headerButtonStyle]}>
+              <span style={styles.headerButtonSpan}>
+                <i className="fa fa-undo" style={styles.headerButtonIcon}/>
+                <span style={styles.noPadding}>{msg.clearPuzzle()}</span>
+              </span>
+            </div>
+            }
+            <div
+                id="versions-header"
+                key="versions-header"
+                style={[styles.workspaceHeader, headerButtonStyle]}>
+              <span style={styles.headerButtonSpan}>
+                <i className="fa fa-clock-o" style={styles.headerButtonIcon}/>
+                <span style={styles.noPadding}>{msg.showVersionsHeader()}</span>
+              </span>
+            </div>
+            <div id="workspace-header" style={styles.workspaceHeader}>
+              <span id="workspace-header-span">
+                {props.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort()}
+              </span>
+              <div id="blockCounter">
+                <div id="blockUsed" className='block-counter-default'>
+                </div>
+                <span> / </span>
+                <span id="idealBlockNumber"></span>
+                <span>{" " + msg.blocks()}</span>
               </div>
-              <span> / </span>
-              <span id="idealBlockNumber"></span>
-              <span>{" " + msg.blocks()}</span>
             </div>
           </div>
         </div>
-      </div>
-      {props.editCode && <ProtectedStatefulDiv id="codeTextbox"/>}
-      {props.showDebugger && <JsDebugger/>}
-    </span>
-  );
-};
-
-CodeWorkspace.propTypes = {
-  localeDirection: React.PropTypes.oneOf(['rtl', 'ltr']).isRequired,
-  editCode: React.PropTypes.bool.isRequired,
-  readonlyWorkspace: React.PropTypes.bool.isRequired,
-  showDebugger: React.PropTypes.bool
-};
+        {props.editCode && <ProtectedStatefulDiv id="codeTextbox"/>}
+        {props.showDebugger && <JsDebugger/>}
+      </span>
+    );
+  }
+});
 
 module.exports = Radium(CodeWorkspace);
