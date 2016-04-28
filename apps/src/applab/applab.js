@@ -50,9 +50,9 @@ var createStore = require('../redux').createStore;
 var Provider = require('react-redux').Provider;
 var rootReducer = require('./reducers').rootReducer;
 var actions = require('./actions');
-var setInitialLevelProps = actions.setInitialLevelProps;
 var changeInterfaceMode = actions.changeInterfaceMode;
 var setInstructionsInTopPane = actions.setInstructionsInTopPane;
+var setInitialLevelProps = require('../redux/levelProperties').setInitialLevelProps;
 
 var applabConstants = require('./constants');
 var consoleApi = require('../consoleApi');
