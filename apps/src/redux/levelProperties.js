@@ -1,4 +1,4 @@
-var _ = require('lodash');
+var _ = require('../lodash');
 var utils = require('../utils');
 
 var SET_INITIAL_LEVEL_PROPS = 'levelProperties/SET_INITIAL_LEVEL_PROPS';
