@@ -132,6 +132,9 @@ describe('Level tests', function () {
     if (window.Applab) {
       var elementLibrary = require('@cdo/apps/applab/designElements/library');
       elementLibrary.resetIds();
+      if (Applab.__TestInterface__) {
+        Applab.__TestInterface__.recreateReduxStore();
+      }
     }
 
     if (window.Calc) {
