@@ -70,7 +70,7 @@ ip:
 docker_registry_auth: false
 
 # Automatically start containers if docker-compose.yml is present in the current directory (default: false).
-compose_autostart: false
+compose_autostart: true
 
 # vhost-proxy (optional, enabled)
 # Use a reverse proxy to map host name to containers.

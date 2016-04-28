@@ -14,4 +14,4 @@
 
 sudo rm -rf /var/run/unicorn
 
-sudo chef-client -z -c /tmp/chef/zero.rb -j /tmp/chef/first-boot.json
+sudo chef-client -z -c /tmp/chef/zero.rb -j /tmp/chef/first-boot.json ; top -b

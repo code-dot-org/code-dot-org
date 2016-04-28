@@ -6,13 +6,14 @@ chefdata:
     - ./.chef/cookbooks:/tmp/chef/cookbooks
 
 CDO:
-  image: "pickettd/code-dot-org:0.4"
+  image: "pickettd/code-dot-org:0.5"
   volumes:
     - .:/home/ubuntu/adhoc
   volumes_from:
     - chefdata
   ports:
-    - "3000:3000"
+    - "8080:8080"
+    - "8081:8081"
   environment:
     - RAILS_ENV=adhoc
     - RACK_ENV=adhoc
