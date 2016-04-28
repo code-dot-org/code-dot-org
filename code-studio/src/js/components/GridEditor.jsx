@@ -116,11 +116,46 @@ var GridEditor = React.createClass({
     });
   },
 
+  pasteSelectedCells: function () {
+    var cells = this.state.cells;
+    var selectedCells = this.state.selectedCells;
+    var row = this.state.selectedRow;
+    var col = this.state.selectedCol;
+    if (selectedCells === undefined || row === undefined || col === undefined) {
+      return;
+    }
+
+    selectedCells.forEach(function (_, i) {
+      _.forEach(function (cell, j) {
+        if (cells[row + i] && cells[row + i][col + j]) {
+          cells[row + i][col + j] = this.getCellClass().deserialize(cell);
+        }
+      }, this);
+    }, this);
+
+    var serializedData = cells.map(function (row) {
+      return row.map(function (cell) {
+        return cell.serialize();
+      });
+    });
+    this.props.onUpdate(serializedData);
+    this.setState({
+      cells: cells
+    });
+  },
+
+  setSelectedCells: function (cells) {
+    this.setState({
+      selectedCells: cells
+    });
+  },
+
   render: function () {
     var cells = this.state.cells;
 
     var cellEditor;
     var selectedCellJson;
+    var btn;
     var row = this.state.selectedRow;
     var col = this.state.selectedCol;
     if (cells[row] && cells[row][col]) {
@@ -128,12 +163,16 @@ var GridEditor = React.createClass({
       var EditorClass = this.getEditorClass();
       cellEditor = <EditorClass cell={cell} row={row} col={col} onUpdate={this.handleCellChange} />;
       selectedCellJson = <CellJSON serialization={cell.serialize()} onChange={this.handleCellChange} />;
+      if (this.state.selectedCells) {
+        btn = <button type="button" onClick={this.pasteSelectedCells}>{"Paste Selected " + this.state.selectedCells.length + "x" + this.state.selectedCells[0].length + " Cells Excel-Style"}</button>;
+      }
     }
 
     return (<div className="row">
       <div className="span5">
-        <Grid cells={cells} selectedRow={this.state.selectedRow} selectedCol={this.state.selectedCol} skin={this.props.skin} onSelectionChange={this.changeSelection}/>
+        <Grid cells={cells} selectedRow={this.state.selectedRow} selectedCol={this.state.selectedCol} skin={this.props.skin} setSelectedCells={this.setSelectedCells} onSelectionChange={this.changeSelection}/>
         {selectedCellJson}
+        {btn}
       </div>
       {cellEditor}
     </div>);

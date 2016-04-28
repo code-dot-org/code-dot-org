@@ -8,12 +8,11 @@ var Cell = React.createClass({
     row: React.PropTypes.number.isRequired,
     col: React.PropTypes.number.isRequired,
     selected: React.PropTypes.bool.isRequired,
-    onSelectionChange: React.PropTypes.func.isRequired,
+    onClick: React.PropTypes.func.isRequired,
+    onMouseDown: React.PropTypes.func.isRequired,
+    onMouseOver: React.PropTypes.func.isRequired,
+    onMouseUp: React.PropTypes.func.isRequired,
     skin: React.PropTypes.string.isRequired,
-  },
-
-  handleClickCell: function (event) {
-    this.props.onSelectionChange(this.props.row, this.props.col);
   },
 
   render: function () {
@@ -24,6 +23,9 @@ var Cell = React.createClass({
 
     if (this.props.selected) {
       classNames.push('selected');
+    }
+    if (this.props.selecting) {
+      classNames.push('selecting');
     }
 
     var tiles = ['border', 'path', 'start', 'end', 'obstacle'];
@@ -56,7 +58,13 @@ var Cell = React.createClass({
       }
     }
 
-    return (<td className={classNames.join(' ')} onClick={this.handleClickCell} style={tdStyle}>
+    return (<td
+        className={classNames.join(' ')}
+        onClick={this.props.onClick.bind(null, this.props.row, this.props.col)}
+        onMouseDown={this.props.onMouseDown.bind(null, this.props.row, this.props.col)}
+        onMouseOver={this.props.onMouseOver.bind(null, this.props.row, this.props.col)}
+        onMouseUp={this.props.onMouseUp.bind(null, this.props.row, this.props.col)}
+        style={tdStyle}>
       {text}
     </td>);
   }
@@ -68,7 +76,67 @@ var Grid = React.createClass({
     selectedRow: React.PropTypes.number,
     selectedCol: React.PropTypes.number,
     skin: React.PropTypes.string.isRequired,
-    onSelectionChange: React.PropTypes.func.isRequired
+    onSelectionChange: React.PropTypes.func.isRequired,
+    setSelectedCells: React.PropTypes.func.isRequired,
+  },
+
+  beginDrag: function (row, col) {
+    this.setState({
+      dragging: true,
+      dragStart: {row, col},
+    });
+  },
+
+  onMouseOver: function (row, col) {
+    if (this.state && this.state.dragging) {
+      this.setState({
+        dragCurrent: {row, col},
+      });
+    }
+  },
+
+  endDrag: function (row, col) {
+    var from = this.state.dragStart;
+    this.setState({
+      dragging: false,
+      dragStart: null,
+      dragCurrent: null
+    });
+
+    if (from.row == row && from.col == col) {
+      return;
+    }
+
+    var topLeft = {
+      row: Math.min(from.row, row),
+      col: Math.min(from.col, col),
+    };
+    var bottomRight = {
+      row: Math.max(from.row, row),
+      col: Math.max(from.col, col),
+    };
+
+    var cells = [];
+
+    for (var i = topLeft.row; i <= bottomRight.row; i++) {
+      var arr = [];
+      for (var j = topLeft.col; j <= bottomRight.col; j++) {
+        arr.push(this.props.cells[i][j].serialize());
+      }
+      cells.push(arr);
+    }
+
+    this.props.setSelectedCells(cells);
+  },
+
+  isSelecting: function (x, y) {
+    if (this.state && this.state.dragging && this.state.dragCurrent) {
+      return x >= Math.min(this.state.dragStart.row, this.state.dragCurrent.row) &&
+             x <= Math.max(this.state.dragStart.row, this.state.dragCurrent.row) &&
+             y >= Math.min(this.state.dragStart.col, this.state.dragCurrent.col) &&
+             y <= Math.max(this.state.dragStart.col, this.state.dragCurrent.col);
+    }
+    return false;
   },
 
   render: function () {
@@ -82,7 +150,11 @@ var Grid = React.createClass({
           row={x}
           col={y}
           selected={selected}
-          onSelectionChange={this.props.onSelectionChange}
+          selecting={this.isSelecting(x, y)}
+          onClick={this.props.onSelectionChange}
+          onMouseDown={this.beginDrag}
+          onMouseOver={this.onMouseOver}
+          onMouseUp={this.endDrag}
           skin={this.props.skin}
         />);
       }, this);
