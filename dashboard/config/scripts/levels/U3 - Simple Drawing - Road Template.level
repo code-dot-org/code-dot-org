@@ -17,7 +17,13 @@
       "regularPolygon": null,
       "text": null,
       "comment": null,
-      "color": null
+      "color": null,
+      "background": null,
+      "randomNumber_max": null,
+      "randomNumber_min_max": null,
+      "console.log": null,
+      "draw": null,
+      "line": null
     },
     "edit_code": true,
     "embed": "false",
@@ -42,7 +48,8 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "show_d_pad": "false"
   },
   "published": true,
   "notes": "",

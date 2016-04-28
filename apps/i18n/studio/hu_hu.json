@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "20 Egér Droidot kell szerezned. Használd az \"adj hozzá egy Egér Droid\" utasítást a \"ha elkapja az egér droidot\" eseményen belül, hogy még egy vagy két Egér Droidot hozzáadj akkor, amikor elkapsz egyet.",
   "failedMultiplyCharactersTimeoutGotSome": "Gratulálok, készítettél kódot Egér Droidok készítésére. Mehetsz a következő feladványra, vagy megpróbálhatsz ismét 20 Egér Droidot elkapni. Próbáld egyszerűbbé tenni több hozzáadásával! (Tartsd lenyomva a nyilakat a billentyűzeten vagy képernyőn a gyorsabb mozgáshoz)",
   "failedChangeSettingTimeout": "Három Lázadót kell elkapnod a továbbjutáshoz.",
-  "failedChangeSettingSettings": "Készítsd el a saját játékod. Hogy továbbléphess ezen a feladványon, meg kell változtatnod a droidodat és beállítanod a sebességét."
+  "failedChangeSettingSettings": "Készítsd el a saját játékod. Hogy továbbléphess ezen a feladványon, meg kell változtatnod a droidodat és beállítanod a sebességét.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }

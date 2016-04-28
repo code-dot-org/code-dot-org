@@ -94,6 +94,7 @@ en:
       CSD U3 Variables console write: {}
       CSD U3 Variables2 SFLP: {}
       CSD U3 Variables2 STOP intro expressions: {}
+      CSD U3 Variables2 STOP variables in expressions: {}
       CSD Variables STOP variables in draw loop: {}
       CSD-U3-SFLP Draw Loop: {}
       CSD-U3-SFLP Simple Drawing: {}
@@ -114,6 +115,7 @@ en:
       CSP Unit 3 - Learning JavaScript Resources:
         Learning JavaScript Resources: Learning JavaScript Resources
         description here: description here
+      CSP-mod1-unit1overview: {}
       CSPPD PD Phases:
         CSPPD PD Phases: CSPPD PD Phases
       CSPPD PD overview:
@@ -283,6 +285,11 @@ en:
         title: title
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
+      ECS PD1 classroom culture:
+        ECS classroom culture: ECS classroom culture
+      ECS PD1 teaching strategies:
+        ECS PD1 teaching strategies: ECS PD1 teaching strategies
+        ECSPD1 teaching strategies: ECSPD1 teaching strategies
       ECS Phase 3 Overview: {}
       ECS Phase 3 Unit 3 Overview: {}
       ECS Phase 3 Unit 4 Overview: {}
@@ -505,7 +512,62 @@ en:
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: An exploration of Growth Mindset
         What is Growth Mindset?: What is Growth Mindset?
+      ECSPD1  intro to The Hour of Code:
+        Introduction to The Hour of Code: Introduction to The Hour of Code
+        Introduction to The Hour of code: Introduction to The Hour of code
+      ECSPD1 ECS Welcome Video:
+        ECSPD1 Welcome Video: ECSPD1 Welcome Video
+        Welcome Video: Welcome Video
+        Welcome to Online PD for ECS: Welcome to Online PD for ECS
+        Welcome to Online PLP for ECS: Welcome to Online PLP for ECS
+      ECSPD1 Forum:
+        ECS Forum: ECS Forum
+        ECS Forum Discussion: ECS Forum Discussion
+      ECSPD1 barriers to access cs:
+        Barriers to Access CS: Barriers to Access CS
+        ECSPD1 Barriers to Access CS: ECSPD1 Barriers to Access CS
+      ECSPD1 congratulations end:
+        ECS PD1 congratulations end: ECS PD1 congratulations end
+      ECSPD1 cs is about:
+        ECSPD1 cs is about: ECSPD1 cs is about
+      ECSPD1 curriculum connections:
+        ECS Curriculum Connections: ECS Curriculum Connections
+        ECS curriculum connections: ECS curriculum connections
+      ECSPD1 equity in cs education:
+        Equity in Computer Science Education: Equity in Computer Science Education
+      ECSPD1 navigating progress:
+        ECSPD1 navigating progress: ECSPD1 navigating progress
+        Navigating and Progress: Navigating and Progress
       ECSPD1 pre survey: {}
+      ECSPD1 professional learning program phases:
+        ECS professional learning program phases: ECS professional learning program phases
+        ECSP Professional Learning Program Phases: ECSP Professional Learning Program Phases
+      ECSPD1 results of The Hour of Code:
+        Results of The Hour of Code: Results of The Hour of Code
+        Results of The Hour of code: Results of The Hour of code
+      ECSPD1 student centered learning:
+        ECS Student Centered Learning: ECS Student Centered Learning
+        ECS student centered learning: ECS student centered learning
+      ECSPD1 unifying themes:
+        ECS Unifying Themes: ECS Unifying Themes
+      ECSPD1 unit 1 overview:
+        ECS Unit 1 Overview: ECS Unit 1 Overview
+        ECS unit 1 overview: ECS unit 1 overview
+      ECSPD1 unit 2 overview:
+        ECS Unit 2 Overview: ECS Unit 2 Overview
+        ECS unit 2 overview: ECS unit 2 overview
+      ECSPD1 unit overviews:
+        ECS  unit overviews: ECS  unit overviews
+        ECS Unit Overviews: ECS Unit Overviews
+      ECSPD1 wrap up:
+        ECS Wrap Up: ECS Wrap Up
+        ECS unit wrap up: ECS unit wrap up
+      ECSPD1 your role:
+        ECS Your Role as a Learner and Facilitator: ECS Your Role as a Learner and Facilitator
+        ECS your role as a learner and facilitator: ECS your role as a learner and facilitator
+      ECSPD1why we need cs:
+        ECSPD1 why we need cs: ECSPD1 why we need cs
+        Why We Need CS: Why We Need CS
       ECSPD3-u5 about: {}
       ECSPD3-u5 challenge details: {}
       ECSPD3-u5 challenge inside: {}
@@ -775,6 +837,9 @@ en:
       PDECS tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
+      PDECS tour 2016-17 CSinSci:
+        Tour of PD Space: Tour of PD Space
+        tour of the PD space: tour of the PD space
       PDK5 Beyond C:
         Beyond: Beyond
       PDK5 CS Video:
@@ -988,6 +1053,7 @@ en:
       U3 - Conditionals - Translating Flowcharts - Else: {}
       U3 - Conditionals - Translating Flowcharts - If Statement: {}
       U3 - Simple Drawing - Plan Personal Drawing: {}
+      U3 - Simple Drawings - Review Rect Oval Fill: {}
       U3 - Simulation - Intro: {}
       U3 Simulation Updating Hypotheses: {}
       U3 Simulations Hypotheses Reflections: {}

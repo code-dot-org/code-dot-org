@@ -1236,14 +1236,24 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
-.show-code {
-  summary {
-    color: $charcoal;
-    font-family: $gotham-bold;
+.modal-content {
+  .show-code {
+    summary {
+      color: $charcoal;
+      font-family: $gotham-bold;
+    }
+
+    .generated-code-container {
+      margin: 25px 10px 25px -80px;
+    }
   }
 
-  .generated-code-container {
-    margin: 25px 10px 25px -80px;
+  &.no-modal-icon {
+    .show-code {
+      .generated-code-container {
+        margin-left: 0px;
+      }
+    }
   }
 }
 
