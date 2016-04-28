@@ -1,0 +1,33 @@
+name 'ECSPD1 barriers to access cs'
+title 'ECSPD1 Barriers to Access CS'
+description 'Barriers to Access CS'
+css 'unplugged'
+
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+#Barriers to Access Computer Science Education K-12
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc?list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q" frameborder="0" allowfullscreen></iframe>
+<br>
+<br>
+
+<img align="left" src="add picture it is a civil right" height="910" width="400" hspace="20">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+#### Computer Science affects every field, yet very few students have access in our K-12 education system
+<br><br><br>
+
+<br><br>
+
+
+
+<br><br><br><br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN
