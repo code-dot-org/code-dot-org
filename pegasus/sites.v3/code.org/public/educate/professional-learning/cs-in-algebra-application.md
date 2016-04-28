@@ -3,7 +3,7 @@ title: CS in Algebra Educator Application
 nav: plc_algebra_nav
 ---
 
-# Computer Science in Science Application 
+# Computer Science in Algebra Application 
 
 We're so excited that you are interested in applying for our Professional Learning Program for CS in Algebra. Space for the 2016-17 school year is limited, so be sure to get your application in soon.
 ## Who is eligible?

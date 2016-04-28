@@ -1,0 +1,51 @@
+name 'ECSPD1 unit overviews'
+title 'ECS  unit overviews'
+description 'ECS Unit Overviews'
+css 'unplugged'
+
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+# ECS Unit Overviews
+
+Code.org has partnered with [Exploring Computer Science](www.exploringcs.org), an introductory high school computer science curriculum developed through an NSF-funded project out of UCLA. The course consists of 6 units, where Units 1-4 represent the core experience, and Units 5 and 6 are optional. Assignments and instruction are based on inquiry and equity and designed to be socially relevant and meaningful for diverse students. 
+<br>
+
+<br>
+Explore the curriculum by clicking on the units below:
+
+<details>
+<summary><strong>Unit 1: Human Computer Interaction</strong></summary>
+
+Students are introduced to the concepts of computer and computing while investigating the major components of computers and the suitability of these components for particular applications. Students will work at their own pace, collaborate in groups where they can learn from one another, and gain an overview of the many, varied ways in which computers and computing are used.
+</details>
+
+<details><summary><strong>Unit 2: Problem Solving</strong></summary>
+Students become “computational thinkers” by applying a variety of problem solving techniques as they create solutions to problems in a variety of contexts. As most of the world’s problems today do not have single, simple solutions, the emphasis of this unit is on the process, rather than the solution. Common computer science topics such as searching, sorting, and graphing are introduced.
+</details>
+
+<details><summary><strong>Unit 3: Web Design</strong></summary>
+Students are prepared to take the role of a developer by expanding their knowledge of programming and Web page design and applying it to the creation of Web pages, programs, and documentation for users and equipment. The basics of HTML and CSS are introduced as a method for designing web pages based on their own culture, interests, and unique experiences.
+</details>
+
+<details><summary><strong>Unit 4: Introduction to Programming</strong></summary>
+Programming is one of the creative processes that can transform ideas into reality. Students design programming solutions to a variety of computational problems including animated stories, video games, and community-based projects. Students will use a block-based programming language that moves the focus away from messy syntax and allows for quick modifications and tinkering.
+</details>
+
+<details><summary><strong>Unit 5: Computing and Data Analysis <em>(optional)</em></strong></summary>
+Managing and interpreting large amounts of data is part of the foundation of our information society and the economy. Where there are humans, there is data. Students explore how computing facilitates new methods of managing and interpreting data. Students use computers to translate, process, and visualize data in order to find patterns and test hypotheses.
+</details>
+
+<details><summary><strong>Unit 6: Robotics <em>(optional)</em></strong></summary>
+Robotics provides a physical application of the programming and problem solving skills acquired in the previous units. Students apply these concepts to the study of robotics and work in small groups to build and program a robot to perform a required task. In order to design, build, and improve their robots, students will need to apply effective team practices and understand the different roles that are important for success.
+</details>
+<br>
+*content adapted from [exploringcs.org](exploringcs.org)*
+<br>
+<br>
+
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

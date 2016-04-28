@@ -1,0 +1,79 @@
+name 'ECSPD1 results of The Hour of Code'
+title 'Results of The Hour of Code'
+description 'Results of The Hour of code'
+css 'unplugged' 
+
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+
+# Results of The Hour of Code
+<br>
+
+<img align="left" src="https://code.org/images/edquote1.png" height="910" width="400" hspace="20">
+<br>
+<br>
+<br>
+<br>
+<h1>In 2014 The Hour of Code was the fastest event to reach 15 million users in just 7 days</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<img align="right" src="https://code.org/images/edquote1.png" height="910" width="400" hspace="20">
+<br>
+<br>
+<br>
+<br>
+<h1>By 2015 over 236,601,577 students had tried an Hour of Code</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+And within a few short years, the Hour of Code became so popular that it became the largest learning event in history worldwide.
+<br>
+<br>
+<br>
+Now that the movement has started, students, parents, schools, and even communities are excited about computer science, but we don’t have enough schools offering it, teachers to teach it, little own teachers with the necessary credentials or background to take on this challenge of preparing students for future careers in computing. 
+<br>
+<br>
+<img align="left" src="https://code.org/images/cs-stats/Slide1_Schools_Teach.png" height="910" width="400" hspace="20">
+<img align="left" src="https://code.org/images/cs-stats/Slide2_STEM_CS.png" height="910" width="400" hspace="20">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+So what comes next…… it is working with fabulous teachers like yourselves, who are willing to step up to the task and be part of a movement that will impact students perception of computer science and equip yourselves with teaching strategies that will create a classroom culture that is inclusive of all students who are engaged, contributing members of a computing community of practice.
+<br>
+<br>
+
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN
