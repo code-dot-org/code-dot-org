@@ -35,8 +35,6 @@ var Provider = require('react-redux').Provider;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
-var FOOTER_HEIGHT = 30;
-
 var ButtonState = {
   UP: 0,
   DOWN: 1
@@ -138,7 +136,6 @@ GameLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
-  this.copyrightStrings = config.copyrightStrings;
 
   this.level.softButtons = this.level.softButtons || {};
 
@@ -320,86 +317,12 @@ GameLab.prototype.afterInject_ = function (config) {
   divGameLab.style.width = '400px';
   divGameLab.style.height = '400px';
 
-  if (this.shouldRenderFooter_()) {
-    this.renderFooterInSharedGame_();
-  }
-
   // Update gameLabP5's scale and keep it updated with future resizes:
   this.gameLabP5.scale = this.calculateVisualizationScale_();
 
   window.addEventListener('resize', function () {
     this.gameLabP5.scale = this.calculateVisualizationScale_();
   }.bind(this));
-};
-
-/**
- * Return whether to render a footer inside the game space
- * (must sync with game.rb's owns_footer_for_share?)
- * (Currently, this is disabled until we understand how we want to render)
- */
-GameLab.prototype.shouldRenderFooter_ = function () {
-  return false;
-  // return this.studioApp_.share;
-};
-
-/**
- * Render footer inside the game space like applab does (currently disabled)
- */
-GameLab.prototype.renderFooterInSharedGame_ = function () {
-  var divGameLab = document.getElementById('divGameLab');
-  var footerDiv = document.createElement('div');
-  footerDiv.setAttribute('id', 'footerDiv');
-  divGameLab.parentNode.insertBefore(footerDiv, divGameLab.nextSibling);
-
-  var menuItems = [
-    {
-      text: commonMsg.reportAbuse(),
-      link: '/report_abuse',
-      newWindow: true
-    },
-    {
-      text: msg.makeMyOwnGame(),
-      link: '/projects/gamelab/new',
-      hideOnMobile: true
-    },
-    {
-      text: commonMsg.openWorkspace(),
-      link: location.href + '/view'
-    },
-    {
-      text: commonMsg.copyright(),
-      link: '#',
-      copyright: true
-    },
-    {
-      text: commonMsg.privacyPolicy(),
-      link: 'https://code.org/privacy',
-      newWindow: true
-    }
-  ];
-  if (dom.isMobile()) {
-    menuItems = menuItems.filter(function (item) {
-      return !item.hideOnMobile;
-    });
-  }
-
-  ReactDOM.render(React.createElement(window.dashboard.SmallFooter,{
-    i18nDropdown: '',
-    copyrightInBase: false,
-    copyrightStrings: this.copyrightStrings,
-    baseMoreMenuString: commonMsg.builtOnCodeStudio(),
-    rowHeight: FOOTER_HEIGHT,
-    style: {
-      fontSize: 18
-    },
-    baseStyle: {
-      width: $("#divGameLab").width(),
-      paddingLeft: 0
-    },
-    className: 'dark',
-    menuItems: menuItems,
-    phoneFooter: true
-  }), footerDiv);
 };
 
 /**
