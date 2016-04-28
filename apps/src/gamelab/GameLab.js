@@ -208,16 +208,9 @@ GameLab.prototype.init = function (config) {
                           config.level.editCode &&
                           !config.level.debuggerDisabled);
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var extraControlRows;
 
   if (showDebugButtons || showDebugConsole) {
     this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
-    var extraControlRowsHtml = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
-      showButtons: showDebugButtons,
-      showConsole: showDebugConsole,
-      showWatch: true,
-    });
-    extraControlRows = <ProtectedStatefulDiv dangerouslySetInnerHTML={{ __html : extraControlRowsHtml }} />;
   }
 
   this.reduxStore_.dispatch(setInitialLevelProps({
@@ -228,8 +221,8 @@ GameLab.prototype.init = function (config) {
     instructionsInTopPane: config.showInstructionsInTopPane,
     puzzleNumber: config.level.puzzle_number,
     stageTotal: config.level.stage_total,
-    showDebugButtons: true,
-    showDebugConsole: true,
+    showDebugButtons: showDebugButtons,
+    showDebugConsole: showDebugConsole,
     showDebugWatch: true,
   }));
 
