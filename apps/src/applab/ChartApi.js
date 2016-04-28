@@ -8,7 +8,6 @@
 'use strict';
 
 var utils = require('../utils');
-var AppStorage = require('./appStorage');
 var GoogleChart = require('./GoogleChart');
 require("babelify/polyfill"); // required for Promises in IE / Phantom
 
@@ -21,7 +20,7 @@ require("babelify/polyfill"); // required for Promises in IE / Phantom
  */
 var ChartApi = module.exports = function (docContext, appStorage) {
   this.document_ = docContext || document;
-  this.appStorage_ = appStorage || AppStorage;
+  this.appStorage_ = appStorage || Applab.storage;
 
   /**
    * List of all warnings generated while performing operations through this

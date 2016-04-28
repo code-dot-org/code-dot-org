@@ -531,6 +531,10 @@ module LevelsHelper
     generator.create_token(payload)
   end
 
+  def use_firebase_for_new_project?
+    @game == Game.applab && CDO.use_firebase_for_new_applab_projects
+  end
+
   def enable_scrolling?
     @level.is_a?(Blockly)
   end
