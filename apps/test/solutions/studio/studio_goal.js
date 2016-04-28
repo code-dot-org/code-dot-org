@@ -19,7 +19,7 @@ var levelDef = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   firstSpriteIndex: 3,
-  timeoutFailureTick: 100
+  timeoutFailureTick: 200
 };
 
 module.exports = {
@@ -55,6 +55,58 @@ module.exports = {
       expected: {
         result: false,
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+      },
+    },
+    {
+      description: "Dynamically add a goal and miss it",
+      xml: '<xml>' +
+        '<block type="when_run" deletable="false">' +
+          '<block type="studio_addGoal"><title name="VALUE">14</title>' +
+            '<next><block type="studio_moveDistance">' +
+              '<title name="DIR">1</title><title name="DISTANCE">100</title>' +
+            '<next><block type="studio_moveDistance">' +
+              '<title name="DIR">4</title><title name="DISTANCE">200</title>' +
+            '</block></next></block></next>' +
+          '</block></next>' +
+        '</block>' +
+          '</xml>',
+      expected: {
+        result: false,
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+      },
+    },
+    {
+      description: "Dynamically add a goal and hit it",
+      xml: '<xml>' +
+            '<block type="when_run" deletable="false">' +
+            '  <next>' +
+            '    <block type="studio_addGoal">' +
+            '      <title name="VALUE">19</title>' +
+            '      <next>' +
+            '        <block type="studio_moveDistance">' +
+            '          <title name="DIR">1</title>' +
+            '          <title name="DISTANCE">100</title>' +
+            '          <next>' +
+            '            <block type="studio_moveDistance">' +
+            '              <title name="DIR">4</title>' +
+            '              <title name="DISTANCE">200</title>' +
+            '              <next>' +
+            '                <block type="studio_moveDistance">' +
+            '                  <title name="DIR">2</title>' +
+            '                  <title name="DISTANCE">100</title>' +
+            '                </block>' +
+            '              </next>' +
+            '            </block>' +
+            '          </next>' +
+            '        </block>' +
+            '      </next>' +
+            '    </block>' +
+            '  </next>' +
+            '</block>' +
+          '</xml>',
+      expected: {
+        result: true,
+        testResult: TestResults.ALL_PASS
       },
     }
   ]

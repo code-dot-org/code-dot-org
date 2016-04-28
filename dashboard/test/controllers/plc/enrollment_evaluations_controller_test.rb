@@ -12,10 +12,10 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     #the same for everyone. Not all users taking an examination will answer the exact same questions.
     @course = create(:plc_course)
     @course_unit = create(:plc_course_unit, plc_course: @course)
-    @module1 = create(:plc_learning_module, name: 'Getting thrown off cliffs')
-    @module2 = create(:plc_learning_module, name: 'Advanced Ornithology')
-    @module3 = create(:plc_learning_module, name: 'Answering questions honestly')
-    @module4 = create(:plc_learning_module, name: 'Admitting ignorance')
+    @module1 = create(:plc_learning_module, name: 'Getting thrown off cliffs', plc_course_unit: @course_unit)
+    @module2 = create(:plc_learning_module, name: 'Advanced Ornithology', plc_course_unit: @course_unit)
+    @module3 = create(:plc_learning_module, name: 'Answering questions honestly', plc_course_unit: @course_unit)
+    @module4 = create(:plc_learning_module, name: 'Admitting ignorance', plc_course_unit: @course_unit)
 
     @question1 = create(:plc_evaluation_question, question: 'What is your name', plc_course_unit: @course_unit)
     @question2 = create(:plc_evaluation_question, question: 'What is your quest', plc_course_unit: @course_unit)
@@ -67,33 +67,56 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     #Sir Lancelot says that his name is Lancelot, his quest is to seek the grail, and that his favorite color is blue.
     #He should be enrolled only in "Answering questions honestly"
     do_expected_answers_yield_expected_module_enrollments(
-        [@answer1_1.plc_learning_module_id, @answer2_1.plc_learning_module_id, @answer3_1.plc_learning_module_id].to_s, [@module3])
+        [@answer1_1, @answer2_1, @answer3_1], [@module3])
 
     #Sir Robin says that his name is Robin, his quest is to seek the grail, and that he doesn't know the capital of Assyria
     #He should be enrolled in "Answering questions honestly" and "Admitting Ignorance"
     do_expected_answers_yield_expected_module_enrollments(
-        [@answer1_2.plc_learning_module_id, @answer2_1.plc_learning_module_id, @answer4_1.plc_learning_module_id].to_s, [@module3, @module4])
+        [@answer1_2, @answer2_1, @answer4_1], [@module3, @module4])
 
     #Sir Galahad says that his name is Galahad, his quest is to seek the grail, and that his favorite color is blue - no, yellow
     #He should be enrolled in "Answering questions honestly" and "Getting thrown off cliffs"
     do_expected_answers_yield_expected_module_enrollments(
-        [@answer1_3.plc_learning_module_id, @answer2_1.plc_learning_module_id, @answer3_2.plc_learning_module_id].to_s, [@module3, @module1])
+        [@answer1_3, @answer2_1, @answer3_2], [@module3, @module1])
 
     #King Arthur says that his name is Arthur, his quest is to seek the grail, and needs clarification on swallow speed
     #He should be enrolled in "Answering questions honestly" and "Advanced Ornitholoy"
     do_expected_answers_yield_expected_module_enrollments(
-        [@answer1_4.plc_learning_module_id, @answer2_1.plc_learning_module_id, @answer5_1.plc_learning_module_id].to_s, [@module3, @module2])
+        [@answer1_4, @answer2_1, @answer5_1], [@module3, @module2])
 
     #Sir Edgecase of Edgecaseville should be enrolled in no modules
     do_expected_answers_yield_expected_module_enrollments(
-        [@answer1_5.plc_learning_module_id, @answer3_3.plc_learning_module_id, @answer5_2.plc_learning_module_id].to_s, [])
+        [@answer1_5, @answer3_3, @answer5_2], [])
+  end
+
+  test "Cannot do actions on enrollments that are not mine " do
+    other_user = create :teacher
+    sign_out(@user)
+    sign_in(other_user)
+
+    get :perform_evaluation, unit_assignment_id: @unit_assignment.id
+    assert_response :forbidden
+
+    post :submit_evaluation, unit_assignment_id: @unit_assignment.id, answer_module_list: [@answer1_1]
+    assert_response :forbidden
+
+    get :preview_assignments, unit_assignment_id: @unit_assignment.id, enrolled_modules: "#{@module1.id},#{@module2.id}"
+    assert_response :forbidden
+
+    post :confirm_assignments, unit_assignment_id: @unit_assignment.id, learning_module_ids: [@module1.id, @module2.id]
+    assert_response :forbidden
   end
 
   private
   def do_expected_answers_yield_expected_module_enrollments(answers, expected_module_enrollments)
-    post :submit_evaluation, unit_assignment_id: @unit_assignment.id, answerModuleList: answers
+    post :submit_evaluation, unit_assignment_id: @unit_assignment.id, answer_module_list: answers
+    assert_redirected_to controller: :enrollment_evaluations, action: :preview_assignments, enrolled_modules: answers
+
+    post :confirm_assignments, unit_assignment_id: @unit_assignment.id, learning_module_ids: answers.map(&:plc_learning_module_id)
     assert_redirected_to plc_enrollment_unit_assignment_path(@unit_assignment)
+
     @unit_assignment.reload
     assert_equal expected_module_enrollments.map(&:id).sort, @enrollment.plc_module_assignments.all.map(&:plc_learning_module_id).sort
+    @unit_assignment.update!(status: Plc::EnrollmentUnitAssignment::PENDING_EVALUATION)
   end
 end
