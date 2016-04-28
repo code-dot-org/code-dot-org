@@ -20,7 +20,8 @@ class ProjectsController < ApplicationController
     },
     gamelab: {
       name: 'New Game Lab Project',
-      login_required: true
+      login_required: true,
+      student_of_admin_required: true
     },
     makerlab: {
       name: 'New Maker Lab Project',
@@ -53,7 +54,7 @@ class ProjectsController < ApplicationController
   end
 
   def load
-    return if redirect_if_admin_required_and_not_admin
+    return if redirect_unless_account_type_requirements_met
     if STANDALONE_PROJECTS[params[:key]][:login_required]
       authenticate_user!
     end
@@ -70,7 +71,7 @@ class ProjectsController < ApplicationController
   end
 
   def create_new
-    return if redirect_if_admin_required_and_not_admin
+    return if redirect_unless_account_type_requirements_met
     return if redirect_applab_under_13(@level)
     redirect_to action: 'edit', channel_id: create_channel({
       name: 'Untitled Project',
@@ -102,7 +103,7 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    return if redirect_if_admin_required_and_not_admin
+    return if redirect_unless_account_type_requirements_met
     if STANDALONE_PROJECTS[params[:key]][:login_required]
       authenticate_user!
     end
@@ -110,7 +111,7 @@ class ProjectsController < ApplicationController
   end
 
   def remix
-    return if redirect_if_admin_required_and_not_admin
+    return if redirect_unless_account_type_requirements_met
     if STANDALONE_PROJECTS[params[:key]][:login_required]
       authenticate_user!
     end
@@ -133,10 +134,21 @@ class ProjectsController < ApplicationController
   end
 
   # Redirect to home if user not authenticated
-  def redirect_if_admin_required_and_not_admin
-    if STANDALONE_PROJECTS[params[:key]][:admin_required] && !current_user.try(:admin?)
+  def redirect_unless_account_type_requirements_met
+    admin_required = STANDALONE_PROJECTS[params[:key]][:admin_required]
+    user_is_admin = current_user.try(:admin?)
+    if admin_required && !user_is_admin
       redirect_to '/'
-      true
+      return true
     end
+
+    student_of_admin_required = STANDALONE_PROJECTS[params[:key]][:student_of_admin_required]
+    user_is_student_of_admin = current_user.teachers.any? { |teacher| teacher.try(:admin?) }
+    if student_of_admin_required && !(user_is_admin || user_is_student_of_admin)
+      redirect_to '/'
+      return true
+    end
+
+    false
   end
 end
