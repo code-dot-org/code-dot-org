@@ -390,6 +390,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
       case StepType.RUN:
         // Bail out here if in a break state (paused), but make sure that we still
         // have the next tick queued first, so we can resume after un-pausing):
+        this.isExecuting = false;
         return;
       case StepType.OUT:
         // If we haven't yet set stepOutToStackDepth, work backwards through the

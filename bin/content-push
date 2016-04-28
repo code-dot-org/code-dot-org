@@ -15,7 +15,7 @@ def ask_for_name
 end
 
 def check_changes
-  system("git status #{CONTENT_PATHS}")
+  system("git status -uall #{CONTENT_PATHS}")
   print "Should I commit and push all of these unstaged and untracked files in pegasus and dashboard? [Y/n] "
   input = gets.chomp
   if input == '' || input[0].downcase == 'y'

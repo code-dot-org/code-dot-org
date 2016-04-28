@@ -182,7 +182,8 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "show_d_pad": "false"
   },
   "published": true,
   "notes": "",

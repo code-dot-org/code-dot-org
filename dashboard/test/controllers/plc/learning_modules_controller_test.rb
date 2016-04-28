@@ -17,7 +17,7 @@ class Plc::LearningModulesControllerTest < ActionController::TestCase
   test 'should create new learning module' do
     module_name = SecureRandom.hex
     assert_difference('Plc::LearningModule.count') do
-      post :create, plc_learning_module: {plc_learning_module: @learning_module, name: module_name, plc_course_unit_id: @course_unit.id}
+      post :create, plc_learning_module: {plc_learning_module: @learning_module, name: module_name, plc_course_unit_id: @course_unit.id, module_type: Plc::LearningModule::PRACTICE_MODULE}
     end
     assert_equal module_name, Plc::LearningModule.find_by(name: module_name).name
     assert_redirected_to plc_learning_module_path(assigns(:learning_module))
