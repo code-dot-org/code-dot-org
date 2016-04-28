@@ -796,15 +796,9 @@ Applab.init = function (config) {
     Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
 
-  // TODO - move into AppLabView and put necessary props into store
-  var codeWorkspace = (
-    <Provider store={Applab.reduxStore}>
-      <ConnectedCodeWorkspace/>
-    </Provider>
-  );
-
+  // TODO (brent) hideSource should probably be part of initialLevelProps
   Applab.reactInitialProps_ = {
-    codeWorkspace: codeWorkspace,
+    codeWorkspace: <ConnectedCodeWorkspace/>,
     hideSource: !!config.hideSource,
     onMount: onMount
   };
