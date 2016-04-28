@@ -9,6 +9,7 @@ commonStyles.hidden = {
 commonStyles.purpleHeader = {
   height: styleConstants["workspace-headers-height"],
   backgroundColor: color.purple,
+  color: color.white,
   overflowY: 'hidden',
   WebkitUserSelect: 'none',
   MozUserSelect: 'none',
@@ -17,9 +18,10 @@ commonStyles.purpleHeader = {
 };
 
 commonStyles.purpleHeaderReadOnly = {
-  backgroundColor: color.charcoal
+  backgroundColor: color.charcoal,
 };
 
 commonStyles.purpleHeaderRunning = {
-  backgroundColor: color.lighter_purple
+  backgroundColor: color.lighter_purple,
+  color: color.dark_charcoal,
 };
