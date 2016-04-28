@@ -207,6 +207,22 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal '100', script.script_levels[1].level.level_num
   end
 
+  test 'allow applab levels in login_required scripts' do
+    Script.add_script(
+        {name: 'test script', hidden: false, login_required: true},
+        [{name: 'New App Lab Project'}] # From level.yml fixture
+    )
+  end
+
+  test 'forbid applab levels in non-login scripts' do
+    assert_raises_matching /Applab.*levels can only be added to a script that requires login/ do
+      Script.add_script(
+          {name: 'test script', hidden: false, login_required: false},
+          [{name: 'New App Lab Project'}] # From level.yml fixture
+      )
+    end
+  end
+
   test 'allow gamelab levels in hidden scripts' do
     Script.add_script(
         {name: 'test script', hidden: true},
