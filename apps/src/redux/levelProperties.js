@@ -27,10 +27,6 @@ var levelInitialState = {
   assetUrl: function () {}
 };
 
-Object.keys(ALLOWED_KEYS).forEach(function (key) {
-  levelInitialState[key] = levelInitialState[key] || undefined;
-});
-
 module.exports.default = function reducer(state, action) {
   state = state || levelInitialState;
 
