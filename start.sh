@@ -14,4 +14,8 @@
 
 sudo rm -rf /var/run/unicorn
 
+sudo rm /home/ubuntu/adhoc/dashboard/config/unicorn.rb.pid
+
+sudo rm /home/ubuntu/adhoc/pegasus/config/unicorn.rb.pid
+
 sudo chef-client -z -c /tmp/chef/zero.rb -j /tmp/chef/first-boot.json ; top -b
