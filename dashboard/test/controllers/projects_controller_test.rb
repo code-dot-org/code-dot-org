@@ -93,6 +93,12 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_redirected_to '/'
   end
 
+  test 'gamelab project level redirects to home if not signed in' do
+    sign_out :user
+    get :load, key: :gamelab
+    assert_redirected_to '/'
+  end
+
   test 'gamelab project level goes to edit if admin' do
     sign_in create(:admin)
 
