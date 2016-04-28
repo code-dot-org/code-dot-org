@@ -207,6 +207,23 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal '100', script.script_levels[1].level.level_num
   end
 
+  test 'allow gamelab levels in hidden scripts' do
+    Script.add_script(
+        {name: 'test script', hidden: true},
+        [{name: 'New Game Lab Project'}] # From level.yml fixture
+    )
+  end
+
+  test 'forbid gamelab levels in non-hidden scripts' do
+    # Temporary limitation prior to release of gamelab: Can remove on release.
+    assert_raises_matching /Gamelab levels can only be added to a hidden script/ do
+      Script.add_script(
+          {name: 'test script', hidden: false},
+          [{name: 'New Game Lab Project'}] # From level.yml fixture
+      )
+    end
+  end
+
   test 'scripts are hidden or not' do
     visible_scripts = %w{20-hour flappy playlab infinity artist course1 course2 course3 course4 frozen hourofcode algebra cspunit1 cspunit2 cspunit3 starwarsblocks}.
       map{|s| Script.find_by_name(s)}
