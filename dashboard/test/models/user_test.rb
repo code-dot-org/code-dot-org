@@ -860,6 +860,62 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 0, user_proficiency.repeat_loops_d5_count
   end
 
+  test 'track_proficiency does not update basic_proficiency_at if already proficient' do
+    TIME = '2015-01-02 03:45:43'
+    script = create :script
+    level = create :level
+    student = create :student
+    level_concept_difficulty = LevelConceptDifficulty.
+      create(level: level, events: 5)
+    user_proficiency = UserProficiency.create(
+      user_id: student.id, sequencing_d3_count: 6, repeat_loops_d4_count: 7,
+      events_d5_count: 8, basic_proficiency_at: TIME)
+
+    User.track_proficiency(
+      user_proficiency.user_id, script.id, level_concept_difficulty.level_id)
+
+    user_proficiency = UserProficiency.
+      where(user_id: user_proficiency.user_id).
+      first
+    assert !user_proficiency.nil?
+    assert_equal TIME, user_proficiency.basic_proficiency_at
+  end
+
+  test 'track_proficiency updates if newly proficient' do
+    script = create :script
+    level = create :level
+    level_concept_difficulty = LevelConceptDifficulty.
+      create(level_id: level.id, events: 5)
+    student = create :student
+    user_proficiency = UserProficiency.create(
+      user_id: student.id, sequencing_d3_count: 3, repeat_loops_d3_count: 3,
+      events_d3_count: 2)
+
+    User.track_proficiency(
+      user_proficiency.user_id, script.id, level_concept_difficulty.level_id)
+
+    user_proficiency = UserProficiency.
+      where(user_id: user_proficiency.user_id).
+      first
+    assert !user_proficiency.nil?
+    assert !user_proficiency.basic_proficiency_at.nil?
+  end
+
+  test 'track_proficiency does not update basic_proficiency_at if not proficient' do
+    script = create :script
+    level_concept_difficulty = create :level_concept_difficulty
+    user_proficiency = create :user_proficiency
+
+    User.track_proficiency(
+      user_proficiency.user_id, script.id, level_concept_difficulty.level_id)
+
+    user_proficiency = UserProficiency.
+      where(user_id: user_proficiency.user_id).
+      first
+    assert !user_proficiency.nil?
+    assert user_proficiency.basic_proficiency_at.nil?
+  end
+
   test 'track_level_progress_sync calls track_proficiency if new perfect score' do
     script_level = create :script_level
     student = create :student
