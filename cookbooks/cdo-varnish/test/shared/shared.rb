@@ -401,35 +401,19 @@ module HttpCacheTest
       end
 
       it 'Does not strip cookies from assets in higher-priority whitelisted path' do
-        url = build_url 'api', 'image.png'
-        cookie = 'hour_of_code' # whitelisted for this path
-        text = 'Hello World!'
-        text_cookie = 'Hello Cookie!'
-        mock_response url, text, {}, {'Set-Cookie' => "#{cookie}=cookie_value; path=/"}
-        mock_response url, text_cookie, {'Cookie' => "#{cookie}=cookie_value;"}, {'Set-Cookie' => "#{cookie}=cookie_value2; path=/"}
-
-        # Does not strip request cookie or response cookie
-        response = proxy_request url, {}, {"#{cookie}" => 'cookie_value'}
-        assert_equal text_cookie, last_line(response)
-        refute_nil get_header(response, 'Set-Cookie')
+        does_not_strip_cookies_from_png_in_path 'api'
       end
 
       it 'Does not strip cookies from assets in v3/assets path' do
-        url = build_url 'v3/assets', 'image.png'
-        cookie = 'hour_of_code' # whitelisted for this path
-        text = 'Hello World!'
-        text_cookie = 'Hello Cookie!'
-        mock_response url, text, {}, {'Set-Cookie' => "#{cookie}=cookie_value; path=/"}
-        mock_response url, text_cookie, {'Cookie' => "#{cookie}=cookie_value;"}, {'Set-Cookie' => "#{cookie}=cookie_value2; path=/"}
-
-        # Does not strip request cookie or response cookie
-        response = proxy_request url, {}, {"#{cookie}" => 'cookie_value'}
-        assert_equal text_cookie, last_line(response)
-        refute_nil get_header(response, 'Set-Cookie')
+        does_not_strip_cookies_from_png_in_path 'v3/assets'
       end
 
       it 'Does not strip cookies from assets in v3/animations path' do
-        url = build_url 'v3/animations', 'image.png'
+        does_not_strip_cookies_from_png_in_path 'v3/animations'
+      end
+
+      def does_not_strip_cookies_from_png_in_path(path)
+        url = build_url path, 'image.png'
         cookie = 'hour_of_code' # whitelisted for this path
         text = 'Hello World!'
         text_cookie = 'Hello Cookie!'
