@@ -11,6 +11,6 @@ Scenario: Basic GameLab level
   Then I see no difference for "initial load"
   And I press "animationMode"
   Then I see no difference for "animation tab"
-  And I press "newListItem"
+  And I press ".animationList .newListItem" using jQuery
   Then I see no difference for "new animation"
   And I close my eyes
