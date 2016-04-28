@@ -39,7 +39,6 @@ var JsDebuggerUi = require('../JsDebuggerUi');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var VisualizationOverlay = require('./VisualizationOverlay');
-var ShareWarningsDialog = require('../templates/ShareWarningsDialog');
 var logToCloud = require('../logToCloud');
 var DialogButtons = require('../templates/DialogButtons');
 var executionLog = require('../executionLog');
@@ -374,7 +373,7 @@ function renderFooterInSharedGame() {
 
   var menuItems = [
     {
-      text: applabMsg.reportAbuse(),
+      text: commonMsg.reportAbuse(),
       link: '/report_abuse',
       newWindow: true
     },
@@ -388,12 +387,12 @@ function renderFooterInSharedGame() {
       link: location.href + '/view'
     },
     {
-      text: applabMsg.copyright(),
+      text: commonMsg.copyright(),
       link: '#',
       copyright: true
     },
     {
-      text: applabMsg.privacyPolicy(),
+      text: commonMsg.privacyPolicy(),
       link: 'https://code.org/privacy',
       newWindow: true
     }
@@ -408,7 +407,7 @@ function renderFooterInSharedGame() {
     i18nDropdown: '',
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
-    baseMoreMenuString: applabMsg.builtOnCodeStudio(),
+    baseMoreMenuString: commonMsg.builtOnCodeStudio(),
     rowHeight: applabConstants.FOOTER_HEIGHT,
     style: {
       fontSize: 18
@@ -542,63 +541,6 @@ Applab.initReadonly = function (config) {
   studioApp.initReadonly(config);
 };
 
-function hasSeenDataAlert(channelId) {
-  var dataAlerts = localStorage.getItem('dataAlerts');
-  if (!dataAlerts) {
-    return false;
-  }
-  var channelIds = JSON.parse(dataAlerts);
-  return channelIds.indexOf(channelId) !== -1;
-}
-
-function markSeenDataAlert(channelId) {
-  var dataAlerts = localStorage.getItem('dataAlerts');
-  if (!dataAlerts) {
-    dataAlerts = '[]';
-  }
-  var channelIds = JSON.parse(dataAlerts);
-  channelIds.push(channelId);
-  localStorage.setItem('dataAlerts', JSON.stringify(channelIds));
-}
-
-function onCloseShareWarnings(showStoreDataAlert) {
-  // we closed the dialog without hitting too_young
-  // Only want to ask about age once across apps
-  if (!Applab.user.isSignedIn) {
-    utils.trySetLocalStorage('is13Plus', 'true');
-  }
-  // Only want to ask about storing data once per app.
-  if (showStoreDataAlert) {
-    markSeenDataAlert(Applab.channelId);
-  }
-  window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
-}
-
-function handleShareWarningsTooYoung() {
-  utils.trySetLocalStorage('is13Plus', 'false');
-  window.location.href = '/too_young';
-}
-
-/**
- * Starts the app after (potentially) Showing a modal warning about data sharing
- * (if appropriate) and determining user is old enough
- */
-Applab.startSharedAppAfterWarnings = function () {
-  // dashboard will redirect young signed in users
-  var is13Plus = Applab.user.isSignedIn || localStorage.getItem('is13Plus') === "true";
-  var showStoreDataAlert = Applab.hasDataStoreAPIs(Applab.getCode()) &&
-    !hasSeenDataAlert(Applab.channelId);
-
-  var modal = document.createElement('div');
-  document.body.appendChild(modal);
-
-  return ReactDOM.render(<ShareWarningsDialog
-    showStoreDataAlert={showStoreDataAlert}
-    is13Plus={is13Plus}
-    handleClose={onCloseShareWarnings.bind(null, showStoreDataAlert)}
-    handleTooYoung={handleShareWarningsTooYoung}/>, modal);
-};
-
 /**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
@@ -673,6 +615,15 @@ Applab.init = function (config) {
     studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
+  config.shareWarningInfo = {
+    hasDataAPIs: function () {
+      return Applab.hasDataStoreAPIs(Applab.getCode());
+    },
+    onWarningsComplete: function () {
+      window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
+    }
+  };
+
   config.afterInject = function () {
     if (studioApp.isUsingBlockly()) {
       /**
@@ -699,20 +650,10 @@ Applab.init = function (config) {
     // and sized in drawDiv().
     Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
 
-    if (!!config.level.projectTemplateLevelName) {
-      studioApp.displayWorkspaceAlert('warning', <div>{commonMsg.projectWarning()}</div>);
-    }
-
-    studioApp.alertIfAbusiveProject('#codeWorkspace');
-
     // IE9 doesnt support the way we handle responsiveness. Instead, explicitly
     // resize our visualization (user can still resize with grippy)
     if (!utils.browserSupportsCssMedia()) {
       studioApp.resizeVisualization(300);
-    }
-
-    if (studioApp.share) {
-      Applab.startSharedAppAfterWarnings();
     }
   };
 

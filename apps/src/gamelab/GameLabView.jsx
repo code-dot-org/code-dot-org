@@ -24,6 +24,7 @@ var GameLabView = React.createClass({
     isShareView: React.PropTypes.bool.isRequired,
     generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
     showFinishButton: React.PropTypes.bool.isRequired,
+    hideSource: React.PropTypes.bool.isRequired,
     onMount: React.PropTypes.func.isRequired
   },
 
@@ -54,7 +55,8 @@ var GameLabView = React.createClass({
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
         <InstructionsWithWorkspace
-          generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}/>
+          generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}
+          hideSource={this.props.hideSource}/>
       </div>
     );
   },
