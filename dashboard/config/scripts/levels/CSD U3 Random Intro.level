@@ -14,7 +14,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "What do you think this code will do when it is run? Make a prediction, then run this code 5 - 10 times, recording the output each time. Share your results with your neighbor.",
-    "start_blocks": "// Run this program a few times\r\n// and record the output\r\nconsole.log(randomNumber(10));",
+    "start_blocks": "// Run this program a few times\r\n// and record the output\r\nconsole.log(randomNumber(0,10));",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -38,7 +38,8 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "markdown_instructions": "# Randomness\r\n\r\nSometimes we want our programs to run a bit differently everytime, and a simple way to do this is to generate **random numbers**. What would you expect this code to produce?\r\n\r\n# console.log() \r\nThe `console.log()` block is a really useful tool for testing and debugging - anything that you place into `console.log()`'s input will be printed to the debug console, which you can find below your code.\r\n\r\n# Do This\r\n\r\nYou will **not write any code** in this level.\r\n\r\n* Read the program provided\r\n* **Predict** what the provided program will do. **Be specific!**\r\n* Run the program several times and **record** the results.\r\n* **Discuss the results with a neighbor**. Was your prediction correct?",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"This program will print out a result here\",\r\n  \"element_id\": \"#debug-console\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": -25\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"This program will print out a result here\",\r\n  \"element_id\": \"#debug-console\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": -25\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "show_d_pad": "false"
   },
   "published": true,
   "notes": "",

@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "Du må få 20 musedroider. Bruk \"legg til en musedroide\"-kommandoen i \"når har fått musedroide\"-eventet for å legge til to eller flere musedroider hver gang du får tak i en.",
   "failedMultiplyCharactersTimeoutGotSome": "Gratulerer, du lagt til kode for å lage musedroider. Du kan gå til neste nivå eller prøve på nytt å få 20 musedroider. Prøve å gjøre det enklere ved å legge til flere av dem! (Trykk og hold inne tastene på tastaturet (eller skjermen) for å bevege deg raskere.)",
   "failedChangeSettingTimeout": "Ta tre opprørspiloter for å gå videre.",
-  "failedChangeSettingSettings": "Gjøre spillet til ditt eget. For å klare denne oppgaven må du endre droiden din og angi hastigheten."
+  "failedChangeSettingSettings": "Gjøre spillet til ditt eget. For å klare denne oppgaven må du endre droiden din og angi hastigheten.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }
