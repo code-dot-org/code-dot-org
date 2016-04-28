@@ -28,6 +28,7 @@ var dom = require('../dom');
 var experiments = require('../experiments');
 
 var actions = require('./actions');
+var setInitialLevelProps = require('../redux/levelProperties').setInitialLevelProps;
 var createStore = require('../redux').createStore;
 var gamelabReducer = require('./reducers').gamelabReducer;
 var GameLabView = require('./GameLabView');
@@ -178,12 +179,6 @@ GameLab.prototype.init = function (config) {
       defaultStepSpeed: 1
     });
   }.bind(this);
-
-  this.reduxStore_.dispatch(actions.setInitialLevelProps({
-    assetUrl: this.studioApp_.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share
-  }));
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
