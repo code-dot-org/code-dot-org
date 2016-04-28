@@ -26,8 +26,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Use `repeat` loops to get me to the pig.",
-    "maze_data": null
+    "markdown_instructions": "Use `repeat` loops to get me to the pig."
   },
   "published": true,
   "notes": "",
