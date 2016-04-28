@@ -3,7 +3,6 @@
 # Table name: script_levels
 #
 #  id         :integer          not null, primary key
-#  level_id   :integer          not null
 #  script_id  :integer          not null
 #  chapter    :integer
 #  created_at :datetime
@@ -11,6 +10,7 @@
 #  stage_id   :integer
 #  position   :integer
 #  assessment :boolean
+#  level_id   :integer
 #
 # Indexes
 #
@@ -25,7 +25,7 @@ class ScriptLevel < ActiveRecord::Base
   include LevelsHelper
   include Rails.application.routes.url_helpers
 
-  belongs_to :level
+  has_and_belongs_to_many :levels
   belongs_to :script, inverse_of: :script_levels
   belongs_to :stage, inverse_of: :script_levels
   acts_as_list scope: :stage
@@ -35,6 +35,23 @@ class ScriptLevel < ActiveRecord::Base
 
   def script
     Script.get_from_cache(script_id)
+  end
+
+  # TODO(ram): stop using and delete these four convenience methods
+  def level
+    levels[0]
+  end
+
+  def level=(l)
+    levels[0] = l
+  end
+
+  def level_id
+    levels[0].id
+  end
+
+  def level_id=(new_level_id)
+    levels[0] = Level.find(new_level_id)
   end
 
   def next_level

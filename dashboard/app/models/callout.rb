@@ -58,7 +58,7 @@ class Callout < ActiveRecord::Base
       'levels.level_num' => row_data[CSV_HEADERS[:level_num]],
       'games.name' => row_data[CSV_HEADERS[:game_name]]
     }
-    script_level = ScriptLevel.joins(level: :game).joins(:script).where(script_level_search_conditions)
+    script_level = ScriptLevel.joins(levels: :game).joins(:script).where(script_level_search_conditions)
 
     unless script_level && script_level.count > 0
       puts "Error finding script level with search conditions: #{script_level_search_conditions}"
