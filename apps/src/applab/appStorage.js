@@ -9,14 +9,21 @@ var Firebase = require("firebase");
  */
 var AppStorage = module.exports;
 
-// HACKHACK: Need to make this configurable
-var BASE_DB_URL = 'https://radiant-fire-5518.firebaseio.com';
-
 var databaseCache = {};
 function getDatabase(channelId) {
   var db = databaseCache[channelId];
   if (db == null) {
-    db = new Firebase(BASE_DB_URL + '/v3/shared-tables/' + channelId);
+    if (!Applab.firebaseName) {
+      throw new Error("Error connecting to Firebase: Firebase name not specified");
+    }
+    if (!Applab.firebaseAuthToken) {
+      throw new Error("Error connecting to Firebase: Firebase auth token not specified");
+    }
+    var base_url = 'https://' + Applab.firebaseName + '.firebaseio.com';
+    db = new Firebase(base_url + '/v3/shared-tables/' + channelId);
+    if (Applab.firebaseAuthToken) {
+      db.auth(Applab.firebaseAuthToken);
+    }
     databaseCache[channelId] = db;
   }
   console.log(db);
@@ -55,8 +62,6 @@ function getCounter(channelId, counterName, onSuccess, onError) {
     }
   });
 }
-
-var firebase = new Firebase('https://radiant-fire-5518.firebaseio.com/applab');
 
 /**
  * @param {number} status Http status code.
@@ -304,7 +309,7 @@ AppStorage.onRecordEvent = function (tableName, onRecord, onError) {
 };
 
 AppStorage.resetRecordListener = function () {
-  getDatabase().off();
+  getDatabase(Applab.channelId).off();
 };
 
 /**

@@ -614,6 +614,8 @@ Applab.init = function (config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   Applab.channelId = config.channel;
+  Applab.firebaseName = config.firebaseName;
+  Applab.firebaseAuthToken = config.firebaseAuthToken;
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
 
