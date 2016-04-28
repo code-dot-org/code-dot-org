@@ -2,65 +2,12 @@
 
 /* global Applab */
 
-var Firebase = require("firebase");
+var RecordListener = require('./RecordListener');
 
 /**
  * Namespace for app storage.
  */
 var AppStorage = module.exports;
-
-var databaseCache = {};
-function getDatabase(channelId) {
-  var db = databaseCache[channelId];
-  if (db == null) {
-    if (!Applab.firebaseName) {
-      throw new Error("Error connecting to Firebase: Firebase name not specified");
-    }
-    if (!Applab.firebaseAuthToken) {
-      throw new Error("Error connecting to Firebase: Firebase auth token not specified");
-    }
-    var base_url = 'https://' + Applab.firebaseName + '.firebaseio.com';
-    db = new Firebase(base_url + '/v3/shared-tables/' + channelId);
-    if (Applab.firebaseAuthToken) {
-      db.auth(Applab.firebaseAuthToken);
-    }
-    databaseCache[channelId] = db;
-  }
-  console.log(db);
-  return db;
-}
-
-function getKeyValues(channelId) {
-  var kv = getDatabase(channelId).child('keys');
-  console.log(kv);
-  return kv;
-}
-
-function getTable(channelId, tableName) {
-  return getDatabase(channelId).child('tables').child(tableName);
-}
-
-/**
- * Increments the given counter, specified by channelId and counterName.
- * Calls onSuccess with the counter value, or onError with an error string
- * if it was not possible to determine the value of the counter.
- */
-function getCounter(channelId, counterName, onSuccess, onError) {
-  var counters = getDatabase(channelId).child('counters');
-  counters.child(counterName).transaction(function (currentValue) {
-    return (currentValue || 0) + 1;
-  }, function (err, committed, data) {
-    if (err) {
-      onError(err);
-    } else if (committed) {
-      // This should always be available if there was no error, since our
-      // update functions always returns a value.
-      onSuccess(data.val());
-    } else {
-      onError("Unexpected error");
-    }
-  });
-}
 
 /**
  * @param {number} status Http status code.
@@ -78,7 +25,7 @@ function getStatusDescription(status) {
 
 /**
  * Calls onError with a message generated from commandName and status and the status code
- * @param {function (string, number)} onError Function to call with error message and http status.
+ * @param {function(string, number)} onError Function to call with error message and http status.
  * @param {string} commandName App Lab command name to include in error message.
  * @param {number} status Http status code.
  * @param {string?} detailedErrorMessage Optional detailed error message.
@@ -106,82 +53,94 @@ function onErrorStatus(onError, commandName, status, detailedErrorMessage) {
 /**
  * Reads the value associated with the key, accessible to all users of the app.
  * @param {string} key The name of the key.
- * @param {function (Object)} onSuccess Function to call on success with the
+ * @param {function(Object)} onSuccess Function to call on success with the
        value retrieved from storage.
- * @param {function (string, number)} onError Function to call on error with error msg and http status.
+ * @param {function(string, number)} onError Function to call on error with error msg and http status.
  */
 AppStorage.getKeyValue = function (key, onSuccess, onError) {
-  var entry = getKeyValues(Applab.channelId).child(key);
-  entry.once("value", function (object) {
-    onSuccess(object.val());
-  }, onError);
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleGetKeyValue.bind(req, onSuccess, onError);
+  var url = '/v3/shared-properties/' + Applab.channelId + '/' + key;
+  req.open('GET', url, true);
+  req.send();
+};
+
+var handleGetKeyValue = function (onSuccess, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+  if (this.status === 404) {
+    onSuccess(undefined);
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onErrorStatus(onError, 'getKeyValue', this.status, this.responseText);
+    return;
+  }
+  var value = JSON.parse(this.responseText);
+  onSuccess(value);
 };
 
 /**
  * Saves the value associated with the key, accessible to all users of the app.
  * @param {string} key The name of the key.
  * @param {Object} value The value to associate with the key.
- * @param {function ()} onSuccess Function to call on success.
- * @param {function (string, number)} onError Function to call on error with error msg and
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string, number)} onError Function to call on error with error msg and
  *    http status.
  */
 AppStorage.setKeyValue = function (key, value, onSuccess, onError) {
-  var entries = getKeyValues(Applab.channelId);
-  entries.update(createEntry(key, value), function (error) {
-    if (error) {
-      onError();
-    } else {
-      onSuccess();
-    }
-  });
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleSetKeyValue.bind(req, onSuccess, onError);
+  var url = '/v3/shared-properties/' + Applab.channelId + '/' + key;
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(value));
 };
 
-/**
- * Creates a hash with given key and value.
- */
-function createEntry(key, value) {
-  var result = {};
-  result[key] = value;
-  return result;
-}
+var handleSetKeyValue = function (onSuccess, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onErrorStatus(onError, 'setKeyValue', this.status, this.responseText);
+    return;
+  }
+  onSuccess();
+};
 
 /**
  * Creates a new record in the specified table, accessible to all users.
  * @param {string} tableName The name of the table to read from.
  * @param {Object} record Object containing other properties to store
  *     on the record.
- * @param {function (Object)} onSuccess Function to call with the new record.
- * @param {function (string, number)} onError Function to call with an error message
+ * @param {function(Object)} onSuccess Function to call with the new record.
+ * @param {function(string, number)} onError Function to call with an error message
  *    and http status in case of failure.
  */
 AppStorage.createRecord = function (tableName, record, onSuccess, onError) {
-  // Assign a unique id for the new record.
-  var idCounter = tableName + '_id';
-  getCounter(Applab.channelId, idCounter, function (counter) {
-    record.id = counter;
-    console.log(counter);
-    var recordRef = getTable(Applab.channelId, tableName).child(counter);
-    recordRef.update(record, function (error) {
-      if (!error) {
-	onSuccess(record);
-      } else {
-	onError(error);
-      }
-    });
-  }, onError);
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleCreateRecord.bind(req, onSuccess, onError);
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' + tableName;
+  req.open('POST', url, true);
+  req.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+  req.send(JSON.stringify(record));
 };
 
-/**
- * Returns true if record matches the given search parameters, which are a map
- * from key name to expected value.
- */
-function matchesSearch(record, searchParams) {
-  var matches = true;
-  Object.keys(searchParams || {}).forEach(function (key) {
-    matches = matches && (record[key] == searchParams[key]);
-  });
-  return matches;
-}
+var handleCreateRecord = function (onSuccess, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onErrorStatus(onError, 'createRecord', this.status, this.responseText);
+    return;
+  }
+  var record = JSON.parse(this.responseText);
+  onSuccess(record);
+};
 
 /**
  * Reads records which match the searchParams specified by the user,
@@ -190,40 +149,40 @@ function matchesSearch(record, searchParams) {
  * @param {string} searchParams.id Optional id of record to read.
  * @param {Object} searchParams Other search criteria. Only records
  *     whose contents match all criteria will be returned.
- * @param {function (Array)} onSuccess Function to call with an array of record
+ * @param {function(Array)} onSuccess Function to call with an array of record
        objects.
- * @param {function (string, number)} onError Function to call with an error message
+ * @param {function(string, number)} onError Function to call with an error message
  *     and http status in case of failure.
  */
 AppStorage.readRecords = function (tableName, searchParams, onSuccess, onError) {
-  var table = getTable(Applab.channelId, tableName);
-  var searchKeys = searchParams ? Object.keys(searchParams) : [];
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleReadRecords.bind(req,
+      searchParams, onSuccess, onError);
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' + tableName;
+  req.open('GET', url, true);
+  req.send();
 
-  if (searchKeys.length == 1) {
-     // If there is only a single search parameter, use the firebase equalTo
-     // query to return only the records matching that parameter from the server.
-     var key = searchKeys[0];
-     table.orderByChild(key).equalTo(searchParams[key]).once('value', function (recordsRef) {
-       var recordMap = recordsRef.val() || {};
-       var records = Object.keys(recordMap).map(function (id) { return recordMap[id]; });
-       onSuccess(records);
-     }, onError);
-   } else {
-    // If there is more than one search parameters, Get all records in the table
-    // and filter them on the client.
-    table.once('value', function (recordsRef) {
-      var recordMap = recordsRef.val() || {};
-      var records = [];
-      // Collect all of the records matching the searchParams.
-      Object.keys(recordMap).forEach(function (id) {
-        var record = recordMap[id];
-        if (matchesSearch(record, searchParams)) {
-          records.push(record);
-        }
-      });
-      onSuccess(records);
-    }, onError);
+};
+
+var handleReadRecords = function (searchParams, onSuccess, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
   }
+  if (this.status < 200 || this.status >= 300) {
+    onErrorStatus(onError, 'readRecords', this.status, this.responseText);
+    return;
+  }
+  var records = JSON.parse(this.responseText);
+  records = records.filter(function (record) {
+    for (var prop in searchParams) {
+      if (record[prop] !== searchParams[prop]) {
+        return false;
+      }
+    }
+    return true;
+  });
+  onSuccess(records);
 };
 
 /**
@@ -232,21 +191,36 @@ AppStorage.readRecords = function (tableName, searchParams, onSuccess, onError) 
  * @param {string} record.id The id of the row to update.
  * @param {Object} record Object containing other properties to update
  *     on the record.
- * @param {function (Object, boolean)} onComplete Function to call on success,
+ * @param {function(Object, boolean)} onComplete Function to call on success,
  *     or if the record id is not found.
- * @param {function (string, number)} onError Function to call with an error message
+ * @param {function(string, number)} onError Function to call with an error message
  *     and http status in case of other types of failures.
  */
 AppStorage.updateRecord = function (tableName, record, onComplete, onError) {
-  var recordRef = getTable(Applab.channelId, tableName).child(record.id);
-  recordRef.set(record, function (error) {
-    if (!error) {
-      // TODO: We need to handle the 404 case, probably by attempting a read.
-      onComplete(record, true);
-    } else {
-      onError(error);
-    }
-  });
+  var recordId = record.id;
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleUpdateRecord.bind(req, tableName, record, onComplete, onError);
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' +
+      tableName + '/' + recordId;
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(record));
+};
+
+var handleUpdateRecord = function (tableName, record, onComplete, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+  if (this.status === 404) {
+    onComplete(null, false);
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onErrorStatus(onError, 'updateRecord', this.status, this.responseText);
+    return;
+  }
+  onComplete(record, true);
 };
 
 /**
@@ -254,21 +228,39 @@ AppStorage.updateRecord = function (tableName, record, onComplete, onError) {
  * @param {string} tableName The name of the table to delete from.
  * @param {string} record.id The id of the record to delete.
  * @param {Object} record Object whose other properties are ignored.
- * @param {function (boolean)} onComplete Function to call on success, or if the
+ * @param {function(boolean)} onComplete Function to call on success, or if the
  *     record id is not found.
- * @param {function (string, number)} onError Function to call with an error message
+ * @param {function(string, number)} onError Function to call with an error message
  *     and http status in case of other types of failures.
  */
 AppStorage.deleteRecord = function (tableName, record, onComplete, onError) {
-  var table = getTable(Applab.channelId, tableName);
-  table.child(record.id).remove(function (error) {
-    if (error) {
-      onError(error);
-    } else {
-      onComplete(true);  // TODO: Return false if record is not present.
-    }
-  });
+  var recordId = record.id;
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleDeleteRecord.bind(req, tableName, record, onComplete, onError);
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' +
+      tableName + '/' + recordId + '/delete';
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(JSON.stringify(record));
 };
+
+var handleDeleteRecord = function (tableName, record, onComplete, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+  if (this.status === 404) {
+    onComplete(false);
+    return;
+  }
+  if (this.status < 200 || this.status >= 300) {
+    onErrorStatus(onError, 'deleteRecord', this.status, this.responseText);
+    return;
+  }
+  onComplete(true);
+};
+
+var recordListener = new RecordListener();
 
 /**
  * Listens to tableName for any changes to the data it contains, and calls
@@ -277,9 +269,9 @@ AppStorage.deleteRecord = function (tableName, record, onComplete, onError) {
  * - for 'update' events, returns the updated record
  * - for 'delete' events, returns a record containing the id of the deleted record
  * @param {string} tableName Table to listen to.
- * @param {function (Object, RecordListener.EventType)} onRecord Callback to call when
+ * @param {function(Object, RecordListener.EventType)} onRecord Callback to call when
  * a change occurs with the record object (described above) and event type.
- * @param {function (string, number)} onError Callback to call with an error to show to the user and
+ * @param {function(string, number)} onError Callback to call with an error to show to the user and
  *   http status code.
  */
 AppStorage.onRecordEvent = function (tableName, onRecord, onError) {
@@ -291,24 +283,14 @@ AppStorage.onRecordEvent = function (tableName, onRecord, onError) {
     return;
   }
 
-  var table = getTable(Applab.channelId, tableName);
-  // CONSIDER: Do we need to make sure a client doesn't hear about updates that it triggered?
-
-  table.on('child_added', function (childSnapshot, prevChildKey) {
-    onRecord(childSnapshot.val(), 'create');
-  });
-
-  table.on('value', function (dataSnapshot) {
-    onRecord(dataSnapshot.val(), 'update');
-  });
-
-  table.on('child_removed', function (oldChildSnapshot) {
-    onRecord(oldChildSnapshot.val(), 'delete');
-  });
+  if (!recordListener.setListener(tableName, onRecord)) {
+    onError('You are already listening for events on table "' + tableName + '". ' +
+      'only one event handler can be registered per table.', 400);
+  }
 };
 
 AppStorage.resetRecordListener = function () {
-  getDatabase(Applab.channelId).off();
+  recordListener.reset();
 };
 
 /**
@@ -319,24 +301,40 @@ AppStorage.resetRecordListener = function () {
  *     "table_name2": [{ "city": "Seattle", "state": "WA" }, { "city": "Chicago", "state": "IL"}]
  *   }
  * @param {bool} overwrite Whether to overwrite a table if it already exists.
- * @param {function ()} onSuccess Function to call on success.
- * @param {function (string, number)} onError Function to call with an error message
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string, number)} onError Function to call with an error message
  *    and http status in case of failure.
  */
 AppStorage.populateTable = function (jsonData, overwrite, onSuccess, onError) {
   if (!jsonData || !jsonData.length) {
     return;
   }
-  var tables = getDatabase(Applab.channelId).child('tables');
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handlePopulateTable.bind(req, onSuccess, onError);
+  var url = '/v3/shared-tables/' + Applab.channelId;
+  if (overwrite) {
+    url += "?overwrite=1";
+  }
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(jsonData);
+};
 
-  // TODO: Respect overwrite
-  tables.set(jsonData, function (error) {
-    if (error) {
-      onError(error);
-    } else {
-      onSuccess();
+var handlePopulateTable = function (onSuccess, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+
+  if (this.status != 200) {
+    if (onError) {
+      onError('error populating tables: unexpected http status ' + this.status, this.status);
     }
-  });
+    return;
+  }
+  if (onSuccess) {
+    onSuccess();
+  }
 };
 
 /**
@@ -347,22 +345,40 @@ AppStorage.populateTable = function (jsonData, overwrite, onSuccess, onError) {
  *     "button_color": "blue"
  *   }
  * @param {bool} overwrite Whether to overwrite a table if it already exists.
- * @param {function ()} onSuccess Function to call on success.
- * @param {function (string, number)} onError Function to call with an error message
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string, number)} onError Function to call with an error message
  *    and http status in case of failure.
  */
 AppStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onError) {
   if (!jsonData || !jsonData.length) {
     return;
   }
-  // TODO: Test this; Implement overwrite.
-  var tables = getDatabase(Applab.channelId).child('tables');
-  var keyValues = getKeyValues(Applab.channelId);
-  tables.set(jsonData, function (error) {
-    if (!error) {
-      onSuccess();
-    } else {
-      onError(error);
+  var req = new XMLHttpRequest();
+
+  req.onreadystatechange = handlePopulateKeyValue.bind(req, onSuccess, onError);
+  var url = '/v3/shared-properties/' + Applab.channelId;
+
+  if (overwrite) {
+    url += "?overwrite=1";
+  }
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(jsonData);
+};
+
+var handlePopulateKeyValue = function (onSuccess, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+
+  if (this.status != 200) {
+    if (onError) {
+      onError('error populating kv: unexpected http status ' + this.status, this.status);
     }
-  });
+    return;
+  }
+  if (onSuccess) {
+    onSuccess();
+  }
 };
