@@ -8,10 +8,14 @@ level 'PS U3 Q1-2'
 level 'PS U3 Q1-3'
 level 'PS U3 Q1-4'
 level 'PS U3 Q1-5'
+
 page
 level 'PS U3 Q1-6'
-level 'PS U3 Q1-7'         # TextMatch
-level 'ECSPD your goals'   # FreeResponse
+text 'sample external 1'    # External
+level 'PS U3 Q1-7'          # TextMatch
+text 'sample external 2'    # External
+level 'ECSPD your goals'    # FreeResponse
+
 page
 level 'PS U3 Q1-8'
 level 'PS U3 Q1-9'
