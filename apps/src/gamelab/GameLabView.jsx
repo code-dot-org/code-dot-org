@@ -55,7 +55,7 @@ var GameLabView = React.createClass({
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
         <InstructionsWithWorkspace
-          hideSource={this.props.hideSource}/>
+          hideSource={this.props.hideSource}
           codeWorkspace={this.props.codeWorkspace}/>
       </div>
     );
