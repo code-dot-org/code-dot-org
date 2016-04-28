@@ -28,6 +28,7 @@ var dom = require('../dom');
 var experiments = require('../experiments');
 
 var actions = require('./actions');
+var setInitialLevelProps = require('../redux/levelProperties').setInitialLevelProps;
 var createStore = require('../redux').createStore;
 var gamelabReducer = require('./reducers').gamelabReducer;
 var GameLabView = require('./GameLabView');
@@ -179,22 +180,10 @@ GameLab.prototype.init = function (config) {
     });
   }.bind(this);
 
-  this.reduxStore_.dispatch(actions.setInitialLevelProps({
-    assetUrl: this.studioApp_.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share
-  }));
-
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
-  var extraControlRowsHtml = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
-    showButtons: true,
-    showConsole: true,
-    showWatch: true,
-  });
-  var extraControlRows = <ProtectedStatefulDiv dangerouslySetInnerHTML={{ __html : extraControlRowsHtml }} />;
 
-  this.reduxStore_.dispatch(actions.setInitialLevelProps({
+  this.reduxStore_.dispatch(setInitialLevelProps({
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
@@ -202,6 +191,9 @@ GameLab.prototype.init = function (config) {
     instructionsInTopPane: config.showInstructionsInTopPane,
     puzzleNumber: config.level.puzzle_number,
     stageTotal: config.level.stage_total,
+    showDebugButtons: true,
+    showDebugConsole: true,
+    showDebugWatch: true,
   }));
 
   // Push project-sourced animation metadata into store
@@ -214,7 +206,7 @@ GameLab.prototype.init = function (config) {
       localeDirection={this.studioApp_.localeDirection()}
       editCode={!!config.level.editCode}
       readonlyWorkspace={!!config.readonlyWorkspace}
-      extraControlRows={extraControlRows}
+      showDebugger={true}
     />
   );
 
