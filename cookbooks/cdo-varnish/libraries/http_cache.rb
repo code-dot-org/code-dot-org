@@ -108,7 +108,10 @@ class HttpCache
       dashboard: {
         behaviors: [
           {
-            path: '/v3/assets/*',
+            path: %w(
+              /v3/assets/*
+              /v3/animations/*
+            ),
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
