@@ -8,7 +8,7 @@ var constants = require('./constants');
 var ApplabInterfaceMode = constants.ApplabInterfaceMode;
 var instructions = require('../redux/instructions');
 var levelProperties = require('../redux/levelProperties');
-var isRunning = require('../redux/isRunning');
+var runState = require('../redux/runState');
 
 function currentScreenId(state, action) {
   state = state || null;
@@ -46,7 +46,7 @@ var rootReducer = combineReducers({
   level: levelProperties.default,
   interfaceMode: interfaceMode,
   instructions: instructions.default,
-  isRunning: isRunning.default
+  runState: runState.default
 });
 
 module.exports = { rootReducer: rootReducer };
