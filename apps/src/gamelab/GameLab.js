@@ -187,12 +187,6 @@ GameLab.prototype.init = function (config) {
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
-  var extraControlRowsHtml = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
-    showButtons: true,
-    showConsole: true,
-    showWatch: true,
-  });
-  var extraControlRows = <ProtectedStatefulDiv dangerouslySetInnerHTML={{ __html : extraControlRowsHtml }} />;
 
   this.reduxStore_.dispatch(actions.setInitialLevelProps({
     assetUrl: this.studioApp_.assetUrl,
@@ -202,6 +196,9 @@ GameLab.prototype.init = function (config) {
     instructionsInTopPane: config.showInstructionsInTopPane,
     puzzleNumber: config.level.puzzle_number,
     stageTotal: config.level.stage_total,
+    showDebugButtons: true,
+    showDebugConsole: true,
+    showDebugWatch: true,
   }));
 
   // Push project-sourced animation metadata into store
@@ -214,7 +211,7 @@ GameLab.prototype.init = function (config) {
       localeDirection={this.studioApp_.localeDirection()}
       editCode={!!config.level.editCode}
       readonlyWorkspace={!!config.readonlyWorkspace}
-      extraControlRows={extraControlRows}
+      showDebugger={true}
     />
   );
 

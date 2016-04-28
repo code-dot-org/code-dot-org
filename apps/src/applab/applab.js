@@ -655,7 +655,6 @@ Applab.init = function (config) {
                           !config.level.debuggerDisabled);
   var breakpointsEnabled = !config.level.debuggerDisabled;
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var extraControlRows;
 
   // Construct a logging observer for interpreter events
   if (!config.hideSource) {
@@ -664,11 +663,6 @@ Applab.init = function (config) {
 
   if (showDebugButtons || showDebugConsole) {
     debuggerUi = new JsDebuggerUi(Applab.runButtonClick);
-    var extraControlRowsHtml = debuggerUi.getMarkup(studioApp.assetUrl, {
-      showButtons: showDebugButtons,
-      showConsole: showDebugConsole
-    });
-    extraControlRows = <ProtectedStatefulDiv dangerouslySetInnerHTML={{ __html : extraControlRowsHtml }} />;
   }
 
   config.loadAudio = function () {
@@ -844,6 +838,9 @@ Applab.init = function (config) {
     instructionsInTopPane: config.showInstructionsInTopPane,
     puzzleNumber: config.level.puzzle_number,
     stageTotal: config.level.stage_total,
+    showDebugButtons: showDebugButtons,
+    showDebugConsole: showDebugConsole,
+    showDebugWatch: false,
   }));
 
   Applab.reduxStore.dispatch(changeInterfaceMode(
@@ -856,7 +853,7 @@ Applab.init = function (config) {
       localeDirection={studioApp.localeDirection()}
       editCode={!!config.level.editCode}
       readonlyWorkspace={Applab.reduxStore.getState().level.isReadOnlyWorkspace}
-      extraControlRows={extraControlRows}
+      showDebugger={showDebugButtons || showDebugConsole}
     />
   );
 
