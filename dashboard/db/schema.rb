@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160427181822) do
+ActiveRecord::Schema.define(version: 20160428020044) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -730,6 +730,7 @@ ActiveRecord::Schema.define(version: 20160427181822) do
     t.integer  "conditionals_d3_count",          limit: 4, default: 0
     t.integer  "conditionals_d4_count",          limit: 4, default: 0
     t.integer  "conditionals_d5_count",          limit: 4, default: 0
+    t.datetime "basic_proficiency_at"
   end
 
   add_index "user_proficiencies", ["user_id"], name: "index_user_proficiencies_on_user_id", using: :btree
