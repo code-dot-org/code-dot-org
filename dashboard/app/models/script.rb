@@ -38,7 +38,7 @@ class Script < ActiveRecord::Base
 
   include SerializedProperties
 
-  serialized_attrs %w(pd admin_required)
+  serialized_attrs %w(pd admin_required professional_learning_course)
 
   def Script.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
@@ -346,6 +346,7 @@ class Script < ActiveRecord::Base
           properties: {
                        pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
                        admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
+                       professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course] # default false
                       },
         }, stages.map{|stage| stage[:levels]}.flatten]
       end
@@ -486,6 +487,7 @@ class Script < ActiveRecord::Base
           properties: {
                        pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
                        admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
+                       professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course] # default false
           }
         }, script_data[:stages].map { |stage| stage[:levels] }.flatten)
         Script.update_i18n(i18n)
