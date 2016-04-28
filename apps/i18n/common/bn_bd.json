@@ -233,5 +233,9 @@
   "watchVideo": "ভিডিও দেখুন",
   "when": "যখন",
   "whenRun": "চালানোর সময়",
-  "workspaceHeaderShort": "কর্মপরিসর:"
+  "workspaceHeaderShort": "কর্মপরিসর:",
+  "builtOnCodeStudio": "Built on Code Studio",
+  "copyright": "Copyright",
+  "privacyPolicy": "Privacy Policy",
+  "reportAbuse": "Report Abuse"
 }
