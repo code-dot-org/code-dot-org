@@ -1,0 +1,38 @@
+name 'ECS PD1 teaching strategies'
+title 'ECS PD1 teaching strategies'
+description 'ECSPD1 teaching strategies'
+css 'unplugged'
+
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+# Teaching Strategies
+<br>
+As a learner in this model, you will have the opportunity to look at teaching strategies that use discovery through accessible topics with inquiry to solve real world problems that are culturally relevant, addresses social and ethical issues and teaches students about becoming members of a “computing community of practice.” What is so great about these strategies, is that can be applied to all courses of study, not just computer science.
+<br>
+
+<br>
+The lessons follow a pedagogical approach that comes from research done by Jane Margolis, who wrote - Stuck in the Shallow End and Unlocking the Clubhouse: Women in Computing, in addition to Linda Darling-Hammond, who wrote – Powerful Learning: What we Know About Teaching for Understanding, using the following practices:
+<br>
+
+<ul><li> Creating ambitious and meaningful tasks that reflect how knowledge is used in the field</li>
+<li> Engaging students in active learning, so that they apply and test what they know</li>
+<li> Drawing connections to students’ prior knowledge and experiences</li>
+<li> Diagnosing student understanding in order to scaffold the learning process step by step</li>
+<li> Assessing student learning continuously and adapting teaching to student needs</li>
+<li> Providing clear standards, constant feedback, and opportunities for work</li>
+<li> Encouraging strategic and metacognitive thinking, so that students can learn to evaluate and guide their own teaching.</li></ul>
+
+<img align="left" src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png" height="910" width="400" hspace="20">
+<img align="right" src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png" height="910" width="400" hspace="20">
+
+<br>
+<br>
+Many of these practices you already use in class, others will be new , either way, we will have time to experience these successful teaching approaches as both a learner and facilitator.
+<br>
+
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

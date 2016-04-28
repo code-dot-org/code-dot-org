@@ -1,0 +1,26 @@
+name 'ECSPD1 congratulations end'
+title 'ECS PD1 congratulations end'
+Description 'ECS PD1 Congratulations End of PLP'
+css 'unplugged'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+## Congratulations! 
+
+You've just finished your first phase of the online professional learning program! Thank you so much for spending the time to complete this introduction, where we hope you learned more about the program you've just embarked on. 
+<br>
+<br>
+Please take time to write down strategies in your journal that resonate with you or tips and tricks that will help you break down the barriers of equity and access so all of your students will see themselves as contributing members of your computer science course. 
+<br>
+<br>
+#####<strong>We'll see you this summer at your in-person professional learning program!</strong> 
+<br>
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/juXqFtaPmNk?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<br>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

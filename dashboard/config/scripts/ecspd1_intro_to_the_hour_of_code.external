@@ -1,0 +1,34 @@
+name 'ECSPD1  intro to The Hour of Code'
+title 'Introduction to The Hour of Code'
+description 'Introduction to The Hour of code'
+
+css 'unplugged' 
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+
+# Breaking Barriers with The Hour of Code
+
+In order to solve the barriers of equity, access and the lack of cultural awareness, Code.org introduced “ The Hour of Code” in 2013.  The Hour of Code was designed so that any teacher, in any grade, in any subject could expose their students to a variety of computer science concepts, whether they were on or off the computer to peak students interest.  
+<br>
+This doesn’t mean that after just one hour students would then be experts in computer science, or that they wouldn’t need any other course or time learning about the concepts of computer science.  It would be the first step into exploring computer science, seeing the tip of the iceberg to endless opportunities in a new field that is changing how we live, work and play.
+<br>
+
+<br>
+#####<em>If you haven't yet watched The Hour Of Code video's, take a moment to feel the excitement and energy that they present to get teachers, students,schools, communities and nations to take action!</em>
+>## 2013
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FC5FbmsH4fw" frameborder="0" allowfullscreen></iframe>
+<br>
+
+>## 2014
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rH7AjDMz_dc" frameborder="0" allowfullscreen></iframe>
+<br>
+
+>## 2015
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ofze6CWUCx8" frameborder="0" allowfullscreen></iframe>
+<br>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
