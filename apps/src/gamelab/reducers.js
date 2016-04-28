@@ -41,7 +41,10 @@ function level(state, action) {
         'instructionsMarkdown',
         'instructionsInTopPane',
         'puzzleNumber',
-        'stageTotal'
+        'stageTotal',
+        'showDebugButtons',
+        'showDebugConsole',
+        'showDebugWatch',
       ];
       Object.keys(action.props).forEach(function (key) {
         if (-1 === allowedKeys.indexOf(key)) {
