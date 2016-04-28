@@ -75,7 +75,7 @@ var GameLab = function () {
   this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
   /** @type {JsDebuggerUi} */
-  this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
+  this.debugger_ = null;
 
   this.eventHandlers = {};
   this.Globals = {};
@@ -110,7 +110,9 @@ module.exports = GameLab;
  */
 GameLab.prototype.log = function (object) {
   this.consoleLogger_.log(object);
-  this.debugger_.log(object);
+  if (this.debugger_) {
+    this.debugger_.log(object);
+  }
 };
 
 /**
@@ -177,10 +179,12 @@ GameLab.prototype.init = function (config) {
   // able to turn them on.
   config.showInstructionsInTopPane = experiments.isEnabled('topInstructions');
 
+  var breakpointsEnabled = !config.level.debuggerDisabled;
+
   var onMount = function () {
     config.loadAudio = this.loadAudio_.bind(this);
     config.afterInject = this.afterInject_.bind(this, config);
-    config.afterEditorReady = this.afterEditorReady_.bind(this, true);
+    config.afterEditorReady = this.afterEditorReady_.bind(this, breakpointsEnabled);
 
     // Store p5specialFunctions in the unusedConfig array so we don't give warnings
     // about these functions not being called:
@@ -193,9 +197,11 @@ GameLab.prototype.init = function (config) {
       dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
     }
 
-    this.debugger_.initializeAfterDomCreated({
-      defaultStepSpeed: 1
-    });
+    if (this.debugger_) {
+      this.debugger_.initializeAfterDomCreated({
+        defaultStepSpeed: 1
+      });
+    }
   }.bind(this);
 
   this.reduxStore_.dispatch(actions.setInitialLevelProps({
@@ -206,12 +212,21 @@ GameLab.prototype.init = function (config) {
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
-  var extraControlRowsHtml = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
-    showButtons: true,
-    showConsole: true,
-    showWatch: true,
-  });
-  var extraControlRows = <ProtectedStatefulDiv dangerouslySetInnerHTML={{ __html : extraControlRowsHtml }} />;
+  var showDebugButtons = (!config.hideSource &&
+                          config.level.editCode &&
+                          !config.level.debuggerDisabled);
+  var showDebugConsole = !config.hideSource && config.level.editCode;
+  var extraControlRows;
+
+  if (showDebugButtons || showDebugConsole) {
+    this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
+    var extraControlRowsHtml = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
+      showButtons: showDebugButtons,
+      showConsole: showDebugConsole,
+      showWatch: true,
+    });
+    extraControlRows = <ProtectedStatefulDiv dangerouslySetInnerHTML={{ __html : extraControlRowsHtml }} />;
+  }
 
   this.reduxStore_.dispatch(actions.setInitialLevelProps({
     assetUrl: this.studioApp_.assetUrl,
@@ -430,7 +445,9 @@ GameLab.prototype.reset = function (ignore) {
   this.preloadInProgress = false;
   this.globalCodeRunsDuringPreload = false;
 
-  this.debugger_.detach();
+  if (this.debugger_) {
+    this.debugger_.detach();
+  }
   this.consoleLogger_.detach();
 
   // Discard the interpreter.
@@ -780,7 +797,9 @@ GameLab.prototype.initInterpreter = function () {
   });
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
-  this.debugger_.attachTo(this.JSInterpreter);
+  if (this.debugger_) {
+    this.debugger_.attachTo(this.JSInterpreter);
+  }
   this.JSInterpreter.parse({
     code: this.studioApp_.getCode(),
     blocks: dropletConfig.blocks,
