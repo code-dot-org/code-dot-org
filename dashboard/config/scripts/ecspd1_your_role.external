@@ -1,0 +1,49 @@
+name 'ECSPD1 your role'
+title 'ECS your role as a learner and facilitator'
+description 'ECS Your Role as a Learner and Facilitator'
+css 'unplugged' 
+
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+# Your Role as a Learner and Facilitator
+<br>
+Your week long in-person workshop during the summer will give you an opportunity to learn about the pedagogical approaches that have been mentioned in combination with looking at the curriculum and activities of Unit 1 – Human Computer Interaction and Unit 2 – Problem Solving with a new perspective focusing on equity and access, in the role of as both a learner and a facilitator.  
+<br>
+As you experiene the curriculum content as an active learner, you’ll gain important insights into the experiences your students will have during the academic year.  By interacting with the curriculum content as a facilitator, you’ll gain essential experiencing planning and delivering lessons. 
+<br>
+
+<br>
+####Teaching and Learning in Context
+The workshop and activities encourage participants and facilitators to share their expertise from the field and collaborate on strategies to bring ECS to all students.  The professional development program provides an opportunity to learn from everyone in the room.  Facilitators model behavior and pedagogical approaches, and participants share their own practices by planning and delivering lessons.
+<br>
+
+<br>
+####A Collaborative, Participant-Centric Approach
+We will participate in and plan a few lessons from Units 1, 2, and 3 via demonstrations from the facilitators, where you will get to take on the role of a learner, in addition to having the opportunity to plan and co facilitate a lesson with a group of teachers, taking on the role of a facilitator.  One of the teaching approaches we use for this is the teacher, learner, observer (TLO) model where we focus on best teaching practices and reflect on the lessons as they might play out in the classroom, so that you can meet the needs of your students being inclusive of all learners, rather than just focusing on programming.
+<br>
+
+<br>
+<img align="left" src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png" height="910" width="400" hspace="20">
+<br>
+<br> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<em>For more details on our TLO model, check out this full description</em> [(*source*)](https://docs.google.com/document/d/1LbGH2E5pvvc_mWzW8ssr7vcA8pa1cZGPeHKbjj-_g_8/edit#) 
+<br>
+<br>
+
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

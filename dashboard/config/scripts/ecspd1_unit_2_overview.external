@@ -1,0 +1,70 @@
+name 'ECSPD1 unit 2 overview'
+title 'ECS unit 2 overview'
+description 'ECS Unit 2 Overview'
+css 'unplugged' 
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+# ECS Unit 2 Overview
+<br>
+To help you become familiar with Unit 2: Problem Solving, let’s explore the topics to be addressed and how they are intended to tie in together:
+
+<ul><li>Students will be given opportunities to become “computational thinkers” by applying a variety of problem--‐solving techniques to create solutions to problems that are situated in a variety of contexts.</li><br>
+ 
+<li>The range of contexts given motivates the need for students to think abstractly and apply known algorithms where appropriate, but also create new algorithms they come up with in teams. Analysis of various solutions and algorithms will highlight problems that are not easily solved by computer and for which there are no known solutions.</li> <br>
+ 
+<li>This unit also focuses on the connections between mathematics and computer science, where students will be introduced to selected topics in discrete mathematics including Boolean logic, functions, graphs and the binary number system. Students are also introduced to searching and sorting algorithms and graphs.</li><br>
+ 
+<br>
+<img align="left" src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png" height="910" width="400" hspace="20">
+<br>
+<br> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<img align="left" src="https://code.org/images/edquote1.png" height="910" width="400" hspace="20">
+<br>
+<br> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+By the end of Unit 2, students will be able to apply the problem solving process to Unit 3 designing web pages and Unit 4 programming, and then again in Units 5 and Unit 6 in new situations.
+<br>
+
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

@@ -25,7 +25,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "// Use randomNumber() to draw some\r\n//randomized shapes\r\n",
+    "start_blocks": "// Use randomNumber() to draw some\r\n// randomized shapes\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -48,11 +48,14 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "markdown_instructions": "# Randomized Shapes\r\n\r\nLet's see how we can used randomization in our drawings. Each of the parameters from the shape functions you've seen can be replaced with calls to `randomNumber()`. Try drawing some images that are slightly randomized each time.\r\n\r\n# Do This\r\n\r\nPick a shape function and use calls to `randomNumber()` in place of one or more of the parameters. Maker sure you run it a few times so you can see the effect of randomization.",
-    "instructions": "Pick a shape function and use calls to randomNumber() in place of one or more of the parameters. Maker sure you run it a few times so you can see the effect of randomization."
+    "markdown_instructions": "# Randomized Shapes\r\n\r\nLet's see how we can used randomization in our drawings. Each of the inputs from the shape blocks you've seen can be replaced with calls to `randomNumber()`. Try drawing some images that are slightly randomized each time. You might try changing the position randomly by using `randomNumber()` in place of the x or y inputs, or you could change the size of the shape itself by randomizing the length or width inputs.\r\n\r\n# Do This\r\n\r\nPick a shape function and use calls to `randomNumber()` in place of one or more of the parameters. Make sure you run it a few times so you can see the effect of randomization.",
+    "instructions": "Pick a shape block and use calls to randomNumber() in place of one or more of the parameters. Maker sure you run it a few times so you can see the effect of randomization.",
+    "show_d_pad": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>
