@@ -810,13 +810,19 @@ SQL
 
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_proficiency = UserProficiency.where(user_id: user_id).first_or_create!
-      user_proficiency.last_progress_at = Time.now
+      time_now = Time.now
+      user_proficiency.last_progress_at = time_now
 
       ConceptDifficulties::CONCEPTS.each do |concept|
         difficulty_number = level_concept_difficulty.send(concept)
         if !difficulty_number.nil?
           user_proficiency.increment_level_count(concept, difficulty_number)
         end
+      end
+
+      if user_proficiency.basic_proficiency_at.nil? &&
+          user_proficiency.basic_proficiency?
+        user_proficiency.basic_proficiency_at = time_now
       end
 
       user_proficiency.save!
