@@ -235,11 +235,7 @@ GameLab.prototype.init = function (config) {
     this.reduxStore_.dispatch(actions.setInitialAnimationMetadata(config.initialAnimationMetadata));
   }
 
-  var codeWorkspace = (
-    <Provider store={this.reduxStore_}>
-      <ConnectedCodeWorkspace/>
-    </Provider>
-  );
+  var codeWorkspace = <ConnectedCodeWorkspace/>;
 
   ReactDOM.render(<Provider store={this.reduxStore_}>
     <GameLabView
