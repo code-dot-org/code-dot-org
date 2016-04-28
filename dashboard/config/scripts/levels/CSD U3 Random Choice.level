@@ -7,13 +7,12 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "console.log": null
     },
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "// Use randomNumber() to randomly return either 0 or 1\r\nconsole.log(randomNumber(10));",
+    "start_blocks": "// Use randomNumber() to randomly return either 0 or 1\r\nconsole.log(randomNumber(__,__));",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -36,7 +35,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "markdown_instructions": "# Making Random Choices\r\n\r\nYou probably noticed that the code from the last puzzle did a few things.\r\n* Always produced a whole number (also called an **integer**).\r\n* The highest number that could be produced was 10, which is the **input** we passed to the `randomNumber` function.\r\n* The lowest number that could be produced was 0.\r\n\r\nLet's create a program that can randomly make decisions for us. We'll use a **binary** representation where `0` means `false` and `1` means `true`.\r\n\r\n# Do This\r\n\r\nWrite a program that randomly writes out either 0 or 1 using `console.log()`.\r\n\r\nHave your partner ask some true/false or yes/no questions and use your program to randomly answer.",
+    "markdown_instructions": "# Making Random Choices\r\n\r\nYou probably noticed that the code from the last puzzle did a few things.\r\n* Always produced a whole number (also called an **integer**).\r\n* The lowest number that could be produced was 0, whis is the first **input** we passed to the `randomNumber` block.\r\n* The highest number that could be produced was 10, which is the sencond **input** to the block.\r\n\r\nLet's create a program that can randomly make decisions for us. We'll use a **binary** representation where `0` means `false` and `1` means `true`.\r\n\r\n# Do This\r\n\r\nWrite a program that randomly writes out either 0 or 1 using `console.log()`.\r\n\r\nHave your partner ask some true/false or yes/no questions and use your program to randomly answer.",
     "instructions": "Use the randomNumber() block to generate either 0 or 1",
     "callout_json": "[]",
     "show_d_pad": "false"

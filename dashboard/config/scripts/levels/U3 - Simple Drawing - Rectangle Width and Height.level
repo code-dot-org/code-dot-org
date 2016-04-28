@@ -1,0 +1,61 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-27T18:07:09.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "rect": {
+        "params": [
+          "0",
+          "0",
+          "200",
+          "200"
+        ],
+        "paletteParams": [
+          "x",
+          "y",
+          "width",
+          "height"
+        ]
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "markdown_instructions": "# Drawing Rules\r\n\r\nSo what did you discover on the last level?\r\n\r\n* What do each of the 4 openings control?\r\n\r\n\t* First Opening - controls the **location of the rectangle from left to right** - we call this the **x position**\r\n    * Second Opening - controls the **location of the rectangle from top to bottom** - we call this the **y position**\r\n    * Third Opening - controls the **width** of the rectangle\r\n    * Fourth Opening - controls the **height** of the rectangle\r\n\r\n* What is the size of the drawing area?\r\n\r\n\t* Width - 400\r\n    * Height - 400\r\n\r\n* So where is (0,0) or x = 0 and y = 0?\r\n\r\n\t* The **upper left corner of the grid!**\r\n\r\n# Do This\r\n\r\nWe have provided you with code for a rectangle that draws in the upper left corner when you run the program. Using your new knowledge of the workspace and the inputs for a rectangle:\r\n\r\n* **Change the width and height of the rectangle so that it fills the whole drawing area**\r\n* **HINT:** Remember that the rectangle block is `rect(x, y, width, height)` in that order",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"element_id\": \"#runButton\",\r\n  \"callout_text\": \"Don't forget to click run to test your program\",\r\n  \"qtip_config\": {\r\n   \t\"position\": {\r\n      \"my\": \"bottom left\",\r\n      \"at\": \"top right\",\r\n      \"adjust\": {\r\n       \"x\": 0,\r\n       \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "instructions": "Do This",
+    "start_blocks": "rect(0,0,30,50);",
+    "show_d_pad": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

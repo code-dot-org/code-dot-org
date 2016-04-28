@@ -57,6 +57,7 @@
 #  conditionals_d3_count          :integer          default(0)
 #  conditionals_d4_count          :integer          default(0)
 #  conditionals_d5_count          :integer          default(0)
+#  basic_proficiency_at           :datetime
 #
 # Indexes
 #

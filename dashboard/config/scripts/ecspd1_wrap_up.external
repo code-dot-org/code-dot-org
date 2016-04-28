@@ -1,0 +1,20 @@
+name 'ECSPD1 wrap up'
+title 'ECS unit wrap up'
+description 'ECS Wrap Up'
+css 'unplugged'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+# Wrap Up and Next Steps
+<br>
+Hopefully you’ve noticed, that throughout the next 15 months of your journey, you will be using teaching approaches that focus on broadening the participation of all students, so more of your typically underrepresented students will want to take computer science courses because you are more inclusive and teaching with this new lens of equity, access and cultural awareness. 
+<br>
+
+<br>
+You will receive (or already have received) an email with workshop registration information communication from Code.org or your Professional Learning Program in a seperate email. If you need ot reach Code.org you can send and email to  teacher@code.org.  
+
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN
