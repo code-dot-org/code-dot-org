@@ -5,8 +5,7 @@ Feature: App Lab Eyes
 
 Scenario: Button shows up on top of canvas
   When I open my eyes to test "applab eyes"
-  And I am on "http://learn.code.org/projects/applab/new"
-  And I rotate to landscape
+  Given I start a new Applab project
   Then I see no difference for "initial load"
   And I press "show-code-header"
   And I add code for a canvas and a button
@@ -40,7 +39,6 @@ Scenario: App Lab UI elements from initial code and html
 
 Scenario: Text area with multiple lines, radio button, checkbox
   Given I start a new Applab project
-  And I rotate to landscape
   And I switch to design mode
   And I open my eyes to test "applab design mode"
 
@@ -160,9 +158,8 @@ Scenario: Applab Instructions Resize
   Then I close my eyes
 
 Scenario: Applab debugging
+  Given I start a new Applab project
   When I open my eyes to test "Applab debugging"
-  And I am on "http://learn.code.org/projects/applab/new"
-  And I wait to see "#runButton"
   And I press "show-code-header"
   And I add code for a canvas and a button
   Then I press "stepInButton"
