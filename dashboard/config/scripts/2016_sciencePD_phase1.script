@@ -7,7 +7,7 @@ pd 'true'
 stage 'Introduction to PD'
 level 'sciPD Intro'
 level 'PDECS tour 2016-17 CSinSci'
-level 'sciPD commitment 2016-17'
+# level 'sciPD commitment 2016-17'
 level 'sciPD commitment match'
 
 stage 'What to Expect'
