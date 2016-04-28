@@ -17,6 +17,9 @@ FactoryGirl.define do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 03, 14)
       admin false
+      factory :admin_teacher do
+        admin true
+      end
       factory :facilitator do
         name 'Facilitator Person'
         after(:create) do |facilitator|
@@ -47,6 +50,13 @@ FactoryGirl.define do
     factory :young_student do
       user_type User::TYPE_STUDENT
       birthday Time.zone.today - 10.years
+    end
+
+    factory :student_of_admin do
+      after(:create) do |user|
+        section = create(:section, user: create(:admin_teacher))
+        create(:follower, section: section, student_user: user)
+      end
     end
   end
 
