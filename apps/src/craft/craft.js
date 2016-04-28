@@ -13,7 +13,7 @@ var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
 var MusicController = require('../MusicController');
 var AppView = require('../templates/AppView');
-var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var CodeWorkspace = require('../templates/CodeWorkspace');
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
 
 var ResultType = studioApp.ResultType;
@@ -237,18 +237,6 @@ Craft.init = function (config) {
       break;
   }
 
-  var generateCodeWorkspaceHtmlFromEjs = function () {
-    return codeWorkspaceEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        localeDirection: studioApp.localeDirection(),
-        editCode: config.level.editCode,
-        blockCounterClass: 'block-counter-default',
-        readonlyWorkspace: config.readonlyWorkspace
-      }
-    });
-  };
-
   var onMount = function () {
     studioApp.init($.extend({}, config, {
       forceInsertTopBlock: 'when_run',
@@ -317,6 +305,14 @@ Craft.init = function (config) {
     }
   };
 
+  var codeWorkspace = (
+    <CodeWorkspace
+      localeDirection={studioApp.localeDirection()}
+      editCode={!!config.level.editCode}
+      readonlyWorkspace={!!config.readonlyWorkspace}
+    />
+  );
+
   ReactDOM.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
     isEmbedView: !!config.embed,
@@ -324,7 +320,7 @@ Craft.init = function (config) {
     hideSource: !!config.hideSource,
     noVisualization: false,
     isRtl: studioApp.isRtl(),
-    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
+    codeWorkspace: codeWorkspace,
     visualizationColumn: <CraftVisualizationColumn/>,
     onMount: onMount
   }), document.getElementById(config.containerId));

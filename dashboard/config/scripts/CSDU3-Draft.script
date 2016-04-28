@@ -59,4 +59,11 @@ level 'CSD U3 Variables draw loop xy'
 level 'CSD U3 Variables draw loop rgb'
 level 'CSD U3 Variables CHALLENGE gamelab gary'
 
+stage 'Expressions and Reassignment'
+level 'CSD U3 Variables2 SFLP'
+level 'CSD U3 Variables2 STOP intro expressions'
+level 'CSD U3 Variables2 expressions'
+level 'CSD U3 Variables2 expressions in variables'
+level 'CSD U3 Variables2 expressions in commands'
+
 stage' Sprite Properties and Mod'

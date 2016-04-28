@@ -1,0 +1,15 @@
+- course_unit = @enrollment_unit_assignment.plc_course_unit
+
+You will be assigned these modules
+- @enrolled_modules.each do |enrolled_module|
+  %li
+    = enrolled_module.name_with_required_tag
+
+%br
+You can change your course enrollment here
+= form_tag(action: 'confirm_assignments') do
+  - options = options_with_learning_module_names_and_required_tag(course_unit)
+  = select_tag 'learning_module_ids', options_for_select(options, selected: @enrolled_modules.pluck(:id), disabled: course_unit.get_required_learning_module_ids),
+    {multiple: true, size: options.size, style: 'width: 100%'}
+
+  = submit_tag('Confirm Module Selections', id: 'confirm_assignments')

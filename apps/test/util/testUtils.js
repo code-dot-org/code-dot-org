@@ -40,6 +40,21 @@ exports.setExternalGlobals = function () {
       exceedsAbuseThreshold: function () { return false; },
       getCurrentId: function () { return 'fake_id'; },
       isEditing: function () { return true; }
+    },
+    assets: {
+      showAssetManager: function () {},
+      listStore: {
+        reset() {},
+        add() {
+          return [];
+        },
+        remove() {
+          return [];
+        },
+        list() {
+          return [];
+        },
+      },
     }
   });
   window.marked = function (str) {

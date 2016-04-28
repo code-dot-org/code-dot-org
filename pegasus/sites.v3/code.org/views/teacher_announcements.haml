@@ -1,4 +1,5 @@
 - cta_url = CDO.code_org_url("/curriculum/unplugged")
+- petition_url = "http://bit.ly/computersciencepetition"
 
 %div.teacher-announce
   %a.announce-heading-link{:href=>"http://teacherblog.code.org/"}
@@ -16,3 +17,12 @@
     %div{style: "float: right; margin-top: 25px;"}
       %a{:href=>cta_url}
         %button= I18n.t(:dashboard_announce_button_text)
+  %div.announce-content
+    %a{:href=>petition_url}
+      %div.content-img-container
+        %img.content-img{:src=>"/images/fill-300x200/teacher-dashboard/petition-faces.png"}
+    %div.content-text
+      = I18n.t(:dashboard_announce_petition)
+    %div{style: "float: right; margin-top: 25px;"}
+      %a{:href=>petition_url}
+        %button= I18n.t(:dashboard_announce_petition_button)

@@ -25,10 +25,11 @@ var DialogButtons = require('./templates/DialogButtons');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
-var assetListStore = require('./assetManagement/assetListStore');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
+var redux = require('./redux');
+var isRunning = require('./redux/isRunning');
 var copyrightStrings;
 
 /**
@@ -194,6 +195,12 @@ var StudioApp = function () {
    */
   this.wireframeShare = false;
 
+  /**
+   * Redux store that might be provided by the app. Initially give it an empty
+   * interface so that we can assume existence.
+   */
+  this.reduxStore_ = null;
+
   this.onAttempt = undefined;
   this.onContinue = undefined;
   this.onResetPressed = undefined;
@@ -262,6 +269,8 @@ StudioApp.prototype.init = function (config) {
     config = {};
   }
 
+  this.reduxStore_ = config.reduxStore || redux.createFakeStore();
+
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
 
@@ -284,7 +293,7 @@ StudioApp.prototype.init = function (config) {
 
     // Pre-populate asset list
     assetsApi.ajax('GET', '', function (xhr) {
-      assetListStore.reset(JSON.parse(xhr.responseText));
+      dashboard.assets.listStore.reset(JSON.parse(xhr.responseText));
     }, function () {
       // Unable to load asset list
     });
@@ -843,6 +852,8 @@ StudioApp.prototype.toggleRunReset = function (button) {
   if (button !== 'run' && button !== 'reset') {
     throw "Unexpected input";
   }
+
+  this.reduxStore_.dispatch(isRunning.setIsRunning(!showRun));
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');

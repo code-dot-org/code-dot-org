@@ -44,26 +44,7 @@
 }]]></config>
   <blocks>
     <start_blocks>
-      <xml>
-        <block type="when_run" movable="false" deletable="false">
-          <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="get 2 nectar"/>
-            </block>
-          </next>
-        </block>
-        <block type="procedures_defnoreturn" deletable="false" editable="false">
-          <mutation/>
-          <title name="NAME">get 2 nectar</title>
-          <statement name="STACK">
-            <block type="maze_nectar" deletable="false">
-              <next>
-                <block type="maze_nectar" deletable="false"/>
-              </next>
-            </block>
-          </statement>
-        </block>
-      </xml>
+      <xml/>
     </start_blocks>
     <toolbox_blocks>
       <xml>
@@ -76,8 +57,6 @@
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="maze_nectar"/>
-        <block type="maze_honey"/>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
@@ -86,13 +65,13 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="procedures_callnoreturn">
           <mutation name="get 2 nectar"/>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
