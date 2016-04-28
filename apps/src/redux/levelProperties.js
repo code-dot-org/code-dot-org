@@ -1,9 +1,9 @@
 var _ = require('lodash');
+var utils = require('../utils');
 
 var SET_INITIAL_LEVEL_PROPS = 'levelProperties/SET_INITIAL_LEVEL_PROPS';
 
-// TODO - use makeEnum so we dont need to do indexOf?
-var ALLOWED_KEYS = [
+var ALLOWED_KEYS = utils.makeEnum(
   'assetUrl',
   'channelId',
   'isDesignModeHidden',
@@ -20,14 +20,14 @@ var ALLOWED_KEYS = [
   'stageTotal',
   'showDebugButtons',
   'showDebugConsole',
-  'showDebugWatch',
-];
+  'showDebugWatch'
+);
 
 var levelInitialState = {
   assetUrl: function () {}
 };
 
-ALLOWED_KEYS.forEach(function (key) {
+Object.keys(ALLOWED_KEYS).forEach(function (key) {
   levelInitialState[key] = levelInitialState[key] || undefined;
 });
 
@@ -36,7 +36,7 @@ module.exports.default = function reducer(state, action) {
 
   if (action.type === SET_INITIAL_LEVEL_PROPS) {
     Object.keys(action.props).forEach(function (key) {
-      if (-1 === ALLOWED_KEYS.indexOf(key)) {
+      if (ALLOWED_KEYS[key] === undefined) {
         throw new Error('Property "' + key + '" may not be set using the ' +
             action.type + ' action.');
       }
