@@ -158,3 +158,17 @@ Scenario: Applab Instructions Resize
   Then I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9?topInstructions=false"
   And I wait to see "#runButton"
   Then I close my eyes
+
+Scenario: Applab debugging
+  When I open my eyes to test "Applab debugging"
+  And I am on "http://learn.code.org/projects/applab/new"
+  And I wait to see "#runButton"
+  And I press "show-code-header"
+  And I add code for a canvas and a button
+  Then I press "stepInButton"
+  And I see no difference for "stepped in once"
+  Then I press "stepInButton"
+  And I see no difference for "stepped in twice"
+  Then I press "stepInButton"
+  And I see no difference for "stepped in thrice"
+  Then I close my eyes
