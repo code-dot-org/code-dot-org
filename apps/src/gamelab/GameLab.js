@@ -34,6 +34,8 @@ var Provider = require('react-redux').Provider;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
+var FOOTER_HEIGHT = 30;
+
 var ButtonState = {
   UP: 0,
   DOWN: 1
@@ -133,6 +135,7 @@ GameLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
+  this.copyrightStrings = config.copyrightStrings;
 
   this.level.softButtons = this.level.softButtons || {};
 
@@ -152,6 +155,22 @@ GameLab.prototype.init = function (config) {
 
   config.dropletConfig = dropletConfig;
   config.appMsg = msg;
+
+  // hide makeYourOwn on the share page
+  config.makeYourOwn = false;
+
+  config.centerEmbedded = false;
+  config.wireframeShare = true;
+  config.noHowItWorks = true;
+
+  config.shareWarningInfo = {
+    hasDataAPIs: function () {
+      return this.hasDataStoreAPIs(this.studioApp_.getCode());
+    }.bind(this),
+    onWarningsComplete: function () {
+      window.setTimeout(this.studioApp_.runButtonClick, 0);
+    }.bind(this)
+  };
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
@@ -227,6 +246,7 @@ GameLab.prototype.init = function (config) {
     <GameLabView
       generateCodeWorkspaceHtml={generateCodeWorkspaceHtmlFromEjs}
       showFinishButton={finishButtonFirstLine && showFinishButton}
+      hideSource={!!config.hideSource}
       onMount={onMount} />
   </Provider>, document.getElementById(config.containerId));
 };
@@ -244,6 +264,15 @@ GameLab.prototype.calculateVisualizationScale_ = function () {
 };
 
 /**
+ * @param {string} code The code to search for Data Storage APIs
+ * @return {boolean} True if the code uses any data storage APIs
+ */
+GameLab.prototype.hasDataStoreAPIs = function (code) {
+  return /createRecord/.test(code) || /updateRecord/.test(code) ||
+      /setKeyValue/.test(code);
+};
+
+/**
  * Code called after the blockly div + blockly core is injected into the document
  */
 GameLab.prototype.afterInject_ = function (config) {
@@ -256,12 +285,16 @@ GameLab.prototype.afterInject_ = function (config) {
         this.onArrowButtonDown.bind(this, ArrowIds[btn]));
   }
   if (this.level.showDPad) {
-    dom.addMouseUpTouchEvent(document.getElementById('studio-dpad-button'),
-        this.resetDPad.bind(this));
     dom.addMouseDownTouchEvent(document.getElementById('studio-dpad-button'),
         this.onDPadButtonDown.bind(this));
   }
+  // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
+  // all touchend events on the page, breaking click events...
   document.addEventListener('mouseup', this.onMouseUp.bind(this), false);
+  var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
+  if (mouseUpTouchEventName) {
+    document.body.addEventListener(mouseUpTouchEventName, this.onMouseUp.bind(this));
+  }
 
   if (this.studioApp_.isUsingBlockly()) {
     // Add to reserved word list: API, local variables in execution evironment
@@ -277,12 +310,86 @@ GameLab.prototype.afterInject_ = function (config) {
   divGameLab.style.width = '400px';
   divGameLab.style.height = '400px';
 
+  if (this.shouldRenderFooter_()) {
+    this.renderFooterInSharedGame_();
+  }
+
   // Update gameLabP5's scale and keep it updated with future resizes:
   this.gameLabP5.scale = this.calculateVisualizationScale_();
 
   window.addEventListener('resize', function () {
     this.gameLabP5.scale = this.calculateVisualizationScale_();
   }.bind(this));
+};
+
+/**
+ * Return whether to render a footer inside the game space
+ * (must sync with game.rb's owns_footer_for_share?)
+ * (Currently, this is disabled until we understand how we want to render)
+ */
+GameLab.prototype.shouldRenderFooter_ = function () {
+  return false;
+  // return this.studioApp_.share;
+};
+
+/**
+ * Render footer inside the game space like applab does (currently disabled)
+ */
+GameLab.prototype.renderFooterInSharedGame_ = function () {
+  var divGameLab = document.getElementById('divGameLab');
+  var footerDiv = document.createElement('div');
+  footerDiv.setAttribute('id', 'footerDiv');
+  divGameLab.parentNode.insertBefore(footerDiv, divGameLab.nextSibling);
+
+  var menuItems = [
+    {
+      text: commonMsg.reportAbuse(),
+      link: '/report_abuse',
+      newWindow: true
+    },
+    {
+      text: msg.makeMyOwnGame(),
+      link: '/projects/gamelab/new',
+      hideOnMobile: true
+    },
+    {
+      text: commonMsg.openWorkspace(),
+      link: location.href + '/view'
+    },
+    {
+      text: commonMsg.copyright(),
+      link: '#',
+      copyright: true
+    },
+    {
+      text: commonMsg.privacyPolicy(),
+      link: 'https://code.org/privacy',
+      newWindow: true
+    }
+  ];
+  if (dom.isMobile()) {
+    menuItems = menuItems.filter(function (item) {
+      return !item.hideOnMobile;
+    });
+  }
+
+  ReactDOM.render(React.createElement(window.dashboard.SmallFooter,{
+    i18nDropdown: '',
+    copyrightInBase: false,
+    copyrightStrings: this.copyrightStrings,
+    baseMoreMenuString: commonMsg.builtOnCodeStudio(),
+    rowHeight: FOOTER_HEIGHT,
+    style: {
+      fontSize: 18
+    },
+    baseStyle: {
+      width: $("#divGameLab").width(),
+      paddingLeft: 0
+    },
+    className: 'dark',
+    menuItems: menuItems,
+    phoneFooter: true
+  }), footerDiv);
 };
 
 /**
@@ -504,10 +611,17 @@ GameLab.prototype.onDPadButtonDown = function (e) {
     document.body.addEventListener(this.dPadState.touchEventName,
         this.dPadState.boundHandler);
   }
-  this.dPadState.startingX = e.clientX;
-  this.dPadState.startingY = e.clientY;
-  this.dPadState.previousX = e.clientX;
-  this.dPadState.previousY = e.clientY;
+  if (e.touches) {
+    this.dPadState.startingX = e.touches[0].clientX;
+    this.dPadState.startingY = e.touches[0].clientY;
+    this.dPadState.previousX = e.touches[0].clientX;
+    this.dPadState.previousY = e.touches[0].clientY;
+  } else {
+    this.dPadState.startingX = e.clientX;
+    this.dPadState.startingY = e.clientY;
+    this.dPadState.previousX = e.clientX;
+    this.dPadState.previousY = e.clientY;
+  }
 
   $('#studio-dpad-button').addClass('active');
 
@@ -539,17 +653,24 @@ GameLab.prototype.onDPadMouseMove = function (e) {
     }
   }
 
-  notifyKeyHelper(window.p5.prototype.LEFT_ARROW, 'left',
-      this.dPadState.startingX, this.dPadState.previousX, e.clientX, false);
-  notifyKeyHelper(window.p5.prototype.RIGHT_ARROW, 'right',
-      this.dPadState.startingX, this.dPadState.previousX, e.clientX, true);
-  notifyKeyHelper(window.p5.prototype.UP_ARROW, 'up',
-      this.dPadState.startingY, this.dPadState.previousY, e.clientY, false);
-  notifyKeyHelper(window.p5.prototype.DOWN_ARROW, 'down',
-      this.dPadState.startingY, this.dPadState.previousY, e.clientY, true);
+  var clientX = e.clientX;
+  var clientY = e.clientY;
+  if (e.touches) {
+    clientX = e.touches[0].clientX;
+    clientY = e.touches[0].clientY;
+  }
 
-  this.dPadState.previousX = e.clientX;
-  this.dPadState.previousY = e.clientY;
+  notifyKeyHelper(window.p5.prototype.LEFT_ARROW, 'left',
+      this.dPadState.startingX, this.dPadState.previousX, clientX, false);
+  notifyKeyHelper(window.p5.prototype.RIGHT_ARROW, 'right',
+      this.dPadState.startingX, this.dPadState.previousX, clientX, true);
+  notifyKeyHelper(window.p5.prototype.UP_ARROW, 'up',
+      this.dPadState.startingY, this.dPadState.previousY, clientY, false);
+  notifyKeyHelper(window.p5.prototype.DOWN_ARROW, 'down',
+      this.dPadState.startingY, this.dPadState.previousY, clientY, true);
+
+  this.dPadState.previousX = clientX;
+  this.dPadState.previousY = clientY;
 };
 
 GameLab.prototype.resetDPad = function () {
