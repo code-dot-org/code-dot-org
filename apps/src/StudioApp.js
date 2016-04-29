@@ -2243,7 +2243,7 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
     return /\bfa\b/.test(node.className);
   });
   var imgBlocksGlyph = _.find(contentSpan.childNodes, function (node) {
-    return /\bblocks-glyph\b/.test(node.className);
+    return /\bblocks_glyph\b/.test(node.src);
   });
 
   // Change glyph
