@@ -154,4 +154,5 @@ If students struggle to use the correct number of blocks to draw a line, point o
 
 [/content]
 
+<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 <link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>

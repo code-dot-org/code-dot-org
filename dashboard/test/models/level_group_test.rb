@@ -15,6 +15,18 @@ class LevelGroupTest < ActiveSupport::TestCase
     "
   end
 
+  # Create an external with name "externalX" where X is passed in
+  def get_external_dsl(id)
+    "
+    name 'external#{id}'
+    title 'an external'
+    markdown <<MARKDOWN
+    ### Sample external
+    This is a first sample of some instruction text that's stored in a .external file.
+MARKDOWN
+    "
+  end
+
   # Test that level.pages for a level_group has the correct offsets and page numbers.
   test 'get level group pages' do
 
@@ -30,6 +42,7 @@ class LevelGroupTest < ActiveSupport::TestCase
   level 'level3'
   page
   level 'level4'
+  text 'external1'
   level 'level5'
   page
   level 'level6'
@@ -42,11 +55,14 @@ class LevelGroupTest < ActiveSupport::TestCase
       levels["multi_#{id}"] = Multi.create_from_level_builder({}, {dsl_text: get_multi_dsl(id)})
     end
 
+    # Create the external level.
+    External.create_from_level_builder({}, {dsl_text: get_external_dsl(1)})
+
     # Create the level_group.
     level_group = LevelGroup.create_from_level_builder({}, {name: 'my_level_group', dsl_text: level_group_input_dsl})
-    pages = level_group.pages
 
     # Validate the page offsets and page_numbers.
+    pages = level_group.pages
     assert_equal 'Long Assessment', level_group.properties['title']
     assert_equal pages[0].offset, 0
     assert_equal pages[0].page_number, 1
@@ -54,6 +70,10 @@ class LevelGroupTest < ActiveSupport::TestCase
     assert_equal pages[1].page_number, 2
     assert_equal pages[2].offset, 5
     assert_equal pages[2].page_number, 3
+
+    # Validate the text index.
+    texts = level_group.properties["texts"]
+    assert_equal texts[0]["index"], 4
   end
 
   # Test that a level_group can't be created if it has duplicate levels.
