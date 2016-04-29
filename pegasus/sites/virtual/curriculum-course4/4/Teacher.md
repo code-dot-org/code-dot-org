@@ -221,16 +221,28 @@ Use these activities to enhance student learning. They can be used as outside of
 - 6c. Troubleshoot systems and applications
 
 ### The activities in this lesson support CSTA K-12 Computer Science Standards:
- 
-- CT.L1:6.01 - Understand and use the basic steps in algorithmic problem-solving  
-- CT.L1:6.02 - Develop a simple understanding of an algorithm using computer-free exercises   
-- CPP.L1:6.05 - Construct a program as a set of step-by-step instructions to be acted out
 
+- CL.L2-03  Collaborate with peers, experts, and others using collaborative practices such as pair programming, working in project teams, and participating in group active learning activities
+- CT.L1:6-01 Understand and use the basic steps in algorithmic problem-solving
+- CT.L1:6-02 Develop a simple understanding of an algorithm using computer-free exercises
+- CPP.L1:6-05 Construct a program as a set of step-by-step instructions to be acted out
 
-### Other standards, including the NGSS, and Common Core Math & Language Arts
+### Next-Gen Science Standards
 
-- CCLA-K:SL.2 - Confirm understanding of a text by asking or answering questions
-- CCLA-1:SL.2 - Ask and answer questions about key details in a text
+- 3-5-ETS1-1 Define a simple design problem reflecting a need or a want that includes specified criteria for success and constraints on materials, time, or cost
+
+### Common Core Mathematical Practices
+
+- 2. Reason abstractly and quantitatively
+- 6. Attend to precision
+- 7. Look for and make use of structure
+- 8. Look for and express regularity in repeated reasoning
+
+### Common Core Language Arts Standards
+
+- L.3.6 Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships
+- L.4.6 Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal precise actions, emotions, or states of being and that are basic to a particular topic
+- L.5.6 Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal contrast, addition, and other logical relationships
 
 [/together]
 
