@@ -1011,6 +1011,10 @@ $aniGifPreviewHeight: 60px;
   }
 }
 
+.workspace-header-height {
+  height: $workspace-headers-height;
+}
+
 .workspace-header {
   text-align: center;
   white-space: nowrap;
@@ -1055,6 +1059,15 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     padding-right: 8px;
     font-size: 15px;
   }
+  .fa-code {
+    font-weight: bold;
+  }
+  .blocks-glyph {
+    display: none;
+    height: 18px;
+    vertical-align: text-bottom;
+    padding-right: 8px;
+  }
 }
 
 #versions-header {
@@ -1080,6 +1093,14 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 }
 
 #headers, .purple-header {
+  height: $workspace-headers-height;
+  background-color: $purple;
+  overflow-y: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   #show-toolbox-icon, #hide-toolbox-icon {
     position: absolute;
     top: 0;
