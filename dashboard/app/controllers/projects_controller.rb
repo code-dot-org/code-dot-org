@@ -143,7 +143,7 @@ class ProjectsController < ApplicationController
     end
 
     student_of_admin_required = STANDALONE_PROJECTS[params[:key]][:student_of_admin_required]
-    user_is_student_of_admin = current_user.try(:teachers).try(:any?) &:admin?
+    user_is_student_of_admin = current_user.try(:student_of_admin?)
     if student_of_admin_required && !(user_is_admin || user_is_student_of_admin)
       redirect_to '/'
       return true

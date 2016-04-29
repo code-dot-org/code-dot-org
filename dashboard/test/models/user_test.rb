@@ -1087,6 +1087,33 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [], student.students
   end
 
+  test 'student_of_admin?' do
+    teacher = create :teacher
+    section1 = create :section, user_id: teacher.id
+
+    admin_teacher = create :admin_teacher
+    section2 = create :section, user_id: admin_teacher.id
+
+    student_of_none = create :student
+
+    student_of_normal_teacher = create :student
+    create :follower, section: section1, student_user: student_of_normal_teacher
+
+    student_of_admin_teacher = create :student
+    create :follower, section: section2, student_user: student_of_admin_teacher
+
+    student_of_both_teachers = create :student
+    create :follower, section: section1, student_user: student_of_both_teachers
+    create :follower, section: section2, student_user: student_of_both_teachers
+
+    assert !teacher.student_of_admin?
+    assert !admin_teacher.student_of_admin?
+    assert !student_of_none.student_of_admin?
+    assert !student_of_normal_teacher.student_of_admin?
+    assert student_of_admin_teacher.student_of_admin?
+    assert student_of_both_teachers.student_of_admin?
+  end
+
   test "authorized teacher" do
     # you can't just create your own authorized teacher account
     fake_teacher = create :teacher
