@@ -113,19 +113,32 @@ class Ability
     if user.id && user.admin?
       can :read, Script
       can :read, ScriptLevel
-    elsif user.id # logged in, not admin
+    elsif user.id && user.student_of_admin? # logged in, not admin but student of admin
       can :read, Script do |script|
         !script.admin_required?
       end
       can :read, ScriptLevel do |script_level|
         !script_level.script.admin_required?
       end
-    else # not logged in
+    elsif user.id # logged in, not admin or student of admin
       can :read, Script do |script|
-        !script.admin_required? && !script.login_required?
+        !script.admin_required? &&
+            !script.student_of_admin_required?
       end
       can :read, ScriptLevel do |script_level|
-        !script_level.script.login_required? && !script_level.script.admin_required?
+        !script_level.script.admin_required? &&
+            !script_level.script.student_of_admin_required?
+      end
+    else # not logged in
+      can :read, Script do |script|
+        !script.admin_required? &&
+            !script.student_of_admin_required? &&
+            !script.login_required?
+      end
+      can :read, ScriptLevel do |script_level|
+        !script_level.script.login_required? &&
+            !script_level.script.student_of_admin_required? &&
+            !script_level.script.admin_required?
       end
     end
 
