@@ -25,7 +25,7 @@ module.exports.default = function (state, action) {
 
   if (action.type === SET_IS_DEBUGGING) {
     return _.assign({}, {
-      isRunning: action.isDebugging ? true : action.isRunning,
+      isRunning: action.isDebugging ? true : state.isRunning,
       isDebugging: action.isDebugging,
     });
   }

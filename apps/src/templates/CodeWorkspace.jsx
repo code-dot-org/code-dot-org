@@ -1,6 +1,7 @@
 var Radium = require('radium');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var JsDebugger = require('./JsDebugger');
+var PaneHeader = require('./PaneHeader');
 var msg = require('../locale');
 var commonStyles = require('../commonStyles');
 var styleConstants = require('../styleConstants');
@@ -116,14 +117,10 @@ var CodeWorkspace = React.createClass({
 
     return (
       <span id="codeWorkspaceWrapper">
-        <div
+        <PaneHeader
             id="headers"
             dir={props.localeDirection}
-            style={[
-              commonStyles.purpleHeader,
-              props.readonlyWorkspace && commonStyles.purpleHeaderReadOnly,
-              runModeIndicators && props.isRunning && commonStyles.purpleHeaderRunning
-            ]}
+            hasFocus={!props.isRunning}
         >
           <div id="codeModeHeaders">
             <div id="toolbox-header" style={styles.workspaceHeader}>
@@ -177,7 +174,7 @@ var CodeWorkspace = React.createClass({
               </div>
             </div>
           </div>
-        </div>
+        </PaneHeader>
         {props.editCode && <ProtectedStatefulDiv id="codeTextbox"/>}
         {props.showDebugger && <JsDebugger/>}
       </span>
