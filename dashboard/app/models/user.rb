@@ -471,7 +471,8 @@ select
   (select coalesce(sum(trophy_id), 0) from user_trophies where user_id = #{self.id}) as current_trophies,
   (select count(*) * 3 from concepts) as max_trophies
 from script_levels sl
-left outer join user_levels ul on ul.level_id = sl.level_id and ul.user_id = #{self.id}
+left outer join levels_script_levels lsl on lsl.script_level_id = sl.id
+left outer join user_levels ul on ul.level_id = lsl.level_id and ul.user_id = #{self.id}
 where sl.script_id = #{script.id}
 SQL
   end
@@ -810,13 +811,19 @@ SQL
 
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_proficiency = UserProficiency.where(user_id: user_id).first_or_create!
-      user_proficiency.last_progress_at = Time.now
+      time_now = Time.now
+      user_proficiency.last_progress_at = time_now
 
       ConceptDifficulties::CONCEPTS.each do |concept|
         difficulty_number = level_concept_difficulty.send(concept)
         if !difficulty_number.nil?
           user_proficiency.increment_level_count(concept, difficulty_number)
         end
+      end
+
+      if user_proficiency.basic_proficiency_at.nil? &&
+          user_proficiency.basic_proficiency?
+        user_proficiency.basic_proficiency_at = time_now
       end
 
       user_proficiency.save!
@@ -863,6 +870,9 @@ SQL
       new_level_perfected = true if !user_level.perfect? &&
         new_result == 100 &&
         HintViewRequest.
+          where(user_id: user_id, script_id: script_id, level_id: level_id).
+          empty? &&
+        AuthoredHintViewRequest.
           where(user_id: user_id, script_id: script_id, level_id: level_id).
           empty?
 

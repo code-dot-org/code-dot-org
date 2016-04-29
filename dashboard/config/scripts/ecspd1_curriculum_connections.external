@@ -1,0 +1,41 @@
+name 'ECSPD1 curriculum connections'
+title 'ECS curriculum connections'
+description 'ECS Curriculum Connections'
+css 'unplugged' 
+
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+# ECS Curriculum Connections
+<br>
+While you work through the curriculum, you will see that it spirals, always making connections forwards and backwards to build on students’ depth and level of understanding. It is critical that you teach the units in order, as Unit 1 and Unit 2 are foundational in that they will introduce all of the themes of the curriculum in a such a way that students will be able to experience them and build upon their understanding then be able to apply that knowledge to Unit 3 and Unit 4 in new situations, and then again extend the application thereof to Unit 5 and Unit 6. 
+<br>
+
+<br>
+<img align="left" src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png" height="910" width="400" hspace="20">
+
+<img align="right" src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png" height="910" width="400" hspace="20">
+<br>
+<br> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+Keep in mind that each one of your students comes to your course with a different background and understanding of how computers work and may even have little or limited exposure to using the computer to solve problems, rather than it use it to be a device for social media, games or entertainment.
+<br>
+
+
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

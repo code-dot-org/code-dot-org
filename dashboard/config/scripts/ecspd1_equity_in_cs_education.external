@@ -1,0 +1,30 @@
+name 'ECSPD1 equity in cs education'
+title 'Equity in Computer Science Education'
+description 'Equity in Computer Science Education'
+css 'unplugged' 
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+
+# Equity in Computer Science Education
+
+We have also discovered the equity issue that is present in many schools that do offer computer science, is that those courses typically don’t have an equitable representation of females and students of diversity enrolled.  Often times a computer science course is promoted as a programming or math intensive course that is intended for a certain group of students and hasn’t been welcoming to the entire student body.
+<br>
+
+<br>
+<img src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png" height="910" width="400" hspace="20">
+<br> 
+
+<br>
+If students don’t have the opportunity to experience computer science at multiple stages in their elementary and middle years, they most likely don’t consider signing up for an AP Computer Science course with little or no background or particular stereotypes of who takes the course and what it is about.
+<br>
+
+<br>
+<img src="add ap enrollment pic" height="910" width="400" hspace="20">
+<br> 
+
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

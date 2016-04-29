@@ -1,0 +1,49 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-27T19:50:21.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "rect": null,
+      "fill": null,
+      "ellipse": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "markdown_instructions": "# Simple Drawing\r\n\r\n<img src=\"https://images.code.org/47dce1fc1ac728bcc523909573812099-image-1461787179482.59.14 PM.png\" style=\"width:200px; float:right\">\r\n\r\nThis is a mess! We need your help debugging this program. We have all the right lines of code they just are not in the right order to draw the correct picture. It is supposed to look like the picture on the right.\r\n\r\n# Do This\r\n\r\n* Re-order the code to get the program to match the picture\r\n\r\n",
+    "instructions": "Do This",
+    "show_d_pad": "false",
+    "start_blocks": "fill(\"yellow\");\r\nrect(0, 0, 200, 200);\r\nellipse(300, 100, 200, 200);\r\nrect(200, 0, 200, 200);\r\nellipse(100, 100, 200, 200);\r\nrect(0, 200, 200, 200);\r\nfill(\"blue\");\r\nfill(\"red\");\r\nellipse(100, 300, 200, 200);\r\nellipse(300, 300, 200, 200);\r\nrect(200, 200, 200, 200);\r\nfill(\"green\");"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

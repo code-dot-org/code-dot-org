@@ -22,7 +22,7 @@ var styles = {
  */
 var AnimationList = function (props) {
   return (
-    <ScrollableList style={styles.root}>
+    <ScrollableList style={styles.root} className="animationList">
       {props.animations.map(function (animation) {
         return <AnimationListItem
             key={animation.key}
