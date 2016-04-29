@@ -229,15 +229,41 @@ Use these activities to enhance student learning. They can be used as outside of
 
 ### ISTE Standards (formerly NETS) Satisfied by this Lesson Include:
 
-- 1.c - Use models and simulation to explore complex systems and issues  
-- 2.d - Contribute to project teams to solve problems
+- 1c. Use models and simulation to explore complex systems and issues
+- 2d. Contribute to project teams to solve problems
 
 ### The activities in this lesson support CSTA K-12 Computer Science Standards:
- 
-- CT.L1:6.01 - Understand and use the basic steps in algorithmic problem-solving  
-- CT.L1:6.02 - Develop a simple understanding of an algorithm using computer-free exercises  
 
-### Other standards, including the NGSS, and Common Core Math & Language Arts
+- CL.L1:3-02 Work cooperatively and collaboratively with peers teachers, and others using technology
+- CT.L1:6-01 Understand and use the basic steps in algorithmic problem-solving
+- CT.L1:6-02 Develop a simple understanding of an algorithm using computer-free exercises
+- CT.L2-01 Use the basic steps in algorithmic problem solving to design solutions
+- CT.L2-12 Use abstraction to decompose a problem into sub-problems
+- CT.L2-14 Examine connections between elements of mathematics and computer science including binary numbers, logic, sets, and functions
+- CT.L3A-03 Explain how sequence, selection, iteration, and recursion are building blocks of algorithms
+
+### Next-Gen Science Standards
+
+- 3-5-ETS1-2 Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem
+
+### Common Core Mathematical Practices
+
+- 1. Make sense of problems and persevere in solving them
+- 2. Reason abstractly and quantitatively.
+- 4. Model with mathematics
+- 6. Attend to precision
+- 7. Look for and make use of structure
+- 8. Look for and express regularity in repeated reasoning
+
+### Common Core Math Standards
+
+- 4.OA.C.5 Generate a number or shape pattern that follows a given rule. Identify apparent features of the pattern that were not explicit in the rule itself
+
+### Common Core Language Arts Standards
+
+- L.3.6 Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships
+- L.4.6 Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal precise actions, emotions, or states of being and that are basic to a particular topic
+- L.5.6 Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal contrast, addition, and other logical relationships
 
 
 [/together]
