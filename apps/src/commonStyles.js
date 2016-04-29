@@ -6,6 +6,7 @@ commonStyles.hidden = {
   display: 'none'
 };
 
+// TODO - might end up in pane header
 commonStyles.purpleHeader = {
   height: styleConstants["workspace-headers-height"],
   backgroundColor: color.purple,
@@ -21,7 +22,7 @@ commonStyles.purpleHeaderReadOnly = {
   backgroundColor: color.charcoal,
 };
 
-commonStyles.purpleHeaderRunning = {
+commonStyles.purpleHeaderUnfocused = {
   backgroundColor: color.lighter_purple,
   color: color.dark_charcoal,
 };
