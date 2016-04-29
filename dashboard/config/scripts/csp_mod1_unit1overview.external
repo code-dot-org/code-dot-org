@@ -1,0 +1,14 @@
+name 'CSP-mod1-unit1overview'
+
+markdown <<MARKDOWN
+
+## Unit 1 overview
+This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. Topics include: the digital representation of information - especially, numbers, text, and communication protocols.  The first unit of this course purposefully addresses material that is fundamental to computing but with which many students, even those with computers at home or who have some prior experience with programming, are unfamiliar. This levels the playing field for participation and engagement right from the beginning of the course. 
+
+Chapter 1 of the unit begins with a consideration of what is involved in sending a single bit of information from one place to another. In the Sending Binary Messages lesson students work with a partner to invent and build their own bit-sending “device.” Complexity increases as students adapt their machines to handle multi-bit messages and increasingly complex information. Students use an Internet Simulator that allows them to develop and test binary encodings and communication protocols of their own invention.These should be an illustrative set of activities that helps build toward the enduring understandings that: A variety of abstractions built upon binary sequences can be used to represent all digital data (2.1) and that characteristics of the Internet influence the systems built on it (6.2).
+
+Chapter 2 of the unit is called “Inventing the Internet” because through the unit students continue to solve problems similar ones that had to be solved to build the real Internet. Students design their own versions of protocols, each one layered on the previous one, in a process that mimics the layered sets of protocols on the real Internet and builds toward the enduring understandings that The Internet is a network of autonomous systems (6.1) and that How the Internet was designed (layers of protocols) affects the systems built on top of it (6.2) as well as its ability to grow and adapt. 
+
+For the practice Performance Task at the end of the unit students research a modern societal issue related to the Internet such as “Net Neutrality” or internet censorship, which layers in enduring understandings about the fact that computing has a global affect -- both beneficial and harmful -- on people and society (7.3).
+
+MARKDOWN

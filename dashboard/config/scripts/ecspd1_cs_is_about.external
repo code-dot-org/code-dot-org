@@ -1,0 +1,35 @@
+name 'ECSPD1 cs is about'
+title 'ECSPD1 cs is about'
+Description 'CS Is About'
+css 'unplugged'
+href 'path/to/html/in/asset/folder'
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+
+#<strong> What Computer Science Is And Is Not</strong>
+<br>
+
+
+Computer science <strong>IS</strong> blending digital tools with ideas and creativity to solve problems.  It <strong>IS NOT</strong> a programming course, or computer literacy course.
+<br>
+
+<br><br>
+<img align="left" src="Add image of astronomy and telescope" height="910" width="400" hspace="20">
+<br><br>
+
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xJqSu1IbcHg" frameborder="0" allowfullscreen></iframe>
+<br>
+
+<em>NOTE: you can speed up the video by first clicking play, and then clicking the settings menu, which is the gear icon at the bottom of the video player. The speed setting is the second from the top.</em>
+<br>
+<br>
+ We are empowering students to develop a sense of agency and ownership of their learning so they can be informed citizens in a modern world and the next wave of inventors and entrepreneurs with the skills they need to be successful in jobs that do not yet exist, using technologies that have not yet be invented.
+<br><br>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

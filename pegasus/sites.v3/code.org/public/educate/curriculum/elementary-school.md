@@ -125,6 +125,34 @@ By the end of each course, students can create interactive games or stories that
 The courses are flexible so educators can tailor them to their class based on their students’ developmental
 level and prior experience. The lessons align to <a href="http://csta.acm.org/Curriculum/sub/K12Standards.html" target="_blank">CSTA Computer Science Standards </a>, <a href="http://www.iste.org/standards/standards-for-students" target="_blank">ISTE standards </a>, and reinforce concepts and skills taught in other subject areas by integrating national <a href="http://www.corestandards.org/Math/" target="_blank">Math </a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts </a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science </a> standards. 
 
+## Examples of student creations
+
+[col-33]
+
+<center><img src="/images/animated-examples/artist-game-space.gif" width="90%"></center>
+
+<div style="margin-top: 5px;">In this puzzle, the student created a honeycomb pattern.</div>
+
+[/col-33]
+
+[col-33]
+
+<center><img src="/images/animated-examples/play-lab-game-space.gif" width="90%"></center>
+
+<div style="margin-left: 15px; margin-top: 5px;">This student created a game with different levels, so that they can play against different characters. Game on!</div>
+
+[/col-33]
+
+[col-33]
+
+<center><img src="/images/animated-examples/flappy-game-space.gif" width="90%"></center>
+
+<div style="margin-left: 15px; margin-top: 5px;">This student created a Flappy Bird game.</div>
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
 ## Teacher dashboard
 The Code Studio teacher dashboard makes it easy for teachers to view lesson plans, create student accounts and monitor student progress. Students don't need an email address to have an account in Code Studio. Students can even log-in with a picture instead of a text password.
 
