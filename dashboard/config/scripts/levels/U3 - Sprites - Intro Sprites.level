@@ -1,0 +1,49 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-28T21:06:19.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "drawSprites": null,
+      "var sprite = createSprite": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "instructions": "Do This",
+    "markdown_instructions": "# Sprites\r\n\r\nSprites are a new type of object you can put on the game area. Sprites allow a programmer to easily control all elements of an object easily. More about that on a later level. \r\n\r\nTo create a sprite we call <img src=\"\" style=\"width:100\">. Almost always you will want to save this sprite you created for later use. So the `createSprite` block actually pulls out of the toolbox like this <img src=\"\" style=\"width:100\">. Remember from variables that you can name your variable whatever name you want. You should create your sprites outside the draw loop so that they do not disappear after one time through the draw loop.\r\n\r\n`createSprites` only creates the sprite but does not draw it on the game area. In order draw your sprite on the game area you need to call <img src=\"\" style=\"width:100\"> inside the draw loop. \r\n\r\n# Do This\r\nSet up a new sprite:\r\n\r\n* Create a sprite by adding a call to `createSprite` above the draw loop\r\n* Change the name of your sprite\r\n* Call `drawSprites` in draw loop",
+    "show_d_pad": "false",
+    "callout_json": "[\r\n  {\r\n \"localization_key\": \"\",\r\n \"element_id\": \".droplet-palette-group-header.red\",\r\n \"callout_text\": \"Open this toolbox to create a sprite\",\r\n \"qtip_config\": {\r\n      \"position\": {\r\n     \"my\": \"bottom left\",\r\n     \"at\": \"top left\",\r\n     \"adjust\": {\r\n      \"x\": 10,\r\n      \"y\": 0\r\n   }\r\n  }\r\n }\r\n}\r\n]",
+    "start_blocks": "function draw(){\r\n  \r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

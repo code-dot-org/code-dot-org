@@ -2,11 +2,11 @@ name 'ECSPD1 unit 1 overview'
 title 'ECS unit 1 overview'
 description 'ECS Unit 1 Overview'
 css 'unplugged'
-href 'path/to/html/in/asset/folder'
+
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
 
-# ECS Unit 1 Overview
+## ECS Unit 1 Overview
 <br>
 In order to help you become familiar with Unit 1: Human Computer Interaction, let’s take a look at the topics to be addressed and how they are intended to tie in together:
 
@@ -17,9 +17,8 @@ In order to help you become familiar with Unit 1: Human Computer Interaction, le
 <li>Students will learn the characteristics that make certain tasks easy or difficult for computers, and how these differ from those that humans characteristically find easy or difficult.</li><br>
  
 <li>Students will gain an appreciation for the many ways in which computing has enabled innovations which have led to an impact on society, as well as for the many different fields in which they are used.  In addition to, making connections among social, economical and cultural contexts.</li> <br>
-
 <br>
-<img align="left" src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png" height="910" width="400" hspace="20">
+<img src="https://images.code.org/cbc16d3cf0f21a17301be1ad7417578c-image-1461914669719.JPG" width="650" style="float:left; margin-right:30px">
 <br>
 <br> 
 <br>
@@ -33,7 +32,15 @@ In order to help you become familiar with Unit 1: Human Computer Interaction, le
 <br>
 <br>
 <br>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <br>
 
