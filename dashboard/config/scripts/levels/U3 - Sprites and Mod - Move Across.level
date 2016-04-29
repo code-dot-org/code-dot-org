@@ -8,9 +8,12 @@
     "skin": "gamelab",
     "code_functions": {
       "drawSprites": null,
-      "var sprite = createSprite": null,
       "background": null,
-      "x": null
+      "var sprite = createSprite": null,
+      "x": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "randomNumber_min_max": null
     },
     "edit_code": true,
     "embed": "false",
@@ -35,7 +38,8 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "show_d_pad": "false"
   },
   "published": true,
   "notes": "",

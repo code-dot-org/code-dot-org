@@ -131,3 +131,6 @@ assessment 'PS U3 Assessment1 new'
 
 stage 'Free Response'
 level 'Sample Free Response'
+
+stage 'Game Lab'
+level 'allthethings_U3 - Simple Drawing - Rectangle Width and Height'
