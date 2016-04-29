@@ -8,6 +8,7 @@ var connect = require('react-redux').connect;
 var i18n = require('../locale');
 var commonStyles = require('../commonStyles');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
+var PaneHeader = require('./PaneHeader');
 
 var styles = {
   noPadding: {
@@ -142,19 +143,23 @@ var JsDebugger = function (props) {
   };
 
   return (
-    <ProtectedStatefulDiv id="debug-area">
+    <div id="debug-area">
       <div id="debugResizeBar" className="fa fa-ellipsis-h"></div>
-      <div id="debug-area-header">
+      <PaneHeader id="debug-area-header" hasFocus={props.isDebugging}>
         <span className="header-text">{i18n.debugConsoleHeader()}</span>
         <i id="show-hide-debug-icon" className="fa fa-chevron-circle-down"/>
-        {props.debugButtons && <div id="debug-commands-header" className="workspace-header">
+        {props.debugButtons &&
+        <div id="debug-commands-header" className="workspace-header">
           <i id="running-spinner" style={commonStyles.hidden} className="fa fa-spinner fa-spin"></i>
           <i id="paused-icon" style={commonStyles.hidden} className="fa fa-pause"></i>
           <span className="header-text">{i18n.debugCommandsHeaderWhenOpen()}</span>
-        </div>}
-        {props.debugWatch && <div id="debug-watch-header" className="workspace-header">
+        </div>
+        }
+        {props.debugWatch &&
+        <div id="debug-watch-header" className="workspace-header">
           <span className="header-text">{i18n.debugWatchHeader()}</span>
-        </div>}
+        </div>
+        }
         <div id="clear-console-header" className="workspace-header workspace-header-button">
           <span>
             <i className="fa fa-eraser"/>
@@ -162,11 +167,11 @@ var JsDebugger = function (props) {
           </span>
         </div>
         <Slider style={sliderStyle}/>
-      </div>
+      </PaneHeader>
       {props.debugButtons && <DebugButtons/>}
       {props.debugConsole && <DebugConsole debugButtons={props.debugButtons} debugWatch={props.debugWatch}/>}
       {props.debugWatch && <DebugWatch debugButtons={props.debugButtons}/>}
-    </ProtectedStatefulDiv>
+    </div>
   );
 };
 
@@ -180,6 +185,7 @@ module.exports = connect(function propsFromStore(state) {
   return {
     debugButtons: state.level.showDebugButtons,
     debugConsole: state.level.showDebugConsole,
-    debugWatch: state.level.showDebugWatch
+    debugWatch: state.level.showDebugWatch,
+    isDebugging: state.runState.isDebugging
   };
 })(JsDebugger);
