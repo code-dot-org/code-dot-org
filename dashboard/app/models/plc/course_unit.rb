@@ -46,7 +46,7 @@ class Plc::CourseUnit < ActiveRecord::Base
 
     (Plc::LearningModule::MODULE_TYPES - [Plc::LearningModule::REQUIRED_MODULE]).each do |module_type|
       #Find the first element in the ordered map that is of this type
-      learning_module, _ = searching_map.find { |k, _| k.module_type == module_type}.first
+      learning_module, _ = searching_map.find { |k, _| k.module_type == module_type}.try(:first)
       selected_learning_modules << learning_module unless learning_module.nil?
     end
 
