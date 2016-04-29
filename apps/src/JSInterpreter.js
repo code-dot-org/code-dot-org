@@ -1132,3 +1132,28 @@ JSInterpreter.prototype.evalInCurrentScope = function (expression) {
   evalInterpreter.run();
   return evalInterpreter.value;
 };
+
+JSInterpreter.prototype.handlePauseContinue = function () {
+  // We have code and are either running or paused
+  if (this.paused && this.nextStep === StepType.RUN) {
+    this.paused = false;
+  } else {
+    this.paused = true;
+    this.nextStep = StepType.RUN;
+  }
+};
+
+JSInterpreter.prototype.handleStepOver = function () {
+  this.paused = true;
+  this.nextStep = StepType.OVER;
+};
+
+JSInterpreter.prototype.handleStepIn = function () {
+  this.paused = true;
+  this.nextStep = StepType.IN;
+};
+
+JSInterpreter.prototype.handleStepOut = function () {
+  this.paused = true;
+  this.nextStep = StepType.OUT;
+};
