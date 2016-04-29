@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "你必需抓住20隻滾輪機器人(Mouse Droid)。在\"當抓到滾輪機器人\"事件中放入 \"新增滾輪機器人\"程式積木，讓你每次抓到滾輪機器人時會新增兩隻或兩隻以上的滾輪機器人。",
   "failedMultiplyCharactersTimeoutGotSome": "恭喜! 你已經完成新增程式碼來增加滾輪機器人(Mouse Droid) 。你可以繼續前往下一關，或是試著抓住這20隻滾輪機器人(Mouse Droid)。新增更多的滾輪機器人可以讓這個關卡更容易通過。(按住鍵盤(螢幕) 上的方向鍵不放可以讓角色移動的更快一點。)",
   "failedChangeSettingTimeout": "接觸3個反抗軍飛行員以便繼續。",
-  "failedChangeSettingSettings": "開始設計你自己的遊戲。要完成這個關卡，你必須改變你的機器人並設置它的速度。"
+  "failedChangeSettingSettings": "開始設計你自己的遊戲。要完成這個關卡，你必須改變你的機器人並設置它的速度。",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }

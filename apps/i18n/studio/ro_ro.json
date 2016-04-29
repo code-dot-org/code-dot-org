@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "Trebuie sa prinzi 20 de Mouse Droids. Foloseste comanda \"adauga Mouse Droid\" inauntrul evenimentului \"cand prind Mouse Droid\" pentru a adauga doi sau mai multi roboti Mouse de fiecare data cand prinzi unul.",
   "failedMultiplyCharactersTimeoutGotSome": "Felicitari, ai adaugat codul pentru a crea mai multi roboti Mouse. Poti merge catre urmatorul puzzle sau sa incerci din nou sa prinzi cei 20 de roboti. Incearca sa iti usurezi munca adaugand mai multi! (tine apasate sagetile tasataturii sau ecranului pentru a merge mai repede",
   "failedChangeSettingTimeout": "Obtine 3 Rebel Pilots pentru a trece mai departe.",
-  "failedChangeSettingSettings": "Fa-ti propriul joc. Pentru a trece de acest puzzle, trebuie sa iti schimbi robotul si sa ii setezi viteza."
+  "failedChangeSettingSettings": "Fa-ti propriul joc. Pentru a trece de acest puzzle, trebuie sa iti schimbi robotul si sa ii setezi viteza.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }

@@ -1813,3 +1813,18 @@ en:
           description: Test of new educational philosophy
           description_audience: Ages 8-18
           Computational Thinking: Computational Thinking
+          Sample Stage: Sample Stage
+        ECSPD1:
+          title: 'ECS: Phase 1 PD'
+          description_short: Introduction to the Code.org ECS Version 5 Program
+          description: Two hour introduction to your Professional Learning Program for the ECS Version 5 curriculum
+          Getting Started: Getting Started
+        algebraFacilitator:
+          title: Computer Science in Algebra Facilitator Pre Work
+          description_short: Teach Algebra through Functional Programming
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Introduction to PD
+          Course Overview: Course Overview
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Evaluation Blocks: Evaluation Blocks
+          Teacher Dashboard: Teacher Dashboard

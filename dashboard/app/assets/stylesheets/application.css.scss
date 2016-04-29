@@ -614,23 +614,46 @@ $default-modal-width: 640px;
   background: $light_gray;
 }
 
-#project-share .social-buttons a {
-  display: inline-block;
-  &:hover, & {
-    text-decoration: none;
+#project-share {
+
+  .export-button {
+    color: $dark_color;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
   }
-  i {
-    display: table-cell;
-    width: 45px;
-    height: 45px;
-    border-radius: 5px;
+
+  .social-buttons a {
+    display: inline-block;
     background: $purple;
     color: white;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 24pt;
-    &:hover {
-      box-shadow: 2px 2px 5px $light_gray;
+    border-radius: 5px;
+    margin-right: 8px;
+    font-size: larger;
+    &:hover, & {
+      text-decoration: none;
+    }
+    i {
+      border-radius: 5px;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 24pt;
+      &:hover {
+        box-shadow: 2px 2px 5px $light_gray;
+      }
+
+      &.fa-facebook {
+        background-color: #3b5998;
+      }
+      &.fa-twitter {
+        background-color: #00aced;
+      }
+    }
+    span {
+      padding-right: 10px;
     }
   }
 }
@@ -1943,10 +1966,11 @@ $information-desktop: "only screen and (min-width: 1024px)";
   }
   .item-mark {
     display: inline-block;
-    text-align: right;
+    text-align: left;
     padding-right: 10px;
     box-sizing: border-box;
     font-size: 21px;
+    width: 30px;
   }
   .item-label {
     display: inline-block;
@@ -1956,6 +1980,9 @@ $information-desktop: "only screen and (min-width: 1024px)";
     label {
       font-size: 14px;
     }
+  }
+  .item-answer-letter {
+    font-family: $gotham-bold;
   }
 }
 

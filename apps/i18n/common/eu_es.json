@@ -233,5 +233,9 @@
   "watchVideo": "Ikusi Bideoa",
   "when": "-enean",
   "whenRun": "martxan dagoenean",
-  "workspaceHeaderShort": "Lan eremua: "
+  "workspaceHeaderShort": "Lan eremua: ",
+  "builtOnCodeStudio": "Built on Code Studio",
+  "copyright": "Copyright",
+  "privacyPolicy": "Privacy Policy",
+  "reportAbuse": "Report Abuse"
 }

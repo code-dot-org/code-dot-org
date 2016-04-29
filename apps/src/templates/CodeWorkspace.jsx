@@ -1,4 +1,5 @@
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
+var JsDebugger = require('./JsDebugger');
 var msg = require('../locale');
 var commonStyles = require('../commonStyles');
 
@@ -55,7 +56,7 @@ var CodeWorkspace = function (props) {
         </div>
       </ProtectedStatefulDiv>
       {props.editCode && <ProtectedStatefulDiv id="codeTextbox"/>}
-      {props.extraControlRows}
+      {props.showDebugger && <JsDebugger/>}
     </span>
   );
 };
@@ -64,7 +65,7 @@ CodeWorkspace.propTypes = {
   localeDirection: React.PropTypes.oneOf(['rtl', 'ltr']).isRequired,
   editCode: React.PropTypes.bool.isRequired,
   readonlyWorkspace: React.PropTypes.bool.isRequired,
-  extraControlRows: React.PropTypes.element
+  showDebugger: React.PropTypes.bool
 };
 
 module.exports = CodeWorkspace;
