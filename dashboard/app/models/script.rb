@@ -403,6 +403,10 @@ class Script < ActiveRecord::Base
         raise ActiveRecord::RecordNotFound, "Level: #{row_data.to_json}, Script: #{script.name}"
       end
 
+      unless level.published
+        raise ActiveRecord::RecordNotFound, "Level is not published! #{row_data.to_json}, Script: #{script.name}"
+      end
+
       if level.game && (level.game == Game.applab || level.game == Game.gamelab) && !script.hidden && !script.login_required
         raise 'Applab/Gamelab levels can only be added to a script that requires login'
       end
