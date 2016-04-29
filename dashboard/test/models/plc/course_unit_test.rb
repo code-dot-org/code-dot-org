@@ -21,10 +21,10 @@ class Plc::CourseUnitTest < ActiveSupport::TestCase
     @course_unit.plc_learning_modules.destroy_all
 
     content_learning_module1, content_learning_module2, content_learning_module3, content_learning_module4 =
-        4.times.map {create(:plc_learning_module, plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE)}
+      4.times.map {create(:plc_learning_module, plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE)}
 
     practice_learning_module1, practice_learning_module2, practice_learning_module3, practice_learning_module4 =
-        4.times.map {create(:plc_learning_module, plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE)}
+      4.times.map {create(:plc_learning_module, plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE)}
 
     selected_learning_module_ids = [content_learning_module1.id, content_learning_module2.id, content_learning_module2.id, content_learning_module3.id, content_learning_module4.id, content_learning_module2.id, content_learning_module1.id,
                                     practice_learning_module1.id, practice_learning_module1.id, practice_learning_module2.id, practice_learning_module3.id, practice_learning_module4.id, practice_learning_module3.id, practice_learning_module3.id]
