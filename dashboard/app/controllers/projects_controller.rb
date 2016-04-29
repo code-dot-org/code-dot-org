@@ -54,10 +54,10 @@ class ProjectsController < ApplicationController
   end
 
   def load
-    return if redirect_unless_account_type_requirements_met
     if STANDALONE_PROJECTS[params[:key]][:login_required]
       authenticate_user!
     end
+    return if redirect_unless_account_type_requirements_met
     return if redirect_applab_under_13(@level)
     if current_user
       channel = StorageApps.new(storage_id_for_user).most_recent(params[:key])
@@ -103,18 +103,18 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    return if redirect_unless_account_type_requirements_met
     if STANDALONE_PROJECTS[params[:key]][:login_required]
       authenticate_user!
     end
+    return if redirect_unless_account_type_requirements_met
     show
   end
 
   def remix
-    return if redirect_unless_account_type_requirements_met
     if STANDALONE_PROJECTS[params[:key]][:login_required]
       authenticate_user!
     end
+    return if redirect_unless_account_type_requirements_met
     src_channel_id = params[:channel_id]
     new_channel_id = create_channel nil, src_channel_id
     AssetBucket.new.copy_files src_channel_id, new_channel_id
