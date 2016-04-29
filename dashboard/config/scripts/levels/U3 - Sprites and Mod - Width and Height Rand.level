@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-04-20T19:24:07.000Z",
+  "created_at": "2016-04-28T19:34:50.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -11,6 +11,9 @@
       "background": null,
       "var sprite = createSprite": null,
       "x": null,
+      "y": null,
+      "sprite.width": null,
+      "sprite.height": null,
       "addOperator": null,
       "subtractOperator": null,
       "randomNumber_min_max": null
@@ -39,9 +42,10 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
+    "show_d_pad": "false",
     "instructions": "Do This",
-    "markdown_instructions": "# Stuff",
-    "show_d_pad": "false"
+    "markdown_instructions": "# Width and Height\r\n\r\n# Do This",
+    "start_blocks": "var sprite1 = createSprite(randomNumber(0, 400), randomNumber(0, 400), 30, 30);\r\n\r\nframeRate(100);\r\n\r\nfunction draw() {\r\n  sprite1.x = randomNumber(0,400);\r\n  sprite1.y = randomNumber(0,400);\r\n  \r\n  background('white');\r\n  drawSprites();\r\n}"
   },
   "published": true,
   "notes": "",
