@@ -6,14 +6,14 @@ var color = require('../color');
 var experiments = require('../experiments');
 
 var styles = {
-  workspaceHeader: {
+  paneSection: {
     textAlign: 'center',
     whiteSpace: 'nowrap',
     overflowX: 'hidden',
     height: styleConstants["workspace-headers-height"],
     lineHeight: styleConstants["workspace-headers-height"] + 'px',
   },
-  workspaceHeaderButton: {
+  headerButton: {
     cursor: 'pointer',
     float: 'right',
     overflow: 'hidden',
@@ -30,7 +30,7 @@ var styles = {
       backgroundColor: color.cyan
     }
   },
-  workspaceHeaderButtonUnfocused: {
+  headerButtonUnfocused: {
     backgroundColor: color.lightest_purple
   },
   headerButtonSpan: {
@@ -51,38 +51,6 @@ var styles = {
     verticalAlign: 'text-bottom',
     paddingRight: 8
   }
-};
-
-// TODO - might belong elsewhere
-var WorkspaceHeader = function (props) {
-  return <div {...props} style={[styles.workspaceHeader, props.style]}/>;
-};
-
-var WorkspaceHeaderButton = function (props) {
-  var runModeIndicators = experiments.isEnabled('runModeIndicators');
-
-  return (
-    <div
-        id={props.id}
-        style={[
-          styles.workspaceHeaderButton,
-          runModeIndicators && !props.headerHasFocus && styles.workspaceHeaderButtonUnfocused
-        ]}
-    >
-      <span style={styles.headerButtonSpan}>
-        {/* hiddenIcon currently toggle externally */}
-        {props.hiddenImage && <img src={props.hiddenImage} style={styles.hiddenIcon}/>}
-        <i className={props.iconClass} style={styles.headerButtonIcon}/>
-        <span style={styles.noPadding}>{props.label}</span>
-      </span>
-    </div>
-  );
-};
-WorkspaceHeaderButton.propTypes = {
-  headerHasFocus: React.PropTypes.bool.isRequired,
-  iconClass: React.PropTypes.string.isRequired,
-  label: React.PropTypes.string.isRequired,
-  hiddenImage: React.PropTypes.string
 };
 
 /**
@@ -113,7 +81,46 @@ var PaneHeader = React.createClass({
   }
 });
 
+/**
+ * A section of our Pane Header. Essentially this is just a div with some
+ * particular styles applied
+ */
+var PaneSection = function (props) {
+  return <div {...props} style={[styles.paneSection, props.style]}/>;
+};
+
+/**
+ * A button within or PaneHeader, whose styles change whether or not the pane
+ * has focus
+ */
+var PaneButton = function (props) {
+  var runModeIndicators = experiments.isEnabled('runModeIndicators');
+
+  return (
+    <div
+        id={props.id}
+        style={[
+          styles.headerButton,
+          runModeIndicators && !props.headerHasFocus && styles.headerButtonUnfocused
+        ]}
+    >
+      <span style={styles.headerButtonSpan}>
+        {/* hiddenIcon currently toggle externally */}
+        {props.hiddenImage && <img src={props.hiddenImage} style={styles.hiddenIcon}/>}
+        <i className={props.iconClass} style={styles.headerButtonIcon}/>
+        <span style={styles.noPadding}>{props.label}</span>
+      </span>
+    </div>
+  );
+};
+PaneButton.propTypes = {
+  headerHasFocus: React.PropTypes.bool.isRequired,
+  iconClass: React.PropTypes.string.isRequired,
+  label: React.PropTypes.string.isRequired,
+  hiddenImage: React.PropTypes.string
+};
+
 module.exports = Radium(PaneHeader);
 
-module.exports.WorkspaceHeader = Radium(WorkspaceHeader);
-module.exports.WorkspaceHeaderButton = Radium(WorkspaceHeaderButton);
+module.exports.PaneSection = Radium(PaneSection);
+module.exports.PaneButton = Radium(PaneButton);
