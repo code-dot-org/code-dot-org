@@ -2,8 +2,8 @@ var Radium = require('radium');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var JsDebugger = require('./JsDebugger');
 var PaneHeader = require('./PaneHeader');
-var WorkspaceHeader = PaneHeader.WorkspaceHeader;
-var WorkspaceHeaderButton = PaneHeader.WorkspaceHeaderButton;
+var PaneSection = PaneHeader.PaneSection;
+var PaneButton = PaneHeader.PaneButton;
 var msg = require('../locale');
 var commonStyles = require('../commonStyles');
 var styleConstants = require('../styleConstants');
@@ -70,34 +70,34 @@ var CodeWorkspace = React.createClass({
             hasFocus={!props.isRunning}
         >
           <div id="codeModeHeaders">
-            <WorkspaceHeader id="toolbox-header">
+            <PaneSection id="toolbox-header">
               <i id="hide-toolbox-icon" style={chevronStyle} className="fa fa-chevron-circle-right"/>
               <span>{props.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}</span>
-            </WorkspaceHeader>
-            <WorkspaceHeader id="show-toolbox-header" style={commonStyles.hidden}>
+            </PaneSection>
+            <PaneSection id="show-toolbox-header" style={commonStyles.hidden}>
               <i id="show-toolbox-icon" styles={styles.headerIcon} className="fa fa-chevron-circle-right"/>
               <span>{msg.showToolbox()}</span>
-            </WorkspaceHeader>
-            <WorkspaceHeaderButton
+            </PaneSection>
+            <PaneButton
                 id="show-code-header"
                 hiddenImage="/blockly/media/applab/blocks_glyph.gif"
                 iconClass="fa fa-code"
                 label={msg.showCodeHeader()}
                 headerHasFocus={!props.isRunning}/>
-            {!props.readonlyWorkspace && <WorkspaceHeaderButton
+            {!props.readonlyWorkspace && <PaneButton
                 id="clear-puzzle-header"
                 headerHasFocus={!props.isRunning}
                 iconClass="fa fa-undo"
                 label={msg.clearPuzzle()}/>
             }
-            <WorkspaceHeaderButton
+            <PaneButton
                 id="versions-header"
                 headerHasFocus={!props.isRunning}
                 iconClass="fa fa-clock-o"
                 label={msg.showVersionsHeader()}/>
-            <WorkspaceHeader id="workspace-header">
+            <PaneSection id="workspace-header">
               <span id="workspace-header-span">
-                {props.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort()}
+                {props.readonlyWorkspace ? msg.readonlyPaneSection() : msg.workspaceHeaderShort()}
               </span>
               <div id="blockCounter">
                 <div id="blockUsed" className='block-counter-default'>
@@ -106,7 +106,7 @@ var CodeWorkspace = React.createClass({
                 <span id="idealBlockNumber"></span>
                 <span>{" " + msg.blocks()}</span>
               </div>
-            </WorkspaceHeader>
+            </PaneSection>
           </div>
         </PaneHeader>
         {props.editCode && <ProtectedStatefulDiv id="codeTextbox"/>}
