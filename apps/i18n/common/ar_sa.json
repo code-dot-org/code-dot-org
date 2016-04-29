@@ -233,5 +233,9 @@
   "watchVideo": "شاهد الفيديو",
   "when": "عندما",
   "whenRun": "عند التشغيل",
-  "workspaceHeaderShort": "مساحة العمل: "
+  "workspaceHeaderShort": "مساحة العمل: ",
+  "builtOnCodeStudio": "Built on Code Studio",
+  "copyright": "Copyright",
+  "privacyPolicy": "Privacy Policy",
+  "reportAbuse": "Report Abuse"
 }

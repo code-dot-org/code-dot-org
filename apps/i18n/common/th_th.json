@@ -233,5 +233,9 @@
   "watchVideo": "ดูวีดีโอ",
   "when": "เมื่อ",
   "whenRun": "เมื่อเรียกให้ทำงาน",
-  "workspaceHeaderShort": "พื้นที่ทำงาน: "
+  "workspaceHeaderShort": "พื้นที่ทำงาน: ",
+  "builtOnCodeStudio": "Built on Code Studio",
+  "copyright": "Copyright",
+  "privacyPolicy": "Privacy Policy",
+  "reportAbuse": "Report Abuse"
 }
