@@ -9,6 +9,7 @@
     "code_functions": {
       "fill": null,
       "noFill": null,
+      "color": null,
       "stroke": null,
       "strokeWeight": null,
       "noStroke": null,

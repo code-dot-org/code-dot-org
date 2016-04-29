@@ -8,15 +8,19 @@ markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
 
 
-#<strong> What Computer Science Is And Is Not</strong>
-<br>
+# What Computer Science Is And Is Not
 
-
-Computer science <strong>IS</strong> blending digital tools with ideas and creativity to solve problems.  It <strong>IS NOT</strong> a programming course, or computer literacy course.
-<br>
-
+#### We will start off by taking a look at:
+- What computer science is and is not
+- The problem in computer science education - Students do not have access to cs courses K-12
+- Why it matters that all of our students have the opportunity to learn computer science
+- How the way we teach computer science impacts students perceptions and level of engagement, as to whether or not they see themselves being a part of the cs movement
 <br><br>
-<img align="left" src="Add image of astronomy and telescope" height="910" width="400" hspace="20">
+<img src="https://images.code.org/c96386a2f56d19233c941c6c3005ea7b-image-1461873146999.png" width="400" style="float:left; margin-right:30px">
+<br>
+Computer science <strong>IS</strong> blending digital tools with ideas and creativity to solve problems.  It <strong>IS NOT</strong> a programming course, or computer literacy course.
+<br><br>
+We are empowering students to develop a sense of agency and ownership of their learning so they can be informed citizens in a modern world and the next wave of inventors and entrepreneurs with the skills they need to be successful in jobs that do not yet exist, using technologies that have not yet be invented.
 <br><br>
 
 <br>
@@ -26,8 +30,7 @@ Computer science <strong>IS</strong> blending digital tools with ideas and creat
 <em>NOTE: you can speed up the video by first clicking play, and then clicking the settings menu, which is the gear icon at the bottom of the video player. The speed setting is the second from the top.</em>
 <br>
 <br>
- We are empowering students to develop a sense of agency and ownership of their learning so they can be informed citizens in a modern world and the next wave of inventors and entrepreneurs with the skills they need to be successful in jobs that do not yet exist, using technologies that have not yet be invented.
-<br><br>
+
 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
