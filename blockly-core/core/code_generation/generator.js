@@ -95,6 +95,13 @@ Blockly.Generator.blocksToCode = function(name, blocks, opt_showHidden) {
   return code;
 };
 
+Blockly.Generator.xmlToCode = function(name, xml) {
+  var div = document.createElement('div');
+  var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(div, xml);
+  var blocks = blockSpace.getTopBlocks(true);
+  return Blockly.Generator.blocksToCode(name, blocks);
+}
+
 /**
  * Generate code for all blocks in the blockSpace to the specified language.
  * @param {string} name Language name (e.g. 'JavaScript').

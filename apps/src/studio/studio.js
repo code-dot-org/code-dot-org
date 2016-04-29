@@ -2845,6 +2845,17 @@ Studio.execute = function () {
       return Studio.onPuzzleComplete();
     }
 
+    if (level.initializationBlocks) {
+      var xml = parseXmlElement(level.initializationBlocks);
+      var initializationCode = Blockly.Generator.xmlToCode('JavaScript', xml);
+      var func = codegen.functionFromCode(initializationCode, {
+        StudioApp: studioApp,
+        Studio: api,
+        Globals: Studio.Globals
+      });
+      registerEventHandler(handlers, 'whenGameStarts', func);
+    }
+
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
