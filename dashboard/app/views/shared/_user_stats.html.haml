@@ -5,6 +5,7 @@
 - level_progress = progress[:levels] || {}
 - should_show_lesson_plan = user && user.teacher?
 - current_level_id = params[:current_level_id]
+- puzzle_page = params[:puzzle_page] || -1
 
 .user-stats-block
   - script_summary[:stages].each do |stage|
@@ -57,5 +58,5 @@
 - if async
   :javascript
     //<![CDATA[
-    window.dashboard.progress.populateProgress("#{script.name}")
+    window.dashboard.progress.populateProgress("#{script.name}", #{puzzle_page})
     //]]>
