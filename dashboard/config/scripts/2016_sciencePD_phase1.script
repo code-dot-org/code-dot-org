@@ -14,7 +14,7 @@ stage 'What to Expect'
 level 'sciPD what to expect 16-17'
 level 'sciPD intro video'
 level 'sciPD expectations'
-level 'sciPD meet and greet 16-17'
+# level 'sciPD meet and greet 16-17'
 level 'AlgPD Break'
 
 stage 'Introduction to Complex Adaptive Systems'
