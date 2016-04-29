@@ -20,7 +20,6 @@ class ProjectsController < ApplicationController
     },
     gamelab: {
       name: 'New Game Lab Project',
-      admin_required: true,
       login_required: true
     },
     makerlab: {
@@ -88,13 +87,18 @@ class ProjectsController < ApplicationController
         share: sharing,
     )
     # for sharing pages, the app will display the footer inside the playspace instead
-    no_footer = sharing && @game.owns_footer_for_share?
+    no_footer = sharing
+    # if the game doesn't own the sharing footer, treat it as a legacy share
+    @is_legacy_share = sharing && !@game.owns_footer_for_share?
     view_options(
       readonly_workspace: sharing || readonly,
       full_width: true,
       callouts: [],
       channel: params[:channel_id],
       no_footer: no_footer,
+      code_studio_logo: @is_legacy_share,
+      no_header: sharing,
+      is_legacy_share: @is_legacy_share,
       small_footer: !no_footer && (@game.uses_small_footer? || enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name)

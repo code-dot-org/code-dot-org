@@ -129,7 +129,7 @@ class Script < ActiveRecord::Base
   def self.script_cache_from_db
     {}.tap do |cache|
       Script.all.pluck(:id).each do |script_id|
-        script = Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage, :callouts]}, :stages]).find(script_id)
+        script = Script.includes([{script_levels: [{levels: [:game, :concepts] }, :stage, :callouts]}, :stages]).find(script_id)
 
         cache[script.name] = script
         cache[script.id.to_s] = script
@@ -403,23 +403,21 @@ class Script < ActiveRecord::Base
         raise ActiveRecord::RecordNotFound, "Level: #{row_data.to_json}, Script: #{script.name}"
       end
 
-      if level.game && level.game == Game.gamelab && !script.hidden && !script.admin_required
-        raise 'Gamelab levels can only be added to a script that requires admin (temporarily)'
-      end
-
       if level.game && (level.game == Game.applab || level.game == Game.gamelab) && !script.hidden && !script.login_required
         raise 'Applab/Gamelab levels can only be added to a script that requires login'
       end
 
       script_level_attributes = {
         script_id: script.id,
-        level_id: level.id,
         chapter: (chapter += 1),
         assessment: assessment
       }
       script_level = script.script_levels.detect{|sl|
-        script_level_attributes.all?{ |k, v| sl.send(k) == v }
-      } || ScriptLevel.find_or_create_by(script_level_attributes)
+        script_level_attributes.all?{ |k, v| sl.send(k) == v } &&
+          sl.levels == [level]
+      } || ScriptLevel.create(script_level_attributes) {|sl|
+        sl.levels = [level]
+      }
       # Set/create Stage containing custom ScriptLevel
       if stage_name
         stage = script.stages.detect{|s| s.name == stage_name} ||

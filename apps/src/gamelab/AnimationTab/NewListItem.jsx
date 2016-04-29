@@ -62,7 +62,7 @@ var NewListItem = React.createClass({
   render: function () {
     var hovered = Radium.getState(this.state, 'main', ':hover');
     return (
-      <div style={styles.tile} onClick={this.props.onClick}>
+      <div style={styles.tile} onClick={this.props.onClick} className="newListItem">
         <div style={styles.wrapper}>
           <div style={[styles.dottedBorder, hovered && styles.dottedBorderHovered]}>
             <i className="fa fa-plus" style={styles.addButton}></i>

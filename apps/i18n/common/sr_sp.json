@@ -233,5 +233,9 @@
   "watchVideo": "Погледај видео",
   "when": "када",
   "whenRun": "Када кренеш",
-  "workspaceHeaderShort": "Радни простор: "
+  "workspaceHeaderShort": "Радни простор: ",
+  "builtOnCodeStudio": "Built on Code Studio",
+  "copyright": "Copyright",
+  "privacyPolicy": "Privacy Policy",
+  "reportAbuse": "Report Abuse"
 }

@@ -824,13 +824,12 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'track_proficiency adds proficiency if necessary and no hint used' do
-    script = create :script
     level_concept_difficulty = create :level_concept_difficulty
     # Defaults with repeat_loops_{d1,d2,d3,d4,d5}_count = {0,2,0,3,0}.
     user_proficiency = create :user_proficiency
 
     User.track_proficiency(
-      user_proficiency.user_id, script.id, level_concept_difficulty.level_id)
+      user_proficiency.user_id, nil, level_concept_difficulty.level_id)
 
     user_proficiency = UserProficiency.
       where(user_id: user_proficiency.user_id).
@@ -844,12 +843,10 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'track_proficiency creates proficiency if necessary and no hint used' do
-    script = create :script
     level_concept_difficulty = create :level_concept_difficulty
     student = create :student
 
-    User.track_proficiency(
-      student.id, script.id, level_concept_difficulty.level_id)
+    User.track_proficiency(student.id, nil, level_concept_difficulty.level_id)
 
     user_proficiency = UserProficiency.where(user_id: student.id).first
     assert !user_proficiency.nil?
@@ -858,6 +855,53 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 0, user_proficiency.repeat_loops_d3_count
     assert_equal 0, user_proficiency.repeat_loops_d4_count
     assert_equal 0, user_proficiency.repeat_loops_d5_count
+  end
+
+  test 'track_proficiency does not update basic_proficiency_at if already proficient' do
+    TIME = '2015-01-02 03:45:43 UTC'
+    level = create :level
+    student = create :student
+    level_concept_difficulty = LevelConceptDifficulty.
+      create(level: level, events: 5)
+    UserProficiency.create(
+      user_id: student.id, sequencing_d3_count: 6, repeat_loops_d4_count: 7,
+      events_d5_count: 8, basic_proficiency_at: TIME)
+
+    User.track_proficiency(student.id, nil, level_concept_difficulty.level_id)
+
+    user_proficiency = UserProficiency.where(user_id: student.id).first
+    assert !user_proficiency.nil?
+    assert_equal TIME, user_proficiency.basic_proficiency_at.to_s
+  end
+
+  test 'track_proficiency updates if newly proficient' do
+    level = create :level
+    level_concept_difficulty = LevelConceptDifficulty.
+      create(level_id: level.id, events: 5)
+    student = create :student
+    UserProficiency.create(
+      user_id: student.id, sequencing_d3_count: 3, repeat_loops_d3_count: 3,
+      events_d3_count: 2)
+
+    User.track_proficiency(student.id, nil, level_concept_difficulty.level_id)
+
+    user_proficiency = UserProficiency.where(user_id: student.id).first
+    assert !user_proficiency.nil?
+    assert !user_proficiency.basic_proficiency_at.nil?
+  end
+
+  test 'track_proficiency does not update basic_proficiency_at if not proficient' do
+    level_concept_difficulty = create :level_concept_difficulty
+    user_proficiency = create :user_proficiency
+
+    User.track_proficiency(
+      user_proficiency.user_id, nil, level_concept_difficulty.level_id)
+
+    user_proficiency = UserProficiency.
+      where(user_id: user_proficiency.user_id).
+      first
+    assert !user_proficiency.nil?
+    assert user_proficiency.basic_proficiency_at.nil?
   end
 
   test 'track_level_progress_sync calls track_proficiency if new perfect score' do
@@ -893,6 +937,17 @@ class UserTest < ActiveSupport::TestCase
     student = create :student
     create :hint_view_request, user_id: student.id,
       level_id: script_level.level_id, script_id: script_level.script_id
+
+    User.expects(:track_proficiency).never
+
+    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, false)
+  end
+
+  test 'track_level_progress_sync does not call track_proficiency if authored hint used' do
+    script_level = create :script_level
+    student = create :student
+    AuthoredHintViewRequest.create(user_id: student.id,
+      level_id: script_level.level_id, script_id: script_level.script_id)
 
     User.expects(:track_proficiency).never
 

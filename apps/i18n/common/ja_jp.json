@@ -233,5 +233,9 @@
   "watchVideo": "ビデオを見る",
   "when": "とき",
   "whenRun": "実行した時",
-  "workspaceHeaderShort": "ワークスペース："
+  "workspaceHeaderShort": "ワークスペース：",
+  "builtOnCodeStudio": "Built on Code Studio",
+  "copyright": "Copyright",
+  "privacyPolicy": "Privacy Policy",
+  "reportAbuse": "Report Abuse"
 }

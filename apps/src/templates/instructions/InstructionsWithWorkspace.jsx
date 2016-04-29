@@ -16,6 +16,7 @@ var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 var InstructionsWithWorkspace = React.createClass({
   propTypes: {
     codeWorkspace: React.PropTypes.element.isRequired,
+    hideSource: React.PropTypes.bool.isRequired,
 
     // props provided via connect
     showInstructions: React.PropTypes.bool.isRequired,
@@ -158,6 +159,7 @@ var InstructionsWithWorkspace = React.createClass({
         <CodeWorkspaceContainer
             ref="codeWorkspace"
             topMargin={topPaneHeight}
+            hidden={this.props.hideSource}
             noVisualization={false}
             isRtl={false}
             codeWorkspace={this.props.codeWorkspace}

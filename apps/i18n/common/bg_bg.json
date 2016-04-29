@@ -233,5 +233,9 @@
   "watchVideo": "Гледайте видеото",
   "when": "когато",
   "whenRun": "при стартиране",
-  "workspaceHeaderShort": "Работна област: "
+  "workspaceHeaderShort": "Работна област: ",
+  "builtOnCodeStudio": "Built on Code Studio",
+  "copyright": "Copyright",
+  "privacyPolicy": "Privacy Policy",
+  "reportAbuse": "Report Abuse"
 }
