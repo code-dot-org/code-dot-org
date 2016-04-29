@@ -142,6 +142,22 @@ class Ability
       end
     end
 
+    # Handle standalone projects as a special case.
+    # They don't necessarily have a model, permissions and redirects are run
+    # through ProjectsController and their view/edit requirements are defined
+    # there.
+    ProjectsController::STANDALONE_PROJECTS.each_pair do |project_type_key, project_type_props|
+      if project_type_props[:admin_required]
+        can :load_project, project_type_key if user.admin?
+      elsif project_type_props[:student_of_admin_required]
+        can :load_project, project_type_key if user.admin? || user.student_of_admin?
+      elsif project_type_props[:login_required]
+        can :load_project, project_type_key if user.id
+      else
+        can :load_project, project_type_key
+      end
+    end
+
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.

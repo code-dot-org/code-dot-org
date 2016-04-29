@@ -54,10 +54,7 @@ class ProjectsController < ApplicationController
   end
 
   def load
-    if STANDALONE_PROJECTS[params[:key]][:login_required]
-      authenticate_user!
-    end
-    return if redirect_unless_account_type_requirements_met
+    authorize! :load_project, params[:key]
     return if redirect_applab_under_13(@level)
     if current_user
       channel = StorageApps.new(storage_id_for_user).most_recent(params[:key])
@@ -68,15 +65,19 @@ class ProjectsController < ApplicationController
     end
 
     create_new
+  rescue CanCan::AccessDenied
+    redirect_unauthorized
   end
 
   def create_new
-    return if redirect_unless_account_type_requirements_met
+    authorize! :load_project, params[:key]
     return if redirect_applab_under_13(@level)
     redirect_to action: 'edit', channel_id: create_channel({
       name: 'Untitled Project',
       level: polymorphic_url([params[:key], 'project_projects'])
     })
+  rescue CanCan::AccessDenied
+    redirect_unauthorized
   end
 
   def show
@@ -103,23 +104,21 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    if STANDALONE_PROJECTS[params[:key]][:login_required]
-      authenticate_user!
-    end
-    return if redirect_unless_account_type_requirements_met
+    authorize! :load_project, params[:key]
     show
+  rescue CanCan::AccessDenied
+    redirect_unauthorized
   end
 
   def remix
-    if STANDALONE_PROJECTS[params[:key]][:login_required]
-      authenticate_user!
-    end
-    return if redirect_unless_account_type_requirements_met
+    authorize! :load_project, params[:key]
     src_channel_id = params[:channel_id]
     new_channel_id = create_channel nil, src_channel_id
     AssetBucket.new.copy_files src_channel_id, new_channel_id
     SourceBucket.new.copy_files src_channel_id, new_channel_id
     redirect_to action: 'edit', channel_id: new_channel_id
+  rescue CanCan::AccessDenied
+    redirect_unauthorized
   end
 
   def set_level
@@ -133,22 +132,13 @@ class ProjectsController < ApplicationController
     @@project_level_cache[key] ||= Level.find_by_key(key)
   end
 
-  # Redirect to home if user not authenticated
-  def redirect_unless_account_type_requirements_met
-    admin_required = STANDALONE_PROJECTS[params[:key]][:admin_required]
-    user_is_admin = current_user.try(:admin?)
-    if admin_required && !user_is_admin
+  def redirect_unauthorized
+    if current_user
+      # Logged in and trying to reach a forbidden page - redirect to home.
       redirect_to '/'
-      return true
+    else
+      # Not logged in and trying to reach a forbidden page - redirect to sign in.
+      authenticate_user!
     end
-
-    student_of_admin_required = STANDALONE_PROJECTS[params[:key]][:student_of_admin_required]
-    user_is_student_of_admin = current_user.try(:student_of_admin?)
-    if student_of_admin_required && !(user_is_admin || user_is_student_of_admin)
-      redirect_to '/'
-      return true
-    end
-
-    false
   end
 end
