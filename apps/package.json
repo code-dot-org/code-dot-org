@@ -44,6 +44,7 @@
     "@cdo/apps": "file:src",
     "Base64": "0.3.0",
     "babelify": "^6.3.0",
+    "blaze_compiler": "0.0.36",
     "browserify": "10.2.4",
     "browserify-global-shim": "^1.0.3",
     "browserify-incremental": "3.0.1",

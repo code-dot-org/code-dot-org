@@ -1,0 +1,9 @@
+functions:
+  - isLoggedIn(): auth.uid !== null
+
+schema: {}
+
+access:
+  - location: /
+    read:  true
+    write: true && isLoggedIn()

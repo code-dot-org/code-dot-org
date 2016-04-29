@@ -1,0 +1,6 @@
+{
+  "rules":{
+    ".write":"((auth.uid!==null))",
+    ".read":"true"
+  }
+}
