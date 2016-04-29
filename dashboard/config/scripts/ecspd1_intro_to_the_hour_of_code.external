@@ -1,9 +1,8 @@
 name 'ECSPD1  intro to The Hour of Code'
 title 'Introduction to The Hour of Code'
-description 'Introduction to The Hour of code'
-
+description 'Introduction to The Hour of Code'
 css 'unplugged' 
-href 'path/to/html/in/asset/folder'
+
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
 
@@ -16,19 +15,19 @@ This doesn’t mean that after just one hour students would then be experts in c
 <br>
 
 <br>
-#####<em>If you haven't yet watched The Hour Of Code video's, take a moment to feel the excitement and energy that they present to get teachers, students,schools, communities and nations to take action!</em>
->## 2013
+##### <em> If you haven't yet watched The Hour Of Code video's, take a moment to feel the excitement and energy that they present to get teachers, students,schools, communities and nations to take action!</em>
+## 2013
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FC5FbmsH4fw" frameborder="0" allowfullscreen></iframe>
 <br>
 
->## 2014
+## 2014
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rH7AjDMz_dc" frameborder="0" allowfullscreen></iframe>
 <br>
 
->## 2015
+## 2015
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ofze6CWUCx8" frameborder="0" allowfullscreen></iframe>
 <br>
 
-
+<br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
