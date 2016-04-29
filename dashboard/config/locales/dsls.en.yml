@@ -515,12 +515,20 @@ en:
       ECSPD1  intro to The Hour of Code:
         Introduction to The Hour of Code: Introduction to The Hour of Code
         Introduction to The Hour of code: Introduction to The Hour of code
+      ECSPD1 Code Studio:
+        ECSPD1 Code Studio: ECSPD1 Code Studio
+        Navigating Code Studio: Navigating Code Studio
       ECSPD1 ECS Welcome Video:
         ECSPD1 Welcome Video: ECSPD1 Welcome Video
         Welcome to Online PD for ECS: Welcome to Online PD for ECS
       ECSPD1 Forum:
         ECS Forum: ECS Forum
         ECS Forum Discussion: ECS Forum Discussion
+      ECSPD1 Forum Intro:
+        Forum Introduction: Forum Introduction
+      ECSPD1 Welcome to the Code.org Family:
+        ECSPD1 Welcome to the Code.org Family: ECSPD1 Welcome to the Code.org Family
+        Welcome to the Code.org Family: Welcome to the Code.org Family
       ECSPD1 barriers to access cs:
         Barriers to Access CS: Barriers to Access CS
         ECSPD1 Barriers to Access CS: ECSPD1 Barriers to Access CS
@@ -1525,6 +1533,8 @@ en:
         Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
       sciPD what to expect:
         What to Expect: What to Expect
+      sciPD what to expect 16-17:
+        What to Expect: What to Expect
       sciPD2 SLN explore:
         Exploring StarLogo Nova Advanced Features: Exploring StarLogo Nova Advanced Features
       sciPD2 StarLogoNova:
@@ -1879,6 +1889,18 @@ en:
         Match each character with its correct coordinate!: Match each character with its correct coordinate!
         Ninjacat: Ninjacat
         Ruby: Ruby
+      ECS Matching Program Commitment:
+        'Academic Year Development: 4 days in-person and 20 hours online': 'Academic Year Development: 4 days in-person and 20 hours online'
+        ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 5).
+        : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 5).
+        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
+        'Optional Summer Wrap-up: 3 days in-person': 'Optional Summer Wrap-up: 3 days in-person'
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        Phase 4: Phase 4
+        Program Commitment Matching Question: Program Commitment Matching Question
+        'Summer Study: 5 days in-person': 'Summer Study: 5 days in-person'
       ECSPD Growth Mindset Reflection Q:
         Fixed Mindset: Fixed Mindset
         Fixed vs Growth Mindset: Fixed vs Growth Mindset
@@ -1951,6 +1973,23 @@ en:
         Phase 4: Phase 4
       ECSPD unit matching:
         Matching Unit Descriptions and Numbers: Matching Unit Descriptions and Numbers
+        Unit 1: Unit 1
+        Unit 2: Unit 2
+        Unit 3: Unit 3
+        Unit 4: Unit 4
+        Unit 5: Unit 5
+        Unit 6: Unit 6
+        application of problem solving techniques to develop solutions: application of problem solving techniques to develop solutions
+        apply programming and problem solving to the study of robots: apply programming and problem solving to the study of robots
+        create programs to solve computational problems: create programs to solve computational problems
+        introduction to the concepts of computer and computing: introduction to the concepts of computer and computing
+        use computing to manage and interpret data: use computing to manage and interpret data
+        website development and design: website development and design
+      ECSPD1 Matching Unit Descriptions and Numbers:
+        Answer 1: Answer 1
+        ECSPD1 Matching Unit Descriptions and Numbers: ECSPD1 Matching Unit Descriptions and Numbers
+        Matching Unit Descriptions and Numbers: Matching Unit Descriptions and Numbers
+        Question: Question
         Unit 1: Unit 1
         Unit 2: Unit 2
         Unit 3: Unit 3
@@ -2163,14 +2202,17 @@ en:
         https://studio.code.org/script_assets/pd/circle3.png: https://studio.code.org/script_assets/pd/circle3.png
       PDAlg commitment match:
         'Academic Year Development: 2 days in-person and 10 hours online': 'Academic Year Development: 2 days in-person and 10 hours online'
+        'Blended Academic Year Development: 2 hours online, self-paced. 1 day (7 hours) in person': 'Blended Academic Year Development: 2 hours online, self-paced. 1 day (7 hours) in person'
         'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer Study: 3 days in-person and 8 hours online'
         ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
         : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
         'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
+        'Online Introduction: 2 hours online, self-paced': 'Online Introduction: 2 hours online, self-paced'
         Phase 1: Phase 1
         Phase 2: Phase 2
         Phase 3: Phase 3
         Program Commitment Matching Question: Program Commitment Matching Question
+        'Summer Study: 2 days (14 hours) in-person': 'Summer Study: 2 days (14 hours) in-person'
       PDECS commitment match:
         'Academic Year Development: 4 days in-person and 12 hours online': 'Academic Year Development: 4 days in-person and 12 hours online'
         'Blended Summer Study: 5 days in-person and 8 hours online': 'Blended Summer Study: 5 days in-person and 8 hours online'
@@ -2405,6 +2447,16 @@ en:
         ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
         : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
         'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        Program Commitment Matching Question: Program Commitment Matching Question
+      sciPD commitment match 16-17:
+        'Blended Academic Year Development: 2 days in-person and 10 hours online': 'Blended Academic Year Development: 2 days in-person and 10 hours online'
+        'Blended Summer Study: 2 days in-person and 7 hours online': 'Blended Summer Study: 2 days in-person and 7 hours online'
+        ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
+        : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
+        'Online Introduction: 3 hours online, self-paced': 'Online Introduction: 3 hours online, self-paced'
         Phase 1: Phase 1
         Phase 2: Phase 2
         Phase 3: Phase 3

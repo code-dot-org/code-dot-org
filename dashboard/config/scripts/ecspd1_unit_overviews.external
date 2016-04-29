@@ -3,7 +3,6 @@ title 'ECS  unit overviews'
 description 'ECS Unit Overviews'
 css 'unplugged'
 
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
 

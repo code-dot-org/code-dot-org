@@ -25,6 +25,15 @@
   - parsed = JSON.parse(@last_attempt || '{}')
   - page.levels.each_with_index do |level, index|
 
+    -# Show any text from an external level.
+
+    - if data["texts"]
+      - data["texts"].select {|text| text["index"] == page.offset + index}.each do |text_level_info|
+        - text_level = Level.find_by_name(text_level_info["level_name"])
+        = render partial: 'levels/external', locals: {in_level_group: true, level: text_level}
+
+    -# Embed the multi/match/free_response level.
+
     - last_attempt = parsed[level.id.to_s].try(:[], 'result')
     - level_class = level.class.to_s.underscore
 

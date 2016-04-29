@@ -32,7 +32,8 @@
     "examples_required": "false",
     "never_autoplay_video": "false",
     "permitted_errors": "0",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Start with the code from the last puzzle and add an extra `turn right` of three degrees inside the repeat loop.\",\r\n  \"hint_id\": \"Course_4_Artist_Functions_Inspiration_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try turning by more than 90 degrees outside of the `repeat loop`, but still inside the `for loop`.\",\r\n  \"hint_id\": \"Course_4_Artist_Functions_Inspiration_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"**Solution:**\\n![Solution](https://images.code.org/660d9ed1984350fa2dcff82fcf97f1b8-image-1442951899761.54.28.png)\",\r\n  \"hint_id\": \"Course_4_Artist_Functions_Inspiration_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Start with the code from the last puzzle and add an extra `turn right` of three degrees inside the repeat loop.\",\r\n  \"hint_id\": \"Course_4_Artist_Functions_Inspiration_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try turning by more than 90 degrees outside of the `repeat loop`, but still inside the `for loop`.\",\r\n  \"hint_id\": \"Course_4_Artist_Functions_Inspiration_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"**Solution:**\\n![Solution](https://images.code.org/660d9ed1984350fa2dcff82fcf97f1b8-image-1442951899761.54.28.png)\",\r\n  \"hint_id\": \"Course_4_Artist_Functions_Inspiration_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "discard_background": "false"
   },
   "published": true,
   "notes": "",
@@ -141,30 +142,23 @@
           </block>
         </category>
         <category name="Brushes">
-          <block type="draw_width" inline="false">
-            <value name="WIDTH">
-              <block type="math_number">
-                <title name="NUM">1</title>
+          <block type="alpha" inline="true" id="alpha">
+            <value name="VALUE">
+              <block type="math_number_dropdown">
+                <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">100</title>
               </block>
             </value>
           </block>
-          <block type="draw_colour" inline="true">
+          <block type="draw_colour" inline="true" id="draw-color">
             <value name="COLOUR">
               <block type="colour_picker">
                 <title name="COLOUR">#ff0000</title>
               </block>
             </value>
           </block>
-          <block type="draw_colour" inline="true">
+          <block type="draw_colour" inline="true" id="draw-color">
             <value name="COLOUR">
               <block type="colour_random"/>
-            </value>
-          </block>
-          <block type="alpha" inline="true" id="alpha">
-            <value name="VALUE">
-              <block type="math_number_dropdown">
-                <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">100</title>
-              </block>
             </value>
           </block>
           <block type="draw_colour" inline="true" id="draw-color">
@@ -187,6 +181,19 @@
                 </value>
               </block>
             </value>
+          </block>
+          <block type="draw_width" inline="false">
+            <value name="WIDTH">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_line_style_pattern">
+            <title name="VALUE">DEFAULT</title>
+          </block>
+          <block type="sticker">
+            <title name="VALUE">Alien</title>
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE">

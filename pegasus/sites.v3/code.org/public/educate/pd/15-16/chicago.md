@@ -25,52 +25,7 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-
-Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CSP. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
-
-
-**Save the date:**
-
-Quarter 4: Saturday, March 19 , 2016
-
-8:30am - 3:30pm
-<br/>
-Breakfast and lunch will be served.
-<br/><br/>
-**Location**
-
-[23 E Illinois St<br/>
-Chicago, IL 60611](https://www.google.com/maps/place/Philip+H.+Corboy+Law+Center/@41.8973803,-87.6271242,15z/data=!4m2!3m1!1s0x0:0x45b3bb60ee4f6313)
-
-Please enter through After-Words bookstore found on E Illinois St. Transportation recommendations: 
-<br/>
-
-1. If you want to take public transportation the venue is 1 block away from the Grand Avenue Red Line Stop.
-
-
-2. Parking Recommendations.  
-Use SpotHero.com to reserve a parking space in a nearby surface lot or garage at a low rate.  You should be able to find something around $18 for the day.  The closest spot hero lot is across the street from the office at 430 N Rush St.  There are cheaper places to park that are a bit further away.
-
-Street/meter Parking is generally available on Wabash right in front of the office, but you'll need to use the City of Chicago Parking app to park for longer than two hours.  It's also a $4/hr zone.
-
-**What to bring to Phase 3 quarterly sessions:**
-
-Laptop and Charger
-<br/>
-Green journal<br/>
-Snacks
-<br/>
-Water
-<br/>
-<br/>
-
-|Class code | Date | Name |
-|---------- | ---- | ---- |
-|**58160** | 10/24/2015 | CS4All CSP Phase 3 PD for 1st quarter|
-|**58161** | 12/12/2015	 | CS4All CSP Phase 3 PD for 2nd quarter|
-|**58162** | 2/6/2016 | CS4All CSP Phase 3 PD for 3rd quarter|
-|**58163** | 3/19/2016 | CS4All CSP Phase 3 PD for 4th quarter|
-
+Milestone Complete!
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
