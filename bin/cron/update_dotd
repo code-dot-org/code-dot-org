@@ -1,9 +1,12 @@
 #!/usr/bin/env ruby
 require 'open-uri'
 require 'json'
+require 'cdo/only_one'
 require_relative '../../deployment'
 
 def main()
+  return unless only_one_running?(__FILE__)
+
   slack_token = CDO.slack_token
   pagerduty_token = CDO.pagerduty_token
   channel_id = CDO.developers_channel_id
@@ -26,4 +29,4 @@ def main()
   open("https://slack.com/api/channels.setTopic?token=#{slack_token}&channel=#{channel_id}&topic=#{new_topic}")
 end
 
-main() if only_one_running?(__FILE__)
+main()
