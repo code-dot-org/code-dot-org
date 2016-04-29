@@ -6,25 +6,44 @@ class DslTest < ActiveSupport::TestCase
   end
 
   test 'test Script DSL' do
-    input_dsl = "
-stage 'Stage1'
-level 'Level 1'
-level 'Level 2'
-level 'Level 3'
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      stage 'Stage1'
+      level 'Level 1'
+      level 'Level 2'
+      level 'Level 3'
 
-stage 'Stage2'
-level 'Level 4'
-level 'Level 5'
-"
+      stage 'Stage2'
+      level 'Level 4'
+      level 'Level 5'
+    DSL
     output, i18n = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    expected = {:id=>nil, :stages=>[
-        {:stage=>"Stage1", :levels=>[{:name=>"Level 1", :stage=>"Stage1"},
-                                     {:name=>"Level 2", :stage=>"Stage1"},
-                                     {:name=>"Level 3", :stage=>"Stage1"}]},
-        {:stage=>"Stage2", :levels=>[{:name=>"Level 4", :stage=>"Stage2"},
-                                     {:name=>"Level 5", :stage=>"Stage2"}]}],
-                :hidden=>true, :trophies=>false, :wrapup_video=>nil,
-                :login_required=>false, admin_required: false, :pd=>false}
+    expected = {
+        id: nil,
+        stages: [
+          {
+              stage: 'Stage1',
+              levels: [
+                  {name: 'Level 1', stage: 'Stage1'},
+                  {name: 'Level 2', stage: 'Stage1'},
+                  {name: 'Level 3', stage: 'Stage1'}
+              ]
+          },
+          {
+              stage: 'Stage2',
+              levels: [
+                  {name: 'Level 4', stage: 'Stage2'},
+                  {name: 'Level 5', stage: 'Stage2'}
+              ]
+          }
+        ],
+        hidden: true,
+        trophies: false,
+        wrapup_video: nil,
+        login_required: false,
+        admin_required: false,
+        student_of_admin_required: false,
+        pd: false
+    }
 
     i18n_expected = {'en'=>{'data'=>{'script'=>{'name'=>{'test'=>{
         'Stage1'=>'Stage1',
@@ -35,23 +54,85 @@ level 'Level 5'
   end
 
   test 'test Script DSL admin_required as boolean' do
-    input_dsl = "
-admin_required true
-"
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      admin_required true
+    DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
 
-    expected = {id: nil, stages: [], hidden: true, trophies: false, wrapup_video: nil, login_required: false, admin_required: true, pd: false}
+    expected = {
+        id: nil,
+        stages: [],
+        hidden: true,
+        trophies: false,
+        wrapup_video: nil,
+        login_required: false,
+        admin_required: true,
+        student_of_admin_required: false,
+        pd: false
+    }
 
     assert_equal expected, output
   end
 
   test 'test Script DSL admin_required as string' do
-    input_dsl = "
-admin_required 'true'
-"
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      admin_required 'true'
+    DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
 
-    expected = {id: nil, stages: [], hidden: true, trophies: false, wrapup_video: nil, login_required: false, admin_required: true, pd: false}
+    expected = {
+        id: nil,
+        stages: [],
+        hidden: true,
+        trophies: false,
+        wrapup_video: nil,
+        login_required: false,
+        admin_required: true,
+        student_of_admin_required: false,
+        pd: false
+    }
+
+    assert_equal expected, output
+  end
+
+  test 'test Script DSL student_of_admin_required as boolean' do
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      student_of_admin_required true
+    DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+
+    expected = {
+        id: nil,
+        stages: [],
+        hidden: true,
+        trophies: false,
+        wrapup_video: nil,
+        login_required: false,
+        admin_required: false,
+        student_of_admin_required: true,
+        pd: false
+    }
+
+    assert_equal expected, output
+  end
+
+  test 'test Script DSL student_of_admin_required as string' do
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      student_of_admin_required 'true'
+    DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+
+    expected = {
+        id: nil,
+        stages: [],
+        hidden: true,
+        trophies: false,
+        wrapup_video: nil,
+        login_required: false,
+        admin_required: false,
+        student_of_admin_required: true,
+        pd: false
+    }
 
     assert_equal expected, output
   end
