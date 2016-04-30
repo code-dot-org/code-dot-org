@@ -464,7 +464,14 @@ class Script < ActiveRecord::Base
     # Generate PLC objects
     if script.professional_learning_course
       course = Plc::Course.find_or_create_by! name: 'Default'
-      Plc::CourseUnit.where(script_id: script.id).first_or_create!(plc_course_id: course.id)
+      unit = Plc::CourseUnit.where(script_id: script.id).first_or_create!(plc_course_id: course.id)
+
+      script.stages.each do |stage|
+        Plc::LearningModule.where(stage_id: stage.id).first_or_create!(
+          plc_course_unit_id: unit.id,
+          module_type: Plc::LearningModule::REQUIRED_MODULE
+        )
+      end
     end
 
     script
