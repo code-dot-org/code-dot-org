@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 # A simple tool to display a histogram of the number of github reverts
 # bucketed by month. Reverts are identified heuristically by looking
 # for commits with "revert" in title or description.
@@ -7,7 +8,7 @@ require 'date'
 # Gather the dates of the reverts from the git log.
 revert_dates = `git log | grep -i -C 3 revert | grep Date | sed "s/\s*Date:   //"`
 dates = []
-for revert_date in revert_dates.split("\n")
+revert_dates.split("\n").each do |revert_date|
   # Expected format:
   # Thu Oct 2 16:05:32 2014 -0700
   parts = revert_date.split(' ')
@@ -17,12 +18,12 @@ end
 
 # Count the number of reverts by month.
 histogram = Hash.new {|hash, key| hash[key] = 0}
-for date in dates.sort
+dates.sort.each do |date|
   bucketed_date = date.strftime("%Y-%m")
   histogram[bucketed_date] += 1
 end
 
 # Display the histogram.
-for date, count in histogram
-  puts "#{date},#{count.to_s.rjust(3)},#{'*' * count}"
+histogram.each do |date, count|
+  puts "#{date}, #{count.to_s.rjust(3)}, #{'=' * count}"
 end
