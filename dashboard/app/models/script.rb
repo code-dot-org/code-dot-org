@@ -464,16 +464,26 @@ class Script < ActiveRecord::Base
     # Generate PLC objects
     if script.professional_learning_course
       course = Plc::Course.find_or_create_by! name: 'Default'
-      unit = Plc::CourseUnit.where(script_id: script.id).first_or_create!(plc_course_id: course.id)
+      unit = Plc::CourseUnit.find_or_initialize_by(script_id: script.id)
+      unit.update!(
+        plc_course_id: course.id,
+        unit_name: I18n.t("data.script.name.#{script.name}.title"),
+        unit_description: I18n.t("data.script.name.#{script.name}.description")
+      )
 
       script.stages.each do |stage|
-        lm = Plc::LearningModule.where(stage_id: stage.id).first_or_create!(
+        lm = Plc::LearningModule.find_or_initialize_by(stage_id: stage.id)
+        lm.update!(
           plc_course_unit_id: unit.id,
-          module_type: Plc::LearningModule::REQUIRED_MODULE
+          name: stage.name,
+          module_type: Plc::LearningModule::REQUIRED_MODULE,
+          plc_tasks: []
         )
 
         stage.script_levels.each do |sl|
-          task = Plc::Task.where(script_level_id: sl.id).first_or_create!
+          task = Plc::Task.find_or_initialize_by(script_level_id: sl.id)
+          task.name = sl.level.name
+          task.save!
           lm.plc_tasks << task
         end
       end
