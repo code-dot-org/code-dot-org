@@ -460,6 +460,13 @@ class Script < ActiveRecord::Base
 
     script.stages = script_stages
     script.reload.stages
+
+    # Generate PLC objects
+    if script.professional_learning_course
+      course = Plc::Course.find_or_create_by! name: 'Default'
+      Plc::CourseUnit.where(script_id: script.id).first_or_create!(plc_course_id: course.id)
+    end
+
     script
   end
 

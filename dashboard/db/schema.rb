@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428020044) do
+ActiveRecord::Schema.define(version: 20160429214539) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -386,9 +386,11 @@ ActiveRecord::Schema.define(version: 20160428020044) do
     t.integer  "unit_order",       limit: 4
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+    t.integer  "script_id",        limit: 4
   end
 
   add_index "plc_course_units", ["plc_course_id"], name: "index_plc_course_units_on_plc_course_id", using: :btree
+  add_index "plc_course_units", ["script_id"], name: "index_plc_course_units_on_script_id", using: :btree
 
   create_table "plc_courses", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -880,6 +882,7 @@ ActiveRecord::Schema.define(version: 20160428020044) do
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
+  add_foreign_key "plc_course_units", "scripts"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_proficiencies", "users"
 end
