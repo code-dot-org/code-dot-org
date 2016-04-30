@@ -4,6 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  user_id    :integer
+#  kind       :string(255)
 #  properties :text(65535)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
