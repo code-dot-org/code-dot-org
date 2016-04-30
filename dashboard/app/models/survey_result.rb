@@ -11,6 +11,7 @@
 #
 # Indexes
 #
+#  index_survey_results_on_kind     (kind)
 #  index_survey_results_on_user_id  (user_id)
 #
 

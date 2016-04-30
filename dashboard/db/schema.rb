@@ -611,6 +611,7 @@ ActiveRecord::Schema.define(version: 20160430111030) do
     t.datetime "updated_at",               null: false
   end
 
+  add_index "survey_results", ["kind"], name: "index_survey_results_on_kind", using: :btree
   add_index "survey_results", ["user_id"], name: "index_survey_results_on_user_id", using: :btree
 
   create_table "teacher_bonus_prizes", force: :cascade do |t|
