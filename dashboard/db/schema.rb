@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428020044) do
+ActiveRecord::Schema.define(version: 20160430111030) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -605,11 +605,13 @@ ActiveRecord::Schema.define(version: 20160428020044) do
 
   create_table "survey_results", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
+    t.string   "kind",       limit: 255
     t.text     "properties", limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
 
+  add_index "survey_results", ["kind"], name: "index_survey_results_on_kind", using: :btree
   add_index "survey_results", ["user_id"], name: "index_survey_results_on_user_id", using: :btree
 
   create_table "teacher_bonus_prizes", force: :cascade do |t|
