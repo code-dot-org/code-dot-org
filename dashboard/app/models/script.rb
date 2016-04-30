@@ -467,10 +467,15 @@ class Script < ActiveRecord::Base
       unit = Plc::CourseUnit.where(script_id: script.id).first_or_create!(plc_course_id: course.id)
 
       script.stages.each do |stage|
-        Plc::LearningModule.where(stage_id: stage.id).first_or_create!(
+        lm = Plc::LearningModule.where(stage_id: stage.id).first_or_create!(
           plc_course_unit_id: unit.id,
           module_type: Plc::LearningModule::REQUIRED_MODULE
         )
+
+        stage.script_levels.each do |sl|
+          task = Plc::Task.where(script_level_id: sl.id).first_or_create!
+          lm.plc_tasks << task
+        end
       end
     end
 
