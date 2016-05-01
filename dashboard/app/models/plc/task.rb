@@ -23,8 +23,6 @@ class Plc::Task < ActiveRecord::Base
   include SerializedProperties
   include StiFactory
 
-  validates_uniqueness_of :script_level
-
   attr_readonly :type
 
   # Can be overridden by subclasses, otherwise they will default to something like Learning Resource Task
