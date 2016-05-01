@@ -25,7 +25,6 @@ class Plc::CourseUnit < ActiveRecord::Base
   has_many :plc_unit_assignment, class_name: '::Plc::EnrollmentUnitAssignment', foreign_key: 'plc_course_unit_id', dependent: :destroy
 
   validates :plc_course, presence: true
-  validates_uniqueness_of :script, scope: :plc_course_id
 
   def get_all_possible_learning_resources
     plc_learning_modules.map(&:plc_tasks).flatten.select{ |task| task.class == Plc::LearningResourceTask }

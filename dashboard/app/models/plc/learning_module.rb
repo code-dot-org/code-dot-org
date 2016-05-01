@@ -31,7 +31,6 @@ class Plc::LearningModule < ActiveRecord::Base
 
   validates_presence_of :plc_course_unit_id
   validates :module_type, inclusion: {in: MODULE_TYPES}
-  validates_uniqueness_of :stage, scope: :plc_course_unit_id
 
   attr_readonly :plc_course_unit_id
 
