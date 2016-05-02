@@ -297,14 +297,6 @@ GameLab.prototype.afterInject_ = function (config) {
     Blockly.JavaScript.addReservedWords('GameLab,code');
   }
 
-  // Adjust visualizationColumn width.
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  visualizationColumn.style.width = '400px';
-
-  var divGameLab = document.getElementById('divGameLab');
-  divGameLab.style.width = '400px';
-  divGameLab.style.height = '400px';
-
   // Update gameLabP5's scale and keep it updated with future resizes:
   this.gameLabP5.scale = this.calculateVisualizationScale_();
 
