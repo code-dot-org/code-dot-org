@@ -90,6 +90,7 @@ module UsersHelper
               result: result,
               submitted: submitted
           }
+          puts "  just set user data: #{user_data.to_json}"
 
           # Just in case this level has multiple pages, in which case we add an additional
           # array of booleans indicating which pages have been completed.
@@ -99,6 +100,7 @@ module UsersHelper
       end
     end
 
+    puts "final user data: #{user_data.to_json}"
     user_data
   end
 
