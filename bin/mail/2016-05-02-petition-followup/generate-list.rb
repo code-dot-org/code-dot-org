@@ -6,7 +6,7 @@ require_relative '../mailing-common/mailing-list-utils'
 # First, get all US teachers and past organizers.
 teacher_query = %q(
   ((kind_s:user && role_s:teacher) ||
-  kind_s:HocSignup2015 || kind_s:HocSignup2014 || kind_s:"CSEdWeekEvent2013") && (
+  kind_s:HocSignup2015 || kind_s:HocSignup2014 || kind_s:CSEdWeekEvent2013) && (
     create_ip_country_s: "United States" ||
     hoc_country_s: "us" ||
     location_country_code_s: "US"
@@ -17,15 +17,14 @@ fields = %w[email_s name_s]
 teachers = query_subscribed_contacts(q: teacher_query, fl: fields)
 puts "#{teachers.length} total US teachers and past HOC organizers."
 
-
 # Next, filter for those who did not click through the previous email.
 PREVIOUS_MESSAGE_NAME = '4-22-petition-congress-3b-no'
 CLICK_THROUGH_URL = 'http://bit.ly/computersciencepetition'
 message_id = DB[:poste_messages].where(name: PREVIOUS_MESSAGE_NAME).first[:id]
 url_id = DB[:poste_urls].where(url: CLICK_THROUGH_URL).first[:id]
 
-# sending the entire email list was causing problems, so splitting into smaller lists
-# sent over multiple queries.
+# Including the entire email list in the query was causing problems, so
+# splitting into smaller lists sent over multiple queries.
 results = {}
 teachers.keys.each_slice(10000) do |teacher_emails|
   email_list = teacher_emails.map{|email| "\"#{email}\""}.join(',')
