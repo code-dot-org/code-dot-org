@@ -87,19 +87,21 @@ class UsersHelperTest < ActionView::TestCase
   end
 
   def test_summarize_user_progress_with_pages
+    puts "STARTING TEST"
     user = create :user, total_lines: 42
+    puts user.id
     script = create :script
 
     # Create some levels to be embedded in the LevelGroup.
-    sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
-    sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
-    sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
-    sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
+    sub_level1 = create :text_match, name: 'user_progress__level_free_response', type: 'TextMatch'
+    sub_level2 = create :multi, name: 'user_progress__level_multi_unsubmitted', type: 'Multi'
+    sub_level3 = create :multi, name: 'user_progress__level_multi_correct', type: 'Multi'
+    sub_level4 = create :multi, name: 'user_progress__level_multi_incorrect', type: 'Multi'
 
     # Create a LevelGroup level.
-    level = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level = create :level_group, name: 'user_progress__LevelGroupLevel1', type: 'LevelGroup'
     level.properties['title'] =  'Long assessment 1'
-    level.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
+    level.properties['pages'] = [{levels: ['user_progress__level_free_response', 'user_progress__level_multi_unsubmitted']}, {levels: ['user_progress__level_multi_correct', 'user_progress__level_multi_incorrect']}]
     level.save!
 
     # Create a ScriptLevel joining this level to the script.
