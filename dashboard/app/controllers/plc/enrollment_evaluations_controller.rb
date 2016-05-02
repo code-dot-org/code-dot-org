@@ -22,7 +22,7 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
   end
 
   def confirm_assignments
-    modules_to_enroll_in = Plc::LearningModule.where(id: params[:learning_module_ids])
+    modules_to_enroll_in = Plc::LearningModule.find([params[:content_module], params[:practice_module]])
     enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
 
     enrollment_unit_assignment.enroll_user_in_unit_with_learning_modules(modules_to_enroll_in)
