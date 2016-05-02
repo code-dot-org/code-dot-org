@@ -514,13 +514,9 @@ en:
         What is Growth Mindset?: What is Growth Mindset?
       ECSPD1  intro to The Hour of Code:
         Introduction to The Hour of Code: Introduction to The Hour of Code
-        Introduction to The Hour of code: Introduction to The Hour of code
       ECSPD1 Code Studio:
         ECSPD1 Code Studio: ECSPD1 Code Studio
         Navigating Code Studio: Navigating Code Studio
-      ECSPD1 ECS Welcome Video:
-        ECSPD1 Welcome Video: ECSPD1 Welcome Video
-        Welcome to Online PD for ECS: Welcome to Online PD for ECS
       ECSPD1 Forum:
         ECS Forum: ECS Forum
         ECS Forum Discussion: ECS Forum Discussion
@@ -539,11 +535,13 @@ en:
       ECSPD1 curriculum connections:
         ECS Curriculum Connections: ECS Curriculum Connections
         ECS curriculum connections: ECS curriculum connections
+      ECSPD1 curriculum design: {}
       ECSPD1 equity in cs education:
         Equity in Computer Science Education: Equity in Computer Science Education
       ECSPD1 navigating progress:
         ECSPD1 navigating progress: ECSPD1 navigating progress
         Navigating and Progress: Navigating and Progress
+      ECSPD1 post survey: {}
       ECSPD1 pre survey: {}
       ECSPD1 professional learning program phases:
         ECS professional learning program phases: ECS professional learning program phases
@@ -571,9 +569,6 @@ en:
       ECSPD1 your role:
         ECS Your Role as a Learner and Facilitator: ECS Your Role as a Learner and Facilitator
         ECS your role as a learner and facilitator: ECS your role as a learner and facilitator
-      ECSPD1why we need cs:
-        ECSPD1 why we need cs: ECSPD1 why we need cs
-        Why We Need CS: Why We Need CS
       ECSPD3-u5 about: {}
       ECSPD3-u5 challenge details: {}
       ECSPD3-u5 challenge inside: {}
@@ -891,6 +886,9 @@ en:
         Unplugged intro: Unplugged intro
       PDK5 Why K5 CS:
         Why teach computer science in elementary school?: Why teach computer science in elementary school?
+      PDSci commitment:
+        CS in Science PD commitments: CS in Science PD commitments
+        overview of program commitments: overview of program commitments
       Pixelation - Lesson 14 - Instructions Make Your Own:
         Make your own B&W image: Make your own B&W image
         description here: description here
@@ -1453,6 +1451,8 @@ en:
       facilitator test: {}
       k5 what next 1: {}
       rbo-test1: {}
+      sciPD Break 16-17:
+        Before you move on...: Before you move on...
       sciPD Course Overview: {}
       sciPD Intro: {}
       sciPD StarLogo intro 1:
@@ -1508,6 +1508,8 @@ en:
       sciPD expectations: {}
       sciPD finish:
         Code.org Post Survey: Code.org Post Survey
+      sciPD finish 16-17:
+        Code.org Post Survey: Code.org Post Survey
       sciPD framework forum:
         Computational Thinking and the Framework for K-12: Computational Thinking and the Framework for K-12
       sciPD framework video:
@@ -1523,6 +1525,7 @@ en:
       sciPD materials:
         Workshop Materials: Workshop Materials
       sciPD meet and greet: {}
+      sciPD meet and greet 16-17: {}
       sciPD p2 intro:
         Welcome to Phase 2: Welcome to Phase 2
       sciPD p3 intro:
@@ -1986,10 +1989,7 @@ en:
         use computing to manage and interpret data: use computing to manage and interpret data
         website development and design: website development and design
       ECSPD1 Matching Unit Descriptions and Numbers:
-        Answer 1: Answer 1
-        ECSPD1 Matching Unit Descriptions and Numbers: ECSPD1 Matching Unit Descriptions and Numbers
         Matching Unit Descriptions and Numbers: Matching Unit Descriptions and Numbers
-        Question: Question
         Unit 1: Unit 1
         Unit 2: Unit 2
         Unit 3: Unit 3
@@ -2201,12 +2201,9 @@ en:
         https://studio.code.org/script_assets/pd/circle2.png: https://studio.code.org/script_assets/pd/circle2.png
         https://studio.code.org/script_assets/pd/circle3.png: https://studio.code.org/script_assets/pd/circle3.png
       PDAlg commitment match:
-        'Academic Year Development: 2 days in-person and 10 hours online': 'Academic Year Development: 2 days in-person and 10 hours online'
         'Blended Academic Year Development: 2 hours online, self-paced. 1 day (7 hours) in person': 'Blended Academic Year Development: 2 hours online, self-paced. 1 day (7 hours) in person'
-        'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer Study: 3 days in-person and 8 hours online'
         ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
         : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
-        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
         'Online Introduction: 2 hours online, self-paced': 'Online Introduction: 2 hours online, self-paced'
         Phase 1: Phase 1
         Phase 2: Phase 2
@@ -2443,10 +2440,12 @@ en:
         yearbook-picture: yearbook-picture
       sciPD commitment match:
         'Academic Year Development: 2 days in-person and 10 hours online': 'Academic Year Development: 2 days in-person and 10 hours online'
+        'Blended Summer Study: 2 days in-person and 7 hours online': 'Blended Summer Study: 2 days in-person and 7 hours online'
         'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer Study: 3 days in-person and 8 hours online'
         ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
         : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
         'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
+        'Online Introduction: 3 hours online': 'Online Introduction: 3 hours online'
         Phase 1: Phase 1
         Phase 2: Phase 2
         Phase 3: Phase 3
