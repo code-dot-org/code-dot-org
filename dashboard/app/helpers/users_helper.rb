@@ -78,10 +78,12 @@ module UsersHelper
       uls = user.user_levels_by_level(script)
       script_levels = script.script_levels
       user_data[:levels] = {}
+      puts "script_levels: #{script_levels.to_json}"
       script_levels.each do |sl|
         result = level_info(user, sl, uls)
         submitted = level_submitted(user, sl, uls)
         completion_status = submitted ? "submitted" : (activity_css_class result)
+        puts "  completion_status: #{completion_status}"
         if completion_status != 'not_tried'
           user_data[:levels][sl.level_id] = {
               status: completion_status,
