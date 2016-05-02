@@ -30,6 +30,11 @@ var styles = {
       backgroundColor: color.cyan
     }
   },
+  headerButtonRtl: {
+    float: 'left',
+    marginLeft: 3,
+    marginRight: 0
+  },
   headerButtonUnfocused: {
     backgroundColor: color.lightest_purple
   },
@@ -45,11 +50,9 @@ var styles = {
     fontSize: 15,
     fontWeight: 'bold'
   },
-  hiddenIcon: {
-    display: 'none',
-    height: 18,
-    verticalAlign: 'text-bottom',
-    paddingRight: 8
+  headerButtonIconRtl: {
+    paddingRight: 0,
+    paddingLeft: 8
   }
 };
 
@@ -91,18 +94,24 @@ var PaneSection = function (props) {
  * has focus
  */
 var PaneButton = function (props) {
+  var divStyle = [
+    styles.headerButton,
+    props.isRtl && styles.headerButtonRtl,
+    !props.headerHasFocus && styles.headerButtonUnfocused
+  ];
+  var iconStyle = [
+    styles.headerButtonIcon,
+    props.isRtl && styles.headerButtonIconRtl,
+  ];
+
   return (
     <div
         id={props.id}
-        style={[
-          styles.headerButton,
-          !props.headerHasFocus && styles.headerButtonUnfocused
-        ]}
+        style={divStyle}
     >
       <span style={styles.headerButtonSpan}>
-        {/* hiddenIcon currently toggle externally TODO: change color of icon*/}
-        {props.hiddenImage && <img src={props.hiddenImage} style={styles.hiddenIcon}/>}
-        <i className={props.iconClass} style={styles.headerButtonIcon}/>
+        {props.hiddenImage}
+        <i className={props.iconClass} style={iconStyle}/>
         <span style={styles.noPadding}>{props.label}</span>
       </span>
     </div>
@@ -112,7 +121,8 @@ PaneButton.propTypes = {
   headerHasFocus: React.PropTypes.bool.isRequired,
   iconClass: React.PropTypes.string.isRequired,
   label: React.PropTypes.string.isRequired,
-  hiddenImage: React.PropTypes.string
+  isRtl: React.PropTypes.bool.isRequired,
+  hiddenImage: React.PropTypes.element
 };
 
 module.exports = Radium(PaneHeader);
