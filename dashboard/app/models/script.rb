@@ -70,7 +70,7 @@ class Script < ActiveRecord::Base
     end
   end
 
-  serialized_attrs %w(pd admin_required professional_learning_course)
+  serialized_attrs %w(pd admin_required professional_learning_course student_of_admin_required)
 
   def Script.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
@@ -378,7 +378,8 @@ class Script < ActiveRecord::Base
           properties: {
                        pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
                        admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
-                       professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course] # default false
+                       professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course], # default false
+                       student_of_admin_required: script_data[:student_of_admin_required].nil? ? false : script_data[:student_of_admin_required], # default false
                       },
         }, stages.map{|stage| stage[:levels]}.flatten]
       end
@@ -436,8 +437,34 @@ class Script < ActiveRecord::Base
         raise ActiveRecord::RecordNotFound, "Level: #{row_data.to_json}, Script: #{script.name}"
       end
 
-      if level.game && (level.game == Game.applab || level.game == Game.gamelab) && !script.hidden && !script.login_required
-        raise 'Applab/Gamelab levels can only be added to a script that requires login'
+      # TODO: (bbuchanan) Enable stricter gamelab rule when possible.
+      # There are scripts that are not yet compliant with this
+      # gamelab rule.  Once the new student_of_admin_required option is
+      # deployed to levelbuilder and all scripts are updated to be
+      # compliant, enable this enforcing check to make sure future
+      # scripts are compliant as well.
+      #
+      # Scripts known to be in violation of this rule:
+      #   gamelab-hackathon.script
+      #   CSDU3-Draft.script
+      #   TEMP CSD Unit 3.script
+      if Game.gamelab == level.game
+        # unless script.student_of_admin_required || script.admin_required
+        unless script.hidden || script.login_required || script.student_of_admin_required || script.admin_required
+          raise <<-ERROR.gsub(/^\s+/, '')
+            Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required
+            (while adding level "#{level.name}" to script "#{script.name}")
+          ERROR
+        end
+      end
+
+      if Game.applab == level.game
+        unless script.hidden || script.login_required || script.student_of_admin_required || script.admin_required
+          raise <<-ERROR.gsub(/^\s+/, '')
+            Applab levels can only be added to scripts that are hidden or require login
+            (while adding level "#{level.name}" to script "#{script.name}")
+          ERROR
+        end
       end
 
       script_level_attributes = {
@@ -521,7 +548,8 @@ class Script < ActiveRecord::Base
           properties: {
                        pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
                        admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
-                       professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course] # default false
+                       professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course], # default false
+                       student_of_admin_required: script_data[:student_of_admin_required].nil? ? false : script_data[:student_of_admin_required], # default false
           }
         }, script_data[:stages].map { |stage| stage[:levels] }.flatten)
         Script.update_i18n(i18n)
