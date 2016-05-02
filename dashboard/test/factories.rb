@@ -328,7 +328,7 @@ FactoryGirl.define do
   end
 
   factory :plc_written_submission_task, parent: :plc_task, class: 'Plc::WrittenAssignmentTask' do
-    assignment_description nil
+    level_id nil
   end
 
   factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
@@ -349,10 +349,6 @@ FactoryGirl.define do
   factory :plc_evaluation_question, :class => 'Plc::EvaluationQuestion' do
     question "MyString"
     plc_course_unit nil
-  end
-
-  factory :written_enrollment_task_assignment, parent: :plc_enrollment_task_assignment, class: 'Plc::WrittenEnrollmentTaskAssignment' do
-    submission nil
   end
 
   factory :plc_enrollment_task_assignment, :class => 'Plc::EnrollmentTaskAssignment' do
@@ -413,6 +409,7 @@ FactoryGirl.define do
 
   factory :survey_result do
     user { create :teacher }
+    kind 'Diversity2016'
     properties {{survey2016_ethnicity_asian: "1"}}
     properties {{survey2016_foodstamps: "3"}}
   end
