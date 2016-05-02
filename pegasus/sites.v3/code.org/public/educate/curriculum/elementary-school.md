@@ -173,8 +173,8 @@ The Code Studio teacher dashboard makes it easy for teachers to view lesson plan
 ## No workshop in your area? 
 [Find](/educate/k5-affiliates-directory) a K-5 Affiliate near you or consider completing one of our [online self-paced courses](/educate/professional-development-online) on your own.
 
-## Become a K-5 Affiliate- for your district or region
-Code.org is interested in partnering with local [school districts](/educate/k5-district-partnership) and experienced [computer science educators](/educate/k5-affiliates) to host K-5 workshops.
+## Become a CS Fundamentals Facilitator- for your district or region
+Code.org is interested in partnering with local [school districts](/educate/district) and experienced [computer science educators](/educate/professional-learning/cs-fundamentals-facilitator) to host K-5 workshops.
 
 
 ## Need more help?

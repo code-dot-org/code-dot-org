@@ -616,6 +616,7 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
     // `state.n` representing which VariableDeclarator is being executed).
     return state.n > 0;
   }
+  /* eslint-disable no-fallthrough */
   switch (type) {
     // Declarations:
     case "VariableDeclarator":
@@ -644,6 +645,7 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
     case "Program":
       return true;
   }
+  /* eslint-enable  no-fallthrough */
   return false;
 };
 
