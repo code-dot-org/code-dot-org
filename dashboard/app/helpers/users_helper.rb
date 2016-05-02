@@ -93,7 +93,6 @@ module UsersHelper
           # array of booleans indicating which pages have been completed.
           pages_completed = get_pages_completed(user, sl)
           user_data[:levels][sl.level_id][:pages_completed] = pages_completed if pages_completed
-          puts user_data.to_json
         end
       end
     end
