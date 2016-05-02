@@ -9,6 +9,9 @@ var i18n = require('../locale');
 var commonStyles = require('../commonStyles');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var PaneHeader = require('./PaneHeader');
+var PaneSection = PaneHeader.PaneSection;
+var PaneButton = PaneHeader.PaneButton;
+var experiments = require('../experiments');
 
 var styles = {
   noPadding: {
@@ -94,6 +97,8 @@ var DebugWatch = function (props) {
  * used here and by turtle.
  */
 var Slider = function (props) {
+  var icons = props.hasFocus ? '/blockly/media/turtle/icons_white.png' :
+    '/blockly/media/turtle/icons.png';
   return (
     <div id="slider-cell" style={props.style}>
       <svg id="speed-slider"
@@ -108,7 +113,7 @@ var Slider = function (props) {
               x={5}
               y={6} />
         </clipPath>
-        <image xlinkHref="/blockly/media/turtle_icons.png"
+        <image xlinkHref={icons}
             height={42}
             width={84}
             x={-21}
@@ -123,7 +128,7 @@ var Slider = function (props) {
               y={2} />
         </clipPath>
         <image
-            xlinkHref="/blockly/media/turtle_icons.png"
+            xlinkHref={icons}
             height={42}
             width={84}
             x={120}
@@ -133,11 +138,18 @@ var Slider = function (props) {
     </div>
   );
 };
+Slider.propTypes = {
+  hasFocus: React.PropTypes.bool.isRequired
+};
 
 /**
  * The parent JsDebugger component.
  */
 var JsDebugger = function (props) {
+  // Initially, don't want to toggle PaneHeader unless runModeIndicators is on
+  var runModeIndicators = experiments.isEnabled('runModeIndicators');
+  var hasFocus = runModeIndicators && props.isDebugging;
+
   var sliderStyle = {
     marginLeft: props.debugButtons ? 0 : 40
   };
@@ -145,28 +157,31 @@ var JsDebugger = function (props) {
   return (
     <div id="debug-area">
       <div id="debugResizeBar" className="fa fa-ellipsis-h"></div>
-      <PaneHeader id="debug-area-header" hasFocus={props.isDebugging}>
+      <PaneHeader
+          id="debug-area-header"
+          hasFocus={hasFocus}
+      >
         <span className="header-text">{i18n.debugConsoleHeader()}</span>
         <i id="show-hide-debug-icon" className="fa fa-chevron-circle-down"/>
         {props.debugButtons &&
-        <div id="debug-commands-header" className="workspace-header">
+        <PaneSection id="debug-commands-header">
           <i id="running-spinner" style={commonStyles.hidden} className="fa fa-spinner fa-spin"></i>
           <i id="paused-icon" style={commonStyles.hidden} className="fa fa-pause"></i>
           <span className="header-text">{i18n.debugCommandsHeaderWhenOpen()}</span>
-        </div>
+        </PaneSection>
         }
         {props.debugWatch &&
-        <div id="debug-watch-header" className="workspace-header">
+        <PaneSection id="debug-watch-header">
           <span className="header-text">{i18n.debugWatchHeader()}</span>
-        </div>
+        </PaneSection>
         }
-        <div id="clear-console-header" className="workspace-header workspace-header-button">
-          <span>
-            <i className="fa fa-eraser"/>
-            <span style={styles.noPadding}>Clear</span>
-          </span>
-        </div>
-        <Slider style={sliderStyle}/>
+        <PaneButton
+            id="clear-console-header"
+            iconClass="fa fa-eraser"
+            label="Clear"
+            headerHasFocus={hasFocus}
+        />
+        <Slider style={sliderStyle} hasFocus={hasFocus}/>
       </PaneHeader>
       {props.debugButtons && <DebugButtons/>}
       {props.debugConsole && <DebugConsole debugButtons={props.debugButtons} debugWatch={props.debugWatch}/>}
@@ -178,7 +193,8 @@ var JsDebugger = function (props) {
 JsDebugger.propTypes = {
   debugButtons: React.PropTypes.bool.isRequired,
   debugConsole: React.PropTypes.bool.isRequired,
-  debugWatch: React.PropTypes.bool.isRequired
+  debugWatch: React.PropTypes.bool.isRequired,
+  isDebugging: React.PropTypes.bool.isRequired
 };
 
 module.exports = connect(function propsFromStore(state) {
