@@ -26,7 +26,7 @@ var GameLabVisualizationHeader = React.createClass({
           <button value={GameLabInterfaceMode.CODE}>
             {msg.codeMode()}
           </button>
-          <button value={GameLabInterfaceMode.ANIMATION}>
+          <button value={GameLabInterfaceMode.ANIMATION} id="animationMode">
             {msg.animationMode()}
           </button>
         </ToggleGroup>

@@ -13,6 +13,7 @@ module ViewOptionsHelper
     readonly_workspace
     is_external_project_level
     is_channel_backed
+    is_legacy_share
     post_milestone
     puzzle_ratings_url
     authored_hint_view_requests_url

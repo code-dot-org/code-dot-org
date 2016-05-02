@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "Du behöver fånga 20 mus-droider. Använd kommandot \"Lägg till en mus-droid\" inuti händelsen \"när få mus-droid\" för att lägga till två eller flera mus-droider varje gång du fångat en.",
   "failedMultiplyCharactersTimeoutGotSome": "Grattis, du har lagt till kod för att skapa mus-droider. Du kan gå till nästa pussel eller försöka igen för att fånga 20 mus-droider. Försök att göra det lättare genom att lägga till fler av dem! (Tryck och håll ner tangenterna på tangentbordet (eller skärmen) för att gå snabbare.)",
   "failedChangeSettingTimeout": "Få tre rebellpiloter att flytta på sig.",
-  "failedChangeSettingSettings": "Gör spelet till ditt eget. För att klara detta pussel, måste du ändra din droid och ange dess hastighet."
+  "failedChangeSettingSettings": "Gör spelet till ditt eget. För att klara detta pussel, måste du ändra din droid och ange dess hastighet.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }

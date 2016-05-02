@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "Kamu harus mendapatkan 20 Droid Tikus. Gunakan perintah \"tambah sebuah Droid Tikus\" di dalam kejadian \"ketika mendapatkan Droid Tikus\" untuk menambahkan dua atau lebih Droid Tikus setiap kali kamu mendapatkan satu.",
   "failedMultiplyCharactersTimeoutGotSome": "Selamat, kamu menambahkan kode untuk membuat Droid Tikus. Kamu bisa pergi ke teka-teki berikutnya atau mencoba lagi untuk mendapatkan 20 Droid Tikus. Cobalah buat hal tersebut menjadi lebih mudah dengan menambah jumlah mereka! (Tekan dan tahan tombol-tombol pada keyboardmu (atau layar) untuk bergerak lebih cepat.)",
   "failedChangeSettingTimeout": "Dapatkan tiga Pilot Pemberontak untuk dapat lanjut.",
-  "failedChangeSettingSettings": "Buatlah game tersebut milikmu. Untuk menyelesaikan teka-teki ini, kamu harus mengganti droidmu dan menetapkan kecepatannya."
+  "failedChangeSettingSettings": "Buatlah game tersebut milikmu. Untuk menyelesaikan teka-teki ini, kamu harus mengganti droidmu dan menetapkan kecepatannya.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }

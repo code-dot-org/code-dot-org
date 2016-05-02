@@ -26,6 +26,38 @@ var HIDDEN_VALUE = constants.HIDDEN_VALUE;
 var CLICK_VALUE = constants.CLICK_VALUE;
 var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
+// 9 possible positions in playspace (+ random):
+var POSITION_VALUES = [[msg.positionRandom(), RANDOM_VALUE],
+    [msg.positionTopLeft(), Position.TOPLEFT.toString()],
+    [msg.positionTopCenter(), Position.TOPCENTER.toString()],
+    [msg.positionTopRight(), Position.TOPRIGHT.toString()],
+    [msg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
+    [msg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
+    [msg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
+    [msg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
+    [msg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
+    [msg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]];
+
+// Still a slightly reduced set of 17 out of 25 possible positions (+ random):
+var POSITION_VALUES_EXTENDED = [[msg.positionRandom(), RANDOM_VALUE],
+    [msg.positionOutTopLeft(), Position.OUTTOPLEFT.toString()],
+    [msg.positionOutTopRight(), Position.OUTTOPRIGHT.toString()],
+    [msg.positionTopOutLeft(), Position.TOPOUTLEFT.toString()],
+    [msg.positionTopLeft(), Position.TOPLEFT.toString()],
+    [msg.positionTopCenter(), Position.TOPCENTER.toString()],
+    [msg.positionTopRight(), Position.TOPRIGHT.toString()],
+    [msg.positionTopOutRight(), Position.TOPOUTRIGHT.toString()],
+    [msg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
+    [msg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
+    [msg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
+    [msg.positionBottomOutLeft(), Position.BOTTOMOUTLEFT.toString()],
+    [msg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
+    [msg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
+    [msg.positionBottomRight(), Position.BOTTOMRIGHT.toString()],
+    [msg.positionBottomOutRight(), Position.BOTTOMOUTRIGHT.toString()],
+    [msg.positionOutBottomLeft(), Position.OUTBOTTOMLEFT.toString()],
+    [msg.positionOutBottomRight(), Position.OUTBOTTOMRIGHT.toString()]];
+
 var generateSetterCode = function (opts) {
   var value = opts.value || opts.ctx.getTitleValue('VALUE');
   if (value === RANDOM_VALUE) {
@@ -749,39 +781,8 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  // 9 possible positions in playspace (+ random):
-  blockly.Blocks.studio_setSpritePosition.VALUES =
-      [[msg.positionRandom(), RANDOM_VALUE],
-       [msg.positionTopLeft(), Position.TOPLEFT.toString()],
-       [msg.positionTopCenter(), Position.TOPCENTER.toString()],
-       [msg.positionTopRight(), Position.TOPRIGHT.toString()],
-       [msg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
-       [msg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
-       [msg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
-       [msg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
-       [msg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
-       [msg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]];
-
-  // Still a slightly reduced set of 17 out of 25 possible positions (+ random):
-  blockly.Blocks.studio_setSpritePosition.VALUES_EXTENDED =
-      [[msg.positionRandom(), RANDOM_VALUE],
-       [msg.positionOutTopLeft(), Position.OUTTOPLEFT.toString()],
-       [msg.positionOutTopRight(), Position.OUTTOPRIGHT.toString()],
-       [msg.positionTopOutLeft(), Position.TOPOUTLEFT.toString()],
-       [msg.positionTopLeft(), Position.TOPLEFT.toString()],
-       [msg.positionTopCenter(), Position.TOPCENTER.toString()],
-       [msg.positionTopRight(), Position.TOPRIGHT.toString()],
-       [msg.positionTopOutRight(), Position.TOPOUTRIGHT.toString()],
-       [msg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
-       [msg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
-       [msg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
-       [msg.positionBottomOutLeft(), Position.BOTTOMOUTLEFT.toString()],
-       [msg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
-       [msg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
-       [msg.positionBottomRight(), Position.BOTTOMRIGHT.toString()],
-       [msg.positionBottomOutRight(), Position.BOTTOMOUTRIGHT.toString()],
-       [msg.positionOutBottomLeft(), Position.OUTBOTTOMLEFT.toString()],
-       [msg.positionOutBottomRight(), Position.OUTBOTTOMRIGHT.toString()]];
+  blockly.Blocks.studio_setSpritePosition.VALUES = POSITION_VALUES;
+  blockly.Blocks.studio_setSpritePosition.VALUES_EXTENDED = POSITION_VALUES_EXTENDED;
 
   generator.studio_setSpritePosition = function () {
     return generateSetterCode({
@@ -824,6 +825,69 @@ exports.install = function (blockly, blockInstallOptions) {
     return 'Studio.setSpriteXY(\'block_id_' + this.id +
       '\', ' +
       spriteParam + ', ' +
+      xParam + ', ' +
+      yParam + ');\n';
+  };
+
+  blockly.Blocks.studio_addGoal = {
+    // Block for adding a goal flag at a specified position
+    helpUrl: '',
+    init: function () {
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      dropdown.setValue(this.VALUES[1][1]); // default to top-left
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(msg.addGoal());
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.addGoalTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_addGoal.VALUES = POSITION_VALUES;
+
+  generator.studio_addGoal = function () {
+    var value = this.getTitleValue('VALUE');
+    if (value === RANDOM_VALUE) {
+      var possibleValues =
+        _(this.VALUES)
+          .map(function (item) { return item[1]; })
+          .without(RANDOM_VALUE, HIDDEN_VALUE, CLICK_VALUE);
+      value = 'Studio.random([' + possibleValues + '])';
+    }
+    return 'Studio.addGoal(\'block_id_' + this.id + '\', ' + value + ');\n';
+  };
+
+  blockly.Blocks.studio_addGoalXY = {
+    // Block for jumping a sprite to specific XY location.
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(msg.addGoal());
+      this.appendDummyInput()
+        .appendTitle(msg.toXY());
+      this.appendValueInput('XPOS')
+        .setCheck(blockly.BlockValueType.NUMBER);
+      this.appendValueInput('YPOS')
+        .setCheck(blockly.BlockValueType.NUMBER);
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.addGoalTooltip());
+    }
+  };
+
+  generator.studio_addGoalXY = function () {
+    var xParam = Blockly.JavaScript.valueToCode(this, 'XPOS',
+        Blockly.JavaScript.ORDER_NONE) || '0';
+    var yParam = Blockly.JavaScript.valueToCode(this, 'YPOS',
+        Blockly.JavaScript.ORDER_NONE) || '0';
+    return 'Studio.addGoalXY(\'block_id_' + this.id +
+      '\', ' +
       xParam + ', ' +
       yParam + ');\n';
   };

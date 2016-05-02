@@ -10,7 +10,7 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     @learning_module2 = create(:plc_learning_module, plc_course_unit: @course_unit)
     @task2 = create(:plc_written_submission_task, plc_learning_modules: [@learning_module2])
     create(:plc_learning_module, plc_course_unit: @course_unit)
-    @required_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, required: true)
+    @required_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: Plc::LearningModule::REQUIRED_MODULE)
   end
 
   test 'Enrolling user in a course creates other assignment objects' do

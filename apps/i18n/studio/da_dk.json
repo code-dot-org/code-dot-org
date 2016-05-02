@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "Du skal få 20 Musedroider. Tjek at du bruger \"add a Mouse Droid\" kommandoen inden i \"when get Mouse Droid\" til at tilføje to eller flere Musedroider hver gang du rører en.",
   "failedMultiplyCharactersTimeoutGotSome": "Sådan! Du har skrevet kode som tilføjer Musedroider. Du kan gå til næste øvelse eller prøve en gang til at få 20 Musedroider. Prøv at gøre det lettere ved at tilføje flere af dem! (Tryk og hold nede på piletasterne på dit tastatur (eller skærmen) for at bevæge dig hurtigere:)",
   "failedChangeSettingTimeout": "Nå frem til tre Rebel Pilots for at gå videre.",
-  "failedChangeSettingSettings": "Gør det til dit spil. For at gå videre, skal du ændre din droide og sætte dens hastighed."
+  "failedChangeSettingSettings": "Gør det til dit spil. For at gå videre, skal du ændre din droide og sætte dens hastighed.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }
