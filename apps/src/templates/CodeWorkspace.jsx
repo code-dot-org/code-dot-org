@@ -62,12 +62,19 @@ var CodeWorkspace = React.createClass({
       runModeIndicators && props.isRunning && styles.runningChevron
     ];
 
+    // By default, continue to show header as focused. When runModeIndicators
+    // is enabled, remove focus while running.
+    var hasFocus = true;
+    if (runModeIndicators && props.isRunning) {
+      hasFocus = false;
+    }
+
     return (
       <span id="codeWorkspaceWrapper">
         <PaneHeader
             id="headers"
             dir={props.localeDirection}
-            hasFocus={!props.isRunning}
+            hasFocus={hasFocus}
         >
           <div id="codeModeHeaders">
             <PaneSection id="toolbox-header">
@@ -83,16 +90,16 @@ var CodeWorkspace = React.createClass({
                 hiddenImage="/blockly/media/applab/blocks_glyph.gif"
                 iconClass="fa fa-code"
                 label={msg.showCodeHeader()}
-                headerHasFocus={!props.isRunning}/>
+                headerHasFocus={hasFocus}/>
             {!props.readonlyWorkspace && <PaneButton
                 id="clear-puzzle-header"
-                headerHasFocus={!props.isRunning}
+                headerHasFocus={hasFocus}
                 iconClass="fa fa-undo"
                 label={msg.clearPuzzle()}/>
             }
             <PaneButton
                 id="versions-header"
-                headerHasFocus={!props.isRunning}
+                headerHasFocus={hasFocus}
                 iconClass="fa fa-clock-o"
                 label={msg.showVersionsHeader()}/>
             <PaneSection id="workspace-header">

@@ -68,29 +68,12 @@ $debug-area-initial-height: 120px;
 #debug-area-header {
   position: absolute;
   top: $resize-bar-width;
-  height: $workspace-headers-height;
   left: 0;
   right: 0;
-  background-color: $lighter_purple;
   text-align: center;
 
   & > span {
     line-height: $workspace-headers-height;
-  }
-
-  & > span, .workspace-header {
-    color: $dark_charcoal;
-  }
-
-  .workspace-header-button {
-    background-color: $lightest_purple;
-    color: $charcoal;
-    margin-right: 6px;
-
-    &:hover {
-      background-color: $cyan;
-      color: $white;
-    }
   }
 
   span {

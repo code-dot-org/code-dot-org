@@ -65,13 +65,10 @@ var PaneHeader = React.createClass({
   },
 
   render: function () {
-    // Initially, don't want to toggle PaneHeader unless runModeIndicators is on
-    var runModeIndicators = experiments.isEnabled('runModeIndicators');
-
     // TODO purpleHeader style should possibly move into this module
     var style = [
       commonStyles.purpleHeader,
-      runModeIndicators && !this.props.hasFocus && commonStyles.purpleHeaderUnfocused,
+      !this.props.hasFocus && commonStyles.purpleHeaderUnfocused,
       this.props.readOnly && commonStyles.purpleHeaderReadOnly,
     ];
 
@@ -94,18 +91,16 @@ var PaneSection = function (props) {
  * has focus
  */
 var PaneButton = function (props) {
-  var runModeIndicators = experiments.isEnabled('runModeIndicators');
-
   return (
     <div
         id={props.id}
         style={[
           styles.headerButton,
-          runModeIndicators && !props.headerHasFocus && styles.headerButtonUnfocused
+          !props.headerHasFocus && styles.headerButtonUnfocused
         ]}
     >
       <span style={styles.headerButtonSpan}>
-        {/* hiddenIcon currently toggle externally */}
+        {/* hiddenIcon currently toggle externally TODO: change color of icon*/}
         {props.hiddenImage && <img src={props.hiddenImage} style={styles.hiddenIcon}/>}
         <i className={props.iconClass} style={styles.headerButtonIcon}/>
         <span style={styles.noPadding}>{props.label}</span>
