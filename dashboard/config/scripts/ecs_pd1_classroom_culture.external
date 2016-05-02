@@ -3,11 +3,10 @@ title 'ECS classroom culture'
 description 'ECS classroom culture'
 css 'unplugged'
 
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
  
-#ECS Classroom Culture
+# ECS Classroom Culture
 
 <br>
 There are many technological tools that enable people to explore computer science concepts and create innovative artifacts that can impact society, however, the use of technology is not the focus of the course.  In fact, many of the activities in Units 1 and 2 are unplugged or off of the computer so that students are able to connect with the concepts of the course and create an equitable environment where all students can contribute to discussions with whatever background they bring to class to build upon foundational skills, that will serve them well as they apply those skills to Units 3 and 4.  
@@ -17,13 +16,32 @@ There are many technological tools that enable people to explore computer scienc
 It is critical to take the time in Unit 1 and 2 to build a classroom culture that is inclusive of all students so there are relationships built on trust and an understanding that all students are important and every student has something to share that is valuable.  As this is a student centered course, they will work in groups often.  We will look at grouping strategies and ways to keep them engaged.
 <br>
 
+
+<br>
+<img src="https://images.code.org/eeb440013b0236f3288767ffa23070f3-image-1461911237112.jpg" width="350" style="float:left; margin-right:30px">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <br>
 In this course, programming is used as one of the tools, but not the only tool. Students are asked to be creative in designing and implementing solutions as they translate ideas into tangible forms. As students learn about the collaborative nature of computer science and work in teams, actively creating and communicating results for their work in writing and orally, they will be discussing broader implications of computing technologies and consider how computing concepts can connect to other disciplines and their world around them outside of school by creating artifacts, graphs and visualizations to support their computational analysis.
 <br>
 
-<br>
-<img src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png" height="910" width="400" hspace="20">
-<br>
 
 <br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
