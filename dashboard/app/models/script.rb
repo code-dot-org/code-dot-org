@@ -32,6 +32,7 @@ class Script < ActiveRecord::Base
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
+  has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
   validates :name, presence: true, uniqueness: { case_sensitive: false}
