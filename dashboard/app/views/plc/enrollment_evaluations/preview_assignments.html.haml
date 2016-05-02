@@ -1,29 +1,33 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/plc', media: 'all'
+
 - course_unit = @enrollment_unit_assignment.plc_course_unit
 
 = form_tag(action: 'confirm_assignments') do
-  .content_module
-    %h3 Required Content Module
-    %p
-      %strong Based on your self-assessment answers, we chose one content module for you as required.
-      You can choose a different required module if you think that it would help you better prepare to teach.
-
-    - @content_learning_modules.each do |content_module|
+  .preview_evaluation
+    .module_type_section
+      %h3 Required Content Module
       %p
-        %input.radio{type: 'radio', name: 'content_module', value: content_module.id, checked: @enrolled_module_ids.include?(content_module.id.to_s)}
-          = content_module.name
+        %strong Based on your self-assessment answers, we chose one content module for you as required.
+        You can choose a different required module if you think that it would help you better prepare to teach.
 
-  .practice_module
-    %h3 Required Practice Module
-    %p
-      %strong Based on your self-assessment answers, we chose one practice module for you as required.
-      You can choose a different required module if you think that it would help you better preare to teach.
+      - @content_learning_modules.each do |content_module|
+        %p
+          %input.radio{type: 'radio', name: 'content_module', value: content_module.id, checked: @enrolled_module_ids.include?(content_module.id.to_s)}
+            = content_module.name
 
-    %p
-      All other modules will be available for reference.
-
-    - @practice_learning_modules.each do |practice_module|
+    .module_type_section
+      %h3 Required Practice Module
       %p
-        %input.radio{type: 'radio', name: 'practice_module', value: practice_module.id, checked: @enrolled_module_ids.include?(practice_module.id.to_s)}
-          = practice_module.name
+        %strong Based on your self-assessment answers, we chose one practice module for you as required.
+        You can choose a different required module if you think that it would help you better prepare to teach.
 
-  = submit_tag('Confirm Module Selections', id: 'confirm_assignments')
+      %p
+        All other modules will be available for reference.
+
+      - @practice_learning_modules.each do |practice_module|
+        %p
+          %input.radio{type: 'radio', name: 'practice_module', value: practice_module.id, checked: @enrolled_module_ids.include?(practice_module.id.to_s)}
+            = practice_module.name
+
+      = submit_tag('Confirm Module Selections', id: 'confirm_assignments')
