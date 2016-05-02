@@ -32,6 +32,11 @@ var styles = {
       backgroundColor: color.cyan
     }
   },
+  workspaceHeaderButtonRtl: {
+    float: 'left',
+    marginLeft: 3,
+    marginRight: 0
+  },
   workspaceHeaderButtonRunning: {
     backgroundColor: color.lightest_purple
   },
@@ -44,8 +49,18 @@ var styles = {
   blocksGlyph: {
     display: 'none',
     height: 18,
+    lineHeight: '24px',
     verticalAlign: 'text-bottom',
     paddingRight: 8
+  },
+  blocksGlyphRtl: {
+    paddingRight: 0,
+    paddingLeft: 8,
+    transform: 'scale(-1, 1)',
+    MozTransform: 'scale(-1, 1)',
+    WebkitTransform: 'scale(-1, 1)',
+    OTransform: 'scale(-1, 1)',
+    msTransform: 'scale(-1, 1)',
   },
   headerIcon: {
     fontSize: 18
@@ -54,6 +69,10 @@ var styles = {
     lineHeight: '24px',
     paddingRight: 8,
     fontSize: 15
+  },
+  headerButtonIconRtl: {
+    paddingRight: 0,
+    paddingLeft: 8
   },
   noPadding: {
     padding: 0
@@ -104,14 +123,25 @@ var CodeWorkspace = React.createClass({
     var runModeIndicators = experiments.isEnabled('runModeIndicators');
 
     var chevronStyle = [
-      commonStyles.hidden,
       styles.chevron,
       runModeIndicators && props.isRunning && styles.runningChevron
     ];
 
     var headerButtonStyle = [
+      styles.workspaceHeader,
       styles.workspaceHeaderButton,
+      (props.localeDirection === 'rtl') && styles.workspaceHeaderButtonRtl,
       runModeIndicators && props.isRunning && styles.workspaceHeaderButtonRunning
+    ];
+
+    var headerButtonIcon = [
+      styles.headerButtonIcon,
+      (props.localeDirection === 'rtl') && styles.headerButtonIconRtl,
+    ];
+
+    var blocksGlyph = [
+      styles.blocksGlyph,
+      (props.localeDirection === 'rtl') && styles.blocksGlyphRtl,
     ];
 
     return (
@@ -127,20 +157,20 @@ var CodeWorkspace = React.createClass({
         >
           <div id="codeModeHeaders">
             <div id="toolbox-header" style={styles.workspaceHeader}>
-              <i id="hide-toolbox-icon" style={chevronStyle} className="fa fa-chevron-circle-right"/>
+              <i id="hide-toolbox-icon" style={[commonStyles.hidden, chevronStyle]} className="fa fa-chevron-circle-right"/>
               <span>{props.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}</span>
             </div>
             <div id="show-toolbox-header" style={[styles.workspaceHeader, commonStyles.hidden]}>
-              <i id="show-toolbox-icon" styles={styles.headerIcon} className="fa fa-chevron-circle-right"/>
+              <i id="show-toolbox-icon" style={chevronStyle} className="fa fa-chevron-circle-right"/>
               <span>{msg.showToolbox()}</span>
             </div>
             <div
                 id="show-code-header"
                 key="show-code-header"
-                style={[styles.workspaceHeader, headerButtonStyle]}>
+                style={headerButtonStyle}>
               <span style={styles.headerButtonSpan}>
-                <img src="/blockly/media/applab/blocks_glyph.gif" style={styles.blocksGlyph} />
-                <i className="fa fa-code" style={[styles.bold, styles.headerButtonIcon]}/>
+                <img src="/blockly/media/applab/blocks_glyph.gif" style={blocksGlyph} />
+                <i className="fa fa-code" style={[styles.bold, headerButtonIcon]}/>
                 <span style={styles.noPadding}>{msg.showCodeHeader()}</span>
               </span>
             </div>
@@ -148,9 +178,9 @@ var CodeWorkspace = React.createClass({
             <div
                 id="clear-puzzle-header"
                 key="clear-puzzle-header"
-                style={[styles.workspaceHeader, headerButtonStyle]}>
+                style={headerButtonStyle}>
               <span style={styles.headerButtonSpan}>
-                <i className="fa fa-undo" style={styles.headerButtonIcon}/>
+                <i className="fa fa-undo" style={headerButtonIcon}/>
                 <span style={styles.noPadding}>{msg.clearPuzzle()}</span>
               </span>
             </div>
@@ -158,9 +188,9 @@ var CodeWorkspace = React.createClass({
             <div
                 id="versions-header"
                 key="versions-header"
-                style={[styles.workspaceHeader, headerButtonStyle]}>
+                style={headerButtonStyle}>
               <span style={styles.headerButtonSpan}>
-                <i className="fa fa-clock-o" style={styles.headerButtonIcon}/>
+                <i className="fa fa-clock-o" style={headerButtonIcon}/>
                 <span style={styles.noPadding}>{msg.showVersionsHeader()}</span>
               </span>
             </div>

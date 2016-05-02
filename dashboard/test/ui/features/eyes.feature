@@ -112,6 +112,18 @@ Scenario:
   And I wait for 2 seconds
   And I close my eyes
 
+Scenario:
+  When I open my eyes to test "star wars RTL"
+  Given I am on "http://learn.code.org/s/starwars/stage/1/puzzle/15/lang/ar-sa"
+  And I rotate to landscape
+  And I close the dialog
+  And I close the dialog
+  And I wait to see "#runButton"
+  And I see no difference for "star wars RTL"
+  And I press "show-code-header"
+  And I see no difference for "star wars RTL text mode"
+  And I close my eyes
+
 @dashboard_db_access
 Scenario:
   Given I am a student
