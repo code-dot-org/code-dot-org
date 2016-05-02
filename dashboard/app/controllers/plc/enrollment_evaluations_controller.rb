@@ -10,7 +10,7 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
 
   def submit_evaluation
     enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
-    modules_to_enroll_in = enrollment_unit_assignment.plc_course_unit.get_top_modules_of_each_type_from_user_selections(params[:answer_module_list])
+    modules_to_enroll_in = enrollment_unit_assignment.plc_course_unit.get_top_modules_of_each_type_from_user_selections(params[:answer_module_list].split(','))
     redirect_to controller: :enrollment_evaluations, action: :preview_assignments, unit_assignment_id: params[:unit_assignment_id], enrolled_modules: modules_to_enroll_in.map(&:id).sort
   end
 
