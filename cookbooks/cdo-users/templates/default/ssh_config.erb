@@ -6,5 +6,5 @@ Host *.ec2.internal
 
 <% @hosts.each do |node| %>
 Host <%= node.name %>
-  HostName <%= node['fqdn'] || 'fqdn_missing' %>
+  HostName <%= node['cloud'] ? node['cloud']['local_hostname'] : node['fqdn'] || 'fqdn_missing' %>
 <% end %>
