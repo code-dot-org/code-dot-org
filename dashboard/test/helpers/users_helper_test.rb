@@ -101,17 +101,19 @@ class UsersHelperTest < ActionView::TestCase
     level.properties['title'] =  'Long assessment 1'
     level.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
     level.save!
+
+    # Create a ScriptLevel joining this level to the script.
     create :script_level, script: script, level: level, assessment: true
 
-    # Create a UserLevel joining this user to this level.
-    ul = create :user_level, user: user, best_result: 100, script: script, level: level
+    # Create a UserLevel joining this level to the user.
+    ul = create :user_level, user: user, best_result: 100, level: level, script: script
 
-    # The activity record will point at a LevelSource with JSON data in which
+    # The Activity record will point at a LevelSource with JSON data in which
     # page one has all valid answers and page two has no valid answers.
     level_source = create :level_source,
       data: "{\"#{sub_level1.id}\":{\"valid\":true},\"#{sub_level2.id}\":{\"valid\":true},\"#{sub_level3.id}\":{\"valid\":false},\"#{sub_level4.id}\":{\"valid\":false}}"
 
-    # And now create the activity record.
+    # And now create the Activity record.
     create :activity, level_id: level.id,
       user_id: user.id,
       level_source_id: level_source.id,
