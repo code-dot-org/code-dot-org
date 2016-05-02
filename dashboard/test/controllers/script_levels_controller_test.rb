@@ -133,7 +133,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.start_blocks = "<should:override/>"
     real_level.save!
 
-    sl = create :script_level, level: real_level
+    sl = create :script_level, levels: [real_level]
     get :show, script_id: sl.script, stage_id: '1', id: '1'
 
     assert_response :success
@@ -151,7 +151,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.start_blocks = "<shouldnot:override/>"
     real_level.save!
 
-    sl = create :script_level, level: real_level
+    sl = create :script_level, levels: [real_level]
     get :show, script_id: sl.script, stage_id: '1', id: '1'
 
     assert_response :success
@@ -170,7 +170,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.start_html = '<div><label id="label1">wrong html</label></div>'
     real_level.save!
 
-    sl = create :script_level, level: real_level
+    sl = create :script_level, levels: [real_level]
     get :show, script_id: sl.script, stage_id: '1', id: '1'
 
     assert_response :success
@@ -188,7 +188,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.start_html = '<div><label id="label1">real_level html</label></div>'
     real_level.save!
 
-    sl = create :script_level, level: real_level
+    sl = create :script_level, levels: [real_level]
     get :show, script_id: sl.script, stage_id: '1', id: '1'
 
     assert_response :success
@@ -207,7 +207,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.toolbox_blocks = "<should:override/>"
     real_level.save!
 
-    sl = create :script_level, level: real_level
+    sl = create :script_level, levels: [real_level]
     get :show, script_id: sl.script, stage_id: '1', id: '1'
 
     assert_response :success
@@ -225,7 +225,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.toolbox_blocks = "<shouldnot:override/>"
     real_level.save!
 
-    sl = create :script_level, level: real_level
+    sl = create :script_level, levels: [real_level]
     get :show, script_id: sl.script, stage_id: '1', id: '1'
 
     assert_response :success
@@ -392,7 +392,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "next redirects to first non-unplugged level for custom scripts" do
     custom_script = create(:script, :name => 'coolscript')
     unplugged_stage = create(:stage, script: custom_script, name: 'unplugged stage', position: 1)
-    create(:script_level, level: create(:unplugged), script: custom_script, stage: unplugged_stage, position: 1)
+    create(:script_level, levels: [create(:unplugged)], script: custom_script, stage: unplugged_stage, position: 1)
     plugged_stage = create(:stage, script: custom_script, name: 'plugged stage', position: 2)
     create(:script_level, script: custom_script, stage: plugged_stage, position: 1)
 
@@ -409,7 +409,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     UserLevel.create(user: @student, level: first_level.level, script: custom_script, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
     second_level = create(:script_level, script: custom_script, stage: custom_stage_1, :position => 2)
     UserLevel.create(user: @student, level: second_level.level, script: custom_script, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
-    create(:script_level, level: create(:unplugged), script: custom_script, stage: custom_stage_1, :position => 3)
+    create(:script_level, levels: [create(:unplugged)], script: custom_script, stage: custom_stage_1, :position => 3)
     last_level = create(:script_level, script: custom_script, stage: custom_stage_1, :position => 4)
 
     get :next, script_id: 'coolscript'
@@ -419,7 +419,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "next skips entire unplugged stage" do
     custom_script = create(:script, :name => 'coolscript')
     unplugged_stage = create(:stage, script: custom_script, name: 'unplugged stage', position: 1)
-    create(:script_level, level: create(:unplugged), script: custom_script, stage: unplugged_stage, position: 1)
+    create(:script_level, levels: [create(:unplugged)], script: custom_script, stage: unplugged_stage, position: 1)
     create(:script_level, script: custom_script, stage: unplugged_stage, position: 2)
     create(:script_level, script: custom_script, stage: unplugged_stage, position: 3)
     plugged_stage = create(:stage, script: custom_script, name: 'plugged stage', position: 2)
@@ -432,7 +432,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "next when only unplugged level goes back to home" do
     custom_script = create(:script, :name => 'coolscript')
     custom_stage_1 = create(:stage, script: custom_script, name: 'neat stage', position: 1)
-    create(:script_level, level: create(:unplugged), script: custom_script, stage: custom_stage_1, :position => 1)
+    create(:script_level, levels: [create(:unplugged)], script: custom_script, stage: custom_stage_1, :position => 1)
 
     assert_raises RuntimeError do
       get :next, script_id: 'coolscript'
@@ -550,7 +550,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script = create(:script)
     level = create(:level, :blockly)
     stage = create(:stage, script: script)
-    script_level = create(:script_level, script: script, level: level, stage: stage)
+    script_level = create(:script_level, script: script, levels: [level], stage: stage)
 
     get :show, script_id: script, stage_id: stage.position, id: script_level.position
 
@@ -563,7 +563,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script = create(:script)
     level = create(:level, :blockly, user_id: nil)
     stage = create(:stage, script: script)
-    script_level = create(:script_level, script: script, level: level, stage: stage)
+    script_level = create(:script_level, script: script, levels: [level], stage: stage)
 
     create(:callout, script_level: script_level)
 
@@ -732,7 +732,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     level = create :applab
-    script_level = create :script_level, level: level
+    script_level = create :script_level, levels: [level]
     ChannelToken.create!(level: level, user: @student) do |ct|
       ct.channel = 'test_channel_id'
     end
@@ -748,7 +748,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     level = create :applab
-    script_level = create :script_level, level: level
+    script_level = create :script_level, levels: [level]
 
     get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @student.id, section_id: @section.id
 
@@ -760,7 +760,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @admin
 
     level = create :makerlab
-    script_level = create :script_level, level: level
+    script_level = create :script_level, levels: [level]
 
     get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @admin.id
 
@@ -771,7 +771,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @admin
 
     level = create :applab
-    script_level = create :script_level, level: level
+    script_level = create :script_level, levels: [level]
 
     get :show, script_id: script_level.script, stage_id: script_level.stage, id: script_level.position, user_id: @admin.id
 
@@ -846,7 +846,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'teacher can view solution' do
-    sl = ScriptLevel.find_by_script_id_and_level_id(Script.find_by_name('allthethings'), Level.find_by_key('K-1 Artist1 1'))
+    sl = ScriptLevel.joins(:script, :levels).find_by(
+      scripts: {name: 'allthethings'},
+      levels:  Level.key_to_params('K-1 Artist1 1'))
 
     assert_routing({method: "get", path: build_script_level_path(sl)},
                    {controller: "script_levels", action: "show", script_id: 'allthethings', stage_id: sl.stage.position.to_s, id: sl.position.to_s, solution: true},
@@ -869,7 +871,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'student cannot view solution' do
-    sl = ScriptLevel.find_by_script_id_and_level_id(Script.find_by_name('allthethings'), Level.find_by_key('K-1 Artist1 1'))
+    sl = ScriptLevel.joins(:script, :levels).find_by(
+      scripts: {name: 'allthethings'},
+      levels: Level.key_to_params('K-1 Artist1 1'))
 
     sign_in @student
 
@@ -879,7 +883,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'under 13 gets redirected when trying to access applab' do
-    sl = ScriptLevel.find_by_script_id_and_level_id(Script.find_by_name('allthethings'), Level.find_by_key('U3L2 Using Simple Commands'))
+    sl = ScriptLevel.joins(:script, :levels).find_by(
+      scripts: {name: 'allthethings'},
+      levels: Level.key_to_params('U3L2 Using Simple Commands'))
 
     sign_in @young_student
 
@@ -889,7 +895,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'over 13 does not get redirected when trying to access applab' do
-    sl = ScriptLevel.find_by_script_id_and_level_id(Script.find_by_name('allthethings'), Level.find_by_key('U3L2 Using Simple Commands'))
+    sl = ScriptLevel.joins(:script, :levels).find_by(
+      scripts: {name: 'allthethings'},
+      levels: Level.key_to_params('U3L2 Using Simple Commands'))
 
     sign_in @student
 
@@ -903,7 +911,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     last_attempt_data = 'test'
     level = create(:applab, submittable: true)
-    script_level = create(:script_level, level: level)
+    script_level = create(:script_level, levels: [level])
     Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
     ul = UserLevel.create!(level: level, script: script_level.script, user: @student, best_result: ActivityConstants::FREE_PLAY_RESULT, submitted: true)
 
@@ -963,7 +971,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     level = create(:applab, examples: ['fakeexample'])
     Level.any_instance.stubs(:examples).returns(['fakeexample'])
 
-    get_show_script_level_page(create(:script_level, level: level))
+    get_show_script_level_page(create(:script_level, levels: [level]))
 
     assert_select 'button', text: I18n.t('teacher.panel.example'), count: 0
   end
@@ -980,7 +988,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     level = create(:applab, examples: ['fakeexample'])
 
-    get_show_script_level_page(create(:script_level, level: level))
+    get_show_script_level_page(create(:script_level, levels: [level]))
 
     assert_select 'button', I18n.t('teacher.panel.example')
   end

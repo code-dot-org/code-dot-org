@@ -21,9 +21,12 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 1, @script_level.position
   end
 
-  test "should destroy when related level is destroyed" do
+  test "should destroy when all related levels are destroyed" do
     @script_level = create(:script_level)
-    @script_level.level.destroy
+    @script_level.levels << create(:level)
+    @script_level.levels[1].destroy
+    assert ScriptLevel.exists?(@script_level.id)
+    @script_level.levels[0].destroy
     assert_not ScriptLevel.exists?(@script_level.id)
   end
 
@@ -81,15 +84,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'calling next_level when next level is unplugged skips the level for script without stages' do
-    last_20h_maze_1_level = ScriptLevel.find_by(level: Level.find_by_level_num('2_19'), script_id: 1)
-    first_20h_artist_1_level = ScriptLevel.find_by(level: Level.find_by_level_num('1_1'), script_id: 1)
+    last_20h_maze_1_level = ScriptLevel.joins(:levels).find_by(levels: {level_num: '2_19'}, script_id: 1)
+    first_20h_artist_1_level = ScriptLevel.joins(:levels).find_by(levels: {level_num: '1_1'}, script_id: 1)
 
     assert_equal first_20h_artist_1_level, last_20h_maze_1_level.next_progression_level
   end
 
   test 'calling next_level when next level is not unplugged does not skip the level for script without stages' do
-    first_20h_artist_1_level = ScriptLevel.find_by(level: Level.find_by_level_num('1_1'), script_id: 1)
-    second_20h_artist_1_level = ScriptLevel.find_by(level: Level.find_by_level_num('1_2'), script_id: 1)
+    first_20h_artist_1_level = ScriptLevel.joins(:levels).find_by(levels: {level_num: '1_1'}, script_id: 1)
+    second_20h_artist_1_level = ScriptLevel.joins(:levels).find_by(levels: {level_num: '1_2'}, script_id: 1)
 
     assert_equal second_20h_artist_1_level, first_20h_artist_1_level.next_progression_level
   end
@@ -98,7 +101,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script = create(:script, name: 's1')
     stage = create(:stage, script: script, position: 1)
     script_level_first = create(:script_level, script: script, stage: stage, position: 1)
-    create(:script_level, level: create(:unplugged), script: script, stage: stage, position: 2)
+    create(:script_level, levels: [create(:unplugged)], script: script, stage: stage, position: 2)
     script_level_after = create(:script_level, script: script, stage: stage, position: 3)
 
     assert_equal script_level_after, script_level_first.next_progression_level
@@ -110,9 +113,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level_first = create(:script_level, script: script, stage: first_stage, position: 1, chapter: 1)
 
     unplugged_stage = create(:stage, script: script, position: 2)
-    create(:script_level, level: create(:unplugged), script: script, stage: unplugged_stage, position: 1, chapter: 2)
-    create(:script_level, level: create(:match), script: script, stage: unplugged_stage, position: 2, chapter: 3)
-    create(:script_level, level: create(:match), script: script, stage: unplugged_stage, position: 3, chapter: 4)
+    create(:script_level, levels: [create(:unplugged)], script: script, stage: unplugged_stage, position: 1, chapter: 2)
+    create(:script_level, levels: [create(:match)], script: script, stage: unplugged_stage, position: 2, chapter: 3)
+    create(:script_level, levels: [create(:match)], script: script, stage: unplugged_stage, position: 3, chapter: 4)
 
     plugged_stage = create(:stage, script: script, position: 3)
     script_level_after = create(:script_level, script: script, stage: plugged_stage, position: 1, chapter: 5)
@@ -129,7 +132,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   test 'calling next_level on an unplugged level works' do
     script = create(:script, name: 's1')
     stage = create(:stage, script: script, position: 1)
-    script_level_unplugged = create(:script_level, level: create(:unplugged), script: script, stage: stage, position: 1, chapter: 1)
+    script_level_unplugged = create(:script_level, levels: [create(:unplugged)], script: script, stage: stage, position: 1, chapter: 1)
     script_level_after = create(:script_level, script: script, stage: stage, position: 2, chapter: 2)
 
     assert_equal script_level_after, script_level_unplugged.next_level

@@ -65,15 +65,14 @@ Snacks
 <br/>
 Water
 
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
+### Phase 4: Summer Wrap-up (5 days in-person - Summer 2016) ###
 
-Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
-will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
+Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
 
 
-**Save the Dates**
+**Save the Date**
 
-Monday, June 27th - Wednesday, June 29th
+Monday, August 1st - Friday, August 5th
 <br />
 8:30am - 3:30pm
 <br />
@@ -93,7 +92,6 @@ Laptop and Charger<br/>
 Snacks<br/>
 Water Bottle
 <br />
-
 
 [**Back to the top**](#top)
 

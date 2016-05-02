@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 <span style="background-color: transparent; color: #4f81bd; font-family: Cambria; font-size: 17px; font-style: normal; font-variant: normal; font-weight: bold; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">
 ### PART 6: Create Agents</span>
 <div dir="ltr" style="margin-left: 0pt;">
-<table style="border-collapse: collapse; border: none;"><colgroup><col width="312"></col><col width="312"></col></colgroup><tbody>
+<table style="border-collapse: collapse; border: none;"><colgroup><col width="412"></col><col width="412"></col></colgroup><tbody>
 <tr style="height: 0px;"><td colspan="2" style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.38; margin-bottom: 31pt; margin-top: 15pt;">
 <span style="background-color: transparent; color: #3c3c3c; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">REMIX “Orientation – version 2” and rename it as “Orientation – version 3” in your public gallery.</span><span style="background-color: transparent; color: #3c3c3c; font-family: Verdana; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">  </span><span style="background-color: transparent; color: #3c3c3c; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">In this part of the tutorial, you will program “The World” to create some Turtle agents when the user clicks the setup button.</span></div>
 </td></tr>
@@ -73,7 +73,9 @@ markdown <<MARKDOWN
 <div dir="ltr" style="line-height: 1.38; margin-bottom: 17pt; margin-top: 0pt;">
 <span style="background-color: transparent; color: #3c3c3c; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> </span></div>
 <br><br>
-<div id="discourse-comments"></div><br><br>
+<a href="http://forum.code.org/t/computer-science-in-science-pd-the-tutorial-6/22" target="_new"><button style="background-color:#00B2C0; color:white;">Start Discussion
+</button></a>
+<br><br><br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

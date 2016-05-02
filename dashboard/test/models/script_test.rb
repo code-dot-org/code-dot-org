@@ -167,7 +167,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_file_remove_level = File.join(self.class.fixture_path, "duplicate_scripts", "test_fixture.script")
 
     scripts,_ = Script.setup([script_file_remove_level])
-    new_first_script_level = ScriptLevel.where(script: scripts[0], level: promoted_level).first
+    new_first_script_level = ScriptLevel.joins(:levels).where(script: scripts[0], levels: {id: promoted_level}).first
     assert_equal 1, new_first_script_level.position
   end
 

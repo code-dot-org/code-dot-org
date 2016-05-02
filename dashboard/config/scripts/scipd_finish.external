@@ -4,20 +4,22 @@ css 'unplugged'
 skip_dialog true
 
 markdown <<MARKDOWN
-### Post-Survey and Finish
+### Congratulations! 
 
 
 <div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
 <span style="background-color: transparent; color: #3c3c3c; font-family: Verdana; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">
 
-Thank you for participating in the first phase of professional development with Code.org. To finish your Phase 1 Online PD experience, please take this survey.
+You've just finished your first phase of the CS in Science Professional Learning Program! Thank you so much for spending the time to complete this introduction, where we hope you learned more about the program you've just embarked on. 
 
-<script type="text/javascript" src="https://secure.jotform.us/jsform/51206832309147"></script>
+We'll see you this summer at your in-person workshop! You will soon receive (or may have already received) a registration email with dates, times and location information for your local workshop. If you have any questions, please don't hesitate to email us at [teacher@code.org](mailto:teacher@code.org).
 
-<a href="http://www.jotform.us/form/51206832309147">Can't see the survey? Click Here.</a>
+Please take this quick survey.
 
+<iframe src="https://docs.google.com/a/code.org/forms/d/1A2YHHWcRi2IMdUdkkA5ZvH78ykRV4bH09OyB57zkWuA/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
-That's it, you're done with the Computer Science in Science Phase 1 Online PD!  
+<a href="http://goo.gl/forms/disf8rXkgP">Can't see the survey? Click Here.</a>
+
 Click "Continue" below to exit to the teacher dashboard.</span></div>
 </br>
 
