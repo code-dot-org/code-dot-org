@@ -30,7 +30,8 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The foundation of this code is the same as the solution to the previous challenge puzzle...with a couple of changes.\",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_inspire_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try a `for` loop that goes from 3 to 10 with an increment of 1.\",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_inspire_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"There are two iterations of the same repeat loop inside the `for` loop, but the second repeat turns the opposite direction.\",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_inspire_c\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"**Solution:**  ![Solution](https://images.code.org/d619892fc17ff491c201d86bb917e523-image-1441005190828.12.30.png) \",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_inspire_d\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The foundation of this code is the same as the solution to the previous challenge puzzle...with a couple of changes.\",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_inspire_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try a `for` loop that goes from 3 to 10 with an increment of 1.\",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_inspire_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"There are two iterations of the same repeat loop inside the `for` loop, but the second repeat turns the opposite direction.\",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_inspire_c\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"**Solution:**  ![Solution](https://images.code.org/d619892fc17ff491c201d86bb917e523-image-1441005190828.12.30.png) \",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_inspire_d\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "discard_background": "false"
   },
   "published": true,
   "notes": "",
@@ -144,30 +145,23 @@
           </block>
         </category>
         <category name="Brushes">
-          <block type="draw_width" inline="false">
-            <value name="WIDTH">
-              <block type="math_number">
-                <title name="NUM">1</title>
-              </block>
-            </value>
-          </block>
-          <block type="draw_colour" inline="true">
-            <value name="COLOUR">
-              <block type="colour_picker">
-                <title name="COLOUR">#0000cd</title>
-              </block>
-            </value>
-          </block>
-          <block type="draw_colour" inline="true">
-            <value name="COLOUR">
-              <block type="colour_random"/>
-            </value>
-          </block>
           <block type="alpha" inline="true" id="alpha">
             <value name="VALUE">
               <block type="math_number_dropdown">
                 <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">100</title>
               </block>
+            </value>
+          </block>
+          <block type="draw_colour" inline="true" id="draw-color">
+            <value name="COLOUR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_colour" inline="true" id="draw-color">
+            <value name="COLOUR">
+              <block type="colour_random"/>
             </value>
           </block>
           <block type="draw_colour" inline="true" id="draw-color">
@@ -190,6 +184,19 @@
                 </value>
               </block>
             </value>
+          </block>
+          <block type="draw_width" inline="false">
+            <value name="WIDTH">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_line_style_pattern">
+            <title name="VALUE">DEFAULT</title>
+          </block>
+          <block type="sticker">
+            <title name="VALUE">Alien</title>
           </block>
         </category>
       </xml>

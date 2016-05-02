@@ -1,0 +1,28 @@
+name 'sciPD what to expect 16-17'
+title 'What to Expect'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+
+### What to Expect: Material We'll Cover
+
+
+**Phase 1 consists of three components:**
+
+  1) an introduction to the course (10 minutes);<br>
+  2) eight CS in Science intro videos (roughly 58 minutes total); and<br>
+  3) a guided tutorial introduction to StarLogo Nova (approximately 60 minutes). *Available after May 4, 2016.<br>
+
+The set of Phase 1 components can be completed in just over 2 hours.
+
+ 
+**What we'll cover:**
+
+Within each of the lessons, you will watch a video, occasionally review a document, test your understanding by answering a quiz question or two, write a reflection on a topic and post it to the online forum, read other participants’ entries on the forum and write a comment in reaction, and perhaps read an accompanying article.
+
+The guided tutorial, “Getting Started in StarLogo Nova”, takes you through a series of steps that will introduce you to the modeling and simulation environment. After completing each of the steps, you will save your project and share a link to it on the forum.
+
+Let’s get started! 
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

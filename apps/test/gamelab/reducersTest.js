@@ -3,6 +3,10 @@ var createStore = require('@cdo/apps/redux').createStore;
 var expect = require('chai').expect;
 var GameLabInterfaceMode = require('@cdo/apps/gamelab/constants').GameLabInterfaceMode;
 var gamelabReducer = require('@cdo/apps/gamelab/reducers').gamelabReducer;
+var levelProperties = require('@cdo/apps/redux/levelProperties');
+
+var testUtils = require('../util/testUtils');
+testUtils.setExternalGlobals();
 
 describe('gamelabReducer', function () {
   var store;
@@ -44,7 +48,7 @@ describe('gamelabReducer', function () {
   });
 
   describe('action: setInitialLevelProps', function () {
-    var setInitialLevelProps = actions.setInitialLevelProps;
+    var setInitialLevelProps = levelProperties.setInitialLevelProps;
 
     it('allows setting assetUrl', function () {
       var newAssetUrlFunction = function () {};
@@ -76,7 +80,7 @@ describe('gamelabReducer', function () {
         store.dispatch(setInitialLevelProps({
           theAnswer: 42
         }));
-      }).to.throw(Error, /Property "theAnswer" may not be set using the SET_INITIAL_LEVEL_PROPS action./);
+      }).to.throw(Error, /Property "theAnswer" may not be set using the levelProperties\/SET_INITIAL_LEVEL_PROPS action./);
     });
 
   });
