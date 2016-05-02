@@ -413,6 +413,7 @@ FactoryGirl.define do
 
   factory :survey_result do
     user { create :teacher }
+    kind 'Diversity2016'
     properties {{survey2016_ethnicity_asian: "1"}}
     properties {{survey2016_foodstamps: "3"}}
   end
