@@ -3,39 +3,29 @@ title 'ECS student centered learning'
 description 'ECS Student Centered Learning'
 css 'unplugged' 
 
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
 
-# Student Centered Learning
+## Student Centered Learning
+
 <br>
 These first two units of ECS level the playing field for all students to be able to be contributing members of a team, while at the same time take a new look at topics that may seem fairly straight forward until they take a deeper dive and look at it with a computer scientist’s point of view.
 <br>
+
+<br>
+<img src="https://images.code.org/a33b888fc323ed08e780041c8b2c328f-image-1461911871189.png" width="300" style="float:left; margin-right:30px">
 
 <br>
 As the facilitator you will be able to establish a classroom culture that sets the stage for a positive classroom environment where students know you care, clarity of what is expected is apparent, the course is challenging, yet students aren’t afraid to take risks, students are engaged, all students feel like they can share ideas and their ideas are respected, in addition to students feeling that the teacher is aware of their individual needs and what they need to be successful.
 <br>
 
 <br>
-<img align="left" src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png" height="910" width="400" hspace="20">
-<br>
-<br> 
+Taking on this new approach of students learning through inquiry and you being more of a facilitator than “sage on the stage”, may seem a bit awkward at first, however, as you continue to give students the opportunity to explore, make connections and find creative solutions, it will seem more natural.  During your academic year professional learning program, you will take a closer look at the other Units and how they tie in together as an introductory computer science course so they can have a positive first experience with computer science.
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<em>[(*source*)](http://infogr.am/Student-Centered-Learning)</em> 
 <br>
 
-<br>
-Taking on this new approach of students learning through inquiry and you being more of a facilitator than “sage on the stage”, may seem a bit awkward at first, however, as you continue to give students the opportunity to explore, make connections and find creative solutions, it will seem more natural.  During your academic year professional learning program, you will take a closer look at the other Units and how they tie in together as an introductory computer science course so they can have a positive first experience with computer science.
+<em>[(*source*)](http://infogr.am/Student-Centered-Learning)</em> 
 <br>
 <br>
 

@@ -3,20 +3,14 @@ title 'Results of The Hour of Code'
 description 'Results of The Hour of code'
 css 'unplugged' 
 
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
 
 
-# Results of The Hour of Code
+## Results of The Hour of Code
 <br>
 
-<img align="left" src="https://code.org/images/edquote1.png" height="910" width="400" hspace="20">
-<br>
-<br>
-<br>
-<br>
-<h1>In 2014 The Hour of Code was the fastest event to reach 15 million users in just 7 days</h1>
+<img src="https://images.code.org/760b427fc565eedb7fe6a9b60794b848-image-1461907981973.png" width="340" style="float:left; margin-right:30px">
 <br>
 <br>
 <br>
@@ -25,19 +19,15 @@ markdown <<MARKDOWN
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<img align="right" src="https://code.org/images/edquote1.png" height="910" width="400" hspace="20">
-<br>
-<br>
-<br>
-<br>
-<h1>By 2015 over 236,601,577 students had tried an Hour of Code</h1>
+<h4>In 2014 The Hour of Code was the fastest event to reach 15 million users in just 7 days</h4>
 <br>
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+ <img src="https://images.code.org/664ce0bc32b48ba37d126c6692e18a1a-image-1461908057259.png" width="400" style="float:right; margin-left:30px">
 <br>
 <br>
 <br>
@@ -46,16 +36,15 @@ markdown <<MARKDOWN
 <br>
 <br>
 <br>
-<br>
-And within a few short years, the Hour of Code became so popular that it became the largest learning event in history worldwide.
-<br>
+<h4>By 2015 over 236,601,577 students had tried an Hour of Code</h4>
 <br>
 <br>
-Now that the movement has started, students, parents, schools, and even communities are excited about computer science, but we don’t have enough schools offering it, teachers to teach it, little own teachers with the necessary credentials or background to take on this challenge of preparing students for future careers in computing. 
+<br>
+<h5>And within a few short years, the Hour of Code became so popular that it became the largest learning event in history worldwide.</h5>
 <br>
 <br>
-<img align="left" src="https://code.org/images/cs-stats/Slide1_Schools_Teach.png" height="910" width="400" hspace="20">
-<img align="left" src="https://code.org/images/cs-stats/Slide2_STEM_CS.png" height="910" width="400" hspace="20">
+ <img src="https://images.code.org/cd39087605c1d962f28d3c76f7332f3f-image-1461908480812.png" width="750" style="float:left; margin-right:30px">
+  <img src="https://images.code.org/086b12cb86f131722c7529e5bf43dbdf-image-1461908523620.png" width="550" style="float:left; margin-right:30px">
 <br>
 <br>
 <br>
@@ -69,11 +58,50 @@ Now that the movement has started, students, parents, schools, and even communit
 <br>
 <br>
 <br>
-So what comes next…… it is working with fabulous teachers like yourselves, who are willing to step up to the task and be part of a movement that will impact students perception of computer science and equip yourselves with teaching strategies that will create a classroom culture that is inclusive of all students who are engaged, contributing members of a computing community of practice.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<em><h5>Now that the movement has started, students, parents, schools, and even communities are excited about computer science, but we don’t have enough schools offering it, teachers to teach it, little own teachers with the necessary credentials or background to take on this challenge of preparing students for future careers in computing.</h5> </em>
+<br>
+<br>
+<br>
+<img src="https://code.org/images/cs-stats/Slide1_Schools_Teach.png" width="380" style="float:right; margin-left:30px"> <img src="https://code.org/images/cs-stats/Slide2_STEM_CS.png" width="375" style="float:left; margin-right:30px">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<strong>So what comes next…… it is working with fabulous teachers like yourselves, who are willing to step up to the task and be part of a movement that will impact students perception of computer science and equip yourselves with teaching strategies that will create a classroom culture that is inclusive of all students who are engaged, contributing members of a computing community of practice.</strong>
 <br>
 <br>
 
 <br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

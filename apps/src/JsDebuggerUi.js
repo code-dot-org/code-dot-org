@@ -434,14 +434,7 @@ JsDebuggerUi.prototype.clearDebugInput = function () {
 JsDebuggerUi.prototype.onPauseContinueButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
-    // We have code and are either running or paused
-    if (jsInterpreter.paused &&
-        jsInterpreter.nextStep === StepType.RUN) {
-      jsInterpreter.paused = false;
-    } else {
-      jsInterpreter.paused = true;
-      jsInterpreter.nextStep = StepType.RUN;
-    }
+    jsInterpreter.handlePauseContinue();
 
     this.updatePauseUiState();
   }
@@ -517,8 +510,7 @@ JsDebuggerUi.prototype.resetDebugControls_ = function () {
 JsDebuggerUi.prototype.onStepOverButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
-    jsInterpreter.paused = true;
-    jsInterpreter.nextStep = StepType.OVER;
+    jsInterpreter.handleStepOver();
     this.updatePauseUiState();
   }
 };
@@ -530,16 +522,14 @@ JsDebuggerUi.prototype.onStepInButton = function () {
     this.onPauseContinueButton();
     jsInterpreter = this.jsInterpreter_;
   }
-  jsInterpreter.paused = true;
-  jsInterpreter.nextStep = StepType.IN;
+  jsInterpreter.handleStepIn();
   this.updatePauseUiState();
 };
 
 JsDebuggerUi.prototype.onStepOutButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
-    jsInterpreter.paused = true;
-    jsInterpreter.nextStep = StepType.OUT;
+    jsInterpreter.handleStepOut();
     this.updatePauseUiState();
   }
 };
