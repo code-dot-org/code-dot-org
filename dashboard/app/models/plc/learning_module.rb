@@ -31,6 +31,8 @@ class Plc::LearningModule < ActiveRecord::Base
   attr_readonly :plc_course_unit_id
 
   scope :required, -> { where(module_type: REQUIRED_MODULE)}
+  scope :content, -> { where(module_type: CONTENT_MODULE)}
+  scope :practice, -> { where(module_type: PRACTICE_MODULE)}
 
   def is_required?
     module_type == REQUIRED_MODULE
