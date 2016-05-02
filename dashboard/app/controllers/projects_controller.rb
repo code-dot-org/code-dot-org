@@ -2,6 +2,7 @@ require 'active_support/core_ext/hash/indifferent_access'
 
 class ProjectsController < ApplicationController
   before_filter :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy]
+  before_filter :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix]
   include LevelsHelper
 
@@ -54,7 +55,6 @@ class ProjectsController < ApplicationController
   end
 
   def load
-    authorize! :load_project, params[:key]
     return if redirect_applab_under_13(@level)
     if current_user
       channel = StorageApps.new(storage_id_for_user).most_recent(params[:key])
@@ -65,19 +65,14 @@ class ProjectsController < ApplicationController
     end
 
     create_new
-  rescue CanCan::AccessDenied
-    redirect_unauthorized
   end
 
   def create_new
-    authorize! :load_project, params[:key]
     return if redirect_applab_under_13(@level)
     redirect_to action: 'edit', channel_id: create_channel({
       name: 'Untitled Project',
       level: polymorphic_url([params[:key], 'project_projects'])
     })
-  rescue CanCan::AccessDenied
-    redirect_unauthorized
   end
 
   def show
@@ -104,21 +99,15 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    authorize! :load_project, params[:key]
     show
-  rescue CanCan::AccessDenied
-    redirect_unauthorized
   end
 
   def remix
-    authorize! :load_project, params[:key]
     src_channel_id = params[:channel_id]
     new_channel_id = create_channel nil, src_channel_id
     AssetBucket.new.copy_files src_channel_id, new_channel_id
     SourceBucket.new.copy_files src_channel_id, new_channel_id
     redirect_to action: 'edit', channel_id: new_channel_id
-  rescue CanCan::AccessDenied
-    redirect_unauthorized
   end
 
   def set_level
@@ -132,7 +121,16 @@ class ProjectsController < ApplicationController
     @@project_level_cache[key] ||= Level.find_by_key(key)
   end
 
-  def redirect_unauthorized
+  # For certain actions, check a special permission before proceeding.
+  def authorize_load_project!
+    authorize! :load_project, params[:key]
+  end
+
+  # Automatically catch authorization exceptions on any methods in this controller
+  # Overrides handler defined in application_controller.rb.
+  # Special for projects controller - when forbidden, redirect to home instead
+  # of returning a 403.
+  rescue_from CanCan::AccessDenied do
     if current_user
       # Logged in and trying to reach a forbidden page - redirect to home.
       redirect_to '/'
