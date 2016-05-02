@@ -19,7 +19,7 @@ describe('The Exporter,', function () {
     server.respondWith('/assets/js/applab-api.js', 'applab-api.js content');
     server.respondWith('/assets/css/applab.css', 'applab.css content');
 
-    assetPrefix.init({channel: 'some-channel-id'});
+    assetPrefix.init({channel: 'some-channel-id', assetPathPrefix: '/v3/assets/'});
 
     sinon.stub(dashboard.assets.listStore, 'list').returns([
       {filename: 'foo.png'},
