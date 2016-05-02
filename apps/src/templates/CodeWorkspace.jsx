@@ -19,7 +19,23 @@ var styles = {
   },
   runningChevron: {
     color: color.dark_charcoal
-  }
+  },
+  blocksGlyph: {
+    display: 'none',
+    height: 18,
+    lineHeight: '24px',
+    verticalAlign: 'text-bottom',
+    paddingRight: 8
+  },
+  blocksGlyphRtl: {
+    paddingRight: 0,
+    paddingLeft: 8,
+    transform: 'scale(-1, 1)',
+    MozTransform: 'scale(-1, 1)',
+    WebkitTransform: 'scale(-1, 1)',
+    OTransform: 'scale(-1, 1)',
+    msTransform: 'scale(-1, 1)',
+  },
 };
 
 var CodeWorkspace = React.createClass({
@@ -57,7 +73,6 @@ var CodeWorkspace = React.createClass({
     var runModeIndicators = experiments.isEnabled('runModeIndicators');
 
     var chevronStyle = [
-      commonStyles.hidden,
       styles.chevron,
       runModeIndicators && props.isRunning && styles.runningChevron
     ];
@@ -69,6 +84,15 @@ var CodeWorkspace = React.createClass({
       hasFocus = false;
     }
 
+    var isRtl = props.localeDirection === 'rtl';
+
+    var blocksGlyphImage = (
+      <img src="/blockly/media/applab/blocks_glyph.gif" style={[
+          styles.blocksGlyph,
+          isRtl && styles.blocksGlyphRtl
+      ]}/>
+    );
+
     return (
       <span id="codeWorkspaceWrapper">
         <PaneHeader
@@ -78,30 +102,33 @@ var CodeWorkspace = React.createClass({
         >
           <div id="codeModeHeaders">
             <PaneSection id="toolbox-header">
-              <i id="hide-toolbox-icon" style={chevronStyle} className="fa fa-chevron-circle-right"/>
+              <i id="hide-toolbox-icon" style={[commonStyles.hidden, chevronStyle]} className="fa fa-chevron-circle-right"/>
               <span>{props.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}</span>
             </PaneSection>
             <PaneSection id="show-toolbox-header" style={commonStyles.hidden}>
-              <i id="show-toolbox-icon" styles={styles.headerIcon} className="fa fa-chevron-circle-right"/>
+              <i id="show-toolbox-icon" style={chevronStyle} className="fa fa-chevron-circle-right"/>
               <span>{msg.showToolbox()}</span>
             </PaneSection>
             <PaneButton
                 id="show-code-header"
-                hiddenImage="/blockly/media/applab/blocks_glyph.gif"
+                hiddenImage={blocksGlyphImage}
                 iconClass="fa fa-code"
                 label={msg.showCodeHeader()}
+                isRtl={isRtl}
                 headerHasFocus={hasFocus}/>
             {!props.readonlyWorkspace && <PaneButton
                 id="clear-puzzle-header"
                 headerHasFocus={hasFocus}
                 iconClass="fa fa-undo"
-                label={msg.clearPuzzle()}/>
+                label={msg.clearPuzzle()}
+                isRtl={isRtl}/>
             }
             <PaneButton
                 id="versions-header"
                 headerHasFocus={hasFocus}
                 iconClass="fa fa-clock-o"
-                label={msg.showVersionsHeader()}/>
+                label={msg.showVersionsHeader()}
+                isRtl={isRtl}/>
             <PaneSection id="workspace-header">
               <span id="workspace-header-span">
                 {props.readonlyWorkspace ? msg.readonlyPaneSection() : msg.workspaceHeaderShort()}
