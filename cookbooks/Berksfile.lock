@@ -98,7 +98,7 @@ GRAPH
   cdo-secrets (0.1.1)
   cdo-solr (0.1.0)
     cdo-java-7 (>= 0.0.0)
-  cdo-users (0.1.0)
+  cdo-users (0.1.1)
   cdo-varnish (0.3.12)
     apt (>= 0.0.0)
   chef-client (4.2.4)
