@@ -1830,3 +1830,9 @@ en:
           Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           Evaluation Blocks: Evaluation Blocks
           Teacher Dashboard: Teacher Dashboard
+        flex-stages:
+          title: Flex Stages Text
+          description: Test script for flexible stages
+          Sample Content Stage A: Sample Content Stage A
+          Sample Content Stage B: Sample Content Stage B
+          Sample Practice Stage: Sample Practice Stage

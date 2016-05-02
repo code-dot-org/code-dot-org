@@ -8,6 +8,7 @@
 #  script_id  :integer          not null
 #  created_at :datetime
 #  updated_at :datetime
+#  flex       :string(255)
 #
 
 # Ordered partitioning of script levels within a script
