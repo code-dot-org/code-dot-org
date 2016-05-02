@@ -38,6 +38,37 @@ class Script < ActiveRecord::Base
 
   include SerializedProperties
 
+  after_save :generate_plc_objects
+
+  def generate_plc_objects
+    if professional_learning_course
+      course = Plc::Course.find_or_create_by! name: 'Default'
+      unit = Plc::CourseUnit.find_or_initialize_by(script_id: id)
+      unit.update!(
+        plc_course_id: course.id,
+        unit_name: I18n.t("data.script.name.#{name}.title"),
+        unit_description: I18n.t("data.script.name.#{name}.description")
+      )
+
+      stages.each do |stage|
+        lm = Plc::LearningModule.find_or_initialize_by(stage_id: stage.id)
+        lm.update!(
+          plc_course_unit_id: unit.id,
+          name: stage.name,
+          module_type: Plc::LearningModule::REQUIRED_MODULE,
+          plc_tasks: []
+        )
+
+        stage.script_levels.each do |sl|
+          task = Plc::Task.find_or_initialize_by(script_level_id: sl.id)
+          task.name = sl.level.name
+          task.save!
+          lm.plc_tasks << task
+        end
+      end
+    end
+  end
+
   serialized_attrs %w(pd admin_required professional_learning_course)
 
   def Script.twenty_hour_script
@@ -460,34 +491,7 @@ class Script < ActiveRecord::Base
 
     script.stages = script_stages
     script.reload.stages
-
-    # Generate PLC objects
-    if script.professional_learning_course
-      course = Plc::Course.find_or_create_by! name: 'Default'
-      unit = Plc::CourseUnit.find_or_initialize_by(script_id: script.id)
-      unit.update!(
-        plc_course_id: course.id,
-        unit_name: I18n.t("data.script.name.#{script.name}.title"),
-        unit_description: I18n.t("data.script.name.#{script.name}.description")
-      )
-
-      script.stages.each do |stage|
-        lm = Plc::LearningModule.find_or_initialize_by(stage_id: stage.id)
-        lm.update!(
-          plc_course_unit_id: unit.id,
-          name: stage.name,
-          module_type: Plc::LearningModule::REQUIRED_MODULE,
-          plc_tasks: []
-        )
-
-        stage.script_levels.each do |sl|
-          task = Plc::Task.find_or_initialize_by(script_level_id: sl.id)
-          task.name = sl.level.name
-          task.save!
-          lm.plc_tasks << task
-        end
-      end
-    end
+    script.generate_plc_objects
 
     script
   end
