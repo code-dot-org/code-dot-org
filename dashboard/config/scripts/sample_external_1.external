@@ -1,0 +1,8 @@
+name 'sample external 1'
+title 'sample external 1'
+markdown <<MARKDOWN
+### Sample external
+
+This is a first sample of some instruction text that's stored in a .external file.
+
+MARKDOWN

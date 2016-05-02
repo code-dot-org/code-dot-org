@@ -12,7 +12,9 @@ theme: none
 
 We believe that every student should have the opportunity to learn computer science, and the reasons are far more varied than simply having a strong resume. Critical thinking, logic, persistence, and creativity help students excel at problem-solving in all subject areas, no matter what their age.
 
-At Code.org, we recognize that this benefit begins early. That's why we have partnered with Thinkersmith and Common Sense Media to develop an exciting and engaging curriculum that allows students to explore the limitless world of technology, beginning in elementary school.
+At Code.org, we recognize that this benefit begins early. That's why we partnered with Thinkersmith and Common Sense Media to develop an exciting and engaging curriculum that allows students to explore the limitless world of technology, beginning in elementary school.
+
+None of this would have been possible, however, without the help we received from our sponsors.  It's thanks to our generous donors that we can offer our high quality curriculum resources at no cost to schools, teachers, or students.  For more information on these supporters, please visit our donors page at [https://code.org/about/donors](https://code.org/about/donors).
 
 ## Who is this for?
 

@@ -127,52 +127,29 @@ level and prior experience. The lessons align to <a href="http://csta.acm.org/Cu
 
 ## Examples of student creations
 
-In this puzzle, the student created a honeycomb pattern.
-
-[col-50]
-
-<img src="/images/animated-examples/artist-game-space.gif" width="80%">
-
-[/col-50]
-
-[col-50]
-
-<img src="/images/animated-examples/artist-blocks.gif" width="90%">
-
-[/col-50]
-
-<p style="clear:both">&nbsp;</p>
-
-
-This student created a game with different levels, so that they can play against different characters. Game on!
-
 [col-33]
 
-<img src="/images/animated-examples/play-lab-game-space.gif" width="100%">
+<center><img src="/images/animated-examples/artist-game-space.gif" width="90%"></center>
+
+<div style="margin-top: 5px;">In this puzzle, the student created a honeycomb pattern.</div>
 
 [/col-33]
 
-[col-66]
-
-<img src="/images/animated-examples/play-lab-blocks.gif" width="100%">
-
-[/col-66]
-
-<p style="clear:both">&nbsp;</p>
-
-This student created a Flappy Bird game.
-
 [col-33]
 
-<img src="/images/animated-examples/flappy-game-space.gif" width="100%">
+<center><img src="/images/animated-examples/play-lab-game-space.gif" width="90%"></center>
+
+<div style="margin-left: 15px; margin-top: 5px;">This student created a game with different levels, so that they can play against different characters. Game on!</div>
 
 [/col-33]
 
-[col-66]
+[col-33]
 
-<img src="/images/animated-examples/flappy-blocks.gif" width="100%">
+<center><img src="/images/animated-examples/flappy-game-space.gif" width="90%"></center>
 
-[/col-66]
+<div style="margin-left: 15px; margin-top: 5px;">This student created a Flappy Bird game.</div>
+
+[/col-33]
 
 <p style="clear:both">&nbsp;</p>
 

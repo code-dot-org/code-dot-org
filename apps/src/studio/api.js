@@ -99,6 +99,19 @@ exports.setSpriteXY = function (id, spriteIndex, xpos, ypos) {
   });
 };
 
+exports.addGoal = function (id, value) {
+  Studio.queueCmd(id, 'addGoal', {
+    'value': Number(value)
+  });
+};
+
+exports.addGoalXY = function (id, x, y) {
+  Studio.queueCmd(id, 'addGoal', {
+    'x': Number(x),
+    'y': Number(y)
+  });
+};
+
 exports.playSound = function (id, soundName) {
   Studio.queueCmd(id, 'playSound', {'soundName': soundName});
 };

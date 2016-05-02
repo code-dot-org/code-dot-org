@@ -10,6 +10,8 @@ var combineReducers = require('redux').combineReducers;
 var errorDialogStack = require('./errorDialogStackModule').default;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 var instructions = require('../redux/instructions');
+var levelProperties = require('../redux/levelProperties');
+var isRunning = require('../redux/isRunning');
 var utils = require('../utils');
 
 function interfaceMode(state, action) {
@@ -18,39 +20,6 @@ function interfaceMode(state, action) {
   switch (action.type) {
     case ActionType.CHANGE_INTERFACE_MODE:
       return action.interfaceMode;
-    default:
-      return state;
-  }
-}
-
-var levelInitialState = {
-  assetUrl: function () {},
-  isEmbedView: undefined,
-  isShareView: undefined
-};
-
-function level(state, action) {
-  state = state || levelInitialState;
-
-  switch (action.type) {
-    case ActionType.SET_INITIAL_LEVEL_PROPS:
-      var allowedKeys = [
-        'assetUrl',
-        'isEmbedView',
-        'isShareView',
-        'instructionsMarkdown',
-        'instructionsInTopPane',
-        'puzzleNumber',
-        'stageTotal'
-      ];
-      Object.keys(action.props).forEach(function (key) {
-        if (-1 === allowedKeys.indexOf(key)) {
-          throw new Error('Property "' + key + '" may not be set using the ' +
-              action.type + ' action.');
-        }
-      });
-      return _.assign({}, state, action.props);
-
     default:
       return state;
   }
@@ -108,8 +77,9 @@ var gamelabReducer = combineReducers({
   animations: animations,
   errorDialogStack: errorDialogStack,
   interfaceMode: interfaceMode,
-  level: level,
-  instructions: instructions.default
+  level: levelProperties.default,
+  instructions: instructions.default,
+  isRunning: isRunning.default
 });
 
 module.exports = { gamelabReducer: gamelabReducer };

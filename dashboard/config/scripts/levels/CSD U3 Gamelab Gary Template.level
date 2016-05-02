@@ -23,7 +23,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "function draw() {\r\n  background('white');\r\n  noStroke();\r\n  \r\n  // Head\r\n  fill('orange');\r\n  regularPolygon(6, 150, 200, 200);\r\n  \r\n  // Randomize the width and/or height\r\n  // to simulate speech\r\n  fill('blue');\r\n  ellipse(200, 275, 100, 50);\r\n  \r\n  // Eyes\r\n  fill('white');\r\n  ellipse(160, 150, 50, 50);\r\n  ellipse(240, 150, 50, 50);\r\n  fill('black');\r\n  ellipse(160, 150, 20, 20);\r\n  ellipse(240, 150, 20, 20);\r\n  \r\n  // Eyebrows\r\n  fill('brown');\r\n  rect(130, 120, 60, 20);\r\n  rect(210, 120, 60, 20);\r\n  \r\n  // Nose\r\n  stroke('purple');\r\n  strokeWeight(8);\r\n  noFill();\r\n  arc(190, 200, 100, 50, 270, 45);\r\n  \r\n  // Mouth\r\n  noStroke();\r\n  fill('blue');\r\n}\r\n",
+    "start_blocks": "function draw() {\r\n  background('white');\r\n  noStroke();\r\n  \r\n  // Head\r\n  fill('orange');\r\n  regularPolygon(200, 200, 6, 150);\r\n  \r\n  // Mouth\r\n  // randomize the width and/or height\r\n  // to simulate speech\r\n  fill('blue');\r\n  ellipse(200, 275, 100, 50);\r\n  \r\n  // Eyes\r\n  fill('white');\r\n  ellipse(160, 150, 50, 50);\r\n  ellipse(240, 150, 50, 50);\r\n  fill('black');\r\n  ellipse(160, 150, 20, 20);\r\n  ellipse(240, 150, 20, 20);\r\n  \r\n  // Eyebrows\r\n  fill('brown');\r\n  rect(130, 120, 60, 20);\r\n  rect(210, 120, 60, 20);\r\n  \r\n  // Nose\r\n  stroke('purple');\r\n  strokeWeight(8);\r\n  noFill();\r\n  arc(190, 200, 100, 50, 270, 45);\r\n}\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -45,7 +45,8 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "show_d_pad": "false"
   },
   "published": true,
   "notes": "",

@@ -15,8 +15,7 @@
     - else
       = @learning_module.plc_course_unit.unit_name
   .field
-    %label
-      Required:
-      = f.check_box :required, {value: @learning_module.required}
+    = f.label :module_type
+    = f.select :module_type, options_for_select(options_for_learning_module_types, @learning_module.module_type)
   .actions
     = f.submit 'Save'

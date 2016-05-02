@@ -44,7 +44,19 @@
 }]]></config>
   <blocks>
     <start_blocks>
-      <xml/>
+      <xml>
+        <block type="procedures_defnoreturn" deletable="false" editable="false" uservisible="false">
+          <mutation/>
+          <title name="NAME">get 2 nectar</title>
+          <statement name="STACK">
+            <block type="maze_nectar" deletable="false">
+              <next>
+                <block type="maze_nectar" deletable="false"/>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>

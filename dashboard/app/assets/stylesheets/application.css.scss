@@ -1966,10 +1966,11 @@ $information-desktop: "only screen and (min-width: 1024px)";
   }
   .item-mark {
     display: inline-block;
-    text-align: right;
+    text-align: left;
     padding-right: 10px;
     box-sizing: border-box;
     font-size: 21px;
+    width: 30px;
   }
   .item-label {
     display: inline-block;
@@ -1979,6 +1980,9 @@ $information-desktop: "only screen and (min-width: 1024px)";
     label {
       font-size: 14px;
     }
+  }
+  .item-answer-letter {
+    font-family: $gotham-bold;
   }
 }
 
