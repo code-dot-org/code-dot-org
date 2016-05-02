@@ -123,7 +123,6 @@ var CodeWorkspace = React.createClass({
     var runModeIndicators = experiments.isEnabled('runModeIndicators');
 
     var chevronStyle = [
-      commonStyles.hidden,
       styles.chevron,
       runModeIndicators && props.isRunning && styles.runningChevron
     ];
@@ -158,11 +157,11 @@ var CodeWorkspace = React.createClass({
         >
           <div id="codeModeHeaders">
             <div id="toolbox-header" style={styles.workspaceHeader}>
-              <i id="hide-toolbox-icon" style={chevronStyle} className="fa fa-chevron-circle-right"/>
+              <i id="hide-toolbox-icon" style={[commonStyles.hidden, chevronStyle]} className="fa fa-chevron-circle-right"/>
               <span>{props.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}</span>
             </div>
             <div id="show-toolbox-header" style={[styles.workspaceHeader, commonStyles.hidden]}>
-              <i id="show-toolbox-icon" styles={styles.headerIcon} className="fa fa-chevron-circle-right"/>
+              <i id="show-toolbox-icon" style={chevronStyle} className="fa fa-chevron-circle-right"/>
               <span>{msg.showToolbox()}</span>
             </div>
             <div
