@@ -2,7 +2,7 @@ name 'ECSPD1 equity in cs education'
 title 'Equity in Computer Science Education'
 description 'Equity in Computer Science Education'
 css 'unplugged' 
-href 'path/to/html/in/asset/folder'
+
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
 
@@ -13,16 +13,47 @@ We have also discovered the equity issue that is present in many schools that do
 <br>
 
 <br>
-<img src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png" height="910" width="400" hspace="20">
+<img src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png" width="550" style="float:left; margin-right:30px">
 <br> 
-
+<br>
+<br>
+<br> 
+<br>
+<br>
+<br> 
+<br>
+<br>
+<br> 
+<br>
+<br>
+<br> 
+<br>
+<br>
+<br> 
+<br>
 <br>
 If students don’t have the opportunity to experience computer science at multiple stages in their elementary and middle years, they most likely don’t consider signing up for an AP Computer Science course with little or no background or particular stereotypes of who takes the course and what it is about.
 <br>
 
 <br>
-<img src="add ap enrollment pic" height="910" width="400" hspace="20">
+ <img src="https://images.code.org/8b0b13c9015828ec78addc2cf6a1d06f-image-1461907185836.png" width="550" style="float:left; margin-right:30px">
 <br> 
+
+<br>
+<br> 
+<br>
+<br>
+<br> 
+<br>
+<br>
+<br> 
+<br>
+<br> 
+<br>
+<br>
+<br> 
+<br>
+
 
 <br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

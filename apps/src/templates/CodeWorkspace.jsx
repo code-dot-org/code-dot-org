@@ -93,6 +93,16 @@ var CodeWorkspace = React.createClass({
       ]}/>
     );
 
+    var headerButtonIcon = [
+      styles.headerButtonIcon,
+      (props.localeDirection === 'rtl') && styles.headerButtonIconRtl,
+    ];
+
+    var blocksGlyph = [
+      styles.blocksGlyph,
+      (props.localeDirection === 'rtl') && styles.blocksGlyphRtl,
+    ];
+
     return (
       <span id="codeWorkspaceWrapper">
         <PaneHeader
