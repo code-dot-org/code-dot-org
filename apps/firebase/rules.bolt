@@ -1,0 +1,7 @@
+
+isLoggedIn() { auth.uid !== null }
+
+path / {
+  read() { true }
+  write() { isLoggedIn() }
+}

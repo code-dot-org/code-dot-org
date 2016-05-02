@@ -7,3 +7,4 @@ require_relative '../../deployment'
 
 url = "https://#{CDO.firebase_name}.firebaseio.com/.settings/rules.json?auth=#{CDO.firebase_secret}"
 system("curl -X PUT -T rules.json '#{url}'")
+puts ''
