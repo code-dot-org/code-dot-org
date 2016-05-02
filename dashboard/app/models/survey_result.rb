@@ -28,10 +28,13 @@ class SurveyResult < ActiveRecord::Base
   ETHNICITIES["other"] = "Other"
   ETHNICITIES.freeze
 
-  RESULT_ATTRS = ETHNICITIES.keys.map{|key| "survey2016_ethnicity_#{key}"}
-  RESULT_ATTRS << "survey2016_foodstamps"
-  RESULT_ATTRS.freeze
+  DIVERSITY_ATTRS = ETHNICITIES.keys.map{|key| "survey2016_ethnicity_#{key}"}
+  DIVERSITY_ATTRS << "survey2016_foodstamps"
+  DIVERSITY_ATTRS.freeze
 
-  serialized_attrs RESULT_ATTRS
+  NET_PROMOTER_SCORE_ATTRS = %w(nps_value nps_comment)
+  NET_PROMOTER_SCORE_ATTRS.freeze
+
+  serialized_attrs DIVERSITY_ATTRS + NET_PROMOTER_SCORE_ATTRS
   belongs_to :user
 end
