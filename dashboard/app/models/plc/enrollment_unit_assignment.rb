@@ -45,9 +45,11 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
 
         module_assignment = Plc::EnrollmentModuleAssignment.find_or_create_by(plc_enrollment_unit_assignment: self, plc_learning_module: learning_module)
         learning_module.plc_tasks.each do |task|
-          Plc::EnrollmentTaskAssignment.find_or_create_by(plc_enrollment_module_assignment: module_assignment,
-                                                          plc_task: task, status: :not_started,
-                                                          type: task.class.task_assignment_type.name)
+          Plc::EnrollmentTaskAssignment.find_or_create_by(
+            plc_enrollment_module_assignment: module_assignment,
+            plc_task: task,
+            status: Plc::EnrollmentTaskAssignment::NOT_STARTED
+          )
 
         end
       end

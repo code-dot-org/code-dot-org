@@ -1821,6 +1821,11 @@ en:
           description_short: Introduction to the Code.org ECS Version 5 Program
           description: Two hour introduction to your Professional Learning Program for the ECS Version 5 curriculum
           Getting Started: Getting Started
+          What is ECS?: What is ECS?
+          ECS Curriculum: ECS Curriculum
+          Wrap Up: Wrap Up
+          Welcome to Phase 1!: Welcome to Phase 1!
+          Background and Context: Background and Context
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description_short: Teach Algebra through Functional Programming
