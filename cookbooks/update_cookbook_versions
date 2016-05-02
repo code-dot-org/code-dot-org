@@ -2,7 +2,7 @@
 
 # Calculates the 'version' of all local cookbooks based on the total number of git commits in the repository,
 # filtering out git commits that modify nothing but metadata.rb.
-# Sets the patch version to the
+# Sets the patch version in all cookbook metadata to the calculated commit counts.
 require 'pathname'
 require 'chef/cookbook/metadata'
 
@@ -28,8 +28,11 @@ def update_metadata(cookbook_path)
   File.write(metadata_file, new_metadata)
 end
 
-# Run `knife cookbook list` against local cookbook path.
-`bundle exec knife cookbook list -z 2>/dev/null`.each_line do |path|
-  path = path.split(/\s/).first
-  update_metadata path
+require 'chef/local_mode'
+Chef::Config.local_mode = true
+Chef::Config.chef_repo_path = Chef::Config.find_chef_repo_path(__dir__)
+Chef::LocalMode.with_server_connectivity do
+  require 'chef/server_api'
+  cookbooks = Chef::ServerAPI.new(Chef::Config[:chef_server_url]).get('/cookbooks')
+  cookbooks.keys.each{|path| update_metadata path}
 end
