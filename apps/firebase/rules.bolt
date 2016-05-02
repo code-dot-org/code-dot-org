@@ -1,7 +1,25 @@
 
 isLoggedIn() { auth.uid !== null }
 
+prevCount() { prior(this) != null ? 1 : 0 }
+nextCount() { this != null ? 1 : 0 }
+prevTableCount() { prior(this).parent().row_count != null ? prior(this).parent().row_count : 0 }
+nextTableCount() { this.parent().row_count }
+isTargetId() { record_id == this.parent().target_record_id }
+rowCountUpdated() { nextCount() - prevCount() == nextTableCount() - prevTableCount() }
+
+
 path / {
   read() { true }
   write() { isLoggedIn() }
+}
+
+path /v3/shared-tables/tables/{table_name}/target_record_id is String;
+
+path /v3/shared-tables/tables/{table_name}/row_count is Number {
+  validate() { this < 1000 }
+}
+
+path /v3/shared-tables/tables/{table_name}/{record_id} is String {
+  validate() { isTargetId() && rowCountUpdated() }
 }

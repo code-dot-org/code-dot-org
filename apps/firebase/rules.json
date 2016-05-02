@@ -1,6 +1,23 @@
 {
   "rules": {
     ".read": "true",
-    ".write": "auth.uid != null"
+    ".write": "auth.uid != null",
+    "v3": {
+      "shared-tables": {
+        "tables": {
+          "$table_name": {
+            "target_record_id": {
+              ".validate": "newData.isString()"
+            },
+            "row_count": {
+              ".validate": "newData.isNumber() && newData.val() < 1000"
+            },
+            "$record_id": {
+              ".validate": "newData.isString() && record_id == this.parent().child('target_record_id').val() && (this != null ? 1 : 0) - (this != null ? 1 : 0) == this.parent().child('row_count').val() - (this.parent().child('row_count').val() != null ? this.parent().child('row_count').val() : 0)"
+            }
+          }
+        }
+      }
+    }
   }
 }
