@@ -28,7 +28,8 @@ class AdminFunometerController < ApplicationController
 
       # Generate the funometer percentages for the script, by stage.
       ratings_by_stage = ratings.
-                         joins("INNER JOIN script_levels ON puzzle_ratings.script_id = script_levels.script_id AND puzzle_ratings.level_id = script_levels.level_id").
+                         joins("INNER JOIN script_levels ON puzzle_ratings.script_id = script_levels.script_id").
+                         joins("INNER JOIN levels_script_levels ON script_levels.id = levels_script_levels.script_level_id AND puzzle_ratings.level_id = levels_script_levels.level_id").
                          joins("INNER JOIN stages ON stages.id = script_levels.stage_id").
                          group('script_levels.stage_id').
                          order('script_levels.stage_id')
@@ -49,7 +50,7 @@ class AdminFunometerController < ApplicationController
       stage = Stage.find(params[:stage_id])
       @stage_name = stage[:name]
       @script_id = stage[:script_id]
-      @level_ids = ScriptLevel.where('stage_id = ?', params[:stage_id]).pluck(:level_id)
+      @level_ids = ScriptLevel.joins(:levels).where('stage_id = ?', params[:stage_id]).pluck("levels.id")
 
       # Compute the global funometer percentage for the stage.
       ratings = PuzzleRating.where(level_id: @level_ids)

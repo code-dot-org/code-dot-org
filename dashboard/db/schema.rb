@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160418185704) do
+ActiveRecord::Schema.define(version: 20160428020044) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -307,6 +307,14 @@ ActiveRecord::Schema.define(version: 20160418185704) do
 
   add_index "levels", ["game_id"], name: "index_levels_on_game_id", using: :btree
 
+  create_table "levels_script_levels", id: false, force: :cascade do |t|
+    t.integer "level_id",        limit: 4, null: false
+    t.integer "script_level_id", limit: 4, null: false
+  end
+
+  add_index "levels_script_levels", ["level_id"], name: "index_levels_script_levels_on_level_id", using: :btree
+  add_index "levels_script_levels", ["script_level_id"], name: "index_levels_script_levels_on_script_level_id", using: :btree
+
   create_table "pd_attendances", force: :cascade do |t|
     t.integer  "pd_session_id", limit: 4, null: false
     t.integer  "teacher_id",    limit: 4, null: false
@@ -444,10 +452,10 @@ ActiveRecord::Schema.define(version: 20160418185704) do
 
   create_table "plc_learning_modules", force: :cascade do |t|
     t.string   "name",               limit: 255
-    t.datetime "created_at",                                     null: false
-    t.datetime "updated_at",                                     null: false
-    t.integer  "plc_course_unit_id", limit: 4,                   null: false
-    t.boolean  "required",                       default: false, null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "plc_course_unit_id", limit: 4,   null: false
+    t.string   "module_type",        limit: 255
   end
 
   add_index "plc_learning_modules", ["plc_course_unit_id"], name: "index_plc_learning_modules_on_plc_course_unit_id", using: :btree
@@ -512,7 +520,7 @@ ActiveRecord::Schema.define(version: 20160418185704) do
   add_index "puzzle_ratings", ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
 
   create_table "script_levels", force: :cascade do |t|
-    t.integer  "level_id",   limit: 4, null: false
+    t.integer  "level_id",   limit: 4
     t.integer  "script_id",  limit: 4, null: false
     t.integer  "chapter",    limit: 4
     t.datetime "created_at"
@@ -730,6 +738,7 @@ ActiveRecord::Schema.define(version: 20160418185704) do
     t.integer  "conditionals_d3_count",          limit: 4, default: 0
     t.integer  "conditionals_d4_count",          limit: 4, default: 0
     t.integer  "conditionals_d5_count",          limit: 4, default: 0
+    t.datetime "basic_proficiency_at"
   end
 
   add_index "user_proficiencies", ["user_id"], name: "index_user_proficiencies_on_user_id", using: :btree

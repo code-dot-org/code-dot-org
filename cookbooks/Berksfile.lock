@@ -98,7 +98,7 @@ GRAPH
   cdo-solr (0.1.0)
     cdo-java-7 (>= 0.0.0)
   cdo-users (0.1.0)
-  cdo-varnish (0.3.10)
+  cdo-varnish (0.3.11)
     apt (>= 0.0.0)
   chef-client (4.2.4)
     cron (>= 1.2.0)
