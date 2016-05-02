@@ -951,6 +951,43 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  def create_student_of_admin_script
+    create(:script, student_of_admin_required: true).tap do |script|
+      create :script_level, script: script
+    end
+  end
+
+  test "should not get show of student_of_admin script if not signed in" do
+    script = create_student_of_admin_script
+
+    get :show, script_id: script.name, stage_id: 1, id: 1
+    assert_redirected_to_sign_in
+  end
+
+  test "should not get show of student_of_admin script if signed in but not admin or student of admin" do
+    script = create_student_of_admin_script
+
+    sign_in create(:student)
+    get :show, script_id: script.name, stage_id: 1, id: 1
+    assert_response :forbidden
+  end
+
+  test "should get show of student_of_admin script if signed in as student of admin" do
+    script = create_student_of_admin_script
+
+    sign_in create(:student_of_admin)
+    get :show, script_id: script.name, stage_id: 1, id: 1
+    assert_response :success
+  end
+
+  test "should get show of student_of_admin script if signed in as admin" do
+    script = create_student_of_admin_script
+
+    sign_in create(:admin)
+    get :show, script_id: script.name, stage_id: 1, id: 1
+    assert_response :success
+  end
+
   test "should have milestone posting disabled if Milestone is set" do
     Gatekeeper.set('postMilestone', where: {script_name: @script.name}, value: false)
     get_show_script_level_page @script_level
