@@ -935,6 +935,7 @@ en:
           Minecraft: Minecraft
           Rich long assessment: Rich long assessment
           Free Response: Free Response
+          Game Lab: Game Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1786,6 +1787,7 @@ en:
           Variables: Variables
           " Sprite Properties and Mod": " Sprite Properties and Mod"
           Expressions and Reassignment: Expressions and Reassignment
+          Sprites and Properties: Sprites and Properties
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS

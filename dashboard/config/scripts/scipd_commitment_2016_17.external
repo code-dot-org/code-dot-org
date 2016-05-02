@@ -1,2 +1,31 @@
 name 'sciPD commitment 2016-17'
 title 'Commitment for 2016-2017'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+
+
+## Program Timeline
+
+The program you're about to begin spans through the upcoming academic year. During this time you will have access to three phases of professional development (PD) designed to leverage your experience with the curriculum and associated teaching strategies and to facilitate the development of a strong community of teachers. You'll work with a support network formed by that local community of teachers and facilitators to move through the first year and beyond. 
+<br><br>
+
+###These PD opportunities will occur in three phases: 
+
+**Phase 1: Online Introduction**
+- 3 hours online, self-paced 
+
+**Phase 2: Summer Blended Study**
+- 2 days (14 hours) in person 
+- 3 hours online, self-paced 
+- 7 hours online, self-paced 
+
+**Phase 3: Blended Academic Year Development**
+- 2 days (14 hours) in person 
+- 10 hours online, self-paced<br>
+
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN
