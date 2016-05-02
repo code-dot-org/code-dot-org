@@ -401,7 +401,19 @@ module HttpCacheTest
       end
 
       it 'Does not strip cookies from assets in higher-priority whitelisted path' do
-        url = build_url 'api', 'image.png'
+        does_not_strip_cookies_from_png_in_path 'api'
+      end
+
+      it 'Does not strip cookies from assets in v3/assets path' do
+        does_not_strip_cookies_from_png_in_path 'v3/assets'
+      end
+
+      it 'Does not strip cookies from assets in v3/animations path' do
+        does_not_strip_cookies_from_png_in_path 'v3/animations'
+      end
+
+      def does_not_strip_cookies_from_png_in_path(path)
+        url = build_url path, 'image.png'
         cookie = 'hour_of_code' # whitelisted for this path
         text = 'Hello World!'
         text_cookie = 'Hello Cookie!'

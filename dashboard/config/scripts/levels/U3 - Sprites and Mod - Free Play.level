@@ -36,12 +36,7 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "declareAssign_str_hello_world": null,
-      "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null,
-      "return": null
+      "declareAssign_str_hello_world": null
     },
     "edit_code": true,
     "embed": "false",
@@ -66,7 +61,8 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "show_d_pad": "false"
   },
   "published": true,
   "notes": "",

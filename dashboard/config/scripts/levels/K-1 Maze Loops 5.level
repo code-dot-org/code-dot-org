@@ -64,18 +64,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <recommended_blocks>
-      <xml>
-        <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="2-6">3</title>
-        </block>
-        <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="2-6">4</title>
-        </block>
-        <block type="maze_moveSouth"/>
-        <block type="maze_moveEast"/>
-      </xml>
-    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" movable="false">

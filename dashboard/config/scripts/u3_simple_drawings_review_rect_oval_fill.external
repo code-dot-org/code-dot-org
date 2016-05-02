@@ -1,0 +1,31 @@
+name 'U3 - Simple Drawings - Review Rect Oval Fill'
+css 'unplugged'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Review
+
+We have learned a lot of new things so far. Before we jump into further exmaples take a second and read this review of the things we have covered so far.
+
+# Programming Basics
+
+* When we draw shapes on the computer we give commands in order, 1 command per a line. 
+* That order can become very important when the two shapes are overlapping as the one drawn first will go behind the other.
+
+# Drawing Area Rules
+
+* 400 by 400
+* (0,0) is in the upper left corner
+* X gets bigger from left to right
+* Y gets bigger from top to bottom
+* All X and Y values are positive on the drawing area
+
+# Drawing Commands
+ 
+|Command| Visual | Example |  Human Meaning |
+|---|---| --- | --- |
+|rect(x, y, width, height)|<img src="https://images.code.org/71fdc3f88aadbd0f4e1a9b6e2f02ecef-image-1461858896126.54.26 AM.png" width="200"> | `rect(30, 20, 50, 20)` | Draw a rectangle with the upper left corner at x=30 and y=20. The width=50 and height=20|
+|ellipse(x, y, width, height)|<img src="https://images.code.org/bfcac30d85e6921ec0e2aaa0120c2ba7-image-1461858896127.54.31 AM.png" width="200"> |`ellipse(10, 25, 100, 300)` |Draw an ellipse with the center at x=10 and y=25. The  width=100  and height=300|
+|fill(‘color’)| |<code>fill("teal") <br> rect(30, 20, 50, 20)</code>|Sets the internal color for shapes. Needs to be set BEFORE the shape you want it on.|
+
+
+MARKDOWN

@@ -48,14 +48,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <recommended_blocks>
-      <xml>
-        <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="2-6">???</title>
-        </block>
-        <block type="maze_moveNorth"/>
-      </xml>
-    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

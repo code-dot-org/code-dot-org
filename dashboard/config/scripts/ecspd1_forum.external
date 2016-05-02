@@ -1,0 +1,27 @@
+name 'ECSPD1 Forum'
+title 'ECS Forum'
+description 'ECS Forum Discussion'
+css 'unplugged'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+
+## Forum Introductions
+
+In our online PD you will have many opportunities to connect with other teachers through a forum. Take this opportunity to introduce yourself by sharing the same information that each of the facilitators shared on the previous level. **In your first post take a minute and introduce yourself by sharing your teaching background and any hobbies or pastimes you enjoy!**
+
+<br>
+####STEP 1: <p> 
+To get started, click on "Continue Discussion" below to be taken to the forum page. Click the "Reply" button under the previous introduction posts to add your own. </p>
+
+<br>
+#### STEP 2: <p>
+ 
+Come back later and read new posts and respond to someone else's post by clicking on "post a response" to go to the forum page, then clicking "reply" on the comment you wish to reply to. </p>
+
+<div id="discourse-comments"></div>
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

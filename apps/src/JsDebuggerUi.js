@@ -78,24 +78,6 @@ var JsDebuggerUi = module.exports = function (runApp) {
 };
 
 /**
- * Generate DOM element markup from an ejs file for the debug area.
- * @param {!function} assetUrl - Helper for getting asset URLs.
- * @param {!Object} options
- * @param {!boolean} options.showButtons - Whether to show the debug buttons
- * @param {!boolean} options.showConsole - Whether to show the debug console
- * @param {!boolean} options.showWatch - Whether to show the debug watch area
- * @returns {string} of HTML markup to be embedded in CodeWorkspace
- */
-JsDebuggerUi.prototype.getMarkup = function (assetUrl, options) {
-  return require('./JsDebuggerUi.html.ejs')({
-    assetUrl: assetUrl,
-    debugButtons: options.showButtons,
-    debugConsole: options.showConsole,
-    debugWatch: options.showWatch
-  });
-};
-
-/**
  * Attach the debugger to a particular JSInterpreter instance.  Reinitializes
  * the UI state and begins listening for interpreter events.
  * @param {JSInterpreter} jsInterpreter
@@ -452,14 +434,7 @@ JsDebuggerUi.prototype.clearDebugInput = function () {
 JsDebuggerUi.prototype.onPauseContinueButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
-    // We have code and are either running or paused
-    if (jsInterpreter.paused &&
-        jsInterpreter.nextStep === StepType.RUN) {
-      jsInterpreter.paused = false;
-    } else {
-      jsInterpreter.paused = true;
-      jsInterpreter.nextStep = StepType.RUN;
-    }
+    jsInterpreter.handlePauseContinue();
 
     this.updatePauseUiState();
   }
@@ -535,8 +510,7 @@ JsDebuggerUi.prototype.resetDebugControls_ = function () {
 JsDebuggerUi.prototype.onStepOverButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
-    jsInterpreter.paused = true;
-    jsInterpreter.nextStep = StepType.OVER;
+    jsInterpreter.handleStepOver();
     this.updatePauseUiState();
   }
 };
@@ -548,16 +522,14 @@ JsDebuggerUi.prototype.onStepInButton = function () {
     this.onPauseContinueButton();
     jsInterpreter = this.jsInterpreter_;
   }
-  jsInterpreter.paused = true;
-  jsInterpreter.nextStep = StepType.IN;
+  jsInterpreter.handleStepIn();
   this.updatePauseUiState();
 };
 
 JsDebuggerUi.prototype.onStepOutButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
-    jsInterpreter.paused = true;
-    jsInterpreter.nextStep = StepType.OUT;
+    jsInterpreter.handleStepOut();
     this.updatePauseUiState();
   }
 };

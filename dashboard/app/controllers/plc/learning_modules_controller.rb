@@ -60,6 +60,6 @@ class Plc::LearningModulesController < ApplicationController
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   def learning_module_params
-    params.require(:plc_learning_module).permit(:name, :learning_module_type, :plc_course_unit_id, :required)
+    params.require(:plc_learning_module).permit(:name, :learning_module_type, :plc_course_unit_id, :module_type)
   end
 end
