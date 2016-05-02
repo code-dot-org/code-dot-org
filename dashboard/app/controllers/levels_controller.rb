@@ -88,7 +88,7 @@ class LevelsController < ApplicationController
     type = params[:type]
     blocks_xml = Blockly.convert_toolbox_to_category(blocks_xml) if type == 'toolbox_blocks'
     @level.properties[type] = blocks_xml
-    if @level.respond_to?("add_missing_toolbox_blocks") && type == 'solution_blocks'
+    if params[:autoadd] && @level.respond_to?("add_missing_toolbox_blocks") && type == 'solution_blocks'
       @level.add_missing_toolbox_blocks
     end
     @level.save!
