@@ -37,19 +37,7 @@ describe('isRunning reducer', function () {
     assert.strictEqual(state.isRunning, true);
   });
 
-  it ('sets isDebugging to false when running', function () {
-    var previousState = {
-      isRunning: false,
-      isDebugging: true
-    };
-    var state = reducer(previousState, runState.setIsRunning(true));
-    assert.deepEqual(state, {
-      isRunning: true,
-      isDebugging: false
-    });
-  });
-
-  it ('doesnt change isDebugging when set to false', function () {
+  it ('sets isDebugging to false when running is set to false', function () {
     var previousState = {
       isRunning: false,
       isDebugging: true
@@ -57,6 +45,18 @@ describe('isRunning reducer', function () {
     var state = reducer(previousState, runState.setIsRunning(false));
     assert.deepEqual(state, {
       isRunning: false,
+      isDebugging: false
+    });
+  });
+
+  it ('doesnt change isDebugging when set to true', function () {
+    var previousState = {
+      isRunning: true,
+      isDebugging: true
+    };
+    var state = reducer(previousState, runState.setIsRunning(true));
+    assert.deepEqual(state, {
+      isRunning: true,
       isDebugging: true
     });
   });
