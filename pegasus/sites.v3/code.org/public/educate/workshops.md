@@ -300,9 +300,13 @@ Breakfast and lunch will be served. We will offer vegetarian options, but please
 
 **Location**
 
-TBD
+Group 1 & 2 will be at the following location:
 
-*More information coming soon*<br/>
+[Microsoft 200 E Randolph St #200, 
+<br/>
+Room: MPR 2 
+<br/> 
+Chicago, IL 60601](https://goo.gl/maps/fNkGysPUCo42)
  
 
 **What do I bring to my workshop?**

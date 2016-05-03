@@ -1,0 +1,16 @@
+name 'sciPD commitment match 16-17'
+title 'Program Commitment Matching Question'
+description 'Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page'
+hide_submit true
+skip_sound true
+
+height 60
+
+question 'Phase 1'
+answer 'Online Introduction: 3 hours online, self-paced'
+
+question 'Phase 2'
+answer 'Blended Summer Study: 2 days in-person and 7 hours online'
+
+question 'Phase 3'
+answer 'Blended Academic Year Development: 2 days in-person and 10 hours online'

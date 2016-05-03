@@ -20,7 +20,10 @@ license_key=<%= node['cdo-newrelic']['license-key'] %>
 # Value  : Name of the instance displayed on NewRelic
 # Default: OS-level hostname
 #
-hostname=<%= node.name %>
+# Note: the RPM Ruby agent always uses the OS-level hostname as its primary identifier
+# and is not configurable.
+# Leave this the default for the server monitor to stay in sync with the RPM agent.
+#hostname=<%= node.name %>
 
 #
 # Option : labels
