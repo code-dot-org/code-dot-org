@@ -1,3 +1,9 @@
+/**
+ * A collection of components for displaying the purple header used in a few
+ * places in our apps. The parent component is a PaneHeader that can be toggled
+ * as focused or not. We then have child components of PaneSection and PaneButton.
+ */
+
 var Radium = require('radium');
 
 var commonStyles = require('../commonStyles');
@@ -57,10 +63,9 @@ var styles = {
 };
 
 /**
- * A purple pane header that can be active (purple), inactive (light purple)
+ * A purple pane header that can have be focused (purple), unfocused (light purple)
  * or read only (charcoal).
  */
-
 var PaneHeader = React.createClass({
   propTypes: {
     hasFocus: React.PropTypes.bool.isRequired,
@@ -71,7 +76,8 @@ var PaneHeader = React.createClass({
   render: function () {
     var props = this.props;
 
-    // TODO purpleHeader style should possibly move into this module
+    // TODO: AnimationTab should likely use components from PaneHeader, at
+    // which point purpleHeader style should move in here.
     var style = [
       props.style,
       commonStyles.purpleHeader,
