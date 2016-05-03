@@ -11,14 +11,31 @@ var CourseProgress = React.createClass({
     stages: React.PropTypes.arrayOf(React.PropTypes.shape({
       name: React.PropTypes.string,
       lesson_plan_html_url: React.PropTypes.string,
+      flex_category: React.PropTypes.string,
       levels: STAGE_PROGRESS_TYPE
     }))
   },
 
   render: function () {
-    var rows = this.props.stages.map(function (stage) {
-      return <CourseProgressRow stage={stage} key={stage.name}/>;
-    });
+    var rows = [], stages = this.props.stages;
+    for (var i = 0; i < stages.length; ) {
+
+      if (stages[i].flex_category) {
+        var flexRows = [], previous = stages[i].flex_category;
+        for ( ; i < stages.length && stages[i].flex_category === previous; i++) {
+          flexRows.push(<CourseProgressRow stage={stages[i]} key={stages[i].name}/>);
+        }
+        rows.push(
+          <div key={previous}>
+            <h4>{previous}</h4>
+            {flexRows}
+          </div>
+        );
+      } else {
+        rows.push(<CourseProgressRow stage={stages[i]} key={stages[i].name}/>);
+        i++;
+      }
+    }
 
     return (
       <div className='user-stats-block'>
