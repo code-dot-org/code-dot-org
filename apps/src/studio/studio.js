@@ -42,6 +42,8 @@ var ThreeSliceAudio = require('./ThreeSliceAudio');
 var MusicController = require('../MusicController');
 var paramLists = require('./paramLists.js');
 
+var studioCell = require('./cell');
+
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
   // Loading these modules extends SVGElement and puts canvg in the global
@@ -187,7 +189,11 @@ var consoleLogger = null;
 
 function loadLevel() {
   // Load maps.
-  Studio.map = level.map;
+  Studio.map = level.map.map(function (row) {
+    return row.map(function (cell) {
+      return isNaN(parseInt(cell)) ? studioCell.deserialize(cell) : new studioCell(cell);
+    });
+  });
   Studio.wallMap = null;  // The map name actually being used.
   Studio.wallMapRequested = null; // The map name requested by the caller.
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
@@ -1543,7 +1549,7 @@ Studio.getWallValue = function (row, col) {
   if (Studio.wallMap) {
     return skin[Studio.wallMap] ? (skin[Studio.wallMap][row][col] << constants.WallCoordsShift): 0;
   } else {
-    return Studio.map[row][col] & constants.WallAnyMask;
+    return Studio.map[row][col].getTileType() & constants.WallAnyMask;
   }
 };
 
@@ -1700,16 +1706,18 @@ Studio.initSprites = function () {
   // Locate the start and finish positions.
   for (var row = 0; row < Studio.ROWS; row++) {
     for (var col = 0; col < Studio.COLS; col++) {
-      if (Studio.map[row][col] & SquareType.SPRITEFINISH) {
+      if (Studio.map[row][col].getTileType() & SquareType.SPRITEFINISH) {
         Studio.spriteGoals_.push({x: col * Studio.SQUARE_SIZE,
                                   y: row * Studio.SQUARE_SIZE,
                                   finished: false});
-      } else if (Studio.map[row][col] & SquareType.SPRITESTART) {
+      } else if (Studio.map[row][col].getTileType() & SquareType.SPRITESTART) {
         if (0 === Studio.spriteCount) {
           Studio.spriteStart_ = [];
         }
-        Studio.spriteStart_[Studio.spriteCount] = {x: col * Studio.SQUARE_SIZE,
-                                                   y: row * Studio.SQUARE_SIZE};
+        Studio.spriteStart_[Studio.spriteCount] = $.extend({}, Studio.map[row][col].serialize(), {
+          x: col * Studio.SQUARE_SIZE,
+          y: row * Studio.SQUARE_SIZE
+        });
         Studio.spriteCount++;
       }
     }
@@ -2275,11 +2283,11 @@ Studio.reset = function (first) {
       displayX: Studio.spriteStart_[i].x,
       displayY: Studio.spriteStart_[i].y,
       loop: true,
-      speed: constants.DEFAULT_SPRITE_SPEED,
-      size: constants.DEFAULT_SPRITE_SIZE,
-      dir: Direction.NONE,
-      displayDir: Direction.SOUTH,
-      emotion: level.defaultEmotion || Emotions.NORMAL,
+      speed: Studio.spriteStart_[i].speed || constants.DEFAULT_SPRITE_SPEED,
+      size: Studio.spriteStart_[i].size || constants.DEFAULT_SPRITE_SIZE,
+      dir: Studio.spriteStart_[i].direction || Direction.NONE,
+      displayDir: Studio.spriteStart_[i].direction || Direction.SOUTH,
+      emotion: Studio.spriteStart_[i].emotion || level.defaultEmotion || Emotions.NORMAL,
       renderOffset: renderOffset,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
@@ -2289,7 +2297,7 @@ Studio.reset = function (first) {
 
     var opts = {
       spriteIndex: i,
-      value: Studio.startAvatars[i % Studio.startAvatars.length],
+      value: Studio.startAvatars[Studio.spriteStart_[i].sprite || (i % Studio.startAvatars.length)],
       forceHidden: level.spritesHiddenToStart
     };
     Studio.setSprite(opts);
@@ -3239,7 +3247,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
 Studio.createLevelItems = function (svg) {
   for (var row = 0; row < Studio.ROWS; row++) {
     for (var col = 0; col < Studio.COLS; col++) {
-      var mapVal = Studio.map[row][col];
+      var mapVal = Studio.map[row][col].getTileType();
       for (var index = 0; index < skin.ItemClassNames.length; index++) {
         if (constants.squareHasItemClass(index, mapVal)) {
           // Create item:
