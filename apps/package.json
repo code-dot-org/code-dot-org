@@ -15,7 +15,8 @@
     "build:dist": "MOOC_DEV=0 grunt clean build",
     "start": "MOOC_DEV=1 grunt dev",
     "start:applab": "npm run start -- --app=applab",
-    "start:gamelab": "npm run start -- --app=gamelab"
+    "start:gamelab": "npm run start -- --app=gamelab",
+    "test-audio": "echo \"Open your browser to http://127.0.0.1:8080/test/audio/audio_test.html\" && http-server ."
   },
   "browser": {
     "blockly": "./build/package/js/blockly.js"
@@ -77,6 +78,7 @@
     "grunt-sass": "1.0.0",
     "grunt-strip-code": "0.1.2",
     "http-proxy": "1.11.1",
+    "http-server": "^0.9.0",
     "johnny-five": "bcjordan/johnny-five#with-firmata-fix",
     "jquery": "2.1.4",
     "jquery-ui": "1.10.5",
