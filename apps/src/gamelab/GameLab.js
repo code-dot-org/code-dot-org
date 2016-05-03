@@ -33,6 +33,7 @@ var createStore = require('../redux').createStore;
 var gamelabReducer = require('./reducers').gamelabReducer;
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
+var VisualizationOverlay = require('../templates/VisualizationOverlay');
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -192,6 +193,8 @@ GameLab.prototype.init = function (config) {
 
     this.studioApp_.init(config);
 
+    window.addEventListener('resize', this.renderVisualizationOverlay.bind(this));
+
     var finishButton = document.getElementById('finishButton');
     if (finishButton) {
       dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
@@ -348,6 +351,8 @@ GameLab.prototype.reset = function (ignore) {
   this.preloadInProgress = false;
   this.globalCodeRunsDuringPreload = false;
 
+  this.renderVisualizationOverlay();
+
   if (this.debugger_) {
     this.debugger_.detach();
   }
@@ -375,6 +380,35 @@ GameLab.prototype.reset = function (ignore) {
     $('#studio-dpad').removeClass('studio-dpad-none');
     this.resetDPad();
   }
+};
+
+GameLab.prototype.renderVisualizationOverlay = function () {
+  var divGameLab = document.getElementById('divGameLab');
+  var visualizationOverlay = document.getElementById('visualizationOverlay');
+  if (!divGameLab || !visualizationOverlay) {
+    return;
+  }
+
+  // Enable crosshair cursor for divGameLab
+  $(divGameLab).toggleClass('withCrosshair', this.isCrosshairAllowed());
+
+  if (!this.visualizationOverlay_) {
+    this.visualizationOverlay_ = new VisualizationOverlay();
+  }
+
+  // Calculate current visualization scale to pass to the overlay component.
+  var unscaledWidth = parseInt(visualizationOverlay.getAttribute('width'));
+  var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
+
+  this.visualizationOverlay_.render(visualizationOverlay, {
+    isCrosshairAllowed: this.isCrosshairAllowed(),
+    scale: scaledWidth / unscaledWidth,
+    isInDesignMode: false
+  });
+};
+
+GameLab.prototype.isCrosshairAllowed = function () {
+  return !this.studioApp_.isRunning();
 };
 
 GameLab.prototype.onPuzzleComplete = function (submit) {
@@ -481,6 +515,8 @@ GameLab.prototype.runButtonClick = function () {
   }
   this.studioApp_.attempts++;
   this.execute();
+
+  this.renderVisualizationOverlay();
 
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');

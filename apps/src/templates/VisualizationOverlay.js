@@ -3,8 +3,8 @@
 
 var constants = require('../constants');
 var CrosshairOverlay = require('./CrosshairOverlay');
-var gridUtils = require('./gridUtils');
-var elementUtils = require('./designElements/elementUtils');
+var gridUtils = require('../applab/gridUtils');
+var elementUtils = require('../applab/designElements/elementUtils');
 var SVG_NS = constants.SVG_NS;
 
 /**
@@ -64,7 +64,7 @@ VisualizationOverlay.prototype.render = function (intoElement, nextProps) {
   var oldProps = $.extend({}, this.props_);
   $.extend(this.props_, nextProps);
 
-  if (this.props_.scale !== oldProps.scale) {
+  if (this.props_.scale !== oldProps.scale || !this.screenSpaceToAppSpaceTransform_) {
     this.recalculateTransformAtScale_(this.props_.scale);
   }
 
