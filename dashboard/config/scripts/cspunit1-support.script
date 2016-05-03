@@ -1,0 +1,16 @@
+professional_learning_course 'true'
+title 'Online Support for CSP Unit 1'
+description 'This is a test Professional Learning Course'
+login_required 'true'
+
+stage 'Teachers and Tools'
+  level 'U3L2 Free Response Reflection'
+
+stage 'Supporting Peer Learning', 'Content'
+  level 'U3L2 Free Response Reflection'
+
+stage 'Running a Constructive Classroom', 'Content'
+  level 'U3L2 Free Response Reflection'
+
+stage 'Strategies for Student Writing', 'Practice'
+  level 'U3L2 Free Response Reflection'

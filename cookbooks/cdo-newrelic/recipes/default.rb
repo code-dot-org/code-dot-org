@@ -13,7 +13,8 @@ end
 apt_package 'newrelic-sysmond'
 
 service 'newrelic-sysmond' do
-  action [:enable]
+  supports restart: true, status: true
+  action [:enable, :start]
 end
 
 template '/etc/newrelic/nrsysmond.cfg' do

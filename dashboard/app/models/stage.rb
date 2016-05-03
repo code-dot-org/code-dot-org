@@ -2,18 +2,20 @@
 #
 # Table name: stages
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)      not null
-#  position   :integer
-#  script_id  :integer          not null
-#  created_at :datetime
-#  updated_at :datetime
+#  id            :integer          not null, primary key
+#  name          :string(255)      not null
+#  position      :integer
+#  script_id     :integer          not null
+#  created_at    :datetime
+#  updated_at    :datetime
+#  flex_category :string(255)
 #
 
 # Ordered partitioning of script levels within a script
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Game/Stage)
 class Stage < ActiveRecord::Base
   has_many :script_levels, -> { order('position ASC') }, inverse_of: :stage
+  has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :stage, dependent: :destroy
   belongs_to :script, inverse_of: :stages
   acts_as_list scope: :script
 
