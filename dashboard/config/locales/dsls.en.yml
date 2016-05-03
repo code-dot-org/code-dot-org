@@ -520,8 +520,6 @@ en:
       ECSPD1 Forum:
         ECS Forum: ECS Forum
         ECS Forum Discussion: ECS Forum Discussion
-      ECSPD1 Forum Intro:
-        Forum Introduction: Forum Introduction
       ECSPD1 Welcome to the Code.org Family:
         ECSPD1 Welcome to the Code.org Family: ECSPD1 Welcome to the Code.org Family
         Welcome to the Code.org Family: Welcome to the Code.org Family
@@ -1451,6 +1449,10 @@ en:
       facilitator test: {}
       k5 what next 1: {}
       rbo-test1: {}
+      sample external 1:
+        sample external 1: sample external 1
+      sample external 2:
+        sample external 2: sample external 2
       sciPD Break 16-17:
         Before you move on...: Before you move on...
       sciPD Course Overview: {}
@@ -2441,10 +2443,8 @@ en:
       sciPD commitment match:
         'Academic Year Development: 2 days in-person and 10 hours online': 'Academic Year Development: 2 days in-person and 10 hours online'
         'Blended Summer Study: 2 days in-person and 7 hours online': 'Blended Summer Study: 2 days in-person and 7 hours online'
-        'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer Study: 3 days in-person and 8 hours online'
         ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
         : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
-        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
         'Online Introduction: 3 hours online': 'Online Introduction: 3 hours online'
         Phase 1: Phase 1
         Phase 2: Phase 2
