@@ -4,9 +4,15 @@
 
 var _ = require('../lodash');
 var ActionType = require('./actions').ActionType;
-var animationPicker = require('./AnimationPicker/reducers').animationPicker;
+var animationPicker = require('./AnimationPicker/animationPickerModule').default;
+var animationTab = require('./AnimationTab/animationTabModule').default;
 var combineReducers = require('redux').combineReducers;
+var errorDialogStack = require('./errorDialogStackModule').default;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
+var instructions = require('../redux/instructions');
+var levelProperties = require('../redux/levelProperties');
+var runState = require('../redux/runState');
+var utils = require('../utils');
 
 function interfaceMode(state, action) {
   state = state || GameLabInterfaceMode.CODE;
@@ -19,29 +25,46 @@ function interfaceMode(state, action) {
   }
 }
 
-var levelInitialState = {
-  assetUrl: function () {},
-  isEmbedView: undefined,
-  isShareView: undefined
-};
-
-function level(state, action) {
-  state = state || levelInitialState;
+function animation(state, action) {
+  state = state || { key: utils.createUuid() };
 
   switch (action.type) {
-    case ActionType.SET_INITIAL_LEVEL_PROPS:
-      var allowedKeys = [
-        'assetUrl',
-        'isEmbedView',
-        'isShareView'
-      ];
-      Object.keys(action.props).forEach(function (key) {
-        if (-1 === allowedKeys.indexOf(key)) {
-          throw new Error('Property "' + key + '" may not be set using the ' +
-              action.type + ' action.');
-        }
+    case ActionType.SET_ANIMATION_NAME:
+      if (state.key === action.animationKey) {
+        return _.assign({}, state, {
+          name: action.name
+        });
+      }
+      return state;
+
+    default:
+      return state;
+  }
+}
+
+function animations(state, action) {
+  state = state || [];
+
+  switch (action.type) {
+
+    case ActionType.ADD_ANIMATION_AT:
+      return [].concat(
+          state.slice(0, action.index),
+          action.animationProps,
+          state.slice(action.index));
+
+    case ActionType.DELETE_ANIMATION:
+      return state.filter(function (animation) {
+        return animation.key !== action.animationKey;
       });
-      return _.assign({}, state, action.props);
+
+    case ActionType.SET_INITIAL_ANIMATION_METADATA:
+      return action.metadata;
+
+    case ActionType.SET_ANIMATION_NAME:
+      return state.map(function (animState) {
+        return animation(animState, action);
+      });
 
     default:
       return state;
@@ -50,8 +73,13 @@ function level(state, action) {
 
 var gamelabReducer = combineReducers({
   animationPicker: animationPicker,
+  animationTab: animationTab,
+  animations: animations,
+  errorDialogStack: errorDialogStack,
   interfaceMode: interfaceMode,
-  level: level
+  level: levelProperties.default,
+  instructions: instructions.default,
+  runState: runState.default
 });
 
 module.exports = { gamelabReducer: gamelabReducer };

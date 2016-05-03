@@ -21,11 +21,10 @@ class DashboardStudent
   end
 
   def self.create(params)
-    name = params[:name].to_s
-    name = 'New Student' if name.empty?
-
-    params[:gender] = nil unless valid_gender?(params[:gender])
-    params[:birthday] = age_to_birthday(params[:age]) if age_to_birthday(params[:age])
+    name = !params[:name].to_s.empty? ? params[:name].to_s : 'New Student'
+    gender = valid_gender?(params[:gender]) ? params[:gender] : nil
+    birthday = age_to_birthday(params[:age]) ?
+      age_to_birthday(params[:age]) : params[:birthday]
 
     created_at = DateTime.now
 
@@ -33,8 +32,8 @@ class DashboardStudent
       name: name,
       user_type: 'student',
       provider: 'sponsored',
-      gender: params[:gender],
-      birthday: params[:birthday],
+      gender: gender,
+      birthday: birthday,
       created_at: created_at,
       updated_at: created_at,
       username: UserHelpers.generate_username(Dashboard.db[:users], name)
@@ -183,21 +182,26 @@ class DashboardSection
     valid_grades.include? grade
   end
 
-  @@valid_course_cache = nil
-  def self.valid_courses
+  @@course_cache = {}
+  def self.valid_courses(user_id = nil)
+    # admins can see all courses, even those marked hidden
+    course_cache_key = (user_id && Dashboard.admin?(user_id)) ? "all" : "valid"
+
     # only do this query once because in prod we only change courses
     # when deploying (technically this isn't true since we are in
     # pegasus and courses are owned by dashboard...)
-    return @@valid_course_cache unless @@valid_course_cache.nil?
+    return @@course_cache[course_cache_key] if @@course_cache.key?(course_cache_key)
 
     # don't crash when loading environment before database has been created
     return {} unless (Dashboard.db[:scripts].count rescue nil)
 
+    where_clause = Dashboard.admin?(user_id) ? "" : "hidden = 0"
+
     # cache result if we have to actually run the query
-    @@valid_course_cache = Hash[
+    @@course_cache[course_cache_key] = Hash[
          Dashboard.db[:scripts].
-           where("hidden = 0").
-           select(:id, :name).
+           where(where_clause).
+           select(:id, :name, :hidden).
            all.
            map do |course|
              name = course[:name]
@@ -206,6 +210,7 @@ class DashboardSection
              elsif name == ScriptConstants::HOC_NAME
                name = ScriptConstants::HOC_TEACHER_DASHBOARD_NAME
              end
+             name += " *" if course[:hidden]
              [course[:id], name]
            end
         ]
@@ -218,18 +223,13 @@ class DashboardSection
   def self.create(params)
     return nil unless params[:user] && params[:user][:user_type] == 'teacher'
 
-    name = params[:name].to_s
-    name = 'New Section' if name.empty?
-
-    params[:login_type] = 'email' if params[:login_type].to_s == 'none'
-    params[:login_type] = 'word' unless valid_login_type?(params[:login_type].to_s)
-
-    params[:grade] = nil unless valid_grade?(params[:grade].to_s)
-
-    if params[:course] && valid_course_id?(params[:course][:id])
-      params[:script_id] = params[:course][:id].to_i
-    end
-
+    name = !params[:name].to_s.empty? ? params[:name].to_s : 'New Section'
+    login_type =
+      params[:login_type].to_s == 'none' ? 'email' : params[:login_type].to_s
+    login_type = 'word' unless valid_login_type?(login_type)
+    grade = valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil
+    script_id = params[:course] && valid_course_id?(params[:course][:id]) ?
+      params[:course][:id].to_i : params[:script_id]
     created_at = DateTime.now
 
     row = nil
@@ -238,9 +238,9 @@ class DashboardSection
       row = Dashboard.db[:sections].insert({
         user_id: params[:user][:id],
         name: name,
-        login_type: params[:login_type],
-        grade: params[:grade],
-        script_id: params[:script_id],
+        login_type: login_type,
+        grade: grade,
+        script_id: script_id,
         code: SectionHelpers.random_code,
         created_at: created_at,
         updated_at: created_at,
@@ -366,9 +366,7 @@ class DashboardSection
              *DashboardStudent.fields,
              :secret_pictures__name___secret_picture_name,
              :secret_pictures__path___secret_picture_path).
-      # NOTE: Using distinct(:student_user_id) is not supported by the sqlite test
-      # environment.
-      distinct.select(:student_user_id).
+      distinct(:student_user_id).
       where(section_id: @row[:id]).
       where(users__deleted_at: nil).
       map do |row|

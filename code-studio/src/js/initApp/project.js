@@ -66,7 +66,8 @@ var isEditing = false;
  */
 var currentSources = {
   source: null,
-  html: null
+  html: null,
+  animations: null
 };
 
 /**
@@ -84,7 +85,8 @@ function packSources() {
 function unpackSources(data) {
   currentSources = {
     source: data.source,
-    html: data.html
+    html: data.html,
+    animations: data.animations
   };
 }
 
@@ -282,6 +284,10 @@ var projects = module.exports = {
         sourceHandler.setInitialLevelHtml(currentSources.html);
       }
 
+      if (currentSources.animations) {
+        sourceHandler.setInitialAnimationMetadata(currentSources.animations);
+      }
+
       if (isEditing) {
         if (current) {
           if (currentSources.source) {
@@ -344,7 +350,7 @@ var projects = module.exports = {
   getStandaloneApp: function () {
     switch (appOptions.app) {
       case 'applab':
-        return 'applab';
+        return appOptions.level.makerlabEnabled ? 'makerlab' : 'applab';
       case 'gamelab':
         return 'gamelab';
       case 'turtle':
@@ -406,7 +412,8 @@ var projects = module.exports = {
 
       sourceAndHtml = {
         source: this.sourceHandler.getLevelSource(),
-        html: this.sourceHandler.getLevelHtml()
+        html: this.sourceHandler.getLevelHtml(),
+        animations: this.sourceHandler.getAnimationMetadata()
       };
     }
 
@@ -480,13 +487,16 @@ var projects = module.exports = {
 
     var source = this.sourceHandler.getLevelSource();
     var html = this.sourceHandler.getLevelHtml();
+    var animations = this.sourceHandler.getAnimationMetadata();
 
-    if (currentSources.source === source && currentSources.html === html) {
+    if (currentSources.source === source &&
+        currentSources.html === html &&
+        currentSources.animations === animations) {
       hasProjectChanged = false;
       return;
     }
 
-    this.save({source: source, html: html}, function () {
+    this.save({source: source, html: html, animations: animations}, function () {
       hasProjectChanged = false;
     });
   },
@@ -514,7 +524,8 @@ var projects = module.exports = {
    */
   copy: function (newName, callback) {
     var srcChannel = current.id;
-    var wrappedCallback = this.copyAssets.bind(this, srcChannel, callback);
+    var wrappedCallback = this.copyAssets.bind(this, srcChannel,
+        this.copyAnimations.bind(this, srcChannel, callback));
     delete current.id;
     delete current.hidden;
     this.setName(newName);
@@ -537,12 +548,23 @@ var projects = module.exports = {
       executeCallback(callback);
     });
   },
+  copyAnimations: function (srcChannel, callback) {
+    if (!srcChannel) {
+      executeCallback(callback);
+      return;
+    }
+    var destChannel = current.id;
+    // TODO: Copy animation assets to new channel
+    executeCallback(callback);
+  },
   serverSideRemix: function () {
     if (current && !current.name) {
       var url = projects.appToProjectUrl();
       if (url === '/projects/algebra_game') {
         this.setName('Big Game Template');
-      } else if (url === '/projects/applab' || url === '/projects/gamelab') {
+      } else if (url === '/projects/applab' ||
+          url === '/projects/makerlab' ||
+          url === '/projects/gamelab') {
         this.setName('My Project');
       }
     }
@@ -670,7 +692,8 @@ function fetchSource(channelData, callback, version) {
         console.warn('unable to fetch project source file', err);
         data = {
           source: '',
-          html: ''
+          html: '',
+          animations: ''
         };
       }
       unpackSources(data);

@@ -25,7 +25,7 @@
   "COLOUR_RGB_RED": "raudona spalva",
   "COLOUR_RGB_TITLE": "spalvinti su",
   "COLOUR_RGB_TOOLTIP": "Sukurk spalvą su tam tikru raudonos, žalios ir mėlynos spalvų kiekiu. Visos vertės turi būti nuo 0 iki 100.",
-  "CONFIRM_CREATE_VARIABLE": "Create",
+  "CONFIRM_CREATE_VARIABLE": "Sukurti",
   "CONFIRM_DELETE_FUNCTION_MESSAGE": "Dėmesio! Ar tikrai norite ištrinti %1?",
   "CONFIRM_RENAME_VARIABLE": "Pervadinti",
   "CONTRACT_EDITOR_HEADER": "Dizaino receptas",

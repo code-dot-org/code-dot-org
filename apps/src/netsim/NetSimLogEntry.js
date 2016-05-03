@@ -4,8 +4,8 @@
 'use strict';
 
 var moment = require('moment');
-var utils = require('../utils');
-var _ = utils.getLodash();
+var utils = require('../utils'); // Provides Function.prototype.inherits
+var _ = require('../lodash');
 var i18n = require('./locale');
 var NetSimEntity = require('./NetSimEntity');
 var Packet = require('./Packet');

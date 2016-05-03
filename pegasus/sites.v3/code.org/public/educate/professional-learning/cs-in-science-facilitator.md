@@ -3,7 +3,7 @@ title: CS in Science Facilitator Program
 nav: educate_nav
 ---
 # Become a Computer Science in Science Facilitator
-**2016 Application Update: The application process closed March 15th. We are reviewing applications and accepting facilitators on a rolling basis through April 22nd. We will update everyone of their acceptance status by April 22nd.**
+**2016 Application Update: The application process closed March 15th. We are reviewing applications and accepting facilitators on a rolling basis through April 29th. We will update everyone of their acceptance status by April 29th.**
 
 Code.org is looking to partner with experienced middle school computer science educators to deliver multiple in-person workshops to local middle school teachers teaching our [CS in Science curriculum](https://code.org/curriculum/science) (in partnership with Project GUTS). Applicants who meet the facilitator criteria who live in a region where Code.org has Professional Learning or District Partners will be prioritized for acceptance.
 

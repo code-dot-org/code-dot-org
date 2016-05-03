@@ -33,7 +33,10 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "instructions": "Do This",
+    "markdown_instructions": "# Sprites\r\n\r\n# Do This\r\n* Create spirte\r\n* Change the name of your sprite\r\n* call drawsprites in draw loop",
+    "show_d_pad": "false"
   },
   "published": true,
   "notes": "",

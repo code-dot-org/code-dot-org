@@ -1,0 +1,28 @@
+name 'ECSPD1 congratulations end'
+title 'ECS PD1 congratulations end'
+Description 'ECS PD1 Congratulations End of PLP'
+css 'unplugged'
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+## Congratulations! 
+
+<br>
+You've just finished your first phase of the online professional learning program! Thank you so much for spending the time to complete this introduction, where we hope that you've learned more about the program you've just embarked on. 
+<br>
+
+<br>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/juXqFtaPmNk?rel=0" frameborder="0" allowfullscreen></iframe>
+<br>
+
+<br>
+You will receive (or already have received) an email with workshop registration information communication from Code.org or your Professional Learning Program in a seperate email. If you need to reach Code.org, you can send an email to teacher@code.org. 
+<br>
+<br>
+##### We'll see you this summer at your in-person professional learning program!
+<br>
+<br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

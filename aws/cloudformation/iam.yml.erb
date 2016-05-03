@@ -1,0 +1,35 @@
+---
+AWSTemplateFormatVersion: 2010-09-09
+Description: IAM layer including roles and access permissions for Code.org infrastructure.
+Resources:
+  FrontendRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: [ec2.amazonaws.com]
+            Action: ['sts:AssumeRole']
+      Path: '/'
+      Policies:
+        - PolicyName: instance
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: ['s3:GetObject']
+                Resource: 'arn:aws:s3:::<%=s3_bucket%>/*'
+              - Effect: Allow
+                Action:
+                  - 'cloudformation:SignalResource'
+                  - 'ec2:DescribeImages'
+                Resource: '*'
+  FrontendInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: '/'
+      Roles: [Ref: FrontendRole]
+Outputs:
+  FrontendInstanceProfile:
+    Description: Frontend Instance Profile
+    Value: {Ref: FrontendInstanceProfile}

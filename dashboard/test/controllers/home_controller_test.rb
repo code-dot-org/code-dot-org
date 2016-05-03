@@ -15,7 +15,7 @@ class HomeControllerTest < ActionController::TestCase
 
     get :index
 
-    assert_select 'a', 'Iniciar Sesión'
+    assert_select 'div.description', 'Code Studio es la página principal de los cursos en línea creados por Code.org'
   end
 
   test "language is set with cookies" do

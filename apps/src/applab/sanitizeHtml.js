@@ -50,7 +50,9 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
   // Do not warn when these attributes are removed.
   var ignoredAttributes = [
     'pmbx_context',   // Used by Chrome plugins such as Bitdefender Wallet.
-    'kl_vkbd_parsed'  // Origin unknown. Assumed to be a plugin of some kind.
+    'kl_vkbd_parsed', // Origin unknown. Assumed to be a plugin of some kind.
+    'vk_16761',       // Origin unknown.
+    'abp'             // adblock plus plugin.
   ];
 
   var processed = sanitize(unsafe, {
@@ -108,30 +110,39 @@ function isIdAvailable(elementId) {
  */
 module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
   var warnings = [];
-  var defaultAttributes = ['id', 'class', 'data-*', 'height', 'style',  'title', 'width'];
 
+  // Define tags with a standard set of allowed attributes
+
+  var standardAttributes = ['id', 'class', 'data-*', 'height', 'style',  'title', 'width'];
+  // <i> could allow people to covertly specify font awesome icons, which seems ok
+  var tagsWithStandardAttributes = [
+    'b', 'br', 'canvas', 'em', 'font', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr',
+    'i', 'label', 'li', 'ol', 'option', 'p', 'span', 'strong', 'table', 'td', 'th',
+    'tr', 'u', 'ul'
+  ];
+  var defaultAttributesMap = {};
+  tagsWithStandardAttributes.forEach(function (tag) {
+    defaultAttributesMap[tag] = standardAttributes;
+  });
+
+  // Define tags with a custom set of allowed attributes
+
+  var customAttributesMap = {
+    button: standardAttributes.concat(['data-canonical-image-url']),
+    div: standardAttributes.concat(['contenteditable', 'data-canonical-image-url', 'tabindex', 'xmlns']),
+    img: standardAttributes.concat(['data-canonical-image-url', 'src']),
+    input: standardAttributes.concat(['autocomplete', 'checked', 'max', 'min', 'name', 'placeholder', 'step', 'type', 'value']),
+    select: standardAttributes.concat(['multiple', 'size'])
+  };
+  var tagsWithCustomAttributes = Object.keys(customAttributesMap);
+
+  var allowedTags = sanitize.defaults.allowedTags.concat(tagsWithStandardAttributes)
+    .concat(tagsWithCustomAttributes);
+  var allowedAttributes = $.extend({}, sanitize.defaults.allowedAttributes,
+    defaultAttributesMap, customAttributesMap);
   var safe = sanitize(unsafe, {
-    allowedTags: sanitize.defaults.allowedTags.concat([
-      'button', 'canvas', 'img', 'input', 'option', 'label', 'select', 'span', 'font', 'u', 'b', 'em', 'i', 'table', 'th', 'tr', 'td']),
-    allowedAttributes: $.extend({}, sanitize.defaults.allowedAttributes, {
-      button: defaultAttributes.concat(['data-canonical-image-url']),
-      canvas: defaultAttributes,
-      div: defaultAttributes.concat(['contenteditable', 'data-canonical-image-url', 'tabindex', 'xmlns']),
-      font: defaultAttributes,
-      img: defaultAttributes.concat(['data-canonical-image-url', 'src']),
-      input: defaultAttributes.concat(['autocomplete', 'checked', 'max', 'min', 'name', 'placeholder', 'step', 'type', 'value']),
-      label: defaultAttributes,
-      select: defaultAttributes,
-      span: defaultAttributes,
-      u: defaultAttributes,
-      b: defaultAttributes,
-      em: defaultAttributes,
-      i: defaultAttributes,  // This could allow people to covertly specify font awesome icons, which seems ok
-      table: defaultAttributes,
-      th: defaultAttributes,
-      tr: defaultAttributes,
-      td: defaultAttributes
-    }),
+    allowedTags: allowedTags,
+    allowedAttributes: allowedAttributes,
     allowedSchemes: sanitize.defaults.allowedSchemes.concat(['data']),
     transformTags: {
       '*': function (tagName, attribs) {

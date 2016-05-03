@@ -4,7 +4,6 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
 @import 'color';
 @import 'mixins';
 @import "../JsDebuggerUi.scss";
-@import "./AnimationTab.scss";
 @import "./ResizablePanes.scss";
 
 #divGameLab {
@@ -17,6 +16,20 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
   background-color: white;
 
   @include user-selects(none);
+}
+
+.legacy-share-view {
+  #runButton, #resetButton {
+    display:none !important;
+  }
+  #studio-dpad {
+    width: 100%;
+    margin-left: 0;
+  }
+  #studio-dpad-button {
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 /* Sprited icons. */
@@ -42,7 +55,6 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
 }
 .dpad-btn {
   background-position: -21px -63px;
-  margin-right: 3px;
 }
 .left-btn {
   background-position: -21px -42px;

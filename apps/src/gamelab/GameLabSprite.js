@@ -14,6 +14,16 @@ module.exports.createSprite = function (x, y, width, height) {
   var s = new this.Sprite(x, y, width, height);
   var p5Inst = this;
 
+  s.setAnimation = function (animationName) {
+    var animation = p5Inst.projectAnimations[animationName];
+    if (typeof animation === 'undefined') {
+      throw new Error('Unable to find an animation named "' + animationName +
+          '".  Please make sure the animation exists.');
+    }
+    s.addAnimation(animationName, animation);
+    s.changeAnimation(animationName);
+  };
+
   s.setFrame = function (frame) {
     if (s.animation) {
       s.animation.setFrame(frame);
@@ -135,6 +145,7 @@ module.exports.createSprite = function (x, y, width, height) {
   s.isTouching = isTouching.bind(s, this);
   s.depth = this.allSprites.maxDepth()+1;
   this.allSprites.add(s);
+
   return s;
 };
 

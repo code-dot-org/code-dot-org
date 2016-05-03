@@ -1,5 +1,4 @@
-var utils = require('../utils');
-var _ = utils.getLodash();
+var _ = require('../lodash');
 
 /**
  * Stores information about a current Maze execution.  Execution consists of a

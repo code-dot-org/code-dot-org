@@ -269,28 +269,67 @@ module.exports = function (grunt) {
     allFilesDest.push(outputDir + app + '.js');
   });
 
-  // Use command-line tools to run browserify (faster/more stable this way)
-  var browserifyExec = 'mkdir -p build/browserified &&' +
-      (envOptions.dev ? '' : ' NODE_ENV=production') + // Necessary for production Redux
-      ' `npm bin`/browserifyinc' +
-      ' -g [ browserify-global-shim ]' +
-      ' --cachefile ' + outputDir + 'browserifyinc-cache.json' +
-      ' --extension=.jsx' +
+  /**
+   * Generates a command line string to execute browserify with the specified options.
+   * Available options are:
+   *
+   * @param {!Object} options
+   * @param {boolean} [options.globalShim] - boolean for whether or not to turn on
+   *        the browserify-global-shim transform
+   * @param {!string} options.cacheFile - file name where the browserify cache should be stored
+   * @param {!string[]} options.srcFiles - list of src files to pass to browserify
+   * @param {!string[]} options.destFiles - list of destination file paths to pass to browserify
+   * @param {boolean} [options.factorBundle] - whether or not to use the factor-bundle plugin to
+   *        extract common code into a separate file.
+   */
+  function getBrowserifyCommand(options) {
+    // Use command-line tools to run browserify (faster/more stable this way)
+    var cmd = 'mkdir -p build/browserified &&' +
+          (envOptions.dev ? '' : ' NODE_ENV=production') + // Necessary for production Redux
+          ' `npm bin`/browserifyinc';
+    if (options.globalShim) {
+      cmd += ' -g [ browserify-global-shim ]';
+    }
+    if (options.cacheFile) {
+      cmd += ' --cachefile ' + outputDir + options.cacheFile;
+    }
+    cmd += ' --extension=.jsx' +
       ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]' +
       (envOptions.dev ? '' : ' -t loose-envify') +
-      ' -d ' + allFilesSrc.join(' ') +
-      (
-          APPS.length > 1 ?
-          ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js' :
-          ' -o ' + allFilesDest[0]
-      );
+      ' -d ' + options.srcFiles.join(' ');
+    if (options.factorBundle) {
+      cmd += ' -p [ factor-bundle -o ' +
+        options.destFiles.join(' -o ') +
+        ' ] -o ' + outputDir + 'common.js';
+    } else {
+      cmd += ' -o ' + options.destFiles[0];
+    }
+    return cmd;
+  }
+
+  var browserifyExec = getBrowserifyCommand({
+    globalShim: true,
+    cacheFile: 'browserifyinc-cache.json',
+    srcFiles: allFilesSrc,
+    destFiles: allFilesDest,
+    factorBundle: APPS.length > 1,
+  });
+
+  var applabAPIExec = getBrowserifyCommand({
+    globalShim: false,
+    cacheFile: 'applab-api-cache.json',
+    srcFiles: ['build/js/applab/api-entry.js'],
+    destFiles: [outputDir + 'applab-api.js'],
+    factorBundle: false,
+  });
 
   var fastMochaTest = process.argv.indexOf('--fast') !== -1;
 
   config.exec = {
     browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
     convertScssVars: './script/convert-scss-variables.js',
-    mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : '')
+    mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : ''),
+    applabapi: 'echo "' + applabAPIExec + '" && ' + applabAPIExec,
   };
 
   var ext = envOptions.dev ? 'uncompressed' : 'compressed';
@@ -348,7 +387,7 @@ module.exports = function (grunt) {
   config.watch = {
     js: {
       files: ['src/**/*.{js,jsx}'],
-      tasks: ['newer:copy:src', 'exec:browserify', 'notify:browserify'],
+      tasks: ['newer:copy:src', 'exec:browserify', 'exec:applabapi', 'notify:browserify'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true
@@ -469,6 +508,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'prebuild',
     'exec:browserify',
+    'exec:applabapi',
     'notify:browserify',
     // Skip minification in development environment.
     envOptions.dev ? 'noop' : ('concurrent:uglify'),

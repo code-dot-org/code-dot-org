@@ -8,7 +8,7 @@ class Plc::TasksController < ApplicationController
 
   # GET /plc/tasks/new
   def new
-    @task.plc_learning_module_ids = [params[:plc_learning_module_id]]
+    @task.plc_learning_modules = Plc::LearningModule.where(id: params[:plc_learning_module_id])
     @task.type = params[:type]
   end
 
@@ -54,7 +54,7 @@ class Plc::TasksController < ApplicationController
     elsif params[:plc_script_completion_task]
       params.require(:plc_script_completion_task).permit(:name, {plc_learning_module_ids: []}, :type, :script_id)
     elsif params[:plc_written_assignment_task]
-      params.require(:plc_written_assignment_task).permit(:name, {plc_learning_module_ids: []}, :type, :assignment_description)
+      params.require(:plc_written_assignment_task).permit(:name, {plc_learning_module_ids: []}, :type, :level_id)
     elsif params[:plc_task]
       params.require(:plc_task).permit(:name, {plc_learning_module_ids: []}, :type)
     end

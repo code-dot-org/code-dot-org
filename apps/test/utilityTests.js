@@ -7,7 +7,7 @@ var utils = require('@cdo/apps/utils');
 var requiredBlockUtils = require('@cdo/apps/required_block_utils');
 var blockUtils = require('@cdo/apps/block_utils');
 var assert = testUtils.assert;
-var _ = require('lodash');
+var _ = require('@cdo/apps/lodash');
 var mazeUtils = require('@cdo/apps/maze/mazeUtils');
 
 describe("String.prototype.repeat", function () {

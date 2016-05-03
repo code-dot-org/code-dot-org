@@ -5,9 +5,10 @@ var color = require('./color');
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
 var dropletUtils = require('./dropletUtils');
-var _ = utils.getLodash();
+var _ = require('./lodash');
 var dom = require('./dom');
 var constants = require('./constants.js');
+var KeyCodes = constants.KeyCodes;
 var msg = require('./locale');
 var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
@@ -24,16 +25,18 @@ var DialogButtons = require('./templates/DialogButtons');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
-var assetListStore = require('./assetManagement/assetListStore');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
+var shareWarnings = require('./shareWarnings');
+var redux = require('./redux');
+var runState = require('./redux/runState');
 var copyrightStrings;
 
 /**
 * The minimum width of a playable whole blockly game.
 */
 var MIN_WIDTH = 900;
-var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 320;
+var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
 
@@ -192,6 +195,12 @@ var StudioApp = function () {
    */
   this.wireframeShare = false;
 
+  /**
+   * Redux store that might be provided by the app. Initially give it an empty
+   * interface so that we can assume existence.
+   */
+  this.reduxStore_ = null;
+
   this.onAttempt = undefined;
   this.onContinue = undefined;
   this.onResetPressed = undefined;
@@ -260,6 +269,8 @@ StudioApp.prototype.init = function (config) {
     config = {};
   }
 
+  this.reduxStore_ = config.reduxStore || redux.createFakeStore();
+
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
 
@@ -282,7 +293,7 @@ StudioApp.prototype.init = function (config) {
 
     // Pre-populate asset list
     assetsApi.ajax('GET', '', function (xhr) {
-      assetListStore.reset(JSON.parse(xhr.responseText));
+      dashboard.assets.listStore.reset(JSON.parse(xhr.responseText));
     }, function () {
       // Unable to load asset list
     });
@@ -298,6 +309,7 @@ StudioApp.prototype.init = function (config) {
       sendToPhone: config.sendToPhone,
       twitter: config.twitter,
       app: config.app,
+      noHowItWorks: config.noHowItWorks,
       isLegacyShare: config.isLegacyShare
     });
   }
@@ -431,6 +443,21 @@ StudioApp.prototype.init = function (config) {
     // handleUsingBlockly_ already does an onResize. We still want that goodness
     // if we're not blockly
     this.onResize();
+  }
+
+  this.alertIfAbusiveProject('#codeWorkspace');
+
+  if (this.share && config.shareWarningInfo) {
+    shareWarnings.checkSharedAppWarnings({
+      channelId: config.channel,
+      isSignedIn: config.isSignedIn,
+      hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
+      onWarningsComplete: config.shareWarningInfo.onWarningsComplete
+    });
+  }
+
+  if (!!config.level.projectTemplateLevelName) {
+    this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
   }
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
@@ -607,8 +634,10 @@ StudioApp.prototype.scaleLegacyShare = function () {
 
   var frameWidth = $(phoneFrameScreen).width();
   var scale = frameWidth / vizWidth;
-  applyTransformOrigin(vizContainer, 'left top');
-  applyTransformScale(vizContainer, 'scale(' + scale + ')');
+  if (scale !== 1) {
+    applyTransformOrigin(vizContainer, 'left top');
+    applyTransformScale(vizContainer, 'scale(' + scale + ')');
+  }
 };
 
 /**
@@ -754,6 +783,11 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
         newWindow: true
       },
       {
+        text: window.dashboard.i18n.t('footer.report_abuse'),
+        link: "/report_abuse",
+        newWindow: true
+      },
+      {
         text: window.dashboard.i18n.t('footer.how_it_works'),
         link: location.href + "/edit",
         newWindow: false
@@ -818,6 +852,8 @@ StudioApp.prototype.toggleRunReset = function (button) {
   if (button !== 'run' && button !== 'reset') {
     throw "Unexpected input";
   }
+
+  this.reduxStore_.dispatch(runState.setIsRunning(!showRun));
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
@@ -1783,11 +1819,16 @@ StudioApp.prototype.configureDom = function (config) {
     visualizationColumn.className = visualizationColumn.className + " centered_embed";
   }
 
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
+  if (config.noPadding && smallFooter) {
+    // The small footer's padding should not increase its size when not part
+    // of a larger page.
+    smallFooter.style.boxSizing = "border-box";
+  }
   if (!config.embed && !config.hideSource) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
-    var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
     if (smallFooter) {
       smallFooter.className += " responsive";
     }
@@ -1827,7 +1868,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         }), div);
       }
 
-      if (!options.embed) {
+      if (!options.embed && !options.noHowItWorks) {
         var runButton = document.getElementById('runButton');
         var buttonRow = runButton.parentElement;
         var openWorkspace = document.createElement('button');
@@ -1879,6 +1920,10 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     enablePaletteAtStart: !config.readonlyWorkspace,
     textModeAtStart: config.level.textModeAtStart
   });
+
+  if (config.level.paletteCategoryAtStart) {
+    this.editor.changePaletteGroup(config.level.paletteCategoryAtStart);
+  }
 
   this.editor.aceEditor.setShowPrintMargin(false);
 
@@ -2004,6 +2049,34 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   this.editor.on('palettetoggledone', function (e) {
     // Reposition callouts after block/text toggle (in case they need to move)
     $('.cdo-qtips').qtip('reposition', null, false);
+  });
+
+  // Prevent the backspace key from navigating back. Make sure it's still
+  // allowed on other elements.
+  // Based on http://stackoverflow.com/a/2768256/2506748
+  $(document).on('keydown', function (event) {
+    var doPrevent = false;
+    if (event.keyCode !== KeyCodes.BACKSPACE) {
+      return;
+    }
+    var d = event.srcElement || event.target;
+    if ((d.tagName.toUpperCase() === 'INPUT' && (
+        d.type.toUpperCase() === 'TEXT' ||
+        d.type.toUpperCase() === 'PASSWORD' ||
+        d.type.toUpperCase() === 'FILE' ||
+        d.type.toUpperCase() === 'EMAIL' ||
+        d.type.toUpperCase() === 'SEARCH' ||
+        d.type.toUpperCase() === 'NUMBER' ||
+        d.type.toUpperCase() === 'DATE' )) ||
+        d.tagName.toUpperCase() === 'TEXTAREA') {
+      doPrevent = d.readOnly || d.disabled;
+    } else {
+      doPrevent = !d.isContentEditable;
+    }
+
+    if (doPrevent) {
+      event.preventDefault();
+    }
   });
 
   if (this.instructionsDialog) {
@@ -2169,9 +2242,7 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   var fontAwesomeGlyph = _.find(contentSpan.childNodes, function (node) {
     return /\bfa\b/.test(node.className);
   });
-  var imgBlocksGlyph = _.find(contentSpan.childNodes, function (node) {
-    return /\bblocks-glyph\b/.test(node.className);
-  });
+  var imgBlocksGlyph = document.getElementById('blocks_glyph');
 
   // Change glyph
   if (usingBlocks) {
@@ -2510,7 +2581,8 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
  *   should display the error in.
  */
 StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
-  if (window.dashboard && dashboard.project.exceedsAbuseThreshold()) {
+  if (window.dashboard && dashboard.project &&
+      dashboard.project.exceedsAbuseThreshold()) {
     var i18n = {
       tos: window.dashboard.i18n.t('project.abuse.tos'),
       contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
