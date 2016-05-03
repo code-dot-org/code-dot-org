@@ -790,7 +790,8 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: false,
-    localeDirection: studioApp.localeDirection()
+    localeDirection: studioApp.localeDirection(),
+    isDroplet: true
   }));
 
   Applab.reduxStore.dispatch(changeInterfaceMode(

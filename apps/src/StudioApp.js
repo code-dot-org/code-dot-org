@@ -28,7 +28,6 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
-var redux = require('./redux');
 var runState = require('./redux/runState');
 var copyrightStrings;
 
@@ -269,7 +268,9 @@ StudioApp.prototype.init = function (config) {
     config = {};
   }
 
-  this.reduxStore_ = config.reduxStore || redux.createStore(redux.combineReducers());
+  this.reduxStore_ = config.reduxStore;
+  // TODO - dont check this in
+  // TODO - throw if not given a redux store?
   window.__reduxStore = this.reduxStore_;
 
   config.getCode = this.getCode.bind(this);

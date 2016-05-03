@@ -28,9 +28,12 @@ var commonMsg = require('../locale');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
+var redux = require ('../redux');
+var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
+var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var MazeVisualizationColumn = require('./MazeVisualizationColumn');
+var setInitialLevelProps = require('../redux/levelProperties').setInitialLevelProps;
 var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
@@ -70,6 +73,21 @@ var skin;
  * Milliseconds between each animation frame.
  */
 var stepSpeed = 100;
+
+/**
+ * A method for tests to recreate our redux store between runs.
+ */
+function newReduxStore() {
+  /**
+   * Redux Store holding application state, transformable by actions.
+   * @type {Store}
+   * @see http://redux.js.org/docs/basics/Store.html
+   */
+  Maze.reduxStore = redux.createStore(redux.combineReducers());
+}
+
+newReduxStore();
+
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -510,6 +528,8 @@ Maze.init = function (config) {
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
 
+  config.reduxStore = Maze.reduxStore;
+
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.bee = new Bee(Maze, studioApp, config);
     // Override default stepSpeed
@@ -609,6 +629,14 @@ Maze.init = function (config) {
     }
   };
 
+  // Push initial level properties into the Redux store
+  Maze.reduxStore.dispatch(setInitialLevelProps({
+    localeDirection: studioApp.localeDirection(),
+    isReadOnlyWorkspace: !!config.readonlyWorkspace,
+    isDroplet: !!level.editCode
+  }));
+
+
   var visualizationColumn = (
     <MazeVisualizationColumn
       hideRunButton={!!(level.stepOnly && !level.edit_blocks)}
@@ -617,25 +645,22 @@ Maze.init = function (config) {
     />
   );
 
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={studioApp.localeDirection()}
-      editCode={!!level.editCode}
-      readonlyWorkspace={!!config.readonlyWorkspace}
-    />
+  ReactDOM.render(
+    <Provider store={Maze.reduxStore}>
+      <AppView
+        assetUrl={studioApp.assetUrl}
+        isEmbedView={!!config.embed}
+        isShareView={!!config.share}
+        hideSource={!!config.hideSource}
+        noVisualization={false}
+        isRtl={studioApp.isRtl()}
+        codeWorkspace={<ConnectedCodeWorkspace/>}
+        visualizationColumn={visualizationColumn}
+        onMount={studioApp.init.bind(studioApp, config)}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
   );
-
-  ReactDOM.render(React.createElement(AppView, {
-    assetUrl: studioApp.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    hideSource: !!config.hideSource,
-    noVisualization: false,
-    isRtl: studioApp.isRtl(),
-    codeWorkspace: codeWorkspace,
-    visualizationColumn: visualizationColumn,
-    onMount: studioApp.init.bind(studioApp, config)
-  }), document.getElementById(config.containerId));
 };
 
 /**
@@ -1880,4 +1905,8 @@ Maze.onExecutionFinish = function () {
   if (Maze.bee) {
     Maze.bee.onExecutionFinish();
   }
+};
+
+Maze.__TestInterface__ = {
+  recreateReduxStore: newReduxStore
 };
