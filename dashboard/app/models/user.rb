@@ -526,6 +526,10 @@ SQL
     self.user_type == TYPE_TEACHER
   end
 
+  def student_of_admin?
+    teachers.any? &:admin?
+  end
+
   def authorized_teacher?
     # you are "really" a teacher if you are in any cohort for an ops workshop
     admin? || cohorts.present?

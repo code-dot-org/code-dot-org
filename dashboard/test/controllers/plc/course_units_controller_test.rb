@@ -7,8 +7,8 @@ class Plc::CourseUnitsControllerTest < ActionController::TestCase
     @user = create(:admin)
     sign_in(@user)
 
-    @module1 = create(:plc_learning_module, name: 'Module 1')
-    @module2 = create(:plc_learning_module, name: 'Module 2')
+    @module1 = create(:plc_learning_module, name: 'Module 1', plc_course_unit: @course_unit)
+    @module2 = create(:plc_learning_module, name: 'Module 2', plc_course_unit: @course_unit)
     @question = create(:plc_evaluation_question, plc_course_unit: @course_unit, question: 'Some question')
   end
 
