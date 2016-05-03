@@ -1,6 +1,6 @@
 name             'cdo-users'
 maintainer       'Code.org'
-maintainer_email 'geoffrey@code.org'
+maintainer_email 'will@code.org'
 license          'All rights reserved'
 description      'Creates users for the accounts defined in Chef'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))

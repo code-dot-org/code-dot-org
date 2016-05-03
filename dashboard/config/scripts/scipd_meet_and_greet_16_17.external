@@ -1,0 +1,17 @@
+name 'sciPD meet and greet 16-17'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+### Meet and Greet
+
+Introduce yourself (name, years taught, school, background, subject, grade, past experience with CS, etc.) Then come back later and read other entries and introduce yourself on another teachers thread (find and comment on something you have in common). 
+
+STEP 1: To get started, click on "Start Discussion" below to be taken to another page to view introductions. Click the "Reply" button under the Meet and Greet note to add your information. 
+
+STEP 2: Come back later and read new posts and respond to someone else's post by clicking on "post a response" and entering your comment.
+
+<a href="http://forum.code.org/t/computer-science-in-science-pd-meet-and-greet/19" target="_new"><button style="background-color:#00B2C0; color:white;">Start Discussion
+</button></a>
+<br><br><br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
