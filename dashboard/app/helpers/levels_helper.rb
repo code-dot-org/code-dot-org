@@ -524,11 +524,17 @@ module LevelsHelper
 
     user_id = current_user ? current_user.id.to_s : session.id
     payload = {
-        :uid => user_id,
-        :is_dashboard_user => !!current_user
+      :uid => user_id,
+      :is_dashboard_user => !!current_user
     }
+    options = {
+      # Provides additional debugging information to the browser when
+      # security rules are evaluated.
+      :debug => CDO.firebase_debug && CDO.rack_env?(:development)
+    }
+    # TODO(dave): cache token generator across requests
     generator = Firebase::FirebaseTokenGenerator.new(CDO.firebase_secret)
-    generator.create_token(payload)
+    generator.create_token(payload, options)
   end
 
   def use_firebase_for_new_project?
