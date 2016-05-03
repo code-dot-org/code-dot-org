@@ -20,7 +20,11 @@ puts "#{teachers.length} total US teachers and past HOC organizers."
 # Next, filter for those who did not click through any of the previous petition emails (experiments or final).
 PREVIOUS_MESSAGE_NAME_PREFIX = '4-22-petition-congress%'
 CLICK_THROUGH_URL = 'http://bit.ly/computersciencepetition'
-message_id_list = DB[:poste_messages].where(Sequel.like(:name, PREVIOUS_MESSAGE_NAME_PREFIX)).map(:id).join(',')
+message_id_list = DB[:poste_messages].
+  where(Sequel.like(:name, PREVIOUS_MESSAGE_NAME_PREFIX)).
+  map(:id).
+  join(',')
+
 url_id = DB[:poste_urls].where(url: CLICK_THROUGH_URL).get(:id)
 raise "Unable to find click through url (#{CLICK_THROUGH_URL})" unless url_id
 
@@ -35,16 +39,18 @@ teachers.keys.each_slice(10000) do |teacher_emails|
   unless test_query_succeeded
     test_query = <<-SQL
       SELECT COUNT(0) AS click_count FROM poste_deliveries
-      INNER JOIN poste_clicks ON (poste_clicks.delivery_id = poste_deliveries.id AND poste_clicks.url_id = #{url_id})
+      INNER JOIN poste_clicks ON poste_clicks.delivery_id = poste_deliveries.id
+        AND poste_clicks.url_id = #{url_id}
       WHERE poste_deliveries.message_id IN (#{message_id_list}) AND
         contact_email IN (#{email_list})
     SQL
-    test_query_succeeded = true if DB.fetch(test_query).get(:click_count) > 0
+    test_query_succeeded = DB.fetch(test_query).get(:click_count) > 0
   end
 
   filter_query = <<-SQL
     SELECT contact_email FROM poste_deliveries
-    LEFT JOIN poste_clicks ON (poste_clicks.delivery_id = poste_deliveries.id AND poste_clicks.url_id = #{url_id})
+    LEFT JOIN poste_clicks ON poste_clicks.delivery_id = poste_deliveries.id
+      AND poste_clicks.url_id = #{url_id}
     WHERE poste_deliveries.message_id IN (#{message_id_list}) AND
       poste_clicks.id IS NULL AND
       contact_email IN (#{email_list})
