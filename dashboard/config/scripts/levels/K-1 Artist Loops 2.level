@@ -32,31 +32,41 @@
     "impressive": "false",
     "disable_sharing": "false"
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 2
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="simple_move_right" next_connection_disabled="true"/>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="simple_move_up"/>
-        <block type="simple_move_down"/>
-        <block type="simple_move_right"/>
-        <block type="simple_move_left"/>
+        <block type="simple_move_up" next_connection_disabled="true"/>
+        <block type="simple_move_down" next_connection_disabled="true"/>
+        <block type="simple_move_right" next_connection_disabled="true"/>
+        <block type="simple_move_left" next_connection_disabled="true"/>
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-6">???</title>
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-6">???</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

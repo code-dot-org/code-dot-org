@@ -173,9 +173,9 @@ These guidelines explain the type of space your facilitators need to run a succe
 **Example Workshop Agendas**<br/> 
 
 - [Phase 2: Summer Workshop](/files/csp-p2-agenda.pdf)<br/>
-- Phase 3: Academic Year Development - Coming Soon!<br/>
-	- Session A<br/>
-	- Session B<Br/>
+- Phase 3: Academic Year Development <br/>
+	- [Session A](/files/CSPFirstQuarterWorkshop-teachers.pdf)<br/>
+	- Session B<br/>
 	- Session C<br/>
 	- Session D<br/>
 

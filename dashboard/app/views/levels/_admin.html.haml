@@ -27,6 +27,7 @@
               = form_tag level_clone_path(@level), method: :post, remote: true do
                 = label_tag 'New name:'
                 = text_field_tag :name, @level.name
+                = hidden_field_tag :authenticity_token, form_authenticity_token
                 = submit_tag 'Clone'
         - elsif @script_level
           %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level)).to_s

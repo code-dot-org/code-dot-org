@@ -10,9 +10,9 @@ content-type: text/ng-template
       .modal-header
         %button{ type: "button", class: "close", :"data-dismiss"=> "modal" }
           %span{ :"aria-hidden"=>"true" } &times;
-          %span.sr-only Close
+          %span.sr-only= I18n.t('dashboard_sections_close')
         .move-students-error
-        .move-students-header Select students to move to a new section. Moving students will not clear their progress.
+        .move-students-header= I18n.t('dashboard_sections_move_students_desc')
         .move-students-container
           .student-selection-area
             %table
@@ -20,7 +20,7 @@ content-type: text/ng-template
                 %th.manage-th.checkboxes
                   %input{ type: "checkbox", "ng-model" => "selectedAll", "ng-click" => "checkAll()" }
                 %th.manage-th
-                  Name
+                  = I18n.t('dashboard_students_name')
               %tr{ "ng-repeat" => "student in students" }
                 %td
                   %input{ type: "checkbox", "ng-model" => "student.selected" }
@@ -28,30 +28,30 @@ content-type: text/ng-template
                   {{student.name}}
           .destination-section-area
             %label
-              .section-title.selection Move to section:
+              .section-title.selection= I18n.t('dashboard_sections_move_to_section')
               %select{ "ng-model" => "selectedSectionCode" }
                 %option{"ng-repeat" => "section in sections | filter: {id: '!' + currentSection.id}", value: "{{section.code}}"}
                   {{section.name}}
-                %option{value: "Other Section"}
+                %option{value: I18n.t('dashboard_sections_other_section')}
                   {{otherSection}}
             %div{ "ng-show" => "selectedSectionCode != 'Other Section'" }
-              Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+              = I18n.t('dashboard_sections_one_per_teacher')
             %div{ "ng-show" => "selectedSectionCode == 'Other Section'" }
               %label
-                .section-title.selection Enter section code:
-                %input{ class: "text-box selection-text", type: 'text', maxlength: 6, "ng-model" => "manuallySelectedSectionCode", placeholder: "6-character code (ABCDEF)" }
+                .section-title.selection= I18n.t('dashboard_sections_enter_code')
+                %input{ class: "text-box selection-text", type: 'text', maxlength: 6, "ng-model" => "manuallySelectedSectionCode", placeholder: I18n.t('dashboard_sections_code_placeholder') }
               %div
-                .section-title Would you like the student(s) to be in both sections?
+                .section-title= I18n.t('dashboard_sections_both_sections')
                 %form
                   %label.selection-text
                     %input{ type: 'radio', "ng-model" => "stayEnrolledInCurrentSection", value: "true" }
-                    .option Yes, I want to copy student(s) to be in this current section AND the new section
+                    .option= I18n.t('dashboard_sections_yes_both')
                   %label.selection-text
                     %input{ type: 'radio', "ng-model" => "stayEnrolledInCurrentSection", value: "false" }
-                    .option No, I want to move student(s) to be in the new section only.
+                    .option= I18n.t('dashboard_sections_no_move')
             .modal-buttons
-              %button{ :type=>"button", :class=>"btn btn-primary btn-white", :"data-dismiss"=>"modal" }= "Cancel"
-              %button{ :type=>"button", :class=>"btn btn-primary", "ng-click" => "moveStudents()" }= "Move Students"
+              %button{ :type=>"button", :class=>"btn btn-primary btn-white", :"data-dismiss"=>"modal" }= I18n.t('dashboard_action_cancel')
+              %button{ :type=>"button", :class=>"btn btn-primary", "ng-click" => "moveStudents()" }= I18n.t('dashboard_sections_move_students')
 
 %div{style: "padding-left:20px"}
 

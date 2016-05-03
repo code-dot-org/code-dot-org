@@ -3,7 +3,7 @@
  */
 'use strict';
 
-var _ = require('../utils').getLodash();
+var _ = require('../lodash');
 var ObservableEvent = require('../ObservableEvent');
 var NetSimApi = require('./NetSimApi');
 var NetSimGlobals = require('./NetSimGlobals');

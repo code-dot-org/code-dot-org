@@ -476,58 +476,59 @@
           định nghĩa các khối mới thuộc về bạn khác những khối được xây dựng.
       3:
         image: notes/frozen3_3.jpg
-        text: Once you've taught a computer how to do an action once using this sequence
-          of commands, you can make up your own name for that action so it's easy
-          to repeat it later. When you define your own command and give it a name,
-          that's called a function.
+        text: Một khi bạn đã dạy một máy tính làm thế nào để làm một hành động một
+          lần bằng cách sử dụng dãy lệnh này, bạn có thể tạo 1 tên riêng cho hành
+          động đó. Vì vậy ta dễ dàng lặp lại hành động đó sau này. Khi bạn định nghĩa
+          các lệnh của riêng bạn và đặt tên cho nó, ta gọi đó là hàm.
       4:
         image: notes/frozen3_4.jpg
-        text: Hi, I’m Jess. When programming with blocks, you would use functions
-          if there are a set of actions you would like to use lots of times. For example,
-          you've written code to create a square.
+        text: Xin chào, Tôi là Jess. Khi lập trình với các khối, bạn sẽ sử dụng hàm
+          nếu có một tập các hành động bạn muốn sử dụng nhiều lần. Ví dụ, bạn đã viết
+          mã để tạo ra một hình vuông.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'Bạn có thể định nghĩa nó như là một hàm với tên "tạo ra một hình vuông." '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple
-          squares.
+        text: Bây giờ bạn có một khối mới mà bạn có thể sử dụng nhiều lần để tạo ra
+          nhiều hình vuông.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns.
-          In the next puzzle, the code you recently wrote to make a circle is available
-          to you as a new function that can make circles of different sizes. Can you
-          use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: Rất nhiều hình đơn giản có thể được sử dụng để tạo ra các hình phức
+          tạp hơn. Trong trò chơi tiếp theo, mã bạn đã viết mới đây để tạo một vòng
+          tròn sẽ được dùng để định nghĩa 1 hàm mới mà có thể tạo hình tròn với kích
+          thước khác nhau. Bạn có thể sử dụng nó để giúp Elsa tạo ra các hình phức
+          tạp và xinh đẹp trong tuyết?
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: We're going to create games using Play Lab. Good games have a story,
-          and every story has actors. We'll learn how to make our actors like witches,
-          alinens, and animals speak, move, and interact with each other. By the end
-          of this tutorial, you can build a game from scratch and share it with your
-          friends.
+        text: Chúng ta sẽ tạo ra trò chơi bằng cách sử dụng Play Lab. Một trò chơi
+          hay cần có cốt truyện, và mọi trò chơi cần có nhân vật. Chúng ta có thể
+          học cách xây dựng nhân vật như phù thuỷ, công chúa, giọng nói của các con
+          thú, chuyển động, nói chuyện. Ở cuối bài học này, bạn có thể làm 1 trò chơi
+          từ đầu tới cuối và chia sẻ với bạn bè.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space
-          where your program will run. The instructions for each level are written
-          below.
+        text: Màn hình của bạn được chia thành ba phần chính. Ở bên trái là không
+          gian chương trình sẽ chạy. Các lệnh cho từng cấp độ được viết bên dưới.
       3:
         image: notes/playlab_intro_3.png
-        text: The middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace and this is
-          where we'll build our program.
+        text: Khu vực giữa là hộp công cụ, và mỗi khối là 1 lệnh. Không gian màu trắng
+          bên phải được gọi là không gian làm việc và đây là nơi chúng ta sẽ xây dựng
+          chương trình của mình.
       4:
         image: notes/playlab_intro_4.png
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line, and then they'll snap together.
+        text: Để bắt đầu, bạn sẽ cần liên kết các khối với khối màu cam "khi chạy".
+          Bạn có thể liên kết nhiều khối với nhau bằng cách kéo chúng cho đến khi
+          bạn nhìn thấy đường màu vàng, và sau đó chúng sẽ nối liền với nhau.
       5:
         image: notes/playlab_intro_5.png
-        text: In this first puzzle, our actor is a penguin and we'll be making it
-          say "Hello!" by dragging the say block out, linking it to the when run block,
-          and typing in "Hello." We can also make the penguin move by using the move
-          right and move left blocks. Once you have your blocks in place, hit the
-          run button to see what you've programmed.
+        text: Trong trò chơi đầu tiên, nhân vật của chúng ta là chim cánh cụt và chúng
+          ta sẽ làm cho nó nói "Xin chào!" bằng cách kéo các khối nói ra, liên kết
+          với khối "khi chạy" và gõ vào "Xin chào." Chúng ta cũng có thể di chuyển
+          chim cánh cụt bằng cách sử dụng khối đi sang phải và đi sang trái. Khi bạn
+          đã có các khối đúng vị trí, nhấn nút Chạy để xem những gì bạn đã lập trình
+          được.
       6:
         image: notes/playlab_intro_6.png
         text: Get started and by the end, you'll be able to create your own game with
@@ -537,13 +538,14 @@
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: Now, we're going to learn about something that all game programmers
-          use everyday. They're called events. An event tells your program to listen
-          for when something happens. When that thing happens, it performs an action.
+        text: Bây giờ, chúng ta sẽ tìm hiểu về một số thứ mà tất cả các lập trình
+          viên trò chơi sử dụng hàng ngày. Đó là sự kiện. Một sự kiện nói chương trình
+          của bạn lắng nghe khi một điều gì đó xảy ra. Khi nó xảy ra, ta thực hiện
+          1 hành động.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button,
-          or a tap on the screen.
+        text: 'Một số ví dụ về các sự kiện là: đang lắng nghe cho một nhấp chuột,
+          phím mũi tên hoặc phím tab được nhấn.'
       3:
         image: notes/playlab_events_3.png
         text: Here, we're going to make the space bot greet the earthlings when a

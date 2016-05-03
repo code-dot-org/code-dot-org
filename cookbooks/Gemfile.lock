@@ -101,12 +101,18 @@ GEM
       mixlib-log (~> 1.3)
       rack
       uuidtools (~> 2.1)
+    chefspec (4.6.1)
+      chef (>= 11.14)
+      fauxhai (~> 3.2)
+      rspec (~> 3.0)
     cleanroom (1.0.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     excon (0.45.4)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
+    fauxhai (3.4.0)
+      net-ssh
     ffi (1.9.10)
     ffi-yajl (2.2.3)
       libyajl2 (~> 1.2)
@@ -241,10 +247,11 @@ PLATFORMS
 DEPENDENCIES
   berkshelf
   chef (= 12.7.2)
+  chefspec
   kitchen-docker
   kitchen-ec2!
   kitchen-sync
   test-kitchen!
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

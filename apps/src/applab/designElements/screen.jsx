@@ -6,7 +6,7 @@ var BooleanPropertyRow = require('./BooleanPropertyRow');
 var EventHeaderRow = require('./EventHeaderRow');
 var EventRow = require('./EventRow');
 var DefaultScreenButtonPropertyRow = require('./DefaultScreenButtonPropertyRow');
-var ICON_PREFIX_REGEX = require('../constants').ICON_PREFIX_REGEX;
+var applabConstants = require('../constants');
 
 var elementUtils = require('./elementUtils');
 
@@ -27,7 +27,7 @@ var ScreenProperties = React.createClass({
 
     var iconColorPicker;
     var canonicalImage = element.getAttribute('data-canonical-image-url');
-    if (ICON_PREFIX_REGEX.test(canonicalImage)) {
+    if (applabConstants.ICON_PREFIX_REGEX.test(canonicalImage)) {
       iconColorPicker = (
         <ColorPickerPropertyRow
           desc={'icon color'}
@@ -132,8 +132,8 @@ module.exports = {
     element.setAttribute('class', 'screen');
     element.setAttribute('tabIndex', '1');
     element.style.display = 'block';
-    element.style.height = Applab.footerlessAppHeight + 'px';
-    element.style.width = Applab.appWidth + 'px';
+    element.style.height = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT + 'px';
+    element.style.width = applabConstants.APP_WIDTH + 'px';
     element.style.left = '0px';
     element.style.top = '0px';
     // We want our screen to be behind canvases. By setting any z-index on the

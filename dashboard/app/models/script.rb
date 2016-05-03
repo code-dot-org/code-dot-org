@@ -32,13 +32,45 @@ class Script < ActiveRecord::Base
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
+  has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
   validates :name, presence: true, uniqueness: { case_sensitive: false}
 
   include SerializedProperties
 
-  serialized_attrs %w(pd admin_required)
+  after_save :generate_plc_objects
+
+  def generate_plc_objects
+    if professional_learning_course
+      course = Plc::Course.find_or_create_by! name: 'Default'
+      unit = Plc::CourseUnit.find_or_initialize_by(script_id: id)
+      unit.update!(
+        plc_course_id: course.id,
+        unit_name: I18n.t("data.script.name.#{name}.title"),
+        unit_description: I18n.t("data.script.name.#{name}.description")
+      )
+
+      stages.each do |stage|
+        lm = Plc::LearningModule.find_or_initialize_by(stage_id: stage.id)
+        lm.update!(
+          plc_course_unit_id: unit.id,
+          name: stage.name,
+          module_type: Plc::LearningModule::REQUIRED_MODULE,
+          plc_tasks: []
+        )
+
+        stage.script_levels.each do |sl|
+          task = Plc::Task.find_or_initialize_by(script_level_id: sl.id)
+          task.name = sl.level.name
+          task.save!
+          lm.plc_tasks << task
+        end
+      end
+    end
+  end
+
+  serialized_attrs %w(pd admin_required professional_learning_course student_of_admin_required)
 
   def Script.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
@@ -129,7 +161,7 @@ class Script < ActiveRecord::Base
   def self.script_cache_from_db
     {}.tap do |cache|
       Script.all.pluck(:id).each do |script_id|
-        script = Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage, :callouts]}, :stages]).find(script_id)
+        script = Script.includes([{script_levels: [{levels: [:game, :concepts] }, :stage, :callouts]}, :stages]).find(script_id)
 
         cache[script.name] = script
         cache[script.id.to_s] = script
@@ -346,6 +378,8 @@ class Script < ActiveRecord::Base
           properties: {
                        pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
                        admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
+                       professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course], # default false
+                       student_of_admin_required: script_data[:student_of_admin_required].nil? ? false : script_data[:student_of_admin_required], # default false
                       },
         }, stages.map{|stage| stage[:levels]}.flatten]
       end
@@ -378,6 +412,7 @@ class Script < ActiveRecord::Base
       row_data = row.dup
       stage_name = row.delete(:stage)
       assessment = row.delete(:assessment)
+      stage_flex_category = row.delete(:stage_flex_category)
 
       key = row.delete(:name)
 
@@ -403,23 +438,47 @@ class Script < ActiveRecord::Base
         raise ActiveRecord::RecordNotFound, "Level: #{row_data.to_json}, Script: #{script.name}"
       end
 
-      if level.game && level.game == Game.gamelab && !script.hidden && !script.admin_required
-        raise 'Gamelab levels can only be added to a script that requires admin (temporarily)'
+      # TODO: (bbuchanan) Enable stricter gamelab rule when possible.
+      # There are scripts that are not yet compliant with this
+      # gamelab rule.  Once the new student_of_admin_required option is
+      # deployed to levelbuilder and all scripts are updated to be
+      # compliant, enable this enforcing check to make sure future
+      # scripts are compliant as well.
+      #
+      # Scripts known to be in violation of this rule:
+      #   gamelab-hackathon.script
+      #   CSDU3-Draft.script
+      #   TEMP CSD Unit 3.script
+      if Game.gamelab == level.game
+        # unless script.student_of_admin_required || script.admin_required
+        unless script.hidden || script.login_required || script.student_of_admin_required || script.admin_required
+          raise <<-ERROR.gsub(/^\s+/, '')
+            Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required
+            (while adding level "#{level.name}" to script "#{script.name}")
+          ERROR
+        end
       end
 
-      if level.game && (level.game == Game.applab || level.game == Game.gamelab) && !script.hidden && !script.login_required
-        raise 'Applab/Gamelab levels can only be added to a script that requires login'
+      if Game.applab == level.game
+        unless script.hidden || script.login_required || script.student_of_admin_required || script.admin_required
+          raise <<-ERROR.gsub(/^\s+/, '')
+            Applab levels can only be added to scripts that are hidden or require login
+            (while adding level "#{level.name}" to script "#{script.name}")
+          ERROR
+        end
       end
 
       script_level_attributes = {
         script_id: script.id,
-        level_id: level.id,
         chapter: (chapter += 1),
         assessment: assessment
       }
       script_level = script.script_levels.detect{|sl|
-        script_level_attributes.all?{ |k, v| sl.send(k) == v }
-      } || ScriptLevel.find_or_create_by(script_level_attributes)
+        script_level_attributes.all?{ |k, v| sl.send(k) == v } &&
+          sl.levels == [level]
+      } || ScriptLevel.create(script_level_attributes) {|sl|
+        sl.levels = [level]
+      }
       # Set/create Stage containing custom ScriptLevel
       if stage_name
         stage = script.stages.detect{|s| s.name == stage_name} ||
@@ -427,6 +486,10 @@ class Script < ActiveRecord::Base
             name: stage_name,
             script: script
           )
+
+        stage.assign_attributes(flex_category: stage_flex_category)
+        stage.save! if stage.changed?
+
         script_level_attributes[:stage_id] = stage.id
         script_level_attributes[:position] = (script_level_position[stage.id] += 1)
         script_level.reload
@@ -461,6 +524,8 @@ class Script < ActiveRecord::Base
 
     script.stages = script_stages
     script.reload.stages
+    script.generate_plc_objects
+
     script
   end
 
@@ -488,6 +553,8 @@ class Script < ActiveRecord::Base
           properties: {
                        pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
                        admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
+                       professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course], # default false
+                       student_of_admin_required: script_data[:student_of_admin_required].nil? ? false : script_data[:student_of_admin_required], # default false
           }
         }, script_data[:stages].map { |stage| stage[:levels] }.flatten)
         Script.update_i18n(i18n)

@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "Tu dois obtenir 20 Droïdes Souris. Utilises la commande \"ajouter un Droïde Souris\" à l'évènement \"quand un Droïde Souris est atteint\" pour ajouter au moins deux Droïdes Souris à chaque fois que tu en atteins un.",
   "failedMultiplyCharactersTimeoutGotSome": "Félicitations, Tu as ajouté du code pour fabriquer des Droïdes Souris. Tu peux passer au prochain puzzle ou essayer à nouveau d'obtenir 20 Droïdes Souris. Essaye de le rendre plus facile en en ajoutant plus ! (Maintiens les touches du clavier (ou de l'écran) enfoncées pour aller plus vite.)",
   "failedChangeSettingTimeout": "Atteins trois Pilotes Rebelles pour continuer.",
-  "failedChangeSettingSettings": "Fais ton propre jeu. Pour réussir ce puzzle, tu devras modifier ton droïde et régler sa vitesse."
+  "failedChangeSettingSettings": "Fais ton propre jeu. Pour réussir ce puzzle, tu devras modifier ton droïde et régler sa vitesse.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }

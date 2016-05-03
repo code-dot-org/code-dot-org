@@ -3,7 +3,7 @@ title: CSP Facilitator Program
 nav: educate_nav
 ---
 # Become a Computer Science Principles Facilitator
-**2016 Application Update: The application process closed March 15th. We are reviewing applications and accepting facilitators on a rolling basis through April 22nd. We will update everyone of their acceptance status by April 22nd.**
+**2016 Application Update: The application process closed March 15th. We are reviewing applications and accepting facilitators on a rolling basis through April 29nd. We will update everyone of their acceptance status by April 29nd.**
 
 Code.org is looking to partner with experienced high school or college-level computer science educators to deliver multiple in-person workshops to local high school teachers teaching our year-long [Computer Science Principles](https://code.org/educate/csp) course. Facilitators apply and are accepted to a two-year train-the-trainer program.
 

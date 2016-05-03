@@ -224,8 +224,15 @@ div#visualizationResizeBar {
   margin: 0 auto;
   padding: 20px 0;
 
+  background-size: initial;
+
   #playSpaceHeader, #gameButtons {
     display: none;
+  }
+
+  #phoneFrameScreen {
+    width: 320px;
+    height: 480px;
   }
 
   #visualization {

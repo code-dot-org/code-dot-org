@@ -14,7 +14,7 @@ if (process.env.NODE_ENV !== "production") {
  * @param {!function} reducer
  * @return {Store} Configured Redux store, ready for use.
  */
-module.exports = function createStore(reducer) {
+module.exports.createStore = function (reducer) {
 
   // You have to manually enable debugging here, both to keep the logger out
   // of production bundles, and because it causes a lot of console noise and
@@ -39,4 +39,18 @@ module.exports = function createStore(reducer) {
   }
 
   return redux.createStore(reducer, redux.applyMiddleware(reduxThunk));
+};
+
+/**
+ * Create a non-functioning redux store that allows us to always call getState
+ * and dispatch as no-ops.
+ */
+module.exports.createFakeStore = function () {
+  return {
+    getState: function () {
+      return {};
+    },
+    dispatch: function () {
+    }
+  };
 };

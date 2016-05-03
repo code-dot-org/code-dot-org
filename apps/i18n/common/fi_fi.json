@@ -233,5 +233,9 @@
   "watchVideo": "Katso video",
   "when": "kun",
   "whenRun": "suoritettaessa",
-  "workspaceHeaderShort": "Työtila: "
+  "workspaceHeaderShort": "Työtila: ",
+  "builtOnCodeStudio": "Built on Code Studio",
+  "copyright": "Copyright",
+  "privacyPolicy": "Privacy Policy",
+  "reportAbuse": "Report Abuse"
 }

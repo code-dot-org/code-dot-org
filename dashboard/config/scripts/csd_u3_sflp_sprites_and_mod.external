@@ -2,7 +2,7 @@ name 'CSD-U3-SFLP Sprites and Mod'
 href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
-## Unit 3: Lesson 05 - Sprites and Mod
+## Unit 3: Lesson 05 - Sprites and Properties
 
 # Background
 
@@ -16,7 +16,29 @@ Blah Blah
 
 # Vocab
 
-* blah blah
+* Sprite
+* Object
+* Property
+* Rotate
+
+# Commands 
+
+### Sprites : 
+|Command| Meaning| Example | Documentation |
+|---|---| --- | --- |
+|createSprite(x, y, width, height)|Creates a new rectangle sprite.|`var square = createSprite(200,300, 40, 40);`  | link |
+|sprite.shapeColor| Property for the color of rectangle sprites|`sprite.shapeColor = color(230, 140, 93);`  | link |
+|sprite.x| Property for x position of sprite| `sprite.x = randomNumber(0,400);` | link |
+|sprite.y| Property for y position of sprite| `sprite.y = 200;` | link |
+|sprite.width| Property for width of sprite| `sprite.width = randomNumber(0,100);` | link |
+|sprite.height|Property for height of sprite| `sprite.height = 30;`  | link |
+|sprite.rotation|Property for angle of rotation of sprite in degrees| `sprite.roation = randomNumber(0,360);` | link |
+
+### Input : 
+|Command| Meaning| Example | Documentation |
+|---|---| --- | --- |
+|mouseX|Gives the x position of the mouse|`sprite.x = mouseX;`  | link |
+|mouseY|Gives the y position of the mouse|`sprite.y = mouseY;` | link |
 
 # Resources
 * Activity Guide: <a href="https://drive.google.com/open?id=1_Dkh33G7NTrnlAR0kD8UJZ9A2xFO_ICIJeDrxm-S6e4">Simple Drawings in Game Lab</a>

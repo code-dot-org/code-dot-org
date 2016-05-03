@@ -28,6 +28,9 @@ class Gamelab < Blockly
   serialized_attrs %w(
     free_play
     text_mode_at_start
+    palette_category_at_start
+    show_d_pad
+    soft_buttons
     submittable
     data_properties
     hide_view_data_button
@@ -39,6 +42,11 @@ class Gamelab < Blockly
     ['gamelab']
   end
 
+  # List of possible palette categories
+  def self.palette_categories
+    %w(gamelab sprites groups input control math variables functions)
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(level_params.merge(
         user: params[:user],
@@ -46,6 +54,7 @@ class Gamelab < Blockly
         level_num: 'custom',
         properties: {
           code_functions: JSON.parse(palette),
+          show_d_pad: true,
           edit_code: true
         }
     ))
@@ -113,7 +122,7 @@ class Gamelab < Blockly
         "collide": null,
         "displace": null,
         "overlap": null,
-        "changeAnimation": null,
+        "setAnimation": null,
         "setCollider": null,
         "setColor": null,
         "setVelocity": null,

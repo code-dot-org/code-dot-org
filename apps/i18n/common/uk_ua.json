@@ -233,5 +233,9 @@
   "watchVideo": "Переглянути відео",
   "when": "коли",
   "whenRun": "коли гра починається",
-  "workspaceHeaderShort": "Робоча область: "
+  "workspaceHeaderShort": "Робоча область: ",
+  "builtOnCodeStudio": "Built on Code Studio",
+  "copyright": "Copyright",
+  "privacyPolicy": "Privacy Policy",
+  "reportAbuse": "Report Abuse"
 }

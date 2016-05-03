@@ -1,0 +1,63 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-21T19:06:32.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "noStroke": null,
+      "arc": null,
+      "ellipse": null,
+      "line": null,
+      "point": null,
+      "rect": null,
+      "triangle": null,
+      "text": null,
+      "textAlign": null,
+      "textSize": null,
+      "background": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "randomNumber_min_max": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Extend this project to create your own random art visualization with variables.",
+    "markdown_instructions": "# Keep going!\r\n\r\n**Keep using the patterns we just explored to build your own visualization**\r\n\r\n# Do This\r\n\r\n* Extend your project to create a **personal randomized piece of art**\r\n* Some techniques you might try:\r\n\t* Use **new shapes** like `rect`, `regularPolygon`, or `line`\r\n    * Use **variables in unexpected ways**, (e.g. `red` also controls the size of your ellipse)\r\n    * Create **new variables** to control new parts of your program\r\n    * Pick **new ranges** for your random values\r\n    * Switch which variables are assigned values **inside or outside the draw loop**",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

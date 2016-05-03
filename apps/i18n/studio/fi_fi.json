@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "Tarvitset 20 hiiridroidia. Käytä komentoa \"Lisää Hiiridroidi\" tapahtuman \"Kerättäessä Hiiridroidi\" sisällä ja lisää sen avulla vähintään kaksi uutta hiiridroidia aina kun keräät niistä yhden.",
   "failedMultiplyCharactersTimeoutGotSome": "Onnittelut! Lisäsit koodia luodaksesi hiiridroideja. Nyt voit siirtyä seuraavaan tehtävään tai kokeilla napata uudet 20 hiiridroidia. Voit helpottaa tehtävää lisäämällä niitä enemmän. (Pidä nuolinäppäimiä tai ruudun nappeja pohjassa liikuaksesi nopeammin.)",
   "failedChangeSettingTimeout": "Nappaa kolme Kapinallispilottia siirtyäksesi eteenpäin.",
-  "failedChangeSettingSettings": "Tee oma peli. Läpäistäksesi tehtävän, sinun täytyy muuttaa sekä droidiasi että sen nopeutta."
+  "failedChangeSettingSettings": "Tee oma peli. Läpäistäksesi tehtävän, sinun täytyy muuttaa sekä droidiasi että sen nopeutta.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }

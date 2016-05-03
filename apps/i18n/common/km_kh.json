@@ -233,5 +233,9 @@
   "watchVideo": "មើល​វីដេអូ",
   "when": "នៅ​ពេល",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "builtOnCodeStudio": "Built on Code Studio",
+  "copyright": "Copyright",
+  "privacyPolicy": "Privacy Policy",
+  "reportAbuse": "Report Abuse"
 }

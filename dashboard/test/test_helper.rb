@@ -170,6 +170,19 @@ class ActiveSupport::TestCase
   Found in #{a_name} but not #{b_name}: #{(a.keys - b.keys).join(', ')}
   Found in #{b_name} but not #{a_name}: #{(b.keys - a.keys).join(', ')})
   end
+
+  # Given a regular expression and a block, ensure that the block raises an
+  # exception with a message matching the regular expression.
+  def assert_raises_matching(matcher)
+    assert_raises do
+      begin
+        yield
+      rescue => err
+        assert_match matcher, err.to_s
+        raise err
+      end
+    end
+  end
 end
 
 # Helpers for all controller test cases
@@ -319,6 +332,21 @@ end
 # Mock storage_id to generate random IDs
 def storage_id(_)
   SecureRandom.hex
+end
+
+$stub_encrypted_channel_id = 'STUB_CHANNEL_ID-1234'
+def storage_encrypt_channel_id(_)
+  $stub_encrypted_channel_id
+end
+
+$stub_channel_owner = 33
+$stub_channel_id = 44
+# stubbing storage_decrypt is inappropriate access, but
+# allows storage_decrypt_channel_id to throw the right
+# errors if the input is malformed and keeps us from
+# having to access the Pegasus DB from Dashboard tests.
+def storage_decrypt(encrypted)
+  "#{$stub_channel_owner}:#{$stub_channel_id}"
 end
 
 # A fake slogger implementation that captures the records written to it.

@@ -21,6 +21,11 @@ var logToCloud = require('../logToCloud');
 
 var OPTIONAL = true;
 
+// For proxying non-https xhr requests
+var XHR_PROXY_PATH = '//' + location.host + '/xhr';
+
+var ICON_PREFIX_REGEX = require('./constants').ICON_PREFIX_REGEX;
+
 var applabCommands = module.exports;
 
 /**
@@ -255,7 +260,12 @@ applabCommands.image = function (opts) {
   apiValidateType(opts, 'image', 'url', opts.src, 'string');
 
   var newImage = document.createElement("img");
-  newImage.src = assetPrefix.fixPath(opts.src);
+  if (ICON_PREFIX_REGEX.test(opts.src)) {
+    newImage.src = assetPrefix.renderIconToString(opts.src, newImage);
+    newImage.width = newImage.height = 200;
+  } else {
+    newImage.src = assetPrefix.fixPath(opts.src);
+  }
   newImage.setAttribute('data-canonical-image-url', opts.src);
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
@@ -1048,25 +1058,34 @@ applabCommands.playSound = function (opts) {
       return;
     }
 
+    // TODO: Re-enable forceHTML5 after Varnish 4.1 upgrade.
+    //       See Pivotal #108279582
+    //
+    //       HTML5 audio is not working for user-uploaded MP3s due to a bug in
+    //       Varnish 4.0 with certain forms of the Range request header.
+    //
+    //       By commenting this line out, we re-enable Web Audio API in App
+    //       Lab, which has the following effects:
+    //       GOOD: Web Audio should not use the Range header so it won't hit
+    //             the bug.
+    //       BAD: This disables cross-domain audio loading (hotlinking from an
+    //            App Lab app to an audio asset on another site) so it might
+    //            break some existing apps.  This should be less problematic
+    //            since we now allow students to upload and serve audio assets
+    //            from our domain via the Assets API now.
+    //
+    var forceHTML5 = false;
+    if (window.location.protocol === 'file:') {
+      // There is no way to make ajax requests from html on the filesystem.  So
+      // the only way to play sounds is using HTML5. This scenario happens when
+      // students export their apps and run them offline. At this point, their
+      // uploaded sound files are exported as well, which means varnish is not
+      // an issue.
+      forceHTML5 = true;
+    }
     studioApp.cdoSounds.playURL(url, {
       volume: 1.0,
-      // TODO: Re-enable forceHTML5 after Varnish 4.1 upgrade.
-      //       See Pivotal #108279582
-      //
-      //       HTML5 audio is not working for user-uploaded MP3s due to a bug in
-      //       Varnish 4.0 with certain forms of the Range request header.
-      //
-      //       By commenting this line out, we re-enable Web Audio API in App
-      //       Lab, which has the following effects:
-      //       GOOD: Web Audio should not use the Range header so it won't hit
-      //             the bug.
-      //       BAD: This disables cross-domain audio loading (hotlinking from an
-      //            App Lab app to an audio asset on another site) so it might
-      //            break some existing apps.  This should be less problematic
-      //            since we now allow students to upload and serve audio assets
-      //            from our domain via the Assets API now.
-      //
-      // forceHTML5: true,
+      forceHTML5: forceHTML5,
       allowHTML5Mobile: true
     });
   }
@@ -1403,7 +1422,14 @@ applabCommands.startWebRequest = function (opts) {
   logWebRequest(opts.url);
   var req = new XMLHttpRequest();
   req.onreadystatechange = applabCommands.onHttpRequestEvent.bind(req, opts);
-  req.open('GET', opts.url, true);
+  if (!Applab.channelId) {
+    // In the unlikely event that the rest of App Lab hasn't broken in the absence
+    // of a channel id, let the user know its out fault that startWebRequest is failing.
+    throw new Error('Internal error: A channel id is required to execute startWebRequest.');
+  }
+  var url = XHR_PROXY_PATH + '?u=' + encodeURIComponent(opts.url) +
+      '&c=' + encodeURIComponent(Applab.channelId);
+  req.open('GET', url, true);
   req.send();
 };
 

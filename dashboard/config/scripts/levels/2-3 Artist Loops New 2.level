@@ -44,11 +44,11 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="draw_move_by_constant">
+        <block type="draw_move_by_constant" deletable="false">
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
           <next>
-            <block type="draw_turn_by_constant_dropdown">
+            <block type="draw_turn_by_constant_dropdown" deletable="false">
               <title name="DIR">turnRight</title>
               <title name="VALUE" config="45,60,90,120,180">90</title>
             </block>
@@ -61,14 +61,6 @@
         <block type="draw_move_by_constant">
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
         </block>
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
@@ -91,13 +83,13 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_repeat">
           <title name="TIMES">4</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
@@ -105,11 +97,11 @@
             <block type="controls_repeat">
               <title name="TIMES">4</title>
               <statement name="DO">
-                <block type="draw_move_by_constant">
+                <block type="draw_move_by_constant" deletable="false">
                   <title name="DIR">moveForward</title>
                   <title name="VALUE">100</title>
                   <next>
-                    <block type="draw_turn_by_constant_dropdown">
+                    <block type="draw_turn_by_constant_dropdown" deletable="false">
                       <title name="DIR">turnRight</title>
                       <title name="VALUE" config="45,60,90,120,180">90</title>
                     </block>

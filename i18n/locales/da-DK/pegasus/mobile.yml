@@ -500,6 +500,11 @@ da-DK:
   dashboard_action_remove_confirm: Fjern?
   dashboard_action_done: Udfør
   dashboard_action_required: krævet
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Lærerens Startside
   dashboard_navigation_section_student_progress: Elevernes konti og fremskridt
   dashboard_navigation_section_teacher_progress: Dine kurser
@@ -517,6 +522,17 @@ da-DK:
   dashboard_navigation_view_stats: Vis statistikker
   dashboard_navigation_section: 'Hold: %{section_name}'
   dashboard_navigation_student: 'Elev: %{student_name}'
+  dashboard_progress_not_started: ikke startet
+  dashboard_progress_in_progress: i gang
+  dashboard_progress_not_completed: ikke afsluttet
+  dashboard_progress_completed_too_many_blocks: afsluttet, for mange blokke
+  dashboard_progress_completed_perfect: Afsluttet, perfekt
+  dashboard_progress_furthest_level_attempted: længst opnåede niveau
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nyt hold
   dashboard_sections_jumbotron_instruction: Opret nye hold og tilføj elever. Hold hjælper dig til at organisere eleverne i mindre grupper, så du kan følge deres fremskridt og administrere deres konti.
   dashboard_sections_table_section: Hold
@@ -532,6 +548,19 @@ da-DK:
   dashboard_sections_secret_none: 'Hvis du vil have dine elever til at styre deres egne konti, herunder at vælge deres egne adgangskoder, så vælg typen <b>ingen</b>.'
   dashboard_sections_print_secrets: Du kan derefter udskrive en ark af kort der indeholder kontooplysninger til at blive distribueret til eleverne individuelt.
   dashboard_sections_switch_section: 'Skift hold:'
+  dashboard_sections_close: Luk
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Tilføj elev
   dashboard_students_add_students: Tilføj flere elever
   dashboard_students_add_multiple: 'Skriv eller indsæt navnene på dine elever, en per linje:'
@@ -598,13 +627,6 @@ da-DK:
   dashboard_login_picture: Billede
   dashboard_login_none: E-mail
   dashboard_new_password: Ny adgangskode
-  dashboard_progress_not_started: ikke startet
-  dashboard_progress_in_progress: i gang
-  dashboard_progress_not_completed: ikke afsluttet
-  dashboard_progress_completed_too_many_blocks: afsluttet, for mange blokke
-  dashboard_progress_completed_perfect: Afsluttet, perfekt
-  dashboard_progress_furthest_level_attempted: længst opnåede niveau
-  dashboard_progress_submitted: submitted
   dashboard_stage: trin
   dashboard_puzzle: Opgave
   dashboard_question: Spørgsmål
@@ -639,11 +661,8 @@ da-DK:
   dashboard_faq_k5: K-5 Ofte stillede spørgsmål
   dashboard_announcements: Meddelelser
   dashboard_announce_view_all: Vis alle
-  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
-  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
+  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
   dashboard_announce_button_text: Lær mere
-  dashboard_announce_hoc: '<b>23 November 2015</b> - Ønsker du en frivillig, som er dedikeret i datalogi uddannelse, til at hjælpe dig under din Hour of Code? Over 7.000 frivillige ønsker at inspirere dine elever ved at besøge dit klasseværelse eller videochatte. Tjek kortet over frivillige for at kontakte frivillige i dit område.'
-  dashboard_announce_playlab: '<b>4. December 2015</b> - The Hour of Code er her! Prøv 50 tutorials for alle aldre, og enhver enhed. Nyt i denne uge: Kod dine egne historier og spil i nye Spil-Labs, Ice Age og Gumball.'
   code_hoc_coming: 'Hour of Code er her - 8.-14. december!'
   code_sign_up: Tilmeld dig til at deltage i CS Education Week
   learn_more: Lær mere

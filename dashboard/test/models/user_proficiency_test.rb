@@ -27,6 +27,20 @@ class UserProficiencyTest < ActiveSupport::TestCase
       'sequencing', UserProficiency::MAXIMUM_CONCEPT_DIFFICULTY + 1)
   end
 
+  test 'increment_leveL_count' do
+    # The factory creates user_proficiency with sequencing_d2_count = 0
+    # and repeat_loops_d2_count = 2;
+    user_proficiency = create(:user_proficiency)
+
+    user_proficiency.increment_level_count('sequencing', 2)
+    assert_equal 1, user_proficiency.sequencing_d2_count
+
+    user_proficiency.increment_level_count('repeat_loops', 2)
+    assert_equal 3, user_proficiency.repeat_loops_d2_count
+    user_proficiency.increment_level_count('repeat_loops', 2)
+    assert_equal 4, user_proficiency.repeat_loops_d2_count
+  end
+
   test 'basic_proficiency' do
     # Proficiency in two concepts is insufficient for basic proficiency.
     assert !@proficiency.basic_proficiency?

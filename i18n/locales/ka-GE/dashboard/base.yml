@@ -25,7 +25,10 @@ ka:
   welcome_back: 'კარგია, რომ დაბრუნდით, %{name}'
   submit: გაგზავნა
   unsubmit: ჩაბარების გაუქმება
+  previous_page: Previous page
   next_page: Next page
+  cancel: გაუქმება
+  okay: კარგი
   heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
@@ -451,6 +454,11 @@ ka:
     minecraft:
       title: მაინკრაფტი
       body: შეისწავლეთ მაინკრაფტის სამყარო კოდით.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: მოსწავლეებმა ეს კოდით დახატეს!
     students_made_these_with_code: მოსწავლეებმა ეს კოდის მეშვეობით შექმნეს!
@@ -494,6 +502,12 @@ ka:
     wrong_body: მადლობა პასუხისთვის
     correct_title: მადლობა
     correct_body: მადლობა პასუხისთვის
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: არასწორი გადაწყვეტაა
     wrong_body: პასუხი, რომელიც თქვენ შეიყვანეთ, არასწორია. სცადეთ თავიდან!
