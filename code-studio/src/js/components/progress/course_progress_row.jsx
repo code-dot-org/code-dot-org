@@ -11,6 +11,7 @@ var CourseProgressRow = React.createClass({
     stage: React.PropTypes.shape({
       name: React.PropTypes.string,
       lesson_plan_html_url: React.PropTypes.string,
+      flex_category: React.PropTypes.string,
       levels: STAGE_PROGRESS_TYPE
     })
   },
