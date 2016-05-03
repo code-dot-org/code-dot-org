@@ -3,6 +3,7 @@
 
 var constants = require('../constants');
 var elementUtils = require('../applab/designElements/elementUtils');
+var gridUtils = require('../applab/gridUtils');
 var SVG_NS = constants.SVG_NS;
 
 var CROSSHAIR_MARGIN = 6;
@@ -28,7 +29,6 @@ var CrosshairOverlay = function () {
     y: 0,
     appWidth: 0,
     appHeight: 0,
-    isDragging: false,
     isInDesignMode: false
   };
 
@@ -37,6 +37,12 @@ var CrosshairOverlay = function () {
    * @private {String}
    */
   this.mouseoverApplabControlId_ = null;
+
+  /**
+   * Whether an element is being dragged.
+   * @private {boolean}
+   */
+  this.isDragging_ = false;
 };
 module.exports = CrosshairOverlay;
 
@@ -47,7 +53,6 @@ module.exports = CrosshairOverlay;
  * @param {number} nextProps.y
  * @param {number} nextProps.appWidth
  * @param {number} nextProps.appHeight
- * @param {boolean} nextProps.isDragging True if user is currently dragging a control
  */
 CrosshairOverlay.prototype.render = function (intoElement, nextProps) {
   // Create element if necessary
@@ -58,6 +63,19 @@ CrosshairOverlay.prototype.render = function (intoElement, nextProps) {
   // Put element in correct parent
   if (this.ownElement_.parentNode !== intoElement) {
     this.moveToParent_(intoElement);
+  }
+
+  // Modify passed props if we're in a 'dragging' mode.
+  var draggingElement = $(".ui-draggable-dragging");
+  this.isDragging_ = !!draggingElement.length;
+  if (this.isDragging_) {
+    // If we're dragging an element, use our util method to determine the right
+    // mouse pos (top left of the dragged element)
+    var point = gridUtils.scaledDropPoint(draggingElement);
+    nextProps = $.extend({}, nextProps, {
+      x: point.left,
+      y: point.top
+    });
   }
 
   // Record any new/updated properties
@@ -78,7 +96,7 @@ CrosshairOverlay.prototype.render = function (intoElement, nextProps) {
 
   // If we're dragging an element, instead put the text above and right of the
   // cross hair, while making sure it doesnt go past the top of the overlay
-  if (this.props_.isDragging) {
+  if (this.isDragging_) {
     rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT - ELEMENT_ID_Y_OFFSET;
     rectY = Math.max(0, rectY);
   }

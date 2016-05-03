@@ -3,7 +3,6 @@
 
 var constants = require('../constants');
 var CrosshairOverlay = require('./CrosshairOverlay');
-var gridUtils = require('../applab/gridUtils');
 var SVG_NS = constants.SVG_NS;
 
 /**
@@ -70,7 +69,6 @@ VisualizationOverlay.prototype.render = function (intoElement, nextProps) {
       y: this.mousePos_.y,
       appWidth: this.appSize_.x,
       appHeight: this.appSize_.y,
-      isDragging: $(".ui-draggable-dragging").length > 0,
       isInDesignMode: this.props_.isInDesignMode
     });
   } else {
@@ -114,16 +112,7 @@ VisualizationOverlay.prototype.onSvgMouseMove_ = function (event) {
 
   this.mousePos_.x = event.clientX;
   this.mousePos_.y = event.clientY;
-  var draggingElement = $(".ui-draggable-dragging");
-  if (draggingElement.length) {
-    // If we're dragging an element, use our util method to determine the right
-    // mouse pos (top left of the dragged element)
-    var point = gridUtils.scaledDropPoint(draggingElement);
-    this.mousePos_.x = point.left;
-    this.mousePos_.y = point.top;
-  } else {
-    this.mousePos_ = this.mousePos_.matrixTransform(this.screenSpaceToAppSpaceTransform_);
-  }
+  this.mousePos_ = this.mousePos_.matrixTransform(this.screenSpaceToAppSpaceTransform_);
 
   if (this.shouldShowCrosshair_()) {
     this.crosshairOverlay_.onSvgMouseMove(event);
