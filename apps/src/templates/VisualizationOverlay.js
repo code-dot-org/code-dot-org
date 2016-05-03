@@ -7,17 +7,17 @@ var SVG_NS = constants.SVG_NS;
 
 /**
  * Creates and controls an SVG overlay on the app visualization.
+ * @param {!CrosshairOverlay} crosshairOverlay
  * @constructor
  */
-var VisualizationOverlay = function () {
+var VisualizationOverlay = function (crosshairOverlay) {
   /** @private {SVGGElement} */
   this.ownElement_ = null;
 
   /** @private {Object} */
   this.props_ = {
     isCrosshairAllowed: false,
-    scale: 1,
-    isInDesignMode: false
+    scale: 1
   };
 
   /** @private {function} */
@@ -33,7 +33,7 @@ var VisualizationOverlay = function () {
   this.screenSpaceToAppSpaceTransform_ = null;
 
   /** @private {CrosshairOverlay} */
-  this.crosshairOverlay_ = new CrosshairOverlay();
+  this.crosshairOverlay_ = crosshairOverlay;
 };
 module.exports = VisualizationOverlay;
 
@@ -42,7 +42,6 @@ module.exports = VisualizationOverlay;
  * @param {Object} nextProps
  * @param {boolean} nextProps.isCrosshairAllowed
  * @param {number} nextProps.scale
- * @param {boolean} nextProps.isInDesignMode
  */
 VisualizationOverlay.prototype.render = function (intoElement, nextProps) {
   // Create element if necessary
@@ -68,8 +67,7 @@ VisualizationOverlay.prototype.render = function (intoElement, nextProps) {
       x: this.mousePos_.x,
       y: this.mousePos_.y,
       appWidth: this.appSize_.x,
-      appHeight: this.appSize_.y,
-      isInDesignMode: this.props_.isInDesignMode
+      appHeight: this.appSize_.y
     });
   } else {
     this.crosshairOverlay_.destroy();

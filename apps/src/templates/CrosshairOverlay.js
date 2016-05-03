@@ -28,8 +28,7 @@ var CrosshairOverlay = function () {
     x: 0,
     y: 0,
     appWidth: 0,
-    appHeight: 0,
-    isInDesignMode: false
+    appHeight: 0
   };
 
   /**
@@ -43,6 +42,12 @@ var CrosshairOverlay = function () {
    * @private {boolean}
    */
   this.isDragging_ = false;
+
+  /**
+   * Whether we're currently in design mode.
+   * @private {boolean}
+   */
+  this.isInDesignMode_ = false;
 };
 module.exports = CrosshairOverlay;
 
@@ -247,7 +252,7 @@ CrosshairOverlay.prototype.getMouseoverApplabControlId_ = function (eventTarget)
     }
 
     // If we're in design mode, get the element id without the prefix
-    if (this.props_.isInDesignMode) {
+    if (this.isInDesignMode_) {
       return elementUtils.getId(controlElement);
     }
 
@@ -288,4 +293,12 @@ CrosshairOverlay.getAssociatedControl_ = function (resizeHandleElement) {
   }
 
   return null;
+};
+
+/**
+ * Set whether we're currently in design mode.
+ * @param {boolean} inDesignMode
+ */
+CrosshairOverlay.setInDesignMode = function (inDesignMode) {
+  this.isInDesignMode_ = inDesignMode;
 };
