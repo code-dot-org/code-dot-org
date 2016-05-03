@@ -70,6 +70,12 @@ exec(command, function (err, stdout, stderr) {
     globs = ['./test/util/mochaFastMode.js'].concat(globs);
   }
 
+  if (process.env.mocha_entry) {
+    console.log('Want to run these tests directly? Type:');
+    console.log('./node_modules/.bin/mochify --extension .jsx --transform ejsify',
+                globs.join(' '));
+  }
+
   mochify(globs.join(' '), {
     grep: grep,
     debug: process.env.mocha_debug,

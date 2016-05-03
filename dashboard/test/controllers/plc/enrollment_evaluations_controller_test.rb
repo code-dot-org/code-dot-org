@@ -113,7 +113,7 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
 
   private
   def do_expected_answers_yield_expected_module_enrollments(answers, expected_module_enrollments)
-    post :submit_evaluation, unit_assignment_id: @unit_assignment.id, answer_module_list: answers.map(&:plc_learning_module_id).compact!.to_s.gsub(' ', '')[1..-2]
+    post :submit_evaluation, unit_assignment_id: @unit_assignment.id, answer_module_list: answers.map(&:plc_learning_module_id).compact.to_s.gsub(' ', '')[1..-2]
     assert_redirected_to controller: :enrollment_evaluations, action: :preview_assignments, enrolled_modules: expected_module_enrollments.map(&:id)
 
     post :confirm_assignments, unit_assignment_id: @unit_assignment.id, learning_module_ids: expected_module_enrollments.map(&:id)
