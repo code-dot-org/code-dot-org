@@ -2,6 +2,7 @@
 'use strict';
 
 var constants = require('../constants');
+var elementUtils = require('../applab/designElements/elementUtils');
 var SVG_NS = constants.SVG_NS;
 
 var CROSSHAIR_MARGIN = 6;
@@ -28,9 +29,14 @@ var CrosshairOverlay = function () {
     appWidth: 0,
     appHeight: 0,
     isDragging: false,
-    mouseoverApplabControlId: null
+    isInDesignMode: false
   };
 
+  /**
+   * Element id of control user's hovering over
+   * @private {String}
+   */
+  this.mouseoverApplabControlId_ = null;
 };
 module.exports = CrosshairOverlay;
 
@@ -42,7 +48,6 @@ module.exports = CrosshairOverlay;
  * @param {number} nextProps.appWidth
  * @param {number} nextProps.appHeight
  * @param {boolean} nextProps.isDragging True if user is currently dragging a control
- * @param {string} nextProps.mouseoverApplabControlId Element id of control user's hovering over
  */
 CrosshairOverlay.prototype.render = function (intoElement, nextProps) {
   // Create element if necessary
@@ -97,7 +102,7 @@ CrosshairOverlay.prototype.render = function (intoElement, nextProps) {
   this.text_.textContent = this.getCoordinateText();
 
   // If user is hovering over a control, show the element's id as a second tooltip
-  if (this.props_.mouseoverApplabControlId) {
+  if (this.mouseoverApplabControlId_) {
     var elementIdRectX = rectX;
     var elementIdRectY = rectY + ELEMENT_ID_Y_OFFSET;
 
@@ -169,7 +174,7 @@ CrosshairOverlay.prototype.getCoordinateText = function () {
  */
 CrosshairOverlay.prototype.getElementIdText_ = function () {
   return "id: " +
-      CrosshairOverlay.ellipsify(this.props_.mouseoverApplabControlId, ELEMENT_ID_TEXT_MAX_CHAR);
+      CrosshairOverlay.ellipsify(this.mouseoverApplabControlId_, ELEMENT_ID_TEXT_MAX_CHAR);
 };
 
 
@@ -196,4 +201,73 @@ CrosshairOverlay.prototype.createTextElement_ = function () {
   this.ownElement_.appendChild(textElement);
 
   return textElement;
+};
+
+CrosshairOverlay.prototype.onSvgMouseMove = function (event) {
+  this.mouseoverApplabControlId_ = this.getMouseoverApplabControlId_(event.target);
+};
+
+/**
+ * Gets the element id of the Applab UI control user is hovering over, if any.
+ * If the user is in design mode, we strip the element id prefix.
+ * @param {EventTarget} eventTarget The mouseover event target
+ * @returns {string} id of the Applab UI control the mouse is over. Returns null if none exist.
+ * @private
+ */
+CrosshairOverlay.prototype.getMouseoverApplabControlId_ = function (eventTarget) {
+
+  // Check that the element is a child of a screen
+  if (eventTarget && $(eventTarget).parents('div.screen').length > 0) {
+    var controlElement = eventTarget;
+
+    // Check to see the mouseover target is a resize handle.
+    // If so, grab the id of associated control instead of the resize handle itself.
+    // We need to do this because for very small controls, the resize handle completely
+    // covers the control itself, making it impossible to show the id tooltip
+    if (CrosshairOverlay.isResizeHandle_(controlElement)) {
+      controlElement = CrosshairOverlay.getAssociatedControl_(controlElement);
+    }
+
+    // If we're in design mode, get the element id without the prefix
+    if (this.props_.isInDesignMode) {
+      return elementUtils.getId(controlElement);
+    }
+
+    return controlElement.id;
+  }
+
+  return null;
+};
+
+/**
+ * Determines whether an element is a resize handle. The criteria we're using here are:
+ * 1) The element has a screen element as its ancestor
+ * AND
+ * 2) It has the 'ui-resizable-handle' class
+ * @param {HTMLElement} element
+ * @returns {boolean} True if element is a resize handle
+ * @private
+ * @static
+ */
+CrosshairOverlay.isResizeHandle_ = function (element) {
+  return $(element).parents('div.screen').length > 0 &&
+      $(element).hasClass('ui-resizable-handle');
+};
+
+/**
+ * Given a resize handle element, find the actual ui control it's associated with
+ * @param {HTMLElement} resizeHandleElement
+ * @returns {HTMLElement} The UI control element associated with the resize
+ *          handle, or null if none exists.
+ * @private
+ * @static
+ */
+CrosshairOverlay.getAssociatedControl_ = function (resizeHandleElement) {
+  var siblingControl = $(resizeHandleElement).siblings().not('.ui-resizable-handle');
+
+  if (siblingControl.length > 0 && siblingControl[0].id) {
+    return siblingControl[0];
+  }
+
+  return null;
 };
