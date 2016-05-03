@@ -1,9 +1,6 @@
 # A migration that transfers the net promoter score survey results in the users
 # table to the survey_results table. Does NOT remove the data from the users
 # table.
-
-require 'active_record'
-
 class MigrateNetPromoterScore2015Data < ActiveRecord::Migration
   def change
     reversible do |direction|
