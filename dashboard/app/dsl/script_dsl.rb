@@ -7,6 +7,7 @@ class ScriptDSL < BaseDSL
     @description = nil
     @description_audience = nil
     @stage = nil
+    @stage_flex_category = nil
     @concepts = []
     @skin = nil
     @levels = []
@@ -38,9 +39,10 @@ class ScriptDSL < BaseDSL
 
   string :wrapup_video
 
-  def stage(name)
+  def stage(name, flex = nil)
     @stages << {stage: @stage, levels: @levels} if @stage
     @stage = name
+    @stage_flex_category = flex
     @levels = []
     @concepts = []
     @skin = nil
@@ -82,6 +84,7 @@ class ScriptDSL < BaseDSL
     @levels << {
       :name => name,
       :stage => @stage,
+      :stage_flex_category => @stage_flex_category,
       :skin => @skin,
       :concepts => @concepts.join(','),
       :level_concept_difficulty => @level_concept_difficulty || {},

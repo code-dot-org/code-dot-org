@@ -412,6 +412,7 @@ class Script < ActiveRecord::Base
       row_data = row.dup
       stage_name = row.delete(:stage)
       assessment = row.delete(:assessment)
+      stage_flex_category = row.delete(:stage_flex_category)
 
       key = row.delete(:name)
 
@@ -485,6 +486,10 @@ class Script < ActiveRecord::Base
             name: stage_name,
             script: script
           )
+
+        stage.assign_attributes(flex_category: stage_flex_category)
+        stage.save! if stage.changed?
+
         script_level_attributes[:stage_id] = stage.id
         script_level_attributes[:position] = (script_level_position[stage.id] += 1)
         script_level.reload
