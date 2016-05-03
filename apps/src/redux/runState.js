@@ -11,15 +11,13 @@ var initialState = {
   isDebugging: false
 };
 
-// TODO - add a simple test
-
 module.exports.default = function (state, action) {
   state = state || initialState;
 
   if (action.type === SET_IS_RUNNING) {
     return _.assign({}, {
       isRunning: action.isRunning,
-      isDebugging: action.isRunning ? state.isDebugging : false
+      isDebugging: action.isRunning ? false : state.isDebugging
     });
   }
 
@@ -42,6 +40,11 @@ module.exports.setIsRunning = function (isRunning) {
     isRunning: isRunning
   };
 };
+
+/**
+ * @param {boolean} isDebugging - Whether the app is currently paused in the
+ *   debugger
+ */
 
 module.exports.setIsDebugging = function (isDebugging) {
   return {
