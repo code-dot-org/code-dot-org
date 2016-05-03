@@ -11,9 +11,9 @@
 #
 
 class Plc::WrittenAssignmentTask < Plc::Task
-  serialized_attrs %w(assignment_description)
+  serialized_attrs %w(level_id)
 
-  def self.task_assignment_type
-    Plc::WrittenEnrollmentTaskAssignment
+  def level
+    Level.find(level_id) if level_id
   end
 end

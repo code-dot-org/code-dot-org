@@ -4,6 +4,13 @@ var connect = require('react-redux').connect;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 var msg = require('../locale');
 var ToggleGroup = require('../templates/ToggleGroup');
+var styleConstants = require('../styleConstants');
+
+var styles = {
+  main: {
+    height: styleConstants["workspace-headers-height"],
+  }
+};
 
 /**
  * Controls above the visualization header, including the code/animation toggle.
@@ -19,14 +26,14 @@ var GameLabVisualizationHeader = React.createClass({
 
   render: function () {
     return (
-      <div className="workspace-header-height">
+      <div style={styles.main}>
         <ToggleGroup
             selected={this.props.interfaceMode}
             onChange={this.props.onInterfaceModeChange}>
           <button value={GameLabInterfaceMode.CODE}>
             {msg.codeMode()}
           </button>
-          <button value={GameLabInterfaceMode.ANIMATION}>
+          <button value={GameLabInterfaceMode.ANIMATION} id="animationMode">
             {msg.animationMode()}
           </button>
         </ToggleGroup>

@@ -3,7 +3,11 @@
 
 %p
   %strong Name:
-  = @learning_module.name_with_required_tag
+  = @learning_module.name
+
+%p
+  %strong Learning module type:
+  = @learning_module.module_type.try(:titleize)
 
 -@task_groupings.each do |task_grouping|
   .outlined_section
