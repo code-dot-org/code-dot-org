@@ -1,7 +1,7 @@
 /* global React, dashboard */
 
 var STAGE_PROGRESS_TYPE = require('./stage_progress_type');
-var StageProgress = require('./stage_progress');
+var CourseProgressRow = require('./course_progress_row');
 
 /**
  * Stage progress component used in level header and course overview.
@@ -17,19 +17,7 @@ var CourseProgress = React.createClass({
 
   render: function () {
     var rows = this.props.stages.map(function (stage) {
-      return (
-        <div className='game-group' key={stage.name}>
-          <div className='stage'>
-            {stage.title}
-            <div className='stage-lesson-plan-link' style={{display: 'none'}}>
-              <a target='_blank' href={stage.lesson_plan_html_url}>
-                {dashboard.i18n.t('view_lesson_plan')}
-              </a>
-            </div>
-          </div>
-          <StageProgress levels={stage.levels} largeDots={true} />
-        </div>
-      );
+      return <CourseProgressRow stage={stage} key={stage.name}/>;
     });
 
     return (
