@@ -11,7 +11,6 @@ var errorDialogStack = require('./errorDialogStackModule').default;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 var instructions = require('../redux/instructions');
 var levelProperties = require('../redux/levelProperties');
-var isRunning = require('../redux/isRunning');
 var utils = require('../utils');
 
 function interfaceMode(state, action) {
@@ -78,8 +77,7 @@ var gamelabReducer = combineReducers({
   errorDialogStack: errorDialogStack,
   interfaceMode: interfaceMode,
   level: levelProperties.default,
-  instructions: instructions.default,
-  isRunning: isRunning.default
+  instructions: instructions.default
 });
 
 module.exports = { gamelabReducer: gamelabReducer };
