@@ -363,4 +363,28 @@ class ScriptTest < ActiveSupport::TestCase
 
     assert_equal 1, script.summarize[:stages].count
   end
+
+  test 'should generate PLC objects' do
+    script_file = File.join(self.class.fixture_path, 'test_plc.script')
+    scripts, custom_i18n = Script.setup([script_file])
+    I18n.backend.store_translations I18n.locale, custom_i18n['en']
+
+    script = scripts.first
+    script.save! # Need to trigger an update because i18n strings weren't loaded
+    assert script.professional_learning_course
+
+    unit = script.plc_course_unit
+    assert_equal 'PLC Test', unit.unit_name
+    assert_equal 'PLC test fixture script', unit.unit_description
+
+    lm = script.stages.first.plc_learning_module
+    assert_equal 'Sample Module', lm.name
+    assert_equal 1, unit.plc_learning_modules.count
+    assert_equal lm, unit.plc_learning_modules.first
+
+    task = script.script_levels.first.plc_task
+    assert_equal 'Level 1', task.name
+    assert_equal 1, lm.plc_tasks.count
+    assert_equal task, lm.plc_tasks.first
+  end
 end

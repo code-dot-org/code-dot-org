@@ -34,6 +34,7 @@ class ScriptDSL < BaseDSL
   boolean :student_of_admin_required
   boolean :trophies
   boolean :pd
+  boolean :professional_learning_course
 
   string :wrapup_video
 
@@ -47,7 +48,18 @@ class ScriptDSL < BaseDSL
 
   def parse_output
     stage(nil)
-    {id: @id, stages: @stages, hidden: @hidden, trophies: @trophies, wrapup_video: @wrapup_video, login_required: @login_required, admin_required: @admin_required, student_of_admin_required: @student_of_admin_required, pd: @pd}
+    {
+      id: @id,
+      stages: @stages,
+      hidden: @hidden,
+      trophies: @trophies,
+      wrapup_video: @wrapup_video,
+      login_required: @login_required,
+      admin_required: @admin_required,
+      pd: @pd,
+      student_of_admin_required: @student_of_admin_required,
+      professional_learning_course: @professional_learning_course
+    }
   end
 
   def concepts(*items)

@@ -9,13 +9,16 @@
 #  unit_order       :integer
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  script_id        :integer
 #
 # Indexes
 #
 #  index_plc_course_units_on_plc_course_id  (plc_course_id)
+#  index_plc_course_units_on_script_id      (script_id)
 #
 
 class Plc::CourseUnit < ActiveRecord::Base
+  belongs_to :script
   belongs_to :plc_course, class_name: '::Plc::Course'
   has_many :plc_learning_modules, class_name: '::Plc::LearningModule', foreign_key: 'plc_course_unit_id', dependent: :destroy
   has_many :plc_evaluation_questions, class_name: '::Plc::EvaluationQuestion', foreign_key: 'plc_course_unit_id', dependent: :destroy

@@ -32,13 +32,45 @@ class Script < ActiveRecord::Base
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
+  has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
   validates :name, presence: true, uniqueness: { case_sensitive: false}
 
   include SerializedProperties
 
-  serialized_attrs %w(pd admin_required student_of_admin_required)
+  after_save :generate_plc_objects
+
+  def generate_plc_objects
+    if professional_learning_course
+      course = Plc::Course.find_or_create_by! name: 'Default'
+      unit = Plc::CourseUnit.find_or_initialize_by(script_id: id)
+      unit.update!(
+        plc_course_id: course.id,
+        unit_name: I18n.t("data.script.name.#{name}.title"),
+        unit_description: I18n.t("data.script.name.#{name}.description")
+      )
+
+      stages.each do |stage|
+        lm = Plc::LearningModule.find_or_initialize_by(stage_id: stage.id)
+        lm.update!(
+          plc_course_unit_id: unit.id,
+          name: stage.name,
+          module_type: Plc::LearningModule::REQUIRED_MODULE,
+          plc_tasks: []
+        )
+
+        stage.script_levels.each do |sl|
+          task = Plc::Task.find_or_initialize_by(script_level_id: sl.id)
+          task.name = sl.level.name
+          task.save!
+          lm.plc_tasks << task
+        end
+      end
+    end
+  end
+
+  serialized_attrs %w(pd admin_required professional_learning_course student_of_admin_required)
 
   def Script.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
@@ -346,6 +378,7 @@ class Script < ActiveRecord::Base
           properties: {
                        pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
                        admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
+                       professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course], # default false
                        student_of_admin_required: script_data[:student_of_admin_required].nil? ? false : script_data[:student_of_admin_required], # default false
                       },
         }, stages.map{|stage| stage[:levels]}.flatten]
@@ -486,6 +519,8 @@ class Script < ActiveRecord::Base
 
     script.stages = script_stages
     script.reload.stages
+    script.generate_plc_objects
+
     script
   end
 
@@ -513,6 +548,7 @@ class Script < ActiveRecord::Base
           properties: {
                        pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
                        admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
+                       professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course], # default false
                        student_of_admin_required: script_data[:student_of_admin_required].nil? ? false : script_data[:student_of_admin_required], # default false
           }
         }, script_data[:stages].map { |stage| stage[:levels] }.flatten)
