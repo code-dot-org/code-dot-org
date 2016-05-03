@@ -64,19 +64,23 @@ var styles = {
 var PaneHeader = React.createClass({
   propTypes: {
     hasFocus: React.PropTypes.bool.isRequired,
-    readOnly: React.PropTypes.bool
+    readOnly: React.PropTypes.bool,
+    style: React.PropTypes.object
   },
 
   render: function () {
+    var props = this.props;
+
     // TODO purpleHeader style should possibly move into this module
     var style = [
+      props.style,
       commonStyles.purpleHeader,
-      !this.props.hasFocus && commonStyles.purpleHeaderUnfocused,
-      this.props.readOnly && commonStyles.purpleHeaderReadOnly,
+      !props.hasFocus && commonStyles.purpleHeaderUnfocused,
+      props.readOnly && commonStyles.purpleHeaderReadOnly,
     ];
 
     return (
-      <div {...this.props} style={style}/>
+      <div {...props} style={style}/>
     );
   }
 });

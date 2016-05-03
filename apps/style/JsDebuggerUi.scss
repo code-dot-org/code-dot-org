@@ -65,38 +65,6 @@ $debug-area-initial-height: 120px;
   bottom: $debug-area-initial-height;
 }
 
-#debug-area-header {
-  position: absolute;
-  top: $resize-bar-width;
-  left: 0;
-  right: 0;
-  text-align: center;
-
-  & > span {
-    line-height: $workspace-headers-height;
-  }
-
-  span {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  #show-hide-debug-icon {
-    position: absolute;
-    top: 0;
-    left: 8px;
-    margin: 0;
-    line-height: $workspace-headers-height;
-    font-size: 18px;
-
-    &:hover {
-      cursor: pointer;
-      color: white;
-    }
-  }
-}
-
 $debug-commands-column-width: 270px;
 $debug-console-min-column-width: 130px;
 $debug-watch-max-column-width: 150px;

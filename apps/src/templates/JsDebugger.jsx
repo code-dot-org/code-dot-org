@@ -7,6 +7,7 @@ var connect = require('react-redux').connect;
 
 var i18n = require('../locale');
 var commonStyles = require('../commonStyles');
+var styleConstants = require('../styleConstants');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var PaneHeader = require('./PaneHeader');
 var PaneSection = PaneHeader.PaneSection;
@@ -14,8 +15,33 @@ var PaneButton = PaneHeader.PaneButton;
 var experiments = require('../experiments');
 
 var styles = {
+  debugAreaHeader: {
+    position: 'absolute',
+    top: styleConstants['resize-bar-width'],
+    left: 0,
+    right: 0,
+    textAlign: 'center'
+  },
   noPadding: {
     padding: 0
+  },
+  noUserSelect: {
+    MozUserSelect: 'none',
+    WebkitUserSelect: 'none',
+    msUserSelect: 'none',
+    userSelect: 'none',
+  },
+  showHideIcon: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    margin: 0,
+    lineHeight: styleConstants['workspace-headers-height'] + 'px',
+    fontSize: 18,
+    ':hover': {
+      cursor: 'pointer',
+      color: 'white'
+    }
   }
 };
 
@@ -168,19 +194,32 @@ var JsDebugger = function (props) {
       <PaneHeader
           id="debug-area-header"
           hasFocus={hasFocus}
+          style={styles.debugAreaHeader}
       >
-        <span className="header-text">{i18n.debugConsoleHeader()}</span>
+        <span
+            style={styles.noUserSelect}
+            className="header-text">
+          {i18n.debugConsoleHeader()}
+        </span>
         <i id="show-hide-debug-icon" className="fa fa-chevron-circle-down"/>
         {props.debugButtons &&
         <PaneSection id="debug-commands-header">
           <i id="running-spinner" style={commonStyles.hidden} className="fa fa-spinner fa-spin"></i>
           <i id="paused-icon" style={commonStyles.hidden} className="fa fa-pause"></i>
-          <span className="header-text">{i18n.debugCommandsHeaderWhenOpen()}</span>
+          <span
+              style={styles.noUserSelect}
+              className="header-text">
+            {i18n.debugCommandsHeaderWhenOpen()}
+          </span>
         </PaneSection>
         }
         {props.debugWatch &&
         <PaneSection id="debug-watch-header">
-          <span className="header-text">{i18n.debugWatchHeader()}</span>
+          <span
+              style={styles.noUserSelect}
+              className="header-text">
+            {i18n.debugWatchHeader()}
+          </span>
         </PaneSection>
         }
         <PaneButton
@@ -188,6 +227,7 @@ var JsDebugger = function (props) {
             iconClass="fa fa-eraser"
             label="Clear"
             headerHasFocus={hasFocus}
+            isRtl={false}
         />
         <Slider style={sliderStyle} hasFocus={hasFocus}/>
       </PaneHeader>
