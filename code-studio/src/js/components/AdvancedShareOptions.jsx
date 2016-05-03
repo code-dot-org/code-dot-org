@@ -10,10 +10,11 @@ const style = {
     },
     li: {
       display: 'inline-block',
-      color: color.purple,
+      color: color.light_gray,
       fontSize: 'larger',
       fontWeight: 'bold',
       marginRight: 10,
+      cursor: 'pointer',
     },
   },
   p: {
@@ -28,7 +29,12 @@ const style = {
     color: color.purple,
     cursor: 'pointer',
     fontWeight: 'bold'
-  }
+  },
+  embedInput: {
+    cursor: 'copy',
+    width: 465,
+    height: 80,
+  },
 };
 
 var AdvancedShareOptions = React.createClass({
@@ -39,7 +45,7 @@ var AdvancedShareOptions = React.createClass({
   getInitialState() {
     return {
       expanded: false,
-      selectedOption: 'export',
+      selectedOption: this.props.onClickExport ? 'export' : 'embed',
       exporting: false,
       exportError: null,
     };
@@ -59,6 +65,26 @@ var AdvancedShareOptions = React.createClass({
           exportError: 'Failed to export project. Please try again later.'
         });
       }
+    );
+  },
+
+  renderEmbedTab() {
+    var url = window.location.href.replace('edit','embed');
+    var iframeHtml = '<iframe width="352" height="612" style="border: 1px solid black;" src="' +
+          url + '"></iframe>';
+    return (
+      <div>
+        <p style={style.p}>
+          You can paste the embed code into an HTML page to display
+          the project on a webpage.
+        </p>
+        <textarea
+          type="text"
+          onClick={(e) => e.target.select()}
+          readOnly="true"
+          value={iframeHtml}
+          style={style.embedInput}></textarea>
+      </div>
     );
   },
 
@@ -94,15 +120,31 @@ var AdvancedShareOptions = React.createClass({
     var optionsNav;
     var selectedOption;
     if (this.state.expanded) {
+      var selectedLiStyle = Object.assign({}, style.nav.li, {color:color.purple});
+      var exportTab = null;
+      if (this.props.onClickExport) {
+        exportTab = (
+          <li style={this.state.selectedOption === 'export' ? selectedLiStyle : style.nav.li}
+              onClick={() => this.setState({selectedOption: 'export'})}>
+            Export
+          </li>
+        );
+      }
       optionsNav = (
         <div>
           <ul style={style.nav.ul}>
-            <li style={style.nav.li}>Export</li>
+            {exportTab}
+            <li style={this.state.selectedOption === 'embed' ? selectedLiStyle : style.nav.li}
+                onClick={() => this.setState({selectedOption: 'embed'})}>
+              Embed
+            </li>
           </ul>
         </div>
       );
       if (this.state.selectedOption === 'export') {
         selectedOption = this.renderExportTab();
+      } else if (this.state.selectedOption === 'embed') {
+        selectedOption = this.renderEmbedTab();
       }
     }
     var expand = this.state.expanded && this.state.selectedOption ? null :
