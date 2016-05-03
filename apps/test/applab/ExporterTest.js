@@ -83,6 +83,7 @@ describe('The Exporter,', function () {
           <div class="screen" tabindex="1" id="screen1">
             <input type="text" id="nameInput"/>
             <img src="/v3/assets/some-channel-id/foo.png"/>
+            <button id="iconButton" data-canonical-image-url="icon://fa-hand-peace-o">
             <button id="clickMeButton" style="background-color: red;">Click Me!</button>
           </div>
         </div>`
@@ -169,6 +170,7 @@ describe('The Exporter,', function () {
         el.innerHTML = zipFiles['my-app/index.html'];
         assert.equal(el.querySelector("img").getAttribute('src'), 'assets/foo.png');
       });
+
     });
 
   });
