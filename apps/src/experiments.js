@@ -1,8 +1,8 @@
 /**
  * This module contains logic for tracking various experiments. Experiments
  * can be enabled/disabled using query parameters:
- *   enable:  http://foo.com/?enableExperiments=experimentOne,experimentTwo
- *   disable: http://foo.com/?disableExperiments=experimentOne,experimentTwo
+ *   enable:  http://foo.com/?enableExperiment=experimentOne,experimentTwo
+ *   disable: http://foo.com/?disableExperiment=experimentOne,experimentTwo
  * Experiment state is persisted across page loads using local storage.
  */
 
