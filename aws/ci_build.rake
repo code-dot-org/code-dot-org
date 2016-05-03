@@ -239,7 +239,7 @@ task :chef_update do
       RakeUtils.bundle_exec 'berks', 'install'
       if rack_env?(:staging) && RakeUtils.file_changed_from_git?(cookbooks_dir)
         RakeUtils.system 'git', 'add', '.'
-        RakeUtils.system 'git', 'commit', '-m', 'Updated cookbook versions'
+        RakeUtils.system 'git', 'commit', '-m', '"Updated cookbook versions"'
         RakeUtils.git_push
       end
       RakeUtils.bundle_exec 'berks', 'upload', (rack_env?(:production) ? '' : '--no-freeze')
