@@ -234,7 +234,14 @@ end
 task :chef_update do
   if CDO.daemon && CDO.chef_managed
     RakeUtils.with_bundle_dir(cookbooks_dir) do
+      # Automatically update Chef cookbook versions in staging environment.
+      RakeUtils.bundle_exec './update_cookbook_versions' if rack_env?(:staging)
       RakeUtils.bundle_exec 'berks', 'install'
+      if rack_env?(:staging) && RakeUtils.file_changed_from_git?(cookbooks_dir)
+        RakeUtils.system 'git', 'add', '.'
+        RakeUtils.system 'git', 'commit', '-m', 'Updated cookbook versions'
+        RakeUtils.git_push
+      end
       RakeUtils.bundle_exec 'berks', 'upload', (rack_env?(:production) ? '' : '--no-freeze')
       RakeUtils.bundle_exec 'berks', 'apply', rack_env
     end
