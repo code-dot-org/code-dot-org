@@ -103,6 +103,7 @@ class UsersHelperTest < ActionView::TestCase
     level.properties['title'] =  'Long assessment 1'
     level.properties['pages'] = [{levels: ['user_progress__level_free_response', 'user_progress__level_multi_unsubmitted']}, {levels: ['user_progress__level_multi_correct', 'user_progress__level_multi_incorrect']}]
     level.save!
+    puts "level: #{level.to_json}"
 
     # Create a ScriptLevel joining this level to the script.
     sl = create :script_level, script: script, level: level, assessment: true
