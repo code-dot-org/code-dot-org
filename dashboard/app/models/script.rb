@@ -427,7 +427,7 @@ class Script < ActiveRecord::Base
             script: script
           )
 
-        stage.assign_attributes(flex: stage_flex_category)
+        stage.assign_attributes(flex_category: stage_flex_category)
         stage.save! if stage.changed?
 
         script_level_attributes[:stage_id] = stage.id
