@@ -1,5 +1,5 @@
 #!/bin/sh
 
-# 286556 total recipients
+# 299761 total recipients
 
 ../send-to-mailing-list --limit 300000 5-2-petition-follow-up ./followup-teachers.csv
