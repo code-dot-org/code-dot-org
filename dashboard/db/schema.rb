@@ -596,12 +596,12 @@ ActiveRecord::Schema.define(version: 20160501234059) do
   add_index "segments", ["workshop_id"], name: "index_segments_on_workshop_id", using: :btree
 
   create_table "stages", force: :cascade do |t|
-    t.string   "name",       limit: 255, null: false
-    t.integer  "position",   limit: 4
-    t.integer  "script_id",  limit: 4,   null: false
+    t.string   "name",          limit: 255, null: false
+    t.integer  "position",      limit: 4
+    t.integer  "script_id",     limit: 4,   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "flex",       limit: 255
+    t.string   "flex_category", limit: 255
   end
 
   create_table "survey_results", force: :cascade do |t|
