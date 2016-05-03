@@ -35,6 +35,8 @@ class SurveyResult < ActiveRecord::Base
   NET_PROMOTER_SCORE_ATTRS = %w(nps_value nps_comment)
   NET_PROMOTER_SCORE_ATTRS.freeze
 
-  serialized_attrs DIVERSITY_ATTRS + NET_PROMOTER_SCORE_ATTRS
+  ALL_ATTRS = (DIVERSITY_ATTRS + NET_PROMOTER_SCORE_ATTRS).freeze
+
+  serialized_attrs ALL_ATTRS
   belongs_to :user
 end
