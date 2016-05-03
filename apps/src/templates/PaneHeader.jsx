@@ -41,6 +41,15 @@ var styles = {
     marginLeft: 3,
     marginRight: 0
   },
+  headerButtonMinecraft: {
+    backgroundColor: '#606060',
+    color: '#BFBFBF',
+    border: 'none',
+    ':hover': {
+      backgroundColor: '#606060',
+      color: color.white
+    }
+  },
   headerButtonUnfocused: {
     backgroundColor: color.lightest_purple
   },
@@ -107,6 +116,7 @@ var PaneButton = function (props) {
   var divStyle = [
     styles.headerButton,
     props.isRtl && styles.headerButtonRtl,
+    props.isMinecraft && styles.headerButtonMinecraft,
     !props.headerHasFocus && styles.headerButtonUnfocused
   ];
   var iconStyle = [

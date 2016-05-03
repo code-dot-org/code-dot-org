@@ -47,7 +47,8 @@ var CodeWorkspace = React.createClass({
     editCode: React.PropTypes.bool.isRequired,
     readonlyWorkspace: React.PropTypes.bool.isRequired,
     showDebugger: React.PropTypes.bool,
-    isRunning: React.PropTypes.bool
+    isRunning: React.PropTypes.bool,
+    isMinecraft: React.PropTypes.bool
   },
 
   shouldComponentUpdate: function (nextProps) {
@@ -131,20 +132,23 @@ var CodeWorkspace = React.createClass({
                 iconClass="fa fa-code"
                 label={msg.showCodeHeader()}
                 isRtl={isRtl}
+                isMinecraft={props.isMinecraft}
                 headerHasFocus={hasFocus}/>
             {!props.readonlyWorkspace && <PaneButton
                 id="clear-puzzle-header"
                 headerHasFocus={hasFocus}
                 iconClass="fa fa-undo"
                 label={msg.clearPuzzle()}
-                isRtl={isRtl}/>
+                isRtl={isRtl}
+                isMinecraft={props.isMinecraft}/>
             }
             <PaneButton
                 id="versions-header"
                 headerHasFocus={hasFocus}
                 iconClass="fa fa-clock-o"
                 label={msg.showVersionsHeader()}
-                isRtl={isRtl}/>
+                isRtl={isRtl}
+                isMinecraft={props.isMinecraft}/>
             <PaneSection id="workspace-header">
               <span id="workspace-header-span">
                 {props.readonlyWorkspace ? msg.readonlyPaneSection() : msg.workspaceHeaderShort()}
