@@ -7,6 +7,7 @@ class ScriptDSL < BaseDSL
     @description = nil
     @description_audience = nil
     @stage = nil
+    @stage_flex_category = nil
     @concepts = []
     @skin = nil
     @levels = []
@@ -16,6 +17,7 @@ class ScriptDSL < BaseDSL
     @hidden = true
     @login_required = false
     @admin_required = false
+    @student_of_admin_required = false
     @trophies = false
     @pd = false
     @wrapup_video = nil
@@ -30,14 +32,17 @@ class ScriptDSL < BaseDSL
   boolean :hidden
   boolean :login_required
   boolean :admin_required
+  boolean :student_of_admin_required
   boolean :trophies
   boolean :pd
+  boolean :professional_learning_course
 
   string :wrapup_video
 
-  def stage(name)
+  def stage(name, flex = nil)
     @stages << {stage: @stage, levels: @levels} if @stage
     @stage = name
+    @stage_flex_category = flex
     @levels = []
     @concepts = []
     @skin = nil
@@ -45,7 +50,18 @@ class ScriptDSL < BaseDSL
 
   def parse_output
     stage(nil)
-    {id: @id, stages: @stages, hidden: @hidden, trophies: @trophies, wrapup_video: @wrapup_video, login_required: @login_required, admin_required: @admin_required, pd: @pd}
+    {
+      id: @id,
+      stages: @stages,
+      hidden: @hidden,
+      trophies: @trophies,
+      wrapup_video: @wrapup_video,
+      login_required: @login_required,
+      admin_required: @admin_required,
+      pd: @pd,
+      student_of_admin_required: @student_of_admin_required,
+      professional_learning_course: @professional_learning_course
+    }
   end
 
   def concepts(*items)
@@ -68,6 +84,7 @@ class ScriptDSL < BaseDSL
     @levels << {
       :name => name,
       :stage => @stage,
+      :stage_flex_category => @stage_flex_category,
       :skin => @skin,
       :concepts => @concepts.join(','),
       :level_concept_difficulty => @level_concept_difficulty || {},

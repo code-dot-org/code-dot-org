@@ -14,10 +14,22 @@ describe('The Exporter,', function () {
 
   beforeEach(function () {
     server = sinon.fakeServerWithClock.create();
-    server.respondWith('/assets/js/en_us/common_locale.js', 'common_locale.js content');
-    server.respondWith('/assets/js/en_us/applab_locale.js', 'applab_locale.js content');
-    server.respondWith('/assets/js/applab-api.js', 'applab-api.js content');
-    server.respondWith('/assets/css/applab.css', 'applab.css content');
+    server.respondWith(
+      /\/blockly\/js\/en_us\/common_locale\.js\?__cb__=\d+/,
+      'common_locale.js content'
+    );
+    server.respondWith(
+      /\/blockly\/js\/en_us\/applab_locale\.js\?__cb__=\d+/,
+      'applab_locale.js content'
+    );
+    server.respondWith(
+      /\/blockly\/js\/applab-api\.js\?__cb__=\d+/,
+      'applab-api.js content'
+    );
+    server.respondWith(
+      /\/blockly\/css\/applab\.css\?__cb__=\d+/,
+      'applab.css content'
+    );
 
     assetPrefix.init({channel: 'some-channel-id', assetPathPrefix: '/v3/assets/'});
 
@@ -36,7 +48,7 @@ describe('The Exporter,', function () {
 
   describe("when assets can't be fetched,", function () {
     beforeEach(function () {
-      server.respondWith('/assets/js/en_us/common_locale.js', [500, {}, ""]);
+      server.respondWith(/\/blockly\/js\/en_us\/common_locale\.js\?__cb__=\d+/, [500, {}, ""]);
     });
 
     it("should reject the promise with an error", function (done) {
@@ -71,6 +83,7 @@ describe('The Exporter,', function () {
           <div class="screen" tabindex="1" id="screen1">
             <input type="text" id="nameInput"/>
             <img src="/v3/assets/some-channel-id/foo.png"/>
+            <button id="iconButton" data-canonical-image-url="icon://fa-hand-peace-o">
             <button id="clickMeButton" style="background-color: red;">Click Me!</button>
           </div>
         </div>`
@@ -157,6 +170,7 @@ describe('The Exporter,', function () {
         el.innerHTML = zipFiles['my-app/index.html'];
         assert.equal(el.querySelector("img").getAttribute('src'), 'assets/foo.png');
       });
+
     });
 
   });
