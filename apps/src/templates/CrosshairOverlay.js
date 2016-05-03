@@ -86,25 +86,9 @@ CrosshairOverlay.prototype.render = function (intoElement, nextProps) {
   // Record any new/updated properties
   $.extend(this.props_, nextProps);
 
-  var rectX = this.props_.x + CROSSHAIR_MARGIN;
-  if (rectX + TEXT_RECT_WIDTH + EDGE_MARGIN > this.props_.appWidth) {
-    // This response gives a smooth horizontal reposition when near the edge
-    rectX -= (rectX + TEXT_RECT_WIDTH + EDGE_MARGIN - this.props_.appWidth);
-    // This response snaps the text to the other side when near the edge
-    //rectX = this.props_.x - CROSSHAIR_MARGIN - TEXT_RECT_WIDTH;
-  }
-
-  var rectY = this.props_.y + CROSSHAIR_MARGIN;
-  if (rectY + TEXT_RECT_HEIGHT + EDGE_MARGIN > this.props_.appHeight) {
-    rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT;
-  }
-
-  // If we're dragging an element, instead put the text above and right of the
-  // cross hair, while making sure it doesnt go past the top of the overlay
-  if (this.isDragging_) {
-    rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT - ELEMENT_ID_Y_OFFSET;
-    rectY = Math.max(0, rectY);
-  }
+  var bubbleCoordinates = this.getBubbleCoordinates_();
+  var rectX = bubbleCoordinates.rectX;
+  var rectY = bubbleCoordinates.rectY;
 
   var textX = rectX + TEXT_RECT_WIDTH / 2;
   var textY = rectY + TEXT_RECT_HEIGHT + TEXT_Y_OFFSET;
@@ -146,6 +130,33 @@ CrosshairOverlay.prototype.render = function (intoElement, nextProps) {
     this.elementIdBubble_.style.display = 'none';
     this.elementIdText_.style.display = 'none';
   }
+};
+
+/**
+ * Given current properties, calcualtes the position for rendering the tooltip.
+ * @returns {{rectX: number, rectY: number}}
+ */
+CrosshairOverlay.prototype.getBubbleCoordinates_ = function () {
+  var rectX = this.props_.x + CROSSHAIR_MARGIN;
+  if (rectX + TEXT_RECT_WIDTH + EDGE_MARGIN > this.props_.appWidth) {
+    // This response gives a smooth horizontal reposition when near the edge
+    rectX -= (rectX + TEXT_RECT_WIDTH + EDGE_MARGIN - this.props_.appWidth);
+    // This response snaps the text to the other side when near the edge
+    //rectX = this.props_.x - CROSSHAIR_MARGIN - TEXT_RECT_WIDTH;
+  }
+
+  var rectY = this.props_.y + CROSSHAIR_MARGIN;
+  if (rectY + TEXT_RECT_HEIGHT + EDGE_MARGIN > this.props_.appHeight) {
+    rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT;
+  }
+
+  // If we're dragging an element, instead put the text above and right of the
+  // cross hair, while making sure it doesnt go past the top of the overlay
+  if (this.isDragging_) {
+    rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT - ELEMENT_ID_Y_OFFSET;
+    rectY = Math.max(0, rectY);
+  }
+  return {rectX: rectX, rectY: rectY};
 };
 
 CrosshairOverlay.prototype.destroy = function () {
