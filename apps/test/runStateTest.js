@@ -37,84 +37,84 @@ describe('isRunning reducer', function () {
     assert.strictEqual(state.isRunning, true);
   });
 
-  it ('sets isDebugging to false when running is set to false', function () {
+  it ('sets isDebuggerPaused to false when running is set to false', function () {
     var previousState = {
       isRunning: false,
-      isDebugging: true
+      isDebuggerPaused: true
     };
     var state = reducer(previousState, runState.setIsRunning(false));
     assert.deepEqual(state, {
       isRunning: false,
-      isDebugging: false
+      isDebuggerPaused: false
     });
   });
 
-  it ('doesnt change isDebugging when set to true', function () {
+  it ('doesnt change isDebuggerPaused when set to true', function () {
     var previousState = {
       isRunning: true,
-      isDebugging: true
+      isDebuggerPaused: true
     };
     var state = reducer(previousState, runState.setIsRunning(true));
     assert.deepEqual(state, {
       isRunning: true,
-      isDebugging: true
+      isDebuggerPaused: true
     });
   });
 });
 
-describe('isDebugging reducer', function () {
+describe('isDebuggerPaused reducer', function () {
   var reducer = runState.default;
 
   it('starts out false', function () {
     var state = reducer(null, {});
-    assert.strictEqual(state.isDebugging, false);
+    assert.strictEqual(state.isDebuggerPaused, false);
   });
 
   it('can be set to true when false', function () {
     var previousState = {
-      isDebugging: false
+      isDebuggerPaused: false
     };
-    var state = reducer(previousState, runState.setIsDebugging(true));
-    assert.strictEqual(state.isDebugging, true);
+    var state = reducer(previousState, runState.setIsDebuggerPaused(true));
+    assert.strictEqual(state.isDebuggerPaused, true);
   });
 
   it('can be set to false when true', function () {
     var previousState = {
-      isDebugging: true
+      isDebuggerPaused: true
     };
-    var state = reducer(previousState, runState.setIsDebugging(false));
-    assert.strictEqual(state.isDebugging, false);
+    var state = reducer(previousState, runState.setIsDebuggerPaused(false));
+    assert.strictEqual(state.isDebuggerPaused, false);
   });
 
   it('can be set to true when already true', function () {
     var previousState = {
-      isDebugging: true
+      isDebuggerPaused: true
     };
-    var state = reducer(previousState, runState.setIsDebugging(true));
-    assert.strictEqual(state.isDebugging, true);
+    var state = reducer(previousState, runState.setIsDebuggerPaused(true));
+    assert.strictEqual(state.isDebuggerPaused, true);
   });
 
   it ('sets isRunning to true when debugging', function () {
     var previousState = {
       isRunning: true,
-      isDebugging: false
+      isDebuggerPaused: false
     };
-    var state = reducer(previousState, runState.setIsDebugging(true));
+    var state = reducer(previousState, runState.setIsDebuggerPaused(true));
     assert.deepEqual(state, {
       isRunning: true,
-      isDebugging: true
+      isDebuggerPaused: true
     });
   });
 
   it ('doesnt change isRunning when set to false', function () {
     var previousState = {
       isRunning: true,
-      isDebugging: false
+      isDebuggerPaused: false
     };
-    var state = reducer(previousState, runState.setIsDebugging(false));
+    var state = reducer(previousState, runState.setIsDebuggerPaused(false));
     assert.deepEqual(state, {
       isRunning: true,
-      isDebugging: false
+      isDebuggerPaused: false
     });
   });
 

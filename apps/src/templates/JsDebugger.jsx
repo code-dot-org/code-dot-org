@@ -182,7 +182,7 @@ Slider.propTypes = {
 var JsDebugger = function (props) {
   // Initially, don't want to toggle PaneHeader unless runModeIndicators is on
   var runModeIndicators = experiments.isEnabled('runModeIndicators');
-  var hasFocus = runModeIndicators && props.isDebugging;
+  var hasFocus = runModeIndicators && props.isDebuggerPaused;
 
   var sliderStyle = {
     marginLeft: props.debugButtons ? 0 : 40
@@ -242,7 +242,7 @@ JsDebugger.propTypes = {
   debugButtons: React.PropTypes.bool.isRequired,
   debugConsole: React.PropTypes.bool.isRequired,
   debugWatch: React.PropTypes.bool.isRequired,
-  isDebugging: React.PropTypes.bool.isRequired
+  isDebuggerPaused: React.PropTypes.bool.isRequired
 };
 
 module.exports = connect(function propsFromStore(state) {
@@ -250,6 +250,6 @@ module.exports = connect(function propsFromStore(state) {
     debugButtons: state.level.showDebugButtons,
     debugConsole: state.level.showDebugConsole,
     debugWatch: state.level.showDebugWatch,
-    isDebugging: state.runState.isDebugging
+    isDebuggerPaused: state.runState.isDebuggerPaused
   };
 })(JsDebugger);
