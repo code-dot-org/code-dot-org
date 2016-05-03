@@ -188,7 +188,7 @@ FactoryGirl.define do
       level {create(:level, :with_autoplay_video)}
     end
 
-    level
+    level {create :applab}
 
     trait :never_autoplay_video_true do
       level {create(:level, :never_autoplay_video_true)}
