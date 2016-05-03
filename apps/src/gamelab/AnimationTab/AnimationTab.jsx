@@ -1,9 +1,12 @@
 /** @file Root of the animation editor interface mode for GameLab */
 'use strict';
 
+var Radium = require('radium');
 var FrameList = require('./FrameList');
 var AnimationPicker = require('../AnimationPicker/AnimationPicker');
 var AnimationList = require('./AnimationList');
+var styleConstants = require('../../styleConstants');
+var commonStyles = require('../../commonStyles');
 var color = require('../../color');
 var GameLabVisualizationHeader = require('../GameLabVisualizationHeader');
 var ResizablePanes = require('./ResizablePanes');
@@ -42,7 +45,7 @@ var styles = {
     backgroundColor: 'white',
     textAlign: 'center',
     paddingTop:'48%'
-  }
+  },
 };
 
 /**
@@ -50,7 +53,7 @@ var styles = {
  */
 var AnimationTab = React.createClass({
   propTypes: {
-    channelId: React.PropTypes.string.isRequired
+    channelId: React.PropTypes.string.isRequired,
   },
 
   render: function () {
@@ -62,13 +65,13 @@ var AnimationTab = React.createClass({
             <AnimationList />
           </div>
           <div style={styles.framesColumn}>
-            <div className="purple-header workspace-header">
+            <div className="purple-header workspace-header" style={commonStyles.purpleHeader}>
               <span>Frames</span>
             </div>
             <FrameList />
           </div>
           <div style={styles.editorColumn}>
-            <div className="purple-header workspace-header">
+            <div className="purple-header workspace-header" style={commonStyles.purpleHeader}>
               <span>Workspace</span>
             </div>
             <div style={styles.editorRegion}>
@@ -81,4 +84,4 @@ var AnimationTab = React.createClass({
     );
   }
 });
-module.exports = AnimationTab;
+module.exports = Radium(AnimationTab);
