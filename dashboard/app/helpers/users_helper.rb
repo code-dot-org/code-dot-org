@@ -78,19 +78,16 @@ module UsersHelper
       uls = user.user_levels_by_level(script)
       script_levels = script.script_levels
       user_data[:levels] = {}
-      puts "script_levels: #{script_levels.to_json}"
       script_levels.each do |sl|
         result = level_info(user, sl, uls)
         submitted = level_submitted(user, sl, uls)
         completion_status = submitted ? "submitted" : (activity_css_class result)
-        puts "  completion_status: #{completion_status}"
         if completion_status != 'not_tried'
           user_data[:levels][sl.level_id] = {
               status: completion_status,
               result: result,
               submitted: submitted
           }
-          puts "  just set user data: #{user_data.to_json}"
 
           # Just in case this level has multiple pages, in which case we add an additional
           # array of booleans indicating which pages have been completed.
@@ -100,7 +97,6 @@ module UsersHelper
       end
     end
 
-    puts "final user data: #{user_data.to_json}"
     user_data
   end
 
@@ -160,7 +156,6 @@ module UsersHelper
 
   def level_info(user, script_level, user_levels)
     if user
-      puts "level_info user_level (#{script_level.level_id}) #{user_levels.to_json}"
       user_levels[script_level.level_id].try(:best_result) || 0
     else
       0
