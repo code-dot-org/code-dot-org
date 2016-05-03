@@ -34,7 +34,7 @@ var styles = {
   showHideIcon: {
     position: 'absolute',
     top: 0,
-    left: 0,
+    left: 8,
     margin: 0,
     lineHeight: styleConstants['workspace-headers-height'] + 'px',
     fontSize: 18,
@@ -201,7 +201,7 @@ var JsDebugger = function (props) {
             className="header-text">
           {i18n.debugConsoleHeader()}
         </span>
-        <i id="show-hide-debug-icon" className="fa fa-chevron-circle-down"/>
+        <i id="show-hide-debug-icon" className="fa fa-chevron-circle-down" style={styles.showHideIcon}/>
         {props.debugButtons &&
         <PaneSection id="debug-commands-header">
           <i id="running-spinner" style={commonStyles.hidden} className="fa fa-spinner fa-spin"></i>
