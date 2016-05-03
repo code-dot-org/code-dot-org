@@ -269,7 +269,8 @@ StudioApp.prototype.init = function (config) {
     config = {};
   }
 
-  this.reduxStore_ = config.reduxStore || redux.createFakeStore();
+  this.reduxStore_ = config.reduxStore || redux.createStore(redux.combineReducers());
+  window.__reduxStore = this.reduxStore_;
 
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;

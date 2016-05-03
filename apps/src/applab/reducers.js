@@ -3,12 +3,10 @@
 'use strict';
 
 var ActionType = require('./actions').ActionType;
-var combineReducers = require('redux').combineReducers;
+var combineReducers = require('../redux').combineReducers;
 var constants = require('./constants');
 var ApplabInterfaceMode = constants.ApplabInterfaceMode;
 var instructions = require('../redux/instructions');
-var levelProperties = require('../redux/levelProperties');
-var runState = require('../redux/runState');
 
 function currentScreenId(state, action) {
   state = state || null;
@@ -43,10 +41,8 @@ function interfaceMode(state, action) {
 
 var rootReducer = combineReducers({
   currentScreenId: currentScreenId,
-  level: levelProperties.default,
   interfaceMode: interfaceMode,
   instructions: instructions.default,
-  runState: runState.default
 });
 
 module.exports = { rootReducer: rootReducer };
