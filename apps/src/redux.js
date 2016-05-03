@@ -7,6 +7,9 @@ var reduxThunk = require('redux-thunk').default;
 if (process.env.NODE_ENV !== "production") {
   var createLogger = require('redux-logger');
 }
+var _ = require('./lodash');
+var runState = require('./redux/runState');
+var levelProperties = require('./redux/levelProperties');
 
 /**
  * Creates a store configured for use the way we want for Code.org.
@@ -42,15 +45,14 @@ module.exports.createStore = function (reducer) {
 };
 
 /**
- * Create a non-functioning redux store that allows us to always call getState
- * and dispatch as no-ops.
+ * Returns a combined reducer that includes our basic set of reducers common
+ * to all apps, and the passed in reducers
  */
-module.exports.createFakeStore = function () {
-  return {
-    getState: function () {
-      return {};
-    },
-    dispatch: function () {
-    }
-  };
+module.exports.combineReducers = function (reducers) {
+  var allReducers = _.assign({}, {
+    runState: runState.default,
+    level: levelProperties.default
+  }, reducers);
+
+  return redux.combineReducers(allReducers);
 };

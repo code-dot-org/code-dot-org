@@ -6,12 +6,10 @@ var _ = require('../lodash');
 var ActionType = require('./actions').ActionType;
 var animationPicker = require('./AnimationPicker/animationPickerModule').default;
 var animationTab = require('./AnimationTab/animationTabModule').default;
-var combineReducers = require('redux').combineReducers;
+var combineReducers = require('../redux').combineReducers;
 var errorDialogStack = require('./errorDialogStackModule').default;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 var instructions = require('../redux/instructions');
-var levelProperties = require('../redux/levelProperties');
-var runState = require('../redux/runState');
 var utils = require('../utils');
 
 function interfaceMode(state, action) {
@@ -77,9 +75,7 @@ var gamelabReducer = combineReducers({
   animations: animations,
   errorDialogStack: errorDialogStack,
   interfaceMode: interfaceMode,
-  level: levelProperties.default,
-  instructions: instructions.default,
-  runState: runState.default
+  instructions: instructions.default
 });
 
 module.exports = { gamelabReducer: gamelabReducer };
