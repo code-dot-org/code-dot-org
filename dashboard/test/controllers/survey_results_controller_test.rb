@@ -6,7 +6,7 @@ class SurveyResultsControllerTest < ActionController::TestCase
     @teacher = create(:teacher)
   end
 
-  test 'post diveristy survey results' do
+  test 'post diversity survey results' do
     sign_in @teacher
 
     assert_creates(SurveyResult) do
