@@ -33,6 +33,7 @@ var createStore = require('../redux').createStore;
 var gamelabReducer = require('./reducers').gamelabReducer;
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
+var CrosshairOverlay = require('../templates/CrosshairOverlay');
 var VisualizationOverlay = require('../templates/VisualizationOverlay');
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
@@ -393,7 +394,7 @@ GameLab.prototype.renderVisualizationOverlay = function () {
   $(divGameLab).toggleClass('withCrosshair', this.isCrosshairAllowed());
 
   if (!this.visualizationOverlay_) {
-    this.visualizationOverlay_ = new VisualizationOverlay();
+    this.visualizationOverlay_ = new VisualizationOverlay(new CrosshairOverlay());
   }
 
   // Calculate current visualization scale to pass to the overlay component.
@@ -402,8 +403,7 @@ GameLab.prototype.renderVisualizationOverlay = function () {
 
   this.visualizationOverlay_.render(visualizationOverlay, {
     isCrosshairAllowed: this.isCrosshairAllowed(),
-    scale: scaledWidth / unscaledWidth,
-    isInDesignMode: false
+    scale: scaledWidth / unscaledWidth
   });
 };
 
