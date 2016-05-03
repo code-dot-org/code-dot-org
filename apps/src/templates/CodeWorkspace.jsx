@@ -10,6 +10,9 @@ var styleConstants = require('../styleConstants');
 var color = require('../color');
 var experiments = require('../experiments');
 
+var BLOCKS_GLYPH_LIGHT = "data:image/gif;base64,R0lGODlhEAAQAIAAAP///////yH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
+var BLOCKS_GLYPH_DARK = "data:image/gif;base64,R0lGODlhEAAQAIAAAE1XX01XXyH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
+
 var styles = {
   headerIcon: {
     fontSize: 18
@@ -87,10 +90,13 @@ var CodeWorkspace = React.createClass({
     var isRtl = props.localeDirection === 'rtl';
 
     var blocksGlyphImage = (
-      <img src="/blockly/media/applab/blocks_glyph.gif" style={[
-          styles.blocksGlyph,
-          isRtl && styles.blocksGlyphRtl
-      ]}/>
+      <img
+          id="blocks_glyph"
+          src={hasFocus ? BLOCKS_GLYPH_LIGHT : BLOCKS_GLYPH_DARK}
+          style={[
+            styles.blocksGlyph,
+            isRtl && styles.blocksGlyphRtl
+          ]}/>
     );
 
     var headerButtonIcon = [

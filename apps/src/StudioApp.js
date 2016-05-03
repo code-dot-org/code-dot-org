@@ -2242,9 +2242,7 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   var fontAwesomeGlyph = _.find(contentSpan.childNodes, function (node) {
     return /\bfa\b/.test(node.className);
   });
-  var imgBlocksGlyph = _.find(contentSpan.childNodes, function (node) {
-    return /\bblocks_glyph\b/.test(node.src);
-  });
+  var imgBlocksGlyph = document.getElementById('blocks_glyph');
 
   // Change glyph
   if (usingBlocks) {
