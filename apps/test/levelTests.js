@@ -137,6 +137,12 @@ describe('Level tests', function () {
       }
     }
 
+    if (window.Maze) {
+      if (Maze.__TestInterface__) {
+        Maze.__TestInterface__.recreateReduxStore();
+      }
+    }
+
     if (window.Calc) {
       Calc.resetButtonClick();
     }

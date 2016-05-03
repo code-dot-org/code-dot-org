@@ -231,7 +231,8 @@ GameLab.prototype.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: true,
-    localeDirection: this.studioApp_.localeDirection()
+    localeDirection: this.studioApp_.localeDirection(),
+    isDroplet: true
   }));
 
   // Push project-sourced animation metadata into store
