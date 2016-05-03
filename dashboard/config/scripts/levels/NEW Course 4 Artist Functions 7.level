@@ -32,7 +32,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
-    "never_autoplay_video": "false"
+    "never_autoplay_video": "false",
+    "discard_background": "false"
   },
   "published": true,
   "notes": "",
@@ -121,9 +122,6 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="procedures_callnoreturn">
-          <mutation name="draw a square"/>
-        </block>
         <block type="pick_one">
           <statement name="PICK">
             <block type="draw_move" inline="true">

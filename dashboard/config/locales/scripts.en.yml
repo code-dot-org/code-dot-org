@@ -1633,6 +1633,7 @@ en:
           'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
+          'Unplugged: Fast Functions': 'Unplugged: Fast Functions'
         AlgebraB:
           title: Computer Science in Algebra
           description_short: Learn Functional Programming through Algebra
@@ -1654,8 +1655,8 @@ en:
           description_short: Gamelab Hackathon
           description: A place to try things out in Game Lab
         algebraPD1:
-          title: Computer Science in Algebra PD
-          description_short: Teach Algebra through Functional Programming
+          title: CS in Algebra Part 1
+          description_short: 'Phase 1: Online Introduction'
           description: Teach Algebra through Functional Programming
           Introduction to PD: Introduction to PD
           Course Overview: Course Overview
@@ -1817,8 +1818,8 @@ en:
           Computational Thinking: Computational Thinking
           Sample Stage: Sample Stage
         ECSPD1:
-          title: 'ECS: Phase 1 PD'
-          description_short: Introduction to the Code.org ECS Version 5 Program
+          title: ECS Part 1
+          description_short: 'Phase 1: Online Introduction'
           description: Two hour introduction to your Professional Learning Program for the ECS Version 5 curriculum
           Getting Started: Getting Started
           What is ECS?: What is ECS?
@@ -1826,6 +1827,8 @@ en:
           Wrap Up: Wrap Up
           Welcome to Phase 1!: Welcome to Phase 1!
           Background and Context: Background and Context
+          'Classroom and workshop style ': 'Classroom and workshop style '
+          'Classroom and Workshop Style ': 'Classroom and Workshop Style '
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description_short: Teach Algebra through Functional Programming

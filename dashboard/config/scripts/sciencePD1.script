@@ -1,6 +1,6 @@
-title 'Computer Science in Science PD'
+title 'CS in Science: Part 1'
 description "In Partnership with Project GUTS"
-description_short "In Partnership with Project GUTS"
+description_short "Phase 1: Online Introduction"
 login_required 'true'
 pd 'true'
 

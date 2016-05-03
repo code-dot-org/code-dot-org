@@ -542,6 +542,7 @@ en:
         ECS Curriculum Connections: ECS Curriculum Connections
         ECS curriculum connections: ECS curriculum connections
       ECSPD1 curriculum design: {}
+      ECSPD1 dikjstra: {}
       ECSPD1 equity in cs education:
         Equity in Computer Science Education: Equity in Computer Science Education
       ECSPD1 navigating progress:
@@ -759,6 +760,10 @@ en:
       PDAlg 3BPlanning: {}
       PDAlg 3BWelcome: {}
       PDAlg 3CAbout: {}
+      PDAlg 3CBootstrap: {}
+      PDAlg 3CCourseAB: {}
+      PDAlg 3CElective: {}
+      PDAlg 3CFuture: {}
       PDAlg 3CGathering: {}
       PDAlg 3CGo: {}
       PDAlg 3CPlanning: {}
@@ -1543,6 +1548,8 @@ en:
         Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
       sciPD preQ p1 16-17:
         Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
+      sciPD survey1:
+        Code.org Post Survey: Code.org Post Survey
       sciPD what to expect:
         What to Expect: What to Expect
       sciPD what to expect 16-17:
@@ -1903,6 +1910,8 @@ en:
         Ruby: Ruby
       ECS Matching Program Commitment:
         'Academic Year Development: 4 days in-person and 20 hours online': 'Academic Year Development: 4 days in-person and 20 hours online'
+        ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 4).
+        : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 4).
         ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 5).
         : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 5).
         'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
@@ -4904,6 +4913,9 @@ en:
         Enter answer here: Enter answer here
         Enter prompt here: Enter prompt here
         Enter title here: Enter title here
+      ECSPD1 background reflection: {}
+      ECSPD1 computational thinker: {}
+      ECSPD1 video reflection: {}
       PS U3 Q1-7:
         Enter answer here: Enter answer here
         Enter prompt here: Enter prompt here
