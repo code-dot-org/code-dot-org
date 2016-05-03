@@ -9,13 +9,12 @@
     "code_functions": {
       "declareAssign_x": null,
       "declareNoAssign_x": null,
-      "assign_x": null,
-      "console.log": null
+      "assign_x": null
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Reassigning a Variable Pt. 2\r\n\r\nWere you surprised by what you saw? Remember **programs run line by line** and a variable can only ever hold a single value.\r\n\r\n# Do This\r\n\r\nYou will **not write any code** in this level.\r\n\r\n* Read the program provided\r\n* **Predict** what number will be displayed in the console.\r\n* Run the program\r\n* **Discuss the results with a neighbor**. Were you suprised?",
-    "start_blocks": "var size;\r\nsize = 10;\r\nconsole.log(size);\r\nsize = 20;\r\nconsole.log(size);",
+    "markdown_instructions": "# Creating and assigning in one line\r\n\r\nYou can use `var` and `=` in a single line to **assign a value to a variable as soon as it is created**, for example: `var size = 10;`\r\n\r\n# Do This\r\n\r\n* **Create a new variable and assign it a value** in a single line.",
+    "start_blocks": "var bestTemperature = 72;\r\n//Create your own variable and give it a value in a single line.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -38,10 +37,12 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "instructions": "Predict: What will get displayed in the console?"
+    "instructions": "Create and assign a new variable in a single line."
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -29,7 +29,8 @@
     "disable_examples": "false",
     "markdown_instructions": "Use the `repeat` block to get me to the pig!"
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 1
@@ -38,24 +39,19 @@
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveNorth"/>
-        <block type="maze_moveSouth"/>
-        <block type="maze_moveEast"/>
-        <block type="maze_moveWest"/>
+        <block type="maze_moveNorth" next_connection_disabled="true"/>
+        <block type="maze_moveSouth" next_connection_disabled="true"/>
+        <block type="maze_moveEast" next_connection_disabled="true"/>
+        <block type="maze_moveWest" next_connection_disabled="true"/>
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-6">5</title>
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <block type="controls_repeat_simplified_dropdown">
-        <title name="TIMES" config="2-6">5</title>
-      </block>
-    </required_blocks>
     <recommended_blocks>
-      <xml>
-        <block type="maze_moveEast"/>
-      </xml>
+      <block type="controls_repeat_simplified_dropdown">
+        <title name="TIMES" config="2-6">???</title>
+      </block>
     </recommended_blocks>
     <solution_blocks>
       <xml>

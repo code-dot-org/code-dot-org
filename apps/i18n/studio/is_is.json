@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "Þú þarft að ná 20 vélmúsum. Notaðu \"bæta við vélmús\" skipunina í \"þegar nær vélmús\" atviki til að bæta við tveimur eða fleiri vélmúsum í hvert skipti sem þú nærð einni.",
   "failedMultiplyCharactersTimeoutGotSome": "Til hamingju, þú bættir við kóða sem býr til vélmýs. Þú getur farið áfram í næstu þraut eða reynt aftur að ná 20 vélmúsum. Prófaðu að auðvelda það með því að hafa fleiri! (Ýttu á og haltu niðri lyklunum á lyklaborðinu (eða skjánum) til að hreyfast hraðar.)",
   "failedChangeSettingTimeout": "Náðu þremur flugmönnum til að halda áfram.",
-  "failedChangeSettingSettings": "Gerðu þetta að þínum leik. Til að ljúka þrautinni þarft þú að breyta vélmenninu og stilla hraða þess."
+  "failedChangeSettingSettings": "Gerðu þetta að þínum leik. Til að ljúka þrautinni þarft þú að breyta vélmenninu og stilla hraða þess.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }

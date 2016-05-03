@@ -117,17 +117,42 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">5</title>
+        <block type="procedures_callnoreturn" inline="false">
+          <mutation name="get 5 nectar">
+            <arg name="direction"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="variables_get">
+              <title name="VAR">???</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_if" inline="false">
+          <mutation else="1"/>
+          <value name="IF0">
+            <block type="logic_compare" inline="true">
+              <title name="OP">EQ</title>
+              <value name="A">
+                <block type="parameters_get">
+                  <title name="VAR">direction</title>
+                </block>
+              </value>
+              <value name="B">
+                <block type="variables_get">
+                  <title name="VAR">left</title>
+                </block>
+              </value>
+            </block>
+          </value>
         </block>
         <block type="controls_repeat">
-          <title name="TIMES">2</title>
+          <title name="TIMES">5</title>
         </block>
       </xml>
     </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false">
+        <block type="when_run" deletable="false" movable="false" uservisible="false" y="14">
           <next>
             <block type="variables_set" inline="false" uservisible="false">
               <title name="VAR">left</title>

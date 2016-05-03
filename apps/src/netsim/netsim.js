@@ -8,7 +8,7 @@
 'use strict';
 
 var utils = require('../utils');
-var _ = utils.getLodash();
+var _ = require('../lodash');
 var i18n = require('./locale');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');

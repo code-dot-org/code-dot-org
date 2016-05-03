@@ -1,10 +1,10 @@
 'use strict';
 /* global describe, beforeEach, it */
 
-var _ = require('lodash');
 var testUtils = require('../util/testUtils');
 var NetSimTestUtils = require('../util/netsimTestUtils');
-var utils = require('@cdo/apps/utils');
+var _ = require('@cdo/apps/lodash');
+var utils = require('@cdo/apps/utils'); // Provides String.prototype.repeat
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var NetSimConstants = require('@cdo/apps/netsim/NetSimConstants');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');

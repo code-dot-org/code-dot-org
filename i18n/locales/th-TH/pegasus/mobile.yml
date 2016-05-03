@@ -509,6 +509,11 @@ th-TH:
   dashboard_action_remove_confirm: ลบ?
   dashboard_action_done: เรียบร้อย
   dashboard_action_required: ต้องระบุ
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: หน้าแรกของคุณครู
   dashboard_navigation_section_student_progress: บัญชีผู้ใช้ของนักเรียนและความคืบหน้า
   dashboard_navigation_section_teacher_progress: ความคืบหน้าของคุณ
@@ -526,6 +531,17 @@ th-TH:
   dashboard_navigation_view_stats: ดูสถิติ
   dashboard_navigation_section: 'กลุ่ม %{section_name}'
   dashboard_navigation_student: 'นักเรียน %{student_name}'
+  dashboard_progress_not_started: not started
+  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_completed: ไม่สมบูรณ์
+  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: กลุ่มใหม่
   dashboard_sections_jumbotron_instruction: สร้างกลุ่มใหม่ และเพิ่มนักเรียนเข้ากลุ่ม กลุ่มจะช่วยคุณจัดการนักเรียนให้อยู่ในกลุ่มย่อย ซึ่งคุณจะสามารถติดตามผลการเรียนและจัดการบัญชีได้ง่ายขึ้น
   dashboard_sections_table_section: Section
@@ -541,6 +557,19 @@ th-TH:
   dashboard_sections_secret_none: 'ถ้าคุณต้องการให้นักเรียนจัดการบัญชีของตนเอง ซึ่งรวมทั้งการเลือกรหัสผ่านของตนเอง ให้เลือกชนิดความลับเป็น<b>ไม่มี</b>'
   dashboard_sections_print_secrets: คุณสามารถพิมพ์บัตรข้อมูลเกี่ยวกับบัญชี เพื่อแจกจ่ายให้แก่นักเรียนของคุณแต่ละคนได้
   dashboard_sections_switch_section: สลับกลุ่ม
+  dashboard_sections_close: Close
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: เพิ่มนักเรียน
   dashboard_students_add_students: เพิ่มนักเรียนหลายคน
   dashboard_students_add_multiple: พิมพ์ชื่อของนักเรียนของคุณ หนึ่งชื่อต่อหนึ่งบรรทัด
@@ -607,13 +636,6 @@ th-TH:
   dashboard_login_picture: รูปภาพ
   dashboard_login_none: อีเมล
   dashboard_new_password: รหัสผ่านใหม่
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
-  dashboard_progress_not_completed: ไม่สมบูรณ์
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
-  dashboard_progress_submitted: submitted
   dashboard_stage: ขั้นตอน
   dashboard_puzzle: ปริศนา
   dashboard_question: คำถาม
@@ -648,11 +670,8 @@ th-TH:
   dashboard_faq_k5: คำถามที่พบบ่อย ของ ประถม5 ( K-5 )
   dashboard_announcements: ประกาศ
   dashboard_announce_view_all: ดูทั้งหมด
-  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
-  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
+  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
   dashboard_announce_button_text: สิ่งที่น่าเรียนรู้ยังมีอีก
-  dashboard_announce_hoc: '<b>15 ตุลาคม 2015</b> - Hour of Code กำลังมา &mdash; ทุกคนที่เข้าร่วมจะได้รับบัตรของขวัญสำหรับซื้อสินค้าใน Amazon.com หรือ Microsoft.com เป็นของขวัญขอบคุณ เข้าร่วมห้องเรียนทั่วโลกในระหว่างวันที่ 7-13 ธันวาคม'
-  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: 'นี่คือ Hour of Code - 8-14 ธันวาคม!'
   code_sign_up: ลงทะเบียนเพื่อเข้าร่วมในช่วงสัปดาห์ของวิทยาการคอมพิวเตอร์
   learn_more: เรียนรู้เพิ่มเติม

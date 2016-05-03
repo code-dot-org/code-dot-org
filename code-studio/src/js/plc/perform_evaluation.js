@@ -1,15 +1,15 @@
 /* global dashboard */
 
 $(window).load(function () {
-  $('#submitEvaluation').click(function () {
+  $('#submit_evaluation').click(function () {
     var evaluationResponses = [];
 
     $('input:checked').each(function () {
-      if (this.value) {
+      if (this.hasAttribute('value')) {
         evaluationResponses.push(this.value);
       }
     });
 
-    $('#answerModuleList').val(evaluationResponses);
+    $('#answer_module_list').val(evaluationResponses);
   });
 });

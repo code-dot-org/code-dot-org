@@ -162,6 +162,13 @@
         </category>
       </xml>
     </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="procedures_callnoreturn">
+          <mutation name="get 3 nectar"/>
+        </block>
+      </xml>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="procedures_defnoreturn" editable="false">

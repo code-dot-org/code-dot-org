@@ -6,9 +6,9 @@
  */
 var Dialog = React.createClass({
   propTypes: {
-    children: React.PropTypes.element.isRequired,
     isOpen: React.PropTypes.bool.isRequired,
-    handleClose: React.PropTypes.func.isRequired
+    handleClose: React.PropTypes.func.isRequired,
+    uncloseable: React.PropTypes.bool
   },
 
   componentDidMount: function () {
@@ -26,7 +26,9 @@ var Dialog = React.createClass({
   },
 
   closeDialog: function () {
-    this.props.handleClose();
+    if (!this.props.uncloseable) {
+      this.props.handleClose();
+    }
   },
 
   focusDialog: function () {
@@ -45,7 +47,7 @@ var Dialog = React.createClass({
         <div className="modal-backdrop in" onClick={this.closeDialog}></div>
         <div tabIndex="-1" className="modal dash_modal in" ref="dialog" onKeyDown={this.closeOnEscape}>
           <div className="modal-body dash_modal_body">
-            <div id="x-close" className="x-close" onClick={this.closeDialog}></div>
+            {!this.props.uncloseable && <div id="x-close" className="x-close" onClick={this.closeDialog}></div>}
             {this.props.children}
           </div>
         </div>

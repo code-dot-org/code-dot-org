@@ -1,7 +1,6 @@
-:javascript
-  #{render template: 'levels/textMatch.js', formats: [:js]}
-  window.levelGroup = {levels: {}};
+- content_for(:head) do
+  =javascript_include_tag 'js/levels/textMatch'
 
-= render partial: 'levels/single_text_match', locals: {index: 0, standalone: true, level: @level, last_attempt: @last_attempt }
+= render partial: 'levels/single_text_match', locals: {standalone: true, level: @level, last_attempt: @last_attempt }
 
 = render partial: 'levels/common_audio'

@@ -1,13 +1,11 @@
 - app = 'level_group'
 - data = @level.properties
 
-:javascript
-  #{render template: 'levels/multi.js', formats: [:js]}
-  #{render template: 'levels/textMatch.js', formats: [:js]}
-  #{render template: 'levels/levelGroup.js', formats: [:js]}
+- content_for(:head) do
+  =javascript_include_tag 'js/levels/levelGroup'
 
+:javascript
   window.levelData = #{data.to_json};
-  window.levelGroup = {levels: {}};
 
 = render partial: 'levels/common_audio'
 
@@ -21,11 +19,20 @@
 - @pages.each do |page|
 
   - unless data["title"].blank?
-    %h2= t('heading_x_of_y', heading: data["title"], x: page.page_number, y: @pages.length)
+    %h2= t('heading_x_of_y', heading: data["title"], x: page.page_number, y: @level.pages.length)
     %br/
 
   - parsed = JSON.parse(@last_attempt || '{}')
   - page.levels.each_with_index do |level, index|
+
+    -# Show any text from an external level.
+
+    - if data["texts"]
+      - data["texts"].select {|text| text["index"] == page.offset + index}.each do |text_level_info|
+        - text_level = Level.find_by_name(text_level_info["level_name"])
+        = render partial: 'levels/external', locals: {in_level_group: true, level: text_level}
+
+    -# Embed the multi/match/free_response level.
 
     - last_attempt = parsed[level.id.to_s].try(:[], 'result')
     - level_class = level.class.to_s.underscore
@@ -36,27 +43,21 @@
         -# For students (or teachers doing PD), mark all answers incorrect, so we don't give anything away.
         - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
           - level.properties['answers'].each { |answer| answer['correct'] = false }
-        = render partial: 'levels/single_multi', locals: {index: index, standalone: false, level: level, last_attempt: last_attempt, tight_layout: true }
+        = render partial: 'levels/single_multi', locals: {standalone: false, level: level, last_attempt: last_attempt, tight_layout: true}
       - elsif level_class == "text_match"
         -# For students (or teachers doing PD), clear out all answers.
         - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
           - level.properties['answers'] = nil
-        = render partial: 'levels/single_text_match', locals: {index: index, standalone: false, level: level, last_attempt: last_attempt }
+        = render partial: 'levels/single_text_match', locals: {standalone: false, level: level, last_attempt: last_attempt }
       - elsif level_class == "free_response"
-        = render partial: 'levels/free_response', locals: {index: index, level: level, last_attempt: last_attempt}
+        = render partial: 'levels/free_response', locals: {in_level_group: true, level: level, last_attempt: last_attempt}
 
   - unless @script_level.nil?
-    - if page.page_number < @total_page_count
-      %a.btn.btn-large.btn-primary.nextPageButton
-        =t('next_page')
-    - else
-      = render partial: 'levels/dialog', locals: {app: app, data: data}
-      %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
-        =t('unsubmit')
+    = render partial: 'levels/dialog', locals: {app: app, data: data, previous_button: page.page_number > 1, next_button: page.page_number < @total_page_count}
 
 - unless @script_level.nil?
   :javascript
-    var levelCount = #{@pages[0].levels.length};
+    var levelCount = #{@total_level_count};
     var page = #{current_page || -1};
 
     var fallbackResponse = #{@fallback_response.to_json};

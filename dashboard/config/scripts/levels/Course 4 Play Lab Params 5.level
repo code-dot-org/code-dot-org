@@ -39,8 +39,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "min_workspace_height": "600",
-    "maze_data": null
+    "min_workspace_height": "600"
   },
   "published": true,
   "notes": "",

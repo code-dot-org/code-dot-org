@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'chef', '12.7.2'
+gem 'chefspec'
 gem 'berkshelf'
 
 # Test-kitchen fork, items not yet merged:

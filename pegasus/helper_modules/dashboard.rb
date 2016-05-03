@@ -24,7 +24,7 @@ module Dashboard
 
     # @returns [User] for given user_id, or nil if not found in database
     def self.get(user_id)
-      row = Dashboard.db[:users][id: user_id]
+      row = Dashboard.db[:users].where(id: user_id, deleted_at: nil).first
       return nil unless row
       Dashboard::User.new(row)
     end
@@ -75,13 +75,17 @@ module Dashboard
     end
 
     def followed_by?(other_user_id)
-      !!Dashboard.db[:followers].
-          where(student_user_id: other_user_id, user_id: id).
-          first
+      Dashboard.db[:followers].
+        join(:users, :id=>:followers__student_user_id).
+        where(followers__student_user_id: other_user_id).
+        where(followers__user_id: id).
+        where(users__deleted_at: nil, followers__deleted_at: nil).
+        any?
     end
 
     def owned_sections
-      Dashboard.db[:sections].select(:id).where(user_id: id).all
+      Dashboard.db[:sections].
+        select(:id).where(user_id: id, deleted_at: nil).all
     end
 
   end

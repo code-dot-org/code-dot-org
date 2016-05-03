@@ -29,13 +29,13 @@ var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
 var AppView = require('../templates/AppView');
-var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var CodeWorkspace = require('../templates/CodeWorkspace');
+var MazeVisualizationColumn = require('./MazeVisualizationColumn');
 var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var mazeUtils = require('./mazeUtils');
-var _ = utils.getLodash();
+var _ = require('../lodash');
 var dropletConfig = require('./dropletConfig');
 
 var MazeMap = require('./mazeMap');
@@ -503,8 +503,6 @@ Maze.init = function (config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
   studioApp.reset = this.reset.bind(this);
 
-  var extraControlRows = null;
-
   skin = config.skin;
   level = config.level;
 
@@ -518,10 +516,6 @@ Maze.init = function (config) {
     Maze.scale.stepSpeed = 2;
   } else if (config.skinId === 'letters') {
     Maze.wordSearch = new WordSearch(level.searchWord, level.map, Maze.drawTile);
-    extraControlRows = require('./extraControlRows.html.ejs')({
-      assetUrl: studioApp.assetUrl,
-      searchWord: level.searchWord
-    });
   }
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.cellClass = BeeCell;
@@ -615,34 +609,21 @@ Maze.init = function (config) {
     }
   };
 
-  var generateCodeWorkspaceHtmlFromEjs = function () {
-    return codeWorkspaceEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        localeDirection: studioApp.localeDirection(),
-        blockUsed: undefined,
-        idealBlockNumber: undefined,
-        editCode: level.editCode,
-        blockCounterClass: 'block-counter-default',
-        readonlyWorkspace: config.readonlyWorkspace
-      }
-    });
-  };
+  var visualizationColumn = (
+    <MazeVisualizationColumn
+      hideRunButton={!!(level.stepOnly && !level.edit_blocks)}
+      showStepButton={!!(level.step && !level.edit_blocks)}
+      searchWord={level.searchWord}
+    />
+  );
 
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        visualization: require('./visualization.html.ejs')(),
-        controls: require('./controls.html.ejs')({
-          assetUrl: studioApp.assetUrl,
-          showStepButton: level.step && !level.edit_blocks
-        }),
-        extraControlRows: extraControlRows
-      },
-      hideRunButton: level.stepOnly && !level.edit_blocks
-    });
-  };
+  var codeWorkspace = (
+    <CodeWorkspace
+      localeDirection={studioApp.localeDirection()}
+      editCode={!!level.editCode}
+      readonlyWorkspace={!!config.readonlyWorkspace}
+    />
+  );
 
   ReactDOM.render(React.createElement(AppView, {
     assetUrl: studioApp.assetUrl,
@@ -651,8 +632,8 @@ Maze.init = function (config) {
     hideSource: !!config.hideSource,
     noVisualization: false,
     isRtl: studioApp.isRtl(),
-    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
-    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
+    codeWorkspace: codeWorkspace,
+    visualizationColumn: visualizationColumn,
     onMount: studioApp.init.bind(studioApp, config)
   }), document.getElementById(config.containerId));
 };

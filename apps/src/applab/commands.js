@@ -21,6 +21,11 @@ var logToCloud = require('../logToCloud');
 
 var OPTIONAL = true;
 
+// For proxying non-https xhr requests
+var XHR_PROXY_PATH = '//' + location.host + '/xhr';
+
+var ICON_PREFIX_REGEX = require('./constants').ICON_PREFIX_REGEX;
+
 var applabCommands = module.exports;
 
 /**
@@ -255,7 +260,12 @@ applabCommands.image = function (opts) {
   apiValidateType(opts, 'image', 'url', opts.src, 'string');
 
   var newImage = document.createElement("img");
-  newImage.src = assetPrefix.fixPath(opts.src);
+  if (ICON_PREFIX_REGEX.test(opts.src)) {
+    newImage.src = assetPrefix.renderIconToString(opts.src, newImage);
+    newImage.width = newImage.height = 200;
+  } else {
+    newImage.src = assetPrefix.fixPath(opts.src);
+  }
   newImage.setAttribute('data-canonical-image-url', opts.src);
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
@@ -1403,7 +1413,14 @@ applabCommands.startWebRequest = function (opts) {
   logWebRequest(opts.url);
   var req = new XMLHttpRequest();
   req.onreadystatechange = applabCommands.onHttpRequestEvent.bind(req, opts);
-  req.open('GET', opts.url, true);
+  if (!Applab.channelId) {
+    // In the unlikely event that the rest of App Lab hasn't broken in the absence
+    // of a channel id, let the user know its out fault that startWebRequest is failing.
+    throw new Error('Internal error: A channel id is required to execute startWebRequest.');
+  }
+  var url = XHR_PROXY_PATH + '?u=' + encodeURIComponent(opts.url) +
+      '&c=' + encodeURIComponent(Applab.channelId);
+  req.open('GET', url, true);
   req.send();
 };
 

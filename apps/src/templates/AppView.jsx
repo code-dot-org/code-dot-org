@@ -16,8 +16,8 @@ var AppView = React.createClass({
     hideSource: React.PropTypes.bool.isRequired,
     noVisualization: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
-    generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
-    generateVisualizationColumnHtml: React.PropTypes.func.isRequired,
+    codeWorkspace: React.PropTypes.element,
+    visualizationColumn: React.PropTypes.element,
     onMount: React.PropTypes.func.isRequired
   },
 
@@ -32,8 +32,9 @@ var AppView = React.createClass({
           isEmbedView={this.props.isEmbedView}
           isShareView={this.props.isShareView}>
         <div id="visualizationColumn">
-          <ProtectedStatefulDiv
-            contentFunction={this.props.generateVisualizationColumnHtml} />
+          {this.props.generateVisualizationColumnHtml && <ProtectedStatefulDiv
+            contentFunction={this.props.generateVisualizationColumnHtml} />}
+          {this.props.visualizationColumn}
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
         <CodeWorkspaceContainer
@@ -41,7 +42,8 @@ var AppView = React.createClass({
             hidden={this.props.hideSource}
             noVisualization={this.props.noVisualization}
             isRtl={this.props.isRtl}
-            generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}/>
+            generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}
+            codeWorkspace={this.props.codeWorkspace}/>
       </StudioAppWrapper>
     );
   }

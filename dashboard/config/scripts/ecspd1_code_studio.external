@@ -1,0 +1,40 @@
+name 'ECSPD1 Code Studio'
+title 'ECSPD1 Code Studio'
+description 'Navigating Code Studio'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+## How To Navigate the Online Professional Learning Program and Check Your Progress
+<br/>
+Your Online professional learning course lives here in Code Studio.  This is your online learning platform (see image 1). 
+
+</br/>
+To get to this page, click on the orange button in the top right corner. 
+- Select Code Studio from the dropdown. 
+- Select your online PD course - that brings you to your progress page (see image 2). 
+<br>
+
+Pay attention to the name of the course you are completing as you'll will have multiple courses you'll be completing during the year! If at any point throughout your Professional Learning Program you have a question, please let us know by emailing teacher@code.org.
+<br/>
+
+<br>
+#### I completed my online professional learning program. Why does it still say I haven't finished?
+
+##### <strong> Make sure you’ve clicked the orange continue button at the bottom of every level in your online PLP (see image 3). </strong> 
+
+<br/>
+*Image 1: Your course in Code Studio*
+
+![Image 1](https://code.org/images//fit-700/online-pd-faq.png)
+
+<br/>
+*Image 2: Your progress page in Code Studio*
+![Image 2](https://code.org/images//fit-700/online-pd-faq2.png)
+
+<br/>
+*Image 3: Importance of the Continue button*
+![Image 3](https://code.org/images//fit-700/online-pd-faq3.png)
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

@@ -20,7 +20,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\n**For-Loops Super Challenge:** Can you figure out how to re-create this drawing? \r\n\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\" width=\"350px\"/>\r\n\r\n<h4 class=\"hint\">\r\n<details>\r\n<summary><b>Hints</b></summary>\r\n\t<br/><br/>\r\n\t<h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #1</b></summary>\r\n    \t<br/>\r\n    \tThe `pen width` is 1. The first square has 50 pixel sides, and each square is 50 pixels wider than the last.\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #2</b></summary>\r\n    \t<br/>\r\n    \tThe opacity on the brush is always `counter`/2.\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Hint #3</b></summary>\r\n    \t<br/>\r\n    \tAfter you make each square, don't forget to jump backward, turn, jump again, then turn back!\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n    \r\n    <h5 class=\"hintInner\">\r\n\t<details>\r\n\t<summary><b>Solution</b></summary>\r\n    \t<br/>\r\n    \t<br/>\r\n    \t<img src=\"https://images.code.org/ab0a2ec7344fd5d9ca7bb9ae44e021aa-image-1453937169708.25.28.png\" width=\"450px\"/>\r\n    \t<br/><br/>\r\n    </details>\r\n\t</h5>\r\n</details>\r\n</h4>\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>More About Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>\r\n",
+    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\n**For-Loops Super Challenge:** Can you figure out how to re-create this drawing? \r\n\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\" width=\"350px\"/>\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -30,9 +30,11 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "never_autoplay_video": "false",
-    "ideal": "27"
+    "ideal": "27",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The `pen width` is 1. The first square has 50 pixel sides, and each square is 50 pixels wider than the last.\",\r\n  \"hint_id\": \"Course_4_SCFL_3_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The opacity on the brush is always `counter`/2.\",\r\n  \"hint_id\": \"Course_4_SCFL_3_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"After you make each square, don't forget to jump backward, turn, jump again, then turn back!\",\r\n  \"hint_id\": \"Course_4_SCFL_3_c\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"**Solution:**![Solution](https://images.code.org/ab0a2ec7344fd5d9ca7bb9ae44e021aa-image-1453937169708.25.28.png)\",\r\n  \"hint_id\": \"Course_4_SCFL_3_d\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 4,
     "repeat_loops": 3,

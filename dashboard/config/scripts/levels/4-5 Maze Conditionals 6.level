@@ -53,15 +53,13 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_if">
           <title name="DIR">isPathLeft</title>
         </block>
+        <block type="maze_forever"/>
       </xml>
-    </required_blocks>
-    <recommended_blocks>
-      <block type="maze_forever"/>
     </recommended_blocks>
     <solution_blocks>
       <xml>

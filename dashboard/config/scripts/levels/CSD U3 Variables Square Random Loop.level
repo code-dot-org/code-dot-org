@@ -29,8 +29,8 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Random Values and the Draw Loop\r\n\r\nWhat if we generate a new random value every time the draw loop runs?\r\n\r\n# Do This\r\n\r\n* Read the program provided\r\n* **Predict:** what will happen when you run the program? Why? **Explain your reasoning to a neighbor**.\r\n* Run the program. Were you surpised by what happened? **Compare notes with a neighbor**.",
-    "start_blocks": "//Predict: What will this program draw?\r\nvar size;\r\n\r\nfunction draw(){\r\n  background(255,255,255);\r\n  size = randomNumber(1,100);\r\n  rect(200,200,size,size);\r\n}",
+    "markdown_instructions": "# Random Values and the Draw Loop\r\n\r\nIn the last level you should have **made a prediction** about the difference between two programs. They are both available here, with the second one commented out.\r\n\r\n# Do This\r\n\r\n* Run the first program\r\n* **Comment out** the first program and **uncomment** the second program\r\n* Run the second program\r\n* **Compare what you observed to your prediction. Discuss the results with a neighbor**",
+    "start_blocks": "// Run this program. Then comment it out,\r\n// uncomment the program below and run that\r\n// one to compare.\r\n\r\nvar size = randomNumber(10,30);\r\nfunction draw(){\r\n  background(\"white\");\r\n  rect(200,200,size,size);\r\n}\r\n\r\n/*\r\nvar size;\r\nfunction draw(){\r\n  background(\"white\");\r\n  size = randomNumber(10,30);\r\n  rect(200,200,size,size);\r\n}\r\n*/",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -53,10 +53,12 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "instructions": "Change the value \"size\" initialized to make a larger square."
+    "instructions": "Test your predictions from the last level."
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

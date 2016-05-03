@@ -3,6 +3,7 @@
 var Radium = require('radium');
 var connect = require('react-redux').connect;
 var actions = require('../../applab/actions');
+var instructions = require('../../redux/instructions');
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
@@ -150,10 +151,10 @@ module.exports = connect(function propsFromStore(state) {
 }, function propsFromDispatch(dispatch) {
   return {
     toggleInstructionsCollapsed: function () {
-      dispatch(actions.toggleInstructionsCollapsed());
+      dispatch(instructions.toggleInstructionsCollapsed());
     },
     setInstructionsHeight: function (height) {
-      dispatch(actions.setInstructionsHeight(height));
+      dispatch(instructions.setInstructionsHeight(height));
     }
   };
 }, null, { withRef: true }

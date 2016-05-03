@@ -6,6 +6,7 @@ var ReactTestUtils = require('react-addons-test-utils');
 
 var MarkdownInstructions = require('@cdo/apps/templates/instructions/MarkdownInstructions');
 var NonMarkdownInstructions = require('@cdo/apps/templates/instructions/NonMarkdownInstructions');
+var instructions = require('@cdo/apps/redux/instructions');
 
 function shallowRender(element) {
   var renderer = ReactTestUtils.createRenderer();
@@ -87,5 +88,78 @@ describe('NonMarkdownInstructions', function () {
     assert.equal(element.children[0].textContent, "title");
     assert.equal(element.children[1].textContent, "instructions");
     assert.equal(element.children[2].textContent, "instructions2");
+  });
+});
+
+describe('instructions reducer', function () {
+  var reducer = instructions.default;
+
+  it('starts out uncollapsed', function () {
+    var state = reducer(null, {});
+    assert.deepEqual(state, {
+      collapsed: false,
+      height: 300,
+      maxHeight: 0
+    });
+  });
+
+  it('toggles collapsed', function () {
+    var initialState, newState;
+
+    // start collapsed
+    initialState = {
+      collapsed: false,
+      height: 300,
+      maxHeight: 0
+    };
+    newState = reducer(initialState, instructions.toggleInstructionsCollapsed());
+    assert.deepEqual(newState, {
+      collapsed: true,
+      height: 300,
+      maxHeight: 0
+    });
+
+    // start uncollapsed
+    initialState = {
+      collapsed: true,
+      height: 300,
+      maxHeight: 0
+    };
+    newState = reducer(initialState, instructions.toggleInstructionsCollapsed());
+    assert.deepEqual(newState, {
+      collapsed: false,
+      height: 300,
+      maxHeight: 0
+    });
+  });
+
+  it('modifies height', function () {
+    var initialState, newState;
+    initialState = {
+      collapsed: false,
+      height: 300,
+      maxHeight: 0
+    };
+    newState = reducer(initialState, instructions.setInstructionsHeight(200));
+    assert.deepEqual(newState, {
+      collapsed: false,
+      height: 200,
+      maxHeight: 0
+    });
+  });
+
+  it('modifies maxHeight', function () {
+    var initialState, newState;
+    initialState = {
+      collapsed: false,
+      height: 300,
+      maxHeight: 0
+    };
+    newState = reducer(initialState, instructions.setInstructionsMaxHeight(400));
+    assert.deepEqual(newState, {
+      collapsed: false,
+      height: 300,
+      maxHeight: 400
+    });
   });
 });

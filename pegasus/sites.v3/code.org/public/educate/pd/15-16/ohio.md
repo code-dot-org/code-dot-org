@@ -26,41 +26,7 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
-
-
-**Save the date:**
-
-Quarter 4: Saturday, April 16, 2016 
-
-8:30am - 3:30pm
-<br/>
-Breakfast and lunch will be served.
-
-**Location**
-
-[Columbus State Community College<br/>
-Conference Center<br/>
-Room 407<br/>
-315 Cleveland Avenue<br/>
-Columbus, OH 43215](https://www.google.com/maps/place/Columbus+State+Child+Development+Center/@39.969909,-82.9919726,16z/data=!4m2!3m1!1s0x0:0xb426e07cbf2840c5)
-
-Review the [campus map](http://www.cscc.edu/about/columbus/) (the Conference Center is listed as WD on the corner of Cleveland Ave and Grove Street) and [building map](http://www.cscc.edu/community/conference-center/floor-plans-pricing.shtml). 
-
-Please print these [Parking Directions](https://code.org/files/ohio-lot27-s.pdf) and [Parking Pass](/files/4-16-16-columbus-ecs-parking.pdf) to bring with you on the day of the event.
-
-Please remember to bring your robotics kits. If you don't have robotics kits, you should still plan to attend the workshop!
-
-**What to bring to Phase 3 quarterly sessions:**
-
-Laptop and Charger
-<br/>
-ECS green journal <br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
+Milestone Complete!
 
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)

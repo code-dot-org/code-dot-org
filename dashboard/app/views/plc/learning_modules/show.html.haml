@@ -4,8 +4,10 @@
 %p
   %strong Name:
   = @learning_module.name
-  - if @learning_module.required
-    %span.required REQUIRED
+
+%p
+  %strong Learning module type:
+  = @learning_module.module_type.try(:titleize)
 
 -@task_groupings.each do |task_grouping|
   .outlined_section

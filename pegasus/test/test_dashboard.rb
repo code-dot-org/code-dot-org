@@ -13,7 +13,11 @@ class DashboardTest < Minitest::Test
     before do
       FakeDashboard.use_fake_database
       @student = Dashboard::User.get(FakeDashboard::STUDENT[:id])
+      @deleted_student = Dashboard::User.
+        get(FakeDashboard::DELETED_STUDENT[:id])
       @teacher = Dashboard::User.get(FakeDashboard::TEACHER[:id])
+      @teacher_with_deleted = Dashboard::User.
+        get(FakeDashboard::TEACHER_WITH_DELETED[:id])
       @admin = Dashboard::User.get(FakeDashboard::ADMIN[:id])
       @facilitator = Dashboard::User.get(FakeDashboard::FACILITATOR[:id])
     end
@@ -49,6 +53,16 @@ class DashboardTest < Minitest::Test
                          ]
                      },
                      @teacher.select(:name, :owned_sections))
+      end
+    end
+
+    describe 'get' do
+      it 'does return students' do
+        assert @student
+      end
+
+      it 'does not return deleted students' do
+        assert_nil @deleted_student
       end
     end
 
@@ -91,6 +105,42 @@ class DashboardTest < Minitest::Test
         assert @facilitator.has_permission? 'FACILITATOR'
         assert @facilitator.has_permission? ' facilitator '
         assert @facilitator.has_permission? :facilitator
+      end
+    end
+
+    describe 'followed_by?' do
+      it 'returns true when appropriate' do
+        assert @teacher.followed_by?(@student.id)
+      end
+
+      it 'returns false when appropriate' do
+        assert !@admin.followed_by?(@student.id)
+      end
+
+      it 'ignores deleted followers' do
+        assert !@teacher_with_deleted.followed_by?(FakeDashboard::SELF_STUDENT[:id])
+      end
+
+      it 'ignores deleted students' do
+        assert !@teacher_with_deleted.followed_by?(FakeDashboard::DELETED_STUDENT[:id])
+      end
+    end
+
+    describe 'owned_sections' do
+      it 'returns no sections for a student' do
+        assert_equal 0, @student.owned_sections.count
+      end
+
+      it 'returns sections for a teacher' do
+        sections = @teacher.owned_sections
+        assert_equal 2, sections.size
+        assert_equal [{id: 150001}, {id: 150002}], sections
+      end
+
+      it 'does not return deleted sections' do
+        sections = @teacher_with_deleted.owned_sections
+        assert_equal 1, sections.size
+        assert_equal [{id: 150004}], sections
       end
     end
   end

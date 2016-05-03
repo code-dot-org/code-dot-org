@@ -8,7 +8,7 @@
  */
 'use strict';
 
-var utils = require('../utils');
+var utils = require('../utils'); // Provides Function.prototype.inherits
 var i18n = require('./locale');
 var markup = require('./NetSimLogPanel.html.ejs');
 var Packet = require('./Packet');

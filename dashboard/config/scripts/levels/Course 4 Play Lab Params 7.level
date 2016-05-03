@@ -21,7 +21,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "instructions": "Let's have some fun! Look at the code provided to see if you can figure out what each block does.  \r\n\r\nWhen you're done, use the arrow keys to control Dog and collect all of the flags.",
+    "instructions": "Let's have some fun! Look at the code provided to see if you can figure out what each block does.  \r\nWhen you're done, use the arrow keys to control Dog and collect all of the flags.\r\nNOTE: You don't need to make any changes to the program",
     "first_sprite_index": "0",
     "embed": "false",
     "soft_buttons": [
@@ -32,7 +32,7 @@
     ],
     "disable_sharing": "false",
     "protaganist_sprite_index": "0",
-    "markdown_instructions": "Let's have some fun! Look at the code provided to see if you can figure out what each block does.  \r\n\r\nWhen you're done, use the arrow keys to control Dog and collect all of the flags.",
+    "markdown_instructions": "Let's have some fun! Look at the code provided to see if you can figure out what each block does.  \r\n\r\nWhen you're done, use the arrow keys to control Dog and collect all of the flags.\r\n\r\n**NOTE:** You don't need to make any changes to the program",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -47,6 +47,7 @@
     "examples_required": "false"
   },
   "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 1,
     "repeat_until_while": 1,

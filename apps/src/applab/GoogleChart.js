@@ -7,7 +7,7 @@
 /* global google, Promise */
 
 require("babelify/polyfill"); // required for Promises in IE / Phantom
-require('../utils');
+require('../utils'); // Provides Function.prototype.inherits
 
 /**
  * Abstract base type for Google Charts API charts.

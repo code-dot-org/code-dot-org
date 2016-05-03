@@ -1707,7 +1707,7 @@ fr:
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
-        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+        text: "Si tu aimerais faire ton propre jeu, c'est très simple. Tout ce dont tu auras besoin, c'est de quelques bases en programmation, et après tu pourras commencer à jouer à ton propre jeu."
       2:
         image: notes/gumball_intro_2.JPG
         text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
@@ -1761,7 +1761,7 @@ fr:
     iceage_intro:
       1:
         image: notes/iceage_intro_1.JPG
-        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+        text: "Si tu aimerais faire ton propre jeu, c'est très simple. Tout ce dont tu auras besoin, c'est de quelques bases en programmation, et après tu pourras commencer à jouer à ton propre jeu."
       2:
         image: notes/iceage_intro_2.JPG
         text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."

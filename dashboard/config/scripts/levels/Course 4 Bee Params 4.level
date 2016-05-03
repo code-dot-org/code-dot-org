@@ -230,8 +230,18 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
+        <block type="procedures_callnoreturn" inline="false">
+          <mutation name="get 3 nectar">
+            <arg name="direction"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="variables_get">
+              <title name="VAR">???</title>
+            </block>
+          </value>
+        </block>
         <block type="controls_repeat">
-          <title name="TIMES">2</title>
+          <title name="TIMES">???</title>
         </block>
       </xml>
     </recommended_blocks>

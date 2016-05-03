@@ -10,7 +10,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,3,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,0,0,0,3,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "disable_param_editing": "false",
     "disable_variable_editing": "true",
     "start_direction": "1",
@@ -22,7 +22,7 @@
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "predraw_blocks": "<xml><block type=\"procedures_defnoreturn\" movable=\"false\"><mutation><arg name=\"direction\" /></mutation><title name=\"NAME\">get 3 nectar</title><statement name=\"STACK\"><block type=\"controls_if\" inline=\"false\"><mutation else=\"1\" /><value name=\"IF0\"><block type=\"logic_compare\" inline=\"true\" movable=\"false\"><title name=\"OP\">EQ</title><value name=\"A\"><block type=\"variables_get\" movable=\"false\"><title name=\"VAR\">direction</title></block></value><value name=\"B\"><block type=\"variables_get\"><title name=\"VAR\">left</title></block></value></block></value><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"controls_repeat\"><title name=\"TIMES\">3</title><statement name=\"DO\"><block type=\"maze_nectar\" /></statement><next><block type=\"maze_move\"><title name=\"DIR\">moveBackward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveBackward</title></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type=\"when_run\" movable=\"false\" deletable=\"false\"><next><block type=\"variables_set\" inline=\"false\" movable=\"false\" deletable=\"false\"><title name=\"VAR\">left</title><value name=\"VALUE\"><block type=\"math_number\" movable=\"false\" deletable=\"false\" editable=\"false\"><title name=\"NUM\">0</title></block></value><next><block type=\"variables_set\" inline=\"false\" movable=\"false\" deletable=\"false\"><title name=\"VAR\">right</title><value name=\"VALUE\"><block type=\"math_number\" movable=\"false\" deletable=\"false\" editable=\"false\"><title name=\"NUM\">1</title></block></value><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"procedures_callnoreturn\" inline=\"false\"><mutation name=\"get 3 nectar\"><arg name=\"direction\" /></mutation><value name=\"ARG0\"><block type=\"variables_get\"><title name=\"VAR\">right</title></block></value><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"procedures_callnoreturn\" inline=\"false\"><mutation name=\"get 3 nectar\"><arg name=\"direction\" /></mutation><value name=\"ARG0\"><block type=\"variables_get\"><title name=\"VAR\">left</title></block></value><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"procedures_callnoreturn\" inline=\"false\"><mutation name=\"get 3 nectar\"><arg name=\"direction\" /></mutation><value name=\"ARG0\"><block type=\"variables_get\"><title name=\"VAR\">right</title></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "markdown_instructions": "Now there are flowers on both sides!  \r\n\r\nWe've added variables called `left` and `right` for you to use, and added a parameter called `direction` to `get 3 nectar`. Edit `get 3 nectar` so that the bee turns the correct direction when the variables `left` or `right` are passed into the function. ",
+    "markdown_instructions": "Now there are flowers on both sides!  \r\n\r\nWe've added variables called `left` and `right` for you to use, and now there is a parameter called `direction` inside `get 3 nectar`. \r\n\r\n**Edit `get 3 nectar` so that the bee turns the correct direction when the variables `left` or `right` are passed into the function.**",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -35,7 +35,8 @@
     "fast_get_nectar_animation": "true",
     "callout_json": "[]"
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 5,
     "functions_with_params": 2
@@ -233,7 +234,7 @@
             <mutation name="get 3 nectar"/>
           </block>
         </category>
-        <category name="Variables">
+        <category name="Variables" custom="VARIABLE">
           <block type="variables_get">
             <title name="VAR">left</title>
           </block>
@@ -243,77 +244,93 @@
         </category>
       </xml>
     </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="procedures_callnoreturn" inline="false">
+          <mutation name="get 3 nectar">
+            <arg name="direction"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="variables_get">
+              <title name="VAR">???</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" deletable="false" movable="false" uservisible="false" y="14">
           <next>
-            <block type="variables_set" inline="false" deletable="false" movable="false">
+            <block type="variables_set" inline="false" deletable="false" movable="false" uservisible="false">
               <title name="VAR">left</title>
               <value name="VALUE">
-                <block type="math_number" deletable="false" movable="false" editable="false">
+                <block type="math_number" deletable="false" movable="false" editable="false" uservisible="false">
                   <title name="NUM">0</title>
                 </block>
               </value>
               <next>
-                <block type="variables_set" inline="false" deletable="false" movable="false">
+                <block type="variables_set" inline="false" deletable="false" movable="false" uservisible="false">
                   <title name="VAR">right</title>
                   <value name="VALUE">
-                    <block type="math_number" deletable="false" movable="false" editable="false">
+                    <block type="math_number" deletable="false" movable="false" editable="false" uservisible="false">
                       <title name="NUM">1</title>
                     </block>
                   </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_move">
+              <title name="DIR">moveForward</title>
+              <next>
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
                   <next>
-                    <block type="maze_move">
-                      <title name="DIR">moveForward</title>
+                    <block type="procedures_callnoreturn" inline="false">
+                      <mutation name="get 3 nectar">
+                        <arg name="direction"/>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="variables_get">
+                          <title name="VAR">right</title>
+                        </block>
+                      </value>
                       <next>
                         <block type="maze_move">
                           <title name="DIR">moveForward</title>
                           <next>
-                            <block type="procedures_callnoreturn" inline="false">
-                              <mutation name="get 3 nectar">
-                                <arg name="direction"/>
-                              </mutation>
-                              <value name="ARG0">
-                                <block type="variables_get">
-                                  <title name="VAR">right</title>
-                                </block>
-                              </value>
+                            <block type="maze_move">
+                              <title name="DIR">moveForward</title>
                               <next>
-                                <block type="maze_move">
-                                  <title name="DIR">moveForward</title>
+                                <block type="procedures_callnoreturn" inline="false">
+                                  <mutation name="get 3 nectar">
+                                    <arg name="direction"/>
+                                  </mutation>
+                                  <value name="ARG0">
+                                    <block type="variables_get">
+                                      <title name="VAR">left</title>
+                                    </block>
+                                  </value>
                                   <next>
                                     <block type="maze_move">
                                       <title name="DIR">moveForward</title>
                                       <next>
-                                        <block type="procedures_callnoreturn" inline="false">
-                                          <mutation name="get 3 nectar">
-                                            <arg name="direction"/>
-                                          </mutation>
-                                          <value name="ARG0">
-                                            <block type="variables_get">
-                                              <title name="VAR">left</title>
-                                            </block>
-                                          </value>
+                                        <block type="maze_move">
+                                          <title name="DIR">moveForward</title>
                                           <next>
-                                            <block type="maze_move">
-                                              <title name="DIR">moveForward</title>
-                                              <next>
-                                                <block type="maze_move">
-                                                  <title name="DIR">moveForward</title>
-                                                  <next>
-                                                    <block type="procedures_callnoreturn" inline="false">
-                                                      <mutation name="get 3 nectar">
-                                                        <arg name="direction"/>
-                                                      </mutation>
-                                                      <value name="ARG0">
-                                                        <block type="variables_get">
-                                                          <title name="VAR">right</title>
-                                                        </block>
-                                                      </value>
-                                                    </block>
-                                                  </next>
+                                            <block type="procedures_callnoreturn" inline="false">
+                                              <mutation name="get 3 nectar">
+                                                <arg name="direction"/>
+                                              </mutation>
+                                              <value name="ARG0">
+                                                <block type="variables_get">
+                                                  <title name="VAR">right</title>
                                                 </block>
-                                              </next>
+                                              </value>
                                             </block>
                                           </next>
                                         </block>
