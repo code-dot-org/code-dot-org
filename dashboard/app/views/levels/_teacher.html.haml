@@ -17,7 +17,10 @@
         - if @user_level
           .user_level
             .level
-              - status = activity_css_class(@user_level.best_result)
+              - if @user_level.submitted?
+                - status = "submitted"
+              - else
+                - status = activity_css_class(@user_level.best_result)
               .level_link{class: status}
                 - if @level.unplugged?
                   %span.puzzle-named
@@ -79,7 +82,11 @@
             - @section.students.order(:name).each do |student|
               - active = 'active' if @user && student.id == @user.id
               %tr.section-student{class: active}
-                - status = activity_css_class(student.user_level_for(@script_level).try(:best_result))
+                - user_level = student.user_level_for(@script_level)
+                - if user_level && user_level.submitted?
+                  - status = "submitted"
+                - else
+                  - status = activity_css_class(user_level.try(:best_result))
                 %td
                   .level_link{class: status}
                     - if @level.unplugged?
