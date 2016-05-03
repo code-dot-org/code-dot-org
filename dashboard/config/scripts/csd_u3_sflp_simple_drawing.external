@@ -21,6 +21,32 @@ Welcome to Game Lab! Game lab allows you to draw interactive games and animation
 # Vocab
 
 * Program - blah blah
+* Bug - blah blah
+* Debugging - blah blah
+
+# Command Overview
+### Shapes : 
+|Command| Meaning| Example | Documentation |
+|---|---| --- | --- |
+|rect(x, y, width, height)|Draws a rectangle| `rect(100, 200, 50, 20)` | link |
+|ellipse(x, y, width, height)|Draws an oval| `ellipse(10, 25, 100, 300)` | link |
+|regularPolygon(x, y, number of sides, radius)|Draws a multi-sided shape with equal length sides|`regularPolygon(100, 50, 5, 50)`| link |
+|text("string", x, y)|Draws text|`text("Code.org", 100, 100)`| link |
+
+### Color and Style:
+|Command| Meaning| Example |  Documentation |
+|---|---| --- | --- |
+|color(red, green, blue)|Creates a color using RGB values| `color(255,125,255)`| link |
+|fill(‘color’)|Sets the internal color for shapes| `fill("teal")`| link |
+|noFill()|Sets the shapes to have no internal color|`noFill()`|link |
+|stroke(‘color’)|Sets the outline color for shapes| `stroke("magenta")`|link |
+|noStroke()|Sets shapes to have no outline| `noStroke()`|link |
+|strokeWeight()|Sets the thickness of the outline| `strokeWeight(30)` |link |
+
+### Clean Code :
+|Command| Meaning| Example |  Documentation |
+|---|---| --- | --- |
+|// comment|Creates information for humans| `// Creates arms ` |link |
 
 # Resources
 * Activity Guide: <a href="https://drive.google.com/open?id=1_Dkh33G7NTrnlAR0kD8UJZ9A2xFO_ICIJeDrxm-S6e4">Simple Drawings in Game Lab</a>

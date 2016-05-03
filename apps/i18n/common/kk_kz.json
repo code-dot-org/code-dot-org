@@ -233,5 +233,9 @@
   "watchVideo": "Бейнематериалды көру",
   "when": "кезде",
   "whenRun": "қосу кезінде",
-  "workspaceHeaderShort": "Жұмыс аумағы: "
+  "workspaceHeaderShort": "Жұмыс аумағы: ",
+  "builtOnCodeStudio": "Built on Code Studio",
+  "copyright": "Copyright",
+  "privacyPolicy": "Privacy Policy",
+  "reportAbuse": "Report Abuse"
 }

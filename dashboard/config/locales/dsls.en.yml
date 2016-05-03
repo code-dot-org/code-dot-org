@@ -94,6 +94,7 @@ en:
       CSD U3 Variables console write: {}
       CSD U3 Variables2 SFLP: {}
       CSD U3 Variables2 STOP intro expressions: {}
+      CSD U3 Variables2 STOP variables in expressions: {}
       CSD Variables STOP variables in draw loop: {}
       CSD-U3-SFLP Draw Loop: {}
       CSD-U3-SFLP Simple Drawing: {}
@@ -114,6 +115,7 @@ en:
       CSP Unit 3 - Learning JavaScript Resources:
         Learning JavaScript Resources: Learning JavaScript Resources
         description here: description here
+      CSP-mod1-unit1overview: {}
       CSPPD PD Phases:
         CSPPD PD Phases: CSPPD PD Phases
       CSPPD PD overview:
@@ -283,6 +285,11 @@ en:
         title: title
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
+      ECS PD1 classroom culture:
+        ECS classroom culture: ECS classroom culture
+      ECS PD1 teaching strategies:
+        ECS PD1 teaching strategies: ECS PD1 teaching strategies
+        ECSPD1 teaching strategies: ECSPD1 teaching strategies
       ECS Phase 3 Overview: {}
       ECS Phase 3 Unit 3 Overview: {}
       ECS Phase 3 Unit 4 Overview: {}
@@ -505,7 +512,63 @@ en:
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: An exploration of Growth Mindset
         What is Growth Mindset?: What is Growth Mindset?
+      ECSPD1  intro to The Hour of Code:
+        Introduction to The Hour of Code: Introduction to The Hour of Code
+      ECSPD1 Code Studio:
+        ECSPD1 Code Studio: ECSPD1 Code Studio
+        Navigating Code Studio: Navigating Code Studio
+      ECSPD1 Forum:
+        ECS Forum: ECS Forum
+        ECS Forum Discussion: ECS Forum Discussion
+      ECSPD1 Forum Intro:
+        Forum Introduction: Forum Introduction
+      ECSPD1 Welcome to the Code.org Family:
+        ECSPD1 Welcome to the Code.org Family: ECSPD1 Welcome to the Code.org Family
+        Welcome to the Code.org Family: Welcome to the Code.org Family
+      ECSPD1 barriers to access cs:
+        Barriers to Access CS: Barriers to Access CS
+        ECSPD1 Barriers to Access CS: ECSPD1 Barriers to Access CS
+      ECSPD1 congratulations end:
+        ECS PD1 congratulations end: ECS PD1 congratulations end
+      ECSPD1 cs is about:
+        ECSPD1 cs is about: ECSPD1 cs is about
+      ECSPD1 curriculum connections:
+        ECS Curriculum Connections: ECS Curriculum Connections
+        ECS curriculum connections: ECS curriculum connections
+      ECSPD1 curriculum design: {}
+      ECSPD1 equity in cs education:
+        Equity in Computer Science Education: Equity in Computer Science Education
+      ECSPD1 navigating progress:
+        ECSPD1 navigating progress: ECSPD1 navigating progress
+        Navigating and Progress: Navigating and Progress
+      ECSPD1 post survey: {}
       ECSPD1 pre survey: {}
+      ECSPD1 professional learning program phases:
+        ECS professional learning program phases: ECS professional learning program phases
+        ECSP Professional Learning Program Phases: ECSP Professional Learning Program Phases
+      ECSPD1 results of The Hour of Code:
+        Results of The Hour of Code: Results of The Hour of Code
+        Results of The Hour of code: Results of The Hour of code
+      ECSPD1 student centered learning:
+        ECS Student Centered Learning: ECS Student Centered Learning
+        ECS student centered learning: ECS student centered learning
+      ECSPD1 unifying themes:
+        ECS Unifying Themes: ECS Unifying Themes
+      ECSPD1 unit 1 overview:
+        ECS Unit 1 Overview: ECS Unit 1 Overview
+        ECS unit 1 overview: ECS unit 1 overview
+      ECSPD1 unit 2 overview:
+        ECS Unit 2 Overview: ECS Unit 2 Overview
+        ECS unit 2 overview: ECS unit 2 overview
+      ECSPD1 unit overviews:
+        ECS  unit overviews: ECS  unit overviews
+        ECS Unit Overviews: ECS Unit Overviews
+      ECSPD1 wrap up:
+        ECS Wrap Up: ECS Wrap Up
+        ECS unit wrap up: ECS unit wrap up
+      ECSPD1 your role:
+        ECS Your Role as a Learner and Facilitator: ECS Your Role as a Learner and Facilitator
+        ECS your role as a learner and facilitator: ECS your role as a learner and facilitator
       ECSPD3-u5 about: {}
       ECSPD3-u5 challenge details: {}
       ECSPD3-u5 challenge inside: {}
@@ -775,6 +838,9 @@ en:
       PDECS tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
+      PDECS tour 2016-17 CSinSci:
+        Tour of PD Space: Tour of PD Space
+        tour of the PD space: tour of the PD space
       PDK5 Beyond C:
         Beyond: Beyond
       PDK5 CS Video:
@@ -820,6 +886,9 @@ en:
         Unplugged intro: Unplugged intro
       PDK5 Why K5 CS:
         Why teach computer science in elementary school?: Why teach computer science in elementary school?
+      PDSci commitment:
+        CS in Science PD commitments: CS in Science PD commitments
+        overview of program commitments: overview of program commitments
       Pixelation - Lesson 14 - Instructions Make Your Own:
         Make your own B&W image: Make your own B&W image
         description here: description here
@@ -988,6 +1057,7 @@ en:
       U3 - Conditionals - Translating Flowcharts - Else: {}
       U3 - Conditionals - Translating Flowcharts - If Statement: {}
       U3 - Simple Drawing - Plan Personal Drawing: {}
+      U3 - Simple Drawings - Review Rect Oval Fill: {}
       U3 - Simulation - Intro: {}
       U3 Simulation Updating Hypotheses: {}
       U3 Simulations Hypotheses Reflections: {}
@@ -1381,6 +1451,8 @@ en:
       facilitator test: {}
       k5 what next 1: {}
       rbo-test1: {}
+      sciPD Break 16-17:
+        Before you move on...: Before you move on...
       sciPD Course Overview: {}
       sciPD Intro: {}
       sciPD StarLogo intro 1:
@@ -1419,6 +1491,8 @@ en:
         Models in the Classroom: Models in the Classroom
       sciPD class models video:
         Using Models in the Classroom: Using Models in the Classroom
+      sciPD commitment 2016-17:
+        Commitment for 2016-2017: Commitment for 2016-2017
       sciPD complex adaptive forum:
         Complex Adaptive Forum: Complex Adaptive Forum
       sciPD complex adaptive video:
@@ -1433,6 +1507,8 @@ en:
         Dispositions And Classroom Culture: Dispositions And Classroom Culture
       sciPD expectations: {}
       sciPD finish:
+        Code.org Post Survey: Code.org Post Survey
+      sciPD finish 16-17:
         Code.org Post Survey: Code.org Post Survey
       sciPD framework forum:
         Computational Thinking and the Framework for K-12: Computational Thinking and the Framework for K-12
@@ -1449,6 +1525,7 @@ en:
       sciPD materials:
         Workshop Materials: Workshop Materials
       sciPD meet and greet: {}
+      sciPD meet and greet 16-17: {}
       sciPD p2 intro:
         Welcome to Phase 2: Welcome to Phase 2
       sciPD p3 intro:
@@ -1458,6 +1535,8 @@ en:
       sciPD preQ p1 16-17:
         Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
       sciPD what to expect:
+        What to Expect: What to Expect
+      sciPD what to expect 16-17:
         What to Expect: What to Expect
       sciPD2 SLN explore:
         Exploring StarLogo Nova Advanced Features: Exploring StarLogo Nova Advanced Features
@@ -1813,6 +1892,18 @@ en:
         Match each character with its correct coordinate!: Match each character with its correct coordinate!
         Ninjacat: Ninjacat
         Ruby: Ruby
+      ECS Matching Program Commitment:
+        'Academic Year Development: 4 days in-person and 20 hours online': 'Academic Year Development: 4 days in-person and 20 hours online'
+        ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 5).
+        : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 5).
+        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
+        'Optional Summer Wrap-up: 3 days in-person': 'Optional Summer Wrap-up: 3 days in-person'
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        Phase 4: Phase 4
+        Program Commitment Matching Question: Program Commitment Matching Question
+        'Summer Study: 5 days in-person': 'Summer Study: 5 days in-person'
       ECSPD Growth Mindset Reflection Q:
         Fixed Mindset: Fixed Mindset
         Fixed vs Growth Mindset: Fixed vs Growth Mindset
@@ -1884,6 +1975,20 @@ en:
         Phase 3: Phase 3
         Phase 4: Phase 4
       ECSPD unit matching:
+        Matching Unit Descriptions and Numbers: Matching Unit Descriptions and Numbers
+        Unit 1: Unit 1
+        Unit 2: Unit 2
+        Unit 3: Unit 3
+        Unit 4: Unit 4
+        Unit 5: Unit 5
+        Unit 6: Unit 6
+        application of problem solving techniques to develop solutions: application of problem solving techniques to develop solutions
+        apply programming and problem solving to the study of robots: apply programming and problem solving to the study of robots
+        create programs to solve computational problems: create programs to solve computational problems
+        introduction to the concepts of computer and computing: introduction to the concepts of computer and computing
+        use computing to manage and interpret data: use computing to manage and interpret data
+        website development and design: website development and design
+      ECSPD1 Matching Unit Descriptions and Numbers:
         Matching Unit Descriptions and Numbers: Matching Unit Descriptions and Numbers
         Unit 1: Unit 1
         Unit 2: Unit 2
@@ -2096,15 +2201,15 @@ en:
         https://studio.code.org/script_assets/pd/circle2.png: https://studio.code.org/script_assets/pd/circle2.png
         https://studio.code.org/script_assets/pd/circle3.png: https://studio.code.org/script_assets/pd/circle3.png
       PDAlg commitment match:
-        'Academic Year Development: 2 days in-person and 10 hours online': 'Academic Year Development: 2 days in-person and 10 hours online'
-        'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer Study: 3 days in-person and 8 hours online'
+        'Blended Academic Year Development: 2 hours online, self-paced. 1 day (7 hours) in person': 'Blended Academic Year Development: 2 hours online, self-paced. 1 day (7 hours) in person'
         ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
         : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
-        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
+        'Online Introduction: 2 hours online, self-paced': 'Online Introduction: 2 hours online, self-paced'
         Phase 1: Phase 1
         Phase 2: Phase 2
         Phase 3: Phase 3
         Program Commitment Matching Question: Program Commitment Matching Question
+        'Summer Study: 2 days (14 hours) in-person': 'Summer Study: 2 days (14 hours) in-person'
       PDECS commitment match:
         'Academic Year Development: 4 days in-person and 12 hours online': 'Academic Year Development: 4 days in-person and 12 hours online'
         'Blended Summer Study: 5 days in-person and 8 hours online': 'Blended Summer Study: 5 days in-person and 8 hours online'
@@ -2335,10 +2440,22 @@ en:
         yearbook-picture: yearbook-picture
       sciPD commitment match:
         'Academic Year Development: 2 days in-person and 10 hours online': 'Academic Year Development: 2 days in-person and 10 hours online'
+        'Blended Summer Study: 2 days in-person and 7 hours online': 'Blended Summer Study: 2 days in-person and 7 hours online'
         'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer Study: 3 days in-person and 8 hours online'
         ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
         : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
         'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
+        'Online Introduction: 3 hours online': 'Online Introduction: 3 hours online'
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        Program Commitment Matching Question: Program Commitment Matching Question
+      sciPD commitment match 16-17:
+        'Blended Academic Year Development: 2 days in-person and 10 hours online': 'Blended Academic Year Development: 2 days in-person and 10 hours online'
+        'Blended Summer Study: 2 days in-person and 7 hours online': 'Blended Summer Study: 2 days in-person and 7 hours online'
+        ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
+        : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
+        'Online Introduction: 3 hours online, self-paced': 'Online Introduction: 3 hours online, self-paced'
         Phase 1: Phase 1
         Phase 2: Phase 2
         Phase 3: Phase 3

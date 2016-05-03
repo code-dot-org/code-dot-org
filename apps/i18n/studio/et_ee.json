@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "Sul on vaja saada 20 hiirt. Kasuta sündmuses „kui saab hiire“ käsku „lisa hiir“, et lisada mõne hiire kättesaamisel kaks või rohkem hiirt juurde.",
   "failedMultiplyCharactersTimeoutGotSome": "Tubli töö! Lisasid hiirte loomiseks koodi. Võid liikuda järgmise mõistatuse juurde või proovida uuesti saada 20 hiirt. Et asi oleks lihtsam, lisa neid juurde! (Kiiremaks liikumiseks vajuta pikalt klaviatuuril (või ekraanil) olevaid klahve.)",
   "failedChangeSettingTimeout": "Edasiliikumiseks hangi kolm pilooti.",
-  "failedChangeSettingSettings": "Tee oma mäng. Mõistatuse lahendamiseks pead muutma oma droidi ja määrama selle kiiruse."
+  "failedChangeSettingSettings": "Tee oma mäng. Mõistatuse lahendamiseks pead muutma oma droidi ja määrama selle kiiruse.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }

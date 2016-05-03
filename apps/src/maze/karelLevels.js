@@ -321,7 +321,7 @@ module.exports = {
   '1_5': {
     'toolbox': toolbox(1, 5),
     'startBlocks': startBlocks(1, 5),
-    'ideal': 6,
+    'ideal': 5,
     'requiredBlocks': [
       [MOVE_FORWARD], [FILL], [REPEAT], [UNTIL_BLOCKED]
     ],
@@ -457,7 +457,7 @@ module.exports = {
 
   '1_9': {
     'toolbox': toolbox(1, 9),
-    'ideal': 10,
+    'ideal': 8,
     'requiredBlocks': [
       [MOVE_FORWARD],
       [DIG],

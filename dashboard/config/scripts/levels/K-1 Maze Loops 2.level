@@ -27,8 +27,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Use the `repeat` block to get me to the pig!",
-    "maze_data": null
+    "markdown_instructions": "Use the `repeat` block to get me to the pig!"
   },
   "published": true,
   "notes": "",
