@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return Studio.Globals.level > 4\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return Studio.Globals.level > 2;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "soft_buttons": [
@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "We've added one last function for you. \r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\" function only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor example: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level 4 to move to the next puzzle. ",
+    "instructions": "We've added one last function for you. \r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\" function only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor example: \"player_score\" > 6\r\n\r\nPlay the game, and make it to level 3 to move to the next puzzle. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -30,7 +30,7 @@
     "coordinate_grid_background": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "We've added one last function for you.\r\n<hr/>\r\n\r\n<h4>\r\nUse an `if` statement to program your game to call the `level_up` function only when `player_score` becomes greater than a certain number.<br/><br/>\r\n</h4>\r\n<i>For example: `player_score` > 6</i>\r\n\r\n\r\n<hr/>\r\n<i>Play the game, and make it past level 4 to move to the next puzzle.</i>",
+    "markdown_instructions": "We've added one last function for you.\r\n<hr/>\r\n\r\n<h4>\r\nUse an `if` statement to program your game to call the `level_up` function only when `player_score` becomes greater than a certain number.<br/><br/>\r\n</h4>\r\n<i>For example: `player_score` > 6</i>\r\n\r\n\r\n<hr/>\r\n<i>Play the game, and make it to level 3 to move to the next puzzle.</i>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -45,6 +45,7 @@
     "min_workspace_height": "2200"
   },
   "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 5,
     "repeat_until_while": 2,

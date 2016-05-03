@@ -1,5 +1,4 @@
-var utils = require('../utils');
-var _ = utils.getLodash();
+var _ = require('../lodash');
 
 /**
  * An instantiable Artist API logic. The methods on this object are called by

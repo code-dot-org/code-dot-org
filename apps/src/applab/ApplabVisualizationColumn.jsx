@@ -1,8 +1,8 @@
 var Visualization = require('./Visualization');
-var GameButtons = require('./GameButtons');
+var GameButtons = require('../templates/GameButtons');
+var CompletionButton = require('./CompletionButton');
 var PlaySpaceHeader = require('./PlaySpaceHeader');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var commonStyles = require('../commonStyles');
+var BelowVisualization = require('../templates/BelowVisualization');
 var connect = require('react-redux').connect;
 
 /**
@@ -26,28 +26,10 @@ var ApplabVisualizationColumn = React.createClass({
             onScreenCreate={this.props.onScreenCreate} />
         }
         <Visualization/>
-        <GameButtons/>
-        <ProtectedStatefulDiv id="belowVisualization">
-          <div id="bubble" className="clearfix">
-            <table id="prompt-table">
-              <tbody>
-                <tr>
-                  <td id="prompt-icon-cell" style={commonStyles.hidden}>
-                    <img id="prompt-icon"/>
-                  </td>
-                  <td id="prompt-cell">
-                    <p id="prompt"/>
-                    <p id="prompt2" style={commonStyles.hidden}/>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div id="ani-gif-preview-wrapper" style={commonStyles.hidden}>
-              <div id="ani-gif-preview">
-              </div>
-            </div>
-          </div>
-        </ProtectedStatefulDiv>
+        <GameButtons instructionsInTopPane={this.props.instructionsInTopPane}>
+          <CompletionButton/>
+        </GameButtons>
+        <BelowVisualization instructionsInTopPane={this.props.instructionsInTopPane}/>
       </div>
     );
   }
@@ -56,5 +38,6 @@ var ApplabVisualizationColumn = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isReadOnlyWorkspace: state.level.isReadOnlyWorkspace,
+    instructionsInTopPane: state.level.instructionsInTopPane
   };
 })(ApplabVisualizationColumn);

@@ -23,7 +23,7 @@ class HintViewRequestsControllerTest < ActionController::TestCase
 
     params = {
       script_id: 1,
-      level_id: 1,
+      level_id: ActiveRecord::FixtureSet.identify(:level_1),
       feedback_type: 1,
       feedback_xml: '',
     }

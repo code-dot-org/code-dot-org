@@ -1,7 +1,7 @@
 #about_nav
   %span.about_list
     -current_url = "/educate/professional-learning-partner"
-    -{'Workshop planning'=>current_url + '/playbook/workshop-planning','Teacher support'=>current_url + '/playbook/teacher-support','Facilitator support'=>'/playbook/facilitator-support','FAQ'=>current_url + '/faq'}.each_pair do |label,url|
+    -{'Playbook home'=>current_url + '/playbook','Communications and branding'=>current_url + '/playbook/communications','Facilitator support'=>current_url + '/playbook/facilitator-support', 'Teacher support'=>current_url + '/playbook/teacher-support', 'Workshop planning'=>current_url + '/playbook/workshop-planning', 'FAQ'=>current_url + '/playbook/faq'}.each_pair do |label,url|
       - if current_url == url
         %span.about_list_item_selected= label
       -else

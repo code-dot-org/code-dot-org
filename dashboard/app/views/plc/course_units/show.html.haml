@@ -22,7 +22,7 @@
   - @course_unit.plc_learning_modules.each do |learning_module|
     %li
       = link_to learning_module.name, learning_module
-      - if learning_module.required
+      - if learning_module.is_required?
         %span.required REQUIRED
 %hr
 %p
@@ -53,7 +53,7 @@
               = answer.answer
             %td
               #{answer.plc_learning_module.try(:name)}
-              -if answer.plc_learning_module.try(:required)
+              -if answer.plc_learning_module.try(:is_required?)
                 %span.required REQUIRED
             %td
         %tr.cloneableAnswerRow
@@ -61,7 +61,7 @@
           %td
             = text_field_tag ''
           %td
-            = select_tag '', options_for_select(options_for_evaluation_answer_modules(@course_unit)), include_blank: ''
+            = select_tag '', options_for_select(options_with_learning_module_names_and_required_tag(@course_unit)), include_blank: ''
           %td
         %tr.new_answer_button_row{question_id: question.id}
           %td

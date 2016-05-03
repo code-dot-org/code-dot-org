@@ -9,9 +9,8 @@ class TransfersController < ApplicationController
     begin
       new_section = Section.find_by!(code: new_section_code)
     rescue ActiveRecord::RecordNotFound
-      # TODO: i18n
       render json: {
-        error: "Sorry, but that section does not exist. Please enter a different section code."
+        error: I18n.t('move_students.new_section_dne', new_section_code: new_section_code)
       }, status: :not_found
       return
     end
@@ -20,17 +19,15 @@ class TransfersController < ApplicationController
     if params.has_key?(:current_section_code)
       current_section_code = params[:current_section_code]
     else
-      # TODO: i18n
       render json: {
-        error: "Please provide current_section_code."
+        error: I18n.t('move_students.section_code_not_entered')
       }, status: :bad_request
       return
     end
 
     if new_section_code == current_section_code
-      # TODO: i18n
       render json: {
-        error: "The current section cannot be the same as the new section."
+        error: I18n.t('move_students.section_code_cant_be_current_section')
       }, status: :bad_request
       return
     end
@@ -38,17 +35,15 @@ class TransfersController < ApplicationController
     begin
       current_section = Section.find_by!(code: current_section_code)
     rescue ActiveRecord::RecordNotFound
-      # TODO: i18n
       render json: {
-        error: "Sorry, but section #{current_section_code} does not exist. Please enter a different section code."
+        error: I18n.t('move_students.current_section_dne', current_section_code: current_section_code)
       }, status: :not_found
       return
     end
 
     if current_section.user != current_user
-      # TODO: i18n
       render json: {
-        error: "You cannot move students from a section that does not belong to you."
+        error: I18n.t('move_students.students_not_yours')
       }, status: :forbidden
       return
     end
@@ -61,9 +56,8 @@ class TransfersController < ApplicationController
     elsif params.has_key?(:stay_enrolled_in_current_section)
       stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section]
     else
-      # TODO: i18n
       render json: {
-        error: "Please provide stay_enrolled_in_current_section."
+        error: I18n.t('move_students.stay_enrolled_not_entered')
       }, status: :bad_request
       return
     end
@@ -71,9 +65,8 @@ class TransfersController < ApplicationController
     if params.has_key?(:student_ids)
       student_ids = params[:student_ids].split(',').map(&:to_i)
     else
-      # TODO: i18n
       render json: {
-        error: "Please provide student_ids."
+        error: I18n.t('move_students.student_ids_not_entered')
       }, status: :bad_request
       return
     end
@@ -81,17 +74,15 @@ class TransfersController < ApplicationController
     begin
       students = User.find(student_ids)
     rescue ActiveRecord::RecordNotFound
-      # TODO: i18n
       render json: {
-        error: "One or more students could not be found."
+        error: I18n.t('move_students.student_not_found')
       }, status: :not_found
       return
     end
 
     if student_ids.count != current_user.followers.where(student_user_id: student_ids).count
-      # TODO: i18n
       render json: {
-        error: "All the students must currently be enrolled in your section."
+        error: I18n.t('move_students.all_students_must_be_in_current_section')
       }, status: :forbidden
       return
     end
@@ -100,7 +91,7 @@ class TransfersController < ApplicationController
       new_section_teacher = new_section.user
       if students.any? {|student| Follower.exists?(student_user: student, user_id: new_section_teacher.id)}
         render json: {
-          error: "You cannot move these students because this teacher already has them in another section."
+          error: I18n.t('move_students.already_enrolled_in_new_section')
         }, status: :bad_request
         return
       end

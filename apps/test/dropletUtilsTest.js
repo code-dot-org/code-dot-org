@@ -821,26 +821,31 @@ describe('mergeCategoriesWithConfig', function () {
         "blocks": []
       },
       "Control": {
+        "id": "control",
         "color": "blue",
         "rgb": "#64B5F6",
         "blocks": []
       },
       "Math": {
+        "id": "math",
         "color": "orange",
         "rgb": "#FFB74D",
         "blocks": []
       },
       "Variables": {
+        "id": "variables",
         "color": "purple",
         "rgb": "#BB77C7",
         "blocks": []
       },
       "Functions": {
+        "id": "functions",
         "color": "green",
         "rgb": "#68D995",
         "blocks": []
       },
       "": {
+        "id": "default",
         "blocks": []
       }
     };

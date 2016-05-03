@@ -25,7 +25,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "// Use randomNumber() to draw some\r\n// shapes with randomized colors\r\n",
+    "start_blocks": "// Use randomNumber() to draw some\r\n// shapes with randomized colors\r\nfill(color(0,0,0));\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -52,7 +52,9 @@
     "instructions": "Could you use randomNumber() to pick random colors as well? Try setting one or more of the channels in the rgb block with a random number. What should the maximum value be?"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

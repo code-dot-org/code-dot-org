@@ -1,0 +1,21 @@
+name 'CSD U3 Variables STOP showing value'
+css 'unplugged'
+markdown <<MARKDOWN
+# Showing a variable's value
+
+It is useful to **display a variable's value**. Here are two ways of doing this.
+
+**Write:** You already know how to use the `write` command to show text. If you use a variable's **label without quotes** in the write command you can show your variable's value on the screen.
+
+	Example:
+	var size = 10;
+	write(size, 20, 20, 100, 100);
+
+**Console.log:** This is a new command. Below your code there is a **debug console**. This can be used to **display information about your program you don't want your user to see.** We'll explore the power of this tool in coming levels.
+
+	Example:
+	var size = 10;
+	console.log(size);
+
+Time to try these out!
+MARKDOWN

@@ -7,15 +7,13 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
-      "declareAssign_x": null,
       "declareNoAssign_x": null,
-      "assign_x": null,
-      "console.log": null
+      "assign_x": null
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Reassigning a Variable\r\n\r\nA variable can only hold **one piece of information at a time**. What do you think happens when you try to assign a  value to a variable already holding some information?\r\n\r\n# Do This\r\n\r\nYou will **not write any code** in this level.\r\n\r\n* Read the program provided\r\n* **Predict** what number will be displayed in the console.\r\n* Run the program\r\n* **Discuss the results with a neighbor**. Were you suprised?",
-    "start_blocks": "var size;\r\nsize = 10;\r\nsize = 20;\r\nconsole.log(size);",
+    "markdown_instructions": "# Assiging a Variable\r\n\r\nVariables **store a single piece of information that can change throughout your program**. The `=` command gives a variable a new value.\r\n\r\nYou read the command `size = 10;` as \"size gets the value 10\". You can also say \"size gets 10\".\r\n\r\n# Do This\r\n\r\n**Use the `=` command** to assign a value to the variable `numberOfDogs`",
+    "start_blocks": "var numberOfCats;\r\nvar numberOfDogs;\r\nnumberOfCats = 10;\r\n//Assign a value to numberOfDogs",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -41,7 +39,9 @@
     "instructions": "Predict: What will get displayed in the console?"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

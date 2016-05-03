@@ -27,11 +27,11 @@ var VersionRow = React.createClass({
       button = <button className="btn-default" disabled="disabled" style={{cursor: "default"}}>{msg.currentVersion()}</button>;
     } else {
       button = [
-        <a href={location.href + '?version=' + this.props.versionId}
+        <a key={0} href={location.href + '?version=' + this.props.versionId}
           target="_blank">
           <button className="version-preview"><i className="fa fa-eye"></i></button>
         </a>,
-        <button className="btn-info" onClick={this.props.onChoose}>{msg.restoreThisVersion()}</button>
+        <button key={1} className="btn-info" onClick={this.props.onChoose}>{msg.restoreThisVersion()}</button>
       ];
     }
 

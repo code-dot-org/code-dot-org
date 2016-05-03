@@ -10,7 +10,7 @@ content-type: text/ng-template
   = I18n.t('dashboard_landing_loading')
 
 %div{'ng-show' => 'assessmentsLoaded'}
-  View assesments in:
+  = I18n.t('dashboard_assessments_view')
   %select{"ng-model" => "course_id", "ng-options"=>"k*1 as v for (k, v) in course_list", 'ng-change' => 'changeScript(course_id)'}
 
 %br/
@@ -19,7 +19,7 @@ content-type: text/ng-template
   assessments_filtered = "assessments | orderBy:order | filter:(stageFilter && {stage: stageFilter}):true"
 
 %div{style: "padding-left:20px", 'ng-show' => '!assessments.length'}
-  No assessments
+  = I18n.t('dashboard_assessments_none')
 %div{style: "padding-left:20px", 'ng-show' => 'assessments.length'}
   %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'assessments.length', "ng-form" => "allForm"}
     %colgroup
@@ -34,16 +34,16 @@ content-type: text/ng-template
     %tr
       %th.manage-th{colspan: 8}
         %div{'ng-show' => 'stages && stages.length > 1', style: 'float: left; line-height: 35px'}
-          Filter by stage:
+          = I18n.t('dashboard_filter_by_stage')
           %select{'ng-model' => 'stageFilter', "ng-options" => "stage for stage in stages", "ng-show" => 'stages'}
-            %option{value: ""} All
+            %option{value: ""}= I18n.t('dashboard_filter_all')
         %button.btn.btn-white{'ng-csv' => assessments_filtered,
                 filename: "assessments.csv",
                 'csv-header' => "['Name', 'Stage', 'Puzzle', 'Status', 'Multi correct', 'Multi count', 'Multi correct percent', 'Submission timestamp']",
                 'csv-column-order' => "['student.name', 'stage', 'puzzle', 'status' , 'multi_correct', 'multi_count', 'multi_correct_percent', 'timestamp']",
                 style: 'float: right'}
           %i.fa.fa-download
-          Download CSV
+          = I18n.t('dashboard_download_csv')
 
     %tr
       %th.manage-th
@@ -100,16 +100,16 @@ content-type: text/ng-template
     %tr
       %th.manage-th{colspan: 6}
         %div{'ng-show' => 'stages && stages.length > 1', style: 'float: left; line-height: 35px'}
-          Filter by stage:
+          = I18n.t('dashboard_filter_by_stage')
           %select{'ng-model' => 'stageFilter', "ng-options" => "stage for stage in stages", "ng-show" => 'stages'}
-            %option{value: ""} All
+            %option{value: ""}= I18n.t('dashboard_filter_all')
         %button.btn.btn-white{'ng-csv' => levels_filtered,
                 filename: "assessment_levels.csv",
                 'csv-header' => "['Name', 'Stage', 'Puzzle', 'Question', 'Response', 'Correctness']",
                 'csv-column-order' => "['student.name', 'stage', 'puzzle', 'question', 'studentResult', 'correct']",
                 style: 'float: right'}
           %i.fa.fa-download
-          Download CSV
+          = I18n.t('dashboard_download_csv')
 
     %tr
       %th.manage-th

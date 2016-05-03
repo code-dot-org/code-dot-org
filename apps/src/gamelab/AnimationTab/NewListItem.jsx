@@ -38,7 +38,7 @@ var styles = {
     fontSize: 48,
     marginTop: '-50%'
   },
-  sequenceName: {
+  animationName: {
     marginLeft: 4,
     marginRight: 4,
     marginTop: 4,
@@ -50,7 +50,7 @@ var styles = {
 };
 
 /**
- * List item control (usable in sequences or frames lists) for adding
+ * List item control (usable in animation or frame lists) for adding
  * a new item - displays as a plus sign in a dashed box.
  */
 var NewListItem = React.createClass({
@@ -62,13 +62,13 @@ var NewListItem = React.createClass({
   render: function () {
     var hovered = Radium.getState(this.state, 'main', ':hover');
     return (
-      <div style={styles.tile} onClick={this.props.onClick}>
+      <div style={styles.tile} onClick={this.props.onClick} className="newListItem">
         <div style={styles.wrapper}>
           <div style={[styles.dottedBorder, hovered && styles.dottedBorderHovered]}>
             <i className="fa fa-plus" style={styles.addButton}></i>
           </div>
         </div>
-        <div className="sequence-name" style={styles.sequenceName}>
+        <div className="animation-name" style={styles.animationName}>
           {this.props.label}
         </div>
       </div>

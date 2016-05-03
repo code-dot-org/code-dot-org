@@ -31,7 +31,9 @@
     "disable_examples": "false",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "fast_get_nectar_animation": "false"
+    "fast_get_nectar_animation": "false",
+    "markdown_instructions": "**Challenge:** Now there's honey to deal with too! \r\n\r\nRewrite your function to use both the number of honey units and the number of nectar units.  How would you use those numbers to decide what you should do?",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"It's okay to ask for a honey number and a nectar number each time.  If there's none of something, the number can be 0.\",\r\n  \"hint_id\": \"Course_4_Bee_Params_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
   "notes": "",
@@ -233,7 +235,7 @@
             </value>
           </block>
         </category>
-        <category name="Variables">
+        <category name="Variables" custom="VARIABLE">
           <block type="variables_get">
             <title name="VAR">left</title>
           </block>
@@ -241,21 +243,11 @@
             <title name="VAR">right</title>
           </block>
         </category>
-        <category name="NEW BLOCKS">
-          <block type="procedures_callnoreturn" inline="false">
-            <mutation name="get nectar make honey">
-              <arg name="direction"/>
-              <arg name="nectars"/>
-              <arg name="honey"/>
-            </mutation>
-          </block>
-          <block type="parameters_get"/>
-        </category>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false" y="15">
+        <block type="when_run" deletable="false" movable="false" uservisible="false" y="14">
           <next>
             <block type="variables_set" inline="false" deletable="false" movable="false" uservisible="false">
               <title name="VAR">left</title>

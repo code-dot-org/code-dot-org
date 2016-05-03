@@ -7,7 +7,7 @@ var utils = require('@cdo/apps/utils');
 var requiredBlockUtils = require('@cdo/apps/required_block_utils');
 var blockUtils = require('@cdo/apps/block_utils');
 var assert = testUtils.assert;
-var _ = require('lodash');
+var _ = require('@cdo/apps/lodash');
 var mazeUtils = require('@cdo/apps/maze/mazeUtils');
 
 describe("String.prototype.repeat", function () {
@@ -724,5 +724,48 @@ describe('utils.unescapeText', function () {
         });
       });
     });
+  });
+});
+
+describe('utils.makeEnum', function () {
+  var makeEnum = utils.makeEnum;
+  it('builds a key:"key" enum object from its arguments', function () {
+    var Seasons = makeEnum('SPRING', 'SUMMER', 'FALL', 'WINTER');
+    assert.deepEqual(Seasons, {
+      SPRING: 'SPRING',
+      SUMMER: 'SUMMER',
+      FALL: 'FALL',
+      WINTER: 'WINTER'
+    });
+  });
+
+  it('returns an empty object when given no arguments', function () {
+    var TheVoid = makeEnum();
+    assert.deepEqual(TheVoid, {});
+  });
+
+  it('attempts to coerce arguments to string', function () {
+    var Coerced = makeEnum(undefined, null, 3.14, {});
+    assert.deepEqual(Coerced, {
+      'undefined': 'undefined',
+      'null': 'null',
+      '3.14': '3.14',
+      '[object Object]': '[object Object]'
+    });
+  });
+
+  it('throws if a duplicate key occurs', function () {
+    assert.throws(function () {
+      makeEnum('twins', 'twins');
+    });
+  });
+
+  it('freezes returned object if Object.freeze is available', function () {
+    var ColdThings = makeEnum('snow', 'ice', 'vacuum');
+    if (Object.freeze) {
+      assert.throws(function () {
+        ColdThings['sorbet'] = 'sorbet';
+      });
+    }
   });
 });

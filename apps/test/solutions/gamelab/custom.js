@@ -1,6 +1,5 @@
 var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants').TestResults;
-var _ = require('lodash');
 
 module.exports = {
   app: "gamelab",

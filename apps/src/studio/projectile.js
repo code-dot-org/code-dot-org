@@ -1,7 +1,7 @@
 var Collidable = require('./collidable');
 var Direction = require('./constants').Direction;
 var constants = require('./constants');
-var utils = require('../utils');
+var utils = require('../utils'); // Provides Function.prototype.inherits
 var StudioAnimation = require('./StudioAnimation');
 var StudioSpriteSheet = require('./StudioSpriteSheet');
 

@@ -53,10 +53,10 @@ class SectionApiHelperTest < Minitest::Test
       before do
         # mock scripts (the first query to the db gets the scripts)
         @fake_db.fetch = [
-            {id: 1, name: 'Foo', hidden: '0'},
-            {id: 3, name: 'Bar', hidden: '0'},
-            {id: 4, name: 'mc', hidden: '0'},
-            {id: 5, name: 'hourofcode', hidden: '0'}
+            {id: 1, name: 'Foo', hidden: false},
+            {id: 3, name: 'Bar', hidden: false},
+            {id: 4, name: 'mc', hidden: false},
+            {id: 5, name: 'hourofcode', hidden: false}
         ]
       end
 

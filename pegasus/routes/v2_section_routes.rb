@@ -3,7 +3,9 @@ get '/v2/sections' do
   only_for 'code.org'
   dont_cache
   content_type :json
-  JSON.pretty_generate(DashboardSection.fetch_user_sections(dashboard_user_id))
+  sections = DashboardSection.fetch_user_sections(dashboard_user_id)
+  forbidden! unless sections
+  JSON.pretty_generate(sections)
 end
 
 post '/v2/sections' do
@@ -19,7 +21,9 @@ get '/v2/sections/membership' do
   only_for 'code.org'
   dont_cache
   content_type :json
-  JSON.pretty_generate(DashboardSection.fetch_student_sections(dashboard_user_id))
+  sections = DashboardSection.fetch_student_sections(dashboard_user_id)
+  forbidden! unless sections
+  JSON.pretty_generate(sections)
 end
 
 get '/v2/sections/:id' do |id|
@@ -87,8 +91,4 @@ get '/v2/sections/:id/teachers' do |id|
   forbidden! unless section = DashboardSection.fetch_if_allowed(id, dashboard_user_id)
   content_type :json
   JSON.pretty_generate(section.to_owner_hash[:teachers])
-end
-
-get '/v2/sections/:id/login_cards' do |id|
-
 end

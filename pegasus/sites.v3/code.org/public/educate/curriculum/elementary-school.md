@@ -125,6 +125,34 @@ By the end of each course, students can create interactive games or stories that
 The courses are flexible so educators can tailor them to their class based on their students’ developmental
 level and prior experience. The lessons align to <a href="http://csta.acm.org/Curriculum/sub/K12Standards.html" target="_blank">CSTA Computer Science Standards </a>, <a href="http://www.iste.org/standards/standards-for-students" target="_blank">ISTE standards </a>, and reinforce concepts and skills taught in other subject areas by integrating national <a href="http://www.corestandards.org/Math/" target="_blank">Math </a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts </a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science </a> standards. 
 
+## Examples of student creations
+
+[col-33]
+
+<center><img src="/images/animated-examples/artist-game-space.gif" width="90%"></center>
+
+<div style="margin-top: 5px;">In this puzzle, the student created a honeycomb pattern.</div>
+
+[/col-33]
+
+[col-33]
+
+<center><img src="/images/animated-examples/play-lab-game-space.gif" width="90%"></center>
+
+<div style="margin-left: 15px; margin-top: 5px;">This student created a game with different levels, so that they can play against different characters. Game on!</div>
+
+[/col-33]
+
+[col-33]
+
+<center><img src="/images/animated-examples/flappy-game-space.gif" width="90%"></center>
+
+<div style="margin-left: 15px; margin-top: 5px;">This student created a Flappy Bird game.</div>
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
 ## Teacher dashboard
 The Code Studio teacher dashboard makes it easy for teachers to view lesson plans, create student accounts and monitor student progress. Students don't need an email address to have an account in Code Studio. Students can even log-in with a picture instead of a text password.
 
@@ -145,8 +173,8 @@ The Code Studio teacher dashboard makes it easy for teachers to view lesson plan
 ## No workshop in your area? 
 [Find](/educate/k5-affiliates-directory) a K-5 Affiliate near you or consider completing one of our [online self-paced courses](/educate/professional-development-online) on your own.
 
-## Become a K-5 Affiliate- for your district or region
-Code.org is interested in partnering with local [school districts](/educate/k5-district-partnership) and experienced [computer science educators](/educate/k5-affiliates) to host K-5 workshops.
+## Become a CS Fundamentals Facilitator- for your district or region
+Code.org is interested in partnering with local [school districts](/educate/district) and experienced [computer science educators](/educate/professional-learning/cs-fundamentals-facilitator) to host K-5 workshops.
 
 
 ## Need more help?
@@ -155,6 +183,9 @@ check out Code.org’s [live events for teachers](http://www.eventbrite.com/o/co
 
 ## Spread the word! 
 Use [this email](/educate/k5/resources) or share this [one-pager](/educate/k5/k5onepager.pdf) with teachers, principals and district administrators. 
+
+## Don't have computers?
+No problem. You can still teach the fundamentals of computer science without any computers or devices. Try using these [unplugged lessons](/curriculum/unplugged) in your classroom as a stand-alone course or as complementary lessons for any computer science course.
 
 ## 3rd Party resources for elementary school CS
 

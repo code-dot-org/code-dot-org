@@ -1,0 +1,50 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-28T20:56:04.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "drawSprites": null,
+      "var sprite = createSprite": null,
+      "randomNumber_min_max": null,
+      "shapeColor": null,
+      "color": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "instructions": "Do This",
+    "markdown_instructions": "# Random Shape Color\r\n\r\nA sprite is actually a special thing in programming called an object. An object is an item that comes with a bunch of properties. In past levels you created rectangles and then made a bunch of variables to keep track of different qualities about that rectangles such as its position and color. Sprites take away the need to make lots of separate variables because they are built in as properties. \r\n\r\nThe first sprite property you are going to use is `shapeColor`. `shapeColor` controls the color of the rectangle sprite. To access properties programmers use something called dot notation. For `shapeColor` that looks like <img src=\"\" style=\"width:100\"> where sprite is the name of the sprite you want to change the color of. \r\n\r\nProperties can be used to both get and set the value.  For now just worry about setting which looks like <img src=\"\" style=\"width:100\">. Just like variables, properties can also be updated repeatedly inside the draw loop to produce an animation. \r\n\r\nOne thing you need to be careful of as you write programs with sprites is that you keep `drawSprites` as the last line inside the draw loop. This will allow all the updates to the sprites to happen before redrawing.\r\n\r\n# Do This\r\n\r\nYou are going to make both sprites change colors randomly.\r\n\r\n* Move the commands to set `shapeColor` inside the draw loop. Make sure to keep `drawSprites` as the last line in the draw loop\r\n* Set the `shapeColor` of both sprites to a random color \r\n* Run the program and test it out.",
+    "show_d_pad": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

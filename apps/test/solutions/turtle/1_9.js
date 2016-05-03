@@ -21,7 +21,7 @@ module.exports = {
       description: "Top failure: Same as top solve, but with no loop",
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.TOO_FEW_BLOCKS_FAIL
       },
       missingBlocks: [],
       xml: '<xml><block type="draw_colour" inline="true"><value name="COLOUR"><block type="colour_random"></block></value><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_move_by_constant"><title name="DIR">moveBackward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">45</title></block></next></block></next></block></next></block></xml>'

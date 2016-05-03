@@ -1,5 +1,6 @@
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
+require('../utils'); // Provides Function.prototype.inherits
 
 var EvalCircle = function (width, height, style, color) {
   evalUtils.ensureNumber(width);

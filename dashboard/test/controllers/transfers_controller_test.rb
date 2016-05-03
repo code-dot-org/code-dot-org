@@ -25,7 +25,7 @@ class TransfersControllerTest < ActionController::TestCase
     post :create, new_section_code: code, student_ids: @word_user_1.id.to_s, current_section_code: @word_section.code, stay_enrolled_in_current_section: false
 
     assert_response 404
-    assert_equal "Sorry, but that section does not exist. Please enter a different section code.", json_response["error"]
+    assert_equal "Sorry, but section #{code} does not exist. Please enter a different section code.", json_response["error"]
   end
 
   test "returns an error when the current_section_code is not provided" do

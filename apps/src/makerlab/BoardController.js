@@ -57,16 +57,18 @@ BoardController.prototype.ensureBoardConnected = function () {
 
 BoardController.prototype.installComponentsOnInterpreter = function (codegen, jsInterpreter) {
   this.prewiredComponents = this.prewiredComponents ||
-      initializeCircuitPlaygroundComponents(this.board_.io);
+      initializeCircuitPlaygroundComponents(this.board_.io, this.board_);
 
   var componentConstructors = {
     Led: five.Led,
+    Board: five.Board,
     RGB: five.Led.RGB,
     Button: five.Button,
     Switch: five.Switch,
     Piezo: five.Piezo,
     Thermometer: five.Thermometer,
     Sensor: five.Sensor,
+    Pin: five.Pin,
     CapTouch: PlaygroundIO.CapTouch,
     Tap: PlaygroundIO.Tap,
     Accelerometer: five.Accelerometer
@@ -154,8 +156,19 @@ function getDevicePort() {
   }.bind(this));
 }
 
+/**
+ * Returns whether the given descriptor's serialport is potentially an Arduino
+ * device.
+ *
+ * Based on logic in johnny-five lib/board.js, match ports that Arduino cares
+ * about, like: ttyUSB#, cu.usbmodem#, COM#
+ *
+ * @param {Object} port node-serial compatible serialport info object
+ * @returns {boolean} whether this is potentially an Arduino device
+ */
 function deviceOnPortAppearsUsable(port) {
-  return port.comName.match(/usbmodem/);
+  var comNameRegex = /usb|acm|^com/i;
+  return comNameRegex.test(port.comName);
 }
 
 /**
@@ -163,7 +176,7 @@ function deviceOnPortAppearsUsable(port) {
  * Circuit Playground board.
  * @returns {Object.<String, Object>} board components
  */
-function initializeCircuitPlaygroundComponents(io) {
+function initializeCircuitPlaygroundComponents(io, board) {
   return {
     pixels: Array.from({length: 10}, function (_, index) {
       return new five.Led.RGB({
@@ -173,16 +186,6 @@ function initializeCircuitPlaygroundComponents(io) {
     }),
 
     led: new five.Led(13),
-
-    buttonL: new five.Button('4', {
-      isPullup: true,
-      invert: true
-    }),
-
-    buttonR: new five.Button('19', {
-      isPullup: true,
-      invert: true
-    }),
 
     toggle: new five.Switch('21'),
 
@@ -202,17 +205,41 @@ function initializeCircuitPlaygroundComponents(io) {
       freq: 100
     }),
 
-    sound: new five.Sensor({
-      pin: "A4",
-      freq: 100
-    }),
-
     accelerometer: new five.Accelerometer({
       controller: PlaygroundIO.Accelerometer
     }),
 
     tap: new PlaygroundIO.Tap(io),
 
-    touch: new PlaygroundIO.CapTouch(io)
+    touch: new PlaygroundIO.CapTouch(io),
+
+    /**
+     * Must initialize sound sensor BEFORE left button, otherwise left button
+     * will not respond to input.
+     */
+    sound: new five.Sensor({
+      pin: "A4",
+      freq: 100
+    }),
+
+    buttonL: new five.Button('4'),
+
+    buttonR: new five.Button('19'),
+
+    board: board,
+
+    /**
+     * Constants helpful for prototyping direct board usage
+     */
+    INPUT: 0,
+    OUTPUT: 1,
+    ANALOG: 2,
+    PWM: 3,
+    SERVO: 4
   };
 }
+
+BoardController.__testonly__ = {
+  deviceOnPortAppearsUsable: deviceOnPortAppearsUsable,
+  getDevicePort: getDevicePort
+};

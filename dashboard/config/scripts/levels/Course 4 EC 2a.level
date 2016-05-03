@@ -17,8 +17,8 @@
     "step_mode": "1",
     "nectar_goal": "22",
     "flower_type": "redWithNectar",
-    "ideal": "20",
-    "instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!",
+    "ideal": "18",
+    "instructions": "No rules. No clues. Just the challenge!",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "honey_goal": "0",
@@ -32,9 +32,11 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "fast_get_nectar_animation": "false",
-    "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!"
+    "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!",
+    "step_speed": "1"
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 5,
     "repeat_loops": 5,

@@ -1,0 +1,18 @@
+name 'CSD U3 Variables console write'
+css 'unplugged'
+markdown <<MARKDOWN
+# Using a variable's value
+
+Variables have a **label** or name and a **value**. There's only **3 ways to use a variable** and you already know two of them. 
+
+* `var score;`  creates a new variable
+* `score = 10;`  assigns a value to a variable
+
+Any time you use the label outside of the two examples above, **your program will use the value currently in that variable**.
+
+* `write(score, 100, 100, 200, 200)` writes the value of `score` to the screen
+* `rect(200, 200, size, size)` will use the value of `size` to make a rectangle
+* `strokeWeight(defaultWeight)` will use the value of `defaultWeight` to set the stroke weight
+
+Let's try it out!
+MARKDOWN

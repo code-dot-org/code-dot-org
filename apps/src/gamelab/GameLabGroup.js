@@ -27,7 +27,8 @@ module.exports.Group = function (baseConstructor) {
    *
    * @private
    * @method _groupCollideGameLab
-   * @param {!string} type one of 'overlap', 'collide', 'displace', 'bounce'
+   * @param {!string} type one of 'overlap', 'collide', 'displace', 'bounce', or
+   * 'bounceOff'
    * @param {Object} target Group or Sprite
    * @param {Function} [callback] on collision.
    * @return {boolean} True if any collision/overlap occurred
@@ -64,6 +65,7 @@ module.exports.Group = function (baseConstructor) {
   array.collide = _groupCollideGameLab.bind(array, 'collide');
   array.displace = _groupCollideGameLab.bind(array, 'displace');
   array.bounce = _groupCollideGameLab.bind(array, 'bounce');
+  array.bounceOff = _groupCollideGameLab.bind(array, 'bounceOff');
 
   /**
    * Test each member of group against the target using the isTouching sprite
@@ -112,7 +114,6 @@ module.exports.Group = function (baseConstructor) {
 
   array.destroyEach = array.callMethodEach.bind(array, 'destroy');
   array.pointToEach = array.callMethodEach.bind(array, 'pointTo');
-  array.setColorRGBEach = array.callMethodEach.bind(array, 'setColorRGB');
   array.setColliderEach = array.callMethodEach.bind(array, 'setCollider');
   array.setSpeedEach = array.callMethodEach.bind(array, 'setSpeed');
   array.setVelocityEach = array.callMethodEach.bind(array, 'setVelocity');

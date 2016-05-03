@@ -172,8 +172,8 @@ module LevelsHelper
 
     if @level.is_a? Blockly
       @app_options = blockly_options
-    elsif @level.is_a? DSLDefined
-      @app_options = dsl_defined_options
+    elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse)
+      @app_options = question_options
     elsif @level.is_a? Widget
       @app_options = widget_options
     elsif @level.unplugged?
@@ -228,8 +228,8 @@ module LevelsHelper
     app_options
   end
 
-  # Options hash for DSLDefined
-  def dsl_defined_options
+  # Options hash for Multi/Match/FreeResponse/TextMatch/ContractMatch/External/LevelGroup levels
+  def question_options
     app_options = {}
 
     level_options = app_options[:level] ||= Hash.new

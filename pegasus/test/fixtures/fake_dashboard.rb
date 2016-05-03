@@ -20,22 +20,16 @@ module FakeDashboard
   SELF_STUDENT = {
     id: 5, name: 'Self Studying Student', user_type: 'student', admin: false
   }
-  UPDATED_STUDENT = {
-    id: 6, name: 'Supdating Student', user_type: 'student', admin: false,
-  }
   DELETED_STUDENT = {
-    id: 7, name: 'Stricken Student', user_type: 'student', admin: false,
+    id: 6, name: 'Stricken Student', user_type: 'student', admin: false,
     deleted_at: '2016-01-01 12:34:56'
   }
   TEACHER_WITH_DELETED = {
-    id: 8, name: 'Temporary Teacher', user_type: 'teacher', admin: false
-  }
-  TEACHER_WITH_UPDATED = {
-    id: 9, name: 'Temporary Teacher', user_type: 'teacher', admin: false
+    id: 7, name: 'Temporary Teacher', user_type: 'teacher', admin: false
   }
   USERS = [
-    STUDENT, TEACHER, ADMIN, FACILITATOR, SELF_STUDENT, UPDATED_STUDENT,
-    DELETED_STUDENT, TEACHER_WITH_DELETED, TEACHER_WITH_UPDATED
+    STUDENT, TEACHER, ADMIN, FACILITATOR, SELF_STUDENT, DELETED_STUDENT,
+    TEACHER_WITH_DELETED
   ]
 
   #
@@ -52,22 +46,39 @@ module FakeDashboard
   #
   # Fake Data: Sections
   #
+  SECTION_NORMAL = {id: 150001, user_id: TEACHER[:id], name: 'Fake Section A'}
+  SECTION_EMPTY = {id: 150002, user_id: TEACHER[:id], name: 'Fake Section B'}
+  SECTION_DELETED = {
+    id: 150003, user_id: TEACHER_WITH_DELETED[:id], name: 'Fake Section C',
+    deleted_at: '2015-01-01 12:34:56'
+  }
+  SECTION_DELETED_FOLLOWERS = {
+    id: 150004, user_id: TEACHER_WITH_DELETED[:id], name: 'Fake Section D'
+  }
   TEACHER_SECTIONS = [
-      {id: 150001, user_id: TEACHER[:id], name: 'Fake Section A'},
-      {id: 150002, user_id: TEACHER[:id], name: 'Fake Section B'},
-      {id: 150003, user_id: TEACHER_WITH_DELETED[:id], name: 'Fake Section C'},
-      {id: 150004, user_id: TEACHER_WITH_UPDATED[:id], name: 'Fake Section D'},
+    SECTION_NORMAL, SECTION_EMPTY, SECTION_DELETED, SECTION_DELETED_FOLLOWERS
   ]
 
   #
   # Fake Data: Followers
   #
   FOLLOWERS = [
-      {user_id: TEACHER[:id], student_user_id: STUDENT[:id]},
-      {user_id: TEACHER_WITH_DELETED[:id], student_user_id: STUDENT[:id]},
-      {user_id: TEACHER_WITH_DELETED[:id], student_user_id: DELETED_STUDENT[:id]},
-      {user_id: TEACHER_WITH_UPDATED[:id], student_user_id: STUDENT[:id]},
-      {user_id: TEACHER_WITH_UPDATED[:id], student_user_id: UPDATED_STUDENT[:id]},
+      {
+        user_id: TEACHER[:id],
+        student_user_id: STUDENT[:id],
+        section_id: SECTION_NORMAL[:id]
+      },
+      {
+        user_id: TEACHER_WITH_DELETED[:id],
+        student_user_id: DELETED_STUDENT[:id],
+        section_id: SECTION_DELETED_FOLLOWERS[:id]
+      },
+      {
+        user_id: TEACHER_WITH_DELETED[:id],
+        student_user_id: SELF_STUDENT[:id],
+        section_id: SECTION_DELETED_FOLLOWERS[:id],
+        deleted_at: '2016-01-01 00:01:02'
+      }
   ]
 
   # Overrides the current database with a procedure that, given a query,
@@ -77,7 +88,7 @@ module FakeDashboard
   # test with a transaction so the changes do not affect other tests (unfortuantely
   # we cannot make this automatic yet):
   #
-  #   db.transaction(:rollback => :always) do
+  #   Dashboard.db.transaction(:rollback => :always) do
   #     ...test stuff here...
   #   end
   #
