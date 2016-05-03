@@ -862,11 +862,14 @@ Applab.canExportApp = function () {
 };
 
 Applab.exportApp = function () {
+  Applab.runButtonClick();
+  var html = document.getElementById('divApplab').outerHTML;
+  studioApp.resetButtonClick();
   return Exporter.exportApp(
     // TODO: find another way to get this info that doesn't rely on globals.
     window.dashboard && window.dashboard.project.getCurrentName() || 'my-app',
     studioApp.editor.getValue(),
-    designMode.serializeToLevelHtml()
+    html
   );
 };
 
