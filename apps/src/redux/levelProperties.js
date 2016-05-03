@@ -20,8 +20,7 @@ var ALLOWED_KEYS = utils.makeEnum(
   'stageTotal',
   'showDebugButtons',
   'showDebugConsole',
-  'showDebugWatch',
-  'localeDirection'
+  'showDebugWatch'
 );
 
 var levelInitialState = {
