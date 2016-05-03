@@ -67,7 +67,7 @@ var AnimationPreview = React.createClass({
   },
 
   precalculateRenderProps: function (nextProps) {
-    var framesPerRow = Math.floor(this.props.sourceWidth / this.props.frameWidth);
+    var framesPerRow = Math.floor(nextProps.sourceWidth / nextProps.frameWidth);
     var innerWidth = nextProps.width - 2 * MARGIN_PX;
     var innerHeight = nextProps.height - 2 * MARGIN_PX;
     var xScale = innerWidth / nextProps.frameWidth;
@@ -80,7 +80,7 @@ var AnimationPreview = React.createClass({
       scaledFrameWidth: nextProps.frameWidth * scale,
       scaledFrameHeight: scaledFrameHeight,
       extraTopMargin: Math.ceil((innerHeight - scaledFrameHeight) / 2),
-      wrappedSourceUrl: "url('" + this.props.sourceUrl + "')"
+      wrappedSourceUrl: "url('" + nextProps.sourceUrl + "')"
     });
   },
 
