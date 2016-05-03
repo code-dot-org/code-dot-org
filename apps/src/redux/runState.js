@@ -4,11 +4,11 @@
 var _ = require('../lodash');
 
 var SET_IS_RUNNING = 'runState/SET_IS_RUNNING';
-var SET_IS_DEBUGGING = 'runState/SET_IS_DEBUGGING';
+var SET_IS_DEBUGGER_PAUSED = 'runState/SET_IS_DEBUGGER_PAUSED';
 
 var initialState = {
   isRunning: false,
-  isDebugging: false
+  isDebuggerPaused: false
 };
 
 /**
@@ -20,14 +20,14 @@ module.exports.default = function (state, action) {
   if (action.type === SET_IS_RUNNING) {
     return _.assign({}, {
       isRunning: action.isRunning,
-      isDebugging: action.isRunning === false ? false : state.isDebugging
+      isDebuggerPaused: action.isRunning === false ? false : state.isDebuggerPaused
     });
   }
 
-  if (action.type === SET_IS_DEBUGGING) {
+  if (action.type === SET_IS_DEBUGGER_PAUSED) {
     return _.assign({}, {
-      isRunning: action.isDebugging ? true : state.isRunning,
-      isDebugging: action.isDebugging,
+      isRunning: action.isDebuggerPaused ? true : state.isRunning,
+      isDebuggerPaused: action.isDebuggerPaused,
     });
   }
 
@@ -45,13 +45,13 @@ module.exports.setIsRunning = function (isRunning) {
 };
 
 /**
- * @param {boolean} isDebugging - Whether the app is currently paused in the
+ * @param {boolean} isDebuggerPaused - Whether the app is currently paused in the
  *   debugger
  */
 
-module.exports.setIsDebugging = function (isDebugging) {
+module.exports.setIsDebuggerPaused = function (isDebuggerPaused) {
   return {
-    type: SET_IS_DEBUGGING,
-    isDebugging: isDebugging
+    type: SET_IS_DEBUGGER_PAUSED,
+    isDebuggerPaused: isDebuggerPaused
   };
 };
