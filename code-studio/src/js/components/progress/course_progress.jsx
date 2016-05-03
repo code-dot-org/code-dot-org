@@ -26,9 +26,11 @@ var CourseProgress = React.createClass({
           flexRows.push(<CourseProgressRow stage={stages[i]} key={stages[i].name}/>);
         }
         rows.push(
-          <div key={previous}>
-            <h4>{previous}</h4>
-            {flexRows}
+          <div className="flex-wrapper">
+            <div key={previous} className="flex-category">
+              <h4>{previous}</h4>
+              {flexRows}
+            </div>
           </div>
         );
       } else {
