@@ -28,8 +28,7 @@
     "examples_required": "false",
     "markdown_instructions": "The `if/else` block checks a condition, and then does one thing OR another. \r\n\r\nUse this new block to get me to the sunflower.",
     "never_autoplay_video": "false",
-    "step_speed": "1",
-    "maze_data": null
+    "step_speed": "1"
   },
   "published": true,
   "notes": "",

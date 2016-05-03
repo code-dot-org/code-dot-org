@@ -935,6 +935,7 @@ en:
           Minecraft: Minecraft
           Rich long assessment: Rich long assessment
           Free Response: Free Response
+          Game Lab: Game Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1786,6 +1787,7 @@ en:
           Variables: Variables
           " Sprite Properties and Mod": " Sprite Properties and Mod"
           Expressions and Reassignment: Expressions and Reassignment
+          Sprites and Properties: Sprites and Properties
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -1813,11 +1815,17 @@ en:
           description: Test of new educational philosophy
           description_audience: Ages 8-18
           Computational Thinking: Computational Thinking
+          Sample Stage: Sample Stage
         ECSPD1:
           title: 'ECS: Phase 1 PD'
           description_short: Introduction to the Code.org ECS Version 5 Program
           description: Two hour introduction to your Professional Learning Program for the ECS Version 5 curriculum
           Getting Started: Getting Started
+          What is ECS?: What is ECS?
+          ECS Curriculum: ECS Curriculum
+          Wrap Up: Wrap Up
+          Welcome to Phase 1!: Welcome to Phase 1!
+          Background and Context: Background and Context
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description_short: Teach Algebra through Functional Programming
@@ -1827,3 +1835,10 @@ en:
           Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           Evaluation Blocks: Evaluation Blocks
           Teacher Dashboard: Teacher Dashboard
+        cspunit1-support:
+          title: Online Support for CSP Unit 1
+          description: This is a test Professional Learning Course
+          Teachers and Tools: Teachers and Tools
+          Supporting Peer Learning: Supporting Peer Learning
+          Running a Constructive Classroom: Running a Constructive Classroom
+          Strategies for Student Writing: Strategies for Student Writing

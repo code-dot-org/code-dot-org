@@ -17,7 +17,8 @@ class SurveyResultsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def survey_result_params
-    params.require(:survey).permit(SurveyResult::RESULT_ATTRS.map(&:to_sym))
+    params.require(:survey).
+      permit(SurveyResult::RESULT_ATTRS.map(&:to_sym) + [:kind])
   end
 
 end

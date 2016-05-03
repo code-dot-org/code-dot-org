@@ -170,6 +170,19 @@ class ActiveSupport::TestCase
   Found in #{a_name} but not #{b_name}: #{(a.keys - b.keys).join(', ')}
   Found in #{b_name} but not #{a_name}: #{(b.keys - a.keys).join(', ')})
   end
+
+  # Given a regular expression and a block, ensure that the block raises an
+  # exception with a message matching the regular expression.
+  def assert_raises_matching(matcher)
+    assert_raises do
+      begin
+        yield
+      rescue => err
+        assert_match matcher, err.to_s
+        raise err
+      end
+    end
+  end
 end
 
 # Helpers for all controller test cases

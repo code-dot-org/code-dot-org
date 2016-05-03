@@ -28,8 +28,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "instructions": "Use the `if` block to help me decide when to turn. \r\n",
-    "maze_data": null
+    "instructions": "Use the `if` block to help me decide when to turn. \r\n"
   },
   "published": true,
   "notes": "",
