@@ -35,7 +35,8 @@ class ScriptLevel < ActiveRecord::Base
   NEXT = 'next'
 
   def script
-    Script.get_from_cache(script_id)
+    return Script.get_from_cache(script_id) if Script.should_cache?
+    super
   end
 
   # TODO(ram): stop using and delete these four convenience methods
