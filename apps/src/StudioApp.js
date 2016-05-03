@@ -29,7 +29,7 @@ var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
 var redux = require('./redux');
-var isRunning = require('./redux/isRunning');
+var runState = require('./redux/runState');
 var copyrightStrings;
 
 /**
@@ -853,7 +853,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
     throw "Unexpected input";
   }
 
-  this.reduxStore_.dispatch(isRunning.setIsRunning(!showRun));
+  this.reduxStore_.dispatch(runState.setIsRunning(!showRun));
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
@@ -2242,9 +2242,7 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   var fontAwesomeGlyph = _.find(contentSpan.childNodes, function (node) {
     return /\bfa\b/.test(node.className);
   });
-  var imgBlocksGlyph = _.find(contentSpan.childNodes, function (node) {
-    return /\bblocks_glyph\b/.test(node.src);
-  });
+  var imgBlocksGlyph = document.getElementById('blocks_glyph');
 
   // Change glyph
   if (usingBlocks) {

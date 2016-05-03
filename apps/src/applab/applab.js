@@ -795,7 +795,6 @@ Applab.init = function (config) {
   Applab.reduxStore.dispatch(changeInterfaceMode(
     Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
-
   // TODO (brent) hideSource should probably be part of initialLevelProps
   Applab.reactInitialProps_ = {
     codeWorkspace: <ConnectedCodeWorkspace/>,
@@ -900,7 +899,7 @@ Applab.clearEventHandlersKillTickLoop = function () {
  * @returns {boolean}
  */
 Applab.isRunning = function () {
-  return Applab.reduxStore.getState().isRunning;
+  return Applab.reduxStore.getState().runState.isRunning;
 };
 
 /**
