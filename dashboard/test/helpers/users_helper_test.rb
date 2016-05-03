@@ -105,7 +105,8 @@ class UsersHelperTest < ActionView::TestCase
     level.save!
 
     # Create a ScriptLevel joining this level to the script.
-    create :script_level, script: script, level: level, assessment: true
+    sl = create :script_level, script: script, level: level, assessment: true
+    puts "script_level: #{sl.to_json}"
 
     # Create a UserLevel joining this level to the user.
     ul = create :user_level, user: user, best_result: 100, level: level, script: script
