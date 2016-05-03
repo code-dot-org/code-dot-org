@@ -14,13 +14,10 @@ right 'May - June'
 right 'Throughout the year'
 
 markdown <<MARKDOWN
-### **Units of Study**
-#### Video Games and Coordinate Planes
+### **Topics of Study**
+#### Order of Operations
 #### Contracts, Strings, and Images
 #### Defining Functions
 #### The Design Recipe
-#### Game Animation (linear functions)
-#### Boundary Detection (inequalities in the plane)
-#### Piecewise Functions
-#### Collision Detection (the distance formula)
+#### Animation with Linear Functions
 MARKDOWN
