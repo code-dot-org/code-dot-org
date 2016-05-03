@@ -2,13 +2,13 @@
 #
 # Table name: stages
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)      not null
-#  position   :integer
-#  script_id  :integer          not null
-#  created_at :datetime
-#  updated_at :datetime
-#  flex       :string(255)
+#  id            :integer          not null, primary key
+#  name          :string(255)      not null
+#  position      :integer
+#  script_id     :integer          not null
+#  created_at    :datetime
+#  updated_at    :datetime
+#  flex_category :string(255)
 #
 
 # Ordered partitioning of script levels within a script
