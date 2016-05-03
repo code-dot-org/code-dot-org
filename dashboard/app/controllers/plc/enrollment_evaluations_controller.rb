@@ -9,8 +9,9 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
   end
 
   def submit_evaluation
-    # Eventually, the logic for more complex module assignments will go here. For now since we are naively assigning modules, just go to preview
-    redirect_to controller: :enrollment_evaluations, action: :preview_assignments, unit_assignment_id: params[:unit_assignment_id], enrolled_modules: params[:answer_module_list]
+    enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
+    modules_to_enroll_in = enrollment_unit_assignment.plc_course_unit.get_top_modules_of_each_type_from_user_selections(params[:answer_module_list].split(','))
+    redirect_to controller: :enrollment_evaluations, action: :preview_assignments, unit_assignment_id: params[:unit_assignment_id], enrolled_modules: modules_to_enroll_in.map(&:id).sort
   end
 
   def preview_assignments
