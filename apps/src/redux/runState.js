@@ -11,13 +11,16 @@ var initialState = {
   isDebugging: false
 };
 
+/**
+ * Reducer for runState. It should be impossible to be debugging if not running.
+ */
 module.exports.default = function (state, action) {
   state = state || initialState;
 
   if (action.type === SET_IS_RUNNING) {
     return _.assign({}, {
       isRunning: action.isRunning,
-      isDebugging: action.isRunning ? false : state.isDebugging
+      isDebugging: action.isRunning === false ? false : state.isDebugging
     });
   }
 
