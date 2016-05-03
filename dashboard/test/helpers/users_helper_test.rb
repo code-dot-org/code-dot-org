@@ -109,6 +109,7 @@ class UsersHelperTest < ActionView::TestCase
 
     # Create a UserLevel joining this level to the user.
     ul = create :user_level, user: user, best_result: 100, level: level, script: script
+    puts "user level: #{ul.to_json}"
 
     # The Activity record will point at a LevelSource with JSON data in which
     # page one has all valid answers and page two has no valid answers.

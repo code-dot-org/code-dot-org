@@ -160,6 +160,7 @@ module UsersHelper
 
   def level_info(user, script_level, user_levels)
     if user
+      puts "level_info user_level (#{script_level.level_id}) #{user_levels.to_json}"
       user_levels[script_level.level_id].try(:best_result) || 0
     else
       0
