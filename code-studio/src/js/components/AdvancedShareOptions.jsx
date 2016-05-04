@@ -1,11 +1,14 @@
 var color = require('../color.js');
+var Radium = require('radium');
 
 const style = {
   nav: {
     ul: {
       borderBottom: '1px solid',
       borderColor: color.purple,
-      margin: 0,
+      marginTop: 0,
+      marginLeft: 0,
+      marginRight: 0,
       marginBottom: 10,
     },
     li: {
@@ -16,6 +19,7 @@ const style = {
       marginRight: 10,
       cursor: 'pointer',
     },
+    selectedLi: {color:color.purple},
   },
   p: {
     fontSize: 'inherit',
@@ -37,7 +41,7 @@ const style = {
   },
 };
 
-var AdvancedShareOptions = React.createClass({
+var AdvancedShareOptions = Radium(React.createClass({
   propTypes: {
     onClickExport: React.PropTypes.func,
     i18n: React.PropTypes.object.isRequired,
@@ -83,7 +87,7 @@ var AdvancedShareOptions = React.createClass({
           onClick={(e) => e.target.select()}
           readOnly="true"
           value={iframeHtml}
-          style={style.embedInput}></textarea>
+          style={style.embedInput} />
       </div>
     );
   },
@@ -120,11 +124,11 @@ var AdvancedShareOptions = React.createClass({
     var optionsNav;
     var selectedOption;
     if (this.state.expanded) {
-      var selectedLiStyle = Object.assign({}, style.nav.li, {color:color.purple});
       var exportTab = null;
       if (this.props.onClickExport) {
         exportTab = (
-          <li style={this.state.selectedOption === 'export' ? selectedLiStyle : style.nav.li}
+          <li style={[style.nav.li,
+                      this.state.selectedOption === 'export' && style.nav.selectedLi]}
               onClick={() => this.setState({selectedOption: 'export'})}>
             Export
           </li>
@@ -134,7 +138,8 @@ var AdvancedShareOptions = React.createClass({
         <div>
           <ul style={style.nav.ul}>
             {exportTab}
-            <li style={this.state.selectedOption === 'embed' ? selectedLiStyle : style.nav.li}
+            <li style={[style.nav.li,
+                      this.state.selectedOption === 'embed' && style.nav.selectedLi]}
                 onClick={() => this.setState({selectedOption: 'embed'})}>
               {this.props.i18n.t('project.embed')}
             </li>
@@ -161,6 +166,6 @@ var AdvancedShareOptions = React.createClass({
       </div>
     );
   }
-});
+}));
 
 module.exports = AdvancedShareOptions;
