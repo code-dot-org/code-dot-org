@@ -169,17 +169,37 @@ endvariants
 level 'Level 3'
 "
     expected = {
-      :id=>nil,
-      :stages=>[
-        {:stage=>"Stage1", :scriptlevels=>[
-          {:levels=>[{:name=>"Level 1"}], :stage=>"Stage1"},
-          {:levels=>[{:name=>"Level 2a"},
-                     {:name=>"Level 2b"}],
-           :stage=>"Stage1",
-           :properties=>{"Level 2b"=>{:active=>false}}},
-          {:levels=>[{:name=>"Level 3"}], :stage=>"Stage1"}]}],
-      :hidden=>true, :trophies=>false, :wrapup_video=>nil,
-      :login_required=>false, admin_required: false, :pd=>false}
+      id: nil,
+      stages: [
+        {
+          stage: "Stage1",
+          scriptlevels: [
+            {
+              stage: "Stage1",
+              levels: [{name: "Level 1"}]
+            },
+            {
+              stage: "Stage1",
+              levels: [{name: "Level 2a"},
+                       {name: "Level 2b"}],
+              properties: {"Level 2b"=>{active: false}}
+            },
+            {
+              stage: "Stage1",
+              levels: [{name: "Level 3"}]
+            }
+          ]
+        }
+      ],
+      hidden: true,
+      trophies: false,
+      wrapup_video: nil,
+      login_required: false,
+      admin_required: false,
+      pd: false,
+      student_of_admin_required: false,
+      professional_learning_course: nil
+    }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output

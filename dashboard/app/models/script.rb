@@ -402,10 +402,10 @@ class Script < ActiveRecord::Base
 
     # Overwrites current script levels
     script.script_levels = raw_script_levels.map do |raw_script_level|
-      pp raw_script_level
       raw_script_level.symbolize_keys!
 
       assessment = false
+      stage_flex_category = nil
 
       levels = raw_script_level[:levels].map do |raw_level|
         raw_level.symbolize_keys!
