@@ -6,15 +6,33 @@ var PlaySpaceHeader = require('./PlaySpaceHeader');
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var commonStyles = require('../commonStyles');
+var color = require('../color');
 var applabConstants = require('./constants');
 var connect = require('react-redux').connect;
+var experiments = require('../experiments');
 
+const RADIUS = 30;
 
 var styles = {
+  phoneFrameTop: {
+    display: 'block',
+    height: 50,
+    backgroundColor: color.light_gray,
+    borderTopLeftRadius: RADIUS,
+    borderTopRightRadius: RADIUS,
+  },
+  phoneFrameBottom: {
+    display: 'block',
+    height: 50,
+    backgroundColor: color.light_gray,
+    borderBottomLeftRadius: RADIUS,
+    borderBottomRightRadius: RADIUS,
+  },
   nonResponsive: {
     maxWidth: applabConstants.APP_WIDTH,
   }
 };
+
 
 /**
  * Equivalent of visualizationColumn.html.ejs. Initially only supporting
@@ -41,6 +59,10 @@ var ApplabVisualizationColumn = React.createClass({
       (this.props.isEmbedView || this.props.hideSource) && styles.nonResponsive
     ];
 
+    // TODO - is phone fram part of visualization or of column?
+    var addPhoneFrame = experiments.isEnabled('runModeIndicators') &&
+      !this.props.isEmbedView && !this.props.isShareView;
+
     return (
       <div id="visualizationColumn" className={classes} style={vizColStyle}>
         {!this.props.isReadOnlyWorkspace && <PlaySpaceHeader
@@ -48,7 +70,9 @@ var ApplabVisualizationColumn = React.createClass({
             screenIds={this.props.screenIds}
             onScreenCreate={this.props.onScreenCreate} />
         }
+        <div style={[commonStyles.hidden, addPhoneFrame && styles.phoneFrameTop]}/>
         <Visualization/>
+        <div style={[commonStyles.hidden, addPhoneFrame && styles.phoneFrameBottom]}/>
         <GameButtons instructionsInTopPane={this.props.instructionsInTopPane}>
           <CompletionButton/>
         </GameButtons>
