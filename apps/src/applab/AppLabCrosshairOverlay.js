@@ -7,8 +7,6 @@ var elementUtils = require('../applab/designElements/elementUtils');
 var gridUtils = require('../applab/gridUtils');
 
 var CROSSHAIR_MARGIN = CrosshairOverlay.CROSSHAIR_MARGIN;
-var EDGE_MARGIN = CrosshairOverlay.EDGE_MARGIN;
-var TEXT_RECT_WIDTH = CrosshairOverlay.TEXT_RECT_WIDTH;
 var TEXT_RECT_HEIGHT = CrosshairOverlay.TEXT_RECT_HEIGHT;
 var ELEMENT_ID_Y_OFFSET = CrosshairOverlay.TEXT_RECT_HEIGHT + 4;
 var ELEMENT_ID_TEXT_MAX_CHAR = 12;
@@ -116,35 +114,35 @@ AppLabCrosshairOverlay.prototype.render = function (intoElement, nextProps) {
 };
 
 /**
- * Given current properties, calcualtes the position for rendering the tooltip.
+ * Given current properties, calculates the position for rendering the tooltip.
+ * Custom behavior: When dragging an element, position tooltip above element.
  * @returns {{rectX: number, rectY: number}}
  * @override
  */
 AppLabCrosshairOverlay.prototype.getBubbleCoordinates_ = function () {
-  var rectX = this.props_.x + CROSSHAIR_MARGIN;
-  if (rectX + TEXT_RECT_WIDTH + EDGE_MARGIN > this.props_.appWidth) {
-    // This response gives a smooth horizontal reposition when near the edge
-    rectX -= (rectX + TEXT_RECT_WIDTH + EDGE_MARGIN - this.props_.appWidth);
-    // This response snaps the text to the other side when near the edge
-    //rectX = this.props_.x - CROSSHAIR_MARGIN - TEXT_RECT_WIDTH;
-  }
-
-  var rectY = this.props_.y + CROSSHAIR_MARGIN;
-  if (this.mouseoverApplabControlId_) {
-    if (rectY + ELEMENT_ID_Y_OFFSET + TEXT_RECT_HEIGHT + EDGE_MARGIN > this.props_.appHeight) {
-      rectY = this.props_.y - CROSSHAIR_MARGIN - ELEMENT_ID_Y_OFFSET - TEXT_RECT_HEIGHT;
-    }
-  } else if (rectY + TEXT_RECT_HEIGHT + EDGE_MARGIN > this.props_.appHeight) {
-    rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT;
-  }
+  var coordinates = CrosshairOverlay.prototype.getBubbleCoordinates_.call(this);
 
   // If we're dragging an element, instead put the text above and right of the
   // cross hair, while making sure it doesnt go past the top of the overlay
   if (this.isDragging_) {
-    rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT - ELEMENT_ID_Y_OFFSET;
-    rectY = Math.max(0, rectY);
+    coordinates.rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT - ELEMENT_ID_Y_OFFSET;
+    coordinates.rectY = Math.max(0, coordinates.rectY);
   }
-  return {rectX: rectX, rectY: rectY};
+  return coordinates;
+};
+
+/**
+ * Modify base behavior to reflect larger tooltip when showing element ID.
+ * @returns {{width: number, height: number}}
+ * @private
+ * @override
+ */
+AppLabCrosshairOverlay.prototype.getTooltipDimensions_ = function () {
+  var size = CrosshairOverlay.prototype.getTooltipDimensions_.call(this);
+  if (this.mouseoverApplabControlId_) {
+    size.height += ELEMENT_ID_Y_OFFSET;
+  }
+  return size;
 };
 
 /**
