@@ -84,14 +84,12 @@
   = f.text_area :recommended_blocks, placeholder: 'Recommended Blocks', rows: 4, value: @level.pretty_block('recommended')
   :javascript
     levelbuilder.initializeCodeMirror('level_recommended_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
-.field
-  - if @level.game.uses_droplet?
-    = f.label :initialization_blocks, 'Edit Initialization Blocks'
-  - else
+- unless @level.game.uses_droplet?
+  .field
     = link_to 'Edit Initialization Blocks', level_edit_blocks_path(@level, :initialization_blocks) unless @level.new_record?
-  = f.text_area :initialization_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('initialization')
-  :javascript
-    levelbuilder.initializeCodeMirror('level_initialization_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
+    = f.text_area :initialization_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('initialization')
+    :javascript
+      levelbuilder.initializeCodeMirror('level_initialization_blocks', 'xml');
 .field
   = f.label :ideal, 'Ideal block number'
   = f.number_field :ideal
