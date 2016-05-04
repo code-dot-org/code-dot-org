@@ -48,7 +48,7 @@ var Exporter = require('./Exporter');
 
 var createStore = require('../redux').createStore;
 var Provider = require('react-redux').Provider;
-var rootReducer = require('./reducers').rootReducer;
+var reducers = require('./reducers');
 var actions = require('./actions');
 var changeInterfaceMode = actions.changeInterfaceMode;
 var setInstructionsInTopPane = actions.setInstructionsInTopPane;
@@ -77,20 +77,6 @@ var jsInterpreterLogger = null;
  * @type {JsDebuggerUi} Controller for JS debug buttons and console area
  */
 var debuggerUi = null;
-
-/**
- * A method for tests to recreate our redux store between runs.
- */
-function newReduxStore() {
-  /**
-   * Redux Store holding application state, transformable by actions.
-   * @type {Store}
-   * @see http://redux.js.org/docs/basics/Store.html
-   */
-  Applab.reduxStore = createStore(rootReducer);
-}
-
-newReduxStore();
 
 /**
  * Temporary: Some code depends on global access to logging, but only Applab
@@ -646,7 +632,7 @@ Applab.init = function (config) {
     // should never be present on such levels, however some levels do
     // have levelHtml stored due to a previous bug. HTML set by levelbuilder
     // is stored in startHtml, not levelHtml.
-    if (Applab.reduxStore.getState().level.isDesignModeHidden) {
+    if (studioApp.reduxStore_.getState().level.isDesignModeHidden) {
       config.level.levelHtml = '';
     }
 
@@ -706,8 +692,6 @@ Applab.init = function (config) {
   // able to turn them on.
   config.showInstructionsInTopPane = experiments.isEnabled('topInstructions');
 
-  config.reduxStore = Applab.reduxStore;
-
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
 
@@ -722,7 +706,7 @@ Applab.init = function (config) {
       vizCol.className += " with_padding";
     }
 
-    if (Applab.reduxStore.getState().level.isEmbedView || config.hideSource) {
+    if (studioApp.reduxStore_.getState().level.isEmbedView || config.hideSource) {
       // no responsive styles active in embed or hideSource mode, so set sizes:
       viz.style.width = Applab.appWidth + 'px';
       viz.style.height = (shouldRenderFooter() ? Applab.appHeight : Applab.footerlessAppHeight) + 'px';
@@ -754,7 +738,7 @@ Applab.init = function (config) {
     }
 
     if (level.editCode) {
-      setupReduxSubscribers(Applab.reduxStore);
+      setupReduxSubscribers(studioApp.reduxStore_);
 
       designMode.addKeyboardHandlers();
 
@@ -772,7 +756,7 @@ Applab.init = function (config) {
   }.bind(this);
 
   // Push initial level properties into the Redux store
-  Applab.reduxStore.dispatch(setInitialLevelProps({
+  studioApp.reduxStore_.dispatch(setInitialLevelProps({
     assetUrl: studioApp.assetUrl,
     channelId: config.channel,
     isDesignModeHidden: !!config.level.hideDesignMode,
@@ -794,7 +778,7 @@ Applab.init = function (config) {
     isDroplet: true
   }));
 
-  Applab.reduxStore.dispatch(changeInterfaceMode(
+  studioApp.reduxStore_.dispatch(changeInterfaceMode(
     Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
   // TODO (brent) hideSource should probably be part of initialLevelProps
@@ -851,7 +835,7 @@ Applab.render = function () {
     onScreenCreate: designMode.createScreen
   });
   ReactDOM.render(
-    <Provider store={Applab.reduxStore}>
+    <Provider store={studioApp.reduxStore_}>
       <AppLabView {...nextProps} />
     </Provider>,
     Applab.reactMountPoint_);
@@ -901,7 +885,7 @@ Applab.clearEventHandlersKillTickLoop = function () {
  * @returns {boolean}
  */
 Applab.isRunning = function () {
-  return Applab.reduxStore.getState().runState.isRunning;
+  return studioApp.reduxStore_.getState().runState.isRunning;
 };
 
 /**
@@ -1256,7 +1240,7 @@ function onInterfaceModeChange(mode) {
       Applab.serializeAndSave();
       var divApplab = document.getElementById('divApplab');
       designMode.parseFromLevelHtml(divApplab, false);
-      Applab.changeScreen(Applab.reduxStore.getState().currentScreenId);
+      Applab.changeScreen(studioApp.reduxStore_.getState().currentScreenId);
     } else {
       Applab.activeScreen().focus();
     }
@@ -1648,6 +1632,6 @@ Applab.showRateLimitAlert = function () {
   }
 };
 
-Applab.__TestInterface__ = {
-  recreateReduxStore: newReduxStore
+Applab.getReducers = function () {
+  return reducers;
 };

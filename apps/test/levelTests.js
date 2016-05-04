@@ -129,18 +129,12 @@ describe('Level tests', function () {
       Studio.JSInterpreter = undefined;
     }
 
+    // Recreate our redux store so that we have a fresh copy
+    studioApp.createReduxStore_();
+
     if (window.Applab) {
       var elementLibrary = require('@cdo/apps/applab/designElements/library');
       elementLibrary.resetIds();
-      if (Applab.__TestInterface__) {
-        Applab.__TestInterface__.recreateReduxStore();
-      }
-    }
-
-    if (window.Maze) {
-      if (Maze.__TestInterface__) {
-        Maze.__TestInterface__.recreateReduxStore();
-      }
     }
 
     if (window.Calc) {

@@ -473,7 +473,7 @@ designMode.onDeletePropertiesButton = function (element, event) {
   } else {
     designMode.editElementProperties(
         elementUtils.getPrefixedElementById(
-            Applab.reduxStore.getState().currentScreenId));
+            studioApp.reduxStore_.getState().currentScreenId));
   }
 };
 
@@ -628,7 +628,7 @@ designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
 };
 
 designMode.toggleDesignMode = function (enable) {
-  Applab.reduxStore.dispatch(actions.changeInterfaceMode(enable ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
+  studioApp.reduxStore_.dispatch(actions.changeInterfaceMode(enable ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 };
 
 function onInterfaceModeChange(mode) {
@@ -926,7 +926,7 @@ designMode.createScreen = function () {
  * @param {!string} screenId
  */
 designMode.changeScreen = function (screenId) {
-  Applab.reduxStore.dispatch(actions.changeScreen(screenId));
+  studioApp.reduxStore_.dispatch(actions.changeScreen(screenId));
 };
 
 /**
