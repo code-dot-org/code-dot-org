@@ -13,11 +13,9 @@ class DeploymentTest < Minitest::Test
   end
 
   def after_teardown
-    begin
-      RSpec::Mocks.verify
-    ensure
-      RSpec::Mocks.teardown
-    end
+    RSpec::Mocks.verify
+  ensure
+    RSpec::Mocks.teardown
   end
 
   # Approximates the parts of the JSON output from `knife search node` that we use.
