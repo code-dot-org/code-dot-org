@@ -9,24 +9,27 @@
   - @user_course_enrollments.each do |user_course_enrollment|
     %h2 #{user_course_enrollment.plc_course.name}
     - user_course_enrollment.plc_unit_assignments.each do |enrollment_unit_assignment|
+      - next if enrollment_unit_assignment.status == Plc::EnrollmentUnitAssignment::START_BLOCKED
+
+      - content_module_assignment = enrollment_unit_assignment.module_assignment_for_type Plc::LearningModule::CONTENT_MODULE
+      - practice_module_assignment = enrollment_unit_assignment.module_assignment_for_type Plc::LearningModule::PRACTICE_MODULE
+
       .outlined_section
         %h4
           = enrollment_unit_assignment.plc_course_unit.unit_name
-        - case enrollment_unit_assignment.status
-          - when Plc::EnrollmentUnitAssignment::START_BLOCKED
-            %p
-              This unit cannot be started yet
-          - when Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
-            %p
-              = link_to 'Click here to take the evaluation quiz for this unit', perform_evaluation_path(enrollment_unit_assignment), class: 'btn'
-          - when Plc::EnrollmentUnitAssignment::IN_PROGRESS
-            %p
-              = link_to 'Click here to view tasks, resources, and get badged', plc_enrollment_unit_assignment_path(enrollment_unit_assignment), class: 'btn'
-          - when Plc::EnrollmentUnitAssignment::COMPLETED
-            %p.fa.fa-check-circle.fa-5x{style: 'color: green; display: table; margin: auto'}
-            %p{style: 'text-align: center'}
-              #{enrollment_unit_assignment.plc_course_unit.unit_name} badge complete!
-            %p
-              = link_to "Click here to #{enrollment_unit_assignment.plc_course_unit.unit_name} resources", plc_enrollment_unit_assignment_path(enrollment_unit_assignment), class: 'btn'
+        .course_unit_sections
+          - evaluation_complete = enrollment_unit_assignment.status != Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
+          .course_unit_section{class: evaluation_complete ? 'completed' : 'not_started'}
+            %i.fa.fa-info-circle
+            .course_unit_section_name
+              = link_to 'Unit Overview', evaluation_complete ? plc_enrollment_unit_assignment_path(enrollment_unit_assignment) : perform_evaluation_path(enrollment_unit_assignment), class: 'course_unit_link'
+          .course_unit_section{class: content_module_assignment.try(:module_status) || 'not_started'}
+            %i.fa.fa-book
+            .course_unit_section_name
+              = link_to 'Unit Content', plc_enrollment_unit_assignment_path(enrollment_unit_assignment), class: 'course_unit_link'
+          .course_unit_section{class: practice_module_assignment.try(:module_status) || 'not_started'}
+            %i.fa.fa-graduation-cap
+            .course_unit_section_name
+              = link_to 'Teaching Practices', plc_enrollment_unit_assignment_path(enrollment_unit_assignment), class: 'course_unit_link'
       %br
     %br
