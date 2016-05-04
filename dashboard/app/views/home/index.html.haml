@@ -26,6 +26,10 @@
 
   .clear
 
+  - if current_user.teacher?
+    #teacher-announcement
+      = render template: 'api/teacher_announcement'
+
   - if current_user
     #user_hero
       = render template: 'api/user_hero'
