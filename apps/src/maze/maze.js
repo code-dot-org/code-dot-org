@@ -38,8 +38,6 @@ var mazeUtils = require('./mazeUtils');
 var _ = require('../lodash');
 var dropletConfig = require('./dropletConfig');
 
-var parseXmlElement = require('../xml').parseElement;
-
 var MazeMap = require('./mazeMap');
 var Bee = require('./bee');
 var Cell = require('./cell');
@@ -984,14 +982,13 @@ Maze.execute = function (stepMode) {
   beginAttempt();
   Maze.prepareForExecution();
 
-  var code;
+  var code = '';
   if (studioApp.isUsingBlockly()) {
-    if (level.initializationBlocks) {
-      var initializationXml = parseXmlElement(level.initializationBlocks);
-      var initializationCode = Blockly.Generator.xmlToCode('JavaScript', initializationXml);
+    if (studioApp.initializationCode) {
+      code += studioApp.initializationCode;
     }
 
-    code = (initializationCode || '') + Blockly.Generator.blockSpaceToCode('JavaScript');
+    code += Blockly.Generator.blockSpaceToCode('JavaScript');
   } else {
     code = dropletUtils.generateCodeAliases(dropletConfig, 'Maze');
     code += studioApp.editor.getValue();
