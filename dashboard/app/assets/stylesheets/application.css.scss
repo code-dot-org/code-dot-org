@@ -934,6 +934,14 @@ input.header_input {
   }
 }
 
+body.embedded {
+  #codeApp.pin_bottom {
+    top: 0px;
+    left: 0px;
+  }
+}
+
+
 .reference_area {
   margin-top: 20px;
 
@@ -1408,6 +1416,21 @@ a.download-video {
     margin: 20px 0 20px -20px;
     form {
       margin: 0;
+    }
+  }
+}
+
+#landingpage.teacher-course {
+  $radius: 5px;
+  #lesson {
+    background: $cyan;
+    border-radius: $radius $radius 0 0;
+  }
+  #stats {
+    border: 5px solid $cyan;
+    border-radius: 0 0 $radius $radius;
+    .user-stats-block {
+      background: none;
     }
   }
 }
