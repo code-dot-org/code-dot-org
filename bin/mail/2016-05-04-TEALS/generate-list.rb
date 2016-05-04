@@ -42,7 +42,7 @@ volunteer_query = %q(
 )
 
 results = {}
-SOLR.query(q: volunteer_query).each do |result|
+SOLR.query(q: volunteer_query).reverse_each do |result|
   next unless result
 
   state = nil
