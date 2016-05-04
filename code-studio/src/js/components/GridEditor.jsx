@@ -83,9 +83,10 @@ var GridEditor = React.createClass({
     });
   },
 
-  handleCellChange: function (newSerializedCell) {
-    var row = this.state.selectedRow;
-    var col = this.state.selectedCol;
+  updateCells: function (row, col, newCells) {
+    if (newCells === undefined || row === undefined || col === undefined) {
+      return;
+    }
 
     // this is technically a violation of React's "thou shalt not modify
     // state" commandment. The problem here is that we're modifying an
@@ -101,31 +102,7 @@ var GridEditor = React.createClass({
     // Both of those seem a bit unnecessary, so for now this hack will
     // remain.
     var cells = this.state.cells;
-    var newCell = this.getCellClass().deserialize(newSerializedCell);
-    if (row !== undefined && col !== undefined) {
-      cells[row][col] = newCell;
-    }
-    var serializedData = cells.map(function (row) {
-      return row.map(function (cell) {
-        return cell.serialize();
-      });
-    });
-    this.props.onUpdate(serializedData);
-    this.setState({
-      cells: cells
-    });
-  },
-
-  pasteSelectedCells: function () {
-    var cells = this.state.cells;
-    var selectedCells = this.state.selectedCells;
-    var row = this.state.selectedRow;
-    var col = this.state.selectedCol;
-    if (selectedCells === undefined || row === undefined || col === undefined) {
-      return;
-    }
-
-    selectedCells.forEach(function (_, i) {
+    newCells.forEach(function (_, i) {
       _.forEach(function (cell, j) {
         if (cells[row + i] && cells[row + i][col + j]) {
           cells[row + i][col + j] = this.getCellClass().deserialize(cell);
@@ -138,15 +115,29 @@ var GridEditor = React.createClass({
         return cell.serialize();
       });
     });
+
     this.props.onUpdate(serializedData);
     this.setState({
       cells: cells
     });
   },
 
-  setSelectedCells: function (cells) {
+  handleCellChange: function (newSerializedCell) {
+    var row = this.state.selectedRow;
+    var col = this.state.selectedCol;
+    this.updateCells(row, col, [[newSerializedCell]]);
+  },
+
+  pasteCopiedCells: function () {
+    var copiedCells = this.state.copiedCells;
+    var row = this.state.selectedRow;
+    var col = this.state.selectedCol;
+    this.updateCells(row, col, copiedCells);
+  },
+
+  setCopiedCells: function (cells) {
     this.setState({
-      selectedCells: cells
+      copiedCells: cells
     });
   },
 
@@ -155,7 +146,7 @@ var GridEditor = React.createClass({
 
     var cellEditor;
     var selectedCellJson;
-    var btn;
+    var pasteButton;
     var row = this.state.selectedRow;
     var col = this.state.selectedCol;
     if (cells[row] && cells[row][col]) {
@@ -163,16 +154,24 @@ var GridEditor = React.createClass({
       var EditorClass = this.getEditorClass();
       cellEditor = <EditorClass cell={cell} row={row} col={col} onUpdate={this.handleCellChange} />;
       selectedCellJson = <CellJSON serialization={cell.serialize()} onChange={this.handleCellChange} />;
-      if (this.state.selectedCells) {
-        btn = <button type="button" onClick={this.pasteSelectedCells}>{"Paste Selected " + this.state.selectedCells.length + "x" + this.state.selectedCells[0].length + " Cells Excel-Style"}</button>;
+      if (this.state.copiedCells) {
+        pasteButton = (<button type="button" onClick={this.pasteCopiedCells}>
+            {"Paste Selected " + this.state.copiedCells.length + "x" + this.state.copiedCells[0].length + " Cells Excel-Style"}
+          </button>);
       }
     }
 
     return (<div className="row">
       <div className="span5">
-        <Grid cells={cells} selectedRow={this.state.selectedRow} selectedCol={this.state.selectedCol} skin={this.props.skin} setSelectedCells={this.setSelectedCells} onSelectionChange={this.changeSelection}/>
+        <Grid
+          cells={cells}
+          selectedRow={this.state.selectedRow}
+          selectedCol={this.state.selectedCol}
+          skin={this.props.skin}
+          setCopiedCells={this.setCopiedCells}
+          onSelectionChange={this.changeSelection} />
         {selectedCellJson}
-        {btn}
+        {pasteButton}
       </div>
       {cellEditor}
     </div>);

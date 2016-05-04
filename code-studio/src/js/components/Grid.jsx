@@ -77,20 +77,20 @@ var Grid = React.createClass({
     selectedCol: React.PropTypes.number,
     skin: React.PropTypes.string.isRequired,
     onSelectionChange: React.PropTypes.func.isRequired,
-    setSelectedCells: React.PropTypes.func.isRequired,
+    setCopiedCells: React.PropTypes.func.isRequired,
   },
 
   beginDrag: function (row, col) {
     this.setState({
       dragging: true,
-      dragStart: {row, col},
+      dragStart: {row: row, col: col},
     });
   },
 
-  onMouseOver: function (row, col) {
+  moveDrag: function (row, col) {
     if (this.state && this.state.dragging) {
       this.setState({
-        dragCurrent: {row, col},
+        dragCurrent: {row: row, col: col},
       });
     }
   },
@@ -107,26 +107,18 @@ var Grid = React.createClass({
       return;
     }
 
-    var topLeft = {
-      row: Math.min(from.row, row),
-      col: Math.min(from.col, col),
-    };
-    var bottomRight = {
-      row: Math.max(from.row, row),
-      col: Math.max(from.col, col),
-    };
+    var top = Math.min(from.row, row),
+        left = Math.min(from.col, col),
+        bottom = Math.max(from.row, row),
+        right = Math.max(from.col, col);
 
-    var cells = [];
+    var cells = this.props.cells.slice(top, bottom + 1).map(function (row) {
+      return row.slice(left, right + 1).map(function (cell) {
+        return cell.serialize();
+      });
+    });
 
-    for (var i = topLeft.row; i <= bottomRight.row; i++) {
-      var arr = [];
-      for (var j = topLeft.col; j <= bottomRight.col; j++) {
-        arr.push(this.props.cells[i][j].serialize());
-      }
-      cells.push(arr);
-    }
-
-    this.props.setSelectedCells(cells);
+    this.props.setCopiedCells(cells);
   },
 
   isSelecting: function (x, y) {
@@ -153,7 +145,7 @@ var Grid = React.createClass({
           selecting={this.isSelecting(x, y)}
           onClick={this.props.onSelectionChange}
           onMouseDown={this.beginDrag}
-          onMouseOver={this.onMouseOver}
+          onMouseOver={this.moveDrag}
           onMouseUp={this.endDrag}
           skin={this.props.skin}
         />);
