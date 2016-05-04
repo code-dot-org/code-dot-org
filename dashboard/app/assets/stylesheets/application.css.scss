@@ -1248,6 +1248,10 @@ a.download-video {
     font-size: 18px;
   }
 
+  #teacher-announcement {
+    margin-top: 10px;
+  }
+
   .teacher-announce {
     position: relative;
     font-size: 14px;
@@ -1291,9 +1295,8 @@ a.download-video {
     font-family: 'Gotham 5r', sans-serif;
   }
   .teacher-announce .announce-learn-more {
-    bottom: 10px;
-    position: absolute;
-    right: 10px;
+    float: right;
+    margin-top: 25px;
   }
 
   .gallery {
