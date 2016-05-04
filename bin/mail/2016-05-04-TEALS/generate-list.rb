@@ -3,6 +3,7 @@ require_relative '../mailing-common/mailing-list-utils'
 
 # Spec: https://docs.google.com/document/d/16KXH4E3M0WWhPUE25j6Sooa1CN1qtyjQ2sbHcbiNqJo/edit#heading=h.9hz1cfop5llo
 
+# These values are arbitrary, based on need, from a snapshot of the data.
 NUM_VOLUNTEERS_BY_STATE = {
   'Washington' => 249,
   'California' => 142,
