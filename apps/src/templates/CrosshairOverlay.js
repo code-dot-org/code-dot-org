@@ -29,6 +29,8 @@ var CrosshairOverlay = function () {
 module.exports = CrosshairOverlay;
 
 CrosshairOverlay.CROSSHAIR_MARGIN = CROSSHAIR_MARGIN;
+CrosshairOverlay.EDGE_MARGIN = EDGE_MARGIN;
+CrosshairOverlay.TEXT_RECT_WIDTH = TEXT_RECT_WIDTH;
 CrosshairOverlay.TEXT_RECT_HEIGHT = TEXT_RECT_HEIGHT;
 
 /**
