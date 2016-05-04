@@ -75,6 +75,10 @@ var CodeWorkspace = React.createClass({
     var props = this.props;
 
     var runModeIndicators = experiments.isEnabled('runModeIndicators');
+    if (props.isMinecraft) {
+      // ignore runModeIndicators in MC
+      runModeIndicators = false;
+    }
 
     var chevronStyle = [
       styles.chevron,
