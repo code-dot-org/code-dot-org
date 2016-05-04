@@ -237,7 +237,7 @@ module LevelsHelper
     level_options[:lastAttempt] = @last_attempt
     level_options.merge! @level.properties.camelize_keys
 
-    if current_user.nil? || current_user.teachers.empty?
+    if !@script.try(:professional_learning_course) && (current_user.nil? || current_user.teachers.empty?)
       # only students with teachers should be able to submit
       level_options['submittable'] = false
     end
