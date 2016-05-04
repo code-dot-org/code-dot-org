@@ -2,6 +2,7 @@
 @import "mixins";
 @import "style-constants";
 @import "../JsDebuggerUi.scss";
+@import "../VisualizationOverlay.scss";
 @import "skins/base.scss";
 @import "skins/modern.scss";
 
@@ -248,7 +249,7 @@ div#visualizationResizeBar {
   }
 }
 
-#divApplab, #designModeViz, #visualizationOverlay {
+#divApplab, #designModeViz {
   overflow: hidden;
   outline: none;
   -webkit-touch-callout: none;
@@ -263,35 +264,10 @@ div#visualizationResizeBar {
 }
 
 #visualizationOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
   // layer 1 is design mode/div applab
   // layer 2 is items being dragged out from toolbox
   // layer 3 is overlay
   z-index: 3;
-  pointer-events: none;
-  // This is a hack that enables pointer-events: none on this absolutely-
-  // positioned SVG element in IE9.
-  filter: progid:DXImageTransform.Microsoft.Blur(pixelradius=0);
-}
-
-.crosshair-overlay {
-  line {
-    stroke: #aaa;
-    stroke-width: 1.8px;
-    stroke-dasharray: 6.5px;
-  }
-
-  rect {
-    stroke: #bdc3c7;
-    stroke-width: 2px;
-    fill: rgba(255,255,255,0.8);
-  }
-
-  text {
-    text-anchor: middle;
-  }
 }
 
 #divApplab canvas, #designModeViz canvas {

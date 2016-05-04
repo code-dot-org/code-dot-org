@@ -8,7 +8,7 @@ var api = require('./api');
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var CodeWorkspace = require('../templates/CodeWorkspace');
+var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = require('../lodash');
@@ -33,6 +33,8 @@ var createStore = require('../redux').createStore;
 var gamelabReducer = require('./reducers').gamelabReducer;
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
+var CrosshairOverlay = require('../templates/CrosshairOverlay');
+var VisualizationOverlay = require('../templates/VisualizationOverlay');
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -177,6 +179,8 @@ GameLab.prototype.init = function (config) {
   // able to turn them on.
   config.showInstructionsInTopPane = experiments.isEnabled('topInstructions');
 
+  config.reduxStore = this.reduxStore_;
+
   var breakpointsEnabled = !config.level.debuggerDisabled;
 
   var onMount = function () {
@@ -189,6 +193,8 @@ GameLab.prototype.init = function (config) {
     config.unusedConfig = this.gameLabP5.p5specialFunctions;
 
     this.studioApp_.init(config);
+
+    window.addEventListener('resize', this.renderVisualizationOverlay.bind(this));
 
     var finishButton = document.getElementById('finishButton');
     if (finishButton) {
@@ -216,6 +222,7 @@ GameLab.prototype.init = function (config) {
   this.reduxStore_.dispatch(setInitialLevelProps({
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
+    isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isShareView: !!config.share,
     instructionsMarkdown: config.level.markdownInstructions,
     instructionsInTopPane: config.showInstructionsInTopPane,
@@ -224,6 +231,7 @@ GameLab.prototype.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: true,
+    localeDirection: this.studioApp_.localeDirection()
   }));
 
   // Push project-sourced animation metadata into store
@@ -231,14 +239,7 @@ GameLab.prototype.init = function (config) {
     this.reduxStore_.dispatch(actions.setInitialAnimationMetadata(config.initialAnimationMetadata));
   }
 
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={this.studioApp_.localeDirection()}
-      editCode={!!config.level.editCode}
-      readonlyWorkspace={!!config.readonlyWorkspace}
-      showDebugger={true}
-    />
-  );
+  var codeWorkspace = <ConnectedCodeWorkspace/>;
 
   ReactDOM.render(<Provider store={this.reduxStore_}>
     <GameLabView
@@ -300,14 +301,6 @@ GameLab.prototype.afterInject_ = function (config) {
     Blockly.JavaScript.addReservedWords('GameLab,code');
   }
 
-  // Adjust visualizationColumn width.
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  visualizationColumn.style.width = '400px';
-
-  var divGameLab = document.getElementById('divGameLab');
-  divGameLab.style.width = '400px';
-  divGameLab.style.height = '400px';
-
   // Update gameLabP5's scale and keep it updated with future resizes:
   this.gameLabP5.scale = this.calculateVisualizationScale_();
 
@@ -359,6 +352,8 @@ GameLab.prototype.reset = function (ignore) {
   this.preloadInProgress = false;
   this.globalCodeRunsDuringPreload = false;
 
+  this.renderVisualizationOverlay();
+
   if (this.debugger_) {
     this.debugger_.detach();
   }
@@ -386,6 +381,34 @@ GameLab.prototype.reset = function (ignore) {
     $('#studio-dpad').removeClass('studio-dpad-none');
     this.resetDPad();
   }
+};
+
+GameLab.prototype.renderVisualizationOverlay = function () {
+  var divGameLab = document.getElementById('divGameLab');
+  var visualizationOverlay = document.getElementById('visualizationOverlay');
+  if (!divGameLab || !visualizationOverlay) {
+    return;
+  }
+
+  // Enable crosshair cursor for divGameLab
+  $(divGameLab).toggleClass('withCrosshair', this.isCrosshairAllowed());
+
+  if (!this.visualizationOverlay_) {
+    this.visualizationOverlay_ = new VisualizationOverlay(new CrosshairOverlay());
+  }
+
+  // Calculate current visualization scale to pass to the overlay component.
+  var unscaledWidth = parseInt(visualizationOverlay.getAttribute('width'));
+  var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
+
+  this.visualizationOverlay_.render(visualizationOverlay, {
+    isCrosshairAllowed: this.isCrosshairAllowed(),
+    scale: scaledWidth / unscaledWidth
+  });
+};
+
+GameLab.prototype.isCrosshairAllowed = function () {
+  return !this.studioApp_.isRunning();
 };
 
 GameLab.prototype.onPuzzleComplete = function (submit) {
@@ -492,6 +515,8 @@ GameLab.prototype.runButtonClick = function () {
   }
   this.studioApp_.attempts++;
   this.execute();
+
+  this.renderVisualizationOverlay();
 
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');
