@@ -65,7 +65,7 @@ GameLabP5.prototype.init = function (options) {
     var userSetup = this.setup || window.setup;
     var userDraw = this.draw || window.draw;
     if (typeof userDraw === 'function') {
-      this.push();
+      this.resetMatrix();
       if (typeof userSetup === 'undefined') {
         this.scale(this.pixelDensity, this.pixelDensity);
       }
@@ -86,7 +86,6 @@ GameLabP5.prototype.init = function (options) {
     this._registeredMethods.post.forEach(function (f) {
       f.call(self);
     });
-    this.pop();
   };
 
   // Disable fullscreen() method:
