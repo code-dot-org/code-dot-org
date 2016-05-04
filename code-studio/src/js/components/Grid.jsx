@@ -80,6 +80,10 @@ var Grid = React.createClass({
     setCopiedCells: React.PropTypes.func.isRequired,
   },
 
+  /**
+   * When drag begins, record that we are now dragging and where we
+   * started from.
+   */
   beginDrag: function (row, col) {
     this.setState({
       dragging: true,
@@ -87,6 +91,11 @@ var Grid = React.createClass({
     });
   },
 
+  /**
+   * As the mouse moves over the cells, if we are dragging then record
+   * the latest cell we've moved over so we can highlight all selected
+   * cells appropriately.
+   */
   moveDrag: function (row, col) {
     if (this.state && this.state.dragging) {
       this.setState({
@@ -95,6 +104,10 @@ var Grid = React.createClass({
     }
   },
 
+  /**
+   * Once the drag ends, create a subarray of all selected cells and
+   * save it to our parent.
+   */
   endDrag: function (row, col) {
     var from = this.state.dragStart;
     this.setState({
@@ -121,12 +134,16 @@ var Grid = React.createClass({
     this.props.setCopiedCells(cells);
   },
 
-  isSelecting: function (x, y) {
+  /**
+   * As we are dragging, we can determine if a given x,y coordinate pair
+   * is within the area being selected.
+   */
+  isSelecting: function (row, col) {
     if (this.state && this.state.dragging && this.state.dragCurrent) {
-      return x >= Math.min(this.state.dragStart.row, this.state.dragCurrent.row) &&
-             x <= Math.max(this.state.dragStart.row, this.state.dragCurrent.row) &&
-             y >= Math.min(this.state.dragStart.col, this.state.dragCurrent.col) &&
-             y <= Math.max(this.state.dragStart.col, this.state.dragCurrent.col);
+      return row >= Math.min(this.state.dragStart.row, this.state.dragCurrent.row) &&
+             row <= Math.max(this.state.dragStart.row, this.state.dragCurrent.row) &&
+             col >= Math.min(this.state.dragStart.col, this.state.dragCurrent.col) &&
+             col <= Math.max(this.state.dragStart.col, this.state.dragCurrent.col);
     }
     return false;
   },
