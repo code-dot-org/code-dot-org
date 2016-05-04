@@ -770,8 +770,8 @@ Artist.prototype.execute = function () {
   } else {
     this.code = '';
 
-    if (this.studioApp.initializationCode) {
-      this.code += this.studioApp.initializationCode;
+    if (this.studioApp_.initializationCode) {
+      this.code += this.studioApp_.initializationCode;
     }
 
     this.code += Blockly.Generator.blockSpaceToCode('JavaScript');
