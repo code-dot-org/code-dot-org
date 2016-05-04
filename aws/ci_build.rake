@@ -281,12 +281,13 @@ end
 MAX_FRONTEND_UPGRADE_FAILURES = 5
 task :deploy do
   with_hipchat_logging("deploy frontends") do
-    if CDO.daemon && CDO.app_servers.any?
+    app_servers = CDO.app_servers
+    if CDO.daemon && app_servers.any?
       Dir.chdir(deploy_dir) do
         num_failures = 0
-        thread_count = (CDO.app_servers.keys.length * 0.20).ceil
-        threaded_each CDO.app_servers.keys, thread_count do |name|
-          succeeded = upgrade_frontend name, CDO.app_servers[name]
+        thread_count = (app_servers.keys.length * 0.20).ceil
+        threaded_each app_servers.keys, thread_count do |name|
+          succeeded = upgrade_frontend name, app_servers[name]
           if !succeeded
             num_failures += 1
             raise 'too many frontend upgrade failures, aborting deploy' if num_failures > MAX_FRONTEND_UPGRADE_FAILURES
