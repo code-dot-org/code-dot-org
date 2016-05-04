@@ -314,10 +314,10 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
       flakiness = TestFlakiness.test_flakiness[test_run_string]
       if !flakiness
         $lock.synchronize { puts "No flakiness data for #{test_run_string}".green }
-        return 0
+        return 1
       elsif flakiness == 0.0
         $lock.synchronize { puts "#{test_run_string} is not flaky".green }
-        return 0
+        return 1
       else
         flakiness_message = "#{test_run_string} is #{flakiness} flaky. "
         max_reruns = [(1 / Math.log(flakiness, 0.05)).ceil - 1, # reruns = runs - 1
