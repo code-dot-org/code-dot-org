@@ -1,6 +1,6 @@
 /* global React, dashboard */
 
-var STAGE_PROGRESS_TYPE = require('./stage_progress_type');
+var STAGE_TYPE = require('./types').STAGE_TYPE;
 var StageProgress = require('./stage_progress');
 
 /**
@@ -8,12 +8,7 @@ var StageProgress = require('./stage_progress');
  */
 var CourseProgressRow = React.createClass({
   propTypes: {
-    stage: React.PropTypes.shape({
-      name: React.PropTypes.string,
-      lesson_plan_html_url: React.PropTypes.string,
-      flex_category: React.PropTypes.string,
-      levels: STAGE_PROGRESS_TYPE
-    })
+    stage: STAGE_TYPE
   },
 
   render: function () {

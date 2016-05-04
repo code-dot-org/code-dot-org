@@ -1,6 +1,6 @@
 /* global React, dashboard */
 
-var STAGE_PROGRESS_TYPE = require('./stage_progress_type');
+var STAGE_TYPE = require('./types').STAGE_TYPE;
 var CourseProgressRow = require('./course_progress_row');
 
 /**
@@ -8,16 +8,15 @@ var CourseProgressRow = require('./course_progress_row');
  */
 var CourseProgress = React.createClass({
   propTypes: {
-    stages: React.PropTypes.arrayOf(React.PropTypes.shape({
-      name: React.PropTypes.string,
-      lesson_plan_html_url: React.PropTypes.string,
-      flex_category: React.PropTypes.string,
-      levels: STAGE_PROGRESS_TYPE
-    }))
+    stages: React.PropTypes.arrayOf(STAGE_TYPE)
   },
 
   render: function () {
     var rows = [], stages = this.props.stages;
+
+    // Iterate through each stage. When a stage with a flex_category is found,
+    // greedily add stages with the same flex_category until finding a stage
+    // with a different (or no) flex_category.
     for (var i = 0; i < stages.length; ) {
 
       if (stages[i].flex_category) {
