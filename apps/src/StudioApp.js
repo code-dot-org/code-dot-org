@@ -1795,10 +1795,6 @@ StudioApp.prototype.configureDom = function (config) {
       config.level.disableVariableEditing = false;
     }
 
-    if (config.embed) {
-      document.body.className += ' embedded';
-    }
-
     if (config.pinWorkspaceToBottom) {
       var bodyElement = document.body;
       bodyElement.style.overflow = "hidden";
@@ -1870,12 +1866,10 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
         var div = document.createElement('div');
         document.body.appendChild(div);
-        if (!options.embed) {
-          ReactDOM.render(React.createElement(WireframeSendToPhone, {
-            channelId: dashboard.project.getCurrentId(),
-            appType: dashboard.project.getStandaloneApp()
-          }), div);
-        }
+        ReactDOM.render(React.createElement(WireframeSendToPhone, {
+          channelId: dashboard.project.getCurrentId(),
+          appType: dashboard.project.getStandaloneApp()
+        }), div);
       }
 
       if (!options.embed && !options.noHowItWorks) {
