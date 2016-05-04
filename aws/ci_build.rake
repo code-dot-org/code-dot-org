@@ -221,6 +221,8 @@ def upgrade_frontend(name, host)
     success = true
   rescue
     HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, removing from rotation.", color: 'red'
+    HipChat.log "log command: `ssh gateway.code.org ssh production-daemon cat #{log_path}`"
+    HipChat.log "/quote #{File.read(log_path)}"
     # The frontend is in indeterminate state, so make sure it is stopped.
     stop_frontend name, host, log_path
     success = false
