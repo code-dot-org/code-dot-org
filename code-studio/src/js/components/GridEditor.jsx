@@ -83,6 +83,15 @@ var GridEditor = React.createClass({
     });
   },
 
+  /**
+   * Helper method used to update chunks of the grid. Excepts a row and
+   * column representing the top left corner from which to begin
+   * replacing and a two-dimensional array of serialized cells to update
+   * into the grid.
+   * @param {number} row
+   * @param {number} col
+   * @param {Object[][]} newCells
+   */
   updateCells: function (row, col, newCells) {
     if (newCells === undefined || row === undefined || col === undefined) {
       return;
@@ -122,12 +131,19 @@ var GridEditor = React.createClass({
     });
   },
 
+  /**
+   * When a given cell is modified, update the grid
+   */
   handleCellChange: function (newSerializedCell) {
     var row = this.state.selectedRow;
     var col = this.state.selectedCol;
+    // updateCells expects a two-dimentional array
     this.updateCells(row, col, [[newSerializedCell]]);
   },
 
+  /**
+   * "Paste" the cells in our "clipboard" into the grid
+   */
   pasteCopiedCells: function () {
     var copiedCells = this.state.copiedCells;
     var row = this.state.selectedRow;
@@ -135,6 +151,9 @@ var GridEditor = React.createClass({
     this.updateCells(row, col, copiedCells);
   },
 
+  /**
+   * Store the given cells on our "clipboard"
+   */
   setCopiedCells: function (cells) {
     this.setState({
       copiedCells: cells
