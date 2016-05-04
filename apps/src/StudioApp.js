@@ -31,7 +31,7 @@ var shareWarnings = require('./shareWarnings');
 
 var redux = require('./redux');
 var runState = require('./redux/runState');
-var levelProperties = require('./redux/levelProperties');
+var commonReducers = require('./redux/commonReducers');
 var combineReducers = require('redux').combineReducers;
 
 var copyrightStrings;
@@ -266,11 +266,6 @@ StudioApp.prototype.configureRedux = function (reducers) {
  * runs).
  */
 StudioApp.prototype.createReduxStore_ = function () {
-  var commonReducers = {
-    runState: runState.default,
-    level: levelProperties.default
-  };
-
   var combined = combineReducers(_.assign({}, commonReducers, this.reducers_));
   this.reduxStore = redux.createStore(combined);
 };
