@@ -1412,6 +1412,21 @@ a.download-video {
   }
 }
 
+#landingpage.teacher-course {
+  $radius: 5px;
+  #lesson {
+    background: $cyan;
+    border-radius: $radius $radius 0 0;
+  }
+  #stats {
+    border: 5px solid $cyan;
+    border-radius: 0 0 $radius $radius;
+    .user-stats-block {
+      background: none;
+    }
+  }
+}
+
 .course_progress {
   margin: 10px 0;
 }
