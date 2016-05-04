@@ -23,7 +23,9 @@ var ALLOWED_KEYS = utils.makeEnum(
   'showDebugWatch',
   'localeDirection',
   'isDroplet',
-  'isMinecraft'
+  'isMinecraft',
+  'visualizationHasPadding',
+  'hideSource',
 );
 
 var levelInitialState = {
