@@ -11,8 +11,8 @@ class UserScriptTest < ActiveSupport::TestCase
     @user_script = create :user_script, user: @user, script: @script
   end
 
-  def complete_level(script_level)
-    @user.track_level_progress_async(script_level, 100, false)
+  def complete_level(script_level, result = 100)
+    @user.track_level_progress_async(script_level, result, false)
   end
 
   def complete_all_levels
@@ -41,7 +41,7 @@ class UserScriptTest < ActiveSupport::TestCase
 
     # attempt some levels
     @script_levels[8..-1].each do |script_level|
-      complete_level(script_level)
+      complete_level(script_level, 10)
     end
 
     assert !@user_script.check_completed?
