@@ -211,7 +211,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_raises_matching /Applab levels can only be added to scripts that are hidden or require login/ do
       Script.add_script(
           {name: 'test script', hidden: false},
-          [{name: 'New App Lab Project'}] # From level.yml fixture
+          [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
       )
     end
   end
@@ -219,28 +219,28 @@ class ScriptTest < ActiveSupport::TestCase
   test 'allow applab levels in hidden scripts' do
     Script.add_script(
         {name: 'test script', hidden: true},
-        [{name: 'New App Lab Project'}] # From level.yml fixture
+        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
     )
   end
 
   test 'allow applab levels in login_required scripts' do
     Script.add_script(
         {name: 'test script', hidden: false, login_required: true},
-        [{name: 'New App Lab Project'}] # From level.yml fixture
+        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
     )
   end
 
   test 'allow applab levels in student_of_admin_required scripts' do
     Script.add_script(
         {name: 'test script', hidden: false, student_of_admin_required: true},
-        [{name: 'New App Lab Project'}] # From level.yml fixture
+        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
     )
   end
 
   test 'allow applab levels in admin_required scripts' do
     Script.add_script(
         {name: 'test script', hidden: false, admin_required: true},
-        [{name: 'New App Lab Project'}] # From level.yml fixture
+        [{levels: [{name: 'New App Lab Project'}]}] # From level.yml fixture
     )
   end
 
@@ -248,7 +248,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_raises_matching /Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required/ do
       Script.add_script(
           {name: 'test script', hidden: false},
-          [{name: 'New Game Lab Project'}] # From level.yml fixture
+          [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
       )
     end
   end
@@ -257,7 +257,7 @@ class ScriptTest < ActiveSupport::TestCase
   test 'allow gamelab levels in hidden scripts' do
     Script.add_script(
         {name: 'test script', hidden: true},
-        [{name: 'New Game Lab Project'}] # From level.yml fixture
+        [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
     )
   end
 
@@ -265,21 +265,21 @@ class ScriptTest < ActiveSupport::TestCase
   test 'allow gamelab levels in login_required scripts' do
     Script.add_script(
         {name: 'test script', hidden: false, login_required: true},
-        [{name: 'New Game Lab Project'}] # From level.yml fixture
+        [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
     )
   end
 
   test 'allow gamelab levels in student_of_admin_required scripts' do
     Script.add_script(
         {name: 'test script', hidden: false, student_of_admin_required: true},
-        [{name: 'New Game Lab Project'}] # From level.yml fixture
+        [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
     )
   end
 
   test 'allow gamelab levels in admin_required scripts' do
     Script.add_script(
         {name: 'test script', hidden: false, admin_required: true},
-        [{name: 'New Game Lab Project'}] # From level.yml fixture
+        [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
     )
   end
 

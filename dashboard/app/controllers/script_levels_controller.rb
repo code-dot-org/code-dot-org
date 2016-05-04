@@ -151,6 +151,7 @@ class ScriptLevelsController < ApplicationController
     elsif @user && current_user && @user != current_user
       # load other user's solution for teachers viewing their students' solution
       level_source = @user.last_attempt(@level).try(:level_source)
+      @user_level = @user.user_level_for(@script_level, @level)
       readonly_view_options
     elsif current_user
       # load user's previous attempt at this puzzle.
@@ -182,7 +183,6 @@ class ScriptLevelsController < ApplicationController
     # TODO: This should use cancan/authorize.
     if user.student_of?(current_user)
       @user = user
-      @user_level = @user.user_level_for(@script_level)
     end
   end
 
