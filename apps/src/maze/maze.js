@@ -74,21 +74,6 @@ var skin;
  */
 var stepSpeed = 100;
 
-/**
- * A method for tests to recreate our redux store between runs.
- */
-function newReduxStore() {
-  /**
-   * Redux Store holding application state, transformable by actions.
-   * @type {Store}
-   * @see http://redux.js.org/docs/basics/Store.html
-   */
-  Maze.reduxStore = redux.createStore(redux.combineReducers());
-}
-
-newReduxStore();
-
-
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
 
@@ -528,8 +513,6 @@ Maze.init = function (config) {
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
 
-  config.reduxStore = Maze.reduxStore;
-
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.bee = new Bee(Maze, studioApp, config);
     // Override default stepSpeed
@@ -630,7 +613,7 @@ Maze.init = function (config) {
   };
 
   // Push initial level properties into the Redux store
-  Maze.reduxStore.dispatch(setInitialLevelProps({
+  studioApp.reduxStore_.dispatch(setInitialLevelProps({
     localeDirection: studioApp.localeDirection(),
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isDroplet: !!level.editCode
@@ -646,7 +629,7 @@ Maze.init = function (config) {
   );
 
   ReactDOM.render(
-    <Provider store={Maze.reduxStore}>
+    <Provider store={studioApp.reduxStore_}>
       <AppView
         assetUrl={studioApp.assetUrl}
         isEmbedView={!!config.embed}
@@ -1905,8 +1888,4 @@ Maze.onExecutionFinish = function () {
   if (Maze.bee) {
     Maze.bee.onExecutionFinish();
   }
-};
-
-Maze.__TestInterface__ = {
-  recreateReduxStore: newReduxStore
 };

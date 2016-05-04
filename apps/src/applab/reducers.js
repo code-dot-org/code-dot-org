@@ -40,9 +40,11 @@ function interfaceMode(state, action) {
 }
 
 var rootReducer = combineReducers({
-  currentScreenId: currentScreenId,
-  interfaceMode: interfaceMode,
-  instructions: instructions.default,
+
 });
 
-module.exports = { rootReducer: rootReducer };
+module.exports = {
+  currentScreenId: currentScreenId,
+  interfaceMode: interfaceMode,
+  instructions: instructions.default
+};

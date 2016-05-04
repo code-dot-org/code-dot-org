@@ -28,6 +28,7 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
+var redux = require('./redux');
 var runState = require('./redux/runState');
 var copyrightStrings;
 
@@ -244,6 +245,15 @@ StudioApp.prototype.configure = function (options) {
   this.minVisualizationWidth = options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
 };
 
+StudioApp.prototype.configureRedux = function (reducers) {
+  this.reducers_ = reducers;
+  this.createReduxStore_();
+};
+
+StudioApp.prototype.createReduxStore_ = function () {
+  this.reduxStore_ = redux.createStore(redux.combineReducers(this.reducers_));
+};
+
 /**
  * @param {AppOptionsConfig}
  */
@@ -267,11 +277,6 @@ StudioApp.prototype.init = function (config) {
   if (!config) {
     config = {};
   }
-
-  this.reduxStore_ = config.reduxStore;
-  // TODO - dont check this in
-  // TODO - throw if not given a redux store?
-  window.__reduxStore = this.reduxStore_;
 
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;

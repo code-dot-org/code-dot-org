@@ -51,6 +51,7 @@ module.exports = function (app, levels, options) {
   }
 
   studioApp.configure(options);
+  studioApp.configureRedux(app.getReducers ? app.getReducers() : null);
 
   options.skin = options.skinsModule.load(studioApp.assetUrl, options.skinId);
 
