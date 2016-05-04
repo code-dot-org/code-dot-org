@@ -1,4 +1,4 @@
-/** @file */
+/** @file App Lab-specific Crosshair Overlay */
 'use strict';
 
 require('../utils'); // Provides Function.prototype.inherits
