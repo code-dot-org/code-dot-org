@@ -36,7 +36,7 @@
     %h2= level.title
   %div= render(inline: level.markdown_instructions, type: :md)
 
-  - if level.allow_user_uploads
+  - if level.allow_user_uploads == 'true'
     %script{src: asset_path('js/fileupload/jquery.iframe-transport.js')}
     %script{src: asset_path('js/fileupload/jquery.fileupload.js')}
     %p#free-response-upload
