@@ -55,6 +55,7 @@ var AnimationPreview = React.createClass({
 
   advanceFrame: function () {
     this.setState({ currentFrame: (this.state.currentFrame + 1) % this.props.frameCount });
+    clearTimeout(this.timeout_);
     this.timeout_ = setTimeout(this.advanceFrame, 1000 / this.props.frameRate);
   },
 
