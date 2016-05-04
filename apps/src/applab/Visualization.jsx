@@ -3,8 +3,15 @@ var applabConstants = require('./constants');
 var commonStyles = require('../commonStyles');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var connect = require('react-redux').connect;
+var experiments = require('../experiments');
 
 var styles = {
+  main: {
+    // TODO - could do this in every Visualization.jsx and get rid of it from scss
+    position: 'relative',
+    height: 400,
+    marginBottom: 5
+  },
   nonResponsive: {
     width: applabConstants.APP_WIDTH,
     height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT
@@ -12,6 +19,9 @@ var styles = {
   share: {
     // overrides nonReponsive
     height: applabConstants.APP_HEIGHT
+  },
+  phoneFrame: {
+    marginBottom: 0
   }
 };
 
@@ -27,6 +37,9 @@ var Visualization = React.createClass({
     var appWidth = applabConstants.APP_WIDTH;
     var appHeight = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
 
+    var addPhoneFrame = experiments.isEnabled('runModeIndicators') &&
+      !this.props.isEmbedView && !this.props.isShareView;
+
     var classes = '';
     if (this.props.visualizationHasPadding) {
       classes += 'with_padding';
@@ -34,7 +47,8 @@ var Visualization = React.createClass({
 
     var vizStyle = [
       (this.props.isEmbedView || this.props.hideSource) && styles.nonResponsive,
-      this.props.isShareView && styles.share
+      this.props.isShareView && styles.share,
+      addPhoneFrame && styles.phoneFrame
     ];
 
     return (
