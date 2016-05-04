@@ -612,6 +612,42 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   }
 end
 
+And(/^I sign in as an admin named "([^"]*)"$/) do |name|
+  steps %Q{
+    Given I am on "http://studio.code.org/reset_session"
+    And I am on "http://studio.code.org/users/sign_in"
+    And I display toast "Loading Rails, creating admin user... (This may take 30 seconds)"
+  }
+
+  require_rails_env
+  email, password = generate_user(name)
+  create_admin_user(name, email, password)
+
+  steps %Q{
+    When I type "#{email}" into "#user_login"
+    And I type "#{password}" into "#user_password"
+    And I click selector "input[type=submit][value='Sign in']"
+    Then I wait to see ".header_user"
+  }
+end
+
+And(/I display toast "([^"]*)"$/) do |message|
+  @browser.execute_script(<<-SCRIPT)
+    $('<div>')
+      .addClass('ui-test-toast')
+      .text("#{message}")
+      .css('position', 'absolute')
+      .css('top', 50)
+      .css('right', 50)
+      .css('padding', 50)
+      .css('background-color', 'lightyellow')
+      .css('border', 'dashed 3px #eeee00')
+      .css('font-weight', 'bold')
+      .css('font-size', '14pt')
+      .appendTo($('body'))
+  SCRIPT
+end
+
 And(/I fill in username and password for "([^"]*)"$/) do |name|
   steps %Q{
     And I type "#{@users[name][:email]}" into "#user_login"
