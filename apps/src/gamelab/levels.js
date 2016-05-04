@@ -72,7 +72,6 @@ levels.custom = utils.extend(levels.sandbox, {
     "overlap": null,
     "setAnimation": null,
     "setCollider": null,
-    "setColor": null,
     "setVelocity": null,
     "sprite.height": null,
     "sprite.width": null,
