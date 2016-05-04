@@ -1,6 +1,7 @@
 var codegen = require('./codegen');
 var ObservableEvent = require('./ObservableEvent');
 var utils = require('./utils');
+var runState = require('./redux/runState');
 
 /**
  * Create a JSInterpreter object. This object wraps an Interpreter object and
@@ -390,6 +391,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
       case StepType.RUN:
         // Bail out here if in a break state (paused), but make sure that we still
         // have the next tick queued first, so we can resume after un-pausing):
+        this.isExecuting = false;
         return;
       case StepType.OUT:
         // If we haven't yet set stepOutToStackDepth, work backwards through the
@@ -1130,4 +1132,33 @@ JSInterpreter.prototype.evalInCurrentScope = function (expression) {
   // run() may throw if there's a problem in the expression
   evalInterpreter.run();
   return evalInterpreter.value;
+};
+
+JSInterpreter.prototype.handlePauseContinue = function () {
+  // We have code and are either running or paused
+  if (this.paused && this.nextStep === StepType.RUN) {
+    this.paused = false;
+  } else {
+    this.paused = true;
+    this.nextStep = StepType.RUN;
+  }
+  this.studioApp.reduxStore_.dispatch(runState.setIsDebuggerPaused(this.paused));
+};
+
+JSInterpreter.prototype.handleStepOver = function () {
+  this.paused = true;
+  this.nextStep = StepType.OVER;
+  this.studioApp.reduxStore_.dispatch(runState.setIsDebuggerPaused(this.paused));
+};
+
+JSInterpreter.prototype.handleStepIn = function () {
+  this.paused = true;
+  this.nextStep = StepType.IN;
+  this.studioApp.reduxStore_.dispatch(runState.setIsDebuggerPaused(this.paused));
+};
+
+JSInterpreter.prototype.handleStepOut = function () {
+  this.paused = true;
+  this.nextStep = StepType.OUT;
+  this.studioApp.reduxStore_.dispatch(runState.setIsDebuggerPaused(this.paused));
 };

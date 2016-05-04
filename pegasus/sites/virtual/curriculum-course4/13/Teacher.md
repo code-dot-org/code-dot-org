@@ -267,54 +267,49 @@ Use these activities to enhance student learning. They can be used as outside of
 
 ## Connections and Background Information
 
-### ISTE Standards (formerly NETS) 
-- 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-- 1.c - Use models and simulation to explore complex systems and issues.   
-- 2.a - Interact, collaborate, and publish with peers, experts, or others employing a variety of digital environments and media.
-- 2.d - Contribute to project teams to solve problems.  
-- 4.b - Plan and manage activities to develop a solution or complete a project.
-- 4.d - Use multiple processes and diverse perspectives to explore alternative solutions.
-- 6.c - Troubleshoot systems and applications.
+### ISTE Standards (formerly NETS)
+
+- 1a. Apply existing knowledge to generate new ideas, products, or processes
+- 1c. Use models and simulation to explore complex systems and issues
+- 2a. Interact, collaborate, and publish with peers, experts, or others employing a variety of digital environments and media
+- 2d. Contribute to project teams to solve problems
+- 4b. Plan and manage activities to develop a solution or complete a project
+- 4d. Use multiple processes and diverse perspectives to explore alternative solutions
 
 ### CSTA K-12 Computer Science Standards
- 
-CL.L1:3.2 - Work cooperatively and collaboratively with peers teachers, and others using technology.  
-CT.L2:2.1 - Use the basic steps in algorithmic problem solving to design solutions.   
-CT.L2:2-6 - Describe and analyze a sequence of instructions being followed.  
-CT.L2:2-7 - Represent data in a variety of ways: text, sounds, pictures, numbers.  
-CT.L2:2-8 - Use visual representations of problem states, structures, and data.  
-CT.L2:2-12 - Use abstraction to decompose a problem into sub problems.  
-CT.L3A:1 - Use predefined functions and parameters, classes and methods to divide a complex problem into simpler parts.  
-CT.L3A:3 - Explain how sequence, selection, iteration, and recursion are building blocks of algorithms.  
-CPP.L1:6-5 - Construct a program as a set of step-by-step instructions to be acted out.  
-CT.L2:2-14 - Examine connections between elements of mathematics and computer science including binary numbers, logic, sets, and functions.   
+
+- CL.L1:3-02 Work cooperatively and collaboratively with peers teachers, and others using technology
+- CT.L2-01 Use the basic steps in algorithmic problem solving to design solutions
+- CT.L2-06 Describe and analyze a sequence of instructions being followed
+- CT.L2-07 Represent data in a variety of ways: text, sounds, pictures, numbers
+- CT.L2-08 Use visual representations of problem states, structures, and data
+- CT.L2-12 Use abstraction to decompose a problem into sub problems
+- CT.L2-14 Examine connections between elements of mathematics and computer science including binary numbers, logic, sets, and functions
+- CT.L3A-01 Use predefined functions and parameters, classes and methods to divide a complex problem into simpler parts
+- CT.L3A-03 Explain how sequence, selection, iteration, and recursion are building blocks of algorithms
+- CPP.L1:6-05 Construct a program as a set of step-by-step instructions to be acted out
 
 ### NGSS Science and Engineering Practices
- 
-- K-2-ETS1-1 - Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool. 
-- 3-5-ETS1-2 - Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+
+- 3-5-ETS1-2 Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem
 
 ### Common Core Mathematical Practices
- 
-- 1. Make sense of problems and persevere in solving them.
-- 2. Reason abstractly and quantitatively.
-- 3. Construct viable arguments and critique the reasoning of others.
-- 6. Attend to precision.
-- 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.
+
+- 1. Make sense of problems and persevere in solving them
+- 2. Reason abstractly and quantitatively
+- 3. Construct viable arguments and critique the reasoning of others
+- 6. Attend to precision
+- 7. Look for and make use of structure
+- 8. Look for and express regularity in repeated reasoning
 
 ### Common Core Language Arts Standards
 
-- SL.2.1.B - Build on others' talk in conversations by linking their comments to the remarks of others.
-- SL.2.1.C - Ask for clarification and further explanation as needed about the topics and texts under discussion.
-- SL.2.2 - Recount or describe key ideas or details from a text read aloud or information presented orally or through other media.
-- SL.2.3 - Ask and answer questions about what a speaker says in order to clarify comprehension, gather additional information, or deepen understanding of a topic or issue.
-- RI.2.4 - Determine the meaning of words and phrases in a text relevant to a grade 2 topic or subject area.
-- SL.3.1.C - Ask questions to check understanding of information presented, stay on topic, and link their comments to the remarks of others.
-- SL.3.1.D - Explain their own ideas and understanding in light of the discussion.
-- SL.3.3 - Ask and answer questions about information from a speaker, offering appropriate elaboration and detail.
-- RI.3.1 - Ask and answer questions to demonstrate understanding of a text, referring explicitly to the text as the basis for the answers.
-- L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
+- SL.3.1.D Explain their own ideas and understanding in light of the discussion
+- SL.3.3 Ask and answer questions about information from a speaker, offering appropriate elaboration and detail
+- RI.3.1 Ask and answer questions to demonstrate understanding of a text, referring explicitly to the text as the basis for the answers
+- L.3.6 Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships
+- L.4.6 Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal precise actions, emotions, or states of being and that are basic to a particular topic
+- L.5.6 Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal contrast, addition, and other logical relationships
 
 
 

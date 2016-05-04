@@ -39,8 +39,7 @@
     "build-css:dist": "npm run lint-css && npm run clean-css && scripts/build-css.js --dist",
     "build-js": "scripts/build-js.js",
     "build-js:dist": "npm run lint-js && npm test && npm run clean-js && scripts/build-js.js --dist && scripts/uglify-js.js",
-    "start": "scripts/build-js.js --watch",
-    "test-audio": "echo \"Open your browser to http://127.0.0.1:8080/test/audio/audio_test.html\" && http-server ."
+    "start": "scripts/build-js.js --watch"
   },
   "//": "ejsify is a dependency of apps/src; we declare it here rather than in apps/src/package.json so we can continue to avoid needing to npm install that module.",
   "devDependencies": {
