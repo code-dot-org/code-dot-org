@@ -32,8 +32,6 @@ var AppView = React.createClass({
           isEmbedView={this.props.isEmbedView}
           isShareView={this.props.isShareView}>
         <div id="visualizationColumn">
-          {this.props.generateVisualizationColumnHtml && <ProtectedStatefulDiv
-            contentFunction={this.props.generateVisualizationColumnHtml} />}
           {this.props.visualizationColumn}
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
@@ -42,7 +40,6 @@ var AppView = React.createClass({
             hidden={this.props.hideSource}
             noVisualization={this.props.noVisualization}
             isRtl={this.props.isRtl}
-            generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}
             codeWorkspace={this.props.codeWorkspace}/>
       </StudioAppWrapper>
     );

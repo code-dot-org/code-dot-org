@@ -7,7 +7,7 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
  
-# Teaching Strategies
+## Teaching Strategies
 <br>
 As a learner in this model, you will have the opportunity to look at teaching strategies that use discovery through accessible topics with inquiry to solve real world problems that are culturally relevant, addresses social and ethical issues and teaches students about becoming members of a “computing community of practice.” What is so great about these strategies, is that can be applied to all courses of study, not just computer science.
 <br>
@@ -24,14 +24,20 @@ The lessons follow a pedagogical approach that comes from research done by Jane 
 <li> Providing clear standards, constant feedback, and opportunities for work</li>
 <li> Encouraging strategic and metacognitive thinking, so that students can learn to evaluate and guide their own teaching.</li></ul>
 
-<img align="left" src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png" height="910" width="400" hspace="20">
-<img align="right" src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png" height="910" width="400" hspace="20">
+<img src="https://images.code.org/b7d73b7347510f9057f126510d6d2096-image-1461910875309.JPG" width="150" style="float:right; margin-left:30px">
+<img src="https://images.code.org/a91800825083a3b480a9f6088f7096d3-image-1461910879700.JPG" width="150" style="float:left; margin-right:30px">
 
 <br>
 <br>
-Many of these practices you already use in class, others will be new , either way, we will have time to experience these successful teaching approaches as both a learner and facilitator.
+<br>
+<br>
+<strong> Many of these practices you already use in class, others will be new, either way, we will have time to experience these successful teaching approaches as both a learner and facilitator.</strong>
 <br>
 
+<br>
+<br>
+<br>
+<br>
 <br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

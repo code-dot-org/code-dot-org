@@ -318,6 +318,7 @@
   homepage_slot_text_link_stats: "See the stats"
   homepage_slot_text_link_buy: "Get involved"
   homepage_slot_text_link_donate: "Make a donation"
+  homepage_slot_text_link_shop: "T-shirts, hats, & more"
   homepage_header_codestudio: "Code Studio student creations"
   homepage_header_donors: "Code.org thanks its supporters"
   homepage_donors_seall: "See all"
@@ -663,8 +664,8 @@
   dashboard_faq_k5: "K-5 Frequently Asked Questions"
   dashboard_announcements: "Announcements"
   dashboard_announce_view_all: "View all"
-  dashboard_announce_message: "<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course."
-  dashboard_announce_button_text: "Go unplugged"
+  dashboard_announce_message: 'We''ve started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio, and your feedback would help us out. There''s a lot that goes into measuring what students can do, so we''re releasing a 3-series blog post. First up: See how we''re tagging puzzles in Code Studio with concepts and difficulty levels, and let us know if you agree!'
+  dashboard_announce_button_text: "Learn more"
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: "Add your name"
   code_hoc_coming: "The Hour of Code is here - December 8-14!"

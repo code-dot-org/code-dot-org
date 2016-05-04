@@ -1909,10 +1909,6 @@ Studio.init = function (config) {
     }
 
     drawMap();
-
-    if (!!config.level.projectTemplateLevelName) {
-      studioApp.displayWorkspaceAlert('warning', <div>{commonMsg.projectWarning()}</div>);
-    }
   };
 
   config.afterClearPuzzle = function () {
