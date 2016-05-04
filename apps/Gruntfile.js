@@ -420,7 +420,8 @@ module.exports = function (grunt) {
       tasks: ['newer:copy:src', 'exec:browserify', 'exec:applabapi', 'notify:browserify'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        livereload: true,
+        interrupt: true
       }
     },
     style: {
@@ -428,7 +429,8 @@ module.exports = function (grunt) {
       tasks: ['newer:sass', 'notify:sass'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        livereload: true,
+        interrupt: true
       }
     },
     content: {
