@@ -252,8 +252,6 @@ getWidth()
   {func: 'setWidthEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['width'], params: ["50"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setWidthEach' },
 /* TODO: decide whether to expose these Group methods:
 draw() - USEFUL?
-Other possible functions:
-setAnimationEach(label)
 */
 
   // Drawing
