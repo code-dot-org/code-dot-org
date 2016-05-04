@@ -866,6 +866,10 @@ StudioApp.prototype.toggleRunReset = function (button) {
   $('.arrow').prop("disabled", showRun);
 };
 
+StudioApp.prototype.isRunning = function () {
+  return this.reduxStore_.getState().isRunning;
+};
+
 /**
  * Attempts to associate a set of audio files to a given name
  * Handles the case where cdoSounds does not exist, e.g. in tests

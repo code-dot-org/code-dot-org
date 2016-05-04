@@ -1,0 +1,18 @@
+// Common styles for the CrosshairOverlay component.
+.crosshair-overlay {
+  line {
+    stroke: #aaa;
+    stroke-width: 1.8px;
+    stroke-dasharray: 6.5px;
+  }
+
+  rect {
+    stroke: #bdc3c7;
+    stroke-width: 2px;
+    fill: rgba(255,255,255,0.8);
+  }
+
+  text {
+    text-anchor: middle;
+  }
+}
