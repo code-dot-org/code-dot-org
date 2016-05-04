@@ -120,6 +120,7 @@ var CodeWorkspace = React.createClass({
             id="headers"
             dir={props.localeDirection}
             hasFocus={hasFocus}
+            className={props.isRunning ? 'is-running' : ''}
         >
           <div id="codeModeHeaders">
             <PaneSection id="toolbox-header">
@@ -158,7 +159,6 @@ var CodeWorkspace = React.createClass({
                 {props.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort()}
               </span>
               <div id="blockCounter">
-                {/* TODO - Would like this to be all React/redux so that text isnt yellow on light purple while running */}
                 <ProtectedStatefulDiv id="blockUsed" className='block-counter-default'/>
                 <span> / </span>
                 <span id="idealBlockNumber"></span>
