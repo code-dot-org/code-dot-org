@@ -20,7 +20,8 @@ var styles = {
     top: styleConstants['resize-bar-width'],
     left: 0,
     right: 0,
-    textAlign: 'center'
+    textAlign: 'center',
+    lineHeight: '30px'
   },
   noPadding: {
     padding: 0
