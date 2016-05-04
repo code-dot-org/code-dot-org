@@ -768,7 +768,13 @@ Artist.prototype.execute = function () {
   if (this.level.editCode) {
     this.initInterpreter();
   } else {
-    this.code = Blockly.Generator.blockSpaceToCode('JavaScript');
+    this.code = '';
+
+    if (this.studioApp.initializationCode) {
+      this.code += this.studioApp.initializationCode;
+    }
+
+    this.code += Blockly.Generator.blockSpaceToCode('JavaScript');
     this.evalCode(this.code);
   }
 
