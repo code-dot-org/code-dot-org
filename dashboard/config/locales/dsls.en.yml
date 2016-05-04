@@ -761,6 +761,7 @@ en:
       PDAlg 3BWelcome: {}
       PDAlg 3CAbout: {}
       PDAlg 3CBootstrap: {}
+      PDAlg 3CCongrats: {}
       PDAlg 3CCourseAB: {}
       PDAlg 3CElective: {}
       PDAlg 3CFuture: {}
@@ -768,6 +769,7 @@ en:
       PDAlg 3CGo: {}
       PDAlg 3CPlanning: {}
       PDAlg 3CShare Forum: {}
+      PDAlg 3CSharePlan: {}
       PDAlg 3CSharing: {}
       PDAlg 3CWelcome: {}
       PDAlg 4-7 Big Game: {}
