@@ -1,4 +1,4 @@
-var color = require('@cdo/apps/color');
+var color = require('../color.js');
 
 const style = {
   nav: {
