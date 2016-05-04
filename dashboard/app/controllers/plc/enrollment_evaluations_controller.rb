@@ -16,7 +16,7 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
 
   def preview_assignments
     @enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
-    @enrolled_modules = Plc::LearningModule.where(id: params[:enrolled_modules].split(','))
+    @enrolled_modules = Plc::LearningModule.where(id: params[:enrolled_modules].try(:split, ','))
   end
 
   def confirm_assignments

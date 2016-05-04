@@ -36,6 +36,7 @@ crowdin.yaml
 /apps/npm-debug.log
 /apps/src/color.js
 /apps/src/styleConstants.js
+/code-studio/src/js/color.js
 *_temp.json
 /.ruby-version
 /levelbuilder_ci_last_run

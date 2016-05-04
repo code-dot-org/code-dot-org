@@ -115,7 +115,6 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id", to: 'projects#show', key: key.to_s, as: "#{key}_project_share", share: true
         get "/#{key}/:channel_id/edit", to: 'projects#edit', key: key.to_s, as: "#{key}_project_edit"
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
-        get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_embed", embed: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
       end
       get '/angular', to: 'projects#angular'
@@ -304,9 +303,7 @@ Dashboard::Application.routes.draw do
     root to: 'plc#index'
     resources :courses
     resources :learning_modules
-    resources :tasks
     resources :user_course_enrollments
-    resources :enrollment_task_assignments
     resources :course_units
     resources :enrollment_unit_assignments
     resources :evaluation_questions
