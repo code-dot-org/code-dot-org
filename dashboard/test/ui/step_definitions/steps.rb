@@ -753,6 +753,10 @@ Then /^I navigate to the last shared URL$/ do
   @browser.navigate.to last_shared_url
 end
 
+Then /^I copy the embed code into a new document$/ do
+  @browser.execute_script("document.body.innerHTML = $('#project-share textarea').text();")
+end
+
 Then /^I append "([^"]*)" to the URL$/ do |append|
   url = @browser.current_url + append
   @browser.navigate.to "#{url}"
