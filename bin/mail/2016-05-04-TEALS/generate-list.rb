@@ -50,10 +50,14 @@ SOLR.query(q: volunteer_query).reverse_each do |result|
   state ||= result['create_ip_state_s'] if NUM_VOLUNTEERS_BY_STATE.has_key? result['create_ip_state_s']
   num_volunteers = state ? NUM_VOLUNTEERS_BY_STATE[state] : nil
   email = result['email_s'].downcase.strip
+  name = result['name_s']
 
+  # Duplicate :name as :name_s because this email template uses :name as a greeting,
+  # but :name is used for constructing the to line and stripped from params.
   results[email] = {
     email: email,
-    name: result['name_s'],
+    name: name,
+    name_s: name,
     state: state,
     num_volunteers: num_volunteers
   } unless UNSUBSCRIBERS[email]

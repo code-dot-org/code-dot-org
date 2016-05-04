@@ -1,3 +1,3 @@
 #!/bin/sh
 
-../send-to-mailing-list 2016-05-05-teals-volunteers ../mailing-common/test-params-us.csv
+../send-to-mailing-list 2016-05-05-teals-volunteers ./test-params.csv
