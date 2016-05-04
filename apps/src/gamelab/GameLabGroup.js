@@ -114,6 +114,7 @@ module.exports.Group = function (baseConstructor) {
 
   array.destroyEach = array.callMethodEach.bind(array, 'destroy');
   array.pointToEach = array.callMethodEach.bind(array, 'pointTo');
+  array.setAnimationEach = array.callMethodEach.bind(array, 'setAnimation');
   array.setColliderEach = array.callMethodEach.bind(array, 'setCollider');
   array.setSpeedEach = array.callMethodEach.bind(array, 'setSpeed');
   array.setVelocityEach = array.callMethodEach.bind(array, 'setVelocity');
