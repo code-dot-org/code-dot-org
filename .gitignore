@@ -31,6 +31,7 @@ crowdin.yaml
 /aws/.code-studio-commit-built
 /shared/js/node_modules/
 /apps/build
+/apps/build-times.log
 /apps/node_modules/
 /apps/npm-debug.log
 /apps/src/color.js

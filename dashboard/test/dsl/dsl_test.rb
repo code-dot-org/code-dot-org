@@ -42,6 +42,7 @@ class DslTest < ActiveSupport::TestCase
         login_required: false,
         admin_required: false,
         student_of_admin_required: false,
+        professional_learning_course: nil,
         pd: false
     }
 
@@ -68,6 +69,7 @@ class DslTest < ActiveSupport::TestCase
         login_required: false,
         admin_required: true,
         student_of_admin_required: false,
+        professional_learning_course: nil,
         pd: false
     }
 
@@ -89,6 +91,7 @@ class DslTest < ActiveSupport::TestCase
         login_required: false,
         admin_required: true,
         student_of_admin_required: false,
+        professional_learning_course: nil,
         pd: false
     }
 
@@ -110,6 +113,7 @@ class DslTest < ActiveSupport::TestCase
         login_required: false,
         admin_required: false,
         student_of_admin_required: true,
+        professional_learning_course: nil,
         pd: false
     }
 
@@ -131,6 +135,7 @@ class DslTest < ActiveSupport::TestCase
         login_required: false,
         admin_required: false,
         student_of_admin_required: true,
+        professional_learning_course: nil,
         pd: false
     }
 
