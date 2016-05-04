@@ -39,7 +39,7 @@ var JsDebuggerUi = require('../JsDebuggerUi');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var VisualizationOverlay = require('../templates/VisualizationOverlay');
-var CrosshairOverlay = require('../templates/CrosshairOverlay');
+var AppLabCrosshairOverlay = require('./AppLabCrosshairOverlay');
 var logToCloud = require('../logToCloud');
 var DialogButtons = require('../templates/DialogButtons');
 var executionLog = require('../executionLog');
@@ -1004,7 +1004,9 @@ Applab.renderVisualizationOverlay = function () {
   $(designModeViz).toggleClass('withCrosshair', true);
 
   if (!Applab.visualizationOverlay_) {
-    Applab.crosshairOverlay_ = new CrosshairOverlay();
+    /** @private {AppLabCrosshairOverlay} */
+    Applab.crosshairOverlay_ = new AppLabCrosshairOverlay();
+    /** @private {VisualizationOverlay} */
     Applab.visualizationOverlay_ = new VisualizationOverlay(Applab.crosshairOverlay_);
   }
 
