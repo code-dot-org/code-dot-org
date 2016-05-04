@@ -1061,7 +1061,11 @@ Bounce.onReportComplete = function (response) {
  * Execute the user's code.  Heaven help us...
  */
 Bounce.execute = function () {
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript', 'bounce_whenRun');
+  var code = '';
+  if (studioApp.initializationCode) {
+    code += studioApp.initializationCode;
+  }
+  code += Blockly.Generator.blockSpaceToCode('JavaScript', 'bounce_whenRun');
   Bounce.result = ResultType.UNSET;
   Bounce.testResults = TestResults.NO_TESTS_RUN;
   Bounce.waitingForReport = false;
