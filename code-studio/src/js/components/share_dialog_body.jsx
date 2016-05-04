@@ -106,7 +106,11 @@ var ShareDialogBody = React.createClass({
 
     var advancedOptions;
     if (this.props.appType === 'applab') {
-      advancedOptions = <AdvancedShareOptions onClickExport={this.props.onClickExport} />;
+      advancedOptions = (
+        <AdvancedShareOptions
+           i18n={this.props.i18n}
+           onClickExport={this.props.onClickExport} />
+      );
     }
 
     return (

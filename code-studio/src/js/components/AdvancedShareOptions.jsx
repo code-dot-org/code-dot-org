@@ -40,6 +40,7 @@ const style = {
 var AdvancedShareOptions = React.createClass({
   propTypes: {
     onClickExport: React.PropTypes.func,
+    i18n: React.PropTypes.object.isRequired,
   },
 
   getInitialState() {
@@ -75,8 +76,7 @@ var AdvancedShareOptions = React.createClass({
     return (
       <div>
         <p style={style.p}>
-          You can paste the embed code into an HTML page to display
-          the project on a webpage.
+          {this.props.i18n.t('project.share_embed_description')}
         </p>
         <textarea
           type="text"
@@ -136,7 +136,7 @@ var AdvancedShareOptions = React.createClass({
             {exportTab}
             <li style={this.state.selectedOption === 'embed' ? selectedLiStyle : style.nav.li}
                 onClick={() => this.setState({selectedOption: 'embed'})}>
-              Embed
+              {this.props.i18n.t('project.embed')}
             </li>
           </ul>
         </div>
@@ -148,7 +148,11 @@ var AdvancedShareOptions = React.createClass({
       }
     }
     var expand = this.state.expanded && this.state.selectedOption ? null :
-          <a onClick={this.expand} style={style.expand}>Show advanced options</a>;
+          (
+            <a onClick={this.expand} style={style.expand}>
+              {this.props.i18n.t('project.advanced_share')}
+            </a>
+          );
     return (
       <div style={style.root}>
         {expand}
