@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: plps
+# Table name: professional_learning_partners
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)      not null
@@ -9,9 +9,9 @@
 #
 # Indexes
 #
-#  index_plps_on_name  (name)
+#  index_professional_learning_partners_on_name  (name)
 #
 
-class Plp < ActiveRecord::Base
+class ProfessionalLearningPartner < ActiveRecord::Base
   belongs_to :contact, class_name: 'User'
 end

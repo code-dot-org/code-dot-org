@@ -474,7 +474,7 @@ FactoryGirl.define do
     rate 10
   end
 
-  factory :plp do
+  factory :professional_learning_partner do
     sequence(:name) { |n| "PLP #{n}" }
     contact {create :teacher}
   end
