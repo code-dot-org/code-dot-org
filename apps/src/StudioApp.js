@@ -28,8 +28,12 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
+
 var redux = require('./redux');
 var runState = require('./redux/runState');
+var levelProperties = require('./redux/levelProperties');
+var combineReducers = require('redux').combineReducers;
+
 var copyrightStrings;
 
 /**
@@ -196,10 +200,9 @@ var StudioApp = function () {
   this.wireframeShare = false;
 
   /**
-   * Redux store that might be provided by the app. Initially give it an empty
-   * interface so that we can assume existence.
+   * Redux store that might be provided by the app.
    */
-  this.reduxStore_ = null;
+  this.reduxStore = null;
 
   this.onAttempt = undefined;
   this.onContinue = undefined;
@@ -245,13 +248,31 @@ StudioApp.prototype.configure = function (options) {
   this.minVisualizationWidth = options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
 };
 
+/**
+ * Creates a redux store for this app, while caching the set of app specific
+ * reducers, so that we can recreate the store from scratch at any point if need
+ * be
+ * @param {object} reducers - App specific reducers
+ */
 StudioApp.prototype.configureRedux = function (reducers) {
   this.reducers_ = reducers;
   this.createReduxStore_();
 };
 
+/**
+ * Creates our redux store by combining the set of app specific reducers that
+ * we stored along with a set of common reducers used by every app. Creation
+ * should happen once on app load (tests will also recreate our store between
+ * runs).
+ */
 StudioApp.prototype.createReduxStore_ = function () {
-  this.reduxStore_ = redux.createStore(redux.combineReducers(this.reducers_));
+  var commonReducers = {
+    runState: runState.default,
+    level: levelProperties.default
+  };
+
+  var combined = combineReducers(_.assign({}, commonReducers, this.reducers_));
+  this.reduxStore = redux.createStore(combined);
 };
 
 /**
@@ -860,7 +881,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
     throw "Unexpected input";
   }
 
-  this.reduxStore_.dispatch(runState.setIsRunning(!showRun));
+  this.reduxStore.dispatch(runState.setIsRunning(!showRun));
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');

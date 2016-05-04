@@ -6,7 +6,6 @@ var _ = require('../lodash');
 var ActionType = require('./actions').ActionType;
 var animationPicker = require('./AnimationPicker/animationPickerModule').default;
 var animationTab = require('./AnimationTab/animationTabModule').default;
-var combineReducers = require('../redux').combineReducers;
 var errorDialogStack = require('./errorDialogStackModule').default;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 var instructions = require('../redux/instructions');
@@ -69,13 +68,11 @@ function animations(state, action) {
   }
 }
 
-var gamelabReducer = combineReducers({
+module.exports = {
   animationPicker: animationPicker,
   animationTab: animationTab,
   animations: animations,
   errorDialogStack: errorDialogStack,
   interfaceMode: interfaceMode,
   instructions: instructions.default
-});
-
-module.exports = { gamelabReducer: gamelabReducer };
+};
