@@ -514,20 +514,12 @@ en:
         What is Growth Mindset?: What is Growth Mindset?
       ECSPD1  intro to The Hour of Code:
         Introduction to The Hour of Code: Introduction to The Hour of Code
-        Introduction to The Hour of code: Introduction to The Hour of code
       ECSPD1 Code Studio:
         ECSPD1 Code Studio: ECSPD1 Code Studio
         Navigating Code Studio: Navigating Code Studio
-      ECSPD1 ECS Welcome Video:
-        ECSPD1 Welcome Video: ECSPD1 Welcome Video
-        Welcome Video: Welcome Video
-        Welcome to Online PD for ECS: Welcome to Online PD for ECS
-        Welcome to Online PLP for ECS: Welcome to Online PLP for ECS
       ECSPD1 Forum:
         ECS Forum: ECS Forum
         ECS Forum Discussion: ECS Forum Discussion
-      ECSPD1 Forum Intro:
-        Forum Introduction: Forum Introduction
       ECSPD1 Welcome to the Code.org Family:
         ECSPD1 Welcome to the Code.org Family: ECSPD1 Welcome to the Code.org Family
         Welcome to the Code.org Family: Welcome to the Code.org Family
@@ -576,9 +568,6 @@ en:
       ECSPD1 your role:
         ECS Your Role as a Learner and Facilitator: ECS Your Role as a Learner and Facilitator
         ECS your role as a learner and facilitator: ECS your role as a learner and facilitator
-      ECSPD1why we need cs:
-        ECSPD1 why we need cs: ECSPD1 why we need cs
-        Why We Need CS: Why We Need CS
       ECSPD3-u5 about: {}
       ECSPD3-u5 challenge details: {}
       ECSPD3-u5 challenge inside: {}
@@ -1465,6 +1454,10 @@ en:
       facilitator test: {}
       k5 what next 1: {}
       rbo-test1: {}
+      sample external 1:
+        sample external 1: sample external 1
+      sample external 2:
+        sample external 2: sample external 2
       sciPD Break 16-17:
         Before you move on...: Before you move on...
       sciPD Course Overview: {}
@@ -2007,10 +2000,7 @@ en:
         use computing to manage and interpret data: use computing to manage and interpret data
         website development and design: website development and design
       ECSPD1 Matching Unit Descriptions and Numbers:
-        Answer 1: Answer 1
-        ECSPD1 Matching Unit Descriptions and Numbers: ECSPD1 Matching Unit Descriptions and Numbers
         Matching Unit Descriptions and Numbers: Matching Unit Descriptions and Numbers
-        Question: Question
         Unit 1: Unit 1
         Unit 2: Unit 2
         Unit 3: Unit 3
@@ -2222,12 +2212,9 @@ en:
         https://studio.code.org/script_assets/pd/circle2.png: https://studio.code.org/script_assets/pd/circle2.png
         https://studio.code.org/script_assets/pd/circle3.png: https://studio.code.org/script_assets/pd/circle3.png
       PDAlg commitment match:
-        'Academic Year Development: 2 days in-person and 10 hours online': 'Academic Year Development: 2 days in-person and 10 hours online'
         'Blended Academic Year Development: 2 hours online, self-paced. 1 day (7 hours) in person': 'Blended Academic Year Development: 2 hours online, self-paced. 1 day (7 hours) in person'
-        'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer Study: 3 days in-person and 8 hours online'
         ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
         : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
-        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
         'Online Introduction: 2 hours online, self-paced': 'Online Introduction: 2 hours online, self-paced'
         Phase 1: Phase 1
         Phase 2: Phase 2
@@ -2465,10 +2452,8 @@ en:
       sciPD commitment match:
         'Academic Year Development: 2 days in-person and 10 hours online': 'Academic Year Development: 2 days in-person and 10 hours online'
         'Blended Summer Study: 2 days in-person and 7 hours online': 'Blended Summer Study: 2 days in-person and 7 hours online'
-        'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer Study: 3 days in-person and 8 hours online'
         ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
         : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
-        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
         'Online Introduction: 3 hours online': 'Online Introduction: 3 hours online'
         Phase 1: Phase 1
         Phase 2: Phase 2

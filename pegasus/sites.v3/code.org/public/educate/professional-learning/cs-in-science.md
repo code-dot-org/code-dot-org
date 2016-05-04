@@ -35,7 +35,7 @@ The goal of this professional learning program is to help teachers to introduce 
 <br/>
 	- 7 hours online, self-paced
 <br/>
-- **Phase 3: Blended Academic Year Development**
+- **Phase 3: Academic Year Development**
 <br/>
 	- 2 days (14 hours) in person
 <br/>

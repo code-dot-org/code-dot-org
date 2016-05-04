@@ -30,7 +30,10 @@ module.exports.init = function (config) {
  */
 module.exports.fixPath = function (filename) {
 
-  if (ABSOLUTE_REGEXP.test(filename)) {
+  // Rewrite urls to pass through our media proxy. Unless of course we are in an
+  // exported app, in which case our media proxy won't be good for anything
+  // anyway.
+  if (ABSOLUTE_REGEXP.test(filename) && window.location.protocol !== 'file:') {
     // We want to be able to handle the case where our filename contains a
     // space, i.e. "www.example.com/images/foo bar.png", even though this is a
     // technically invalid URL. encodeURIComponent will replace space with %20
