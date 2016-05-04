@@ -1162,6 +1162,7 @@ Applab.execute = function () {
   var codeWhenRun;
   if (level.editCode) {
     codeWhenRun = studioApp.getCode();
+    Applab.currentExecutionLog = [];
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Applab.Globals namespace)
