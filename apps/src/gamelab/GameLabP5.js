@@ -620,6 +620,16 @@ GameLabP5.prototype.getCustomMarshalGlobalProperties = function () {
 
 GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
   return [
+    'arguments',
+    'callee',
+    'caller',
+    'constructor',
+    'eval',
+    'prototype',
+    'stack',
+    'unwatch',
+    'valueOf',
+    'watch',
     '_userNode',
     '_elements',
     '_curElement',
