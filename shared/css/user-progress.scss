@@ -154,3 +154,22 @@ a.level_link.submitted:hover
     margin-right: 25px;
   }
 }
+
+.flex-wrapper {
+  border-bottom: 2px solid #c6cacd;
+}
+
+.flex-category {
+  border-left: 8px solid $cyan;
+  padding-left: 15px;
+  margin: 10px 0 10px 10px;
+  h4 {
+    margin: 0.25em 0;
+  }
+  .game-group:last-child {
+    border-bottom: 0;
+  }
+  .stage {
+    width: 167px;
+  }
+}
