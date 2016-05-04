@@ -44,6 +44,7 @@ class DeploymentTest < Minitest::Test
   def test_app_servers
     allow(RakeUtils).to receive(:with_bundle_dir){|&blk| blk.call}
     allow(CDO).to receive(:`).and_return(KNIFE_SERVERS)
+    allow(CDO).to receive(:chef_managed).and_return(true)
 
     assert_equal({'a' => 'host_a', 'b' => 'host_b'}, CDO.app_servers)
   end
