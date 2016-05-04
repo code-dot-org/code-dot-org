@@ -11,11 +11,13 @@ class UserScriptTest < ActiveSupport::TestCase
     @user_script = create :user_script, user: @user, script: @script
   end
 
+  def complete_level(script_level)
+    @user.track_level_progress_async(script_level, 100, false)
+  end
+
   def complete_all_levels
     @script_levels.each do |script_level|
-      user_level = UserLevel.where(user: @user, level: script_level.level, script: @script).create
-      user_level.best_result = 100
-      user_level.save
+      complete_level(script_level)
     end
   end
 
@@ -34,16 +36,12 @@ class UserScriptTest < ActiveSupport::TestCase
   test "check completed for script with all levels completed but some not passed" do
     # complete some levels
     @script_levels[0...8].each do |script_level|
-      user_level = UserLevel.where(user: @user, level: script_level.level).create
-      user_level.best_result = 100
-      user_level.save
+      complete_level(script_level)
     end
 
     # attempt some levels
     @script_levels[8..-1].each do |script_level|
-      user_level = UserLevel.where(user: @user, level: script_level.level).create
-      user_level.best_result = 10
-      user_level.save
+      complete_level(script_level)
     end
 
     assert !@user_script.check_completed?
@@ -77,7 +75,7 @@ class UserScriptTest < ActiveSupport::TestCase
                               last_progress_at: Time.now).empty?
   end
 
-  test "completing a script updates script completion levels" do
+  test "completing a pd script updates script completion levels" do
     @script.update(pd: true)
     level = ScriptCompletion.find_or_create_by!(
       game: Game.script_completion,
@@ -89,9 +87,31 @@ class UserScriptTest < ActiveSupport::TestCase
     level.save!
     sl = create :script_level, levels: [level]
 
+    # Complete some levels
+    @script_levels[0...8].each do |script_level|
+      complete_level(script_level)
+    end
+
     refute UserLevel.exists?(user: @user, level: sl.level, script: sl.script)
-    complete_all_levels
-    User.track_script_progress(@user, @script)
+
+    # Complete remaining levels
+    @script_levels[8..-1].each do |script_level|
+      complete_level(script_level)
+    end
+
     assert UserLevel.find_by(user: @user, level: sl.level, script: sl.script).perfect?
+  end
+
+  test "completing a pd script scans ScriptCompletion" do
+    @script.update(pd: true)
+    ScriptCompletion.stubs(:all).throws('should not scan ScriptCompletion levels')
+    assert_raise do
+      complete_all_levels
+    end
+  end
+
+  test "completing a non-pd script does not scan ScriptCompletion" do
+    ScriptCompletion.stubs(:all).throws('should not scan ScriptCompletion levels')
+    complete_all_levels
   end
 end
