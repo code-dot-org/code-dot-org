@@ -7,13 +7,12 @@
  * so when moving things preserve the include order as much as possible.
  */
 'use strict';
-/* global Sounds */
 var _ = require('lodash');
 
 // Shim window.console to be safe in IE
 require('./consoleShim')(window);
 
-var Sounds = require('./Sounds');
+var Sounds = require('@cdo/apps/Sounds');
 var activateReferenceAreaOnLoad = require('./reference_area');
 
 window.React = require('react');

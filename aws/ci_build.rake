@@ -350,6 +350,10 @@ file UI_TEST_SYMLINK do
   end
 end
 
+task :wait_for_test_server do
+  RakeUtils.wait_for_url 'http://test-studio.code.org'
+end
+
 task :regular_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir('test/ui')) do
     HipChat.log 'Running <b>dashboard</b> UI tests...'
@@ -392,6 +396,7 @@ $websites_test = build_task('websites-test', [
   :shared_unit_tests,
   :dashboard_unit_tests,
   :ui_test_flakiness,
+  :wait_for_test_server,
   :ui_tests
 ])
 
