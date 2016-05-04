@@ -29,8 +29,6 @@ var CrosshairOverlay = function () {
 module.exports = CrosshairOverlay;
 
 CrosshairOverlay.CROSSHAIR_MARGIN = CROSSHAIR_MARGIN;
-CrosshairOverlay.EDGE_MARGIN = EDGE_MARGIN;
-CrosshairOverlay.TEXT_RECT_WIDTH = TEXT_RECT_WIDTH;
 CrosshairOverlay.TEXT_RECT_HEIGHT = TEXT_RECT_HEIGHT;
 
 /**
@@ -79,24 +77,37 @@ CrosshairOverlay.prototype.render = function (intoElement, nextProps) {
 };
 
 /**
- * Given current properties, calcualtes the position for rendering the tooltip.
+ * Given current properties, calculates the position for rendering the tooltip.
  * @returns {{rectX: number, rectY: number}}
  */
 CrosshairOverlay.prototype.getBubbleCoordinates_ = function () {
+  var tooltipSize = this.getTooltipDimensions_();
   var rectX = this.props_.x + CROSSHAIR_MARGIN;
-  if (rectX + TEXT_RECT_WIDTH + EDGE_MARGIN > this.props_.appWidth) {
+  if (rectX + tooltipSize.width + EDGE_MARGIN > this.props_.appWidth) {
     // This response gives a smooth horizontal reposition when near the edge
-    rectX -= (rectX + TEXT_RECT_WIDTH + EDGE_MARGIN - this.props_.appWidth);
+    rectX -= (rectX + tooltipSize.width + EDGE_MARGIN - this.props_.appWidth);
     // This response snaps the text to the other side when near the edge
-    //rectX = this.props_.x - CROSSHAIR_MARGIN - TEXT_RECT_WIDTH;
+    //rectX = this.props_.x - CROSSHAIR_MARGIN - tooltipSize.width;
   }
 
   var rectY = this.props_.y + CROSSHAIR_MARGIN;
-  if (rectY + TEXT_RECT_HEIGHT + EDGE_MARGIN > this.props_.appHeight) {
-    rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT;
+  if (rectY + tooltipSize.height + EDGE_MARGIN > this.props_.appHeight) {
+    rectY = this.props_.y - CROSSHAIR_MARGIN - tooltipSize.height;
   }
 
   return {rectX: rectX, rectY: rectY};
+};
+
+/**
+ * Simple getter for tooltip dimensions, useful to override in child class.
+ * @returns {{width: number, height: number}}
+ * @private
+ */
+CrosshairOverlay.prototype.getTooltipDimensions_ = function () {
+  return {
+    width: TEXT_RECT_WIDTH,
+    height: TEXT_RECT_HEIGHT
+  };
 };
 
 CrosshairOverlay.prototype.destroy = function () {
