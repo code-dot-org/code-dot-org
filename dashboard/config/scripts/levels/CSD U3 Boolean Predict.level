@@ -6,8 +6,6 @@
   "user_id": 1,
   "properties": {
     "skin": "gamelab",
-    "code_functions": {
-    },
     "edit_code": true,
     "embed": "false",
     "instructions": "What do you think this code will do when it is run? Predict what each console.log() command will print, then run the program to check your predictions.",
