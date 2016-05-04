@@ -310,6 +310,7 @@ Craft.init = function (config) {
       localeDirection={studioApp.localeDirection()}
       editCode={!!config.level.editCode}
       readonlyWorkspace={!!config.readonlyWorkspace}
+      isMinecraft={true}
     />
   );
 

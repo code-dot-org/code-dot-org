@@ -82,6 +82,7 @@ a.level_link.submitted:hover
   overflow:hidden;
   float:left;
   width:100%;
+  background-color: $lightest_gray;
 }
 
 .stage-lesson-plan-link a,
@@ -96,7 +97,6 @@ a.level_link.submitted:hover
 
 .game-group {
   border-bottom: 2px solid $lighter_gray;
-  background-color: $lightest_gray;
   display: table;
   table-layout: fixed;
   padding: 10px;
@@ -137,7 +137,6 @@ a.level_link.submitted:hover
   margin: 10px 0 0 0;
   float: left;
   padding: 10px;
-  background-color: $lightest_gray;
   dl {
     margin: 0;
     float: left;
@@ -152,5 +151,24 @@ a.level_link.submitted:hover
     line-height: 36px;
     margin-left: 0;
     margin-right: 25px;
+  }
+}
+
+.flex-wrapper {
+  border-bottom: 2px solid #c6cacd;
+}
+
+.flex-category {
+  border-left: 8px solid $cyan;
+  padding-left: 15px;
+  margin: 10px 0 10px 10px;
+  h4 {
+    margin: 0.25em 0;
+  }
+  .game-group:last-child {
+    border-bottom: 0;
+  }
+  .stage {
+    width: 167px;
   }
 }

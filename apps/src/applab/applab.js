@@ -17,7 +17,7 @@ var apiBlockly = require('./apiBlockly');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var AppLabView = require('./AppLabView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
+var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var dom = require('../dom');
@@ -38,7 +38,8 @@ var JsInterpreterLogger = require('../JsInterpreterLogger');
 var JsDebuggerUi = require('../JsDebuggerUi');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
-var VisualizationOverlay = require('./VisualizationOverlay');
+var VisualizationOverlay = require('../templates/VisualizationOverlay');
+var AppLabCrosshairOverlay = require('./AppLabCrosshairOverlay');
 var logToCloud = require('../logToCloud');
 var DialogButtons = require('../templates/DialogButtons');
 var executionLog = require('../executionLog');
@@ -78,11 +79,18 @@ var jsInterpreterLogger = null;
 var debuggerUi = null;
 
 /**
- * Redux Store holding application state, transformable by actions.
- * @type {Store}
- * @see http://redux.js.org/docs/basics/Store.html
+ * A method for tests to recreate our redux store between runs.
  */
-Applab.reduxStore = createStore(rootReducer);
+function newReduxStore() {
+  /**
+   * Redux Store holding application state, transformable by actions.
+   * @type {Store}
+   * @see http://redux.js.org/docs/basics/Store.html
+   */
+  Applab.reduxStore = createStore(rootReducer);
+}
+
+newReduxStore();
 
 /**
  * Temporary: Some code depends on global access to logging, but only Applab
@@ -782,24 +790,15 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: false,
+    localeDirection: studioApp.localeDirection()
   }));
 
   Applab.reduxStore.dispatch(changeInterfaceMode(
     Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
-
-  // TODO - move into AppLabView and put necessary props into store
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={studioApp.localeDirection()}
-      editCode={!!config.level.editCode}
-      readonlyWorkspace={Applab.reduxStore.getState().level.isReadOnlyWorkspace}
-      showDebugger={showDebugButtons || showDebugConsole}
-    />
-  );
-
+  // TODO (brent) hideSource should probably be part of initialLevelProps
   Applab.reactInitialProps_ = {
-    codeWorkspace: codeWorkspace,
+    codeWorkspace: <ConnectedCodeWorkspace/>,
     hideSource: !!config.hideSource,
     onMount: onMount
   };
@@ -901,10 +900,7 @@ Applab.clearEventHandlersKillTickLoop = function () {
  * @returns {boolean}
  */
 Applab.isRunning = function () {
-  // We are _always_ running in share mode.
-  // TODO: (bbuchanan) Needs a better condition. Tracked in bug:
-  //      https://www.pivotaltracker.com/story/show/105022102
-  return !!($('#resetButton').is(':visible') || studioApp.share);
+  return Applab.reduxStore.getState().runState.isRunning;
 };
 
 /**
@@ -1010,8 +1006,14 @@ Applab.renderVisualizationOverlay = function () {
   $(designModeViz).toggleClass('withCrosshair', true);
 
   if (!Applab.visualizationOverlay_) {
-    Applab.visualizationOverlay_ = new VisualizationOverlay();
+    /** @private {AppLabCrosshairOverlay} */
+    Applab.crosshairOverlay_ = new AppLabCrosshairOverlay();
+    /** @private {VisualizationOverlay} */
+    Applab.visualizationOverlay_ = new VisualizationOverlay(Applab.crosshairOverlay_);
   }
+
+  // Tell the crosshair overlay whether we're in design mode
+  Applab.crosshairOverlay_.setInDesignMode(Applab.isInDesignMode());
 
   // Calculate current visualization scale to pass to the overlay component.
   var unscaledWidth = parseInt(visualizationOverlay.getAttribute('width'));
@@ -1019,8 +1021,7 @@ Applab.renderVisualizationOverlay = function () {
 
   Applab.visualizationOverlay_.render(visualizationOverlay, {
     isCrosshairAllowed: Applab.isCrosshairAllowed(),
-    scale: scaledWidth / unscaledWidth,
-    isInDesignMode: Applab.isInDesignMode()
+    scale: scaledWidth / unscaledWidth
   });
 };
 
@@ -1056,6 +1057,7 @@ Applab.runButtonClick = function () {
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
+
   studioApp.toggleRunReset('reset');
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
@@ -1643,4 +1645,8 @@ Applab.showRateLimitAlert = function () {
   } else {
     studioApp.displayWorkspaceAlert("error", alert);
   }
+};
+
+Applab.__TestInterface__ = {
+  recreateReduxStore: newReduxStore
 };

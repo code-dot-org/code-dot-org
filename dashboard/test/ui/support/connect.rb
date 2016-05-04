@@ -1,6 +1,8 @@
 require 'selenium/webdriver'
 require 'cgi'
 require 'httparty'
+require_relative '../../../../deployment'
+require 'active_support/core_ext/object/blank'
 
 $browser_configs = JSON.load(open("browsers.json"))
 
@@ -50,7 +52,7 @@ def saucelabs_browser
       browser = Selenium::WebDriver.for(:remote,
                                         url: url,
                                         desired_capabilities: capabilities,
-                                        http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
+                                        http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5 * 60}) # iOS takes more time
     rescue StandardError
       raise if retries >= MAX_CONNECT_RETRIES
       puts 'Failed to get browser, retrying...'
@@ -69,8 +71,8 @@ def saucelabs_browser
   end
 
   # let's allow much longer timeouts when searching for an element
-  browser.manage.timeouts.implicit_wait = 2.minutes
-  browser.send(:bridge).setScriptTimeout(1.minute * 1000)
+  browser.manage.timeouts.implicit_wait = 2 * 60
+  browser.send(:bridge).setScriptTimeout(1 * 60 * 1000)
 
   browser
 end
@@ -131,6 +133,9 @@ After do |_s|
   unless @browser.nil?
     # clear session state (or get a new browser)
     if slow_browser?
+      unless @browser.current_url.include?('studio')
+        steps 'Then I am on "http://studio.code.org/"'
+      end
       @browser.execute_script 'sessionStorage.clear()'
     else
       @browser.quit unless @browser.nil?

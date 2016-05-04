@@ -36,9 +36,11 @@ describe('The Exporter,', function () {
     sinon.stub(dashboard.assets.listStore, 'list').returns([
       {filename: 'foo.png'},
       {filename: 'bar.png'},
+      {filename: 'zoo.mp3'},
     ]);
     server.respondWith('/v3/assets/some-channel-id/foo.png', 'foo.png content');
     server.respondWith('/v3/assets/some-channel-id/bar.png', 'bar.png content');
+    server.respondWith('/v3/assets/some-channel-id/zoo.mp3', 'zoo.mp3 content');
   });
 
   afterEach(function () {
@@ -78,7 +80,7 @@ describe('The Exporter,', function () {
     beforeEach(function (done) {
       zipPromise = Exporter.exportAppToZip(
         'my-app',
-        'console.log("hello");',
+        'console.log("hello");\nplaySound("zoo.mp3");',
         `<div>
           <div class="screen" tabindex="1" id="screen1">
             <input type="text" id="nameInput"/>
@@ -153,7 +155,6 @@ describe('The Exporter,', function () {
 
       it("should contain a code.js file", function () {
         assert.property(zipFiles, 'my-app/code.js');
-        assert.equal(zipFiles['my-app/code.js'], 'console.log("hello");');
       });
 
       it("should contain a README.md file", function () {
@@ -163,12 +164,17 @@ describe('The Exporter,', function () {
       it("should contain the assets files used by the project", function () {
         assert.property(zipFiles, 'my-app/assets/foo.png');
         assert.property(zipFiles, 'my-app/assets/bar.png');
+        assert.property(zipFiles, 'my-app/assets/zoo.mp3');
       });
 
       it("should rewrite urls in html to point to the correct asset files", function () {
         var el = document.createElement('html');
         el.innerHTML = zipFiles['my-app/index.html'];
         assert.equal(el.querySelector("img").getAttribute('src'), 'assets/foo.png');
+      });
+
+      it("should rewrite urls in the code to point to the correct asset files", function () {
+        assert.equal(zipFiles['my-app/code.js'], 'console.log("hello");\nplaySound("assets/zoo.mp3");');
       });
 
     });
