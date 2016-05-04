@@ -1,50 +1,7 @@
 class Plc::CourseUnitsController < ApplicationController
   load_and_authorize_resource
 
-  # GET /plc/course_units
-  # GET /plc/course_units.json
-  def index
-  end
-
-  # GET /plc/course_units/1
-  # GET /plc/course_units/1.json
   def show
-  end
-
-  # GET /plc/course_units/new
-  def new
-    @course_unit.plc_course_id = params[:plc_course_id]
-  end
-
-  # GET /plc/course_units/1/edit
-  def edit
-  end
-
-  # POST /plc/course_units
-  # POST /plc/course_units.json
-  def create
-    if @course_unit.save
-      redirect_to @course_unit, notice: 'Course unit was successfully created.'
-    else
-      redirect_to action: :new
-    end
-  end
-
-  # PATCH/PUT /plc/course_units/1
-  # PATCH/PUT /plc/course_units/1.json
-  def update
-    if @course_unit.update(course_unit_params)
-      redirect_to @course_unit, notice: 'Course unit was successfully created.'
-    else
-      redirect_to action: :edit
-    end
-  end
-
-  # DELETE /plc/course_units/1
-  # DELETE /plc/course_units/1.json
-  def destroy
-    @course_unit.destroy
-    redirect_to plc_content_creator_show_courses_and_modules_path
   end
 
   def submit_new_questions_and_answers
@@ -63,11 +20,8 @@ class Plc::CourseUnitsController < ApplicationController
   end
 
   private
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def course_unit_params
-    params.require(:plc_course_unit).permit(:plc_course_id, :unit_name, :unit_description, :unit_order)
-  end
 
+  # Never trust parameters from the scary internet, only allow the white list through.
   def new_questions_params
     params.require(:newQuestionsList)
   end
