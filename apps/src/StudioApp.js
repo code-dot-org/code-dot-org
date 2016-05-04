@@ -200,7 +200,8 @@ var StudioApp = function () {
   this.wireframeShare = false;
 
   /**
-   * Redux store that might be provided by the app.
+   * Redux store that will be created during configureRedux, based on a common
+   * set of reducers and a set of reducers (potentially) supplied by the app
    */
   this.reduxStore = null;
 
@@ -252,7 +253,8 @@ StudioApp.prototype.configure = function (options) {
  * Creates a redux store for this app, while caching the set of app specific
  * reducers, so that we can recreate the store from scratch at any point if need
  * be
- * @param {object} reducers - App specific reducers
+ * @param {object} reducers - App specific reducers, or null if the app is not
+ *   providing any.
  */
 StudioApp.prototype.configureRedux = function (reducers) {
   this.reducers_ = reducers;
