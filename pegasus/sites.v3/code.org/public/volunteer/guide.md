@@ -8,11 +8,24 @@ theme: responsive
 Thank you for your interest in volunteering to inspire students about computer science. Here are some steps you can take in preparation for volunteering.
 
 ## 1. Sign up to volunteer
-Sign up at [code.org/volunteer](/volunteer). The more information you provide, the more likely a teacher will contact you. It's also helpful if you:
+If you are a software engineer, CS student, or just someone passionate about CS education, join the more than 12,000 volunteers who have signed up to volunteer with Code.org. Volunteers are most needed during the Hour of Code, but if you're also interested in a year-round commitment teachers are constantly looking for professionals and students alike to inspire their students. Sign up to volunteer at [code.org/volunteer](/volunteer).
+
+The more information you provide, the more likely a teacher will contact you. It's also helpful if you:
 
 * Add your company and use your company email. Your email address will never be shared.
 * Select the checkbox to "I’m interested in volunteering year-round" if you want to volunteer throughout the year, outside of the Hour of Code. If you do not select this checkbox, you will only be displayed on the map during September-December for the Hour of Code.
 * All professionals are welcome to volunteer! We want students to learn about all career paths in tech. Please provide a short description at the bottom of the form about your connection to computer science and careers in tech.
+
+### Volunteer at TEALS
+
+If you are a software engineer who is available for a bigger commitment, consider volunteering with TEALS. [TEALS](http://c.tealsk12.org/l/667) (Technology Education and Literacy in Schools) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. You can make an impact in local schools by helping teachers teach Intro and AP CS classes 2 days a week.
+
+[<button>Learn more</button>](http://c.tealsk12.org/l/667)
+
+<%= view :three_circles, circles: [
+{img: '/images/teals/fit-150/atul-hatalkar.jpg', text: '"Yes, teaching in my living room helps young people. But TEALS has enabled me to make an even larger impact on the kids in my town." - Atul Hatalkar, Principal Engineer'},
+{img: '/images/teals/fit-150/basis-chandler.jpg', text: '"Every day I feel more blessed to be part of TEALS, to give something fruitful back to the community. Every day I teach kids I feel more grateful for my life." - Silvia Doomra, Program Manager'},
+{img: '/images/teals/fit-150/leonardo-souza.jpg', text: '"It’s not just me teaching computer science; I’m also helping a teacher learn to teach computer science so they can be self-sufficient." - Leonardo Souza, Senior Software Engineer'}] %>
 
 ## 2. Connect with a teacher and confirm
 Teachers will search for volunteers through our [volunteer map](/volunteer/local). When you get an email from a teacher, reply to the email and share the following information:
