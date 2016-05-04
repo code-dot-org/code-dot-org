@@ -151,7 +151,7 @@ var CodeWorkspace = React.createClass({
                 isMinecraft={props.isMinecraft}/>
             <PaneSection id="workspace-header">
               <span id="workspace-header-span">
-                {props.readonlyWorkspace ? msg.readonlyPaneSection() : msg.workspaceHeaderShort()}
+                {props.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort()}
               </span>
               <div id="blockCounter">
                 <div id="blockUsed" className='block-counter-default'>
