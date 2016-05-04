@@ -14,17 +14,19 @@ var experiments = require('../experiments');
 const RADIUS = 30;
 
 var styles = {
-  phoneFrameTop: {
+  phoneFrame: {
     display: 'block',
     height: 50,
-    backgroundColor: color.light_gray,
+    backgroundColor: color.lighter_gray,
+  },
+  phoneFrameRunning: {
+    backgroundColor: color.charcoal
+  },
+  phoneFrameTop: {
     borderTopLeftRadius: RADIUS,
     borderTopRightRadius: RADIUS,
   },
   phoneFrameBottom: {
-    display: 'block',
-    height: 50,
-    backgroundColor: color.light_gray,
     borderBottomLeftRadius: RADIUS,
     borderBottomRightRadius: RADIUS,
   },
@@ -70,9 +72,23 @@ var ApplabVisualizationColumn = React.createClass({
             screenIds={this.props.screenIds}
             onScreenCreate={this.props.onScreenCreate} />
         }
-        <div style={[commonStyles.hidden, addPhoneFrame && styles.phoneFrameTop]}/>
+        <div
+            style={[
+              commonStyles.hidden,
+              addPhoneFrame && styles.phoneFrame,
+              addPhoneFrame && styles.phoneFrameTop,
+              addPhoneFrame && this.props.isRunning && styles.phoneFrameRunning,
+            ]}
+        />
         <Visualization/>
-        <div style={[commonStyles.hidden, addPhoneFrame && styles.phoneFrameBottom]}/>
+        <div
+            style={[
+              commonStyles.hidden,
+              addPhoneFrame && styles.phoneFrame,
+              addPhoneFrame && styles.phoneFrameBottom,
+              addPhoneFrame && this.props.isRunning && styles.phoneFrameRunning
+            ]}
+        />
         <GameButtons instructionsInTopPane={this.props.instructionsInTopPane}>
           <CompletionButton/>
         </GameButtons>
@@ -87,6 +103,8 @@ module.exports = connect(function propsFromStore(state) {
     instructionsInTopPane: state.pageConstants.instructionsInTopPane,
     visualizationHasPadding: state.pageConstants.visualizationHasPadding,
     hideSource: state.pageConstants.hideSource,
+    isShareView: state.pageConstants.isShareView,
     isEmbedView: state.pageConstants.isEmbedView
+    isRunning: state.runState.isRunning
   };
 })(Radium(ApplabVisualizationColumn));
