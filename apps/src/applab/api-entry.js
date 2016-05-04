@@ -12,6 +12,10 @@ var applabCommands = require('./commands');
 var api = require('./api');
 var appStorage = require('./appStorage');
 
+var Sounds = require('../Sounds');
+var studioApp = require('../StudioApp').singleton;
+studioApp.cdoSounds = new Sounds();
+
 // TODO: remove the below two monkey patches.
 window.Applab.JSInterpreter = {getNearestUserCodeLine: function () {return 0;}};
 

@@ -36,9 +36,8 @@ ________________
 <br/>
 
 
-### **Professional Learning at Code.org**
+### **Professional Learning at Code.org - About the Programs**
 
-#### About the Programs ####
 **Curriculum Overviews** provide additional information about the course to teachers who might be interested in enrolling in the program.
 
 - CS in Algebra - Coming soon!<br/>

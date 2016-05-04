@@ -2,9 +2,35 @@ var path = require('path');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
 var glob = require('glob');
+var execSync = require('child_process').execSync;
+var timeGrunt = require('time-grunt-nowatch');
+
+/**
+ * A replacement for console.log that will work when called after the watch task
+ * has started.
+ */
+function log(str) {
+	process.stdout.write(process.stdout, str + '\n', 'utf8');
+}
 
 module.exports = function (grunt) {
-  require('time-grunt')(grunt);
+  var email = 'unknown';
+  try {
+    email = execSync('git config --get user.email').toString().trim();
+  } catch (e) {
+    // I guess we are not in a git checkout, or don't have git installed.
+  }
+  timeGrunt(grunt, false, function (stats, done) {
+    try {
+      fs.appendFileSync(
+        path.join(__dirname, 'build-times.log'),
+        JSON.stringify([new Date().toString(), email, stats])+'\n'
+      );
+    } catch (e) {
+      log("failed to write to build-times.log file: "+e);
+    }
+    done();
+  });
 
   var config = {};
 
