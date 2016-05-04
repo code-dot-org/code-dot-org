@@ -37,6 +37,29 @@ Schools and teachers can [sign up now](https://form.jotform.com/60746479314159) 
 [<button>Sign up</button>](https://form.jotform.com/60746479314159)
 
 
+### Middle School
+
+Our current middle school curriculum focuses on using computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts.
+<br/>
+
+#### Computer Science in Algebra
+
+Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming. The twenty lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, Code.org CS in Algebra demonstrates how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
+
+- **July 25 - 26** at the College of Southern Maryland
+
+[<button>Sign up</button>](https://form.jotform.com/61175232916151)
+
+<br/>
+#### Computer Science in Science
+
+Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of 4 instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation.
+
+- **July 27 - 28** at the College of Southern Maryland
+
+[<button>Sign up</button>](https://form.jotform.com/61175565477162)
+
+
 ### Grades K-5
 
 Code.org offers an elementary school curriculum that allows even the youngest students to explore the limitless world of computing. Courses blend online, self-guided and self-paced tutorials with “unplugged” activities that require no computer at all.
