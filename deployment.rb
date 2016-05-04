@@ -285,6 +285,20 @@ class CDOImpl < OpenStruct
   def with_default(default_value)
     DelegateWithDefault.new(self, default_value)
   end
+
+  # When running on Chef Server, use Search via knife CLI to fetch a dynamic list of app-server front-ends,
+  # appending to the static list already provided by configuration files.
+  def app_servers
+    return super unless CDO.chef_managed
+    require 'cdo/rake_utils'
+    @app_servers ||= RakeUtils.with_bundle_dir(cookbooks_dir) do
+      knife_cmd = "knife search node 'roles:front-end AND chef_environment:#{rack_env}' --format json --attribute cloud_v2"
+      JSON.parse(`#{knife_cmd}`)['rows'].map do |key|
+        [key.keys.first, key.values.first['cloud_v2']['local_hostname']]
+      end.to_h
+    end
+    @app_servers.merge(super)
+  end
 end
 
 CDO ||= CDOImpl.new
