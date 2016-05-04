@@ -613,7 +613,7 @@ Maze.init = function (config) {
   };
 
   // Push initial level properties into the Redux store
-  studioApp.reduxStore_.dispatch(setInitialLevelProps({
+  studioApp.reduxStore.dispatch(setInitialLevelProps({
     localeDirection: studioApp.localeDirection(),
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isDroplet: !!level.editCode
@@ -629,7 +629,7 @@ Maze.init = function (config) {
   );
 
   ReactDOM.render(
-    <Provider store={studioApp.reduxStore_}>
+    <Provider store={studioApp.reduxStore}>
       <AppView
         assetUrl={studioApp.assetUrl}
         isEmbedView={!!config.embed}
