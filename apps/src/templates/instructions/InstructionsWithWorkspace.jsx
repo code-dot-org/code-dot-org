@@ -171,8 +171,8 @@ var InstructionsWithWorkspace = React.createClass({
 
 module.exports = connect(function propsFromStore(state) {
   return {
-    showInstructions: state.level.instructionsInTopPane && !!state.level.instructionsMarkdown,
-    instructionsCollapsed: state.instructions.collapsed || !state.level.instructionsInTopPane,
+    showInstructions: state.pageConstants.instructionsInTopPane && !!state.pageConstants.instructionsMarkdown,
+    instructionsCollapsed: state.instructions.collapsed || !state.pageConstants.instructionsInTopPane,
     instructionsHeight: state.instructions.height,
     instructionsMaxHeight: state.instructions.maxHeight,
   };

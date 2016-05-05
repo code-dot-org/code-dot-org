@@ -31,7 +31,7 @@ var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var CalcVisualizationColumn = require('./CalcVisualizationColumn');
-var setInitialLevelProps = require('../redux/levelProperties').setInitialLevelProps;
+var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
@@ -202,7 +202,7 @@ Calc.init = function (config) {
   };
 
   // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setInitialLevelProps({
+  studioApp.reduxStore.dispatch(setPageConstants({
     localeDirection: studioApp.localeDirection(),
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isDroplet: !!level.editCode

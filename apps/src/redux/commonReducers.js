@@ -3,9 +3,9 @@
  */
 
 var runState = require('./runState');
-var levelProperties = require('./levelProperties');
+var pageConstants = require('./pageConstants');
 
 module.exports = {
   runState: runState.default,
-  level: levelProperties.default
+  pageConstants: pageConstants.default
 };
