@@ -1,4 +1,5 @@
 var Radium = require('radium');
+var connect = require('react-redux').connect;
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var JsDebugger = require('./JsDebugger');
 var PaneHeader = require('./PaneHeader');
@@ -174,4 +175,13 @@ var CodeWorkspace = React.createClass({
   }
 });
 
-module.exports = Radium(CodeWorkspace);
+module.exports = connect(function propsFromStore(state) {
+  return {
+    editCode: state.pageConstants.isDroplet,
+    localeDirection: state.pageConstants.localeDirection,
+    readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+    isRunning: state.runState.isRunning,
+    showDebugger: state.pageConstants.showDebugButtons || state.pageConstants.showDebugConsole,
+    isMinecraft: !!state.pageConstants.isMinecraft
+  };
+})(Radium(CodeWorkspace));

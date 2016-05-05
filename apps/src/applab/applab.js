@@ -17,7 +17,6 @@ var apiBlockly = require('./apiBlockly');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var AppLabView = require('./AppLabView');
-var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var dom = require('../dom');
