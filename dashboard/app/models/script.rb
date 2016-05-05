@@ -56,7 +56,7 @@ class Script < ActiveRecord::Base
         lm.update!(
           plc_course_unit_id: unit.id,
           name: stage.name,
-          module_type: Plc::LearningModule::REQUIRED_MODULE,
+          module_type: stage.flex_category.try(:downcase) || Plc::LearningModule::REQUIRED_MODULE,
           plc_tasks: []
         )
 
