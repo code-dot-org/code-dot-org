@@ -30,10 +30,12 @@ var CellJSON = React.createClass({
   },
 
   render: function () {
-    return (<label>
-      Cell JSON (for copy/pasting):
-      <input type="text" value={JSON.stringify(this.props.serialization)} ref="serializedInput" onChange={this.handleChange}/>
-    </label>);
+    return (
+      <label>
+        Cell JSON (for copy/pasting):
+        <input type="text" value={JSON.stringify(this.props.serialization)} ref="serializedInput" onChange={this.handleChange}/>
+      </label>
+    );
   }
 });
 
@@ -84,7 +86,7 @@ var GridEditor = React.createClass({
   },
 
   /**
-   * Helper method used to update chunks of the grid. Excepts a row and
+   * Helper method used to update chunks of the grid. Accepts a row and
    * column representing the top left corner from which to begin
    * replacing and a two-dimensional array of serialized cells to update
    * into the grid.
@@ -111,8 +113,8 @@ var GridEditor = React.createClass({
     // Both of those seem a bit unnecessary, so for now this hack will
     // remain.
     var cells = this.state.cells;
-    newCells.forEach(function (_, i) {
-      _.forEach(function (cell, j) {
+    newCells.forEach(function (newRow, i) {
+      newRow.forEach(function (cell, j) {
         if (cells[row + i] && cells[row + i][col + j]) {
           cells[row + i][col + j] = this.getCellClass().deserialize(cell);
         }
@@ -175,25 +177,27 @@ var GridEditor = React.createClass({
       selectedCellJson = <CellJSON serialization={cell.serialize()} onChange={this.handleCellChange} />;
       if (this.state.copiedCells) {
         pasteButton = (<button type="button" onClick={this.pasteCopiedCells}>
-            {"Paste Selected " + this.state.copiedCells.length + "x" + this.state.copiedCells[0].length + " Cells Excel-Style"}
+            {"Paste Selected " + this.state.copiedCells.length + "x" + this.state.copiedCells[0].length + " Cells"}
           </button>);
       }
     }
 
-    return (<div className="row">
-      <div className="span5">
-        <Grid
-          cells={cells}
-          selectedRow={this.state.selectedRow}
-          selectedCol={this.state.selectedCol}
-          skin={this.props.skin}
-          setCopiedCells={this.setCopiedCells}
-          onSelectionChange={this.changeSelection} />
-        {selectedCellJson}
-        {pasteButton}
+    return (
+      <div className="row">
+        <div className="span5">
+          <Grid
+            cells={cells}
+            selectedRow={this.state.selectedRow}
+            selectedCol={this.state.selectedCol}
+            skin={this.props.skin}
+            setCopiedCells={this.setCopiedCells}
+            onSelectionChange={this.changeSelection} />
+          {selectedCellJson}
+          {pasteButton}
+        </div>
+        {cellEditor}
       </div>
-      {cellEditor}
-    </div>);
+    );
   },
 });
 module.exports = GridEditor;
