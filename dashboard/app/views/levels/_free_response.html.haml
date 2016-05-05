@@ -44,7 +44,7 @@
       dashboard.project.getCurrentId = function () {
         return appOptions.channel;
       };
-      ReactDOM.render(React.createElement(dashboard.Attachments, {}), document.querySelector('#free-response-upload'));
+      ReactDOM.render(React.createElement(dashboard.Attachments, {readonly: #{!!@view_options.readonly_workspace}}), document.querySelector('#free-response-upload'));
 
   - height = level.height || '80'
   %textarea.response{id: "level_#{level.id}", placeholder: level.placeholder || 'Enter your answer here', style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
