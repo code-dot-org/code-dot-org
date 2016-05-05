@@ -24,7 +24,6 @@ var GameLabView = React.createClass({
     interfaceMode: React.PropTypes.oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION]).isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
-    codeWorkspace: React.PropTypes.element.isRequired,
     showFinishButton: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
     onMount: React.PropTypes.func.isRequired
@@ -61,8 +60,7 @@ var GameLabView = React.createClass({
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
         <InstructionsWithWorkspace
-          hideSource={this.props.hideSource}
-          codeWorkspace={this.props.codeWorkspace}/>
+          hideSource={this.props.hideSource}/>
       </div>
     );
   },
@@ -90,7 +88,7 @@ var GameLabView = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     interfaceMode: state.interfaceMode,
-    isEmbedView: state.level.isEmbedView,
-    isShareView: state.level.isShareView
+    isEmbedView: state.pageConstants.isEmbedView,
+    isShareView: state.pageConstants.isShareView
   };
 })(GameLabView);

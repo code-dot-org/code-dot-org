@@ -1879,3 +1879,12 @@ en:
           test Unit 1 practice module Delta: test Unit 1 practice module Delta
           test Unit 1 practice module Echo: test Unit 1 practice module Echo
           test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        allthehiddenthings:
+          title: All the Hidden Things!
+          description_short: Unreleased level types for UI testing as admin
+          description: Unreleased level types for UI testing as admin
+          Game Lab: Game Lab
+        cspunit1-support-test:
+          title: CSP Unit 1 teacher support
+          description: Online Supports for CSP Unit 1
+          Unit 1 Overview: Unit 1 Overview

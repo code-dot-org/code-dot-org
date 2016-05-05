@@ -58,10 +58,6 @@ module.exports.createSprite = function (x, y, width, height) {
     return s.animation ? s.animation.frameChanged : false;
   };
 
-  s.setColor = function (colorString) {
-    s.shapeColor = colorString;
-  };
-
   s.destroy = function () {
     s.remove();
   };
@@ -214,7 +210,7 @@ var AABBops = function (p5Inst, type, target, callback) {
 
     }
     else
-      throw('Error: overlap can only be checked between sprites or groups');
+      throw new Error('Error: overlap can only be checked between sprites or groups');
 
   } else {
     state.__i++;
@@ -524,7 +520,7 @@ var isTouching = function (p5Inst, target) {
 
   }
   else
-    throw('Error: isTouching can only be checked between sprites or groups');
+    throw new Error('Error: isTouching can only be checked between sprites or groups');
 
     for(var i=0; i<others.length; i++)
       if(this !== others[i] && !this.removed) //you can check collisions within the same group but not on itself

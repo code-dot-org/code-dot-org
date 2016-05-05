@@ -32,7 +32,9 @@ var styles = {
     flex: '0 0 250px', // sets initial width
     minWidth: 150,
     maxWidth: 300,
-    border: 'solid thin ' + color.light_purple,
+    borderTop: 'solid thin ' + color.light_purple,
+    borderBottom: 'solid thin ' + color.light_purple,
+    borderLeft: 'solid thin ' + color.light_purple,
     borderRight: 'none'
   },
   editorColumn: {
