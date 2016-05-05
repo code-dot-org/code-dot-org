@@ -96,7 +96,11 @@ Resources:
                 Action: ["logs:CreateLogGroup","logs:CreateLogStream","logs:PutLogEvents"]
                 Resource: "arn:aws:logs:*:*:*"
               - Effect: Allow
-                Action: ["ec2:DisableVpcClassicLink", "ec2:EnableVpcClassicLink"]
+                Action:
+                  - "ec2:DisableVpcClassicLink"
+                  - "ec2:EnableVpcClassicLink"
+                  - "ec2:EnableVpcClassicLinkDnsSupport"
+                  - "ec2:DisableVpcClassicLinkDnsSupport"
                 Resource: "*"
 Outputs:
   LookupStackOutputs:
