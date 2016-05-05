@@ -58,6 +58,6 @@ GameLabVisualizationColumn.propTypes = {
 
 module.exports = connect(function propsFromStore(state) {
   return {
-    instructionsInTopPane: state.level.instructionsInTopPane
+    instructionsInTopPane: state.pageConstants.instructionsInTopPane
   };
 })(GameLabVisualizationColumn);

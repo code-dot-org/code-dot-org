@@ -7,5 +7,5 @@ var pageConstants = require('./pageConstants');
 
 module.exports = {
   runState: runState.default,
-  level: pageConstants.default
+  pageConstants: pageConstants.default
 };
