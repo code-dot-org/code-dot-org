@@ -224,4 +224,8 @@ module RakeUtils
   def self.local_environment?
     (rack_env?(:development, :test) && !CDO.chef_managed) || rack_env?(:adhoc)
   end
+
+  def self.wait_for_url(url)
+    system_ "until $(curl --output /dev/null --silent --head --fail #{url}); do sleep 5; done"
+  end
 end

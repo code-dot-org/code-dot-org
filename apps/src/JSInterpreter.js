@@ -1,6 +1,7 @@
 var codegen = require('./codegen');
 var ObservableEvent = require('./ObservableEvent');
 var utils = require('./utils');
+var runState = require('./redux/runState');
 
 /**
  * Create a JSInterpreter object. This object wraps an Interpreter object and
@@ -734,6 +735,29 @@ JSInterpreter.prototype.createPrimitive = function (data) {
 };
 
 /**
+ * Helper to determine if we should prevent custom marshalling from occurring
+ * in a situation where we normally would use it. Allows us to block from a
+ * specific list of properties and a hardcoded list of instance types that are
+ * not safe to return into the interpreter sandbox.
+ *
+ * @param {string} name Name of property.
+ * @param {!Object} obj Data object.
+ * @param {Object} nativeParent Native parent object (if parented).
+ * @return {boolean} true if property access should be blocked.
+ */
+JSInterpreter.prototype.shouldBlockCustomMarshalling_ = function (name, obj,
+    nativeParent) {
+  if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
+    return true;
+  }
+  var value = obj.isCustomMarshal ? obj.data[name] : nativeParent[name];
+  if (value instanceof Node || value instanceof Window) {
+    return true;
+  }
+  return false;
+};
+
+/**
  * Wrapper to Interpreter's getProperty (extended for custom marshaling)
  *
  * Fetch a property value from a data object.
@@ -753,10 +777,10 @@ JSInterpreter.prototype.getProperty = function (
   if (obj.isCustomMarshal ||
       (obj === this.globalScope &&
           (!!(nativeParent = this.customMarshalGlobalProperties[name])))) {
-    var value;
-    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
-      return baseGetProperty.call(interpreter, obj, name);
+    if (this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+      return interpreter.UNDEFINED;
     }
+    var value;
     if (obj.isCustomMarshal) {
       value = obj.data[name];
     } else {
@@ -794,8 +818,8 @@ JSInterpreter.prototype.hasProperty = function (
   if (obj.isCustomMarshal ||
       (obj === this.globalScope &&
           (!!(nativeParent = this.customMarshalGlobalProperties[name])))) {
-    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
-      return baseHasProperty.call(interpreter, obj, name);
+    if (this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+      return false;
     } else if (obj.isCustomMarshal) {
       return name in obj.data;
     } else {
@@ -829,16 +853,14 @@ JSInterpreter.prototype.setProperty = function (
   name = name.toString();
   var nativeParent;
   if (obj.isCustomMarshal) {
-    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
-      return baseSetProperty.call(
-          interpreter, obj, name, value, opt_fixed, opt_nonenum);
+    if (this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+      return;
     }
     obj.data[name] = codegen.marshalInterpreterToNative(interpreter, value);
   } else if (obj === this.globalScope &&
       (!!(nativeParent = this.customMarshalGlobalProperties[name]))) {
-    if (-1 !== this.customMarshalBlockedProperties.indexOf(name)) {
-      return baseSetProperty.call(
-          interpreter, obj, name, value, opt_fixed, opt_nonenum);
+    if (this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+      return;
     }
     nativeParent[name] = codegen.marshalInterpreterToNative(interpreter, value);
   } else {
@@ -1141,19 +1163,23 @@ JSInterpreter.prototype.handlePauseContinue = function () {
     this.paused = true;
     this.nextStep = StepType.RUN;
   }
+  this.studioApp.reduxStore_.dispatch(runState.setIsDebuggerPaused(this.paused));
 };
 
 JSInterpreter.prototype.handleStepOver = function () {
   this.paused = true;
   this.nextStep = StepType.OVER;
+  this.studioApp.reduxStore_.dispatch(runState.setIsDebuggerPaused(this.paused));
 };
 
 JSInterpreter.prototype.handleStepIn = function () {
   this.paused = true;
   this.nextStep = StepType.IN;
+  this.studioApp.reduxStore_.dispatch(runState.setIsDebuggerPaused(this.paused));
 };
 
 JSInterpreter.prototype.handleStepOut = function () {
   this.paused = true;
   this.nextStep = StepType.OUT;
+  this.studioApp.reduxStore_.dispatch(runState.setIsDebuggerPaused(this.paused));
 };
