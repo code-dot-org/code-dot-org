@@ -28,8 +28,12 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
+
 var redux = require('./redux');
 var runState = require('./redux/runState');
+var commonReducers = require('./redux/commonReducers');
+var combineReducers = require('redux').combineReducers;
+
 var copyrightStrings;
 
 /**
@@ -196,10 +200,10 @@ var StudioApp = function () {
   this.wireframeShare = false;
 
   /**
-   * Redux store that might be provided by the app. Initially give it an empty
-   * interface so that we can assume existence.
+   * Redux store that will be created during configureRedux, based on a common
+   * set of reducers and a set of reducers (potentially) supplied by the app
    */
-  this.reduxStore_ = null;
+  this.reduxStore = null;
 
   this.onAttempt = undefined;
   this.onContinue = undefined;
@@ -246,6 +250,29 @@ StudioApp.prototype.configure = function (options) {
 };
 
 /**
+ * Creates a redux store for this app, while caching the set of app specific
+ * reducers, so that we can recreate the store from scratch at any point if need
+ * be
+ * @param {object} reducers - App specific reducers, or null if the app is not
+ *   providing any.
+ */
+StudioApp.prototype.configureRedux = function (reducers) {
+  this.reducers_ = reducers;
+  this.createReduxStore_();
+};
+
+/**
+ * Creates our redux store by combining the set of app specific reducers that
+ * we stored along with a set of common reducers used by every app. Creation
+ * should happen once on app load (tests will also recreate our store between
+ * runs).
+ */
+StudioApp.prototype.createReduxStore_ = function () {
+  var combined = combineReducers(_.assign({}, commonReducers, this.reducers_));
+  this.reduxStore = redux.createStore(combined);
+};
+
+/**
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
@@ -268,8 +295,6 @@ StudioApp.prototype.init = function (config) {
   if (!config) {
     config = {};
   }
-
-  this.reduxStore_ = config.reduxStore || redux.createFakeStore();
 
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
@@ -853,7 +878,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
     throw "Unexpected input";
   }
 
-  this.reduxStore_.dispatch(runState.setIsRunning(!showRun));
+  this.reduxStore.dispatch(runState.setIsRunning(!showRun));
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
@@ -867,7 +892,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
 };
 
 StudioApp.prototype.isRunning = function () {
-  return this.reduxStore_.getState().isRunning;
+  return this.reduxStore.getState().isRunning;
 };
 
 /**
@@ -1715,6 +1740,11 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.startBlocks_ = config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
+
+  if (config.level.initializationBlocks) {
+    var xml = parseXmlElement(config.level.initializationBlocks);
+    this.initializationCode = Blockly.Generator.xmlToCode('JavaScript', xml);
+  }
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);

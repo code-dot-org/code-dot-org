@@ -16,9 +16,11 @@ var sharedConstants = require('../constants');
 var codegen = require('../codegen');
 var api = require('./api');
 var blocks = require('./blocks');
+var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
+var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var StudioVisualizationColumn = require('./StudioVisualizationColumn');
+var setInitialLevelProps = require('../redux/levelProperties').setInitialLevelProps;
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Sprite = require('./Sprite');
@@ -27,7 +29,6 @@ var Item = require('./Item');
 var BigGameLogic = require('./bigGameLogic');
 var RocketHeightLogic = require('./rocketHeightLogic');
 var SamBatLogic = require('./samBatLogic');
-var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = require('../lodash');
@@ -1971,10 +1972,6 @@ Studio.init = function (config) {
 
   Studio.makeThrottledSpriteWallCollisionHelpers();
 
-  var visualizationColumn = <StudioVisualizationColumn
-    finishButton={!level.isProjectLevel}
-    inputOutputTable={level.inputOutputTable}/>;
-
   var onMount = function () {
     studioApp.init(config);
 
@@ -1993,25 +1990,33 @@ Studio.init = function (config) {
     }
   };
 
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={studioApp.localeDirection()}
-      editCode={!!level.editCode}
-      readonlyWorkspace={!!config.readonlyWorkspace}
-    />
-  );
+  // Push initial level properties into the Redux store
+  studioApp.reduxStore.dispatch(setInitialLevelProps({
+    localeDirection: studioApp.localeDirection(),
+    isReadOnlyWorkspace: !!config.readonlyWorkspace,
+    isDroplet: !!level.editCode
+  }));
 
-  ReactDOM.render(React.createElement(AppView, {
-    assetUrl: studioApp.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    hideSource: !!config.hideSource,
-    noVisualization: false,
-    isRtl: studioApp.isRtl(),
-    codeWorkspace: codeWorkspace,
-    visualizationColumn: visualizationColumn,
-    onMount: onMount
-  }), document.getElementById(config.containerId));
+  var visualizationColumn = <StudioVisualizationColumn
+    finishButton={!level.isProjectLevel}
+    inputOutputTable={level.inputOutputTable}/>;
+
+  ReactDOM.render(
+    <Provider store={studioApp.reduxStore}>
+      <AppView
+          assetUrl={studioApp.assetUrl}
+          isEmbedView={!!config.embed}
+          isShareView={!!config.share}
+          hideSource={!!config.hideSource}
+          noVisualization={false}
+          isRtl={studioApp.isRtl()}
+          codeWorkspace={<ConnectedCodeWorkspace/>}
+          visualizationColumn={visualizationColumn}
+          onMount={onMount}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
+  );
 };
 
 /**
@@ -2535,6 +2540,15 @@ var registerEventHandler = function (handlers, name, func) {
     cmdQueue: []});
 };
 
+var registerHandlersForCode = function (handlers, blockName, code) {
+  var func = codegen.functionFromCode(code, {
+    StudioApp: studioApp,
+    Studio: api,
+    Globals: Studio.Globals
+  });
+  registerEventHandler(handlers, blockName, func);
+};
+
 var registerHandlers =
       function (handlers, blockName, eventNameBase,
                 nameParam1, matchParam1Val,
@@ -2553,10 +2567,6 @@ var registerHandlers =
          matchParam2Val === titleVal2)) {
       var code = Blockly.Generator.blocksToCode('JavaScript', [block]);
       if (code) {
-        var func = codegen.functionFromCode(code, {
-                                            StudioApp: studioApp,
-                                            Studio: api,
-                                            Globals: Studio.Globals } );
         var eventName = eventNameBase;
         if (nameParam1) {
           eventName += '-' + matchParam1Val;
@@ -2564,7 +2574,7 @@ var registerHandlers =
         if (nameParam2) {
           eventName += '-' + matchParam2Val;
         }
-        registerEventHandler(handlers, eventName, func);
+        registerHandlersForCode(handlers, eventName, code);
       }
     }
   }
@@ -2843,6 +2853,10 @@ Studio.execute = function () {
   if (studioApp.isUsingBlockly()) {
     if (Studio.checkForBlocklyPreExecutionFailure()) {
       return Studio.onPuzzleComplete();
+    }
+
+    if (studioApp.initializationCode) {
+      registerHandlersForCode(handlers, 'whenGameStarts', studioApp.initializationCode);
     }
 
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
