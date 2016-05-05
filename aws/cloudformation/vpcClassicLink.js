@@ -1,7 +1,7 @@
 /**
  * @file AWS Lambda Custom Resource function to enable ClassicLink in a VPC.
  * @see {@link http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EnableVpcClassicLink.html}
- * @see {@link http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EnableVpcClassicLink.html}
+ * @see {@link http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#enableVpcClassicLink-property}
  */
 
 // This module is automatically provided to ZipFile-based Lambda functions.
@@ -13,6 +13,8 @@ exports.handler = function (event, context) {
   console.log("REQUEST RECEIVED:\n", JSON.stringify(event));
 
   var vpcId = event.ResourceProperties.VpcId;
+
+  // Additionally enable DNS hostname resolution if the `DnsSupport` property is `true`.
   var dnsSupport = event.ResourceProperties.DnsSupport;
   var params = {
     VpcId: vpcId
