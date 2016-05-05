@@ -6,8 +6,8 @@ var StudioAppWrapper = require('./StudioAppWrapper');
 
 module.exports = connect(function propsFromStore(state) {
   return {
-    assetUrl: state.level.assetUrl,
-    isEmbedView: state.level.isEmbedView,
-    isShareView: state.level.isShareView
+    assetUrl: state.pageConstants.assetUrl,
+    isEmbedView: state.pageConstants.isEmbedView,
+    isShareView: state.pageConstants.isShareView
   };
 })(StudioAppWrapper);

@@ -52,7 +52,7 @@ var reducers = require('./reducers');
 var actions = require('./actions');
 var changeInterfaceMode = actions.changeInterfaceMode;
 var setInstructionsInTopPane = actions.setInstructionsInTopPane;
-var setInitialLevelProps = require('../redux/levelProperties').setInitialLevelProps;
+var setPageConstants = require('../redux/pageConstants').setPageConstants;
 
 var applabConstants = require('./constants');
 var consoleApi = require('../consoleApi');
@@ -632,7 +632,7 @@ Applab.init = function (config) {
     // should never be present on such levels, however some levels do
     // have levelHtml stored due to a previous bug. HTML set by levelbuilder
     // is stored in startHtml, not levelHtml.
-    if (studioApp.reduxStore.getState().level.isDesignModeHidden) {
+    if (studioApp.reduxStore.getState().pageConstants.isDesignModeHidden) {
       config.level.levelHtml = '';
     }
 
@@ -706,7 +706,7 @@ Applab.init = function (config) {
       vizCol.className += " with_padding";
     }
 
-    if (studioApp.reduxStore.getState().level.isEmbedView || config.hideSource) {
+    if (studioApp.reduxStore.getState().pageConstants.isEmbedView || config.hideSource) {
       // no responsive styles active in embed or hideSource mode, so set sizes:
       viz.style.width = Applab.appWidth + 'px';
       viz.style.height = (shouldRenderFooter() ? Applab.appHeight : Applab.footerlessAppHeight) + 'px';
@@ -756,7 +756,7 @@ Applab.init = function (config) {
   }.bind(this);
 
   // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setInitialLevelProps({
+  studioApp.reduxStore.dispatch(setPageConstants({
     assetUrl: studioApp.assetUrl,
     channelId: config.channel,
     isDesignModeHidden: !!config.level.hideDesignMode,
@@ -1147,6 +1147,7 @@ Applab.execute = function () {
   var codeWhenRun;
   if (level.editCode) {
     codeWhenRun = studioApp.getCode();
+    Applab.currentExecutionLog = [];
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Applab.Globals namespace)

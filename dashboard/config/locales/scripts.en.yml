@@ -1871,3 +1871,12 @@ en:
           Supporting Peer Learning: Supporting Peer Learning
           Running a Constructive Classroom: Running a Constructive Classroom
           Strategies for Student Writing: Strategies for Student Writing
+        allthehiddenthings:
+          title: All the Hidden Things!
+          description_short: Unreleased level types for UI testing as admin
+          description: Unreleased level types for UI testing as admin
+          Game Lab: Game Lab
+        cspunit1-support-test:
+          title: CSP Unit 1 teacher support
+          description: Online Supports for CSP Unit 1
+          Unit 1 Overview: Unit 1 Overview
