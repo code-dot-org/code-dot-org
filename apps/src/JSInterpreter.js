@@ -49,6 +49,54 @@ var JSInterpreter = module.exports = function (options) {
   this.stoppedAtBreakpointRows = [];
   this.logExecution = options.logExecution;
   this.executionLog = [];
+
+  this.patchInterpreterMethods_();
+};
+
+JSInterpreter.prototype.patchInterpreterMethods_ = function () {
+
+  // These methods need to be patched in order to support custom marshaling.
+
+  // These changes revert a 10% speedup commit that bypassed hasProperty,
+  // getProperty, and setProperty:
+  // https://github.com/NeilFraser/JS-Interpreter/commit/c6f25b4a30046a858e5e90a92a8c0d24a93c0231
+
+  /**
+  * Retrieves a value from the scope chain.
+  * @param {!Object} name Name of variable.
+  * @return {!Object} The value.
+  */
+  window.Interpreter.prototype.getValueFromScope = function (name) {
+    var scope = this.getScope();
+    var nameStr = name.toString();
+    while (scope) {
+      if (this.hasProperty(scope, nameStr)) {
+        return this.getProperty(scope, nameStr);
+      }
+      scope = scope.parentScope;
+    }
+    this.throwException('Unknown identifier: ' + nameStr);
+    return this.UNDEFINED;
+  };
+  /**
+  * Sets a value to the current scope.
+  * @param {!Object} name Name of variable.
+  * @param {!Object} value Value.
+  */
+  window.Interpreter.prototype.setValueToScope = function (name, value) {
+    var scope = this.getScope();
+    var strict = scope.strict;
+    var nameStr = name.toString();
+    while (scope) {
+      if (this.hasProperty(scope, nameStr) || (!strict && !scope.parentScope)) {
+        this.setProperty(scope, nameStr, value);
+        return;
+      }
+      scope = scope.parentScope;
+    }
+    this.throwException('Unknown identifier: ' + nameStr);
+  };
+
 };
 
 /**
@@ -352,7 +400,9 @@ JSInterpreter.prototype.removeStoppedAtBreakpointRowForScope = function (scope) 
 JSInterpreter.prototype.isProgramDone = function () {
   return this.executionError ||
       !this.interpreter ||
-      !this.interpreter.stateStack.length;
+      !this.interpreter.stateStack[0] ||
+      (this.interpreter.stateStack[0].node.type === 'Program' &&
+        this.interpreter.stateStack[0].done);
 };
 
 /**
@@ -367,6 +417,9 @@ var INTERSTITIAL_NODES = {
 
 /**
  * Execute the interpreter
+ *
+ * @param {boolean} firstStep Pass true only on the first call
+ * @param {boolean} runUntilCallbackReturn Exit after processing event callback
  */
 JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallbackReturn) {
   if (this.isExecuting) {
@@ -1163,23 +1216,23 @@ JSInterpreter.prototype.handlePauseContinue = function () {
     this.paused = true;
     this.nextStep = StepType.RUN;
   }
-  this.studioApp.reduxStore_.dispatch(runState.setIsDebuggerPaused(this.paused));
+  this.studioApp.reduxStore.dispatch(runState.setIsDebuggerPaused(this.paused));
 };
 
 JSInterpreter.prototype.handleStepOver = function () {
   this.paused = true;
   this.nextStep = StepType.OVER;
-  this.studioApp.reduxStore_.dispatch(runState.setIsDebuggerPaused(this.paused));
+  this.studioApp.reduxStore.dispatch(runState.setIsDebuggerPaused(this.paused));
 };
 
 JSInterpreter.prototype.handleStepIn = function () {
   this.paused = true;
   this.nextStep = StepType.IN;
-  this.studioApp.reduxStore_.dispatch(runState.setIsDebuggerPaused(this.paused));
+  this.studioApp.reduxStore.dispatch(runState.setIsDebuggerPaused(this.paused));
 };
 
 JSInterpreter.prototype.handleStepOut = function () {
   this.paused = true;
   this.nextStep = StepType.OUT;
-  this.studioApp.reduxStore_.dispatch(runState.setIsDebuggerPaused(this.paused));
+  this.studioApp.reduxStore.dispatch(runState.setIsDebuggerPaused(this.paused));
 };

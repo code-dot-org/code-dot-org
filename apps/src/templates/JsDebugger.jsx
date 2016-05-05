@@ -248,9 +248,9 @@ JsDebugger.propTypes = {
 
 module.exports = connect(function propsFromStore(state) {
   return {
-    debugButtons: state.level.showDebugButtons,
-    debugConsole: state.level.showDebugConsole,
-    debugWatch: state.level.showDebugWatch,
+    debugButtons: state.pageConstants.showDebugButtons,
+    debugConsole: state.pageConstants.showDebugConsole,
+    debugWatch: state.pageConstants.showDebugWatch,
     isDebuggerPaused: state.runState.isDebuggerPaused
   };
 })(JsDebugger);

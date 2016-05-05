@@ -85,12 +85,12 @@ var CodeWorkspaceContainer = React.createClass({
 
     return (
       <div style={mainStyle} className="editor-column">
-        <ProtectedStatefulDiv
+        <div
             id="codeWorkspace"
             style={styles.codeWorkspace}>
           {this.props.codeWorkspace}
           <ProtectedStatefulDiv id="designWorkspace" style={styles.hidden}/>
-        </ProtectedStatefulDiv>
+        </div>
       </div>
     );
   }

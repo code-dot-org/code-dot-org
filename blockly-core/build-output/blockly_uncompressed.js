@@ -25048,6 +25048,12 @@ Blockly.Generator.blocksToCode = function(name, blocks, opt_showHidden) {
   code = code.replace(/[ \t]+\n/g, "\n");
   return code
 };
+Blockly.Generator.xmlToCode = function(name, xml) {
+  var div = document.createElement("div");
+  var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(div, xml);
+  var blocks = blockSpace.getTopBlocks(true);
+  return Blockly.Generator.blocksToCode(name, blocks)
+};
 Blockly.Generator.blockSpaceToCode = function(name, opt_typeFilter, opt_showHidden) {
   var blocksToGenerate;
   if(opt_typeFilter) {

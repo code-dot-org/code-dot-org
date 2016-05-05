@@ -5,10 +5,10 @@ var connect = require('react-redux').connect;
 
 module.exports = connect(function propsFromStore(state) {
   return {
-    editCode: true,
-    localeDirection: state.level.localeDirection,
-    readonlyWorkspace: state.level.isReadOnlyWorkspace,
+    editCode: state.pageConstants.isDroplet,
+    localeDirection: state.pageConstants.localeDirection,
+    readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     isRunning: state.runState.isRunning,
-    showDebugger: state.level.showDebugButtons || state.level.showDebugConsole
+    showDebugger: state.pageConstants.showDebugButtons || state.pageConstants.showDebugConsole
   };
 })(CodeWorkspace);

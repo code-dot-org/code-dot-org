@@ -90,7 +90,7 @@ var GameLabView = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     interfaceMode: state.interfaceMode,
-    isEmbedView: state.level.isEmbedView,
-    isShareView: state.level.isShareView
+    isEmbedView: state.pageConstants.isEmbedView,
+    isShareView: state.pageConstants.isShareView
   };
 })(GameLabView);
