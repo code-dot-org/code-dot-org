@@ -633,18 +633,18 @@ end
 
 And(/I display toast "([^"]*)"$/) do |message|
   @browser.execute_script(<<-SCRIPT)
-    $('<div>')
-      .addClass('ui-test-toast')
-      .text("#{message}")
-      .css('position', 'absolute')
-      .css('top', 50)
-      .css('right', 50)
-      .css('padding', 50)
-      .css('background-color', 'lightyellow')
-      .css('border', 'dashed 3px #eeee00')
-      .css('font-weight', 'bold')
-      .css('font-size', '14pt')
-      .appendTo($('body'))
+    var div = document.createElement('div');
+    div.className = 'ui-test-toast';
+    div.textContent = "#{message}";
+    div.style.position = 'absolute';
+    div.style.top = '50px';
+    div.style.right = '50px';
+    div.style.padding = '50px';
+    div.style.backgroundColor = 'lightyellow';
+    div.style.border = 'dashed 3px #eeee00';
+    div.style.fontWeight = 'bold';
+    div.style.fontSize = '14pt';
+    document.body.appendChild(div);
   SCRIPT
 end
 
