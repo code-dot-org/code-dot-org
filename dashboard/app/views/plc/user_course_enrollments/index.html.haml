@@ -23,11 +23,11 @@
             %i.fa.fa-info-circle
             .course_unit_section_name
               = link_to 'Unit Overview', evaluation_complete ? plc_enrollment_unit_assignment_path(enrollment_unit_assignment) : perform_evaluation_path(enrollment_unit_assignment), class: 'course_unit_link'
-          .course_unit_section{class: content_module_assignment.try(:module_status) || 'not_started'}
+          .course_unit_section{class: content_module_assignment.try(:status) || 'not_started'}
             %i.fa.fa-book
             .course_unit_section_name
               = link_to 'Unit Content', plc_enrollment_unit_assignment_path(enrollment_unit_assignment), class: 'course_unit_link'
-          .course_unit_section{class: practice_module_assignment.try(:module_status) || 'not_started'}
+          .course_unit_section{class: practice_module_assignment.try(:status) || 'not_started'}
             %i.fa.fa-graduation-cap
             .course_unit_section_name
               = link_to 'Teaching Practices', plc_enrollment_unit_assignment_path(enrollment_unit_assignment), class: 'course_unit_link'
