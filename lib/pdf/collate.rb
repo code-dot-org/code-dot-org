@@ -43,7 +43,6 @@ module PDF
     return [options, all_paths]
   end
 
-
   def self.merge_pdfs(output_file, *filenames)
     temp_file_handles = []
 
