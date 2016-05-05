@@ -13,9 +13,11 @@ var flappyMsg = require('./locale');
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');
+var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
+var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var FlappyVisualizationColumn = require('./FlappyVisualizationColumn');
+var setInitialLevelProps = require('../redux/levelProperties').setInitialLevelProps;
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
@@ -583,25 +585,29 @@ Flappy.init = function (config) {
     dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
   };
 
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={studioApp.localeDirection()}
-      editCode={!!level.editCode}
-      readonlyWorkspace={!!config.readonlyWorkspace}
-    />
-  );
+  // Push initial level properties into the Redux store
+  studioApp.reduxStore.dispatch(setInitialLevelProps({
+    localeDirection: studioApp.localeDirection(),
+    isReadOnlyWorkspace: !!config.readonlyWorkspace,
+    isDroplet: !!level.editCode
+  }));
 
-  ReactDOM.render(React.createElement(AppView, {
-    assetUrl: studioApp.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    hideSource: !!config.hideSource,
-    noVisualization: false,
-    isRtl: studioApp.isRtl(),
-    codeWorkspace: codeWorkspace,
-    visualizationColumn: <FlappyVisualizationColumn/>,
-    onMount: onMount
-  }), document.getElementById(config.containerId));
+  ReactDOM.render(
+    <Provider store={studioApp.reduxStore}>
+      <AppView
+          assetUrl={studioApp.assetUrl}
+          isEmbedView={!!config.embed}
+          isShareView={!!config.share}
+          hideSource={!!config.hideSource}
+          noVisualization={false}
+          isRtl={studioApp.isRtl()}
+          codeWorkspace={<ConnectedCodeWorkspace/>}
+          visualizationColumn={<FlappyVisualizationColumn/>}
+          onMount={onMount}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
+  );
 };
 
 /**
