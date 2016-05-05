@@ -1,3 +1,4 @@
+// auth helpers
 
 isLoggedIn() { auth.uid !== null }
 
@@ -7,30 +8,52 @@ valueOr(value, defaultValue) { value == null ? defaultValue : value }
 
 // Row count helpers
 
-getRecordAsInt(value) { value == null ? 1 : 0 }
-prevTableCount(record) { valueOr(prior(record).parent().row_count, 0) }
-nextTableCount(record) { record.parent().row_count }
-rowCountUpdated() { getRecordAsInt(this) - getRecordAsInt(prior(this)) == nextTableCount(this) - prevTableCount(this) }
+getRecordAsInt(record) { record == null ? 0 : 1 }
+rowCount(record) { valueOr(record.parent().row_count, 0) }
+rowCountUpdated(nextRecord, prevRecord) { getRecordAsInt(nextRecord) - getRecordAsInt(prevRecord) == rowCount(nextRecord) - rowCount(prevRecord) }
 
-isTargetId() { record_id == this.parent().target_record_id }
+// target record helpers
+
+isTargetId(record, record_id) { record_id == record.parent().target_record_id }
+// The NEW version of the NEW target record. Note: calling prior() on
+// the result of nextTargetRecord will get the OLD version of the OLD
+// target record, which is probably not what you want.
+nextTargetRecord(table) { table[table.target_record_id] }
+// The OLD version of the NEW target record.
+prevTargetRecord(table) { prior(table)[table.target_record_id] }
+
+// path rules
 
 path / {
   read() { true }
-  write() { isLoggedIn() }
 }
 
+// TODO(dave): consolidate this "counter" with other per-table metadata,
+// including target_record_id and row_count.
+
 path /v3/shared-tables/{channel_id}/counters/{table_name} is Number {
+  write() { isLoggedIn() && this != null }
   validate() { this == valueOr(prior(this), 0) + 1 }
 }
 
-path /v3/shared-tables/{channel_id}/tables/{table_name}/target_record_id is String;
+path /v3/shared-tables/{channel_id}/tables/{table_name}/target_record_id is String {
+  write() { isLoggedIn() && this != null }
+}
 
 path /v3/shared-tables/{channel_id}/tables/{table_name}/row_count is Number {
-  validate() { this < 1000 }
+  write() { isLoggedIn() && this != null }
+  validate() { 
+    // require that target record is modified appropriately when row count is modified
+    this < 1000 && rowCountUpdated(nextTargetRecord(this.parent()), prevTargetRecord(this.parent()))
+  }
 }
 
 // the key $record_id is the id of the record. Its value is the json-encoded
 // value of the record.
-//path /v3/shared-tables/{channel_id}/tables/{table_name}/{record_id} is String {
-//  validate() {  rowCountUpdated() && isTargetId() }
-//}
+path /v3/shared-tables/{channel_id}/tables/{table_name}/{record_id} is String {
+  write() {
+    // Specify these rules in write(), because validate() is skipped when data is null
+    // (e.g. records are removed).
+    isLoggedIn() && isTargetId(this, record_id) && rowCountUpdated(this, prior(this))
+  }
+}

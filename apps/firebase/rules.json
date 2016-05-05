@@ -1,22 +1,28 @@
 {
   "rules": {
     ".read": "true",
-    ".write": "auth.uid != null",
     "v3": {
       "shared-tables": {
         "$channel_id": {
           "counters": {
             "$table_name": {
-              ".validate": "newData.isNumber() && newData.val() == (data.val() == null ? 0 : data.val()) + 1"
+              ".validate": "newData.isNumber() && newData.val() == (data.val() == null ? 0 : data.val()) + 1",
+              ".write": "auth.uid != null && newData.val() != null"
             }
           },
           "tables": {
             "$table_name": {
               "target_record_id": {
-                ".validate": "newData.isString()"
+                ".validate": "newData.isString()",
+                ".write": "auth.uid != null && newData.val() != null"
               },
               "row_count": {
-                ".validate": "newData.isNumber() && newData.val() < 1000"
+                ".validate": "newData.isNumber() && newData.val() < 1000 && (newData.parent().child(newData.parent().child('target_record_id').val()).val() == null ? 0 : 1) - (data.parent().child(newData.parent().child('target_record_id').val()).val() == null ? 0 : 1) == (newData.parent().child(newData.parent().child('target_record_id').val()).parent().child('row_count').val() == null ? 0 : newData.parent().child(newData.parent().child('target_record_id').val()).parent().child('row_count').val()) - (data.parent().child(newData.parent().child('target_record_id').val()).parent().child('row_count').val() == null ? 0 : data.parent().child(newData.parent().child('target_record_id').val()).parent().child('row_count').val())",
+                ".write": "auth.uid != null && newData.val() != null"
+              },
+              "$record_id": {
+                ".validate": "newData.isString()",
+                ".write": "auth.uid != null && $record_id == newData.parent().child('target_record_id').val() && (newData.val() == null ? 0 : 1) - (data.val() == null ? 0 : 1) == (newData.parent().child('row_count').val() == null ? 0 : newData.parent().child('row_count').val()) - (data.parent().child('row_count').val() == null ? 0 : data.parent().child('row_count').val())"
               }
             }
           }

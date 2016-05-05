@@ -160,13 +160,22 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
   getCounter(Applab.channelId, idCounter, function (counter) {
     record.id = counter;
     console.log(counter);
-    var recordRef = getTable(Applab.channelId, tableName).child(counter);
-    recordRef.update(record, function (error) {
-      if (!error) {
-	onSuccess(record);
-      } else {
-	onError(error);
-      }
+
+    var tableRef = getTable(Applab.channelId, tableName);
+    tableRef.child('row_count').once('value', function (rowCountSnapshot) {
+      var data = {};
+      data[counter] = JSON.stringify(record);
+      data.target_record_id = String(counter);
+      var newRowCount = (rowCountSnapshot.val() || 0) + 1;
+      data.row_count = newRowCount;
+
+      tableRef.update(data, function (error) {
+        if (!error) {
+          onSuccess(record);
+        } else {
+          onError(error);
+        }
+      });
     });
   }, onError);
 };
@@ -238,14 +247,23 @@ FirebaseStorage.readRecords = function (tableName, searchParams, onSuccess, onEr
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError) {
-  var recordRef = getTable(Applab.channelId, tableName).child(record.id);
-  recordRef.set(record, function (error) {
-    if (!error) {
-      // TODO: We need to handle the 404 case, probably by attempting a read.
-      onComplete(record, true);
-    } else {
-      onError(error);
-    }
+  var tableRef = getTable(Applab.channelId, tableName);
+  tableRef.child('row_count').once('value', function (rowCountSnapshot) {
+
+    var data = {};
+    data[record.id] = JSON.stringify(record);
+    data.target_record_id = String(record.id);
+
+    // TODO: We need to handle the 404 case, probably by attempting a read.
+    data.row_count = rowCountSnapshot.val();
+
+    tableRef.update(data, function (error) {
+      if (!error) {
+        onComplete(record, true);
+      } else {
+        onError(error);
+      }
+    });
   });
 };
 
@@ -260,13 +278,21 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError) {
-  var table = getTable(Applab.channelId, tableName);
-  table.child(record.id).remove(function (error) {
-    if (error) {
-      onError(error);
-    } else {
-      onComplete(true);  // TODO: Return false if record is not present.
-    }
+  var tableRef = getTable(Applab.channelId, tableName);
+
+  tableRef.child('row_count').once('value', function (rowCountSnapshot) {
+    var data = {};
+    data[record.id] = null;
+    data.target_record_id = String(record.id);
+    data.row_count = rowCountSnapshot.val() - 1;
+
+    tableRef.update(data, function (error) {
+      if (error) {
+        onError(error);
+      } else {
+        onComplete(true);  // TODO: Return false if record is not present.
+      }
+    });
   });
 };
 
