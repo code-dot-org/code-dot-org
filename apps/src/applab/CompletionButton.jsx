@@ -59,9 +59,9 @@ var CompletionButton = React.createClass({
 
 module.exports = connect(function propsFromStore(state) {
   return {
-    isProjectLevel: state.level.isProjectLevel,
-    isSubmittable: state.level.isSubmittable,
-    isSubmitted: state.level.isSubmitted,
+    isProjectLevel: state.pageConstants.isProjectLevel,
+    isSubmittable: state.pageConstants.isSubmittable,
+    isSubmitted: state.pageConstants.isSubmitted,
   };
 })(CompletionButton);
 
