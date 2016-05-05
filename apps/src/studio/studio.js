@@ -27,7 +27,6 @@ var Item = require('./Item');
 var BigGameLogic = require('./bigGameLogic');
 var RocketHeightLogic = require('./rocketHeightLogic');
 var SamBatLogic = require('./samBatLogic');
-var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = require('../lodash');
@@ -2535,6 +2534,15 @@ var registerEventHandler = function (handlers, name, func) {
     cmdQueue: []});
 };
 
+var registerHandlersForCode = function (handlers, blockName, code) {
+  var func = codegen.functionFromCode(code, {
+    StudioApp: studioApp,
+    Studio: api,
+    Globals: Studio.Globals
+  });
+  registerEventHandler(handlers, blockName, func);
+};
+
 var registerHandlers =
       function (handlers, blockName, eventNameBase,
                 nameParam1, matchParam1Val,
@@ -2553,10 +2561,6 @@ var registerHandlers =
          matchParam2Val === titleVal2)) {
       var code = Blockly.Generator.blocksToCode('JavaScript', [block]);
       if (code) {
-        var func = codegen.functionFromCode(code, {
-                                            StudioApp: studioApp,
-                                            Studio: api,
-                                            Globals: Studio.Globals } );
         var eventName = eventNameBase;
         if (nameParam1) {
           eventName += '-' + matchParam1Val;
@@ -2564,7 +2568,7 @@ var registerHandlers =
         if (nameParam2) {
           eventName += '-' + matchParam2Val;
         }
-        registerEventHandler(handlers, eventName, func);
+        registerHandlersForCode(handlers, eventName, code);
       }
     }
   }
@@ -2843,6 +2847,10 @@ Studio.execute = function () {
   if (studioApp.isUsingBlockly()) {
     if (Studio.checkForBlocklyPreExecutionFailure()) {
       return Studio.onPuzzleComplete();
+    }
+
+    if (studioApp.initializationCode) {
+      registerHandlersForCode(handlers, 'whenGameStarts', studioApp.initializationCode);
     }
 
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
