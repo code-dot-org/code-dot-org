@@ -1,7 +1,7 @@
 var _ = require('../lodash');
 var utils = require('../utils');
 
-var SET_INITIAL_LEVEL_PROPS = 'levelProperties/SET_INITIAL_LEVEL_PROPS';
+var SET_PAGE_CONSTANTS = 'pageConstants/SET_PAGE_CONSTANTS';
 
 var ALLOWED_KEYS = utils.makeEnum(
   'assetUrl',
@@ -21,7 +21,9 @@ var ALLOWED_KEYS = utils.makeEnum(
   'showDebugButtons',
   'showDebugConsole',
   'showDebugWatch',
-  'localeDirection'
+  'localeDirection',
+  'isDroplet',
+  'isMinecraft'
 );
 
 var levelInitialState = {
@@ -31,7 +33,7 @@ var levelInitialState = {
 module.exports.default = function reducer(state, action) {
   state = state || levelInitialState;
 
-  if (action.type === SET_INITIAL_LEVEL_PROPS) {
+  if (action.type === SET_PAGE_CONSTANTS) {
     Object.keys(action.props).forEach(function (key) {
       if (ALLOWED_KEYS[key] === undefined) {
         throw new Error('Property "' + key + '" may not be set using the ' +
@@ -45,8 +47,9 @@ module.exports.default = function reducer(state, action) {
 };
 
 /**
- * Push lots of view properties of the level into the store.
- * Should be called during level init.
+ * Push lots of page constants into the store.
+ * Should be called during level init. Expectation is that these properties
+ * never change once set.
  * Any properties omitted from the props argument are not set in the state.
  *
  * @param {!Object} props
@@ -65,9 +68,9 @@ module.exports.default = function reducer(state, action) {
  * ...
  * @returns {{type: ActionType, props: Object}}
  */
-module.exports.setInitialLevelProps = function (props) {
+module.exports.setPageConstants = function (props) {
   return {
-    type: SET_INITIAL_LEVEL_PROPS,
+    type: SET_PAGE_CONSTANTS,
     props: props
   };
 };

@@ -351,7 +351,7 @@ file UI_TEST_SYMLINK do
 end
 
 task :wait_for_test_server do
-  RakeUtils.wait_for_url 'http://test-studio.code.org'
+  RakeUtils.wait_for_url 'https://test-studio.code.org'
 end
 
 task :regular_ui_tests => [UI_TEST_SYMLINK] do

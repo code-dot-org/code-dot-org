@@ -1,4 +1,5 @@
 var Radium = require('radium');
+var connect = require('react-redux').connect;
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var JsDebugger = require('./JsDebugger');
 var PaneHeader = require('./PaneHeader');
@@ -46,9 +47,9 @@ var CodeWorkspace = React.createClass({
     localeDirection: React.PropTypes.oneOf(['rtl', 'ltr']).isRequired,
     editCode: React.PropTypes.bool.isRequired,
     readonlyWorkspace: React.PropTypes.bool.isRequired,
-    showDebugger: React.PropTypes.bool,
-    isRunning: React.PropTypes.bool,
-    isMinecraft: React.PropTypes.bool
+    showDebugger: React.PropTypes.bool.isRequired,
+    isRunning: React.PropTypes.bool.isRequired,
+    isMinecraft: React.PropTypes.bool.isRequired
   },
 
   shouldComponentUpdate: function (nextProps) {
@@ -75,6 +76,10 @@ var CodeWorkspace = React.createClass({
     var props = this.props;
 
     var runModeIndicators = experiments.isEnabled('runModeIndicators');
+    if (props.isMinecraft) {
+      // ignore runModeIndicators in MC
+      runModeIndicators = false;
+    }
 
     var chevronStyle = [
       styles.chevron,
@@ -116,6 +121,7 @@ var CodeWorkspace = React.createClass({
             id="headers"
             dir={props.localeDirection}
             hasFocus={hasFocus}
+            className={props.isRunning ? 'is-running' : ''}
         >
           <div id="codeModeHeaders">
             <PaneSection id="toolbox-header">
@@ -154,8 +160,7 @@ var CodeWorkspace = React.createClass({
                 {props.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort()}
               </span>
               <div id="blockCounter">
-                <div id="blockUsed" className='block-counter-default'>
-                </div>
+                <ProtectedStatefulDiv id="blockUsed" className='block-counter-default'/>
                 <span> / </span>
                 <span id="idealBlockNumber"></span>
                 <span>{" " + msg.blocks()}</span>
@@ -170,4 +175,13 @@ var CodeWorkspace = React.createClass({
   }
 });
 
-module.exports = Radium(CodeWorkspace);
+module.exports = connect(function propsFromStore(state) {
+  return {
+    editCode: state.pageConstants.isDroplet,
+    localeDirection: state.pageConstants.localeDirection,
+    readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+    isRunning: !!state.runState.isRunning,
+    showDebugger: !!(state.pageConstants.showDebugButtons || state.pageConstants.showDebugConsole),
+    isMinecraft: !!state.pageConstants.isMinecraft
+  };
+})(Radium(CodeWorkspace));

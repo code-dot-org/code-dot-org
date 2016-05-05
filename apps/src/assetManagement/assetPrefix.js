@@ -29,7 +29,6 @@ module.exports.init = function (config) {
  * @returns {string}
  */
 module.exports.fixPath = function (filename) {
-
   // Rewrite urls to pass through our media proxy. Unless of course we are in an
   // exported app, in which case our media proxy won't be good for anything
   // anyway.

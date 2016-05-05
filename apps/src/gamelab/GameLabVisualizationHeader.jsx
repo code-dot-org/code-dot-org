@@ -43,7 +43,7 @@ var GameLabVisualizationHeader = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
-    isShareView: state.level.isShareView,
+    isShareView: state.pageConstants.isShareView,
     interfaceMode: state.interfaceMode
   };
 }, function propsFromDispatch(dispatch) {
