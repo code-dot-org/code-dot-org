@@ -65,7 +65,7 @@ GameLabP5.prototype.init = function (options) {
     var userSetup = this.setup || window.setup;
     var userDraw = this.draw || window.draw;
     if (typeof userDraw === 'function') {
-      this.push();
+      this.resetMatrix();
       if (typeof userSetup === 'undefined') {
         this.scale(this.pixelDensity, this.pixelDensity);
       }
@@ -86,11 +86,10 @@ GameLabP5.prototype.init = function (options) {
     this._registeredMethods.post.forEach(function (f) {
       f.call(self);
     });
-    this.pop();
   };
 
-  // Disable fullScreen() method:
-  window.p5.prototype.fullScreen = function (val) {
+  // Disable fullscreen() method:
+  window.p5.prototype.fullscreen = function (val) {
     return false;
   };
 
@@ -102,8 +101,7 @@ GameLabP5.prototype.init = function (options) {
   window.p5.prototype._updateNextTouchCoords = function (e) {
     if (e.type === 'mousedown' ||
         e.type === 'mousemove' ||
-        e.type === 'mouseup' ||
-        e.type === 'dragover'){ /* NOTE: cpirich: modified p5 to add dragover */
+        e.type === 'mouseup' || !e.touches) {
       this._setProperty('_nextTouchX', this._nextMouseX);
       this._setProperty('_nextTouchY', this._nextMouseY);
     } else {
@@ -153,7 +151,7 @@ GameLabP5.prototype.init = function (options) {
   window.p5.prototype._updateNextMouseCoords = function (e) {
     if (e.type === 'touchstart' ||
         e.type === 'touchmove' ||
-        e.type === 'touchend') {
+        e.type === 'touchend' || e.touches) {
       this._setProperty('_nextMouseX', this._nextTouchX);
       this._setProperty('_nextMouseY', this._nextTouchY);
     } else {
@@ -476,17 +474,14 @@ GameLabP5.prototype.startExecution = function () {
          * Copied code from p5 _setup()
          */
 
-        // // unhide hidden canvas that was created
-        // this.canvas.style.visibility = '';
-        // this.canvas.className = this.canvas.className.replace('p5_hidden', '');
-
         // unhide any hidden canvases that were created
-        var reg = new RegExp(/(^|\s)p5_hidden(?!\S)/g);
-        var canvases = document.getElementsByClassName('p5_hidden');
+        var canvases = document.getElementsByTagName('canvas');
         for (var i = 0; i < canvases.length; i++) {
           var k = canvases[i];
-          k.style.visibility = '';
-          k.className = k.className.replace(reg, '');
+          if (k.dataset.hidden === 'true') {
+            k.style.visibility = '';
+            delete(k.dataset.hidden);
+          }
         }
         this._setupDone = true;
 
@@ -620,6 +615,16 @@ GameLabP5.prototype.getCustomMarshalGlobalProperties = function () {
 
 GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
   return [
+    'arguments',
+    'callee',
+    'caller',
+    'constructor',
+    'eval',
+    'prototype',
+    'stack',
+    'unwatch',
+    'valueOf',
+    'watch',
     '_userNode',
     '_elements',
     '_curElement',

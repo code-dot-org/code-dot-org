@@ -21,7 +21,7 @@ commonStyles.purpleHeaderReadOnly = {
   backgroundColor: color.charcoal,
 };
 
-commonStyles.purpleHeaderRunning = {
+commonStyles.purpleHeaderUnfocused = {
   backgroundColor: color.lighter_purple,
   color: color.dark_charcoal,
 };

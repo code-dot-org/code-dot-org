@@ -1,0 +1,10 @@
+name 'ECSPD1 video reflection'
+skip_sound true
+skip_dialogue true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+## Impact of Computer science
+
+What thoughts do you have about the impact of computer science after watching this video? 
+MARKDOWN
