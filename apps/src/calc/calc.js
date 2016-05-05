@@ -29,7 +29,6 @@ var skins = require('../skins');
 var levels = require('./levels');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var CalcVisualizationColumn = require('./CalcVisualizationColumn');
 var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
@@ -219,7 +218,6 @@ Calc.init = function (config) {
           hideSource={!!config.hideSource}
           noVisualization={false}
           isRtl={studioApp.isRtl()}
-          codeWorkspace={<ConnectedCodeWorkspace/>}
           visualizationColumn={visualizationColumn}
           onMount={studioApp.init.bind(studioApp, config)}
       />
