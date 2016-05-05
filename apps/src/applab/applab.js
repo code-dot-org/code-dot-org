@@ -17,7 +17,6 @@ var apiBlockly = require('./apiBlockly');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var AppLabView = require('./AppLabView');
-var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var dom = require('../dom');
@@ -783,7 +782,6 @@ Applab.init = function (config) {
 
   // TODO (brent) hideSource should probably be part of initialLevelProps
   Applab.reactInitialProps_ = {
-    codeWorkspace: <ConnectedCodeWorkspace/>,
     hideSource: !!config.hideSource,
     onMount: onMount
   };

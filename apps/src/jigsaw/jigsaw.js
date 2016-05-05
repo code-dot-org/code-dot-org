@@ -11,7 +11,6 @@ var studioApp = require('../StudioApp').singleton;
 var skins = require('../skins');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');
 var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
@@ -184,7 +183,6 @@ Jigsaw.init = function (config) {
           hideSource={!!config.hideSource}
           noVisualization={true}
           isRtl={studioApp.isRtl()}
-          codeWorkspace={<ConnectedCodeWorkspace/>}
           visualizationColumn={<JigsawVisualizationColumn/>}
           onMount={onMount}
       />
