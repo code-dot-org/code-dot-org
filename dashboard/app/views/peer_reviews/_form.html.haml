@@ -1,0 +1,31 @@
+= form_for @peer_review do |f|
+  - if @peer_review.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@peer_review.errors.count, "error")} prohibited this peer_review from being saved:"
+      %ul
+        - @peer_review.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :user
+    = f.text_field :user
+  .field
+    = f.label :from_instructor
+    = f.check_box :from_instructor
+  .field
+    = f.label :script
+    = f.text_field :script
+  .field
+    = f.label :level
+    = f.text_field :level
+  .field
+    = f.label :level_source
+    = f.text_field :level_source
+  .field
+    = f.label :data
+    = f.text_area :data
+  .field
+    = f.label :status
+    = f.number_field :status
+  .actions
+    = f.submit 'Save'

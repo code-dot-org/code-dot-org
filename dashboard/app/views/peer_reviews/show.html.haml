@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @peer_review.user
+%p
+  %b From instructor:
+  = @peer_review.from_instructor
+%p
+  %b Script:
+  = @peer_review.script
+%p
+  %b Level:
+  = @peer_review.level
+%p
+  %b Level source:
+  = @peer_review.level_source
+%p
+  %b Data:
+  = @peer_review.data
+%p
+  %b Status:
+  = @peer_review.status
+
+= link_to 'Edit', edit_peer_review_path(@peer_review)
+\|
+= link_to 'Back', peer_reviews_path

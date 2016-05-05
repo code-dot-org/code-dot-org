@@ -1,0 +1,33 @@
+%h1 Listing peer_reviews
+
+%table
+  %thead
+    %tr
+      %th User
+      %th From instructor
+      %th Script
+      %th Level
+      %th Level source
+      %th Data
+      %th Status
+      %th
+      %th
+      %th
+
+  %tbody
+    - @peer_reviews.each do |peer_review|
+      %tr
+        %td= peer_review.user
+        %td= peer_review.from_instructor
+        %td= peer_review.script
+        %td= peer_review.level
+        %td= peer_review.level_source
+        %td= peer_review.data
+        %td= peer_review.status
+        %td= link_to 'Show', peer_review
+        %td= link_to 'Edit', edit_peer_review_path(peer_review)
+        %td= link_to 'Destroy', peer_review, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Peer review', new_peer_review_path
