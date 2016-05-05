@@ -1240,14 +1240,18 @@ a.download-video {
     font-size: 18px;
   }
 
+  #teacher_announcement {
+    margin-top: 10px;
+  }
+
   .teacher-announce {
     position: relative;
     font-size: 14px;
   }
   .teacher-announce .announce-heading {
-    background-color: #7665a0;
+    background-color: $purple;
     border-radius: 4px;
-    color: #fff;
+    color: white;
     height: 20px;
     overflow: hidden;
     padding: 10px;
@@ -1257,7 +1261,7 @@ a.download-video {
     float: right;
   }
   .teacher-announce .announce-content {
-    background-color: #ebe8f1;
+    background-color: $lightest_purple;
     border-radius: 4px;
     margin-top: 3px;
     overflow: hidden;
@@ -1271,7 +1275,7 @@ a.download-video {
     height: 108px;
   }
   .teacher-announce .announce-content .content-text {
-    color: #4d575f;
+    color: $charcoal;
     float: left;
     max-height: 90px;
     overflow: hidden;
@@ -1283,9 +1287,11 @@ a.download-video {
     font-family: 'Gotham 5r', sans-serif;
   }
   .teacher-announce .announce-learn-more {
-    bottom: 10px;
-    position: absolute;
-    right: 10px;
+    float: right;
+    margin-top: 25px;
+  }
+  .teacher-announce a {
+    text-decoration: none;
   }
 
   .gallery {
@@ -1408,6 +1414,21 @@ a.download-video {
     margin: 20px 0 20px -20px;
     form {
       margin: 0;
+    }
+  }
+}
+
+#landingpage.teacher-course {
+  $radius: 5px;
+  #lesson {
+    background: $cyan;
+    border-radius: $radius $radius 0 0;
+  }
+  #stats {
+    border: 5px solid $cyan;
+    border-radius: 0 0 $radius $radius;
+    .user-stats-block {
+      background: none;
     }
   }
 }
