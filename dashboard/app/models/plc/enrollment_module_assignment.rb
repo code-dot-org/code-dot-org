@@ -29,7 +29,7 @@ class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
   ]
 
   # The module status is completely determined by the completeness of its task assignments
-  def module_status
+  def status
     tasks_to_complete = plc_task_assignments.joins(:plc_task).where.not('plc_tasks.type': 'Plc::LearningResourceTask')
     completed_tasks = tasks_to_complete.where(status: Plc::EnrollmentTaskAssignment::COMPLETED)
 
