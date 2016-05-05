@@ -21,46 +21,58 @@
     computer science graduates
 
 %div.fact{style: "margin-left:20px;"}
-  - if data[:cs_counts_t] == "No"
+  - if data[:pd_funding_s] == "No"
     %i.fa.fa-times-circle
     &nbsp;
-    CS doesn't count as math or science credit
-  - elsif data[:cs_counts_t] == "Yes"
+    No state funding for CS PD
+  - elsif data[:pd_funding_s] == "Yes"
     %i.fa.fa-check-circle
     &nbsp;
-    CS counts as math or science credit
+    State funding for CS PD
+  - elsif data[:pd_funding_s] == "Other"
+    %i.fa.fa-check-circle
+    &nbsp;
+    = data[:pd_funding_exception_s]
   %br
 
-  - if data[:cs_teacher_cert_s] == "No"
+  - if data[:require_hs_s] == "No"
     %i.fa.fa-times-circle
     &nbsp;
-    No clear CS teacher certification pathways
-  - elsif data[:cs_teacher_cert_s] == "Yes"
+    Does not require all high schools to offer CS
+  - elsif data[:require_hs_s] == "Yes"
     %i.fa.fa-check-circle
     &nbsp;
-    Clear certification pathways for CS teachers
+    Requires all high schools to offer CS
+  - elsif data[:require_hs_s] == "Other"
+    %i.fa.fa-check-circle
+    &nbsp;
+    = data[:require_hs_exception_s]
   %br
 
   - if data[:cs_standards_s] == "No"
     %i.fa.fa-times-circle
     &nbsp;
-    No CS K-12 curriculum standards
+    No K-12 CS curriculum standards
   - elsif data[:cs_standards_s] == "Yes"
     %i.fa.fa-check-circle
     &nbsp;
-    CS K-12 curriculum standards
+    K-12 CS curriculum standards
+  - elsif data[:cs_standards_s] == "Other"
+    %i.fa.fa-check-circle
+    &nbsp;
+    = data[:cs_standards_exception_s]
 
 -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/files/states/#{state}.pdf"))
   %div.download-fact-sheet<
-    %a{href: "/advocacy/state-facts/#{state}.pdf", target: '_blank'}<
+    %button{href: "/advocacy/state-facts/#{state}.pdf", style: 'height:40px'}<
+      %i{:class=>"fa fa-download", :style=>'margin-right:10px'}<
       Download #{statename} fact-sheet
-      %img{:src=>"/images/download.png", width: "35px", style: 'margin-top:-5px'}
 
 -if data[:text_t]
   %p
     =data[:text_t]
 %p
-  %button{onclick: "return adjustScroll('tools-section')"}
+  %a{style: "color:white;", onclick: "return adjustScroll('tools-section')"}
     Take action
 
   -if data[:action_text_s] && data[:action_url_s]
