@@ -47,8 +47,8 @@ var CodeWorkspace = React.createClass({
     localeDirection: React.PropTypes.oneOf(['rtl', 'ltr']).isRequired,
     editCode: React.PropTypes.bool.isRequired,
     readonlyWorkspace: React.PropTypes.bool.isRequired,
-    showDebugger: React.PropTypes.bool,
-    isRunning: React.PropTypes.bool,
+    showDebugger: React.PropTypes.bool.isRequired,
+    isRunning: React.PropTypes.bool.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired
   },
 
@@ -180,8 +180,8 @@ module.exports = connect(function propsFromStore(state) {
     editCode: state.pageConstants.isDroplet,
     localeDirection: state.pageConstants.localeDirection,
     readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    isRunning: state.runState.isRunning,
-    showDebugger: state.pageConstants.showDebugButtons || state.pageConstants.showDebugConsole,
+    isRunning: !!state.runState.isRunning,
+    showDebugger: !!(state.pageConstants.showDebugButtons || state.pageConstants.showDebugConsole),
     isMinecraft: !!state.pageConstants.isMinecraft
   };
 })(Radium(CodeWorkspace));
