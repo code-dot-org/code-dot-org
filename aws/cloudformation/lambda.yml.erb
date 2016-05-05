@@ -60,7 +60,13 @@ Resources:
                 Action: ["logs:CreateLogGroup","logs:CreateLogStream","logs:PutLogEvents"]
                 Resource: "arn:aws:logs:*:*:*"
               - Effect: Allow
-                Action: ["ec2:CreateImage", "ec2:DeregisterImage", "ec2:DescribeImages", "ec2:CreateTags"]
+                Action:
+                  - "ec2:CreateImage"
+                  - "ec2:DeregisterImage"
+                  - "ec2:DescribeImages"
+                  - "ec2:CreateTags"
+                  - "ec2:DescribeSnapshots"
+                  - "ec2:DeleteSnapshot"
                 Resource: "*"
 Outputs:
   LookupStackOutputs:
