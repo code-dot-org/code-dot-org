@@ -75,6 +75,12 @@ group :development, :test do
   gem 'minitest-reporters'
   gem 'minitest-around'
   gem 'eyes_selenium', '~> 2.28.0'
+
+  # for pegasus PDF generation
+  gem 'open_uri_redirections', require: false
+
+  # for pegasus testing
+  # gem 'pdf-reader' # enable for PDF merger tests
 end
 
 group :doc do
