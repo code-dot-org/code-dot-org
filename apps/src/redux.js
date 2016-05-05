@@ -40,17 +40,3 @@ module.exports.createStore = function (reducer) {
 
   return redux.createStore(reducer, redux.applyMiddleware(reduxThunk));
 };
-
-/**
- * Create a non-functioning redux store that allows us to always call getState
- * and dispatch as no-ops.
- */
-module.exports.createFakeStore = function () {
-  return {
-    getState: function () {
-      return {};
-    },
-    dispatch: function () {
-    }
-  };
-};

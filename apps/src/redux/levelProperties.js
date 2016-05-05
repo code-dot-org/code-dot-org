@@ -21,7 +21,8 @@ var ALLOWED_KEYS = utils.makeEnum(
   'showDebugButtons',
   'showDebugConsole',
   'showDebugWatch',
-  'localeDirection'
+  'localeDirection',
+  'isDroplet'
 );
 
 var levelInitialState = {
