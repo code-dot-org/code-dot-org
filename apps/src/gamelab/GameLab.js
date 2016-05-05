@@ -169,7 +169,7 @@ GameLab.prototype.init = function (config) {
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructions');
+  config.showInstructionsInTopPane = true;
 
   var breakpointsEnabled = !config.level.debuggerDisabled;
 

@@ -108,7 +108,7 @@ Scenario: Applab embedded level
 
 Scenario: Applab Instructions in Top Pane
   When I open my eyes to test "Applab Instructions in top pane"
-  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9?topInstructions=true"
+  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9"
   And I wait to see "#runButton"
   And I see no difference for "top instructions enabled on standard level"
   Then I click selector ".fa-chevron-circle-down"
@@ -125,26 +125,11 @@ Scenario: Applab Instructions in Top Pane
   When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/12"
   And I wait to see "#runButton"
   And I see no difference for "top instructions enabled on embed level"
-
-  Then I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9?topInstructions=false"
-  And I wait to see "#runButton"
-
-  When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9"
-  And I wait to see "#runButton"
-  And I see no difference for "top instructions disabled on standard level"
-
-  When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/10"
-  And I wait to see "#runButton"
-  And I see no difference for "top instructions disabled on instructionless level"
-
-  When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/12"
-  And I wait to see "#runButton"
-  And I see no difference for "top instructions disabled on embed level"
   Then I close my eyes
 
 Scenario: Applab Instructions Resize
   When I open my eyes to test "Applab instructions resize"
-  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9?topInstructions=true"
+  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9"
   And I wait to see "#runButton"
   And I see no difference for "base case"
   Then I drag the instructions grippy by -150 pixels
@@ -153,8 +138,6 @@ Scenario: Applab Instructions Resize
   And I see no difference for "big instructions"
   Then I drag the visualization grippy by -200 pixels
   And I see no difference for "small visualization"
-  Then I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9?topInstructions=false"
-  And I wait to see "#runButton"
   Then I close my eyes
 
 Scenario: Applab debugging
