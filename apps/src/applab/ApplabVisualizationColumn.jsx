@@ -104,7 +104,7 @@ module.exports = connect(function propsFromStore(state) {
     visualizationHasPadding: state.pageConstants.visualizationHasPadding,
     hideSource: state.pageConstants.hideSource,
     isShareView: state.pageConstants.isShareView,
-    isEmbedView: state.pageConstants.isEmbedView
-    isRunning: state.runState.isRunning
+    isEmbedView: state.pageConstants.isEmbedView,
+    isRunning: state.runState.isRunning,
   };
 })(Radium(ApplabVisualizationColumn));

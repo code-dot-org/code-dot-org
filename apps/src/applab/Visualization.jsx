@@ -72,9 +72,9 @@ var Visualization = React.createClass({
 
 module.exports = connect(function propsFromStore(state) {
   return {
-    visualizationHasPadding: state.level.visualizationHasPadding,
-    hideSource: state.level.hideSource,
-    isEmbedView: state.level.isEmbedView,
-    isShareView: state.level.isShareView
+    visualizationHasPadding: state.pageConstants.visualizationHasPadding,
+    hideSource: state.pageConstants.hideSource,
+    isEmbedView: state.pageConstants.isEmbedView,
+    isShareView: state.pageConstants.isShareView
   };
 })(Radium(Visualization));
