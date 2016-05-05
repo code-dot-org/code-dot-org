@@ -1,8 +1,11 @@
 var actions = require('@cdo/apps/gamelab/actions');
 var createStore = require('@cdo/apps/redux').createStore;
+var combineReducers = require('redux').combineReducers;
 var expect = require('chai').expect;
+var _ = require('@cdo/apps/lodash');
 var GameLabInterfaceMode = require('@cdo/apps/gamelab/constants').GameLabInterfaceMode;
-var gamelabReducer = require('@cdo/apps/gamelab/reducers').gamelabReducer;
+var gamelabReducers = require('@cdo/apps/gamelab/reducers');
+var commonReducers = require('@cdo/apps/redux/commonReducers');
 var levelProperties = require('@cdo/apps/redux/levelProperties');
 
 var testUtils = require('../util/testUtils');
@@ -15,7 +18,7 @@ describe('gamelabReducer', function () {
   var ANIMATION = GameLabInterfaceMode.ANIMATION;
 
   beforeEach(function () {
-    store = createStore(gamelabReducer);
+    store = createStore(combineReducers(_.assign({}, commonReducers, gamelabReducers)));
     initialState = store.getState();
   });
 

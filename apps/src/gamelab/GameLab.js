@@ -30,7 +30,7 @@ var experiments = require('../experiments');
 var actions = require('./actions');
 var setInitialLevelProps = require('../redux/levelProperties').setInitialLevelProps;
 var createStore = require('../redux').createStore;
-var gamelabReducer = require('./reducers').gamelabReducer;
+var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
 var CrosshairOverlay = require('../templates/CrosshairOverlay');
@@ -58,13 +58,6 @@ var GameLab = function () {
   this.level = null;
   this.tickIntervalId = 0;
   this.tickCount = 0;
-
-  /**
-   * Redux Store holding application state, transformable by actions.
-   * @private {Store}
-   * @see http://redux.js.org/docs/basics/Store.html
-   */
-  this.reduxStore_ = createStore(gamelabReducer);
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
@@ -179,8 +172,6 @@ GameLab.prototype.init = function (config) {
   // able to turn them on.
   config.showInstructionsInTopPane = experiments.isEnabled('topInstructions');
 
-  config.reduxStore = this.reduxStore_;
-
   var breakpointsEnabled = !config.level.debuggerDisabled;
 
   var onMount = function () {
@@ -219,7 +210,7 @@ GameLab.prototype.init = function (config) {
     this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
   }
 
-  this.reduxStore_.dispatch(setInitialLevelProps({
+  this.studioApp_.reduxStore.dispatch(setInitialLevelProps({
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
@@ -231,17 +222,18 @@ GameLab.prototype.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: true,
-    localeDirection: this.studioApp_.localeDirection()
+    localeDirection: this.studioApp_.localeDirection(),
+    isDroplet: true
   }));
 
   // Push project-sourced animation metadata into store
   if (typeof config.initialAnimationMetadata !== 'undefined') {
-    this.reduxStore_.dispatch(actions.setInitialAnimationMetadata(config.initialAnimationMetadata));
+    this.studioApp_.reduxStore.dispatch(actions.setInitialAnimationMetadata(config.initialAnimationMetadata));
   }
 
   var codeWorkspace = <ConnectedCodeWorkspace/>;
 
-  ReactDOM.render(<Provider store={this.reduxStore_}>
+  ReactDOM.render(<Provider store={this.studioApp_.reduxStore}>
     <GameLabView
       codeWorkspace={codeWorkspace}
       showFinishButton={finishButtonFirstLine && showFinishButton}
@@ -984,7 +976,7 @@ GameLab.prototype.displayFeedback_ = function () {
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
  */
 GameLab.prototype.getAnimationMetadata = function () {
-  return this.reduxStore_.getState().animations;
+  return this.studioApp_.reduxStore.getState().animations;
 };
 
 GameLab.prototype.getAnimationDropdown = function () {
@@ -994,4 +986,8 @@ GameLab.prototype.getAnimationDropdown = function () {
       display: utils.quote(animation.name)
     };
   });
+};
+
+GameLab.prototype.getAppReducers = function () {
+  return reducers;
 };

@@ -27,9 +27,11 @@ var commonMsg = require('../locale');
 var calcMsg = require('./locale');
 var skins = require('../skins');
 var levels = require('./levels');
+var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
+var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var CalcVisualizationColumn = require('./CalcVisualizationColumn');
+var setInitialLevelProps = require('../redux/levelProperties').setInitialLevelProps;
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
@@ -199,26 +201,31 @@ Calc.init = function (config) {
     }
   };
 
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={studioApp.localeDirection()}
-      editCode={!!level.editCode}
-      readonlyWorkspace={!!config.readonlyWorkspace}
-    />
-  );
+  // Push initial level properties into the Redux store
+  studioApp.reduxStore.dispatch(setInitialLevelProps({
+    localeDirection: studioApp.localeDirection(),
+    isReadOnlyWorkspace: !!config.readonlyWorkspace,
+    isDroplet: !!level.editCode
+  }));
+
   var visualizationColumn = <CalcVisualizationColumn inputOutputTable={level.inputOutputTable}/>;
 
-  ReactDOM.render(React.createElement(AppView, {
-    assetUrl: studioApp.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    hideSource: !!config.hideSource,
-    noVisualization: false,
-    isRtl: studioApp.isRtl(),
-    codeWorkspace: codeWorkspace,
-    visualizationColumn: visualizationColumn,
-    onMount: studioApp.init.bind(studioApp, config)
-  }), document.getElementById(config.containerId));
+  ReactDOM.render(
+    <Provider store={studioApp.reduxStore}>
+      <AppView
+          assetUrl={studioApp.assetUrl}
+          isEmbedView={!!config.embed}
+          isShareView={!!config.share}
+          hideSource={!!config.hideSource}
+          noVisualization={false}
+          isRtl={studioApp.isRtl()}
+          codeWorkspace={<ConnectedCodeWorkspace/>}
+          visualizationColumn={visualizationColumn}
+          onMount={studioApp.init.bind(studioApp, config)}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
+  );
 };
 
 /**
