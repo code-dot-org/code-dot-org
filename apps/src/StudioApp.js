@@ -1716,6 +1716,11 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
 
+  if (config.level.initializationBlocks) {
+    var xml = parseXmlElement(config.level.initializationBlocks);
+    this.initializationCode = Blockly.Generator.xmlToCode('JavaScript', xml);
+  }
+
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
   this.enableShowLinesCount = (config.enableShowLinesCount !== false);

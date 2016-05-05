@@ -982,10 +982,13 @@ Maze.execute = function (stepMode) {
   beginAttempt();
   Maze.prepareForExecution();
 
-
-  var code;
+  var code = '';
   if (studioApp.isUsingBlockly()) {
-    code = Blockly.Generator.blockSpaceToCode('JavaScript');
+    if (studioApp.initializationCode) {
+      code += studioApp.initializationCode;
+    }
+
+    code += Blockly.Generator.blockSpaceToCode('JavaScript');
   } else {
     code = dropletUtils.generateCodeAliases(dropletConfig, 'Maze');
     code += studioApp.editor.getValue();
