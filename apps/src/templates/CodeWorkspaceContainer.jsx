@@ -9,7 +9,7 @@ var Radium = require('radium');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var utils = require('../utils');
 var commonStyles = require('../commonStyles');
-var ConnectedCodeWorkspace = require('./ConnectedCodeWorkspace');
+var CodeWorkspace = require('./CodeWorkspace');
 
 var styles = {
   main: {
@@ -88,7 +88,7 @@ var CodeWorkspaceContainer = React.createClass({
         <div
             id="codeWorkspace"
             style={styles.codeWorkspace}>
-          <ConnectedCodeWorkspace/>
+          <CodeWorkspace/>
           <ProtectedStatefulDiv id="designWorkspace" style={styles.hidden}/>
         </div>
       </div>
