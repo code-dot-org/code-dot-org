@@ -1633,6 +1633,7 @@ en:
           'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
+          'Unplugged: Fast Functions': 'Unplugged: Fast Functions'
         AlgebraB:
           title: Computer Science in Algebra
           description_short: Learn Functional Programming through Algebra
@@ -1654,8 +1655,8 @@ en:
           description_short: Gamelab Hackathon
           description: A place to try things out in Game Lab
         algebraPD1:
-          title: Computer Science in Algebra PD
-          description_short: Teach Algebra through Functional Programming
+          title: CS in Algebra Part 1
+          description_short: 'Phase 1: Online Introduction'
           description: Teach Algebra through Functional Programming
           Introduction to PD: Introduction to PD
           Course Overview: Course Overview
@@ -1669,6 +1670,7 @@ en:
           description: CS in Algebra end of year reflection
           Getting Started: Getting Started
           Sharing Student Work: Sharing Student Work
+          Planning For the Future: Planning For the Future
         csp1:
           title: CS Principles Unit 1 - The Internet
           description_short: The Internet
@@ -1817,8 +1819,8 @@ en:
           Computational Thinking: Computational Thinking
           Sample Stage: Sample Stage
         ECSPD1:
-          title: 'ECS: Phase 1 PD'
-          description_short: Introduction to the Code.org ECS Version 5 Program
+          title: ECS Part 1
+          description_short: 'Phase 1: Online Introduction'
           description: Two hour introduction to your Professional Learning Program for the ECS Version 5 curriculum
           Getting Started: Getting Started
           What is ECS?: What is ECS?
@@ -1826,6 +1828,8 @@ en:
           Wrap Up: Wrap Up
           Welcome to Phase 1!: Welcome to Phase 1!
           Background and Context: Background and Context
+          'Classroom and workshop style ': 'Classroom and workshop style '
+          'Classroom and Workshop Style ': 'Classroom and Workshop Style '
         algebraFacilitator:
           title: Computer Science in Algebra Facilitator Pre Work
           description_short: Teach Algebra through Functional Programming
@@ -1835,6 +1839,31 @@ en:
           Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           Evaluation Blocks: Evaluation Blocks
           Teacher Dashboard: Teacher Dashboard
+        sciencePD1:
+          title: 'CS in Science: Part 1'
+          description_short: 'Phase 1: Online Introduction'
+          description: In Partnership with Project GUTS
+          Introduction to PD: Introduction to PD
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        cspoptional:
+          title: CS Principles Optional Lessons
+          description_short: Optional
+          description: Optional lessons and content across all of the CS Principles units are listed here
+          Unit 1 - Sending Bits in the Real World: Unit 1 - Sending Bits in the Real World
+          Unit 1 - Encoding Numbers in the Real World: Unit 1 - Encoding Numbers in the Real World
+          Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning Tree
+          Algorithms Detour - Shortest Path: Algorithms Detour - Shortest Path
+          Algorithms Detour - How Routers Learn: Algorithms Detour - How Routers Learn
         cspunit1-support:
           title: Online Support for CSP Unit 1
           description: This is a test Professional Learning Course
