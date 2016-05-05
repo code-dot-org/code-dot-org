@@ -253,6 +253,8 @@ Dashboard::Application.routes.draw do
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
+  resources :peer_reviews
+
   concern :ops_routes do
     # /ops/district/:id
     resources :districts do
