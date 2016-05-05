@@ -28,7 +28,7 @@ var dom = require('../dom');
 var experiments = require('../experiments');
 
 var actions = require('./actions');
-var setInitialLevelProps = require('../redux/levelProperties').setInitialLevelProps;
+var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var createStore = require('../redux').createStore;
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
@@ -210,7 +210,7 @@ GameLab.prototype.init = function (config) {
     this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
   }
 
-  this.studioApp_.reduxStore.dispatch(setInitialLevelProps({
+  this.studioApp_.reduxStore.dispatch(setPageConstants({
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,

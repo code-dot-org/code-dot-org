@@ -38,7 +38,7 @@ var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var ArtistVisualizationColumn = require('./ArtistVisualizationColumn');
-var setInitialLevelProps = require('../redux/levelProperties').setInitialLevelProps;
+var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var Slider = require('../slider');
@@ -211,7 +211,7 @@ Artist.prototype.init = function (config) {
   config.afterInject = _.bind(this.afterInject_, this, config);
 
   // Push initial level properties into the Redux store
-  this.studioApp_.reduxStore.dispatch(setInitialLevelProps({
+  this.studioApp_.reduxStore.dispatch(setPageConstants({
     localeDirection: this.studioApp_.localeDirection(),
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isDroplet: !!config.level.editCode
