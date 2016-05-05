@@ -58,7 +58,7 @@ If you're a software engineer, there are many opportunities to get involved loca
 
 [col-66]
 
-- [TEALS](http://www.tealsk12.org) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. Join the more than 1,500 CS professionals who have made an impact in local high schools by volunteering 2 days a week to teacher Intro and AP CS classes.
+- [TEALS](http://c.tealsk12.org/l/667) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. Join the more than 1,500 CS professionals who have made an impact in local high schools by volunteering 2 days a week to teacher Intro and AP CS classes.
 - [CoderDojo](http://www.coderdojo.com) - Start a Dojo in your neighborhood, mentor children to learn to code.
 - [Citizen Schools](http://www.citizenschools.org/curriculum-category/science-technology/) - Volunteer to teach computer programming in extended-day programs at schools.
 

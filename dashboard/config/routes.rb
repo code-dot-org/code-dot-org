@@ -303,9 +303,7 @@ Dashboard::Application.routes.draw do
     root to: 'plc#index'
     resources :courses
     resources :learning_modules
-    resources :tasks
     resources :user_course_enrollments
-    resources :enrollment_task_assignments
     resources :course_units
     resources :enrollment_unit_assignments
     resources :evaluation_questions

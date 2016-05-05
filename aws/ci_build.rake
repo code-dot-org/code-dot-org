@@ -351,13 +351,13 @@ file UI_TEST_SYMLINK do
 end
 
 task :wait_for_test_server do
-  RakeUtils.wait_for_url 'http://test-studio.code.org'
+  RakeUtils.wait_for_url 'https://test-studio.code.org'
 end
 
 task :regular_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir('test/ui')) do
     HipChat.log 'Running <b>dashboard</b> UI tests...'
-    failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '50', '--magic_retry', '--html', '--fail_fast'
+    failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '90', '--magic_retry', '--html', '--fail_fast'
     if failed_browser_count == 0
       message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
       HipChat.log message

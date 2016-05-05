@@ -1124,11 +1124,13 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   #clear-puzzle-header:hover {
     background-color: $red;
   }
-  .block-counter-default {
-    color: white;
-  }
   .block-counter-overflow {
     color: $yellow;
+  }
+  &.is-running {
+    .block-counter-overflow {
+      color: $dark_orange;
+    }
   }
 }
 

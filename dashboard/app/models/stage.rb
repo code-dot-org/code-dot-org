@@ -74,6 +74,7 @@ class Stage < ActiveRecord::Base
         position: position,
         name: localized_name,
         title: localized_title,
+        flex_category: flex_category,
         # Ensures we get the cached ScriptLevels, vs hitting the db
         levels: script.script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
     }
