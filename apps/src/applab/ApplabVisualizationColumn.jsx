@@ -62,7 +62,7 @@ var ApplabVisualizationColumn = React.createClass({
     ];
 
     // TODO - is phone fram part of visualization or of column?
-    var addPhoneFrame = experiments.isEnabled('runModeIndicators') &&
+    var addPhoneFrame = experiments.isEnabled('phoneFrame') &&
       !this.props.isEmbedView && !this.props.isShareView;
 
     return (
