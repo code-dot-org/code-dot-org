@@ -52,7 +52,7 @@ var reducers = require('./reducers');
 var actions = require('./actions');
 var changeInterfaceMode = actions.changeInterfaceMode;
 var setInstructionsInTopPane = actions.setInstructionsInTopPane;
-var setInitialLevelProps = require('../redux/levelProperties').setInitialLevelProps;
+var setPageConstants = require('../redux/pageConstants').setPageConstants;
 
 var applabConstants = require('./constants');
 var consoleApi = require('../consoleApi');
@@ -756,7 +756,7 @@ Applab.init = function (config) {
   }.bind(this);
 
   // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setInitialLevelProps({
+  studioApp.reduxStore.dispatch(setPageConstants({
     assetUrl: studioApp.assetUrl,
     channelId: config.channel,
     isDesignModeHidden: !!config.level.hideDesignMode,

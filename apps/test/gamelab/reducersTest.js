@@ -6,7 +6,7 @@ var _ = require('@cdo/apps/lodash');
 var GameLabInterfaceMode = require('@cdo/apps/gamelab/constants').GameLabInterfaceMode;
 var gamelabReducers = require('@cdo/apps/gamelab/reducers');
 var commonReducers = require('@cdo/apps/redux/commonReducers');
-var levelProperties = require('@cdo/apps/redux/levelProperties');
+var pageConstants = require('@cdo/apps/redux/pageConstants');
 
 var testUtils = require('../util/testUtils');
 testUtils.setExternalGlobals();
@@ -50,13 +50,13 @@ describe('gamelabReducer', function () {
     });
   });
 
-  describe('action: setInitialLevelProps', function () {
-    var setInitialLevelProps = levelProperties.setInitialLevelProps;
+  describe('action: setPageConstants', function () {
+    var setPageConstants = pageConstants.setPageConstants;
 
     it('allows setting assetUrl', function () {
       var newAssetUrlFunction = function () {};
       expect(initialState.level.assetUrl).to.not.equal(newAssetUrlFunction);
-      store.dispatch(setInitialLevelProps({
+      store.dispatch(setPageConstants({
         assetUrl: newAssetUrlFunction
       }));
       expect(store.getState().level.assetUrl).to.equal(newAssetUrlFunction);
@@ -64,7 +64,7 @@ describe('gamelabReducer', function () {
 
     it('allows setting isEmbedView', function () {
       expect(initialState.level.isEmbedView).to.be.undefined;
-      store.dispatch(setInitialLevelProps({
+      store.dispatch(setPageConstants({
         isEmbedView: false
       }));
       expect(store.getState().level.isEmbedView).to.be.false;
@@ -72,7 +72,7 @@ describe('gamelabReducer', function () {
 
     it('allows setting isShareView', function () {
       expect(initialState.level.isShareView).to.be.undefined;
-      store.dispatch(setInitialLevelProps({
+      store.dispatch(setPageConstants({
         isShareView: true
       }));
       expect(store.getState().level.isShareView).to.be.true;
@@ -80,10 +80,10 @@ describe('gamelabReducer', function () {
 
     it('does not allow setting other properties', function () {
       expect(function () {
-        store.dispatch(setInitialLevelProps({
+        store.dispatch(setPageConstants({
           theAnswer: 42
         }));
-      }).to.throw(Error, /Property "theAnswer" may not be set using the levelProperties\/SET_INITIAL_LEVEL_PROPS action./);
+      }).to.throw(Error, /Property "theAnswer" may not be set using the pageConstants\/SET_PAGE_CONSTANTS action./);
     });
 
   });

@@ -16,7 +16,7 @@ var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
-var setInitialLevelProps = require('../redux/levelProperties').setInitialLevelProps;
+var setPageConstants = require('../redux/pageConstants').setPageConstants;
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -308,7 +308,7 @@ Craft.init = function (config) {
   };
 
   // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setInitialLevelProps({
+  studioApp.reduxStore.dispatch(setPageConstants({
     localeDirection: studioApp.localeDirection(),
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isDroplet: !!config.level.editCode
