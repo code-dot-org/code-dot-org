@@ -1248,7 +1248,7 @@ a.download-video {
     font-size: 18px;
   }
 
-  #teacher-announcement {
+  #teacher_announcement {
     margin-top: 10px;
   }
 
@@ -1257,9 +1257,9 @@ a.download-video {
     font-size: 14px;
   }
   .teacher-announce .announce-heading {
-    background-color: #7665a0;
+    background-color: $purple;
     border-radius: 4px;
-    color: #fff;
+    color: white;
     height: 20px;
     overflow: hidden;
     padding: 10px;
@@ -1269,7 +1269,7 @@ a.download-video {
     float: right;
   }
   .teacher-announce .announce-content {
-    background-color: #ebe8f1;
+    background-color: $lightest_purple;
     border-radius: 4px;
     margin-top: 3px;
     overflow: hidden;
@@ -1283,7 +1283,7 @@ a.download-video {
     height: 108px;
   }
   .teacher-announce .announce-content .content-text {
-    color: #4d575f;
+    color: $charcoal;
     float: left;
     max-height: 90px;
     overflow: hidden;
@@ -1297,6 +1297,9 @@ a.download-video {
   .teacher-announce .announce-learn-more {
     float: right;
     margin-top: 25px;
+  }
+  .teacher-announce a {
+    text-decoration: none;
   }
 
   .gallery {
