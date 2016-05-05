@@ -75,6 +75,10 @@ var CodeWorkspace = React.createClass({
     var props = this.props;
 
     var runModeIndicators = experiments.isEnabled('runModeIndicators');
+    if (props.isMinecraft) {
+      // ignore runModeIndicators in MC
+      runModeIndicators = false;
+    }
 
     var chevronStyle = [
       styles.chevron,
@@ -116,6 +120,7 @@ var CodeWorkspace = React.createClass({
             id="headers"
             dir={props.localeDirection}
             hasFocus={hasFocus}
+            className={props.isRunning ? 'is-running' : ''}
         >
           <div id="codeModeHeaders">
             <PaneSection id="toolbox-header">
@@ -154,8 +159,7 @@ var CodeWorkspace = React.createClass({
                 {props.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort()}
               </span>
               <div id="blockCounter">
-                <div id="blockUsed" className='block-counter-default'>
-                </div>
+                <ProtectedStatefulDiv id="blockUsed" className='block-counter-default'/>
                 <span> / </span>
                 <span id="idealBlockNumber"></span>
                 <span>{" " + msg.blocks()}</span>
