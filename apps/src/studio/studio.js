@@ -18,7 +18,6 @@ var api = require('./api');
 var blocks = require('./blocks');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var StudioVisualizationColumn = require('./StudioVisualizationColumn');
 var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
@@ -2010,7 +2009,6 @@ Studio.init = function (config) {
           hideSource={!!config.hideSource}
           noVisualization={false}
           isRtl={studioApp.isRtl()}
-          codeWorkspace={<ConnectedCodeWorkspace/>}
           visualizationColumn={visualizationColumn}
           onMount={onMount}
       />

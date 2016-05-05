@@ -8,7 +8,6 @@ var api = require('./api');
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = require('../lodash');
@@ -231,11 +230,8 @@ GameLab.prototype.init = function (config) {
     this.studioApp_.reduxStore.dispatch(actions.setInitialAnimationMetadata(config.initialAnimationMetadata));
   }
 
-  var codeWorkspace = <ConnectedCodeWorkspace/>;
-
   ReactDOM.render(<Provider store={this.studioApp_.reduxStore}>
     <GameLabView
-      codeWorkspace={codeWorkspace}
       showFinishButton={finishButtonFirstLine && showFinishButton}
       hideSource={!!config.hideSource}
       onMount={onMount} />
