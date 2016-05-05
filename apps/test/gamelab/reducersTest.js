@@ -6,7 +6,7 @@ var _ = require('@cdo/apps/lodash');
 var GameLabInterfaceMode = require('@cdo/apps/gamelab/constants').GameLabInterfaceMode;
 var gamelabReducers = require('@cdo/apps/gamelab/reducers');
 var commonReducers = require('@cdo/apps/redux/commonReducers');
-var levelProperties = require('@cdo/apps/redux/levelProperties');
+var pageConstants = require('@cdo/apps/redux/pageConstants');
 
 var testUtils = require('../util/testUtils');
 testUtils.setExternalGlobals();
@@ -24,10 +24,10 @@ describe('gamelabReducer', function () {
 
   it('has expected default state', function () {
     expect(initialState.interfaceMode).to.equal(CODE);
-    expect(initialState.level).to.be.an.object;
-    expect(initialState.level.assetUrl).to.be.a.function;
-    expect(initialState.level.isEmbedView).to.be.undefined;
-    expect(initialState.level.isShareView).to.be.undefined;
+    expect(initialState.pageConstants).to.be.an.object;
+    expect(initialState.pageConstants.assetUrl).to.be.a.function;
+    expect(initialState.pageConstants.isEmbedView).to.be.undefined;
+    expect(initialState.pageConstants.isShareView).to.be.undefined;
   });
 
   describe('action: changeInterfaceMode', function () {
@@ -50,40 +50,40 @@ describe('gamelabReducer', function () {
     });
   });
 
-  describe('action: setInitialLevelProps', function () {
-    var setInitialLevelProps = levelProperties.setInitialLevelProps;
+  describe('action: setPageConstants', function () {
+    var setPageConstants = pageConstants.setPageConstants;
 
     it('allows setting assetUrl', function () {
       var newAssetUrlFunction = function () {};
-      expect(initialState.level.assetUrl).to.not.equal(newAssetUrlFunction);
-      store.dispatch(setInitialLevelProps({
+      expect(initialState.pageConstants.assetUrl).to.not.equal(newAssetUrlFunction);
+      store.dispatch(setPageConstants({
         assetUrl: newAssetUrlFunction
       }));
-      expect(store.getState().level.assetUrl).to.equal(newAssetUrlFunction);
+      expect(store.getState().pageConstants.assetUrl).to.equal(newAssetUrlFunction);
     });
 
     it('allows setting isEmbedView', function () {
-      expect(initialState.level.isEmbedView).to.be.undefined;
-      store.dispatch(setInitialLevelProps({
+      expect(initialState.pageConstants.isEmbedView).to.be.undefined;
+      store.dispatch(setPageConstants({
         isEmbedView: false
       }));
-      expect(store.getState().level.isEmbedView).to.be.false;
+      expect(store.getState().pageConstants.isEmbedView).to.be.false;
     });
 
     it('allows setting isShareView', function () {
-      expect(initialState.level.isShareView).to.be.undefined;
-      store.dispatch(setInitialLevelProps({
+      expect(initialState.pageConstants.isShareView).to.be.undefined;
+      store.dispatch(setPageConstants({
         isShareView: true
       }));
-      expect(store.getState().level.isShareView).to.be.true;
+      expect(store.getState().pageConstants.isShareView).to.be.true;
     });
 
     it('does not allow setting other properties', function () {
       expect(function () {
-        store.dispatch(setInitialLevelProps({
+        store.dispatch(setPageConstants({
           theAnswer: 42
         }));
-      }).to.throw(Error, /Property "theAnswer" may not be set using the levelProperties\/SET_INITIAL_LEVEL_PROPS action./);
+      }).to.throw(Error, /Property "theAnswer" may not be set using the pageConstants\/SET_PAGE_CONSTANTS action./);
     });
 
   });

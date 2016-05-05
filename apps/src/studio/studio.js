@@ -20,7 +20,7 @@ var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var StudioVisualizationColumn = require('./StudioVisualizationColumn');
-var setInitialLevelProps = require('../redux/levelProperties').setInitialLevelProps;
+var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Sprite = require('./Sprite');
@@ -1991,7 +1991,7 @@ Studio.init = function (config) {
   };
 
   // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setInitialLevelProps({
+  studioApp.reduxStore.dispatch(setPageConstants({
     localeDirection: studioApp.localeDirection(),
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isDroplet: !!level.editCode

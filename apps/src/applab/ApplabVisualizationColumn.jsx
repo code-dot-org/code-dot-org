@@ -37,7 +37,7 @@ var ApplabVisualizationColumn = React.createClass({
 ;
 module.exports = connect(function propsFromStore(state) {
   return {
-    isReadOnlyWorkspace: state.level.isReadOnlyWorkspace,
-    instructionsInTopPane: state.level.instructionsInTopPane
+    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+    instructionsInTopPane: state.pageConstants.instructionsInTopPane
   };
 })(ApplabVisualizationColumn);
