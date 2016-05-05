@@ -12,9 +12,11 @@ var dom = require('../dom');
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
 var MusicController = require('../MusicController');
+var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
+var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
+var setPageConstants = require('../redux/pageConstants').setPageConstants;
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -305,26 +307,29 @@ Craft.init = function (config) {
     }
   };
 
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={studioApp.localeDirection()}
-      editCode={!!config.level.editCode}
-      readonlyWorkspace={!!config.readonlyWorkspace}
-      isMinecraft={true}
-    />
-  );
+  // Push initial level properties into the Redux store
+  studioApp.reduxStore.dispatch(setPageConstants({
+    localeDirection: studioApp.localeDirection(),
+    isReadOnlyWorkspace: !!config.readonlyWorkspace,
+    isDroplet: !!config.level.editCode
+  }));
 
-  ReactDOM.render(React.createElement(AppView, {
-    assetUrl: studioApp.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    hideSource: !!config.hideSource,
-    noVisualization: false,
-    isRtl: studioApp.isRtl(),
-    codeWorkspace: codeWorkspace,
-    visualizationColumn: <CraftVisualizationColumn/>,
-    onMount: onMount
-  }), document.getElementById(config.containerId));
+  ReactDOM.render(
+    <Provider store={studioApp.reduxStore}>
+      <AppView
+          assetUrl={studioApp.assetUrl}
+          isEmbedView={!!config.embed}
+          isShareView={!!config.share}
+          hideSource={!!config.hideSource}
+          noVisualization={false}
+          isRtl={studioApp.isRtl()}
+          codeWorkspace={<ConnectedCodeWorkspace isMinecraft={true}/>}
+          visualizationColumn={<CraftVisualizationColumn/>}
+          onMount={onMount}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
+  );
 };
 
 var preloadImage = function (url) {
@@ -611,7 +616,11 @@ Craft.executeUserCode = function () {
   var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
   appCodeOrgAPI.startCommandCollection();
   // Run user generated code, calling appCodeOrgAPI
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
+  var code = '';
+  if (studioApp.initializationCode) {
+    code += studioApp.initializationCode;
+  }
+  code += Blockly.Generator.blockSpaceToCode('JavaScript');
   codegen.evalWith(code, {
     moveForward: function (blockID) {
       appCodeOrgAPI.moveForward(studioApp.highlight.bind(studioApp, blockID));

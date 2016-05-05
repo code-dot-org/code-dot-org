@@ -1,9 +1,9 @@
 @eyes
 @dashboard_db_access
-@skip
 Feature: Game Lab Eyes
 
 Scenario: Basic GameLab level
+  When I sign in as an admin named "Gamelab Gary"
   When I open my eyes to test "gamelab eyes"
   And I am on "http://learn.code.org/projects/gamelab/new"
   And I rotate to landscape
@@ -14,3 +14,4 @@ Scenario: Basic GameLab level
   And I press ".animationList .newListItem" using jQuery
   Then I see no difference for "new animation"
   And I close my eyes
+  And I sign out

@@ -16,7 +16,8 @@
     "start": "MOOC_DEV=1 grunt dev",
     "start:applab": "npm run start -- --app=applab",
     "start:gamelab": "npm run start -- --app=gamelab",
-    "test-audio": "echo \"Open your browser to http://127.0.0.1:8080/test/audio/audio_test.html\" && http-server ."
+    "test-audio": "echo \"Open your browser to http://127.0.0.1:8080/test/audio/audio_test.html\" && http-server .",
+    "build:stats": "node ./script/build-stats.js"
   },
   "browser": {
     "blockly": "./build/package/js/blockly.js"
@@ -52,6 +53,7 @@
     "canvg": "gabelerner/canvg",
     "chai": "1.10.0",
     "chai-subset": "1.2.0",
+    "chalk": "^1.1.3",
     "chrome-serialport": "bcjordan/chrome-serialport#2",
     "connect-livereload": "0.5.3",
     "ejs": "0.8.4",
@@ -111,6 +113,7 @@
     "sprintf-js": "^1.0.3",
     "stackblur": "^1.0.0",
     "time-grunt": "^1.3.0",
+    "time-grunt-nowatch": "github:pcardune/time-grunt-nowatch#fefcb475ca216c774a741b987c0799d1ea9b03a7",
     "uglify-js": "2.4.24",
     "which": "1.1.1"
   },
