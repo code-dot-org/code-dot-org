@@ -17,7 +17,7 @@ var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var FlappyVisualizationColumn = require('./FlappyVisualizationColumn');
-var setInitialLevelProps = require('../redux/levelProperties').setInitialLevelProps;
+var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
@@ -586,7 +586,7 @@ Flappy.init = function (config) {
   };
 
   // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setInitialLevelProps({
+  studioApp.reduxStore.dispatch(setPageConstants({
     localeDirection: studioApp.localeDirection(),
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isDroplet: !!level.editCode
