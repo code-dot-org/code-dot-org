@@ -95,7 +95,7 @@ describe('instructions reducer', function () {
   var reducer = instructions.default;
 
   it('starts out uncollapsed', function () {
-    var state = reducer(null, {});
+    var state = reducer(undefined, {});
     assert.deepEqual(state, {
       collapsed: false,
       height: 300,

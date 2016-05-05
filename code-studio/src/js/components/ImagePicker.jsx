@@ -1,5 +1,5 @@
 var AssetManager = require('./AssetManager');
-var color = require('@cdo/apps/color');
+var color = require('../color.js');
 var IconLibrary = require('./IconLibrary');
 var ICON_PREFIX = require('@cdo/apps/applab/constants').ICON_PREFIX;
 
