@@ -64,9 +64,9 @@
 
 -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/files/states/#{state}.pdf"))
   %div.download-fact-sheet<
-    %button{href: "/advocacy/state-facts/#{state}.pdf", style: 'height:40px'}<
-      %i{:class=>"fa fa-download", :style=>'margin-right:10px'}<
-      Download #{statename} fact-sheet
+    %a{:href=>"/advocacy/state-facts/#{state}.pdf", target: '_blank'}
+      %button{style: 'height:40px'}<
+        View #{statename} fact-sheet
 
 -if data[:text_t]
   %p
