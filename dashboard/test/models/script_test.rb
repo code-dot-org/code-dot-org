@@ -381,10 +381,18 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'Sample Module', lm.name
     assert_equal 1, unit.plc_learning_modules.count
     assert_equal lm, unit.plc_learning_modules.first
+    assert_equal Plc::LearningModule::CONTENT_MODULE, lm.module_type
 
     task = script.script_levels.first.plc_task
     assert_equal 'Level 1', task.name
     assert_equal 1, lm.plc_tasks.count
     assert_equal task, lm.plc_tasks.first
+  end
+
+  test 'expect error on bad module types' do
+    script_file = File.join(self.class.fixture_path, 'test_bad_plc_module.script')
+    assert_raises ActiveRecord::RecordInvalid do
+      Script.setup([script_file])
+    end
   end
 end
