@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160502025310) do
+ActiveRecord::Schema.define(version: 20160505000003) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -386,9 +386,11 @@ ActiveRecord::Schema.define(version: 20160502025310) do
     t.integer  "unit_order",       limit: 4
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+    t.integer  "script_id",        limit: 4
   end
 
   add_index "plc_course_units", ["plc_course_id"], name: "index_plc_course_units_on_plc_course_id", using: :btree
+  add_index "plc_course_units", ["script_id"], name: "index_plc_course_units_on_script_id", using: :btree
 
   create_table "plc_courses", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -455,9 +457,11 @@ ActiveRecord::Schema.define(version: 20160502025310) do
     t.datetime "updated_at",                     null: false
     t.integer  "plc_course_unit_id", limit: 4,   null: false
     t.string   "module_type",        limit: 255
+    t.integer  "stage_id",           limit: 4
   end
 
   add_index "plc_learning_modules", ["plc_course_unit_id"], name: "index_plc_learning_modules_on_plc_course_unit_id", using: :btree
+  add_index "plc_learning_modules", ["stage_id"], name: "index_plc_learning_modules_on_stage_id", using: :btree
 
   create_table "plc_learning_modules_tasks", id: false, force: :cascade do |t|
     t.integer "plc_learning_module_id", limit: 4, null: false
@@ -468,12 +472,15 @@ ActiveRecord::Schema.define(version: 20160502025310) do
   add_index "plc_learning_modules_tasks", ["plc_task_id"], name: "index_plc_learning_modules_tasks_on_plc_task_id", using: :btree
 
   create_table "plc_tasks", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.datetime "created_at",                                     null: false
-    t.datetime "updated_at",                                     null: false
-    t.string   "type",       limit: 255,   default: "Plc::Task", null: false
-    t.text     "properties", limit: 65535
+    t.string   "name",            limit: 255
+    t.datetime "created_at",                                          null: false
+    t.datetime "updated_at",                                          null: false
+    t.string   "type",            limit: 255,   default: "Plc::Task", null: false
+    t.text     "properties",      limit: 65535
+    t.integer  "script_level_id", limit: 4
   end
+
+  add_index "plc_tasks", ["script_level_id"], name: "index_plc_tasks_on_script_level_id", using: :btree
 
   create_table "plc_user_course_enrollments", force: :cascade do |t|
     t.string   "status",        limit: 255
@@ -505,6 +512,14 @@ ActiveRecord::Schema.define(version: 20160502025310) do
 
   add_index "prizes", ["prize_provider_id"], name: "index_prizes_on_prize_provider_id", using: :btree
   add_index "prizes", ["user_id"], name: "index_prizes_on_user_id", using: :btree
+
+  create_table "professional_learning_partners", force: :cascade do |t|
+    t.string  "name",       limit: 255, null: false
+    t.integer "contact_id", limit: 4,   null: false
+    t.boolean "urban"
+  end
+
+  add_index "professional_learning_partners", ["name"], name: "index_professional_learning_partners_on_name", using: :btree
 
   create_table "puzzle_ratings", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
@@ -595,11 +610,12 @@ ActiveRecord::Schema.define(version: 20160502025310) do
   add_index "segments", ["workshop_id"], name: "index_segments_on_workshop_id", using: :btree
 
   create_table "stages", force: :cascade do |t|
-    t.string   "name",       limit: 255, null: false
-    t.integer  "position",   limit: 4
-    t.integer  "script_id",  limit: 4,   null: false
+    t.string   "name",          limit: 255, null: false
+    t.integer  "position",      limit: 4
+    t.integer  "script_id",     limit: 4,   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "flex_category", limit: 255
   end
 
   create_table "survey_results", force: :cascade do |t|
@@ -881,6 +897,9 @@ ActiveRecord::Schema.define(version: 20160502025310) do
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
+  add_foreign_key "plc_course_units", "scripts"
+  add_foreign_key "plc_learning_modules", "stages"
+  add_foreign_key "plc_tasks", "script_levels"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_proficiencies", "users"
 end

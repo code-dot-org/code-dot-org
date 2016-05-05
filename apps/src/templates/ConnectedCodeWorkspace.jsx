@@ -8,7 +8,7 @@ module.exports = connect(function propsFromStore(state) {
     editCode: true,
     localeDirection: state.level.localeDirection,
     readonlyWorkspace: state.level.isReadOnlyWorkspace,
-    isRunning: state.isRunning,
+    isRunning: state.runState.isRunning,
     showDebugger: state.level.showDebugButtons || state.level.showDebugConsole
   };
 })(CodeWorkspace);

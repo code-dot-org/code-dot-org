@@ -38,7 +38,8 @@ var JsInterpreterLogger = require('../JsInterpreterLogger');
 var JsDebuggerUi = require('../JsDebuggerUi');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
-var VisualizationOverlay = require('./VisualizationOverlay');
+var VisualizationOverlay = require('../templates/VisualizationOverlay');
+var AppLabCrosshairOverlay = require('./AppLabCrosshairOverlay');
 var logToCloud = require('../logToCloud');
 var DialogButtons = require('../templates/DialogButtons');
 var executionLog = require('../executionLog');
@@ -795,7 +796,6 @@ Applab.init = function (config) {
   Applab.reduxStore.dispatch(changeInterfaceMode(
     Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
-
   // TODO (brent) hideSource should probably be part of initialLevelProps
   Applab.reactInitialProps_ = {
     codeWorkspace: <ConnectedCodeWorkspace/>,
@@ -862,11 +862,14 @@ Applab.canExportApp = function () {
 };
 
 Applab.exportApp = function () {
+  Applab.runButtonClick();
+  var html = document.getElementById('divApplab').outerHTML;
+  studioApp.resetButtonClick();
   return Exporter.exportApp(
     // TODO: find another way to get this info that doesn't rely on globals.
     window.dashboard && window.dashboard.project.getCurrentName() || 'my-app',
     studioApp.editor.getValue(),
-    designMode.serializeToLevelHtml()
+    html
   );
 };
 
@@ -897,7 +900,7 @@ Applab.clearEventHandlersKillTickLoop = function () {
  * @returns {boolean}
  */
 Applab.isRunning = function () {
-  return Applab.reduxStore.getState().isRunning;
+  return Applab.reduxStore.getState().runState.isRunning;
 };
 
 /**
@@ -1003,8 +1006,14 @@ Applab.renderVisualizationOverlay = function () {
   $(designModeViz).toggleClass('withCrosshair', true);
 
   if (!Applab.visualizationOverlay_) {
-    Applab.visualizationOverlay_ = new VisualizationOverlay();
+    /** @private {AppLabCrosshairOverlay} */
+    Applab.crosshairOverlay_ = new AppLabCrosshairOverlay();
+    /** @private {VisualizationOverlay} */
+    Applab.visualizationOverlay_ = new VisualizationOverlay(Applab.crosshairOverlay_);
   }
+
+  // Tell the crosshair overlay whether we're in design mode
+  Applab.crosshairOverlay_.setInDesignMode(Applab.isInDesignMode());
 
   // Calculate current visualization scale to pass to the overlay component.
   var unscaledWidth = parseInt(visualizationOverlay.getAttribute('width'));
@@ -1012,8 +1021,7 @@ Applab.renderVisualizationOverlay = function () {
 
   Applab.visualizationOverlay_.render(visualizationOverlay, {
     isCrosshairAllowed: Applab.isCrosshairAllowed(),
-    scale: scaledWidth / unscaledWidth,
-    isInDesignMode: Applab.isInDesignMode()
+    scale: scaledWidth / unscaledWidth
   });
 };
 
