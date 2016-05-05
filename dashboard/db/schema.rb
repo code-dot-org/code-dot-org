@@ -513,11 +513,11 @@ ActiveRecord::Schema.define(version: 20160505010203) do
   add_index "prizes", ["prize_provider_id"], name: "index_prizes_on_prize_provider_id", using: :btree
   add_index "prizes", ["user_id"], name: "index_prizes_on_user_id", using: :btree
 
-  create_table "professional_learning_partners", force: :cascade do |t|		
-    t.string  "name",       limit: 255, null: false		
-    t.integer "contact_id", limit: 4,   null: false		
-    t.boolean "urban"		
-  end		
+  create_table "professional_learning_partners", force: :cascade do |t|
+    t.string  "name",       limit: 255, null: false
+    t.integer "contact_id", limit: 4,   null: false
+    t.boolean "urban"
+  end
 
   add_index "professional_learning_partners", ["name"], name: "index_professional_learning_partners_on_name", using: :btree
 
