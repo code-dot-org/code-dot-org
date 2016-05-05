@@ -3,38 +3,17 @@ var Visualization = require('./Visualization');
 var GameButtons = require('../templates/GameButtons');
 var CompletionButton = require('./CompletionButton');
 var PlaySpaceHeader = require('./PlaySpaceHeader');
+var PhoneFrame = require('./PhoneFrame');
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var commonStyles = require('../commonStyles');
-var color = require('../color');
 var applabConstants = require('./constants');
 var connect = require('react-redux').connect;
-var experiments = require('../experiments');
-
-const RADIUS = 30;
 
 var styles = {
-  phoneFrame: {
-    display: 'block',
-    height: 50,
-    backgroundColor: color.lighter_gray,
-  },
-  phoneFrameRunning: {
-    backgroundColor: color.charcoal
-  },
-  phoneFrameTop: {
-    borderTopLeftRadius: RADIUS,
-    borderTopRightRadius: RADIUS,
-  },
-  phoneFrameBottom: {
-    borderBottomLeftRadius: RADIUS,
-    borderBottomRightRadius: RADIUS,
-  },
   nonResponsive: {
     maxWidth: applabConstants.APP_WIDTH,
   }
 };
-
 
 /**
  * Equivalent of visualizationColumn.html.ejs. Initially only supporting
@@ -61,9 +40,7 @@ var ApplabVisualizationColumn = React.createClass({
       (this.props.isEmbedView || this.props.hideSource) && styles.nonResponsive
     ];
 
-    // TODO - is phone fram part of visualization or of column?
-    var addPhoneFrame = experiments.isEnabled('phoneFrame') &&
-      !this.props.isEmbedView && !this.props.isShareView;
+    var showFrame = !this.props.isEmbedView && !this.props.isShareView;
 
     return (
       <div id="visualizationColumn" className={classes} style={vizColStyle}>
@@ -72,23 +49,9 @@ var ApplabVisualizationColumn = React.createClass({
             screenIds={this.props.screenIds}
             onScreenCreate={this.props.onScreenCreate} />
         }
-        <div
-            style={[
-              commonStyles.hidden,
-              addPhoneFrame && styles.phoneFrame,
-              addPhoneFrame && styles.phoneFrameTop,
-              addPhoneFrame && this.props.isRunning && styles.phoneFrameRunning,
-            ]}
-        />
-        <Visualization/>
-        <div
-            style={[
-              commonStyles.hidden,
-              addPhoneFrame && styles.phoneFrame,
-              addPhoneFrame && styles.phoneFrameBottom,
-              addPhoneFrame && this.props.isRunning && styles.phoneFrameRunning
-            ]}
-        />
+        <PhoneFrame showFrame={showFrame} isRunning={this.props.isRunning}>
+          <Visualization/>
+        </PhoneFrame>
         <GameButtons instructionsInTopPane={this.props.instructionsInTopPane}>
           <CompletionButton/>
         </GameButtons>
