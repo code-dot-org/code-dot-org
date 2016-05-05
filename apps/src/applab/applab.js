@@ -783,7 +783,6 @@ Applab.init = function (config) {
 
   // TODO (brent) hideSource should probably be part of initialLevelProps
   Applab.reactInitialProps_ = {
-    codeWorkspace: <ConnectedCodeWorkspace/>,
     hideSource: !!config.hideSource,
     onMount: onMount
   };

@@ -30,7 +30,6 @@ var codegen = require('../codegen');
 var api = require('./api');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var EvalVisualizationColumn = require('./EvalVisualizationColumn');
 var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
@@ -164,7 +163,6 @@ Eval.init = function (config) {
           hideSource={!!config.hideSource}
           noVisualization={false}
           isRtl={studioApp.isRtl()}
-          codeWorkspace={<ConnectedCodeWorkspace/>}
           visualizationColumn={<EvalVisualizationColumn/>}
           onMount={studioApp.init.bind(studioApp, config)}
       />

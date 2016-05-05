@@ -48,7 +48,7 @@ var CodeWorkspace = React.createClass({
     readonlyWorkspace: React.PropTypes.bool.isRequired,
     showDebugger: React.PropTypes.bool,
     isRunning: React.PropTypes.bool,
-    isMinecraft: React.PropTypes.bool
+    isMinecraft: React.PropTypes.bool.isRequired
   },
 
   shouldComponentUpdate: function (nextProps) {
