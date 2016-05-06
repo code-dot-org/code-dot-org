@@ -60,6 +60,6 @@ var ScreenSelector = React.createClass({
 module.exports = ScreenSelector;
 module.exports = connect(function propsFromStore(state) {
   return {
-    currentScreenId: state.currentScreenId
+    currentScreenId: state.screens.currentScreenId
   };
 })(ScreenSelector);
