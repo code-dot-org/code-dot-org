@@ -1888,3 +1888,15 @@ en:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
           Unit 1 Overview: Unit 1 Overview
+        cspunit1-tools:
+          title: netsim task completion
+          description: introduction to the internet simulator and a discussion of how we use it to teach the internet
+          netsim: netsim
+        Test CPS PD:
+          test Unit 1 required reading: test Unit 1 required reading
+          test Unit 1 content module Alpha: test Unit 1 content module Alpha
+          test Unit 1 content module Bravo: test Unit 1 content module Bravo
+          test Unit 1 content module Charlie: test Unit 1 content module Charlie
+          test Unit 1 practice module Delta: test Unit 1 practice module Delta
+          test Unit 1 practice module Echo: test Unit 1 practice module Echo
+          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
