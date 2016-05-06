@@ -179,21 +179,36 @@ function updateRateLimitInfo(channelData, currentTime, timestamp, opCount) {
 }
 
 /**
- * @param {function(number)} callback Function which receives the server timestamp,
- *     in ms since the beginning of the epoch.
+ * @param {Firebase} channelRef
+ * @param {String} tableName
+ * @param {function(Object.<string, number>)} onSuccess Function which receives an object
+ *     with the following properties which have been fetched from the server:
+ *     timestamp, opCount, rowCount, currentTime.
  */
-function getServerTime(onSuccess, onError) {
-  var ref = getDatabase(Applab.channelId).child('temp_timestamp');
-  ref.set(Firebase.ServerValue.TIMESTAMP, function (err) {
-    if (err) {
-      onError(err);
-    } else {
-      ref.once('value', function (snapshot) {
-        onSuccess(snapshot.val());
+function getServerData(channelRef, tableName, onSuccess, onError) {
+  // TODO(dave): consolidate read operations and handle errors
+  var tableRef = getTable(Applab.channelId, tableName);
+  channelRef.child('timestamp').once('value', function (timestampSnapshot) {
+    channelRef.child('op_count').once('value', function (opCountSnapshot) {
+      tableRef.child('row_count').once('value', function (rowCountSnapshot) {
+        channelRef.child('temp_timestamp').set(Firebase.ServerValue.TIMESTAMP, function (err) {
+          if (err) {
+            onError(err);
+          } else {
+            channelRef.child('temp_timestamp').once('value', function (currentTimeSnapshot) {
+              onSuccess({
+                timestamp: timestampSnapshot.val(),
+                opCount: opCountSnapshot.val(),
+                rowCount: rowCountSnapshot.val(),
+                currentTime: currentTimeSnapshot.val()
+              });
+            });
+          }
+        });
       });
-    }
+    });
   });
-}
+ }
 
 /**
  * Creates a new record in the specified table, accessible to all users.
@@ -211,32 +226,25 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
     record.id = counter;
 
     var channelRef = getDatabase(Applab.channelId);
-    var tableRef = getTable(Applab.channelId, tableName);
-    channelRef.child('timestamp').once('value', function (timestampSnapshot) {
-      channelRef.child('op_count').once('value', function (opCountSnapshot) {
-        tableRef.child('row_count').once('value', function (rowCountSnapshot) {
-          getServerTime(function (currentTime) {
-            var channelData = {};
-            channelData['tables/' + tableName + '/' + counter] = JSON.stringify(record);
-            channelData['tables/' + tableName + '/target_record_id'] = String(counter);
-            var newRowCount = (rowCountSnapshot.val() || 0) + 1;
-            channelData['tables/' + tableName + '/row_count']= newRowCount;
+    getServerData(channelRef, tableName, function (serverData) {
+      var channelData = {};
+      channelData['tables/' + tableName + '/' + counter] = JSON.stringify(record);
+      channelData['tables/' + tableName + '/target_record_id'] = String(counter);
+      var newRowCount = (serverData.rowCount || 0) + 1;
+      channelData['tables/' + tableName + '/row_count']= newRowCount;
 
-            if (updateRateLimitInfo(channelData, currentTime, timestampSnapshot.val(), opCountSnapshot.val())) {
-              channelRef.update(channelData, function (error) {
-                if (!error) {
-                  onSuccess(record);
-                } else {
-                  onError(error);
-                }
-              });
-            } else {
-              onError('the rate limit has been exceeded. please try your request again later.');
-            }
-          }, onError);
+      if (updateRateLimitInfo(channelData, serverData.currentTime, serverData.timestamp, serverData.opCount)) {
+        channelRef.update(channelData, function (error) {
+          if (!error) {
+            onSuccess(record);
+          } else {
+            onError(error);
+          }
         });
-      });
-    });
+      } else {
+        onError('the rate limit has been exceeded. please try your request again later.');
+      }
+    }, onError);
   }, onError);
 };
 
@@ -307,6 +315,7 @@ FirebaseStorage.readRecords = function (tableName, searchParams, onSuccess, onEr
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError) {
+  var channelRef = getDatabase(Applab.channelId);
   var tableRef = getTable(Applab.channelId, tableName);
   tableRef.child('row_count').once('value', function (rowCountSnapshot) {
 
