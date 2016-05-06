@@ -72,9 +72,6 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ],
     "fail_on_lint_errors": "false"
   },
   "published": true,

@@ -1455,8 +1455,7 @@ en:
         Videos for Equity Segment: Videos for Equity Segment
       facilitator test: {}
       k5 what next 1: {}
-      plc csp1 chapter overviews:
-        Unit 1 chapter overviews: Unit 1 chapter overviews
+      plc csp1 chapter overviews: {}
       plc csp1 intro to tools: {}
       plc csp1 introduction to unit: {}
       plc csp1 netsim setup: {}
@@ -1693,6 +1692,16 @@ en:
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
       unique level name here:
+        description here: description here
+        title: title
+      v1 U1L13 Student Lesson Introduction:
+        The Need for DNS: The Need for DNS
+      v2 U1L10 Student Lesson Introduction:
+        The Need for Addressing: The Need for Addressing
+      v2 U1L2 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L8 Student Lesson Introduction:
         description here: description here
         title: title
       wn scratchjr 1:
