@@ -1,4 +1,10 @@
-FactoryGirl.define do
+FactoryGirl.define do  factory :school_district do
+    name "MyString"
+city "MyString"
+state "MyString"
+zip "MyString"
+  end
+
   factory :user do
     birthday Date.new(1991, 03, 14)
     sequence(:email) { |n| "testuser#{n}@example.com.xx" }

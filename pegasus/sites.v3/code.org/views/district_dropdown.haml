@@ -2,7 +2,7 @@
 -require 'school_districts_2014'
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
-%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.js"}
 %script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
 %script{type: "text/javascript", src: "/js/district-dropdown.js"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
@@ -16,10 +16,10 @@
         %select#school-type.form-control{name: "school_type_s", type: "select", required: true}
           %option{value: "nil", selected: true}
           %option{value: "charter"} Charter
-          %option{value: "private"} Private 
+          %option{value: "private"} Private
           %option{value: "public"} Public
           %option{value: "other"} Other
-        
+
     %div{style: "clear: both;"}
     .form-group{style: "display: none; margin-top: 20px;"}
       %h4{style: "margin-left: 15px;"} Enter your school district's zip code
@@ -32,20 +32,21 @@
       %div.col-xs-4
         %select#school-state.form-control{name: "school_state_s", type: "select", required: false}
           %option{value: "nil", selected: true}
-          - get_all_sates_with_dc.each do |state_abbr, state_name|
+          - get_all_states_with_dc.each do |state_abbr, state_name|
             %option{value: state_abbr}= state_name
           %option{value: "other"} Other
-    
+
     %div{style: "clear: both;"}
     .form-group{style: "display: none; margin-top: 20px;"}
       %h4{style: "margin-left: 15px;"} Search for your district
       #school-districts.col-xs-6
-        %select#school-district.form-control{name: "school_district_s", type: "select", required: false}
-          %option{value: "nil", selected: true}
-          - get_all_school_districts_in_state('AL').each do |district_id, attributes|
-            %option{value: district_id}= "#{attributes[:name].titleize} (#{attributes[:city].titleize})"
-          %option{value: "other"} Other
+        %input.form-control{name: "school_district_s", type: "text", required: false}
+          -#
+            %option{value: "nil", selected: true}
+            - get_all_school_districts_in_state('AL').each do |district_id, attributes|
+              %option{value: district_id}= "#{attributes[:name].titleize} (#{attributes[:city].titleize})"
+            %option{value: "other"} Other
 
     %div{style: "clear: both; margin-top: 20px;"}
       .form-group.col-xs-4
-        %button#btn-submit{type: "submit"} Go to application 
+        %button#btn-submit{type: "submit"} Go to application

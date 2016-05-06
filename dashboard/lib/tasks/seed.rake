@@ -111,6 +111,13 @@ namespace :seed do
     end
   end
 
+  task school_districts: :environment do
+    SchoolDistrict.transaction do
+      SchoolDistrict.reset_db
+      SchoolDistrict.find_or_create_all_from_tsv!('config/school_districts.tsv')
+    end
+  end
+
   task trophies: :environment do
     # code in user.rb assumes that broze id: 1, silver id: 2 and gold id: 3.
     Trophy.transaction do
@@ -265,9 +272,9 @@ namespace :seed do
   end
 
   desc "seed all dashboard data"
-  task all: [:videos, :concepts, :scripts, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task all: [:videos, :concepts, :scripts, :trophies, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
   desc "seed all dashboard data that has changed since last seed"
-  task incremental: [:videos, :concepts, :scripts_incremental, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task incremental: [:videos, :concepts, :scripts_incremental, :trophies, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
 
   desc "seed only dashboard data required for tests"
   task test: [:videos, :games, :concepts, :trophies, :prize_providers, :secret_words, :secret_pictures]
