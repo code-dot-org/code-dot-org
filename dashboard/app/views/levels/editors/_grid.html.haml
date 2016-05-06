@@ -132,10 +132,6 @@
           return { tileType: cell };
         });
       });
-      // Fully replace any existing node; otherwise, React tries to be
-      // clever with our initialState and some things don't get properly
-      // updated
-      ReactDOM.unmountComponentAtNode(container)
       ReactDOM.render(React.createElement(dashboard.GridEditor, {
         serializedMaze: serializedMaze,
         skin: 'playlab',
