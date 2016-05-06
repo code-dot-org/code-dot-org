@@ -906,6 +906,18 @@ Blockly.Block.prototype.showContextMenu_ = function(e) {
       }
     };
     options.push(nextConnectionDisabledOption);
+
+    // editable
+    var editableOption = {
+      text: this.editable_ ?
+          "Make Uneditable" : "Make editable",
+      enabled: true,
+      callback: function () {
+        block.setEditable(!block.isEditable());
+        Blockly.ContextMenu.hide();
+      }
+    };
+    options.push(editableOption);
   }
 
   // Allow the block to add or modify options.
