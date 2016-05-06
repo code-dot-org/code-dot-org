@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160503010123) do
+ActiveRecord::Schema.define(version: 20160504205902) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -524,6 +524,15 @@ ActiveRecord::Schema.define(version: 20160503010123) do
 
   add_index "puzzle_ratings", ["script_id", "level_id"], name: "index_puzzle_ratings_on_script_id_and_level_id", using: :btree
   add_index "puzzle_ratings", ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
+
+  create_table "school_districts", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "city",       limit: 255
+    t.string   "state",      limit: 255
+    t.string   "zip",        limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "script_levels", force: :cascade do |t|
     t.integer  "level_id",   limit: 4
