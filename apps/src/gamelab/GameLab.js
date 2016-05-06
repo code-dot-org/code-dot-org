@@ -171,6 +171,7 @@ GameLab.prototype.init = function (config) {
   var breakpointsEnabled = !config.level.debuggerDisabled;
 
   var onMount = function () {
+    this.setupReduxSubscribers(this.studioApp_.reduxStore);
     config.loadAudio = this.loadAudio_.bind(this);
     config.afterInject = this.afterInject_.bind(this, config);
     config.afterEditorReady = this.afterEditorReady_.bind(this, breakpointsEnabled);
@@ -191,6 +192,8 @@ GameLab.prototype.init = function (config) {
         defaultStepSpeed: 1
       });
     }
+
+    this.setCrosshairCursorForPlaySpace();
   }.bind(this);
 
   var showFinishButton = !this.level.isProjectLevel;
@@ -231,6 +234,40 @@ GameLab.prototype.init = function (config) {
       hideSource={!!config.hideSource}
       onMount={onMount} />
   </Provider>, document.getElementById(config.containerId));
+};
+
+/**
+ * Subscribe to state changes on the store.
+ * @param {!Store} store
+ */
+GameLab.prototype.setupReduxSubscribers = function (store) {
+  var state = {};
+  var boundOnIsRunningChange = this.onIsRunningChange.bind(this);
+  store.subscribe(function () {
+    var lastState = state;
+    state = store.getState();
+
+    if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
+      boundOnIsRunningChange(state.runState.isRunning);
+    }
+  });
+};
+
+GameLab.prototype.onIsRunningChange = function () {
+  this.setCrosshairCursorForPlaySpace();
+};
+
+/**
+ * Hopefully a temporary measure - we do this ourselves for now because this is
+ * a 'protected' div that React doesn't update, but eventually would rather do
+ * this with React.
+ */
+GameLab.prototype.setCrosshairCursorForPlaySpace = function () {
+  $('#divGameLab').toggleClass('withCrosshair', this.shouldUseCrosshairCursorInPlaySpace());
+};
+
+GameLab.prototype.shouldUseCrosshairCursorInPlaySpace = function () {
+  return !this.studioApp_.isRunning();
 };
 
 GameLab.prototype.loadAudio_ = function () {
