@@ -61,14 +61,6 @@ def build()
     # Ensure updated Gemfile.lock dependencies are installed.
     RakeUtils.bundle_install
 
-    # Run `sudo chef-client` to ensure that the deploy respect updates to the Chef config
-    # (e.g. the cdo-servers attribute describing which servers to deploy).
-    Dir.chdir(aws_dir) do
-      # Ensure the chef cookbooks are up to date.
-      RakeUtils.rake '--rakefile', 'ci_build.rake', 'chef_update'
-      RakeUtils.system 'sudo', 'chef-client'
-    end
-
     status = 0
     Dir.chdir(aws_dir) do
       status = begin
