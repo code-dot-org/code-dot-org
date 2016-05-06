@@ -21,7 +21,7 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
 Resources:
   VPC: <%= lambda.call 'LookupStackOutputs', StackName: 'VPC' %>
-  IAM: <%= lambda.call 'LookupStackOutputs', StackName: 'IAM' %>
+  IAM: <%= lambda.call 'LookupStackOutputs', StackName: 'IAM', Nonce: 0 %>
   AMI: <%= lambda.call 'LookupStackOutputs', StackName: "AMI-#{environment}" %>
   LoadBalancer:
     Type: AWS::ElasticLoadBalancing::LoadBalancer
@@ -63,14 +63,22 @@ Resources:
         MinInstancesInService: <%=autoscaling_count%>
         PauseTime: PT60M
         WaitOnResourceSignals: true
+        SuspendProcesses:
+          - AlarmNotification
+          - ScheduledActions
+          - AZRebalance
+          - HealthCheck
+          - ReplaceUnhealthy
+      AutoScalingScheduledAction:
+        IgnoreUnmodifiedGroupSizeProperties: true
     Properties:
       VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: LaunchConfig}
-      MinSize: 1
+      MinSize: 0
       MaxSize: 12
       DesiredCapacity: <%=autoscaling_count%>
       HealthCheckType: ELB
-      HealthCheckGracePeriod: 4000
+      HealthCheckGracePeriod: 2000
       LoadBalancerNames: [Ref: LoadBalancer]
       MetricsCollection:
         - Granularity: 1Minute
@@ -166,6 +174,16 @@ Resources:
           node_name: 'fe-${INSTANCE_ID}',
           run_list: ['role[front-end]'],
           commit: `git ls-remote origin #{branch} | cut -f1`.strip )%>
+  WebServerHook:
+    Type: AWS::AutoScaling::LifecycleHook
+    Properties:
+      AutoScalingGroupName: {Ref: WebServer}
+      LifecycleTransition: 'autoscaling:EC2_INSTANCE_LAUNCHING'
+      DefaultResult: ABANDON
+      HeartbeatTimeout: 1200 # seconds = 20 minutes
+      NotificationTargetARN: {Ref: WebServerHookTopic}
+      RoleARN: {'Fn::GetAtt': [IAM, LifecycleHookRoleARN]}
+  WebServerHookTopic: {Type: 'AWS::SNS::Topic'}
 <%
   %w(Dashboard Pegasus).each do |app|
     app_domain = "#{app == 'Dashboard' ? 'dashboard-' : ''}#{subdomain}"
