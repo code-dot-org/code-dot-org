@@ -29,10 +29,6 @@ Rounding out Course 4 is the Artist: Binary lesson. Here, students will build bi
 
 [Artist: Binary](#Activity)
 
-### **Extended Learning**
-
-[Extension Activities](#Extended)
-
 
 [/summary]
 
@@ -64,13 +60,6 @@ To begin, it can be helpful to review the previous lesson, specifically differen
 
 [/together]
 
-[together]
-
-## Extended Learning 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
-
-
-[/together]
 
 [standards]
 
