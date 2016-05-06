@@ -36,7 +36,6 @@ var ArtistAPI = require('./api');
 var apiJavascript = require('./apiJavascript');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var ArtistVisualizationColumn = require('./ArtistVisualizationColumn');
 var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var utils = require('../utils');
@@ -230,7 +229,6 @@ Artist.prototype.init = function (config) {
           hideSource={!!config.hideSource}
           noVisualization={false}
           isRtl={this.studioApp_.isRtl()}
-          codeWorkspace={<ConnectedCodeWorkspace/>}
           visualizationColumn={visualizationColumn}
           onMount={this.studioApp_.init.bind(this.studioApp_, config)}
       />

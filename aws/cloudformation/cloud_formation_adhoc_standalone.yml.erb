@@ -1,6 +1,15 @@
 <%
 require 'cdo/aws/cloudfront'
-%>
+unless system("git ls-remote --exit-code 'https://github.com/code-dot-org/code-dot-org.git' #{branch} > /dev/null")
+  raise 'Current branch needs to be pushed to GitHub with the same name, otherwise deploy will fail.
+To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
+end
+unless dry_run
+  update_certs.call
+  update_cookbooks.call
+  update_bootstrap_script.call
+end
+-%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: Standalone Code.org application on a single EC2 instance<%=cdn_enabled ? ' over CloudFront CDN' : ''%>.

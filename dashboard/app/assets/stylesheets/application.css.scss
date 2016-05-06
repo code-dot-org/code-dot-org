@@ -2313,7 +2313,7 @@ button.notext {
 
 /*
  * The following responsive styles are designed to match behavior
- * with the vizualizationColumn and visualizationEditor styles
+ * with the vizualizationColumn styles
  * defined in apps/style/common.scss, so that the columns in the
  * header line up with the columns below them.
  */
@@ -2328,12 +2328,20 @@ $width: 400px;
   padding-left: 15px;
 }
 
+#visualizationEditor.responsive {
+  margin-left: $width;
+  padding-left: 15px;
+}
+
 @media screen and (min-width: 1101px) and (max-width: 1150px) {
   $width: 350px;
   #visualizationColumnHeader.responsive {
     max-width: $width;
   }
   #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+  #visualizationEditor.responsive {
     margin-left: $width;
   }
 }
@@ -2346,6 +2354,9 @@ $width: 400px;
   #visualizationEditorHeader.responsive {
     margin-left: $width;
   }
+  #visualizationEditor.responsive {
+    margin-left: $width;
+  }
 }
 
 @media screen and (min-width: 1001px) and (max-width: 1050px) {
@@ -2356,6 +2367,9 @@ $width: 400px;
   #visualizationEditorHeader.responsive {
     margin-left: $width;
   }
+  #visualizationEditor.responsive {
+    margin-left: $width;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -2364,6 +2378,9 @@ $width: 400px;
     max-width: $width;
   }
   #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+  #visualizationEditor.responsive {
     margin-left: $width;
   }
 }

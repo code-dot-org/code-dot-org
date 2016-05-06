@@ -16,7 +16,6 @@ var codegen = require('../codegen');
 var api = require('./api');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var BounceVisualizationColumn = require('./BounceVisualizationColumn');
 var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
@@ -796,9 +795,8 @@ Bounce.init = function (config) {
           hideSource={!!config.hideSource}
           noVisualization={false}
           isRtl={studioApp.isRtl()}
-          codeWorkspace={<ConnectedCodeWorkspace/>}
           visualizationColumn={<BounceVisualizationColumn/>}
-          onMount={studioApp.init.bind(studioApp, config)}
+          onMount={onMount}
       />
     </Provider>,
     document.getElementById(config.containerId)

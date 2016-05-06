@@ -26,3 +26,7 @@ suites:
     attributes:
       cdo-apps:
         daemon: true
+  - name: stop
+    run_list:
+      - recipe[cdo-apps]
+      - recipe[cdo-apps::stop]
