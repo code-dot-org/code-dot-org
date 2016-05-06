@@ -1,3 +1,5 @@
+@import "color";
+
 .module_assignments {
   display: flex;
 
@@ -24,3 +26,47 @@
   }
 }
 
+.course_unit_sections {
+  display: flex;
+
+  .course_unit_section {
+    border: 1px solid black;
+    padding: 1em;
+    width: 200px;
+
+    .course_unit_section_name {
+      margin: auto;
+      text-align: center;
+    }
+
+    i {
+      margin: auto;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .not_started {
+    .course_unit_link {
+      color: black !important;
+    }
+  }
+
+  .in_progress {
+    color: black;
+    background-color: $goldenrod;
+
+    .course_unit_link {
+      color: black !important;
+    }
+  }
+
+  .completed {
+    color: white;
+    background-color: green;
+
+    .course_unit_link {
+      color: white !important;
+    }
+  }
+}
