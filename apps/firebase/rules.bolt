@@ -22,6 +22,34 @@ nextTargetRecord(table) { table[table.target_record_id] }
 // The OLD version of the NEW target record.
 prevTargetRecord(table) { prior(table)[table.target_record_id] }
 
+// rate limit helpers
+
+getTimestamp(channelId) { root.v3['shared-tables'][channelId].timestamp }
+getOpCount(channelId) { root.v3['shared-tables'][channelId].op_count }
+
+isValidOpCount(opCount, maxCount) {
+  opCount == valueOr(prior(opCount), 0) + 1 && opCount <= maxCount
+}
+
+isRateLimitReset(timestamp, opCount, maxTime) {
+  timestamp == now && (prior(timestamp) == null || timestamp > prior(timestamp) + maxTime) && opCount == 0
+}
+
+isValidRateLimit(timestamp, opCount, maxTime, maxCount) {
+  isValidOpCount(opCount, maxCount) || isRateLimitReset(timestamp, opCount, maxTime)
+}
+
+// Verify that the op count has been incremented or the timestamp has been
+// reset. Rely on the rules for those fields to determine whether it was 
+// valid to do so.
+isRateLimitUpdated(timestamp, opCount) {
+  timestamp == now || opCount == prior(opCount) + 1
+}
+
+allRateLimitsUpdated(channelId) {
+  isRateLimitUpdated(getTimestamp(channelId), getOpCount(channelId))
+}
+
 // path rules
 
 path / {
@@ -54,6 +82,26 @@ path /v3/shared-tables/{channel_id}/tables/{table_name}/{record_id} is String {
   write() {
     // Specify these rules in write(), because validate() is skipped when data is null
     // (e.g. records are removed).
-    isLoggedIn() && isTargetId(this, record_id) && rowCountUpdated(this, prior(this))
+    isLoggedIn() && isTargetId(this, record_id) && rowCountUpdated(this, prior(this)) && allRateLimitsUpdated(channel_id)
   }
+}
+
+// TODO(dave): consolidate timestamp and op_count under {channel_id}/limits/{interval}/
+
+path /v3/shared-tables/{channel_id}/timestamp is Number {
+  write() { isLoggedIn() && this == now }
+  validate() {
+    isValidRateLimit(this, this.parent().op_count, 15000, 3)
+  }
+}
+
+path /v3/shared-tables/{channel_id}/op_count is Number {
+  write() { isLoggedIn() && this != null }
+  validate() {
+    isValidRateLimit(this.parent().timestamp, this, 15000, 3)
+  }
+}
+
+path /v3/shared-tables/{channel_id}/temp_timestamp is Number {
+  write() { isLoggedIn() && this == now }
 }

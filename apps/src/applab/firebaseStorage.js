@@ -145,6 +145,56 @@ function createEntry(key, value) {
   return result;
 }
 
+var RATE_LIMIT_INTERVAL_MS = 15 * 1000; // 15 seconds
+var RATE_LIMIT_MAX_OP_COUNT = 3;
+
+function resetTimestamp(channelData) {
+  channelData.timestamp = Firebase.ServerValue.TIMESTAMP;
+  channelData.op_count = 0;
+}
+
+/**
+ * @param {Object} channelData
+ * @param {number} timestamp
+ * @param {number} opCount
+ * @returns {boolean} true if the request is expected to pass rate limit rules.
+ */
+function updateRateLimitInfo(channelData, currentTime, timestamp, opCount) {
+  if (timestamp == null || opCount == null || opCount >= RATE_LIMIT_MAX_OP_COUNT) {
+    // We need to reset the count on our next request in order to comply
+    // with rate limits enforced by security rules.
+    if (currentTime < timestamp + RATE_LIMIT_INTERVAL_MS) {
+      // It is too soon to reset the count.
+      var timeRemaining = Math.ceil((timestamp + RATE_LIMIT_INTERVAL_MS - currentTime) / 1000);
+      console.log('rate limit exceeded. please wait ' + timeRemaining + ' seconds before retrying.');
+      return false;
+    } else {
+      resetTimestamp(channelData);
+      return true;
+    }
+  } else {
+    channelData.op_count = opCount + 1;
+    return true;
+  }
+}
+
+/**
+ * @param {function(number)} callback Function which receives the server timestamp,
+ *     in ms since the beginning of the epoch.
+ */
+function getServerTime(onSuccess, onError) {
+  var ref = getDatabase(Applab.channelId).child('temp_timestamp');
+  ref.set(Firebase.ServerValue.TIMESTAMP, function (err) {
+    if (err) {
+      onError(err);
+    } else {
+      ref.once('value', function (snapshot) {
+        onSuccess(snapshot.val());
+      });
+    }
+  });
+}
+
 /**
  * Creates a new record in the specified table, accessible to all users.
  * @param {string} tableName The name of the table to read from.
@@ -159,22 +209,32 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
   var idCounter = tableName + '_id';
   getCounter(Applab.channelId, idCounter, function (counter) {
     record.id = counter;
-    console.log(counter);
 
+    var channelRef = getDatabase(Applab.channelId);
     var tableRef = getTable(Applab.channelId, tableName);
-    tableRef.child('row_count').once('value', function (rowCountSnapshot) {
-      var data = {};
-      data[counter] = JSON.stringify(record);
-      data.target_record_id = String(counter);
-      var newRowCount = (rowCountSnapshot.val() || 0) + 1;
-      data.row_count = newRowCount;
+    channelRef.child('timestamp').once('value', function (timestampSnapshot) {
+      channelRef.child('op_count').once('value', function (opCountSnapshot) {
+        tableRef.child('row_count').once('value', function (rowCountSnapshot) {
+          getServerTime(function (currentTime) {
+            var channelData = {};
+            channelData['tables/' + tableName + '/' + counter] = JSON.stringify(record);
+            channelData['tables/' + tableName + '/target_record_id'] = String(counter);
+            var newRowCount = (rowCountSnapshot.val() || 0) + 1;
+            channelData['tables/' + tableName + '/row_count']= newRowCount;
 
-      tableRef.update(data, function (error) {
-        if (!error) {
-          onSuccess(record);
-        } else {
-          onError(error);
-        }
+            if (updateRateLimitInfo(channelData, currentTime, timestampSnapshot.val(), opCountSnapshot.val())) {
+              channelRef.update(channelData, function (error) {
+                if (!error) {
+                  onSuccess(record);
+                } else {
+                  onError(error);
+                }
+              });
+            } else {
+              onError('the rate limit has been exceeded. please try your request again later.');
+            }
+          }, onError);
+        });
       });
     });
   }, onError);

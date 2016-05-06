@@ -22,9 +22,21 @@
               },
               "$record_id": {
                 ".validate": "newData.isString()",
-                ".write": "auth.uid != null && $record_id == newData.parent().child('target_record_id').val() && (newData.val() == null ? 0 : 1) - (data.val() == null ? 0 : 1) == (newData.parent().child('row_count').val() == null ? 0 : newData.parent().child('row_count').val()) - (data.parent().child('row_count').val() == null ? 0 : data.parent().child('row_count').val())"
+                ".write": "auth.uid != null && $record_id == newData.parent().child('target_record_id').val() && (newData.val() == null ? 0 : 1) - (data.val() == null ? 0 : 1) == (newData.parent().child('row_count').val() == null ? 0 : newData.parent().child('row_count').val()) - (data.parent().child('row_count').val() == null ? 0 : data.parent().child('row_count').val()) && (newData.parent().parent().parent().parent().parent().parent().child('v3').child('shared-tables').child($channel_id).child('timestamp').val() == now || newData.parent().parent().parent().parent().parent().parent().child('v3').child('shared-tables').child($channel_id).child('op_count').val() == root.child('v3').child('shared-tables').child($channel_id).child('op_count').val() + 1)"
               }
             }
+          },
+          "timestamp": {
+            ".validate": "newData.isNumber() && (newData.parent().child('op_count').val() == (data.parent().child('op_count').val() == null ? 0 : data.parent().child('op_count').val()) + 1 && newData.parent().child('op_count').val() <= 3 || newData.val() == now && (data.val() == null || newData.val() > data.val() + 15000) && newData.parent().child('op_count').val() == 0)",
+            ".write": "auth.uid != null && newData.val() == now"
+          },
+          "op_count": {
+            ".validate": "newData.isNumber() && (newData.val() == (data.val() == null ? 0 : data.val()) + 1 && newData.val() <= 3 || newData.parent().child('timestamp').val() == now && (data.parent().child('timestamp').val() == null || newData.parent().child('timestamp').val() > data.parent().child('timestamp').val() + 15000) && newData.val() == 0)",
+            ".write": "auth.uid != null && newData.val() != null"
+          },
+          "temp_timestamp": {
+            ".validate": "newData.isNumber()",
+            ".write": "auth.uid != null && newData.val() == now"
           }
         }
       }
