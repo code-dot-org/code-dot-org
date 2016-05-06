@@ -287,36 +287,10 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
   OUTPUT_MUTEX.synchronize {
     print "\nCreated instance #{instance_id} with name #{instance_provisioning_info.name}\n"
     print "Private dns name: #{private_dns_name}\n\n"
-    puts "Writing new configuration file\n"
   }
 
-  file_suffix = rand(100_000_000)
-
-  Net::SSH.start('gateway.code.org', @username) do |ssh|
-    ssh.exec!("knife environment show #{environment} -F json > /tmp/old_knife_config#{file_suffix}")
-  end
-
-  Net::SCP.download!('gateway.code.org', @username, "/tmp/old_knife_config#{file_suffix}",
-                     "/tmp/knife_config#{file_suffix}")
-
-  OUTPUT_MUTEX.synchronize {
-    configuration_json = JSON.parse(File.read("/tmp/knife_config#{file_suffix}"))
-    configuration_json['override_attributes']['cdo-secrets']['app_servers'] ||= {}
-    configuration_json['override_attributes']['cdo-secrets']['app_servers'][instance_provisioning_info.name] = private_dns_name
-    File.open('/tmp/new_knife_config.json', 'w') do |f|
-      f.write(JSON.dump(configuration_json))
-    end
-  }
-
-  Net::SCP.upload!('gateway.code.org', @username, '/tmp/new_knife_config.json', "/tmp/new_knife_config#{file_suffix}.json")
-  print "New configuration file uploaded, now loading it.\n"
-
-  Net::SSH.start('gateway.code.org', @username) do |ssh|
-    execute_ssh_on_channel(ssh,
-                           "knife environment from file /tmp/new_knife_config#{file_suffix}.json",
-                           "Unable to update environment #{environment}")
-    ssh.exec!("rm /tmp/*#{file_suffix}*")
-  end
+  # Note: updating node['cdo-secrets']['app_servers'] is no longer needed, CDO.app_servers uses `knife search` directly.
+  # Ref: https://github.com/code-dot-org/code-dot-org/pull/8219
 
   cmd = "ssh gateway.code.org -t \"/bin/sh -c 'knife bootstrap #{private_dns_name} -x ubuntu --sudo --bootstrap-version #{CHEF_VERSION} -E #{environment} -N #{instance_provisioning_info.name} -r role[#{role}]'\""
   print "Bootstrapping #{environment} frontend, please be patient. This takes ~15 minutes.\n"

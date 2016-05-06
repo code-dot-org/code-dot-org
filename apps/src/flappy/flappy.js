@@ -15,7 +15,6 @@ var codegen = require('../codegen');
 var api = require('./api');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var FlappyVisualizationColumn = require('./FlappyVisualizationColumn');
 var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
@@ -601,7 +600,6 @@ Flappy.init = function (config) {
           hideSource={!!config.hideSource}
           noVisualization={false}
           isRtl={studioApp.isRtl()}
-          codeWorkspace={<ConnectedCodeWorkspace/>}
           visualizationColumn={<FlappyVisualizationColumn/>}
           onMount={onMount}
       />

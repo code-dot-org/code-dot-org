@@ -14,7 +14,6 @@ var levelbuilderOverrides = require('./levelbuilderOverrides');
 var MusicController = require('../MusicController');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
 var setPageConstants = require('../redux/pageConstants').setPageConstants;
 
@@ -311,7 +310,8 @@ Craft.init = function (config) {
   studioApp.reduxStore.dispatch(setPageConstants({
     localeDirection: studioApp.localeDirection(),
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isDroplet: !!config.level.editCode
+    isDroplet: !!config.level.editCode,
+    isMinecraft: true
   }));
 
   ReactDOM.render(
@@ -323,7 +323,6 @@ Craft.init = function (config) {
           hideSource={!!config.hideSource}
           noVisualization={false}
           isRtl={studioApp.isRtl()}
-          codeWorkspace={<ConnectedCodeWorkspace isMinecraft={true}/>}
           visualizationColumn={<CraftVisualizationColumn/>}
           onMount={onMount}
       />

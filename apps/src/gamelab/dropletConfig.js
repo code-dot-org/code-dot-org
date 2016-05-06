@@ -266,7 +266,7 @@ draw() - USEFUL?
   {func: 'strokeWeight', category: 'Drawing', paletteParams: ['size'], params: ["3"], customDocURL: "http://p5js.org/reference/#/p5/strokeWeight" },
   {func: 'color', category: 'Drawing', paletteParams: ['r','g','b'], params: ["255", "255", "255"], type: 'value', customDocURL: "http://p5js.org/reference/#/p5/color" },
   {func: 'noStroke', category: 'Drawing', customDocURL: "http://p5js.org/reference/#/p5/noStroke" },
-  {func: 'arc', category: 'Drawing', paletteParams: ['x','y','w','h','start','stop'], params: ["0", "0", "800", "800", "0", "90"], customDocURL: "http://p5js.org/reference/#/p5/arc" },
+  {func: 'arc', category: 'Drawing', paletteParams: ['x','y','w','h','start','stop'], params: ["0", "0", "800", "800", "0", "PI/2"], customDocURL: "http://p5js.org/reference/#/p5/arc" },
   {func: 'ellipse', category: 'Drawing', paletteParams: ['x','y','w','h'], params: ["200", "200", "400", "400"], customDocURL: "http://p5js.org/reference/#/p5/ellipse" },
   {func: 'line', category: 'Drawing', paletteParams: ['x1','y1','x2','y2'], params: ["0", "0", "400", "400"], customDocURL: "http://p5js.org/reference/#/p5/line" },
   {func: 'point', category: 'Drawing', paletteParams: ['x','y'], params: ["200", "200"], customDocURL: "http://p5js.org/reference/#/p5/point" },

@@ -17,7 +17,6 @@ var apiBlockly = require('./apiBlockly');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var AppLabView = require('./AppLabView');
-var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var dom = require('../dom');
@@ -690,7 +689,7 @@ Applab.init = function (config) {
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructions');
+  config.showInstructionsInTopPane = true;
 
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
@@ -783,7 +782,6 @@ Applab.init = function (config) {
 
   // TODO (brent) hideSource should probably be part of initialLevelProps
   Applab.reactInitialProps_ = {
-    codeWorkspace: <ConnectedCodeWorkspace/>,
     hideSource: !!config.hideSource,
     onMount: onMount
   };
