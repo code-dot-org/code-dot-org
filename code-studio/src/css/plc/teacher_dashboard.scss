@@ -1,3 +1,5 @@
+@import "color";
+
 .module_assignments {
   display: flex;
 
@@ -52,7 +54,7 @@
 
   .in_progress {
     color: black;
-    background-color: goldenrod;
+    background-color: $goldenrod;
 
     .course_unit_link {
       color: black !important;
