@@ -9,9 +9,6 @@
       .obstacle { background-color: gold !important }
       .dirt { background-color: #d1d567 !important }
       .conditional { background-color: green !important }
-      .none { background-color: #e7e8ea !important }
-      .goal { background-color: #b9bf15 !important }
-      .sprite { background-color: #0094ca !important }
       td {
         width: 40px;
         border: 1px solid #CCC;
@@ -65,6 +62,21 @@
         }
         &.flower-hive-or-nothing {
           background-image: url('#{image_path("editor/flower-hive-or-nothing.png")}');
+        }
+        &.playlab {
+          &.none {
+            background-color: #e7e8ea !important;
+          }
+          &.goal {
+            background-color: #b9bf15 !important;
+            background-image: url('/blockly/media/skins/studio/goal.png');
+            background-size: contain;
+            background-position: center;
+          }
+          &.sprite {
+            background-color: #0094ca !important;
+            background-size: 1200% 100%;
+          }
         }
       }
       tr {

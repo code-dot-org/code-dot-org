@@ -6,6 +6,12 @@
 /* global React */
 var constants = require('@cdo/apps/studio/constants');
 
+var avatarList = ["dog", "cat", "penguin", "dinosaur", "octopus",
+    "witch", "bat", "bird", "dragon", "squirrel", "wizard", "alien",
+    "ghost", "monster", "robot", "unicorn", "zombie", "knight",
+    "ninja", "pirate", "caveboy", "cavegirl", "princess", "spacebot",
+    "soccergirl", "soccerboy", "tennisgirl", "tennisboy"];
+
 var CellEditor = React.createClass({
   propTypes: {
     cell: React.PropTypes.object.isRequired,
@@ -18,7 +24,7 @@ var CellEditor = React.createClass({
     var values = {};
     var nodes = ReactDOM.findDOMNode(this).querySelectorAll('[name]');
     for (var i = 0, node; (node = nodes[i]); i++) {
-      values[node.name] = isNaN(parseInt(node.value)) ? undefined : parseInt(node.value);
+      values[node.name] = isNaN(parseInt(node.value)) ? undefined : Number(node.value);
     }
     this.props.onUpdate(values);
   },
@@ -28,11 +34,58 @@ var CellEditor = React.createClass({
 
     // We want undefined values that are going to be in <selects> to
     // actually be the STRING 'undefined' rather than the value.
-    ['tileType', 'speed', 'size', 'direction', 'emotion'].forEach(function (value) {
+    ['tileType', 'speed', 'size', 'direction', 'emotion', 'sprite'].forEach(value => {
       if (values[value] === undefined) {
         values[value] = 'undefined';
       }
     });
+
+    var spriteAttributes;
+    if (values.tileType === constants.SquareType.SPRITESTART) {
+      spriteAttributes = (
+        <div>
+          <label htmlFor="sprite">Sprite:</label>
+          <select name="sprite" value={values.sprite} onChange={this.handleChange}>
+            <option value="undefined">default</option>
+            {avatarList.map((sprite, i) => {
+              return <option key={sprite} value={i}>{sprite}</option>;
+            })}
+          </select>
+
+          <label htmlFor="speed">Speed: </label>
+          <select name="speed" value={values.speed} onChange={this.handleChange}>
+            <option value="undefined">default</option>
+            {Object.keys(constants.SpriteSpeed).map(type => {
+              return <option key={type} value={constants.SpriteSpeed[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
+            })}
+          </select>
+
+          <label htmlFor="size">Size: </label>
+          <select name="size" value={values.size} onChange={this.handleChange}>
+            <option value="undefined">default</option>
+            {Object.keys(constants.SpriteSize).map(type => {
+              return <option key={type} value={constants.SpriteSize[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
+            })}
+          </select>
+
+          <label htmlFor="direction">Direction: </label>
+          <select name="direction" value={values.direction} onChange={this.handleChange}>
+            <option value="undefined">default</option>
+            {Object.keys(constants.Direction).map(type => {
+              return <option key={type} value={constants.Direction[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
+            })}
+          </select>
+
+          <label htmlFor="emotion">Emotion: </label>
+          <select name="emotion" value={values.emotion} onChange={this.handleChange}>
+            <option value="undefined">default</option>
+            {Object.keys(constants.Emotions).map(type => {
+              return <option key={type} value={constants.Emotions[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
+            })}
+          </select>
+        </div>
+      );
+    }
 
     return (
       <form className="span4 offset1">
@@ -47,40 +100,7 @@ var CellEditor = React.createClass({
           <option value={constants.SquareType.SPRITESTART}>sprite</option>
         </select>
 
-        <label htmlFor="sprite">Sprite:</label>
-        <input type="number" name="sprite" min="0" sprite={values.sprite} onChange={this.handleChange} />
-
-        <label htmlFor="speed">Speed: </label>
-        <select name="speed" value={values.speed} onChange={this.handleChange}>
-          <option value="undefined">default</option>
-          {Object.keys(constants.SpriteSpeed).map(function (type) {
-            return <option key={type} value={constants.SpriteSpeed[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
-          })}
-        </select>
-
-        <label htmlFor="size">Size: </label>
-        <select name="size" value={values.size} onChange={this.handleChange}>
-          <option value="undefined">default</option>
-          {Object.keys(constants.SpriteSize).map(function (type) {
-            return <option key={type} value={constants.SpriteSize[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
-          })}
-        </select>
-
-        <label htmlFor="direction">Direction: </label>
-        <select name="direction" value={values.direction} onChange={this.handleChange}>
-          <option value="undefined">default</option>
-          {Object.keys(constants.Direction).map(function (type) {
-            return <option key={type} value={constants.Direction[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
-          })}
-        </select>
-
-        <label htmlFor="emotion">Emotion: </label>
-        <select name="emotion" value={values.emotion} onChange={this.handleChange}>
-          <option value="undefined">default</option>
-          {Object.keys(constants.Emotions).map(function (type) {
-            return <option key={type} value={constants.Emotions[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
-          })}
-        </select>
+        {spriteAttributes}
 
       </form>
     );
