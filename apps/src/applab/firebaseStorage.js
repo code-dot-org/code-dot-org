@@ -316,23 +316,26 @@ FirebaseStorage.readRecords = function (tableName, searchParams, onSuccess, onEr
  */
 FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError) {
   var channelRef = getDatabase(Applab.channelId);
-  var tableRef = getTable(Applab.channelId, tableName);
-  tableRef.child('row_count').once('value', function (rowCountSnapshot) {
 
-    var data = {};
-    data[record.id] = JSON.stringify(record);
-    data.target_record_id = String(record.id);
+  getServerData(channelRef, tableName, function (serverData) {
+    var channelData = {};
+    channelData['tables/' + tableName + '/' + record.id] = JSON.stringify(record);
+    channelData['tables/' + tableName + '/target_record_id'] = String(record.id);
 
     // TODO: We need to handle the 404 case, probably by attempting a read.
-    data.row_count = rowCountSnapshot.val();
+    channelData['tables/' + tableName + '/row_count']= serverData.rowCount;
 
-    tableRef.update(data, function (error) {
-      if (!error) {
-        onComplete(record, true);
-      } else {
-        onError(error);
-      }
-    });
+    if (updateRateLimitInfo(channelData, serverData.currentTime, serverData.timestamp, serverData.opCount)) {
+      channelRef.update(channelData, function (error) {
+        if (!error) {
+          onComplete(record, true);
+        } else {
+          onError(error);
+        }
+      });
+    } else {
+      onError('the rate limit has been exceeded. please try your request again later.');
+    }
   });
 };
 
@@ -347,21 +350,26 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError) {
-  var tableRef = getTable(Applab.channelId, tableName);
+  var channelRef = getDatabase(Applab.channelId);
+  getServerData(channelRef, tableName, function (serverData) {
+    var channelData = {};
+    channelData['tables/' + tableName + '/' + record.id] = null;
+    channelData['tables/' + tableName + '/target_record_id'] = String(record.id);
 
-  tableRef.child('row_count').once('value', function (rowCountSnapshot) {
-    var data = {};
-    data[record.id] = null;
-    data.target_record_id = String(record.id);
-    data.row_count = rowCountSnapshot.val() - 1;
+    // TODO: We need to handle the 404 case, probably by attempting a read.
+    channelData['tables/' + tableName + '/row_count']= serverData.rowCount - 1;
 
-    tableRef.update(data, function (error) {
-      if (error) {
-        onError(error);
-      } else {
-        onComplete(true);  // TODO: Return false if record is not present.
-      }
-    });
+    if (updateRateLimitInfo(channelData, serverData.currentTime, serverData.timestamp, serverData.opCount)) {
+      channelRef.update(channelData, function (error) {
+        if (!error) {
+          onComplete(true);
+        } else {
+          onError(error);
+        }
+      });
+    } else {
+      onError('the rate limit has been exceeded. please try your request again later.');
+    }
   });
 };
 
