@@ -31,7 +31,6 @@ var api = require('./api');
 var redux = require ('../redux');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var MazeVisualizationColumn = require('./MazeVisualizationColumn');
 var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
@@ -636,7 +635,6 @@ Maze.init = function (config) {
           hideSource={!!config.hideSource}
           noVisualization={false}
           isRtl={studioApp.isRtl()}
-          codeWorkspace={<ConnectedCodeWorkspace/>}
           visualizationColumn={visualizationColumn}
           onMount={studioApp.init.bind(studioApp, config)}
       />

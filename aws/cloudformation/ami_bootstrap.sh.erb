@@ -15,11 +15,12 @@ STACK=<%=stack_name%>
 REGION=<%=region%>
 S3_BUCKET=<%=s3_bucket%>
 ENVIRONMENT=<%=environment%>
-RUN_LIST=<%=run_list%>
+RUN_LIST='<%=run_list.to_json%>'
 INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 NODE_NAME=<%=node_name%>
 
-sudo -u ubuntu bash -c "aws s3 cp s3://${S3_BUCKET}/chef/bootstrap.sh - | sudo bash -s -- <%=local_mode ? '-z' : ''%> -n ${NODE_NAME} -r ${RUN_LIST} -e ${ENVIRONMENT}"
+OPTIONS="<%=local_mode ? '-z' : ''%> -n ${NODE_NAME} -r '${RUN_LIST}' -e ${ENVIRONMENT}"
+sudo -u ubuntu bash -c "aws s3 cp s3://${S3_BUCKET}/chef/bootstrap-${STACK}.sh - | sudo bash -s -- ${OPTIONS}"
 [ $? -eq 0 ] && STATUS=SUCCESS || STATUS=FAILURE
 
 aws cloudformation signal-resource \
@@ -32,6 +33,7 @@ aws cloudformation signal-resource \
 
 WAIT_CMD="aws ec2 wait image-available \
   --filters Name=tag:cloudformation:amimanager:stack-name,Values=${STACK} \
+  Name=tag:cloudformation:amimanager:logical-id,Values=<%=ami_id%> \
   --region ${REGION}"
 # aws-cli has hardcoded waiter timeouts (15 sec/attempt, max 40 = 10 min), so we need a dumb loop to extend the timeout.
 # Ref https://github.com/aws/aws-cli/issues/1295
