@@ -16,22 +16,31 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
 
   def preview_assignments
     @enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
-    @enrolled_modules = Plc::LearningModule.where(id: params[:enrolled_modules].try(:split, ','))
+    @content_learning_modules = @enrollment_unit_assignment.plc_course_unit.plc_learning_modules.content
+    @practice_learning_modules = @enrollment_unit_assignment.plc_course_unit.plc_learning_modules.practice
+    @enrolled_module_ids = params[:enrolled_modules]
   end
 
   def confirm_assignments
-    modules_to_enroll_in = Plc::LearningModule.where(id: params[:learning_module_ids])
-    enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
+    if params[:content_module].nil? || params[:practice_module].nil?
+      redirect_to controller: :enrollment_evaluations, action: :perform_evaluation, unit_assignment_id: params[:unit_assignment_id]
+      return
+    end
 
-    enrollment_unit_assignment.enroll_user_in_unit_with_learning_modules(modules_to_enroll_in)
-    redirect_to controller: :enrollment_unit_assignments, action: :show, id: enrollment_unit_assignment.id
+    modules_to_enroll_in = Plc::LearningModule.find([params[:content_module], params[:practice_module]])
+
+    if modules_to_enroll_in.size == 2 && modules_to_enroll_in.map(&:module_type).sort == [Plc::LearningModule::CONTENT_MODULE, Plc::LearningModule::PRACTICE_MODULE]
+      enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
+      enrollment_unit_assignment.enroll_user_in_unit_with_learning_modules(modules_to_enroll_in)
+      redirect_to controller: :enrollment_unit_assignments, action: :show, id: enrollment_unit_assignment.id
+    else
+      redirect_to controller: :enrollment_evaluations, action: :perform_evaluation, unit_assignment_id: params[:unit_assignment_id]
+    end
   end
 
   private
   def authorize_for_this_unit
     plc_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
     authorize! :read, plc_unit_assignment.plc_user_course_enrollment
-
-    #Eventually, logic for only allowing evaluations for units that haven't been started go here
   end
 end
