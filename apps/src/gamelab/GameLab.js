@@ -372,27 +372,27 @@ GameLab.prototype.reset = function (ignore) {
 };
 
 GameLab.prototype.renderVisualizationOverlay = function () {
-  var divGameLab = document.getElementById('divGameLab');
-  var visualizationOverlay = document.getElementById('visualizationOverlay');
-  if (!divGameLab || !visualizationOverlay) {
-    return;
-  }
-
-  // Enable crosshair cursor for divGameLab
-  $(divGameLab).toggleClass('withCrosshair', this.isCrosshairAllowed());
-
-  if (!this.visualizationOverlay_) {
-    this.visualizationOverlay_ = new VisualizationOverlay(new CrosshairOverlay());
-  }
-
-  // Calculate current visualization scale to pass to the overlay component.
-  var unscaledWidth = parseInt(visualizationOverlay.getAttribute('width'));
-  var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
-
-  this.visualizationOverlay_.render(visualizationOverlay, {
-    isCrosshairAllowed: this.isCrosshairAllowed(),
-    scale: scaledWidth / unscaledWidth
-  });
+  // var divGameLab = document.getElementById('divGameLab');
+  // var visualizationOverlay = document.getElementById('visualizationOverlay');
+  // if (!divGameLab || !visualizationOverlay) {
+  //   return;
+  // }
+  //
+  // // Enable crosshair cursor for divGameLab
+  // $(divGameLab).toggleClass('withCrosshair', this.isCrosshairAllowed());
+  //
+  // if (!this.visualizationOverlay_) {
+  //   this.visualizationOverlay_ = new VisualizationOverlay(new CrosshairOverlay());
+  // }
+  //
+  // // Calculate current visualization scale to pass to the overlay component.
+  // var unscaledWidth = parseInt(visualizationOverlay.getAttribute('width'));
+  // var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
+  //
+  // this.visualizationOverlay_.render(visualizationOverlay, {
+  //   isCrosshairAllowed: this.isCrosshairAllowed(),
+  //   scale: scaledWidth / unscaledWidth
+  // });
 };
 
 GameLab.prototype.isCrosshairAllowed = function () {
