@@ -74,7 +74,7 @@ should_i "DTP" do
 end
 
 should_i "deploy Levelbuilder while the deploy to production is happening" do
-puts <<EOS
+  puts <<EOS
 Go to the Levelbuilder room on Slack and ask everyone @here if they are ready for a deploy (They need to save their changes, otherwise they may lose some work when you complete the next step).
 EOS
   open_url 'https://github.com/code-dot-org/code-dot-org/compare/levelbuilder...test'
