@@ -8,6 +8,7 @@ var gameLabConstants = require('./constants');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var VisualizationOverlay = require('../templates/VizOverlay');
 var CrosshairOverlay = require('../templates/CHOverlay');
+var TooltipOverlay = require('../templates/TooltipOverlay');
 
 var GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 var GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -24,6 +25,7 @@ var GameLabVisualizationColumn = function (props) {
         </div>
         <VisualizationOverlay width={GAME_WIDTH} height={GAME_HEIGHT}>
           <CrosshairOverlay/>
+          <TooltipOverlay/>
         </VisualizationOverlay>
       </ProtectedStatefulDiv>
       <GameButtons
