@@ -221,6 +221,8 @@ def upgrade_frontend(name, host)
     success = true
   rescue
     HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, removing from rotation.", color: 'red'
+    HipChat.log "log command: `ssh gateway.code.org ssh production-daemon cat #{log_path}`"
+    HipChat.log "/quote #{File.read(log_path)}"
     # The frontend is in indeterminate state, so make sure it is stopped.
     stop_frontend name, host, log_path
     success = false
@@ -234,7 +236,14 @@ end
 task :chef_update do
   if CDO.daemon && CDO.chef_managed
     RakeUtils.with_bundle_dir(cookbooks_dir) do
+      # Automatically update Chef cookbook versions in staging environment.
+      RakeUtils.bundle_exec './update_cookbook_versions' if rack_env?(:staging)
       RakeUtils.bundle_exec 'berks', 'install'
+      if rack_env?(:staging) && RakeUtils.file_changed_from_git?(cookbooks_dir)
+        RakeUtils.system 'git', 'add', '.'
+        RakeUtils.system 'git', 'commit', '-m', '"Updated cookbook versions"'
+        RakeUtils.git_push
+      end
       RakeUtils.bundle_exec 'berks', 'upload', (rack_env?(:production) ? '' : '--no-freeze')
       RakeUtils.bundle_exec 'berks', 'apply', rack_env
     end
@@ -272,12 +281,13 @@ end
 MAX_FRONTEND_UPGRADE_FAILURES = 5
 task :deploy do
   with_hipchat_logging("deploy frontends") do
-    if CDO.daemon && CDO.app_servers.any?
+    app_servers = CDO.app_servers
+    if CDO.daemon && app_servers.any?
       Dir.chdir(deploy_dir) do
         num_failures = 0
-        thread_count = (CDO.app_servers.keys.length * 0.20).ceil
-        threaded_each CDO.app_servers.keys, thread_count do |name|
-          succeeded = upgrade_frontend name, CDO.app_servers[name]
+        thread_count = (app_servers.keys.length * 0.20).ceil
+        threaded_each app_servers.keys, thread_count do |name|
+          succeeded = upgrade_frontend name, app_servers[name]
           if !succeeded
             num_failures += 1
             raise 'too many frontend upgrade failures, aborting deploy' if num_failures > MAX_FRONTEND_UPGRADE_FAILURES
@@ -343,10 +353,14 @@ file UI_TEST_SYMLINK do
   end
 end
 
+task :wait_for_test_server do
+  RakeUtils.wait_for_url 'https://test-studio.code.org'
+end
+
 task :regular_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir('test/ui')) do
     HipChat.log 'Running <b>dashboard</b> UI tests...'
-    failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '50', '--magic_retry', '--html', '--fail_fast'
+    failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '90', '--magic_retry', '--html', '--fail_fast'
     if failed_browser_count == 0
       message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
       HipChat.log message
@@ -385,6 +399,7 @@ $websites_test = build_task('websites-test', [
   :shared_unit_tests,
   :dashboard_unit_tests,
   :ui_test_flakiness,
+  :wait_for_test_server,
   :ui_tests
 ])
 

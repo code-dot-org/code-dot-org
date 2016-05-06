@@ -40,7 +40,7 @@ var ColorPickerPropertyRow = React.createClass({
   handleColorChange: function (color) {
     if (color.rgb.a == 1) {
       // no transparency set
-      this.changeColor('#' + color.hex);
+      this.changeColor(color.hex);
     } else {
       this.changeColor(`rgba(${color.rgb.r},${color.rgb.g},${color.rgb.b},${color.rgb.a})`);
     }

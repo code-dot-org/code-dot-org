@@ -141,11 +141,11 @@ var TopInstructions = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
-    isEmbedView: state.level.isEmbedView,
-    puzzleNumber: state.level.puzzleNumber,
-    stageTotal: state.level.stageTotal,
+    isEmbedView: state.pageConstants.isEmbedView,
+    puzzleNumber: state.pageConstants.puzzleNumber,
+    stageTotal: state.pageConstants.stageTotal,
     maxHeight: state.instructions.maxHeight,
-    markdown: state.level.instructionsMarkdown,
+    markdown: state.pageConstants.instructionsMarkdown,
     collapsed: state.instructions.collapsed,
   };
 }, function propsFromDispatch(dispatch) {

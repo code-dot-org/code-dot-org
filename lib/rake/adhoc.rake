@@ -3,7 +3,7 @@ namespace :adhoc do
   task :environment do
     require_relative '../../deployment'
     CDO.chef_local_mode = !ENV['CHEF_SERVER']
-    ENV['RAILS_ENV'] = ENV['RACK_ENV'] = CDO.rack_env = 'adhoc'
+    ENV['RAILS_ENV'] = ENV['RACK_ENV'] = CDO.rack_env = 'adhoc' if CDO.chef_local_mode
     require 'cdo/aws/cloud_formation'
   end
 
@@ -16,7 +16,8 @@ namespace :adhoc do
     desc 'Launch an adhoc server, with CloudFront CDN enabled.
 Note: Consumes AWS resources until `adhoc:stop` is called.'
     task cdn: :environment do
-      AWS::CloudFormation.create_or_update(true)
+      ENV['CDN_ENABLED'] = '1'
+      AWS::CloudFormation.create_or_update
     end
 
   end

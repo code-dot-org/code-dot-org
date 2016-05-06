@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'open-uri'
 require 'json'
-require 'cdo/only_one'
+require File.expand_path('../../../pegasus/src/env', __FILE__)
 require_relative '../../deployment'
 
 def main()

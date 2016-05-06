@@ -28,9 +28,11 @@ var commonMsg = require('../locale');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
+var redux = require ('../redux');
+var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
 var MazeVisualizationColumn = require('./MazeVisualizationColumn');
+var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
@@ -609,6 +611,13 @@ Maze.init = function (config) {
     }
   };
 
+  // Push initial level properties into the Redux store
+  studioApp.reduxStore.dispatch(setPageConstants({
+    localeDirection: studioApp.localeDirection(),
+    isReadOnlyWorkspace: !!config.readonlyWorkspace,
+    isDroplet: !!level.editCode
+  }));
+
   var visualizationColumn = (
     <MazeVisualizationColumn
       hideRunButton={!!(level.stepOnly && !level.edit_blocks)}
@@ -617,25 +626,21 @@ Maze.init = function (config) {
     />
   );
 
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={studioApp.localeDirection()}
-      editCode={!!level.editCode}
-      readonlyWorkspace={!!config.readonlyWorkspace}
-    />
+  ReactDOM.render(
+    <Provider store={studioApp.reduxStore}>
+      <AppView
+          assetUrl={studioApp.assetUrl}
+          isEmbedView={!!config.embed}
+          isShareView={!!config.share}
+          hideSource={!!config.hideSource}
+          noVisualization={false}
+          isRtl={studioApp.isRtl()}
+          visualizationColumn={visualizationColumn}
+          onMount={studioApp.init.bind(studioApp, config)}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
   );
-
-  ReactDOM.render(React.createElement(AppView, {
-    assetUrl: studioApp.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    hideSource: !!config.hideSource,
-    noVisualization: false,
-    isRtl: studioApp.isRtl(),
-    codeWorkspace: codeWorkspace,
-    visualizationColumn: visualizationColumn,
-    onMount: studioApp.init.bind(studioApp, config)
-  }), document.getElementById(config.containerId));
 };
 
 /**
@@ -982,10 +987,13 @@ Maze.execute = function (stepMode) {
   beginAttempt();
   Maze.prepareForExecution();
 
-
-  var code;
+  var code = '';
   if (studioApp.isUsingBlockly()) {
-    code = Blockly.Generator.blockSpaceToCode('JavaScript');
+    if (studioApp.initializationCode) {
+      code += studioApp.initializationCode;
+    }
+
+    code += Blockly.Generator.blockSpaceToCode('JavaScript');
   } else {
     code = dropletUtils.generateCodeAliases(dropletConfig, 'Maze');
     code += studioApp.editor.getValue();
