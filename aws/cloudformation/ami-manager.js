@@ -71,7 +71,7 @@ exports.handler = function (event, context) {
         error(null, "DescribeImages returned multiple Images, expected one");
       }
     });
-  } else if (event.RequestType == "Update" || event.RequestType == "Create") {
+  } else if (event.RequestType == "Create") {
     if (stackName && instanceId && instanceRegion) {
       ec2.createImage(
         {
@@ -115,6 +115,13 @@ exports.handler = function (event, context) {
       );
     } else {
       error(null, "StackName, InstanceId or InstanceRegion not specified");
+    }
+  } else if (event.RequestType == "Update") {
+    if (event.PhysicalResourceId) {
+      responseData.ImageId = event.PhysicalResourceId;
+      response.send(event, context, response.SUCCESS, responseData, event.PhysicalResourceId);
+    } else {
+      error(null, "In-place updates not supported");
     }
   } else {
     error(null, "Invalid RequestType: " + event.RequestType);
