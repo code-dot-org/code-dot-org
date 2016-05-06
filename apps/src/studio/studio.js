@@ -191,6 +191,11 @@ function loadLevel() {
   // Load maps.
   Studio.map = level.map.map(function (row) {
     return row.map(function (cell) {
+      // Each cell should be either an integer (in which case we are
+      // dealing with the legacy format and should treat that value as
+      // the tileType for the cell) or an object (in which case we are
+      // dealing with the new format and should treat that value as a
+      // serialization of the cell).
       return isNaN(parseInt(cell)) ? studioCell.deserialize(cell) : new studioCell(cell);
     });
   });
@@ -1714,10 +1719,11 @@ Studio.initSprites = function () {
         if (0 === Studio.spriteCount) {
           Studio.spriteStart_ = [];
         }
-        Studio.spriteStart_[Studio.spriteCount] = $.extend({}, Studio.map[row][col].serialize(), {
-          x: col * Studio.SQUARE_SIZE,
-          y: row * Studio.SQUARE_SIZE
-        });
+        Studio.spriteStart_[Studio.spriteCount] = $.extend({},
+            Studio.map[row][col].serialize(), {
+              x: col * Studio.SQUARE_SIZE,
+              y: row * Studio.SQUARE_SIZE
+            });
         Studio.spriteCount++;
       }
     }
@@ -2280,17 +2286,18 @@ Studio.reset = function (first) {
     if (Studio.sprite[i]) {
       Studio.sprite[i].removeElement();
     }
+    var spriteStart = Studio.spriteStart_[i];
     Studio.sprite[i] = new Sprite({
-      x: Studio.spriteStart_[i].x,
-      y: Studio.spriteStart_[i].y,
-      displayX: Studio.spriteStart_[i].x,
-      displayY: Studio.spriteStart_[i].y,
+      x: spriteStart.x,
+      y: spriteStart.y,
+      displayX: spriteStart.x,
+      displayY: spriteStart.y,
       loop: true,
-      speed: Studio.spriteStart_[i].speed || constants.DEFAULT_SPRITE_SPEED,
-      size: Studio.spriteStart_[i].size || constants.DEFAULT_SPRITE_SIZE,
-      dir: Studio.spriteStart_[i].direction || Direction.NONE,
-      displayDir: Studio.spriteStart_[i].direction || Direction.SOUTH,
-      emotion: Studio.spriteStart_[i].emotion || level.defaultEmotion || Emotions.NORMAL,
+      speed: spriteStart.speed || constants.DEFAULT_SPRITE_SPEED,
+      size: spriteStart.size || constants.DEFAULT_SPRITE_SIZE,
+      dir: spriteStart.direction || Direction.NONE,
+      displayDir: spriteStart.direction || Direction.SOUTH,
+      emotion: spriteStart.emotion || level.defaultEmotion || Emotions.NORMAL,
       renderOffset: renderOffset,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
@@ -2298,9 +2305,10 @@ Studio.reset = function (first) {
       visible: !level.spritesHiddenToStart
     });
 
+    var sprite = spriteStart.sprite || (i % Studio.startAvatars.length);
     var opts = {
       spriteIndex: i,
-      value: Studio.startAvatars[Studio.spriteStart_[i].sprite || (i % Studio.startAvatars.length)],
+      value: Studio.startAvatars[sprite],
       forceHidden: level.spritesHiddenToStart
     };
     Studio.setSprite(opts);
