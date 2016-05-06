@@ -81,9 +81,12 @@ let VisualizationOverlay = React.createClass({
           viewBox={"0 0 " + this.props.width + " " + this.props.height}
           pointerEvents="none"
       >
-        <g>
-          <text x="50" y="50">{this.state.mouseX + ', ' + this.state.mouseY}</text>}
-        </g>
+        {React.Children.map(this.props.children, child => React.cloneElement(child, {
+          width: this.props.width,
+          height: this.props.height,
+          mouseX: this.state.mouseX,
+          mouseY: this.state.mouseY
+        }))}
       </svg>
     );
   }
