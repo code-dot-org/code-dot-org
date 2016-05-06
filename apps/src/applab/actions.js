@@ -6,7 +6,6 @@ var utils = require('../utils');
 
 /** @enum {string} */
 var ActionType = module.exports.ActionType = utils.makeEnum(
-  'CHANGE_SCREEN',
   'CHANGE_INTERFACE_MODE'
 );
 
@@ -19,19 +18,5 @@ module.exports.changeInterfaceMode = function (interfaceMode) {
   return {
     type: ActionType.CHANGE_INTERFACE_MODE,
     interfaceMode: interfaceMode
-  };
-};
-
-/**
- * Change the active app screen while designing the app.
- * Note: Runtime screen changes are a separate operation, currently handled
- * in applab.js
- * @param {!string} screenId
- * @returns {{type: ActionType, screenId: string}}
- */
-module.exports.changeScreen = function (screenId) {
-  return {
-    type: ActionType.CHANGE_SCREEN,
-    screenId: screenId
   };
 };

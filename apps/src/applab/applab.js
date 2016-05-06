@@ -1225,7 +1225,7 @@ function onInterfaceModeChange(mode) {
       Applab.serializeAndSave();
       var divApplab = document.getElementById('divApplab');
       designMode.parseFromLevelHtml(divApplab, false);
-      Applab.changeScreen(studioApp.reduxStore.getState().currentScreenId);
+      Applab.changeScreen(studioApp.reduxStore.getState().screens.currentScreenId);
     } else {
       Applab.activeScreen().focus();
     }

@@ -4,6 +4,7 @@ var constants = require('./constants');
 var msg = require('../locale');
 var utils = require('../utils');
 var actions = require('./actions');
+var screens = require('./redux/screens');
 var connect = require('react-redux').connect;
 var ScreenSelector = require('./ScreenSelector');
 var ToggleGroup = require('../templates/ToggleGroup');
@@ -95,7 +96,7 @@ module.exports = connect(function propsFromStore(state) {
 }, function propsFromDispatch(dispatch) {
   return {
     onScreenChange: function (screenId) {
-      dispatch(actions.changeScreen(screenId));
+      dispatch(screens.changeScreen(screenId));
     },
     onInterfaceModeChange: function (mode) {
       dispatch(actions.changeInterfaceMode(mode));
