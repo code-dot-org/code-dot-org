@@ -12,7 +12,7 @@ class UserScriptTest < ActiveSupport::TestCase
   end
 
   def complete_level(script_level, result = 100)
-    @user.track_level_progress_async(script_level, result, false)
+    @user.track_level_progress_async(script_level, result, false, nil)
   end
 
   def complete_all_levels
