@@ -892,7 +892,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
 };
 
 StudioApp.prototype.isRunning = function () {
-  return this.reduxStore.getState().isRunning;
+  return this.reduxStore.getState().runState.isRunning;
 };
 
 /**

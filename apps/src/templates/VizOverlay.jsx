@@ -1,5 +1,7 @@
 /** @file SVG Visualization Overlay */
 
+var connect = require('react-redux').connect;
+
 /**
  * Overlay for the play space that helps render additional UI (like the
  * crosshair and element tooltips).  Main responsibilities for this class are:
@@ -10,7 +12,8 @@
 let VisualizationOverlay = React.createClass({
   propTypes: {
     width: React.PropTypes.number.isRequired,
-    height: React.PropTypes.number.isRequired
+    height: React.PropTypes.number.isRequired,
+    areOverlaysVisible: React.PropTypes.bool.isRequired
   },
 
   getInitialState: () => ({
@@ -68,6 +71,15 @@ let VisualizationOverlay = React.createClass({
     // }
   },
 
+  renderOverlays() {
+    return React.Children.map(this.props.children, child => React.cloneElement(child, {
+      width: this.props.width,
+      height: this.props.height,
+      mouseX: this.state.mouseX,
+      mouseY: this.state.mouseY
+    }));
+  },
+
   render() {
     return (
       <svg
@@ -81,14 +93,11 @@ let VisualizationOverlay = React.createClass({
           viewBox={"0 0 " + this.props.width + " " + this.props.height}
           pointerEvents="none"
       >
-        {React.Children.map(this.props.children, child => React.cloneElement(child, {
-          width: this.props.width,
-          height: this.props.height,
-          mouseX: this.state.mouseX,
-          mouseY: this.state.mouseY
-        }))}
+        {this.props.areOverlaysVisible && this.renderOverlays()}
       </svg>
     );
   }
 });
-export default VisualizationOverlay;
+export default connect((state) => ({
+  areOverlaysVisible: !state.runState.isRunning
+}))(VisualizationOverlay);
