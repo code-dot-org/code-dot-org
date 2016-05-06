@@ -10,9 +10,9 @@ class MigrateNetPromoterScore2015Data < ActiveRecord::Migration
       direction.up do
         ActiveRecord::Base.record_timestamps = false
         begin
-          User.all.each do |user|
-            if user.survey2015_value or user.survey2015_comment
-              SurveyResult.create(
+          User.where("properties LIKE '%survey2015%'").find_each do |user|
+            if user.survey2015_value || user.survey2015_comment
+              SurveyResult.create!(
                 user_id: user.id,
                 kind: 'NetPromoterScore2015',
                 properties: {

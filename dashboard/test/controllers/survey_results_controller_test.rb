@@ -23,17 +23,17 @@ class SurveyResultsControllerTest < ActionController::TestCase
   test 'post net promoter score survey results' do
     sign_in @teacher
 
-    NPS_VALUE = 10
-    NPS_COMMENT = "Rock on"
+    nps_value = 10
+    nps_comment = "Rock on"
     assert_creates(SurveyResult) do
-      post :create, {survey: {kind: 'NetPromoterScore2015', nps_value: NPS_VALUE, nps_comment: NPS_COMMENT}, format: :json}
+      post :create, {survey: {kind: 'NetPromoterScore2015', nps_value: nps_value, nps_comment: nps_comment}, format: :json}
     end
 
     survey_result = SurveyResult.where(user: @teacher).first
     assert survey_result
     assert_equal 'NetPromoterScore2015', survey_result.kind
-    assert_equal NPS_VALUE, survey_result.properties['nps_value']
-    assert_equal NPS_COMMENT, survey_result.properties['nps_comment']
+    assert_equal nps_value, survey_result.properties['nps_value']
+    assert_equal nps_comment, survey_result.properties['nps_comment']
   end
 
   test 'blocks non-whitelisted parameters' do
