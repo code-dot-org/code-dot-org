@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="Baker Note: this lesson is being merged into the previous one “the Need for DNS”In this lesson, students identify the similarities between DNS and the postal service, focusing on their hierarchical structure. They then explore stories from the news about DNS and some of the vulnerabilities of the system. Students perform a jigsaw research activity by reading one article in a small group then changing groups and sharing their new knowledge with other students in the class. The articles should serve to help students begin thinking about the global impact of different protocols on the Internet by bringing current events to the classroom.">
+    <title>v1 Unit 2 Lesson 10 DNS in the Real World</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/turdunit/"><span class="h2">Unit</span><span class="h1">8</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/turdunit/1" data-pdf-link="#unit8lesson1">
+            1
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/turdunit/2" data-pdf-link="#unit8lesson2">
+            2
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/turdunit/3" data-pdf-link="#unit8lesson3">
+            3
+        </a>
+        </div>
+        
+            
+                
+                    <div class="lesson current">
+                
+            
+        <a href="/educate/csp_test/turdunit/4" data-pdf-link="#unit8lesson4">
+            4
+        </a>
+        </div>
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit8lesson4">
+        
+            
+                <h1>Lesson 4: v1 Unit 2 Lesson 10 DNS in the Real World</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <h1 id="baker-note-this-lesson-is-being-merged-into-the-previous-one-the-need-for-dns">Baker Note: this lesson is being merged into the previous one “the Need for DNS”</h1>
+<p>In this lesson, students identify the similarities between DNS and the postal service, focusing on their hierarchical structure. They then explore stories from the news about DNS and some of the vulnerabilities of the system. Students perform a jigsaw research activity by reading one article in a small group then changing groups and sharing their new knowledge with other students in the class. The articles should serve to help students begin thinking about the global impact of different protocols on the Internet by bringing current events to the classroom.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>DNS (Domain Name Server) is a hierarchical system that translates domain names into IP addresses. At the top level of DNS are the root servers, which contain information for domains for such as .com or .org. By accessing the correct root, and looking at each of its branches, it is possible for the DNS to follow the branches down to second level and subdomains to find the appropriate IP address. A single DNS may not know all of the information necessary to find an IP address, but by asking other DNSes, it is able to find that information.</p>
+<p>The DNS is an open standard protocol, which makes it vulnerable to security issues. These issues include DNS cache poisoning and DDoS attacks, among others. In DNS cache poisoning, DNS servers are given an incorrect IP address, thus routing anyone looking for that information to an incorrect website. DDoS attacks occur when a DNS server is sent too many requests at once and is unable to field all of them. This results in the DNS being unable to serve any request, essentially blocking the DNS from use.</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocv1-unit-2-lesson-10-dns-in-the-real-world">
+                
+                    <h3>Getting Started</h3>
+                
+                    <h3>Activity</h3>
+                
+                    <h3>Wrap-up</h3>
+                
+                    <h3>Readings</h3>
+                
+                    <h3>Assessment</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Describe how a system of DNS servers support IP lookups.</li>
+                    
+                        <li>Explain that DNS is a hierarchical system that supports growth and change.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit2/lesson10" target="_blank">Forum</a></li>
+<li>Print copies of the Activity Guide</li>
+<li>Read through articles in the Reading section below and choose a set for your class. Students should read in groups of 4-6, so not all articles are necessary.</li>
+<li>Either print copies of articles for each group, or plan for students to read on computers.</li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2' target='_blank' class='print_link'>CSP Unit 2</a> - Code Studio
+                                </li>
+                            
+                                <li>
+                                    <a href='https://www.youtube.com/watch?v=2ZUxoi7YNgs' target='_blank' class='print_link'>How DNS Works</a> - Video
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/19W0-2tTK4t1f-jKW2MCMoWVHPird-uiQ0PpcqNWx7g8/edit?usp=sharing' target='_blank' class='print_link'>Research: DNS in the Real World</a> - Activity Guide (<a href='https://docs.google.com/document/d/19W0-2tTK4t1f-jKW2MCMoWVHPird-uiQ0PpcqNWx7g8/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+
+        </div>
+    </div>
+
+    <div id="v1-unit-2-lesson-10-dns-in-the-real-worldcontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started</h2>
+                    <p><strong>Goal:</strong> The DNS is both redundant and hierarchical in nature. Students will watch a video to help better understand its hierarchy, then discuss the analogy between the DNS and the postal service.</p>
+<h3 id="video-how-dns-works">Video: How DNS Works.</h3>
+<p><strong>Video:</strong> Show students the video How DNS Works.</p>
+<h3 id="discussion">Discussion.</h3>
+<p><em>Say:</em> While we can’t actually see what’s going on in the DNS in real life, we can compare it to a system that you’ve seen before: the postal service. (See Code Studio levels 2.)</p>
+<ul>
+<li>How can you relate DNS and the postal service? Describe their analogous hierarchical structure.<ul>
+<li>Scaling of DNS requires system of servers organized in a hierarchy, just like there is a system of post offices and hierarchy (main city post office and local neighborhood post offices). Hierarchy of DNS/IP is analogous to country/state/city/zip/street/direction/number. New URL/IP address pairs are sometimes added, just like new homes and addresses are added and the post office needs to know. IP addresses for web pages sometimes do change, just like people sometimes move. When you move, you send in a change of address card; when a web page’s IP address changes, it needs to update its DNS, which then shares the IP change with other DNS servers.</li>
+</ul>
+</li>
+<li>How do DNS and the postal service function differently?<ul>
+<li>If you send mail to someone who has moved, it sometimes comes back undelivered. The Internet cannot have undelivered messages, so the DNS server is queried for the current IP address for EVERY web page you visit.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Transition:</strong> To learn more about DNS you will be reading articles about how it works and some of the vulnerabilities of the system, namely DDoS (Distributed Denial of Service) attacks. You will have 20 minutes to read, then we will perform a jigsaw and you will learn about the other articles from your classmates. </p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity</h2>
+                    <p><strong>Introduction:</strong> Students will need to be placed in groups of 4-6 people to complete their readings. Distribute Activity Guide - Research: DNS in the Real World, one copy per student. Assign each group one of the articles (they can be found on Code Studio as well as below in the lesson plan) and ask that they complete the first page of the sheet. Encourage groups to work together and make sure that at the end of the reading time, all students in the group feel comfortable with the technical content in the article. If groups are finished early, suggest that they do more research on the subject of their article and DDoS attacks.</p>
+<h3 id="research-with-dns-articles">Research with DNS articles.</h3>
+<p>Provide students 15-20 minutes to read their article and make sense of the content. Groups should work together to complete their activity guide.</p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<p>Some articles are shorter than others and may not take the full 15 minutes to read. Consider giving these to students with lower reading levels or pairing them together so that a group reads two articles.</p>
+</div>
+</div>
+<p><strong>Jigsaw:</strong> Number students within their groups, then send students to create new physical groups depending upon their new number (e.g., all the students labeled “1” move to create a group in the same part of the room). Students should exchange information they learned with one another, recording the key points from each article in the space provided on the second page of the activity guide.</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up</h2>
+                    <p><strong>Discussion:</strong> Conclude the lesson with a sense-making discussion summarizing the broad themes of the day. The two key points are how DNS functions in the real world and DDoS attacks. If students are having a hard time visualizing DDoS attacks, consider using this infographic: <a href="http://securityskeptic.typepad.com/the-security-skeptic/anatomy-of-dns-ddos-attack.html" target="_blank">Anatomy of DNS DDoS Attack</a>. <em>Prompts:</em></p>
+<ul>
+<li>What makes DNS hierarchical?</li>
+<li>What is DDoS?  What makes DNS susceptible to it?<ul>
+<li>Distributed Denial of Service occurs when a DNS receives too many requests at once. This causes the DNS to be “blocked.” DNS is susceptible because it is an open public communication protocol, which means anyone has access to it.</li>
+</ul>
+</li>
+<li>What are other disadvantages of the open standard of addressing that the Internet uses?<ul>
+<li>DNS can be altered by governments or organizations to prevent access to certain locations on the Internet. (If you don’t know the IP, you can’t send or receive traffic.)</li>
+<li>Manipulating the DNS can allow an attacker to read traffic coming from your computer and even impersonate you on the Internet. Traffic intended for you can instead be rerouted to an attacker</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Readings</h2>
+                    <p>Below is a set of readings that address DNS and possible security vulnerabilities. Feel free to select some or all, or find your own sources as well. We suggest using at least one article from each section to ensure diverse conversation during the jigsaw.</p>
+<p>What is DDoS?, how to launch, and how to stop</p>
+<ul>
+<li>Growing threat of DDoS: http://www.information-age.com/technology/security/123459033/growing-threat-ddos-attacks-dns</li>
+<li>Details of DDoS attacks: http://www.business2community.com/tech-gadgets/the-details-behind-a-denial-of-service-attack-what-it-is-why-it-matters-and-what-you-can-do-to-stop-it-01241089</li>
+<li>Launching and stopping a DDoS attack: https://blog.cloudflare.com/65gbps-ddos-no-problem/ </li>
+</ul>
+<p>Attacks on DNS in the news</p>
+<ul>
+<li>Google and Lenovo hijacked: http://www.pcworld.com/article/2889392/like-google-in-vietnam-lenovo-tripped-up-by-a-dns-attack.html </li>
+<li>Attack against NATO: http://www.scmagazine.com/ddos-attacks-against-nato-likely-dns-amplification-or-ntp-reflection-expert-suggests/article/338524/ </li>
+<li>Gaming company hijacked: http://thehackernews.com/2014/06/dns-flood-ddos-attack-hit-video-gaming.html</li>
+<li>DNS breach of St. Louis Federal Reserve: http://krebsonsecurity.com/2015/05/st-louis-federal-reserve-suffers-dns-breach/</li>
+</ul>
+<p>DNS Censorship</p>
+<ul>
+<li>China’s DNS Firewall: NOTE, PROFANITY (once) http://www.forbes.com/sites/thomasbrewster/2015/01/26/china-great-firewall-causing-ddos-attacks/ </li>
+<li>Turkish DNS firewall: http://www.techtimes.com/articles/4998/20140331/turkish-isps-intercept-google-dns-services-to-spy-on-internet-users.htm </li>
+</ul>
+<p>Other</p>
+<ul>
+<li>DNS and IPv6: http://www.scmagazineuk.com/ddos-attacks-double-but-could-go-bigger-still-with-ipv6/article/415736/</li>
+<li>New Zealand company accessing Netflix in USA: http://thenextweb.com/insider/2015/04/10/new-zealand-internet-providers-threatened-with-legal-action-for-providing-access-to-us-netflix/ </li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p><strong>Questions:</strong></p>
+<ol>
+<li>
+<p>What feature of DNS and IP allows the Internet to scale?</p>
+<p>a) Redundancy</p>
+<p>b) Hierarchy</p>
+<p>c) Multiple Servers</p>
+<p>d) Government Control</p>
+</li>
+<li>
+<p>What is a disadvantage of the open standard of addressing that the Internet uses? (Choose two.)</p>
+<p>a) Censorship</p>
+<p>b) Spoofing</p>
+<p>c) Redundancy</p>
+<p>d) Hierarchy</p>
+</li>
+<li>
+<p>Why do multiple websites at your school and your computers in your classroom all have IP addresses that start with the same two sets of numbers?</p>
+</li>
+</ol>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CD</strong> - Computers &amp; Communication Devices</summary>
+                    <ul>
+                        
+                            <li><strong>CD.L3A:8</strong> - Explain the basic components of computer networks (e.g., servers, file protection, routing, spoolers and queues, shared resources, and fault-tolerance).</li>
+                        
+                            <li><strong>CD.L3A:9</strong> - Describe how the Internet facilitates global communication.</li>
+                        
+                            <li><strong>CD.L3B:4</strong> - Describe the issues that impact network functionality (e.g., latency, bandwidth, firewalls, server capability).</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CI</strong> - Community, Global, and Ethical Impacts</summary>
+                    <ul>
+                        
+                            <li><strong>CI.L2:5</strong> - Describe ethical issues that relate to computers and networks (e.g., security, privacy, ownership and information sharing).</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CL</strong> - Collaboration</summary>
+                    <ul>
+                        
+                            <li><strong>CL.L2:3</strong> - Collaborate with peers, experts and others using collaborative practices such as pair programming, working in project teams and participating in-group active learning activities.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>6.1</strong> - The Internet is a network of autonomous systems.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.1.1</strong> - Explain the abstractions in the Internet and how the Internet functions. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.1.1A</strong> - The Internet connects devices and networks all over the world.</li>
+                                
+                                    <li><strong>6.1.1B</strong> - An end to end architecture facilitates connecting new devices and networks on the Internet.</li>
+                                
+                                    <li><strong>6.1.1C</strong> - Devices and networks that make up the Internet are connected and communicate using addresses and protocols.</li>
+                                
+                                    <li><strong>6.1.1E</strong> - Connecting new devices to the Internet is enabled by assignment of an Internet protocol (IP) address.</li>
+                                
+                                    <li><strong>6.1.1F</strong> - The Internet is built on evolving standards, including those for addresses and names.</li>
+                                
+                                    <li><strong>6.1.1G</strong> - The domain name system (DNS) translates names to IP addresses.</li>
+                                
+                                    <li><strong>6.1.1H</strong> - The number of devices that could use an IP address has grown so fast that a new protocol (IPv6) has been established to handle routing of many more devices.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.2</strong> - Characteristics of the Internet influence the systems built on it.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.2.1</strong> - Explain characteristics of the Internet and the systems built on it. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.2.1B</strong> - The domain name syntax is hierarchical</li>
+                                
+                                    <li><strong>6.2.1C</strong> - IP addresses are hierarchical.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>6.2.2</strong> - Explain how the characteristics of the Internet influence the systems built on it. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.2.2C</strong> - Hierarchy in the DNS helps that system scale.</li>
+                                
+                                    <li><strong>6.2.2D</strong> - Interfaces and protocols enable widespread use of the Internet.</li>
+                                
+                                    <li><strong>6.2.2E</strong> - Open standards fuel the growth of the Internet.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.3</strong> - Cybersecurity is an important concern for the Internet and the systems built on it.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.3.1</strong> - Identify existing cybersecurity concerns and potential options to address these issues with the Internet and the systems built on it. [P1]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.3.1B</strong> - The domain name system (DNS) was not designed to be completely secure.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#tocv1-unit-2-lesson-10-dns-in-the-real-world').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#v1-unit-2-lesson-10-dns-in-the-real-worldcontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'v1-unit-2-lesson-10-dns-in-the-real-world', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

@@ -44,3 +44,14 @@ Scenario: Complete Level 5
   And I wait to see ".congrats"
   And element ".congrats" is visible
   And element ".congrats" has text "Congratulations! You completed Puzzle 5."
+
+Scenario: Complete Bounce freeplay level
+  Given I am on "http://learn.code.org/s/course3/stage/15/puzzle/10?noautoplay=true"
+  When I rotate to landscape
+  And I close the dialog
+  And element "#finishButton" is not visible
+  And I press "runButton"
+  And element "#finishButton" is visible
+  And I press "finishButton"
+  And I wait to see ".congrats"
+  And element ".congrats" is visible
