@@ -109,15 +109,15 @@ Each of these activities can either be used alone or with other computer science
  
 	case theCourse
 	when "course1"
-	    theCourse = "Course 1, Lesson "
+	    theCourse = "Course 1: Stage "
 	when "course2"
-	    theCourse = "Course 2, Lesson "
+	    theCourse = "Course 2: Stage "
 	when "course3"
-	    theCourse = "Course 3, Lesson "
+	    theCourse = "Course 3: Stage "
 	when "course4"
-	    theCourse = "Course 4, Lesson "
+	    theCourse = "Course 4: Stage "
 	when "20-hour"
-	    theCourse = "Accelerated Course, Lesson "
+	    theCourse = "Accelerated Course: Stage "
 	else
 	    theCourse = ""
 	end

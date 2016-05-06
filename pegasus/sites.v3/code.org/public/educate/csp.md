@@ -33,6 +33,7 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 <img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge"> Starting in the 2016-17 school year Code.org is recognized by the College Board as an endorsed provider of curriculum and professional development for AP® Computer Science Principles (AP CSP). This endorsement affirms that all components of Code.org CSP’s offerings are aligned to the AP Curriculum Framework standards and the AP CSP assessment. Using an endorsed provider affords schools access to resources including an AP CSP syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach AP CSP.
 
  * [Code.org 2016-17 AP CSP Endorsed Syllabus ID #1648108v1](/files/CSPSyllabusApril2016.pdf)
+ * [Instructions: How to add our authorized syllabus to your AP Course Audit](https://docs.google.com/document/export?format=pdf&id=12VOTkJv9R_Db-YDvNjNYkhZ5nnAw8eqFkmwscM8W16M)
  <br>
  
  *Note: The course materials on this page (see below) still reflect the sequence of 2015-16 pilot course syllabus. Though largely the same, the new sequence and other small changes will be updated to reflect the 2016 AP Endorsed syllabus soon.*
