@@ -910,7 +910,7 @@ class UserTest < ActiveSupport::TestCase
 
     User.expects(:track_proficiency).once
 
-    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, false)
+    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, nil, false)
   end
 
   test 'track_level_progress_sync does not call track_proficiency if old perfect score' do
@@ -920,7 +920,7 @@ class UserTest < ActiveSupport::TestCase
 
     User.expects(:track_proficiency).never
 
-    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, false)
+    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, nil, false)
   end
 
   test 'track_level_progress_sync does not call track_proficiency if new passing score' do
@@ -929,7 +929,7 @@ class UserTest < ActiveSupport::TestCase
 
     User.expects(:track_proficiency).never
 
-    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 25, false)
+    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 25, nil, false)
   end
 
   test 'track_level_progress_sync does not call track_proficiency if hint used' do
@@ -940,7 +940,7 @@ class UserTest < ActiveSupport::TestCase
 
     User.expects(:track_proficiency).never
 
-    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, false)
+    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, nil, false)
   end
 
   test 'track_level_progress_sync does not call track_proficiency if authored hint used' do
@@ -951,7 +951,7 @@ class UserTest < ActiveSupport::TestCase
 
     User.expects(:track_proficiency).never
 
-    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, false)
+    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, nil, false)
   end
 
   test 'normalize_gender' do
