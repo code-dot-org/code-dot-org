@@ -1,5 +1,6 @@
-- cta_url = CDO.code_org_url("/curriculum/unplugged")
+- cta_url = "http://teacherblog.code.org/post/143850631049/how-the-hints-system-on-code-studio-helps-measure"
 - petition_url = "http://bit.ly/computersciencepetition"
+- tagging_url = "http://teacherblog.code.org/post/143765455379/were-tagging-puzzles-in-code-studio-with-their"
 
 %div.teacher-announce
   %a.announce-heading-link{:href=>"http://teacherblog.code.org/"}
@@ -11,9 +12,9 @@
   %div.announce-content
     %a{:href=>cta_url}
       %div.content-img-container
-        %img.content-img{:src=>"/images/fill-300x200/teacher-dashboard/unplugged.png"}
+        %img.content-img{:src=>"/images/fill-300x200/teacher-dashboard/tagging-puzzles.jpg"}
     %div.content-text
-      = I18n.t(:dashboard_announce_message)
+      = I18n.t(:dashboard_announce_message, tagging_url: tagging_url, ux_url: cta_url)
     %div{style: "float: right; margin-top: 25px;"}
       %a{:href=>cta_url}
         %button= I18n.t(:dashboard_announce_button_text)

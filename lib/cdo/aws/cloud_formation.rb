@@ -15,8 +15,24 @@ module AWS
     # Hard-coded values for our CloudFormation template.
     TEMPLATE = ENV['TEMPLATE'] || 'cloud_formation_adhoc_standalone.yml.erb'
 
-    DOMAIN = 'cdn-code.org'
-    BRANCH = ENV['branch'] || RakeUtils.git_branch
+    DOMAIN = ENV['DOMAIN'] || 'cdn-code.org'
+
+    # Use [DOMAIN] wildcard SSL certificate for ELB and CloudFront, if available.
+    IAM_METADATA = Aws::IAM::Client.new.get_server_certificate(server_certificate_name: DOMAIN).
+      server_certificate.server_certificate_metadata rescue nil
+
+    IAM_CERTIFICATE_ID = IAM_METADATA && IAM_METADATA.server_certificate_id
+
+    # Lookup ACM certificate for ELB and CloudFront SSL, if IAM-based certificate is not available.
+    ACM_REGION = 'us-east-1'
+    CERTIFICATE_ARN = IAM_METADATA ? IAM_METADATA.arn :
+      Aws::ACM::Client.new(region: ACM_REGION).
+      list_certificates(certificate_statuses: ['ISSUED']).
+      certificate_summary_list.
+      find { |cert| cert.domain_name == "*.#{DOMAIN}" }.
+      certificate_arn
+
+    BRANCH = ENV['branch'] || rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env
     # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
     STACK_NAME_INVALID_REGEX = /[^[:alnum:]-]/
@@ -29,43 +45,31 @@ module AWS
     INSTANCE_TYPE = 't2.large'
     SSH_IP = '0.0.0.0/0'
     S3_BUCKET = 'cdo-dist'
+    CDN_ENABLED = !!ENV['CDN_ENABLED']
 
     STACK_ERROR_LINES = 250
-
-    # Use AWS Certificate Manager for ELB and CloudFront SSL certificates.
-    ACM_REGION = 'us-east-1'
-    CERTIFICATE_ARN = Aws::ACM::Client.new(region: ACM_REGION).
-      list_certificates(certificate_statuses: ['ISSUED']).
-      certificate_summary_list.
-      find { |cert| cert.domain_name == "*.#{DOMAIN}" }.
-      certificate_arn
 
     class << self
       # Validates that the template is valid CloudFormation syntax.
       # Does not check validity of the resource properties, just the base syntax.
       # First prints the JSON-formatted template, then either raises an error (if invalid)
       # or prints the template description (if valid).
-      def validate(cdn_enabled: false)
-        json_template = json_template(cdn_enabled: cdn_enabled)
-        CDO.log.info JSON.pretty_generate(JSON.parse(json_template))
+      def validate
+        template = json_template(dry_run: true)
+        CDO.log.info JSON.pretty_generate(JSON.parse(template))
         CDO.log.info cfn.validate_template(
-          template_body: json_template
+          template_body: template
         ).description
       end
 
-      def create_or_update(cdn_enabled: false)
-        json_template = json_template(cdn_enabled: cdn_enabled)
-
-        update_certs
-        update_cookbooks
-        update_bootstrap_script
-
+      def create_or_update
+        template = json_template
         action = stack_exists? ? :update : :create
         CDO.log.info "#{action} stack: #{STACK_NAME}..."
         start_time = Time.now
         updated_stack_id = cfn.method("#{action}_stack").call(
           stack_name: STACK_NAME,
-          template_body: json_template,
+          template_body: template,
           capabilities: ['CAPABILITY_IAM']
         ).stack_id
         wait_for_stack(action, start_time)
@@ -125,7 +129,7 @@ module AWS
       def update_bootstrap_script
         Aws::S3::Client.new.put_object(
           bucket: S3_BUCKET,
-          key: 'chef/bootstrap.sh',
+          key: "chef/bootstrap-#{STACK_NAME}.sh",
           body: File.read(aws_dir('chef-bootstrap.sh'))
         )
       end
@@ -166,15 +170,12 @@ module AWS
         CDO.log.info "Don't forget to clean up AWS resources by running `rake adhoc:stop` after you're done testing your instance!" if action == :create
       end
 
-      def json_template(cdn_enabled:)
-        unless system("git ls-remote --exit-code 'https://github.com/code-dot-org/code-dot-org.git' #{BRANCH} > /dev/null")
-          raise 'Current branch needs to be pushed to GitHub with the same name, otherwise deploy will fail.
-To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
-        end
+      def json_template(dry_run: false)
         template_string = File.read(aws_dir('cloudformation', TEMPLATE))
         availability_zones = Aws::EC2::Client.new.describe_availability_zones.availability_zones.map(&:zone_name)
         azs = availability_zones.map { |zone| zone[-1].upcase }
         @@local_variables = OpenStruct.new(
+          dry_run: dry_run,
           local_mode: !!CDO.chef_local_mode,
           stack_name: STACK_NAME,
           ssh_key_name: SSH_KEY_NAME,
@@ -184,8 +185,9 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
           region: CDO.aws_region,
           environment: rack_env,
           ssh_ip: SSH_IP,
+          iam_certificate_id: IAM_CERTIFICATE_ID,
           certificate_arn: CERTIFICATE_ARN,
-          cdn_enabled: cdn_enabled,
+          cdn_enabled: CDN_ENABLED,
           domain: DOMAIN,
           subdomain: FQDN,
           availability_zone: availability_zones.first,
@@ -196,7 +198,10 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
           js: method(:js),
           subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}}.to_json,
           public_subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}}.to_json,
-          lambda: method(:lambda)
+          lambda: method(:lambda),
+          update_certs: method(:update_certs),
+          update_cookbooks: method(:update_cookbooks),
+          update_bootstrap_script: method(:update_bootstrap_script)
         )
         erb_output = erb_eval(template_string)
         YAML.load(erb_output).to_json

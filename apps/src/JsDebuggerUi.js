@@ -547,16 +547,15 @@ function clearAllChildElements(element) {
 JsDebuggerUi.prototype.onWatchTimer_ = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
-
-    for (var watchExpression in this.watchExpressions_) {
-      var currentValue = jsInterpreter.evaluateWatchExpression(watchExpression);
-      if (this.watchExpressions_[watchExpression].lastValue !== currentValue) {
-        // Store new value
-        this.watchExpressions_[watchExpression].lastValue = currentValue;
-      }
-      var debugWatchDiv = this.getElement_('#debug-watch');
-      if (debugWatchDiv) {
-        clearAllChildElements(debugWatchDiv);
+    var debugWatchDiv = this.getElement_('#debug-watch');
+    if (debugWatchDiv) {
+      clearAllChildElements(debugWatchDiv);
+      for (var watchExpression in this.watchExpressions_) {
+        var currentValue = jsInterpreter.evaluateWatchExpression(watchExpression);
+        if (this.watchExpressions_[watchExpression].lastValue !== currentValue) {
+          // Store new value
+          this.watchExpressions_[watchExpression].lastValue = currentValue;
+        }
         var watchItem = document.createElement('div');
         watchItem.className = 'debug-watch-item';
         watchItem.innerHTML = require('./JsDebuggerWatchItem.html.ejs')({

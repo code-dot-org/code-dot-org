@@ -2,13 +2,13 @@
 #
 # Table name: stages
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)      not null
-#  position   :integer
-#  script_id  :integer          not null
-#  created_at :datetime
-#  updated_at :datetime
-#  flex       :string(255)
+#  id            :integer          not null, primary key
+#  name          :string(255)      not null
+#  position      :integer
+#  script_id     :integer          not null
+#  created_at    :datetime
+#  updated_at    :datetime
+#  flex_category :string(255)
 #
 
 # Ordered partitioning of script levels within a script
@@ -22,7 +22,8 @@ class Stage < ActiveRecord::Base
   validates_uniqueness_of :name, scope: :script_id
 
   def script
-    Script.get_from_cache(script_id)
+    return Script.get_from_cache(script_id) if Script.should_cache?
+    super
   end
 
   def to_param
@@ -30,7 +31,7 @@ class Stage < ActiveRecord::Base
   end
 
   def unplugged?
-    script_levels = Script.get_from_cache(script.name).script_levels.select{|sl| sl.stage_id == self.id}
+    script_levels = script.script_levels.select{|sl| sl.stage_id == self.id}
     return false unless script_levels.first
     script_levels.first.level.unplugged?
   end
@@ -73,6 +74,7 @@ class Stage < ActiveRecord::Base
         position: position,
         name: localized_name,
         title: localized_title,
+        flex_category: flex_category,
         # Ensures we get the cached ScriptLevels, vs hitting the db
         levels: script.script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
     }

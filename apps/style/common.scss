@@ -443,10 +443,6 @@ html[dir='rtl'] div#visualizationResizeBar {
 
 /* Shrink the visualization area on small displays. */
 
-#visualizationEditor.responsive {
-  margin-left: 400px;
-  padding-left: 15px;
-}
 #visualization.responsive > * {
   -webkit-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
@@ -494,9 +490,6 @@ html[dir='rtl'] div#visualizationResizeBar {
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
-  }
-  #visualizationEditor.responsive {
-    margin-left: $width;
   }
   #visualization.responsive > * {
     -webkit-transform: scale($scale);
@@ -1124,11 +1117,13 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   #clear-puzzle-header:hover {
     background-color: $red;
   }
-  .block-counter-default {
-    color: white;
-  }
   .block-counter-overflow {
     color: $yellow;
+  }
+  &.is-running {
+    .block-counter-overflow {
+      color: $dark_orange;
+    }
   }
 }
 

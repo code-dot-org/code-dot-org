@@ -19,7 +19,7 @@ markdown <<MARKDOWN
 <br>
 <br>
 <br>
-<h4>In 2014 The Hour of Code was the fastest event to reach 15 million users in just 7 days</h4>
+<h5>In 2014 The Hour of Code was the fastest event to reach 15 million users in just 7 days</h5>
 <br>
 <br>
 <br>
@@ -36,7 +36,7 @@ markdown <<MARKDOWN
 <br>
 <br>
 <br>
-<h4>By 2015 over 236,601,577 students had tried an Hour of Code</h4>
+<h5>By 2015 over 236,601,577 students had tried an Hour of Code</h5>
 <br>
 <br>
 <br>
@@ -79,7 +79,6 @@ markdown <<MARKDOWN
 <em><h5>Now that the movement has started, students, parents, schools, and even communities are excited about computer science, but we don’t have enough schools offering it, teachers to teach it, little own teachers with the necessary credentials or background to take on this challenge of preparing students for future careers in computing.</h5> </em>
 <br>
 <br>
-<br>
 <img src="https://code.org/images/cs-stats/Slide1_Schools_Teach.png" width="380" style="float:right; margin-left:30px"> <img src="https://code.org/images/cs-stats/Slide2_STEM_CS.png" width="375" style="float:left; margin-right:30px">
 <br>
 <br>
@@ -94,11 +93,7 @@ markdown <<MARKDOWN
 <br>
 <br>
 <br>
-
-<br>
-<br>
-<br>
-<strong>So what comes next…… it is working with fabulous teachers like yourselves, who are willing to step up to the task and be part of a movement that will impact students perception of computer science and equip yourselves with teaching strategies that will create a classroom culture that is inclusive of all students who are engaged, contributing members of a computing community of practice.</strong>
+<h5>So what comes next…… it is working with fabulous teachers like yourselves, who are willing to step up to the task and be part of a movement that will impact students perception of computer science and equip yourselves with teaching strategies that will create a classroom culture that is inclusive of all students who are engaged, contributing members of a computing community of practice.</h5>
 <br>
 <br>
 
