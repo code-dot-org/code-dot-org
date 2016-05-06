@@ -10,7 +10,8 @@
     "skip_sound": true,
     "markdown_instructions": "In this module, you learned about how information gets shuttled from place-to-place on the internet, and the major steps along the way.  **Write a lesson plan for your students about how packets are constructed.**\r\n\r\n### How this task is reviewed\r\nThis task is peer-reviewed by 2 peers, using the following rubric:\r\n - Lesson includes lecture\r\n - Lesson includes activity on network simulator",
     "submittable": "true",
-    "allow_user_uploads": "true"
+    "allow_user_uploads": "true",
+    "peer_reviewable": "true"
   },
   "published": true,
   "notes": "",
