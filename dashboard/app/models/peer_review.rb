@@ -26,4 +26,18 @@ class PeerReview < ActiveRecord::Base
   belongs_to :script
   belongs_to :level
   belongs_to :level_source
+
+  REVIEWS_PER_SUBMISSION = 2
+
+  def self.create_for_submission(user_level, level_source_id, from_instructor = false)
+    REVIEWS_PER_SUBMISSION.times do
+      create!(
+        user: user_level.user,
+        from_instructor: from_instructor,
+        script: user_level.script,
+        level: user_level.level,
+        level_source_id: level_source_id
+      )
+    end
+  end
 end
