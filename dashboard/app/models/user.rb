@@ -893,7 +893,7 @@ SQL
     end
 
     # Create peer reviews after submitting a peer_reviewable solution
-    if user_level && user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable)
+    if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable)
       PeerReview.create_for_submission(user_level, level_source_id)
     end
 
