@@ -16,6 +16,8 @@ var FRAME_HEADER_HEIGHT = 25;
 Blockly.BlockSvgUnused = function (block) {
   this.block_ = block;
 
+  this.bindData_ = undefined;
+
   this.frameGroup_ = undefined;
   this.frameClipRect_ = undefined;
   this.frameBase_ = undefined;
@@ -29,6 +31,10 @@ Blockly.BlockSvgUnused = function (block) {
 Blockly.BlockSvgUnused.UNUSED_BLOCK_HELP_EVENT = 'blocklyUnusedBlockHelpClicked';
 
 Blockly.BlockSvgUnused.prototype.initChildren = function () {
+
+  // Unhide when run button pressed. Save binding data so we can unbind.
+  this.bindData_ = Blockly.bindEvent_(Blockly.mainBlockSpace.getCanvas(),
+      Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED, this, this.unhide.bind(this));
 
   this.frameGroup_ = Blockly.createSvgElement('g', {
     'class': 'blocklyUnusedFrame'
@@ -89,7 +95,7 @@ Blockly.BlockSvgUnused.prototype.initChildren = function () {
 /**
  * @override
  */
-Blockly.BlockSvgUnused.prototype.getPadding = function() {
+Blockly.BlockSvgUnused.prototype.getPadding = function () {
   return {
     top: FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT,
     right: FRAME_MARGIN_SIDE,
@@ -117,7 +123,11 @@ Blockly.BlockSvgUnused.prototype.bindClickEvent = function () {
   });
 };
 
-Blockly.BlockSvgUnused.prototype.render = function(svgGroup) {
+Blockly.BlockSvgUnused.prototype.unhide = function () {
+  this.frameGroup_ && Blockly.removeClass_(this.frameGroup_, 'hidden');
+};
+
+Blockly.BlockSvgUnused.prototype.render = function (svgGroup) {
 
   // Remove ourselves from the DOM and calculate the size of our
   // container, then insert ourselves into the container.
@@ -128,11 +138,7 @@ Blockly.BlockSvgUnused.prototype.render = function(svgGroup) {
   var groupRect = svgGroup.getBoundingClientRect();
   goog.dom.insertChildAt(svgGroup, this.frameGroup_, 0);
 
-  this.frameGroup_.setAttribute('style', 'opacity: 0; transition: opacity 2s;');
-
-  setTimeout(function () {
-    this.frameGroup_ && this.frameGroup_.setAttribute('style', 'opacity: 0.8; transition: opacity 2s;');
-  }.bind(this), 2000);
+  Blockly.addClass_(this.frameGroup_, 'hidden');
 
   this.bindClickEvent();
 
@@ -157,6 +163,9 @@ Blockly.BlockSvgUnused.prototype.render = function(svgGroup) {
 };
 
 Blockly.BlockSvgUnused.prototype.dispose = function () {
+  if (this.bindData_) {
+    Blockly.unbindEvent_(this.bindData_);
+  }
   goog.dom.removeNode(this.frameGroup_);
   this.frameGroup_ = undefined;
   this.frameClipRect_ = undefined;

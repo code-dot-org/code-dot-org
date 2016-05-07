@@ -127,6 +127,12 @@ Blockly.BlockSpace.EVENTS.EVENT_BLOCKS_IMPORTED = 'blocksImported';
 Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE = 'blockSpaceChange';
 
 /**
+ * Fired by Code Studio when the run button is clicked.
+ * @type {string}
+ */
+Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED = "run_button_whooopdedoo";
+
+/**
  * Angle away from the horizontal to sweep for blocks.  Order of execution is
  * generally top to bottom, but a small angle changes the scan to give a bit of
  * a left to right bias (reversed in RTL).  Units are in degrees.
