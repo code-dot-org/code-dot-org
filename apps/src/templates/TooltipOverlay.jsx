@@ -21,7 +21,9 @@ let TooltipOverlay = React.createClass({
     mouseX: React.PropTypes.number,
     mouseY: React.PropTypes.number,
     // Set of tooltip text provider functions.  See the end of this file for examples.
-    providers: React.PropTypes.arrayOf(React.PropTypes.func)
+    providers: React.PropTypes.arrayOf(React.PropTypes.func),
+    // Normally the tooltip is below the curosr
+    tooltipAboveCursor: React.PropTypes.bool
   },
 
   getTooltipStrings() {
@@ -49,7 +51,8 @@ let TooltipOverlay = React.createClass({
    */
   getTooltipTopLeft() {
     var tooltipSize = this.getTooltipDimensions();
-    var rectX = this.props.mouseX + TOOLTIP_MARGIN;
+    var rectX, rectY;
+    rectX = this.props.mouseX + TOOLTIP_MARGIN;
     if (rectX + tooltipSize.width + EDGE_MARGIN > this.props.width) {
       // This response gives a smooth horizontal reposition when near the edge
       rectX -= (rectX + tooltipSize.width + EDGE_MARGIN - this.props.width);
@@ -57,9 +60,16 @@ let TooltipOverlay = React.createClass({
       //rectX = this.props.mouseX - TOOLTIP_MARGIN - tooltipSize.width;
     }
 
-    var rectY = this.props.mouseY + TOOLTIP_MARGIN;
-    if (rectY + tooltipSize.height + EDGE_MARGIN > this.props.height) {
-      rectY = this.props.mouseY - TOOLTIP_MARGIN - tooltipSize.height;
+    var abovePosition = this.props.mouseY - TOOLTIP_MARGIN - tooltipSize.height;
+    var belowPosition = this.props.mouseY + TOOLTIP_MARGIN;
+    if (belowPosition + tooltipSize.height + TOOLTIP_MARGIN > this.props.height) {
+      rectY = abovePosition;
+    } else if (abovePosition - TOOLTIP_MARGIN < 0) {
+      rectY = belowPosition;
+    } else if (this.props.tooltipAboveCursor) {
+      rectY = abovePosition;
+    } else {
+      rectY = belowPosition;
     }
 
     return {rectX: rectX, rectY: rectY};
