@@ -1,6 +1,6 @@
 /** @file App Lab-specific Crosshair Overlay */
 
-import CrosshairOverlay from '../templates/CHOverlay';
+import CrosshairOverlay from '../templates/CrosshairOverlay';
 import { scaledDropPoint } from './gridUtils';
 
 const AppLabTooltipOverlay = React.createClass({
