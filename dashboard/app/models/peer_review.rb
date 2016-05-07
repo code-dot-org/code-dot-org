@@ -37,6 +37,17 @@ class PeerReview < ActiveRecord::Base
     ESCALATED = 2
   ]
 
+  def named_status
+    case status
+    when 0
+      'Accepted'
+    when 1
+      'Rejected'
+    when 2
+      'Escalated'
+    end
+  end
+
   def self.create_for_submission(user_level, level_source_id, from_instructor = false)
     REVIEWS_PER_SUBMISSION.times do
       create!(

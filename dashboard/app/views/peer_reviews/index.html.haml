@@ -1,35 +1,43 @@
-%h1 Listing peer_reviews
+%h1 Peer Reviews
 
-%table
+%h2 Unassigned
+%table{style: 'width: 100%'}
   %thead
     %tr
       %th Submitter
       %th Reviewer
       %th From instructor
       %th Script
-      %th Level
-      %th Level source
-      %th Data
+      %th Review Comments
       %th Status
       %th
+  - @available.each do |peer_review|
+    %tr
+    %td= peer_review.submitter.email
+    %td= peer_review.reviewer.try(:email)
+    %td= peer_review.from_instructor
+    %td= peer_review.script.name
+    %td= peer_review.data
+    %td= peer_review.named_status
+    %td= link_to 'Show', peer_review
+
+%h2 Reviews I've Submitted for Peers
+%table{style: 'width: 100%'}
+  %thead
+    %tr
+      %th Submitter
+      %th Reviewer
+      %th From instructor
+      %th Script
+      %th Review Comments
+      %th Status
       %th
-      %th
-
-  %tbody
-    - @peer_reviews.each do |peer_review|
-      %tr
-        %td= peer_review.submitter.email
-        %td= peer_review.reviewer.try(:email)
-        %td= peer_review.from_instructor
-        %td= peer_review.script.name
-        %td= peer_review.level
-        %td= peer_review.level_source
-        %td= peer_review.data
-        %td= peer_review.status
-        %td= link_to 'Show', peer_review
-        %td= link_to 'Edit', edit_peer_review_path(peer_review)
-        %td= link_to 'Destroy', peer_review, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Peer review', new_peer_review_path
+  - @submitted.each do |peer_review|
+    %tr
+      %td= peer_review.submitter.email
+      %td= peer_review.reviewer.try(:email)
+      %td= peer_review.from_instructor
+      %td= peer_review.script.name
+      %td= peer_review.data
+      %td= peer_review.named_status
+      %td= link_to 'Show', peer_review
