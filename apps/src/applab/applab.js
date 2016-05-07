@@ -977,35 +977,9 @@ Applab.reset = function (first) {
  * Should call whenever its state/props would change.
  */
 Applab.renderVisualizationOverlay = function () {
-  var divApplab = document.getElementById('divApplab');
-  var designModeViz = document.getElementById('designModeViz');
-  var visualizationOverlay = document.getElementById('visualizationOverlay');
-  if (!divApplab || !designModeViz || !visualizationOverlay) {
-    return;
-  }
-
   // Enable crosshair cursor for divApplab and designModeViz
-  $(divApplab).toggleClass('withCrosshair', Applab.isCrosshairAllowed());
-  $(designModeViz).toggleClass('withCrosshair', true);
-
-  if (!Applab.visualizationOverlay_) {
-    /** @private {AppLabCrosshairOverlay} */
-    Applab.crosshairOverlay_ = new AppLabCrosshairOverlay();
-    /** @private {VisualizationOverlay} */
-    Applab.visualizationOverlay_ = new VisualizationOverlay(Applab.crosshairOverlay_);
-  }
-
-  // Tell the crosshair overlay whether we're in design mode
-  Applab.crosshairOverlay_.setInDesignMode(Applab.isInDesignMode());
-
-  // Calculate current visualization scale to pass to the overlay component.
-  var unscaledWidth = parseInt(visualizationOverlay.getAttribute('width'));
-  var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
-
-  Applab.visualizationOverlay_.render(visualizationOverlay, {
-    isCrosshairAllowed: Applab.isCrosshairAllowed(),
-    scale: scaledWidth / unscaledWidth
-  });
+  $('#divApplab').toggleClass('withCrosshair', Applab.isCrosshairAllowed());
+  $('#designModeViz').toggleClass('withCrosshair', true);
 };
 
 /**
