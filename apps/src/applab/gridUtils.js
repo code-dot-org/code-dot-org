@@ -31,8 +31,8 @@ module.exports.scaledDropPoint = function (draggedElement) {
   var top = (draggedOffset.top - boundingRect.top) / yScale;
 
   // snap top-left corner to nearest location in the grid
-  left = this.snapToGridSize(left);
-  top = this.snapToGridSize(top);
+  left = module.exports.snapToGridSize(left);
+  top = module.exports.snapToGridSize(top);
 
   return {
     left: left,
