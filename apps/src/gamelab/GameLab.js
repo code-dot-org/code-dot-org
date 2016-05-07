@@ -31,6 +31,7 @@ var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
+import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -263,11 +264,8 @@ GameLab.prototype.onIsRunningChange = function () {
  * this with React.
  */
 GameLab.prototype.setCrosshairCursorForPlaySpace = function () {
-  $('#divGameLab').toggleClass('withCrosshair', this.shouldUseCrosshairCursorInPlaySpace());
-};
-
-GameLab.prototype.shouldUseCrosshairCursorInPlaySpace = function () {
-  return !this.studioApp_.isRunning();
+  var showOverlays = shouldOverlaysBeVisible(this.studioApp_.reduxStore.getState());
+  $('#divGameLab').toggleClass('withCrosshair', showOverlays);
 };
 
 GameLab.prototype.loadAudio_ = function () {

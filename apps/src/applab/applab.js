@@ -57,6 +57,7 @@ var applabConstants = require('./constants');
 var consoleApi = require('../consoleApi');
 
 var BoardController = require('../makerlab/BoardController');
+import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -821,12 +822,9 @@ Applab.onIsRunningChange = function () {
  * this with React.
  */
 Applab.setCrosshairCursorForPlaySpace = function () {
-  $('#divApplab').toggleClass('withCrosshair', Applab.shouldUseCrosshairCursorInPlaySpace());
+  var showOverlays = shouldOverlaysBeVisible(studioApp.reduxStore.getState());
+  $('#divApplab').toggleClass('withCrosshair', showOverlays);
   $('#designModeViz').toggleClass('withCrosshair', true);
-};
-
-Applab.shouldUseCrosshairCursorInPlaySpace = function () {
-  return !Applab.isRunning();
 };
 
 /**

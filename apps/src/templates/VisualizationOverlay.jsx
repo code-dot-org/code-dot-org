@@ -99,5 +99,9 @@ let VisualizationOverlay = React.createClass({
   }
 });
 export default connect((state) => ({
-  areOverlaysVisible: !state.runState.isRunning
+  areOverlaysVisible: shouldOverlaysBeVisible(state)
 }))(VisualizationOverlay);
+
+export function shouldOverlaysBeVisible(state) {
+  return !(state.runState.isRunning || state.pageConstants.isShareView);
+}
