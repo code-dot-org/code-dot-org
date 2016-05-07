@@ -41,51 +41,6 @@ var CellEditor = React.createClass({
     });
 
     var spriteAttributes;
-    if (values.tileType === constants.SquareType.SPRITESTART) {
-      spriteAttributes = (
-        <div>
-          <label htmlFor="sprite">Sprite:</label>
-          <select name="sprite" value={values.sprite} onChange={this.handleChange}>
-            <option value="undefined">default</option>
-            {avatarList.map((sprite, i) => {
-              return <option key={sprite} value={i}>{sprite}</option>;
-            })}
-          </select>
-
-          <label htmlFor="speed">Speed: </label>
-          <select name="speed" value={values.speed} onChange={this.handleChange}>
-            <option value="undefined">default</option>
-            {Object.keys(constants.SpriteSpeed).map(type => {
-              return <option key={type} value={constants.SpriteSpeed[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
-            })}
-          </select>
-
-          <label htmlFor="size">Size: </label>
-          <select name="size" value={values.size} onChange={this.handleChange}>
-            <option value="undefined">default</option>
-            {Object.keys(constants.SpriteSize).map(type => {
-              return <option key={type} value={constants.SpriteSize[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
-            })}
-          </select>
-
-          <label htmlFor="direction">Direction: </label>
-          <select name="direction" value={values.direction} onChange={this.handleChange}>
-            <option value="undefined">default</option>
-            {Object.keys(constants.Direction).map(type => {
-              return <option key={type} value={constants.Direction[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
-            })}
-          </select>
-
-          <label htmlFor="emotion">Emotion: </label>
-          <select name="emotion" value={values.emotion} onChange={this.handleChange}>
-            <option value="undefined">default</option>
-            {Object.keys(constants.Emotions).map(type => {
-              return <option key={type} value={constants.Emotions[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
-            })}
-          </select>
-        </div>
-      );
-    }
 
     return (
       <form className="span4 offset1">
@@ -100,7 +55,49 @@ var CellEditor = React.createClass({
           <option value={constants.SquareType.SPRITESTART}>sprite</option>
         </select>
 
-        {spriteAttributes}
+        {(values.tileType === constants.SquareType.SPRITESTART) &&
+          <div>
+            <label htmlFor="sprite">Sprite:</label>
+            <select name="sprite" value={values.sprite} onChange={this.handleChange}>
+              <option value="undefined">default</option>
+              {avatarList.map((sprite, i) => {
+                return <option key={sprite} value={i}>{sprite}</option>;
+              })}
+            </select>
+
+            <label htmlFor="speed">Speed: </label>
+            <select name="speed" value={values.speed} onChange={this.handleChange}>
+              <option value="undefined">default</option>
+              {Object.keys(constants.SpriteSpeed).map(type => {
+                return <option key={type} value={constants.SpriteSpeed[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
+              })}
+            </select>
+
+            <label htmlFor="size">Size: </label>
+            <select name="size" value={values.size} onChange={this.handleChange}>
+              <option value="undefined">default</option>
+              {Object.keys(constants.SpriteSize).map(type => {
+                return <option key={type} value={constants.SpriteSize[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
+              })}
+            </select>
+
+            <label htmlFor="direction">Direction: </label>
+            <select name="direction" value={values.direction} onChange={this.handleChange}>
+              <option value="undefined">default</option>
+              {Object.keys(constants.Direction).map(type => {
+                return <option key={type} value={constants.Direction[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
+              })}
+            </select>
+
+            <label htmlFor="emotion">Emotion: </label>
+            <select name="emotion" value={values.emotion} onChange={this.handleChange}>
+              <option value="undefined">default</option>
+              {Object.keys(constants.Emotions).map(type => {
+                return <option key={type} value={constants.Emotions[type]}>{type.replace(/_/g, ' ').toLowerCase()}</option>;
+              })}
+            </select>
+          </div>
+        }
 
       </form>
     );

@@ -3,10 +3,11 @@
 var mazeUtils = require('@cdo/apps/maze/mazeUtils');
 var studioConstants = require('@cdo/apps/studio/constants');
 
-var studioTiles = {};
-studioTiles[studioConstants.SquareType.OPEN] = 'none';
-studioTiles[studioConstants.SquareType.SPRITEFINISH] = 'goal';
-studioTiles[studioConstants.SquareType.SPRITESTART] = 'sprite';
+var studioTiles = {
+  [studioConstants.SquareType.OPEN]: 'none',
+  [studioConstants.SquareType.SPRITEFINISH]: 'goal',
+  [studioConstants.SquareType.SPRITESTART]: 'sprite',
+};
 
 var studioAvatarList = ["dog", "cat", "penguin", "dinosaur", "octopus",
     "witch", "bat", "bird", "dragon", "squirrel", "wizard", "alien",
