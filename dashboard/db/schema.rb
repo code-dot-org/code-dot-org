@@ -380,7 +380,8 @@ ActiveRecord::Schema.define(version: 20160505193334) do
   add_index "pd_workshops_facilitators", ["user_id"], name: "index_pd_workshops_facilitators_on_user_id", using: :btree
 
   create_table "peer_reviews", force: :cascade do |t|
-    t.integer  "user_id",         limit: 4
+    t.integer  "submitter_id",    limit: 4
+    t.integer  "reviewer_id",     limit: 4
     t.boolean  "from_instructor",               default: false, null: false
     t.integer  "script_id",       limit: 4,                     null: false
     t.integer  "level_id",        limit: 4,                     null: false
@@ -392,9 +393,10 @@ ActiveRecord::Schema.define(version: 20160505193334) do
   end
 
   add_index "peer_reviews", ["level_id"], name: "index_peer_reviews_on_level_id", using: :btree
-  add_index "peer_reviews", ["level_source_id"], name: "index_peer_reviews_on_level_source_id", using: :btree
+  add_index "peer_reviews", ["level_source_id"], name: "fk_rails_afcb8b7aac", using: :btree
+  add_index "peer_reviews", ["reviewer_id"], name: "index_peer_reviews_on_reviewer_id", using: :btree
   add_index "peer_reviews", ["script_id"], name: "index_peer_reviews_on_script_id", using: :btree
-  add_index "peer_reviews", ["user_id"], name: "index_peer_reviews_on_user_id", using: :btree
+  add_index "peer_reviews", ["submitter_id"], name: "index_peer_reviews_on_submitter_id", using: :btree
 
   create_table "plc_course_units", force: :cascade do |t|
     t.integer  "plc_course_id",    limit: 4
@@ -914,10 +916,10 @@ ActiveRecord::Schema.define(version: 20160505193334) do
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
-  add_foreign_key "peer_reviews", "level_sources"
   add_foreign_key "peer_reviews", "levels"
   add_foreign_key "peer_reviews", "scripts"
-  add_foreign_key "peer_reviews", "users"
+  add_foreign_key "peer_reviews", "users", column: "reviewer_id"
+  add_foreign_key "peer_reviews", "users", column: "submitter_id"
   add_foreign_key "plc_course_units", "scripts"
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "plc_tasks", "script_levels"
