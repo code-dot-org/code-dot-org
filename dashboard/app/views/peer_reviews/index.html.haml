@@ -3,7 +3,8 @@
 %table
   %thead
     %tr
-      %th User
+      %th Submitter
+      %th Reviewer
       %th From instructor
       %th Script
       %th Level
@@ -17,9 +18,10 @@
   %tbody
     - @peer_reviews.each do |peer_review|
       %tr
-        %td= peer_review.user
+        %td= peer_review.submitter.email
+        %td= peer_review.reviewer.try(:email)
         %td= peer_review.from_instructor
-        %td= peer_review.script
+        %td= peer_review.script.name
         %td= peer_review.level
         %td= peer_review.level_source
         %td= peer_review.data
