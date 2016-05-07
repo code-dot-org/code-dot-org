@@ -31,6 +31,12 @@ class PeerReview < ActiveRecord::Base
 
   REVIEWS_PER_SUBMISSION = 2
 
+  VALID_STATUSES = [
+    ACCEPTED = 0,
+    REJECTED = 1,
+    ESCALATED = 2
+  ]
+
   def self.create_for_submission(user_level, level_source_id, from_instructor = false)
     REVIEWS_PER_SUBMISSION.times do
       create!(

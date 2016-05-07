@@ -1662,7 +1662,7 @@ a.download-video {
   overflow: hidden;
 }
 
-.text-match, .free-response {
+.text-match, .free-response, .peer-review {
   p {
     font-size: 16px;
     line-height: 24px;
@@ -1674,6 +1674,10 @@ a.download-video {
     // to be selectable.
     @include selectable;
   }
+}
+
+.peer-review input[type=radio] {
+  margin: 0 3px 3px 5px;
 }
 
 .external,

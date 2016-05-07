@@ -6,6 +6,9 @@ class PeerReviewsController < ApplicationController
   end
 
   def show
+    @level = @peer_review.level
+    @last_attempt = @peer_review.level_source.data
+    view_options readonly_workspace: true, full_width: true
   end
 
   private
