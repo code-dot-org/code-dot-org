@@ -38,7 +38,7 @@
 - else
   = render partial: 'levels/blockly'
 
-- if @peer_reviews.try(:size)
+- if @peer_reviews.present?
   = render partial: 'peer_reviews/viewer'
 
 - if tracking_pixel_enabled && @script.try(:hoc?) && (@script_level.try(:chapter) == 1 || @script_level.try(:position) == 1)

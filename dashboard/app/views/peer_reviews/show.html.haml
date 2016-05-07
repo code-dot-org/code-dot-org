@@ -2,7 +2,7 @@
   %h1 Peer Review
   %p Please review the peer submission in the grey box below.
 
-  .submitted_readonly
+  .submitted_readonly{style: 'padding: 8px;'}
     %script{src: asset_path('js/initApp/initApp.js')}
     :javascript
       var appOptions = #{app_options.to_json};

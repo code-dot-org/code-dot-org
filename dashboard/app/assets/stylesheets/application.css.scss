@@ -1681,10 +1681,17 @@ a.download-video {
 }
 
 .peer-review-content {
+  background: #fff;
   border: 1px solid $light_gray;
   border-radius: 5px;
   padding: 10px;
-
+  margin-bottom: 1em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .peer-review-title {
+    margin: 0;
+  }
   .peer-review-status {
     font-size: 1em;
   }

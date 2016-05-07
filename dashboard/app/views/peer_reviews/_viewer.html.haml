@@ -2,7 +2,7 @@
   %p Feedback:
   - @peer_reviews.each do |peer_review|
     .peer-review-content
-      %p
+      %p.peer-review-title
         %strong= peer_review.from_instructor ? 'Instructor Feedback' : 'Peer Feedback'
         = "\u2022 added #{time_ago_in_words(peer_review.updated_at)} ago"
       %p.peer-review-status= peer_review.named_status_long
