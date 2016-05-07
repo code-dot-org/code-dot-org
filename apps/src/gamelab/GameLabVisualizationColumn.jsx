@@ -6,8 +6,8 @@ var ArrowButtons = require('../templates/ArrowButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
 var gameLabConstants = require('./constants');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var VisualizationOverlay = require('../templates/VizOverlay');
-var CrosshairOverlay = require('../templates/CHOverlay');
+var VisualizationOverlay = require('../templates/VisualizationOverlay');
+var CrosshairOverlay = require('../templates/CrosshairOverlay');
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 
 var GAME_WIDTH = gameLabConstants.GAME_WIDTH;

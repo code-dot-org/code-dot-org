@@ -1,8 +1,8 @@
 var applabConstants = require('./constants');
 var commonStyles = require('../commonStyles');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-import VisualizationOverlay from '../templates/VizOverlay';
-import AppLabCrosshairOverlay from './AppLabCHOverlay';
+import VisualizationOverlay from '../templates/VisualizationOverlay';
+import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
 import AppLabTooltipOverlay from './AppLabTooltipOverlay';
 
 var Visualization = React.createClass({
