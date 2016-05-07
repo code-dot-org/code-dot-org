@@ -189,16 +189,14 @@ var consoleLogger = null;
 
 function loadLevel() {
   // Load maps.
-  Studio.map = level.map.map(function (row) {
-    return row.map(function (cell) {
-      // Each cell should be either an integer (in which case we are
-      // dealing with the legacy format and should treat that value as
-      // the tileType for the cell) or an object (in which case we are
-      // dealing with the new format and should treat that value as a
-      // serialization of the cell).
-      return isNaN(parseInt(cell)) ? studioCell.deserialize(cell) : new studioCell(cell);
-    });
-  });
+  Studio.map = level.map.map(row => row.map(cell => (
+    // Each cell should be either an integer (in which case we are
+    // dealing with the legacy format and should treat that value as
+    // the tileType for the cell) or an object (in which case we are
+    // dealing with the new format and should treat that value as a
+    // serialization of the cell).
+    isNaN(parseInt(cell)) ? studioCell.deserialize(cell) : new studioCell(cell)
+  )));
   Studio.wallMap = null;  // The map name actually being used.
   Studio.wallMapRequested = null; // The map name requested by the caller.
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
