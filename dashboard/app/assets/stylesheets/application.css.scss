@@ -1680,6 +1680,16 @@ a.download-video {
   margin: 0 3px 3px 5px;
 }
 
+.peer-review-content {
+  border: 1px solid $light_gray;
+  border-radius: 5px;
+  padding: 10px;
+
+  .peer-review-status {
+    font-size: 1em;
+  }
+}
+
 .external,
 .text-match,
 .free-response,

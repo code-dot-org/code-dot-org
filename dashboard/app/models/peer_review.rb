@@ -48,6 +48,17 @@ class PeerReview < ActiveRecord::Base
     end
   end
 
+  def named_status_long
+    case status
+    when 0
+      'Yes, this submission meets the requirements'
+    when 1
+      'No, this submission does not meet the requirements'
+    when 2
+      'I would like an instructor to review this submission'
+    end
+  end
+
   def self.create_for_submission(user_level, level_source_id, from_instructor = false)
     REVIEWS_PER_SUBMISSION.times do
       create!(
