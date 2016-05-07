@@ -1711,6 +1711,13 @@ StudioApp.prototype.runButtonClickWrapper = function (callback) {
     $(window).trigger('run_button_pressed');
     $(window).trigger('appModeChanged');
   }
+
+  // inform Blockly that the run button has been pressed
+  if (this.isUsingBlockly()) {
+    Blockly.mainBlockSpace.getCanvas()
+        .dispatchEvent(new Event(Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED));
+  }
+
   callback();
 };
 
