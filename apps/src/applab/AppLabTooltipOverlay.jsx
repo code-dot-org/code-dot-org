@@ -5,6 +5,7 @@ import elementUtils from './designElements/elementUtils';
 import { scaledDropPoint } from './gridUtils';
 import { connect } from 'react-redux';
 import { ApplabInterfaceMode } from './constants';
+import { ellipsify } from '../utils';
 
 var ELEMENT_ID_TEXT_MAX_CHAR = 12;
 
@@ -144,17 +145,4 @@ function getAssociatedControl(resizeHandleElement) {
   }
 
   return null;
-}
-
-/**
- * If the string is too long, truncate it and append an ellipsis.
- * @param {string} inputText
- * @param {number} maxLength
- * @returns {string}
- */
-function ellipsify(inputText, maxLength) {
-  if (inputText && inputText.length > maxLength) {
-    return inputText.substr(0, maxLength - 3) + "...";
-  }
-  return inputText || '';
 }

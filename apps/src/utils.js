@@ -418,3 +418,16 @@ exports.makeEnum = function () {
   }
   return result;
 };
+
+/**
+ * If the string is too long, truncate it and append an ellipsis.
+ * @param {string} inputText
+ * @param {number} maxLength
+ * @returns {string}
+ */
+exports.ellipsify = function (inputText, maxLength) {
+  if (inputText && inputText.length > maxLength) {
+    return inputText.substr(0, maxLength - 3) + "...";
+  }
+  return inputText || '';
+};
