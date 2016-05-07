@@ -5,8 +5,8 @@ unless dry_run
   update_certs.call unless cdn_enabled
 end
 
-# Since DesiredCapacity can change dynamically, use the current value
-# in the template so it doesn't get reset to the original value on every stack update.
+# Since instance count can change dynamically, use the current value
+# in the template for zero-downtime rolling updates.
 autoscaling = Aws::AutoScaling::Client.new
 asg = autoscaling.describe_auto_scaling_groups.auto_scaling_groups.find do |group|
   tags = group.tags.map{|tag| [tag.key, tag.value]}.to_h
@@ -55,13 +55,13 @@ Resources:
     Type: AWS::AutoScaling::AutoScalingGroup
     CreationPolicy:
       ResourceSignal:
-        Timeout: PT60M
+        Timeout: PT25M
         Count: 2
     UpdatePolicy:
       AutoScalingRollingUpdate:
         MaxBatchSize: 12
         MinInstancesInService: <%=autoscaling_count%>
-        PauseTime: PT60M
+        PauseTime: PT25M
         WaitOnResourceSignals: true
         SuspendProcesses:
           - AlarmNotification
@@ -74,9 +74,9 @@ Resources:
     Properties:
       VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: LaunchConfig}
-      MinSize: 0
+      MinSize: 1
       MaxSize: 12
-      DesiredCapacity: <%=autoscaling_count%>
+      DesiredCapacity: 2
       HealthCheckType: ELB
       HealthCheckGracePeriod: 2000
       LoadBalancerNames: [Ref: LoadBalancer]
