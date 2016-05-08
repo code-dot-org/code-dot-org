@@ -41,11 +41,6 @@
       %h4{style: "margin-left: 15px;"} Search for your district
       #school-districts.col-xs-6
         %input.form-control{name: "school_district_s", type: "text", required: false}
-          -#
-            %option{value: "nil", selected: true}
-            - get_all_school_districts_in_state('AL').each do |district_id, attributes|
-              %option{value: district_id}= "#{attributes[:name].titleize} (#{attributes[:city].titleize})"
-            %option{value: "other"} Other
 
     %div{style: "clear: both; margin-top: 20px;"}
       .form-group.col-xs-4

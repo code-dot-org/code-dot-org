@@ -4,8 +4,7 @@ var selected_state;
 $(function () {
   var doneLoading = false;
 
-  function setupDistrictDropdown(stateCode)
-  {
+  function setupDistrictDropdown(stateCode) {
     doneLoading = false;
 
     var inputElement = $('#school-districts input');
@@ -15,42 +14,26 @@ $(function () {
     }
 
     selectize = inputElement.selectize({
-      //valueField: 'url',
-      //labelField: 'name',
-      //searchField: 'name',
-      /*plugins: ['fast_click'],
-      diacritics: false,
-      multiple: false,
-      allowEmptyOption: false, */
-      maxItems: 1,
-      preload: true,
-      load: function(query, callback) {
-        console.log(query);
-        console.log("in load");
-        if (!query.length || doneLoading) {
-          return callback();
-        }
+      maxItems: 1
+    });
 
-        $.ajax({
-          url: "/dashboardapi/v1/school-districts/" + stateCode,
-          type: 'GET',
-          error: function() {
-            callback();
-          },
-          success: function(res) {
-            var districts = [];
+    inputElement[0].selectize.load(function (callback) {
+      $.ajax({
+        url: "/dashboardapi/v1/school-districts/" + stateCode,
+        type: 'GET',
+        error: function () {
+          callback();
+        },
+        success: function (res) {
+          var districts = [];
 
-            for (var i = 0; i < res.object.length; i++) {
-              var entry = res.object[i];
-              districts.push({value: entry.id, text: entry.name});
-            }
-            callback(districts);
+          for (var i = 0; i < res.object.length; i++) {
+            var entry = res.object[i];
+            districts.push({value: entry.id, text: entry.name});
           }
-        });
-
-        //callback([{"value": "a value", "text": "a text"}]);
-        doneLoading = true;
-      }
+          callback(districts);
+        }
+      });
     });
   }
 
