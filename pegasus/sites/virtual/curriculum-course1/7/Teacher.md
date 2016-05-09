@@ -24,10 +24,6 @@ In this lesson students will help their bees to collect nectar from flowers and 
 
 [Bee: Sequence](#Activity)
 
-### **Extended Learning**
-
-[Extension Activities](#Extended)
-
 
 [/summary]
 
@@ -72,13 +68,6 @@ Point out to students that each flower and honeycomb has a little number next to
 ![](binaryphoto.png) -->
 
 
-[together]
-
-## Extended Learning 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
-
-
-[/together]
 
 [standards]
 
