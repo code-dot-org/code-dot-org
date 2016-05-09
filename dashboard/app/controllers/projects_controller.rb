@@ -77,16 +77,16 @@ class ProjectsController < ApplicationController
 
   def show
     return if redirect_applab_under_13(@level)
-    embed = params[:embed] == true
-    sharing = embed || params[:share] == true
+    iframe_embed = params[:iframe_embed] == true
+    sharing = iframe_embed || params[:share] == true
     readonly = params[:readonly] == true
-    if embed
+    if iframe_embed
       response.headers['X-Frame-Options'] = 'ALLOWALL'
     end
     level_view_options(
         hide_source: sharing,
         share: sharing,
-        embed: embed,
+        iframe_embed: iframe_embed,
     )
     # for sharing pages, the app will display the footer inside the playspace instead
     no_footer = sharing
