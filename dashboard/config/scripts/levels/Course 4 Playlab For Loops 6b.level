@@ -40,8 +40,7 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "callout_json": "[]",
-    "authored_hints": "[]",
-    "maze_data": null
+    "authored_hints": "[]"
   },
   "published": true,
   "notes": "",

@@ -27,6 +27,14 @@ def open_url(url)
   puts url
 end
 
+wait_for "between 10AM and 11:30AM (Pacific) to morning DTT"
+
+should_i "morning DTT" do
+  open_url 'https://github.com/code-dot-org/code-dot-org/compare/test...staging'
+end
+
+wait_for "morning DTT to complete, re-run/investigate failures, and update test room topic to that commit # green"
+
 should_i "commit content changes from staging" do
   puts <<EOS
 Follow the prompts given by the content-push script. If you need to do something fancier (or if the changed files do not "look ok" when it asks you), log in to staging and hand-craft the commit.
