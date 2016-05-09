@@ -1,0 +1,1035 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="In this lesson, students explore more deeply how communication between multiple computers can work over the Internet. They do this by playing a simplified game of Battleship, in which the first game is played unplugged, in their table groups, and the second game is played using the Internet Simulator, so that multiple students can connect to each other and see each other’s messages. Students must devise a messaging protocol that makes it clear who is sending the message and who the intended recipient is.">
+    <title>The Need for Addressing</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/unit1/"><span class="h2">Unit</span><span class="h1">1</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit1/ch1" data-pdf-link="#unit1chapter1">
+                Ch. 1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/1" data-pdf-link="#unit1lesson1">
+                1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/2" data-pdf-link="#unit1lesson2">
+                2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/3" data-pdf-link="#unit1lesson3">
+                3
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/4" data-pdf-link="#unit1lesson4">
+                4
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/5" data-pdf-link="#unit1lesson5">
+                5
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/6" data-pdf-link="#unit1lesson6">
+                6
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/7" data-pdf-link="#unit1lesson7">
+                7
+            </a>
+            </div>
+            
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit1/ch2" data-pdf-link="#unit1chapter2">
+                Ch. 2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/8" data-pdf-link="#unit1lesson8">
+                8
+            </a>
+            </div>
+            
+                
+                    
+                        <div class="lesson current">
+                    
+                
+            <a href="/educate/csp_test/unit1/9" data-pdf-link="#unit1lesson9">
+                9
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/10" data-pdf-link="#unit1lesson10">
+                10
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/11" data-pdf-link="#unit1lesson11">
+                11
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/12" data-pdf-link="#unit1lesson12">
+                12
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/13" data-pdf-link="#unit1lesson13">
+                13
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/14" data-pdf-link="#unit1lesson14">
+                14
+            </a>
+            </div>
+            
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit1lesson9">
+        
+            
+                <h1>Lesson 9: The Need for Addressing</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+                
+                Group Problem Solving
+            
+                | 
+                Internet Simulator
+            
+                | 
+                Unplugged
+            
+                | 
+                Widget
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>In this lesson, students explore more deeply how communication between multiple computers can work over the Internet. They do this by playing a simplified game of Battleship, in which the first game is played unplugged, in their table groups, and the second game is played using the Internet Simulator, so that multiple students can connect to each other and see each other’s messages. Students must devise a messaging protocol that makes it clear who is sending the message and who the intended recipient is.</p>
+<p>Students then devise a <em>binary protocol</em> for playing this game which will entail developing an addressing system for players, as a well as a formal packet structure for transmitting data about the state of the game.</p>
+<p><strong>NOTE</strong>: this is a large lesson that will likely need to span 2 days of class.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>This lesson builds up to students learning about the “Internet Protocol” addressing system, commonly known as <span>IP Addresses</span>.</p>
+<p>Up to this point in the course, the Internet Simulator has only assumed point-to-point communication.  The “protocols” students were inventing mostly had to do with encoding information in binary, rather than also encoding communication information required for successful delivery of the message.</p>
+<p>The lesson mimics a real problem that designers of the internet had to solve. Many computers are connected together by networks. So if a computer sends some bits out, those bits pass through many computers. How does a computer know who those bits are for?  If a response is necessary, how does it send it back?  This is a complicated question, but the first part of the answer is that you need an addressing system, and some kind of fixed structure for messages that everyone agrees on (a protocol) so messages can be interpreted properly.  (We’ll get to routing later).</p>
+<p>The Internet Simulator for this lesson is setup to “broadcast” every message to every person in the group. Since everyone receives any bits that were sent by anyone else, a method for identifying the intended sender and receiver of the message is needed. Students will invent a protocol for addressing messages.</p>
+<p>Many network systems, such as local ethernet and WiFi, rely on addressing schemes to make sure bits are received by the correct computer based on address and for other computers to simply ignore messages not intended for them. </p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocthe-need-for-addressing">
+                
+                    <h3>Getting Started (20 mins)</h3>
+                
+                    <h3>Activity: Silent Broadcast Battleship (25 mins)</h3>
+                
+                    <h3>Activity 2: Invent a Binary Protocol for Battleship (20 mins)</h3>
+                
+                    <h3>Wrap-up</h3>
+                
+                    <h3>Assessment</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Recall that browsing the Internet entails computers sending each other requests and sending back data to satisfy those requests.</li>
+                    
+                        <li>Explain why messages need to contain addressing information (sender/recipient identification).</li>
+                    
+                        <li>Invent an informal addressing protocol for use in the Battleship game.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit2/lesson2" target="_blank">Forum</a></li>
+<li>Copies of the Battleship game board for each student</li>
+<li>Poster paper or methods/materials for students to present</li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Teacher</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='http://youtu.be/3NSM2n_ufCU' target='_blank' class='print_link'>U2L02 - Teaching Tips & Tricks Video</a> - Video (<a href='https://www.dropbox.com/s/eisfbqdkswa0mc6/CSP-tips%26tricks-U2L2-Netsim-50mb.mp4?dl=0' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://drive.google.com/open?id=1oKi5_35xB-6Np5stnbGq7MCKnRZVC5qCVUQmAJByrTI' target='_blank' class='print_link'>Broadcast Battleship Game Board</a> - Activity Guide (<a href='https://drive.google.com/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://drive.google.com/open?id=1r1r1JScAThVhJog9VJ-gbQx0zyxT3dXFLMEkp6m5Awg' target='_blank' class='print_link'>Broadcast Battleship Rules</a> - Activity Guide (<a href='https://drive.google.com/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2' target='_blank' class='print_link'>CSP Unit 2</a> - Code Studio
+                                </li>
+                            
+                                <li>
+                                    <a href='https://youtu.be/x_YTEBRnR1U' target='_blank' class='print_link'>Internet Simulator - Part 3</a> - Video (<a href='http://videos.code.org/2015/csp/internetsimulator_3.mp4' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://drive.google.com/open?id=1hq1UNK1Q4K0LHqmu0_yeO0a0NQKHzC8W--Q0QaISHVI' target='_blank' class='print_link'>Invent a Binary Protocol for Battleship</a> - Activity Guide (<a href='https://drive.google.com/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://drive.google.com/open?id=1YSWsBrwuzqG0TzVXyH7Boi7XUrlPuslHxwZy0vVVjZY' target='_blank' class='print_link'>IP and DNS Video Worksheet (Optional)</a> - Video Worksheet  (<a href='https://drive.google.com/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+                <h2>Vocabulary</h2>
+                <ul>
+                    
+                        <li><strong>IP Address</strong> - A number assigned to any item that is connected to the Internet.</li>
+                    
+                        <li><strong>Packets</strong> - Small chunks of information that have been carefully formed from larger chunks of information.</li>
+                    
+                        <li><strong>Protocol</strong> - A set of rules governing the exchange or transmission of data between devices.</li>
+                    
+                </ul>
+            
+
+        </div>
+    </div>
+
+    <div id="the-need-for-addressingcontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started (20 mins)</h2>
+                    <div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Remarks</p>
+<div></div>
+<div>
+<p>So far we have only solved Internet problems when you are connected to one other person (so-called “point-to-point” communication).  Obviously, the Internet is bigger than that, and today we’re going to look at problems that involve multiple people.</p>
+</div>
+<div>
+<h3 id="introduce-broadcast-battleship">Introduce “Broadcast Battleship”</h3>
+</div>
+<div>
+<ul>
+<li>We will start by playing a game that simulates some issues that arise when constructing the internet.</li>
+<li>We will play a crazy game of Battleship where instead of playing against one other person you will <strong>play multiple games against multiple other people simultaneously</strong> –  We call this “Broadcast Battleship”</li>
+<li>In our version today, you will play in <strong>groups of 3</strong> (4 is OK)</li>
+<li>To make it easier to track, we’ve also simplified the playing board to just a <strong>3x3 grid</strong> (instead of the classic 10x10)</li>
+<li>And we’ll just play with paper and pencil.</li>
+</ul>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_battleshipRules"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div></div>
+<div>
+<p>While every student will need a game board to play, you may <strong>not need to distribute</strong> the <a class="resource" href="https://drive.google.com/open?id=1r1r1JScAThVhJog9VJ-gbQx0zyxT3dXFLMEkp6m5Awg" target="_blank">Broadcast Battleship Rules</a>  if students already know the game of Battleship.  You may also choose to:
+<em> Project the rules on a screen at the front of the room
+</em> Have students read/review a digital copy of the rules
+* Do a brief demonstration with you and a few students.</p>
+</div>
+<div>
+<p>You might ask students: Who has played Battleship? How does the game work? What’s the object of the game? What are the rules? </p>
+</div>
+</div>
+<div class="admonition discussion">
+<p class="admonition-title" id="discussion_None"><i class="glyphicon glyphicon-comment"></i>Activity Goal</p>
+<div>
+<p><strong>Why Battleship?</strong>  </p>
+</div>
+<div>
+<p>Teachers may want to substitute other games for battleship in this activity for a variety of reasons.  However, if you do that be aware that battleship was chosen because it has several properties that force concepts of internet protocols to come out.  Battleship has a relatively fixed size message length, a need to encode several different pieces of information (coordinates), to and from addressing, and a verification message (hit or miss).</p>
+</div>
+<div>
+<p><strong>Example Game Board</strong></p>
+</div>
+<div>
+<p>Below is an example game board included in <a class="resource" href="https://drive.google.com/open?id=1r1r1JScAThVhJog9VJ-gbQx0zyxT3dXFLMEkp6m5Awg" target="_blank">Broadcast Battleship Rules</a> (click to enlarge)</p>
+</div>
+<div>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L02-broadcastBattleshipBoard.png"><img alt="" src="https://code.org/educate/docs/csp/U2L02-broadcastBattleshipBoard.png" style="width: 350px;"></a></p>
+</div>
+</div>
+<h3 id="battleship-setup">Battleship Setup</h3>
+<ul>
+<li>Arrange students in table groups of 3. (A group of 4 is OK, but not recommended.)</li>
+</ul>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_battleshipRules"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<ul>
+<li>(Optional) Distribute <a class="resource" href="https://drive.google.com/open?id=1r1r1JScAThVhJog9VJ-gbQx0zyxT3dXFLMEkp6m5Awg" target="_blank">Broadcast Battleship Rules</a> to each student. </li>
+<li>Distribute <a class="resource" href="https://drive.google.com/open?id=1oKi5_35xB-6Np5stnbGq7MCKnRZVC5qCVUQmAJByrTI" target="_blank">Broadcast Battleship Game Board</a> to each student.</li>
+<li>Review the rules for the multi-player version, and answer any logistical questions.</li>
+</ul>
+<div class="admonition guide">
+<p class="admonition-title" id="guide_None"><i class="fa fa-pencil-square-o"></i>Play Broadcast Battleship - Round 1 - unlplugged</p>
+<div></div>
+</div>
+<div class="guide">
+
+<ul>
+<li>
+<p><strong>Start Game Unplugged.</strong> </p>
+</li>
+<li>
+<p>Give students a couple minutes to play the game. </p>
+</li>
+<li>
+<p>Students might not finish the game, but students should get a good feel for how the game works and what the mechanics of the game are.</p>
+</li>
+<li>
+<p><strong>Pause the Game After 5 minutes</strong> </p>
+</li>
+<li>After a couple minutes interrupt the game</li>
+<li>Assure  students they’ll return to playing in a minute <ul>
+<li>they record their current spot in the game if necessary to pick up where they left off</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Transitional Comment</p>
+<div>
+<ul>
+<li>It seems that most of you have figured out a way to play battleship with your group. </li>
+<li>You will get to continue to play your game in a few minutes. </li>
+<li>We are going to add a <strong>new challenge: Your team is going to have to play Battleship <em>without talking</em>.</strong> </li>
+<li>You will only be able to <strong>use the Internet Simulator to communicate</strong></li>
+</ul>
+</div>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity: Silent Broadcast Battleship (25 mins)</h2>
+                    <div class="admonition tip">
+<p class="admonition-title" id="tip_broadcast"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div>
+<p>The first time students visit Code Studio for this lesson a <strong>tutorial video</strong> will pop up to shows how this works.</p>
+</div>
+<div>
+<p>You may want to do one of the following:</p>
+</div>
+<div>
+<ul>
+<li>show this video to the whole class</li>
+<li>have students watch it individually</li>
+<li>have students skip the video and demonstrate the behavior to everyone</li>
+</ul>
+</div>
+</div>
+<h3 id="introduce-new-version-of-internet-simulator-broadcast">Introduce new version of Internet Simulator (Broadcast)</h3>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/code-studio-icon.png"><img alt="" src="https://code.org/educate/docs/csp/code-studio-icon.png"></a> Transition to the Internet Simulator found in Code Studio for this lesson</p>
+<ul>
+<li>Students log in to Code Studio, and navigate to the lesson: “The Need for Addressing”</li>
+</ul>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_broadcast"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<p>Highlight the <strong>differences in the new version:</strong></p>
+<ol>
+<li>You connect to a “Room” with other people, instead of an individual
+    partner.  </li>
+<li>Every message that is sent gets <strong>broadcast</strong> to everyone
+    in the “room”, including you!</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_notalking"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div></div>
+<div>
+<ul>
+<li>You will probably need to <strong>enforce the NO TALKING rule</strong></li>
+<li>Without talking, communication protocols will organically come out as students try to play the game in this new mode of the Internet Simulator.</li>
+<li>Assure students that they <em>will get a chance to talk and collaborate</em> before trying again.</li>
+</ul>
+</div>
+</div>
+<div class="admonition guide">
+<p class="admonition-title" id="guide_None"><i class="fa fa-pencil-square-o"></i>Continue the game on the Internet Simulator</p>
+<div></div>
+</div>
+<div class="guide">
+<ul>
+<li>Give students 5-10 minutes to finish their game using the Internet Simulator.        </li>
+</ul>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_notalking"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<ul>
+<li>Enforce the <strong>no-talking rule</strong> </li>
+<li>Students should quickly discover that they need to “address” their messages.   </li>
+<li>That is, they need to indicate the sender (themselves) and the intended recipient somewhere in the message, in order for the game to work. </li>
+<li>
+<p>Different tables (and different player pairs) may invent different ways of doing this. Some examples: </p>
+</li>
+<li>
+<p>“Hi, Tom, it’s Mary.” </p>
+</li>
+<li>“Mary to Tom.” </li>
+<li>“Mary → Tom” </li>
+<li>“To Tom, From Mary”</li>
+<li>“Mary is asking Tom right now”, etc.</li>
+</ul>
+<p>Some methods may be more informal, or buried in content of the message: </p>
+<ul>
+<li>“Tom, B4. This is Mary, by the way.” </li>
+<li>“That B4 message was for Tom. It’s Mary.” </li>
+<li>“I just sent that message. This is Tom. No, the other message.”</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_protocol"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div></div>
+<div>
+<p>At this point, playing the game is less important than moving towards developing a clear and efficient protocol. </p>
+</div>
+<div>
+<p>Students might notice that a concise protocol makes it harder for them as humans to play the game, but remind them that they are the computers in this activity. </p>
+</div>
+<div>
+<p>Why would it be important to keep the message short and standardized? Make a connection to the protocols from previous lessons: <em>Sending Numbers</em> and <em>Sending Text</em>.</p>
+</div>
+</div>
+<h3 id="refine-and-reflect">Refine and Reflect.</h3>
+<p><strong>After the 5-10 minutes</strong> allow groups to talk.  They should discuss standardizing their protocol for sending messages. They should consider:</p>
+<ul>
+<li>What protocol have they been using? Did they have a protocol at all?</li>
+<li>How can they standardize their communication?</li>
+<li>How do they make their message as clear as possible?</li>
+<li>How do they make their message as efficient (short/easy to interpret) as possible? </li>
+</ul>
+<h3 id="play-game-round-2">Play Game. Round 2.</h3>
+<p>After groups have had a chance to coordinate and refine their protocols, give them a chance to try it out on a fresh game.</p>
+<ul>
+<li>Have students return to the Internet Simulator, start a new game and test out their protocol.</li>
+<li>Remind them of the No Talking rule.</li>
+<li>If necessary, distribute a clean copy of <a href="Resource not found" target="_blank">Activity Guide - Battleship Rules and Game Board</a> for use in this round.</li>
+</ul>
+<p><strong>After 5 minutes</strong> or enough time to try out their new protocol, transition to the next activity.</p>
+</div>
+<p><strong> (Optional) Individual Reflection</strong></p>
+<ul>
+<li>
+<p>Before moving on to the group whip around, have students complete the reflection question in Code Studio or in their journal:</p>
+<ul>
+<li>How did your group decide upon a system for sending messages in the Battleship simulator?</li>
+<li>Were there disagreements or problems?</li>
+<li>How were they resolved?</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity 2: Invent a Binary Protocol for Battleship (20 mins)</h2>
+                    <div class="guide">
+<div class="admonition tip">
+<p class="admonition-title" id="tip_protocols"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div></div>
+<div>
+<p>If students are having difficult getting started:</p>
+</div>
+<div>
+<ul>
+<li>The activity guide contains a number of suggestions and questions to get thinking started – Start by lead students through these questions</li>
+<li>Use the exemplar solution as a guide to coerce students into thinking about at least some element of that to get un-stuck.</li>
+</ul>
+</div>
+<div>
+<p>Here a few other prompts you can use    </p>
+</div>
+<div>
+<ul>
+<li>How will you standardize the recipient and sender addresses?  </li>
+<li>Should you encode people’s names or (hint) use a number?</li>
+<li>How would a recipient of your message know where address ends and the other begins?  </li>
+<li>What other information do you need to include?</li>
+</ul>
+</div>
+</div>
+<p>Distribute and go over <a class="resource" href="https://drive.google.com/open?id=1hq1UNK1Q4K0LHqmu0_yeO0a0NQKHzC8W--Q0QaISHVI" target="_blank">Invent a Binary Protocol for Battleship</a></p>
+<p>(From the Activity Guide)</p>
+<h3 id="overview">Overview</h3>
+<p>Previously you came up with a method for exchanging messages on an open broadcast channel to play multiple games of Battleship at once. Now that you’ve played Battleship this way, with your group or with a partner, describe an efficient <strong>binary protocol for playing a 3-person game of Battleship that can be played accurately over the Internet Simulator.</strong>  </p>
+<p>Let “efficient” mean that your protocol uses the smallest reasonable number of bits (0s and 1s) to make messages for Battleship that still contain all of the necessary information for playing the game.</p>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_protocols"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<p><strong>Give groups about 10 minutes to work</strong></p>
+<ul>
+<li>Use the teaching tips to help students along if they struggle to start.</li>
+</ul>
+</div>
+<div class="admonition discussion">
+<p class="admonition-title" id="discussion_solution"><i class="glyphicon glyphicon-comment"></i>Discussion Goal</p>
+<div></div>
+<div>
+<p>A good solution uses a <strong>numeric</strong> address (not tied to a person’s name) and a <strong>fixed length</strong> message. The number allows you to uniquely identify players (like a phone number) and having a fixed length helps know where each “chunk” of the message starts and ends.</p>
+</div>
+<div>
+<p><strong>How many bits do you need for addresses?</strong> – For 3-person Battleship, you only need 2 bits for an address, since there are only 3 people; each can have a unique code.</p>
+</div>
+<div>
+<p><strong>How many bits are needed for the total message?</strong> – Answers to this will vary and creativity should be encouraged.  However, it should be evident from the students’ protocols that they recognize the fundamental elements of the game and what might be able to be compressed into only a few bits. </p>
+</div>
+<div>
+<p>(See the example solution).</p>
+</div>
+</div>
+<h3 id="discuss-share">Discuss &amp; Share</h3>
+<p>After groups have had some time to work bring the class together.</p>
+<ul>
+<li>Ask if any group would like to share their protocol</li>
+</ul>
+<p>
+</p><div class="tiplink tiplink-discussion"><a href="#discussion_solution"><i class="glyphicon glyphicon-comment"></i></a></div>
+<p></p>
+<p>After the group has presented open up the discussion to draw out similarities and differences.  Here are a few prompts:</p>
+<ul>
+<li><em>“Did any other group do something similar? or something completely different?</em>“</li>
+<li><em>“What pieces of information were common across all of the protocols? Sender, recipient, cell number, hit/miss info.</em>“</li>
+<li><em>“If we were to play a different game, what data would stay the same? What would change?</em>“</li>
+</ul>
+<p>Use this question to <strong>transition</strong> to the wrap-up:</p>
+<p><strong>What do you think all of this has to do with the Internet?</strong></p>
+<div class="guide">
+<h3 id="optional-exemplar-solution">(Optional) Exemplar Solution</h3>
+<p><strong>You may choose to share this with your students or not</strong>.  You might just use this exemplar as background knowledge to help you guide students’ solutions.</p>
+<p><em>A simple, but clever encoding protocol is to recognize that the addresses, coordinates, and hit/miss messages can each be encoded with 2 bits (i.e. a list of 5 numbers in the range 0-3), and that you can make a combined message protocol that would allow a player to communicate anything needed for the game.</em></p>
+<p><em>The scheme shown below uses 10 bits total. The last two bits are interesting: they indicate whether this is a shot being fired for the given row and column or whether it’s a hit/miss response to the given row and column.  Since the respondent who says hit or miss must verify the coordinates of the shot they are responding to, the recipient doesn’t have to remember the last shot they called.</em></p>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L03-battleship-exemplar.png"><img alt="" class="center" src="https://code.org/educate/docs/csp/U2L03-battleship-exemplar.png"></a></p>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up</h2>
+                    <h3 id="real-ip-addresses-background-and-video">Real IP Addresses - Background and Video.</h3>
+<p>It turns out computers on the Internet are addressed in a similar way to phones for many of the same reasons.  The real addresses used on the Internet are called “Internet Protocol Addresses” or <span class="vocab" title="IP Address: A number assigned to any item that is connected to the Internet.">IP Address</span>es for short.</p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_packets"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div></div>
+<div>
+<p><strong>Do some rapid research (Optional)</strong></p>
+</div>
+<div>
+<p>At this point, you could have students look up the real IP <span class="vocab" title="Packets: Small chunks of information that have been carefully formed from larger chunks of information.">packet</span> structure and it might make some sense to them.  They might find it satisfying and empowering to be able to understand a more technical article.  The Wikipedia article on IPv4 packets shows how all the bits are laid out: https://en.wikipedia.org/wiki/IPv4#Packet_structure</p>
+</div>
+<div>
+<p>However, we have not yet covered a major aspect of packets, and the real need for their existence, which is that they are used to breakdown very large messages into smaller chunks to improve reliability of transmission.  <strong>We cover packets in a future lesson</strong>.</p>
+</div>
+</div>
+<p><strong>Video:</strong> <a class="resource" href="https://youtu.be/5o8CwafCxnU" target="_blank">The Internet: IP Addresses and DNS</a></p>
+<ul>
+<li>Have students watch the video</li>
+<li>
+<p>Have students complete <a class="resource" href="https://drive.google.com/open?id=1YSWsBrwuzqG0TzVXyH7Boi7XUrlPuslHxwZy0vVVjZY" target="_blank">IP and DNS Video Worksheet (Optional)</a> </p>
+</li>
+<li>
+<p>You may <strong>stop the video at 4:10</strong> so that only the content on IP addresses is covered, as DNS will be covered later. In this case, you should split the video worksheet into two parts.</p>
+</li>
+</ul>
+<h3 id="discuss">Discuss</h3>
+<p>You should review the material covered in the video.</p>
+<p>The questions in the <a class="resource" href="https://drive.google.com/open?id=1YSWsBrwuzqG0TzVXyH7Boi7XUrlPuslHxwZy0vVVjZY" target="_blank">IP and DNS Video Worksheet (Optional)</a> are a good place to start.  The essential ideas and vocabulary students should know are:</p>
+<ul>
+<li><span class="vocab" title="IP Address: A number assigned to any item that is connected to the Internet.">IP Address</span></li>
+</ul>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_packets"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<ul>
+<li>IP <span class="vocab" title="Packets: Small chunks of information that have been carefully formed from larger chunks of information.">Packets</span></li>
+<li>IPv4  versus IPv6</li>
+</ul>
+<p><strong>Optional Quick activity:</strong> What’s the IP address of the computer you’re using right now?</p>
+<p>There are a number of ways to figure out your IP address.  An exploratory way is to do a web search for: *”What’s my IP address?”</p>
+<p>That will lead to finding something, but you should be cautioned that the answer isn’t always simple.  </p>
+<p>For example, if you are in a computer lab and use a site like <a href="http://whatismyipaddress.com/" target="_blank">What’s my IP Address?</a> it’s likely that all of the computers in the classroom will report the same address.  This is because the computers in a computer lab are probably using the same shared connection and might look to the outside world like they’re all coming from the same place.</p>
+<p>You can also look at a computer’s settings to see what it thinks it’s IP address is.</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p><strong>Questions</strong> (also on Code Studio):</p>
+<ol>
+<li>
+<p>To improve communication in playing Battleship on the Internet Simulator your group invented a(n):</p>
+<p>a) heuristic</p>
+<p>b) algorithm</p>
+<p>c) protocol  </p>
+<p>d) encoding</p>
+</li>
+<li>
+<p>Which of the following information is not necessary in your protocol to play Battleship?</p>
+<p>a) cell number</p>
+<p>b) from</p>
+<p>c) to</p>
+<p>d) time</p>
+</li>
+<li>
+<p>Even with a good protocol, what are some privacy and security challenges while playing Battleship on the Internet Simulator?</p>
+</li>
+</ol>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li><strong>Security and Privacy:</strong> If the messaging scheme your group designed was really used on the Internet, what could go wrong in terms of security and privacy? Think about what a malicious person could do. What if the messages sent weren’t about a game but about something more personal like a conversation with a friend, or communicating with a bank?<ul>
+<li>There are two major security problems with the current version:<ul>
+<li>Anyone can fake a return address. Bob could send you a message and claim it’s “from Alice,” and you’d have no way to confirm who sent it.</li>
+<li>Everyone can view everyone else’s messages! Because all messages are “broadcast” over Internet Simulator, messages have no expectation of privacy.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CD</strong> - Computers &amp; Communication Devices</summary>
+                    <ul>
+                        
+                            <li><strong>CD.L2:6</strong> - Describe the major components and functions of computer systems and networks.</li>
+                        
+                            <li><strong>CD.L3A:9</strong> - Describe how the Internet facilitates global communication.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CL</strong> - Collaboration</summary>
+                    <ul>
+                        
+                            <li><strong>CL.L2:3</strong> - Collaborate with peers, experts and others using collaborative practices such as pair programming, working in project teams and participating in-group active learning activities.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>6.1</strong> - The Internet is a network of autonomous systems.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.1.1</strong> - Explain the abstractions in the Internet and how the Internet functions. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.1.1C</strong> - Devices and networks that make up the Internet are connected and communicate using addresses and protocols.</li>
+                                
+                                    <li><strong>6.1.1D</strong> - The Internet and the systems built on it facilitate collaboration.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.2</strong> - Characteristics of the Internet influence the systems built on it.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.2.2</strong> - Explain how the characteristics of the Internet influence the systems built on it. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.2.2D</strong> - Interfaces and protocols enable widespread use of the Internet.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.3</strong> - Cybersecurity is an important concern for the Internet and the systems built on it.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.3.1</strong> - Identify existing cybersecurity concerns and potential options to address these issues with the Internet and the systems built on it. [P1]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.3.1A</strong> - The trust model of the Internet involves tradeoffs.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#tocthe-need-for-addressing').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#the-need-for-addressingcontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'the-need-for-addressing', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

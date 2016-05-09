@@ -29,9 +29,6 @@ Students use the Artist environment to write programs that have looped statement
 
 [Artist: Nested Loops](#Activity)
 
-### **Extended Learning**
-
-[Extension Activities](#Extended)
 
 
 [/summary]
@@ -71,13 +68,6 @@ Students use the Artist environment to write programs that have looped statement
 ![](binaryphoto.png) -->
 
 
-[together]
-
-## Extended Learning 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
-
-
-[/together]
 
 [standards]
 

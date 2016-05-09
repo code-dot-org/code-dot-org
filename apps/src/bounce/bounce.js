@@ -796,7 +796,7 @@ Bounce.init = function (config) {
           noVisualization={false}
           isRtl={studioApp.isRtl()}
           visualizationColumn={<BounceVisualizationColumn/>}
-          onMount={studioApp.init.bind(studioApp, config)}
+          onMount={onMount}
       />
     </Provider>,
     document.getElementById(config.containerId)

@@ -7,10 +7,10 @@ Feature: App Lab Scenarios
     # One of two levels backed by the same template
     Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/10?noautoplay=true"
     And I rotate to landscape
-    And I close the dialog
+    And I wait to see "#runButton"
 
     Then I reset the puzzle to the starting version
-    And I close the dialog
+    And I wait to see "#runButton"
     And the palette has 2 blocks
     And the droplet code is "turnRight(90);\n"
 
@@ -22,7 +22,7 @@ Feature: App Lab Scenarios
     # Next level, backed by the same template
     Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/11?noautoplay=true"
     And I rotate to landscape
-    And I close the dialog
+    And I wait to see "#runButton"
 
     Then the palette has 2 blocks
     And the droplet code is "turnRight(90);\nturnLeft(90);\n"
@@ -35,5 +35,5 @@ Feature: App Lab Scenarios
     # back to the first level
     Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/10?noautoplay=true"
     And I rotate to landscape
-    And I close the dialog
+    And I wait to see "#runButton"
     And the droplet code is "turnRight(90);\nturnLeft(90);\nturnRight(10);\n"

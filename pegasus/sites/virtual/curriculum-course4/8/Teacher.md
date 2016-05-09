@@ -225,6 +225,8 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [together]
 
+[standards]
+
 ## Connections and Background Information
 
 ### ISTE Standards (formerly NETS) Satisfied by this Lesson Include:
@@ -265,6 +267,7 @@ Use these activities to enhance student learning. They can be used as outside of
 - L.4.6 Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal precise actions, emotions, or states of being and that are basic to a particular topic
 - L.5.6 Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal contrast, addition, and other logical relationships
 
+[/standards]
 
 [/together]
 

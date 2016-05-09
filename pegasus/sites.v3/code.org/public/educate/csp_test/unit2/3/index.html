@@ -1,0 +1,997 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="In this lesson, students will begin to explore the way digital images are encoded in binary. The class begins by asking students to invent their own image encoding protocol in order to familiarize themselves with some of the subtle complications of encoding images, namely the need for other data, called metadata, that describes properties of the image necessary for rendering it. Students will learn about pixels, raster images, and what an image file format is. Students will encode binary image data using a widget in Code Studio.">
+    <title>Encoding B&amp;W Images</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/unit2/"><span class="h2">Unit</span><span class="h1">2</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit2/ch1" data-pdf-link="#unit2chapter1">
+                Ch. 1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/1" data-pdf-link="#unit2lesson1">
+                1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit2/2" data-pdf-link="#unit2lesson2">
+                2
+            </a>
+            </div>
+            
+                
+                    
+                        <div class="lesson current">
+                    
+                
+            <a href="/educate/csp_test/unit2/3" data-pdf-link="#unit2lesson3">
+                3
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/4" data-pdf-link="#unit2lesson4">
+                4
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/5" data-pdf-link="#unit2lesson5">
+                5
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/6" data-pdf-link="#unit2lesson6">
+                6
+            </a>
+            </div>
+            
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit2/ch2" data-pdf-link="#unit2chapter2">
+                Ch. 2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/7" data-pdf-link="#unit2lesson7">
+                7
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/8" data-pdf-link="#unit2lesson8">
+                8
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/9" data-pdf-link="#unit2lesson9">
+                9
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/10" data-pdf-link="#unit2lesson10">
+                10
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/11" data-pdf-link="#unit2lesson11">
+                11
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/12" data-pdf-link="#unit2lesson12">
+                12
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/13" data-pdf-link="#unit2lesson13">
+                13
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/14" data-pdf-link="#unit2lesson14">
+                14
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit2/15" data-pdf-link="#unit2lesson15">
+                15
+            </a>
+            </div>
+            
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit2lesson3">
+        
+            
+                <h1>Lesson 3: Encoding B&amp;W Images</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>In this lesson, students will begin to explore the way digital images are encoded in binary. The class begins by asking students to invent their own image encoding protocol in order to familiarize themselves with some of the subtle complications of encoding images, namely the need for other data, called <span class="vocab" title="metadata: is data that describes other data.  For example, a digital image my include metadata that describe the size of the image, number of colors, or resolution.">metadata</span>, that describes properties of the image necessary for rendering it. Students will learn about pixels, raster images, and what an image file format is.  Students will encode binary image data using a widget in Code Studio.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>The main purpose of this lesson is for students to exhibit some creativity while getting some hands-on experience manipulating binary data that represents something other than plain numbers or text.  Connections to abstraction in data can be made here. Connections can be made back to file sizes and file formats here as well - e.g. how many bytes does it take to store an image v. text?   If you want to broach the subject, the concept of data compression can come in here too - it is interesting to think about how a black and white image might be compressed. You should be aware that this lesson largely acts a stepping stone to the <em>next lesson</em> which addresses how RGB colors are represented in binary.</p>
+<p>Image file types have some similarities to data packets we saw in the Internet unit – because images must include metadata, or data about the data. The data of a black-and-white image is the list of bits that represent whether each pixel is on or off. To create the image, however, we must also know how wide and tall the image is in order to recreate it accurately. This necessitates the creation of a file format which clearly define how this metadata will be encoded, since it is crucial for interpreting the subsequent data of the image.  It is similar to how an internet packet doesn’t only contain the data you need to send, but must also include metadata like the to and from addresses and packet number.</p>
+<p>Digital images can be stored in many formats, but one of the most common formats is “raster”. Raster images store the image as an array of individual pixels, each of which has a particular color. Higher-quality images can be obtained by decreasing the size of the pixels (resolution). While full color will be addressed in the next lesson, an important idea here is that images on computer screens are created with <em>light</em> by illuminating pixels on the screen.  This is why it is typical in a black and white image for the value 1 to represent white - it means turn the light on - and 0 represents black - light off.  If you were drawing on paper you might do the inverse.</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocencoding-bw-images">
+                
+                    <h3>Getting Started (10 mins)</h3>
+                
+                    <h3>Activity</h3>
+                
+                    <h3>Wrap-up</h3>
+                
+                    <h3>Assessment</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Describe that a pixel is an element of a digital image.</li>
+                    
+                        <li>Explain how images are encoded with pixel data.</li>
+                    
+                        <li>Explain why image width and height are metadata for a digital image.</li>
+                    
+                        <li>Encode a B&amp;W image in binary using a protocol that represents the data (pixel intensity) and metadata (width, height).</li>
+                    
+                        <li>Create the necessary metadata to represent the width and height of a digital image, using a computational tool.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit1/lesson14" target="_blank">Forum</a></li>
+<li>(Optional) Graph or grid paper for drawing pixel images by hand</li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Teacher</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit1/stage/14/puzzle/1' target='_blank' class='print_link'>Activity Guide KEY - Encode a B&W Image</a> - Answer Key
+                                </li>
+                            
+                                <li>
+                                    <a href='http://youtu.be/yWrmxQSnmPc' target='_blank' class='print_link'>U1L14 - Teaching Tips & Tricks Video</a> - Video (<a href='https://www.dropbox.com/s/ryke4wt445sds9c/U1L14-Tips%26Tricks-v2_1.mp4?dl=0' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://youtu.be/rJOa5Q5a1WM' target='_blank' class='print_link'>B&W Pixelation Tutorial</a> - Video (<a href='http://videos.code.org/2015/csp/pixelation_bw.mp4' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit1' target='_blank' class='print_link'>CSP Unit 1</a> - Code Studio
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/a/code.org/document/d/15V5wZAdGd0J6BIcOAATrM0mJHI6eR5E1nDaR4C-Aomo/' target='_blank' class='print_link'>Extension: Magnify an Image (optional)</a> - Activity Guide (<a href='https://docs.google.com/a/code.org/document/d/15V5wZAdGd0J6BIcOAATrM0mJHI6eR5E1nDaR4C-Aomo/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1ueUif3AbjQHgte5B1ud1gyenQFEYzj5f8rnqpAsZXJg' target='_blank' class='print_link'>Invent a B&W image encoding scheme</a> - Activity Guide (<a href='https://docs.google.com/document/d/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1kLLr-ELXgBKDULCYDm3slAVQkszAHez85es7aLdAk_Q' target='_blank' class='print_link'>The B&W Pixelation Widget</a> - Activity Guide (<a href='https://docs.google.com/document/d/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+                <h2>Vocabulary</h2>
+                <ul>
+                    
+                        <li><strong>Image</strong> - A type of data used for graphics or pictures.</li>
+                    
+                        <li><strong>metadata</strong> - is data that describes other data.  For example, a digital image my include metadata that describe the size of the image, number of colors, or resolution.</li>
+                    
+                        <li><strong>pixel</strong> - short for &quot;picture element&quot; it is the fundamental unit of a digital image, typically a tiny square or dot which contains a single point of color of a larger image.</li>
+                    
+                </ul>
+            
+
+        </div>
+    </div>
+
+    <div id="encoding-bw-imagescontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started (10 mins)</h2>
+                    <div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Remarks</p>
+<div>
+<p>Back in the Internet Unit you encoded a line-drawing image as a list of numbers that made up the coordinates of the points in the image. That works for line drawings, but how might you encode a different kind of image? Today we’re going to consider how you might use bits to encode a photographic image, or if you like: how could I encode vision?</p>
+</div>
+<div>
+<p>Today, we’re going to start to learn about images, but we’re going to start simple, with black and white images.</p>
+</div>
+</div>
+<h3 id="invent-an-encoding-scheme-for-bw-images">Invent An Encoding Scheme for B&amp;W Images</h3>
+<div class="guide">
+<div class="admonition discussion">
+<p class="admonition-title" id="discussion_None"><i class="glyphicon glyphicon-comment"></i>Activity Goal</p>
+<div></div>
+<div>
+<p>The purpose of this little concept invention activity is to be creative and to get the mind moving.  There is no exact right answer that we’re going for here.</p>
+</div>
+<div>
+<p>There are many clever and interesting ways this could be done.  Most students will likely end up saying that each pixel should be represented with either a 0 or a 1.  </p>
+</div>
+<div>
+<p>But what we really want to draw out is the idea of “metadata”.  Simply encoding the pixel data is not enough.  We also need to encode the width and height of the image, or the image could not be recreated - other than through trial and error</p>
+</div>
+</div>
+<ul>
+<li><strong>Distribute</strong> <a class="resource" href="https://docs.google.com/document/d/1ueUif3AbjQHgte5B1ud1gyenQFEYzj5f8rnqpAsZXJg" target="_blank">Invent a B&amp;W image encoding scheme</a> </li>
+<li>Separate students into pairs, and hand each student a copy of the activity guide. </li>
+<li>Students should work the first two pages</li>
+<li>Give groups time to work</li>
+</ul>
+<p><strong>Discuss:</strong> </p>
+<p>Ask students to <a href="Teaching Strategies for the CS Classroom" target="_blank">share-out</a> their file format to identify commonalities and patterns. </p>
+<ul>
+<li>As a class, address students’ questions that arise from the concept invention activity. </li>
+<li>Use the questions below to spur conversation. If the concept of metadata, or data about data, arises naturally, then address it here.</li>
+</ul>
+<p><strong>Prompts:</strong></p>
+<ul>
+<li>How have you encoded white and black portions of your image, what do 0 and 1 stand for in your encoding?</li>
+<li>Are your encodings flexible enough to accommodate images of any size? * How do they accomplish this?</li>
+<li>Is your encoding intuitive and easy to use?</li>
+<li>Is your encoding efficient?</li>
+</ul>
+</div>
+<div class="admonition content">
+<p class="admonition-title" id="content_pixel"><i class="glyphicon glyphicon-education"></i>Content Corner</p>
+<div>
+<p>There is some mystery about the etymology of the word “pixel”.  You can read more about it on the <a href="https://en.wikipedia.org/wiki/Pixel#Etymology" target="_blank">Wikipedia: pixel page</a></p>
+</div>
+</div>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Remarks</p>
+<div></div>
+<div>
+<p>
+</p><div class="tiplink tiplink-content"><a href="#content_pixel"><i class="glyphicon glyphicon-education"></i></a></div>
+<p></p>
+</div>
+<div>
+<ul>
+<li><strong>Vocabulary:</strong> each little dot that makes up a picture like this is called a <span class="vocab" title='pixel: short for "picture element" it is the fundamental unit of a digital image, typically a tiny square or dot which contains a single point of color of a larger image.'>pixel</span>.  Where did this word pixel come from?  It turns out that originally the dots were referred to as “picture elements”, that got shortened to “pict-el” and eventually “pixel”.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>What we’ve discovered is that the data for our image file must contain more than just a 0 or 1 for every pixel.  It must contain other data that describes the pixel data.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>This is called <span>metatdata</span>. In this case the metadata encodes the width and height of the image.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>We’ve seen forms of metadata before.  For example: an internet packet.  The packet contains the data that needs to be sent, but also other data like the <em>to</em> and <em>from</em> address, and packet number.</li>
+</ul>
+</div>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity</h2>
+                    <p><strong>Introduction</strong></p>
+<ul>
+<li>The pixelation widget in Code Studio will allow us to play with these ideas a little more.</li>
+<li>This widget follows a particular encoding scheme for images that you’ll have to follow.</li>
+</ul>
+<h3 id="video-the-pixelation-widget">Video: The Pixelation widget</h3>
+<ul>
+<li>
+<p>Show the tutorial video: <a class="resource" href="https://youtu.be/rJOa5Q5a1WM" target="_blank">B&amp;W Pixelation Tutorial</a></p>
+</li>
+<li>
+<p>NOTE: This video pops up the first time you visit the pixelation widget in Code Studio.  You might perfer to have students watch it there on their own.</p>
+</li>
+</ul>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/code-studio-icon.png"><img alt="" class="left" src="https://code.org/educate/docs/csp/code-studio-icon.png"></a> </p>
+<h3 id="use-the-pixelation-widget">Use the Pixelation Widget</h3>
+<p><strong>Distribute</strong>: Activity Guide - <a class="resource" href="https://docs.google.com/document/d/1kLLr-ELXgBKDULCYDm3slAVQkszAHez85es7aLdAk_Q" target="_blank">The B&amp;W Pixelation Widget</a>   </p>
+<div class="guide">
+<div class="admonition guide">
+<p class="admonition-title" id="guide_None"><i class="fa fa-pencil-square-o"></i>Activity Guide</p>
+<div></div>
+</div>
+<p>Page 1:</p>
+<ul>
+<li>Explains the encoding scheme and a bit about how the tool works. </li>
+<li>
+<p>Describes the 3 student tasks to get familiar with the tool:</p>
+<ol>
+<li>Create a small image: Start by trying to recreate the 3x5 letter “A” depicted (shown above) using the pixelation widget. </li>
+<li>Correct an error: Oh no! An extra bit was inserted into an image during transmission!  Track it down.</li>
+<li>Make your own image of any size of anything you like.</li>
+</ol>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div>
+<ul>
+<li>You may not need or want to use the first page of the activity guide.  It is a reference for students, but the tasks for students are given in Code Studio.</li>
+<li>Similarly for the second page, if you don’t intend to collect it for assessment purposes, you can use the questions as group discussion or wrap-up questions.</li>
+</ul>
+</div>
+</div>
+<p>The second page asks students to:</p>
+<ul>
+<li>Copy/paste a copy of their personal creation</li>
+<li>Copy/paste the bits that are used to encode it</li>
+<li>
+<p>Written reflection questions:</p>
+<ul>
+<li>What are the largest dimensions (width and height) of an image we can make with the pixelation widget?</li>
+<li>How many total bits would there be in the largest possible image we could make with the pixelation widget?</li>
+<li>How many bits would it take to represent the smallest possible image (i.e. an image with one pixel)?</li>
+<li>What would happen if we didn’t include width and height bits in our protocol? Assume your friend just sent you 32 bits of pixel data (just the 0s and 1s for black and white pixels). Could you recover the original image? If so, how?</li>
+</ul>
+</li>
+</ul>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up</h2>
+                    <p><strong>Review:</strong> </p>
+<ul>
+<li>
+<p>The image file protocol we used contains “metadata”: the width and height. <strong>Metadata is “data about the data”</strong> that might be required to encode or decode the bits. </p>
+</li>
+<li>
+<p>For example, you couldn’t render the B&amp;W image properly without somehow including the dimensions. Prompts:</p>
+<ul>
+<li>What other examples of metadata have we seen in the course so far? </li>
+<li>What other types of data might we want to send that would require metadata?</li>
+</ul>
+</li>
+</ul>
+<p><strong>(Optional) Prompt:</strong></p>
+<p><em>“Did you think about compression at all while doing this exercise?  Can you think of a way that you might represent an image of pixel data with fewer bits?  What would have to change about the encoding strategy?”</em></p>
+<ul>
+<li>For an answer to this see the <a href="http://csunplugged.org/image-representation/#Colour_by_Numbers" target="_blank">“Color by Numbers”</a> Activity from CS Unplugged (csunplugged.org).  </li>
+<li>It uses something called “run-length encoding”</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p><strong>Activity Guide (<a href="Resource not found" target="_blank">Activity Guide - Encode a B&amp;W Image</a>, paper or electronic):</strong></p>
+<ul>
+<li>Check to make sure that the bits they submitted actually produce the image as claimed.</li>
+<li>Score the digital artifact as you see fit, with points for creativity and perceived effort.</li>
+<li>The following questions can be found in the Activity Guide and also appear on Code Studio:<ul>
+<li>Using the B&amp;W file format from the pixelation widget<ul>
+<li>What are the largest dimensions (width and height) of an image we can make with the pixelation widget?</li>
+<li>How many total bits would there be in the largest possible image we could make with the pixelation widget?</li>
+<li>How many bits would it take to represent the smallest possible image (i.e. an image with one pixel)?</li>
+</ul>
+</li>
+<li>What would happen if we didn’t include width and height bits in our protocol? Assume your friend just sent you 32 bits of pixel data (just the 0s and 1s for black and white pixels). Could you recover the original image? If so, how?</li>
+</ul>
+</li>
+</ul>
+<p>Answers to questions are in <a class="resource" href="https://studio.code.org/s/cspunit1/stage/14/puzzle/1" target="_blank">Activity Guide KEY - Encode a B&amp;W Image</a>.</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li>
+<p>Check out the <a href="http://csunplugged.org/image-representation/#Colour_by_Numbers" target="_blank">“Color by Numbers”</a> from CS Unplugged (csunplugged.org) which uses a different clever encoding scheme for B&amp;W images.</p>
+</li>
+<li>
+<ul>
+<li>Do the <a class="resource" href="https://docs.google.com/a/code.org/document/d/15V5wZAdGd0J6BIcOAATrM0mJHI6eR5E1nDaR4C-Aomo/" target="_blank">Extension: Magnify an Image (optional)</a> activity (double the size of an image on the Pixelation Tool).</li>
+</ul>
+</li>
+<li>Have students research raster graphics in anticipation of the subsequent lesson.</li>
+<li>Attempting to communicate with possible intelligent life beyond our solar system has been a dream for humans and the goal of scientists for many years. Questions about messages to send, as well as how to send messages deep into space to unknown recipients have been debated. In 1974, scientists sent the Arecibo message to the star cluster M13 some 25,000 light years away. Read about the message they sent using 1,679 binary digits (https://en.m.wikipedia.org/wiki/Arecibo_message).<ul>
+<li>How would you change the content of the message? What would you delete and add? Why would your change be significant in a communication to other intelligent beings?</li>
+<li>Sketch the segment of the design you would alter. Remember, you must retain the original number of bits.</li>
+<li>List the details in this article that you understand more deeply because of what you have learned in this class up to this point.</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CL</strong> - Collaboration</summary>
+                    <ul>
+                        
+                            <li><strong>CL.L2:3</strong> - Collaborate with peers, experts and others using collaborative practices such as pair programming, working in project teams and participating in-group active learning activities.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CPP</strong> - Computing Practice &amp; Programming</summary>
+                    <ul>
+                        
+                            <li><strong>CPP.L2:4</strong> - Demonstrate an understanding of algorithms and their practical application.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CT</strong> - Computational Thinking</summary>
+                    <ul>
+                        
+                            <li><strong>CT.L2:13</strong> - Understand the notion of hierarchy and abstraction in computing including high level languages, translation, instruction set and logic circuits.</li>
+                        
+                            <li><strong>CT.L2:14</strong> - Examine connections between elements of mathematics and computer science including binary numbers, logic, sets and functions.</li>
+                        
+                            <li><strong>CT.L2:7</strong> - Represent data in a variety of ways including text, sounds, pictures and numbers.</li>
+                        
+                            <li><strong>CT.L2:8</strong> - Use visual representations of problem states, structures and data (e.g., graphs, charts, network diagrams, flowcharts).</li>
+                        
+                            <li><strong>CT.L2:9</strong> - Interact with content-specific models and simulations (e.g., ecosystems, epidemics, molecular dynamics) to support learning and research.</li>
+                        
+                            <li><strong>CT.L3A:6</strong> - Analyze the representation and trade-offs among various forms of digital information.</li>
+                        
+                            <li><strong>CT.L3B:8</strong> - Use models and simulations to help formulate, refine, and test scientific hypotheses.</li>
+                        
+                            <li><strong>CT.L3B:9</strong> - Analyze data and identify patterns through modeling and simulation.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>1.1</strong> - Creative development can be an essential process for creating computational artifacts.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>1.1.1</strong> - Apply a creative development process when creating computational artifacts. [P2]</summary>
+                            <ul>
+                                
+                                    <li><strong>1.1.1A</strong> - A creative process in the development of a computational artifact can include, but is not limited to, employing nontraditional, nonprescribed techniques; the use of novel combinations of artifacts, tools, and techniques; and the exploration of personal curiosities.</li>
+                                
+                                    <li><strong>1.1.1B</strong> - Creating computational artifacts employs an iterative and often exploratory process to translate ideas into tangible form.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>1.2</strong> - Computing enables people to use creative development processes to create computational artifacts for creative expression or to solve a problem.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>1.2.1</strong> - Create a computational artifact for creative expression. [P2]</summary>
+                            <ul>
+                                
+                                    <li><strong>1.2.1A</strong> - A computational artifact is anything created by a human using a computer and can be, but is not limited to, a program, an image, audio, video, a presentation, or a web page file.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>1.3</strong> - Computing can extend traditional forms of human expression and experience.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>1.3.1</strong> - Use computing tools and techniques for creative expression. [P2]</summary>
+                            <ul>
+                                
+                                    <li><strong>1.3.1C</strong> - Digital images can be created by generating pixel patterns, manipulating existing digital images, or combining images.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>2.1</strong> - A variety of abstractions built upon binary sequences can be used to represent all digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.1</strong> - Describe the variety of abstractions used to represent data. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.1A</strong> - Digital data is represented by abstractions at different levels.</li>
+                                
+                                    <li><strong>2.1.1B</strong> - At the lowest level, all digital data are represented by bits.</li>
+                                
+                                    <li><strong>2.1.1C</strong> - At a higher level, bits are grouped to represent abstractions, including but not limited to numbers, characters, and color.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.2</strong> - Explain how binary sequences are used to represent digital data. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.2A</strong> - A finite representation is used to model the infinite mathematical concept of a number. </li>
+                                
+                                    <li><strong>2.1.2B</strong> - In many programming languages, the fixed number of bits used to represent characters or integers limits the range of integer values and mathematical operations; this limitation can result in overflow or other errors.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>2.3</strong> - Models and simulations use abstraction to generate new understanding and knowledge.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.3.1</strong> - Use models and simulations to represent phenomena. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.3.1A</strong> - Models and simulations are simplified representations of more complex objects or phenomena.</li>
+                                
+                                    <li><strong>2.3.1B</strong> - Models may use different abstractions or levels of abstraction depending on the objects or phenomena being posed.</li>
+                                
+                                    <li><strong>2.3.1C</strong> - Models often omit unnecessary features of the objects or phenomena that are being modeled.</li>
+                                
+                                    <li><strong>2.3.1D</strong> - Simulations mimic real world events without the cost or danger of building and testing the phenomena in the real world.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.1</strong> - People use computer programs to process information to gain insight and knowledge.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.1</strong> - Use computers to process information, find patterns, and test hypotheses about digitally processed information to gain insight and knowledge. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.1A</strong> - Computers are used in an iterative and interactive way when processing digital information to gain insight and knowledge.</li>
+                                
+                                    <li><strong>3.1.1D</strong> - Insight and knowledge can be obtained from translating and transforming digitally represented information.</li>
+                                
+                                    <li><strong>3.1.1E</strong> - Patterns can emerge when data is transformed using computational tools.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.2</strong> - Collaborate when processing information to gain insight and knowledge. [P6]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.2A</strong> - Collaboration is an important part of solving data driven problems.</li>
+                                
+                                    <li><strong>3.1.2B</strong> - Collaboration facilitates solving computational problems by applying multiple perspectives, experiences, and skill sets.</li>
+                                
+                                    <li><strong>3.1.2C</strong> - Communication between participants working on data driven problems gives rise to enhanced insights and knowledge.</li>
+                                
+                                    <li><strong>3.1.2D</strong> - Collaboration in developing hypotheses and questions, and in testing hypotheses and answering questions, about data helps participants gain insight and knowledge.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.3</strong> - Explain the insight and knowledge gained from digitally processed data by using appropriate visualizations, notations, and precise language. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.3A</strong> - Visualization tools and software can communicate information about data.</li>
+                                
+                                    <li><strong>3.1.3E</strong> - Interactivity with data is an aspect of communicating.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.2</strong> - Computing facilitates exploration and the discovery of connections in information.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.2.1</strong> - Extract information from data to discover and explain connections, patterns, or trends. [P1]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.2.1G</strong> - Metadata is data about data.</li>
+                                
+                                    <li><strong>3.2.1H</strong> - Metadata can be descriptive data about an image, a Web page, or other complex objects.</li>
+                                
+                                    <li><strong>3.2.1I</strong> - Metadata can increase the effective use of data or data sets by providing additional information about various aspects of that data.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.3</strong> - There are trade offs when representing information as digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.3.1</strong> - Analyze how data representation, storage, security, and transmission of data involve computational manipulation of information. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.3.1A</strong> - Digital data representations involve trade  offs related to storage, security, and privacy concerns.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#tocencoding-bw-images').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#encoding-bw-imagescontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'encoding-bw-images', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>
