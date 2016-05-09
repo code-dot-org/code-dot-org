@@ -9,7 +9,7 @@ import { ellipsify } from '../utils';
 
 var ELEMENT_ID_TEXT_MAX_CHAR = 12;
 
-const AppLabTooltipOverlay = React.createClass({
+export const AppLabTooltipOverlay = React.createClass({
   propTypes: {
     // width, height, mouseX and mouseY are given in app-space, not screen-space
     width: React.PropTypes.number,
