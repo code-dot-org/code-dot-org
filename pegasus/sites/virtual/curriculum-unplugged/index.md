@@ -19,7 +19,7 @@ video_player: true
         <h1 class="jumbo-h1-second-box">CS Fundamentals Unplugged</h1
         <p class="jumbo-tutorial-description">We've compiled a list of all of our unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand alone course or as complementary lessons for any computer science course.</p>
         <p>
-        <p class="jumbo-tutorial-specs">Ages 6+, English only</p>
+        <p class="jumbo-tutorial-specs">Ages 4+, English only</p>
       </div>
     </div>
   </div>
