@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="This lesson introduces the concept of public key cryptography using the classic “Alice and Bob” scenario often taught in computer science classes. In this scenario, Alice and Bob are able to securely send messages to each other without having to come up with a shared secret key ahead of time. Students model this exchange using cups and beans, and send a “secret number” to a partner. Students learn that public key cryptography uses asymmetric encryption, which is why one key (the encryption key or “public key”) can be made completely public without compromising the security of encrypted messages.">
+    <title>Asymmetric and Public Keys - Cups and Beans</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+
+    
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+
+    
+
+    
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.8.3.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+    
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body">
+
+
+    <div id="admin_edit">
+    
+    <button type="button" class="togglesay btn btn-success">Don't tell me what to say!</button>
+    <button type="button" class="togglesay btn btn-danger" style="display:none;">Help, what should I say?</button>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><span class="h2">Unit</span><span class="h1">2</span></div>
+
+    <div class="lessons">
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit2/1" data-pdf-link="#unit2lesson1">
+        1
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit2/2" data-pdf-link="#unit2lesson2">
+        2
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit2/3" data-pdf-link="#unit2lesson3">
+        3
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit2/4" data-pdf-link="#unit2lesson4">
+        4
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit2/5" data-pdf-link="#unit2lesson5">
+        5
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit2/6" data-pdf-link="#unit2lesson6">
+        6
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit2/7" data-pdf-link="#unit2lesson7">
+        7
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit2/8" data-pdf-link="#unit2lesson8">
+        8
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit2/9" data-pdf-link="#unit2lesson9">
+        9
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit2/10" data-pdf-link="#unit2lesson10">
+        10
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit2/11" data-pdf-link="#unit2lesson11">
+        11
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit2/12" data-pdf-link="#unit2lesson12">
+        12
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit2/13" data-pdf-link="#unit2lesson13">
+        13
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit2/14" data-pdf-link="#unit2lesson14">
+        14
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit2/15" data-pdf-link="#unit2lesson15">
+        15
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit2/16" data-pdf-link="#unit2lesson16">
+        16
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/csp_test/unit2/17" data-pdf-link="#unit2lesson17">
+        17
+    </a>
+    </div>
+    
+        
+            <div class="lesson current">
+        
+    <a href="/educate/csp_test/unit2/18" data-pdf-link="#unit2lesson18">
+        18
+    </a>
+    </div>
+    
+        
+            <div class="lesson unfinished">
+        
+    <a href="/educate/csp_test/unit2/19" data-pdf-link="#unit2lesson19">
+        19
+    </a>
+    </div>
+    
+        
+            <div class="lesson unfinished">
+        
+    <a href="/educate/csp_test/unit2/20" data-pdf-link="#unit2lesson20">
+        20
+    </a>
+    </div>
+    
+</div>
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+
+    <div class="together" id="unit2lesson18">
+        
+            <h1>Lesson 18: Asymmetric and Public Keys - Cups and Beans</h1>
+        
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>This lesson introduces the concept of public key cryptography using the classic “Alice and Bob” scenario often taught in computer science classes. In this scenario, Alice and Bob are able to securely send messages to each other without having to come up with a shared secret key ahead of time. Students model this exchange using cups and beans, and send a “secret number” to a partner. Students learn that public key cryptography uses asymmetric encryption, which is why one key (the encryption key or “public key”) can be made completely public without compromising the security of encrypted messages.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>Students have done encryption before, but those methods always required both parties knowing a secret key to encrypt and decrypt. A major problem that arises: how can two parties establish a secret key without meeting ahead of time?  If we can solve that problem, then we have a way for people (or computers) to establish keys over the Internet to enable secure transactions.
+Public key cryptography does away with this problem by introducing asymmetric keys – that is, the key to encrypt (which is public) is NOT the same key used to decrypt (which is private). In this way, messages can be sent between people who have never met before, and these messages can be shared publicly with a reasonable expectation of security. 
+In later lessons, students will learn to leverage computationally hard algorithms to make these messages essentially uncrackable.</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocasymmetric-and-public-keys-cups-and-beans">
+                
+                    <h3>Getting Started</h3>
+                
+                    <h3>Activity - 30 mins</h3>
+                
+                    <h3>Wrap-up</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+                    <h3>Assessment</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Explain what the modulo operation does.</li>
+                    
+                        <li>Relate the modulo function to a one-way function.</li>
+                    
+                        <li>Explain in high-level terms why an encryption scheme using multiplication and modulo is hard to crack.</li>
+                    
+                        <li>Describe how and why encryption has a mathematical foundation.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit2/lesson18" target="_blank">Forum</a></li>
+<li>Paper and pencil</li>
+<li>Plastic cups (preferably clear with lids) - 1 per group of 3 students</li>
+<li>Infinite supply of beans (a bag of dried beans works well)</li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1hUinHsXY06yYpsPe_iutgkO3Pvp1GOAjEoglsh7HklU/edit' target='_blank' class='print_link'>Public Key Bean Counting</a> - Activity Guide (<a href='https://docs.google.com/document/d/1hUinHsXY06yYpsPe_iutgkO3Pvp1GOAjEoglsh7HklU/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://www.youtube.com/watch?v=ZghMPWGXexs' target='_blank' class='print_link'>The Internet: Encryption & Public Keys</a> - Video (<a href='https://videos.code.org/2015/csp/concept_encryption.mp4' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+
+        </div>
+    </div>
+
+    <div id="asymmetric-and-public-keys-cups-and-beanscontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started</h2>
+                    <p><strong>Recall:</strong> Think back to the Caesar cipher, random substitution cipher, and Vigenère cipher we saw in previous lessons. Each of these ciphers had something called a “key” that was used to encrypt and decrypt secret messages.  An eavesdropper who intercepted the message and didn’t have the key had to do a lot of work to crack the message or just guess what the key was.</p>
+<p><strong>Question:</strong> Is there a way to send an encrypted message over an insecure channel without establishing a key ahead of time in private?  </p>
+<p><strong>Prompt:</strong> Let’s do a thought experiment: Imagine that Bob wants to send Alice a message using the Vigenère cipher.  Alice and Bob haven’t met ahead of time or established any kind of shared secret.  Now imagine that Alice and Bob are far apart and have to rely on Eve, the eavesdropper, to deliver their messages to each other.  Assume that Eve won’t alter the messages when she delivers them, but she will try to spy.  Can you figure out a way for Bob to send Alice an encrypted message that only Alice can read?  </p>
+<p>Have small groups or pairs discuss this problem for a few minutes and then ask if there are any solutions.</p>
+<ul>
+<li><strong>Teacher’s Note:</strong> There is no way to do this.  It’s likely that, at best, a group figured out a way to communicate a key by obscuring or hiding it in some fashion that still requires the recipient to know what to look for or to have some prior knowledge of what to do.</li>
+<li>Hopefully, students encountered the never-ending cycle: In order to ensure the key is secure, we’d have to encrypt the key… with a secret key… that would have to be encrypted with a key…that would have to be encrypted with a key….and so on.</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity - 30 mins</h2>
+                    <p><strong>Introduction:</strong> The problem of how to send encrypted messages without establishing keys in private ahead of time baffled cryptographers and computer scientists for years, but there is a way to do it!  In today’s activity, we will act out a way to send secret messages that does NOT rely on a shared secret key. </p>
+<p>This method is called <strong>public key cryptography</strong> because the “key” needed to encrypt something is actually public, and can be used by anyone!  But that key cannot be used to decrypt.  It also relies on the existence of one-way functions that work similarly to the one we studied in the last lesson.  For today’s activity, we’re not going to encrypt and decrypt data.  Instead we’ll be using physical objects to represent data, one-way functions, encryption, and decryption. </p>
+<p>Let’s try it out.</p>
+<h3 id="a-metaphor-for-a-one-way-function">A metaphor for a one-way function.</h3>
+<p>Have you ever been to a carnival or fair where there’s a big glass jar of candy (usually jelly beans) and you’re supposed to guess how much candy is in the jar? </p>
+<p>Today this will be our metaphor for a <strong><em>one-way function</em></strong>: Imagine that a person can count out some number of candies, dump them in a glass jar, close the lid and put a lock on it.  Only that person knows how many candies there are in the jar, and only that person can open the jar.  </p>
+<p>For anyone else, even though they can see the all the candy right there in the jar, it’s almost impossible to accurately count how many candies there are. If you do manage to figure it out, it’s probably just dumb luck!  So for today, we’ll say that guessing the number of candies in the jar is a <strong>computationally hard problem to solve</strong>.</p>
+<h3 id="paper-cups-jelly-beans-public-key-bean-counting">Paper Cups &amp; Jelly Beans - Public Key Bean Counting.</h3>
+<ul>
+<li>Form groups of 3 for this activity - one each to play Alice, Bob and Eve.  It’s fine if some students double-up to play one of the characters.</li>
+<li>Distribute the materials and copies of <a href="Public Key Bean Counting" target="_blank">Activity Guide - Public Key Bean Counting</a> to each group.</li>
+<li>Let groups read the instructions and do the activity on their own.</li>
+<li>After doing the information exchange with cups and beans a few times, have students read the <strong>“What’s the point?”</strong> page at the end of the activity guide.<ul>
+<li>It contains “official” terminology for public key cryptography and relates it to the cups and beans activity.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Teaching Tips</p>
+<p>Once students get into the activity, it may go very quickly.  Encourage students to:</p>
+<ul>
+<li>Repeat it playing different roles.</li>
+<li>Try the 3-cup version.</li>
+<li>After reading the “What’s the point” section of the activity guide, have students act out the information exchange procedure using the terminology of Public key, Private key, Encrypting and Decrypting.</li>
+</ul>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up</h2>
+                    <p><strong>Review:</strong>  <em>Say:</em></p>
+<ul>
+<li><strong>This is a big deal:</strong> Public key cryptography is what makes secure transactions on the Internet possible.  Without it we couldn’t buy things, communicate without being spied on, use banks, or keep our own conduct on the Internet secret or private.</li>
+<li><strong>Major points:</strong> <ul>
+<li>Bob was able to encrypt a secret message for Alice without needing to know her key</li>
+<li>The only “information” exchanged in public, where Eve could see it, was the result of one-way functions that produced data that would be “computationally hard” to crack. </li>
+<li>Anyone, not just Alice, could make a sealed cup of beans and put it out in public with their name on it, allowing anyone else to encrypt a message just for them!</li>
+<li>This is <strong>asymmetric</strong> encryption in a nutshell: one key can only be used to encrypt data, and a different (but related) key can only be used to decrypt.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Watch the Video:</strong> <a class="resource" href="https://www.youtube.com/watch?v=ZghMPWGXexs" target="_blank">The Internet: Encryption &amp; Public Keys</a></p>
+<p><strong>Foreshadow the Next Lesson:</strong></p>
+<ul>
+<li><em>Say:</em> It’s important to understand how the process of public key cryptography works.  The “real” thing uses math instead of cups and beans, but the process is the same.  Tomorrow we’ll take a look at how the math works. (Don’t worry; it’s not that hard.)</li>
+<li>Recap the cups and beans version of public key cryptography, using the terminology introduced on the activity guide.  Here is a breakdown:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+<th>Cups and Beans Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asymmetric Encryption</td>
+<td>A method of encrypting that uses two different keys, one for encrypting a message and one for decrypting.</td>
+<td></td>
+</tr>
+<tr>
+<td>Public Key Cryptography</td>
+<td>The term for the most common form of asymmetric encryption.  The encrypting key is made public so anyone can use it.  The decrypting key is kept private and never shared.  Thus, anyone can encrypt a message for anyone else, but only the holder of the private key can actually read it.</td>
+<td></td>
+</tr>
+<tr>
+<td>Private Key</td>
+<td>A key used for decrypting a message that is only known to one person, the intended recipient.</td>
+<td>Alice’s private key is the number of beans she chooses to put in the cup initially.</td>
+</tr>
+<tr>
+<td>Public Key</td>
+<td>A key that can be used by anyone to encrypt a message for the intended recipient.  It is generated using a one-way function on the private key, so there is a relationship between the public and private keys, but figuring it out is a computationally hard problem.</td>
+<td>Alice makes her public key by using the “one way function” of sealing the lid on the cup of beans, which makes cracking her private key a “hard problem.”</td>
+</tr>
+<tr>
+<td>Encrypting (a message)</td>
+<td>In public key cryptography, you encrypt a message using a one-way function with the intended recipient’s public key.</td>
+<td>Bob encrypts a message by using Alice’s public cup of beans.  Adding beans to the cup is also a one-way function.  Bob can put the cup back out in public, knowing that cracking his message is a “hard” problem.</td>
+</tr>
+<tr>
+<td>Decrypting (a message)</td>
+<td>In public key cryptography, the recipient gets a message that has been encrypted with her public key.  She can use the private key to decrypt the message.  It works because of the relationship between the public and private keys.</td>
+<td>Alice decrypts the message by taking the lid off the cup, dumping out the beans, and taking away the number of beans she “privately” added to the cup.  The lid on the cup represents a one-way function that Alice knows the answer to.  (This is the hardest analogy to make; we’ll see it for real in the next lesson.)</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<strong>Real World Concerns:</strong></p>
+<ul>
+<li>One nice side benefit of Asymmetric encryption is that it reduces the number of keys you need to know or remember.  With symmetric encryption, you would have to share a key with anyone and everyone you want to have secure transactions with. In public key cryptography (which uses asymmetric encryption) you don’t have to remember anything.  Just find the public key of whoever you want to communicate with (most common example: a website you want to send your credit card info to) and encrypt a message and send it off.  You know that only the holder of the private key for that public key can see it.</li>
+<li>Of course, in the real world, we can’t use cups to send messages on the Internet! Why do you think this method doesn’t quite work on the Internet? (Teacher’s Note: In this activity, there was an implicit “look but don’t touch” rule. On the Internet, all bets are off. Anyone could “dump the cups” and count how many beans were in each. We need to make our public keys more secure!)  We’ll show how in the next lesson.</li>
+<li>Public key cryptography is accomplished using mathematical one-way functions, and these functions need to be tough enough that they’re very hard or impossible for a computer to crack (just as it’s impossible to tell how many beans there are by looking at the cups). In the next lesson, we’ll look at a classic problem in computer science that is considered “computationally hard.” We’ll be leveraging these types of “computationally hard” problems to send messages using public key cryptography.</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li>What additional security concerns might arise with public key cryptography? How do you know for sure that someone else’s public key belongs to him?</li>
+<li>Read <a href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf" target="_blank">Blown to Bits (www.bitsbook.com), Chapter 5</a>, Secret Bits, pp. 174-178, Lessons for the Internet Age, then answer the following questions:<ul>
+<li>The Fundamental Tenet of Cryptography is presented in the textbook as: “If lots of smart people have failed to solve a problem, then it probably won’t be solved (soon).”  Do you agree or disagree?  Why?  Does it inspire confidence in modern cryptography?</li>
+<li>Chapter 5 introduces some basic encryption and security topics and talks about some misconceptions and mistakes people have made. From your own experience, do you think people are getting smarter about this? Is the public more aware or more complacent in recent years? How different do you think the technical population is from the general population?</li>
+</ul>
+</li>
+<li>Read <a href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf" target="_blank">Blown to Bits (www.bitsbook.com), Chapter 5</a>, Secret Bits, pp. 179-183, Secrecy Changes Forever, to review the Alice and Bob scenario.</li>
+<li>Read <a href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf" target="_blank">Blown to Bits (www.bitsbook.com), Chapter 5</a>, Secret Bits, pp. 183-187, Digital Signatures, then answer the following question:
+Should Certificate Authorities (CAs) be regulated?</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p><strong>Questions:</strong></p>
+<ol>
+<li>
+<p>In symmetric encryption, the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason (more are welcome) why asymmetric encryption is useful.</p>
+</li>
+<li>
+<p>In the cups and beans activity, what is the public key? What is the private key? What is the unencrypted and encrypted message?</p>
+</li>
+<li>
+<p>What are some other examples of one-way functions? Can you think of a one-way function in real life? </p>
+</li>
+</ol>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CPP</strong> - Computing Practice &amp; Programming</summary>
+                    <ul>
+                        
+                            <li><strong>CPP.L3A:9</strong> - Explain the principles of security by examining encryption, cryptography, and authentication techniques.</li>
+                        
+                            <li><strong>CPP.L3B:5</strong> - Deploy principles of security by implementing encryption and authentication strategies.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CT</strong> - Computational Thinking</summary>
+                    <ul>
+                        
+                            <li><strong>CT.L3B:2</strong> - Explain the value of heuristic algorithms to approximate solutions for intractable problems.</li>
+                        
+                            <li><strong>CT.L3B:3</strong> - Critically examine classical algorithms and implement an original algorithm.</li>
+                        
+                            <li><strong>CT.L3B:4</strong> - Evaluate algorithms by their efficiency, correctness, and clarity.</li>
+                        
+                            <li><strong>CT.L3B:5</strong> - Use data analysis to enhance understanding of complex natural and human systems.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>2.3</strong> - Models and simulations use abstraction to generate new understanding and knowledge.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.3.1</strong> - Use models and simulations to represent phenomena. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.3.1A</strong> - Models and simulations are simplified representations of more complex objects or phenomena.</li>
+                                
+                                    <li><strong>2.3.1B</strong> - Models may use different abstractions or levels of abstraction depending on the objects or phenomena being posed.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>4.2</strong> - Algorithms can solve many but not all computational problems.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>4.2.1</strong> - Explain the difference between algorithms that run in a reasonable time and those that do not run in a reasonable time. [P1]</summary>
+                            <ul>
+                                
+                                    <li><strong>4.2.1A</strong> - Many problems can be solved in a reasonable time.</li>
+                                
+                                    <li><strong>4.2.1B</strong> - Reasonable time means that as the input size grows, the number of steps the algorithm takes is proportional to the square (or cube, fourth power, fifth power, etc.) of the size of the input. </li>
+                                
+                                    <li><strong>4.2.1C</strong> - Some problems cannot be solved in a reasonable time, even for small input sizes.</li>
+                                
+                                    <li><strong>4.2.1D</strong> - Some problems can be solved but not in a reasonable time. In these cases, heuristic approaches may be helpful to find solutions in reasonable time.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>4.2.2</strong> - Explain the difference between solvable and unsolvable problems in computer science. [P1]</summary>
+                            <ul>
+                                
+                                    <li><strong>4.2.2A</strong> - A heuristic is a technique that may allow us to find an approximate solution when typical methods fail to find an exact solution.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>4.2.4</strong> - Evaluate algorithms analytically and empirically for efficiency, correctness, and clarity. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>4.2.4A</strong> - Determining an algorithmâ€™s efficiency is done by reasoning formally or mathematically about the algorithm.</li>
+                                
+                                    <li><strong>4.2.4B</strong> - Empirical analysis of an algorithm is done by implementing the algorithm and running it on different inputs.</li>
+                                
+                                    <li><strong>4.2.4C</strong> - The correctness of an algorithm is determined by reasoning formally or mathematically about the algorithm, not by testing an implementation of the algorithm.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.3</strong> - Cybersecurity is an important concern for the Internet and the systems built on it.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.3.1</strong> - Identify existing cybersecurity concerns and potential options to address these issues with the Internet and the systems built on it. [P1]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.3.1H</strong> - Cryptography is essential to many models of cybersecurity.</li>
+                                
+                                    <li><strong>6.3.1I</strong> - Cryptography has a mathematical foundation.</li>
+                                
+                                    <li><strong>6.3.1L</strong> - Public key encryption, which is not symmetric, is an encryption method that is widely used because of the enhanced security associated with its use.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+
+    <script type="text/javascript">
+        $('#tocasymmetric-and-public-keys-cups-and-beans').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#asymmetric-and-public-keys-cups-and-beanscontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'asymmetric-and-public-keys-cups-and-beans', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+        $(function(){
+            $('.togglesay').live('click', function() {
+                $('.say').slideToggle();
+                $('.togglesay').toggle();
+            });
+        });
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            //$('<input type="checkbox" class="todo" name="' + (count++) + '"/>').prependTo(".prep ul li");
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+            // read the current/previous setting
+            $("input.todo").each(function() {
+                var mycookie = $.cookie($(this).attr('name'));
+                if (mycookie && mycookie == "true") {
+                    $(this).prop('checked', mycookie);
+                }
+            });
+            $("input.todo").change(function() {
+                $.cookie($(this).attr("name"), $(this).prop('checked'), {
+                    path: '/',
+                    expires: 365
+                });
+            });
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+    <!--<script type="text/javascript">
+        jQuery(function ($) {
+            $('body').annotator();
+        });
+    </script>-->
+
+    <!--<script type="text/javascript">
+        $(function() {
+            // Add conditional classname based on support
+            $('html').addClass($.fn.details.support ? 'details' : 'no-details');
+            // Emulate <details> where necessary and enable open/close event handlers
+            $('details').details();
+            // Bind some example event handlers
+            $('details').on({
+                'open.details': function() {
+                    console.log('opened');
+                },
+                'close.details': function() {
+                    console.log('closed');
+                }
+            });
+        });
+    </script>-->
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+<!--<script async defer src="https://factlink.com/lib/dist/factlink_loader.min.js"></script>-->
+</body>
+</html>
