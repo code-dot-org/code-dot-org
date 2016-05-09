@@ -6,6 +6,17 @@
 /* global React */
 var constants = require('@cdo/apps/studio/constants');
 
+// TODO elijah this list is pulled from
+// @cdo/apps/studio/skins:loadStudio(), where it is hardcoded as the
+// list of avatars for the Code Studio Playlab Skin. The list is
+// duplicated in Grid.jsx for the purposes of displaying the sprites.
+// Ideally, both of these templates would just be referencing a more
+// publically-accessible list in apps code.
+// Even more ideally, this editor would be expanded to support any of
+// our skins, but that will likely require a bit of a refactor in the
+// way we handle skins, and is unjustifiable for now, since the
+// Playlab-skinned levels are currently the only ones we edit with this
+// interface.
 var avatarList = ["dog", "cat", "penguin", "dinosaur", "octopus",
     "witch", "bat", "bird", "dragon", "squirrel", "wizard", "alien",
     "ghost", "monster", "robot", "unicorn", "zombie", "knight",

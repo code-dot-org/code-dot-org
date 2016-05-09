@@ -9,6 +9,8 @@ var studioTiles = {
   [studioConstants.SquareType.SPRITESTART]: 'sprite',
 };
 
+// This list is duplicated in StudioCellEditor. See comment there for
+// some explanation of why that's not the greatest design.
 var studioAvatarList = ["dog", "cat", "penguin", "dinosaur", "octopus",
     "witch", "bat", "bird", "dragon", "squirrel", "wizard", "alien",
     "ghost", "monster", "robot", "unicorn", "zombie", "knight", "ninja",
