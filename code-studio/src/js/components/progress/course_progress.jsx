@@ -2,13 +2,23 @@
 
 var STAGE_TYPE = require('./types').STAGE_TYPE;
 var CourseProgressRow = require('./course_progress_row');
+var StageDetails = require('./stage_details');
 
 /**
  * Stage progress component used in level header and course overview.
  */
 var CourseProgress = React.createClass({
   propTypes: {
+    display: React.PropTypes.oneOf(['dots', 'list']).isRequired,
     stages: React.PropTypes.arrayOf(STAGE_TYPE)
+  },
+
+  getRow: function (stage) {
+    if (this.props.display === 'dots') {
+      return <CourseProgressRow stage={stage} key={stage.name}/>;
+    } else {
+      return <StageDetails  stage={stage} key={stage.name}/>;
+    }
   },
 
   render: function () {
@@ -22,7 +32,7 @@ var CourseProgress = React.createClass({
       if (stages[i].flex_category) {
         var flexRows = [], previous = stages[i].flex_category;
         for ( ; i < stages.length && stages[i].flex_category === previous; i++) {
-          flexRows.push(<CourseProgressRow stage={stages[i]} key={stages[i].name}/>);
+          flexRows.push(this.getRow(stages[i]));
         }
         rows.push(
           <div className="flex-wrapper">
@@ -33,7 +43,7 @@ var CourseProgress = React.createClass({
           </div>
         );
       } else {
-        rows.push(<CourseProgressRow stage={stages[i]} key={stages[i].name}/>);
+        rows.push(this.getRow(stages[i]));
         i++;
       }
     }

@@ -125,9 +125,11 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
 };
 
 progress.renderCourseProgress = function (scriptData) {
+  var teacherCourse = $('#landingpage').hasClass('teacher-course');
   var mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
   ReactDOM.render(React.createElement(CourseProgress, {
+    display: teacherCourse ? 'list' : 'dots',
     stages: scriptData.stages
   }), mountPoint);
   progress.populateProgress(scriptData.name);

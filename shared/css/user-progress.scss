@@ -87,7 +87,7 @@ a.level_link.submitted:hover
 
 .stage-lesson-plan-link a,
 .stage-lesson-plan-link a:link,
-.stage-lesson-plan-link a:visited,
+.stage-lesson-plan-link a:visited
 {
   font-size: 10px;
   color: $purple;
@@ -125,6 +125,12 @@ a.level_link.submitted:hover
       }
     }
   }
+}
+
+.teacher-stage {
+  margin: 0.5em 0;
+  font-size: 1.2em;
+  text-decoration: underline;
 }
 
 .puzzle-named {
