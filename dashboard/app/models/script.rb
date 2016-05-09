@@ -438,20 +438,8 @@ class Script < ActiveRecord::Base
         raise ActiveRecord::RecordNotFound, "Level: #{row_data.to_json}, Script: #{script.name}"
       end
 
-      # TODO: (bbuchanan) Enable stricter gamelab rule when possible.
-      # There are scripts that are not yet compliant with this
-      # gamelab rule.  Once the new student_of_admin_required option is
-      # deployed to levelbuilder and all scripts are updated to be
-      # compliant, enable this enforcing check to make sure future
-      # scripts are compliant as well.
-      #
-      # Scripts known to be in violation of this rule:
-      #   gamelab-hackathon.script
-      #   CSDU3-Draft.script
-      #   TEMP CSD Unit 3.script
       if Game.gamelab == level.game
-        # unless script.student_of_admin_required || script.admin_required
-        unless script.hidden || script.login_required || script.student_of_admin_required || script.admin_required
+        unless script.student_of_admin_required || script.admin_required
           raise <<-ERROR.gsub(/^\s+/, '')
             Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required
             (while adding level "#{level.name}" to script "#{script.name}")
