@@ -6,7 +6,7 @@ class CreatePeerReviews < ActiveRecord::Migration
       t.boolean :from_instructor, null: false, default: false
       t.references :script, index: true, foreign_key: true, null: false
       t.references :level, index: true, foreign_key: true, null: false
-      t.references :level_source, foreign_key: true, null: false
+      t.references :level_source, index: true, foreign_key: true, null: false
       t.text :data
       t.integer :status
 

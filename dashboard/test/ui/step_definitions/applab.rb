@@ -121,9 +121,14 @@ end
 
 def set_nth_input(n, value)
   elements = @browser.find_elements(:css, '#design-properties input')
-  press_keys(elements[n], ":delete")
-  press_keys(elements[n], ":delete")
-  press_keys(elements[n], ":delete")
+  # For some reason, the test machine seemed to stop responding to :delete. Even
+  # stranger, on my localhost, if I do a bunch of backspaces without following
+  # them with a delete, the press_keys(value) is ignored. By having both here,
+  # things seem to work both on test and in development
+  press_keys(elements[n], "\b") # backspace
+  press_keys(elements[n], "\b") # backspace
+  press_keys(elements[n], "\b") # backspace
+  press_keys(elements[n], "\b") # backspace
   press_keys(elements[n], ":delete")
   press_keys(elements[n], value)
 end

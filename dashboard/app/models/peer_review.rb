@@ -16,10 +16,11 @@
 #
 # Indexes
 #
-#  index_peer_reviews_on_level_id      (level_id)
-#  index_peer_reviews_on_reviewer_id   (reviewer_id)
-#  index_peer_reviews_on_script_id     (script_id)
-#  index_peer_reviews_on_submitter_id  (submitter_id)
+#  index_peer_reviews_on_level_id         (level_id)
+#  index_peer_reviews_on_level_source_id  (level_source_id)
+#  index_peer_reviews_on_reviewer_id      (reviewer_id)
+#  index_peer_reviews_on_script_id        (script_id)
+#  index_peer_reviews_on_submitter_id     (submitter_id)
 #
 
 class PeerReview < ActiveRecord::Base
