@@ -807,7 +807,7 @@ function setupReduxSubscribers(store) {
     }
 
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
-      Applab.onIsRunningChange(state.runState.isRunning);
+      Applab.onIsRunningChange();
     }
   });
 }
