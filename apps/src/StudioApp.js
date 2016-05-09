@@ -341,7 +341,7 @@ StudioApp.prototype.init = function (config) {
       twitter: config.twitter,
       app: config.app,
       noHowItWorks: config.noHowItWorks,
-      isLegacyShare: config.isLegacyShare
+      isLegacyShare: config.isLegacyShare,
     });
   }
 
@@ -1811,7 +1811,7 @@ StudioApp.prototype.configureDom = function (config) {
   var visualizationColumn = document.getElementById('visualizationColumn');
   var visualization = document.getElementById('visualization');
 
-  if (!config.hideSource || config.embed) {
+  if (!config.hideSource || config.embed || config.level.iframeEmbed) {
     var vizHeight = this.MIN_WORKSPACE_HEIGHT;
     if (this.isUsingBlockly() && config.level.edit_blocks) {
       // Set a class on the main blockly div so CSS can style blocks differently
@@ -1828,7 +1828,7 @@ StudioApp.prototype.configureDom = function (config) {
       config.level.disableVariableEditing = false;
     }
 
-    if (config.iframeEmbed) {
+    if (config.level.iframeEmbed) {
       document.body.className += ' embedded_iframe';
     }
 
@@ -1903,7 +1903,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
         var div = document.createElement('div');
         document.body.appendChild(div);
-        if (!options.iframeEmbed) {
+        if (!options.level.iframeEmbed) {
           ReactDOM.render(React.createElement(WireframeSendToPhone, {
             channelId: dashboard.project.getCurrentId(),
             appType: dashboard.project.getStandaloneApp()
