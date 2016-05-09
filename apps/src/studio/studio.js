@@ -2629,6 +2629,13 @@ Studio.checkForBlocklyPreExecutionFailure = function () {
     return true;
   }
 
+  if (studioApp.hasExtraTopBlocks() && !level.showUnusedBlocks) {
+    Studio.result = false;
+    Studio.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
   if (studioApp.hasEmptyFunctionOrVariableName()) {
     Studio.result = false;
     Studio.testResults = TestResults.EMPTY_FUNCTION_NAME;

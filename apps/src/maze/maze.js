@@ -1155,6 +1155,13 @@ Maze.execute = function (stepMode) {
   studioApp.reset(false);
   resetDirtImages(true);
 
+  // if we have extra top blocks, don't even bother animating
+  if (Maze.testResults === TestResults.EXTRA_TOP_BLOCKS_FAIL) {
+    Maze.result = ResultType.ERROR;
+    displayFeedback();
+    return;
+  }
+
   Maze.animating_ = true;
 
   if (studioApp.isUsingBlockly()) {

@@ -130,7 +130,7 @@ Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE = 'blockSpaceChange';
  * Fired by Code Studio when the run button is clicked.
  * @type {string}
  */
-Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED = "run_button_whooopdedoo";
+Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED = "runButtonClicked";
 
 /**
  * Angle away from the horizontal to sweep for blocks.  Order of execution is

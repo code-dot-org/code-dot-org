@@ -1664,7 +1664,7 @@ Blockly.Block.prototype.setIsUnused = function(isUnused) {
         Blockly.mainBlockSpace.isReadOnly() === false &&
         Blockly.mainBlockSpace.isTopBlock(this);
   }
-  if (Blockly.showUnused) {
+  if (Blockly.showUnusedBlocks) {
     this.svg_.setIsUnused(isUnused);
   }
   this.childBlocks_.forEach(function (block) {
