@@ -70,10 +70,15 @@ class PairingsControllerTest < ActionController::TestCase
   end
 
   test 'should remove pairings in session' do
-    sign_in create(:user)
+    sign_in user = create(:user)
+
+    section = create(:follower, student_user: user).section
+    classmate = create(:follower, section: section).student_user
+    session[:pairings] = [classmate.id]
+
     xhr :put, :update, pairings: []
 
     assert_response :success
-    assert_equal nil, session[:pairings]
+    assert_equal [], session[:pairings]
   end
 end

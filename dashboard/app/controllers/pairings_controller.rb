@@ -7,11 +7,7 @@ class PairingsController < ApplicationController
   end
 
   def update
-    if params[:pairings].present?
-      self.pairings = params[:pairings]
-    else # turn off pair programming
-      self.pairings = nil
-    end
+    self.pairings = params[:pairings]
 
     head :ok
   end

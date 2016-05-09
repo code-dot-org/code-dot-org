@@ -225,8 +225,13 @@ class ApplicationController < ActionController::Base
   # saved as a cookie)
 
   def pairings=(pairings_from_params)
-    return if pairings_from_params.blank?
+    # remove pairings
+    if pairings_from_params.blank?
+      session[:pairings] = []
+      return
+    end
 
+    # replace pairings
     session[:pairings] = pairings_from_params.map do |pairing_param|
       other_user = User.find(pairing_param[:id])
       if current_user.can_pair_with? other_user
