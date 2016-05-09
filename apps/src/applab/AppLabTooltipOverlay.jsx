@@ -2,7 +2,7 @@
 
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import elementUtils from './designElements/elementUtils';
-import { scaledDropPoint } from './gridUtils';
+import { draggedElementDropPoint } from './gridUtils';
 import { connect } from 'react-redux';
 import { ApplabInterfaceMode } from './constants';
 import { ellipsify } from '../utils';
@@ -77,22 +77,7 @@ const AppLabTooltipOverlay = React.createClass({
   },
 
   render() {
-    let mouseX = this.props.mouseX,
-        mouseY = this.props.mouseY,
-        tooltipAboveCursor = false;
-
-    // Modify passed props if we're in a 'dragging' mode.
-    const draggingElement = $(".ui-draggable-dragging");
-    const isDragging = !!draggingElement.length;
-    if (isDragging) {
-      // If we're dragging an element, use its current drop position
-      // (top left of the dragged element)
-      const point = scaledDropPoint(draggingElement);
-      mouseX = point.left;
-      mouseY = point.top;
-      tooltipAboveCursor = true;
-    }
-
+    const dragPoint = draggedElementDropPoint();
     var tooltipProviders = [coordinatesProvider()];
     if (this.state.hoveredControlId) {
       tooltipProviders.push(this.getElementIdText);
@@ -102,10 +87,10 @@ const AppLabTooltipOverlay = React.createClass({
       <TooltipOverlay
           width={this.props.width}
           height={this.props.height}
-          mouseX={mouseX}
-          mouseY={mouseY}
+          mouseX={dragPoint ? dragPoint.left : this.props.mouseX}
+          mouseY={dragPoint ? dragPoint.top : this.props.mouseY}
           providers={tooltipProviders}
-          tooltipAboveCursor={tooltipAboveCursor}
+          tooltipAboveCursor={!!dragPoint}
       />
     );
   }

@@ -5,8 +5,7 @@
 var GRID_SIZE = 5;
 
 /**
- * @typedef TopLeft
- * @type Object
+ * @typedef {Object} TopLeft
  * @property {number} top
  * @property {number} left
  */
@@ -14,10 +13,10 @@ var GRID_SIZE = 5;
 /**
  * Given an element being dragged, determine the scaled x/y position of the
  * top left corned, scaled to our visualization.
- * @param {jQueryObject} draggedElement
+ * @param {jQuery} draggedElement
  * @return {TopLeft}
  */
-module.exports.scaledDropPoint = function (draggedElement) {
+export function scaledDropPoint(draggedElement) {
   var div = document.getElementById('designModeViz');
 
   var boundingRect = div.getBoundingClientRect();
@@ -38,7 +37,29 @@ module.exports.scaledDropPoint = function (draggedElement) {
     left: left,
     top: top
   };
-};
+}
+
+/**
+ * Get jQuery object for the element(s) currently being dragged. Will be empty
+ * if no drag is currently underway.
+ * @returns {jQuery}
+ */
+export function getDraggedElement() {
+  return $('.ui-draggable-dragging');
+}
+
+/**
+ * If a drag is underway, returns the target coordinates of the dragged element
+ * if they were dropped right now.  If no drag is underway, returns null.
+ * @returns {TopLeft|null}
+ */
+export function draggedElementDropPoint() {
+  const draggedElement = getDraggedElement();
+  if (!draggedElement.length) {
+    return null;
+  }
+  return module.exports.scaledDropPoint(draggedElement);
+}
 
 /**
  * Given a coordinate on either axis and a grid size, returns a coordinate
@@ -46,7 +67,7 @@ module.exports.scaledDropPoint = function (draggedElement) {
  * @param {number} coordinate
  * @returns {number}
  */
-module.exports.snapToGridSize = function (coordinate) {
+export function snapToGridSize(coordinate) {
   var halfGrid = GRID_SIZE / 2;
   return coordinate - ((coordinate + halfGrid) % GRID_SIZE - halfGrid);
-};
+}
