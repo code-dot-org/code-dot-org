@@ -32,8 +32,7 @@ var Visualization = React.createClass({
     var appWidth = applabConstants.APP_WIDTH;
     var appHeight = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
 
-    var addPhoneFrame = experiments.isEnabled('phoneFrame') &&
-      !this.props.isEmbedView && !this.props.isShareView;
+    var addPhoneFrame = experiments.isEnabled('phoneFrame') && !this.props.isShareView;
 
     return (
       <ProtectedStatefulDiv>
