@@ -80,6 +80,14 @@ en:
     external:
       AlgPD Break:
         Before you move on...: Before you move on...
+      Algo How Routers Learn Student Lesson Introduction:
+        description here: description here
+        title: title
+      Algo MST Student Lesson Introduction:
+        Algorithm detour - Minimum Spanning Tree: Algorithm detour - Minimum Spanning Tree
+      Algo Shortest Path Student Lesson Introduction:
+        description here: description here
+        title: title
       App Lab Feedback:
         App Lab Feedback: App Lab Feedback
         description here: description here
@@ -632,6 +640,9 @@ en:
       ECSU4 Challenge Submission: {}
       Embedded Arduino Sketch Test:
         Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
+      Encoding Numbers Real World Student Lesson Introduction:
+        description here: description here
+        title: title
       Equity About: {}
       Equity CS: {}
       Equity Celebrate: {}
@@ -926,6 +937,9 @@ en:
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
+      Sending Bits Real World Student Lesson Introduction:
+        description here: description here
+        title: title
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
       TLO practical:
@@ -936,6 +950,7 @@ en:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
       U1L1 Innovation - Video:
+        CS is Changing Everything - Video: CS is Changing Everything - Video
         Impact of Innovation - Video: Impact of Innovation - Video
         description here: description here
       U1L1 Student Lesson Introduction:
@@ -992,6 +1007,7 @@ en:
       U1L8 Student Lesson Introduction:
         Sending Numbers: Sending Numbers
         description here: description here
+        title: title
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1696,14 +1712,42 @@ en:
         title: title
       v1 U1L13 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        description here: description here
+        title: title
       v2 U1L10 Student Lesson Introduction:
         The Need for Addressing: The Need for Addressing
+        U1L10 Routers and Redundancy: U1L10 Routers and Redundancy
+      v2 U1L11 Student Lesson Introduction:
+        Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+      v2 U1L12 Student Lesson Introduction:
+        The Need for DNS: The Need for DNS
+      v2 U1L13 Student Lesson Introduction:
+        HTTP and Abstraction: HTTP and Abstraction
+      v2 U1L14 Student Lesson Introduction:
+        description here: description here
+        title: title
       v2 U1L2 Student Lesson Introduction:
         description here: description here
         title: title
+      v2 U1L3 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L4 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L5 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L6 Student Lesson Introduction:
+        Sending Numbers: Sending Numbers
+        description here: description here
       v2 U1L8 Student Lesson Introduction:
         description here: description here
         title: title
+      v2 U1L9 Student Lesson Introduction:
+        The Need for Addressing: The Need for Addressing
+        The Need for DNS: The Need for DNS
       wn scratchjr 1:
         Scratch Jr: Scratch Jr
     level_group:
