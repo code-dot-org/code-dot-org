@@ -1,6 +1,6 @@
 /* global React, dashboard */
 
-var STAGE_PROGRESS_TYPE = require('./stage_progress_type');
+var STAGE_PROGRESS_TYPE = require('./types').STAGE_PROGRESS_TYPE;
 
 /**
  * Stage progress component used in level header and course overview.

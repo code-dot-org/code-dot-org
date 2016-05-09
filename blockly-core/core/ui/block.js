@@ -894,6 +894,18 @@ Blockly.Block.prototype.showContextMenu_ = function(e) {
       }
     };
     options.push(movableOption);
+
+    // next connection disabled
+    var nextConnectionDisabledOption = {
+      text: this.nextConnectionDisabled_ ?
+          "Enable Next Connection" : "Disable Next Connection",
+      enabled: true,
+      callback: function () {
+        block.setNextConnectionDisabled(!block.nextConnectionDisabled_);
+        Blockly.ContextMenu.hide();
+      }
+    };
+    options.push(nextConnectionDisabledOption);
   }
 
   // Allow the block to add or modify options.
@@ -1480,6 +1492,10 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
   }
 };
 
+Blockly.Block.prototype.isNextConnectionDisabled = function() {
+  return this.nextConnectionDisabled_;
+};
+
 /**
  * Set whether this block should allow for succeeding connections.
  * Called by Xml.domToBlock, primarily used as a passthrough to
@@ -1487,9 +1503,10 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
  */
 Blockly.Block.prototype.setNextConnectionDisabled = function(disabled) {
   this.nextConnectionDisabled_ = disabled;
-  if (this.nextConnectionDisabled_ === true) {
-    this.setNextStatement(false);
+  if (disabled && this.nextConnection && this.nextConnection.targetConnection) {
+    this.nextConnection.disconnect();
   }
+  this.setNextStatement(!disabled);
 };
 
 /**

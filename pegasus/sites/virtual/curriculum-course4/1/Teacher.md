@@ -74,17 +74,12 @@ Students will:
 ## Getting Started (10 min) 
 
 ### <a name="Review"></a> 1) Review
-This is a great time to review the last lesson that you went through with your class.  We suggest you alternate between asking questions of the whole class and having students talk about their answers in small groups.
+This is a great time to review computer science experiences from the past. Where did everyone leave off?
 
 Here are some questions that you can ask in review:
 
-- What did we do last time?
-
-- What do you wish we would have had a chance to do?
-
-- Did you think of any questions after the lesson that you want to ask?
-
-- What was your favorite part of the last lesson?  
+- Do you remember what an algorithm is?
+- What does an algorithm have to do with sequence?
 
 [tip]
 
@@ -215,19 +210,34 @@ Try to focus on misplacements that allow the class to back up only a few steps t
 - 1c. Use models and simulations to explore complex systems and issues
 - 2d. Contribute to project teams to produce original works or solve problems
 - 4b. Plan and manage activities to develop a solution or complete a project
-- 6c. Troubleshoot systems and applications
+- 6c. Use multiple processes and diverse perspectives to explore alternative solutions
 
 ### The activities in this lesson support CSTA K-12 Computer Science Standards:
- 
-- CT.L1:6.01 - Understand and use the basic steps in algorithmic problem-solving  
-- CT.L1:6.02 - Develop a simple understanding of an algorithm using computer-free exercises   
-- CPP.L1:6.05 - Construct a program as a set of step-by-step instructions to be acted out
 
+- CT.L1:6-01 Understand and use the basic steps in algorithmic problem-solving
+- CT.L1:6-02 Develop a simple understanding of an algorithm using computer-free exercises
+- CPP.L1:6-05 Construct a program as a set of step-by-step instructions to be acted out
 
-### Other standards, including the NGSS, and Common Core Math & Language Arts
+### Next-Gen Science Standards
 
-- CCLA-K:SL.2 - Confirm understanding of a text by asking or answering questions
-- CCLA-1:SL.2 - Ask and answer questions about key details in a text
+- 3-5-ETS1-2 Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem
+
+### Common Core Mathematical Practices
+
+- 1. Make sense of problems and persevere in solving them
+- 6. Attend to precision
+
+### Common Core Math Standards
+
+- 3.G.A.1 Understand that shapes in different categories  may share attributes and that the shared attributes can define a larger category
+- 5.G.B.3 Understand that attributes belonging to a category of two-dimensional figures also belong to all subcategories of that category
+
+### Common Core Language Arts Standards
+
+- L.3.6 Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
+- L.4.6 Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal precise actions, emotions, or states of being and that are basic to a particular topic.
+- L.5.6 Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal contrast, addition, and other logical relationships.
+
 
 [/together]
 

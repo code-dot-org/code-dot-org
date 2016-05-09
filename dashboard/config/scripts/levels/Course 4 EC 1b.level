@@ -41,45 +41,7 @@
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="maze_forever">
-              <statement name="DO">
-                <block type="maze_ifElse">
-                  <title name="DIR">isPathForward</title>
-                  <statement name="DO">
-                    <block type="maze_moveForward"/>
-                  </statement>
-                  <statement name="ELSE">
-                    <block type="maze_ifElse">
-                      <title name="DIR">isPathLeft</title>
-                      <statement name="DO">
-                        <block type="maze_turn">
-                          <title name="DIR">turnLeft</title>
-                          <next>
-                            <block type="maze_moveForward"/>
-                          </next>
-                        </block>
-                      </statement>
-                      <statement name="ELSE">
-                        <block type="maze_if">
-                          <title name="DIR">isPathRight</title>
-                          <statement name="DO">
-                            <block type="maze_turn">
-                              <title name="DIR">turnRight</title>
-                              <next>
-                                <block type="maze_moveForward"/>
-                              </next>
-                            </block>
-                          </statement>
-                        </block>
-                      </statement>
-                    </block>
-                  </statement>
-                </block>
-              </statement>
-            </block>
-          </next>
-        </block>
+  </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>

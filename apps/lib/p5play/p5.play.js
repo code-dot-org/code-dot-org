@@ -139,6 +139,10 @@ p5.prototype.spriteUpdate = true;
    * A Sprite can have a collider that defines the active area to detect
    * collisions or overlappings with other sprites and mouse interactions.
    *
+   * Sprites created using createSprite (the preferred way) are added to the
+   * allSprites group and given a depth value that puts it in front of all
+   * other sprites.
+   *
    * @method createSprite
    * @param {Number} x Initial x coordinate
    * @param {Number} y Initial y coordinate
@@ -948,7 +952,9 @@ function Sprite(pInst, _x, _y, _w, _h) {
   *
   * @property depth
   * @type {Number}
-  * @default 0
+  * @default One more than the greatest existing sprite depth, when calling
+  *          createSprite().  When calling new Sprite() directly, depth will
+  *          initialize to 0 (not recommended).
   */
   this.depth = 0;
 
@@ -2614,18 +2620,13 @@ function Group() {
   * @return {Number} The depth of the sprite drawn on the top
   */
   array.maxDepth = function() {
-    var max;
+    if (array.length === 0) {
+      return 0;
+    }
 
-    if(array.length === 0)
-      max = 0;
-    else
-      max = array[0].depth;
-
-    for(var i = 0; i<array.length; i++)
-      if(array[i].depth>max)
-        max = array[i].depth;
-
-    return max;
+    return array.reduce(function(maxDepth, sprite) {
+      return Math.max(maxDepth, sprite.depth);
+    }, -Infinity);
   };
 
   /**
@@ -2635,18 +2636,13 @@ function Group() {
   * @return {Number} The depth of the sprite drawn on the bottom
   */
   array.minDepth = function() {
-    var min;
+    if (array.length === 0) {
+      return 99999;
+    }
 
-    if(array.length === 0)
-      min = 99999;
-    else
-      min = array[0].depth;
-
-    for(var i = 0; i<array.length; i++)
-      if(array[i].depth<min)
-        min = array[i].depth;
-
-    return min;
+    return array.reduce(function(minDepth, sprite) {
+      return Math.min(minDepth, sprite.depth);
+    }, Infinity);
   };
 
   /**

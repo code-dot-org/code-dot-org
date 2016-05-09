@@ -56,15 +56,11 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_if">
           <title name="DIR">isPathLeft</title>
         </block>
-      </xml>
-    </required_blocks>
-    <recommended_blocks>
-      <xml>
         <block type="maze_forever"/>
       </xml>
     </recommended_blocks>

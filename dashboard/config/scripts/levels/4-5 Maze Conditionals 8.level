@@ -69,13 +69,13 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_ifElse">
           <title name="DIR">isPathForward</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

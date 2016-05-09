@@ -1,18 +1,18 @@
 - level ||= @level
 - last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
-- index ||= nil
+- in_level_group ||= false
 
-- if index # If an index was provided we're inside a LevelGroup.
+- if in_level_group # The LevelGroup will collect results for each level.
   :javascript
     window.levelGroup.levels[#{level.id}] = {
       getCurrentAnswer: function () {
-        var response = $('#level_#{index}').val();
+        var response = $('#level_#{level.id}').val();
         return { response: response, valid: response.length > 1 };
       }
     };
 
     $(document).ready(function() {
-      $("textarea#level_#{index}.response").blur(function () {
+      $("textarea#level_#{level.id}.response").blur(function () {
         if (window.levelGroup && window.levelGroup.answerChangedFn) {
           window.levelGroup.answerChangedFn();
         }
@@ -22,20 +22,33 @@
 - else # Otherwise we need to provide a `window.getResult` function.
   :javascript
     function getResult() {
+      var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
+
       return {
         response: $('.response').val(),
+        submitted: appOptions.level.submittable || forceSubmittable,
         result: true
       };
     }
 
 .free-response
-  - if level.title.present? && !index
+  - if level.title.present? && !in_level_group
     %h2= level.title
   %div= render(inline: level.markdown_instructions, type: :md)
 
+  - if level.allow_user_uploads
+    %script{src: asset_path('js/fileupload/jquery.iframe-transport.js')}
+    %script{src: asset_path('js/fileupload/jquery.fileupload.js')}
+    %p#free-response-upload
+    :javascript
+      dashboard.project.getCurrentId = function () {
+        return appOptions.channel;
+      };
+      ReactDOM.render(React.createElement(dashboard.Attachments, {}), document.querySelector('#free-response-upload'));
+
   - height = level.height || '80'
-  %textarea.response{id: "level_#{index}", placeholder: level.placeholder || 'Enter your answer here', style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
+  %textarea.response{id: "level_#{level.id}", placeholder: level.placeholder || 'Enter your answer here', style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
 
   -# Don't render the dialog partial if we're inside a LevelGroup.
-  = render partial: 'levels/dialog', locals: {app: 'free_response', data: level.properties} unless index
+  = render partial: 'levels/dialog', locals: {app: 'free_response', data: level.properties} unless in_level_group
   = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}

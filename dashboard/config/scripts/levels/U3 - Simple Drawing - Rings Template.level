@@ -41,7 +41,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "start_blocks": "// band 5 - blue\r\nellipse(200, 300, 200, 200);\r\n\r\n// band 6 - indigo\r\nellipse(200, 300, 150, 150);\r\n\r\n// band 7 - violet (smallest band)\r\nellipse(200, 300, 100, 100);"
+    "start_blocks": "ellipse(200, 300, 200, 200);\r\nellipse(200, 300, 150, 150);\r\nellipse(200, 300, 100, 100);",
+    "show_d_pad": "false"
   },
   "published": true,
   "notes": "",

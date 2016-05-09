@@ -83,12 +83,12 @@ class ApiControllerTest < ActionController::TestCase
     level1 = create :text_match
     level1.properties['title'] =  'Text Match 1'
     level1.save!
-    create :script_level, script: script, level: level1
+    create :script_level, script: script, levels: [level1]
 
     level2 = create :text_match
     level2.properties['title'] =  'Text Match 2'
     level2.save!
-    create :script_level, script: script, level: level2
+    create :script_level, script: script, levels: [level2]
     # create some other random levels
     5.times do
       create :script_level, script: script
@@ -148,7 +148,7 @@ class ApiControllerTest < ActionController::TestCase
     level1.properties['title'] =  'Long assessment 1'
     level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
     level1.save!
-    create :script_level, script: script, level: level1, assessment: true
+    create :script_level, script: script, levels: [level1], assessment: true
 
     # student_1 has an assessment
     create(:activity, user: @student_1, level: level1,

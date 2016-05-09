@@ -1,0 +1,28 @@
+name 'ECSPD1 unit 1 overview'
+title 'ECS unit 1 overview'
+description 'ECS Unit 1 Overview'
+css 'unplugged'
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+## ECS Unit 1 Overview
+<br>
+In order to help you become familiar with Unit 1: Human Computer Interaction, let’s take a look at the topics to be addressed and how they are intended to tie in together:
+
+<ul><li>Concepts of computer and computing while investigating the major components of computers and the suitability of these components for particular applications.  They will experiment with internet search techniques, explore a variety of websites and web applications and discuss issues of privacy and security. Fundamental notions of Human Computer Interaction (HCI) and ergonomics are introduced.</li><br>
+ 
+<li>“Intelligent” machine behavior is not “magic” but is based on algorithms applied to useful representations of information, including large data sets.</li> <br>
+ 
+<li>Characteristics that make certain tasks easy or difficult for computers, and how these differ from those that humans characteristically find easy or difficult.</li><br>
+ 
+<li>Gain an appreciation for the many ways in which computing has enabled innovations which have led to an impact on society, as well as for the many different fields in which they are used.  In addition to, making connections among social, economical and cultural contexts.</li> <br>
+<br>
+![](https://images.code.org/c70f9b95aa876ffa3e5f6f6b6dece576-image-1462230752303.11.48 PM.png)
+<br>
+<br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

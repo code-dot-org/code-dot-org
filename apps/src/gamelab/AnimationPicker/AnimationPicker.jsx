@@ -3,7 +3,7 @@ var AnimationPickerBody = require('./AnimationPickerBody.jsx');
 var connect = require('react-redux').connect;
 var Dialog = require('../../templates/DialogComponent.jsx');
 var gamelabMsg = require('../locale');
-var HiddenUploader = require('../../assetManagement/HiddenUploader.jsx');
+var HiddenUploader = window.dashboard.HiddenUploader;
 var styles = require('./styles');
 var utils = require('../../utils');
 

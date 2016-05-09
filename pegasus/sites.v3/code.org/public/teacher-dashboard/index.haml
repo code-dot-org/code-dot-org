@@ -147,7 +147,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
                                        function($scope, $window, sectionsService){
     $scope.sectionsLoaded = false;
 
-    $scope.course_list = #{DashboardSection::valid_courses.to_json};
+    $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
 
     $scope.sections = sectionsService.query();
 
@@ -214,7 +214,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.section = sectionsService.get({id: $routeParams.sectionid});
 
     $scope.course_id = parseInt($routeParams.courseid);
-    $scope.course_list = #{DashboardSection::valid_courses.to_json};
+    $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
 
     $scope.progress = sectionsService.studentProgress({id: $routeParams.sectionid, studentId: $routeParams.studentid});
 
@@ -545,7 +545,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.progressLoadedFirst = false;
     $scope.progressLoaded = false;
 
-    $scope.course_list = #{DashboardSection::valid_courses.to_json};
+    $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
 
     // wait until we have both the students and the student progress
     $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(){
@@ -692,7 +692,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.responsesLoaded = false;
     $scope.stages = [];
 
-    $scope.course_list = #{DashboardSection::valid_courses.to_json};
+    $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
 
     // wait until we have both the students and the student progress
     $q.all([$scope.section.$promise, $scope.responses.$promise]).then(function(){
@@ -755,7 +755,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.assessmentsLoaded = false;
     $scope.stages = [];
 
-    $scope.course_list = #{DashboardSection::valid_courses.to_json};
+    $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
 
     $scope.correctness_list = {
       free_response: '#{I18n.t('dashboard_correctness_free_response')}',

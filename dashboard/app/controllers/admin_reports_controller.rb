@@ -41,7 +41,7 @@ class AdminReportsController < ApplicationController
       # differ from @foodstamps_all and @ethnic_all as a teacher may not answer those questions.
       @student_count = 0
 
-      SurveyResult.all.each do |survey_result|
+      SurveyResult.where(kind: 'Diversity2016').each do |survey_result|
         @participants += 1
         next if survey_result.properties.blank?
         @respondents += 1
