@@ -96,7 +96,7 @@ class ScriptDSL < BaseDSL
     @video_key_for_next_level = nil
     if @current_scriptlevel
       @current_scriptlevel[:levels] << level
-      if not @active
+      if !@active
         @current_scriptlevel[:properties][name] = { :active => @active }
         @active = true
       end
