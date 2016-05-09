@@ -12,7 +12,7 @@ const styles = {
     height: 50,
     backgroundColor: color.lighter_gray,
   },
-  phoneFrameRunning: {
+  phoneFrameDark: {
     backgroundColor: color.charcoal
   },
   phoneFrameTop: {
@@ -32,11 +32,11 @@ const styles = {
 const PhoneFrame = React.createClass({
   propTypes: {
     showFrame: React.PropTypes.bool.isRequired,
-    isRunning: React.PropTypes.bool.isRequired
+    isDark: React.PropTypes.bool.isRequired
   },
 
   render: function () {
-    const { showFrame, isRunning} = this.props;
+    const { showFrame, isDark } = this.props;
     let hideFrame = !showFrame;
     if (!experiments.isEnabled('phoneFrame')) {
       hideFrame = true;
@@ -48,7 +48,7 @@ const PhoneFrame = React.createClass({
             style={[
               styles.phoneFrame,
               styles.phoneFrameTop,
-              isRunning && styles.phoneFrameRunning,
+              isDark && styles.phoneFrameDark,
               hideFrame && commonStyles.hidden
             ]}
         />
@@ -57,7 +57,7 @@ const PhoneFrame = React.createClass({
             style={[
               styles.phoneFrame,
               styles.phoneFrameBottom,
-              isRunning && styles.phoneFrameRunning,
+              isDark && styles.phoneFrameDark,
               hideFrame && commonStyles.hidden
             ]}
         />

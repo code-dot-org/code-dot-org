@@ -47,7 +47,7 @@ var ApplabVisualizationColumn = React.createClass({
             screenIds={this.props.screenIds}
             onScreenCreate={this.props.onScreenCreate} />
         }
-        <PhoneFrame showFrame={showFrame} isRunning={this.props.isRunning}>
+        <PhoneFrame showFrame={showFrame} isDark={this.props.isRunning}>
           <Visualization/>
         </PhoneFrame>
         <GameButtons instructionsInTopPane={this.props.instructionsInTopPane}>
