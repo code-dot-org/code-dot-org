@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160509143719) do
+ActiveRecord::Schema.define(version: 20160509202648) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -805,7 +805,6 @@ ActiveRecord::Schema.define(version: 20160509143719) do
     t.string   "name",                       limit: 255
     t.string   "locale",                     limit: 10,    default: "en-US", null: false
     t.date     "birthday"
-    t.string   "parent_email",               limit: 255
     t.string   "user_type",                  limit: 16
     t.string   "school",                     limit: 255
     t.string   "full_address",               limit: 1024
