@@ -15,6 +15,7 @@
 #
 # Indexes
 #
+#  index_script_levels_on_level_id   (level_id)
 #  index_script_levels_on_script_id  (script_id)
 #  index_script_levels_on_stage_id   (stage_id)
 #
