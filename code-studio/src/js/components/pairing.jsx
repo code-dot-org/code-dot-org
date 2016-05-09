@@ -10,7 +10,8 @@ var SectionSelector = React.createClass({
   },
 
   render: function () {
-    if (this.props.sections.length === 1) {
+    if (this.props.sections.length === 0 ||
+        this.props.sections.length === 1) {
       return null;
     }
 
