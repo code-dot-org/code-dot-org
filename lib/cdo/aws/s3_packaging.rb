@@ -93,7 +93,7 @@ class S3Packaging
     Dir.chdir(@source_location + '/' + sub_path) do
       # add a commit_hash file whose contents represent the key for this package
       IO.write('commit_hash', @commit_hash)
-      RakeUtils.system "tar -zcf #{package.path} *"
+      RakeUtils.system "tar -cz --exclude='*.cache.json' --file #{package.path} *"
     end
     @logger.info 'Created'
     package
