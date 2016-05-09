@@ -57,18 +57,14 @@ let VisualizationOverlay = React.createClass({
   },
 
   onMouseMove(event) {
-    var screenSpaceToAppSpaceTransform = this.state.screenSpaceToAppSpaceTransform;
     this.mousePos_.x = event.clientX;
     this.mousePos_.y = event.clientY;
-    this.mousePos_ = this.mousePos_.matrixTransform(screenSpaceToAppSpaceTransform);
+    this.mousePos_ = this.mousePos_.matrixTransform(
+        this.state.screenSpaceToAppSpaceTransform);
     this.setState({
       mouseX: this.mousePos_.x,
       mouseY: this.mousePos_.y
     });
-
-    // if (this.shouldShowCrosshair_()) {
-    //   this.crosshairOverlay_.onSvgMouseMove(event);
-    // }
   },
 
   renderOverlays() {
