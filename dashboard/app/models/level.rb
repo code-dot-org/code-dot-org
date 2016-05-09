@@ -294,6 +294,10 @@ class Level < ActiveRecord::Base
     Script.cache_find_level(id)
   end
 
+  def icon
+    'fa-puzzle-piece'
+  end
+
   private
 
   def write_to_file?
