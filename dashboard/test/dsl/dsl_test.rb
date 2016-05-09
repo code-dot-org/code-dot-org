@@ -23,31 +23,16 @@ class DslTest < ActiveSupport::TestCase
           {
               stage: 'Stage1',
               scriptlevels: [
-                  {
-                      levels: [{name: 'Level 1'}],
-                      stage: 'Stage1'
-                  },
-                  {
-                      levels: [{name: 'Level 2'}],
-                      stage: 'Stage1'
-                  },
-                  {
-                      levels: [{name: 'Level 3'}],
-                      stage: 'Stage1'
-                  }
+                  {stage: 'Stage1', levels: [{name: 'Level 1'}]},
+                  {stage: 'Stage1', levels: [{name: 'Level 2'}]},
+                  {stage: 'Stage1', levels: [{name: 'Level 3'}]}
               ]
           },
           {
               stage: 'Stage2',
               scriptlevels: [
-                  {
-                      levels: [{name: 'Level 4'}],
-                      stage: 'Stage2'
-                  },
-                  {
-                      levels: [{name: 'Level 5'}],
-                      stage: 'Stage2'
-                  }
+                  {stage: 'Stage2', levels: [{name: 'Level 4'}]},
+                  {stage: 'Stage2', levels: [{name: 'Level 5'}]}
               ]
           }
         ],
@@ -174,20 +159,11 @@ level 'Level 3'
         {
           stage: "Stage1",
           scriptlevels: [
-            {
-              stage: "Stage1",
-              levels: [{name: "Level 1"}]
-            },
-            {
-              stage: "Stage1",
-              levels: [{name: "Level 2a"},
-                       {name: "Level 2b"}],
+            {stage: "Stage1", levels: [{name: "Level 1"}]},
+            {stage: "Stage1", levels: [{name: "Level 2a"}, {name: "Level 2b"}],
               properties: {"Level 2b"=>{active: false}}
             },
-            {
-              stage: "Stage1",
-              levels: [{name: "Level 3"}]
-            }
+            {stage: "Stage1", levels: [{name: "Level 3"}]}
           ]
         }
       ],

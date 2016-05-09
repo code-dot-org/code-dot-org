@@ -319,16 +319,11 @@ class ApiControllerTest < ActionController::TestCase
 
   test "should get user progress for stage with swapped level" do
     sign_in @student_1
-
     script = create :script
     stage = create :stage, script: script
-
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
-
     create :script_level, script: script, stage: stage, levels: [level1a, level1b], properties: "{'maze 1': {active: false}}"
-
-    # student_1 has an assessment
     create(:activity, user: @student_1, level: level1a,
            level_source: create(:level_source, level: level1a, data: 'level source'))
 
