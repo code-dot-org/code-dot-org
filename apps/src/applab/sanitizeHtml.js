@@ -51,8 +51,14 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
   var ignoredAttributes = [
     'pmbx_context',   // Used by Chrome plugins such as Bitdefender Wallet.
     'kl_vkbd_parsed', // Origin unknown. Assumed to be a plugin of some kind.
+    'kl_virtual_keyboard_secure_input', // Origin unknown.
     'vk_16761',       // Origin unknown.
+    '_vkenabled',     // Origin unknown.
     'abp'             // adblock plus plugin.
+  ];
+
+  var ignoredTags = [
+    'grammarly-btn'   // Grammarly plugin.
   ];
 
   var processed = sanitize(unsafe, {
@@ -74,6 +80,9 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
           attribs: attribs
         };
       }
+    },
+    exclusiveFilter: function (element) {
+      return (ignoredTags.indexOf(element.tag) !== -1);
     }
   });
   if (processed != safe) {
