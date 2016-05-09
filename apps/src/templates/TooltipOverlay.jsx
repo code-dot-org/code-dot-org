@@ -92,7 +92,7 @@ let TooltipOverlay = React.createClass({
       var rectY = bubbleCoordinates.rectY + indexYOffset;
       var textY = rectY + TEXT_RECT_HEIGHT + TEXT_Y_OFFSET;
       return (
-        <g>
+        <g key={index}>
           <rect
               x={rectX}
               y={rectY}
