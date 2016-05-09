@@ -17,7 +17,7 @@
     "step_mode": "1",
     "nectar_goal": "20",
     "flower_type": "redWithNectar",
-    "ideal": "32",
+    "ideal": "27",
     "instructions": "Let's start from scratch - can you create a new function called \"get 5 nectar\" with a direction parameter?",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
@@ -42,22 +42,22 @@
   }
 }]]></config>
   <blocks>
-    <start_blocks>
+    <initialization_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false" uservisible="false" y="14">
           <next>
-            <block type="variables_set" inline="false">
+            <block type="variables_set" inline="false" uservisible="false">
               <title name="VAR">left</title>
               <value name="VALUE">
-                <block type="math_number">
+                <block type="math_number" uservisible="false">
                   <title name="NUM">0</title>
                 </block>
               </value>
               <next>
-                <block type="variables_set" inline="false">
+                <block type="variables_set" inline="false" uservisible="false">
                   <title name="VAR">right</title>
                   <value name="VALUE">
-                    <block type="math_number">
+                    <block type="math_number" uservisible="false">
                       <title name="NUM">1</title>
                     </block>
                   </value>
@@ -66,6 +66,10 @@
             </block>
           </next>
         </block>
+      </xml>
+    </initialization_blocks>
+    <start_blocks>
+      <xml>
         <block type="when_run" deletable="false" movable="false">
   </block>
       </xml>
@@ -152,28 +156,6 @@
     </recommended_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false" y="14">
-          <next>
-            <block type="variables_set" inline="false" uservisible="false">
-              <title name="VAR">left</title>
-              <value name="VALUE">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">0</title>
-                </block>
-              </value>
-              <next>
-                <block type="variables_set" inline="false" uservisible="false">
-                  <title name="VAR">right</title>
-                  <value name="VALUE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
