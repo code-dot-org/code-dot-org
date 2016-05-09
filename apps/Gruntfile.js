@@ -335,7 +335,7 @@ module.exports = function (grunt) {
 
   var browserifyExec = getBrowserifyCommand({
     globalShim: true,
-    cacheFile: 'browserifyinc-cache.json',
+    cacheFile: 'browserifyinc.cache.json',
     srcFiles: allFilesSrc,
     destFiles: allFilesDest,
     factorBundle: APPS.length > 1,
@@ -343,7 +343,7 @@ module.exports = function (grunt) {
 
   var applabAPIExec = getBrowserifyCommand({
     globalShim: false,
-    cacheFile: 'applab-api-cache.json',
+    cacheFile: 'applab-api.cache.json',
     srcFiles: ['build/js/applab/api-entry.js'],
     destFiles: [outputDir + 'applab-api.js'],
     factorBundle: false,
