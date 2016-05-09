@@ -134,3 +134,11 @@ level 'Sample Free Response'
 
 stage 'Game Lab'
 level 'allthethings_U3 - Simple Drawing - Rectangle Width and Height'
+
+stage 'Levels with Variants'
+variants
+  active false
+  level '2-3 Maze 1'
+
+  level '2-3 Maze 2'
+endvariants
