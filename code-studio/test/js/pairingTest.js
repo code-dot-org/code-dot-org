@@ -7,7 +7,7 @@ var sinon = require('sinon');
 window.React = React; // the below file wants React as a global
 var Pairing = require('../../src/js/components/pairing.jsx');
 
-describe('Pairing component', function() {
+describe('Pairing component', function () {
   var div;
   var component;
   var server;
@@ -50,7 +50,7 @@ describe('Pairing component', function() {
     server.restore();
   }
 
-  describe('for student in multiple sections', function(){
+  describe('for student in multiple sections', function (){
     var ajaxUrl = '/pairings';
     var ajaxState = {
       sections: [{id: 1, name: "A section", students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]},
@@ -76,15 +76,15 @@ describe('Pairing component', function() {
       }
     });
 
-    it('should render a section dropdown', function() {
+    it('should render a section dropdown', function () {
       assert(sectionSelect());
     });
 
-    it('should not render a list of students', function() {
+    it('should not render a list of students', function () {
       assert.equal(0, numberOfStudents());
     });
 
-    it('should change the section and render a list of students when a section with students is selected', function() {
+    it('should change the section and render a list of students when a section with students is selected', function () {
       // choose first section
       TestUtils.Simulate.change(sectionSelect(), {target: {value: "1"}});
       assert.equal("1", sectionSelect().value);
@@ -97,7 +97,25 @@ describe('Pairing component', function() {
     });
   });
 
-  describe('for student in one section', function(){
+  describe('before ajax response is received', function (){
+    beforeEach(function () {
+      div = document.createElement("div");
+      component = ReactDOM.render(React.createElement(Pairing, {}), div);
+    });
+
+    afterEach(function () {
+      if (div) {
+        ReactDOM.unmountComponentAtNode(div);
+        component = null;
+      }
+    });
+
+    it('should not render a section dropdown', function () {
+      assert.equal(0, TestUtils.scryRenderedDOMComponentsWithTag(component, 'select').length);
+    });
+  });
+
+  describe('for student in one section', function (){
     var ajaxUrl = '/pairings';
     var ajaxState = {
       sections: [{id: 1, name: "A section", students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]}],
@@ -122,17 +140,17 @@ describe('Pairing component', function() {
       }
     });
 
-    it('should not render a section dropdown', function() {
+    it('should not render a section dropdown', function () {
       assert.equal(0, TestUtils.scryRenderedDOMComponentsWithTag(component, 'select').length);
     });
 
 
-    it('should render a list of students', function() {
+    it('should render a list of students', function () {
       assert.equal(2, numberOfStudents());
       assert.equal(0, numberOfSelectedStudents());
     });
 
-    it('should select a student when clicking on it', function() {
+    it('should select a student when clicking on it', function () {
       assert.equal(2, numberOfStudents());
       assert.equal(0, numberOfSelectedStudents());
       assert(!addPartnersButtonRendered());
@@ -162,7 +180,7 @@ describe('Pairing component', function() {
       assert(!addPartnersButtonRendered());
     });
 
-    it('should let you select a student and add them as a partner', function() {
+    it('should let you select a student and add them as a partner', function () {
       assert.equal(2, numberOfStudents());
       assert.equal(0, numberOfSelectedStudents());
       assert(!addPartnersButtonRendered());
@@ -181,7 +199,7 @@ describe('Pairing component', function() {
     });
   });
 
-  describe('for student who is currently pairing', function(){
+  describe('for student who is currently pairing', function (){
     var ajaxUrl = '/pairings';
     var ajaxState = {
       sections: [{id: 1, name: "A section", students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]},
@@ -207,15 +225,15 @@ describe('Pairing component', function() {
       }
     });
 
-    it('should not render a section dropdown', function() {
+    it('should not render a section dropdown', function () {
       assert.equal(0, TestUtils.scryRenderedDOMComponentsWithTag(component, 'select').length);
     });
 
-    it('should render a list of students', function() {
+    it('should render a list of students', function () {
       assert.equal(3, numberOfStudents());
     });
 
-    it('should remove all students and go back to selection mode when clicking Stop', function() {
+    it('should remove all students and go back to selection mode when clicking Stop', function () {
       assert.equal(3, numberOfStudents());
 
       // click on stop button
