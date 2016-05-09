@@ -77,17 +77,17 @@ const AppLabTooltipOverlay = React.createClass({
   },
 
   render() {
-    var mouseX = this.props.mouseX;
-    var mouseY = this.props.mouseY;
-    var tooltipAboveCursor = false;
+    let mouseX = this.props.mouseX,
+        mouseY = this.props.mouseY,
+        tooltipAboveCursor = false;
 
     // Modify passed props if we're in a 'dragging' mode.
-    var draggingElement = $(".ui-draggable-dragging");
-    this.isDragging_ = !!draggingElement.length;
-    if (this.isDragging_) {
+    const draggingElement = $(".ui-draggable-dragging");
+    const isDragging = !!draggingElement.length;
+    if (isDragging) {
       // If we're dragging an element, use its current drop position
       // (top left of the dragged element)
-      var point = scaledDropPoint(draggingElement);
+      const point = scaledDropPoint(draggingElement);
       mouseX = point.left;
       mouseY = point.top;
       tooltipAboveCursor = true;
