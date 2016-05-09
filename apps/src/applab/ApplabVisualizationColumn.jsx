@@ -32,7 +32,7 @@ var ApplabVisualizationColumn = React.createClass({
   },
 
   render: function () {
-    var showFrame = !this.props.isEmbedView && !this.props.isShareView;
+    var showFrame = !this.props.isShareView;
 
     return (
       <div
