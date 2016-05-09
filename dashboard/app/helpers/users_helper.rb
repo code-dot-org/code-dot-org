@@ -108,18 +108,26 @@ module UsersHelper
   def get_pages_completed(user, sl)
     level = sl.level
 
-    if level.type == "LevelGroup"
+    if level.is_a? LevelGroup
       pages_completed = []
 
-      last_attempt = JSON.parse(user.last_attempt(level).try(:level_source).data)
+      last_attempt = JSON.parse(user.last_attempt(level).level_source.data)
 
       # Go through each page.
       level.properties["pages"].each do |page|
         page_valid_result_count = 0
 
-        # Go through each level on that page.
+        # Construct an array of the embedded level names used on the page.
+        embedded_level_names = []
         page["levels"].each do |level_name|
-          level_id = Level.find_by_name(level_name).id
+          embedded_level_names << level_name
+        end
+
+        # Retrieve the level information for those embedded levels.  These results
+        # won't necessarily match the order of level names as requested, but
+        # fortunately we are just accumulating a count and don't mind the order.
+        Level.where(name: embedded_level_names).each do |embedded_level|
+          level_id = embedded_level.id
 
           # Do we have a valid result for this level in the LevelGroup last_attempt?
           if last_attempt[level_id.to_s] && last_attempt[level_id.to_s]["valid"]
