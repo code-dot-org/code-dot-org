@@ -4,7 +4,7 @@ class RemoveSurvey2015ValueSurvey2015CommentFromUsers  < ActiveRecord::Migration
       # The up direction clears the survey2015_value and survey2015_comment
       # fields from the users table if they exist.
       direction.up do
-        User.where("properties LIKE '%survey2015%'").find_each do |user|
+        User.with_deleted.where("properties LIKE '%survey2015%'").find_each do |user|
           user.survey2015_value = nil
           user.survey2015_comment = nil
           user.save!
@@ -16,7 +16,7 @@ class RemoveSurvey2015ValueSurvey2015CommentFromUsers  < ActiveRecord::Migration
       # table.
       direction.down do
         SurveyResult.where(kind: 'NetPromoterScore2015').find_each do |survey_result|
-          user = User.where(id: survey_result.user_id).first
+          user = User.with_deleted.where(id: survey_result.user_id).first
           if user
             user.survey2015_value = survey_result.nps_value
             user.survey2015_comment = survey_result.nps_comment
