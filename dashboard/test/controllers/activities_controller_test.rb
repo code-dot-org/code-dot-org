@@ -1046,6 +1046,15 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal('milestone-stage-1', response['stage_changing']['previous']['name'])
   end
 
+  test 'milestone post respects level_id for active level' do
+    script_level = Script.find_by_name('allthethings').stages.find {|stage| stage.name == 'Levels with Variants'}.script_levels.first
+    level_id = Level.by_name('2-3 Maze 2').id
+    post :milestone, @milestone_params.merge(script_level_id: script_level.id, level_id: level_id)
+    response = JSON.parse(@response.body)
+
+    assert_equal response[:level_id], level_id
+  end
+
   test 'New level completed response' do
     def new_level
       post :milestone, @milestone_params
