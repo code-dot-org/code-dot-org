@@ -42,7 +42,8 @@
     "start": "scripts/build-js.js --watch",
     "convert-scss-vars": "scripts/convert-scss-variables.js",
     "prebuild-js": "npm run convert-scss-vars",
-    "prebuild-js:dist": "npm run convert-scss-vars"
+    "prebuild-js:dist": "npm run convert-scss-vars",
+    "prestart": "npm run convert-scss-vars"
   },
   "//": "ejsify is a dependency of apps/src; we declare it here rather than in apps/src/package.json so we can continue to avoid needing to npm install that module.",
   "devDependencies": {
