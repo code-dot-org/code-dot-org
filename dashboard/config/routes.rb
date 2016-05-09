@@ -305,9 +305,7 @@ Dashboard::Application.routes.draw do
     root to: 'plc#index'
     resources :courses
     resources :learning_modules
-    resources :tasks
     resources :user_course_enrollments
-    resources :enrollment_task_assignments
     resources :course_units
     resources :enrollment_unit_assignments
     resources :evaluation_questions
@@ -315,8 +313,8 @@ Dashboard::Application.routes.draw do
 
   get '/plc/enrollment_evaluations/:unit_assignment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
   post '/plc/enrollment_evaluations/:unit_assignment_id/submit_evaluation', to: 'plc/enrollment_evaluations#submit_evaluation'
-
-  get '/plc/learning_modules/:id/new_learning_resource_for_module', to: 'plc/learning_modules#new_learning_resource_for_module', as: 'new_learning_resource_for_module'
+  get '/plc/enrollment_evaluations/:unit_assignment_id/preview_assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
+  post '/plc/enrollment_evaluations/:unit_assignment_id/confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments'
 
   post '/plc/course_units/:id/submit_new_questions_and_answers', to: 'plc/course_units#submit_new_questions_and_answers'
 

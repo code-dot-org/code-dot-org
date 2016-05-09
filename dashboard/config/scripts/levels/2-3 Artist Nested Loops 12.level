@@ -64,7 +64,7 @@
                     </block>
                   </statement>
                   <next>
-                    <block type="controls_repeat" deletable="false" editable="false">
+                    <block type="controls_repeat" deletable="false" editable="false" next_connection_disabled="true">
                       <title name="TIMES">15</title>
                       <statement name="DO">
                         <block type="draw_move_by_constant" deletable="false" editable="false">
@@ -118,13 +118,13 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_repeat">
-          <title name="TIMES">12</title>
+          <title name="TIMES">???</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

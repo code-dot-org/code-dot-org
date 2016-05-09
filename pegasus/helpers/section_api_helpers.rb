@@ -21,7 +21,7 @@ class DashboardStudent
   end
 
   def self.create(params)
-    name = params[:name].to_s.present? ? params[:name].to_s : 'New Student'
+    name = !params[:name].to_s.empty? ? params[:name].to_s : 'New Student'
     gender = valid_gender?(params[:gender]) ? params[:gender] : nil
     birthday = age_to_birthday(params[:age]) ?
       age_to_birthday(params[:age]) : params[:birthday]
@@ -182,21 +182,26 @@ class DashboardSection
     valid_grades.include? grade
   end
 
-  @@valid_course_cache = nil
-  def self.valid_courses
+  @@course_cache = {}
+  def self.valid_courses(user_id = nil)
+    # admins can see all courses, even those marked hidden
+    course_cache_key = (user_id && Dashboard.admin?(user_id)) ? "all" : "valid"
+
     # only do this query once because in prod we only change courses
     # when deploying (technically this isn't true since we are in
     # pegasus and courses are owned by dashboard...)
-    return @@valid_course_cache unless @@valid_course_cache.nil?
+    return @@course_cache[course_cache_key] if @@course_cache.key?(course_cache_key)
 
     # don't crash when loading environment before database has been created
     return {} unless (Dashboard.db[:scripts].count rescue nil)
 
+    where_clause = Dashboard.admin?(user_id) ? "" : "hidden = 0"
+
     # cache result if we have to actually run the query
-    @@valid_course_cache = Hash[
+    @@course_cache[course_cache_key] = Hash[
          Dashboard.db[:scripts].
-           where("hidden = 0").
-           select(:id, :name).
+           where(where_clause).
+           select(:id, :name, :hidden).
            all.
            map do |course|
              name = course[:name]
@@ -205,6 +210,7 @@ class DashboardSection
              elsif name == ScriptConstants::HOC_NAME
                name = ScriptConstants::HOC_TEACHER_DASHBOARD_NAME
              end
+             name += " *" if course[:hidden]
              [course[:id], name]
            end
         ]
@@ -217,7 +223,7 @@ class DashboardSection
   def self.create(params)
     return nil unless params[:user] && params[:user][:user_type] == 'teacher'
 
-    name = params[:name].to_s.present? ? params[:name].to_s : 'New Section'
+    name = !params[:name].to_s.empty? ? params[:name].to_s : 'New Section'
     login_type =
       params[:login_type].to_s == 'none' ? 'email' : params[:login_type].to_s
     login_type = 'word' unless valid_login_type?(login_type)

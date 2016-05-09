@@ -12,11 +12,11 @@ var InstructionsWithWorkspace = require('../templates/instructions/InstructionsW
 var AppLabView = React.createClass({
   propTypes: {
     isEditingProject: React.PropTypes.bool.isRequired,
+    hideSource: React.PropTypes.bool.isRequired,
 
     screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
 
-    generateCodeWorkspaceHtml: React.PropTypes.func.isRequired,
     onMount: React.PropTypes.func.isRequired
   },
 
@@ -35,7 +35,7 @@ var AppLabView = React.createClass({
             id="visualizationResizeBar"
             className="fa fa-ellipsis-v" />
         <InstructionsWithWorkspace
-          generateCodeWorkspaceHtml={this.props.generateCodeWorkspaceHtml}/>
+          hideSource={this.props.hideSource}/>
       </ConnectedStudioAppWrapper>
     );
   }

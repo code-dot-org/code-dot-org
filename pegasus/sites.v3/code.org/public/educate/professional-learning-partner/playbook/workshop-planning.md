@@ -2,7 +2,7 @@
 title: Workshop Planning
 nav: plp_playbook_nav
 ---
----
+
 <a id="top"></a>
 
 # Workshop Planning
@@ -21,6 +21,14 @@ Click on the program name below to find out more about the workshop requirements
 - **[CS in Science](#science)**<Br/>
 - **[Exploring CS](#ecs)**<br/>
 - **[CS Principles](#csp)**<br/>
+
+
+
+<br/><br/>
+
+
+#### [Click here](https://docs.google.com/presentation/d/1zFiNhlHqk6Gldzpbyc_MbgA0ovTswa4cns0AfT8jdAc/edit#slide=id.gdebb9aea3_0_101) to review the slides from the 'Planning Code.org Summer Workshops' webinar. 
+
 
 
 ________________
@@ -173,9 +181,9 @@ These guidelines explain the type of space your facilitators need to run a succe
 **Example Workshop Agendas**<br/> 
 
 - [Phase 2: Summer Workshop](/files/csp-p2-agenda.pdf)<br/>
-- Phase 3: Academic Year Development - Coming Soon!<br/>
-	- Session A<br/>
-	- Session B<Br/>
+- Phase 3: Academic Year Development <br/>
+	- [Session A](/files/CSPFirstQuarterWorkshop-teachers.pdf)<br/>
+	- Session B<br/>
 	- Session C<br/>
 	- Session D<br/>
 

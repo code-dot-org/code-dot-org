@@ -1,36 +1,42 @@
 /* global React, dashboard */
 
-var STAGE_PROGRESS_TYPE = require('./stage_progress_type');
-var StageProgress = require('./stage_progress');
+var STAGE_TYPE = require('./types').STAGE_TYPE;
+var CourseProgressRow = require('./course_progress_row');
 
 /**
  * Stage progress component used in level header and course overview.
  */
 var CourseProgress = React.createClass({
   propTypes: {
-    stages: React.PropTypes.arrayOf(React.PropTypes.shape({
-      name: React.PropTypes.string,
-      lesson_plan_html_url: React.PropTypes.string,
-      levels: STAGE_PROGRESS_TYPE
-    }))
+    stages: React.PropTypes.arrayOf(STAGE_TYPE)
   },
 
   render: function () {
-    var rows = this.props.stages.map(function (stage) {
-      return (
-        <div className='game-group' key={stage.name}>
-          <div className='stage'>
-            {stage.title}
-            <div className='stage-lesson-plan-link' style={{display: 'none'}}>
-              <a target='_blank' href={stage.lesson_plan_html_url}>
-                {dashboard.i18n.t('view_lesson_plan')}
-              </a>
+    var rows = [], stages = this.props.stages;
+
+    // Iterate through each stage. When a stage with a flex_category is found,
+    // greedily add stages with the same flex_category until finding a stage
+    // with a different (or no) flex_category.
+    for (var i = 0; i < stages.length; ) {
+
+      if (stages[i].flex_category) {
+        var flexRows = [], previous = stages[i].flex_category;
+        for ( ; i < stages.length && stages[i].flex_category === previous; i++) {
+          flexRows.push(<CourseProgressRow stage={stages[i]} key={stages[i].name}/>);
+        }
+        rows.push(
+          <div className="flex-wrapper">
+            <div key={previous} className="flex-category">
+              <h4>{previous}</h4>
+              {flexRows}
             </div>
           </div>
-          <StageProgress levels={stage.levels} largeDots={true} />
-        </div>
-      );
-    });
+        );
+      } else {
+        rows.push(<CourseProgressRow stage={stages[i]} key={stages[i].name}/>);
+        i++;
+      }
+    }
 
     return (
       <div className='user-stats-block'>

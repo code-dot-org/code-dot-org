@@ -3,7 +3,6 @@
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var DesignWorkspace = require('./DesignWorkspace');
-var showAssetManager = require('../assetManagement/show');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
@@ -179,26 +178,6 @@ designMode.onPropertyChange = function (element, name, value) {
 };
 
 /**
- * Create a data-URI with the image data of the given icon glyph.
- * @param value {string} An icon identifier of the format "icon://fa-icon-name".
- * @param element {Element}
- * @return {string}
- */
-function renderIconToString(value, element) {
-  var canvas = document.createElement('canvas');
-  canvas.width = canvas.height = 400;
-  var ctx = canvas.getContext('2d');
-  ctx.font = '300px FontAwesome, serif';
-  ctx.textBaseline = 'middle';
-  ctx.textAlign = 'center';
-  ctx.fillStyle = element.getAttribute('data-icon-color');
-  var regex = new RegExp('^' + ICON_PREFIX + 'fa-');
-  var unicode = '0x' + dashboard.iconsUnicode[value.replace(regex, '')];
-  ctx.fillText(String.fromCharCode(unicode), 200, 200);
-  return canvas.toDataURL();
-}
-
-/**
  * After handling properties generically, give elementLibrary a chance
  * to do any element specific changes.
  * @param element
@@ -286,7 +265,7 @@ designMode.updateProperty = function (element, name, value) {
       };
 
       if (ICON_PREFIX_REGEX.test(value)) {
-        element.style.backgroundImage = 'url(' + renderIconToString(value, element) + ')';
+        element.style.backgroundImage = 'url(' + assetPrefix.renderIconToString(value, element) + ')';
         fitImage();
         break;
       }
@@ -308,7 +287,7 @@ designMode.updateProperty = function (element, name, value) {
       var height = parseInt(element.style.height, 10);
       element.style.backgroundSize = width + 'px ' + height + 'px';
 
-      var url = ICON_PREFIX_REGEX.test(value) ? renderIconToString(value, element) : assetPrefix.fixPath(value);
+      var url = ICON_PREFIX_REGEX.test(value) ? assetPrefix.renderIconToString(value, element) : assetPrefix.fixPath(value);
       element.style.backgroundImage = 'url(' + url + ')';
 
       break;
@@ -317,7 +296,7 @@ designMode.updateProperty = function (element, name, value) {
       element.setAttribute('data-canonical-image-url', value);
 
       if (ICON_PREFIX_REGEX.test(value)) {
-        element.src = renderIconToString(value, element);
+        element.src = assetPrefix.renderIconToString(value, element);
         break;
       }
 
@@ -494,7 +473,7 @@ designMode.onDeletePropertiesButton = function (element, event) {
   } else {
     designMode.editElementProperties(
         elementUtils.getPrefixedElementById(
-            Applab.reduxStore.getState().currentScreenId));
+            studioApp.reduxStore.getState().currentScreenId));
   }
 };
 
@@ -649,7 +628,7 @@ designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
 };
 
 designMode.toggleDesignMode = function (enable) {
-  Applab.reduxStore.dispatch(actions.changeInterfaceMode(enable ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
+  studioApp.reduxStore.dispatch(actions.changeInterfaceMode(enable ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 };
 
 function onInterfaceModeChange(mode) {
@@ -947,7 +926,7 @@ designMode.createScreen = function () {
  * @param {!string} screenId
  */
 designMode.changeScreen = function (screenId) {
-  Applab.reduxStore.dispatch(actions.changeScreen(screenId));
+  studioApp.reduxStore.dispatch(actions.changeScreen(screenId));
 };
 
 /**
@@ -1014,7 +993,7 @@ designMode.renderDesignWorkspace = function (element) {
     onDuplicate: designMode.onDuplicate.bind(this, element),
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
     onInsertEvent: designMode.onInsertEvent.bind(this),
-    handleManageAssets: showAssetManager,
+    handleManageAssets: dashboard.assets.showAssetManager,
     isDimmed: Applab.running
   };
   ReactDOM.render(React.createElement(DesignWorkspace, props), designWorkspace);

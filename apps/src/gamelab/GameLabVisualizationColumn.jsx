@@ -4,14 +4,30 @@ var connect = require('react-redux').connect;
 var GameButtons = require('../templates/GameButtons');
 var ArrowButtons = require('../templates/ArrowButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
+var gameLabConstants = require('./constants');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 
+var GAME_WIDTH = gameLabConstants.GAME_WIDTH;
+var GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
+
 var GameLabVisualizationColumn = function (props) {
+  var divGameLabStyle = {
+    width: GAME_WIDTH,
+    height: GAME_HEIGHT
+  };
   return (
     <span>
       <ProtectedStatefulDiv id="visualization">
-        <div id="divGameLab" tabIndex="1">
+        <div id="divGameLab" style={divGameLabStyle} tabIndex="1">
         </div>
+        <svg version="1.1"
+             baseProfile="full"
+             xmlns="http://www.w3.org/2000/svg"
+             id="visualizationOverlay"
+             width={GAME_WIDTH}
+             height={GAME_HEIGHT}
+             viewBox={"0 0 " + GAME_WIDTH + " " + GAME_HEIGHT}
+             pointerEvents="none"/>
       </ProtectedStatefulDiv>
       <GameButtons
           hideRunButton={false}
@@ -42,6 +58,6 @@ GameLabVisualizationColumn.propTypes = {
 
 module.exports = connect(function propsFromStore(state) {
   return {
-    instructionsInTopPane: state.level.instructionsInTopPane
+    instructionsInTopPane: state.pageConstants.instructionsInTopPane
   };
 })(GameLabVisualizationColumn);

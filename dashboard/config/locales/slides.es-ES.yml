@@ -2791,12 +2791,13 @@
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: "Здравейте! Аз съм Катлийн Кенеди Продуцент на Междузвездни Войни: Силата
-          се Пробужда. Днес ще работите с една от нашите звезди, ББ-8, който е сферичен
-          дроид. Всичко което прави и всяко негово движение се контролира от софтуер.
-          Компютърните науки оказват влияние във всяка една сфера от маркетинг до
-          медицина и филмо-производство. Всъщност хиляди Инженери работят заедно за
-          да създадават филми като Силата се Пробужда."
+        text: Hola, soy Kathleen Kennedy, la productora de Star Wars, El Despertar
+          de La Fuerza. Hoy trabajarás con una de nuestras estrellas, el BB-8. BB-8
+          es un androide esférico. Todo lo que hace, cada movimiento que ejecuta,
+          es controlado por un programa de ordenador. La informática tiene impacto
+          en cualquier industria, desde el marketing hasta la atención sanitaria,
+          o en una película. De hecho, cientos de ingenieros informáticos trabajaron
+          conjuntamente para hacer una película como El Despertar de La Fuerza.
       2:
         image: notes/starwars_blocks_intro_2.JPG
         text: Hola, soy Rachel Rose. Soy una ingeniera de I+D en ILM y lidero el equipo
@@ -2906,14 +2907,17 @@
           está llena de cerdos inflables y cuando tocas 10.000, ganas."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: "Направихме игра в която неможете да губите печелите точки от всичко.
-          В моята програма обърнах бутоните, когато натиснете горе, вашият герой отива
-          долу, като натиснете дясно, той отива на ляво. Трудно е! Понякога това е
-          предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!"
+        text: "[alumnos hablando] Hicimos un juego en el que no se puede perder y todo 
+          lo que te mata te da puntos. Para mi programa, invertí las teclas de modo que 
+          cada vez que se hace clic, tu personaje va hacia abajo y cuando vas a la derecha, 
+          el personaje va a la izquierda. ¡Es muy difícil! A veces, que acaba de obtener 
+          una ventaja, una ventaja injusta si usted es el desarrollador del juego. ¿Lo 
+          entendí? ¡Hurra!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: "След като сте направите играта, изберете сподели за да я споделите
-          с приятели или да играете на телефон. Забавлявайте се!"
+        text: "Cuando haya terminado de hacer su juego, elige compartir para obtener un 
+          enlace que se puede compartir con amigos o jugar su juego en su teléfono. ¡Que 
+          te diviertas!"
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG

@@ -5,6 +5,7 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
 @import 'mixins';
 @import "../JsDebuggerUi.scss";
 @import "./ResizablePanes.scss";
+@import '../VisualizationOverlay.scss';
 
 #divGameLab {
   overflow: hidden;
@@ -16,6 +17,30 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
   background-color: white;
 
   @include user-selects(none);
+
+  &.withCrosshair {
+    cursor: crosshair;
+  }
+}
+
+.legacy-share-view {
+  #runButton, #resetButton {
+    display:none !important;
+  }
+  #studio-dpad {
+    width: 100%;
+    margin-left: 0;
+  }
+  #studio-dpad-button {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+#visualizationOverlay {
+  // layer 1 is divGameLab
+  // layer 2 is overlay
+  z-index: 2;
 }
 
 /* Sprited icons. */

@@ -14,6 +14,7 @@ function clientApi(endpoint) {
       return '/v3/' + endpoint + '/' + dashboard.project.getCurrentId() + (path ? '/' + path : '');
     },
     ajax: function (method, file, success, error, data) {
+      error = error || function () {};
       if (!window.dashboard) {
         error({status: "No dashboard"});
         return;
