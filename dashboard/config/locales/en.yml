@@ -299,6 +299,7 @@ en:
       example_with_number: 'Example Solution %{solution_number}'
       submitted_on: 'Submitted on:'
       unsubmit: 'Unsubmit'
+      worked_with: 'Worked With'
       driver: 'Driver'
       navigator: 'Navigator'
   user:
