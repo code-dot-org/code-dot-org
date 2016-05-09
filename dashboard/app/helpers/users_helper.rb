@@ -81,7 +81,7 @@ module UsersHelper
       script_levels.each do |sl|
         result = level_info(user, sl, uls)
         submitted = level_submitted(user, sl, uls)
-        completion_status = submitted ? "submitted" : (activity_css_class result)
+        completion_status = activity_css_class(result, submitted)
         if completion_status != 'not_tried'
           user_data[:levels][sl.level_id] = {
               status: completion_status,
