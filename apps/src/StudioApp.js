@@ -1821,8 +1821,8 @@ StudioApp.prototype.configureDom = function (config) {
       config.level.disableVariableEditing = false;
     }
 
-    if (config.embed) {
-      document.body.className += ' embedded';
+    if (config.iframeEmbed) {
+      document.body.className += ' embedded_iframe';
     }
 
     if (config.pinWorkspaceToBottom) {
@@ -1896,7 +1896,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
         var div = document.createElement('div');
         document.body.appendChild(div);
-        if (!options.embed) {
+        if (!options.iframeEmbed) {
           ReactDOM.render(React.createElement(WireframeSendToPhone, {
             channelId: dashboard.project.getCurrentId(),
             appType: dashboard.project.getStandaloneApp()
