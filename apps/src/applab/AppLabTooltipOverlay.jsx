@@ -41,32 +41,30 @@ const AppLabTooltipOverlay = React.createClass({
   /**
    * Gets the element id of the Applab UI control user is hovering over, if any.
    * If the user is in design mode, we strip the element id prefix.
-   * @param {EventTarget} eventTarget The mouseover event target
+   * @param {HTMLElement} controlElement The mouseover event target
    * @returns {string} id of the Applab UI control the mouse is over. Returns null if none exist.
    * @private
    */
-  getHoveredControlId(eventTarget) {
+  getHoveredControlId(controlElement) {
     // Check that the element is a child of a screen
-    if (eventTarget && $(eventTarget).parents('div.screen').length > 0) {
-      var controlElement = eventTarget;
-
-      // Check to see the mouseover target is a resize handle.
-      // If so, grab the id of associated control instead of the resize handle itself.
-      // We need to do this because for very small controls, the resize handle completely
-      // covers the control itself, making it impossible to show the id tooltip
-      if (isResizeHandle(controlElement)) {
-        controlElement = getAssociatedControl(controlElement);
-      }
-
-      // If we're in design mode, get the element id without the prefix
-      if (this.props.isInDesignMode) {
-        return elementUtils.getId(controlElement);
-      }
-
-      return controlElement.id;
+    if (!controlElement || $(controlElement).parents('div.screen').length === 0) {
+      return null;
     }
 
-    return null;
+    // Check to see the target is a resize handle.
+    // If so, grab the id of associated control instead of the resize handle itself.
+    // We need to do this because for very small controls, the resize handle completely
+    // covers the control itself, making it impossible to show the id tooltip
+    if (isResizeHandle(controlElement)) {
+      controlElement = getAssociatedControl(controlElement);
+    }
+
+    // If we're in design mode, get the element id without the prefix
+    if (this.props.isInDesignMode) {
+      return elementUtils.getId(controlElement);
+    }
+
+    return controlElement.id;
   },
 
   /**
