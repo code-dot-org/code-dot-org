@@ -39,6 +39,11 @@ var InstructionsWithWorkspace = React.createClass({
    * call adjustTopPaneHeight as our maxHeight may need adjusting.
    */
   onResize: function () {
+    // No need to resize anything if we're collapsed
+    if (this.props.instructionsCollapsed) {
+      return;
+    }
+
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
 
