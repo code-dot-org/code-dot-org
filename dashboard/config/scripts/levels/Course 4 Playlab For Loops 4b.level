@@ -49,7 +49,7 @@
   "level_concept_difficulty": {
     "sequencing": 1,
     "debugging": 1,
-    "for_loops": 5,
+    "for_loops": 3,
     "variables": 2
   }
 }]]></config>
