@@ -119,12 +119,6 @@ function showVideoDialog(options, forceShowVideo) {
     active: 0  // Set starting tab.
   });
 
-  var download = $('<a/>').append($('<img src="<%= asset_path 'download_button.png' %>"/>'))
-      .addClass('download-video')
-      .attr('href', options.download);
-  var nav = $div.find('.ui-tabs-nav');
-  nav.append(download);
-
   // Resize modal to fit constraining dimension.
   var height = $(window).height() * widthRatio,
       width = $(window).width() * heightRatio;

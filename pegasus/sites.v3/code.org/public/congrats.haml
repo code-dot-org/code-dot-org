@@ -71,7 +71,8 @@ max_age: 60
 
     #certificate.col-50
       = view :congrats_certificate
-      = view :congrats_share, cert_id:cert_id, facebook:facebook, twitter:twitter
+      %div{:style=>'display:none;'}
+        = view :congrats_share, cert_id:cert_id, facebook:facebook, twitter:twitter
 
     -if false
       #print_option.col-50{:style=>'display:none;'}
@@ -83,7 +84,8 @@ max_age: 60
 
   %div{:style=>'clear: both; height:30px'}
 
-  = view :congrats_continue
+  %div{:style=>'display:none;'}
+    = view :congrats_continue
 
 = view 'popup_window.js'
 %img{src: "https://code.org/api/hour/finish_#{params[:tutorial]}.png", alt: params[:tutorial], width: '1', height: '1', class: 'tracking-pixel'}

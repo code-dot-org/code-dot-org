@@ -1090,6 +1090,7 @@ html[dir=rtl] .qtip-content {
 }
 
 a.download-video {
+  visibility: hidden;
   z-index: 1;
   cursor: pointer;
   width: 40px;

@@ -131,6 +131,7 @@ class ScriptLevelsController < ApplicationController
     else
       @script_level = @script.get_script_level_by_id(params[:id])
     end
+    Rails.logger.info "Loading level #{params[:id]} #{params}"
     raise ActiveRecord::RecordNotFound unless @script_level
     authorize! :read, @script_level
   end
