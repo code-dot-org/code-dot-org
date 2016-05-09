@@ -8,6 +8,7 @@ var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var applabConstants = require('./constants');
 var connect = require('react-redux').connect;
+var classNames = require('classnames');
 
 var styles = {
   nonResponsive: {
@@ -31,19 +32,16 @@ var ApplabVisualizationColumn = React.createClass({
   },
 
   render: function () {
-    var classes = '';
-    if (this.props.visualizationHasPadding) {
-      classes += 'with_padding';
-    }
-
-    var vizColStyle = [
-      (this.props.isEmbedView || this.props.hideSource) && styles.nonResponsive
-    ];
-
     var showFrame = !this.props.isEmbedView && !this.props.isShareView;
 
     return (
-      <div id="visualizationColumn" className={classes} style={vizColStyle}>
+      <div
+          id="visualizationColumn"
+          className={classNames({with_padding: this.props.visualizationHasPadding})}
+          style={[
+            (this.props.isEmbedView || this.props.hideSource) && styles.nonResponsive
+          ]}
+      >
         {!this.props.isReadOnlyWorkspace && <PlaySpaceHeader
             isEditingProject={this.props.isEditingProject}
             screenIds={this.props.screenIds}

@@ -4,14 +4,9 @@ var commonStyles = require('../commonStyles');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var connect = require('react-redux').connect;
 var experiments = require('../experiments');
+var classNames = require('classnames');
 
 var styles = {
-  main: {
-    // TODO - could do this in every Visualization.jsx and get rid of it from scss
-    position: 'relative',
-    height: 400,
-    marginBottom: 5
-  },
   nonResponsive: {
     width: applabConstants.APP_WIDTH,
     height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT
@@ -40,20 +35,16 @@ var Visualization = React.createClass({
     var addPhoneFrame = experiments.isEnabled('phoneFrame') &&
       !this.props.isEmbedView && !this.props.isShareView;
 
-    var classes = '';
-    if (this.props.visualizationHasPadding) {
-      classes += 'with_padding';
-    }
-
-    var vizStyle = [
-      (this.props.isEmbedView || this.props.hideSource) && styles.nonResponsive,
-      this.props.isShareView && styles.share,
-      addPhoneFrame && styles.phoneFrame
-    ];
-
     return (
       <ProtectedStatefulDiv>
-        <div id="visualization" className={classes} style={vizStyle}>
+        <div id="visualization"
+            className={classNames({with_padding: this.props.visualizationHasPadding})}
+            style={[
+              (this.props.isEmbedView || this.props.hideSource) && styles.nonResponsive,
+              this.props.isShareView && styles.share,
+              addPhoneFrame && styles.phoneFrame
+            ]}
+        >
           <div id="divApplab" className="appModern" tabIndex="1"/>
           <div id="designModeViz" className="appModern" style={commonStyles.hidden}/>
           <svg version="1.1"
