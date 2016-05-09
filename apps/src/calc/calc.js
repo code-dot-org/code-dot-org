@@ -725,6 +725,7 @@ Calc.execute = function () {
 function isPreAnimationFailure(testResult) {
   return testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
     testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
+    testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL ||
     testResult === TestResults.EXAMPLE_FAILED ||
     testResult === TestResults.EMPTY_FUNCTION_NAME;
 }
@@ -735,6 +736,13 @@ function isPreAnimationFailure(testResult) {
  */
 Calc.generateResults_ = function () {
   appState.message = undefined;
+
+  // Check for pre-execution errors
+  if (studioApp.hasExtraTopBlocks() && !level.showUnusedBlocks) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
+    return;
+  }
 
   if (studioApp.hasUnfilledFunctionalBlock()) {
     appState.result = ResultType.FAILURE;
@@ -782,7 +790,9 @@ Calc.generateResults_ = function () {
     }
   }
 
-  if (appState.result === ResultType.SUCCESS && studioApp.hasExtraTopBlocks()) {
+  if (appState.result === ResultType.SUCCESS &&
+      studioApp.hasExtraTopBlocks() &&
+      level.showUnusedBlocks) {
     appState.testResults = TestResults.PASS_WITH_EXTRA_TOP_BLOCKS;
   }
 

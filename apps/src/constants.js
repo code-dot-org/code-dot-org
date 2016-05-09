@@ -30,7 +30,7 @@ exports.TestResults = {
   TOO_FEW_BLOCKS_FAIL: 2,             // Fewer than the ideal number of blocks used.
   LEVEL_INCOMPLETE_FAIL: 3,           // Default failure to complete a level.
   MISSING_BLOCK_UNFINISHED: 4,        // A required block was not used.
-  EXTRA_TOP_BLOCKS_FAIL: 5,           // There was more than one top-level block. DEPRECATED
+  EXTRA_TOP_BLOCKS_FAIL: 5,           // There was more than one top-level block.
   RUNTIME_ERROR_FAIL: 6,              // There was a runtime error in the program.
   SYNTAX_ERROR_FAIL: 7,               // There was a syntax error in the program.
   MISSING_BLOCK_FINISHED: 10,         // The level was solved without required block.

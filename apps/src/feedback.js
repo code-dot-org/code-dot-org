@@ -524,6 +524,15 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function (options) {
         message = options.level.levelIncompleteError ||
             msg.levelIncompleteError();
         break;
+      case TestResults.EXTRA_TOP_BLOCKS_FAIL:
+        var hasWhenRun = Blockly.mainBlockSpace.getTopBlocks().some(function (block) {
+          return block.type === 'when_run' && block.isUserVisible();
+        });
+
+        var defaultMessage = hasWhenRun ?
+          msg.extraTopBlocksWhenRun() : msg.extraTopBlocks();
+        message = options.level.extraTopBlocks || defaultMessage;
+        break;
       case TestResults.APP_SPECIFIC_FAIL:
         message = options.level.appSpecificFailError;
         break;
@@ -1331,6 +1340,9 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
       return emptyBlockFailure;
     }
   }
+  if (!this.studioApp_.showUnusedBlocks && !options.allowTopBlocks && this.hasExtraTopBlocks()) {
+    return TestResults.EXTRA_TOP_BLOCKS_FAIL;
+  }
   if (this.studioApp_.hasDuplicateVariablesInForLoops()) {
     return TestResults.NESTED_FOR_SAME_VARIABLE;
   }
@@ -1373,7 +1385,7 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
   if (this.studioApp_.IDEAL_BLOCK_NUM &&
       numEnabledBlocks > this.studioApp_.IDEAL_BLOCK_NUM) {
     return TestResults.TOO_MANY_BLOCKS_FAIL;
-  } else if (this.hasExtraTopBlocks()) {
+  } else if (this.hasExtraTopBlocks() && this.studioApp_.showUnusedBlocks) {
     return TestResults.PASS_WITH_EXTRA_TOP_BLOCKS;
   } else {
     return TestResults.ALL_PASS;

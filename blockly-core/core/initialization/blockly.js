@@ -186,7 +186,7 @@ Blockly.readOnly = false;
  * should be rendered differently.
  * @const
  */
-Blockly.showUnused = false;
+Blockly.showUnusedBlocks = false;
 
 /**
  * Currently highlighted connection (during a drag).
@@ -231,7 +231,6 @@ Blockly.BUMP_DELAY = 250;
  * @const
  */
 Blockly.COLLAPSE_CHARS = 30;
-
 
 /**
  * The main blockSpace (defined by inject.js).
