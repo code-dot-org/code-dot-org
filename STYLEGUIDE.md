@@ -233,7 +233,11 @@ https://github.com/airbnb/javascript. Exceptions that we'd like to make should b
 
 
 ### React
-Our default style if not mentioned here should be that mentioned in the AirBnb guide https://github.com/airbnb/javascript/tree/master/react (perhaps with the exception of closing tags on their own line).
+Our default style if not mentioned here should be that mentioned in the AirBnb guide https://github.com/airbnb/javascript/tree/master/react
+
+https://github.com/airbnb/javascript/tree/master/react#spacing We're okay with no space in
+self-closing tags, i.e. `<MyComponent/>` and `<MyComponent />` are both valid.
+
 * <a name="js-react-inline-styles"></a>
 Prefer single object for all styles vs. inlined style objects.  Define static styles outside the component, and only dynamic styles in the render method.
 ```jsx
