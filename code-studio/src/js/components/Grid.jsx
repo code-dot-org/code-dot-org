@@ -1,6 +1,25 @@
 /* global React */
 
 var mazeUtils = require('@cdo/apps/maze/mazeUtils');
+var studioConstants = require('@cdo/apps/studio/constants');
+
+var studioTiles = {
+  [studioConstants.SquareType.OPEN]: 'none',
+  [studioConstants.SquareType.SPRITEFINISH]: 'goal',
+  [studioConstants.SquareType.SPRITESTART]: 'sprite',
+};
+
+// This list is duplicated in StudioCellEditor. See comment there for
+// some explanation of why that's not the greatest design.
+var studioAvatarList = ["dog", "cat", "penguin", "dinosaur", "octopus",
+    "witch", "bat", "bird", "dragon", "squirrel", "wizard", "alien",
+    "ghost", "monster", "robot", "unicorn", "zombie", "knight", "ninja",
+    "pirate", "caveboy", "cavegirl", "princess", "spacebot", "soccergirl",
+    "soccerboy", "tennisgirl", "tennisboy"];
+
+var karelTiles = ['border', 'path', 'start', 'end', 'obstacle'];
+var beeConditions = ['', 'flower-or-hive', 'flower-or-nothing', 'hive-or-nothing', 'flower-hive-or-nothing'];
+var beeFeatures = ['hive', 'flower'];
 
 var Cell = React.createClass({
   propTypes: {
@@ -20,6 +39,7 @@ var Cell = React.createClass({
 
     var classNames = [];
     var tdStyle = {};
+    var text;
 
     if (this.props.selected) {
       classNames.push('selected');
@@ -28,33 +48,40 @@ var Cell = React.createClass({
       classNames.push('highlighted');
     }
 
-    var tiles = ['border', 'path', 'start', 'end', 'obstacle'];
-    classNames.push(tiles[cell.tileType_]);
+    // Cell type-specific stuff
+    // TODO(elijah) This area contains a bunch of application-specific
+    // logic which would ideally live somewhere more flexible.
+    if (this.props.skin === 'playlab') {
+      classNames.push('playlab', studioTiles[cell.getTileType()]);
 
-    if (mazeUtils.isBeeSkin(this.props.skin)) {
-      var conditions = ['', 'flower-or-hive', 'flower-or-nothing', 'hive-or-nothing', 'flower-hive-or-nothing'];
-      var features = ['hive', 'flower'];
-      if (cell.isVariableCloud()) {
-        classNames.push('conditional');
-        classNames.push(conditions[cell.cloudType_]);
-      } else if (cell.featureType_ !== undefined) {
-        classNames.push(features[cell.featureType_]);
+      if (cell.getTileType() === studioConstants.SquareType.SPRITESTART && cell.sprite_ !== undefined) {
+        tdStyle.backgroundImage = "url('/blockly/media/skins/studio/" + studioAvatarList[cell.sprite_] + "_spritesheet_200px.png')";
       }
     } else {
-      // farmer
-      if (cell.isDirt()) {
-        classNames.push('dirt');
-        var dirtValue = cell.getCurrentValue();
-        var dirtIndex = 10 + dirtValue + (dirtValue < 0 ? 1 : 0);
-        tdStyle.backgroundPosition = -dirtIndex * 50;
-      }
-    }
+      classNames.push(karelTiles[cell.tileType_]);
 
-    var text = '';
-    if (cell.originalValue_ !== undefined && cell.originalValue_ !== null) {
-      text = cell.originalValue_.toString();
-      if (cell.range_ && cell.range_ > cell.originalValue_) {
-        text += " - " + cell.range_.toString();
+      if (mazeUtils.isBeeSkin(this.props.skin)) {
+        if (cell.isVariableCloud()) {
+          classNames.push('conditional');
+          classNames.push(beeConditions[cell.cloudType_]);
+        } else if (cell.featureType_ !== undefined) {
+          classNames.push(beeFeatures[cell.featureType_]);
+        }
+      } else {
+        // farmer
+        if (cell.isDirt()) {
+          classNames.push('dirt');
+          var dirtValue = cell.getCurrentValue();
+          var dirtIndex = 10 + dirtValue + (dirtValue < 0 ? 1 : 0);
+          tdStyle.backgroundPosition = -dirtIndex * 50;
+        }
+      }
+
+      if (cell.originalValue_ !== undefined && cell.originalValue_ !== null) {
+        text = cell.originalValue_.toString();
+        if (cell.range_ && cell.range_ > cell.originalValue_) {
+          text += " - " + cell.range_.toString();
+        }
       }
     }
 
@@ -82,9 +109,7 @@ var Grid = React.createClass({
     setCopiedCells: React.PropTypes.func.isRequired,
   },
 
-  getInitialState: function () {
-    return {};
-  },
+  getInitialState: () => ({}),
 
   /**
    * When drag begins, record that we are now dragging and where we
@@ -93,7 +118,7 @@ var Grid = React.createClass({
   beginDrag: function (row, col) {
     this.setState({
       dragging: true,
-      dragStart: {row: row, col: col},
+      dragStart: {row, col},
     });
   },
 
@@ -105,7 +130,7 @@ var Grid = React.createClass({
   moveDrag: function (row, col) {
     if (this.state.dragging) {
       this.setState({
-        dragCurrent: {row: row, col: col},
+        dragCurrent: {row, col},
       });
     }
   },
@@ -131,8 +156,8 @@ var Grid = React.createClass({
         bottom = Math.max(from.row, row),
         right = Math.max(from.col, col);
 
-    var cells = this.props.cells.slice(top, bottom + 1).map(function (row) {
-      return row.slice(left, right + 1).map(function (cell) {
+    var cells = this.props.cells.slice(top, bottom + 1).map((row) => {
+      return row.slice(left, right + 1).map((cell) => {
         return cell.serialize();
       });
     });
@@ -160,8 +185,8 @@ var Grid = React.createClass({
   },
 
   render: function () {
-    var tableRows = this.props.cells.map(function (row, x) {
-      var tableDatas = row.map(function (cell, y) {
+    var tableRows = this.props.cells.map((row, x) => {
+      var tableDatas = row.map((cell, y) => {
         var selected = this.props.selectedRow === x && this.props.selectedCol === y;
 
         return (
@@ -179,14 +204,14 @@ var Grid = React.createClass({
             skin={this.props.skin}
           />
         );
-      }, this);
+      });
 
       return (
         <tr key={'row-' + x}>
           {tableDatas}
         </tr>
       );
-    }, this);
+    });
 
     return (
       <table>
