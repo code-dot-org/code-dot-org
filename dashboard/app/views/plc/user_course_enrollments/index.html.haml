@@ -18,7 +18,7 @@
         %h4
           = enrollment_unit_assignment.plc_course_unit.unit_name
         .course_unit_sections
-          - evaluation_complete = enrollment_unit_assignment.status != Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
+          - evaluation_complete = content_module_assignment.nil?
           .course_unit_section{class: evaluation_complete ? 'completed' : 'not_started'}
             %i.fa.fa-info-circle
             .course_unit_section_name
