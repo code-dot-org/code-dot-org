@@ -1,6 +1,6 @@
 /** @file Crosshair and guides over visualization */
 
-var CROSSHAIR_MARGIN = 6;
+export const CROSSHAIR_MARGIN = 6;
 
 /**
  * Crosshair and Guides layered over the play space.
