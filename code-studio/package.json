@@ -58,6 +58,7 @@
     "ejsify": "1.0.0",
     "envify": "^3.4.0",
     "eslint": "^2.3.0",
+    "esprima": "^2.6.0",
     "factor-bundle": "^2.5.0",
     "http-server": "^0.9.0",
     "istanbul": "^0.4.2",
@@ -74,6 +75,7 @@
     "recursive-readdir-sync": "^1.0.6",
     "sass-lint": "^1.4.0",
     "semver": "^5.1.0",
+    "through": "^2.3.6",
     "uglify-js": "^2.6.1",
     "uglifyify": "^3.0.1",
     "watchify": "^3.7.0"
