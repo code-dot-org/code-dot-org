@@ -1906,9 +1906,9 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       } else {
         $(vizColumn).addClass('wireframeShare');
 
-        var div = document.createElement('div');
-        document.body.appendChild(div);
         if (!options.level.iframeEmbed) {
+          var div = document.createElement('div');
+          document.body.appendChild(div);
           ReactDOM.render(React.createElement(WireframeSendToPhone, {
             channelId: dashboard.project.getCurrentId(),
             appType: dashboard.project.getStandaloneApp()
