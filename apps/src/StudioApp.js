@@ -294,6 +294,18 @@ StudioApp.prototype.localeIsEnglish = function () {
 };
 
 /**
+ * Given the studio app config object, show shared app warnings.
+ */
+function showWarnings(config) {
+  shareWarnings.checkSharedAppWarnings({
+    channelId: config.channel,
+    isSignedIn: config.isSignedIn,
+    hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
+    onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
+  });
+}
+
+/**
  * Common startup tasks for all apps. Happens after configure.
  * @param {AppOptionsConfig}
  */
@@ -478,13 +490,17 @@ StudioApp.prototype.init = function (config) {
 
   this.alertIfAbusiveProject('#codeWorkspace');
 
+  // make sure startIFrameEmbeddedApp has access to the config object
+  // so it can decide whether or not to show a warning.
+  this.startIFrameEmbeddedApp = this.startIFrameEmbeddedApp.bind(this, config);
+
   if (this.share && config.shareWarningInfo) {
-    shareWarnings.checkSharedAppWarnings({
-      channelId: config.channel,
-      isSignedIn: config.isSignedIn,
-      hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
-      onWarningsComplete: config.shareWarningInfo.onWarningsComplete
-    });
+    if (!config.level.iframeEmbed) {
+      // shared apps that are embedded in an iframe handle warnings in
+      // startIFrameEmbeddedApp since they don't become "active" until the user
+      // clicks on them.
+      showWarnings(config);
+    }
   }
 
   if (!!config.level.projectTemplateLevelName) {
@@ -576,6 +592,14 @@ StudioApp.prototype.init = function (config) {
 
   if (config.isLegacyShare && config.hideSource) {
     this.setupLegacyShareView();
+  }
+};
+
+StudioApp.prototype.startIFrameEmbeddedApp = function (config) {
+  if (this.share && config.shareWarningInfo) {
+    showWarnings(config);
+  } else {
+    this.runButtonClick();
   }
 };
 
