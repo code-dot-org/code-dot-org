@@ -64,9 +64,15 @@ module.exports = function (grunt) {
       for (var i = 0; i < stats.length; i++) {
         var task = stats[i][0];
         var time = stats[i][1];
-        totalTime += time;
+        if (task.indexOf('exec') === 0) {
+          dataToLog.push({
+            task: task,
+            totalTime: time,
+            email: email,
+            logTimestamp: timestamp,
+          });
+        }
       }
-      dataToLog.push({totalTime: totalTime, email: email, logTimestamp: timestamp});
     });
     lineReader.on('close', function () {
       if (dataToLog.length > 0) {
