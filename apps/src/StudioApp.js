@@ -28,8 +28,12 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
+
 var redux = require('./redux');
 var runState = require('./redux/runState');
+var commonReducers = require('./redux/commonReducers');
+var combineReducers = require('redux').combineReducers;
+
 var copyrightStrings;
 
 /**
@@ -196,10 +200,10 @@ var StudioApp = function () {
   this.wireframeShare = false;
 
   /**
-   * Redux store that might be provided by the app. Initially give it an empty
-   * interface so that we can assume existence.
+   * Redux store that will be created during configureRedux, based on a common
+   * set of reducers and a set of reducers (potentially) supplied by the app
    */
-  this.reduxStore_ = null;
+  this.reduxStore = null;
 
   this.onAttempt = undefined;
   this.onContinue = undefined;
@@ -246,6 +250,29 @@ StudioApp.prototype.configure = function (options) {
 };
 
 /**
+ * Creates a redux store for this app, while caching the set of app specific
+ * reducers, so that we can recreate the store from scratch at any point if need
+ * be
+ * @param {object} reducers - App specific reducers, or null if the app is not
+ *   providing any.
+ */
+StudioApp.prototype.configureRedux = function (reducers) {
+  this.reducers_ = reducers;
+  this.createReduxStore_();
+};
+
+/**
+ * Creates our redux store by combining the set of app specific reducers that
+ * we stored along with a set of common reducers used by every app. Creation
+ * should happen once on app load (tests will also recreate our store between
+ * runs).
+ */
+StudioApp.prototype.createReduxStore_ = function () {
+  var combined = combineReducers(_.assign({}, commonReducers, this.reducers_));
+  this.reduxStore = redux.createStore(combined);
+};
+
+/**
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
@@ -268,8 +295,6 @@ StudioApp.prototype.init = function (config) {
   if (!config) {
     config = {};
   }
-
-  this.reduxStore_ = config.reduxStore || redux.createFakeStore();
 
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
@@ -853,7 +878,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
     throw "Unexpected input";
   }
 
-  this.reduxStore_.dispatch(runState.setIsRunning(!showRun));
+  this.reduxStore.dispatch(runState.setIsRunning(!showRun));
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
@@ -864,6 +889,10 @@ StudioApp.prototype.toggleRunReset = function (button) {
 
   // Toggle soft-buttons (all have the 'arrow' class set):
   $('.arrow').prop("disabled", showRun);
+};
+
+StudioApp.prototype.isRunning = function () {
+  return this.reduxStore.getState().isRunning;
 };
 
 /**
@@ -1357,7 +1386,6 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var visualization = document.getElementById('visualization');
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
   var visualizationColumn = document.getElementById('visualizationColumn');
-  var visualizationEditor = document.getElementById('visualizationEditor');
 
   var oldVizWidth = $(visualizationColumn).width();
   var newVizWidth = Math.max(this.minVisualizationWidth,
@@ -1388,9 +1416,6 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var scale = (newVizWidth / this.nativeVizWidth);
 
   applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
-  if (visualizationEditor) {
-    visualizationEditor.style.marginLeft = newVizWidthString;
-  }
 
   if (oldVizWidth < 230 && newVizWidth >= 230) {
     $('#soft-buttons').removeClass('soft-buttons-compact');
@@ -1712,6 +1737,11 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
 
+  if (config.level.initializationBlocks) {
+    var xml = parseXmlElement(config.level.initializationBlocks);
+    this.initializationCode = Blockly.Generator.xmlToCode('JavaScript', xml);
+  }
+
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
   this.enableShowLinesCount = (config.enableShowLinesCount !== false);
@@ -1791,6 +1821,10 @@ StudioApp.prototype.configureDom = function (config) {
       config.level.disableVariableEditing = false;
     }
 
+    if (config.iframeEmbed) {
+      document.body.className += ' embedded_iframe';
+    }
+
     if (config.pinWorkspaceToBottom) {
       var bodyElement = document.body;
       bodyElement.style.overflow = "hidden";
@@ -1862,10 +1896,12 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
         var div = document.createElement('div');
         document.body.appendChild(div);
-        ReactDOM.render(React.createElement(WireframeSendToPhone, {
-          channelId: dashboard.project.getCurrentId(),
-          appType: dashboard.project.getStandaloneApp()
-        }), div);
+        if (!options.iframeEmbed) {
+          ReactDOM.render(React.createElement(WireframeSendToPhone, {
+            channelId: dashboard.project.getCurrentId(),
+            appType: dashboard.project.getStandaloneApp()
+          }), div);
+        }
       }
 
       if (!options.embed && !options.noHowItWorks) {

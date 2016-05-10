@@ -391,6 +391,7 @@ module LevelsHelper
     hide_source
     submitted
     unsubmit_url
+    iframe_embed
   ))
   # Sets custom level options to be used by the view layer. The option hash is frozen once read.
   def level_view_options(opts = nil)

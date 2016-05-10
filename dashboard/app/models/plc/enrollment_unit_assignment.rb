@@ -32,6 +32,10 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
 
   validates :status, inclusion: {in: UNIT_STATUS_STATES}
 
+  def module_assignment_for_type(module_type)
+    plc_module_assignments.joins(:plc_learning_module).find_by('plc_learning_modules.module_type': module_type)
+  end
+
   def enroll_user_in_unit_with_learning_modules(learning_modules)
     transaction do
       plc_module_assignments.destroy_all

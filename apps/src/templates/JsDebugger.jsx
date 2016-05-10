@@ -20,7 +20,8 @@ var styles = {
     top: styleConstants['resize-bar-width'],
     left: 0,
     right: 0,
-    textAlign: 'center'
+    textAlign: 'center',
+    lineHeight: '30px'
   },
   noPadding: {
     padding: 0
@@ -247,9 +248,9 @@ JsDebugger.propTypes = {
 
 module.exports = connect(function propsFromStore(state) {
   return {
-    debugButtons: state.level.showDebugButtons,
-    debugConsole: state.level.showDebugConsole,
-    debugWatch: state.level.showDebugWatch,
+    debugButtons: state.pageConstants.showDebugButtons,
+    debugConsole: state.pageConstants.showDebugConsole,
+    debugWatch: state.pageConstants.showDebugWatch,
     isDebuggerPaused: state.runState.isDebuggerPaused
   };
 })(JsDebugger);

@@ -29,11 +29,6 @@ This short stage illustrates how students can use their new skills with function
 
 [Bee: Functions with Parameters](#Activity)
 
-### **Extended Learning**
-
-[Extension Activities](#Extended)
-
-
 [/summary]
 
 ## Lesson Objectives 
@@ -61,13 +56,6 @@ This lesson gets complicated rather quickly.  If your students had an easy time 
 
 [/together]
 
-[together]
-
-## Extended Learning 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
-
-
-[/together]
 
 [standards]
 

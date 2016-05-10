@@ -473,4 +473,9 @@ FactoryGirl.define do
     rate_type Pd::DistrictPaymentTerm::RATE_TYPES.first
     rate 10
   end
+
+  factory :professional_learning_partner do
+    sequence(:name) { |n| "PLP #{n}" }
+    contact {create :teacher}
+  end
 end

@@ -56,7 +56,7 @@ class Script < ActiveRecord::Base
         lm.update!(
           plc_course_unit_id: unit.id,
           name: stage.name,
-          module_type: Plc::LearningModule::REQUIRED_MODULE,
+          module_type: stage.flex_category.try(:downcase) || Plc::LearningModule::REQUIRED_MODULE,
           plc_tasks: []
         )
 
@@ -441,6 +441,15 @@ class Script < ActiveRecord::Base
 
         unless level
           raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
+        end
+
+        if Game.gamelab == level.game
+          unless script.student_of_admin_required || script.admin_required
+            raise <<-ERROR.gsub(/^\s+/, '')
+              Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required
+              (while adding level "#{level.name}" to script "#{script.name}")
+            ERROR
+          end
         end
 
         # TODO: (bbuchanan) Enable stricter gamelab rule when possible.

@@ -3,7 +3,7 @@ from: 'Hadi Partovi <hadi_partovi@code.org>'
 subject: "Don't make me ask again :-)"
 ---
 
-Thanks to your passion, millions of children have tried computer science. But tens of millions remain without access, and [you can help](http://bit.ly/computersciencepetition). 
+Happy teacher appreciation week! Thanks to your passion, millions of children have tried computer science. But tens of millions remain without access, and [you can help](http://bit.ly/computersciencepetition). 
 
 Last week, I asked 1 million Code.org supporters to [sign your name](http://bit.ly/computersciencepetition) alongside America’s top leaders urging Congress to fund computer science. We’ve shot past 100,000 signatures, **but we can do much much more if we act together.** 
 
