@@ -1,0 +1,8 @@
+%h1
+  Your registration has been canceled.
+
+- if @enroll_url
+  %p
+    If you need to re-enroll, click
+    %a{href: @enroll_url}
+      = @enroll_url

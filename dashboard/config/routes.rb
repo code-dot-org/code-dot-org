@@ -317,6 +317,13 @@ Dashboard::Application.routes.draw do
 
   post '/plc/course_units/:id/submit_new_questions_and_answers', to: 'plc/course_units#submit_new_questions_and_answers'
 
+  namespace :pd do
+    get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
+    post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
+    get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
+    get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
+  end
+
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'

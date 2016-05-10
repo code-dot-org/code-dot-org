@@ -1,0 +1,78 @@
+%div
+  %h1
+    Register for a Code Studio workshop (for teachers)
+  %p
+    Taught by Code.org facilitators who are experienced computer science educators,
+    our workshops will prepare you to teach the Code.org curriculum.
+
+  %h2
+    Workshop Details
+
+  %div.row
+    %div.span2{style: 'text-align: right'}
+      = @workshop.sessions.count == 1 ? 'Date:' : 'Dates:'
+    %div.span8
+      - @workshop.sessions.each do |session|
+        = session.start.strftime('%m/%d/%Y')
+        %br
+  %div.row
+    %div.span2{style: 'text-align: right'} Location:
+    %div.span2
+      = @workshop.location_name
+      %br
+      = @workshop.location_address
+  %br
+  = simple_format(@workshop.notes)
+
+  - if @enrollment.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@enrollment.errors.count, 'error')}:"
+      %ul
+        - @enrollment.errors.full_messages.each do |msg|
+          %li= msg
+
+  =form_for @enrollment, url: {action: 'create'} do |form|
+    %h2
+      Your Information
+    %p
+      Fields marked with a * are required. Your email address will be shared
+      with the workshop organizer and facilitators.
+    %div.control-group
+      %label
+        Your Name
+        %span.form-required-field
+          *
+      %div.controls
+        =form.text_field :name, class: 'span5', readonly: !current_user.nil?
+    %div.control-group
+      %label
+        Email Address
+        %span.form-required-field
+          *
+      %div.controls
+        =form.text_field :email, class: 'span5', readonly: !current_user.nil?
+    - unless current_user
+      %div.control-group
+        %label
+          Confirm Email Address
+          %span.form-required-field
+            *
+        %div.controls
+          =form.text_field :email_confirmation, class: 'span5'
+    %div.control-group
+      %label
+        District
+        %span.form-required-field
+          *
+      %div.controls
+        =form.text_field :district_name, class: 'span5'
+    %div.control-group
+      %label
+        School
+        %span.form-required-field
+          *
+      %div.controls
+        =form.text_field :school, class: 'span5'
+
+    %div.control-group
+      = form.submit 'Register', class: 'btn'
