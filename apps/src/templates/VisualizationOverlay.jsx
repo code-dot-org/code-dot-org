@@ -1,6 +1,6 @@
 /** @file SVG Visualization Overlay */
 
-var connect = require('react-redux').connect;
+import { connect } from 'react-redux';
 
 /**
  * Overlay for the play space that helps render additional UI (like the
@@ -9,7 +9,7 @@ var connect = require('react-redux').connect;
  *   Efficiently transforming mouse position into app-space
  * @constructor
  */
-let VisualizationOverlay = React.createClass({
+export let VisualizationOverlay = React.createClass({
   propTypes: {
     width: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
@@ -68,7 +68,8 @@ let VisualizationOverlay = React.createClass({
   },
 
   renderOverlays() {
-    return React.Children.map(this.props.children, child => React.cloneElement(child, {
+    return React.Children.map(this.props.children, (child, index) => React.cloneElement(child, {
+      key: index,
       width: this.props.width,
       height: this.props.height,
       mouseX: this.state.mouseX,
