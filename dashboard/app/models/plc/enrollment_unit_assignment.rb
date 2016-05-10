@@ -59,7 +59,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
         enroll_in_module learning_module
       end
 
-      update(status: IN_PROGRESS)
+      update!(status: IN_PROGRESS)
     end
   end
 
