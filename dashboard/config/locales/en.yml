@@ -681,3 +681,7 @@ en:
     icon_library:
       search_placeholder_text: 'Search for an icon...'
       no_icons_found: 'No icons found'
+  flex_category:
+    required: 'Overview'
+    content: 'Content'
+    practice: 'Teacher Practices'
