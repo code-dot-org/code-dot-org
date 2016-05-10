@@ -257,7 +257,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_raises_matching /Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required/ do
       Script.add_script(
           {name: 'test script', hidden: true},
-          [{name: 'New Game Lab Project'}] # From level.yml fixture
+          [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
       )
     end
   end
@@ -266,7 +266,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_raises_matching /Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required/ do
       Script.add_script(
           {name: 'test script', hidden: false, login_required: true},
-          [{name: 'New Game Lab Project'}] # From level.yml fixture
+          [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
       )
     end
   end
