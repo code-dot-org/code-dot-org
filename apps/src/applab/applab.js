@@ -747,6 +747,7 @@ Applab.init = function (config) {
     hideSource: !!config.hideSource,
     isDesignModeHidden: !!config.level.hideDesignMode,
     isEmbedView: !!config.embed,
+    isIframeEmbed: !!config.level.iframeEmbed,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isShareView: !!config.share,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
