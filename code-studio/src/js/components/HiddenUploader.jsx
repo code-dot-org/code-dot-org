@@ -53,7 +53,8 @@ var HiddenUploader = React.createClass({
         ref="uploader"
         type="file"
         style={{display: 'none'}}
-        accept={(this.props.allowedExtensions || '*')}/>;
+        accept={(this.props.allowedExtensions || '*')}
+        multiple/>;
   }
 });
 module.exports = HiddenUploader;
