@@ -66,7 +66,8 @@ const PhoneFrame = React.createClass({
             {showSelector && !hideFrame &&
             <ScreenSelector
                 screenIds={this.props.screenIds}
-                onCreate={this.props.onScreenCreate}/>
+                onCreate={this.props.onScreenCreate}
+            />
             }
             </div>
         </div>

@@ -1,8 +1,7 @@
 const CHANGE_SCREEN = 'screens/CHANGE_SCREEN';
 
 const initialState = {
-  currentScreenId: null,
-  allScreens: []
+  currentScreenId: null
 };
 
 export default function (state = initialState, action) {
