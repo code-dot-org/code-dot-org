@@ -30,10 +30,8 @@
       "randomNumber_min_max": null,
       "background": null,
       "console.log": null,
-      "declareAssign_x": null,
       "declareNoAssign_x": null,
-      "assign_x": null,
-      "declareAssign_str_hello_world": null
+      "assign_x": null
     },
     "show_d_pad": "true",
     "edit_code": true,
