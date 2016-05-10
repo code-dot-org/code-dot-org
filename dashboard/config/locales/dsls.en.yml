@@ -80,6 +80,14 @@ en:
     external:
       AlgPD Break:
         Before you move on...: Before you move on...
+      Algo How Routers Learn Student Lesson Introduction:
+        description here: description here
+        title: title
+      Algo MST Student Lesson Introduction:
+        Algorithm detour - Minimum Spanning Tree: Algorithm detour - Minimum Spanning Tree
+      Algo Shortest Path Student Lesson Introduction:
+        description here: description here
+        title: title
       App Lab Feedback:
         App Lab Feedback: App Lab Feedback
         description here: description here
@@ -632,6 +640,9 @@ en:
       ECSU4 Challenge Submission: {}
       Embedded Arduino Sketch Test:
         Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
+      Encoding Numbers Real World Student Lesson Introduction:
+        description here: description here
+        title: title
       Equity About: {}
       Equity CS: {}
       Equity Celebrate: {}
@@ -750,6 +761,7 @@ en:
       PDAlg 3BWelcome: {}
       PDAlg 3CAbout: {}
       PDAlg 3CBootstrap: {}
+      PDAlg 3CCongrats: {}
       PDAlg 3CCourseAB: {}
       PDAlg 3CElective: {}
       PDAlg 3CFuture: {}
@@ -757,6 +769,7 @@ en:
       PDAlg 3CGo: {}
       PDAlg 3CPlanning: {}
       PDAlg 3CShare Forum: {}
+      PDAlg 3CSharePlan: {}
       PDAlg 3CSharing: {}
       PDAlg 3CWelcome: {}
       PDAlg 4-7 Big Game: {}
@@ -924,6 +937,9 @@ en:
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
+      Sending Bits Real World Student Lesson Introduction:
+        description here: description here
+        title: title
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
       TLO practical:
@@ -934,7 +950,7 @@ en:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
       U1L1 Innovation - Video:
-        Impact of Innovation - Video: Impact of Innovation - Video
+        CS is Changing Everything - Video: CS is Changing Everything - Video
         description here: description here
       U1L1 Student Lesson Introduction:
         Impact of Innovation: Impact of Innovation
@@ -988,8 +1004,8 @@ en:
         description here: description here
         title: title
       U1L8 Student Lesson Introduction:
-        Sending Numbers: Sending Numbers
         description here: description here
+        title: title
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1453,6 +1469,11 @@ en:
         Videos for Equity Segment: Videos for Equity Segment
       facilitator test: {}
       k5 what next 1: {}
+      plc csp1 chapter overviews: {}
+      plc csp1 intro to tools: {}
+      plc csp1 introduction to unit: {}
+      plc csp1 netsim setup: {}
+      plc csp1 philosophy and commentary: {}
       rbo-test1: {}
       sample external 1:
         sample external 1: sample external 1
@@ -1687,6 +1708,42 @@ en:
       unique level name here:
         description here: description here
         title: title
+      v1 U1L13 Student Lesson Introduction:
+        The Need for DNS: The Need for DNS
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L10 Student Lesson Introduction:
+        U1L10 Routers and Redundancy: U1L10 Routers and Redundancy
+      v2 U1L11 Student Lesson Introduction:
+        Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+      v2 U1L12 Student Lesson Introduction:
+        The Need for DNS: The Need for DNS
+      v2 U1L13 Student Lesson Introduction:
+        HTTP and Abstraction: HTTP and Abstraction
+      v2 U1L14 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L2 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L3 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L4 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L5 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L6 Student Lesson Introduction:
+        Sending Numbers: Sending Numbers
+        description here: description here
+      v2 U1L8 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L9 Student Lesson Introduction:
+        The Need for Addressing: The Need for Addressing
       wn scratchjr 1:
         Scratch Jr: Scratch Jr
     level_group:
@@ -1905,8 +1962,6 @@ en:
         'Academic Year Development: 4 days in-person and 20 hours online': 'Academic Year Development: 4 days in-person and 20 hours online'
         ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 4).
         : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 4).
-        ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 5).
-        : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 5).
         'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
         'Optional Summer Wrap-up: 3 days in-person': 'Optional Summer Wrap-up: 3 days in-person'
         Phase 1: Phase 1

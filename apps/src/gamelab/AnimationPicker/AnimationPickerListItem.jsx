@@ -1,10 +1,12 @@
 /** @file A clickable item in the scroll area of the animation picker */
 'use strict';
 
+var AnimationPreview = require('./AnimationPreview');
 var color = require('../../color');
 var Radium = require('radium');
 
 var THUMBNAIL_SIZE = 105;
+var THUMBNAIL_BORDER_WIDTH = 1;
 
 var styles = {
   root: {
@@ -18,9 +20,12 @@ var styles = {
     height: THUMBNAIL_SIZE,
     borderStyle: 'solid',
     borderColor: color.light_gray,
-    borderWidth: 1.5,
+    borderWidth: THUMBNAIL_BORDER_WIDTH,
     borderRadius: 12,
-    cursor: 'pointer'
+    cursor: 'pointer',
+    ':hover': {
+      borderColor: color.purple
+    }
   },
   thumbnailIcon: {
     color: color.white,
@@ -35,7 +40,9 @@ var styles = {
   },
   label: {
     marginTop: 3,
-    fontSize: '90%'
+    fontSize: '90%',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden'
   },
   labelIcon: {
     fontStyle: 'italic'
@@ -56,6 +63,16 @@ var AnimationPickerListItem = function (props) {
   return (
     <div style={styles.root} onClick={props.onClick}>
       <div style={thumbnailStyle}>
+        {props.sourceUrl && <AnimationPreview
+            width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+            height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+            sourceUrl={props.sourceUrl}
+            sourceWidth={props.sourceWidth}
+            sourceHeight={props.sourceHeight}
+            frameWidth={props.frameWidth}
+            frameHeight={props.frameHeight}
+            frameCount={props.frameCount}
+            frameRate={props.frameRate}/>}
         {props.icon && <i className={"fa fa-" + props.icon} />}
       </div>
       <div style={labelStyle}>
@@ -67,6 +84,13 @@ var AnimationPickerListItem = function (props) {
 AnimationPickerListItem.propTypes = {
   label: React.PropTypes.string.isRequired,
   icon: React.PropTypes.string,
+  sourceUrl: React.PropTypes.string,
+  sourceWidth: React.PropTypes.number,
+  sourceHeight: React.PropTypes.number,
+  frameWidth: React.PropTypes.number,
+  frameHeight: React.PropTypes.number,
+  frameCount: React.PropTypes.number,
+  frameRate: React.PropTypes.number,
   onClick: React.PropTypes.func
 };
 module.exports = Radium(AnimationPickerListItem);

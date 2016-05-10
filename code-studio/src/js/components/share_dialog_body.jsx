@@ -128,7 +128,7 @@ var ShareDialogBody = React.createClass({
           <div className="social-buttons">
             <a id="sharing-phone" href="" onClick={this.showSendToPhone}>
               <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
-              Send to phone
+              <span>Send to phone</span>
             </a>
             <a href={facebookShareUrl}
                target="_blank"

@@ -29,11 +29,6 @@ Having experienced the creation and use of functions and parameters, students wi
 
 [Artist: Play Lab with Parameters](#Activity)
 
-### **Extended Learning**
-
-[Extension Activities](#Extended)
-
-
 [/summary]
 
 ## Lesson Objectives 
@@ -62,13 +57,6 @@ While the students will have had some experience creating functions with paramet
 
 [/together]
 
-[together]
-
-## Extended Learning 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
-
-
-[/together]
 
 [standards]
 

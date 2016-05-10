@@ -253,20 +253,22 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
-  # TODO: (bbuchanan) Forbid gamelab levels in hidden scripts. See note in script.rb.
-  test 'allow gamelab levels in hidden scripts' do
-    Script.add_script(
-        {name: 'test script', hidden: true},
-        [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
-    )
+  test 'forbid gamelab levels in hidden scripts' do
+    assert_raises_matching /Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required/ do
+      Script.add_script(
+          {name: 'test script', hidden: true},
+          [{name: 'New Game Lab Project'}] # From level.yml fixture
+      )
+    end
   end
 
-  # TODO: (bbuchanan) Forbid gamelab levels in login_required scripts. See note in script.rb.
-  test 'allow gamelab levels in login_required scripts' do
-    Script.add_script(
-        {name: 'test script', hidden: false, login_required: true},
-        [{levels: [{name: 'New Game Lab Project'}]}] # From level.yml fixture
-    )
+  test 'forbid gamelab levels in login_required scripts' do
+    assert_raises_matching /Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required/ do
+      Script.add_script(
+          {name: 'test script', hidden: false, login_required: true},
+          [{name: 'New Game Lab Project'}] # From level.yml fixture
+      )
+    end
   end
 
   test 'allow gamelab levels in student_of_admin_required scripts' do
@@ -381,10 +383,18 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'Sample Module', lm.name
     assert_equal 1, unit.plc_learning_modules.count
     assert_equal lm, unit.plc_learning_modules.first
+    assert_equal Plc::LearningModule::CONTENT_MODULE, lm.module_type
 
     task = script.script_levels.first.plc_task
     assert_equal 'Level 1', task.name
     assert_equal 1, lm.plc_tasks.count
     assert_equal task, lm.plc_tasks.first
+  end
+
+  test 'expect error on bad module types' do
+    script_file = File.join(self.class.fixture_path, 'test_bad_plc_module.script')
+    assert_raises ActiveRecord::RecordInvalid do
+      Script.setup([script_file])
+    end
   end
 end

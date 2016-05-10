@@ -7,7 +7,8 @@ nav: plc_science_nav
 
 We're so excited that you are interested in applying for our Professional Learning Program for CS in Science. Space for the 2016-17 school year is limited, so be sure to get your application in soon.
 ## Who is eligible?
-Please note that this application is for teachers from districts that have partnerships with Code.org. If your district does not have a partnership, please add your information to our <a href="https://form.jotform.com/60338373405150" target=_blank>wait-list</a> and we'll let you know if space opens up. 
+Please note that this application is for teachers from districts that have partnerships with Code.org. If your district does not have a partnership, please complete our [Single School Application](https://form.jotform.com/61175565477162) and we'll let you know if space opens up.
+
 
 **Some of our district partners have their own application process.**  If you do not see your district on the application [click on your district's pin on the map](/educate/professional-learning/cs-in-science-apply) to find the appropriate form.
 

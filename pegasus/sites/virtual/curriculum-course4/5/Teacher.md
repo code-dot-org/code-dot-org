@@ -168,6 +168,10 @@ Use these activities to enhance student learning. They can be used as outside of
 - Can students find songs where there are phrases that repeat, except for one or two words that change? 
   - Using "Old MacDonald" or "Five Little Monkeys" will prepare the students nicely for an activity that is coming up.<br/>  
 
+
+
+[standards]
+
 ## Connections and Background Information
 
 ### ISTE Standards (formerly NETS) Satisfied by this Lesson Include:
@@ -196,6 +200,8 @@ Use these activities to enhance student learning. They can be used as outside of
 - L.3.6 Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
 - L.4.6 Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal precise actions, emotions, or states of being and that are basic to a particular topic.
 - L.5.6 Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal contrast, addition, and other logical relationships
+
+[/standards]
 
 [/together]
 

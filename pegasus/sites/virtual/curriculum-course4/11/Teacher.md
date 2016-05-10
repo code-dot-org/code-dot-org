@@ -25,9 +25,6 @@ Building on the previous Play Lab activity, students will add deeper interactivi
 
 [Play Lab: For Loops](#Activity)
 
-### **Extended Learning**
-
-[Extension Activities](#Extended)
 
 
 [/summary]
@@ -59,13 +56,6 @@ Play Lab allows students to combine their new for loop skills with skills from p
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
 
-
-[together]
-
-## Extended Learning 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
-
-[/together]
 
 [standards]
 
