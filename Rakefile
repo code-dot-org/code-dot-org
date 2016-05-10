@@ -51,8 +51,10 @@ namespace :build do
 
   task :configure do
     if CDO.chef_managed
-      HipChat.log 'Applying <b>chef</b> profile...'
-      #   RakeUtils.sudo 'chef-client'
+      # HipChat.log 'Applying <b>chef</b> profile...'
+      # Chef client not wanted for static-hoc build since this is a
+      #  snapshot of a time in the past.
+      #  RakeUtils.sudo 'chef-client'
     end
 
     unless CDO.chef_managed
