@@ -1047,12 +1047,16 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'milestone post respects level_id for active level' do
-    script_level = Script.find_by_name('allthethings').stages.find {|stage| stage.name == 'Levels with Variants'}.script_levels.first
-    level_id = Level.by_name('2-3 Maze 2').id
-    post :milestone, @milestone_params.merge(script_level_id: script_level.id, level_id: level_id)
+    script = create :script
+    stage = create :stage, script: script
+    level1a = create :maze, name: 'maze 1'
+    level1b = create :maze, name: 'maze 1 new'
+    script_level = create :script_level, script: script, stage: stage, levels: [level1a, level1b], properties: "{'maze 1': {active: false}}"
+
+    post :milestone, @milestone_params.merge(script_level_id: script_level.id, level_id: level1a.id)
     response = JSON.parse(@response.body)
 
-    assert_equal response[:level_id], level_id
+    assert_equal response['level_id'], level1a.id
   end
 
   test 'New level completed response' do
