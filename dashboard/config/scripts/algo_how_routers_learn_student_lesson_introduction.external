@@ -1,0 +1,31 @@
+name 'Algo How Routers Learn Student Lesson Introduction'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+## Unit 1: How Routers Learn
+
+# Background
+
+You have learned quite a bit about sending information over the Internet. As you know, when you send a message to your friend, it may pass through several routers to get there. If you live in Los Angeles, CA and your friend lives in Houston, TX, your router will check its "routing table" to send your message in the most direct route it knows (i.e. generally, a message won’t go to Dubai between California and Texas). Let’s say someone built a high-speed Internet line directly between your house and your friend’s. How would your router learn about this new route? In the previous lesson, you learned about the Single Source Shortest Path (SSSP) problem. Today, you will be able to investigate a common application of SSSP – how routers learn.
+
+# Vocabulary
+
+<strong>Routing Table</strong>: a data table stored in a router that lists the routes to particular network destinations.
+
+# Lesson
+
+* Describe how routers create routing tables
+* Simulate the job of a router
+* Develop a router table to efficiently transmit packets from one destination to another across the Internet
+
+# Resources
+
+* Activity Guide: <a href="https://docs.google.com/document/d/1aO3wwU4mJSbjxYB5BR4iAplq6SLkXeGSqXvKjaQ2UQE/edit?usp=sharing" target="_blank">Simulation Worksheet</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

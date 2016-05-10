@@ -518,6 +518,10 @@ module.exports = {
         $('#designModeViz .textArea div').first().click();
         assertPropertyRowValue(0, 'id', 'text_area1', assert);
         assert.equal($('#propertyRowContainer textarea').first().val(), 'Text1\n\nText2', 'Text should be written');
+
+        // Reacquire reference to textArea, since it was unmounted when we
+        // selected the screen.
+        textArea = $('#propertyRowContainer textarea').first()[0];
         ReactTestUtils.Simulate.change(textArea,
           { target: { value: 'I said hey-hey-hey-hey\n\What\'s going on?' } });
         assert.equal($('#designModeViz .textArea').first().prop('innerHTML'),

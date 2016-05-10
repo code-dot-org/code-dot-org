@@ -21,8 +21,10 @@ module UsersHelper
   #             "levels": {"135": {"status": "perfect", "result": 100}}},
   #         "artist": {
   #             "levels": {
-  #                "1138": {"status": "attempted", "result": 5},
-  #                "1147": {"status": "perfect", "result": 30}}}}}
+  #                "1138": {"status": "attempted", "result": 5, submitted: false},
+  #                "1139": {"status": "attempted", "result": 5, submitted: true},
+  #                "1142": {"status": "attempted", "result": 5, pages_completed: [true, false, false], submitted: false},
+  #                "1147": {"status": "perfect", "result": 30, submitted: false}}}}}
   def summarize_user_progress_for_all_scripts(user)
     user_data = {}
     merge_user_summary(user_data, user)
@@ -79,18 +81,67 @@ module UsersHelper
       script_levels.each do |sl|
         result = level_info(user, sl, uls)
         submitted = level_submitted(user, sl, uls)
-        completion_status = submitted ? "submitted" : (activity_css_class result)
+        completion_status = activity_css_class(result, submitted)
         if completion_status != 'not_tried'
           user_data[:levels][sl.level_id] = {
               status: completion_status,
               result: result,
               submitted: submitted
           }
+
+          # Just in case this level has multiple pages, in which case we add an additional
+          # array of booleans indicating which pages have been completed.
+          pages_completed = get_pages_completed(user, sl)
+          user_data[:levels][sl.level_id][:pages_completed] = pages_completed if pages_completed
         end
       end
     end
 
     user_data
+  end
+
+  # Given a user and a script-level, returns a nil if there is only one page, or an array of
+  # boolean values if there are multiple pages.  The array contains true for each page that
+  # is considered complete.  Since this is currently just used for multi-page LevelGroup levels,
+  # true means that a valid (though not necessarily correct) answer has been given for each
+  # level embedded on the page.
+  def get_pages_completed(user, sl)
+    level = sl.level
+
+    if level.is_a? LevelGroup
+      pages_completed = []
+
+      last_attempt = JSON.parse(user.last_attempt(level).level_source.data)
+
+      # Go through each page.
+      level.properties["pages"].each do |page|
+        page_valid_result_count = 0
+
+        # Construct an array of the embedded level names used on the page.
+        embedded_level_names = []
+        page["levels"].each do |level_name|
+          embedded_level_names << level_name
+        end
+
+        # Retrieve the level information for those embedded levels.  These results
+        # won't necessarily match the order of level names as requested, but
+        # fortunately we are just accumulating a count and don't mind the order.
+        Level.where(name: embedded_level_names).each do |embedded_level|
+          level_id = embedded_level.id
+
+          # Do we have a valid result for this level in the LevelGroup last_attempt?
+          if last_attempt[level_id.to_s] && last_attempt[level_id.to_s]["valid"]
+            page_valid_result_count += 1
+          end
+        end
+
+        # The page is considered complete if there was a valid result for each
+        # embedded level.
+        pages_completed << (page_valid_result_count == page["levels"].length)
+      end
+
+      pages_completed
+    end
   end
 
   def percent_complete(script, user = current_user)

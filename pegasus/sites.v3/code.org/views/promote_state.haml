@@ -4,15 +4,16 @@
 -statename = get_us_state_from_abbr(state)
 -petition_url = data[:petition_url_t]
 %script{type: "text/javascript", src: "/shared/js/helpers.js"}
+%script{type: "text/javascript", src: "/js/promote.js"}
 %p#state-title
   #{statename}
-%p.fact{style: "margin-bottom: 0px"}
+%p.fact{style: "margin-bottom: 0px;"}
   -unless data[:cs_jobs_i] == 0
     %strong.figure
       =format_integer_with_commas(data[:cs_jobs_i])
     open computing jobs
 -unless data[:growth_vs_average_f] < 0.0
-  %p.fact{style: "color: #ddd"}
+  %p.fact{style: "color: #ddd;"}
     (<b>#{data[:growth_vs_average_f]}x</b> the state average demand rate)
 %p.fact
   -unless data[:cs_graduates] == 0
@@ -20,7 +21,7 @@
       =format_integer_with_commas(data[:cs_graduates_i])
     computer science graduates
 
-%div.fact{style: "margin-left:20px;"}
+%div.fact{style: "margin-left: 20px;"}
   - if data[:pd_funding_s] == "No"
     %i.fa.fa-times-circle
     &nbsp;
@@ -62,16 +63,33 @@
     &nbsp;
     = data[:cs_standards_exception_s]
 
+%p.fact{style: "margin-top: 5px; margin-bottom: 0px;"}
+  #show-ap-stats{style: "cursor: pointer;"} &#9654;&nbsp; Show AP Stats
+  #hide-ap-stats{style: "display: none;"}
+    %div{style: "cursor: pointer;"} &#9660;&nbsp; Hide AP Stats
+    .fact{style: "margin-left: 20px;"}
+      %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
+      &nbsp;
+      = "#{data[:percent_schools_ap_cs_i]}% of schools teach AP CS"
+    .fact{style: "margin-left: 20px;"}
+      %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
+      &nbsp;
+      = "#{data[:percent_ap_female_i]}% of AP students are female"
+    .fact{style: "margin-left: 20px;"}
+      %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
+      &nbsp;
+      = "#{format_integer_with_commas(data[:total_ap_students_color_i])} underrepresented minority students"
+
 -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/files/states/#{state}.pdf"))
-  %div.download-fact-sheet<
+  %div.download-fact-sheet
     %a{:href=>"/advocacy/state-facts/#{state}.pdf", target: '_blank'}
-      %button{style: 'height:40px'}<
+      %button{style: 'height:40px; padding-left: 20px; padding-right: 20px;'}<
         View #{statename} fact-sheet
 
 -if data[:text_t]
   %p
     =data[:text_t]
-%p
+%p{style: "margin-left: 21px;"}
   %a{style: "color:white;", onclick: "return adjustScroll('tools-section')"}
     Take action
 
