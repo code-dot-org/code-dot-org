@@ -4,6 +4,7 @@ Feature: App Lab Embed
 
   Background:
     Given I start a new Applab project
+    And I append "?enableExperiments=applab-embed" to the URL
 
   Scenario: App Lab Embed
     Given I switch to text mode
