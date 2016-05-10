@@ -38,17 +38,18 @@ describe('CrosshairOverlay', () => {
         </g>
     );
   }
-  it('renders lines converging at mouse position if mouse is in bounds', () => {
-    checkRenderAtMousePosition(0, 0);
-    checkRenderAtMousePosition(TEST_APP_WIDTH, 0);
-    checkRenderAtMousePosition(0, TEST_APP_HEIGHT);
-    checkRenderAtMousePosition(TEST_APP_WIDTH, TEST_APP_HEIGHT);
-  });
 
   it('renders null if mouse is out of bounds', () => {
     expect(renderAtMousePosition(-1, 0)).to.be.null;
     expect(renderAtMousePosition(0, -1)).to.be.null;
     expect(renderAtMousePosition(TEST_APP_WIDTH + 1, TEST_APP_HEIGHT)).to.be.null;
     expect(renderAtMousePosition(TEST_APP_WIDTH, TEST_APP_HEIGHT + 1)).to.be.null;
+  });
+
+  it('renders lines converging at mouse position if mouse is in bounds', () => {
+    checkRenderAtMousePosition(0, 0);
+    checkRenderAtMousePosition(TEST_APP_WIDTH, 0);
+    checkRenderAtMousePosition(0, TEST_APP_HEIGHT);
+    checkRenderAtMousePosition(TEST_APP_WIDTH, TEST_APP_HEIGHT);
   });
 });
