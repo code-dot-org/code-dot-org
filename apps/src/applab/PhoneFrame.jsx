@@ -3,13 +3,15 @@ import commonStyles from '../commonStyles';
 import color from '../color';
 import applabConstants from './constants';
 import experiments from '../experiments';
+import ScreenSelector from './ScreenSelector';
 
 const RADIUS = 30;
+const FRAME_HEIGHT = 50;
 
 const styles = {
   phoneFrame: {
     display: 'block',
-    height: 50,
+    height: FRAME_HEIGHT,
     backgroundColor: color.lighter_gray,
   },
   phoneFrameDark: {
@@ -25,6 +27,12 @@ const styles = {
   },
   nonResponsive: {
     maxWidth: applabConstants.APP_WIDTH,
+  },
+  screenSelector: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    paddingTop: (FRAME_HEIGHT - ScreenSelector.styles.dropdown.height) / 2,
+    width: '80%'
   }
 };
 
@@ -32,11 +40,13 @@ const styles = {
 const PhoneFrame = React.createClass({
   propTypes: {
     showFrame: React.PropTypes.bool.isRequired,
-    isDark: React.PropTypes.bool.isRequired
+    isDark: React.PropTypes.bool.isRequired,
+    screenIds: React.PropTypes.array.isRequired,
+    onScreenCreate: React.PropTypes.func.isRequired,
   },
 
   render: function () {
-    const { showFrame, isDark } = this.props;
+    const { showFrame, isDark, showSelector } = this.props;
     let hideFrame = !showFrame;
     if (!experiments.isEnabled('phoneFrame')) {
       hideFrame = true;
@@ -51,7 +61,14 @@ const PhoneFrame = React.createClass({
               isDark && styles.phoneFrameDark,
               hideFrame && commonStyles.hidden
             ]}
-        />
+        >
+          <div style={styles.screenSelector}>
+            {showSelector && <ScreenSelector
+                screenIds={this.props.screenIds}
+                onCreate={this.props.onScreenCreate}/>
+            }
+            </div>
+        </div>
         {this.props.children}
         <div
             style={[

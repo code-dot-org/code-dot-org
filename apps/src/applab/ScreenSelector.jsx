@@ -7,6 +7,17 @@ var connect = require('react-redux').connect;
 var elementUtils = require('./designElements/elementUtils');
 var screens = require('./redux/screens');
 
+var styles = {
+  dropdown: {
+    display: 'inline-block',
+    verticalAlign: 'top',
+    width: '100%',
+    height: 28,
+    marginBottom: 6,
+    borderColor: color.light_gray
+  }
+};
+
 /**
  * The dropdown that appears above the visualization in design mode, used
  * for selecting a screen to edit.
@@ -32,15 +43,6 @@ var ScreenSelector = React.createClass({
   },
 
   render: function () {
-    var dropdownStyle = {
-      display: 'inline-block',
-      verticalAlign: 'top',
-      width: '100%',
-      height: 28,
-      marginBottom: 6,
-      borderColor: color.light_gray
-    };
-
     var options = this.props.screenIds.map(function (item) {
       return <option key={item} value={item}>{item}</option>;
     });
@@ -60,8 +62,8 @@ var ScreenSelector = React.createClass({
     return (
       <select
           id="screenSelector"
-          style={dropdownStyle}
-          value={this.props.currentScreenId}
+          style={styles.dropdown}
+          value={this.props.currentScreenId || ''}
           onChange={this.handleChange}
           disabled={Applab.isRunning()}>
         {options}
@@ -82,3 +84,5 @@ module.exports = connect(function propsFromStore(state) {
     }
   };
 })(ScreenSelector);
+
+module.exports.styles = styles;
