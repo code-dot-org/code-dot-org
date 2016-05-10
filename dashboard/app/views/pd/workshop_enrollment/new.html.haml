@@ -1,3 +1,6 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
 %div
   %h1
     Register for a Code Studio workshop (for teachers)
@@ -35,7 +38,10 @@
     %h2
       Your Information
     %p
-      Fields marked with a * are required. Your email address will be shared
+      Fields marked with a
+      %span.form-required-field
+        *
+      are required. Your email address will be shared
       with the workshop organizer and facilitators.
     %div.control-group
       %label
