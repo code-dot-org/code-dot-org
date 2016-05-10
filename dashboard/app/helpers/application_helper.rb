@@ -48,9 +48,11 @@ module ApplicationHelper
     image_tag(image_url('white-checkmark.png'))
   end
 
-  def activity_css_class(result)
+  def activity_css_class(result, submitted=false)
     # For definitions of the result values, see /app/src/constants.js.
-    if result.nil? || result == 0
+    if submitted
+      'submitted'
+    elsif result.nil? || result == 0
       'not_tried'
     elsif result >= Activity::FREE_PLAY_RESULT
       'perfect'
