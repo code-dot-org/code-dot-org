@@ -159,7 +159,7 @@ end
 
 And /^I delete the current design mode element$/ do
   elements = @browser.find_elements(:css, '#design-properties button')
-  elements[-1].click
+  elements[0].click
 end
 
 def drag_grippy(element_js, delta_x, delta_y)
