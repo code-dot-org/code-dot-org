@@ -1893,6 +1893,11 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   if (this.share) {
     if (options.isLegacyShare || this.wireframeShare) {
       document.body.style.backgroundColor = '#202B34';
+      if (options.level.iframeEmbed) {
+        // so help me god.
+        document.body.style.backgroundColor = "transparent";
+      }
+
 
       $('.header-wrapper').hide();
       var vizColumn = document.getElementById('visualizationColumn');
