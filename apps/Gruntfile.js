@@ -19,7 +19,7 @@ module.exports = function (grunt) {
     // I guess we are not in a git checkout, or don't have git installed.
   }
   timeGrunt(grunt, false, function (stats, done) {
-    grunt.log.header('New Relic Logging');
+    grunt.log.writeln('-- New Relic Logging --');
     var logFilePath = path.join(__dirname, 'build-times.log');
     try {
       fs.appendFileSync(
