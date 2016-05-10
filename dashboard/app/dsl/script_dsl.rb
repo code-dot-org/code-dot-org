@@ -19,6 +19,7 @@ class ScriptDSL < BaseDSL
     @active = true
     @button = nil
     @image = nil
+    @description = nil
     @hidden = true
     @login_required = false
     @admin_required = false
@@ -85,6 +86,7 @@ class ScriptDSL < BaseDSL
   boolean :active
   string :button
   string :image
+  string :description
 
   def assessment(name)
     level(name, {assessment: true})
@@ -106,13 +108,15 @@ class ScriptDSL < BaseDSL
       levelprops[:active] = @active if !@active
       levelprops[:button] = @button if @button
       levelprops[:image] = @image if @image
-      if !@active || @button || @image
+      levelprops[:description] = @description if @description
+      if !@active || @button || @image || @description
         @current_scriptlevel[:properties][name] = levelprops
       end
 
       @active = true
       @button = nil
       @image = nil
+      @description = nil
     else
       @scriptlevels << {
         :stage => @stage,
