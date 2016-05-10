@@ -4,9 +4,9 @@ const TOOLTIP_MARGIN = 6;
 const EDGE_MARGIN = 5;
 export const TEXT_RECT_WIDTH = 110;
 export const TEXT_RECT_HEIGHT = 21;
-const TEXT_RECT_RADIUS = TEXT_RECT_HEIGHT / 3;
-const TEXT_Y_OFFSET = -7;
+export const TEXT_RECT_RADIUS = TEXT_RECT_HEIGHT / 3;
 export const BETWEEN_RECT_MARGIN = 4;
+const TEXT_Y_OFFSET = -7;
 
 /**
  * Renders a set of tooltips layered over the play space.
