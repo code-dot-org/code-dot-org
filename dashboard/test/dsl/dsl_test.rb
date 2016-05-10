@@ -189,11 +189,13 @@ variants
   prompt 'Which level would you like to try?'
 
   button 'Challenge'
-  image 'https://studio.code.org/blah/maze-2-super.png'
+  image 'https://studio.code.org/blah/maze-2-challenge.png'
+  description 'This is a hard level'
   level 'Level 2a'
 
   button 'Super Challenge'
   image 'https://studio.code.org/blah/maze-2-super.png'
+  description 'This is a very hard level'
   level 'Level 2b'
 endvariants
 level 'Level 3'
@@ -212,11 +214,70 @@ level 'Level 3'
                 prompt: 'Which level would you like to try?',
                 'Level 2a' => {
                   button: 'Challenge',
-                  image: 'https://studio.code.org/blah/maze-2-super.png'
+                  image: 'https://studio.code.org/blah/maze-2-challenge.png',
+                  description: 'This is a hard level'
                 },
                 'Level 2b' => {
                   button: 'Super Challenge',
-                  image: 'https://studio.code.org/blah/maze-2-super.png'
+                  image: 'https://studio.code.org/blah/maze-2-super.png',
+                  description: 'This is a very hard level'
+                }
+              }
+            },
+            {stage: 'Stage1', levels: [{name: 'Level 3'}]}
+          ]
+        }
+      ],
+      hidden: true,
+      trophies: false,
+      wrapup_video: nil,
+      login_required: false,
+      admin_required: false,
+      pd: false,
+      student_of_admin_required: false,
+      professional_learning_course: nil
+    }
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
+
+  test 'test Script DSL with selectable level variants and some missing options' do
+    input_dsl = "
+stage 'Stage1'
+level 'Level 1'
+variants
+  prompt 'Which level would you like to try?'
+
+  button 'Challenge'
+  image 'https://studio.code.org/blah/maze-2-challenge.png'
+  level 'Level 2a'
+
+  button 'Super Challenge'
+  description 'This is a very hard level'
+  level 'Level 2b'
+endvariants
+level 'Level 3'
+"
+    expected = {
+      id: nil,
+      stages: [
+        {
+          stage: 'Stage1',
+          scriptlevels: [
+            {stage: 'Stage1', levels: [{name: 'Level 1'}]},
+            {
+              stage: 'Stage1',
+              levels: [{name: 'Level 2a'}, {name: 'Level 2b'}],
+              properties: {
+                prompt: 'Which level would you like to try?',
+                'Level 2a' => {
+                  button: 'Challenge',
+                  image: 'https://studio.code.org/blah/maze-2-challenge.png'
+                },
+                'Level 2b' => {
+                  button: 'Super Challenge',
+                  description: 'This is a very hard level'
                 }
               }
             },
