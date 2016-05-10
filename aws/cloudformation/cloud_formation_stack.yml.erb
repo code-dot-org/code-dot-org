@@ -4,17 +4,6 @@ unless dry_run
   update_bootstrap_script.call
   update_certs.call unless cdn_enabled
 end
-
-# Since instance count can change dynamically, use the current value
-# in the template for zero-downtime rolling updates.
-autoscaling = Aws::AutoScaling::Client.new
-asg = autoscaling.describe_auto_scaling_groups.auto_scaling_groups.find do |group|
-  tags = group.tags.map{|tag| [tag.key, tag.value]}.to_h
-  tags['aws:cloudformation:stack-name'] == stack_name &&
-    tags['aws:cloudformation:logical-id'] == 'WebServer'
-end
-autoscaling_count = asg ? asg.desired_capacity : 2
-
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -53,14 +42,24 @@ Resources:
         Timeout: 300
   WebServer:
     Type: AWS::AutoScaling::AutoScalingGroup
-    CreationPolicy:
-      ResourceSignal:
-        Timeout: PT25M
-        Count: 2
     UpdatePolicy:
       AutoScalingRollingUpdate:
-        MaxBatchSize: 12
-        MinInstancesInService: <%=autoscaling_count%>
+<%
+      # For zero-downtime immutable updates with AutoScalingRollingUpdate,
+      # we need to set MinInstancesInService equal to the current number of instances
+      # in the Auto Scaling Group.
+      starting_instances = 4
+      autoscaling = Aws::AutoScaling::Client.new
+      asg = autoscaling.describe_auto_scaling_groups.auto_scaling_groups.find do |group|
+        tags = group.tags.map{|tag| [tag.key, tag.value]}.to_h
+        tags['aws:cloudformation:stack-name'] == stack_name &&
+          tags['aws:cloudformation:logical-id'] == 'WebServer'
+      end
+      min_in_service = asg ? asg.desired_capacity : starting_instances
+      max_size = 12
+-%>
+        MaxBatchSize: <%=max_size%>
+        MinInstancesInService: <%=min_in_service%>
         PauseTime: PT25M
         WaitOnResourceSignals: true
         SuspendProcesses:
@@ -71,12 +70,16 @@ Resources:
           - ReplaceUnhealthy
       AutoScalingScheduledAction:
         IgnoreUnmodifiedGroupSizeProperties: true
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: PT25M
+        Count: <%=starting_instances%>
     Properties:
       VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: LaunchConfig}
-      MinSize: 1
-      MaxSize: 12
-      DesiredCapacity: 2
+      MinSize: 2
+      MaxSize: <%=max_size%>
+      DesiredCapacity: <%=starting_instances%>
       HealthCheckType: ELB
       HealthCheckGracePeriod: 2000
       LoadBalancerNames: [Ref: LoadBalancer]
@@ -116,14 +119,10 @@ Resources:
       EstimatedInstanceWarmup: 300
       PolicyType: StepScaling
       StepAdjustments:
-        # 50-60% cpu, no adjustment
+        # 60-40% cpu, no adjustment
         - MetricIntervalUpperBound: 0
-          MetricIntervalLowerBound: -10
-          ScalingAdjustment: 0
-        # 50-40% cpu, -10% instances
-        - MetricIntervalUpperBound: -10
           MetricIntervalLowerBound: -20
-          ScalingAdjustment: -10
+          ScalingAdjustment: 0
         # 40-30% cpu, -20% instances
         - MetricIntervalUpperBound: -20
           MetricIntervalLowerBound: -30
