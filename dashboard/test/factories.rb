@@ -459,7 +459,8 @@ FactoryGirl.define do
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
     sequence(:name) { |n| "Workshop Participant #{n} " }
-    sequence(:email) { |n| "testuser#{n}@example.com.xx" }
+    sequence(:email) { |n| "participant#{n}@example.com.xx" }
+    school {'Example School'}
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
