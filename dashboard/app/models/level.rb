@@ -23,6 +23,7 @@
 #
 
 class Level < ActiveRecord::Base
+  extend OrderAsSpecified
   belongs_to :game
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels

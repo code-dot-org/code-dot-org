@@ -49,7 +49,7 @@ ruby
       end
     end
 
-    Level.where(name: level_names)
+    Level.where(name: level_names).order_as_specified(name: level_names)
   end
 
   class LevelGroupPage
