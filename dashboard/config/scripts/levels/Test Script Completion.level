@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "script_id": "99",
+    "script_name": "starwars",
     "skip_dialog": true,
     "skip_sound": true
   },

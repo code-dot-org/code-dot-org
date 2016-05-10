@@ -13,7 +13,6 @@ social:
 ---
 :javascript
   var petitionIncluded = false;
-  var promoteIncluded = false;
 
 -state ||= nil
 
@@ -64,9 +63,10 @@ social:
 
 :javascript
   var petition;
-  var promote;
 
   $(document).ready()
   {
-    petition = new Petition();
+    if (petitionIncluded) {
+      petition = new Petition();
+    }
   }
