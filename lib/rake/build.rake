@@ -113,6 +113,7 @@ namespace :build do
           HipChat.log 'Not seeding <b>dashboard</b> due to CDO.skip_seed_all...'
         else
           HipChat.log 'Seeding <b>dashboard</b>...'
+          HipChat.log 'consider setting "skip_seed_all" in locals.yml if this is taking too long' if rack_env?(:development)
           RakeUtils.rake 'seed:all'
         end
       end
