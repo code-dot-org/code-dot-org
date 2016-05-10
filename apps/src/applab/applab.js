@@ -697,22 +697,6 @@ Applab.init = function (config) {
   var onMount = function () {
     studioApp.init(config);
 
-    var viz = document.getElementById('visualization');
-    var vizCol = document.getElementById('visualizationColumn');
-
-    if (!config.noPadding) {
-      viz.className += " with_padding";
-      vizCol.className += " with_padding";
-    }
-
-    if (studioApp.reduxStore.getState().pageConstants.isEmbedView || config.hideSource) {
-      // no responsive styles active in embed or hideSource mode, so set sizes:
-      viz.style.width = Applab.appWidth + 'px';
-      viz.style.height = (shouldRenderFooter() ? Applab.appHeight : Applab.footerlessAppHeight) + 'px';
-      // Use offsetWidth of viz so we can include any possible border width:
-      vizCol.style.maxWidth = viz.offsetWidth + 'px';
-    }
-
     if (debuggerUi) {
       debuggerUi.initializeAfterDomCreated({
         defaultStepSpeed: config.level.sliderSpeed
@@ -758,6 +742,8 @@ Applab.init = function (config) {
   studioApp.reduxStore.dispatch(setPageConstants({
     assetUrl: studioApp.assetUrl,
     channelId: config.channel,
+    visualizationHasPadding: !config.noPadding,
+    hideSource: !!config.hideSource,
     isDesignModeHidden: !!config.level.hideDesignMode,
     isEmbedView: !!config.embed,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,

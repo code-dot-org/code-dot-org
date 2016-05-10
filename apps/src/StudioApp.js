@@ -28,6 +28,7 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
+var experiments = require('./experiments');
 
 var redux = require('./redux');
 var runState = require('./redux/runState');
@@ -270,6 +271,11 @@ StudioApp.prototype.configureRedux = function (reducers) {
 StudioApp.prototype.createReduxStore_ = function () {
   var combined = combineReducers(_.assign({}, commonReducers, this.reducers_));
   this.reduxStore = redux.createStore(combined);
+
+  if (experiments.isEnabled('reduxGlobalStore')) {
+    // Expose our store globally, to make debugging easier
+    window.reduxStore = this.reduxStore;
+  }
 };
 
 /**
@@ -1821,6 +1827,10 @@ StudioApp.prototype.configureDom = function (config) {
       config.level.disableVariableEditing = false;
     }
 
+    if (config.iframeEmbed) {
+      document.body.className += ' embedded_iframe';
+    }
+
     if (config.pinWorkspaceToBottom) {
       var bodyElement = document.body;
       bodyElement.style.overflow = "hidden";
@@ -1892,10 +1902,12 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
         var div = document.createElement('div');
         document.body.appendChild(div);
-        ReactDOM.render(React.createElement(WireframeSendToPhone, {
-          channelId: dashboard.project.getCurrentId(),
-          appType: dashboard.project.getStandaloneApp()
-        }), div);
+        if (!options.iframeEmbed) {
+          ReactDOM.render(React.createElement(WireframeSendToPhone, {
+            channelId: dashboard.project.getCurrentId(),
+            appType: dashboard.project.getStandaloneApp()
+          }), div);
+        }
       }
 
       if (!options.embed && !options.noHowItWorks) {

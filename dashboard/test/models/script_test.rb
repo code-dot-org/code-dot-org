@@ -253,20 +253,22 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
-  # TODO: (bbuchanan) Forbid gamelab levels in hidden scripts. See note in script.rb.
-  test 'allow gamelab levels in hidden scripts' do
-    Script.add_script(
-        {name: 'test script', hidden: true},
-        [{name: 'New Game Lab Project'}] # From level.yml fixture
-    )
+  test 'forbid gamelab levels in hidden scripts' do
+    assert_raises_matching /Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required/ do
+      Script.add_script(
+          {name: 'test script', hidden: true},
+          [{name: 'New Game Lab Project'}] # From level.yml fixture
+      )
+    end
   end
 
-  # TODO: (bbuchanan) Forbid gamelab levels in login_required scripts. See note in script.rb.
-  test 'allow gamelab levels in login_required scripts' do
-    Script.add_script(
-        {name: 'test script', hidden: false, login_required: true},
-        [{name: 'New Game Lab Project'}] # From level.yml fixture
-    )
+  test 'forbid gamelab levels in login_required scripts' do
+    assert_raises_matching /Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required/ do
+      Script.add_script(
+          {name: 'test script', hidden: false, login_required: true},
+          [{name: 'New Game Lab Project'}] # From level.yml fixture
+      )
+    end
   end
 
   test 'allow gamelab levels in student_of_admin_required scripts' do
