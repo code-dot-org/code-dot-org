@@ -2,7 +2,7 @@
  * A couple of utility functions for dealing with our design mode grid.
  */
 
-var GRID_SIZE = 5;
+const GRID_SIZE = 5;
 
 /**
  * @typedef {Object} TopLeft
@@ -17,21 +17,20 @@ var GRID_SIZE = 5;
  * @return {TopLeft}
  */
 export function scaledDropPoint(draggedElement) {
-  var div = document.getElementById('designModeViz');
+  const div = document.getElementById('designModeViz');
 
-  var boundingRect = div.getBoundingClientRect();
-  var draggedOffset = draggedElement.offset();
+  const boundingRect = div.getBoundingClientRect();
+  const draggedOffset = draggedElement.offset();
 
+  const xScale = boundingRect.width / div.offsetWidth;
+  const yScale = boundingRect.height / div.offsetHeight;
 
-  var xScale = boundingRect.width / div.offsetWidth;
-  var yScale = boundingRect.height / div.offsetHeight;
-
-  var left = (draggedOffset.left - boundingRect.left) / xScale;
-  var top = (draggedOffset.top - boundingRect.top) / yScale;
+  let left = (draggedOffset.left - boundingRect.left) / xScale;
+  let top = (draggedOffset.top - boundingRect.top) / yScale;
 
   // snap top-left corner to nearest location in the grid
-  left = module.exports.snapToGridSize(left);
-  top = module.exports.snapToGridSize(top);
+  left = snapToGridSize(left);
+  top = snapToGridSize(top);
 
   return {
     left: left,
@@ -58,7 +57,7 @@ export function draggedElementDropPoint() {
   if (!draggedElement.length) {
     return null;
   }
-  return module.exports.scaledDropPoint(draggedElement);
+  return scaledDropPoint(draggedElement);
 }
 
 /**
@@ -68,6 +67,6 @@ export function draggedElementDropPoint() {
  * @returns {number}
  */
 export function snapToGridSize(coordinate) {
-  var halfGrid = GRID_SIZE / 2;
+  const halfGrid = GRID_SIZE / 2;
   return coordinate - ((coordinate + halfGrid) % GRID_SIZE - halfGrid);
 }
