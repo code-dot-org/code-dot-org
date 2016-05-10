@@ -7,6 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
+      "color": null,
       "fill": null,
       "noFill": null,
       "stroke": null,
@@ -15,15 +16,19 @@
       "ellipse": null,
       "rect": null,
       "regularPolygon": null,
+      "line": null,
+      "arc": null,
+      "shape": null,
+      "point": null,
       "text": null,
+      "textAlign": null,
+      "textFont": null,
+      "textSize": null,
       "comment": null,
-      "color": null,
-      "background": null,
-      "randomNumber_max": null,
-      "randomNumber_min_max": null,
-      "console.log": null,
       "draw": null,
-      "line": null
+      "randomNumber_min_max": null,
+      "background": null,
+      "console.log": null
     },
     "edit_code": true,
     "embed": "false",

@@ -24,7 +24,7 @@
 
 class ScriptCompletion < Level
   serialized_attrs %w(
-    script_id
+    script_name
     skip_dialog
     skip_sound
   )
