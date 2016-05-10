@@ -24,7 +24,6 @@ Scenario: App Lab UI elements from initial code and html
   # this level displays each ui element by generating it dynamically as well as
   # displaying design-mode-created elements.
   And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9?noautoplay=true"
-  And I close the dialog
   And I wait to see "#runButton"
   And element "#runButton" is visible
   Then I see no difference for "design mode elements in code mode"
@@ -102,7 +101,6 @@ Scenario: Applab embedded level
   When I open my eyes to test "Applab embedded level"
   And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/12"
   And I rotate to landscape
-  And I close the dialog
   And I see no difference for "embedded level"
   Then I close my eyes
 

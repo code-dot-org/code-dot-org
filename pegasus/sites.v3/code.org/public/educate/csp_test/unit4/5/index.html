@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages. Students do a guided reading of a short section of Blown to Bits and answer some questions. Then students try their own hand at cracking a message encoded with the classic Caesar cipher. Students should become well-acquainted with idea that in an age of powerful computational tools, techniques of encryption will need to be more sophisticated. The most important aspect of this lesson is to understand how and why encryption plays a role in all of our lives every day on the Internet. It’s not just for the military anymore. The need for secrecy when sending bits over the Internet is important for anyone using the Internet.">
+    <title>The Need for Encryption</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/unit4/"><span class="h2">Unit</span><span class="h1">4</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/1" data-pdf-link="#unit4lesson1">
+            1
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/2" data-pdf-link="#unit4lesson2">
+            2
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/3" data-pdf-link="#unit4lesson3">
+            3
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/4" data-pdf-link="#unit4lesson4">
+            4
+        </a>
+        </div>
+        
+            
+                
+                    <div class="lesson current">
+                
+            
+        <a href="/educate/csp_test/unit4/5" data-pdf-link="#unit4lesson5">
+            5
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/6" data-pdf-link="#unit4lesson6">
+            6
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/7" data-pdf-link="#unit4lesson7">
+            7
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/8" data-pdf-link="#unit4lesson8">
+            8
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/9" data-pdf-link="#unit4lesson9">
+            9
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/10" data-pdf-link="#unit4lesson10">
+            10
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/11" data-pdf-link="#unit4lesson11">
+            11
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/12" data-pdf-link="#unit4lesson12">
+            12
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/13" data-pdf-link="#unit4lesson13">
+            13
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/14" data-pdf-link="#unit4lesson14">
+            14
+        </a>
+        </div>
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit4lesson5">
+        
+            
+                <h1>Lesson 5: The Need for Encryption</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.  Students do a guided reading of a short section of Blown to Bits and answer some questions. Then students try their own hand at cracking a message encoded with the classic Caesar cipher.  Students should become well-acquainted with idea that in an age of powerful computational tools, techniques of encryption will need to be more sophisticated.  The most important aspect of this lesson is to understand how and why encryption plays a role in all of our lives every day on the Internet.  It’s not just for the military anymore. The need for secrecy when sending bits over the Internet is important for anyone using the Internet.    </p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>This lesson is the first in a series of lessons about cryptography and encryption.  “Encryption” is a process for transforming a message so that the original is “hidden” from anyone who is not the intended recipient. Encryption is not just for the military and spies anymore. We use encryption everyday on the Internet, primarily to conduct commercial transactions, and without it our economy might grind to a halt. Computational tools dramatically increase the strength and complexity of the algorithms we use to encrypt information, but these same tools also increase our ability to crack an encryption. Developing strong encryptions relies on knowledge of problems that are “hard” for computers to solve, and using that knowledge to encrypt messages.  As a resource, you may wish to read all of Chapter 5 of <em>Blown to Bits</em>.  It provides social context which you may want to bring to your classroom and previews content covered across many upcoming lessons in Unit 2.</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocthe-need-for-encryption">
+                
+                    <h3>Getting Started</h3>
+                
+                    <h3>Activity</h3>
+                
+                    <h3>Wrap-up</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+                    <h3>Assessment</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Explain why encryption is an important need for everyday life on the Internet.</li>
+                    
+                        <li>Crack or break a message encrypted with a Caesar cipher using the Frequency Analysis Widget.</li>
+                    
+                        <li>Answer simple questions about the history of encryption, Caesar and random substitution ciphers, and techniques for cracking codes, including frequency analysis.</li>
+                    
+                        <li>Evaluate the security and ease of use of their encryption.	</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit2/lesson13" target="_blank">Forum</a></li>
+<li>(Optional) Copies of Worksheet</li>
+<li>(Optional) Copies of <em>Blown to Bits</em> reading</li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Teacher</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2/stage/13/puzzle/1' target='_blank' class='print_link'>Worksheet KEY - Reading Guide for Encryption</a> - Answer Key
+                                </li>
+                            
+                        </ul>
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf' target='_blank' class='print_link'>Blown to Bits, Chapter 5</a> - Reading
+                                </li>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2/stage/13/puzzle/2' target='_blank' class='print_link'>Frequency Analysis Widget</a> - Widget
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/edit' target='_blank' class='print_link'>Reading Guide for Encryption</a> - Worksheet (<a href='https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+
+        </div>
+    </div>
+
+    <div id="the-need-for-encryptioncontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started</h2>
+                    <h3 id="the-critical-role-of-encryption-in-everyday-life">The critical role of encryption in everyday life.</h3>
+<p><strong>Goal:</strong> Prepare students to reflect upon the critical role secrecy plays in their own lives, both on and off the Internet. Motivate the need for means of encrypting information as it travels across the Internet.</p>
+<p><strong>Think:</strong> Provide students a couple of minutes to silently journal about the following prompt:</p>
+<ul>
+<li>In your daily life what things do you or other people rely on keeping a secret? Who are these secrets being kept from? How are these things kept secret?</li>
+</ul>
+<p><strong>Share:</strong> Provide a couple minutes for students to share their ideas with their classmates. Ask them to brainstorm as many areas as they can where they or other people rely on secrecy. Provide students an opportunity to share their ideas with the class, trying to touch on as many different people and contexts as possible. Potential areas to discuss:</p>
+<ul>
+<li>Social interactions (e.g., a surprise birthday party)</li>
+<li>A play in a sports game, your hand in a card game</li>
+<li>Personal identification information, PIN numbers, etc.</li>
+<li>Business and government negotiations</li>
+<li>Military activity</li>
+</ul>
+<p><strong>Transition:</strong> Secrecy is a critical part of our lives, in ways big and small. As our lives increasingly migrate to the Internet, we want to be sure we can maintain the privacy of our information and control who has access to privileged information. Digital commerce, business, government and business operations, and even social networks all rely on our ability to keep information from falling into the wrong hands.</p>
+<p>As we saw with our activities on the Internet Simulator, the Internet is not inherently secure. Packets traveling across the Internet move through many routers, each of which could be owned by different people or organizations. These people, whether out of malice or curiosity, can easily read the traffic as it makes its way from sender to receiver. So we should consider all information traveling across the Internet to be public, almost as if written on a sheet of paper. In fact, many of the ideas we use to keep secrets in the digital age are far older than the Internet, as we’re about to see.</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity</h2>
+                    <p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/code-studio-icon.png"><img alt="" src="https://code.org/educate/docs/csp/code-studio-icon.png"></a> <strong>Distribute:</strong> Arrange students in pairs and distribute <a href="Reading Guide for Encryption" target="_blank">Worksheet - Reading Guide for Encryption</a>.(There should be a link in Code Studio for students to get to the worksheet, and the worksheet contains a link to the reading.  You could also print and hand out either of these things if you prefer.)</p>
+<p>The activity asks students to:</p>
+<ul>
+<li>Read pp. 165-169 of <a class="resource" href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf" target="_blank">Blown to Bits, Chapter 5</a>.</li>
+<li>Answer the questions provided.</li>
+<li>Try to crack a Caesar shift cipher using the <a class="resource" href="https://studio.code.org/s/cspunit2/stage/13/puzzle/2" target="_blank">Frequency Analysis Widget</a>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<p>Students should be encouraged to chat with their partner while completing the worksheet. The questions are fairly straightforward and the point is more to use the questions as a guide to the reading, than to find all the answers as quickly as possible.</p>
+</div>
+<div>
+<p>If students finish early, there are lots of things they can continue to play with in the Frequency Analysis Widget. They could encrypt their own text and have a friend try to crack it, for example.</p>
+</div>
+<div>
+<p><strong>Note:</strong> We will use this widget again in the next lesson, making use of its ability to crack random substitution ciphers. The purpose of using it here is to make a quick point about the use of computational tools in the realm of cryptography and familiarize students with the tool in preparation for the next lesson. There is no need to spend a lot of time with it in this lesson.</p>
+</div>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up</h2>
+                    <p><strong>Review:</strong> Use this opportunity to review new vocabulary introduced in the activity and respond to questions students may have encountered during the activity. Points to synthesize during this review:</p>
+<ul>
+<li>Definitions of cryptography, encryption, decryption, cracking/breaking an encryption</li>
+</ul>
+<p><em>Prompts:</em></p>
+<ul>
+<li>Why might it at least seem more difficult to crack a random substitution cipher than a Caesar?<ul>
+<li>There are many more possible random substitutions (26 * 25 * 24 * 23 …) than there are shifts (25). The naive way to crack the cipher is to try all possible substitutions.</li>
+</ul>
+</li>
+<li>Was it difficult to crack a Caesar cipher? Did it take longer than you thought? Why?<ul>
+<li>Computational tools aid humans in the implementation of encryption, decryption, and cracking algorithms. In other words, using a computer changes the speed and complexity of the types of encryption we can do, but it also increases our ability to break or circumvent encryption.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Discuss:</strong> Building on the reflection of the speed with which students cracked the Caesar cipher, read or display the following quote from RFC 3271, “The Internet is for Everyone.” Ask students to discuss what Vint Cerf is saying in this paragraph. What is “cryptographic technology” in the context of the Internet?</p>
+<ul>
+<li>“Internet is for everyone - but it won’t be if its users cannot protect their privacy and the confidentiality of transactions conducted on the network.  Let us dedicate ourselves to the proposition that cryptographic technology sufficient to protect privacy from unauthorized disclosure should be freely available, applicable and exportable.”</li>
+</ul>
+<p><strong>Closing:</strong> <em>Say:</em> Encryption is a necessary component of the Internet if we wish to use it to securely transmit secret information. Old encryption algorithms relied on the infeasibility of checking all possible substitutions, but as we saw today (and will see again in our next lesson), computational tools dramatically increase the speed with which we can break encryptions. If we are to create a secure Internet, we will need to develop tools and protocols which can resist the enormous computational power of modern computers.</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li>The earlier sections of Chapter 5 of Blown to Bits make reference to the significance of and controversies surrounding encryption in the aftermath of September 11th. This reading may be a useful tool for further introducing the impact of cryptography on many aspects of modern life.</li>
+<li>Ask students to review the history of their Internet browsing and calculate roughly what percentage they conduct with the assumption that it is “private.” Do they have any way of being sure this is the case? Are there any websites they visit where they feel more confident in the secrecy of their traffic than others? Are they justified in this conclusion?</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p><strong>Questions</strong> (also included in Code Studio):</p>
+<ol>
+<li>
+<p>What is a Caesar cipher?</p>
+</li>
+<li>
+<p>What is the “key” to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?</p>
+<p>a) A secret word only know by Caesar.</p>
+<p>b) The number of characters to shift each letter in the alphabet.</p>
+<p>c) The letter that occurs most often in the encrypted message.</p>
+<p>d) The day of the month that the encrypted message was sent.</p>
+</li>
+<li>
+<p>The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?</p>
+<p>a) 26</p>
+<p>b) 26 × 25</p>
+<p>c) 26 × 25 × 24 ×···× 3 × 2 x 1</p>
+<p>d) 2626</p>
+</li>
+</ol>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CI</strong> - Community, Global, and Ethical Impacts</summary>
+                    <ul>
+                        
+                            <li><strong>CI.L3A:10</strong> - Describe security and privacy issues that relate to computer networks.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CL</strong> - Collaboration</summary>
+                    <ul>
+                        
+                            <li><strong>CL.L2:2</strong> - Collaboratively design, develop, publish and present products (e.g., videos, podcasts, websites) using technology resources that demonstrate and communicate curriculum. concepts.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CPP</strong> - Computing Practice &amp; Programming</summary>
+                    <ul>
+                        
+                            <li><strong>CPP.L3A:9</strong> - Explain the principles of security by examining encryption, cryptography, and authentication techniques.</li>
+                        
+                            <li><strong>CPP.L3B:5</strong> - Deploy principles of security by implementing encryption and authentication strategies.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CT</strong> - Computational Thinking</summary>
+                    <ul>
+                        
+                            <li><strong>CT.L3B:4</strong> - Evaluate algorithms by their efficiency, correctness, and clarity.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>3.3</strong> - There are trade offs when representing information as digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.3.1</strong> - Analyze how data representation, storage, security, and transmission of data involve computational manipulation of information. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.3.1B</strong> - Security concerns engender tradeoffs in storing and transmitting information.</li>
+                                
+                                    <li><strong>3.3.1F</strong> - Security and privacy concerns arise with data containing personal information.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.3</strong> - Cybersecurity is an important concern for the Internet and the systems built on it.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.3.1</strong> - Identify existing cybersecurity concerns and potential options to address these issues with the Internet and the systems built on it. [P1]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.3.1C</strong> - Implementing cybersecurity has software, hardware, and human components.</li>
+                                
+                                    <li><strong>6.3.1H</strong> - Cryptography is essential to many models of cybersecurity.</li>
+                                
+                                    <li><strong>6.3.1I</strong> - Cryptography has a mathematical foundation.</li>
+                                
+                                    <li><strong>6.3.1K</strong> - Symmetric encryption is a method of encryption involving one key for encryption and decryption.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>7.3</strong> - Computing has a global affect â€” both beneficial and harmful â€” on people and society.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>7.3.1</strong> - Analyze the beneficial and harmful effects of computing. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>7.3.1G</strong> - Privacy and security concerns arise in the development and use of computational systems and artifacts.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#tocthe-need-for-encryption').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#the-need-for-encryptioncontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'the-need-for-encryption', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

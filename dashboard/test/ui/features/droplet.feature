@@ -4,7 +4,6 @@
 Feature: Droplet levels work as expected
   Background:
     Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/5?noautoplay=true"
-    And I close the dialog
 
   # For now test only Chrome, Safari does not support actions API
   @chrome
