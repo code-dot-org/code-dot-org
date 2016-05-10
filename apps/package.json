@@ -55,6 +55,7 @@
     "chai-subset": "1.2.0",
     "chalk": "^1.1.3",
     "chrome-serialport": "bcjordan/chrome-serialport#2",
+    "classnames": "^2.2.5",
     "connect-livereload": "0.5.3",
     "ejs": "0.8.4",
     "ejsify": "1.0.0",
@@ -121,6 +122,6 @@
     "query-string": "4.1.0",
     "filesaver.js": "0.2.0",
     "jszip": "3.0.0",
-    "react-color": "code-dot-org/react-color#f0c7c3bc1fabb149ecc76902d1510cb761aa311d"
+    "react-color": "code-dot-org/react-color#65a688f0ed61da00acea95cb1c8aa0c691b3839e"
   }
 }

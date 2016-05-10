@@ -257,7 +257,8 @@ module.exports = {
         '<div id="container" abp="228">' +
         '<img id="image1" src="">' +
         '<img id="image2" src="' + imageUrl + '" />' +
-        '</div>' +
+        '<grammarly-btn></grammarly-btn>' +
+      '</div>' +
       '\')\n;',
 
       runBeforeClick: function (assert) {

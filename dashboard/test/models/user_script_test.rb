@@ -83,7 +83,7 @@ class UserScriptTest < ActiveSupport::TestCase
       level_num: 'custom',
       user_id: 0
     )
-    level.script_id = @script.id.to_s
+    level.script_name = @script.name
     level.save!
     sl = create :script_level, levels: [level]
 
