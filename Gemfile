@@ -191,3 +191,6 @@ gem 'rack-attack', '~> 4.4'
 
 # Generate SSL certificates
 gem 'acmesmith'
+
+# Allows for ActiveRecord queries that return items in a specified order
+gem 'order_as_specified'
