@@ -23,7 +23,6 @@
 #  name                       :string(255)
 #  locale                     :string(10)       default("en-US"), not null
 #  birthday                   :date
-#  parent_email               :string(255)
 #  user_type                  :string(16)
 #  school                     :string(255)
 #  full_address               :string(1024)

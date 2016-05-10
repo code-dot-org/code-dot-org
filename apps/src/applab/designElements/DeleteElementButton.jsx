@@ -1,5 +1,20 @@
 /* global $ */
 var color = require('../../color');
+var commonStyles = require('../../commonStyles');
+var Radium = require('radium');
+
+var styles = {
+  right: {
+    float: 'right'
+  },
+  confirming: {
+    marginLeft: 20
+  },
+  red: {
+    backgroundColor: color.red,
+    color: color.white
+  }
+};
 
 /**
  * A delete button that will also ask for confirmation when shouldConfirm is
@@ -34,40 +49,29 @@ var DeleteElementButton = React.createClass({
   },
 
   render: function () {
-    var buttonStyle = {
-      paddingTop: '5px',
-      paddingBottom: '5px',
-      fontSize: '14px',
-    };
-
-    var redButtonStyle = $.extend({}, buttonStyle, {
-      backgroundColor: color.red,
-      color: color.white
-    });
-
     var confirm;
     if (this.state.confirming) {
       return (
-        <div style={{marginLeft: 20}}>
+        <div style={[styles.right, styles.confirming]}>
           Delete?
           <button
-            style={buttonStyle}
-            onClick={this.abortDelete}>
-            No
+              style={[commonStyles.button, styles.red]}
+              onClick={this.finishDelete}>
+            Yes
           </button>
           <button
-            style={redButtonStyle}
-            onClick={this.finishDelete}>
-            Yes
+              style={commonStyles.button}
+              onClick={this.abortDelete}>
+            No
           </button>
         </div>
       );
     }
     return (
-      <div style={{marginLeft: 15}}>
+      <div>
         <button
-          style={redButtonStyle}
-          onClick={this.handleDeleteInternal}>
+            style={[commonStyles.button, styles.red, styles.right]}
+            onClick={this.handleDeleteInternal}>
           Delete
         </button>
       </div>
@@ -75,4 +79,4 @@ var DeleteElementButton = React.createClass({
   }
 });
 
-module.exports = DeleteElementButton;
+module.exports = Radium(DeleteElementButton);

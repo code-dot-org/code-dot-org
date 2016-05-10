@@ -50,9 +50,15 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
   // Do not warn when these attributes are removed.
   var ignoredAttributes = [
     'pmbx_context',   // Used by Chrome plugins such as Bitdefender Wallet.
-    'kl_vkbd_parsed', // Origin unknown. Assumed to be a plugin of some kind.
+    'kl_vkbd_parsed', // Possibly from Kaspersky Labs password manager.
+    'kl_virtual_keyboard_secure_input', // Possibly from Kaspersky Labs password manager.
     'vk_16761',       // Origin unknown.
+    '_vkenabled',     // Origin unknown.
     'abp'             // adblock plus plugin.
+  ];
+
+  var ignoredTags = [
+    'grammarly-btn'   // Grammarly plugin.
   ];
 
   var processed = sanitize(unsafe, {
@@ -74,6 +80,9 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
           attribs: attribs
         };
       }
+    },
+    exclusiveFilter: function (element) {
+      return (ignoredTags.indexOf(element.tag) !== -1);
     }
   });
   if (processed != safe) {

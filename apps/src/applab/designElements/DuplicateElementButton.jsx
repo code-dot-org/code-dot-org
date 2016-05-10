@@ -1,3 +1,14 @@
+var commonStyles = require('../../commonStyles');
+var Radium = require('radium');
+
+var styles = {
+  duplicateButton: {
+    backgroundColor: '#0aa',
+    color: 'white',
+    float: 'right'
+  }
+};
+
 /**
  * A duplicate button that helps replicate elements
  */
@@ -11,27 +22,16 @@ var DuplicateElementButton = React.createClass({
   },
 
   render: function () {
-    var buttonStyle = {
-      paddingTop: '5px',
-      paddingBottom: '5px',
-      fontSize: '14px',
-    };
-
-    var duplicateButtonStyle = $.extend({}, buttonStyle, {
-      backgroundColor: '#0aa',
-      color: 'white'
-    });
-
     return (
-      <div style={{marginLeft: 15}}>
+      <div style={styles.main}>
         <button
-        style={duplicateButtonStyle}
-        onClick={this.handleDuplicate}>
-        Duplicate
-      </button>
+            style={[commonStyles.button, styles.duplicateButton]}
+            onClick={this.handleDuplicate}>
+          Duplicate
+        </button>
     </div>
     );
   }
 });
 
-module.exports = DuplicateElementButton;
+module.exports = Radium(DuplicateElementButton);

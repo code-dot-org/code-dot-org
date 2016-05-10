@@ -19,7 +19,7 @@ video_player: true
         <h1 class="jumbo-h1-second-box">CS Fundamentals Unplugged</h1
         <p class="jumbo-tutorial-description">We've compiled a list of all of our unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand alone course or as complementary lessons for any computer science course.</p>
         <p>
-        <p class="jumbo-tutorial-specs">Ages 6+, English only</p>
+        <p class="jumbo-tutorial-specs">Ages 4+, English only</p>
       </div>
     </div>
   </div>
@@ -109,15 +109,15 @@ Each of these activities can either be used alone or with other computer science
  
 	case theCourse
 	when "course1"
-	    theCourse = "Course 1, Lesson "
+	    theCourse = "Course 1: Stage "
 	when "course2"
-	    theCourse = "Course 2, Lesson "
+	    theCourse = "Course 2: Stage "
 	when "course3"
-	    theCourse = "Course 3, Lesson "
+	    theCourse = "Course 3: Stage "
 	when "course4"
-	    theCourse = "Course 4, Lesson "
+	    theCourse = "Course 4: Stage "
 	when "20-hour"
-	    theCourse = "Accelerated Course, Lesson "
+	    theCourse = "Accelerated Course: Stage "
 	else
 	    theCourse = ""
 	end
