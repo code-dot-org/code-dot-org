@@ -303,6 +303,36 @@ task :deploy do
   end
 end
 
+task :deploy_immutable do
+  with_hipchat_logging("deploy new frontends") do
+    autoscaling = Aws::AutoScaling::Client.new
+    asg = autoscaling.describe_auto_scaling_groups.auto_scaling_groups.find do |group|
+      tags = group.tags.map{|tag| [tag.key, tag.value]}.to_h
+      tags['aws:cloudformation:stack-name'] == stack_name &&
+        tags['aws:cloudformation:logical-id'] == 'WebServer'
+    end
+
+    min_in_service = asg ? asg.desired_capacity : starting_instances
+    max_size = 12
+
+
+    app_servers = CDO.app_servers
+    if CDO.daemon && app_servers.any?
+      Dir.chdir(deploy_dir) do
+        num_failures = 0
+        thread_count = (app_servers.keys.length * 0.20).ceil
+        threaded_each app_servers.keys, thread_count do |name|
+          succeeded = upgrade_frontend name, app_servers[name]
+          if !succeeded
+            num_failures += 1
+            raise 'too many frontend upgrade failures, aborting deploy' if num_failures > MAX_FRONTEND_UPGRADE_FAILURES
+          end
+        end
+      end
+    end
+  end
+end
+
 $websites = build_task('websites', [
   deploy_dir('rebuild'),
   BLOCKLY_CORE_TASK,
