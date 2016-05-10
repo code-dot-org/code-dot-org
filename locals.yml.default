@@ -57,3 +57,7 @@ dashboard_enable_pegasus: true
 #pusher_app_id: ''
 #pusher_application_key: ''
 #pusher_application_secret: ''
+
+# Credentials for new relic logging. Used to log apps build times.
+# Log in to https://rpm.newrelic.com/accounts/501463 to get the key
+#new_relic_license_key: ''
