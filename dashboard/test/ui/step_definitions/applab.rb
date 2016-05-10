@@ -130,6 +130,9 @@ def set_nth_input(n, value)
   press_keys(elements[n], "\b") # backspace
   press_keys(elements[n], "\b") # backspace
   press_keys(elements[n], ":delete")
+  press_keys(elements[n], ":delete")
+  press_keys(elements[n], ":delete")
+  press_keys(elements[n], ":delete")
   press_keys(elements[n], value)
 end
 
