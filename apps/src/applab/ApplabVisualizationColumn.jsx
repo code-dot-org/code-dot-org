@@ -23,9 +23,15 @@ var styles = {
 var ApplabVisualizationColumn = React.createClass({
   propTypes: {
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
+    instructionsInTopPane: React.PropTypes.bool.isRequired,
+    visualizationHasPadding: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
+    isShareView: React.PropTypes.bool.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
+    isRunning: React.PropTypes.bool.isRequired,
+    interfaceMode: React.PropTypes.string.isRequired,
 
+    // non redux backed
     isEditingProject: React.PropTypes.bool.isRequired,
     screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
