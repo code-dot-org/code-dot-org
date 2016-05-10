@@ -1070,4 +1070,30 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     end
   end
 
+  test "should present level with activity" do
+    sign_in @student
+    level = create :maze, name: 'maze 1'
+    level2 = create :maze, name: 'maze 2'
+    create :activity, user: @student, level_id: level.id,
+        level_source: create(:level_source, level: level, data: 'level source')
+
+    get_show_script_level_page(create(:script_level, levels: [level, level2],
+        properties: '{"maze 1": {"active": false}}'))
+    assert_equal assigns(:level), level
+  end
+
+  test "should present level with most recent activity" do
+    sign_in @student
+    level = create :maze, name: 'maze 1'
+    level2 = create :maze, name: 'maze 2'
+    create :activity, user: @student, level_id: level2.id,
+        level_source: create(:level_source, level: level2, data: 'level source')
+    create :activity, user: @student, level_id: level.id,
+        level_source: create(:level_source, level: level, data: 'level source')
+
+    get_show_script_level_page(create(:script_level, levels: [level, level2],
+        properties: '{"maze 1": {"active": false}}'))
+    assert_equal assigns(:level), level
+  end
+
 end
