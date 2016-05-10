@@ -5,6 +5,15 @@ require 'os'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
 
+# Helper functions
+def make_blockly_symlink
+  Dir.chdir(apps_dir) do
+    apps_build = CDO.use_my_apps ? apps_dir('build/package') : 'apps-package'
+    puts apps_build
+    RakeUtils.ln_s apps_build, dashboard_dir('public','blockly')
+  end
+end
+
 namespace :lint do
   task :ruby do
     RakeUtils.bundle_exec 'rubocop'
@@ -217,7 +226,7 @@ task :build => ['build:all']
 # Whether this is a development or adhoc environment where we should install npm and create
 # a local database.
 def local_environment?
-  (rack_env?(:development) && !CDO.chef_managed) || rack_env?(:adhoc)
+  (rack_env?(:development) && !CDO.chef_managed) || rack_env?(:adhoc) || rack_env?(:'static-hoc')
 end
 
 def install_npm
