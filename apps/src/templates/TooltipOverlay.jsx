@@ -1,12 +1,12 @@
 /** @file Crosshair and guides over visualization */
 
-var TOOLTIP_MARGIN = 6;
-var EDGE_MARGIN = 5;
-var TEXT_RECT_WIDTH = 110;
-var TEXT_RECT_HEIGHT = 21;
-var TEXT_RECT_RADIUS = TEXT_RECT_HEIGHT / 3;
-var TEXT_Y_OFFSET = -7;
-var BETWEEN_RECT_MARGIN = 4;
+const TOOLTIP_MARGIN = 6;
+const EDGE_MARGIN = 5;
+export const TEXT_RECT_WIDTH = 110;
+export const TEXT_RECT_HEIGHT = 21;
+const TEXT_RECT_RADIUS = TEXT_RECT_HEIGHT / 3;
+const TEXT_Y_OFFSET = -7;
+export const BETWEEN_RECT_MARGIN = 4;
 
 /**
  * Renders a set of tooltips layered over the play space.
@@ -41,7 +41,7 @@ let TooltipOverlay = React.createClass({
     var tooltipCount = this.getTooltipStrings().length;
     return {
       width: TEXT_RECT_WIDTH,
-      height: tooltipCount * TEXT_RECT_HEIGHT + (tooltipCount-1) * BETWEEN_RECT_MARGIN
+      height: tooltipCount * TEXT_RECT_HEIGHT + Math.max(0, tooltipCount-1) * BETWEEN_RECT_MARGIN
     };
   },
 
@@ -110,7 +110,7 @@ let TooltipOverlay = React.createClass({
   },
 
   render() {
-    if (!this.isMouseInBounds() || !this.props.providers) {
+    if (!this.isMouseInBounds() || !this.props.providers || !this.props.providers.length) {
       return null;
     }
     return <g className="tooltip-overlay">{this.renderTooltips()}</g>;
