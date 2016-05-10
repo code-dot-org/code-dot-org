@@ -35,6 +35,10 @@ dashboard_enable_pegasus: true
 # If false, dashboard will try to use a prepackaged version from S3.
 #use_my_code_studio: true
 
+# Whether to skip the slow `rake seed:all` command during `rake build`.
+# This means you won't see the latest edits to levels until you manually
+# run `rake seed:all` or disable this flag.
+#skip_seed_all: true
 
 # Encryption key required for decoding certain protected level sources.
 # Ask a Code.org dev for this if you need access to protected levels.
