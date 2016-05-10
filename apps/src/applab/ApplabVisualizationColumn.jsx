@@ -47,7 +47,13 @@ var ApplabVisualizationColumn = React.createClass({
             screenIds={this.props.screenIds}
             onScreenCreate={this.props.onScreenCreate} />
         }
-        <PhoneFrame showFrame={showFrame} isDark={this.props.isRunning}>
+        <PhoneFrame
+            showFrame={showFrame}
+            isDark={this.props.isRunning}
+            showSelector={this.props.interfaceMode === applabConstants.ApplabInterfaceMode.DESIGN}
+            screenIds={this.props.screenIds}
+            onScreenCreate={this.props.onScreenCreate}
+        >
           <Visualization/>
         </PhoneFrame>
         <GameButtons instructionsInTopPane={this.props.instructionsInTopPane}>
@@ -67,5 +73,6 @@ module.exports = connect(function propsFromStore(state) {
     isShareView: state.pageConstants.isShareView,
     isEmbedView: state.pageConstants.isEmbedView,
     isRunning: state.runState.isRunning,
+    interfaceMode: state.interfaceMode
   };
 })(Radium(ApplabVisualizationColumn));
