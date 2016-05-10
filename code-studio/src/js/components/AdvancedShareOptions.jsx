@@ -79,7 +79,7 @@ var AdvancedShareOptions = Radium(React.createClass({
     var url = window.location.href.replace('edit','embed');
     // If you change this width and height, make sure to update the
     // #visualizationColumn.wireframeShare css
-    var iframeHtml = '<iframe width="352" height="612" style="border: 1px solid black;" src="' +
+    var iframeHtml = '<iframe width="352" height="612" style="border: 0px;" src="' +
           url + '"></iframe>';
     return (
       <div>
