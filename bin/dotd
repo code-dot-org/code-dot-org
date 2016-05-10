@@ -30,7 +30,7 @@ end
 wait_for "between 10AM and 11:30AM (Pacific) to morning DTT"
 
 should_i "morning DTT" do
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/test...staging'
+  open_url 'https://github.com/code-dot-org/code-dot-org/compare/test...staging?expand=1&title=DTT%20%28Staging%20>%20Test%29'
 end
 
 wait_for "morning DTT to complete, re-run/investigate failures, and update test room topic to that commit # green"
@@ -50,7 +50,7 @@ EOS
 end
 
 should_i "merge from levelbuilder to staging" do
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/staging...levelbuilder'
+  open_url 'https://github.com/code-dot-org/code-dot-org/compare/staging...levelbuilder?expand=1&title=Levelbuilder%20>%20Staging'
 end
 
 wait_for "staging to finish building"
@@ -66,7 +66,7 @@ should_i "DTT" do
   puts <<EOS
 Update Developer room status with "DTT: NO (@yourname DTP candidate)"
 EOS
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/test...staging'
+  open_url 'https://github.com/code-dot-org/code-dot-org/compare/test...staging?expand=1&title=DTT%20%28Staging%20>%20Test%29'
 end
 
 wait_for "a green test run"
@@ -78,14 +78,14 @@ EOS
 wait_for "between 1:30PM and 3:30PM (Pacific) to DTP"
 
 should_i "DTP" do
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/production...test'
+  open_url 'https://github.com/code-dot-org/code-dot-org/compare/production...test?expand=1&title=DTP%20%Test%20>%20Production%29'
 end
 
 should_i "deploy Levelbuilder while the deploy to production is happening" do
   puts <<EOS
 Go to the Levelbuilder room on Slack and ask everyone @here if they are ready for a deploy (They need to save their changes, otherwise they may lose some work when you complete the next step).
 EOS
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/levelbuilder...test'
+  open_url 'https://github.com/code-dot-org/code-dot-org/compare/levelbuilder...test?expand=1&title=Test%20>%20Levelbuilder'
 end
 
 wait_for "DTP to finish"
