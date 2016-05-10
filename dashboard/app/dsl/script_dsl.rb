@@ -15,7 +15,10 @@ class ScriptDSL < BaseDSL
     @stages = []
     @i18n_strings = Hash.new({})
     @video_key_for_next_level = nil
+    @prompt = nil
     @active = true
+    @button = nil
+    @image = nil
     @hidden = true
     @login_required = false
     @admin_required = false
@@ -78,7 +81,10 @@ class ScriptDSL < BaseDSL
 
   string :video_key_for_next_level
 
+  string :prompt
   boolean :active
+  string :button
+  string :image
 
   def assessment(name)
     level(name, {assessment: true})
@@ -96,10 +102,17 @@ class ScriptDSL < BaseDSL
     @video_key_for_next_level = nil
     if @current_scriptlevel
       @current_scriptlevel[:levels] << level
-      if !@active
-        @current_scriptlevel[:properties][name] = { :active => @active }
-        @active = true
+      levelprops = {}
+      levelprops[:active] = @active if !@active
+      levelprops[:button] = @button if @button
+      levelprops[:image] = @image if @image
+      if !@active || @button || @image
+        @current_scriptlevel[:properties][name] = levelprops
       end
+
+      @active = true
+      @button = nil
+      @image = nil
     else
       @scriptlevels << {
         :stage => @stage,
@@ -113,8 +126,11 @@ class ScriptDSL < BaseDSL
   end
 
   def endvariants
+    @current_scriptlevel[:properties][:prompt] = @prompt if @prompt
     @scriptlevels << @current_scriptlevel
+
     @current_scriptlevel = nil
+    @promt = nil
   end
 
   def i18n_strings
