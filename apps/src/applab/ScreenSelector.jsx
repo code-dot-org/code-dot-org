@@ -5,6 +5,7 @@ var color = require('../color');
 var constants = require('./constants');
 var connect = require('react-redux').connect;
 var elementUtils = require('./designElements/elementUtils');
+var screens = require('./redux/screens');
 
 /**
  * The dropdown that appears above the visualization in design mode, used
@@ -13,9 +14,21 @@ var elementUtils = require('./designElements/elementUtils');
  */
 var ScreenSelector = React.createClass({
   propTypes: {
-    screenIds: React.PropTypes.array.isRequired,
+    // from connect
     currentScreenId: React.PropTypes.string,
-    onChange: React.PropTypes.func.isRequired
+    onScreenChange: React.PropTypes.func.isRequired,
+
+    // passed explicitly
+    screenIds: React.PropTypes.array.isRequired,
+    onCreate: React.PropTypes.func.isRequired
+  },
+
+  handleChange: function (evt) {
+    var screenId = evt.target.value;
+    if (screenId === constants.NEW_SCREEN) {
+      screenId = this.props.onCreate();
+    }
+    this.props.onScreenChange(screenId);
   },
 
   render: function () {
@@ -49,7 +62,7 @@ var ScreenSelector = React.createClass({
           id="screenSelector"
           style={dropdownStyle}
           value={this.props.currentScreenId}
-          onChange={this.props.onChange}
+          onChange={this.handleChange}
           disabled={Applab.isRunning()}>
         {options}
         <option>{constants.NEW_SCREEN}</option>
@@ -61,5 +74,11 @@ module.exports = ScreenSelector;
 module.exports = connect(function propsFromStore(state) {
   return {
     currentScreenId: state.screens.currentScreenId
+  };
+}, function propsFromDispatch(dispatch) {
+  return {
+    onScreenChange: function (screenId) {
+      dispatch(screens.changeScreen(screenId));
+    }
   };
 })(ScreenSelector);
