@@ -20,16 +20,16 @@
             %li= msg
 
     .field
-      %p
-        = f.radio_button :status, PeerReview::ACCEPTED
-        <strong>Yes</strong>, this submission <strong>meets</strong> the requirements
-      %p
-        = f.radio_button :status, PeerReview::REJECTED
-        <strong>No</strong>, this submission <strong>does not meet</strong> the requirements
-      %p
-        = f.radio_button :status, PeerReview::ESCALATED
+      %label
+        = f.radio_button :status, :accepted
+        != t('peer_review.accepted.description')
+      %label
+        = f.radio_button :status, :rejected
+        != t('peer_review.rejected.description')
+      %label
+        = f.radio_button :status, :escalated
         %span{style: 'font-size: 0.8em;'}
-          I would like an instructor to review this submission
+          != t('peer_review.escalated.description')
     .field
       %p Review notes:
       = f.text_area :data, rows: 7, placeholder: 'Type your peer review here', style: 'width: 100%; box-sizing: border-box;'

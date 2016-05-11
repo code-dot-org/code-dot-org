@@ -1663,7 +1663,7 @@ a.download-video {
 }
 
 .text-match, .free-response, .peer-review {
-  p {
+  p, label {
     font-size: 16px;
     line-height: 24px;
   }
@@ -1694,6 +1694,9 @@ a.download-video {
   }
   .peer-review-status {
     font-size: 1em;
+    & > strong {
+      font-family: inherit;
+    }
   }
 }
 

@@ -32,32 +32,18 @@ class PeerReview < ActiveRecord::Base
 
   REVIEWS_PER_SUBMISSION = 2
 
-  VALID_STATUSES = [
-    ACCEPTED = 0,
-    REJECTED = 1,
-    ESCALATED = 2
-  ]
+  enum status: {
+    accepted: 0,
+    rejected: 1,
+    escalated: 2
+  }
 
   def named_status
-    case status
-    when 0
-      'Accepted'
-    when 1
-      'Rejected'
-    when 2
-      'Escalated'
-    end
+    I18n.t("peer_review.#{status}.name") if status
   end
 
   def named_status_long
-    case status
-    when 0
-      'Yes, this submission meets the requirements'
-    when 1
-      'No, this submission does not meet the requirements'
-    when 2
-      'I would like an instructor to review this submission'
-    end
+    I18n.t("peer_review.#{status}.description").html_safe if status
   end
 
   def self.create_for_submission(user_level, level_source_id, from_instructor = false)
