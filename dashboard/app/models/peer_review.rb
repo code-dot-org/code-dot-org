@@ -38,11 +38,11 @@ class PeerReview < ActiveRecord::Base
     escalated: 2
   }
 
-  def named_status
+  def localized_status
     I18n.t("peer_review.#{status}.name") if status
   end
 
-  def named_status_long
+  def localized_status_description
     I18n.t("peer_review.#{status}.description").html_safe if status
   end
 
