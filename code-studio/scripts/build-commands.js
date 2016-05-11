@@ -3,7 +3,7 @@
 'use strict';
 
 var _ = require('lodash');
-var browserify = require('browserify');
+var browserifyInc = require('browserify-incremental');
 var chalk = require('chalk');
 var child_process = require('child_process');
 var envify = require('envify');
@@ -77,12 +77,15 @@ exports.bundle = function (config) {
   };
 
   // Create browserify instance
-  var bundler = browserify({
+  var bundler = browserifyInc({
     // Enables source map
     debug: true,
 
     // Allow requiring jsx without specifying extension
     extensions: ['.jsx'],
+
+    // Required for browserify-incremental
+    cacheFile: shouldWatch ? undefined : outPath(srcPath + commonFile).replace(/\.js?$/i, '.cache.json'),
 
     // Required for watchify
     cache: {},

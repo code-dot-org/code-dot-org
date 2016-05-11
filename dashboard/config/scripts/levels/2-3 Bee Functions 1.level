@@ -43,7 +43,7 @@
   }
 }]]></config>
   <blocks>
-    <start_blocks>
+    <initialization_blocks>
       <xml>
         <block type="procedures_defnoreturn" deletable="false" editable="false" uservisible="false">
           <mutation/>
@@ -57,6 +57,11 @@
           </statement>
         </block>
       </xml>
+    </initialization_blocks>
+    <start_blocks>
+      <xml>
+
+</xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>

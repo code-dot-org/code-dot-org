@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160505010203) do
+ActiveRecord::Schema.define(version: 20160510000000) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -339,6 +339,9 @@ ActiveRecord::Schema.define(version: 20160505010203) do
     t.string   "email",          limit: 255, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "district_name",  limit: 255
+    t.string   "school",         limit: 255
+    t.string   "code",           limit: 255
   end
 
   add_index "pd_enrollments", ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
@@ -805,7 +808,6 @@ ActiveRecord::Schema.define(version: 20160505010203) do
     t.string   "name",                       limit: 255
     t.string   "locale",                     limit: 10,    default: "en-US", null: false
     t.date     "birthday"
-    t.string   "parent_email",               limit: 255
     t.string   "user_type",                  limit: 16
     t.string   "school",                     limit: 255
     t.string   "full_address",               limit: 1024

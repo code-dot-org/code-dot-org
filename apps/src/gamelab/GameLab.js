@@ -28,12 +28,10 @@ var experiments = require('../experiments');
 
 var actions = require('./actions');
 var setPageConstants = require('../redux/pageConstants').setPageConstants;
-var createStore = require('../redux').createStore;
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
-var CrosshairOverlay = require('../templates/CrosshairOverlay');
-var VisualizationOverlay = require('../templates/VisualizationOverlay');
+import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -174,6 +172,7 @@ GameLab.prototype.init = function (config) {
   var breakpointsEnabled = !config.level.debuggerDisabled;
 
   var onMount = function () {
+    this.setupReduxSubscribers(this.studioApp_.reduxStore);
     config.loadAudio = this.loadAudio_.bind(this);
     config.afterInject = this.afterInject_.bind(this, config);
     config.afterEditorReady = this.afterEditorReady_.bind(this, breakpointsEnabled);
@@ -183,8 +182,6 @@ GameLab.prototype.init = function (config) {
     config.unusedConfig = this.gameLabP5.p5specialFunctions;
 
     this.studioApp_.init(config);
-
-    window.addEventListener('resize', this.renderVisualizationOverlay.bind(this));
 
     var finishButton = document.getElementById('finishButton');
     if (finishButton) {
@@ -196,6 +193,8 @@ GameLab.prototype.init = function (config) {
         defaultStepSpeed: 1
       });
     }
+
+    this.setCrosshairCursorForPlaySpace();
   }.bind(this);
 
   var showFinishButton = !this.level.isProjectLevel;
@@ -236,6 +235,37 @@ GameLab.prototype.init = function (config) {
       hideSource={!!config.hideSource}
       onMount={onMount} />
   </Provider>, document.getElementById(config.containerId));
+};
+
+/**
+ * Subscribe to state changes on the store.
+ * @param {!Store} store
+ */
+GameLab.prototype.setupReduxSubscribers = function (store) {
+  var state = {};
+  var boundOnIsRunningChange = this.onIsRunningChange.bind(this);
+  store.subscribe(function () {
+    var lastState = state;
+    state = store.getState();
+
+    if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
+      boundOnIsRunningChange(state.runState.isRunning);
+    }
+  });
+};
+
+GameLab.prototype.onIsRunningChange = function () {
+  this.setCrosshairCursorForPlaySpace();
+};
+
+/**
+ * Hopefully a temporary measure - we do this ourselves for now because this is
+ * a 'protected' div that React doesn't update, but eventually would rather do
+ * this with React.
+ */
+GameLab.prototype.setCrosshairCursorForPlaySpace = function () {
+  var showOverlays = shouldOverlaysBeVisible(this.studioApp_.reduxStore.getState());
+  $('#divGameLab').toggleClass('withCrosshair', showOverlays);
 };
 
 GameLab.prototype.loadAudio_ = function () {
@@ -340,8 +370,6 @@ GameLab.prototype.reset = function (ignore) {
   this.preloadInProgress = false;
   this.globalCodeRunsDuringPreload = false;
 
-  this.renderVisualizationOverlay();
-
   if (this.debugger_) {
     this.debugger_.detach();
   }
@@ -369,34 +397,6 @@ GameLab.prototype.reset = function (ignore) {
     $('#studio-dpad').removeClass('studio-dpad-none');
     this.resetDPad();
   }
-};
-
-GameLab.prototype.renderVisualizationOverlay = function () {
-  var divGameLab = document.getElementById('divGameLab');
-  var visualizationOverlay = document.getElementById('visualizationOverlay');
-  if (!divGameLab || !visualizationOverlay) {
-    return;
-  }
-
-  // Enable crosshair cursor for divGameLab
-  $(divGameLab).toggleClass('withCrosshair', this.isCrosshairAllowed());
-
-  if (!this.visualizationOverlay_) {
-    this.visualizationOverlay_ = new VisualizationOverlay(new CrosshairOverlay());
-  }
-
-  // Calculate current visualization scale to pass to the overlay component.
-  var unscaledWidth = parseInt(visualizationOverlay.getAttribute('width'));
-  var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
-
-  this.visualizationOverlay_.render(visualizationOverlay, {
-    isCrosshairAllowed: this.isCrosshairAllowed(),
-    scale: scaledWidth / unscaledWidth
-  });
-};
-
-GameLab.prototype.isCrosshairAllowed = function () {
-  return !this.studioApp_.isRunning();
 };
 
 GameLab.prototype.onPuzzleComplete = function (submit) {
@@ -503,8 +503,6 @@ GameLab.prototype.runButtonClick = function () {
   }
   this.studioApp_.attempts++;
   this.execute();
-
-  this.renderVisualizationOverlay();
 
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');
