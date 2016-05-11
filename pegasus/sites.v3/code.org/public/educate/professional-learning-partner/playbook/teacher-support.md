@@ -72,7 +72,12 @@ ________________
 
 ### **Classroom Materials**
 
-Click on the links below to see a list of classroom supplies your teacher will need to 
+Click on the links below to see a list of classroom supplies your teacher will need to teach the course.
+
+- [CS Principles]()
+- [Exploring Computer Science]()
+- [CS in Science]()
+- [CS in Algebra]()
 
 [**Back to the top**](#top)
 <br/>
