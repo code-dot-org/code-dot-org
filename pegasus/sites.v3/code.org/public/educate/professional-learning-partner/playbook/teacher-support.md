@@ -10,26 +10,12 @@ nav: plp_playbook_nav
 
 ## Quick Links
 
-- [Examples for Online Support](#examples)<br/>
 - [Professional learning program support](#support)<br/>
+- [Examples for Online Support](#examples)<br/>
+- [Classroom Materials](#supplies)<br/>
 - [Technology in the classroom](#technology)<br/>
 - [Privacy policy](#privacy)
 
-________________
-<a id="online"></a>
-<br/>
-
-
-### **Examples for Online Support**
-
-[Code.org Forums](http://forum.code.org/)<br/>
-These forums are program specific and are a great way for teachers to help each other with questions about their online coursework and workshops. We recommend giving your teachers a space to help each other answer questions, and collaborate.<br/>
-
-[Code.org FAQ](/educate/pd/15-16/faq)<br/>
-This FAQ from previous workshops should NOT be used to answer your teacher's questions, but can provide you with a great example of how to set up your own FAQ for your teachers' specific needs. 
-
-[**Back to the top**](#top)
-<br/>
 
 ________________
 <a id="support"></a>
@@ -59,6 +45,39 @@ Online course modules will be assigned to you through [Code Studio](https://stud
 Logging Into Code Studio - Video Coming Soon!
 
 Checking your progress in Code Stuido - Video Coming Soon!
+
+[**Back to the top**](#top)
+<br/>
+
+________________
+<a id="online"></a>
+<br/>
+
+
+### **Examples for Online Support**
+
+[Code.org Forums](http://forum.code.org/)<br/>
+These forums are program specific and are a great way for teachers to help each other with questions about their online coursework and workshops. We recommend giving your teachers a space to help each other answer questions, and collaborate.<br/>
+
+[Code.org FAQ](/educate/pd/15-16/faq)<br/>
+This FAQ from previous workshops should NOT be used to answer your teacher's questions, but can provide you with a great example of how to set up your own FAQ for your teachers' specific needs. 
+
+[**Back to the top**](#top)
+<br/>
+
+________________
+<a id="supplies"></a>
+<br/>
+
+
+### **Classroom Materials**
+
+Click on the links below to see a list of classroom supplies your teacher will need to teach the course.
+
+- [CS Principles]()
+- [Exploring Computer Science]()
+- [CS in Science]()
+- [CS in Algebra]()
 
 [**Back to the top**](#top)
 <br/>
