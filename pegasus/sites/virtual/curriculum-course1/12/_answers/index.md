@@ -14,7 +14,7 @@ theme: none
 
 
 ### [Getting Loopy Assessment](Key-Assessment12-GettingLoopy.pdf)
-- Hand out the worksheet titled "Getting Loopy" and allow students to complete the activity independently after the instructions have been well explained. 
+- Hand out the worksheet titled "Getting Loopy" and allow students to complete the activity independently after the instructions have been well explained.
 
 [/together]
 
@@ -24,7 +24,6 @@ theme: none
 
 <br/><br/><br/>
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
 
 
