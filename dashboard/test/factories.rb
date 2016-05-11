@@ -327,7 +327,7 @@ FactoryGirl.define do
   factory :plc_enrollment_unit_assignment, :class => 'Plc::EnrollmentUnitAssignment' do
     plc_user_course_enrollment nil
     plc_course_unit nil
-    status Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
+    status Plc::EnrollmentUnitAssignment::START_BLOCKED
   end
 
   factory :plc_course_unit, :class => 'Plc::CourseUnit' do
