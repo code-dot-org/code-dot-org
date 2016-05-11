@@ -4,6 +4,7 @@
 var AnimationPreview = require('./AnimationPreview');
 var color = require('../../color');
 var Radium = require('radium');
+import { METADATA_SHAPE } from '../animationMetadata';
 
 var THUMBNAIL_SIZE = 105;
 var THUMBNAIL_BORDER_WIDTH = 1;
@@ -63,17 +64,11 @@ var AnimationPickerListItem = function (props) {
   return (
     <div style={styles.root} onClick={props.onClick}>
       <div style={thumbnailStyle}>
-        {props.sourceUrl &&
+        {props.animation &&
             <AnimationPreview
+                animation={props.animation}
                 width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
                 height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-                sourceUrl={props.sourceUrl}
-                sourceWidth={props.sourceWidth}
-                sourceHeight={props.sourceHeight}
-                frameWidth={props.frameWidth}
-                frameHeight={props.frameHeight}
-                frameCount={props.frameCount}
-                frameRate={props.frameRate}
             />}
         {props.icon && <i className={"fa fa-" + props.icon} />}
       </div>
@@ -84,15 +79,9 @@ var AnimationPickerListItem = function (props) {
   );
 };
 AnimationPickerListItem.propTypes = {
-  label: React.PropTypes.string.isRequired,
+  animation: React.PropTypes.shape(METADATA_SHAPE),
   icon: React.PropTypes.string,
-  sourceUrl: React.PropTypes.string,
-  sourceWidth: React.PropTypes.number,
-  sourceHeight: React.PropTypes.number,
-  frameWidth: React.PropTypes.number,
-  frameHeight: React.PropTypes.number,
-  frameCount: React.PropTypes.number,
-  frameRate: React.PropTypes.number,
+  label: React.PropTypes.string.isRequired,
   onClick: React.PropTypes.func
 };
 module.exports = Radium(AnimationPickerListItem);

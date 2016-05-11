@@ -31,8 +31,12 @@ var AnimationPickerBody = React.createClass({
               icon="upload"
               onClick={this.props.onUploadClick}
           />
-          {animationLibrary.map(metadata =>
-            <AnimationPickerListItem key={metadata.sourceUrl} {...metadata} />
+          {animationLibrary.map(animation =>
+            <AnimationPickerListItem
+                key={animation.sourceUrl}
+                label={animation.label}
+                animation={animation}
+            />
           )}
         </ScrollableList>
       </div>
