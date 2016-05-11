@@ -49,14 +49,14 @@ end
   <td style="background-color: #00ADBC; color: #FFFFFF; font-size: 20px; font-weight: bold;">Looking for lessons that don't require computers?</td>
 </tr>
 <tr>
-  <td> 
-  
+  <td>
+
   If this is your first time programming, you may want to go through one of the following online courses before teaching this material:
 <li> <a href="https://www.codecademy.com/learn/javascript" target="_blank">Codecademy</a>
 <li> <a href="https://www.khanacademy.org/computing/computer-programming/programming" target="_blank">Khan Academy</a>
 <li> <a href="https://codehs.com/library/course/1/module/1" target="_blank">CodeHS</a>
 
-  
+
   </td>
 </tr>
 </table> -->
@@ -81,13 +81,13 @@ Each of these activities can either be used alone or with other computer science
       <th style="text-align: center;">Additional Resources</th>
     </tr>
   </thead>
-  
-  <% lessons.each_with_index do |lesson, index| 
-  
+
+  <% lessons.each_with_index do |lesson, index|
+
   	# Get the course number formatted well
-     
+
      theCourse = lesson[:courseNum_s]
- 
+
 	case theCourse
 	when course1
 	    theCourse = "Course 1, Lesson "
@@ -103,24 +103,24 @@ Each of these activities can either be used alone or with other computer science
 	    theCourse = ""
 	end
   %>
-  
-  
+
+
   <tbody>
     <tr>
       <td rowspan="2" style="color: white; border:1px solid white; text-align: center;"><%= lesson[:mainConcept_s] %></td>
       <td style="border:1px solid #999999;"> <h3><a href="<%= lesson[:lessonURL_t] %>"><%= lesson[:name_t] %></a><br/></h3>
       	<div style="font-size: 10px; line-height: 110%;"><%= theCourse lesson[:lessonNum_s] %><br/><br/></div>
      	<div style="font-size: 12px; line-height: 110%;"><%= lesson[:overview_t] %><br/><br/></div>
-        <a href="<%= lesson[:lessonPlan_t] %>">Lesson Plan</a> 
+        <a href="<%= lesson[:lessonPlan_t] %>">Lesson Plan</a>
         <%	if lesson[:teacherVid_t].present? %>
 		  | <a href="<%= lesson[:teacherVid_t] %>">Teacher Video</a><br/>
 		<% end %>
-        
+
       </td>
       <td style="border:1px solid #999999;">
       <%= youtube_embed(lesson[:lessonVid_t])%>
    		<a href="<%= lesson[:lessonVid_t] %>"><%= lesson[:lessonVid_t] %></a>
-      
+
       </td>
       <td style="border:1px solid #999999;">
           <%	if lesson[:sampleTeachingVid_t].present? %>
@@ -130,7 +130,7 @@ Each of these activities can either be used alone or with other computer science
       <%= lesson[:additional_t] %></td>
     </tr>
     <% end %>
-</table> 
+</table>
 
 
 
@@ -138,7 +138,6 @@ Each of these activities can either be used alone or with other computer science
 
 
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
 [/content]
 
