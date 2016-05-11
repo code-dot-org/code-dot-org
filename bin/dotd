@@ -93,7 +93,7 @@ EOS
 wait_for "between 1:30PM and 3:30PM (Pacific) to DTP"
 
 should_i "DTP" do
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/production...test?expand=1&title=DTP%20%Test%20%3E%20Production%29'
+  open_url 'https://github.com/code-dot-org/code-dot-org/compare/production...test?expand=1&title=DTP%20%28Test%20%3E%20Production%29'
 end
 
 should_i "deploy Levelbuilder while the deploy to production is happening" do
