@@ -10,7 +10,7 @@ var JigsawVisualizationColumn = function () {
     <span>
       <div id="visualization">
       </div>
-      <GameButtons hideRunButton={false}/>
+      <GameButtons/>
       <BelowVisualization/>
     </span>
   );

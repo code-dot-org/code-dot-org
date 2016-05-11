@@ -12,7 +12,7 @@ var BounceVisualizationColumn = function () {
       <ProtectedStatefulDiv id="visualization">
         <svg version="1.1" id="svgBounce"/>
       </ProtectedStatefulDiv>
-      <GameButtons hideRunButton={false}>
+      <GameButtons>
         <ArrowButtons/>
 
         {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}

@@ -73,7 +73,7 @@ var ApplabVisualizationColumn = React.createClass({
         >
           <Visualization/>
         </PhoneFrame>
-        <GameButtons instructionsInTopPane={this.props.instructionsInTopPane}>
+        <GameButtons>
           <div style={[
               styles.completion,
               experiments.isEnabled('phoneFrame') && styles.phoneFrameCompletion

@@ -10,7 +10,7 @@ var FlappyVisualizationColumn = function () {
       <ProtectedStatefulDiv id="visualization">
         <svg version="1.1" id="svgFlappy"/>
       </ProtectedStatefulDiv>
-      <GameButtons hideRunButton={false}>
+      <GameButtons>
         <div id="right-button-cell">
           <button id="rightButton" className="share">
             <img src="/blockly/media/1x1.gif"/>

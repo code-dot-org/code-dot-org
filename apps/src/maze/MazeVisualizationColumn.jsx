@@ -8,7 +8,7 @@ var MazeVisualizationColumn = function (props) {
   return (
     <span>
       <Visualization/>
-      <GameButtons hideRunButton={props.hideRunButton}>
+      <GameButtons>
         <StepButton showStepButton={props.showStepButton}/>
       </GameButtons>
       {props.searchWord && <SpellingControls searchWord={props.searchWord}/>}
@@ -18,7 +18,6 @@ var MazeVisualizationColumn = function (props) {
 };
 
 MazeVisualizationColumn.propTypes = {
-  hideRunButton: React.PropTypes.bool.isRequired,
   showStepButton: React.PropTypes.bool.isRequired,
   searchWord: React.PropTypes.string
 };

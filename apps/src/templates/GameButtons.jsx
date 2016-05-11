@@ -5,6 +5,7 @@ import commonStyles from '../commonStyles';
 import experiments from '../experiments';
 import classNames from 'classnames';
 import Radium from 'radium';
+import { connect } from 'react-redux';
 
 const styles = {
   instructionsInTopPane: {
@@ -74,6 +75,7 @@ ResetButton.propTypes = {
  * A set of game buttons that consist of a run/reset button, and potentially a
  * set of children that we expect to be additional buttons.
  */
+// TODO - buttons need to show up while experiment is enabled if this isnt applab
 const GameButtons = props => (
   <ProtectedStatefulDiv
       id="gameButtons"
@@ -96,4 +98,9 @@ GameButtons.propTypes = {
   instructionsInTopPane: React.PropTypes.bool,
   isMinecraft: React.PropTypes.bool
 };
-export default GameButtons;
+
+export default connect(state => ({
+  hideRunButton: state.pageConstants.hideRunButton,
+  instructionsInTopPane: state.pageConstants.instructionsInTopPane,
+  isMinecraft: state.pageConstants.isMinecraft
+}))(GameButtons);

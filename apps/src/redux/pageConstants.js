@@ -25,7 +25,8 @@ var ALLOWED_KEYS = utils.makeEnum(
   'isDroplet',
   'isMinecraft',
   'visualizationHasPadding',
-  'hideSource'
+  'hideSource',
+  'hideRunButton'
 );
 
 var levelInitialState = {
