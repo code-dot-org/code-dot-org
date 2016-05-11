@@ -69,8 +69,7 @@ module SerializedProperties
       end
 
       define_method("#{cleartext_property_name}?") do
-        # same as the getter without ?
-        self.send(cleartext_property_name)
+        !!JSONValue.value(self.send(cleartext_property_name))
       end
     end
 

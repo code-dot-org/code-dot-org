@@ -5,5 +5,5 @@
       %p.peer-review-title
         %strong= peer_review.from_instructor ? 'Instructor Feedback' : 'Peer Feedback'
         = "\u2022 added #{time_ago_in_words(peer_review.updated_at)} ago"
-      %p.peer-review-status= peer_review.named_status_long
+      %p.peer-review-status= peer_review.localized_status_description
       %p= peer_review.data
