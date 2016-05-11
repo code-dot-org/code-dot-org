@@ -139,7 +139,7 @@ class ScriptDSL < BaseDSL
     end
 
     @current_scriptlevel = nil
-    @promt = nil
+    @prompt = nil
   end
 
   def i18n_strings
