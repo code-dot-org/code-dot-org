@@ -41,6 +41,7 @@ var ApplabVisualizationColumn = React.createClass({
     isEmbedView: React.PropTypes.bool.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes.string.isRequired,
+    playspacePhoneFrame: React.PropTypes.bool,
 
     // non redux backed
     isEditingProject: React.PropTypes.bool.isRequired,
@@ -49,8 +50,6 @@ var ApplabVisualizationColumn = React.createClass({
   },
 
   render: function () {
-    var showFrame = !this.props.isShareView;
-
     return (
       <div
           id="visualizationColumn"
@@ -65,7 +64,7 @@ var ApplabVisualizationColumn = React.createClass({
             onScreenCreate={this.props.onScreenCreate} />
         }
         <PhoneFrame
-            showFrame={showFrame}
+            showFrame={this.props.playspacePhoneFrame && !this.props.isShareView}
             isDark={this.props.isRunning}
             showSelector={this.props.interfaceMode === applabConstants.ApplabInterfaceMode.DESIGN}
             screenIds={this.props.screenIds}
@@ -76,7 +75,7 @@ var ApplabVisualizationColumn = React.createClass({
         <GameButtons>
           <div style={[
               styles.completion,
-              experiments.isEnabled('phoneFrame') && styles.phoneFrameCompletion
+              this.props.playspacePhoneFrame && styles.phoneFrameCompletion
             ]}
           >
             <CompletionButton/>
@@ -96,6 +95,7 @@ module.exports = connect(function propsFromStore(state) {
     isShareView: state.pageConstants.isShareView,
     isEmbedView: state.pageConstants.isEmbedView,
     isRunning: state.runState.isRunning,
-    interfaceMode: state.interfaceMode
+    interfaceMode: state.interfaceMode,
+    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
   };
 })(Radium(ApplabVisualizationColumn));

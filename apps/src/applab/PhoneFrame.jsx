@@ -68,10 +68,6 @@ const PhoneFrame = React.createClass({
 
   render: function () {
     const { showFrame, isDark, showSelector } = this.props;
-    var experimentEnabled = experiments.isEnabled('phoneFrame');
-
-    let hideFrame = !showFrame || !experimentEnabled;
-
     return (
       <span>
         <div
@@ -79,11 +75,11 @@ const PhoneFrame = React.createClass({
               styles.phoneFrame,
               styles.phoneFrameTop,
               isDark && styles.phoneFrameDark,
-              hideFrame && commonStyles.hidden
+              !showFrame && commonStyles.hidden
             ]}
         >
           <div style={styles.screenSelector}>
-            {showSelector && experimentEnabled &&
+            {showSelector &&
             <ScreenSelector
                 screenIds={this.props.screenIds}
                 onCreate={this.props.onScreenCreate}
@@ -97,10 +93,10 @@ const PhoneFrame = React.createClass({
               styles.phoneFrame,
               styles.phoneFrameBottom,
               isDark && styles.phoneFrameDark,
-              hideFrame && commonStyles.hidden
+              !showFrame && commonStyles.hidden
             ]}
         >
-          {experimentEnabled &&
+          {showFrame &&
             <div style={styles.buttonContainer}>
               <RunButton hidden={false} style={styles.buttonMinWidth}/>
               <ResetButton style={styles.buttonMinWidth}/>

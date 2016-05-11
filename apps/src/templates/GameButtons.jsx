@@ -75,18 +75,17 @@ ResetButton.propTypes = {
  * A set of game buttons that consist of a run/reset button, and potentially a
  * set of children that we expect to be additional buttons.
  */
-// TODO - buttons need to show up while experiment is enabled if this isnt applab
 const GameButtons = props => (
   <ProtectedStatefulDiv
       id="gameButtons"
       style={props.instructionsInTopPane ? styles.instructionsInTopPane : undefined}>
-    {!experiments.isEnabled('phoneFrame') &&
+    {!props.playspacePhoneFrame &&
     <RunButton
         hidden={props.hideRunButton}
         isMinecraft={props.isMinecraft}
     />
     }
-    {!experiments.isEnabled('phoneFrame') &&
+    {!props.playspacePhoneFrame &&
     <ResetButton isMinecraft={props.isMinecraft}/>
     }
     {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}
@@ -96,11 +95,13 @@ const GameButtons = props => (
 GameButtons.propTypes = {
   hideRunButton: React.PropTypes.bool,
   instructionsInTopPane: React.PropTypes.bool,
-  isMinecraft: React.PropTypes.bool
+  isMinecraft: React.PropTypes.bool,
+  playspacePhoneFrame: React.PropTypes.bool
 };
 
 export default connect(state => ({
   hideRunButton: state.pageConstants.hideRunButton,
   instructionsInTopPane: state.pageConstants.instructionsInTopPane,
-  isMinecraft: state.pageConstants.isMinecraft
+  isMinecraft: state.pageConstants.isMinecraft,
+  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
 }))(GameButtons);
