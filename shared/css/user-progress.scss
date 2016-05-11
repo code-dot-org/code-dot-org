@@ -214,7 +214,7 @@ a.level_link.submitted:hover
     & > div {
       padding: 5px 10px;
       margin: 3px 0;
-      border: 1px solid $light_gray;
+      border: 1px solid $lightest_gray;
       border-radius: 2px;
     }
     .game-group {
@@ -222,6 +222,9 @@ a.level_link.submitted:hover
     }
     .stage {
       width: 167px;
+    }
+    .level_link {
+      margin: 2px;
     }
   }
 }
