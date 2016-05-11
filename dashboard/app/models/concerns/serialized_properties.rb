@@ -48,7 +48,7 @@ module SerializedProperties
     def define_methods_for_property(property_name)
       define_method(property_name) { read_attribute('properties')[property_name] }
       define_method("#{property_name}=") { |value| read_attribute('properties')[property_name] = value }
-      define_method("#{property_name}?") { read_attribute('properties')[property_name] }
+      define_method("#{property_name}?") { !!JSONValue.value(read_attribute('properties')[property_name]) }
     end
 
     ENCRYPTED_PROPERTY_REGEX = /^encrypted_/
