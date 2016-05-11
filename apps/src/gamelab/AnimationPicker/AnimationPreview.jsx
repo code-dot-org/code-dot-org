@@ -1,5 +1,5 @@
 /** @file Render a gallery image/spritesheet as an animated preview */
-
+import { METADATA_SHAPE } from '../animationMetadata';
 var MARGIN_PX = 2;
 
 /**
@@ -8,15 +8,9 @@ var MARGIN_PX = 2;
  */
 var AnimationPreview = React.createClass({
   propTypes: {
+    animation: React.PropTypes.shape(METADATA_SHAPE).isRequired,
     width: React.PropTypes.number.isRequired,
-    height: React.PropTypes.number.isRequired,
-    sourceUrl: React.PropTypes.string.isRequired,
-    sourceWidth: React.PropTypes.number.isRequired,
-    sourceHeight: React.PropTypes.number.isRequired,
-    frameWidth: React.PropTypes.number.isRequired,
-    frameHeight: React.PropTypes.number.isRequired,
-    frameCount: React.PropTypes.number.isRequired,
-    frameRate: React.PropTypes.number.isRequired
+    height: React.PropTypes.number.isRequired
   },
 
   getInitialState: function () {
@@ -54,9 +48,9 @@ var AnimationPreview = React.createClass({
   },
 
   advanceFrame: function () {
-    this.setState({ currentFrame: (this.state.currentFrame + 1) % this.props.frameCount });
+    this.setState({ currentFrame: (this.state.currentFrame + 1) % this.props.animation.frameCount });
     clearTimeout(this.timeout_);
-    this.timeout_ = setTimeout(this.advanceFrame, 1000 / this.props.frameRate);
+    this.timeout_ = setTimeout(this.advanceFrame, 1000 / this.props.animation.frameRate);
   },
 
   stopAndResetAnimation: function () {
@@ -68,20 +62,20 @@ var AnimationPreview = React.createClass({
   },
 
   precalculateRenderProps: function (nextProps) {
-    var framesPerRow = Math.floor(nextProps.sourceWidth / nextProps.frameWidth);
+    var framesPerRow = Math.floor(nextProps.animation.sourceWidth / nextProps.animation.frameWidth);
     var innerWidth = nextProps.width - 2 * MARGIN_PX;
     var innerHeight = nextProps.height - 2 * MARGIN_PX;
-    var xScale = innerWidth / nextProps.frameWidth;
-    var yScale = innerHeight / nextProps.frameHeight;
+    var xScale = innerWidth / nextProps.animation.frameWidth;
+    var yScale = innerHeight / nextProps.animation.frameHeight;
     var scale = Math.min(1, Math.min(xScale, yScale));
-    var scaledFrameHeight = nextProps.frameHeight * scale;
+    var scaledFrameHeight = nextProps.animation.frameHeight * scale;
     this.setState({
       framesPerRow: framesPerRow,
-      scaledSourceWidth: nextProps.sourceWidth * scale,
-      scaledFrameWidth: nextProps.frameWidth * scale,
+      scaledSourceWidth: nextProps.animation.sourceWidth * scale,
+      scaledFrameWidth: nextProps.animation.frameWidth * scale,
       scaledFrameHeight: scaledFrameHeight,
       extraTopMargin: Math.ceil((innerHeight - scaledFrameHeight) / 2),
-      wrappedSourceUrl: "url('" + nextProps.sourceUrl + "')"
+      wrappedSourceUrl: "url('" + nextProps.animation.sourceUrl + "')"
     });
   },
 
