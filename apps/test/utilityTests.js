@@ -769,3 +769,12 @@ describe('utils.makeEnum', function () {
     }
   });
 });
+
+describe("ellipsify", function () {
+  const ellipsify = utils.ellipsify;
+  it("ellipsifies id strings that exceed max length", function () {
+    assert.equal("abcdefghi", ellipsify("abcdefghi", 12));
+    assert.equal("abcdefghijkl", ellipsify("abcdefghijkl", 12));
+    assert.equal("abcdefghi...", ellipsify("abcdefghijklm", 12));
+  });
+});
