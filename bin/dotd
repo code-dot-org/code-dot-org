@@ -35,7 +35,6 @@ end
 
 def open_in_default_browser(url)
   # Based on http://stackoverflow.com/a/14053693/5000129
-  puts "host_os: #{RbConfig::CONFIG['host_os']}"
   if RbConfig::CONFIG['host_os'] =~ /linux|bsd/
     system "sensible-browser \"#{url}\""
   else
