@@ -1,6 +1,14 @@
 /** @file Helper methods for working with animation metadata */
 
 /**
+ * React validation shape for an {x,y} pair.
+ */
+const VECTOR2_SHAPE = {
+  x: React.PropTypes.number.isRequired,
+  y: React.PropTypes.number.isRequired
+};
+
+/**
  * React validation shape for animation metadata, appropriate to pass to
  * React.PropTypes.shape.
  *
@@ -11,10 +19,8 @@
  */
 export const METADATA_SHAPE = {
   sourceUrl: React.PropTypes.string.isRequired,
-  sourceWidth: React.PropTypes.number.isRequired,
-  sourceHeight: React.PropTypes.number.isRequired,
-  frameWidth: React.PropTypes.number.isRequired,
-  frameHeight: React.PropTypes.number.isRequired,
+  sourceSize: React.PropTypes.shape(VECTOR2_SHAPE).isRequired,
+  frameSize: React.PropTypes.shape(VECTOR2_SHAPE).isRequired,
   frameCount: React.PropTypes.number.isRequired,
   frameRate: React.PropTypes.number.isRequired
 };
