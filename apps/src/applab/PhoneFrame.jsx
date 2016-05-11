@@ -4,7 +4,7 @@ import color from '../color';
 import applabConstants from './constants';
 import experiments from '../experiments';
 import ScreenSelector from './ScreenSelector';
-import GameButtons from '../templates/GameButtons';
+import GameButtons, { RunButton, ResetButton } from '../templates/GameButtons';
 import CompletionButton from './CompletionButton';
 
 const RADIUS = 30;
@@ -99,8 +99,8 @@ const PhoneFrame = React.createClass({
         >
           {experimentEnabled &&
             <div style={styles.buttons}>
-              <GameButtons.RunButton hidden={false} style={styles.buttonMinWidth}/>
-              <GameButtons.ResetButton style={styles.buttonMinWidth}/>
+              <RunButton hidden={false} style={styles.buttonMinWidth}/>
+              <ResetButton style={styles.buttonMinWidth}/>
             </div>
           }
         </div>

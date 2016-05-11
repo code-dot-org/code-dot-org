@@ -1,7 +1,7 @@
 var Visualization = require('./Visualization');
 var StepButton = require('./StepButton');
 var SpellingControls = require('./SpellingControls');
-var GameButtons = require('../templates/GameButtons');
+var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
 
 var MazeVisualizationColumn = function (props) {

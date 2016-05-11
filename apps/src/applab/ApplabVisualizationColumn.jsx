@@ -1,6 +1,6 @@
 var Radium = require('radium');
 var Visualization = require('./Visualization');
-var GameButtons = require('../templates/GameButtons');
+var GameButtons = require('../templates/GameButtons').default;
 var CompletionButton = require('./CompletionButton');
 var PlaySpaceHeader = require('./PlaySpaceHeader');
 var PhoneFrame = require('./PhoneFrame');

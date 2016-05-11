@@ -1,7 +1,7 @@
 var msg = require('../locale');
 var connect = require('react-redux').connect;
 
-var GameButtons = require('../templates/GameButtons');
+var GameButtons = require('../templates/GameButtons').default;
 var ArrowButtons = require('../templates/ArrowButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
 var gameLabConstants = require('./constants');
