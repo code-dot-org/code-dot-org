@@ -22,7 +22,7 @@ class UserScript < ActiveRecord::Base
   belongs_to :user
   belongs_to :script
 
-  after_update :check_plc_task_assignment_updating
+  after_update :mark_script_completion_levels
 
   def script
     Script.get_from_cache(script_id)
@@ -39,9 +39,12 @@ class UserScript < ActiveRecord::Base
     started_at.nil? && completed_at.nil? && assigned_at.nil? && last_progress_at.nil?
   end
 
-  def check_plc_task_assignment_updating
-    if self.completed_at && self.script.pd
-      Plc::ScriptCompletionTask.check_for_script_completion(self)
+  def mark_script_completion_levels
+    if completed_at && script.pd
+      ScriptCompletion.all.
+        select{ |sc| sc.script_name == script.name }.
+        map(&:script_levels).flatten.
+        each{ |sl| user.track_level_progress_async(sl, ActivityConstants::BEST_PASS_RESULT, false) }
     end
   end
 end

@@ -29,11 +29,6 @@ Students will use the Artist environment to draw complicated images using functi
 
 [Artist: Functions with Parameters](#Activity)
 
-### **Extended Learning**
-
-[Extension Activities](#Extended)
-
-
 [/summary]
 
 ## Lesson Objectives 
@@ -63,13 +58,6 @@ Students will have experienced functions through Artist in a previous stage. Thi
 
 [/together]
 
-[together]
-
-## Extended Learning 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
-
-
-[/together]
 
 [standards]
 

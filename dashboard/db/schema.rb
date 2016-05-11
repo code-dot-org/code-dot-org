@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160504205902) do
+ActiveRecord::Schema.define(version: 20160510000000) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -339,6 +339,9 @@ ActiveRecord::Schema.define(version: 20160504205902) do
     t.string   "email",          limit: 255, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "district_name",  limit: 255
+    t.string   "school",         limit: 255
+    t.string   "code",           limit: 255
   end
 
   add_index "pd_enrollments", ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
@@ -512,6 +515,14 @@ ActiveRecord::Schema.define(version: 20160504205902) do
 
   add_index "prizes", ["prize_provider_id"], name: "index_prizes_on_prize_provider_id", using: :btree
   add_index "prizes", ["user_id"], name: "index_prizes_on_user_id", using: :btree
+
+  create_table "professional_learning_partners", force: :cascade do |t|
+    t.string  "name",       limit: 255, null: false
+    t.integer "contact_id", limit: 4,   null: false
+    t.boolean "urban"
+  end
+
+  add_index "professional_learning_partners", ["name"], name: "index_professional_learning_partners_on_name", using: :btree
 
   create_table "puzzle_ratings", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
@@ -806,7 +817,6 @@ ActiveRecord::Schema.define(version: 20160504205902) do
     t.string   "name",                       limit: 255
     t.string   "locale",                     limit: 10,    default: "en-US", null: false
     t.date     "birthday"
-    t.string   "parent_email",               limit: 255
     t.string   "user_type",                  limit: 16
     t.string   "school",                     limit: 255
     t.string   "full_address",               limit: 1024

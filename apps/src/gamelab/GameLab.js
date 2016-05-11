@@ -8,7 +8,6 @@ var api = require('./api');
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var ConnectedCodeWorkspace = require('../templates/ConnectedCodeWorkspace');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = require('../lodash');
@@ -28,11 +27,11 @@ var dom = require('../dom');
 var experiments = require('../experiments');
 
 var actions = require('./actions');
-var setInitialLevelProps = require('../redux/levelProperties').setInitialLevelProps;
-var createStore = require('../redux').createStore;
-var gamelabReducer = require('./reducers').gamelabReducer;
+var setPageConstants = require('../redux/pageConstants').setPageConstants;
+var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
+import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -56,13 +55,6 @@ var GameLab = function () {
   this.level = null;
   this.tickIntervalId = 0;
   this.tickCount = 0;
-
-  /**
-   * Redux Store holding application state, transformable by actions.
-   * @private {Store}
-   * @see http://redux.js.org/docs/basics/Store.html
-   */
-  this.reduxStore_ = createStore(gamelabReducer);
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
@@ -175,13 +167,12 @@ GameLab.prototype.init = function (config) {
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructions');
-
-  config.reduxStore = this.reduxStore_;
+  config.showInstructionsInTopPane = true;
 
   var breakpointsEnabled = !config.level.debuggerDisabled;
 
   var onMount = function () {
+    this.setupReduxSubscribers(this.studioApp_.reduxStore);
     config.loadAudio = this.loadAudio_.bind(this);
     config.afterInject = this.afterInject_.bind(this, config);
     config.afterEditorReady = this.afterEditorReady_.bind(this, breakpointsEnabled);
@@ -202,6 +193,8 @@ GameLab.prototype.init = function (config) {
         defaultStepSpeed: 1
       });
     }
+
+    this.setCrosshairCursorForPlaySpace();
   }.bind(this);
 
   var showFinishButton = !this.level.isProjectLevel;
@@ -215,7 +208,7 @@ GameLab.prototype.init = function (config) {
     this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
   }
 
-  this.reduxStore_.dispatch(setInitialLevelProps({
+  this.studioApp_.reduxStore.dispatch(setPageConstants({
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
@@ -227,23 +220,52 @@ GameLab.prototype.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: true,
-    localeDirection: this.studioApp_.localeDirection()
+    localeDirection: this.studioApp_.localeDirection(),
+    isDroplet: true
   }));
 
   // Push project-sourced animation metadata into store
   if (typeof config.initialAnimationMetadata !== 'undefined') {
-    this.reduxStore_.dispatch(actions.setInitialAnimationMetadata(config.initialAnimationMetadata));
+    this.studioApp_.reduxStore.dispatch(actions.setInitialAnimationMetadata(config.initialAnimationMetadata));
   }
 
-  var codeWorkspace = <ConnectedCodeWorkspace/>;
-
-  ReactDOM.render(<Provider store={this.reduxStore_}>
+  ReactDOM.render(<Provider store={this.studioApp_.reduxStore}>
     <GameLabView
-      codeWorkspace={codeWorkspace}
       showFinishButton={finishButtonFirstLine && showFinishButton}
       hideSource={!!config.hideSource}
       onMount={onMount} />
   </Provider>, document.getElementById(config.containerId));
+};
+
+/**
+ * Subscribe to state changes on the store.
+ * @param {!Store} store
+ */
+GameLab.prototype.setupReduxSubscribers = function (store) {
+  var state = {};
+  var boundOnIsRunningChange = this.onIsRunningChange.bind(this);
+  store.subscribe(function () {
+    var lastState = state;
+    state = store.getState();
+
+    if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
+      boundOnIsRunningChange(state.runState.isRunning);
+    }
+  });
+};
+
+GameLab.prototype.onIsRunningChange = function () {
+  this.setCrosshairCursorForPlaySpace();
+};
+
+/**
+ * Hopefully a temporary measure - we do this ourselves for now because this is
+ * a 'protected' div that React doesn't update, but eventually would rather do
+ * this with React.
+ */
+GameLab.prototype.setCrosshairCursorForPlaySpace = function () {
+  var showOverlays = shouldOverlaysBeVisible(this.studioApp_.reduxStore.getState());
+  $('#divGameLab').toggleClass('withCrosshair', showOverlays);
 };
 
 GameLab.prototype.loadAudio_ = function () {
@@ -296,14 +318,6 @@ GameLab.prototype.afterInject_ = function (config) {
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords('GameLab,code');
   }
-
-  // Adjust visualizationColumn width.
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  visualizationColumn.style.width = '400px';
-
-  var divGameLab = document.getElementById('divGameLab');
-  divGameLab.style.width = '400px';
-  divGameLab.style.height = '400px';
 
   // Update gameLabP5's scale and keep it updated with future resizes:
   this.gameLabP5.scale = this.calculateVisualizationScale_();
@@ -956,7 +970,7 @@ GameLab.prototype.displayFeedback_ = function () {
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
  */
 GameLab.prototype.getAnimationMetadata = function () {
-  return this.reduxStore_.getState().animations;
+  return this.studioApp_.reduxStore.getState().animations;
 };
 
 GameLab.prototype.getAnimationDropdown = function () {
@@ -966,4 +980,8 @@ GameLab.prototype.getAnimationDropdown = function () {
       display: utils.quote(animation.name)
     };
   });
+};
+
+GameLab.prototype.getAppReducers = function () {
+  return reducers;
 };

@@ -19,6 +19,9 @@
         background-repeat: no-repeat;
         text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
 
+        &.highlighted {
+          border-color: yellow;
+        }
         &.selected {
           border-color: cyan;
         }
@@ -59,6 +62,21 @@
         }
         &.flower-hive-or-nothing {
           background-image: url('#{image_path("editor/flower-hive-or-nothing.png")}');
+        }
+        &.playlab {
+          &.none {
+            background-color: #e7e8ea !important;
+          }
+          &.goal {
+            background-color: #b9bf15 !important;
+            background-image: url('/blockly/media/skins/studio/goal.png');
+            background-size: contain;
+            background-position: center;
+          }
+          &.sprite {
+            background-color: #0094ca !important;
+            background-size: 1200% 100%;
+          }
         }
       }
       tr {
@@ -103,6 +121,25 @@
 
       $("select[name='level[skin]']").on('change', renderGridEditor);
       renderGridEditor();
+
+  - elsif @level.is_a? Studio
+    #gridEditor
+    :javascript
+      var container = document.getElementById('gridEditor');
+      var maze = eval(#{@level.properties['maze'].try(:to_json)});
+      var serializedMaze = isNaN(maze[0][0]) ? maze : maze.map(function (row) {
+        return row.map(function (cell) {
+          return { tileType: cell };
+        });
+      });
+      ReactDOM.render(React.createElement(dashboard.GridEditor, {
+        serializedMaze: serializedMaze,
+        skin: 'playlab',
+        onUpdate: function (serializedData) {
+          $('#level_maze_data').val(JSON.stringify(serializedData));
+        }
+      }), container);
+
   - else
     .row
       #mazeTable.span5

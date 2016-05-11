@@ -1,0 +1,29 @@
+name 'ECSPD1 dikjstra'
+css 'unplugged'
+markdown <<MARKDOWN
+
+
+# What is Computer Science and why does it matter?
+
+
+<br>
+<h4>What is Computer Science?</h4>
+When many people hear the words “computer science” they may actually be thinking of computer literacy or educational technology. 
+
+<img src="https://images.code.org/c96386a2f56d19233c941c6c3005ea7b-image-1461873146999.png" width="400" style="float:right; margin-left:30px"> 
+
+**Computer literacy** is the ability to effectively use digital tools and applications to access, understand and produce information. A few basic examples: knowing how to type, search, and use word processing tools. 
+ 
+**Educational technology** is the integration of technology into teaching in order to advance student learning across subject areas. Example: using an application to learn a new language or practice skills in mathematics. 
+
+**Computer science** is the study of computers, algorithmic processes, hardware and software designs, applications, and their impact on society. In simpler terms it is the art of blending digital tools, human ideas, and creativity to solve problems. Topics in computer science include: artificial intelligence, programming, data analysis, security, modeling, web design, ethical issues, and robotics. 
+ 
+<h4>Why Does Computer Science Matter?</h4>
+Computer science provides students with valuable opportunities to be creators with technology and not just consumers of technology. By becoming creators, students engage in inquiry-based learning that is relevant to them and their interests thereby motivating them to push themselves to deeper learning.
+ 
+Regardless of what field students end up pursuing for their career or further study, computer science will prepare them by developing their practices of creativity, collaboration, communication, abstraction, and problem solving.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

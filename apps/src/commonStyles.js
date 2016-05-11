@@ -21,7 +21,13 @@ commonStyles.purpleHeaderReadOnly = {
   backgroundColor: color.charcoal,
 };
 
-commonStyles.purpleHeaderRunning = {
+commonStyles.purpleHeaderUnfocused = {
   backgroundColor: color.lighter_purple,
   color: color.dark_charcoal,
+};
+
+commonStyles.button = {
+  paddingTop: 5,
+  paddingBottom: 5,
+  fontSize: 14
 };
