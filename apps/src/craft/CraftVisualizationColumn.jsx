@@ -13,7 +13,7 @@ var CraftVisualizationColumn = function () {
           </div>
         </div>
       </ProtectedStatefulDiv>
-      <GameButtons hideRunButton={false} isMinecraft={true}>
+      <GameButtons>
         <div id="right-button-cell">
           <button id="rightButton" className="share mc-share-button">
             <div>{msg.finish()}</div>

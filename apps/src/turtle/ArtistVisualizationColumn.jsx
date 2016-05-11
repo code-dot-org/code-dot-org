@@ -15,7 +15,7 @@ var ArtistVisualizationColumn = function (props) {
   return (
     <span>
       <ProtectedStatefulDiv id="visualization"/>
-      <GameButtons hideRunButton={false}>
+      <GameButtons>
         <div id="slider-cell">
           <svg id="slider"
                version="1.1"
