@@ -15,6 +15,7 @@ var utils = require('../utils');
 var gridUtils = require('./gridUtils');
 var logToCloud = require('../logToCloud');
 var actions = require('./actions');
+var screens = require('./redux/screens');
 
 var ICON_PREFIX = applabConstants.ICON_PREFIX;
 var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
@@ -29,13 +30,15 @@ var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
  * @param {!Store} store
  */
 designMode.setupReduxSubscribers = function (store) {
-  var state = {};
+  var state = {
+    screens: {}
+  };
   store.subscribe(function () {
     var lastState = state;
     state = store.getState();
 
-    if (state.currentScreenId !== lastState.currentScreenId) {
-      onScreenChange(state.currentScreenId);
+    if (state.screens.currentScreenId !== lastState.screens.currentScreenId) {
+      onScreenChange(state.screens.currentScreenId);
     }
 
     if (state.interfaceMode !== lastState.interfaceMode) {
@@ -473,7 +476,7 @@ designMode.onDeletePropertiesButton = function (element, event) {
   } else {
     designMode.editElementProperties(
         elementUtils.getPrefixedElementById(
-            studioApp.reduxStore.getState().currentScreenId));
+            studioApp.reduxStore.getState().screens.currentScreenId));
   }
 };
 
@@ -926,7 +929,7 @@ designMode.createScreen = function () {
  * @param {!string} screenId
  */
 designMode.changeScreen = function (screenId) {
-  studioApp.reduxStore.dispatch(actions.changeScreen(screenId));
+  studioApp.reduxStore.dispatch(screens.changeScreen(screenId));
 };
 
 /**
