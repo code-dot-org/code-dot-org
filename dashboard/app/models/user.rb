@@ -836,7 +836,7 @@ SQL
 
   # returns whether a new level has been completed and asynchronously enqueues an operation
   # to update the level progress.
-  def track_level_progress_async(script_level, new_result, submitted, level_source_id)
+  def track_level_progress_async(script_level:, new_result:, submitted:, level_source_id:)
     level_id = script_level.level_id
     script_id = script_level.script_id
     old_user_level = UserLevel.where(user_id: self.id,
@@ -862,7 +862,7 @@ SQL
   end
 
   # The synchronous handler for the track_level_progress helper.
-  def User.track_level_progress_sync(user_id, level_id, script_id, new_result, level_source_id, submitted)
+  def User.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:)
     new_level_completed = false
     new_level_perfected = false
 
@@ -910,7 +910,14 @@ SQL
     raise 'Model must be User' if op['model'] != 'User'
     case op['action']
       when 'track_level_progress'
-        User.track_level_progress_sync(op['user_id'], op['level_id'], op['script_id'], op['new_result'], op['level_source_id'], op['submitted'])
+        User.track_level_progress_sync(
+          user_id: op['user_id'],
+          level_id: op['level_id'],
+          script_id: op['script_id'],
+          new_result: op['new_result'],
+          submitted: op['submitted'],
+          level_source_id: op['level_source_id']
+        )
       else
         raise "Unknown action in #{op}"
     end

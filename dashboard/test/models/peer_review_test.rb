@@ -22,7 +22,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     level_source = create :level_source, data: 'My submitted answer'
 
     initial = PeerReview.count
-    @user.track_level_progress_async(@script_level, 100, true, level_source.id)
+    @user.track_level_progress_async(script_level: @script_level, new_result: 100, submitted: true, level_source_id: level_source.id)
     assert_equal PeerReview::REVIEWS_PER_SUBMISSION, PeerReview.count - initial
   end
 end
