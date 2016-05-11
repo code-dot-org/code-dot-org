@@ -188,13 +188,13 @@ level 'Level 1'
 variants
   prompt 'Which level would you like to try?'
 
-  button 'Challenge'
-  image 'https://studio.code.org/blah/maze-2-challenge.png'
+  buttontext 'Challenge'
+  imageurl 'https://studio.code.org/blah/maze-2-challenge.png'
   description 'This is a hard level'
   level 'Level 2a'
 
-  button 'Super Challenge'
-  image 'https://studio.code.org/blah/maze-2-super.png'
+  buttontext 'Super Challenge'
+  imageurl 'https://studio.code.org/blah/maze-2-super.png'
   description 'This is a very hard level'
   level 'Level 2b'
 endvariants
@@ -213,13 +213,13 @@ level 'Level 3'
               properties: {
                 prompt: 'Which level would you like to try?',
                 'Level 2a' => {
-                  button: 'Challenge',
-                  image: 'https://studio.code.org/blah/maze-2-challenge.png',
+                  buttontext: 'Challenge',
+                  imageurl: 'https://studio.code.org/blah/maze-2-challenge.png',
                   description: 'This is a hard level'
                 },
                 'Level 2b' => {
-                  button: 'Super Challenge',
-                  image: 'https://studio.code.org/blah/maze-2-super.png',
+                  buttontext: 'Super Challenge',
+                  imageurl: 'https://studio.code.org/blah/maze-2-super.png',
                   description: 'This is a very hard level'
                 }
               }
@@ -249,11 +249,11 @@ level 'Level 1'
 variants
   prompt 'Which level would you like to try?'
 
-  button 'Challenge'
-  image 'https://studio.code.org/blah/maze-2-challenge.png'
+  buttontext 'Challenge'
+  imageurl 'https://studio.code.org/blah/maze-2-challenge.png'
   level 'Level 2a'
 
-  button 'Super Challenge'
+  buttontext 'Super Challenge'
   description 'This is a very hard level'
   level 'Level 2b'
 endvariants
@@ -272,11 +272,11 @@ level 'Level 3'
               properties: {
                 prompt: 'Which level would you like to try?',
                 'Level 2a' => {
-                  button: 'Challenge',
-                  image: 'https://studio.code.org/blah/maze-2-challenge.png'
+                  buttontext: 'Challenge',
+                  imageurl: 'https://studio.code.org/blah/maze-2-challenge.png'
                 },
                 'Level 2b' => {
-                  button: 'Super Challenge',
+                  buttontext: 'Super Challenge',
                   description: 'This is a very hard level'
                 }
               }
@@ -297,6 +297,19 @@ level 'Level 3'
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
+  end
+
+  test 'test Script DSL raises for dangling properties' do
+    input_dsl = "
+stage 'Stage1'
+variants
+  level 'Level 2b'
+  buttontext 'hi'
+endvariants
+"
+    assert_raises_matching /Unused property "hi"/ do
+      ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    end
   end
 
   test 'test Multi DSL' do

@@ -17,8 +17,8 @@ class ScriptDSL < BaseDSL
     @video_key_for_next_level = nil
     @prompt = nil
     @active = true
-    @button = nil
-    @image = nil
+    @buttontext = nil
+    @imageurl = nil
     @description = nil
     @hidden = true
     @login_required = false
@@ -84,8 +84,8 @@ class ScriptDSL < BaseDSL
 
   string :prompt
   boolean :active
-  string :button
-  string :image
+  string :buttontext
+  string :imageurl
   string :description
 
   def assessment(name)
@@ -106,16 +106,16 @@ class ScriptDSL < BaseDSL
       @current_scriptlevel[:levels] << level
       levelprops = {}
       levelprops[:active] = @active if !@active
-      levelprops[:button] = @button if @button
-      levelprops[:image] = @image if @image
+      levelprops[:buttontext] = @buttontext if @buttontext
+      levelprops[:imageurl] = @imageurl if @imageurl
       levelprops[:description] = @description if @description
-      if !@active || @button || @image || @description
+      if !@active || @buttontext || @imageurl || @description
         @current_scriptlevel[:properties][name] = levelprops
       end
 
       @active = true
-      @button = nil
-      @image = nil
+      @buttontext = nil
+      @imageurl = nil
       @description = nil
     else
       @scriptlevels << {
@@ -132,6 +132,11 @@ class ScriptDSL < BaseDSL
   def endvariants
     @current_scriptlevel[:properties][:prompt] = @prompt if @prompt
     @scriptlevels << @current_scriptlevel
+
+    unused_prop = (!@active && @active.to_s) || @buttontext || @imageurl || @description
+    if unused_prop
+      raise 'Unused property "' + unused_prop + '" at ' + caller[0].to_s
+    end
 
     @current_scriptlevel = nil
     @promt = nil
