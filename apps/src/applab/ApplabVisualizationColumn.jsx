@@ -54,7 +54,6 @@ var ApplabVisualizationColumn = React.createClass({
     if (this.props.playspacePhoneFrame) {
       visualization = (
         <PhoneFrame
-            showFrame={true}
             isDark={this.props.isRunning}
             showSelector={this.props.interfaceMode === applabConstants.ApplabInterfaceMode.DESIGN}
             screenIds={this.props.screenIds}
@@ -79,6 +78,7 @@ var ApplabVisualizationColumn = React.createClass({
         }
         {visualization}
         <GameButtons>
+          {/* This div is used to control whether or not our finish button is centered*/}
           <div style={[
               styles.completion,
               this.props.playspacePhoneFrame && styles.phoneFrameCompletion
