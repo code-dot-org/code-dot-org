@@ -1,5 +1,4 @@
 import Radium from 'radium';
-import commonStyles from '../commonStyles';
 import color from '../color';
 import applabConstants from './constants';
 import experiments from '../experiments';
@@ -60,22 +59,20 @@ const styles = {
 
 const PhoneFrame = React.createClass({
   propTypes: {
-    showFrame: React.PropTypes.bool.isRequired,
     isDark: React.PropTypes.bool.isRequired,
     screenIds: React.PropTypes.array.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
   },
 
   render: function () {
-    const { showFrame, isDark, showSelector } = this.props;
+    const { isDark, showSelector } = this.props;
     return (
       <span>
         <div
             style={[
               styles.phoneFrame,
               styles.phoneFrameTop,
-              isDark && styles.phoneFrameDark,
-              !showFrame && commonStyles.hidden
+              isDark && styles.phoneFrameDark
             ]}
         >
           <div style={styles.screenSelector}>
@@ -93,15 +90,12 @@ const PhoneFrame = React.createClass({
               styles.phoneFrame,
               styles.phoneFrameBottom,
               isDark && styles.phoneFrameDark,
-              !showFrame && commonStyles.hidden
             ]}
         >
-          {showFrame &&
-            <div style={styles.buttonContainer}>
-              <RunButton hidden={false} style={styles.buttonMinWidth}/>
-              <ResetButton style={styles.buttonMinWidth}/>
-            </div>
-          }
+          <div style={styles.buttonContainer}>
+            <RunButton hidden={false} style={styles.buttonMinWidth}/>
+            <ResetButton style={styles.buttonMinWidth}/>
+          </div>
         </div>
       </span>
     );

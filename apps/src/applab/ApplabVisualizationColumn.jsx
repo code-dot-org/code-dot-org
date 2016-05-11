@@ -50,6 +50,20 @@ var ApplabVisualizationColumn = React.createClass({
   },
 
   render: function () {
+    let visualization = <Visualization/>;
+    if (this.props.playspacePhoneFrame) {
+      visualization = (
+        <PhoneFrame
+            showFrame={true}
+            isDark={this.props.isRunning}
+            showSelector={this.props.interfaceMode === applabConstants.ApplabInterfaceMode.DESIGN}
+            screenIds={this.props.screenIds}
+            onScreenCreate={this.props.onScreenCreate}
+        >
+          <Visualization/>
+        </PhoneFrame>
+      );
+    }
     return (
       <div
           id="visualizationColumn"
@@ -63,15 +77,7 @@ var ApplabVisualizationColumn = React.createClass({
             screenIds={this.props.screenIds}
             onScreenCreate={this.props.onScreenCreate} />
         }
-        <PhoneFrame
-            showFrame={this.props.playspacePhoneFrame && !this.props.isShareView}
-            isDark={this.props.isRunning}
-            showSelector={this.props.interfaceMode === applabConstants.ApplabInterfaceMode.DESIGN}
-            screenIds={this.props.screenIds}
-            onScreenCreate={this.props.onScreenCreate}
-        >
-          <Visualization/>
-        </PhoneFrame>
+        {visualization}
         <GameButtons>
           <div style={[
               styles.completion,
