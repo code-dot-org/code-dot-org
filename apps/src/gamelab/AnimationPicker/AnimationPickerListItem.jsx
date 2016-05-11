@@ -63,16 +63,18 @@ var AnimationPickerListItem = function (props) {
   return (
     <div style={styles.root} onClick={props.onClick}>
       <div style={thumbnailStyle}>
-        {props.sourceUrl && <AnimationPreview
-            width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-            height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-            sourceUrl={props.sourceUrl}
-            sourceWidth={props.sourceWidth}
-            sourceHeight={props.sourceHeight}
-            frameWidth={props.frameWidth}
-            frameHeight={props.frameHeight}
-            frameCount={props.frameCount}
-            frameRate={props.frameRate}/>}
+        {props.sourceUrl &&
+            <AnimationPreview
+                width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+                height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+                sourceUrl={props.sourceUrl}
+                sourceWidth={props.sourceWidth}
+                sourceHeight={props.sourceHeight}
+                frameWidth={props.frameWidth}
+                frameHeight={props.frameHeight}
+                frameCount={props.frameCount}
+                frameRate={props.frameRate}
+            />}
         {props.icon && <i className={"fa fa-" + props.icon} />}
       </div>
       <div style={labelStyle}>
