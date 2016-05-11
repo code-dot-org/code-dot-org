@@ -69,18 +69,12 @@ const AnimationPreview = React.createClass({
     const xScale = innerWidth / nextAnimation.frameSize.x;
     const yScale = innerHeight / nextAnimation.frameSize.y;
     const scale = Math.min(1, Math.min(xScale, yScale));
-    const scaledFrameHeight = nextAnimation.frameSize.y * scale;
+    const scaledFrameSize = scaleVector2(nextAnimation.frameSize, scale);
     this.setState({
       framesPerRow: Math.floor(nextAnimation.sourceSize.x / nextAnimation.frameSize.x),
-      scaledSourceSize: {
-        x: nextAnimation.sourceSize.x * scale,
-        y: nextAnimation.sourceSize.y * scale
-      },
-      scaledFrameSize: {
-        x: nextAnimation.frameSize.x * scale,
-        y: scaledFrameHeight
-      },
-      extraTopMargin: Math.ceil((innerHeight - scaledFrameHeight) / 2),
+      scaledSourceSize: scaleVector2(nextAnimation.sourceSize, scale),
+      scaledFrameSize: scaledFrameSize,
+      extraTopMargin: Math.ceil((innerHeight - scaledFrameSize.y) / 2),
       wrappedSourceUrl: `url('${nextAnimation.sourceUrl}')`
     });
   },
@@ -123,3 +117,10 @@ const AnimationPreview = React.createClass({
   }
 });
 export default AnimationPreview;
+
+function scaleVector2(vector, scale) {
+  return {
+    x: vector.x * scale,
+    y: vector.y * scale
+  };
+}
