@@ -7,10 +7,12 @@
 
 var BeeCell = require('@cdo/apps/maze/beeCell');
 var Cell = require('@cdo/apps/maze/cell');
+var StudioCell = require('@cdo/apps/studio/cell');
 var mazeUtils = require('@cdo/apps/maze/mazeUtils');
 
 var BeeCellEditor = require('./BeeCellEditor');
 var CellEditor = require('./CellEditor');
+var StudioCellEditor = require('./StudioCellEditor');
 var Grid = require('./Grid');
 
 var CellJSON = React.createClass({
@@ -71,10 +73,16 @@ var GridEditor = React.createClass({
   },
 
   getCellClass: function () {
+    if (this.props.skin === 'playlab') {
+      return StudioCell;
+    }
     return mazeUtils.isBeeSkin(this.props.skin) ? BeeCell : Cell;
   },
 
   getEditorClass: function () {
+    if (this.props.skin === 'playlab') {
+      return StudioCellEditor;
+    }
     return mazeUtils.isBeeSkin(this.props.skin) ? BeeCellEditor : CellEditor;
   },
 
