@@ -23,7 +23,6 @@
 #  name                       :string(255)
 #  locale                     :string(10)       default("en-US"), not null
 #  birthday                   :date
-#  parent_email               :string(255)
 #  user_type                  :string(16)
 #  school                     :string(255)
 #  full_address               :string(1024)
@@ -241,8 +240,6 @@ class User < ActiveRecord::Base
   validates :age, presence: true, on: :create # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
-
-  validates_length_of :parent_email, maximum: 255
 
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true

@@ -54,7 +54,8 @@ exec(command, function (err, stdout, stderr) {
     './test/calc/*.js',
     './test/craft/*.js',
     './test/gamelab/*.js',
-    './test/netsim/*.js'
+    './test/netsim/*.js',
+    './test/templates/*.js'
   ];
 
   if (process.env.mocha_entry) {

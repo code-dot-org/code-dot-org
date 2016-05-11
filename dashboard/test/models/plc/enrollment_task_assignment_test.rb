@@ -14,12 +14,12 @@ class Plc::EnrollmentTaskAssignmentTest < ActiveSupport::TestCase
     @unit_enrollment = Plc::EnrollmentUnitAssignment.create(
         plc_user_course_enrollment: @enrollment,
         plc_course_unit: @course_unit,
-        status: Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
+        status: Plc::EnrollmentUnitAssignment::START_BLOCKED
     )
   end
 
   test 'Completing tasks does not mark module / course complete until all are complete' do
-    assert_equal Plc::EnrollmentUnitAssignment::PENDING_EVALUATION, @unit_enrollment.status
+    assert_equal Plc::EnrollmentUnitAssignment::START_BLOCKED, @unit_enrollment.status
     @unit_enrollment.enroll_user_in_unit_with_learning_modules([@learning_module1, @learning_module2])
     task_assignments = @enrollment.plc_task_assignments
 
