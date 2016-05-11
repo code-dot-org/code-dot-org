@@ -760,7 +760,7 @@ Applab.init = function (config) {
     showDebugWatch: false,
     localeDirection: studioApp.localeDirection(),
     isDroplet: true,
-    playspacePhoneFrame: experiments.isEnabled('phoneFrame')
+    playspacePhoneFrame: !config.share && experiments.isEnabled('phoneFrame')
   }));
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(
