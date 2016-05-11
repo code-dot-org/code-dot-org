@@ -178,9 +178,24 @@ a.level_link.submitted:hover
   }
 }
 
-.teacher-course {
+#landingpage.teacher-course {
+  #lesson {
+    background: none;
+    border-radius: 3px;
+    .whitetext, .smallwhitetext {
+      margin-left: 10px;
+      color: $dark_charcoal !important;
+    }
+    .lightgreytext > a {
+      color: $charcoal !important;
+    }
+  }
+  #stats {
+    background: none;
+  }
   .user-stats-block {
     width: 900px;
+    background: none;
   }
   .flex-wrapper {
     border: 0;
@@ -194,6 +209,12 @@ a.level_link.submitted:hover
       padding: 5px 10px;
       background: $cyan;
       color: #fff;
+      border-radius: 2px;
+    }
+    & > div {
+      padding: 5px 10px;
+      margin: 3px 0;
+      border: 1px solid $light_gray;
       border-radius: 2px;
     }
     .game-group {
