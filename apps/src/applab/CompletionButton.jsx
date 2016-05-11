@@ -55,7 +55,7 @@ var CompletionButton = React.createClass({
           <button
               id={id}
               className="share"
-              style={[experiments.isEnabled('phoneFrame') && styles.phoneFrameButton]}
+              style={[this.props.playspacePhoneFrame && styles.phoneFrameButton]}
           >
             <img src="/blockly/media/1x1.gif"/>
             {contents}
@@ -71,6 +71,7 @@ module.exports = connect(function propsFromStore(state) {
     isProjectLevel: state.pageConstants.isProjectLevel,
     isSubmittable: state.pageConstants.isSubmittable,
     isSubmitted: state.pageConstants.isSubmitted,
+    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
   };
 })(CompletionButton);
 

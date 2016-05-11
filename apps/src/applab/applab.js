@@ -759,7 +759,8 @@ Applab.init = function (config) {
     showDebugConsole: showDebugConsole,
     showDebugWatch: false,
     localeDirection: studioApp.localeDirection(),
-    isDroplet: true
+    isDroplet: true,
+    playspacePhoneFrame: experiments.isEnabled('phoneFrame')
   }));
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(

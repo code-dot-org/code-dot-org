@@ -26,7 +26,8 @@ var ALLOWED_KEYS = utils.makeEnum(
   'isMinecraft',
   'visualizationHasPadding',
   'hideSource',
-  'hideRunButton'
+  'hideRunButton',
+  'playspacePhoneFrame'
 );
 
 var levelInitialState = {
