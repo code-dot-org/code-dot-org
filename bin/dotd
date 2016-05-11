@@ -68,7 +68,7 @@ should_i "merge from levelbuilder to staging" do
   open_url 'https://github.com/code-dot-org/code-dot-org/compare/staging...levelbuilder?expand=1&title=Levelbuilder%20%3E%20Staging'
 end
 
-wait_for "staging to finish building"
+wait_for "staging to finish building. if a staging build was already running, wait for a second build which will include the levelbuilder content"
 
 should_i "commit content changes from staging" do
   puts <<EOS
