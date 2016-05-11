@@ -18,6 +18,7 @@ Feature: App Lab Scenarios
     And I append text to droplet "turnLeft(90);\n"
     And the droplet code is "turnRight(90);\nturnLeft(90);\n"
     And I press "runButton"
+    And I wait until element ".project_updated_at" contains text "Saved"
 
     # Next level, backed by the same template
     Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/11?noautoplay=true"
