@@ -18,8 +18,8 @@ module.exports = function (grunt) {
   } catch (e) {
     // I guess we are not in a git checkout, or don't have git installed.
   }
-  timeGrunt(grunt, false, function (stats, done) {
-    grunt.log.writeln('-- New Relic Logging --');
+  timeGrunt(grunt, false, function (stats, log) {
+    log(chalk.underline('New Relic Logging'));
     var logFilePath = path.join(__dirname, 'build-times.log');
     try {
       fs.appendFileSync(
@@ -27,24 +27,24 @@ module.exports = function (grunt) {
         JSON.stringify([new Date().toString(), email, stats])+'\n'
       );
     } catch (e) {
-      grunt.log.writeln("failed to write to build-times.log file: "+e);
+      log(chalk.red("failed to write to build-times.log file: "+e));
     }
     if (!newrelicLicenseKey) {
       // we will skip logging to new relic.
-      grunt.log.warn(
+      log(chalk.yellow(
         "Add new_relic_license_key to your locals.yml file to\n" +
           "have your build times logged to new relic. Talk to paul@code.org\n" +
           "for more information."
-      );
-      done();
+      ));
       return;
     }
-    var lineReader = readline.createInterface({
-      input: fs.createReadStream(logFilePath)
-    });
+    var data = fs.readFileSync(logFilePath, 'utf-8');
+    var lines = data.split('\n');
     var dataToLog = [];
-    var lineIndex = 0;
-    lineReader.on('line', function (line) {
+    lines.forEach(function (line) {
+      if (!line) {
+        return;
+      }
       var data = JSON.parse(line);
       var timestamp = Math.floor(new Date(data[0]).getTime()/1000); // seconds since epoch
       var email = data[1];
@@ -63,28 +63,22 @@ module.exports = function (grunt) {
         }
       }
     });
-    lineReader.on('close', function () {
-      if (dataToLog.length > 0) {
-        grunt.log.write("logging " + dataToLog.length + " build time events to new relic ");
-        var failed = false;
-        dataToLog.forEach(function (data) {
-          try {
-            newrelic.recordCustomEvent("apps_build", data);
-            grunt.log.write(".");
-          } catch (e) {
-            grunt.log.write("X");
-            grunt.log.error(["Failed to upload to new relic: "+e]);
-            failed = true;
-          }
-        });
-        if (!failed) {
-          grunt.log.write(' ');
-          grunt.log.ok();
-          fs.truncateSync(logFilePath);
+    if (dataToLog.length > 0) {
+      log("logging " + dataToLog.length + " build time events to new relic ");
+      var failed = false;
+      dataToLog.forEach(function (data) {
+        try {
+          newrelic.recordCustomEvent("apps_build", data);
+        } catch (e) {
+          log(chalk.red("Failed to upload to new relic: "+e));
+          failed = true;
         }
+      });
+      if (!failed) {
+        log(chalk.green('OK'));
+        fs.truncateSync(logFilePath);
       }
-      done();
-    });
+    }
   });
 
   var config = {};
