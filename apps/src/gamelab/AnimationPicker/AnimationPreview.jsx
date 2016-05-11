@@ -17,9 +17,8 @@ const AnimationPreview = React.createClass({
     return {
       currentFrame: 0,
       framesPerRow: 1,
-      scaledSourceWidth: 0,
-      scaledFrameWidth: 0,
-      scaledFrameHeight: 0,
+      scaledSourceSize: {x: 0, y:0},
+      scaledFrameSize: {x: 0, y:0},
       extraTopMargin: 0,
       wrappedSourceUrl: ''
     };
@@ -67,43 +66,48 @@ const AnimationPreview = React.createClass({
     const nextAnimation = nextProps.animation;
     const innerWidth = nextProps.width - 2 * MARGIN_PX;
     const innerHeight = nextProps.height - 2 * MARGIN_PX;
-    const xScale = innerWidth / nextAnimation.frameWidth;
-    const yScale = innerHeight / nextAnimation.frameHeight;
+    const xScale = innerWidth / nextAnimation.frameSize.x;
+    const yScale = innerHeight / nextAnimation.frameSize.y;
     const scale = Math.min(1, Math.min(xScale, yScale));
-    const scaledFrameHeight = nextAnimation.frameHeight * scale;
+    const scaledFrameHeight = nextAnimation.frameSize.y * scale;
     this.setState({
-      framesPerRow: Math.floor(nextAnimation.sourceWidth / nextAnimation.frameWidth),
-      scaledSourceWidth: nextAnimation.sourceWidth * scale,
-      scaledFrameWidth: nextAnimation.frameWidth * scale,
-      scaledFrameHeight: scaledFrameHeight,
+      framesPerRow: Math.floor(nextAnimation.sourceSize.x / nextAnimation.frameSize.x),
+      scaledSourceSize: {
+        x: nextAnimation.sourceSize.x * scale,
+        y: nextAnimation.sourceSize.y * scale
+      },
+      scaledFrameSize: {
+        x: nextAnimation.frameSize.x * scale,
+        y: scaledFrameHeight
+      },
       extraTopMargin: Math.ceil((innerHeight - scaledFrameHeight) / 2),
       wrappedSourceUrl: `url('${nextAnimation.sourceUrl}')`
     });
   },
 
   render: function () {
-    const { currentFrame, framesPerRow, scaledSourceWidth, scaledFrameWidth,
-        scaledFrameHeight, extraTopMargin, wrappedSourceUrl} = this.state;
+    const { currentFrame, framesPerRow, scaledSourceSize, scaledFrameSize,
+        extraTopMargin, wrappedSourceUrl } = this.state;
 
     const row = Math.floor(currentFrame / framesPerRow);
     const column = currentFrame % framesPerRow;
-    const xOffset = -scaledFrameWidth * column;
-    const yOffset = -scaledFrameHeight * row;
+    const xOffset = -scaledFrameSize.x * column;
+    const yOffset = -scaledFrameSize.y * row;
 
     const containerStyle = {
       width: this.props.width,
       height: this.props.height
     };
     const imageStyle = {
-      width: scaledFrameWidth,
-      height: scaledFrameHeight,
+      width: scaledFrameSize.x,
+      height: scaledFrameSize.y,
       marginTop: MARGIN_PX + extraTopMargin,
       marginLeft: MARGIN_PX,
       marginRight: MARGIN_PX,
       marginBottom: MARGIN_PX,
       backgroundImage: wrappedSourceUrl,
       backgroundRepeat: 'no-repeat',
-      backgroundSize: scaledSourceWidth,
+      backgroundSize: scaledSourceSize.x,
       backgroundPosition: xOffset + 'px ' + yOffset + 'px'
     };
 
