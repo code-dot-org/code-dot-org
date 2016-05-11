@@ -9,26 +9,9 @@ var yaml = require('js-yaml');
 var readline = require('readline');
 var chalk = require('chalk');
 
-/**
- * A replacement for console.log that will work when called after the watch task
- * has started.
- */
-function log(str) {
-	process.stdout.write(process.stdout, str + '\n', 'utf8');
-}
-
 module.exports = function (grunt) {
   var locals = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '..', 'locals.yml')));
   var newrelicLicenseKey = locals.new_relic_license_key;
-  if (!newrelicLicenseKey) {
-    // we will skip logging to new relic.
-    console.log(chalk.yellow(
-        "\n\nAdd new_relice_license_key to your locals.yml file to\n" +
-          "have your build times logged to new relic. Talk to paul@code.org\n" +
-          "for more information.\n\n"
-    ));
-  }
-
   var email = 'unknown';
   try {
     email = execSync('git config --get user.email').toString().trim();
@@ -36,6 +19,7 @@ module.exports = function (grunt) {
     // I guess we are not in a git checkout, or don't have git installed.
   }
   timeGrunt(grunt, false, function (stats, done) {
+    grunt.log.writeln('-- New Relic Logging --');
     var logFilePath = path.join(__dirname, 'build-times.log');
     try {
       fs.appendFileSync(
@@ -43,10 +27,15 @@ module.exports = function (grunt) {
         JSON.stringify([new Date().toString(), email, stats])+'\n'
       );
     } catch (e) {
-      log("failed to write to build-times.log file: "+e);
+      grunt.log.writeln("failed to write to build-times.log file: "+e);
     }
     if (!newrelicLicenseKey) {
       // we will skip logging to new relic.
+      grunt.log.warn(
+        "Add new_relic_license_key to your locals.yml file to\n" +
+          "have your build times logged to new relic. Talk to paul@code.org\n" +
+          "for more information."
+      );
       done();
       return;
     }
@@ -76,11 +65,23 @@ module.exports = function (grunt) {
     });
     lineReader.on('close', function () {
       if (dataToLog.length > 0) {
-        log("logging " + dataToLog.length + " build time events to new relic...");
+        grunt.log.write("logging " + dataToLog.length + " build time events to new relic ");
+        var failed = false;
         dataToLog.forEach(function (data) {
-          newrelic.recordCustomEvent("apps_build", data);
+          try {
+            newrelic.recordCustomEvent("apps_build", data);
+            grunt.log.write(".");
+          } catch (e) {
+            grunt.log.write("X");
+            grunt.log.error(["Failed to upload to new relic: "+e]);
+            failed = true;
+          }
         });
-        fs.truncateSync(logFilePath);
+        if (!failed) {
+          grunt.log.write(' ');
+          grunt.log.ok();
+          fs.truncateSync(logFilePath);
+        }
       }
       done();
     });
