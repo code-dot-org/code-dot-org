@@ -5,7 +5,7 @@ require_https: true
 
 # Donate
 
-<img src="/sites/default/files/fpcoverphoto.jpeg" alt="Kids at computers" width="851" height="315"/>
+<img src="/sites/default/files/images/fpcoverphoto.jpeg" alt="Kids at computers" width="851" height="315"/>
 
 <br/>
 [<button>Donate by credit card</button>](#creditcard) &nbsp;  [<button>Donate with PayPal</button>](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV8WDN6DRDVDL)
@@ -52,4 +52,3 @@ Do your shopping at [smile.amazon.com](https://smile.amazon.com/) to donate a % 
 *Code.org is registered as a public 501(c)(3) non-profit organization.
 Contributions to Code.org are tax-deductible to the extent permitted by law.
 Code.org's tax identification number is 46-0858543.*
-
