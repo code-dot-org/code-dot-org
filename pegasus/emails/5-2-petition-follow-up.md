@@ -3,18 +3,18 @@ from: 'Hadi Partovi <hadi_partovi@code.org>'
 subject: "Don't make me ask again :-)"
 ---
 
-I'm writing every educator or organizer who has engaged with Code.org.  Thanks to your passion, millions of children have tried computer science. But tens of millions remain without access, and you can help. 
+Happy teacher appreciation week! Thanks to your passion, millions of children have tried computer science. But tens of millions remain without access, and [you can help](http://bit.ly/computersciencepetition). 
 
-Last week, I asked 1 million Code.org supporters to [sign your name](http://bit.ly/computersciencepetition) alongside America’s top leaders. We’ve shot past 100,000 signatures, but we can do much much more if we act together. 
+Last week, I asked 1 million Code.org supporters to [sign your name](http://bit.ly/computersciencepetition) alongside America’s top leaders urging Congress to fund computer science. We’ve shot past 100,000 signatures, **but we can do much much more if we act together.** 
 
-Every one of you has given your time to this movement. Please give another 5 minutes, [sign the petition](http://bit.ly/computersciencepetition), and even ask your colleagues and communities and parents to join in support: [http://change.org/computerscience](http://bit.ly/computersciencepetition).
+You have given your time to this movement — **please give another 2 minutes to [sign the petition](http://bit.ly/computersciencepetition).** Even ask your colleagues, communities, and parents to join in support: [http://change.org/computerscience](http://bit.ly/computersciencepetition).
 
-We live in divided times, in an election year where debates about opportunity, inequality, growth, and security divide our country. ***But on computer science, Americans can unite again, with your help.*** Computer science offers opportunity in the face of inequality. It is the driver of economic growth as the largest and fastest-growing wage sector across industries, and its impact on cybersecurity is even key to national security.  
+We live in divided times, and debates about opportunity, inequality, growth, and security divide our country. ***But on computer science, with your help, Americans can unite.***
 
 Some may debate whether every *child* must learn to code, but we all agree that every student should have the *opportunity* to learn computer science.
 
 </br>
-<a href="http://bit.ly/computersciencepetition"><img src="https://code.org/images/petitionfaces.jpg" width="100%"></a>
+<a href="http://bit.ly/computersciencepetition"><img src="https://code.org/images/email/letterpetition/petitionfacesv2.jpg" width="100%"></a>
 </br>
 
 Last week the CEOs of America's largest companies joined 29 governors — from both parties — and top K-12 leaders, in an unprecedented union. Despite their differences, our country's leadership is aligned on this issue across the political spectrum, across industries, across schools, and across state lines. Their letter is included below.
@@ -29,7 +29,9 @@ Hadi Partovi<br />
 Founder, Code.org
 <br />
 
-### Every student in America should have this opportunity
+<hr>
+
+## Every student in America should have this opportunity
 Dear Members of Congress and fellow Americans,
 
 As business leaders, elected officials, educators, and members of the public, we join forces to deliver a bipartisan message about opportunity and the American Dream. Technology is transforming society at an unprecedented rate. Whether it’s smartphones or social networks, self-driving cars or personalized medicine, nothing embodies the American Dream so much as the opportunity to change or even reinvent the world with technology. And participating in this world requires access to computer science in our schools. **We ask you to provide funding for every student in every school to have an** ***opportunity*** **to learn computer science.**
@@ -82,6 +84,7 @@ Lowell McAdam, Chairman and CEO, Verizon<br/>
 Marc Benioff, Chairman and CEO, Salesforce<br/>
 Mark Cuban, Owner, Dallas Mavericks, Landmark Theatres<br/>
 Mark Zuckerberg, Chairman and CEO, Facebook<br/>
+Oscar Munoz, CEO, United Airlines<br/>
 Rami Rahim, CEO, Juniper Networks<br/>
 Randall Stephenson, Chairman and CEO, AT&T<br/>
 Reid Hoffman, Chairman, LinkedIn<br/>
@@ -137,6 +140,7 @@ Kimberly Hill, Superintendent, Charles County Public Schools<br/>
 Michelle King, Superintendent, Los Angeles Unified<br/>
 Pat Skorkowsky, Superintendent, Clark County School District<br/>
 Richard Carranza, Superintendent, San Francisco Unified<br/>
+Richard Woods, State Superintendent, Georgia<br/>
 Susan Enfield, Superintendent, Highline Public Schools<br/>
 Tom Torlakson, State Superintendent, California<br/>
 

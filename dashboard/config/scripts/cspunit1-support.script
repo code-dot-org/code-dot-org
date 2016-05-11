@@ -5,6 +5,7 @@ login_required 'true'
 
 stage 'Teachers and Tools'
   level 'U3L2 Free Response Reflection'
+  level 'Test Script Completion'
 
 stage 'Supporting Peer Learning', 'Content'
   level 'U3L2 Free Response Reflection'

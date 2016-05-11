@@ -1,3 +1,5 @@
+var experiments = require('./experiments');
+
 /** @file Code.org configured store-creation method.
  *  @see http://redux.js.org/docs/api/createStore.html */
 'use strict';
@@ -16,10 +18,11 @@ if (process.env.NODE_ENV !== "production") {
  */
 module.exports.createStore = function (reducer) {
 
-  // You have to manually enable debugging here, both to keep the logger out
+  // You have to manually enable debugging, both to keep the logger out
   // of production bundles, and because it causes a lot of console noise and
-  // makes our unit tests fail.
-  var enableReduxDebugging = false;
+  // makes our unit tests fail. To enable, append ?enableExperiments=reduxLogging
+  // to your url
+  var enableReduxDebugging = experiments.isEnabled('reduxLogging');
   if (process.env.NODE_ENV !== "production" && enableReduxDebugging) {
     var reduxLogger = createLogger();
 
@@ -39,18 +42,4 @@ module.exports.createStore = function (reducer) {
   }
 
   return redux.createStore(reducer, redux.applyMiddleware(reduxThunk));
-};
-
-/**
- * Create a non-functioning redux store that allows us to always call getState
- * and dispatch as no-ops.
- */
-module.exports.createFakeStore = function () {
-  return {
-    getState: function () {
-      return {};
-    },
-    dispatch: function () {
-    }
-  };
 };

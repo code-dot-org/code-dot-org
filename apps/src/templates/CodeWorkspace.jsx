@@ -1,50 +1,28 @@
 var Radium = require('radium');
+var connect = require('react-redux').connect;
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var JsDebugger = require('./JsDebugger');
+var PaneHeader = require('./PaneHeader');
+var PaneSection = PaneHeader.PaneSection;
+var PaneButton = PaneHeader.PaneButton;
 var msg = require('../locale');
 var commonStyles = require('../commonStyles');
 var styleConstants = require('../styleConstants');
 var color = require('../color');
 var experiments = require('../experiments');
 
+var BLOCKS_GLYPH_LIGHT = "data:image/gif;base64,R0lGODlhEAAQAIAAAP///////yH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
+var BLOCKS_GLYPH_DARK = "data:image/gif;base64,R0lGODlhEAAQAIAAAE1XX01XXyH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
+
 var styles = {
-  workspaceHeader: {
-    textAlign: 'center',
-    whiteSpace: 'nowrap',
-    overflowX: 'hidden',
-    height: styleConstants["workspace-headers-height"],
-    lineHeight: styleConstants["workspace-headers-height"] + 'px',
+  headerIcon: {
+    fontSize: 18
   },
-  workspaceHeaderButton: {
-    cursor: 'pointer',
-    float: 'right',
-    overflow: 'hidden',
-    backgroundColor: color.light_purple,
-    marginTop: 3,
-    marginBottom: 3,
-    marginRight: 3,
-    marginLeft: 0,
-    height: 24,
-    borderRadius: 4,
-    fontFamily: '"Gotham 5r", sans-serif',
-    lineHeight: '18px',
-    ':hover': {
-      backgroundColor: color.cyan
-    }
+  chevron: {
+    fontSize: 18,
   },
-  workspaceHeaderButtonRtl: {
-    float: 'left',
-    marginLeft: 3,
-    marginRight: 0
-  },
-  workspaceHeaderButtonRunning: {
-    backgroundColor: color.lightest_purple
-  },
-  headerButtonSpan: {
-    paddingLeft: 12,
-    paddingRight: 12,
-    paddingTop: 0,
-    paddingBottom: 0
+  runningChevron: {
+    color: color.dark_charcoal
   },
   blocksGlyph: {
     display: 'none',
@@ -62,30 +40,6 @@ var styles = {
     OTransform: 'scale(-1, 1)',
     msTransform: 'scale(-1, 1)',
   },
-  headerIcon: {
-    fontSize: 18
-  },
-  headerButtonIcon: {
-    lineHeight: '24px',
-    paddingRight: 8,
-    fontSize: 15
-  },
-  headerButtonIconRtl: {
-    paddingRight: 0,
-    paddingLeft: 8
-  },
-  noPadding: {
-    padding: 0
-  },
-  bold: {
-    fontWeight: 'bold'
-  },
-  chevron: {
-    fontSize: 18,
-  },
-  runningChevron: {
-    color: color.dark_charcoal
-  }
 };
 
 var CodeWorkspace = React.createClass({
@@ -93,8 +47,9 @@ var CodeWorkspace = React.createClass({
     localeDirection: React.PropTypes.oneOf(['rtl', 'ltr']).isRequired,
     editCode: React.PropTypes.bool.isRequired,
     readonlyWorkspace: React.PropTypes.bool.isRequired,
-    showDebugger: React.PropTypes.bool,
-    isRunning: React.PropTypes.bool
+    showDebugger: React.PropTypes.bool.isRequired,
+    isRunning: React.PropTypes.bool.isRequired,
+    isMinecraft: React.PropTypes.bool.isRequired
   },
 
   shouldComponentUpdate: function (nextProps) {
@@ -121,18 +76,34 @@ var CodeWorkspace = React.createClass({
     var props = this.props;
 
     var runModeIndicators = experiments.isEnabled('runModeIndicators');
+    if (props.isMinecraft) {
+      // ignore runModeIndicators in MC
+      runModeIndicators = false;
+    }
 
     var chevronStyle = [
       styles.chevron,
       runModeIndicators && props.isRunning && styles.runningChevron
     ];
 
-    var headerButtonStyle = [
-      styles.workspaceHeader,
-      styles.workspaceHeaderButton,
-      (props.localeDirection === 'rtl') && styles.workspaceHeaderButtonRtl,
-      runModeIndicators && props.isRunning && styles.workspaceHeaderButtonRunning
-    ];
+    // By default, continue to show header as focused. When runModeIndicators
+    // is enabled, remove focus while running.
+    var hasFocus = true;
+    if (runModeIndicators && props.isRunning) {
+      hasFocus = false;
+    }
+
+    var isRtl = props.localeDirection === 'rtl';
+
+    var blocksGlyphImage = (
+      <img
+          id="blocks_glyph"
+          src={hasFocus ? BLOCKS_GLYPH_LIGHT : BLOCKS_GLYPH_DARK}
+          style={[
+            styles.blocksGlyph,
+            isRtl && styles.blocksGlyphRtl
+          ]}/>
+    );
 
     var headerButtonIcon = [
       styles.headerButtonIcon,
@@ -146,68 +117,57 @@ var CodeWorkspace = React.createClass({
 
     return (
       <span id="codeWorkspaceWrapper">
-        <div
+        <PaneHeader
             id="headers"
             dir={props.localeDirection}
-            style={[
-              commonStyles.purpleHeader,
-              props.readonlyWorkspace && commonStyles.purpleHeaderReadOnly,
-              runModeIndicators && props.isRunning && commonStyles.purpleHeaderRunning
-            ]}
+            hasFocus={hasFocus}
+            className={props.isRunning ? 'is-running' : ''}
         >
           <div id="codeModeHeaders">
-            <div id="toolbox-header" style={styles.workspaceHeader}>
+            <PaneSection id="toolbox-header">
               <i id="hide-toolbox-icon" style={[commonStyles.hidden, chevronStyle]} className="fa fa-chevron-circle-right"/>
               <span>{props.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}</span>
-            </div>
-            <div id="show-toolbox-header" style={[styles.workspaceHeader, commonStyles.hidden]}>
+            </PaneSection>
+            <PaneSection id="show-toolbox-header" style={commonStyles.hidden}>
               <i id="show-toolbox-icon" style={chevronStyle} className="fa fa-chevron-circle-right"/>
               <span>{msg.showToolbox()}</span>
-            </div>
-            <div
+            </PaneSection>
+            <PaneButton
                 id="show-code-header"
-                key="show-code-header"
-                style={headerButtonStyle}>
-              <span style={styles.headerButtonSpan}>
-                <img src="/blockly/media/applab/blocks_glyph.gif" style={blocksGlyph} />
-                <i className="fa fa-code" style={[styles.bold, headerButtonIcon]}/>
-                <span style={styles.noPadding}>{msg.showCodeHeader()}</span>
-              </span>
-            </div>
-            {!props.readonlyWorkspace &&
-            <div
+                hiddenImage={blocksGlyphImage}
+                iconClass="fa fa-code"
+                label={msg.showCodeHeader()}
+                isRtl={isRtl}
+                isMinecraft={props.isMinecraft}
+                headerHasFocus={hasFocus}/>
+            {!props.readonlyWorkspace && <PaneButton
                 id="clear-puzzle-header"
-                key="clear-puzzle-header"
-                style={headerButtonStyle}>
-              <span style={styles.headerButtonSpan}>
-                <i className="fa fa-undo" style={headerButtonIcon}/>
-                <span style={styles.noPadding}>{msg.clearPuzzle()}</span>
-              </span>
-            </div>
+                headerHasFocus={hasFocus}
+                iconClass="fa fa-undo"
+                label={msg.clearPuzzle()}
+                isRtl={isRtl}
+                isMinecraft={props.isMinecraft}/>
             }
-            <div
+            <PaneButton
                 id="versions-header"
-                key="versions-header"
-                style={headerButtonStyle}>
-              <span style={styles.headerButtonSpan}>
-                <i className="fa fa-clock-o" style={headerButtonIcon}/>
-                <span style={styles.noPadding}>{msg.showVersionsHeader()}</span>
-              </span>
-            </div>
-            <div id="workspace-header" style={styles.workspaceHeader}>
+                headerHasFocus={hasFocus}
+                iconClass="fa fa-clock-o"
+                label={msg.showVersionsHeader()}
+                isRtl={isRtl}
+                isMinecraft={props.isMinecraft}/>
+            <PaneSection id="workspace-header">
               <span id="workspace-header-span">
                 {props.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort()}
               </span>
               <div id="blockCounter">
-                <div id="blockUsed" className='block-counter-default'>
-                </div>
+                <ProtectedStatefulDiv id="blockUsed" className='block-counter-default'/>
                 <span> / </span>
                 <span id="idealBlockNumber"></span>
                 <span>{" " + msg.blocks()}</span>
               </div>
-            </div>
+            </PaneSection>
           </div>
-        </div>
+        </PaneHeader>
         {props.editCode && <ProtectedStatefulDiv id="codeTextbox"/>}
         {props.showDebugger && <JsDebugger/>}
       </span>
@@ -215,4 +175,13 @@ var CodeWorkspace = React.createClass({
   }
 });
 
-module.exports = Radium(CodeWorkspace);
+module.exports = connect(function propsFromStore(state) {
+  return {
+    editCode: state.pageConstants.isDroplet,
+    localeDirection: state.pageConstants.localeDirection,
+    readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+    isRunning: !!state.runState.isRunning,
+    showDebugger: !!(state.pageConstants.showDebugButtons || state.pageConstants.showDebugConsole),
+    isMinecraft: !!state.pageConstants.isMinecraft
+  };
+})(Radium(CodeWorkspace));

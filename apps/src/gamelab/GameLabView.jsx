@@ -7,12 +7,14 @@ var AnimationTab = require('./AnimationTab/AnimationTab');
 var connect = require('react-redux').connect;
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper');
 var ErrorDialogStack = require('./ErrorDialogStack');
-var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
+var gameLabConstants = require('./constants');
 var GameLabVisualizationHeader = require('./GameLabVisualizationHeader');
 var GameLabVisualizationColumn = require('./GameLabVisualizationColumn');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var InstructionsWithWorkspace = require('../templates/instructions/InstructionsWithWorkspace');
 
+var GameLabInterfaceMode = gameLabConstants.GameLabInterfaceMode;
+var GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 
 /**
  * Top-level React wrapper for GameLab
@@ -22,7 +24,6 @@ var GameLabView = React.createClass({
     interfaceMode: React.PropTypes.oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION]).isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
-    codeWorkspace: React.PropTypes.element.isRequired,
     showFinishButton: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
     onMount: React.PropTypes.func.isRequired
@@ -47,16 +48,19 @@ var GameLabView = React.createClass({
       codeModeStyle.display = 'none';
     }
 
+    var visualizationColumnStyle = {
+      width: GAME_WIDTH
+    };
+
     return (
       <div style={codeModeStyle}>
-        <div id="visualizationColumn">
+        <div id="visualizationColumn" style={visualizationColumnStyle}>
           {this.shouldShowHeader() && <GameLabVisualizationHeader />}
           <GameLabVisualizationColumn finishButton={this.props.showFinishButton}/>
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
         <InstructionsWithWorkspace
-          hideSource={this.props.hideSource}
-          codeWorkspace={this.props.codeWorkspace}/>
+          hideSource={this.props.hideSource}/>
       </div>
     );
   },
@@ -84,7 +88,7 @@ var GameLabView = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     interfaceMode: state.interfaceMode,
-    isEmbedView: state.level.isEmbedView,
-    isShareView: state.level.isShareView
+    isEmbedView: state.pageConstants.isEmbedView,
+    isShareView: state.pageConstants.isShareView
   };
 })(GameLabView);

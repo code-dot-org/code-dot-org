@@ -4,29 +4,31 @@
 - if @user_course_enrollments.nil? || @user_course_enrollments.empty?
   %p Hello #{current_user.name}, your future course progress will go here
 - else
-  %p Hello #{current_user.name}, here is your progress for your courses
-
   - @user_course_enrollments.each do |user_course_enrollment|
-    %h2 #{user_course_enrollment.plc_course.name}
-    - user_course_enrollment.plc_unit_assignments.each do |enrollment_unit_assignment|
-      .outlined_section
-        %h4
-          = enrollment_unit_assignment.plc_course_unit.unit_name
-        - case enrollment_unit_assignment.status
-          - when Plc::EnrollmentUnitAssignment::START_BLOCKED
-            %p
-              This unit cannot be started yet
-          - when Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
-            %p
-              = link_to 'Click here to take the evaluation quiz for this unit', perform_evaluation_path(enrollment_unit_assignment), class: 'btn'
-          - when Plc::EnrollmentUnitAssignment::IN_PROGRESS
-            %p
-              = link_to 'Click here to view tasks, resources, and get badged', plc_enrollment_unit_assignment_path(enrollment_unit_assignment), class: 'btn'
-          - when Plc::EnrollmentUnitAssignment::COMPLETED
-            %p.fa.fa-check-circle.fa-5x{style: 'color: green; display: table; margin: auto'}
-            %p{style: 'text-align: center'}
-              #{enrollment_unit_assignment.plc_course_unit.unit_name} badge complete!
-            %p
-              = link_to "Click here to #{enrollment_unit_assignment.plc_course_unit.unit_name} resources", plc_enrollment_unit_assignment_path(enrollment_unit_assignment), class: 'btn'
-      %br
-    %br
+    %h3.course_title
+      = user_course_enrollment.plc_course.name
+    -# Lame that we have to do this but Firefox doesn't support multiline flexboxes
+    - user_course_enrollment.plc_unit_assignments.each_slice(2).to_a.each do |unit_group|
+      .course_unit_sections
+        - unit_group.each do |unit_enrollment|
+          .course_unit_section
+            .course_unit_title
+              = unit_enrollment.plc_course_unit.unit_name
+            - if unit_enrollment.status == Plc::EnrollmentUnitAssignment::START_BLOCKED
+              .coming_soon
+                Coming soon!
+            - else
+              - required_module_assignment = unit_enrollment.module_assignment_for_type Plc::LearningModule::REQUIRED_MODULE
+              - content_module_assignment = unit_enrollment.module_assignment_for_type Plc::LearningModule::CONTENT_MODULE
+              - practice_module_assignment = unit_enrollment.module_assignment_for_type Plc::LearningModule::PRACTICE_MODULE
+              - evaluation_pending = required_module_assignment && content_module_assignment.nil? && practice_module_assignment.nil?
+              - unit_overview_status = evaluation_pending ? 'in_progress' : required_module_assignment.try(:status) || 'completed'
+              = link_to evaluation_pending ? perform_evaluation_path(unit_enrollment) : plc_enrollment_unit_assignment_path(unit_enrollment) do
+                .module_assignment{class: unit_overview_status}
+                  Overview
+              = link_to plc_enrollment_unit_assignment_path(unit_enrollment) do
+                .module_assignment{class: content_module_assignment.try(:status) || Plc::EnrollmentModuleAssignment::NOT_STARTED}
+                  Content
+              = link_to plc_enrollment_unit_assignment_path(unit_enrollment) do
+                .module_assignment{class: practice_module_assignment.try(:status) || Plc::EnrollmentModuleAssignment::NOT_STARTED}
+                  Teaching Practice

@@ -333,7 +333,7 @@ zip "MyString"
   factory :plc_enrollment_unit_assignment, :class => 'Plc::EnrollmentUnitAssignment' do
     plc_user_course_enrollment nil
     plc_course_unit nil
-    status Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
+    status Plc::EnrollmentUnitAssignment::START_BLOCKED
   end
 
   factory :plc_course_unit, :class => 'Plc::CourseUnit' do
@@ -465,7 +465,8 @@ zip "MyString"
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
     sequence(:name) { |n| "Workshop Participant #{n} " }
-    sequence(:email) { |n| "testuser#{n}@example.com.xx" }
+    sequence(:email) { |n| "participant#{n}@example.com.xx" }
+    school {'Example School'}
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
@@ -478,5 +479,10 @@ zip "MyString"
     course Pd::Workshop::COURSES.first
     rate_type Pd::DistrictPaymentTerm::RATE_TYPES.first
     rate 10
+  end
+
+  factory :professional_learning_partner do
+    sequence(:name) { |n| "PLP #{n}" }
+    contact {create :teacher}
   end
 end

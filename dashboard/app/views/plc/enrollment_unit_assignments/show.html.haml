@@ -18,9 +18,9 @@
       - module_assignment.plc_task_assignments.each do |task_assignment|
         - icon_class, icon_style = task_assignment.get_icon_and_style
         %i{class: 'fa ' + icon_class.to_s, style: icon_style}
-        = link_to task_assignment.plc_task.name,
-                  task_assignment.plc_task.try(:resource_url) ? "http://#{task_assignment.plc_task.resource_url}" : plc_enrollment_task_assignment_path(task_assignment),
-                  target: '_blank'
+        - sl = task_assignment.plc_task.script_level
+        - link = task_assignment.plc_task.try(:resource_url) ? "http://#{task_assignment.plc_task.resource_url}" : script_stage_script_level_path(sl.script, sl.stage, sl)
+        = link_to task_assignment.plc_task.name, link, target: '_blank'
         %br
 
 .all_possible_resources

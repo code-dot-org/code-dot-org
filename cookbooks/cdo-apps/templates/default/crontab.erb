@@ -90,8 +90,6 @@
   cronjob at:"#{rand(20)} */8 * * *", do:'service dashboard upgrade && service pegasus upgrade'
 
   cronjob at:"#{rand(60)} * * * *", do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
-
-  cronjob at:'@reboot', do:'chef-client'
 %>
 #
 # node: <%= node.name %>
