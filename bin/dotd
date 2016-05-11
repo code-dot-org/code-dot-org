@@ -70,7 +70,7 @@ end
 
 wait_for "staging to finish building. if a staging build was already running, wait for a second build which will include the levelbuilder content"
 
-should_i "commit content changes from staging" do
+should_i "commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD" do
   puts <<EOS
 Follow the prompts given by the content-push script. If you need to do something fancier (or if the changed files do not "look ok" when it asks you), log in to staging and hand-craft the commit.
 EOS
