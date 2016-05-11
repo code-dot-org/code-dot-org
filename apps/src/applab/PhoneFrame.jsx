@@ -36,12 +36,15 @@ const styles = {
     paddingTop: (FRAME_HEIGHT - ScreenSelector.styles.dropdown.height) / 2,
     width: '80%'
   },
-  buttons: {
-    paddingTop: 4, // TODO - actually center
+  buttonContainer: {
     marginLeft: 'auto',
     marginRight: 'auto',
     width: '100%',
-    textAlign: 'center'
+    textAlign: 'center',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: FRAME_HEIGHT
   },
   // The way that this works in the non-phone frame world is use media queries to
   // set runButton's min-width to be 111px at >1051, and 45px otherwise. When
@@ -98,7 +101,7 @@ const PhoneFrame = React.createClass({
             ]}
         >
           {experimentEnabled &&
-            <div style={styles.buttons}>
+            <div style={styles.buttonContainer}>
               <RunButton hidden={false} style={styles.buttonMinWidth}/>
               <ResetButton style={styles.buttonMinWidth}/>
             </div>
