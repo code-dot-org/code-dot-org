@@ -148,13 +148,14 @@ var Pairing = React.createClass({
             data: JSON.stringify({pairings: pairings}),
             contentType: 'application/json; charset=utf-8',
             method: 'PUT',
-            dataType: 'json'})
-      .done(function (result) {
+            dataType: 'json',
+            context: this})
+      .done(function (data, textStatus, jqXHR) {
         this.refreshUserMenu();
-      }.bind(this))
-      .fail(function (result) {
+      })
+      .fail(function (jqXHR, textStatus, errorThrown) {
         // TODO what to do here?
-      }.bind(this));
+      });
   },
 
   handleStop: function (event) {
@@ -168,10 +169,11 @@ var Pairing = React.createClass({
             contentType: 'application/json; charset=utf-8',
             method: 'PUT',
             dataType: 'json'})
-      .done(function (result) {
+      .done(function (data, textStatus, jqXHR) {
         this.refreshUserMenu();
+        this.props.handleClose(); // close dialog
       }.bind(this))
-      .fail(function (result) {
+      .fail(function (jqXHR, textStatus, errorThrown) {
         // TODO what to do here?
       }.bind(this));
 
