@@ -9,7 +9,7 @@ var styles = {
     display: 'inline'
   },
   phoneFrameButton: {
-    minWidth: 111,
+    minWidth: 105,
     textAlign: 'center'
   }
 };
