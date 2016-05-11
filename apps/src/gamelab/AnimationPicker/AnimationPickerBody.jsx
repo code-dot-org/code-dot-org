@@ -8,6 +8,7 @@ var Radium = require('radium');
 var ScrollableList = require('../AnimationTab/ScrollableList.jsx');
 var styles = require('./styles');
 import animationLibrary from '../animationLibrary';
+import { getLabel } from '../animationMetadata';
 
 var AnimationPickerBody = React.createClass({
   propTypes: {
@@ -34,7 +35,7 @@ var AnimationPickerBody = React.createClass({
           {animationLibrary.map(animation =>
             <AnimationPickerListItem
                 key={animation.sourceUrl}
-                label={animation.label}
+                label={getLabel(animation)}
                 animation={animation}
             />
           )}
