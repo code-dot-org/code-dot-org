@@ -1,12 +1,12 @@
 /** @file Render a gallery image/spritesheet as an animated preview */
 import { METADATA_SHAPE } from '../animationMetadata';
-var MARGIN_PX = 2;
+const MARGIN_PX = 2;
 
 /**
  * Render an animated preview of a spritesheet at a given size, scaled with
  * a fixed aspect ratio to fit.
  */
-var AnimationPreview = React.createClass({
+const AnimationPreview = React.createClass({
   propTypes: {
     animation: React.PropTypes.shape(METADATA_SHAPE).isRequired,
     width: React.PropTypes.number.isRequired,
@@ -48,7 +48,9 @@ var AnimationPreview = React.createClass({
   },
 
   advanceFrame: function () {
-    this.setState({ currentFrame: (this.state.currentFrame + 1) % this.props.animation.frameCount });
+    this.setState({
+      currentFrame: (this.state.currentFrame + 1) % this.props.animation.frameCount
+    });
     clearTimeout(this.timeout_);
     this.timeout_ = setTimeout(this.advanceFrame, 1000 / this.props.animation.frameRate);
   },
@@ -62,42 +64,37 @@ var AnimationPreview = React.createClass({
   },
 
   precalculateRenderProps: function (nextProps) {
-    var framesPerRow = Math.floor(nextProps.animation.sourceWidth / nextProps.animation.frameWidth);
-    var innerWidth = nextProps.width - 2 * MARGIN_PX;
-    var innerHeight = nextProps.height - 2 * MARGIN_PX;
-    var xScale = innerWidth / nextProps.animation.frameWidth;
-    var yScale = innerHeight / nextProps.animation.frameHeight;
-    var scale = Math.min(1, Math.min(xScale, yScale));
-    var scaledFrameHeight = nextProps.animation.frameHeight * scale;
+    const nextAnimation = nextProps.animation;
+    const innerWidth = nextProps.width - 2 * MARGIN_PX;
+    const innerHeight = nextProps.height - 2 * MARGIN_PX;
+    const xScale = innerWidth / nextAnimation.frameWidth;
+    const yScale = innerHeight / nextAnimation.frameHeight;
+    const scale = Math.min(1, Math.min(xScale, yScale));
+    const scaledFrameHeight = nextAnimation.frameHeight * scale;
     this.setState({
-      framesPerRow: framesPerRow,
-      scaledSourceWidth: nextProps.animation.sourceWidth * scale,
-      scaledFrameWidth: nextProps.animation.frameWidth * scale,
+      framesPerRow: Math.floor(nextAnimation.sourceWidth / nextAnimation.frameWidth),
+      scaledSourceWidth: nextAnimation.sourceWidth * scale,
+      scaledFrameWidth: nextAnimation.frameWidth * scale,
       scaledFrameHeight: scaledFrameHeight,
       extraTopMargin: Math.ceil((innerHeight - scaledFrameHeight) / 2),
-      wrappedSourceUrl: "url('" + nextProps.animation.sourceUrl + "')"
+      wrappedSourceUrl: `url('${nextAnimation.sourceUrl}')`
     });
   },
 
   render: function () {
-    var currentFrame = this.state.currentFrame;
-    var framesPerRow = this.state.framesPerRow;
-    var scaledFrameWidth = this.state.scaledFrameWidth;
-    var scaledFrameHeight = this.state.scaledFrameHeight;
-    var scaledSourceWidth = this.state.scaledSourceWidth;
-    var extraTopMargin = this.state.extraTopMargin;
-    var wrappedSourceUrl = this.state.wrappedSourceUrl;
+    const { currentFrame, framesPerRow, scaledSourceWidth, scaledFrameWidth,
+        scaledFrameHeight, extraTopMargin, wrappedSourceUrl} = this.state;
 
-    var row = Math.floor(currentFrame / framesPerRow);
-    var column = currentFrame % framesPerRow;
-    var xOffset = -scaledFrameWidth * column;
-    var yOffset = -scaledFrameHeight * row;
+    const row = Math.floor(currentFrame / framesPerRow);
+    const column = currentFrame % framesPerRow;
+    const xOffset = -scaledFrameWidth * column;
+    const yOffset = -scaledFrameHeight * row;
 
-    var containerStyle = {
+    const containerStyle = {
       width: this.props.width,
       height: this.props.height
     };
-    var imageStyle = {
+    const imageStyle = {
       width: scaledFrameWidth,
       height: scaledFrameHeight,
       marginTop: MARGIN_PX + extraTopMargin,
@@ -116,9 +113,9 @@ var AnimationPreview = React.createClass({
           style={containerStyle}
           onMouseOver={this.onMouseOver}
           onMouseOut={this.onMouseOut}>
-        <img src="/blockly/media/1x1.gif" style={imageStyle}/>
+        <img src="/blockly/media/1x1.gif" style={imageStyle} />
       </div>
     );
   }
 });
-module.exports = AnimationPreview;
+export default AnimationPreview;
