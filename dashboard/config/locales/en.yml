@@ -177,8 +177,6 @@ en:
         subject: "Join a class with %{teacher_name} at Code.org!"
       student_disassociated:
         subject: "Code.org notification: %{student_name} is no longer associated as your student."
-      teacher_disassociated:
-        subject: "Code.org notification: %{teacher_name} is no longer associated as your teacher."
   reports:
     error:
       access_denied: "You don't have access to this person's stats"
