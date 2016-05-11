@@ -324,6 +324,13 @@ ActiveRecord::Schema.define(version: 20160512224559) do
 
   add_index "pd_attendances", ["pd_session_id"], name: "index_pd_attendances_on_pd_session_id", using: :btree
 
+  create_table "pd_course_facilitators", force: :cascade do |t|
+    t.integer "facilitator_id", limit: 4,   null: false
+    t.string  "course",         limit: 255, null: false
+  end
+
+  add_index "pd_course_facilitators", ["course"], name: "index_pd_course_facilitators_on_course", using: :btree
+
   create_table "pd_district_payment_terms", force: :cascade do |t|
     t.integer "district_id", limit: 4
     t.string  "course",      limit: 255,                         null: false
