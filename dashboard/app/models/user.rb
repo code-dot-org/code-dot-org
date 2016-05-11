@@ -117,6 +117,9 @@ class User < ActiveRecord::Base
     class_name: 'District',
     foreign_key: 'contact_id'
 
+  has_many :districts_users, class_name: 'DistrictsUsers'
+  has_many :districts, through: :districts_users
+
   belongs_to :invited_by, :polymorphic => true
 
   # TODO: I think we actually want to do this.

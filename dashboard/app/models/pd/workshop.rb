@@ -35,16 +35,39 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_ECS = 'ECS',
     COURSE_CS_IN_A = 'CSinA',
     COURSE_CS_IN_S = 'CSinS',
-    COURSE_CSD = 'CSD'
+    COURSE_CSD = 'CSD',
+    COURSE_COUNSELOR_ADMIN = 'Counselor/Admin'
   ]
 
   STATE_NOT_STARTED = 'Not Started'
   STATE_IN_PROGRESS = 'In Progress'
   STATE_ENDED = 'Ended'
 
+  SUBJECTS = {
+    COURSE_ECS => [
+      'Phase 2: Summer Study',
+      'Phase 3 - Quarter 1',
+      'Phase 3 - Quarter 2',
+      'Phase 3 - Quarter 3',
+      'Phase 3 - Quarter 4',
+      'Phase 4: Summer wrap-up'
+    ],
+    COURSE_CS_IN_A => [
+      'Phase 2: Summer Study',
+      'Phase 3: Academic Year Development'
+    ],
+    COURSE_CS_IN_S => [
+      'Phase 2: Blended Summer Study',
+      'Phase 3 - Semester 1',
+      'Phase 3 - Semester 2'
+    ]
+  }
+
   validates_inclusion_of :workshop_type, in: TYPES
   validates_inclusion_of :course, in: COURSES
-  validates :capacity, numericality: {only_integer: true, greater_than: 0}
+  validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
+  validate :sessions_must_start_on_separate_days
+  validate :subject_must_be_valid_for_course
 
   belongs_to :organizer, class_name: 'User'
   has_and_belongs_to_many :facilitators, class_name: 'User', join_table: 'pd_workshops_facilitators', foreign_key: 'pd_workshop_id', association_foreign_key: 'user_id'
@@ -54,6 +77,22 @@ class Pd::Workshop < ActiveRecord::Base
 
   has_many :enrollments, class_name: 'Pd::Enrollment', dependent: :destroy, foreign_key: 'pd_workshop_id'
   belongs_to :section
+
+  def sessions_must_start_on_separate_days
+    if sessions.all(&:valid?)
+      unless sessions.map{|session| session.start.to_datetime.to_date}.uniq.length == sessions.length
+        errors.add(:sessions, 'must start on separate days.')
+      end
+    else
+      errors.add(:sessions, "must each have a valid start and end.")
+    end
+  end
+
+  def subject_must_be_valid_for_course
+    unless (SUBJECTS[course] && SUBJECTS[course].include?(subject)) || (!SUBJECTS[course] && !subject)
+      errors.add(:subject, 'must be a valid option for the course.')
+    end
+  end
 
   def self.organized_by(organizer)
     where(organizer_id: organizer.id)
@@ -71,26 +110,41 @@ class Pd::Workshop < ActiveRecord::Base
     joins(sessions: :attendances).where(pd_attendances: {teacher_id: teacher.id}).distinct
   end
 
+  def self.in_state(state)
+    case state
+      when STATE_NOT_STARTED
+        where(started_at: nil)
+      when STATE_IN_PROGRESS
+        where.not(started_at: nil).where(ended_at: nil)
+      when STATE_ENDED
+        where.not(started_at: nil).where.not(ended_at: nil)
+      else
+        raise "Unrecognized state: #{state}"
+    end
+  end
+
   def friendly_name
     start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
     "Workshop #{start_time} at #{location_name}"
   end
 
+  # Puts workshop in 'In Progress' state, creates a section and returns the section.
   def start!
     return unless self.started_at.nil?
     raise 'Workshop must have at least one session to start.' if self.sessions.empty?
 
-    self.started_at = DateTime.now
+    self.started_at = Time.zone.now
     self.section = Section.create!(
       name: friendly_name,
       user_id: self.organizer_id
     )
     self.save!
+    self.section
   end
 
   def end!
     return unless self.ended_at.nil?
-    self.ended_at = DateTime.now
+    self.ended_at = Time.zone.now
     self.save!
   end
 
