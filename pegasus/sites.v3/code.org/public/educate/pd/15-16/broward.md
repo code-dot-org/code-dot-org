@@ -111,7 +111,12 @@ Breakfast and lunch will be served.
 
 **Location**
 
-More Details Coming Soon!
+Broward County Public Schools<br/>
+Office of Talent Development<br/>
+3531 Davie Road<br/>
+Davie, Florida  33314
+
+[See this map for location and parking directions.](/files/BrowardPhase4Map.pdf)
 
 **What do I bring to my Phase 4 Workshop?**
 

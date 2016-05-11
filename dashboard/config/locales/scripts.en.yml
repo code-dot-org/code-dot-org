@@ -1901,3 +1901,10 @@ en:
           test Unit 1 practice module Delta: test Unit 1 practice module Delta
           test Unit 1 practice module Echo: test Unit 1 practice module Echo
           test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        'csp-facilitators ':
+          title: CSP Tool Overview
+          description_short: Introduction to CS Principles for new Facilitators
+          description: A collection of tools from the CS Principles course. These levels provide a glimpse into the tools we use throughout the curriculum to
+          Introduction to Text Compression: Introduction to Text Compression
+          Turtle Programming: Turtle Programming
+          Introduction to Events: Introduction to Events

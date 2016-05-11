@@ -23,9 +23,15 @@ var styles = {
 var ApplabVisualizationColumn = React.createClass({
   propTypes: {
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
+    instructionsInTopPane: React.PropTypes.bool.isRequired,
+    visualizationHasPadding: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
+    isShareView: React.PropTypes.bool.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
+    isRunning: React.PropTypes.bool.isRequired,
+    interfaceMode: React.PropTypes.string.isRequired,
 
+    // non redux backed
     isEditingProject: React.PropTypes.bool.isRequired,
     screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
@@ -47,7 +53,13 @@ var ApplabVisualizationColumn = React.createClass({
             screenIds={this.props.screenIds}
             onScreenCreate={this.props.onScreenCreate} />
         }
-        <PhoneFrame showFrame={showFrame} isDark={this.props.isRunning}>
+        <PhoneFrame
+            showFrame={showFrame}
+            isDark={this.props.isRunning}
+            showSelector={this.props.interfaceMode === applabConstants.ApplabInterfaceMode.DESIGN}
+            screenIds={this.props.screenIds}
+            onScreenCreate={this.props.onScreenCreate}
+        >
           <Visualization/>
         </PhoneFrame>
         <GameButtons instructionsInTopPane={this.props.instructionsInTopPane}>
@@ -67,5 +79,6 @@ module.exports = connect(function propsFromStore(state) {
     isShareView: state.pageConstants.isShareView,
     isEmbedView: state.pageConstants.isEmbedView,
     isRunning: state.runState.isRunning,
+    interfaceMode: state.interfaceMode
   };
 })(Radium(ApplabVisualizationColumn));

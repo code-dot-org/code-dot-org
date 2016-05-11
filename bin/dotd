@@ -2,7 +2,7 @@
 
 def should_i(question)
   loop do
-    print "Should I #{question}? [Yes/Skip/Quit] "
+    print "Should I #{question}? [#{underline('Y')}es]/#{underline('S')}kip/#{underline('Q')}uit: "
     response = gets.strip.downcase
     if "yes".start_with? response # also catches blank/return ;)
       yield
@@ -15,6 +15,12 @@ def should_i(question)
     end
   end
 end
+
+def stylize(text, color_code)
+  "\e[#{color_code}m#{text}\e[0m"
+end
+
+def underline(text); stylize(text, 4); end
 
 def wait_for(thing)
   print "Wait for #{thing} then hit enter to continue..."
@@ -29,7 +35,6 @@ end
 
 def open_in_default_browser(url)
   # Based on http://stackoverflow.com/a/14053693/5000129
-  puts "host_os: #{RbConfig::CONFIG['host_os']}"
   if RbConfig::CONFIG['host_os'] =~ /linux|bsd/
     system "sensible-browser \"#{url}\""
   else
