@@ -39,7 +39,6 @@ class Ability
         Plc::CourseUnit,
         # PD models
         Pd::Workshop,
-        Pd::Enrollment,
         Pd::Attendance,
         Pd::DistrictPaymentTerm
       ]

@@ -5,6 +5,9 @@ var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var connect = require('react-redux').connect;
 var experiments = require('../experiments');
 var classNames = require('classnames');
+import VisualizationOverlay from '../templates/VisualizationOverlay';
+import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
+import AppLabTooltipOverlay from './AppLabTooltipOverlay';
 
 var styles = {
   nonResponsive: {
@@ -19,7 +22,6 @@ var styles = {
     marginBottom: 0
   }
 };
-
 
 var Visualization = React.createClass({
   propTypes: {
@@ -46,14 +48,10 @@ var Visualization = React.createClass({
         >
           <div id="divApplab" className="appModern" tabIndex="1"/>
           <div id="designModeViz" className="appModern" style={commonStyles.hidden}/>
-          <svg version="1.1"
-               baseProfile="full"
-               xmlns="http://www.w3.org/2000/svg"
-               id="visualizationOverlay"
-               width={appWidth}
-               height={appHeight}
-               viewBox={"0 0 " + appWidth + " " + appHeight}
-               pointerEvents="none"/>
+          <VisualizationOverlay width={appWidth} height={appHeight}>
+            <AppLabCrosshairOverlay/>
+            <AppLabTooltipOverlay/>
+          </VisualizationOverlay>
         </div>
       </ProtectedStatefulDiv>
     );

@@ -116,7 +116,7 @@
     "sprintf-js": "^1.0.3",
     "stackblur": "^1.0.0",
     "time-grunt": "^1.3.0",
-    "time-grunt-nowatch": "github:pcardune/time-grunt-nowatch#fefcb475ca216c774a741b987c0799d1ea9b03a7",
+    "time-grunt-nowatch": "github:pcardune/time-grunt-nowatch#c88a3793cf7953090f78fa36f0e991abdcd756da",
     "uglify-js": "2.4.24",
     "which": "1.1.1"
   },
