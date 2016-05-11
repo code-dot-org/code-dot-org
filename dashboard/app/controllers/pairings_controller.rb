@@ -9,7 +9,7 @@ class PairingsController < ApplicationController
   def update
     self.pairings = params[:pairings]
 
-    head :ok
+    render json: {pairings: pairings_summary, sections: sections_summary}
   end
 
   private
