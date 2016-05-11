@@ -45,14 +45,9 @@ const styles = {
     justifyContent: 'center',
     height: FRAME_HEIGHT
   },
-  // The way that this works in the non-phone frame world is use media queries to
-  // set runButton's min-width to be 111px at >1051, and 45px otherwise. When
-  // min-width was 45px, we would actually render at 105px.
-  // In phone frame, there's no reason to resize based on screen width since we
-  // don't need to make room for more buttons on the same row. I've decided the
-  // 105px looks better than 11px so I'm going with that.
+
   buttonMinWidth: {
-    minWidth: 105
+    minWidth: CompletionButton.styles.phoneFrameButton.minWidth
   }
 };
 

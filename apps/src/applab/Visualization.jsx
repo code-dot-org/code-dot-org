@@ -43,7 +43,7 @@ var Visualization = React.createClass({
             style={[
               (this.props.isEmbedView || this.props.hideSource) && styles.nonResponsive,
               this.props.isShareView && styles.share,
-              !this.props.isShareView && this.props.playspacePhoneFrame && styles.phoneFrame
+              this.props.playspacePhoneFrame && styles.phoneFrame
             ]}
         >
           <div id="divApplab" className="appModern" tabIndex="1"/>
