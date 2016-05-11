@@ -1,7 +1,7 @@
 var msg = require('../locale');
 var commonStyles = require('../commonStyles');
 
-var GameButtons = require('../templates/GameButtons');
+var GameButtons = require('../templates/GameButtons').default;
 var ArrowButtons = require('../templates/ArrowButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');

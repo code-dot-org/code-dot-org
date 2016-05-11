@@ -1,4 +1,4 @@
-var GameButtons = require('../templates/GameButtons');
+var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
 
 /**
