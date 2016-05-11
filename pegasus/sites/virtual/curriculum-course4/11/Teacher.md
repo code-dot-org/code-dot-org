@@ -10,7 +10,7 @@ theme: none
 
 [together]
 
-## Lesson Overview 
+## Lesson Overview
 
 Building on the previous Play Lab activity, students will add deeper interactivity as they build their own video games.
 
@@ -29,12 +29,12 @@ Building on the previous Play Lab activity, students will add deeper interactivi
 
 [/summary]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 
 - Utilize for loops to count from 1 to 100
 - Count by tens repeatedly using the for loop structure
-- Employ skills from previous lessons to create more difficult looping algorithms 
+- Employ skills from previous lessons to create more difficult looping algorithms
 
 [/together]
 
@@ -114,7 +114,6 @@ Play Lab allows students to combine their new for loop skills with skills from p
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
 
 [/content]

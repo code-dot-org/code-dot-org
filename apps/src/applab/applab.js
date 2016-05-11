@@ -57,6 +57,7 @@ var applabConstants = require('./constants');
 var consoleApi = require('../consoleApi');
 
 var BoardController = require('../makerlab/BoardController');
+import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -697,29 +698,11 @@ Applab.init = function (config) {
   var onMount = function () {
     studioApp.init(config);
 
-    var viz = document.getElementById('visualization');
-    var vizCol = document.getElementById('visualizationColumn');
-
-    if (!config.noPadding) {
-      viz.className += " with_padding";
-      vizCol.className += " with_padding";
-    }
-
-    if (studioApp.reduxStore.getState().pageConstants.isEmbedView || config.hideSource) {
-      // no responsive styles active in embed or hideSource mode, so set sizes:
-      viz.style.width = Applab.appWidth + 'px';
-      viz.style.height = (shouldRenderFooter() ? Applab.appHeight : Applab.footerlessAppHeight) + 'px';
-      // Use offsetWidth of viz so we can include any possible border width:
-      vizCol.style.maxWidth = viz.offsetWidth + 'px';
-    }
-
     if (debuggerUi) {
       debuggerUi.initializeAfterDomCreated({
         defaultStepSpeed: config.level.sliderSpeed
       });
     }
-
-    window.addEventListener('resize', Applab.renderVisualizationOverlay);
 
     var finishButton = document.getElementById('finishButton');
     if (finishButton) {
@@ -758,6 +741,8 @@ Applab.init = function (config) {
   studioApp.reduxStore.dispatch(setPageConstants({
     assetUrl: studioApp.assetUrl,
     channelId: config.channel,
+    visualizationHasPadding: !config.noPadding,
+    hideSource: !!config.hideSource,
     isDesignModeHidden: !!config.level.hideDesignMode,
     isEmbedView: !!config.embed,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
@@ -806,8 +791,27 @@ function setupReduxSubscribers(store) {
     if (state.interfaceMode !== lastState.interfaceMode) {
       onInterfaceModeChange(state.interfaceMode);
     }
+
+    if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
+      Applab.onIsRunningChange();
+    }
   });
 }
+
+Applab.onIsRunningChange = function () {
+  Applab.setCrosshairCursorForPlaySpace();
+};
+
+/**
+ * Hopefully a temporary measure - we do this ourselves for now because this is
+ * a 'protected' div that React doesn't update, but eventually would rather do
+ * this with React.
+ */
+Applab.setCrosshairCursorForPlaySpace = function () {
+  var showOverlays = shouldOverlaysBeVisible(studioApp.reduxStore.getState());
+  $('#divApplab').toggleClass('withCrosshair', showOverlays);
+  $('#designModeViz').toggleClass('withCrosshair', true);
+};
 
 /**
  * Cache of props, established during init, to use when re-rendering top-level
@@ -883,7 +887,7 @@ Applab.clearEventHandlersKillTickLoop = function () {
  * @returns {boolean}
  */
 Applab.isRunning = function () {
-  return studioApp.reduxStore.getState().runState.isRunning;
+  return studioApp.isRunning();
 };
 
 /**
@@ -946,8 +950,6 @@ Applab.reset = function (first) {
     applabTurtle.turtleSetVisibility(true);
   }
 
-  Applab.renderVisualizationOverlay();
-
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
@@ -970,42 +972,6 @@ Applab.reset = function (first) {
     Applab.JSInterpreter.deinitialize();
     Applab.JSInterpreter = null;
   }
-};
-
-/**
- * Manually re-render visualization SVG overlay.
- * Should call whenever its state/props would change.
- */
-Applab.renderVisualizationOverlay = function () {
-  var divApplab = document.getElementById('divApplab');
-  var designModeViz = document.getElementById('designModeViz');
-  var visualizationOverlay = document.getElementById('visualizationOverlay');
-  if (!divApplab || !designModeViz || !visualizationOverlay) {
-    return;
-  }
-
-  // Enable crosshair cursor for divApplab and designModeViz
-  $(divApplab).toggleClass('withCrosshair', Applab.isCrosshairAllowed());
-  $(designModeViz).toggleClass('withCrosshair', true);
-
-  if (!Applab.visualizationOverlay_) {
-    /** @private {AppLabCrosshairOverlay} */
-    Applab.crosshairOverlay_ = new AppLabCrosshairOverlay();
-    /** @private {VisualizationOverlay} */
-    Applab.visualizationOverlay_ = new VisualizationOverlay(Applab.crosshairOverlay_);
-  }
-
-  // Tell the crosshair overlay whether we're in design mode
-  Applab.crosshairOverlay_.setInDesignMode(Applab.isInDesignMode());
-
-  // Calculate current visualization scale to pass to the overlay component.
-  var unscaledWidth = parseInt(visualizationOverlay.getAttribute('width'));
-  var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
-
-  Applab.visualizationOverlay_.render(visualizationOverlay, {
-    isCrosshairAllowed: Applab.isCrosshairAllowed(),
-    scale: scaledWidth / unscaledWidth
-  });
 };
 
 /**
@@ -1046,9 +1012,6 @@ Applab.runButtonClick = function () {
     Blockly.mainBlockSpace.traceOn(true);
   }
   Applab.execute();
-
-  // Re-render overlay to update cursor rules.
-  Applab.renderVisualizationOverlay();
 
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');
@@ -1239,7 +1202,7 @@ function onInterfaceModeChange(mode) {
       Applab.serializeAndSave();
       var divApplab = document.getElementById('divApplab');
       designMode.parseFromLevelHtml(divApplab, false);
-      Applab.changeScreen(studioApp.reduxStore.getState().currentScreenId);
+      Applab.changeScreen(studioApp.reduxStore.getState().screens.currentScreenId);
     } else {
       Applab.activeScreen().focus();
     }
@@ -1610,10 +1573,6 @@ Applab.getScreens = function () {
 // Wrap design mode function so that we can call from commands
 Applab.updateProperty = function (element, property, value) {
   return designMode.updateProperty(element, property, value);
-};
-
-Applab.isCrosshairAllowed = function () {
-  return !Applab.isRunning();
 };
 
 Applab.showRateLimitAlert = function () {

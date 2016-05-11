@@ -42,7 +42,7 @@ class UserScript < ActiveRecord::Base
   def mark_script_completion_levels
     if completed_at && script.pd
       ScriptCompletion.all.
-        select{ |sc| sc.script_id == script.id.to_s }.
+        select{ |sc| sc.script_name == script.name }.
         map(&:script_levels).flatten.
         each{ |sl| user.track_level_progress_async(script_level: sl, new_result: ActivityConstants::BEST_PASS_RESULT, submitted: false, level_source_id: nil) }
     end

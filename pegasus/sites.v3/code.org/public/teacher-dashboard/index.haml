@@ -757,23 +757,23 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
     $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
 
-    $scope.correctness_list = {
-      free_response: '#{I18n.t('dashboard_correctness_free_response')}',
-      unsubmitted:   '#{I18n.t('dashboard_correctness_unsubmitted')}',
-      correct:       '#{I18n.t('dashboard_correctness_correct')}',
-      incorrect:     '#{I18n.t('dashboard_correctness_incorrect')}'
-    };
-
-    $scope.submission_list = {
-      submitted:   '#{I18n.t('dashboard_submission_submitted')}',
-      in_progress: '#{I18n.t('dashboard_submission_in_progress')}',
-    };
-
     // wait until we have both the students and the student progress
     $q.all([$scope.section.$promise, $scope.assessments.$promise]).then(function(){
       $scope.assessmentsLoaded = true;
       $scope.findStages();
     });
+
+    var submission_list = {
+      submitted:   '#{I18n.t('dashboard_submission_submitted')}',
+      in_progress: '#{I18n.t('dashboard_submission_in_progress')}',
+    };
+
+    var correctness_list = {
+      free_response: '#{I18n.t('dashboard_correctness_free_response')}',
+      unsubmitted:   '#{I18n.t('dashboard_correctness_unsubmitted')}',
+      correct:       '#{I18n.t('dashboard_correctness_correct')}',
+      incorrect:     '#{I18n.t('dashboard_correctness_incorrect')}'
+    };
 
     $scope.changeScript = function(scriptId) {
       $scope.assessmentsLoaded = false;
@@ -794,7 +794,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
           } else {
             assessment.multi_correct_percent = assessment.multi_correct / assessment.multi_count * 100;
           }
-          assessment.status = assessment.submitted ? "submitted" : "in_progress";
+          assessment.status = assessment.submitted ? submission_list["submitted"] : submission_list["in_progress"];
 
           // Don't show a timestamp for non-submittted assessments.
           if (!assessment.submitted) {
@@ -811,7 +811,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
               question: index + 1,
               student: assessment.student,
               studentResult: level_result.student_result,
-              correct: level_result.correct
+              correct: correctness_list[level_result.correct]
             };
             $scope.levels.push(levelResult);
           });

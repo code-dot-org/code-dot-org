@@ -70,7 +70,6 @@ Code.org is offering $50 off [**Dash & Dot pack**](https://store.makewonder.com/
 **Need more support?**
 
 - Refresh your skills before you teach. Check out our [online workshop](https://code.org/educate/professional-development-online).
-- Meet us online. Attend one of our [online monthly meetings](http://www.eventbrite.com/o/codeorg-teacher-community-8317327577).
 - Connect with other educators teaching CS. Join our [Professional Learning Community](http://forum.code.org/). 
 - See our [FAQ](http://support.code.org/). 
 - Or [contact us](http://code.org/contact).
