@@ -1003,9 +1003,6 @@ Applab.runButtonClick = function () {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
-  if (!resetButton.style.minWidth) {
-    resetButton.style.minWidth = runButton.offsetWidth + 'px';
-  }
 
   studioApp.toggleRunReset('reset');
   if (studioApp.isUsingBlockly()) {

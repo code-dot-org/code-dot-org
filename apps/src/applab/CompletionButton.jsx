@@ -2,10 +2,15 @@ var msg = require('../locale');
 
 var connect = require('react-redux').connect;
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+var experiments = require('../experiments');
 
 var styles = {
   main: {
     display: 'inline'
+  },
+  phoneFrameButton: {
+    minWidth: 111,
+    textAlign: 'center'
   }
 };
 
@@ -47,7 +52,11 @@ var CompletionButton = React.createClass({
     return (
       <ProtectedStatefulDiv style={styles.main}>
         <div id="share-cell" className={divClass}>
-          <button id={id} className="share">
+          <button
+              id={id}
+              className="share"
+              style={[experiments.isEnabled('phoneFrame') && styles.phoneFrameButton]}
+          >
             <img src="/blockly/media/1x1.gif"/>
             {contents}
           </button>

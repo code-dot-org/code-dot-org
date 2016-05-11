@@ -9,10 +9,21 @@ var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var applabConstants = require('./constants');
 var connect = require('react-redux').connect;
 var classNames = require('classnames');
+var experiments = require('../experiments');
 
 var styles = {
   nonResponsive: {
     maxWidth: applabConstants.APP_WIDTH,
+  },
+  completion: {
+    display: 'inline'
+  },
+  phoneFrameCompletion: {
+    display: 'block',
+    width: '100%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    textAlign: 'center'
   }
 };
 
@@ -63,7 +74,13 @@ var ApplabVisualizationColumn = React.createClass({
           <Visualization/>
         </PhoneFrame>
         <GameButtons instructionsInTopPane={this.props.instructionsInTopPane}>
-          <CompletionButton/>
+          <div style={[
+              styles.completion,
+              experiments.isEnabled('phoneFrame') && styles.phoneFrameCompletion
+            ]}
+          >
+            <CompletionButton/>
+          </div>
         </GameButtons>
         <BelowVisualization instructionsInTopPane={this.props.instructionsInTopPane}/>
       </div>
