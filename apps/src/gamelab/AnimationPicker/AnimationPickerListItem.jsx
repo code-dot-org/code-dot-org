@@ -1,15 +1,15 @@
 /** @file A clickable item in the scroll area of the animation picker */
 'use strict';
 
-var AnimationPreview = require('./AnimationPreview');
-var color = require('../../color');
-var Radium = require('radium');
+import Radium from 'radium';
+import color from '../../color';
+import AnimationPreview from './AnimationPreview';
 import { METADATA_SHAPE } from '../animationMetadata';
 
-var THUMBNAIL_SIZE = 105;
-var THUMBNAIL_BORDER_WIDTH = 1;
+const THUMBNAIL_SIZE = 105;
+const THUMBNAIL_BORDER_WIDTH = 1;
 
-var styles = {
+const styles = {
   root: {
     float: 'left',
     width: THUMBNAIL_SIZE,
@@ -50,38 +50,42 @@ var styles = {
   }
 };
 
-var AnimationPickerListItem = function (props) {
-  var thumbnailStyle = [
-    styles.thumbnail,
-    props.icon && styles.thumbnailIcon
-  ];
+const AnimationPickerListItem = React.createClass({
+  propTypes: {
+    animation: React.PropTypes.shape(METADATA_SHAPE),
+    icon: React.PropTypes.string,
+    label: React.PropTypes.string.isRequired,
+    onClick: React.PropTypes.func
+  },
 
-  var labelStyle = [
-    styles.label,
-    props.icon && styles.labelIcon
-  ];
+  render() {
+    var thumbnailStyle = [
+      styles.thumbnail,
+      this.props.icon && styles.thumbnailIcon
+    ];
 
-  return (
-    <div style={styles.root} onClick={props.onClick}>
-      <div style={thumbnailStyle}>
-        {props.animation &&
-            <AnimationPreview
-                animation={props.animation}
-                width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-                height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-            />}
-        {props.icon && <i className={"fa fa-" + props.icon} />}
+    var labelStyle = [
+      styles.label,
+      this.props.icon && styles.labelIcon
+    ];
+
+    return (
+      <div style={styles.root} onClick={this.props.onClick}>
+        <div style={thumbnailStyle}>
+          {this.props.animation &&
+              <AnimationPreview
+                  animation={this.props.animation}
+                  width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+                  height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+              />
+          }
+          {this.props.icon && <i className={"fa fa-" + this.props.icon} />}
+        </div>
+        <div style={labelStyle}>
+          {this.props.label}
+        </div>
       </div>
-      <div style={labelStyle}>
-        {props.label}
-      </div>
-    </div>
-  );
-};
-AnimationPickerListItem.propTypes = {
-  animation: React.PropTypes.shape(METADATA_SHAPE),
-  icon: React.PropTypes.string,
-  label: React.PropTypes.string.isRequired,
-  onClick: React.PropTypes.func
-};
-module.exports = Radium(AnimationPickerListItem);
+    );
+  }
+});
+export default Radium(AnimationPickerListItem);
