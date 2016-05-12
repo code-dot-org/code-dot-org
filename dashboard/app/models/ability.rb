@@ -26,6 +26,7 @@ class Ability
         :reports,
         User,
         Follower,
+        PeerReview,
         # Ops models
         District,
         Workshop,
