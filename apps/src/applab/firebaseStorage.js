@@ -152,12 +152,14 @@ function createEntry(key, value) {
   return result;
 }
 
-var RATE_LIMIT_INTERVAL_MS = 15 * 1000; // 15 seconds
+var RATE_LIMIT_INTERVAL_SEC = 15;
+var RATE_LIMIT_INTERVAL_MS = RATE_LIMIT_INTERVAL_SEC * 1000;
 var RATE_LIMIT_MAX_OP_COUNT = 3;
 
-function resetTimestamp(channelData) {
-  channelData.timestamp = Firebase.ServerValue.TIMESTAMP;
-  channelData.op_count = 0;
+function resetTimestamp(channelData, interval) {
+  var prefix = 'limits/' + interval + '/';
+  channelData[prefix + 'last_reset_time'] = Firebase.ServerValue.TIMESTAMP;
+  channelData[prefix + 'last_op_count'] = 0;
 }
 
 /**
@@ -166,8 +168,12 @@ function resetTimestamp(channelData) {
  * @param {number} opCount
  * @returns {boolean} true if the request is expected to pass rate limit rules.
  */
-function updateRateLimitInfo(channelData, currentTime, timestamp, opCount) {
-  if (timestamp == null || opCount == null || opCount >= RATE_LIMIT_MAX_OP_COUNT) {
+function updateRateLimitInfo(channelData, currentTime, limits) {
+  var rateLimit = limits[RATE_LIMIT_INTERVAL_SEC] || {};
+  var timestamp = rateLimit.last_reset_time;
+  var opCount = rateLimit.last_op_count;
+
+  if (typeof timestamp != 'number' || typeof opCount != 'number'|| opCount >= RATE_LIMIT_MAX_OP_COUNT) {
     // We need to reset the count on our next request in order to comply
     // with rate limits enforced by security rules.
     if (currentTime < timestamp + RATE_LIMIT_INTERVAL_MS) {
@@ -176,11 +182,11 @@ function updateRateLimitInfo(channelData, currentTime, timestamp, opCount) {
       console.log('rate limit exceeded. please wait ' + timeRemaining + ' seconds before retrying.');
       return false;
     } else {
-      resetTimestamp(channelData);
+      resetTimestamp(channelData, RATE_LIMIT_INTERVAL_SEC);
       return true;
     }
   } else {
-    channelData.op_count = opCount + 1;
+    channelData['limits/' + RATE_LIMIT_INTERVAL_SEC + '/last_op_count'] = opCount + 1;
     return true;
   }
 }
@@ -194,26 +200,25 @@ function updateRateLimitInfo(channelData, currentTime, timestamp, opCount) {
  */
 function getServerData(channelRef, tableName, onSuccess, onError) {
   // TODO(dave): consolidate read operations and handle errors
+  var limitsRef = channelRef.child('limits');
+  var serverTimeRef = channelRef.child('server_time').child(userId);
   var tableRef = getTable(Applab.channelId, tableName);
-  var serverTimeRef = getDatabase(Applab.channelId).child('server_time').child(userId);
-  channelRef.child('timestamp').once('value', function (timestampSnapshot) {
-    channelRef.child('op_count').once('value', function (opCountSnapshot) {
-      tableRef.child('row_count').once('value', function (rowCountSnapshot) {
-        serverTimeRef.set(Firebase.ServerValue.TIMESTAMP, function (err) {
-          if (err) {
-            onError(err);
-          } else {
-            serverTimeRef.onDisconnect().remove();
-            serverTimeRef.once('value', function (currentTimeSnapshot) {
-              onSuccess({
-                timestamp: timestampSnapshot.val(),
-                opCount: opCountSnapshot.val(),
-                rowCount: rowCountSnapshot.val(),
-                currentTime: currentTimeSnapshot.val()
-              });
+
+  limitsRef.once('value', function (limitsSnapshot) {
+    tableRef.child('row_count').once('value', function (rowCountSnapshot) {
+      serverTimeRef.set(Firebase.ServerValue.TIMESTAMP, function (err) {
+        if (err) {
+          onError(err);
+        } else {
+          serverTimeRef.onDisconnect().remove();
+          serverTimeRef.once('value', function (currentTimeSnapshot) {
+            onSuccess({
+              limits: limitsSnapshot.val() || {},
+              rowCount: rowCountSnapshot.val(),
+              currentTime: currentTimeSnapshot.val()
             });
-          }
-        });
+          });
+        }
       });
     });
   });
@@ -242,7 +247,7 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
       var newRowCount = (serverData.rowCount || 0) + 1;
       channelData['tables/' + tableName + '/row_count']= newRowCount;
 
-      if (updateRateLimitInfo(channelData, serverData.currentTime, serverData.timestamp, serverData.opCount)) {
+      if (updateRateLimitInfo(channelData, serverData.currentTime, serverData.limits)) {
         channelRef.update(channelData, function (error) {
           if (!error) {
             onSuccess(record);
@@ -334,7 +339,7 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
     // TODO: We need to handle the 404 case, probably by attempting a read.
     channelData['tables/' + tableName + '/row_count']= serverData.rowCount;
 
-    if (updateRateLimitInfo(channelData, serverData.currentTime, serverData.timestamp, serverData.opCount)) {
+    if (updateRateLimitInfo(channelData, serverData.currentTime, serverData.limits)) {
       channelRef.update(channelData, function (error) {
         if (!error) {
           onComplete(record, true);
@@ -368,7 +373,7 @@ FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError)
     // TODO: We need to handle the 404 case, probably by attempting a read.
     channelData['tables/' + tableName + '/row_count']= serverData.rowCount - 1;
 
-    if (updateRateLimitInfo(channelData, serverData.currentTime, serverData.timestamp, serverData.opCount)) {
+    if (updateRateLimitInfo(channelData, serverData.currentTime, serverData.limits)) {
       channelRef.update(channelData, function (error) {
         if (!error) {
           onComplete(true);
