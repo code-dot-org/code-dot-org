@@ -20,6 +20,16 @@ var styles = {
   },
   phoneFrame: {
     marginBottom: 0
+  },
+  screenBlock: {
+    backgroundColor: 'rgba(0, 0, 0, 0.05)',
+    width: applabConstants.APP_WIDTH,
+    height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT,
+    overflow: 'hidden',
+    zIndex: 4,
+    position: 'absolute',
+    top: 0,
+    left: 0
   }
 };
 
@@ -29,6 +39,7 @@ var Visualization = React.createClass({
     hideSource: React.PropTypes.bool.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
+    isPaused: React.PropTypes.bool.isRequired,
     playspacePhoneFrame: React.PropTypes.bool.isRequired
   },
 
@@ -37,7 +48,7 @@ var Visualization = React.createClass({
     var appHeight = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
 
     return (
-      <ProtectedStatefulDiv>
+      <div>
         <div id="visualization"
             className={classNames({with_padding: this.props.visualizationHasPadding})}
             style={[
@@ -52,8 +63,13 @@ var Visualization = React.createClass({
             <AppLabCrosshairOverlay/>
             <AppLabTooltipOverlay/>
           </VisualizationOverlay>
+          <div style={[
+              styles.screenBlock,
+              !(this.props.isPaused && this.props.playspacePhoneFrame) && commonStyles.hidden
+            ]}
+          />
         </div>
-      </ProtectedStatefulDiv>
+      </div>
     );
   }
 });
@@ -64,6 +80,7 @@ module.exports = connect(function propsFromStore(state) {
     hideSource: state.pageConstants.hideSource,
     isEmbedView: state.pageConstants.isEmbedView,
     isShareView: state.pageConstants.isShareView,
+    isPaused: state.runState.isDebuggerPaused,
     playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
   };
 })(Radium(Visualization));
