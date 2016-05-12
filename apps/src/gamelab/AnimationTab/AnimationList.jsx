@@ -2,7 +2,7 @@
 'use strict';
 
 import { show, Goal } from '../AnimationPicker/animationPickerModule';
-var AnimationListItem = require('./AnimationListItem');
+import AnimationListItem from './AnimationListItem';
 var color = require('../../color');
 var connect = require('react-redux').connect;
 var NewListItem = require('./NewListItem');
