@@ -9,7 +9,7 @@ var yaml = require('js-yaml');
 var readline = require('readline');
 var chalk = require('chalk');
 
-module.exports = function (grunt) {
+function logBuildTimes(grunt) {
   var locals = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '..', 'locals.yml')));
   var newrelicLicenseKey = locals.new_relic_license_key;
   var email = 'unknown';
@@ -80,6 +80,14 @@ module.exports = function (grunt) {
       }
     }
   });
+}
+
+module.exports = function (grunt) {
+  try {
+    logBuildTimes(grunt);
+  } catch (e) {
+    // Don't block build because of failure to log build times
+  }
 
   var config = {};
 

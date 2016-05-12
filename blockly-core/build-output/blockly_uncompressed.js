@@ -1982,7 +1982,7 @@ Blockly.Field.prototype.getRootElement = function() {
 };
 Blockly.Field.prototype.updateWidth_ = function() {
   var width;
-  if(this.textElement_.getComputedTextLength) {
+  if(this.textElement_.getComputedTextLength && document.body.contains(this.textElement_)) {
     width = this.textElement_.getComputedTextLength()
   }else {
     width = 1

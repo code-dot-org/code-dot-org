@@ -38,7 +38,7 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
  
  *Note: The course materials on this page (see below) still reflect the sequence of 2015-16 pilot course syllabus. Though largely the same, the new sequence and other small changes will be updated to reflect the 2016 AP Endorsed syllabus soon.*
 
-The resources are distributed under a Creative Commons Attribution NonCommerical ShareAlike License see our [Terms of Service](https://code.org/tos).
+The resources are distributed under a Creative Commons Attribution NonCommerical ShareAlike License see our [Terms of Service](https://code.org/tos). If you are interested in licensing Code.org materials for commercial purposes, [contact us](https://code.org/contact).
 
 ### <a name="features"></a>Features
 
