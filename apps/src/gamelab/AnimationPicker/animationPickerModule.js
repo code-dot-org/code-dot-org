@@ -101,42 +101,43 @@ export function beginUpload(filename) {
  */
 export function handleUploadComplete(result) {
   return function (dispatch, getState) {
-    var state = getState().animationPicker;
-    var goal = state.goal;
-    var uploadFilename = state.uploadFilename;
-    if (goal === Goal.NEW_ANIMATION) {
-      // TODO (bbuchanan): This sequencing feels backwards.  Eventually, we
-      // ought to preview and get dimensions from the local filesystem, async
-      // with the upload itself, but that will mean refactoring away from the
-      // jQuery uploader.
-      loadImageMetadata(result, uploadFilename, animation => {
-        dispatch(gamelabActions.addAnimation(animation));
+    const { goal, uploadFilename } = getState().animationPicker;
+    const key = result.filename.replace(/\.png$/i, '');
+    const sourceUrl = sourceUrlFromKey(key);
+
+    // TODO (bbuchanan): This sequencing feels backwards.  Eventually, we
+    // ought to preview and get dimensions from the local filesystem, async
+    // with the upload itself, but that will mean refactoring away from the
+    // jQuery uploader.
+    loadImageMetadata(sourceUrl, metadata => {
+      const animation = Object.assign({}, metadata, {
+        key: key,
+        name: uploadFilename,
+        sourceUrl: sourceUrl,
+        size: result.size,
+        version: result.versionId
       });
-    } else if (goal === Goal.NEW_FRAME) {
-      // TODO (bbuchanan): Implement after integrating Piskel
-    }
-    dispatch(hide());
+
+      if (goal === Goal.NEW_ANIMATION) {
+        dispatch(gamelabActions.addAnimation(animation));
+      } else if (goal === Goal.NEW_FRAME) {
+        // TODO (bbuchanan): Implement after integrating Piskel
+      }
+      dispatch(hide());
+    });
   };
 }
 
 /**
  * Asynchronously loads an image file as an Image, then derives appropriate
  * animation metadata from that Image and returns the metadata to a callback.
- * @param {!{filename: string, result: number, versionId: string}} result
- * @param {!string} name
+ * @param {!string} sourceUrl - Where to find the image.
  * @param {!function} callback
  */
-function loadImageMetadata(result, name, callback) {
-  const key = result.filename.replace(/\.png$/i, '');
-  const sourceUrl = sourceUrlFromKey(key);
+function loadImageMetadata(sourceUrl, callback) {
   let image  = new Image();
   image.addEventListener('load', function () {
     callback({
-      key: key,
-      name: name,
-      size: result.size,
-      version: result.versionId,
-      sourceUrl: sourceUrl,
       sourceSize: {x: image.width, y: image.height},
       frameSize: {x: image.width, y: image.height},
       frameCount: 1,
