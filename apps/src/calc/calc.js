@@ -738,7 +738,7 @@ Calc.generateResults_ = function () {
   appState.message = undefined;
 
   // Check for pre-execution errors
-  if (studioApp.hasExtraTopBlocks() && !level.showUnusedBlocks) {
+  if (studioApp.hasExtraTopBlocks() && !Blockly.showUnusedBlocks) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
     return;
@@ -792,7 +792,7 @@ Calc.generateResults_ = function () {
 
   if (appState.result === ResultType.SUCCESS &&
       studioApp.hasExtraTopBlocks() &&
-      level.showUnusedBlocks) {
+      Blockly.showUnusedBlocks) {
     appState.testResults = TestResults.PASS_WITH_EXTRA_TOP_BLOCKS;
   }
 

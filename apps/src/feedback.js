@@ -1340,7 +1340,7 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
       return emptyBlockFailure;
     }
   }
-  if (!this.studioApp_.showUnusedBlocks && !options.allowTopBlocks && this.hasExtraTopBlocks()) {
+  if (!Blockly.showUnusedBlocks && !options.allowTopBlocks && this.hasExtraTopBlocks()) {
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
   }
   if (this.studioApp_.hasDuplicateVariablesInForLoops()) {
@@ -1385,7 +1385,7 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
   if (this.studioApp_.IDEAL_BLOCK_NUM &&
       numEnabledBlocks > this.studioApp_.IDEAL_BLOCK_NUM) {
     return TestResults.TOO_MANY_BLOCKS_FAIL;
-  } else if (this.hasExtraTopBlocks() && this.studioApp_.showUnusedBlocks) {
+  } else if (this.hasExtraTopBlocks() && Blockly.showUnusedBlocks) {
     return TestResults.PASS_WITH_EXTRA_TOP_BLOCKS;
   } else {
     return TestResults.ALL_PASS;

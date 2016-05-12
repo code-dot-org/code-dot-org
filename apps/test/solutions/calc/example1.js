@@ -153,7 +153,7 @@ module.exports = {
       },
       xml: '<xml>' +
         blockUtils.calcBlockXml('functional_plus', [1, 2]) +
-        blockUtils.calcBlockXml('functional_plus', [3, 4]) +
+        blockUtils.calcBlockXml('functional_plus', [3, 2]) +
       '</xml>'
     },
     {
