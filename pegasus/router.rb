@@ -22,6 +22,7 @@ require 'dynamic_config/dcdo'
 if rack_env?(:production)
   require 'newrelic_rpm'
   NewRelic::Agent.after_fork(force_reconnect: true)
+  require 'newrelic_ignore_downlevel_browsers'
   require 'honeybadger'
 end
 
