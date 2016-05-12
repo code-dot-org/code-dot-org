@@ -30,30 +30,33 @@ class Pd::Workshop < ActiveRecord::Base
   ]
 
   COURSES = [
-    COURSE_CSF = 'CSF',
-    COURSE_CSP = 'CSP',
-    COURSE_ECS = 'ECS',
-    COURSE_CS_IN_A = 'CSinA',
-    COURSE_CS_IN_S = 'CSinS',
-    COURSE_CSD = 'CSD',
-    COURSE_COUNSELOR_ADMIN = 'Counselor/Admin'
+    COURSE_CSF = 'CS Fundamentals',
+    COURSE_CSP = 'CS Principles',
+    COURSE_ECS = 'Exploring Computer Science',
+    COURSE_CS_IN_A = 'CS in Algebra',
+    COURSE_CS_IN_S = 'CS in Science',
+    COURSE_CSD = 'CS Discoveries',
+    COURSE_COUNSELOR = 'Counselor',
+    COURSE_ADMIN = 'Admin'
   ]
 
-  STATE_NOT_STARTED = 'Not Started'
-  STATE_IN_PROGRESS = 'In Progress'
-  STATE_ENDED = 'Ended'
+  STATES = [
+    STATE_NOT_STARTED = 'Not Started',
+    STATE_IN_PROGRESS = 'In Progress',
+    STATE_ENDED = 'Ended'
+  ]
 
   SUBJECTS = {
     COURSE_ECS => [
-      'Phase 2: Summer Study',
-      'Phase 3 - Quarter 1',
-      'Phase 3 - Quarter 2',
-      'Phase 3 - Quarter 3',
-      'Phase 3 - Quarter 4',
+      'Phase 2: in-person',
+      'Unit 3 - HTML',
+      'Unit 4 - Scratch',
+      'Unit 5 - Data',
+      'Unit 6 - Robotics',
       'Phase 4: Summer wrap-up'
     ],
     COURSE_CS_IN_A => [
-      'Phase 2: Summer Study',
+      'Phase 2 in-person',
       'Phase 3: Academic Year Development'
     ],
     COURSE_CS_IN_S => [

@@ -1,5 +1,4 @@
 class Pd::TeacherProgressReport
-
   def self.generate_report_for_user(user)
     teachers =
       if user.admin?
@@ -14,7 +13,7 @@ class Pd::TeacherProgressReport
           Pd::Attendance.for_workshop(workshop).distinct_teachers
         end.flatten
       else
-        []
+        raise 'Unauthorized'
       end
 
     generate_report teachers
