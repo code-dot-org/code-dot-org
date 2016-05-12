@@ -5,10 +5,10 @@
 var _ = require('../lodash');
 var ActionType = require('./actions').ActionType;
 import animationPicker from './AnimationPicker/animationPickerModule';
-var animationTab = require('./AnimationTab/animationTabModule').default;
+import animationTab from './AnimationTab/animationTabModule';
 var errorDialogStack = require('./errorDialogStackModule').default;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
-var instructions = require('../redux/instructions');
+var instructions = require('../redux/instructions').default;
 var utils = require('../utils');
 
 function interfaceMode(state, action) {
@@ -69,10 +69,10 @@ function animations(state, action) {
 }
 
 module.exports = {
-  animationPicker: animationPicker,
-  animationTab: animationTab,
-  animations: animations,
-  errorDialogStack: errorDialogStack,
-  interfaceMode: interfaceMode,
-  instructions: instructions.default
+  animationPicker,
+  animationTab,
+  animations,
+  errorDialogStack,
+  interfaceMode,
+  instructions
 };

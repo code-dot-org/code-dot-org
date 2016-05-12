@@ -6,7 +6,7 @@ var actions = require('../actions');
 var color = require('../../color');
 var connect = require('react-redux').connect;
 var ListItemButtons = require('./ListItemButtons');
-var ListItemThumbnail = require('./ListItemThumbnail');
+import ListItemThumbnail from './ListItemThumbnail';
 var Radium = require('radium');
 var selectAnimation = require('./animationTabModule').selectAnimation;
 import { METADATA_SHAPE } from '../animationMetadata';
@@ -69,10 +69,17 @@ var AnimationListItem = React.createClass({
   propTypes: {
     isSelected: React.PropTypes.bool,
     animation: React.PropTypes.shape(METADATA_SHAPE).isRequired,
+    columnWidth: React.PropTypes.number.isRequired,
     cloneAnimation: React.PropTypes.func.isRequired,
     deleteAnimation: React.PropTypes.func.isRequired,
     selectAnimation: React.PropTypes.func.isRequired,
     setAnimationName: React.PropTypes.func.isRequired
+  },
+
+  componentWillReceiveProps: function (nextProps) {
+    if (this.props.columnWidth !== nextProps.columnWidth) {
+      this.refs.thumbnail.forceResize();
+    }
   },
 
   onSelect: function () {
@@ -116,6 +123,7 @@ var AnimationListItem = React.createClass({
     return (
       <div style={tileStyle} onClick={this.onSelect}>
         <ListItemThumbnail
+            ref="thumbnail"
             animation={this.props.animation}
             isSelected={this.props.isSelected}
         />
@@ -128,7 +136,9 @@ var AnimationListItem = React.createClass({
   }
 });
 module.exports = connect(function propsFromStore(state) {
-  return {};
+  return {
+    columnWidth: state.animationTab.columnSizes[0]
+  };
 }, function propsFromDispatch(dispatch) {
   return {
     cloneAnimation: function (animationKey) {

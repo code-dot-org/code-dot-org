@@ -5,11 +5,12 @@ var Radium = require('radium');
 var FrameList = require('./FrameList');
 var AnimationPicker = require('../AnimationPicker/AnimationPicker');
 var AnimationList = require('./AnimationList');
-var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
 var color = require('../../color');
 var GameLabVisualizationHeader = require('../GameLabVisualizationHeader');
 var ResizablePanes = require('./ResizablePanes');
+import { connect } from 'react-redux';
+import { setColumnSizes } from './animationTabModule';
 
 var styles = {
   root: {
@@ -56,12 +57,13 @@ var styles = {
 var AnimationTab = React.createClass({
   propTypes: {
     channelId: React.PropTypes.string.isRequired,
+    onColumnWidthsChange: React.PropTypes.func.isRequired
   },
 
   render: function () {
     return (
       <div>
-        <ResizablePanes style={styles.root}>
+        <ResizablePanes style={styles.root} onChange={this.props.onColumnWidthsChange}>
           <div style={styles.animationsColumn}>
             <GameLabVisualizationHeader />
             <AnimationList />
@@ -86,4 +88,8 @@ var AnimationTab = React.createClass({
     );
   }
 });
-module.exports = Radium(AnimationTab);
+module.exports = connect(state => ({}), dispatch => ({
+  onColumnWidthsChange: (widths) => {
+    dispatch(setColumnSizes(widths));
+  }
+}))(Radium(AnimationTab));

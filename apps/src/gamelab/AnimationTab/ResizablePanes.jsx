@@ -13,7 +13,8 @@ var _ = require('../../lodash');
  */
 var ResizablePanes = React.createClass({
   propTypes: {
-    style: React.PropTypes.object
+    style: React.PropTypes.object,
+    onChange: React.PropTypes.func.isRequired
   },
 
   getInitialState: function () {
@@ -64,6 +65,9 @@ var ResizablePanes = React.createClass({
 
     this.setState({
       overrideSizes: _.assign({}, this.state.overrideSizes, overrideSizesChange)
+    }, () => {
+      this.props.onChange(React.Children.map(this.props.children,
+          (child, i) => this.refs['pane-' + i].getBoundingClientRect().width));
     });
   },
 
@@ -102,7 +106,8 @@ var ResizablePanes = React.createClass({
           key={"resizer-" + index}
           data-resizer-index={index}
           className="resizer"
-          onMouseDown={this.onResizerMouseDown} />
+          onMouseDown={this.onResizerMouseDown}
+      />
     );
   },
 
