@@ -13,8 +13,6 @@ nav: about_nav
  	- [Financial Analyst](#finance)
 - **Fundraising**
  	- [Grant Writer (Part time)](#grant)
-- **Marketing**
-  	- [Marketing & Communications Manager](#market)
 - **Outreach**
  	- [District Manager - East Coast locations](#dcdm)
 - **Product**
@@ -212,6 +210,7 @@ The ideal candidate has the following qualifications:
 - Experience building developer infrastructure
 - Expertise in some of these technologies preferred: Ruby / Rails, JavaScript, Sinatra, SQL/Databases/MySQL, React
 
+To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="design" href="#design">UX / Visual Designer (Seattle, WA)</a>
 **Job Summary:**
@@ -249,40 +248,6 @@ Additional desired skills include:
 - At least two years of relevant experience 
 
 Email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="market"href="#market">Marketing & Communications Manager (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is looking for a talented and creative hands-on manager to develop and execute a strategic, comprehensive marketing and communications plan for the organization. In the last 3 years, Code.org has grown exponentially. We currently have 8 million student accounts with 10,000 additional created every day. Our social media accounts have over 1.5 million followers and a third of US schools joined the Hour of Code this year. We need your help to continue to drive momentum and opportunity for computer science education. You can find our newsroom here. 
-
-Responsibilities of the position include:
-
-- Designing and managing organization-wide communications strategy 
-- Managing, maintaining, and growing our social media presence 
-- Serving as the central point of contact for website content on code.org, csedweek.org, hourofcode.com
-- Designing and managing email communication plan for marketing and grassroots lobbying campaigns
-- Managing email campaigns to teachers, parents, students, volunteers
-- Managing public relations, media coverage, and events 
-- Developing marketing video concepts and messaging with video team
-
-**Skills and Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- Excellent written and verbal communication skills and sound editorial judgment
-- Strong copywriting and content development experience 
-- Knowledge and understanding of current trends in social media 
-- Passion for digital media and devices, an “early adopter” of digital trends
-- Familiar with methodologies of website and media tracking tools 
-- Proven ability to work effectively across a wide range of internal teams, and produce on deadline in a fast-paced environment
-- Proficient in using Google suite of applications, presentation and layout skills 
-- 5-7 years of relevant work experience in communications and technology
-- Bachelor’s degree in communications, public relations, or related field
-- Familiarity or background in educational communications preferred, no background in Computer Science required
-
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>. Please include a writing sample, blog, or social media account. 
-
 
 
 ## <a name="train"href="#train">Training and Development Specialist (Seattle, WA)</a>
