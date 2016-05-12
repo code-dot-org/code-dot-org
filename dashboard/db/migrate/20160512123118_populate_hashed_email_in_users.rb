@@ -11,4 +11,7 @@ class PopulateHashedEmailInUsers < ActiveRecord::Migration
       user.save!
     end
   end
+
+  def down
+  end
 end
