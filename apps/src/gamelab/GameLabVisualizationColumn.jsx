@@ -1,7 +1,7 @@
 var msg = require('../locale');
 var connect = require('react-redux').connect;
 
-var GameButtons = require('../templates/GameButtons');
+var GameButtons = require('../templates/GameButtons').default;
 var ArrowButtons = require('../templates/ArrowButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
 var gameLabConstants = require('./constants');
@@ -28,9 +28,7 @@ var GameLabVisualizationColumn = function (props) {
           <TooltipOverlay providers={[coordinatesProvider()]}/>
         </VisualizationOverlay>
       </ProtectedStatefulDiv>
-      <GameButtons
-          hideRunButton={false}
-          instructionsInTopPane={props.instructionsInTopPane}>
+      <GameButtons>
         <div id="studio-dpad" className="studio-dpad-none">
           <button id="studio-dpad-button" className="arrow">
             <img src="/blockly/media/1x1.gif" className="dpad-btn icon21"/>
