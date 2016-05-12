@@ -57,6 +57,15 @@ class ScriptLevel < ActiveRecord::Base
     levels[0] = Level.find(new_level_id)
   end
 
+  def oldest_active_level
+    return levels[0] if levels.length == 1
+    return levels.min_by(&:created_at) unless properties
+    properties_hash = JSON.parse(properties)
+    levels.sort_by(&:created_at).find do |level|
+      !properties_hash[level.name] || properties_hash[level.name]['active'] != false
+    end
+  end
+
   def next_level
     i = script.script_levels.index(self)
     return nil if i.nil? || i == script.script_levels.length

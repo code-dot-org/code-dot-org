@@ -24,7 +24,7 @@ class ActivitiesController < ApplicationController
 
     if params[:script_level_id]
       @script_level = ScriptLevel.cache_find(params[:script_level_id].to_i)
-      @level = (params[:level_id] && Level.find(params[:level_id].to_i)) || @script_level.levels[0]
+      @level = params[:level_id] ? Script.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
       script_name = @script_level.script.name
     elsif params[:level_id]
       # TODO: do we need a cache_find for Level like we have for ScriptLevel?

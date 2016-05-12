@@ -52,10 +52,11 @@ module.exports = function (callback) {
     }
 
     $.ajax(
-        '/api/user_progress/' + appOptions.scriptName +
-        '/' + appOptions.stagePosition +
-        '/' + appOptions.levelPosition +
-        '/' + appOptions.serverLevelId
+        `/api/user_progress` +
+        `/${appOptions.scriptName}` +
+        `/${appOptions.stagePosition}` +
+        `/${appOptions.levelPosition}` +
+        `/${appOptions.serverLevelId}`
     ).done(function (data) {
       appOptions.disableSocialShare = data.disableSocialShare;
 
