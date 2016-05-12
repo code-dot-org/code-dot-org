@@ -59,5 +59,9 @@ export function getSourceUrl(animation) {
   if (animation.sourceUrl) {
     return animation.sourceUrl;
   }
-  return animationsApi.basePath(animation.key + '.png');
+  return sourceUrlFromKey(animation.key);
+}
+
+export function sourceUrlFromKey(key) {
+  return animationsApi.basePath(key + '.png');
 }
