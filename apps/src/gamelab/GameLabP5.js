@@ -723,15 +723,8 @@ GameLabP5.prototype.preloadAnimations = function (animationMetadata) {
     var image = this.p5.loadImage(
         getSourceUrl(animation),
         function onSuccess() {
-          var spriteSheet;
-          if (animation.frameSize && animation.frameCount) {
-            // Multi-frame mode
-            spriteSheet = this.p5.loadSpriteSheet(image, animation.frameSize.x,
-                animation.frameSize.y, animation.frameCount);
-          } else {
-            // Single-frame mode
-            spriteSheet = this.p5.loadSpriteSheet(image, image.width, image.height, 1);
-          }
+          var spriteSheet = this.p5.loadSpriteSheet(image, animation.frameSize.x,
+              animation.frameSize.y, animation.frameCount);
           this.p5.projectAnimations[animation.name] = this.p5.loadAnimation(spriteSheet);
         }.bind(this));
   }, this);
