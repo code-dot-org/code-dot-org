@@ -9,7 +9,7 @@ module NewRelic
       # the script_tag while exposing it to IE10+ and other browsers. (Note that
       # IE10+ and other browser don't support conditional comments so the
       # guard will does nothing in those cases.)
-      result = "<!--[if !IE]> --> #{script_tag} <!--<![endif]-->"
+      result = "<!--[if !IE]><!--> #{script_tag} <!--<![endif]-->"
 
       # Mark the result as html_safe in Rails.
       result = result.html_safe if result.respond_to? :html_safe
