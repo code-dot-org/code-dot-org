@@ -1,4 +1,5 @@
-import * as actions from './animationPickerModule';
+import { hide, pickLibraryAnimation, beginUpload, handleUploadComplete,
+    handleUploadError } from './animationPickerModule';
 var AnimationPickerBody = require('./AnimationPickerBody.jsx');
 var connect = require('react-redux').connect;
 var Dialog = require('../../templates/DialogComponent.jsx');
@@ -87,19 +88,19 @@ module.exports = connect(function propsFromStore(state) {
 }, function propsFromDispatch(dispatch) {
   return {
     onClose: function () {
-      dispatch(actions.hide());
+      dispatch(hide());
     },
     onPickLibraryAnimation: function (animation) {
-      dispatch(actions.pickLibraryAnimation(animation));
+      dispatch(pickLibraryAnimation(animation));
     },
     onUploadStart: function (data) {
-      dispatch(actions.beginUpload(data.files[0].name));
+      dispatch(beginUpload(data.files[0].name));
     },
     onUploadDone: function (result) {
-      dispatch(actions.handleUploadComplete(result));
+      dispatch(handleUploadComplete(result));
     },
     onUploadError: function (status) {
-      dispatch(actions.handleUploadError(status));
+      dispatch(handleUploadError(status));
     }
   };
 })(AnimationPicker);
