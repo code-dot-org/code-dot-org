@@ -5,6 +5,7 @@ import experiments from '../experiments';
 import ScreenSelector from './ScreenSelector';
 import GameButtons, { RunButton, ResetButton } from '../templates/GameButtons';
 import CompletionButton from './CompletionButton';
+import FontAwesome from '../templates/FontAwesome';
 
 const RADIUS = 30;
 const FRAME_HEIGHT = 60;
@@ -88,7 +89,7 @@ const PhoneFrame = React.createClass({
           }
           {isPaused &&
           <div style={[styles.centeredInFrame, styles.paused]}>
-            <i className="fa fa-pause" style={styles.pauseIcon}/>
+            <FontAwesome icon="pause" style={styles.pauseIcon}/>
             PAUSED
           </div>
           }
