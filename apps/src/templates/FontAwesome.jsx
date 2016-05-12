@@ -7,7 +7,10 @@
  * See http://fontawesome.io/icons/ to look up supported icon names.
  */
 export default function FontAwesome(props) {
-  return <i className={`fa fa-${props.icon}`} />;
+  const newProps = Object.assign({}, props, {
+    className: `fa fa-${props.icon} ${props.className}`
+  });
+  return <i {...newProps} />;
 }
 
 FontAwesome.propTypes = {
