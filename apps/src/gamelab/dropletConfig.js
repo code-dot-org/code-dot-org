@@ -95,7 +95,7 @@ module.exports.blocks = [
   {func: 'console.log', parent: consoleApi, category: 'Game Lab', paletteParams: ['message'], params: ['"message"'] },
 
   // Sprites
-  {func: 'createSprite', category: 'Sprites', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-createSprite" },
+  {func: 'createSprite', category: 'Sprites', paramButtons: { minArgs: 2, maxArgs: 4}, paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-createSprite" },
   {func: 'var sprite = createSprite', category: 'Sprites', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], noAutocomplete: true, docFunc: 'createSprite', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-createSprite" },
   {func: 'setSpeed', blockPrefix: spriteBlockPrefix, category: 'Sprites', paletteParams: ['speed','angle'], params: ["1", "90"], tipPrefix: spriteMethodPrefix, modeOptionName: '*.setSpeed', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-setSpeed" },
   {func: 'getAnimationLabel', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.getAnimationLabel', type: 'value', noAutocomplete: true, customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#method-getAnimationLabel" },
@@ -264,7 +264,7 @@ draw() - USEFUL?
   {func: 'noFill', category: 'Drawing', customDocURL: "http://p5js.org/reference/#/p5/noFill" },
   {func: 'stroke', category: 'Drawing', paletteParams: ['color'], params: ['"blue"'], dropdown: { 0: ['"blue"', 'color(255, 0, 0)', 'color(255, 0, 0, 127)'] }, customDocURL: "http://p5js.org/reference/#/p5/stroke" },
   {func: 'strokeWeight', category: 'Drawing', paletteParams: ['size'], params: ["3"], customDocURL: "http://p5js.org/reference/#/p5/strokeWeight" },
-  {func: 'color', category: 'Drawing', paletteParams: ['r','g','b'], params: ["255", "255", "255"], type: 'value', customDocURL: "http://p5js.org/reference/#/p5/color" },
+  {func: 'color', category: 'Drawing', paramButtons: { minArgs: 1, maxArgs: 4}, paletteParams: ['r','g','b'], params: ["255", "255", "255"], type: 'value', customDocURL: "http://p5js.org/reference/#/p5/color" },
   {func: 'noStroke', category: 'Drawing', customDocURL: "http://p5js.org/reference/#/p5/noStroke" },
   {func: 'arc', category: 'Drawing', paletteParams: ['x','y','w','h','start','stop'], params: ["0", "0", "800", "800", "0", "PI/2"], customDocURL: "http://p5js.org/reference/#/p5/arc" },
   {func: 'ellipse', category: 'Drawing', paletteParams: ['x','y','w','h'], params: ["200", "200", "400", "400"], customDocURL: "http://p5js.org/reference/#/p5/ellipse" },
@@ -272,7 +272,7 @@ draw() - USEFUL?
   {func: 'point', category: 'Drawing', paletteParams: ['x','y'], params: ["200", "200"], customDocURL: "http://p5js.org/reference/#/p5/point" },
   {func: 'rect', category: 'Drawing', paletteParams: ['x','y','w','h'], params: ["100", "100", "200", "200"], customDocURL: "http://p5js.org/reference/#/p5/rect" },
   {func: 'regularPolygon', category: 'Drawing', paletteParams: ['x','y','sides','size'], params: ["200", "200", "5", "50"] },
-  {func: 'shape', category: 'Drawing', paletteParams: ['x1','y1','x2','y2','x3','y3'], params: ["200", "0", "0", "400", "400", "400"] },
+  {func: 'shape', category: 'Drawing', paramButtons: { minArgs: 6 }, paletteParams: ['x1','y1','x2','y2','x3','y3'], params: ["200", "0", "0", "400", "400", "400"] },
   {func: 'triangle', category: 'Drawing', paletteParams: ['x1','y1','x2','y2','x3','y3'], params: ["200", "0", "0", "400", "400", "400"], noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/triangle" },
   {func: 'text', category: 'Drawing', paletteParams: ['str','x','y','w','h'], params: ['"text"', "0", "0", "400", "100"], customDocURL: "http://p5js.org/reference/#/p5/text" },
   {func: 'textAlign', category: 'Drawing', paletteParams: ['horiz','vert'], params: ["CENTER", "TOP"], customDocURL: "http://p5js.org/reference/#/p5/textAlign" },

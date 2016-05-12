@@ -2,7 +2,7 @@
  * Copyright (c) 2016 Anthony Bau.
  * MIT License.
  *
- * Date: 2016-04-21
+ * Date: 2016-05-11
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
@@ -7269,13 +7269,17 @@ hook('mousedown', 4, function(point, event, state) {
     str = hitTestResult.stringifyInPlace();
     if ((hitTestBlock.addButtonRect != null) && hitTestBlock.addButtonRect.contains(mainPoint)) {
       line = this.mode.handleButton(str, 'add-button', hitTestResult.getReader());
-      this.populateBlock(hitTestResult, line);
-      this.redrawMain();
+      if ((line != null ? line.length : void 0) >= 0) {
+        this.populateBlock(hitTestResult, line);
+        this.redrawMain();
+      }
       return state.consumedHitTest = true;
     } else if ((hitTestBlock.subtractButtonRect != null) && hitTestBlock.subtractButtonRect.contains(mainPoint)) {
       line = this.mode.handleButton(str, 'subtract-button', hitTestResult.getReader());
-      this.populateBlock(hitTestResult, line);
-      this.redrawMain();
+      if ((line != null ? line.length : void 0) >= 0) {
+        this.populateBlock(hitTestResult, line);
+        this.redrawMain();
+      }
       return state.consumedHitTest = true;
     }
   }
@@ -8779,7 +8783,7 @@ Editor.prototype.validCursorPosition = function(destination) {
 };
 
 Editor.prototype.setCursor = function(destination, validate, direction) {
-  var end, ref1, ref2, start;
+  var end, ref1, ref2, socket, start;
   if (validate == null) {
     validate = (function() {
       return true;
@@ -8805,9 +8809,12 @@ Editor.prototype.setCursor = function(destination, validate, direction) {
   }
   destination = this.toCrossDocumentLocation(destination);
   if (this.cursorAtSocket() && !this.cursor.is(destination)) {
-    this.reparse(this.getCursor(), null, (destination.document === this.cursor.document ? [destination.location] : []));
-    this.hiddenInput.blur();
-    this.dropletElement.focus();
+    socket = this.getCursor();
+    if (indexOf.call(socket.classes, '__comment__') < 0) {
+      this.reparse(socket, null, (destination.document === this.cursor.document ? [destination.location] : []));
+      this.hiddenInput.blur();
+      this.dropletElement.focus();
+    }
   }
   this.cursor = destination;
   this.correctCursor();
@@ -8986,15 +8993,14 @@ hook('populate', 0, function() {
 });
 
 hook('keydown', 0, function(event, state) {
-  var head, newBlock, newSocket;
+  var head, newBlock, newSocket, newTextMarker, socket;
   if (this.readOnly) {
     return;
   }
   if (event.which === ENTER_KEY) {
     if (!this.cursorAtSocket() && !event.shiftKey && !event.ctrlKey && !event.metaKey) {
       newBlock = new model.Block();
-      newSocket = new model.Socket(this.mode.empty, Infinity);
-      newSocket.handwritten = true;
+      newSocket = new model.Socket(this.mode.empty, Infinity, true);
       newSocket.setParent(newBlock);
       helper.connect(newBlock.start, newSocket.start);
       helper.connect(newSocket.end, newBlock.end);
@@ -9006,12 +9012,33 @@ hook('keydown', 0, function(event, state) {
       this.redrawMain();
       return this.newHandwrittenSocket = newSocket;
     } else if (this.cursorAtSocket() && !event.shiftKey) {
+      socket = this.getCursor();
       this.hiddenInput.blur();
       this.dropletElement.focus();
       this.setCursor(this.cursor, function(token) {
         return token.type !== 'socketStart';
       });
-      return this.redrawMain();
+      this.redrawMain();
+      if (indexOf.call(socket.classes, '__comment__') >= 0 && this.mode.startSingleLineComment) {
+        newBlock = new model.Block(0, 'blank', helper.ANY_DROP);
+        newBlock.classes = ['__comment__', 'block-only'];
+        newBlock.socketLevel = helper.BLOCK_ONLY;
+        newTextMarker = new model.TextToken(this.mode.startSingleLineComment);
+        newTextMarker.setParent(newBlock);
+        newSocket = new model.Socket('', 0, true);
+        newSocket.classes = ['__comment__'];
+        newSocket.setParent(newBlock);
+        helper.connect(newBlock.start, newTextMarker);
+        helper.connect(newTextMarker, newSocket.start);
+        helper.connect(newSocket.end, newBlock.end);
+        head = this.getCursor();
+        while (head.type === 'newline') {
+          head = head.prev;
+        }
+        this.spliceIn(newBlock, head);
+        this.redrawMain();
+        return this.newHandwrittenSocket = newSocket;
+      }
     }
   }
 });
@@ -11838,8 +11865,88 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
     return text.match(/^\s*\/\/.*$/);
   };
 
+  JavaScriptParser.prototype.indentAndCommentMarker = function(text) {
+    return text.match(/^\s*\/\//)[0];
+  };
+
+  JavaScriptParser.prototype.handleButton = function(text, button, oldBlock) {
+    var argCount, currentElif, elseLocation, known, lastArgPosition, lines, maxArgs, minArgs, newLastArgPosition, node;
+    if (button === 'add-button' && indexOf.call(oldBlock.classes, 'IfStatement') >= 0) {
+      node = acorn.parse(text, {
+        locations: true,
+        line: 0,
+        allowReturnOutsideFunction: true
+      }).body[0];
+      currentElif = node;
+      elseLocation = null;
+      while (true) {
+        if (currentElif.type === 'IfStatement') {
+          if (currentElif.alternate != null) {
+            elseLocation = {
+              line: currentElif.alternate.loc.start.line,
+              column: currentElif.alternate.loc.start.column
+            };
+            currentElif = currentElif.alternate;
+          } else {
+            elseLocation = null;
+            break;
+          }
+        } else {
+          break;
+        }
+      }
+      if (elseLocation != null) {
+        lines = text.split('\n');
+        elseLocation = lines.slice(0, elseLocation.line).join('\n').length + elseLocation.column + 1;
+        return text.slice(0, elseLocation).trimRight() + ' if (__) ' + text.slice(elseLocation).trimLeft() + ' else {\n  __\n}';
+      } else {
+        return text + ' else {\n  __\n}';
+      }
+    } else if (indexOf.call(oldBlock.classes, 'CallExpression') >= 0) {
+      node = acorn.parse(text, {
+        line: 0,
+        allowReturnOutsideFunction: true
+      }).body[0];
+      known = this.lookupKnownName(node.expression);
+      argCount = node.expression["arguments"].length;
+      if (button === 'add-button') {
+        maxArgs = known != null ? known.fn.maxArgs : void 0;
+        if (maxArgs == null) {
+          maxArgs = Infinity;
+        }
+        if (argCount >= maxArgs) {
+          return;
+        }
+        if (argCount) {
+          lastArgPosition = node.expression["arguments"][argCount - 1].end;
+          return text.slice(0, lastArgPosition).trimRight() + ', __' + text.slice(lastArgPosition).trimLeft();
+        } else {
+          lastArgPosition = node.expression.end - 1;
+          return text.slice(0, lastArgPosition).trimRight() + '__' + text.slice(lastArgPosition).trimLeft();
+        }
+      } else if (button === 'subtract-button') {
+        minArgs = known != null ? known.fn.minArgs : void 0;
+        if (minArgs == null) {
+          minArgs = 0;
+        }
+        if (argCount <= minArgs) {
+          return;
+        }
+        if (argCount > 0) {
+          lastArgPosition = node.expression["arguments"][argCount - 1].end;
+          if (argCount === 1) {
+            newLastArgPosition = node.expression["arguments"][0].start;
+          } else {
+            newLastArgPosition = node.expression["arguments"][argCount - 2].end;
+          }
+          return text.slice(0, newLastArgPosition).trimRight() + text.slice(lastArgPosition).trimLeft();
+        }
+      }
+    }
+  };
+
   JavaScriptParser.prototype.mark = function(indentDepth, node, depth, bounds) {
-    var argument, block, currentElif, declaration, element, endPosition, expression, i, j, k, known, l, len, len1, len2, len3, len4, len5, len6, len7, len8, m, match, n, nodeBoundsStart, o, p, position, prefix, property, q, r, ref, ref1, ref10, ref11, ref12, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, results, results1, results2, results3, results4, results5, results6, results7, results8, space, statement, string, switchCase;
+    var argument, block, blockOpts, currentElif, declaration, element, endPosition, expression, i, j, k, known, l, len, len1, len2, len3, len4, len5, len6, len7, len8, m, match, n, nodeBoundsStart, o, p, position, prefix, property, q, r, ref, ref1, ref10, ref11, ref12, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, results, results1, results2, results3, results4, results5, results6, results7, results8, showButtons, space, statement, string, switchCase;
     switch (node.type) {
       case 'Program':
         ref = node.body;
@@ -11963,7 +12070,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
       case 'IfStatement':
       case 'ConditionalExpression':
         this.jsBlock(node, depth, bounds, {
-          addButton: true
+          addButton: '+'
         });
         this.jsSocketAndMark(indentDepth, node.test, depth + 1, NEVER_PAREN);
         this.jsSocketAndMark(indentDepth, node.consequent, depth + 1, null);
@@ -12054,8 +12161,18 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         break;
       case 'CallExpression':
       case 'NewExpression':
-        this.jsBlock(node, depth, bounds);
         known = this.lookupKnownName(node);
+        blockOpts = {};
+        if (known != null ? known.fn : void 0) {
+          showButtons = (known.fn.minArgs != null) || (known.fn.maxArgs != null);
+        } else {
+          showButtons = this.opts.paramButtonsForUnknownFunctions;
+        }
+        if (showButtons) {
+          blockOpts.addButton = '\u21A0';
+          blockOpts.subtractButton = '\u219E';
+        }
+        this.jsBlock(node, depth, bounds, blockOpts);
         if (!known) {
           this.jsSocketAndMark(indentDepth, node.callee, depth + 1, NEVER_PAREN);
         } else if (known.anyobj && node.callee.type === 'MemberExpression') {
@@ -12064,7 +12181,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         ref5 = node["arguments"];
         for (i = m = 0, len3 = ref5.length; m < len3; i = ++m) {
           argument = ref5[i];
-          this.jsSocketAndMark(indentDepth, argument, depth + 1, NEVER_PAREN, null, null, known != null ? (ref6 = known.fn) != null ? (ref7 = ref6.dropdown) != null ? ref7[i] : void 0 : void 0 : void 0, (i === 0 && node["arguments"].length === 1 ? '' : void 0));
+          this.jsSocketAndMark(indentDepth, argument, depth + 1, NEVER_PAREN, null, null, known != null ? (ref6 = known.fn) != null ? (ref7 = ref6.dropdown) != null ? ref7[i] : void 0 : void 0 : void 0);
         }
         if (!known && node["arguments"].length === 0 && !this.opts.lockZeroParamFunctions) {
           position = {
@@ -12321,41 +12438,7 @@ JavaScriptParser.startComment = '/*';
 
 JavaScriptParser.endComment = '*/';
 
-JavaScriptParser.handleButton = function(text, button, oldBlock) {
-  var currentElif, elseLocation, lines, node;
-  if (button === 'add-button' && indexOf.call(oldBlock.classes, 'IfStatement') >= 0) {
-    node = acorn.parse(text, {
-      locations: true,
-      line: 0,
-      allowReturnOutsideFunction: true
-    }).body[0];
-    currentElif = node;
-    elseLocation = null;
-    while (true) {
-      if (currentElif.type === 'IfStatement') {
-        if (currentElif.alternate != null) {
-          elseLocation = {
-            line: currentElif.alternate.loc.start.line,
-            column: currentElif.alternate.loc.start.column
-          };
-          currentElif = currentElif.alternate;
-        } else {
-          elseLocation = null;
-          break;
-        }
-      } else {
-        break;
-      }
-    }
-    if (elseLocation != null) {
-      lines = text.split('\n');
-      elseLocation = lines.slice(0, elseLocation.line).join('\n').length + elseLocation.column + 1;
-      return text.slice(0, elseLocation).trimRight() + ' if (__) ' + text.slice(elseLocation).trimLeft() + ' else {\n  __\n}';
-    } else {
-      return text + ' else {\n  __\n}';
-    }
-  }
-};
+JavaScriptParser.startSingleLineComment = '//';
 
 JavaScriptParser.getDefaultSelectionRange = function(string) {
   var end, ref, start;
@@ -14023,7 +14106,15 @@ exports.Parser = Parser = (function() {
     return this.addMarkup(indent, opts.bounds, opts.depth);
   };
 
+  Parser.prototype.checkBounds = function(bounds) {
+    var ref, ref1, ref2, ref3;
+    if (!(((bounds != null ? (ref = bounds.start) != null ? ref.line : void 0 : void 0) != null) && ((bounds != null ? (ref1 = bounds.start) != null ? ref1.column : void 0 : void 0) != null) && ((bounds != null ? (ref2 = bounds.end) != null ? ref2.line : void 0 : void 0) != null) && ((bounds != null ? (ref3 = bounds.end) != null ? ref3.column : void 0 : void 0) != null))) {
+      throw new IllegalArgumentException('bad bounds object');
+    }
+  };
+
   Parser.prototype.addMarkup = function(container, bounds, depth) {
+    this.checkBounds(bounds);
     this.markup.push({
       token: container.start,
       location: bounds.start,
@@ -14082,21 +14173,40 @@ exports.Parser = Parser = (function() {
   };
 
   Parser.prototype.constructHandwrittenBlock = function(text) {
-    var block, socket, textToken;
+    var block, posAfterIndentAndCommentMarker, socket, textPrefix, textPrefixToken, textToken;
     block = new model.Block(0, 'blank', helper.ANY_DROP);
-    socket = new model.Socket(this.empty, 0, true);
-    textToken = new model.TextToken(text);
-    helper.connect(block.start, socket.start);
-    helper.connect(socket.start, textToken);
-    helper.connect(textToken, socket.end);
-    helper.connect(socket.end, block.end);
+    socket = new model.Socket('', 0, true);
+    socket.setParent(block);
     if (this.isComment(text)) {
+      posAfterIndentAndCommentMarker = this.indentAndCommentMarker(text).length;
+      if (posAfterIndentAndCommentMarker) {
+        textPrefix = text.slice(0, posAfterIndentAndCommentMarker);
+        text = text.slice(posAfterIndentAndCommentMarker);
+      }
       block.socketLevel = helper.BLOCK_ONLY;
       block.classes = ['__comment__', 'block-only'];
+      socket.classes = ['__comment__'];
     } else {
       block.classes = ['__handwritten__', 'block-only'];
     }
+    textToken = new model.TextToken(text);
+    textToken.setParent(block);
+    if (textPrefix) {
+      textPrefixToken = new model.TextToken(textPrefix);
+      textPrefixToken.setParent(block);
+      helper.connect(block.start, textPrefixToken);
+      helper.connect(textPrefixToken, socket.start);
+    } else {
+      helper.connect(block.start, socket.start);
+    }
+    helper.connect(socket.start, textToken);
+    helper.connect(textToken, socket.end);
+    helper.connect(socket.end, block.end);
     return block;
+  };
+
+  Parser.prototype.handleButton = function(text, command, oldblock) {
+    return text;
   };
 
   Parser.prototype.applyMarkup = function(opts) {
@@ -14345,10 +14455,6 @@ Parser.drop = function(block, context, pred, next) {
   }
 };
 
-Parser.handleButton = function(text, command, oldblock) {
-  return text;
-};
-
 Parser.empty = '';
 
 Parser.emptyIndent = '';
@@ -14372,6 +14478,7 @@ exports.wrapParser = function(CustomParser) {
       this.emptyIndent = CustomParser.emptyIndent;
       this.startComment = (ref = CustomParser.startComment) != null ? ref : '/*';
       this.endComment = (ref1 = CustomParser.endComment) != null ? ref1 : '*/';
+      this.startSingleLineComment = CustomParser.startSingleLineComment;
       this.getDefaultSelectionRange = (ref2 = CustomParser.getDefaultSelectionRange) != null ? ref2 : getDefaultSelectionRange;
     }
 
@@ -14420,7 +14527,9 @@ exports.wrapParser = function(CustomParser) {
     };
 
     CustomParserFactory.prototype.handleButton = function(text, command, oldblock) {
-      return CustomParser.handleButton(text, command, oldblock);
+      var parser;
+      parser = this.createParser(text);
+      return parser.handleButton(text, command, oldblock);
     };
 
     return CustomParserFactory;
@@ -15803,10 +15912,10 @@ exports.View = View = (function() {
         };
       })(this);
       if (this.model.buttons.addButton) {
-        drawButton('+', this.addButtonRect, ctx);
+        drawButton(this.model.buttons.addButton, this.addButtonRect, ctx);
       }
       if (this.model.buttons.subtractButton) {
-        return drawButton('-', this.subtractButtonRect, ctx);
+        return drawButton(this.model.buttons.subtractButton, this.subtractButtonRect, ctx);
       }
     };
 
@@ -15837,12 +15946,12 @@ exports.View = View = (function() {
           top = multilineBounds.bottom() + height / 2 - this.view.opts.buttonHeight / 2;
         }
       }
-      if (this.model.buttons.addButton) {
-        this.addButtonRect = new this.view.draw.Rectangle(start, top, this.view.opts.buttonWidth, this.view.opts.buttonHeight);
+      if (this.model.buttons.subtractButton) {
+        this.subtractButtonRect = new this.view.draw.Rectangle(start, top, this.view.opts.buttonWidth, this.view.opts.buttonHeight);
         start += this.view.opts.buttonWidth + this.view.opts.buttonPadding;
       }
-      if (this.model.buttons.subtractButton) {
-        return this.subtractButtonRect = new this.view.draw.Rectangle(start, top, this.view.opts.buttonWidth, this.view.opts.buttonHeight);
+      if (this.model.buttons.addButton) {
+        return this.addButtonRect = new this.view.draw.Rectangle(start, top, this.view.opts.buttonWidth, this.view.opts.buttonHeight);
       }
     };
 

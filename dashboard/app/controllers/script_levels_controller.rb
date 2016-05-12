@@ -214,6 +214,10 @@ class ScriptLevelsController < ApplicationController
       @total_level_count = @level.levels.length
     end
 
+    if @level.try(:peer_reviewable)
+      @peer_reviews = PeerReview.where(level: @level, submitter: current_user).where.not(status: nil)
+    end
+
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level.id)
 
     view_options(
