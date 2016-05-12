@@ -114,7 +114,6 @@ class TransfersController < ApplicationController
       student.assign_script(new_section.script) if new_section.script
     end
 
-    # TODO: Email students if they're transferred to another teacher
     render json: {}, status: :no_content
   end
 end
