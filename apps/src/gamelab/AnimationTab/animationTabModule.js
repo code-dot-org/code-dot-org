@@ -34,7 +34,7 @@ export function selectAnimation(animationKey) {
 }
 
 function columnSizes(state, action) {
-  state = state || [150, 250, Infinity];
+  state = state || [150, 250, undefined];
   switch (action.type) {
     case SET_COLUMN_SIZES:
       return action.sizes;
