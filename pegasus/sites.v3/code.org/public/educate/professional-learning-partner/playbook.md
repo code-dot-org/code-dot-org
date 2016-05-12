@@ -16,7 +16,7 @@ title: Professional Learning Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'Fundraising Resources', description_t: "Coming soon!"} %>
 
-<%= view :educate_box, item: {title_s: 'Summer Workshop Marketplace', description_t: "Coming soon!"} %>
+<%= view :educate_box, item: {title_s: 'Mimeo Marketplace', description_t: "Coming soon!"} %>
 
 <%= view :educate_box, item: {title_s: 'Recruiting Teachers', description_t: "Coming soon!"} %>
 

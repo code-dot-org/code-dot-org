@@ -32,6 +32,7 @@ class FreeResponse < Level
     skip_dialog
     skip_sound
     submittable
+    peer_reviewable
   )
 
   before_validation do

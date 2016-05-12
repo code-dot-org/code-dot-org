@@ -26,7 +26,7 @@ ________________
 
 **Curriculum Overviews** provide additional information about the course to teachers who might be interested in enrolling in the program.
 
-- CS in Algebra - Coming soon!<br/>
+- [CS in Algebra](https://www.dropbox.com/s/wk6i5kuz0mczi8n/2016_welcome_CSinAlgebra_031416_v2.pdf?dl=0)<br/>
 - [CS in Science](https://www.dropbox.com/s/w26x522k8gs4p1e/Code.orgCSinScience_1_pager_030716.pdf?dl=0) <br/>
 - [Exploring CS](https://www.dropbox.com/s/qijdf4pu4etrvn2/Code.org%20ECS_1-pager_030216_v5.pdf?dl=0)<br/>
 - [CS Princples](https://www.dropbox.com/s/ujpfi18rcfycpll/Code.orgCSP_1-pager_03082016.pdf?dl=0)
@@ -34,8 +34,8 @@ ________________
 
 **Program Overviews** provide a deeper look at the details of our professional learning offerings for teachers, and are used for outlining the structure and flow of the program the teacher is enrolling in.
 
-- CS in Algebra - Coming Soon!  
-- [Cs in Science](https://www.dropbox.com/s/7qxe09uxxmsumtx/2016_welcome_CSinScience_031816_v3.pdf?dl=0)<br/>
+- [CS in Algebra](https://www.dropbox.com/s/lo60ydun7pdh127/Code.orgCSinAlgebra_1-pager_03082016.pdf?dl=0)<br/> 
+- - [Cs in Science](https://www.dropbox.com/s/7qxe09uxxmsumtx/2016_welcome_CSinScience_031816_v3.pdf?dl=0)<br/>
 - [Exploring CS](https://www.dropbox.com/s/na6um5intbw4c8w/2016_welcome_ECS_031816_v5.pdf?dl=0)<br/>
 - [CS Princples](https://www.dropbox.com/s/pl3uzvc1dripydc/2016_CSP%20welcome_031816_v3.pdf?dl=0)<br/>
 
@@ -74,10 +74,10 @@ ________________
 
 Click on the links below to see a list of classroom supplies your teacher will need to teach the course.
 
-- [CS Principles]()
-- [Exploring Computer Science]()
-- [CS in Science]()
-- [CS in Algebra]()
+- [CS Principles]() - Coming Soon!
+- [Exploring Computer Science]() - Coming Soon!
+- [CS in Science]() - Coming Soon!
+- [CS in Algebra]() - Coming Soon!
 
 [**Back to the top**](#top)
 <br/>
