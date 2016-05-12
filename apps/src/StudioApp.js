@@ -28,6 +28,7 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
+var experiments = require('./experiments');
 
 var redux = require('./redux');
 var runState = require('./redux/runState');
@@ -270,6 +271,11 @@ StudioApp.prototype.configureRedux = function (reducers) {
 StudioApp.prototype.createReduxStore_ = function () {
   var combined = combineReducers(_.assign({}, commonReducers, this.reducers_));
   this.reduxStore = redux.createStore(combined);
+
+  if (experiments.isEnabled('reduxGlobalStore')) {
+    // Expose our store globally, to make debugging easier
+    window.reduxStore = this.reduxStore;
+  }
 };
 
 /**
@@ -892,7 +898,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
 };
 
 StudioApp.prototype.isRunning = function () {
-  return this.reduxStore.getState().isRunning;
+  return this.reduxStore.getState().runState.isRunning;
 };
 
 /**

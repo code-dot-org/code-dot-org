@@ -76,7 +76,7 @@ require 'cdo/user_helpers'
 
 class User < ActiveRecord::Base
   include SerializedProperties
-  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender survey2015_value survey2015_comment)
+  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender)
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -526,7 +526,7 @@ SQL
   end
 
   def student_of_admin?
-    teachers.any? &:admin?
+    teachers.any?(&:admin?)
   end
 
   def authorized_teacher?
@@ -835,7 +835,7 @@ SQL
 
   # returns whether a new level has been completed and asynchronously enqueues an operation
   # to update the level progress.
-  def track_level_progress_async(script_level, new_result, submitted, pairings)
+  def track_level_progress_async(script_level:, new_result:, submitted:, level_source_id:, pairings:)
     level_id = script_level.level_id
     script_id = script_level.script_id
     old_user_level = UserLevel.where(user_id: self.id,
@@ -848,8 +848,10 @@ SQL
                 'level_id' => level_id,
                 'script_id' => script_id,
                 'new_result' => new_result,
+                'level_source_id' => level_source_id,
                 'submitted' => submitted,
                 'pairing_user_ids' => pairings ? pairings.map(&:id) : nil}
+
     if Gatekeeper.allows('async_activity_writes', where: {hostname: Socket.gethostname})
       User.progress_queue.enqueue(async_op.to_json)
     else
@@ -861,9 +863,10 @@ SQL
   end
 
   # The synchronous handler for the track_level_progress helper.
-  def User.track_level_progress_sync(user_id, level_id, script_id, new_result, submitted, pairing_user_ids = nil)
+  def User.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids:)
     new_level_completed = false
     new_level_perfected = false
+
     user_level = nil
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.
@@ -892,7 +895,12 @@ SQL
 
     if pairing_user_ids
       pairing_user_ids.each do |navigator_user_id|
-        navigator_user_level = User.track_level_progress_sync(navigator_user_id, level_id, script_id, new_result, submitted)
+        navigator_user_level = User.track_level_progress_sync(user_id: navigator_user_id,
+                                                              level_id: level_id,
+                                                              script_id: script_id,
+                                                              new_result: new_result,
+                                                              submitted: submitted,
+                                                              level_source_id: level_source_id)
         retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
           PairedUserLevel.find_or_create_by(navigator_user_level_id: navigator_user_level.id,
                                             driver_user_level_id: user_level.id)
@@ -900,7 +908,12 @@ SQL
       end
     end
 
-    if new_level_completed && script_id # TODO: do this as a callback
+    # Create peer reviews after submitting a peer_reviewable solution
+    if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable)
+      PeerReview.create_for_submission(user_level, level_source_id)
+    end
+
+    if new_level_completed && script_id
       User.track_script_progress(user_id, script_id)
     end
 
@@ -914,7 +927,15 @@ SQL
     raise 'Model must be User' if op['model'] != 'User'
     case op['action']
       when 'track_level_progress'
-        User.track_level_progress_sync(op['user_id'], op['level_id'], op['script_id'], op['new_result'], op['submitted'], op['pairing_user_ids'])
+        User.track_level_progress_sync(
+          user_id: op['user_id'],
+          level_id: op['level_id'],
+          script_id: op['script_id'],
+          new_result: op['new_result'],
+          submitted: op['submitted'],
+          level_source_id: op['level_source_id'],
+          pairing_user_ids: op['pairing_user_ids']
+        )
       else
         raise "Unknown action in #{op}"
     end
