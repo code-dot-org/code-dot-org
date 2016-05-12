@@ -95,7 +95,7 @@ class ApiController < ApplicationController
     script = Script.get_from_cache(params[:script_name])
     stage = script.stages[params[:stage_position].to_i - 1]
     script_level = stage.script_levels[params[:level_position].to_i - 1]
-    level = (params[:level] && Script.cache_find_level(params[:level].to_i)) || script_level.levels[0]
+    level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
     if current_user
       last_activity = current_user.last_attempt(level)
@@ -126,7 +126,7 @@ class ApiController < ApplicationController
     load_section
     load_script
 
-    text_response_script_levels = @script.script_levels.includes(:levels).where('levels.type' => TextMatch)
+    text_response_script_levels = @script.script_levels.includes(:levels).where('levels.type' => [TextMatch, FreeResponse])
 
     data = @section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
