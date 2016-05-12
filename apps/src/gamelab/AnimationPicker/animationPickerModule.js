@@ -167,8 +167,7 @@ export function handleUploadError(status) {
  */
 export function pickLibraryAnimation(animation) {
   return (dispatch, getState) => {
-    var state = getState().animationPicker;
-    var goal = state.goal;
+    const goal = getState().animationPicker.goal;
     if (goal === Goal.NEW_ANIMATION) {
       dispatch(gamelabActions.addAnimation(Object.assign({}, animation, {
         key: createUuid()
