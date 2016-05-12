@@ -130,7 +130,11 @@ The default dashboard install uses a static build of apps and of code-studio JS,
 
 1. Run `rake package` for the changes to take effect.
 
-This configures dashboard to rebuild apps/code-studio/blockly-core whenever you run `rake build` and to use the versions that you built yourself.  See the documentation in those directories faster ways to build and iterate.
+This configures dashboard to rebuild apps/code-studio/blockly-core whenever you run `rake build` and to use the versions that you built yourself.  See the documentation in those directories for faster ways to build and iterate.
+
+If waiting around for javascript builds is making you sad, consider sending build time logs to New Relic so we can track the slowness. You can do this by copying our license key from [the New Relic account page](https://rpm.newrelic.com/accounts/501463) and pasting it into `locals.yml`:
+
+    new_relic_license_key: <license key here>
 
 ## More Information
 Please also see our other documentation, including our:

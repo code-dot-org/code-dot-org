@@ -2294,7 +2294,7 @@ Studio.reset = function (first) {
       speed: spriteStart.speed || constants.DEFAULT_SPRITE_SPEED,
       size: spriteStart.size || constants.DEFAULT_SPRITE_SIZE,
       dir: spriteStart.direction || Direction.NONE,
-      displayDir: spriteStart.direction || Direction.SOUTH,
+      displayDir: spriteStart.direction || Direction.NONE,
       emotion: spriteStart.emotion || level.defaultEmotion || Emotions.NORMAL,
       renderOffset: renderOffset,
       // tickCount of last time sprite moved,

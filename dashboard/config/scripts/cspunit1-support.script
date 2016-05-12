@@ -4,7 +4,7 @@ description 'This is a test Professional Learning Course'
 login_required 'true'
 
 stage 'Teachers and Tools'
-  level 'U3L2 Free Response Reflection'
+  level 'Sample Free Response'
   level 'Test Script Completion'
 
 stage 'Supporting Peer Learning', 'Content'

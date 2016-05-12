@@ -12,7 +12,7 @@ class UserScriptTest < ActiveSupport::TestCase
   end
 
   def complete_level(script_level, result = 100)
-    @user.track_level_progress_async(script_level, result, false, [])
+    @user.track_level_progress_async(script_level: script_level, new_result: result, submitted: false, level_source_id: nil)
   end
 
   def complete_all_levels
@@ -83,7 +83,7 @@ class UserScriptTest < ActiveSupport::TestCase
       level_num: 'custom',
       user_id: 0
     )
-    level.script_id = @script.id.to_s
+    level.script_name = @script.name
     level.save!
     sl = create :script_level, levels: [level]
 

@@ -1670,8 +1670,8 @@ a.download-video {
   overflow: hidden;
 }
 
-.text-match, .free-response {
-  p {
+.text-match, .free-response, .peer-review {
+  p, label {
     font-size: 16px;
     line-height: 24px;
   }
@@ -1681,6 +1681,30 @@ a.download-video {
     // level markdown (the question) into the answer box, so we want it
     // to be selectable.
     @include selectable;
+  }
+}
+
+.peer-review input[type=radio] {
+  margin: 0 3px 3px 5px;
+}
+
+.peer-review-content {
+  background: #fff;
+  border: 1px solid $light_gray;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 1em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .peer-review-title {
+    margin: 0;
+  }
+  .peer-review-status {
+    font-size: 1em;
+    & > strong {
+      font-family: inherit;
+    }
   }
 }
 
