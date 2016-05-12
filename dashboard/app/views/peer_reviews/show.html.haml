@@ -1,0 +1,37 @@
+.peer-review
+  %h1 Peer Review
+  %p Please review the peer submission in the grey box below.
+
+  .submitted_readonly{style: 'padding: 8px;'}
+    %script{src: asset_path('js/initApp/initApp.js')}
+    :javascript
+      var appOptions = #{app_options.to_json};
+    = render partial: 'levels/free_response', locals: {in_level_group: true}
+
+  %br
+  %p Does this submission satisfy the requirements stated in the question?
+
+  = form_for @peer_review do |f|
+    - if @peer_review.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@peer_review.errors.count, 'error')} prohibited this peer_review from being saved:"
+        %ul
+          - @peer_review.errors.full_messages.each do |msg|
+            %li= msg
+
+    .field
+      %label
+        = f.radio_button :status, :accepted
+        != t('peer_review.accepted.description')
+      %label
+        = f.radio_button :status, :rejected
+        != t('peer_review.rejected.description')
+      %label
+        = f.radio_button :status, :escalated
+        %span{style: 'font-size: 0.8em;'}
+          != t('peer_review.escalated.description')
+    .field
+      %p Review notes:
+      = f.text_area :data, rows: 7, placeholder: 'Type your peer review here', style: 'width: 100%; box-sizing: border-box;'
+    .actions
+      = f.submit 'Submit', class: 'btn btn-large btn-primary'
