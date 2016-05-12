@@ -70,16 +70,11 @@ Resources:
           - ReplaceUnhealthy
       AutoScalingScheduledAction:
         IgnoreUnmodifiedGroupSizeProperties: true
-    CreationPolicy:
-      ResourceSignal:
-        Timeout: PT25M
-        Count: <%=starting_instances%>
     Properties:
       VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: LaunchConfig}
       MinSize: 2
       MaxSize: <%=max_size%>
-      DesiredCapacity: <%=starting_instances%>
       HealthCheckType: ELB
       HealthCheckGracePeriod: 2000
       LoadBalancerNames: [Ref: LoadBalancer]
