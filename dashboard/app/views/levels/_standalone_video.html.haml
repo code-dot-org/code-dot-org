@@ -8,10 +8,11 @@
 
 .standalone-video
   - video = @level.specified_autoplay_video
+  - src = "/videos/embed/#{video.youtube_code}?rel=0"
   %h2= video.localized_name
   %div= render(inline: @level.markdown_instructions, type: :md) if @level.markdown_instructions
 
-  %iframe{width: 853, height: 480, frameborder: 0, allowfullscreen: true, src: video.youtube_url(autoplay: 0)}
+  %iframe{width: 853, height: 480, frameborder: 0, allowfullscreen: true, src: src}
   %p= link_to t('video.download'), video.download
 
   = render partial: 'levels/dialog', locals: {continue_button: true, data: @level.properties}
