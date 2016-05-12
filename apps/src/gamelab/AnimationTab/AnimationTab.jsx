@@ -23,14 +23,12 @@ var styles = {
   animationsColumn: {
     display: 'flex',
     flexDirection: 'column',
-    flex: '0 0 150px', // sets initial width
     minWidth: 150,
     maxWidth: 300
   },
   framesColumn: {
     display: 'flex',
     flexDirection: 'column',
-    flex: '0 0 250px', // sets initial width
     minWidth: 150,
     maxWidth: 300,
     borderTop: 'solid thin ' + color.light_purple,
@@ -57,13 +55,18 @@ var styles = {
 var AnimationTab = React.createClass({
   propTypes: {
     channelId: React.PropTypes.string.isRequired,
+    columnSizes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
     onColumnWidthsChange: React.PropTypes.func.isRequired
   },
 
   render: function () {
     return (
       <div>
-        <ResizablePanes style={styles.root} onChange={this.props.onColumnWidthsChange}>
+        <ResizablePanes
+            style={styles.root}
+            columnSizes={this.props.columnSizes}
+            onChange={this.props.onColumnWidthsChange}
+        >
           <div style={styles.animationsColumn}>
             <GameLabVisualizationHeader />
             <AnimationList />
@@ -88,7 +91,9 @@ var AnimationTab = React.createClass({
     );
   }
 });
-module.exports = connect(state => ({}), dispatch => ({
+module.exports = connect(state => ({
+  columnSizes: state.animationTab.columnSizes
+}), dispatch => ({
   onColumnWidthsChange: (widths) => {
     dispatch(setColumnSizes(widths));
   }
