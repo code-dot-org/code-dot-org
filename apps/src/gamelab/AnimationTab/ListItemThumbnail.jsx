@@ -59,6 +59,7 @@ const ListItemThumbnail = React.createClass({
     this.recalculatePreviewSize();
   },
 
+  /** @public */
   forceResize() {
     this.recalculatePreviewSize();
   },
