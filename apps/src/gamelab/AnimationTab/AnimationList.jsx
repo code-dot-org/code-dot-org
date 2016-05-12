@@ -7,6 +7,7 @@ var color = require('../../color');
 var connect = require('react-redux').connect;
 var NewListItem = require('./NewListItem');
 var ScrollableList = require('./ScrollableList');
+import { METADATA_SHAPE } from '../animationMetadata';
 
 var styles = {
   root: {
@@ -39,7 +40,7 @@ var AnimationList = function (props) {
   );
 };
 AnimationList.propTypes = {
-  animations: React.PropTypes.array.isRequired,
+  animations: React.PropTypes.arrayOf(React.PropTypes.shape(METADATA_SHAPE)).isRequired,
   selectedAnimation: React.PropTypes.string,
   onNewItemClick: React.PropTypes.func.isRequired
 };

@@ -3,6 +3,7 @@
 
 var _ = require('../../lodash');
 var color = require('../../color');
+import { getSourceUrl, METADATA_SHAPE } from '../animationMetadata';
 
 var staticStyles = {
   root: {
@@ -45,9 +46,9 @@ var staticStyles = {
  */
 var ListItemThumbnail = React.createClass({
   propTypes: {
+    animation: React.PropTypes.shape(METADATA_SHAPE).isRequired,
     index: React.PropTypes.number,
-    isSelected: React.PropTypes.bool,
-    src: React.PropTypes.string.isRequired
+    isSelected: React.PropTypes.bool
   },
 
   getIndexBubble: function () {
@@ -62,6 +63,14 @@ var ListItemThumbnail = React.createClass({
     );
   },
 
+  // This is because we still have placeholder consumers of this component.
+  pickSourceUrl: function () {
+    if (this.props.src) {
+      return this.props.src;
+    }
+    return getSourceUrl(this.props.animation);
+  },
+
   render: function () {
     var styles = _.merge({}, staticStyles, {
       root: {
@@ -72,7 +81,7 @@ var ListItemThumbnail = React.createClass({
     return (
       <div style={styles.root}>
         <div style={styles.wrapper}>
-          <img src={this.props.src} style={styles.image}/>
+          <img src={this.pickSourceUrl()} style={styles.image}/>
           {this.getIndexBubble()}
         </div>
       </div>

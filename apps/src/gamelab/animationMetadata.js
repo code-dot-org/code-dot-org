@@ -1,4 +1,5 @@
 /** @file Helper methods for working with animation metadata */
+import { animations as animationsApi } from '../clientApi';
 
 /**
  * @typedef {Object} Vector2
@@ -16,6 +17,8 @@ const VECTOR2_SHAPE = {
 
 /**
  * @typedef {Object} AnimationMetadata
+ * @property {string} key - Uniquely identifies animation within project,
+ *           usually a UUID.
  * @property {string} name
  * @property {string} sourceUrl
  * @property {Vector2} sourceSize
@@ -34,6 +37,7 @@ const VECTOR2_SHAPE = {
  *   }
  */
 export const METADATA_SHAPE = {
+  key: React.PropTypes.string,
   name: React.PropTypes.string.isRequired,
   sourceUrl: React.PropTypes.string.isRequired,
   sourceSize: React.PropTypes.shape(VECTOR2_SHAPE).isRequired,
@@ -49,4 +53,11 @@ export const METADATA_SHAPE = {
  */
 export function getLabel(animation) {
   return `${animation.name} (${animation.frameCount})`;
+}
+
+export function getSourceUrl(animation) {
+  if (animation.sourceUrl) {
+    return animation.sourceUrl;
+  }
+  return animationsApi.basePath(animation.key + '.png');
 }

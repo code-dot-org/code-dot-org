@@ -3,13 +3,13 @@
 
 var _ = require('../../lodash');
 var actions = require('../actions');
-var animationsApi = require('../../clientApi').animations;
 var color = require('../../color');
 var connect = require('react-redux').connect;
 var ListItemButtons = require('./ListItemButtons');
 var ListItemThumbnail = require('./ListItemThumbnail');
 var Radium = require('radium');
 var selectAnimation = require('./animationTabModule').selectAnimation;
+import { METADATA_SHAPE } from '../animationMetadata';
 
 var styles = {
   tile: {
@@ -68,7 +68,7 @@ var styles = {
 var AnimationListItem = React.createClass({
   propTypes: {
     isSelected: React.PropTypes.bool,
-    animation: React.PropTypes.object.isRequired,
+    animation: React.PropTypes.shape(METADATA_SHAPE).isRequired,
     cloneAnimation: React.PropTypes.func.isRequired,
     deleteAnimation: React.PropTypes.func.isRequired,
     selectAnimation: React.PropTypes.func.isRequired,
@@ -116,8 +116,9 @@ var AnimationListItem = React.createClass({
     return (
       <div style={tileStyle} onClick={this.onSelect}>
         <ListItemThumbnail
+            animation={this.props.animation}
             isSelected={this.props.isSelected}
-            src={animationsApi.basePath(this.props.animation.key + '.png')} />
+        />
         {animationName}
         {this.props.isSelected && <ListItemButtons
             onCloneClick={this.cloneAnimation}

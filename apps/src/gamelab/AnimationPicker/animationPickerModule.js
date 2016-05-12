@@ -129,3 +129,25 @@ exports.handleUploadError = function (status) {
   };
 };
 
+/**
+ * A library animation was selected by the user.  This concludes our picking
+ * process. Dispatch root gamelab action to add appropriate metadta and then
+ * close the animation picker.
+ * @param {!AnimationMetadata} animation
+ * @returns {function}
+ */
+exports.pickLibraryAnimation = function (animation) {
+  return (dispatch, getState) => {
+    var state = getState().animationPicker;
+    var goal = state.goal;
+    var uploadFilename = state.uploadFilename;
+    if (goal === Goal.NEW_ANIMATION) {
+      dispatch(gamelabActions.addAnimation(Object.assign(animation, {
+        key: utils.createUuid()
+      })));
+    } else if (goal === Goal.NEW_FRAME) {
+      // TODO (bbuchanan): Implement after integrating Piskel
+    }
+    dispatch(exports.hide());
+  };
+};
