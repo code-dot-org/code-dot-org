@@ -16,3 +16,4 @@
   %p= link_to t('video.download'), video.download
 
   = render partial: 'levels/dialog', locals: {continue_button: true, data: @level.properties}
+  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => @level.teacher_markdown}}

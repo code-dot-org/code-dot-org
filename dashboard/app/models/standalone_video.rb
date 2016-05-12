@@ -24,6 +24,7 @@
 
 class StandaloneVideo < Level
   serialized_attrs %w(
+    encrypted_teacher_markdown
     skip_dialog
     skip_sound
   )
