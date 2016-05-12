@@ -340,4 +340,30 @@ DSL
     assert_equal i18n_expected, i18n
   end
 
+  test 'test Evaluation Question' do
+    learning_module1 = create(:plc_learning_module, name: 'Module1')
+    learning_module2 = create(:plc_learning_module, name: 'Module2')
+    input_dsl = <<DSL
+name 'Test question'
+question 'Question text'
+answer 'answer 1'
+answer 'answer 2', 1, '#{learning_module1.name}'
+answer 'answer 3', 2, '#{learning_module2.name}'
+DSL
+
+    output, _ = EvaluationQuestion.parse(input_dsl, 'test')
+    expected = {
+        name: 'Test question',
+        properties: {
+            options: {},
+            questions: [{text: 'Question text'}],
+            answers: [
+                {text: 'answer 1', weight: 1, learning_module: nil},
+                {text: 'answer 2', weight: 1, learning_module: learning_module1.name},
+                {text: 'answer 3', weight: 2, learning_module: learning_module2.name}
+            ]
+        }
+      }
+    assert_equal expected, output
+  end
 end

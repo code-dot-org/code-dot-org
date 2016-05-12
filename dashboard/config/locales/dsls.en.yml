@@ -77,6 +77,26 @@ en:
         : A rocket blasts off, traveling at 15 meters per second. Write a contract for the function rocket-height that takes in the number of seconds that have passed since the rocket took off, and which produces the height of the rocket at that time.
         Contract for rocket-height: Contract for rocket-height
         rocket-height|Number|Number: rocket-height|Number|Number
+      levelCM:
+        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
+        Eval Contracts 1 B: Eval Contracts 1 B
+        Write a contract for the star function: Write a contract for the star function
+        star|image|color:string|radius:Number|style:string: star|image|color:string|radius:Number|style:string
+    evaluation_question:
+      CSP Unit 1 Question 1:
+        Getting my students to write: Getting my students to write
+        Getting students to work as a peer group: Getting students to work as a peer group
+        Running a good constructive classroom: Running a good constructive classroom
+        What is the hardest thing about teaching computer science?: What is the hardest thing about teaching computer science?
+      CSP Unit 1 Question 2:
+        Can you write binary encoding of things?: Can you write binary encoding of things?
+        Getting my students to write: Getting my students to write
+        Getting students to work as a peer group: Getting students to work as a peer group
+        'No': 'No'
+        Running a good constructive classroom: Running a good constructive classroom
+        Sounds like SATANS encoding: Sounds like SATANS encoding
+        What is the hardest thing about teaching computer science?: What is the hardest thing about teaching computer science?
+        'Yes': 'Yes'
     external:
       AlgPD Break:
         Before you move on...: Before you move on...
@@ -1443,6 +1463,8 @@ en:
         Equity Vs. Equality: Equity Vs. Equality
       equity vids:
         Videos for Equity Segment: Videos for Equity Segment
+      external1:
+        an external: an external
       facilitator test: {}
       introduction to events: {}
       introduction to turtle: {}
@@ -1773,9 +1795,11 @@ en:
     level_group:
       name:
         CSP Culminating Assessment: {}
+        CSP Support Unit 1 Assessment: {}
         PS U3 Assessment1 new: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
+        long assessment: {}
     match:
       2-3 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
@@ -4817,6 +4841,55 @@ en:
         "/script_assets/msm/Unit%202/exercise_5.png": "/script_assets/msm/Unit%202/exercise_5.png"
         Code from Circle: Code from Circle
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
+      level1:
+        '2': '2'
+        What is the name of this function?: What is the name of this function?
+        content1: content1
+        g: g
+        g(y) = y + 2: g(y) = y + 2
+        y: y
+      level2:
+        '2': '2'
+        What is the name of this function?: What is the name of this function?
+        content1: content1
+        g: g
+        g(y) = y + 2: g(y) = y + 2
+        y: y
+      level3:
+        '2': '2'
+        What is the name of this function?: What is the name of this function?
+        content1: content1
+        g: g
+        g(y) = y + 2: g(y) = y + 2
+        y: y
+      level4:
+        '2': '2'
+        What is the name of this function?: What is the name of this function?
+        content1: content1
+        g: g
+        g(y) = y + 2: g(y) = y + 2
+        y: y
+      level5:
+        '2': '2'
+        What is the name of this function?: What is the name of this function?
+        content1: content1
+        g: g
+        g(y) = y + 2: g(y) = y + 2
+        y: y
+      level6:
+        '2': '2'
+        What is the name of this function?: What is the name of this function?
+        content1: content1
+        g: g
+        g(y) = y + 2: g(y) = y + 2
+        y: y
+      level7:
+        '2': '2'
+        What is the name of this function?: What is the name of this function?
+        content1: content1
+        g: g
+        g(y) = y + 2: g(y) = y + 2
+        y: y
       msm variables multi 1:
         '15': '15'
         What is the value of x?: What is the value of x?

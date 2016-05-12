@@ -5,6 +5,8 @@
 
 - multi_answer_characters = ("A".."Z").to_a
 
+- puts '--------------' + level.inspect
+
 - layout_class = use_tight_layout ? "tight" : "default"
 
 .multi{id: "level_#{level.id}", class: layout_class}
@@ -100,6 +102,6 @@
       "level_#{level.id}",
       #{standalone},
       "#{data['type']}" == "multi2" ? 2 : 1,
-      #{data['answers'].map {|answer| answer['correct']}},
+      #{data['answers'].map {|answer| answer['correct'] || 'null'}},
       #{last_attempt.to_json}
     );

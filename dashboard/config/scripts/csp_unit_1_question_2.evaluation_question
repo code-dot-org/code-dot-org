@@ -1,0 +1,5 @@
+name 'CSP Unit 1 Question 2'
+question 'Can you write binary encoding of things?'
+answer 'Yes'
+answer 'No', 1, 'Sending Binary Messages'
+answer 'Sounds like SATANS encoding', 5, 'Sending Binary Messages' 
