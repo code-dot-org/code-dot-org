@@ -1,11 +1,12 @@
 /** Animation or Frame thumbnail */
 'use strict';
 
-var _ = require('../../lodash');
-var color = require('../../color');
+import _ from '../../lodash';
+import color from '../../color';
 import { getSourceUrl, METADATA_SHAPE } from '../animationMetadata';
+import AnimationPreview from '../AnimationPicker/AnimationPreview';
 
-var staticStyles = {
+const staticStyles = {
   root: {
     position: 'relative',
     imageRendering: 'pixelated',
@@ -17,9 +18,6 @@ var staticStyles = {
   wrapper: {
     position: 'relative',
     margin: 4
-  },
-  image: {
-    width: '100%'
   },
   indexBubble: {
     position: 'absolute',
@@ -44,14 +42,34 @@ var staticStyles = {
 /**
  * Animation or Frame thumbnail.
  */
-var ListItemThumbnail = React.createClass({
+const ListItemThumbnail = React.createClass({
   propTypes: {
     animation: React.PropTypes.shape(METADATA_SHAPE).isRequired,
     index: React.PropTypes.number,
     isSelected: React.PropTypes.bool
   },
 
-  getIndexBubble: function () {
+  getInitialState() {
+    return {
+      previewSize: 0
+    };
+  },
+
+  componentDidMount() {
+    this.recalculatePreviewSize();
+  },
+
+  forceResize() {
+    this.recalculatePreviewSize();
+  },
+
+  recalculatePreviewSize() {
+    this.setState({
+      previewSize: this.refs.wrapper.getBoundingClientRect().width
+    });
+  },
+
+  getIndexBubble() {
     if (typeof this.props.index === 'undefined') {
       return undefined;
     }
@@ -63,15 +81,7 @@ var ListItemThumbnail = React.createClass({
     );
   },
 
-  // This is because we still have placeholder consumers of this component.
-  pickSourceUrl: function () {
-    if (this.props.src) {
-      return this.props.src;
-    }
-    return getSourceUrl(this.props.animation);
-  },
-
-  render: function () {
+  render() {
     var styles = _.merge({}, staticStyles, {
       root: {
         border: 'solid 2px ' + (this.props.isSelected ? color.purple : color.light_purple)
@@ -80,12 +90,16 @@ var ListItemThumbnail = React.createClass({
 
     return (
       <div style={styles.root}>
-        <div style={styles.wrapper}>
-          <img src={this.pickSourceUrl()} style={styles.image}/>
+        <div ref="wrapper" style={styles.wrapper}>
+          <AnimationPreview
+              animation={this.props.animation}
+              width={this.state.previewSize}
+              height={this.state.previewSize}
+          />
           {this.getIndexBubble()}
         </div>
       </div>
     );
   }
 });
-module.exports = ListItemThumbnail;
+export default ListItemThumbnail;
