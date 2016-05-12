@@ -109,7 +109,7 @@ class ScriptDSL < BaseDSL
       levelprops[:buttontext] = @buttontext if @buttontext
       levelprops[:imageurl] = @imageurl if @imageurl
       levelprops[:description] = @description if @description
-      if !@active || @buttontext || @imageurl || @description
+      unless levelprops.empty?
         @current_scriptlevel[:properties][name] = levelprops
       end
 
@@ -133,7 +133,7 @@ class ScriptDSL < BaseDSL
     @current_scriptlevel[:properties][:prompt] = @prompt if @prompt
     @scriptlevels << @current_scriptlevel
 
-    unused_prop = (!@active && @active.to_s) || @buttontext || @imageurl || @description
+    unused_prop = @active == false ? @active.to_s : (@buttontext || @imageurl || @description)
     if unused_prop
       raise 'Unused property "' + unused_prop + '" at ' + caller[0].to_s
     end
