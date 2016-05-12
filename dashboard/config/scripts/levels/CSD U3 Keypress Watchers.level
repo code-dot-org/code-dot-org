@@ -34,9 +34,7 @@
     "debugger_disabled": "true",
     "markdown_instructions": "# Do Together\r\n\r\nYou will **not write any code** in this program.\r\n\r\n* Read the program and see if you can guess what will happen\r\n* Add watchers to each of the four variables\r\n\t* `up`\r\n    * `down`\r\n    * `left`\r\n    * `right`\r\n* While the program is running, press the arrow keys and observe the watchers\r\n* Share and discuss your observations\r\n\t* What seems to be the difference between `keyDown()`, `keyWentDown()`, and `keyUp()`?\r\n    * What do you think the exclamation mark (`!`) on line 8 does?\r\n    * How might you use the different keypress blocks in a game?",
     "callout_json": "[]",
-    "show_d_pad": "false",
-    "code_functions": {
-    }
+    "show_d_pad": "false"
   },
   "published": true,
   "notes": "",
