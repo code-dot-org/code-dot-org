@@ -1,4 +1,4 @@
-var actions = require('./animationPickerModule');
+import * as actions from './animationPickerModule';
 var AnimationPickerBody = require('./AnimationPickerBody.jsx');
 var connect = require('react-redux').connect;
 var Dialog = require('../../templates/DialogComponent.jsx');
