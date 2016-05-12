@@ -1,9 +1,15 @@
 {
   "rules": {
-    ".read": "true",
     "v3": {
       "shared-tables": {
+        ".read": "true",
         "$channel_id": {
+          "server_time": {
+            "$user_id": {
+              ".validate": "newData.isNumber() && newData.val() == now",
+              ".write": "auth.uid == $user_id"
+            }
+          },
           "counters": {
             "$table_name": {
               ".validate": "newData.isNumber() && newData.val() == (data.val() == null ? 0 : data.val()) + 1",
@@ -33,10 +39,6 @@
           "op_count": {
             ".validate": "newData.isNumber() && (newData.val() == (data.val() == null ? 0 : data.val()) + 1 && newData.val() <= 3 || newData.parent().child('timestamp').val() == now && (data.parent().child('timestamp').val() == null || newData.parent().child('timestamp').val() > data.parent().child('timestamp').val() + 15000) && newData.val() == 0)",
             ".write": "auth.uid != null && newData.val() != null"
-          },
-          "temp_timestamp": {
-            ".validate": "newData.isNumber()",
-            ".write": "auth.uid != null && newData.val() == now"
           }
         }
       }

@@ -10,6 +10,7 @@ var Firebase = require("firebase");
 var FirebaseStorage = module.exports;
 
 var databaseCache = {};
+var userId;
 function getDatabase(channelId) {
   var db = databaseCache[channelId];
   if (db == null) {
@@ -22,7 +23,13 @@ function getDatabase(channelId) {
     var base_url = 'https://' + Applab.firebaseName + '.firebaseio.com';
     db = new Firebase(base_url + '/v3/shared-tables/' + channelId);
     if (Applab.firebaseAuthToken) {
-      db.auth(Applab.firebaseAuthToken);
+      db.authWithCustomToken(Applab.firebaseAuthToken, function (err, user) {
+        if (err) {
+          throw new Error('error authenticating to Firebase: ' + err);
+        } else {
+          userId = user.uid;
+        }
+      });
     }
     databaseCache[channelId] = db;
   }
@@ -188,14 +195,16 @@ function updateRateLimitInfo(channelData, currentTime, timestamp, opCount) {
 function getServerData(channelRef, tableName, onSuccess, onError) {
   // TODO(dave): consolidate read operations and handle errors
   var tableRef = getTable(Applab.channelId, tableName);
+  var serverTimeRef = getDatabase(Applab.channelId).child('server_time').child(userId);
   channelRef.child('timestamp').once('value', function (timestampSnapshot) {
     channelRef.child('op_count').once('value', function (opCountSnapshot) {
       tableRef.child('row_count').once('value', function (rowCountSnapshot) {
-        channelRef.child('temp_timestamp').set(Firebase.ServerValue.TIMESTAMP, function (err) {
+        serverTimeRef.set(Firebase.ServerValue.TIMESTAMP, function (err) {
           if (err) {
             onError(err);
           } else {
-            channelRef.child('temp_timestamp').once('value', function (currentTimeSnapshot) {
+            serverTimeRef.onDisconnect().remove();
+            serverTimeRef.once('value', function (currentTimeSnapshot) {
               onSuccess({
                 timestamp: timestampSnapshot.val(),
                 opCount: opCountSnapshot.val(),

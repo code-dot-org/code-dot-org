@@ -52,8 +52,13 @@ allRateLimitsUpdated(channelId) {
 
 // path rules
 
-path / {
+path /v3/shared-tables {
   read() { true }
+}
+
+path /v3/shared-tables/{channel_id}/server_time/{user_id} is Number {
+  write() { auth.uid == user_id }
+  validate() { this == now }
 }
 
 // TODO(dave): consolidate this "counter" with other per-table metadata,
@@ -102,6 +107,3 @@ path /v3/shared-tables/{channel_id}/op_count is Number {
   }
 }
 
-path /v3/shared-tables/{channel_id}/temp_timestamp is Number {
-  write() { isLoggedIn() && this == now }
-}
