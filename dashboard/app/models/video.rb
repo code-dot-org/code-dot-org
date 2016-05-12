@@ -86,12 +86,16 @@ class Video < ActiveRecord::Base
     self.thumbnail_url
   end
 
+  def localized_name
+    I18n.t("data.video.name.#{key}")
+  end
+
   def summarize(autoplay = true)
     # Note: similar video info is also set in javascript at levels/_blockly.html.haml
     {
         src: youtube_url(autoplay: autoplay ? 1 : 0),
         key: key,
-        name: I18n.t("data.video.name.#{key}"),
+        name: localized_name,
         download: download,
         thumbnail: thumbnail_path,
         enable_fallback: true,
