@@ -22,10 +22,14 @@ var styles = {
     marginBottom: 0
   },
   screenBlock: {
-    backgroundColor: 'rgba(0, 0, 0, 0.05)',
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
     width: applabConstants.APP_WIDTH,
     height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT,
     overflow: 'hidden',
+    // layer 1 is design mode/div applab
+    // layer 2 is items being dragged out from toolbox
+    // layer 3 is cross-hair overlay
+    // layer 4 is this
     zIndex: 4,
     position: 'absolute',
     top: 0,
@@ -48,27 +52,25 @@ var Visualization = React.createClass({
     var appHeight = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
 
     return (
-      <div>
-        <div id="visualization"
-            className={classNames({with_padding: this.props.visualizationHasPadding})}
-            style={[
-              (this.props.isEmbedView || this.props.hideSource) && styles.nonResponsive,
-              this.props.isShareView && styles.share,
-              this.props.playspacePhoneFrame && styles.phoneFrame
-            ]}
-        >
-          <div id="divApplab" className="appModern" tabIndex="1"/>
-          <div id="designModeViz" className="appModern" style={commonStyles.hidden}/>
-          <VisualizationOverlay width={appWidth} height={appHeight}>
-            <AppLabCrosshairOverlay/>
-            <AppLabTooltipOverlay/>
-          </VisualizationOverlay>
-          <div style={[
-              styles.screenBlock,
-              !(this.props.isPaused && this.props.playspacePhoneFrame) && commonStyles.hidden
-            ]}
-          />
-        </div>
+      <div id="visualization"
+          className={classNames({with_padding: this.props.visualizationHasPadding})}
+          style={[
+            (this.props.isEmbedView || this.props.hideSource) && styles.nonResponsive,
+            this.props.isShareView && styles.share,
+            this.props.playspacePhoneFrame && styles.phoneFrame
+          ]}
+      >
+        <div id="divApplab" className="appModern" tabIndex="1"/>
+        <div id="designModeViz" className="appModern" style={commonStyles.hidden}/>
+        <VisualizationOverlay width={appWidth} height={appHeight}>
+          <AppLabCrosshairOverlay/>
+          <AppLabTooltipOverlay/>
+        </VisualizationOverlay>
+        <div style={[
+            styles.screenBlock,
+            !(this.props.isPaused && this.props.playspacePhoneFrame) && commonStyles.hidden
+          ]}
+        />
       </div>
     );
   }
