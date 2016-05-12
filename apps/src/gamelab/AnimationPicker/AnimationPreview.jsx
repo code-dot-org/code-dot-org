@@ -90,7 +90,8 @@ const AnimationPreview = React.createClass({
 
     const containerStyle = {
       width: this.props.width,
-      height: this.props.height
+      height: this.props.height,
+      textAlign: 'center'
     };
     const imageStyle = {
       width: scaledFrameSize.x,
