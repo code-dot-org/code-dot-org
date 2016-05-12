@@ -1,0 +1,43 @@
+%h1 Peer Reviews
+
+%h2 Unassigned
+%table{style: 'width: 100%'}
+  %thead
+    %tr
+      %th Submitter
+      %th Reviewer
+      %th From instructor
+      %th Script
+      %th Review Comments
+      %th Status
+      %th
+  - @available.each do |peer_review|
+    %tr
+    %td= peer_review.submitter.email
+    %td= peer_review.reviewer.try(:email)
+    %td= peer_review.from_instructor
+    %td= peer_review.script.name
+    %td= peer_review.data
+    %td= peer_review.localized_status
+    %td= link_to 'Show', peer_review
+
+%h2 Reviews I've Submitted for Peers
+%table{style: 'width: 100%'}
+  %thead
+    %tr
+      %th Submitter
+      %th Reviewer
+      %th From instructor
+      %th Script
+      %th Review Comments
+      %th Status
+      %th
+  - @submitted.each do |peer_review|
+    %tr
+      %td= peer_review.submitter.email
+      %td= peer_review.reviewer.try(:email)
+      %td= peer_review.from_instructor
+      %td= peer_review.script.name
+      %td= peer_review.data
+      %td= peer_review.localized_status
+      %td= link_to 'Show', peer_review
