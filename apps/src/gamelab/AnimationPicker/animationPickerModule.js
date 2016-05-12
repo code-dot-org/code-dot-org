@@ -162,9 +162,8 @@ export function pickLibraryAnimation(animation) {
   return (dispatch, getState) => {
     var state = getState().animationPicker;
     var goal = state.goal;
-    var uploadFilename = state.uploadFilename;
     if (goal === Goal.NEW_ANIMATION) {
-      dispatch(gamelabActions.addAnimation(Object.assign(animation, {
+      dispatch(gamelabActions.addAnimation(Object.assign({}, animation, {
         key: createUuid()
       })));
     } else if (goal === Goal.NEW_FRAME) {
