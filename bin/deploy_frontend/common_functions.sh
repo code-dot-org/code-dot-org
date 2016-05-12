@@ -16,8 +16,9 @@
 # permissions and limitations under the License.
 
 # ELB_LIST defines which Elastic Load Balancers this instance should be part of.
-# The elements in ELB_LIST should be seperated by space.
-ELB_LIST=""
+# The elements in ELB_LIST should be separated by space.
+# Set to "all" to automatically use all load balancers the instance is registered to.
+ELB_LIST="all"
 
 # Under normal circumstances, you shouldn't need to change anything below this line.
 # -----------------------------------------------------------------------------
@@ -406,16 +407,10 @@ get_elb_list() {
 
     if [ -z "${asg_name}" ]; then
         msg "Instance is not part of an ASG. Looking up from ELB."
-        local all_balancers=$($AWS_CLI elb describe-load-balancers \
-            --query LoadBalancerDescriptions[*].LoadBalancerName \
-            --output text | sed -e $'s/\t/ /g')
-        for elb in $all_balancers; do
-            local instance_health
-            instance_health=$(get_instance_health_elb $instance_id $elb)
-            if [ $? == 0 ]; then
-                elb_list="$elb_list $elb"
-            fi
-        done
+        # https://github.com/awslabs/aws-codedeploy-samples/pull/41
+        elb_list=$($AWS_CLI elb describe-load-balancers \
+            --query 'LoadBalancerDescriptions[].[LoadBalancerName,Instances[].InstanceId]' \
+            --output text | grep $instance_id | awk '{ORS=" ";print $1}')
     else
         elb_list=$($AWS_CLI autoscaling describe-auto-scaling-groups \
             --auto-scaling-group-names "${asg_name}" \
