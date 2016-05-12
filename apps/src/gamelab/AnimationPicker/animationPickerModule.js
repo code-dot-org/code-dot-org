@@ -119,12 +119,19 @@ export function handleUploadComplete(result) {
   };
 }
 
-function loadImageMetadata(result, name, cb) {
+/**
+ * Asynchronously loads an image file as an Image, then derives appropriate
+ * animation metadata from that Image and returns the metadata to a callback.
+ * @param {!{filename: string, result: number, versionId: string}} result
+ * @param {!string} name
+ * @param {!function} callback
+ */
+function loadImageMetadata(result, name, callback) {
   const key = result.filename.replace(/\.png$/i, '');
   const sourceUrl = sourceUrlFromKey(key);
   let image  = new Image();
   image.addEventListener('load', function () {
-    cb({
+    callback({
       key: key,
       name: name,
       size: result.size,
