@@ -94,7 +94,7 @@ var AnimationTab = React.createClass({
 module.exports = connect(state => ({
   columnSizes: state.animationTab.columnSizes
 }), dispatch => ({
-  onColumnWidthsChange: (widths) => {
+  onColumnWidthsChange(widths) {
     dispatch(setColumnSizes(widths));
   }
 }))(Radium(AnimationTab));
