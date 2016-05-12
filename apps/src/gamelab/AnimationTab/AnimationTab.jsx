@@ -3,7 +3,7 @@
 
 var Radium = require('radium');
 var FrameList = require('./FrameList');
-var AnimationPicker = require('../AnimationPicker/AnimationPicker');
+import AnimationPicker from '../AnimationPicker/AnimationPicker';
 var AnimationList = require('./AnimationList');
 var commonStyles = require('../../commonStyles');
 var color = require('../../color');
