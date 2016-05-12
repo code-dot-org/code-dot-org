@@ -713,7 +713,7 @@ applabCommands.drawImage = function (opts) {
 /**
  * We support a couple different version of this API
  * drawImageURL(url, [callback])
- * drawImaegURL(url, x, y, width, height, [calback])
+ * drawImageURL(url, x, y, width, height, [callback])
  */
 applabCommands.drawImageURL = function (opts) {
   var divApplab = document.getElementById('divApplab');

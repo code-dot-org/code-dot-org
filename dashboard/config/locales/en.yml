@@ -677,6 +677,16 @@ en:
           other: 'Other'
         detail: 'Please provide as much detail as possible regarding the content you are reporting.'
         acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+  peer_review:
+    accepted:
+      name: 'Accepted'
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: 'Rejected'
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: 'Escalated'
+      description: 'I would like an instructor to review this submission'
   components:
     icon_library:
       search_placeholder_text: 'Search for an icon...'

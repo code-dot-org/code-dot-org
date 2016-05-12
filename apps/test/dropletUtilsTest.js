@@ -109,7 +109,8 @@ describe('generateDropletModeOptions', function () {
         },
         "dropdown": {
           "color": "#FFF176",
-          "title": "dropdown"
+          "title": "dropdown",
+          "minArgs": 1
         },
         "getText": {
           "value": true,
@@ -145,7 +146,9 @@ describe('generateDropletModeOptions', function () {
           "dropdown": {
             "1": ["true", "false"]
           },
-          "title": "radioButton"
+          "title": "radioButton",
+          "minArgs": 2,
+          "maxArgs": 3
         },
         "getChecked": {
           "value": true,
@@ -198,7 +201,9 @@ describe('generateDropletModeOptions', function () {
         "setPosition": {
           "color": "#FFF176",
           "dropdown": {},
-          "title": "setPosition"
+          "title": "setPosition",
+          "minArgs": 3,
+          "maxArgs": 5
         },
         "setSize": {
           "color": "#FFF176",
@@ -233,7 +238,9 @@ describe('generateDropletModeOptions', function () {
         },
         "createCanvas": {
           "color": "#F78183",
-          "title": "createCanvas"
+          "title": "createCanvas",
+          "minArgs": 1,
+          "maxArgs": 3
         },
         "setActiveCanvas": {
           "color": "#F78183",
@@ -278,7 +285,9 @@ describe('generateDropletModeOptions', function () {
         },
         "drawImageURL": {
           "color": "#F78183",
-          "title": "drawImageURL"
+          "title": "drawImageURL",
+          "minArgs": 1,
+          "maxArgs": 6
         },
         "getImageData": {
           "value": true,
@@ -331,7 +340,9 @@ describe('generateDropletModeOptions', function () {
         },
         "setRGB": {
           "color": "#F78183",
-          "title": "setRGB"
+          "title": "setRGB",
+          "minArgs": 6,
+          "maxArgs": 7
         },
         "startWebRequest": {
           "color": "#D3E965",
@@ -382,12 +393,16 @@ describe('generateDropletModeOptions', function () {
         "drawChart": {
           "color": "#D3E965",
           "dropdown": {},
-          "title": "drawChart"
+          "title": "drawChart",
+          "minArgs": 3,
+          "maxArgs": 5
         },
         "drawChartFromRecords": {
           "color": "#D3E965",
           "dropdown": {},
-          "title": "drawChartFromRecords"
+          "title": "drawChartFromRecords",
+          "minArgs": 4,
+          "maxArgs": 6
         },
         "moveForward": {
           "color": "#4DD0E1",
@@ -427,14 +442,18 @@ describe('generateDropletModeOptions', function () {
           "dropdown": {
             "0": ["30", "45", "60", "90"]
           },
-          "title": "turnRight"
+          "title": "turnRight",
+          "minArgs": 0,
+          "maxArgs": 1
         },
         "turnLeft": {
           "color": "#4DD0E1",
           "dropdown": {
             "0": ["30", "45", "60", "90"]
           },
-          "title": "turnLeft"
+          "title": "turnLeft",
+          "minArgs": 0,
+          "maxArgs": 1
         },
         "turnTo": {
           "color": "#4DD0E1",
@@ -498,7 +517,9 @@ describe('generateDropletModeOptions', function () {
         },
         "penRGB": {
           "color": "#4DD0E1",
-          "title": "penRGB"
+          "title": "penRGB",
+          "minArgs": 3,
+          "maxArgs": 4
         },
         "show": {
           "color": "#4DD0E1",
@@ -661,7 +682,8 @@ describe('generateDropletModeOptions', function () {
         "assignments": {
           "color": "#BB77C7"
         }
-      }
+      },
+      "paramButtonsForUnknownFunctions": true
     };
     var config = {
       dropletConfig: applabDropletConfig,
@@ -773,7 +795,8 @@ describe('generateDropletModeOptions', function () {
         "assignments": {
           "color": "#BB77C7"
         }
-      }
+      },
+      "paramButtonsForUnknownFunctions": true
     };
     var config = {
       dropletConfig: mazeDropletConfig,
