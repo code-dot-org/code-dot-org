@@ -4,6 +4,7 @@
 import _ from '../../lodash';
 import gamelabActions from '../actions';
 import { makeEnum, createUuid } from '../../utils';
+import { sourceUrlFromKey } from '../animationMetadata';
 
 /**
  * @enum {string} Export possible targets for animation picker for consumers
@@ -104,17 +105,38 @@ export function handleUploadComplete(result) {
     var goal = state.goal;
     var uploadFilename = state.uploadFilename;
     if (goal === Goal.NEW_ANIMATION) {
-      dispatch(gamelabActions.addAnimation({
-        key: result.filename.replace(/\.png$/i, ''),
-        name: uploadFilename,
-        size: result.size,
-        version: result.versionId
-      }));
+      // TODO (bbuchanan): This sequencing feels backwards.  Eventually, we
+      // ought to preview and get dimensions from the local filesystem, async
+      // with the upload itself, but that will mean refactoring away from the
+      // jQuery uploader.
+      loadImageMetadata(result, uploadFilename, animation => {
+        dispatch(gamelabActions.addAnimation(animation));
+      });
     } else if (goal === Goal.NEW_FRAME) {
       // TODO (bbuchanan): Implement after integrating Piskel
     }
     dispatch(hide());
   };
+}
+
+function loadImageMetadata(result, name, cb) {
+  const key = result.filename.replace(/\.png$/i, '');
+  const sourceUrl = sourceUrlFromKey(key);
+  let image  = new Image();
+  image.addEventListener('load', function () {
+    cb({
+      key: key,
+      name: name,
+      size: result.size,
+      version: result.versionId,
+      sourceUrl: sourceUrl,
+      sourceSize: {x: image.width, y: image.height},
+      frameSize: {x: image.width, y: image.height},
+      frameCount: 1,
+      frameRate: 15
+    });
+  });
+  image.src = sourceUrl;
 }
 
 /**
