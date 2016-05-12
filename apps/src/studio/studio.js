@@ -2629,7 +2629,7 @@ Studio.checkForBlocklyPreExecutionFailure = function () {
     return true;
   }
 
-  if (studioApp.hasExtraTopBlocks() && !level.showUnusedBlocks) {
+  if (studioApp.hasExtraTopBlocks() && !Blockly.showUnusedBlocks) {
     Studio.result = false;
     Studio.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
     Studio.preExecutionFailure = true;

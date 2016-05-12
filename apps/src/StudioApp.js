@@ -219,8 +219,6 @@ StudioApp.prototype.configure = function (options) {
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
   this.usingBlockly_ = !this.editCode;
-  this.showUnusedBlocks = experiments.isEnabled('unusedBlocks') &&
-      utils.valueOr(options.level && options.level.showUnusedBlocks, true);
 
   // TODO (bbuchanan) : Replace this editorless-hack with setting an editor enum
   // or (even better) inject an appropriate editor-adaptor.
@@ -2186,7 +2184,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     hasVerticalScrollbars: config.hasVerticalScrollbars,
     hasHorizontalScrollbars: config.hasHorizontalScrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false),
-    showUnusedBlocks: experiments.isEnabled('unusedBlocks') && utils.valueOr(config.level.showUnusedBlocks, true),
+    showUnusedBlocks: experiments.isEnabled('unusedBlocks') && utils.valueOr(config.showUnusedBlocks, true),
     readOnly: utils.valueOr(config.readonlyWorkspace, false),
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false)
   };
