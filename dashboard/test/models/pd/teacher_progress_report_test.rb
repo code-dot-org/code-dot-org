@@ -87,9 +87,11 @@ class Pd::TeacherProgressReportTest < ActiveSupport::TestCase
     Pd::TeacherProgressReport.generate_report_for_user organizer
   end
 
-  test 'report for teacher should be empty' do
-    Pd::TeacherProgressReport.expects(:generate_report).with([])
-    Pd::TeacherProgressReport.generate_report_for_user @teacher1
+  test 'teachers cannot generate reports' do
+    e = assert_raises RuntimeError do
+      Pd::TeacherProgressReport.generate_report_for_user @teacher1
+    end
+    assert_equal 'Unauthorized', e.message
   end
 
   test 'only workshops that have ended' do
