@@ -53,7 +53,7 @@ export default connect(state => ({
   animations: state.animations,
   selectedAnimation: state.animationTab.selectedAnimation
 }), dispatch => ({
-  onNewItemClick: function () {
+  onNewItemClick() {
     dispatch(show(Goal.NEW_ANIMATION));
   }
 }))(AnimationList);

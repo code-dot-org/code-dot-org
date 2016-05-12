@@ -137,16 +137,16 @@ const AnimationListItem = React.createClass({
 export default connect(state => ({
   columnWidth: state.animationTab.columnSizes[0]
 }), dispatch => ({
-  cloneAnimation: function (animationKey) {
+  cloneAnimation(animationKey) {
     dispatch(actions.cloneAnimation(animationKey));
   },
-  deleteAnimation: function (animationKey) {
+  deleteAnimation(animationKey) {
     dispatch(actions.deleteAnimation(animationKey));
   },
-  selectAnimation: function (animationKey) {
+  selectAnimation(animationKey) {
     dispatch(selectAnimation(animationKey));
   },
-  setAnimationName: function (animationKey, newName) {
+  setAnimationName(animationKey, newName) {
     dispatch(actions.setAnimationName(animationKey, newName));
   }
 }))(Radium(AnimationListItem));
