@@ -4,7 +4,7 @@
 
 var _ = require('../lodash');
 var ActionType = require('./actions').ActionType;
-var animationPicker = require('./AnimationPicker/animationPickerModule').default;
+import animationPicker from './AnimationPicker/animationPickerModule';
 var animationTab = require('./AnimationTab/animationTabModule').default;
 var errorDialogStack = require('./errorDialogStackModule').default;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
