@@ -12,6 +12,7 @@ import { getLabel } from '../animationMetadata';
 
 var AnimationPickerBody = React.createClass({
   propTypes: {
+    onPickLibraryAnimation: React.PropTypes.func.isRequired,
     onUploadClick: React.PropTypes.func.isRequired
   },
 
@@ -37,6 +38,7 @@ var AnimationPickerBody = React.createClass({
                 key={animation.sourceUrl}
                 label={getLabel(animation)}
                 animation={animation}
+                onClick={this.props.onPickLibraryAnimation.bind(this, animation)}
             />
           )}
         </ScrollableList>

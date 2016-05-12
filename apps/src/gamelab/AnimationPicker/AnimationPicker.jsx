@@ -32,6 +32,7 @@ var AnimationPicker = React.createClass({
     uploadInProgress: React.PropTypes.bool.isRequired,
     uploadError: React.PropTypes.string,
     onClose: React.PropTypes.func.isRequired,
+    onPickLibraryAnimation: React.PropTypes.func.isRequired,
     onUploadStart: React.PropTypes.func.isRequired,
     onUploadDone: React.PropTypes.func.isRequired,
     onUploadError: React.PropTypes.func.isRequired
@@ -47,7 +48,12 @@ var AnimationPicker = React.createClass({
     } else if (this.props.uploadInProgress) {
       return <h1 style={styles.title}>{gamelabMsg.animationPicker_uploading()}</h1>;
     }
-    return <AnimationPickerBody onUploadClick={this.onUploadClick} />;
+    return (
+        <AnimationPickerBody
+            onPickLibraryAnimation={this.props.onPickLibraryAnimation}
+            onUploadClick={this.onUploadClick}
+        />
+    );
   },
 
   render: function () {
@@ -82,6 +88,9 @@ module.exports = connect(function propsFromStore(state) {
   return {
     onClose: function () {
       dispatch(actions.hide());
+    },
+    onPickLibraryAnimation: function (animation) {
+      dispatch(actions.pickLibraryAnimation(animation));
     },
     onUploadStart: function (data) {
       dispatch(actions.beginUpload(data.files[0].name));
