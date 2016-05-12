@@ -39,7 +39,7 @@
 
     .level-group-number= "#{page.offset + index + 1}. "
     .level-group-content
-      - if level_class == "multi"
+      - if ['multi', 'evaluation_question'].include? level_class
         -# For students (or teachers doing PD), mark all answers incorrect, so we don't give anything away.
         - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
           - level.properties['answers'].each { |answer| answer['correct'] = false }
@@ -51,6 +51,8 @@
         = render partial: 'levels/single_text_match', locals: {standalone: false, level: level, last_attempt: last_attempt }
       - elsif level_class == "free_response"
         = render partial: 'levels/free_response', locals: {in_level_group: true, level: level, last_attempt: last_attempt}
+      - else
+        = raise "Unsupported level type #{level_class}"
 
   - unless @script_level.nil?
     = render partial: 'levels/dialog', locals: {app: app, data: data, previous_button: page.page_number > 1, next_button: page.page_number < @total_page_count}

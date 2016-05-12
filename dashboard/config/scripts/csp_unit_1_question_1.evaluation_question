@@ -1,0 +1,5 @@
+name 'CSP Unit 1 Question 1'
+question 'What is the hardest thing about teaching computer science?'
+answer 'Getting my students to write', 1, 'Strategies for Student Writing'
+answer 'Running a good constructive classroom', 1, 'Running a Constructive Classroom'
+answer 'Getting students to work as a peer group', 1, 'Supporting Peer Learning'
