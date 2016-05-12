@@ -17,8 +17,8 @@ const AnimationPreview = React.createClass({
     return {
       currentFrame: 0,
       framesPerRow: 1,
-      scaledSourceSize: {x: 0, y:0},
-      scaledFrameSize: {x: 0, y:0},
+      scaledSourceSize: {x: 0, y: 0},
+      scaledFrameSize: {x: 0, y: 0},
       extraTopMargin: 0,
       wrappedSourceUrl: ''
     };
