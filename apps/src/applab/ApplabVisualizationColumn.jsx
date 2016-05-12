@@ -52,6 +52,7 @@ var ApplabVisualizationColumn = React.createClass({
   render: function () {
     let visualization = <Visualization/>;
     if (this.props.playspacePhoneFrame) {
+      // wrap our visualization in a phone frame
       visualization = (
         <PhoneFrame
             isDark={this.props.isRunning}
@@ -59,7 +60,7 @@ var ApplabVisualizationColumn = React.createClass({
             screenIds={this.props.screenIds}
             onScreenCreate={this.props.onScreenCreate}
         >
-          <Visualization/>
+          {visualization}
         </PhoneFrame>
       );
     }
