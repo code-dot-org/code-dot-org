@@ -549,6 +549,8 @@ Applab.init = function (config) {
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
+  config.runButtonClickWrapper = runButtonClickWrapper;
+
   Applab.channelId = config.channel;
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
@@ -979,10 +981,10 @@ Applab.reset = function (first) {
  * Save the app state and trigger any callouts, then call the callback.
  * @param callback {Function}
  */
-studioApp.runButtonClickWrapper = function (callback) {
+function runButtonClickWrapper(callback) {
   $(window).trigger('run_button_pressed');
   Applab.serializeAndSave(callback);
-};
+}
 
 /**
  * We also want to serialize in save in some other cases (i.e. entering code
