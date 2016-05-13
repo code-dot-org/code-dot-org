@@ -2,6 +2,7 @@
 - last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
 - in_level_group ||= false
 
+%link{rel: 'stylesheet', href: asset_path('blockly/css/common.css')}
 %script{src: asset_path('js/levels/external.js')}
 :javascript
   var options = #{level.properties['options'].to_json}
