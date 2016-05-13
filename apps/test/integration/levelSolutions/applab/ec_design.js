@@ -1,4 +1,5 @@
 var testUtils = require('../../../util/testUtils');
+var tickWrapper = require('../../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('@cdo/apps/lodash');
 var $ = require('jquery');
@@ -354,7 +355,7 @@ module.exports = {
       editCode: true,
       xml: 'button("my_button", "text");',
       runBeforeClick: function (assert) {
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.equal($('#my_button').length, 1);
 
           $("#designModeButton").click();
@@ -790,7 +791,7 @@ module.exports = {
         images = $('#designModeViz').find('img');
         assert.equal(images.length, 4, "there are four images in design mode");
 
-        testUtils.runOnAppTick(Applab, 1, function () {
+        tickWrapper.runOnAppTick(Applab, 1, function () {
           assert.equal($('#design_image1').attr('src'), redImage, 'after run, design mode img src prefixed with new channel id');
           assert.equal($('#image1').attr('src'), redImage, 'after run, code mode img src prefixed with new channel id');
 

@@ -4,7 +4,6 @@ chai.use(chaiSubset);
 chai.config.includeStack = true;
 var assert = chai.assert;
 exports.assert = assert;
-var tickWrapper = require('./tickWrapper');
 
 require('require-globify');
 
@@ -85,41 +84,6 @@ exports.generateArtistAnswer = function (generatedCode) {
   api.log = [];
   generatedCode(api);
   return api.log;
-};
-
-/**
- * Runs the given function at the provided tick count. For Studio.
- */
-exports.runOnStudioTick = function (tick, fn) {
-  exports.runOnAppTick(Studio, tick, fn);
-};
-
-/**
- * Generic function allowing us to hook into onTick. Only tested for Studio/Applab
- */
-exports.runOnAppTick = function (app, tick, fn) {
-  tickWrapper.runOnAppTick(app, tick, fn);
-};
-
-/**
- * Check a given predicate every tick, returning a promise that will resolve
- * when the predicate first evaluates TRUE.  This provides an easy way to
- * wait for certain asynchronous test setup to complete before checking
- * assertions.
- *
- * @param {Studio|Applab|GameLab} app - actually, any object with an onTick method.
- * @param {function} predicate
- * @returns {Promise} to resolve when predicate is true
- *
- * @example
- *   tickAppUntil(Applab, function () {
- *     return document.getElementById('slow-element');
- *   }).then(function () {
- *     assert(document.getElementById('slow-element').textContent === 'pass');
- *   });
- */
-exports.tickAppUntil = function (app, predicate) {
-  return tickWrapper.tickAppUntil(app, predicate);
 };
 
 /**
