@@ -1,4 +1,5 @@
 var testUtils = require('../../../util/testUtils');
+var tickWrapper = require('../../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 var _ = require('@cdo/apps/lodash');
 var Direction = require('@cdo/apps/studio/constants.js').Direction;
@@ -58,7 +59,7 @@ module.exports = {
         "throwProjectile(0, 2, 'blue_fireball');" +
         "onEvent('whenSpriteCollided-1-any_projectile', function() { vanish(1); });",
       runBeforeClick: function (assert) {
-        testUtils.runOnStudioTick(5, function () {
+        tickWrapper.runOnAppTick(Studio, 5, function () {
           assert(Studio.projectiles.length === 1);
           assert(Studio.projectiles[0].dir === Direction.EAST);
           var proj = document.getElementById('studioanimation_clippath_20').nextSibling;
@@ -71,7 +72,7 @@ module.exports = {
         });
         // our fireball should collide at tick 24, and vanish at tick 25, so by
         // tick 26 we should be finished
-        testUtils.runOnStudioTick(26, function () {
+        tickWrapper.runOnAppTick(Studio, 26, function () {
           assert(Studio.sprite[1].visible === false, "Second sprite has vanished");
           Studio.onPuzzleComplete();
         });

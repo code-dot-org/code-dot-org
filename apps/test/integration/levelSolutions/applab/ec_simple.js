@@ -1,4 +1,5 @@
 var testUtils = require('../../../util/testUtils');
+var tickWrapper = require('../../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('@cdo/apps/lodash');
 
@@ -67,7 +68,7 @@ module.exports = {
 
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 200, function () {
+        tickWrapper.runOnAppTick(Applab, 200, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -110,7 +111,7 @@ module.exports = {
 
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -157,7 +158,7 @@ module.exports = {
 
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -204,7 +205,7 @@ module.exports = {
 
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -238,7 +239,7 @@ module.exports = {
 
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },

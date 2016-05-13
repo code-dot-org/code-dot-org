@@ -1,4 +1,5 @@
 var testUtils = require('../../../util/testUtils');
+var tickWrapper = require('../../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('@cdo/apps/lodash');
 
@@ -43,7 +44,7 @@ module.exports = {
 
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -73,7 +74,7 @@ module.exports = {
        '  setText("result2", success);\n' +
        '});\n',
      runBeforeClick: function (assert) {
-       testUtils.tickAppUntil(Applab, canvasAndResultsPopulated).then(function () {
+       tickWrapper.tickAppUntil(Applab, canvasAndResultsPopulated).then(function () {
          assert.equal(document.getElementById('result1').textContent, "true");
          assert.equal(document.getElementById('result2').textContent, "false");
          Applab.onPuzzleComplete();
@@ -105,7 +106,7 @@ module.exports = {
        '  setText("result2", success);\n' +
        '});\n',
      runBeforeClick: function (assert) {
-       testUtils.tickAppUntil(Applab, canvasAndResultsPopulated).then(function () {
+       tickWrapper.tickAppUntil(Applab, canvasAndResultsPopulated).then(function () {
          assert.equal(document.getElementById('result1').textContent, "true");
          assert.equal(document.getElementById('result2').textContent, "false");
          Applab.onPuzzleComplete();
@@ -137,7 +138,7 @@ module.exports = {
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         // provide time for image to load
-        testUtils.runOnAppTick(Applab, 10, function () {
+        tickWrapper.runOnAppTick(Applab, 10, function () {
           var point1 = {x: 1, y: 1};
           var point2 = {x: 100, y: 200};
           var point3 = {x: 110, y: 220};
