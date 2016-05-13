@@ -14,12 +14,12 @@ var assert = require('chai').assert;
 var $ = require('jquery');
 var sinon = require('sinon');
 require('jquery-ui');
-var tickWrapper = require('./util/tickWrapper');
+var tickWrapper = require('./../util/tickWrapper');
 
-var wrappedEventListener = require('./util/wrappedEventListener');
-var testCollectionUtils = require('./util/testCollectionUtils');
+var wrappedEventListener = require('../util/wrappedEventListener');
+var testCollectionUtils = require('../util/testCollectionUtils');
 
-var testUtils = require('./util/testUtils');
+var testUtils = require('../util/testUtils');
 testUtils.setupLocales();
 testUtils.setExternalGlobals();
 
@@ -174,7 +174,7 @@ describe('Level tests', function () {
 
 // Loads a test collection at path and runs all the tests specified in it.
 function runTestCollection(item) {
-  var runLevelTest = require('./util/runLevelTest');
+  var runLevelTest = require('../util/runLevelTest');
   // Append back the .js so that we can distinguish 2_1.js from 2_10.js when grepping
   var path = item.path + '.js';
   var testCollection = item.data;
@@ -184,7 +184,7 @@ function runTestCollection(item) {
   describe(path, function () {
     testCollection.tests.forEach(function (testData, index) {
       testUtils.setupLocale(app);
-      var dataItem = require('./util/data')(app);
+      var dataItem = require('../util/data')(app);
 
       // todo - maybe change the name of expected to make it clear what type of
       // test is being run, since we're using the same JSON files for these

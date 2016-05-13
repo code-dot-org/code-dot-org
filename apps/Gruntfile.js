@@ -331,6 +331,7 @@ module.exports = function (grunt) {
   config.exec = {
     browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
     convertScssVars: './script/convert-scss-variables.js',
+    integrationTest: 'node test/util/runIntegrationTests.js --color' + (fastMochaTest ? ' --fast' : ''),
     mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : ''),
     applabapi: 'echo "' + applabAPIExec + '" && ' + applabAPIExec,
   };
@@ -541,7 +542,15 @@ module.exports = function (grunt) {
     'exec:mochaTest'
   ]);
 
-  grunt.registerTask('test', ['mochaTest']);
+  grunt.registerTask('integrationTest', [
+    'newer:messages',
+    'exec:convertScssVars',
+    'newer:copy:static',
+    'concat',
+    'exec:integrationTest'
+  ]);
+
+  grunt.registerTask('test', ['mochaTest', 'integrationTest']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
 
