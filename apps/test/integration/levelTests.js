@@ -22,6 +22,7 @@ var testCollectionUtils = require('./util/testCollectionUtils');
 var testUtils = require('../util/testUtils');
 testUtils.setupLocales();
 testUtils.setExternalGlobals();
+import {setupBlocklyFrame, getStudioAppSingleton} from './util/testBlockly';
 
 // Anatomy of a level test collection. The example itself is uncommented so
 // that you get the benefits of editor syntax highlighting
@@ -111,8 +112,8 @@ describe('Level tests', function () {
     }, 1);
     clock = sinon.useFakeTimers(Date.now());
 
-    testUtils.setupBlocklyFrame();
-    studioApp = testUtils.getStudioAppSingleton();
+    setupBlocklyFrame();
+    studioApp = getStudioAppSingleton();
 
     wrappedEventListener.attach();
 
