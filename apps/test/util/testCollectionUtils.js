@@ -5,7 +5,7 @@ module.exports = {
   // Get all json files under directory path
   getCollections: function () {
     // require-globify transform
-    var files = require('../integration/solutions/**/*.js', {hash: 'path'});
+    var files = require('../integration/levelSolutions/**/*.js', {hash: 'path'});
     var testCollections = [];
     Object.keys(files).forEach(function (file) {
       // Setting that allows us to ignore particular level files
