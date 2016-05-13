@@ -1,6 +1,6 @@
 var assert = require('chai').assert;
 var testUtils = require('../../util/testUtils');
-var testBlockFactory = require('../../util/testBlockFactory');
+var testBlockFactory = require('./testBlockFactory');
 
 /** @type {StudioApp} instance reference internal to this module  */
 var studioApp;
