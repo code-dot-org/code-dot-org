@@ -615,12 +615,12 @@ Maze.init = function (config) {
   studioApp.reduxStore.dispatch(setPageConstants({
     localeDirection: studioApp.localeDirection(),
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isDroplet: !!level.editCode
+    isDroplet: !!level.editCode,
+    hideRunButton: !!(level.stepOnly && !level.edit_blocks)
   }));
 
   var visualizationColumn = (
     <MazeVisualizationColumn
-      hideRunButton={!!(level.stepOnly && !level.edit_blocks)}
       showStepButton={!!(level.step && !level.edit_blocks)}
       searchWord={level.searchWord}
     />

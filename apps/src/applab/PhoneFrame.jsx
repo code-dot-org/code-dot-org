@@ -1,12 +1,14 @@
 import Radium from 'radium';
-import commonStyles from '../commonStyles';
 import color from '../color';
 import applabConstants from './constants';
 import experiments from '../experiments';
 import ScreenSelector from './ScreenSelector';
+import GameButtons, { RunButton, ResetButton } from '../templates/GameButtons';
+import CompletionButton from './CompletionButton';
+import FontAwesome from '../templates/FontAwesome';
 
 const RADIUS = 30;
-const FRAME_HEIGHT = 50;
+const FRAME_HEIGHT = 60;
 
 const styles = {
   phoneFrame: {
@@ -33,43 +35,64 @@ const styles = {
     marginRight: 'auto',
     paddingTop: (FRAME_HEIGHT - ScreenSelector.styles.dropdown.height) / 2,
     width: '80%'
+  },
+  centeredInFrame: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: '100%',
+    textAlign: 'center',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: FRAME_HEIGHT
+  },
+  paused: {
+    color: 'white',
+    fontSize: 20
+  },
+  pauseIcon: {
+    marginRight: 5
+  },
+  buttonMinWidth: {
+    minWidth: CompletionButton.styles.phoneFrameButton.minWidth
   }
 };
 
 
 const PhoneFrame = React.createClass({
   propTypes: {
-    showFrame: React.PropTypes.bool.isRequired,
     isDark: React.PropTypes.bool.isRequired,
     screenIds: React.PropTypes.array.isRequired,
+    showSelector: React.PropTypes.bool.isRequired,
+    isPaused: React.PropTypes.bool.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
   },
 
   render: function () {
-    const { showFrame, isDark, showSelector } = this.props;
-    let hideFrame = !showFrame;
-    if (!experiments.isEnabled('phoneFrame')) {
-      hideFrame = true;
-    }
-
+    const { isDark, screenIds, showSelector, isPaused, onScreenCreate } = this.props;
     return (
       <span>
         <div
             style={[
               styles.phoneFrame,
               styles.phoneFrameTop,
-              isDark && styles.phoneFrameDark,
-              hideFrame && commonStyles.hidden
+              isDark && styles.phoneFrameDark
             ]}
         >
+          {showSelector &&
           <div style={styles.screenSelector}>
-            {showSelector && !hideFrame &&
             <ScreenSelector
-                screenIds={this.props.screenIds}
-                onCreate={this.props.onScreenCreate}
+                screenIds={screenIds}
+                onCreate={onScreenCreate}
             />
-            }
             </div>
+          }
+          {isPaused &&
+          <div style={[styles.centeredInFrame, styles.paused]}>
+            <FontAwesome icon="pause" style={styles.pauseIcon}/>
+            PAUSED
+          </div>
+          }
         </div>
         {this.props.children}
         <div
@@ -77,9 +100,13 @@ const PhoneFrame = React.createClass({
               styles.phoneFrame,
               styles.phoneFrameBottom,
               isDark && styles.phoneFrameDark,
-              hideFrame && commonStyles.hidden
             ]}
-        />
+        >
+          <div style={styles.centeredInFrame}>
+            <RunButton hidden={false} style={styles.buttonMinWidth}/>
+            <ResetButton style={styles.buttonMinWidth}/>
+          </div>
+        </div>
       </span>
     );
   }
