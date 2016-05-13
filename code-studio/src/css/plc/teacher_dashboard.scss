@@ -49,6 +49,8 @@
 
     .coming_soon {
       text-align: center;
+      font-size: 16px;
+      padding-top: 20px;
     }
 
     a {
@@ -57,7 +59,6 @@
 
     .module_assignment {
       border-radius: 5px;
-      color: white !important;
       font-family: "Gotham 4r", sans-serif;
       text-decoration: none;
       margin: 10px;
@@ -69,15 +70,19 @@
     }
 
     .not_started {
-      background-color: #0094ca;
+      border: 1px solid #bbbbbb;
+      background-color: $white;
+      color: $charcoal !important;
     }
 
     .in_progress {
       background-color: #EFCD1C;
+      color: white !important;
     }
 
     .completed {
-      background-color: #b9bf15;
+      background-color: #0ebe0e;
+      color: white !important;
     }
   }
 }
