@@ -911,7 +911,8 @@ class UserTest < ActiveSupport::TestCase
       script_id: script_level.script_id,
       new_result: result,
       submitted: false,
-      level_source_id: nil
+      level_source_id: nil,
+      pairing_user_ids: nil
     )
   end
 

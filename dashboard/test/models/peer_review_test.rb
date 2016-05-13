@@ -21,8 +21,8 @@ class PeerReviewTest < ActiveSupport::TestCase
   test 'submitting a peer reviewed level should create PeerReview objects' do
     level_source = create :level_source, data: 'My submitted answer'
 
-    initial = PeerReview.count
-    @user.track_level_progress_async(script_level: @script_level, new_result: 100, submitted: true, level_source_id: level_source.id)
-    assert_equal PeerReview::REVIEWS_PER_SUBMISSION, PeerReview.count - initial
+    assert_difference('PeerReview.count', PeerReview::REVIEWS_PER_SUBMISSION) do
+      @user.track_level_progress_async(script_level: @script_level, new_result: 100, submitted: true, level_source_id: level_source.id, pairings: nil)
+    end
   end
 end
