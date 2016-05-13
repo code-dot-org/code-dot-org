@@ -71,7 +71,7 @@ var LabelProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
         <EnumPropertyRow
           desc={'text alignment'}
-          initialValue={element.style.textAlign || 'center'}
+          initialValue={element.style.textAlign || 'left'}
           options={['left','right','center','justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')} />
         <BooleanPropertyRow
