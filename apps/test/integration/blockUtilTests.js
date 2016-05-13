@@ -1,5 +1,6 @@
 var testUtils = require('../util/testUtils');
 testUtils.setupLocales();
+import {setupTestBlockly} from './util/testBlockly';
 
 var requiredBlockUtils = require('@cdo/apps/required_block_utils');
 var blockUtils = require('@cdo/apps/block_utils');
@@ -7,7 +8,7 @@ var assert = testUtils.assert;
 
 describe("blockUtils", function () {
   beforeEach(function () {
-    testUtils.setupTestBlockly();
+    setupTestBlockly();
   });
 
   it("can create a block from XML", function () {
@@ -31,7 +32,7 @@ describe("blockUtils", function () {
 
 describe("requiredBlockUtils", function () {
   beforeEach(function () {
-    testUtils.setupTestBlockly();
+    setupTestBlockly();
   });
 
   it("can recognize matching titles in blocks", function () {

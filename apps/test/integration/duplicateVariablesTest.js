@@ -1,12 +1,13 @@
 var testUtils = require('./../util/testUtils');
 var assert = testUtils.assert;
+import {setupTestBlockly} from './util/testBlockly';
 
 describe('hasDuplicateVariablesInForLoops', function () {
   var studioApp;
 
   // create our environment
   beforeEach(function () {
-    testUtils.setupTestBlockly();
+    setupTestBlockly();
     studioApp = testUtils.getStudioAppSingleton();
 
     var artistBlocks = require('@cdo/apps/turtle/blocks');
