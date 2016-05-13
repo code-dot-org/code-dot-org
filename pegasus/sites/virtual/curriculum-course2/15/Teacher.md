@@ -8,7 +8,7 @@ theme: none
 
 [content]
 
-## K-1 Lesson Overview
+## Lesson Overview
 Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
 
 [summary]

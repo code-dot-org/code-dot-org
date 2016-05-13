@@ -21,6 +21,10 @@ var MAX_DEBUG_AREA_HEIGHT = 400;
 var WATCH_TIMER_PERIOD = 500;
 /** @const {string} */
 var WATCH_COMMAND_PREFIX = "$watch ";
+/** @const {string} */
+var UNWATCH_COMMAND_PREFIX = "$unwatch ";
+/** @const {string} */
+var WATCH_VALUE_NOT_RUNNING = "undefined";
 
 /**
  * Debugger controls and debug console used in our rich JavaScript IDEs, like
@@ -91,7 +95,7 @@ JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
   this.observer_.observe(jsInterpreter.onExecutionWarning,
       this.log.bind(this));
 
-  this.watchIntervalId_ = setInterval(this.onWatchTimer_.bind(this),
+  this.watchIntervalId_ = setInterval(this.updateWatchView_.bind(this),
       WATCH_TIMER_PERIOD);
 
   this.updatePauseUiState();
@@ -109,13 +113,9 @@ JsDebuggerUi.prototype.detach = function () {
   this.observer_.unobserveAll();
   this.jsInterpreter_ = null;
 
-  var debugWatchDiv = this.getElement_('#debug-watch');
-  if (debugWatchDiv) {
-    clearAllChildElements(debugWatchDiv);
-  }
-  this.watchExpressions_ = {};
   clearInterval(this.watchIntervalId_);
   this.watchIntervalId_ = 0;
+  this.updateWatchView_();
 
   this.resetDebugControls_();
 };
@@ -288,17 +288,25 @@ JsDebuggerUi.prototype.onDebugInputKeyDown = function (e) {
     e.target.textContent = '';
     this.log('> ' + input);
     var jsInterpreter = this.jsInterpreter_;
-    if (jsInterpreter) {
-      if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
-        var watchExpression = input.substring(WATCH_COMMAND_PREFIX.length);
-        this.watchExpressions_[watchExpression] = {};
-      } else {
-        try {
-          var result = jsInterpreter.evalInCurrentScope(input);
-          this.log('< ' + String(result));
-        } catch (err) {
-          this.log('< ' + String(err));
-        }
+    var watchExpression;
+    if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
+      watchExpression = input.substring(WATCH_COMMAND_PREFIX.length);
+      this.watchExpressions_[watchExpression] = {};
+      // Update immediately. When not running, this will confirm that the watch
+      // was added, since no timer will refresh automatically:
+      this.updateWatchView_();
+    } else if (0 === input.indexOf(UNWATCH_COMMAND_PREFIX)) {
+      watchExpression = input.substring(UNWATCH_COMMAND_PREFIX.length);
+      delete this.watchExpressions_[watchExpression];
+      // Update immediately. When not running, this will confirm that the watch
+      // was removed, since no timer will refresh automatically:
+      this.updateWatchView_();
+    } else if (jsInterpreter) {
+      try {
+        var result = jsInterpreter.evalInCurrentScope(input);
+        this.log('< ' + String(result));
+      } catch (err) {
+        this.log('< ' + String(err));
       }
     } else {
       this.log('< (not running)');
@@ -544,26 +552,29 @@ function clearAllChildElements(element) {
  * Refresh the watch expressions.
  * @private
  */
-JsDebuggerUi.prototype.onWatchTimer_ = function () {
+JsDebuggerUi.prototype.updateWatchView_ = function () {
   var jsInterpreter = this.jsInterpreter_;
-  if (jsInterpreter) {
-    var debugWatchDiv = this.getElement_('#debug-watch');
-    if (debugWatchDiv) {
-      clearAllChildElements(debugWatchDiv);
-      for (var watchExpression in this.watchExpressions_) {
-        var currentValue = jsInterpreter.evaluateWatchExpression(watchExpression);
-        if (this.watchExpressions_[watchExpression].lastValue !== currentValue) {
-          // Store new value
-          this.watchExpressions_[watchExpression].lastValue = currentValue;
-        }
-        var watchItem = document.createElement('div');
-        watchItem.className = 'debug-watch-item';
-        watchItem.innerHTML = require('./JsDebuggerWatchItem.html.ejs')({
-          varName: watchExpression,
-          varValue: currentValue
-        });
-        debugWatchDiv.appendChild(watchItem);
+  var debugWatchDiv = this.getElement_('#debug-watch');
+  if (debugWatchDiv) {
+    clearAllChildElements(debugWatchDiv);
+    for (var watchExpression in this.watchExpressions_) {
+      var currentValue;
+      if (jsInterpreter) {
+        currentValue = jsInterpreter.evaluateWatchExpression(watchExpression);
+      } else {
+        currentValue = WATCH_VALUE_NOT_RUNNING;
       }
+      if (this.watchExpressions_[watchExpression].lastValue !== currentValue) {
+        // Store new value
+        this.watchExpressions_[watchExpression].lastValue = currentValue;
+      }
+      var watchItem = document.createElement('div');
+      watchItem.className = 'debug-watch-item';
+      watchItem.innerHTML = require('./JsDebuggerWatchItem.html.ejs')({
+        varName: watchExpression,
+        varValue: currentValue
+      });
+      debugWatchDiv.appendChild(watchItem);
     }
   }
 };

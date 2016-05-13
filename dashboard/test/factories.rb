@@ -324,6 +324,16 @@ FactoryGirl.define do
     status 'present'
   end
 
+  factory :peer_review do
+    user nil
+    from_instructor false
+    script nil
+    level nil
+    level_source nil
+    data "MyText"
+    status 1
+  end
+
   factory :plc_enrollment_unit_assignment, :class => 'Plc::EnrollmentUnitAssignment' do
     plc_user_course_enrollment nil
     plc_course_unit nil

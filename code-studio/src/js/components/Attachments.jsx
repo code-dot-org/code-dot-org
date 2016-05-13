@@ -23,7 +23,9 @@ var styles = {
  * An attachment list component.
  */
 var Attachments = React.createClass({
-  propTypes: {},
+  propTypes: {
+    readonly: React.PropTypes.bool
+  },
 
   getInitialState: function () {
     return {loaded: false};
@@ -53,15 +55,21 @@ var Attachments = React.createClass({
       });
     }
 
-    return (
-      <span>
+    var button;
+    if (!this.props.readonly) {
+      button = (
         <input
           style={styles.button}
           className='btn btn-default'
           type='button'
           value='Add/Remove Attachments'
-          onClick={this.showAssetManager}
-        />
+          onClick={this.showAssetManager}/>
+      );
+    }
+
+    return (
+      <span>
+        {button}
         {attachmentList}
       </span>
     );

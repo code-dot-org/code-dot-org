@@ -2,7 +2,7 @@
 
 def should_i(question)
   loop do
-    print "Should I #{question}? [Yes/Skip/Quit] "
+    print "Should I #{question}? [#{underline('Y')}es]/#{underline('S')}kip/#{underline('Q')}uit: "
     response = gets.strip.downcase
     if "yes".start_with? response # also catches blank/return ;)
       yield
@@ -15,6 +15,12 @@ def should_i(question)
     end
   end
 end
+
+def stylize(text, color_code)
+  "\e[#{color_code}m#{text}\e[0m"
+end
+
+def underline(text); stylize(text, 4); end
 
 def wait_for(thing)
   print "Wait for #{thing} then hit enter to continue..."
@@ -29,7 +35,6 @@ end
 
 def open_in_default_browser(url)
   # Based on http://stackoverflow.com/a/14053693/5000129
-  puts "host_os: #{RbConfig::CONFIG['host_os']}"
   if RbConfig::CONFIG['host_os'] =~ /linux|bsd/
     system "sensible-browser \"#{url}\""
   else
@@ -63,9 +68,9 @@ should_i "merge from levelbuilder to staging" do
   open_url 'https://github.com/code-dot-org/code-dot-org/compare/staging...levelbuilder?expand=1&title=Levelbuilder%20%3E%20Staging'
 end
 
-wait_for "staging to finish building"
+wait_for "staging to finish building. if a staging build was already running, wait for a second build which will include the levelbuilder content"
 
-should_i "commit content changes from staging" do
+should_i "commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD" do
   puts <<EOS
 Follow the prompts given by the content-push script. If you need to do something fancier (or if the changed files do not "look ok" when it asks you), log in to staging and hand-craft the commit.
 EOS
@@ -88,7 +93,7 @@ EOS
 wait_for "between 1:30PM and 3:30PM (Pacific) to DTP"
 
 should_i "DTP" do
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/production...test?expand=1&title=DTP%20%Test%20%3E%20Production%29'
+  open_url 'https://github.com/code-dot-org/code-dot-org/compare/production...test?expand=1&title=DTP%20%28Test%20%3E%20Production%29'
 end
 
 should_i "deploy Levelbuilder while the deploy to production is happening" do
