@@ -3,6 +3,7 @@
  */
 
 var testUtils = require('../../../util/testUtils');
+var tickWrapper = require('../../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
 
 // take advantage of the fact that we expose the filesystem via
@@ -52,7 +53,7 @@ module.exports = {
 
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -77,7 +78,7 @@ module.exports = {
           "setText('idTxt2', getText('idTxt1'));",
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert(document.getElementById('idTxt2').textContent === 'test-value');
           Applab.onPuzzleComplete();
         });
@@ -94,7 +95,7 @@ module.exports = {
       xml: "button('my_button_id', 'my_button_text');",
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var button = document.getElementById('my_button_id');
           assert(button);
           assert.equal(button.textContent, 'my_button_text');
@@ -117,7 +118,7 @@ module.exports = {
         "setPosition('id', 10, 20, 30, 40);",
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var button = document.getElementById('id');
           assert(button);
           assert.equal(button.style.left, '10px');
@@ -140,7 +141,7 @@ module.exports = {
         "button('button1', 'Button 1 text');" +
         "button('button1', 'zOMG duplicate');",
       runBeforeClick: function (assert) {
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var debugOutput = document.getElementById('debug-output');
           assert.equal(debugOutput.textContent, "WARNING: Line: 1: button() id parameter refers to an id (button1) which already exists.");
           Applab.onPuzzleComplete();
@@ -158,7 +159,7 @@ module.exports = {
         "button('runButton', 'Bad name for a run button');" +
         "button('submitButton', 'Bad name for a submit button');",
       runBeforeClick: function (assert) {
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var debugOutput = document.getElementById('debug-output');
           assert.equal(debugOutput.textContent,
               "ERROR: Line: 1: Error: button() id parameter refers to an id " +
@@ -183,7 +184,7 @@ module.exports = {
         "setSize('id', 50, 150);",
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var button = document.getElementById('id');
           assert(button);
           assert.equal(button.style.width, '50px');
@@ -218,7 +219,7 @@ module.exports = {
 
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           // Element.outerHTML undoes some of the cosmetic changes made by the sanitizer.
           var expectedHtml = '' +
             '<div id="container">' +
@@ -263,7 +264,7 @@ module.exports = {
 
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           // Element.outerHTML undoes some of the cosmetic changes made by the sanitizer.
           var expectedHtml = '' +
             '<div id="container">' +
@@ -303,7 +304,7 @@ module.exports = {
 
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var expectedHtml = '' +
             '<div id="container">' +
             '<img id="image3" src="">' +
@@ -358,7 +359,7 @@ module.exports = {
 
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var expectedHtml = '' +
             '<div id="container">' +
             '<div id="mydiv">one</div>' +

@@ -1,4 +1,5 @@
 var testUtils = require('../../../util/testUtils');
+var tickWrapper = require('../../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var dropletUtils = require('@cdo/apps/dropletUtils');
 var _ = require('@cdo/apps/lodash');
@@ -25,7 +26,7 @@ module.exports = {
         'var f = Math.min(4, 5, 6);\n',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -51,7 +52,7 @@ module.exports = {
         '}\n',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -78,7 +79,7 @@ module.exports = {
       runBeforeClick: function (assert) {
         var randomNumberSpy = sinon.spy(dropletUtils, 'randomNumber');
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.strictEqual(randomNumberSpy.callCount, 100);
           Applab.onPuzzleComplete();
         });
@@ -113,7 +114,7 @@ module.exports = {
         // clear contents before run
         testUtils.setAceText('');
 
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -144,7 +145,7 @@ module.exports = {
         // clear contents before run
         testUtils.setAceText('');
 
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -178,7 +179,7 @@ module.exports = {
         // clear contents before run
         testUtils.setAceText('');
 
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },

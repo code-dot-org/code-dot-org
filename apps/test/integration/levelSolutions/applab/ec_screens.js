@@ -1,4 +1,5 @@
 var testUtils = require('../../../util/testUtils');
+var tickWrapper = require('../../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('@cdo/apps/lodash');
 var $ = require('jquery');
@@ -76,7 +77,7 @@ module.exports = {
         assert.equal($('#propertyRowContainer button').attr('class'), 'rainbow-gradient', 'should be color picker');
 
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -126,7 +127,7 @@ module.exports = {
         assert(!$('#button1').is(':visible'));
 
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -208,7 +209,7 @@ module.exports = {
         assert.equal($("#design-properties button:contains('Delete')").length, 0, 'None should say Delete');
 
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -234,7 +235,7 @@ module.exports = {
         'dropdown("my_dropdown", "option1", "etc");',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           function idExistsOnScreen1(id) {
             var element = document.getElementById(id);
             assert(element);
@@ -285,7 +286,7 @@ module.exports = {
         assert.equal($("#designModeViz").children().length, 2, 'has two screen divs');
 
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.equal($('#divApplab').is(':visible'), true, 'divApplab is visible');
 
           assert.equal($('#divApplab #screen1').is(':visible'), false, 'screen1 is not visible');
@@ -344,7 +345,7 @@ module.exports = {
         assert.equal($('#divApplab #screen2')[0].style.display === 'none', true, 'screen 2 hidden');
 
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -384,7 +385,7 @@ module.exports = {
           'expected Code button (inactive) to have white background.');
 
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -410,7 +411,7 @@ module.exports = {
         assert.equal($('#design_screen2')[0].style.display === 'none', false, 'screen 2 visible');
         assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible when designing');
 
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           // should be on screen 2 after run
           assert.equal($('#divApplab').is(':visible'), true, 'divApplab is visible');
           assert.equal($('#divApplab #screen1')[0].style.display === 'none', true, 'screen 1 hidden after run');
@@ -515,7 +516,7 @@ module.exports = {
         assert.equal(screenElement.children.length, 0);
 
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -556,7 +557,7 @@ module.exports = {
         assert.equal(screenElement.style.height, '450px');
 
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
@@ -676,7 +677,7 @@ module.exports = {
         assert.equal($("#designModeButton").is(':visible'), true, '#designModeButton is visible');
         assert.equal($("#versions-header").is(':visible'), true, '#versions-header is visible');
 
-        testUtils.runOnAppTick(Applab, 20, function () {
+        tickWrapper.runOnAppTick(Applab, 20, function () {
           assert.equal($("#screen1").is(':visible'), true, '#screen1 is visible');
           assert.equal($("#mybutton").is(':visible'), true, '#mybutton is visible');
 

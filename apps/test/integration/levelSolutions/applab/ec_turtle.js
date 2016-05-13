@@ -1,4 +1,5 @@
 var testUtils = require('../../../util/testUtils');
+var tickWrapper = require('../../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var levels = require('@cdo/apps/applab/levels');
 var $ = require('jquery');
@@ -28,7 +29,7 @@ module.exports = {
         assert.equal(Applab.turtle.y, 240);
 
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.equal($('#divApplab > .screen').length, 1);
           assert.equal($('#turtleImage').parent().attr('id'), 'screen1');
           assert.equal(Applab.turtle.heading, 90);
@@ -59,7 +60,7 @@ module.exports = {
         // clear contents before run
         testUtils.setAceText('');
 
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },

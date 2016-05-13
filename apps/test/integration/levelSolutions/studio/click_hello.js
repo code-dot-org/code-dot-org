@@ -1,4 +1,5 @@
 var testUtils = require('../../../util/testUtils');
+var tickWrapper = require('../../../util/tickWrapper');
 var _ = require('@cdo/apps/lodash');
 
 var TestResults = require('@cdo/apps/constants.js').TestResults;
@@ -18,7 +19,7 @@ module.exports = {
         assert(Studio.startAvatars[0] === 'octopus');
 
         // simulate a click so that level gets completed
-        testUtils.runOnStudioTick(1, function () {
+        tickWrapper.runOnAppTick(Studio, 1, function () {
           var e = {
             preventDefault: function () { }
           };

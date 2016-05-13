@@ -1,4 +1,5 @@
 var testUtils = require('../../../util/testUtils');
+var tickWrapper = require('../../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('@cdo/apps/lodash');
 
@@ -25,7 +26,7 @@ module.exports = {
         'setProperty("my_button", "image", "' + facebookImage + '");',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var button = document.getElementById('my_button');
 
           assert.equal(button.textContent, 'newtext');
@@ -62,7 +63,7 @@ module.exports = {
         'setProperty("my_button", "image", "' + facebookImage + '");',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var button = document.getElementById('my_button');
 
           assert.equal(button.textContent, 'newtext');
@@ -95,7 +96,7 @@ module.exports = {
         'setProperty("my_text_input", "placeholder", "placeholdertext");',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var textInput = document.getElementById('my_text_input');
 
           assert.equal(textInput.getAttribute('placeholder'), 'placeholdertext');
@@ -125,7 +126,7 @@ module.exports = {
         'setProperty("my_slider", "step", 3);',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var slider = document.getElementById('my_slider');
 
           assert.equal(slider.getAttribute('value'), '51');
@@ -160,7 +161,7 @@ module.exports = {
         'setProperty("my_image", "hidden", true);',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var image = document.getElementById('my_image');
 
           // we set style.width/height instead of the width/height attributes
@@ -206,7 +207,7 @@ module.exports = {
         'setProperty("my_image", "hidden", true);',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var image = document.getElementById('my_image');
 
           // we set style.width/height instead of the width/height attributes
@@ -246,7 +247,7 @@ module.exports = {
         'setProperty("my_drop", "options", ["one", "two", "three"]);',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var dropdown = $("#my_drop");
 
           assert.equal(dropdown.children().length, 3);
@@ -278,7 +279,7 @@ module.exports = {
         'setProperty("my_drop", "options", ["one", "two", "three"]);',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var dropdown = $("#my_drop");
 
           assert.equal(dropdown.children().length, 3);
@@ -311,7 +312,7 @@ module.exports = {
         'setProperty("canvas1", "height", 13);',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var canvas = $("#canvas1")[0];
 
           // we set the width/height attributes instead of style.width/height
@@ -344,7 +345,7 @@ module.exports = {
         'setProperty("screen1", "image", "' + flappyImage + '");',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var screen = $("#screen1")[0];
 
           // we set the width/height attributes instead of style.width/height
@@ -374,7 +375,7 @@ module.exports = {
         'setProperty("image1", "picture", "' + flappyImage + '");',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var image = $("#image1")[0];
 
           // we set the width/height attributes instead of style.width/height
@@ -404,7 +405,7 @@ module.exports = {
         'setProperty("radio_button1", "checked", true);',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var radio = $("#radio_button1")[0];
 
           assert.equal(radio.getAttribute('name'), "gid1");
@@ -433,7 +434,7 @@ module.exports = {
         'setProperty("text_area1", "readonly", true);',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var text = $("#text_area1")[0];
 
           assert.equal(text.getAttribute('contenteditable'), "false");
@@ -460,7 +461,7 @@ module.exports = {
         'setProperty("my_image", "cant_set_this", 11);',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var image = document.getElementById('my_image');
 
           Applab.onPuzzleComplete();
@@ -487,7 +488,7 @@ module.exports = {
         'setProperty("my_image", "hidden", "true");',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var image = document.getElementById('my_image');
 
           Applab.onPuzzleComplete();
