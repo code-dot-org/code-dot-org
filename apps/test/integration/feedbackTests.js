@@ -2,6 +2,7 @@ var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 testUtils.setupLocales();
 testUtils.setExternalGlobals();
+import {setupTestBlockly} from './util/testBlockly';
 
 var testCollectionUtils = require('./util/testCollectionUtils');
 var sharedFunctionalBlocks = require('@cdo/apps/sharedFunctionalBlocks');
@@ -17,7 +18,7 @@ describe("checkForEmptyContainerBlockFailure_", function () {
 
   // create our environment
   beforeEach(function () {
-    testUtils.setupTestBlockly();
+    setupTestBlockly();
     studioApp = testUtils.getStudioAppSingleton();
     TestResults = studioApp.TestResults;
   });
@@ -113,7 +114,7 @@ describe("throwOnInvalidExampleBlocks", function () {
 
   // create our environment
   beforeEach(function () {
-    testUtils.setupTestBlockly();
+    setupTestBlockly();
     studioApp = testUtils.getStudioAppSingleton();
     sharedFunctionalBlocks.install(Blockly, Blockly.JavaScript, null);
   });
@@ -231,7 +232,7 @@ describe("getUserBlocks_", function () {
 
   // create our environment
   beforeEach(function () {
-    testUtils.setupTestBlockly();
+    setupTestBlockly();
     studioApp = testUtils.getStudioAppSingleton();
   });
 
@@ -350,7 +351,7 @@ describe("getMissingBlocks_ tests", function () {
 
   // create our environment
   beforeEach(function () {
-    testUtils.setupTestBlockly();
+    setupTestBlockly();
     studioApp = testUtils.getStudioAppSingleton();
   });
 
@@ -613,7 +614,7 @@ describe("getCountableBlocks_", function () {
 
   // create our environment
   beforeEach(function () {
-    testUtils.setupTestBlockly();
+    setupTestBlockly();
     blocks.install(Blockly, blockInstallOptions);
     studioApp = testUtils.getStudioAppSingleton();
   });
