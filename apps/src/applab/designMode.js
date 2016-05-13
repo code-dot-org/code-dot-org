@@ -943,6 +943,9 @@ designMode.changeScreen = function (screenId) {
  * @param {!string} screenId
  */
 function onScreenChange(screenId) {
+  // TODO - do i need to gate on mode?
+  Applab.changeScreen(studioApp.reduxStore.getState().screens.currentScreenId);
+
   elementUtils.getScreens().each(function () {
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
