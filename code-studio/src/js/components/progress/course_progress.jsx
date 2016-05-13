@@ -1,8 +1,8 @@
 /* global React, dashboard */
 
-var STAGE_TYPE = require('./types').STAGE_TYPE;
-var CourseProgressRow = require('./course_progress_row');
-var StageDetails = require('./stage_details');
+import {STAGE_TYPE} from './types';
+import CourseProgressRow from './course_progress_row';
+import StageDetails from './stage_details';
 
 /**
  * Stage progress component used in level header and course overview.
@@ -13,15 +13,15 @@ var CourseProgress = React.createClass({
     stages: React.PropTypes.arrayOf(STAGE_TYPE)
   },
 
-  getRow: function (stage) {
+  getRow(stage) {
     if (this.props.display === 'dots') {
-      return <CourseProgressRow stage={stage} key={stage.name}/>;
+      return <CourseProgressRow stage={stage} key={stage.name} />;
     } else {
-      return <StageDetails  stage={stage} key={stage.name}/>;
+      return <StageDetails stage={stage} key={stage.name} />;
     }
   },
 
-  render: function () {
+  render() {
     var rows = [], stages = this.props.stages;
 
     // Iterate through each stage. When a stage with a flex_category is found,
