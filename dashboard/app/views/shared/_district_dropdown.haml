@@ -17,7 +17,7 @@
 
     .form-group{style: "display: none; margin-top: 20px;"}
       .question Enter your school district's zip code
-      %input#school-zipcode.form-control{name: "school_zip", type: "text", required: false}
+      %input#school-zipcode.form-control{name: "#{form_name}[school_zip]", type: "text", required: false}
 
     .form-group{style: "display: none; margin-top: 20px;"}
       .question Select your state
@@ -30,4 +30,4 @@
     .form-group{style: "display: none; margin-top: 20px;"}
       .question Search for your district
       #school-district
-        %input.form-control{name: "school_district_id", type: "text", required: false}
+        %input.form-control{name: "#{form_name}[school_district_id]", type: "text", required: false}
