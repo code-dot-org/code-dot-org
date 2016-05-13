@@ -53,12 +53,17 @@ fi
 msg "Instance is not part of an ASG, continuing..."
 
 # https://github.com/awslabs/aws-codedeploy-samples/pull/40
-if test -z "$ELB_LIST"; then
+if [ "${ELB_LIST}" = all ]; then
     if [ -a /tmp/elblist ]; then
         msg "Finding all the ELBs that this instance was previously registered to"
         read ELB_LIST < /tmp/elblist
-        rm -f /tmp/elblist
     else
+        msg "Instance was not previously deregistered from any ELBs"
+        ELB_LIST=""
+    fi
+else
+    msg "Checking that user set at least one load balancer"
+    if test -z "$ELB_LIST"; then
         error_exit "Must have at least one load balancer to register to"
     fi
 fi
@@ -79,6 +84,11 @@ for elb in $ELB_LIST; do
         error_exit "Failed to register instance $INSTANCE_ID from ELB $elb"
     fi
 done
+
+# Remove list of ELBs this instance was previously registered to only after submitting all instance registrations.
+if [ -a /tmp/elblist ]; then
+    rm -f /tmp/elblist
+fi
 
 # Wait for all Registrations to finish
 msg "Waiting for instance to register to its load balancers"
