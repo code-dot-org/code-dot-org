@@ -14,7 +14,7 @@ var assert = require('chai').assert;
 var $ = require('jquery');
 var sinon = require('sinon');
 require('jquery-ui');
-var tickWrapper = require('../util/tickWrapper');
+var tickWrapper = require('./util/tickWrapper');
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
