@@ -49,6 +49,7 @@ var createStore = require('../redux').createStore;
 var Provider = require('react-redux').Provider;
 var reducers = require('./reducers');
 var actions = require('./actions');
+import { changeScreen } from './redux/screens';
 var changeInterfaceMode = actions.changeInterfaceMode;
 var setInstructionsInTopPane = actions.setInstructionsInTopPane;
 var setPageConstants = require('../redux/pageConstants').setPageConstants;
@@ -983,6 +984,10 @@ Applab.reset = function (first) {
  */
 function runButtonClickWrapper(callback) {
   $(window).trigger('run_button_pressed');
+
+  // Change back to default screen before we serialize. This also makes it so
+  // that we'll be back on the default screen after a reset.
+  studioApp.reduxStore.dispatch(changeScreen(elementUtils.getDefaultScreenId()));
   Applab.serializeAndSave(callback);
 }
 
@@ -1018,7 +1023,6 @@ Applab.runButtonClick = function () {
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
   }
-
 
   if (studioApp.editor) {
     logToCloud.addPageAction(logToCloud.PageAction.RunButtonClick, {
