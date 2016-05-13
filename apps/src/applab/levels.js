@@ -183,7 +183,15 @@ levels.custom = {
     "callMyFunction": null,
     "callMyFunction_n": null,
     "return": null,
-    "comment": null
+    "comment": null,
+
+    // Makerlab
+    // TODO(bjordan): Move to Makerlab level template
+    "pinMode": null,
+    "digitalWrite": null,
+    "digitalRead": null,
+    "analogWrite": null,
+    "analogRead": null,
   },
 
   // "randomNumber_max": null, // DEPRECATED

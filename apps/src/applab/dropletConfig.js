@@ -174,6 +174,12 @@ module.exports.blocks = [
   {func: 'setStyle', parent: api, category: 'Advanced', params: ['"id"', '"color:red;"'] },
   {func: 'getAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"'], type: 'value' },
   {func: 'setAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"', "200"]},
+
+  {func: 'pinMode', parent: api, category: 'Maker Lab', params: ['13', '"input"']},
+  {func: 'digitalWrite', parent: api, category: 'Maker Lab', params: ['13', '1']},
+  {func: 'digitalRead', parent: api, category: 'Maker Lab', nativeIsAsync: true, params: ['"D4"']},
+  {func: 'analogWrite', parent: api, category: 'Maker Lab', params: ['5', '150']},
+  {func: 'analogRead', parent: api, category: 'Maker Lab', nativeIsAsync: true, params: ['5']},
 ];
 
 module.exports.categories = {
@@ -197,9 +203,9 @@ module.exports.categories = {
     rgb: COLOR_CYAN,
     blocks: []
   },
-  Advanced: {
-    color: 'blue',
-    rgb: COLOR_BLUE,
+  'Maker Lab': {
+    color: 'cyan',
+    rgb: COLOR_CYAN,
     blocks: []
   },
 };
