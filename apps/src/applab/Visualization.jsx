@@ -1,6 +1,7 @@
 var Radium = require('radium');
 var applabConstants = require('./constants');
 var commonStyles = require('../commonStyles');
+var color = require('../color');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var connect = require('react-redux').connect;
 var experiments = require('../experiments');
@@ -19,7 +20,11 @@ var styles = {
     height: applabConstants.APP_HEIGHT
   },
   phoneFrame: {
-    marginBottom: 0
+    marginBottom: 0,
+    borderColor: color.lighter_gray
+  },
+  phoneFrameRunning: {
+    borderColor: color.charcoal
   },
   screenBlock: {
     backgroundColor: 'rgba(255, 255, 255, 0.5)',
@@ -44,6 +49,7 @@ var Visualization = React.createClass({
     isEmbedView: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     isPaused: React.PropTypes.bool.isRequired,
+    isRunning: React.PropTypes.bool.isRequired,
     playspacePhoneFrame: React.PropTypes.bool.isRequired
   },
 
@@ -57,7 +63,8 @@ var Visualization = React.createClass({
           style={[
             (this.props.isEmbedView || this.props.hideSource) && styles.nonResponsive,
             this.props.isShareView && styles.share,
-            this.props.playspacePhoneFrame && styles.phoneFrame
+            this.props.playspacePhoneFrame && styles.phoneFrame,
+            this.props.playspacePhoneFrame && this.props.isRunning && styles.phoneFrameRunning
           ]}
       >
         <div id="divApplab" className="appModern" tabIndex="1"/>
@@ -82,6 +89,7 @@ module.exports = connect(function propsFromStore(state) {
     hideSource: state.pageConstants.hideSource,
     isEmbedView: state.pageConstants.isEmbedView,
     isShareView: state.pageConstants.isShareView,
+    isRunning: state.runState.isRunning,
     isPaused: state.runState.isDebuggerPaused,
     playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
   };
