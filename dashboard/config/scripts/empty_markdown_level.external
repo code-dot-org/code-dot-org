@@ -1,0 +1,4 @@
+name 'Empty Markdown Level'
+markdown <<MARKDOWN
+This is an empty markdown level.
+MARKDOWN

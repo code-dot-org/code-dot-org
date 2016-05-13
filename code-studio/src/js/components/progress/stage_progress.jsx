@@ -1,6 +1,6 @@
 /* global React, dashboard */
 
-var STAGE_PROGRESS_TYPE = require('./types').STAGE_PROGRESS_TYPE;
+import {STAGE_PROGRESS_TYPE} from './types';
 
 /**
  * Stage progress component used in level header and course overview.
@@ -12,9 +12,9 @@ var StageProgress = React.createClass({
     largeDots: React.PropTypes.bool
   },
 
-  render: function () {
+  render() {
     var lastIndex = this.props.levels.length - 1;
-    var progressDots = this.props.levels.map(function (level, index) {
+    var progressDots = this.props.levels.map((level, index) => {
 
       var innerClass = 'level_link ' + (level.status || 'not_tried');
       if (level.kind == 'unplugged') {
@@ -48,7 +48,7 @@ var StageProgress = React.createClass({
         </div>,
         ' '
       ]);
-    }.bind(this));
+    });
 
     return (
       <div className={this.props.largeDots ? 'games' : 'progress_container'}>
