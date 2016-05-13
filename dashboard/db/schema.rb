@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160510000000) do
+ActiveRecord::Schema.define(version: 20160512220646) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -334,17 +334,19 @@ ActiveRecord::Schema.define(version: 20160510000000) do
   add_index "pd_district_payment_terms", ["district_id", "course"], name: "index_pd_district_payment_terms_on_district_id_and_course", using: :btree
 
   create_table "pd_enrollments", force: :cascade do |t|
-    t.integer  "pd_workshop_id", limit: 4,   null: false
-    t.string   "name",           limit: 255, null: false
-    t.string   "email",          limit: 255, null: false
+    t.integer  "pd_workshop_id",     limit: 4,   null: false
+    t.string   "name",               limit: 255, null: false
+    t.string   "email",              limit: 255, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "district_name",  limit: 255
-    t.string   "school",         limit: 255
-    t.string   "code",           limit: 255
+    t.string   "code",               limit: 255
+    t.string   "school",             limit: 255
+    t.integer  "school_district_id", limit: 4
+    t.integer  "school_zip",         limit: 4
   end
 
   add_index "pd_enrollments", ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
+  add_index "pd_enrollments", ["school_district_id"], name: "index_pd_enrollments_on_school_district_id", using: :btree
 
   create_table "pd_sessions", force: :cascade do |t|
     t.integer  "pd_workshop_id", limit: 4
@@ -908,6 +910,7 @@ ActiveRecord::Schema.define(version: 20160510000000) do
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
+  add_foreign_key "pd_enrollments", "school_districts"
   add_foreign_key "plc_course_units", "scripts"
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "plc_tasks", "script_levels"
