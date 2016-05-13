@@ -1,10 +1,10 @@
+import {assert} from 'chai';
 var testUtils = require('./util/testUtils');
 var xml = require('@cdo/apps/xml');
 
 testUtils.setupLocales();
 
 var utils = require('@cdo/apps/utils');
-var assert = testUtils.assert;
 var _ = require('@cdo/apps/lodash');
 var mazeUtils = require('@cdo/apps/maze/mazeUtils');
 

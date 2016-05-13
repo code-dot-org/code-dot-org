@@ -1,7 +1,6 @@
-var testUtils = require('./util/testUtils');
+import {assert} from 'chai';
 
 var WordSearch = require('@cdo/apps/maze/wordsearch');
-var assert = testUtils.assert;
 
 function setGlobals() {
   document.body.innerHTML = '<svg id="svg"></svg>';

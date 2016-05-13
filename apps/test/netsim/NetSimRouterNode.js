@@ -1,6 +1,7 @@
 'use strict';
 /* global describe, beforeEach, it */
 
+import {assert} from 'chai';
 var testUtils = require('../util/testUtils');
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var _ = require('@cdo/apps/lodash');
@@ -18,7 +19,6 @@ var Packet = require('@cdo/apps/netsim/Packet');
 
 
 var asciiToBinary = DataConverters.asciiToBinary;
-var assert = testUtils.assert;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var assertTableSize = NetSimTestUtils.assertTableSize;
 var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;

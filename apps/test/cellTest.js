@@ -1,9 +1,6 @@
-var chai = require('chai');
-chai.config.includeStack = true;
-var assert = chai.assert;
+import {assert} from 'chai';
 
 var testUtils = require('./util/testUtils');
-
 testUtils.setupLocales();
 
 var Cell = require('@cdo/apps/maze/cell');

@@ -1,12 +1,12 @@
 'use strict';
 /* global describe, beforeEach, it */
 
+import {assert} from 'chai';
 var testUtils = require('../util/testUtils');
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
 
-var assert = testUtils.assert;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var assertTableSize = NetSimTestUtils.assertTableSize;
 var fakeShard = NetSimTestUtils.fakeShard;

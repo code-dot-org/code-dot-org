@@ -2,7 +2,7 @@
 'use strict';
 /* global describe, beforeEach, it */
 
-var assert = require('../util/testUtils').assert;
+import {assert} from 'chai';
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var NetSimLogPanel = require('@cdo/apps/netsim/NetSimLogPanel');
 var DataConverters = require('@cdo/apps/netsim/DataConverters');

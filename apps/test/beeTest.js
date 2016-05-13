@@ -1,15 +1,11 @@
-var chai = require('chai');
-chai.config.includeStack = true;
-var assert = chai.assert;
+import {assert} from 'chai';
 
 var testUtils = require('./util/testUtils');
-
 testUtils.setupLocales();
 
 var Bee = require('@cdo/apps/maze/bee');
 var BeeCell = require('@cdo/apps/maze/beeCell');
 var MazeMap = require('@cdo/apps/maze/mazeMap');
-var utils = require('@cdo/apps/utils');
 
 var baseLevel = {
   honeyGoal: 1,
@@ -39,7 +35,7 @@ describe("Bee", function () {
   it("fails if invalid flowerType", function () {
     var maze = {};
     var config = {
-      level: utils.extend(baseLevel, {
+      level: Object.assign(baseLevel, {
         flowerType: 'invalid'
       })
     };
@@ -57,7 +53,7 @@ describe("Bee", function () {
       var map = [[mapValue]];
 
       var config = {
-        level: utils.extend(baseLevel, {
+        level: Object.assign(baseLevel, {
           flowerType: flowerType,
           map: map,
           initialDirt: [[initialDirtValue]]

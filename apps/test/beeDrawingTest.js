@@ -1,3 +1,4 @@
+import {assert} from 'chai';
 var testUtils = require('./util/testUtils');
 
 testUtils.setupLocales();
@@ -14,9 +15,7 @@ var Bee = require('@cdo/apps/maze/bee');
 var BeeCell = require('@cdo/apps/maze/beeCell');
 var MazeMap = require('@cdo/apps/maze/mazeMap');
 var BeeItemDrawer = require('@cdo/apps/maze/beeItemDrawer');
-var DirtDrawer = require('@cdo/apps/maze/dirtDrawer');
 var cellId = require('@cdo/apps/maze/mazeUtils').cellId;
-var assert = testUtils.assert;
 
 function createFakeSkin() {
   // BeeItemDrawer takes a skin as an input. Rather than load the actual skin,
@@ -39,7 +38,6 @@ function validateImages(setup, defaultFlower) {
 
   // create a 1 row map with all of our values
   var map = [setup.map(function (item) { return item[0]; })];
-  var dirtMap = [setup.map(function (item) { return item[1]; })];
   var initialDirtMap = [setup.map(function (item) { return item[2]; })];
 
   var fakeMaze = {

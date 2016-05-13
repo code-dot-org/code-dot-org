@@ -1,11 +1,9 @@
-var testUtils = require('./util/testUtils');
+import {assert} from 'chai';
 var Maze = require('@cdo/apps/maze/maze');
 var MazeMap = require('@cdo/apps/maze/mazeMap');
 var DirtDrawer = require('@cdo/apps/maze/dirtDrawer');
 var Cell = require('@cdo/apps/maze/cell');
-var assert = testUtils.assert;
 var cellId = require('@cdo/apps/maze/mazeUtils').cellId;
-var studioApp = require('@cdo/apps/StudioApp').singleton;
 
 describe("Maze", function () {
   var dirtMap = [

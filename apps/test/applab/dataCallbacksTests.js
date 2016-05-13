@@ -1,6 +1,6 @@
-var sinon = require('sinon');
+import {assert} from 'chai';
+import sinon from 'sinon';
 var testUtils = require('../util/testUtils');
-var assert = testUtils.assert;
 testUtils.setupLocales('applab');
 testUtils.setExternalGlobals();
 

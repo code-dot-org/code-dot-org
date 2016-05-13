@@ -1,14 +1,13 @@
 'use strict';
 /* global describe, beforeEach, it */
 
+import {assert} from 'chai';
 var testUtils = require('../util/testUtils');
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
 var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
 var NetSimVizAutoDnsNode = require('@cdo/apps/netsim/NetSimVizAutoDnsNode');
-
-var assert = testUtils.assert;
 
 testUtils.setupLocale('netsim');
 

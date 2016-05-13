@@ -1,5 +1,5 @@
+import {assert} from 'chai';
 var tickWrapper = require('./integration/util/tickWrapper');
-var assert = require('./util/testUtils').assert;
 
 function createFakeApp() {
   return {

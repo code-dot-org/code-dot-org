@@ -1,7 +1,6 @@
 'use strict';
 /* global describe, beforeEach, it, Promise */
-
-var assert = require('../util/testUtils').assert;
+import {assert} from 'chai';
 var ChartApi = require('@cdo/apps/applab/ChartApi');
 var GoogleChart = require('@cdo/apps/applab/GoogleChart');
 

@@ -1,7 +1,7 @@
 'use strict';
 /* global describe, beforeEach, it */
 
-var assert = require('../util/testUtils').assert;
+import {assert} from 'chai';
 var NetSimSlider = require('@cdo/apps/netsim/NetSimSlider');
 
 describe("NetSimSlider", function () {

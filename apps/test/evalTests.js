@@ -1,7 +1,4 @@
-var chai = require('chai');
-chai.config.includeStack = true;
-var assert = chai.assert;
-//var jsdom = require('jsdom').jsdom;
+import {assert} from 'chai';
 
 var testUtils = require('./util/testUtils');
 testUtils.setupLocales('eval');

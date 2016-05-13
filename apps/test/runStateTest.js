@@ -1,7 +1,6 @@
+import {assert} from 'chai';
 var testUtils = require('./util/testUtils');
-var assert = testUtils.assert;
 testUtils.setExternalGlobals();
-var ReactTestUtils = require('react-addons-test-utils');
 
 var runState = require('@cdo/apps/redux/runState');
 

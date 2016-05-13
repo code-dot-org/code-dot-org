@@ -1,5 +1,4 @@
-var testUtils = require('./util/testUtils');
-var assert = testUtils.assert;
+import {assert} from 'chai';
 
 describe("CommandHistory", function () {
   var CommandHistory = require('@cdo/apps/CommandHistory');
