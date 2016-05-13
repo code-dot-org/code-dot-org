@@ -900,7 +900,8 @@ SQL
                                                               script_id: script_id,
                                                               new_result: new_result,
                                                               submitted: submitted,
-                                                              level_source_id: level_source_id)
+                                                              level_source_id: level_source_id,
+                                                              pairing_user_ids: nil)
         retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
           PairedUserLevel.find_or_create_by(navigator_user_level_id: navigator_user_level.id,
                                             driver_user_level_id: user_level.id)
