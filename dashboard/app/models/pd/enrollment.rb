@@ -18,10 +18,6 @@
 #  index_pd_enrollments_on_pd_workshop_id      (pd_workshop_id)
 #  index_pd_enrollments_on_school_district_id  (school_district_id)
 #
-# Foreign Keys
-#
-#  fk_rails_be1a5b9dc6  (school_district_id => school_districts.id)
-#
 
 class Pd::Enrollment < ActiveRecord::Base
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
@@ -32,7 +28,7 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def school_district_or_zip
     unless school_district_id || school_zip
-      errors.add(:base, "Specify a school district or school ZIP.")
+      errors.add(:base, "School district or school ZIP is required")
     end
   end
 
