@@ -15,7 +15,6 @@ class ScriptDSL < BaseDSL
     @stages = []
     @i18n_strings = Hash.new({})
     @video_key_for_next_level = nil
-    @active = true
     @hidden = true
     @login_required = false
     @admin_required = false
@@ -85,6 +84,7 @@ class ScriptDSL < BaseDSL
   end
 
   def level(name, properties = {})
+    active = properties.delete(:active)
     level = {
       :name => name,
       :stage_flex_category => @stage_flex_category,
@@ -96,10 +96,7 @@ class ScriptDSL < BaseDSL
     @video_key_for_next_level = nil
     if @current_scriptlevel
       @current_scriptlevel[:levels] << level
-      if !@active
-        @current_scriptlevel[:properties][name] = { :active => @active }
-        @active = true
-      end
+      @current_scriptlevel[:properties][name] = { :active => active } if active == false
     else
       @scriptlevels << {
         :stage => @stage,
