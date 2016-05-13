@@ -1,7 +1,7 @@
 'use strict';
 /* global describe, it */
 
-var assert = require('../util/testUtils').assert;
+import {assert} from 'chai';
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 
 describe("DataConverters", function () {

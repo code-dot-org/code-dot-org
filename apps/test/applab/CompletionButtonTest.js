@@ -1,7 +1,6 @@
 'use strict';
-
+import {assert} from 'chai';
 var testUtils = require('../util/testUtils');
-var assert = testUtils.assert;
 testUtils.setupLocales();
 testUtils.setExternalGlobals();
 var CompletionButton = require('@cdo/apps/applab/CompletionButton').__TestInterface__.UnconnectedCompletionButton;

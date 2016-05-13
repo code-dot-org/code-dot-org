@@ -1,13 +1,7 @@
-var chai = require('chai');
-chai.config.includeStack = true;
-var assert = chai.assert;
-
+import {assert} from 'chai';
 var testUtils = require('./util/testUtils');
-
 testUtils.setupLocales();
-
 var BeeCell = require('@cdo/apps/maze/beeCell');
-var utils = require('@cdo/apps/utils');
 
 describe("BeeCell", function () {
   var cellEquals = function (left, right) {

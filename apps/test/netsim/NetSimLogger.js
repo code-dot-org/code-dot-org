@@ -1,7 +1,7 @@
 'use strict';
 /* global describe, it */
 
-var assert = require('../util/testUtils').assert;
+import {assert} from 'chai';
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 
 // Simple console that only has 'log' method

@@ -1,7 +1,6 @@
-var testUtils = require('../util/testUtils');
+import {assert} from 'chai';
 
 var BoardController = require('@cdo/apps/makerlab/BoardController');
-var assert = testUtils.assert;
 
 var OSX_DEFAULT_PORTS = [
   {

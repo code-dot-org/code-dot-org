@@ -1,4 +1,4 @@
-var assert = require('chai').assert;
+import {assert} from 'chai';
 var testCollectionUtils = require('./testCollectionUtils');
 
 var cb;

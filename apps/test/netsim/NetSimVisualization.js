@@ -1,6 +1,7 @@
 'use strict';
 /* global describe, beforeEach, it */
 
+import {assert} from 'chai';
 var testUtils = require('../util/testUtils');
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var NetSimVisualization = require('@cdo/apps/netsim/NetSimVisualization');
@@ -14,7 +15,6 @@ var NetSimVizSimulationNode = require('@cdo/apps/netsim/NetSimVizSimulationNode'
 var NetSimVizSimulationWire = require('@cdo/apps/netsim/NetSimVizSimulationWire');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 
-var assert = testUtils.assert;
 var DnsMode = NetSimConstants.DnsMode;
 var EncodingType = NetSimConstants.EncodingType;
 var fakeShard = NetSimTestUtils.fakeShard;
