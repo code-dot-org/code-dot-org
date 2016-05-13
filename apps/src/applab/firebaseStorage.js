@@ -10,7 +10,7 @@ var Firebase = require("firebase");
 var FirebaseStorage = module.exports;
 
 var databaseCache = {};
-var userId;
+var firebaseUserId;
 function getDatabase(channelId) {
   var db = databaseCache[channelId];
   if (db == null) {
@@ -27,7 +27,7 @@ function getDatabase(channelId) {
         if (err) {
           throw new Error('error authenticating to Firebase: ' + err);
         } else {
-          userId = user.uid;
+          firebaseUserId = user.uid;
         }
       });
     }
@@ -155,7 +155,7 @@ function createEntry(key, value) {
 /**
  * Map representing the rate limit over each time interval.
  *
- * @type {Object.<number, number>} Map from rate limit interval in seconds
+ * @type {Object.<string, number>} Map from rate limit interval in seconds
  *     to the maximum number of operations allowed during that interval.
  */
 var RATE_LIMITS = {
@@ -167,105 +167,178 @@ var RATE_LIMITS = {
  * List of rate limit intervals, longest-first so that the first limit we hit
  * will tell us the maximum amount of time the client must wait before retrying.
  *
- * @type {Array.<number>} Array of rate limit intervals in seconds, in descending
+ * @type {Array.<string>} Array of rate limit intervals in seconds, in descending
  * numerical order.
  */
 var RATE_LIMIT_INTERVALS = Object.keys(RATE_LIMITS).sort(function (a, b) {
   return Number(b) - Number(a);
 });
 
-function resetTimestamp(channelData, interval) {
-  channelData['limits/' + interval + '/last_reset_time'] = Firebase.ServerValue.TIMESTAMP;
-  channelData['limits/' + interval + '/last_op_count'] = 0;
+/**
+ * Increments each rate limit counter, calling the callback with map from
+ * rate limit intervals to the corresponding token to use.
+ */
+function getRateLimitTokens(onSuccess, onError) {
+  // TODO(dave): combine the getRateLimitToken() results with Promise.all().
+  getRateLimitToken(15, function (counters15) {
+    getRateLimitToken(60, function (counters60) {
+      onSuccess({
+        15: counters15.last_op_count,
+        60: counters60.last_op_count
+      });
+    }, onError);
+  }, onError);
 }
 
 /**
  *
- * @param {Object} channelData Object to update which will be written to Firebase.
- * @param {number} currentTimeMs The current server time in ms.
- * @param {Object} limits Data from the server representing current rate limit
- *   counter values.
- * @returns {boolean} true if the request is expected to pass rate limit rules.
+ * @param {number} currentTimeMs
+ * @param {number} interval
+ * @param {function (Object)} onSuccess Callback to call on success with an object
+ *     containing the new counter data including last_reset_time and last_op_count.
+ *     last_op_count is the next valid rate limit token for this client to use.
+ * @param {function (string)} onError Callback to call with an error to show to the user.
  */
-function updateRateLimits(channelData, currentTimeMs, limits, onError) {
-  for (var i = 0; i < RATE_LIMIT_INTERVALS.length; i++) {
-    var interval = RATE_LIMIT_INTERVALS[i];
-    if (!updateRateLimit(channelData, currentTimeMs, limits, interval, onError)) {
-      return false;
-    }
-  }
-  return true;
+function getRateLimitToken(interval, onSuccess, onError) {
+  // Atomically increment the rate limit counter to obtain a rate limit token.
+  incrementCounters(interval, onSuccess, function (countersData) {
+    // The increment failed because the count reached its maximum. Try to reset the count.
+    resetRateLimit(interval, countersData.last_reset_time, function () {
+      // The rate limit was reset. Try one more time to increment it.
+      incrementCounters(interval, onSuccess, function () {
+        throw new Error('Rate limit exceeded immediately after it was reset.');
+      });
+    }, onError);
+  });
 }
 
 /**
- * Indicates whether this request is allowed according to the specified rate limit
- * interval, and if so, updates channelData to write back to firebase accordingly.
- * @param {Object} channelData Object to update which will be written to Firebase.
- * @param {number} currentTimeMs The current server time in ms.
- * @param {Object} limits Data from the server representing current rate limit
- *   counter values.
- * @param {number} interval The number of seconds in this rate limit interval.
- * @returns {boolean} Whether this request is expected to pass the rate limit rule
- *     which applies to this interval.
+ *
+ * @param {number} interval
+ * @param lastResetTimeMs
+ * @param onSuccess
+ * @param onError
  */
-function updateRateLimit(channelData, currentTimeMs, limits, interval, onError) {
-  var rateLimit = limits[interval] || {};
-  var maxOpCount = RATE_LIMITS[interval];
-
-  var lastResetTimeMs = rateLimit.last_reset_time;
-  var opCount = rateLimit.last_op_count;
-
-  if (typeof lastResetTimeMs != 'number' || typeof opCount != 'number'|| opCount >= maxOpCount) {
-    // We need to reset the count on our next request in order to comply
-    // with rate limits enforced by security rules.
+function resetRateLimit(interval, lastResetTimeMs, onSuccess, onError) {
+  getCurrentTimeMs(function (currentTimeMs) {
     var nextResetTimeMs = lastResetTimeMs + interval * 1000;
     if (currentTimeMs < nextResetTimeMs) {
-      // It is too soon to reset the count.
+      // It is too soon to reset this rate limit.
       var timeRemaining = Math.ceil((nextResetTimeMs - currentTimeMs) / 1000);
       onError('rate limit exceeded. please wait ' + timeRemaining + ' seconds before retrying.');
-      return false;
     } else {
-      resetTimestamp(channelData, interval);
-      return true;
+      // Enough time has passed for this rate limit to be reset.
+      var limitRef = getDatabase(Applab.channelId).child('limits').child(interval);
+      var limitData = {
+        counters: {
+          last_reset_time: Firebase.ServerValue.TIMESTAMP,
+          last_op_count: 0
+        }
+      };
+      // 'set' will remove other children of limitRef including target_op_id and used_ops.
+      limitRef.set(limitData, function (error) {
+        if (error) {
+          limitRef.once('value', function (limitSnapshot) {
+            var newResetTimeMs = limitSnapshot.child('counters').child('last_reset_time').val();
+            if (newResetTimeMs <= lastResetTimeMs) {
+              throw new Error('Failed to reset rate limit: ' + error);
+            } else {
+              // Our reset request failed, but the timestamp was updated, so we assume
+              // that another client's reset attempt succeeded.
+              onSuccess();
+            }
+          });
+        } else {
+          onSuccess();
+        }
+      });
     }
+  });
+}
+
+/**
+ *
+ * @param countersRef
+ * @param interval
+ * @param onSuccess
+ * @param onAbort
+ */
+function incrementCounters(interval, onSuccess, onAbort) {
+  var countersRef = getDatabase(Applab.channelId).child('limits').child(interval).child('counters');
+  var increment = incrementCountersData.bind(this, interval);
+  countersRef.transaction(increment, function (error, committed, countersSnapshot) {
+    if (error) {
+      throw new Error('Unexpected error obtaining rate limit token: ' + error);
+    } else if (!committed) {
+      onAbort(countersSnapshot.val());
+    } else {
+      onSuccess(countersSnapshot.val());
+    }
+  });
+}
+
+/**
+ * Update function for a Firebase transaction to increment a rate limit counter.
+ * @param {number} interval The rate limit interval.
+ * @param {Object} countersData
+ * @param {number} countersData.last_reset_time The last time this rate limit interval was reset.
+ * @param {number} countersData.last_op_count The number of operations on this rate limit
+ *     interval since the last reset.
+ * @returns {*} new value for countersData, or undefined if the transaction should be aborted.
+ */
+function incrementCountersData(interval, countersData) {
+  countersData = countersData || {};
+  var last_op_count = countersData.last_op_count || 0;
+  if (countersData.last_reset_time == null) {
+    // Initialize and increment this rate limit.
+    countersData.last_reset_time = Firebase.ServerValue.TIMESTAMP;
+    countersData.last_op_count = 1;
+    return countersData;
+  } else if (last_op_count < RATE_LIMITS[interval]) {
+    // Increment this rate limit.
+    countersData.last_op_count = last_op_count + 1;
+    return countersData;
   } else {
-    channelData['limits/' + interval + '/last_op_count'] = opCount + 1;
-    return true;
+    // The rate limit cannot be incremented. Abort the transaction.
+    return;
   }
 }
 
 /**
  * @param {Firebase} channelRef
  * @param {String} tableName
- * @param {function(Object.<string, number>)} onSuccess Function which receives an object
+ * @param {function (Object.<string, number>)} onSuccess Function which receives an object
  *     with the following properties which have been fetched from the server:
  *     timestamp, opCount, rowCount, currentTime.
  */
-function getServerData(channelRef, tableName, onSuccess, onError) {
-  // TODO(dave): consolidate read operations and handle errors
-  var limitsRef = channelRef.child('limits');
-  var serverTimeRef = channelRef.child('server_time').child(userId);
-  var tableRef = getTable(Applab.channelId, tableName);
-
-  limitsRef.once('value', function (limitsSnapshot) {
+function getServerData(tableName, onSuccess, onError) {
+  getRateLimitTokens(function (tokenMap) {
+    var tableRef = getTable(Applab.channelId, tableName);
     tableRef.child('row_count').once('value', function (rowCountSnapshot) {
-      serverTimeRef.set(Firebase.ServerValue.TIMESTAMP, function (err) {
-        if (err) {
-          onError(err);
-        } else {
-          serverTimeRef.onDisconnect().remove();
-          serverTimeRef.once('value', function (currentTimeSnapshot) {
-            onSuccess({
-              limits: limitsSnapshot.val() || {},
-              rowCount: rowCountSnapshot.val(),
-              currentTime: currentTimeSnapshot.val()
-            });
-          });
-        }
+      onSuccess({
+        rowCount: rowCountSnapshot.val(),
+        tokenMap: tokenMap
       });
     });
-  });
+  }, onError);
  }
+
+
+
+
+function getCurrentTimeMs(onComplete) {
+  var serverTimeRef = getDatabase(Applab.channelId).child('server_time').child(firebaseUserId);
+  serverTimeRef.set(Firebase.ServerValue.TIMESTAMP, function (err) {
+    if (err) {
+      throw new Error('unexpected error getting current time from the server: ' + err);
+    } else {
+      serverTimeRef.onDisconnect().remove();
+      serverTimeRef.once('value', function (currentTimeSnapshot) {
+        onComplete(currentTimeSnapshot.val());
+      });
+    }
+  });
+}
 
 /**
  * Creates a new record in the specified table, accessible to all users.
@@ -282,26 +355,39 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
   getCounter(Applab.channelId, idCounter, function (counter) {
     record.id = counter;
 
-    var channelRef = getDatabase(Applab.channelId);
-    getServerData(channelRef, tableName, function (serverData) {
+    getServerData(tableName, function (serverData) {
       var channelData = {};
       channelData['tables/' + tableName + '/' + counter] = JSON.stringify(record);
       channelData['tables/' + tableName + '/target_record_id'] = String(counter);
       var newRowCount = (serverData.rowCount || 0) + 1;
-      channelData['tables/' + tableName + '/row_count']= newRowCount;
+      channelData['tables/' + tableName + '/row_count'] = newRowCount;
+      addRateLimitTokens(channelData, serverData.tokenMap);
 
-      if (updateRateLimits(channelData, serverData.currentTime, serverData.limits, onError)) {
-        channelRef.update(channelData, function (error) {
-          if (!error) {
-            onSuccess(record);
-          } else {
-            onError(error);
-          }
-        });
-      }
+      var channelRef = getDatabase(Applab.channelId);
+      channelRef.update(channelData, function (error) {
+        if (!error) {
+          onSuccess(record);
+        } else {
+          onError(error);
+        }
+      });
     }, onError);
   }, onError);
 };
+
+/**
+ * Populate the rate limit metadata in channelData needed to make the
+ * request succeed, using the rate limit info in limitsData.
+ * @param channelData
+ * @param limitsData
+ */
+function addRateLimitTokens(channelData, tokenMap) {
+  RATE_LIMIT_INTERVALS.forEach(function (interval) {
+    var token = tokenMap[interval];
+    channelData['limits/' + interval + '/used_ops/' + token] = true;
+    channelData['limits/' + interval + '/target_op_id'] = token;
+  });
+}
 
 /**
  * Returns true if record matches the given search parameters, which are a map
@@ -370,25 +456,23 @@ FirebaseStorage.readRecords = function (tableName, searchParams, onSuccess, onEr
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError) {
-  var channelRef = getDatabase(Applab.channelId);
-
-  getServerData(channelRef, tableName, function (serverData) {
+  getServerData(tableName, function (serverData) {
     var channelData = {};
     channelData['tables/' + tableName + '/' + record.id] = JSON.stringify(record);
     channelData['tables/' + tableName + '/target_record_id'] = String(record.id);
 
     // TODO: We need to handle the 404 case, probably by attempting a read.
     channelData['tables/' + tableName + '/row_count']= serverData.rowCount;
+    addRateLimitTokens(channelData, serverData.tokenMap);
 
-    if (updateRateLimits(channelData, serverData.currentTime, serverData.limits, onError)) {
-      channelRef.update(channelData, function (error) {
-        if (!error) {
-          onComplete(record, true);
-        } else {
-          onError(error);
-        }
-      });
-    }
+    var channelRef = getDatabase(Applab.channelId);
+    channelRef.update(channelData, function (error) {
+      if (!error) {
+        onComplete(record, true);
+      } else {
+        onError(error);
+      }
+    });
   });
 };
 
@@ -403,24 +487,23 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError) {
-  var channelRef = getDatabase(Applab.channelId);
-  getServerData(channelRef, tableName, function (serverData) {
+  getServerData(tableName, function (serverData) {
     var channelData = {};
     channelData['tables/' + tableName + '/' + record.id] = null;
     channelData['tables/' + tableName + '/target_record_id'] = String(record.id);
 
     // TODO: We need to handle the 404 case, probably by attempting a read.
     channelData['tables/' + tableName + '/row_count']= serverData.rowCount - 1;
+    addRateLimitTokens(channelData, serverData.tokenMap);
 
-    if (updateRateLimits(channelData, serverData.currentTime, serverData.limits, onError)) {
-      channelRef.update(channelData, function (error) {
-        if (!error) {
-          onComplete(true);
-        } else {
-          onError(error);
-        }
-      });
-    }
+    var channelRef = getDatabase(Applab.channelId);
+    channelRef.update(channelData, function (error) {
+      if (!error) {
+        onComplete(true);
+      } else {
+        onError(error);
+      }
+    });
   });
 };
 

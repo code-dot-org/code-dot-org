@@ -5,6 +5,9 @@ isLoggedIn() { auth.uid !== null }
 // general helpers
 
 valueOr(value, defaultValue) { value == null ? defaultValue : value }
+isUnchanged(value) { value == prior(value) }
+isIncremented(value) { value == prior(value) + 1 }
+isNotRemoved(value) { value != null || prior(value) == null }
 
 // Row count helpers
 
@@ -24,31 +27,63 @@ prevTargetRecord(table) { prior(table)[table.target_record_id] }
 
 // rate limit helpers
 
-getLastResetTime(channel, interval) { channel.limits[interval + ''].last_reset_time }
-getLastOpCount(channel, interval) { channel.limits[interval + ''].last_op_count }
+getRateLimit(channel, interval) { channel.limits[interval + ''] }
 
-isValidOpCount(opCount, maxCount) {
-  opCount == valueOr(prior(opCount), 0) + 1 && opCount <= maxCount
+isValidInit(limit) {
+  prior(limit.counters.last_reset_time) == null &&
+  limit.counters.last_reset_time == now &&
+  limit.counters.last_op_count == 1 &&
+  limit.used_ops == null
 }
 
-isRateLimitReset(timestamp, opCount, maxTime) {
-  timestamp == now && (prior(timestamp) == null || timestamp > prior(timestamp) + maxTime) && opCount == 0
+isValidIncrement(limit, maxCount) {
+  isUnchanged(limit.counters.last_reset_time) &&
+  isUnchanged(limit.target_op_id) &&
+  isNotRemoved(limit.used_ops) &&
+  isIncremented(limit.counters.last_op_count) &&
+  limit.counters.last_op_count <= maxCount 
 }
 
-isValidRateLimit(timestamp, opCount, maxTime, maxCount) {
-  isValidOpCount(opCount, maxCount) || isRateLimitReset(timestamp, opCount, maxTime)
+isValidReset(limit, maxTime) {
+  limit.used_ops == null &&
+  limit.counters.last_reset_time == now && 
+  limit.counters.last_reset_time > prior(limit.counters.last_reset_time + maxTime) &&
+  limit.counters.last_op_count == 0
 }
 
-// Verify that the op count has been incremented or the timestamp has been
-// reset. Rely on the rules for those fields to determine whether it was 
-// valid to do so.
-isRateLimitUpdated(timestamp, opCount) {
-  timestamp == now || opCount == prior(opCount) + 1
+// The NEW version of the NEW target op.
+nextTargetOp(limit) {
+  limit.used_ops[limit.target_op_id + '']
 }
 
+// The OLD version of the NEW target op.
+prevTargetOp(limit) { 
+  prior(limit).used_ops[limit.target_op_id + '']
+}
+
+isValidUsedOp(limit) {
+  isUnchanged(limit.counters.last_op_count) &&
+  isUnchanged(limit.counters.last_reset_time) &&
+  targetOpUsed(limit) &&
+  limit.target_op_id <= limit.counters.last_op_count
+}
+
+isValidRateLimit(limit, maxTime, maxCount) {
+  isValidInit(limit) ||
+  isValidIncrement(limit, maxCount) || 
+  isValidReset(limit, maxTime) ||
+  isValidUsedOp(limit)
+}
+
+targetOpUsed(limit) {
+  prevTargetOp(limit) == null && nextTargetOp(limit) == true
+}
+
+// Minimal check to ensure the client wrote to each rate limit,
+// which will trigger the more thorough validation checks there.
 allRateLimitsUpdated(channel) {
-  isRateLimitUpdated(getLastResetTime(channel, 15), getLastOpCount(channel, 15)) &&
-  isRateLimitUpdated(getLastResetTime(channel, 60), getLastOpCount(channel, 60))
+  targetOpUsed(getRateLimit(channel, 15)) &&
+  targetOpUsed(getRateLimit(channel, 60))
 }
 
 //
@@ -90,28 +125,42 @@ path /v3/shared-tables/{channel_id}/tables/{table_name}/{record_id} is String {
   write() {
     // Specify these rules in write(), because validate() is skipped when data is null
     // (e.g. records are removed).
-    isLoggedIn() && isTargetId(this, record_id) && rowCountUpdated(this, prior(this)) && allRateLimitsUpdated(this.parent().parent().parent())
+    isLoggedIn() && isTargetId(this, record_id) && rowCountUpdated(this, prior(this)) &&
+    allRateLimitsUpdated(this.parent().parent().parent())
   }
 }
 
 // rate limits
 
-type RateLimit {
-  last_reset_time: Number
-  last_op_count: Number  
+type RateLimits {
+  '15': RateLimit | Null
+  '60': RateLimit | Null
 }
 
-path /v3/shared-tables/{channel_id}/limits/15 is RateLimit {
+type RateLimit {
+  counters: RateLimitCounters
+  target_op_id: Number | Null
+  used_ops: Boolean[]
+}
+
+type RateLimitCounters {
+  last_reset_time: Number
+  last_op_count: Number
+}
+
+path /v3/shared-tables/{channel_id}/limits is RateLimits {
   write() { isLoggedIn() && this != null }
+}
+
+path /v3/shared-tables/{channel_id}/limits/15 {
   validate() {
-    isValidRateLimit(this.last_reset_time, this.last_op_count, 15000, 3)
+    isValidRateLimit(this, 15000, 3)
   }
 }
 
-path /v3/shared-tables/{channel_id}/limits/60 is RateLimit {
-  write() { isLoggedIn() && this != null }
+path /v3/shared-tables/{channel_id}/limits/60 {
   validate() {
-    isValidRateLimit(this.last_reset_time, this.last_op_count, 60000, 6)
+    isValidRateLimit(this, 60000, 6)
   }
 }
 
