@@ -28,7 +28,7 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def school_district_or_zip
     unless school_district_id || school_zip
-      errors.add(:base, "School district or school ZIP is required")
+      errors.add(:school_district, "School district or school ZIP is required")
     end
   end
 
