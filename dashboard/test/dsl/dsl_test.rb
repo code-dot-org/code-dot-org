@@ -148,8 +148,7 @@ stage 'Stage1'
 level 'Level 1'
 variants
 level 'Level 2a'
-active false
-level 'Level 2b'
+level 'Level 2b', active: false
 endvariants
 level 'Level 3'
 "
