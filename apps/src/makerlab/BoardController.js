@@ -115,9 +115,6 @@ BoardController.prototype.reset = function () {
       console.log(component);
     }
   });
-
-  this.board_.pinMode(13, five.Pin.OUTPUT);
-  this.board_.digitalWrite(13, 0);
 };
 
 function connect() {
@@ -180,17 +177,50 @@ function deviceOnPortAppearsUsable(port) {
  * @returns {Object.<String, Object>} board components
  */
 function initializeCircuitPlaygroundComponents(io, board) {
+  var pixels = Array.from({length: 10}, function (_, index) {
+    return new five.Led.RGB({
+      controller: PlaygroundIO.Pixel,
+      pin: index
+    });
+  });
+
+  /**
+   * Must initialize sound sensor BEFORE left button, otherwise left button
+   * will not respond to input.
+   */
+  var sound = new five.Sensor({
+    pin: "A4",
+    freq: 100
+  });
+  var buttonL = new five.Button('4');
+  var buttonR = new five.Button('19');
+  var isPressedGetter = { get: function () { return this.value === 1; } };
+  Object.defineProperty(buttonL, "isPressed", isPressedGetter);
+  Object.defineProperty(buttonR, "isPressed", isPressedGetter);
+
   return {
-    pixels: Array.from({length: 10}, function (_, index) {
-      return new five.Led.RGB({
-        controller: PlaygroundIO.Pixel,
-        pin: index
-      });
-    }),
+    pixel0: pixels[0],
+    pixel1: pixels[1],
+    pixel2: pixels[2],
+    pixel3: pixels[3],
+    pixel4: pixels[4],
+    pixel5: pixels[5],
+    pixel6: pixels[6],
+    pixel7: pixels[7],
+    pixel8: pixels[8],
+    pixel9: pixels[9],
+    pixels: {
+      blink: () => pixels.forEach((p) => {p.blink()}),
+      stop: () => pixels.forEach((p) => {p.stop()}),
+      on: () => pixels.forEach((p) => {p.on()}),
+      off: () => pixels.forEach((p) => {p.off()}),
+      toggle: () => pixels.forEach((p) => {p.toggle()}),
+      color: (c) => pixels.forEach((p) => {p.color(c)}),
+    },
 
     led: new five.Led(13),
 
-    toggle: new five.Switch('21'),
+    toggleSwitch: new five.Switch('21'),
 
     piezo: new five.Piezo({
       pin: '5',
@@ -216,18 +246,11 @@ function initializeCircuitPlaygroundComponents(io, board) {
 
     touch: new PlaygroundIO.CapTouch(io),
 
-    /**
-     * Must initialize sound sensor BEFORE left button, otherwise left button
-     * will not respond to input.
-     */
-    sound: new five.Sensor({
-      pin: "A4",
-      freq: 100
-    }),
+    sound: sound,
 
-    buttonL: new five.Button('4'),
+    buttonL: buttonL,
 
-    buttonR: new five.Button('19'),
+    buttonR: buttonR,
 
     board: board,
 
