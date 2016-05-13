@@ -225,7 +225,7 @@ module.exports.blocks = [
   {func: 'piezo.play', category: 'Circuit', paletteParams: ['song'], params: [JSON.stringify(playSongObject)]},
 
   {func: 'isPressed', blockPrefix: 'buttonL.', category: 'Circuit', type: 'readonlyproperty', tipPrefix: 'button[L/R]' },
-  {func: 'holdTime', blockPrefix: 'buttonL.', category: 'Circuit', type: 'readonlyproperty', tipPrefix: 'button[L/R]' },
+  {func: 'holdtime', blockPrefix: 'buttonL.', category: 'Circuit', type: 'property', tipPrefix: 'button[L/R]' },
 
   {func: 'toggleSwitch', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'toggleSwitch.isOpen', category: 'Circuit', type: 'readonlyproperty' },
