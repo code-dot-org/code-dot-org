@@ -587,7 +587,7 @@ describe("getMissingBlocks_ tests", function () {
 
       testCollection.tests.forEach(function (testData, index) {
         testUtils.setupLocale(app);
-        var dataItem = require('./../util/data')(app);
+        var dataItem = require('./util/data')(app);
 
         if (testData.missingBlocks) {
           it('MissingBlocks: ' + testData.description, function () {
