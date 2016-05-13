@@ -36,7 +36,7 @@ class Plc::CourseUnit < ActiveRecord::Base
 
   def get_top_modules_of_each_type_from_user_selections(learning_module_ids_and_weights)
     # Preload all of the learning modules, that way we don't have to hit the DB multiple times
-    return [] if learning_module_ids_and_weights.nil? || learning_module_ids_and_weights.empty?
+    return [] if learning_module_ids_and_weights.blank?
     learning_module_map = {}
     learning_module_ids_and_weights.each {|k, v| learning_module_map[Plc::LearningModule.find(k)] = v}
 
