@@ -1,13 +1,15 @@
 /** @file Redux actions and reducer for the AnimationTab */
 'use strict';
 
-var combineReducers = require('redux').combineReducers;
-var GameLabActionType = require('../actions').ActionType;
+import { combineReducers } from 'redux';
+import { ActionType as GameLabActionType } from '../actions';
 
-var SELECT_ANIMATION = 'AnimationTab/SELECT_ANIMATION';
+const SELECT_ANIMATION = 'AnimationTab/SELECT_ANIMATION';
+const SET_COLUMN_SIZES = 'AnimationTab/SET_COLUMN_SIZES';
 
-exports.default = combineReducers({
-  selectedAnimation: selectedAnimation
+export default combineReducers({
+  columnSizes,
+  selectedAnimation
 });
 
 function selectedAnimation(state, action) {
@@ -27,6 +29,25 @@ function selectedAnimation(state, action) {
  * @param {!string} animationKey
  * @returns {{type: string, animationKey: string}}
  */
-exports.selectAnimation = function (animationKey) {
-  return { type: SELECT_ANIMATION, animationKey: animationKey };
-};
+export function selectAnimation(animationKey) {
+  return { type: SELECT_ANIMATION, animationKey };
+}
+
+function columnSizes(state, action) {
+  state = state || [150, 250, undefined];
+  switch (action.type) {
+    case SET_COLUMN_SIZES:
+      return action.sizes;
+    default:
+      return state;
+  }
+}
+
+/**
+ * Set sizes of the columns on the animation tab.
+ * @param {number[]} sizes
+ * @returns {{type: string, sizes: number[]}}
+ */
+export function setColumnSizes(sizes) {
+  return { type: SET_COLUMN_SIZES, sizes };
+}
