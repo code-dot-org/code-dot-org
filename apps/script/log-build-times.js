@@ -3,16 +3,16 @@
  *       steps, and (when possible) to upload those logs to New Relic.
  */
 var newrelic = require('newrelic'); // Wants to be first.
+var _ = require('lodash');
+var cdoConfig = require('./cdo-config');
 var chalk = require('chalk');
 var fs = require('fs');
 var execSync = require('child_process').execSync;
 var path = require('path');
 var timeGrunt = require('time-grunt-nowatch');
-var yaml = require('js-yaml');
 
 var LOG_FILE_NAME = 'build-times.log';
 var LOG_FILE_PATH = path.join(__dirname, '../', LOG_FILE_NAME);
-var LOCALS_YML_PATH = path.join(__dirname, '../../', 'locals.yml');
 
 /**
  * Decorate the given grunt module to record and report build durations.
@@ -55,7 +55,7 @@ function writeStatsToLogFile(stats, consoleLog) {
  * @param {function} consoleLog
  */
 function uploadLoggedStatsToNewRelic(consoleLog) {
-  if (!getNewRelicLicenseKey()) {
+  if (!isNewRelicConfigured()) {
     // we will skip logging to new relic.
     consoleLog(chalk.yellow(
         "Add new_relic_license_key to your locals.yml file to\n" +
@@ -74,7 +74,7 @@ function uploadLoggedStatsToNewRelic(consoleLog) {
   }
 
   if (dataToLog.length > 0) {
-    consoleLog("Logging " + dataToLog.length + " build time events to new relic ");
+    consoleLog("Sending " + dataToLog.length + " build time events to new relic ");
     var failed = false;
     dataToLog.forEach(function (data) {
       try {
@@ -123,24 +123,17 @@ function parseCollectedData(data) {
 }
 
 /**
- * Retrieve the New Relic License Key from locals.yml, if it exists.
- * If locals.yml does not exist, or the key does not exist, return undefined.
+ * True if we can find a configured New Relic license key, otherwise false.
  */
-var getNewRelicLicenseKey = once(function () {
-  try {
-    var locals = yaml.safeLoad(fs.readFileSync(LOCALS_YML_PATH));
-    return locals.new_relic_license_key;
-  } catch (e) {
-    // No locals.yml found, assume no license key is available.
-    return undefined;
-  }
-});
+function isNewRelicConfigured() {
+  return !!cdoConfig.get('new_relic_license_key');
+}
 
 /**
  * Retrieve the git user's email address.  Return 'unknown' if we are unable
  * to get this information.
  */
-var getUserEmail = once(function () {
+var getUserEmail = _.once(function () {
   try {
     return execSync('git config --get user.email').toString().trim();
   } catch (e) {
@@ -148,19 +141,3 @@ var getUserEmail = once(function () {
     return 'unknown';
   }
 });
-
-/**
- * Creates a function that is restricted to invoking func once. Repeat calls to
- * the function return the value of the first invocation.
- * @see https://lodash.com/docs#once
- */
-function once(fn) {
-  var called, returnValue;
-  return function () {
-    if (!called) {
-      returnValue = fn.apply(this, arguments);
-      called = true;
-    }
-    return returnValue;
-  };
-}
