@@ -1,5 +1,5 @@
 ---
-title: Table of Contents for Courses 1, 2, and 3
+title: Table of Contents for Courses 1, 2, 3 and 4
 view: page_curriculum
 theme: none
 ---
@@ -108,6 +108,38 @@ theme: none
 | 21. Artist: Patterns | 260 |   
 
 [/lesson-table]
+
+## Course 4
+[lesson-table]
+
+| Lesson Number and Name | Page Number |
+|------------------------|-------------|
+| 1. **Algorithms: Tangrams** | 123 |                                         
+| 2. Maze and Bee | 123 |
+| 3. Artist: Loops Review | 123 |                                                                                                                                                          
+| 4. **Variables in Envelopes** | 123
+| 5. **Abstraction with Mad Glibs** | 123 |                         
+| 6. Artist: Variables | 123 |
+| 7. Play Lab: Variables | 123   |
+| 8. **For Loop Fun** | 123 |
+| 9. Bee: For Loops | 123|
+| 10. Artist: For Loops| 123 |
+| 11. Play Lab: For Loops | 123 |
+| 12. Artist: Functions | 123 |
+| 13. **Songwriting with Parameters** | 123 |
+| 14. Artist: Functions with Parameters | 123 |
+| 15. Play Lab: Functions with Parameters | 123 |
+| 16. Bee: Functions with Parameters | 123 |
+| 17. **Binary Images** | 123 |
+| 18. Artist: Binary | 123 |
+| 19. Super Challenge - Variables | 123 |
+| 20. Super Challenge - For Loops | 123 |
+| 21. Super Challenge - Functions with Parameters | 123 |
+| 22. Extreme Challenge - Comprehensive | 123|    
+
+
+[/lesson-table]
+
 
 ## Appendix
 

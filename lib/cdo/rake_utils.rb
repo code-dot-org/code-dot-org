@@ -96,7 +96,7 @@ module RakeUtils
   end
 
   def self.git_pull()
-    system 'git', 'pull', 'origin', git_branch
+    system 'git', 'pull', '--ff-only', 'origin', git_branch
   end
 
   def self.git_push()
