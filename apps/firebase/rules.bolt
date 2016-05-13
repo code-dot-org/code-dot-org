@@ -47,7 +47,8 @@ isRateLimitUpdated(timestamp, opCount) {
 }
 
 allRateLimitsUpdated(channel) {
-  isRateLimitUpdated(getLastResetTime(channel, 15), getLastOpCount(channel, 15))
+  isRateLimitUpdated(getLastResetTime(channel, 15), getLastOpCount(channel, 15)) &&
+  isRateLimitUpdated(getLastResetTime(channel, 60), getLastOpCount(channel, 60))
 }
 
 //
@@ -107,6 +108,11 @@ path /v3/shared-tables/{channel_id}/limits/15 is RateLimit {
   }
 }
 
-//path /v3/shared-tables/{channel_id}/limits/60 is RateLimit;
+path /v3/shared-tables/{channel_id}/limits/60 is RateLimit {
+  write() { isLoggedIn() && this != null }
+  validate() {
+    isValidRateLimit(this.last_reset_time, this.last_op_count, 60000, 6)
+  }
+}
 
 //path /v3/shared-tables/{channel_id}/limits/240 is RateLimit;

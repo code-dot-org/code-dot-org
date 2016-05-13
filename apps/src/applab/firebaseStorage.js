@@ -152,41 +152,84 @@ function createEntry(key, value) {
   return result;
 }
 
-var RATE_LIMIT_INTERVAL_SEC = 15;
-var RATE_LIMIT_INTERVAL_MS = RATE_LIMIT_INTERVAL_SEC * 1000;
-var RATE_LIMIT_MAX_OP_COUNT = 3;
+/**
+ * Map representing the rate limit over each time interval.
+ *
+ * @type {Object.<number, number>} Map from rate limit interval in seconds
+ *     to the maximum number of operations allowed during that interval.
+ */
+var RATE_LIMITS = {
+  15: 3,
+  60: 6
+};
+
+/**
+ * List of rate limit intervals, longest-first so that the first limit we hit
+ * will tell us the maximum amount of time the client must wait before retrying.
+ *
+ * @type {Array.<number>} Array of rate limit intervals in seconds, in descending
+ * numerical order.
+ */
+var RATE_LIMIT_INTERVALS = Object.keys(RATE_LIMITS).sort(function (a, b) {
+  return Number(b) - Number(a);
+});
 
 function resetTimestamp(channelData, interval) {
-  var prefix = 'limits/' + interval + '/';
-  channelData[prefix + 'last_reset_time'] = Firebase.ServerValue.TIMESTAMP;
-  channelData[prefix + 'last_op_count'] = 0;
+  channelData['limits/' + interval + '/last_reset_time'] = Firebase.ServerValue.TIMESTAMP;
+  channelData['limits/' + interval + '/last_op_count'] = 0;
 }
 
 /**
- * @param {Object} channelData
- * @param {number} timestamp
- * @param {number} opCount
+ *
+ * @param {Object} channelData Object to update which will be written to Firebase.
+ * @param {number} currentTimeMs The current server time in ms.
+ * @param {Object} limits Data from the server representing current rate limit
+ *   counter values.
  * @returns {boolean} true if the request is expected to pass rate limit rules.
  */
-function updateRateLimitInfo(channelData, currentTime, limits) {
-  var rateLimit = limits[RATE_LIMIT_INTERVAL_SEC] || {};
-  var timestamp = rateLimit.last_reset_time;
+function updateRateLimits(channelData, currentTimeMs, limits, onError) {
+  for (var i = 0; i < RATE_LIMIT_INTERVALS.length; i++) {
+    var interval = RATE_LIMIT_INTERVALS[i];
+    if (!updateRateLimit(channelData, currentTimeMs, limits, interval, onError)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+/**
+ * Indicates whether this request is allowed according to the specified rate limit
+ * interval, and if so, updates channelData to write back to firebase accordingly.
+ * @param {Object} channelData Object to update which will be written to Firebase.
+ * @param {number} currentTimeMs The current server time in ms.
+ * @param {Object} limits Data from the server representing current rate limit
+ *   counter values.
+ * @param {number} interval The number of seconds in this rate limit interval.
+ * @returns {boolean} Whether this request is expected to pass the rate limit rule
+ *     which applies to this interval.
+ */
+function updateRateLimit(channelData, currentTimeMs, limits, interval, onError) {
+  var rateLimit = limits[interval] || {};
+  var maxOpCount = RATE_LIMITS[interval];
+
+  var lastResetTimeMs = rateLimit.last_reset_time;
   var opCount = rateLimit.last_op_count;
 
-  if (typeof timestamp != 'number' || typeof opCount != 'number'|| opCount >= RATE_LIMIT_MAX_OP_COUNT) {
+  if (typeof lastResetTimeMs != 'number' || typeof opCount != 'number'|| opCount >= maxOpCount) {
     // We need to reset the count on our next request in order to comply
     // with rate limits enforced by security rules.
-    if (currentTime < timestamp + RATE_LIMIT_INTERVAL_MS) {
+    var nextResetTimeMs = lastResetTimeMs + interval * 1000;
+    if (currentTimeMs < nextResetTimeMs) {
       // It is too soon to reset the count.
-      var timeRemaining = Math.ceil((timestamp + RATE_LIMIT_INTERVAL_MS - currentTime) / 1000);
-      console.log('rate limit exceeded. please wait ' + timeRemaining + ' seconds before retrying.');
+      var timeRemaining = Math.ceil((nextResetTimeMs - currentTimeMs) / 1000);
+      onError('rate limit exceeded. please wait ' + timeRemaining + ' seconds before retrying.');
       return false;
     } else {
-      resetTimestamp(channelData, RATE_LIMIT_INTERVAL_SEC);
+      resetTimestamp(channelData, interval);
       return true;
     }
   } else {
-    channelData['limits/' + RATE_LIMIT_INTERVAL_SEC + '/last_op_count'] = opCount + 1;
+    channelData['limits/' + interval + '/last_op_count'] = opCount + 1;
     return true;
   }
 }
@@ -247,7 +290,7 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
       var newRowCount = (serverData.rowCount || 0) + 1;
       channelData['tables/' + tableName + '/row_count']= newRowCount;
 
-      if (updateRateLimitInfo(channelData, serverData.currentTime, serverData.limits)) {
+      if (updateRateLimits(channelData, serverData.currentTime, serverData.limits, onError)) {
         channelRef.update(channelData, function (error) {
           if (!error) {
             onSuccess(record);
@@ -255,8 +298,6 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
             onError(error);
           }
         });
-      } else {
-        onError('the rate limit has been exceeded. please try your request again later.');
       }
     }, onError);
   }, onError);
@@ -339,7 +380,7 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
     // TODO: We need to handle the 404 case, probably by attempting a read.
     channelData['tables/' + tableName + '/row_count']= serverData.rowCount;
 
-    if (updateRateLimitInfo(channelData, serverData.currentTime, serverData.limits)) {
+    if (updateRateLimits(channelData, serverData.currentTime, serverData.limits, onError)) {
       channelRef.update(channelData, function (error) {
         if (!error) {
           onComplete(record, true);
@@ -347,8 +388,6 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
           onError(error);
         }
       });
-    } else {
-      onError('the rate limit has been exceeded. please try your request again later.');
     }
   });
 };
@@ -360,7 +399,7 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
  * @param {Object} record Object whose other properties are ignored.
  * @param {function (boolean)} onComplete Function to call on success, or if the
  *     record id is not found.
- * @param {function (string, number)} onError Function to call with an error message
+ * @param {function(string, number)} onError Function to call with an error message
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError) {
@@ -373,7 +412,7 @@ FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError)
     // TODO: We need to handle the 404 case, probably by attempting a read.
     channelData['tables/' + tableName + '/row_count']= serverData.rowCount - 1;
 
-    if (updateRateLimitInfo(channelData, serverData.currentTime, serverData.limits)) {
+    if (updateRateLimits(channelData, serverData.currentTime, serverData.limits, onError)) {
       channelRef.update(channelData, function (error) {
         if (!error) {
           onComplete(true);
@@ -381,8 +420,6 @@ FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError)
           onError(error);
         }
       });
-    } else {
-      onError('the rate limit has been exceeded. please try your request again later.');
     }
   });
 };
