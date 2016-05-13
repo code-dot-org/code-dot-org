@@ -28,7 +28,8 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "ideal": "7",
-    "honey_goal": "5"
+    "honey_goal": "5",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The bee is looping these actions over and over again:\\n- move forward\\n- make honey\\n- turn left\\n- move forward\\n- turn right\",\r\n  \"hint_id\": \"sample5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
   },
   "published": true,
   "notes": "Upping the complexity to just beyond what we want students to actually learn.",
