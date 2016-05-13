@@ -4,7 +4,6 @@
 // current directory to be our root
 var which = require('npm-which')(__dirname + '/../..').sync;
 var mochify = require('mochify');
-
 var exec = require('child_process').exec;
 var command = which('linklocal');
 
@@ -30,12 +29,6 @@ exec(command, function (err, stdout, stderr) {
   }
 
   var grep = process.env.mocha_grep;
-  if (process.argv.indexOf('--fast') !== -1) {
-    console.log('Running without maze/turtle level tests.');
-    // Load mochaFastMode as an entry point as a way of getting this option
-    // into our bundle code.
-    globs = ['./test/util/mochaFastMode.js'].concat(globs);
-  }
 
   if (process.env.mocha_entry) {
     console.log('Want to run these tests directly? Type:');
