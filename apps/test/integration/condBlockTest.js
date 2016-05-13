@@ -1,6 +1,6 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
-import {setupTestBlockly} from './util/testBlockly';
+import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 
 describe('functional_cond_number', function () {
   var studioApp;
@@ -8,7 +8,7 @@ describe('functional_cond_number', function () {
   // create our environment
   beforeEach(function () {
     setupTestBlockly();
-    studioApp = testUtils.getStudioAppSingleton();
+    studioApp = getStudioAppSingleton();
 
     var sharedFunctionalBlocks = require('@cdo/apps/sharedFunctionalBlocks');
     sharedFunctionalBlocks.install(Blockly, Blockly.JavaScript, null);

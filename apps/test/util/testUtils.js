@@ -13,8 +13,6 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Radium = require('radium');
 
-var studioApp;
-
 exports.setExternalGlobals = function () {
   window.React = React;
   window.ReactDOM = ReactDOM;
@@ -70,39 +68,6 @@ function setupLocales() {
 }
 
 exports.setupLocales = setupLocales;
-
-exports.setupBlocklyFrame = function () {
-  require('./frame')();
-  assert(global.Blockly, 'Frame loaded Blockly into global namespace');
-  assert(Object.keys(global.Blockly).length > 0);
-  Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
-
-  setupLocales();
-
-  // c, n, v, p, s get added to global namespace by messageformat module, which
-  // is loaded when we require our locale msg files
-  studioApp = require('@cdo/apps/StudioApp').singleton;
-  studioApp.reset = function (){};
-
-  var blocklyAppDiv = document.getElementById('app');
-  assert(blocklyAppDiv, 'blocklyAppDiv exists');
-
-
-  studioApp.assetUrl = function (path) {
-    return '../lib/blockly/' + path;
-  };
-};
-
-/**
- * Gets the singleton loaded by setupTestBlockly. Throws if setupTestBlockly
- * was not used (this will be true in the case of level tests).
- */
-exports.getStudioAppSingleton = function () {
-  if (!studioApp) {
-    throw new Error("Expect singleton to exist");
-  }
-  return studioApp;
-};
 
 /**
  * Generates an artist answer (which is just an ordered list of artist commands)
