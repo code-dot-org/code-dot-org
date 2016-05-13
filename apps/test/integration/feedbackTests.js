@@ -3,7 +3,7 @@ var assert = testUtils.assert;
 testUtils.setupLocales();
 testUtils.setExternalGlobals();
 
-var testCollectionUtils = require('../util/testCollectionUtils');
+var testCollectionUtils = require('./util/testCollectionUtils');
 var sharedFunctionalBlocks = require('@cdo/apps/sharedFunctionalBlocks');
 
 /**

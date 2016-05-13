@@ -1,5 +1,5 @@
 var assert = require('chai').assert;
-var testCollectionUtils = require('../../util/testCollectionUtils');
+var testCollectionUtils = require('./testCollectionUtils');
 
 var cb;
 
