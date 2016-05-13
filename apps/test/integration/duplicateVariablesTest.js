@@ -1,6 +1,6 @@
 var testUtils = require('./../util/testUtils');
 var assert = testUtils.assert;
-import {setupTestBlockly} from './util/testBlockly';
+import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 
 describe('hasDuplicateVariablesInForLoops', function () {
   var studioApp;
@@ -8,7 +8,7 @@ describe('hasDuplicateVariablesInForLoops', function () {
   // create our environment
   beforeEach(function () {
     setupTestBlockly();
-    studioApp = testUtils.getStudioAppSingleton();
+    studioApp = getStudioAppSingleton();
 
     var artistBlocks = require('@cdo/apps/turtle/blocks');
     artistBlocks.install(Blockly, {skin: 'turtle'});
