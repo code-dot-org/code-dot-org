@@ -1454,6 +1454,24 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
+// icon26 run26 and reset26 are currently only used by blockly-core
+// Includes an icon at position x, y (starting from top-left)
+@mixin icon26($x, $y) {
+  $x-offset: $x * 26px;
+  $y-offset: $y * 26px;
+  width: 26px;
+  height: 26px;
+  background: url("#{$common_root}shared-sprites-26x26.png") $x-offset $y-offset;
+}
+
+.run26 {
+   @include icon26(0, 0);
+}
+
+.reset26 {
+  @include icon26(0, 1);
+}
+
 #stepButton {
   margin-right: 0;
   text-align: center;
