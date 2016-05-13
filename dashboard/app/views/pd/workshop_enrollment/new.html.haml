@@ -70,8 +70,10 @@
         District
         %span.form-required-field
           *
-      %div.controls
-        =form.text_field :district_name, class: 'span5'
+      .span5{style: "border: solid 1px #bbb; border-radius: 4px; padding: 15px; margin-left: 0px"}
+        %div.controls
+          = render partial: 'shared/district_dropdown'
+      %div{style: "clear: both"}
     %div.control-group
       %label
         School

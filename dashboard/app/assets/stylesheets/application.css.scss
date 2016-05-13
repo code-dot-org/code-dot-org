@@ -27,6 +27,9 @@
  *= require buttons
  *= require course-blocks
  *= require details-polyfill
+ *
+ *= require selectize
+ *= require selectize.default
  */
 
 // TODO: Move into code-studio.scss when it exists.

@@ -7,7 +7,7 @@ $(function () {
   function setupDistrictDropdown(stateCode) {
     doneLoading = false;
 
-    var inputElement = $('#school-districts input');
+    var inputElement = $('#school-district input');
     if (inputElement[0].selectize) {
       inputElement[0].selectize.clear();
       inputElement[0].selectize.destroy();
@@ -50,10 +50,10 @@ $(function () {
 
   $('#school-state').change(function () {
     if ($(this).val() != 'other') {
-      $('#school-districts').closest('.form-group').show();
+      $('#school-district').closest('.form-group').show();
       setupDistrictDropdown($('#school-state').val());
     } else {
-      $('#school-districts').closest('.form-group').hide();
+      $('#school-district').closest('.form-group').hide();
     }
   });
 });
