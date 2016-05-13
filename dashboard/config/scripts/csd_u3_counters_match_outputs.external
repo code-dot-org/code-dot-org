@@ -31,7 +31,7 @@ This lesson was all about how to use **expressions** to **use a variable like a 
 	var position = 0;
     
     function draw(){
-    	position = position + 0.r;
+    	position = position + 0.5;
         background("white");
         fill("red");
         rect(position, 20, 50, 50);
