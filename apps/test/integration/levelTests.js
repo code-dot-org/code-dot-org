@@ -174,7 +174,7 @@ describe('Level tests', function () {
 
 // Loads a test collection at path and runs all the tests specified in it.
 function runTestCollection(item) {
-  var runLevelTest = require('../util/runLevelTest');
+  var runLevelTest = require('./util/runLevelTest');
   // Append back the .js so that we can distinguish 2_1.js from 2_10.js when grepping
   var path = item.path + '.js';
   var testCollection = item.data;
