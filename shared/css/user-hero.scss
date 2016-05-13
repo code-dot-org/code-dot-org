@@ -43,6 +43,12 @@
       color: $white;
     }
   }
+  #plc_course_progress {
+    background-color: $lightest_cyan;
+    border-bottom: 1px solid $cyan;
+    color: $charcoal;
+    padding: 10px;
+  }
   #currentprogress {
     width: 70%;
     float: left;
