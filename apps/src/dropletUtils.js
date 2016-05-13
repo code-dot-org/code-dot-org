@@ -530,6 +530,7 @@ function getModeOptionFunctionsFromConfig(config) {
     }
 
     newFunc.dropdown = block.dropdown;
+    newFunc.objectDropdown = block.objectDropdown;
     if (block.paramButtons) {
       newFunc.minArgs = block.paramButtons.minArgs;
       newFunc.maxArgs = block.paramButtons.maxArgs;
