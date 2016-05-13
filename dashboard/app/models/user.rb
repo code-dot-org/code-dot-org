@@ -196,9 +196,6 @@ class User < ActiveRecord::Base
 
   GENDER_OPTIONS = [[nil, ''], ['gender.male', 'm'], ['gender.female', 'f'], ['gender.none', '-']]
 
-  STUDENTS_COMPLETED_FOR_PRIZE = 15
-  STUDENTS_FEMALE_FOR_BONUS = 7
-
   attr_accessor :login
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
