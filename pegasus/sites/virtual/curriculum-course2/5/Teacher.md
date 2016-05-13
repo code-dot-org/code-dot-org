@@ -8,7 +8,7 @@ theme: none
 
 [content]
 
-## K-1 Lesson Overview
+## Lesson Overview
 Loops are a handy way of describing actions that repeat a certain number of times.  In this lesson, students will practice converting sets of actions into a single loop.
 
 [summary]

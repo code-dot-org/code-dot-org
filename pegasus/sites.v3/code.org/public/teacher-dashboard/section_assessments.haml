@@ -71,7 +71,7 @@ content-type: text/ng-template
       %td
         {{assessment.puzzle}}
       %td
-        {{submission_list[assessment.status]}}
+        {{assessment.status}}
       %td
         {{assessment.multi_correct}}
       %td
@@ -85,7 +85,7 @@ content-type: text/ng-template
   &nbsp;
 
 :ruby
-  levels_filtered = "levels | orderBy:order | filter:(stageFilter && {stage: stageFilter}):true"
+  levels_filtered = "levels | orderBy:orderSingles | filter:(stageFilterSingles && {stage: stageFilterSingles}):true"
 
 %div{style: "padding-left:20px", 'ng-show' => 'assessments.length'}
   %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'assessments.length', "ng-form" => "allForm"}
@@ -101,7 +101,7 @@ content-type: text/ng-template
       %th.manage-th{colspan: 6}
         %div{'ng-show' => 'stages && stages.length > 1', style: 'float: left; line-height: 35px'}
           = I18n.t('dashboard_filter_by_stage')
-          %select{'ng-model' => 'stageFilter', "ng-options" => "stage for stage in stages", "ng-show" => 'stages'}
+          %select{'ng-model' => 'stageFilterSingles', "ng-options" => "stage for stage in stages", "ng-show" => 'stages'}
             %option{value: ""}= I18n.t('dashboard_filter_all')
         %button.btn.btn-white{'ng-csv' => levels_filtered,
                 filename: "assessment_levels.csv",
@@ -113,17 +113,17 @@ content-type: text/ng-template
 
     %tr
       %th.manage-th
-        %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
+        %a{href: "", "ng-click" => "orderSingles = 'name'"}= I18n.t('dashboard_students_name')
       %th.manage-th
-        %a{href: "", "ng-click" => "order = 'stage'"}= I18n.t('dashboard_stage')
+        %a{href: "", "ng-click" => "orderSingles = 'stage'"}= I18n.t('dashboard_stage')
       %th.manage-th
-        %a{href: "", "ng-click" => "order = 'puzzle'"}= I18n.t('dashboard_puzzle')
+        %a{href: "", "ng-click" => "orderSingles = 'puzzle'"}= I18n.t('dashboard_puzzle')
       %th.manage-th
-        %a{href: "", "ng-click" => "order = 'question'"}= I18n.t('dashboard_question')
+        %a{href: "", "ng-click" => "orderSingles = 'question'"}= I18n.t('dashboard_question')
       %th.manage-th
-        %a{href: "", "ng-click" => "order = 'response'"}= I18n.t('dashboard_response')
+        %a{href: "", "ng-click" => "orderSingles = 'studentResult'"}= I18n.t('dashboard_response')
       %th.manage-th
-        %a{href: "", "ng-click" => "order = 'correctness'"}= I18n.t('dashboard_correctness')
+        %a{href: "", "ng-click" => "orderSingles = 'correct'"}= I18n.t('dashboard_correctness')
 
     %tr{"ng-repeat" => "level in #{levels_filtered}", "ng-form" => "form"}
       %td
@@ -137,4 +137,4 @@ content-type: text/ng-template
       %td
         {{level.studentResult}}
       %td
-        {{correctness_list[level.correct]}}
+        {{level.correct}}

@@ -1,0 +1,10 @@
+name 'CSD U3 Counters match trial'
+question '	var position = 0;
+    
+    function draw(){
+    	position = position + 1;
+    	background("white");
+        fill("red");
+        rect(position, 20, 50, 50);
+    }'
+answer 'Maybe'

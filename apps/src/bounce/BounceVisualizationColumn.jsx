@@ -1,7 +1,7 @@
 var msg = require('../locale');
 var commonStyles = require('../commonStyles');
 
-var GameButtons = require('../templates/GameButtons');
+var GameButtons = require('../templates/GameButtons').default;
 var ArrowButtons = require('../templates/ArrowButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
@@ -12,7 +12,7 @@ var BounceVisualizationColumn = function () {
       <ProtectedStatefulDiv id="visualization">
         <svg version="1.1" id="svgBounce"/>
       </ProtectedStatefulDiv>
-      <GameButtons hideRunButton={false}>
+      <GameButtons>
         <ArrowButtons/>
 
         {" " /* Explicitly insert whitespace so that this behaves like our ejs file*/}

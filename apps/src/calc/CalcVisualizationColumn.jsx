@@ -1,4 +1,4 @@
-var GameButtons = require('../templates/GameButtons');
+var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 
@@ -12,7 +12,7 @@ var CalcVisualizationColumn = function (props) {
           <g id="answerExpression" className="expr" transform="translate(0, 350)"/>
         </svg>
       </ProtectedStatefulDiv>
-      <GameButtons hideRunButton={false}/>
+      <GameButtons/>
       <BelowVisualization inputOutputTable={props.inputOutputTable}/>
     </span>
   );

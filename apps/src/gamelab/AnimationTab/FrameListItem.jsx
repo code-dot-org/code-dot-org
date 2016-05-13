@@ -5,7 +5,7 @@ var _ = require('../../lodash');
 var color = require('../../color');
 var connect = require('react-redux').connect;
 var ListItemButtons = require('./ListItemButtons');
-var ListItemThumbnail = require('./ListItemThumbnail');
+var ListItemThumbnail = require('./ListItemThumbnail').default;
 
 var staticStyles = {
   tile: {

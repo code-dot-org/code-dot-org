@@ -28,13 +28,13 @@ var Visualization = React.createClass({
     visualizationHasPadding: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
+    isShareView: React.PropTypes.bool.isRequired,
+    playspacePhoneFrame: React.PropTypes.bool.isRequired
   },
 
   render: function () {
     var appWidth = applabConstants.APP_WIDTH;
     var appHeight = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
-
-    var addPhoneFrame = experiments.isEnabled('phoneFrame') && !this.props.isShareView;
 
     return (
       <ProtectedStatefulDiv>
@@ -43,7 +43,7 @@ var Visualization = React.createClass({
             style={[
               (this.props.isEmbedView || this.props.hideSource) && styles.nonResponsive,
               this.props.isShareView && styles.share,
-              addPhoneFrame && styles.phoneFrame
+              this.props.playspacePhoneFrame && styles.phoneFrame
             ]}
         >
           <div id="divApplab" className="appModern" tabIndex="1"/>
@@ -63,6 +63,7 @@ module.exports = connect(function propsFromStore(state) {
     visualizationHasPadding: state.pageConstants.visualizationHasPadding,
     hideSource: state.pageConstants.hideSource,
     isEmbedView: state.pageConstants.isEmbedView,
-    isShareView: state.pageConstants.isShareView
+    isShareView: state.pageConstants.isShareView,
+    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
   };
 })(Radium(Visualization));
