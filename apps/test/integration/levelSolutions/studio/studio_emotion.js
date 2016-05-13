@@ -1,5 +1,5 @@
 var testUtils = require('../../../util/testUtils');
-var tickWrapper = require('../../../util/tickWrapper');
+var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 var Emotions = require('@cdo/apps/studio/constants.js').Emotions;
 

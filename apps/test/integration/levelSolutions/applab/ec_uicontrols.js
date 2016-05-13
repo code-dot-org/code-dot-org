@@ -3,7 +3,7 @@
  */
 
 var testUtils = require('../../../util/testUtils');
-var tickWrapper = require('../../../util/tickWrapper');
+var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
 
 // take advantage of the fact that we expose the filesystem via

@@ -1,4 +1,4 @@
-var tickWrapper = require('./util/tickWrapper');
+var tickWrapper = require('./integration/util/tickWrapper');
 var assert = require('./util/testUtils').assert;
 
 function createFakeApp() {
