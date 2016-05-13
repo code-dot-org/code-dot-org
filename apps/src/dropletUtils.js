@@ -8,6 +8,8 @@ var _ = require('./lodash');
  * @property {Object} parent object within which this function is defined as a property, keyed by the func name
  * @property {String} category category within which to place the block
  * @property {String} type type of the block (e.g. value, either, property, readonlyproperty)
+ * @property {Object[]} dropdown array of dropdown info for arguments (see Droplet docs)
+ * @property {Object|string[]|Function} objectDropdown dropdown info for object on the left side of member expression (assumes wildcard in name)
  * @property {string[]} paletteParams
  * @property {string[]} params
  * @property {Object.<number, function>} dropdown
