@@ -1791,6 +1791,7 @@ en:
           " Sprite Properties and Mod": " Sprite Properties and Mod"
           Expressions and Reassignment: Expressions and Reassignment
           Sprites and Properties: Sprites and Properties
+          Counting with Variables: Counting with Variables
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -1901,3 +1902,17 @@ en:
           test Unit 1 practice module Delta: test Unit 1 practice module Delta
           test Unit 1 practice module Echo: test Unit 1 practice module Echo
           test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        'csp-facilitators ':
+          title: CSP Tool Overview
+          description_short: Introduction to CS Principles for new Facilitators
+          description: A collection of tools from the CS Principles course. These levels provide a glimpse into the tools we use throughout the curriculum to
+          Introduction to Text Compression: Introduction to Text Compression
+          Turtle Programming: Turtle Programming
+          Introduction to Events: Introduction to Events
+        csp-facilitators:
+          title: CSP Tool Overview
+          description_short: Introduction to CS Principles for new Facilitators
+          description: A collection of tools from the CS Principles course. These levels provide a glimpse into the tools we use throughout the curriculum to
+          Introduction to Text Compression: Introduction to Text Compression
+          Turtle Programming: Turtle Programming
+          Introduction to Events: Introduction to Events

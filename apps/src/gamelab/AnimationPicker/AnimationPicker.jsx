@@ -1,4 +1,5 @@
-var actions = require('./animationPickerModule');
+import { hide, pickLibraryAnimation, beginUpload, handleUploadComplete,
+    handleUploadError } from './animationPickerModule';
 var AnimationPickerBody = require('./AnimationPickerBody.jsx');
 var connect = require('react-redux').connect;
 var Dialog = require('../../templates/DialogComponent.jsx');
@@ -32,6 +33,7 @@ var AnimationPicker = React.createClass({
     uploadInProgress: React.PropTypes.bool.isRequired,
     uploadError: React.PropTypes.string,
     onClose: React.PropTypes.func.isRequired,
+    onPickLibraryAnimation: React.PropTypes.func.isRequired,
     onUploadStart: React.PropTypes.func.isRequired,
     onUploadDone: React.PropTypes.func.isRequired,
     onUploadError: React.PropTypes.func.isRequired
@@ -47,7 +49,12 @@ var AnimationPicker = React.createClass({
     } else if (this.props.uploadInProgress) {
       return <h1 style={styles.title}>{gamelabMsg.animationPicker_uploading()}</h1>;
     }
-    return <AnimationPickerBody onUploadClick={this.onUploadClick} />;
+    return (
+        <AnimationPickerBody
+            onPickLibraryAnimation={this.props.onPickLibraryAnimation}
+            onUploadClick={this.onUploadClick}
+        />
+    );
   },
 
   render: function () {
@@ -81,16 +88,19 @@ module.exports = connect(function propsFromStore(state) {
 }, function propsFromDispatch(dispatch) {
   return {
     onClose: function () {
-      dispatch(actions.hide());
+      dispatch(hide());
+    },
+    onPickLibraryAnimation: function (animation) {
+      dispatch(pickLibraryAnimation(animation));
     },
     onUploadStart: function (data) {
-      dispatch(actions.beginUpload(data.files[0].name));
+      dispatch(beginUpload(data.files[0].name));
     },
     onUploadDone: function (result) {
-      dispatch(actions.handleUploadComplete(result));
+      dispatch(handleUploadComplete(result));
     },
     onUploadError: function (status) {
-      dispatch(actions.handleUploadError(status));
+      dispatch(handleUploadError(status));
     }
   };
 })(AnimationPicker);
