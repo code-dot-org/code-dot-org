@@ -16,7 +16,7 @@ var sinon = require('sinon');
 require('jquery-ui');
 var tickWrapper = require('../util/tickWrapper');
 
-var wrappedEventListener = require('../util/wrappedEventListener');
+var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
 
 var testUtils = require('../util/testUtils');
