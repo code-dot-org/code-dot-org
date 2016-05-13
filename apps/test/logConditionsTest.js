@@ -1,5 +1,4 @@
-var testUtils = require('./util/testUtils');
-var assert = testUtils.assert;
+import {assert} from 'chai';
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 
 var executionLog = require('@cdo/apps/executionLog');

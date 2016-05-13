@@ -1,7 +1,7 @@
 /* global Promise dashboard */
-var sinon = require('sinon');
+import {assert} from 'chai';
+import sinon from 'sinon';
 var testUtils = require('../util/testUtils');
-var assert = testUtils.assert;
 var assetPrefix = require('@cdo/apps/assetManagement/assetPrefix');
 
 testUtils.setupLocales('applab');

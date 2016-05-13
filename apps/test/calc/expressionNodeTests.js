@@ -1,8 +1,4 @@
-var chai = require('chai');
-chai.config.includeStack = true;
-var assert = chai.assert;
-
-var testUtils = require('../util/testUtils');
+import {assert} from 'chai';
 
 var ExpressionNode = require('@cdo/apps/calc/expressionNode');
 var Token = require('@cdo/apps/calc/token');

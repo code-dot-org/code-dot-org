@@ -1,8 +1,5 @@
-/**
- * Created by brad on 2/22/16.
- */
+import {assert} from 'chai';
 var testUtils = require('./util/testUtils');
-var assert = testUtils.assert;
 testUtils.setExternalGlobals();
 var ReactTestUtils = require('react-addons-test-utils');
 

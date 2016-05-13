@@ -1,5 +1,4 @@
-var testUtils = require('./../util/testUtils');
-var assert = testUtils.assert;
+import {assert} from 'chai';
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 
 describe('hasDuplicateVariablesInForLoops', function () {

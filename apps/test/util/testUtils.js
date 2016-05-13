@@ -1,9 +1,4 @@
-var chai = require('chai');
-var chaiSubset = require('chai-subset');
-chai.use(chaiSubset);
-chai.config.includeStack = true;
-var assert = chai.assert;
-exports.assert = assert;
+import {assert} from 'chai';
 
 require('require-globify');
 

@@ -9,10 +9,9 @@
 // todo - should we also have tests around which blocks to show as part of the
 // feedback when a user gets the puzzle wrong?
 
-var path = require('path');
-var assert = require('chai').assert;
-var $ = require('jquery');
-var sinon = require('sinon');
+import {assert} from 'chai';
+import $ from 'jquery';
+import sinon from 'sinon';
 require('jquery-ui');
 var tickWrapper = require('./util/tickWrapper');
 

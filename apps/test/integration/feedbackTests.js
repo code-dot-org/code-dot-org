@@ -1,5 +1,5 @@
+import {assert} from 'chai';
 var testUtils = require('../util/testUtils');
-var assert = testUtils.assert;
 testUtils.setupLocales();
 testUtils.setExternalGlobals();
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';

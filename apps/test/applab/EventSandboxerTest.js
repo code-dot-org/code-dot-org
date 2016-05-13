@@ -1,8 +1,6 @@
 /** @file Tests of App Lab event sanitization. */
 'use strict';
-
-var testUtils = require('../util/testUtils');
-var assert = testUtils.assert;
+import {assert} from 'chai';
 var EventSandboxer = require('@cdo/apps/applab/EventSandboxer');
 
 describe('EventSandboxer', function () {

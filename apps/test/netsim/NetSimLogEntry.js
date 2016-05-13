@@ -1,14 +1,13 @@
 'use strict';
 /* global describe, beforeEach, it */
 
-var testUtils = require('../util/testUtils');
+import {assert} from 'chai';
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var Packet = require('@cdo/apps/netsim/Packet');
 
-var assert = testUtils.assert;
 var assertTableSize = NetSimTestUtils.assertTableSize;
 var base64ToBinary = DataConverters.base64ToBinary;
 var binaryToBase64 = DataConverters.binaryToBase64;

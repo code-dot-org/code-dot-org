@@ -1,4 +1,4 @@
-var testUtils = require('./util/testUtils');
+import {assert} from 'chai';
 
 function setGlobals() {
   document.body.innerHTML = '<div id="svgMaze"><div class="pegman-location"></div></div>';
@@ -9,7 +9,6 @@ function setGlobals() {
 
 var DirtDrawer = require('@cdo/apps/maze/dirtDrawer');
 var cellId = require('@cdo/apps/maze/mazeUtils').cellId;
-var assert = testUtils.assert;
 
 function createFakeSkin() {
   return {

@@ -1,8 +1,8 @@
 /** @file Tests for NetSimLogPanel */
 /* globaldescribe, beforeEach, it */
-var testUtils = require('../util/testUtils');
+
+import {assert} from 'chai';
 var NetSimTestUtils = require('../util/netsimTestUtils');
-var assert = testUtils.assert;
 
 var NetSimSendPanel = require('@cdo/apps/netsim/NetSimSendPanel');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
@@ -13,7 +13,6 @@ var constants = require('@cdo/apps/constants');
 var KeyCodes = constants.KeyCodes;
 
 var NetSimConstants = require('@cdo/apps/netsim/NetSimConstants');
-var EncodingType = NetSimConstants.EncodingType;
 var MessageGranularity = NetSimConstants.MessageGranularity;
 
 /**

@@ -1,5 +1,7 @@
-var testUtils = require('./util/testUtils');
-var assert = testUtils.assert;
+import chai from 'chai';
+import chaiSubset from 'chai-subset';
+chai.use(chaiSubset);
+var assert = chai.assert;
 
 describe("JSInterpreter", function () {
   var Observer = require('@cdo/apps/Observer');

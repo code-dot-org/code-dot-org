@@ -1,5 +1,4 @@
-var testUtils = require('./util/testUtils');
-var assert = testUtils.assert;
+import {assert} from 'chai';
 
 var ExecutionInfo = require('@cdo/apps/maze/executionInfo');
 
