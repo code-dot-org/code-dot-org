@@ -1,22 +1,22 @@
 /* global React, dashboard */
 
-var STAGE_TYPE = require('./types').STAGE_TYPE;
+import {STAGE_TYPE} from './types';
 
 /**
  * Stage progress component used in level header and course overview.
  */
-var CourseProgressRow = React.createClass({
+var StageDetails = React.createClass({
   propTypes: {
     stage: STAGE_TYPE
   },
 
-  render: function () {
-    var items = this.props.stage.levels.map(function (level) {
+  render() {
+    var items = this.props.stage.levels.map(level => {
       return (
         <div key={level.id}>
           <a href={level.url}>
             <div className={`level-${level.id} level_link ${level.status || 'not_tried'}`}>
-              <i className={`fa ${level.icon}`}/>
+              <i className={`fa ${level.icon}`} />
             </div>
             &nbsp;
             {level.name}
@@ -35,4 +35,4 @@ var CourseProgressRow = React.createClass({
     );
   }
 });
-module.exports = CourseProgressRow;
+module.exports = StageDetails;
