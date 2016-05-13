@@ -176,21 +176,16 @@ file deploy_dir('rebuild') do
   touch deploy_dir('rebuild')
 end
 
-def stop_frontend(name, host, log_path)
-  # NOTE: The order of these prefers deploy-speed over user-experience. Stopping varnish first
-  #   immediately terminates connections to the backends so they stop immediately. Changing the
-  #   order to stop Dashboard and Pegasus first would drain the user connections before stopping
-  #   which can take a minutes. The Load Balancer has health-checks that will pull the instances
-  #   out of rotation and those checks can be directed at either varnish itself, the services through
-  #   varnish, or the services directly. So, changing the order here means evalulating whether or not
-  #   the ELB health-checks make sense to begin diverting traffic at the right time (vs. returning 503s)
+# Use the AWS-provided scripts to cleanly deregister a frontend instance from its load balancer(s),
+# with zero downtime and support for auto-scaling groups.
+# Raises a RuntimeError if the script returns a non-zero exit code.
+def deregister_frontend(name, host, log_path, append=true)
   command = [
-    'sudo service varnish stop',
-    'sudo service dashboard stop',
-    'sudo service pegasus stop',
+    "cd #{rack_env}",
+    'bin/deploy_frontend/deregister_from_elb.sh',
   ].join(' ; ')
 
-  RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>>', log_path
+  RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", append ? '>>' : '>', log_path
 end
 
 #
@@ -203,6 +198,8 @@ def upgrade_frontend(name, host)
     'git pull --ff-only',
     'sudo bundle install',
     'rake build',
+    # Use the AWS-provided script to cleanly re-register a frontend instance with its load balancer(s).
+    'bin/deploy_frontend/register_with_elb.sh'
   ]
   command = commands.join(' && ')
 
@@ -210,12 +207,11 @@ def upgrade_frontend(name, host)
 
   log_path = aws_dir "deploy-#{name}.log"
 
-  # Stop the frontend before running the commands so that the git pull doesn't modify files
-  # out from under a running instance. The rake build command will restart the instance.
-  stop_frontend name, host, log_path
-
   success = false
   begin
+    # Remove the frontend from load balancer rotation before running the commands,
+    # so that the git pull doesn't modify files out from under a running instance.
+    deregister_frontend name, host, log_path, false
     RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>', log_path
     #HipChat.log "Upgraded <b>#{name}</b> (#{host})."
     success = true
@@ -223,8 +219,8 @@ def upgrade_frontend(name, host)
     HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, removing from rotation.", color: 'red'
     HipChat.log "log command: `ssh gateway.code.org ssh production-daemon cat #{log_path}`"
     HipChat.log "/quote #{File.read(log_path)}"
-    # The frontend is in indeterminate state, so make sure it is stopped.
-    stop_frontend name, host, log_path
+    # The frontend is in indeterminate state, so make sure it is not serving traffic.
+    deregister_frontend name, host, log_path
     success = false
   end
 
