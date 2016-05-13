@@ -66,6 +66,10 @@ class Video < ActiveRecord::Base
     "#{Video.youtube_base_url}/embed/#{youtube_code}/?#{defaults.to_query}"
   end
 
+  def embed_url
+    Video.embed_url youtube_code
+  end
+
   def self.embed_url(id)
     CDO.studio_url "videos/embed/#{id}"
   end
