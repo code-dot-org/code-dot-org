@@ -146,15 +146,11 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
 
   private
   def do_expected_answers_yield_expected_module_enrollments(answers, expected_module_enrollments, valid_answers)
-    answers_hash = {}
+    answers_hash = Hash.new(0)
 
     answers.each do |answer|
       next if answer.plc_learning_module_id.nil?
-      if answers_hash[answer.plc_learning_module_id].nil?
-        answers_hash[answer.plc_learning_module_id] = 1
-      else
-        answers_hash[answer.plc_learning_module_id] += 1
-      end
+      answers_hash[answer.plc_learning_module_id] += 1
     end
     answers_hash.each {|k, v| answers_hash[k] = v.to_s}
 
