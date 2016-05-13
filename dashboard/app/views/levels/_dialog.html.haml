@@ -9,6 +9,9 @@
     - if local_assigns[:next_button]
       %a.btn.btn-large.btn-primary.nextPageButton
         =t('next_page')
+    - elsif local_assigns[:continue_button]
+      %a.btn.btn-large.btn-primary.next-stage.submitButton
+        =t('continue')
     - else
       %a.btn.btn-large.btn-primary.next-stage.submitButton
         =t('submit')

@@ -1711,6 +1711,7 @@ a.download-video {
 .external,
 .text-match,
 .free-response,
+.standalone-video,
 .multi,
 .match {
   #markdown.teacher {
@@ -1731,6 +1732,11 @@ a.download-video {
       margin: 0;
     }
   }
+}
+
+.standalone-video {
+  width: 853px;
+  margin: auto;
 }
 
 .multi #markdown.teacher {

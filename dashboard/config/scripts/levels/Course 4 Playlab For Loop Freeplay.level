@@ -54,6 +54,11 @@
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run"/>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <category name="Actions">
@@ -180,6 +185,7 @@
           <block type="studio_whenSpriteClicked">
             <title name="SPRITE">0</title>
           </block>
+          <block type="when_run"/>
         </category>
         <category name="Loops">
           <block type="studio_repeatForever"/>
