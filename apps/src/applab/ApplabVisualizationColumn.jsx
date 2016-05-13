@@ -57,6 +57,7 @@ var ApplabVisualizationColumn = React.createClass({
         <PhoneFrame
             isDark={this.props.isRunning}
             showSelector={this.props.interfaceMode === applabConstants.ApplabInterfaceMode.DESIGN}
+            isPaused={this.props.isPaused}
             screenIds={this.props.screenIds}
             onScreenCreate={this.props.onScreenCreate}
         >
@@ -102,6 +103,7 @@ module.exports = connect(function propsFromStore(state) {
     isShareView: state.pageConstants.isShareView,
     isEmbedView: state.pageConstants.isEmbedView,
     isRunning: state.runState.isRunning,
+    isPaused: state.runState.isDebuggerPaused,
     interfaceMode: state.interfaceMode,
     playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
   };
