@@ -115,6 +115,9 @@ BoardController.prototype.reset = function () {
       console.log(component);
     }
   });
+
+  this.board_.pinMode(13, five.Pin.OUTPUT);
+  this.board_.digitalWrite(13, 0);
 };
 
 function connect() {
