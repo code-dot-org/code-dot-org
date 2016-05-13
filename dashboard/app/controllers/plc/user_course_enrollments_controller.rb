@@ -28,7 +28,7 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   # POST /plc/user_course_enrollments
   # POST /plc/user_course_enrollments.json
   def create
-    user_emails = user_course_enrollment_params[:user_emails].split /\r\n/
+    user_emails = user_course_enrollment_params[:user_emails].split
     users = User.where(email: user_emails)
     if users.size != user_emails.size
       redirect_to action: :new, notice: "Unknown users #{(user_emails - users.pluck(:email)).join(', ')}"
