@@ -1,12 +1,13 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
+import {setupTestBlockly} from './util/testBlockly';
 
 describe('functional_cond_number', function () {
   var studioApp;
 
   // create our environment
   beforeEach(function () {
-    testUtils.setupTestBlockly();
+    setupTestBlockly();
     studioApp = testUtils.getStudioAppSingleton();
 
     var sharedFunctionalBlocks = require('@cdo/apps/sharedFunctionalBlocks');
