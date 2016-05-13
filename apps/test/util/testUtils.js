@@ -13,10 +13,6 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Radium = require('radium');
 
-exports.buildPath = function (path) {
-  return __dirname + '/../../build/js/' + path;
-};
-
 var studioApp;
 
 var testBlockFactory = require('./testBlockFactory');
