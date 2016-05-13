@@ -146,7 +146,19 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
 
   private
   def do_expected_answers_yield_expected_module_enrollments(answers, expected_module_enrollments, valid_answers)
-    post :submit_evaluation, unit_assignment_id: @unit_assignment.id, answer_module_list: answers.map(&:plc_learning_module_id).compact.to_s.gsub(' ', '')[1..-2]
+    answers_hash = {}
+
+    answers.each do |answer|
+      next if answer.plc_learning_module_id.nil?
+      if answers_hash[answer.plc_learning_module_id].nil?
+        answers_hash[answer.plc_learning_module_id] = 1
+      else
+        answers_hash[answer.plc_learning_module_id] += 1
+      end
+    end
+    answers_hash.each {|k, v| answers_hash[k] = v.to_s}
+
+    post :submit_evaluation, unit_assignment_id: @unit_assignment.id, answer_module_list: answers_hash.to_json
     assert_redirected_to controller: :enrollment_evaluations, action: :preview_assignments, enrolled_modules: expected_module_enrollments.values.map(&:id)
 
     post :confirm_assignments, unit_assignment_id: @unit_assignment.id, content_module: expected_module_enrollments[:content_module].try(:id), practice_module: expected_module_enrollments[:practice_module].try(:id)
