@@ -39,21 +39,28 @@ $(function () {
 
   $('#school-type').change(function () {
     if (['public', 'other'].indexOf($(this).val()) > -1) {
+      // Show state.
       $('#school-state').closest('.form-group').show();
       $('#school-zipcode').closest('.form-group').hide();
+      // And clear ZIP.
+
     } else {
+      // Show ZIP.
       $('#school-state').closest('.form-group').hide();
       $('#school-zipcode').closest('.form-group').show();
       $('#school-district').closest('.form-group').hide();
+      // And clear district.
     }
   });
 
   $('#school-state').change(function () {
     if ($(this).val() != 'other') {
+      // Show districts.
       $('#school-district').closest('.form-group').show();
       setupDistrictDropdown($('#school-state').val());
     } else {
       $('#school-district').closest('.form-group').hide();
+      // And clear district.
     }
   });
 });

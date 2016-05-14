@@ -14,8 +14,7 @@
 class SchoolDistrict < ActiveRecord::Base
   include Seeded
 
-  CSV_HEADERS =
-  {
+  CSV_HEADERS = {
     :id => 'LEAID',
     :name => 'NAME',
     :city => 'LCITY',
@@ -43,6 +42,5 @@ class SchoolDistrict < ActiveRecord::Base
               zip: row_data[CSV_HEADERS[:zip]]}
     SchoolDistrict.where(params).first_or_create!
   end
-
 
 end
