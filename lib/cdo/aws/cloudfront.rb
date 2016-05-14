@@ -28,7 +28,7 @@ module AWS
         aliases: [CDO.pegasus_hostname] + (['i18n'] + CDO.partners).map{|x| CDO.canonical_hostname("#{x}.code.org")},
         origin: "#{ENV['RACK_ENV']}-pegasus.code.org",
         # IAM server certificate name
-        ssl_cert: 'codeorg-cloudfront',
+        ssl_cert: 'code.org',
         log: {
           bucket: 'cdo-logs',
           prefix: "#{ENV['RACK_ENV']}-pegasus-cdn"
@@ -37,7 +37,7 @@ module AWS
       dashboard: {
         aliases: [CDO.dashboard_hostname],
         origin: "#{ENV['RACK_ENV']}-dashboard.code.org",
-        ssl_cert: 'codeorg-cloudfront',
+        ssl_cert: 'code.org',
         log: {
           bucket: 'cdo-logs',
           prefix: "#{ENV['RACK_ENV']}-dashboard-cdn"
