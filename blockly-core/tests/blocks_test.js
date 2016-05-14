@@ -190,3 +190,43 @@ function test_isVisible() {
   // tests
   Blockly.editBlocks = original_editBlocks_state;
 }
+
+function test_blockSetIsUnused() {
+  var orig = Blockly.showUnusedBlocks;
+
+  var i, block;
+
+  var containerDiv = Blockly.Test.initializeBlockSpaceEditor();
+  var blockSpace = Blockly.mainBlockSpace;
+
+  var blockXml = [
+    '<block type="controls_whileUntil" />',
+    '<block type="variables_set" uservisible="false" />',
+    '<block type="functional_definition" />',
+  ];
+
+  Blockly.Xml.domToBlockSpace(blockSpace,
+      Blockly.Xml.textToDom('<xml>' + blockXml.join('') + '</xml>'));
+
+  var blocks = blockSpace.getTopBlocks();
+  assertEquals(3, blocks.length);
+
+  Blockly.showUnusedBlocks = false;
+  for (i = 0; i < blocks.length; i++) {
+    block = blocks[i];
+    block.setIsUnused();
+    assertEquals(false, block.isUnused());
+  }
+
+  Blockly.showUnusedBlocks = true;
+  var expectedResults = [true, false, false];
+  for (i = 0; i < blocks.length; i++) {
+    block = blocks[i];
+    var expectedResult = expectedResults[i];
+    block.setIsUnused();
+    assertEquals(expectedResult, block.isUnused());
+  }
+
+  goog.dom.removeNode(containerDiv);
+  Blockly.showUnusedBlocks = orig;
+}
