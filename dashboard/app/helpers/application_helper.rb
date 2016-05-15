@@ -50,9 +50,17 @@ module ApplicationHelper
 
   def activity_css_class(user_level)
     # For definitions of the result values, see /app/src/constants.js.
-    result = user_level.try :best_result
+    result = user_level.try(:best_result)
 
-    if user_level.try :submitted
+    if user_level && Level.cache_find(user_level.level_id).try(:peer_reviewable?)
+      if result == Activity::REJECTED_RESULT
+        'rejected'
+      elsif result == Activity::ACCEPTED_RESULT
+        'accepted'
+      else
+        'attempted'
+      end
+    elsif user_level.try(:submitted)
       'submitted'
     elsif result.nil? || result == 0
       'not_tried'
