@@ -121,7 +121,15 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
     }
 
     var status;
-    if (serverProgress && serverProgress[level.id] && serverProgress[level.id].submitted) {
+    var result = (serverProgress[level.id] || {}).result;
+    if (serverProgress && serverProgress[level.id] && serverProgress[level.id].reviewable && result == 150 || result == 200) {
+      if (result == 150) {
+        status = 'rejected';
+      }
+      if (result == 200) {
+        status = 'accepted';
+      }
+    } else if (serverProgress && serverProgress[level.id] && serverProgress[level.id].submitted) {
       status = "submitted";
     } else if (serverProgress && serverProgress[level.id] && serverProgress[level.id].pages_completed) {
       // The dot is considered perfect if the page is considered complete.
@@ -129,10 +137,10 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
       status = pageCompleted ? "perfect" : "attempted";
     } else if (clientState.queryParams('user_id')) {
       // Show server progress only (the student's progress)
-      status = progress.activityCssClass((serverProgress[level.id] || {}).result);
+      status = progress.activityCssClass(result);
     } else {
       // Merge server progress with local progress
-      status = progress.mergedActivityCssClass((serverProgress[level.id] || {}).result, clientProgress[level.id]);
+      status = progress.mergedActivityCssClass(result, clientProgress[level.id]);
     }
 
     var href = level.url + location.search;

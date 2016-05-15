@@ -85,6 +85,7 @@ module UsersHelper
           user_data[:levels][sl.level_id] = {
               status: completion_status,
               result: ul.try(:best_result) || 0,
+              reviewable: sl.level.try(:peer_reviewable?),
               submitted: ul.try(:submitted) || 0
           }
 
