@@ -37,7 +37,6 @@ var apiJavascript = require('./apiJavascript');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var ArtistVisualizationColumn = require('./ArtistVisualizationColumn');
-var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var Slider = require('../slider');
@@ -210,11 +209,7 @@ Artist.prototype.init = function (config) {
   config.afterInject = _.bind(this.afterInject_, this, config);
 
   // Push initial level properties into the Redux store
-  this.studioApp_.reduxStore.dispatch(setPageConstants({
-    localeDirection: this.studioApp_.localeDirection(),
-    isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isDroplet: !!config.level.editCode
-  }));
+  this.studioApp_.setCommonPageConstants(config);
 
   var iconPath = '/blockly/media/turtle/' +
     (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');

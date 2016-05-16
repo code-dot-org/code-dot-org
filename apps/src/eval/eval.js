@@ -31,7 +31,6 @@ var api = require('./api');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var EvalVisualizationColumn = require('./EvalVisualizationColumn');
-var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var CustomEvalError = require('./evalError');
@@ -146,13 +145,6 @@ Eval.init = function (config) {
       Blockly.contractEditor.registerTestResetHandler(resetExampleDisplay);
     }
   };
-
-  // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setPageConstants({
-    localeDirection: studioApp.localeDirection(),
-    isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isDroplet: !!level.editCode
-  }));
 
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>

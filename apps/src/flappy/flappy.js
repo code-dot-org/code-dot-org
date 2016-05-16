@@ -16,7 +16,6 @@ var api = require('./api');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var FlappyVisualizationColumn = require('./FlappyVisualizationColumn');
-var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
@@ -583,13 +582,6 @@ Flappy.init = function (config) {
     var rightButton = document.getElementById('rightButton');
     dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
   };
-
-  // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setPageConstants({
-    localeDirection: studioApp.localeDirection(),
-    isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isDroplet: !!level.editCode
-  }));
 
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>

@@ -5,7 +5,8 @@ import {connect} from 'react-redux';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 var _ = require('../lodash');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
-var StudioAppWrapper = require('./StudioAppWrapper');
+// TODO - everyone is connected
+var ConnectedStudioAppWrapper = require('./ConnectedStudioAppWrapper');
 var CodeWorkspaceContainer = require('./CodeWorkspaceContainer');
 
 /**
@@ -19,7 +20,6 @@ var AppView = React.createClass({
     hideSource: React.PropTypes.bool.isRequired,
     noVisualization: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
-    codeWorkspace: React.PropTypes.element,
     visualizationColumn: React.PropTypes.element,
     onMount: React.PropTypes.func.isRequired,
     // Provided from redux
@@ -36,10 +36,7 @@ var AppView = React.createClass({
     });
 
     return (
-      <StudioAppWrapper
-          assetUrl={this.props.assetUrl}
-          isEmbedView={this.props.isEmbedView}
-          isShareView={this.props.isShareView}>
+      <ConnectedStudioAppWrapper>
         <div id="visualizationColumn" className={visualizationColumnClassNames}>
           {this.props.visualizationColumn}
         </div>
@@ -49,8 +46,8 @@ var AppView = React.createClass({
             hidden={this.props.hideSource}
             noVisualization={this.props.noVisualization}
             isRtl={this.props.isRtl}
-            codeWorkspace={this.props.codeWorkspace}/>
-      </StudioAppWrapper>
+        />
+      </ConnectedStudioAppWrapper>
     );
   }
 });
