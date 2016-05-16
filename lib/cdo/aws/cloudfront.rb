@@ -28,7 +28,7 @@ module AWS
         aliases: [CDO.pegasus_hostname] + (['i18n'] + CDO.partners).map{|x| CDO.canonical_hostname("#{x}.code.org")},
         origin: "#{ENV['RACK_ENV']}-pegasus.code.org",
         # IAM server certificate name
-        ssl_cert: 'codeorg-cloudfront',
+        ssl_cert: 'code.org',
         log: {
           bucket: 'cdo-logs',
           prefix: "#{ENV['RACK_ENV']}-pegasus-cdn"
@@ -37,7 +37,7 @@ module AWS
       dashboard: {
         aliases: [CDO.dashboard_hostname],
         origin: "#{ENV['RACK_ENV']}-dashboard.code.org",
-        ssl_cert: 'codeorg-cloudfront',
+        ssl_cert: 'code.org',
         log: {
           bucket: 'cdo-logs',
           prefix: "#{ENV['RACK_ENV']}-dashboard-cdn"
@@ -176,6 +176,8 @@ module AWS
       server_certificate_id = ssl_cert && Aws::IAM::Client.new.
         get_server_certificate(server_certificate_name: ssl_cert).
         server_certificate.server_certificate_metadata.server_certificate_id
+      # accepts sni-only, vip
+      ssl_support_method = (app == :hourofcode) ? 'sni-only' : 'vip'
       {
         aliases: {
           quantity: cloudfront[:aliases].length, # required
@@ -233,7 +235,7 @@ module AWS
           certificate: server_certificate_id,
           iam_certificate_id: server_certificate_id,
           certificate_source: 'iam',
-          ssl_support_method: 'vip', # accepts sni-only, vip
+          ssl_support_method: ssl_support_method,
           minimum_protocol_version: 'TLSv1' # accepts SSLv3, TLSv1
         } : {
           cloud_front_default_certificate: true,
