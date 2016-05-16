@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import {expect} from '../util/configuredChai';
 import sinon from 'sinon';
 import ReactTestUtils from 'react-addons-test-utils';
 import AppLabCrosshairOverlay from '@cdo/apps/applab/AppLabCrosshairOverlay';

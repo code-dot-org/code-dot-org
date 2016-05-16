@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from './util/configuredChai';
 
 var WordSearch = require('@cdo/apps/maze/wordsearch');
 

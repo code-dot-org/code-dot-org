@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import {expect} from '../util/configuredChai';
 import ReactTestUtils from 'react-addons-test-utils';
 import TooltipOverlay, {
     textProvider,

@@ -1,7 +1,4 @@
-import chai from 'chai';
-import chaiSubset from 'chai-subset';
-chai.use(chaiSubset);
-var assert = chai.assert;
+import {assert} from './util/configuredChai';
 
 describe("JSInterpreter", function () {
   var Observer = require('@cdo/apps/Observer');

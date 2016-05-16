@@ -1,7 +1,7 @@
 /** @file Tests for NetSimLogPanel */
 /* globaldescribe, beforeEach, it */
 
-import {assert} from 'chai';
+import {assert} from '../util/configuredChai';
 var NetSimTestUtils = require('../util/netsimTestUtils');
 
 var NetSimSendPanel = require('@cdo/apps/netsim/NetSimSendPanel');

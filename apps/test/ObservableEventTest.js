@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from './util/configuredChai';
 
 describe("ObservableEvent", function () {
   var ObservableEvent = require('@cdo/apps/ObservableEvent');

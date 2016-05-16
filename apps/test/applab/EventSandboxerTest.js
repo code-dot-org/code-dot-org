@@ -1,6 +1,6 @@
 /** @file Tests of App Lab event sanitization. */
 'use strict';
-import {assert} from 'chai';
+import {assert} from '../util/configuredChai';
 var EventSandboxer = require('@cdo/apps/applab/EventSandboxer');
 
 describe('EventSandboxer', function () {
