@@ -197,26 +197,26 @@ function deviceOnPortAppearsUsable(port) {
  * @returns {Object.<String, Object>} board components
  */
 function initializeCircuitPlaygroundComponents(io, board) {
-  var pixels = Array.from({length: 10}, function (_, index) {
-    return new five.Led.RGB({
-      controller: PlaygroundIO.Pixel,
-      pin: index
-    });
-  });
+  const pixels = Array.from({length: 10}, (_, index) => new five.Led.RGB({
+    controller: PlaygroundIO.Pixel,
+    pin: index
+  }));
 
   /**
    * Must initialize sound sensor BEFORE left button, otherwise left button
    * will not respond to input.
    */
-  var sound = new five.Sensor({
+  const sound = new five.Sensor({
     pin: "A4",
     freq: 100
   });
-  var buttonL = new five.Button('4');
-  var buttonR = new five.Button('19');
-  var isPressedGetter = { get: function () { return this.value === 1; } };
-  Object.defineProperty(buttonL, "isPressed", isPressedGetter);
-  Object.defineProperty(buttonR, "isPressed", isPressedGetter);
+  const buttonL = new five.Button('4');
+  const buttonR = new five.Button('19');
+  [buttonL, buttonR].forEach((button) => {
+    Object.defineProperty(button, "isPressed", {
+      get: () => this.value === 1
+    });
+  });
 
   return {
     pixel0: pixels[0],

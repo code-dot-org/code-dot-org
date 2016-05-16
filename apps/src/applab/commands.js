@@ -1803,12 +1803,12 @@ applabCommands.pinMode = function (opts) {
   apiValidateType(opts, 'pinMode', 'pin', opts.pin, 'pinid');
   apiValidateType(opts, 'pinMode', 'mode', opts.mode, 'string');
 
-  var modeStringToConstant = {
-    'input': 0,
-    'output': 1,
-    'analog': 2,
-    'pwm': 3,
-    'servo': 4
+  const modeStringToConstant = {
+    input: 0,
+    output: 1,
+    analog: 2,
+    pwm: 3,
+    servo: 4
   };
 
   Applab.makerlabController.pinMode(opts.pin, modeStringToConstant[opts.mode]);
