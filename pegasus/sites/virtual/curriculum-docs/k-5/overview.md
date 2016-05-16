@@ -8,14 +8,16 @@ theme: none
 
 
 [content]
-## Who made this? 
+## Who made this?  
 
 
 We believe that every student should have the opportunity to learn computer science, and the reasons are far more varied than simply having a strong resume. Critical thinking, logic, persistence, and creativity help students excel at problem-solving in all subject areas, no matter what their age.
 
 At Code.org, we recognize that this benefit begins early. That's why we partnered with Thinkersmith and Common Sense Media to develop an exciting and engaging curriculum that allows students to explore the limitless world of technology, beginning in elementary school.
 
-None of this would have been possible, however, without the help we received from our sponsors.  It's thanks to our generous donors that we can offer our high quality curriculum resources at no cost to schools, teachers, or students.  For more information on these supporters, please visit our donors page at [https://code.org/about/donors](https://code.org/about/donors).
+It is thanks to our generous donors that we were able to develop and can offer this course at no cost to schools, teachers, or students:
+
+Microsoft, Infosys Foundation USA, Omidyar Network, Google, Ballmer Family Giving, Ali and Hadi Partovi, Bill and Melinda Gates, BlackRock, Jeff Bezos, John and Ann Doerr, Juniper Networks, Mark Zuckerberg and Priscilla Chan, Quadrivium Foundation, Reid Hoffman, Salesforce, Sean N. Parker Foundation, Smang Family Foundation, Verizon
 
 ## Who is this for?
 

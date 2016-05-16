@@ -26,6 +26,7 @@ class Ability
         :reports,
         User,
         Follower,
+        PeerReview,
         # Ops models
         District,
         Workshop,
@@ -39,7 +40,6 @@ class Ability
         Plc::CourseUnit,
         # PD models
         Pd::Workshop,
-        Pd::Enrollment,
         Pd::Attendance,
         Pd::DistrictPaymentTerm
       ]

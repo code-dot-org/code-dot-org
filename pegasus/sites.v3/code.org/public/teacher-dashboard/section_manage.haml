@@ -92,8 +92,8 @@ content-type: text/ng-template
           %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}"} {{student.name}}
           %div{"ng-show" => "section.login_type == 'email' && student.username"}
             = I18n.t('dashboard_students_username', student_username: '{{student.username}}')
-          %div{"ng-show" => "section.login_type == 'email' && (student.email || student.hashed_email)"}
-            = I18n.t('dashboard_students_email', student_email: '{{student.email || "hidden"}}')
+          %div{"ng-show" => "section.login_type == 'email' && student.user_type == 'teacher' && student.email"}
+            = I18n.t('dashboard_students_email', student_email: '{{student.email}}')
         %span{"ng-show" => "student.editing"}
           %input{"ng-model" => "student.name", placeholder: I18n.t('dashboard_students_placeholder_name'), style: "width: 100%", type: "text", required: "true"}/
           %span.required= I18n.t('dashboard_action_required')

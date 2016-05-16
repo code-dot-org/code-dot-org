@@ -4,6 +4,7 @@ var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var GameLabGame = require('./GameLabGame');
+import { getSourceUrl } from './animationMetadata';
 
 /**
  * An instantiable GameLabP5 class that wraps p5 and p5play and patches it in
@@ -720,10 +721,10 @@ GameLabP5.prototype.preloadAnimations = function (animationMetadata) {
     //       causes a preload-count increment/decrement pair.  No manual
     //       tracking is required.
     var image = this.p5.loadImage(
-        animationsApi.basePath(animation.key + '.png'),
+        getSourceUrl(animation),
         function onSuccess() {
-          // Hard-coded to single-frame for now.
-          var spriteSheet = this.p5.loadSpriteSheet(image, image.width, image.height, 1);
+          var spriteSheet = this.p5.loadSpriteSheet(image, animation.frameSize.x,
+              animation.frameSize.y, animation.frameCount);
           this.p5.projectAnimations[animation.name] = this.p5.loadAnimation(spriteSheet);
         }.bind(this));
   }, this);

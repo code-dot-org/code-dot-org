@@ -1426,21 +1426,6 @@ a.download-video {
   }
 }
 
-#landingpage.teacher-course {
-  $radius: 5px;
-  #lesson {
-    background: $cyan;
-    border-radius: $radius $radius 0 0;
-  }
-  #stats {
-    border: 5px solid $cyan;
-    border-radius: 0 0 $radius $radius;
-    .user-stats-block {
-      background: none;
-    }
-  }
-}
-
 .course_progress {
   margin: 10px 0;
 }
@@ -1670,8 +1655,8 @@ a.download-video {
   overflow: hidden;
 }
 
-.text-match, .free-response {
-  p {
+.text-match, .free-response, .peer-review {
+  p, label {
     font-size: 16px;
     line-height: 24px;
   }
@@ -1684,9 +1669,34 @@ a.download-video {
   }
 }
 
+.peer-review input[type=radio] {
+  margin: 0 3px 3px 5px;
+}
+
+.peer-review-content {
+  background: #fff;
+  border: 1px solid $light_gray;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 1em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .peer-review-title {
+    margin: 0;
+  }
+  .peer-review-status {
+    font-size: 1em;
+    & > strong {
+      font-family: inherit;
+    }
+  }
+}
+
 .external,
 .text-match,
 .free-response,
+.standalone-video,
 .multi,
 .match {
   #markdown.teacher {
@@ -1707,6 +1717,11 @@ a.download-video {
       margin: 0;
     }
   }
+}
+
+.standalone-video {
+  width: 853px;
+  margin: auto;
 }
 
 .multi #markdown.teacher {

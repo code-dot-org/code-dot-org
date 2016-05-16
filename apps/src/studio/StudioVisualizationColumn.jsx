@@ -1,6 +1,6 @@
 var msg = require('../locale');
 
-var GameButtons = require('../templates/GameButtons');
+var GameButtons = require('../templates/GameButtons').default;
 var ArrowButtons = require('../templates/ArrowButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
@@ -11,7 +11,7 @@ var StudioVisualizationColumn = function (props) {
       <ProtectedStatefulDiv id="visualization">
         <svg version="1.1" id="svgStudio"/>
       </ProtectedStatefulDiv>
-      <GameButtons hideRunButton={false}>
+      <GameButtons>
         <ArrowButtons/>
 
         {props.finishButton && <div id="share-cell" className="share-cell-none">

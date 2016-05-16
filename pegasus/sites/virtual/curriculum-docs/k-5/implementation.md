@@ -10,7 +10,7 @@ theme: none
 
 This document offers suggestions for implementing an individual CS Fundamentals course in an elementary school classroom, as well as planning the rollout of all four K-5 courses as a pathway across elementary school grade levels.
 
-## Scheduling the Lessons
+## Scheduling the Lessons  
 
 Where do you teach the courses? Do you use an existing "special" like media (library) or art, or do you use a pre-existing computer lab period and split the online and unplugged lessons between the lab teacher and the grade level teachers respectively?
 

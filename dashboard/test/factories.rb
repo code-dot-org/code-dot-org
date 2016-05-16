@@ -324,10 +324,20 @@ FactoryGirl.define do
     status 'present'
   end
 
+  factory :peer_review do
+    user nil
+    from_instructor false
+    script nil
+    level nil
+    level_source nil
+    data "MyText"
+    status 1
+  end
+
   factory :plc_enrollment_unit_assignment, :class => 'Plc::EnrollmentUnitAssignment' do
     plc_user_course_enrollment nil
     plc_course_unit nil
-    status Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
+    status Plc::EnrollmentUnitAssignment::START_BLOCKED
   end
 
   factory :plc_course_unit, :class => 'Plc::CourseUnit' do
@@ -459,7 +469,8 @@ FactoryGirl.define do
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
     sequence(:name) { |n| "Workshop Participant #{n} " }
-    sequence(:email) { |n| "testuser#{n}@example.com.xx" }
+    sequence(:email) { |n| "participant#{n}@example.com.xx" }
+    school {'Example School'}
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do

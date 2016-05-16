@@ -123,13 +123,13 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
     var status;
     if (serverProgress && serverProgress[level.id] && serverProgress[level.id].submitted) {
       status = "submitted";
-    } else if (clientState.queryParams('user_id')) {
-      // Show server progress only (the student's progress)
-      status = progress.activityCssClass((serverProgress[level.id] || {}).result);
     } else if (serverProgress && serverProgress[level.id] && serverProgress[level.id].pages_completed) {
       // The dot is considered perfect if the page is considered complete.
       var pageCompleted = serverProgress[level.id].pages_completed[levelRepeat];
       status = pageCompleted ? "perfect" : "attempted";
+    } else if (clientState.queryParams('user_id')) {
+      // Show server progress only (the student's progress)
+      status = progress.activityCssClass((serverProgress[level.id] || {}).result);
     } else {
       // Merge server progress with local progress
       status = progress.mergedActivityCssClass((serverProgress[level.id] || {}).result, clientProgress[level.id]);
@@ -160,9 +160,11 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
 };
 
 progress.renderCourseProgress = function (scriptData) {
+  var teacherCourse = $('#landingpage').hasClass('teacher-course');
   var mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
   ReactDOM.render(React.createElement(CourseProgress, {
+    display: teacherCourse ? 'list' : 'dots',
     stages: scriptData.stages
   }), mountPoint);
   progress.populateProgress(scriptData.name);

@@ -32,11 +32,16 @@ class FreeResponse < Level
     skip_dialog
     skip_sound
     submittable
+    peer_reviewable
   )
 
   before_validation do
     self.skip_dialog = true
     self.skip_sound = true
+  end
+
+  def icon
+    'fa-pencil'
   end
 
   def self.create_from_level_builder(params, level_params)
