@@ -46,9 +46,13 @@ function onCloseShareWarnings(showedStoreDataAlert, options) {
   }
 }
 
-function handleShareWarningsTooYoung() {
+function handleShareWarningsTooYoung(onTooYoung) {
   utils.trySetLocalStorage('is13Plus', 'false');
-  window.location.href = '/too_young';
+  if (onTooYoung) {
+    onTooYoung();
+  } else {
+    window.location.href = '/too_young';
+  }
 }
 
 /**
@@ -63,10 +67,16 @@ function handleShareWarningsTooYoung() {
  * @param {function} options.onWarningsComplete - Callback will be called after
  *        the modal warnings is dismissed. Will also be called if the modal
  *        warning is deemed to not be necessary.
+ * @param {function} options.onTooYoung - Callback will be called if the user
+ *        is deemed to be too young. If not specified, the page will be
+ *        redirected to /too_young
  */
 exports.checkSharedAppWarnings = function (options) {
-  // dashboard will redirect young signed in users
+  var handleTooYoung = handleShareWarningsTooYoung.bind(null, options.onTooYoung);
+  // dashboard will redirect young signed in users, but we will
+  // redirect them anyway if they got here somehow
   var is13Plus = options.isSignedIn || localStorage.getItem('is13Plus') === "true";
+
   var showStoreDataAlert = (options.hasDataAPIs && options.hasDataAPIs()) &&
       !hasSeenDataAlert(options.channelId);
   // Ensure the property is true or false and not undefined.
@@ -75,9 +85,12 @@ exports.checkSharedAppWarnings = function (options) {
   var modal = document.createElement('div');
   document.body.appendChild(modal);
 
-  return ReactDOM.render(<ShareWarningsDialog
-    showStoreDataAlert={showStoreDataAlert}
-    is13Plus={is13Plus}
-    handleClose={onCloseShareWarnings.bind(null, showStoreDataAlert, options)}
-    handleTooYoung={handleShareWarningsTooYoung}/>, modal);
+  return ReactDOM.render(
+      <ShareWarningsDialog
+          showStoreDataAlert={showStoreDataAlert}
+          is13Plus={is13Plus}
+          handleClose={onCloseShareWarnings.bind(null, showStoreDataAlert, options)}
+          handleTooYoung={handleTooYoung}/>,
+    modal
+  );
 };
