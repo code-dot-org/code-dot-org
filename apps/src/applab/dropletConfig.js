@@ -252,6 +252,11 @@ module.exports.categories = {
     rgb: COLOR_CYAN,
     blocks: []
   },
+  Advanced: {
+    color: 'blue',
+    rgb: COLOR_BLUE,
+    blocks: []
+  },
   'Maker Lab': {
     color: 'cyan',
     rgb: COLOR_CYAN,
