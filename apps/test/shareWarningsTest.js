@@ -95,6 +95,22 @@ describe('shareWarnings', function () {
         assert.isTrue(onTooYoung.calledOnce);
       });
 
+      it('should consider the is13Plus option to decide if the user is13Plus', () => {
+        var dialog = checkSharedAppWarnings({
+          channelId: 'some-channel',
+          isSignedIn: true,
+          is13Plus: true,
+        });
+        assert.isTrue(dialog.props.is13Plus);
+
+        dialog = checkSharedAppWarnings({
+          channelId: 'some-channel',
+          isSignedIn: true,
+          is13Plus: false,
+        });
+        assert.isFalse(dialog.props.is13Plus);
+      });
+
     });
 
   });

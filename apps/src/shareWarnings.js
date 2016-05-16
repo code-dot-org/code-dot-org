@@ -62,6 +62,7 @@ function handleShareWarningsTooYoung(onTooYoung) {
  * @param {!Object} options
  * @param {!string} options.channelId - service side channel.
  * @param {!boolean} options.isSignedIn - login state of current user.
+ * @param {!boolean} options.is13Plus - age state of current user (if signed in).
  * @param {function} options.hasDataAPIs - Function to call to determine if
  *        the current program uses any data APIs.
  * @param {function} options.onWarningsComplete - Callback will be called after
@@ -73,9 +74,10 @@ function handleShareWarningsTooYoung(onTooYoung) {
  */
 exports.checkSharedAppWarnings = function (options) {
   var handleTooYoung = handleShareWarningsTooYoung.bind(null, options.onTooYoung);
-  // dashboard will redirect young signed in users, but we will
-  // redirect them anyway if they got here somehow
-  var is13Plus = options.isSignedIn || localStorage.getItem('is13Plus') === "true";
+  // dashboard will redirect young signed in users unless they are on an iframe
+  // embed, so we will redirect them if they got here somehow
+  var is13Plus = (options.isSignedIn && options.is13Plus) ||
+                  localStorage.getItem('is13Plus') === "true";
 
   var showStoreDataAlert = (options.hasDataAPIs && options.hasDataAPIs()) &&
       !hasSeenDataAlert(options.channelId);
