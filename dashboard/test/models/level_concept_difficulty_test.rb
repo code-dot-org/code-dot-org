@@ -16,4 +16,18 @@ class LevelConceptDifficultyTest < ActiveSupport::TestCase
     assert_equal @level_concept_difficulty.repeat_loops, nil
     assert_equal @level_concept_difficulty.sequencing, 1
   end
+
+  test 'level_concept_difficulty deleted when level deleted' do
+    level = Level.create(name: 'test delete level_concept_difficulty', type: 'Maze')
+    LevelConceptDifficulty.create(
+      level: level,
+      sequencing: 1,
+      repeat_loops: 2
+    )
+
+    lcd_id = level.level_concept_difficulty.id
+    assert LevelConceptDifficulty.exists?(lcd_id)
+    level.destroy
+    assert !LevelConceptDifficulty.exists?(lcd_id)
+  end
 end

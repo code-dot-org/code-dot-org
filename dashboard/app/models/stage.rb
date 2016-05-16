@@ -52,6 +52,10 @@ class Stage < ActiveRecord::Base
     end
   end
 
+  def localized_category
+    I18n.t "flex_category.#{flex_category}" if flex_category
+  end
+
   def lesson_plan_html_url
     "#{lesson_plan_base_url}/Teacher"
   end
@@ -74,7 +78,7 @@ class Stage < ActiveRecord::Base
         position: position,
         name: localized_name,
         title: localized_title,
-        flex_category: flex_category,
+        flex_category: localized_category,
         # Ensures we get the cached ScriptLevels, vs hitting the db
         levels: script.script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
     }
