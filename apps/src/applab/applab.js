@@ -985,9 +985,15 @@ Applab.reset = function (first) {
 function runButtonClickWrapper(callback) {
   $(window).trigger('run_button_pressed');
 
-  // Change back to default screen before we serialize. This also makes it so
-  // that we'll be back on the default screen after a reset.
-  studioApp.reduxStore.dispatch(changeScreen(elementUtils.getDefaultScreenId()));
+  const defaultScreenId = elementUtils.getDefaultScreenId();
+  // Reset our design mode screen to be the default one, so that after we reset
+  // we'll end up on the default screen rather than whichever one we were last
+  // editing.
+  studioApp.reduxStore.dispatch(changeScreen(defaultScreenId));
+  // Also set the visualization screen to be the default one before we serialize
+  // so that our serialization isn't changing based on whichever screen we were
+  // last editing.
+  Applab.changeScreen(defaultScreenId);
   Applab.serializeAndSave(callback);
 }
 
@@ -1544,8 +1550,9 @@ Applab.activeScreen = function () {
 };
 
 /**
- * Changes the active screen by toggling all screens in divApplab to be non-visible,
- * unless they match the provided screenId. Also focuses the screen.
+ * Changes the active screen for the visualization by toggling all screens in
+ * divApplab to be non-visible, unless they match the provided screenId. Also
+ * focuses the screen.
  */
 Applab.changeScreen = function (screenId) {
   Applab.getScreens().each(function () {
