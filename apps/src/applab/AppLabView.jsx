@@ -12,7 +12,6 @@ var InstructionsWithWorkspace = require('../templates/instructions/InstructionsW
 var AppLabView = React.createClass({
   propTypes: {
     isEditingProject: React.PropTypes.bool.isRequired,
-    hideSource: React.PropTypes.bool.isRequired,
 
     screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
