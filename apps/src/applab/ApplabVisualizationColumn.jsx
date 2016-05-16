@@ -56,7 +56,7 @@ var ApplabVisualizationColumn = React.createClass({
       visualization = (
         <PhoneFrame
             isDark={this.props.isRunning}
-            showSelector={this.props.interfaceMode === applabConstants.ApplabInterfaceMode.DESIGN}
+            showSelector={!this.props.isRunning}
             isPaused={this.props.isPaused}
             screenIds={this.props.screenIds}
             onScreenCreate={this.props.onScreenCreate}
