@@ -38,10 +38,10 @@ class ScriptConstantsTest < Minitest::Test
   end
 
   def test_category
-    assert_equal ScriptConstants.category(ScriptConstants::HOC_NAME), 'hoc'
-    assert_equal ScriptConstants.category(ScriptConstants::STARWARS_NAME), 'hoc'
-    assert_equal ScriptConstants.category(ScriptConstants::FLAPPY_NAME), 'hoc'
-    assert_equal ScriptConstants.category(ScriptConstants::COURSE1_NAME), 'csf'
-    assert_equal ScriptConstants.category(ScriptConstants::CSP_UNIT1_NAME), 'csp'
+    assert_equal ScriptConstants.categories(ScriptConstants::HOC_NAME), ['hoc']
+    assert_equal ScriptConstants.categories(ScriptConstants::STARWARS_NAME), ['hoc']
+    assert_equal ScriptConstants.categories(ScriptConstants::FLAPPY_NAME), ['hoc', 'flappy']
+    assert_equal ScriptConstants.categories(ScriptConstants::COURSE1_NAME), ['csf']
+    assert_equal ScriptConstants.categories(ScriptConstants::CSP_UNIT1_NAME), ['csp']
   end
 end
