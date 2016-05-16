@@ -206,13 +206,20 @@ class DashboardSection
            all.
            map do |course|
              name = course[:name]
+             category = ScriptConstants.category(name) || 'other'
              if name == ScriptConstants::MINECRAFT_NAME
                name = ScriptConstants::MINECRAFT_TEACHER_DASHBOARD_NAME
              elsif name == ScriptConstants::HOC_NAME
                name = ScriptConstants::HOC_TEACHER_DASHBOARD_NAME
              end
              name += " *" if course[:hidden]
-             [course[:id], name]
+             [
+               course[:id],
+               [
+                 I18n.t("#{name}_name", default: name),
+                 I18n.t("#{category}_category_name".to_sym, default: category)
+               ]
+             ]
            end
         ]
   end

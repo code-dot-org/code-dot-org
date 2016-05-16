@@ -36,4 +36,12 @@ class ScriptConstantsTest < Minitest::Test
     assert ScriptConstants.hoc?(ScriptConstants::ICEAGE_NAME)
     assert !ScriptConstants.hoc?(ScriptConstants::COURSE4_NAME)
   end
+
+  def test_category
+    assert_equal ScriptConstants.category(ScriptConstants::HOC_NAME), 'hoc'
+    assert_equal ScriptConstants.category(ScriptConstants::STARWARS_NAME), 'hoc'
+    assert_equal ScriptConstants.category(ScriptConstants::FLAPPY_NAME), 'hoc'
+    assert_equal ScriptConstants.category(ScriptConstants::COURSE1_NAME), 'csf'
+    assert_equal ScriptConstants.category(ScriptConstants::CSP_UNIT1_NAME), 'csp'
+  end
 end
