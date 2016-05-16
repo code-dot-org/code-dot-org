@@ -183,12 +183,12 @@
         course4:
           description_short: Sinh viên tham gia khóa học 4 cần phải hoàn thành các
             khóa học 2 và 3.
-          description: Khóa học 4 được thiết kế cho những người đã học qua khóa 2
-            và 3. Học viên sẽ nghiên cứu sâu hơn cách lập trình về chủ đề đã được
-            giới thiệu trong các khóa học trước đó với các giải pháp linh hoạt cho
-            các vấn đề phức tạp hơn. Cuối khóa học này, sinh viên tạo cách tương tác
-            giữa cốt truyện và trò chơi mà họ muốn chia sẻ với bất cứ ai. Khuyến khích
-            cho học sinh các lớp 4-5.
+          description: Khóa học 4 được thiết kế cho những học sinh đã hoàn thành khóa
+            học 2 và 3. Học sinh sẽ học cách giải các câu đố với sự phức tạp tăng
+            lên cũng như tìm hiểu làm thế nào để kết hợp một số khái niệm khi giải
+            quyết các thách thức. Khi hoàn tất khóa học này, học sinh sẽ tạo ra chương
+            trình sử dụng nhiều kỹ năng, bao gồm vòng lặp, hàm có tham số. Khuyến
+            nghị cho lớp 4-8.
           'Artist: Variables': 'Nghệ sĩ: biến'
           'Bee: For Loops': 'Ong: Cho vòng'
           title: Khóa học 4
@@ -216,10 +216,10 @@
           Maze and Bee: Mê cung và ong
           Artist Binary: Nghệ sĩ nhị phân
           description_audience: Lứa tuổi 10 + (sau khóa học 3)
-          Super Challenge - Variables: Super Challenge - Variables
-          Super Challenge - For Loops: Super Challenge - For Loops
-          Super Challenge - Functions and Parameters: Super Challenge - Functions
-            and Parameters
+          Super Challenge - Variables: Siêu thách thức - Biến số
+          Super Challenge - For Loops: 'Siêu thách thức: Vòng lặp For'
+          Super Challenge - Functions and Parameters: 'Siêu thách thức: Hàm và tham
+            số'
           Extreme Challenge - Comprehensive: Extreme Challenge - Comprehensive
         Course4pre:
           title: Khóa học 4 điều kiện tiên quyết
@@ -1619,8 +1619,10 @@
           Spring 2016: Spring 2016
         iceage:
           title: Ice Age Play Lab
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          description: Create a story or make a game with Ice Age Play Lab!
+          description_short: Tạo ra một câu chuyện hoặc làm cho một trò chơi với Ice
+            Age Play Lab!
+          description: Tạo ra một câu chuyện hoặc làm cho một trò chơi với Ice Age
+            Play Lab!
           Ice Age Play Lab: Ice Age Play Lab
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
@@ -1639,7 +1641,7 @@
           Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
-          description_short: Programming
+          description_short: Lập trình
           description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
@@ -1677,22 +1679,24 @@
           Challenge Overview: Challenge Overview
         gumball:
           title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
+          description_short: Tạo ra một câu chuyện hoặc làm cho một trò chơi với Ice
+            Age Play Lab!
+          description: Tạo ra một câu chuyện hoặc làm cho một trò chơi với Ice Age
+            Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
+          title: 'Star Wars: Xây dựng một Thiên Hà bằng lập trình'
+          description_short: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars
+            của riêng bạn trong một thiên hà xa xôi.
+          description: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars của
+            riêng bạn trong một thiên hà xa xôi.
           Hour of Code 2015: Giờ lập trình 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
+          title: 'Star Wars: Xây dựng một Thiên Hà bằng lập trình'
+          description_short: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars
+            của riêng bạn trong một thiên hà xa xôi.
+          description: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars của
+            riêng bạn trong một thiên hà xa xôi.
           Hour of Code 2015: Giờ lập trình 2015
         minecraft:
           title: Minecraft
@@ -1932,7 +1936,7 @@
           Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
         csp3:
           title: CSP Unit 3 - Programming
-          description_short: Programming
+          description_short: Lập trình
           description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
@@ -2007,9 +2011,34 @@
           Explore PT: Explore PT
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
-          description_short: Programming
+          description_short: Lập trình
           description: Temp place to work on U3 of Disco
           Drawing in Game Lab: Drawing in Game Lab
           Animation: Hình ảnh động
           Draw Loop and Random: Draw Loop and Random
           Variables: Các biến
+          Sprite Properties and Mod: Sprite Properties and Mod
+        2016_sciencePD_phase1:
+          title: Computer Science in Science PD 2016-2017
+          description_short: In Partnership with Project GUTS
+          description: In Partnership with Project GUTS
+          Introduction to PD: Introduction to PD
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
+            Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
+            Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational
+            Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        TEMP CSD Unit 3:
+          title: " TEMP CSD Unit 3 - Interactive Games and Animations"
+          description_short: Lập trình
+          description: ''
+          Drawing in Game Lab: Drawing in Game Lab

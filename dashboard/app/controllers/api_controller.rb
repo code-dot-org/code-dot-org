@@ -25,11 +25,7 @@ class ApiController < ApplicationController
       level_map = student.user_levels_by_level(@script)
       student_levels = @script.script_levels.map do |script_level|
         user_level = level_map[script_level.level_id]
-        if user_level.try(:submitted)
-          level_class = "submitted"
-        else
-          level_class = activity_css_class(user_level.try(:best_result))
-        end
+        level_class = activity_css_class(user_level.try(:best_result), user_level.try(:submitted))
         {class: level_class, title: script_level.position, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
       end
       {id: student.id, levels: student_levels}
@@ -130,7 +126,7 @@ class ApiController < ApplicationController
     load_section
     load_script
 
-    text_response_script_levels = @script.script_levels.includes(:level).where('levels.type' => [TextMatch, FreeResponse])
+    text_response_script_levels = @script.script_levels.includes(:levels).where('levels.type' => [TextMatch, FreeResponse])
 
     data = @section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
@@ -161,7 +157,7 @@ class ApiController < ApplicationController
     load_section
     load_script
 
-    level_group_script_levels = @script.script_levels.includes(:level).where("levels.type" => LevelGroup)
+    level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => LevelGroup)
 
     multi_answer_characters = ("A".."Z").to_a
 
@@ -190,11 +186,11 @@ class ApiController < ApplicationController
         script_level.level.levels.each do |level|
           level_response = response_parsed[level.id.to_s]
 
-          if level_response
-            level_result = {}
+          level_result = {}
 
+          if level_response
             case level
-            when TextMatch
+            when TextMatch, FreeResponse
               student_result = level_response["result"]
               level_result[:student_result] = student_result
               level_result[:correct] = "free_response"
@@ -216,9 +212,11 @@ class ApiController < ApplicationController
                 level_result[:correct] = "incorrect"
               end
             end
-
-            level_results << level_result
+          else
+            level_result[:correct] = "unsubmitted"
           end
+
+          level_results << level_result
         end
 
         submitted = user_level.try(:submitted)

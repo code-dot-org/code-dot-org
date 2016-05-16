@@ -23,7 +23,6 @@
 #  name                       :string(255)
 #  locale                     :string(10)       default("en-US"), not null
 #  birthday                   :date
-#  parent_email               :string(255)
 #  user_type                  :string(16)
 #  school                     :string(255)
 #  full_address               :string(1024)
@@ -77,7 +76,7 @@ require 'cdo/user_helpers'
 
 class User < ActiveRecord::Base
   include SerializedProperties
-  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender survey2015_value survey2015_comment)
+  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender)
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -197,9 +196,6 @@ class User < ActiveRecord::Base
 
   GENDER_OPTIONS = [[nil, ''], ['gender.male', 'm'], ['gender.female', 'f'], ['gender.none', '-']]
 
-  STUDENTS_COMPLETED_FOR_PRIZE = 15
-  STUDENTS_FEMALE_FOR_BONUS = 7
-
   attr_accessor :login
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
@@ -241,8 +237,6 @@ class User < ActiveRecord::Base
   validates :age, presence: true, on: :create # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
-
-  validates_length_of :parent_email, maximum: 255
 
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
@@ -471,7 +465,8 @@ select
   (select coalesce(sum(trophy_id), 0) from user_trophies where user_id = #{self.id}) as current_trophies,
   (select count(*) * 3 from concepts) as max_trophies
 from script_levels sl
-left outer join user_levels ul on ul.level_id = sl.level_id and ul.user_id = #{self.id}
+left outer join levels_script_levels lsl on lsl.script_level_id = sl.id
+left outer join user_levels ul on ul.level_id = lsl.level_id and ul.user_id = #{self.id}
 where sl.script_id = #{script.id}
 SQL
   end
@@ -523,6 +518,10 @@ SQL
 
   def teacher?
     self.user_type == TYPE_TEACHER
+  end
+
+  def student_of_admin?
+    teachers.any? &:admin?
   end
 
   def authorized_teacher?
@@ -810,7 +809,8 @@ SQL
 
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_proficiency = UserProficiency.where(user_id: user_id).first_or_create!
-      user_proficiency.last_progress_at = Time.now
+      time_now = Time.now
+      user_proficiency.last_progress_at = time_now
 
       ConceptDifficulties::CONCEPTS.each do |concept|
         difficulty_number = level_concept_difficulty.send(concept)
@@ -819,13 +819,18 @@ SQL
         end
       end
 
+      if user_proficiency.basic_proficiency_at.nil? &&
+          user_proficiency.basic_proficiency?
+        user_proficiency.basic_proficiency_at = time_now
+      end
+
       user_proficiency.save!
     end
   end
 
   # returns whether a new level has been completed and asynchronously enqueues an operation
   # to update the level progress.
-  def track_level_progress_async(script_level, new_result, submitted)
+  def track_level_progress_async(script_level:, new_result:, submitted:, level_source_id:)
     level_id = script_level.level_id
     script_id = script_level.script_id
     old_user_level = UserLevel.where(user_id: self.id,
@@ -838,6 +843,7 @@ SQL
                 'level_id' => level_id,
                 'script_id' => script_id,
                 'new_result' => new_result,
+                'level_source_id' => level_source_id,
                 'submitted' => submitted}
     if Gatekeeper.allows('async_activity_writes', where: {hostname: Socket.gethostname})
       User.progress_queue.enqueue(async_op.to_json)
@@ -850,9 +856,11 @@ SQL
   end
 
   # The synchronous handler for the track_level_progress helper.
-  def User.track_level_progress_sync(user_id, level_id, script_id, new_result, submitted)
+  def User.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:)
     new_level_completed = false
     new_level_perfected = false
+
+    user_level = nil
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.
         where(user_id: user_id, level_id: level_id, script_id: script_id).
@@ -864,6 +872,9 @@ SQL
         new_result == 100 &&
         HintViewRequest.
           where(user_id: user_id, script_id: script_id, level_id: level_id).
+          empty? &&
+        AuthoredHintViewRequest.
+          where(user_id: user_id, script_id: script_id, level_id: level_id).
           empty?
 
       # Update user_level with the new attempt.
@@ -871,8 +882,14 @@ SQL
       user_level.best_result = new_result if user_level.best_result.nil? ||
         new_result > user_level.best_result
       user_level.submitted = submitted
+      user_level.level_source_id = level_source_id
 
       user_level.save!
+    end
+
+    # Create peer reviews after submitting a peer_reviewable solution
+    if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable)
+      PeerReview.create_for_submission(user_level, level_source_id)
     end
 
     if new_level_completed && script_id
@@ -888,7 +905,14 @@ SQL
     raise 'Model must be User' if op['model'] != 'User'
     case op['action']
       when 'track_level_progress'
-        User.track_level_progress_sync(op['user_id'], op['level_id'], op['script_id'], op['new_result'], op['submitted'])
+        User.track_level_progress_sync(
+          user_id: op['user_id'],
+          level_id: op['level_id'],
+          script_id: op['script_id'],
+          new_result: op['new_result'],
+          submitted: op['submitted'],
+          level_source_id: op['level_source_id']
+        )
       else
         raise "Unknown action in #{op}"
     end

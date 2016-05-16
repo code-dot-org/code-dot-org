@@ -3,7 +3,7 @@ es:
     script:
       name:
         20-hour:
-          desc: 'Curso K-8  de introducción a las ciencias de la computación'
+          desc: Curso K-8 de introducción a las Ciencias de la Computación
           Unplug1: Etapa 1
           Maze: Etapa 2
           Unplug2: Etapa 3
@@ -25,7 +25,7 @@ es:
           Artist5: Etapa 19
           Unplug11: Etapa 20
         Hour of Code:
-          desc: Hora del código
+          desc: Hora de Code
           Maze: Etapa 1
         Edit Code:
           desc: Editar código (beta)
@@ -99,14 +99,14 @@ es:
         Jigsaw: Rompecabezas
         MazeStep: Modo paso a paso de laberinto
         Wordsearch: Sopa de Letras
-        Webapp: Laboratorio de App
+        Webapp: Laboratorio de Aplicaciones
         ArtistEC: El artista
         TextMatch: Combinación de texto
-        StudioEC: Laboratorio de Juegos
-        Applab: Laboratorio de App
-        NetSim: Simulador de internet
+        StudioEC: Laboratorio de juegos
+        Applab: Laboratorio de Aplicaciones
+        NetSim: Simulador de Internet
         Custom: Artista
-        CustomStudio: Laboratorio de Juegos
+        CustomStudio: Laboratorio de juegos
     trophy:
       name:
         Bronze: Bronce
@@ -125,132 +125,132 @@ es:
         parameters: Funciones con parámetros
     level:
       instructions:
-        maze_2_2: '¿Me ayudas a atrapar el cerdo malo? Apila juntos un par de bloques "avanzar" y presiona "Ejecutar Programa" para ayudarme a llegar allí. '
+        maze_2_2: '¿Me ayudas a atrapar al cerdo malo? Apila juntos un par de bloques "avanzar" y pulsa "Ejecutar Programa" para ayudarme a llegar allí. '
         maze_2_1: Este cerdo me está poniendo furioso. ¡Ayudame a encontrarlo!
-        maze_2_2_5: Traza el camino y llévame al cerdo tonto. Evita el TNT o las plumas volarán!
+        maze_2_2_5: Traza el camino y llévame al cerdo tonto. ¡Evita el TNT o las plumas volarán!
         maze_2_3: ¡Guíame al demonio verde! (Cuidado con el TNT)
         maze_2_4: Mantén la calma y ayúdame a encontrar el cerdo malo. O de lo contrario, ¡puedo enfadarme!
         maze_2_5: Hay una forma de llegar al tonto cerdo utilizando sólo 2 bloques. ¿Puedes encontrarla?
         maze_2_6: Intenta llevarme al intruso verde utilizando sólo tres bloques.
         maze_2_7: 'Ayúdame a desterrar este cerdito malo usando el menor número de bloques posible. Prueba usando más de un bloque "repetir veces".'
-        maze_2_8: 'Cuando un bloque es gris, significa que no puedes borrarlo. Resuelve este puzzle utilizando el bloque de "repetir" que se repite 3 veces. Intenta poner estos 3 bloques dentro del bloque gris de "repetir": mover, mover, girar.'
-        maze_2_9: 'Ok, prueba el nuevo bloque "repetir hasta" - repetirá hasta que llegue al cerdo molesto.'
-        maze_2_10: 'Ok, una última vez para practicar - se puede resolver éste usando solo 4 bloques?'
-        maze_2_11: 'Hola persona.  Yo zombi. Yo hambriento. Debo... llegar... al girasol... ¿Me puedes llevar ahí con sólo 5 bloques?'
-        maze_2_12: Ok, esto es similar, pero un poco diferente. ¿Puedes hacerlo en sólo 5 bloques?
+        maze_2_8: 'Cuando un bloque es gris, significa que no puedes borrarlo. Resuelve este rompecabezas utilizando el bloque de "repetir" que se repite 3 veces. Intenta poner estos 3 bloques dentro del bloque gris de "repetir": mover, mover, girar.'
+        maze_2_9: 'Vale, prueba el nuevo bloque "repetir hasta"; repetirá hasta que llegue al cerdo molesto.'
+        maze_2_10: Vale, una última vez para practicar; ¿se puede resolver esto usando solo 4 bloques?
+        maze_2_11: Hola persona. Yo zombi. Yo hambriento. Debo... llegar... al girasol... ¿Me puedes llevar ahí con sólo 5 bloques?
+        maze_2_12: Vale, esto es similar, pero un poco diferente. ¿Puedes hacerlo en sólo 5 bloques?
         maze_2_13: 'Usa el nuevo bloque "si" para dejarme decidir cuándo girar. Sugerencia: solo necesitas un bloque más, pero aprende cómo lo hicimos así puedes hacerlo tú solo la próxima vez.'
-        maze_2_14: 'Ok, esto es como el último puzzle, pero tienes que recordar cómo usaste el bloque "si" y el bloque "repetir" juntos.'
-        maze_2_15: '¡Yo querer girasol! Usa un bloque "si" para llevarme allí con la menor cantidad posible de bloques.'
-        maze_2_16: 'Ok, vamos hacer esto nuevamente para practicar - esto no es muy diferente, pero ten cuidado con los masticadores!'
-        maze_2_17: 'Los bloques "si-sino" comprueban una condición, y luego hacen una cosa U otra. Para llevarme al girasol intenta usar este nuevo bloque.'
+        maze_2_14: 'Vale, esto es como el último rompecabezas, pero tienes que recordar cómo usaste el bloque "si" y el bloque "repetir" juntos.'
+        maze_2_15: '¡Yo quiero girasol! Usa un bloque "si" para llevarme allí con la menor cantidad posible de bloques.'
+        maze_2_16: Vale, vamos a hacer esto nuevamente para practicar; esto no es muy diferente, ¡pero ten cuidado con los masticadores!
+        maze_2_17: 'Los bloques "si-sino" comprueban una condición, y luego hacen una cosa u otra. Para llevarme al girasol intenta usar este nuevo bloque.'
         maze_2_18: 'Una práctica más del bloque "si-sino", ¿Puedes hacerlo bien en tu primer intento?'
-        maze_2_19: ¿Puedes agregar sólo 3 bloques para ayudarme a resolver un laberinto más complejo? Si lo haces bien, puedo caminar cualquier camino con curvas sin importar su longitud.
+        maze_2_19: ¿Puedes agregar solo 3 bloques para ayudarme a resolver un laberinto más complejo? Si lo haces bien, puedo caminar cualquier camino con curvas sin importar su longitud.
         turtle_1_1: Hola, soy un artista. Puedes escribir código para hacerme dibujar casi cualquier cosa. Utiliza algunos bloques para hacerme dibujar por encima de las líneas grises de la imagen.
         turtle_1_2: 'Ahora, dibuja un cuadrado. Nota: usa tu color favorito eligiéndolo en el nuevo bloque "definir color".'
         turtle_1_3: Haz un cuadrado usando sólo 3 bloques.
-        turtle_1_4: 'Dibuja un triángulo cuyos lados tienen todos diferentes colores, usando la opción "color al azar" que elige un color diferente cada vez. Ayuda: tendrás que averiguar cuánto girar haciendo click en el número del bloque girar.'
+        turtle_1_4: 'Dibuja un triángulo cuyos lados tienen todos diferentes colores, usando la opción "color al azar" que elige un color diferente cada vez. Ayuda: tendrás que averiguar cuánto girar haciendo clic en el número del bloque girar.'
         turtle_1_5: Ahora, para practicar, dibuja un triángulo y un cuadrado para dibujar un sobre.
-        turtle_1_6: '¿Puedes darte cuenta cómo dibujar este triángulo y cuadrado? Ayuda: Haz el triángulo primero, y luego averigua cuánto girar antes de dibujar el cuadrado.'
-        turtle_1_7: 'Ok, vamos hacerlo un poco más difícil - ve si puedes dibujar estos anteojos verdes. Los cuadrados tienen 100 píxeles en cada lado, y están separados por 50 píxeles. ¡No te olvides de dibujar en verde!'
-        turtle_1_8: 'Muy bien, tratemos de averiguar qué pasa si ejecutas este código (o presionas "Ejecutar" para probarlo). Luego, repítelo las veces necesarias para completar el dibujo. Los colores serán diferentes cada vez.'
-        turtle_1_9: ¿Puedes adivinar con qué número reemplazarías a los signos de interrogación para dibujar un círculo?
+        turtle_1_6: '¿Puedes darte cuenta de cómo dibujar este triángulo y cuadrado? Ayuda: haz el triángulo primero, y luego averigua cuánto girar antes de dibujar el cuadrado.'
+        turtle_1_7: Vale, vamos a hacerlo un poco más difícil; intenta dibujar estos anteojos verdes. Los cuadrados tienen 100 píxeles en cada lado, y están separados por 50 píxeles. ¡No te olvides de dibujar en verde!
+        turtle_1_8: 'Muy bien, tratemos de averiguar qué pasa si ejecutas este código (o pulsas "Ejecutar" para probarlo). Luego, repítelo las veces necesarias para completar el dibujo. Los colores serán diferentes cada vez.'
+        turtle_1_9: ¿Puedes adivinar con qué número reemplazarías los signos de interrogación para dibujar un círculo?
         turtle_1_10: '¡Lo lograste! Ahora, a dibujar cualquier cosa que quieras. Algunas ideas divertidas: un muñeco de palitos, un copo de nieve o un espiral. Prueba también el nuevo bloque "ajuste de ancho". ¡Que te diviertas!'
-        turtle_4_1: '¿Puedes dibujar un triángulo (con bordes de 100 pixeles) usando sólo tres bloques? Pista: Usa un bloque "repeat".'
-        turtle_4_2: 'Agrega un bloque "girar a la derecha 90 grados" en algún lugar en medio del programa que ya está en el area de trabajo para dibujar estos triángulos.'
-        turtle_4_3: 'OK, este es el código que escribiste para dibujar un único triángulo. Puedes agregar un bloque "repeat" y un bloque "turn" para crear una hermosa flor?'
-        turtle_4_4: 'Aquí está el mismo código del puzzle anterior, pero girado sólo 36 grados después de dibujar cada triángulo. ¿Cuántas veces necesitas repetir esto? (Pista: después de girar el dibujo 360 grados, este se convertirá en un círculo completo).'
-        turtle_4_5: 'Aquí está el mismo código del puzzle anterior, pero repitiendo los giros 36 veces. ¿De cuántos grados debería ser el giro? (Pista: después de girar el dibujo 360 grados, este se volverá un círculo completo).'
-        turtle_4_6: Usando sólo 3 bloques, ¿puedes dibujar un cuadrado con bordes de 20 pixeles?
-        turtle_4_7: 'Aquí está el código para dibujar el cuadrado del puzzle anterior. Puedes repetirlo para dibujar 10 cuadrados adyacentes como una escalera? Pista: sólo necesitas 2 bloques más.'
-        turtle_4_8: Aquí está la solución al puzzle anterior. ¿Puedes agregar sólo 2 bloques más para completar el dibujo?
-        turtle_4_9: Aquí está la solución al puzzle previo. ¿Cuántos grados deberías girar para completar el dibujo? (Probablemente necesitas intentarlo unas cuantas veces)
-        turtle_4_10: Aquí está la solución al puzzle anterior. ¿Cuántas veces deberías repetirlo para completar el dibujo?
+        turtle_4_1: '¿Puedes dibujar un triángulo (con bordes de 100 píxeles) usando sólo tres bloques? Pista: Usa un bloque "repeat".'
+        turtle_4_2: 'Agrega un bloque "girar a la derecha 90 grados" en algún lugar en medio del programa que ya está en el área de trabajo para dibujar estos triángulos.'
+        turtle_4_3: 'Vale, éste es el código que escribiste para dibujar un único triángulo. ¿Puedes agregar un bloque "repeat" y un bloque "turn" para crear una hermosa flor?'
+        turtle_4_4: 'Aquí está el mismo código del rompecabezas anterior, pero girado sólo 36 grados después de dibujar cada triángulo. ¿Cuántas veces necesitas repetir esto? (Pista: después de girar el dibujo 360 grados, éste se convertirá en un círculo completo).'
+        turtle_4_5: 'Aquí está el mismo código del rompecabezas anterior, pero repitiendo los giros 36 veces. ¿De cuántos grados debería ser el giro? (Pista: después de girar el dibujo 360 grados, éste se volverá un círculo completo).'
+        turtle_4_6: Usando sólo 3 bloques, ¿puedes dibujar un cuadrado con bordes de 20 píxeles?
+        turtle_4_7: 'Aquí está el código para dibujar el cuadrado del rompecabezas anterior. ¿Puedes repetirlo para dibujar 10 cuadrados adyacentes como una escalera? Pista: sólo necesitas 2 bloques más.'
+        turtle_4_8: Aquí está la solución al rompecabezas anterior. ¿Puedes agregar sólo 2 bloques más para completar el dibujo?
+        turtle_4_9: Aquí está la solución al rompecabezas anterior. ¿Cuántos grados deberías girar para completar el dibujo? (Probablemente necesitas intentarlo unas cuantas veces)
+        turtle_4_10: Aquí está la solución al rompecabezas anterior. ¿Cuántas veces deberías repetirlo para completar el dibujo?
         turtle_4_11: 'Intenta cambiar los números en los bloques "turn" y "repeat" para crear patrones diferentes. O experimenta cambiando el resto del código para dibujar cualquier cosa que quieras.'
-        maze_karel_1_1: 'Hola, soy un granjero. Necesito que me ayudes a aplanar el campo en mi granja para que esté listo para sembrar. Muéveme a la pila de tierra y utiliza el bloque "eliminar" para quitarla.'
+        maze_karel_1_1: 'Hola, soy un granjero. Necesito que me ayudes a aplanar el campo de mi granja para que esté listo para sembrar. Muéveme a la pila de tierra y utiliza el bloque "eliminar" para quitarla.'
         maze_karel_1_2: 'A continuación, muéveme hacia el agujero y llénalo con DOS paladas de tierra, usando el bloque "llenar".'
         maze_karel_1_3: Muéveme a la pila de tierra y dime cuantas paladas de eliminar debo dar usando la menor cantidad de bloques posible.
         maze_karel_1_4: '¿Puedes ayudarme a quitar las cuatro pilas de tierra? Sugerencia: usa un bloque repetir si puedes.'
         maze_karel_1_5: 'Ayúdame a llenar todos estos agujeros con 5 paladas de tierra. Sugerencia: puedes poner un bloque "repetir" dentro del bloque "mientras".'
         maze_karel_1_6: 'Quita todas las pilas de tierra, utilizando la menor cantidad de bloques que sea posible. Las nuevas opciones en el menú desplegable del bloque "mientras" me dicen si estoy parado en una pila o un agujero.'
-        maze_karel_1_7: Vaya, encontré un agujero muy profundo! No sé cuantas paladas de tierra necesita. ¿Puedes escribir un programa que lo llene hasta que la tierra esté plana?
-        maze_karel_1_8: Ayúdame a llenar en el agujero en el otro extremo del campo, con la menor cantidad posible de bloques.
-        maze_karel_1_9: 'Hacerme quitar todas estas pilas de tierra. Trata de usar la menor cantidad de bloques que sea posible. Sugerencia: prueba usando un bloque "mientras".'
-        maze_karel_1_10: 'Estoy trabajando hasta tarde, así que está oscuro afuera, y no sé qué tan grandes son las pilas. Ahora no tengo todas las opciones que solía tener en el bloque "mientras". Muéveme a lo largo del campo y si hay una pila, quítala.'
+        maze_karel_1_7: ¡Vaya, encontré un agujero muy profundo! No sé cuantas paladas de tierra necesita. ¿Puedes escribir un programa que lo llene hasta que la tierra esté plana?
+        maze_karel_1_8: Ayúdame a llenar el agujero en el otro extremo del campo, con la menor cantidad posible de bloques.
+        maze_karel_1_9: 'Ayúdame a quitar todas estas pilas de tierra. Trata de usar la menor cantidad de bloques que sea posible. Sugerencia: prueba usando un bloque "mientras".'
+        maze_karel_1_10: 'Estoy trabajando hasta tarde, así que está oscuro afuera, y no conozco el tamaño de las pilas. Ahora no tengo todas las opciones que solía tener en el bloque "mientras". Muéveme a lo largo del campo y si hay una pila, quítala.'
         maze_karel_1_11: 'Todavía está oscuro afuera. Muéveme a lo largo del campo. Si hay una pila, quítala y si hay un agujero, rellénalo. Sugerencia: utiliza el menú desplegable de opciones del bloque "si".'
         turtle_2_1: 'Hola. Yo artista zombi. ¡Me encanta dibujar! Ayúdame a dibujar un cuadrado con un color especial. Nota importante: dispones de los mismos bloques pero ahora han sido organizados en categorías.'
         turtle_2_2: '¡Bienvenido al uso de funciones, que permiten definir nuevos bloques! Prueba el bloque nuevo "dibujar un cuadrado", en la categoría "Funciones", para dibujar un pequeño cuadrado verde de 50 x 50.'
         turtle_2_3: 'Usa el bloque "repetir" (en la categoría "Iteraciones") para dibujar tres cuadrados de tamaño 100, cada uno separado 120 grados. Y hazlo en 3 colores diferentes, al azar.'
         turtle_2_4: 'Ahora vamos a hacer algo sofisticado. Cambia el código para dibujar 36 cuadrados, de 100 píxeles de ancho, cada uno separado por 10 grados. Sugerencia: podrías utilizar el control deslizante para hacerme ir más rápido.'
-        turtle_2_5: 'Dibuja cuadrados con lados de 50, 60, 70, 80 y 90 píxeles.  Necesitarás utilizar la función "dibujar un cuadrado" cinco veces.'
+        turtle_2_5: 'Dibuja cuadrados con lados de 50, 60, 70, 80 y 90 píxeles. Necesitarás utilizar la función "dibujar un cuadrado" cinco veces.'
         turtle_2_6: 'Bien, este programa utilizará un contador, para dibujar los mismos cuadrados que la última vez. Haz que el cuadrado sea del mismo tamaño que el contador, usando el bloque "contador". Sugerencia: Está en la categoría Variables.'
-        turtle_2_7: 'Este es un programa para dibujar un espiral, pero los bloques están desactivados así que no funcionan. Haz un nuevo programa utilizando un bloque "contar con" (en la categoría Iteraciones) y "contador" (en la categoría Variables) para dibujar el mismo espiral.'
+        turtle_2_7: 'Éste es un programa para dibujar un espiral, pero los bloques están desactivados así que no funcionan. Haz un nuevo programa utilizando un bloque "contar con" (en la categoría Iteraciones) y "contador" (en la categoría Variables) para dibujar el mismo espiral.'
         turtle_2_7_5: 'Hay una nueva función de "dibujar un muñeco de nieve" (en la categoría de funciones). Dibuja dos muñecos de nieve, de 250 y 100 de altura.'
         turtle_2_8: 'Éste es un poco complicado. Utiliza la función "dibujar un muñeco de nieve" y el bloque nuevo "saltar adelante" (en la categoría de Acciones). Dibuja 3 muñecos de nieve en diferentes colores, separados por 100 píxeles.'
         turtle_2_9: 'Utiliza una iteración "contar con" para dibujar una familia de muñecos de nieve, con alturas de 110, 100, 80, 90 y 70. Los muñecos de nieve deberían estar separados por 60 píxeles.'
-        turtle_2_10: 'Aquí hay algo de código para probar experimentando con diferentes espirales.  ¿Qué sucede si cambias la cantidad del giro? O estableces un color al azar en la iteración.  Dibuja cualquier cosa que quieras.'
+        turtle_2_10: Aquí hay un código para probar con diferentes espirales. ¿Qué sucede si cambias la cantidad del giro? O estableces un color al azar en la iteración. Dibuja cualquier cosa que quieras.
         maze_karel_2_1: 'Trata de usar los bloques para ayudarme a quitar todas las pilas y llenar todos los agujeros del suelo. Intenta utilizar iteraciones en lugar de usar demasiados bloques. Sugerencia: puedes poner una iteración dentro de otra iteración.'
-        maze_karel_2_2: 'Hemos definido nuestro propio bloque llamado "llenar 5", que está ahora en la categoría de Funciones. Usalo para ayudarme a llenar este agujero.'
+        maze_karel_2_2: 'Hemos definido nuestro propio bloque llamado "llenar 5", que está ahora en la categoría de Funciones. Úsalo para ayudarme a llenar este agujero.'
         maze_karel_2_3: 'Usa el nuevo bloque de función "llenar 5" para hacerme rellenar todos los agujeros. Tendrás que arrastrar el bloque "llenar 5" de la categoría Funciones.'
         maze_karel_2_4: Define una nueva función que saque 7 paladas. Luego úsala para escribir un programa que me ayuda a eliminar todas las pilas.
         maze_karel_2_5: Crea una nueva función que elimine 6 paladas de una pila y úsala para ayudarme a nivelar todas las pilas.
         maze_karel_2_6: 'Usa dos nuevas funciones, "llenar 8" y "quitar 8", que me ayuden a nivelar la pila y rellenar el agujero.'
         maze_karel_2_7: ¡Hay una vaca en mi campo! Escribe una nueva función que me ayude a esquivar la vaca y quite la pila. Pon todos los bloques dentro de la nueva función.
         maze_karel_2_8: 'Usa la nueva función, "evitar la vaca y quitar 1", para ayudarme a eliminar todas las pilas.'
-        maze_karel_2_9: Ok, aquí hay una función que elimina 4 diferentes pilas de tierra en una columna vertical. Intenta poner esta función dentro de una iteración, para eliminar todas las pilas de tierra usando sólo unos pocos bloques.
+        maze_karel_2_9: Vale, aquí hay una función que elimina 4 pilas de tierra diferentes en una columna vertical. Intenta poner esta función dentro de una iteración, para eliminar todas las pilas de tierra usando sólo unos pocos bloques.
         maze_karel_2_10: Muéveme a través del campo y utiliza estas dos funciones para ayudarme a quitar todas las pilas y tapar todos los agujeros.
-        turtle_3_1: 'Este puzzle te muestra cómo se definen las funciones "dibujar un cuadrado" y "dibujar un círculo".  Definir una función no ejecuta sus bloques.  Tienes que usar el bloque "dibujar un cuadrado" para realmente dibujar un cuadrado.'
+        turtle_3_1: 'Este rompecabezas te muestra cómo se definen las funciones "dibujar un cuadrado" y "dibujar un círculo". Definir una función no ejecuta sus bloques. Tienes que usar el bloque "dibujar un cuadrado" para realmente dibujar un cuadrado.'
         turtle_3_2: 'Usando la función "dibujar un cuadrado" como ejemplo, crea una función "dibujar un triángulo" y úsala.'
-        turtle_3_3: 'Dibuja cercas triangulares alrededor de los gatos y una cerca cuadrada alrededor de la vaca.  Sugerencia: prueba el programa a medida que avanzas.'
+        turtle_3_3: 'Dibuja cercas triangulares alrededor de los gatos y una cerca cuadrada alrededor de la vaca. Sugerencia: prueba el programa a medida que avanzas.'
         turtle_3_4: 'Ve si puedes descubrir cómo usar "dibujar un cuadrado" y "dibujar un triángulo" (y algunos otros bloques) para dibujar una casa alrededor del León.'
         turtle_3_5: 'Ahora crea una nueva función "dibujar una casa" y úsala para albergar dos gatos. Sugerencia: crea una nueva función usando el bloque "hacer algo" y escribe tu propio texto para nombrar el bloque.'
         turtle_3_6: 'Usando "dibujar un cuadrado" como ejemplo, agrega una entrada llamada "longitud" a "dibujar un triángulo". Luego, dibuja triángulos de diferentes tamaños. (Sugerencia: haz clic en la estrella para agregar una entrada a una función)'
         turtle_3_7: 'Agrega una entrada denominada "longitud" a "dibujar una casa" y construye una casa grande para el elefante (con bordes de 150 píxeles de largo)'
-        turtle_3_8: 'Modificar "dibuja una casa" así que termino en la esquina inferior derecha después de dibujar una nueva casa. Utilice esta función modificada para dibujar tres casas.'
+        turtle_3_8: 'Modificar "dibuja una casa" cuando termine en la esquina inferior derecha después de dibujar una nueva casa. Utiliza esta función modificada para dibujar tres casas.'
         turtle_3_9: '¿Puedes volver a crear la función "dibujar una casa" sin ayuda? Pruébalo y luego dibuja una hilera de casas.'
         turtle_3_10: ¡Has aprendido mucho! Ahora úsalo para dibujar lo que quieras. Intentar dibujar una estrella, o un espiral o un copo de nieve sofisticado.
         maze_karel_debug_seq_1: ¡Bienvenido a la depuración! Mi código no funciona bien. ¿Puedes detectar el problema y arreglarlo para que pueda aplanar mi campo y dejarlo listo para la siembra?
         maze_karel_debug_seq_2: ¿Qué funciona mal en este programa? ¿Cómo deberías arreglarlo para quitar esa pila?
-        maze_karel_debug_repeat: Depura este programa por mí para que mi campo sea agradable y plano.
+        maze_karel_debug_repeat: Depura este programa por mí, para que mi campo sea agradable y plano.
         maze_karel_debug_while: ¿Cómo deberías cambiar este programa para ayudarme a llenar el agujero?
         maze_karel_debug_if: ¡Ayuda! Arregla el programa para que mi campo esté completamente plano.
-        maze_karel_debug_if_else: Depura este programa para que pueda llenar los agujeros y quite todas las pilas.
+        maze_karel_debug_if_else: Depura este programa para que pueda llenar los agujeros y quitar todas las pilas.
         maze_karel_debug_function_1: ¿Qué deberías cambiar en este programa para ayudarme a eliminar todas las pilas?
-        maze_karel_debug_function_2: ¿Puedes depurar este programa para mí así puedo dejar mi campo plano?
+        maze_karel_debug_function_2: ¿Puedes depurar este programa para mí, así puedo dejar mi campo plano?
         maze_karel_debug_function_3: 'Edita este programa para que pueda eliminar todas las pilas de mi campo. '
-        turtle_5_1: Intente ejecutar este programa y haga cambios para ver que ocurre. ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente diferente)
+        turtle_5_1: Intenta ejecutar este programa y haz cambios para ver que ocurre. ¿Puedes averiguar cómo funciona? (o elimínalo y reemplázalo con algo totalmente diferente)
         turtle_5_2: Intente ejecutar este programa y haga cambios para ver que ocurre. ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente diferente)
         turtle_5_3: Intente ejecutar este programa y haga cambios para ver que ocurre. ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente diferente)
         turtle_5_4: Intente ejecutar este programa y haga cambios para ver que ocurre. ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente diferente)
         turtle_5_5: Intente ejecutar este programa y haga cambios para ver que ocurre. ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente diferente)
         turtle_5_6: Intente ejecutar este programa y haga cambios para ver que ocurre. ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente diferente)
-        maze_3_1: Tengo que llegar a ese cerdo! Escriba move() un par de veces, y de esa forma poder recuperar mis huevos.
-        maze_3_2: Escríbeme un programa para haga todo el camino hasta el cerdo.
-        maze_3_3: ¿Cómo llego al cerdo? Asegúrate de que no pasar por la caja de TNT!
-        maze_3_4: ¡Argh! Escríbeme un programa que me haga esquivar el TNT y llegue hasta el cerdo.
-        bounce_1: 'Une un bloque al bloque "cuando flecha izquierda" y presiona "Ejecutar Programa". Mueve la paleta usando la flecha izquierda para alcanzar el objetivo final.'
-        bounce_2: 'Une un bloque a los bloques "cuando flecha derecha" y "cuando flecha izquierda". Mueve la paleta para alcanzar ambos objetivos finales.'
-        bounce_3: 'Ahora intenta algo similar con el bloque "cuando flecha arriba". Mueve la paleta hacia el objetivo final en la parte superior.'
-        bounce_4: Esta vez tienes que añadir cuatro bloques. Mueve la paleta a los cuatro objetivos finales para completar este puzzle.
+        maze_3_1: ¡Tengo que llegar a ese cerdo! Escribe (move) un par de veces, y de esa forma poder recuperar mis huevos.
+        maze_3_2: Escríbeme un programa para que haga todo el camino hasta el cerdo.
+        maze_3_3: ¿Cómo llego al cerdo? ¡Asegúrate de no pasar por la caja de TNT!
+        maze_3_4: ¡Argh! Escríbeme un programa que me haga esquivar al TNT y llegar hasta el cerdo.
+        bounce_1: 'Une un bloque al bloque "cuando flecha izquierda" y pulsa "Ejecutar Programa". Mueve la paleta usando la flecha izquierda para alcanzar el objetivo final.'
+        bounce_2: 'Une un bloque a los bloques "cuándo flecha derecha" y "cuándo flecha izquierda". Mueve la paleta para alcanzar ambos objetivos finales.'
+        bounce_3: 'Ahora intenta algo similar con el bloque "cuándo flecha arriba". Mueve la paleta hacia el objetivo final en la parte superior.'
+        bounce_4: Esta vez tienes que añadir cuatro bloques. Mueve la paleta a los cuatro objetivos finales para completar este rompecabezas.
         bounce_5: 'Vamos a lanzar una pelota hacia la paleta. Une un bloque al bloque "cuando la pelota golpea la paleta" para asegurar que la pelota alcance el objetivo final.'
-        bounce_6: 'Ahora el objetivo final está en la parte superior. Tienes que unir bloques a ambos bloques de "cuando la pelota choca" para resolver este puzzle.'
+        bounce_6: 'Ahora el objetivo final está en la parte superior. Tienes que unir bloques a ambos bloques de "cuando la pelota choca" para resolver este rompecabezas.'
         bounce_7: 'Une bloques a cada uno de los bloques "cuando". Rebota la pelota hasta que alcance el objetivo final.'
         bounce_10: 'Ahora hay una meta en la parte superior. Une los bloques "anotar punto" y "anotar punto del oponente" a los bloques "cuando pelota alcanza la meta" y "cuando pelota pasa de largo" para crear un juego. Prueba cuantos puntos puedes anotar antes de que tu oponente anote dos veces.'
-        bounce_11: 'Ahora puedes unir bloques al bloque "cuando ejecute". Tienes que colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar. También, trata de cambiar la escena o la velocidad de la paleta y la pelota y ver cuantos puntos puedes anotar antes de que tu oponente anote dos veces.'
-        bounce_12: 'Crea tu propio juego "Rebote". Puedes cambiar todos los efectos visuales y las reglas. Cuando estes listo haz clic en Terminar para que tus amigos prueben tu juego en sus teléfonos.'
-        Custom_builder: 'Arrastra los bloques desde la caja de herramientas al espacio de trabajo para dibujar el nivel que deseas crear. Presiona "Ejecutar" cuando estés listo.'
-        flappy_1: 'Adjunta un bloque a "cuando se haga clic en el bloque", entonces presione "Ejecutar". Haz clic o toca la pantalla para mover a Flappy hacia el objetivo.'
+        bounce_11: 'Ahora puedes unir bloques al bloque "cuando ejecute". Tienes que colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar. También, trata de cambiar la escena o la velocidad de la paleta y la pelota y ver cuántos puntos puedes anotar antes de que tu oponente anote dos veces.'
+        bounce_12: 'Crea tu propio juego "Rebote". Puedes cambiar todos los efectos visuales y las reglas. Cuando estés listo, haz clic en Terminar para que tus amigos prueben tu juego en sus teléfonos.'
+        Custom_builder: 'Arrastra los bloques desde la caja de herramientas al espacio de trabajo para dibujar el nivel que deseas crear. Pulsa "Ejecutar" cuando estés listo.'
+        flappy_1: 'Adjunta un bloque a "cuando se haga clic en el bloque", entonces pulsa "Ejecutar". Haz clic o toca la pantalla para mover a Flappy hacia el objetivo.'
         flappy_2: |-
-          Ahora hemos agregado el suelo.  Adjunta un bloque al bloque "cuando golpe el suelo".  Tú código necesita 'TERMINAR EL JUEGO' cuando Flappy golpe el suelo.
+          Ahora hemos agregado el suelo. Adjunta un bloque al bloque "cuando golpee el suelo". Tu código necesita 'TERMINAR EL JUEGO' cuando Flappy golpee el suelo.
         flappy_3: 'El bloque "cuando ejecute" te permite ejecutar el código cuando tu juego inicie. Intenta establecer la velocidad del nivel y el aleteo al objetivo.'
         flappy_4: |-
-          Flappy volará entre los obstáculos a menos que escribas el código que lo hará estrellarse.  Adjunta un bloque al bloque "cuando golpea un obstáculo".  Tú código necesita 'TERMINAR EL JUEGO' cuando Flappy se estrelle en el primer conjunto de tubos.
-        flappy_5: 'Ahora agreguemos el marcador, y contaremos los puntos cuando Flappy pase los obstáculos.  Agrega al bloque "cuando pase un obstáculo", y entonces anota un punto cuando Flappy vuele entre el primer conjunto de tubos.'
-        flappy_6: Ve si puedes anotar un punto haciendo que Flappy aletee más rápido o más lento.
+          Flappy volará entre los obstáculos a menos que escribas el código que lo haga estrellarse. Adjunta un bloque al bloque "cuando golpea un obstáculo". Tu código necesita 'TERMINAR EL JUEGO' cuando Flappy se estrelle en el primer conjunto de tubos.
+        flappy_5: 'Ahora agreguemos el marcador, y contaremos los puntos cuando Flappy pase los obstáculos. Agrega al bloque "cuando pase un obstáculo", y entonces anota un punto cuando Flappy vuele entre el primer conjunto de tubos.'
+        flappy_6: Intenta anotar un punto haciendo que Flappy aletee más rápido o más lento.
         flappy_7: 'A continuación, trata de cambiar el fondo adjuntando otro bloque al bloque "cuando ejecute".'
         flappy_8: Puedes poner elementos visuales en cualquier momento, no sólo cuando comience el juego. Intenta establecer una escena AL AZAR cuando sucedan otros eventos, por ejemplo, al superar un obstáculo.
-        flappy_9: Para mezclar las cosas, al chocar con un obstáculo, en vez de terminar el juego intente ajustar el marcador de nuevo a 0.
-        flappy_11: Crea tu propio juego Flappy, Puedes cambiar todos los efectos visuales y las reglas, hasta la gravedad. Cuando finalices haz clic en Terminar para que tus amigos prueben tu juego en sus teléfonos.
-        flappy_k1_1: Jugar Flappy
+        flappy_9: Para mezclar las cosas, al chocar con un obstáculo, en vez de terminar el juego, intente ajustar el marcador de nuevo a 0.
+        flappy_11: Crea tu propio juego Flappy; puedes cambiar todos los efectos visuales y las reglas, hasta la gravedad. Cuando finalices, haz clic en Terminar para que tus amigos prueben tu juego en sus teléfonos.
+        flappy_k1_1: Jugar a Flappy
         flappy_k1_2: 'Adjunta un bloque a "cuando se haga clic en el bloque", entonces presione "Ejecutar". Haz clic o toca la pantalla para mover a Flappy hacia el objetivo.'
         flappy_k1_3: |-
           Ahora hemos agregado el suelo.  Adjunta un bloque al bloque "cuando golpe el suelo".  Tú código necesita 'TERMINAR EL JUEGO' cuando Flappy golpe el suelo.
@@ -258,9 +258,9 @@ es:
         flappy_k1_5: |-
           Flappy volará entre los obstáculos a menos que escribas el código que lo hará estrellarse.  Adjunta un bloque al bloque "cuando golpea un obstáculo".  Tú código necesita 'TERMINAR EL JUEGO' cuando Flappy se estrelle en el primer conjunto de tubos.
         flappy_k1_6: 'Ahora agreguemos el marcador, y contaremos los puntos cuando Flappy pase los obstáculos.  Agrega al bloque "cuando pase un obstáculo", y entonces anota un punto cuando Flappy vuele entre el primer conjunto de tubos.'
-        flappy_k1_7: Ve si puedes anotar puntos múltiples al pasar un obstáculo
+        flappy_k1_7: Intenta anotar puntos múltiples al pasar un obstáculo
         flappy_k1_8: 'A continuación, trata de cambiar el fondo colocando otro bloque al bloque "cuando inicie"'
-        flappy_k1_9: 'Trata de cambiar el jugador colocando un bloque "colocar jugador" al bloque "cuando ejecute".'
+        flappy_k1_9: 'Trata de cambiar el jugador colocando un bloque "colocar jugador" al bloque "cuando se ejecute".'
         jigsaw_1: Haz clic en el bloque
         jigsaw_2: Arrastra el bloque al objetivo
         jigsaw_3: Acomoda los bloques para formar una imagen
@@ -273,7 +273,7 @@ es:
         jigsaw_10: Acomoda los bloques para formar una imagen
         jigsaw_11: Acomoda los bloques para formar una imagen
         jigsaw_12: Acomoda los bloques para formar una imagen
-        jigsaw_13: ¡Arregla el puzzle!
+        jigsaw_13: ¡Ordena el rompecabezas!
         mazestep_1: Aquí va la descripción del paso del laberinto
         mazestep_2: Aquí va la descripción del paso del laberinto
         mazestep_3: Aquí va la descripción del paso del laberinto
@@ -284,10 +284,10 @@ es:
         studio_c2_3: ¿Puedes crear un programa que haga que el perro se mueva hacia el gato?
         studio_c2_4: '¿Puedes escribir un programa que haga que el perro se mueva hacia el gato, y que el gato diga "hola" cuando el perro se acerque a él?'
         studio_c2_5: '¿Puedes escribir un programa para hacer que el pulpo diga "hola" cuando se hace clic sobre él?'
-        studio_c2_6: ¿Puedes escribir un programa que haga que este pingüino se mueva al presionar las teclas de flecha arriba /abajo / izquierda / derecha para alcanzar todos los objetivos?
-        studio_c2_7: 'El bloque de "repetir para siempre" te permite ejecutar el código de manera continua.  ¿Puedes adjuntar los bloques que se necesitan para mover este dinosaurio hacia arriba y hacia abajo continuamente?'
-        studio_c2_8: '¿Puedes hacer que el pingüino diga "¡Ouch!" y reproduzca un sonido de "golpe", si él choca con el dinosaurio? hay moverlo con las teclas de flecha para hacer que esto ocurra'
-        studio_c2_9: '¿Puedes agregar un bloque para anotar un punto cuando el pingüino choque con el pulpo?,  hay que moverlo con las teclas de flecha para anotar un punto'
+        studio_c2_6: ¿Puedes escribir un programa que haga que este pingüino se mueva al pulsar las teclas de flecha arriba/abajo/izquierda/derecha para alcanzar todos los objetivos?
+        studio_c2_7: 'El bloque de "repetir para siempre" te permite ejecutar el código de manera continua. ¿Puedes adjuntar los bloques que se necesitan para mover este dinosaurio hacia arriba y hacia abajo continuamente?'
+        studio_c2_8: '¿Puedes hacer que el pingüino diga "¡Ay!" y reproduzca un sonido de "golpe", si él choca con el dinosaurio? Hay que moverlo con las teclas de flecha para hacer que esto ocurra'
+        studio_c2_9: ¿Puedes agregar un bloque para anotar un punto cuando el pingüino choque con el pulpo? Hay que moverlo con las teclas de flecha para anotar un punto
         studio_c2_10: ¿Puedes agregar bloques para cambiar el fondo y la velocidad del pingüino y moverlo con las teclas de flecha hasta anotar?
         studio_c2_11: Crea tu propia historia. Cuando finalices, haz clic en Terminar para que tus amigos prueben tu historia en sus teléfonos.
         studio_c3_story_1: '¿Puedes hacer que este perro diga "Hola mundo"?'
@@ -303,59 +303,59 @@ es:
         studio_c3_game_5: '¿Puedes agregar un bloque para anotar un punto cuando el pingüino choque con el pulpo?,  hay que moverlo con las teclas de flecha para anotar un punto'
         studio_c3_game_6: ¿Puedes agregar bloques para cambiar el fondo y la velocidad del pingüino y moverlo con las teclas de flecha hasta anotar?
         studio_c3_game_7: Crea tu propio juego. Cuando hayas terminado, haz clic en finalizar para que tus amigos prueben tu juego en sus teléfonos.
-        studio_playlab_1: 'El pingüino quiere decir "Hola" - ¿puedes ayudarlo?'
-        studio_playlab_2: 'El Chico de la cueva (actor 1) y la Chica de la cueva (actor 2) quieren decirse "Hola" el uno al otro. ¿Puedes ayudarles utilizando el bloque de "decir" dos veces?'
+        studio_playlab_1: 'El pingüino quiere decir "Hola"; ¿puedes ayudarlo?'
+        studio_playlab_2: 'El Chico de la cueva (actor 1) y la Chica de la cueva (actor 2) quieren decirse "Hola" el uno al otro. ¿Puedes ayudarlos utilizando el bloque de "decir" dos veces?'
         studio_playlab_3: ¿Puedes ayudar a la chica tenista a alcanzar la bandera?
         studio_playlab_4: ¿Puedes ayudar al chico tenista (actor 1) a alcanzar a la chica tenista (actor 2) y reproducir un sonido cuando llegue?
-        studio_playlab_5: '¿Puedes ayudar al Robot espacial a decir "saludos terrícolas" cuando es cliqueado? No te olvides de hacer clic en él después de hacer clic en Ejecutar'
+        studio_playlab_5: '¿Puedes ayudar al Robot espacial a decir "saludos, terrícolas" cuando se hace clic en él? No te olvides de hacer clic en él después de hacer clic en Ejecutar'
         studio_playlab_6: ¿Puede ayudar a la bruja a moverse usando las teclas de flecha arriba/abajo/derecha/izquierda para llegar a todas las bolas de fuego mágicas?
-        studio_playlab_7: 'El bloque "repetir por siempre" permite repetir la ejecución del código continuamente. ¿Puedes conectar bloques para ayudar al mago a moverse de izquierda a derecha repetidamente?'
+        studio_playlab_7: 'El bloque "repetir para siempre" permite repetir la ejecución del código continuamente. ¿Puedes conectar bloques para ayudar al mago a moverse de izquierda a derecha repetidamente?'
         studio_playlab_8: ¿Puedes añadir un bloque para anotar un punto y un bloque para reproducir un sonido cuando el unicornio corre hacia el mago y luego moverlo con las flechas hasta que ganes un punto?
-        studio_playlab_9: Establecer el fondo para esta invasión alienígena y ayuda al Robot espacial a alcanzar a los alienígenas más rápido cambiando su velocidad. Luego muévelo con las teclas de flechas para llegar al Robot espacial y alertar a los demás
+        studio_playlab_9: Establece el fondo para esta invasión alienígena y ayuda al Robot espacial a alcanzar a los alienígenas más rápido cambiando su velocidad. Luego muévelo con las teclas de flechas para llegar al Robot espacial y alertar a los demás
         studio_playlab_10: Crea tu propio juego. Cuando hayas terminado, haz clic en finalizar para que tus amigos prueben tu juego en sus teléfonos.
         studio_iceage_hello1: |-
-          Sid quiere reunir a todos para una nueva aventura. ¿Puedes ayudarlo a decir '"Hola" arrastrando el bloque 'Decir' en el área de trabajo y tecleando la palabra "Hola" dentro de él?
-        studio_iceage_hello2: 'Sid (actor 1) se encontró a Manny (actor 2) y quiere invitarlo a una aventura. Ayudarlos a saludarse uno al otro usando el bloque "Actor Dice" dos veces.'
-        studio_iceage_move_to_flag: '¡Scrat esta buscando su bellota! Ayúdalo a avanzar los últimos 200 pixeles usando el bloque "Avanzar".'
-        studio_iceage_move_to_actor: 'Diego (actor 1) esta buscando a Manny (actor 2). Ayuda a Diego a moverse 200 pixeles hacia abajo con Manny, utiliza el bloque "mover actor". Después, conecta un bloque a el evento "cuando el actor toque" para reproducir un sonido cuando ellos se encuentren.'
-        studio_iceage_repeat: 'El bloque "repetir por siempre" permite correr el código continuamente. ¿Puedes adjuntar bloques a él para ayudar a Granny a hacer algo de ejercicio al moverse de izquierda a derecha repetidamente?'
-        studio_iceage_click_hello: ¿Puedes ayudar a Sid a decidir por sus amigos cuando le das clic? no olvides dar clic en él después de que oprimas ejecutar.
-        studio_iceage_move_events: '¡Scrat esta buscando bellotas¡ Ayúdale a correr tras de ellas al adjuntar el bloque "mover" a cada uno de los eventos y cambiar de dirección con cada flecha de dirección. Cuando termines, da clic en Ejecutar e intenta recolectar todas las bellotas.'
-        studio_iceage_sound_and_points: 'Te hemos dado la mayoría del código que hace que Granny se mueva a la izquierda y derecha, también el código para mover a Sid por la pantalla. ¿Puedes finalizar el código y agregar bloques al evento "cuando el actor toca" para hacer que se reproduzca un sonido y ganen un punto cuando Sid y Granny se encuentren? Presiona Ejecutar y juega.'
-        studio_iceage_warn_ice_age: '¡Todos necesitan moverse más rápido porque la era de hielo se aproxima! Cambia el fondo a "tempanos" y fija la velocidad de Sid a "rápido", después presiona Ejecutar y muévelo hacia Diego para que se caliente.'
+          Sid quiere reunir a todos para una nueva aventura. ¿Puedes ayudarlo a decir '"Hola" arrastrando el bloque 'Decir' al área de trabajo y tecleando la palabra "Hola" dentro de él?
+        studio_iceage_hello2: 'Sid (actor 1) se encontró a Manny (actor 2) y quiere invitarlo a una aventura. Ayúdalos a saludarse uno al otro usando el bloque "Actor Dice" dos veces.'
+        studio_iceage_move_to_flag: '¡Scrat está buscando su bellota! Ayúdalo a avanzar los últimos 200 píxeles usando el bloque "Avanzar".'
+        studio_iceage_move_to_actor: 'Diego (actor 1) esta buscando a Manny (actor 2). Ayuda a Diego a moverse 200 píxeles hacia abajo con Manny, utiliza el bloque "mover actor". Después, conecta un bloque al evento "cuando el actor toque" para reproducir un sonido cuando ellos se encuentren.'
+        studio_iceage_repeat: 'El bloque "repetir para siempre" permite ejecutar el código continuamente. ¿Puedes adjuntar bloques a él para ayudar a Granny a hacer algo de ejercicio al moverse de izquierda a derecha repetidamente?'
+        studio_iceage_click_hello: ¿Puedes ayudar a Sid a decidir por sus amigos cuando le das clic? No olvides hacer clic en él después de pulsar ejecutar.
+        studio_iceage_move_events: '¡Scrat esta buscando bellotas¡ Ayúdalo a correr tras ellas al adjuntar el bloque "mover" a cada uno de los eventos y cambiar de dirección con cada flecha de dirección. Cuando termines, haz clic en Ejecutar e intenta recolectar todas las bellotas.'
+        studio_iceage_sound_and_points: 'Te hemos dado la mayoría del código que hace que Granny se mueva a la izquierda y derecha, también el código para mover a Sid por la pantalla. ¿Puedes finalizar el código y agregar bloques al evento "cuando el actor toca" para hacer que se reproduzca un sonido y ganen un punto cuando Sid y Granny se encuentren? Pulsa Ejecutar y juega.'
+        studio_iceage_warn_ice_age: '¡Todos necesitan moverse más rápido porque la era de hielo se aproxima! Cambia el fondo a "témpanos" y fija la velocidad de Sid a "rápido", después pulsa Ejecutar y muévelo hacia Diego para que entre en calor.'
         studio_iceage_throw_hearts: 'Sid quiere que su abuela Granny sepa que él la ama. ¡Usa el comando "actor lanza" para hacer que Sid (actor1) le lance corazones a Granny (actor 2)! Fija el humor de Granny a feliz cuando le lleguen los corazones.'
-        studio_iceage_free_play: ¡Es hora de crear tu propio juego o historia! Cuando termines, da clic en Terminar y ¡haz que tus amigos jueguen con tu juego en sus teléfonos, tablets o computadoras!
-        studio_gumball_hello1: 'Anais quiere hacer nuevos amigos. ¿Puedes ayudarla a decir "Hola" arrastrando el bloque de «decir» al el área de trabajo y escribiendo la palabra "Hola" dentro?'
-        studio_gumball_hello2: 'Darwin (actor 1) y su hermano Gumball (actor 2) se dirigen a la escuela.  Ayudales a saludarse mediante el uso de los el bloque de "actor dice" dos veces.'
-        studio_gumball_move_to_flag: '¡Banana Joe está a punto de ganar una carrera un día de campo!  Ayúdale a ir a los últimas 200 píxeles utilizando el bloque "mover".'
-        studio_gumball_move_to_actor: '¡Gumball (actor 1) y Darwin (actor 2) llegan tarde en el día de campo! Ayuda a Gumball a ir 200 píxeles hacia abajo hasta Darwin utilizando el bloque "mover actor".  A continuación, conecta un bloque al evento "cuando toque actor" para reproducir un sonido cuando se encuentran uno al otro.'
-        studio_gumball_repeat: 'El bloque "repetir por siempre" nos permite ejecutar código de forma continua.  ¿Puedes conectar bloques a el para ayudar a Gumball a calentar para la carrera moviendo a izquierda y derecha repetidamente?'
-        studio_gumball_click_hello: '¿Puedes ayudar a Antón a anunciar el inicio de una carrera dicendo "¡Preparados, listos, ya!"? ¡Para probar tu programa, no olvides pulsar sobre Antón después de hacer clic en ejecutar!'
-        studio_gumball_move_events: '¡Darwin está en la bandera del concurso de la reunión! Ayúdale a correr conectando el bloque "mover" a cada uno de los eventos. Cuando hayas terminado, haz clic en ejecutar y trata de recoger todas las banderas.'
-        studio_gumball_sound_and_points: 'Tenemos la mayor parte del código que hace que a Anton (actor 2) se mueva de la izquierda y derecha, así como el código para mover a Banana Joe (actor 1) alrededor de la pantalla.  ¿Puedes terminar el código y añadir bloques al evento "cuando el actor toque" para hacer que ambos reproduzcan un sonido y anotar un punto cuando Joe Banana y Antón choquen?  Pulsa ejecutar para jugar al juego.'
-        studio_gumball_warn_food_fight: '¡Darwin apenas escapó de una lucha de comida! Cambia el fondo a los "personajes" y configura a rápida la velocidad de Darwin, luego presiona "Correr" y muevelo hacia Penny para advertirla.'
-        studio_gumball_join_food_fight: '¡ Únete a la lucha de la comida! Utiliza el comando "actor tira el ítem recto" para que Banana Joe (actor 1) lance comida a Antón (actor 2)! Establece el humor de Antón en enfadado cuando reciba el impacto.'
-        studio_gumball_free_play: Crea tu propio juego o historia. ¡Cuando hayas terminado, haz clic en finalizar para permitir que los amigos prueben tu juego en sus teléfonos, tabletas o computadoras!
+        studio_iceage_free_play: ¡Es hora de crear tu propio juego o historia! Cuando termines, haz clic en Terminar y ¡haz que tus amigos jueguen con tu juego en sus teléfonos, tablets u ordenadores!
+        studio_gumball_hello1: 'Anais quiere hacer nuevos amigos. ¿Puedes ayudarla a decir "Hola" arrastrando el bloque de «decir» al área de trabajo y escribiendo la palabra "Hola" dentro?'
+        studio_gumball_hello2: 'Darwin (actor 1) y su hermano Gumball (actor 2) se dirigen a la escuela. Ayúdalos a saludarse mediante el uso del bloque de "actor dice" dos veces.'
+        studio_gumball_move_to_flag: '¡Banana Joe está a punto de ganar una carrera durante un día de campo! Ayúdalo a ir a los últimos 200 píxeles utilizando el bloque "mover".'
+        studio_gumball_move_to_actor: '¡Gumball (actor 1) y Darwin (actor 2) llegan tarde al día de campo! Ayuda a Gumball a ir 200 píxeles hacia abajo hasta Darwin utilizando el bloque "mover actor". A continuación, conecta un bloque al evento "cuando toque actor" para reproducir un sonido cuando se encuentran uno al otro.'
+        studio_gumball_repeat: 'El bloque "repetir para siempre" nos permite ejecutar el código de forma continua. ¿Puedes conectar bloques a él para ayudar a Gumball a calentar para la carrera moviendo a izquierda y derecha repetidamente?'
+        studio_gumball_click_hello: '¿Puedes ayudar a Antón a anunciar el inicio de una carrera diciendo "¡Preparados, listos, ya!"? ¡Para probar tu programa, no olvides pulsar sobre Antón después de hacer clic en ejecutar!'
+        studio_gumball_move_events: '¡Darwin está en la bandera del concurso de la reunión! Ayúdalo a correr conectando el bloque "mover" a cada uno de los eventos. Cuando hayas terminado, haz clic en ejecutar y trata de recoger todas las banderas.'
+        studio_gumball_sound_and_points: 'Tenemos la mayor parte del código que hace que Anton (actor 2) se mueva a la izquierda y a la derecha, así como el código para mover a Banana Joe (actor 1) alrededor de la pantalla. ¿Puedes terminar el código y añadir bloques al evento "cuando el actor toque" para hacer que ambos reproduzcan un sonido y anotar un punto cuando Joe Banana y Antón choquen? Pulsa ejecutar para jugar al juego.'
+        studio_gumball_warn_food_fight: '¡Darwin escapó por los pelos de una lucha de comida! Cambia el fondo a los "personajes" y configura la velocidad de Darwin a rápida, luego pulsa "Correr" y muévelo hacia Penny para advertirla.'
+        studio_gumball_join_food_fight: '¡Únete a la lucha de la comida! ¡Utiliza el comando "actor tira el artículo recto" para que Banana Joe (actor 1) lance comida a Antón (actor 2)! Establece el humor de Antón a enfadado cuando reciba el impacto.'
+        studio_gumball_free_play: Crea tu propio juego o historia. ¡Cuando hayas terminado, haz clic en finalizar para permitir que los amigos prueben tu juego en sus teléfonos, tabletas u ordenadores!
         studio_full_sandbox: Crea tu propio juego. Cuando hayas terminado, haz clic en finalizar para que tus amigos prueben tu juego en sus teléfonos.
         studio_k1_1: '¿Puedes hacer que este perro diga "Hola mundo"?'
         studio_k1_2: ¿Puedes hacer que el perro diga algo y que el gato le conteste algo?
         studio_k1_3: ¿Puedes crear un programa que haga que el perro se mueva al gato?
         studio_k1_4: 'Haz que el perro se mueva hacia el gato y el gato diga "hola" cuando llegue a él.'
         studio_k1_5: ¿Puedes agregar un bloque para que el pulpo esté feliz?
-        studio_k1_6: ¡Crea tu propia historia! Mueve al gato y perro alrededor, y hazlos decir cosas.
+        studio_k1_6: ¡Crea tu propia historia! Mueve al gato y al perro alrededor, y hazlos decir cosas.
         maze_wordsearch_k_1: Muéveme para deletrear la palabra ESTE
         maze_wordsearch_k_2: Muéveme para deletrear la palabra SUR
         maze_wordsearch_k_3: Muéveme para deletrear la palabra OESTE
         maze_wordsearch_k_4: Muéveme para deletrear la palabra NORTE
-        maze_wordsearch_k_6: Mueveme al Este y luego al Sur para deletrear la palabra SALTO
-        maze_wordsearch_k_9: Mueveme en una dirección, y luego en otra para deletrear la palabra CÓDIGO
-        maze_wordsearch_k_13: Mueveme en una dirección, y luego en otra para deletrear la palabra DEPURAR
-        maze_wordsearch_k_15: Mueveme en una dirección, y luego en otra para deletrear la palabra SOBRE
-        maze_wordsearch_k_16: Mueveme en una dirección, y luego en otra para deletrear la palabra DEBAJO
-        maze_wordsearch_k_20: ¡Esta es una prueba! Mueveme en una dirección, y luego en otra para deletrear la palabra HISTORIA
+        maze_wordsearch_k_6: Muéveme al Este y luego al Sur para deletrear la palabra SALTO
+        maze_wordsearch_k_9: Muéveme en una dirección, y luego en otra para deletrear la palabra CÓDIGO
+        maze_wordsearch_k_13: Muéveme en una dirección, y luego en otra para deletrear la palabra DEPURAR
+        maze_wordsearch_k_15: Muéveme en una dirección, y luego en otra para deletrear la palabra SOBRE
+        maze_wordsearch_k_16: Muéveme en una dirección, y luego en otra para deletrear la palabra DEBAJO
+        maze_wordsearch_k_20: ¡Ésta es una prueba! Muéveme en una dirección, y luego en otra para deletrear la palabra HISTORIA
         applab_ec_simple: Crea tu aplicación usando los bloques en la caja de herramientas.
-        turtle_ec_1_2: 'Ahora, dibuja un cuadrado. Nota: usa tu color favorito eligiéndolo en el nuevo bloque "Color De Lapiz".'
-        turtle_ec_1_10: '¡Lo lograste! Ahora, dibujar cualquier cosa que quieras. Algunas ideas divertidas: una de palotes, copos de nieve o espirales. Prueba también el nuevo bloque "Ancho del Lápiz". ¡Que te diviertas!'
+        turtle_ec_1_2: 'Ahora, dibuja un cuadrado. Nota: usa tu color favorito eligiéndolo en el nuevo bloque "Color de Lapiz".'
+        turtle_ec_1_10: '¡Lo lograste! Ahora, dibuja cualquier cosa que quieras. Algunas ideas divertidas: una de palotes, copos de nieve o espirales. Prueba también el nuevo bloque "Ancho del Lápiz". ¡Que te diviertas!'
         studio_ec_sandbox: Crea tu propio juego. Cuando hayas terminado, haz clic en finalizar para que tus amigos prueben tu juego en sus teléfonos.
     video:
       name:
@@ -366,14 +366,14 @@ es:
         loop_times: Bloque Repetir Veces
         loop_until: Bloque Repetir Hasta
         if: Bloque Si
-        if_else: Bloque Si/Sino
-        if_else_scrat: Bloque Si/Sino
+        if_else: Bloque Si/Si no
+        if_else_scrat: Bloque Si/Si no
         function: Funciones
         loop_while: Bloque Mientras
         loop_for: Bloque Contador
         parameters: Funciones con parámetros
-        hoc_wrapup: Repaso de la Hora del Código
-        Unplug1: ¿Que son las CC?
+        hoc_wrapup: Repaso de la Hora de Code
+        Unplug1: ¿Qué son las CC?
         Unplug2: Pensamiento computacional
         Unplug3: Programación de hoja cuadriculada
         Unplug4: Algoritmos
@@ -387,7 +387,7 @@ es:
         C1_happy_maps_unplugged: Mapas Felices
         C1_moveitmoveit_unplugged: Muévelo, Muévelo
         C1_bigevent_unplugged: El Gran Evento
-        C1_getting_loopy: Bucleandose
+        C1_getting_loopy: Girar y girar
         C1_pair_programming: Programación de pares
         C1_maze_intro_sequencing: Introducción a Secuenciamiento del Laberinto
         C1_maze_debugging: Depuración del Laberinto
@@ -399,15 +399,15 @@ es:
         C1_maze_loops: Bucles de Laberinto
         C1_playlab_storytelling: 'Laboratorio de Juego - Crear una Historia'
         C1_planting_seed: Plantando una Semilla
-        C1_building_foundation: Construyendo una base
+        C1_building_foundation: Construir una base
         C1_going_places_safely: Ir a Sitios Seguro
         C2_maze_intro: Introducción al Laberinto
         C2_artist_intro: Introducción al Artista
         C2_zuck_repeat_loop: Bucles de Laberinto
         C2_artist_loops: Ciclos del Artista
-        C2_artist_debugging: Debugging del Artista
-        C2_bee_loops: Bucles de Abeja
-        C2_bee_debugging: Depuración Abeja
+        C2_artist_debugging: Depuración del artista
+        C2_bee_loops: Bucles de abeja
+        C2_bee_debugging: Depuración abeja
         C2_bee_conditionals: Condiciones de la Abeja
         C2_playlab_createstory: 'Laboratorio de Juego - Crear una Historia'
         C2_graph_paper: Programación de hoja cuadriculada
@@ -415,16 +415,16 @@ es:
         C2_binary_bracelets: Pulseras Binarias
         C2_relay_programming: Programación bajo presión
         C2_paper_airplanes: Aviones de Papel
-        C2_digital_footprint: Tu huella Digital
-        C2_digital_footprint_v2: Tu huella Digital
-        C3_maze_level_4: Bucles de Laberinto
+        C2_digital_footprint: Tu huella dactilar
+        C2_digital_footprint_v2: Tu huella dactilar
+        C3_maze_level_4: Bucles del laberinto
         C3_artist_intro: Introducción al Artista
         C3_artist_functions: Funciones de artista
         C3_bee_functions: Funciones Abeja
         C3_bee_conditionals: Condiciones de la Abeja
         C3_maze_conditionals: Condicionales de Laberinto
         C3_artist_nested_loops: Bucles anidados
-        C3_farmer_while: Bucles While
+        C3_farmer_while: Bucles Mientras
         C3_bee_nested_loops: Bucles anidados
         C3_bee_debugging: Depuración Abeja
         C3_bounce: Rebotar
@@ -437,7 +437,7 @@ es:
         C3_songwriting_with_parameters: Composición Musical con Parámetros
         C4_intro: Introducción
         C4_loops_zombie: Bucles
-        C4_bee_conditional: Condiciones de la Abeja
+        C4_bee_conditional: Condiciones de la abeja
         C4_variables_artist: 'Variables - Artista'
         C4_variables_playlab: 'Variables - Laboratorio de juego'
         C4_for_loops: Bucles Para
@@ -452,18 +452,18 @@ es:
         C4_unplugged_madlibs: Bibliotecas locas
         C4_unplugged_variables: Variables en sobres
         C4_unplugged_forloops: Bucles Para
-        C4_unplugged_parameters: Composicion musical con Parámetros
+        C4_unplugged_parameters: Composicion musical con parámetros
         C4_unplugged_binary: Binario
-        frozen_intro: Introducción a La Hora del Código
+        frozen_intro: Prueba la Hora de Code
         frozen_loops: Introducción a los bucles
         frozen_functions: Introducción a las Funciones
         playlab_intro: Introducción al laboratorio de juegos
         playlab_events: Eventos del laboratorio de juegos
         playlab_repeat_forever: 'Laboratorio de juego: repetir para siempre'
         tutorial_puzzle_challenge: Tutorial Desafío de rompecabezas
-        infinity_playlab_intro: 'Jugar Lab - introducción'
-        infinity_playlab_events: 'Jugar Lab - eventos'
-        infinity_playlab_repeat_forever: 'Jugar Lab - repetir por siempre'
+        infinity_playlab_intro: 'Laboratorio de juegos - introducción'
+        infinity_playlab_events: 'Laboratorio de juegos - eventos'
+        infinity_playlab_repeat_forever: 'Laboratorio de juegos - repetir para siempre'
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: 'Introduction to Databases - Part 1'
         csp_applab_databases_2: 'Introduction to Databases - Part 2'
@@ -523,20 +523,20 @@ es:
         mc_intro: 'Minecraft - Introducción'
         mc_repeat: 'Minecraft - Repetir'
         mc_if_statements: 'Minecraft - Cláusulas condicionales'
-        mc_congrats_share: 'Minecraft - Enhorabuena'
-        mc_congrats_no_share: 'Minecraft - Enhorabuena'
-        gumball_intro: 'Hora del Código de Gumball - introducción'
-        gumball_events: 'Hora del Código de Gumball - Eventos'
-        gumball_repeat: 'Hora del Código de Gumball - instrucciones Repetir'
-        iceage_intro: 'Hora de código Era del Hielo - Introducción'
-        iceage_events: 'Hora de Código Era del Hielo - Eventos'
-        iceage_repeat: 'Hora de Código Era del Hielo - Repetir comando'
+        mc_congrats_share: 'Minecraft - Felicitaciones'
+        mc_congrats_no_share: 'Minecraft - Felicitaciones'
+        gumball_intro: 'Hora de Code de Gumball - introducción'
+        gumball_events: 'Hora de Code de Gumball - Eventos'
+        gumball_repeat: 'Hora de Code de Gumball - instrucciones Repetir'
+        iceage_intro: 'Hora de Code Era del Hielo - Introducción'
+        iceage_events: 'Hora de Code Era del Hielo - Eventos'
+        iceage_repeat: 'Hora de Code Era del Hielo - Repetir comando'
     callout:
       text:
         drag_blocks: 'Arrastra un bloque de "mover" y pégalo debajo del otro bloque'
         run: 'Haz clic en "Ejecutar" para probar tu programa'
-        watch_again: Haz clic aquí para ver el video otra vez
-        gray_block_explanation: 'Los bloques que están de color gris no se pueden eliminar.  ¿Puedes resolver el rompecabezas de todas formas?'
+        watch_again: Haz clic aquí para ver el vídeo otra vez
+        gray_block_explanation: Los bloques que están de color gris no se pueden eliminar. ¿Puedes resolver el rompecabezas de todas formas?
         show_code_explanation: Haz clic aquí para ver el código del programa que estas haciendo
         instructions_repeat_explanation: Las instrucciones para cada rompecabezas se repiten aquí
         category_explanation: Tienes todos los mismos bloques, pero ahora se han organizado en categorías
@@ -550,20 +550,20 @@ es:
         repeat_blocks: 'Usa el bloque de "Repetir" y ponlo alrededor de los bloques del espacio de trabajo'
         repeat_blocks_1: (1) Usa este bloque y ponlo alrededor de los bloques grises en el espacio de trabajo.
         repeat_blocks_2: '(2) Mueve el bloque "Repetir" aquí, y coloca los bloques grises dentro'
-        snowflake_dropdown: Usa este menú desplegable para crear diferentes copos de nieve!
+        snowflake_dropdown: ¡Usa este menú desplegable para crear diferentes copos de nieve!
         degrees_per_side: Divide 360 entre el número de lados para obtener el tamaño de cada ángulo en grados.
         set_sides: 'Usa este bloque para dar a "lados" el valor necesario para completar el rompecabezas.'
         set_length: 'Usa este bloque para fijar el valor correcto de "longitud".'
         which_equation: ¿Qué ecuación hace los lados más cortos para obtener formas con más lados?
         get_nectar: 'Usa el bloque nuevo "obtener néctar".'
         actions_category: '¡La caja de herramientas tiene un nuevo aspecto! Ahora están aquí los bloques de "Acciones".'
-        draw_square_hint: 'Sugerencia: Usa el bucle para hacer un cuadrado que creaste en el último puzzle.'
+        draw_square_hint: 'Sugerencia: Usa el bucle para hacer un cuadrado que creaste en el último rompecabezas.'
         edit_function: Haz clic aquí para editar tu función.
         create_function: 'Haz clic aquí para abrir el desplegable "Funciones", luego haz clic en el botón "Crear una función".'
-        house_hint: Está bien si la imagen no se ve como una casa todavía. Lo solucionaremos en el siguiente puzzle.
+        house_hint: Está bien si la imagen no se ve como una casa todavía. Lo solucionaremos en el siguiente rompecabezas.
         edit_draw_square: Usa este botón para editar la función y añadir el bucle.
         edit_get_nectar: Usa este botón para editar la función y cambiar la dirección hacia la que la abeja girará para obtener el néctar.
-        logic_category: 'Abre el desplegable "Lógica" para encontrar el bloque "si/sino".'
+        logic_category: 'Abre el desplegable "Lógica" para encontrar el bloque "si/si no".'
         length_parameter: '¿Puedes actualizar esta función para que utilice el parámetro "longitud"?'
         frozen_diamond_repeat: Utiliza el bloque repetir para crear esta figura.
         frozen_circle_function_in_circle_turn: No te olvides de girar después de crear cada círculo.
@@ -575,33 +575,33 @@ es:
         playlab_move_girl: 'Utiliza el bloque "mover a la derecha" para mover a la chica tenista'
         playlab_play_sound: 'Añade el bloque "reproducir sonido" aquí'
         playlab_arrow_keys: Recuerda que debes utilizar esto para mover a la bruja después de hacer clic en Ejecutar
-        playlab_add_move: 'Añade bloques "mover" dentro de este bloque  repetir'
+        playlab_add_move: 'Añade bloques "mover" dentro de este bloque repetir'
         playlab_add_score: Agrega bloques de puntuación aquí
         playlab_add_blocks: Añade tus bloques aquí
         set_variable: Arrastra un bloque número aquí para definir tu variable
         place_variable: Arrastra tu variable dentro de este bloque.
         bee_for_loop: Arrastra la mayor cantidad de néctar que quieres que la abeja recolecte aquí.
         place_counter_variable: Arrastre la variable contador dentro de este bloque
-        function_editor_draw_square: 'Esta es tu definición de función. Estos bloques se ejecutan cada vez que usas el bloque "dibujar un cuadrado"'
+        function_editor_draw_square: 'Ésta es tu definición de función. Estos bloques se ejecutan cada vez que usas el bloque "dibujar un cuadrado"'
         change_here: Haz tu cambio aquí.
-        write_draw_square_function: Arrasta bloques de la caja de herramientas aquí que dibujen un cuadrado.
+        write_draw_square_function: Arrastra bloques de la caja de herramientas aquí que dibujen un cuadrado.
         write_draw_triangle_function: Arrastra bloques desde la caja de herramientas aquí para que dibujen un triángulo
         edit_add_parameter: Haz clic en editar para agregar un parámetro en la función
-        add_and_drag_parameter: Escribe el nombre de su parámetro aquí, haga clic en agregar y luego arrastrarlo en la definición de la función
-        fill_in_actor: Rellene el ??? con números que corresponden a cada actor (1, 2 y 3)
-        repeat: Ponga bloques dentro del bucle para repetir comandos
-        if_bee_nectar: 'Utilice el bloque "si" para decidir si la abeja debe obtener el néctar'
-        if_else_bee: 'Use el bloque "si/sino" para que la abeja obtenga néctar de una flor, y haga miel si no es una flor'
+        add_and_drag_parameter: Escribe el nombre de su parámetro aquí, haz clic en agregar y luego arrastrarlo en la definición de la función
+        fill_in_actor: Rellena el ??? con números que corresponden a cada actor (1, 2 y 3)
+        repeat: Coloca bloques dentro del bucle para repetir comandos
+        if_bee_nectar: 'Utiliza el bloque "si" para decidir si la abeja debe obtener el néctar'
+        if_else_bee: 'Utiliza el bloque "si/si no" para que la abeja obtenga néctar de una flor, y haga miel si no es una flor'
         repeat_full_circle: Introduce el número de veces que el zombie tiene que moverse para hacer un círculo completo
-        place_length_variable: Arrastre aquí la variable longitud para reemplazar los signos de interrogación
-        arrows_move_actor: Usa las flechas para mover el actor
+        place_length_variable: Arrastra aquí la variable longitud para reemplazar los signos de interrogación
+        arrows_move_actor: Usa las flechas para mover al actor
         right_arrow_fireball: Use la flecha derecha para disparar bolas de fuego
-        name_function: Escriba el nombre de su función aquí
-        Infinity_move_right_runbutton: Añadir movimiento bloque aquí
-        Infinity_move_directions_callout: ¿Qué bloque hará Baymax subir cuando se presiona la flecha hacia arriba?
-        Infinity_move_directions_callout_arrow: Utilice las flechas para dirigir
+        name_function: Escribe el nombre de su función aquí
+        Infinity_move_right_runbutton: Añade aquí el movimiento del bloque
+        Infinity_move_directions_callout: ¿Qué bloque hará que Baymax suba cuando se pulsa la flecha hacia arriba?
+        Infinity_move_directions_callout_arrow: Utiliza las flechas para dirigir
         Infinity_move_collide_callout: Reproducir un sonido cuando se produce este evento.
-        Infinity_repeat_callout: Lugar para mover bloques dentro de aquí
+        Infinity_repeat_callout: Lugar para mover bloques aquí dentro
         craft_run_button_callout: 'Dale a "Ejecutar" para probar el programa.'
         craft_drag_block_callout: 'Arrastra un bloque "avanzar" y acóplalo bajo otro bloque.'
         craft_callout_preplaced: Hemos colocado algunos bloques para que empieces.

@@ -1,6 +1,6 @@
 var msg = require('../locale');
 
-var GameButtons = require('../templates/GameButtons');
+var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 
@@ -13,7 +13,7 @@ var CraftVisualizationColumn = function () {
           </div>
         </div>
       </ProtectedStatefulDiv>
-      <GameButtons hideRunButton={false}>
+      <GameButtons>
         <div id="right-button-cell">
           <button id="rightButton" className="share mc-share-button">
             <div>{msg.finish()}</div>

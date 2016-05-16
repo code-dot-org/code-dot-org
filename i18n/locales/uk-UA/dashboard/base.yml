@@ -25,7 +25,10 @@ uk:
   welcome_back: 'З поверненням, %{name}'
   submit: Надіслати
   unsubmit: Відкликати
+  previous_page: Previous page
   next_page: Next page
+  cancel: Скасувати
+  okay: Добре
   heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
@@ -451,6 +454,11 @@ uk:
     minecraft:
       title: Майнкрафт
       body: Дослідимо світ Майнкрафту через код.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Ці малюнки запрограмували учні!
     students_made_these_with_code: Це запрограмували учні!
@@ -494,6 +502,12 @@ uk:
     wrong_body: Дякуємо за надсилання відповіді.
     correct_title: Дякую
     correct_body: Дякуємо за надсилання відповіді.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Неправильне рішення
     wrong_body: 'Подане рішення не є правильним.  Будь ласка, спробуйте ще раз!'

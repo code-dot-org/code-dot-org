@@ -1,0 +1,54 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-26T16:03:53.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "console.log": null
+    },
+    "show_d_pad": "true",
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Assign the value of each expression to a variable and console.log that variable.",
+    "markdown_instructions": "# Do This\r\n\r\n* Use the `=` (assignment operator) to store the value of each expression in a variable\r\n* Use `console.log` to display each value\r\n* Repeat the pattern with some expressions of your own. What do you want to calculate?",
+    "start_blocks": "// Use the \"=\" operator to store the value of each\r\n// expression inside of a variable. Then use\r\n// console.log to display the value of the variable.\r\n// The first has been done for you.\r\n\r\nvar bigNumber = 200 * 100;\r\nconsole.log(bigNumber);\r\n\r\n// Use the same pattern as above with these expressions\r\n1 * 2 * 3 * 4 * 5 * 6 * 7 * 8 * 9 * 10;\r\n1 / 100000;\r\n\r\n// Now try adding some of your own!\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "true",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

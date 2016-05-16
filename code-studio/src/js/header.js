@@ -138,7 +138,8 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
           script_id: stageData.script_id,
           current_level_id: currentLevelId,
           user_id: clientState.queryParams('user_id'),
-          section_id: clientState.queryParams('section_id')
+          section_id: clientState.queryParams('section_id'),
+          puzzle_page: puzzlePage
         }, success: function (result) {
           $('.header_popup_body').html(result);
           if (trophiesClicked) {
@@ -183,7 +184,10 @@ function shareProject() {
       abuseContact: i18n.t('project.abuse.contact_us'),
       channelId: dashboard.project.getCurrentId(),
       appType: dashboard.project.getStandaloneApp(),
-      onClickPopup: popupWindow
+      onClickPopup: popupWindow,
+      // TODO: Can I not proliferate the use of global references to Applab somehow?
+      onClickExport: window.Applab && window.Applab.canExportApp() ?
+        window.Applab.exportApp : null,
     });
     ReactDOM.render(dialog, dialogDom);
   });

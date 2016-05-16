@@ -1,9 +1,17 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 require_relative '../../../deployment'
-require 'cdo/hip_chat'
+
+ROOT = File.expand_path('../../../..', __FILE__)
+
+# Set up gems listed in the Gemfile.
+ENV['BUNDLE_GEMFILE'] ||= "#{ROOT}//Gemfile"
+require 'bundler'
+require 'bundler/setup'
+
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
+require 'cdo/hip_chat'
 
 require 'json'
 require 'yaml'
@@ -11,6 +19,9 @@ require 'optparse'
 require 'ostruct'
 require 'colorize'
 require 'open3'
+require 'parallel'
+
+require 'active_support/core_ext/object/blank'
 
 ENV['BUILD'] = `git rev-parse --short HEAD`
 
@@ -93,6 +104,9 @@ opt_parser = OptionParser.new do |opts|
   end
   opts.on("-n", "--parallel ParallelLimit", String, "Maximum number of browsers to run in parallel (default is 1)") do |p|
     $options.parallel_limit = p.to_i
+  end
+  opts.on("--db", String, "Run scripts requiring DB access regardless of environment (otherwise restricted to development/test).") do
+    $options.force_db_access = true
   end
   opts.on("-V", "--verbose", "Verbose") do
     $options.verbose = true
@@ -179,15 +193,13 @@ def format_duration(total_seconds)
   "%.1d:%.2d minutes" % [minutes, seconds]
 end
 
-# Kind of hacky way to determine if we have access to the database
-# (for example, to create users) on the domain/environment that we are
-# testing.
-require File.expand_path('../../../config/environment.rb', __FILE__)
-
-if Rails.env.development?
+if $options.force_db_access
+  $options.pegasus_db_access = true
+  $options.dashboard_db_access = true
+elsif rack_env?(:development)
   $options.pegasus_db_access = true if $options.pegasus_domain =~ /(localhost|ngrok)/
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /(localhost|ngrok)/
-elsif Rails.env.test?
+elsif rack_env?(:test)
   $options.pegasus_db_access = true if $options.pegasus_domain =~ /test/
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /test/
 end
@@ -195,15 +207,22 @@ end
 features = $options.feature || Dir.glob('features/**/*.feature')
 browser_features = $browsers.product features
 
+git_branch = `git rev-parse --abbrev-ref HEAD`.strip
+ENV['BATCH_NAME'] =  "#{git_branch} | #{Time.now}"
+
 test_type = $options.run_eyes_tests ? 'eyes tests' : 'UI tests'
 HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} in #{$options.parallel_limit} threads</b>..."
+if test_type == 'eyes tests'
+  HipChat.log "Batching eyes tests as #{ENV['BATCH_NAME']}"
+  print "Batching eyes tests as #{ENV['BATCH_NAME']}"
+end
 
 Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
   feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
   browser_name = browser['name'] || 'UnknownBrowser'
   test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
 
-  if $options.pegasus_domain =~ /test/ && !Rails.env.development? && RakeUtils.git_updates_available?
+  if $options.pegasus_domain =~ /test/ && rack_env?(:development) && RakeUtils.git_updates_available?
     message = "Killing <b>dashboard</b> UI tests (changes detected)"
     HipChat.log message, color: 'yellow'
     raise Parallel::Kill
@@ -295,10 +314,10 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
       flakiness = TestFlakiness.test_flakiness[test_run_string]
       if !flakiness
         $lock.synchronize { puts "No flakiness data for #{test_run_string}".green }
-        return 0
+        return 1
       elsif flakiness == 0.0
         $lock.synchronize { puts "#{test_run_string} is not flaky".green }
-        return 0
+        return 1
       else
         flakiness_message = "#{test_run_string} is #{flakiness} flaky. "
         max_reruns = [(1 / Math.log(flakiness, 0.05)).ceil - 1, # reruns = runs - 1
@@ -389,7 +408,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
 
     message += "<br/><i>rerun: bundle exec ./runner.rb -c #{browser_name} -f #{feature} #{'--eyes' if $options.run_eyes_tests} --html</i>"
     HipChat.log message, color: 'red'
-    HipChat.developers short_message, color: 'red' if Rails.env.test?
+    HipChat.developers short_message, color: 'red' if rack_env?(:test)
   end
   result_string =
     if scenario_count == 0

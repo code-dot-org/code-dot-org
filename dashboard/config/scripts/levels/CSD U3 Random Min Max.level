@@ -13,7 +13,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "// Use randomNumber() to randomly return\r\n// a number in a range you define",
+    "start_blocks": "// Use randomNumber() to randomly generate\r\n// a number in a range you define\r\n// and print it out with console.log()",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -36,9 +36,10 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "markdown_instructions": "# Changing the minimum\r\n\r\nSo far we've only generated numbers from 0 up to a value we set, but what if we wanted a different minimum? For example, if we want to use `randomNumber()` to create circles that have a radius somewhere between 50 and 100 pixels, how mught we do it?\r\n\r\nIf you check out the toolbox you'll notice that the `randomNumber()` function now takes two arguments. The second argument is **optional** - meaning that if you only call `randomNumber()` with one number it will give you a random integer from 0 to that number, but if you call it with two numbers you'll get a random integer from the first to the second.\r\n\r\n# Do This\r\n\r\nUsing `console.log()` write a program that randomly returns a number in a range you define.\r\n\r\nCan you make it return negative numbers? What about both positive and negative ones?",
+    "markdown_instructions": "# Changing the minimum\r\n\r\nSo far we've only generated numbers from 0 up to some other value, but what if we wanted a different minimum? For example, if we want to use `randomNumber()` to create circles that have a radius somewhere between 50 and 100 pixels, how mught we do it?\r\n\r\nThe first input (also callend an **argument**) of the `randomNumber()` block defines the lowest number that will be randomly generated. In the previous levels we always used 0, but you could use any integer as the lower bound (even negative numbers!)\r\n\r\n# Do This\r\n\r\nUsing `console.log()` write a program that randomly returns a number in a range you define. Try coming up with an interesting range of numbers for your program, for example:\r\n* Randomly generate a month number\r\n* Ranodmly generate a temperature below boiling but above freezing\r\n* Randomly generate a year you were alive in\r\n\r\nCan you come up with a range that includes negative numbers? What about both positive and negative ones?",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Find the randomNumber() block here\",\r\n  \"element_id\": \".droplet-palette-header .orange\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "instructions": "Using console.log() write a program that randomly returns a number in a range you define."
+    "instructions": "Using console.log() write a program that randomly returns a number in a range you define.",
+    "show_d_pad": "false"
   },
   "published": true,
   "notes": "",

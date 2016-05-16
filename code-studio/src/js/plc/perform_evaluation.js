@@ -1,15 +1,19 @@
 /* global dashboard */
 
 $(window).load(function () {
-  $('#submitEvaluation').click(function () {
-    var evaluationResponses = [];
+  $('#submit_evaluation').click(function () {
+    var evaluationResponses = {};
 
     $('input:checked').each(function () {
-      if (this.value) {
-        evaluationResponses.push(this.value);
+      if (this.hasAttribute('value')) {
+        if (evaluationResponses[this.value]) {
+          evaluationResponses[this.value] += this.getAttribute('weight');
+        } else {
+          evaluationResponses[this.value] = this.getAttribute('weight');
+        }
       }
     });
 
-    $('#answerModuleList').val(evaluationResponses);
+    $('#answer_module_list').val(JSON.stringify(evaluationResponses));
   });
 });

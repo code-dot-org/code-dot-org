@@ -273,6 +273,7 @@ $dpad-red: #F78183;
 
 #studio-dpad-button {
   display: inline;
+  position: relative;
   border-radius: 21px;
   margin: 5px;
   &.active {
@@ -280,20 +281,16 @@ $dpad-red: #F78183;
     border: 1px solid $dpad-red;
   }
   &.left {
-    margin-left: 0;
-    margin-right: 10px;
+    left: -5px;
   }
   &.right {
-    margin-left: 10px;
-    margin-right: 0;
+    left: 5px;
   }
   &.up {
-    margin-top: 0;
-    margin-bottom: 10px;
+    top: -5px;
   }
   &.down {
-    margin-top: 10px;
-    margin-bottom: 0;
+    top: 5px;
   }
 }
 
@@ -446,10 +443,6 @@ html[dir='rtl'] div#visualizationResizeBar {
 
 /* Shrink the visualization area on small displays. */
 
-#visualizationEditor.responsive {
-  margin-left: 400px;
-  padding-left: 15px;
-}
 #visualization.responsive > * {
   -webkit-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
@@ -497,9 +490,6 @@ html[dir='rtl'] div#visualizationResizeBar {
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
-  }
-  #visualizationEditor.responsive {
-    margin-left: $width;
   }
   #visualization.responsive > * {
     -webkit-transform: scale($scale);
@@ -614,8 +604,6 @@ button.blocklyLaunch {
   &#resetButton {
     border: 1px solid $cyan;
     background-color: $cyan;
-  }
-  &#runButton div {
   }
 }
 button.share {
@@ -1014,10 +1002,6 @@ $aniGifPreviewHeight: 60px;
   }
 }
 
-.workspace-header-height {
-  height: $workspace-headers-height;
-}
-
 .workspace-header {
   text-align: center;
   white-space: nowrap;
@@ -1062,15 +1046,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     padding-right: 8px;
     font-size: 15px;
   }
-  .fa-code {
-    font-weight: bold;
-  }
-  .blocks-glyph {
-    display: none;
-    height: 18px;
-    vertical-align: text-bottom;
-    padding-right: 8px;
-  }
 }
 
 #versions-header {
@@ -1096,14 +1071,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 }
 
 #headers, .purple-header {
-  height: $workspace-headers-height;
-  background-color: $purple;
-  overflow-y: hidden;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
   #show-toolbox-icon, #hide-toolbox-icon {
     position: absolute;
     top: 0;
@@ -1148,11 +1115,13 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   #clear-puzzle-header:hover {
     background-color: $red;
   }
-  .block-counter-default {
-    color: white;
-  }
   .block-counter-overflow {
     color: $yellow;
+  }
+  &.is-running {
+    .block-counter-overflow {
+      color: $dark_orange;
+    }
   }
 }
 
@@ -1236,14 +1205,24 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
-.show-code {
-  summary {
-    color: $charcoal;
-    font-family: $gotham-bold;
+.modal-content {
+  .show-code {
+    summary {
+      color: $charcoal;
+      font-family: $gotham-bold;
+    }
+
+    .generated-code-container {
+      margin: 25px 10px 25px -80px;
+    }
   }
 
-  .generated-code-container {
-    margin: 25px 10px 25px -80px;
+  &.no-modal-icon {
+    .show-code {
+      .generated-code-container {
+        margin-left: 0px;
+      }
+    }
   }
 }
 
@@ -1475,6 +1454,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
+// icon26 run26 and reset26 are currently only used by blockly-core
 // Includes an icon at position x, y (starting from top-left)
 @mixin icon26($x, $y) {
   $x-offset: $x * 26px;
@@ -1485,7 +1465,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 }
 
 .run26 {
-  @include icon26(0, 0);
+   @include icon26(0, 0);
 }
 
 .reset26 {
@@ -1613,6 +1593,7 @@ a.WireframeSendToPhone_send-to-phone-link {
 
 #visualizationColumn.wireframeShare {
   background: url("#{$common_root}phone_wireframe.png") center center no-repeat;
+  background-size: 432px 757px;
 }
 
 .legacy-share-view {
@@ -1627,7 +1608,6 @@ a.WireframeSendToPhone_send-to-phone-link {
       #visualizationContainer {
         display: inline-block;
         #visualization {
-          height: auto;
           overflow: hidden;
         }
       }
@@ -1635,20 +1615,20 @@ a.WireframeSendToPhone_send-to-phone-link {
   }
 
   #visualizationColumn.wireframeShare {
-    width: 352px !important;
-    height: 612px !important;
+    width: 432px !important;
+    height: 757px !important;
     margin: 0 auto;
     padding: 20px 0;
     overflow: hidden;
 
     #phoneFrameScreen {
       position: relative;
-      top: 68px;
+      top: 78px;
       left: 16px;
       border: solid thin #202b34;
       background-color: #202b34;
-      width: 320px;
-      height: 480px;
+      width: 400px;
+      height: 600px;
     }
   }
 

@@ -824,13 +824,12 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'track_proficiency adds proficiency if necessary and no hint used' do
-    script = create :script
     level_concept_difficulty = create :level_concept_difficulty
     # Defaults with repeat_loops_{d1,d2,d3,d4,d5}_count = {0,2,0,3,0}.
     user_proficiency = create :user_proficiency
 
     User.track_proficiency(
-      user_proficiency.user_id, script.id, level_concept_difficulty.level_id)
+      user_proficiency.user_id, nil, level_concept_difficulty.level_id)
 
     user_proficiency = UserProficiency.
       where(user_id: user_proficiency.user_id).
@@ -844,12 +843,10 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'track_proficiency creates proficiency if necessary and no hint used' do
-    script = create :script
     level_concept_difficulty = create :level_concept_difficulty
     student = create :student
 
-    User.track_proficiency(
-      student.id, script.id, level_concept_difficulty.level_id)
+    User.track_proficiency(student.id, nil, level_concept_difficulty.level_id)
 
     user_proficiency = UserProficiency.where(user_id: student.id).first
     assert !user_proficiency.nil?
@@ -860,13 +857,70 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 0, user_proficiency.repeat_loops_d5_count
   end
 
+  test 'track_proficiency does not update basic_proficiency_at if already proficient' do
+    TIME = '2015-01-02 03:45:43 UTC'
+    level = create :level
+    student = create :student
+    level_concept_difficulty = LevelConceptDifficulty.
+      create(level: level, events: 5)
+    UserProficiency.create(
+      user_id: student.id, sequencing_d3_count: 6, repeat_loops_d4_count: 7,
+      events_d5_count: 8, basic_proficiency_at: TIME)
+
+    User.track_proficiency(student.id, nil, level_concept_difficulty.level_id)
+
+    user_proficiency = UserProficiency.where(user_id: student.id).first
+    assert !user_proficiency.nil?
+    assert_equal TIME, user_proficiency.basic_proficiency_at.to_s
+  end
+
+  test 'track_proficiency updates if newly proficient' do
+    level = create :level
+    level_concept_difficulty = LevelConceptDifficulty.
+      create(level_id: level.id, events: 5)
+    student = create :student
+    UserProficiency.create(
+      user_id: student.id, sequencing_d3_count: 3, repeat_loops_d3_count: 3,
+      events_d3_count: 2)
+
+    User.track_proficiency(student.id, nil, level_concept_difficulty.level_id)
+
+    user_proficiency = UserProficiency.where(user_id: student.id).first
+    assert !user_proficiency.nil?
+    assert !user_proficiency.basic_proficiency_at.nil?
+  end
+
+  test 'track_proficiency does not update basic_proficiency_at if not proficient' do
+    level_concept_difficulty = create :level_concept_difficulty
+    user_proficiency = create :user_proficiency
+
+    User.track_proficiency(
+      user_proficiency.user_id, nil, level_concept_difficulty.level_id)
+
+    user_proficiency = UserProficiency.
+      where(user_id: user_proficiency.user_id).
+      first
+    assert !user_proficiency.nil?
+    assert user_proficiency.basic_proficiency_at.nil?
+  end
+
+  def track_progress(student, script_level, result)
+    User.track_level_progress_sync(
+      user_id: student.id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id,
+      new_result: result,
+      submitted: false,
+      level_source_id: nil
+    )
+  end
+
   test 'track_level_progress_sync calls track_proficiency if new perfect score' do
     script_level = create :script_level
     student = create :student
 
     User.expects(:track_proficiency).once
-
-    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, false)
+    track_progress(student, script_level, 100)
   end
 
   test 'track_level_progress_sync does not call track_proficiency if old perfect score' do
@@ -875,8 +929,7 @@ class UserTest < ActiveSupport::TestCase
     create :user_level, user_id: student.id, script_id: script_level.script_id, level_id: script_level.level_id, best_result: 100
 
     User.expects(:track_proficiency).never
-
-    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, false)
+    track_progress(student, script_level, 100)
   end
 
   test 'track_level_progress_sync does not call track_proficiency if new passing score' do
@@ -884,8 +937,7 @@ class UserTest < ActiveSupport::TestCase
     student = create :student
 
     User.expects(:track_proficiency).never
-
-    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 25, false)
+    track_progress(student, script_level, 25)
   end
 
   test 'track_level_progress_sync does not call track_proficiency if hint used' do
@@ -895,8 +947,17 @@ class UserTest < ActiveSupport::TestCase
       level_id: script_level.level_id, script_id: script_level.script_id
 
     User.expects(:track_proficiency).never
+    track_progress(student, script_level, 100)
+  end
 
-    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, false)
+  test 'track_level_progress_sync does not call track_proficiency if authored hint used' do
+    script_level = create :script_level
+    student = create :student
+    AuthoredHintViewRequest.create(user_id: student.id,
+      level_id: script_level.level_id, script_id: script_level.script_id)
+
+    User.expects(:track_proficiency).never
+    track_progress(student, script_level, 100)
   end
 
   test 'normalize_gender' do
@@ -1030,6 +1091,33 @@ class UserTest < ActiveSupport::TestCase
 
     assert_equal [teacher], student.teachers
     assert_equal [], student.students
+  end
+
+  test 'student_of_admin?' do
+    teacher = create :teacher
+    section1 = create :section, user_id: teacher.id
+
+    admin_teacher = create :admin_teacher
+    section2 = create :section, user_id: admin_teacher.id
+
+    student_of_none = create :student
+
+    student_of_normal_teacher = create :student
+    create :follower, section: section1, student_user: student_of_normal_teacher
+
+    student_of_admin_teacher = create :student
+    create :follower, section: section2, student_user: student_of_admin_teacher
+
+    student_of_both_teachers = create :student
+    create :follower, section: section1, student_user: student_of_both_teachers
+    create :follower, section: section2, student_user: student_of_both_teachers
+
+    assert !teacher.student_of_admin?
+    assert !admin_teacher.student_of_admin?
+    assert !student_of_none.student_of_admin?
+    assert !student_of_normal_teacher.student_of_admin?
+    assert student_of_admin_teacher.student_of_admin?
+    assert student_of_both_teachers.student_of_admin?
   end
 
   test "authorized teacher" do

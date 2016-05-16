@@ -334,7 +334,7 @@
   "playSoundAlert3": "alarm 3 sesi çıkar",
   "playSoundAlert4": "alarm 4 sesi çıkar",
   "playSoundApplause": "alkış sesi çıkar",
-  "playSoundRandom": "rasgele ses çal",
+  "playSoundRandom": "rastgele ses çal",
   "positionOutTopLeft": "yukarıdaki sol üst konuma",
   "positionOutTopRight": "yukarıdaki sağ üst konuma",
   "positionTopOutLeft": "sol üst dış konuma",
@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "Sen 20 Fare Droids almak gerekir. İki veya daha fazla Fare Droids tek olsun her zaman eklemek için \"Fare Droid olsun\" olayı içinde \"bir fare Droid ekle\" komutunu kullanın.\n",
   "failedMultiplyCharactersTimeoutGotSome": "Tebrikler, fare Droids yapmak için kod eklendi. Bir sonraki bulmaca gitmek ya da 20 Fare Droids almak için tekrar deneyebilirsiniz. Onları daha ekleyerek kolaylaştırıyoruz deneyin! (Basın ve hızlı hareket etmek için klavye (veya ekran) tuşları basılı tutun.)",
   "failedChangeSettingTimeout": "Taşımak için üç Rebel Pilotlar alın.",
-  "failedChangeSettingSettings": "Bunu kendi oyunun haline getir. Bu bulmacayı geçmek için droidini değiştirmen ve onun süresini düzenlemen lazım."
+  "failedChangeSettingSettings": "Bunu kendi oyunun haline getir. Bu bulmacayı geçmek için droidini değiştirmen ve onun süresini düzenlemen lazım.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }

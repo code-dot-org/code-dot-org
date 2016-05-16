@@ -6,6 +6,7 @@ describe('AnimationTab', function () {
   describe('reducer', function () {
     var reducer = animationTabModule.default;
     var initialState = {
+      columnSizes: [150, 250, undefined],
       selectedAnimation: ''
     };
 
@@ -14,7 +15,7 @@ describe('AnimationTab', function () {
     });
 
     it('returns original state on unhandled action', function () {
-      var state = { selectedAnimation: 'whatever' };
+      var state = { columnSizes: [], selectedAnimation: 'whatever' };
       expect(reducer(state, {})).to.equal(state);
     });
 
@@ -24,13 +25,11 @@ describe('AnimationTab', function () {
       it('changes selected animation in state', function () {
         var newState = reducer(initialState, selectAnimation('animationKey'));
         expect(newState).not.to.equal(initialState);
-        expect(newState).to.deep.equal({
-          selectedAnimation: 'animationKey'
-        });
+        expect(newState).to.have.deep.property('selectedAnimation', 'animationKey');
       });
 
       it('does not change state if animation already selected', function () {
-        var state = { selectedAnimation: 'anotherKey' };
+        var state = { columnSizes: [], selectedAnimation: 'anotherKey' };
         var newState = reducer(state, selectAnimation('anotherKey'));
         expect(newState).to.equal(state);
       });
@@ -46,9 +45,7 @@ describe('AnimationTab', function () {
         };
         var newState = reducer(initialState, action);
         expect(newState).not.to.equal(initialState);
-        expect(newState).to.deep.equal({
-          selectedAnimation: 'new_animation_key'
-        });
+        expect(newState).to.have.deep.property('selectedAnimation', 'new_animation_key');
       });
     });
   });

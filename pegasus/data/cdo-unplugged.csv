@@ -3,12 +3,13 @@ happyMaps,Algorithms,Happy Maps,4+,https://studio.code.org/s/course1/stage/1/puz
 - Arrange directions to reach predetermined goal
 - Predict where character will land, given a list of steps","At the root of all computer science is something called an algorithm. The word “algorithm” may sound like something complicated, but really it’s just a list of instructions that someone can follow to achieve a result.
 
-","<ul><li><a href=""http://www.bbc.co.uk/guides/z3whpv4"">What is an algorithm?</a></li>
-<li><a href=""http://www.tynker.com/blog/articles/ideas-and-tips/how-to-explain-algorithms-to-kids"">How to explain algorithms to kids</a></li></ul>",https:,studio.code.org,s,course1,stage,1,puzzle,1
+","<ul><li><a href=""http://www.bbc.co.uk/guides/z3whpv4"" target=""_new"">What is an algorithm?</a></li>
+<li><a href=""http://www.tynker.com/blog/articles/ideas-and-tips/how-to-explain-algorithms-to-kids"" target=""_new"">How to explain algorithms to kids</a></li></ul>",https:,studio.code.org,s,course1,stage,1,puzzle,1
 moveIt,Algorithms,"Move It, Move It",6+,https://studio.code.org/s/course1/stage/2/puzzle/1,https://code.org/curriculum/course1/2/Teacher,https://youtu.be/VGi2bnRFqzM,https://www.youtube.com/watch?v=aV4rqNUG-Jw,,"- Recognize situations where they can create programs to complete tasks
 - Predict moves necessary to get teammate from start to finish
 - Convert movements into symbolic instructions
-- Relate algorithms as programs to teammates","This lesson will help students realize that in order to give clear instructions, they need a common language. Students will practice controlling one another using a simple combination of hand gestures.",,https:,studio.code.org,s,course1,stage,2,puzzle,1
+- Relate algorithms as programs to teammates","This lesson will help students realize that in order to give clear instructions, they need a common language. Students will practice controlling one another using a simple combination of hand gestures.","<ul><li><a href=""https://csedweek.org/unplugged/thinkersmith"" target=""_new"">My Robotic Friends</a></li>
+<li><a href=""https://www.kodable.com/hour-of-code/lessons/kindergarten-hour-of-code"" target=""_new"">Fuzz Family Frenzy</a></li></ul>",https:,studio.code.org,s,course1,stage,2,puzzle,1
 plantSeed,Algorithms,Real Life Algorithms: Plant a Seed,6+,https://studio.code.org/s/course1/stage/6/puzzle/1,https://code.org/curriculum/course1/6/Teacher,https://youtu.be/FHsuEh1kJ18,https://www.youtube.com/watch?v=icVRxFr39AU,,"- Name various activities that make up their day
 - Decompose large activities into a series of smaller events
 - Arrange sequential events into their logical order","In this lesson, students will relate the concept of algorithms back to everyday real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.",,https:,studio.code.org,s,course1,stage,6,puzzle,1

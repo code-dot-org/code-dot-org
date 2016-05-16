@@ -21,6 +21,6 @@
             = link_to("(#{t 'crud.edit'})", edit_script_path(script))
             = link_to(data_t_suffix('script.name', script.name, 'title'), script_level_path(script, ScriptLevel::NEXT))
     %li= link_to t('builder.manage'), new_level_path
-    %li= link_to 'Admin Stats', admin_stats_path
+    %li= link_to 'Admin Page Directory', admin_directory_path
     %li= link_to 'Search for Teachers', search_for_teachers_path
     %li= link_to 'Gallery', gallery_activities_path

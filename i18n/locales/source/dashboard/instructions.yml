@@ -729,7 +729,7 @@ en:
         you write a program that removes each of them until the ground is even?"
       4-5 While Loops 8_instruction: " There is a really deep hole and a really large
         pile of dirt.  How many shovelfuls of dirt need to be moved around to make
-        the ground flat?  Hint: Use the while loop for both."
+        the ground flat?"
       4-5 While Loops Assessment 1_instruction: "There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat."
       AlgPD DR Free Play_instruction: "Create a function based on your own word problem."
@@ -1168,7 +1168,7 @@ en:
       Course 4 Artist Binary 2_instruction: "Which of these binary strings could
         you loop 8 times to draw this image?"
       Course 4 Artist Binary 3_instruction: "Can you draw this pattern by looping
-        a three digit binary string?"
+        just three binary digits (0s and 1s)?"
       Course 4 Artist Binary 4_instruction: "Each binary string represents one row
         of this picture. Can you rearrange them so it draws a smiley face instead
         of a frowny face?"
@@ -1485,9 +1485,9 @@ en:
       Course 4 Bee Loops 5a NEW_instruction: "Now, use loops to help the bee collect
         all the nectar on it's way to the honeycomb with as few blocks as possible.  When
         you get there, don't forget to make honey!"
-      Course 4 Bee Params 1_instruction: "Use the function \"get 3 nectar\" which
-        turns, moves to collect the nectar, and then returns to the original location.
-        Write a sequence to collect all of the nectar using \"get 3 nectar.\""
+      Course 4 Bee Params 1_instruction: "Write a sequence to collect all of the
+        nectar using `get 3 nectar` which turns, moves to collect the nectar, and
+        then returns to the original location."
       Course 4 Bee Params 2_instruction: "Modify the \"get 3 nectar\" function so
         it makes me turn right instead of left to the flowers."
       Course 4 Bee Params 3 (copy 1)_instruction: "Now there are flowers on both
@@ -1562,12 +1562,10 @@ en:
         get the bottom right-hand corner."
       Course 4 EC 1a_instruction: "No rules. No clues. Just the challenge!"
       Course 4 EC 1b_instruction: "No rules. No clues. Just the challenge!"
-      Course 4 EC 2a_instruction: "**Extreme Challenge:**  No rules. No clues. Just
-        the challenge!"
-      Course 4 EC 2b_instruction: "**Extreme Challenge:**  No rules. No clues. Just
-        the challenge!"
-      Course 4 EC 2c_instruction: "**Extreme Challenge:**  No rules. No clues. Just
-        the challenge!"
+      Course 4 EC 2a_instruction: "No rules. No clues. Just the challenge!"
+      Course 4 EC 2b_instruction: "No rules. No clues. Just the challenge!"
+      Course 4 EC 2c_instruction: "No rules. No clues. Just the challenge!"
+      Course 4 EC 2d_instruction: "No rules. No clues. Just the challenge!"
       Course 4 EC 3_instruction: "Use what you learned in the previous level to draw
         an image like this. Note: The code becomes more simple if you incorporate
         parameters. "
@@ -1584,27 +1582,27 @@ en:
         of blocks possible?"
       Course 4 Play Lab For Loops 2_instruction: "This time, let's try counting
         the odd numbers from 1 to 100."
-      Course 4 Play Lab Params 1_instruction: "Here's a function called \"jump\"
-        that causes your main character to jump up 100 pixels. Use the jump function
-        to collect all of the flags."
+      Course 4 Play Lab Params 1_instruction: "Here's a function called `jump` that
+        causes your main character to jump up 100 pixels. Run the program and use
+        the jump function to collect all of the flags by moving the dog with the arrow
+        keys."
       Course 4 Play Lab Params 10_instruction: "We've added one last function for
         you. \r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"
         function only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor
-        example: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level
-        4 to move to the next puzzle. "
+        example: \"player_score\" > 6\r\n\r\nPlay the game, and make it to level 3
+        to move to the next puzzle. "
       Course 4 Play Lab Params 2_instruction: "Now we've got flags that are too
         high for our current jump! Let's use both the \"up\" and \"down\" arrows
         so that we can have multiple jump heights.  \r\n\r\nWe need to add a parameter
         to our jump function called \"height\".  The up arrow should cause the dog
         to jump 200 pixels and the down arrow should make it jump only 100 pixels.
-        \r\n\r\nHint: You will need to click \"edit\" on the jump function and update
-        it so that it uses the \"height\" parameter."
+        "
       Course 4 Play Lab Params 3_instruction: "We have added another parameter to
         the jump function so that we can use it with other actors. Each actor is represented
         by a number, starting from one. Edit the \"jump\" function so that it uses
         the \"actor\" parameter to make the correct character jump. "
-      Course 4 Play Lab Params 4_instruction: "Here's a function called \"patrol.\"
-        Edit it to move Cat up 400 pixels and then down 400 pixels."
+      Course 4 Play Lab Params 4_instruction: "Here's a function called `patrol`.
+        \r\n\r\nEdit `patrol` to move Cat up 400 pixels and then down 400 pixels."
       Course 4 Play Lab Params 5_instruction: "Edit the the \"patrol\" function to
         add an \"actor\" parameter, so that we can call it for each of the actors
         on the screen. Remember, the actors correspond to numbers 1, 2, and 3."
@@ -1613,15 +1611,16 @@ en:
         parameter to help Penguin get both flags before the other sprites even get
         one."
       Course 4 Play Lab Params 7_instruction: "Let's have some fun! Look at the
-        code provided to see if you can figure out what each block does.  \r\n\r\nWhen
-        you're done, use the arrow keys to control Dog and collect all of the flags."
-      Course 4 Play Lab Params 8_instruction: "Use a \"when actor touches\" block
+        code provided to see if you can figure out what each block does.  \r\nWhen
+        you're done, use the arrow keys to control Dog and collect all of the flags.\r\nNOTE:
+        You don't need to make any changes to the program"
+      Course 4 Play Lab Params 8_instruction: "Use the `when actor touches` block
         to send Dog back to the top-left ONLY if Dog touches any of the other actors."
       Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,
-        but most of the code is hidden. There’s a new function \"score_points.\"\r\n\r\nEdit
-        the function so that a \"points\" parameter is added to the \"player_score\"
-        variable. \r\n\r\nThe variable \"player_score\" should increase each time
-        Dog tags Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote:
+        but most of the code is hidden. There’s a new function `score_points.`\r\n\r\nEdit
+        the function so that a new parameter called `points` can be added to `player_score`.
+        \r\n\r\nThe variable `player_score` should increase each time Dog tags Cat
+        with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote:
         When you're done, click \"Run\" to play.  When Dog scores 6 points, you will
         move on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: "This time you don't have to write any
@@ -1802,12 +1801,16 @@ en:
       CSD U3 Frame Rate_instruction: "Slow down Gamelab Gary's animation with frameRate()"
       CSD U3 Random Animation_instruction: "Use randomNumber() to animate Gary's
         mouth."
+      CSD U3 Random Choice_instruction: "Use the randomNumber() block to generate
+        either 0 or 1"
       CSD U3 Random Color_instruction: "Could you use randomNumber() to pick random
         colors as well? Try setting one or more of the channels in the rgb block with
         a random number. What should the maximum value be?"
       CSD U3 Random Intro_instruction: "What do you think this code will do when
         it is run? Make a prediction, then run this code 5 - 10 times, recording the
         output each time. Share your results with your neighbor."
+      CSD U3 Random Min Max_instruction: "Using console.log() write a program that
+        randomly returns a number in a range you define."
       CSD U3 Random Width Height_instruction: "Pick a shape function and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
         run it a few times so you can see the effect of randomization."
@@ -1818,6 +1821,7 @@ en:
       CSD U3 Simple Drawing - Background_instruction: "Put all of your code into
         a draw() loop and then add set the background to blue with the background()
         block."
+      CSD U3 Simple Drawing - Personal Animation_instruction: "DO This"
       CSD U3 Variable Arithmetic pt2_instruction: "Predict: What two numbers will
         be displayed in the console?"
       CSD U3 Variable Arithmetic_instruction: "Change the value \"size\" initialized
@@ -1826,22 +1830,35 @@ en:
         will be displayed in the console?"
       CSD U3 Variable Incrementation_instruction: "Predict: What two numbers will
         be displayed in the console?"
+      CSD U3 Variables CHALLENGE gamelab gary_instruction: "Use variables to animate
+        Game Lab Gary"
+      CSD U3 Variables draw loop newVars_instruction: "Extend this project to create
+        your own random art visualization with variables."
+      CSD U3 Variables draw loop rgb_instruction: "Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn."
+      CSD U3 Variables draw loop xy_instruction: "Assign the variables x1 and y1
+        random values inside the draw loop and use them to control where the square
+        is drawn."
       CSD U3 Variables Initialize_instruction: "Predict: What will get displayed
         in the console?"
-      CSD U3 Variables Intro_instruction: "Create your own variable, give it a value,
-        and display that value in the console."
+      CSD U3 Variables Intro_instruction: "Create your own variable "
+      CSD U3 Variables random drawing exemplar_instruction: "Check out this example
+        randomized drawing."
       CSD U3 Variables Random_instruction: "Predict: What will get displayed in the
         console?"
-      CSD U3 Variables Reassign pt2_instruction: "Predict: What will get displayed
-        in the console?"
+      CSD U3 Variables Reassign pt2_instruction: "Create and assign a new variable
+        in a single line."
       CSD U3 Variables Reassign_instruction: "Predict: What will get displayed in
         the console?"
-      CSD U3 Variables Square Random Loop_instruction: "Change the value \"size\"
-        initialized to make a larger square."
+      CSD U3 Variables Square Random Loop_instruction: "Test your predictions from
+        the last level."
       CSD U3 Variables Square Random_instruction: "Change the value \"size\" initialized
         to make a larger square."
       CSD U3 Variables Square_instruction: "Change the value \"size\" initialized
         to make a larger square."
+      CSD U3 Variables use value rect_instruction: "Predict: What will get displayed
+        in the console?"
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one
         thing you can count multiple things\r\n\r\nFind out how many people like something
         other than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo
@@ -2846,6 +2863,8 @@ en:
         First, draw a square."
       Ryan Doily Step 2_instruction: "Now you need to turn and repeat it 20 times!
         How many degrees do you turn to get 360 after 20 iterations?"
+      Ryan Doily Step 3_instruction: "Now you need to turn and repeat it 20 times!
+        How many degrees do you turn to get 360 after 20 iterations?"
       Ryan Test Locked Blocks_instruction: "Here's a function called \"patrol.\"
         Edit it to move Cat up 400 pixels and then down 400 pixels."
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.
@@ -3467,6 +3486,12 @@ en:
         back a default response."
       U3 full clicker demo_instruction: "Clicker game - Try it out!"
       U3 mehal's clone_instruction: "Try out a demo of the Digital Assistant!"
+      U3 Variables consolelog_instruction: "Use the write block to display the value
+        of size"
+      U3 Variables misconceptions try it_instruction: "Test out your predictions
+        from the previous level."
+      U3 Variables write_instruction: "Use the write block to display the value of
+        size"
       U3- Variables - Assign Random For Turtle Draw_instruction: "Try writing the
         same code in text mode."
       U3- Variables - Changing the Value_instruction: "Update the value of 'turnAmount'

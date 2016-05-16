@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "20 Mouse Droid behar dituzu. Erabili \"gehitu Mouse Droid bat\" komandoa \"Mouse Droid lortzean\" gertaeraren barnean bi Mouse Droid edo gehiago gehitzeko bat lortzen duzun bakoitzean.",
   "failedMultiplyCharactersTimeoutGotSome": "Zorionak, Mouse Droid-ak gehitzeko kodea gehitu duzu. Hurrengo ariketarekin jarrai dezakezu edo berriro saiatu 20 Mouse Droid lortzeko. Errazagoa da gehiago gehitzen badituzu! (Mantendu sakatuta gezidun teklak zure teklatuan (edo pantailan) arinago mugitzeko.)",
   "failedChangeSettingTimeout": "Lortu hiru Rebel Pilot aurrera jarraitzeko.",
-  "failedChangeSettingSettings": "Egin ezazu nahi duzun jokoa. Ariketa hau gainditzeko, zure robota aldatu behar duzu eta bere abiadura ezarri."
+  "failedChangeSettingSettings": "Egin ezazu nahi duzun jokoa. Ariketa hau gainditzeko, zure robota aldatu behar duzu eta bere abiadura ezarri.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }

@@ -8,6 +8,7 @@
     "skin": "applab",
     "code_functions": {
       "forLoop_i_0_4": null,
+      "ifBlock": null,
       "addOperator": null,
       "subtractOperator": null,
       "multiplyOperator": null,
@@ -37,7 +38,8 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -69,7 +71,12 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "fail_on_lint_errors": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

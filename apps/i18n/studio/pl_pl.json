@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "Musisz złapać 20 Myszodroidów. Użyj polecenia \"dodaj Myszodroida\" wewnątrz zdarzenia \"kiedy złapie Myszodroida\", by dodać dwa lub więcej Myszodroidy za każdym razem, kiedy złapiesz jednego.",
   "failedMultiplyCharactersTimeoutGotSome": "Gratulacje, dodałeś kod, by utworzyć Myszodroidów. Możesz przejść do następnej łamigłówki lub ponownie zdobyć 20 Myszodroidów. Ułatwisz to sobie dodając ich więcej! (Naciskaj i przytrzymuj klawisze ze strzałkami na klawiaturze (lub na ekranie), by poruszać się szybciej.)",
   "failedChangeSettingTimeout": "Zdobądź trzech Pilotów Rebeliantów, aby kontynuować.",
-  "failedChangeSettingSettings": "Stwórz własną grę. Aby przejść ten poziom, musisz zmienić swojego droida i ustawić jego prędkość."
+  "failedChangeSettingSettings": "Stwórz własną grę. Aby przejść ten poziom, musisz zmienić swojego droida i ustawić jego prędkość.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }

@@ -1,6 +1,6 @@
 var msg = require('../locale');
 
-var GameButtons = require('../templates/GameButtons');
+var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 
@@ -16,7 +16,7 @@ var EvalVisualizationColumn = function () {
           <g id="test-result"/>
         </svg>
       </ProtectedStatefulDiv>
-      <GameButtons hideRunButton={false}>
+      <GameButtons>
         <button id="continueButton" className="launch hide float-right">
           <img src="/blockly/media/1x1.gif"/>
           {msg.continue()}

@@ -243,17 +243,9 @@
               </block>
             </statement>
           </block>
-        </category>
-        <category name="NEW BLOCKS">
-          <block type="parameters_get"/>
-          <block type="procedures_callnoreturn" inline="false">
-            <mutation name="draw an octagon">
-              <arg name="length"/>
-            </mutation>
-          </block>
-          <block type="jump_by_constant"/>
           <block type="procedures_defnoreturn">
             <mutation/>
+            <title name="NAME">do something</title>
           </block>
         </category>
       </xml>

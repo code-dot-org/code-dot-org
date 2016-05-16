@@ -1,0 +1,18 @@
+name 'unique level name here'
+title 'title'
+description 'description here'
+question 'Question'
+wrong 'wrong answer'
+right 'right answer'
+
+markdown <<MARKDOWN
+Consider the following code segment.
+
+<pre>
+n &larr; 5
+REPEAT UNTIL (&lt;MISSING CONDITION&gt;)
+    n &larr; n * (-1)
+</pre>
+
+Which of the following replacements for <MISSING CONDITION> will NOT result in an infinite loop?
+MARKDOWN

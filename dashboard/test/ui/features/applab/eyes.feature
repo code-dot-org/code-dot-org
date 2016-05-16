@@ -5,8 +5,7 @@ Feature: App Lab Eyes
 
 Scenario: Button shows up on top of canvas
   When I open my eyes to test "applab eyes"
-  And I am on "http://learn.code.org/projects/applab/new"
-  And I rotate to landscape
+  Given I start a new Applab project
   Then I see no difference for "initial load"
   And I press "show-code-header"
   And I add code for a canvas and a button
@@ -25,7 +24,6 @@ Scenario: App Lab UI elements from initial code and html
   # this level displays each ui element by generating it dynamically as well as
   # displaying design-mode-created elements.
   And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9?noautoplay=true"
-  And I close the dialog
   And I wait to see "#runButton"
   And element "#runButton" is visible
   Then I see no difference for "design mode elements in code mode"
@@ -40,7 +38,6 @@ Scenario: App Lab UI elements from initial code and html
 
 Scenario: Text area with multiple lines, radio button, checkbox
   Given I start a new Applab project
-  And I rotate to landscape
   And I switch to design mode
   And I open my eyes to test "applab design mode"
 
@@ -104,13 +101,12 @@ Scenario: Applab embedded level
   When I open my eyes to test "Applab embedded level"
   And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/12"
   And I rotate to landscape
-  And I close the dialog
   And I see no difference for "embedded level"
   Then I close my eyes
 
 Scenario: Applab Instructions in Top Pane
   When I open my eyes to test "Applab Instructions in top pane"
-  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9?topInstructions=true"
+  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9"
   And I wait to see "#runButton"
   And I see no difference for "top instructions enabled on standard level"
   Then I click selector ".fa-chevron-circle-down"
@@ -127,25 +123,11 @@ Scenario: Applab Instructions in Top Pane
   When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/12"
   And I wait to see "#runButton"
   And I see no difference for "top instructions enabled on embed level"
-
-  Then execute JavaScript expression "window.localStorage.removeItem('experiments-topInstructions')"
-
-  When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9"
-  And I wait to see "#runButton"
-  And I see no difference for "top instructions disabled on standard level"
-
-  When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/10"
-  And I wait to see "#runButton"
-  And I see no difference for "top instructions disabled on instructionless level"
-
-  When I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/12"
-  And I wait to see "#runButton"
-  And I see no difference for "top instructions disabled on embed level"
   Then I close my eyes
 
 Scenario: Applab Instructions Resize
   When I open my eyes to test "Applab instructions resize"
-  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9?topInstructions=true"
+  And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9"
   And I wait to see "#runButton"
   And I see no difference for "base case"
   Then I drag the instructions grippy by -150 pixels
@@ -154,5 +136,17 @@ Scenario: Applab Instructions Resize
   And I see no difference for "big instructions"
   Then I drag the visualization grippy by -200 pixels
   And I see no difference for "small visualization"
-  Then execute JavaScript expression "window.localStorage.removeItem('experiments-topInstructions')"
+  Then I close my eyes
+
+Scenario: Applab debugging
+  Given I start a new Applab project
+  When I open my eyes to test "Applab debugging"
+  And I press "show-code-header"
+  And I add code for a canvas and a button
+  Then I press "stepInButton"
+  And I see no difference for "stepped in once"
+  Then I press "stepInButton"
+  And I see no difference for "stepped in twice"
+  Then I press "stepInButton"
+  And I see no difference for "stepped in thrice"
   Then I close my eyes

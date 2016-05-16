@@ -3,49 +3,49 @@ es:
     unplugged:
       Unplug1:
         title: Introducción a la informática
-        desc: 'Esta clase dará una introducción al concepto de “Ciencias de la Computación” y explicará qué hace un “informático”. Los estudiantes  tendrán la oportunidad de asumir el rol de un informático. Al finalizar la actividad, cada estudiante tendrá un recordatorio sobre qué aprendió durante la clase. Tal vez Ud. crea que es conveniente evitar enseñar a los niños más pequeños el complejo vocabulario asociado a las clases que siguen, pero presentarlo de manera lúdica y divertida ahora es mucho más productivo que esperar otras oportunidades.'
+        desc: Esta clase introducirá el concepto de “Ciencias de la computación” y explicará qué hace un “informático”. Los estudiantes tendrán la oportunidad de asumir el rol de un informático. Al finalizar la actividad, cada estudiante recibirá un recordatorio sobre qué aprendió durante la clase. Tal vez creas que no es conveniente enseñar a los niños más pequeños el complejo vocabulario asociado a estas clases, pero si se presenta de manera lúdica y divertida, ahora es mucho más productivo que esperar otras oportunidades.
         pdfs:
           - unplug1-es-ES
         video: Unplug1
       Unplug2:
         title: Pensamiento computacional
-        desc: 'Sólo con papel y fibrones, los estudiantes aprenderán los 4 pasos del pensamiento computacional.  Después de una breve introducción, los alumnos deben dividirse en grupos donde darán instrucciones para otros alumnos que les permitan dibujar un monstruo específico (del catálogo de monstruos preseleccionados). La tarea debe ser dividida, para que luego los equipos encuentren patrones en todos los monstruos del catálogo, y abstraigan detalles similares entre los monstruos. Deben usar esa información para crear un algoritmo (instrucciones) para que otro equipo dibuje un monstruo específico. Los equipos deben luego intercambiar algoritmos con otro grupo y dibujar un monstruo siguiendo el algoritmo que les toque. ¿El dibujo lo que el equipo original quiso hacer?'
+        desc: Sólo con papel y rotuladores, los estudiantes aprenderán los 4 pasos del pensamiento computacional. Después de una breve introducción, los alumnos deben dividirse en grupos y darán instrucciones a otros alumnos para que dibujen un monstruo específico (del catálogo de monstruos preseleccionados). La tarea debe ser dividida, para que luego los equipos encuentren patrones en todos los monstruos del catálogo y encuentren detalles similares entre los monstruos. Deben usar esa información para crear un algoritmo (instrucciones) para que otro equipo dibuje un monstruo específico. A continuación, los equipos deben intercambiar algoritmos con otro grupo y dibujar un monstruo siguiendo el algoritmo que les toque. ¿El dibujo es lo que el equipo original quiso conseguir?
         pdfs:
           - unplug2-es-ES
         video: Unplug2
       Unplug3:
         title: Programación en papel cuadriculado
-        desc: Programando algunos dibujos, los estudiantes empezarán a entender de qué trata la programación. La clase empezará haciendo que los estudiantes intercambien instrucciones para colorear cuadrados en una hoja cuadriculada, con el fin de reproducir una imagen en la hoja. La clase puede terminar exhibiendo los dibujos que los estudiantes realizaron.
+        desc: Al programar algunos dibujos, los estudiantes empezarán a comprender de qué se trata la programación. Para comenzar la clase, los estudiantes intercambiarán instrucciones para colorear cuadrados en una hoja cuadriculada, con el fin de reproducir una imagen en la hoja. La clase puede terminar exhibiendo los dibujos que los estudiantes realizaron.
         pdfs:
           - unplug3-es-ES
         video: Unplug3
       Unplug4:
         title: Algoritmos
-        desc: Esta clase cubre el tema algoritmos. Usando figuras de tangram y papel cuadriculado, el primer ejercicio muestra qué tan importante es hacer a cada instrucción lo más clara e inequívoca posible. Al final, la clase puede explorar en cuántas formas se puede doblar un papel en un rectángulo, notando cómo algunos métodos requieren menos pliegues que otros.
+        desc: Esta clase cubre el tema algoritmos. El primer ejercicio muestra con figuras de tangram y papel cuadriculado la importancia de que cada instrucción sea lo más clara e inequívoca posible. Para finalizar, la clase puede explorar en cuántas formas se puede doblar un papel en un rectángulo y notar cómo algunos métodos requieren menos pliegues que otros.
         pdfs:
           - unplug4-es-ES
         video: Unplug4
       Unplug5:
         title: funciones
-        desc: En esta clase, los estudiantes harán un collar con cuerdas, piedritas y una medalla especial. Seguirán una serie de tareas repetitivas, y luego se les pedirá que identifiquen ciertos conjuntos de “habilidades” que se duplican varias veces. Una vez que esas habilidades fueron definidas, serán llamadas desde un programa principal y el bello proceso de creación será volcado en una sola pieza de papel. El programa final será escrito por toda la clase, independientemente del tipo de cuerdas, piedritas o medallas. Para efectivamente permitir esto, los estudiantes deberán “abstraer” los detalles específicos entre los materiales y crear términos vagos para los suministros de cada uno. El uso de huecos genéricos es una maravillosa introducción a las variables.
+        desc: En esta clase, los estudiantes harán un collar con cuerdas, piedrecitas y una medalla especial. Seguirán una serie de tareas repetitivas, y luego se les pedirá que identifiquen ciertos conjuntos de “habilidades” que se duplican varias veces. Una vez que esas habilidades se definieron, se solicitarán desde un programa principal y el bello proceso de creación será plasmado en una sola pieza de papel. El programa final se escribirá por toda la clase, independientemente del tipo de cuerdas, piedrecitas o medallas. Para permitirlo realmente, los estudiantes deberán “abstraer” los detalles específicos entre los materiales y crear términos vagos para los suministros de cada uno. El uso de huecos genéricos es una maravillosa introducción a las variables.
         pdfs:
           - unplug5-es-ES
         video: Unplug5
       Unplug6:
         title: Condicionales
-        desc: 'La clase trata de un juego.  Después de introducir la idea de condicionales, sentencias “si”, y bucles, la clase puede practicar en conjunto el uso de un programa ya escrito, con un mazo de tarjetas y suerte.'
+        desc: En la clase se realizará un juego. Después de introducir la idea de condicionales, sentencias “si” y bucles, la clase puede practicar en conjunto el uso de un programa ya escrito; solo necesitarán un mazo de tarjetas y suerte.
         pdfs:
           - unplug6-es-ES
         video: Unplug6
       Unplug7:
         title: Escritura de la canción
-        desc: Leer letras de canciones puede ser una aventura intuitiva para los estudiantes. Vamos a tomar una actividad que hace uso de conocimientos previos para dar una buena clase sobre definición y llamada de funciones. Una vez que los estudiantes se familiaricen con el proceso de definición/llamado, podemos añadir complicaciones como pasaje de parámetros en los llamados a funciones.
+        desc: Leer letras de canciones puede ser una aventura intuitiva para los estudiantes. Vamos a elegir una actividad que utiliza conocimientos previos para dar una buena clase sobre definición y llamada de funciones. Una vez que los estudiantes se familiaricen con el proceso de definición/llamado, podemos agregar complicaciones como pasaje de parámetros en los llamados a funciones.
         pdfs:
           - unplug7-es-ES
         video: Unplug7
       Unplug8:
         title: Abstracción
-        desc: Vamos a combinar la rutina diaria de los estudiantes y un juego que trata de juegos de palabras, para que la clase aprenda sobre la efectividad que posee la abstracción.
+        desc: Vamos a combinar la rutina diaria de los estudiantes y un juego de palabras, para que la clase aprenda sobre la efectividad que posee la abstracción.
         pdfs:
           - unplug8-es-ES
         video: Unplug8
@@ -57,13 +57,13 @@ es:
         video: Unplug9
       Unplug10:
         title: Internet
-        desc: En esta clase, los alumnos seguirán el flujo de Internet, mientras aprenden sobre direcciones web, IPs y DNS.
+        desc: En esta clase, los alumnos seguirán el flujo de Internet, mientras aprenden sobre direcciones web, IP y DNS.
         pdfs:
           - unplug10-es-ES
         video: Unplug10
       Unplug11:
         title: Cierre
-        desc: Este cierre final en nuestra primera serie de 20 horas ayudará a la clase a volver a vivir sus momentos favoritos, mientras se les dan los próximos pasos para que puedan continuar, si están interesados, el viaje a través de las Ciencias de la computación.
+        desc: El cierre final de la serie de 20 horas ayudará a la clase a revivir sus momentos favoritos. Además, se informan los próximos pasos a seguir, si están interesados en continuar con el viaje a través de las Ciencias de la computación.
         pdfs:
           - unplug11-es-ES
         video: Unplug11
@@ -77,7 +77,7 @@ es:
         video: C1_muévelomuévelo_desconectado
       PlantASeed:
         title: 'Algoritmos de la Vida Real: Planta una Semilla'
-        desc: Esta lección resalta formas en las que usamos algoritmos en nuestra vida cotidiana, usando el acto de plantar una semilla como ejemplo. También se centra en el panorama general de la informática y cómo los algoritmos juegan un papel esencial.
+        desc: Esta lección resalta formas en las que usamos algoritmos en nuestra vida cotidiana, usando de ejemplo plantar una semilla. También se centra en el panorama general de la informática y cómo los algoritmos juegan un papel esencial.
         video: C1_plantando_semillas
       BuildingAFoundation:
         title: Construyendo una Base
@@ -85,19 +85,19 @@ es:
         video: C1_construyendo_cimientos
       GettingLoopy:
         title: Bucleandose
-        desc: Esta lección introduce el concepto de programación de los bucles (instruciones repetidas) atravéz de una actividad de baile. Los estudiantes aprenderan simple coreografía, despues se les dirá que la repitan.
+        desc: Esta lección introduce el concepto de programación de los bucles (instrucciones repetidas) a través de una actividad de baile. Los estudiantes aprenderán una simple coreografía, después se les pedirá que la repitan.
         video: C1_getting_loopy
       RelayProgramming:
         title: Programación de Relevos
-        desc: 'Los estudiantes corren una carrera de relevos, donde aceleran por el camino para escribir un algoritmo basado en una imagen "Grafica en Papel de Programación". Ellos sólo pueden escribir una instrucción a la vez y si hay algun error en algun lugar, deben borrar todo hasta ese punto.'
+        desc: 'Los estudiantes corren una carrera de relevos, donde aceleran por el camino para escribir un algoritmo basado en una imagen "Grafica en papel de programación". Ellos sólo pueden escribir una instrucción a la vez y si hay algún error en algún lugar, deben borrar todo hasta ese punto.'
         video: C2_programación_relevos
       Conditionals:
         title: Condicionales
-        desc: 'Para aprender acerca de las instrucciones condicionales, los estudiantes juegan con cartas y crean reglas como "si tomo una tarjeta roja, obtengo un punto" y "si tomo una carta negra, tu obtienes un punto."'
+        desc: 'Para aprender acerca de las instrucciones condicionales, los estudiantes juegan con cartas y crean reglas como "si tomo una tarjeta roja, obtengo un punto" y "si tomo una carta negra, tú obtienes un punto."'
         video: C2_condiciones_con_tarjetas
       BigEvent:
         title: El Gran Evento
-        desc: 'Los estudiantes son introducidos al concepto de "eventos" en programación, que son acciones que una computadora monitorea constantemente. El profesor presionará botones en un control remoto de papel y los estudiantes reaccionarán dependiendo de qué botón se presiona.'
+        desc: 'Se presenta a los estudiantes el concepto de "eventos" en programación, que son acciones que un ordenador monitoriza constantemente. El profesor presionará botones en un control remoto de papel y los estudiantes reaccionarán dependiendo de qué botón se presiona.'
         video: C1_granevento_desconectado
       GoingPlacesSafely:
         title: Ir a Sitios Seguro
@@ -105,19 +105,19 @@ es:
         video: C1_going_places_safely
       GraphPaperProgramming:
         title: Programación en papel cuadriculado
-        desc: 'Los estudiantes escriben un algoritmo (un conjunto de instrucciones) usando un conjunto de  comandos predefinidos para dirigir a sus compañeros en la reproducción de un dibujo.'
+        desc: Los estudiantes escriben un algoritmo (un conjunto de instrucciones) usando un conjunto de comandos predefinidos para dirigir a sus compañeros en la reproducción de un dibujo.
         video: C2_papel_cuadriculado
       PaperPlanes:
         title: 'Algoritmos de la vida real : Aviones de papel'
-        desc: Esta lección hace ver modos en los que usamos algoritmos en nuestra vida diaria, específicamente haciendo aviones de papel. Esta lección también se enfoca en las ciencias de la computación en general y cómo los algoritmos juegan un papel escencial.
+        desc: Esta lección muestra la manera en que usamos algoritmos en nuestra vida diaria, específicamente haciendo aviones de papel. Esta lección también se enfoca en las ciencias de la computación en general y cómo los algoritmos juegan un papel esencial.
         video: C2_aviones_de_papel
       BinaryBracelets:
         title: Pulseras Binarias
-        desc: Los estudiantes crean pulseras como representaciones binarias de la primera letra de su nombre. Aprenden que los datos pueden ser representada y guardados de más de una forma.
+        desc: Los estudiantes crean pulseras como representaciones binarias de la primera letra de su nombre. Aprenden que los datos se pueden representar y guardar de más de una forma.
         video: C2_pulseras_binarias
       DigitalFootprint:
         title: Tu huella Digital
-        desc: 'Los profesores le presentan a los alumnos la idea de que poner información sobre ellos en línea crea una huella digital o un "rastro" que tiene consecuencias.'
+        desc: 'Los profesores le presentan a los alumnos la idea de que poner información sobre ellos en línea crea una huella dactilar o un "rastro" que tiene consecuencias.'
         video: C2_digital_footprint
       ComputationalThinking:
         title: Pensamiento computacional
@@ -128,16 +128,16 @@ es:
         desc: Los estudiantes crean un algoritmo con variables y funciones (pedazos de código que quieres usar una y otra vez) para crear un tragaluz con un hilo y pequeños cristales.
         video: C3_tragaluces_funcionales
       SongwritingParameters:
-        title: Composicion musical con Parámetros
-        desc: Los estudiantes usan el concepto del coro en una canción para aprender sobre el paso de parámetros (que personaliza una función sin tener que reescrbir la función entera).
+        title: Composicion musical con parámetros
+        desc: Los estudiantes usan el concepto del coro en una canción para aprender sobre el paso de parámetros (que personaliza una función sin tener que reescribir la función entera).
         video: C3_composición_musical_con_parámetros
       DiceRace:
-        title: 'Algoritmos de la vida real: Carrera de Dados'
-        desc: Esta clase muestra modos en los que usamos algoritmos en nuestra vida diaria. Como parte de eso, los estudiantes identificarán y escribirán el algoritmo de un juego de carrera de dados.
+        title: 'Algoritmos de la vida real: Carrera de dados'
+        desc: Esta clase muestra modos en los que usamos algoritmos en nuestra vida diaria. Como parte de eso, los estudiantes identificarán y escribirán el algoritmo de un juego de carrera con dados.
         video: C3_carrera_dados
       Internet:
         title: Internet
-        desc: Los alumnos envían mensajes representando varios métodos de transmision de Internet usando pedazos de papel.
+        desc: Los alumnos envían mensajes representando varios métodos de transmisión de Internet usando pedazos de papel.
         video: C3_internet
       Crowdsourcing:
         title: Colaboración Abierta
@@ -152,7 +152,7 @@ es:
         video: C4_algoritmos_sin_conexión
       EnvelopeVariables:
         title: Variables de sobre
-        desc: 'Las variables permiten mucha libertad en Ciencias de la computación.  Esta clase ayuda a explicar qué son las variables y cómo podemos usarlas de muchas maneras diferentes. Usa esta actividad antes de (o junto con) la clase de abstracción para comprender a fondo la idea.'
+        desc: Las variables permiten mucha libertad en la ciencia de la computación. Esta clase ayuda a explicar qué son las variables y cómo podemos usarlas de muchas maneras diferentes. Usa esta actividad antes de (o junto con) la clase de abstracción para comprender a fondo la idea.
         video: C4_variables_sin_conexión
       MadGlibs:
         title: Loco Glibs
@@ -164,15 +164,15 @@ es:
         video: C4_bucles_for_sin_conexión
       SongwritingWithParameters:
         title: Composición Musical con Parámetros
-        desc: 'Una de las estructuras más magníficas en el mundo de las ciencias de la computación es la función.  Las Funciones (a veces llamadas procedimientos) son mini programas que puedes utilizar una y otra vez dentro de tu programa más grande. Esta clase  ayudará a los alumnos a entender intuitivamente por qué la combinación de partes de código en funciones es una práctica tan útil.  '
+        desc: Una de las estructuras más magníficas en el mundo de las ciencias de la computación es la función. Las Funciones (a veces llamadas procedimientos) son mini programas que puedes utilizar una y otra vez dentro de tu programa más grande. Esta clase ayudará a los alumnos a entender intuitivamente por qué la combinación de partes de código en funciones es una práctica tan útil.
         video: C4_parámetros_sin_conexión
       BinaryImages:
         title: Imágenes binarias
-        desc: 'Aunque muchas personas piensan que el binario es  estrictamente ceros y unos, nuestros cursos anteriores enseñaron a los alumnos que la información puede ser representada en una variedad de opciones binarias.  Esta clase lleva ese concepto un paso más allá que ilustra cómo una computadora también puede almacenar información aún más compleja (por ejemplo, imágenes y colores) en binario.'
+        desc: Aunque muchas personas piensan que el binario es estrictamente ceros y unos, nuestros cursos anteriores enseñaron a los alumnos que la información puede ser representada en una variedad de opciones binarias. Esta clase lleva ese concepto un paso más allá que ilustra cómo un ordenador también puede almacenar información aún más compleja (por ejemplo, imágenes y colores) en binario.
         video: C4_binario_sin_conexión
       VideoGamesCoordinatePlanes:
         title: Videojuegos y planos de coordenadas
-        desc: Descubre cómo los videojuegos que tu amas en realidad son regidos por el álgebra.Explora cómo las expresiones algebraicas y el plano de cartesiano puede ayudarnos a entender cómo funcionan los videojuegos y comienza a planificar el videojuego que tu crearás.
+        desc: Descubre cómo los videojuegos que tu amas en realidad son regidos por el álgebra. Explora cómo las expresiones algebraicas y el plano de cartesiano puede ayudarnos a entender cómo funcionan los videojuegos y comienza a planificar el videojuego que tu crearás.
         video: alg_11_coordinate_plane
       Contracts:
         title: Contratos, dominio y rango
@@ -180,17 +180,17 @@ es:
         video: alg_5_contracts
       DesignRecipe:
         title: La receta de diseño
-        desc: 'En la última etapa los estudiantes escribieron algunas funciones muy simples - pero más sofisticadas funciones exigen un enfoque más reflexivo. La receta de diseño es un enfoque estructurado para escribir funciones que incluye escribir casos de prueba para asegurar que la función funciona como se espera.'
+        desc: 'En la última etapa los estudiantes escribieron algunas funciones muy simples - pero más sofisticadas funciones exigen un enfoque más reflexivo. La receta de diseño es un enfoque estructurado para escribir funciones que incluye escribir casos de prueba para asegurar que la función opera como se espera.'
         video: alg_8_design_recipe
       Booleans:
-        title: Booleanos y Lógica
-        desc: Valores booleanos son el cuarto y último tipo de datos que aprenderás en este curso. En esta actividad tu aprenderás acerca de lo que son valores booleanos, y cómo pueden ayudarnos a escribir funciones que piensan lógicamente
+        title: Booleanos y lógica
+        desc: Los valores booleanos son el cuarto y último tipo de datos que aprenderás en este curso. En esta actividad tu aprenderás acerca de lo que son valores booleanos, y cómo pueden ayudarnos a escribir funciones que piensan lógicamente.
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Funciones por partes y condicionales
-        desc: Los parámetros que le pasamos a funciones causan las salidas variadas basadas en un patrón muy rígido. Supongamos que queremos parámetros con algunos valores para crear salidas usando un patrón pero otros valores a utilizar un patrón diferente. Esto es donde condicionales son necesarios...
+        desc: Los parámetros que pasamos a funciones causan distintas salidas basadas en un patrón muy rígido. Supongamos que queremos parámetros con algunos valores para crear salidas usando un patrón, pero otros valores utilizarán un patrón diferente. Aquí es donde se necesitan los condicionales...
         video: alg_10_conditionals
       CollisionDetection:
         title: Detección de colisiones y el teorema de Pitágoras
-        desc: Determinar cuándo los objetos en la pantalla táctil es un aspecto importante de la mayoría de los juegos. En esta lección analizaremos cómo la fórmula de la distancia y el teorema de Pitágoras se pueden utilizar para medir la distancia entre dos puntos en el avión y luego decidir si se toca los dos puntos (o juego de caracteres) son tocados.
+        desc: Determinar cuándo los objetos en la pantalla táctil es un aspecto importante de la mayoría de los juegos. En esta lección analizaremos cómo la fórmula de la distancia y el teorema de Pitágoras se pueden utilizar para medir la distancia entre dos puntos en el avión y luego decidir si se tocan los dos puntos (o juego de caracteres).
         video: alg_16_biggame_collision_detection

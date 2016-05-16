@@ -7,13 +7,12 @@
  * so when moving things preserve the include order as much as possible.
  */
 'use strict';
-/* global Sounds */
 var _ = require('lodash');
 
 // Shim window.console to be safe in IE
 require('./consoleShim')(window);
 
-var Sounds = require('./Sounds');
+var Sounds = require('@cdo/apps/Sounds');
 var activateReferenceAreaOnLoad = require('./reference_area');
 
 window.React = require('react');
@@ -27,7 +26,7 @@ require('./components/report_abuse_form');
 require('./components/send_to_phone');
 require('./components/small_footer');
 require('./components/GridEditor');
-require('./components/IconLibrary');
+require('./components/Attachments');
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
@@ -48,13 +47,14 @@ window.dashboard.utils ={
 };
 window.dashboard.header = require('./header');
 window.dashboard.videos = require('./videos');
+window.dashboard.assets = require('./assets');
 
 // usages: _dialogHelper.js, frequency.js, text-compression.js, levelGroup.js, multi.js
 // arguably each of the above files belongs in code-studio
 window.Dialog = require('./dialog');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
-// script error and a url, throw that so that we have the info in new relic.
+// script error and a url, throw that so that we have the info in New Relic.
 var windowOnError = window.onerror;
 window.onerror = function (msg, url, ln) {
   if (/^Script error/.test(msg) && url) {

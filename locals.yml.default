@@ -35,6 +35,11 @@ dashboard_enable_pegasus: true
 # If false, dashboard will try to use a prepackaged version from S3.
 #use_my_code_studio: true
 
+# Whether to skip the slow `rake seed:all` command during `rake build`.
+# Until you manually run `rake seed:all` or disable this flag, you won't
+# see changes to: videos, concepts, levels, scripts, trophies, prize providers, 
+callouts, hints, secret words, or secret pictures.
+#skip_seed_all: true
 
 # Encryption key required for decoding certain protected level sources.
 # Ask a Code.org dev for this if you need access to protected levels.
@@ -57,3 +62,7 @@ dashboard_enable_pegasus: true
 #pusher_app_id: ''
 #pusher_application_key: ''
 #pusher_application_secret: ''
+
+# Credentials for new relic logging. Used to log apps build times.
+# Log in to https://rpm.newrelic.com/accounts/501463 to get the key
+#new_relic_license_key: ''
