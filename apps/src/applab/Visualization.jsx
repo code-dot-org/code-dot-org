@@ -5,6 +5,7 @@ var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var connect = require('react-redux').connect;
 var experiments = require('../experiments');
 var classNames = require('classnames');
+import {VISUALIZATION_DIV_ID, isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import VisualizationOverlay from '../templates/VisualizationOverlay';
 import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
 import AppLabTooltipOverlay from './AppLabTooltipOverlay';
@@ -44,7 +45,8 @@ var Visualization = React.createClass({
     isEmbedView: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     isPaused: React.PropTypes.bool.isRequired,
-    playspacePhoneFrame: React.PropTypes.bool.isRequired
+    playspacePhoneFrame: React.PropTypes.bool.isRequired,
+    isResponsive: React.PropTypes.bool.isRequired
   },
 
   render: function () {
@@ -52,10 +54,13 @@ var Visualization = React.createClass({
     var appHeight = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
 
     return (
-      <div id="visualization"
-          className={classNames({with_padding: this.props.visualizationHasPadding})}
+      <div id={VISUALIZATION_DIV_ID}
+          className={classNames({
+            responsive: this.props.isResponsive,
+            with_padding: this.props.visualizationHasPadding
+          })}
           style={[
-            (this.props.isEmbedView || this.props.hideSource) && styles.nonResponsive,
+            !this.props.isResponsive && styles.nonResponsive,
             this.props.isShareView && styles.share,
             this.props.playspacePhoneFrame && styles.phoneFrame
           ]}
@@ -83,6 +88,7 @@ module.exports = connect(function propsFromStore(state) {
     isEmbedView: state.pageConstants.isEmbedView,
     isShareView: state.pageConstants.isShareView,
     isPaused: state.runState.isDebuggerPaused,
-    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
+    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
+    isResponsive: isResponsiveFromState(state)
   };
 })(Radium(Visualization));

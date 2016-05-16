@@ -1,9 +1,8 @@
-var msg = require('../locale');
 var commonStyles = require('../commonStyles');
 
 var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 
 var styles = {
   invisible: {
@@ -14,7 +13,7 @@ var styles = {
 var ArtistVisualizationColumn = function (props) {
   return (
     <span>
-      <ProtectedStatefulDiv id="visualization"/>
+      <ProtectedVisualizationDiv />
       <GameButtons>
         <div id="slider-cell">
           <svg id="slider"
