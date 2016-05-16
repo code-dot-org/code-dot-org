@@ -2,10 +2,21 @@ var msg = require('../locale');
 
 var connect = require('react-redux').connect;
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+var experiments = require('../experiments');
 
-var styles = {
+const styles = {
   main: {
     display: 'inline'
+  },
+  // The way that this works in the non-phone frame world is use media queries to
+  // set runButton's min-width to be 111px at >1051, and 45px otherwise. When
+  // min-width was 45px, we would actually render at 105px.
+  // In phone frame, there's no reason to resize based on screen width since we
+  // don't need to make room for more buttons on the same row. I've decided the
+  // 105px looks better than 11px so I'm going with that.
+  phoneFrameButton: {
+    minWidth: 105,
+    textAlign: 'center'
   }
 };
 
@@ -47,7 +58,11 @@ var CompletionButton = React.createClass({
     return (
       <ProtectedStatefulDiv style={styles.main}>
         <div id="share-cell" className={divClass}>
-          <button id={id} className="share">
+          <button
+              id={id}
+              className="share"
+              style={[this.props.playspacePhoneFrame && styles.phoneFrameButton]}
+          >
             <img src="/blockly/media/1x1.gif"/>
             {contents}
           </button>
@@ -62,8 +77,11 @@ module.exports = connect(function propsFromStore(state) {
     isProjectLevel: state.pageConstants.isProjectLevel,
     isSubmittable: state.pageConstants.isSubmittable,
     isSubmitted: state.pageConstants.isSubmitted,
+    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
   };
 })(CompletionButton);
+
+module.exports.styles = styles;
 
 module.exports.__TestInterface__ = {
   UnconnectedCompletionButton: CompletionButton

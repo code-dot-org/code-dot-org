@@ -20,11 +20,6 @@ var styles = {
 var FrameList = function () {
   return (
     <ScrollableList style={styles.root}>
-      <FrameListItem index={1} />
-      <FrameListItem index={2} />
-      <FrameListItem index={3} isSelected />
-      <FrameListItem index={4} />
-      <FrameListItem index={151} />
       <NewListItem label="new frame" onClick={function () {}} />
     </ScrollableList>
   );

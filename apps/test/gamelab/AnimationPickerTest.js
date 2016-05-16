@@ -1,10 +1,9 @@
-var animationPickerModule = require('@cdo/apps/gamelab/AnimationPicker/animationPickerModule');
+import reducer, * as animationPickerModule from '@cdo/apps/gamelab/AnimationPicker/animationPickerModule';
 var expect = require('chai').expect;
 var Goal = animationPickerModule.Goal;
 
 describe('AnimationPicker', function () {
   describe('reducer', function () {
-    var reducer = animationPickerModule.default;
     var initialState = {
       visible: false,
       goal: null,

@@ -51,10 +51,15 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "markdown_instructions": "# Printing After Setting Value\r\n\r\nWe started trying to remove the duplicate code we had on the last level by initializing a variable to a nonsense, or \"dummy,\" value that would still ensure we entered the loop. \r\n\r\nIn the code provided, not every number is going to display. However, this time we want to try **not to add code** to fix the problem, since duplicate code is inefficient. \r\n\r\n# Do This:\r\n\r\n* **Starter Code:** The code is completely functional except that it does not print one of the numbers it's supposed to. ** Hint: ** What should be the last number that prints every time this program runs?\r\n\r\n* Run the program to see the behavior.\r\n\r\n* Fix the code so that it prints all the values of `num`. **Hint:** You don't need to add any code. Just switch the order of the code you have now!",
+    "markdown_instructions": "# Printing After Setting Value\r\n\r\nWe started trying to remove the duplicate code we had on the last level by initializing a variable to a nonsense, or \"dummy,\" value that would still ensure we entered the loop. \r\n\r\nIn the code provided, not every number is going to display. However, this time we want to try **not to add code** to fix the problem, since duplicate code is inefficient. \r\n\r\n# Do This:\r\n\r\n* **Starter Code:** The code is completely functional except that it does not print one of the numbers it's supposed to. In addition we don't want it to print the dummy variable of -1.** Hint: ** What should be the last number that prints every time this program runs?\r\n\r\n* Run the program to see the behavior.\r\n\r\n* Fix the code so that it prints all the values of `num`. **Hint:** You don't need to add any code. Just switch the order of the code you have now!",
     "start_blocks": "var num = -1;\r\nwhile (num != 6) { \r\n   write(\"Number is: \" + num);\r\n   num = randomNumber(1, 6);\r\n}\r\nwrite(\"Done.\");",
     "instructions": "Without adding any lines of code, reorder the code so that it prints all the values of num. (Click to see full instructions)",
-    "encrypted_examples": "MyfoTh6Bhci1kxpnSKntFJPgYsiDdN7hV2Ry9U0UpzWk+wND/Th/C2N2cyDA\nK2un\n"
+    "encrypted_examples": "MyfoTh6Bhci1kxpnSKntFJPgYsiDdN7hV2Ry9U0UpzWk+wND/Th/C2N2cyDA\nK2un\n",
+    "fail_on_lint_errors": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

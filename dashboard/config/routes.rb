@@ -255,6 +255,8 @@ Dashboard::Application.routes.draw do
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
+  resources :peer_reviews
+
   concern :ops_routes do
     # /ops/district/:id
     resources :districts do
@@ -317,6 +319,13 @@ Dashboard::Application.routes.draw do
   post '/plc/enrollment_evaluations/:unit_assignment_id/confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments'
 
   post '/plc/course_units/:id/submit_new_questions_and_answers', to: 'plc/course_units#submit_new_questions_and_answers'
+
+  namespace :pd do
+    get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
+    post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
+    get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
+    get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
+  end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'

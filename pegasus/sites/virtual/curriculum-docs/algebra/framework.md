@@ -47,7 +47,7 @@ Lesson <%= index + 1 %>: <%=lesson[:name_s] %>
 <td>
 <% standards = lesson[:standards_t].split(";").collect{|id| DB[:cdo_standards].where(id_s:id).first}.reject(&:blank?).group_by{|s| s[:family_s]} %>
 <% standards.each do |family| %>
-<strong><%= family[0] %></strong>: 
+<strong><%= family[0] %></strong>:
 <% family[1].each_with_index do |standard, index| %>
 <%= standard[:id_s] %>
 <%= index < family[1].size - 1 ? ", " : "." %>
@@ -64,7 +64,6 @@ Lesson <%= index + 1 %>: <%=lesson[:name_s] %>
 <br/>
 <% end %>
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
 [/content]
 

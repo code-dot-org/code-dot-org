@@ -6,17 +6,7 @@ var ActionType = require('./actions').ActionType;
 var constants = require('./constants');
 var ApplabInterfaceMode = constants.ApplabInterfaceMode;
 var instructions = require('../redux/instructions');
-
-function currentScreenId(state, action) {
-  state = state || null;
-
-  switch (action.type) {
-    case ActionType.CHANGE_SCREEN:
-      return action.screenId;
-    default:
-      return state;
-  }
-}
+var screens = require('./redux/screens');
 
 var levelInitialState = {
   assetUrl: function () {},
@@ -39,7 +29,7 @@ function interfaceMode(state, action) {
 }
 
 module.exports = {
-  currentScreenId: currentScreenId,
   interfaceMode: interfaceMode,
+  screens: screens.default,
   instructions: instructions.default
 };

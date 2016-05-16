@@ -904,13 +904,23 @@ class UserTest < ActiveSupport::TestCase
     assert user_proficiency.basic_proficiency_at.nil?
   end
 
+  def track_progress(student, script_level, result)
+    User.track_level_progress_sync(
+      user_id: student.id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id,
+      new_result: result,
+      submitted: false,
+      level_source_id: nil
+    )
+  end
+
   test 'track_level_progress_sync calls track_proficiency if new perfect score' do
     script_level = create :script_level
     student = create :student
 
     User.expects(:track_proficiency).once
-
-    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, false)
+    track_progress(student, script_level, 100)
   end
 
   test 'track_level_progress_sync does not call track_proficiency if old perfect score' do
@@ -919,8 +929,7 @@ class UserTest < ActiveSupport::TestCase
     create :user_level, user_id: student.id, script_id: script_level.script_id, level_id: script_level.level_id, best_result: 100
 
     User.expects(:track_proficiency).never
-
-    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, false)
+    track_progress(student, script_level, 100)
   end
 
   test 'track_level_progress_sync does not call track_proficiency if new passing score' do
@@ -928,8 +937,7 @@ class UserTest < ActiveSupport::TestCase
     student = create :student
 
     User.expects(:track_proficiency).never
-
-    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 25, false)
+    track_progress(student, script_level, 25)
   end
 
   test 'track_level_progress_sync does not call track_proficiency if hint used' do
@@ -939,8 +947,7 @@ class UserTest < ActiveSupport::TestCase
       level_id: script_level.level_id, script_id: script_level.script_id
 
     User.expects(:track_proficiency).never
-
-    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, false)
+    track_progress(student, script_level, 100)
   end
 
   test 'track_level_progress_sync does not call track_proficiency if authored hint used' do
@@ -950,8 +957,7 @@ class UserTest < ActiveSupport::TestCase
       level_id: script_level.level_id, script_id: script_level.script_id)
 
     User.expects(:track_proficiency).never
-
-    User.track_level_progress_sync(student.id, script_level.level_id, script_level.script_id, 100, false)
+    track_progress(student, script_level, 100)
   end
 
   test 'normalize_gender' do

@@ -1,0 +1,17 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2016-05-12T19:52:02.934Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "video_key": "csp_concept_internet_wires_cables_wifi",
+    "markdown_instructions": "[Video guide and questions](https://docs.google.com/document/d/1YviZiL1VjpUa9Gbe3j_4lETKyoZqEW14_RG7EEWEwgU/edit)",
+    "encrypted_teacher_markdown": "5KQcxdG2dIFDZz7ROz7asXvAiY0r8xwne1qA2aL3R22IJDttgkMXJHUpNLIS\nLAyOURYJC/istVwrneAIDlBJYQMICvlLaqHFbh7G6/r9x/xkkicDeC9FX3XX\n+uxq/N4yASUMlwj/FnZDNKOfS+wFlT027tuPiAW6Ax4L10F0sXWjBo1ySbJr\n1h3IKZ3o5h8jdZmTtQvCk3IJFqcnT6dfa4Z5oENhvE61oTMTa+DAWqOML/Qa\nF70pDwYY1mPhCJYf3akYjr7bIh8IFtzQMvPRLF5B9Umk1rgxOiDMX57wkyGk\nfrwQJD6+UXWPm53/8I7oLeu0SelK3C27PnBKuAyQWy6UKdAueAv6MRAzaZjX\n2+ZkF9T0GjpketuibEIoahku\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</StandaloneVideo>

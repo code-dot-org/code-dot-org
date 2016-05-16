@@ -1,7 +1,7 @@
 var msg = require('../locale');
 var commonStyles = require('../commonStyles');
 
-var GameButtons = require('../templates/GameButtons');
+var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 
@@ -15,7 +15,7 @@ var ArtistVisualizationColumn = function (props) {
   return (
     <span>
       <ProtectedStatefulDiv id="visualization"/>
-      <GameButtons hideRunButton={false}>
+      <GameButtons>
         <div id="slider-cell">
           <svg id="slider"
                version="1.1"

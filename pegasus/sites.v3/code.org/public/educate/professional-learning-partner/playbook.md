@@ -14,11 +14,11 @@ title: Professional Learning Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'FAQ', description_t: "Can't find what you're looking for? Check the FAQ.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/FAQ"), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Fundraising Guide', description_t: "Coming soon!"} %>
+<%= view :educate_box, item: {title_s: 'Fundraising Resources', description_t: "Coming soon!"} %>
 
-<%= view :educate_box, item: {title_s: 'Code.org Workshop  Supplies Marketplace', description_t: "Coming soon!"} %>
+<%= view :educate_box, item: {title_s: 'Mimeo Marketplace', description_t: "Coming soon!"} %>
 
-<%= view :educate_box, item: {title_s: 'Recruitment Guide', description_t: "Coming soon!"} %>
+<%= view :educate_box, item: {title_s: 'Recruiting Teachers', description_t: "Coming soon!"} %>
 
 <%= view :educate_box, item: {title_s: 'Reporting and Evaluations', description_t: "Coming soon!"} %>
 
