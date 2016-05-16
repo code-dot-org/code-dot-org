@@ -16,7 +16,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,2,2,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skip_instructions_popup": "false",
-    "ideal": "8",
+    "ideal": "7",
     "video_key": "C3_bee_functions",
     "markdown_instructions": "Functions are blocks of code that perform a task.  \r\n\r\nUse the `get 2 nectar` function to collect the nectar from each flower.",
     "never_autoplay_video": "false",

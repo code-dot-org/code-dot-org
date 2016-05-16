@@ -8,6 +8,7 @@ var connect = require('react-redux').connect;
 var ScreenSelector = require('./ScreenSelector');
 var ToggleGroup = require('../templates/ToggleGroup');
 var ViewDataButton = require('./ViewDataButton');
+var experiments = require('../experiments');
 
 var ApplabInterfaceMode = constants.ApplabInterfaceMode;
 
@@ -19,8 +20,8 @@ var PlaySpaceHeader = React.createClass({
     isShareView: React.PropTypes.bool.isRequired,
     isViewDataButtonHidden: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes.oneOf([ApplabInterfaceMode.CODE, ApplabInterfaceMode.DESIGN]).isRequired,
+    playspacePhoneFrame: React.PropTypes.bool,
     screenIds: React.PropTypes.array.isRequired,
-    onScreenChange: React.PropTypes.func.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
     onInterfaceModeChange: React.PropTypes.func.isRequired
   },
@@ -29,14 +30,6 @@ var PlaySpaceHeader = React.createClass({
     window.open(
       '//' + utils.getPegasusHost() + '/v3/edit-csp-app/' + this.props.channelId,
       '_blank');
-  },
-
-  handleScreenChange: function (evt) {
-    var screenId = evt.target.value;
-    if (screenId === constants.NEW_SCREEN) {
-      screenId = this.props.onScreenCreate();
-    }
-    this.props.onScreenChange(screenId);
   },
 
   render: function () {
@@ -53,10 +46,11 @@ var PlaySpaceHeader = React.createClass({
 
     if (this.props.interfaceMode === ApplabInterfaceMode.CODE && !this.shouldHideViewDataButton()) {
       rightSide = <ViewDataButton onClick={this.handleViewData} />;
-    } else if (this.props.interfaceMode === ApplabInterfaceMode.DESIGN) {
+    } else if (this.props.interfaceMode === ApplabInterfaceMode.DESIGN &&
+        !this.props.playspacePhoneFrame) {
       rightSide = <ScreenSelector
           screenIds={this.props.screenIds}
-          onChange={this.handleScreenChange} />;
+          onCreate={this.props.onScreenCreate}/>;
     }
 
     return (
@@ -90,13 +84,11 @@ module.exports = connect(function propsFromStore(state) {
     isDesignModeHidden: state.pageConstants.isDesignModeHidden,
     isShareView: state.pageConstants.isShareView,
     isViewDataButtonHidden: state.pageConstants.isViewDataButtonHidden,
-    interfaceMode: state.interfaceMode
+    interfaceMode: state.interfaceMode,
+    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
   };
 }, function propsFromDispatch(dispatch) {
   return {
-    onScreenChange: function (screenId) {
-      dispatch(actions.changeScreen(screenId));
-    },
     onInterfaceModeChange: function (mode) {
       dispatch(actions.changeInterfaceMode(mode));
     }

@@ -64,9 +64,9 @@
     = data[:cs_standards_exception_s]
 
 %p.fact{style: "margin-top: 5px; margin-bottom: 0px;"}
-  #show-ap-stats{style: "cursor: pointer;"} &#9654;&nbsp; Show AP Stats
+  #show-ap-stats{style: "cursor: pointer;"} &#9654;&nbsp; AP Stats
   #hide-ap-stats{style: "display: none;"}
-    %div{style: "cursor: pointer;"} &#9660;&nbsp; Hide AP Stats
+    %div{style: "cursor: pointer;"} &#9660;&nbsp; AP Stats
     .fact{style: "margin-left: 20px;"}
       %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
       &nbsp;
@@ -74,11 +74,15 @@
     .fact{style: "margin-left: 20px;"}
       %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
       &nbsp;
-      = "#{data[:percent_ap_female_i]}% of AP students are female"
+      = "#{format_integer_with_commas(data[:ap_cs_exams_i])} students took the AP exam last year"
     .fact{style: "margin-left: 20px;"}
       %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
       &nbsp;
-      = "#{format_integer_with_commas(data[:total_ap_students_color_i])} underrepresented minority students"
+      = "#{data[:percent_ap_female_i]}% of them were female"
+    .fact{style: "margin-left: 20px;"}
+      %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
+      &nbsp;
+      = "#{format_integer_with_commas(data[:total_ap_students_color_i])} were underrepresented minorities"
 
 -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/files/states/#{state}.pdf"))
   %div.download-fact-sheet
@@ -108,9 +112,10 @@
   =succeed "," do
     %a{href: "http://www.conference-board.org/", style: "color: #BCC2C6", target: '_blank'} The Conference Board
   =succeed "," do
-    %a{href: "http://www.nsf.gov/", style: "color: #BCC2C6", target: '_blank'} National Science Foundation
+    %a{href: "http://nces.ed.gov/", style: "color: #BCC2C6", target: '_blank'} National Center for Education Statistics
+  and the
   =succeed "." do
-    %a{href: "http://code.org/learn/local", style: "color:#BCC2C6", target: '_blank'} Code.org database
+    %a{href: "https://research.collegeboard.org/programs/ap/data", style: "color:#BCC2C6", target: '_blank'} College Board
   =succeed "." do
     %a{href: "https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub", style: "color: #BCC2C6", target: '_blank'} More info
 

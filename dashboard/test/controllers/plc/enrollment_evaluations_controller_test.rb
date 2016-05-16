@@ -55,7 +55,7 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
 
     @enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @course)
     @unit_assignment = create(:plc_enrollment_unit_assignment, plc_user_course_enrollment: @enrollment,
-                              plc_course_unit: @course_unit, status: Plc::EnrollmentUnitAssignment::PENDING_EVALUATION)
+                              plc_course_unit: @course_unit, status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
   end
 
   test "perform_evaluation retrieves all questions and answers" do
@@ -146,7 +146,15 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
 
   private
   def do_expected_answers_yield_expected_module_enrollments(answers, expected_module_enrollments, valid_answers)
-    post :submit_evaluation, unit_assignment_id: @unit_assignment.id, answer_module_list: answers.map(&:plc_learning_module_id).compact.to_s.gsub(' ', '')[1..-2]
+    answers_hash = Hash.new(0)
+
+    answers.each do |answer|
+      next if answer.plc_learning_module_id.nil?
+      answers_hash[answer.plc_learning_module_id] += 1
+    end
+    answers_hash.each {|k, v| answers_hash[k] = v.to_s}
+
+    post :submit_evaluation, unit_assignment_id: @unit_assignment.id, answer_module_list: answers_hash.to_json
     assert_redirected_to controller: :enrollment_evaluations, action: :preview_assignments, enrolled_modules: expected_module_enrollments.values.map(&:id)
 
     post :confirm_assignments, unit_assignment_id: @unit_assignment.id, content_module: expected_module_enrollments[:content_module].try(:id), practice_module: expected_module_enrollments[:practice_module].try(:id)
@@ -156,7 +164,6 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
 
       @unit_assignment.reload
       assert_equal expected_module_enrollments.values.map(&:id).sort, @enrollment.plc_module_assignments.all.map(&:plc_learning_module_id).sort
-      @unit_assignment.update!(status: Plc::EnrollmentUnitAssignment::PENDING_EVALUATION)
     else
       assert_redirected_to perform_evaluation_path(unit_assignment_id: @unit_assignment.id)
     end

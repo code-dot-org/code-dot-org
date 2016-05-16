@@ -1,17 +1,16 @@
 /** A single list item representing an animation. */
 'use strict';
 
-var _ = require('../../lodash');
-var actions = require('../actions');
-var animationsApi = require('../../clientApi').animations;
-var color = require('../../color');
-var connect = require('react-redux').connect;
-var ListItemButtons = require('./ListItemButtons');
-var ListItemThumbnail = require('./ListItemThumbnail');
-var Radium = require('radium');
-var selectAnimation = require('./animationTabModule').selectAnimation;
+import Radium from 'radium';
+import { connect } from 'react-redux';
+import color from '../../color';
+import actions from '../actions';
+import { METADATA_SHAPE } from '../animationMetadata';
+import { selectAnimation } from './animationTabModule';
+import ListItemButtons from './ListItemButtons';
+import ListItemThumbnail from './ListItemThumbnail';
 
-var styles = {
+const styles = {
   tile: {
     width: '100%',
 
@@ -65,33 +64,40 @@ var styles = {
  * thumbnail, along with the animation name and (if currently selected)
  * controls for deleting or duplicating the animation.
  */
-var AnimationListItem = React.createClass({
+const AnimationListItem = React.createClass({
   propTypes: {
     isSelected: React.PropTypes.bool,
-    animation: React.PropTypes.object.isRequired,
+    animation: React.PropTypes.shape(METADATA_SHAPE).isRequired,
+    columnWidth: React.PropTypes.number.isRequired,
     cloneAnimation: React.PropTypes.func.isRequired,
     deleteAnimation: React.PropTypes.func.isRequired,
     selectAnimation: React.PropTypes.func.isRequired,
     setAnimationName: React.PropTypes.func.isRequired
   },
 
-  onSelect: function () {
+  componentWillReceiveProps(nextProps) {
+    if (this.props.columnWidth !== nextProps.columnWidth) {
+      this.refs.thumbnail.forceResize();
+    }
+  },
+
+  onSelect() {
     this.props.selectAnimation(this.props.animation.key);
   },
 
-  cloneAnimation: function () {
+  cloneAnimation() {
     this.props.cloneAnimation(this.props.animation.key);
   },
 
-  deleteAnimation: function () {
+  deleteAnimation() {
     this.props.deleteAnimation(this.props.animation.key);
   },
 
-  onNameChange: function (event) {
+  onNameChange(event) {
     this.props.setAnimationName(this.props.animation.key, event.target.value);
   },
 
-  render: function () {
+  render() {
     var animationName;
     if (this.props.isSelected) {
       animationName = (
@@ -116,8 +122,10 @@ var AnimationListItem = React.createClass({
     return (
       <div style={tileStyle} onClick={this.onSelect}>
         <ListItemThumbnail
+            ref="thumbnail"
+            animation={this.props.animation}
             isSelected={this.props.isSelected}
-            src={animationsApi.basePath(this.props.animation.key + '.png')} />
+        />
         {animationName}
         {this.props.isSelected && <ListItemButtons
             onCloneClick={this.cloneAnimation}
@@ -126,21 +134,19 @@ var AnimationListItem = React.createClass({
     );
   }
 });
-module.exports = connect(function propsFromStore(state) {
-  return {};
-}, function propsFromDispatch(dispatch) {
-  return {
-    cloneAnimation: function (animationKey) {
-      dispatch(actions.cloneAnimation(animationKey));
-    },
-    deleteAnimation: function (animationKey) {
-      dispatch(actions.deleteAnimation(animationKey));
-    },
-    selectAnimation: function (animationKey) {
-      dispatch(selectAnimation(animationKey));
-    },
-    setAnimationName: function (animationKey, newName) {
-      dispatch(actions.setAnimationName(animationKey, newName));
-    }
-  };
-})(Radium(AnimationListItem));
+export default connect(state => ({
+  columnWidth: state.animationTab.columnSizes[0]
+}), dispatch => ({
+  cloneAnimation(animationKey) {
+    dispatch(actions.cloneAnimation(animationKey));
+  },
+  deleteAnimation(animationKey) {
+    dispatch(actions.deleteAnimation(animationKey));
+  },
+  selectAnimation(animationKey) {
+    dispatch(selectAnimation(animationKey));
+  },
+  setAnimationName(animationKey, newName) {
+    dispatch(actions.setAnimationName(animationKey, newName));
+  }
+}))(Radium(AnimationListItem));

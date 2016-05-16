@@ -2,7 +2,7 @@
 
 def should_i(question)
   loop do
-    print "Should I #{question}? [Yes/Skip/Quit] "
+    print "Should I #{question}? [#{underline('Y')}es]/#{underline('S')}kip/#{underline('Q')}uit: "
     response = gets.strip.downcase
     if "yes".start_with? response # also catches blank/return ;)
       yield
@@ -16,21 +16,36 @@ def should_i(question)
   end
 end
 
+def stylize(text, color_code)
+  "\e[#{color_code}m#{text}\e[0m"
+end
+
+def underline(text); stylize(text, 4); end
+
 def wait_for(thing)
   print "Wait for #{thing} then hit enter to continue..."
   gets
 end
 
 def open_url(url)
-  system "open #{url}"
+  open_in_default_browser(url)
   puts "Browser didn't open? go to:"
   puts url
+end
+
+def open_in_default_browser(url)
+  # Based on http://stackoverflow.com/a/14053693/5000129
+  if RbConfig::CONFIG['host_os'] =~ /linux|bsd/
+    system "sensible-browser \"#{url}\""
+  else
+    system "open \"#{url}\""
+  end
 end
 
 wait_for "between 10AM and 11:30AM (Pacific) to morning DTT"
 
 should_i "morning DTT" do
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/test...staging'
+  open_url 'https://github.com/code-dot-org/code-dot-org/compare/test...staging?expand=1&title=DTT%20%28Staging%20%3E%20Test%29'
 end
 
 wait_for "morning DTT to complete, re-run/investigate failures, and update test room topic to that commit # green"
@@ -50,12 +65,12 @@ EOS
 end
 
 should_i "merge from levelbuilder to staging" do
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/staging...levelbuilder'
+  open_url 'https://github.com/code-dot-org/code-dot-org/compare/staging...levelbuilder?expand=1&title=Levelbuilder%20%3E%20Staging'
 end
 
-wait_for "staging to finish building"
+wait_for "staging to finish building. if a staging build was already running, wait for a second build which will include the levelbuilder content"
 
-should_i "commit content changes from staging" do
+should_i "commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD" do
   puts <<EOS
 Follow the prompts given by the content-push script. If you need to do something fancier (or if the changed files do not "look ok" when it asks you), log in to staging and hand-craft the commit.
 EOS
@@ -66,7 +81,7 @@ should_i "DTT" do
   puts <<EOS
 Update Developer room status with "DTT: NO (@yourname DTP candidate)"
 EOS
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/test...staging'
+  open_url 'https://github.com/code-dot-org/code-dot-org/compare/test...staging?expand=1&title=DTT%20%28Staging%20%3E%20Test%29'
 end
 
 wait_for "a green test run"
@@ -78,14 +93,14 @@ EOS
 wait_for "between 1:30PM and 3:30PM (Pacific) to DTP"
 
 should_i "DTP" do
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/production...test'
+  open_url 'https://github.com/code-dot-org/code-dot-org/compare/production...test?expand=1&title=DTP%20%28Test%20%3E%20Production%29'
 end
 
 should_i "deploy Levelbuilder while the deploy to production is happening" do
   puts <<EOS
 Go to the Levelbuilder room on Slack and ask everyone @here if they are ready for a deploy (They need to save their changes, otherwise they may lose some work when you complete the next step).
 EOS
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/levelbuilder...test'
+  open_url 'https://github.com/code-dot-org/code-dot-org/compare/levelbuilder...test?expand=1&title=Test%20%3E%20Levelbuilder'
 end
 
 wait_for "DTP to finish"
