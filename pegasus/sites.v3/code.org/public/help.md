@@ -70,14 +70,3 @@ If you're a software engineer, there are many opportunities to get involved loca
 Code.org's online platform [Code Studio](https://studio.code.org) enables students to learn the basic concepts of computer science as early as kindergarten. Try [Play Lab](/playlab), a tool developed for elementary students to create games and stories. Or try [App Lab](/educate/applab), a JavaScript programming environment for high school students to create apps.
 
 [<button>Learn more</button>](https://studio.code.org)
-
-<!--
-## Spend 10 minutes adding "hints" to our tutorials
-
-With millions of students trying the Hour of Code, and hundreds of thousands doing the Code.org introductory online courses, we could use your help adding helpful hints for students who make mistakes. In just 10 minutes you can help improve our courses.
-
-[<button>Learn more</button>](http://code.org/hints)
-
--->
-
-

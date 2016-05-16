@@ -260,19 +260,19 @@ class Script < ActiveRecord::Base
   end
 
   def twenty_hour?
-    ScriptConstants.twenty_hour?(self.name)
+    ScriptConstants.script_in_category?(:twenty_hour, self.name)
   end
 
   def hoc?
-    ScriptConstants.hoc?(self.name)
+    ScriptConstants.script_in_category?(:hoc, self.name)
   end
 
   def flappy?
-    ScriptConstants.flappy?(self.name)
+    ScriptConstants.script_in_category?(:flappy, self.name)
   end
 
   def minecraft?
-    ScriptConstants.minecraft?(self.name)
+    ScriptConstants.script_in_category?(:minecraft, self.name)
   end
 
   def find_script_level(level_id)

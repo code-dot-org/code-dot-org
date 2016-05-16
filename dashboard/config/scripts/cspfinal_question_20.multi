@@ -1,0 +1,6 @@
+name 'CSPFinal_Question_20'
+question 'A bakery collects data on sales. Each sales record includes the date of the sale, the type of items sold, the number of each item sold, and the price of each item sold. Which of the following CANNOT be determined from the bakery\'s data set?'
+wrong 'The total income from sales the bakery received in the past month.'
+right 'Which customer most frequently purchases bread.'
+wrong 'The item bought in the highest quantity in the past week.'
+wrong 'Times of day when certain items sell the most.'
