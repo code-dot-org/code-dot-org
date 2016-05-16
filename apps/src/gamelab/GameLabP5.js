@@ -630,7 +630,12 @@ GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
     'elt',
     'canvas',
     'parent',
-    'p5'
+    'p5',
+    'downloadFile',
+    'writeFile',
+    'httpGet',
+    'httpPost',
+    'httpDo',
   ];
 };
 
