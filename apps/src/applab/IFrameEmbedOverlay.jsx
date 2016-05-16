@@ -15,19 +15,6 @@ var styles = {
       zIndex: 5,
       textAlign: 'center',
     },
-    ageWarning: {
-      backgroundColor: 'pink',
-      color: 'red',
-      padding: 10,
-      width: '90%',
-      borderColor: 'red',
-      borderWidth: 1,
-      borderStyle: 'solid',
-      borderRadius: 5,
-      marginLeft: 'auto',
-      marginRight: 'auto',
-      marginTop: 5,
-    },
   },
   playButton: {
     color: 'white',
@@ -58,7 +45,7 @@ var IFrameEmbedOverlay = React.createClass({
            onClick={this.onClick}>
         {
           this.state.tooYoung ?
-          <div style={styles.overlay.ageWarning}>
+          <div className="alert alert-danger">
             This content has age restrictions in place and is not available for younger students
           </div> :
           <span className="fa fa-play" style={styles.playButton} />
