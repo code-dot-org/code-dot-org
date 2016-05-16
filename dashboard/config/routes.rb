@@ -346,6 +346,4 @@ Dashboard::Application.routes.draw do
   end
 
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: { format: 'json' }
-
 end
-
