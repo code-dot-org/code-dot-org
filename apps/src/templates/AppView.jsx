@@ -14,9 +14,6 @@ var connect = require('react-redux').connect;
  */
 var AppView = React.createClass({
   propTypes: {
-    assetUrl: React.PropTypes.func.isRequired,
-    isEmbedView: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     isResponsive: React.PropTypes.bool.isRequired
