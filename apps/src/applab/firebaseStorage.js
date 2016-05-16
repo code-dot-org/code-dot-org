@@ -159,8 +159,8 @@ function createEntry(key, value) {
  *     to the maximum number of operations allowed during that interval.
  */
 var RATE_LIMITS = {
-  15: 3,
-  60: 6
+  15: 30,
+  60: 60
 };
 
 /**

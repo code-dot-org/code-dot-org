@@ -154,13 +154,13 @@ path /v3/shared-tables/{channel_id}/limits is RateLimits {
 
 path /v3/shared-tables/{channel_id}/limits/15 {
   validate() {
-    isValidRateLimit(this, 15000, 3)
+    isValidRateLimit(this, 15000, 30)
   }
 }
 
 path /v3/shared-tables/{channel_id}/limits/60 {
   validate() {
-    isValidRateLimit(this, 60000, 6)
+    isValidRateLimit(this, 60000, 60)
   }
 }
 
