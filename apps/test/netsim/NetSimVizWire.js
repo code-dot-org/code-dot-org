@@ -1,7 +1,7 @@
 'use strict';
 /* global describe, beforeEach, it */
 
-import {assert} from 'chai';
+import {assert} from '../util/configuredChai';
 var testUtils = require('../util/testUtils');
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
 var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');

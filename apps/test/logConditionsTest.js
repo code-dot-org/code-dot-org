@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from './util/configuredChai';
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 
 var executionLog = require('@cdo/apps/executionLog');

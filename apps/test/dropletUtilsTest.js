@@ -1,5 +1,5 @@
 const _ = require('@cdo/apps/lodash');
-import {assert} from 'chai';
+import {assert} from './util/configuredChai';
 var sinon = require('sinon');
 
 var testUtils = require('./util/testUtils');

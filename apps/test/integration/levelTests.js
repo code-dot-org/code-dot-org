@@ -9,7 +9,7 @@
 // todo - should we also have tests around which blocks to show as part of the
 // feedback when a user gets the puzzle wrong?
 
-import {assert} from 'chai';
+import {assert} from '../util/configuredChai';
 import $ from 'jquery';
 import sinon from 'sinon';
 require('jquery-ui');

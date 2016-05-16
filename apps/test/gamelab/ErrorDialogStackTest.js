@@ -1,5 +1,5 @@
 var errorDialogStackModule = require('@cdo/apps/gamelab/errorDialogStackModule');
-var expect = require('chai').expect;
+import {expect} from '../util/configuredChai';
 
 describe('ErrorDialogStack', function () {
   describe('reducer', function () {

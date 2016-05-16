@@ -1,5 +1,5 @@
 import reducer, * as animationPickerModule from '@cdo/apps/gamelab/AnimationPicker/animationPickerModule';
-var expect = require('chai').expect;
+import {expect} from '../util/configuredChai';
 var Goal = animationPickerModule.Goal;
 
 describe('AnimationPicker', function () {

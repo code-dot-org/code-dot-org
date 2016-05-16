@@ -1,7 +1,7 @@
 'use strict';
 /* global describe, beforeEach, it */
 
-import {assert} from 'chai';
+import {assert} from '../util/configuredChai';
 var NetSimSlider = require('@cdo/apps/netsim/NetSimSlider');
 
 describe("NetSimSlider", function () {

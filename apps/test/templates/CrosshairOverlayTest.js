@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import {expect} from '../util/configuredChai';
 import ReactTestUtils from 'react-addons-test-utils';
 import CrosshairOverlay, { CROSSHAIR_MARGIN } from '@cdo/apps/templates/CrosshairOverlay';
 // ES5-style require necessary to stub gridUtils.draggedElementDropPoint

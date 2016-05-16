@@ -1,6 +1,6 @@
 'use strict';
 
-import {assert} from 'chai';
+import {assert} from './configuredChai';
 
 var utils = require('@cdo/apps/utils');
 var _ = require('@cdo/apps/lodash');

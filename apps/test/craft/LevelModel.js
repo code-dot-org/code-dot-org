@@ -1,6 +1,4 @@
-let chai = require('chai');
-chai.config.includeStack = true;
-let assert = chai.assert;
+import {assert} from '../util/configuredChai';
 
 let testUtils = require('../util/testUtils');
 testUtils.setupLocale('calc');

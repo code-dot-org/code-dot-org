@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from './util/configuredChai';
 var testUtils = require('./util/testUtils');
 testUtils.setupLocales();
 var BeeCell = require('@cdo/apps/maze/beeCell');
