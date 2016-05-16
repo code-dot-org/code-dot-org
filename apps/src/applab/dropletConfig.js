@@ -29,7 +29,7 @@ var arrayMethodPrefix = '[list].';
 
 var stringBlockPrefix = 'str.';
 
-var playSongObject = {
+const playSongObject = {
   song: [
     ["A", 500], [null, 50], ["A", 500], [null, 50], ["A", 500], [null, 50],
     ["F", 350], [null, 50], ["C5", 150], [null, 50], ["A", 500], [null, 50],
