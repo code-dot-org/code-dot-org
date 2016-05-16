@@ -146,6 +146,8 @@ Eval.init = function (config) {
     }
   };
 
+  studioApp.setCommonPageConstants(config);
+
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView

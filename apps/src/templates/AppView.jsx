@@ -11,9 +11,6 @@ var connect = require('react-redux').connect;
  */
 var AppView = React.createClass({
   propTypes: {
-    assetUrl: React.PropTypes.func.isRequired,
-    isEmbedView: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
 
@@ -46,9 +43,6 @@ var AppView = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
-    assetUrl: state.pageConstants.assetUrl,
-    isEmbedView: state.pageConstants.isEmbedView,
-    isShareView: state.pageConstants.isShareView,
     hideSource: state.pageConstants.hideSource,
     isRtl: state.pageConstants.localeDirection === 'rtl'
   };
