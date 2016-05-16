@@ -1,5 +1,7 @@
 'use strict';
 
+import classNames from 'classnames';
+import {connect} from 'react-redux';
 var _ = require('../lodash');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var StudioAppWrapper = require('./StudioAppWrapper');
@@ -18,7 +20,9 @@ var AppView = React.createClass({
     isRtl: React.PropTypes.bool.isRequired,
     codeWorkspace: React.PropTypes.element,
     visualizationColumn: React.PropTypes.element,
-    onMount: React.PropTypes.func.isRequired
+    onMount: React.PropTypes.func.isRequired,
+    // Provided from redux
+    isResponsive: React.PropTypes.bool.isRequired
   },
 
   componentDidMount: function () {
@@ -26,12 +30,16 @@ var AppView = React.createClass({
   },
 
   render: function () {
+    const visualizationColumnClassNames = classNames({
+      responsive: this.props.isResponsive
+    });
+
     return (
       <StudioAppWrapper
           assetUrl={this.props.assetUrl}
           isEmbedView={this.props.isEmbedView}
           isShareView={this.props.isShareView}>
-        <div id="visualizationColumn">
+        <div id="visualizationColumn" className={visualizationColumnClassNames}>
           {this.props.visualizationColumn}
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
@@ -45,4 +53,6 @@ var AppView = React.createClass({
     );
   }
 });
-module.exports = AppView;
+module.exports = connect(state => ({
+  isResponsive: !state.pageConstants.isEmbedView && !state.pageConstants.hideSource
+}))(AppView);

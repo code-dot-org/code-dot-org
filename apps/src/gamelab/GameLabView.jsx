@@ -2,9 +2,10 @@
 /* global dashboard */
 'use strict';
 
+import classNames from 'classnames';
+import {connect} from 'react-redux';
 var _ = require('../lodash');
 var AnimationTab = require('./AnimationTab/AnimationTab');
-var connect = require('react-redux').connect;
 var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper');
 var ErrorDialogStack = require('./ErrorDialogStack');
 var gameLabConstants = require('./constants');
@@ -52,15 +53,29 @@ var GameLabView = React.createClass({
       width: GAME_WIDTH
     };
 
+    const visualizationColumnClassNames = classNames({
+      responsive: this.isResponsive()
+    });
+
     return (
       <div style={codeModeStyle}>
-        <div id="visualizationColumn" style={visualizationColumnStyle}>
+        <div
+            id="visualizationColumn"
+            className={visualizationColumnClassNames}
+            style={visualizationColumnStyle}
+        >
           {this.shouldShowHeader() && <GameLabVisualizationHeader />}
-          <GameLabVisualizationColumn finishButton={this.props.showFinishButton}/>
+          <GameLabVisualizationColumn
+              finishButton={this.props.showFinishButton}
+          />
         </div>
-        <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
+        <ProtectedStatefulDiv
+            id="visualizationResizeBar"
+            className="fa fa-ellipsis-v"
+        />
         <InstructionsWithWorkspace
-          hideSource={this.props.hideSource}/>
+          hideSource={this.props.hideSource}
+        />
       </div>
     );
   },
@@ -75,6 +90,10 @@ var GameLabView = React.createClass({
     return !(this.props.isEmbedView || this.props.isShareView);
   },
 
+  isResponsive: function () {
+    return !this.props.isEmbedView && !this.props.hideSource;
+  },
+
   render: function () {
     return (
       <ConnectedStudioAppWrapper>
@@ -87,6 +106,7 @@ var GameLabView = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
+    hideSource: state.pageConstants.hideSource,
     interfaceMode: state.interfaceMode,
     isEmbedView: state.pageConstants.isEmbedView,
     isShareView: state.pageConstants.isShareView
