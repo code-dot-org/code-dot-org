@@ -537,7 +537,6 @@ module.exports = function (grunt) {
   grunt.registerTask('mochaTest', [
     'newer:messages',
     'exec:convertScssVars',
-    'newer:copy:static',
     'concat',
     'exec:mochaTest'
   ]);
