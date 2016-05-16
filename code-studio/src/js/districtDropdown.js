@@ -65,6 +65,11 @@ $(function () {
     zipElement.val("");
   }
 
+  function clearState() {
+    var stateElement = $("#school-state");
+    stateElement.val("");
+  }
+
   function clearDistrict() {
     $("#school-district-id-form").val("");
   }
@@ -82,7 +87,8 @@ $(function () {
       $('#school-state').closest('.form-group').hide();
       $('#school-zipcode').closest('.form-group').show();
       $('#school-district').closest('.form-group').hide();
-      // And clear district.
+      // And clear state and district.
+      clearState();
       clearDistrict();
     }
   });
