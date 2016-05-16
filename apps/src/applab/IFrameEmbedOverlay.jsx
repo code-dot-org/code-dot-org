@@ -46,7 +46,7 @@ var IFrameEmbedOverlay = React.createClass({
         {
           this.state.tooYoung ?
           <div className="alert alert-danger">
-            This content has age restrictions in place and is not available for younger students
+            {window.dashboard.i18n.t('errors.messages.too_young')}
           </div> :
           <span className="fa fa-play" style={styles.playButton} />
         }
