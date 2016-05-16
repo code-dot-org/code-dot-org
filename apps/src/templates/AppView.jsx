@@ -2,6 +2,7 @@
 
 import classNames from 'classnames';
 import {connect} from 'react-redux';
+import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 var _ = require('../lodash');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var StudioAppWrapper = require('./StudioAppWrapper');
@@ -54,5 +55,5 @@ var AppView = React.createClass({
   }
 });
 module.exports = connect(state => ({
-  isResponsive: !state.pageConstants.isEmbedView && !state.pageConstants.hideSource
+  isResponsive: isResponsiveFromState(state)
 }))(AppView);
