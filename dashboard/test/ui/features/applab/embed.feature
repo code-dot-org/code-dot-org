@@ -15,4 +15,6 @@ Feature: App Lab Embed
     And I press "resetButton"
 
     Then I navigate to the embedded version of my project
+    And I wait until element ".fa-play" is visible within element "iframe"
+    And I click selector ".fa-play" within element "iframe"
     And I wait until element "#divApplab > .screen > button#hello" is visible within element "iframe"
