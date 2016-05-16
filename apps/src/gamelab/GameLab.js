@@ -208,20 +208,11 @@ GameLab.prototype.init = function (config) {
     this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
   }
 
+  this.studioApp_.setCommonPageConstants(config);
   this.studioApp_.reduxStore.dispatch(setPageConstants({
-    assetUrl: this.studioApp_.assetUrl,
-    isEmbedView: !!config.embed,
-    isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isShareView: !!config.share,
-    instructionsMarkdown: config.level.markdownInstructions,
-    instructionsInTopPane: config.showInstructionsInTopPane,
-    puzzleNumber: config.level.puzzle_number,
-    stageTotal: config.level.stage_total,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
-    showDebugWatch: true,
-    localeDirection: this.studioApp_.localeDirection(),
-    isDroplet: true
+    showDebugWatch: true
   }));
 
   // Push project-sourced animation metadata into store

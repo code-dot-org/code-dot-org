@@ -612,10 +612,8 @@ Maze.init = function (config) {
   };
 
   // Push initial level properties into the Redux store
+  studioApp.setCommonPageConstants(config);
   studioApp.reduxStore.dispatch(setPageConstants({
-    localeDirection: studioApp.localeDirection(),
-    isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isDroplet: !!level.editCode,
     hideRunButton: !!(level.stepOnly && !level.edit_blocks)
   }));
 
