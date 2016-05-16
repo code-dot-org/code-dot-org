@@ -24,9 +24,11 @@
           future: "не може да бъде в бъдещето"
   hello: "Здравей, свят"
   welcome_back: "Добре дошли отново, %{name}"
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: "Изпрати"
   unsubmit: "Не е добавено"
-  previous_page: Previous page
+  previous_page: "Предишна страница"
   next_page: "Следваща страница"
   cancel: "Отмени"
   okay: "Добре"
@@ -35,8 +37,8 @@
     code:
       label: "Добавете учител:"
       placeholder: "Код по раздел(ABCDEF)"
-      instructions: Моля въведете кода, споделен от вашия учител. Това е код от 6
-        букви като "ABCDEF".
+      instructions: Моля въведете кода, споделен от учителя. Това е код от 6 букви
+        като "ABCDEF".
     submit: "Добавяне на учител"
   add_hint_form:
     placeholder: "Моля, въведете вашата препоръка"
@@ -168,9 +170,6 @@
         subject: "Присъединете се към класа на  %{teacher_name} в Code.org!"
       student_disassociated:
         subject: 'Code.org уведомление: %{student_name} вече не свързан като ваш ученик.'
-      teacher_disassociated:
-        subject: 'Code.org уведомление: %{teacher_name} вече не е свързан като ваш
-          учител.'
   reports:
     error:
       access_denied: "Нямате достъп до статистиката на този човек"
@@ -266,10 +265,10 @@
       finished_hoc: "Аз приключих моя 'Час на Кодирането'"
       sign_in_to_save: "Впишете се, за да запазите напредъка си"
       free_play:
-        playlab: "Направи приложение"
+        playlab: "Направи Play Lab приложение"
         artist: "Начертай нещо"
         calculate: Calculate Something
-        applab: "Направи приложение"
+        applab: "Направи Play Lab приложение"
     user:
       classroom: "Начална страница на учителя"
       district_dashboard: "Областно табло"
@@ -304,7 +303,7 @@
     students:
       dashboard: "Отидете в Таблото на учителя"
     user_not_found: "Учителят не може да бъде намерен."
-    student_teacher_disassociated: "Премахнати сте%{teacher_name} от учителя си."
+    student_teacher_disassociated: "Премахнали сте %{teacher_name} като ваш учител."
     panel:
       answer_viewer: "Преглед на отговора"
       student: "Ученик"
@@ -386,6 +385,37 @@
     no_primary_course: "Опитайте курс в студиото по кодиране"
     choose_next_course: "Опитайте курс като си изберете един от тези по-долу"
     print_certificate: "Печат на сертификат"
+    announcement_title: "Съобщения"
+    announcement_view_all: "Преглед на всички"
+    announcement_message: "<b>22 април 2016</b> - Дейностите без компютър са важна
+      част от процеса на обучение, но учителите ни казват, че намирането им в ресурсите
+      може да бъде объркващо и отнема време. Ние ви послушахме! Сега можете да намерите
+      всички ресурси без компютър на една целева страница. Свържете уроците с всеки
+      Кн клас, или използвайте самостоятелно като независим курс."
+    announcement_button: "Научете повече"
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: "Обучавайте се в Code Studio"
     description: "Всеки може да учи компютърни науки. Програмирай игри, приложения
@@ -407,22 +437,22 @@
       създаването на този урок."
     help_from_html_old: "Инженери от Google, Microsoft, Facebook и Twitter помогнаха
       за създаването на тези материали."
-    art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Всички права запазени.
-      < br / > Междузвездни войни &#8482; © %{current_year} Дисни и Lucasfilm. Всички
-      права запазени. < br / > замразени &#8482; © %{current_year} Disney. Всички
-      права запазени. < br / > Ледена епоха &#8482; © %{current_year} 20th Century
-      Fox. Всички права запазени. < br / > ядосан птици &#8482; © 2009-%{current_year}
-      Rovio Ентъртеймънт Оод Всички права запазени. < br / > растения срещу зомбита
-      &#8482; © %{current_year} Electronic Arts Инк. Всички права запазени. < br /
-      > Невероятният свят на Гъмбол е запазена марка и © 2015 Картун Нетуърк.
-    art_from_html_old: Minecraft &#8482; © %{current_year} Microsoft. Всички права
-      запазени. Междузвездни войни &#8482; © %{current_year} Дисни и Lucasfilm. Всички
-      права запазени. Замразени &#8482; © %{current_year} Disney. Всички права запазени.
-      Ледена епоха &#8482; © %{current_year} 20th Century Fox. Всички права запазени.
-      Ядосан птици &#8482; © 2009-%{current_year} Rovio Ентъртеймънт Оод Всички права
-      запазени. Растения срещу зомбита &#8482; © %{current_year} Electronic Arts Инк.
-      Всички права запазени. Невероятният свят на Гъмбол е запазена марка и © 2015
-      Картун Нетуърк.
+    art_from_html: Minecraft &#8482; &copy;%{current_year} Microsoft. Всички права
+      запазени. <br /> Междузвездни войни &#8482;&copy; %{current_year} Дисни и Lucasfilm.
+      Всички права запазени. <br /> Frozen&#8482; &copy; %{current_year} Disney. Всички
+      права запазени. <br /> Ледена епоха &#8482; &copy;%{current_year} 20th Century
+      Fox. Всички права запазени. <br />Angry Birds&#8482; &copy; 2009-%{current_year}
+      Rovio Ентъртеймънт Оод Всички права запазени. <br /> Plants vs. Zombies&#8482;
+      &copy;%{current_year} Electronic Arts Инк. Всички права запазени.<br /> Невероятният
+      свят на Гъмбол е запазена марка и &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft &#8482; &copy;%{current_year} Microsoft. Всички права
+      запазени. Междузвездни войни &#8482;&copy; %{current_year} Дисни и Lucasfilm.
+      Всички права запазени. Frozen&#8482; &copy; %{current_year} Disney. Всички права
+      запазени. Ледена епоха &#8482; &copy;%{current_year} 20th Century Fox. Всички
+      права запазени. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Ентъртеймънт
+      Оод Всички права запазени. Plants vs. Zombies&#8482; &copy;%{current_year} Electronic
+      Arts Инк. Всички права запазени. Невероятният свят на Гъмбол е запазена марка
+      и &copy; 2015 Cartoon Network.
     code_from_html: Code.org използва p5.play, който е лицензиран под <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
     powered_by_aws: "Създадено с Amazon Web Services"
@@ -514,10 +544,10 @@
     applab:
       title: "Лаборатория за приложения"
       body: App Lab е програмна среда, в която създавате прости приложения. Създайте
-        дизайна на приложението си, програмирайте с блокове или JavaScript за да проработи,
-        а след това го споделете за секунди.
-      body_short: "Създайте дизайна на приложението си, програмирайте с блокове или
-        JavaScript за да проработи, а след това го споделете за секунди."
+        дизайн, програмирайте с блокове или JavaScript приложението си, а след това
+        го споделете за секунди.
+      body_short: "Създайте дизайн, програмирайте с блокове или JavaScript приложението
+        си, а след това го споделете за секунди."
       audience: "Възраст 13 +"
       cta: "Научете как"
     hoc:
@@ -554,14 +584,14 @@
       title: Minecraft
       body: "Изследвайте Minecraft света чрез код."
     unplugged:
-      title: Unplugged Lessons
-      audience: Ages 6+
-      body: We've compiled a list of unplugged lessons for you to use in your classroom.
-        Now you can teach the fundamentals of computer science, whether you have computers
-        in your classroom or not! Try using these lessons as a stand-alone course
-        or as complementary lessons for any computer science course.
-      body_short: If you don't have computers, try these unplugged lessons in your
-        classroom.
+      title: "Уроци без компютър"
+      audience: "Възраст 6 +"
+      body: "Ние сме съставили списък с уроци без компютър, за да можете да ги използвате
+        в класната си стая. Сега можете да изучавате основите на компютърните науки
+        и без да имате компютри в класната стая! Опитайте да използвате тези уроци
+        като самостоятелен курс или като допълнение за всеки курс по компютърни науки."
+      body_short: "Ако не разполагате с компютри, пробвайте тези уроци в класната
+        стая."
   gallery:
     students_drew_these_with_code: "Учениците начертаха това с код!"
     students_made_these_with_code: "Учениците правят това с код!"
@@ -611,15 +641,15 @@
     wrong_body: "Благодаря Ви, че подадохте отговор"
     correct_title: "Благодаря"
     correct_body: "Благодаря Ви, че подадохте отговор"
-    unsubmit-title: Unsubmit your assessment
-    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
-      date.  Are you sure?
-    submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
-      assessment after submitting it.  Are you sure?
-    submit-complete-title: Submit your assessment
-    submit-complete-body: You cannot edit your assessment after submitting it.  Are
-      you sure?
+    unsubmit-title: "Отмяна на изпращането на оценката"
+    unsubmit-body: "Отмяната на изпращането на оценката ще нулира представените дата
+      и час.  Сигурни ли сте?"
+    submit-incomplete-title: "Изпращане на оценката"
+    submit-incomplete-body: "Сигурен ли сте? Вие сте оставили някои въпроси непопълнени.
+      \ Не може да се редактира оценка след подаване."
+    submit-complete-title: "Изпращане на оценката"
+    submit-complete-body: "Не можете да редактирате Вашата  оценка след подаване,
+      да продължа ли?"
   match:
     wrong_title: "Неправилно решение"
     wrong_body: "Решението, което сте въвели не е правилно.  Моля опитайте отново!"
@@ -724,6 +754,10 @@
     share: "Сподели"
     share_title: "Споделяне на Вашия проект"
     share_copy_link: "Копиране на връзката:"
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: "Затваряне"
     more: "Повече"
     name: "Име"
@@ -733,7 +767,7 @@
       нещо</strong> по-долу, за да направите ново приложение в Игрална Лаборатория
       или проект с художника! <br/>Можете да се върнете към работа по проектите си
       по всяко време."
-    need_help: "Нужда от помощ, за да започнете?"
+    need_help: "Опитайте тези курсове, които ще помогнат при започване на нов проект"
     really_delete: "Да се изтрие ли?"
     delete_yes: "Да"
     delete_no: "Не"
@@ -781,7 +815,23 @@
         acknowledge: "С подаването на тази информация, Вие се съгласявате, че тя ще
           бъде третирана съобразно условията на %{link_start_privacy}Privacy Policy%{link_end}
           и %{link_start_tos}Terms на Service%{link_end}"
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
   components:
     icon_library:
       search_placeholder_text: "Търси икона..."
       no_icons_found: "Няма намерени икони"
+  flex_category:
+    required: "Общ преглед"
+    content: Content
+    practice: Teacher Practices

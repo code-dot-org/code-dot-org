@@ -23,13 +23,15 @@ is:
           future: má ekki vera í framtíð
   hello: Halló heimur
   welcome_back: 'Velkomin/n aftur, %{name}'
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Senda inn
   unsubmit: Afturkalla innsendingu
-  previous_page: Previous page
+  previous_page: Fyrri síða
   next_page: Næsta síða
   cancel: Hætta við
   okay: Allt í lagi
-  heading_x_of_y: '%{heading} (page %{x} of %{y})'
+  heading_x_of_y: '%{heading} (síða %{x} af %{y})'
   add_teacher_form:
     code:
       label: 'Bæta við kennara:'
@@ -154,8 +156,6 @@ is:
         subject: 'Komdu í bekk sem %{teacher_name} kennir hjá Code.org!'
       student_disassociated:
         subject: 'Orðsending frá Code.org: %{student_name} er ekki lengur skráð(ur) sem nemandi þinn.'
-      teacher_disassociated:
-        subject: 'Orðsending frá Code.org: %{teacher_name} er ekki lengur skráð(ur) sem kennari þinn.'
   reports:
     error:
       access_denied: Þú hefur ekki aðgang að upplýsingum um þennan aðila
@@ -332,6 +332,23 @@ is:
     no_primary_course: Prófaðu námskeið í Kóðastúdíóinu
     choose_next_course: Prófaðu Kóðastúdíóið með því að velja námskeið hér fyrir neðan
     print_certificate: Prenta skírteini
+    announcement_title: Tilkynningar
+    announcement_view_all: Skoða allt
+    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+    announcement_button: Læra meira
+    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: Lærðu í Kóðastúdíóinu
     description: Allir geta lært tölvunarfræði. Búðu til leiki, öpp og list með kóða.
@@ -349,7 +366,7 @@ is:
     help_from_html_old: Tæknifólk hjá Google, Microsoft, Facebook og Twitter aðstoðaði við gerð þessa kennsluefnis.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Öll réttindi áskilin.<br />Star Wars&#8482;  &copy; %{current_year} Disney og Lucasfilm. Öll réttindi áskilin.<br />Frozen&#8482; &copy; %{current_year} Disney. Öll réttindi áskilin.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Öll réttindi áskilin.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Öll réttindi áskilin.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Öll réttindi áskilin.<br/>The Amazing World of Gumball er vörumerki og &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Öll réttindi áskilin. Star Wars&#8482;  &copy; %{current_year} Disney og Lucasfilm. Öll réttindi áskilin. Frozen&#8482; &copy; %{current_year} Disney. Öll réttindi áskilin. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Öll réttindi áskilin. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Öll réttindi áskilin. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Öll réttindi áskilin. The Amazing World of Gumball er vörumerki og &copy; 2015 Cartoon Network.'
-    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
+    code_from_html: 'Code.org notar p5.play, sem er undir <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1 leyfinu</a>.'
     powered_by_aws: Knúið af Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE merkið og Hour of Code&reg; eru vörumerki Code.org.'
     copyright: Höfundarréttur
@@ -455,10 +472,10 @@ is:
       title: Minecraft
       body: Kannaðu Minecraft heim með kóða.
     unplugged:
-      title: Unplugged Lessons
-      audience: Ages 6+
-      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
-      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
+      title: Verkefni án tölvu
+      audience: Aldur 6+
+      body: Við höfum sett saman lista yfir verkefni unnin án tölvu sem hægt er að nota í kennslustofunni. Nú er hægt að kenna grundvallaratriði tölvunarfræðinnar hvort sem tölvur eru til staðar eða ekki í kennslustofunni. Reyndu að nota verkefnin sem sjálfstæð námskeið eða sem aukaefni fyrir námskeið í tölvunarfræði.
+      body_short: Prófaðu verkefni án tölvu, ef engin tölva er til staðar.
   gallery:
     students_drew_these_with_code: Nemendur teiknuðu þetta með kóða!
     students_made_these_with_code: Nemendur gerðu þetta með forritun!
@@ -502,11 +519,11 @@ is:
     wrong_body: Takk fyrir að senda inn svar
     correct_title: Takk fyrir
     correct_body: Takk fyrir að senda inn svar
-    unsubmit-title: Unsubmit your assessment
-    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
-    submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
-    submit-complete-title: Submit your assessment
+    unsubmit-title: Dragðu skil tilbaka
+    unsubmit-body: Með því að draga skil til baka þá verða tími og dagsetning endurstillt. Ertu viss um þetta?
+    submit-incomplete-title: Sendu inn efni til mats
+    submit-incomplete-body: Þú átt eftir að klára nokkrar spurningar. Þú getur ekki farið inn í verkefni og breytt þeim eftir að skil hafa verið staðfest. Ertu viss um þetta?
+    submit-complete-title: Sendu inn efni til mats
     submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Ófullnægjandi lausn
@@ -598,6 +615,9 @@ is:
     share: Deila leik
     share_title: Deila verkefninu
     share_copy_link: 'Afrita tengilinn:'
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Loka
     more: Meira
     name: Nafn
@@ -637,7 +657,21 @@ is:
           other: Annað
         detail: Vinsamlegast lýstu efninu sem þú ert að tilkynna eins nákvæmlega og unnt er.
         acknowledge: 'Með því að senda inn þessar upplýsingar, staðfestir þú að þær megi nota í samræmi við %{link_start_privacy}Persónuverndarstefnu%{link_end} og %{link_start_tos}Þjónustuskilmála%{link_end}'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
   components:
     icon_library:
       search_placeholder_text: Leita að tákni...
       no_icons_found: Engin tákn fundust
+  flex_category:
+    required: Yfirlit
+    content: Content
+    practice: Teacher Practices

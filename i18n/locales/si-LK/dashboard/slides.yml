@@ -3,7 +3,7 @@ si:
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: "Welcome to your first hour of code! Let's dive right into your first taste of programming."
+        text: hour of code වැඩසටහන සදහා ඔබව සාදරයෙන් පිළිගනිමු.
       2:
         image: notes/hoc1_2.jpg
         text: "We'll be using Blockly, a visual programming language where you drag and drop blocks to write code."

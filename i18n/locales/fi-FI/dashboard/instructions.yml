@@ -378,9 +378,7 @@ fi:
       4-5 Nested Loops 2_instruction: 'Laita tämä silmukka toisen silmukan sisään ja piirrä 10 kolmiota. Tätä kutsutaan sisäkkäiseksi silmukaksi.  '
       4-5 Nested Loops 3_instruction: "Create a sun by nesting the starter code in\nanother loop.\\r\n\\r\nTo get this cool design with a hollow center, you'll\nneed to jump forward by the length of the triangle before turning."
       4-5 Nested Loops 5_instruction: Liitä annettu koodi silmukkaan. Tee tuulimylly.
-      4-5 Nested Loops 6_instruction: |
-        Can you draw a hexagon by looping the triangle
-        code?
+      4-5 Nested Loops 6_instruction: Osaatko piirtää kuusikulmion kolmiokoodia toistamalla?
       4-5 Nested Loops 7_instruction: "Toista tämä kuvio 10 kertaa.\\r\n\\r\nKuinka monta astetta sinun on käännyttävä joka toistolla?"
       4-5 Nested Loops 8_instruction: "Toista tämä kuvio 6 kertaa.\\r\n\\r\nKuinka monta astetta sinun on käännyttävä joka toistolla? "
       4-5 Nested Loops 9_instruction: Piirrä alligaattorin suuhun hampaat!
@@ -421,6 +419,9 @@ fi:
         sign in to test applab levels (By design, applab levels only work if signed
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script).
+      allthethings_U3 - Simple Drawing - Rectangle Width and Height_instruction: |
+        Do
+        This
       App Lab test_instruction: ehto
       Applab allthethings onRecordEvent_instruction: |
         Please sign in to test applab
@@ -890,43 +891,21 @@ fi:
       Course 4 2_instruction: Juuri nyt mehiläinen haluaa vain mettä. Muista, kaikki esineet eivät ole kukkia, joten tarkista, että keräät mettä vain kukista.
       Course 4 Artist 1_instruction: 'Auta minua laatikon piirtämisessa. (Jokainen viiva on 200 kuvapistettä pitkä) '
       Course 4 Artist 10_instruction: "Click here to see the full instructions again!\\r\n\\r\nHere\nis the code for an interesting shape.  What happens when you repeat it multiple\ntimes, turning between each iteration?   Notice that the turns in this shape\nadd up to 420 degrees, which means that when your artist is done drawing,\nit will be facing a different direction than when you started.  That new direction\nis exactly 60 degrees to the right of where you began."
-      Course 4 Artist 11_instruction: |
-        Now for a challenge!  Feel free to use trial
-        and error. You are not expected to get the image perfect the first time.   Want
-        to see more hints?  Click here!
-      Course 4 Artist 12_instruction: "Want a second peek at the inspiration design\nor the hints?  Click here!\\r\n\\r\nOtherwise, make a design all your own!"
-      Course 4 Artist 13_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can design anything you want!
-      Course 4 Artist 2_instruction: |
-        Can you use a loop to draw the greyed out square?  (Each
-        side is 300px long)
-      Course 4 Artist 20_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can create whatever you want!
-      Course 4 Artist 3_instruction: |
-        Try to figure out what happens if you run this
-        code (or press "Run" to test it). Then, repeat it enough times to complete
-        the drawing.
-      Course 4 Artist 4_instruction: |
-        How many degrees are in a circle?  Fill in
-        the repeat block with that number to create a circle of colors.
-      Course 4 Artist 5_instruction: |
-        Draw the other half of this design so it's
-        symmetrical. The triangles are equilateral and are 50 pixels long. Hint: You
-        may have to run the code several times to figure out all of the blocks that
-        need to be added.
-      Course 4 Artist 6_instruction: "Complete the code to draw these triangles.  \\r\n\\r\nEach\nequilateral triangle has sides of 100 pixels. "
+      Course 4 Artist 11_instruction: Tässäpä haastetta! Kokeile vapaasti yrittämällä ja erehtymällä. Sinun ei tarvitse onnistua täydellisesti ensimmäisellä kerralla. Haluatko nähdä lisää vinkkejä? Klikkaa tästä!
+      Course 4 Artist 12_instruction: "Haluatko kurkistaa uudelleen suunnitteluapuun tai vinkkeihin? Klikkaa tästä!\\r\n\\r\nJollet, tee kuvio aivan itse!"
+      Course 4 Artist 13_instruction: Pelaatko edelleen? Tässä sinulle tyhjä maalauspohja, jolle voit piirtää, mitä haluat!
+      Course 4 Artist 2_instruction: 'Osaatko käyttää silmukkaa  harmaan neliön piirtämiseen? (Jokainen sivu on 300 kuvapistettä pitkä.)'
+      Course 4 Artist 20_instruction: Pelaatko edelleen? Tässä sinulle tyhjä maalauspohja, jolle voit luoda, mitä haluat!
+      Course 4 Artist 3_instruction: "Yritä päätellä, mitä tapahtuu, jos suoritat tämän koodin (tai kokeile painamalla 'suorita'-nappulaa). Toista se sitten niin monta kertaa, että saat piirroksen valmiiksi."
+      Course 4 Artist 4_instruction: Kuinka monta astetta ympyrä on? Kirjoita oikea numero toista-palikkaan ja saat aikaan väriympyrän.
+      Course 4 Artist 5_instruction: 'Piirrä tämän kuvion toinen puoli niin, että kuviosta tulee symmetrinen. Kolmiot ovat tasasivuisia ja 50 kuvapistettä pitkiä. Vinkki: Voi olla, että koodi pitää suorittaa monta kertaa, jotta kaikki lisättävät palikat selviävät.'
+      Course 4 Artist 6_instruction: "Täydennä koodi ja piirrä nämä kolmiot. \\r\n\\r\nJokaisen tasakylkisen kolmion sivut ovat 100 kuvapistettä pitkiä. "
       Course 4 Artist 7_instruction: |
         Now nest this loop inside another loop to draw
         10 triangles. This is called a nested loop. Hint: All 10 triangles complete
         a 360 degree rotation.  
-      Course 4 Artist 8_instruction: |
-        Draw this sun by looping this whole block of
-        code multiple times.
-      Course 4 Artist 8a_instruction: |
-        Remember this shape?  Now we're going to
-        let you build it without giving you any blocks to start!
+      Course 4 Artist 8_instruction: Toista koko koodipalikka useita kertoja ja piirrä aurinko.
+      Course 4 Artist 8a_instruction: Muistatko tämän muodon? Nyt saat rakentaa ilman valmiita aloituspalikoita!
       Course 4 Artist 9_instruction: "Loop this design 10 times and make sure to\nturn between each shape that's drawn. \\r\n"
       Course 4 Artist Binary 1_instruction: "Here's a function that takes a binary\nstring of 1's and 0's and instructs the artist to follow them from left\nto right, top to bottom.  The artist will fill-in the squares when it sees\na 1 and ignore the square when it sees a 0. \\r\n\\r\nRun this code to see how\nthe artist uses binary to draw this pattern."
       Course 4 Artist Binary 1a_instruction: "Here's a function that takes a binary\nstring of 1's and 0's and instructs the artist to follow them from left\nto right, top to bottom.  The artist will fill-in the squares when it sees\na 1 and ignore the square when it sees a 0. \\r\n\\r\nRun this code to see how\nthe artist uses binary to draw this pattern."
@@ -946,12 +925,10 @@ fi:
       Course 4 Artist Binary 6_instruction: |
         What is the shortest binary string that
         you can repeat to draw this image?
-      Course 4 Artist Binary 7_instruction: Finish this drawing.
-      Course 4 Artist Binary Free Play 2_instruction: |
-        Free Play: Here's a blank
-        canvas for you to draw on.  Have fun!
+      Course 4 Artist Binary 7_instruction: Tee tämä piirustus valmiiksi.
+      Course 4 Artist Binary Free Play 2_instruction: 'Vapaa leikki: Tässä sinulle tyhjä maalauspohja, jolle voit piirtää. Pidä hauskaa!'
       Course 4 Artist Binary Free Play 2a_instruction: "Here's a higher resolution\ncanvas to draw on - 16 pixels by 16 pixels!\\r\n\\r\nSee what happens when we\nstart to get creative with the bits?"
-      Course 4 Artist Binary Free Play 2b_instruction: Click here to see hints.
+      Course 4 Artist Binary Free Play 2b_instruction: Katso täältä vinkkejä.
       Course 4 Artist Binary Free Play_instruction: |
         Free Play: Draw whatever you
         like with binary!
@@ -968,9 +945,7 @@ fi:
       Course 4 Artist For Loops 1_instruction: |
         Use a repeat block to draw this triangle
         that is 50 pixels wide.
-      Course 4 Artist For Loops 10_instruction: |
-        Free Play Time! Have fun drawing
-        whatever you like with the blocks you have learned how to use
+      Course 4 Artist For Loops 10_instruction: Vapaan leikin aika! Pidä hauskaa ja piirrä, mitä haluat. Käytä niitä palikoita, joita olet oppinut käyttämään.
       Course 4 Artist For Loops 11_instruction: |
         Remember back in a previous stage
         when we used a variable to control the number of sides in a shape? We are
@@ -978,16 +953,8 @@ fi:
         with a triangle and adds one side at a time until it draws a decagon (10 sides).
         Each side should be 100 pixels long. 
       Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour knowledge of `for` loops and the `counter` variable, create this drawing\nwhere each shape has two more sides than the last.  Make sure that each side\nis 10 times as long as the number of sides in the polygon.\\r\n\\r\nVery little\nof the code has been provided for you."
-      Course 4 Artist For Loops 12_instruction: |
-        That looked pretty cool, but now
-        I'd like to draw each shape next to the last one. This time each side is
-        20 pixels. Use a jump block to jump forward 40 pixels after each shape. 
-      Course 4 Artist For Loops 13_instruction: |
-        Hmmm, those shapes are getting bigger
-        every time! Didn't we already solve this problem with variables? How can
-        we use the counter variable to make the sides smaller as there are more of
-        them? Instead of moving forward by a set amount, try moving forward (100 /
-        counter) pixels.
+      Course 4 Artist For Loops 12_instruction: 'Tuo näytti aika hienolta. Nyt haluaisin sinun piirtävän jokaisen muodon edellisen viereen. Tällä kertaa jokainen sivu on 20 kuvapistettä. Käytä hyppää-palikkaa ja hyppää jokaisen muodon jälkeen eteenpäin 40 kuvapistettä. '
+      Course 4 Artist For Loops 13_instruction: Hmm, muodothan kasvavat kerta kerralta! Tämän ongelman voi ratkaista variaabeleilla. Kuinka laskuri-variaabelia käytetään sivujen pienentämiseen, nyt kun sivuja on enemmän? Sen sijaan, että siirtyisit eteenpäin asettamalla luvun, yritä liikkua eteenpäin (100/laskuri) kuvapisteillä.
       Course 4 Artist For Loops 14_instruction: |
         If you turn a little bit more or
         less than you normally would for a shape, it creates a neat effect. Try using
@@ -1028,10 +995,8 @@ fi:
         Just one little change to the code
         from the last image can create this image. Can you figure out what that change
         is?
-      Course 4 Artist For Loops 9_instruction: |
-        Can you make a spiral? Move forward
-        from 1 to 75 pixels, increasing by 1 pixel each time.
-      Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to\nuse all of the things you've learned to create this image?\\r\n\\r\nNeed a\nhint? Click here."
+      Course 4 Artist For Loops 9_instruction: Osaatko tehdä kierteen? Siirry eteenpäin yhdestä 75 kuvapisteeseen, lisää joka kerralla 1 kuvapiste.
+      Course 4 Artist For Loops Challenge_instruction: "Keksitkö, kuinka voit käyttää kaikkia oppimiasi asioita tämän kuvan luomiseen? \\r\n\\r\nJos haluat vinkin, napsauta tästä."
       Course 4 Artist For Loops inspire_instruction: "Free-Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\\r\n\\r\nNeed a hint? Click here."
       Course 4 Artist Functions 1_instruction: |
         Can you draw a square that is 100
@@ -1498,11 +1463,11 @@ fi:
         counter variable each time the loop is run.
       Course 4 Play Labs For Loops 2_instruction: |
         This time, let's try counting
-        only the odd numbers from 1 to 100.
+        only the odd numbers from 1 to 101.
       Course 4 Play Labs For Loops 3_instruction: |
         If we count by larger numbers,
-        we count even higher in the same amount of time. Try making the dog count
-        from 10 up to 1000, adding 10 at a time.
+        we count even higher in the same amount of time. Try making Pirate Pegleg
+        count from 10 up to 1000, adding 10 at a time.
       Course 4 Play Labs For Loops 4_instruction: |
         Changing the increment can be
         helpful, but we're still counting linearly (each number is the same distance
@@ -1525,6 +1490,14 @@ fi:
       Course 4 Play Labs For Loops 7a_instruction: "Now we're getting somewhere!  What\nif we start counting how many times we can click The Wizard before Dog gets\nto 30?  \\r\n\\r\nFinish adding blocks to The Wizard so that every time he's\nclicked the variable \"clicked\" increases by one. You can ignore \"increment\"\nfor now.\\r\n\\r\nDog will start counting when you click \"Run\"."
       Course 4 Play Labs For Loops 8_instruction: "Now, help the actors move as they\ncount.  \\r\n\\r\nDog should move and count by adding 2 (counter + 2) each time.  Cat\nwill move and count by multiplying by 2 (counter * 2)  each time. Penguin\nwill move and count to the power of 2 (counter ^ 2) each time.  Who will reach\ntheir flag first?"
       Course 4 Play Labs For Loops 8a_instruction: "To finish our game, we need to\nbring back the \"increment\" variable!    Let's tie it to the level of the\ngame.\\r\n\\r\n1) Keep track of the number of times The Wizard is clicked.\\r\n2)\nIf The Wizard is clicked at least 10 times before Dog counts to 30, raise\n\"increment\" by 1 and start again.\\r\n3) If The Wizard does not get clicked\nat least 10 times, the game is over."
+      Course 4 Playlab For Loop Freeplay_instruction: |
+        Freeplay: Use everything you've
+        learned so far to make a game that includes a `for` loop!
+      Course 4 Playlab For Loops 4b_instruction: "Now, these two characters are going\nto race!  \\r\n\\r\nEach of them will move `counter` steps at a time, but their\ncounters will have different values because of the `for` loops.  \\r\n\\r\nCan\nyou change the increment in one of the loops so that the race is a tie?"
+      Course 4 Playlab For Loops 5b_instruction: |
+        Adjust the interval on these `for`
+        loops so that the two characters end in the exact same place.
+      Course 4 Playlab For Loops 6b_instruction: "Edit this `for` loop to create\na game that's fun for you to play!\\r\n\\r\nPress \"Run\" and click Madame\nUnicorn four times to win. "
       Course 4 SCF 1_instruction: |
         Use the suggested functions to draw four rows
         of hexagons. Notice how our even numbered rows are shifted to the right?
@@ -1533,7 +1506,7 @@ fi:
         nectar with the fewest blocks possible?
       Course 4 SCF 1b_instruction: |
         Can you figure out how to collect all of this
-        nectar with the fewest blocks possible?
+        honey with the fewest blocks possible?
       Course 4 SCF 2_instruction: |
         Use what you learned in the previous level to
         draw an image like this. Note: The code becomes more simple if you incorporate
@@ -1601,6 +1574,13 @@ fi:
         Here's a program that looks pretty
         similar to what you've been writing, but may behave quite differently. You'll
         want to stop and discuss with the class before moving on.
+      CSD U3 Boolean Modify_instruction: |
+        Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Boolean Predict_instruction: |
+        What do you think this code will do when
+        it is run? Predict what each console.log() command will print, then run the
+        program to check your predictions.
       CSD U3 Draw Loop Discuss_instruction: |
         Here's a program that looks pretty
         similar to what you've been writing, but may behave quite differently. You'll
@@ -1611,6 +1591,12 @@ fi:
         to generate some of the inputs?You'll want to stop and discuss with the class
         before moving on.
       CSD U3 Frame Rate_instruction: "Slow down Gamelab Gary's animation with frameRate()"
+      CSD U3 Keypress Boolean_instruction: |
+        Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Keypress Watchers_instruction: |
+        Modify the code so that all of the console.log
+        commands print true
       CSD U3 Random Animation_instruction: |
         Use randomNumber() to animate Gary's
         mouth.
@@ -1629,9 +1615,9 @@ fi:
         Using console.log() write a program that
         randomly returns a number in a range you define.
       CSD U3 Random Width Height_instruction: |
-        Pick a shape function and use calls
-        to randomNumber() in place of one or more of the parameters. Maker sure you
-        run it a few times so you can see the effect of randomization.
+        Pick a shape block and use calls to
+        randomNumber() in place of one or more of the parameters. Maker sure you run
+        it a few times so you can see the effect of randomization.
       CSD U3 Simple Drawing - Animation 2_instruction: |
         Use randomNumber() on the
         x position and width of your cloud ellipses to introduce a bit of animation.
@@ -1658,6 +1644,9 @@ fi:
       CSD U3 Variables CHALLENGE gamelab gary_instruction: |
         Use variables to animate
         Game Lab Gary
+      CSD U3 Variables create and assign_instruction: |
+        Create and assign size in
+        a single line of code.
       CSD U3 Variables draw loop newVars_instruction: |
         Extend this project to create
         your own random art visualization with variables.
@@ -1669,10 +1658,28 @@ fi:
         Assign the variables x1 and y1
         random values inside the draw loop and use them to control where the square
         is drawn.
+      CSD U3 Variables eyeBrows_instruction: |
+        Predict what will happen when you move
+        the assignment of eyeSize inside the draw loop. Then try it out
       CSD U3 Variables Initialize_instruction: |
         Predict: What will get displayed
         in the console?
       CSD U3 Variables Intro_instruction: 'Create your own variable '
+      CSD U3 Variables make a square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
+      CSD U3 Variables multiple assignments_instruction: |
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
+      CSD U3 Variables naming rules_instruction: |
+        Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables random assignment_instruction: |
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
+      CSD U3 Variables random draw loop_instruction: |
+        Predict what will happen when
+        you move the assignment of eyeSize inside the draw loop. Then try it out
       CSD U3 Variables random drawing exemplar_instruction: |
         Check out this example
         randomized drawing.
@@ -1694,9 +1701,24 @@ fi:
       CSD U3 Variables Square_instruction: |
         Change the value "size" initialized
         to make a larger square.
+      CSD U3 Variables TEMPLATE square_instruction: |
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
       CSD U3 Variables use value rect_instruction: |
         Predict: What will get displayed
         in the console?
+      CSD U3 Variables write_instruction: |
+        Use the write block to display the value
+        of size
+      CSD U3 Variables2 expressions in commands_instruction: |
+        Use expressions inside
+        a drawing command
+      CSD U3 Variables2 expressions in variables_instruction: |
+        Assign the value of
+        each expression to a variable and console.log that variable.
+      CSD U3 Variables2 expressions_instruction: |
+        Use console.log to display the
+        results of each expression. Then create your own.
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -2805,6 +2827,9 @@ fi:
         you don't know which one! Be careful not to collect nectar from a purple
         flower if it doesn't have any. Check if the nectar is equal to 1 by using
         the if block.
+      Rocket Height Course A_instruction: |
+        Follow the Design Recipe to create a function
+        rocket-height.
       Ryan - 4-5 Bee Conditionals 2_instruction: Mehiläinen haluaa mettä juuri nyt. Kaikki kohteet eivat ole kukkkia, tarkistapa siis JOKAISEN PILVEN alta, ettei siellä piileskele kukkaa. Jos löydät kukan, voit kerätä meden.
       Ryan - Bee Conditionals_instruction: |
         The bee only wants nectar right now.
@@ -2869,6 +2894,14 @@ fi:
         Only one last direction to worry about!
         Create a "safe-down?" function and update the "on-screen?" function so
         that it checks up, down, left, and right.
+      sample1_instruction: "Our adventurer wants to collect gems.  But she can only\nuse 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she can\nusing just 4 blocks?"
+      sample2_instruction: |
+        Use what you've learned to help bee gather all of this
+        honey using only 4 blocks.
+      sample3_instruction: Now you can help bee make all of the honey.
+      sample4_instruction: "Our adventurer has found a stash of coins in this cave.\\r\n\\r\nCan\nyou help her grab as many as she can using just 7 blocks?"
+      sample5_instruction: Help bee make all of the honey.
+      sample6_instruction: 'Challenge: Help bee make all of the honey.'
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
@@ -3488,13 +3521,17 @@ fi:
       U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
       U3 - Simple Drawing - Comments_instruction: Do this
       U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
+      U3 - Simple Drawing - Fill_instruction: Do This
       U3 - Simple Drawing - No Fill_instruction: Do this
       U3 - Simple Drawing - Order of Blocks_instruction: Do this
+      U3 - Simple Drawing - Oval_instruction: Do This
       U3 - Simple Drawing - Personal Drawing_instruction: DO This
+      U3 - Simple Drawing - Rectangle Width and Height_instruction: Do This
       U3 - Simple Drawing - Rectangle_instruction: Do This
       U3 - Simple Drawing - regular polygon_instruction: Do this
       U3 - Simple Drawing - Road Ellipse_instruction: Do This
       U3 - Simple Drawing - Road Rects and Color_instruction: Do This
+      U3 - Simple Drawing - Simple Shape Drawing_instruction: Do This
       U3 - Simple Drawing - Stroke and Stroke Weight_instruction: Do this
       U3 - Simple Drawing - text_instruction: Do This
       U3 - Simple Drawing - X and Y values_instruction: Do This
@@ -3528,6 +3565,16 @@ fi:
       U3 - Simulation - Template_instruction: |
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
+      U3 - Sprites - Intro Sprites_instruction: Do This
+      U3 - Sprites and Mod - Create  and Draw Sprite_instruction: Do This
+      U3 - Sprites and Mod - Mouse Width and Height_instruction: Do this
+      U3 - Sprites and Mod - Mouse X and Y_instruction: Do this
+      U3 - Sprites and Mod - Rand Around Mouse_instruction: Do this
+      U3 - Sprites and Mod - Rand Shape Color_instruction: Do This
+      U3 - Sprites and Mod - Shape Color_instruction: Do This
+      U3 - Sprites and Mod - two sprites_instruction: Do This
+      U3 - Sprites and Mod - Wrap Many Squares_instruction: Do This
+      U3 - Sprites and Mod - X and Y Prop_instruction: Do This
       U3 - User Input - Save getText To Variable_instruction: |
         Save the age and name
         of the user in variables (Click to see full instructions)
@@ -3604,9 +3651,21 @@ fi:
       U3 Variables consolelog_instruction: |
         Use the write block to display the value
         of size
+      U3 Variables flower example_instruction: |
+        Change the value of petalSize multiple
+        times. How does it change your drawing?
+      U3 Variables gray square_instruction: |
+        Change the value of petalSize multiple
+        times. How does it change your drawing?
+      U3 Variables make a square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
       U3 Variables misconceptions try it_instruction: |
         Test out your predictions
         from the previous level.
+      U3 Variables randomize your square_instruction: |
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
       U3 Variables write_instruction: |
         Use the write block to display the value of
         size

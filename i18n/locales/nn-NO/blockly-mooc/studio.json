@@ -2,6 +2,8 @@
   "actor":"figur",
   "addCharacter":"legg til en",
   "addCharacterTooltip":"Tilføy en figur til scenen.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"legg til 10 poeng",
   "addPoints50":"legg til 50 poeng",
   "addPoints100":"legg til 100 poeng",

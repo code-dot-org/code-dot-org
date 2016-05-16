@@ -2,6 +2,8 @@
   "actor":"ойыншы",
   "addCharacter":"қосу",
   "addCharacterTooltip":"Сахнаға кейіпкер қосу.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"10 ұпай қосу",
   "addPoints50":"50 ұпай қосу",
   "addPoints100":"100 ұпай қосу",

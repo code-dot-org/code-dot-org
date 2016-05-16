@@ -2,6 +2,8 @@
   "actor": "aktör",
   "addCharacter": "ekle",
   "addCharacterTooltip": "Sahneye bir karakter ekleyin.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location.",
   "addPoints10": "10 puan ekle",
   "addPoints50": "50 puan ekle",
   "addPoints100": "100 puan ekle",
@@ -764,7 +766,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Sen 20 Fare Droids almak gerekir. İki veya daha fazla Fare Droids tek olsun her zaman eklemek için \"Fare Droid olsun\" olayı içinde \"bir fare Droid ekle\" komutunu kullanın.\n",
   "failedMultiplyCharactersTimeoutGotSome": "Tebrikler, fare Droids yapmak için kod eklendi. Bir sonraki bulmaca gitmek ya da 20 Fare Droids almak için tekrar deneyebilirsiniz. Onları daha ekleyerek kolaylaştırıyoruz deneyin! (Basın ve hızlı hareket etmek için klavye (veya ekran) tuşları basılı tutun.)",
   "failedChangeSettingTimeout": "Taşımak için üç Rebel Pilotlar alın.",
-  "failedChangeSettingSettings": "Bunu kendi oyunun haline getir. Bu bulmacayı geçmek için droidini değiştirmen ve onun süresini düzenlemen lazım.",
-  "addGoal": "add goal",
-  "addGoalTooltip": "Add a goal to the scene at the specified location."
+  "failedChangeSettingSettings": "Bunu kendi oyunun haline getir. Bu bulmacayı geçmek için droidini değiştirmen ve onun süresini düzenlemen lazım."
 }

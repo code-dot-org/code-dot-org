@@ -2,6 +2,8 @@
   "actor":"szereplő",
   "addCharacter":"adj hozzá egy",
   "addCharacterTooltip":"Adj hozzá egy karaktert a jelenethez.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"adj hozzá 10 pontot",
   "addPoints50":"adj hozzá 50 pontot",
   "addPoints100":"adj hozzá 100 pontot",

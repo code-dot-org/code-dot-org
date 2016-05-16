@@ -2,6 +2,8 @@
   "actor":"aktör",
   "addCharacter":"ekle",
   "addCharacterTooltip":"Sahneye bir karakter ekleyin.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"10 puan ekle",
   "addPoints50":"50 puan ekle",
   "addPoints100":"100 puan ekle",
