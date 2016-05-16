@@ -7,6 +7,7 @@ require 'digest'
 require 'sprockets-derailleur'
 
 module RakeUtils
+  alias_method :original_system, :system
 
   def self.system__(command)
     CDO.log.info command
@@ -51,6 +52,24 @@ module RakeUtils
       raise error, error.message, CDO.filter_backtrace([output])
     end
     status
+  end
+
+  # Alternate version of RakeUtils.rake which always streams STDOUT to the shell
+  # during execution.
+  def self.rake_stream_output(*args)
+    system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rake', *args
+  end
+
+  # Alternate version of RakeUtils.system which always streams STDOUT to the
+  # shell during execution.
+  def self.system_stream_output(*args)
+    command = command_(*args)
+    CDO.log.info command
+    system(command)
+    unless $?.exitstatus == 0
+      error = RuntimeError.new("'#{command}' returned #{status}")
+      raise error, error.message
+    end
   end
 
   def self.exec_in_background(command)
