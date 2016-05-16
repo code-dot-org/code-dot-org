@@ -27,7 +27,6 @@ var dom = require('../dom');
 var experiments = require('../experiments');
 
 var actions = require('./actions');
-var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
@@ -208,12 +207,11 @@ GameLab.prototype.init = function (config) {
     this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
   }
 
-  this.studioApp_.setCommonPageConstants(config);
-  this.studioApp_.reduxStore.dispatch(setPageConstants({
+  this.studioApp_.setPageConstants(config, {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: true
-  }));
+  });
 
   // Push project-sourced animation metadata into store
   if (typeof config.initialAnimationMetadata !== 'undefined') {

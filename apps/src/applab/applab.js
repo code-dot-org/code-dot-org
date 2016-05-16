@@ -740,10 +740,8 @@ Applab.init = function (config) {
     }
   }.bind(this);
 
-  studioApp.setCommonPageConstants(config);
-
   // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setPageConstants({
+  studioApp.setPageConstants(config, {
     channelId: config.channel,
     visualizationHasPadding: !config.noPadding,
     isDesignModeHidden: !!config.level.hideDesignMode,
@@ -756,14 +754,12 @@ Applab.init = function (config) {
     showDebugConsole: showDebugConsole,
     showDebugWatch: false,
     playspacePhoneFrame: !config.share && experiments.isEnabled('phoneFrame')
-  }));
+  });
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(
     Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
-  // TODO (brent) hideSource should probably be part of initialLevelProps
   Applab.reactInitialProps_ = {
-    hideSource: !!config.hideSource,
     onMount: onMount
   };
 
