@@ -96,10 +96,10 @@ module ScriptConstants
   end
 
   def self.teacher_dashboard_name(script)
-    if script == ScriptConstants::MINECRAFT_NAME
-      ScriptConstants::MINECRAFT_TEACHER_DASHBOARD_NAME
-    elsif script == ScriptConstants::HOC_NAME
-      ScriptConstants::HOC_TEACHER_DASHBOARD_NAME
+    if script == MINECRAFT_NAME
+      MINECRAFT_TEACHER_DASHBOARD_NAME
+    elsif script == HOC_NAME
+      HOC_TEACHER_DASHBOARD_NAME
     else
       script
     end
