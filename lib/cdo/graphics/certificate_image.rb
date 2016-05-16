@@ -88,7 +88,8 @@ def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=
 end
 
 def prefilled_title_course?(course)
-  ScriptConstants.script_in_category?(:hoc, course) || ScriptConstants.script_in_category?(:twenty_hour, course)
+  ScriptConstants.script_in_category?(:hoc, course) ||
+      ScriptConstants.script_in_category?(:twenty_hour, course)
 end
 
 # Specify a fallback certificate title for a given non-HoC course ID. As of HoC
