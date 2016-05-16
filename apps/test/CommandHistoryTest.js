@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from './util/configuredChai';
 
 describe("CommandHistory", function () {
   var CommandHistory = require('@cdo/apps/CommandHistory');

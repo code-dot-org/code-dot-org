@@ -1,4 +1,6 @@
-var assert = require('chai').assert;
+// Note: Putting ES6 in this test file breaks the test build, for reasons I
+// haven't figured out yet (bbuchanan).  It's got something to do with require-globify.
+var assert = require('../../util/configuredChai').assert;
 var testUtils = require('../../util/testUtils');
 var testBlockFactory = require('./testBlockFactory');
 

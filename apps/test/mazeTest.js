@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from './util/configuredChai';
 var Maze = require('@cdo/apps/maze/maze');
 var MazeMap = require('@cdo/apps/maze/mazeMap');
 var DirtDrawer = require('@cdo/apps/maze/dirtDrawer');

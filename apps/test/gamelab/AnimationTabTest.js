@@ -1,5 +1,5 @@
 var animationTabModule = require('@cdo/apps/gamelab/AnimationTab/animationTabModule');
-var expect = require('chai').expect;
+import {expect} from '../util/configuredChai';
 import {ADD_ANIMATION_AT} from '@cdo/apps/gamelab/animationModule';
 
 describe('AnimationTab', function () {

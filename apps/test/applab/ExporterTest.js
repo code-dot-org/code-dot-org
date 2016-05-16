@@ -1,5 +1,5 @@
 /* global Promise dashboard */
-import {assert} from 'chai';
+import {assert} from '../util/configuredChai';
 import sinon from 'sinon';
 var testUtils = require('../util/testUtils');
 var assetPrefix = require('@cdo/apps/assetManagement/assetPrefix');

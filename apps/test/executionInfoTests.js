@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from './util/configuredChai';
 
 var ExecutionInfo = require('@cdo/apps/maze/executionInfo');
 

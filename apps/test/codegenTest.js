@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from './util/configuredChai';
 var codegen = require('@cdo/apps/codegen');
 
 describe("codegen", function () {
