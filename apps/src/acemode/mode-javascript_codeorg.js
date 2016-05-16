@@ -49,9 +49,19 @@ exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
           },
         };
         // Mark all of our blocks as predefined so that linter doesnt complain about
-        // using undefined variables
+        // using undefined variables. Only mark blocks that appear to be global functions
+        // or properties, because adding items here will cause "already defined" lint
+        // errors if the same name is used by student code
         dropletUtils.getAllAvailableDropletBlocks(dropletConfig).forEach(function (block) {
-          newOptions.predef[block.func] = false;
+          // Don't use block.func if there is:
+          // (1) a block property override OR
+          // (2) a modeOptionName that starts with a wildcard (belongs to an object) OR
+          // (3) a dot in the block.func name (a member of a global or other object)
+          if (!block.block &&
+              (!block.modeOptionName || block.modeOptionName[0] !== '*') &&
+              (-1 === block.func.indexOf('.'))) {
+            newOptions.predef[block.func] = false;
+          }
         });
 
         if (dropletConfig.additionalPredefValues) {
