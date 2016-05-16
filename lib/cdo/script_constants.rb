@@ -82,16 +82,8 @@ module ScriptConstants
     minecraft: [MINECRAFT_NAME]
   }
 
-  # Responds to methods of the format <category>? (where category is one of the
-  # keys to CATEGORIES, defind above). Takes a single argument and returns whether
-  # or not the script with that name is in that category.
-  def self.method_missing(symbol, *args)
-    method = symbol.to_s
-    category = method[0..-2].to_sym
-    return CATEGORIES[category].include? args.first if args.length == 1 &&
-      method[-1] == '?' &&
-      CATEGORIES.include?(category)
-    super
+  def self.script_in_category?(category, script)
+    return CATEGORIES[category].include? script
   end
 
   def self.categories(script)
