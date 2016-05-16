@@ -49,6 +49,7 @@ var createStore = require('../redux').createStore;
 var Provider = require('react-redux').Provider;
 var reducers = require('./reducers');
 var actions = require('./actions');
+import { changeScreen } from './redux/screens';
 var changeInterfaceMode = actions.changeInterfaceMode;
 var setInstructionsInTopPane = actions.setInstructionsInTopPane;
 var setPageConstants = require('../redux/pageConstants').setPageConstants;
@@ -983,6 +984,16 @@ Applab.reset = function (first) {
  */
 function runButtonClickWrapper(callback) {
   $(window).trigger('run_button_pressed');
+
+  const defaultScreenId = elementUtils.getDefaultScreenId();
+  // Reset our design mode screen to be the default one, so that after we reset
+  // we'll end up on the default screen rather than whichever one we were last
+  // editing.
+  studioApp.reduxStore.dispatch(changeScreen(defaultScreenId));
+  // Also set the visualization screen to be the default one before we serialize
+  // so that our serialization isn't changing based on whichever screen we were
+  // last editing.
+  Applab.changeScreen(defaultScreenId);
   Applab.serializeAndSave(callback);
 }
 
@@ -1018,7 +1029,6 @@ Applab.runButtonClick = function () {
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
   }
-
 
   if (studioApp.editor) {
     logToCloud.addPageAction(logToCloud.PageAction.RunButtonClick, {
@@ -1175,9 +1185,9 @@ Applab.execute = function () {
 };
 
 Applab.beginVisualizationRun = function () {
-  // Set focus on the default screen so key events can be handled
-  // right from the start without requiring the user to adjust focus.
-  Applab.loadDefaultScreen();
+  // Call change screen on the default screen to ensure it has focus
+  var defaultScreenId = Applab.getScreens().first().attr('id');
+  Applab.changeScreen(defaultScreenId);
 
   Applab.running = true;
   $('#headers').addClass('dimmed');
@@ -1540,8 +1550,9 @@ Applab.activeScreen = function () {
 };
 
 /**
- * Changes the active screen by toggling all screens in divApplab to be non-visible,
- * unless they match the provided screenId. Also focuses the screen.
+ * Changes the active screen for the visualization by toggling all screens in
+ * divApplab to be non-visible, unless they match the provided screenId. Also
+ * focuses the screen.
  */
 Applab.changeScreen = function (screenId) {
   Applab.getScreens().each(function () {
@@ -1559,11 +1570,6 @@ Applab.changeScreen = function (screenId) {
       applabTurtle.turtleSetVisibility(true);
     }
   }
-};
-
-Applab.loadDefaultScreen = function () {
-  var defaultScreenId = Applab.getScreens().first().attr('id');
-  Applab.changeScreen(defaultScreenId);
 };
 
 Applab.getScreens = function () {
