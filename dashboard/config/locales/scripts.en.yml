@@ -1916,3 +1916,8 @@ en:
           Introduction to Text Compression: Introduction to Text Compression
           Turtle Programming: Turtle Programming
           Introduction to Events: Introduction to Events
+        cspassessment:
+          title: CS Principles Culminating Assessment
+          description_short: Culminating
+          description: 'This 55-question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact. '
+          CS Principles Culminating Assessment: CS Principles Culminating Assessment
