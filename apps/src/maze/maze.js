@@ -612,10 +612,9 @@ Maze.init = function (config) {
   };
 
   // Push initial level properties into the Redux store
-  studioApp.setCommonPageConstants(config);
-  studioApp.reduxStore.dispatch(setPageConstants({
+  studioApp.setPageConstants(config, {
     hideRunButton: !!(level.stepOnly && !level.edit_blocks)
-  }));
+  });
 
   var visualizationColumn = (
     <MazeVisualizationColumn

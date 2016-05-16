@@ -209,7 +209,7 @@ Artist.prototype.init = function (config) {
   config.afterInject = _.bind(this.afterInject_, this, config);
 
   // Push initial level properties into the Redux store
-  this.studioApp_.setCommonPageConstants(config);
+  this.studioApp_.setPageConstants(config);
 
   var iconPath = '/blockly/media/turtle/' +
     (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');

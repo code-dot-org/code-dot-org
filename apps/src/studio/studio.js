@@ -2000,7 +2000,7 @@ Studio.init = function (config) {
     }
   };
 
-  studioApp.setCommonPageConstants(config);
+  studioApp.setPageConstants(config);
 
   var visualizationColumn = <StudioVisualizationColumn
     finishButton={!level.isProjectLevel}
