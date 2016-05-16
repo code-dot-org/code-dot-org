@@ -49,6 +49,7 @@ var createStore = require('../redux').createStore;
 var Provider = require('react-redux').Provider;
 var reducers = require('./reducers');
 var actions = require('./actions');
+import { changeScreen } from './redux/screens';
 var changeInterfaceMode = actions.changeInterfaceMode;
 var setInstructionsInTopPane = actions.setInstructionsInTopPane;
 var setPageConstants = require('../redux/pageConstants').setPageConstants;
@@ -549,6 +550,8 @@ Applab.init = function (config) {
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
+  config.runButtonClickWrapper = runButtonClickWrapper;
+
   Applab.channelId = config.channel;
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
@@ -745,6 +748,7 @@ Applab.init = function (config) {
     hideSource: !!config.hideSource,
     isDesignModeHidden: !!config.level.hideDesignMode,
     isEmbedView: !!config.embed,
+    isIframeEmbed: !!config.level.iframeEmbed,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isShareView: !!config.share,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
@@ -759,7 +763,8 @@ Applab.init = function (config) {
     showDebugConsole: showDebugConsole,
     showDebugWatch: false,
     localeDirection: studioApp.localeDirection(),
-    isDroplet: true
+    isDroplet: true,
+    playspacePhoneFrame: !config.share && experiments.isEnabled('phoneFrame')
   }));
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(
@@ -978,10 +983,20 @@ Applab.reset = function (first) {
  * Save the app state and trigger any callouts, then call the callback.
  * @param callback {Function}
  */
-studioApp.runButtonClickWrapper = function (callback) {
+function runButtonClickWrapper(callback) {
   $(window).trigger('run_button_pressed');
+
+  const defaultScreenId = elementUtils.getDefaultScreenId();
+  // Reset our design mode screen to be the default one, so that after we reset
+  // we'll end up on the default screen rather than whichever one we were last
+  // editing.
+  studioApp.reduxStore.dispatch(changeScreen(defaultScreenId));
+  // Also set the visualization screen to be the default one before we serialize
+  // so that our serialization isn't changing based on whichever screen we were
+  // last editing.
+  Applab.changeScreen(defaultScreenId);
   Applab.serializeAndSave(callback);
-};
+}
 
 /**
  * We also want to serialize in save in some other cases (i.e. entering code
@@ -1003,9 +1018,6 @@ Applab.runButtonClick = function () {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
-  if (!resetButton.style.minWidth) {
-    resetButton.style.minWidth = runButton.offsetWidth + 'px';
-  }
 
   studioApp.toggleRunReset('reset');
   if (studioApp.isUsingBlockly()) {
@@ -1018,7 +1030,6 @@ Applab.runButtonClick = function () {
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
   }
-
 
   if (studioApp.editor) {
     logToCloud.addPageAction(logToCloud.PageAction.RunButtonClick, {
@@ -1175,9 +1186,9 @@ Applab.execute = function () {
 };
 
 Applab.beginVisualizationRun = function () {
-  // Set focus on the default screen so key events can be handled
-  // right from the start without requiring the user to adjust focus.
-  Applab.loadDefaultScreen();
+  // Call change screen on the default screen to ensure it has focus
+  var defaultScreenId = Applab.getScreens().first().attr('id');
+  Applab.changeScreen(defaultScreenId);
 
   Applab.running = true;
   $('#headers').addClass('dimmed');
@@ -1540,8 +1551,9 @@ Applab.activeScreen = function () {
 };
 
 /**
- * Changes the active screen by toggling all screens in divApplab to be non-visible,
- * unless they match the provided screenId. Also focuses the screen.
+ * Changes the active screen for the visualization by toggling all screens in
+ * divApplab to be non-visible, unless they match the provided screenId. Also
+ * focuses the screen.
  */
 Applab.changeScreen = function (screenId) {
   Applab.getScreens().each(function () {
@@ -1559,11 +1571,6 @@ Applab.changeScreen = function (screenId) {
       applabTurtle.turtleSetVisibility(true);
     }
   }
-};
-
-Applab.loadDefaultScreen = function () {
-  var defaultScreenId = Applab.getScreens().first().attr('id');
-  Applab.changeScreen(defaultScreenId);
 };
 
 Applab.getScreens = function () {

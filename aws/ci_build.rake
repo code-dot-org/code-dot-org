@@ -176,20 +176,25 @@ file deploy_dir('rebuild') do
   touch deploy_dir('rebuild')
 end
 
-def stop_frontend(name, host, log_path)
-  # NOTE: The order of these prefers deploy-speed over user-experience. Stopping varnish first
-  #   immediately terminates connections to the backends so they stop immediately. Changing the
-  #   order to stop Dashboard and Pegasus first would drain the user connections before stopping
-  #   which can take a minutes. The Load Balancer has health-checks that will pull the instances
-  #   out of rotation and those checks can be directed at either varnish itself, the services through
-  #   varnish, or the services directly. So, changing the order here means evalulating whether or not
-  #   the ELB health-checks make sense to begin diverting traffic at the right time (vs. returning 503s)
+# Use the AWS-provided scripts to cleanly deregister a frontend instance from its load balancer(s),
+# with zero downtime and support for auto-scaling groups.
+# Raises a RuntimeError if the script returns a non-zero exit code.
+def deregister_frontend(host, log_path)
   command = [
-    'sudo service varnish stop',
-    'sudo service dashboard stop',
-    'sudo service pegasus stop',
+    "cd #{rack_env}",
+    'bin/deploy_frontend/deregister_from_elb.sh',
   ].join(' ; ')
 
+  RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>', log_path
+end
+
+# Use the AWS-provided script to cleanly re-register a frontend instance with its load balancer(s).
+# Raises a RuntimeError if the script returns a non-zero exit code.
+def reregister_frontend(host, log_path)
+  command = [
+    "cd #{rack_env}",
+    'bin/deploy_frontend/register_with_elb.sh',
+  ].join(' ; ')
   RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>>', log_path
 end
 
@@ -202,7 +207,7 @@ def upgrade_frontend(name, host)
     "cd #{rack_env}",
     'git pull --ff-only',
     'sudo bundle install',
-    'rake build',
+    'rake build'
   ]
   command = commands.join(' && ')
 
@@ -210,21 +215,22 @@ def upgrade_frontend(name, host)
 
   log_path = aws_dir "deploy-#{name}.log"
 
-  # Stop the frontend before running the commands so that the git pull doesn't modify files
-  # out from under a running instance. The rake build command will restart the instance.
-  stop_frontend name, host, log_path
-
   success = false
   begin
-    RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>', log_path
-    #HipChat.log "Upgraded <b>#{name}</b> (#{host})."
+    # Remove the frontend from load balancer rotation before running the commands,
+    # so that the git pull doesn't modify files out from under a running instance.
+    deregister_frontend host, log_path
+    RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>>', log_path
     success = true
+    reregister_frontend host, log_path
+    HipChat.log "Upgraded <b>#{name}</b> (#{host})."
   rescue
-    HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, removing from rotation.", color: 'red'
+    # The frontend is in an indeterminate state, and is not registered with the load balancer.
+    HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, and is currently out of the load balancer rotation.\n" +
+      "Re-deploy or manually run `~/#{rack_env}/bin/deploy_frontend/register_with_elb.sh` on this instance to place it back into service.",
+      color: 'red'
     HipChat.log "log command: `ssh gateway.code.org ssh production-daemon cat #{log_path}`"
     HipChat.log "/quote #{File.read(log_path)}"
-    # The frontend is in indeterminate state, so make sure it is stopped.
-    stop_frontend name, host, log_path
     success = false
   end
 
@@ -331,7 +337,7 @@ task :dashboard_unit_tests do
     with_hipchat_logging(name) do
       # Unit tests mess with the database so stop the service before running them
       RakeUtils.stop_service CDO.dashboard_unicorn_name
-      RakeUtils.rake 'db:schema:load'
+      RakeUtils.rake 'db:test:prepare'
       RakeUtils.rake 'test'
       RakeUtils.rake "seed:all"
       RakeUtils.start_service CDO.dashboard_unicorn_name

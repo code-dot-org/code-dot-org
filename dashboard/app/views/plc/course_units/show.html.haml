@@ -37,11 +37,14 @@
     %th
       Associated Module
     %th
+      Weight
+    %th
     - @course_unit.plc_evaluation_questions.each do |question|
       %tbody.question_section
         %tr
           %td
             = question.question
+          %td
           %td
           %td
           %td
@@ -56,12 +59,16 @@
               -if answer.plc_learning_module.try(:is_required?)
                 %span.required REQUIRED
             %td
+              #{answer.weight}
+            %td
         %tr.cloneableAnswerRow
           %td
           %td
             = text_field_tag ''
           %td
             = select_tag '', options_for_select(options_with_learning_module_names_and_required_tag(@course_unit)), include_blank: ''
+          %td
+            = text_field_tag '', '1', style: 'width: 20px'
           %td
         %tr.new_answer_button_row{question_id: question.id}
           %td

@@ -141,7 +141,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
           testData.runBeforeClick(assert);
         }
 
-        studioApp.runButtonClickWrapper.call(studioApp, studioApp.runButtonClick);
+        $("#runButton").click();
 
       }, timeout);
       // waitLong();
