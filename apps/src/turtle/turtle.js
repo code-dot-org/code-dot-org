@@ -218,12 +218,6 @@ Artist.prototype.init = function (config) {
   ReactDOM.render(
     <Provider store={this.studioApp_.reduxStore}>
       <AppView
-          assetUrl={this.studioApp_.assetUrl}
-          isEmbedView={!!config.embed}
-          isShareView={!!config.share}
-          hideSource={!!config.hideSource}
-          noVisualization={false}
-          isRtl={this.studioApp_.isRtl()}
           visualizationColumn={visualizationColumn}
           onMount={this.studioApp_.init.bind(this.studioApp_, config)}
       />
