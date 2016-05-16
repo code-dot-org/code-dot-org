@@ -303,6 +303,7 @@ function showWarnings(config) {
     isSignedIn: config.isSignedIn,
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
+    onTooYoung: config.shareWarningInfo.onTooYoung,
   });
 }
 
@@ -596,8 +597,9 @@ StudioApp.prototype.init = function (config) {
   }
 };
 
-StudioApp.prototype.startIFrameEmbeddedApp = function (config) {
+StudioApp.prototype.startIFrameEmbeddedApp = function (config, onTooYoung) {
   if (this.share && config.shareWarningInfo) {
+    config.shareWarningInfo.onTooYoung = onTooYoung;
     showWarnings(config);
   } else {
     this.runButtonClick();
