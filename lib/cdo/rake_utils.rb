@@ -6,9 +6,9 @@ require 'cdo/hip_chat'
 require 'digest'
 require 'sprockets-derailleur'
 
-module RakeUtils
-  alias_method :original_system, :system
+alias original_system system
 
+module RakeUtils
   def self.system__(command)
     CDO.log.info command
     system_status_output__ "#{command} 2>&1"
