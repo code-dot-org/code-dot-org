@@ -5,6 +5,11 @@ import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 
 export const VISUALIZATION_DIV_ID = 'visualization';
 
+/**
+ * @param {!Object} state - Redux state from any app.
+ * @returns {boolean} TRUE if we expect to apply responsive styles to layout
+ *          elements in the current view.
+ */
 export function isResponsiveFromState(state) {
   return !state.pageConstants.isEmbedView && !state.pageConstants.hideSource;
 }
