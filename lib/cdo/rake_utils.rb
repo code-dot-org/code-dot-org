@@ -65,7 +65,7 @@ module RakeUtils
   def self.system_stream_output(*args)
     command = command_(*args)
     CDO.log.info command
-    system(command)
+    original_system(command)
     unless $?.exitstatus == 0
       error = RuntimeError.new("'#{command}' returned #{status}")
       raise error, error.message
