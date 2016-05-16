@@ -1,0 +1,15 @@
+name 'CSPFinal_Question_11'
+right 'I and II only'
+wrong 'I and III only'
+wrong 'II and III only'
+wrong 'I, II, and III'
+markdown <<MARKDOWN
+A city is redesigning their traffic light system and has decided to use simulation software to test various timing configurations.  Which of the following are reasons to use simulation software in this context?
+
+    I. The simulation will allow the city to quickly gain insight to a variety of conditions that affect traffic.
+
+    II. Simulating various configurations allows the city to find the best one without inconveniencing drivers.
+
+    III. Drivers can share feedback about various traffic light configurations.
+
+MARKDOWN
