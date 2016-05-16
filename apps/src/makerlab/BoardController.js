@@ -117,6 +117,26 @@ BoardController.prototype.reset = function () {
   });
 };
 
+BoardController.prototype.pinMode = function (pin, modeConstant) {
+  this.board_.pinMode(pin, modeConstant);
+};
+
+BoardController.prototype.digitalWrite = function (pin, value) {
+  this.board_.digitalWrite(pin, value);
+};
+
+BoardController.prototype.digitalRead = function (pin, callback) {
+  return this.board_.digitalRead(pin, callback);
+};
+
+BoardController.prototype.analogWrite = function (pin, value) {
+  this.board_.analogWrite(pin, value);
+};
+
+BoardController.prototype.analogRead = function (pin, callback) {
+  return this.board_.analogRead(pin, callback);
+};
+
 function connect() {
   return getDevicePort().then(connectToBoard);
 }
