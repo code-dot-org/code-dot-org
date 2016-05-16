@@ -1,7 +1,7 @@
 import GameButtons, {ResetButton} from '../templates/GameButtons';
+import IFrameEmbedOverlay from './IFrameEmbedOverlay';
 
 var Radium = require('radium');
-var studioApp = require('../StudioApp').singleton;
 var Visualization = require('./Visualization');
 var CompletionButton = require('./CompletionButton');
 var PlaySpaceHeader = require('./PlaySpaceHeader');
@@ -12,7 +12,6 @@ import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 var applabConstants = require('./constants');
 var connect = require('react-redux').connect;
 var classNames = require('classnames');
-var experiments = require('../experiments');
 
 var styles = {
   nonResponsive: {
@@ -28,22 +27,6 @@ var styles = {
     marginRight: 'auto',
     textAlign: 'center'
   },
-  overlay: {
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    position: 'absolute',
-    top: 68,
-    left: 16,
-    width: applabConstants.APP_WIDTH,
-    height: applabConstants.APP_HEIGHT,
-    zIndex: 5,
-    textAlign: 'center',
-    cursor: 'pointer',
-  },
-  playButton: {
-    color: 'white',
-    fontSize: 200,
-    lineHeight: applabConstants.APP_HEIGHT+'px',
-  },
   resetButtonWrapper: {
     position: 'absolute',
     bottom: 5,
@@ -51,14 +34,6 @@ var styles = {
     width: '100%',
   },
 };
-
-var IframeOverlay = Radium(function (props) {
-  return (
-    <div style={[styles.overlay]} onClick={() => studioApp.startIFrameEmbeddedApp()}>
-      <span className="fa fa-play" style={[styles.playButton]} />
-    </div>
-  );
-});
 
 /**
  * Equivalent of visualizationColumn.html.ejs. Initially only supporting
@@ -87,7 +62,7 @@ var ApplabVisualizationColumn = React.createClass({
   render: function () {
     let visualization = [
       <Visualization key="1"/>,
-      this.props.isIframeEmbed && !this.props.isRunning && <IframeOverlay key="2"/>
+      this.props.isIframeEmbed && !this.props.isRunning && <IFrameEmbedOverlay key="2"/>
     ];
     // Share view still uses image for phone frame. Would eventually like it to
     // use same code
