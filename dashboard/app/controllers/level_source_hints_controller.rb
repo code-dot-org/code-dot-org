@@ -201,7 +201,7 @@ class LevelSourceHintsController < ApplicationController
 
   def add_hint_access
     redirect_url = params[:redirect]
-    user = User.where(email: params[:user_email]).first
+    user = User.find_by_email_or_hashed_email(params[:user_email])
     if user
       user.update_attribute(:hint_access, true)
       redirect_to redirect_url, notice: "User hint access added to #{params[:user_email]}"

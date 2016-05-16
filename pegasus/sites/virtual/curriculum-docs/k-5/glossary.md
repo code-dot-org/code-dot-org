@@ -58,20 +58,7 @@ lessons = DB[:cdo_glossary_csf]
 # Vocabulary
 
 
-<table border="0" style="vertical-align:top;">
-  <colgroup>
-    <col width="18%">
-    <col width="65%">
-    <col width="20%">
-  </colgroup>
-  <thead>
-    <tr style="border-style: none none solid none;" >
-      <th style="text-align: left;">Vocabulary</th>
-      <th style="text-align: left;">Definition</th>
-      <th style="text-align: left;">Location</th>
-    </tr>
-  </thead>
-  
+
    <% lessons.each_with_index do |lesson, index|
     	# Get the course number formatted well
      
@@ -93,15 +80,12 @@ lessons = DB[:cdo_glossary_csf]
 	#end
   %>
   
-  <tbody style="border-style: none none solid none;" >
-    <tr style="border-style: none none solid none;" >
-      <td style="border-style: none none solid none;" > <h3 style="line-height: 150%;"><%= lesson[:theWord_s] %><br/> </td>
-      <td style="border-style: none none solid none; padding: 0 20px 0 20px" > <%= lesson[:defined_t] %>  </td>
-      <td style="border-style: none none solid none;" ><i><%= lesson[:locations_t] %></i> </td>
-    </tr>
-    <% end %>
-</table> 
+<h3><%= lesson[:theWord_s]%></h3>
+<small style="line-height: 90%;"><i>(<%= lesson[:locations2_t] %>)</i></small><br/> 
+<%= lesson[:defined_t]%>
+<br/><br/>
 
+<% end %>
 
 
 <br/>
