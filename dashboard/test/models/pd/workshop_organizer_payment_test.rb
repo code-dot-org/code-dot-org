@@ -2,6 +2,7 @@ require 'test_helper'
 require 'cdo/activity_constants'
 
 class Pd::WorkshopOrganizerPaymentTest < ActiveSupport::TestCase
+  freeze_time
 
   setup do
     @organizer = create :workshop_organizer
