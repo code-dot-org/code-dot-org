@@ -3,7 +3,7 @@
 
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper');
+var StudioAppWrapper = require('../templates/StudioAppWrapper');
 var InstructionsWithWorkspace = require('../templates/instructions/InstructionsWithWorkspace');
 
 /**
@@ -26,7 +26,7 @@ var AppLabView = React.createClass({
 
   render: function () {
     return (
-      <ConnectedStudioAppWrapper>
+      <StudioAppWrapper>
         <ApplabVisualizationColumn
             isEditingProject={this.props.isEditingProject}
             screenIds={this.props.screenIds}
@@ -36,7 +36,7 @@ var AppLabView = React.createClass({
             className="fa fa-ellipsis-v" />
         <InstructionsWithWorkspace
           hideSource={this.props.hideSource}/>
-      </ConnectedStudioAppWrapper>
+      </StudioAppWrapper>
     );
   }
 });
