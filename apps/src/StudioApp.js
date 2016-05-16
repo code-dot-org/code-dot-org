@@ -1867,8 +1867,6 @@ StudioApp.prototype.configureDom = function (config) {
     smallFooter.style.boxSizing = "border-box";
   }
   if (!config.embed && !config.hideSource) {
-    // Make the visualization responsive to screen size, except on share page.
-    visualization.className += " responsive";
     if (smallFooter) {
       smallFooter.className += " responsive";
     }
