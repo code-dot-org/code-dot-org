@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "20개의 마우스 드로이드를 모아야 합니다. \"마우스 드로이드를 얻으면\" 이벤트 안에 \"마우스 드로이드 추가\" 블록을 넣어 1개를 얻으면 2개 이상 추가되도록 해보세요.",
   "failedMultiplyCharactersTimeoutGotSome": "축하합니다. 마우스 드로이드를 만들기 위한 코드가 추가되었습니다. 다음 퍼즐로 가거나 20개를 얻도록 다시 시도해 볼 수 있습니다.",
   "failedChangeSettingTimeout": "3명의 반란군 조종사를 움직이세요.",
-  "failedChangeSettingSettings": "게임을 직접 만들어보세요. 이 퍼즐을 해결하기 위해서는 드로이드와 드로이드의 속도를 변경해야 합니다."
+  "failedChangeSettingSettings": "게임을 직접 만들어보세요. 이 퍼즐을 해결하기 위해서는 드로이드와 드로이드의 속도를 변경해야 합니다.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }

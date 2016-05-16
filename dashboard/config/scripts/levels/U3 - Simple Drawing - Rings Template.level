@@ -14,7 +14,8 @@
       "noStroke": null,
       "ellipse": null,
       "rect": null,
-      "comment": null
+      "comment": null,
+      "color": null
     },
     "edit_code": true,
     "embed": "false",
@@ -40,7 +41,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "start_blocks": "ellipse(200, 300, 200, 200);\r\n\r\nellipse(200, 300, 150, 150);\r\n\r\nellipse(200, 300, 100, 100);"
+    "start_blocks": "ellipse(200, 300, 200, 200);\r\nellipse(200, 300, 150, 150);\r\nellipse(200, 300, 100, 100);",
+    "show_d_pad": "false"
   },
   "published": true,
   "notes": "",

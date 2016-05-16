@@ -10,7 +10,7 @@ theme: none
 
 [together]
 
-## Lesson Overview 
+## Lesson Overview
 
 Building on the previous Play Lab activity, students will add deeper interactivity as they build their own video games.
 
@@ -32,7 +32,7 @@ Building on the previous Play Lab activity, students will add deeper interactivi
 
 [/summary]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 
 - Identify actions that correlate to input events
@@ -75,7 +75,7 @@ Designing a game that is fun to play yet challenging enough to avoid boredom is 
 
 [together]
 
-## Extended Learning 
+## Extended Learning
 <a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### Look Under the Hood
@@ -116,11 +116,11 @@ When you share a link to your game, you also share all of the code that goes beh
 - 4.d - Use multiple processes and diverse perspectives to explore alternative solutions.
 - 6.a - Understand and use technology systems.
 - 6.c - Troubleshoot systems and applications.
-- 6.d - Transfer current knowledge to learning of new technologies.  
+- 6.d - Transfer current knowledge to learning of new technologies.
 
 
 ### CSTA K-12 Computer Science Standards
- 
+
 - CT.L1:3-01. Use technology resources (e.g., puzzles, logical thinking programs) to solve age appropriate problems.
 - CT.L1:3-02. Use writing tools, digital cameras and drawing tools to illustrate thoughts, ideas, and stories in a step by step manner.
 - CL.L1:3-02. Work cooperatively and collaboratively with peers teachers, and others using technology.
@@ -134,16 +134,16 @@ When you share a link to your game, you also share all of the code that goes beh
 - CT.L2-07. Represent data in a variety of ways: text, sounds, pictures, numbers.
 - CT.L2-08. Use visual representations of problem states, structures, and data.
 - CT.L2-12. Use abstraction to decompose a problem into sub-problems.
-- CT.L2-14. Examine connections between elements of mathematics and computer science including binary numbers, logic, sets, and functions. 
+- CT.L2-14. Examine connections between elements of mathematics and computer science including binary numbers, logic, sets, and functions.
 - CPP.L2-08. Demonstrate dispositions amenable to open-ended problem solving and programming.
-- CT.L3A.03. Explain how sequence, selection, iteration, and recursion are building blocks of algorithms. 
+- CT.L3A.03. Explain how sequence, selection, iteration, and recursion are building blocks of algorithms.
 
 ### Next-Gen Science Standards
 
-- 3-5-ETS1-2. Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+- 3-5-ETS1-2. Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem.
 
 ### Common Core Mathematical Practices
- 
+
 - 1. Make sense of problems and persevere in solving them.
 - 2. Reason abstractly and quantitatively.
 - 4. Model with mathematics
@@ -173,9 +173,7 @@ When you share a link to your game, you also share all of the code that goes beh
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

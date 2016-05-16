@@ -1,33 +1,6 @@
 /* global define */
 'use strict';
 
-var savedAmd;
-
-// Do some hackery to make it so that lodash doesn't think it's being loaded
-// via require js
-if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
-  savedAmd = define.amd;
-  define.amd = false;
-}
-
-// get lodash
-var _ = require('./lodash');
-var Hammer = require('./hammer');
-
-// undo hackery
-if (typeof define === 'function' && savedAmd) {
-  define.amd = savedAmd;
-  savedAmd = null;
-}
-
-exports.getLodash = function () {
-  return _;
-};
-
-exports.getHammer = function () {
-  return Hammer;
-};
-
 exports.shallowCopy = function (source) {
   var result = {};
   for (var prop in source) {
@@ -444,4 +417,17 @@ exports.makeEnum = function () {
     Object.freeze(result);
   }
   return result;
+};
+
+/**
+ * If the string is too long, truncate it and append an ellipsis.
+ * @param {string} inputText
+ * @param {number} maxLength
+ * @returns {string}
+ */
+exports.ellipsify = function (inputText, maxLength) {
+  if (inputText && inputText.length > maxLength) {
+    return inputText.substr(0, maxLength - 3) + "...";
+  }
+  return inputText || '';
 };

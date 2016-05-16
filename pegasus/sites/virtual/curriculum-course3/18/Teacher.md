@@ -11,34 +11,34 @@ theme: none
 [together]
 
 ## Lesson Overview
-In this lesson, students will pretend to flow through the Internet, all the while learning about Internet connections, URLs, IP Addresses, and the DNS.  
+In this lesson, students will pretend to flow through the Internet, all the while learning about Internet connections, URLs, IP Addresses, and the DNS.
 
 [summary]
 
 ## Teaching Summary
 ### **Getting Started** - 25 minutes
 
-1) [Review](#Review)  
+1) [Review](#Review)
 2) [Vocabulary](#Vocab) <br/>
-3) [Getting the Message](#GetStarted)  
+3) [Getting the Message](#GetStarted)
 
-### **Activity: The Internet** - 15  minutes  
+### **Activity: The Internet** - 15  minutes
 
-4) [The Internet](#Activity1)  
+4) [The Internet](#Activity1)
 
-### **Wrap-up** - 10  minutes 
-5) [Flash Chat](#WrapUp) - What did we learn?  
+### **Wrap-up** - 10  minutes
+5) [Flash Chat](#WrapUp) - What did we learn?
 6) [Vocab Shmocab](#Shmocab)
 
-### **Assessment** - 5  minutes 
+### **Assessment** - 5  minutes
 7) [The Internet Assessment](#Assessment)
 
 [/summary]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 - Learn about the complexity of sending messages over the Internet
-- Translate URLs into IP Addresses 
+- Translate URLs into IP Addresses
 - Practice creative problem solving
 
 [/together]
@@ -125,14 +125,14 @@ Small chunks of information that have been carefully formed from larger chunks o
 
 [tip]
 
-# Lesson Tip  
+# Lesson Tip
 A quick preview is all you need here. These words will all be explained as part of the lesson, so it would be far less confusing to do a brief intro to the words as a "see if you can spot these during the day" type of heads-up.
 
 [/tip]
 
 
 ### <a name="GetStarted"></a> 3) Getting the Message
-- It's quite likely that your students are aware of what the Internet is, but they may not really *understand* what the Internet is. 
+- It's quite likely that your students are aware of what the Internet is, but they may not really *understand* what the Internet is.
   - Ask "What is the Internet?"
   - Is the Internet a public place or a private place?<br>
   (Truthfully, many people think it can be both, but it should be viewed as a public space no matter what settings you think you've mastered.)
@@ -144,35 +144,35 @@ A quick preview is all you need here. These words will all be explained as part 
 
 [tip]
 
-# Lesson Tip  
-There are some great YouTube videos on this subject that can make this lesson a little easier to understand.  You can show them to the class in advance, or just watch them yourself.  
+# Lesson Tip
+There are some great YouTube videos on this subject that can make this lesson a little easier to understand.  You can show them to the class in advance, or just watch them yourself.
 [Here is one of the most clear and entertaining versions.](http://youtu.be/7_LPdttKXPc) <br>
 (We recommend stopping the video at 2:59, if possible.)
 
 [/tip]
-   
+
 Sending a message over the Internet is a lot like sending a message through the mail...if every letter we sent required thousands of envelopes!
 
-Every message we send through the Internet gets chopped up and each piece is wrapped in its own version of an envelope.  We call those "packets." Packets are specially formed chunks of information that are able to easily flow through any of the Internet's channels. 
+Every message we send through the Internet gets chopped up and each piece is wrapped in its own version of an envelope.  We call those "packets." Packets are specially formed chunks of information that are able to easily flow through any of the Internet's channels.
 
 Sometimes, a few of those packets will get lost, because the Internet is a crazy place. In that case, the packets need to be resent, and the whole message has to get put on hold until they arrive.
 
 Where do you think those packets are headed?
 
-- Even if you're sending messages to another person, they first have to go to at least one "server."  
+- Even if you're sending messages to another person, they first have to go to at least one "server."
   - A server is a special computer that is supposed to be always on and ready to send and receive information.
   - Every website has a server.
   - Even email goes through servers.
-  
-Servers don't have names like you and I do.  They're actually addressed using numbers.  These numbers are called IP addresses, and they look a little strange. 
- 
-- For example: One of Code.org's IP addresses used to be 54.243.71.82 
+
+Servers don't have names like you and I do.  They're actually addressed using numbers.  These numbers are called IP addresses, and they look a little strange.
+
+- For example: One of Code.org's IP addresses used to be 54.243.71.82
 
    - (Please be sure to check this out in advance. Most IP addresses change from time to time and they are then reused for other sites.)
 
-There are many ways to reach the Internet from your house, school, or place of business.  
+There are many ways to reach the Internet from your house, school, or place of business.
 
-- You can connect directly using a cable (that might be DSL, Cable, or Fiber Optic) 
+- You can connect directly using a cable (that might be DSL, Cable, or Fiber Optic)
 - Or you can connect using radio waves over the air through Wi-Fi
 
 Direct connections are most reliable, but they can be inconvenient.
@@ -184,12 +184,12 @@ Wi-Fi connections are super convenient, but the aren't always reliable.
 
 - Can you figure out why not?
   - (Radio waves bounce all over the place and can get lost.)
-      
+
 So, if you're used to sending information to URLs (like www.code.org) and the servers actually have IP addresses for names (like 54.243.71.82) how does the Internet change from one to the other?  That's what the DNS is for.  The DNS (Domain Name Server) has tables that allow the system to go back and forth between URLs and IP addresses. If the Domain Name Servers ever stopped working, it would shut down the Internet as we know it!
 
 [tip]
 
-# Lesson Tip  
+# Lesson Tip
 If you're thinking that this is a lot of text and it would be extremely boring to try to lecture this to a class full of elementary school kids, you're absolutely right!
 
 If you're unable to show a YouTube video in class to help explain it all, I highly recommend drawing pictures to explain each idea above, or choosing students as volunteers to act out what you describe while you're explaining.  They're not expected to get every detail and definition at this point, only to gain exposure.
@@ -224,8 +224,8 @@ Now let's take this DNS Table and pretend to send messages through the Internet!
 > 2)  Have the class help you fill in the blank spots in the table.  Pick your favorite URLs and find their IP addresses using a site like www.getip.com.
 
 > 3)  Divide into groups of 3 to 5.
- 
-> 4)  Assign each group an IP address from the table, and each person in the group a position: 
+
+> 4)  Assign each group an IP address from the table, and each person in the group a position:
 
 > * The Message Writer
 > * The Internet
@@ -265,7 +265,7 @@ Now let's take this DNS Table and pretend to send messages through the Internet!
 > 3) **Fiber Optic Cable:** The best at delivering messages, but you must be connected to a wire.<br>
 		Simulation: Internet can carry packets in hand, but must keep the other hand touching a wall, desk, chair or the floor at all times.
 
-To play this game, you can have your groups cluster anywhere, but for the first time it can be less confusing to have groups play in a line. 
+To play this game, you can have your groups cluster anywhere, but for the first time it can be less confusing to have groups play in a line.
 
 - Line up the servers on one end of the room (holding their IP addresses). The Return Internet players can be over there as well (if you have that many people in each group).
 - Have the everyone else line up across from their server at the other side of the room.
@@ -276,7 +276,7 @@ To play this game, you can have your groups cluster anywhere, but for the first 
 
 [tip]
 
-# Lesson Tip  
+# Lesson Tip
 
 If it feels like there are too many rules to explain outright, feel free to post them on the board and just explain the game as you go.  You can play multiple rounds until the class really understands.
 
@@ -294,7 +294,7 @@ If it feels like there are too many rules to explain outright, feel free to post
 
 [tip]
 
-# Lesson Tip  
+# Lesson Tip
 Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future.  Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
 
 [/tip]
@@ -322,7 +322,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 ## Assessment (5 min)
 ### <a name="Assessment"></a>7) [The Internet Assessment](Assessment18-Internet.pdf)
-- Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
+- Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained.
 - This should feel familiar, thanks to the previous activities.
 
 [/together]
@@ -335,14 +335,14 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 ## Connections and Background Information
 
-### ISTE Standards (formerly NETS) 
+### ISTE Standards (formerly NETS)
 
 - 5.a - Advocate and practice safe, legal, and responsible use of information and technology.
 - 5.b - Exhibit a positive attitude toward using technology that supports collaboration, learning, and productivity.
 - 6.a - Understand and use technology systems.
 
 ### CSTA K-12 Computer Science Standards
- 
+
 - CI.L1:3-01. Practice responsible digital citizenship (legal and ethical behaviors) in the use of technology systems and software.
 - CPP.L2-06. Demonstrate good practices in personal information security: using passwords, encryption, secure transactions.
 - CD.L1:6-04. Identify that information is coming to the computer from many sources over a network.
@@ -361,9 +361,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

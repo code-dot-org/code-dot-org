@@ -1982,7 +1982,7 @@ Blockly.Field.prototype.getRootElement = function() {
 };
 Blockly.Field.prototype.updateWidth_ = function() {
   var width;
-  if(this.textElement_.getComputedTextLength) {
+  if(this.textElement_.getComputedTextLength && document.body.contains(this.textElement_)) {
     width = this.textElement_.getComputedTextLength()
   }else {
     width = 1
@@ -5959,6 +5959,9 @@ Blockly.Xml.blockToDom = function(block, ignoreChildBlocks) {
   }
   if(!block.isUserVisible()) {
     element.setAttribute("uservisible", false)
+  }
+  if(block.isNextConnectionDisabled()) {
+    element.setAttribute("next_connection_disabled", true)
   }
   if(/^procedures_def/.test(block.type) && block.userCreated) {
     element.setAttribute("usercreated", true)
@@ -12948,12 +12951,7 @@ Blockly.ContextMenu.show = function(e, options) {
     menu.addItem(menuItem);
     menuItem.setEnabled(option.enabled);
     if(option.enabled) {
-      var evtHandlerCapturer = function(callback) {
-        return function() {
-          Blockly.doCommand(callback)
-        }
-      };
-      goog.events.listen(menuItem, goog.ui.Component.EventType.ACTION, evtHandlerCapturer(option.callback))
+      goog.events.listen(menuItem, goog.ui.Component.EventType.ACTION, option.callback)
     }
   }
   goog.events.listen(menu, goog.ui.Component.EventType.ACTION, Blockly.ContextMenu.hide);
@@ -12993,12 +12991,6 @@ Blockly.ContextMenu.optionToDom_ = function(text) {
   var textNode = document.createTextNode(text);
   textElement.appendChild(textNode);
   return gElement
-};
-Blockly.ContextMenu.hide = function() {
-  if(Blockly.ContextMenu.visible) {
-    Blockly.ContextMenu.svgGroup.style.display = "none";
-    Blockly.ContextMenu.visible = false
-  }
 };
 Blockly.ContextMenu.callbackFactory = function(block, xml) {
   return function() {
@@ -14753,7 +14745,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.rendered = false;
   this.disabled = false;
   this.tooltip = "";
-  this.contextMenu = false;
+  this.contextMenu = true;
   this.parentBlock_ = null;
   this.childBlocks_ = [];
   this.deletable_ = true;
@@ -15062,6 +15054,9 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
   this.select();
   this.blockSpace.blockSpaceEditor.hideChaff();
   if(Blockly.isRightButton(e)) {
+    if(Blockly.editBlocks) {
+      this.showContextMenu_(e)
+    }
   }else {
     if(!this.isMovable() || !this.canDisconnectFromParent()) {
       return
@@ -15165,51 +15160,6 @@ Blockly.Block.prototype.showContextMenu_ = function(e) {
       duplicateOption.enabled = false
     }
     options.push(duplicateOption);
-    if(Blockly.Comment && !this.collapsed_) {
-      var commentOption = {enabled:true};
-      if(this.comment) {
-        commentOption.text = Blockly.Msg.REMOVE_COMMENT;
-        commentOption.callback = function() {
-          block.setCommentText(null)
-        }
-      }else {
-        commentOption.text = Blockly.Msg.ADD_COMMENT;
-        commentOption.callback = function() {
-          block.setCommentText("")
-        }
-      }
-      options.push(commentOption)
-    }
-    if(!this.collapsed_) {
-      for(var i = 0;i < this.inputList.length;i++) {
-        if(this.inputList[i].type == Blockly.INPUT_VALUE) {
-          var inlineOption = {enabled:true};
-          inlineOption.text = this.inputsInline ? Blockly.Msg.EXTERNAL_INPUTS : Blockly.Msg.INLINE_INPUTS;
-          inlineOption.callback = function() {
-            block.setInputsInline(!block.inputsInline)
-          };
-          options.push(inlineOption);
-          break
-        }
-      }
-    }
-    if(Blockly.collapse) {
-      if(this.collapsed_) {
-        var expandOption = {enabled:true};
-        expandOption.text = Blockly.Msg.EXPAND_BLOCK;
-        expandOption.callback = function() {
-          block.setCollapsed(false)
-        };
-        options.push(expandOption)
-      }else {
-        var collapseOption = {enabled:true};
-        collapseOption.text = Blockly.Msg.COLLAPSE_BLOCK;
-        collapseOption.callback = function() {
-          block.setCollapsed(true)
-        };
-        options.push(collapseOption)
-      }
-    }
     var disableOption = {text:this.disabled ? Blockly.Msg.ENABLE_BLOCK : Blockly.Msg.DISABLE_BLOCK, enabled:!this.getInheritedDisabled(), callback:function() {
       block.setDisabled(!block.disabled)
     }};
@@ -15223,13 +15173,33 @@ Blockly.Block.prototype.showContextMenu_ = function(e) {
     }};
     options.push(deleteOption)
   }
-  var url = goog.isFunction(this.helpUrl) ? this.helpUrl() : this.helpUrl;
-  var helpOption = {enabled:!!url};
-  helpOption.text = Blockly.Msg.HELP;
-  helpOption.callback = function() {
-    block.showHelp_()
-  };
-  options.push(helpOption);
+  if(Blockly.editBlocks) {
+    var userVisibleOption = {text:this.userVisible_ ? "Make Invisible to Users" : "Make Visible to Users", enabled:true, callback:function() {
+      block.setUserVisible(!block.isUserVisible());
+      Blockly.ContextMenu.hide()
+    }};
+    options.push(userVisibleOption);
+    var deletableOption = {text:this.deletable_ ? "Make Undeletable to Users" : "Make Deletable to Users", enabled:true, callback:function() {
+      block.setDeletable(!block.isDeletable());
+      Blockly.ContextMenu.hide()
+    }};
+    options.push(deletableOption);
+    var movableOption = {text:this.movable_ ? "Make Immovable to Users" : "Make Movable to Users", enabled:true, callback:function() {
+      block.setMovable(!block.isMovable());
+      Blockly.ContextMenu.hide()
+    }};
+    options.push(movableOption);
+    var nextConnectionDisabledOption = {text:this.nextConnectionDisabled_ ? "Enable Next Connection" : "Disable Next Connection", enabled:true, callback:function() {
+      block.setNextConnectionDisabled(!block.nextConnectionDisabled_);
+      Blockly.ContextMenu.hide()
+    }};
+    options.push(nextConnectionDisabledOption);
+    var editableOption = {text:this.editable_ ? "Make Uneditable" : "Make editable", enabled:true, callback:function() {
+      block.setEditable(!block.isEditable());
+      Blockly.ContextMenu.hide()
+    }};
+    options.push(editableOption)
+  }
   if(this.customContextMenu && !block.isInFlyout) {
     this.customContextMenu(options)
   }
@@ -15569,11 +15539,15 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
     this.svg_ && this.render()
   }
 };
+Blockly.Block.prototype.isNextConnectionDisabled = function() {
+  return this.nextConnectionDisabled_
+};
 Blockly.Block.prototype.setNextConnectionDisabled = function(disabled) {
   this.nextConnectionDisabled_ = disabled;
-  if(this.nextConnectionDisabled_ === true) {
-    this.setNextStatement(false)
+  if(disabled && (this.nextConnection && this.nextConnection.targetConnection)) {
+    this.nextConnection.disconnect()
   }
+  this.setNextStatement(!disabled)
 };
 Blockly.Block.prototype.isCurrentlyBeingDragged = function() {
   return Blockly.selected === this && Blockly.Block.isFreelyDragging()
@@ -25078,6 +25052,12 @@ Blockly.Generator.blocksToCode = function(name, blocks, opt_showHidden) {
   code = code.replace(/\n\s+$/, "\n");
   code = code.replace(/[ \t]+\n/g, "\n");
   return code
+};
+Blockly.Generator.xmlToCode = function(name, xml) {
+  var div = document.createElement("div");
+  var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(div, xml);
+  var blocks = blockSpace.getTopBlocks(true);
+  return Blockly.Generator.blocksToCode(name, blocks)
 };
 Blockly.Generator.blockSpaceToCode = function(name, opt_typeFilter, opt_showHidden) {
   var blocksToGenerate;

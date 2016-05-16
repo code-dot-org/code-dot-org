@@ -13,7 +13,7 @@ By "programming" one another to draw pictures, students will begin to understand
 
 
 [summary]
-## Teaching Summary 
+## Teaching Summary
 
 ### **Getting Started** - 15 minutes
 
@@ -21,16 +21,16 @@ By "programming" one another to draw pictures, students will begin to understand
 2) [Introduce Graph Paper Programming](#GetStarted) <br/>
 3) [Practice Together](#Practice)
 
-### **Activity: Graph Paper Programming** - 20  minutes  
+### **Activity: Graph Paper Programming** - 20  minutes
 
 4) [Four-by-Fours](#Activity1)
 
-### **Wrap-up** - 5  minutes 
+### **Wrap-up** - 5  minutes
 
 5) [Flash Chat: What did we learn?](#FlashChat)<br/>
 6) [Vocab Shmocab](#Shmocab)
 
-### **Assessment** - 10  minutes 
+### **Assessment** - 10  minutes
 
 7) [Graph Paper Programming Assessment](#Assessment)
 
@@ -39,12 +39,12 @@ By "programming" one another to draw pictures, students will begin to understand
 
 [/summary]
 
-## Lesson Objectives 
+## Lesson Objectives
 
 Students will:
 
-- Understand the difficulty of translating real problems into programs  
-- Learn that ideas may feel clear and yet still be misinterpreted by a computer  
+- Understand the difficulty of translating real problems into programs
+- Learn that ideas may feel clear and yet still be misinterpreted by a computer
 - Practice communicating ideas through codes and symbols
 
 
@@ -55,19 +55,19 @@ Students will:
 
 - [Four-by-Fours Activity Worksheet](Activity1-GraphPaperProgramming.pdf)
 - [Graph Paper Programming Assessment](Assessment1-GraphPaperProgramming.pdf)
-- Sheets of 4x4 paper grids for the students to use as practice (These are provided as part of the [Four-by-Fours Activity Worksheet](Activity1-GraphPaperProgramming.pdf), but if you have the students create their own, you can include Common Core Math standard 2.G.2.) 
+- Sheets of 4x4 paper grids for the students to use as practice (These are provided as part of the [Four-by-Fours Activity Worksheet](Activity1-GraphPaperProgramming.pdf), but if you have the students create their own, you can include Common Core Math standard 2.G.2.)
 - Blank paper or index cards for programs
 - Markers, pens, or pencils
 
 ### For the Teacher
 
 - [Lesson Video](http://youtu.be/Yy1zbkfRtIg?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
-- Print out one [Four-by-Fours Activity Worksheet](Activity1-GraphPaperProgramming.pdf) for each group  
-- Print one [Graph Paper Programming Assessment](Assessment1-GraphPaperProgramming.pdf) for each student  
+- Print out one [Four-by-Fours Activity Worksheet](Activity1-GraphPaperProgramming.pdf) for each group
+- Print one [Graph Paper Programming Assessment](Assessment1-GraphPaperProgramming.pdf) for each student
 - Supply each group with several drawing grids, paper, and pens/pencils
 
 
-## Getting Started (15 min) 
+## Getting Started (15 min)
 
 ### <a name="Vocab"></a>1) Vocabulary
 This lesson has two new and important words:<br/>
@@ -79,15 +79,15 @@ This lesson has two new and important words:<br/>
 [/centerIt]
 
 **Algorithm** - Say it with me: Al-go-ri-thm <br/>
-A list of steps that you can follow to finish a task 
+A list of steps that you can follow to finish a task
 
 **Program** - Say it with me: Pro-gram <br/>
 An algorithm that has been coded into something that can be run by a machine
 
 <br/>
 
-### <a name="GetStarted"></a>2) Introduce Graph Paper Programming 
-In this activity, we are going to guide each other toward making drawings, without letting the other people in our group see the original image. 
+### <a name="GetStarted"></a>2) Introduce Graph Paper Programming
+In this activity, we are going to guide each other toward making drawings, without letting the other people in our group see the original image.
 
 For this exercise, we will use sheets of 4x4 graph paper.  Starting at the upper left-hand corner, we’ll guide our teammates’ Automatic Realization Machine (ARM) with simple instructions.  Those instructions include:
 
@@ -123,7 +123,7 @@ With one little substitution, we can do this much more easily!  Instead of havin
 
 In this instance, the arrow symbols are the “program” code and the words are the “algorithm” piece. This means that we could write the algorithm:
 
->“Move one square right, Move one square right, Fill-in square with color” 
+>“Move one square right, Move one square right, Fill-in square with color”
 
 and that would correspond to the program:
 
@@ -165,7 +165,7 @@ A sample algorithm:
 Fill-In Square, Move Left, Move Left, Fill-In Square<br/>
 Move Down, Move Right, Fill-In Square, Move Right”
 
-Some of your class may notice that there is an unnecessary step, but hold them off until after the programming stage.<br/>  
+Some of your class may notice that there is an unnecessary step, but hold them off until after the programming stage.<br/>
 Walk the class through translating the algorithm into the program:
 
 >![image](program1.png)
@@ -175,7 +175,7 @@ The classroom may be buzzing with suggestions by this point.  If the class gets 
 >![image](program2.png)
 
 If the class can shout out the algorithm and define the correct symbols to use for each step, they’re ready to move on.  Depending on your class and their age, you can either try doing a more complicated grid together or skip straight to having them work in groups on their [Four-by-Fours Activity Worksheet](/curriculum/course2/1/Activity1-GraphPaperProgramming.pdf).
- 
+
 
 [tip]
 
@@ -189,11 +189,11 @@ Have the class imagine that your arm is an Automatic Realization Machine (ARM). 
 ### <a name="Activity1"></a>4) [Four-by-Fours Activity Worksheet](/curriculum/course2/1/Activity1-GraphPaperProgramming.pdf)
 
 1. Divide students into pairs.
-2. Have each pair choose an image from the worksheet.  
-3. Discuss the algorithm to draw that image with partner.  
-4. Convert algorithm into a program using symbols.  
-5. Trade programs with another pair and draw one another's image. 
-6. Choose another image and go again!  
+2. Have each pair choose an image from the worksheet.
+3. Discuss the algorithm to draw that image with partner.
+4. Convert algorithm into a program using symbols.
+5. Trade programs with another pair and draw one another's image.
+6. Choose another image and go again!
 
 <br/>
 
@@ -204,7 +204,7 @@ Have the class imagine that your arm is an Automatic Realization Machine (ARM). 
 [/centerIt]
 
 ## Wrap-up (5 min)
-### <a name="FlashChat"></a>5) Flash Chat: What did we learn? 
+### <a name="FlashChat"></a>5) Flash Chat: What did we learn?
 
 - What did we learn today?
 - What if we used the same arrows, but replaced "Fill-In Square" with "Lay Brick"? What might we be able to do?
@@ -227,55 +227,55 @@ Have the class imagine that your arm is an Automatic Realization Machine (ARM). 
 ### 7) [Graph Paper Programming Assessment](Assessment1-GraphPaperProgramming.pdf) <br/><br/>
 
 
-## Extended Learning 
+## Extended Learning
 Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
-### Better and Better 
+### Better and Better
 
-- Have your class try making up their own images.  
+- Have your class try making up their own images.
 - Can they figure out how to program the images that they create?
 
 
-### Class Challenge 
+### Class Challenge
 
-- As the teacher, draw an image on a 5x5 grid.  
+- As the teacher, draw an image on a 5x5 grid.
 - Can the class code that up along with you?
 
 [standards]
 
 ## Connections and Background Information
 
-### ISTE Standards (formerly NETS) 
+### ISTE Standards (formerly NETS)
 
 - 1.b - Create original works as a means of personal or group expression.
-- 1.c - Use models and simulation to explore complex systems and issues.   
-- 2.d - Contribute to project teams to solve problems.  
+- 1.c - Use models and simulation to explore complex systems and issues.
+- 2.d - Contribute to project teams to solve problems.
 - 4.b - Plan and manage activities to develop a solution or complete a project.
 - 4.d - Use multiple processes and diverse perspectives to explore alternative solutions.
 
 ### CSTA K-12 Computer Science Standards
 
-- CPP.L1:3-04 - Construct a set of statements to be acted out to accomplish a simple task. 
+- CPP.L1:3-04 - Construct a set of statements to be acted out to accomplish a simple task.
 - CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
 - CT.L1:3-03 - Understand how to arrange information into useful order without using a computer.
-- CT.L1:6-01 - Understand and use the basic steps in algorithmic problem-solving.  
-- CT.L1:6-02 - Develop a simple understanding of an algorithm using computer-free exercises.  
+- CT.L1:6-01 - Understand and use the basic steps in algorithmic problem-solving.
+- CT.L1:6-02 - Develop a simple understanding of an algorithm using computer-free exercises.
 - CT.L2-07 - Represent data in a variety of ways: text, sounds, pictures, numbers.
 
- 
+
 ### NGSS Science and Engineering Practices
 
-- K-2-ETS1-2 - Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem. 
-- 3-5-ETS1-2 - Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+- K-2-ETS1-2 - Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem.
+- 3-5-ETS1-2 - Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem.
 
 ### Common Core Mathematical Practices
- 
+
 - 1. Make sense of problems and persevere in solving them.
 - 2. Reason abstractly and quantitatively.
 - 3. Construct viable arguments and critique the reasoning of others.
 - 6. Attend to precision.
 - 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning. 
+- 8. Look for and express regularity in repeated reasoning.
 
 ### Common Core Math Standards
 
@@ -295,9 +295,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

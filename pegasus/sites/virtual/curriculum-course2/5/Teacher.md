@@ -8,7 +8,7 @@ theme: none
 
 [content]
 
-## K-1 Lesson Overview
+## Lesson Overview
 Loops are a handy way of describing actions that repeat a certain number of times.  In this lesson, students will practice converting sets of actions into a single loop.
 
 [summary]
@@ -18,24 +18,24 @@ Loops are a handy way of describing actions that repeat a certain number of time
 
 1) [Review](#Review) <br/>
 2) [Vocabulary](#Vocab)<br/>
-3) [Repeat After Me](#GetStarted)  
+3) [Repeat After Me](#GetStarted)
 
-### **Activity: Loops** - 15  minutes  
+### **Activity: Loops** - 15  minutes
 
 4) [Getting Loopy](#Activity1)
 
-### **Wrap-up** - 10  minutes 
+### **Wrap-up** - 10  minutes
 
 5) [Flash Chat](#WrapUp) - What did we learn?<br/>
 
-### **Assessment** - 10  minutes 
+### **Assessment** - 10  minutes
 6) [Getting Loopy Assessment](#Assessment)
 
 [/summary]
 
 [together]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 - Repeat actions initiated by the instructor
 - Translate a picture program into a live-action dance
@@ -97,7 +97,7 @@ This lesson has one new and important vocabulary word:<br/>
 [/centerIt]
 
 **Loop** - Say it with me: Loop <br/>
-The action of doing something over and over again 
+The action of doing something over and over again
 
 [/together]
 
@@ -107,10 +107,10 @@ The action of doing something over and over again
     - When they finish, instruct them to do it again, using the exact same words you did before.
     - When they finish, instruct again.
     - Then again.
-    
+
 - Would it have been easier for me to just ask you to go around the table four times?
   - What if I wanted you to do it ten times?
-  
+
 - If I want you to repeat an action 10 times, that's called "looping."
 
 - When I know in advance that I want you to do something a certain number of times, it's easier for both of us if I just ask you to "Repeat it that many times."
@@ -138,7 +138,7 @@ Example:
 
 # Lesson Tip
 
-Looking for some good music?  
+Looking for some good music?
 Here are some great places to find some:
 
 - [Radio Disney](http://music.disney.com/radio-disney)
@@ -159,7 +159,7 @@ Please be advised that some of these stations may display ads with third-party c
 > 4. Can you find the loop in the instructions?
 >   - What would the dance look like if we only repeated the main part 2 times?
 >   - What if we repeated the main part 4 times?
-> 5. Can you find anything else in the dance that we could use a loop for? 
+> 5. Can you find anything else in the dance that we could use a loop for?
 
 [/together]
 
@@ -181,7 +181,7 @@ Please be advised that some of these stations may display ads with third-party c
 
 ## Assessment (10 min)
 ### <a name="Assessment"></a>6) Assessment Worksheet: [Getting Loopy Assessment](/curriculum/course2/5/Assessment5-GettingLoopy.pdf)
-- Hand out the worksheet titled "Getting Loopy" and allow students to complete the activity independently after the instructions have been well explained. 
+- Hand out the worksheet titled "Getting Loopy" and allow students to complete the activity independently after the instructions have been well explained.
 - This should feel familiar, thanks to the previous activities.
 
 [/together]
@@ -189,20 +189,20 @@ Please be advised that some of these stations may display ads with third-party c
 
 [together]
 
-## Extended Learning 
+## Extended Learning
 Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### So Moving
 
 - Give the students pictures of actions or dance moves that they can do.
   - Have students arrange moves and add loops to choreograph their own dance.
-- Share the dances with the rest of the class. 
+- Share the dances with the rest of the class.
 
 ### Connect It Back
 
 - Find some YouTube videos of popular dances that repeat themselves.
 - Can your class find the loops?
-- Try the same thing with songs! 
+- Try the same thing with songs!
 
 
 [/together]
@@ -211,21 +211,21 @@ Use these activities to enhance student learning. They can be used as outside of
 
 ## Connections and Background Information
 
-### ISTE Standards (formerly NETS) 
+### ISTE Standards (formerly NETS)
 
-- 1.c - Use models and simulation to explore complex systems and issues.  
-- 2.d - Contribute to project teams to solve problems.  
+- 1.c - Use models and simulation to explore complex systems and issues.
+- 2.d - Contribute to project teams to solve problems.
 - 4.b - Plan and manage activities to develop a solution or complete a project.
-- 6.a - Understand and use technology systems.   
+- 6.a - Understand and use technology systems.
 
 
 ### CSTA K-12 Computer Science Standards
- 
+
 - CT.L1:3-03 - Understand how to arrange information into useful order without using a computer.
-- CT.L1:6-01 - Understand and use the basic steps in algorithmic problem-solving.  
-- CT.L1:6-02 - Develop a simple understanding of an algorithm using computer-free exercises.  
+- CT.L1:6-01 - Understand and use the basic steps in algorithmic problem-solving.
+- CT.L1:6-02 - Develop a simple understanding of an algorithm using computer-free exercises.
 - CT.L1:6-05 - Make a list of sub-problems to consider while addressing a larger problem.
-- CPP.L1:3-04 - Construct a set of statements to be acted out to accomplish a simple task.  
+- CPP.L1:3-04 - Construct a set of statements to be acted out to accomplish a simple task.
 - CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out (e.g., make a peanut butter and jelly sandwich activity).
 - CT.L2-03. Define an algorithm as a sequence of instructions that can be processed by a computer.
 - CT.L2-06. Describe and analyze a sequence of instructions being followed.
@@ -234,17 +234,17 @@ Use these activities to enhance student learning. They can be used as outside of
 
 ### NGSS Science and Engineering Practices
 
-- K-2-PS3-2 - Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem.  
-- 3-5-ETS1-2 - Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+- K-2-PS3-2 - Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem.
+- 3-5-ETS1-2 - Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem.
 
 ### Common Core Mathematical Practices
- 
+
 - 1. Make sense of problems and persevere in solving them.
 - 2. Reason abstractly and quantitatively.
 - 4. Model with mathematics.
 - 6. Attend to precision.
 - 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.  
+- 8. Look for and express regularity in repeated reasoning.
 
 ### Common Core Math Standards
 - 1.MD.4. - Organize, represent, and interpret data with up to three categories; ask and answer questions about the total number of data points, how many in each category, and how many more or less are in one category than in another.
@@ -263,9 +263,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

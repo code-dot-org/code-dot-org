@@ -1,0 +1,23 @@
+name 'CSD U3 Variables2 STOP variables in expressions'
+css 'unplugged'
+markdown <<MARKDOWN
+# Make a Prediction: Variables in Expressions
+
+**What happens when we use a variable in an expression?**
+
+	// Program 1
+    var age = 12;
+    console.log(age + 1);
+    
+	// Program 2
+    var height = 10;
+    var width = 5;
+    console.log(width * height);
+    
+    // Program 3
+    var ageYears = 13;
+    var ageMonths = ageYears * 12;
+    console.log(ageMonths);
+
+**Once you're predicted the output of each program, discuss with a neighbor and be ready to share with the class. You'll be able to try these programs out on the next level**
+MARKDOWN

@@ -8,6 +8,11 @@ include_recipe 'omnibus_updater'
 
 include_recipe 'apt'
 include_recipe 'sudo-user'
+include_recipe 'cdo-networking'
+
+# Set hostname to the Chef node name (via chef_hostname cookbook)
+HOSTNAME_INVALID_CHAR = /[^[:alnum:]-]/
+hostname node.name.downcase.gsub(HOSTNAME_INVALID_CHAR, '-')
 
 # These packages are used by Gems we install via Bundler.
 
@@ -61,6 +66,8 @@ execute 'update-locale' do
 end
 
 include_recipe 'cdo-repository'
+
+include_recipe 'cdo-apps::workers'
 
 %w(dashboard pegasus).each do |app|
   node.override['cdo-secrets']["#{app}_port"] = node['cdo-apps'][app]['port']

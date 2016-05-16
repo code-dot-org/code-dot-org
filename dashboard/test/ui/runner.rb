@@ -208,8 +208,15 @@ all_features = Dir.glob('features/**/*.feature')
 features_to_run = passed_features.empty? ? all_features : passed_features
 browser_features = $browsers.product features_to_run
 
+git_branch = `git rev-parse --abbrev-ref HEAD`.strip
+ENV['BATCH_NAME'] =  "#{git_branch} | #{Time.now}"
+
 test_type = $options.run_eyes_tests ? 'eyes tests' : 'UI tests'
 HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} in #{$options.parallel_limit} threads</b>..."
+if test_type == 'eyes tests'
+  HipChat.log "Batching eyes tests as #{ENV['BATCH_NAME']}"
+  print "Batching eyes tests as #{ENV['BATCH_NAME']}"
+end
 
 Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
   feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
@@ -312,10 +319,10 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
       flakiness = TestFlakiness.test_flakiness[test_run_string]
       if !flakiness
         $lock.synchronize { puts "No flakiness data for #{test_run_string}".green }
-        return 0
+        return 1
       elsif flakiness == 0.0
         $lock.synchronize { puts "#{test_run_string} is not flaky".green }
-        return 0
+        return 1
       else
         flakiness_message = "#{test_run_string} is #{flakiness} flaky. "
         max_reruns = [(1 / Math.log(flakiness, 0.05)).ceil - 1, # reruns = runs - 1

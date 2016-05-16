@@ -10,7 +10,7 @@ content-type: text/ng-template
   = I18n.t('dashboard_landing_loading')
 
 %div{'ng-show' => 'responsesLoaded'}
-  View text responses in:
+  = I18n.t('dashboard_responses_view')
   %select{"ng-model" => "course_id", "ng-options"=>"k*1 as v for (k, v) in course_list", 'ng-change' => 'changeScript(course_id)'}
 
 %br/
@@ -19,7 +19,7 @@ content-type: text/ng-template
   responses_filtered = "responses | orderBy:order | filter:(stageFilter && {stage: stageFilter}):true"
 
 %div{style: "padding-left:20px", 'ng-show' => '!responses.length'}
-  No text responses
+  = I18n.t('dashboard_responses_none')
 %div{style: "padding-left:20px", 'ng-show' => 'responses.length'}
   %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'responses.length', "ng-form" => "allForm"}
     %colgroup
@@ -31,16 +31,16 @@ content-type: text/ng-template
     %tr
       %th.manage-th{colspan: 5}
         %div{'ng-show' => 'stages && stages.length > 1', style: 'float: left; line-height: 35px'}
-          Filter by stage:
+          = I18n.t('dashboard_filter_by_stage')
           %select{'ng-model' => 'stageFilter', "ng-options" => "stage for stage in stages", "ng-show" => 'stages'}
-            %option{value: ""} All
+            %option{value: ""}= I18n.t('dashboard_filter_all')
         %button.btn.btn-white{'ng-csv' => responses_filtered,
                 filename: "responses.csv",
                 'csv-header' => "['Name', 'Stage', 'Puzzle', 'Question', 'Response']",
                 'csv-column-order' => "['student.name', 'stage', 'puzzle', 'question', 'response']",
                 style: 'float: right'}
           %i.fa.fa-download
-          Download CSV
+          = I18n.t('dashboard_download_csv')
 
     %tr
       %th.manage-th

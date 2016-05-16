@@ -1,0 +1,54 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-28T19:34:50.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "frameRate": null,
+      "drawSprites": null,
+      "background": null,
+      "var sprite = createSprite": null,
+      "sprite.width": null,
+      "sprite.height": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "randomNumber_min_max": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "show_d_pad": "false",
+    "markdown_instructions": "# Width and Height\r\n\r\nOther properties that exist for sprites are ones to control the width and height of the sprite. The property names are `width` and `height`. So to access the width of a sprite named `cat` you would say `cat.width`.\r\n\r\n# Do This\r\n\r\n* Create a sprite and draw it on the screen\r\n* Set the width and height to a random value each time the program loops\r\n* Make sure there is only one rectangle drawn on the window at a time",
+    "start_blocks": "function draw() {\r\n \r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

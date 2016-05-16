@@ -1,6 +1,6 @@
 var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants').TestResults;
-var _ = require('lodash');
+var _ = require('@cdo/apps/lodash');
 
 /**
  * This is based off of the currently version of U3L2_TurtleSquare_right.level,

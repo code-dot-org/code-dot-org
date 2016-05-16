@@ -29,6 +29,7 @@ class Blockly < Level
   serialized_attrs %w(
     level_url
     skin
+    initialization_blocks
     start_blocks
     toolbox_blocks
     required_blocks
@@ -74,7 +75,7 @@ class Blockly < Level
 
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
-    %w(start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
+    %w(initialization_blocks start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
   end
 
   def to_xml(options={})

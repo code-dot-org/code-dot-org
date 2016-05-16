@@ -4,7 +4,7 @@ title: Professional Learning Partner Virtual Playbook
 
 <link type="text/css" rel="stylesheet" href="/css/educate.css" />
 
-<%= view :educate_box, item: {title_s: 'Branding and Teacher Communications', description_t: "Coming Soon!"} %>
+<%= view :educate_box, item: {title_s: 'Branding and Teacher Communications', description_t: "Find examples of emails your teachers will receive, and tips on how to write an email of your own.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/communications"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Community Building', description_t: "Coming Soon!"} %>
 
@@ -13,6 +13,12 @@ title: Professional Learning Partner Virtual Playbook
 <%= view :educate_box, item: {title_s: 'Facilitator Support', description_t: "Support your facilitators with these essential resources", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/facilitator-support"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'FAQ', description_t: "Can't find what you're looking for? Check the FAQ.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/FAQ"), button_s: "Learn more"} %>
+
+<%= view :educate_box, item: {title_s: 'Fundraising Resources', description_t: "Coming soon!"} %>
+
+<%= view :educate_box, item: {title_s: 'Mimeo Marketplace', description_t: "Coming soon!"} %>
+
+<%= view :educate_box, item: {title_s: 'Recruiting Teachers', description_t: "Coming soon!"} %>
 
 <%= view :educate_box, item: {title_s: 'Reporting and Evaluations', description_t: "Coming soon!"} %>
 

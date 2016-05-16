@@ -8,7 +8,7 @@ theme: none
 
 [content]
 
-## K-1 Lesson Overview
+## Lesson Overview
 Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
 
 [summary]
@@ -18,24 +18,24 @@ Events are a great way to add variety to a pre-written algorithm. Sometimes you 
 
 1) [Review](#Review) <br/>
 2) [Vocabulary](#Vocab)<br/>
-3) [A Series of Events](#GetStarted)  
+3) [A Series of Events](#GetStarted)
 
-### **Activity: Events** - 15  minutes  
+### **Activity: Events** - 15  minutes
 
 4) [The Big Event](#Activity1)
 
-### **Wrap-up** - 5  minutes 
+### **Wrap-up** - 5  minutes
 
 5) [Flash Chat](#WrapUp) - What did we learn?<br/>
 
-### **Assessment** - 10  minutes 
+### **Assessment** - 10  minutes
 6) [The Big Event Assessment](#Assessment)
 
 [/summary]
 
 [together]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 - Repeat commands given by an instructor
 - Recognize actions of the teacher as signals to initiate commands
@@ -104,23 +104,23 @@ An event is an action that causes something to happen.
 
 - Prep your class to answer a question:
   -  "I'm going to ask you a question.  I want you to raise your hand if you want me to call on you for the answer."
-  
+
   - Ask a simple question that most of your students should be able to answer, such as:
      - How many thumbs do I have?
      - What is bigger, a bird or a horse?
-  
+
   - Call on a student who has their hand raised and let them give their answer.
   - Upon finishing that display, ask the class how you knew that the student wanted you to call on them.
      - Your class will likely mention the raising of the hand.
   - Explain to everyone that when students raise their hand, it is an "event" that causes you to know that they want to be called on. <br><br>
-  
+
 - Ask the class if they can think of any other events that give signals.
   - You may need to remind them that you're not talking about an event like a birthday party or a field trip.
   - If they have trouble, you can remind them that an event is an action that causes something to happen.
      - What about an alarm clock going off? What does that make happen?
      - What about pressing "Start" on the microwave? What does that do?
      - What about pressing the power button on your tv remote?
-     
+
 - Today, we're going to practice changing programs by introducing events.
 
 
@@ -131,7 +131,7 @@ An event is an action that causes something to happen.
 
 - Do you remember guiding your friends to fill in an image of squares in Graph Paper Programming?
   - In that exercise, you knew in advance exactly what you wanted your friends to draw, so you could make a program that took them from start to finish without any interruptions.
-  - In most real programs, we can't do that because we want to have options, depending on what the user needs.  
+  - In most real programs, we can't do that because we want to have options, depending on what the user needs.
      - Say that I only want my character to move when my finger is on the screen of my phone.  I would need to program the character to *only* move when I put my finger on the screen of my phone.
      - Putting my finger on the screen would then become an "event" that tells my character to move.
 
@@ -167,9 +167,9 @@ If your students seem confused, talk about their favorite games and all of the w
 > 6. Get the class started on a planned task before interrupting them again with the buttons. We suggest:
   * Counting to 10
   * Singing “Old MacDonald”
-> 7. Once their plan is underway, interject button presses sporadically. 
-> 8. Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven. 
-  
+> 7. Once their plan is underway, interject button presses sporadically.
+> 8. Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven.
+
 
 [/together]
 
@@ -188,7 +188,7 @@ If your students seem confused, talk about their favorite games and all of the w
 
 ## Assessment (10 min)
 ### <a name="Assessment"></a>7) Assessment Worksheet: [Controlling by Events Assessment](Assessment15-TheBigEvent.pdf)
-- Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
+- Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained.
 - This should feel familiar, thanks to the previous activities.
 
 [/together]
@@ -196,17 +196,17 @@ If your students seem confused, talk about their favorite games and all of the w
 
 [together]
 
-## Extended Learning 
+## Extended Learning
 Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### One Person's Event is Another One's Reaction
 
-- Assign each student an event to watch out for, and an appropriate reaction to that event.  Chain the actions so that each child's reaction becomes an event that triggers the reaction of another student.  Keep assigning until everyone has something to do and everyone makes someone react. 
+- Assign each student an event to watch out for, and an appropriate reaction to that event.  Chain the actions so that each child's reaction becomes an event that triggers the reaction of another student.  Keep assigning until everyone has something to do and everyone makes someone react.
 
 
 ### Eventopalooza
 
-- Break the class up into groups. Using the Events Controller, assign each group a different reaction to the same button. Do this for all three buttons, then watch the chaos! 
+- Break the class up into groups. Using the Events Controller, assign each group a different reaction to the same button. Do this for all three buttons, then watch the chaos!
 
 
 [/together]
@@ -215,31 +215,31 @@ Use these activities to enhance student learning. They can be used as outside of
 
 ## Connections and Background Information
 
-### ISTE Standards (formerly NETS) 
+### ISTE Standards (formerly NETS)
 
-- 1.c - Use models and simulation to explore complex systems and issues.   
+- 1.c - Use models and simulation to explore complex systems and issues.
 - 4.b - Plan and manage activities to develop a solution or complete a project.
-- 6.a - Understand and use technology systems.  
-  
+- 6.a - Understand and use technology systems.
+
 
 ### CSTA K-12 Computer Science Standards
- 
-- CPP.L1:3-04 - Construct a set of statements to be acted out to accomplish a simple task.  
-- CT.L1:6-02 - Develop a simple understanding of an algorithm using computer-free exercises.  
+
+- CPP.L1:3-04 - Construct a set of statements to be acted out to accomplish a simple task.
+- CT.L1:6-02 - Develop a simple understanding of an algorithm using computer-free exercises.
 - CT.L1:6-05 - Make a list of sub-problems to consider while addressing a larger problem.
-- CT.L1:6-01 - Understand and use the basic steps in algorithmic problem-solving. 
+- CT.L1:6-01 - Understand and use the basic steps in algorithmic problem-solving.
 - CT.L2-06 - Describe and analyze a sequence of instructions being followed.
 
 ### NGSS Science and Engineering Practices
-- K-2-ETS1-1. Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool. 
+- K-2-ETS1-1. Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.
 
 ### Common Core Mathematical Practices
- 
+
 - 1. Make sense of problems and persevere in solving them.
 - 2. Reason abstractly and quantitatively.
 - 6. Attend to precision.
 - 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning.  
+- 8. Look for and express regularity in repeated reasoning.
 
 ### Common Core Language Arts Standards
 - SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups
@@ -254,9 +254,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

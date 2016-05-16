@@ -2,7 +2,7 @@ name 'sciPD expectations'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN
-### Professional Development Overview
+### Professional Learning Program Overview
 
 <iframe width="680" height="415" src="https://youtubeeducation.com/embed/t29Ann5323w" frameborder="0" allowfullscreen></iframe>
 <br>
@@ -14,23 +14,21 @@ markdown <<MARKDOWN
 
 **Participants are expected to do the following:**
 
-1. Complete an initial survey about background, interests, and goals for taking the course.
+1. Complete assignments including watching videos, reading documents, and answering quiz questions (Phase 1).
 
-2. Complete assignments including watching videos, reading documents, and answering quiz questions (Phase 1).
+2. Contribute to discussions by responding to discussion prompts then returning to discussions to comment on fellow students postings (Phase 1).
 
-3. Contribute to discussions by responding to discussion prompts then returning to discussions to comment on fellow students postings (Phase 1).
+3. Attend and participate fully in the face-to-face CS in Science: Blended Summer Study workshop held in your region (Phase 2).
 
-4. Attend and participate fully in the face-to-face Summer CS in Science PD workshop held in your District (Phase 2).
+4. Prepare and offer a CS in Science Hour of Code activity during CSEdWeek (Phase 3).
 
-5. Prepare and offer a CS in Science Hour of Code activity during CSEdWeek (Phase 3).
+5. Attend and participate fully in both Phase 3: Academic Year Development one-day workshops held locally in your region. There will be a workshop each semester during the 2016-2017 school year. (Phase 3)
 
-6. Attend and participate fully in the one-day refresher PD workshops held in your District in the Fall and Winter.
+6. Implement module 1 followed by either module 2, 3, or 4, in the context of a regular day Science class at your school (Phase 3).
 
-7. Implement module 1 followed by either module 2, 3, or 4, in the context of a regular day Science class at your school (Phase 3).
+7. Share the details of your implementation, success and barriers encountered, with others on the Code.org forum (Phase 3).
 
-8. Share the details of your implementation, success and barriers encountered, with others on the Code.org forum (Phase 3).
-
-9. Complete a survey about your experience in the course and provide suggestions for improving the course for future participants.
+8. Complete a survey after each workshop about your experience in the course and provide suggestions for improving the course for future participants.
 
 </br>
 

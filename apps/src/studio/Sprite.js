@@ -5,8 +5,7 @@ var spriteActions = require('./spriteActions');
 var Direction = constants.Direction;
 var Emotions = constants.Emotions;
 var NextTurn = constants.NextTurn;
-var utils = require('../utils');
-var _ = utils.getLodash();
+var utils = require('../utils'); // Provides Function.prototype.inherits
 var StudioAnimation = require('./StudioAnimation');
 var StudioSpriteSheet = require('./StudioSpriteSheet');
 
@@ -28,7 +27,7 @@ var Sprite = function (options) {
 
   this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED;
   this.setNormalFrameDuration(options.animationFrameDuration);
-  this.displayDir = Direction.NONE;
+  this.displayDir = options.displayDir || Direction.NONE;
   this.startFadeTime = null;
   this.fadeTime = 0;
 

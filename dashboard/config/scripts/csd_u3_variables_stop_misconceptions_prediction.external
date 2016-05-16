@@ -10,35 +10,27 @@ At this point you know how to create a variable with `var`, update its value wit
 
 **Program 1:**
 
-```
-var age;
-console.log(age);
-```
+	var age;
+	console.log(age);
 
 **Program 2:**
 
-```
-var items = 20;
-items = 10;
-console.log(items);
-```
+	var items = 20;
+	items = 10;
+	console.log(items);
 
 **Program 3:**
 
-```
-var items = 20;
-console.log(items);
-items = 10;
-console.log(items);
-```
+	var items = 20;
+	console.log(items);
+	items = 10;
+	console.log(items);
 
 **Program 4:**
 
-```
-var score = randomNumber(10,20);
-console.log(score);
-console.log(score);
-```
+	var score = randomNumber(10,20);
+	console.log(score);
+	console.log(score);
 
 **Once you've shared your predictions, move on to the next level to try out the code for yourself.**
 MARKDOWN

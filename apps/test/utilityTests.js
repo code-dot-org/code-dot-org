@@ -7,7 +7,7 @@ var utils = require('@cdo/apps/utils');
 var requiredBlockUtils = require('@cdo/apps/required_block_utils');
 var blockUtils = require('@cdo/apps/block_utils');
 var assert = testUtils.assert;
-var _ = require('lodash');
+var _ = require('@cdo/apps/lodash');
 var mazeUtils = require('@cdo/apps/maze/mazeUtils');
 
 describe("String.prototype.repeat", function () {
@@ -767,5 +767,14 @@ describe('utils.makeEnum', function () {
         ColdThings['sorbet'] = 'sorbet';
       });
     }
+  });
+});
+
+describe("ellipsify", function () {
+  const ellipsify = utils.ellipsify;
+  it("ellipsifies id strings that exceed max length", function () {
+    assert.equal("abcdefghi", ellipsify("abcdefghi", 12));
+    assert.equal("abcdefghijkl", ellipsify("abcdefghijkl", 12));
+    assert.equal("abcdefghi...", ellipsify("abcdefghijklm", 12));
   });
 });

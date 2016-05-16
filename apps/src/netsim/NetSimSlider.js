@@ -3,7 +3,7 @@
  */
 'use strict';
 
-var utils = require('../utils');
+var utils = require('../utils'); // Provides Function.prototype.inherits
 var markup = require('./NetSimSlider.html.ejs');
 var i18n = require('./locale');
 

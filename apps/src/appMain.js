@@ -1,5 +1,5 @@
 var utils = require('./utils');
-var _ = utils.getLodash();
+var _ = require('./lodash');
 var requiredBlockUtils = require('./required_block_utils');
 var studioApp = require('./StudioApp').singleton;
 var authoredHintUtils = require('./authoredHintUtils');
@@ -51,6 +51,7 @@ module.exports = function (app, levels, options) {
   }
 
   studioApp.configure(options);
+  studioApp.configureRedux(app.getAppReducers ? app.getAppReducers() : null);
 
   options.skin = options.skinsModule.load(studioApp.assetUrl, options.skinId);
 

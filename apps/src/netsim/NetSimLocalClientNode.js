@@ -6,8 +6,8 @@
  */
 'use strict';
 
-var utils = require('../utils');
-var _ = utils.getLodash();
+require('../utils'); // Provides Function.prototype.inherits
+var _ = require('../lodash');
 var i18n = require('./locale');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimEntity = require('./NetSimEntity');
@@ -20,6 +20,7 @@ var ObservableEvent = require('../ObservableEvent');
 var logger = NetSimLogger.getSingleton();
 var NetSimConstants = require('./NetSimConstants');
 var NetSimGlobals = require('./NetSimGlobals');
+require('../utils'); // Provides Function.prototype.inherits
 
 var MessageGranularity = NetSimConstants.MessageGranularity;
 

@@ -1,7 +1,7 @@
 var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var dropletUtils = require('@cdo/apps/dropletUtils');
-var _ = require('lodash');
+var _ = require('@cdo/apps/lodash');
 var sinon = require('sinon');
 
 module.exports = {

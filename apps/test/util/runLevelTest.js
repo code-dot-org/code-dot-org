@@ -1,5 +1,4 @@
 var assert = require('chai').assert;
-var _ = require('lodash');
 var testCollectionUtils = require('./testCollectionUtils');
 
 var cb;
@@ -142,7 +141,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
           testData.runBeforeClick(assert);
         }
 
-        studioApp.runButtonClickWrapper.call(studioApp, studioApp.runButtonClick);
+        $("#runButton").click();
 
       }, timeout);
       // waitLong();

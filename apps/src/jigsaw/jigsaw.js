@@ -9,9 +9,10 @@
 
 var studioApp = require('../StudioApp').singleton;
 var skins = require('../skins');
+var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
-var visualizationColumnEjs = require('../templates/visualizationColumn.html.ejs');
+var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');
+var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
 
 /**
@@ -149,26 +150,6 @@ Jigsaw.init = function (config) {
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
-  var generateCodeWorkspaceHtmlFromEjs = function () {
-    return codeWorkspaceEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        localeDirection: studioApp.localeDirection(),
-        editCode: level.editCode,
-        blockCounterClass: 'block-counter-default'
-      }
-    });
-  };
-
-  var generateVisualizationColumnHtmlFromEjs = function () {
-    return visualizationColumnEjs({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        controls: require('./controls.html.ejs')({assetUrl: studioApp.assetUrl})
-      }
-    });
-  };
-
   var onMount = function () {
     studioApp.init(config);
 
@@ -186,17 +167,28 @@ Jigsaw.init = function (config) {
     }
   };
 
-  ReactDOM.render(React.createElement(AppView, {
-    assetUrl: studioApp.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    hideSource: !!config.hideSource,
-    noVisualization: true,
-    isRtl: studioApp.isRtl(),
-    generateCodeWorkspaceHtml: generateCodeWorkspaceHtmlFromEjs,
-    generateVisualizationColumnHtml: generateVisualizationColumnHtmlFromEjs,
-    onMount: onMount
-  }), document.getElementById(config.containerId));
+  // Push initial level properties into the Redux store
+  studioApp.reduxStore.dispatch(setPageConstants({
+    localeDirection: studioApp.localeDirection(),
+    isReadOnlyWorkspace: !!config.readonlyWorkspace,
+    isDroplet: !!level.editCode
+  }));
+
+  ReactDOM.render(
+    <Provider store={studioApp.reduxStore}>
+      <AppView
+          assetUrl={studioApp.assetUrl}
+          isEmbedView={!!config.embed}
+          isShareView={!!config.share}
+          hideSource={!!config.hideSource}
+          noVisualization={true}
+          isRtl={studioApp.isRtl()}
+          visualizationColumn={<JigsawVisualizationColumn/>}
+          onMount={onMount}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
+  );
 };
 
 function checkForSuccess() {

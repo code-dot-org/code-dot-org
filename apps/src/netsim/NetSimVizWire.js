@@ -3,7 +3,7 @@
  */
 'use strict';
 
-require('../utils');
+require('../utils'); // Provides Function.prototype.inherits
 var jQuerySvgElement = require('./NetSimUtils').jQuerySvgElement;
 var NetSimVizElement = require('./NetSimVizElement');
 var tweens = require('./tweens');

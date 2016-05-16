@@ -474,6 +474,11 @@ zh-CN:
   dashboard_action_remove_confirm: 移除？
   dashboard_action_done: 完成
   dashboard_action_required: 必填
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: 教师主页
   dashboard_navigation_section_student_progress: 学生账户和进度
   dashboard_navigation_section_teacher_progress: 您的课程进度
@@ -491,6 +496,17 @@ zh-CN:
   dashboard_navigation_view_stats: 查看统计
   dashboard_navigation_section: '学习小组：%{section_name}'
   dashboard_navigation_student: '学生：%{student_name}'
+  dashboard_progress_not_started: 未开始
+  dashboard_progress_in_progress: 正在进行
+  dashboard_progress_not_completed: 未完成
+  dashboard_progress_completed_too_many_blocks: 完成，使用太多块
+  dashboard_progress_completed_perfect: 完美完成
+  dashboard_progress_furthest_level_attempted: 尝试过最远的关卡
+  dashboard_progress_submitted: 已提交
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: 新的学习小组
   dashboard_sections_jumbotron_instruction: 创建新的学习小组并为其添加学生。学习小组可以帮助您以小组为单位来管理学生，以便您跟踪他们的进度和管理他们的帐户。
   dashboard_sections_table_section: 单元
@@ -506,6 +522,19 @@ zh-CN:
   dashboard_sections_secret_none: '如果您希望您的学生自主管理他们自己的账户，包括选择他们自己的密码，请选择<b>无</b>加密类型。'
   dashboard_sections_print_secrets: 然后您可以打印一叠包含账户信息的卡片以单独分发给您的学生们。
   dashboard_sections_switch_section: 切换学习小组
+  dashboard_sections_close: 关闭
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: 添加学生
   dashboard_students_add_students: 添加多位学生
   dashboard_students_add_multiple: 输入或粘贴学生的名字，每行一个：
@@ -572,13 +601,6 @@ zh-CN:
   dashboard_login_picture: 图片
   dashboard_login_none: 电子邮件
   dashboard_new_password: 新密码
-  dashboard_progress_not_started: 未开始
-  dashboard_progress_in_progress: 正在进行
-  dashboard_progress_not_completed: 未完成
-  dashboard_progress_completed_too_many_blocks: 完成，使用太多块
-  dashboard_progress_completed_perfect: 完美完成
-  dashboard_progress_furthest_level_attempted: 尝试过最远的关卡
-  dashboard_progress_submitted: 已提交
   dashboard_stage: 阶段
   dashboard_puzzle: 关卡
   dashboard_question: 问题
@@ -613,11 +635,8 @@ zh-CN:
   dashboard_faq_k5: K-5 组的常见问题
   dashboard_announcements: 公告
   dashboard_announce_view_all: 查看全部
-  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
-  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
+  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
   dashboard_announce_button_text: 了解详情
-  dashboard_announce_hoc: '<b>2015 年 11 月 23 日</b>-在你发起的编程一小时活动期间，你是否需要一名热衷于计算机科学教育的志愿者提供帮助？逾7,000 名志愿者正在寻找通过参与您的课堂或远程视频聊天的形式激发你学生的潜质。查看你所在地区的志愿者分布地图并取得的联系。'
-  dashboard_announce_playlab: '<b>2015 年 12 月 4 日</b>-编程一小时就在这里！面向所有年龄段、通过所有类型的设备尝试 50 节教程。本周新内容：在全新的游戏实验室里用冰河世纪和陶阿甘编写你自己的代码故事和游戏。'
   code_hoc_coming: 代码小时就在这里 — — 12 月 8-14 ！
   code_sign_up: 注册以便在计算机科学教育周期间参加
   learn_more: 现在就试试

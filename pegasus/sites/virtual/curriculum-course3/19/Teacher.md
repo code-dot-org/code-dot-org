@@ -12,28 +12,28 @@ theme: none
 
 
 ## Lesson Overview
-In computer science, we face some big, daunting problems. Challenges like finding large prime numbers or sequencing DNA are almost impossible to do alone. Adding the power of others makes these tasks managable.  This lesson will show your students how helpful teamwork can really be. 
+In computer science, we face some big, daunting problems. Challenges like finding large prime numbers or sequencing DNA are almost impossible to do alone. Adding the power of others makes these tasks managable.  This lesson will show your students how helpful teamwork can really be.
 
 [summary]
 
 ## Teaching Summary
 ### **Getting Started** - 20 minutes
 
-1) [Review](#Review)  
+1) [Review](#Review)
 2) [Vocabulary](#Vocab) <br/>
-3) [Big Problems](#GetStarted)  
+3) [Big Problems](#GetStarted)
 
-### **Activity: Crowdsourcing** - 20  minutes  
+### **Activity: Crowdsourcing** - 20  minutes
 
-4) [Working Together](#Activity1)  
+4) [Working Together](#Activity1)
 
-### **Wrap-up** - 5  minutes 
-5) [Flash Chat](#WrapUp) - What did we learn?  
+### **Wrap-up** - 5  minutes
+5) [Flash Chat](#WrapUp) - What did we learn?
 6) [Vocab Shmocab](#Shmocab)
 
 [/summary]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 - Identify a large task that needs to be done
 - Rearrange a large task into several smaller tasks
@@ -54,7 +54,7 @@ In computer science, we face some big, daunting problems. Challenges like findin
 
 [tip]
 
-# Materials Tip  
+# Materials Tip
 Playing cards usually come in multi-packs at the dollar store, but if you're rushed you can [print some from online](http://printerprojects.com/playingcards/deck.html) onto cardstock and cut them out with a slicer.
 
 [/tip]
@@ -114,7 +114,7 @@ Getting help from a large group of people to finish something faster
   - Once they've counted out their ten, have them report to you, drop their buttons back in the jar, and go again until the pile is gone.
 - Comment on how fast the task went.
   - Have the class reflect on how long it might have taken or how hard it may have felt to do alone.
-	
+
 
 [/together]
 
@@ -137,11 +137,11 @@ Jars of buttons and pennies work nicely, but if you find yourself with little ti
 
 > 1) Divide into groups of 4, 5, or 6.
 
-> 2) Grab your deck of playing cards and dump it into a bag, bucket, or even a loose pocket that you can make with the bottom of your shirt. 
+> 2) Grab your deck of playing cards and dump it into a bag, bucket, or even a loose pocket that you can make with the bottom of your shirt.
 
 > 3) Shake the cards until they’re all mixed up.
 
-> 4) Dump the cards out onto a table or desk where the whole group can see them.  
+> 4) Dump the cards out onto a table or desk where the whole group can see them.
 
 > 5) Decide how to break up the task of sorting the deck so that every person has something to do and no one is doing too much.
 
@@ -152,7 +152,7 @@ Jars of buttons and pennies work nicely, but if you find yourself with little ti
 
 [tip]
 
-# Lesson Tip  
+# Lesson Tip
 It can be challenging for students to figure out how to break apart large tasks at first.  Students might find it helpful to have some ideas handed to them after working for a while.  One great division for sorting cards is as follows:
 
 - One person picks up the cards and determines the suit of each one.
@@ -176,7 +176,7 @@ It can be challenging for students to figure out how to break apart large tasks 
 
 [tip]
 
-# Lesson Tip  
+# Lesson Tip
 Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future.  Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
 
 [/tip]
@@ -197,7 +197,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 ## Assessment (0 min)
 ### <a name="Assessment"></a>7) No Indivdual Assessment
-- Since crowdsourcing is not meant to be done alone, there is no individual assessment. 
+- Since crowdsourcing is not meant to be done alone, there is no individual assessment.
 - The final assessment of this lesson is the result of the previous activity.
 
 [/together]
@@ -208,27 +208,27 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 [together]
 
-## Extended Learning 
+## Extended Learning
 Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### Reverse Crowdsourcing
 
-- Often we think of crowdsourcing as pulling things apart to make them more simple.  You can also make big, beautiful things with the same technique. 
+- Often we think of crowdsourcing as pulling things apart to make them more simple.  You can also make big, beautiful things with the same technique.
 - Have your students each grab three cards and build one segment of a [card house](http://www.wikihow.com/Build-a-Tower-of-Cards).
 - Each student can go one after another to build a grand card tower.
-- Try with two, or even three students adding their chunk at a time. 
-  - Does crowdsourcing always make a task easier? 
+- Try with two, or even three students adding their chunk at a time.
+  - Does crowdsourcing always make a task easier?
 
 
 ### Crowdsourcing in the Round
 
-- You can crowdsource all at the same time or you can do it one person at a time.  Try having the whole class sort the same deck of cards, one student at a time.  
+- You can crowdsource all at the same time or you can do it one person at a time.  Try having the whole class sort the same deck of cards, one student at a time.
   - Shuffle the cards and place them in a pile in the center of the room.
-  - Have each student approach the pile and choose four cards. 
+  - Have each student approach the pile and choose four cards.
      - Have four piles for the students to sort their cards into
-          - Spades 
-          - Clubs 
-          - Hearts 
+          - Spades
+          - Clubs
+          - Hearts
           - Diamonds
      - Once all cards have been put in their four piles, have the following four students sort the individual piles.
      - The last person will put all four piles together.
@@ -240,15 +240,15 @@ Use these activities to enhance student learning. They can be used as outside of
 
 ## Connections and Background Information
 
-### ISTE Standards (formerly NETS) 
+### ISTE Standards (formerly NETS)
 
-- 1.c - Use models and simulation to explore complex systems and issues.   
-- 2.d - Contribute to project teams to solve problems.  
+- 1.c - Use models and simulation to explore complex systems and issues.
+- 2.d - Contribute to project teams to solve problems.
 - 4.b - Plan and manage activities to develop a solution or complete a project.
 - 6.a - Understand and use technology systems.
 
 ### CSTA K-12 Computer Science Standards
- 
+
 - CPP.L1:3-04. Construct a set of statements to be acted out to accomplish a simple task
 - CT.L1:3-03. Understand how to arrange information into useful order without using a computer
 - CT.L1:6-01. Understand and use the basic steps in algorithmic problem-solving
@@ -256,13 +256,13 @@ Use these activities to enhance student learning. They can be used as outside of
 - CT.L1:6-05. Make a list of sub-problems to consider while addressing a larger problem.
 - CL.L1:6-03. Identify ways that teamwork and collaboration can support problem solving and innovation.
 - CT.L2-06. Describe and analyze a sequence of instructions being followed.
- 
+
 ### NGSS Science and Engineering Practices
 
-- K-2-ETS1-1 - Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.  
+- K-2-ETS1-1 - Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.
 
 ### Common Core Mathematical Practices
- 
+
 - 1. Make sense of problems and persevere in solving them.
 - 2. Reason abstractly and quantitatively.
 - 6. Attend to precision.
@@ -283,9 +283,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 <a href="https://www.commonsensemedia.org/"><img src="https://code.org/curriculum/docs/k-5/commonSense.png" border="0"></a><br/>
 

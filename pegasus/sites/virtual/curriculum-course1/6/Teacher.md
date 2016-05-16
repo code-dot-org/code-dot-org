@@ -9,7 +9,7 @@ theme: none
 [content]
 
 ## Lesson Overview
-In this lesson, students will relate the concept of algorithms back to everyday real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa. 
+In this lesson, students will relate the concept of algorithms back to everyday real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.
 
 [summary]
 
@@ -18,25 +18,25 @@ In this lesson, students will relate the concept of algorithms back to everyday 
 
 1) [Review](#Review) <br/>
 2) [Vocabulary](#Vocab)<br/>
-3) [What We Do Daily](#GetStarted)  
+3) [What We Do Daily](#GetStarted)
 
-### **Activity: Real-Life Algorithms** - 20  minutes  
+### **Activity: Real-Life Algorithms** - 20  minutes
 
-4) [Real-Life Algorithms: Plant a Seed](#Activity1)  
+4) [Real-Life Algorithms: Plant a Seed](#Activity1)
 
 
-### **Wrap-up** - 5  minutes 
+### **Wrap-up** - 5  minutes
 
 5) [Flash Chat](#WrapUp) - What did we learn?<br/>
 
-### **Assessment** - 15  minutes 
+### **Assessment** - 15  minutes
 6) [Daily Algorithms](#Assessment)
 
 [/summary]
 
 [together]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 - Name various activities that make up their day
 - Decompose large activities into a series of smaller events
@@ -127,7 +127,7 @@ You know your classroom best.  As the teacher, decide if you should all do this 
 [/tip]
 
 - You can use algorithms to help describe things that people do every day.  In this activity, we will create an algorithm to help each other plant a seed.
- 
+
 
 > **Directions:**
 
@@ -165,7 +165,7 @@ If deciding on the correct steps seems too difficult for your students, do that 
 
 ## Assessment (15 min)
 ### <a name="Assessment"></a>6) Assessment Worksheet: [Daily Algorithms](Assessment6-RealLifeAlg.pdf)
-- Hand out the worksheet titled "Daily Algorithms" and allow students to complete the activity independently after the instructions have been well explained. 
+- Hand out the worksheet titled "Daily Algorithms" and allow students to complete the activity independently after the instructions have been well explained.
 - This should feel familiar, thanks to the previous activities.
 
 [/together]
@@ -173,7 +173,7 @@ If deciding on the correct steps seems too difficult for your students, do that 
 
 [together]
 
-## Extended Learning 
+## Extended Learning
 Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### Go Figure
@@ -194,19 +194,19 @@ Use these activities to enhance student learning. They can be used as outside of
 ### ISTE Standards (formerly NETS)
 
 - 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-- 1.c - Use models and simulation to explore complex systems and issues.  
+- 1.c - Use models and simulation to explore complex systems and issues.
 - 2.d - Contribute to project teams to solve problems.
 - 4.b - Plan and manage activities to develop a solution or complete a project.
-- 6.a - Understand and use technology systems. 
+- 6.a - Understand and use technology systems.
 
 
 ### CSTA K-12 Computer Science Standards
- 
+
 - CT.L1:3-03. Understand how to arrange information into useful order without using a computer.
 - CT.L1:6-01. Understand and use the basic steps in algorithmic problem-solving.
 - CT.L1:6-02. Develop a simple understanding of an algorithm using computer-free exercise.
 - CT.L1:6-05. Make a list of sub-problems to consider while addressing a larger problem.
-- CPP.L1:3-04. Construct a set of statements to be acted out to accomplish a simple task. 
+- CPP.L1:3-04. Construct a set of statements to be acted out to accomplish a simple task.
 - CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out (e.g., make a peanut butter and jelly sandwich activity).
 - CT.L2-03. Define an algorithm as a sequence of instructions that can be processed by a computer.
 - CT.L2-06. Describe and analyze a sequence of instructions being followed.
@@ -243,9 +243,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

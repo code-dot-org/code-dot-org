@@ -10,9 +10,6 @@ var Visualization = function () {
           <path d="M 0,-55 a 55 55 0 0 1 55 55" />
         </g>
       </svg>
-      <div id="capacityBubble">
-        <div id="capacity"></div>
-      </div>
     </ProtectedStatefulDiv>
   );
 };

@@ -764,5 +764,7 @@
   "failedMultiplyCharactersTimeoutBlockly": "Precisas apanhar 20 Mouse Droids. Usa o comando \"add a Mouse Droid\" dentro do evento \"when get Mouse Droid\" para adicionares dois ou mais Mouse Droids de cada vez que apanhas um.",
   "failedMultiplyCharactersTimeoutGotSome": "Parabéns, adicionaste código para fazer Mouse Droids. Podes continuar para o próximo puzzle ou tentar novamente obter 20 Mouse Droids. Tenta torná-lo mais fácil adicionando mais deles! (Pressiona e segura as teclas do teu teclado (ou ecrã) para te moveres mais rápido.)",
   "failedChangeSettingTimeout": "Consegue três Pilotos Rebeldes para seguires em frente.",
-  "failedChangeSettingSettings": "Faz o teu próprio jogo. Para passares este enigma, precisas mudar o teu droid e definir a sua velocidade."
+  "failedChangeSettingSettings": "Faz o teu próprio jogo. Para passares este enigma, precisas mudar o teu droid e definir a sua velocidade.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location."
 }

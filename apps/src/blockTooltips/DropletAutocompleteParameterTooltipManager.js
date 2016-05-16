@@ -95,7 +95,9 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
     this.dropletTooltipManager.codeFunctions,
     this.autocompletePaletteApisOnly).forEach(function (block) {
       if (!block.dropdown ||
-          (block.func !== paramInfo.funcName && block.func !== paramInfo.fullFuncName)) {
+          (block.func !== paramInfo.funcName &&
+          block.modeOptionName !== paramInfo.funcName &&
+          block.func !== paramInfo.fullFuncName)) {
         // Not the right block or no dropdown specified
         return;
       }

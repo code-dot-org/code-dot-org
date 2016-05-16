@@ -89,20 +89,15 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
-        <block type="maze_moveForward"/>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
         <block type="bee_whileNectarAmount">
           <title name="ARG1">nectarRemaining</title>
           <title name="OP">&gt;</title>
           <title name="ARG2">0</title>
         </block>
-        <block type="maze_nectar"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

@@ -76,7 +76,7 @@ var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTe
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
 var LOOP_HIGHLIGHT_RE =
-    new RegExp(LOOP_HIGHLIGHT.replace(/\(.*\)/, '\\(.*\\)'), 'g');
+    new RegExp(LOOP_HIGHLIGHT.replace(/\(.*\)/, '\\(.*\\)') + '\\s*', 'g');
 
 /**
  * Returns javascript code to call a timeout check
@@ -90,7 +90,7 @@ exports.loopHighlight = function (apiName, blockId) {
   if (blockId === undefined) {
     args = "%1";
   }
-  return apiName + '.' + LOOP_HIGHLIGHT.replace('()', '(' + args + ')');
+  return '  ' + apiName + '.' + LOOP_HIGHLIGHT.replace('()', '(' + args + ')');
 };
 
 /**
@@ -525,22 +525,9 @@ function populateGlobalFunctions(interpreter, blocks, blockFilter, scope) {
 
 function populateJSFunctions(interpreter) {
   // The interpreter is missing some basic JS functions. Add them as needed:
-  var wrapper;
-
-  // Add static methods from String:
-  var functions = ['fromCharCode'];
-  for (var i = 0; i < functions.length; i++) {
-    wrapper = exports.makeNativeMemberFunction({
-      interpreter: interpreter,
-      nativeFunc: String[functions[i]],
-      nativeParentObj: String,
-    });
-    interpreter.setProperty(interpreter.STRING, functions[i],
-      interpreter.createNativeFunction(wrapper), false, true);
-  }
 
   // Add String.prototype.includes
-  wrapper = function (searchStr) {
+  var wrapper = function (searchStr) {
     // Polyfill based off of https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
     return interpreter.createPrimitive(
       String.prototype.indexOf.apply(this, arguments) !== -1);
@@ -616,6 +603,7 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
     // `state.n` representing which VariableDeclarator is being executed).
     return state.n > 0;
   }
+  /* eslint-disable no-fallthrough */
   switch (type) {
     // Declarations:
     case "VariableDeclarator":
@@ -644,6 +632,7 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
     case "Program":
       return true;
   }
+  /* eslint-enable  no-fallthrough */
   return false;
 };
 

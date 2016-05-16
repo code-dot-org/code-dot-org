@@ -3,6 +3,7 @@
 var Radium = require('radium');
 var connect = require('react-redux').connect;
 var actions = require('../../applab/actions');
+var instructions = require('../../redux/instructions');
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
@@ -140,20 +141,20 @@ var TopInstructions = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
-    isEmbedView: state.level.isEmbedView,
-    puzzleNumber: state.level.puzzleNumber,
-    stageTotal: state.level.stageTotal,
+    isEmbedView: state.pageConstants.isEmbedView,
+    puzzleNumber: state.pageConstants.puzzleNumber,
+    stageTotal: state.pageConstants.stageTotal,
     maxHeight: state.instructions.maxHeight,
-    markdown: state.level.instructionsMarkdown,
+    markdown: state.pageConstants.instructionsMarkdown,
     collapsed: state.instructions.collapsed,
   };
 }, function propsFromDispatch(dispatch) {
   return {
     toggleInstructionsCollapsed: function () {
-      dispatch(actions.toggleInstructionsCollapsed());
+      dispatch(instructions.toggleInstructionsCollapsed());
     },
     setInstructionsHeight: function (height) {
-      dispatch(actions.setInstructionsHeight(height));
+      dispatch(instructions.setInstructionsHeight(height));
     }
   };
 }, null, { withRef: true }

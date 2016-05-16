@@ -14,6 +14,16 @@ module.exports.createSprite = function (x, y, width, height) {
   var s = new this.Sprite(x, y, width, height);
   var p5Inst = this;
 
+  s.setAnimation = function (animationName) {
+    var animation = p5Inst.projectAnimations[animationName];
+    if (typeof animation === 'undefined') {
+      throw new Error('Unable to find an animation named "' + animationName +
+          '".  Please make sure the animation exists.');
+    }
+    s.addAnimation(animationName, animation);
+    s.changeAnimation(animationName);
+  };
+
   s.setFrame = function (frame) {
     if (s.animation) {
       s.animation.setFrame(frame);
@@ -46,10 +56,6 @@ module.exports.createSprite = function (x, y, width, height) {
 
   s.frameDidChange = function () {
     return s.animation ? s.animation.frameChanged : false;
-  };
-
-  s.setColor = function (colorString) {
-    s.shapeColor = colorString;
   };
 
   s.destroy = function () {
@@ -135,6 +141,7 @@ module.exports.createSprite = function (x, y, width, height) {
   s.isTouching = isTouching.bind(s, this);
   s.depth = this.allSprites.maxDepth()+1;
   this.allSprites.add(s);
+
   return s;
 };
 
@@ -203,7 +210,7 @@ var AABBops = function (p5Inst, type, target, callback) {
 
     }
     else
-      throw('Error: overlap can only be checked between sprites or groups');
+      throw new Error('Error: overlap can only be checked between sprites or groups');
 
   } else {
     state.__i++;
@@ -513,7 +520,7 @@ var isTouching = function (p5Inst, target) {
 
   }
   else
-    throw('Error: isTouching can only be checked between sprites or groups');
+    throw new Error('Error: isTouching can only be checked between sprites or groups');
 
     for(var i=0; i<others.length; i++)
       if(this !== others[i] && !this.removed) //you can check collisions within the same group but not on itself

@@ -56,7 +56,7 @@
                       <title name="DIR">moveForward</title>
                       <title name="VALUE">1</title>
                       <next>
-                        <block type="draw_turn_by_constant" deletable="false" editable="false">
+                        <block type="draw_turn_by_constant" deletable="false" editable="false" next_connection_disabled="true">
                           <title name="DIR">turnRight</title>
                           <title name="VALUE">1</title>
                         </block>
@@ -72,10 +72,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">100</title>
-        </block>
         <block type="draw_turn_by_constant">
           <title name="DIR">turnRight</title>
           <title name="VALUE">90</title>
@@ -101,9 +97,13 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml/>
-    </required_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+      </xml>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

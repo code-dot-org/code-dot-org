@@ -211,6 +211,11 @@ class ScriptLevelsController < ApplicationController
       puzzle_page = params[:puzzle_page] || 1
       @pages = [@level.pages[puzzle_page.to_i - 1]]
       @total_page_count = @level.pages.count
+      @total_level_count = @level.levels.length
+    end
+
+    if @level.try(:peer_reviewable)
+      @peer_reviews = PeerReview.where(level: @level, submitter: current_user).where.not(status: nil)
     end
 
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level.id)

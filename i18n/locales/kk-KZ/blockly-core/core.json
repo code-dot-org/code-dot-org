@@ -25,7 +25,7 @@
   "COLOUR_RGB_RED":"қызыл",
   "COLOUR_RGB_TITLE":"түстерінен",
   "COLOUR_RGB_TOOLTIP":"Қызыл, жасыл және көк түстерінен берілген мөлшерде жаңа түс жаса. Барлық мәндер 0 мен 100 аралығында болуы тиіс.",
-  "CONFIRM_CREATE_VARIABLE":"Create",
+  "CONFIRM_CREATE_VARIABLE":"Құру",
   "CONFIRM_DELETE_FUNCTION_MESSAGE":"Ескерту! %1 жоюға сенімдісіз бе?",
   "CONFIRM_RENAME_VARIABLE":"Жоба атын өзгерту",
   "CONTRACT_EDITOR_HEADER":"Рецепт құрастыру",

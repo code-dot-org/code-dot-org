@@ -499,6 +499,11 @@ de-DE:
   dashboard_action_remove_confirm: Entfernen?
   dashboard_action_done: Fertig
   dashboard_action_required: benötigt
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Lehrer-Hauptseite
   dashboard_navigation_section_student_progress: Schülerkonten und Fortschritt
   dashboard_navigation_section_teacher_progress: Dein Kursfortschritt
@@ -516,6 +521,17 @@ de-DE:
   dashboard_navigation_view_stats: Statistik ansehen
   dashboard_navigation_section: 'Bereich: %{section_name}'
   dashboard_navigation_student: 'Schüler: %{student_name}'
+  dashboard_progress_not_started: Nicht gestartet
+  dashboard_progress_in_progress: In Bearbeitung
+  dashboard_progress_not_completed: Nicht erfüllt
+  dashboard_progress_completed_too_many_blocks: abgeschlossen, zu viele Blöcke
+  dashboard_progress_completed_perfect: Abgeschlossen, perfekt
+  dashboard_progress_furthest_level_attempted: Höchste Ebene versucht
+  dashboard_progress_submitted: eingereicht
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Neuer Bereich
   dashboard_sections_jumbotron_instruction: Erstelle neue Bereiche und füge Schüler hinzu. Abschnitte helfen Dir Schüler zu organisieren und in kleinere Gruppen aufzuteilen, um deren Fortschritt optimal verfolgen und ihre Konten verwalten zu können.
   dashboard_sections_table_section: Abschnitt
@@ -531,6 +547,19 @@ de-DE:
   dashboard_sections_secret_none: 'Wenn Du willst, dass die Schüler ihre Konten selbst verwalten, eingeschlossen eines eigenen Passwortes, wähle den geheimen Typ <b>Nichts</b>.'
   dashboard_sections_print_secrets: Du kannst dann die Kontoinformationen für alle Schüler ausdrucken und somit individuell verteilen.
   dashboard_sections_switch_section: 'Bereich wechseln:'
+  dashboard_sections_close: Schliessen
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: Schüler hinzufügen
   dashboard_students_add_students: Mehrere Schüler hinzufügen
   dashboard_students_add_multiple: 'Füge die Namen Deiner Schüler ein, einer pro Zeile:'
@@ -597,13 +626,6 @@ de-DE:
   dashboard_login_picture: Bild
   dashboard_login_none: E-Mail
   dashboard_new_password: Neues Passwort
-  dashboard_progress_not_started: Nicht gestartet
-  dashboard_progress_in_progress: In Bearbeitung
-  dashboard_progress_not_completed: Nicht erfüllt
-  dashboard_progress_completed_too_many_blocks: abgeschlossen, zu viele Blöcke
-  dashboard_progress_completed_perfect: Abgeschlossen, perfekt
-  dashboard_progress_furthest_level_attempted: Höchste Ebene versucht
-  dashboard_progress_submitted: eingereicht
   dashboard_stage: Bühne
   dashboard_puzzle: Aufgabe
   dashboard_question: Frage
@@ -638,11 +660,8 @@ de-DE:
   dashboard_faq_k5: Häufig gestellte Fragen zur Grundschule
   dashboard_announcements: Ankündigungen
   dashboard_announce_view_all: Alle anzeigen
-  dashboard_announce_message: "<b>New feature</b> - Now you can move your students between your sections or to another teacher's section."
-  dashboard_announce_message_second: "<b>Phase one applications closing</b> - Do you (or a teacher you know) want to learn how to teach a full year introductory high school computer science class students will love? You don't need any prior experience to join our free workshops for our Exploring Computer Science course. Sign up by April 22nd. "
+  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
   dashboard_announce_button_text: Erfahre mehr
-  dashboard_announce_hoc: '<b>9. November 2015</b> - Eine neue Hour of Code Anleitung ist erschienen, präsentiert durch den bevorstehenden Film: Star Wars: Das Erwachen der Macht. Arbeite zusammen mit Rey um den neuen Droiden, BB-8, durch seine Mission zu leiten. Dann triff Leia, um dein eigenes Spiel in einer weit, weit entfernten Galaxie zu erstellen und zu teilen.'
-  dashboard_announce_playlab: '<b>4. Dezember 2015</b> - "Hour of Code" ist da! Erkunde 50 Übungen, es spielt keine Rolle wie alt du bist oder welches Gerät du benutzt. Diese Woche neu: Programmiere deine eigenen Geschichten und Spiele in neuen Spielelaboren, Ice Age und Gumball.'
   code_hoc_coming: '"The Hour of Code" ist da - 8.-14. Dezember!'
   code_sign_up: Melde dich an, um an der Woche der Informatik teilzunehmen
   learn_more: Erfahre mehr

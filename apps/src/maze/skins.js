@@ -8,8 +8,7 @@
 // look: Colour of sonar-like look icon.
 
 var skinsBase = require('../skins');
-var utils = require('../utils');
-var _ = utils.getLodash();
+var _ = require('../lodash');
 
 var CONFIGS = {
   letters: {

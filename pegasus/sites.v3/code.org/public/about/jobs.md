@@ -13,15 +13,12 @@ nav: about_nav
  	- [Financial Analyst](#finance)
 - **Fundraising**
  	- [Grant Writer (Part time)](#grant)
-- **Marketing**
-  	- [Marketing & Communications Manager](#market)
 - **Outreach**
  	- [District Manager - East Coast locations](#dcdm)
 - **Product**
 	- [Senior Backend Engineer / Infrastructure Lead](#backend)
 	- [UX / Visual Designer](#design)
 - **Professional Learning & Community**
-	- [VP of Professional Learning & Community](#vp)
 	- [Training and Development Specialist](#train)
 
 
@@ -213,6 +210,7 @@ The ideal candidate has the following qualifications:
 - Experience building developer infrastructure
 - Expertise in some of these technologies preferred: Ruby / Rails, JavaScript, Sinatra, SQL/Databases/MySQL, React
 
+To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="design" href="#design">UX / Visual Designer (Seattle, WA)</a>
 **Job Summary:**
@@ -250,75 +248,6 @@ Additional desired skills include:
 - At least two years of relevant experience 
 
 Email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="market"href="#market">Marketing & Communications Manager (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is looking for a talented and creative hands-on manager to develop and execute a strategic, comprehensive marketing and communications plan for the organization. In the last 3 years, Code.org has grown exponentially. We currently have 8 million student accounts with 10,000 additional created every day. Our social media accounts have over 1.5 million followers and a third of US schools joined the Hour of Code this year. We need your help to continue to drive momentum and opportunity for computer science education. You can find our newsroom here. 
-
-Responsibilities of the position include:
-
-- Designing and managing organization-wide communications strategy 
-- Managing, maintaining, and growing our social media presence 
-- Serving as the central point of contact for website content on code.org, csedweek.org, hourofcode.com
-- Designing and managing email communication plan for marketing and grassroots lobbying campaigns
-- Managing email campaigns to teachers, parents, students, volunteers
-- Managing public relations, media coverage, and events 
-- Developing marketing video concepts and messaging with video team
-
-**Skills and Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- Excellent written and verbal communication skills and sound editorial judgment
-- Strong copywriting and content development experience 
-- Knowledge and understanding of current trends in social media 
-- Passion for digital media and devices, an “early adopter” of digital trends
-- Familiar with methodologies of website and media tracking tools 
-- Proven ability to work effectively across a wide range of internal teams, and produce on deadline in a fast-paced environment
-- Proficient in using Google suite of applications, presentation and layout skills 
-- 5-7 years of relevant work experience in communications and technology
-- Bachelor’s degree in communications, public relations, or related field
-- Familiarity or background in educational communications preferred, no background in Computer Science required
-
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>. Please include a writing sample, blog, or social media account. 
-
-## <a name="vp"href="#vp">VP of Professional Learning & Community  (Seattle, WA)</a>
-
-**Job Summary:**
-
-This critical senior management role would lead an integrated team responsible for ensuring a high-quality professional learning and professional development (PD) experience for Code.org’s K-12 partner teachers, schools, districts, and local organizations. 
-
-The primary responsibility of this role is to manage a team working to establish a nationwide network of facilitators and professional learning organizations, and to use this local PD capacity to train 100,000 in-service teachers to begin teaching computer science. 
-
-Responsibilities of this job include:
-
-- Ensure cross-team alignment of workflows with Professional Learning & Community, Product, District Outreach, and Curriculum Development teams
-- Oversee the implementation of all Professional Learning & Community program activities
-- Supervise the creation and management of high-level relationships with external partners
-- Develop a culture of efficiencies through the development of standardized, automated, and/or streamlined processes, including driving technical automation projects in collaboration with the engineering team
-- Utilize data to inform program improvements
-
-**Skills and Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- Bachelor’s degree (minimum) with 5+ years senior management experience, skilled in managing cross-functional teams
-- Demonstrated successful project management leadership in the scaling of a national program
-- Experience and aptitude for managing complex projects and relationships to realize successful project outcomes
-- Professional demeanor, possessing excellent communication, organizational, project management and interpersonal skills
-- Must be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team
-- A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must
-
-Additional desired strengths include:
-
-- Experience in developing or delivering online/asynchronous professional development and/or managing train-the-trainer models 
-- Experience in a fast growth start-up environment 
-- Understanding of and passion for equity in computer science and K-12 education
-
- 
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="train"href="#train">Training and Development Specialist (Seattle, WA)</a>

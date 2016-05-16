@@ -25,6 +25,7 @@ class LevelsController < ApplicationController
   def show
     if @level.try(:pages)
       @pages = @level.pages
+      @total_level_count = @level.levels.length
     end
 
     view_options(
@@ -87,9 +88,6 @@ class LevelsController < ApplicationController
     type = params[:type]
     blocks_xml = Blockly.convert_toolbox_to_category(blocks_xml) if type == 'toolbox_blocks'
     @level.properties[type] = blocks_xml
-    if @level.respond_to?("add_missing_toolbox_blocks") && type == 'solution_blocks'
-      @level.add_missing_toolbox_blocks
-    end
     @level.save!
     render json: { redirect: level_url(@level) }
   end
@@ -106,7 +104,7 @@ class LevelsController < ApplicationController
       return
     end
     if @level.update(level_params)
-      render json: { redirect: level_url(@level, show_callouts: true) }
+      render json: { redirect: level_url(@level, show_callouts: 1) }
     else
       render json: @level.errors, status: :unprocessable_entity
     end
