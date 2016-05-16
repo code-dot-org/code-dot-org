@@ -8,7 +8,7 @@ Automated UI tests for the dashboard.
 
 This is the best option for rapid iteration while writing a new test. ChromeDriver will run your tests in a new window on your machine.
 
-1. [Download the chromedriver](https://code.google.com/p/selenium/wiki/ChromeDriver)
+1. [Download the chromedriver](https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver)
 2. Start the chromedriver in the background (or a separate window): `/path/to/your/downloaded/chromedriver &`
 3. `cd` to the directory of this README.
 4. `bundle install`

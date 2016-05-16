@@ -1014,7 +1014,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
       {options.bodyText && <p>{options.bodyText}</p>}
       {options.prompt && <input
           style={textBoxStyle}
-          value={options.promptPrefill} />}
+          defaultValue={options.promptPrefill} />}
       <DialogButtons
           confirmText={options.confirmText}
           cancelText={options.cancelText}

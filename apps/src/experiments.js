@@ -9,9 +9,6 @@
 var queryString = require('query-string');
 
 var experiments = module.exports;
-// TODO(pcardune): remove OLD_KEY_WHITELIST when whitelisted experiments have
-// shipped
-var OLD_KEY_WHITELIST = ['topInstructions'];
 var STORAGE_KEY = 'experimentsList';
 
 /**
@@ -24,11 +21,6 @@ experiments.getQueryString_ = function () {
 experiments.getEnabledExperiments = function () {
   var jsonList = localStorage.getItem(STORAGE_KEY);
   var enabled = jsonList ? JSON.parse(jsonList) : [];
-  OLD_KEY_WHITELIST.forEach(function (key) {
-    if (localStorage.getItem('experiments-' + key) === 'true') {
-      enabled.push(key);
-    }
-  });
   return enabled;
 };
 
@@ -73,9 +65,5 @@ experiments.isEnabled = function (key) {
     }
   }
 
-  if (OLD_KEY_WHITELIST.indexOf(key) >= 0 && deprecatedKeyQuery) {
-    enabled = deprecatedKeyQuery === 'true';
-    this.setEnabled(key, enabled);
-  }
   return enabled;
 };

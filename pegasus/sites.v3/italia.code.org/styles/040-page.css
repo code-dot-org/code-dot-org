@@ -481,23 +481,3 @@ a.lines_of_code_link {
   text-decoration:none;
   font-family: 'Gotham 4r', sans-serif;
 }
-
-#sitemap #box {
-  background-color:grey;
-  margin-top:10px;
-  margin-bottom:10px;
-  padding:10px;
-  color:#aaa;
-}
-
-#sitemap #box h1 {
-  font-size:20px;
-  color:white;
-  margin:0px;
-}
-
-#sitemap #box a {
-  color:white;
-  font-family: 'Gotham 4r', sans-serif;
-}
-

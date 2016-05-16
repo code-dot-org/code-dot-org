@@ -17,6 +17,9 @@ FactoryGirl.define do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 03, 14)
       admin false
+      factory :admin_teacher do
+        admin true
+      end
       factory :facilitator do
         name 'Facilitator Person'
         after(:create) do |facilitator|
@@ -47,6 +50,13 @@ FactoryGirl.define do
     factory :young_student do
       user_type User::TYPE_STUDENT
       birthday Time.zone.today - 10.years
+    end
+
+    factory :student_of_admin do
+      after(:create) do |user|
+        section = create(:section, user: create(:admin_teacher))
+        create(:follower, section: section, student_user: user)
+      end
     end
   end
 
@@ -185,17 +195,17 @@ FactoryGirl.define do
     end
 
     trait :with_autoplay_video do
-      level {create(:level, :with_autoplay_video)}
+      levels {[create(:level, :with_autoplay_video)]}
     end
 
-    level
+    levels {[create(:level)]}
 
     trait :never_autoplay_video_true do
-      level {create(:level, :never_autoplay_video_true)}
+      levels {[create(:level, :never_autoplay_video_true)]}
     end
 
     trait :never_autoplay_video_false do
-      level {create(:level, :never_autoplay_video_false)}
+      levels {[create(:level, :never_autoplay_video_false)]}
     end
 
     chapter do |script_level|
@@ -314,10 +324,20 @@ FactoryGirl.define do
     status 'present'
   end
 
+  factory :peer_review do
+    user nil
+    from_instructor false
+    script nil
+    level nil
+    level_source nil
+    data "MyText"
+    status 1
+  end
+
   factory :plc_enrollment_unit_assignment, :class => 'Plc::EnrollmentUnitAssignment' do
     plc_user_course_enrollment nil
     plc_course_unit nil
-    status Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
+    status Plc::EnrollmentUnitAssignment::START_BLOCKED
   end
 
   factory :plc_course_unit, :class => 'Plc::CourseUnit' do
@@ -328,7 +348,7 @@ FactoryGirl.define do
   end
 
   factory :plc_written_submission_task, parent: :plc_task, class: 'Plc::WrittenAssignmentTask' do
-    assignment_description nil
+    level_id nil
   end
 
   factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
@@ -349,10 +369,6 @@ FactoryGirl.define do
   factory :plc_evaluation_question, :class => 'Plc::EvaluationQuestion' do
     question "MyString"
     plc_course_unit nil
-  end
-
-  factory :written_enrollment_task_assignment, parent: :plc_enrollment_task_assignment, class: 'Plc::WrittenEnrollmentTaskAssignment' do
-    submission nil
   end
 
   factory :plc_enrollment_task_assignment, :class => 'Plc::EnrollmentTaskAssignment' do
@@ -380,6 +396,7 @@ FactoryGirl.define do
   factory :plc_learning_module, :class => 'Plc::LearningModule' do
     name "MyString"
     plc_course_unit {create(:plc_course_unit)}
+    module_type Plc::LearningModule::CONTENT_MODULE
   end
   factory :plc_course, :class => 'Plc::Course' do
     name "MyString"
@@ -397,6 +414,7 @@ FactoryGirl.define do
   factory :professional_learning_module do
     name "Some module"
     learning_module_type "Some learning module type"
+    required false
   end
 
   factory :professional_learning_task do
@@ -411,6 +429,7 @@ FactoryGirl.define do
 
   factory :survey_result do
     user { create :teacher }
+    kind 'Diversity2016'
     properties {{survey2016_ethnicity_asian: "1"}}
     properties {{survey2016_foodstamps: "3"}}
   end
@@ -450,7 +469,8 @@ FactoryGirl.define do
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
     sequence(:name) { |n| "Workshop Participant #{n} " }
-    sequence(:email) { |n| "testuser#{n}@example.com.xx" }
+    sequence(:email) { |n| "participant#{n}@example.com.xx" }
+    school {'Example School'}
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
@@ -463,5 +483,10 @@ FactoryGirl.define do
     course Pd::Workshop::COURSES.first
     rate_type Pd::DistrictPaymentTerm::RATE_TYPES.first
     rate 10
+  end
+
+  factory :professional_learning_partner do
+    sequence(:name) { |n| "PLP #{n}" }
+    contact {create :teacher}
   end
 end

@@ -1,20 +1,22 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-04-20T19:31:00.161Z",
+  "created_at": "2016-04-20T19:31:00.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
       "drawSprites": null,
-      "var sprite = createSprite": null,
       "background": null,
+      "var sprite = createSprite": null,
       "x": null,
       "y": null,
-      "sprite.height": null,
-      "sprite.width": null,
-      "rotation": null
+      "shapeColor": null,
+      "rotation": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "randomNumber_min_max": null
     },
     "edit_code": true,
     "embed": "false",
@@ -39,7 +41,10 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "show_d_pad": "false",
+    "markdown_instructions": "# Rotation Direction\r\n\r\nOn the last level you made your sprite rotate by using `sprite.rotation = sprite.roation + 1`.  This will always rotate in the positive direction. Sometimes however you will want your sprite to rotate the other direction. To do this you can just use subtraction!\r\n\r\n# Do This\r\n\r\n* Create two sprites\r\n* Make one rotate in the positive direction and one in the negative direction",
+    "start_blocks": "function draw(){\r\n  \r\n}"
   },
   "published": true,
   "notes": "",

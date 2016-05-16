@@ -22,7 +22,7 @@
   - @course_unit.plc_learning_modules.each do |learning_module|
     %li
       = link_to learning_module.name, learning_module
-      - if learning_module.required
+      - if learning_module.is_required?
         %span.required REQUIRED
 %hr
 %p
@@ -37,11 +37,14 @@
     %th
       Associated Module
     %th
+      Weight
+    %th
     - @course_unit.plc_evaluation_questions.each do |question|
       %tbody.question_section
         %tr
           %td
             = question.question
+          %td
           %td
           %td
           %td
@@ -53,15 +56,19 @@
               = answer.answer
             %td
               #{answer.plc_learning_module.try(:name)}
-              -if answer.plc_learning_module.try(:required)
+              -if answer.plc_learning_module.try(:is_required?)
                 %span.required REQUIRED
+            %td
+              #{answer.weight}
             %td
         %tr.cloneableAnswerRow
           %td
           %td
             = text_field_tag ''
           %td
-            = select_tag '', options_for_select(options_for_evaluation_answer_modules(@course_unit)), include_blank: ''
+            = select_tag '', options_for_select(options_with_learning_module_names_and_required_tag(@course_unit)), include_blank: ''
+          %td
+            = text_field_tag '', '1', style: 'width: 20px'
           %td
         %tr.new_answer_button_row{question_id: question.id}
           %td
@@ -87,6 +94,4 @@
   =hidden_field_tag 'newAnswersList', '[]'
   =submit_tag 'Submit new questions and answers', id: 'submitNewQuestions', disabled: true
 
-= link_to 'Edit', edit_plc_course_unit_path(@course_unit)
-\|
 = link_to 'Back', plc_course_path(@course_unit.plc_course)

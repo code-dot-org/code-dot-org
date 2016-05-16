@@ -26,13 +26,17 @@ theme: pdf
 
   .intro
     .intro-text
-      Computer science drives job growth and innovation throughout our economy and society. Computing occupations make up two-thirds of all projected new jobs in STEM fields and 16% of all new wages, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. 75 percent of U.S. schools don’t even offer computer science and only 8% of STEM graduates study it. We need to improve access for all students, including groups who have traditionally been underrepresented.
+      Computer science drives job growth and innovation throughout our economy and society. Computing occupations are the 
+      %b
+        number 1 source of all new wages in the U.S. 
+      and make up two-thirds of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. 75 percent of U.S. schools don’t even offer computer science and only 8% of STEM graduates study it. We need to improve access for all students, including groups who have traditionally been underrepresented.
 
     %img.chart{src: "/images/charts/jobs_degrees.png"}
 
-  .call-out
+  .clear
+  #top-stats{style: "margin-top: 20px;"}
     %center
-      %h3 9 in 10 parents want their students to learn computer science, but only 1 in 4 schools teach it.
+      %img{src: "/images/charts/facts-sheet-top-stats.png", width: "100%"}
 
   %div
     %h2
@@ -143,12 +147,16 @@ theme: pdf
         %li Ask your local school district to allow computer science courses to satisfy a core math or science requirement.
         %li 
           Visit
-          %a{href: "https://code.org/educate/3rdparty"} https://code.org/educate/3rdparty
+          %a{href: "www.code.org/educate/3rdparty"} www.code.org/educate/3rdparty
           to find out about courses and curriculum from a variety of third parties, including Code.org.
         %li
           Visit
           %a{href: state_info[:website_url_s]}= state_info[:website_url_s]
           to learn more about supporting computer science in your state.
+        %li
+          Sign the petition at
+          %a{href: "www.change.org/computerscience"} www.change.org/computerscience
+          to join 100,000 Americans asking Congress to support computer science.
 
   %div.clear-both
     %h2.no-margin-bottom
@@ -223,6 +231,12 @@ theme: pdf
   .quote-center
     %h3 “Computer Science is a liberal art: it’s something that everybody should be exposed to and everyone should have a mastery of to some extent.”
     %p — Steve Jobs
+
+  %div
+    %h2 What can the federal government do to support computer science in grades K-12?
+    Access to computer science courses is a bipartisan issue that can be addressed without adding to the Federal budget. Tell your representatives in Washington, D.C. that you support funding to expand access to this foundational 21st-century subject in your community that will America remain secure and globally competitive. Over 100,000 Americans, CEOs of the largest companies in every major industry, 29 governors, and major K-12 education leaders have all joined forces to call on Congress to support this idea. You can see their open letter (and add your name in support) at 
+    = succeed "." do
+      %a{href: "www.change.org/computerscience"} www.change.org/computerscience
 
   %div
     %p

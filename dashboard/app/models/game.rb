@@ -113,6 +113,14 @@ class Game < ActiveRecord::Base
     @@game_free_response ||= find_by_name("FreeResponse")
   end
 
+  def self.script_completion
+    @@game_script_completion ||= find_by_name("ScriptCompletion")
+  end
+
+  def self.standalone_video
+    @@game_standalone_video ||= find_by_name("StandaloneVideo")
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -212,6 +220,8 @@ class Game < ActiveRecord::Base
         Gamelab:gamelab
         LevelGroup:level_group
         FreeResponse:free_response
+        ScriptCompletion:script_completion
+        StandaloneVideo:standalone_video
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

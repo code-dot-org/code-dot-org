@@ -36,11 +36,13 @@ progress.mergedActivityCssClass = function (a, b) {
   return progress.activityCssClass(clientState.mergeActivityResult(a, b));
 };
 
-progress.populateProgress = function (scriptName) {
+progress.populateProgress = function (scriptName, puzzlePage) {
+  var status;
+
   // Render the progress the client knows about (from sessionStorage)
   var clientProgress = clientState.allLevelsProgress()[scriptName] || {};
   Object.keys(clientProgress).forEach(function (levelId) {
-    $('.level-' + levelId).addClass(progress.activityCssClass(clientProgress[levelId]));
+    $('.user-stats-block .level-' + levelId).addClass(progress.activityCssClass(clientProgress[levelId]));
   });
 
   $.ajax('/api/user_progress/' + scriptName).done(function (data) {
@@ -59,8 +61,25 @@ progress.populateProgress = function (scriptName) {
       if (serverProgress[levelId].submitted) {
         // Clear the existing class and replace
         $('.level-' + levelId).attr('class', 'level_link submitted');
+      } else if (serverProgress[levelId].pages_completed) {
+        // This is a multi-page level.  There will be multiple dots for the same level ID,
+        // so we need to decorate each of them individually.
+        var pagesCompleted = serverProgress[levelId].pages_completed;
+        for (var page = 0; page < pagesCompleted.length; page++) {
+          // The dot is considered perfect if the page is considered complete.
+          var pageCompleted = pagesCompleted[page];
+          status = pageCompleted ? "perfect" : "attempted";
+
+          // Clear the existing class and replace.
+          $($('.user-stats-block .level-' + levelId)[page]).attr('class', 'level-' + levelId + ' level_link ' + status);
+
+          // If this is the current level, highlight it.
+          if (window.appOptions && appOptions.serverLevelId && levelId == appOptions.serverLevelId && puzzlePage-1 == page) {
+            $($('.user-stats-block .level-' + appOptions.serverLevelId)[puzzlePage-1]).parent().addClass('puzzle_outer_current');
+          }
+        }
       } else if (serverProgress[levelId].result !== clientProgress[levelId]) {
-        var status = progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId].result);
+        status = progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId].result);
 
         // Clear the existing class and replace
         $('.level-' + levelId).attr('class', 'level_link ' + status);
@@ -71,8 +90,8 @@ progress.populateProgress = function (scriptName) {
     });
   });
 
-  // Highlight the current level
-  if (window.appOptions && appOptions.serverLevelId) {
+  // Unless we already highlighted a specific page, highlight the current level.
+  if (puzzlePage == -1 && window.appOptions && appOptions.serverLevelId) {
     $('.level-' + appOptions.serverLevelId).parent().addClass('puzzle_outer_current');
   }
 };
@@ -80,18 +99,34 @@ progress.populateProgress = function (scriptName) {
 progress.renderStageProgress = function (stageData, progressData, clientProgress, currentLevelId, puzzlePage) {
   var serverProgress = progressData.levels || {};
   var currentLevelIndex = null;
+  var lastLevelId = null;
+  var levelRepeat = 0;
 
   var combinedProgress = stageData.levels.map(function (level, index) {
     // Determine the current level index.
     // However, because long assessments can have the same level appearing
     // multiple times, just set this the first time it's determined.
     if (level.id === currentLevelId && currentLevelIndex === null) {
-       currentLevelIndex = index;
+      currentLevelIndex = index;
+    }
+
+    // If we have a multi-page level, then we will encounter the same level ID
+    // multiple times in a row.  Keep track of how many times we've seen it
+    // repeat, so that we know what page we're up to.
+    if (level.id === lastLevelId) {
+      levelRepeat++;
+    } else {
+      lastLevelId = level.id;
+      levelRepeat = 0;
     }
 
     var status;
     if (serverProgress && serverProgress[level.id] && serverProgress[level.id].submitted) {
       status = "submitted";
+    } else if (serverProgress && serverProgress[level.id] && serverProgress[level.id].pages_completed) {
+      // The dot is considered perfect if the page is considered complete.
+      var pageCompleted = serverProgress[level.id].pages_completed[levelRepeat];
+      status = pageCompleted ? "perfect" : "attempted";
     } else if (clientState.queryParams('user_id')) {
       // Show server progress only (the student's progress)
       status = progress.activityCssClass((serverProgress[level.id] || {}).result);
@@ -125,9 +160,11 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
 };
 
 progress.renderCourseProgress = function (scriptData) {
+  var teacherCourse = $('#landingpage').hasClass('teacher-course');
   var mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
   ReactDOM.render(React.createElement(CourseProgress, {
+    display: teacherCourse ? 'list' : 'dots',
     stages: scriptData.stages
   }), mountPoint);
   progress.populateProgress(scriptData.name);

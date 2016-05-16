@@ -129,6 +129,9 @@ describe('Level tests', function () {
       Studio.JSInterpreter = undefined;
     }
 
+    // Recreate our redux store so that we have a fresh copy
+    studioApp.createReduxStore_();
+
     if (window.Applab) {
       var elementLibrary = require('@cdo/apps/applab/designElements/library');
       elementLibrary.resetIds();

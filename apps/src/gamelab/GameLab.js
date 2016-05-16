@@ -7,7 +7,7 @@ var codegen = require('../codegen');
 var api = require('./api');
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
-var codeWorkspaceEjs = require('../templates/codeWorkspace.html.ejs');
+var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = require('../lodash');
@@ -27,10 +27,11 @@ var dom = require('../dom');
 var experiments = require('../experiments');
 
 var actions = require('./actions');
-var createStore = require('../redux');
-var gamelabReducer = require('./reducers').gamelabReducer;
+var setPageConstants = require('../redux/pageConstants').setPageConstants;
+var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
+import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -55,13 +56,6 @@ var GameLab = function () {
   this.tickIntervalId = 0;
   this.tickCount = 0;
 
-  /**
-   * Redux Store holding application state, transformable by actions.
-   * @private {Store}
-   * @see http://redux.js.org/docs/basics/Store.html
-   */
-  this.reduxStore_ = createStore(gamelabReducer);
-
   /** @type {StudioApp} */
   this.studioApp_ = null;
 
@@ -72,7 +66,7 @@ var GameLab = function () {
   this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
   /** @type {JsDebuggerUi} */
-  this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
+  this.debugger_ = null;
 
   this.eventHandlers = {};
   this.Globals = {};
@@ -107,7 +101,9 @@ module.exports = GameLab;
  */
 GameLab.prototype.log = function (object) {
   this.consoleLogger_.log(object);
-  this.debugger_.log(object);
+  if (this.debugger_) {
+    this.debugger_.log(object);
+  }
 };
 
 /**
@@ -153,14 +149,33 @@ GameLab.prototype.init = function (config) {
   config.dropletConfig = dropletConfig;
   config.appMsg = msg;
 
+  // hide makeYourOwn on the share page
+  config.makeYourOwn = false;
+
+  config.centerEmbedded = false;
+  config.wireframeShare = true;
+  config.noHowItWorks = true;
+
+  config.shareWarningInfo = {
+    hasDataAPIs: function () {
+      return this.hasDataStoreAPIs(this.studioApp_.getCode());
+    }.bind(this),
+    onWarningsComplete: function () {
+      window.setTimeout(this.studioApp_.runButtonClick, 0);
+    }.bind(this)
+  };
+
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructions');
+  config.showInstructionsInTopPane = true;
+
+  var breakpointsEnabled = !config.level.debuggerDisabled;
 
   var onMount = function () {
+    this.setupReduxSubscribers(this.studioApp_.reduxStore);
     config.loadAudio = this.loadAudio_.bind(this);
     config.afterInject = this.afterInject_.bind(this, config);
-    config.afterEditorReady = this.afterEditorReady_.bind(this, true);
+    config.afterEditorReady = this.afterEditorReady_.bind(this, breakpointsEnabled);
 
     // Store p5specialFunctions in the unusedConfig array so we don't give warnings
     // about these functions not being called:
@@ -173,62 +188,84 @@ GameLab.prototype.init = function (config) {
       dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
     }
 
-    this.debugger_.initializeAfterDomCreated({
-      defaultStepSpeed: 1
-    });
-  }.bind(this);
+    if (this.debugger_) {
+      this.debugger_.initializeAfterDomCreated({
+        defaultStepSpeed: 1
+      });
+    }
 
-  this.reduxStore_.dispatch(actions.setInitialLevelProps({
-    assetUrl: this.studioApp_.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share
-  }));
+    this.setCrosshairCursorForPlaySpace();
+  }.bind(this);
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
-  var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
-    showButtons: true,
-    showConsole: true,
-    showWatch: true,
-  });
+  var showDebugButtons = (!config.hideSource &&
+                          config.level.editCode &&
+                          !config.level.debuggerDisabled);
+  var showDebugConsole = !config.hideSource && config.level.editCode;
 
-  var generateCodeWorkspaceHtmlFromEjs = function () {
-    return codeWorkspaceEjs({
-      assetUrl: this.studioApp_.assetUrl,
-      data: {
-        localeDirection: this.studioApp_.localeDirection(),
-        extraControlRows: extraControlRows,
-        blockUsed : undefined,
-        idealBlockNumber : undefined,
-        editCode: this.level.editCode,
-        blockCounterClass : 'block-counter-default',
-        pinWorkspaceToBottom: true,
-        readonlyWorkspace: config.readonlyWorkspace
-      }
-    });
-  }.bind(this);
+  if (showDebugButtons || showDebugConsole) {
+    this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
+  }
 
-  this.reduxStore_.dispatch(actions.setInitialLevelProps({
+  this.studioApp_.reduxStore.dispatch(setPageConstants({
     assetUrl: this.studioApp_.assetUrl,
     isEmbedView: !!config.embed,
+    isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isShareView: !!config.share,
     instructionsMarkdown: config.level.markdownInstructions,
     instructionsInTopPane: config.showInstructionsInTopPane,
     puzzleNumber: config.level.puzzle_number,
     stageTotal: config.level.stage_total,
+    showDebugButtons: showDebugButtons,
+    showDebugConsole: showDebugConsole,
+    showDebugWatch: true,
+    localeDirection: this.studioApp_.localeDirection(),
+    isDroplet: true
   }));
 
   // Push project-sourced animation metadata into store
   if (typeof config.initialAnimationMetadata !== 'undefined') {
-    this.reduxStore_.dispatch(actions.setInitialAnimationMetadata(config.initialAnimationMetadata));
+    this.studioApp_.reduxStore.dispatch(actions.setInitialAnimationMetadata(config.initialAnimationMetadata));
   }
 
-  ReactDOM.render(<Provider store={this.reduxStore_}>
+  ReactDOM.render(<Provider store={this.studioApp_.reduxStore}>
     <GameLabView
-      generateCodeWorkspaceHtml={generateCodeWorkspaceHtmlFromEjs}
       showFinishButton={finishButtonFirstLine && showFinishButton}
+      hideSource={!!config.hideSource}
       onMount={onMount} />
   </Provider>, document.getElementById(config.containerId));
+};
+
+/**
+ * Subscribe to state changes on the store.
+ * @param {!Store} store
+ */
+GameLab.prototype.setupReduxSubscribers = function (store) {
+  var state = {};
+  var boundOnIsRunningChange = this.onIsRunningChange.bind(this);
+  store.subscribe(function () {
+    var lastState = state;
+    state = store.getState();
+
+    if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
+      boundOnIsRunningChange(state.runState.isRunning);
+    }
+  });
+};
+
+GameLab.prototype.onIsRunningChange = function () {
+  this.setCrosshairCursorForPlaySpace();
+};
+
+/**
+ * Hopefully a temporary measure - we do this ourselves for now because this is
+ * a 'protected' div that React doesn't update, but eventually would rather do
+ * this with React.
+ */
+GameLab.prototype.setCrosshairCursorForPlaySpace = function () {
+  var showOverlays = shouldOverlaysBeVisible(this.studioApp_.reduxStore.getState());
+  $('#divGameLab').toggleClass('withCrosshair', showOverlays);
 };
 
 GameLab.prototype.loadAudio_ = function () {
@@ -244,6 +281,15 @@ GameLab.prototype.calculateVisualizationScale_ = function () {
 };
 
 /**
+ * @param {string} code The code to search for Data Storage APIs
+ * @return {boolean} True if the code uses any data storage APIs
+ */
+GameLab.prototype.hasDataStoreAPIs = function (code) {
+  return /createRecord/.test(code) || /updateRecord/.test(code) ||
+      /setKeyValue/.test(code);
+};
+
+/**
  * Code called after the blockly div + blockly core is injected into the document
  */
 GameLab.prototype.afterInject_ = function (config) {
@@ -256,26 +302,22 @@ GameLab.prototype.afterInject_ = function (config) {
         this.onArrowButtonDown.bind(this, ArrowIds[btn]));
   }
   if (this.level.showDPad) {
-    dom.addMouseUpTouchEvent(document.getElementById('studio-dpad-button'),
-        this.resetDPad.bind(this));
     dom.addMouseDownTouchEvent(document.getElementById('studio-dpad-button'),
         this.onDPadButtonDown.bind(this));
   }
+  // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
+  // all touchend events on the page, breaking click events...
   document.addEventListener('mouseup', this.onMouseUp.bind(this), false);
+  var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
+  if (mouseUpTouchEventName) {
+    document.body.addEventListener(mouseUpTouchEventName, this.onMouseUp.bind(this));
+  }
 
   if (this.studioApp_.isUsingBlockly()) {
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords('GameLab,code');
   }
-
-  // Adjust visualizationColumn width.
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  visualizationColumn.style.width = '400px';
-
-  var divGameLab = document.getElementById('divGameLab');
-  divGameLab.style.width = '400px';
-  divGameLab.style.height = '400px';
 
   // Update gameLabP5's scale and keep it updated with future resizes:
   this.gameLabP5.scale = this.calculateVisualizationScale_();
@@ -328,7 +370,9 @@ GameLab.prototype.reset = function (ignore) {
   this.preloadInProgress = false;
   this.globalCodeRunsDuringPreload = false;
 
-  this.debugger_.detach();
+  if (this.debugger_) {
+    this.debugger_.detach();
+  }
   this.consoleLogger_.detach();
 
   // Discard the interpreter.
@@ -504,10 +548,17 @@ GameLab.prototype.onDPadButtonDown = function (e) {
     document.body.addEventListener(this.dPadState.touchEventName,
         this.dPadState.boundHandler);
   }
-  this.dPadState.startingX = e.clientX;
-  this.dPadState.startingY = e.clientY;
-  this.dPadState.previousX = e.clientX;
-  this.dPadState.previousY = e.clientY;
+  if (e.touches) {
+    this.dPadState.startingX = e.touches[0].clientX;
+    this.dPadState.startingY = e.touches[0].clientY;
+    this.dPadState.previousX = e.touches[0].clientX;
+    this.dPadState.previousY = e.touches[0].clientY;
+  } else {
+    this.dPadState.startingX = e.clientX;
+    this.dPadState.startingY = e.clientY;
+    this.dPadState.previousX = e.clientX;
+    this.dPadState.previousY = e.clientY;
+  }
 
   $('#studio-dpad-button').addClass('active');
 
@@ -539,17 +590,24 @@ GameLab.prototype.onDPadMouseMove = function (e) {
     }
   }
 
-  notifyKeyHelper(window.p5.prototype.LEFT_ARROW, 'left',
-      this.dPadState.startingX, this.dPadState.previousX, e.clientX, false);
-  notifyKeyHelper(window.p5.prototype.RIGHT_ARROW, 'right',
-      this.dPadState.startingX, this.dPadState.previousX, e.clientX, true);
-  notifyKeyHelper(window.p5.prototype.UP_ARROW, 'up',
-      this.dPadState.startingY, this.dPadState.previousY, e.clientY, false);
-  notifyKeyHelper(window.p5.prototype.DOWN_ARROW, 'down',
-      this.dPadState.startingY, this.dPadState.previousY, e.clientY, true);
+  var clientX = e.clientX;
+  var clientY = e.clientY;
+  if (e.touches) {
+    clientX = e.touches[0].clientX;
+    clientY = e.touches[0].clientY;
+  }
 
-  this.dPadState.previousX = e.clientX;
-  this.dPadState.previousY = e.clientY;
+  notifyKeyHelper(window.p5.prototype.LEFT_ARROW, 'left',
+      this.dPadState.startingX, this.dPadState.previousX, clientX, false);
+  notifyKeyHelper(window.p5.prototype.RIGHT_ARROW, 'right',
+      this.dPadState.startingX, this.dPadState.previousX, clientX, true);
+  notifyKeyHelper(window.p5.prototype.UP_ARROW, 'up',
+      this.dPadState.startingY, this.dPadState.previousY, clientY, false);
+  notifyKeyHelper(window.p5.prototype.DOWN_ARROW, 'down',
+      this.dPadState.startingY, this.dPadState.previousY, clientY, true);
+
+  this.dPadState.previousX = clientX;
+  this.dPadState.previousY = clientY;
 };
 
 GameLab.prototype.resetDPad = function () {
@@ -664,7 +722,9 @@ GameLab.prototype.initInterpreter = function () {
   });
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
-  this.debugger_.attachTo(this.JSInterpreter);
+  if (this.debugger_) {
+    this.debugger_.attachTo(this.JSInterpreter);
+  }
   this.JSInterpreter.parse({
     code: this.studioApp_.getCode(),
     blocks: dropletConfig.blocks,
@@ -744,6 +804,8 @@ GameLab.prototype.onP5ExecutionStarting = function () {
  * @return {Boolean} whether or not the preload has completed
  */
 GameLab.prototype.onP5Preload = function () {
+  this.gameLabP5.preloadAnimations(this.getAnimationMetadata());
+
   this.initInterpreter();
   // And execute the interpreter for the first time:
   if (this.JSInterpreter && this.JSInterpreter.initialized()) {
@@ -908,5 +970,18 @@ GameLab.prototype.displayFeedback_ = function () {
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
  */
 GameLab.prototype.getAnimationMetadata = function () {
-  return this.reduxStore_.getState().animations;
+  return this.studioApp_.reduxStore.getState().animations;
+};
+
+GameLab.prototype.getAnimationDropdown = function () {
+  return this.getAnimationMetadata().map(function (animation) {
+    return {
+      text: utils.quote(animation.name),
+      display: utils.quote(animation.name)
+    };
+  });
+};
+
+GameLab.prototype.getAppReducers = function () {
+  return reducers;
 };

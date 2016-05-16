@@ -82,32 +82,4 @@ describe('experiments', function () {
     assert.isFalse(experiments.isEnabled('better-feature'));
   });
 
-  // TODO(pcardune): remove when whitelisted experiments have shipped
-  describe('deprecated behavior', function () {
-
-    beforeEach(function () {
-      localStorage.removeItem('experiments-topInstructions');
-    });
-
-    it('can load whitelisted experiments from deprecated storage', function () {
-      assert.isFalse(experiments.isEnabled('topInstructions'));
-      localStorage.setItem('experiments-topInstructions', true);
-      assert.isTrue(experiments.isEnabled('topInstructions'));
-      assert.sameMembers(
-        experiments.getEnabledExperiments(),
-        ['topInstructions']
-      );
-    });
-
-    it('can toggle an experiment with a query parameter', function () {
-      assert.strictEqual(experiments.isEnabled('topInstructions'), false);
-
-      mockedQueryString = '?topInstructions=true';
-      assert.strictEqual(experiments.isEnabled('topInstructions'), true);
-
-      mockedQueryString = '?topInstructions=false';
-      assert.strictEqual(experiments.isEnabled('topInstructions'), false);
-    });
-  });
-
 });

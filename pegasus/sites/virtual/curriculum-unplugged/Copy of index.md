@@ -24,14 +24,14 @@ lessons = DB[:cdo-unplugged].where(course_s:course)
   <td style="background-color: #00ADBC; color: #FFFFFF; font-size: 20px; font-weight: bold;">Looking for lessons that don't require computers?</td>
 </tr>
 <tr>
-  <td> 
-  
+  <td>
+
   If this is your first time programming, you may want to go through one of the following online courses before teaching this material:
 <li> <a href="https://www.codecademy.com/learn/javascript" target="_blank">Codecademy</a>
 <li> <a href="https://www.khanacademy.org/computing/computer-programming/programming" target="_blank">Khan Academy</a>
 <li> <a href="https://codehs.com/library/course/1/module/1" target="_blank">CodeHS</a>
 
-  
+
   </td>
 </tr>
 </table> -->
@@ -81,7 +81,6 @@ Each of these activities can either be used alone or with other computer science
 
 <% end %>
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
 [/content]
 

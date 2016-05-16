@@ -1982,7 +1982,7 @@ Blockly.Field.prototype.getRootElement = function() {
 };
 Blockly.Field.prototype.updateWidth_ = function() {
   var width;
-  if(this.textElement_.getComputedTextLength) {
+  if(this.textElement_.getComputedTextLength && document.body.contains(this.textElement_)) {
     width = this.textElement_.getComputedTextLength()
   }else {
     width = 1
@@ -5959,6 +5959,9 @@ Blockly.Xml.blockToDom = function(block, ignoreChildBlocks) {
   }
   if(!block.isUserVisible()) {
     element.setAttribute("uservisible", false)
+  }
+  if(block.isNextConnectionDisabled()) {
+    element.setAttribute("next_connection_disabled", true)
   }
   if(/^procedures_def/.test(block.type) && block.userCreated) {
     element.setAttribute("usercreated", true)
@@ -15185,7 +15188,17 @@ Blockly.Block.prototype.showContextMenu_ = function(e) {
       block.setMovable(!block.isMovable());
       Blockly.ContextMenu.hide()
     }};
-    options.push(movableOption)
+    options.push(movableOption);
+    var nextConnectionDisabledOption = {text:this.nextConnectionDisabled_ ? "Enable Next Connection" : "Disable Next Connection", enabled:true, callback:function() {
+      block.setNextConnectionDisabled(!block.nextConnectionDisabled_);
+      Blockly.ContextMenu.hide()
+    }};
+    options.push(nextConnectionDisabledOption);
+    var editableOption = {text:this.editable_ ? "Make Uneditable" : "Make editable", enabled:true, callback:function() {
+      block.setEditable(!block.isEditable());
+      Blockly.ContextMenu.hide()
+    }};
+    options.push(editableOption)
   }
   if(this.customContextMenu && !block.isInFlyout) {
     this.customContextMenu(options)
@@ -15526,11 +15539,15 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
     this.svg_ && this.render()
   }
 };
+Blockly.Block.prototype.isNextConnectionDisabled = function() {
+  return this.nextConnectionDisabled_
+};
 Blockly.Block.prototype.setNextConnectionDisabled = function(disabled) {
   this.nextConnectionDisabled_ = disabled;
-  if(this.nextConnectionDisabled_ === true) {
-    this.setNextStatement(false)
+  if(disabled && (this.nextConnection && this.nextConnection.targetConnection)) {
+    this.nextConnection.disconnect()
   }
+  this.setNextStatement(!disabled)
 };
 Blockly.Block.prototype.isCurrentlyBeingDragged = function() {
   return Blockly.selected === this && Blockly.Block.isFreelyDragging()
@@ -25035,6 +25052,12 @@ Blockly.Generator.blocksToCode = function(name, blocks, opt_showHidden) {
   code = code.replace(/\n\s+$/, "\n");
   code = code.replace(/[ \t]+\n/g, "\n");
   return code
+};
+Blockly.Generator.xmlToCode = function(name, xml) {
+  var div = document.createElement("div");
+  var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(div, xml);
+  var blocks = blockSpace.getTopBlocks(true);
+  return Blockly.Generator.blocksToCode(name, blocks)
 };
 Blockly.Generator.blockSpaceToCode = function(name, opt_typeFilter, opt_showHidden) {
   var blocksToGenerate;

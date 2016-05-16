@@ -3,9 +3,11 @@
 - use_tight_layout = data['layout'] == "tight" || tight_layout
 - force_wrap_layout = data['layout'] == "wrap"
 
+- multi_answer_characters = ("A".."Z").to_a
+
 - layout_class = use_tight_layout ? "tight" : "default"
 
-.multi{id: "level_#{index}", class: layout_class}
+.multi{id: "level_#{level.id}", class: layout_class}
   - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?
   - if question_content_blank
     - question_content_class = nil
@@ -66,8 +68,12 @@
               .fa{class: checked_class}
             .item-mark{id: "cross_#{i}", style: 'display: none;'}
               .fa{class: cross_class}
-            .item-label
-              %label{style: "height: #{height}"}!= multi_t(level, answer['text'])
+            - unless standalone
+              %label.item-label.item-answer-letter{style: "height: #{height}"}
+                ="#{multi_answer_characters[i]}. "
+                &nbsp;
+            %label.item-label{style: "height: #{height}"}
+              != multi_t(level, answer['text'])
           - if use_tight_layout && !force_wrap_layout
             %br/
 
@@ -91,8 +97,7 @@
 - if standalone || @script_level
   :javascript
     window.levelGroup.levels[#{level.id}] = new Multi(
-      "level_#{index}",
-      #{level.id},
+      "level_#{level.id}",
       #{standalone},
       "#{data['type']}" == "multi2" ? 2 : 1,
       #{data['answers'].map {|answer| answer['correct']}},

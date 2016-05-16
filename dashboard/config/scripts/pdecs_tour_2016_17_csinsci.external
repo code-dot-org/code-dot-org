@@ -1,0 +1,75 @@
+name 'PDECS tour 2016-17 CSinSci'
+title 'Tour of PD Space'
+description 'tour of the PD space'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/onlinePDstage1puzzle2.css">
+
+## Using the Space 
+
+All of your Online PD will be done here, in Code Studio. Below you'll find a quick tour of the interface, which demonstrates several important features of using Code Studio:
+<br>
+
+
+The main PD page is broken up into several __stages__, which each represent a different topic or idea
+
+<h4><details>
+<summary>click here to see more about stages</summary>
+<br>
+<div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>
+<br>
+<img src ="/script_assets/pd/pd_stage_overview.gif" />
+</details></h4>
+
+<br>
+
+Each stage is made up of __levels__, which hold individual videos, readings, or questions. Levels are indicated by the circles with numbers, and are visible on the main PD page, on the header in any level, and from the header drop-down in any level
+
+The colors of the level circle will change based on your progress. In this PD you'll see the following types of circles:
+
+![/script_assets/pd/stage_states.png](/script_assets/pd/stage_states.png)
+<br/><br/>
+
+> **IMPORTANT:** To be considered 100% complete, all circles for all levels need to be green with checkmarks.  A circle will not be changed to green unless you click a continue or a submit button. As you progress through the levels, check back periodically to ensure the levels you have completed are marked with a green circle.
+
+
+<h4><details>
+<summary>click here to see more about levels</summary>
+<br>
+
+<div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>
+<br>
+<img src ="/script_assets/pd/pd_level_overview.gif" />
+</details></h4>
+
+<br>
+
+__Accessing levels__ can be done four ways:
+<ol><li>clicking from the main PD page, </li><li> clicking to a different level in the same stage with the circles on the header of the page,</li><li> advance to the next level by clicking "continue" or "submit" at the bottom of each level (<bold>NOTE: this is the way you'll advance through most activities in Code Studio</bold>) </li>
+<li>using the drop-down menu in the header can be used to access any level (this is helpful for going back to a level you've completed before)</li></ol>
+
+<h4><details>
+<summary>click here to see more about accessing levels</summary>
+<br>
+<div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>
+<br>
+<img src ="/script_assets/pd/pd-level-click.gif" />
+</details></h4>
+
+<br>
+
+__Resizing text boxes__ can be done by clicking and dragging the bottom-right corner of the box. 
+
+<h4><details>
+<summary>click here to see more about resizing text boxes</summary>
+<br>
+<div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>
+<br>
+<img src ="/script_assets/pd/pd-resizing-box.gif" />
+</details></h4>
+
+<br>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

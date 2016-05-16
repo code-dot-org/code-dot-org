@@ -1,0 +1,19 @@
+:javascript
+  function getResult() {
+    return {
+      response: 'ok',
+      result: true
+    };
+  }
+
+.standalone-video
+  - video = @level.specified_autoplay_video
+  - src = video.embed_url
+  %h2= "Video: #{video.localized_name}"
+  %div= render(inline: @level.markdown_instructions, type: :md) if @level.markdown_instructions
+
+  %iframe{width: 853, height: 480, frameborder: 0, allowfullscreen: true, src: src}
+  %p= link_to t('video.download'), video.download
+
+  = render partial: 'levels/dialog', locals: {continue_button: true, data: @level.properties}
+  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => @level.teacher_markdown}}

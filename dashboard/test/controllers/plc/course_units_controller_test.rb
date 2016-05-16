@@ -7,45 +7,14 @@ class Plc::CourseUnitsControllerTest < ActionController::TestCase
     @user = create(:admin)
     sign_in(@user)
 
-    @module1 = create(:plc_learning_module, name: 'Module 1')
-    @module2 = create(:plc_learning_module, name: 'Module 2')
+    @module1 = create(:plc_learning_module, name: 'Module 1', plc_course_unit: @course_unit)
+    @module2 = create(:plc_learning_module, name: 'Module 2', plc_course_unit: @course_unit)
     @question = create(:plc_evaluation_question, plc_course_unit: @course_unit, question: 'Some question')
-  end
-
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
-  test "should create plc_course_unit" do
-    assert_difference('Plc::CourseUnit.count') do
-      post :create, plc_course_unit: { plc_course_unit: @course_unit, plc_course_id: @course_unit.plc_course_id, unit_description: @course_unit.unit_description, unit_name: @course_unit.unit_name, unit_order: @course_unit.unit_order }
-    end
-
-    assert_redirected_to plc_course_unit_path(assigns(:course_unit))
   end
 
   test "should show plc_course_unit" do
     get :show, id: @course_unit
     assert_response :success
-  end
-
-  test "should get edit" do
-    get :edit, id: @course_unit
-    assert_response :success
-  end
-
-  test "should update plc_course_unit" do
-    patch :update, id: @course_unit, plc_course_unit: { plc_course_unit: @course_unit }
-    assert_redirected_to plc_course_unit_path(assigns(:course_unit))
-  end
-
-  test "should destroy plc_course_unit" do
-    assert_difference('Plc::CourseUnit.count', -1) do
-      delete :destroy, id: @course_unit
-    end
-
-    assert_redirected_to plc_content_creator_show_courses_and_modules_path
   end
 
   test "should create evaluation questions" do

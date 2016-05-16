@@ -244,20 +244,6 @@
             </statement>
           </block>
         </category>
-        <category name="NEW BLOCKS">
-          <block type="parameters_get"/>
-          <block type="procedures_callnoreturn">
-            <mutation name="draw an octagon"/>
-          </block>
-          <block type="procedures_callnoreturn" inline="false">
-            <mutation name="draw octagons">
-              <arg name="numOctagons"/>
-            </mutation>
-          </block>
-          <block type="procedures_callnoreturn">
-            <mutation name="shift down"/>
-          </block>
-        </category>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

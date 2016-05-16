@@ -2,7 +2,7 @@
 set -o errexit
 # Code-dot-org Chef bootstrap script.
 # One-liner to run:
-# aws s3 cp s3://${S3_BUCKET}/chef/bootstrap.sh - | sudo bash -s -- [options]
+# aws s3 cp s3://${S3_BUCKET}/chef/bootstrap-${STACK}.sh - | sudo bash -s -- [options]
 #
 # This file is currently pushed to S3 whenever AWS::CloudFormation#create_or_update is run,
 # but updates should be automated through CI in the future.
@@ -25,7 +25,7 @@ set -o errexit
 ENVIRONMENT=adhoc
 BRANCH=staging
 CHEF_VERSION=12.7.2
-RUN_LIST='recipe[cdo-apps]'
+RUN_LIST='["recipe[cdo-apps]"]'
 NODE_NAME=$(hostname)
 S3_BUCKET=cdo-dist
 
@@ -94,18 +94,22 @@ if [ ! -f ${FIRST_BOOT} ] ; then
   "omnibus_updater": {
     "version": "${CHEF_VERSION}"
   },
-  "cdo-repository": {
-    "branch": "${BRANCH}"
-  },
-  "run_list": ["${RUN_LIST}"]
+  "run_list": ${RUN_LIST}
 }
 JSON
 fi
 
-# Remove existing Chef Client key every time bootstrap is run.
-if [ -f /etc/chef/client.pem ] ; then
-    rm /etc/chef/client.pem
-fi
+# Remove client + node from Chef server on halt/reboot or shutdown.
+SHUTDOWN_SH=/etc/init.d/chef_shutdown
+cat <<SH > ${SHUTDOWN_SH}
+#/bin/sh
+/opt/chef/bin/knife node delete ${NODE_NAME} -y -c /etc/chef/client.rb
+/opt/chef/bin/knife client delete ${NODE_NAME} -y -c /etc/chef/client.rb
+rm -f /etc/chef/client.pem
+SH
+chmod +x ${SHUTDOWN_SH}
+ln -fs ${SHUTDOWN_SH} /etc/rc0.d/S04chef_shutdown
+ln -fs ${SHUTDOWN_SH} /etc/rc6.d/S04chef_shutdown
 
 if [ "${LOCAL_MODE}" = "1" ]; then
   mkdir -p ${CHEF_REPO_PATH}/{cookbooks,environments}
@@ -121,7 +125,11 @@ cat <<JSON > ${CHEF_REPO_PATH}/environments/adhoc.json
   "cookbook_versions": {},
   "json_class": "Chef::Environment",
   "chef_type": "environment",
-  "default_attributes": {},
+  "default_attributes": {
+    "cdo-repository": {
+      "branch": "${BRANCH}"
+    }
+  },
   "override_attributes": {}
 }
 JSON
