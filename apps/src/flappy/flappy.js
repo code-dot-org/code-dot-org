@@ -583,6 +583,8 @@ Flappy.init = function (config) {
     dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
   };
 
+  studioApp.setCommonPageConstants(config);
+
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
