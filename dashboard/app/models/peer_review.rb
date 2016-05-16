@@ -30,13 +30,52 @@ class PeerReview < ActiveRecord::Base
   belongs_to :level
   belongs_to :level_source
 
+  after_save :mark_user_level
+
   REVIEWS_PER_SUBMISSION = 2
+  REVIEWS_FOR_CONSENSUS = 2
 
   enum status: {
     accepted: 0,
     rejected: 1,
     escalated: 2
   }
+
+  def mark_user_level
+    user_level = UserLevel.find_by(user: submitter, level: level)
+
+    # Instructor feedback should override all other feedback
+    if from_instructor
+      user_level.update!(best_result: accepted? ? Activity::ACCEPTED_RESULT : Activity::REJECTED_RESULT)
+      return
+    end
+
+    # Ignore negative peer feedback after a submission has already been approved
+    return if user_level.best_result == Activity::ACCEPTED_RESULT
+
+    # Only look at reviews for the most recent submission
+    most_recent = submitter.last_attempt(level).try(:level_source_id)
+    return unless level_source_id == most_recent
+
+    # Find all current PeerReviews for this submission
+    reviews = PeerReview.where(
+      submitter: submitter,
+      script: script,
+      level: level,
+      level_source_id: most_recent
+    ).where.not(status: nil)
+
+    # Need at least `REVIEWS_FOR_CONSENSUS` reviews to accept/reject
+    return unless reviews.size >= REVIEWS_FOR_CONSENSUS
+
+    if reviews.all?(&:accepted?)
+      user_level.update!(best_result: Activity::ACCEPTED_RESULT)
+    elsif reviews.all?(&:rejected?)
+      user_level.update!(best_result: Activity::REJECTED_RESULT)
+    else
+      # TODO: find_or_create PeerReview assigned to the instructor
+    end
+  end
 
   def localized_status
     I18n.t("peer_review.#{status}.name") if status
