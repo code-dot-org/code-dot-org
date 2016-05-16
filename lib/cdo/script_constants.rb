@@ -82,6 +82,8 @@ module ScriptConstants
     minecraft: [MINECRAFT_NAME]
   }
 
+  # Provide a method for each category (hoc? twenty_hour? etc.) that checks if
+  # the script name is in that category.
   def self.method_missing(symbol, *args)
     method = symbol.to_s
     category = method[0..-2].to_sym
@@ -91,8 +93,18 @@ module ScriptConstants
     super
   end
 
-  def self.category(script)
-    CATEGORIES.each {|category, scripts| return category.to_s if scripts.include? script}
-    nil
+  def self.categories(script)
+    CATEGORIES.select {|_, scripts| scripts.include? script}.
+        map {|category, _| category.to_s}
+  end
+
+  def self.teacher_dashboard_name(script)
+    if script == ScriptConstants::MINECRAFT_NAME
+      ScriptConstants::MINECRAFT_TEACHER_DASHBOARD_NAME
+    elsif script == ScriptConstants::HOC_NAME
+      ScriptConstants::HOC_TEACHER_DASHBOARD_NAME
+    else
+      script
+    end
   end
 end
