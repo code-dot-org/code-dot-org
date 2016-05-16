@@ -1185,9 +1185,9 @@ Applab.execute = function () {
 };
 
 Applab.beginVisualizationRun = function () {
-  // Set focus on the default screen so key events can be handled
-  // right from the start without requiring the user to adjust focus.
-  Applab.loadDefaultScreen();
+  // Call change screen on the default screen to ensure it has focus
+  var defaultScreenId = Applab.getScreens().first().attr('id');
+  Applab.changeScreen(defaultScreenId);
 
   Applab.running = true;
   $('#headers').addClass('dimmed');
@@ -1570,11 +1570,6 @@ Applab.changeScreen = function (screenId) {
       applabTurtle.turtleSetVisibility(true);
     }
   }
-};
-
-Applab.loadDefaultScreen = function () {
-  var defaultScreenId = Applab.getScreens().first().attr('id');
-  Applab.changeScreen(defaultScreenId);
 };
 
 Applab.getScreens = function () {
