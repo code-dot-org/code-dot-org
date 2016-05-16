@@ -10,26 +10,14 @@ class SectionsController < ApplicationController
 
     # TODO: redirect to home page if you're already logged in
 
-    user = User.find(params[:user_id])
-
-    if @section.login_type == Section::LOGIN_TYPE_PICTURE &&
-        user.secret_picture_id.present? &&
-        user.secret_picture_id == params[:secret_picture_id].to_i
-      sign_in user, :bypass => true
+    if user = User.authenticate_with_section(section: @section, params: params)
+      sign_in user, bypass: true
       user.update_tracked_fields!(request)
-      redirect_to_section_script && return
+      redirect_to_section_script
+    else
+      flash[:alert] = 'Invalid login, please try again'
+      redirect_to section_path(id: @section.code)
     end
-
-    if @section.login_type == Section::LOGIN_TYPE_WORD &&
-        user.secret_words.present? &&
-        user.secret_words == params[:secret_words]
-      sign_in user, :bypass => true
-      user.update_tracked_fields!(request)
-      redirect_to_section_script && return
-    end
-
-    flash[:alert] = 'Invalid login, please try again'
-    redirect_to section_path(id: @section.code)
   end
 
   private
