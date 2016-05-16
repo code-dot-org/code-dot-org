@@ -1,6 +1,8 @@
+import GameButtons, {ResetButton} from '../templates/GameButtons';
+
 var Radium = require('radium');
+var studioApp = require('../StudioApp').singleton;
 var Visualization = require('./Visualization');
-var GameButtons = require('../templates/GameButtons').default;
 var CompletionButton = require('./CompletionButton');
 var PlaySpaceHeader = require('./PlaySpaceHeader');
 var PhoneFrame = require('./PhoneFrame');
@@ -24,8 +26,38 @@ var styles = {
     marginLeft: 'auto',
     marginRight: 'auto',
     textAlign: 'center'
-  }
+  },
+  overlay: {
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    position: 'absolute',
+    top: 68,
+    left: 16,
+    width: applabConstants.APP_WIDTH,
+    height: applabConstants.APP_HEIGHT,
+    zIndex: 5,
+    textAlign: 'center',
+    cursor: 'pointer',
+  },
+  playButton: {
+    color: 'white',
+    fontSize: 200,
+    lineHeight: applabConstants.APP_HEIGHT+'px',
+  },
+  resetButtonWrapper: {
+    position: 'absolute',
+    bottom: 5,
+    textAlign: 'center',
+    width: '100%',
+  },
 };
+
+var IframeOverlay = Radium(function (props) {
+  return (
+    <div style={[styles.overlay]} onClick={() => studioApp.startIFrameEmbeddedApp()}>
+      <span className="fa fa-play" style={[styles.playButton]} />
+    </div>
+  );
+});
 
 /**
  * Equivalent of visualizationColumn.html.ejs. Initially only supporting
@@ -42,6 +74,7 @@ var ApplabVisualizationColumn = React.createClass({
     isRunning: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes.string.isRequired,
     playspacePhoneFrame: React.PropTypes.bool,
+    isIframeEmbed: React.PropTypes.bool.isRequired,
 
     // non redux backed
     isEditingProject: React.PropTypes.bool.isRequired,
@@ -50,7 +83,10 @@ var ApplabVisualizationColumn = React.createClass({
   },
 
   render: function () {
-    let visualization = <Visualization/>;
+    let visualization = [
+      <Visualization key="1"/>,
+      this.props.isIframeEmbed && !this.props.isRunning && <IframeOverlay key="2"/>
+    ];
     if (this.props.playspacePhoneFrame) {
       // wrap our visualization in a phone frame
       visualization = (
@@ -79,6 +115,11 @@ var ApplabVisualizationColumn = React.createClass({
             onScreenCreate={this.props.onScreenCreate} />
         }
         {visualization}
+        {this.props.isIframeEmbed &&
+         <div style={styles.resetButtonWrapper}>
+           <ResetButton/>
+         </div>
+        }
         <GameButtons>
           {/* This div is used to control whether or not our finish button is centered*/}
           <div style={[
@@ -102,6 +143,7 @@ module.exports = connect(function propsFromStore(state) {
     hideSource: state.pageConstants.hideSource,
     isShareView: state.pageConstants.isShareView,
     isEmbedView: state.pageConstants.isEmbedView,
+    isIframeEmbed: state.pageConstants.isIframeEmbed,
     isRunning: state.runState.isRunning,
     isPaused: state.runState.isDebuggerPaused,
     interfaceMode: state.interfaceMode,
