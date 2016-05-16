@@ -1,7 +1,8 @@
+import GameButtons, {ResetButton} from '../templates/GameButtons';
+
 var Radium = require('radium');
 var studioApp = require('../StudioApp').singleton;
 var Visualization = require('./Visualization');
-var GameButtons = require('../templates/GameButtons').default;
 var CompletionButton = require('./CompletionButton');
 var PlaySpaceHeader = require('./PlaySpaceHeader');
 var PhoneFrame = require('./PhoneFrame');
@@ -42,6 +43,12 @@ var styles = {
     fontSize: 200,
     lineHeight: applabConstants.APP_HEIGHT+'px',
   },
+  resetButtonWrapper: {
+    position: 'absolute',
+    bottom: 5,
+    textAlign: 'center',
+    width: '100%',
+  },
 };
 
 var IframeOverlay = Radium(function (props) {
@@ -77,8 +84,8 @@ var ApplabVisualizationColumn = React.createClass({
 
   render: function () {
     let visualization = [
-      <Visualization/>,
-      this.props.isIframeEmbed && !this.props.isRunning && <IframeOverlay />
+      <Visualization key="1"/>,
+      this.props.isIframeEmbed && !this.props.isRunning && <IframeOverlay key="2"/>
     ];
     if (this.props.playspacePhoneFrame) {
       // wrap our visualization in a phone frame
@@ -108,6 +115,11 @@ var ApplabVisualizationColumn = React.createClass({
             onScreenCreate={this.props.onScreenCreate} />
         }
         {visualization}
+        {this.props.isIframeEmbed &&
+         <div style={styles.resetButtonWrapper}>
+           <ResetButton/>
+         </div>
+        }
         <GameButtons>
           {/* This div is used to control whether or not our finish button is centered*/}
           <div style={[
