@@ -230,12 +230,12 @@ function initializeCircuitPlaygroundComponents(io, board) {
     pixel8: pixels[8],
     pixel9: pixels[9],
     pixels: {
-      blink: () => pixels.forEach((p) => {p.blink()}),
-      stop: () => pixels.forEach((p) => {p.stop()}),
-      on: () => pixels.forEach((p) => {p.on()}),
-      off: () => pixels.forEach((p) => {p.off()}),
-      toggle: () => pixels.forEach((p) => {p.toggle()}),
-      color: (c) => pixels.forEach((p) => {p.color(c)}),
+      blink: () => pixels.forEach(p => p.blink()),
+      stop: () => pixels.forEach(p => p.stop()),
+      on: () => pixels.forEach(p => p.on()),
+      off: () => pixels.forEach(p => p.off()),
+      toggle: () => pixels.forEach(p => p.toggle()),
+      color: c => pixels.forEach(p => p.color(c))
     },
 
     led: new five.Led(13),
