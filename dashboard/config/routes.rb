@@ -70,17 +70,6 @@ Dashboard::Application.routes.draw do
   get '/s/2-3(/*all)', to: redirect('/s/course2')
   get '/s/4-5(/*all)', to: redirect('/s/course3')
 
-  resources :level_source_hints
-  get '/add_hint/:level_source_id', :to => 'level_source_hints#add_hint', as: 'add_hint'
-  get '/show_hints/:level_source_id', :to => 'level_source_hints#show_hints', as: 'show_hints'
-  get '/add_pop_hint/:idx', :to => 'level_source_hints#add_pop_hint', as: 'add_pop_hint'
-  get '/show_pop_hints/:idx(/:restriction)', :to => 'level_source_hints#show_pop_hints', as: 'show_pop_hints'
-  get '/add_pop_hint_per_level/:level_id/:idx', :to => 'level_source_hints#add_pop_hint_per_level', as: 'add_pop_hint_per_level'
-  get '/show_pop_hints_per_level/:level_id/:idx(/:restriction)', :to => 'level_source_hints#show_pop_hints_per_level', as: 'show_pop_hints_per_level'
-  get '/add_hint_access', :to => 'level_source_hints#add_hint_access', as: 'add_hint_access'
-
-  resources :frequent_unsuccessful_level_sources, only: [:index]
-
   devise_scope :user do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
   end
@@ -115,7 +104,7 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id", to: 'projects#show', key: key.to_s, as: "#{key}_project_share", share: true
         get "/#{key}/:channel_id/edit", to: 'projects#edit', key: key.to_s, as: "#{key}_project_edit"
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
-        get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_embed", iframe_embed: true
+        get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
       end
       get '/angular', to: 'projects#angular'
