@@ -171,12 +171,7 @@ Jigsaw.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          assetUrl={studioApp.assetUrl}
-          isEmbedView={!!config.embed}
-          isShareView={!!config.share}
-          hideSource={!!config.hideSource}
           noVisualization={true}
-          isRtl={studioApp.isRtl()}
           visualizationColumn={<JigsawVisualizationColumn/>}
           onMount={onMount}
       />
