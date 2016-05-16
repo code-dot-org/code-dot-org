@@ -1316,7 +1316,6 @@ function resizePinnedBelowVisualizationArea() {
   var playSpaceHeader = document.getElementById('playSpaceHeader');
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
-  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var top = 0;
   if (playSpaceHeader) {
@@ -1324,7 +1323,15 @@ function resizePinnedBelowVisualizationArea() {
   }
 
   if (visualization) {
-    top += $(visualization).outerHeight(true);
+    var parent = $(visualization).parent();
+    if (parent.attr('id') === 'phoneFrame') {
+      // Phone frame itself doesnt have height. Loop through children
+      parent.children().each(function () {
+        top += $(this).outerHeight(true);
+      });
+    } else {
+      top += $(visualization).outerHeight(true);
+    }
   }
 
   if (gameButtons) {
@@ -1332,6 +1339,7 @@ function resizePinnedBelowVisualizationArea() {
   }
 
   var bottom = 0;
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
   if (smallFooter) {
     var codeApp = $('#codeApp');
     bottom += $(smallFooter).outerHeight(true);
