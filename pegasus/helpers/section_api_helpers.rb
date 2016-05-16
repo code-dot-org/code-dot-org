@@ -206,13 +206,13 @@ class DashboardSection
            all.
            map do |course|
              name = ScriptConstants.teacher_dashboard_name(course[:name])
-             category = ScriptConstants.categories(course[:name])[0] || 'other'
+             first_category = ScriptConstants.categories(course[:name])[0] || 'other'
              name += " *" if course[:hidden]
              [
                course[:id],
                [
                  I18n.t("#{name}_name", default: name),
-                 I18n.t("#{category}_category_name".to_sym, default: category)
+                 I18n.t("#{first_category}_category_name".to_sym, default: first_category)
                ]
              ]
            end
