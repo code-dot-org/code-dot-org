@@ -1,17 +1,18 @@
 /** @file Root of the animation editor interface mode for GameLab */
 'use strict';
 
-var Radium = require('radium');
-var FrameList = require('./FrameList');
-var AnimationPicker = require('../AnimationPicker/AnimationPicker');
-var AnimationList = require('./AnimationList');
-var styleConstants = require('../../styleConstants');
-var commonStyles = require('../../commonStyles');
-var color = require('../../color');
-var GameLabVisualizationHeader = require('../GameLabVisualizationHeader');
-var ResizablePanes = require('./ResizablePanes');
+import Radium from 'radium';
+import { connect } from 'react-redux';
+import color from '../../color';
+import commonStyles from '../../commonStyles';
+import AnimationPicker from '../AnimationPicker/AnimationPicker';
+import GameLabVisualizationHeader from '../GameLabVisualizationHeader';
+import { setColumnSizes } from './animationTabModule';
+import AnimationList from './AnimationList';
+import FrameList from './FrameList';
+import ResizablePanes from './ResizablePanes';
 
-var styles = {
+const styles = {
   root: {
     position: 'absolute',
     top: 0,
@@ -22,14 +23,12 @@ var styles = {
   animationsColumn: {
     display: 'flex',
     flexDirection: 'column',
-    flex: '0 0 150px', // sets initial width
     minWidth: 150,
     maxWidth: 300
   },
   framesColumn: {
     display: 'flex',
     flexDirection: 'column',
-    flex: '0 0 250px', // sets initial width
     minWidth: 150,
     maxWidth: 300,
     borderTop: 'solid thin ' + color.light_purple,
@@ -47,21 +46,27 @@ var styles = {
     backgroundColor: 'white',
     textAlign: 'center',
     paddingTop:'48%'
-  },
+  }
 };
 
 /**
  * Root of the animation editor interface mode for GameLab
  */
-var AnimationTab = React.createClass({
+const AnimationTab = React.createClass({
   propTypes: {
     channelId: React.PropTypes.string.isRequired,
+    columnSizes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
+    onColumnWidthsChange: React.PropTypes.func.isRequired
   },
 
-  render: function () {
+  render() {
     return (
       <div>
-        <ResizablePanes style={styles.root}>
+        <ResizablePanes
+            style={styles.root}
+            columnSizes={this.props.columnSizes}
+            onChange={this.props.onColumnWidthsChange}
+        >
           <div style={styles.animationsColumn}>
             <GameLabVisualizationHeader />
             <AnimationList />
@@ -86,4 +91,10 @@ var AnimationTab = React.createClass({
     );
   }
 });
-module.exports = Radium(AnimationTab);
+export default connect(state => ({
+  columnSizes: state.animationTab.columnSizes
+}), dispatch => ({
+  onColumnWidthsChange(widths) {
+    dispatch(setColumnSizes(widths));
+  }
+}))(Radium(AnimationTab));

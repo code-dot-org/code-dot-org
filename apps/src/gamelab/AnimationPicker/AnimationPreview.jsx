@@ -1,31 +1,24 @@
 /** @file Render a gallery image/spritesheet as an animated preview */
-
-var MARGIN_PX = 2;
+import { METADATA_SHAPE } from '../animationMetadata';
+const MARGIN_PX = 2;
 
 /**
  * Render an animated preview of a spritesheet at a given size, scaled with
  * a fixed aspect ratio to fit.
  */
-var AnimationPreview = React.createClass({
+const AnimationPreview = React.createClass({
   propTypes: {
+    animation: React.PropTypes.shape(METADATA_SHAPE).isRequired,
     width: React.PropTypes.number.isRequired,
-    height: React.PropTypes.number.isRequired,
-    sourceUrl: React.PropTypes.string.isRequired,
-    sourceWidth: React.PropTypes.number.isRequired,
-    sourceHeight: React.PropTypes.number.isRequired,
-    frameWidth: React.PropTypes.number.isRequired,
-    frameHeight: React.PropTypes.number.isRequired,
-    frameCount: React.PropTypes.number.isRequired,
-    frameRate: React.PropTypes.number.isRequired
+    height: React.PropTypes.number.isRequired
   },
 
   getInitialState: function () {
     return {
       currentFrame: 0,
       framesPerRow: 1,
-      scaledSourceWidth: 0,
-      scaledFrameWidth: 0,
-      scaledFrameHeight: 0,
+      scaledSourceSize: {x: 0, y: 0},
+      scaledFrameSize: {x: 0, y: 0},
       extraTopMargin: 0,
       wrappedSourceUrl: ''
     };
@@ -54,9 +47,11 @@ var AnimationPreview = React.createClass({
   },
 
   advanceFrame: function () {
-    this.setState({ currentFrame: (this.state.currentFrame + 1) % this.props.frameCount });
+    this.setState({
+      currentFrame: (this.state.currentFrame + 1) % this.props.animation.frameCount
+    });
     clearTimeout(this.timeout_);
-    this.timeout_ = setTimeout(this.advanceFrame, 1000 / this.props.frameRate);
+    this.timeout_ = setTimeout(this.advanceFrame, 1000 / this.props.animation.frameRate);
   },
 
   stopAndResetAnimation: function () {
@@ -68,51 +63,46 @@ var AnimationPreview = React.createClass({
   },
 
   precalculateRenderProps: function (nextProps) {
-    var framesPerRow = Math.floor(nextProps.sourceWidth / nextProps.frameWidth);
-    var innerWidth = nextProps.width - 2 * MARGIN_PX;
-    var innerHeight = nextProps.height - 2 * MARGIN_PX;
-    var xScale = innerWidth / nextProps.frameWidth;
-    var yScale = innerHeight / nextProps.frameHeight;
-    var scale = Math.min(1, Math.min(xScale, yScale));
-    var scaledFrameHeight = nextProps.frameHeight * scale;
+    const nextAnimation = nextProps.animation;
+    const innerWidth = nextProps.width - 2 * MARGIN_PX;
+    const innerHeight = nextProps.height - 2 * MARGIN_PX;
+    const xScale = innerWidth / nextAnimation.frameSize.x;
+    const yScale = innerHeight / nextAnimation.frameSize.y;
+    const scale = Math.min(1, Math.min(xScale, yScale));
+    const scaledFrameSize = scaleVector2(nextAnimation.frameSize, scale);
     this.setState({
-      framesPerRow: framesPerRow,
-      scaledSourceWidth: nextProps.sourceWidth * scale,
-      scaledFrameWidth: nextProps.frameWidth * scale,
-      scaledFrameHeight: scaledFrameHeight,
-      extraTopMargin: Math.ceil((innerHeight - scaledFrameHeight) / 2),
-      wrappedSourceUrl: "url('" + nextProps.sourceUrl + "')"
+      framesPerRow: Math.floor(nextAnimation.sourceSize.x / nextAnimation.frameSize.x),
+      scaledSourceSize: scaleVector2(nextAnimation.sourceSize, scale),
+      scaledFrameSize: scaledFrameSize,
+      extraTopMargin: Math.ceil((innerHeight - scaledFrameSize.y) / 2),
+      wrappedSourceUrl: `url('${nextAnimation.sourceUrl}')`
     });
   },
 
   render: function () {
-    var currentFrame = this.state.currentFrame;
-    var framesPerRow = this.state.framesPerRow;
-    var scaledFrameWidth = this.state.scaledFrameWidth;
-    var scaledFrameHeight = this.state.scaledFrameHeight;
-    var scaledSourceWidth = this.state.scaledSourceWidth;
-    var extraTopMargin = this.state.extraTopMargin;
-    var wrappedSourceUrl = this.state.wrappedSourceUrl;
+    const { currentFrame, framesPerRow, scaledSourceSize, scaledFrameSize,
+        extraTopMargin, wrappedSourceUrl } = this.state;
 
-    var row = Math.floor(currentFrame / framesPerRow);
-    var column = currentFrame % framesPerRow;
-    var xOffset = -scaledFrameWidth * column;
-    var yOffset = -scaledFrameHeight * row;
+    const row = Math.floor(currentFrame / framesPerRow);
+    const column = currentFrame % framesPerRow;
+    const xOffset = -scaledFrameSize.x * column;
+    const yOffset = -scaledFrameSize.y * row;
 
-    var containerStyle = {
+    const containerStyle = {
       width: this.props.width,
-      height: this.props.height
+      height: this.props.height,
+      textAlign: 'center'
     };
-    var imageStyle = {
-      width: scaledFrameWidth,
-      height: scaledFrameHeight,
+    const imageStyle = {
+      width: scaledFrameSize.x,
+      height: scaledFrameSize.y,
       marginTop: MARGIN_PX + extraTopMargin,
       marginLeft: MARGIN_PX,
       marginRight: MARGIN_PX,
       marginBottom: MARGIN_PX,
       backgroundImage: wrappedSourceUrl,
       backgroundRepeat: 'no-repeat',
-      backgroundSize: scaledSourceWidth,
+      backgroundSize: scaledSourceSize.x,
       backgroundPosition: xOffset + 'px ' + yOffset + 'px'
     };
 
@@ -122,9 +112,16 @@ var AnimationPreview = React.createClass({
           style={containerStyle}
           onMouseOver={this.onMouseOver}
           onMouseOut={this.onMouseOut}>
-        <img src="/blockly/media/1x1.gif" style={imageStyle}/>
+        <img src="/blockly/media/1x1.gif" style={imageStyle} />
       </div>
     );
   }
 });
-module.exports = AnimationPreview;
+export default AnimationPreview;
+
+function scaleVector2(vector, scale) {
+  return {
+    x: vector.x * scale,
+    y: vector.y * scale
+  };
+}
