@@ -12,7 +12,6 @@ var skins = require('../skins');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');
-var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
 
 /**
@@ -167,12 +166,7 @@ Jigsaw.init = function (config) {
     }
   };
 
-  // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setPageConstants({
-    localeDirection: studioApp.localeDirection(),
-    isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isDroplet: !!level.editCode
-  }));
+  studioApp.setCommonPageConstants(config);
 
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
