@@ -8,6 +8,7 @@ var PlaySpaceHeader = require('./PlaySpaceHeader');
 var PhoneFrame = require('./PhoneFrame');
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 var applabConstants = require('./constants');
 var connect = require('react-redux').connect;
 var classNames = require('classnames');
@@ -144,7 +145,7 @@ module.exports = connect(function propsFromStore(state) {
     instructionsInTopPane: state.pageConstants.instructionsInTopPane,
     visualizationHasPadding: state.pageConstants.visualizationHasPadding,
     isShareView: state.pageConstants.isShareView,
-    isResponsive: !state.pageConstants.isEmbedView && !state.pageConstants.hideSource,
+    isResponsive: isResponsiveFromState(state),
     isIframeEmbed: state.pageConstants.isIframeEmbed,
     isRunning: state.runState.isRunning,
     isPaused: state.runState.isDebuggerPaused,
