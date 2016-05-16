@@ -54,6 +54,8 @@ module TestRunUtils
 
   def self.run_pegasus_tests
     Dir.chdir(pegasus_dir) do
+      puts 'Running pegasus tests (puts).'
+      CDO.log.info 'Running pegasus tests (cdo.log.info)'
       with_hipchat_logging('Running pegasus tests') do
         RakeUtils.rake 'test'
       end
