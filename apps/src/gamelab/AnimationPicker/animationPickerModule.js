@@ -1,23 +1,24 @@
 /** @file Redux reducer and actions for the Animation Picker */
 'use strict';
 
-var _ = require('../../lodash');
-var gamelabActions = require('../actions');
-var utils = require('../../utils');
+import _ from '../../lodash';
+import gamelabActions from '../actions';
+import { makeEnum, createUuid } from '../../utils';
+import { sourceUrlFromKey } from '../animationMetadata';
 
 /**
  * @enum {string} Export possible targets for animation picker for consumers
  *       to use when calling show().
  */
-var Goal = exports.Goal = utils.makeEnum('NEW_ANIMATION', 'NEW_FRAME');
+export const Goal = makeEnum('NEW_ANIMATION', 'NEW_FRAME');
 
-var SHOW = 'AnimationPicker/SHOW';
-var HIDE = 'AnimationPicker/HIDE';
-var BEGIN_UPLOAD = 'AnimationPicker/BEGIN_UPLOAD';
-var HANDLE_UPLOAD_ERROR = 'AnimationPicker/HANDLE_UPLOAD_ERROR';
+const SHOW = 'AnimationPicker/SHOW';
+const HIDE = 'AnimationPicker/HIDE';
+const BEGIN_UPLOAD = 'AnimationPicker/BEGIN_UPLOAD';
+const HANDLE_UPLOAD_ERROR = 'AnimationPicker/HANDLE_UPLOAD_ERROR';
 
 // Default state, which we reset to any time we hide the animation picker.
-var initialState = {
+const initialState = {
   visible: false,
   goal: null,
   uploadInProgress: false,
@@ -25,7 +26,7 @@ var initialState = {
   uploadError: null
 };
 
-exports.default = function reducer(state, action) {
+export default function reducer(state, action) {
   state = state || initialState;
   switch (action.type) {
     case SHOW:
@@ -55,7 +56,7 @@ exports.default = function reducer(state, action) {
     default:
       return state;
   }
-};
+}
 
 /**
  * Display the AnimationPicker modal dialog (reset to initial state).
@@ -64,32 +65,32 @@ exports.default = function reducer(state, action) {
  * @returns {{type: string, goal: AnimationPicker.Goal }}
  * @throws {TypeError} if a valid goal is not provided
  */
-exports.show = function (goal) {
+export function show(goal) {
   if ([Goal.NEW_ANIMATION, Goal.NEW_FRAME].indexOf(goal) === -1) {
     throw new TypeError('Must provide a valid goal');
   }
   return { type: SHOW, goal: goal };
-};
+}
 
 /**
  * Hide the AnimationPicker modal dialog (resetting its state).
  * @returns {{type: string}}
  */
-exports.hide = function () {
+export function hide() {
   return { type: HIDE };
-};
+}
 
 /**
  * We have an upload in progress.  Record the name of the file being uploaded.
  * @param {!string} filename
  * @returns {{type: string, filename: string}}
  */
-exports.beginUpload = function (filename) {
+export function beginUpload(filename) {
   return {
     type: BEGIN_UPLOAD,
     filename: filename
   };
-};
+}
 
 /**
  * An upload completed successfully.  This concludes our picking process.
@@ -98,34 +99,83 @@ exports.beginUpload = function (filename) {
  * @param {!{filename: string, result: number, versionId: string}} result
  * @returns {function}
  */
-exports.handleUploadComplete = function (result) {
+export function handleUploadComplete(result) {
   return function (dispatch, getState) {
-    var state = getState().animationPicker;
-    var goal = state.goal;
-    var uploadFilename = state.uploadFilename;
-    if (goal === Goal.NEW_ANIMATION) {
-      dispatch(gamelabActions.addAnimation({
-        key: result.filename.replace(/\.png$/i, ''),
+    const { goal, uploadFilename } = getState().animationPicker;
+    const key = result.filename.replace(/\.png$/i, '');
+    const sourceUrl = sourceUrlFromKey(key);
+
+    // TODO (bbuchanan): This sequencing feels backwards.  Eventually, we
+    // ought to preview and get dimensions from the local filesystem, async
+    // with the upload itself, but that will mean refactoring away from the
+    // jQuery uploader.
+    loadImageMetadata(sourceUrl, metadata => {
+      const animation = Object.assign({}, metadata, {
+        key: key,
         name: uploadFilename,
+        sourceUrl: sourceUrl,
         size: result.size,
         version: result.versionId
-      }));
-    } else if (goal === Goal.NEW_FRAME) {
-      // TODO (bbuchanan): Implement after integrating Piskel
-    }
-    dispatch(exports.hide());
+      });
+
+      if (goal === Goal.NEW_ANIMATION) {
+        dispatch(gamelabActions.addAnimation(animation));
+      } else if (goal === Goal.NEW_FRAME) {
+        // TODO (bbuchanan): Implement after integrating Piskel
+      }
+      dispatch(hide());
+    });
   };
-};
+}
+
+/**
+ * Asynchronously loads an image file as an Image, then derives appropriate
+ * animation metadata from that Image and returns the metadata to a callback.
+ * @param {!string} sourceUrl - Where to find the image.
+ * @param {!function} callback
+ */
+function loadImageMetadata(sourceUrl, callback) {
+  let image  = new Image();
+  image.addEventListener('load', function () {
+    callback({
+      sourceSize: {x: image.width, y: image.height},
+      frameSize: {x: image.width, y: image.height},
+      frameCount: 1,
+      frameRate: 15
+    });
+  });
+  image.src = sourceUrl;
+}
 
 /**
  * An upload error occurred.  Show it to the student.
  * @param {!string} status
  * @returns {{type: string, status: string}}
  */
-exports.handleUploadError = function (status) {
+export function handleUploadError(status) {
   return {
     type: HANDLE_UPLOAD_ERROR,
     status: status
   };
-};
+}
 
+/**
+ * A library animation was selected by the user.  This concludes our picking
+ * process. Dispatch root gamelab action to add appropriate metadta and then
+ * close the animation picker.
+ * @param {!AnimationMetadata} animation
+ * @returns {function}
+ */
+export function pickLibraryAnimation(animation) {
+  return (dispatch, getState) => {
+    const goal = getState().animationPicker.goal;
+    if (goal === Goal.NEW_ANIMATION) {
+      dispatch(gamelabActions.addAnimation(Object.assign({}, animation, {
+        key: createUuid()
+      })));
+    } else if (goal === Goal.NEW_FRAME) {
+      // TODO (bbuchanan): Implement after integrating Piskel
+    }
+    dispatch(hide());
+  };
+}

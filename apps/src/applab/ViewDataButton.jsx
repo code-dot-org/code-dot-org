@@ -3,6 +3,7 @@
 
 var applabMsg = require('./locale');
 var styles = require('../templates/ToggleButtonStyles');
+var FontAwesome = require('../templates/FontAwesome');
 
 /**
  * The button above the visualization that opens the data browser.
@@ -33,7 +34,7 @@ var ViewDataButton = React.createClass({
           style={showDataButtonStyle}
           className='no-outline'
           onClick={this.props.onClick}>
-        <i className='fa fa-database' style={styles.iconStyle} />
+        <FontAwesome icon="database" style={styles.iconStyle} />
         {applabMsg.viewData()}
       </button>
     );

@@ -2,7 +2,7 @@ title 'CSP Post-AP Material - Databases and Using Data in Your Apps'
 description 'App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.'
 description_short 'Data Apps'
 login_required 'true'
-hidden 'true'
+hidden 'false'
 
 #1
 stage 'Creating Javascript Objects'

@@ -459,6 +459,13 @@ $small-footer-standard-width: 400px;
 .full_container {
   padding: 0px 25px 25px 25px;
 }
+body.embedded_iframe {
+  .full_container {
+    padding-left: 0px;
+  }
+}
+
+
 
 $default-modal-width: 640px;
 
@@ -933,14 +940,6 @@ input.header_input {
     margin-top: 10px;
   }
 }
-
-body.embedded_iframe {
-  #codeApp.pin_bottom {
-    top: 0px;
-    left: 0px;
-  }
-}
-
 
 .reference_area {
   margin-top: 20px;
@@ -1426,21 +1425,6 @@ a.download-video {
   }
 }
 
-#landingpage.teacher-course {
-  $radius: 5px;
-  #lesson {
-    background: $cyan;
-    border-radius: $radius $radius 0 0;
-  }
-  #stats {
-    border: 5px solid $cyan;
-    border-radius: 0 0 $radius $radius;
-    .user-stats-block {
-      background: none;
-    }
-  }
-}
-
 .course_progress {
   margin: 10px 0;
 }
@@ -1711,6 +1695,7 @@ a.download-video {
 .external,
 .text-match,
 .free-response,
+.standalone-video,
 .multi,
 .match {
   #markdown.teacher {
@@ -1731,6 +1716,11 @@ a.download-video {
       margin: 0;
     }
   }
+}
+
+.standalone-video {
+  width: 853px;
+  margin: auto;
 }
 
 .multi #markdown.teacher {

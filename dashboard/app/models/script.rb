@@ -260,19 +260,19 @@ class Script < ActiveRecord::Base
   end
 
   def twenty_hour?
-    ScriptConstants.twenty_hour?(self.name)
+    ScriptConstants.script_in_category?(:twenty_hour, self.name)
   end
 
   def hoc?
-    ScriptConstants.hoc?(self.name)
+    ScriptConstants.script_in_category?(:hoc, self.name)
   end
 
   def flappy?
-    ScriptConstants.flappy?(self.name)
+    ScriptConstants.script_in_category?(:flappy, self.name)
   end
 
   def minecraft?
-    ScriptConstants.minecraft?(self.name)
+    ScriptConstants.script_in_category?(:minecraft, self.name)
   end
 
   def find_script_level(level_id)
@@ -301,7 +301,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'course4' || name == 'edit-code' || name == 'cspunit1' || name == 'cspunit2' || name == 'cspunit3' || name == 'cspunit4' || name == 'cspunit5'
+    name == 'edit-code' || name == 'cspunit1' || name == 'cspunit2' || name == 'cspunit3' || name == 'cspunit4' || name == 'cspunit5'
   end
 
   def is_k1?
@@ -335,7 +335,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5).include?(self.name)
+    k5_course? || %w(msm algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 cspoptional text-compression netsim pixelation frequency_analysis vigenere).include?(self.name)
   end
 
   def has_banner?

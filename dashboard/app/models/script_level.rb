@@ -131,9 +131,12 @@ class ScriptLevel < ActiveRecord::Base
         id: level.id,
         position: position,
         kind: kind,
+        icon: level.icon,
         title: level_display_text,
         url: build_script_level_url(self)
     }
+
+    summary[:name] = level.name if script.professional_learning_course?
 
     # Add a previous pointer if it's not the obvious (level-1)
     if previous_level

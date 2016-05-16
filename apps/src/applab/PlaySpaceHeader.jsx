@@ -20,6 +20,7 @@ var PlaySpaceHeader = React.createClass({
     isShareView: React.PropTypes.bool.isRequired,
     isViewDataButtonHidden: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes.oneOf([ApplabInterfaceMode.CODE, ApplabInterfaceMode.DESIGN]).isRequired,
+    playspacePhoneFrame: React.PropTypes.bool,
     screenIds: React.PropTypes.array.isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
     onInterfaceModeChange: React.PropTypes.func.isRequired
@@ -34,8 +35,6 @@ var PlaySpaceHeader = React.createClass({
   render: function () {
     var leftSide, rightSide;
 
-    var phoneFrame = experiments.isEnabled('phoneFrame');
-
     if (!this.shouldHideToggle()) {
       leftSide = (
         <ToggleGroup selected={this.props.interfaceMode} onChange={this.props.onInterfaceModeChange}>
@@ -47,7 +46,8 @@ var PlaySpaceHeader = React.createClass({
 
     if (this.props.interfaceMode === ApplabInterfaceMode.CODE && !this.shouldHideViewDataButton()) {
       rightSide = <ViewDataButton onClick={this.handleViewData} />;
-    } else if (this.props.interfaceMode === ApplabInterfaceMode.DESIGN && !phoneFrame) {
+    } else if (this.props.interfaceMode === ApplabInterfaceMode.DESIGN &&
+        !this.props.playspacePhoneFrame) {
       rightSide = <ScreenSelector
           screenIds={this.props.screenIds}
           onCreate={this.props.onScreenCreate}/>;
@@ -84,7 +84,8 @@ module.exports = connect(function propsFromStore(state) {
     isDesignModeHidden: state.pageConstants.isDesignModeHidden,
     isShareView: state.pageConstants.isShareView,
     isViewDataButtonHidden: state.pageConstants.isViewDataButtonHidden,
-    interfaceMode: state.interfaceMode
+    interfaceMode: state.interfaceMode,
+    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
   };
 }, function propsFromDispatch(dispatch) {
   return {
