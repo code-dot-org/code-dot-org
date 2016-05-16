@@ -18,6 +18,8 @@ module ScriptConstants
   INFINITY_NAME = 'infinity'
   ARTIST_NAME = 'artist'
   ALGEBRA_NAME = 'algebra'
+  ALGEBRA_A_NAME = 'AlgebraA'
+  ALGEBRA_B_NAME = 'AlgebraB'
   FLAPPY_NAME = 'flappy'
   TWENTY_HOUR_NAME = '20-hour'
   ACCELERATED_NAME = 'accelerated'
@@ -25,19 +27,22 @@ module ScriptConstants
   COURSE2_NAME = 'course2'
   COURSE3_NAME = 'course3'
   COURSE4_NAME = 'course4'
+  CSP_UNIT1_NAME = 'cspunit1'
+  CSP_UNIT2_NAME = 'cspunit2'
+  CSP_UNIT3_NAME = 'cspunit3'
+  CSP_UNIT4_NAME = 'cspunit4'
+  CSP_UNIT5_NAME = 'cspunit5'
+  CSP_UNIT6_NAME = 'cspunit6'
 
   MINECRAFT_TEACHER_DASHBOARD_NAME = 'minecraft'
   HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'
 
-  def ScriptConstants.twenty_hour?(name)
-    name == TWENTY_HOUR_NAME
-  end
+  CATEGORIES = {
+    hoc: [
+        # Note that now multiple scripts can be an 'hour of code' script.
+        # If adding a script here,
+        # you must also update the Data_HocTutorials gsheet so the end of script API works
 
-  def ScriptConstants.hoc?(name)
-    # Note that now multiple scripts can be an 'hour of code' script.
-    # If adding a script here,
-    # you must also update the Data_HocTutorials gsheet so the end of script API works
-    [
         nil,
         HOC_2013_NAME,
         HOC_NAME,
@@ -51,14 +56,43 @@ module ScriptConstants
         MINECRAFT_NAME,
         INFINITY_NAME,
         ARTIST_NAME
-    ].include? name
+    ],
+    csf: [
+        TWENTY_HOUR_NAME,
+        COURSE1_NAME,
+        COURSE2_NAME,
+        COURSE3_NAME,
+        COURSE4_NAME
+    ],
+    csp: [
+        CSP_UNIT1_NAME,
+        CSP_UNIT2_NAME,
+        CSP_UNIT3_NAME,
+        CSP_UNIT4_NAME,
+        CSP_UNIT5_NAME,
+        CSP_UNIT6_NAME
+    ],
+    math: [
+      ALGEBRA_NAME,
+      ALGEBRA_A_NAME,
+      ALGEBRA_B_NAME
+    ],
+    twenty_hour: [TWENTY_HOUR_NAME],
+    flappy: [FLAPPY_NAME],
+    minecraft: [MINECRAFT_NAME]
+  }
+
+  def self.method_missing(symbol, *args)
+    method = symbol.to_s
+    category = method[0..-2].to_sym
+    return CATEGORIES[category].include? args.first if args.length == 1 &&
+      method[-1] == '?' &&
+      CATEGORIES.include?(category)
+    super
   end
 
-  def ScriptConstants.flappy?(name)
-    name == FLAPPY_NAME
-  end
-
-  def ScriptConstants.minecraft?(name)
-    name == MINECRAFT_NAME
+  def self.category(script)
+    CATEGORIES.each {|category, scripts| return category.to_s if scripts.include? script}
+    nil
   end
 end

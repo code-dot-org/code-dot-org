@@ -72,8 +72,8 @@ class SectionApiHelperTest < Minitest::Test
       end
 
       it 'rewrites mc as minecraft, hourofcode as classicmaze' do
-        assert_equal 'minecraft', DashboardSection.valid_courses[4]
-        assert_equal 'classicmaze', DashboardSection.valid_courses[5]
+        assert_equal 'minecraft', DashboardSection.valid_courses[4][0]
+        assert_equal 'classicmaze', DashboardSection.valid_courses[5][0]
       end
     end
 
