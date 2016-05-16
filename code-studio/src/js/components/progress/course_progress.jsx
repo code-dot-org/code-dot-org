@@ -1,17 +1,27 @@
 /* global React, dashboard */
 
-var STAGE_TYPE = require('./types').STAGE_TYPE;
-var CourseProgressRow = require('./course_progress_row');
+import {STAGE_TYPE} from './types';
+import CourseProgressRow from './course_progress_row';
+import StageDetails from './stage_details';
 
 /**
  * Stage progress component used in level header and course overview.
  */
 var CourseProgress = React.createClass({
   propTypes: {
+    display: React.PropTypes.oneOf(['dots', 'list']).isRequired,
     stages: React.PropTypes.arrayOf(STAGE_TYPE)
   },
 
-  render: function () {
+  getRow(stage) {
+    if (this.props.display === 'dots') {
+      return <CourseProgressRow stage={stage} key={stage.name} />;
+    } else {
+      return <StageDetails stage={stage} key={stage.name} />;
+    }
+  },
+
+  render() {
     var rows = [], stages = this.props.stages;
 
     // Iterate through each stage. When a stage with a flex_category is found,
@@ -22,18 +32,18 @@ var CourseProgress = React.createClass({
       if (stages[i].flex_category) {
         var flexRows = [], previous = stages[i].flex_category;
         for ( ; i < stages.length && stages[i].flex_category === previous; i++) {
-          flexRows.push(<CourseProgressRow stage={stages[i]} key={stages[i].name}/>);
+          flexRows.push(this.getRow(stages[i]));
         }
         rows.push(
-          <div className="flex-wrapper">
-            <div key={previous} className="flex-category">
+          <div className="flex-wrapper" key={i}>
+            <div className="flex-category">
               <h4>{previous}</h4>
               {flexRows}
             </div>
           </div>
         );
       } else {
-        rows.push(<CourseProgressRow stage={stages[i]} key={stages[i].name}/>);
+        rows.push(this.getRow(stages[i]));
         i++;
       }
     }

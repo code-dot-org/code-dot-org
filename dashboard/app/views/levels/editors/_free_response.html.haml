@@ -11,6 +11,12 @@
     it).
   = boolean_check_box f, :submittable
 .field
+  = f.label :peer_reviewable
+  %p
+    If checked, students that submit a solution for grading can have their
+    solution reviewed by peers.
+  = boolean_check_box f, :peer_reviewable
+.field
   = f.label :height
   %p Height of the answer textarea in px.
   = f.number_field :height, step: 50

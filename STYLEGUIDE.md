@@ -81,7 +81,7 @@ Fallback: http://matthewpaulmoore.com/post/5190436725/ruby-on-rails-code-quality
 
 ## JavaScript
 
-Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
+Default: https://google.github.io/styleguide/javascriptguide.xml
 
 * <a name="js-indentation"></a>
   Use 2 spaces per indentation level. Line continuations should be indented at 4 spaces (including function arguments). Wrap at 80 characters.
@@ -403,7 +403,7 @@ Fallback: http://css-tricks.com/css-style-guides
 
 ## HTML
 
-Default: http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml
+Default: https://google.github.io/styleguide/htmlcssguide.xml
 
 - Avoid inline event handlers in markup.
 - Avoid inline styles in markup.

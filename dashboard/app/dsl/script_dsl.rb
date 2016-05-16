@@ -16,10 +16,6 @@ class ScriptDSL < BaseDSL
     @i18n_strings = Hash.new({})
     @video_key_for_next_level = nil
     @prompt = nil
-    @active = true
-    @buttontext = nil
-    @imageurl = nil
-    @description = nil
     @hidden = true
     @login_required = false
     @admin_required = false
@@ -83,16 +79,16 @@ class ScriptDSL < BaseDSL
   string :video_key_for_next_level
 
   string :prompt
-  boolean :active
-  string :buttontext
-  string :imageurl
-  string :description
 
   def assessment(name)
     level(name, {assessment: true})
   end
 
   def level(name, properties = {})
+    active = properties.delete(:active)
+    buttontext = properties.delete(:buttontext)
+    imageurl = properties.delete(:imageurl)
+    level_description = properties.delete(:description)
     level = {
       :name => name,
       :stage_flex_category => @stage_flex_category,
@@ -104,19 +100,15 @@ class ScriptDSL < BaseDSL
     @video_key_for_next_level = nil
     if @current_scriptlevel
       @current_scriptlevel[:levels] << level
+
       levelprops = {}
-      levelprops[:active] = @active if !@active
-      levelprops[:buttontext] = @buttontext if @buttontext
-      levelprops[:imageurl] = @imageurl if @imageurl
-      levelprops[:description] = @description if @description
+      levelprops[:active] = active if active == false
+      levelprops[:buttontext] = buttontext if buttontext
+      levelprops[:imageurl] = imageurl if imageurl
+      levelprops[:description] = level_description if level_description
       unless levelprops.empty?
         @current_scriptlevel[:properties][name] = levelprops
       end
-
-      @active = true
-      @buttontext = nil
-      @imageurl = nil
-      @description = nil
     else
       @scriptlevels << {
         :stage => @stage,
@@ -132,11 +124,6 @@ class ScriptDSL < BaseDSL
   def endvariants
     @current_scriptlevel[:properties][:prompt] = @prompt if @prompt
     @scriptlevels << @current_scriptlevel
-
-    unused_prop = @active == false ? @active.to_s : (@buttontext || @imageurl || @description)
-    if unused_prop
-      raise 'Unused property "' + unused_prop + '" at ' + caller[0].to_s
-    end
 
     @current_scriptlevel = nil
     @prompt = nil

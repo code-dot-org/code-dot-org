@@ -148,8 +148,7 @@ stage 'Stage1'
 level 'Level 1'
 variants
 level 'Level 2a'
-active false
-level 'Level 2b'
+level 'Level 2b', active: false
 endvariants
 level 'Level 3'
 "
@@ -188,15 +187,15 @@ level 'Level 1'
 variants
   prompt 'Which level would you like to try?'
 
-  buttontext 'Challenge'
-  imageurl 'https://studio.code.org/blah/maze-2-challenge.png'
-  description 'This is a hard level'
-  level 'Level 2a'
+  level 'Level 2a',
+    buttontext: 'Challenge',
+    imageurl: 'https://studio.code.org/blah/maze-2-challenge.png',
+    description: 'This is a hard level'
 
-  buttontext 'Super Challenge'
-  imageurl 'https://studio.code.org/blah/maze-2-super.png'
-  description 'This is a very hard level'
-  level 'Level 2b'
+  level 'Level 2b',
+    buttontext: 'Super Challenge',
+    imageurl: 'https://studio.code.org/blah/maze-2-super.png',
+    description: 'This is a very hard level'
 endvariants
 level 'Level 3'
 "
@@ -249,13 +248,13 @@ level 'Level 1'
 variants
   prompt 'Which level would you like to try?'
 
-  buttontext 'Challenge'
-  imageurl 'https://studio.code.org/blah/maze-2-challenge.png'
-  level 'Level 2a'
+  level 'Level 2a',
+    buttontext: 'Challenge',
+    imageurl: 'https://studio.code.org/blah/maze-2-challenge.png'
 
-  buttontext 'Super Challenge'
-  description 'This is a very hard level'
-  level 'Level 2b'
+  level 'Level 2b',
+    buttontext: 'Super Challenge',
+    description: 'This is a very hard level'
 endvariants
 level 'Level 3'
 "
@@ -297,19 +296,6 @@ level 'Level 3'
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
-  end
-
-  test 'test Script DSL raises for dangling properties' do
-    input_dsl = "
-stage 'Stage1'
-variants
-  level 'Level 2b'
-  buttontext 'hi'
-endvariants
-"
-    assert_raises_matching /Unused property "hi"/ do
-      ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    end
   end
 
   test 'test Multi DSL' do

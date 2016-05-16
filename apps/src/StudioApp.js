@@ -898,7 +898,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
 };
 
 StudioApp.prototype.isRunning = function () {
-  return this.reduxStore.getState().isRunning;
+  return this.reduxStore.getState().runState.isRunning;
 };
 
 /**
@@ -1773,13 +1773,13 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 };
 
 // Overwritten by applab.
-StudioApp.prototype.runButtonClickWrapper = function (callback) {
+function runButtonClickWrapper(callback) {
   if (window.$) {
     $(window).trigger('run_button_pressed');
     $(window).trigger('appModeChanged');
   }
   callback();
-};
+}
 
 /**
  * Begin modifying the DOM based on config.
@@ -1796,7 +1796,8 @@ StudioApp.prototype.configureDom = function (config) {
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var runClick = this.runButtonClick.bind(this);
-  var throttledRunClick = _.debounce(this.runButtonClickWrapper.bind(this, runClick), 250, true);
+  var clickWrapper = (config.runButtonClickWrapper || runButtonClickWrapper);
+  var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, true);
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 

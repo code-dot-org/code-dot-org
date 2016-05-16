@@ -210,15 +210,10 @@ class ScriptLevelsController < ApplicationController
       return last_attempt.level if last_attempt
     end
 
-    # Otherwise return the active level with the lowest id. Active defaults to true
-    return @script_level.levels.min_by(&:id) unless @script_level.properties
-
-    properties = JSON.parse(@script_level.properties)
-    @script_level.levels.sort_by(&:id).each do |level|
-      return level unless properties[level.name] && properties[level.name]['active'] == false
-    end
-
-    raise "No active levels found for scriptlevel #{@script_level.id}"
+    # Otherwise return the oldest active level
+    oldest_active = @script_level.oldest_active_level
+    raise "No active levels found for scriptlevel #{@script_level.id}" unless oldest_active
+    oldest_active
   end
 
   def present_level
@@ -234,6 +229,10 @@ class ScriptLevelsController < ApplicationController
       @pages = [@level.pages[puzzle_page.to_i - 1]]
       @total_page_count = @level.pages.count
       @total_level_count = @level.levels.length
+    end
+
+    if @level.try(:peer_reviewable)
+      @peer_reviews = PeerReview.where(level: @level, submitter: current_user).where.not(status: nil)
     end
 
     @callback = milestone_script_level_url(

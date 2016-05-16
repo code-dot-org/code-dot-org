@@ -28,25 +28,28 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   # POST /plc/user_course_enrollments
   # POST /plc/user_course_enrollments.json
   def create
-    user = User.find_by_email_or_hashed_email(user_course_enrollment_params[:user_email])
-    if user.nil?
-      redirect_to action: :new
+    user_emails = user_course_enrollment_params[:user_emails].split
+    users = User.where(email: user_emails)
+    if users.size != user_emails.size
+      redirect_to action: :new, notice: "Unknown users #{(user_emails - users.pluck(:email)).join(', ')}"
       return
     end
 
-    @user_course_enrollment = Plc::UserCourseEnrollment.find_or_create_by(user: user,
+    users.each do |user|
+      user_course_enrollment = Plc::UserCourseEnrollment.find_or_create_by(user: user,
                                                                      plc_course_id: user_course_enrollment_params[:plc_course_id])
 
-    if @user_course_enrollment.valid?
-      redirect_to action: :index
-    else
-      redirect_to action: :new
+      unless user_course_enrollment.valid?
+        throw "Unable to create enrollment for #{user.email} - validation failed"
+      end
     end
+
+    redirect_to action: :new, notice: "Enrollments created for #{user_emails.join(', ')}"
   end
 
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_course_enrollment_params
-    params.permit(:user_email, :plc_course_id)
+    params.permit(:user_emails, :plc_course_id)
   end
 end
