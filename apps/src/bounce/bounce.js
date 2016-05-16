@@ -778,7 +778,7 @@ Bounce.init = function (config) {
     dom.addClickTouchEvent(finishButton, Bounce.onPuzzleComplete);
   };
 
-  studioApp.setCommonPageConstants(config);
+  studioApp.setPageConstants(config);
 
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>

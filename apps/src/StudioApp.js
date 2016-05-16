@@ -2719,10 +2719,12 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
  * Sets a bunch of common page constants used by all of our apps in our redux
  * store based on our app options config.
  * @param {AppOptionsConfig}
+ * @param {object} appSpecificConstants - Optional additional constants that
+ *   are app specific.
  */
-StudioApp.prototype.setCommonPageConstants = function (config) {
+StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
-  this.reduxStore.dispatch(setPageConstants({
+  const combined = Object.assign({
     localeDirection: this.localeDirection(),
     assetUrl: this.assetUrl,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
@@ -2734,5 +2736,7 @@ StudioApp.prototype.setCommonPageConstants = function (config) {
     instructionsInTopPane: config.showInstructionsInTopPane,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total
-  }));
+  }, appSpecificConstants);
+
+  this.reduxStore.dispatch(setPageConstants(combined));
 };
