@@ -1,0 +1,6 @@
+name 'CSPFinal_Question_24'
+question 'The internet is comprised of a series of free and open protocols intended to promote wide scale use.  Which of the following is NOT an example of an open internet?'
+wrong 'Restricting Facebook at school'
+right 'Giving traffic from specific companies or users higher priority in the network'
+wrong 'Routing large packets through different servers'
+wrong 'Charging residential customers more for higher internet speeds'

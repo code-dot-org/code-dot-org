@@ -7,11 +7,10 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
+      "frameRate": null,
       "drawSprites": null,
       "background": null,
       "var sprite = createSprite": null,
-      "x": null,
-      "y": null,
       "sprite.width": null,
       "sprite.height": null,
       "addOperator": null,
@@ -43,9 +42,8 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "show_d_pad": "false",
-    "instructions": "Do This",
-    "markdown_instructions": "# Width and Height\r\n\r\n# Do This",
-    "start_blocks": "var sprite1 = createSprite(randomNumber(0, 400), randomNumber(0, 400), 30, 30);\r\n\r\nframeRate(100);\r\n\r\nfunction draw() {\r\n  sprite1.x = randomNumber(0,400);\r\n  sprite1.y = randomNumber(0,400);\r\n  \r\n  background('white');\r\n  drawSprites();\r\n}"
+    "markdown_instructions": "# Width and Height\r\n\r\nOther properties that exist for sprites are ones to control the width and height of the sprite. The property names are `width` and `height`. So to access the width of a sprite named `cat` you would say `cat.width`.\r\n\r\n# Do This\r\n\r\n* Create a sprite and draw it on the screen\r\n* Set the width and height to a random value each time the program loops\r\n* Make sure there is only one rectangle drawn on the window at a time",
+    "start_blocks": "function draw() {\r\n \r\n}"
   },
   "published": true,
   "notes": "",

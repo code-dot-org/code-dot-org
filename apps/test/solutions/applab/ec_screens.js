@@ -434,6 +434,56 @@ module.exports = {
     },
 
     {
+      description: "return to default screen after reset",
+      editCode: true,
+      levelHtml:
+        '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" style="width: 320px; height: 450px; display: block;">' +
+          '<div class="screen" tabindex="1" id="default_screen" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
+            '<button id="button1" style="padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 160px; top: 70px; background-color: rgb(26, 188, 156);">Button</button>' +
+          '</div>' +
+          '<div class="screen" tabindex="1" id="other_screen" style="display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
+            '<button id="button2" style="padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 185px; top: 65px; background-color: rgb(26, 188, 156);">Button</button>' +
+          '</div>' +
+        '</div>',
+      runBeforeClick: function (assert) {
+        // enter design mode
+        $("#designModeButton").click();
+
+        assert.equal($("#design_default_screen").is(':visible'), true);
+        assert.equal($("#design_other_screen").is(':visible'), false);
+
+        // change to other screen
+        ReactTestUtils.Simulate.change(document.getElementById('screenSelector'),
+          { target: { value: 'other_screen' } });
+
+        assert.equal($("#design_default_screen").is(':visible'), false);
+        assert.equal($("#design_other_screen").is(':visible'), true);
+
+        $("#runButton").click();
+
+        // design screens are not visible, default screen is visible
+        assert.equal($("#design_default_screen").is(':visible'), false);
+        assert.equal($("#design_other_screen").is(':visible'), false);
+        assert.equal($("#default_screen").is(':visible'), true);
+        assert.equal($("#other_screen").is(':visible'), false);
+
+        $("#resetButton").click();
+
+        // after reset, go back to default screen
+        assert.equal($("#design_default_screen").is(':visible'), true);
+        assert.equal($("#design_other_screen").is(':visible'), false);
+        assert.equal($("#default_screen").is(':visible'), false);
+        assert.equal($("#other_screen").is(':visible'), false);
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
       description: "add/remove an element to a screen",
       editCode: true,
       xml: "",

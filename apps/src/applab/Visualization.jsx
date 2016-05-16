@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import {connect} from 'react-redux';
 import Radium from 'radium';
 import commonStyles from '../commonStyles';
+import color from '../color';
 import VisualizationOverlay from '../templates/VisualizationOverlay';
 import {VISUALIZATION_DIV_ID, isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import applabConstants from './constants';
@@ -18,7 +19,11 @@ var styles = {
     height: applabConstants.APP_HEIGHT
   },
   phoneFrame: {
-    marginBottom: 0
+    marginBottom: 0,
+    borderColor: color.lighter_gray
+  },
+  phoneFrameRunning: {
+    borderColor: color.charcoal
   },
   screenBlock: {
     backgroundColor: 'rgba(255, 255, 255, 0.5)',
@@ -41,6 +46,7 @@ var Visualization = React.createClass({
     visualizationHasPadding: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     isPaused: React.PropTypes.bool.isRequired,
+    isRunning: React.PropTypes.bool.isRequired,
     playspacePhoneFrame: React.PropTypes.bool.isRequired,
     isResponsive: React.PropTypes.bool.isRequired
   },
@@ -59,7 +65,8 @@ var Visualization = React.createClass({
           style={[
             !this.props.isResponsive && styles.nonResponsive,
             this.props.isShareView && styles.share,
-            this.props.playspacePhoneFrame && styles.phoneFrame
+            this.props.playspacePhoneFrame && styles.phoneFrame,
+            this.props.playspacePhoneFrame && this.props.isRunning && styles.phoneFrameRunning
           ]}
       >
         <div
@@ -90,6 +97,7 @@ var Visualization = React.createClass({
 module.exports = connect(state => ({
   visualizationHasPadding: state.pageConstants.visualizationHasPadding,
   isShareView: state.pageConstants.isShareView,
+  isRunning: state.runState.isRunning,
   isPaused: state.runState.isDebuggerPaused,
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
   isResponsive: isResponsiveFromState(state)
