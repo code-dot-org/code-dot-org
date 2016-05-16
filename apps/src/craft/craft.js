@@ -15,7 +15,6 @@ var MusicController = require('../MusicController');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
-var setPageConstants = require('../redux/pageConstants').setPageConstants;
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -307,10 +306,9 @@ Craft.init = function (config) {
   };
 
   // Push initial level properties into the Redux store
-  studioApp.setCommonPageConstants(config);
-  studioApp.reduxStore.dispatch(setPageConstants({
+  studioApp.setPageConstants(config, {
     isMinecraft: true
-  }));
+  });
 
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
