@@ -1271,7 +1271,7 @@ L.5.6 - Acquire and use accurately grade-appropriate general academic and domain
                 <tr>
             <td colspan="2">
                 <h2>
-                    16. Bee: Functions with Parameters/h2>
+                    16. Bee: Functions with Parameters</h2>
             </td>
         </tr>
         <tr>

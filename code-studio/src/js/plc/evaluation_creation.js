@@ -36,14 +36,16 @@ $(window).load(function () {
 
     $('.question_section .new_answer_row').each(function (index, element) {
       var questionId = element.getAttribute('question_id');
-      var answerText = $(element).find('input').val();
+      var answerText = $(element).find('input:first').val();
+      var weight = $(element).find('input:last').val();
       var associatedModule = $(element).find('select').val();
 
       newAnswerData[questionId] = newAnswerData[questionId] || [];
 
       newAnswerData[questionId].push({
         answer: answerText,
-        learningModuleId: associatedModule
+        learningModuleId: associatedModule,
+        weight: weight
       });
     });
 
