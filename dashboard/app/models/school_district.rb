@@ -14,6 +14,9 @@
 class SchoolDistrict < ActiveRecord::Base
   include Seeded
 
+  # The listing of all US school districts comes from http://nces.ed.gov/ccd/pubagency.asp
+  # and is then exported into a tab-separated file.
+  # The data format, notably the LEAID, is described at https://nces.ed.gov/ccd/aadd.asp
   CSV_HEADERS = {
     :id => 'LEAID',
     :name => 'NAME',

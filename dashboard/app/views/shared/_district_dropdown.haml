@@ -7,7 +7,7 @@
   #pl-application-facets.form-section
 
     .form-group
-      .question Select your school type
+      .question Select school type
       %select#school-type.form-control{name: "school_type_s", type: "select", required: true}
         %option{value: "nil", selected: true}
         %option{value: "charter"} Charter
@@ -16,11 +16,11 @@
         %option{value: "other"} Other
 
     .form-group{style: "display: none; margin-top: 20px;"}
-      .question Enter your school district's zip code
+      .question Enter school district's ZIP code
       %input#school-zipcode.form-control{name: "#{form_name}[school_zip]", type: "text", required: false}
 
     .form-group{style: "display: none; margin-top: 20px;"}
-      .question Select your state
+      .question Select state
       %select#school-state.form-control{name: "school_state_s", type: "select", required: false}
         %option{value: "nil", selected: true}
         - get_all_states_with_dc.each do |state_abbr, state_name|
@@ -28,6 +28,19 @@
         %option{value: "other"} Other
 
     .form-group{style: "display: none; margin-top: 20px;"}
-      .question Search for your district
+      .question Search for district
       #school-district
-        %input.form-control{name: "#{form_name}[school_district_id]", type: "text", required: false}
+
+        -# We'll apply the Selectize UI control to this input.
+        %input#school-district-id.form-control{name: "school_district_id_source", type: "text", required: false}
+
+        -# This is the input we'll actually submit as part of the form.  We'll copy the Selectized value into
+        -# here whenever it's changed.  Sometimes we'll override this with code, say 0 for "unknown district".
+        -# Selectize was showing this 0 as a character when it was disabled, hence giving Selectize its own
+        -# input to work with above.
+        %input#school-district-id-form.form-control{name: "#{form_name}[school_district_id]", type: "hidden", required: false}
+
+      %label
+        %input#school-district-other{name: "school_district_other", type: "checkbox", style: "margin-top: 0px"}
+        %span{style: "font-size: 12px"}
+          Other district not listed above

@@ -4,20 +4,26 @@ var selected_state;
 $(function () {
   var doneLoading = false;
 
+  var districtElement = $('#school-district-id');
+
   function setupDistrictDropdown(stateCode) {
     doneLoading = false;
 
-    var inputElement = $('#school-district input');
-    if (inputElement[0].selectize) {
-      inputElement[0].selectize.clear();
-      inputElement[0].selectize.destroy();
+    var selectize = districtElement[0].selectize;
+    if (selectize) {
+      selectize.clear();
+      selectize.destroy();
     }
 
-    selectize = inputElement.selectize({
-      maxItems: 1
+    selectize = districtElement.selectize({
+      maxItems: 1,
+      onChange: function () {
+        var districtId = districtElement[0].selectize.getValue();
+        $("#school-district-id-form").val(districtId);
+      }
     });
 
-    inputElement[0].selectize.load(function (callback) {
+    districtElement[0].selectize.load(function (callback) {
       $.ajax({
         url: "/dashboardapi/v1/school-districts/" + stateCode,
         type: 'GET',
@@ -35,6 +41,32 @@ $(function () {
         }
       });
     });
+
+  }
+
+  function enableDistricts(enable) {
+    var selectize = districtElement[0].selectize;
+    if (selectize) {
+      if (enable) {
+        selectize.enable();
+      } else {
+        selectize.disable();
+        selectize.clear();
+      }
+    }
+  }
+
+  function setDistrictUnknown() {
+    $("#school-district-id-form").val(0);
+  }
+
+  function clearZip() {
+    var zipElement = $('#school-zipcode');
+    zipElement.val("");
+  }
+
+  function clearDistrict() {
+    $("#school-district-id-form").val("");
   }
 
   $('#school-type').change(function () {
@@ -43,6 +75,7 @@ $(function () {
       $('#school-state').closest('.form-group').show();
       $('#school-zipcode').closest('.form-group').hide();
       // And clear ZIP.
+      clearZip();
 
     } else {
       // Show ZIP.
@@ -50,17 +83,33 @@ $(function () {
       $('#school-zipcode').closest('.form-group').show();
       $('#school-district').closest('.form-group').hide();
       // And clear district.
+      clearDistrict();
     }
   });
 
   $('#school-state').change(function () {
     if ($(this).val() != 'other') {
-      // Show districts.
+      // Show districts.  (State is already showing, so ZIP is already clear.)
       $('#school-district').closest('.form-group').show();
       setupDistrictDropdown($('#school-state').val());
     } else {
       $('#school-district').closest('.form-group').hide();
-      // And clear district.
+      // Set district to "unknown district".
+      setDistrictUnknown();
     }
   });
+
+  $('#school-district-other').change(function () {
+    if ($(this).prop("checked")) {
+      // Disable districts.
+      enableDistricts(false);
+
+      // And set district to "unknown district".
+      setDistrictUnknown();
+    } else {
+      // Enable districts.  (And clear "unknown district".)
+      enableDistricts(true);
+    }
+  });
+
 });
