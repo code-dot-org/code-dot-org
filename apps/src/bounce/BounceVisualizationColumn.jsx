@@ -4,7 +4,7 @@ var GameButtons = require('../templates/GameButtons').default;
 var ArrowButtons = require('../templates/ArrowButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var ProtectedVisualizationDiv = require('../templates/ProtectedVisualizationDiv');
+import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 
 var BounceVisualizationColumn = function () {
   return (

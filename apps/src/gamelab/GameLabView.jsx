@@ -13,6 +13,7 @@ var GameLabVisualizationHeader = require('./GameLabVisualizationHeader');
 var GameLabVisualizationColumn = require('./GameLabVisualizationColumn');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var InstructionsWithWorkspace = require('../templates/instructions/InstructionsWithWorkspace');
+import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 
 var GameLabInterfaceMode = gameLabConstants.GameLabInterfaceMode;
 var GAME_WIDTH = gameLabConstants.GAME_WIDTH;
@@ -24,6 +25,7 @@ var GameLabView = React.createClass({
   propTypes: {
     interfaceMode: React.PropTypes.oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION]).isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
+    isResponsive: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     showFinishButton: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
@@ -54,7 +56,7 @@ var GameLabView = React.createClass({
     };
 
     const visualizationColumnClassNames = classNames({
-      responsive: this.isResponsive()
+      responsive: this.props.isResponsive
     });
 
     return (
@@ -90,10 +92,6 @@ var GameLabView = React.createClass({
     return !(this.props.isEmbedView || this.props.isShareView);
   },
 
-  isResponsive: function () {
-    return !this.props.isEmbedView && !this.props.hideSource;
-  },
-
   render: function () {
     return (
       <ConnectedStudioAppWrapper>
@@ -109,6 +107,7 @@ module.exports = connect(function propsFromStore(state) {
     hideSource: state.pageConstants.hideSource,
     interfaceMode: state.interfaceMode,
     isEmbedView: state.pageConstants.isEmbedView,
+    isResponsive: isResponsiveFromState(state),
     isShareView: state.pageConstants.isShareView
   };
 })(GameLabView);

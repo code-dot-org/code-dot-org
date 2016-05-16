@@ -1,4 +1,4 @@
-var ProtectedVisualizationDiv = require('../templates/ProtectedVisualizationDiv');
+import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 
 var Visualization = function () {
   return (
