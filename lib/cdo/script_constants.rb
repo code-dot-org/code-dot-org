@@ -37,6 +37,10 @@ module ScriptConstants
   MINECRAFT_TEACHER_DASHBOARD_NAME = 'minecraft'
   HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'
 
+  # Note that calls to ScriptConstants.categories() will return categories in
+  # the same order specified here (for scripts that appear in multiple places).
+  # Changing the order here can change which category a script appears under
+  # on the teacher dashboard.
   CATEGORIES = {
     hoc: [
         # Note that now multiple scripts can be an 'hour of code' script.
