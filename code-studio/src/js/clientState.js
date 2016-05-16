@@ -89,6 +89,9 @@ clientState.levelProgress = function (scriptName, levelId) {
  * Returns the "best" of the two results, as defined in apps/src/constants.js.
  * Note that there are negative results that count as an attempt, so we can't
  * just take the maximum.
+ *
+ * Results larger than 100 are reserved for server-dependent changes and can't
+ * be cached locally.
  * @param {Number} a
  * @param {Number} b
  * @return {Number} The better result.
@@ -96,10 +99,10 @@ clientState.levelProgress = function (scriptName, levelId) {
 clientState.mergeActivityResult = function (a, b) {
   a = a || 0;
   b = b || 0;
-  if (a === 0) {
+  if (a === 0 || a > 100) {
     return b;
   }
-  if (b === 0) {
+  if (b === 0 || a > 100) {
     return a;
   }
   return Math.max(a, b);
