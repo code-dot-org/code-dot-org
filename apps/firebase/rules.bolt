@@ -6,7 +6,7 @@ isLoggedIn() { auth.uid !== null }
 
 valueOr(value, defaultValue) { value == null ? defaultValue : value }
 isUnchanged(value) { value == prior(value) }
-isIncremented(value) { value == prior(value) + 1 }
+isIncremented(value) { value > prior(value) }
 isNotRemoved(value) { value != null || prior(value) == null }
 
 // Row count helpers
@@ -104,7 +104,7 @@ path /v3/shared-tables/{channel_id}/server_time/{user_id} is Number {
 
 path /v3/shared-tables/{channel_id}/counters/{table_name} is Number {
   write() { isLoggedIn() && this != null }
-  validate() { this == valueOr(prior(this), 0) + 1 }
+  validate() { this > valueOr(prior(this), 0) }
 }
 
 path /v3/shared-tables/{channel_id}/tables/{table_name}/target_record_id is String {
