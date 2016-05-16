@@ -248,8 +248,6 @@ namespace :seed do
     end
   end
 
-  task analyze_data: [:ideal_solutions, :frequent_level_sources]
-
   task secret_words: :environment do
     SecretWord.setup
   end
