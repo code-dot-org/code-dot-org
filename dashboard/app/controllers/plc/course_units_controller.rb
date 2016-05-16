@@ -13,6 +13,7 @@ class Plc::CourseUnitsController < ApplicationController
       answer_list.each do |answer_properties|
         Plc::EvaluationAnswer.create(plc_evaluation_question_id: question_id,
                                      answer: answer_properties['answer'],
+                                     weight: answer_properties['weight'] || 1,
                                      plc_learning_module_id: answer_properties['learningModuleId'] == '' ? nil : answer_properties['learningModuleId'])
       end
     end

@@ -25,6 +25,12 @@ exports.config = {
    * Your New Relic license key.
    */
   license_key: licenseKey,
+  /**
+   * Disable New Relic agent startup when the license key is not available.
+   * Otherwise, the New Relic agent does a bunch of stuff behind the scenes
+   * as soon as you require it, and can fail when no license key is provided.
+   */
+  agent_enabled: !!licenseKey,
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing

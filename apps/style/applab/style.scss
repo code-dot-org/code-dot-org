@@ -461,3 +461,9 @@ body.embedded_iframe {
   background: -moz-linear-gradient(to bottom right, red, orange, yellow, green, blue); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, red, orange, yellow, green, blue); /* Standard syntax */
 }
+
+img#turtleImage {
+  position: absolute;
+  height: 24px;
+  margin: 0px;
+}

@@ -13,7 +13,7 @@
     - answers = question.plc_evaluation_answers
     - answers.each do |answer|
       %p
-        %input.radio{type: "radio", name: question.id, value: answer.plc_learning_module_id, checked: answer == answers.first, style: 'margin-left: 20px'}
+        %input.radio{type: "radio", name: question.id, weight: answer.weight, value: answer.plc_learning_module_id, checked: answer == answers.first, style: 'margin-left: 20px'}
           #{answer.answer}
   = hidden_field_tag('answer_module_list')
   = submit_tag('Submit evaluation', id: 'submit_evaluation')

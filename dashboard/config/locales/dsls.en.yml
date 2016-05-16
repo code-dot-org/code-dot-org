@@ -485,7 +485,6 @@ en:
       ECSPD Unit4 Connections: {}
       ECSPD What Is Problem Solving: {}
       ECSPD What is the Challenge: {}
-      ECSPD Why Binary - The Internet Video: {}
       ECSPD curriculum overview:
         ECS Curriculum Overview: ECS Curriculum Overview
         Overview of Curriculum: Overview of Curriculum
@@ -643,6 +642,7 @@ en:
       ECSU4 Challenge Submission: {}
       Embedded Arduino Sketch Test:
         Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
+      Empty Markdown Level: {}
       Encoding Numbers Real World Student Lesson Introduction:
         description here: description here
         title: title
@@ -952,9 +952,6 @@ en:
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
-      U1L1 Innovation - Video:
-        CS is Changing Everything - Video: CS is Changing Everything - Video
-        description here: description here
       U1L1 Student Lesson Introduction:
         Impact of Innovation: Impact of Innovation
         description here: description here
@@ -994,9 +991,6 @@ en:
       U1L4 Widget Demo - Video:
         Widget Demonstration - Video: Widget Demonstration - Video
         description here: description here
-      U1L5 How the Internet Works - Video:
-        How the Internet Works - Video: How the Internet Works - Video
-        description here: description here
       U1L5 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1012,15 +1006,6 @@ en:
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
-      U2 Encryption and Public Keys - Video:
-        'The Internet: Encryption and Public Keys - Video': 'The Internet: Encryption and Public Keys - Video'
-        description here: description here
-      U2 HTTP and HTML - Video:
-        'The Internet: HTTP and HTML - Video': 'The Internet: HTTP and HTML - Video'
-        description here: description here
-      'U2 The Internet: Cybersecurity and Crime - Video':
-        'The Internet: Cybersecurity and Crime - Video': 'The Internet: Cybersecurity and Crime - Video'
-        description here: description here
       U2L1 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1052,14 +1037,8 @@ en:
         Security and Hacking in the Real World: Security and Hacking in the Real World
       U2L3 Student Lesson Introduction:
         Lesson 3 - Invent an addressing protocol: Lesson 3 - Invent an addressing protocol
-      'U2L3: IP DNS Video':
-        IP/DNS Video: IP/DNS Video
-        'Internet: IP/DNS': 'Internet: IP/DNS'
       U2L4 Student Lesson Introduction:
         U2L04 Routers and Redundancy: U2L04 Routers and Redundancy
-      U2L5 Packets and Reliability - Video:
-        'The Internet: Packets, Routers, and Reliability - Video': 'The Internet: Packets, Routers, and Reliability - Video'
-        description here: description here
       U2L5 Student Lesson Introduction:
         Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
       U2L6 Student Lesson Introduction:
@@ -1330,9 +1309,6 @@ en:
       U4L10 Student Lesson Introduction:
         description here: description here
         title: title
-      U4L11 Data and Medicine - Video:
-        Data and Medicine- Video: Data and Medicine- Video
-        description here: description here
       U4L11 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1409,9 +1385,6 @@ en:
         description here: description here
         title: title
       Unit 3 Survey 2: {}
-      a bit about pixels:
-        kevin systrom pixel video: kevin systrom pixel video
-        pixel video: pixel video
       broadcast lesson plan: {}
       challenges sample:
         Give these a try: Give these a try
@@ -3040,11 +3013,8 @@ en:
       CSPFinal_Question_1:
         Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.: Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.
         Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent: Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent
-        Double the number of bits in studentID to double the number of IDs that the database can represent: Double the number of bits in studentID to double the number of IDs that the database can represent
         Remove a bit from <code>studentID</code> to make room for incoming students: Remove a bit from <code>studentID</code> to make room for incoming students
-        Remove a bit from studentID to make room for incoming students: Remove a bit from studentID to make room for incoming students
         Use the same number of bits in <code>studentID</code> but reserve the first bit to indicate middle school or high school.: Use the same number of bits in <code>studentID</code> but reserve the first bit to indicate middle school or high school.
-        Use the same number of bits in studentID but reserve the first bit to indicate middle school or high school.: Use the same number of bits in studentID but reserve the first bit to indicate middle school or high school.
       CSPFinal_Question_10:
         I and II only: I and II only
         I and III only: I and III only
@@ -3061,11 +3031,6 @@ en:
         Low level protocols are written in binary while high level protocols are written in hexadecimal.: Low level protocols are written in binary while high level protocols are written in hexadecimal.
         Low level protocols can provide functionality to high level protocols without revealing the details of how this is accomplished.: Low level protocols can provide functionality to high level protocols without revealing the details of how this is accomplished.
       CSPFinal_Question_13:
-        "<code>dieRoll = 2</code>": "<code>dieRoll = 2</code>"
-        "<code>dieRoll = evenCounter + RollCounter</code>": "<code>dieRoll = evenCounter + RollCounter</code>"
-        "<code>dieRoll = evenCounter + rollCounter</code>": "<code>dieRoll = evenCounter + rollCounter</code>"
-        "<code>evenCounter * 2 = rollCounter</code>": "<code>evenCounter * 2 = rollCounter</code>"
-        "<code>rollCounter = 5</code>": "<code>rollCounter = 5</code>"
         "<pre>dieRoll = 2</pre>": "<pre>dieRoll = 2</pre>"
         "<pre>dieRoll = evenCounter + RollCounter</pre>": "<pre>dieRoll = evenCounter + RollCounter</pre>"
         "<pre>evenCounter * 2 = rollCounter</pre>": "<pre>evenCounter * 2 = rollCounter</pre>"
@@ -3081,11 +3046,8 @@ en:
         A non-computationally hard problem to which an approximate result will suffice.: A non-computationally hard problem to which an approximate result will suffice.
         A non-computationally hard problem to which an exact result is necessary.: A non-computationally hard problem to which an exact result is necessary.
       CSPFinal_Question_16:
-        It displays the difference between a and b (<code>a - b</code>): It displays the difference between a and b (<code>a - b</code>)
         It displays the difference between a and b (a - b): It displays the difference between a and b (a - b)
-        It displays the product of a and b (<code>a * b</code>): It displays the product of a and b (<code>a * b</code>)
         It displays the product of a and b (a * b): It displays the product of a and b (a * b)
-        It displays the sum of a and b (<code>a + b</code>): It displays the sum of a and b (<code>a + b</code>)
         It displays the sum of a and b (a + b): It displays the sum of a and b (a + b)
         It runs in an infinite loop: It runs in an infinite loop
       CSPFinal_Question_17:
@@ -3101,8 +3063,6 @@ en:
         Multiband transformation: Multiband transformation
         ? The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
         : The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
-        description here: description here
-        title: title
       CSPFinal_Question_19:
         ? 'A certain cartoon image is known to have only 4 colors in it.  Currently the image is stored in full 24-bit RGB color and the total size of the file is quite large. The designer proposes reducing the number of bits the image by: Making a small table of the 4 colors and numbering them 0, 1, 2 and 3, which requires only 2 bits; then representing the image as a list of these smaller, 2-bit numbers.'
         : 'A certain cartoon image is known to have only 4 colors in it.  Currently the image is stored in full 24-bit RGB color and the total size of the file is quite large. The designer proposes reducing the number of bits the image by: Making a small table of the 4 colors and numbering them 0, 1, 2 and 3, which requires only 2 bits; then representing the image as a list of these smaller, 2-bit numbers.'
@@ -3110,8 +3070,6 @@ en:
         Lossless compression: Lossless compression
         Lossy compression: Lossy compression
         Steganography: Steganography
-        description here: description here
-        title: title
       CSPFinal_Question_2:
         High bandwidth, high latency: High bandwidth, high latency
         High bandwidth, low latency: High bandwidth, low latency
@@ -3124,8 +3082,6 @@ en:
         The total income from sales the bakery received in the past month.: The total income from sales the bakery received in the past month.
         Times of day when certain items sell the most.: Times of day when certain items sell the most.
         Which customer most frequently purchases bread.: Which customer most frequently purchases bread.
-        description here: description here
-        title: title
       CSPFinal_Question_21:
         ? A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
         : A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
@@ -3133,8 +3089,6 @@ en:
         Scalability of the system.: Scalability of the system.
         Structuring the metadata of the information for analysis.: Structuring the metadata of the information for analysis.
         The frequency of a particular item occurring in a data set.: The frequency of a particular item occurring in a data set.
-        description here: description here
-        title: title
       CSPFinal_Question_22:
         Computing the most frequently occurring values in the data set: Computing the most frequently occurring values in the data set
         Copying the data to a cloud server: Copying the data to a cloud server
@@ -3142,23 +3096,16 @@ en:
         Using data visualization tools: Using data visualization tools
         ? Which of the following methods is not a common technique to translate or transform large data sets to gain insight and knowledge?
         : Which of the following methods is not a common technique to translate or transform large data sets to gain insight and knowledge?
-        description here: description here
-        title: title
       CSPFinal_Question_23:
-        '': ''
-        Question: Question
         Which classes are assigning the most homework using the computers: Which classes are assigning the most homework using the computers
         Which of the following is MOST likely to be answerable using only the collected data set?: Which of the following is MOST likely to be answerable using only the collected data set?
         Which programs students are running on the lab computers: Which programs students are running on the lab computers
         Which students are visiting social media sites from school: Which students are visiting social media sites from school
         Which websites are most frequently visited before and after school hours from a school computer: Which websites are most frequently visited before and after school hours from a school computer
-        description here: description here
-        title: title
       CSPFinal_Question_24:
         Charging residential customers more for higher internet speeds: Charging residential customers more for higher internet speeds
         Giving traffic from specific companies or users higher priority in the network: Giving traffic from specific companies or users higher priority in the network
         Restricting Facebook at school: Restricting Facebook at school
-        Restricting facebook at school: Restricting facebook at school
         Routing large packets through different servers: Routing large packets through different servers
         ? The internet is comprised of a series of free and open protocols intended to promote wide scale use.  Which of the following is NOT an example of an open internet?
         : The internet is comprised of a series of free and open protocols intended to promote wide scale use.  Which of the following is NOT an example of an open internet?
@@ -3192,14 +3139,10 @@ en:
         The code will display the smallest of the three values: The code will display the smallest of the three values
         The code will not display anything due to an error: The code will not display anything due to an error
       CSPFinal_Question_3:
-        A: A
-        B: B
         Computer <code>A</code>: Computer <code>A</code>
         Computer <code>B</code>: Computer <code>B</code>
         Computer <code>D</code>: Computer <code>D</code>
         Computer <code>F</code>: Computer <code>F</code>
-        D: D
-        F: F
       CSPFinal_Question_30:
         "<pre>0 0</pre>": "<pre>0 0</pre>"
         "<pre>0 10</pre>": "<pre>0 10</pre>"
@@ -3226,7 +3169,6 @@ en:
         'The weight of <code>A-to-C</code> increases by 2 (total cost: 4)': 'The weight of <code>A-to-C</code> increases by 2 (total cost: 4)'
         'The weight of <code>A-to-C</code> increases by 3 (total cost: 5)': 'The weight of <code>A-to-C</code> increases by 3 (total cost: 5)'
         'The weight of <code>A-to-C</code> increases by 4 (total cost: 6)': 'The weight of <code>A-to-C</code> increases by 4 (total cost: 6)'
-        'The weight of <code>A-to-C</code> increases by 5 (total cost: 47)': 'The weight of <code>A-to-C</code> increases by 5 (total cost: 47)'
         'The weight of <code>A-to-C</code> increases by 5 (total cost: 7)': 'The weight of <code>A-to-C</code> increases by 5 (total cost: 7)'
       CSPFinal_Question_5:
         No, public key encryption allows the credit card information to be read by the public.: No, public key encryption allows the credit card information to be read by the public.
@@ -3244,19 +3186,10 @@ en:
         5 bits: 5 bits
         6 bits: 6 bits
       CSPFinal_Question_8:
-        "<code>DEC: 13    BIN: 1110  HEX: F</code>": "<code>DEC: 13    BIN: 1110  HEX: F</code>"
-        "<pre>BIN: 1110  DEC: 13    HEX: F</pre>": "<pre>BIN: 1110  DEC: 13    HEX: F</pre>"
-        'BIN: <b>1110</b>, DEC: <b>13</b>, HEX: <b>F</b>': 'BIN: <b>1110</b>, DEC: <b>13</b>, HEX: <b>F</b>'
-        'BIN: <strong>1110</strong>, DEC: <b>13</b>, HEX: <b>F</b>': 'BIN: <strong>1110</strong>, DEC: <b>13</b>, HEX: <b>F</b>'
         'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>': 'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>'
-        'DEC: 13    HEX: F     BIN: 1110': 'DEC: 13    HEX: F     BIN: 1110'
-        'DEC: <b>13</b>, BIN: <b>1110</b>, HEX: <b>F</b>': 'DEC: <b>13</b>, BIN: <b>1110</b>, HEX: <b>F</b>'
-        'DEC: <b>13</b>, HEX: <b>F</b>, BIN: <b>1110</b>': 'DEC: <b>13</b>, HEX: <b>F</b>, BIN: <b>1110</b>'
         'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>': 'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>'
         'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>': 'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>'
-        'HEX: <b>F</b> DEC: <b>13</b>, BIN: <b>1110</b>': 'HEX: <b>F</b> DEC: <b>13</b>, BIN: <b>1110</b>'
         'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>': 'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>'
-        'HEX: F     DEC: 13    BIN: 1110': 'HEX: F     DEC: 13    BIN: 1110'
       CSPFinal_Question_9:
         ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
         : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.

@@ -1,6 +1,6 @@
 var Radium = require('radium');
 var Visualization = require('./Visualization');
-var GameButtons = require('../templates/GameButtons');
+var GameButtons = require('../templates/GameButtons').default;
 var CompletionButton = require('./CompletionButton');
 var PlaySpaceHeader = require('./PlaySpaceHeader');
 var PhoneFrame = require('./PhoneFrame');
@@ -9,10 +9,21 @@ var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var applabConstants = require('./constants');
 var connect = require('react-redux').connect;
 var classNames = require('classnames');
+var experiments = require('../experiments');
 
 var styles = {
   nonResponsive: {
     maxWidth: applabConstants.APP_WIDTH,
+  },
+  completion: {
+    display: 'inline'
+  },
+  phoneFrameCompletion: {
+    display: 'block',
+    width: '100%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    textAlign: 'center'
   }
 };
 
@@ -30,6 +41,7 @@ var ApplabVisualizationColumn = React.createClass({
     isEmbedView: React.PropTypes.bool.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes.string.isRequired,
+    playspacePhoneFrame: React.PropTypes.bool,
 
     // non redux backed
     isEditingProject: React.PropTypes.bool.isRequired,
@@ -38,8 +50,21 @@ var ApplabVisualizationColumn = React.createClass({
   },
 
   render: function () {
-    var showFrame = !this.props.isShareView;
-
+    let visualization = <Visualization/>;
+    if (this.props.playspacePhoneFrame) {
+      // wrap our visualization in a phone frame
+      visualization = (
+        <PhoneFrame
+            isDark={this.props.isRunning}
+            showSelector={this.props.interfaceMode === applabConstants.ApplabInterfaceMode.DESIGN}
+            isPaused={this.props.isPaused}
+            screenIds={this.props.screenIds}
+            onScreenCreate={this.props.onScreenCreate}
+        >
+          {visualization}
+        </PhoneFrame>
+      );
+    }
     return (
       <div
           id="visualizationColumn"
@@ -53,17 +78,16 @@ var ApplabVisualizationColumn = React.createClass({
             screenIds={this.props.screenIds}
             onScreenCreate={this.props.onScreenCreate} />
         }
-        <PhoneFrame
-            showFrame={showFrame}
-            isDark={this.props.isRunning}
-            showSelector={this.props.interfaceMode === applabConstants.ApplabInterfaceMode.DESIGN}
-            screenIds={this.props.screenIds}
-            onScreenCreate={this.props.onScreenCreate}
-        >
-          <Visualization/>
-        </PhoneFrame>
-        <GameButtons instructionsInTopPane={this.props.instructionsInTopPane}>
-          <CompletionButton/>
+        {visualization}
+        <GameButtons>
+          {/* This div is used to control whether or not our finish button is centered*/}
+          <div style={[
+              styles.completion,
+              this.props.playspacePhoneFrame && styles.phoneFrameCompletion
+            ]}
+          >
+            <CompletionButton/>
+          </div>
         </GameButtons>
         <BelowVisualization instructionsInTopPane={this.props.instructionsInTopPane}/>
       </div>
@@ -79,6 +103,8 @@ module.exports = connect(function propsFromStore(state) {
     isShareView: state.pageConstants.isShareView,
     isEmbedView: state.pageConstants.isEmbedView,
     isRunning: state.runState.isRunning,
-    interfaceMode: state.interfaceMode
+    isPaused: state.runState.isDebuggerPaused,
+    interfaceMode: state.interfaceMode,
+    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
   };
 })(Radium(ApplabVisualizationColumn));
