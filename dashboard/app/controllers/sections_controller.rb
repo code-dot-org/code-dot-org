@@ -1,21 +1,17 @@
 class SectionsController < ApplicationController
-  def show
-    load_section
+  before_action :load_section
 
+  def show
     @secret_pictures = SecretPicture.all.shuffle
   end
 
   def log_in
-    load_section
-
-    # TODO: redirect to home page if you're already logged in
-
     if user = User.authenticate_with_section(section: @section, params: params)
       sign_in user, bypass: true
       user.update_tracked_fields!(request)
       redirect_to_section_script
     else
-      flash[:alert] = 'Invalid login, please try again'
+      flash[:alert] = I18n.t('signinsection.invalid_login')
       redirect_to section_path(id: @section.code)
     end
   end

@@ -139,6 +139,7 @@ en:
     picture: 'Now find your secret picture'
     words: 'Now enter your secret words'
     login: 'Sign in'
+    invalid_login: 'Invalid login, please try again'
   password:
     reset_form:
       title: 'Forgot your password?'
