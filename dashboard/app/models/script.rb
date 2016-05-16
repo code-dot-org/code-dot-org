@@ -314,7 +314,7 @@ class Script < ActiveRecord::Base
 
   def banner_image
     if has_banner?
-      "banner_#{name}_cropped.png"
+      "banner_#{name}.png"
     end
   end
 
