@@ -360,6 +360,7 @@ module.exports.categories = {
 };
 
 module.exports.additionalPredefValues = [
+  'Game',
   'P2D', 'WEBGL', 'ARROW', 'CROSS', 'HAND', 'MOVE',
   'TEXT', 'WAIT', 'HALF_PI', 'PI', 'QUARTER_PI', 'TAU', 'TWO_PI', 'DEGREES',
   'RADIANS', 'CORNER', 'CORNERS', 'RADIUS', 'RIGHT', 'LEFT', 'CENTER', 'TOP',
