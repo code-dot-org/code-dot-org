@@ -6,7 +6,7 @@ import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 var _ = require('../lodash');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 // TODO - everyone is connected
-var ConnectedStudioAppWrapper = require('./ConnectedStudioAppWrapper');
+var StudioAppWrapper = require('./StudioAppWrapper');
 var CodeWorkspaceContainer = require('./CodeWorkspaceContainer');
 
 /**
@@ -36,7 +36,7 @@ var AppView = React.createClass({
     });
 
     return (
-      <ConnectedStudioAppWrapper>
+      <StudioAppWrapper>
         <div id="visualizationColumn" className={visualizationColumnClassNames}>
           {this.props.visualizationColumn}
         </div>
@@ -47,7 +47,7 @@ var AppView = React.createClass({
             noVisualization={this.props.noVisualization}
             isRtl={this.props.isRtl}
         />
-      </ConnectedStudioAppWrapper>
+      </StudioAppWrapper>
     );
   }
 });
