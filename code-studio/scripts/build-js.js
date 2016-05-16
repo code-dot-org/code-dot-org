@@ -121,9 +121,9 @@ Promise.all([
       });
       */
 
-      this.on('changed', function (filepath) {
+      watcher.on('changed', function (filepath) {
         console.log(filepath + ' was changed, rebuilding CSS');
-        child_process.execSync('npm run build-css', {stdio:[0,1,2]});
+        child_process.execSync('npm run build-css', {stdio:'inherit'});
       });
     });
   } else if (!allStepsSucceeded) {
