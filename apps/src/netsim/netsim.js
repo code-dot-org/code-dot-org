@@ -251,13 +251,17 @@ NetSim.prototype.init = function (config) {
     this.runLoop_.begin();
   }.bind(this);
 
-  ReactDOM.render(React.createElement(NetSimView, {
-    assetUrl: this.studioApp_.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    generateCodeAppHtml: generateCodeAppHtmlFromEjs,
-    onMount: onMount
-  }), document.getElementById(config.containerId));
+  // Push initial level properties into the Redux store
+  this.studioApp_.setPageConstants(config);
+
+  ReactDOM.render(
+    <Provider store={this.studioApp_.reduxStore}>
+      <NetSimView
+          generateCodeAppHtml: generateCodeAppHtmlFromEjs,
+          onMount: onMount
+      />
+    </Provider>
+  ), document.getElementById(config.containerId));
 };
 
 /**
