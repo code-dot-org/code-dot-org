@@ -89,6 +89,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       :name,
       :email,
       :email_confirmation,
+      :school_type,
+      :school_state,
       :school_district_id,
       :school_zip,
       :school

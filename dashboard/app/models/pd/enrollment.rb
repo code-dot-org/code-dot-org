@@ -12,23 +12,29 @@
 #  school             :string(255)
 #  school_district_id :integer
 #  school_zip         :integer
+#  school_type        :string(255)
+#  school_state       :string(255)
 #
 # Indexes
 #
 #  index_pd_enrollments_on_pd_workshop_id      (pd_workshop_id)
 #  index_pd_enrollments_on_school_district_id  (school_district_id)
 #
+# Foreign Keys
+#
+#  fk_rails_be1a5b9dc6  (school_district_id => school_districts.id)
+#
 
 class Pd::Enrollment < ActiveRecord::Base
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
 
-  validates :name, :email, :school, presence: true
+  validates :name, :email, :school, :school_type, presence: true
   validates_confirmation_of :email
   validate :school_district_or_zip
 
   def school_district_or_zip
-    unless school_district_id || school_zip
-      errors.add(:school_district, "School district or school ZIP is required")
+    unless (school_district_id && school_state) || school_zip
+      errors.add(:school_district, "School district (and state) or school ZIP is required")
     end
   end
 
