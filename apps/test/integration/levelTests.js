@@ -52,7 +52,7 @@ var example = {
       // to use the xml from the level itself
       xml: '',
       // Prefix to add to the names of image and sound assets in applab instead of
-      // "/v3/assets/". Set this to "//localhost:8001/apps/test/assets/" and add
+      // "/v3/assets/". Set this to "//localhost:8001/apps/test/integration/assets/" and add
       // files to apps/test/assets if you need requests for assets to succeed.
       assetPathPrefix: '',
       customValidator: function (assert) {
