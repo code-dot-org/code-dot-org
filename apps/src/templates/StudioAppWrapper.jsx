@@ -7,7 +7,7 @@ var connect = require('react-redux').connect;
  * Wrapper component for all Code Studio app types, which provides rotate
  * container and clear-div but otherwise just renders children.
  */
-var StudioAppWrapper = React.createClass({
+var UnconnectedStudioAppWrapper = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
@@ -34,4 +34,6 @@ module.exports = connect(function propsFromStore(state) {
     isEmbedView: state.pageConstants.isEmbedView,
     isShareView: state.pageConstants.isShareView
   };
-})(StudioAppWrapper);
+})(UnconnectedStudioAppWrapper);
+
+module.exports.UnconnectedStudioAppWrapper = UnconnectedStudioAppWrapper;
