@@ -203,6 +203,12 @@ class ScriptLevelsController < ApplicationController
     # If there's only one level in this scriptlevel, use that
     return @script_level.levels[0] if @script_level.levels.length == 1
 
+    # For teachers, load the student's most recent attempt
+    if @user && current_user != @user
+      last_attempt = @user.last_attempt_for_any(@script_level.levels)
+      return last_attempt.level if last_attempt
+    end
+
     # If they've tried at least one variant before, use the most recently attempted
     # (unless overridden by a force_reload query string param)
     if current_user && !params[:force_reload]
