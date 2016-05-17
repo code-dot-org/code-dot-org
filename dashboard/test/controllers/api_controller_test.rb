@@ -317,6 +317,21 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal true, body['disablePostMilestone']
   end
 
+  test "should get user progress for stage with swapped level" do
+    sign_in @student_1
+    script = create :script
+    stage = create :stage, script: script
+    level1a = create :maze, name: 'maze 1'
+    level1b = create :maze, name: 'maze 1 new'
+    create :script_level, script: script, stage: stage, levels: [level1a, level1b], properties: "{'maze 1': {active: false}}"
+    create(:activity, user: @student_1, level: level1a,
+           level_source: create(:level_source, level: level1a, data: 'level source'))
+
+    get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1, level: level1a.id
+    body = JSON.parse(response.body)
+    assert_equal('level source', body['lastAttempt']['source'])
+  end
+
   test "should get progress for section with section script" do
     get :section_progress, section_id: @flappy_section.id
     assert_response :success

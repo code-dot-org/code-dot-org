@@ -3,12 +3,73 @@ layout: none
 theme: none
 content-type: text/ng-template
 ---
-%div
-  %div
-    %br/
-    %a{href: '/teacher-dashboard#/'}= I18n.t('dashboard_navigation_home_page')
-    %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
-    %b{style: "color: #ff8b02;"}= I18n.t('dashboard_navigation_lesson_plans_resources')
-    %br/
-  %div{:style=>"clear:both; margin-top: 16px"}
-  = view :teacher_notices
+#breadcrumb
+  %br/
+  %a{href: '/teacher-dashboard#/'}= I18n.t :dashboard_navigation_home_page
+  %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
+  %b{style: "color: #ff8b02;"}= I18n.t :dashboard_navigation_lesson_plans_resources
+
+#curriculum_resources
+  %h2= I18n.t :dashboard_curriculum_k5_title
+  
+  - %w(course1 course2 course3 course4).each do |course|
+    = view :course_curriculum, course: course
+
+  %p
+    %a{href: CDO.code_org_url('/curriculum/docs/k-5/complete.pdf'), target: '_blank'}
+      = I18n.t :dashboard_view_all_lesson_plans  
+
+  %p
+    = I18n.t :dashboard_unplugged, unplugged_url: CDO.code_org_url('/curriculum/unplugged')  
+
+  %h2= I18n.t :dashboard_curriculum_middle_title
+  %p
+    = I18n.t :dashboard_curriculum_csina
+    %a{href: CDO.code_org_url('/curriculum/algebra')}
+      = I18n.t :dashboard_curriculum
+    |
+    %a{href: CDO.code_org_url('/curriculum/docs/algebra/overview.pdf'), target: '_blank'}
+      = I18n.t :dashboard_overview
+    |
+    %a{href: CDO.code_org_url('/curriculum/docs/algebra/framework.pdf'), target: '_blank'}
+      = I18n.t :dashboard_framework
+    |
+    %a{href: CDO.code_org_url('/curriculum/docs/algebra/standards.pdf'), target: '_blank'}
+      = I18n.t :dashboard_standards
+
+  %p
+    = I18n.t :dashboard_curriculum_csins
+    %a{href: CDO.code_org_url('curriculum/science')}
+      = I18n.t :dashboard_curriculum
+
+  %h2= I18n.t :dashboard_curriculum_high_title
+  %p
+    = I18n.t :dashboard_curriculum_csp
+    %a{href: CDO.code_org_url('/educate/csp')}
+      = I18n.t :dashboard_curriculum
+
+  %p
+    = I18n.t :dashboard_curriculum_ecs
+    %a{href: "http://www.exploringcs.org/"}
+      = I18n.t :dashboard_curriculum
+
+  %h2= I18n.t :dashboard_landing_classroom_resources
+  %p
+    %a{href: CDO.code_org_url('/educate/inspire'), target: '_blank'}
+      = I18n.t :dashboard_landing_inspire
+  %p
+    %a{href: CDO.code_org_url('/educate/videos'), target: '_blank'}
+      = I18n.t :dashboard_landing_video_library
+  %p
+    %a{href: 'https://support.code.org/hc/en-us/requests/new', target: '_blank'}
+      = I18n.t :dashboard_landing_report_bug
+  %p
+    %a{href: 'http://forum.code.org/', target: '_blank'}
+      = I18n.t :dashboard_landing_teacher_forum
+
+  %br
+
+  #classroom
+    .section.section-light
+      %h2= I18n.t :dashboard_faq_k5
+      %iframe{:allowscriptaccess => "always", :allowFullScreen => "true", :frameborder => "0", :height => "500", :src => "https://www.youtube.com/embed/videoseries?list=PLzdnOPI1iJNdSi1R-QTs-iQ-HUURR5FsL", :title => "YouTube video player", :width => "100%"}
