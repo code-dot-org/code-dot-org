@@ -645,6 +645,66 @@ describe('generateDropletModeOptions', function () {
         "setAttribute": {
           "color": "#19C3E1",
           "title": "setAttribute"
+        },
+        pinMode: {color: '#4DD0E1', title: 'pinMode'},
+        digitalWrite: {color: '#4DD0E1', title: 'digitalWrite'},
+        digitalRead: {value: true, color: '#4DD0E1', title: 'digitalRead'},
+        analogWrite: {color: '#4DD0E1', title: 'analogWrite'},
+        analogRead: {value: true, color: '#4DD0E1', title: 'analogRead'},
+        led: {property: true, value: true, color: '#D3E965', title: 'led'},
+        'led.on': {color: '#D3E965', title: 'led.on'},
+        'led.off': {color: '#D3E965', title: 'led.off'},
+        'led.toggle': {color: '#D3E965', title: 'led.toggle'},
+        'led.blink': {color: '#D3E965', title: 'led.blink'},
+        'led.stop': {color: '#D3E965', title: 'led.stop'},
+        on: {color: '#D3E965', title: 'on'},
+        off: {color: '#D3E965', title: 'off'},
+        toggle: {color: '#D3E965', title: 'toggle'},
+        blink: {color: '#D3E965', title: 'blink'},
+        stop: {color: '#D3E965', title: 'stop'},
+        intensity: {color: '#D3E965', title: 'intensity'},
+        color: {color: '#D3E965', title: 'color'},
+        pixels: {
+          property: true,
+          value: true,
+          color: '#D3E965',
+          title: 'pixels'
+        },
+        'pixels.on': {color: '#D3E965', title: 'pixels.on'},
+        'pixels.off': {color: '#D3E965', title: 'pixels.off'},
+        'pixels.toggle': {color: '#D3E965', title: 'pixels.toggle'},
+        'pixels.blink': {color: '#D3E965', title: 'pixels.blink'},
+        'pixels.stop': {color: '#D3E965', title: 'pixels.stop'},
+        'pixels.intensity': {color: '#D3E965', title: 'pixels.intensity'},
+        'pixels.color': {color: '#D3E965', title: 'pixels.color'},
+        piezo: {property: true, value: true, color: '#D3E965', title: 'piezo'},
+        'piezo.frequency': {color: '#D3E965', title: 'piezo.frequency'},
+        'piezo.note': {color: '#D3E965', title: 'piezo.note'},
+        'piezo.stop': {color: '#D3E965', title: 'piezo.stop'},
+        'piezo.play': {color: '#D3E965', title: 'piezo.play'},
+        isPressed: {
+          property: true,
+          value: true,
+          color: '#D3E965',
+          title: 'isPressed'
+        },
+        holdtime: {
+          property: true,
+          value: true,
+          color: '#D3E965',
+          title: 'holdtime'
+        },
+        toggleSwitch: {
+          property: true,
+          value: true,
+          color: '#D3E965',
+          title: 'toggleSwitch'
+        },
+        'toggleSwitch.isOpen': {
+          property: true,
+          value: true,
+          color: '#D3E965',
+          title: 'toggleSwitch.isOpen'
         }
       },
       "categories": {
@@ -842,6 +902,16 @@ describe('mergeCategoriesWithConfig', function () {
         "color": "blue",
         "rgb": "#19C3E1",
         "blocks": []
+      },
+      "Maker Lab": {
+        "blocks": [],
+        "color": "cyan",
+        "rgb": "#4DD0E1"
+      },
+      "Circuit": {
+        "blocks": [],
+        "color": "lightgreen",
+        "rgb": "#D3E965"
       },
       "Control": {
         "id": "control",
