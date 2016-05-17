@@ -51,6 +51,9 @@ exec(command, function (err, stdout, stderr) {
   var globs = ['./test/integration/*.js'];
 
   if (process.env.mocha_entry) {
+    if (!/^\./.test(process.env.mocha_entry)) {
+      process.env.mocha_entry = './' + process.env.mocha_entry;
+    }
     globs = [process.env.mocha_entry];
     console.log('restricting to entries: ' + globs);
   }
