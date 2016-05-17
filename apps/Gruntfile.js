@@ -332,7 +332,7 @@ module.exports = function (grunt) {
     browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
     convertScssVars: './script/convert-scss-variables.js',
     integrationTest: 'node test/util/runIntegrationTests.js --color' + (fastMochaTest ? ' --fast' : ''),
-    mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : ''),
+    mochaTest: 'node test/util/runTests.js --color',
     applabapi: 'echo "' + applabAPIExec + '" && ' + applabAPIExec,
   };
 
