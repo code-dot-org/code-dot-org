@@ -460,6 +460,7 @@
   dashboard_landing_new_beta: "New! Try our beta courses for K-5 students."
   dashboard_landing_new_k5courses: "New! Try our courses for K-5 students."
   dashboard_landing_useful_links: "Other useful links"
+  dashboard_landing_classroom_resources: "Resources for your classroom"
   dashboard_landing_office_hours: "Ask a question in person! Visit our monthly video office hours."
   dashboard_landing_print_certificates: "Print certificates for students who finish this course"
   dashboard_landing_educator_blog: "Read about news and updates to our materials at our Educator Blog"
@@ -473,6 +474,10 @@
   dashboard_landing_available_courses: "Here are the courses currently available for you and your students."
   dashboard_landing_more_tutorials: "Want to see even more tutorials?"
   dashboard_landing_more_tutorials_desc: "There are more tutorials <a href=\"/learn/beyond\">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!"
+  dashboard_landing_inspire: "Inspire your students with posters, videos, and more."
+  dashboard_landing_video_library: "Use a video from the Video Library of computer science concepts."
+  dashboard_landing_report_bug: "Request a feature or report a bug."
+  dashboard_landing_teacher_forum: "Join the professional learning community."
   dashboard_hoc_courses: "The Hour of Code for All Ages"
   dashboard_hoc_courses_desc: "Try any of these shorter 1 hour tutorials with your students!"
   dashboard_hoc_courses_desc_and_cta: "Try these short, one-hour tutorials with your students. <a href=\"https://hourofcode.com\">Join the Hour of Code movement</a> during Computer Science Education Week."
@@ -602,11 +607,12 @@
   dashboard_curriculum_middle_title: "Middle School Educator Resources"
   dashboard_curriculum_high_title: "High School Educator Resources"
   dashboard_lesson_plans: "Lesson Plans"
-  dashboard_view_all_lesson_plans: "Download complete curriculum for Courses 1-3"
+  dashboard_view_all_lesson_plans: "Download complete curriculum for Courses 1-4"
   dashboard_course1: 'Course 1:'
   dashboard_course2: 'Course 2:'
   dashboard_course3: 'Course 3:'
-  dashboard_course4: 'Course 4 (beta): '
+  dashboard_course4: 'Course 4: '
+  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: "Curriculum"
   dashboard_curriculum_overview: "K-5 Curriculum Overview"
   dashboard_overview: "Overview"

@@ -774,7 +774,7 @@
   dashboard_curriculum_middle_title: Middle School Educator Resources
   dashboard_curriculum_high_title: High School Educator Resources
   dashboard_lesson_plans: Lesson Plans
-  dashboard_view_all_lesson_plans: View all lesson plans
+  dashboard_view_all_lesson_plans: Download complete curriculum for Courses 1-3
   dashboard_course1: 'Course 1:'
   dashboard_course2: 'Course 2:'
   dashboard_course3: 'Course 3:'
@@ -1683,3 +1683,11 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
+  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
