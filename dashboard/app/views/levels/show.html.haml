@@ -34,7 +34,7 @@
     = render partial: 'levels/widget'
   - else
     = render partial: "levels/#{@level.class.to_s.underscore}"
-  - unless @level.is_a?(StandaloneVideo) || @level.is_a?(ExternalLink)
+  - unless @level.is_a?(StandaloneVideo)
     = render partial: 'levels/reference_area'
 - else
   = render partial: 'levels/blockly'
