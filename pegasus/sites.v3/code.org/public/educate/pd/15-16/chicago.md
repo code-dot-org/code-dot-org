@@ -99,7 +99,11 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
-Milestone complete!
+In person workshop complete!
+
+Deadline for Online Coursework is June 30th.
+
+Phase 3 Part 3: Refection - This final online course will launch in early May on your Code Studio Teacher Dashboard. If you need support while finishing your work or teaching the course, check out the CS in Algebra forum here.
 
 
 [**Back to the top**](#top)

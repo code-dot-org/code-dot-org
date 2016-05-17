@@ -564,6 +564,7 @@ ActiveRecord::Schema.define(version: 20160517131521) do
   add_index "puzzle_ratings", ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
 
   create_table "script_levels", force: :cascade do |t|
+    t.integer  "level_id",   limit: 4
     t.integer  "script_id",  limit: 4,     null: false
     t.integer  "chapter",    limit: 4
     t.datetime "created_at"
@@ -571,7 +572,6 @@ ActiveRecord::Schema.define(version: 20160517131521) do
     t.integer  "stage_id",   limit: 4
     t.integer  "position",   limit: 4
     t.boolean  "assessment"
-    t.integer  "level_id",   limit: 4
     t.text     "properties", limit: 65535
   end
 
