@@ -1,16 +1,17 @@
 class ExternalLink < Level
-  def disclaimer
-    'Danger! Danger Will Robinson!'
-  end
-
   serialized_attrs %w(
     link_title
-    markdown_instructions
     url
   )
 
   def icon
     'fa-globe'
+  end
+
+  before_validation do
+    unless url.start_with? 'http://'
+      url.prepend 'http://'
+    end
   end
 
   def self.create_from_level_builder(params, level_params)
