@@ -109,6 +109,9 @@ Blockly.BlockSvgUnused.prototype.bindClickEvent = function () {
     return;
   }
   this.isbound_ = true;
+
+  // We bind to mousedown rather than click so we can interrupt the drag
+  // that would otherwise be initiated.
   Blockly.bindEvent_(this.frameHelp_, 'mousedown', this, function (e) {
     if (Blockly.isRightButton(e)) {
       // Right-click.
