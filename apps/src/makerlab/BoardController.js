@@ -6,7 +6,7 @@
 var five = require('johnny-five');
 var ChromeSerialPort = require('chrome-serialport');
 var PlaygroundIO = require('playground-io');
-require("babelify/polyfill"); // required for Promises in IE / Phantom
+require("babel-polyfill"); // required for Promises in IE / Phantom
 
 /** @const {string} */
 var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
