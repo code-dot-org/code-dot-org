@@ -6,12 +6,7 @@ import classNames from 'classnames';
 import {connect} from 'react-redux';
 var _ = require('../lodash');
 var AnimationTab = require('./AnimationTab/AnimationTab');
-<<<<<<< HEAD
-var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper');
-=======
-var connect = require('react-redux').connect;
 var StudioAppWrapper = require('../templates/StudioAppWrapper');
->>>>>>> just use (connected) StudioAppWrapper
 var ErrorDialogStack = require('./ErrorDialogStack');
 var gameLabConstants = require('./constants');
 var GameLabVisualizationHeader = require('./GameLabVisualizationHeader');
