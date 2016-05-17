@@ -15,7 +15,6 @@ var MusicController = require('../MusicController');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
-var setPageConstants = require('../redux/pageConstants').setPageConstants;
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -307,22 +306,13 @@ Craft.init = function (config) {
   };
 
   // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setPageConstants({
-    localeDirection: studioApp.localeDirection(),
-    isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isDroplet: !!config.level.editCode,
+  studioApp.setPageConstants(config, {
     isMinecraft: true
-  }));
+  });
 
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          assetUrl={studioApp.assetUrl}
-          isEmbedView={!!config.embed}
-          isShareView={!!config.share}
-          hideSource={!!config.hideSource}
-          noVisualization={false}
-          isRtl={studioApp.isRtl()}
           visualizationColumn={<CraftVisualizationColumn/>}
           onMount={onMount}
       />

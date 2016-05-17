@@ -256,6 +256,11 @@ When /^I click selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
 end
 
+When /^I click selector "([^"]*)" within element "([^"]*)"$/ do |jquery_selector, parent_selector|
+  # normal a href links can only be clicked this way
+  @browser.execute_script("$(\"#{jquery_selector}\", $(\"#{parent_selector}\").contents())[0].click();")
+end
+
 When /^I focus selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\")[0].focus();")
 end
@@ -751,6 +756,10 @@ end
 
 Then /^I navigate to the last shared URL$/ do
   @browser.navigate.to last_shared_url
+end
+
+Then /^I copy the embed code into a new document$/ do
+  @browser.execute_script("document.body.innerHTML = $('#project-share textarea').text();")
 end
 
 Then /^I append "([^"]*)" to the URL$/ do |append|

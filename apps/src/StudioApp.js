@@ -29,6 +29,7 @@ var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
 var experiments = require('./experiments');
+import { setPageConstants } from './redux/pageConstants';
 
 var redux = require('./redux');
 var runState = require('./redux/runState');
@@ -294,6 +295,18 @@ StudioApp.prototype.localeIsEnglish = function () {
 };
 
 /**
+ * Given the studio app config object, show shared app warnings.
+ */
+function showWarnings(config) {
+  shareWarnings.checkSharedAppWarnings({
+    channelId: config.channel,
+    isSignedIn: config.isSignedIn,
+    hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
+    onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
+  });
+}
+
+/**
  * Common startup tasks for all apps. Happens after configure.
  * @param {AppOptionsConfig}
  */
@@ -341,7 +354,7 @@ StudioApp.prototype.init = function (config) {
       twitter: config.twitter,
       app: config.app,
       noHowItWorks: config.noHowItWorks,
-      isLegacyShare: config.isLegacyShare
+      isLegacyShare: config.isLegacyShare,
     });
   }
 
@@ -478,13 +491,17 @@ StudioApp.prototype.init = function (config) {
 
   this.alertIfAbusiveProject('#codeWorkspace');
 
+  // make sure startIFrameEmbeddedApp has access to the config object
+  // so it can decide whether or not to show a warning.
+  this.startIFrameEmbeddedApp = this.startIFrameEmbeddedApp.bind(this, config);
+
   if (this.share && config.shareWarningInfo) {
-    shareWarnings.checkSharedAppWarnings({
-      channelId: config.channel,
-      isSignedIn: config.isSignedIn,
-      hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
-      onWarningsComplete: config.shareWarningInfo.onWarningsComplete
-    });
+    if (!config.level.iframeEmbed) {
+      // shared apps that are embedded in an iframe handle warnings in
+      // startIFrameEmbeddedApp since they don't become "active" until the user
+      // clicks on them.
+      showWarnings(config);
+    }
   }
 
   if (!!config.level.projectTemplateLevelName) {
@@ -576,6 +593,14 @@ StudioApp.prototype.init = function (config) {
 
   if (config.isLegacyShare && config.hideSource) {
     this.setupLegacyShareView();
+  }
+};
+
+StudioApp.prototype.startIFrameEmbeddedApp = function (config) {
+  if (this.share && config.shareWarningInfo) {
+    showWarnings(config);
+  } else {
+    this.runButtonClick();
   }
 };
 
@@ -1809,9 +1834,8 @@ StudioApp.prototype.configureDom = function (config) {
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
-  var visualization = document.getElementById('visualization');
 
-  if (!config.hideSource || config.embed) {
+  if (!config.hideSource || config.embed || config.level.iframeEmbed) {
     var vizHeight = this.MIN_WORKSPACE_HEIGHT;
     if (this.isUsingBlockly() && config.level.edit_blocks) {
       // Set a class on the main blockly div so CSS can style blocks differently
@@ -1828,7 +1852,7 @@ StudioApp.prototype.configureDom = function (config) {
       config.level.disableVariableEditing = false;
     }
 
-    if (config.iframeEmbed) {
+    if (config.level.iframeEmbed) {
       document.body.className += ' embedded_iframe';
     }
 
@@ -1861,16 +1885,13 @@ StudioApp.prototype.configureDom = function (config) {
   }
 
   var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
-  if (config.noPadding && smallFooter) {
-    // The small footer's padding should not increase its size when not part
-    // of a larger page.
-    smallFooter.style.boxSizing = "border-box";
-  }
-  if (!config.embed && !config.hideSource) {
-    // Make the visualization responsive to screen size, except on share page.
-    visualization.className += " responsive";
-    visualizationColumn.className += " responsive";
-    if (smallFooter) {
+  if (smallFooter) {
+    if (config.noPadding) {
+      // The small footer's padding should not increase its size when not part
+      // of a larger page.
+      smallFooter.style.boxSizing = "border-box";
+    }
+    if (!config.embed && !config.hideSource) {
       smallFooter.className += " responsive";
     }
   }
@@ -1893,6 +1914,11 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   if (this.share) {
     if (options.isLegacyShare || this.wireframeShare) {
       document.body.style.backgroundColor = '#202B34';
+      if (options.level.iframeEmbed) {
+        // so help me god.
+        document.body.style.backgroundColor = "transparent";
+      }
+
 
       $('.header-wrapper').hide();
       var vizColumn = document.getElementById('visualizationColumn');
@@ -1901,9 +1927,9 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       } else {
         $(vizColumn).addClass('wireframeShare');
 
-        var div = document.createElement('div');
-        document.body.appendChild(div);
-        if (!options.iframeEmbed) {
+        if (!options.level.iframeEmbed) {
+          var div = document.createElement('div');
+          document.body.appendChild(div);
           ReactDOM.render(React.createElement(WireframeSendToPhone, {
             channelId: dashboard.project.getCurrentId(),
             appType: dashboard.project.getStandaloneApp()
@@ -2683,4 +2709,30 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
   } else {
     return code;
   }
+};
+
+/**
+ * Sets a bunch of common page constants used by all of our apps in our redux
+ * store based on our app options config.
+ * @param {AppOptionsConfig}
+ * @param {object} appSpecificConstants - Optional additional constants that
+ *   are app specific.
+ */
+StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
+  const level = config.level;
+  const combined = Object.assign({
+    localeDirection: this.localeDirection(),
+    assetUrl: this.assetUrl,
+    isReadOnlyWorkspace: !!config.readonlyWorkspace,
+    isDroplet: !!level.editCode,
+    hideSource: !!config.hideSource,
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    instructionsMarkdown: level.markdownInstructions,
+    instructionsInTopPane: config.showInstructionsInTopPane,
+    puzzleNumber: level.puzzle_number,
+    stageTotal: level.stage_total
+  }, appSpecificConstants);
+
+  this.reduxStore.dispatch(setPageConstants(combined));
 };

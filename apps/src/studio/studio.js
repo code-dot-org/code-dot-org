@@ -19,7 +19,6 @@ var blocks = require('./blocks');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var StudioVisualizationColumn = require('./StudioVisualizationColumn');
-var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Sprite = require('./Sprite');
@@ -2001,12 +2000,7 @@ Studio.init = function (config) {
     }
   };
 
-  // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setPageConstants({
-    localeDirection: studioApp.localeDirection(),
-    isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isDroplet: !!level.editCode
-  }));
+  studioApp.setPageConstants(config);
 
   var visualizationColumn = <StudioVisualizationColumn
     finishButton={!level.isProjectLevel}
@@ -2015,12 +2009,6 @@ Studio.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          assetUrl={studioApp.assetUrl}
-          isEmbedView={!!config.embed}
-          isShareView={!!config.share}
-          hideSource={!!config.hideSource}
-          noVisualization={false}
-          isRtl={studioApp.isRtl()}
           visualizationColumn={visualizationColumn}
           onMount={onMount}
       />

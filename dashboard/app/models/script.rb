@@ -260,19 +260,19 @@ class Script < ActiveRecord::Base
   end
 
   def twenty_hour?
-    ScriptConstants.twenty_hour?(self.name)
+    ScriptConstants.script_in_category?(:twenty_hour, self.name)
   end
 
   def hoc?
-    ScriptConstants.hoc?(self.name)
+    ScriptConstants.script_in_category?(:hoc, self.name)
   end
 
   def flappy?
-    ScriptConstants.flappy?(self.name)
+    ScriptConstants.script_in_category?(:flappy, self.name)
   end
 
   def minecraft?
-    ScriptConstants.minecraft?(self.name)
+    ScriptConstants.script_in_category?(:minecraft, self.name)
   end
 
   def find_script_level(level_id)
@@ -314,7 +314,7 @@ class Script < ActiveRecord::Base
 
   def banner_image
     if has_banner?
-      "banner_#{name}_cropped.png"
+      "banner_#{name}.png"
     end
   end
 
@@ -339,7 +339,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_banner?
-    k5_course? || %w(cspunit1 cspunit2 cspunit3).include?(self.name)
+    k5_course? || %w(csp1 csp2 cspunit1 cspunit2 cspunit3).include?(self.name)
   end
 
   def freeplay_links
