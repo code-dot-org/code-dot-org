@@ -29,6 +29,7 @@ var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
 var experiments = require('./experiments');
+import { setPageConstants } from './redux/pageConstants';
 
 var redux = require('./redux');
 var runState = require('./redux/runState');
@@ -2708,4 +2709,30 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
   } else {
     return code;
   }
+};
+
+/**
+ * Sets a bunch of common page constants used by all of our apps in our redux
+ * store based on our app options config.
+ * @param {AppOptionsConfig}
+ * @param {object} appSpecificConstants - Optional additional constants that
+ *   are app specific.
+ */
+StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
+  const level = config.level;
+  const combined = Object.assign({
+    localeDirection: this.localeDirection(),
+    assetUrl: this.assetUrl,
+    isReadOnlyWorkspace: !!config.readonlyWorkspace,
+    isDroplet: !!level.editCode,
+    hideSource: !!config.hideSource,
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    instructionsMarkdown: level.markdownInstructions,
+    instructionsInTopPane: config.showInstructionsInTopPane,
+    puzzleNumber: level.puzzle_number,
+    stageTotal: level.stage_total
+  }, appSpecificConstants);
+
+  this.reduxStore.dispatch(setPageConstants(combined));
 };
