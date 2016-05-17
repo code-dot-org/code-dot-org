@@ -1,6 +1,6 @@
 'use strict';
-import {assert} from '../util/configuredChai';
-var testUtils = require('../util/testUtils');
+import {assert} from '../../util/configuredChai';
+var testUtils = require('../../util/testUtils');
 testUtils.setupLocales();
 testUtils.setExternalGlobals();
 var CompletionButton = require('@cdo/apps/applab/CompletionButton').__TestInterface__.UnconnectedCompletionButton;

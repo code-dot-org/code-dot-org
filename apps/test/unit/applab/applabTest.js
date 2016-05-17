@@ -1,5 +1,5 @@
-import {assert} from '../util/configuredChai';
-var testUtils = require('../util/testUtils');
+import {assert} from '../../util/configuredChai';
+var testUtils = require('../../util/testUtils');
 testUtils.setupLocales('applab');
 testUtils.setExternalGlobals();
 
