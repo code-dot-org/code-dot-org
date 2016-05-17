@@ -1788,7 +1788,7 @@ en:
           Animation: Animation
           Draw Loop and Random: Draw Loop and Random
           Variables: Variables
-          " Sprite Properties and Mod": " Sprite Properties and Mod"
+          "Sprite Properties and Mod": "Sprite Properties and Mod"
           Expressions and Reassignment: Expressions and Reassignment
           Sprites and Properties: Sprites and Properties
           Counting with Variables: Counting with Variables
@@ -1873,6 +1873,11 @@ en:
           Supporting Peer Learning: Supporting Peer Learning
           Running a Constructive Classroom: Running a Constructive Classroom
           Strategies for Student Writing: Strategies for Student Writing
+          Intro to the Unit: Intro to the Unit
+          Chapter Overviews: Chapter Overviews
+          'Tool Talk: Intro to Netsim': 'Tool Talk: Intro to Netsim'
+          Sending Binary Messages: Sending Binary Messages
+          Encoding and Sending Numbers: Encoding and Sending Numbers
         test-teaching-ap-cs-unit-1:
           test Unit 1 required reading: test Unit 1 required reading
           test Unit 1 content module Alpha: test Unit 1 content module Alpha
@@ -1916,3 +1921,8 @@ en:
           Introduction to Text Compression: Introduction to Text Compression
           Turtle Programming: Turtle Programming
           Introduction to Events: Introduction to Events
+        cspassessment:
+          title: CS Principles Culminating Assessment
+          description_short: Culminating
+          description: 'This 55-question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact. '
+          CS Principles Culminating Assessment: CS Principles Culminating Assessment

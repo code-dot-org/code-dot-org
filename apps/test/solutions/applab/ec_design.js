@@ -391,9 +391,7 @@ module.exports = {
         assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible after resetting');
         assert.equal($('#screenSelector:disabled').length, 0, 'screen select enabled after');
 
-        testUtils.runOnAppTick(Applab, 2, function () {
-          Applab.onPuzzleComplete();
-        });
+        Applab.onPuzzleComplete();
       },
       expected: {
         result: true,

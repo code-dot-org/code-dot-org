@@ -51,7 +51,13 @@ module.exports = function (callback) {
       appOptions.disableSocialShare = true;
     }
 
-    $.ajax('/api/user_progress/' + appOptions.scriptName + '/' + appOptions.stagePosition + '/' + appOptions.levelPosition).done(function (data) {
+    $.ajax(
+        `/api/user_progress` +
+        `/${appOptions.scriptName}` +
+        `/${appOptions.stagePosition}` +
+        `/${appOptions.levelPosition}` +
+        `/${appOptions.serverLevelId}`
+    ).done(function (data) {
       appOptions.disableSocialShare = data.disableSocialShare;
 
       // Merge progress from server (loaded via AJAX)

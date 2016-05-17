@@ -1,22 +1,22 @@
 /** Body of the animation picker dialog */
 'use strict';
 
-var AnimationPickerListItem = require('./AnimationPickerListItem.jsx');
-var AnimationPickerSearchBar = require('./AnimationPickerSearchBar.jsx');
-var gamelabMsg = require('../locale');
-var Radium = require('radium');
-var ScrollableList = require('../AnimationTab/ScrollableList.jsx');
-var styles = require('./styles');
+import Radium from 'radium';
+import gamelabMsg from '../locale';
 import animationLibrary from '../animationLibrary';
 import { getLabel } from '../animationMetadata';
+import ScrollableList from '../AnimationTab/ScrollableList.jsx';
+import styles from './styles';
+import AnimationPickerListItem from './AnimationPickerListItem.jsx';
+import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
 
-var AnimationPickerBody = React.createClass({
+const AnimationPickerBody = React.createClass({
   propTypes: {
     onPickLibraryAnimation: React.PropTypes.func.isRequired,
     onUploadClick: React.PropTypes.func.isRequired
   },
 
-  render: function () {
+  render() {
     return (
       <div>
         <h1 style={styles.title}>
@@ -46,4 +46,4 @@ var AnimationPickerBody = React.createClass({
     );
   }
 });
-module.exports = Radium(AnimationPickerBody);
+export default Radium(AnimationPickerBody);

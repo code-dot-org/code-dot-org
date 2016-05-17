@@ -29,7 +29,7 @@ class Level < ActiveRecord::Base
   belongs_to :solution_level_source, :class_name => "LevelSource" # TODO: Do we even use this?
   belongs_to :ideal_level_source, :class_name => "LevelSource" # "see the solution" link uses this
   belongs_to :user
-  has_one :level_concept_difficulty
+  has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
   has_many :hint_view_requests
 
@@ -292,6 +292,10 @@ class Level < ActiveRecord::Base
 
   def self.cache_find(id)
     Script.cache_find_level(id)
+  end
+
+  def icon
+    'fa-puzzle-piece'
   end
 
   private

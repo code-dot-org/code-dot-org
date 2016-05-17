@@ -10,7 +10,7 @@ theme: none
 
 [together]
 
-## K-1 Lesson Overview 
+## Lesson Overview 
 In this first online activity students will become familiar with basic mouse use and the block-based programming interface they will be using throughout the course. Students will begin by simply dragging images on screen and then progress to dragging puzzle pieces into the proper order.
 
 [summary]

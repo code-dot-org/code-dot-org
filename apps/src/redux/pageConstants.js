@@ -8,6 +8,7 @@ var ALLOWED_KEYS = utils.makeEnum(
   'channelId',
   'isDesignModeHidden',
   'isEmbedView',
+  'isIframeEmbed',
   'isReadOnlyWorkspace',
   'isShareView',
   'isProjectLevel',
@@ -30,18 +31,19 @@ var ALLOWED_KEYS = utils.makeEnum(
   'playspacePhoneFrame'
 );
 
-var levelInitialState = {
-  assetUrl: function () {}
+const initialState = {
+  assertUrl() {
+  }
 };
 
-module.exports.default = function reducer(state, action) {
-  state = state || levelInitialState;
-
+module.exports.default = function reducer(state = initialState, action) {
   if (action.type === SET_PAGE_CONSTANTS) {
     Object.keys(action.props).forEach(function (key) {
       if (ALLOWED_KEYS[key] === undefined) {
-        throw new Error('Property "' + key + '" may not be set using the ' +
-            action.type + ' action.');
+        throw new Error(`Property "${key}" may not be set using the ${action.type} action.`);
+      }
+      if (state[key] !== initialState[key] && state[key] !== action.props[key]) {
+        throw new Error(`Can't change value of key "${key}".`);
       }
     });
     return _.assign({}, state, action.props);

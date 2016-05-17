@@ -114,14 +114,14 @@ class HomeControllerTest < ActionController::TestCase
     sign_in create(:user)
 
     get :index
-    assert_select 'a[href="/admin/stats"]', 0
+    assert_select 'a[href="/admin"]', 0
   end
 
   test "do show admin links when admin" do
     sign_in create(:admin)
 
     get :index
-    assert_select 'a[href="/admin/stats"]'
+    assert_select 'a[href="/admin"]'
   end
 
   test 'logged in user without primary course does not see resume info' do

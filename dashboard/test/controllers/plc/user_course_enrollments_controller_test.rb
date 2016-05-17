@@ -17,24 +17,41 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
   end
 
   test 'invalid email address' do
-    post :create, user_email: 'invalid', plc_course_id: @plc_course.id
-    assert_redirected_to new_plc_user_course_enrollment_path
+    post :create, user_emails: 'invalid', plc_course_id: @plc_course.id
+    assert_redirected_to action: :new, notice: 'Unknown users invalid'
+
+    post :create, user_emails: "invalid\r\n#{@user.email}"
+    assert_redirected_to action: :new, notice: 'Unknown users invalid'
+  end
+
+  test 'validation failed' do
+    assert_raise do
+      post :create, user_emails: @user.email, plc_course_id: nil
+    end
   end
 
   test "should create plc_user_course_enrollment" do
     @user_course_enrollment.destroy
 
     assert_creates(Plc::UserCourseEnrollment) do
-      post :create, user_email: @user.email, plc_course_id: @plc_course.id
+      post :create, user_emails: @user.email, plc_course_id: @plc_course.id
     end
 
-    assert_redirected_to plc_user_course_enrollments_path
+    assert_redirected_to action: :new, notice: "Enrollments created for #{@user.email}"
+
+    user2 = create :teacher
+    user3 = create :teacher
+
+    post :create, user_emails: "#{user2.email}\r\n#{user3.email}", plc_course_id: @plc_course.id
+    assert_redirected_to action: :new, notice: "Enrollments created for #{user2.email}, #{user3.email}"
+    assert_equal 1, Plc::UserCourseEnrollment.where(user: user2, plc_course: @plc_course).count
+    assert_equal 1, Plc::UserCourseEnrollment.where(user: user3, plc_course: @plc_course).count
 
     assert_no_difference('Plc::UserCourseEnrollment.count') do
-      post :create, user_email: @user.email, plc_course_id: @plc_course.id
+      post :create, user_emails: @user.email, plc_course_id: @plc_course.id
     end
 
-    assert_redirected_to plc_user_course_enrollments_path
+    assert_redirected_to action: :new, notice: "Enrollments created for #{@user.email}"
   end
 
   test 'Enrollment is viewable in all possible enrollment states' do
