@@ -210,6 +210,7 @@ GameLab.prototype.init = function (config) {
 
   this.studioApp_.reduxStore.dispatch(setPageConstants({
     assetUrl: this.studioApp_.assetUrl,
+    hideSource: !!config.hideSource,
     isEmbedView: !!config.embed,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isShareView: !!config.share,
@@ -229,12 +230,14 @@ GameLab.prototype.init = function (config) {
     this.studioApp_.reduxStore.dispatch(actions.setInitialAnimationMetadata(config.initialAnimationMetadata));
   }
 
-  ReactDOM.render(<Provider store={this.studioApp_.reduxStore}>
-    <GameLabView
-      showFinishButton={finishButtonFirstLine && showFinishButton}
-      hideSource={!!config.hideSource}
-      onMount={onMount} />
-  </Provider>, document.getElementById(config.containerId));
+  ReactDOM.render((
+    <Provider store={this.studioApp_.reduxStore}>
+      <GameLabView
+          showFinishButton={finishButtonFirstLine && showFinishButton}
+          onMount={onMount}
+      />
+    </Provider>
+  ), document.getElementById(config.containerId));
 };
 
 /**
