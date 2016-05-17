@@ -4,6 +4,7 @@ isLoggedIn() { auth.uid !== null }
 
 // general helpers
 
+orZero(value) { valueOr(value, 0) }
 valueOr(value, defaultValue) { value == null ? defaultValue : value }
 isUnchanged(value) { value == prior(value) }
 isIncremented(value) { value > prior(value) }
@@ -12,7 +13,14 @@ isNotRemoved(value) { value != null || prior(value) == null }
 // Row count helpers
 
 getRecordAsInt(record) { record == null ? 0 : 1 }
-rowCount(record) { valueOr(record.parent().row_count, 0) }
+sumRowCounts(rowCount) { 
+  orZero(rowCount['0']) + orZero(rowCount['1']) + 
+  orZero(rowCount['2']) + orZero(rowCount['3']) + 
+  orZero(rowCount['4']) + orZero(rowCount['5']) + 
+  orZero(rowCount['6']) + orZero(rowCount['7']) + 
+  orZero(rowCount['8']) + orZero(rowCount['9']) 
+}
+rowCount(record) { sumRowCounts(record.parent().row_count) }
 rowCountUpdated(nextRecord, prevRecord) { getRecordAsInt(nextRecord) - getRecordAsInt(prevRecord) == rowCount(nextRecord) - rowCount(prevRecord) }
 
 // target record helpers
@@ -111,12 +119,16 @@ path /v3/shared-tables/{channel_id}/tables/{table_name}/target_record_id is Stri
   write() { isLoggedIn() && this != null }
 }
 
-path /v3/shared-tables/{channel_id}/tables/{table_name}/row_count is Number {
+path /v3/shared-tables/{channel_id}/tables/{table_name}/row_count {
   write() { isLoggedIn() && this != null }
   validate() { 
     // require that target record is modified appropriately when row count is modified
-    this < 1000 && rowCountUpdated(nextTargetRecord(this.parent()), prevTargetRecord(this.parent()))
+    sumRowCounts(this) < 1000 && rowCountUpdated(nextTargetRecord(this.parent()), prevTargetRecord(this.parent()))
   }
+}
+
+path /v3/shared-tables/{channel_id}/tables/{table_name}/row_count/{bucket} is Number {
+  //write() { isLoggedIn() && this != null }
 }
 
 // the key $record_id is the id of the record. Its value is the json-encoded

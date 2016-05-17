@@ -52,8 +52,8 @@ function getTable(channelId, tableName) {
  * Calls onSuccess with the counter value, or onError with an error string
  * if it was not possible to determine the value of the counter.
  */
-function getCounter(channelId, counterName, onSuccess, onError) {
-  var counters = getDatabase(channelId).child('counters');
+function getCounter(counterName, onSuccess, onError) {
+  var counters = getDatabase(Applab.channelId).child('counters');
   counters.child(counterName).transaction(function (currentValue) {
     return (currentValue || 0) + 1;
   }, function (err, committed, data) {
@@ -309,14 +309,14 @@ function incrementCountersData(interval, countersData) {
  * @param {String} tableName
  * @param {function (Object.<string, number>)} onSuccess Function which receives an object
  *     with the following properties which have been fetched from the server:
- *     timestamp, opCount, rowCount, currentTime.
+ *     rowCounts, tokenMap.
  */
 function getServerData(tableName, onSuccess, onError) {
   getRateLimitTokens(function (tokenMap) {
     var tableRef = getTable(Applab.channelId, tableName);
-    tableRef.child('row_count').once('value', function (rowCountSnapshot) {
+    tableRef.child('row_count').once('value', function (rowCountsSnapshot) {
       onSuccess({
-        rowCount: rowCountSnapshot.val(),
+        rowCounts: rowCountsSnapshot.val(),
         tokenMap: tokenMap
       });
     });
@@ -339,6 +339,13 @@ function getCurrentTimeMs(onComplete) {
     }
   });
 }
+const ROW_COUNT_BUCKETS = 2;
+function updateRowCount(recordId, rowCounts, channelData, tableName, delta) {
+  var rowCountIndex = recordId % ROW_COUNT_BUCKETS;
+  rowCounts = rowCounts || {};
+  var newRowCount = (rowCounts[rowCountIndex] || 0) + delta;
+  channelData['tables/' + tableName + '/row_count/' + rowCountIndex] = newRowCount;
+}
 
 /**
  * Creates a new record in the specified table, accessible to all users.
@@ -352,15 +359,14 @@ function getCurrentTimeMs(onComplete) {
 FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) {
   // Assign a unique id for the new record.
   var idCounter = tableName + '_id';
-  getCounter(Applab.channelId, idCounter, function (counter) {
+  getCounter(idCounter, function (counter) {
     record.id = counter;
 
     getServerData(tableName, function (serverData) {
       var channelData = {};
       channelData['tables/' + tableName + '/' + counter] = JSON.stringify(record);
       channelData['tables/' + tableName + '/target_record_id'] = String(counter);
-      var newRowCount = (serverData.rowCount || 0) + 1;
-      channelData['tables/' + tableName + '/row_count'] = newRowCount;
+      updateRowCount(record.id, serverData.rowCounts, channelData, tableName, 1);
       addRateLimitTokens(channelData, serverData.tokenMap);
 
       var channelRef = getDatabase(Applab.channelId);
@@ -462,7 +468,6 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
     channelData['tables/' + tableName + '/target_record_id'] = String(record.id);
 
     // TODO: We need to handle the 404 case, probably by attempting a read.
-    channelData['tables/' + tableName + '/row_count']= serverData.rowCount;
     addRateLimitTokens(channelData, serverData.tokenMap);
 
     var channelRef = getDatabase(Applab.channelId);
@@ -493,7 +498,7 @@ FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError)
     channelData['tables/' + tableName + '/target_record_id'] = String(record.id);
 
     // TODO: We need to handle the 404 case, probably by attempting a read.
-    channelData['tables/' + tableName + '/row_count']= serverData.rowCount - 1;
+    updateRowCount(record.id, serverData.rowCounts, channelData, tableName, -1);
     addRateLimitTokens(channelData, serverData.tokenMap);
 
     var channelRef = getDatabase(Applab.channelId);
