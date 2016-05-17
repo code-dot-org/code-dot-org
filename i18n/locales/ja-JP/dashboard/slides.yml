@@ -399,7 +399,7 @@ ja:
           Here, we're going to make the space bot greet the earthlings when a player clicks on him. We'll use the "when clicked" block and attach the "say" block to it. When the player clicks on the space bot, everything attached to this "when clicked" event block will be performed. What does your alien say?
       4:
         image: notes/playlab_events_4.png
-        text: 'There are also "when arrow" blocks. If you link the "move" blocks to these, you can start to move your actors up, down, left, or right. Step by step, your game is getting more interactive.'
+        text: '"~した時"というブロックがあります。これらに"move"ブロックをリンクして方向を指定すれば、あなたのキャラは上下左右自由に動けるようになります。このようにして一歩一歩、あなたのゲームはさらにいろんなことができるようになります。'
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png

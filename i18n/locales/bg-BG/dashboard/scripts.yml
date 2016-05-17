@@ -156,7 +156,7 @@ bg:
           description_short: 'Нека да използваме кода, за да се присъединим към Анна и Елза и заедно  опознаем  магията и красотата на леда.'
         course4:
           description_short: Учениците, изучаващи курс 4 трябва да са взели вече курсове 2 и 3.
-          description: Курс 4 е предназначен за ученици, които са покрили курсове 2 и 3. Учениците ще научат как да се справят с пъзели с повишена сложност, тъй като ще се научат как да съчетават няколко концепции при решаване на предизвикателство. След завършване на този курс учениците ще могат да създават програми, в които да покажат няколко умения, като цикли и функции с параметри. Препоръчва се за класове 4-8.
+          description: Курс 4 е предназначен за ученици, които са покрили курсове 2 и 3. Учениците ще научат как да се справят с пъзели с повишена сложност, тъй като ще се научат как да съчетават няколко концепции при решаване на предизвикателство. След завършване на този курс, учениците ще могат да създават програми, в които да покажат няколко умения, като цикли и функции с параметри. Препоръчва се за класове 4-8.
           "Artist: Variables": 'Художник: променливи'
           "Bee: For Loops": 'Пчела: За повторенията'
           title: Курс 4
@@ -590,7 +590,7 @@ bg:
         cspunit3:
           title: 'CSP блок 3 - програмиране'
           title_short: CSP Unit 3
-          description_short: Програмиране
+          description_short: В този курс се въвеждат фундаменталните понятия на компютърното програмиране, които отключват възможността да се създават стойностни, интерактивни приложения.
           description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
           Getting to know AppLab: Запознаване с AppLab
           Functions: Функции
@@ -918,7 +918,7 @@ bg:
           AppLab: Лаборатория за приложения
           Online PD: Онлайн PD
           title: Всички неща!
-          description: Всички типове нива за тестване на потребителски интерфейс
+          description: Всички типове нива за тестване на потребителски интерфейс. Моля, влезте в акаунта си, за да тествате applab нивата ( applab нивата работят само ако сте в профила си).
           description_short: Всички типове нива за тестване на потребителски интерфейс
           Odometer: Километраж
           Vigenere: Vigenere
@@ -932,6 +932,8 @@ bg:
           Star wars: Star wars
           Minecraft: Minecraft
           Rich long assessment: Rich long assessment
+          Free Response: Свободен отговор
+          Game Lab: Game Lab
         algebraPD2b:
           title: Компютърни науки в алгебрата
           description: 'Фаза 2 онлайн: Смесено лятно учене'
@@ -1629,6 +1631,7 @@ bg:
           "Unplugged: The Design Recipe": 'Ънплъгд: Напиши рецепта'
           "Play Lab: Defining Functions": 'Театрална лаборатория: Дефиниране на функции'
           "Eval: Functions": 'Оценка: функции'
+          "Unplugged: Fast Functions": 'Unplugged: Fast Functions'
         AlgebraB:
           title: Компютърни науки в алгебрата
           description_short: Научете функционално програмиране чрез алгебра
@@ -1651,7 +1654,7 @@ bg:
           description: A place to try things out in Game Lab
         algebraPD1:
           title: Компютърни науки в алгебрата
-          description_short: Научи алгебра чрез функционално програмиране
+          description_short: 'Фаза 1: Представяне онлайн'
           description: Научи алгебра чрез функционално програмиране
           Introduction to PD: Въведение в PD
           Course Overview: Преглед на курса
@@ -1665,6 +1668,7 @@ bg:
           description: CS in Algebra end of year reflection
           Getting Started: Getting Started
           Sharing Student Work: Sharing Student Work
+          Planning For the Future: Planning For the Future
         csp1:
           title: 'CS Principles Unit 1 - The Internet'
           description_short: Интернет
@@ -1692,6 +1696,7 @@ bg:
           DNS in the Real World: DNS in the Real World
           HTTP and Abstraction: HTTP and Abstraction
           Practice PT - The Internet and Society: 'Practice PT - The Internet and Society'
+          Encoding and Sending Formatted Text: Encoding and Sending Formatted Text
         csp2:
           title: 'CS Principles Unit 2 - Digital Information'
           description_short: Digital Information
@@ -1782,6 +1787,9 @@ bg:
           Draw Loop and Random: Draw Loop and Random
           Variables: Променливи
           Sprite Properties and Mod: 'Sprite Properties and Mod'
+          Expressions and Reassignment: Expressions and Reassignment
+          Sprites and Properties: Sprites and Properties
+          Counting with Variables: Counting with Variables
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -1803,3 +1811,116 @@ bg:
           description_short: Програмиране
           description: ""
           Drawing in Game Lab: Drawing in Game Lab
+        CSF_Secret_Sample:
+          title: Secret Sample
+          description_short: This is a secret...shhhhh
+          description: Test of new educational philosophy
+          description_audience: Възраст 8 + (след курс 2)
+          Computational Thinking: Изчислително мислене
+          Sample Stage: Sample Stage
+        ECSPD1:
+          title: ECS Part 1
+          description_short: 'Фаза 1: Представяне онлайн'
+          description: Two hour introduction to your Professional Learning Program for the ECS Version 5 curriculum
+          Getting Started: Getting Started
+          What is ECS?: Какво е ECS?
+          ECS Curriculum: ECS Curriculum
+          Wrap Up: Wrap Up
+          Welcome to Phase 1!: Welcome to Phase 1!
+          Background and Context: Background and Context
+          Classroom and workshop style : 'Classroom and workshop style '
+          Classroom and Workshop Style : 'Classroom and Workshop Style '
+        algebraFacilitator:
+          title: Computer Science in Algebra Facilitator Pre Work
+          description_short: Научи алгебра чрез функционално програмиране
+          description: Научи алгебра чрез функционално програмиране
+          Introduction to PD: Въведение в PD
+          Course Overview: Преглед на курса
+          Why Computer Science belongs in Algebra: Защо компютърните науки са част от алгебрата
+          Evaluation Blocks: Блокове за оценка
+          Teacher Dashboard: Учителско табло
+        sciencePD1:
+          title: 'CS in Science: Part 1'
+          description_short: 'Фаза 1: Представяне онлайн'
+          description: In Partnership with Project GUTS
+          Introduction to PD: Въведение в PD
+          What to Expect: Какво да очаквате
+          Introduction to Complex Adaptive Systems: Въведение в сложни адаптивни системи
+          Introduction to Computational Science: Въведение в компютърната наука
+          Agent Based Modeling of Complex Adaptive Systems: Моделиране на базата на сложни адаптивни системи
+          Using Computer Models in Science: Използване на компютърни модели в науката
+          Using Models in the Classroom: Използване на модели в класната стая
+          Dispositions and Classroom Culture: Мерки и култура в класната стая
+          Computational Thinking And The Framework For K-12 Science Education: Изчислително мислене и рамката за К-12 образование по науки
+          Introduction to StarLogo Nova: Въведение в StarLogo Nova
+          The Tutorial: Урок
+          Post-Survey: След изследването
+        cspoptional:
+          title: CS Principles Optional Lessons
+          description_short: Optional
+          description: Optional lessons and content across all of the CS Principles units are listed here
+          Unit 1 - Sending Bits in the Real World: 'Unit 1 - Sending Bits in the Real World'
+          Unit 1 - Encoding Numbers in the Real World: 'Unit 1 - Encoding Numbers in the Real World'
+          Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
+          Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
+          Algorithms Detour - How Routers Learn: 'Algorithms Detour - How Routers Learn'
+        cspunit1-support:
+          title: Online Support for CSP Unit 1
+          description: This is a test Professional Learning Course
+          Teachers and Tools: Teachers and Tools
+          Supporting Peer Learning: Supporting Peer Learning
+          Running a Constructive Classroom: Running a Constructive Classroom
+          Strategies for Student Writing: Strategies for Student Writing
+          Intro to the Unit: Intro to the Unit
+          Chapter Overviews: Chapter Overviews
+          "Tool Talk: Intro to Netsim": 'Tool Talk: Intro to Netsim'
+          Sending Binary Messages: Изпращане на бинарни съобщения
+          Encoding and Sending Numbers: Encoding and Sending Numbers
+        test-teaching-ap-cs-unit-1:
+          test Unit 1 required reading: test Unit 1 required reading
+          test Unit 1 content module Alpha: test Unit 1 content module Alpha
+          test Unit 1 content module Bravo: test Unit 1 content module Bravo
+          test Unit 1 content module Charlie: test Unit 1 content module Charlie
+          test Unit 1 practice module Delta: test Unit 1 practice module Delta
+          test Unit 1 practice module Echo: test Unit 1 practice module Echo
+          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        allthehiddenthings:
+          title: All the Hidden Things!
+          description_short: Unreleased level types for UI testing as admin
+          description: Unreleased level types for UI testing as admin
+          Game Lab: Game Lab
+        cspunit1-support-test:
+          title: CSP Unit 1 teacher support
+          description: Online Supports for CSP Unit 1
+          Unit 1 Overview: Unit 1 Overview
+        cspunit1-tools:
+          title: netsim task completion
+          description: introduction to the internet simulator and a discussion of how we use it to teach the internet
+          netsim: netsim
+        Test CPS PD:
+          test Unit 1 required reading: test Unit 1 required reading
+          test Unit 1 content module Alpha: test Unit 1 content module Alpha
+          test Unit 1 content module Bravo: test Unit 1 content module Bravo
+          test Unit 1 content module Charlie: test Unit 1 content module Charlie
+          test Unit 1 practice module Delta: test Unit 1 practice module Delta
+          test Unit 1 practice module Echo: test Unit 1 practice module Echo
+          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        csp-facilitators :
+          title: CSP Tool Overview
+          description_short: Introduction to CS Principles for new Facilitators
+          description: A collection of tools from the CS Principles course. These levels provide a glimpse into the tools we use throughout the curriculum to
+          Introduction to Text Compression: Introduction to Text Compression
+          Turtle Programming: Turtle Programming
+          Introduction to Events: Introduction to Events
+        csp-facilitators:
+          title: CSP Tool Overview
+          description_short: Introduction to CS Principles for new Facilitators
+          description: A collection of tools from the CS Principles course. These levels provide a glimpse into the tools we use throughout the curriculum to
+          Introduction to Text Compression: Introduction to Text Compression
+          Turtle Programming: Turtle Programming
+          Introduction to Events: Introduction to Events
+        cspassessment:
+          title: CS Principles Culminating Assessment
+          description_short: Culminating
+          description: 'This 55-question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact. '
+          CS Principles Culminating Assessment: CS Principles Culminating Assessment

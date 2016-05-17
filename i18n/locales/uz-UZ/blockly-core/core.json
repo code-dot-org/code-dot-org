@@ -25,7 +25,7 @@
   "COLOUR_RGB_RED":"qizil",
   "COLOUR_RGB_TITLE":"rang bilan",
   "COLOUR_RGB_TOOLTIP":"Aniq belgilangan miqdorda qizil, yashil va koʻk ranglardan rang yarating. Barcha qiymatlar 0 dan 100 gacha boʻlishi lozim.",
-  "CONFIRM_CREATE_VARIABLE":"Create",
+  "CONFIRM_CREATE_VARIABLE":"Создать",
   "CONFIRM_DELETE_FUNCTION_MESSAGE":"Diqqat! Siz %1 ni aniq oʻchirmoqchimisiz?",
   "CONFIRM_RENAME_VARIABLE":"Rename",
   "CONTRACT_EDITOR_HEADER":"Retsept yarating",

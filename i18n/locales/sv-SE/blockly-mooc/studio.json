@@ -2,6 +2,8 @@
   "actor":"aktör",
   "addCharacter":"lägg till en",
   "addCharacterTooltip":"Lägga till en karaktär till scenen.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"lägg till 10 poäng",
   "addPoints50":"lägg till 50 poäng",
   "addPoints100":"lägg till 100 poäng",

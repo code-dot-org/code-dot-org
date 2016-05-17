@@ -2,6 +2,8 @@
   "actor": "นักแสดง",
   "addCharacter": "เพิ่ม",
   "addCharacterTooltip": "เพิ่มตัวละครเข้าไปในฉาก",
+  "addGoal": "ตั้งเป้าหมาย",
+  "addGoalTooltip": "Add a goal to the scene at the specified location.",
   "addPoints10": "เพิ่ม 10 คะแนน",
   "addPoints50": "เพิ่ม 50 คะแนน",
   "addPoints100": "เพิ่ม 100 คะแนน",
@@ -85,8 +87,8 @@
   "dropletBlock_moveFast_param0": "ชนิด",
   "dropletBlock_moveFast_param0_description": "The type of characters to be changed ('random', 'man', 'pilot', 'pig', 'bird', 'mouse', 'roo', or 'spider').",
   "dropletBlock_playSound_description": "เล่นเสียงที่ถูกเลือก.",
-  "dropletBlock_playSound_param0": "sound",
-  "dropletBlock_playSound_param0_description": "The name of the sound to play.",
+  "dropletBlock_playSound_param0": "เสียง",
+  "dropletBlock_playSound_param0_description": "ชื่อของเสียงที่จะเล่น",
   "dropletBlock_removePoints_description": "Remove points from the score.",
   "dropletBlock_removePoints_param0": "ตะแนน",
   "dropletBlock_removePoints_param0_description": "The value to remove from the score.",
@@ -764,7 +766,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "You need to get 20 Mouse Droids. Use the \"add a Mouse Droid\" command inside the \"when get Mouse Droid\" event to add two or more Mouse Droids every time you get one.",
   "failedMultiplyCharactersTimeoutGotSome": "Congratulations, you added code to make Mouse Droids. You can go to the next puzzle or try again to get 20 Mouse Droids. Try making it easier by adding more of them! (Press and hold the keys on your keyboard (or screen) to move faster.)",
   "failedChangeSettingTimeout": "Get three Rebel Pilots to move on.",
-  "failedChangeSettingSettings": "Make the game your own. To pass this puzzle, you need to change your droid and set its speed.",
-  "addGoal": "add goal",
-  "addGoalTooltip": "Add a goal to the scene at the specified location."
+  "failedChangeSettingSettings": "Make the game your own. To pass this puzzle, you need to change your droid and set its speed."
 }

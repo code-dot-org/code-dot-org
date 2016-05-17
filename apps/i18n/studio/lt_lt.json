@@ -2,6 +2,8 @@
   "actor": "veikėjas",
   "addCharacter": "pridėk",
   "addCharacterTooltip": "Pridėk veikėją į sceną.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location.",
   "addPoints10": "pridėk 10 taškų",
   "addPoints50": "pridėk 50 taškų",
   "addPoints100": "pridėk 100 taškų",
@@ -186,7 +188,7 @@
   "hoc2015_change_setting_instructions": "Laikas aplankyti kitą planetą",
   "hoc2015_change_setting_instructions2": "Panaudok naujas komandas, kad pakeistum savo robotą ir jo greitį. Tada pagauk Sukilimo Pilotus [rebelpilot].",
   "hoc2015_event_free_instructions": "\"Dabar pabandyk pats, R2-D2.\"",
-  "hoc2015_event_free_instructions2": "Dabar tu turi visus reikiamus įrankius kad sukurtum savo galvosūkį. Atrask ir žaisk su visomis skirtingomis Komandomis ir Įvykiais. Kai pabaigsi, paspausk mygtuką Baigti kad galėtum tęsti.",
+  "hoc2015_event_free_instructions2": "Dabar tu turi visus reikiamus įrankius kad sukurtum savo galvosūkį. Atrask ir žaisk su visomis skirtingomis Komandomis ir Įvykiais. Kai pabaigsi, paspausk mygtuką „Finišas“, kad galėtum tęsti.",
   "iceAge": "Ledynmetis!",
   "incrementPlayerScore": "pridėk tašką",
   "itemIAProjectile1": "širdelės",
@@ -742,7 +744,7 @@
   "failedHasAllGoals": "\"Pabandyk dar kartą, BB-8. Surink visą metalo laužą.\"",
   "successHasAllGoals": "Tu tai padarei, BB-8",
   "successCharacter1": "\"Šaunuolis, R2-D2!\"",
-  "successGenericCharacter": "Sveikinimai. Tu tai padarei",
+  "successGenericCharacter": "Sveikinu! Tau pavyko!",
   "failedTwoItemsTimeout": "Pagauk Pilotus Sukilėlius, kol nesibaigė laikas. Norint judėti, įdėk komandas „Judėk aukštyn“ ir „Judėk žemyn“ į atitinkamas funkcijas. Tada nuspausk ir laikyk rodyklių klavišus savo klaviatūroje (arba ekrane), kad greičiau judėtum.",
   "failedTwoItemsTimeoutBlockly": "Pagauk Pilotus Sukilėlius, kol nesibaigė laikas. Norint judėti, įdėk komandas „Judėk aukštyn“ ir „Judėk žemyn“ prie atitinkamų blokelių. Tada nuspausk ir laikyk rodyklių klavišus savo klaviatūroje (arba ekrane), kad greičiau judėtum.",
   "failedFourItemsTimeout": "Žaidimo laikas baigėsi. Pamėgink nuspausti ir laikyti rodyklių klavišus savo klaviatūroje (arba ekrane), kad greičiau judėtum. Jei klavišai neveikia, pasitikrink, ar gerai sudėliojai blokelius.",
@@ -764,7 +766,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Pagauk 20 Pelės Droidų. Įdėk komandą „pridėti Pelė Droidas“ į komandos „kai Pelė Droidas pagautas“ vidų, kad galėtum pridėti vieną ar daugiau Pelių Droidų kiekvieną kartą, kai pagauni vieną.",
   "failedMultiplyCharactersTimeoutGotSome": "Sveikiname, tu sukūrei kodą Pelėms Droidams pagaminti. Gali pereiti prie kito galvosūkio arba pamėginti dar kartą, kad gautum 20 Pelių Droidų. Pamėgink lengviau – pradėk su didesniu Pelių Droidų skaičiumi. (Nuspausk ir laikyk klavišus savo klaviatūroje (arba ekrane), kad judėtum greičiau.)",
   "failedChangeSettingTimeout": "Pagauk 3 Sukilimo Pilotus.",
-  "failedChangeSettingSettings": "Pasidaryk žaidimą pagal save! Kad išspręstum šį galvosūkį, tau reikia pakeisti savo robotą ir nustatyti jo greitį.",
-  "addGoal": "add goal",
-  "addGoalTooltip": "Add a goal to the scene at the specified location."
+  "failedChangeSettingSettings": "Pasidaryk žaidimą pagal save! Kad išspręstum šį galvosūkį, tau reikia pakeisti savo robotą ir nustatyti jo greitį."
 }
