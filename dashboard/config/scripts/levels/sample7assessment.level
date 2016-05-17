@@ -1,13 +1,13 @@
 <Karel>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2016-05-10T22:58:31.000Z",
+  "created_at": "2016-05-17T01:33:56.000Z",
   "level_num": "custom",
   "user_id": 63,
   "properties": {
     "skin": "bee",
-    "serialized_maze": "[[{\"tileType\":4},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":2},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "instructions": "Help bee make all of the honey.",
+    "serialized_maze": "[[{\"tileType\":4},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":4}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"featureType\":0,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":4},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "instructions": "Can you help bee make all of the honey in just one try?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -23,17 +23,16 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "start_direction": "3",
+    "start_direction": "0",
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "ideal": "7",
-    "honey_goal": "5",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The bee is looping these actions over and over again:\\n- move forward\\n- make honey\\n- turn left\\n- move forward\\n- turn right\",\r\n  \"hint_id\": \"sample5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "maze_data": null
+    "honey_goal": "4",
+    "authored_hints": "[]"
   },
   "published": true,
-  "notes": "Upping the complexity to just beyond what we want students to actually learn.",
+  "notes": "More complex assessment",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -59,19 +58,12 @@
         <block type="maze_moveForward"/>
       </xml>
     </toolbox_blocks>
-    <recommended_blocks>
-      <xml>
-        <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">???</title>
-        </block>
-      </xml>
-    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat_dropdown">
-              <title name="TIMES" config="3-10">5</title>
+              <title name="TIMES" config="3-10">4</title>
               <statement name="DO">
                 <block type="maze_move">
                   <title name="DIR">moveForward</title>
