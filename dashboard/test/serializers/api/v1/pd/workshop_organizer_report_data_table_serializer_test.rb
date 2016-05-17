@@ -87,9 +87,9 @@ class Api::V1::Pd::WorkshopOrganizerReportDataTableSerializerTest < ::ActionCont
 
   def expected_cols_organizer
     [
-      {label: 'Workshop Organizer', type: 'string'},
-      {label: 'Workshop Organizer Id', type: 'string'},
-      {label: 'Workshop Organizer Email', type: 'string'},
+      {label: 'Organizer Name', type: 'string'},
+      {label: 'Organizer Id', type: 'string'},
+      {label: 'Organizer Email', type: 'string'},
       {label: 'Workshop Dates', type: 'string'},
       {label: 'Workshop Type', type: 'string'},
       {label: 'Section Url', type: 'string'},
@@ -111,7 +111,7 @@ class Api::V1::Pd::WorkshopOrganizerReportDataTableSerializerTest < ::ActionCont
       {label: 'Facilitator Payment', type: 'number'},
       {label: 'Staffer Payment', type: 'number'},
       {label: 'Venue Payment', type: 'number'},
-      {label: 'Total Payment', type: 'number'}
+      {label: 'Payment Total', type: 'number'}
     ]
   end
 end

@@ -11,6 +11,10 @@ class Api::V1::Pd::DistrictReportController < Api::V1::Pd::ReportControllerBase
       districts = ::District.all
     elsif current_user.district_contact?
       districts = ::District.where(contact_id: current_user.id)
+    else
+      # This should never be reached because authorize_resource
+      # will only authorize admins and district_contacts (as defined in ability.rb)
+      raise CanCan::AccessDenied.new
     end
 
     report = ::Pd::DistrictReport.generate_district_report districts
