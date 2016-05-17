@@ -15,8 +15,8 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
 
   test 'Enrolling user in a course creates other assignment objects' do
     enrollment = Plc::UserCourseEnrollment.find_or_create_by(user: @teacher, plc_course: @course)
-    unit_enrollment = Plc::EnrollmentUnitAssignment.create(plc_course_unit: @course_unit, plc_user_course_enrollment: enrollment,
-                                                           status: Plc::EnrollmentUnitAssignment::START_BLOCKED)
+    enrollment.create_enrollment_unit_assignments
+    unit_enrollment = enrollment.plc_unit_assignments.first
 
     module_assignments = unit_enrollment.plc_module_assignments
     assert_equal Plc::EnrollmentUnitAssignment::START_BLOCKED, unit_enrollment.status
