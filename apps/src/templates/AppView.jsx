@@ -7,7 +7,6 @@ var _ = require('../lodash');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var StudioAppWrapper = require('./StudioAppWrapper');
 var CodeWorkspaceContainer = require('./CodeWorkspaceContainer');
-var connect = require('react-redux').connect;
 
 /**
  * Top-level React wrapper for our standard blockly apps.
@@ -16,7 +15,7 @@ var AppView = React.createClass({
   propTypes: {
     hideSource: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
-    isResponsive: React.PropTypes.bool.isRequired
+    isResponsive: React.PropTypes.bool.isRequired,
 
     // not provided by redux
     noVisualization: React.PropTypes.bool,
@@ -50,7 +49,7 @@ var AppView = React.createClass({
   }
 });
 module.exports = connect(state => ({
-  isResponsive: isResponsiveFromState(state)
+  isResponsive: isResponsiveFromState(state),
   assetUrl: state.pageConstants.assetUrl,
   isEmbedView: state.pageConstants.isEmbedView,
   isShareView: state.pageConstants.isShareView,
