@@ -1,3 +1,5 @@
+import _ from '../../lodash';
+
 const CHANGE_SCREEN = 'screens/CHANGE_SCREEN';
 
 const initialState = {
@@ -6,7 +8,7 @@ const initialState = {
 
 export default function (state = initialState, action) {
   if (action.type === CHANGE_SCREEN) {
-    return Object.assign({}, state, {
+    return _.assign({}, state, {
       currentScreenId: action.screenId
     });
   }
