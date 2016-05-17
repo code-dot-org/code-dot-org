@@ -2,7 +2,7 @@
 // node_modules directories in parents in addition to the current directory.
 // In practice, that doesn't seem to happen, so instead I'm hardcoding it's
 // current directory to be our root
-var which = require('npm-which')(__dirname + '/../..').sync;
+var which = require('npm-which')(__dirname + '/..').sync;
 var mochify = require('mochify');
 var http = require('http');
 var fs = require('fs');
@@ -25,7 +25,7 @@ function httpServer(port, callback) {
     }
 
     // navigate from root
-    var filepath = __dirname + '/../../..' + url;
+    var filepath = __dirname + '/../..' + url;
     if (!fs.existsSync(filepath)) {
       console.log('404: ' + filepath);
       res.writeHead(404);
@@ -48,9 +48,7 @@ exec(command, function (err, stdout, stderr) {
     return;
   }
 
-  var globs = [
-    './test/integration/*.js'
-  ];
+  var globs = ['./test/integration/*.js'];
 
   if (process.env.mocha_entry) {
     globs = [process.env.mocha_entry];
