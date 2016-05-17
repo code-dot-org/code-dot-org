@@ -5,7 +5,7 @@ var GameButtons = require('../templates/GameButtons').default;
 var ArrowButtons = require('../templates/ArrowButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
 var gameLabConstants = require('./constants');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import VisualizationOverlay from '../templates/VisualizationOverlay';
 import CrosshairOverlay from '../templates/CrosshairOverlay';
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
@@ -20,14 +20,14 @@ var GameLabVisualizationColumn = function (props) {
   };
   return (
     <span>
-      <ProtectedStatefulDiv id="visualization">
+      <ProtectedVisualizationDiv>
         <div id="divGameLab" style={divGameLabStyle} tabIndex="1">
         </div>
         <VisualizationOverlay width={GAME_WIDTH} height={GAME_HEIGHT}>
           <CrosshairOverlay/>
           <TooltipOverlay providers={[coordinatesProvider()]}/>
         </VisualizationOverlay>
-      </ProtectedStatefulDiv>
+      </ProtectedVisualizationDiv>
       <GameButtons>
         <div id="studio-dpad" className="studio-dpad-none">
           <button id="studio-dpad-button" className="arrow">
