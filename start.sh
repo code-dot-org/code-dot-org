@@ -19,6 +19,6 @@ mkdir /tmp/chef/cookbooks
 cd /home/ubuntu/adhoc/cookbooks/cdo-apps
 berks vendor /tmp/chef/cookbooks
 
-sudo chef-client -z -c /tmp/chef/zero.rb -j /tmp/chef/first-boot.json
+sudo chef-client -z -c /tmp/chef/local-adhoc.rb -j /tmp/chef/local-adhoc.json
 
 top -b >/dev/null 2>&1
