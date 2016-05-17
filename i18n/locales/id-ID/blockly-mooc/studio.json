@@ -2,6 +2,8 @@
   "actor":"Pemain",
   "addCharacter":"tambahkan",
   "addCharacterTooltip":"Tambahkan karakter ke dalam layar.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"tambahkan 10 poin",
   "addPoints50":"tambahkan 50 poin",
   "addPoints100":"tambahkan 100 poin",

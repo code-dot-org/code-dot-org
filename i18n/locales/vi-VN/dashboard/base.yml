@@ -23,6 +23,8 @@ vi:
           future: không thể trong tương lai
   hello: Xin chào thế giới
   welcome_back: 'Chào mừng trở lại, %{name}'
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Chấp nhận
   unsubmit: Ngưng gửi
   previous_page: Previous page
@@ -154,8 +156,6 @@ vi:
         subject: 'Tham gia một lớp học với %{teacher_name} tại Code.org!'
       student_disassociated:
         subject: 'Thông báo từ Code.org: %{student_name} không còn trong danh sách là học viên của bạn.'
-      teacher_disassociated:
-        subject: 'Thông báo từ Code.org: %{teacher_name} không còn trong danh sách giáo viên của bạn.'
   reports:
     error:
       access_denied: Bạn không có quyền truy cập vào tình trạng pháp nhân của người này
@@ -332,6 +332,23 @@ vi:
     no_primary_course: Hãy thử một khóa học ở Code Studio
     choose_next_course: Thử một khóa Xưởng Mã bằng cách chọn một khóa bên dưới
     print_certificate: In giấy chứng nhận
+    announcement_title: Announcements
+    announcement_view_all: Tất cả
+    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+    announcement_button: Tìm hiểu thêm
+    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: Học về Xưởng Code
     description: Ai cũng có thẻ học khoa học máy tính. Làm trò chơi, ứng dụng và nghệ thuật với mã lệnh.
@@ -456,7 +473,7 @@ vi:
       body: Khám phá thế giới Minecraft thông qua mã.
     unplugged:
       title: Unplugged Lessons
-      audience: Ages 6+
+      audience: Ages 4+
       body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
       body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
@@ -598,6 +615,9 @@ vi:
     share: Chia sẻ
     share_title: Chia sẻ chương trình của tôi
     share_copy_link: 'Sao chép liên kết:'
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Đóng
     more: Nhiều hơn
     name: Tên
@@ -637,7 +657,21 @@ vi:
           other: Khác
         detail: Xin vui lòng cung cấp càng nhiều chi tiết nếu có thể liên quan đến nội dung bạn đang báo cáo.
         acknowledge: 'Bằng việc gửi thông tin này, bạn xác nhận nó sẽ bị xử lý theo quy định của các điều khoản của %{link_start_privacy}Privacy Policy%{link_end} và %{link_start_tos}Terms Service%{link_end}'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
   components:
     icon_library:
       search_placeholder_text: Tìm kiếm một biểu tượng...
       no_icons_found: Không tìm thấy biểu tượng nào
+  flex_category:
+    required: Tổng quan
+    content: Content
+    practice: Teacher Practices

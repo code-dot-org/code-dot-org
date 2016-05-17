@@ -8,6 +8,7 @@
 #  created_at                 :datetime         not null
 #  updated_at                 :datetime         not null
 #  plc_learning_module_id     :integer
+#  weight                     :integer          default(1), not null
 #
 # Indexes
 #

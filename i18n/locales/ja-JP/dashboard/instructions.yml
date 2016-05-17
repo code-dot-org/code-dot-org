@@ -419,6 +419,9 @@ ja:
         sign in to test applab levels (By design, applab levels only work if signed
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script).
+      allthethings_U3 - Simple Drawing - Rectangle Width and Height_instruction: |
+        Do
+        This
       App Lab test_instruction: テスト
       Applab allthethings onRecordEvent_instruction: |
         Please sign in to test applab
@@ -464,11 +467,7 @@ ja:
         other functions! Using your "shape" function as a base, create 3 house shapes
         each 20 pixels larger than the last starting at 50 pixels in length. Using
         a counter loop might be helpful. 
-      Bee Recommended Blocks test_instruction: |
-        Purple flowers may have either 1
-        or 0 nectar, but you don't know which one! Be careful not to collect nectar
-        from a purple flower if it doesn't have any. Check if the nectar is equal
-        to 1 by using the if block.
+      Bee Recommended Blocks test_instruction: 紫の花の蜜は、1（ある）か 0（ない） かのどちらかですが、どのお花に蜜がある（1である）のかは分かりません！蜜のない花から蜜を集めないように気をつけてください。蜜が 1 かどうかは、「もし」ブロックを使って確認しましょう。
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -901,10 +900,7 @@ ja:
       Course 4 Artist 4_instruction: 円の角度は何度ですか？色がさまざまな円を作るために「繰り返し（ループ）」ブロックに回数を入力してください。
       Course 4 Artist 5_instruction: 図が対象になるように、残りの半分も描いてみましょう。正三角形のそれぞれの長さは５０ピクセルです。ヒント：加えるべきブロックのすべてを明らかにするために、あなたは何回かコードを実行する必要があるでしょう。
       Course 4 Artist 6_instruction: これらの三角形を描くためにコードを完成させてください。ヒント：３６０度以下で回転する３つの三角形があります。・・・３６０の中に３は何回入るでしょうか？
-      Course 4 Artist 7_instruction: |
-        Now nest this loop inside another loop to draw
-        10 triangles. This is called a nested loop. Hint: All 10 triangles complete
-        a 360 degree rotation.  
+      Course 4 Artist 7_instruction: '１０個の三角形を描くため、別の「繰り返し（ループ）」の中に、このループを入れてみましょう。これを「入れ子型の繰り返し（ループ）」と言います。ヒント：１０個の三角形すべてでピッタリ360度回転します。  '
       Course 4 Artist 8_instruction: この全てのブロックを何回も繰り返してこの太陽の絵を描いてください。
       Course 4 Artist 8a_instruction: |
         Remember this shape?  Now we're going to
@@ -915,9 +911,7 @@ ja:
       Course 4 Artist Binary 2_instruction: |
         Which of these binary strings could
         you loop 8 times to draw this image?
-      Course 4 Artist Binary 3_instruction: |
-        Can you draw this pattern by looping
-        just three binary digits (0s and 1s)?
+      Course 4 Artist Binary 3_instruction: 3つの2進数（0と1）だけのループでこのパターンを描くことができますか?
       Course 4 Artist Binary 4_instruction: |
         Each binary string represents one row
         of this picture. Can you rearrange them so it draws a smiley face instead
@@ -930,13 +924,11 @@ ja:
         you can repeat to draw this image?
       Course 4 Artist Binary 7_instruction: Finish this drawing.
       Course 4 Artist Binary Free Play 2_instruction: |
-        Free Play: Here's a blank
-        canvas for you to draw on.  Have fun!
+        自由に描きましょう! 
+        このまっさらなキャンバスは好きなように絵を描いて良い場所です。さあ何から描きましょうか!
       Course 4 Artist Binary Free Play 2a_instruction: "Here's a higher resolution\ncanvas to draw on - 16 pixels by 16 pixels!\\r\n\\r\nSee what happens when we\nstart to get creative with the bits?"
-      Course 4 Artist Binary Free Play 2b_instruction: Click here to see hints.
-      Course 4 Artist Binary Free Play_instruction: |
-        Free Play: Draw whatever you
-        like with binary!
+      Course 4 Artist Binary Free Play 2b_instruction: ヒントを見たい場合は、ここをクリックします。
+      Course 4 Artist Binary Free Play_instruction: 自由に描きましょう! 2進数を使って好きなものを描きましょう!
       Course 4 Artist Binary pre1_instruction: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \\r\n\\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
       Course 4 Artist Binary ryan_instruction: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \\r\n\\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
       Course 4 Artist For  Functions 10_instruction: |
@@ -1072,12 +1064,8 @@ ja:
         We have given you most of the code
         to create a function. However there seems to be something missing. Can you
         make this function block complete?
-      Course 4 Artist Functions challenge_instruction: |
-        Click here to see the hints
-        again.
-      Course 4 Artist Functions Inspiration_instruction: |
-        Click here to see the hints
-        again.
+      Course 4 Artist Functions challenge_instruction: もう一度ヒントを見たい場合は、ここをクリックしてください。
+      Course 4 Artist Functions Inspiration_instruction: もう一度ヒントを見たい場合は、ここをクリックしてください。
       Course 4 Artist Functions inspire_instruction: |
         Click here to see the inspiration
         picture again.
@@ -1457,11 +1445,11 @@ ja:
         counter variable each time the loop is run.
       Course 4 Play Labs For Loops 2_instruction: |
         This time, let's try counting
-        only the odd numbers from 1 to 100.
+        only the odd numbers from 1 to 101.
       Course 4 Play Labs For Loops 3_instruction: |
         If we count by larger numbers,
-        we count even higher in the same amount of time. Try making the dog count
-        from 10 up to 1000, adding 10 at a time.
+        we count even higher in the same amount of time. Try making Pirate Pegleg
+        count from 10 up to 1000, adding 10 at a time.
       Course 4 Play Labs For Loops 4_instruction: |
         Changing the increment can be
         helpful, but we're still counting linearly (each number is the same distance
@@ -1484,6 +1472,14 @@ ja:
       Course 4 Play Labs For Loops 7a_instruction: "Now we're getting somewhere!  What\nif we start counting how many times we can click The Wizard before Dog gets\nto 30?  \\r\n\\r\nFinish adding blocks to The Wizard so that every time he's\nclicked the variable \"clicked\" increases by one. You can ignore \"increment\"\nfor now.\\r\n\\r\nDog will start counting when you click \"Run\"."
       Course 4 Play Labs For Loops 8_instruction: "Now, help the actors move as they\ncount.  \\r\n\\r\nDog should move and count by adding 2 (counter + 2) each time.  Cat\nwill move and count by multiplying by 2 (counter * 2)  each time. Penguin\nwill move and count to the power of 2 (counter ^ 2) each time.  Who will reach\ntheir flag first?"
       Course 4 Play Labs For Loops 8a_instruction: "To finish our game, we need to\nbring back the \"increment\" variable!    Let's tie it to the level of the\ngame.\\r\n\\r\n1) Keep track of the number of times The Wizard is clicked.\\r\n2)\nIf The Wizard is clicked at least 10 times before Dog counts to 30, raise\n\"increment\" by 1 and start again.\\r\n3) If The Wizard does not get clicked\nat least 10 times, the game is over."
+      Course 4 Playlab For Loop Freeplay_instruction: |
+        Freeplay: Use everything you've
+        learned so far to make a game that includes a `for` loop!
+      Course 4 Playlab For Loops 4b_instruction: "Now, these two characters are going\nto race!  \\r\n\\r\nEach of them will move `counter` steps at a time, but their\ncounters will have different values because of the `for` loops.  \\r\n\\r\nCan\nyou change the increment in one of the loops so that the race is a tie?"
+      Course 4 Playlab For Loops 5b_instruction: |
+        Adjust the interval on these `for`
+        loops so that the two characters end in the exact same place.
+      Course 4 Playlab For Loops 6b_instruction: "Edit this `for` loop to create\na game that's fun for you to play!\\r\n\\r\nPress \"Run\" and click Madame\nUnicorn four times to win. "
       Course 4 SCF 1_instruction: |
         Use the suggested functions to draw four rows
         of hexagons. Notice how our even numbered rows are shifted to the right?
@@ -1492,7 +1488,7 @@ ja:
         nectar with the fewest blocks possible?
       Course 4 SCF 1b_instruction: |
         Can you figure out how to collect all of this
-        nectar with the fewest blocks possible?
+        honey with the fewest blocks possible?
       Course 4 SCF 2_instruction: |
         Use what you learned in the previous level to
         draw an image like this. Note: The code becomes more simple if you incorporate
@@ -1560,6 +1556,13 @@ ja:
         Here's a program that looks pretty
         similar to what you've been writing, but may behave quite differently. You'll
         want to stop and discuss with the class before moving on.
+      CSD U3 Boolean Modify_instruction: |
+        Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Boolean Predict_instruction: |
+        What do you think this code will do when
+        it is run? Predict what each console.log() command will print, then run the
+        program to check your predictions.
       CSD U3 Draw Loop Discuss_instruction: |
         Here's a program that looks pretty
         similar to what you've been writing, but may behave quite differently. You'll
@@ -1570,6 +1573,12 @@ ja:
         to generate some of the inputs?You'll want to stop and discuss with the class
         before moving on.
       CSD U3 Frame Rate_instruction: "Slow down Gamelab Gary's animation with frameRate()"
+      CSD U3 Keypress Boolean_instruction: |
+        Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Keypress Watchers_instruction: |
+        Modify the code so that all of the console.log
+        commands print true
       CSD U3 Random Animation_instruction: |
         Use randomNumber() to animate Gary's
         mouth.
@@ -1588,9 +1597,9 @@ ja:
         Using console.log() write a program that
         randomly returns a number in a range you define.
       CSD U3 Random Width Height_instruction: |
-        Pick a shape function and use calls
-        to randomNumber() in place of one or more of the parameters. Maker sure you
-        run it a few times so you can see the effect of randomization.
+        Pick a shape block and use calls to
+        randomNumber() in place of one or more of the parameters. Maker sure you run
+        it a few times so you can see the effect of randomization.
       CSD U3 Simple Drawing - Animation 2_instruction: |
         Use randomNumber() on the
         x position and width of your cloud ellipses to introduce a bit of animation.
@@ -1617,6 +1626,9 @@ ja:
       CSD U3 Variables CHALLENGE gamelab gary_instruction: |
         Use variables to animate
         Game Lab Gary
+      CSD U3 Variables create and assign_instruction: |
+        Create and assign size in
+        a single line of code.
       CSD U3 Variables draw loop newVars_instruction: |
         Extend this project to create
         your own random art visualization with variables.
@@ -1628,10 +1640,28 @@ ja:
         Assign the variables x1 and y1
         random values inside the draw loop and use them to control where the square
         is drawn.
+      CSD U3 Variables eyeBrows_instruction: |
+        Predict what will happen when you move
+        the assignment of eyeSize inside the draw loop. Then try it out
       CSD U3 Variables Initialize_instruction: |
         Predict: What will get displayed
         in the console?
       CSD U3 Variables Intro_instruction: 'Create your own variable '
+      CSD U3 Variables make a square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
+      CSD U3 Variables multiple assignments_instruction: |
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
+      CSD U3 Variables naming rules_instruction: |
+        Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables random assignment_instruction: |
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
+      CSD U3 Variables random draw loop_instruction: |
+        Predict what will happen when
+        you move the assignment of eyeSize inside the draw loop. Then try it out
       CSD U3 Variables random drawing exemplar_instruction: |
         Check out this example
         randomized drawing.
@@ -1653,9 +1683,24 @@ ja:
       CSD U3 Variables Square_instruction: |
         Change the value "size" initialized
         to make a larger square.
+      CSD U3 Variables TEMPLATE square_instruction: |
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
       CSD U3 Variables use value rect_instruction: |
         Predict: What will get displayed
         in the console?
+      CSD U3 Variables write_instruction: |
+        Use the write block to display the value
+        of size
+      CSD U3 Variables2 expressions in commands_instruction: |
+        Use expressions inside
+        a drawing command
+      CSD U3 Variables2 expressions in variables_instruction: |
+        Assign the value of
+        each expression to a variable and console.log that variable.
+      CSD U3 Variables2 expressions_instruction: |
+        Use console.log to display the
+        results of each expression. Then create your own.
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -2693,6 +2738,9 @@ ja:
         you don't know which one! Be careful not to collect nectar from a purple
         flower if it doesn't have any. Check if the nectar is equal to 1 by using
         the if block.
+      Rocket Height Course A_instruction: |
+        Follow the Design Recipe to create a function
+        rocket-height.
       Ryan - 4-5 Bee Conditionals 2_instruction: ミツバチは今すぐ蜜が欲しいのです。すべての物が花ではありません。花が隠れているかもしれないので、すべての雲の下をチェックましょう。そうすればあなたは蜜を集められます。
       Ryan - Bee Conditionals_instruction: |
         The bee only wants nectar right now.
@@ -2757,6 +2805,14 @@ ja:
         Only one last direction to worry about!
         Create a "safe-down?" function and update the "on-screen?" function so
         that it checks up, down, left, and right.
+      sample1_instruction: "Our adventurer wants to collect gems.  But she can only\nuse 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she can\nusing just 4 blocks?"
+      sample2_instruction: |
+        Use what you've learned to help bee gather all of this
+        honey using only 4 blocks.
+      sample3_instruction: Now you can help bee make all of the honey.
+      sample4_instruction: "Our adventurer has found a stash of coins in this cave.\\r\n\\r\nCan\nyou help her grab as many as she can using just 7 blocks?"
+      sample5_instruction: Help bee make all of the honey.
+      sample6_instruction: 'Challenge: Help bee make all of the honey.'
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
@@ -3360,13 +3416,17 @@ ja:
       U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
       U3 - Simple Drawing - Comments_instruction: Do this
       U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
+      U3 - Simple Drawing - Fill_instruction: Do This
       U3 - Simple Drawing - No Fill_instruction: Do this
       U3 - Simple Drawing - Order of Blocks_instruction: Do this
+      U3 - Simple Drawing - Oval_instruction: Do This
       U3 - Simple Drawing - Personal Drawing_instruction: DO This
+      U3 - Simple Drawing - Rectangle Width and Height_instruction: Do This
       U3 - Simple Drawing - Rectangle_instruction: Do This
       U3 - Simple Drawing - regular polygon_instruction: Do this
       U3 - Simple Drawing - Road Ellipse_instruction: Do This
       U3 - Simple Drawing - Road Rects and Color_instruction: Do This
+      U3 - Simple Drawing - Simple Shape Drawing_instruction: Do This
       U3 - Simple Drawing - Stroke and Stroke Weight_instruction: Do this
       U3 - Simple Drawing - text_instruction: Do This
       U3 - Simple Drawing - X and Y values_instruction: Do This
@@ -3400,6 +3460,16 @@ ja:
       U3 - Simulation - Template_instruction: |
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
+      U3 - Sprites - Intro Sprites_instruction: Do This
+      U3 - Sprites and Mod - Create  and Draw Sprite_instruction: Do This
+      U3 - Sprites and Mod - Mouse Width and Height_instruction: Do this
+      U3 - Sprites and Mod - Mouse X and Y_instruction: Do this
+      U3 - Sprites and Mod - Rand Around Mouse_instruction: Do this
+      U3 - Sprites and Mod - Rand Shape Color_instruction: Do This
+      U3 - Sprites and Mod - Shape Color_instruction: Do This
+      U3 - Sprites and Mod - two sprites_instruction: Do This
+      U3 - Sprites and Mod - Wrap Many Squares_instruction: Do This
+      U3 - Sprites and Mod - X and Y Prop_instruction: Do This
       U3 - User Input - Save getText To Variable_instruction: |
         Save the age and name
         of the user in variables (Click to see full instructions)
@@ -3476,9 +3546,21 @@ ja:
       U3 Variables consolelog_instruction: |
         Use the write block to display the value
         of size
+      U3 Variables flower example_instruction: |
+        Change the value of petalSize multiple
+        times. How does it change your drawing?
+      U3 Variables gray square_instruction: |
+        Change the value of petalSize multiple
+        times. How does it change your drawing?
+      U3 Variables make a square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
       U3 Variables misconceptions try it_instruction: |
         Test out your predictions
         from the previous level.
+      U3 Variables randomize your square_instruction: |
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
       U3 Variables write_instruction: |
         Use the write block to display the value of
         size

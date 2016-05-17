@@ -2,6 +2,8 @@
   "actor":"პერსონაჟი",
   "addCharacter":"დაამატეთ",
   "addCharacterTooltip":"პერსონაჟის დამატება სცენაზე.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"10 ქულის დამატება",
   "addPoints50":"50 ქულის დამატება",
   "addPoints100":"100 ქულის დამატება",

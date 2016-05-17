@@ -324,6 +324,13 @@ ActiveRecord::Schema.define(version: 20160517163154) do
 
   add_index "pd_attendances", ["pd_session_id"], name: "index_pd_attendances_on_pd_session_id", using: :btree
 
+  create_table "pd_course_facilitators", force: :cascade do |t|
+    t.integer "facilitator_id", limit: 4,   null: false
+    t.string  "course",         limit: 255, null: false
+  end
+
+  add_index "pd_course_facilitators", ["course"], name: "index_pd_course_facilitators_on_course", using: :btree
+
   create_table "pd_district_payment_terms", force: :cascade do |t|
     t.integer "district_id", limit: 4
     t.string  "course",      limit: 255,                         null: false
@@ -460,9 +467,10 @@ ActiveRecord::Schema.define(version: 20160517163154) do
   create_table "plc_evaluation_answers", force: :cascade do |t|
     t.string   "answer",                     limit: 255
     t.integer  "plc_evaluation_question_id", limit: 4
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
     t.integer  "plc_learning_module_id",     limit: 4
+    t.integer  "weight",                     limit: 4,   default: 1, null: false
   end
 
   add_index "plc_evaluation_answers", ["plc_evaluation_question_id"], name: "index_plc_evaluation_answers_on_plc_evaluation_question_id", using: :btree
@@ -569,14 +577,15 @@ ActiveRecord::Schema.define(version: 20160517163154) do
   end
 
   create_table "script_levels", force: :cascade do |t|
-    t.integer  "level_id",   limit: 4
-    t.integer  "script_id",  limit: 4, null: false
+    t.integer  "script_id",  limit: 4,     null: false
     t.integer  "chapter",    limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "stage_id",   limit: 4
     t.integer  "position",   limit: 4
     t.boolean  "assessment"
+    t.integer  "level_id",   limit: 4
+    t.text     "properties", limit: 65535
   end
 
   add_index "script_levels", ["level_id"], name: "index_script_levels_on_level_id", using: :btree

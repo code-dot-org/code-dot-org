@@ -2,7 +2,7 @@
  * Copyright (c) 2016 Anthony Bau.
  * MIT License.
  *
- * Date: 2016-05-11
+ * Date: 2016-05-13
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
@@ -8452,6 +8452,9 @@ Editor.prototype.showDropdown = function(socket, inPalette) {
         if (inPalette) {
           _this.populateSocket(socket, text);
           _this.redrawPalette();
+        } else if (!socket.editable()) {
+          _this.populateSocket(socket, text);
+          _this.redrawMain();
         } else {
           if (!_this.cursorAtSocket()) {
             return;
@@ -11946,7 +11949,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
   };
 
   JavaScriptParser.prototype.mark = function(indentDepth, node, depth, bounds) {
-    var argument, block, blockOpts, currentElif, declaration, element, endPosition, expression, i, j, k, known, l, len, len1, len2, len3, len4, len5, len6, len7, len8, m, match, n, nodeBoundsStart, o, p, position, prefix, property, q, r, ref, ref1, ref10, ref11, ref12, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, results, results1, results2, results3, results4, results5, results6, results7, results8, showButtons, space, statement, string, switchCase;
+    var argCount, argument, block, blockOpts, currentElif, declaration, element, endPosition, expression, i, j, k, known, l, len, len1, len2, len3, len4, len5, len6, len7, len8, m, match, maxArgs, minArgs, n, nodeBoundsStart, o, p, position, prefix, property, q, r, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref15, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, results, results1, results2, results3, results4, results5, results6, results7, results8, showButtons, space, statement, string, switchCase;
     switch (node.type) {
       case 'Program':
         ref = node.body;
@@ -12163,27 +12166,36 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
       case 'NewExpression':
         known = this.lookupKnownName(node);
         blockOpts = {};
+        argCount = node["arguments"].length;
         if (known != null ? known.fn : void 0) {
           showButtons = (known.fn.minArgs != null) || (known.fn.maxArgs != null);
+          minArgs = (ref5 = known.fn.minArgs) != null ? ref5 : 0;
+          maxArgs = (ref6 = known.fn.maxArgs) != null ? ref6 : Infinity;
         } else {
-          showButtons = this.opts.paramButtonsForUnknownFunctions;
+          showButtons = this.opts.paramButtonsForUnknownFunctions && (argCount !== 0 || !this.opts.lockZeroParamFunctions);
+          minArgs = 0;
+          maxArgs = Infinity;
         }
         if (showButtons) {
-          blockOpts.addButton = '\u21A0';
-          blockOpts.subtractButton = '\u219E';
+          if (argCount < maxArgs) {
+            blockOpts.addButton = '\u21A0';
+          }
+          if (argCount > minArgs) {
+            blockOpts.subtractButton = '\u219E';
+          }
         }
         this.jsBlock(node, depth, bounds, blockOpts);
         if (!known) {
           this.jsSocketAndMark(indentDepth, node.callee, depth + 1, NEVER_PAREN);
         } else if (known.anyobj && node.callee.type === 'MemberExpression') {
-          this.jsSocketAndMark(indentDepth, node.callee.object, depth + 1, NEVER_PAREN);
+          this.jsSocketAndMark(indentDepth, node.callee.object, depth + 1, NEVER_PAREN, null, null, known != null ? (ref7 = known.fn) != null ? ref7.objectDropdown : void 0 : void 0);
         }
-        ref5 = node["arguments"];
-        for (i = m = 0, len3 = ref5.length; m < len3; i = ++m) {
-          argument = ref5[i];
-          this.jsSocketAndMark(indentDepth, argument, depth + 1, NEVER_PAREN, null, null, known != null ? (ref6 = known.fn) != null ? (ref7 = ref6.dropdown) != null ? ref7[i] : void 0 : void 0 : void 0);
+        ref8 = node["arguments"];
+        for (i = m = 0, len3 = ref8.length; m < len3; i = ++m) {
+          argument = ref8[i];
+          this.jsSocketAndMark(indentDepth, argument, depth + 1, NEVER_PAREN, null, null, known != null ? (ref9 = known.fn) != null ? (ref10 = ref9.dropdown) != null ? ref10[i] : void 0 : void 0 : void 0);
         }
-        if (!known && node["arguments"].length === 0 && !this.opts.lockZeroParamFunctions) {
+        if (!known && argCount === 0 && !this.opts.lockZeroParamFunctions) {
           position = {
             line: node.callee.loc.end.line,
             column: node.callee.loc.end.column
@@ -12226,10 +12238,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         return this.jsSocketAndMark(indentDepth, node.argument, depth + 1);
       case 'VariableDeclaration':
         this.jsBlock(node, depth, bounds);
-        ref8 = node.declarations;
+        ref11 = node.declarations;
         results4 = [];
-        for (n = 0, len4 = ref8.length; n < len4; n++) {
-          declaration = ref8[n];
+        for (n = 0, len4 = ref11.length; n < len4; n++) {
+          declaration = ref11[n];
           results4.push(this.mark(indentDepth, declaration, depth + 1));
         }
         return results4;
@@ -12251,10 +12263,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         return this.jsSocketAndMark(indentDepth, node.test, depth + 1);
       case 'ObjectExpression':
         this.jsBlock(node, depth, bounds);
-        ref9 = node.properties;
+        ref12 = node.properties;
         results5 = [];
-        for (o = 0, len5 = ref9.length; o < len5; o++) {
-          property = ref9[o];
+        for (o = 0, len5 = ref12.length; o < len5; o++) {
+          property = ref12[o];
           this.jsSocketAndMark(indentDepth, property.key, depth + 1);
           results5.push(this.jsSocketAndMark(indentDepth, property.value, depth + 1));
         }
@@ -12263,10 +12275,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
       case 'SwitchStatement':
         this.jsBlock(node, depth, bounds);
         this.jsSocketAndMark(indentDepth, node.discriminant, depth + 1);
-        ref10 = node.cases;
+        ref13 = node.cases;
         results6 = [];
-        for (p = 0, len6 = ref10.length; p < len6; p++) {
-          switchCase = ref10[p];
+        for (p = 0, len6 = ref13.length; p < len6; p++) {
+          switchCase = ref13[p];
           results6.push(this.mark(indentDepth, switchCase, depth + 1, null));
         }
         return results6;
@@ -12284,10 +12296,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
             depth: depth + 1,
             prefix: prefix
           });
-          ref11 = node.consequent;
+          ref14 = node.consequent;
           results7 = [];
-          for (q = 0, len7 = ref11.length; q < len7; q++) {
-            statement = ref11[q];
+          for (q = 0, len7 = ref14.length; q < len7; q++) {
+            statement = ref14[q];
             results7.push(this.mark(indentDepth, statement, depth + 2));
           }
           return results7;
@@ -12311,10 +12323,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         break;
       case 'ArrayExpression':
         this.jsBlock(node, depth, bounds);
-        ref12 = node.elements;
+        ref15 = node.elements;
         results8 = [];
-        for (r = 0, len8 = ref12.length; r < len8; r++) {
-          element = ref12[r];
+        for (r = 0, len8 = ref15.length; r < len8; r++) {
+          element = ref15[r];
           if (element != null) {
             results8.push(this.jsSocketAndMark(indentDepth, element, depth + 1, null));
           } else {

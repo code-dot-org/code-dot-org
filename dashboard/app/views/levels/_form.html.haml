@@ -29,7 +29,7 @@
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
     = render partial: 'levels/editors/free_response', locals: {f: f} if @level.is_a? FreeResponse
     = render partial: 'levels/editors/script_completion', locals: {f: f} if @level.is_a? ScriptCompletion
-
+    = render partial: 'levels/editors/standalone_video', locals: {f: f} if @level.is_a? StandaloneVideo
     = render partial: 'levels/editors/pixelation', locals: {f: f} if @level.is_a? Pixelation
     = render partial: 'levels/editors/text_compression', locals: {f: f} if @level.is_a? TextCompression
     = render partial: 'levels/editors/odometer', locals: {f: f} if @level.is_a? Odometer

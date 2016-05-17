@@ -1030,4 +1030,70 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select 'button', I18n.t('teacher.panel.example')
   end
 
+  test "should present single available level for single-level scriptlevels" do
+    level = create :maze
+    get_show_script_level_page(create(:script_level, levels: [level]))
+
+    assert_equal assigns(:level), level
+  end
+
+  test "should present first available level if missing properties" do
+    level = create :maze
+    level2 = create :maze
+    get_show_script_level_page(create(:script_level, levels: [level, level2]))
+
+    assert_equal assigns(:level), level
+  end
+
+  test "should present first level if active" do
+    level = create :maze, name: 'maze 1'
+    level2 = create :maze, name: 'maze 2'
+    get_show_script_level_page(create(:script_level, levels: [level, level2],
+        properties: '{"maze 2": {"active": false}}'))
+    assert_equal assigns(:level), level
+  end
+
+  test "should present second level if first is inactive" do
+    level = create :maze, name: 'maze 1'
+    level2 = create :maze, name: 'maze 2'
+    get_show_script_level_page(create(:script_level, levels: [level, level2],
+        properties: '{"maze 1": {"active": false}}'))
+    assert_equal assigns(:level), level2
+  end
+
+  test "should raise if all levels inactive" do
+    level = create :maze, name: 'maze 1'
+    level2 = create :maze, name: 'maze 2'
+    assert_raises do
+      get_show_script_level_page(create(:script_level, levels: [level, level2],
+          properties: '{"maze 1": {"active": false}, "maze 2": {"active": false}}'))
+    end
+  end
+
+  test "should present level with activity" do
+    sign_in @student
+    level = create :maze, name: 'maze 1'
+    level2 = create :maze, name: 'maze 2'
+    create :activity, user: @student, level_id: level.id,
+        level_source: create(:level_source, level: level, data: 'level source')
+
+    get_show_script_level_page(create(:script_level, levels: [level, level2],
+        properties: '{"maze 1": {"active": false}}'))
+    assert_equal assigns(:level), level
+  end
+
+  test "should present level with most recent activity" do
+    sign_in @student
+    level = create :maze, name: 'maze 1'
+    level2 = create :maze, name: 'maze 2'
+    create :activity, user: @student, level_id: level2.id,
+        level_source: create(:level_source, level: level2, data: 'level source')
+    create :activity, user: @student, level_id: level.id,
+        level_source: create(:level_source, level: level, data: 'level source')
+
+    get_show_script_level_page(create(:script_level, levels: [level, level2],
+        properties: '{"maze 1": {"active": false}}'))
+    assert_equal assigns(:level), level
+  end
+
 end

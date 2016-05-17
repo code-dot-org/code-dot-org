@@ -58,12 +58,12 @@ tr:
     invitations:
       send_instructions: '%{email} adresine davetiye epostası gönderildi.'
       invitation_token_invalid: Sağlanan davet işareti geçerli değil!
-      updated: Parolan başarıyla ayarlandı. Şimdi oturum açtın.
+      updated: Parolanız başarıyla değiştirildi. Şimdi giriş yaptınız.
       no_invitations_remaining: Davet kalmadı
       invitation_removed: Davetin kaldırıldı.
       new:
         header: Davet gönder
-        submit_button: Bir davetiye gönder
+        submit_button: Davetiye gönder
       edit:
         header: Parolanı belirle
         submit_button: Parolamı belirle

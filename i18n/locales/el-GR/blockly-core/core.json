@@ -25,7 +25,7 @@
   "COLOUR_RGB_RED":"κόκκινο",
   "COLOUR_RGB_TITLE":"χρωμάτισε με",
   "COLOUR_RGB_TOOLTIP":"Δημιούργησε ένα χρώμα με το συγκεκριμένο ποσό κόκκινου, πράσινου και μπλε.  Όλες οι τιμές πρέπει να είναι μεταξύ 0 και 100.",
-  "CONFIRM_CREATE_VARIABLE":"Create",
+  "CONFIRM_CREATE_VARIABLE":"Δημιουργία",
   "CONFIRM_DELETE_FUNCTION_MESSAGE":"Προσοχή! Είστε βέβαιοι ότι θέλετε να διαγράψετε το %1;",
   "CONFIRM_RENAME_VARIABLE":"Μετονομασία",
   "CONTRACT_EDITOR_HEADER":"Συνταγή Σχεδιασμού",
