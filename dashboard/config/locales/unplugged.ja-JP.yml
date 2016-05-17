@@ -85,7 +85,7 @@
         desc: "このレッスンでは、種を蒔く行為を例にして、日常生活においてどのようにアルゴリズムが使われているかを学びます。また、コンピューター科学で使われるアルゴリズムの重要さについてもお話します。"
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation
+        title: "ピラミッドをたてよう"
         desc: Students build a structure using only provided supplies. Structures
           must complete a task (reach a certain height or bear a certain weight),
           and students discuss the idea of being persistent when things get complicated.

@@ -2,6 +2,8 @@
   "actor": "aisteoir",
   "addCharacter": "cuir leis an radharc:",
   "addCharacterTooltip": "Cuireann seo carachtar leis an radharc.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location.",
   "addPoints10": "bronn 10 bpointe",
   "addPoints50": "bronn 50 pointe",
   "addPoints100": "bronn 100 pointe",
@@ -248,7 +250,7 @@
   "makeProjectileIAProjectile4": "cuir an chalóg shneachta",
   "makeProjectileIAProjectile5": "cuir an criostal oighir",
   "makeProjectileTooltip": "Cuir an teilgeán atá tar éis tuairteála i bhfolach, nó preab é.",
-  "makeYourOwn": "Déan d'Aip Féin le Súgradh is Dáiríre",
+  "makeYourOwn": "Déan d'Aip Féin sa Spraotharlann",
   "moveDirectionDown": "síos",
   "moveDirectionLeft": "ar chlé",
   "moveDirectionRight": "ar dheis",
@@ -764,7 +766,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Ní mór duit 20 Dróideach Luiche a fháil. Úsáid an t-ordú \"cuir Dróideach Luiche leis\" laistigh den teagmhas \"nuair a fhaightear Dróideach Luiche\" le beirt (nó níos mó) Dróideach Luiche a chruthú nuair a fhaigheann tú ceann amháin.",
   "failedMultiplyCharactersTimeoutGotSome": "Comhghairdeas, chuir tú cód leis an gclár a dhéanann Dróidigh Luiche nua. Anois is féidir leat dul ar aghaidh go dtí an chéad dúshlán eile, nó fill ar an gceann seo agus déan iarracht 20 Dróideach Luiche a fháil. Déan an dúshlán níos éasca trí níos mó acu a chruthú! (Brúigh agus coinnigh síos na saighde ar do mhéarchlár (nó ar an scáileán) chun dlús a chur leis.)",
   "failedChangeSettingTimeout": "Faigh trí Phíolóta Ceannairceach le dul ar aghaidh.",
-  "failedChangeSettingSettings": "Is leatsa an cluiche seo. Chun an dúshlán a chríochnú, ní mór duit do dhróideach a athrú agus a luas a shocrú.",
-  "addGoal": "add goal",
-  "addGoalTooltip": "Add a goal to the scene at the specified location."
+  "failedChangeSettingSettings": "Is leatsa an cluiche seo. Chun an dúshlán a chríochnú, ní mór duit do dhróideach a athrú agus a luas a shocrú."
 }
