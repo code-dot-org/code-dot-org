@@ -23,9 +23,11 @@
           future: "現在までの日付にする"
   hello: "世界の皆さん、こんにちは"
   welcome_back: Welcome Back, %{name}
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: "送信"
   unsubmit: "取り消す"
-  previous_page: Previous page
+  previous_page: "前のページ"
   next_page: "次のページ"
   cancel: "キャンセル"
   okay: "オッケー"
@@ -156,8 +158,6 @@
         subject: "%{teacher_name} のクラスを Code.org で参加 ！%{teacher_name}"
       student_disassociated:
         subject: "あなたはCode.org の通知: %{student_name} で、学生として関連付けられていません"
-      teacher_disassociated:
-        subject: "あなたは、Code.org の通知: %{teacher_name} で、先生として関連付けられていません"
   reports:
     error:
       access_denied: "統計情報へのアクセス権がありません"
@@ -341,13 +341,43 @@
     heading_hoc2014: "<h2>Hour of Code</h2> <h1>全年齢対象</h1>"
     heading_elementary: "<h2>20時間コース</h2> <h1>全年齢の初心者対象</h1>"
     heading_apps: "<h2>お楽しみ</h2><h1>みんなの</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "次のステップへの準備はできましたか? JavaScript ツール （高校生向け）"
     heading_legacy: "<h1>全年齢対象のコース</h1>"
     your_gallery: "ギャラリー"
     no_primary_course: "コード スタジオ でコースを見る"
     choose_next_course: Code Studio コースを以下のリストから一つ試す
     print_certificate: "証書を印刷"
+    announcement_title: Announcements
+    announcement_view_all: View all
+    announcement_message: 'We''ve started to measure student learning in Courses 1-4
+      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
+      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
+      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
+      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_button: "もっと詳しく知る"
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: "コード スタジオで学ぶ"
     description: "誰もがコンピュータサイエンスを学ぶことができます。ゲーム、アプリ、アートをコードで作ろう。"
@@ -365,10 +395,14 @@
       アドバイザー</a> にコード スタジオのサポートを感謝しています。
     help_from_html: "このチュートリアルの作成には Google, Microsoft, Facebook, Twitter のエンジニアが協力しています。"
     help_from_html_old: Google・Microsoft・Facebook・Twitterのエンジニアがこのチュートリアルを作るのを手伝いました。
-    art_from_html: Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All
-      Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br
+      />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br
+      />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice
+      Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br
+      />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
+      Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark
+      and &copy; 2015 Cartoon Network.
     art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights
       Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
       All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights
@@ -377,8 +411,8 @@
       Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year}
       Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball
       is trademark and &copy; 2015 Cartoon Network.
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
-      GNU LGPL 2.1</a>.
+    code_from_html: Code.org は <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      GNU LGPL 2.1</a> ライセンスのp5.play を使用しています｡
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo　と　Hour
       of Code&reg; は Code.org の商標です"
@@ -457,12 +491,9 @@
   upsell:
     applab:
       title: "アプリ ラボ"
-      body: App Lab is a programming environment where you can make simple apps. Design
-        an app, code with blocks or JavaScript to make it work, then share your app
-        in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
-      audience: Ages 13+
+      body: "アプリラボは、シンプルなアプリケーションを作ることができるプログラミング環境です。アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。"
+      body_short: "アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。"
+      audience: 13才以上対象
       cta: Learn how
     hoc:
       title: "古典的な迷路"
@@ -492,7 +523,7 @@
       body: "プログラムを通して、Minecraftの世界を探検しましょう。"
     unplugged:
       title: Unplugged Lessons
-      audience: Ages 6+
+      audience: 6歳以上対象
       body: We've compiled a list of unplugged lessons for you to use in your classroom.
         Now you can teach the fundamentals of computer science, whether you have computers
         in your classroom or not! Try using these lessons as a stand-alone course
@@ -519,7 +550,7 @@
     report_bug: "バグを報告"
     support: "説明を見る"
     support_url: "//support.code.org"
-    help_resources: Help and Resources
+    help_resources: "ヘルプとリソース"
   multi:
     wrong_title: "不正解"
     wrong_body: "不正解です。やりなおしてみてください。"
@@ -529,28 +560,29 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: "ありがとうございます"
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: "回答していただきありがとうございました。"
     correct_title: "ありがとうございます"
-    correct_body: Thank you for submitting an answer.
+    correct_body: "回答していただきありがとうございました。"
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: "ありがとうございます"
-    wrong_body: Thank you for submitting answers.
+    wrong_body: "回答していただきありがとうございました。"
     correct_title: "ありがとうございます"
-    correct_body: Thank you for submitting an answer
+    correct_body: "回答していただきありがとうございました。"
   level_group-submittable:
     wrong_title: "ありがとうございます"
-    wrong_body: Thank you for submitting answers.
+    wrong_body: "回答していただきありがとうございました。"
     correct_title: "ありがとうございます"
-    correct_body: Thank you for submitting answers.
+    correct_body: "回答していただきありがとうございました。"
     unsubmit-title: Unsubmit your assessment
     unsubmit-body: Unsubmitting your assessment will reset the submitted time and
       date.  Are you sure?
-    submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
-      assessment after submitting it.  Are you sure?
-    submit-complete-title: Submit your assessment
+    submit-incomplete-title: "評価を提出します。"
+    submit-incomplete-body: |
+      いくつかの質問が回答されてないままになっています。このままでよろしいですか?
+      ※投稿したあとで評価の再編集はできません。
+    submit-complete-title: "評価を提出します。"
     submit-complete-body: You cannot edit your assessment after submitting it.  Are
       you sure?
   match:
@@ -626,7 +658,7 @@
     completed_perfect: "完成、完璧"
     furthest_level_attempted: "到達レベル"
     assessment: "評価"
-    submitted: submitted
+    submitted: "投稿しました。"
   studio:
     courses_working_on: "試行中のコース"
     completed_courses: "完了したコース"
@@ -644,6 +676,10 @@
     share: "共有"
     share_title: "プロジェクトを共有"
     share_copy_link: "リンクをコピー:"
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: "閉じる"
     more: "それ以上"
     name: "名前"
@@ -685,7 +721,23 @@
         detail: "報告の対象となるコンテンツについて、できるかぎり多くの詳細を提供してください。"
         acknowledge: "この情報を送信することにより、報告された内容は %{link_start_privacy}個人情報保護方針%{link_end}
           および %{link_start_tos}利用規約%{link_end}に基づき、処理されることに同意したとみなされます。"
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
   components:
     icon_library:
       search_placeholder_text: "アイコンの検索.."
       no_icons_found: "アイコンが見つかりませんでした。"
+  flex_category:
+    required: "概要"
+    content: Content
+    practice: Teacher Practices

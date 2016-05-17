@@ -1,7 +1,9 @@
 {
   "actor": "キャラ",
   "addCharacter": "加える",
-  "addCharacterTooltip": "シーンにキャラクターを加える",
+  "addCharacterTooltip": "シーンにキャラクターを加えましょう。",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location.",
   "addPoints10": "10ポイントを追加",
   "addPoints50": "50ポイントを追加",
   "addPoints100": "100ポイントを追加",
@@ -23,7 +25,7 @@
   "backgroundTennis": "テニス",
   "backgroundWinter": "ふゆ",
   "calloutPutCommandsHereRunStart": "ここに、プログラムの起動時に実行するプログラムを配置",
-  "calloutBlocklyPlaceGoUpHere": "上がるにはここへ「上がる」ブロックを置きます。",
+  "calloutBlocklyPlaceGoUpHere": "上がるにはここに「上がる」ブロックを置きます。",
   "calloutClickEvents": "イベント関数ブロックを見るにはイベントヘッダーをクリックします。",
   "calloutUseArrowButtons": "これらのボタンを押すか、キーボードの矢印キーを使って移動イベントを呼び出しましょう。",
   "calloutUseArrowButtonsAutoSteer": "あなたが書いたコードは隠れてしまっていますが、やじるしキーをつかって動かすことができます。",
@@ -58,7 +60,7 @@
   "continue": "次へ",
   "decrementPlayerScore": "減点する",
   "defaultSayText": "ここに入力",
-  "dropletBlock_addCharacter_description": "シーンにキャラクターを加える",
+  "dropletBlock_addCharacter_description": "シーンにキャラクターを加えましょう。",
   "dropletBlock_addCharacter_param0": "タイプ",
   "dropletBlock_addCharacter_param0_description": "あなたが選んだキャラクター('おまかせ'、'ストームトルーパー'、'反乱軍パイロット（rebelpilot）'、'パッファーピッグ'、'マイノック'、'マウスドロイド'、'トーントーン'、'プロボット') を追加してください。",
   "dropletBlock_addPoints_description": "スコアへポイントを追加または削除します。",
@@ -764,7 +766,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "20匹のマウスドロイドをつかまえてください。\"when get Mouse Droid\"（マウスドロイドをつかまえた時）イベントの中の \"add a Mouse Droid\"（マウスドロイドを１匹追加）コマンドをつかって、1匹つかまえるたびに、２匹(または2匹以上) のマウスドロイドが追加されるようにしましょう。",
   "failedMultiplyCharactersTimeoutGotSome": "おめでとうございます。マウスドロイドをつくるコードが追加されました。次のパズルへすすむか、または20匹のマウスドロイドをつかまえるパズルに再ちょうせんしてください。より多くのマウスドロイドを追加すると、ゲームが簡単になります。はやく動くには、キーボード (またはスクリーン) のやじるしを押しつづけてください。",
   "failedChangeSettingTimeout": "上へ動く3つの反乱軍パイロットを取得します。",
-  "failedChangeSettingSettings": "あなだだけのゲームをつくりましょう。この章を終わらせるには、ドロイドを変えてスピードを設定してください。",
-  "addGoal": "add goal",
-  "addGoalTooltip": "Add a goal to the scene at the specified location."
+  "failedChangeSettingSettings": "あなだだけのゲームをつくりましょう。この章を終わらせるには、ドロイドを変えてスピードを設定してください。"
 }

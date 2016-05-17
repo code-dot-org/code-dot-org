@@ -23,9 +23,11 @@ ga:
           future: 'earráid - dáta sa todhchaí'
   hello: Dia dhuit a dhomhain
   welcome_back: 'Fáilte ar ais a %{name}'
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Seol
   unsubmit: Dísheol
-  previous_page: Previous page
+  previous_page: An leathanach roimhe seo
   next_page: An chéad leathanach eile
   cancel: Cealaigh
   okay: Ceart go leor
@@ -154,8 +156,6 @@ ga:
         subject: 'Cláraigh le rang de chuid %{teacher_name} ar Code.org!'
       student_disassociated:
         subject: "Fógra ó Code.org: D'fhág %{student_name} do rang."
-      teacher_disassociated:
-        subject: 'Fógra ó Code.org: Ní hé/hí %{teacher_name} do mhúinteoir a thuilleadh.'
   reports:
     error:
       access_denied: Níl cead agat staitisticí a bhaineann leis an duine seo a fheiceáil
@@ -226,10 +226,10 @@ ga:
       finished_hoc: Chríochnaigh mé an Uair Chódála
       sign_in_to_save: Logáil isteach le do dhul chun cinn a shábháil
       free_play:
-        playlab: Déan aip Play Lab
+        playlab: Déan aip sa Spraotharlann
         artist: Tarraing pictiúr
         calculate: Calculate something
-        applab: Déan aip App Lab
+        applab: Déan aip sa Spraotharlann
     user:
       classroom: Leathanach Baile do Mhúinteoirí
       district_dashboard: Painéal an Scoilcheantair
@@ -332,6 +332,23 @@ ga:
     no_primary_course: Bain triail as cúrsa sa Stiúideo Códála
     choose_next_course: Bain triail as cúrsa sa Stiúideo Códála ón liosta thíos
     print_certificate: Priontáil Teastas
+    announcement_title: Fógraí
+    announcement_view_all: Féach uile
+    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+    announcement_button: Tuilleadh eolais
+    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: Foghlaim sa Stiúideo Códála
     description: Is féidir le haon duine an ríomheolaíocht a fhoghlaim. Déan cluichí, aipeanna, agus ealaín as cód.
@@ -404,7 +421,7 @@ ga:
     title: "Cliceáil 'Rith' chun mo ríomhchlár a fheiceáil"
     bounce_og_title: Féach ar mo Chluiche Liathróide
     flappy_og_title: Féach ar mo Chluiche Flappy
-    studio_og_title: "Féach ar m'Aip Súgradh is Dáiríre"
+    studio_og_title: Féach ar an aip a rinne mé sa Spraotharlann
     check_out_what_i_made: Féach an rud a rinne mé
     og_description: Mise féin a scríobh an cód ar Code.org
     phone_number_not_allowed: Dealraíonn sé go bhfuil uimhir ghutháin ann. Déan iarracht an téacs a athrú.
@@ -450,16 +467,16 @@ ga:
     starwars:
       title: Star Wars
     infinity:
-      title: 'Infinity: Súgradh is Dáiríre'
-      body: Úsáid Súgradh is Dáiríre chun scéal nó cluiche a chruthú ina bhfuil carachtair Disney Infinity.
+      title: 'Infinity: Spraotharlann'
+      body: Úsáid an Spraotharlann chun scéal nó cluiche a chruthú ina bhfuil carachtair Disney Infinity.
     minecraft:
       title: Minecraft
       body: Taiscéal domhan Minecraft le cód.
     unplugged:
-      title: Unplugged Lessons
-      audience: Ages 6+
-      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
-      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
+      title: Ceachtanna Díphlugáilte
+      audience: Aois 6+
+      body: Bhailíomar liosta de cheachtanna díphlugáilte is féidir a úsáid i do sheomra ranga. Anois, beidh tú in ann buntús na ríomheolaíochta a mhúineadh, is cuma mura bhfuil ríomhairí i do sheomra ranga! Bain úsáid as na ceachtanna seo mar chúrsa saorsheasaimh nó mar chomhlánú ar aon chúrsa ríomheolaíochta.
+      body_short: 'Mura bhfuil ríomhairí agat, bain triail as na ceachtanna "díphlugáilte" seo i do sheomra ranga.'
   gallery:
     students_drew_these_with_code: Tharraing daltaí na pictiúir seo le cód!
     students_made_these_with_code: Rinne daltaí iad seo le cód!
@@ -503,12 +520,12 @@ ga:
     wrong_body: Go raibh maith agat as do fhreagraí.
     correct_title: Go raibh maith agat
     correct_body: Go raibh maith agat as do fhreagraí.
-    unsubmit-title: Unsubmit your assessment
-    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
-    submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
-    submit-complete-title: Submit your assessment
-    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
+    unsubmit-title: Dísheol do mheasúnú
+    unsubmit-body: Athshocrófar an dáta seolta má dhísheolann tú do mheasúnú. An bhfuil tú cinnte?
+    submit-incomplete-title: Seol do mheasúnú
+    submit-incomplete-body: "D'fhág tú roinnt freagraí bán. Ní féidir leat do mheasúnú a chur in eagar tar éis duit é a sheoladh. An bhfuil tú cinnte?"
+    submit-complete-title: Seol do mheasúnú
+    submit-complete-body: Ní féidir leat do mheasúnú a chur in eagar tar éis duit é a sheoladh. An bhfuil tú cinnte?
   match:
     wrong_title: Réiteach mícheart
     wrong_body: Chuir tú réiteach mícheart isteach. Déan iarracht eile!
@@ -600,6 +617,9 @@ ga:
     share: Comhroinn
     share_title: Comhroinn do thogra
     share_copy_link: 'Cóipeáil an nasc:'
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Dún
     more: Tuilleadh
     name: Ainm
@@ -639,7 +659,21 @@ ga:
           other: Eile
         detail: Tabhair dúinn an méid is féidir mionsonraí maidir leis an ábhar á thuairisciú.
         acknowledge: 'Agus na sonraí seo á seoladh, glacaim leis go n-úsáidfear iad de réir théarmaí %{link_start_privacy}an Pholasaí Príobháideachais%{link_end} agus de réir na %{link_start_tos}dTéarmaí Seirbhíse%{link_end}'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
   components:
     icon_library:
       search_placeholder_text: Lorg deilbhín...
       no_icons_found: Níor aimsíodh aon deilbhíní
+  flex_category:
+    required: Foramharc
+    content: Content
+    practice: Teacher Practices

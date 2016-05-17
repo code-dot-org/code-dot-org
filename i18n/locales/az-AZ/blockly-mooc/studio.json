@@ -2,6 +2,8 @@
   "actor":"personaj",
   "addCharacter":"əlavə et",
   "addCharacterTooltip":"Səhnəyə bir personaj əlavə edin.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"10 xal əlavə et",
   "addPoints50":"50 xal əlavə et",
   "addPoints100":"100 xal əlavə et",

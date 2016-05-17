@@ -2,6 +2,8 @@
   "actor":"учесник",
   "addCharacter":"додај",
   "addCharacterTooltip":"Додајте лик на сцену.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"додај 10 poena",
   "addPoints50":"додај 50 poena",
   "addPoints100":"додај 100 поена",

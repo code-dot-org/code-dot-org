@@ -2,6 +2,8 @@
   "actor":"aktore",
   "addCharacter":"gehitu",
   "addCharacterTooltip":"Gehitu pertsonaia eszenatokira.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"gehitu 10 puntu",
   "addPoints50":"gehitu 50 puntu",
   "addPoints100":"gehitu 100 puntu",

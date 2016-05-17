@@ -264,6 +264,8 @@ es-ES:
   homepage_banner_privacy_link: Aprende más
   homepage_banner_20k_teachers: Se formaron 20.000 profesores que ahora enseñan Ciencias de la Informática en clase.
   homepage_banner_20k_teachers_link: Aprende más
+  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: Hora del Codigo
   homepage_slot_text_blurb_hoc: Cualquiera puede aprender. Comienza hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código
@@ -289,6 +291,7 @@ es-ES:
   homepage_slot_text_link_stats: Ver las estadísticas
   homepage_slot_text_link_buy: Involucrarse
   homepage_slot_text_link_donate: Hacer una donación
+  homepage_slot_text_link_shop: 'T-shirts, hats, & more'
   homepage_header_codestudio: Creaciones de los estudiante de Code Studio
   homepage_header_donors: Code.org agradece a sus colaboradores
   homepage_donors_seall: Ver todo
@@ -340,10 +343,10 @@ es-ES:
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Arrastra y suelta los bloques y utiliza JavaScript.
   starwars_javascript_specs: Sólo en inglés | Navegadores Actuales | Mayores de 11 años
-  starwars_javascript_start_button: Prueba ahora
+  starwars_javascript_start_button: Intentalo ahora
   starwars_blocks_title: Bloques
   starwars_blocks_description: Arrastra y suelta los bloques.
-  starwars_blocks_specs: Muchos lenguajes|Smartphones, tablets, navegadores actuales | Edad 6-106
+  starwars_blocks_specs: varios lenguajes|smartphones, tablets, navegadores actuales | Edad 6-106
   starwars_blocks_start_button: Aprenda más
   starwars_watch_videos: Antes de empezar, ve uno de estos vídeos inspiradores
   starwars_speak_languages: ¿Hablas otro idioma?
@@ -474,9 +477,9 @@ es-ES:
   dashboard_action_remove_confirm: ¿Eliminar?
   dashboard_action_done: Hecho
   dashboard_action_required: obligatorio
-  dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
-  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_assessments_view: 'Ver evaluaciones en:'
+  dashboard_assessments_none: Sin evaluaciones
+  dashboard_filter_by_stage: 'Filtrado por etapa:'
   dashboard_filter_all: Todos
   dashboard_download_csv: Descargar CSV
   dashboard_navigation_home_page: Página de inicio del profesor
@@ -503,10 +506,10 @@ es-ES:
   dashboard_progress_completed_perfect: completado, perfecto
   dashboard_progress_furthest_level_attempted: Nivel más alto intentado
   dashboard_progress_submitted: enviado
-  dashboard_progress_view: 'View progress in:'
-  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_progress_view: 'Ver progreso en:'
+  dashboard_progress_student_in_script: 'Información de progreso para %{student_name} in %{script_name}'
   dashboard_responses_view: 'Ver respuestas de texto:'
-  dashboard_responses_none: No text responses
+  dashboard_responses_none: Sin respuestas de texto
   dashboard_sections_new_section: Nueva sección
   dashboard_sections_jumbotron_instruction: Crea nuevas secciones y añade alumnos a ellas. Las secciones ayudan a organizar a los alumnos en grupos más pequeños para que puedas seguir su progreso y administrar sus cuentas.
   dashboard_sections_table_section: Sección
@@ -523,18 +526,18 @@ es-ES:
   dashboard_sections_print_secrets: Entonces puedes imprimir una hoja de tarjetas que contengan información de las cuentas para distribuirlas entre tus alumnos.
   dashboard_sections_switch_section: 'Cambiar de sección:'
   dashboard_sections_close: Cerrar
-  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
-  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
-  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
-  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
-  dashboard_sections_move_students: Move students
-  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
-  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
+  dashboard_sections_move_students_desc: Seleccionar estudiantes para pasar a una nueva sección. Mover estudiantes no borrará su progreso.
+  dashboard_sections_one_per_teacher: Los estudiantes solo pueden estar en una sección para cada profesor. Sus estudiantes serán agregados a esta nueva sección y dejarán la sección anterior.
+  dashboard_sections_move_to_section: 'Avanzar a sección:'
+  dashboard_sections_enter_code: 'Ingresar código de sección:'
+  dashboard_sections_code_placeholder: código de 6 caracteres (ABCDEF)
+  dashboard_sections_other_section: Otra Sección
+  dashboard_sections_both_sections: ¿Desearía que el(los) estudiante(s) permanezcan en ambas secciones?
+  dashboard_sections_yes_both: Sí, deseo copiar al (los) estudiante (s) para que permanezcan en la sección actual Y en la nueva sección
+  dashboard_sections_no_move: No, deseo mover al (a los) estudiante (s) para que solo permanezcan en la nueva sección.
+  dashboard_sections_move_students: Mover alumnos
+  dashboard_error_none_selected: No seleccionó a ningún estudiante para mover. Por favor seleccione al menos a un estudiante.
+  dashboard_error_other_section: 'Si están moviendo estudiantes entre sus propias secciones, seleccione su sección en la lista desplegable. Solo seleccione "Otra Sección" para mover sus estudiantes a la sección de un profesor diferente.'
   dashboard_students_add_student: Añadir alumno
   dashboard_students_add_students: Añadir varios alumnos
   dashboard_students_add_multiple: 'Escribe o pega los nombres de sus alumnos, uno por línea:'
@@ -637,6 +640,8 @@ es-ES:
   dashboard_announce_view_all: Ver todo
   dashboard_announce_message: '<b>6 de enero, 2015</b> - Aprender más allá de una Hora de Code en tu clase. Comienza un nuevo curso de introducción y realiza un seguimiento del progreso del alumno.'
   dashboard_announce_button_text: Aprende más
+  dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: '¡La Hora de Code está aquí: del 8 al 14 de diciembre!'
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Informática
   learn_more: Aprenda más
@@ -746,9 +751,27 @@ es-ES:
   course3_name: Curso 3
   course4_name: Curso 4
   accelerated_name: Curso acelerado
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: Principios de CS Unidad 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
   cspunit3_gradelevel: Grados 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  20-hour_name: Curso acelerado
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Laberinto clásico
+  iceage_name: La Era de Hielo
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Matemáticas
+  hoc_category_name: Hora de Code
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
   applab_name: Laboratorio de Aplicaciones
   applab_gradelevel: Edad 13+
   applab_shortdescription_congrats: App Lab es un entorno de programación en el que puedes hacer aplicaciones simples. Diseña una aplicación, codifícala con bloques o JavaScript para hacerla funcionar y luego compartela en segundos

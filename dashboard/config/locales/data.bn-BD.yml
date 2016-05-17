@@ -44,7 +44,7 @@
           Jigsaw: "ধাপ ১"
         Step Levels:
           desc: "গোলকধাঁধা (বেটা)"
-          MazeStep: Stage Step
+          MazeStep: "স্তরের ধাপ"
         edit-code:
           desc: "কোড বদলাও (বেটা)"
           MazeEC: "ধাপ ১"
@@ -66,7 +66,7 @@
           Jigsaw: "ধাপ ১"
         step:
           desc: "গোলকধাঁধা (বেটা)"
-          MazeStep: Stage Step
+          MazeStep: "স্তরের ধাপ"
         wordsearch:
           desc: "বানান-পটু মৌমাছি (বেটা)"
           WordSearch: "ধাপ ১"
@@ -744,7 +744,16 @@
         csp_applab_functions_parameters: Functions with Parameters
         csp_applab_loops: Loops
         csp_applab_turtle: Turtle Programming
+        csp_concept_bigdata_medicine: Data & Medicine
+        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
+        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
+        csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
+        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
+          & Reliability'
+        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: A Little Bit About Pixels
+        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: Color pixelation widget - Part 1
         csp_pixelation_color_2: Color pixelation widget - Part 2
         csp_pixelation_color_3: Color pixelation widget - Part 3

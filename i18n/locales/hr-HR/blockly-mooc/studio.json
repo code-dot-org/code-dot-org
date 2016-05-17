@@ -2,6 +2,8 @@
   "actor":"lik",
   "addCharacter":"dodaj",
   "addCharacterTooltip":"Dodaje lik na scenu.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"dodaj 10 bodova",
   "addPoints50":"dodaj 50 bodova",
   "addPoints100":"dodaj 100 bodova",

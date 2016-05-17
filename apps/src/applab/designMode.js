@@ -38,7 +38,7 @@ designMode.setupReduxSubscribers = function (store) {
     state = store.getState();
 
     if (state.screens.currentScreenId !== lastState.screens.currentScreenId) {
-      onScreenChange(state.screens.currentScreenId);
+      renderScreens(state.screens.currentScreenId);
     }
 
     if (state.interfaceMode !== lastState.interfaceMode) {
@@ -925,7 +925,7 @@ designMode.createScreen = function () {
 /**
  * Changes the active screen by triggering a 'CHANGE_SCREEN' action on the
  * Redux store.  This change propagates across the app, updates the state of
- * React-rendered components, and eventually calls onScreenChange, below.
+ * React-rendered components, and eventually calls renderScreens, below.
  * @param {!string} screenId
  */
 designMode.changeScreen = function (screenId) {
@@ -933,8 +933,8 @@ designMode.changeScreen = function (screenId) {
 };
 
 /**
- * Responds to changing the active screen by toggling all screens to be
- * non-visible, unless they match the provided screenId, and opens the element
+ * Given the currentScreenId in our redux store, toggles all screens to be
+ * non-visible, unless they match the provided screenId, with the element
  * property editor for the new screen.
  *
  * This method is called in response to a change in the application state.  If
@@ -942,7 +942,10 @@ designMode.changeScreen = function (screenId) {
  *
  * @param {!string} screenId
  */
-function onScreenChange(screenId) {
+function renderScreens(screenId) {
+  // Update which screen is shown in run mode
+  Applab.changeScreen(studioApp.reduxStore.getState().screens.currentScreenId);
+
   elementUtils.getScreens().each(function () {
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
@@ -971,7 +974,7 @@ designMode.loadDefaultScreen = function () {
   if (elementUtils.getScreens().length === 0) {
     defaultScreen = designMode.createScreen();
   } else {
-    defaultScreen = elementUtils.getId(elementUtils.getScreens()[0]);
+    defaultScreen = elementUtils.getDefaultScreenId();
   }
   designMode.changeScreen(defaultScreen);
 };
