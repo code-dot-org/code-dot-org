@@ -817,7 +817,7 @@ module.exports = {
       editCode: true,
       xml: '',
       // Use an asset path which we can access so that image loading will succeed
-      assetPathPrefix: '//localhost:8001/apps/test/assets/',
+      assetPathPrefix: '//localhost:8001/apps/test/integration/assets/',
       levelHtml: '' +
       '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern" style="width: 320px; height: 450px; display: block;">' +
         '<div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
@@ -825,7 +825,7 @@ module.exports = {
         '</div>' +
       '</div>',
       runBeforeClick: function (assert) {
-        var flappyUrl = '//localhost:8001/apps/test/assets/applab-channel-id/flappy_promo.png';
+        var flappyUrl = '//localhost:8001/apps/test/integration/assets/applab-channel-id/flappy_promo.png';
         assert.equal($('#design_image1').attr('src'), flappyUrl, 'after init, design mode img src prefixed with new prefix');
         assert.equal($('#image1').attr('src'), flappyUrl, 'after init, code mode img src prefixed with new prefix');
 
@@ -863,7 +863,7 @@ module.exports = {
       editCode: true,
       xml: '',
       // Use an asset path which we can access so that image loading will succeed
-      assetPathPrefix: '//localhost:8001/apps/test/assets/',
+      assetPathPrefix: '//localhost:8001/apps/test/integration/assets/',
       levelHtml: '' +
       '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern" style="width: 320px; height: 450px; display: block;">' +
         '<div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
@@ -873,11 +873,11 @@ module.exports = {
         '</div>' +
       '</div>',
       runBeforeClick: function (assert) {
-        var flappyUrl = '//localhost:8001/apps/test/assets/applab-channel-id/flappy_promo.png';
+        var flappyUrl = '//localhost:8001/apps/test/integration/assets/applab-channel-id/flappy_promo.png';
         assert.equal($('#design_image1').attr('src'), flappyUrl, 'after init, design mode img src prefixed with new prefix');
         assert.equal($('#image1').attr('src'), flappyUrl, 'after init, code mode img src prefixed with new prefix');
 
-        var phoneUrl = 'http://localhost:8001/apps/test/assets/applab-channel-id/phone_purple.png';
+        var phoneUrl = 'http://localhost:8001/apps/test/integration/assets/applab-channel-id/phone_purple.png';
         var phoneBg = 'url(' + phoneUrl + ')';
         assert.equal(phoneBg, $('#design_button1').css('background-image'), 'after init, design mode button image url has new prefix');
         assert.equal(phoneBg, $('#button1').css('background-image'), 'after init, code mode button image url has new prefix');
