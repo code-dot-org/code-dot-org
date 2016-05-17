@@ -46,7 +46,7 @@ function assertPropertyRowExists(index, label, assert) {
   assert.equal(propertyRow.children(0).text(), label, msg);
 }
 
-// We don't load our style sheets in mochaTests, so we instead depend
+// We don't load our style sheets in integration tests, so we instead depend
 // on checking classes.
 // An element will be set to opacity 0.3 if it has the class
 // design-mode-hidden and divApplab is hidden
