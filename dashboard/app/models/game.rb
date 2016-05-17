@@ -121,6 +121,10 @@ class Game < ActiveRecord::Base
     @@game_standalone_video ||= find_by_name("StandaloneVideo")
   end
 
+  def self.external_link
+    @@game_external_link ||= find_by_name('ExternalLink')
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -222,6 +226,7 @@ class Game < ActiveRecord::Base
         FreeResponse:free_response
         ScriptCompletion:script_completion
         StandaloneVideo:standalone_video
+        ExternalLink:external_link
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))
