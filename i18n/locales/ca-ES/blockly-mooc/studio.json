@@ -2,6 +2,8 @@
   "actor":"actor",
   "addCharacter":"afegir un",
   "addCharacterTooltip":"Afegeix un personatge a l'escena.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"suma 10 punts",
   "addPoints50":"suma 50 punts",
   "addPoints100":"suma 100 punts",

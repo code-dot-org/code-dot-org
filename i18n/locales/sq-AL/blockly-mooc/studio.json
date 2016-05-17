@@ -2,6 +2,8 @@
   "actor":"pjesmarrës",
   "addCharacter":"shto",
   "addCharacterTooltip":"Shto personazhin në skenë.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"shto 10 pikë",
   "addPoints50":"shto 50 pikë",
   "addPoints100":"shto 100 pikë",

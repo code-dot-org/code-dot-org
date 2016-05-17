@@ -2,6 +2,8 @@
   "actor": "بازیگر",
   "addCharacter": "اضافه کنید",
   "addCharacterTooltip": "یک شخصیت به سکانس اضافه کنید.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location.",
   "addPoints10": " 10 امتیاز اضافه کن",
   "addPoints50": "50 امتیاز اضافه کن",
   "addPoints100": "100 امتیاز اضافه کن",

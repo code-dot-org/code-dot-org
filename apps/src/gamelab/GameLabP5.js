@@ -1,8 +1,10 @@
 'use strict';
+var animationsApi = require('../clientApi').animations;
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var GameLabGame = require('./GameLabGame');
+import { getSourceUrl } from './animationMetadata';
 
 /**
  * An instantiable GameLabP5 class that wraps p5 and p5play and patches it in
@@ -48,9 +50,11 @@ GameLabP5.prototype.init = function (options) {
   // Override p5.loadImage so we can modify the URL path param
   if (!GameLabP5.baseP5loadImage) {
     GameLabP5.baseP5loadImage = window.p5.prototype.loadImage;
-    window.p5.prototype.loadImage = function (path, successCallback, failureCallback) {
-      path = assetPrefix.fixPath(path);
-      return GameLabP5.baseP5loadImage.call(this, path, successCallback, failureCallback);
+    window.p5.prototype.loadImage = function (path) {
+      // Make sure to pass all arguments through to loadImage, which can get
+      // wrapped and take additional arguments during preload.
+      arguments[0] = assetPrefix.fixPath(path);
+      return GameLabP5.baseP5loadImage.apply(this, arguments);
     };
   }
 
@@ -62,7 +66,7 @@ GameLabP5.prototype.init = function (options) {
     var userSetup = this.setup || window.setup;
     var userDraw = this.draw || window.draw;
     if (typeof userDraw === 'function') {
-      this.push();
+      this.resetMatrix();
       if (typeof userSetup === 'undefined') {
         this.scale(this.pixelDensity, this.pixelDensity);
       }
@@ -83,11 +87,10 @@ GameLabP5.prototype.init = function (options) {
     this._registeredMethods.post.forEach(function (f) {
       f.call(self);
     });
-    this.pop();
   };
 
-  // Disable fullScreen() method:
-  window.p5.prototype.fullScreen = function (val) {
+  // Disable fullscreen() method:
+  window.p5.prototype.fullscreen = function (val) {
     return false;
   };
 
@@ -99,8 +102,7 @@ GameLabP5.prototype.init = function (options) {
   window.p5.prototype._updateNextTouchCoords = function (e) {
     if (e.type === 'mousedown' ||
         e.type === 'mousemove' ||
-        e.type === 'mouseup' ||
-        e.type === 'dragover'){ /* NOTE: cpirich: modified p5 to add dragover */
+        e.type === 'mouseup' || !e.touches) {
       this._setProperty('_nextTouchX', this._nextMouseX);
       this._setProperty('_nextTouchY', this._nextMouseY);
     } else {
@@ -150,7 +152,7 @@ GameLabP5.prototype.init = function (options) {
   window.p5.prototype._updateNextMouseCoords = function (e) {
     if (e.type === 'touchstart' ||
         e.type === 'touchmove' ||
-        e.type === 'touchend') {
+        e.type === 'touchend' || e.touches) {
       this._setProperty('_nextMouseX', this._nextTouchX);
       this._setProperty('_nextMouseY', this._nextTouchY);
     } else {
@@ -473,17 +475,14 @@ GameLabP5.prototype.startExecution = function () {
          * Copied code from p5 _setup()
          */
 
-        // // unhide hidden canvas that was created
-        // this.canvas.style.visibility = '';
-        // this.canvas.className = this.canvas.className.replace('p5_hidden', '');
-
         // unhide any hidden canvases that were created
-        var reg = new RegExp(/(^|\s)p5_hidden(?!\S)/g);
-        var canvases = document.getElementsByClassName('p5_hidden');
+        var canvases = document.getElementsByTagName('canvas');
         for (var i = 0; i < canvases.length; i++) {
           var k = canvases[i];
-          k.style.visibility = '';
-          k.className = k.className.replace(reg, '');
+          if (k.dataset.hidden === 'true') {
+            k.style.visibility = '';
+            delete(k.dataset.hidden);
+          }
         }
         this._setupDone = true;
 
@@ -529,7 +528,6 @@ GameLabP5.prototype.startExecution = function () {
       p5obj.setup = function () {
         p5obj.createCanvas(400, 400);
         p5obj.fill(p5obj.color(127, 127, 127));
-        p5obj.angleMode(p5obj.DEGREES);
 
         this.onSetup();
       }.bind(this);
@@ -617,6 +615,16 @@ GameLabP5.prototype.getCustomMarshalGlobalProperties = function () {
 
 GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
   return [
+    'arguments',
+    'callee',
+    'caller',
+    'constructor',
+    'eval',
+    'prototype',
+    'stack',
+    'unwatch',
+    'valueOf',
+    'watch',
     '_userNode',
     '_elements',
     '_curElement',
@@ -697,4 +705,27 @@ GameLabP5.prototype.afterDrawComplete = function () {
 
 GameLabP5.prototype.afterSetupComplete = function () {
   this.p5._setupEpilogue();
+};
+
+/**
+ * Given a collection of animation metadata for the project, preload each
+ * animation, loading it onto the p5 object for use by the setAnimation method
+ * later.
+ * @param {Object[]} animationMetadata
+ */
+GameLabP5.prototype.preloadAnimations = function (animationMetadata) {
+  // Preload project animations:
+  this.p5.projectAnimations = {};
+  animationMetadata.forEach(function (animation) {
+    // Note: loadImage is automatically wrapped during preload so that it
+    //       causes a preload-count increment/decrement pair.  No manual
+    //       tracking is required.
+    var image = this.p5.loadImage(
+        getSourceUrl(animation),
+        function onSuccess() {
+          var spriteSheet = this.p5.loadSpriteSheet(image, animation.frameSize.x,
+              animation.frameSize.y, animation.frameCount);
+          this.p5.projectAnimations[animation.name] = this.p5.loadAnimation(spriteSheet);
+        }.bind(this));
+  }, this);
 };

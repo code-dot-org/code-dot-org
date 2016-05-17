@@ -2,6 +2,8 @@
   "actor":"الممثل",
   "addCharacter":"أضف",
   "addCharacterTooltip":"أضف شخصية إلى المشهد.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"إضافة 10 نقاط",
   "addPoints50":"إضافة 50 نقطة",
   "addPoints100":"إضافة 100 نقطة",

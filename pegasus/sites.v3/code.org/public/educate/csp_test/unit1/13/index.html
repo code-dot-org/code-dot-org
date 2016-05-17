@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="In this lesson students are introduced to another high-level protocols of the Internet, HTTP. The lesson begins with a review of the layers of the Internet covered thus far, before transitioning to a video covering high-level protocols of the Internet, most notably HTTP. Students will investigate HTTP traffic generated within their own browser by accessing the browser’s developer tools and visiting a variety of websites. A handout summarizing the structure of HTTP is provided to help students understand the components of the HTTP requests and responses they will observe. The lesson concludes with students sharing their findings with their classmates and a reflection on how the layers of the Internet make use of abstraction.">
+    <title>HTTP and Abstraction on the Internet</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/unit1/"><span class="h2">Unit</span><span class="h1">1</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit1/ch1" data-pdf-link="#unit1chapter1">
+                Ch. 1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/1" data-pdf-link="#unit1lesson1">
+                1
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/2" data-pdf-link="#unit1lesson2">
+                2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/3" data-pdf-link="#unit1lesson3">
+                3
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/4" data-pdf-link="#unit1lesson4">
+                4
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/5" data-pdf-link="#unit1lesson5">
+                5
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/6" data-pdf-link="#unit1lesson6">
+                6
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/7" data-pdf-link="#unit1lesson7">
+                7
+            </a>
+            </div>
+            
+        
+            <div class="lesson chapter">
+                <a href="/educate/csp_test/unit1/ch2" data-pdf-link="#unit1chapter2">
+                Ch. 2
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/8" data-pdf-link="#unit1lesson8">
+                8
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/9" data-pdf-link="#unit1lesson9">
+                9
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/10" data-pdf-link="#unit1lesson10">
+                10
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/11" data-pdf-link="#unit1lesson11">
+                11
+            </a>
+            </div>
+            
+                
+                    <div class="lesson finished">
+                
+            <a href="/educate/csp_test/unit1/12" data-pdf-link="#unit1lesson12">
+                12
+            </a>
+            </div>
+            
+                
+                    
+                        <div class="lesson current">
+                    
+                
+            <a href="/educate/csp_test/unit1/13" data-pdf-link="#unit1lesson13">
+                13
+            </a>
+            </div>
+            
+                
+                    <div class="lesson unfinished">
+                
+            <a href="/educate/csp_test/unit1/14" data-pdf-link="#unit1lesson14">
+                14
+            </a>
+            </div>
+            
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit1lesson13">
+        
+            
+                <h1>Lesson 13: HTTP and Abstraction on the Internet</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>In this lesson students are introduced to another high-level protocols of the Internet, <span class="vocab" title="HTTP: HyperText Transfer Protocol - the protocol used for transmitting web pages over the Internet">HTTP</span>. The lesson begins with a review of the layers of the Internet covered thus far, before transitioning to a video covering high-level protocols of the Internet, most notably HTTP. Students will investigate HTTP traffic generated within their own browser by accessing the browser’s developer tools and visiting a variety of websites. A handout summarizing the structure of HTTP is provided to help students understand the components of the HTTP requests and responses they will observe. The lesson concludes with students sharing their findings with their classmates and a reflection on how the layers of the Internet make use of abstraction.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>The main purpose of this lesson is round out understanding of one of the main Enduring Understandings and associated Learning Objective of the CSP Framework:</p>
+<ul>
+<li>6.1 The Internet is a network of autonomous systems.<ul>
+<li>6.1.1 Explain the abstractions in the Internet and how the Internet functions. [P3]</li>
+</ul>
+</li>
+</ul>
+<p>There are two main purposes to this lesson: </p>
+<p>First, simply getting a basic understanding of what HTTP is and what it’s for. HTTP like DNS is an ASCII-text based protocol - it’s just two computers sending text messages to each other.  What makes it a protocol are the rules of the “conversation” the two machines are having.  In the case of HTTP, it is a call-and-response protocol for a client/server relationship, where a client requests a web page or other content (image, sound, video, etc.) from a server.  The server looks for it and sends it back.</p>
+<p>Second and perhaps more importantly, is understanding HTTP as a “high level” protocol that sits on top of <em>all</em> the other protocols and internet systems we’ve learned about in the course.  That text message conversation between the computers is being broken up into TCP/IP packets, and all the data gets sent as bits over wires and airwaves, taking different paths, and it gets interpreted reassembled at the end.  </p>
+<p>We often talk about how the Internet works in “layers” and this is a perfect example of abstraction on the Internet, as one layer makes use of the functionality provided by the layer below it, without worrying about the details of how this functionality is achieved.  And HTTP doesn’t have to worry about anything other than the text protocol of HTTP works.  The network software and devices on your and others’ computers handle looking up addresses, breaking down data, packeting, routing, transmission and interpretation and reassembly.  It’s really amazing.</p>
+<p>What we want students to understand is some degree of the “Big Picture”.  We want them to be able to recognize that these layers exist and to reasonably explain how they work together for common web page requests.</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tochttp-and-abstraction-on-the-internet">
+                
+                    <h3>Getting Started (15 mins)</h3>
+                
+                    <h3>Activity (25 mins)</h3>
+                
+                    <h3>Wrap-up (10 mins)</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+                    <h3>Assessment</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Explain how layers of protocols allow the Internet to function.</li>
+                    
+                        <li>Use developer tools in a modern browser to explore the HTTP traffic associated with visiting common websites.</li>
+                    
+                        <li>Identify abstractions used in the development of Internet protocols.</li>
+                    
+                        <li>Describe how a protocol or layer of the internet acts as an &quot;abstraction&quot; for other layers.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit2/lesson11" target="_blank">Forum</a></li>
+<li>Practice accessing the Developer Tools for the browser used in your classroom (see Worksheet for links to directions)</li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2' target='_blank' class='print_link'>CSP Unit 2</a> - Code Studio
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1dfLzdHV8QoX1ltgiqP1MO0R2xnMSxC1WWWMMrFTtNH0' target='_blank' class='print_link'>HTTP and Abstraction on the Internet</a> - Resource (<a href='https://docs.google.com/document/d/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1zAaHDXi00V4ewphP8w2A41hF-9Fj3Sjg8c6oPbez254/' target='_blank' class='print_link'>HTTP in Action</a> - Worksheet (<a href='https://docs.google.com/document/d/1zAaHDXi00V4ewphP8w2A41hF-9Fj3Sjg8c6oPbez254/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://youtu.be/kBXQZMmiA4s' target='_blank' class='print_link'>The Internet: HTTP and HTML</a> - Video (<a href='http://videos.code.org/2015/csp/concept_http_html.mp4' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+                <h2>Vocabulary</h2>
+                <ul>
+                    
+                        <li><strong>DNS</strong> - The service that translates URLs to IP addresses.</li>
+                    
+                        <li><strong>HTTP</strong> - HyperText Transfer Protocol - the protocol used for transmitting web pages over the Internet</li>
+                    
+                        <li><strong>IP Address</strong> - A number assigned to any item that is connected to the Internet.</li>
+                    
+                        <li><strong>TCP</strong> - Transmission Control Protocol - provides reliable, ordered, and error-checked delivery of a stream of packets on the internet. TCP is tightly linked with IP and usually seen as TCP/IP in writing.</li>
+                    
+                        <li><strong>URL</strong> - An easy-to-remember address for calling a web page (like www.code.org).</li>
+                    
+                </ul>
+            
+
+        </div>
+    </div>
+
+    <div id="http-and-abstraction-on-the-internetcontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started (15 mins)</h2>
+                    <p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L11-ProtocolStack-wDNS-up-and-down.png"><img alt="" src="https://code.org/educate/docs/csp/U2L11-ProtocolStack-wDNS-up-and-down.png" style="float: right; width: 400px;"></a></p>
+<h3 id="the-internet-protocol-stack">The Internet Protocol Stack</h3>
+<p>Display the image shown at right, and/or distribute the <a class="resource" href="https://docs.google.com/document/d/1dfLzdHV8QoX1ltgiqP1MO0R2xnMSxC1WWWMMrFTtNH0" target="_blank">HTTP and Abstraction on the Internet</a> handout and have students follow along with the explanation for the first 2 pages.</p>
+<div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Remarks</p>
+<div>
+<p>We’re rounding out our understanding of how the many protocols and systems of the Internet work together to make the Internet function.  </p>
+</div>
+<div>
+<ul>
+<li>We want to think of the protocols as working in “layers”.  </li>
+<li>This picture here (also on first 2 pages of  <a class="resource" href="https://docs.google.com/document/d/1dfLzdHV8QoX1ltgiqP1MO0R2xnMSxC1WWWMMrFTtNH0" target="_blank">HTTP and Abstraction on the Internet</a>) is a simplified version of what’s known as the “Internet Protocol Stack.”  We’ve studied each layer separately but now you can begin to see how they work together. </li>
+</ul>
+</div>
+<div>
+<p>We imagine outgoing information going DOWN the stack and incoming information going UP the stack. </p>
+</div>
+<div>
+<p>All of this happens in the network software on each computer, whether that computer is your phone, a laptop, or a server like a DNS or web server (routers are a special case that only look at the IP layer).</p>
+</div>
+<div>
+<p>The <strong>important takeaway</strong> here is to understand that the system was constructed with <strong>layers of abstraction</strong> where each layer only needs to concern itself with its specific job, and then hands it off to another layer.  This makes the very complicated task of digital network communication possible.</p>
+</div>
+<div>
+<p>At the top layer, for example, DNS just thinks is “speaking DNS” to some other computer - <strong>the DNS protocol does not even need to know how the other layers work</strong> It just relies on them doing their jobs.</p>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div>
+<p>It’s not important to get too deep into the specifics.  If students understand the basic idea of <strong>layers of abstraction</strong> – that each layer relies on those below it, but uses them “abstractly” that’s enough.  </p>
+</div>
+<div>
+<p>Put differently, higher-level layers depend on the functionality of lower-level layers, without worrying about precisely how those layers work. The <strong>Enduring Understanding</strong> from the CSP framework states: <em>“6.1 The Internet is a network of autonomous systems”</em>  And these layers of abstraction (protocols) is a large part of what that statement is about.</p>
+</div>
+</div>
+<p>Answer any questions and move on to the activity.</p>
+<div class="admonition discussion">
+<p class="admonition-title" id="discussion_http"><i class="glyphicon glyphicon-comment"></i>Discussion Goal</p>
+<div>
+<p>This is largely a rhetorical question.  Use a gateway to explaining that today we’ll learn a little bit more about how HTTP works and look under the hood to see it in action.</p>
+</div>
+</div>
+<p>
+</p><div class="tiplink tiplink-discussion"><a href="#discussion_http"><i class="glyphicon glyphicon-comment"></i></a></div>
+<p></p>
+<p><strong>Transitional Prompt:</strong> <em>“Have you ever seen the letters “HTTP” anywhere while using the internet?”</em></p>
+<ul>
+<li>You see it in the URL of most websites <strong>http</strong>://code.org for example.</li>
+</ul>
+<p>Today we will focus our attention on HTTP, which is a protocol that sits at the same “layer” as DNS - right above TCP.</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity (25 mins)</h2>
+                    <div class="admonition say">
+<p class="admonition-title" id="say_None"><i class="fa fa-microphone"></i>Remarks</p>
+<div>
+<ul>
+<li>HTTP is an ASCII text based protocol.  </li>
+<li>It’s somewhat remarkable to note that many “high level” protocols, like HTTP, are just computers sending ASCII text messages back and forth.  Each protocol simply defines the rules of the “conversation” between two machines.</li>
+<li>In the case of HTTP it is the protocol used for sending and receiving web pages and other web content.  </li>
+<li>Today we’ll look under the hood and see HTTP in action.</li>
+</ul>
+</div>
+</div>
+<h3 id="show-video-the-internet-html-and-http">Show Video: “The Internet: HTML and HTTP.”</h3>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_video"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div></div>
+<div>
+<p>This video includes some content relating to security which will not be covered until later in the course. Rather than focus on every protocol covered, keep the focus on the fact that all of the protocols discussed are text-based and rely on the lower-level protocols already covered in class in order to function.</p>
+</div>
+</div>
+<div class="guide">
+<p>Either as a class or individually, students watch The Internet: HTML and HTTP Overview. </p>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_video"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<p>Tell students to pay particular attention to the portions about HTTP.</p>
+<p>Video Link: <a class="resource" href="https://youtu.be/kBXQZMmiA4s" target="_blank">The Internet: HTTP and HTML</a>    </p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_devtools"><i class="fa fa-lightbulb-o"></i>Teaching Tip</p>
+<div></div>
+<div>
+<p>At the beginning of the activity, students will need to gain access to the Developer Tools of their web browser, and more specifically gain access to the “Network” tab of the tools. It is recommended you practice prior to the beginning of the lesson so that you can demonstrate to the class and provide assistance.</p>
+</div>
+<div>
+<p>If students haven’t previously encountered the terms “static” and “dynamic,” as used to describe web pages, those concepts should be introduced before they begin the activity.  This article gives a good explanation: <a href="https://en.wikipedia.org/wiki/Static_web_page" target="_blank">Wikipedia: Static web page</a>.</p>
+</div>
+</div>
+<h3 id="investigate-http-traffic-on-your-computer">Investigate HTTP traffic on your computer</h3>
+<div class="guide">
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/code-studio-icon.png"><img alt="" src="https://code.org/educate/docs/csp/code-studio-icon.png"></a> We can actually watch HTTP traffic on our computers through tools in the web browser!</p>
+<p><strong>Activity:</strong> </p>
+<p>Students should be placed in pairs and given <a class="resource" href="https://docs.google.com/document/d/1zAaHDXi00V4ewphP8w2A41hF-9Fj3Sjg8c6oPbez254/" target="_blank">HTTP in Action</a></p>
+<ul>
+<li>(optionally distribute <a class="resource" href="https://docs.google.com/document/d/1dfLzdHV8QoX1ltgiqP1MO0R2xnMSxC1WWWMMrFTtNH0" target="_blank">HTTP and Abstraction on the Internet</a> if you haven’t yet). </li>
+</ul>
+<p>Students will complete the worksheet while using the resource as a reference.</p>
+<p>During the activity, students will:</p>
+<p>
+</p><div class="tiplink tiplink-tip"><a href="#tip_devtools"><i class="fa fa-lightbulb-o"></i></a></div>
+<p></p>
+<ul>
+<li>Access the developer tools of their browser.</li>
+<li>Monitor the HTTP traffic generated by visiting a variety of websites.</li>
+<li>Record their findings, using the resource as a guide.</li>
+</ul>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up (10 mins)</h2>
+                    <p><strong>Discuss:</strong> If there is time, ask students to share their findings using a group-share-strategy. Otherwise use a closing discussion to once more discuss the way abstraction is utilized by the different layers of the Internet, relating the discussion to the material discussed today. Some possible prompts:</p>
+<ul>
+<li>What surprised you about the HTTP traffic you observed?</li>
+<li>What does it mean to say that high-level layers of the Internet use low-level layers “abstractly”?</li>
+<li>What other examples of abstraction have we seen in this course? Hint: Unit 1 is basically all about abstraction.</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li>Research SMTP, a high-level protocol for formatting email messages.</li>
+<li>An excellent resource for explaining the many layers of protocols that make up the Internet:
+<a href="http://www.e-cartouche.ch/content_reg/cartouche/formats/en/html/index.html" target="_blank">Internet Techniques and Web Formats</a>.</li>
+<li><a href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter10.pdf" target="_blank">Blown to Bits (www.bitsbook.com), Appendix</a>, The Internet as System and Spirit, pp. 309-316 (The Internet Spirit), then answer the following questions:
+The layers of protocols used in network communication is an example of abstraction. Can you give other examples of abstraction in everyday life?
+When you browse to a web page, maybe with some animated advertisements embedded on it, describe in detail what happens behind the scenes to display that page on your browser.</li>
+<li><a href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter3.pdf" target="_blank">Blown to Bits (www.bitsbook.com), Chapter 3</a>, Ghosts in the Machine: Secrets and Surprises of Electronic Documents, pp. 73-77, then answer the following question about abstraction:
+Discuss how not knowing some basics of how a software tool or computer works, and the abstractions they use, could lead to bad outcomes.</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p><strong>Questions</strong> (also on Code Studio):</p>
+<ol>
+<li>
+<p>Multiple Choice: HTTP is considered to be a high-level protocol because:</p>
+<p>a) HTTP requests are given higher priority for fast delivery when being routed on the Internet.</p>
+<p>b) HTTP requests are encoded using higher-frequency radio waves.</p>
+<p>c) HTTP messages can be either requests or responses.</p>
+<p>d) HTTP requests make use of abstractions provided by lower-level protocols.</p>
+</li>
+<li>
+<p>Choose Two: Choose the two true statements about HTTP:</p>
+<p>a) An HTTP request is sent from a client to request access to data stored on a server.</p>
+<p>b) HTTP requests and responses have identical formats.</p>
+<p>c) Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.</p>
+<p>d) An HTTP response code is only used when a server could not fulfill a request.</p>
+</li>
+<li>
+<p>Free Response: The definition of HTTP makes use of the ASCII character set, without reference to how these characters are encoded. Explain why this is an example of abstraction.</p>
+</li>
+</ol>
+<p><strong>Worksheet:</strong>
+If you like, you may collect and assess the Worksheet for completion.</p>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CD</strong> - Computers &amp; Communication Devices</summary>
+                    <ul>
+                        
+                            <li><strong>CD.L3A:8</strong> - Explain the basic components of computer networks (e.g., servers, file protection, routing, spoolers and queues, shared resources, and fault-tolerance).</li>
+                        
+                            <li><strong>CD.L3A:9</strong> - Describe how the Internet facilitates global communication.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CPP</strong> - Computing Practice &amp; Programming</summary>
+                    <ul>
+                        
+                            <li><strong>CPP.L3A:9</strong> - Explain the principles of security by examining encryption, cryptography, and authentication techniques.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CT</strong> - Computational Thinking</summary>
+                    <ul>
+                        
+                            <li><strong>CT.L3A:9</strong> - Discuss the value of abstraction to manage problem complexity.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>6.1</strong> - The Internet is a network of autonomous systems.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.1.1</strong> - Explain the abstractions in the Internet and how the Internet functions. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.1.1I</strong> - Standards such as hypertext transfer protocol (HTTP), IP, and simple mail transfer protocol (SMTP) are developed and overseen by the Internet Engineering Task Force (IETF).</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.2</strong> - Characteristics of the Internet influence the systems built on it.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.2.2</strong> - Explain how the characteristics of the Internet influence the systems built on it. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.2.2H</strong> - Standards for sharing information and communicating between browsers and servers on the Web include HTTP and secure sockets layer/transport layer security (SSL/TLS).</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#tochttp-and-abstraction-on-the-internet').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#http-and-abstraction-on-the-internetcontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'http-and-abstraction-on-the-internet', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

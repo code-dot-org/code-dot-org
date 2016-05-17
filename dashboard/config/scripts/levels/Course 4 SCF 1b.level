@@ -18,7 +18,7 @@
     "nectar_goal": "0",
     "flower_type": "redWithNectar",
     "ideal": "23",
-    "instructions": "Can you figure out how to collect all of this nectar with the fewest blocks possible?",
+    "instructions": "Can you figure out how to collect all of this honey with the fewest blocks possible?",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "never_autoplay_video": "false",

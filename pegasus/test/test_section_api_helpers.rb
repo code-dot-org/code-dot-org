@@ -53,10 +53,10 @@ class SectionApiHelperTest < Minitest::Test
       before do
         # mock scripts (the first query to the db gets the scripts)
         @fake_db.fetch = [
-            {id: 1, name: 'Foo', hidden: '0'},
-            {id: 3, name: 'Bar', hidden: '0'},
-            {id: 4, name: 'mc', hidden: '0'},
-            {id: 5, name: 'hourofcode', hidden: '0'}
+            {id: 1, name: 'Foo', hidden: false},
+            {id: 3, name: 'Bar', hidden: false},
+            {id: 4, name: 'mc', hidden: false},
+            {id: 5, name: 'hourofcode', hidden: false}
         ]
       end
 
@@ -72,8 +72,10 @@ class SectionApiHelperTest < Minitest::Test
       end
 
       it 'rewrites mc as minecraft, hourofcode as classicmaze' do
-        assert_equal 'minecraft', DashboardSection.valid_courses[4]
-        assert_equal 'classicmaze', DashboardSection.valid_courses[5]
+        assert_includes DashboardSection.valid_courses.flatten(2), 'minecraft'
+        assert_includes DashboardSection.valid_courses.flatten(2), 'classicmaze'
+        refute_includes DashboardSection.valid_courses.flatten(2), 'mc'
+        refute_includes DashboardSection.valid_courses.flatten(2), 'hourofcode'
       end
     end
 

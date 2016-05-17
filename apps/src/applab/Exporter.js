@@ -1,7 +1,12 @@
-var JSZip = require('jszip');
+/* global dashboard */
+
+// TODO(pcardune): Stop using the already packaged/minified version of jszip in
+// favor just plain jszip. Due to a bug in (probably) browserify, we need to use
+// the minified version. See this comment for more details:
+// https://github.com/code-dot-org/code-dot-org/pull/8071#issuecomment-214931393
+var JSZip = require('jszip/dist/jszip.min');
 var saveAs = require('filesaver.js').saveAs;
 
-var assetListStore = require('../assetManagement/assetListStore');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var download = require('../assetManagement/download');
 var elementLibrary = require('./designElements/library');
@@ -84,24 +89,37 @@ export default {
     var css = extractCSSFromHTML(appElement);
     var html = exportProjectEjs({htmlBody: appElement.outerHTML});
     var readme = exportProjectReadmeEjs({appName: appName});
-
+    var cacheBust = '?__cb__='+''+new String(Math.random()).slice(2);
     var assetsToDownload = [
-      {url: '/assets/js/en_us/common_locale.js', zipPath: appName + 'common_locale.js'},
-      {url: '/assets/js/en_us/applab_locale.js', zipPath: appName + 'applab_locale.js'},
-      {url: '/assets/js/applab-api.js', zipPath: appName + 'applab-api.js'},
-      {url: '/assets/css/applab.css', zipPath: appName + 'applab.css'},
-    ].concat(assetListStore.list().map(function (asset) {
+      {
+        url: '/blockly/js/en_us/common_locale.js' + cacheBust,
+        zipPath: appName + '/common_locale.js'
+      }, {
+        url: '/blockly/js/en_us/applab_locale.js' + cacheBust,
+        zipPath: appName + '/applab_locale.js'
+      }, {
+        url: '/blockly/js/applab-api.js' + cacheBust,
+        zipPath: appName + '/applab.js'
+      }, {
+        url: '/blockly/css/applab.css' + cacheBust,
+        zipPath: appName + '/applab.css'
+      },
+    ].concat(dashboard.assets.listStore.list().map(function (asset) {
       return {
         url: assetPrefix.fixPath(asset.filename),
         rootRelativePath: 'assets/' + asset.filename,
         zipPath: appName + '/assets/' + asset.filename,
         dataType: 'binary',
+        filename: asset.filename,
       };
     }));
 
     function rewriteAssetUrls(data) {
       return assetsToDownload.slice(4).reduce(function (data, assetToDownload) {
-        return data.split(assetToDownload.url).join(assetToDownload.rootRelativePath);
+        if (data.indexOf(assetToDownload.url) >= 0) {
+          return data.split(assetToDownload.url).join(assetToDownload.rootRelativePath);
+        }
+        return data.split(assetToDownload.filename).join(assetToDownload.rootRelativePath);
       }, data);
     }
 

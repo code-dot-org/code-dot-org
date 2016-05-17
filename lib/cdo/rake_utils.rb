@@ -96,7 +96,7 @@ module RakeUtils
   end
 
   def self.git_pull()
-    system 'git', 'pull', 'origin', git_branch
+    system 'git', 'pull', '--ff-only', 'origin', git_branch
   end
 
   def self.git_push()
@@ -223,5 +223,9 @@ module RakeUtils
   # a local database.
   def self.local_environment?
     (rack_env?(:development, :test) && !CDO.chef_managed) || rack_env?(:adhoc)
+  end
+
+  def self.wait_for_url(url)
+    system_ "until $(curl --output /dev/null --silent --head --fail #{url}); do sleep 5; done"
   end
 end

@@ -54,7 +54,8 @@ exec(command, function (err, stdout, stderr) {
     './test/calc/*.js',
     './test/craft/*.js',
     './test/gamelab/*.js',
-    './test/netsim/*.js'
+    './test/netsim/*.js',
+    './test/templates/*.js'
   ];
 
   if (process.env.mocha_entry) {
@@ -68,6 +69,12 @@ exec(command, function (err, stdout, stderr) {
     // Load mochaFastMode as an entry point as a way of getting this option
     // into our bundle code.
     globs = ['./test/util/mochaFastMode.js'].concat(globs);
+  }
+
+  if (process.env.mocha_entry) {
+    console.log('Want to run these tests directly? Type:');
+    console.log('./node_modules/.bin/mochify --extension .jsx --transform ejsify',
+                globs.join(' '));
   }
 
   mochify(globs.join(' '), {

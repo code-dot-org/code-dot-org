@@ -363,11 +363,11 @@ ca:
         text: Ara tens un bloc nou que pots utilitzar moltes vegades per crear múltiples quadrats.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns. In the next puzzle, the code you recently wrote to make a circle is available to you as a new function that can make circles of different sizes. Can you use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: "Pots usar un munt de formes simpes per crear models més complexos. En el proper trencaclosques, el codi que acabes d'escriure per a fer un cercle, el pots utilitzar com una funció nova que creï cercles de diferents mides. Pots fer-los servir per ajudar l'Elsa a crear patrons més bonics i complexos?"
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
+        text: "Anem a crear jocs utilitzant Play Lab. Els bons jocs tenen una història, i tota història té uns actors. Aprendrem a fer que actors com ara: bruixes, àliens i animals diversos, parlin, es moguin i interactuin entre ells. Al final d'aquest tutorial, podràs construïr un joc des de zero i compartir-lo amb els teus amics."
       2:
         image: notes/playlab_intro_2.png
         text: "La pantalla es divideix en 3 parts. L'esquerra és l'espai del joc on el programa s'executarà. Les instruccions per a cada nivell estan escrites a sota."

@@ -23,6 +23,8 @@ en:
           future: crwdns4882:0crwdne4882:0
   hello: crwdns2556:0crwdne2556:0
   welcome_back: 'crwdns3633:0%{name}crwdne3633:0'
+  your_professional_learning_plan: crwdns56511:0crwdne56511:0
+  see_your_learning_plan: crwdns56512:0crwdne56512:0
   submit: crwdns35673:0crwdne35673:0
   unsubmit: crwdns56122:0crwdne56122:0
   previous_page: crwdns56442:0crwdne56442:0
@@ -147,8 +149,6 @@ en:
         subject: 'crwdns3178:0%{teacher_name}crwdne3178:0'
       student_disassociated:
         subject: 'crwdns4337:0%{student_name}crwdne4337:0'
-      teacher_disassociated:
-        subject: 'crwdns4362:0%{teacher_name}crwdne4362:0'
   reports:
     error:
       access_denied: crwdns2582:0crwdne2582:0
@@ -325,6 +325,23 @@ en:
     no_primary_course: crwdns36301:0crwdne36301:0
     choose_next_course: crwdns43451:0crwdne43451:0
     print_certificate: crwdns41905:0crwdne41905:0
+    announcement_title: crwdns56513:0crwdne56513:0
+    announcement_view_all: crwdns56514:0crwdne56514:0
+    announcement_message: 'crwdns56515:0%{tagging_url}crwdnd56515:0%{ux_url}crwdne56515:0'
+    announcement_button: crwdns56516:0crwdne56516:0
+    announcement_petition: crwdns56517:0crwdne56517:0
+    announcement_petition_button: crwdns56518:0crwdne56518:0
+  move_students:
+    new_section_dne: 'crwdns56519:0%{new_section_code}crwdne56519:0'
+    section_code_not_entered: crwdns56520:0crwdne56520:0
+    section_code_cant_be_current_section: crwdns56521:0crwdne56521:0
+    current_section_dne: 'crwdns56522:0%{current_section_code}crwdne56522:0'
+    students_not_yours: crwdns56523:0crwdne56523:0
+    stay_enrolled_not_entered: crwdns56524:0crwdne56524:0
+    student_ids_not_entered: crwdns56525:0crwdne56525:0
+    student_not_found: crwdns56526:0crwdne56526:0
+    all_students_must_be_in_current_section: crwdns56527:0crwdne56527:0
+    already_enrolled_in_new_section: crwdns56528:0crwdne56528:0
   share:
     title: crwdns45291:0crwdne45291:0
     description: crwdns45292:0crwdne45292:0
@@ -340,8 +357,8 @@ en:
     thank_you: crwdns45293:0crwdne45293:0
     help_from_html: crwdns6548:0crwdne6548:0
     help_from_html_old: crwdns45345:0crwdne45345:0
-    art_from_html: 'crwdns55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdne55877:0'
-    art_from_html_old: 'crwdns55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdne55878:0'
+    art_from_html: 'crwdns55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdne55877:0'
+    art_from_html_old: 'crwdns55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdne55878:0'
     code_from_html: crwdns56267:0crwdne56267:0
     powered_by_aws: crwdns24789:0crwdne24789:0
     trademark: 'crwdns45294:0%{current_year}crwdne45294:0'
@@ -591,6 +608,9 @@ en:
     share: crwdns35043:0crwdne35043:0
     share_title: crwdns35044:0crwdne35044:0
     share_copy_link: crwdns35045:0crwdne35045:0
+    share_embed_description: crwdns56529:0crwdne56529:0
+    embed: crwdns56530:0crwdne56530:0
+    advanced_share: crwdns56531:0crwdne56531:0
     close: crwdns35046:0crwdne35046:0
     more: crwdns35047:0crwdne35047:0
     name: crwdns35048:0crwdne35048:0
@@ -630,7 +650,21 @@ en:
           other: crwdns49680:0crwdne49680:0
         detail: crwdns49681:0crwdne49681:0
         acknowledge: 'crwdns49682:0%{link_start_privacy}crwdnd49682:0%{link_end}crwdnd49682:0%{link_start_tos}crwdnd49682:0%{link_end}crwdne49682:0'
+  peer_review:
+    accepted:
+      name: crwdns56532:0crwdne56532:0
+      description: crwdns56533:0crwdne56533:0
+    rejected:
+      name: crwdns56534:0crwdne56534:0
+      description: crwdns56535:0crwdne56535:0
+    escalated:
+      name: crwdns56536:0crwdne56536:0
+      description: crwdns56537:0crwdne56537:0
   components:
     icon_library:
       search_placeholder_text: crwdns56250:0crwdne56250:0
       no_icons_found: crwdns56251:0crwdne56251:0
+  flex_category:
+    required: crwdns56538:0crwdne56538:0
+    content: crwdns56539:0crwdne56539:0
+    practice: crwdns56540:0crwdne56540:0

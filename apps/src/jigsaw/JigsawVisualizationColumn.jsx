@@ -1,5 +1,6 @@
-var GameButtons = require('../templates/GameButtons');
+var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
+import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 
 /**
  * For jigsaw, this all ends up being hidden, but StudioApp still has expectation
@@ -8,9 +9,8 @@ var BelowVisualization = require('../templates/BelowVisualization');
 var JigsawVisualizationColumn = function () {
   return (
     <span>
-      <div id="visualization">
-      </div>
-      <GameButtons hideRunButton={false}/>
+      <ProtectedVisualizationDiv />
+      <GameButtons/>
       <BelowVisualization/>
     </span>
   );

@@ -2,6 +2,8 @@
   "actor":"spiller",
   "addCharacter":"tilføj en",
   "addCharacterTooltip":"Tilføj en figur til scenen.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"tilføj 10 point",
   "addPoints50":"tilføj 50 point",
   "addPoints100":"tilføj 100 point",

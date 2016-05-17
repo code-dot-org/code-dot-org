@@ -1,6 +1,24 @@
 require 'test_helper'
 
 class AbilityTest < ActiveSupport::TestCase
+  setup do
+    @public_script = create(:script).tap do |script|
+      @public_script_level = create(:script_level, script: script)
+    end
+
+    @login_required_script = create(:script, login_required: true).tap do |script|
+      @login_required_script_level = create(:script_level, script: script)
+    end
+
+    @student_of_admin_script = create(:script, student_of_admin_required: true).tap do |script|
+      @student_of_admin_script_level = create(:script_level, script: script)
+    end
+
+    @admin_script = create(:script, admin_required: true).tap do |script|
+      @admin_script_level = create(:script_level, script: script)
+    end
+  end
+
   test "as guest" do
     ability = Ability.new(User.new)
 
@@ -14,6 +32,16 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert !ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
+
+    assert ability.can?(:read, @public_script)
+    assert !ability.can?(:read, @login_required_script)
+    assert !ability.can?(:read, @student_of_admin_script)
+    assert !ability.can?(:read, @admin_script)
+
+    assert ability.can?(:read, @public_script_level)
+    assert !ability.can?(:read, @login_required_script_level)
+    assert !ability.can?(:read, @student_of_admin_script_level)
+    assert !ability.can?(:read, @admin_script_level)
   end
 
   test "as member" do
@@ -33,6 +61,43 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
+    assert ability.can?(:read, @public_script)
+    assert ability.can?(:read, @login_required_script)
+    assert !ability.can?(:read, @student_of_admin_script)
+    assert !ability.can?(:read, @admin_script)
+
+    assert ability.can?(:read, @public_script_level)
+    assert ability.can?(:read, @login_required_script_level)
+    assert !ability.can?(:read, @student_of_admin_script_level)
+    assert !ability.can?(:read, @admin_script_level)
+  end
+
+  test "as student of admin" do
+    ability = Ability.new(create(:student_of_admin))
+
+    assert ability.can?(:read, Game)
+    assert ability.can?(:read, Level)
+    assert ability.can?(:read, Activity)
+
+    assert !ability.can?(:destroy, Game)
+    assert !ability.can?(:destroy, Level)
+    assert !ability.can?(:destroy, Activity)
+
+    assert ability.can?(:create, GalleryActivity)
+    assert ability.can?(:destroy, GalleryActivity)
+
+    assert ability.can?(:read, Script.find_by_name('ECSPD'))
+    assert ability.can?(:read, Script.find_by_name('flappy'))
+
+    assert ability.can?(:read, @public_script)
+    assert ability.can?(:read, @login_required_script)
+    assert ability.can?(:read, @student_of_admin_script)
+    assert !ability.can?(:read, @admin_script)
+
+    assert ability.can?(:read, @public_script_level)
+    assert ability.can?(:read, @login_required_script_level)
+    assert ability.can?(:read, @student_of_admin_script_level)
+    assert !ability.can?(:read, @admin_script_level)
   end
 
   test "as admin" do
@@ -49,6 +114,16 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
+
+    assert ability.can?(:read, @public_script)
+    assert ability.can?(:read, @login_required_script)
+    assert ability.can?(:read, @student_of_admin_script)
+    assert ability.can?(:read, @admin_script)
+
+    assert ability.can?(:read, @public_script_level)
+    assert ability.can?(:read, @login_required_script_level)
+    assert ability.can?(:read, @student_of_admin_script_level)
+    assert ability.can?(:read, @admin_script_level)
   end
 
 end

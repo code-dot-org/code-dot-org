@@ -2,6 +2,8 @@
   "actor":"figuvrra",
   "addCharacter":"lasit",
   "addCharacterTooltip":"Lasit fikuvrra oidnosii.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"lasit 10 čuoggá",
   "addPoints50":"lasit 50 čuoggá",
   "addPoints100":"lasit 100 čuoggá",

@@ -23,6 +23,8 @@ et:
           future: ei saa olla tulevikus
   hello: Tere maailm
   welcome_back: 'Tere tulemast tagasi, %{name}'
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Esita
   unsubmit: Võta vastus tagasi
   previous_page: Previous page
@@ -147,8 +149,6 @@ et:
         subject: 'Liitu klassiga koos %{teacher_name} Code.org!'
       student_disassociated:
         subject: 'Code.org teade: %{student_name} pole enam seotud teiega kui teie õpilane.'
-      teacher_disassociated:
-        subject: 'Code.org teade: %{teacher_name} pole enam teiega seotud õpetaja.'
   reports:
     error:
       access_denied: Teil pole juurdepääsu selle isiku andmetele
@@ -325,6 +325,23 @@ et:
     no_primary_course: Proovige Code Studio kursust
     choose_next_course: Proovige Code Studio kursuseid. Selleks valige üks altpoolt
     print_certificate: Prindi tunnistus
+    announcement_title: Teated
+    announcement_view_all: Vaata kõiki
+    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+    announcement_button: Lisateave
+    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: Õpi Code stuudios
     description: Igaüks saab õppida arvutiteadust. Tee mänge, äppe ja kunsti koodimisega.
@@ -449,7 +466,7 @@ et:
       body: Uuri Minecrafti maailma koodi kaudu.
     unplugged:
       title: Unplugged Lessons
-      audience: Ages 6+
+      audience: Ages 4+
       body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
       body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
@@ -591,6 +608,9 @@ et:
     share: Jaga
     share_title: Jaga oma projekti
     share_copy_link: 'Kopeeri link:'
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Sulge
     more: Veel
     name: Nimi
@@ -630,7 +650,21 @@ et:
           other: Muu
         detail: Palun kirjeldage võimalikult detailselt teksti, mida raporteerite.
         acknowledge: 'Selle informatsiooni esitamisel nõustute, et seda käsitletakse vastavalt %{link_start_privacy} privaatsuse tingimustele %{link_end}ja %{link_start_tos} kasutajatingimustele %{link_end}'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
   components:
     icon_library:
       search_placeholder_text: Search for an icon...
       no_icons_found: No icons found
+  flex_category:
+    required: Ülevaade
+    content: Content
+    practice: Teacher Practices

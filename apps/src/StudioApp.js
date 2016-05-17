@@ -25,16 +25,24 @@ var DialogButtons = require('./templates/DialogButtons');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
-var assetListStore = require('./assetManagement/assetListStore');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
+var shareWarnings = require('./shareWarnings');
+var experiments = require('./experiments');
+import { setPageConstants } from './redux/pageConstants';
+
+var redux = require('./redux');
+var runState = require('./redux/runState');
+var commonReducers = require('./redux/commonReducers');
+var combineReducers = require('redux').combineReducers;
+
 var copyrightStrings;
 
 /**
 * The minimum width of a playable whole blockly game.
 */
 var MIN_WIDTH = 900;
-var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 320;
+var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
 
@@ -193,6 +201,12 @@ var StudioApp = function () {
    */
   this.wireframeShare = false;
 
+  /**
+   * Redux store that will be created during configureRedux, based on a common
+   * set of reducers and a set of reducers (potentially) supplied by the app
+   */
+  this.reduxStore = null;
+
   this.onAttempt = undefined;
   this.onContinue = undefined;
   this.onResetPressed = undefined;
@@ -238,6 +252,34 @@ StudioApp.prototype.configure = function (options) {
 };
 
 /**
+ * Creates a redux store for this app, while caching the set of app specific
+ * reducers, so that we can recreate the store from scratch at any point if need
+ * be
+ * @param {object} reducers - App specific reducers, or null if the app is not
+ *   providing any.
+ */
+StudioApp.prototype.configureRedux = function (reducers) {
+  this.reducers_ = reducers;
+  this.createReduxStore_();
+};
+
+/**
+ * Creates our redux store by combining the set of app specific reducers that
+ * we stored along with a set of common reducers used by every app. Creation
+ * should happen once on app load (tests will also recreate our store between
+ * runs).
+ */
+StudioApp.prototype.createReduxStore_ = function () {
+  var combined = combineReducers(_.assign({}, commonReducers, this.reducers_));
+  this.reduxStore = redux.createStore(combined);
+
+  if (experiments.isEnabled('reduxGlobalStore')) {
+    // Expose our store globally, to make debugging easier
+    window.reduxStore = this.reduxStore;
+  }
+};
+
+/**
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
@@ -251,6 +293,18 @@ StudioApp.prototype.hasInstructionsToShow = function (config) {
 StudioApp.prototype.localeIsEnglish = function () {
   return this.LOCALE === ENGLISH_LOCALE;
 };
+
+/**
+ * Given the studio app config object, show shared app warnings.
+ */
+function showWarnings(config) {
+  shareWarnings.checkSharedAppWarnings({
+    channelId: config.channel,
+    isSignedIn: config.isSignedIn,
+    hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
+    onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
+  });
+}
 
 /**
  * Common startup tasks for all apps. Happens after configure.
@@ -283,7 +337,7 @@ StudioApp.prototype.init = function (config) {
 
     // Pre-populate asset list
     assetsApi.ajax('GET', '', function (xhr) {
-      assetListStore.reset(JSON.parse(xhr.responseText));
+      dashboard.assets.listStore.reset(JSON.parse(xhr.responseText));
     }, function () {
       // Unable to load asset list
     });
@@ -299,7 +353,8 @@ StudioApp.prototype.init = function (config) {
       sendToPhone: config.sendToPhone,
       twitter: config.twitter,
       app: config.app,
-      isLegacyShare: config.isLegacyShare
+      noHowItWorks: config.noHowItWorks,
+      isLegacyShare: config.isLegacyShare,
     });
   }
 
@@ -434,6 +489,25 @@ StudioApp.prototype.init = function (config) {
     this.onResize();
   }
 
+  this.alertIfAbusiveProject('#codeWorkspace');
+
+  // make sure startIFrameEmbeddedApp has access to the config object
+  // so it can decide whether or not to show a warning.
+  this.startIFrameEmbeddedApp = this.startIFrameEmbeddedApp.bind(this, config);
+
+  if (this.share && config.shareWarningInfo) {
+    if (!config.level.iframeEmbed) {
+      // shared apps that are embedded in an iframe handle warnings in
+      // startIFrameEmbeddedApp since they don't become "active" until the user
+      // clicks on them.
+      showWarnings(config);
+    }
+  }
+
+  if (!!config.level.projectTemplateLevelName) {
+    this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
+  }
+
   var vizResizeBar = document.getElementById('visualizationResizeBar');
   if (vizResizeBar) {
     dom.addMouseDownTouchEvent(vizResizeBar,
@@ -519,6 +593,14 @@ StudioApp.prototype.init = function (config) {
 
   if (config.isLegacyShare && config.hideSource) {
     this.setupLegacyShareView();
+  }
+};
+
+StudioApp.prototype.startIFrameEmbeddedApp = function (config) {
+  if (this.share && config.shareWarningInfo) {
+    showWarnings(config);
+  } else {
+    this.runButtonClick();
   }
 };
 
@@ -608,8 +690,10 @@ StudioApp.prototype.scaleLegacyShare = function () {
 
   var frameWidth = $(phoneFrameScreen).width();
   var scale = frameWidth / vizWidth;
-  applyTransformOrigin(vizContainer, 'left top');
-  applyTransformScale(vizContainer, 'scale(' + scale + ')');
+  if (scale !== 1) {
+    applyTransformOrigin(vizContainer, 'left top');
+    applyTransformScale(vizContainer, 'scale(' + scale + ')');
+  }
 };
 
 /**
@@ -755,6 +839,11 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
         newWindow: true
       },
       {
+        text: window.dashboard.i18n.t('footer.report_abuse'),
+        link: "/report_abuse",
+        newWindow: true
+      },
+      {
         text: window.dashboard.i18n.t('footer.how_it_works'),
         link: location.href + "/edit",
         newWindow: false
@@ -820,6 +909,8 @@ StudioApp.prototype.toggleRunReset = function (button) {
     throw "Unexpected input";
   }
 
+  this.reduxStore.dispatch(runState.setIsRunning(!showRun));
+
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
   run.style.display = showRun ? 'inline-block' : 'none';
@@ -829,6 +920,10 @@ StudioApp.prototype.toggleRunReset = function (button) {
 
   // Toggle soft-buttons (all have the 'arrow' class set):
   $('.arrow').prop("disabled", showRun);
+};
+
+StudioApp.prototype.isRunning = function () {
+  return this.reduxStore.getState().runState.isRunning;
 };
 
 /**
@@ -1322,7 +1417,6 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var visualization = document.getElementById('visualization');
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
   var visualizationColumn = document.getElementById('visualizationColumn');
-  var visualizationEditor = document.getElementById('visualizationEditor');
 
   var oldVizWidth = $(visualizationColumn).width();
   var newVizWidth = Math.max(this.minVisualizationWidth,
@@ -1353,9 +1447,6 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var scale = (newVizWidth / this.nativeVizWidth);
 
   applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
-  if (visualizationEditor) {
-    visualizationEditor.style.marginLeft = newVizWidthString;
-  }
 
   if (oldVizWidth < 230 && newVizWidth >= 230) {
     $('#soft-buttons').removeClass('soft-buttons-compact');
@@ -1677,6 +1768,11 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
 
+  if (config.level.initializationBlocks) {
+    var xml = parseXmlElement(config.level.initializationBlocks);
+    this.initializationCode = Blockly.Generator.xmlToCode('JavaScript', xml);
+  }
+
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
   this.enableShowLinesCount = (config.enableShowLinesCount !== false);
@@ -1702,13 +1798,13 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 };
 
 // Overwritten by applab.
-StudioApp.prototype.runButtonClickWrapper = function (callback) {
+function runButtonClickWrapper(callback) {
   if (window.$) {
     $(window).trigger('run_button_pressed');
     $(window).trigger('appModeChanged');
   }
   callback();
-};
+}
 
 /**
  * Begin modifying the DOM based on config.
@@ -1725,7 +1821,8 @@ StudioApp.prototype.configureDom = function (config) {
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var runClick = this.runButtonClick.bind(this);
-  var throttledRunClick = _.debounce(this.runButtonClickWrapper.bind(this, runClick), 250, true);
+  var clickWrapper = (config.runButtonClickWrapper || runButtonClickWrapper);
+  var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, true);
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
@@ -1737,9 +1834,8 @@ StudioApp.prototype.configureDom = function (config) {
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
-  var visualization = document.getElementById('visualization');
 
-  if (!config.hideSource || config.embed) {
+  if (!config.hideSource || config.embed || config.level.iframeEmbed) {
     var vizHeight = this.MIN_WORKSPACE_HEIGHT;
     if (this.isUsingBlockly() && config.level.edit_blocks) {
       // Set a class on the main blockly div so CSS can style blocks differently
@@ -1754,6 +1850,10 @@ StudioApp.prototype.configureDom = function (config) {
       // Enable param & var editing in levelbuilder, regardless of level setting
       config.level.disableParamEditing = false;
       config.level.disableVariableEditing = false;
+    }
+
+    if (config.level.iframeEmbed) {
+      document.body.className += ' embedded_iframe';
     }
 
     if (config.pinWorkspaceToBottom) {
@@ -1784,12 +1884,14 @@ StudioApp.prototype.configureDom = function (config) {
     visualizationColumn.className = visualizationColumn.className + " centered_embed";
   }
 
-  if (!config.embed && !config.hideSource) {
-    // Make the visualization responsive to screen size, except on share page.
-    visualization.className += " responsive";
-    visualizationColumn.className += " responsive";
-    var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
-    if (smallFooter) {
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
+  if (smallFooter) {
+    if (config.noPadding) {
+      // The small footer's padding should not increase its size when not part
+      // of a larger page.
+      smallFooter.style.boxSizing = "border-box";
+    }
+    if (!config.embed && !config.hideSource) {
       smallFooter.className += " responsive";
     }
   }
@@ -1812,6 +1914,11 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   if (this.share) {
     if (options.isLegacyShare || this.wireframeShare) {
       document.body.style.backgroundColor = '#202B34';
+      if (options.level.iframeEmbed) {
+        // so help me god.
+        document.body.style.backgroundColor = "transparent";
+      }
+
 
       $('.header-wrapper').hide();
       var vizColumn = document.getElementById('visualizationColumn');
@@ -1820,15 +1927,17 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       } else {
         $(vizColumn).addClass('wireframeShare');
 
-        var div = document.createElement('div');
-        document.body.appendChild(div);
-        ReactDOM.render(React.createElement(WireframeSendToPhone, {
-          channelId: dashboard.project.getCurrentId(),
-          appType: dashboard.project.getStandaloneApp()
-        }), div);
+        if (!options.level.iframeEmbed) {
+          var div = document.createElement('div');
+          document.body.appendChild(div);
+          ReactDOM.render(React.createElement(WireframeSendToPhone, {
+            channelId: dashboard.project.getCurrentId(),
+            appType: dashboard.project.getStandaloneApp()
+          }), div);
+        }
       }
 
-      if (!options.embed) {
+      if (!options.embed && !options.noHowItWorks) {
         var runButton = document.getElementById('runButton');
         var buttonRow = runButton.parentElement;
         var openWorkspace = document.createElement('button');
@@ -2202,9 +2311,7 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   var fontAwesomeGlyph = _.find(contentSpan.childNodes, function (node) {
     return /\bfa\b/.test(node.className);
   });
-  var imgBlocksGlyph = _.find(contentSpan.childNodes, function (node) {
-    return /\bblocks-glyph\b/.test(node.className);
-  });
+  var imgBlocksGlyph = document.getElementById('blocks_glyph');
 
   // Change glyph
   if (usingBlocks) {
@@ -2543,7 +2650,8 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
  *   should display the error in.
  */
 StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
-  if (window.dashboard && dashboard.project.exceedsAbuseThreshold()) {
+  if (window.dashboard && dashboard.project &&
+      dashboard.project.exceedsAbuseThreshold()) {
     var i18n = {
       tos: window.dashboard.i18n.t('project.abuse.tos'),
       contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
@@ -2601,4 +2709,30 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
   } else {
     return code;
   }
+};
+
+/**
+ * Sets a bunch of common page constants used by all of our apps in our redux
+ * store based on our app options config.
+ * @param {AppOptionsConfig}
+ * @param {object} appSpecificConstants - Optional additional constants that
+ *   are app specific.
+ */
+StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
+  const level = config.level;
+  const combined = Object.assign({
+    localeDirection: this.localeDirection(),
+    assetUrl: this.assetUrl,
+    isReadOnlyWorkspace: !!config.readonlyWorkspace,
+    isDroplet: !!level.editCode,
+    hideSource: !!config.hideSource,
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    instructionsMarkdown: level.markdownInstructions,
+    instructionsInTopPane: config.showInstructionsInTopPane,
+    puzzleNumber: level.puzzle_number,
+    stageTotal: level.stage_total
+  }, appSpecificConstants);
+
+  this.reduxStore.dispatch(setPageConstants(combined));
 };

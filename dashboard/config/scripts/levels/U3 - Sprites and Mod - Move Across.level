@@ -8,9 +8,14 @@
     "skin": "gamelab",
     "code_functions": {
       "drawSprites": null,
-      "var sprite = createSprite": null,
       "background": null,
-      "x": null
+      "var sprite = createSprite": null,
+      "x": null,
+      "y": null,
+      "shapeColor": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "randomNumber_min_max": null
     },
     "edit_code": true,
     "embed": "false",
@@ -35,7 +40,10 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "show_d_pad": "false",
+    "markdown_instructions": "# Moving Animation\r\n\r\nYou probably already guessed that there are properties to control the x and y position of the sprite. \r\n\r\nOne major difference between x and y of a rectangle and x and y of a sprite is what position of  item they refer to. In rectangles the x and y position was the upper left corner. For sprites the x and y position is the center of the sprite like it was with ellipses. This may seems strange right now while sprites are just rectangles but in the future sprites will be able to be any image you want.  When you use its an image with weird edges its a little less clear where the upper left corner is. In addition for things such as rotation its much easier to have the x and y at the center because thats the point around which is rotates.\r\n\r\n# Do This\r\n\r\nCreate two sprites. One that moves from left to right and one that moves from top to bottom. \r\n\r\n* Create a sprite\r\n* Increment the x property of one to get movement from left to right\r\n* Increment the y property of the other to get the movement from top to bottom\r\n* Make sure to use drawSprites and redraw your background",
+    "start_blocks": "function draw(){\r\n  \r\n}"
   },
   "published": true,
   "notes": "",

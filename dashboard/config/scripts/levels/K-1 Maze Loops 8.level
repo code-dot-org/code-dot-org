@@ -28,7 +28,8 @@
     "disable_examples": "false",
     "markdown_instructions": "Use `repeat` loops to get me to the pig."
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 3
@@ -46,15 +47,11 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-        <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="2-6">5</title>
-        </block>
-      </xml>
-    </required_blocks>
     <recommended_blocks>
       <xml>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-6">???</title>
+        </block>
         <block type="maze_moveEast"/>
         <block type="maze_moveNorth"/>
         <block type="maze_moveWest"/>
