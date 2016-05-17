@@ -113,7 +113,8 @@ namespace :seed do
 
   task school_districts: :environment do
     SchoolDistrict.transaction do
-      #SchoolDistrict.reset_db
+      # Since other models (e.g. Pd::Enrollment) have a foreign key dependency
+      # on SchoolDistrict, don't reset_db first.  (Callout, above, does that.)
       SchoolDistrict.find_or_create_all_from_tsv!('config/school_districts.tsv')
     end
   end
