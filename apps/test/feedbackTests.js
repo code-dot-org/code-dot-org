@@ -762,3 +762,47 @@ describe("getCountableBlocks_", function () {
     assert.equal(17, count);
   });
 });
+
+describe("unusedBlocks", function () {
+  var studioApp;
+  var TestResults;
+  var blockXml= '<xml><block type="text_print"></block></xml>';
+
+  // create our environment
+  beforeEach(function () {
+    testUtils.setupTestBlockly();
+    var blockInstallOptions = { isK1: false };
+    var blocksCommon = require('@cdo/apps/blocksCommon');
+    blocksCommon.install(Blockly, blockInstallOptions);
+
+    studioApp = testUtils.getStudioAppSingleton();
+    TestResults = studioApp.TestResults;
+  });
+
+  afterEach(function () {
+    Blockly.showUnusedBlocks = false;
+  });
+
+  var checkResultForBlocks = function (args) {
+    studioApp.loadBlocks(blockXml);
+    Blockly.showUnusedBlocks = args.unusedBlocksEnabled;
+
+    assert.equal(args.result,
+        studioApp.feedback_.getTestResults(true, [], [], true, {}));
+  };
+
+  it ("fails when unused blocks are disabled", function () {
+    checkResultForBlocks({
+      result: TestResults.EXTRA_TOP_BLOCKS_FAIL,
+      unusedBlocksEnabled: false
+    });
+  });
+
+  it ("passes when unused blocks are enabled", function () {
+    checkResultForBlocks({
+      result: TestResults.PASS_WITH_EXTRA_TOP_BLOCKS,
+      unusedBlocksEnabled: true
+    });
+  });
+
+});
