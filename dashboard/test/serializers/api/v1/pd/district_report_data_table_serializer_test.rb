@@ -87,7 +87,7 @@ class Api::V1::Pd::DistrictReportDataTableSerializerTest < ::ActionController::T
   def expected_cols_organizer
     [
       {label: 'District Name', type: 'string'},
-      {label: 'Workshop Organizer', type: 'string'},
+      {label: 'Workshop Organizer Name', type: 'string'},
       {label: 'Workshop Organizer Id', type: 'string'},
       {label: 'Facilitators', type: 'string'},
       {label: 'Workshop Dates', type: 'string'},
