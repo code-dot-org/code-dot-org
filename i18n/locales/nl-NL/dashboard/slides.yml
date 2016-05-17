@@ -611,13 +611,14 @@ nl:
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
-        text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
+        text: "Je zou niet eens kunnen starten in de race als je geen mensen hebt die kunnen programmeren! Je hebt ze nodig omdat de race-auto's zoveel gegevens produceren en die informatie moet verwerkt worden om de prestaties te kunnen verbeteren."
       2:
         image: notes/C2_artist_intro_2.png
         text: In deze puzzels ben je een kunstenaar die een potlood gebruikt om verschillende vormen te tekenen. Overal waar je tekenaar heen gaat zal hij een lijn achter je tekenen.
       3:
         image: notes/C2_artist_intro_3.png
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: |-
+          Om op het werkvlak te kunnen bewegen ga je het "beweeg vooruit" blok gebruiken. Het vooruit blok vertelt de kunstenaar om 100 pixels vooruit te bewegen. Wat gebeurt er als we op 'Afspelen' drukken? De kunstenaar beweegt vooruit met precies 100 pixels. Pixels zijn de kleinste vierkantjes die je kunt zien op je scherm.
       4:
         image: notes/C2_artist_intro_4.png
         text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
@@ -630,10 +631,10 @@ nl:
         text: Dit is een voorwaardelijk blok. Het zegt ALS de nektar of honing minder dan, gelijk aan of meer dan een bepaald getal is DAN iets doen.
       2:
         image: notes/C2_bee_conditionals_2.png
-        text: "This is useful when we don't know how much nectar or honey to get, as we see here with this question mark."
+        text: Dit is handig als we niet weten hoeveel nectar of honing we moeten hebben, zoals we hier zien met dit vraagteken.
       3:
         image: notes/C2_bee_conditionals_3.png
-        text: "In this example, we're going to say IF the purple flower has nectar greater than 0, get nectar. That will tell our bee to keep getting nectar as long as it's there. Ta-dah!"
+        text: In dit voorbeeld zeggen we ALS de paarse bloem nectar heeft groter dan 0, haal nectar op. Dat zal onze bij vertellen dat hij nectar moet halen zolang er voorraad is. Ta-dah!
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
@@ -653,7 +654,7 @@ nl:
         text: Deze les heet conditionele kaarten. Elke dag maak je beslissingen op basis van wat je hoort en ziet.
       2:
         image: notes/C2_conditionals_with_cards_2.png
-        text: "I want to walk to the park but first I have to decide whether I should bring an umbrella or not. So I look out the window. If it's cloudy, I'm going to take my umbrella. Else, I'll take some sunglasses. I think I'd better take the umbrella. What I see and hear determines what I take to the park."
+        text: Ik wil naar het park lopen, maar eerst moet ik een besluit nemen of ik mijn paraplu mee zal nemen of niet. Daarom kijk ik uit het raam. Als het bewolkt is, neem ik mijn paraplu mee. Anders neem ik mijn zonnebril mee. Ik denk dat ik beter mijn paraplu mee kan nemen. Wat ik zie en hoor bepaalt wat ik mee neem naar het park.
       3:
         image: notes/C2_conditionals_with_cards_3.png
         text: |-
@@ -814,13 +815,14 @@ nl:
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
-        text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
+        text: "Je zou niet eens kunnen starten in de race als je geen mensen hebt die kunnen programmeren! Je hebt ze nodig omdat de race-auto's zoveel gegevens produceren en die informatie moet verwerkt worden om de prestaties te kunnen verbeteren."
       2:
         image: notes/C3_artist_intro_2.png
         text: In deze puzzels ben je een kunstenaar die een potlood gebruikt om verschillende vormen te tekenen. Overal waar je tekenaar heen gaat zal hij een lijn achter je tekenen.
       3:
         image: notes/C3_artist_intro_3.png
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: |-
+          Om op het werkvlak te kunnen bewegen ga je het "beweeg vooruit" blok gebruiken. Het vooruit blok vertelt de kunstenaar om 100 pixels vooruit te bewegen. Wat gebeurt er als we op 'Afspelen' drukken? De kunstenaar beweegt vooruit met precies 100 pixels. Pixels zijn de kleinste vierkantjes die je kunt zien op je scherm.
       4:
         image: notes/C3_artist_intro_4.png
         text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
@@ -840,10 +842,10 @@ nl:
         text: Dit is een voorwaardelijk blok. Het zegt ALS de nektar of honing minder dan, gelijk aan of meer dan een bepaald getal is DAN iets doen.
       2:
         image: notes/C3_bee_conditionals_2.png
-        text: "This is useful when we don't know how much nectar or honey to get, as we see here with this question mark."
+        text: Dit is handig als we niet weten hoeveel nectar of honing we moeten hebben, zoals we hier zien met dit vraagteken.
       3:
         image: notes/C3_bee_conditionals_3.png
-        text: "In this example, we're going to say IF the purple flower has nectar greater than 0, get nectar. That will tell our bee to keep getting nectar as long as it's there. Ta-dah!"
+        text: In dit voorbeeld zeggen we ALS de paarse bloem nectar heeft groter dan 0, haal nectar op. Dat zal onze bij vertellen dat hij nectar moet halen zolang er voorraad is. Ta-dah!
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png

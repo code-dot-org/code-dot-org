@@ -2,6 +2,8 @@
   "actor":"角色",
   "addCharacter":"新增",
   "addCharacterTooltip":"新增角色至場景",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"加 10 分",
   "addPoints50":"加 50 分",
   "addPoints100":"加 100 分",

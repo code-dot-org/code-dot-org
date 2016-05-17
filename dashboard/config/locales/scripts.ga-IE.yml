@@ -44,7 +44,7 @@
           'Artist: Shapes': 'Ealaíontóir: Cruthanna'
           'Maze: Loops': 'Cathair Ghríobháin: Lúba'
           'Bee: Loops': 'Beach: Lúba'
-          'Studio: Create a Story': 'Súgradh is Dáiríre: Cruthaigh Scéal'
+          'Studio: Create a Story': 'Spraotharlann: Cruthaigh Scéal'
           'Artist: Loops': 'Ealaíontóir: Lúba'
           description_audience: Aois 4-6
           description_short: Tá Cúrsa 1 dírithe ar pháistí atá ag foghlaim an léimh.
@@ -54,7 +54,7 @@
           The Artist: An tEalaíontóir
           Artist Debugging: 'Ealaíontóir: Dífhabhtú'
           Bounce: Preabadh
-          'Studio: Create a Story': 'Súgradh is Dáiríre: Cruthaigh Scéal'
+          'Studio: Create a Story': 'Spraotharlann: Cruthaigh Scéal'
           Artist Loops: 'Ealaíontóir: Lúba'
           Bee Conditionals: 'Beach: Coinníollacha'
           Flappy: Flappy
@@ -92,7 +92,7 @@
           description_short: Tá Cúrsa 2 dírithe ar dhaltaí a bhfuil léamh acu.
         course3:
           The Maze: An Chathair Ghríobháin
-          'Studio: Create a Story': 'Súgradh is Dáiríre: Cruthaigh Scéal'
+          'Studio: Create a Story': 'Spraotharlann: Cruthaigh Scéal'
           The Artist: An tEalaíontóir
           title: Cúrsa 3
           Artist Functions: 'Ealaíontóir: Feidhmeanna'
@@ -121,7 +121,7 @@
             1 agus 2, chun réitigh níos solúbtha a thabhairt ar fadhbanna níos casta.
             Ag deireadh an chúrsa, cruthóidh na daltaí scéalta idirghníomhacha is
             féidir a chomhroinnt le héinne. Dírithe ar aois 9-10.
-          'Studio: Create a Game': 'Súgradh is Dáiríre: Cruthaigh Cluiche'
+          'Studio: Create a Game': 'Spraotharlann: Cruthaigh Cluiche'
           Maze: Cathair Ghríobháin
           Artist: Ealaíontóir
           'Artist: Functions': 'Ealaíontóir: Feidhmeanna'
@@ -147,10 +147,10 @@
           description_audience: Aois 8-18
           description_short: Leanann Cúrsa 3 go díreach tar éis Cúrsa 2.
         playlab:
-          title: Súgradh is Dáiríre
-          description: Cruthaigh scéal nó cluiche le Súgradh is Dáiríre!
+          title: Spraotharlann
+          description: Cruthaigh scéal nó cluiche sa Spraotharlann!
           Play Lab: Súgradh is Dáiríre
-          description_short: Cruthaigh scéal nó cluiche le Súgradh is Dáiríre!
+          description_short: Cruthaigh scéal nó cluiche sa Spraotharlann!
         artist:
           title: Ealaíontóir
           description: Tarraing pictiúir iontacha leis an Ealaíontóir!
@@ -185,12 +185,12 @@
           title: Cúrsa 4
           'Algorithms: Tangrams': 'Algartaim: Tangraim'
           Variables: Athróga
-          'Play Lab: Variables': 'Súgradh is Dáiríre: Athróga'
-          'Play Lab: Functions with Parameters': 'Súgradh is Dáiríre: Feidhmeanna
-            a ghlacann le Paraiméadair'
+          'Play Lab: Variables': 'Spraotharlann: Athróga'
+          'Play Lab: Functions with Parameters': 'Spraotharlann: Feidhmeanna a ghlacann
+            le Paraiméadair'
           'Bee: Functions with Parameters': 'Beach: Feidhmeanna a ghlacann le Paraiméadair'
           'Artist: For Loops': 'Ealaíontóir: Lúba "For"'
-          'Play Lab: For Loops': 'Súgradh is Dáiríre: Lúba "For"'
+          'Play Lab: For Loops': 'Spraotharlann: Lúba "For"'
           'Artist: Functions': 'Ealaíontóir: Feidhmeanna'
           'Unplugged: Tangrams': 'Díphlugáilte: Tangraim'
           Artist: Ealaíontóir
@@ -279,12 +279,12 @@
             Detection and the Pythagorean Theorem'
           'Play Lab: Collision Detection (Big Game)': The Big Game - Collision Detection
         infinity:
-          title: 'Disney Infinity: Súgradh is Dáiríre'
-          description_short: "Úsáid Súgradh is Dáiríre chun scéal nó cluiche a chruthú
+          title: Spraotharlann Disney Infinity
+          description_short: "Úsáid an Spraotharlann chun scéal nó cluiche a chruthú
             ina bhfuil carachtair Disney Infinity."
           description: "Úsáid Súgradh is Dáiríre chun scéal nó cluiche a chruthú ina
             bhfuil carachtair Disney Infinity."
-          Play Lab: Súgradh is Dáiríre
+          Play Lab: Spraotharlann
           Infinity: "Éigríoch"
         algebrademo:
           title: Algebra Demo
@@ -397,8 +397,8 @@
           The Maze: An Chathair Ghríobháin
           Applab: Applab
           The Artist: An tEalaíontóir
-          Play Lab: Súgradh is Dáiríre
-          Play Lab 2015: Súgradh is Dáiríre 2015
+          Play Lab: Spraotharlann
+          Play Lab 2015: Spraotharlann 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
           title: Teagmhais
@@ -531,26 +531,25 @@
           'Unplugged: Contracts': 'Díphlugáilte: Conarthaí'
           'Eval: Writing Contracts': 'Luacháil: Conarthaí a Scríobh'
           'Calc: Defining Variables': "Áireamhán: Athróga a Shainmhíniú"
-          'Play Lab: Defining Variables (Big Game)': 'Súgradh is Dáiríre: Athróga
-            a Shainmhíniú (An Cluiche Mór)'
+          'Play Lab: Defining Variables (Big Game)': 'Spraotharlann: Athróga a Shainmhíniú
+            (An Cluiche Mór)'
           'Eval: Defining Functions': 'Luacháil: Feidhmeanna a Shainmhíniú'
           'Unplugged: The Design Recipe': 'Díphlugáilte: An tOideas Dearaidh'
           'Play Lab: Defining Functions': 'Súgradh is Dáiríre: Feidhmeanna a Shainmhíniú'
           'Eval: Functions': 'Luacháil: Feidhmeanna'
-          'Play Lab: Animation (Big Game)': 'Súgradh is Dáiríre: Beochan (An Cluiche
-            Mór)'
+          'Play Lab: Animation (Big Game)': 'Spraotharlann: Beochan (An Cluiche Mór)'
           'Unplugged: Booleans': 'Díphlugáilte: Luachanna Boole'
           'Eval: Boolean Operators': 'Luacháil: Oibreoirí Boole'
-          'Play Lab: Booleans': 'Súgradh is Dáiríre: Luachanna Boole'
-          'Play Lab: Boolean (Big Game)': 'Súgradh is Dáiríre: Luachanna Boole (An
-            Cluiche Mór)'
+          'Play Lab: Booleans': 'Spraotharlann: Luachanna Boole'
+          'Play Lab: Boolean (Big Game)': 'Spraotharlann: Luachanna Boole (An Cluiche
+            Mór)'
           'Unplugged: Conditionals and Piecewise Functions': 'Díphlugáilte: Coinníollacha
             agus Feidhmeanna Breacleanúnacha'
           'Eval: Conditionals': 'Luacháil: Coinníollacha'
           'Unplugged: Collision Detection and the Distance Formula': 'Díphlugáilte:
             Aimisú Imbhuailte agus an Fhoirmle Faid'
-          'Play Lab: Collision Detection (Big Game)': 'Súgradh is Dáiríre: Aimsiú
-            Imbhuailte (An Cluiche Mór)'
+          'Play Lab: Collision Detection (Big Game)': 'Spraotharlann: Aimsiú Imbhuailte
+            (An Cluiche Mór)'
           Evaluation Blocks: Blocanna Luachála
           Strings and Images: Teaghráin agus Íomhánna
           Contracts: Conarthaí
@@ -1027,6 +1026,8 @@
           Star wars: Star wars
           Minecraft: Minecraft
           Rich long assessment: Rich long assessment
+          Free Response: Free Response
+          Game Lab: Game Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
@@ -1144,7 +1145,7 @@
           Equity PD: Equity PD
         hoc2015:
           title: An Uair Chódála 2015
-          description_short: "Úsáid Súgradh is Dáiríre chun scéal nó cluiche a chruthú."
+          description_short: "Úsáid an Spraotharlann chun scéal nó cluiche a chruthú."
           description: "Úsáid Súgradh is Dáiríre chun scéal nó cluiche a chruthú."
           Hour of Code: An Uair Chódála
           Hour of Code 2015: An Uair Chódála 2015
@@ -1608,11 +1609,10 @@
           Valentine 2016: Valentine 2016
           Spring 2016: Spring 2016
         iceage:
-          title: 'Súgradh is Dáiríre: Ice Age'
-          description_short: 'Cruthaigh scéal nó cluiche le Súgradh is Dáiríre: Ice
-            Age!'
-          description: 'Cruthaigh scéal nó cluiche le Súgradh is Dáiríre: Ice Age!'
-          Ice Age Play Lab: 'Súgradh is Dáiríre: Ice Age'
+          title: 'Spraotharlann: Ice Age'
+          description_short: Cruthaigh scéal nó cluiche sa Spraotharlann Ice Age!
+          description: Cruthaigh scéal nó cluiche sa Spraotharlann Ice Age!
+          Ice Age Play Lab: 'Spraotharlann: Ice Age'
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1667,10 +1667,10 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: 'Súgradh is Dáiríre: Gumball'
-          description_short: 'Cruthaigh scéal nó cluiche le Súgradh is Dáiríre: Gumball!'
-          description: 'Cruthaigh scéal nó cluiche le Súgradh is Dáiríre: Gumball!'
-          Gumball Play Lab: 'Súgradh is Dáiríre: Gumball'
+          title: 'Spraotharlann: Gumball'
+          description_short: Cruthaigh scéal nó cluiche sa Spraotharlann Gumball!
+          description: Cruthaigh scéal nó cluiche sa Spraotharlann Gumball!
+          Gumball Play Lab: 'Spraotharlann: Gumball'
         starwars:
           title: 'Star Wars: Tóg do Réaltra Féin le Cód'
           description_short: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche
@@ -1816,30 +1816,30 @@
           'Calc: Defining Variables': "Áireamhán: Athróga a Shainmhíniú"
           'Eval: Defining Functions': 'Luacháil: Feidhmeanna a Shainmhíniú'
           'Unplugged: The Design Recipe': 'Díphlugáilte: An tOideas Dearaidh'
-          'Play Lab: Defining Functions': 'Súgradh is Dáiríre: Feidhmeanna a Shainmhíniú'
+          'Play Lab: Defining Functions': 'Spraotharlann: Feidhmeanna a Shainmhíniú'
           'Eval: Functions': 'Luacháil: Feidhmeanna'
+          'Unplugged: Fast Functions': 'Unplugged: Fast Functions'
         AlgebraB:
           title: Computer Science in Algebra
           description_short: Learn Functional Programming through Algebra
           description: Learn Functional Programming through Algebra
           'Unplugged: Video Games and Coordinate Planes': 'Díphlugáilte: Físchluichí
             agus Plánaí Comhordanáidí'
-          'Play Lab: Defining Variables (Big Game)': 'Súgradh is Dáiríre: Athróga
-            a Shainmhíniú (An Cluiche Mór)'
-          'Play Lab: Animation (Big Game)': 'Súgradh is Dáiríre: Beochan (An Cluiche
-            Mór)'
+          'Play Lab: Defining Variables (Big Game)': 'Spraotharlann: Athróga a Shainmhíniú
+            (An Cluiche Mór)'
+          'Play Lab: Animation (Big Game)': 'Spraotharlann: Beochan (An Cluiche Mór)'
           'Unplugged: Booleans': 'Díphlugáilte: Luachanna Boole'
           'Eval: Boolean Operators': 'Luacháil: Oibreoirí Boole'
-          'Play Lab: Booleans': 'Súgradh is Dáiríre: Luachanna Boole'
-          'Play Lab: Boolean (Big Game)': 'Súgradh is Dáiríre: Luachanna Boole (An
-            Cluiche Mór)'
+          'Play Lab: Booleans': 'Spraotharlann: Luachanna Boole'
+          'Play Lab: Boolean (Big Game)': 'Spraotharlann: Luachanna Boole (An Cluiche
+            Mór)'
           'Unplugged: Conditionals and Piecewise Functions': 'Díphlugáilte: Coinníollacha
             agus Feidhmeanna Breacleanúnacha'
           'Eval: Conditionals': 'Luacháil: Coinníollacha'
           'Unplugged: Collision Detection and the Distance Formula': 'Díphlugáilte:
             Aimisú Imbhuailte agus an Fhoirmle Faid'
-          'Play Lab: Collision Detection (Big Game)': 'Súgradh is Dáiríre: Aimsiú
-            Imbhuailte (An Cluiche Mór)'
+          'Play Lab: Collision Detection (Big Game)': 'Spraotharlann: Aimsiú Imbhuailte
+            (An Cluiche Mór)'
         gamelab-hackathon:
           Middle_School_Hackathon: Middle_School_Hackathon
           title: Gamelab Hackathon
@@ -1862,6 +1862,7 @@
           description: CS in Algebra end of year reflection
           Getting Started: Getting Started
           Sharing Student Work: Sharing Student Work
+          Planning For the Future: Planning For the Future
         csp1:
           title: CS Principles Unit 1 - The Internet
           description_short: An tIdirlíon
@@ -1895,6 +1896,7 @@
           DNS in the Real World: DNS in the Real World
           HTTP and Abstraction: HTTP and Abstraction
           Practice PT - The Internet and Society: Practice PT - The Internet and Society
+          Encoding and Sending Formatted Text: Encoding and Sending Formatted Text
         csp2:
           title: CS Principles Unit 2 - Digital Information
           description_short: Digital Information
@@ -2005,6 +2007,9 @@
           Draw Loop and Random: Draw Loop and Random
           Variables: Athróga
           Sprite Properties and Mod: Sprite Properties and Mod
+          Expressions and Reassignment: Expressions and Reassignment
+          Sprites and Properties: Sprites and Properties
+          Counting with Variables: Counting with Variables
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -2029,3 +2034,123 @@
           description_short: Códáil
           description: ''
           Drawing in Game Lab: Drawing in Game Lab
+        CSF_Secret_Sample:
+          title: Secret Sample
+          description_short: This is a secret...shhhhh
+          description: Test of new educational philosophy
+          description_audience: Aois 8-18
+          Computational Thinking: Smaointeoireacht Ríomhaireachtúil
+          Sample Stage: Sample Stage
+        ECSPD1:
+          title: ECS Part 1
+          description_short: 'Phase 1: Online Introduction'
+          description: Two hour introduction to your Professional Learning Program
+            for the ECS Version 5 curriculum
+          Getting Started: Getting Started
+          What is ECS?: What is ECS?
+          ECS Curriculum: ECS Curriculum
+          Wrap Up: Wrap Up
+          Welcome to Phase 1!: Welcome to Phase 1!
+          Background and Context: Background and Context
+          Classroom and workshop style: 'Classroom and workshop style '
+          Classroom and Workshop Style: 'Classroom and Workshop Style '
+        algebraFacilitator:
+          title: Computer Science in Algebra Facilitator Pre Work
+          description_short: Teach Algebra through Functional Programming
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Introduction to PD
+          Course Overview: Course Overview
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in
+            Algebra
+          Evaluation Blocks: Blocanna Luachála
+          Teacher Dashboard: Teacher Dashboard
+        sciencePD1:
+          title: 'CS in Science: Part 1'
+          description_short: 'Phase 1: Online Introduction'
+          description: In Partnership with Project GUTS
+          Introduction to PD: Introduction to PD
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
+            Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of
+            Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational
+            Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        cspoptional:
+          title: CS Principles Optional Lessons
+          description_short: Optional
+          description: Optional lessons and content across all of the CS Principles
+            units are listed here
+          Unit 1 - Sending Bits in the Real World: Unit 1 - Sending Bits in the Real
+            World
+          Unit 1 - Encoding Numbers in the Real World: Unit 1 - Encoding Numbers in
+            the Real World
+          Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
+            Tree
+          Algorithms Detour - Shortest Path: Algorithms Detour - Shortest Path
+          Algorithms Detour - How Routers Learn: Algorithms Detour - How Routers Learn
+        cspunit1-support:
+          title: Online Support for CSP Unit 1
+          description: This is a test Professional Learning Course
+          Teachers and Tools: Teachers and Tools
+          Supporting Peer Learning: Supporting Peer Learning
+          Running a Constructive Classroom: Running a Constructive Classroom
+          Strategies for Student Writing: Strategies for Student Writing
+          Intro to the Unit: Intro to the Unit
+          Chapter Overviews: Chapter Overviews
+          'Tool Talk: Intro to Netsim': 'Tool Talk: Intro to Netsim'
+          Sending Binary Messages: Sending Binary Messages
+          Encoding and Sending Numbers: Encoding and Sending Numbers
+        test-teaching-ap-cs-unit-1:
+          test Unit 1 required reading: test Unit 1 required reading
+          test Unit 1 content module Alpha: test Unit 1 content module Alpha
+          test Unit 1 content module Bravo: test Unit 1 content module Bravo
+          test Unit 1 content module Charlie: test Unit 1 content module Charlie
+          test Unit 1 practice module Delta: test Unit 1 practice module Delta
+          test Unit 1 practice module Echo: test Unit 1 practice module Echo
+          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        allthehiddenthings:
+          title: All the Hidden Things!
+          description_short: Unreleased level types for UI testing as admin
+          description: Unreleased level types for UI testing as admin
+          Game Lab: Game Lab
+        cspunit1-support-test:
+          title: CSP Unit 1 teacher support
+          description: Online Supports for CSP Unit 1
+          Unit 1 Overview: Unit 1 Overview
+        cspunit1-tools:
+          title: netsim task completion
+          description: introduction to the internet simulator and a discussion of
+            how we use it to teach the internet
+          netsim: netsim
+        Test CPS PD:
+          test Unit 1 required reading: test Unit 1 required reading
+          test Unit 1 content module Alpha: test Unit 1 content module Alpha
+          test Unit 1 content module Bravo: test Unit 1 content module Bravo
+          test Unit 1 content module Charlie: test Unit 1 content module Charlie
+          test Unit 1 practice module Delta: test Unit 1 practice module Delta
+          test Unit 1 practice module Echo: test Unit 1 practice module Echo
+          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        csp-facilitators:
+          title: CSP Tool Overview
+          description_short: Introduction to CS Principles for new Facilitators
+          description: A collection of tools from the CS Principles course. These
+            levels provide a glimpse into the tools we use throughout the curriculum
+            to
+          Introduction to Text Compression: Introduction to Text Compression
+          Turtle Programming: Turtle Programming
+          Introduction to Events: Introduction to Events
+        cspassessment:
+          title: CS Principles Culminating Assessment
+          description_short: Culminating
+          description: 'This 55-question multiple choice assessment covers questions
+            across 7 big ideas of computer science: Creativity, Abstraction, Data,
+            Algorithms, Programming, The Internet, and Global Impact. '
+          CS Principles Culminating Assessment: CS Principles Culminating Assessment
