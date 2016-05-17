@@ -29,7 +29,6 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
-var experiments = require('./experiments');
 
 var redux = require('./redux');
 var runState = require('./redux/runState');
@@ -1784,7 +1783,7 @@ function runButtonClickWrapper(callback) {
   }
 
   // inform Blockly that the run button has been pressed
-  if (this.isUsingBlockly()) {
+  if (window.Blockly && Blockly.mainBlockSpace) {
     Blockly.mainBlockSpace.getCanvas()
         .dispatchEvent(new Event(Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED));
   }
