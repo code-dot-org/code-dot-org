@@ -1,5 +1,6 @@
 import GameButtons, {ResetButton} from '../templates/GameButtons';
 import IFrameEmbedOverlay from './IFrameEmbedOverlay';
+import * as color from '../color';
 
 var Radium = require('radium');
 var Visualization = require('./Visualization');
@@ -37,8 +38,8 @@ var styles = {
     display: 'inline-block',
     width: 42,
     minWidth: 0,
-    backgroundColor: '#4d575f',
-    borderColor: '#4d575f',
+    backgroundColor: color.dark_charcoal,
+    borderColor: color.dark_charcoal,
     padding: 7,
     height: 42,
     marginLeft: 5,
