@@ -2,7 +2,7 @@
 // node_modules directories in parents in addition to the current directory.
 // In practice, that doesn't seem to happen, so instead I'm hardcoding it's
 // current directory to be our root
-var which = require('npm-which')(__dirname + '/../..').sync;
+var which = require('npm-which')(__dirname + '/..').sync;
 var mochify = require('mochify');
 var exec = require('child_process').exec;
 var command = which('linklocal');
@@ -13,15 +13,7 @@ exec(command, function (err, stdout, stderr) {
     return;
   }
 
-  var globs = [
-    './test/unit/**/*.js',
-    './test/*.js',
-    './test/applab/*.js',
-    './test/calc/*.js',
-    './test/craft/*.js',
-    './test/gamelab/*.js',
-    './test/netsim/*.js'
-  ];
+  var globs = ['./test/unit/**/*.js'];
 
   if (process.env.mocha_entry) {
     if (!/^\./.test(process.env.mocha_entry)) {
