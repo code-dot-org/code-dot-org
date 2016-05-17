@@ -14,7 +14,8 @@ class Plc::EnrollmentTaskAssignmentTest < ActiveSupport::TestCase
     @unit_enrollment = Plc::EnrollmentUnitAssignment.create(
         plc_user_course_enrollment: @enrollment,
         plc_course_unit: @course_unit,
-        status: Plc::EnrollmentUnitAssignment::START_BLOCKED
+        status: Plc::EnrollmentUnitAssignment::START_BLOCKED,
+        user: @user
     )
   end
 
