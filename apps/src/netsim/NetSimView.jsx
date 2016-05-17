@@ -1,7 +1,7 @@
 'use strict';
 
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var StudioAppWrapper = require('../templates/StudioAppWrapper');
+var UnconnectedStudioAppWrapper = require('../templates/StudioAppWrapper').UnconnectedStudioAppWrapper;
 
 /**
  * Top-level React wrapper for our NetSim app.
@@ -21,12 +21,12 @@ var NetSimView = React.createClass({
 
   render: function () {
     return (
-      <StudioAppWrapper
+      <UnconnectedStudioAppWrapper
           assetUrl={this.props.assetUrl}
           isEmbedView={this.props.isEmbedView}
           isShareView={this.props.isShareView}>
         <ProtectedStatefulDiv contentFunction={this.props.generateCodeAppHtml} />
-      </StudioAppWrapper>
+      </UnconnectedStudioAppWrapper>
     );
   }
 });
