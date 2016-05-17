@@ -10,10 +10,12 @@ class ScriptDSL < BaseDSL
     @stage_flex_category = nil
     @concepts = []
     @skin = nil
-    @levels = []
+    @current_scriptlevel = nil
+    @scriptlevels = []
     @stages = []
     @i18n_strings = Hash.new({})
     @video_key_for_next_level = nil
+    @prompt = nil
     @hidden = true
     @login_required = false
     @admin_required = false
@@ -40,10 +42,10 @@ class ScriptDSL < BaseDSL
   string :wrapup_video
 
   def stage(name, flex = nil)
-    @stages << {stage: @stage, levels: @levels} if @stage
+    @stages << {stage: @stage, scriptlevels: @scriptlevels} if @stage
     @stage = name
     @stage_flex_category = flex
-    @levels = []
+    @scriptlevels = []
     @concepts = []
     @skin = nil
   end
@@ -76,14 +78,19 @@ class ScriptDSL < BaseDSL
 
   string :video_key_for_next_level
 
+  string :prompt
+
   def assessment(name)
     level(name, {assessment: true})
   end
 
   def level(name, properties = {})
-    @levels << {
+    active = properties.delete(:active)
+    buttontext = properties.delete(:buttontext)
+    imageurl = properties.delete(:imageurl)
+    level_description = properties.delete(:description)
+    level = {
       :name => name,
-      :stage => @stage,
       :stage_flex_category => @stage_flex_category,
       :skin => @skin,
       :concepts => @concepts.join(','),
@@ -91,6 +98,35 @@ class ScriptDSL < BaseDSL
       :video_key => @video_key_for_next_level
     }.merge(properties).select{|_, v| v.present? }
     @video_key_for_next_level = nil
+    if @current_scriptlevel
+      @current_scriptlevel[:levels] << level
+
+      levelprops = {}
+      levelprops[:active] = active if active == false
+      levelprops[:buttontext] = buttontext if buttontext
+      levelprops[:imageurl] = imageurl if imageurl
+      levelprops[:description] = level_description if level_description
+      unless levelprops.empty?
+        @current_scriptlevel[:properties][name] = levelprops
+      end
+    else
+      @scriptlevels << {
+        :stage => @stage,
+        :levels => [level]
+      }
+    end
+  end
+
+  def variants
+    @current_scriptlevel = { :levels => [], :properties => {}, :stage => @stage}
+  end
+
+  def endvariants
+    @current_scriptlevel[:properties][:prompt] = @prompt if @prompt
+    @scriptlevels << @current_scriptlevel
+
+    @current_scriptlevel = nil
+    @prompt = nil
   end
 
   def i18n_strings
