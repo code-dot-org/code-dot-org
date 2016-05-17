@@ -1,3 +1,4 @@
+import * as color from '../color';
 var Radium = require('radium');
 var studioApp = require('../StudioApp').singleton;
 var applabConstants = require('./constants');
@@ -38,8 +39,8 @@ var styles = {
     lineHeight: '26px',
     padding: 7,
     borderRadius: 5,
-    backgroundColor: '#4d575f',
-    borderColor: '#4d575f',
+    backgroundColor: color.dark_charcoal,
+    borderColor: color.dark_charcoal,
     borderWidth: 1,
     borderStyle: 'solid',
     cursor: 'pointer',
@@ -58,9 +59,6 @@ var styles = {
 };
 
 var IFrameEmbedOverlay = React.createClass({
-
-  propTypes: {
-  },
 
   getInitialState() {
     return {
