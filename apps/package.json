@@ -10,7 +10,7 @@
   "scripts": {
     "lint": "eslint . --ext .js,.jsx",
     "test": "npm run lint && grunt test",
-    "test:unit": "grunt mochaTest",
+    "test:unit": "grunt unitTest",
     "test:integration": "grunt integrationTest",
     "clean": "grunt clean",
     "build": "MOOC_DEV=1 grunt build",
