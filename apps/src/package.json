@@ -6,7 +6,7 @@
   "browserify": {
     "transform": [
       "ejsify",
-      "babelify",
+      ["babelify", {"compact": false}],
       "browserify-shim"
     ]
   },
