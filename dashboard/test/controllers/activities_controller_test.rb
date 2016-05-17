@@ -1034,7 +1034,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       "stage 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; stage 'Milestone Stage 2'; level 'Level 3'",
       "a filename"
     )
-    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:stages].map{|stage| stage[:levels]}.flatten)
+    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:stages].map{|stage| stage[:scriptlevels]}.flatten)
 
     last_level_in_first_stage = script.stages.first.script_levels.last
     post :milestone, @milestone_params.merge(script_level_id: last_level_in_first_stage.id)
@@ -1044,6 +1044,19 @@ class ActivitiesControllerTest < ActionController::TestCase
     # find localized test strings for custom stage names in script
     assert response.has_key?('stage_changing'), "No key 'stage_changing' in response #{response.inspect}"
     assert_equal('milestone-stage-1', response['stage_changing']['previous']['name'])
+  end
+
+  test 'milestone post respects level_id for active level' do
+    script = create :script
+    stage = create :stage, script: script
+    level1a = create :maze, name: 'maze 1'
+    level1b = create :maze, name: 'maze 1 new'
+    script_level = create :script_level, script: script, stage: stage, levels: [level1a, level1b], properties: "{'maze 1': {active: false}}"
+
+    post :milestone, @milestone_params.merge(script_level_id: script_level.id, level_id: level1a.id)
+    response = JSON.parse(@response.body)
+
+    assert_equal response['level_id'], level1a.id
   end
 
   test 'New level completed response' do
