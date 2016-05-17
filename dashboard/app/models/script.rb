@@ -314,7 +314,7 @@ class Script < ActiveRecord::Base
 
   def banner_image
     if has_banner?
-      "banner_#{name}_cropped.png"
+      "banner_#{name}.png"
     end
   end
 
@@ -339,7 +339,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_banner?
-    k5_course? || %w(cspunit1 cspunit2 cspunit3).include?(self.name)
+    k5_course? || %w(csp1 csp2 cspunit1 cspunit2 cspunit3).include?(self.name)
   end
 
   def freeplay_links
