@@ -2,6 +2,8 @@
   "actor":"hahmo",
   "addCharacter":"lisää",
   "addCharacterTooltip":"Lisää hahmo näkymään.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"lisää 10 pistettä",
   "addPoints50":"lisää 50 pistettä",
   "addPoints100":"lisää 100 pistettä",

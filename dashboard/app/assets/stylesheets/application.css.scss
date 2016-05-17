@@ -459,6 +459,13 @@ $small-footer-standard-width: 400px;
 .full_container {
   padding: 0px 25px 25px 25px;
 }
+body.embedded_iframe {
+  .full_container {
+    padding-left: 0px;
+  }
+}
+
+
 
 $default-modal-width: 640px;
 
@@ -933,14 +940,6 @@ input.header_input {
     margin-top: 10px;
   }
 }
-
-body.embedded_iframe {
-  #codeApp.pin_bottom {
-    top: 0px;
-    left: 0px;
-  }
-}
-
 
 .reference_area {
   margin-top: 20px;

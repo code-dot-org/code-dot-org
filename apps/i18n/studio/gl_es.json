@@ -2,6 +2,8 @@
   "actor": "actor",
   "addCharacter": "engadir un",
   "addCharacterTooltip": "Agrega un personaxe á escena.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location.",
   "addPoints10": "agregar 10 puntos",
   "addPoints50": "agregar 50 puntos",
   "addPoints100": "agregar 100 puntos",
@@ -764,7 +766,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Ti necesitas obter 20 Droides Rato. Usa o comando \"agregar un Droide Rato\" dentro do evento \"cando obtés Droide Rato\" para agregar dous ou máis Droides Rato cada vez que obtés un.",
   "failedMultiplyCharactersTimeoutGotSome": "Felicitacións, agregaches código para facer Droides Rato. Podes ir ao seguinte crebacabezas ou tentar outra vez conseguir 20 Ratónes Droide. Trata de facelo máis fácil agregando máis de eles! (Presione e sosteña as teclas do teu teclado (ou pantalla) para moverse máis rápido.)",
   "failedChangeSettingTimeout": "Obten tres pilotos rebeldes para seguir adiante.",
-  "failedChangeSettingSettings": "Crea o teu propio xogo. Para pasar este crebacabezas, necesitas cambiar o teu droide e estabelecer a súa velocidade.",
-  "addGoal": "add goal",
-  "addGoalTooltip": "Add a goal to the scene at the specified location."
+  "failedChangeSettingSettings": "Crea o teu propio xogo. Para pasar este crebacabezas, necesitas cambiar o teu droide e estabelecer a súa velocidade."
 }

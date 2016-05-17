@@ -2,6 +2,8 @@
   "actor":"персонаж",
   "addCharacter":"додати",
   "addCharacterTooltip":"Додати персонаж до сцени.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"додати 10 балів",
   "addPoints50":"додати 50 балів",
   "addPoints100":"додати 100 балів",
