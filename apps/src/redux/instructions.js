@@ -1,3 +1,5 @@
+import _ from '../lodash';
+
 /**
  * A duck module for instructions, particularly instructions that we show in
  * the top pane above the code workspace. This module contains both the actions
@@ -17,21 +19,21 @@ const instructionsInitialState = {
 
 export default function reducer(state = instructionsInitialState, action) {
   if (action.type === TOGGLE_INSTRUCTIONS_COLLAPSED) {
-    return Object.assign({}, state, {
+    return _.assign({}, state, {
       collapsed: !state.collapsed
     });
   }
 
   if (action.type === SET_INSTRUCTIONS_HEIGHT &&
       action.height !== state.height) {
-    return Object.assign({}, state, {
+    return _.assign({}, state, {
       height: action.height
     });
   }
 
   if (action.type === SET_INSTRUCTIONS_MAX_HEIGHT &&
       action.maxHeight !== state.maxHeight) {
-    return Object.assign({}, state, {
+    return _.assign({}, state, {
       maxHeight: action.maxHeight
     });
   }
