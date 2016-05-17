@@ -1842,7 +1842,6 @@ StudioApp.prototype.configureDom = function (config) {
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
-  var visualization = document.getElementById('visualization');
 
   if (!config.hideSource || config.embed || config.level.iframeEmbed) {
     var vizHeight = this.MIN_WORKSPACE_HEIGHT;
@@ -1894,16 +1893,13 @@ StudioApp.prototype.configureDom = function (config) {
   }
 
   var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
-  if (config.noPadding && smallFooter) {
-    // The small footer's padding should not increase its size when not part
-    // of a larger page.
-    smallFooter.style.boxSizing = "border-box";
-  }
-  if (!config.embed && !config.hideSource) {
-    // Make the visualization responsive to screen size, except on share page.
-    visualization.className += " responsive";
-    visualizationColumn.className += " responsive";
-    if (smallFooter) {
+  if (smallFooter) {
+    if (config.noPadding) {
+      // The small footer's padding should not increase its size when not part
+      // of a larger page.
+      smallFooter.style.boxSizing = "border-box";
+    }
+    if (!config.embed && !config.hideSource) {
       smallFooter.className += " responsive";
     }
   }

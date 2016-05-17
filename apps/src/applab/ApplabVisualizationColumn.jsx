@@ -8,6 +8,7 @@ var PlaySpaceHeader = require('./PlaySpaceHeader');
 var PhoneFrame = require('./PhoneFrame');
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 var applabConstants = require('./constants');
 var connect = require('react-redux').connect;
 var classNames = require('classnames');
@@ -68,9 +69,8 @@ var ApplabVisualizationColumn = React.createClass({
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
     instructionsInTopPane: React.PropTypes.bool.isRequired,
     visualizationHasPadding: React.PropTypes.bool.isRequired,
-    hideSource: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
-    isEmbedView: React.PropTypes.bool.isRequired,
+    isResponsive: React.PropTypes.bool.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes.string.isRequired,
     playspacePhoneFrame: React.PropTypes.bool,
@@ -101,13 +101,17 @@ var ApplabVisualizationColumn = React.createClass({
         </PhoneFrame>
       );
     }
+
+    const visualizationColumnClassNames = classNames({
+      with_padding: this.props.visualizationHasPadding,
+      responsive: this.props.isResponsive
+    });
+
     return (
       <div
           id="visualizationColumn"
-          className={classNames({with_padding: this.props.visualizationHasPadding})}
-          style={[
-            (this.props.isEmbedView || this.props.hideSource) && styles.nonResponsive
-          ]}
+          className={visualizationColumnClassNames}
+          style={[!this.props.isResponsive && styles.nonResponsive]}
       >
         {!this.props.isReadOnlyWorkspace && <PlaySpaceHeader
             isEditingProject={this.props.isEditingProject}
@@ -140,9 +144,8 @@ module.exports = connect(function propsFromStore(state) {
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     instructionsInTopPane: state.pageConstants.instructionsInTopPane,
     visualizationHasPadding: state.pageConstants.visualizationHasPadding,
-    hideSource: state.pageConstants.hideSource,
     isShareView: state.pageConstants.isShareView,
-    isEmbedView: state.pageConstants.isEmbedView,
+    isResponsive: isResponsiveFromState(state),
     isIframeEmbed: state.pageConstants.isIframeEmbed,
     isRunning: state.runState.isRunning,
     isPaused: state.runState.isDebuggerPaused,
