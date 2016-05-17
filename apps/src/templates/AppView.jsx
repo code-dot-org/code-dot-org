@@ -13,17 +13,14 @@ var CodeWorkspaceContainer = require('./CodeWorkspaceContainer');
  */
 var AppView = React.createClass({
   propTypes: {
-    assetUrl: React.PropTypes.func.isRequired,
-    isEmbedView: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
-    noVisualization: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
-    codeWorkspace: React.PropTypes.element,
+    isResponsive: React.PropTypes.bool.isRequired,
+
+    // not provided by redux
+    noVisualization: React.PropTypes.bool,
     visualizationColumn: React.PropTypes.element,
     onMount: React.PropTypes.func.isRequired,
-    // Provided from redux
-    isResponsive: React.PropTypes.bool.isRequired
   },
 
   componentDidMount: function () {
@@ -36,10 +33,7 @@ var AppView = React.createClass({
     });
 
     return (
-      <StudioAppWrapper
-          assetUrl={this.props.assetUrl}
-          isEmbedView={this.props.isEmbedView}
-          isShareView={this.props.isShareView}>
+      <StudioAppWrapper>
         <div id="visualizationColumn" className={visualizationColumnClassNames}>
           {this.props.visualizationColumn}
         </div>
@@ -47,13 +41,18 @@ var AppView = React.createClass({
         <CodeWorkspaceContainer
             topMargin={0}
             hidden={this.props.hideSource}
-            noVisualization={this.props.noVisualization}
+            noVisualization={!!this.props.noVisualization}
             isRtl={this.props.isRtl}
-            codeWorkspace={this.props.codeWorkspace}/>
+        />
       </StudioAppWrapper>
     );
   }
 });
 module.exports = connect(state => ({
-  isResponsive: isResponsiveFromState(state)
+  isResponsive: isResponsiveFromState(state),
+  assetUrl: state.pageConstants.assetUrl,
+  isEmbedView: state.pageConstants.isEmbedView,
+  isShareView: state.pageConstants.isShareView,
+  hideSource: state.pageConstants.hideSource,
+  isRtl: state.pageConstants.localeDirection === 'rtl'
 }))(AppView);

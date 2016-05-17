@@ -612,12 +612,9 @@ Maze.init = function (config) {
   };
 
   // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setPageConstants({
-    localeDirection: studioApp.localeDirection(),
-    isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isDroplet: !!level.editCode,
+  studioApp.setPageConstants(config, {
     hideRunButton: !!(level.stepOnly && !level.edit_blocks)
-  }));
+  });
 
   var visualizationColumn = (
     <MazeVisualizationColumn
@@ -629,12 +626,6 @@ Maze.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          assetUrl={studioApp.assetUrl}
-          isEmbedView={!!config.embed}
-          isShareView={!!config.share}
-          hideSource={!!config.hideSource}
-          noVisualization={false}
-          isRtl={studioApp.isRtl()}
           visualizationColumn={visualizationColumn}
           onMount={studioApp.init.bind(studioApp, config)}
       />

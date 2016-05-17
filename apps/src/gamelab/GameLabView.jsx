@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import {connect} from 'react-redux';
 var _ = require('../lodash');
 var AnimationTab = require('./AnimationTab/AnimationTab');
-var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper');
+var StudioAppWrapper = require('../templates/StudioAppWrapper');
 var ErrorDialogStack = require('./ErrorDialogStack');
 var gameLabConstants = require('./constants');
 var GameLabVisualizationHeader = require('./GameLabVisualizationHeader');
@@ -94,11 +94,11 @@ var GameLabView = React.createClass({
 
   render: function () {
     return (
-      <ConnectedStudioAppWrapper>
+      <StudioAppWrapper>
         {this.renderCodeMode()}
         {this.renderAnimationMode()}
         <ErrorDialogStack/>
-      </ConnectedStudioAppWrapper>
+      </StudioAppWrapper>
     );
   }
 });
