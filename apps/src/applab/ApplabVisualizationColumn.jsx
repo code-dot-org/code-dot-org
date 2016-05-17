@@ -87,6 +87,8 @@ var ApplabVisualizationColumn = React.createClass({
       <Visualization key="1"/>,
       this.props.isIframeEmbed && !this.props.isRunning && <IframeOverlay key="2"/>
     ];
+    // Share view still uses image for phone frame. Would eventually like it to
+    // use same code
     if (this.props.playspacePhoneFrame) {
       // wrap our visualization in a phone frame
       visualization = (
