@@ -32,11 +32,11 @@ class ExternalLink < Level
   validates_presence_of :link_title
 
   def icon
-    'fa-globe'
+    'fa-link'
   end
 
   before_validation do
-    unless url.nil? || url.match(/https?:\/\//).nil?
+    unless url.try(:match, /https?:\/\//)
       url.prepend 'http://'
     end
   end
