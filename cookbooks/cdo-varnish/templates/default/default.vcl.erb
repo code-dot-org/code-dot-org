@@ -58,7 +58,7 @@ sub vcl_recv
 
   # Use "/health_check.php" to keep this instance in the load balancer.
   if (req.method == "GET" && (req.url ~ "^/health_check.php$" || req.url ~ "^/health_check$")) {
-    if (std.healthy(dashboard_<%=id%>) && std.healthy(pegasus_<%=id%>)) {
+    if (std.healthy(dashboard_<%=backends.keys.first%>) && std.healthy(pegasus_<%=backends.keys.first%>)) {
       return(synth(200, "Webapps are healthy."));
     } else {
       return(synth(503, "Webapps are not healthy."));
