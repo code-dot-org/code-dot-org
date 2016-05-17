@@ -3,10 +3,10 @@
 # Table name: school_districts
 #
 #  id         :integer          not null, primary key
-#  name       :string(255)
-#  city       :string(255)
-#  state      :string(255)
-#  zip        :string(255)
+#  name       :string(255)      not null
+#  city       :string(255)      not null
+#  state      :string(255)      not null
+#  zip        :string(255)      not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
