@@ -11,8 +11,60 @@ describe('animationModule', function () {
 
   describe('setInitialAnimationMetadata', function () {
     it('sets the entire state for the module', function () {
-      const initialMetadata = [{x:1}, {x:2}];
-      expect(reducer(NaN, setInitialAnimationMetadata(initialMetadata))).to.deep.equal(initialMetadata);
+      const initialMetadata = [{key:1}, {key:2}];
+      const newState = reducer(['an','y','thing'], setInitialAnimationMetadata(initialMetadata));
+      expect(newState.length).to.equal(2);
+      expect(newState[0]).to.deep.equal({
+        key: '1',
+        name: '',
+        frameCount: 1,
+        frameRate: 15,
+        frameSize: {x: 1, y: 1},
+        size: 0,
+        sourceSize: {x: 1, y: 1},
+        sourceUrl: undefined,
+        version: undefined
+      });
+      expect(newState[1]).to.deep.equal({
+        key: '2',
+        name: '',
+        frameCount: 1,
+        frameRate: 15,
+        frameSize: {x: 1, y: 1},
+        size: 0,
+        sourceSize: {x: 1, y: 1},
+        sourceUrl: undefined,
+        version: undefined
+      });
+    });
+
+    it('upgrades imported animation metadata to the latest format', function () {
+      // Specifically this is an example from a metadata change in early May
+      const oldAnimation = {
+        key: 'abc',
+        name: 'This Old House',
+        sourceUrl: '/v3/animations/channel-id/animation-key.png',
+        size: 15,
+        version: '1'
+      };
+      const newState = reducer([], setInitialAnimationMetadata([oldAnimation]));
+      expect(newState[0]).to.deep.equal({
+        key: 'abc',
+        name: 'This Old House',
+        sourceUrl: '/v3/animations/channel-id/animation-key.png',
+        sourceSize: {x: 1, y: 1},
+        frameSize: {x: 1, y: 1},
+        frameCount: 1,
+        frameRate: 15,
+        size: 15,
+        version: '1'
+      });
+    });
+
+    it('throws TypeError if metadata is invalid', function () {
+      expect(function () {
+        reducer([], setInitialAnimationMetadata([{name: 'broken'}]));
+      }).to.throw(TypeError);
     });
   });
 
