@@ -29,7 +29,7 @@ var arrayMethodPrefix = '[list].';
 
 var stringBlockPrefix = 'str.';
 
-const playSongObject = {
+const playSongConfig = {
   song: [
     ["A", 500], [null, 50], ["A", 500], [null, 50], ["A", 500], [null, 50],
     ["F", 350], [null, 50], ["C5", 150], [null, 50], ["A", 500], [null, 50],
@@ -222,7 +222,7 @@ module.exports.blocks = [
   {func: 'piezo.frequency', category: 'Circuit', params: ['500', '100']},
   {func: 'piezo.note', category: 'Circuit', params: ['"A4"', '100']},
   {func: 'piezo.stop', category: 'Circuit'},
-  {func: 'piezo.play', category: 'Circuit', paletteParams: ['song'], params: [JSON.stringify(playSongObject)]},
+  {func: 'piezo.play', category: 'Circuit', paletteParams: ['song'], params: [JSON.stringify(playSongConfig)]},
 
   {func: 'isPressed', blockPrefix: 'buttonL.', category: 'Circuit', type: 'readonlyproperty', tipPrefix: 'button[L/R]' },
   {func: 'holdtime', blockPrefix: 'buttonL.', category: 'Circuit', type: 'property', tipPrefix: 'button[L/R]' },
