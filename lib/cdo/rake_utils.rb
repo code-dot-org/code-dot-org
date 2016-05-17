@@ -67,7 +67,7 @@ module RakeUtils
     CDO.log.info command
     original_system(command)
     unless $?.exitstatus == 0
-      error = RuntimeError.new("'#{command}' returned #{status}")
+      error = RuntimeError.new("'#{command}' returned #{$?.exitstatus}")
       raise error, error.message
     end
   end
