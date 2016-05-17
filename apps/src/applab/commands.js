@@ -94,6 +94,10 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
         properType = (typeof varValue === 'string') ||
           (typeof varValue === 'number') || (typeof varValue === 'boolean');
         break;
+      case 'pinid':
+        properType = (typeof varValue === 'string') ||
+          (typeof varValue === 'number');
+        break;
       case 'number':
         properType = (typeof varValue === 'number' ||
           (typeof varValue === 'string' && !isNaN(varValue)));
@@ -1793,6 +1797,47 @@ applabCommands.drawChartFromRecords = function (opts) {
       opts.columns,
       opts.options
   ).then(onSuccess, onError);
+};
+
+applabCommands.pinMode = function (opts) {
+  apiValidateType(opts, 'pinMode', 'pin', opts.pin, 'pinid');
+  apiValidateType(opts, 'pinMode', 'mode', opts.mode, 'string');
+
+  const modeStringToConstant = {
+    input: 0,
+    output: 1,
+    analog: 2,
+    pwm: 3,
+    servo: 4
+  };
+
+  Applab.makerlabController.pinMode(opts.pin, modeStringToConstant[opts.mode]);
+};
+
+applabCommands.digitalWrite = function (opts) {
+  apiValidateType(opts, 'digitalWrite', 'pin', opts.pin, 'pinid');
+  apiValidateTypeAndRange(opts, 'digitalWrite', 'value', opts.value, 'number', 0, 1);
+
+  Applab.makerlabController.digitalWrite(opts.pin, opts.value);
+};
+
+applabCommands.digitalRead = function (opts) {
+  apiValidateType(opts, 'digitalRead', 'pin', opts.pin, 'pinid');
+
+  return Applab.makerlabController.digitalRead(opts.pin, opts.callback);
+};
+
+applabCommands.analogWrite = function (opts) {
+  apiValidateType(opts, 'analogWrite', 'pin', opts.pin, 'pinid');
+  apiValidateTypeAndRange(opts, 'analogWrite', 'value', opts.value, 'number', 0, 255);
+
+  Applab.makerlabController.analogWrite(opts.pin, opts.value);
+};
+
+applabCommands.analogRead = function (opts) {
+  apiValidateType(opts, 'analogRead', 'pin', opts.pin, 'pinid');
+
+  return Applab.makerlabController.analogRead(opts.pin, opts.callback);
 };
 
 /**
