@@ -1,11 +1,11 @@
-var Radium = require('radium');
-var applabConstants = require('./constants');
-var commonStyles = require('../commonStyles');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var connect = require('react-redux').connect;
-var experiments = require('../experiments');
-var classNames = require('classnames');
+import classNames from 'classnames';
+import {connect} from 'react-redux';
+import Radium from 'radium';
+import commonStyles from '../commonStyles';
+import color from '../color';
 import VisualizationOverlay from '../templates/VisualizationOverlay';
+import {VISUALIZATION_DIV_ID, isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
+import applabConstants from './constants';
 import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
 import AppLabTooltipOverlay from './AppLabTooltipOverlay';
 
@@ -19,7 +19,11 @@ var styles = {
     height: applabConstants.APP_HEIGHT
   },
   phoneFrame: {
-    marginBottom: 0
+    marginBottom: 0,
+    borderColor: color.lighter_gray
+  },
+  phoneFrameRunning: {
+    borderColor: color.charcoal
   },
   screenBlock: {
     backgroundColor: 'rgba(255, 255, 255, 0.5)',
@@ -40,11 +44,11 @@ var styles = {
 var Visualization = React.createClass({
   propTypes: {
     visualizationHasPadding: React.PropTypes.bool.isRequired,
-    hideSource: React.PropTypes.bool.isRequired,
-    isEmbedView: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     isPaused: React.PropTypes.bool.isRequired,
-    playspacePhoneFrame: React.PropTypes.bool.isRequired
+    isRunning: React.PropTypes.bool.isRequired,
+    playspacePhoneFrame: React.PropTypes.bool.isRequired,
+    isResponsive: React.PropTypes.bool.isRequired
   },
 
   render: function () {
@@ -52,37 +56,49 @@ var Visualization = React.createClass({
     var appHeight = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
 
     return (
-      <div id="visualization"
-          className={classNames({with_padding: this.props.visualizationHasPadding})}
+      <div
+          id={VISUALIZATION_DIV_ID}
+          className={classNames({
+            responsive: this.props.isResponsive,
+            with_padding: this.props.visualizationHasPadding
+          })}
           style={[
-            (this.props.isEmbedView || this.props.hideSource) && styles.nonResponsive,
+            !this.props.isResponsive && styles.nonResponsive,
             this.props.isShareView && styles.share,
-            this.props.playspacePhoneFrame && styles.phoneFrame
+            this.props.playspacePhoneFrame && styles.phoneFrame,
+            this.props.playspacePhoneFrame && this.props.isRunning && styles.phoneFrameRunning
           ]}
       >
-        <div id="divApplab" className="appModern" tabIndex="1"/>
-        <div id="designModeViz" className="appModern" style={commonStyles.hidden}/>
+        <div
+            id="divApplab"
+            className="appModern"
+            tabIndex="1"
+        />
+        <div
+            id="designModeViz"
+            className="appModern"
+            style={commonStyles.hidden}
+        />
         <VisualizationOverlay width={appWidth} height={appHeight}>
           <AppLabCrosshairOverlay/>
           <AppLabTooltipOverlay/>
         </VisualizationOverlay>
-        <div style={[
-            styles.screenBlock,
-            !(this.props.isPaused && this.props.playspacePhoneFrame) && commonStyles.hidden
-          ]}
+        <div
+            style={[
+              styles.screenBlock,
+              !(this.props.isPaused && this.props.playspacePhoneFrame) && commonStyles.hidden
+            ]}
         />
       </div>
     );
   }
 });
 
-module.exports = connect(function propsFromStore(state) {
-  return {
-    visualizationHasPadding: state.pageConstants.visualizationHasPadding,
-    hideSource: state.pageConstants.hideSource,
-    isEmbedView: state.pageConstants.isEmbedView,
-    isShareView: state.pageConstants.isShareView,
-    isPaused: state.runState.isDebuggerPaused,
-    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
-  };
-})(Radium(Visualization));
+module.exports = connect(state => ({
+  visualizationHasPadding: state.pageConstants.visualizationHasPadding,
+  isShareView: state.pageConstants.isShareView,
+  isRunning: state.runState.isRunning,
+  isPaused: state.runState.isDebuggerPaused,
+  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
+  isResponsive: isResponsiveFromState(state)
+}))(Radium(Visualization));

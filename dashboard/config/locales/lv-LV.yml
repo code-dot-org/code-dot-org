@@ -24,6 +24,8 @@
           future: nevar būt nākotnē
   hello: Sveika, pasaule
   welcome_back: Laipni lūdzu atpakaļ, %{name}
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Iesniegt
   unsubmit: Atcelt iesniegšanu
   previous_page: Previous page
@@ -169,8 +171,6 @@
         subject: Pievienojieties Code.org klasei ar %{teacher_name}!
       student_disassociated:
         subject: 'Code.org paziņojums: %{student_name} vairs nav jūsu students.'
-      teacher_disassociated:
-        subject: 'Code.org paziņojums: %{teacher_name} vairs nav jūsu skolotājs.'
   reports:
     error:
       access_denied: Jums nav pieejas šīs personas statistikai
@@ -375,6 +375,37 @@
     no_primary_course: Izmēģināt Code Studio kursu
     choose_next_course: Izmēģini kādu no Code Studio kursiem izvēloties zemāk
     print_certificate: Izdrukāt sertifikātu
+    announcement_title: Announcements
+    announcement_view_all: View all
+    announcement_message: 'We''ve started to measure student learning in Courses 1-4
+      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
+      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
+      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
+      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_button: Uzzini vairāk
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: Mācies Code Studio
     description: Jebkurš var apgūt datorzinības. Izveido spēles aplikācijas un mākslu
@@ -696,6 +727,10 @@
     share: Ieteikt
     share_title: Share your project
     share_copy_link: 'Copy the link:'
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Close
     more: Vairāk
     name: Vārds
@@ -748,7 +783,23 @@
         acknowledge: By submitting this information, you acknowledge it will be handled
           in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
           and the %{link_start_tos}Terms of Service%{link_end}
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
   components:
     icon_library:
       search_placeholder_text: Search for an icon...
       no_icons_found: No icons found
+  flex_category:
+    required: Pārskats
+    content: Content
+    practice: Teacher Practices

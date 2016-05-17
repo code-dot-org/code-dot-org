@@ -174,6 +174,7 @@ var InstructionsWithWorkspace = React.createClass({
 
 module.exports = connect(function propsFromStore(state) {
   return {
+    hideSource: state.pageConstants.hideSource,
     showInstructions: state.pageConstants.instructionsInTopPane && !!state.pageConstants.instructionsMarkdown,
     instructionsCollapsed: state.instructions.collapsed || !state.pageConstants.instructionsInTopPane,
     instructionsHeight: state.instructions.height,

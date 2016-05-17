@@ -2,6 +2,8 @@
   "actor": "actor",
   "addCharacter": "Añadir",
   "addCharacterTooltip": "Agrega un personaje a la escena.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location.",
   "addPoints10": "agregar 10 puntos",
   "addPoints50": "agregar 50 puntos",
   "addPoints100": "agregar 100 puntos",
@@ -764,7 +766,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Tú necesitas obtener 20 Droides Mouse. Usa el comando \"agregar un Droide Mouse\" dentro del evento \"cuando obtienes Droide Mouse\" para agregar dos o más Droides Mouse cada vez que obtienes uno.",
   "failedMultiplyCharactersTimeoutGotSome": "Felicitaciones, has agregado código para hacer Droides Mouse. Puedes ir al siguiente rompecabezas o intentar otra vez conseguir 20 Mouses Droide. ¡Trata de hacerlo más fácil agregando más de ellos! (Presione y sostenga las teclas de su teclado (o pantalla) para moverse más rápido.)",
   "failedChangeSettingTimeout": "Obtén tres pilotos rebeldes para seguir adelante.",
-  "failedChangeSettingSettings": "Crea tu propio juego. Para pasar este rompecabezas, necesitas cambiar tu droide y establecer su velocidad.",
-  "addGoal": "add goal",
-  "addGoalTooltip": "Add a goal to the scene at the specified location."
+  "failedChangeSettingSettings": "Crea tu propio juego. Para pasar este rompecabezas, necesitas cambiar tu droide y establecer su velocidad."
 }

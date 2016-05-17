@@ -1,20 +1,26 @@
+import experiments from '@cdo/apps/experiments';
 var color = require('../color.js');
+var Radium = require('radium');
 
 const style = {
   nav: {
     ul: {
       borderBottom: '1px solid',
       borderColor: color.purple,
-      margin: 0,
+      marginTop: 0,
+      marginLeft: 0,
+      marginRight: 0,
       marginBottom: 10,
     },
     li: {
       display: 'inline-block',
-      color: color.purple,
+      color: color.light_gray,
       fontSize: 'larger',
       fontWeight: 'bold',
       marginRight: 10,
+      cursor: 'pointer',
     },
+    selectedLi: {color:color.purple},
   },
   p: {
     fontSize: 'inherit',
@@ -28,18 +34,25 @@ const style = {
     color: color.purple,
     cursor: 'pointer',
     fontWeight: 'bold'
-  }
+  },
+  embedInput: {
+    cursor: 'copy',
+    width: 465,
+    height: 80,
+  },
 };
 
-var AdvancedShareOptions = React.createClass({
+var AdvancedShareOptions = Radium(React.createClass({
   propTypes: {
     onClickExport: React.PropTypes.func,
+    i18n: React.PropTypes.object.isRequired,
   },
 
   getInitialState() {
     return {
       expanded: false,
-      selectedOption: 'export',
+      selectedOption: (this.props.onClickExport && 'export') ||
+        (experiments.isEnabled('applab-embed') && 'embed'),
       exporting: false,
       exportError: null,
     };
@@ -59,6 +72,27 @@ var AdvancedShareOptions = React.createClass({
           exportError: 'Failed to export project. Please try again later.'
         });
       }
+    );
+  },
+
+  renderEmbedTab() {
+    var url = window.location.href.replace('edit','embed');
+    // If you change this width and height, make sure to update the
+    // #visualizationColumn.wireframeShare css
+    var iframeHtml = '<iframe width="352" height="612" style="border: 0px;" src="' +
+          url + '"></iframe>';
+    return (
+      <div>
+        <p style={style.p}>
+          {this.props.i18n.t('project.share_embed_description')}
+        </p>
+        <textarea
+          type="text"
+          onClick={(e) => e.target.select()}
+          readOnly="true"
+          value={iframeHtml}
+          style={style.embedInput} />
+      </div>
     );
   },
 
@@ -91,22 +125,53 @@ var AdvancedShareOptions = React.createClass({
   },
 
   render() {
+    if (!this.state.selectedOption) {
+      // no options are available. Render nothing.
+      return null;
+    }
     var optionsNav;
     var selectedOption;
     if (this.state.expanded) {
+      var exportTab = null;
+      if (this.props.onClickExport) {
+        exportTab = (
+          <li style={[style.nav.li,
+                      this.state.selectedOption === 'export' && style.nav.selectedLi]}
+              onClick={() => this.setState({selectedOption: 'export'})}>
+            Export
+          </li>
+        );
+      }
+      var embedTab;
+      if (experiments.isEnabled('applab-embed')) {
+        embedTab = (
+          <li style={[style.nav.li,
+              this.state.selectedOption === 'embed' && style.nav.selectedLi]}
+              onClick={() => this.setState({selectedOption: 'embed'})}>
+            {this.props.i18n.t('project.embed')}
+          </li>
+        );
+      }
       optionsNav = (
         <div>
           <ul style={style.nav.ul}>
-            <li style={style.nav.li}>Export</li>
+            {exportTab}
+            {embedTab}
           </ul>
         </div>
       );
       if (this.state.selectedOption === 'export') {
         selectedOption = this.renderExportTab();
+      } else if (this.state.selectedOption === 'embed') {
+        selectedOption = this.renderEmbedTab();
       }
     }
     var expand = this.state.expanded && this.state.selectedOption ? null :
-          <a onClick={this.expand} style={style.expand}>Show advanced options</a>;
+          (
+            <a onClick={this.expand} style={style.expand}>
+              {this.props.i18n.t('project.advanced_share')}
+            </a>
+          );
     return (
       <div style={style.root}>
         {expand}
@@ -115,6 +180,6 @@ var AdvancedShareOptions = React.createClass({
       </div>
     );
   }
-});
+}));
 
 module.exports = AdvancedShareOptions;

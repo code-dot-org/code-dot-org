@@ -25,7 +25,7 @@
   "COLOUR_RGB_RED": "লাল",
   "COLOUR_RGB_TITLE": "রঙ করুন",
   "COLOUR_RGB_TOOLTIP": "লাল, সবুজ ও নীল নির্দিষ্ট পরিমান দিয়ে রঙ তৈরি করুন।  সব পরিমান  0 এবং 100 এর মাঝে হতে হবে।",
-  "CONFIRM_CREATE_VARIABLE": "Create",
+  "CONFIRM_CREATE_VARIABLE": "তৈরি করুন",
   "CONFIRM_DELETE_FUNCTION_MESSAGE": "সতর্কীকরণ! আপনি কি নিশ্চিত যে আপনি %1 মুছে ফেলতে চান?",
   "CONFIRM_RENAME_VARIABLE": "পুনঃনামকরণ করুন",
   "CONTRACT_EDITOR_HEADER": "নকশার প্রণালী",

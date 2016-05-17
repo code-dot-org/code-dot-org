@@ -2,6 +2,8 @@
   "actor":"캐릭터",
   "addCharacter":"캐릭터 추가",
   "addCharacterTooltip":"배경에 캐릭터를 추가합니다.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"10 포인트 올리기",
   "addPoints50":"50 포인트 올리기",
   "addPoints100":"100 포인트 올리기",

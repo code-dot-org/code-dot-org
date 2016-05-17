@@ -25,7 +25,7 @@
   "COLOUR_RGB_RED":"e kuqe",
   "COLOUR_RGB_TITLE":"ngjyros me",
   "COLOUR_RGB_TOOLTIP":"Krijo një ngjyrë me sasinë e përcaktuar të të kuqes, të gjelbrës dhe blusë. Të gjitha vlerat duhet të jenë ndërmjet 0 dhe 100.",
-  "CONFIRM_CREATE_VARIABLE":"Create",
+  "CONFIRM_CREATE_VARIABLE":"Krijo",
   "CONFIRM_DELETE_FUNCTION_MESSAGE":"Kujdes! A jeni të sigurt që doni ta fshini %1?",
   "CONFIRM_RENAME_VARIABLE":"Riemëro",
   "CONTRACT_EDITOR_HEADER":"Receta Dizenjimi",

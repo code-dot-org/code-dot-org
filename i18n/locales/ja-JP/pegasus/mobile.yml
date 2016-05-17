@@ -280,6 +280,8 @@ ja-JP:
   homepage_banner_privacy_link: もっと詳しく知る
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
   homepage_banner_20k_teachers_link: もっと詳しく知る
+  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: Hour of Code（コーディングを学ぶ時間）
   homepage_slot_text_blurb_hoc: 誰でも学べる！早速始めよう。
   homepage_slot_text_link_hoc: 「コードの時間」に挑戦する
@@ -305,6 +307,7 @@ ja-JP:
   homepage_slot_text_link_stats: 統計情報を表示
   homepage_slot_text_link_buy: 参加しよう
   homepage_slot_text_link_donate: 寄付します
+  homepage_slot_text_link_shop: 'T-shirts, hats, & more'
   homepage_header_codestudio: Code Studio の生徒作品
   homepage_header_donors: Code.orgは支援者の皆様に感謝します。
   homepage_donors_seall: すべてを見る
@@ -518,7 +521,7 @@ ja-JP:
   dashboard_progress_completed_too_many_blocks: 完成、ブロックが多すぎ
   dashboard_progress_completed_perfect: 完成、完璧
   dashboard_progress_furthest_level_attempted: 到達レベル
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: 投稿しました。
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
   dashboard_responses_view: 'View text responses in:'
@@ -651,8 +654,10 @@ ja-JP:
   dashboard_faq_k5: よくある質問（幼稚園/小学生対象コース）
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
+  dashboard_announce_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
   dashboard_announce_button_text: もっと詳しく知る
+  dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: 'Hour of Codeはこちら - 12月8日 - 14日です！'
   code_sign_up: コンピュタサイエンス教育週間の間に参加する
   learn_more: 今すぐ試す
@@ -766,11 +771,29 @@ ja-JP:
   course3_name: コース3
   course4_name: コース4
   accelerated_name: 上級コース
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  20-hour_name: 上級コース
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: 古典的な迷路
+  iceage_name: Ice Age
+  minecraft_name: マインクラフト
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: 数値
+  hoc_category_name: Hour of Code（コーディングを学ぶ時間）
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
   applab_name: アプリ ラボ
-  applab_gradelevel: Ages 13+
+  applab_gradelevel: 13才以上対象
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: 4才-104才
   codeintl_gradelevel: 4才-104才

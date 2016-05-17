@@ -264,6 +264,8 @@ et-EE:
   homepage_banner_privacy_link: Lisateave
   homepage_banner_20k_teachers: 20 000 õpetajat on läbinud koolituse ning õpetavad nüüd infotehnoloogiat klassides.
   homepage_banner_20k_teachers_link: Lisateave
+  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: KoodiTund
   homepage_slot_text_blurb_hoc: Kõik suudavad õppida. Alusta täna
   homepage_slot_text_link_hoc: Proovi KoodiTundi
@@ -289,6 +291,7 @@ et-EE:
   homepage_slot_text_link_stats: Vaata statistikat
   homepage_slot_text_link_buy: Võta osa
   homepage_slot_text_link_donate: Tee annetus
+  homepage_slot_text_link_shop: 'T-shirts, hats, & more'
   homepage_header_codestudio: Code Student õpilaste loomingud
   homepage_header_donors: Code.org tänab tema toetajaid
   homepage_donors_seall: Vaata kõiki
@@ -635,8 +638,10 @@ et-EE:
   dashboard_faq_k5: K-5 korduma kippuvad küsimused
   dashboard_announcements: Teated
   dashboard_announce_view_all: Vaata kõiki
-  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
+  dashboard_announce_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
   dashboard_announce_button_text: Lisateave
+  dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: 'KoodiTund on siin - 8.-14. detsember!'
   code_sign_up: Registreeru kasutajaks, et osaleda Arvutiteaduse Hariduse Nädalal
   learn_more: Lisateave
@@ -746,9 +751,27 @@ et-EE:
   course3_name: Kursus 3
   course4_name: Kursus 4
   accelerated_name: Kiirendatud kursus
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  20-hour_name: Kiirendatud kursus
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Klassikaline labürint
+  iceage_name: Jääaeg
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Matemaatika
+  hoc_category_name: KoodiTund
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
   applab_name: App Lab
   applab_gradelevel: Ages 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds

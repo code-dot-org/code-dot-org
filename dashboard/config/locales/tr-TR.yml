@@ -24,9 +24,11 @@
           future: gelecekte olması mümkün değil
   hello: Merhaba dünya
   welcome_back: Hoş geldiniz %{name}
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Gönder
   unsubmit: Gönderme
-  previous_page: Previous page
+  previous_page: "Önceki Sayfa"
   next_page: Sonraki Sayfa
   cancel: "İptal"
   okay: Tamam
@@ -166,8 +168,6 @@
         subject: Code.org'ta %{teacher_name} ile bir sınıfa katıl!
       student_disassociated:
         subject: 'Code.org bildirim: %{student_name} artık senin öğrencin değil.'
-      teacher_disassociated:
-        subject: 'Code.org bildirimi: %{teacher_name} artık öğretmeniniz değil.'
   reports:
     error:
       access_denied: Bu kişinin istatistiklerine erişemezsiniz
@@ -381,6 +381,35 @@
     no_primary_course: Code Studio'daki kurslardan birisini deneyin
     choose_next_course: Aşağıdaki Code Studio derslerinden birini seçerek deneyin
     print_certificate: Sertifikayı Yazdır
+    announcement_title: Bildirimler
+    announcement_view_all: Tümünü Gör
+    announcement_message: "<b>4 Nisan 2016</b> - hepimiz Bilgisayar Biliminde bir
+      çeşitlilik sorun olduğunu biliyorum. Kod Studio azınlıklara kod eğitmek için
+      öncülük edecek. Bizim yıllık araştırmamız çeşitliği göstermektedir."
+    announcement_button: Daha fazlasını öğren
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: Code Studio'da Öğrenin
     description: Herkes bilgisayar bilimi öğrenebilir. Kod kullanarak oyunlar, uygulamalar
@@ -538,14 +567,13 @@
       title: Minecraft
       body: Kod aracılığıyla Minecraft dünyasını keşfedin.
     unplugged:
-      title: Unplugged Lessons
-      audience: Ages 6+
-      body: We've compiled a list of unplugged lessons for you to use in your classroom.
-        Now you can teach the fundamentals of computer science, whether you have computers
-        in your classroom or not! Try using these lessons as a stand-alone course
-        or as complementary lessons for any computer science course.
-      body_short: If you don't have computers, try these unplugged lessons in your
-        classroom.
+      title: Bağımsız dersler
+      audience: 6 yaş ve üzeri
+      body: Sınıfınızda kullanmanız için bağımsız dersler listesi toparladık. Sınıfınızda
+        bilgisayar olsa da olmasa da bilgisayar bilimlerin temellerini öğretebilirsiniz.
+        Bu ders konularını tek başına bir ders olarak kullanabileceğiniz gibi başka
+        bir bilgisayar dersini destekleyecek şekilde kullanabilirsiniz.
+      body_short: Bilgisayarınız yok ise bu bağımsız dersleri derste kullanın.
   gallery:
     students_drew_these_with_code: "Öğrenciler kod ile bunu çizdiler!"
     students_made_these_with_code: "Öğrenciler bunları kod ile yaptı!"
@@ -595,15 +623,15 @@
     wrong_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
     correct_title: Teşekkür ederiz
     correct_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
-    unsubmit-title: Unsubmit your assessment
-    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
-      date.  Are you sure?
-    submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
-      assessment after submitting it.  Are you sure?
-    submit-complete-title: Submit your assessment
-    submit-complete-body: You cannot edit your assessment after submitting it.  Are
-      you sure?
+    unsubmit-title: Değerlendirmeni geri al
+    unsubmit-body: Değerlendirmeni geri almak gönderme zamanını sıfırlayacaktır? Emin
+      misin?
+    submit-incomplete-title: Değerlendirmeni gönder.
+    submit-incomplete-body: Bazı soruları boş bıraktın. Değerlendirmeyi gönderdikten
+      sonra değişiklik yapamazsın. Emin misin?
+    submit-complete-title: Değerlendirmeni gönder.
+    submit-complete-body: Değerlendirmenizi gönderdikten sonra düzenleyemezsiniz,
+      gerçekten göndermek istiyor musunuz?
   match:
     wrong_title: Yanlış çözüm
     wrong_body: Girdiğiniz çözüm doğru değil.  Lütfen tekrar deneyin!
@@ -706,6 +734,10 @@
     share: Paylaş
     share_title: Projenizi paylaşın
     share_copy_link: 'Bağlantıyı kopyala:'
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Kapat
     more: Daha Fazla
     name: "İsim"
@@ -755,7 +787,23 @@
           veriniz.
         acknowledge: Bu bilgileri göndererek, %{link_start_privacy}Gizlilik Sözleşmesini%{link_end}
           ve %{link_start_tos}Hizmet Sözleşmesini%{link_end} kabul etmiş olursunuz
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
   components:
     icon_library:
       search_placeholder_text: "Öğe ara..."
       no_icons_found: "Öğe Bulunamadı"
+  flex_category:
+    required: Genel Bakış
+    content: Content
+    practice: Teacher Practices

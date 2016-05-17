@@ -2,17 +2,17 @@ var msg = require('../locale');
 
 var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 
 var CraftVisualizationColumn = function () {
   return (
     <span>
-      <ProtectedStatefulDiv id="visualization">
+      <ProtectedVisualizationDiv>
         <div id="minecraft-frame">
           <div id="phaser-game">
           </div>
         </div>
-      </ProtectedStatefulDiv>
+      </ProtectedVisualizationDiv>
       <GameButtons>
         <div id="right-button-cell">
           <button id="rightButton" className="share mc-share-button">
