@@ -44,8 +44,4 @@ class ExternalLink < Level
   def self.create_from_level_builder(params, level_params)
     create!(level_params.merge(user: params[:user], game: Game.external_link, level_num: 'custom'))
   end
-
-  def external_link_validator
-
-  end
 end
