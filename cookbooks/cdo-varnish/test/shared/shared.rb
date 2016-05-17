@@ -34,6 +34,8 @@ module Cdo
         `curl -s -i #{LOCALHOST}:#{DASHBOARD_PORT}/start`
         mock_started = $?.exitstatus == 0
       end
+      `curl -s -X POST #{LOCALHOST}:#{DASHBOARD_PORT}/__admin/mappings/new -d '#{{request: {method: 'GET', url: '/'}, response: {status: 200}}.to_json}'`
+      `sleep 1` until system("curl -sf #{LOCALHOST}:#{VARNISH_PORT}/health_check.dashboard")
       puts 'setup finished'
       [pid, ngrok_pid]
     end
@@ -66,7 +68,6 @@ module Cdo
         request = {method: 'GET', url: url}.to_json
         JSON.parse(`curl -s -X POST #{LOCALHOST}:#{DASHBOARD_PORT}/__admin/requests/count -d '#{request}'`)['count']
       end
-
       # Mocks a simple text/plain response body at the specified URL.
       def mock_response(url, body, request_headers={}, response_headers={}, method='GET')
         json = {

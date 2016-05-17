@@ -16,6 +16,7 @@ probe backend_healthcheck {
   .url = "/";
   .window = 4;
   .threshold = 2;
+  .initial = 2;
   .interval = 15s;
   .timeout = 10s;
 }
