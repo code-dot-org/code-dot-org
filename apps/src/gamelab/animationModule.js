@@ -164,4 +164,3 @@ export function setAnimationName(animationKey, name) {
     name: name
   };
 }
-
