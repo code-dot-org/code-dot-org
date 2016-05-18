@@ -2,8 +2,6 @@ var chalk = require('chalk');
 var path = require('path');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
-var glob = require('glob');
-var readline = require('readline');
 var webpack = require('webpack');
 var logBuildTimes = require('./script/log-build-times');
 
@@ -276,64 +274,9 @@ module.exports = function (grunt) {
     allFilesDest.push(outputDir + app + '.js');
   });
 
-  /**
-   * Generates a command line string to execute browserify with the specified options.
-   * Available options are:
-   *
-   * @param {!Object} options
-   * @param {boolean} [options.globalShim] - boolean for whether or not to turn on
-   *        the browserify-global-shim transform
-   * @param {!string} options.cacheFile - file name where the browserify cache should be stored
-   * @param {!string[]} options.srcFiles - list of src files to pass to browserify
-   * @param {!string[]} options.destFiles - list of destination file paths to pass to browserify
-   * @param {boolean} [options.factorBundle] - whether or not to use the factor-bundle plugin to
-   *        extract common code into a separate file.
-   */
-  function getBrowserifyCommand(options) {
-    // Use command-line tools to run browserify (faster/more stable this way)
-    var cmd = 'mkdir -p build/browserified &&' +
-          (envOptions.dev ? '' : ' NODE_ENV=production') + // Necessary for production Redux
-          ' `npm bin`/browserifyinc';
-    if (options.globalShim) {
-      cmd += ' -g [ browserify-global-shim ]';
-    }
-    if (options.cacheFile) {
-      cmd += ' --cachefile ' + outputDir + options.cacheFile;
-    }
-    cmd += ' --extension=.jsx' +
-      ' -t [ babelify --compact=false --sourceMap ]' +
-      (envOptions.dev ? '' : ' -t loose-envify') +
-      ' -d ' + options.srcFiles.join(' ');
-    if (options.factorBundle) {
-      cmd += ' -p [ factor-bundle -o ' +
-        options.destFiles.join(' -o ') +
-        ' ] -o ' + outputDir + 'common.js';
-    } else {
-      cmd += ' -o ' + options.destFiles[0];
-    }
-    return cmd;
-  }
-
-  var browserifyExec = getBrowserifyCommand({
-    globalShim: true,
-    cacheFile: 'browserifyinc.cache.json',
-    srcFiles: allFilesSrc,
-    destFiles: allFilesDest,
-    factorBundle: APPS.length > 1,
-  });
-
-  var applabAPIExec = getBrowserifyCommand({
-    globalShim: false,
-    cacheFile: 'applab-api.cache.json',
-    srcFiles: ['build/js/applab/api-entry.js'],
-    destFiles: [outputDir + 'applab-api.js'],
-    factorBundle: false,
-  });
-
   var fastMochaTest = process.argv.indexOf('--fast') !== -1;
 
   config.exec = {
-    browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
     convertScssVars: './script/convert-scss-variables.js',
     integrationTest: 'node test/runIntegrationTests.js --color' + (fastMochaTest ? ' --fast' : ''),
     unitTest: 'node test/runUnitTests.js --color',
