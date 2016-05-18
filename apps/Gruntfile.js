@@ -123,6 +123,12 @@ module.exports = function (grunt) {
         },
         {
           expand: true,
+          cwd: 'lib/piskel',
+          src: ['**/*'],
+          dest: 'build/package/js/piskel/'
+        },
+        {
+          expand: true,
           cwd: 'lib/droplet',
           src: ['droplet-full' + dotMinIfNotDev + '.js'],
           dest: 'build/package/js/droplet/',
