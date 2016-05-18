@@ -235,7 +235,7 @@ var AABBops = function (p5Inst, type, target, callback) {
         print("busted");
         return false;
       }*/
-      if(this.collider !== undefined && other.collider !== undefined)
+      if(typeof this.collider !== undefined && typeof other.collider !== undefined)
       {
       if(type === 'overlap')  {
           var over;
@@ -251,7 +251,7 @@ var AABBops = function (p5Inst, type, target, callback) {
 
             result = true;
 
-            if(callback !== undefined && typeof callback === 'function')
+            if(typeof callback === 'function')
               callback.call(this, this, other);
           }
         }
@@ -633,4 +633,3 @@ var isTouching = function (p5Inst, target) {
 };
 
 /* eslint-enable */
-
