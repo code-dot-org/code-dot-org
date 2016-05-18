@@ -168,15 +168,13 @@ var WorkshopForm = React.createClass({
   },
 
   handleSessionsChange: function (sessions, removedSession) {
+    sessions = _.cloneDeep(sessions);
     sessions.sessionsModified = true;
     var destroyedSessions = [];
     if (removedSession && removedSession.id) {
       destroyedSessions.push(removedSession);
     }
-    this.setState({
-      sessions: _.cloneDeep(sessions),
-      destroyedSessions: _.cloneDeep(destroyedSessions)
-    });
+    this.setState({sessions, destroyedSessions});
   },
   handleFacilitatorsChange: function (facilitators) {
     this.setState({facilitators: facilitators});
