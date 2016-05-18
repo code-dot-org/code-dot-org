@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import {expect} from '../../util/configuredChai';
 import reducer, {setInitialAnimationMetadata, addAnimation, cloneAnimation,
     deleteAnimation, setAnimationName} from '@cdo/apps/gamelab/animationModule';
 
