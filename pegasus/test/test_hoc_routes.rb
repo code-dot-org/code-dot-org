@@ -343,7 +343,7 @@ class HocRoutesTest < Minitest::Test
                         processed_data: '{}',
                         created_at: DateTime.now,
                         updated_at: DateTime.now
-      )
+                       )
     end
 
     def remove_test_company(name)

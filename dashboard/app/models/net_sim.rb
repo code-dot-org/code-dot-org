@@ -98,7 +98,7 @@ class NetSim < Blockly
               user: params[:user],
               game: Game.netsim,
               level_num: 'custom'
-            ))
+    ))
   end
 
   def finishable?
