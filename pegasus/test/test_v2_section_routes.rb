@@ -1,12 +1,12 @@
 # Tests for the routes in v2_section_routes.rb
 
-require 'minitest/autorun'
-require 'rack/test'
+require_relative 'sequel_test_case'
 require 'mocha/mini_test'
+require 'rack/test'
 require_relative 'fixtures/fake_dashboard'
 require_relative 'fixtures/mock_pegasus'
 
-class V2SectionRoutesTest < Minitest::Test
+class V2SectionRoutesTest < SequelTestCase
   describe 'Section Routes' do
     before do
       FakeDashboard.use_fake_database

@@ -1,12 +1,12 @@
 # Tests for the routes in v2_user_routes.rb
 
-require 'minitest/autorun'
-require 'rack/test'
+require_relative 'sequel_test_case'
 require 'mocha/mini_test'
+require 'rack/test'
 require_relative 'fixtures/fake_dashboard'
 require_relative 'fixtures/mock_pegasus'
 
-class V2UserRoutesTest < Minitest::Test
+class V2UserRoutesTest < SequelTestCase
   describe 'User Routes' do
     before do
       FakeDashboard.use_fake_database
@@ -173,45 +173,37 @@ class V2UserRoutesTest < Minitest::Test
 
       it 'returns 403 "Forbidden" when signed in as another student' do
         with_role FakeDashboard::SELF_STUDENT
-        Dashboard.db.transaction(rollback: :always) do
-          @pegasus.post "/v2/students/#{FakeDashboard::STUDENT[:id]}/update",
-            {name: NEW_NAME}.to_json,
-            'CONTENT_TYPE' => 'application/json;charset=utf-8'
-          assert_equal 403, @pegasus.last_response.status
-        end
+        @pegasus.post "/v2/students/#{FakeDashboard::STUDENT[:id]}/update",
+          {name: NEW_NAME}.to_json,
+          'CONTENT_TYPE' => 'application/json;charset=utf-8'
+        assert_equal 403, @pegasus.last_response.status
       end
 
       it 'returns 403 "Forbidden" when signed in as unconnected teacher' do
         with_role FakeDashboard::TEACHER_WITH_DELETED
-        Dashboard.db.transaction(rollback: :always) do
-          @pegasus.post "/v2/students/#{FakeDashboard::STUDENT[:id]}/update",
-            {name: NEW_NAME}.to_json,
-            'CONTENT_TYPE' => 'application/json;charset=utf-8'
-          assert_equal 403, @pegasus.last_response.status
-        end
+        @pegasus.post "/v2/students/#{FakeDashboard::STUDENT[:id]}/update",
+          {name: NEW_NAME}.to_json,
+          'CONTENT_TYPE' => 'application/json;charset=utf-8'
+        assert_equal 403, @pegasus.last_response.status
       end
 
       it 'updates student info when signed in as the teacher' do
         with_role FakeDashboard::TEACHER
-        Dashboard.db.transaction(rollback: :always) do
-          @pegasus.post "/v2/students/#{FakeDashboard::STUDENT[:id]}/update",
-            {name: NEW_NAME}.to_json,
-            'CONTENT_TYPE' => 'application/json;charset=utf-8'
-          assert_equal 200, @pegasus.last_response.status
-          assert_equal expected_v2_students_id_hash_for(
-                         FakeDashboard::STUDENT.merge({name: NEW_NAME})),
-                       JSON.parse(@pegasus.last_response.body)
-        end
+        @pegasus.post "/v2/students/#{FakeDashboard::STUDENT[:id]}/update",
+          {name: NEW_NAME}.to_json,
+          'CONTENT_TYPE' => 'application/json;charset=utf-8'
+        assert_equal 200, @pegasus.last_response.status
+        assert_equal expected_v2_students_id_hash_for(
+                       FakeDashboard::STUDENT.merge({name: NEW_NAME})),
+                     JSON.parse(@pegasus.last_response.body)
       end
 
       it 'returns 403 "Forbidden" when signed in as former teacher' do
         with_role FakeDashboard::TEACHER_WITH_DELETED
-        Dashboard.db.transaction(rollback: :always) do
-          @pegasus.post "/v2/students/#{FakeDashboard::SELF_STUDENT[:id]}/update",
-            {name: NEW_NAME}.to_json,
-            'CONTENT_TYPE' => 'application/json;charset=utf-8'
-          assert_equal 403, @pegasus.last_response.status
-        end
+        @pegasus.post "/v2/students/#{FakeDashboard::SELF_STUDENT[:id]}/update",
+          {name: NEW_NAME}.to_json,
+          'CONTENT_TYPE' => 'application/json;charset=utf-8'
+        assert_equal 403, @pegasus.last_response.status
       end
     end
 
