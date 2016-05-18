@@ -150,6 +150,16 @@ var SessionFormPart = React.createClass({
       return;
     }
 
+    this.applyDatePicker();
+  },
+
+  componentDidUpdate: function (prevProps) {
+    if (prevProps.readOnly && !this.props.readOnly) {
+      this.applyDatePicker();
+    }
+  },
+
+  applyDatePicker: function () {
     // Add date picker to date input.
     var dateInput = $(ReactDOM.findDOMNode(this)).find('.date-picker');
     $(dateInput).datepicker({

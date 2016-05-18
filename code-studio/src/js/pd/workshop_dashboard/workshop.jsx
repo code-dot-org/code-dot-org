@@ -47,7 +47,7 @@ var Workshop = React.createClass({
 
   shouldComponentUpdate: function () {
     // Don't allow editing a workshop that has been started.
-    if (this.props.route.view === 'edit' && this.state.workshop.state !== 'Not Started') {
+    if (this.props.route.view === 'edit' && this.state.workshop && this.state.workshop.state !== 'Not Started') {
       this.context.router.replace(`/workshops/${this.props.params.workshopId}`);
       return false;
     }
