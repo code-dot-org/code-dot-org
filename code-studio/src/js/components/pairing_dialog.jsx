@@ -11,7 +11,7 @@ console.log(Pairing);
 
 var PairingDialog = React.createClass({
     getInitialState: function () {
-      return { isOpen: false };
+      return { isOpen: this.props.initialIsOpen };
     },
 
     close: function () {

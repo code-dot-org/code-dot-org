@@ -142,6 +142,7 @@ en:
     words: 'Now enter your secret words'
     login: 'Sign in'
     invalid_login: 'Invalid login, please try again'
+    pair_programming: 'I have a partner at my computer'
   password:
     reset_form:
       title: 'Forgot your password?'

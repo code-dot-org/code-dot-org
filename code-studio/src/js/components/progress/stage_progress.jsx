@@ -22,7 +22,11 @@ var StageProgress = React.createClass({
       }
 
       var outerClass = (level.kind === 'assessment') ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
-      outerClass = (index === this.props.currentLevelIndex) ? 'puzzle_outer_current' : outerClass;
+      var qtip = "";
+      if (index === this.props.currentLevelIndex) {
+        outerClass = 'puzzle_outer_current';
+        qtip = "here is a qtip";
+      }
       if (index === lastIndex) {
         outerClass += ' last';
       }
@@ -42,7 +46,8 @@ var StageProgress = React.createClass({
           <a
             href={level.url}
             className={innerClass + ' level-' + level.id}
-            style={dotStyle}>
+            style={dotStyle}
+            dataQtip={qtip}>
             {level.title}
           </a>
         </div>,

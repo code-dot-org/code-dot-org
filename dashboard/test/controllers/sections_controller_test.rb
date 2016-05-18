@@ -79,6 +79,22 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to '/s/flappy'
   end
 
+  test "login with show_pairing_dialog shows pairing dialog" do
+    post :log_in, id: @flappy_section.code, user_id: @flappy_user_1.id, secret_words: @flappy_user_1.secret_words, show_pairing_dialog: '1'
+
+    assert_redirected_to '/s/flappy'
+
+    assert session[:show_pairing_dialog]
+  end
+
+  test "login without show_pairing_dialog shows pairing dialog" do
+    post :log_in, id: @flappy_section.code, user_id: @flappy_user_1.id, secret_words: @flappy_user_1.secret_words
+
+    assert_redirected_to '/s/flappy'
+
+    assert !session[:show_pairing_dialog]
+  end
+
   test "cannot log in to section if you are not in the section" do
     assert_no_difference '@picture_user_1.reload.sign_in_count' do # devise Trackable fields are not updated
       post :log_in, id: @picture_section.code, user_id: @word_user_1.id, secret_picture_id: @word_user_1.secret_picture_id

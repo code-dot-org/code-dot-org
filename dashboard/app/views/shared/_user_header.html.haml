@@ -51,7 +51,7 @@
   if (typeof dashboard !== 'undefined') {  // only display pair programming if in dashboard
     // pair programming dialog
     $(document).ready(function () {
-      var props = {source: #{pairing_url.inspect}};
+      var props = {source: #{pairing_url.inspect}, initialIsOpen: #{@show_pairing_dialog}};
       props.i18n = window.dashboard.i18n;
       $('body').append('<div id="pairing"></div>');
       var pairingDialog = ReactDOM.render(
