@@ -1,6 +1,6 @@
 var animationTabModule = require('@cdo/apps/gamelab/AnimationTab/animationTabModule');
 var expect = require('chai').expect;
-var GameLabActionType = require('@cdo/apps/gamelab/actions').ActionType;
+import {ADD_ANIMATION_AT} from '@cdo/apps/gamelab/animationModule';
 
 describe('AnimationTab', function () {
   describe('reducer', function () {
@@ -38,7 +38,7 @@ describe('AnimationTab', function () {
     describe('action: Game Lab ADD_ANIMATION_AT', function () {
       it('changes selected animation to newly added animation', function () {
         var action = {
-          type: GameLabActionType.ADD_ANIMATION_AT,
+          type: ADD_ANIMATION_AT,
           animationProps: {
             key: 'new_animation_key'
           }
