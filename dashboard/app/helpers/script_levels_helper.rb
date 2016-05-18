@@ -1,4 +1,6 @@
 module ScriptLevelsHelper
+  include Plc::EvaluationsHelper
+
   def script_level_solved_response(response, script_level)
     next_user_redirect = next_progression_level_or_redirect_path(script_level)
 
@@ -36,9 +38,17 @@ module ScriptLevelsHelper
         script_level.next_progression_level
       end
 
-    next_level ?
-        build_script_level_path(next_level) :
-        script_completion_redirect(script_level.script)
+    if script_level.level.try(:is_plc_evaluation?)
+      last_result = UserLevel.where(user: current_user, level: script_level.levels[0]).last
+      level_source = LevelSource.where(id: last_result.level_source_id).last
+      enrolled_modules = determine_preferred_learning_modules level_source, script_level.script
+      enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: current_user, plc_course_unit: script_level.script.plc_course_unit)
+      preview_assignments_path(unit_assignment_id: enrollment_unit_assignment, params: {enrolled_modules: enrolled_modules})
+    else
+      next_level ?
+          build_script_level_path(next_level) :
+          script_completion_redirect(script_level.script)
+    end
   end
 
   def wrapup_video_then_redirect_response(wrapup_video, redirect)

@@ -1,0 +1,17 @@
+
+  name 'long assessment'
+  title 'Long Assessment'
+  submittable 'true'
+
+  page
+  level 'level1'
+  level 'level2'
+  level 'level3'
+  page
+  level 'level4'
+  text 'external1'
+  level 'level5'
+  page
+  level 'level6'
+  level 'level7'
+  
