@@ -2,6 +2,8 @@
   "actor":"personaggio",
   "addCharacter":"aggiungi il personaggio",
   "addCharacterTooltip":"Aggiunge un personaggio alla scena.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"aggiungi 10 punti",
   "addPoints50":"aggiungi 50 punti",
   "addPoints100":"aggiungi 100 punti",

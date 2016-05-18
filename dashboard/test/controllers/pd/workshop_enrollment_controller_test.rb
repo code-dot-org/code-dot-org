@@ -1,5 +1,6 @@
 require 'test_helper'
 class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
+  freeze_time
 
   setup do
     @organizer = create :workshop_organizer

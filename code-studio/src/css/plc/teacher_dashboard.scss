@@ -49,6 +49,8 @@
 
     .coming_soon {
       text-align: center;
+      font-size: 16px;
+      padding-top: 20px;
     }
 
     a {
@@ -57,11 +59,33 @@
 
     .module_assignment {
       border-radius: 5px;
-      color: white !important;
       font-family: "Gotham 4r", sans-serif;
       text-decoration: none;
       margin: 10px;
       padding: 5px;
+
+      background-color: $cyan;
+      color: white !important;
+
+      position: relative;
+
+      .ribbon-wrapper {
+        width: 90px;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+
+        .ribbon {
+          transform: rotate(45deg);
+          position: relative;
+          padding: 7px 0;
+          left: -1px;
+          top: 10px;
+          width: 120px;
+        }
+      }
 
       .right_aligned {
         float: right;
@@ -69,15 +93,16 @@
     }
 
     .not_started {
-      background-color: #0094ca;
+      background-color: $white;
+      border: 1px #bbb solid;
     }
 
     .in_progress {
-      background-color: #EFCD1C;
+      background-color: #EFCD1C !important;
     }
 
     .completed {
-      background-color: #b9bf15;
+      background-color: #0ebe0e !important;
     }
   }
 }

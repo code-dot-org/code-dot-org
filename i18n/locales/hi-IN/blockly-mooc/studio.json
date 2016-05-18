@@ -2,6 +2,8 @@
   "actor":"अभिनेता",
   "addCharacter":"एक और जोड़े",
   "addCharacterTooltip":"एक चरित्र दृश्य करने के लिए जोड़ें।",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"10 अंक जोड़ें",
   "addPoints50":"50 अंक जोड़ें",
   "addPoints100":"100 अंक जोड़ें",

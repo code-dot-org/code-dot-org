@@ -373,18 +373,17 @@ tr:
       3:
         image: notes/playlab_events_3.png
         text: |-
-          Here, we're going to make the space bot greet the earthlings when a player clicks on him. We'll use the "when clicked" block and attach the "say" block to it. When the player clicks on the space bot, everything attached to this "when clicked" event block will be performed. What does your alien say?
+          Burada, oyuncu uzay gemisine tıkladığında "Dünyalı,Seni Selamlıyorum!" diyecek. "Tıklandığında" butonunu kullanacağız ve "De" butonunu ona ekleyeceğiz. Oyuncu uzay robot'una tıkladığında "Tıklandığında" butonuna bağlı olan her şey çalışacak. Peki, senin uzaylın ne diyor?
       4:
         image: notes/playlab_events_4.png
-        text: 'There are also "when arrow" blocks. If you link the "move" blocks to these, you can start to move your actors up, down, left, or right. Step by step, your game is getting more interactive.'
+        text: 'Ayrıca "zaman okları" parçaları var. Eğer "hareket" parçalarını bunlara bağlarsanız, karakterinizi yukarı, aşağı, sola ve sağa hareket ettirmeye başlayabilirsiniz!. Git gide oyununuz daha çok interaktif oluyor.'
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
         text: 'Bu "sonsuza dek tekrarla" bloğu. Bu bloktaki komutlar oyun sonuna dek tekrar edecek.'
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: |-
-          If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: 'Eğer karakterimizin bir şey yapmasına gerek kalmadan tekrar eden işleri yapmasını istiyorsak, bloklarımızı "Sonsuz Tekrar" bloğunun içine koyarız.'
       3:
         image: notes/playlab_repeat_forever_3.png
         text: In this next puzzle, our goal is to help the wizard patrol the boundaries of the kingdom, left and right continuously. Learning how the repeat commands works, will save you a ton of time later when you build your own game.
@@ -1178,17 +1177,17 @@ tr:
     C4_variables_artist:
       1:
         image: notes/C4_variables_artist_1.png
-        text: A variable is a container you can store a value in. When you use that variable in an algorithm, it opens up the container and looks at the value inside. This lets you write smarter algorithms that behave differently depending on the value stored in the variable.
+        text: Değişkenler içinde değer sakladığınız bir alandır. Bu değişkeni algoritma içinde kullandığınız zaman değişkenin saklandığı alan açılır ve içindeki değer kullanılır. Bu size değişkenini içindeki değere göre farklı çalışabilen daha akıllı algoritmalar yazma olanağı tanır.
       2:
         image: notes/C4_variables_artist_2.png
-        text: "For example, if you wanted to write an algorithm to say Happy birthday, you're turning 10! to my little brother, that's great now but when I run it next year I'd want it to say, Happy birthday, you're turning 11! I could create a variable called age to store my brother's age and write my algorithm to say Happy birthday, you're turning 'age' instead. Because variable can change, every year I can update the variable 'age' to equal 'age' plus 1."
+        text: 'Örneğin eğer doğum günü kutlamak için bir algoritma yazma isteseniz ve "İyi ki doğdun küçük kardeşim, 10 yaşına girdin" yazdınız harika oldu fakat gelecek yıl 11 olacak yine yeni mesaj yazacaksınız. Bunun yerine kardeşinizin yaşı için bir değişken kullanabilirsiniz ve "İyi ki doğdun küçük kardeşim `yaş`yaşına girdin" diyebilirsiniz Çünkü yaş değişkeni her yıl bir artacak bunu yaş=yaş+1 yapabileceksiniz.'
       3:
         image: notes/C4_variables_artist_3.png
-        text: "In this puzzle, we're going to be using a variable that will set the length of the line our artist draws. Later on in our code, the move forward block will look at that length variable to see what value you've set it to."
+        text: Bu bulmacada sanatçının çizeceği çizginin boyunu belirlemek için length(uzunluk) değişkenini kullanacağız. Kodumuzda ilerle bloğu length değişkenine bakacak içindeki değeri görecek.
     C4_variables_playlab:
       1:
         image: notes/C4_variables_playlab_1.png
-        text: A variable is a container that you can store a value in. When you use that variable in an algorithm, it opens up the container and looks at the value inside. This lets you write smarter algorithms that behave differently depending on the value stored in the variable.
+        text: Değişkenler içinde değer sakladığınız bir alandır. Bu değişkeni algoritma içinde kullandığınız zaman değişkenin saklandığı alan açılır ve içindeki değer kullanılır. Bu size değişkenini içindeki değere göre farklı çalışabilen daha akıllı algoritmalar yazma olanağı tanır.
       2:
         image: notes/C4_variables_playlab_2.png
         text: "Now you're going to try playlab where you are given different games and you can change the values of variables like speed, height, score, in order to change the game. You won't have to change the algorithm of the game to change how it plays, just the variable."

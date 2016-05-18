@@ -365,6 +365,9 @@ is:
         sign in to test applab levels (By design, applab levels only work if signed
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script).
+      allthethings_U3 - Simple Drawing - Rectangle Width and Height_instruction: |
+        Do
+        This
       App Lab test_instruction: prófun
       Applab allthethings onRecordEvent_instruction: |
         Please sign in to test applab
@@ -737,6 +740,14 @@ is:
       Course 4 Play Labs For Loops 7a_instruction: "Nú erum við að komast áleiðis! Hvernig væri að telja hve oft við getum smellt á Vitkann áður en Hundur kemst upp í 30?\\r\n\\r\nBættu kubbum í Vitkann svo að í hvert skipti sem smellt er á hann þá hækki breytan \"clicked\" um 1. Þú getur hunsað \"increment\" í bili.\\r\n\\r\nHundur byrjar að telja þegar þú smellir á \"Keyra\"."
       Course 4 Play Labs For Loops 8_instruction: "Hjálpaðu leikmönnum að hreyfast um leið og þeir telja.\\r\n\\r\nHundur á að hreyfast og bæta 2 við (teljari + 2) í hvert skipti. Köttur á að hreyfast og margfalda með 2 (teljari * 2) í hvert skipti. Mörgæs á að hreyfast og telja í 2. veldi (teljari ^ 2) í hvert skipti. Hver verður fyrstur til að ná sínu flaggi?"
       Course 4 Play Labs For Loops 8a_instruction: "Til að ljúka leiknum þurfum við að nota \"increment\" breytuna aftur. Við skulum tengja hana við áfanga í leiknum.\\r\n\\r\n1) Ef smellt er á Vitkann skal telja það.\\r\n2) Ef smellt er að minnsta kosti 10 sinnum á Vitkann áður en Hundur telur upp í 30, skal hækka \"increment\" um 1 og byrja aftur.\\r\n3) Ef ekki er smellt á Vitkann a.m.k. 10 sinnum er leiknum lokið."
+      Course 4 Playlab For Loop Freeplay_instruction: |
+        Freeplay: Use everything you've
+        learned so far to make a game that includes a `for` loop!
+      Course 4 Playlab For Loops 4b_instruction: "Now, these two characters are going\nto race!  \\r\n\\r\nEach of them will move `counter` steps at a time, but their\ncounters will have different values because of the `for` loops.  \\r\n\\r\nCan\nyou change the increment in one of the loops so that the race is a tie?"
+      Course 4 Playlab For Loops 5b_instruction: |
+        Adjust the interval on these `for`
+        loops so that the two characters end in the exact same place.
+      Course 4 Playlab For Loops 6b_instruction: "Edit this `for` loop to create\na game that's fun for you to play!\\r\n\\r\nPress \"Run\" and click Madame\nUnicorn four times to win. "
       Course 4 SCF 1_instruction: Notaðu föllin sem hér eru til að teikna fjórar raðir af sexhyrningum. Sérðu hvernig röðunum með jafna tölu er hliðrað til hægri?
       Course 4 SCF 1a_instruction: Getur þú fundið út hvernig öllum þessum blómasafa verður safnað með sem fæstum mögulegum kubbum?
       Course 4 SCF 1b_instruction: Getur þú fundið út hvernig öllum þessum blómasafa verður safnað með sem fæstum mögulegum kubbum?
@@ -777,6 +788,13 @@ is:
         Here's a program that looks pretty
         similar to what you've been writing, but may behave quite differently. You'll
         want to stop and discuss with the class before moving on.
+      CSD U3 Boolean Modify_instruction: |
+        Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Boolean Predict_instruction: |
+        What do you think this code will do when
+        it is run? Predict what each console.log() command will print, then run the
+        program to check your predictions.
       CSD U3 Draw Loop Discuss_instruction: |
         Here's a program that looks pretty
         similar to what you've been writing, but may behave quite differently. You'll
@@ -787,6 +805,12 @@ is:
         to generate some of the inputs?You'll want to stop and discuss with the class
         before moving on.
       CSD U3 Frame Rate_instruction: "Slow down Gamelab Gary's animation with frameRate()"
+      CSD U3 Keypress Boolean_instruction: |
+        Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Keypress Watchers_instruction: |
+        Modify the code so that all of the console.log
+        commands print true
       CSD U3 Random Animation_instruction: |
         Use randomNumber() to animate Gary's
         mouth.
@@ -805,9 +829,9 @@ is:
         Using console.log() write a program that
         randomly returns a number in a range you define.
       CSD U3 Random Width Height_instruction: |
-        Pick a shape function and use calls
-        to randomNumber() in place of one or more of the parameters. Maker sure you
-        run it a few times so you can see the effect of randomization.
+        Pick a shape block and use calls to
+        randomNumber() in place of one or more of the parameters. Maker sure you run
+        it a few times so you can see the effect of randomization.
       CSD U3 Simple Drawing - Animation 2_instruction: |
         Use randomNumber() on the
         x position and width of your cloud ellipses to introduce a bit of animation.
@@ -834,6 +858,9 @@ is:
       CSD U3 Variables CHALLENGE gamelab gary_instruction: |
         Use variables to animate
         Game Lab Gary
+      CSD U3 Variables create and assign_instruction: |
+        Create and assign size in
+        a single line of code.
       CSD U3 Variables draw loop newVars_instruction: |
         Extend this project to create
         your own random art visualization with variables.
@@ -845,10 +872,28 @@ is:
         Assign the variables x1 and y1
         random values inside the draw loop and use them to control where the square
         is drawn.
+      CSD U3 Variables eyeBrows_instruction: |
+        Predict what will happen when you move
+        the assignment of eyeSize inside the draw loop. Then try it out
       CSD U3 Variables Initialize_instruction: |
         Predict: What will get displayed
         in the console?
       CSD U3 Variables Intro_instruction: 'Create your own variable '
+      CSD U3 Variables make a square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
+      CSD U3 Variables multiple assignments_instruction: |
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
+      CSD U3 Variables naming rules_instruction: |
+        Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables random assignment_instruction: |
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
+      CSD U3 Variables random draw loop_instruction: |
+        Predict what will happen when
+        you move the assignment of eyeSize inside the draw loop. Then try it out
       CSD U3 Variables random drawing exemplar_instruction: |
         Check out this example
         randomized drawing.
@@ -870,9 +915,24 @@ is:
       CSD U3 Variables Square_instruction: |
         Change the value "size" initialized
         to make a larger square.
+      CSD U3 Variables TEMPLATE square_instruction: |
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
       CSD U3 Variables use value rect_instruction: |
         Predict: What will get displayed
         in the console?
+      CSD U3 Variables write_instruction: |
+        Use the write block to display the value
+        of size
+      CSD U3 Variables2 expressions in commands_instruction: |
+        Use expressions inside
+        a drawing command
+      CSD U3 Variables2 expressions in variables_instruction: |
+        Assign the value of
+        each expression to a variable and console.log that variable.
+      CSD U3 Variables2 expressions_instruction: |
+        Use console.log to display the
+        results of each expression. Then create your own.
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -1476,6 +1536,9 @@ is:
         have flowers inside, and some don't. I should check each cloud, and only
         get nectar from the flowers.
       Quantum Bee_instruction: Fjólublá blóm geta haft annað hvort 1 eða 0 af blómasafa, en þú veist ekki hvort! Gættu þess að safna ekki blómasafa ef blóm hefur ekki safa. Athugaðu hvort safinn sé 1 með því að nota ef kubbinn.
+      Rocket Height Course A_instruction: |
+        Follow the Design Recipe to create a function
+        rocket-height.
       Ryan - 4-5 Bee Conditionals 2_instruction: Þessa stundina vill býflugan bara blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
       Ryan - Bee Conditionals_instruction: Nú vill býflugan bara blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
       Ryan Doily Step 1_instruction: Nú ætlum við að teikna dúllu skref fyrir skref. Teiknaðu fyrst ferning.
@@ -1496,6 +1559,14 @@ is:
       Sam the Butterfly 6_instruction: 'Við höfum bætt við nýjum stika "y" við fallið "á-skjá?". Uppfærðu fallið "á-skjá?" svo það athugi hvort "öruggt-v?" OG " öruggt-h?" OG "öruggt-u?" eru öll sönn. Prófaðu svo fallið með því að reyna að fara út fyrir vinstri, hægri og efri hlið garðsins.'
       Sam the Butterfly 7_instruction: 'Nú þarf að tryggja neðri hliðina! Búðu til fallið "öruggt-n?" og uppfærðu "á-skjá?" fallið svo að það athugi uppi, niðri, vinstri og hægri.'
       Sam the Butterfly Complete_instruction: 'Nú þarf að tryggja neðri hliðina! Búðu til fallið "öruggt-n?" og uppfærðu "á-skjá?" fallið svo að það athugi uppi, niðri, vinstri og hægri.'
+      sample1_instruction: "Our adventurer wants to collect gems.  But she can only\nuse 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she can\nusing just 4 blocks?"
+      sample2_instruction: |
+        Use what you've learned to help bee gather all of this
+        honey using only 4 blocks.
+      sample3_instruction: Now you can help bee make all of the honey.
+      sample4_instruction: "Our adventurer has found a stash of coins in this cave.\\r\n\\r\nCan\nyou help her grab as many as she can using just 7 blocks?"
+      sample5_instruction: Help bee make all of the honey.
+      sample6_instruction: 'Challenge: Help bee make all of the honey.'
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
@@ -2082,13 +2153,17 @@ is:
       U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
       U3 - Simple Drawing - Comments_instruction: Do this
       U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
+      U3 - Simple Drawing - Fill_instruction: Do This
       U3 - Simple Drawing - No Fill_instruction: Do this
       U3 - Simple Drawing - Order of Blocks_instruction: Do this
+      U3 - Simple Drawing - Oval_instruction: Do This
       U3 - Simple Drawing - Personal Drawing_instruction: DO This
+      U3 - Simple Drawing - Rectangle Width and Height_instruction: Do This
       U3 - Simple Drawing - Rectangle_instruction: Do This
       U3 - Simple Drawing - regular polygon_instruction: Do this
       U3 - Simple Drawing - Road Ellipse_instruction: Do This
       U3 - Simple Drawing - Road Rects and Color_instruction: Do This
+      U3 - Simple Drawing - Simple Shape Drawing_instruction: Do This
       U3 - Simple Drawing - Stroke and Stroke Weight_instruction: Do this
       U3 - Simple Drawing - text_instruction: Do This
       U3 - Simple Drawing - X and Y values_instruction: Do This
@@ -2122,6 +2197,16 @@ is:
       U3 - Simulation - Template_instruction: |
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
+      U3 - Sprites - Intro Sprites_instruction: Do This
+      U3 - Sprites and Mod - Create  and Draw Sprite_instruction: Do This
+      U3 - Sprites and Mod - Mouse Width and Height_instruction: Do this
+      U3 - Sprites and Mod - Mouse X and Y_instruction: Do this
+      U3 - Sprites and Mod - Rand Around Mouse_instruction: Do this
+      U3 - Sprites and Mod - Rand Shape Color_instruction: Do This
+      U3 - Sprites and Mod - Shape Color_instruction: Do This
+      U3 - Sprites and Mod - two sprites_instruction: Do This
+      U3 - Sprites and Mod - Wrap Many Squares_instruction: Do This
+      U3 - Sprites and Mod - X and Y Prop_instruction: Do This
       U3 - User Input - Save getText To Variable_instruction: |
         Save the age and name
         of the user in variables (Click to see full instructions)
@@ -2198,9 +2283,21 @@ is:
       U3 Variables consolelog_instruction: |
         Use the write block to display the value
         of size
+      U3 Variables flower example_instruction: |
+        Change the value of petalSize multiple
+        times. How does it change your drawing?
+      U3 Variables gray square_instruction: |
+        Change the value of petalSize multiple
+        times. How does it change your drawing?
+      U3 Variables make a square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
       U3 Variables misconceptions try it_instruction: |
         Test out your predictions
         from the previous level.
+      U3 Variables randomize your square_instruction: |
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
       U3 Variables write_instruction: |
         Use the write block to display the value of
         size

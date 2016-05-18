@@ -26,8 +26,7 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
 var experiments = require('../experiments');
 
-var actions = require('./actions');
-var setPageConstants = require('../redux/pageConstants').setPageConstants;
+import {setInitialAnimationMetadata} from './animationModule';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
@@ -208,33 +207,25 @@ GameLab.prototype.init = function (config) {
     this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
   }
 
-  this.studioApp_.reduxStore.dispatch(setPageConstants({
-    assetUrl: this.studioApp_.assetUrl,
-    isEmbedView: !!config.embed,
-    isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isShareView: !!config.share,
-    instructionsMarkdown: config.level.markdownInstructions,
-    instructionsInTopPane: config.showInstructionsInTopPane,
-    puzzleNumber: config.level.puzzle_number,
-    stageTotal: config.level.stage_total,
+  this.studioApp_.setPageConstants(config, {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
-    showDebugWatch: true,
-    localeDirection: this.studioApp_.localeDirection(),
-    isDroplet: true
-  }));
+    showDebugWatch: true
+  });
 
   // Push project-sourced animation metadata into store
   if (typeof config.initialAnimationMetadata !== 'undefined') {
-    this.studioApp_.reduxStore.dispatch(actions.setInitialAnimationMetadata(config.initialAnimationMetadata));
+    this.studioApp_.reduxStore.dispatch(setInitialAnimationMetadata(config.initialAnimationMetadata));
   }
 
-  ReactDOM.render(<Provider store={this.studioApp_.reduxStore}>
-    <GameLabView
-      showFinishButton={finishButtonFirstLine && showFinishButton}
-      hideSource={!!config.hideSource}
-      onMount={onMount} />
-  </Provider>, document.getElementById(config.containerId));
+  ReactDOM.render((
+    <Provider store={this.studioApp_.reduxStore}>
+      <GameLabView
+          showFinishButton={finishButtonFirstLine && showFinishButton}
+          onMount={onMount}
+      />
+    </Provider>
+  ), document.getElementById(config.containerId));
 };
 
 /**
@@ -690,7 +681,9 @@ GameLab.prototype.execute = function () {
   this.gameLabP5.startExecution();
 
   if (this.level.editCode) {
-    if (!this.JSInterpreter || !this.JSInterpreter.initialized()) {
+    if (!this.JSInterpreter ||
+        !this.JSInterpreter.initialized() ||
+        this.executionError) {
       return;
     }
   } else {
@@ -714,6 +707,22 @@ GameLab.prototype.initInterpreter = function () {
     return;
   }
 
+  codegen.customMarshalObjectList = this.gameLabP5.getCustomMarshalObjectList();
+
+  var self = this;
+  function injectGamelabGlobals() {
+    var propList = self.gameLabP5.getGlobalPropertyList();
+    for (var prop in propList) {
+      // Each entry in the propList is an array with 2 elements:
+      // propListItem[0] - a native property value
+      // propListItem[1] - the property's parent object
+      self.JSInterpreter.createGlobalProperty(
+          prop,
+          propList[prop][0],
+          propList[prop][1]);
+    }
+  }
+
   this.JSInterpreter = new JSInterpreter({
     studioApp: this.studioApp_,
     maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
@@ -729,7 +738,8 @@ GameLab.prototype.initInterpreter = function () {
     code: this.studioApp_.getCode(),
     blocks: dropletConfig.blocks,
     blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
-    enableEvents: true
+    enableEvents: true,
+    initGlobals: injectGamelabGlobals
   });
   if (!this.JSInterpreter.initialized()) {
     return;
@@ -747,19 +757,6 @@ GameLab.prototype.initInterpreter = function () {
   }, this);
 
   this.globalCodeRunsDuringPreload = !!this.eventHandlers.setup;
-
-  codegen.customMarshalObjectList = this.gameLabP5.getCustomMarshalObjectList();
-
-  var propList = this.gameLabP5.getGlobalPropertyList();
-  for (var prop in propList) {
-    // Each entry in the propList is an array with 2 elements:
-    // propListItem[0] - a native property value
-    // propListItem[1] - the property's parent object
-    this.JSInterpreter.createGlobalProperty(
-        prop,
-        propList[prop][0],
-        propList[prop][1]);
-  }
 
   /*
   if (this.checkForEditCodePreExecutionFailure()) {

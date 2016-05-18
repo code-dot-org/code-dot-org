@@ -24,13 +24,15 @@
           future: non può essere in futuro
   hello: Ciao a tutti
   welcome_back: Bentornato, %{name}
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Invia
   unsubmit: Annulla l'invio
-  previous_page: Previous page
+  previous_page: Pagina precedente
   next_page: Pagina successiva
   cancel: Annulla
   okay: Ok!
-  heading_x_of_y: "%{heading} (page %{x} of %{y})"
+  heading_x_of_y: "%{heading} (pagina %{x} su %{y})"
   add_teacher_form:
     code:
       label: 'Aggiungi un insegnante:'
@@ -175,9 +177,6 @@
       student_disassociated:
         subject: 'Notifica da Code.org: %{student_name} non è più iscritto come tuo
           studente.'
-      teacher_disassociated:
-        subject: 'Notifica da Code.org: %{teacher_name} non è più iscritto come tuo
-          insegnante.'
   reports:
     error:
       access_denied: Non hai accesso alle statistiche di questa persona
@@ -406,6 +405,38 @@
     no_primary_course: Prova un corso di Code Studio
     choose_next_course: Prova un corso di Code Studio scegliendone uno qui sotto
     print_certificate: Stampa il certificato
+    announcement_title: Annunci
+    announcement_view_all: Visualizza tutto
+    announcement_message: "<b>22 aprile 2016</b>- Le lezioni senza computer sono una
+      parte fondamentale dell'apprendimento, ma gli insegnanti ci hanno comunicato
+      che trovare tutto il materiale non è sempre semplice e si spreca un sacco di
+      tempo. Vi abbiamo dato ascolto! Adesso troverete tutte le lezioni all'interno
+      della stessa pagina. Utilizzatele con una classe d'informatica oppure come corso
+      a sé stante."
+    announcement_button: Ulteriori informazioni
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: Impara su Code Studio
     description: Chiunque può imparare l'informatica. Realizza giochi, app e lavori
@@ -443,8 +474,8 @@
       Ltd. Tutti i diritti riservati. Plants vs. Zombies&#8482; &copy; %{current_year}
       Electronic Arts Inc. Tutti i diritti riservati. The Amazing World of Gumball
       è un marchio registrato e &copy; 2015 Cartoon Network.
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
-      GNU LGPL 2.1</a>.
+    code_from_html: Code.org usa p5.play, il quale è sotto licenza <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
+      LGPL 2.1</a>.
     powered_by_aws: Eseguito su Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, il logo CODE e Hour
       of Code&reg; sono marchi registrati di Code.org."
@@ -576,14 +607,15 @@
       title: Minecraft
       body: Esplora il mondo di Minecraft attraverso il codice.
     unplugged:
-      title: Unplugged Lessons
-      audience: Ages 6+
-      body: We've compiled a list of unplugged lessons for you to use in your classroom.
-        Now you can teach the fundamentals of computer science, whether you have computers
-        in your classroom or not! Try using these lessons as a stand-alone course
-        or as complementary lessons for any computer science course.
-      body_short: If you don't have computers, try these unplugged lessons in your
-        classroom.
+      title: Lezioni Tradizionali
+      audience: Età 6+
+      body: Abbiamo creato un lista di lezioni che non necessitano di un computer
+        e che potrai usare con la tua classe di studenti. Adesso potrai insegnare
+        i fondamenti dell'informatica, che abbiate un computer oppure no! Prova ad
+        utilizzare queste lezioni come un corso a sé stante o come complemento a qualche
+        altro corso d'informatica.
+      body_short: Se non si dispone di computers, prova queste lezione scollegate
+        nella tua classe.
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
     students_made_these_with_code: Gli studenti l'hanno creato scrivendo del codice!
@@ -634,15 +666,15 @@
     wrong_body: Grazie per aver inviato una risposta
     correct_title: Grazie!
     correct_body: Grazie per aver inviato una risposta
-    unsubmit-title: Unsubmit your assessment
-    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
-      date.  Are you sure?
-    submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
-      assessment after submitting it.  Are you sure?
-    submit-complete-title: Submit your assessment
-    submit-complete-body: You cannot edit your assessment after submitting it.  Are
-      you sure?
+    unsubmit-title: Ritira la tua valutazione
+    unsubmit-body: Ritirare la tua valutazione cancellerà la data e l'ora che hai
+      dichiarato. Sei sicuro?
+    submit-incomplete-title: Invia la tua valutazione
+    submit-incomplete-body: Hai lasciato alcune domande incomplete.  Non è possibile
+      modificare la tua valutazione dopo averla sottoposta.  Sei sicuro?
+    submit-complete-title: Invia la tua valutazione
+    submit-complete-body: Non puoi modificare la tua valutazione dopo averla sottoposta.  Sei
+      sicuro?
   match:
     wrong_title: Riprova!
     wrong_body: La risposta che hai scelto non è corretta.  Per favore riprova!
@@ -747,6 +779,10 @@
     share: Condividi
     share_title: Condividi il tuo progetto
     share_copy_link: 'Copia il link:'
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Chiudi
     more: Di più
     name: Nome
@@ -801,7 +837,23 @@
         acknowledge: Inviando queste informazioni, l'utente riconosce che sarà gestita
           in conformità con i termini della %{link_start_privacy}Politica della privacy%{link_end}
           e i %{link_start_tos}Termini del servizio%{link_end}
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
   components:
     icon_library:
       search_placeholder_text: Cerca un'icona...
       no_icons_found: Non ho trovato alcuna icona
+  flex_category:
+    required: Panoramica
+    content: Content
+    practice: Teacher Practices

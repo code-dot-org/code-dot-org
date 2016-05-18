@@ -50,18 +50,18 @@ content-type: text/ng-template
 
 
 %div.tile
-  = view :light_tile, url:"/teacher-dashboard#/sections", target:"", img_src:"/images/fit-606/logo_student_accounts_progress.jpg", title: I18n.t('dashboard_navigation_section_student_progress'), text:""
+  = view :light_tile, url: CDO.code_org_url("/teacher-dashboard#/sections"), target:"", img_src:"/images/fit-606/logo_student_accounts_progress.jpg", title: I18n.t('dashboard_navigation_section_student_progress'), text:""
 %div.tile
   = view :light_tile, url: CDO.studio_url, target:"", img_src:"/images/fit-606/logo_your_course_progress.jpg", title: I18n.t('dashboard_navigation_section_teacher_progress'), text:""
 %div.tile{:style=>"margin-right: 0px"}
-  = view :light_tile, url:"/teacher-dashboard#/plan", img_src:"/images/fit-606/logo_lesson_plans_resources.jpg", target:"", title: I18n.t('dashboard_navigation_section_lesson_plans'), text:""
+  = view :light_tile, url: CDO.code_org_url("/teacher-dashboard#/plan"), img_src:"/images/fit-606/logo_lesson_plans_resources.jpg", target:"", title: I18n.t('dashboard_navigation_section_lesson_plans'), text:""
 
 %div.tile{:style=>"margin-top: 26px;"}
-  = view :light_tile, url:"http://support.code.org/hc/communities/public/topics", target:"_blank", img_src:"/images/fit-606/logo_community.jpg", title: I18n.t('dashboard_navigation_section_community'), text:""
+  = view :light_tile, url: CDO.code_org_url("/educate/community"), target:"_blank", img_src:"/images/fit-606/logo_community.jpg", title: I18n.t('dashboard_navigation_section_community'), text:""
 %div.tile{:style=>"margin-top: 26px"}
-  = view :light_tile, url:"/professional-development-workshops", target:"_blank", img_src:"/images/fit-606/logo_us_map.jpg", title: I18n.t('dashboard_navigation_section_pd'), text:""
+  = view :light_tile, url: CDO.code_org_url("/professional-development-workshops"), target:"_blank", img_src:"/images/fit-606/logo_us_map.jpg", title: I18n.t('dashboard_navigation_section_pd'), text:""
 %div.tile{:style=>"margin-top: 26px; margin-right: 0px"}
-  = view :light_tile, url:"/volunteer/local", target:"_blank", img_src:"/images/fit-606/logo_skype_classroom.jpg", title: I18n.t('dashboard_navigation_section_speakers'), text:""
+  = view :light_tile, url: CDO.code_org_url("/volunteer/local"), target:"_blank", img_src:"/images/fit-606/logo_skype_classroom.jpg", title: I18n.t('dashboard_navigation_section_speakers'), text:""
 
 %div{style: "clear:both; margin-top: 20px"}
 

@@ -2,6 +2,8 @@
   "actor":"actor",
   "addCharacter":"adaugă o",
   "addCharacterTooltip":"Adaugă un personaj in scenă.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"adăuga 10 puncte",
   "addPoints50":"adaugă 50 puncte",
   "addPoints100":"adaugă 100 puncte",

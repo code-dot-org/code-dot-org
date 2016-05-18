@@ -2,6 +2,8 @@
   "actor": "الممثل",
   "addCharacter": "أضف",
   "addCharacterTooltip": "أضف شخصية إلى المشهد.",
+  "addGoal": "add goal",
+  "addGoalTooltip": "Add a goal to the scene at the specified location.",
   "addPoints10": "إضافة 10 نقاط",
   "addPoints50": "إضافة 50 نقطة",
   "addPoints100": "إضافة 100 نقطة",
@@ -764,7 +766,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "كنت بحاجة للحصول على 20 الماوس Droids. استخدام الأمر \"إضافة الروبوت ماوس\" داخل الحدث \"عندما تحصل على الروبوت الماوس\" لإضافة Droids الماوس اثنين أو أكثر في كل مرة تحصل على واحدة.",
   "failedMultiplyCharactersTimeoutGotSome": "تهانينا، يمكنك إضافة التعليمات البرمجية لجعل الماوس Droids. يمكنك الذهاب للغز القادم أو حاول مرة أخرى للحصول على 20 الماوس Droids. محاولة جعله أسهل عن طريق إضافة المزيد منها! (اضغط باستمرار على مفاتيح على لوحة المفاتيح (أو الشاشة) التحرك بشكل أسرع)",
   "failedChangeSettingTimeout": "الحصول على ثلاثة \"الطيارين المتمردين\" للمضي قدما.",
-  "failedChangeSettingSettings": "جعل اللعبة الخاصة بك. لتمرير هذا اللغز، تحتاج إلى تغيير الروبوت الخاص بك وتعيين سرعة.",
-  "addGoal": "add goal",
-  "addGoalTooltip": "Add a goal to the scene at the specified location."
+  "failedChangeSettingSettings": "جعل اللعبة الخاصة بك. لتمرير هذا اللغز، تحتاج إلى تغيير الروبوت الخاص بك وتعيين سرعة."
 }
