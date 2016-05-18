@@ -182,7 +182,9 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
       email: email,
       email_confirmation: email,
       school: 'test enrollment school',
-      district: 'test enrollment district'
+      school_type: 'public',
+      school_state: 'WA',
+      school_district_id: create(:school_district).id
     }
   end
 

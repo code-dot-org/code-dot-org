@@ -462,6 +462,7 @@ FactoryGirl.define do
     workshop_type Pd::Workshop::TYPES.first
     course Pd::Workshop::COURSES.first
     capacity 10
+
   end
 
   factory :pd_session, class: 'Pd::Session' do
@@ -475,6 +476,9 @@ FactoryGirl.define do
     sequence(:name) { |n| "Workshop Participant #{n} " }
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
     school {'Example School'}
+    school_type {'public'}
+    school_state {'WA'}
+    school_district_id {create(:school_district).id}
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
