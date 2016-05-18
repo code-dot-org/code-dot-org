@@ -3,6 +3,7 @@ class ApiController < ApplicationController
   include LevelsHelper
 
   def user_menu
+    @show_pairing_dialog = !!session.delete(:show_pairing_dialog)
     render partial: 'shared/user_header'
   end
 

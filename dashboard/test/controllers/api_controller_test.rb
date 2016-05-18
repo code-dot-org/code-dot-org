@@ -430,6 +430,28 @@ class ApiControllerTest < ActionController::TestCase
     assert_select 'a[href="http://test.host/redeemprizes"]', 0
   end
 
+  test "user menu should open pairing dialog if asked to in the session" do
+    sign_in create(:student)
+
+    session[:show_pairing_dialog] = true
+
+    get :user_menu
+
+    assert assigns(:show_pairing_dialog)
+    assert !session[:show_pairing_dialog] # should only show once
+  end
+
+  test "user menu should not open pairing dialog if not asked to in the session" do
+    sign_in create(:student)
+
+    session[:show_pairing_dialog] = nil
+
+    get :user_menu
+
+    assert !assigns(:show_pairing_dialog)
+    assert !session[:show_pairing_dialog] # should only show once
+  end
+
   test "do show prize link when you already have a prize" do
     teacher = create(:teacher)
     sign_in teacher
