@@ -330,7 +330,7 @@ cs:
   hoc_faq_keep_learning_q: Jak mohu pokračovat se svým učením po hodině kódu?
   hoc_faq_keep_learning_a: "Kdykoliv a kdokoliv může pořádat Hodinu kódu. Kurzy zůstávají po celý rok. Můžete očekávat, že všechny naše kurzy a výuky budou k dispozici na našich stránkách permanentně. Prosím přejděte na <a href='/promote'> naše zdroje</a> pro návody k událostem další zdroje, které vám pomohou s úspěšnou hodinou kódu."
   hoc_faq_certificates_q: Kde mohu vytisknout certifikáty pro své studenty?
-  hoc_faq_certificates_a: "Přejděte na naši <a href='%{codeorg_url}/certificates'> stránku s certifikáty</a>, kde můžete dopředu tisknout certifikáty pro celou třídu."
+  hoc_faq_certificates_a: "Přejděte na naši <a href='%{codeorg_url}'/certificates'> stránku s certifikáty</a>, kde můžete dopředu tisknout certifikáty pro celou třídu."
   stats_hoc_2013_image_alt: Statistika roku 2013 akce Hodina kódu
   stats_growth: Byl to nejrychlejší způsob, jak dosáhnout 15 milionů uživatelů.
   stats_i18n: Studenti se učí v 40 jazycích
