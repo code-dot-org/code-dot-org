@@ -30,7 +30,6 @@ var levels = require('./levels');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var CalcVisualizationColumn = require('./CalcVisualizationColumn');
-var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
@@ -200,24 +199,13 @@ Calc.init = function (config) {
     }
   };
 
-  // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setPageConstants({
-    localeDirection: studioApp.localeDirection(),
-    isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isDroplet: !!level.editCode
-  }));
+  studioApp.setPageConstants(config);
 
   var visualizationColumn = <CalcVisualizationColumn inputOutputTable={level.inputOutputTable}/>;
 
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          assetUrl={studioApp.assetUrl}
-          isEmbedView={!!config.embed}
-          isShareView={!!config.share}
-          hideSource={!!config.hideSource}
-          noVisualization={false}
-          isRtl={studioApp.isRtl()}
           visualizationColumn={visualizationColumn}
           onMount={studioApp.init.bind(studioApp, config)}
       />

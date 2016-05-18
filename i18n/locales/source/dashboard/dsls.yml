@@ -80,18 +80,32 @@ en:
     external:
       AlgPD Break:
         Before you move on...: Before you move on...
+      Algo How Routers Learn Student Lesson Introduction:
+        description here: description here
+        title: title
+      Algo MST Student Lesson Introduction:
+        Algorithm detour - Minimum Spanning Tree: Algorithm detour - Minimum Spanning Tree
+      Algo Shortest Path Student Lesson Introduction:
+        description here: description here
+        title: title
       App Lab Feedback:
         App Lab Feedback: App Lab Feedback
         description here: description here
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
+      CSD U3 - Sprites - Stop: {}
+      CSD U3 Counters match outputs: {}
+      CSD U3 Keypress Stop: {}
       CSD U3 Variables Reassign Predict No Response: {}
       CSD U3 Variables STOP misconceptions: {}
       CSD U3 Variables STOP misconceptions prediction: {}
       CSD U3 Variables STOP showing value: {}
       CSD U3 Variables STOP using value: {}
       CSD U3 Variables console write: {}
+      CSD U3 Variables2 SFLP: {}
+      CSD U3 Variables2 STOP intro expressions: {}
+      CSD U3 Variables2 STOP variables in expressions: {}
       CSD Variables STOP variables in draw loop: {}
       CSD-U3-SFLP Draw Loop: {}
       CSD-U3-SFLP Simple Drawing: {}
@@ -112,6 +126,7 @@ en:
       CSP Unit 3 - Learning JavaScript Resources:
         Learning JavaScript Resources: Learning JavaScript Resources
         description here: description here
+      CSP-mod1-unit1overview: {}
       CSPPD PD Phases:
         CSPPD PD Phases: CSPPD PD Phases
       CSPPD PD overview:
@@ -281,6 +296,11 @@ en:
         title: title
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
+      ECS PD1 classroom culture:
+        ECS classroom culture: ECS classroom culture
+      ECS PD1 teaching strategies:
+        ECS PD1 teaching strategies: ECS PD1 teaching strategies
+        ECSPD1 teaching strategies: ECSPD1 teaching strategies
       ECS Phase 3 Overview: {}
       ECS Phase 3 Unit 3 Overview: {}
       ECS Phase 3 Unit 4 Overview: {}
@@ -465,7 +485,6 @@ en:
       ECSPD Unit4 Connections: {}
       ECSPD What Is Problem Solving: {}
       ECSPD What is the Challenge: {}
-      ECSPD Why Binary - The Internet Video: {}
       ECSPD curriculum overview:
         ECS Curriculum Overview: ECS Curriculum Overview
         Overview of Curriculum: Overview of Curriculum
@@ -503,6 +522,62 @@ en:
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: An exploration of Growth Mindset
         What is Growth Mindset?: What is Growth Mindset?
+      ECSPD1  intro to The Hour of Code:
+        Introduction to The Hour of Code: Introduction to The Hour of Code
+      ECSPD1 Code Studio:
+        ECSPD1 Code Studio: ECSPD1 Code Studio
+        Navigating Code Studio: Navigating Code Studio
+      ECSPD1 Forum:
+        ECS Forum: ECS Forum
+        ECS Forum Discussion: ECS Forum Discussion
+      ECSPD1 Welcome to the Code.org Family:
+        ECSPD1 Welcome to the Code.org Family: ECSPD1 Welcome to the Code.org Family
+        Welcome to the Code.org Family: Welcome to the Code.org Family
+      ECSPD1 barriers to access cs:
+        Barriers to Access CS: Barriers to Access CS
+        ECSPD1 Barriers to Access CS: ECSPD1 Barriers to Access CS
+      ECSPD1 congratulations end:
+        ECS PD1 congratulations end: ECS PD1 congratulations end
+      ECSPD1 cs is about:
+        ECSPD1 cs is about: ECSPD1 cs is about
+      ECSPD1 curriculum connections:
+        ECS Curriculum Connections: ECS Curriculum Connections
+        ECS curriculum connections: ECS curriculum connections
+      ECSPD1 curriculum design: {}
+      ECSPD1 dikjstra: {}
+      ECSPD1 equity in cs education:
+        Equity in Computer Science Education: Equity in Computer Science Education
+      ECSPD1 navigating progress:
+        ECSPD1 navigating progress: ECSPD1 navigating progress
+        Navigating and Progress: Navigating and Progress
+      ECSPD1 post survey: {}
+      ECSPD1 pre survey: {}
+      ECSPD1 professional learning program phases:
+        ECS professional learning program phases: ECS professional learning program phases
+        ECSP Professional Learning Program Phases: ECSP Professional Learning Program Phases
+      ECSPD1 results of The Hour of Code:
+        Results of The Hour of Code: Results of The Hour of Code
+        Results of The Hour of code: Results of The Hour of code
+      ECSPD1 student centered learning:
+        ECS Student Centered Learning: ECS Student Centered Learning
+        ECS student centered learning: ECS student centered learning
+      ECSPD1 unifying themes:
+        ECS Unifying Themes: ECS Unifying Themes
+      ECSPD1 unit 1 overview:
+        ECS Unit 1 Overview: ECS Unit 1 Overview
+        ECS unit 1 overview: ECS unit 1 overview
+      ECSPD1 unit 2 overview:
+        ECS Unit 2 Overview: ECS Unit 2 Overview
+        ECS unit 2 overview: ECS unit 2 overview
+      ECSPD1 unit overviews:
+        ECS  unit overviews: ECS  unit overviews
+        ECS Unit Overviews: ECS Unit Overviews
+      ECSPD1 wrap up:
+        ECS Wrap Up: ECS Wrap Up
+        ECS unit wrap up: ECS unit wrap up
+      ECSPD1 your role:
+        ECS Your Role as a Learner and Facilitator: ECS Your Role as a Learner and Facilitator
+        ECS your role as a learner and facilitator: ECS your role as a learner and facilitator
       ECSPD3-u5 about: {}
       ECSPD3-u5 challenge details: {}
       ECSPD3-u5 challenge inside: {}
@@ -567,6 +642,10 @@ en:
       ECSU4 Challenge Submission: {}
       Embedded Arduino Sketch Test:
         Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
+      Empty Markdown Level: {}
+      Encoding Numbers Real World Student Lesson Introduction:
+        description here: description here
+        title: title
       Equity About: {}
       Equity CS: {}
       Equity Celebrate: {}
@@ -684,10 +763,16 @@ en:
       PDAlg 3BPlanning: {}
       PDAlg 3BWelcome: {}
       PDAlg 3CAbout: {}
+      PDAlg 3CBootstrap: {}
+      PDAlg 3CCongrats: {}
+      PDAlg 3CCourseAB: {}
+      PDAlg 3CElective: {}
+      PDAlg 3CFuture: {}
       PDAlg 3CGathering: {}
       PDAlg 3CGo: {}
       PDAlg 3CPlanning: {}
       PDAlg 3CShare Forum: {}
+      PDAlg 3CSharePlan: {}
       PDAlg 3CSharing: {}
       PDAlg 3CWelcome: {}
       PDAlg 4-7 Big Game: {}
@@ -772,6 +857,9 @@ en:
       PDECS tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
+      PDECS tour 2016-17 CSinSci:
+        Tour of PD Space: Tour of PD Space
+        tour of the PD space: tour of the PD space
       PDK5 Beyond C:
         Beyond: Beyond
       PDK5 CS Video:
@@ -817,6 +905,9 @@ en:
         Unplugged intro: Unplugged intro
       PDK5 Why K5 CS:
         Why teach computer science in elementary school?: Why teach computer science in elementary school?
+      PDSci commitment:
+        CS in Science PD commitments: CS in Science PD commitments
+        overview of program commitments: overview of program commitments
       Pixelation - Lesson 14 - Instructions Make Your Own:
         Make your own B&W image: Make your own B&W image
         description here: description here
@@ -849,6 +940,9 @@ en:
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
+      Sending Bits Real World Student Lesson Introduction:
+        description here: description here
+        title: title
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
       TLO practical:
@@ -858,9 +952,6 @@ en:
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
-      U1L1 Innovation - Video:
-        Impact of Innovation - Video: Impact of Innovation - Video
-        description here: description here
       U1L1 Student Lesson Introduction:
         Impact of Innovation: Impact of Innovation
         description here: description here
@@ -900,9 +991,6 @@ en:
       U1L4 Widget Demo - Video:
         Widget Demonstration - Video: Widget Demonstration - Video
         description here: description here
-      U1L5 How the Internet Works - Video:
-        How the Internet Works - Video: How the Internet Works - Video
-        description here: description here
       U1L5 Student Lesson Introduction:
         description here: description here
         title: title
@@ -913,20 +1001,11 @@ en:
         description here: description here
         title: title
       U1L8 Student Lesson Introduction:
-        Sending Numbers: Sending Numbers
         description here: description here
+        title: title
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
-      U2 Encryption and Public Keys - Video:
-        'The Internet: Encryption and Public Keys - Video': 'The Internet: Encryption and Public Keys - Video'
-        description here: description here
-      U2 HTTP and HTML - Video:
-        'The Internet: HTTP and HTML - Video': 'The Internet: HTTP and HTML - Video'
-        description here: description here
-      'U2 The Internet: Cybersecurity and Crime - Video':
-        'The Internet: Cybersecurity and Crime - Video': 'The Internet: Cybersecurity and Crime - Video'
-        description here: description here
       U2L1 Student Lesson Introduction:
         description here: description here
         title: title
@@ -958,14 +1037,8 @@ en:
         Security and Hacking in the Real World: Security and Hacking in the Real World
       U2L3 Student Lesson Introduction:
         Lesson 3 - Invent an addressing protocol: Lesson 3 - Invent an addressing protocol
-      'U2L3: IP DNS Video':
-        IP/DNS Video: IP/DNS Video
-        'Internet: IP/DNS': 'Internet: IP/DNS'
       U2L4 Student Lesson Introduction:
         U2L04 Routers and Redundancy: U2L04 Routers and Redundancy
-      U2L5 Packets and Reliability - Video:
-        'The Internet: Packets, Routers, and Reliability - Video': 'The Internet: Packets, Routers, and Reliability - Video'
-        description here: description here
       U2L5 Student Lesson Introduction:
         Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
       U2L6 Student Lesson Introduction:
@@ -985,6 +1058,7 @@ en:
       U3 - Conditionals - Translating Flowcharts - Else: {}
       U3 - Conditionals - Translating Flowcharts - If Statement: {}
       U3 - Simple Drawing - Plan Personal Drawing: {}
+      U3 - Simple Drawings - Review Rect Oval Fill: {}
       U3 - Simulation - Intro: {}
       U3 Simulation Updating Hypotheses: {}
       U3 Simulations Hypotheses Reflections: {}
@@ -1235,9 +1309,6 @@ en:
       U4L10 Student Lesson Introduction:
         description here: description here
         title: title
-      U4L11 Data and Medicine - Video:
-        Data and Medicine- Video: Data and Medicine- Video
-        description here: description here
       U4L11 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1314,9 +1385,6 @@ en:
         description here: description here
         title: title
       Unit 3 Survey 2: {}
-      a bit about pixels:
-        kevin systrom pixel video: kevin systrom pixel video
-        pixel video: pixel video
       broadcast lesson plan: {}
       challenges sample:
         Give these a try: Give these a try
@@ -1376,8 +1444,21 @@ en:
       equity vids:
         Videos for Equity Segment: Videos for Equity Segment
       facilitator test: {}
+      introduction to events: {}
+      introduction to turtle: {}
       k5 what next 1: {}
+      plc csp1 chapter overviews: {}
+      plc csp1 intro to tools: {}
+      plc csp1 introduction to unit: {}
+      plc csp1 netsim setup: {}
+      plc csp1 philosophy and commentary: {}
       rbo-test1: {}
+      sample external 1:
+        sample external 1: sample external 1
+      sample external 2:
+        sample external 2: sample external 2
+      sciPD Break 16-17:
+        Before you move on...: Before you move on...
       sciPD Course Overview: {}
       sciPD Intro: {}
       sciPD StarLogo intro 1:
@@ -1416,6 +1497,8 @@ en:
         Models in the Classroom: Models in the Classroom
       sciPD class models video:
         Using Models in the Classroom: Using Models in the Classroom
+      sciPD commitment 2016-17:
+        Commitment for 2016-2017: Commitment for 2016-2017
       sciPD complex adaptive forum:
         Complex Adaptive Forum: Complex Adaptive Forum
       sciPD complex adaptive video:
@@ -1430,6 +1513,8 @@ en:
         Dispositions And Classroom Culture: Dispositions And Classroom Culture
       sciPD expectations: {}
       sciPD finish:
+        Code.org Post Survey: Code.org Post Survey
+      sciPD finish 16-17:
         Code.org Post Survey: Code.org Post Survey
       sciPD framework forum:
         Computational Thinking and the Framework for K-12: Computational Thinking and the Framework for K-12
@@ -1446,6 +1531,7 @@ en:
       sciPD materials:
         Workshop Materials: Workshop Materials
       sciPD meet and greet: {}
+      sciPD meet and greet 16-17: {}
       sciPD p2 intro:
         Welcome to Phase 2: Welcome to Phase 2
       sciPD p3 intro:
@@ -1454,7 +1540,11 @@ en:
         Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
       sciPD preQ p1 16-17:
         Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
+      sciPD survey1:
+        Code.org Post Survey: Code.org Post Survey
       sciPD what to expect:
+        What to Expect: What to Expect
+      sciPD what to expect 16-17:
         What to Expect: What to Expect
       sciPD2 SLN explore:
         Exploring StarLogo Nova Advanced Features: Exploring StarLogo Nova Advanced Features
@@ -1590,10 +1680,92 @@ en:
       test html katie:
         lkajsdfasdf: lkajsdfasdf
         testing: testing
+      text compression intro: {}
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
       unique level name here:
+        description here: description here
+        title: title
+      v1 U1L13 Student Lesson Introduction:
+        The Need for DNS: The Need for DNS
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L10 Student Lesson Introduction:
+        U1L10 Routers and Redundancy: U1L10 Routers and Redundancy
+      v2 U1L11 Student Lesson Introduction:
+        Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+      v2 U1L12 Student Lesson Introduction:
+        The Need for DNS: The Need for DNS
+      v2 U1L13 Student Lesson Introduction:
+        HTTP and Abstraction: HTTP and Abstraction
+      v2 U1L14 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L2 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L3 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L4 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L5 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L6 Student Lesson Introduction:
+        Sending Numbers: Sending Numbers
+        description here: description here
+      v2 U1L8 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L9 Student Lesson Introduction:
+        The Need for Addressing: The Need for Addressing
+      v2 U2L1 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U2L10 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U2L11 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U2L12 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U2L13 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U2L14 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U2L15 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U2L2 Student Lesson Summary:
+        description here: description here
+        title: title
+      v2 U2L3 Student Lesson Summary:
+        description here: description here
+        title: title
+      v2 U2L4 Student Lesson Summary:
+        description here: description here
+        title: title
+      v2 U2L5 Student Lesson Introduction:
+        Lossy Compression and File Formats: Lossy Compression and File Formats
+        description here: description here
+      v2 U2L6 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U2L7 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U2L8 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U2L9 Student Lesson Introduction:
         description here: description here
         title: title
       wn scratchjr 1:
@@ -1760,6 +1932,10 @@ en:
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
+      CSD U3 Counters match trial:
+        ? "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
+        : "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
+        Maybe: Maybe
       CSPPD AP quiz:
         AP Assessment Matching: AP Assessment Matching
         Create Task: Create Task
@@ -1810,6 +1986,18 @@ en:
         Match each character with its correct coordinate!: Match each character with its correct coordinate!
         Ninjacat: Ninjacat
         Ruby: Ruby
+      ECS Matching Program Commitment:
+        'Academic Year Development: 4 days in-person and 20 hours online': 'Academic Year Development: 4 days in-person and 20 hours online'
+        ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 4).
+        : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page (you can get back to the last level by clicking above on the small circle immediately to the left of the number 4).
+        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
+        'Optional Summer Wrap-up: 3 days in-person': 'Optional Summer Wrap-up: 3 days in-person'
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        Phase 4: Phase 4
+        Program Commitment Matching Question: Program Commitment Matching Question
+        'Summer Study: 5 days in-person': 'Summer Study: 5 days in-person'
       ECSPD Growth Mindset Reflection Q:
         Fixed Mindset: Fixed Mindset
         Fixed vs Growth Mindset: Fixed vs Growth Mindset
@@ -1881,6 +2069,20 @@ en:
         Phase 3: Phase 3
         Phase 4: Phase 4
       ECSPD unit matching:
+        Matching Unit Descriptions and Numbers: Matching Unit Descriptions and Numbers
+        Unit 1: Unit 1
+        Unit 2: Unit 2
+        Unit 3: Unit 3
+        Unit 4: Unit 4
+        Unit 5: Unit 5
+        Unit 6: Unit 6
+        application of problem solving techniques to develop solutions: application of problem solving techniques to develop solutions
+        apply programming and problem solving to the study of robots: apply programming and problem solving to the study of robots
+        create programs to solve computational problems: create programs to solve computational problems
+        introduction to the concepts of computer and computing: introduction to the concepts of computer and computing
+        use computing to manage and interpret data: use computing to manage and interpret data
+        website development and design: website development and design
+      ECSPD1 Matching Unit Descriptions and Numbers:
         Matching Unit Descriptions and Numbers: Matching Unit Descriptions and Numbers
         Unit 1: Unit 1
         Unit 2: Unit 2
@@ -2093,15 +2295,15 @@ en:
         https://studio.code.org/script_assets/pd/circle2.png: https://studio.code.org/script_assets/pd/circle2.png
         https://studio.code.org/script_assets/pd/circle3.png: https://studio.code.org/script_assets/pd/circle3.png
       PDAlg commitment match:
-        'Academic Year Development: 2 days in-person and 10 hours online': 'Academic Year Development: 2 days in-person and 10 hours online'
-        'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer Study: 3 days in-person and 8 hours online'
+        'Blended Academic Year Development: 2 hours online, self-paced. 1 day (7 hours) in person': 'Blended Academic Year Development: 2 hours online, self-paced. 1 day (7 hours) in person'
         ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
         : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
-        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
+        'Online Introduction: 2 hours online, self-paced': 'Online Introduction: 2 hours online, self-paced'
         Phase 1: Phase 1
         Phase 2: Phase 2
         Phase 3: Phase 3
         Program Commitment Matching Question: Program Commitment Matching Question
+        'Summer Study: 2 days (14 hours) in-person': 'Summer Study: 2 days (14 hours) in-person'
       PDECS commitment match:
         'Academic Year Development: 4 days in-person and 12 hours online': 'Academic Year Development: 4 days in-person and 12 hours online'
         'Blended Summer Study: 5 days in-person and 8 hours online': 'Blended Summer Study: 5 days in-person and 8 hours online'
@@ -2332,10 +2534,20 @@ en:
         yearbook-picture: yearbook-picture
       sciPD commitment match:
         'Academic Year Development: 2 days in-person and 10 hours online': 'Academic Year Development: 2 days in-person and 10 hours online'
-        'Blended Summer Study: 3 days in-person and 8 hours online': 'Blended Summer Study: 3 days in-person and 8 hours online'
+        'Blended Summer Study: 2 days in-person and 7 hours online': 'Blended Summer Study: 2 days in-person and 7 hours online'
         ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
         : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
-        'Online Introduction: 2 hours online': 'Online Introduction: 2 hours online'
+        'Online Introduction: 3 hours online': 'Online Introduction: 3 hours online'
+        Phase 1: Phase 1
+        Phase 2: Phase 2
+        Phase 3: Phase 3
+        Program Commitment Matching Question: Program Commitment Matching Question
+      sciPD commitment match 16-17:
+        'Blended Academic Year Development: 2 days in-person and 10 hours online': 'Blended Academic Year Development: 2 days in-person and 10 hours online'
+        'Blended Summer Study: 2 days in-person and 7 hours online': 'Blended Summer Study: 2 days in-person and 7 hours online'
+        ? Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
+        : Match the phases of PD with their descriptions below. Feel free to look back at the Program Commitment details on the previous page
+        'Online Introduction: 3 hours online, self-paced': 'Online Introduction: 3 hours online, self-paced'
         Phase 1: Phase 1
         Phase 2: Phase 2
         Phase 3: Phase 3
@@ -2670,6 +2882,11 @@ en:
         Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
         There are two answers here that are correct.  Looks like you can choose either one and be right.: There are two answers here that are correct.  Looks like you can choose either one and be right.
         What is 2 + 2?: What is 2 + 2?
+      Baker_Test_Question:
+        <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG" width=350>: <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG" width=350>
+        <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=350>: <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=350>
+        <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">: <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">
+        <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">: <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">
       CB_Question_1:
         2 times as many values can be represented.: 2 times as many values can be represented.
         2^32 times as many values can be represented.: 2^32 times as many values can be represented.
@@ -2677,7 +2894,6 @@ en:
         32^2 times as many values can be represented.: 32^2 times as many values can be represented.
       CB_Question_10:
         Better late than never.: Better late than never.
-        Hello. Better late than never: Hello. Better late than never
         Hello. Better late than never.: Hello. Better late than never.
         Hello. Is anyone there?: Hello. Is anyone there?
         Is anyone there?: Is anyone there?
@@ -2750,111 +2966,6 @@ en:
         <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=350>: <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=350>
         <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">: <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">
         <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">: <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">
-      CB_Question_2temp:
-        '': ''
-        "(OnFloor1 AND callTo2) OR (onFloor2 AND callTo1)": "(OnFloor1 AND callTo2) OR (onFloor2 AND callTo1)"
-        "(onFloor1 AND callTo2) AND (onFloor2 AND callTo1)": "(onFloor1 AND callTo2) AND (onFloor2 AND callTo1)"
-        "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)"
-        "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)"
-        2^32 times as many values can be represented.: 2^32 times as many values can be represented.
-        32 times as many values can be represented.: 32 times as many values can be represented.
-        32^2 times as many values can be represented.: 32^2 times as many values can be represented.
-        <img src="https://images.code.org/00f79fe34f512a4c168e5e2b094a6b41-image-1461454050857.PNG">: <img src="https://images.code.org/00f79fe34f512a4c168e5e2b094a6b41-image-1461454050857.PNG">
-        <img src="https://images.code.org/0de0c4e2cda244de13e4f19a9bebb050-image-1461452432706.PNG">: <img src="https://images.code.org/0de0c4e2cda244de13e4f19a9bebb050-image-1461452432706.PNG">
-        <img src="https://images.code.org/0e3157c8246380d3532d66ecd6d956d2-image-1461452438337.PNG">: <img src="https://images.code.org/0e3157c8246380d3532d66ecd6d956d2-image-1461452438337.PNG">
-        <img src="https://images.code.org/30af21f04bf077f19c05acf26747f281-image-1461454973664.PNG">: <img src="https://images.code.org/30af21f04bf077f19c05acf26747f281-image-1461454973664.PNG">
-        <img src="https://images.code.org/4368fc059bdddba9000d5b8956c74481-image-1461454060908.PNG">: <img src="https://images.code.org/4368fc059bdddba9000d5b8956c74481-image-1461454060908.PNG">
-        <img src="https://images.code.org/43aabf471cc0e6d71145e6d25b73f311-image-1461450860910.PNG">: <img src="https://images.code.org/43aabf471cc0e6d71145e6d25b73f311-image-1461450860910.PNG">
-        <img src="https://images.code.org/44d34760736cb918ec15e20566af5523-image-1461454960496.PNG">: <img src="https://images.code.org/44d34760736cb918ec15e20566af5523-image-1461454960496.PNG">
-        <img src="https://images.code.org/4a158d464dcaf49e4d0d7a93a776a9ce-image-1461450922059.PNG">: <img src="https://images.code.org/4a158d464dcaf49e4d0d7a93a776a9ce-image-1461450922059.PNG">
-        <img src="https://images.code.org/4d37b920cb896f266c55de47cfe446a8-image-1461452436002.PNG">: <img src="https://images.code.org/4d37b920cb896f266c55de47cfe446a8-image-1461452436002.PNG">
-        <img src="https://images.code.org/4e51af4d6bd924fe15d82aaa8ff2654d-image-1461454965539.PNG">: <img src="https://images.code.org/4e51af4d6bd924fe15d82aaa8ff2654d-image-1461454965539.PNG">
-        <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG" width=300>: <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG" width=300>
-        <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG">: <img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG">
-        <img src="https://images.code.org/8ff706d9e361250b48562ee85868062e-image-1461450837040.PNG">: <img src="https://images.code.org/8ff706d9e361250b48562ee85868062e-image-1461450837040.PNG">
-        <img src="https://images.code.org/96714b5aa4f23f482aa003a73d197ba7-image-1461454053774.PNG">: <img src="https://images.code.org/96714b5aa4f23f482aa003a73d197ba7-image-1461454053774.PNG">
-        <img src="https://images.code.org/9af0bf7af6603aa6e849fb9644f4e294-image-1461450901827.PNG">: <img src="https://images.code.org/9af0bf7af6603aa6e849fb9644f4e294-image-1461450901827.PNG">
-        <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=300>: <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=300>
-        <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG">: <img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG">
-        <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">: <img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">
-        <img src="https://images.code.org/be3dd88e835cc39163b07f9996f52dc7-image-1461454977406.PNG">: <img src="https://images.code.org/be3dd88e835cc39163b07f9996f52dc7-image-1461454977406.PNG">
-        <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">: <img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">
-        <img src="https://images.code.org/d93101c8ba4542112e351f2c9ad6390b-image-1461454056322.PNG">: <img src="https://images.code.org/d93101c8ba4542112e351f2c9ad6390b-image-1461454056322.PNG">
-        <img src="https://images.code.org/ee285e4616611888a116c4c3e13e4d7c-image-1461452440288.PNG">: <img src="https://images.code.org/ee285e4616611888a116c4c3e13e4d7c-image-1461452440288.PNG">
-        A: A
-        Algorithm A always calculates the correct average, but Algorithm B does not.: Algorithm A always calculates the correct average, but Algorithm B does not.
-        Algorithm B always calculates the correct average, but Algorithm A does not.: Algorithm B always calculates the correct average, but Algorithm A does not.
-        An algorithm that, given of list of integers, displays only the negative integers in the list: An algorithm that, given of list of integers, displays only the negative integers in the list
-        An algorithm that, given of list of integers, displays the number of even integers in the list: An algorithm that, given of list of integers, displays the number of even integers in the list
-        An algorithm that, given of list of integers, displays the sum of the integers in the list: An algorithm that, given of list of integers, displays the sum of the integers in the list
-        An algorithm that, given two integers, displays the greater of the two integers: An algorithm that, given two integers, displays the greater of the two integers
-        Approximately how many miles did the animal travel in one week?: Approximately how many miles did the animal travel in one week?
-        Backing up data: Backing up data
-        Better late than never.: Better late than never.
-        Both Algorithm A and Algorithm B always calculate the correct average.: Both Algorithm A and Algorithm B always calculate the correct average.
-        Computer simulations can only be built after the real-world object or system has been created.: Computer simulations can only be built after the real-world object or system has been created.
-        Computer simulations only run on very powerful computers that are not available to the public.: Computer simulations only run on very powerful computers that are not available to the public.
-        Computer simulations usually make some simplifying assumptions about the real-world object or system being modeled.: Computer simulations usually make some simplifying assumptions about the real-world object or system being modeled.
-        Data compression is only useful for files being transmitted over the Internet.: Data compression is only useful for files being transmitted over the Internet.
-        Deleting entries from data: Deleting entries from data
-        Do the movement patterns of the animal vary according to the weather?: Do the movement patterns of the animal vary according to the weather?
-        Does the animal travel in groups with other tracked animals?: Does the animal travel in groups with other tracked animals?
-        ? First, change all occurrences of &quot; goats &quot; to &quot; sheep. &quot;  <br> Then, change all occurrences of sheep to goats.
-        : First, change all occurrences of &quot; goats &quot; to &quot; sheep. &quot;  <br> Then, change all occurrences of sheep to goats.
-        ? First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot; <br>Last, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
-        : First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot; <br>Last, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
-        ? First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
-        : First, change all occurrences of &quot;goats&quot; to &quot;foxes.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
-        ? First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot;  <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
-        : First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot;  <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot;
-        ? First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
-        : First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
-        First, change all occurrences of goats to sheep. <br> Then, change all occurrences of sheep to goats.: First, change all occurrences of goats to sheep. <br> Then, change all occurrences of sheep to goats.
-        First, change all occurrences of goats to sheep. Then, change all occurrences of sheep to goats.: First, change all occurrences of goats to sheep. Then, change all occurrences of sheep to goats.
-        Hello. Better late than never: Hello. Better late than never
-        Hello. Is anyone there?: Hello. Is anyone there?
-        I and II: I and II
-        I only: I only
-        II only: II only
-        In what geographic locations does the animal typically travel?: In what geographic locations does the animal typically travel?
-        Input <code>A</code> must be false: Input <code>A</code> must be false
-        Input A can be either true or false: Input A can be either true or false
-        Input A must be false: Input A must be false
-        Input A must be true: Input A must be true
-        Is anyone there?: Is anyone there?
-        It is difficult to change input parameters or conditions when using computer simulations.: It is difficult to change input parameters or conditions when using computer simulations.
-        L: L
-        Neither Algorithm A nor Algorithm B calculates the correct average.: Neither Algorithm A nor Algorithm B calculates the correct average.
-        Neither I nor II: Neither I nor II
-        Nothing is displayed; the program results in an infinite loop.: Nothing is displayed; the program results in an infinite loop.
-        Question: Question
-        Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.: Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.
-        Searching through data: Searching through data
-        Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.: Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.
-        Sorting data: Sorting data
-        The number 0 is displayed.: The number 0 is displayed.
-        The number 10 is displayed.: The number 10 is displayed.
-        The number 6 is displayed.: The number 6 is displayed.
-        There are trade-offs involved in choosing a compression technique for storing and transmitting data.: There are trade-offs involved in choosing a compression technique for storing and transmitting data.
-        There is no possible value of input A that will cause the circuit to have the output true.: There is no possible value of input A that will cause the circuit to have the output true.
-        To determine the time of day that the site is most active: To determine the time of day that the site is most active
-        To determine the topics that many users are posting about: To determine the topics that many users are posting about
-        To determine the users who post messages most frequently: To determine the users who post messages most frequently
-        To determine which posts from a particular user have received the greatest number of comments: To determine which posts from a particular user have received the greatest number of comments
-        V: V
-        When the problem can be solved in a reasonable time and an approximate solution is acceptable: When the problem can be solved in a reasonable time and an approximate solution is acceptable
-        When the problem can be solved in a reasonable time and an exact solution is needed: When the problem can be solved in a reasonable time and an exact solution is needed
-        When the problem cannot be solved in a reasonable time and an approximate solution is acceptable: When the problem cannot be solved in a reasonable time and an approximate solution is acceptable
-        When the problem cannot be solved in a reasonable time and an exact solution is needed: When the problem cannot be solved in a reasonable time and an exact solution is needed
-        Y: Y
-        about.example.com: about.example.com
-        example.co.uk: example.co.uk
-        example.com.org: example.com.org
-        example.org: example.org
-        https://images.code.org/43aabf471cc0e6d71145e6d25b73f311-image-1461450860910.PNG: https://images.code.org/43aabf471cc0e6d71145e6d25b73f311-image-1461450860910.PNG
-        https://images.code.org/4a158d464dcaf49e4d0d7a93a776a9ce-image-1461450922059.PNG: https://images.code.org/4a158d464dcaf49e4d0d7a93a776a9ce-image-1461450922059.PNG
-        https://images.code.org/8ff706d9e361250b48562ee85868062e-image-1461450837040.PNG: https://images.code.org/8ff706d9e361250b48562ee85868062e-image-1461450837040.PNG
-        https://images.code.org/9af0bf7af6603aa6e849fb9644f4e294-image-1461450901827.PNG: https://images.code.org/9af0bf7af6603aa6e849fb9644f4e294-image-1461450901827.PNG
       CB_Question_3:
         A: A
         L: L
@@ -2899,6 +3010,195 @@ en:
         Question: Question
         right answer: right answer
         wrong answer: wrong answer
+      CSPFinal_Question_1:
+        Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.: Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.
+        Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent: Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent
+        Remove a bit from <code>studentID</code> to make room for incoming students: Remove a bit from <code>studentID</code> to make room for incoming students
+        Use the same number of bits in <code>studentID</code> but reserve the first bit to indicate middle school or high school.: Use the same number of bits in <code>studentID</code> but reserve the first bit to indicate middle school or high school.
+      CSPFinal_Question_10:
+        I and II only: I and II only
+        I and III only: I and III only
+        II and III only: II and III only
+        II only: II only
+      CSPFinal_Question_11:
+        I and II only: I and II only
+        I and III only: I and III only
+        I, II, and III: I, II, and III
+        II and III only: II and III only
+      CSPFinal_Question_12:
+        High level protocols can take on the role of a low level protocol in the event of failure in the system.: High level protocols can take on the role of a low level protocol in the event of failure in the system.
+        High level protocols take into account specific implementation details of lower level protocols to ensure they are compatible.: High level protocols take into account specific implementation details of lower level protocols to ensure they are compatible.
+        Low level protocols are written in binary while high level protocols are written in hexadecimal.: Low level protocols are written in binary while high level protocols are written in hexadecimal.
+        Low level protocols can provide functionality to high level protocols without revealing the details of how this is accomplished.: Low level protocols can provide functionality to high level protocols without revealing the details of how this is accomplished.
+      CSPFinal_Question_13:
+        "<pre>dieRoll = 2</pre>": "<pre>dieRoll = 2</pre>"
+        "<pre>dieRoll = evenCounter + RollCounter</pre>": "<pre>dieRoll = evenCounter + RollCounter</pre>"
+        "<pre>evenCounter * 2 = rollCounter</pre>": "<pre>evenCounter * 2 = rollCounter</pre>"
+        "<pre>rollCounter = 5</pre>": "<pre>rollCounter = 5</pre>"
+      CSPFinal_Question_14:
+        temperature = 30, dewpoint = 25: temperature = 30, dewpoint = 25
+        temperature = 30, dewpoint = 30: temperature = 30, dewpoint = 30
+        temperature = 35, dewpoint = 30: temperature = 35, dewpoint = 30
+        temperature = 35, dewpoint = 40: temperature = 35, dewpoint = 40
+      CSPFinal_Question_15:
+        A computationally hard problem to which an approximate result will suffice.: A computationally hard problem to which an approximate result will suffice.
+        A computationally hard problem to which an exact result is necessary.: A computationally hard problem to which an exact result is necessary.
+        A non-computationally hard problem to which an approximate result will suffice.: A non-computationally hard problem to which an approximate result will suffice.
+        A non-computationally hard problem to which an exact result is necessary.: A non-computationally hard problem to which an exact result is necessary.
+      CSPFinal_Question_16:
+        It displays the difference between a and b (a - b): It displays the difference between a and b (a - b)
+        It displays the product of a and b (a * b): It displays the product of a and b (a * b)
+        It displays the sum of a and b (a + b): It displays the sum of a and b (a + b)
+        It runs in an infinite loop: It runs in an infinite loop
+      CSPFinal_Question_17:
+        ? Public key encryption is a highly secure encryption scheme that in which a single shared key is used by both the sender and receiver of the message.
+        : Public key encryption is a highly secure encryption scheme that in which a single shared key is used by both the sender and receiver of the message.
+        Public key encryption is an encryption method which relies on separate keys for encrypting and decrypting information.: Public key encryption is an encryption method which relies on separate keys for encrypting and decrypting information.
+        Public key encryption makes use of certain types of problems which are easier for humans to solve than computers.: Public key encryption makes use of certain types of problems which are easier for humans to solve than computers.
+        Public key encryption makes use of mathematical problems which no algorithm can be used to solve.: Public key encryption makes use of mathematical problems which no algorithm can be used to solve.
+      CSPFinal_Question_18:
+        Chrome Sampling transformation: Chrome Sampling transformation
+        Lossless transformation: Lossless transformation
+        Lossy transformation: Lossy transformation
+        Multiband transformation: Multiband transformation
+        ? The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
+        : The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
+      CSPFinal_Question_19:
+        ? 'A certain cartoon image is known to have only 4 colors in it.  Currently the image is stored in full 24-bit RGB color and the total size of the file is quite large. The designer proposes reducing the number of bits the image by: Making a small table of the 4 colors and numbering them 0, 1, 2 and 3, which requires only 2 bits; then representing the image as a list of these smaller, 2-bit numbers.'
+        : 'A certain cartoon image is known to have only 4 colors in it.  Currently the image is stored in full 24-bit RGB color and the total size of the file is quite large. The designer proposes reducing the number of bits the image by: Making a small table of the 4 colors and numbering them 0, 1, 2 and 3, which requires only 2 bits; then representing the image as a list of these smaller, 2-bit numbers.'
+        Asymmetric encryption: Asymmetric encryption
+        Lossless compression: Lossless compression
+        Lossy compression: Lossy compression
+        Steganography: Steganography
+      CSPFinal_Question_2:
+        High bandwidth, high latency: High bandwidth, high latency
+        High bandwidth, low latency: High bandwidth, low latency
+        Low bandwidth, high latency: Low bandwidth, high latency
+        Low bandwidth, low latency: Low bandwidth, low latency
+      CSPFinal_Question_20:
+        ? A bakery collects data on sales. Each sales record includes the date of the sale, the type of items sold, the number of each item sold, and the price of each item sold. Which of the following CANNOT be determined from the bakery's data set?
+        : A bakery collects data on sales. Each sales record includes the date of the sale, the type of items sold, the number of each item sold, and the price of each item sold. Which of the following CANNOT be determined from the bakery's data set?
+        The item bought in the highest quantity in the past week.: The item bought in the highest quantity in the past week.
+        The total income from sales the bakery received in the past month.: The total income from sales the bakery received in the past month.
+        Times of day when certain items sell the most.: Times of day when certain items sell the most.
+        Which customer most frequently purchases bread.: Which customer most frequently purchases bread.
+      CSPFinal_Question_21:
+        ? A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
+        : A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
+        Maintaining privacy of the information stored in the data set.: Maintaining privacy of the information stored in the data set.
+        Scalability of the system.: Scalability of the system.
+        Structuring the metadata of the information for analysis.: Structuring the metadata of the information for analysis.
+        The frequency of a particular item occurring in a data set.: The frequency of a particular item occurring in a data set.
+      CSPFinal_Question_22:
+        Computing the most frequently occurring values in the data set: Computing the most frequently occurring values in the data set
+        Copying the data to a cloud server: Copying the data to a cloud server
+        Putting data into sorted order: Putting data into sorted order
+        Using data visualization tools: Using data visualization tools
+        ? Which of the following methods is not a common technique to translate or transform large data sets to gain insight and knowledge?
+        : Which of the following methods is not a common technique to translate or transform large data sets to gain insight and knowledge?
+      CSPFinal_Question_23:
+        Which classes are assigning the most homework using the computers: Which classes are assigning the most homework using the computers
+        Which of the following is MOST likely to be answerable using only the collected data set?: Which of the following is MOST likely to be answerable using only the collected data set?
+        Which programs students are running on the lab computers: Which programs students are running on the lab computers
+        Which students are visiting social media sites from school: Which students are visiting social media sites from school
+        Which websites are most frequently visited before and after school hours from a school computer: Which websites are most frequently visited before and after school hours from a school computer
+      CSPFinal_Question_24:
+        Charging residential customers more for higher internet speeds: Charging residential customers more for higher internet speeds
+        Giving traffic from specific companies or users higher priority in the network: Giving traffic from specific companies or users higher priority in the network
+        Restricting Facebook at school: Restricting Facebook at school
+        Routing large packets through different servers: Routing large packets through different servers
+        ? The internet is comprised of a series of free and open protocols intended to promote wide scale use.  Which of the following is NOT an example of an open internet?
+        : The internet is comprised of a series of free and open protocols intended to promote wide scale use.  Which of the following is NOT an example of an open internet?
+      CSPFinal_Question_25:
+        ? A newspaper is writing an article on high school principals. Which of the following is the most appropriate online source for the author to gather factual evidence?
+        : A newspaper is writing an article on high school principals. Which of the following is the most appropriate online source for the author to gather factual evidence?
+        A social media site: A social media site
+        Popular search engine results: Popular search engine results
+        The School District's Website: The School District's Website
+        Wikipedia: Wikipedia
+      CSPFinal_Question_26:
+        Access to digital content via peer to peer networks.: Access to digital content via peer to peer networks.
+        Anonymous access to digital content.: Anonymous access to digital content.
+        Authenticating credit card numbers across the web.: Authenticating credit card numbers across the web.
+        Commercial and governmental censorship.: Commercial and governmental censorship.
+        ? Computing has global effects that are both beneficial and harmful on people and society.  Which of the following is LEAST likely to raise legal and ethical concerns?
+        : Computing has global effects that are both beneficial and harmful on people and society.  Which of the following is LEAST likely to raise legal and ethical concerns?
+      CSPFinal_Question_27:
+        0  2  3: 0  2  3
+        0  2  4: 0  2  4
+        2  2  4: 2  2  4
+        2  4  6: 2  4  6
+      CSPFinal_Question_28:
+        "<pre>n  &gt;  5</pre>": "<pre>n  &gt;  5</pre>"
+        "<pre>n  =  -1</pre>": "<pre>n  =  -1</pre>"
+        "<pre>n  =  0</pre>": "<pre>n  =  0</pre>"
+        "<pre>n &lt;  -1</pre>": "<pre>n &lt;  -1</pre>"
+      CSPFinal_Question_29:
+        The code will display the largest of the three values: The code will display the largest of the three values
+        The code will display the middle of all three values: The code will display the middle of all three values
+        The code will display the smallest of the three values: The code will display the smallest of the three values
+        The code will not display anything due to an error: The code will not display anything due to an error
+      CSPFinal_Question_3:
+        Computer <code>A</code>: Computer <code>A</code>
+        Computer <code>B</code>: Computer <code>B</code>
+        Computer <code>D</code>: Computer <code>D</code>
+        Computer <code>F</code>: Computer <code>F</code>
+      CSPFinal_Question_30:
+        "<pre>0 0</pre>": "<pre>0 0</pre>"
+        "<pre>0 10</pre>": "<pre>0 10</pre>"
+        "<pre>4 10</pre>": "<pre>4 10</pre>"
+        "<pre>4 5</pre>": "<pre>4 5</pre>"
+      CSPFinal_Question_31:
+        <img src="https://images.code.org/5be3b5baf6c8f34fadf63f6706c6cc54-image-1463331334777.PNG">: <img src="https://images.code.org/5be3b5baf6c8f34fadf63f6706c6cc54-image-1463331334777.PNG">
+        <img src="https://images.code.org/634ae5b044ca4a0fdf5b32e16a1626ff-image-1463331332131.PNG">: <img src="https://images.code.org/634ae5b044ca4a0fdf5b32e16a1626ff-image-1463331332131.PNG">
+        <img src="https://images.code.org/80e70fdb66626fe67908081c847f973f-image-1463331326861.PNG">: <img src="https://images.code.org/80e70fdb66626fe67908081c847f973f-image-1463331326861.PNG">
+        <img src="https://images.code.org/d72f1bcab09967cccfafc07fd54fc5a9-image-1463331329567.PNG" >: <img src="https://images.code.org/d72f1bcab09967cccfafc07fd54fc5a9-image-1463331329567.PNG" >
+      CSPFinal_Question_32:
+        0 0: 0 0
+        1 1: 1 1
+        2 4: 2 4
+        3 1: 3 1
+        3 3: 3 3
+      CSPFinal_Question_33:
+        It displays the first number in the list: It displays the first number in the list
+        It displays the largest number in the list: It displays the largest number in the list
+        It displays the last number in the list: It displays the last number in the list
+        It displays the smallest number in the list.: It displays the smallest number in the list.
+        Which of the following best describes the result after the program is executed on a given list?: Which of the following best describes the result after the program is executed on a given list?
+      CSPFinal_Question_4:
+        'The weight of <code>A-to-C</code> increases by 2 (total cost: 4)': 'The weight of <code>A-to-C</code> increases by 2 (total cost: 4)'
+        'The weight of <code>A-to-C</code> increases by 3 (total cost: 5)': 'The weight of <code>A-to-C</code> increases by 3 (total cost: 5)'
+        'The weight of <code>A-to-C</code> increases by 4 (total cost: 6)': 'The weight of <code>A-to-C</code> increases by 4 (total cost: 6)'
+        'The weight of <code>A-to-C</code> increases by 5 (total cost: 7)': 'The weight of <code>A-to-C</code> increases by 5 (total cost: 7)'
+      CSPFinal_Question_5:
+        No, public key encryption allows the credit card information to be read by the public.: No, public key encryption allows the credit card information to be read by the public.
+        No, the internet protocols are open standards and thus everything sent over the internet is sent "in the clear".: No, the internet protocols are open standards and thus everything sent over the internet is sent "in the clear".
+        Yes, public key encryption is built upon computationally hard problems that even powerful computers cannot easily solve.: Yes, public key encryption is built upon computationally hard problems that even powerful computers cannot easily solve.
+        Yes, public key encryption is secure because it transmits credit card information in binary.: Yes, public key encryption is secure because it transmits credit card information in binary.
+      CSPFinal_Question_6:
+        It asks a DNS server for the corresponding IP address: It asks a DNS server for the corresponding IP address
+        It creates an IP address for the domain, and shares it with the closest DNS.: It creates an IP address for the domain, and shares it with the closest DNS.
+        It scans addresses until it finds the one it's looking for: It scans addresses until it finds the one it's looking for
+        It uses a Border Gateway Protocol to get the address from a nearby computer.: It uses a Border Gateway Protocol to get the address from a nearby computer.
+      CSPFinal_Question_7:
+        2 bits: 2 bits
+        3 bits: 3 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+      CSPFinal_Question_8:
+        'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>': 'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>'
+        'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>': 'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>'
+        'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>': 'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>'
+        'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>': 'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>'
+      CSPFinal_Question_9:
+        ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
+        : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
+        ? Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
+        : Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
+        ? Hexadecimal is used to represent digital data because hexadecimal representation uses only 1 digit to represent groups of 4 binary digits.
+        : Hexadecimal is used to represent digital data because hexadecimal representation uses only 1 digit to represent groups of 4 binary digits.
+        ? 'There is a limit to the number of things that can be represented in binary data at which point switching to hexadecimal representation is necessary. '
+        : 'There is a limit to the number of things that can be represented in binary data at which point switching to hexadecimal representation is necessary. '
       CSPPD2 pixel video 1:
         How many different light channels make up a single pixel on a standard monitor?: How many different light channels make up a single pixel on a standard monitor?
         four: four
@@ -4718,6 +5018,12 @@ en:
         Presidents: Presidents
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
+      unique level name here:
+        Question: Question
+        description here: description here
+        right answer: right answer
+        title: title
+        wrong answer: wrong answer
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts
@@ -4875,6 +5181,9 @@ en:
         Enter answer here: Enter answer here
         Enter prompt here: Enter prompt here
         Enter title here: Enter title here
+      ECSPD1 background reflection: {}
+      ECSPD1 computational thinker: {}
+      ECSPD1 video reflection: {}
       PS U3 Q1-7:
         Enter answer here: Enter answer here
         Enter prompt here: Enter prompt here
