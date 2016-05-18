@@ -357,4 +357,12 @@ Dashboard::Application.routes.draw do
   get '/api/user_progress/:script_name/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
   get '/api/user_progress', to: 'api#user_progress_for_all_scripts', as: 'user_progress_for_all_scripts'
   get '/api/:action', controller: 'api'
+
+  namespace :api do
+    namespace :v1 do
+      get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
+    end
+  end
+
+  get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: { format: 'json' }
 end
