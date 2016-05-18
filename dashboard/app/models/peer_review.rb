@@ -46,12 +46,12 @@ class PeerReview < ActiveRecord::Base
 
     # Instructor feedback should override all other feedback
     if from_instructor
-      user_level.update!(best_result: accepted? ? Activity::ACCEPTED_RESULT : Activity::REJECTED_RESULT)
+      user_level.update!(best_result: accepted? ? Activity::REVIEW_ACCEPTED_RESULT : Activity::REVIEW_REJECTED_RESULT)
       return
     end
 
     # Ignore negative peer feedback after a submission has already been approved
-    return if user_level.best_result == Activity::ACCEPTED_RESULT
+    return if user_level.best_result == Activity::REVIEW_ACCEPTED_RESULT
 
     # Only look at reviews for the most recent submission
     most_recent = submitter.last_attempt(level).try(:level_source_id)
@@ -69,9 +69,9 @@ class PeerReview < ActiveRecord::Base
     return unless reviews.size >= REVIEWS_FOR_CONSENSUS
 
     if reviews.all?(&:accepted?)
-      user_level.update!(best_result: Activity::ACCEPTED_RESULT)
+      user_level.update!(best_result: Activity::REVIEW_ACCEPTED_RESULT)
     elsif reviews.all?(&:rejected?)
-      user_level.update!(best_result: Activity::REJECTED_RESULT)
+      user_level.update!(best_result: Activity::REVIEW_REJECTED_RESULT)
     else
       # TODO: find_or_create PeerReview assigned to the instructor
     end
