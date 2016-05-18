@@ -7,7 +7,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     @plc_course = create :plc_course
     @user_course_enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @plc_course)
     @course_unit = create(:plc_course_unit, plc_course: @plc_course)
-    @enrollment_unit_assignment = create(:plc_enrollment_unit_assignment, plc_course_unit: @course_unit, plc_user_course_enrollment: @user_course_enrollment)
+    @enrollment_unit_assignment = create(:plc_enrollment_unit_assignment, plc_course_unit: @course_unit, plc_user_course_enrollment: @user_course_enrollment, user: @user)
     @district_contact = create :district_contact
   end
 

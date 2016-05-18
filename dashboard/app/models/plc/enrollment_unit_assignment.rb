@@ -9,11 +9,13 @@
 #  status                        :string(255)
 #  created_at                    :datetime         not null
 #  updated_at                    :datetime         not null
+#  user_id                       :integer
 #
 # Indexes
 #
 #  enrollment_unit_assignment_course_enrollment_index  (plc_user_course_enrollment_id)
 #  enrollment_unit_assignment_course_unit_index        (plc_course_unit_id)
+#  index_plc_enrollment_unit_assignments_on_user_id    (user_id)
 #
 
 class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
@@ -22,6 +24,8 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
 
   has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_enrollment_unit_assignment_id', dependent: :destroy
   has_many :plc_task_assignments, through: :plc_module_assignments, class_name: '::Plc::EnrollmentTaskAssignment', dependent: :destroy
+
+  belongs_to :user, class_name: 'User'
 
   UNIT_STATUS_STATES = [
     START_BLOCKED = 'start_blocked',
@@ -75,7 +79,9 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
   def enroll_in_module(learning_module)
     return unless learning_module.plc_course_unit == plc_course_unit
 
-    module_assignment = Plc::EnrollmentModuleAssignment.find_or_create_by(plc_enrollment_unit_assignment: self, plc_learning_module: learning_module)
+    module_assignment = Plc::EnrollmentModuleAssignment.find_or_create_by(plc_enrollment_unit_assignment: self,
+                                                                          plc_learning_module: learning_module,
+                                                                          user: user)
     learning_module.plc_tasks.each do |task|
       Plc::EnrollmentTaskAssignment.find_or_create_by(
           plc_enrollment_module_assignment: module_assignment,
