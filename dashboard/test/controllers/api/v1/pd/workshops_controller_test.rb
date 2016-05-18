@@ -248,30 +248,13 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal @facilitator, @workshop.facilitators.first
 
     params = workshop_params.merge({
-      facilitators: [{email: new_facilitator.email, name: new_facilitator.name}]
+      facilitators: [new_facilitator.id]
     })
     put :update, id: @workshop.id, pd_workshop: params
     assert_response :success
     @workshop.reload
     assert_equal 1, @workshop.facilitators.length
     assert_equal new_facilitator, @workshop.facilitators.first
-  end
-
-  test 'organizers can create new facilitators' do
-    sign_in @organizer
-    @workshop.facilitators.clear
-    assert_equal 0, @workshop.facilitators.length
-    new_name = 'test_facilitator' + SecureRandom.hex(10)
-    new_email = "test+#{SecureRandom.hex(10)}@example.net"
-
-    params = workshop_params.merge({
-      facilitators: [{email: new_email, name: new_name}]
-    })
-    put :update, id: @workshop.id, pd_workshop: params
-    @workshop.reload
-    assert_equal 1, @workshop.facilitators.length
-    assert_equal new_email, @workshop.facilitators.first.email
-    assert_equal new_name, @workshop.facilitators.first.name
   end
 
   # Actions: Start, End
