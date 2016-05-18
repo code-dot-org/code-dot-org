@@ -4,6 +4,7 @@ import _ from '../lodash';
 import utils from '../utils';
 import {animations as animationsApi} from '../clientApi';
 import {reportError} from './errorDialogStackModule';
+import {validateAndShapeMetadata} from './animationMetadata';
 
 export const ADD_ANIMATION_AT = 'ADD_ANIMATION_AT';
 const DELETE_ANIMATION = 'DELETE_ANIMATION';
@@ -62,22 +63,21 @@ function animation(state, action) {
  * from the sources API.
  *
  * @param {Object} metadata
- * @returns {{type: ActionType, metadata: Object}}
+ * @returns {{type: ActionType, metadata: AnimationMetadata[]}}
  */
 export function setInitialAnimationMetadata(metadata) {
   return {
     type: SET_INITIAL_ANIMATION_METADATA,
-    metadata: metadata
+    metadata: metadata.map(validateAndShapeMetadata)
   };
 }
 
 export function addAnimation(animationProps) {
-  // TODO: Validate animationProps?
   return function (dispatch, getState) {
     dispatch({
       type: ADD_ANIMATION_AT,
       index: getState().animations.length,
-      animationProps: animationProps
+      animationProps: validateAndShapeMetadata(animationProps)
     });
     // TODO: Save project after adding an animation?
   };
