@@ -89,6 +89,17 @@ Promise.all([
       'makerlab/makerlabDependencies.js'
     ],
     commonFile: 'makerlab'
+  })),
+
+  build_commands.bundle(_.extend({}, defaultOptions, {
+    filenames: [
+      'pd/workshop_dashboard/workshop_dashboard.jsx'
+    ],
+    commonFile: 'pd',
+    browserifyGlobalShim: {
+      "react": "React",
+      "react-dom": "ReactDOM"
+    }
   }))
 ]).then(function (results) {
   var allStepsSucceeded = !results.some(function (result) {

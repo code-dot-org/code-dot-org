@@ -1,0 +1,17 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&libraries=places"}
+%div#workshop-container
+
+:javascript
+  var TEACHER_DASHBOARD_URL = "#{CDO.code_org_url '/teacher-dashboard'}";
+  var WORKSHOP_CONSTANTS = {
+    TYPES: #{Pd::Workshop::TYPES},
+    COURSES: #{Pd::Workshop::COURSES},
+    SUBJECTS: #{Pd::Workshop::SUBJECTS.to_json}
+  };
+=javascript_include_tag 'js/pd'
+
+:javascript
+  window.ReactDOM.render(window.WorkshopDashboard, document.getElementById('workshop-container'));
