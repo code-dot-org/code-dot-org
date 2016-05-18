@@ -174,8 +174,8 @@ var WorkshopForm = React.createClass({
       destroyedSessions.push(removedSession);
     }
     this.setState({
-      sessions: sessions,
-      destroyedSessions: destroyedSessions
+      sessions: _.cloneDeep(sessions),
+      destroyedSessions: _.cloneDeep(destroyedSessions)
     });
   },
   handleFacilitatorsChange: function (facilitators) {
@@ -317,7 +317,7 @@ var WorkshopForm = React.createClass({
   },
 
   handleFieldChange: function (fieldName, value) {
-    this.setState(_.set({}, fieldName, value));
+    this.setState({[fieldName]: value});
   },
 
   handleCourseChange: function (event) {
