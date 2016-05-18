@@ -261,7 +261,7 @@ exports.createMouseEvent = function mouseEvent(type, clientX, clientY) {
   var evt;
   var e = {
     bubbles: true,
-    cancelable: (type != "mousemove"),
+    cancelable: (type !== "mousemove"),
     view: window,
     detail: 0,
     screenX: undefined,
@@ -275,7 +275,7 @@ exports.createMouseEvent = function mouseEvent(type, clientX, clientY) {
     button: 0,
     relatedTarget: undefined
   };
-  if (typeof( document.createEvent ) == "function") {
+  if (typeof( document.createEvent ) === "function") {
     evt = document.createEvent("MouseEvents");
     evt.initMouseEvent(type,
       e.bubbles, e.cancelable, e.view, e.detail,

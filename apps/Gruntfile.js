@@ -223,7 +223,7 @@ module.exports = function (grunt) {
     }
   };
   APPS.filter(function (app) {
-    return app != 'none';
+    return app !== 'none';
   }).forEach(function (app) {
     var src = 'style/' + app + '/style.scss';
     var dest = 'build/package/css/' + app + '.css';
@@ -483,7 +483,7 @@ module.exports = function (grunt) {
     var current = path.resolve('build/locale/current');
     mkdirp.sync(current);
     APPS.concat('common').map(function (item) {
-      var localeString = '/*' + item + '*/ module.exports = window.blockly.' + (item == 'common' ? 'locale' : 'appLocale') + ';';
+      var localeString = '/*' + item + '*/ module.exports = window.blockly.' + (item === 'common' ? 'locale' : 'appLocale') + ';';
       fs.writeFileSync(path.join(current, item + '.js'), localeString);
     });
   });

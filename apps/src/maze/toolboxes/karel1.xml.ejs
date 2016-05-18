@@ -13,13 +13,13 @@
         <block type="karel_if"></block>
       <% } -%>
     <% } -%>
-    <% if (level == 5 || level == 10 || level == 11) { -%>
+    <% if (level === 5 || level === 10 || level === 11) { -%>
       <block type="maze_untilBlocked"></block>
     <% } -%>
     <% if (level > 5 && level < 8) { -%>
       <block type="maze_untilBlockedOrNotClear"></block>
     <% } -%>
-    <% if (level == 8 || level == 9) { -%>
+    <% if (level === 8 || level === 9) { -%>
       <block type="maze_untilBlockedOrNotClear">
         <title name="DIR">isPathForward</title>
       </block>
