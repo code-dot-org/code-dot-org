@@ -326,7 +326,7 @@ var handlePopulateTable = function (onSuccess, onError) {
     return;
   }
 
-  if (this.status != 200) {
+  if (this.status !== 200) {
     if (onError) {
       onError('error populating tables: unexpected http status ' + this.status, this.status);
     }
@@ -372,7 +372,7 @@ var handlePopulateKeyValue = function (onSuccess, onError) {
     return;
   }
 
-  if (this.status != 200) {
+  if (this.status !== 200) {
     if (onError) {
       onError('error populating kv: unexpected http status ' + this.status, this.status);
     }

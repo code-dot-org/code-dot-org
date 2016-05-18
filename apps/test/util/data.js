@@ -4,7 +4,7 @@ module.exports = function (app) {
   if (appCache[app]) {
     return appCache[app];
   }
-  if (app == 'maze') {
+  if (app === 'maze') {
     appCache[app] = function () {
       return {
         skins: require('@cdo/apps/maze/skins'),
@@ -16,7 +16,7 @@ module.exports = function (app) {
         blocks: require('@cdo/apps/maze/blocks')
       };
     };
-  } else if (app == 'calc') {
+  } else if (app === 'calc') {
     appCache[app] = function () {
       return {
         levels: {
@@ -25,7 +25,7 @@ module.exports = function (app) {
         blocks: require('@cdo/apps/calc/blocks')
       };
     };
-  } else if (app == 'flappy') {
+  } else if (app === 'flappy') {
     appCache[app] = function () {
       return {
         skins: require('@cdo/apps/flappy/skins'),
@@ -35,7 +35,7 @@ module.exports = function (app) {
         blocks: require('@cdo/apps/flappy/blocks')
       };
     };
-  } else if (app == 'turtle') {
+  } else if (app === 'turtle') {
     appCache[app] = function () {
       return {
         skins: require('@cdo/apps/turtle/skins'),
@@ -45,7 +45,7 @@ module.exports = function (app) {
         blocks: require('@cdo/apps/turtle/blocks')
       };
     };
-  } else if (app == 'eval') {
+  } else if (app === 'eval') {
     appCache[app] = function () {
       return {
         levels: {
@@ -54,7 +54,7 @@ module.exports = function (app) {
         blocks: require('@cdo/apps/eval/blocks')
       };
     };
-  } else if (app == 'bounce') {
+  } else if (app === 'bounce') {
     appCache[app] = function () {
       return {
         skins: require('@cdo/apps/bounce/skins'),
@@ -64,7 +64,7 @@ module.exports = function (app) {
         blocks: require('@cdo/apps/bounce/blocks')
       };
     };
-  } else if (app == 'studio') {
+  } else if (app === 'studio') {
     appCache[app] = function () {
       return {
         skins: require('@cdo/apps/studio/skins'),
@@ -74,7 +74,7 @@ module.exports = function (app) {
         blocks: require('@cdo/apps/studio/blocks')
       };
     };
-  } else if (app == 'craft') {
+  } else if (app === 'craft') {
     appCache[app] = function () {
       return {
         skins: require('@cdo/apps/craft/skins'),
@@ -84,7 +84,7 @@ module.exports = function (app) {
         blocks: require('@cdo/apps/craft/blocks')
       };
     };
-  } else if (app == 'applab') {
+  } else if (app === 'applab') {
     appCache[app] = function () {
       return {
         skins: require('@cdo/apps/applab/skins'),
@@ -94,7 +94,7 @@ module.exports = function (app) {
         blocks: require('@cdo/apps/applab/blocks')
       };
     };
-  } else if (app == 'gamelab') {
+  } else if (app === 'gamelab') {
     appCache[app] = function () {
       return {
         skins: require('@cdo/apps/gamelab/skins'),
