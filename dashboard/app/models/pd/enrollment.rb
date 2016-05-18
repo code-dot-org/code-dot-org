@@ -20,10 +20,6 @@
 #  index_pd_enrollments_on_pd_workshop_id      (pd_workshop_id)
 #  index_pd_enrollments_on_school_district_id  (school_district_id)
 #
-# Foreign Keys
-#
-#  fk_rails_be1a5b9dc6  (school_district_id => school_districts.id)
-#
 
 class Pd::Enrollment < ActiveRecord::Base
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
@@ -33,8 +29,10 @@ class Pd::Enrollment < ActiveRecord::Base
   validate :school_district_or_zip
 
   def school_district_or_zip
-    unless (school_district_id && school_state) || school_zip
-      errors.add(:school_district, "School district (and state) or school ZIP is required")
+    # We need either a school district & state pair, or a ZIP, but not both.
+    unless (!school_district_id.blank? && !school_state.blank?) ^ !school_zip.blank?
+      # "School district " will appear at the beginning of this error string.
+      errors.add(:school_district, "(and state) or school ZIP is required")
     end
   end
 
