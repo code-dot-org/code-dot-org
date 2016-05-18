@@ -1,6 +1,11 @@
-/* global React WORKSHOP_CONSTANTS google */
+/* global React google */
 
-var WorkshopForm = require('./components/workshop_form.jsx');
+/*
+  Creates a new workshop.
+  Route: /workshops/new
+ */
+
+var WorkshopForm = require('./components/workshop_form');
 
 var NewWorkshop = React.createClass({
   contextTypes: {

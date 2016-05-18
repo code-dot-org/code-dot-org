@@ -1,6 +1,10 @@
 /* global React */
 
-var SessionTime = require('./session_time.jsx');
+/*
+  Displays a list of nicely-formatted session times for a workshop.
+ */
+
+var SessionTime = require('./session_time');
 
 var SessionTimesList = React.createClass({
   propTypes: {

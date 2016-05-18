@@ -1,5 +1,9 @@
 /* global React */
 
+/*
+  Dynamic list of facilitator select controls for creating & editing workshops.
+ */
+
 var _ = require('lodash');
 var Row = require('react-bootstrap').Row;
 var Col = require('react-bootstrap').Col;
@@ -55,7 +59,7 @@ var FacilitatorListFormPart = React.createClass({
   },
 
   renderFacilitatorRows: function () {
-    if (!this.props.readOnly && this.props.facilitators.length == 0) {
+    if (!this.props.readOnly && this.props.facilitators.length === 0) {
       // Start with a placeholder empty row.
       this.props.facilitators.push({id: -1});
     }
@@ -66,7 +70,7 @@ var FacilitatorListFormPart = React.createClass({
       } else {
         // Remove already-selected facilitators from available list.
         var filteredAvailableFacilitators = this.props.availableFacilitators.filter((availableFacilitator) => {
-          return !facilitators.find((f) => f.id == availableFacilitator.id);
+          return !facilitators.find((f) => f.id === availableFacilitator.id);
         });
         return this.renderFacilitatorEditRow(facilitator, i, facilitators, filteredAvailableFacilitators);
       }
@@ -95,8 +99,8 @@ var FacilitatorListFormPart = React.createClass({
   },
 
   renderFacilitatorEditRow: function (facilitator, i, facilitators, filteredAvailableFacilitators) {
-    if (filteredAvailableFacilitators.length == 0) {
-      var text = this.props.course == '' ? 'Please select a course' : `No facilitators are available for ${this.props.course}`;
+    if (filteredAvailableFacilitators.length === 0) {
+      var text = this.props.course === '' ? 'Please select a course' : `No facilitators are available for ${this.props.course}`;
       return (
         <label key={i}>
           {text}
@@ -140,7 +144,7 @@ var FacilitatorListFormPart = React.createClass({
   },
 
   renderFacilitatorOption: function (facilitator) {
-    if (facilitator.id == -1) {
+    if (facilitator.id === -1) {
       return (
         <option key={-1}>-- Choose a facilitator --</option>
       );
@@ -154,7 +158,7 @@ var FacilitatorListFormPart = React.createClass({
   },
 
   handleFacilitatorChange: function (i, selectedId) {
-    var selectedFacilitator = this.props.availableFacilitators.find((f) => f.id == selectedId);
+    var selectedFacilitator = this.props.availableFacilitators.find((f) => f.id === selectedId);
     this.props.facilitators[i] = selectedFacilitator;
     this.props.onChange(this.props.facilitators);
   },

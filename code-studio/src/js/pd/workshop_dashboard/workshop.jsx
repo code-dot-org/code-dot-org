@@ -1,10 +1,17 @@
 /* global React TEACHER_DASHBOARD_URL */
 
+/*
+  Workshop view / edit. Displays and optionally edits details for a workshop.
+  Routes:
+    /workshops/:workshopId
+    /Workshops/:workshopId/edit
+ */
+
 var _ = require('lodash');
 var moment = require('moment');
-var ConfirmationDialog = require('./components/confirmation_dialog.jsx');
-var WorkshopForm = require('./components/workshop_form.jsx');
-var WorkshopEnrollment = require('./components/workshop_enrollment.jsx');
+var ConfirmationDialog = require('./components/confirmation_dialog');
+var WorkshopForm = require('./components/workshop_form');
+var WorkshopEnrollment = require('./components/workshop_enrollment');
 var Grid = require('react-bootstrap').Grid;
 var Row = require('react-bootstrap').Row;
 var Col = require('react-bootstrap').Col;
@@ -40,7 +47,7 @@ var Workshop = React.createClass({
 
   shouldComponentUpdate: function () {
     // Don't allow editing a workshop that has been started.
-    if (this.props.route.view == 'edit' && this.state.workshop.state != 'Not Started') {
+    if (this.props.route.view === 'edit' && this.state.workshop.state !== 'Not Started') {
       this.context.router.replace(`/workshops/${this.props.params.workshopId}`);
       return false;
     }
@@ -53,7 +60,7 @@ var Workshop = React.createClass({
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}`,
       dataType: "json"
     }).done(function (data) {
-      this.setState(_.merge(this.state, {
+      this.setState({
         loadingWorkshop: false,
         workshop: _.pick(data, [
           'id',
@@ -72,7 +79,7 @@ var Workshop = React.createClass({
           'sessions',
           'state'
         ])
-      }));
+      });
     }.bind(this));
   },
 
@@ -82,13 +89,13 @@ var Workshop = React.createClass({
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments`,
       dataType: "json"
     }).done(function (data) {
-      this.setState(_.merge(this.state, {
+      this.setState({
         loadingEnrollments: false,
         enrollments: data,
-        workshop: {
+        workshop: _.merge(_.cloneDeep(this.state.workshop), {
           enrolled_teacher_count: data.length
-        }
-      }));
+        })
+      });
     }.bind(this));
   },
 
@@ -109,13 +116,11 @@ var Workshop = React.createClass({
   },
 
   handleStartWorkshopClick: function () {
-    this.state.showStartWorkshopConfirmation = true;
-    this.setState(this.state);
+    this.setState({showStartWorkshopConfirmation: true});
   },
 
   handleStartWorkshopCancel: function () {
-    this.state.showStartWorkshopConfirmation = false;
-    this.setState(this.state);
+    this.setState({showStartWorkshopConfirmation: false});
   },
 
   handleStartWorkshopConfirmed: function (e) {
@@ -124,22 +129,23 @@ var Workshop = React.createClass({
       url: "/api/v1/pd/workshops/" + this.props.params.workshopId + "/start",
       dataType: "json"
     }).done(function (data) {
-      this.state.showStartWorkshopConfirmation = false;
-      this.state.workshop.state = 'In Progress';
-      this.state.workshop.section_id = data.section_id;
-      this.state.workshop.section_code = data.section_code;
-      this.setState(this.state);
+      this.setState({
+        showStartWorkshopConfirmation: false,
+        workshop: _.merge(_.cloneDeep(this.state.workshop), {
+          state: 'In Progress',
+          section_id: data.section_id,
+          section_code: data.section_code
+        })
+      });
     }.bind(this));
   },
 
   handleEndWorkshopClick: function () {
-    this.state.showEndWorkshopConfirmation = true;
-    this.setState(this.state);
+    this.setState({showEndWorkshopConfirmation: true});
   },
 
   handleEndWorkshopCancel: function () {
-    this.state.showEndWorkshopConfirmation = false;
-    this.setState(this.state);
+    this.setState({showEndWorkshopConfirmation: false});
   },
 
   handleEndWorkshopConfirmed: function (e) {
@@ -148,8 +154,11 @@ var Workshop = React.createClass({
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}/end`,
       dataType: "json"
     }).done(function () {
-      this.state.workshop.state = 'Ended';
-      this.setState(this.state);
+      this.setState({
+        workshop: _.merge(_.cloneDeep(this.state.workshop), {
+          state: 'Ended'
+        })
+      });
     }.bind(this));
   },
 
@@ -166,8 +175,7 @@ var Workshop = React.createClass({
   },
 
   handleWorkshopSaved: function (workshop) {
-    this.state.workshop = workshop;
-    this.setState(this.state);
+    this.setState({workshop: workshop});
     this.context.router.replace(`/workshops/${this.props.params.workshopId}`);
   },
 
@@ -179,17 +187,15 @@ var Workshop = React.createClass({
 
   handleEnrollmentRefreshClick: function () {
     this.loadEnrollments();
-    this.setState(_.merge(this.state, {
-      loadingEnrollments: true
-    }));
+    this.setState({loadingEnrollments: true});
   },
 
   getSectionUrl: function () {
-    return `${TEACHER_DASHBOARD_URL}#/sections/${this.state.workshop.section_id}/manage`;
+    return `${window.dashboard.workshop.TEACHER_DASHBOARD_URL}#/sections/${this.state.workshop.section_id}/manage`;
   },
 
   renderSignupPanel: function () {
-    if (this.state.workshop.state != 'Not Started') {
+    if (this.state.workshop.state !== 'Not Started') {
       return null;
     }
 
@@ -309,7 +315,7 @@ var Workshop = React.createClass({
   },
 
   renderAttendancePanel: function () {
-    if (this.state.workshop.state == 'Not Started') {
+    if (this.state.workshop.state === 'Not Started') {
       return null;
     }
 
@@ -346,7 +352,7 @@ var Workshop = React.createClass({
   },
 
   renderEndWorkshopPanel: function () {
-    if (this.state.workshop.state != 'In Progress') {
+    if (this.state.workshop.state !== 'In Progress') {
       return null;
     }
 
@@ -379,8 +385,8 @@ var Workshop = React.createClass({
 
   renderDetailsPanelHeader: function () {
     let button = null;
-    if (this.state.workshop.state == 'Not Started') {
-      if (this.props.route.view == 'edit') {
+    if (this.state.workshop.state === 'Not Started') {
+      if (this.props.route.view === 'edit') {
         button = <Button bsSize="xsmall" bsStyle="primary" onClick={this.handleSaveClick}>Save</Button>;
       } else {
         button = <Button bsSize="xsmall" onClick={this.handleEditClick}>Edit</Button>;
@@ -395,7 +401,7 @@ var Workshop = React.createClass({
   },
 
   renderDetailsPanelContent: function () {
-    if (this.props.route.view == 'edit' ) {
+    if (this.props.route.view === 'edit' ) {
       return (
         <div>
           <WorkshopForm
@@ -407,7 +413,7 @@ var Workshop = React.createClass({
     }
 
     let editButton = null;
-    if (this.state.workshop.state == 'Not Started') {
+    if (this.state.workshop.state === 'Not Started') {
       editButton = (
         <Button onClick={this.handleEditClick}>Edit</Button>
       );

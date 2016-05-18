@@ -1,15 +1,19 @@
-/* global React WORKSHOP_CONSTANTS */
+/* global React */
+
+/*
+  Main landing page and router for the workshop dashboard.
+ */
 
 const Router = require('react-router').Router;
 const Route = require('react-router').Route;
 const IndexRedirect = require('react-router').IndexRedirect;
 const useRouterHistory = require('react-router').useRouterHistory;
 const createHistory = require('history').createHistory;
-const NewWorkshop = require('./new_workshop.jsx');
-const Workshop = require('./workshop.jsx');
-const Header = require('./header.jsx');
-const WorkshopIndex = require('./workshop_index.jsx');
-const WorkshopAttendance = require('./attendance/workshop_attendance.jsx');
+const NewWorkshop = require('./new_workshop');
+const Workshop = require('./workshop');
+const Header = require('./header');
+const WorkshopIndex = require('./workshop_index');
+const WorkshopAttendance = require('./attendance/workshop_attendance');
 
 const ROOT_PATH = '/pd/workshop_dashboard';
 const browserHistory = useRouterHistory(createHistory)({

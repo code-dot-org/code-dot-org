@@ -1,6 +1,11 @@
 /* global React */
 
-var WorkshopTableRow = require('./workshop_table_row.jsx');
+/*
+  Table displaying workshop summaries based on a supplied query.
+ */
+
+var _ = require('lodash');
+var WorkshopTableRow = require('./workshop_table_row');
 var Table = require('react-bootstrap').Table;
 
 var WorkshopTable = React.createClass({
@@ -62,8 +67,9 @@ var WorkshopTable = React.createClass({
         url: '/api/v1/pd/workshops/' + workshop.id
       })
       .done(function () {
-        this.state.workshops.splice(workshop_index, 1);
-        this.setState(this.state);
+        var workshops = _.cloneDeep(this.state.workshops);
+        workshops.splice(workshop_index, 1);
+        this.setState({workshops: workshops});
       }.bind(this));
   },
 
@@ -72,7 +78,7 @@ var WorkshopTable = React.createClass({
       return <i className="fa fa-spinner fa-pulse fa-3x" />;
     }
 
-    if (this.state.workshops.length == 0) {
+    if (this.state.workshops.length === 0) {
       return <p>None.</p>;
     }
 

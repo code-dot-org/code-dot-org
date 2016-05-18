@@ -5,12 +5,12 @@
 %div#workshop-container
 
 :javascript
-  var TEACHER_DASHBOARD_URL = "#{CDO.code_org_url '/teacher-dashboard'}";
-  var WORKSHOP_CONSTANTS = {
+  window.dashboard.workshop = {
+    TEACHER_DASHBOARD_URL: "#{CDO.code_org_url '/teacher-dashboard'}",
     TYPES: #{Pd::Workshop::TYPES},
     COURSES: #{Pd::Workshop::COURSES},
     SUBJECTS: #{Pd::Workshop::SUBJECTS.to_json}
-  };
+  }
 =javascript_include_tag 'js/pd'
 
 :javascript

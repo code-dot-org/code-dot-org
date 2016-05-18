@@ -1,9 +1,13 @@
-/* global React WORKSHOP_CONSTANTS google */
+/* global React google */
+
+/*
+ Form for creating / editing workshop details.
+ */
 
 var _ = require('lodash');
 var moment = require('moment');
-var SessionListFormPart = require('./session_list_form_part.jsx');
-var FacilitatorListFormPart = require('./facilitator_list_form_part.jsx');
+var SessionListFormPart = require('./session_list_form_part');
+var FacilitatorListFormPart = require('./facilitator_list_form_part');
 var Modal = require('react-bootstrap').Modal;
 var Grid = require('react-bootstrap').Grid;
 var Row = require('react-bootstrap').Row;
@@ -64,14 +68,14 @@ var WorkshopForm = React.createClass({
     if (this.props.workshop) {
       initialState = _.merge(initialState,
         _.pick(this.props.workshop, [
-        'facilitators',
-        'location_name',
-        'location_address',
-        'capacity',
-        'workshop_type',
-        'course',
-        'subject',
-        'notes'
+          'facilitators',
+          'location_name',
+          'location_address',
+          'capacity',
+          'workshop_type',
+          'course',
+          'subject',
+          'notes'
         ])
       );
       initialState.sessions = this.prepareSessionsForForm(this.props.workshop.sessions);
@@ -112,7 +116,7 @@ var WorkshopForm = React.createClass({
       url: `/api/v1/pd/course_facilitators?course=${course}`,
       dataType: "json"
     }).done(function (data) {
-      this.setState(_.set(this.state, 'availableFacilitators', data));
+      this.setState({availableFacilitators: data});
     }.bind(this));
   },
 
@@ -125,8 +129,7 @@ var WorkshopForm = React.createClass({
       this.autocomplete = new google.maps.places.Autocomplete($(ReactDOM.findDOMNode(this)).find('.location-autocomplete')[0]);
       google.maps.event.addListener(this.autocomplete, 'place_changed', function () {
         var place = this.autocomplete.getPlace();
-        this.state.location_address = place.formatted_address;
-        this.setState(this.state);
+        this.setState({location_address: place.formatted_address});
       }.bind(this));
     }
   },
@@ -165,20 +168,22 @@ var WorkshopForm = React.createClass({
   },
 
   handleSessionsChange: function (sessions, removedSession) {
-    this.state.sessions = sessions;
-    this.state.sessionsModified = true;
+    sessions.sessionsModified = true;
+    var destroyedSessions = [];
     if (removedSession && removedSession.id) {
-      this.state.destroyedSessions.push(removedSession);
+      destroyedSessions.push(removedSession);
     }
-    this.setState(this.state);
+    this.setState({
+      sessions: sessions,
+      destroyedSessions: destroyedSessions
+    });
   },
   handleFacilitatorsChange: function (facilitators) {
-    this.state.facilitators = facilitators;
-    this.setState(this.state);
+    this.setState({facilitators: facilitators});
   },
 
   renderCourseSelect: function (validation) {
-    var options = WORKSHOP_CONSTANTS.COURSES.map(function (course, i) {
+    var options = window.dashboard.workshop.COURSES.map(function (course, i) {
       return (<option key={i} value={course}>{course}</option>);
     });
     var placeHolder = this.state.course ? null : <option />;
@@ -200,7 +205,7 @@ var WorkshopForm = React.createClass({
   },
 
   renderWorkshopTypeSelect: function (validation) {
-    var options = WORKSHOP_CONSTANTS.TYPES.map(function (workshopType, i) {
+    var options = window.dashboard.workshop.TYPES.map(function (workshopType, i) {
       return (<option key={i} value={workshopType}>{workshopType}</option>);
     });
     var placeHolder = this.state.workshop_type ? null : <option />;
@@ -222,12 +227,12 @@ var WorkshopForm = React.createClass({
   },
 
   shouldRenderSubject() {
-    return this.state.course && WORKSHOP_CONSTANTS.SUBJECTS[this.state.course];
+    return this.state.course && window.dashboard.workshop.SUBJECTS[this.state.course];
   },
 
   renderSubjectSelect: function (validation) {
     if (this.shouldRenderSubject()) {
-      var options = WORKSHOP_CONSTANTS.SUBJECTS[this.state.course].map(function (subject, i) {
+      var options = window.dashboard.workshop.SUBJECTS[this.state.course].map(function (subject, i) {
         return (<option key={i} value={subject}>{subject}</option>);
       });
       var placeHolder = this.state.subject ? null : <option />;
@@ -252,12 +257,13 @@ var WorkshopForm = React.createClass({
   },
 
   handleErrorClick: function (i) {
-    this.state.errors.splice(i,1);
-    this.setState(this.state);
+    var errors = _.cloneDeep(this.state.errors);
+    errors.splice(i,1);
+    this.setState({errors: errors});
   },
 
   renderErrors: function () {
-    if (!this.state.errors || this.state.errors.length == 0) {
+    if (!this.state.errors || this.state.errors.length === 0) {
       return null;
     }
     return this.state.errors.map(function (error, i) {
@@ -279,9 +285,9 @@ var WorkshopForm = React.createClass({
     }
     return (
       this.state.sessionsModified ||
-      this.state.location_name != this.props.workshop.location_name ||
-      this.state.location_address != this.props.workshop.location_address ||
-      this.state.notes != this.props.workshop.notes
+      this.state.location_name !== this.props.workshop.location_name ||
+      this.state.location_address !== this.props.workshop.location_address ||
+      this.state.notes !== this.props.workshop.notes
     );
   },
 
@@ -289,14 +295,12 @@ var WorkshopForm = React.createClass({
     var validation = this.validate();
     if (validation.isValid) {
       if (this.shouldConfirmSave()) {
-        this.state.showSaveConfirmation = true;
-        this.setState(this.state);
+        this.setState({showSaveConfirmation: true});
       } else {
         this.save(false);
       }
     } else {
-      this.state.shouldValidate = true;
-      this.setState(this.state);
+      this.setState({shouldValidate: true});
     }
   },
 
@@ -309,12 +313,11 @@ var WorkshopForm = React.createClass({
   },
 
   handleAbortSave: function () {
-    this.state.showSaveConfirmation = false;
-    this.setState(this.state);
+    this.setState({showSaveConfirmation: false});
   },
 
   handleFieldChange: function (fieldName, value) {
-    this.setState(_.set(this.state, fieldName, value));
+    this.setState(_.set({}, fieldName, value));
   },
 
   handleCourseChange: function (event) {
@@ -322,7 +325,7 @@ var WorkshopForm = React.createClass({
     this.handleFieldChange('course', course);
 
     // clear facilitators
-    this.setState(_.set(this.state, 'facilitators', []));
+    this.setState({facilitators: []});
     this.loadAvailableFacilitators(course);
   },
 
@@ -362,16 +365,16 @@ var WorkshopForm = React.createClass({
       }
     }.bind(this)).fail(function (data) {
       if (data.responseJSON.errors) {
-        this.state.errors = data.responseJSON.errors;
-        this.state.showSaveConfirmation = false;
-        this.setState(this.state);
+        this.setState({
+          errors: data.responseJSON.errors,
+          showSaveConfirmation: false
+        });
       }
     }.bind(this));
   },
 
   handleCancelClick: function (e) {
     // discard changes.
-    // this.setState(this.getInitialState());
     this.context.router.goBack();
   },
 
@@ -423,7 +426,7 @@ var WorkshopForm = React.createClass({
       for (var i = 0; i < this.state.sessions.length; i++) {
         var session = this.state.sessions[i];
         if (!session.date || !moment(session.date, 'MM/DD/YY').isValid() ||
-            !session.startTime || !session.endTime) {
+          !session.startTime || !session.endTime) {
           validation.isValid = false;
         }
       }

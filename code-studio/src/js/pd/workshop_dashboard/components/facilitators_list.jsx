@@ -1,5 +1,9 @@
 /* global React */
 
+/*
+  List of facilitators for display in the workshop summary.
+ */
+
 var FacilitatorsList = React.createClass({
   propTypes: {
     facilitators: React.PropTypes.arrayOf(

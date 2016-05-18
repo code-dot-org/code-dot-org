@@ -1,7 +1,14 @@
 /* global React */
 
-var SessionTime = require('../components/session_time.jsx');
-var SessionAttendance = require('./session_attendance.jsx');
+/*
+  Display and edit attendance for a workshop.
+  It has a tab for each session which lists all enrolled teachers and their status.
+  Route: /workshops/:workshopId/attendance(/:sessionIndex)
+ */
+
+var _ = require('lodash');
+var SessionTime = require('../components/session_time');
+var SessionAttendance = require('./session_attendance');
 var Row = require('react-bootstrap').Row;
 var ButtonToolbar = require('react-bootstrap').ButtonToolbar;
 var Button = require('react-bootstrap').Button;
@@ -23,7 +30,11 @@ var WorkshopAttendance = React.createClass({
 
   getInitialState: function () {
     return {
-      loading: true
+      loading: true,
+      workshopState: undefined,
+      sessionAttendances: undefined,
+      adminActions: undefined,
+      adminOverride: false
     };
   },
 
@@ -59,7 +70,6 @@ var WorkshopAttendance = React.createClass({
 
   handleNavSelect: function (sessionIndex) {
     this.context.router.replace(`/workshops/${this.props.params.workshopId}/attendance/${sessionIndex}`);
-    this.setState(this.state);
   },
 
   handleCancelClick: function (e) {
@@ -102,8 +112,9 @@ var WorkshopAttendance = React.createClass({
   },
 
   handleAttendanceChange: function (i, value) {
-    this.state.sessionAttendances[this.activeSessionIndex()].attendance[i].attended = value;
-    this.setState(this.state);
+    var clonedAttendances = _.cloneDeep(this.state.sessionAttendances);
+    clonedAttendances[this.activeSessionIndex()].attendance[i].attended = value;
+    this.setState({sessionAttendances: clonedAttendances});
   },
 
   activeSessionIndex: function () {
@@ -111,28 +122,27 @@ var WorkshopAttendance = React.createClass({
   },
 
   handleAdminOverrideClick: function () {
-    this.state.adminOverride = !this.state.adminOverride;
-    this.setState(this.state);
+    this.setState({adminOverride: !this.state.adminOverride});
   },
 
   renderAdminControls: function () {
     if (!this.state.adminActions) {
       return null;
     }
-    var toggle_class;
+    var toggleClass;
     var style;
     if (this.state.adminOverride) {
-      toggle_class = "fa fa-toggle-on fa-lg";
+      toggleClass = "fa fa-toggle-on fa-lg";
       style = {backgroundColor: '#f5f5dc'}; // Light green
     } else {
-      toggle_class = "fa fa-toggle-off fa-lg";
+      toggleClass = "fa fa-toggle-off fa-lg";
       style = {backgroundColor: '#f5f5f5'}; // Light gray
     }
     return (
       <Row>
         <Col sm={10} style={{padding: 10}}>
           <span style={style}>Admin: allow counting attendance for teachers not in the section? &nbsp;</span>
-          <i className={toggle_class} style={{cursor:'pointer'}} onClick={this.handleAdminOverrideClick} />
+          <i className={toggleClass} style={{cursor:'pointer'}} onClick={this.handleAdminOverrideClick} />
         </Col>
       </Row>
     );
@@ -143,7 +153,7 @@ var WorkshopAttendance = React.createClass({
       return <i className="fa fa-spinner fa-pulse fa-3x" />;
     }
 
-    let isReadOnly = this.state.workshopState == 'Ended';
+    let isReadOnly = this.state.workshopState === 'Ended';
     let sessionTabs = this.state.sessionAttendances.map(function (sessionAttendance, i) {
       var session = sessionAttendance.session;
       return (
