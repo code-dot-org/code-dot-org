@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160512224559) do
+ActiveRecord::Schema.define(version: 20160517131521) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -324,6 +324,13 @@ ActiveRecord::Schema.define(version: 20160512224559) do
 
   add_index "pd_attendances", ["pd_session_id"], name: "index_pd_attendances_on_pd_session_id", using: :btree
 
+  create_table "pd_course_facilitators", force: :cascade do |t|
+    t.integer "facilitator_id", limit: 4,   null: false
+    t.string  "course",         limit: 255, null: false
+  end
+
+  add_index "pd_course_facilitators", ["course"], name: "index_pd_course_facilitators_on_course", using: :btree
+
   create_table "pd_district_payment_terms", force: :cascade do |t|
     t.integer "district_id", limit: 4
     t.string  "course",      limit: 255,                         null: false
@@ -558,13 +565,14 @@ ActiveRecord::Schema.define(version: 20160512224559) do
 
   create_table "script_levels", force: :cascade do |t|
     t.integer  "level_id",   limit: 4
-    t.integer  "script_id",  limit: 4, null: false
+    t.integer  "script_id",  limit: 4,     null: false
     t.integer  "chapter",    limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "stage_id",   limit: 4
     t.integer  "position",   limit: 4
     t.boolean  "assessment"
+    t.text     "properties", limit: 65535
   end
 
   add_index "script_levels", ["level_id"], name: "index_script_levels_on_level_id", using: :btree

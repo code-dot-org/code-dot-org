@@ -30,8 +30,8 @@
   twentyhours_text: Czy ukończyłeś pierwszą Godzinę Kodowania? Poznaj więcej podstawowych
     pojęć informatycznych i dotyczących programowania w tym kursie, który następuje.
   og_title: Każde dziecko zasługuje na szansę
-  og_description: Każdy uczeń w każdej szkole zasługuje, by mieć szansę uczyć się
-    informatyki.
+  og_description: Każdy uczeń w każdej szkole zasługuje możliwość studiowania (uczenia)
+    się informatyki. To zmienia wszystko.
   hoc2014_heading: Dołącz do <a href="http://hourofcode.com"> Godziny Kodowania (Hour
     of Code)</a> <br/> 8-14 grudnia 2014 r. <br/>
   hoc2014_students: Uczniowie
@@ -91,39 +91,42 @@
     <a href="%{current_path}/next">samouczki partnerów</a>.
   get_a_certificate_of_achievement: Uzyskaj certyfikat osiągnięcia
   view_course: Zobacz kurs
-  view_unit: View unit
+  view_unit: Zobacz jednostkę
   make_app: Utwórz aplikację
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
+  congrats_guest_speaker_title: Znajdź język w swojej klasie
+  congrats_guest_speaker_desc: Teraz, kiedy twoi uczniowie zakończyli kurs Informatyki
+    , należy rozważyć  o podłączeniu go do realnego świata, zapraszając gościa do
+    klasy. Można skorzystać z naszej mapy wolontariuszy i skontaktować się z  lokalnych
+    wolontariuszy, aby odwiedzili twoją klasę, lub poszukać w dowolnym mieście, aby
+    znaleźć studentów informatyki lub specjalistów technicznych, którzy są gotowi,
+    aby zainspirować twoich uczniów zdalnie, za pośrednictwem czatu wideo.
+  congrats_guest_speaker_cta: Znajdź tłumacza
+  congrats_third_party_title: |
+    Używaj nowych funkcji  tych aplikacji i stron internetowych
+     
+  third_party_gradelevel_kto8: Klasa K-8
+  third_party_gradelevel_kto2: Klasa K-2
+  third_party_gradelevel_2to8: Klasy 2-8
+  third_party_gradelevel_4to12: klasa 4-12
+  third_party_gradelevel_5to12: Klasa 5-12
+  third_party_gradelevel_6plus: Klasa 6+
+  third_party_gradelevel_8plus: Klasa 8+
+  third_party_platform_all: 'Platformy: Web, iPad oraz Android'
   third_party_platform_mobile: 'Platforma: iPad i Android'
   third_party_platform_web: 'Platforma: Web'
-  third_party_price_varies: 'Price: Plans vary'
+  third_party_price_varies: Cenowo plny się różnią
   third_party_price_free: 'Cena: bezpłatny'
   third_party_price_299: 'Cena: $2.99/Pobierz'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
-  third_party_tynker_desc: Tynker's creative computing platform helps children develop
-    computational thinking and programming skills in a fun, intuitive and imaginative
-    way. Our innovative visual programming language, interactive self-paced courses,
-    and game-based programming activities provide an easy introduction to programming,
-    and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
+  third_party_price_individual: 'Indywidualne Ceny: Free Trial i $ 25 / miesiąc'
+  third_party_price_school: 'Cena dla szkół: darmowe plany i pro w  $ +2.500 +'
+  third_party_tynker_desc: 'Szkolna cena: Darmowe Plany & Pro w $ 2500 + kreatywne
+    platformy Tynker do wykonywania obliczeń pomaga dzieciom rozwijać obliczeniowej
+    myślenia i umiejętności programowania w przyjemny i intuicyjny i z użyciem wyobraźni
+    sposób. Nasza innowacyjny język wizualny programowania, interaktywne kursy samokształcenia
+    oraz działania. Programowanie do gier opartych umożliwiają łatwe wprowadzenie
+    do programowania i umożliwić dzieciom do innowacji i tworzenia.'
+  third_party_tynker_btn_curriculum: Wypróbuj Tynker program nauczania dla początkujących
+  third_party_tynker_btn_site: Odwiedź Tynker
   third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
     that enables young children (ages 5-7) to create their own interactive stories
     and games. Children snap together graphical programming blocks to make characters
@@ -360,6 +363,9 @@
   homepage_banner_20k_teachers: 20,000 nauczycieli jest wyszkolonych, a teraz uczy
     informatyki w klasach.
   homepage_banner_20k_teachers_link: Ucz się więcej
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: Godzina Kodowania
   homepage_slot_text_blurb_hoc: Każdy może się nauczyć . Zacznij dzisiaj
   homepage_slot_text_link_hoc: Weź udział w Godzinie Kodowania (the Hour of Code)
@@ -385,6 +391,7 @@
   homepage_slot_text_link_stats: Zobacz statystyki
   homepage_slot_text_link_buy: Angażuj się
   homepage_slot_text_link_donate: Ofiaruj darowiznę
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Twórczość uczniów Studia Kodowania
   homepage_header_donors: Code.org dziękuje za wsparcie
   homepage_donors_seall: Zobacz wszystkich
@@ -854,7 +861,13 @@
     problem in computer science. Code Studio teachers are leading the way in educating
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
-  dashboard_announce_button_text: Ucz się więcej
+  dashboard_announce_button_text: Naucz się więcej
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: Godzina Kodowania jest tutaj - 8-14 grudnia!
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej
     (CS Education Week)
@@ -984,13 +997,31 @@
   course3_name: Kurs 3
   course4_name: Kurs 4
   accelerated_name: Przyspieszony Kurs
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: Przyspieszony Kurs
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Klasyczny labirynt
+  iceage_name: Epoka lodowcowa
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Matematyka
+  hoc_category_name: Godzina Kodowania
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
   applab_name: App Lab
   applab_gradelevel: Wiek 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
@@ -1724,12 +1755,11 @@
   infinity_shortcode: inf
   playlab_shortcode: zagraj
   artist_shortcode: art
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.

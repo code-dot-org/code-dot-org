@@ -19,7 +19,5 @@ class Pd::DistrictPaymentTerm < ActiveRecord::Base
     RATE_DAILY = 'daily'
   ]
   validates_inclusion_of :rate_type, in: RATE_TYPES
-
   belongs_to :district
-
 end

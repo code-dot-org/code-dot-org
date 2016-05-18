@@ -260,19 +260,19 @@ class Script < ActiveRecord::Base
   end
 
   def twenty_hour?
-    ScriptConstants.twenty_hour?(self.name)
+    ScriptConstants.script_in_category?(:twenty_hour, self.name)
   end
 
   def hoc?
-    ScriptConstants.hoc?(self.name)
+    ScriptConstants.script_in_category?(:hoc, self.name)
   end
 
   def flappy?
-    ScriptConstants.flappy?(self.name)
+    ScriptConstants.script_in_category?(:flappy, self.name)
   end
 
   def minecraft?
-    ScriptConstants.minecraft?(self.name)
+    ScriptConstants.script_in_category?(:minecraft, self.name)
   end
 
   def find_script_level(level_id)
@@ -314,7 +314,7 @@ class Script < ActiveRecord::Base
 
   def banner_image
     if has_banner?
-      "banner_#{name}_cropped.png"
+      "banner_#{name}.png"
     end
   end
 
@@ -339,7 +339,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_banner?
-    k5_course? || %w(cspunit1 cspunit2 cspunit3).include?(self.name)
+    k5_course? || %w(csp1 csp2 cspunit1 cspunit2 cspunit3).include?(self.name)
   end
 
   def freeplay_links
@@ -381,7 +381,7 @@ class Script < ActiveRecord::Base
                        professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course], # default false
                        student_of_admin_required: script_data[:student_of_admin_required].nil? ? false : script_data[:student_of_admin_required], # default false
                       },
-        }, stages.map{|stage| stage[:levels]}.flatten]
+        }, stages.map{|stage| stage[:scriptlevels]}.flatten]
       end
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
@@ -392,7 +392,7 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def self.add_script(options, data)
+  def self.add_script(options, raw_script_levels)
     script = fetch_script(options)
     chapter = 0
     stage_position = 0; script_level_position = Hash.new(0)
@@ -401,71 +401,82 @@ class Script < ActiveRecord::Base
     levels_by_key = script.levels.index_by(&:key)
 
     # Overwrites current script levels
-    script.script_levels = data.map do |row|
-      row.symbolize_keys!
+    script.script_levels = raw_script_levels.map do |raw_script_level|
+      raw_script_level.symbolize_keys!
 
-      # Concepts are comma-separated, indexed by name
-      row[:concept_ids] = (concepts = row.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
-        (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
-      end
+      assessment = nil
+      stage_flex_category = nil
 
-      row_data = row.dup
-      stage_name = row.delete(:stage)
-      assessment = row.delete(:assessment)
-      stage_flex_category = row.delete(:stage_flex_category)
+      levels = raw_script_level[:levels].map do |raw_level|
+        raw_level.symbolize_keys!
 
-      key = row.delete(:name)
-
-      if row[:level_num] && !key.starts_with?('blockly')
-        # a levels.js level in a old style script -- give it the same key that we use for levels.js levels in new style scripts
-        key = ['blockly', row.delete(:game), row.delete(:level_num)].join(':')
-      end
-
-      level = levels_by_key[key] || Level.find_by_key(key)
-
-      if key.starts_with?('blockly')
-        # this level is defined in levels.js. find/create the reference to this level
-        level = Level.
-          create_with(name: 'blockly').
-          find_or_create_by!(Level.key_to_params(key))
-        level = level.with_type(row.delete(:type) || 'Blockly') if level.type.nil?
-        level.update(row)
-      elsif row[:video_key]
-        level.update(video_key: row[:video_key])
-      end
-
-      unless level
-        raise ActiveRecord::RecordNotFound, "Level: #{row_data.to_json}, Script: #{script.name}"
-      end
-
-      if Game.gamelab == level.game
-        unless script.student_of_admin_required || script.admin_required
-          raise <<-ERROR.gsub(/^\s+/, '')
-            Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required
-            (while adding level "#{level.name}" to script "#{script.name}")
-          ERROR
+        # Concepts are comma-separated, indexed by name
+        raw_level[:concept_ids] = (concepts = raw_level.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
+          (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
         end
+
+        raw_level_data = raw_level.dup
+        assessment = raw_level.delete(:assessment)
+        stage_flex_category = raw_level.delete(:stage_flex_category)
+
+        key = raw_level.delete(:name)
+
+        if raw_level[:level_num] && !key.starts_with?('blockly')
+          # a levels.js level in a old style script -- give it the same key that we use for levels.js levels in new style scripts
+          key = ['blockly', raw_level.delete(:game), raw_level.delete(:level_num)].join(':')
+        end
+
+        level = levels_by_key[key] || Level.find_by_key(key)
+
+        if key.starts_with?('blockly')
+          # this level is defined in levels.js. find/create the reference to this level
+          level = Level.
+            create_with(name: 'blockly').
+            find_or_create_by!(Level.key_to_params(key))
+          level = level.with_type(raw_level.delete(:type) || 'Blockly') if level.type.nil?
+          level.update(raw_level)
+        elsif raw_level[:video_key]
+          level.update(video_key: raw_level[:video_key])
+        end
+
+        unless level
+          raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
+        end
+
+        if Game.gamelab == level.game
+          unless script.student_of_admin_required || script.admin_required
+            raise <<-ERROR.gsub(/^\s+/, '')
+              Gamelab levels can only be added to scripts that are admin_required, or student_of_admin_required
+              (while adding level "#{level.name}" to script "#{script.name}")
+            ERROR
+          end
+        end
+
+        if Game.applab == level.game
+          unless script.hidden || script.login_required || script.student_of_admin_required || script.admin_required
+            raise <<-ERROR.gsub(/^\s+/, '')
+              Applab levels can only be added to scripts that are hidden or require login
+              (while adding level "#{level.name}" to script "#{script.name}")
+            ERROR
+          end
+        end
+        level
       end
 
-      if Game.applab == level.game
-        unless script.hidden || script.login_required || script.student_of_admin_required || script.admin_required
-          raise <<-ERROR.gsub(/^\s+/, '')
-            Applab levels can only be added to scripts that are hidden or require login
-            (while adding level "#{level.name}" to script "#{script.name}")
-          ERROR
-        end
-      end
+      stage_name = raw_script_level.delete(:stage)
+      properties = raw_script_level.delete(:properties)
 
       script_level_attributes = {
         script_id: script.id,
         chapter: (chapter += 1),
         assessment: assessment
       }
+      script_level_attributes[:properties] = properties.to_json if properties
       script_level = script.script_levels.detect{|sl|
         script_level_attributes.all?{ |k, v| sl.send(k) == v } &&
-          sl.levels == [level]
+          sl.levels == levels
       } || ScriptLevel.create(script_level_attributes) {|sl|
-        sl.levels = [level]
+        sl.levels = levels
       }
       # Set/create Stage containing custom ScriptLevel
       if stage_name
@@ -544,7 +555,7 @@ class Script < ActiveRecord::Base
                        professional_learning_course: script_data[:professional_learning_course].nil? ? false : script_data[:professional_learning_course], # default false
                        student_of_admin_required: script_data[:student_of_admin_required].nil? ? false : script_data[:student_of_admin_required], # default false
           }
-        }, script_data[:stages].map { |stage| stage[:levels] }.flatten)
+        }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten)
         Script.update_i18n(i18n)
       end
     rescue StandardError => e

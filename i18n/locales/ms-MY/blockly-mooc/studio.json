@@ -2,6 +2,8 @@
   "actor":"pelakon",
   "addCharacter":"add a",
   "addCharacterTooltip":"Tambah watak ke dalam adegan.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"tambah 10 mata",
   "addPoints50":"tambah 50 mata",
   "addPoints100":"tambah 100 mata",

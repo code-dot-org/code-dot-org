@@ -299,6 +299,8 @@ th-TH:
   homepage_banner_privacy_link: สิ่งที่น่าเรียนรู้ยังมีอีก
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
   homepage_banner_20k_teachers_link: สิ่งที่น่าเรียนรู้ยังมีอีก
+  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: ช่วงเวลาของ Code
   homepage_slot_text_blurb_hoc: ทุกคนสามารถเรียนรู้ได้ เริ่มต้นวันนี้
   homepage_slot_text_link_hoc: ลองใช้ Hour of Code สิ
@@ -324,6 +326,7 @@ th-TH:
   homepage_slot_text_link_stats: ดูสถิติ
   homepage_slot_text_link_buy: มาร่วมกับเราสิ
   homepage_slot_text_link_donate: ร่วมบริจาค
+  homepage_slot_text_link_shop: 'T-shirts, hats, & more'
   homepage_header_codestudio: Code Studio สำหรับนักเรียน
   homepage_header_donors: Code.org ขอขอบคุณพันธมิตร
   homepage_donors_seall: ดูทั้งหมด
@@ -670,8 +673,10 @@ th-TH:
   dashboard_faq_k5: คำถามที่พบบ่อย ของ ประถม5 ( K-5 )
   dashboard_announcements: ประกาศ
   dashboard_announce_view_all: ดูทั้งหมด
-  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
+  dashboard_announce_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
   dashboard_announce_button_text: สิ่งที่น่าเรียนรู้ยังมีอีก
+  dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: 'นี่คือ Hour of Code - 8-14 ธันวาคม!'
   code_sign_up: ลงทะเบียนเพื่อเข้าร่วมในช่วงสัปดาห์ของวิทยาการคอมพิวเตอร์
   learn_more: เรียนรู้เพิ่มเติม
@@ -781,9 +786,27 @@ th-TH:
   course3_name: คอร์ส 3
   course4_name: คอร์ส 4
   accelerated_name: Accelerated Course
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  20-hour_name: Accelerated Course
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Classic Maze
+  iceage_name: Ice Age
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: คำนวณ
+  hoc_category_name: ช่วงเวลาของ Code
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
   applab_name: App Lab
   applab_gradelevel: Ages 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
@@ -1178,7 +1201,7 @@ th-TH:
   sphero_beyond_longdescription: ไม่ว่าคุณจะเป็นผู้สอหรือผู้ปกครอง บทเรียน SPRK จะสอนให้เด็กๆสนุกกับการเขียนโปรแกรมหุ่นยนต์ในขณะที่ฝึกทักษะในทางคณิตศาสตร์และวิทยาศาสตร์ไปพร้อมๆกัน
   compatibility_https_header: กรุณาเปิดใช้งาน HTTPS สำหรับ Code.org
   compatibility_https_message: "เพื่อเพิ่มความปลอดภัย เรากำลังจะสลับไป HTTPS ในวันที่ %{https_date} คุณจะไม่สามารถเข้าถึง Code.org ได้หลังจากวันนี้ <a href='%{it_requirements_url}'>คลิกที่นี่</a>เพื่อเรียนรู้วิธีการเปิดใช้งาน HTTPS สำหรับ Code.org"
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_https_hide_this_warning: ซ่อนคำเตือน
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn

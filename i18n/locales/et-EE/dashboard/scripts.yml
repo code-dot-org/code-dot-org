@@ -932,6 +932,8 @@ et:
           Star wars: Star wars
           Minecraft: Minecraft
           Rich long assessment: Rich long assessment
+          Free Response: Free Response
+          Game Lab: Game Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Faas 2 online: Blended Summer Study'
@@ -1629,6 +1631,7 @@ et:
           "Unplugged: The Design Recipe": 'Unplugged: Disaini retsept'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
           "Eval: Functions": 'Eval: Functions'
+          "Unplugged: Fast Functions": 'Unplugged: Fast Functions'
         AlgebraB:
           title: Computer Science in Algebra
           description_short: Learn Functional Programming through Algebra
@@ -1650,8 +1653,8 @@ et:
           description_short: Gamelab Hackathon
           description: A place to try things out in Game Lab
         algebraPD1:
-          title: Computer Science in Algebra PD
-          description_short: Teach Algebra through Functional Programming
+          title: CS in Algebra Part 1
+          description_short: 'Phase 1: Online Introduction'
           description: Teach Algebra through Functional Programming
           Introduction to PD: Introduction to PD
           Course Overview: Course Overview
@@ -1665,6 +1668,7 @@ et:
           description: CS in Algebra end of year reflection
           Getting Started: Getting Started
           Sharing Student Work: Sharing Student Work
+          Planning For the Future: Planning For the Future
         csp1:
           title: 'CS Principles Unit 1 - The Internet'
           description_short: Internet
@@ -1692,6 +1696,7 @@ et:
           DNS in the Real World: DNS in the Real World
           HTTP and Abstraction: HTTP and Abstraction
           Practice PT - The Internet and Society: 'Practice PT - The Internet and Society'
+          Encoding and Sending Formatted Text: Encoding and Sending Formatted Text
         csp2:
           title: 'CS Principles Unit 2 - Digital Information'
           description_short: Digital Information
@@ -1782,6 +1787,9 @@ et:
           Draw Loop and Random: Draw Loop and Random
           Variables: Muutujad
           Sprite Properties and Mod: 'Sprite Properties and Mod'
+          Expressions and Reassignment: Expressions and Reassignment
+          Sprites and Properties: Sprites and Properties
+          Counting with Variables: Counting with Variables
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -1803,3 +1811,116 @@ et:
           description_short: Programming
           description: ""
           Drawing in Game Lab: Drawing in Game Lab
+        CSF_Secret_Sample:
+          title: Secret Sample
+          description_short: This is a secret...shhhhh
+          description: Test of new educational philosophy
+          description_audience: Vanustele 8-18
+          Computational Thinking: Arvutuslik mõtlemine
+          Sample Stage: Sample Stage
+        ECSPD1:
+          title: ECS Part 1
+          description_short: 'Phase 1: Online Introduction'
+          description: Two hour introduction to your Professional Learning Program for the ECS Version 5 curriculum
+          Getting Started: Getting Started
+          What is ECS?: What is ECS?
+          ECS Curriculum: ECS Curriculum
+          Wrap Up: Wrap Up
+          Welcome to Phase 1!: Welcome to Phase 1!
+          Background and Context: Background and Context
+          Classroom and workshop style : 'Classroom and workshop style '
+          Classroom and Workshop Style : 'Classroom and Workshop Style '
+        algebraFacilitator:
+          title: Computer Science in Algebra Facilitator Pre Work
+          description_short: Teach Algebra through Functional Programming
+          description: Teach Algebra through Functional Programming
+          Introduction to PD: Introduction to PD
+          Course Overview: Course Overview
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Evaluation Blocks: Hindamise plokid
+          Teacher Dashboard: Teacher Dashboard
+        sciencePD1:
+          title: 'CS in Science: Part 1'
+          description_short: 'Phase 1: Online Introduction'
+          description: In Partnership with Project GUTS
+          Introduction to PD: Introduction to PD
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        cspoptional:
+          title: CS Principles Optional Lessons
+          description_short: Optional
+          description: Optional lessons and content across all of the CS Principles units are listed here
+          Unit 1 - Sending Bits in the Real World: 'Unit 1 - Sending Bits in the Real World'
+          Unit 1 - Encoding Numbers in the Real World: 'Unit 1 - Encoding Numbers in the Real World'
+          Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
+          Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
+          Algorithms Detour - How Routers Learn: 'Algorithms Detour - How Routers Learn'
+        cspunit1-support:
+          title: Online Support for CSP Unit 1
+          description: This is a test Professional Learning Course
+          Teachers and Tools: Teachers and Tools
+          Supporting Peer Learning: Supporting Peer Learning
+          Running a Constructive Classroom: Running a Constructive Classroom
+          Strategies for Student Writing: Strategies for Student Writing
+          Intro to the Unit: Intro to the Unit
+          Chapter Overviews: Chapter Overviews
+          "Tool Talk: Intro to Netsim": 'Tool Talk: Intro to Netsim'
+          Sending Binary Messages: Sending Binary Messages
+          Encoding and Sending Numbers: Encoding and Sending Numbers
+        test-teaching-ap-cs-unit-1:
+          test Unit 1 required reading: test Unit 1 required reading
+          test Unit 1 content module Alpha: test Unit 1 content module Alpha
+          test Unit 1 content module Bravo: test Unit 1 content module Bravo
+          test Unit 1 content module Charlie: test Unit 1 content module Charlie
+          test Unit 1 practice module Delta: test Unit 1 practice module Delta
+          test Unit 1 practice module Echo: test Unit 1 practice module Echo
+          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        allthehiddenthings:
+          title: All the Hidden Things!
+          description_short: Unreleased level types for UI testing as admin
+          description: Unreleased level types for UI testing as admin
+          Game Lab: Game Lab
+        cspunit1-support-test:
+          title: CSP Unit 1 teacher support
+          description: Online Supports for CSP Unit 1
+          Unit 1 Overview: Unit 1 Overview
+        cspunit1-tools:
+          title: netsim task completion
+          description: introduction to the internet simulator and a discussion of how we use it to teach the internet
+          netsim: netsim
+        Test CPS PD:
+          test Unit 1 required reading: test Unit 1 required reading
+          test Unit 1 content module Alpha: test Unit 1 content module Alpha
+          test Unit 1 content module Bravo: test Unit 1 content module Bravo
+          test Unit 1 content module Charlie: test Unit 1 content module Charlie
+          test Unit 1 practice module Delta: test Unit 1 practice module Delta
+          test Unit 1 practice module Echo: test Unit 1 practice module Echo
+          test Unit 1 practice module Foxtrot: test Unit 1 practice module Foxtrot
+        csp-facilitators :
+          title: CSP Tool Overview
+          description_short: Introduction to CS Principles for new Facilitators
+          description: A collection of tools from the CS Principles course. These levels provide a glimpse into the tools we use throughout the curriculum to
+          Introduction to Text Compression: Introduction to Text Compression
+          Turtle Programming: Turtle Programming
+          Introduction to Events: Introduction to Events
+        csp-facilitators:
+          title: CSP Tool Overview
+          description_short: Introduction to CS Principles for new Facilitators
+          description: A collection of tools from the CS Principles course. These levels provide a glimpse into the tools we use throughout the curriculum to
+          Introduction to Text Compression: Introduction to Text Compression
+          Turtle Programming: Turtle Programming
+          Introduction to Events: Introduction to Events
+        cspassessment:
+          title: CS Principles Culminating Assessment
+          description_short: Culminating
+          description: 'This 55-question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact. '
+          CS Principles Culminating Assessment: CS Principles Culminating Assessment

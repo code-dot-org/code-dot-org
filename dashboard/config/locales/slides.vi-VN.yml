@@ -531,10 +531,10 @@
           được.
       6:
         image: notes/playlab_intro_6.png
-        text: Get started and by the end, you'll be able to create your own game with
-          all kinds of players that can interact, turn happy or sad, score points,
-          or throw fireballs, or even vanish each other. It's all up to you and the
-          game you want to make.
+        text: Bắt đầu và kết thúc, bạn sẽ có thể tạo cho riêng bạn trò chơi mà tất
+          cả mọi người đều có thể tương tác với nhau, vui hay buồn, điểm số, hoặc
+          ném quả cầu lửa, hoặc thậm chí làm biến mất mọi thứ. Đó là phụ thuộc vào
+          bạn và trò chơi bạn muốn thực hiện.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
@@ -548,53 +548,59 @@
           phím mũi tên hoặc phím tab được nhấn.'
       3:
         image: notes/playlab_events_3.png
-        text: Here, we're going to make the space bot greet the earthlings when a
-          player clicks on him. We'll use the "when clicked" block and attach the
-          "say" block to it. When the player clicks on the space bot, everything attached
-          to this "when clicked" event block will be performed. What does your alien
-          say?
+        text: Ở đây, chúng tôi sẽ làm cho "robot không gian" chào đón các "cư dân
+          của hành tinh trái đất" khi một người chơi nhấp vào anh ta. Chúng tôi sẽ
+          sử dụng khối "khi nhấn vào" và đính kèm các khối "nói" cho nó. Khi người
+          chơi nhấp vào "robot không gian", tất cả mọi thứ kèm theo sự kiện của khối
+          "khi nhấp vào" sẽ được thực hiện. Người ngoài hành tinh nói điều gì vậy?
       4:
         image: notes/playlab_events_4.png
-        text: There are also "when arrow" blocks. If you link the "move" blocks to
-          these, you can start to move your actors up, down, left, or right. Step
-          by step, your game is getting more interactive.
+        text: Cũng có những khối "khi mũi tên". Nếu bạn liên kết khối "di chuyển"
+          tới đây, bạn có thể bắt đầu để di chuyển các nhân vật của bạn lên, xuống,
+          trái, hoặc bên phải. Từng bước một, trò chơi của bạn sẽ có được nhiều tương
+          tác.
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: This is the "repeat forever" block. Anything inside this block will
-          happen forever in the game.
+        text: Đây là khối "lặp lại mãi mãi". Bất cứ điều gì bên trong khối này sẽ
+          xảy ra mãi mãi trong trò chơi.
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: If we want an actor to do something repeatedly, without the player having
-          to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: Nếu chúng ta muốn một nhân vật làm một cái gì đó nhiều lần, mà không
+          cần người chơi phải làm bất cứ điều gì, chúng tôi sẽ đưa những khối hành
+          động đó bên trong khối "lặp lại mãi mãi".
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries
-          of the kingdom, left and right continuously. Learning how the repeat commands
-          works, will save you a ton of time later when you build your own game.
+        text: Trong trò chơi tiếp theo này, mục tiêu của chúng tôi là giúp thuật sĩ
+          tuần tra biên giới của Vương Quốc, trái và phải liên tục. Học cách lặp lại
+          lệnh hoạt động, sẽ giúp bạn tiết kiệm một tấn thời gian sau đó bạn sẽ xây
+          dựng trò chơi của riêng bạn.
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: These are your draw blocks. Use the correct one to move the artist where
-          he needs to go to fill in the grey lines.
+        text: "Đây là khối vẽ của bạn. Sử dụng đúng để di chuyển các nhân vật mà chúng
+          cần phải đi để điền vào các dòng màu xám."
       2:
         image: notes/C1_artist_intro_2.png
-        text: These are jump blocks. When you use these, your artist moves but doesn't
-          draw, so use these to jump to the next grey line.
+        text: "Đây là những khối nhảy. Khi bạn sử dụng này, nhân vật của bạn di chuyển
+          nhưng không đi đến gần, mà sử dụng này khối này để nhảy đến dòng màu xám
+          kế tiếp."
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: Aren't bees super cool? In this next set of puzzles, your goal is to
-          help the bee get to the flowers and get nectar from the flowers and fly
-          over to the honeycomb to make honey. You'll need to use the "get nectar"
-          and the "make honey" blocks for this exercise.
+        text: Các chú ong có phải thật ngầu không? Trong này thiết lập tiếp theo của
+          câu đố, mục tiêu của bạn là để giúp đỡ các con ong nhận được để những bông
+          hoa và lấy mật hoa từ những bông hoa và bay qua các tổ ong để làm mật ong.
+          Bạn sẽ cần phải sử dụng khối "lấy mật" và khối "làm mật ong" cho phần tập
+          luyện này.
       2:
         image: notes/C1_bee_level_intro_2.png
-        text: 'Every flower has a different number of nectars: 1, 2, 3, or more. We
-          know how much nectar is in the red flowers, by the little number in the
-          corner. So be sure to get all the nectar from the flower before you move
-          forward. Also, every honeycomb can only hold so much honey: 1, 2, 3, or
-          more. So be sure to make as much honey as the honeycomb can hold.'
+        text: 'Mỗi bông hoa có một số mật ong khác nhau: 1, 2, 3 hoặc nhiều hơn nữa.
+          Chúng ta biết có bao nhiêu mật hoa trong những bông hoa màu đỏ, bởi con
+          số nhỏ trong góc. Vì vậy, hãy chắc chắn để có được tất cả mật hoa từ Hoa
+          trước khi bạn di chuyển về phía trước. Ngoài ra, mỗi tổ ong chỉ có thể chứa
+          rất nhiều mật ong: 1, 2, 3 hoặc nhiều hơn nữa. Vì vậy, hãy chắc chắn để
+          làm cho càng nhiều mật ong mà các tổ ong có thể giữ.'
       3:
         image: notes/C1_bee_level_intro_3.png
         text: If you're able to get all the nectar and make all the honey, you succeed

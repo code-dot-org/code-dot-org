@@ -110,7 +110,7 @@ export function handleUploadComplete(result) {
     // with the upload itself, but that will mean refactoring away from the
     // jQuery uploader.
     loadImageMetadata(sourceUrl, metadata => {
-      const animation = Object.assign({}, metadata, {
+      const animation = _.assign({}, metadata, {
         key: key,
         name: uploadFilename,
         sourceUrl: sourceUrl,
