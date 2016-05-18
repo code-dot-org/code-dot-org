@@ -57,9 +57,9 @@ module ApplicationHelper
     elsif result.nil? || result == 0
       'not_tried'
     elsif result == Activity::REVIEW_REJECTED_RESULT
-      'rejected'
+      'review_rejected'
     elsif result == Activity::REVIEW_ACCEPTED_RESULT
-      'accepted'
+      'review_accepted'
     elsif result >= Activity::FREE_PLAY_RESULT
       'perfect'
     elsif result >= Activity::MINIMUM_PASS_RESULT

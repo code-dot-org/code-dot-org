@@ -138,10 +138,10 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
     var result = (serverProgress[level.id] || {}).result;
     if (serverProgress && result > MAXIMUM_CACHABLE_RESULT) {
       if (result == REVIEW_REJECTED_RESULT) {
-        status = 'rejected';
+        status = 'review_rejected';
       }
       if (result == REVIEW_ACCEPTED_RESULT) {
-        status = 'accepted';
+        status = 'review_accepted';
       }
     } else if (serverProgress && serverProgress[level.id] && serverProgress[level.id].submitted) {
       status = "submitted";
