@@ -53,9 +53,9 @@ module ApplicationHelper
     result = user_level.try(:best_result)
 
     if user_level && Level.cache_find(user_level.level_id).try(:peer_reviewable?)
-      if result == Activity::REJECTED_RESULT
+      if result == Activity::REVIEW_REJECTED_RESULT
         'rejected'
-      elsif result == Activity::ACCEPTED_RESULT
+      elsif result == Activity::REVIEW_ACCEPTED_RESULT
         'accepted'
       else
         'attempted'
