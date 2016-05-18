@@ -394,7 +394,7 @@ var Utils = Hammer.utils = {
      */
     hasParent: function hasParent(node, parent) {
         while(node) {
-            if(node == parent) {
+            if(node === parent) {
                 return true;
             }
             node = node.parentNode;
@@ -539,7 +539,7 @@ var Utils = Hammer.utils = {
      * @return {Boolean} is_vertical
      */
     isVertical: function isVertical(direction) {
-        return direction == DIRECTION_UP || direction == DIRECTION_DOWN;
+        return direction === DIRECTION_UP || direction === DIRECTION_DOWN;
     },
 
     /**
@@ -563,7 +563,7 @@ var Utils = Hammer.utils = {
 
             // test the style
             if(p in element.style) {
-                element.style[p] = (toggle == null || toggle) && value || '';
+                element.style[p] = (toggle === null || toggle) && value || '';
                 break;
             }
         }
@@ -594,11 +594,11 @@ var Utils = Hammer.utils = {
         };
 
         // also the disable onselectstart
-        if(props.userSelect == 'none') {
+        if(props.userSelect === 'none') {
             element.onselectstart = falseFn;
         }
         // and disable ondragstart
-        if(props.userDrag == 'none') {
+        if(props.userDrag === 'none') {
             element.ondragstart = falseFn;
         }
     },
@@ -708,19 +708,19 @@ var Event = Hammer.event = {
                 return;
 
             // mousebutton must be down
-            } else if(isMouse && eventType == EVENT_START && ev.button === 0) {
+            } else if(isMouse && eventType === EVENT_START && ev.button === 0) {
                 self.preventMouseEvents = false;
                 self.shouldDetect = true;
-            } else if(isPointer && eventType == EVENT_START) {
+            } else if(isPointer && eventType === EVENT_START) {
                 self.shouldDetect = (ev.buttons === 1 || PointerEvent.matchType(POINTER_TOUCH, ev));
             // just a valid start event, but no mouse
-            } else if(!isMouse && eventType == EVENT_START) {
+            } else if(!isMouse && eventType === EVENT_START) {
                 self.preventMouseEvents = true;
                 self.shouldDetect = true;
             }
 
             // update the pointer event before entering the detection
-            if(isPointer && eventType != EVENT_END) {
+            if(isPointer && eventType !== EVENT_END) {
                 PointerEvent.updatePointer(eventType, ev);
             }
 
@@ -731,14 +731,14 @@ var Event = Hammer.event = {
 
             // ...and we are done with the detection
             // so reset everything to start each detection totally fresh
-            if(triggerType == EVENT_END) {
+            if(triggerType === EVENT_END) {
                 self.preventMouseEvents = false;
                 self.shouldDetect = false;
                 PointerEvent.reset();
             // update the pointerevent object after the detection
             }
 
-            if(isPointer && eventType == EVENT_END) {
+            if(isPointer && eventType === EVENT_END) {
                 PointerEvent.updatePointer(eventType, ev);
             }
         };
@@ -765,10 +765,10 @@ var Event = Hammer.event = {
         var changedLength = touchListLength;
 
         // at each touchstart-like event we want also want to trigger a TOUCH event...
-        if(eventType == EVENT_START) {
+        if(eventType === EVENT_START) {
             triggerChange = EVENT_TOUCH;
         // ...the same for a touchend-like event
-        } else if(eventType == EVENT_END) {
+        } else if(eventType === EVENT_END) {
             triggerChange = EVENT_RELEASE;
 
             // keep track of how many touches have been removed
@@ -790,7 +790,7 @@ var Event = Hammer.event = {
 
         // trigger the triggerType event before the change (TOUCH, RELEASE) events
         // but the END event should be at last
-        if(eventType != EVENT_END) {
+        if(eventType !== EVENT_END) {
             handler.call(Detection, evData);
         }
 
@@ -806,7 +806,7 @@ var Event = Hammer.event = {
         }
 
         // trigger the END event
-        if(triggerType == EVENT_END) {
+        if(triggerType === EVENT_END) {
             handler.call(Detection, evData);
 
             // ...and we are done with the detection
@@ -875,7 +875,7 @@ var Event = Hammer.event = {
 
         // get the touchlist
         if(ev.touches) {
-            if(eventType == EVENT_MOVE) {
+            if(eventType === EVENT_MOVE) {
                 return ev.touches;
             }
 
@@ -991,7 +991,7 @@ var PointerEvent = Hammer.PointerEvent = {
      * @param {Object} pointerEvent
      */
     updatePointer: function updatePointer(eventType, pointerEvent) {
-        if(eventType == EVENT_END) {
+        if(eventType === EVENT_END) {
             delete this.pointers[pointerEvent.pointerId];
         } else {
             pointerEvent.identifier = pointerEvent.pointerId;
@@ -1108,7 +1108,7 @@ var Detection = Hammer.detection = {
             this.current.lastEvent = eventData;
         }
 
-        if(eventData.eventType == EVENT_END) {
+        if(eventData.eventType === EVENT_END) {
             this.stopDetect();
         }
 
@@ -1154,7 +1154,7 @@ var Detection = Hammer.detection = {
             recalc = true;
         }
 
-        if(ev.eventType == EVENT_TOUCH || ev.eventType == EVENT_RELEASE) {
+        if(ev.eventType === EVENT_TOUCH || ev.eventType === EVENT_RELEASE) {
             cur.futureCalcEvent = ev;
         }
 
@@ -1185,7 +1185,7 @@ var Detection = Hammer.detection = {
             lastEv = cur.lastEvent || startEv;
 
         // update the start touchlist to calculate the scale/rotation
-        if(ev.eventType == EVENT_TOUCH || ev.eventType == EVENT_RELEASE) {
+        if(ev.eventType === EVENT_TOUCH || ev.eventType === EVENT_RELEASE) {
             startEv.touches = [];
             Utils.each(ev.touches, function(touch) {
                 startEv.touches.push({
@@ -1314,9 +1314,9 @@ Hammer.Instance = function(element, options) {
      * @type {Object}
      */
     this.eventStartHandler = Event.onTouch(element, EVENT_START, function(ev) {
-        if(self.enabled && ev.eventType == EVENT_START) {
+        if(self.enabled && ev.eventType === EVENT_START) {
             Detection.startDetect(self, ev);
-        } else if(ev.eventType == EVENT_TOUCH) {
+        } else if(ev.eventType === EVENT_TOUCH) {
             Detection.detect(ev);
         }
     });
@@ -1500,14 +1500,14 @@ Hammer.Instance.prototype = {
                 // when the distance we moved is too small we skip this gesture
                 // or we can be already in dragging
                 if(ev.distance < inst.options.dragMinDistance &&
-                    cur.name != name) {
+                    cur.name !== name) {
                     return;
                 }
 
                 var startCenter = cur.startEvent.center;
 
                 // we are dragging!
-                if(cur.name != name) {
+                if(cur.name !== name) {
                     cur.name = name;
                     if(inst.options.dragDistanceCorrection && ev.distance > 0) {
                         // When a drag is triggered, set the event center to dragMinDistance pixels from the original event center.
@@ -1701,7 +1701,7 @@ Hammer.gestures.Gesture = {
                 // set timer and if after the timeout it still is hold,
                 // we trigger the hold event
                 timer = setTimeout(function() {
-                    if(current && current.name == name) {
+                    if(current && current.name === name) {
                         inst.trigger(name, ev);
                     }
                 }, options.holdTimeout);
@@ -1759,7 +1759,7 @@ Hammer.gestures.Release = {
     name: 'release',
     index: Infinity,
     handler: function releaseGesture(ev, inst) {
-        if(ev.eventType == EVENT_RELEASE) {
+        if(ev.eventType === EVENT_RELEASE) {
             inst.trigger(this.name, ev);
         }
     }
@@ -1837,7 +1837,7 @@ Hammer.gestures.Swipe = {
     },
 
     handler: function swipeGesture(ev, inst) {
-        if(ev.eventType == EVENT_RELEASE) {
+        if(ev.eventType === EVENT_RELEASE) {
             var touches = ev.touches.length,
                 options = inst.options;
 
@@ -1906,7 +1906,7 @@ Hammer.gestures.Swipe = {
                     didDoubleTap = false;
 
                     // check if double tap
-                    if(prev && prev.name == name &&
+                    if(prev && prev.name === name &&
                         (sincePrev && sincePrev < options.doubleTapInterval) &&
                         ev.distance < options.doubleTapDistance) {
                         inst.trigger('doubletap', ev);
@@ -2007,7 +2007,7 @@ Hammer.gestures.Touch = {
         preventMouse: false
     },
     handler: function touchGesture(ev, inst) {
-        if(inst.options.preventMouse && ev.pointerType == POINTER_MOUSE) {
+        if(inst.options.preventMouse && ev.pointerType === POINTER_MOUSE) {
             ev.stopDetect();
             return;
         }
@@ -2016,7 +2016,7 @@ Hammer.gestures.Touch = {
             ev.preventDefault();
         }
 
-        if(ev.eventType == EVENT_TOUCH) {
+        if(ev.eventType === EVENT_TOUCH) {
             inst.trigger('touch', ev);
         }
     }
@@ -2148,7 +2148,7 @@ Hammer.gestures.Touch = {
  */
 
 // AMD export
-if(typeof define == 'function' && define.amd) {
+if(typeof define === 'function' && define.amd) {
     define(function() {
         return Hammer;
     });

@@ -228,7 +228,7 @@ Jigsaw.onPuzzleComplete = function () {
 
   // If we know they succeeded, mark levelComplete true
   // Note that we have not yet animated the succesful run
-  var levelComplete = (Jigsaw.result == ResultType.SUCCESS);
+  var levelComplete = (Jigsaw.result === ResultType.SUCCESS);
 
   Jigsaw.testResults = studioApp.getTestResults(levelComplete, {
     allowTopBlocks: true
