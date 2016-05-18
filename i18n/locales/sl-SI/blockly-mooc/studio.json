@@ -2,6 +2,8 @@
   "actor":"igralec",
   "addCharacter":"dodaj",
   "addCharacterTooltip":"Dodajte znak na sceno.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"dodaj 10 točk",
   "addPoints50":"dodaj 50 točk",
   "addPoints100":"dodaj 100 točk",

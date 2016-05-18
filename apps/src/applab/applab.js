@@ -741,38 +741,25 @@ Applab.init = function (config) {
   }.bind(this);
 
   // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setPageConstants({
-    assetUrl: studioApp.assetUrl,
+  studioApp.setPageConstants(config, {
     channelId: config.channel,
     visualizationHasPadding: !config.noPadding,
-    hideSource: !!config.hideSource,
     isDesignModeHidden: !!config.level.hideDesignMode,
-    isEmbedView: !!config.embed,
     isIframeEmbed: !!config.level.iframeEmbed,
-    isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isShareView: !!config.share,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
-    instructionsMarkdown: config.level.markdownInstructions,
-    instructionsInTopPane: config.showInstructionsInTopPane,
-    puzzleNumber: config.level.puzzle_number,
-    stageTotal: config.level.stage_total,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: false,
-    localeDirection: studioApp.localeDirection(),
-    isDroplet: true,
     playspacePhoneFrame: !config.share && experiments.isEnabled('phoneFrame')
-  }));
+  });
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(
     Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
-  // TODO (brent) hideSource should probably be part of initialLevelProps
   Applab.reactInitialProps_ = {
-    hideSource: !!config.hideSource,
     onMount: onMount
   };
 

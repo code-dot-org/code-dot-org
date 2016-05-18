@@ -2,6 +2,8 @@
   "actor":"kaiwhakaari",
   "addCharacter":"tāpirihia he",
   "addCharacterTooltip":"Tapirihia he tangata ano ki tenei wahanga.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"tapirihia i te tekau nga piro",
   "addPoints50":"tapirihia i te rima tekau nga piro",
   "addPoints100":"tapirihia i te kotahi rau nga piro",

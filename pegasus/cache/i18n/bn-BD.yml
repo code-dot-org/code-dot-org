@@ -357,6 +357,9 @@
   homepage_banner_20k_teachers: "২০০০০ শিক্ষক প্রশিক্ষিত এবং এখন তারা শ্রেনীকক্ষে
     কম্পিউটার বিজ্ঞান শেখাচ্ছে।"
   homepage_banner_20k_teachers_link: "আরও জানুন"
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: "এক ঘন্টার কোড"
   homepage_slot_text_blurb_hoc: "যে কেউ শিখতে পারে। আজ শুরু করুন"
   homepage_slot_text_link_hoc: "এক ঘন্টা কোড চেষ্টা করুন"
@@ -382,6 +385,7 @@
   homepage_slot_text_link_stats: "শুরুটা দেখুন"
   homepage_slot_text_link_buy: "জড়িত"
   homepage_slot_text_link_donate: "দান করুন"
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: "কোড স্টুডিও ছাত্র সৃষ্টি"
   homepage_header_donors: Code.org তার সমর্থকদের ধন্যবাদ দেয়
   homepage_donors_seall: "সব দেখুন"
@@ -648,11 +652,11 @@
   dashboard_action_remove_confirm: "মুছে ফেলবো?"
   dashboard_action_done: "হয়ে গেছে"
   dashboard_action_required: "প্রয়োজনীয়"
-  dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
-  dashboard_download_csv: Download CSV
+  dashboard_assessments_view: "মূল্যায়ন দেখুন:"
+  dashboard_assessments_none: "মূল্যায়ন নাই"
+  dashboard_filter_by_stage: "স্তর দ্বারা ফিল্টার করুন:"
+  dashboard_filter_all: "সব"
+  dashboard_download_csv: CSV ডাউনলোড করুন
   dashboard_navigation_home_page: "শিক্ষক হোম পেজ"
   dashboard_navigation_section_student_progress: "শিক্ষার্থীদের অ্যাকাউন্ট এবং আগ্রগতি"
   dashboard_navigation_section_teacher_progress: "আপনার কোর্সের অগ্রগতি"
@@ -663,7 +667,7 @@
   dashboard_navigation_all_sections: "শিক্ষার্থীদের অ্যাকাউন্ট এবং আগ্রগতি"
   dashboard_navigation_view_progress: "আগ্রগতি দেখুন"
   dashboard_navigation_view_text_responses: "লিখিত জবাব দেখুন"
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments: "মূল্যায়ন"
   dashboard_navigation_add_students: " শিক্ষার্থীদের যুক্ত করন"
   dashboard_navigation_manage_students: " শিক্ষার্থীদের পরিচালনা করন"
   dashboard_navigation_lesson_plans_resources: "পাঠ পরিকাল্পনা এবং তথ্য"
@@ -677,11 +681,11 @@
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted
   dashboard_progress_submitted: "দাখিল"
-  dashboard_progress_view: 'View progress in:'
-  dashboard_progress_student_in_script: Progress information for %{student_name} in
-    %{script_name}
-  dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_progress_view: "আগ্রগতি দেখুন:"
+  dashboard_progress_student_in_script: "%{student_name} এর %{script_name} তে অগ্রগতি
+    তথ্য"
+  dashboard_responses_view: "লিখিত জবাব দেখুন:"
+  dashboard_responses_none: "কোন টেক্সট প্রতিক্রিয়া নাই"
   dashboard_sections_new_section: "নতুন বিভাগ"
   dashboard_sections_jumbotron_instruction: "নতুন বিভাগ খুলে  শিক্ষার্থীদের তাতে  যুক্ত
     করুন। বিভাগ  শিক্ষার্থীদের  ছোট ছোট দলে বিভক্ত হতে সাহায্য করে যার মাধ্যমে আপনি
@@ -710,16 +714,16 @@
     Moving students will not clear their progress.
   dashboard_sections_one_per_teacher: Students can only be in one section for each
     teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_move_to_section: "শাখাতে সরান:"
+  dashboard_sections_enter_code: "অধ্যায় কোড লিখুন:"
+  dashboard_sections_code_placeholder: 6-বর্ণ-চিহ্ন সঙ্কেত (ABCDEF)
+  dashboard_sections_other_section: "অন্যান্য শাখা"
+  dashboard_sections_both_sections: "আপনি কি উভয় অংশের ছাত্র হতে চান?"
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
     section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
-  dashboard_sections_move_students: Move Students
+  dashboard_sections_move_students: " শিক্ষার্থীদের স্থানান্তর করুন"
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -807,18 +811,18 @@
   dashboard_puzzle: "ধাঁধা"
   dashboard_question: "প্রশ্ন"
   dashboard_response: "জবাব"
-  dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness: "শুদ্ধতা"
+  dashboard_correctness_free_response: "ফ্রী প্রতিক্রিয়া"
+  dashboard_correctness_unsubmitted: "জমা দেওয়া হয়নি"
   dashboard_correctness_correct: "সঠিক"
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
-  dashboard_status: Status
-  dashboard_multi_correct: "# multiple choice correct"
-  dashboard_multi_count: "# multiple choice"
-  dashboard_multi_correct_percent: "% multiple choice correct"
-  dashboard_submission_timestamp: Submission timestamp
+  dashboard_correctness_incorrect: "ভুল"
+  dashboard_submission_submitted: "দাখিল করা হয়েছে"
+  dashboard_submission_in_progress: "অগ্রসর হচ্ছে"
+  dashboard_status: "অবস্থা"
+  dashboard_multi_correct: "# একাধিক পছন্দ সঠিক"
+  dashboard_multi_count: "একাধিক-পছন্দের"
+  dashboard_multi_correct_percent: "% একাধিক পছন্দ সঠিক"
+  dashboard_submission_timestamp: "জমা দেওয়ার টাইমস্ট্যাম্প"
   stats_hoc_2013_heading: "গত বছরের এক ঘন্টার কোড থেকে আসা অবিশ্বাস্য পরিসংখ্যান।
     শুধু এক সপ্তাহেঃ"
   stats_hoc_2013_image_alt: 2013 থেকে ঘন্টা কোড এর stats
@@ -846,6 +850,12 @@
     সীমিত সংখ্যক স্থান যোগ করছি। আপনার স্থান নিশ্চিত করতে <u>মার্চ ৩১<u> এর মধ্যে
     আবেদন করুন।"
   dashboard_announce_button_text: "আরও জানুন"
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: "এক ঘন্টা কোড এখানে-ডিসেম্বর 8-14"
   code_sign_up: CS শিক্ষা সপ্তাহ সময় অংশগ্রহণ করা সাইন আপ করুন
   learn_more: "আরও জানুন"
@@ -969,13 +979,31 @@
   course3_name: "কোর্স ২"
   course4_name: "কোর্স ৪"
   accelerated_name: Accelerated Course
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: "সিএস এর মূলনীতি ইউনিট ৩"
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
   cspunit3_gradelevel: "৯-১২ গ্রেড"
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: Accelerated Course
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Classic Maze
+  iceage_name: "বরফযুগ"
+  minecraft_name: "মাইনক্র্যাফট"
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: "গণিত"
+  hoc_category_name: "এক ঘন্টার কোড"
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
   applab_name: "অ্যাপ ল্যাব"
   applab_gradelevel: "বয়সের ১৩+"
   applab_shortdescription_congrats: "অ্যাপ ল্যাব একটি প্রোগ্রামিং পরিবেশ যেখানে আপনি
@@ -1675,12 +1703,11 @@
   infinity_shortcode: inf
   playlab_shortcode: "খেলুন"
   artist_shortcode: art
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.

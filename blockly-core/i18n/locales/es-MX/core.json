@@ -73,7 +73,7 @@
   "DELETE_BLOCK": "Eliminar bloque",
   "DELETE_PARAMETER": "Eliminar parámetro...",
   "DELETE_PARAMETER_TITLE": "Esto borrará todas las ocurrencias de parámetro '%1'. ¿Está seguro?",
-  "DELETE_X_BLOCKS": "Eliminar bloques de %1",
+  "DELETE_X_BLOCKS": "Eliminar %1 bloques",
   "DISABLE_BLOCK": "Desactivar bloque",
   "DUPLICATE_BLOCK": "Duplicar",
   "ENABLE_BLOCK": "Activa el bloque",

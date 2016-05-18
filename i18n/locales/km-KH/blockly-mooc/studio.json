@@ -2,6 +2,8 @@
   "actor":"អ្នកសម្ដែង",
   "addCharacter":"បន្ថែម",
   "addCharacterTooltip":"បន្ថែម​ចារិក​លក្ខណៈ​ទៅ​ក្នុង​ឆាក",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"បន្ថែម ១០ ពិន្ទុ",
   "addPoints50":"បន្ថែម ៥០ ពិន្ទុ",
   "addPoints100":"បន្ថែម ១០០ ពិន្ទុ",

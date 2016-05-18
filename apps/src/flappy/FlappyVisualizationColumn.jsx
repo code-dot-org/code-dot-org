@@ -2,14 +2,14 @@ var msg = require('../locale');
 
 var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 
 var FlappyVisualizationColumn = function () {
   return (
     <span>
-      <ProtectedStatefulDiv id="visualization">
+      <ProtectedVisualizationDiv>
         <svg version="1.1" id="svgFlappy"/>
-      </ProtectedStatefulDiv>
+      </ProtectedVisualizationDiv>
       <GameButtons>
         <div id="right-button-cell">
           <button id="rightButton" className="share">

@@ -29,7 +29,7 @@
     "fast_get_nectar_animation": "false",
     "ideal": "4",
     "video_key": "C2_bee_loops",
-    "honey_goal": "3"
+    "nectar_goal": "3"
   },
   "published": true,
   "notes": "#2\r\n\r\nTakes the experience that students just had and gives a name to the new tool.  This also lets students who didn't discover loops learn about the concept they were missing at a time when they're interested in it so that they can go back and do better.",
