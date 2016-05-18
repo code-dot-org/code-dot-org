@@ -2403,3 +2403,16 @@ Blockly.Block.prototype.hasUnfilledFunctionalInput = function () {
       !input.connection.targetBlock();
   });
 };
+
+Blockly.Block.prototype.getUnfilledNextStatement = function () {
+  // Does this block have a connection without a block attached
+  for (var i = 0; i < this.inputList.length; i++) {
+    var input = this.inputList[i];
+    if (input.type === Blockly.NEXT_STATEMENT &&
+        input.connection &&
+        !input.connection.targetBlock()) {
+      return input;
+    }
+  }
+  return null;
+};
