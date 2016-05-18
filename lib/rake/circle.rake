@@ -1,12 +1,14 @@
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
 
+RUN_UI_TESTS_TAG = '[test ui]'
+RUN_ALL_TESTS_TAG = '[test all]'
+
 namespace :circle do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
-  task :run_tests, [:force_all_tests_tag] do |_, args|
-    run_all_tests_tag = args[:force_all_tests_tag]
-    if GitUtils.circle_commit_contains?(run_all_tests_tag)
-      HipChat.log "Commit message: '#{GitUtils.circle_commit_message}' contains #{run_all_tests_tag}, force-running all tests."
+  task :run_tests do
+    if GitUtils.circle_commit_contains?(RUN_ALL_TESTS_TAG)
+      HipChat.log "Commit message: '#{GitUtils.circle_commit_message}' contains #{RUN_ALL_TESTS_TAG}, force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
     else
       RakeUtils.rake_stream_output 'test:changed'
@@ -14,10 +16,9 @@ namespace :circle do
   end
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
-  task :run_ui_tests, [:force_tests_commit_tag] do |_, args|
-    run_ui_tests_tag = args[:force_tests_commit_tag]
-    if GitUtils.circle_commit_contains?(run_ui_tests_tag)
-      HipChat.log "Commit message: '#{GitUtils.circle_commit_message}' contains #{run_ui_tests_tag}, running UI tests."
+  task :run_ui_tests do
+    if GitUtils.circle_commit_contains?(RUN_UI_TESTS_TAG)
+      HipChat.log "Commit message: '#{GitUtils.circle_commit_message}' contains #{RUN_UI_TESTS_TAG}, running UI tests."
       RakeUtils.exec_in_background 'RACK_ENV=test RAILS_ENV=test ./bin/dashboard-server'
       RakeUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz'
       RakeUtils.system_stream_output 'tar -xzf sc-latest-linux.tar.gz'
@@ -29,7 +30,7 @@ namespace :circle do
         RakeUtils.system_stream_output 'bundle exec ./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --circle --parallel 35 --retry_count 3 --html'
       end
     else
-      HipChat.log "Commit message: '#{GitUtils.circle_commit_message}' does not contain #{run_ui_tests_tag}, skipping UI tests."
+      HipChat.log "Commit message: '#{GitUtils.circle_commit_message}' does not contain #{RUN_UI_TESTS_TAG}, skipping UI tests."
     end
   end
 end

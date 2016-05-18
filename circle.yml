@@ -55,7 +55,7 @@ test:
   override:
     - bundle exec rake lint:javascript
     # Run tests only for changed sub-projects, unless [test all] in commit
-    - bundle exec rake circle:run_tests['[test all]']:
+    - bundle exec rake circle:run_tests:
         timeout:
             7200
     - ./test.sh:
@@ -65,7 +65,7 @@ test:
     - bundle exec rake seed:all:
         pwd:
             dashboard
-    # Only run UI tests when [ui test] included in commit message
-    - bundle exec rake circle:run_ui_tests['[test ui]']:
+    # Only run UI tests when [test ui] included in commit message
+    - bundle exec rake circle:run_ui_tests:
         timeout:
             7200
