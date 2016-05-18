@@ -70,6 +70,9 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
     new_facilitator_ids.each do |facilitator_id|
       facilitator = User.find_by(id: facilitator_id)
+
+      # Since these ids are supplied by the caller, make sure they each actually represent a real user
+      # and that the user is actually a facilitator before adding.
       next unless facilitator && facilitator.facilitator?
       @workshop.facilitators << facilitator
     end
