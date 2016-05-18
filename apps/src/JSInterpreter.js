@@ -888,7 +888,10 @@ JSInterpreter.prototype.getProperty = function (
       customMarshalValue = obj.data[name];
     }
   } else {
-    var hasProperty = JSInterpreter.baseHasProperty.call(interpreter, obj, name);
+    var hasProperty = false;
+    if (!obj.isPrimitive) {
+        hasProperty = JSInterpreter.baseHasProperty.call(interpreter, obj, name);
+    }
     if (!hasProperty &&
         obj === this.globalScope &&
         !!(nativeParent = this.customMarshalGlobalProperties[name]) &&
@@ -968,7 +971,10 @@ JSInterpreter.prototype.setProperty = function (
       obj.data[name] = codegen.marshalInterpreterToNative(interpreter, value);
     }
   } else {
-    var hasProperty = JSInterpreter.baseHasProperty.call(interpreter, obj, name);
+    var hasProperty = false;
+    if (!obj.isPrimitive) {
+        hasProperty = JSInterpreter.baseHasProperty.call(interpreter, obj, name);
+    }
     if (!hasProperty &&
         obj === this.globalScope &&
         !!(nativeParent = this.customMarshalGlobalProperties[name]) &&
