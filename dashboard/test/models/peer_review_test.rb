@@ -25,4 +25,21 @@ class PeerReviewTest < ActiveSupport::TestCase
     @user.track_level_progress_async(script_level: @script_level, new_result: 100, submitted: true, level_source_id: level_source.id)
     assert_equal PeerReview::REVIEWS_PER_SUBMISSION, PeerReview.count - initial
   end
+
+  test 'resubmitting for review should remove unassigned PeerReview objects' do
+    level_source = create :level_source, data: 'My submitted answer'
+
+    initial = PeerReview.count
+    @user.track_level_progress_async(script_level: @script_level, new_result: 100, submitted: true, level_source_id: level_source.id)
+    assert_equal PeerReview::REVIEWS_PER_SUBMISSION, PeerReview.count - initial
+
+    # Assign one review
+    PeerReview.last.update! reviewer: create(:user)
+
+    updated_level_source = create :level_source, data: 'UPDATED: My submitted answer'
+
+    initial = PeerReview.count
+    @user.track_level_progress_async(script_level: @script_level, new_result: 100, submitted: true, level_source_id: updated_level_source.id)
+    assert_equal PeerReview::REVIEWS_PER_SUBMISSION - 1, PeerReview.count - initial
+  end
 end
