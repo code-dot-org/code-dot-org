@@ -106,7 +106,7 @@ Promise.all([
     console.log("Watching for .js file changes...");
 
     // Use gaze to set a watcher for scss file changes
-    gaze('src/css/*.scss', function (err, watcher) {
+    gaze('src/css/**/*.scss', function (err, watcher) {
 
       console.log("Watching for .scss file changes...");
 
