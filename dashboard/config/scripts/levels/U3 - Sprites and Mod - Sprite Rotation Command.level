@@ -1,18 +1,20 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-04-20T17:16:31.000Z",
+  "created_at": "2016-05-17T20:49:26.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
+      "draw": null,
       "drawSprites": null,
       "background": null,
       "var sprite = createSprite": null,
       "x": null,
       "y": null,
       "shapeColor": null,
+      "rotation": null,
       "addOperator": null,
       "subtractOperator": null,
       "randomNumber_min_max": null
@@ -42,8 +44,8 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "show_d_pad": "false",
-    "markdown_instructions": "# Moving Animation\r\n\r\nYou are going to practice using the x and y properties of a sprite. Don't forget that they designate the center of the rectangle. This may seems strange right now while sprites are just rectangles but in the future sprites will be able to be any image you want.  When you use an image with weird edges its a little less clear where the upper left corner is. In addition, for things such as rotation its much easier to have the x and y at the center because thats the point around which is rotates.\r\n\r\n# Do This\r\n\r\nCreate two sprites. One that moves from left to right and one that moves from top to bottom. \r\n\r\n* Create a sprite that draw on the screen\r\n* Increment the x property of one to get movement from left to right\r\n* Increment the y property of the other to get the movement from top to bottom",
-    "start_blocks": "function draw(){\r\n  \r\n}"
+    "markdown_instructions": "# Rotation\r\n\r\nOne of the cool things about properties are there are new things you can control about a sprite that you could not about a shape! \r\n\r\nOne of those things you can control about a sprite is its rotation.  The `rotation` property sets the angle in degrees that the sprite should be turned to. With this you can angle a sprite to a certain orientation. You can also make the rectangle spin around.\r\n\r\n# Do This\r\nRotate the square so it looks like a diamond!\r\n\r\n* Add a command to set the rotation property of the sprite\r\n* Play with the value of the rotation until you get it to look like the picutre on the right. Hint: It's a multiple of 5 less than 100.",
+    "start_blocks": "var sprite = createSprite(200,200);\r\n\r\nfunction draw(){\r\n  background(\"white\");\r\n  drawSprites();\r\n}"
   },
   "published": true,
   "notes": "",
