@@ -515,6 +515,8 @@ GameLabP5.prototype.startExecution = function () {
           }
         });
 
+        p5obj.angleMode(p5obj.DEGREES);
+
         if (!this.onPreload()) {
           // If onPreload() returns false, it means that the preload phase has
           // not completed, so we need to grab increment p5's preloadCount by
@@ -528,7 +530,6 @@ GameLabP5.prototype.startExecution = function () {
       p5obj.setup = function () {
         p5obj.createCanvas(400, 400);
         p5obj.fill(p5obj.color(127, 127, 127));
-        p5obj.angleMode(p5obj.DEGREES);
 
         this.onSetup();
       }.bind(this);
