@@ -57,21 +57,21 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   private
 
   def adjust_facilitators
-    facilitator_param_list = params[:pd_workshop].delete(:facilitators)
-    return unless facilitator_param_list
+    supplied_facilitator_ids = params[:pd_workshop].delete(:facilitators)
+    return unless supplied_facilitator_ids
 
-    existing_facilitators = Set.new(@workshop.facilitators)
-    facilitator_param_list.each do |facilitator_params|
-      next if facilitator_params[:email].blank?
-      facilitator = User.find_or_create_facilitator(facilitator_params.permit(:email, :name), current_user)
-      if existing_facilitators.include? facilitator
-        existing_facilitators.delete facilitator
-      else
-        @workshop.facilitators << facilitator
-      end
+    existing_facilitator_ids = @workshop.facilitators.map(&:id)
+    new_facilitator_ids = supplied_facilitator_ids - existing_facilitator_ids
+    facilitator_ids_to_remove = existing_facilitator_ids - supplied_facilitator_ids
+
+    facilitator_ids_to_remove.each do |facilitator_id|
+      @workshop.facilitators.delete(facilitator_id)
     end
-    existing_facilitators.each do |removed_facilitator|
-      @workshop.facilitators.delete(removed_facilitator)
+
+    new_facilitator_ids.each do |facilitator_id|
+      facilitator = User.find_by(id: facilitator_id)
+      next unless facilitator.facilitator?
+      @workshop.facilitators << facilitator
     end
   end
 

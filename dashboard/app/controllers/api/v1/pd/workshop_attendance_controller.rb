@@ -11,7 +11,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
     workshop_attendance_params[:session_attendances].each do |supplied_session_attendance|
       session = @workshop.sessions.find_by!(id: supplied_session_attendance[:session_id])
       existing_user_ids = session.attendances.map{|attendance| attendance.teacher.id}
-      supplied_attendances = supplied_session_attendance[:attendances] || []
+      supplied_attendances = supplied_session_attendance[:attendances]
       attending_user_ids = []
       supplied_attendances.each do |attendance|
         if attendance[:id]
@@ -29,7 +29,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
         Pd::Attendance.create session: session, teacher: User.find_by_id!(user_id)
       end
       no_longer_attending.each do |user_id|
-        session.attendances.find_by(teacher_id: user_id).delete
+        session.attendances.find_by(teacher_id: user_id).destroy
       end
 
       session.save!
@@ -41,7 +41,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
   private
 
   def create_teacher(email)
-    raise CanCan::AccessDenied.new('Only admins can create new users in attendance.') unless current_user.admin?
+    require_admin
 
     enrollment = Pd::Enrollment.find_by_email!(email)
     params = {
