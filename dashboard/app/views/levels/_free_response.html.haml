@@ -27,7 +27,7 @@
       return {
         response: $('.response').val(),
         submitted: appOptions.level.submittable || forceSubmittable,
-        result: true
+        result: #{level.submittable? ? ActivityConstants::UNSUBMITTED_ATTEMPT : true}
       };
     }
 
