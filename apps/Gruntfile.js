@@ -297,7 +297,7 @@ module.exports = function (grunt) {
       cmd += ' --cachefile ' + outputDir + options.cacheFile;
     }
     cmd += ' --extension=.jsx' +
-      ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]' +
+      ' -t [ babelify --compact=false --sourceMap ]' +
       (envOptions.dev ? '' : ' -t loose-envify') +
       ' -d ' + options.srcFiles.join(' ');
     if (options.factorBundle) {
