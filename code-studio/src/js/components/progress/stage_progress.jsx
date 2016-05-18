@@ -17,7 +17,7 @@ var StageProgress = React.createClass({
     var progressDots = this.props.levels.map((level, index) => {
 
       var innerClass = 'level_link ' + (level.status || 'not_tried');
-      if (level.kind == 'unplugged') {
+      if (level.kind === 'unplugged') {
         innerClass += ' unplugged_level';
       }
 
