@@ -119,7 +119,7 @@ gem 'nokogiri', '~> 1.6.1'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger', '~> 1.11' # error monitoring
+gem 'honeybadger', '~> 2.0.0' # error monitoring
 
 gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error/etc monitoring
 

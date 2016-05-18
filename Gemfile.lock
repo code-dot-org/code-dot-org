@@ -217,8 +217,7 @@ GEM
     highline (1.6.21)
     hike (1.2.3)
     hitimes (1.2.2)
-    honeybadger (1.16.7)
-      json
+    honeybadger (2.0.12)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
       haml (~> 4.0.0)
@@ -590,7 +589,7 @@ DEPENDENCIES
   haml_lint
   heroku_rails_deflate
   highline (~> 1.6.21)
-  honeybadger (~> 1.11)
+  honeybadger (~> 2.0.0)
   httparty
   jbuilder (~> 1.2)
   jquery-cookie-rails
