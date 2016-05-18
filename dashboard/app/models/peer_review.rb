@@ -42,7 +42,7 @@ class PeerReview < ActiveRecord::Base
   }
 
   def mark_user_level
-    user_level = UserLevel.find_by(user: submitter, level: level)
+    user_level = UserLevel.find_by!(user: submitter, level: level)
 
     # Instructor feedback should override all other feedback
     if from_instructor
