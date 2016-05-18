@@ -102,7 +102,7 @@ module ScriptConstants
   end
 
   def self.position_in_category(script, category)
-    CATEGORIES[category.to_sym] ? CATEGORIES[category.to_sym].find_index(script) : -1
+    CATEGORIES[category.to_sym] ? CATEGORIES[category.to_sym].find_index(script) : nil
   end
 
   def self.teacher_dashboard_name(script)

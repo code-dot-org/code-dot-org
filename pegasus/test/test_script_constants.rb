@@ -52,5 +52,8 @@ class ScriptConstantsTest < Minitest::Test
     assert_equal 3, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT4_NAME, :csp)
     assert_equal 4, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT5_NAME, :csp)
     assert_equal 5, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT6_NAME, :csp)
+
+    assert_nil ScriptConstants.position_in_category('script', :not_a_category)
+    assert_nil ScriptConstants.position_in_category('not a script', :csp)
   end
 end
