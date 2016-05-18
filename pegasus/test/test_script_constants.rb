@@ -44,4 +44,13 @@ class ScriptConstantsTest < Minitest::Test
     assert_equal ['csf'], ScriptConstants.categories(ScriptConstants::COURSE1_NAME)
     assert_equal ['csp'], ScriptConstants.categories(ScriptConstants::CSP_UNIT1_NAME)
   end
+
+  def test_category_index
+    assert_equal 0, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT1_NAME, :csp)
+    assert_equal 1, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT2_NAME, :csp)
+    assert_equal 2, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT3_NAME, :csp)
+    assert_equal 3, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT4_NAME, :csp)
+    assert_equal 4, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT5_NAME, :csp)
+    assert_equal 5, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT6_NAME, :csp)
+  end
 end
