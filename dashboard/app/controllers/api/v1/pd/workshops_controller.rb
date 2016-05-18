@@ -70,7 +70,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
     new_facilitator_ids.each do |facilitator_id|
       facilitator = User.find_by(id: facilitator_id)
-      next unless facilitator.facilitator?
+      next unless facilitator && facilitator.facilitator?
       @workshop.facilitators << facilitator
     end
   end
