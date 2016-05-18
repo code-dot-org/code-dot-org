@@ -1,5 +1,9 @@
 /* global React */
 
+/*
+  Displays nicely-formatted session time for a workshop.
+*/
+
 var moment = require('moment');
 
 var SessionTime = React.createClass({

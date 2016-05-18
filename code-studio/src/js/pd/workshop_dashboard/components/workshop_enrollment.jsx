@@ -1,5 +1,9 @@
 /* global React */
 
+/*
+  Displays nicely-formatted session time for a workshop.
+*/
+
 const Table = require('react-bootstrap').Table;
 
 let styles = {
@@ -26,7 +30,7 @@ const WorkshopEnrollment = React.createClass({
   },
 
   render: function () {
-    if (this.props.enrollments.length == 0) {
+    if (this.props.enrollments.length === 0) {
       let signupUrl = location.origin + "/pd/workshops/" + this.props.workshopId + '/enroll';
       let signupLink = <a href={signupUrl} target="_blank">{signupUrl}</a>;
       return (

@@ -1,7 +1,20 @@
 /* global React */
 
+/*
+  Display and edit attendance for a single teacher in a session,
+  for use in SessionAttendance.
+ */
+
 var OverlayTrigger = require('react-bootstrap').OverlayTrigger;
 var Tooltip = require('react-bootstrap').Tooltip;
+
+var styles = {
+  contents: {
+    height: '100%',
+    width: '100%',
+    cursor:'pointer'
+  }
+};
 
 var SessionAttendanceRow = React.createClass({
   propTypes: {
@@ -42,7 +55,7 @@ var SessionAttendanceRow = React.createClass({
     }
 
     var contents = (
-      <div style={{height: '100%', width: '100%', cursor:'pointer'}} onClick={this.handleClickAttended}>
+      <div style={styles.contents} onClick={this.handleClickAttended}>
         <i className={checkBoxClass}/>
       </div>
     );
@@ -82,7 +95,7 @@ var SessionAttendanceRow = React.createClass({
           {this.props.attendance.in_section ? "Yes" : "No"}
         </td>
         <td>
-          {this.renderAttendedCellContents(this.props.attendance.attended)}
+          {this.renderAttendedCellContents()}
         </td>
       </tr>
     );

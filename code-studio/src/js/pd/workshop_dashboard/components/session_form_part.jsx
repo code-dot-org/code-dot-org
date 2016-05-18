@@ -1,5 +1,10 @@
 /* global React */
 
+/*
+  Individual Session input for creating and editing workshops.
+  Sets date, startTime, and endTime for the session.
+ */
+
 var moment = require('moment');
 var Row = require('react-bootstrap').Row;
 var Col = require('react-bootstrap').Col;

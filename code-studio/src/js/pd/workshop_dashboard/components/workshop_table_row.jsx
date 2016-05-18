@@ -1,8 +1,12 @@
 /* global React */
 
-var SessionTimesList = require('./session_times_list.jsx');
-var ConfirmationDialog = require('./confirmation_dialog.jsx');
-var FacilitatorsList = require('./facilitators_list.jsx');
+/*
+  Workshop summary display for use as a row in WorkshopTable
+ */
+
+var SessionTimesList = require('./session_times_list');
+var ConfirmationDialog = require('./confirmation_dialog');
+var FacilitatorsList = require('./facilitators_list');
 var Button = require('react-bootstrap').Button;
 
 var WorkshopTableRow = React.createClass({
@@ -36,16 +40,15 @@ var WorkshopTableRow = React.createClass({
   },
 
   handleDeleteClick: function () {
-    this.state.showDeleteConfirmation = true;
-    this.setState(this.state);
+    this.setState({showDeleteConfirmation: true});
   },
 
   handleDeleteCanceled: function () {
-    this.state.showDeleteConfirmation = false;
-    this.setState(this.state);
+    this.setState({showDeleteConfirmation: false});
   },
 
   handleDeleteConfirmed: function () {
+    this.setState({showDeleteConfirmation: false});
     this.props.onDelete(this.props.workshop);
   },
 

@@ -1,6 +1,11 @@
 /* global React */
 
-var WorkshopTable = require('./components/workshop_table.jsx');
+/*
+  Workshop Index. Displays workshop summaries and controls for CRUD actions.
+  Route: /workshops
+ */
+
+var WorkshopTable = require('./components/workshop_table');
 var Button = require('react-bootstrap').Button;
 
 var WorkshopIndex = React.createClass({

@@ -11,6 +11,7 @@ var fs = require('fs');
 var mkdirp = require('mkdirp');
 var path = require('path');
 var watchify = require('watchify');
+var globalShim = require('browserify-global-shim');
 
 /**
  * Generate command to:
@@ -124,8 +125,7 @@ exports.bundle = function (config) {
   }
 
   if (browserifyGlobalShim) {
-    var globalShim = require('browserify-global-shim').configure(browserifyGlobalShim);
-    bundler.transform({global: true}, globalShim);
+    bundler.transform({global: true}, globalShim.configure(browserifyGlobalShim));
   }
 
   // Optionally enable watch/rebuild loop

@@ -1,7 +1,11 @@
 /* global React */
 
+/*
+  Dynamic list of session inputs for creating and editing workshops.
+ */
+
 var moment = require('moment');
-var SessionFormPart = require('./session_form_part.jsx');
+var SessionFormPart = require('./session_form_part');
 var Row = require('react-bootstrap').Row;
 var Col = require('react-bootstrap').Col;
 
@@ -49,7 +53,7 @@ var SessionListFormPart = React.createClass({
 
   render: function () {
     var sessionForms = this.props.sessions.map(function (session, i, sessions) {
-      var handleAdd = i == sessions.length-1 && sessions.length < MAX_SESSIONS ? this.handleAdd : null;
+      var handleAdd = i === sessions.length-1 && sessions.length < MAX_SESSIONS ? this.handleAdd : null;
       var handleRemove = sessions.length > 1 ? this.handleRemove.bind(null, i) : null;
       return (
         <SessionFormPart

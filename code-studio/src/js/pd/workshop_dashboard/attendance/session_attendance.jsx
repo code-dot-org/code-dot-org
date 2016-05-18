@@ -1,6 +1,10 @@
 /* global React */
 
-var SessionAttendanceRow = require('./session_attendance_row.jsx');
+/*
+  Display and edit attendance for a workshop session, for display in a WorkshopAttendance tab.
+ */
+
+var SessionAttendanceRow = require('./session_attendance_row');
 var Table = require('react-bootstrap').Table;
 
 var SessionAttendance = React.createClass({

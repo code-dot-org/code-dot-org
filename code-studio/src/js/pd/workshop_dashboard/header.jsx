@@ -1,5 +1,10 @@
 /* global React */
 
+/*
+  Header present throughout the workshop dashboard UI.
+  Displays navigation breadcrumbs.
+ */
+
 var Breadcrumb = require('react-bootstrap').Breadcrumb;
 
 var Header = React.createClass({

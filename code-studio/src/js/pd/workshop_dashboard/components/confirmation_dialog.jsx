@@ -1,5 +1,9 @@
 /* global React */
 
+/*
+  Modal confirmation (OK/Cancel) dialog with custom text and events.
+ */
+
 var Modal = require('react-bootstrap').Modal;
 var Button = require('react-bootstrap').Button;
 
