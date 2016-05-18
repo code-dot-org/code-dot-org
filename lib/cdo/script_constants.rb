@@ -34,6 +34,9 @@ module ScriptConstants
   CSP_UNIT5_NAME = 'cspunit5'
   CSP_UNIT6_NAME = 'cspunit6'
 
+  CSP17_UNIT1_NAME = 'csp1'
+  CSP17_UNIT2_NAME = 'csp2'
+
   MINECRAFT_TEACHER_DASHBOARD_NAME = 'minecraft'
   HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'
 
@@ -75,6 +78,10 @@ module ScriptConstants
         CSP_UNIT4_NAME,
         CSP_UNIT5_NAME,
         CSP_UNIT6_NAME
+    ],
+    csp17: [
+      CSP17_UNIT1_NAME,
+      CSP17_UNIT2_NAME
     ],
     math: [
       ALGEBRA_NAME,
