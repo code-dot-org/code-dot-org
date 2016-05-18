@@ -55,6 +55,14 @@ var JSInterpreter = module.exports = function (options) {
 
 JSInterpreter.prototype.patchInterpreterMethods_ = function () {
 
+  if (!JSInterpreter.baseHasProperty &&
+      !JSInterpreter.baseGetProperty &&
+      !JSInterpreter.baseSetProperty) {
+    JSInterpreter.baseHasProperty = window.Interpreter.prototype.hasProperty;
+    JSInterpreter.baseGetProperty = window.Interpreter.prototype.getProperty;
+    JSInterpreter.baseSetProperty = window.Interpreter.prototype.setProperty;
+  }
+
   // These methods need to be patched in order to support custom marshaling.
 
   // These changes revert a 10% speedup commit that bypassed hasProperty,
@@ -78,18 +86,25 @@ JSInterpreter.prototype.patchInterpreterMethods_ = function () {
     this.throwException('Unknown identifier: ' + nameStr);
     return this.UNDEFINED;
   };
+
   /**
   * Sets a value to the current scope.
   * @param {!Object} name Name of variable.
   * @param {!Object} value Value.
+  * @param {boolean} declarator true if called from variable declarator.
   */
-  window.Interpreter.prototype.setValueToScope = function (name, value) {
+  window.Interpreter.prototype.setValueToScope = function (name, value, declarator) {
     var scope = this.getScope();
     var strict = scope.strict;
     var nameStr = name.toString();
     while (scope) {
       if (this.hasProperty(scope, nameStr) || (!strict && !scope.parentScope)) {
-        this.setProperty(scope, nameStr, value);
+        if (declarator) {
+          // from a declarator, always call baseSetProperty
+          JSInterpreter.baseSetProperty.call(this, scope, nameStr, value);
+        } else {
+          this.setProperty(scope, nameStr, value);
+        }
         return;
       }
       scope = scope.parentScope;
@@ -97,6 +112,43 @@ JSInterpreter.prototype.patchInterpreterMethods_ = function () {
     this.throwException('Unknown identifier: ' + nameStr);
   };
 
+  /**
+   * Sets a value to the scope chain or to an object property.
+   * @param {!Object|!Array} left Name of variable or object/propname tuple.
+   * @param {!Object} value Value.
+   * @param {boolean} declarator true if called from variable declarator.
+   */
+  window.Interpreter.prototype.setValue = function (left, value, declarator) {
+    if (left.length) {
+      var obj = left[0];
+      var prop = left[1];
+      this.setProperty(obj, prop, value);
+    } else {
+      this.setValueToScope(left, value, declarator);
+    }
+  };
+
+  // Patched to add the 3rd "declarator" parameter on the setValue() call(s).
+  // Also removed erroneous? call to hasProperty when there is node.init
+  // Changed to call setValue with this.UNDEFINED when there is no node.init
+  // and JSInterpreter.baseHasProperty returns false for current scope.
+  window.Interpreter.prototype['stepVariableDeclarator'] = function () {
+    var state = this.stateStack[0];
+    var node = state.node;
+    if (node.init && !state.done) {
+      state.done = true;
+      this.stateStack.unshift({node: node.init});
+    } else {
+      if (node.init) {
+        this.setValue(this.createPrimitive(node.id.name), state.value, true);
+      } else {
+        if (!JSInterpreter.baseHasProperty.call(this, this.getScope(), node.id.name)) {
+          this.setValue(this.createPrimitive(node.id.name), this.UNDEFINED, true);
+        }
+      }
+      this.stateStack.shift();
+    }
+  };
 };
 
 /**
@@ -114,6 +166,9 @@ JSInterpreter.prototype.patchInterpreterMethods_ = function () {
  *        place in the interpreter global scope.
  * @param {boolean} [options.enableEvents] - allow the interpreter to define
  *        event handlers that can be invoked by native code. (default false)
+ * @param {Function} [options.initGlobals] when supplied, this function will
+ *        be called during interpreter initialization so that additional globals
+ *        can be added with calls to createGlobalProperty()
  */
 JSInterpreter.prototype.parse = function (options) {
   if (!this.studioApp.hideSource) {
@@ -174,27 +229,19 @@ JSInterpreter.prototype.parse = function (options) {
     // Store globalScope on JSInterpreter
     self.globalScope = scope;
     // Override Interpreter's get/has/set Property functions with JSInterpreter
-    interpreter.getProperty = self.getProperty.bind(
-        self,
-        interpreter,
-        interpreter.getProperty);
-    interpreter.hasProperty = self.hasProperty.bind(
-        self,
-        interpreter,
-        interpreter.hasProperty);
-    // Store this for later because we need to bypass our overriden function
-    // in createGlobalProperty()
-    self.baseSetProperty = interpreter.setProperty;
-    interpreter.setProperty = self.setProperty.bind(
-        self,
-        interpreter,
-        interpreter.setProperty);
+    interpreter.getProperty = self.getProperty.bind(self, interpreter);
+    interpreter.hasProperty = self.hasProperty.bind(self, interpreter);
+    interpreter.setProperty = self.setProperty.bind(self, interpreter);
     codegen.initJSInterpreter(
         interpreter,
         options.blocks,
         options.blockFilter,
         scope,
         options.globalFunctions);
+
+    if (options.initGlobals) {
+      options.initGlobals();
+    }
 
     // Only allow five levels of depth when marshalling the return value
     // since we will occasionally return DOM Event objects which contain
@@ -221,7 +268,15 @@ JSInterpreter.prototype.parse = function (options) {
     // Return value will be stored as this.interpreter inside the supplied
     // initFunc() (other code in initFunc() depends on this.interpreter, so
     // we can't wait until the constructor returns)
-    new window.Interpreter(options.code, initFunc);
+    new window.Interpreter('', initFunc);
+    // We initialize with an empty program so that all of our global functions
+    // can be injected before the user code is processed (thus allowing user
+    // code to override globals of the same names)
+
+    // Now append the user code:
+    this.interpreter.appendCode(options.code);
+    // And repopulate scope since appendCode() doesn't do this automatically:
+    this.interpreter.populateScope_(this.interpreter.ast, this.globalScope);
   } catch (err) {
     this.executionError = err;
     this.handleError();
@@ -815,39 +870,45 @@ JSInterpreter.prototype.shouldBlockCustomMarshalling_ = function (name, obj,
  *
  * Fetch a property value from a data object.
  * @param {!Object} interpeter Interpreter instance.
- * @param {!Function} baseGetProperty Original getProperty() implementation.
  * @param {!Object} obj Data object.
  * @param {*} name Name of property.
  * @return {!Object} Property value (may be UNDEFINED).
  */
 JSInterpreter.prototype.getProperty = function (
     interpreter,
-    baseGetProperty,
     obj,
     name) {
   name = name.toString();
   var nativeParent;
-  if (obj.isCustomMarshal ||
-      (obj === this.globalScope &&
-          (!!(nativeParent = this.customMarshalGlobalProperties[name])))) {
-    if (this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+  var customMarshalValue;
+  if (obj.isCustomMarshal) {
+    if (this.shouldBlockCustomMarshalling_(name, obj)) {
       return interpreter.UNDEFINED;
-    }
-    var value;
-    if (obj.isCustomMarshal) {
-      value = obj.data[name];
     } else {
-      value = nativeParent[name];
-    }
-    var type = typeof value;
-    if (type === 'number' || type === 'boolean' || type === 'string' ||
-        type === 'undefined' || value === null) {
-      return interpreter.createPrimitive(value);
-    } else {
-      return codegen.marshalNativeToInterpreter(interpreter, value, obj.data);
+      customMarshalValue = obj.data[name];
     }
   } else {
-    return baseGetProperty.call(interpreter, obj, name);
+    var hasProperty = false;
+    if (!obj.isPrimitive) {
+        hasProperty = JSInterpreter.baseHasProperty.call(interpreter, obj, name);
+    }
+    if (!hasProperty &&
+        obj === this.globalScope &&
+        !!(nativeParent = this.customMarshalGlobalProperties[name]) &&
+        !this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+      customMarshalValue = nativeParent[name];
+    } else {
+      return JSInterpreter.baseGetProperty.call(interpreter, obj, name);
+    }
+  }
+  var type = typeof customMarshalValue;
+  if (type === 'number' || type === 'boolean' || type === 'string' ||
+      type === 'undefined' || customMarshalValue === null) {
+    return interpreter.createPrimitive(customMarshalValue);
+  } else {
+    return codegen.marshalNativeToInterpreter(interpreter,
+        customMarshalValue,
+        obj.data);
   }
 };
 
@@ -856,30 +917,32 @@ JSInterpreter.prototype.getProperty = function (
  *
  * Does the named property exist on a data object.
  * @param {!Object} interpeter Interpreter instance.
- * @param {!Function} baseHasProperty Original hasProperty() implementation.
  * @param {!Object} obj Data object.
  * @param {*} name Name of property.
  * @return {boolean} True if property exists.
  */
 JSInterpreter.prototype.hasProperty = function (
     interpreter,
-    baseHasProperty,
     obj,
     name) {
   name = name.toString();
   var nativeParent;
-  if (obj.isCustomMarshal ||
-      (obj === this.globalScope &&
-          (!!(nativeParent = this.customMarshalGlobalProperties[name])))) {
-    if (this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+  if (obj.isCustomMarshal) {
+    if (this.shouldBlockCustomMarshalling_(name, obj)) {
       return false;
-    } else if (obj.isCustomMarshal) {
-      return name in obj.data;
     } else {
-      return name in nativeParent;
+      return name in obj.data;
     }
   } else {
-    return baseHasProperty.call(interpreter, obj, name);
+    var hasProperty = JSInterpreter.baseHasProperty.call(interpreter, obj, name);
+    if (!hasProperty &&
+        obj === this.globalScope &&
+        !!(nativeParent = this.customMarshalGlobalProperties[name]) &&
+        !this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+      return true;
+    } else {
+      return hasProperty;
+    }
   }
 };
 
@@ -888,7 +951,6 @@ JSInterpreter.prototype.hasProperty = function (
  *
  * Set a property value on a data object.
  * @param {!Object} interpeter Interpreter instance.
- * @param {!Function} baseSetProperty Original setProperty() implementation.
  * @param {!Object} obj Data object.
  * @param {*} name Name of property.
  * @param {*} value New property value.
@@ -897,7 +959,6 @@ JSInterpreter.prototype.hasProperty = function (
  */
 JSInterpreter.prototype.setProperty = function (
     interpreter,
-    baseSetProperty,
     obj,
     name,
     value,
@@ -906,19 +967,23 @@ JSInterpreter.prototype.setProperty = function (
   name = name.toString();
   var nativeParent;
   if (obj.isCustomMarshal) {
-    if (this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
-      return;
+    if (!this.shouldBlockCustomMarshalling_(name, obj)) {
+      obj.data[name] = codegen.marshalInterpreterToNative(interpreter, value);
     }
-    obj.data[name] = codegen.marshalInterpreterToNative(interpreter, value);
-  } else if (obj === this.globalScope &&
-      (!!(nativeParent = this.customMarshalGlobalProperties[name]))) {
-    if (this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
-      return;
-    }
-    nativeParent[name] = codegen.marshalInterpreterToNative(interpreter, value);
   } else {
-    return baseSetProperty.call(
-        interpreter, obj, name, value, opt_fixed, opt_nonenum);
+    var hasProperty = false;
+    if (!obj.isPrimitive) {
+        hasProperty = JSInterpreter.baseHasProperty.call(interpreter, obj, name);
+    }
+    if (!hasProperty &&
+        obj === this.globalScope &&
+        !!(nativeParent = this.customMarshalGlobalProperties[name]) &&
+        !this.shouldBlockCustomMarshalling_(name, obj, nativeParent)) {
+      nativeParent[name] = codegen.marshalInterpreterToNative(interpreter, value);
+    } else {
+      return JSInterpreter.baseSetProperty.call(
+          interpreter, obj, name, value, opt_fixed, opt_nonenum);
+    }
   }
 };
 
@@ -1027,7 +1092,7 @@ JSInterpreter.prototype.createGlobalProperty = function (name, value, parent) {
 
   // Bypass setProperty since we've hooked it and it will not create the
   // property if it is in customMarshalGlobalProperties
-  this.baseSetProperty.call(
+  JSInterpreter.baseSetProperty.call(
       this.interpreter,
       this.globalScope,
       name,
@@ -1192,16 +1257,13 @@ JSInterpreter.prototype.evalInCurrentScope = function (expression) {
   // Patch getProperty, hasProperty, and setProperty to enable custom marshalling
   evalInterpreter.getProperty = this.getProperty.bind(
       this,
-      evalInterpreter,
-      evalInterpreter.getProperty);
+      evalInterpreter);
   evalInterpreter.hasProperty = this.hasProperty.bind(
       this,
-      evalInterpreter,
-      evalInterpreter.hasProperty);
+      evalInterpreter);
   evalInterpreter.setProperty = this.setProperty.bind(
       this,
-      evalInterpreter,
-      evalInterpreter.setProperty);
+      evalInterpreter);
 
   // run() may throw if there's a problem in the expression
   evalInterpreter.run();
