@@ -5,7 +5,7 @@ module ActivityConstants
   # dashboard these are stored in Activity.result and
   # UserLevel.best_result (UserLevel is an aggregate of Activity)
 
-  UNSUBMITTED_ATTEMPT = -50
+  UNSUBMITTED_RESULT = -50
 
   MINIMUM_FINISHED_RESULT = 10
   MINIMUM_PASS_RESULT = 20
