@@ -1,0 +1,46 @@
+:ruby
+  partial = nil
+  locals = {}
+  if @workshop.course == Pd::Workshop::COURSE_CSF
+    partial = 'csf'
+
+  elsif @workshop.course == Pd::Workshop::COURSE_CS_IN_S
+    locals = {online_url: 'https://studio.code.org/s/sciencepd1'}
+    if @workshop.subject == Pd::Workshop::SUBJECT_CS_IN_S_PHASE_2
+      partial = 'phase_2'
+    elsif @workshop.subject == Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1
+      partial = 'cs_in_s_phase_3_semester_1'
+    elsif @workshop.subject == Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2
+      partial = 'cs_in_s_phase_3_semester_2'
+    end
+
+  elsif @workshop.course == Pd::Workshop::COURSE_CS_IN_A
+    locals = {online_url: 'https://studio.code.org/s/algebrapd1'}
+    if @workshop.subject == Pd::Workshop::SUBJECT_CS_IN_A_PHASE_2
+      partial = 'phase_2'
+    elsif @workshop.subject == Pd::Workshop::SUBJECT_CS_IN_A_PHASE_3
+      partial = 'cs_in_a_phase_3'
+    end
+
+  elsif @workshop.course == Pd::Workshop::COURSE_ECS
+      locals = {online_url: 'https://studio.code.org/s/ecspd1'}
+      if @workshop.subject == Pd::Workshop::SUBJECT_ECS_PHASE_2
+        partial = 'phase_2'
+      elsif @workshop.subject == Pd::Workshop::SUBJECT_ECS_UNIT_3
+        partial = 'ecs_unit_3'
+      elsif @workshop.subject == Pd::Workshop::SUBJECT_ECS_UNIT_4
+        partial = 'ecs_unit_4'
+      elsif @workshop.subject == Pd::Workshop::SUBJECT_ECS_UNIT_5
+        partial = 'ecs_unit_5'
+      elsif @workshop.subject == Pd::Workshop::SUBJECT_ECS_UNIT_6
+        partial = 'ecs_unit_6'
+      elsif @workshop.subject == Pd::Workshop::SUBJECT_ECS_PHASE_4
+        partial = 'ecs_phase_4'
+      end
+    end
+
+- if partial
+  %h3
+    Details about your workshop
+
+  = render partial: "pd/workshop_mailer/workshop_details/#{partial}", locals: locals
