@@ -1,4 +1,6 @@
 /** @file Helper methods for working with animation metadata */
+import React from 'react';
+import _ from '../lodash';
 import { animations as animationsApi } from '../clientApi';
 
 /**
@@ -17,7 +19,7 @@ const VECTOR2_SHAPE = {
 
 /**
  * @typedef {Object} AnimationMetadata
- * @property {string} key - Uniquely identifies animation within project,
+ * @property {!string} key - Uniquely identifies animation within project,
  *           usually a UUID.
  * @property {string} name
  * @property {string} sourceUrl
@@ -25,7 +27,61 @@ const VECTOR2_SHAPE = {
  * @property {Vector2} frameSize
  * @property {number} frameCount
  * @property {number} frameRate
+ * @property {number} [size] - file size (in kB)
+ * @property {string} [version] - S3 version key.
  */
+
+/**
+ * Given an AnimationMetadata object, attempt to patch it up to include all the
+ * properties we expect it to have.  Throw an error if we're unable to do so.
+ * @param {AnimationMetadata} animation
+ * @returns {AnimationMetadata}
+ * @throws {TypeError} if the input animation is invalid and can't be reconciled.
+ */
+export function validateAndShapeMetadata(animation) {
+  let shapedAnimation = _.assign({}, animation);
+  if (!shapedAnimation.hasOwnProperty('key')) {
+    throw new TypeError('Animations must have a key');
+  } else if (typeof shapedAnimation.key !== 'string') {
+    shapedAnimation.key = String(shapedAnimation.key);
+  }
+
+  if (!shapedAnimation.hasOwnProperty('name')) {
+    shapedAnimation.name = '';
+  } else if (typeof shapedAnimation.name !== 'string') {
+    shapedAnimation.name = String(shapedAnimation.name);
+  }
+
+  if (!shapedAnimation.hasOwnProperty('sourceUrl')) {
+    shapedAnimation.sourceUrl = undefined;
+  }
+
+  if (!shapedAnimation.hasOwnProperty('sourceSize')) {
+    shapedAnimation.sourceSize = {x: 1, y: 1};
+  }
+
+  if (!shapedAnimation.hasOwnProperty('frameSize')) {
+    shapedAnimation.frameSize = {x: 1, y: 1};
+  }
+
+  if (!shapedAnimation.hasOwnProperty('frameCount')) {
+    shapedAnimation.frameCount = 1;
+  }
+
+  if (!shapedAnimation.hasOwnProperty('frameRate')) {
+    shapedAnimation.frameRate = 15;
+  }
+
+  if (!shapedAnimation.hasOwnProperty('size')) {
+    shapedAnimation.size = 0;
+  }
+
+  if (!shapedAnimation.hasOwnProperty('version')) {
+    shapedAnimation.version = undefined;
+  }
+
+  return shapedAnimation;
+}
 
 /**
  * React validation shape for animation metadata, appropriate to pass to
