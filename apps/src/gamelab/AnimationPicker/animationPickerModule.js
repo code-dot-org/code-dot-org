@@ -2,7 +2,7 @@
 'use strict';
 
 import _ from '../../lodash';
-import gamelabActions from '../actions';
+import {addAnimation} from '../animationModule';
 import { makeEnum, createUuid } from '../../utils';
 import { sourceUrlFromKey } from '../animationMetadata';
 
@@ -110,7 +110,7 @@ export function handleUploadComplete(result) {
     // with the upload itself, but that will mean refactoring away from the
     // jQuery uploader.
     loadImageMetadata(sourceUrl, metadata => {
-      const animation = Object.assign({}, metadata, {
+      const animation = _.assign({}, metadata, {
         key: key,
         name: uploadFilename,
         sourceUrl: sourceUrl,
@@ -119,7 +119,7 @@ export function handleUploadComplete(result) {
       });
 
       if (goal === Goal.NEW_ANIMATION) {
-        dispatch(gamelabActions.addAnimation(animation));
+        dispatch(addAnimation(animation));
       } else if (goal === Goal.NEW_FRAME) {
         // TODO (bbuchanan): Implement after integrating Piskel
       }
@@ -170,7 +170,7 @@ export function pickLibraryAnimation(animation) {
   return (dispatch, getState) => {
     const goal = getState().animationPicker.goal;
     if (goal === Goal.NEW_ANIMATION) {
-      dispatch(gamelabActions.addAnimation(Object.assign({}, animation, {
+      dispatch(addAnimation(Object.assign({}, animation, {
         key: createUuid()
       })));
     } else if (goal === Goal.NEW_FRAME) {

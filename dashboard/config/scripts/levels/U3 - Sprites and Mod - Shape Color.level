@@ -7,10 +7,18 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
+      "draw": null,
       "drawSprites": null,
-      "var sprite = createSprite": null,
-      "shapeColor": null,
-      "color": null
+      "var sprite = createSprite": {
+        "params": [
+          "200",
+          "200"
+        ],
+        "paletteParams": [
+          "x",
+          "y"
+        ]
+      }
     },
     "edit_code": true,
     "embed": "false",
@@ -37,9 +45,9 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "instructions": "Do This",
-    "markdown_instructions": "# Properties\r\n\r\nWhat do you think this code will do?\r\n",
+    "markdown_instructions": "# Predict\r\n\r\nWhat do you think this code will do?\r\n",
     "show_d_pad": "false",
-    "start_blocks": "var sprite1 = createSprite(100,200, 30, 30);\r\nsprite1.shapeColor = color(255, 140, 29);\r\n\r\nfunction draw(){\r\n  drawSprites();\r\n}"
+    "start_blocks": "var sprite1 = createSprite(100,200);\r\n\r\nfunction draw(){\r\n  drawSprites();\r\n}"
   },
   "published": true,
   "notes": "",

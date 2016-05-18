@@ -11,8 +11,9 @@
       "var sprite = createSprite": null,
       "background": null,
       "randomNumber_min_max": null,
-      "x": null,
-      "y": null
+      "sprite.width": null,
+      "sprite.height": null,
+      "shapeColor": null
     },
     "edit_code": true,
     "embed": "false",
@@ -41,7 +42,7 @@
     "show_d_pad": "false",
     "instructions": "Do This",
     "markdown_instructions": "# Predict\r\n\r\nWhat do you think this program will do when we run it?",
-    "start_blocks": "var sprite1 = createSprite(randomNumber(0, 400), randomNumber(0, 400), 30, 30);\r\n\r\nframeRate(100);\r\n\r\nfunction draw() {\r\n  sprite1.x = randomNumber(0,400);\r\n  sprite1.y = randomNumber(0,400);\r\n  \r\n  background('white');\r\n  drawSprites();\r\n}"
+    "start_blocks": "var sprite1 = createSprite(200, 200, 30, 30);\r\nframeRate(5);\r\n\r\nfunction draw() {\r\n  sprite1.width = randomNumber(0,100);\r\n  sprite1.height = randomNumber(0,100);\r\n  background('white');\r\n  drawSprites();\r\n}"
   },
   "published": true,
   "notes": "",

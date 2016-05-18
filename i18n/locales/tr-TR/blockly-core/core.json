@@ -25,7 +25,7 @@
   "COLOUR_RGB_RED":"kırmızı",
   "COLOUR_RGB_TITLE":"renkle birlikte",
   "COLOUR_RGB_TOOLTIP":"Belirtilen miktarda kırmızı, yeşil ve mavi ile bir renk oluştur.\nTüm değerler 0 ile 100 arasında olmalıdır.",
-  "CONFIRM_CREATE_VARIABLE":"Yarat",
+  "CONFIRM_CREATE_VARIABLE":"Oluştur",
   "CONFIRM_DELETE_FUNCTION_MESSAGE":"Uyarı! %1 silmek istediğinizden emin misiniz?",
   "CONFIRM_RENAME_VARIABLE":"Yeniden adlandır",
   "CONTRACT_EDITOR_HEADER":"Tasarım Tarifi",
