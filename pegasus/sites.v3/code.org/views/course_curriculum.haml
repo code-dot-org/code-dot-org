@@ -1,0 +1,15 @@
+- course ||= "course1"
+
+%p
+  = I18n.t("dashboard_#{course}")
+  %a{href: CDO.code_org_url("/curriculum/#{course}")}
+    = I18n.t :dashboard_lesson_plans
+  |
+  %a{href: CDO.code_org_url("/curriculum/#{course}/docs/overview.pdf"), target: '_blank'}
+    = I18n.t :dashboard_sequence
+  |
+  %a{href: CDO.code_org_url("/curriculum/docs/k-5/framework_#{course}.pdf"), target: '_blank'}
+    = I18n.t :dashboard_framework
+  |
+  %a{href: CDO.code_org_url("/curriculum/docs/k-5/standards_#{course}.pdf"), target: '_blank'}
+    = I18n.t :dashboard_standards

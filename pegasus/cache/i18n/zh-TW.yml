@@ -288,6 +288,9 @@
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
     science in classrooms.
   homepage_banner_20k_teachers_link: "瞭解更多資訊"
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: "一小時的程式課程"
   homepage_slot_text_blurb_hoc: "任何人都可以學習。從今天開始"
   homepage_slot_text_link_hoc: "試試一小時的程式設計課程"
@@ -313,6 +316,7 @@
   homepage_slot_text_link_stats: "瞭解統計資訊"
   homepage_slot_text_link_buy: "參與"
   homepage_slot_text_link_donate: "捐款"
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Code Studio 學生的作品
   homepage_header_donors: Code.org 感謝所有的支持者
   homepage_donors_seall: "全部顯示"
@@ -701,6 +705,12 @@
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
   dashboard_announce_button_text: "瞭解更多資訊"
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: "代碼小時就在這裡 — — 12 月 8-14 ！"
   code_sign_up: "註冊參與電腦科學教育週"
   learn_more: "快來試試"
@@ -819,13 +829,31 @@
   course3_name: "課程 3"
   course4_name: "課程 4"
   accelerated_name: "速成課程"
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: "速成課程"
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: "經典迷宮"
+  iceage_name: "冰原歷險記"
+  minecraft_name: "當個創世神"
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: "運算類"
+  hoc_category_name: "一小時的程式設計課程"
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
   applab_name: App Lab
   applab_gradelevel: 13歲以上
   applab_shortdescription_congrats: App Lab is a programming environment where you
@@ -1320,12 +1348,11 @@
   infinity_shortcode: inf
   playlab_shortcode: "玩"
   artist_shortcode: art
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
