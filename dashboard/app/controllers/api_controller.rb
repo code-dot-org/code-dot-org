@@ -184,6 +184,11 @@ class ApiController < ApplicationController
         level_results = []
 
         script_level.level.levels.each do |level|
+
+          if level.is_a? Multi
+            multi_count += 1
+          end
+
           level_response = response_parsed[level.id.to_s]
 
           level_result = {}
@@ -197,7 +202,6 @@ class ApiController < ApplicationController
             when Multi
               answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes
               student_result = level_response["result"].split(",").sort.join(",")
-              multi_count += 1
 
               # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
               level_result[:student_result] = student_result.split(',').map{ |k| multi_answer_characters[k.to_i] }.join(', ')
