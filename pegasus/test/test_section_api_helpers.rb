@@ -72,10 +72,10 @@ class SectionApiHelperTest < Minitest::Test
       end
 
       it 'rewrites mc as minecraft, hourofcode as classicmaze' do
-        assert_includes DashboardSection.valid_courses.flatten(2), 'minecraft'
-        assert_includes DashboardSection.valid_courses.flatten(2), 'classicmaze'
-        refute_includes DashboardSection.valid_courses.flatten(2), 'mc'
-        refute_includes DashboardSection.valid_courses.flatten(2), 'hourofcode'
+        assert_includes DashboardSection.valid_courses.map(&:values).flatten, 'minecraft'
+        assert_includes DashboardSection.valid_courses.map(&:values).flatten, 'classicmaze'
+        refute_includes DashboardSection.valid_courses.map(&:values).flatten, 'mc'
+        refute_includes DashboardSection.valid_courses.map(&:values).flatten, 'hourofcode'
       end
     end
 
