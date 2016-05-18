@@ -52,16 +52,6 @@ class CS4AllTestCase < MailQueryTestCase
   end
 
   def test_query_hoc_organizers_no_code_studio
-    # mock solr query
-    def query_subscribed_contacts(query)
-      {
-        'hoc_organizer@schools.nyc.gov' => {},
-        'hoc_organizer@another.domain.net' => {},
-        'non_code_studio_user@schools.nyc.gov' => {},
-        'non_code_studio_user@another.domain.net' => {}
-      }
-    end
-
     create_teacher 'hoc_organizer@schools.nyc.gov'
     create_teacher 'hoc_organizer@another.domain.net'
 
