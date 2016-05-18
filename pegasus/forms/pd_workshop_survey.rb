@@ -118,7 +118,7 @@ class PdWorkshopSurvey
   OPTIONS = {
     reason_for_attending_ss: [
       'Personal interest',
-      'Heard about if from someone else who attended and thought it was a worthwhile program.',
+      'Heard about it from someone else who attended and thought it was a worthwhile program.',
       'I have been asked to teach CS and felt I needed to attend some teacher training.',
       'School/district suggested this program',
       'School/district required this program',
