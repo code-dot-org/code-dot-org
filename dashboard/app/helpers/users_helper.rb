@@ -87,7 +87,6 @@ module UsersHelper
               result: ul.try(:best_result) || 0,
               submitted: !!ul.try(:submitted)
           }
-          user_data[:levels][sl.level_id][:reviewable] = true if sl.level.try(:peer_reviewable?)
 
           # Just in case this level has multiple pages, in which case we add an additional
           # array of booleans indicating which pages have been completed.

@@ -52,18 +52,14 @@ module ApplicationHelper
     # For definitions of the result values, see /app/src/constants.js.
     result = user_level.try(:best_result)
 
-    if user_level && Level.cache_find(user_level.level_id).try(:peer_reviewable?)
-      if result == Activity::REVIEW_REJECTED_RESULT
-        'rejected'
-      elsif result == Activity::REVIEW_ACCEPTED_RESULT
-        'accepted'
-      else
-        'attempted'
-      end
-    elsif user_level.try(:submitted)
+    if user_level.try(:submitted)
       'submitted'
     elsif result.nil? || result == 0
       'not_tried'
+    elsif result == Activity::REVIEW_REJECTED_RESULT
+      'rejected'
+    elsif result == Activity::REVIEW_ACCEPTED_RESULT
+      'accepted'
     elsif result >= Activity::FREE_PLAY_RESULT
       'perfect'
     elsif result >= Activity::MINIMUM_PASS_RESULT

@@ -122,11 +122,11 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
 
     var status;
     var result = (serverProgress[level.id] || {}).result;
-    if (serverProgress && serverProgress[level.id] && serverProgress[level.id].reviewable && result == 150 || result == 200) {
-      if (result == 150) {
+    if (serverProgress && result >= 1000) {
+      if (result == 1500) {
         status = 'rejected';
       }
-      if (result == 200) {
+      if (result == 2000) {
         status = 'accepted';
       }
     } else if (serverProgress && serverProgress[level.id] && serverProgress[level.id].submitted) {
