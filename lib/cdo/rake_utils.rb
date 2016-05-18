@@ -6,6 +6,7 @@ require 'cdo/hip_chat'
 require 'digest'
 require 'sprockets-derailleur'
 
+# Store reference to original `system` command (clashes with RakeUtils.system)
 alias original_system system
 
 module RakeUtils
