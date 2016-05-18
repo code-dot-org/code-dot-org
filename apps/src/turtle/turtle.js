@@ -179,7 +179,7 @@ Artist.prototype.init = function (config) {
     this.stickers[name] = img;
   }
 
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
     // let's try adding a background image
     this.level.images = [{}];
     this.level.images[0].filename = 'background.jpg';
@@ -192,10 +192,10 @@ Artist.prototype.init = function (config) {
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
 
-  if (this.skin.id == "anna") {
+  if (this.skin.id === "anna") {
     this.avatarWidth = 73;
     this.avatarHeight = 100;
-  } else if (this.skin.id == "elsa") {
+  } else if (this.skin.id === "elsa") {
     this.avatarWidth = 73;
     this.avatarHeight = 100;
     this.decorationAnimationWidth = 85;
@@ -399,7 +399,7 @@ Artist.prototype.placeImage = function (filename, position, scale) {
     this.display();
   }, this);
 
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
     img.src = this.skin.assetUrl(filename);
   } else {
     img.src = this.studioApp_.assetUrl('media/turtle/' + filename);
@@ -429,9 +429,9 @@ Artist.prototype.loadTurtle = function () {
   this.avatarImage.onload = _.bind(this.display, this);
 
   this.avatarImage.src = this.skin.avatar;
-  if (this.skin.id == "anna") {
+  if (this.skin.id === "anna") {
     this.numberAvatarHeadings = 36;
-  } else if (this.skin.id == "elsa") {
+  } else if (this.skin.id === "elsa") {
     this.numberAvatarHeadings = 18;
   } else {
     this.numberAvatarHeadings = 180;
@@ -444,7 +444,7 @@ Artist.prototype.loadTurtle = function () {
  * Initial the turtle animation deocration on load.
  */
 Artist.prototype.loadDecorationAnimation = function () {
-  if (this.skin.id == "elsa") {
+  if (this.skin.id === "elsa") {
     this.decorationAnimationImage.src = this.skin.decorationAnimation;
     this.decorationAnimationImage.height = this.decorationAnimationHeight;
     this.decorationAnimationImage.width = this.decorationAnimationWidth;
@@ -461,7 +461,7 @@ Artist.prototype.drawTurtle = function () {
   var sourceY;
   // Computes the index of the image in the sprite.
   var index = Math.floor(this.heading * this.numberAvatarHeadings / 360);
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
     // the rotations in the sprite sheet go in the opposite direction.
     index = this.numberAvatarHeadings - index;
 
@@ -469,7 +469,7 @@ Artist.prototype.drawTurtle = function () {
     index = (index + this.numberAvatarHeadings/2) % this.numberAvatarHeadings;
   }
   var sourceX = this.avatarImage.spriteWidth * index;
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
     sourceY = this.avatarImage.spriteHeight * turtleFrame;
     turtleFrame = (turtleFrame + 1) % this.skin.turtleNumFrames;
   } else {
@@ -514,7 +514,7 @@ Artist.prototype.drawTurtle = function () {
   */
 
 Artist.prototype.drawDecorationAnimation = function (when) {
-  if (this.skin.id == "elsa") {
+  if (this.skin.id === "elsa") {
     var frameIndex = (turtleFrame + 10) % this.skin.decorationAnimationNumFrames;
 
     var angleIndex = Math.floor(this.heading * this.numberAvatarHeadings / 360);
@@ -525,7 +525,7 @@ Artist.prototype.drawDecorationAnimation = function (when) {
     // and they are 180 degrees out of phase.
     angleIndex = (angleIndex + this.numberAvatarHeadings/2) % this.numberAvatarHeadings;
 
-    if (ELSA_DECORATION_DETAILS[angleIndex].when == when) {
+    if (ELSA_DECORATION_DETAILS[angleIndex].when === when) {
       var sourceX = this.decorationAnimationImage.width * frameIndex;
       var sourceY = 0;
       var sourceWidth = this.decorationAnimationImage.width;
@@ -573,11 +573,11 @@ Artist.prototype.reset = function (ignore) {
   // Clear the display.
   this.ctxScratch.canvas.width = this.ctxScratch.canvas.width;
   this.ctxPattern.canvas.width = this.ctxPattern.canvas.width;
-  if (this.skin.id == "anna") {
+  if (this.skin.id === "anna") {
     this.ctxScratch.strokeStyle = 'rgb(255,255,255)';
     this.ctxScratch.fillStyle = 'rgb(255,255,255)';
     this.ctxScratch.lineWidth = 2;
-  } else if (this.skin.id == "elsa") {
+  } else if (this.skin.id === "elsa") {
     this.ctxScratch.strokeStyle = 'rgb(255,255,255)';
     this.ctxScratch.fillStyle = 'rgb(255,255,255)';
     this.ctxScratch.lineWidth = 2;
@@ -595,9 +595,9 @@ Artist.prototype.reset = function (ignore) {
   this.ctxFeedback.clearRect(
       0, 0, this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
 
-  if (this.skin.id == "anna") {
+  if (this.skin.id === "anna") {
     this.setPattern("annaLine");
-  } else if (this.skin.id == "elsa") {
+  } else if (this.skin.id === "elsa") {
     this.setPattern("elsaLine");
   } else {
     // Reset to empty pattern
@@ -649,7 +649,7 @@ Artist.prototype.display = function () {
   this.ctxDisplay.drawImage(this.ctxPredraw.canvas, 0, 0);
 
   // Draw the answer layer.
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
     this.ctxDisplay.globalAlpha = 0.4;
   } else {
     this.ctxDisplay.globalAlpha = 0.15;
@@ -1028,12 +1028,12 @@ Artist.prototype.step = function (command, values, options) {
     case 'PC':  // Pen Colour
       this.ctxScratch.strokeStyle = values[0];
       this.ctxScratch.fillStyle = values[0];
-      if (this.skin.id != "anna" && this.skin.id != "elsa") {
+      if (this.skin.id !== "anna" && this.skin.id !== "elsa") {
         this.isDrawingWithPattern = false;
       }
       break;
     case 'PS':  // Pen style with image
-      if (!values[0] || values[0] == 'DEFAULT') {
+      if (!values[0] || values[0] === 'DEFAULT') {
           this.setPattern(null);
       } else {
         this.setPattern(values[0]);
@@ -1160,7 +1160,7 @@ Artist.prototype.moveForward_ = function (distance) {
     this.drawForwardLineWithPattern_(distance);
 
     // Frozen gets both a pattern and a line over the top of it.
-    if (this.skin.id != "elsa" && this.skin.id != "anna") {
+    if (this.skin.id !== "elsa" && this.skin.id !== "anna") {
       return;
     }
   }
@@ -1203,7 +1203,7 @@ Artist.prototype.drawForwardWithJoints_ = function (distance) {
 
 Artist.prototype.drawForwardLine_ = function (distance) {
 
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
     this.ctxScratch.beginPath();
     this.ctxScratch.moveTo(this.stepStartX, this.stepStartY);
     this.jumpForward_(distance);
@@ -1224,7 +1224,7 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
   var startX;
   var startY;
 
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
     this.ctxPattern.moveTo(this.stepStartX, this.stepStartY);
     img = this.currentPathPattern;
     startX = this.stepStartX;
@@ -1415,18 +1415,18 @@ Artist.prototype.checkAnswer = function () {
   // For levels where using too many blocks would allow students
   // to miss the point, convert that feedback to a failure.
   if (level.failForTooManyBlocks &&
-      this.testResults == this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) {
+      this.testResults === this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) {
     this.testResults = this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL;
 
-  } else if ((this.testResults ==
+  } else if ((this.testResults ===
       this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) ||
-      (this.testResults == this.studioApp_.TestResults.ALL_PASS)) {
+      (this.testResults === this.studioApp_.TestResults.ALL_PASS)) {
     // Check that they didn't use a crazy large repeat value when drawing a
     // circle.  This complains if the limit doesn't start with 3.
     // Note that this level does not use colour, so no need to check for that.
     if (level.failForCircleRepeatValue && this.studioApp_.isUsingBlockly()) {
       var code = Blockly.Generator.blockSpaceToCode('JavaScript');
-      if (code.indexOf('count < 3') == -1) {
+      if (code.indexOf('count < 3') === -1) {
         this.testResults =
             this.studioApp_.TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
         this.message = commonMsg.tooMuchWork();
@@ -1505,7 +1505,7 @@ Artist.prototype.getFeedbackImage_ = function (width, height) {
     this.ctxFeedback.canvas.height);
   this.ctxFeedback.fillStyle = style;
 
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+  if (this.skin.id === "anna" || this.skin.id === "elsa") {
     // For frozen skins, show everything - including background,
     // characters, and pattern - along with drawing.
     this.ctxFeedback.globalCompositeOperation = 'copy';

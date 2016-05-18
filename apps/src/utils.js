@@ -400,8 +400,8 @@ exports.trySetLocalStorage = function (item, value) {
  * Generates a simple enum object
  * @example
  *   var Seasons = enum('SPRING', 'SUMMER', 'FALL', 'WINTER');
- *   Seasons.SPRING == 'SPRING';
- *   Seasons.SUMMER == 'SUMMER';
+ *   Seasons.SPRING === 'SPRING';
+ *   Seasons.SUMMER === 'SUMMER';
  *   // etc...
  */
 exports.makeEnum = function () {

@@ -1851,7 +1851,7 @@ StudioApp.prototype.configureDom = function (config) {
       // If in level builder editing blocks, make workspace extra tall
       vizHeight = 3000;
       // Modify the arrangement of toolbox blocks so categories align left
-      if (config.level.edit_blocks == "toolbox_blocks") {
+      if (config.level.edit_blocks === "toolbox_blocks") {
         this.blockYCoordinateInterval = 80;
         config.blockArrangement = { category : { x: 20 } };
       }
