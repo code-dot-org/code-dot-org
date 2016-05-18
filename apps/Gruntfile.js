@@ -4,6 +4,7 @@ var fs = require('fs');
 var mkdirp = require('mkdirp');
 var glob = require('glob');
 var readline = require('readline');
+var webpack = require('webpack');
 var logBuildTimes = require('./script/log-build-times');
 
 module.exports = function (grunt) {
@@ -336,7 +337,57 @@ module.exports = function (grunt) {
     convertScssVars: './script/convert-scss-variables.js',
     integrationTest: 'node test/runIntegrationTests.js --color' + (fastMochaTest ? ' --fast' : ''),
     unitTest: 'node test/runUnitTests.js --color',
-    applabapi: 'echo "' + applabAPIExec + '" && ' + applabAPIExec,
+  };
+
+  var entries = {};
+  APPS.forEach(function (app) {
+    entries[app] = './src/'+app+'/main.js';
+  });
+  if (entries.applab) {
+    entries['applab-api'] = './src/applab/api-entry.js';
+  }
+  config.webpack = {
+    build: {
+      output: {
+        path: path.resolve(__dirname, outputDir),
+        filename: "[name].js",
+      },
+      //    devtool: 'eval',
+      entry: entries,
+      resolve: {
+        extensions: ["", ".js", ".jsx"],
+      },
+      externals: {
+        "johnny-five": "JohnnyFive",
+        "playground-io": "var PlaygroundIO",
+        "chrome-serialport": "var ChromeSerialport",
+        "marked": "var marked",
+      },
+      module: {
+        loaders: [
+          {test: /\.json$/, loader: 'json'},
+          {test: /\.ejs$/, loader: 'ejs-compiled'},
+          {
+            test: /\.jsx?$/,
+            include: [
+              path.resolve(__dirname, 'src'),
+            ],
+            loader: "babel",
+            query: {
+              cacheDirectory: true,
+              sourceMaps: true,
+            }
+          },
+        ],
+      },
+      plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+          name:'common',
+          minChunks: 3,
+        }),
+      ],
+      watch: true,
+    }
   };
 
   var ext = envOptions.dev ? 'uncompressed' : 'compressed';
@@ -398,13 +449,7 @@ module.exports = function (grunt) {
   config.watch = {
     js: {
       files: ['src/**/*.{js,jsx}'],
-      tasks: [
-        'newer:copy:src',
-        'exec:browserify',
-        // only want to watch for applabapi if explicitly specified
-        WATCH_APPLAB_API ? 'exec:applabapi' : 'noop',
-        'notify:browserify'
-      ],
+      tasks: ['newer:copy:src', 'notify:browserify'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true,
@@ -438,7 +483,7 @@ module.exports = function (grunt) {
     },
     ejs: {
       files: ['src/**/*.ejs'],
-      tasks: ['ejs', 'exec:browserify', 'notify:ejs'],
+      tasks: ['ejs', 'notify:ejs'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true
@@ -520,8 +565,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'prebuild',
-    'exec:browserify',
-    'exec:applabapi',
+    'webpack:build',
     'notify:browserify',
     // Skip minification in development environment.
     envOptions.dev ? 'noop' : ('concurrent:uglify'),
@@ -533,7 +577,6 @@ module.exports = function (grunt) {
   grunt.registerTask('dev', [
     'build',
     'express:playground',
-    'watch'
   ]);
 
   grunt.registerTask('unitTest', [
