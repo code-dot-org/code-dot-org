@@ -211,7 +211,7 @@ class DashboardSection
           {
             id: course[:id],
             name: I18n.t("#{name}_name", default: name),
-            category: I18n.t("#{first_category}_category_name".to_sym, default: first_category)
+            category: I18n.t("#{first_category}_category_name", default: first_category)
           }
         end
   end
