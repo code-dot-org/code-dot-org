@@ -631,7 +631,12 @@ GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
     'elt',
     'canvas',
     'parent',
-    'p5'
+    'p5',
+    'downloadFile',
+    'writeFile',
+    'httpGet',
+    'httpPost',
+    'httpDo',
   ];
 };
 
@@ -673,11 +678,14 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
 
   var propList = {};
   var blockedProps = this.getCustomMarshalBlockedProperties();
+  var globalCustomMarshalProps = this.getCustomMarshalGlobalProperties();
 
   // Include every property on the p5 instance in the global property list
-  // except those on the custom marshal blocked list:
+  // except those on the custom marshal lists:
   for (var prop in this.p5) {
-    if (-1 === blockedProps.indexOf(prop)) {
+    if (-1 === blockedProps.indexOf(prop) &&
+        -1 === this.p5specialFunctions.indexOf(prop) &&
+        !globalCustomMarshalProps[prop]) {
       propList[prop] = [this.p5[prop], this.p5];
     }
   }
@@ -723,8 +731,20 @@ GameLabP5.prototype.preloadAnimations = function (animationMetadata) {
     var image = this.p5.loadImage(
         getSourceUrl(animation),
         function onSuccess() {
-          var spriteSheet = this.p5.loadSpriteSheet(image, animation.frameSize.x,
-              animation.frameSize.y, animation.frameCount);
+          // :P Keeping this "backwards compatible" even though we're not
+          // released yet.
+          var frameSizeX = image.width;
+          var frameSizeY = image.height;
+          var frameCount = 1;
+          if (animation.frameSize) {
+            frameSizeX = animation.frameSize.x;
+            frameSizeY = animation.frameSize.y;
+          }
+          if (animation.frameCount) {
+            frameCount = animation.frameCount;
+          }
+          var spriteSheet = this.p5.loadSpriteSheet(image, frameSizeX,
+              frameSizeY, frameCount);
           this.p5.projectAnimations[animation.name] = this.p5.loadAnimation(spriteSheet);
         }.bind(this));
   }, this);

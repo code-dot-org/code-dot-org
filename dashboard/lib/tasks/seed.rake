@@ -157,12 +157,6 @@ namespace :seed do
     end
   end
 
-  desc "calculate most common unsuccessful solutions for the crowdsourced hints UI"
-  task :frequent_level_sources, [:freq_cutoff, :game_name] => :environment do |_t, args|
-    freq_cutoff = 1
-    FrequentUnsuccessfulLevelSource.populate(freq_cutoff, args[:game_name])
-  end
-
   task dummy_prizes: :environment do
     # placeholder data
     Prize.connection.execute('truncate table prizes')
@@ -253,8 +247,6 @@ namespace :seed do
       end
     end
   end
-
-  task analyze_data: [:ideal_solutions, :frequent_level_sources]
 
   task secret_words: :environment do
     SecretWord.setup

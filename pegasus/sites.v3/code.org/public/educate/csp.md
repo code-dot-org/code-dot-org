@@ -49,9 +49,6 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 - Prepare for the AP® CS Principles exam through a curriculum intentionally designed around the latest developments in the College Board framework, including built-in preparation for the performance tasks  
 - Use, share, and customize the resources, as they are distributed under a Creative Commons Attribution NonCommerical ShareAlike License see our [Terms of Service](https://code.org/tos). If you are interested in licensing Code.org materials for commercial purposes, [contact us](https://code.org/contact).
 
-### <a name="acknowledgements"></a>Acknowledgements
-
-The Code.org CS Principles curriculum would not have been possible without inspiration from a number of leaders and projects in the CS education community, the incredible work of the many curriculum writers, engineers, teachers and volunteers who helped develop the course, and the generosity of a number of our donors. Thank you!
 
 [<button>See App Lab in action</button>](/educate/applab) &nbsp;&nbsp; [<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
 
@@ -77,6 +74,9 @@ The Code.org CS Principles curriculum would not have been possible without inspi
 
 <div style="clear: both;"></div>
 
+### <a name="acknowledgements"></a>Acknowledgements
+
+The Code.org CS Principles curriculum would not have been possible without inspiration from a number of leaders and projects in the CS education community, the incredible work of the many curriculum writers, engineers, teachers and volunteers who helped develop the course, and the generosity of a number of our donors. Thank you!
 
 ## <a name="overview"></a>Overview
 

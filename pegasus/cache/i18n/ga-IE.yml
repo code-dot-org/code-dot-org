@@ -373,6 +373,9 @@
   homepage_banner_20k_teachers: 20,000 múinteoir a rinne traenáil agus atá ag múineadh
     na ríomheolaíochta sa seomra ranga anois.
   homepage_banner_20k_teachers_link: Tuilleadh eolais
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: An Uair Chódála
   homepage_slot_text_blurb_hoc: Is féidir le héinne foghlaim. Tosaigh inniu
   homepage_slot_text_link_hoc: Bain triail as an Uair Chódála
@@ -398,6 +401,7 @@
   homepage_slot_text_link_stats: Féach na staitisticí
   homepage_slot_text_link_buy: Glac páirt
   homepage_slot_text_link_donate: Tabhair bronntanas
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Tionscadail a rinne daltaí sa Stiúideo Códála
   homepage_header_donors: Tá Code.org fíorbhuíoch dá thacadóirí
   homepage_donors_seall: Féach uile
@@ -443,7 +447,7 @@
   class_submission_languages_other: Teanga(cha) eile
   inspirational_videos_more: Tuilleadh <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">físeán
     spreagúil</a> ó dhaoine mór-le-rá agus ó cheiliúráin
-  playlab_choose_theme: Roghnaigh téama do "Súgradh is Dáiríre"
+  playlab_choose_theme: Roghnaigh téama don Spraotharlann
   playlab_classic_title: Clasaiceach
   playlab_gumball_title: Saol Iontach Gumball
   playlab_iceage_title: Ice Age - Ag teacht go luath
@@ -669,11 +673,11 @@
   dashboard_action_remove_confirm: Bain?
   dashboard_action_done: Déanta
   dashboard_action_required: riachtanach
-  dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
-  dashboard_download_csv: Download CSV
+  dashboard_assessments_view: 'Féach measúnuithe i:'
+  dashboard_assessments_none: Gan measúnuithe
+  dashboard_filter_by_stage: 'Scagadh de réir na céime:'
+  dashboard_filter_all: Uile
+  dashboard_download_csv: "Íoslódáil CSV"
   dashboard_navigation_home_page: Leathanach baile do mhúinteoirí
   dashboard_navigation_section_student_progress: Cuntais agus Dul Chun Cinn na nDaltaí
   dashboard_navigation_section_teacher_progress: Do Dhul Chun Cinn
@@ -698,11 +702,11 @@
   dashboard_progress_completed_perfect: críochnaithe, foirfe
   dashboard_progress_furthest_level_attempted: an leibhéal is airde
   dashboard_progress_submitted: seolta
-  dashboard_progress_view: 'View progress in:'
-  dashboard_progress_student_in_script: Progress information for %{student_name} in
+  dashboard_progress_view: 'Féach dul chun cinn i:'
+  dashboard_progress_student_in_script: Dul chun cinn déanta ag %{student_name} in
     %{script_name}
-  dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_responses_view: 'Féach na freagraí téacs i:'
+  dashboard_responses_none: Gan freagraí téacs
   dashboard_sections_new_section: Rannán nua
   dashboard_sections_jumbotron_instruction: Cruthaigh rannáin nua agus cuir daltaí
     leo. Le rannáin, is féidir do chuid daltaí a eagrú i ngrúpaí níos lú, sa chaoi
@@ -729,22 +733,23 @@
     cuntais a phriontáil agus a thabhairt do na daltaí ceann ar cheann.
   dashboard_sections_switch_section: 'Athraigh an rannán:'
   dashboard_sections_close: Dún
-  dashboard_sections_move_students_desc: Select students to move to a new section.
-    Moving students will not clear their progress.
+  dashboard_sections_move_students_desc: Roghnaigh na daltaí le bogadh go dtí rannán
+    nua. Ní ghlanfar dul chun cinn na ndaltaí tar éis duit iad a bhogadh.
   dashboard_sections_one_per_teacher: Students can only be in one section for each
     teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
-  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
-    section AND the new section
-  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
-    only.
-  dashboard_sections_move_students: Move Students
-  dashboard_error_none_selected: You didn't select any students to move. Please select
-    at least one student.
+  dashboard_sections_move_to_section: 'Bog go rannán:'
+  dashboard_sections_enter_code: 'Cuir isteach cód an rannáin:'
+  dashboard_sections_code_placeholder: Cód 6-litir (ABCDEF)
+  dashboard_sections_other_section: Rannán Eile
+  dashboard_sections_both_sections: An bhfuil fonn ort an dalta nó na daltaí a choinneáil
+    sa dá rannán?
+  dashboard_sections_yes_both: Tá, ba mhaith liom an dalta nó na daltaí a chóipeáil
+    go dtí an rannán nua AGUS iad a choinneáil sa rannán seo
+  dashboard_sections_no_move: Níl. Ba mhaith liom an dalta nó na daltaí a bhogadh
+    go dtí an rannán nua amháin.
+  dashboard_sections_move_students: Bog na daltaí
+  dashboard_error_none_selected: Níor roghnaigh tú aon daltaí le bogadh. Roghnaigh
+    dalta amháin ar a laghad.
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
@@ -873,6 +878,12 @@
   dashboard_announce_message: "<b>Gné nua</b> - Anois is féidir leat daltaí a bhogadh
     idir rannáin de do chuid féin, nó go dtí rannán ag múinteoir eile."
   dashboard_announce_button_text: Tuilleadh eolais
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: Tá an Uair Chódála anseo - 8-14 Nollaig!
   code_sign_up: Cláraigh chun páirt a ghlacadh le linn Sheachtain an Oideachais Ríomheolaíochta
   learn_more: Bain triail as anois
@@ -985,8 +996,8 @@
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Cloch, Páipéar, Siosúr
   hourofcode_name: Cathair Ghríobháin Chlasaiceach
-  playlab_name: Súgradh is Dáiríre
-  infinity_name: 'Infinity: Súgradh is Dáiríre'
+  playlab_name: Spraotharlann
+  infinity_name: 'Infinity: Spraotharlann'
   artist_name: Ealaíontóir
   monstercoding_name: Tóraíocht Códála ar an Oileán Mistéireach
   allcancode_name: Rith a Mharcó!
@@ -1000,13 +1011,31 @@
   course3_name: Cúrsa 3
   course4_name: Cúrsa 4
   accelerated_name: Cúrsa Luathaithe
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: 'Foras Feasa ar an Ríomheolaíocht: Aonad 3'
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
   cspunit3_gradelevel: Blianta 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: Cúrsa Luathaithe
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Cathair Ghríobháin Chlasaiceach
+  iceage_name: Ice Age
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Matamaitic
+  hoc_category_name: An Uair Chódála
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
   applab_name: Saotharlann Aipeanna
   applab_gradelevel: Aois 13+
   applab_shortdescription_congrats: Is timpeallacht ríomhchláraithe é App Lab lenar
@@ -1174,8 +1203,8 @@
     agus áilleacht an oighir.
   starwars_shortdescription: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche
     Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
-  playlab_shortdescription: Cruthaigh scéal nó cluiche le Súgradh is Dáiríre!
-  infinity_shortdescription: "Úsáid Súgradh is Dáiríre chun scéal nó cluiche a chruthú
+  playlab_shortdescription: Cruthaigh scéal nó cluiche sa Spraotharlann!
+  infinity_shortdescription: "Úsáid an Spraotharlann chun scéal nó cluiche a chruthú
     ina bhfuil carachtair Disney Infinity."
   artist_shortdescription: Tarraing pictiúir iontacha leis an Ealaíontóir!
   monsterocding_shortdescription: Eachtra ildaite féintreoraithe sa ríomhchlárú, dírithe
@@ -1365,7 +1394,7 @@
     cairde!
   starwars_longdescription: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche
     Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
-  playlab_longdescription: Cruthaigh scéal nó cluiche le Súgradh is Dáiríre! Is féidir
+  playlab_longdescription: Cruthaigh scéal nó cluiche sa Spraotharlann! Is féidir
     ainmhithe, foghlaithe mara, zombaithe, ninjanna, agus go leor carachtar eile a
     dhéanamh, fuaimeanna a sheinm, pointí a scóráil, agus fiú meallta tine a chaitheamh!
   monstercoding_longdescription: 'Is éard atá sa Tóraíocht Códála ar an Oileán Mistéireach
@@ -1754,12 +1783,11 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.

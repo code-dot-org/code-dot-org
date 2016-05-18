@@ -1,7 +1,7 @@
 /** @file App Lab-specific Tooltip Overlay */
 
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
-import elementUtils from './designElements/elementUtils';
+import { getId } from './designElements/elementUtils';
 import { draggedElementDropPoint } from './gridUtils';
 import { connect } from 'react-redux';
 import { ApplabInterfaceMode } from './constants';
@@ -61,7 +61,7 @@ export const AppLabTooltipOverlay = React.createClass({
 
     // If we're in design mode, get the element id without the prefix
     if (this.props.isInDesignMode) {
-      return elementUtils.getId(controlElement);
+      return getId(controlElement);
     }
 
     return controlElement.id;
