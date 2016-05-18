@@ -7,6 +7,20 @@ var CourseProgress = require('./components/progress/course_progress');
 var progress = module.exports;
 
 /**
+ * See ActivityConstants.
+ */
+const MINIMUM_PASS_RESULT = 20;
+const MINIMUM_OPTIMAL_RESULT = 30;
+const REVIEW_REJECTED_RESULT = 1500;
+const REVIEW_ACCEPTED_RESULT = 2000;
+
+/**
+ * Values larger than this result are server-dependent and shouldn't be cached
+ * in client storage.
+ */
+const MAXIMUM_CACHABLE_RESULT = 999;
+
+/**
  * See ApplicationHelper#activity_css_class.
  * @param result
  * @return {string}
@@ -15,10 +29,10 @@ progress.activityCssClass = function (result) {
   if (!result) {
     return 'not_tried';
   }
-  if (result >= 30) {
+  if (result >= MINIMUM_OPTIMAL_RESULT) {
     return 'perfect';
   }
-  if (result >= 20) {
+  if (result >= MINIMUM_PASS_RESULT) {
     return 'passed';
   }
   return 'attempted';
@@ -122,11 +136,11 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
 
     var status;
     var result = (serverProgress[level.id] || {}).result;
-    if (serverProgress && result >= 1000) {
-      if (result == 1500) {
+    if (serverProgress && result > MAXIMUM_CACHABLE_RESULT) {
+      if (result == REVIEW_REJECTED_RESULT) {
         status = 'rejected';
       }
-      if (result == 2000) {
+      if (result == REVIEW_ACCEPTED_RESULT) {
         status = 'accepted';
       }
     } else if (serverProgress && serverProgress[level.id] && serverProgress[level.id].submitted) {
