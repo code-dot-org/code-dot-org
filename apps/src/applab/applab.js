@@ -17,7 +17,6 @@ var apiBlockly = require('./apiBlockly');
 var dontMarshalApi = require('./dontMarshalApi');
 var blocks = require('./blocks');
 var AppLabView = require('./AppLabView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var dom = require('../dom');
@@ -39,8 +38,8 @@ var JsInterpreterLogger = require('../JsInterpreterLogger');
 var JsDebuggerUi = require('../JsDebuggerUi');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
-var VisualizationOverlay = require('./VisualizationOverlay');
-var ShareWarningsDialog = require('../templates/ShareWarningsDialog');
+var VisualizationOverlay = require('../templates/VisualizationOverlay');
+var AppLabCrosshairOverlay = require('./AppLabCrosshairOverlay');
 var logToCloud = require('../logToCloud');
 var DialogButtons = require('../templates/DialogButtons');
 var executionLog = require('../executionLog');
@@ -49,16 +48,18 @@ var Exporter = require('./Exporter');
 
 var createStore = require('../redux').createStore;
 var Provider = require('react-redux').Provider;
-var rootReducer = require('./reducers').rootReducer;
+var reducers = require('./reducers');
 var actions = require('./actions');
-var setInitialLevelProps = actions.setInitialLevelProps;
+import { changeScreen } from './redux/screens';
 var changeInterfaceMode = actions.changeInterfaceMode;
 var setInstructionsInTopPane = actions.setInstructionsInTopPane;
+var setPageConstants = require('../redux/pageConstants').setPageConstants;
 
 var applabConstants = require('./constants');
 var consoleApi = require('../consoleApi');
 
 var BoardController = require('../makerlab/BoardController');
+import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -78,13 +79,6 @@ var jsInterpreterLogger = null;
  * @type {JsDebuggerUi} Controller for JS debug buttons and console area
  */
 var debuggerUi = null;
-
-/**
- * Redux Store holding application state, transformable by actions.
- * @type {Store}
- * @see http://redux.js.org/docs/basics/Store.html
- */
-Applab.reduxStore = createStore(rootReducer);
 
 /**
  * Temporary: Some code depends on global access to logging, but only Applab
@@ -376,7 +370,7 @@ function renderFooterInSharedGame() {
 
   var menuItems = [
     {
-      text: applabMsg.reportAbuse(),
+      text: commonMsg.reportAbuse(),
       link: '/report_abuse',
       newWindow: true
     },
@@ -390,12 +384,12 @@ function renderFooterInSharedGame() {
       link: location.href + '/view'
     },
     {
-      text: applabMsg.copyright(),
+      text: commonMsg.copyright(),
       link: '#',
       copyright: true
     },
     {
-      text: applabMsg.privacyPolicy(),
+      text: commonMsg.privacyPolicy(),
       link: 'https://code.org/privacy',
       newWindow: true
     }
@@ -410,7 +404,7 @@ function renderFooterInSharedGame() {
     i18nDropdown: '',
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
-    baseMoreMenuString: applabMsg.builtOnCodeStudio(),
+    baseMoreMenuString: commonMsg.builtOnCodeStudio(),
     rowHeight: applabConstants.FOOTER_HEIGHT,
     style: {
       fontSize: 18
@@ -544,63 +538,6 @@ Applab.initReadonly = function (config) {
   studioApp.initReadonly(config);
 };
 
-function hasSeenDataAlert(channelId) {
-  var dataAlerts = localStorage.getItem('dataAlerts');
-  if (!dataAlerts) {
-    return false;
-  }
-  var channelIds = JSON.parse(dataAlerts);
-  return channelIds.indexOf(channelId) !== -1;
-}
-
-function markSeenDataAlert(channelId) {
-  var dataAlerts = localStorage.getItem('dataAlerts');
-  if (!dataAlerts) {
-    dataAlerts = '[]';
-  }
-  var channelIds = JSON.parse(dataAlerts);
-  channelIds.push(channelId);
-  localStorage.setItem('dataAlerts', JSON.stringify(channelIds));
-}
-
-function onCloseShareWarnings(showStoreDataAlert) {
-  // we closed the dialog without hitting too_young
-  // Only want to ask about age once across apps
-  if (!Applab.user.isSignedIn) {
-    utils.trySetLocalStorage('is13Plus', 'true');
-  }
-  // Only want to ask about storing data once per app.
-  if (showStoreDataAlert) {
-    markSeenDataAlert(Applab.channelId);
-  }
-  window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
-}
-
-function handleShareWarningsTooYoung() {
-  utils.trySetLocalStorage('is13Plus', 'false');
-  window.location.href = '/too_young';
-}
-
-/**
- * Starts the app after (potentially) Showing a modal warning about data sharing
- * (if appropriate) and determining user is old enough
- */
-Applab.startSharedAppAfterWarnings = function () {
-  // dashboard will redirect young signed in users
-  var is13Plus = Applab.user.isSignedIn || localStorage.getItem('is13Plus') === "true";
-  var showStoreDataAlert = Applab.hasDataStoreAPIs(Applab.getCode()) &&
-    !hasSeenDataAlert(Applab.channelId);
-
-  var modal = document.createElement('div');
-  document.body.appendChild(modal);
-
-  return ReactDOM.render(<ShareWarningsDialog
-    showStoreDataAlert={showStoreDataAlert}
-    is13Plus={is13Plus}
-    handleClose={onCloseShareWarnings.bind(null, showStoreDataAlert)}
-    handleTooYoung={handleShareWarningsTooYoung}/>, modal);
-};
-
 /**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
@@ -613,6 +550,8 @@ Applab.init = function (config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
+
+  config.runButtonClickWrapper = runButtonClickWrapper;
 
   Applab.channelId = config.channel;
   Applab.firebaseName = config.firebaseName;
@@ -659,7 +598,6 @@ Applab.init = function (config) {
                           !config.level.debuggerDisabled);
   var breakpointsEnabled = !config.level.debuggerDisabled;
   var showDebugConsole = !config.hideSource && config.level.editCode;
-  var extraControlRows;
 
   // Construct a logging observer for interpreter events
   if (!config.hideSource) {
@@ -668,15 +606,19 @@ Applab.init = function (config) {
 
   if (showDebugButtons || showDebugConsole) {
     debuggerUi = new JsDebuggerUi(Applab.runButtonClick);
-    var extraControlRowsHtml = debuggerUi.getMarkup(studioApp.assetUrl, {
-      showButtons: showDebugButtons,
-      showConsole: showDebugConsole
-    });
-    extraControlRows = <ProtectedStatefulDiv dangerouslySetInnerHTML={{ __html : extraControlRowsHtml }} />;
   }
 
   config.loadAudio = function () {
     studioApp.loadAudio(skin.failureSound, 'failure');
+  };
+
+  config.shareWarningInfo = {
+    hasDataAPIs: function () {
+      return Applab.hasDataStoreAPIs(Applab.getCode());
+    },
+    onWarningsComplete: function () {
+      window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
+    }
   };
 
   config.afterInject = function () {
@@ -697,7 +639,7 @@ Applab.init = function (config) {
     // should never be present on such levels, however some levels do
     // have levelHtml stored due to a previous bug. HTML set by levelbuilder
     // is stored in startHtml, not levelHtml.
-    if (Applab.reduxStore.getState().level.isDesignModeHidden) {
+    if (studioApp.reduxStore.getState().pageConstants.isDesignModeHidden) {
       config.level.levelHtml = '';
     }
 
@@ -705,20 +647,10 @@ Applab.init = function (config) {
     // and sized in drawDiv().
     Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
 
-    if (!!config.level.projectTemplateLevelName) {
-      studioApp.displayWorkspaceAlert('warning', <div>{commonMsg.projectWarning()}</div>);
-    }
-
-    studioApp.alertIfAbusiveProject('#codeWorkspace');
-
     // IE9 doesnt support the way we handle responsiveness. Instead, explicitly
     // resize our visualization (user can still resize with grippy)
     if (!utils.browserSupportsCssMedia()) {
       studioApp.resizeVisualization(300);
-    }
-
-    if (studioApp.share) {
-      Applab.startSharedAppAfterWarnings();
     }
   };
 
@@ -765,9 +697,7 @@ Applab.init = function (config) {
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructions');
-
-  config.reduxStore = Applab.reduxStore;
+  config.showInstructionsInTopPane = true;
 
   Applab.storage.populateTable(level.dataTables, false); // overwrite = false
   Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
@@ -775,29 +705,11 @@ Applab.init = function (config) {
   var onMount = function () {
     studioApp.init(config);
 
-    var viz = document.getElementById('visualization');
-    var vizCol = document.getElementById('visualizationColumn');
-
-    if (!config.noPadding) {
-      viz.className += " with_padding";
-      vizCol.className += " with_padding";
-    }
-
-    if (Applab.reduxStore.getState().level.isEmbedView || config.hideSource) {
-      // no responsive styles active in embed or hideSource mode, so set sizes:
-      viz.style.width = Applab.appWidth + 'px';
-      viz.style.height = (shouldRenderFooter() ? Applab.appHeight : Applab.footerlessAppHeight) + 'px';
-      // Use offsetWidth of viz so we can include any possible border width:
-      vizCol.style.maxWidth = viz.offsetWidth + 'px';
-    }
-
     if (debuggerUi) {
       debuggerUi.initializeAfterDomCreated({
         defaultStepSpeed: config.level.sliderSpeed
       });
     }
-
-    window.addEventListener('resize', Applab.renderVisualizationOverlay);
 
     var finishButton = document.getElementById('finishButton');
     if (finishButton) {
@@ -815,7 +727,7 @@ Applab.init = function (config) {
     }
 
     if (level.editCode) {
-      setupReduxSubscribers(Applab.reduxStore);
+      setupReduxSubscribers(studioApp.reduxStore);
 
       designMode.addKeyboardHandlers();
 
@@ -833,39 +745,25 @@ Applab.init = function (config) {
   }.bind(this);
 
   // Push initial level properties into the Redux store
-  Applab.reduxStore.dispatch(setInitialLevelProps({
-    assetUrl: studioApp.assetUrl,
+  studioApp.setPageConstants(config, {
     channelId: config.channel,
+    visualizationHasPadding: !config.noPadding,
     isDesignModeHidden: !!config.level.hideDesignMode,
-    isEmbedView: !!config.embed,
-    isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isShareView: !!config.share,
+    isIframeEmbed: !!config.level.iframeEmbed,
     isViewDataButtonHidden: !!config.level.hideViewDataButton,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
-    instructionsMarkdown: config.level.markdownInstructions,
-    instructionsInTopPane: config.showInstructionsInTopPane,
-    puzzleNumber: config.level.puzzle_number,
-    stageTotal: config.level.stage_total,
-  }));
+    showDebugButtons: showDebugButtons,
+    showDebugConsole: showDebugConsole,
+    showDebugWatch: false,
+    playspacePhoneFrame: !config.share && experiments.isEnabled('phoneFrame')
+  });
 
-  Applab.reduxStore.dispatch(changeInterfaceMode(
+  studioApp.reduxStore.dispatch(changeInterfaceMode(
     Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
-
-  // TODO - move into AppLabView and put necessary props into store
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={studioApp.localeDirection()}
-      editCode={!!config.level.editCode}
-      readonlyWorkspace={Applab.reduxStore.getState().level.isReadOnlyWorkspace}
-      extraControlRows={extraControlRows}
-    />
-  );
-
   Applab.reactInitialProps_ = {
-    codeWorkspace: codeWorkspace,
     onMount: onMount
   };
 
@@ -889,8 +787,27 @@ function setupReduxSubscribers(store) {
     if (state.interfaceMode !== lastState.interfaceMode) {
       onInterfaceModeChange(state.interfaceMode);
     }
+
+    if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
+      Applab.onIsRunningChange();
+    }
   });
 }
+
+Applab.onIsRunningChange = function () {
+  Applab.setCrosshairCursorForPlaySpace();
+};
+
+/**
+ * Hopefully a temporary measure - we do this ourselves for now because this is
+ * a 'protected' div that React doesn't update, but eventually would rather do
+ * this with React.
+ */
+Applab.setCrosshairCursorForPlaySpace = function () {
+  var showOverlays = shouldOverlaysBeVisible(studioApp.reduxStore.getState());
+  $('#divApplab').toggleClass('withCrosshair', showOverlays);
+  $('#designModeViz').toggleClass('withCrosshair', true);
+};
 
 /**
  * Cache of props, established during init, to use when re-rendering top-level
@@ -916,7 +833,7 @@ Applab.render = function () {
     onScreenCreate: designMode.createScreen
   });
   ReactDOM.render(
-    <Provider store={Applab.reduxStore}>
+    <Provider store={studioApp.reduxStore}>
       <AppLabView {...nextProps} />
     </Provider>,
     Applab.reactMountPoint_);
@@ -928,11 +845,14 @@ Applab.canExportApp = function () {
 };
 
 Applab.exportApp = function () {
+  Applab.runButtonClick();
+  var html = document.getElementById('divApplab').outerHTML;
+  studioApp.resetButtonClick();
   return Exporter.exportApp(
     // TODO: find another way to get this info that doesn't rely on globals.
     window.dashboard && window.dashboard.project.getCurrentName() || 'my-app',
     studioApp.editor.getValue(),
-    designMode.serializeToLevelHtml()
+    html
   );
 };
 
@@ -963,10 +883,7 @@ Applab.clearEventHandlersKillTickLoop = function () {
  * @returns {boolean}
  */
 Applab.isRunning = function () {
-  // We are _always_ running in share mode.
-  // TODO: (bbuchanan) Needs a better condition. Tracked in bug:
-  //      https://www.pivotaltracker.com/story/show/105022102
-  return !!($('#resetButton').is(':visible') || studioApp.share);
+  return studioApp.isRunning();
 };
 
 /**
@@ -1029,8 +946,6 @@ Applab.reset = function (first) {
     applabTurtle.turtleSetVisibility(true);
   }
 
-  Applab.renderVisualizationOverlay();
-
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
@@ -1056,44 +971,23 @@ Applab.reset = function (first) {
 };
 
 /**
- * Manually re-render visualization SVG overlay.
- * Should call whenever its state/props would change.
- */
-Applab.renderVisualizationOverlay = function () {
-  var divApplab = document.getElementById('divApplab');
-  var designModeViz = document.getElementById('designModeViz');
-  var visualizationOverlay = document.getElementById('visualizationOverlay');
-  if (!divApplab || !designModeViz || !visualizationOverlay) {
-    return;
-  }
-
-  // Enable crosshair cursor for divApplab and designModeViz
-  $(divApplab).toggleClass('withCrosshair', Applab.isCrosshairAllowed());
-  $(designModeViz).toggleClass('withCrosshair', true);
-
-  if (!Applab.visualizationOverlay_) {
-    Applab.visualizationOverlay_ = new VisualizationOverlay();
-  }
-
-  // Calculate current visualization scale to pass to the overlay component.
-  var unscaledWidth = parseInt(visualizationOverlay.getAttribute('width'));
-  var scaledWidth = visualizationOverlay.getBoundingClientRect().width;
-
-  Applab.visualizationOverlay_.render(visualizationOverlay, {
-    isCrosshairAllowed: Applab.isCrosshairAllowed(),
-    scale: scaledWidth / unscaledWidth,
-    isInDesignMode: Applab.isInDesignMode()
-  });
-};
-
-/**
  * Save the app state and trigger any callouts, then call the callback.
  * @param callback {Function}
  */
-studioApp.runButtonClickWrapper = function (callback) {
+function runButtonClickWrapper(callback) {
   $(window).trigger('run_button_pressed');
+
+  const defaultScreenId = elementUtils.getDefaultScreenId();
+  // Reset our design mode screen to be the default one, so that after we reset
+  // we'll end up on the default screen rather than whichever one we were last
+  // editing.
+  studioApp.reduxStore.dispatch(changeScreen(defaultScreenId));
+  // Also set the visualization screen to be the default one before we serialize
+  // so that our serialization isn't changing based on whichever screen we were
+  // last editing.
+  Applab.changeScreen(defaultScreenId);
   Applab.serializeAndSave(callback);
-};
+}
 
 /**
  * We also want to serialize in save in some other cases (i.e. entering code
@@ -1115,24 +1009,18 @@ Applab.runButtonClick = function () {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
-  if (!resetButton.style.minWidth) {
-    resetButton.style.minWidth = runButton.offsetWidth + 'px';
-  }
+
   studioApp.toggleRunReset('reset');
   if (studioApp.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
   Applab.execute();
 
-  // Re-render overlay to update cursor rules.
-  Applab.renderVisualizationOverlay();
-
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
   }
-
 
   if (studioApp.editor) {
     logToCloud.addPageAction(logToCloud.PageAction.RunButtonClick, {
@@ -1222,6 +1110,7 @@ Applab.execute = function () {
   var codeWhenRun;
   if (level.editCode) {
     codeWhenRun = studioApp.getCode();
+    Applab.currentExecutionLog = [];
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Applab.Globals namespace)
@@ -1288,9 +1177,9 @@ Applab.execute = function () {
 };
 
 Applab.beginVisualizationRun = function () {
-  // Set focus on the default screen so key events can be handled
-  // right from the start without requiring the user to adjust focus.
-  Applab.loadDefaultScreen();
+  // Call change screen on the default screen to ensure it has focus
+  var defaultScreenId = Applab.getScreens().first().attr('id');
+  Applab.changeScreen(defaultScreenId);
 
   Applab.running = true;
   $('#headers').addClass('dimmed');
@@ -1315,7 +1204,7 @@ function onInterfaceModeChange(mode) {
       Applab.serializeAndSave();
       var divApplab = document.getElementById('divApplab');
       designMode.parseFromLevelHtml(divApplab, false);
-      Applab.changeScreen(Applab.reduxStore.getState().currentScreenId);
+      Applab.changeScreen(studioApp.reduxStore.getState().screens.currentScreenId);
     } else {
       Applab.activeScreen().focus();
     }
@@ -1653,8 +1542,9 @@ Applab.activeScreen = function () {
 };
 
 /**
- * Changes the active screen by toggling all screens in divApplab to be non-visible,
- * unless they match the provided screenId. Also focuses the screen.
+ * Changes the active screen for the visualization by toggling all screens in
+ * divApplab to be non-visible, unless they match the provided screenId. Also
+ * focuses the screen.
  */
 Applab.changeScreen = function (screenId) {
   Applab.getScreens().each(function () {
@@ -1674,11 +1564,6 @@ Applab.changeScreen = function (screenId) {
   }
 };
 
-Applab.loadDefaultScreen = function () {
-  var defaultScreenId = Applab.getScreens().first().attr('id');
-  Applab.changeScreen(defaultScreenId);
-};
-
 Applab.getScreens = function () {
   return $('#divApplab > .screen');
 };
@@ -1686,10 +1571,6 @@ Applab.getScreens = function () {
 // Wrap design mode function so that we can call from commands
 Applab.updateProperty = function (element, property, value) {
   return designMode.updateProperty(element, property, value);
-};
-
-Applab.isCrosshairAllowed = function () {
-  return !Applab.isRunning();
 };
 
 Applab.showRateLimitAlert = function () {
@@ -1705,4 +1586,8 @@ Applab.showRateLimitAlert = function () {
   } else {
     studioApp.displayWorkspaceAlert("error", alert);
   }
+};
+
+Applab.getAppReducers = function () {
+  return reducers;
 };

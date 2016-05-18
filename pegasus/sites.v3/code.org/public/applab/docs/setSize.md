@@ -61,8 +61,8 @@ setSize(id, width, height)
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
 | id | string | Yes | The ID of the UI element to which this event handler applies. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _. |
-| width | number | No | The width to set the UI element to, in pixels. |
-| height | number | No | The height to set the UI element to, in pixels. |
+| width | number | Yes | The width to set the UI element to, in pixels. |
+| height | number | Yes | The height to set the UI element to, in pixels. |
 
 [/parameters]
 

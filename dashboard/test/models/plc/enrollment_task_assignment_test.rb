@@ -14,12 +14,12 @@ class Plc::EnrollmentTaskAssignmentTest < ActiveSupport::TestCase
     @unit_enrollment = Plc::EnrollmentUnitAssignment.create(
         plc_user_course_enrollment: @enrollment,
         plc_course_unit: @course_unit,
-        status: Plc::EnrollmentUnitAssignment::PENDING_EVALUATION
+        status: Plc::EnrollmentUnitAssignment::START_BLOCKED
     )
   end
 
   test 'Completing tasks does not mark module / course complete until all are complete' do
-    assert_equal Plc::EnrollmentUnitAssignment::PENDING_EVALUATION, @unit_enrollment.status
+    assert_equal Plc::EnrollmentUnitAssignment::START_BLOCKED, @unit_enrollment.status
     @unit_enrollment.enroll_user_in_unit_with_learning_modules([@learning_module1, @learning_module2])
     task_assignments = @enrollment.plc_task_assignments
 
@@ -45,7 +45,6 @@ class Plc::EnrollmentTaskAssignmentTest < ActiveSupport::TestCase
   test 'assert_icon_style_for_tasks' do
     learning_module = create(:plc_learning_module, plc_course_unit: @course_unit)
 
-    written_task = create(:plc_written_submission_task, plc_learning_modules: [learning_module])
     script_completion_task = create(:plc_script_completion_task, plc_learning_modules: [learning_module])
     learning_resource_task = create(:plc_learning_resource_task, icon: 'some icon', plc_learning_modules: [learning_module])
 
@@ -53,27 +52,15 @@ class Plc::EnrollmentTaskAssignmentTest < ActiveSupport::TestCase
 
     learning_resource_task_assignment = @unit_enrollment.plc_task_assignments.where(plc_task: learning_resource_task).first
     script_completion_task_assignment =  @unit_enrollment.plc_task_assignments.where(plc_task: script_completion_task).first
-    written_task_assignment = @unit_enrollment.plc_task_assignments.where(plc_task: written_task).first
 
-    learning_resource_expected_icons_and_styles = Hash[
-        Plc::EnrollmentTaskAssignment::TASK_STATUS_STATES.map {|status| [status, {icon: 'some icon', style: ''}]}
-    ]
-
-    script_completion_expected_icons_and_styles = Hash[
-        Plc::EnrollmentTaskAssignment::NOT_STARTED, {icon: 'fa-circle-o', style: 'color: black'},
-        Plc::EnrollmentTaskAssignment::IN_PROGRESS, {icon: 'fa-adjust', style: 'color: darkgoldenrod'},
-        Plc::EnrollmentTaskAssignment::COMPLETED, {icon: 'fa-check-circle', style: 'color: green'},
-    ]
-    written_task_expected_icons_and_styles = Hash[
-        Plc::WrittenEnrollmentTaskAssignment::NOT_STARTED, {icon: 'fa-circle-o', style: 'color: black'},
-        Plc::WrittenEnrollmentTaskAssignment::IN_PROGRESS, {icon: 'fa-adjust', style: 'color: darkgoldenrod'},
-        Plc::WrittenEnrollmentTaskAssignment::REVIEW_REJECTED, {icon: 'fa-exclamation-circle', style: 'color: red'},
-        Plc::WrittenEnrollmentTaskAssignment::COMPLETED, {icon: 'fa-check-circle', style: 'color: green'},
-    ]
-
-    expected_icon_style_map = Hash[learning_resource_task_assignment, learning_resource_expected_icons_and_styles,
-                                   script_completion_task_assignment, script_completion_expected_icons_and_styles,
-                                   written_task_assignment, written_task_expected_icons_and_styles]
+    expected_icon_style_map = {
+      learning_resource_task_assignment => Plc::EnrollmentTaskAssignment::TASK_STATUS_STATES.map{ |status| [status, {icon: 'some icon', style: ''}] }.to_h,
+      script_completion_task_assignment => {
+        Plc::EnrollmentTaskAssignment::NOT_STARTED => {icon: 'fa-circle-o', style: 'color: black'},
+        Plc::EnrollmentTaskAssignment::IN_PROGRESS => {icon: 'fa-adjust', style: 'color: darkgoldenrod'},
+        Plc::EnrollmentTaskAssignment::COMPLETED => {icon: 'fa-check-circle', style: 'color: green'},
+      }
+    }
 
     expected_icon_style_map.each do |assignment, style_map|
       style_map.each do |status, styling|

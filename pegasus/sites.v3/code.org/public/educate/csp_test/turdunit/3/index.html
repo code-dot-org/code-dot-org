@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="Building off the need for addressing messages that arose during the Battleship game activity, this lesson asks students to take time to invent a communication protocol and describe its binary encoding. The challenge is to make the protocol efficient (in terms of number of bits required) and flexible (able to handle different situations). Students discuss the requirements of an addressing protocol - minimally, the sender and recipient’s identifying information - perhaps including the size of the message, date sent, priority, etc. Students choose a number of bits for addresses and justify this choice with the maximum number of users this number of bits could support. Students also discuss why IP addresses must be of a fixed length.">
+    <title>v1 Unit 2 Lesson 3 Invent an Addressing Protocol</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/turdunit/"><span class="h2">Unit</span><span class="h1">8</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/turdunit/1" data-pdf-link="#unit8lesson1">
+            1
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/turdunit/2" data-pdf-link="#unit8lesson2">
+            2
+        </a>
+        </div>
+        
+            
+                
+                    <div class="lesson current">
+                
+            
+        <a href="/educate/csp_test/turdunit/3" data-pdf-link="#unit8lesson3">
+            3
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/turdunit/4" data-pdf-link="#unit8lesson4">
+            4
+        </a>
+        </div>
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit8lesson3">
+        
+            
+                <h1>Lesson 3: v1 Unit 2 Lesson 3 Invent an Addressing Protocol</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+                
+                Unplugged
+            
+                | 
+                Group Problem Solving
+            
+                | 
+                Widget
+            
+                | 
+                Internet Simulator
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>Building off the need for addressing messages that arose during the Battleship game activity, this lesson asks students to take time to invent a communication protocol and describe its binary encoding.  The challenge is to make the protocol efficient (in terms of number of bits required) and flexible (able to handle different situations).  Students discuss the requirements of an addressing protocol - minimally, the sender and recipient’s identifying information - perhaps including the size of the message, date sent, priority, etc. Students choose a number of bits for addresses and justify this choice with the maximum number of users this number of bits could support. Students also discuss why IP addresses must be of a fixed length. </p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>In this lesson students will invent two ideas central to the Internet and how it works: fixed-size numeric addresses for computers (IP addresses) and a structured “packet” that standardizes the bit layout for information you need to send.  Students will invent an addressing scheme and message (datagram) structure for playing Battleship, but these same ideas form a communication protocol that is very similar to real IP addresses and IPv4 packets that are used on the Internet.  </p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocv1-unit-2-lesson-3-invent-an-addressing-protocol">
+                
+                    <h3>Getting Started</h3>
+                
+                    <h3>Activity</h3>
+                
+                    <h3>Wrap-up</h3>
+                
+                    <h3>Assessment</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Construct a binary communication protocol for playing Battleship using the Internet Simulator.</li>
+                    
+                        <li>Connect choices about the Battleship protocol with choices made for real IP addresses and IPv4 packets.</li>
+                    
+                        <li>Identify necessary information to include in a binary communication protocol and how to order the bits.</li>
+                    
+                        <li>Explain properties of IP addresses and IPv4 packets.</li>
+                    
+                        <li>Explain the difference between IPv4 versus IPv6.</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <ul>
+<li><a href="http://forum.code.org/c/csp-unit2/lesson3" target="_blank">Forum</a></li>
+<li>Poster paper or methods/materials for students to present</li>
+</ul>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Teacher</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2/stage/3/puzzle/1' target='_blank' class='print_link'>Video Guide KEY for "IP Addresses and DNS"</a> - Answer Key
+                                </li>
+                            
+                        </ul>
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2' target='_blank' class='print_link'>CSP Unit 2</a> - Code Studio
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1hq1UNK1Q4K0LHqmu0_yeO0a0NQKHzC8W--Q0QaISHVI' target='_blank' class='print_link'>Invent a Binary Protocol for Battleship</a> - Activity Guide (<a href='https://docs.google.com/document/d/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://youtu.be/5o8CwafCxnU' target='_blank' class='print_link'>The Internet: IP Addresses and DNS</a> - Video (<a href='https://videos.code.org/2015/csp/concept_internet_ip_dns.mp4' class='print_link'>download</a>)
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing' target='_blank' class='print_link'>Video Guide for "IP Addresses and DNS"</a> - Worksheet (<a href='https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+                <h2>Vocabulary</h2>
+                <ul>
+                    
+                        <li><strong>IP Address</strong> - A number assigned to any item that is connected to the Internet.</li>
+                    
+                        <li><strong>Packets</strong> - Small chunks of information that have been carefully formed from larger chunks of information.</li>
+                    
+                        <li><strong>Protocol</strong> - A set of rules governing the exchange or transmission of data between devices.</li>
+                    
+                </ul>
+            
+
+        </div>
+    </div>
+
+    <div id="v1-unit-2-lesson-3-invent-an-addressing-protocolcontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started</h2>
+                    <p><strong>Transition:</strong> </p>
+<ul>
+<li>In the last lesson, you and your partner(s) had to figure out how to identify yourselves in your Battleship messages. Each message had to include information about who sent it and where it was going. We call that “addressing information,” for obvious reasons! It’s the same with sending a letter through the mail: you need your recipient’s address and the return address on it.</li>
+</ul>
+<h3 id="how-are-people-identified-on-a-phone-network">How are people identified on a phone network?</h3>
+<p>By their phone number, duh.</p>
+<ul>
+<li>What are the benefits of using a phone <em>number</em>?  Think about the characteristics of phone numbers.  Why was the phone system designed to assign a number to every phone instead of a name?  How many total phone numbers are there?<ul>
+<li>There are about 10 billion phone numbers, <em>999-999-9999</em> phone numbers for the United States (more world wide if you include international codes).</li>
+<li>There is a fixed number of digits. This is important for predictability and usefulness; if phone numbers varied in length it would be tough to track.</li>
+<li>Names vary in length too much and there are many many duplicates, no unique identifier.  Phone numbers allow a unique ID to be attached to any device.</li>
+</ul>
+</li>
+<li>Why do you think phone numbers have 10 digits?  Why not 9 or 11 or 15?<ul>
+<li>Someone thought that 10 billion numbers would be enough.  Given that there are about 320 million people (including children and babies) in the United States, it would be enough for each person to have 25 or 30 phone numbers.</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity</h2>
+                    <h3 id="activity-invent-a-binary-addressing-protocol-for-battleship">Activity: Invent a binary addressing protocol for Battleship.</h3>
+<p>Hand out and go over <a href="Resource not found" target="_blank">Activity Guide - Inventing a Protocol for Battleship</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<p>Lead students with these questions if they are having difficulty coming up with protocols: </p>
+</div>
+<div>
+<ul>
+<li>How will you standardize the recipient and sender addresses?  </li>
+<li>Where in the message will you place your addresses?  Recipient or sender first?  </li>
+<li>How do you know where one ends and the other begins?  </li>
+<li>What other information do you need to include?</li>
+</ul>
+</div>
+</div>
+<p>Students might come up with ways to encode their names in binary, but they might not see the benefits of assigning numbers to people instead. Challenge students with these questions. <em>Prompt:</em></p>
+<ul>
+<li>If students simply encoded their names into binary:<ul>
+<li>How many people in the world have the same name? Is it a good idea to map a sender or recipient’s identity to their real name? What if their name is John Smith?</li>
+</ul>
+</li>
+<li>If students used full names or additional identifying information:<ul>
+<li>Should there be a limit on the length of your protocol? What is the downside of using long names?</li>
+</ul>
+</li>
+<li>If students did not use fixed-length addressing:<ul>
+<li>How does the Internet know to separate the addressing information from the message itself? That is, how does the Internet know where the protocol part ends and the message begins?</li>
+</ul>
+</li>
+</ul>
+<p><strong>Share:</strong> Students should present their protocols. Prompt: What are some common elements of the protocols your classmates came up with? Are there any problems?</p>
+<p><strong>Discuss:</strong></p>
+<ul>
+<li>You can’t use real names as addresses on the Internet. More than one person can share the same name. Sender and recipient information needs to be unique.</li>
+<li>You can’t just translate a person’s name and info into binary, either. This takes up way too much binary space! Addresses are probably numeric in nature.</li>
+<li>We need a clear way for the Internet to know when the protocol ends and the message begins, and we only have 0s and 1s to work with.</li>
+</ul>
+<p><strong>Explain:</strong></p>
+<ul>
+<li>A good solution uses a numeric address (not tied to a person’s name) of fixed length. The numeric part deals with the concerns of a needing a unique identifier and taking up less space, and the fixed length solves the problem of letting the Internet know where the message begins. If all addresses are the same length, it’s easy to define where addresses start and end.</li>
+<li>How many bits do you need for addresses?<ul>
+<li>For 3-person Battleship, you only need 2 bits for an address, since there are only 3 people; each can have a unique code.</li>
+</ul>
+</li>
+<li>How many bits are needed for the total message?<ul>
+<li>Answers to this will vary and creativity should be encouraged.  However, it should be evident from the students’ protocols that they recognize the fundamental elements of the game and what might be able to be compressed into only a few bits.  For example, in the game board the columns are given as letters A, B, C; since there are only 3 possibilities, the column could be encoded with 2 bits rather than, say using the full 8-bit ASCII code.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Exemplar:</strong></p>
+<p>A simple, but clever encoding protocol is to recognize that the addresses, coordinates, and hit/miss messages can each be encoded with 2 bits (i.e. a list of 5 numbers in the range 0-3), and that you can make a combined message protocol that would allow a player to communicate anything needed for the game.</p>
+<p>The scheme shown below uses 10 bits total. The last two bits are interesting: they indicate whether this is a shot being fired for the given row and column or whether it’s a hit/miss response to the given row and column.  Since the respondent who says hit or miss must verify the coordinates of the shot they are responding to, the recipient doesn’t have to remember the last shot they called.</p>
+<p>Communication protocols are most useful and less error prone when a message contains everything the recipient needs to know to process the message.</p>
+<p><strong>Example of a call and response for battleship:</strong></p>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/U2L03-battleship-exemplar.png"><img alt="" class="center" src="https://code.org/educate/docs/csp/U2L03-battleship-exemplar.png"></a></p>
+<h3 id="real-ip-addresses-background-and-video">Real IP Addresses - Background and Video.</h3>
+<p>It turns out computers on the Internet are addressed in a similar way to phones for many of the same reasons.  The real addresses used on the Internet are called “Internet Protocol Addresses” or “IP Addresses” for short.</p>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<p><strong>Do some rapid research (Optional)</strong></p>
+</div>
+<div>
+<p>At this point, you could have students look up the real IP packet structure and it might make some sense to them.  They might find it satisfying and empowering to be able to understand a more technical article.  The Wikipedia article on IPv4 packets shows how all the bits are laid out: https://en.wikipedia.org/wiki/IPv4#Packet_structure</p>
+</div>
+</div>
+<p><strong>Video:</strong> <a class="resource" href="https://youtu.be/5o8CwafCxnU" target="_blank">The Internet: IP Addresses and DNS</a></p>
+<ul>
+<li>Have students watch the video and complete Worksheet - Video Guide for “IP Addresses and DNS”.</li>
+<li>You may choose to have students stop the video at 4:10 so that only the content on IP addresses is covered, as DNS will be covered later. In this case, you should split the video worksheet into two parts.</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up</h2>
+                    <p><strong>Recap IP address background and terminology:</strong></p>
+<p>Teacher can give this info in interest of time; a suggested visual aid: show a real IPv4 packet.</p>
+<ul>
+<li>The message structure you invented for your Battleship protocol is generally described as a <strong>“datagram”</strong> or <strong>“packet”</strong>.</li>
+<li>The real Internet uses a protocol called…wait for it…the <strong>“Internet Protocol” or IP</strong>.   Computers have numeric addresses called <strong>“IP addresses”</strong>.</li>
+<li>The most common datagram or packet structure in use today is called an <strong>“IPv4 packet”</strong> (which means IP version 4).  </li>
+<li>The Internet Protocol is a general protocol used to send messages of any type.</li>
+</ul>
+<p>So we learned about real IP addresses and real IP packets.  Tomorrow we’ll look at our Internet Simulator version of packets, which is greatly simplified.</p>
+<p><strong>Test Your Protocol in the Internet Simulator (Optional):</strong> Students have been provided access to the Internet Simulator. If they have time students may wish to test their protocols there. While interpreting the binary information is not explicitly the goal of this lesson, it will provide an opportunity to think more critically about what information they have included in their protocols.</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p><strong>Questions</strong> (also included in Code Studio):</p>
+<ol>
+<li>
+<p>How many users would a fixed-length IP address system using 6 bits support?</p>
+<p>a) 6 users</p>
+<p>b) 12 users</p>
+<p>c) 32 users</p>
+<p>d) 64 users</p>
+</li>
+<li>
+<p>IP addresses contain information similar to the address for a letter, where you need to include the state, zip code, street and number. This is called:</p>
+<p>a) hierarchy</p>
+<p>b) abstraction</p>
+<p>c) protocol</p>
+<p>d) packet</p>
+</li>
+<li>
+<p>Why doesn’t it make sense for users to be identified by their real names on the Internet?</p>
+</li>
+</ol>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li>How else is the Internet Simulator different right now from how you think the Internet really works?</li>
+<li>An interesting question to ask is: what would you change about the way the Internet Simulator works right now if you could? Some possibilities:<ul>
+<li>You still have to view everyone’s messages to everyone and pick out the ones meant for you. That’s a lot of noise, and a lot of messages to sift through! It would be nice if only the messages meant for you were sent directly to you.</li>
+<li>It’s difficult to remember everyone’s numeric IP address. It would be nice if you could assign nicknames or some other shortcut.</li>
+<li>If you forget someone’s IP address, there’s no way to look it up. It would be nice if there were some equivalent of a phone book, so you could find out your friends’ IP addresses. (Keep in mind, current technology like email does not work this way – you can’t just look up a friend’s email address unless they tell you what it is.)</li>
+<li>There’s no security! Anyone can look at anyone’s messages, or pretend to be anybody else! It would be nice if there was some protection of Internet communication.</li>
+</ul>
+</li>
+<li><a href="http://www.cs.cmu.edu/~tcortina/15110m14/ps11/AppendixA.pdf" target="_blank">Blown to Bits (www.bitsbook.com), Appendix</a> - The Internet as System and Spirit, pp. 301-309 (The Internet as a Communication System), then answer the following questions:<ul>
+<li>The layers of protocols used in network communication is an example of abstraction. Can you give other examples of abstraction in everyday life?</li>
+<li>Compare and contrast sending a postcard versus sending an email.</li>
+</ul>
+</li>
+</ul>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CD</strong> - Computers &amp; Communication Devices</summary>
+                    <ul>
+                        
+                            <li><strong>CD.L3A:8</strong> - Explain the basic components of computer networks (e.g., servers, file protection, routing, spoolers and queues, shared resources, and fault-tolerance).</li>
+                        
+                            <li><strong>CD.L3A:9</strong> - Describe how the Internet facilitates global communication.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CL</strong> - Collaboration</summary>
+                    <ul>
+                        
+                            <li><strong>CL.L2:3</strong> - Collaborate with peers, experts and others using collaborative practices such as pair programming, working in project teams and participating in-group active learning activities.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>2.1</strong> - A variety of abstractions built upon binary sequences can be used to represent all digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.1</strong> - Describe the variety of abstractions used to represent data. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.1A</strong> - Digital data is represented by abstractions at different levels.</li>
+                                
+                                    <li><strong>2.1.1B</strong> - At the lowest level, all digital data are represented by bits.</li>
+                                
+                                    <li><strong>2.1.1C</strong> - At a higher level, bits are grouped to represent abstractions, including but not limited to numbers, characters, and color.</li>
+                                
+                                    <li><strong>2.1.1E</strong> - At one of the lowest levels of abstraction, digital data is represented in binary (base 2) using only combinations of the digits zero and one.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                        <details class="standard">
+                            <summary><strong>2.1.2</strong> - Explain how binary sequences are used to represent digital data. [P5]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.1.2D</strong> - The interpretation of a binary sequence depends on how it is used.</li>
+                                
+                                    <li><strong>2.1.2E</strong> - A sequence of bits may represent instructions or data.</li>
+                                
+                                    <li><strong>2.1.2F</strong> - A sequence of bits may represent different types of data in different contexts.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.3</strong> - There are trade offs when representing information as digital data.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.3.1</strong> - Analyze how data representation, storage, security, and transmission of data involve computational manipulation of information. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.3.1A</strong> - Digital data representations involve trade  offs related to storage, security, and privacy concerns.</li>
+                                
+                                    <li><strong>3.3.1B</strong> - Security concerns engender tradeoffs in storing and transmitting information.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#tocv1-unit-2-lesson-3-invent-an-addressing-protocol').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#v1-unit-2-lesson-3-invent-an-addressing-protocolcontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'v1-unit-2-lesson-3-invent-an-addressing-protocol', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

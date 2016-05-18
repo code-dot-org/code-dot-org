@@ -2,9 +2,12 @@ var path = require('path');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
 var glob = require('glob');
+var readline = require('readline');
+var logBuildTimes = require('./script/log-build-times');
 
 module.exports = function (grunt) {
-  require('time-grunt')(grunt);
+  // Decorate grunt to record and report build durations.
+  logBuildTimes(grunt);
 
   var config = {};
 
@@ -309,7 +312,7 @@ module.exports = function (grunt) {
 
   var browserifyExec = getBrowserifyCommand({
     globalShim: true,
-    cacheFile: 'browserifyinc-cache.json',
+    cacheFile: 'browserifyinc.cache.json',
     srcFiles: allFilesSrc,
     destFiles: allFilesDest,
     factorBundle: APPS.length > 1,
@@ -317,7 +320,7 @@ module.exports = function (grunt) {
 
   var applabAPIExec = getBrowserifyCommand({
     globalShim: false,
-    cacheFile: 'applab-api-cache.json',
+    cacheFile: 'applab-api.cache.json',
     srcFiles: ['build/js/applab/api-entry.js'],
     destFiles: [outputDir + 'applab-api.js'],
     factorBundle: false,
@@ -371,15 +374,19 @@ module.exports = function (grunt) {
     config.uglify[app] = {files: appUglifiedFiles};
   });
 
-  config.uglify.interpreter = {files: {}};
-  config.uglify.interpreter.files[outputDir + 'jsinterpreter/interpreter.min.js'] =
+  config.uglify.lib = {files: {}};
+  config.uglify.lib.files[outputDir + 'jsinterpreter/interpreter.min.js'] =
       outputDir + 'jsinterpreter/interpreter.js';
-  config.uglify.interpreter.files[outputDir + 'jsinterpreter/acorn.min.js'] =
+  config.uglify.lib.files[outputDir + 'jsinterpreter/acorn.min.js'] =
       outputDir + 'jsinterpreter/acorn.js';
+  config.uglify.lib.files[outputDir + 'p5play/p5.play.min.js'] =
+      outputDir + 'p5play/p5.play.js';
+  config.uglify.lib.files[outputDir + 'p5play/p5.min.js'] =
+      outputDir + 'p5play/p5.js';
 
   // Run uglify task across all apps in parallel
   config.concurrent = {
-    uglify: APPS.concat('common', 'interpreter').map(function (x) {
+    uglify: APPS.concat('common', 'lib').map(function (x) {
       return 'uglify:' + x;
     })
   };
@@ -390,7 +397,8 @@ module.exports = function (grunt) {
       tasks: ['newer:copy:src', 'exec:browserify', 'exec:applabapi', 'notify:browserify'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        livereload: true,
+        interrupt: true
       }
     },
     style: {
@@ -398,7 +406,8 @@ module.exports = function (grunt) {
       tasks: ['newer:sass', 'notify:sass'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        livereload: true,
+        interrupt: true
       }
     },
     content: {

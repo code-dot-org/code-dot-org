@@ -70,17 +70,6 @@ Dashboard::Application.routes.draw do
   get '/s/2-3(/*all)', to: redirect('/s/course2')
   get '/s/4-5(/*all)', to: redirect('/s/course3')
 
-  resources :level_source_hints
-  get '/add_hint/:level_source_id', :to => 'level_source_hints#add_hint', as: 'add_hint'
-  get '/show_hints/:level_source_id', :to => 'level_source_hints#show_hints', as: 'show_hints'
-  get '/add_pop_hint/:idx', :to => 'level_source_hints#add_pop_hint', as: 'add_pop_hint'
-  get '/show_pop_hints/:idx(/:restriction)', :to => 'level_source_hints#show_pop_hints', as: 'show_pop_hints'
-  get '/add_pop_hint_per_level/:level_id/:idx', :to => 'level_source_hints#add_pop_hint_per_level', as: 'add_pop_hint_per_level'
-  get '/show_pop_hints_per_level/:level_id/:idx(/:restriction)', :to => 'level_source_hints#show_pop_hints_per_level', as: 'show_pop_hints_per_level'
-  get '/add_hint_access', :to => 'level_source_hints#add_hint_access', as: 'add_hint_access'
-
-  resources :frequent_unsuccessful_level_sources, only: [:index]
-
   devise_scope :user do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
   end
@@ -115,6 +104,7 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id", to: 'projects#show', key: key.to_s, as: "#{key}_project_share", share: true
         get "/#{key}/:channel_id/edit", to: 'projects#edit', key: key.to_s, as: "#{key}_project_edit"
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
+        get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
       end
       get '/angular', to: 'projects#angular'
@@ -189,6 +179,7 @@ Dashboard::Application.routes.draw do
 
   post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
+  post '/milestone/:user_id/:script_level_id/:level_id', :to => 'activities#milestone', :as => 'milestone_script_level'
 
   get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
 
@@ -253,6 +244,8 @@ Dashboard::Application.routes.draw do
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
+  resources :peer_reviews
+
   concern :ops_routes do
     # /ops/district/:id
     resources :districts do
@@ -303,9 +296,7 @@ Dashboard::Application.routes.draw do
     root to: 'plc#index'
     resources :courses
     resources :learning_modules
-    resources :tasks
     resources :user_course_enrollments
-    resources :enrollment_task_assignments
     resources :course_units
     resources :enrollment_unit_assignments
     resources :evaluation_questions
@@ -316,9 +307,38 @@ Dashboard::Application.routes.draw do
   get '/plc/enrollment_evaluations/:unit_assignment_id/preview_assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
   post '/plc/enrollment_evaluations/:unit_assignment_id/confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments'
 
-  get '/plc/learning_modules/:id/new_learning_resource_for_module', to: 'plc/learning_modules#new_learning_resource_for_module', as: 'new_learning_resource_for_module'
-
   post '/plc/course_units/:id/submit_new_questions_and_answers', to: 'plc/course_units#submit_new_questions_and_answers'
+
+  concern :api_v1_pd_routes do
+    namespace :pd do
+      resources :workshops do
+        member do # See http://guides.rubyonrails.org/routing.html#adding-more-restful-actions
+          post :start
+          post :end
+        end
+        get :enrollments, action: 'index', controller: 'workshop_enrollments'
+        get :attendance, action: 'show', controller: 'workshop_attendance'
+        patch :attendance, action: 'update', controller: 'workshop_attendance'
+      end
+      resources :district_report, only: :index
+      resources :workshop_organizer_report, only: :index
+      resources :teacher_progress_report, only: :index
+      resources :course_facilitators, only: :index
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      concerns :api_v1_pd_routes
+    end
+  end
+
+  namespace :pd do
+    get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
+    post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
+    get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
+    get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
+  end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
@@ -330,6 +350,7 @@ Dashboard::Application.routes.draw do
   get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
   get '/api/user_progress/:script_name', to: 'api#user_progress', as: 'user_progress'
   get '/api/user_progress/:script_name/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
+  get '/api/user_progress/:script_name/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
   get '/api/user_progress', to: 'api#user_progress_for_all_scripts', as: 'user_progress_for_all_scripts'
   get '/api/:action', controller: 'api'
 end

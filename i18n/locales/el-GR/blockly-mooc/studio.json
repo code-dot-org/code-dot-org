@@ -2,6 +2,8 @@
   "actor":"ηθοποιός",
   "addCharacter":"πρόσθεσε ένα",
   "addCharacterTooltip":"Πρόσθεσε ένα χαρακτήρα στη σκηνή.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"πρόσθεσε 10 πόντους",
   "addPoints50":"πρόσθεσε 50 πόντους",
   "addPoints100":"πρόσθεσε 100 πόντους",

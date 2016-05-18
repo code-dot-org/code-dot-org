@@ -15,6 +15,7 @@ var utils = require('../utils');
 var gridUtils = require('./gridUtils');
 var logToCloud = require('../logToCloud');
 var actions = require('./actions');
+var screens = require('./redux/screens');
 
 var ICON_PREFIX = applabConstants.ICON_PREFIX;
 var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
@@ -29,13 +30,15 @@ var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
  * @param {!Store} store
  */
 designMode.setupReduxSubscribers = function (store) {
-  var state = {};
+  var state = {
+    screens: {}
+  };
   store.subscribe(function () {
     var lastState = state;
     state = store.getState();
 
-    if (state.currentScreenId !== lastState.currentScreenId) {
-      onScreenChange(state.currentScreenId);
+    if (state.screens.currentScreenId !== lastState.screens.currentScreenId) {
+      renderScreens(state.screens.currentScreenId);
     }
 
     if (state.interfaceMode !== lastState.interfaceMode) {
@@ -473,7 +476,7 @@ designMode.onDeletePropertiesButton = function (element, event) {
   } else {
     designMode.editElementProperties(
         elementUtils.getPrefixedElementById(
-            Applab.reduxStore.getState().currentScreenId));
+            studioApp.reduxStore.getState().screens.currentScreenId));
   }
 };
 
@@ -628,7 +631,7 @@ designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
 };
 
 designMode.toggleDesignMode = function (enable) {
-  Applab.reduxStore.dispatch(actions.changeInterfaceMode(enable ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
+  studioApp.reduxStore.dispatch(actions.changeInterfaceMode(enable ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 };
 
 function onInterfaceModeChange(mode) {
@@ -922,16 +925,16 @@ designMode.createScreen = function () {
 /**
  * Changes the active screen by triggering a 'CHANGE_SCREEN' action on the
  * Redux store.  This change propagates across the app, updates the state of
- * React-rendered components, and eventually calls onScreenChange, below.
+ * React-rendered components, and eventually calls renderScreens, below.
  * @param {!string} screenId
  */
 designMode.changeScreen = function (screenId) {
-  Applab.reduxStore.dispatch(actions.changeScreen(screenId));
+  studioApp.reduxStore.dispatch(screens.changeScreen(screenId));
 };
 
 /**
- * Responds to changing the active screen by toggling all screens to be
- * non-visible, unless they match the provided screenId, and opens the element
+ * Given the currentScreenId in our redux store, toggles all screens to be
+ * non-visible, unless they match the provided screenId, with the element
  * property editor for the new screen.
  *
  * This method is called in response to a change in the application state.  If
@@ -939,7 +942,10 @@ designMode.changeScreen = function (screenId) {
  *
  * @param {!string} screenId
  */
-function onScreenChange(screenId) {
+function renderScreens(screenId) {
+  // Update which screen is shown in run mode
+  Applab.changeScreen(studioApp.reduxStore.getState().screens.currentScreenId);
+
   elementUtils.getScreens().each(function () {
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
@@ -968,7 +974,7 @@ designMode.loadDefaultScreen = function () {
   if (elementUtils.getScreens().length === 0) {
     defaultScreen = designMode.createScreen();
   } else {
-    defaultScreen = elementUtils.getId(elementUtils.getScreens()[0]);
+    defaultScreen = elementUtils.getDefaultScreenId();
   }
   designMode.changeScreen(defaultScreen);
 };

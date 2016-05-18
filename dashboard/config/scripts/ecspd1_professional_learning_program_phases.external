@@ -1,0 +1,56 @@
+name 'ECSPD1 professional learning program phases'
+title 'ECS professional learning program phases'
+description 'ECSP Professional Learning Program Phases'
+css 'unplugged'
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+## ECS Professional Learning Phases
+
+The Code.org ECS Professional Learning Program is broken into four phases. These phases are
+designed to support teachers throughout their first year of teaching ECS. 
+<br>
+<br>
+<img src="https://images.code.org/679aac48c572f8bea5f8f912c3ee445f-image-1461916115236.png" width="550" style="float:left; margin-right:30px">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+### Phase 1: Online Introduction
+**Overview:** The first phase of professional learning is a two-hour online introduction that focuses on providing a foundational knowledge of the ECS teaching practices and course resources. It creates a space for participants to become familiar with the curriculum design and the online professional learning platform.
+
+### Phase 2: Summer Study
+**Overview:** The second phase of professional learning is 5 days in-person. It is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore teaching practices, curriculum, tools, and classroom management. Spending practical time working with the curriculum, you will develop an understanding of how to effectively use the materials and pedagogical strategies that are part of any strong computer science classroom.
+
+### Phase 3: Academic Year
+**Overview:** The third phase of professional learning is composed of blended ongoing
+quarterly in-person meetings and monthly online activities.
+
+* **In-person quarterly workshops:** These quarterly meetings will continue to build pedagogical
+strategies and explore the essential elements of this course. You will participate in activities
+such as teaching new content and keeping the classroom environment equitable and
+engaging for all students.
+* **Online activities:** These online pieces introduce an opportunity to build a
+collaborative professional online learning community — an important teacher tool during the
+first-year of teaching this course. Supports and materials are organized by unit. 
+
+### Phase 4: Summer Wrap-Up and Transition to CS Discoveries
+**Overview:** The fourth phase of professional learning is an in-person workshop focused
+on diving deeper into content and material that was difficult to teach the first time. The fourth
+phase addresses curricular materials with an eye for teaching and learning in context. Teachers
+will reflect on what success looks like in an ECS course and how to recruit diverse groups of
+students for the second year. The workshop will empower teachers to take ownership of the curriculum by making
+adjustments and changes in order to meet the needs of each classroom. 
+<br>
+<br>
+Starting in Fall 2017, teachers will have the option to teach CS Discoveries, an introductory course for 7th-9th grade students created by Code.org that brings together the power of our teaching and learning tools with the educational philosophies of ECS. At this workshop, teachers will have a chance to learn about this new course and how it might fit into their school.
+<br>
+
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

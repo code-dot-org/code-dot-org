@@ -8,7 +8,6 @@
 #  plc_task_id                         :integer
 #  created_at                          :datetime         not null
 #  updated_at                          :datetime         not null
-#  type                                :string(255)
 #  properties                          :text(65535)
 #
 # Indexes

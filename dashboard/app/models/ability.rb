@@ -26,6 +26,7 @@ class Ability
         :reports,
         User,
         Follower,
+        PeerReview,
         # Ops models
         District,
         Workshop,
@@ -39,9 +40,12 @@ class Ability
         Plc::CourseUnit,
         # PD models
         Pd::Workshop,
-        Pd::Enrollment,
         Pd::Attendance,
-        Pd::DistrictPaymentTerm
+        Pd::DistrictPaymentTerm,
+        Pd::DistrictReport,
+        Pd::WorkshopOrganizerReport,
+        Pd::TeacherProgressReport,
+        Pd::CourseFacilitator
       ]
     end
 
@@ -97,35 +101,69 @@ class Ability
             district.contact_id == user.id
           end
         end
+        can :read, Pd::TeacherProgressReport
         can :group_view, Plc::UserCourseEnrollment
         can :manager_view, Plc::UserCourseEnrollment do |enrollment|
           DistrictsUsers.exists?(user: enrollment.user, district: District.where(contact: user.id).pluck(:id))
         end
+        can :read, Pd::DistrictReport
       end
 
       if user.workshop_organizer?
         can :create, Pd::Workshop
         can :manage, Pd::Workshop, organizer_id: user.id
         can :manage, Pd::Attendance, workshop: {organizer_id: user.id}
+        can :read, Pd::WorkshopOrganizerReport
+        can :read, Pd::TeacherProgressReport
+        can :read, Pd::CourseFacilitator
       end
     end
 
     if user.id && user.admin?
       can :read, Script
       can :read, ScriptLevel
-    elsif user.id # logged in, not admin
+    elsif user.id && user.student_of_admin? # logged in, not admin but student of admin
       can :read, Script do |script|
         !script.admin_required?
       end
       can :read, ScriptLevel do |script_level|
         !script_level.script.admin_required?
       end
-    else # not logged in
+    elsif user.id # logged in, not admin or student of admin
       can :read, Script do |script|
-        !script.admin_required? && !script.login_required?
+        !script.admin_required? &&
+            !script.student_of_admin_required?
       end
       can :read, ScriptLevel do |script_level|
-        !script_level.script.login_required? && !script_level.script.admin_required?
+        !script_level.script.admin_required? &&
+            !script_level.script.student_of_admin_required?
+      end
+    else # not logged in
+      can :read, Script do |script|
+        !script.admin_required? &&
+            !script.student_of_admin_required? &&
+            !script.login_required?
+      end
+      can :read, ScriptLevel do |script_level|
+        !script_level.script.login_required? &&
+            !script_level.script.student_of_admin_required? &&
+            !script_level.script.admin_required?
+      end
+    end
+
+    # Handle standalone projects as a special case.
+    # They don't necessarily have a model, permissions and redirects are run
+    # through ProjectsController and their view/edit requirements are defined
+    # there.
+    ProjectsController::STANDALONE_PROJECTS.each_pair do |project_type_key, project_type_props|
+      if project_type_props[:admin_required]
+        can :load_project, project_type_key if user.admin?
+      elsif project_type_props[:student_of_admin_required]
+        can :load_project, project_type_key if user.admin? || user.student_of_admin?
+      elsif project_type_props[:login_required]
+        can :load_project, project_type_key if user.id
+      else
+        can :load_project, project_type_key
       end
     end
 

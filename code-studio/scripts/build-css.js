@@ -22,7 +22,8 @@ var BUILD_PATH = './build/css/';
 var FILES = [
   'levelbuilder.scss',
   'leveltype_widget.scss',
-  'plc.scss'
+  'plc.scss',
+  'pd.scss'
 ];
 
 /**

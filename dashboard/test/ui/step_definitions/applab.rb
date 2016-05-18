@@ -101,6 +101,15 @@ When /^I navigate to the shared version of my project$/ do
   STEPS
 end
 
+When /^I navigate to the embedded version of my project$/ do
+  steps <<-STEPS
+    When I click selector ".project_share"
+    And I wait to see a dialog titled "Share your project"
+    And I click selector "#project-share a:contains('Show advanced options')"
+    And I copy the embed code into a new document
+  STEPS
+end
+
 Then(/^the palette has (\d+) blocks$/) do |num_blocks|
   @browser.execute_script("return $('.droplet-palette-scroller-stuffing > .droplet-hover-div').length").should eq num_blocks.to_i
 end
@@ -121,6 +130,14 @@ end
 
 def set_nth_input(n, value)
   elements = @browser.find_elements(:css, '#design-properties input')
+  # For some reason, the test machine seemed to stop responding to :delete. Even
+  # stranger, on my localhost, if I do a bunch of backspaces without following
+  # them with a delete, the press_keys(value) is ignored. By having both here,
+  # things seem to work both on test and in development
+  press_keys(elements[n], "\b") # backspace
+  press_keys(elements[n], "\b") # backspace
+  press_keys(elements[n], "\b") # backspace
+  press_keys(elements[n], "\b") # backspace
   press_keys(elements[n], ":delete")
   press_keys(elements[n], ":delete")
   press_keys(elements[n], ":delete")
@@ -154,7 +171,7 @@ end
 
 And /^I delete the current design mode element$/ do
   elements = @browser.find_elements(:css, '#design-properties button')
-  elements[-1].click
+  elements[0].click
 end
 
 def drag_grippy(element_js, delta_x, delta_y)

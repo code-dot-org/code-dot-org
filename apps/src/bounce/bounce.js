@@ -14,8 +14,8 @@ var skins = require('../skins');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
+var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
 var BounceVisualizationColumn = require('./BounceVisualizationColumn');
 var dom = require('../dom');
 var Hammer = require('../hammer');
@@ -778,25 +778,17 @@ Bounce.init = function (config) {
     dom.addClickTouchEvent(finishButton, Bounce.onPuzzleComplete);
   };
 
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={studioApp.localeDirection()}
-      editCode={!!level.editCode}
-      readonlyWorkspace={!!config.readonlyWorkspace}
-    />
-  );
+  studioApp.setPageConstants(config);
 
-  ReactDOM.render(React.createElement(AppView, {
-    assetUrl: studioApp.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    hideSource: !!config.hideSource,
-    noVisualization: false,
-    isRtl: studioApp.isRtl(),
-    codeWorkspace: codeWorkspace,
-    visualizationColumn: <BounceVisualizationColumn/>,
-    onMount: onMount
-  }), document.getElementById(config.containerId));
+  ReactDOM.render(
+    <Provider store={studioApp.reduxStore}>
+      <AppView
+          visualizationColumn={<BounceVisualizationColumn/>}
+          onMount={onMount}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
+  );
 };
 
 /**
@@ -1061,7 +1053,11 @@ Bounce.onReportComplete = function (response) {
  * Execute the user's code.  Heaven help us...
  */
 Bounce.execute = function () {
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript', 'bounce_whenRun');
+  var code = '';
+  if (studioApp.initializationCode) {
+    code += studioApp.initializationCode;
+  }
+  code += Blockly.Generator.blockSpaceToCode('JavaScript', 'bounce_whenRun');
   Bounce.result = ResultType.UNSET;
   Bounce.testResults = TestResults.NO_TESTS_RUN;
   Bounce.waitingForReport = false;

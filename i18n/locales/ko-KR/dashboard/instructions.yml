@@ -49,24 +49,14 @@ ko:
         여기에 두 개의 함수가 있습니다. 하나는 큰 기어를 그리는 것이고, 하나는 작은 기어를 그리는 것입니다.
         기계의 내부를 그리는데 사용해보세요!
       2-3 Artist Functions 11.5_instruction: "여기에 똑같은 '육각형 그리기' 함수가 있습니다. \\r\n\\r\n반복 할 때마다 60도씩 회전시키면 어떻게 될까요?"
-      2-3 Artist Functions 11_instruction: |
-        “사각형 그리기” 함수의 이름을 “육각형 그리기”로 바꿨지만, 여전히 이 함수는 사각형을 그리고 있습니다!
-        "육각형 그리기" 함수를 수정해서, 한 변의 길이가 50 픽셀인 육각형을 그려보세요.
-      2-3 Artist Functions 12_instruction: |
-        함수를 사용하면 복잡한 모양을 가진 그림을 그리기에 아주 좋습니다.
-        "꽃 그리기" 함수를 사용해서 나머지 꽃 묘목 상자를 채워주세요.
-        (힌트: 꽃들은 100 픽셀 간격으로 놓여져 있습니다.)  
+      2-3 Artist Functions 11_instruction: "“사각형 그리기” 함수의 이름을 “육각형 그리기”로 바꿨지만, 여전히 이 함수는 사각형을 그리고 있습니다!\n\"육각형 그리기\" 함수를 수정해서, 한 변의 길이가 50 픽셀인 육각형을 그려보세요. \\r\n\\r\n새로운 함수를 사용하여 그림 그리기"
+      2-3 Artist Functions 12_instruction: "함수를 사용하면 복잡한 모양을 가진 그림을 그리기에 아주 좋습니다. \\r\n\\r\n\"꽃 그리기\" 함수를 사용해서 나머지 꽃 묘목 상자를 채워주세요.\\r\n꽃들은 100 픽셀 간격으로 놓여져 있습니다."
       2-3 Artist Functions 13_instruction: |
         4개의 함수를 더 만들었습니다.
         1개 이상의 반복 구조를 이용해 원하는 그림을 만들고 친구들과 공유해 보세요.
         실행을 눌러 살펴보세요.
-      2-3 Artist Functions 2_instruction: |
-        함수들로 새로운 블록들을 만들어낼 수 있습니다!
-        "사각형 그리기" 라는 함수에 사각형 1개를 그리는 블록들을 넣었습니다.
-        "사각형 그리기" 함수를 이용해서 안경을 그려보세요. 사각형들은 75 픽셀 만큼 떨어져 있습니다.
-      2-3 Artist Functions 3_instruction: |
-        한 변의 길이가 115 인 사각형을 그려 더 큰 안경을 만들어보세요.
-        사각형들은 이제 45 픽셀 만큼 떨어져 있습니다.
+      2-3 Artist Functions 2_instruction: "함수들로 새로운 블록들을 만들어낼 수 있습니다! \\r\n\\r\n\"사각형 그리기\" 라는 함수에 사각형 1개를 그리는 블록들을 넣었습니다.\n\"사각형 그리기\" 함수를 이용해서 안경을 그려보세요. \n\\r\n\\r\n사각형들은 75 픽셀 만큼 떨어져 있습니다."
+      2-3 Artist Functions 3_instruction: "한 변의 길이가 115 인 사각형을 그려 더 큰 안경을 만들어보세요. \\r\n\\r\n사각형들은 이제 45 픽셀 만큼 떨어져 있습니다."
       2-3 Artist Functions 4_instruction: '이제, 함수를 "반복" 블록 안에 넣고 3개의 사각형을 그려보세요.'
       2-3 Artist Functions 7_instruction: |
         2개의 서로 매개 변수가 있는 "집 그리기" 함수를 이용해 2개의 집을 그려보세요.
@@ -103,9 +93,7 @@ ko:
       2-3 Artist Loops New 12_instruction: |
         한 변의 길이가 100 픽셀인 다이아몬드를 그려보세요.
         
-      2-3 Artist Loops New 13_instruction: |
-        이런 재미있는 패턴을 만들기 위해서
-        이전 퍼즐의 코드를 반복시켜보세요!
+      2-3 Artist Loops New 13_instruction: "여러분은 몇 개의 코드(회색) 로 하나의 다이아몬드를 만들 것입니다. \\r\n\\r\n이런 재미있는 패턴을 만들기 위해서 회색 코드를 반복시켜보세요!"
       2-3 Artist Loops New 14_instruction: |
         다이아몬드 코드를 살펴보고 어떤 패턴들을 만들어낼 수 있는지 생각해보세요.
         각도와 반복 횟수를 변화시켜가면서 테스트 해보세요.
@@ -121,39 +109,20 @@ ko:
       2-3 Artist Match Rho Pic_instruction: '맞추기: 빠진 코드를 완성해보세요.'
       2-3 Artist Match Sq Pic_instruction: '맞추기: 빠진 코드를 채워보세요.'
       2-3 Artist Match Tri pic_instruction: '맞추기: 빠진 코드를 채워주세요.'
-      2-3 Artist Nested Loops 1_instruction: "여러 가지 모양들을 그리기 위해서 반복 구조들을 사용했었습니다.\n그런데, 반복 구조 안에 다른 반복을 넣을 수 있다는 것을 알았나요?\\r\n패턴을 그리기 위해서, 이 코드 전체를 반복에 넣어 3번 반복 시켜보세요."
+      2-3 Artist Nested Loops 1_instruction: "패턴을 그리기 위해서, 이 코드 전체를 '반복' 블록에 넣으세요."
       2-3 Artist Nested Loops 10_instruction: 패턴을 완성시키기 위해서 이 코드를 12번 반복해 보세요.
       2-3 Artist Nested Loops 11_instruction: |
         이 코드를 4번 반복해서 패턴을 완성해 보세요.
         원을 한 번 그리고 나면, 90도 만큼 회전하세요.
       2-3 Artist Nested Loops 12_instruction: 이 코드를 12번 반복시켜서 곱슬곱슬한 그림을 그려보세요.
-      2-3 Artist Nested Loops 2_instruction: |
-        삼각형을 6번 반복해 그리세요.
-        삼각형을 한 번 그리고 난 후에, 60도씩 회전하면 됩니다.
-      2-3 Artist Nested Loops 3_instruction: |
-        이 패턴을 그리려면, 삼각형을 12번 반복해서 그려야 합니다.
-        원 중심의 각(360 도) 을 그리려고 하는 모양의 개수(12 개) 로 나누면,
-        모양을 한 번 그린 후 몇 도를 회전시켜야 하는지 알 수 있습니다.
-      2-3 Artist Nested Loops 4_instruction: |
-        이 다이아몬드 모양을 12번 반복시켜서 꽃을 그려보세요.
-        힌트: 12 개의 다이아몬드는 12 개의 삼각형을 그리는 것과 같은 방법으로 만들면 됩니다 - 
-        한 번 모양을 그린 후에 얼마나 회전시켜야 할까요?
-      2-3 Artist Nested Loops 5_instruction: |
-        이 건물의 창들을 중첩 반복을 이용해 채워보세요.
-        창들은 20 픽셀 크기로 20 픽셀 만큼 씩 떨어져 있습니다.
-      2-3 Artist Nested Loops 6_instruction: |
-        이 공룡은 꼬리에 8개의 뾰족한 뿔이 나 있습니다; 각 뿔의 길이는 30 픽셀입니다.
-        삼각형을 8번 반복해 그려주세요. 1개를 그리면 그 다음에는 앞으로 이동해야 합니다.
-      2-3 Artist Nested Loops 7_instruction: |
-        이 삼각형을 10번 반복시켜서 태양을 그려보세요.
-        삼각형 1개를 그리고 난 후에는 이동하고 회전해야 할 것입니다.
-        원 모양에 어떻게 나누어 그릴 수 있을지는 그려져 있는 형태를 살펴보세요.
-      2-3 Artist Nested Loops 8_instruction: |
-        자 이제 그림에 잔디를 그려보세요.
-        잔디 1개는 50 픽셀 만큼 씩 떨어져 있습니다.
-      2-3 Artist Nested Loops 9_instruction: |
-        이 그림에 꽃을 더 그리면 그림이 완성될 것입니다.
-        꽃을 그리기 위해서 다이아몬드를 12번 반복시켜 그려보세요.
+      2-3 Artist Nested Loops 2_instruction: "삼각형을 6번 반복해 그리세요. \\r\n\\r\n삼각형을 한 번 그리고 난 후에, 60도씩 회전하면 됩니다."
+      2-3 Artist Nested Loops 3_instruction: "이 패턴을 그리려면, 삼각형을 12번 반복해서 그려야 합니다. \\r\n\\r\n원 중심의 각(360 도) 을 그리려고 하는 모양의 개수(12 개) 로 나누면,\n모양을 한 번 그린 후 몇 도를 회전시켜야 하는지 알 수 있습니다."
+      2-3 Artist Nested Loops 4_instruction: "이 다이아몬드 모양을 12번 반복시켜서 꽃을 그려보세요!\\r\n\\r\n힌트: 12 개의 다이아몬드는 12 개의 삼각형을 그리는 것과 같은 방법으로 만들면 됩니다. \\r \n한 번 모양을 그린 후에 얼마나 회전시켜야 할까요?"
+      2-3 Artist Nested Loops 5_instruction: "이 건물의 창들을 중첩 반복을 이용해 채워보세요. \\r\n\\r\n창들은 20 픽셀 크기로 20 픽셀 만큼 씩 떨어져 있습니다."
+      2-3 Artist Nested Loops 6_instruction: "이 공룡은 꼬리에 8개의 뾰족한 뿔이 나 있습니다.\\r\n각 뿔의 길이는 30 픽셀입니다.\n삼각형을 8번 반복해 그려주세요. 1개를 그리면 그 다음에는 앞으로 이동해야 합니다."
+      2-3 Artist Nested Loops 7_instruction: "이 삼각형을 10번 반복시켜서 태양을 그려보세요. \\r\n\\r\n삼각형 1개를 그리고 난 후에는 이동하고 회전해야 합니다. \\r\n\\r\n원 안에서 몇 개의 모양을 그리게 되며 몇 도씩 회전해야 할지 알아내 보세요."
+      2-3 Artist Nested Loops 8_instruction: "자 이제 그림에 잔디를 그려보세요.\n\\r\n\\r\n잔디 1개는 50 픽셀 만큼 씩 떨어져 있습니다."
+      2-3 Artist Nested Loops 9_instruction: "이 그림에 꽃을 더 그리면 그림이 완성될 것입니다. \\r\n\\r\n꽃을 그리기 위해서 다이아몬드를 12번 반복시켜 그려보세요."
       2-3 Artist Nested Loops Free Play_instruction: |
         자유 플레이시간입니다.
         중첩 반복을 이용해서 원하는 것을 그려보세요.
@@ -198,17 +167,10 @@ ko:
       2-3 Bee Functions 1_instruction: |
         함수들은 어떤 작업을 수행할 때 사용하는 블럭들의 집합이라고 할 수 있습니다.
         "꽃꿀 2번 모으기" 를 이용해서 각 꽃들에서 꽃꿀을 모아보세요.
-      2-3 Bee Functions 10_instruction: |
-        자주색 꽃들에는 꽃꿀이 1개 또는 0 개 있을 수 있습니다.
-        자주색 꽃에 꽃꿀이 있을 때에만 꽃꿀을 모으는 함수를 만들어보세요.
-      2-3 Bee Functions 2_instruction: |
-        함수들은 어떤 작업을 수행하는데 블럭들의 집합이라고 볼 수 있습니다.
-        "5번 모으기" 함수를 이용해서 한 번에 5개의 꽃꿀을 모아보세요.
-        최대한 적은 블록을 사용해서 반복한 수 있도록 해보세요.
+      2-3 Bee Functions 10_instruction: "자주색 꽃들에는 꽃꿀이 1개 또는 0 개 있을 수 있습니다.   \\r\n\\r\n자주색 꽃에 꽃꿀이 있을 때에만 꽃꿀을 모으는 함수를 만들어보세요."
+      2-3 Bee Functions 2_instruction: "함수들은 어떤 작업을 수행하는데 블럭들의 집합이라고 볼 수 있습니다.  \\r\n\\r\n\"5번 모으기\" 함수를 이용해서 한 번에 5개의 꽃꿀을 모아보세요."
       2-3 Bee Functions 3_instruction: 각 꽃에서 꽃꿀을 모두 모아주세요.
-      2-3 Bee Functions 4_instruction: |
-        "움직여서 꽃꿀 얻기" 함수는 꿀벌이 회전하고, 꽃꿀을 얻은 후 원래의 위치로 돌아오도록하는 함수입니다.
-        함수를 사용해서 모든 꽃꿀을 모아보세요.
+      2-3 Bee Functions 4_instruction: "\"움직여서 꽃꿀 얻기\" 함수는 꿀벌이 회전하고, 꽃꿀을 얻은 후 원래의 위치로 돌아오도록하는 함수입니다.  \\r\n\\r\n이 함수를 사용해서 모든 꽃꿀을 모아보세요."
       2-3 Bee Functions 5_instruction: |
         꽃들에 더 많은 꽃꿀이 들어있어요.
         주어진 함수를 수정해서, 꽃꿀을 4번 얻을 수 있게 하고 모든 꽃들로 부터 모든 꽃꿀을 모으세요.
@@ -221,7 +183,7 @@ ko:
         그 함수를 사용해서 각 꽃들로부터 꽃꿀을 모으고, 각 벌집에 꿀을 만들어 넣으세요.
       2-3 Bee Functions 9_instruction: 길을 따라 아래로 내려간 후, 꽃꿀을 얻고, 꿀을 만들고, 다시 처음 위치로 돌아가는 함수를 만들어보세요.
       2-3 Bee Functions Assessment 1_instruction: '형성평가: 주어진 함수를 이용해서 각 꽃에서 꽃꿀을 모아보세요.'
-      2-3 Bee Functions Assessment 2_instruction: '형성평가: 한 번에 3개의 꿀을 만드는 함수를 만들어보세요.'
+      2-3 Bee Functions Assessment 2_instruction: '형성평가: 꿀벌이 앞으로 이동해서 3개의 꿀을 만들고, 다시 돌아오는 함수를 만들어보세요.'
       2-3 Bee Loops 1_instruction: "저 꽃들이 달콤해 보여요!\\r\n\\r\n최대한 적은 블록들을 사용해 각 꽃들에서 꽃꿀을 모아보세요."
       2-3 Bee Loops 10_instruction: 모든 꽃꿀을 모을 수 있도록, 다른 2개의 반복 구조 안에 반복 구조를 넣으세요.
       2-3 Bee Loops 11_instruction: |
@@ -247,15 +209,12 @@ ko:
       2-3 Bee Loops 6_instruction: 꿀벌이 꽃꿀을 모으고 꿀을 만들 수 있는 가장 빠른 방법을 찾을 수 있나요?
       2-3 Bee Loops 7_instruction: |
         와 꽃밭이 이쁘네요!
-        최대한 적은 블록들을 사용해서 꿀벌이 모든 꽃들을 살펴볼 수 있게 해주세요.
-      2-3 Bee Loops 8_instruction: |
-        자주색 꽃들은 몇 개의 꽃꿀이 있는지 알 수 없습니다.
-        "꽃꿀이 있으면" 반복 블록을 이용해서, 모든 꽃꿀을 모아보세요.
-        이 반복 구조는 조건이 참인 동안 계속 반복됩니다. 이 경우에서는 꽃꿀의 개수>0 인 동안 반복되는 것입니다.
+        7 블록보다 적은 블록을 사용해서 꿀벌이 모든 꽃들을 살펴볼 수 있게 해주세요.
+      2-3 Bee Loops 8_instruction: "자주색 꽃들이 몇 개의 꽃꿀을 가지고 있는지 알 수 없습니다. \\r\n\\r\n\"꽃꿀이 있으면\" 반복 블록을 이용해서, 모든 꽃꿀을 모아보세요. \\r\n\\r\n이 반복 구조는 조건이 참인 동안 계속 반복됩니다. 이 경우에서는 '꽃꿀의 개수>0' 인 동안 반복되는 것입니다."
       2-3 Bee Loops 9_instruction: |
         반복(~인 동안) 블럭은 그 안에 "만약" 조건문이 있는 것과 같습니다.
         반복 블럭 안에 이 코드를 추가해서 같은 역할을 하도록 만들어보세요.
-      2-3 Bee Loops Assessment 1_instruction: '형성평가: 반복 구조를 이용해서, 이 꽃에서 꽃꿀을 모두 모아보세요.'
+      2-3 Bee Loops Assessment 1_instruction: "형성평가: '~인 동안' 반복 구조를 이용해서, 이 꽃에서 꽃꿀을 모두 모아보세요."
       2-3 Maze 1_instruction: '나쁜 돼지를 잡을 수 있게 도와주세요! "실행하면" 블록 아래에 "앞으로 이동" 블록들을 여러 개 쌓아 붙인 후, "실행"을 눌러보세요. '
       2-3 Maze 10_instruction: 초록색 나쁜 놈에게 데려다 줘!(TNT 폭탄 조심)
       2-3 Maze 11_instruction: |
@@ -335,25 +294,25 @@ ko:
       4-5 Artist 11_instruction: |
         녹색 줄들을 다 그리세요. 줄들의 길이는 300 픽셀로
         15 픽셀 만큼씩 떨어져 있습니다.
-      4-5 Artist 2_instruction: 사각형을 완성할 수 있도록 이 코드를 반복시켜주세요.
+      4-5 Artist 2_instruction: "사각형을 완성할 수 있도록 '반복' 블록으로 이 코드를 반복시켜주세요."
       4-5 Artist 3.5_instruction: |
         그럼 이번에 이 코드를 실행(또는 "실행" 누르기) 하면 
         무슨일이 벌어질지 생각해 보세요. 그 다음에 여러 번 반복해서 그림을 완성해 보세요!
       4-5 Artist 3_instruction: |
         이 사각형 꽃 침대는 주변 둘레가 600입니다.
-        긴 쪽의 길이는 200 입니다. 사각형을 그려보세요.
+        긴 쪽의 길이는 200 입니다. 가능한 적은 블록을 사용하여 사각형을 그려보세요.
       4-5 Artist 4_instruction: |
         하나의 원 안에는 얼마나 많은 각이 있을까요? 블록들을 반복
         실행해서 무지개색의 원을 한 개 만들어 보세요.
-      4-5 Artist 5_instruction: 어떤 각도를 사용하시겠습니까?
+      4-5 Artist 5_instruction: '좀비가 주어진 루프를 이용하여 이 그림을 정확하게 완성하도록 하려면 "???"를 무엇으로 바꿔야 할까요?'
       4-5 Artist 6_instruction: |
         이 정삼각형의 안쪽 각도는 60, 60, 60 도 입니다.
         각 변의 길이는 200 픽셀입니다. 그림을 완성해 보세요.
       4-5 Artist 7_instruction: |
         이 직각삼각형의 안쪽 각도는 30, 60, 90 도 입니다.
-        기울어진 변의 길이는 100 픽셀의 2배 입니다. 그림을 완성해 보세요.
-      4-5 Artist 8_instruction: 축구장의 중앙선은 사이드라인과 직각입니다. 이 경기장의 둘레는 800 픽셀이고 세로 길이는 240 픽셀입니다. 가로 길이는 얼마일까요? 경계선과 중앙선을 그려보세요.
-      4-5 Artist 9_instruction: 디자인이 대칭이 되도록 나머지 반을 그려보세요. 삼각형들은 등변 삼각형이고 길이는 50 픽셀입니다.
+        기울어진 변의 길이는 200 픽셀입니다. 그림을 완성해 보세요.
+      4-5 Artist 8_instruction: "축구장의 중앙선은 사이드라인과 *직각*입니다.  \\r\n이 경기장의 둘레는 800 픽셀이고 세로 길이는 240 픽셀입니다. 가로 길이는 얼마일까요? \\r\n\\r\n경계선과 중앙선을 그려보세요."
+      4-5 Artist 9_instruction: 디자인이 대칭이 되도록 나머지 반을 그려보세요. 삼각형들은 한 변의 길이가 50 픽셀인 정삼각형입니다.
       4-5 Artist Assessment 1_instruction: |
         형성평가: 정삼각형을 그릴 수 있도록 반복 구조를 사용해 보세요.
         각 변의 길이는 300 픽셀입니다.
@@ -403,21 +362,21 @@ ko:
       4-5 Artist Functions 7_instruction: '"집 그리기" 함수를 이용해서 100, 50 픽셀의 집들을 그려보세요. 두 집은 50 픽셀 만큼 떨어져 있습니다.'
       4-5 Artist Functions 8_instruction: '"꽃 그리기" 함수는 줄기의 높이를 설정할 수 있는 매개 변수가 있습니다. 높이를 200 으로 설정한 다음에 어떻게 되나 살펴보세요.'
       4-5 Artist Functions 9_instruction: 3개의 꽃을 그리세요. 첫 번째 꽃은 높이 100, 그 다음에는 50 만큼 씩 커지게 그리면 됩니다. 꽃들은 100 픽셀 만큼씩 떨어져 있습니다.
-      4-5 Artist Patterns 1_instruction: 반복 구조를 이용해서 이 사각형을 그려주세요. 각 변은 20 픽셀 입니다.
-      4-5 Artist Patterns 10_instruction: '이 코드는 두 줄의 육각형을 만들어 줍니다. - 전체 벌집을 다 그리기 위해서 4번 반복 실행하면 됩니다. 힌트: 가장 마지막 반복에서 120 픽셀 만큼 뒤로 뛰어야, 화가가 화면을 벗어나지 않습니다.'
-      4-5 Artist Patterns 11_instruction: '반 원을 그리기 위해서 얼마나 반복시켜야 할 까요? 힌트: 각 원의 내각은 360도이고, 한 번 반복시키면 3도 만큼씩 돌아갑니다. 완전한 원을 만들기 위해서는 몇 번이나 반복해야 할까요?'
-      4-5 Artist Patterns 12_instruction: 반복하는 것을 복사해서 오른쪽으로 돌기를 왼쪽으로 돌기로 바꾸면 어떻게 될까요? 이 웨이브를 만들기 위해서 반복해 주세요.
-      4-5 Artist Patterns 13_instruction: '그림 틀을 만들기 위해서 전체를 4번 반복시켜보세요. 모서리에 주의하세요 - 90도만 돌면 안됩니다! 3도를 60번 돌면 반 원을 만들 수 있습니다. 어떻게 사분원(1/4 원) 을 만들 수 있을까요?'
+      4-5 Artist Patterns 1_instruction: "반복 구조를 이용해서 이 사각형을 그려주세요. \\r\n\\r\n각 변은 20 픽셀 입니다."
+      4-5 Artist Patterns 10_instruction: "이 코드는 두 줄의 육각형을 만들어 줍니다. - 전체 벌집을 다 그리기 위해서 4번 반복 실행하면 됩니다. \\r\n\\r\n힌트: 가장 마지막 반복에서 120 픽셀 만큼 뒤로 뛰어야, 화가가 화면을 벗어나지 않습니다.\\r\n"
+      4-5 Artist Patterns 11_instruction: '반 원을 그리기 위해서 얼마나 반복시켜야 할까요? '
+      4-5 Artist Patterns 12_instruction: "반복하는 것을 복사하는데 오른쪽으로 돌기를 왼쪽으로 돌기로 바꾸면 어떻게 될까요? \\r\n\\r\n이 웨이브를 만들기 위해서 반복해 주세요."
+      4-5 Artist Patterns 13_instruction: "그림 틀을 만들기 위해서 전체를 4번 반복시켜 보세요. 모서리에 주의하세요 - 90도만 돌면 안됩니다! \\r\n\\r\n3도씩 60번 돌면 반 원을 만들 수 있습니다. 이 코드 블록들 중 어느 것으로 모서리에 사분원(1/4 원) 을 만들 수 있을까요?"
       4-5 Artist Patterns 2_instruction: 어떤 반복 구조 안에 다른 반복 구조를 넣으면, 중첩 반복이라고 부릅니다. 15개의 모든 사각형들이 한 줄로 서려면 바깥쪽 반복 구조를 어떻게 추가해야 할까요?
       4-5 Artist Patterns 3_instruction: 좀더 어려운 것을 해보아요! 반복 구조 안에 반복 구조를 넣어봤는데, 다음 줄을 그리려면 화가를 다시 이전 위치로 돌려 놓아야 해요. 전체 격자를 그리기 위해서 가장 바깥쪽 반복의 끝에 어떤 블록들을 놓아야 할까요?
       4-5 Artist Patterns 4_instruction: 이 다이아몬드는 각 변이 50 픽셀이고, 120도 각과 60도 각으로 이루어져 있습니다. 다이아몬드를 그려보세요.
       4-5 Artist Patterns 5.5_instruction: 다이아몬드 격자를 그리기 위해서는 얼마나 많이 반복해야 할까요?
-      4-5 Artist Patterns 5_instruction: '자 이제 한 줄에 6개의 다이아몬드를 그려보세요. 다이아몬드 코드에서 2번 반복하던 것을 3번 반복으로 고친것을 잘 보세요. - 왜 그랬을까요?'
+      4-5 Artist Patterns 5_instruction: "자 이제 한 줄에 6개의 다이아몬드를 그려보세요. \n\\r\n\\r\n다이아몬드 코드에서 2번 반복하던 것을 3번 반복으로 고친 것을 잘 보세요. - 왜 그랬을까요?\\r\n"
       4-5 Artist Patterns 6_instruction: 다이아몬드 격자를 그리기 위해서는 얼마나 많이 반복해야 할까요?
       4-5 Artist Patterns 7_instruction: '이전 퍼즐에서 사용했던 코드를 변형해서 더 복잡한 패턴을 만들어보세요. 다이아몬드들이 얼마나 겹쳐 그려지는지 살펴보고, 첫 번째 "뒤로 점프하기"를 100에서 50사이 정도로 바꿔보세요. - 그리고 나서 두 번째 "뒤로 점프하기"는 얼마나 더 멀리 해야 할까요?'
       4-5 Artist Patterns 8_instruction: 반복 구조를 사용해서 각 변의 길이가 40 픽셀이면서 내각의 크기가 60 도인 육각형을 만들어 보세요.
       4-5 Artist Patterns 9.5_instruction: 이 코드를 반복시켜서 두 줄로 육각형들을 만들어보세요. 두 번째 줄이 오른쪽으로 얼마나 빗겨 그려져 있는지 살펴보세요.
-      4-5 Artist Patterns 9_instruction: '주어진 코드를 3번 반복시켜서 모든 줄을 그려보세요. 힌트: 각각의 6각형들은 너비가 80픽셀입니다.'
+      4-5 Artist Patterns 9_instruction: "주어진 코드를 3번 반복시켜서 모든 줄을 그려보세요. \\r\n\\r\n각각의 6각형들은 왼쪽 끝에서 오른쪽 끝까지의 너비가 80픽셀입니다."
       4-5 Artist Patterns Free Play_instruction: '마음대로 그리기 - 원하는 패턴을 직접 만들어보세요.'
       4-5 Bee Conditionals - FC Test_instruction: 꿀벌이 꽃꿀을 원합니다. 모두 꽃은 아니기 때문에, 안개 구름 아래에 꽃이 숨어있는지 모두 살펴보아야 합니다. 꽃이면 꽃꿀을 모으면 됩니다.
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
@@ -581,6 +540,9 @@ ko:
         sign in to test applab levels (By design, applab levels only work if signed
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script).
+      allthethings_U3 - Simple Drawing - Rectangle Width and Height_instruction: |
+        Do
+        This
       App Lab test_instruction: 검사
       Applab allthethings onRecordEvent_instruction: |
         Please sign in to test applab
@@ -1429,6 +1391,14 @@ ko:
       Course 4 Play Labs For Loops 7a_instruction: "이제 어딘가 도착했네요! \n강아지가 30 을 카운트하기 전에, 마법사를 클릭하는 횟수를 카운팅 할 수 있을까요? \\r\n\\r\n마법사를 클릭하면, \"클릭됨\" 변수의 값이 1씩 증가되도록 블록들을 추가시켜주세요. 이번에는 \"증가 값\"은 무시해도 됩니다.\\r\n\\r\n\"실행\"을 누르면 강아지가 카운트를 시작할 것입니다."
       Course 4 Play Labs For Loops 8_instruction: "자 이제, 캐릭터들이 자기들이 카운트 하는 만큼씩 이동하도록 해보세요.\\r\n\\r\n강아지는 한 번에 카운트에 2 씩 더해 움직여야합니다.(카운트 + 2)\n고양이는 한 번에 2 배씩 카운트를 곱해 움직여야합니다.(카운트 * 2)\n펭귄은 한 번에 카운트를 제곱해 움직여야 합니다.(카운트 ^ 2)\n깃발에 가장 먼저 도착하는 것은 누구일까요?"
       Course 4 Play Labs For Loops 8a_instruction: "게임을 마치려면 \"증가값\" 변수를 다시 사용해야 합니다! 이번 레벨을 통과하기 위해 사용해봅시다.\\r\n\\r\n1) 마법사가 클릭되는 횟수를 계속 검사합니다.\\r\n2) 강아지의 카운트가 30이 되기 전에, 마법사의 클릭 횟수가 10 이상이 되면, 1 만큼 \"증가값\"을 올리고 다시 시작합니다.\\r\n3) 강아지의 카운트가 30이 되었는데, 마법사의 클릭 횟수가 10 보다 작으면, 게임이 끝납니다."
+      Course 4 Playlab For Loop Freeplay_instruction: |
+        Freeplay: Use everything you've
+        learned so far to make a game that includes a `for` loop!
+      Course 4 Playlab For Loops 4b_instruction: "Now, these two characters are going\nto race!  \\r\n\\r\nEach of them will move `counter` steps at a time, but their\ncounters will have different values because of the `for` loops.  \\r\n\\r\nCan\nyou change the increment in one of the loops so that the race is a tie?"
+      Course 4 Playlab For Loops 5b_instruction: |
+        Adjust the interval on these `for`
+        loops so that the two characters end in the exact same place.
+      Course 4 Playlab For Loops 6b_instruction: "Edit this `for` loop to create\na game that's fun for you to play!\\r\n\\r\nPress \"Run\" and click Madame\nUnicorn four times to win. "
       Course 4 SCF 1_instruction: |
         4줄의 육각형들을 그리기 위해서 주어진 함수들을 사용해보세요.
         짝수 줄의 육각형들은 오른쪽으로 얼마나 이동되어 그려져 있을까요?
@@ -1477,6 +1447,13 @@ ko:
         Here's a program that looks pretty
         similar to what you've been writing, but may behave quite differently. You'll
         want to stop and discuss with the class before moving on.
+      CSD U3 Boolean Modify_instruction: |
+        Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Boolean Predict_instruction: |
+        What do you think this code will do when
+        it is run? Predict what each console.log() command will print, then run the
+        program to check your predictions.
       CSD U3 Draw Loop Discuss_instruction: |
         Here's a program that looks pretty
         similar to what you've been writing, but may behave quite differently. You'll
@@ -1487,6 +1464,12 @@ ko:
         to generate some of the inputs?You'll want to stop and discuss with the class
         before moving on.
       CSD U3 Frame Rate_instruction: "Slow down Gamelab Gary's animation with frameRate()"
+      CSD U3 Keypress Boolean_instruction: |
+        Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Keypress Watchers_instruction: |
+        Modify the code so that all of the console.log
+        commands print true
       CSD U3 Random Animation_instruction: |
         Use randomNumber() to animate Gary's
         mouth.
@@ -1505,9 +1488,9 @@ ko:
         Using console.log() write a program that
         randomly returns a number in a range you define.
       CSD U3 Random Width Height_instruction: |
-        Pick a shape function and use calls
-        to randomNumber() in place of one or more of the parameters. Maker sure you
-        run it a few times so you can see the effect of randomization.
+        Pick a shape block and use calls to
+        randomNumber() in place of one or more of the parameters. Maker sure you run
+        it a few times so you can see the effect of randomization.
       CSD U3 Simple Drawing - Animation 2_instruction: |
         Use randomNumber() on the
         x position and width of your cloud ellipses to introduce a bit of animation.
@@ -1534,6 +1517,9 @@ ko:
       CSD U3 Variables CHALLENGE gamelab gary_instruction: |
         Use variables to animate
         Game Lab Gary
+      CSD U3 Variables create and assign_instruction: |
+        Create and assign size in
+        a single line of code.
       CSD U3 Variables draw loop newVars_instruction: |
         Extend this project to create
         your own random art visualization with variables.
@@ -1545,10 +1531,28 @@ ko:
         Assign the variables x1 and y1
         random values inside the draw loop and use them to control where the square
         is drawn.
+      CSD U3 Variables eyeBrows_instruction: |
+        Predict what will happen when you move
+        the assignment of eyeSize inside the draw loop. Then try it out
       CSD U3 Variables Initialize_instruction: |
         Predict: What will get displayed
         in the console?
       CSD U3 Variables Intro_instruction: 'Create your own variable '
+      CSD U3 Variables make a square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
+      CSD U3 Variables multiple assignments_instruction: |
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
+      CSD U3 Variables naming rules_instruction: |
+        Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables random assignment_instruction: |
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
+      CSD U3 Variables random draw loop_instruction: |
+        Predict what will happen when
+        you move the assignment of eyeSize inside the draw loop. Then try it out
       CSD U3 Variables random drawing exemplar_instruction: |
         Check out this example
         randomized drawing.
@@ -1570,9 +1574,24 @@ ko:
       CSD U3 Variables Square_instruction: |
         Change the value "size" initialized
         to make a larger square.
+      CSD U3 Variables TEMPLATE square_instruction: |
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
       CSD U3 Variables use value rect_instruction: |
         Predict: What will get displayed
         in the console?
+      CSD U3 Variables write_instruction: |
+        Use the write block to display the value
+        of size
+      CSD U3 Variables2 expressions in commands_instruction: |
+        Use expressions inside
+        a drawing command
+      CSD U3 Variables2 expressions in variables_instruction: |
+        Assign the value of
+        each expression to a variable and console.log that variable.
+      CSD U3 Variables2 expressions_instruction: |
+        Use console.log to display the
+        results of each expression. Then create your own.
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\\r\n\\r\nFind out how many people like something\nother than dogs and cats\\r\n\\r\nCount dogs\\r\nCount cats\\r\nCount total\\r\nDo\nthe math\\r\n\\r\nblank/ blank toal\\r\n\\r\nCan also use this to find percents\nfrom this\\r\n\\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \\r\nfind the length of an array\\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\\r\n1. ReadRecords\nfor all records\\r\n2. Way to loop through and count\\r\n"
@@ -2606,6 +2625,9 @@ ko:
         자주색 꽃들에는 꽃꿀이 1 또는 0 인데,
         어떤 꽃이 1이고 0인지 알 수 없습니다! 자주색 꽃에 꿀이 없으면 뽑지 않도록 주의하세요.
         만약(if) 블록을 사용해서 꽃꿀이 1인지 확인해보면 됩니다.
+      Rocket Height Course A_instruction: |
+        Follow the Design Recipe to create a function
+        rocket-height.
       Ryan - 4-5 Bee Conditionals 2_instruction: 꿀벌이 꽃꿀을 원합니다. 모두 꽃은 아니기 때문에, 안개 구름 아래에 꽃이 숨어있는지 모두 살펴보아야 합니다. 꽃이면 꽃꿀을 모으면 됩니다.
       Ryan - Bee Conditionals_instruction: |
         꿀벌은 지금 꽃꿀이 필요합니다.
@@ -2670,6 +2692,14 @@ ko:
         Only one last direction to worry about!
         Create a "safe-down?" function and update the "on-screen?" function so
         that it checks up, down, left, and right.
+      sample1_instruction: "Our adventurer wants to collect gems.  But she can only\nuse 4 blocks to get them.\\r\n\\r\nCan you help her grab as many as she can\nusing just 4 blocks?"
+      sample2_instruction: |
+        Use what you've learned to help bee gather all of this
+        honey using only 4 blocks.
+      sample3_instruction: Now you can help bee make all of the honey.
+      sample4_instruction: "Our adventurer has found a stash of coins in this cave.\\r\n\\r\nCan\nyou help her grab as many as she can using just 7 blocks?"
+      sample5_instruction: Help bee make all of the honey.
+      sample6_instruction: 'Challenge: Help bee make all of the honey.'
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
@@ -3266,13 +3296,17 @@ ko:
       U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\\r\n"
       U3 - Simple Drawing - Comments_instruction: Do this
       U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
+      U3 - Simple Drawing - Fill_instruction: Do This
       U3 - Simple Drawing - No Fill_instruction: Do this
       U3 - Simple Drawing - Order of Blocks_instruction: Do this
+      U3 - Simple Drawing - Oval_instruction: Do This
       U3 - Simple Drawing - Personal Drawing_instruction: DO This
+      U3 - Simple Drawing - Rectangle Width and Height_instruction: Do This
       U3 - Simple Drawing - Rectangle_instruction: Do This
       U3 - Simple Drawing - regular polygon_instruction: Do this
       U3 - Simple Drawing - Road Ellipse_instruction: Do This
       U3 - Simple Drawing - Road Rects and Color_instruction: Do This
+      U3 - Simple Drawing - Simple Shape Drawing_instruction: Do This
       U3 - Simple Drawing - Stroke and Stroke Weight_instruction: Do this
       U3 - Simple Drawing - text_instruction: Do This
       U3 - Simple Drawing - X and Y values_instruction: Do This
@@ -3306,6 +3340,16 @@ ko:
       U3 - Simulation - Template_instruction: |
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
+      U3 - Sprites - Intro Sprites_instruction: Do This
+      U3 - Sprites and Mod - Create  and Draw Sprite_instruction: Do This
+      U3 - Sprites and Mod - Mouse Width and Height_instruction: Do this
+      U3 - Sprites and Mod - Mouse X and Y_instruction: Do this
+      U3 - Sprites and Mod - Rand Around Mouse_instruction: Do this
+      U3 - Sprites and Mod - Rand Shape Color_instruction: Do This
+      U3 - Sprites and Mod - Shape Color_instruction: Do This
+      U3 - Sprites and Mod - two sprites_instruction: Do This
+      U3 - Sprites and Mod - Wrap Many Squares_instruction: Do This
+      U3 - Sprites and Mod - X and Y Prop_instruction: Do This
       U3 - User Input - Save getText To Variable_instruction: |
         Save the age and name
         of the user in variables (Click to see full instructions)
@@ -3382,9 +3426,21 @@ ko:
       U3 Variables consolelog_instruction: |
         Use the write block to display the value
         of size
+      U3 Variables flower example_instruction: |
+        Change the value of petalSize multiple
+        times. How does it change your drawing?
+      U3 Variables gray square_instruction: |
+        Change the value of petalSize multiple
+        times. How does it change your drawing?
+      U3 Variables make a square_instruction: |
+        Change the value of size multiple
+        times. How does it change your drawing?
       U3 Variables misconceptions try it_instruction: |
         Test out your predictions
         from the previous level.
+      U3 Variables randomize your square_instruction: |
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
       U3 Variables write_instruction: |
         Use the write block to display the value of
         size

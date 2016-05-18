@@ -57,10 +57,11 @@ BoardController.prototype.ensureBoardConnected = function () {
 
 BoardController.prototype.installComponentsOnInterpreter = function (codegen, jsInterpreter) {
   this.prewiredComponents = this.prewiredComponents ||
-      initializeCircuitPlaygroundComponents(this.board_.io);
+      initializeCircuitPlaygroundComponents(this.board_.io, this.board_);
 
   var componentConstructors = {
     Led: five.Led,
+    Board: five.Board,
     RGB: five.Led.RGB,
     Button: five.Button,
     Switch: five.Switch,
@@ -114,6 +115,26 @@ BoardController.prototype.reset = function () {
       console.log(component);
     }
   });
+};
+
+BoardController.prototype.pinMode = function (pin, modeConstant) {
+  this.board_.pinMode(pin, modeConstant);
+};
+
+BoardController.prototype.digitalWrite = function (pin, value) {
+  this.board_.digitalWrite(pin, value);
+};
+
+BoardController.prototype.digitalRead = function (pin, callback) {
+  return this.board_.digitalRead(pin, callback);
+};
+
+BoardController.prototype.analogWrite = function (pin, value) {
+  this.board_.analogWrite(pin, value);
+};
+
+BoardController.prototype.analogRead = function (pin, callback) {
+  return this.board_.analogRead(pin, callback);
 };
 
 function connect() {
@@ -175,18 +196,51 @@ function deviceOnPortAppearsUsable(port) {
  * Circuit Playground board.
  * @returns {Object.<String, Object>} board components
  */
-function initializeCircuitPlaygroundComponents(io) {
+function initializeCircuitPlaygroundComponents(io, board) {
+  const pixels = Array.from({length: 10}, (_, index) => new five.Led.RGB({
+    controller: PlaygroundIO.Pixel,
+    pin: index
+  }));
+
+  /**
+   * Must initialize sound sensor BEFORE left button, otherwise left button
+   * will not respond to input.
+   */
+  const sound = new five.Sensor({
+    pin: "A4",
+    freq: 100
+  });
+  const buttonL = new five.Button('4');
+  const buttonR = new five.Button('19');
+  [buttonL, buttonR].forEach((button) => {
+    Object.defineProperty(button, "isPressed", {
+      get: () => this.value === 1
+    });
+  });
+
   return {
-    pixels: Array.from({length: 10}, function (_, index) {
-      return new five.Led.RGB({
-        controller: PlaygroundIO.Pixel,
-        pin: index
-      });
-    }),
+    pixel0: pixels[0],
+    pixel1: pixels[1],
+    pixel2: pixels[2],
+    pixel3: pixels[3],
+    pixel4: pixels[4],
+    pixel5: pixels[5],
+    pixel6: pixels[6],
+    pixel7: pixels[7],
+    pixel8: pixels[8],
+    pixel9: pixels[9],
+    pixels: {
+      blink: () => pixels.forEach(p => p.blink()),
+      stop: () => pixels.forEach(p => p.stop()),
+      on: () => pixels.forEach(p => p.on()),
+      off: () => pixels.forEach(p => p.off()),
+      toggle: () => pixels.forEach(p => p.toggle()),
+      color: c => pixels.forEach(p => p.color(c))
+    },
 
     led: new five.Led(13),
 
-    toggle: new five.Switch('21'),
+    toggleSwitch: new five.Switch('21'),
 
     piezo: new five.Piezo({
       pin: '5',
@@ -212,18 +266,22 @@ function initializeCircuitPlaygroundComponents(io) {
 
     touch: new PlaygroundIO.CapTouch(io),
 
+    sound: sound,
+
+    buttonL: buttonL,
+
+    buttonR: buttonR,
+
+    board: board,
+
     /**
-     * Must initialize sound sensor BEFORE left button, otherwise left button
-     * will not respond to input.
+     * Constants helpful for prototyping direct board usage
      */
-    sound: new five.Sensor({
-      pin: "A4",
-      freq: 100
-    }),
-
-    buttonL: new five.Button('4'),
-
-    buttonR: new five.Button('19')
+    INPUT: 0,
+    OUTPUT: 1,
+    ANALOG: 2,
+    PWM: 3,
+    SERVO: 4
   };
 }
 

@@ -83,12 +83,12 @@ class ApiControllerTest < ActionController::TestCase
     level1 = create :text_match
     level1.properties['title'] =  'Text Match 1'
     level1.save!
-    create :script_level, script: script, level: level1
+    create :script_level, script: script, levels: [level1]
 
     level2 = create :text_match
     level2.properties['title'] =  'Text Match 2'
     level2.save!
-    create :script_level, script: script, level: level2
+    create :script_level, script: script, levels: [level2]
     # create some other random levels
     5.times do
       create :script_level, script: script
@@ -148,7 +148,7 @@ class ApiControllerTest < ActionController::TestCase
     level1.properties['title'] =  'Long assessment 1'
     level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
     level1.save!
-    create :script_level, script: script, level: level1, assessment: true
+    create :script_level, script: script, levels: [level1], assessment: true
 
     # student_1 has an assessment
     create(:activity, user: @student_1, level: level1,
@@ -315,6 +315,21 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal true, body['disablePostMilestone']
+  end
+
+  test "should get user progress for stage with swapped level" do
+    sign_in @student_1
+    script = create :script
+    stage = create :stage, script: script
+    level1a = create :maze, name: 'maze 1'
+    level1b = create :maze, name: 'maze 1 new'
+    create :script_level, script: script, stage: stage, levels: [level1a, level1b], properties: "{'maze 1': {active: false}}"
+    create(:activity, user: @student_1, level: level1a,
+           level_source: create(:level_source, level: level1a, data: 'level source'))
+
+    get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1, level: level1a.id
+    body = JSON.parse(response.body)
+    assert_equal('level source', body['lastAttempt']['source'])
   end
 
   test "should get progress for section with section script" do

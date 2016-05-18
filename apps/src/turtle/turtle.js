@@ -34,8 +34,8 @@ var Colours = require('./colours');
 var codegen = require('../codegen');
 var ArtistAPI = require('./api');
 var apiJavascript = require('./apiJavascript');
+var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
 var ArtistVisualizationColumn = require('./ArtistVisualizationColumn');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
@@ -208,29 +208,22 @@ Artist.prototype.init = function (config) {
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
 
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={this.studioApp_.localeDirection()}
-      editCode={!!config.level.editCode}
-      readonlyWorkspace={!!config.readonlyWorkspace}
-    />
-  );
+  // Push initial level properties into the Redux store
+  this.studioApp_.setPageConstants(config);
 
   var iconPath = '/blockly/media/turtle/' +
     (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
   var visualizationColumn = <ArtistVisualizationColumn iconPath={iconPath}/>;
 
-  ReactDOM.render(React.createElement(AppView, {
-    assetUrl: this.studioApp_.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    hideSource: !!config.hideSource,
-    noVisualization: false,
-    isRtl: this.studioApp_.isRtl(),
-    codeWorkspace: codeWorkspace,
-    visualizationColumn: visualizationColumn,
-    onMount: this.studioApp_.init.bind(this.studioApp_, config)
-  }), document.getElementById(config.containerId));
+  ReactDOM.render(
+    <Provider store={this.studioApp_.reduxStore}>
+      <AppView
+          visualizationColumn={visualizationColumn}
+          onMount={this.studioApp_.init.bind(this.studioApp_, config)}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
+  );
 };
 
 Artist.prototype.loadAudio_ = function () {
@@ -768,7 +761,13 @@ Artist.prototype.execute = function () {
   if (this.level.editCode) {
     this.initInterpreter();
   } else {
-    this.code = Blockly.Generator.blockSpaceToCode('JavaScript');
+    this.code = '';
+
+    if (this.studioApp_.initializationCode) {
+      this.code += this.studioApp_.initializationCode;
+    }
+
+    this.code += Blockly.Generator.blockSpaceToCode('JavaScript');
     this.evalCode(this.code);
   }
 

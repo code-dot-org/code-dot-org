@@ -27,8 +27,8 @@ var commonMsg = require('../locale');
 var calcMsg = require('./locale');
 var skins = require('../skins');
 var levels = require('./levels');
+var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
 var CalcVisualizationColumn = require('./CalcVisualizationColumn');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
@@ -199,26 +199,19 @@ Calc.init = function (config) {
     }
   };
 
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={studioApp.localeDirection()}
-      editCode={!!level.editCode}
-      readonlyWorkspace={!!config.readonlyWorkspace}
-    />
-  );
+  studioApp.setPageConstants(config);
+
   var visualizationColumn = <CalcVisualizationColumn inputOutputTable={level.inputOutputTable}/>;
 
-  ReactDOM.render(React.createElement(AppView, {
-    assetUrl: studioApp.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    hideSource: !!config.hideSource,
-    noVisualization: false,
-    isRtl: studioApp.isRtl(),
-    codeWorkspace: codeWorkspace,
-    visualizationColumn: visualizationColumn,
-    onMount: studioApp.init.bind(studioApp, config)
-  }), document.getElementById(config.containerId));
+  ReactDOM.render(
+    <Provider store={studioApp.reduxStore}>
+      <AppView
+          visualizationColumn={visualizationColumn}
+          onMount={studioApp.init.bind(studioApp, config)}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
+  );
 };
 
 /**

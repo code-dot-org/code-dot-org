@@ -22,7 +22,11 @@ platforms:
         api-key: <%=ENV['API_KEY']%>
         enabled_alert_policy_id: 374172
         disabled_alert_policy_id: 374173
-    run_list:
-      - recipe[cdo-newrelic]
 suites:
   - name: default
+    run_list:
+      - recipe[cdo-newrelic]
+  - name: stop
+    run_list:
+      - recipe[cdo-newrelic]
+      - recipe[cdo-newrelic::unload]

@@ -23,6 +23,8 @@ fa:
           future: نمیتوان در آینده بود
   hello: سلام دنیا
   welcome_back: '%{name}، خوش آمدید'
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: ارسال کنید
   unsubmit: ثبت نشده
   previous_page: Previous page
@@ -152,8 +154,6 @@ fa:
         subject: 'در یک کلاس با %{teacher_name} در Code.org شرکت کنید!'
       student_disassociated:
         subject: 'اعلان Code.org: %{student_name} دیگر به عنوان دانش‌آموز شما شناخته نمی‌شود.'
-      teacher_disassociated:
-        subject: 'اعلان Code.org: %{teacher_name} دیگر به عنوان معلم شما شناخته نمی‌شود.'
   reports:
     error:
       access_denied: شما به اطلاعات آماری این شخص دسترسی ندارید
@@ -330,6 +330,23 @@ fa:
     no_primary_course: یک کلاس را در کد استدیو امتحان کنید
     choose_next_course: یک دوره ی استودیو ی کد را با انتخاب آن در پایین امتحان کنید
     print_certificate: چاپ گواهینامه
+    announcement_title: اطلاعیه‌ها
+    announcement_view_all: مشاهده همه
+    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+    announcement_button: بیشتر بیاموزید
+    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: در استودیو ی کد یاد بگیرید
     description: هرکسی می تواند علوم کامپیوتر را بیاموزد. با کد نویسی بازی، نرم افزار و هنر ایجاد کنید.
@@ -345,8 +362,8 @@ fa:
     thank_you: 'ما از <a href="https://code.org/about/donors"> اهدا کنندگانمان</a>،<a href="https://code.org/about/partners"> همکارانمان</a>، <a href="https://code.org/about/team"> تیم گسترده مان</a>، گروه فیلم برداری مان، و <a href="https://code.org/about/advisors"> مشاوران آموزشیمان</a> برای همکاریشان در ایجاد استودیو ی کد سپاسگزاریم.'
     help_from_html: مهندسین از گوگل , مایکروسافت ، فیس بوک و توییتر در ایجاد این آموزش کمک کردند
     help_from_html_old: مهندسینی از گوگل، مایکروسافت، فیسبوک، و توییتر به تولید این محتوا کمک کردند.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: قدرت گرفته شده توسط وب سرویس های آمازون
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, لوگوی کد نویسی و ساعت کد نویسی &reg; علائم تجاری Code.org هستند.'
@@ -454,7 +471,7 @@ fa:
       body: یک جهان ماینکرفتی را از طریق کد کاوش کنید.
     unplugged:
       title: Unplugged Lessons
-      audience: Ages 6+
+      audience: Ages 4+
       body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
       body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
@@ -596,6 +613,9 @@ fa:
     share: به اشتراک گذاری
     share_title: پروژه خود را به اشتراک بگذارید
     share_copy_link: 'لینک را کپی کنید:'
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: ببند
     more: بیشتر
     name: نام
@@ -635,7 +655,21 @@ fa:
           other: دیگر
         detail: لطفا تا حد امکان جزئیات را در مورد مطلبی که گزارش می دهید ارائه کنید.
         acknowledge: 'با ارسال این اطلاعات، شما می پذیرید که مطابق با سیاست %{link_start_privacy} حفظ حریم شخصی %{link_end} و %{link_start_tos} شرایط سرویس %{link_end} با موضوع برخورد می شود.'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
   components:
     icon_library:
       search_placeholder_text: جستجوی یک شمایل...
       no_icons_found: هیچ نمادی پیدا نشد
+  flex_category:
+    required: بررسی اجمالی
+    content: Content
+    practice: Teacher Practices

@@ -81,7 +81,7 @@ Fallback: http://matthewpaulmoore.com/post/5190436725/ruby-on-rails-code-quality
 
 ## JavaScript
 
-Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
+Default: https://google.github.io/styleguide/javascriptguide.xml
 
 * <a name="js-indentation"></a>
   Use 2 spaces per indentation level. Line continuations should be indented at 4 spaces (including function arguments). Wrap at 80 characters.
@@ -226,8 +226,18 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
     templates include a script tag which assigns app_options to
     a Javascript variable so that it as accessible from JS.
 
+### ES6
+<a name="javascript-es6"></a>
+Our default style if not mentioned here should be that mentioned in the AirBnb guide
+https://github.com/airbnb/javascript. Exceptions that we'd like to make should be noted here.
+
+
 ### React
-Our default style if not mentioned here should be that mentioned in the AirBnb guide https://github.com/airbnb/javascript/tree/master/react (perhaps with the exception of closing tags on their own line).
+Our default style if not mentioned here should be that mentioned in the AirBnb guide https://github.com/airbnb/javascript/tree/master/react
+
+https://github.com/airbnb/javascript/tree/master/react#spacing We're okay with no space in
+self-closing tags, i.e. `<MyComponent/>` and `<MyComponent />` are both valid.
+
 * <a name="js-react-inline-styles"></a>
 Prefer single object for all styles vs. inlined style objects.  Define static styles outside the component, and only dynamic styles in the render method.
 ```jsx
@@ -393,7 +403,7 @@ Fallback: http://css-tricks.com/css-style-guides
 
 ## HTML
 
-Default: http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml
+Default: https://google.github.io/styleguide/htmlcssguide.xml
 
 - Avoid inline event handlers in markup.
 - Avoid inline styles in markup.

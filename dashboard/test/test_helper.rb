@@ -170,6 +170,34 @@ class ActiveSupport::TestCase
   Found in #{a_name} but not #{b_name}: #{(a.keys - b.keys).join(', ')}
   Found in #{b_name} but not #{a_name}: #{(b.keys - a.keys).join(', ')})
   end
+
+  # Given a regular expression and a block, ensure that the block raises an
+  # exception with a message matching the regular expression.
+  def assert_raises_matching(matcher)
+    assert_raises do
+      begin
+        yield
+      rescue => err
+        assert_match matcher, err.to_s
+        raise err
+      end
+    end
+  end
+
+  # Freeze time for the each test case to 9am, or the specified time
+  # To use, declare anywhere in the test class:
+  #   class MyTest < ActiveSupport::TestCase
+  #     freeze_time
+  #     #...
+  def self.freeze_time(time=nil)
+    time ||= Date.today + 9.hours
+    setup do
+      Timecop.freeze time
+    end
+    teardown do
+      Timecop.return
+    end
+  end
 end
 
 # Helpers for all controller test cases

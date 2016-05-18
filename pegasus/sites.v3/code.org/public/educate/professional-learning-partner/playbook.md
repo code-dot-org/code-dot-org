@@ -14,6 +14,12 @@ title: Professional Learning Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'FAQ', description_t: "Can't find what you're looking for? Check the FAQ.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/FAQ"), button_s: "Learn more"} %>
 
+<%= view :educate_box, item: {title_s: 'Fundraising Resources', description_t: "Coming soon!"} %>
+
+<%= view :educate_box, item: {title_s: 'Mimeo Marketplace', description_t: "Coming soon!"} %>
+
+<%= view :educate_box, item: {title_s: 'Recruiting Teachers', description_t: "Coming soon!"} %>
+
 <%= view :educate_box, item: {title_s: 'Reporting and Evaluations', description_t: "Coming soon!"} %>
 
 <%= view :educate_box, item: {title_s: 'Teacher Support', description_t: "These resources will help you provide support to the teachers enrolled in the Professional Learning Program", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/teacher-support"), button_s: "Learn more"} %>

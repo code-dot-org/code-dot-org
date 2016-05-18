@@ -1,0 +1,94 @@
+id_s!,theWord_s,defined_t,locations_t,locations2_t,lessonURL_t,split_s,part1_s,part2_s,courseNum_s,part3_s,lessonNum_s,part4_s,part5_s,youTubeURL_t
+abstraction,abstraction,Pulling out specific differences to make one solution work for multiple problems.,"Course 3: Stage 1<br/>
+Course 4: Stage 5","Course 3: Stage 1 | 
+Course 4: Stage 5",https://studio.code.org/s/course1/stage/1/puzzle/1,https:,studio.code.org,s,course1,stage,1,puzzle,1,
+algorithm,algorithm,"A list of steps to finish a task. A set of instructions that can be performed with or without a computer. For example, the collection of steps to make a peanut butter and jelly sandwich is an algorithm.","Course 1: Stages 1, 6 <br/>
+Course 2: Stages 1, 2 <br/>
+Course 3: Stages 1, 10 <br/>
+Course 4: Stage 1","Course 1: Stages 1, 6 | 
+Course 2: Stages 1, 2 | 
+Course 3: Stages 1, 10 | 
+Course 4: Stage 1",,,,,,,,,,
+binary,binary,A way of representing information using only two options.,"Course 2: Stage 14 <br/>
+Course 4: Stages 17, 18","Course 2: Stage 14 | 
+Course 4: Stages 17, 18",,,,,,,,,,
+Blockly,Blockly,The visual programming language used in Code.org's online learning system for K-5 students.,Course 1: Stage 3,Course 1: Stage 3,,,,,,,,,,
+bug,bug,An error in a program that prevents the program from running as expected.,"Course 1: Stage 5<br/>
+Course 2: Stages 9, 10, 11<br/>
+Course 3: Stage 14","Course 1: Stage 5 | 
+Course 2: Stages 9, 10, 11| 
+Course 3: Stage 14",,,,,,,,,,
+call,call (a function),This is the piece of code that you add to a program to indicate that the program should run the code inside a function at a certain time.,Course 3: Stage 4,Course 3: Stage 4,,,,,,,,,,
+code,code,One or more commands or algorithm(s) designed to be carried out by a computer. See also: program,Course 1: Stage 2,Course 1: Stage 2,,,,,,,,,,
+command,command,An instruction for the computer. Many commands put together make up algorithms and computer programs.,Course 1: Stage 2,Course 1: Stage 2,,,,,,,,,,
+computational thinking,computational thinking,"Mental processes and strategies that include: decomposition, pattern matching, abstraction, algorithms (decomposing problems into smaller, more manageable problems, finding repeating patterns, abstracting specific differences to make one solution work for multiple problems, and creating step-by-step algorithms).",Course 3: Stage 1,Course 3: Stage 1,,,,,,,,,,
+computer science,computer science,Using the power of computers to solve problems.,Course 1: Stage 2,Course 1: Stage 2,,,,,,,,,,
+conditionals,conditionals,Statements that only run under certain conditions or situations.,"Course 2: Stages 12, 13<br/>
+Course 3: Stages 7, 8","Course 2: Stages 12, 13 | 
+Course 3: Stages 7, 8",,,,,,,,,,
+crowdsourcing,crowdsourcing,Getting help from a large group of people to finish something faster.,Course 3: Stage 19,Course 3: Stage 19,,,,,,,,,,
+data,data,"Information. Often, quantities, characters, or symbols that are the inputs and outputs of computer programs.","Course 2: Stage 14<br/>
+Course 3: Stages 1","Course 2: Stage 14 | 
+Course 3: Stages 1",,,,,,,,,,
+debugging,debugging,Finding and fixing errors in programs.,"Course 1: Stage 5<br/>
+Course 2: Stages 9, 10, 11<br/>
+Course 3: Stage 14","Course 1: Stage 5 | 
+Course 2: Stages 9, 10, 11 | 
+Course 3: Stage 14",,,,,,,,,,
+decompose,decompose,Break a problem down into smaller pieces.,Course 3: Stage 1,Course 3: Stage 1,,,,,,,,,,
+define,define (a function),To add code inside a function so that the program knows what it is supposed to do when the function is called.,Course 3: Stage 4,Course 3: Stage 4,,,,,,,,,,
+digital citizen,digital citizen,"Someone who acts safely, responsibly, and respectfully online.",Course 3: Stage 20,Course 3: Stage 20,,,,,,,,,,
+digital footprint,digital footprint,The information about someone on the Internet.,Course 2: Stage 18,Course 2: Stage 18,,,,,,,,,,
+DNS (domain name service),DNS (domain name service),The service that translates URLs to IP addresses.,Course 3: Stage 18,Course 3: Stage 18,,,,,,,,,,
+DSL/cable,DSL/cable,A method of sending information using telephone or television cables.,Course 3: Stage 18,Course 3: Stage 18,,,,,,,,,,
+event,event,An action that causes something to happen.,"Course 1: Stage 15<br/>
+Course 2: Stage 15","Course 1: Stage 15 | 
+Course 2: Stage 15",,,,,,,,,,
+event-handler,event-handler,"A monitor for a specific event or action on a computer. When you write code for an event handler, it will be executed every time that event or action occurs. Many event-handlers respond to human actions such as mouse clicks.","Course 1: Stage 15 <br/>
+Course 2: Stage 15","Course 1: Stage 15 | 
+Course 2: Stage 15",,,,,,,,,,
+fiber optic cable,fiber optic cable,A connection that uses light to transmit information.,Course 3: Stage 18,Course 3: Stage 18,,,,,,,,,,
+for loop,for loop,"A loop with a predetermined beginning, end, and increment (step interval).","Course 4: Stages 8, 9, 10, 11, 20","Course 4: Stages 8, 9, 10, 11, 20",,,,,,,,,,
+function,function,"A piece of code that you can easily call over and over again. Functions are sometimes called ‘procedures.’ A function definition is a segment of code that includes the steps performed in the function.  A function call is the code segment, typically within the main logic of the program, which invokes the function.","Course 3: Stages 4, 5, 6, 9 <br/>
+Course 4: Stages 12, 13, 14, 15, 16, 21","Course 3: Stages 4, 5, 6, 9 | 
+Course 4: Stages 12, 13, 14, 15, 16, 21",,,,,,,,,,
+function call,function call,The piece of code that you add to a program to indicate that the program should run the code inside a function at a certain time.,Course 3: Stage 4,Course 3: Stage 4,,,,,,,,,,
+function definition,function definition,The code inside a function that instructs the program on what to do when the function is called.,Course 3: Stage 4,Course 3: Stage 4,,,,,,,,,,
+Internet,Internet,A group of computers and servers that are connected to each other.,"Course 1: Stage 17 <br/>
+Course 2: Stage 18 <br/>
+Course 3: Stages 18, 20","Course 1: Stage 17 | 
+Course 2: Stage 18 | 
+Course 3: Stages 18, 20",,,,,,,,,,
+IP address,IP address,A number assigned to any item that is connected to the Internet.,Course 3: Stage 18,Course 3: Stage 18,,,,,,,,,,
+iteration,iteration,A repetitive action or command typically created with programming loops.,"Course 1: Stage 12<br/>
+Course 2: Stage 5","Course 1: Stage 12 | 
+Course 2: Stage 5",,,,,,,,,,
+loop,loop,The action of doing something over and over again.,"Course 1: Stages 12, 13, 14<br/>
+Course 2: Stages 5, 6, 7, 8","Course 1: Stages 12, 13, 14 | 
+Course 2: Stages 5, 6, 7, 8",,,,,,,,,,
+packets,packets,Small chunks of information that have been carefully formed from larger chunks of information.,Course 3: Stage 18,Course 3: Stage 18,,,,,,,,,,
+pattern matching,pattern matching,Finding similarities between things.,"Course 3: Stage 1<br/>
+Course 4: Stage 5","Course 3: Stage 1 | 
+Course 4: Stage 5",,,,,,,,,,
+,Parameter,An extra piece of information that you pass to the function to customize it for a specific need.,"Course 4: Stages 13, 14, 15, 16","Course 4: Stages 13, 14, 15, 16",,,,,,,,,,
+persistence,persistence,"Trying again and again, even when something is very hard.",Course 1: Stage 9,Course 1: Stage 9,,,,,,,,,,
+program,program,An algorithm that has been coded into something that can be run by a machine.,"Course 1: Stage 2 <br/>
+Course 2: Stage 1, 9<br/>
+Course 3: Stage 10","Course 1: Stage 2 | 
+Course 2: Stage 1, 9 | 
+Course 3: Stage 10",,,,,,,,,,
+programming,programming,The art of creating a program.,"Course 1: Stage 2 <br/>
+Course 2: Stage 1, 9<br/>
+Course 3: Stage 10","Course 1: Stage 2 | 
+Course 2: Stage 1, 9 | 
+Course 3: Stage 10",,,,,,,,,,
+run program,run program,Cause the computer to execute the commands you've written in your program.,Course 1: Stage 4,Course 1: Stage 4,,,,,,,,,,
+servers,servers,Computers that exist only to provide things to others.,Course 3: Stage 18,Course 3: Stage 18,,,,,,,,,,
+toolbox,toolbox,The tall grey bar in the middle section of Code.org's online learning system that contains all of the commands you can use to write your program.,Course 1: Stage 4,Course 1: Stage 4,,,,,,,,,,
+URL (universal resource locator),URL (universal resource locator),A relatively easy-to-remember address for calling a web page (like www.code.org).,Course 3: Stage 18,Course 3: Stage 18,,,,,,,,,,
+username,username,"A name you make up so that you can see or do things on a website, sometimes called a “screen name.”",Course 1: Stage 18,Course 1: Stage 18,,,,,,,,,,
+variable,variable,A placeholder for a piece of information that can change.,"Course 3: Stage 4<br/>
+Course 4: Stage 4, 5, 6, 7","Course 3: Stage 4 | 
+Course 4: Stage 4, 5, 6, 7",,,,,,,,,,
+Wi-Fi,Wi-Fi,A wireless method of sending information using radio waves.,Course 3: Stage 18,Course 3: Stage 18,,,,,,,,,,
+workspace,workspace,The white area on the right side of Code.org's online learning system where you drag and drop commands to build your program.,Course 1: Stage 4,Course 1: Stage 4,,,,,,,,,,

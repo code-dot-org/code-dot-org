@@ -25,15 +25,16 @@
 class Level < ActiveRecord::Base
   belongs_to :game
   has_and_belongs_to_many :concepts
-  has_many :script_levels, dependent: :destroy
+  has_and_belongs_to_many :script_levels
   belongs_to :solution_level_source, :class_name => "LevelSource" # TODO: Do we even use this?
   belongs_to :ideal_level_source, :class_name => "LevelSource" # "see the solution" link uses this
   belongs_to :user
-  has_one :level_concept_difficulty
+  has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
   has_many :hint_view_requests
 
   before_validation :strip_name
+  before_destroy :remove_empty_script_levels
 
   validates_length_of :name, within: 1..70
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> { where.not(user_id: nil) }
@@ -281,8 +282,20 @@ class Level < ActiveRecord::Base
     self.name = name.to_s.strip unless name.nil?
   end
 
+  def remove_empty_script_levels
+    script_levels.each do |script_level|
+      if script_level.levels.length == 1 && script_level.levels[0] == self
+        script_level.destroy
+      end
+    end
+  end
+
   def self.cache_find(id)
     Script.cache_find_level(id)
+  end
+
+  def icon
+    'fa-puzzle-piece'
   end
 
   private
