@@ -20,7 +20,7 @@ namespace :circle do
     if GitUtils.circle_commit_contains?(RUN_UI_TESTS_TAG)
       HipChat.log "Commit message: '#{GitUtils.circle_commit_message}' contains #{RUN_UI_TESTS_TAG}, running UI tests."
       RakeUtils.exec_in_background 'RACK_ENV=test RAILS_ENV=test ./bin/dashboard-server'
-      RakeUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz'
+      RakeUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-4.3.15-linux.tar.gz'
       RakeUtils.system_stream_output 'tar -xzf sc-latest-linux.tar.gz'
       Dir.chdir(Dir.glob('sc-*-linux')[0]) do
         RakeUtils.exec_in_background './bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY'
