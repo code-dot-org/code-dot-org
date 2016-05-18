@@ -334,6 +334,10 @@ Dashboard::Application.routes.draw do
   end
 
   namespace :pd do
+    # React-router will handle sub-routes on the client.
+    get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
+    get 'workshop_dashboard', to: 'workshop_dashboard#index'
+
     get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
