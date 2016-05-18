@@ -23,7 +23,7 @@ puzzleRatingUtils.buildPuzzleRatingButtons = function () {
   var buttons = buttonContainer.querySelectorAll('.puzzle-rating-btn');
   var buttonClickHandler = function () {
     for (var i = 0, button; (button = buttons[i]); i++) {
-      if (button != this) {
+      if (button !== this) {
         $(button).removeClass('enabled');
       }
     }

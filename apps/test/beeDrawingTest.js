@@ -94,7 +94,7 @@ function validateImages(setup, defaultFlower) {
       }
 
       var actualCloud =
-          !!(cloud && (cloud.getAttribute('visibility') == 'visible'));
+          !!(cloud && (cloud.getAttribute('visibility') === 'visible'));
       assert.equal(actualCloud, expectedCloud);
 
     } catch (exc) {
