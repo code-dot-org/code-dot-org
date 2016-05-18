@@ -136,6 +136,9 @@ def insert_form(kind, data, options={})
   }
   row[:user_id] = dashboard_user[:id] if dashboard_user
 
+  form_class = Object.const_get(kind)
+  row[:source_id] = form_class.get_source_id(data) if form_class.respond_to? :get_source_id
+
   if kind == "HocSignup2015"
     update_row = DB[:forms].where(email: row[:email], kind: kind, name: row[:name]).update(row)
 
