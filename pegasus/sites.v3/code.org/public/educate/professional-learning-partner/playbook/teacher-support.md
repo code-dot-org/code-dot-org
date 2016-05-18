@@ -35,7 +35,7 @@ ________________
 **Program Overviews** provide a deeper look at the details of our professional learning offerings for teachers, and are used for outlining the structure and flow of the program the teacher is enrolling in.
 
 - [CS in Algebra](https://www.dropbox.com/s/lo60ydun7pdh127/Code.orgCSinAlgebra_1-pager_03082016.pdf?dl=0)<br/> 
-- - [Cs in Science](https://www.dropbox.com/s/7qxe09uxxmsumtx/2016_welcome_CSinScience_031816_v3.pdf?dl=0)<br/>
+- [CS in Science](https://www.dropbox.com/s/7qxe09uxxmsumtx/2016_welcome_CSinScience_031816_v3.pdf?dl=0)<br/>
 - [Exploring CS](https://www.dropbox.com/s/na6um5intbw4c8w/2016_welcome_ECS_031816_v5.pdf?dl=0)<br/>
 - [CS Princples](https://www.dropbox.com/s/pl3uzvc1dripydc/2016_CSP%20welcome_031816_v3.pdf?dl=0)<br/>
 

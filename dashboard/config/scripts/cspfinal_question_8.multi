@@ -1,6 +1,6 @@
 name 'CSPFinal_Question_8'
 wrong 'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>'
-wrong 'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>'
+right 'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>'
 wrong 'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>'
 wrong 'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>'
 markdown <<MARKDOWN
