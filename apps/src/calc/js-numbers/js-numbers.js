@@ -2461,9 +2461,9 @@ module.exports = jsnums;
     }
 
     function Exactness(i) {
-      this.defaultp = function () { return i === 0; }
-      this.exactp = function () { return i === 1; }
-      this.inexactp = function () { return i === 2; }
+      this.defaultp = function () { return i == 0; }
+      this.exactp = function () { return i == 1; }
+      this.inexactp = function () { return i == 2; }
     }
 
     Exactness.def = new Exactness(0);
@@ -2600,7 +2600,7 @@ module.exports = jsnums;
     };
 
     function parseFloat(sign, integralPart, fractionalPart, radix, exactness) {
-        var sign = (sign === "-" ? -1 : 1);
+        var sign = (sign == "-" ? -1 : 1);
         var integralPartValue = integralPart === ""  ? 0  :
                                 exactness.intAsExactp() ? parseExactInt(integralPart, radix) :
                                                           parseInt(integralPart, radix)
@@ -2653,9 +2653,9 @@ module.exports = jsnums;
 
     // (public) Constructor
     function BigInteger(a,b,c) {
-        if(a !== null)
-            if("number" === typeof a) this.fromNumber(a,b,c);
-        else if(b === null && "string" !== typeof a) this.fromString(a,256);
+        if(a != null)
+            if("number" == typeof a) this.fromNumber(a,b,c);
+        else if(b == null && "string" != typeof a) this.fromString(a,256);
         else this.fromString(a,b);
     }
 
@@ -2707,11 +2707,11 @@ module.exports = jsnums;
         }
         return c;
     }
-    if(j_lm && (typeof(navigator) !== 'undefined' && navigator.appName === "Microsoft Internet Explorer")) {
+    if(j_lm && (typeof(navigator) !== 'undefined' && navigator.appName == "Microsoft Internet Explorer")) {
         BigInteger.prototype.am = am2;
         dbits = 30;
     }
-    else if(j_lm && (typeof(navigator) !== 'undefined' && navigator.appName !== "Netscape")) {
+    else if(j_lm && (typeof(navigator) !== 'undefined' && navigator.appName != "Netscape")) {
         BigInteger.prototype.am = am1;
         dbits = 26;
     }
@@ -2768,12 +2768,12 @@ module.exports = jsnums;
     // (protected) set from string and radix
     function bnpFromString(s,b) {
         var k;
-        if(b === 16) k = 4;
-        else if(b === 8) k = 3;
-        else if(b === 256) k = 8; // byte array
-        else if(b === 2) k = 1;
-        else if(b === 32) k = 5;
-        else if(b === 4) k = 2;
+        if(b == 16) k = 4;
+        else if(b == 8) k = 3;
+        else if(b == 256) k = 8; // byte array
+        else if(b == 2) k = 1;
+        else if(b == 32) k = 5;
+        else if(b == 4) k = 2;
         else { this.fromRadix(s,b); return; }
         this.t = 0;
         this.s = 0;
@@ -2781,11 +2781,11 @@ module.exports = jsnums;
         while(--i >= 0) {
             var x = (k==8)?s[i]&0xff:intAt(s,i);
             if(x < 0) {
-                if(s.charAt(i) === "-") mi = true;
+                if(s.charAt(i) == "-") mi = true;
                 continue;
             }
             mi = false;
-            if(sh === 0)
+            if(sh == 0)
                 this[this.t++] = x;
             else if(sh+k > this.DB) {
                 this[this.t-1] |= (x&((1<<(this.DB-sh))-1))<<sh;
@@ -2796,7 +2796,7 @@ module.exports = jsnums;
             sh += k;
             if(sh >= this.DB) sh -= this.DB;
         }
-        if(k === 8 && (s[0]&0x80) !== 0) {
+        if(k == 8 && (s[0]&0x80) != 0) {
             this.s = -1;
             if(sh > 0) this[this.t-1] |= ((1<<(this.DB-sh))-1)<<sh;
         }
@@ -2807,18 +2807,18 @@ module.exports = jsnums;
     // (protected) clamp off excess high words
     function bnpClamp() {
         var c = this.s&this.DM;
-        while(this.t > 0 && this[this.t-1] === c) --this.t;
+        while(this.t > 0 && this[this.t-1] == c) --this.t;
     }
 
     // (public) return string representation in given radix
     function bnToString(b) {
         if(this.s < 0) return "-"+this.negate().toString(b);
         var k;
-        if(b === 16) k = 4;
-        else if(b === 8) k = 3;
-        else if(b === 2) k = 1;
-        else if(b === 32) k = 5;
-        else if(b === 4) k = 2;
+        if(b == 16) k = 4;
+        else if(b == 8) k = 3;
+        else if(b == 2) k = 1;
+        else if(b == 32) k = 5;
+        else if(b == 4) k = 2;
         else return this.toRadix(b);
         var km = (1<<k)-1, d, m = false, r = [], i = this.t;
         var p = this.DB-(i*this.DB)%k;
@@ -2849,7 +2849,7 @@ module.exports = jsnums;
     // (public) return + if this > a, - if this < a, 0 if equal
     function bnCompareTo(a) {
         var r = this.s-a.s;
-        if(r !== 0) return r;
+        if(r != 0) return r;
         var i = this.t;
         if ( this.s < 0 ) {
                 r = a.t - i;
@@ -2857,19 +2857,19 @@ module.exports = jsnums;
         else {
                 r = i - a.t;
         }
-        if(r !== 0) return r;
-        while(--i >= 0) if((r=this[i]-a[i]) !== 0) return r;
+        if(r != 0) return r;
+        while(--i >= 0) if((r=this[i]-a[i]) != 0) return r;
         return 0;
     }
 
     // returns bit length of the integer x
     function nbits(x) {
         var r = 1, t;
-        if((t=x>>>16) !== 0) { x = t; r += 16; }
-        if((t=x>>8) !== 0) { x = t; r += 8; }
-        if((t=x>>4) !== 0) { x = t; r += 4; }
-        if((t=x>>2) !== 0) { x = t; r += 2; }
-        if((t=x>>1) !== 0) { x = t; r += 1; }
+        if((t=x>>>16) != 0) { x = t; r += 16; }
+        if((t=x>>8) != 0) { x = t; r += 8; }
+        if((t=x>>4) != 0) { x = t; r += 4; }
+        if((t=x>>2) != 0) { x = t; r += 2; }
+        if((t=x>>1) != 0) { x = t; r += 1; }
         return r;
     }
 
@@ -2963,7 +2963,7 @@ module.exports = jsnums;
         r.clamp();
     }
 
-    // (protected) r = this * a, r !== this,a (HAC 14.12)
+    // (protected) r = this * a, r != this,a (HAC 14.12)
     // "this" should be the larger one if appropriate.
     function bnpMultiplyTo(a,r) {
         var x = this.abs(), y = a.abs();
@@ -2973,10 +2973,10 @@ module.exports = jsnums;
         for(i = 0; i < y.t; ++i) r[i+x.t] = x.am(0,y[i],r,i,0,x.t);
         r.s = 0;
         r.clamp();
-        if(this.s !== a.s) BigInteger.ZERO.subTo(r,r);
+        if(this.s != a.s) BigInteger.ZERO.subTo(r,r);
     }
 
-    // (protected) r = this^2, r !== this (HAC 14.16)
+    // (protected) r = this^2, r != this (HAC 14.16)
     function bnpSquareTo(r) {
         var x = this.abs();
         var i = r.t = 2*x.t;
@@ -2995,24 +2995,24 @@ module.exports = jsnums;
 
 
     // (protected) divide this by m, quotient and remainder to q, r (HAC 14.20)
-    // r !== q, this !== m.  q or r may be null.
+    // r != q, this != m.  q or r may be null.
     function bnpDivRemTo(m,q,r) {
         var pm = m.abs();
         if(pm.t <= 0) return;
         var pt = this.abs();
         if(pt.t < pm.t) {
-            if(q !== null) q.fromInt(0);
-            if(r !== null) this.copyTo(r);
+            if(q != null) q.fromInt(0);
+            if(r != null) this.copyTo(r);
             return;
         }
-        if(r === null) r = nbi();
+        if(r == null) r = nbi();
         var y = nbi(), ts = this.s, ms = m.s;
         var nsh = this.DB-nbits(pm[pm.t-1]);	// normalize modulus
         if(nsh > 0) { pm.lShiftTo(nsh,y); pt.lShiftTo(nsh,r); }
         else { pm.copyTo(y); pt.copyTo(r); }
         var ys = y.t;
         var y0 = y[ys-1];
-        if(y0 === 0) return;
+        if(y0 == 0) return;
         var yt = y0*(1<<this.F1)+((ys>1)?y[ys-2]>>this.F2:0);
         var d1 = this.FV/yt, d2 = (1<<this.F1)/yt, e = 1<<this.F2;
         var i = r.t, j = i-ys, t = (q==null)?nbi():q;
@@ -3033,9 +3033,9 @@ module.exports = jsnums;
                 while(r[i] < --qd) r.subTo(t,r);
             }
         }
-        if(q !== null) {
+        if(q != null) {
             r.drShiftTo(ys,q);
-            if(ts !== ms) BigInteger.ZERO.subTo(q,q);
+            if(ts != ms) BigInteger.ZERO.subTo(q,q);
         }
         r.t = ys;
         r.clamp();
@@ -3070,25 +3070,25 @@ module.exports = jsnums;
 
     // (protected) return "-1/this % 2^DB"; useful for Mont. reduction
     // justification:
-    //         xy === 1 (mod m)
+    //         xy == 1 (mod m)
     //         xy =  1+km
     //   xy(2-xy) = (1+km)(1-km)
     // x[y(2-xy)] = 1-k^2m^2
-    // x[y(2-xy)] === 1 (mod m^2)
+    // x[y(2-xy)] == 1 (mod m^2)
     // if y is 1/x mod m, then y(2-xy) is 1/x mod m^2
     // should reduce x and y(2-xy) by m^2 at each step to keep size bounded.
     // JS multiply "overflows" differently from C/C++, so care is needed here.
     function bnpInvDigit() {
         if(this.t < 1) return 0;
         var x = this[0];
-        if((x&1) === 0) return 0;
-        var y = x&3;		// y === 1/x mod 2^2
-        y = (y*(2-(x&0xf)*y))&0xf;	// y === 1/x mod 2^4
-        y = (y*(2-(x&0xff)*y))&0xff;	// y === 1/x mod 2^8
-        y = (y*(2-(((x&0xffff)*y)&0xffff)))&0xffff;	// y === 1/x mod 2^16
+        if((x&1) == 0) return 0;
+        var y = x&3;		// y == 1/x mod 2^2
+        y = (y*(2-(x&0xf)*y))&0xf;	// y == 1/x mod 2^4
+        y = (y*(2-(x&0xff)*y))&0xff;	// y == 1/x mod 2^8
+        y = (y*(2-(((x&0xffff)*y)&0xffff)))&0xffff;	// y == 1/x mod 2^16
         // last step - calculate inverse mod DV directly;
         // assumes 16 < DB <= 32 and assumes ability to handle 48-bit ints
-        y = (y*(2-x*y%this.DV))%this.DV;		// y === 1/x mod 2^dbits
+        y = (y*(2-x*y%this.DV))%this.DV;		// y == 1/x mod 2^dbits
         // we really want the negative inverse, and -DV < y < DV
         return (y>0)?this.DV-y:-y;
     }
@@ -3139,10 +3139,10 @@ module.exports = jsnums;
         if(x.compareTo(this.m) >= 0) x.subTo(this.m,x);
     }
 
-    // r = "x^2/R mod m"; x !== r
+    // r = "x^2/R mod m"; x != r
     function montSqrTo(x,r) { x.squareTo(r); this.reduce(r); }
 
-    // r = "xy/R mod m"; x,y !== r
+    // r = "xy/R mod m"; x,y != r
     function montMulTo(x,y,r) { x.multiplyTo(y,r); this.reduce(r); }
 
     Montgomery.prototype.convert = montConvert;
@@ -3152,7 +3152,7 @@ module.exports = jsnums;
     Montgomery.prototype.sqrTo = montSqrTo;
 
     // (protected) true iff this is even
-    function bnpIsEven() { return ((this.t>0)?(this[0]&1):this.s) === 0; }
+    function bnpIsEven() { return ((this.t>0)?(this[0]&1):this.s) == 0; }
 
     // (protected) this^e, e < 2^32, doing sqr and mul with "r" (HAC 14.79)
     function bnpExp(e,z) {
@@ -3218,11 +3218,11 @@ module.exports = jsnums;
     // (public) return value as integer
     function bnIntValue() {
         if(this.s < 0) {
-            if(this.t === 1) return this[0]-this.DV;
-            else if(this.t === 0) return -1;
+            if(this.t == 1) return this[0]-this.DV;
+            else if(this.t == 0) return -1;
         }
-        else if(this.t === 1) return this[0];
-        else if(this.t === 0) return 0;
+        else if(this.t == 1) return this[0];
+        else if(this.t == 0) return 0;
         // assumes 16 < DB < 32
         return ((this[1]&((1<<(32-this.DB))-1))<<this.DB)|this[0];
     }
@@ -3236,17 +3236,17 @@ module.exports = jsnums;
     // (protected) return x s.t. r^x < DV
     function bnpChunkSize(r) { return Math.floor(Math.LN2*this.DB/Math.log(r)); }
 
-    // (public) 0 if this === 0, 1 if this > 0
+    // (public) 0 if this == 0, 1 if this > 0
     function bnSigNum() {
         if(this.s < 0) return -1;
-        else if(this.t <= 0 || (this.t === 1 && this[0] <= 0)) return 0;
+        else if(this.t <= 0 || (this.t == 1 && this[0] <= 0)) return 0;
         else return 1;
     }
 
     // (protected) convert to radix string
     function bnpToRadix(b) {
-        if(b === null) b = 10;
-        if(this.signum() === 0 || b < 2 || b > 36) return "0";
+        if(b == null) b = 10;
+        if(this.signum() == 0 || b < 2 || b > 36) return "0";
         var cs = this.chunkSize(b);
         var a = Math.pow(b,cs);
         var d = nbv(a), y = nbi(), z = nbi(), r = "";
@@ -3261,13 +3261,13 @@ module.exports = jsnums;
     // (protected) convert from radix string
     function bnpFromRadix(s,b) {
         this.fromInt(0);
-        if(b === null) b = 10;
+        if(b == null) b = 10;
         var cs = this.chunkSize(b);
         var d = Math.pow(b,cs), mi = false, j = 0, w = 0;
         for(var i = 0; i < s.length; ++i) {
             var x = intAt(s,i);
             if(x < 0) {
-                if(s.charAt(i) === "-" && this.signum() === 0) mi = true;
+                if(s.charAt(i) == "-" && this.signum() == 0) mi = true;
                 continue;
             }
             w = b*w+x;
@@ -3287,7 +3287,7 @@ module.exports = jsnums;
 
     // (protected) alternate constructor
     function bnpFromNumber(a,b,c) {
-        if("number" === typeof b) {
+        if("number" == typeof b) {
             // new BigInteger(int,int,RNG)
             if(a < 2) this.fromInt(1);
             else {
@@ -3317,7 +3317,7 @@ module.exports = jsnums;
         r[0] = this.s;
         var p = this.DB-(i*this.DB)%8, d, k = 0;
         if(i-- > 0) {
-            if(p < this.DB && (d = this[i]>>p) !== (this.s&this.DM)>>p)
+            if(p < this.DB && (d = this[i]>>p) != (this.s&this.DM)>>p)
                 r[k++] = d|(this.s<<(this.DB-p));
             while(i >= 0) {
                 if(p < 8) {
@@ -3328,9 +3328,9 @@ module.exports = jsnums;
                     d = (this[i]>>(p-=8))&0xff;
                     if(p <= 0) { p += this.DB; --i; }
                 }
-                if((d&0x80) !== 0) d |= -256;
-                if(k === 0 && (this.s&0x80) !== (d&0x80)) ++k;
-                if(k > 0 || d !== this.s) r[k++] = d;
+                if((d&0x80) != 0) d |= -256;
+                if(k == 0 && (this.s&0x80) != (d&0x80)) ++k;
+                if(k > 0 || d != this.s) r[k++] = d;
             }
         }
         return r;
@@ -3399,20 +3399,20 @@ module.exports = jsnums;
 
     // return index of lowest 1-bit in x, x < 2^31
     function lbit(x) {
-        if(x === 0) return -1;
+        if(x == 0) return -1;
         var r = 0;
-        if((x&0xffff) === 0) { x >>= 16; r += 16; }
-        if((x&0xff) === 0) { x >>= 8; r += 8; }
-        if((x&0xf) === 0) { x >>= 4; r += 4; }
-        if((x&3) === 0) { x >>= 2; r += 2; }
-        if((x&1) === 0) ++r;
+        if((x&0xffff) == 0) { x >>= 16; r += 16; }
+        if((x&0xff) == 0) { x >>= 8; r += 8; }
+        if((x&0xf) == 0) { x >>= 4; r += 4; }
+        if((x&3) == 0) { x >>= 2; r += 2; }
+        if((x&1) == 0) ++r;
         return r;
     }
 
     // (public) returns index of lowest 1-bit (or -1 if none)
     function bnGetLowestSetBit() {
         for(var i = 0; i < this.t; ++i)
-            if(this[i] !== 0) return i*this.DB+lbit(this[i]);
+            if(this[i] != 0) return i*this.DB+lbit(this[i]);
         if(this.s < 0) return this.t*this.DB;
         return -1;
     }
@@ -3420,7 +3420,7 @@ module.exports = jsnums;
     // return number of 1 bits in x
     function cbit(x) {
         var r = 0;
-        while(x !== 0) { x &= x-1; ++r; }
+        while(x != 0) { x &= x-1; ++r; }
         return r;
     }
 
@@ -3518,7 +3518,7 @@ module.exports = jsnums;
 
     // (protected) this += n << w words, this >= 0
     function bnpDAddOffset(n,w) {
-        if(n === 0) return;
+        if(n == 0) return;
         while(this.t <= w) this[this.t++] = 0;
         this[w] += n;
         while(this[w] >= this.DV) {
@@ -3597,10 +3597,10 @@ module.exports = jsnums;
         while(x.compareTo(this.m) >= 0) x.subTo(this.m,x);
     }
 
-    // r = x^2 mod m; x !== r
+    // r = x^2 mod m; x != r
     function barrettSqrTo(x,r) { x.squareTo(r); this.reduce(r); }
 
-    // r = x*y mod m; x,y !== r
+    // r = x*y mod m; x,y != r
     function barrettMulTo(x,y,r) { x.multiplyTo(y,r); this.reduce(r); }
 
     Barrett.prototype.convert = barrettConvert;
@@ -3648,9 +3648,9 @@ module.exports = jsnums;
             }
 
             n = k;
-            while((w&1) === 0) { w >>= 1; --n; }
+            while((w&1) == 0) { w >>= 1; --n; }
             if((i -= n) < 0) { i += this.DB; --j; }
-            if(is1) {	// ret === 1, don't bother squaring or multiplying it
+            if(is1) {	// ret == 1, don't bother squaring or multiplying it
                 g[w].copyTo(r);
                 is1 = false;
             }
@@ -3660,7 +3660,7 @@ module.exports = jsnums;
                 z.mulTo(r2,g[w],r);
             }
 
-            while(j >= 0 && (e[j]&(1<<i)) === 0) {
+            while(j >= 0 && (e[j]&(1<<i)) == 0) {
                 z.sqrTo(r,r2); t = r; r = r2; r2 = t;
                 if(--i < 0) { i = this.DB-1; --j; }
             }
@@ -3701,7 +3701,7 @@ module.exports = jsnums;
         if(n <= 0) return 0;
         var d = this.DV%n, r = (this.s<0)?n-1:0;
         if(this.t > 0)
-            if(d === 0) r = this[0]%n;
+            if(d == 0) r = this[0]%n;
         else for(var i = this.t-1; i >= 0; --i) r = (d*r+this[i])%n;
         return r;
     }
@@ -3709,10 +3709,10 @@ module.exports = jsnums;
     // (public) 1/this % m (HAC 14.61)
     function bnModInverse(m) {
         var ac = m.isEven();
-        if((this.isEven() && ac) || m.signum() === 0) return BigInteger.ZERO;
+        if((this.isEven() && ac) || m.signum() == 0) return BigInteger.ZERO;
         var u = m.clone(), v = this.clone();
         var a = nbv(1), b = nbv(0), c = nbv(0), d = nbv(1);
-        while(u.signum() !== 0) {
+        while(u.signum() != 0) {
             while(u.isEven()) {
                 u.rShiftTo(1,u);
                 if(ac) {
@@ -3742,7 +3742,7 @@ module.exports = jsnums;
                 d.subTo(b,d);
             }
         }
-        if(v.compareTo(BigInteger.ONE) !== 0) return BigInteger.ZERO;
+        if(v.compareTo(BigInteger.ONE) != 0) return BigInteger.ZERO;
         if(d.compareTo(m) >= 0) return d.subtract(m);
         if(d.signum() < 0) d.addTo(m,d); else return d;
         if(d.signum() < 0) return d.add(m); else return d;
@@ -3754,9 +3754,9 @@ module.exports = jsnums;
     // (public) test primality with certainty >= 1-.5^t
     function bnIsProbablePrime(t) {
         var i, x = this.abs();
-        if(x.t === 1 && x[0] <= lowprimes[lowprimes.length-1]) {
+        if(x.t == 1 && x[0] <= lowprimes[lowprimes.length-1]) {
             for(i = 0; i < lowprimes.length; ++i)
-                if(x[0] === lowprimes[i]) return true;
+                if(x[0] == lowprimes[i]) return true;
             return false;
         }
         if(x.isEven()) return false;
@@ -3765,7 +3765,7 @@ module.exports = jsnums;
             var m = lowprimes[i], j = i+1;
             while(j < lowprimes.length && m < lplim) m *= lowprimes[j++];
             m = x.modInt(m);
-            while(i < j) if(m%lowprimes[i++] === 0) return false;
+            while(i < j) if(m%lowprimes[i++] == 0) return false;
         }
         return x.millerRabin(t);
     }
@@ -3782,13 +3782,13 @@ module.exports = jsnums;
         for(var i = 0; i < t; ++i) {
             a.fromInt(lowprimes[i]);
             var y = a.modPow(r,this);
-            if(y.compareTo(BigInteger.ONE) !== 0 && y.compareTo(n1) !== 0) {
+            if(y.compareTo(BigInteger.ONE) != 0 && y.compareTo(n1) != 0) {
                 var j = 1;
-                while(j++ < k && y.compareTo(n1) !== 0) {
+                while(j++ < k && y.compareTo(n1) != 0) {
                     y = y.modPowInt(2,this);
-                    if(y.compareTo(BigInteger.ONE) === 0) return false;
+                    if(y.compareTo(BigInteger.ONE) == 0) return false;
                 }
-                if(y.compareTo(n1) !== 0) return false;
+                if(y.compareTo(n1) != 0) return false;
             }
         }
         return true;
