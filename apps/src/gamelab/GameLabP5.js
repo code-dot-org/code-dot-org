@@ -631,7 +631,12 @@ GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
     'elt',
     'canvas',
     'parent',
-    'p5'
+    'p5',
+    'downloadFile',
+    'writeFile',
+    'httpGet',
+    'httpPost',
+    'httpDo',
   ];
 };
 
@@ -673,11 +678,14 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
 
   var propList = {};
   var blockedProps = this.getCustomMarshalBlockedProperties();
+  var globalCustomMarshalProps = this.getCustomMarshalGlobalProperties();
 
   // Include every property on the p5 instance in the global property list
-  // except those on the custom marshal blocked list:
+  // except those on the custom marshal lists:
   for (var prop in this.p5) {
-    if (-1 === blockedProps.indexOf(prop)) {
+    if (-1 === blockedProps.indexOf(prop) &&
+        -1 === this.p5specialFunctions.indexOf(prop) &&
+        !globalCustomMarshalProps[prop]) {
       propList[prop] = [this.p5[prop], this.p5];
     }
   }
