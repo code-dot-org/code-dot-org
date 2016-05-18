@@ -156,7 +156,7 @@ type RateLimit {
 }
 
 type RateLimitCounters {
-  last_reset_time: Number
+  last_reset_time: Number | Null
   last_op_count: Number
 }
 
