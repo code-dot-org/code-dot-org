@@ -85,7 +85,7 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
       return (ignoredTags.indexOf(element.tag) !== -1);
     }
   });
-  if (processed != safe) {
+  if (processed !== safe) {
     warn(removedHtml(processed, safe), unsafe, safe, warnings);
   }
 }
@@ -167,7 +167,7 @@ module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
     }
   });
 
-  if (typeof warn === 'function' && safe != unsafe) {
+  if (typeof warn === 'function' && safe !== unsafe) {
     warnAboutUnsafeHtml(warn, unsafe, safe, warnings);
   }
 
