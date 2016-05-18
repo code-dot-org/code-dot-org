@@ -1,5 +1,5 @@
 /** @file Row of controls above the visualization. */
-var actions = require('./actions');
+import {changeInterfaceMode} from './actions';
 var connect = require('react-redux').connect;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 var msg = require('../locale');
@@ -49,7 +49,7 @@ module.exports = connect(function propsFromStore(state) {
 }, function propsFromDispatch(dispatch) {
   return {
     onInterfaceModeChange: function (mode) {
-      dispatch(actions.changeInterfaceMode(mode));
+      dispatch(changeInterfaceMode(mode));
     }
   };
 })(GameLabVisualizationHeader);
