@@ -1592,8 +1592,8 @@ a.WireframeSendToPhone_send-to-phone-link {
 }
 
 #visualizationColumn.wireframeShare {
-  background-color: #5C6971;
-  border-radius: 50px;
+  background: url("#{$common_root}phone_wireframe.png") center center no-repeat;
+  background-size: 432px 757px;
 }
 
 .legacy-share-view {
