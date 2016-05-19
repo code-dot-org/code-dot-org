@@ -349,6 +349,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
+  get '/dashboardapi/v1/pd/k5workshops', to: 'api/v1/pd/workshops#k5_public_map_index'
 
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
