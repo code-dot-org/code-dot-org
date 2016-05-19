@@ -86,16 +86,16 @@ class PeerReview < ActiveRecord::Base
   end
 
   def self.create_for_submission(user_level, level_source_id)
-    timestamps = []
+    created = []
 
     REVIEWS_PER_SUBMISSION.times do
-      timestamps << create!(
+      created << create!(
         submitter_id: user_level.user.id,
         from_instructor: false,
         script: user_level.script,
         level: user_level.level,
         level_source_id: level_source_id
-      ).created_at
+      ).id
     end
 
     # Remove old unassigned reviews for this submitter+script+level combination
@@ -105,6 +105,6 @@ class PeerReview < ActiveRecord::Base
       from_instructor: false,
       script: user_level.script,
       level: user_level.level,
-    ).where.not(created_at: timestamps).destroy_all
+    ).where.not(id: created).destroy_all
   end
 end
