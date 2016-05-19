@@ -167,7 +167,7 @@ var InstructionsWithWorkspace = React.createClass({
         {this.props.showInstructions && <TopInstructions
             ref="topInstructions"
             height={topPaneHeight}
-            onLoadImage={this.adjustTopPaneHeight}/>
+            onResize={this.adjustTopPaneHeight}/>
         }
         <CodeWorkspaceContainer
             ref="codeWorkspaceContainer"

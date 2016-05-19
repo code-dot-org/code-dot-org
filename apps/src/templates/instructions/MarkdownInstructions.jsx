@@ -19,23 +19,30 @@ var styles = {
   }
 };
 
-var MarkdownInstructions = function (props) {
-  return (
-    <div
-      className='instructions-markdown'
-      style={[
-        styles.standard,
-        props.inTopPane && styles.inTopPane,
-        props.markdownClassicMargins && styles.classic
-      ]}
-      dangerouslySetInnerHTML={{ __html: props.renderedMarkdown }}/>
-  );
-};
+const MarkdownInstructions = React.createClass({
+  propTypes: {
+    renderedMarkdown: React.PropTypes.string.isRequired,
+    markdownClassicMargins: React.PropTypes.bool,
+    inTopPane: React.PropTypes.bool
+  },
 
-MarkdownInstructions.propTypes = {
-  renderedMarkdown: React.PropTypes.string.isRequired,
-  markdownClassicMargins: React.PropTypes.bool,
-  inTopPane: React.PropTypes.bool
-};
+  componentDidMount() {
+    $('details').details();
+  },
+
+  render() {
+    const { inTopPane, renderedMarkdown, markdownClassicMargins } = this.props;
+    return (
+      <div
+        className='instructions-markdown'
+        style={[
+          styles.standard,
+          inTopPane && styles.inTopPane,
+          markdownClassicMargins && styles.classic
+        ]}
+        dangerouslySetInnerHTML={{ __html: renderedMarkdown }}/>
+    );
+  }
+});
 
 module.exports = Radium(MarkdownInstructions);
