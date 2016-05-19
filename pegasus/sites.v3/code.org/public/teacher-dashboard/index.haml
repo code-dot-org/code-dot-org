@@ -94,6 +94,15 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     };
   });
 
+  // This is probably not the best way to do this, but this fix is time-sensitive
+  // TODO(ram): make this better (or migrate to React)
+  filters.filter('getNameById', function() {
+    return function(input, id) {
+        var matching = input.filter(function(val) { return val.id == id; });
+        return matching.length > 0 ? matching[0].name : null;
+    };
+  });
+
   // SERVICES
 
   var services = angular.module('teacherDashboard.services', []).

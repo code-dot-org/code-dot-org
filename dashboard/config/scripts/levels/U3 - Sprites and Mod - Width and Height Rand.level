@@ -7,15 +7,41 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
-      "frameRate": null,
+      "draw": null,
       "drawSprites": null,
-      "background": null,
-      "var sprite = createSprite": null,
+      "var sprite = createSprite": {
+        "params": [
+          "200",
+          "200"
+        ],
+        "paletteParams": [
+          "x",
+          "y"
+        ]
+      },
+      "frameRate": null,
+      "randomNumber_min_max": null,
+      "shapeColor": null,
       "sprite.width": null,
       "sprite.height": null,
-      "addOperator": null,
-      "subtractOperator": null,
-      "randomNumber_min_max": null
+      "background": null,
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "strokeWeight": null,
+      "noStroke": null,
+      "color": null,
+      "arc": null,
+      "ellipse": null,
+      "line": null,
+      "point": null,
+      "rect": null,
+      "regularPolygon": null,
+      "shape": null,
+      "text": null,
+      "textAlign": null,
+      "textFont": null,
+      "textSize": null
     },
     "edit_code": true,
     "embed": "false",
@@ -42,8 +68,8 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "show_d_pad": "false",
-    "markdown_instructions": "# Width and Height\r\n\r\nOther properties that exist for sprites are ones to control the width and height of the sprite. The property names are `width` and `height`. So to access the width of a sprite named `cat` you would say `cat.width`.\r\n\r\nYou are going to create a sprite and change its width and height to a random value each loop of the draw loop.  An old problem you ran into when animating shapes will show up again here. Do you remember how to make sure that only one version of a shape is on the screen at a time? Hint: Think back to the flip book.\r\n\r\n# Do This\r\n\r\n* Create a sprite and draw it on the screen\r\n* Set the width and height to a random value each time the program loops\r\n* Make sure there is only one rectangle drawn on the window at a time",
-    "start_blocks": "function draw() {\r\n \r\n}"
+    "markdown_instructions": "# Width and Height\r\n\r\nSprites have other properties. There are properties for width and height of the sprite. The property names are `width` and `height`. So to access the width of a sprite named `cat` you would say `cat.width`.\r\n\r\n# Do This\r\n\r\nThe provided code draws a sprtie that changes colors. Can you change the initial size of the sprite?\r\n\r\n* Set the width and height of the sprite before the draw loop using properties",
+    "start_blocks": "var square = createSprite(200,200);\r\n\r\nfunction draw() {\r\n  \tsquare.shapeColor = color(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255));\r\n\tdrawSprites();\r\n}"
   },
   "published": true,
   "notes": "",

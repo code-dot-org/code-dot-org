@@ -8,14 +8,14 @@ markdown <<MARKDOWN
 Consider the code segment below given in pseudo code.  Assuming that variables `a`, `b` and `c` already have numeric values assigned to them, what is the expected output of this code segment?
 
 <pre>
-val ←  a
-IF(a &lt; b AND b &lt; c)
+val &larr;  a
+IF (b &le; a AND a &le; c)
 {
     val &larr;  b
 }
 ELSE 
 {
-    IF (a &lt; c AND c &lt; b)
+    IF (c &le; a AND a &le; b)
     {	
         val &larr;  c
     }
