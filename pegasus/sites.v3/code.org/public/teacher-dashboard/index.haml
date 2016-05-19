@@ -5,8 +5,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 ---
 - authentication_required!
 - forbidden! unless dashboard_user[:user_type] == 'teacher'
-- error_string_none_selected = I18n.t('dashboard_error_none_selected').gsub!(/"/,"\\\\\"")
-- error_string_other_section = I18n.t('dashboard_error_other_section').gsub!(/"/,"\\\\\"")
+- error_string_none_selected = I18n.t('dashboard_error_none_selected').gsub(/"/,"\\\\\"")
+- error_string_other_section = I18n.t('dashboard_error_other_section').gsub(/"/,"\\\\\"")
 
 %link(rel='stylesheet' type='text/css' href='/css/learn_tabs.css')
 %link(rel='stylesheet' type='text/css' href='/style.css')
