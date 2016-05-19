@@ -2,7 +2,7 @@
 
 var gmap,
   markers = {},
-  info_window,
+  infoWindow,
   remainingWorkshops;
 
 $(document).ready(function () {
@@ -19,7 +19,7 @@ function initializeMap() {
   };
 
   gmap = new google.maps.Map(document.getElementById("gmap"), mapOptions);
-  info_window = new google.maps.InfoWindow();
+  infoWindow = new google.maps.InfoWindow();
 }
 
 function loadWorkshops() {
@@ -40,25 +40,25 @@ function loadWorkshops() {
         // This hash will round the latLngs to 6 decimals.
         var hash = latLng.toUrlValue();
 
-        var infowindow_content = '';
+        var infoWindowContent = '';
 
-        if (typeof markers[hash]==='undefined') {
-          infowindow_content = compileHtml(workshop, true);
+        if (typeof markers[hash] === 'undefined') {
+          infoWindowContent = compileHtml(workshop, true);
           markers[hash] = new google.maps.Marker({
             position: latLng,
             map: gmap,
             title: workshop.location_name_p,
-            infowindow_content: infowindow_content
+            infoWindowContent: infoWindowContent
           });
           google.maps.event.addListener(markers[hash], "click",
             function (e) {
-              info_window.setContent(this.get('infowindow_content'));
-              info_window.open(gmap, this);
+              infoWindow.setContent(this.get('infoWindowContent'));
+              infoWindow.open(gmap, this);
             });
         } else {
-          infowindow_content = compileHtml(workshop, false);
+          infoWindowContent = compileHtml(workshop, false);
           // Extend existing marker.
-          markers[hash].infowindow_content += infowindow_content;
+          markers[hash].infoWindowContent += infoWindowContent;
         }
       }
     });
@@ -78,25 +78,25 @@ function processPdWorkshops(workshops) {
         var lng = location.lng();
         var hash = new google.maps.LatLng(lat, lng).toUrlValue();
 
-        var infowindow_content = '';
+        var infoWindowContent = '';
 
-        if (typeof markers[hash]==='undefined') {
-          infowindow_content = compileHtmlNew(workshop, true);
+        if (typeof markers[hash] === 'undefined') {
+          infoWindowContent = compileHtmlNew(workshop, true);
           markers[hash] = new google.maps.Marker({
             position: location,
             map: gmap,
             title: workshop.location_name,
-            infowindow_content: infowindow_content
+            infoWindowContent: infoWindowContent
           });
           google.maps.event.addListener(markers[hash], "click",
             function (e) {
-              info_window.setContent(this.get('infowindow_content'));
-              info_window.open(gmap, this);
+              infoWindow.setContent(this.get('infoWindowContent'));
+              infoWindow.open(gmap, this);
             });
         } else {
-          infowindow_content = compileHtmlNew(workshop, false);
+          infoWindowContent = compileHtmlNew(workshop, false);
           // Extend existing marker.
-          markers[hash].infowindow_content += infowindow_content;
+          markers[hash].infoWindowContent += infoWindowContent;
         }
 
         geolocateComplete();
@@ -210,7 +210,7 @@ function addGeocomplete() {
     $('#geocomplete').val('');
     gmap.setCenter(new google.maps.LatLng(37.6, -95.665));
     gmap.setZoom(4);
-    info_window.close();
+    infoWindow.close();
     if (html5_storage_supported()) {
       localStorage.removeItem('geocomplete');
     }
