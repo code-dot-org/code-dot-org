@@ -343,6 +343,8 @@ Dashboard::Application.routes.draw do
     get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
 
+    # This is a developer aid that allows previewing rendered mail views with fixed test data.
+    # The route is restricted so it only exists in development mode.
     if Rails.env.development?
       mount Pd::MailPreviewController => 'mail_preview'
     end
