@@ -5,7 +5,9 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     view_options(no_footer: true)
     @workshop = ::Pd::Workshop.find_by_id params[:workshop_id]
 
-    if workshop_closed?
+    if @workshop.nil?
+      render_404
+    elsif workshop_closed?
       render :closed
     elsif workshop_full?
       render :full
@@ -24,6 +26,11 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   # POST /pd/workshops/1/enroll
   def create
     @workshop = ::Pd::Workshop.find_by_id params[:workshop_id]
+    if @workshop.nil?
+      render_404
+      return
+    end
+
     enrollment_email = enrollment_params[:email]
     user = User.find_by_email enrollment_email
 
@@ -89,7 +96,10 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       :name,
       :email,
       :email_confirmation,
-      :district_name,
+      :school_type,
+      :school_state,
+      :school_district_id,
+      :school_zip,
       :school
     )
   end

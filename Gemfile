@@ -191,3 +191,5 @@ gem 'rack-attack', '~> 4.4'
 
 # Generate SSL certificates
 gem 'acmesmith'
+
+gem "selectize-rails"
