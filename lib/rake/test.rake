@@ -46,7 +46,7 @@ namespace :test do
 
     desc 'Runs code-studio tests if code-studio might have changed from staging.'
     task :code_studio do
-      run_tests_if_changed('code-studio', ['code-studio/*']) do
+      run_tests_if_changed('code-studio', ['code-studio/*', 'apps/*']) do
         TestRunUtils.run_code_studio_tests
       end
     end
