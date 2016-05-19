@@ -342,6 +342,12 @@ Dashboard::Application.routes.draw do
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
+
+    # This is a developer aid that allows previewing rendered mail views with fixed test data.
+    # The route is restricted so it only exists in development mode.
+    if Rails.env.development?
+      mount Pd::MailPreviewController => 'mail_preview'
+    end
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
@@ -349,6 +355,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
+  get '/dashboardapi/v1/pd/k5workshops', to: 'api/v1/pd/workshops#k5_public_map_index'
 
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
