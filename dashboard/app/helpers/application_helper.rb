@@ -52,14 +52,14 @@ module ApplicationHelper
     # For definitions of the result values, see /app/src/constants.js.
     result = user_level.try(:best_result)
 
-    if user_level.try(:submitted)
-      'submitted'
-    elsif result.nil? || result == 0
-      'not_tried'
-    elsif result == Activity::REVIEW_REJECTED_RESULT
+    if result == Activity::REVIEW_REJECTED_RESULT
       'review_rejected'
     elsif result == Activity::REVIEW_ACCEPTED_RESULT
       'review_accepted'
+    elsif user_level.try(:submitted)
+      'submitted'
+    elsif result.nil? || result == 0
+      'not_tried'
     elsif result >= Activity::FREE_PLAY_RESULT
       'perfect'
     elsif result >= Activity::MINIMUM_PASS_RESULT
