@@ -6,9 +6,6 @@ require 'cdo/hip_chat'
 require 'digest'
 require 'sprockets-derailleur'
 
-# Store reference to original `system` command (clashes with RakeUtils.system)
-alias original_system system
-
 module RakeUtils
   def self.system__(command)
     CDO.log.info command
@@ -66,8 +63,8 @@ module RakeUtils
   def self.system_stream_output(*args)
     command = command_(*args)
     CDO.log.info command
-    original_system(command)
-    unless $?.exitstatus == 0
+    Kernel.system(command)
+    unless $?.success?
       error = RuntimeError.new("'#{command}' returned #{$?.exitstatus}")
       raise error, error.message
     end
