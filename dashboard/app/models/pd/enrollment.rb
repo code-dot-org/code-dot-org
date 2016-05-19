@@ -23,6 +23,7 @@
 
 class Pd::Enrollment < ActiveRecord::Base
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
+  belongs_to :school_district
 
   validates :name, :email, :school, :school_type, presence: true
   validates_confirmation_of :email

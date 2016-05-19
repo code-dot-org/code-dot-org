@@ -193,3 +193,4 @@ gem 'rack-attack', '~> 4.4'
 gem 'acmesmith'
 
 gem "selectize-rails"
+gem 'mail_view'
