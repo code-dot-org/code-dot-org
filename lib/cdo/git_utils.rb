@@ -8,7 +8,7 @@ module GitUtils
   def self.changed_in_branch_or_local?(base_branch, glob_patterns)
     files_changed_branch_or_local(base_branch).any? do |file_path|
       glob_patterns.any? do |glob|
-        File.fnmatch(glob, file_path)
+        File.fnmatch?(glob, file_path)
       end
     end
   end
