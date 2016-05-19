@@ -86,7 +86,13 @@ var InstructionsWithWorkspace = React.createClass({
     var INSTRUCTIONS_RESERVE = 150;
 
     var topPaneHeight = this.props.instructionsHeight;
-    var totalHeight = topPaneHeight + this.refs.codeWorkspace.getContentHeight();
+    var codeWorkspaceHeight = this.refs.codeWorkspace.getContentHeight();
+    if (codeWorkspaceHeight === 0) {
+      // We haven't initialized the codeWorkspace yet. Don't do any adjusting
+      return;
+    }
+
+    var totalHeight = topPaneHeight + codeWorkspaceHeight;
     var topInstructions = this.refs.topInstructions.getWrappedInstance();
     var instructionsContentHeight = topInstructions.getContentHeight();
 
