@@ -40,6 +40,13 @@ class Pd::Session < ActiveRecord::Base
     self.start.strftime('%m/%d/%Y')
   end
 
+  def formatted_date_with_start_and_end_times
+    start_time = self.start.strftime('%l:%M%P').strip
+    end_time = self.end.strftime('%l:%M%P').strip
+
+    "#{formatted_date}, #{start_time}-#{end_time}"
+  end
+
   def hours
     (self.end - self.start) / 1.hour
   end
