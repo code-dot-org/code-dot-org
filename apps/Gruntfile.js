@@ -1,3 +1,4 @@
+var chalk = require('chalk');
 var path = require('path');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
@@ -331,7 +332,8 @@ module.exports = function (grunt) {
   config.exec = {
     browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
     convertScssVars: './script/convert-scss-variables.js',
-    mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : ''),
+    integrationTest: 'node test/runIntegrationTests.js --color' + (fastMochaTest ? ' --fast' : ''),
+    unitTest: 'node test/runUnitTests.js --color',
     applabapi: 'echo "' + applabAPIExec + '" && ' + applabAPIExec,
   };
 
@@ -533,15 +535,33 @@ module.exports = function (grunt) {
     'watch'
   ]);
 
-  grunt.registerTask('mochaTest', [
+  grunt.registerTask('unitTest', [
+    'newer:messages',
+    'exec:convertScssVars',
+    'concat',
+    'exec:unitTest'
+  ]);
+
+  grunt.registerTask('integrationTest', [
     'newer:messages',
     'exec:convertScssVars',
     'newer:copy:static',
     'concat',
-    'exec:mochaTest'
+    'exec:integrationTest'
   ]);
 
-  grunt.registerTask('test', ['mochaTest']);
+  grunt.registerTask('test', ['unitTest', 'integrationTest']);
+
+  // We used to use 'mochaTest' as our test command.  Alias to be friendly while
+  // we transition away from it.  This can probably be removed in a month or two.
+  // - Brad (16 May 2016)
+  grunt.registerTask('showMochaTestWarning', function () {
+    console.log(chalk.yellow('Warning: ') + 'The ' + chalk.italic('mochaTest') +
+        ' task is deprecated.  Use ' + chalk.italic('test') + ' instead, or' +
+        ' directly invoke its subtasks ' + chalk.italic('unitTest') + ' and ' +
+        chalk.italic('integrationTest') + '.');
+  });
+  grunt.registerTask('mochaTest', ['showMochaTestWarning', 'test']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
 
