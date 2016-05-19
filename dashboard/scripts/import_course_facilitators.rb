@@ -56,4 +56,4 @@ course_facilitator_params_list.each do |course_facilitator_params|
   Pd::CourseFacilitator.find_or_create_by course_facilitator_params
 end
 
-puts 'Success.'
+puts "#{course_facilitator_params_list.length} Course Facilitators Imported."
