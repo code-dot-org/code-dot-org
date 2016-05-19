@@ -334,6 +334,10 @@ Dashboard::Application.routes.draw do
   end
 
   namespace :pd do
+    # React-router will handle sub-routes on the client.
+    get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
+    get 'workshop_dashboard', to: 'workshop_dashboard#index'
+
     get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
@@ -353,4 +357,12 @@ Dashboard::Application.routes.draw do
   get '/api/user_progress/:script_name/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
   get '/api/user_progress', to: 'api#user_progress_for_all_scripts', as: 'user_progress_for_all_scripts'
   get '/api/:action', controller: 'api'
+
+  namespace :api do
+    namespace :v1 do
+      get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
+    end
+  end
+
+  get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: { format: 'json' }
 end

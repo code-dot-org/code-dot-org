@@ -11,6 +11,7 @@ var fs = require('fs');
 var mkdirp = require('mkdirp');
 var path = require('path');
 var watchify = require('watchify');
+var globalShim = require('browserify-global-shim');
 
 /**
  * Generate command to:
@@ -35,6 +36,8 @@ var watchify = require('watchify');
  * @param {boolean} [config.forDistribution] - If true, this bundle step will be
  *        treated as part of a build for distribution, with certain environment
  *        variables inlined, and dead code and whitespace removed.
+ * @param {object} [config.browserifyGlobalShim] - If supplied, applied as options
+ *        to a browserifyGlobalShim transform.
  * @returns {Promise} that resolves after the build completes or fails - even
  *          if the build fails, the promise should resolve, but get an Error
  *          object as its result.  If watch is enabled, the promise resolves
@@ -50,6 +53,7 @@ exports.bundle = function (config) {
   var shouldFactor = config.shouldFactor;
   var shouldWatch = config.shouldWatch;
   var forDistribution = config.forDistribution;
+  var browserifyGlobalShim = config.browserifyGlobalShim;
 
   var outPath = function (inPath) {
     return path
@@ -118,6 +122,10 @@ exports.bundle = function (config) {
         return outPath(srcPath + file);
       })
     });
+  }
+
+  if (browserifyGlobalShim) {
+    bundler.transform({global: true}, globalShim.configure(browserifyGlobalShim));
   }
 
   // Optionally enable watch/rebuild loop
