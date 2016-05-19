@@ -17,8 +17,6 @@ exports.setupTestBlockly = function () {
   };
   var blocklyAppDiv = document.getElementById('app');
   Blockly.inject(blocklyAppDiv, options);
-  // TODO (brent)
-  // studioApp.removeEventListeners();
   testBlockFactory.installTestBlocks(Blockly);
 
   assert(Blockly.Blocks.text_print, "text_print block exists");
