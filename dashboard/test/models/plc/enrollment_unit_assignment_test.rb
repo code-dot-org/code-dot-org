@@ -29,15 +29,11 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
 
     unit_enrollment.enroll_user_in_unit_with_learning_modules([@learning_module1, @learning_module2])
     unit_enrollment.reload
-    task_assignments = unit_enrollment.plc_task_assignments
 
     assert_equal Plc::EnrollmentUnitAssignment::IN_PROGRESS, unit_enrollment.status
     assert_equal 3, module_assignments.count
-    assert_equal 2, task_assignments.count
     assert_equal @required_learning_module, module_assignments.first.plc_learning_module
     assert_equal @learning_module1, module_assignments.second.plc_learning_module
-    assert_equal @task1, task_assignments.first.plc_task
     assert_equal @learning_module2, module_assignments.third.plc_learning_module
-    assert_equal @task2, task_assignments.second.plc_task
   end
 end

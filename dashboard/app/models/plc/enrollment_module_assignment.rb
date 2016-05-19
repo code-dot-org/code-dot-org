@@ -7,7 +7,6 @@
 #  plc_learning_module_id            :integer
 #  created_at                        :datetime         not null
 #  updated_at                        :datetime         not null
-#  user_id                           :integer
 #
 # Indexes
 #
@@ -30,9 +29,8 @@ class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
       COMPLETED = :completed
   ]
 
-  # The module status is completely determined by the completeness of its task assignments
   def status
-    levels_tracked = UserLevel.where(user: user, level: plc_learning_module.stage.script_levels.map(&:level))
+    levels_tracked = UserLevel.where(user: user, level: plc_learning_module.stage.script_levels.map(&:levels).flatten)
     passed_levels = levels_tracked.passing
 
     if levels_tracked.empty?
