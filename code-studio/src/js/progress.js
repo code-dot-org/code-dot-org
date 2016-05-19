@@ -15,12 +15,6 @@ const REVIEW_REJECTED_RESULT = 1500;
 const REVIEW_ACCEPTED_RESULT = 2000;
 
 /**
- * Values larger than this result are server-dependent and shouldn't be cached
- * in client storage.
- */
-const MAXIMUM_CACHABLE_RESULT = 999;
-
-/**
  * See ApplicationHelper#activity_css_class.
  * @param result
  * @return {string}
@@ -72,7 +66,7 @@ progress.populateProgress = function (scriptName, puzzlePage) {
     Object.keys(serverProgress).forEach(function (levelId) {
       // Only the server can speak to whether a level is submitted/accepted/rejected.  If it is,
       // apply this styling but don't cache locally.
-      if (serverProgress[levelId].result > MAXIMUM_CACHABLE_RESULT) {
+      if (serverProgress[levelId].result > clientState.MAXIMUM_CACHABLE_RESULT) {
         var status;
         if (serverProgress[levelId].result == REVIEW_REJECTED_RESULT) {
           status = 'review_rejected';
@@ -146,7 +140,7 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
 
     var status;
     var result = (serverProgress[level.id] || {}).result;
-    if (serverProgress && result > MAXIMUM_CACHABLE_RESULT) {
+    if (serverProgress && result > clientState.MAXIMUM_CACHABLE_RESULT) {
       if (result == REVIEW_REJECTED_RESULT) {
         status = 'review_rejected';
       }
