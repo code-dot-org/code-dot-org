@@ -152,7 +152,15 @@ class Pd::MailPreviewController < MailView
       workshop: workshop,
       name: 'Tracy Teacher',
       email: 'tracy_teacher@example.net',
+      school_district: school_district,
+      school: 'sample school'
     ).tap(&:assign_code)
+  end
+
+  def school_district
+    SchoolDistrict.new(
+      name: 'sample district'
+    )
   end
 
   def day(d)
