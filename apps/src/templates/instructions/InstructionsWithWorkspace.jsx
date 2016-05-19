@@ -22,6 +22,10 @@ var InstructionsWithWorkspace = React.createClass({
     instructionsMaxHeight: React.PropTypes.number.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsMaxHeight: React.PropTypes.func.isRequired,
+
+    // TODO
+    isRtl: React.PropTypes.bool.isRequired,
+    noVisualization: React.PropTypes.bool.isRequired
   },
 
   getInitialState() {
@@ -180,6 +184,8 @@ module.exports = connect(function propsFromStore(state) {
     instructionsCollapsed: state.instructions.collapsed || !state.pageConstants.instructionsInTopPane,
     instructionsHeight: state.instructions.height,
     instructionsMaxHeight: state.instructions.maxHeight,
+    isRtl: state.pageConstants.localeDirection === 'rtl',
+    noVisualization: !!state.pageConstants.noVisualization
   };
 }, function propsFromDispatch(dispatch) {
   return {
