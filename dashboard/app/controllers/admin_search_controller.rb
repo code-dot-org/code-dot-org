@@ -4,6 +4,31 @@ class AdminSearchController < ApplicationController
   before_action :require_admin
   check_authorization
 
+  def find_deleted_users
+    SeamlessDatabasePool.use_persistent_read_connection do
+      @max_users = 8
+      @users = User.with_deleted
+
+      # If requested, filter...
+      if params[:nameFilter].present?
+        @users = @users.where("name LIKE ?", "%#{params[:nameFilter]}%")
+      end
+      if params[:emailFilter].present?
+        @users = @users.where("email LIKE ?", "%#{params[:emailFilter]}%")
+      end
+      if params[:sectionFilter].present?
+        array_of_student_ids = Section.where(code: "#{params[:sectionFilter]}").
+          joins("INNER JOIN followers ON followers.section_id = sections.id").
+          pluck('student_user_id').
+          to_a
+        @users = @users.where(id: array_of_student_ids)
+      end
+
+      @headers = ['ID', 'Name', 'Email', 'Deleted Timestamp']
+      @users = @users.limit(@max_users).pluck('id', 'name', 'email', 'deleted_at')
+    end
+  end
+
   def lookup_section
     @section = Section.find_by_code params[:section_code]
     if params[:section_code] && @section.nil?
