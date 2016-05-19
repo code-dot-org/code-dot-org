@@ -70,9 +70,19 @@ progress.populateProgress = function (scriptName, puzzlePage) {
     // Merge progress from server (loaded via AJAX)
     var serverProgress = data.levels || {};
     Object.keys(serverProgress).forEach(function (levelId) {
-      // Only the server can speak to whether a level is submitted.  If it is,
-      // we show the submitted styling.
-      if (serverProgress[levelId].submitted) {
+      // Only the server can speak to whether a level is submitted/accepted/rejected.  If it is,
+      // apply this styling but don't cache locally.
+      if (serverProgress[levelId].result > MAXIMUM_CACHABLE_RESULT) {
+        var status;
+        if (serverProgress[levelId].result == REVIEW_REJECTED_RESULT) {
+          status = 'review_rejected';
+        }
+        if (serverProgress[levelId].result == REVIEW_ACCEPTED_RESULT) {
+          status = 'review_accepted';
+        }
+        // Clear the existing class and replace
+        $('.level-' + levelId).attr('class', `level_link ${status}`);
+      } else if (serverProgress[levelId].submitted) {
         // Clear the existing class and replace
         $('.level-' + levelId).attr('class', 'level_link submitted');
       } else if (serverProgress[levelId].pages_completed) {
