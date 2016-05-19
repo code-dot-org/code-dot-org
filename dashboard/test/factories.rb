@@ -335,13 +335,14 @@ FactoryGirl.define do
   end
 
   factory :peer_review do
-    user nil
+    submitter {create :user}
+    reviewer nil
     from_instructor false
-    script nil
-    level nil
-    level_source nil
+    script {create :script}
+    level {create :level}
+    level_source {create :level_source}
     data "MyText"
-    status 1
+    status nil
   end
 
   factory :plc_enrollment_unit_assignment, :class => 'Plc::EnrollmentUnitAssignment' do
