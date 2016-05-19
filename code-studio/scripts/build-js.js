@@ -38,6 +38,7 @@ Promise.all([
       'levelbuilder.js',
       'levelbuilder_markdown.js',
       'levelbuilder_studio.js',
+      'districtDropdown.js',
       'levels/contract_match.jsx',
       'levels/widget.js',
       'levels/external.js',

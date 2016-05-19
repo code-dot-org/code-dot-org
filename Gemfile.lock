@@ -455,6 +455,7 @@ GEM
     seamless_database_pool (1.0.14)
       activerecord (>= 3.0.20)
     securecompare (1.0.0)
+    selectize-rails (0.12.1)
     selenium-webdriver (2.45.0)
       childprocess (~> 0.5)
       multi_json (~> 1.0)
@@ -648,6 +649,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   seamless_database_pool
+  selectize-rails
   selenium-webdriver (~> 2.45.0)
   sequel (~> 4.10.0)
   shotgun
