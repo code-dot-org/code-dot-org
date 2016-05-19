@@ -25,6 +25,12 @@ clientState.EXPIRY_DAYS = 365;
  */
 var MAX_LINES_TO_SAVE = 1000;
 
+/**
+ * Values larger than this result are server-dependent and shouldn't be cached
+ * in client storage.
+ */
+clientState.MAXIMUM_CACHABLE_RESULT = 999;
+
 var COOKIE_OPTIONS = {expires: clientState.EXPIRY_DAYS, path: '/'};
 
 clientState.reset = function () {
@@ -89,9 +95,6 @@ clientState.levelProgress = function (scriptName, levelId) {
  * Returns the "best" of the two results, as defined in apps/src/constants.js.
  * Note that there are negative results that count as an attempt, so we can't
  * just take the maximum.
- *
- * Results larger than 100 are reserved for server-dependent changes and can't
- * be cached locally.
  * @param {Number} a
  * @param {Number} b
  * @return {Number} The better result.
@@ -99,17 +102,18 @@ clientState.levelProgress = function (scriptName, levelId) {
 clientState.mergeActivityResult = function (a, b) {
   a = a || 0;
   b = b || 0;
-  if (a === 0 || a > 100) {
+  if (a === 0) {
     return b;
   }
-  if (b === 0 || a > 100) {
+  if (b === 0) {
     return a;
   }
   return Math.max(a, b);
 };
 
 /**
- * Tracks the users progress after they click run
+ * Tracks the users progress after they click run. Results larger than 999 are
+ * reserved for server-dependent changes and can't be cached locally.
  * @param {boolean} result - Whether the user's solution is successful
  * @param {number} lines - Number of lines of code user wrote in this solution
  * @param {number} testResult - Indicates pass, fail, perfect
@@ -122,7 +126,7 @@ clientState.trackProgress = function (result, lines, testResult, scriptName, lev
   }
 
   var savedResult = clientState.levelProgress(scriptName, levelId);
-  if (savedResult !== clientState.mergeActivityResult(savedResult, testResult)) {
+  if (testResult <= clientState.MAXIMUM_CACHABLE_RESULT && savedResult !== clientState.mergeActivityResult(savedResult, testResult)) {
     setLevelProgress(scriptName, levelId, testResult);
   }
 };
