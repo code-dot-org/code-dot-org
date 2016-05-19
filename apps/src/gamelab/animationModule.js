@@ -101,28 +101,41 @@ export function cloneAnimation(animationKey) {
     var sourceAnimation = animations[sourceIndex];
     var newAnimationKey = utils.createUuid();
 
-    animationsApi.ajax(
-        'PUT',
-        newAnimationKey + '.png?src=' + animationKey + '.png',
-        function success(xhr) {
-          try {
-            var response = JSON.parse(xhr.responseText);
-            dispatch({
-              type: ADD_ANIMATION_AT,
-              index: sourceIndex + 1,
-              animationProps: _.assign({}, sourceAnimation, {
-                key: newAnimationKey,
-                name: sourceAnimation.name + '_copy', // TODO: better generated names
-                version: response.versionId
-              })
-            });
-          } catch (e) {
-            onCloneError(e.message);
-          }
-        },
-        function error(xhr) {
-          onCloneError(xhr.status + ' ' + xhr.statusText);
-        });
+    /**
+     * Once the cloned asset is ready, call this to add the appropriate metadata.
+     * @param {string} [versionId]
+     */
+    var addClonedAnimation = function (versionId) {
+      dispatch({
+        type: ADD_ANIMATION_AT,
+        index: sourceIndex + 1,
+        animationProps: _.assign({}, sourceAnimation, {
+          key: newAnimationKey,
+          name: sourceAnimation.name + '_copy', // TODO: better generated names
+          version: versionId
+        })
+      });
+    };
+
+    // If cloning a library animation, no need to perform a copy request
+    if (/^\/blockly\//.test(sourceAnimation.sourceUrl)) {
+      addClonedAnimation();
+    } else {
+      animationsApi.ajax(
+          'PUT',
+          newAnimationKey + '.png?src=' + animationKey + '.png',
+          function success(xhr) {
+            try {
+              var response = JSON.parse(xhr.responseText);
+              addClonedAnimation(response.versionId);
+            } catch (e) {
+              onCloneError(e.message);
+            }
+          },
+          function error(xhr) {
+            onCloneError(xhr.status + ' ' + xhr.statusText);
+          });
+    }
   };
 }
 
