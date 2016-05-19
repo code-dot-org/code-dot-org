@@ -94,6 +94,12 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     };
   });
 
+  filters.filter('getNameById', function() {
+    return function(input, id) {
+        return input.find(function(val) { return val.id == id; }).name;
+    };
+  });
+
   // SERVICES
 
   var services = angular.module('teacherDashboard.services', []).
