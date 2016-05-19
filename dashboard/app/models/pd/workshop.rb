@@ -166,4 +166,21 @@ class Pd::Workshop < ActiveRecord::Base
     return nil if sessions.empty?
     sessions.order(:start).first.start.strftime('%Y')
   end
+
+  def self.in_10_days
+    Pd::Workshop.joins(:sessions).having("(DATE(MAX(start)) = ?)", Date.today + 10.days)
+  end
+
+  def self.send_10_day_reminders
+    in_10_days.each do |workshop|
+      workshop.enrollments.each do |enrollment|
+        Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment).deliver_now
+      end
+    end
+  end
+
+  def self.send_automated_emails
+    send_10_day_reminders
+  end
+
 end
