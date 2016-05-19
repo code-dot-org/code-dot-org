@@ -22,7 +22,8 @@ class CSV::Row
   end
 end
 
-error_count = 0
+# First pass, validate the data.
+course_facilitator_params_list = []
 CSV.foreach(facilitators_csv, headers: true) do |row|
   user_id = row[COL_USER_ID]
   first_name = row[COL_FIRST_NAME]
@@ -37,29 +38,22 @@ CSV.foreach(facilitators_csv, headers: true) do |row|
 
   facilitator =
     if user_id.nil?
-      User.find_by(email: email)
+      User.find_by!(email: email)
     else
-      User.find_by(id: user_id)
+      User.find_by!(id: user_id)
     end
-
-  unless facilitator
-    STDERR.puts "Facilitator #{user_id} (#{email}) not found."
-    error_count += 1
-    next
-  end
 
   # validate other fields
   unless facilitator.name == "#{first_name} #{last_name}" && facilitator.email.casecmp(email)
-    STDERR.puts "Facilitator #{user_id} does not match name or email."
-    error_count += 1
-    next
+    raise "Facilitator #{user_id} does not match name or email."
   end
 
-  Pd::CourseFacilitator.find_or_create_by facilitator_id: facilitator.id, course: course
+  course_facilitator_params_list << {facilitator_id: facilitator.id, course: course}
 end
 
-if error_count == 0
-  puts 'Success.'
+# Second pass, import the data.
+course_facilitator_params_list.each do |course_facilitator_params|
+  Pd::CourseFacilitator.find_or_create_by course_facilitator_params
 end
 
-exit error_count
+puts 'Success.'
