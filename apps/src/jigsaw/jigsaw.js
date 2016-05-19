@@ -166,12 +166,13 @@ Jigsaw.init = function (config) {
     }
   };
 
-  studioApp.setPageConstants(config);
+  studioApp.setPageConstants(config, {
+    noVisualization: true
+  });
 
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          noVisualization={true}
           visualizationColumn={<JigsawVisualizationColumn/>}
           onMount={onMount}
       />
