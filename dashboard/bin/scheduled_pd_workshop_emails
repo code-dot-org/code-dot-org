@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require_relative '../../lib/cdo/only_one'
-require_relative '../../lib/cdo/activity_constants'
 require_relative '../config/environment'
 
 def main

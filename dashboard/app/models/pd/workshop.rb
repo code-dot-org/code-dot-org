@@ -167,20 +167,35 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.order(:start).first.start.strftime('%Y')
   end
 
-  def self.in_10_days
-    Pd::Workshop.joins(:sessions).having("(DATE(MAX(start)) = ?)", Date.today + 10.days)
+  def self.start_in_days(days)
+    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MIN(start)) = ?)", Date.today + days.days)
   end
 
-  def self.send_10_day_reminders
-    in_10_days.each do |workshop|
+  def self.end_in_days(days)
+    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MAX(end)) = ?)", Date.today + days.days)
+  end
+
+  def self.send_reminder_for_upcoming_in_days(days)
+    start_in_days(days).each do |workshop|
       workshop.enrollments.each do |enrollment|
         Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment).deliver_now
       end
     end
   end
 
-  def self.send_automated_emails
-    send_10_day_reminders
+  def self.send_exit_surveys
+    # TODO: handle teachers who show up, join the section, and are marked attended without enrolling.
+    end_in_days(0).each do |workshop|
+      workshop.enrollments.each do |enrollment|
+        teacher = User.find_by(email: enrollment.email, user_type: User::TYPE_TEACHER)
+        Pd::WorkshopMailer.exit_survey(workshop, teacher, enrollment).deliver_now
+      end
+    end
   end
 
+  def self.send_automated_emails
+    send_reminder_for_upcoming_in_days(3)
+    send_reminder_for_upcoming_in_days(10)
+    send_exit_surveys
+  end
 end
