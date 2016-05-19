@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160517220519) do
+ActiveRecord::Schema.define(version: 20160519000515) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -447,9 +447,8 @@ ActiveRecord::Schema.define(version: 20160517220519) do
     t.string   "status",                              limit: 255
     t.integer  "plc_enrollment_module_assignment_id", limit: 4
     t.integer  "plc_task_id",                         limit: 4
-    t.datetime "created_at",                                        null: false
-    t.datetime "updated_at",                                        null: false
-    t.text     "properties",                          limit: 65535
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
   end
 
   add_index "plc_enrollment_task_assignments", ["plc_enrollment_module_assignment_id"], name: "task_assignment_module_assignment_index", using: :btree
