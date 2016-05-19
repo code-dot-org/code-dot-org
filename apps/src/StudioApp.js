@@ -1266,11 +1266,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
 
   this.instructionsDialog.show({hideOptions: hideOptions});
 
-  if (isMarkdownMode) {
-    // process <details> tags with polyfill jQuery plugin
-    $('details').details();
-  }
-
   // Fire a custom event on the document so that other code can respond
   // to instructions being shown.
   var event = document.createEvent('Event');

@@ -66,7 +66,7 @@ var TopInstructions = React.createClass({
     collapsed: React.PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
-    onLoadImage: React.PropTypes.func.isRequired
+    onResize: React.PropTypes.func.isRequired
   },
 
   /**
@@ -97,7 +97,17 @@ var TopInstructions = React.createClass({
 
   componentDidMount: function () {
     // Parent needs to readjust some sizing after images have loaded
-    $(ReactDOM.findDOMNode(this)).find('img').load(this.props.onLoadImage);
+    $(ReactDOM.findDOMNode(this)).find('img').load(this.props.onResize);
+
+    $('details').on({
+      'toggle.details.TopInstructions': () => {
+        this.props.onResize();
+      }
+    });
+  },
+
+  componentWillUnmount() {
+    $('details').off('toggle.details.TopInstructions');
   },
 
   render: function () {
