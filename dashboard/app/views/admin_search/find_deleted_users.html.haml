@@ -1,0 +1,46 @@
+%center
+  %h1 Find (Deleted) Users
+
+%br/
+
+%form{method: 'get'}
+  %table.filters
+    %td
+      Name
+    %td
+      %input{name: "nameFilter", id: "nameFilter", value: params[:nameFilter]}
+    %tr
+      %td
+        Email
+      %td
+        %input{name: "emailFilter", id: "emailFilter", value: params[:emailFilter]}
+    %tr
+      %td
+        Section Code
+      %td
+        %input{name: "sectionFilter", id: "sectionFilter", value: params[:sectionFilter]}
+
+  %br/
+
+  %center
+    %input{type: "submit", name: "submit"}
+
+%br/
+
+%h2 Users
+- if @users.size >= @max_users
+  WARNING: There were too many users, only some of them are included.
+- if @users.size > 0
+  %table.users
+    - if @headers
+      %tr
+        - @headers.each do |field|
+          %th
+            %span= field
+    - @users.each do |user|
+      %tr
+        - user.each do |field|
+          %td
+            %span= field
+- else
+  No users met the specified search criteria.
