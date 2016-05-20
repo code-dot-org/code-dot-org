@@ -17,7 +17,8 @@ var constants = require('../../constants');
 var msg = require('../../locale');
 import CollapserButton from './CollapserButton';
 
-const PADDING_HEIGHT = 30;
+const VERTICAL_PADDING = 10;
+const HORIZONTAL_PADDING = 20;
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const MIN_HEIGHT = RESIZER_HEIGHT + 60;
@@ -33,7 +34,10 @@ const styles = {
   body: {
     backgroundColor: 'white',
     overflowY: 'scroll',
-    padding: PADDING_HEIGHT,
+    paddingTop: VERTICAL_PADDING,
+    paddingBottom: VERTICAL_PADDING,
+    paddingLeft: HORIZONTAL_PADDING,
+    paddingRight: HORIZONTAL_PADDING,
     position: 'absolute',
     top: 0,
     bottom: 0,
@@ -46,6 +50,12 @@ const styles = {
     bottom: 0,
     // Visualization is hard-coded on embed levels. Do the same for instructions position
     left: 340
+  },
+  collapserButton: {
+    float: 'right',
+    marginLeft: 10,
+    // don't want the right margin to apply to our button
+    marginRight: -10
   }
 };
 
@@ -70,7 +80,7 @@ var TopInstructions = React.createClass({
   getRenderedHeight() {
     // TODO - this is getting called a LOT - prob bc blockly?
     var instructionsContent = this.refs.instructions.refs.instructionsMarkdown;
-    return $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) + 2 * PADDING_HEIGHT;
+    return $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) + 2 * VERTICAL_PADDING;
   },
 
   /**
@@ -118,22 +128,25 @@ var TopInstructions = React.createClass({
 
     return (
       <div style={mainStyle} className="editor-column">
-        <div style={[this.props.collapsed && commonStyles.hidden]}>
+        <div>
           <div style={styles.body}>
-            <Instructions
-              ref="instructions"
-              renderedMarkdown={processMarkdown(this.props.markdown)}
-              inTopPane
+            <CollapserButton
+                style={styles.collapserButton}
+                collapsed={this.props.collapsed}
+                onClick={this.props.toggleInstructionsCollapsed}/>
+              <span style={[this.props.collapsed && commonStyles.hidden]}>
+              <Instructions
+                  ref="instructions"
+                  renderedMarkdown={processMarkdown(this.props.markdown)}
+                  inTopPane
               />
+            </span>
           </div>
           {!this.props.isEmbedView && <HeightResizer
             position={this.props.height}
             onResize={this.onHeightResize}/>
           }
         </div>
-        <CollapserButton
-            collapsed={this.props.collapsed}
-            onClick={this.props.toggleInstructionsCollapsed}/>
       </div>
     );
   }
