@@ -756,7 +756,8 @@ function makeDraggable(jqueryElements) {
         newTop = gridUtils.snapToGridSize(newTop);
 
         // containment
-        var position = enforceContainment(newLeft, newTop, ui.helper.outerWidth(true), ui.helper.outerHeight(true));
+        //var position = enforceContainment(newLeft, newTop, ui.helper.outerWidth(true), ui.helper.outerHeight(true));
+        var position = { left: newLeft, top: newTop };
 
         ui.position.left = position.left;
         ui.position.top = position.top;
@@ -778,7 +779,8 @@ function makeDraggable(jqueryElements) {
 
     wrapper.css({
       top: elm.css('top'),
-      left: elm.css('left')
+      left: elm.css('left'),
+      "z-index": 9999,
     });
 
     // Chrome/Safari both have issues where they don't properly render the
