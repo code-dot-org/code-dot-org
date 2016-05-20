@@ -1,8 +1,12 @@
 /* globals dashboard, appOptions  */
 
-var clientState = require('./clientState');
-var StageProgress = require('./components/progress/stage_progress');
-var CourseProgress = require('./components/progress/course_progress');
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { combineReducers } from 'redux';
+import { render } from 'react-dom';
+import clientState from './clientState';
+import StageProgress from './components/progress/stage_progress';
+import CourseProgress from './components/progress/course_progress';
 
 var progress = module.exports;
 
@@ -162,10 +166,31 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
 progress.renderCourseProgress = function (scriptData) {
   var teacherCourse = $('#landingpage').hasClass('teacher-course');
   var mountPoint = document.createElement('div');
+
+  let store = createStore((state = [], action) => {
+    if (action.type === 'INIT') {
+      return Object.assign({}, {
+        stages: action.stages,
+        display: action.display
+      });
+    }
+    return state;
+  });
+
+  store.dispatch({
+    type: 'INIT',
+    stages: scriptData.stages,
+    display: teacherCourse ? 'list' : 'dots'
+  });
+
+  store.dispatch({type: 'TEST'});
+
   $('.user-stats-block').prepend(mountPoint);
-  ReactDOM.render(React.createElement(CourseProgress, {
-    display: teacherCourse ? 'list' : 'dots',
-    stages: scriptData.stages
-  }), mountPoint);
+  render(
+    <Provider store={store}>
+      <CourseProgress/>
+    </Provider>,
+    mountPoint
+  );
   progress.populateProgress(scriptData.name);
 };
