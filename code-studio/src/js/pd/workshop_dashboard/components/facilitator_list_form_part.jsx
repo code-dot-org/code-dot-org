@@ -158,7 +158,7 @@ var FacilitatorListFormPart = React.createClass({
   },
 
   handleFacilitatorChange: function (i, selectedId) {
-    var selectedFacilitator = this.props.availableFacilitators.find((f) => f.id === selectedId);
+    var selectedFacilitator = this.props.availableFacilitators.find((f) => f.id === parseInt(selectedId, 10));
     this.props.facilitators[i] = selectedFacilitator;
     this.props.onChange(this.props.facilitators);
   },
