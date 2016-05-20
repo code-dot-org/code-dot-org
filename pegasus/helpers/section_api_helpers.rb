@@ -201,7 +201,7 @@ class DashboardSection
     # Cache the courses names in English for all users. After the
     # facilitator summit (2016-5-23) we should change the cache to be
     # per-language.
-    course_locale = 'en-us'
+    course_locale = 'en-US'
 
     # cache result if we have to actually run the query
     @@course_cache[course_cache_key] =
