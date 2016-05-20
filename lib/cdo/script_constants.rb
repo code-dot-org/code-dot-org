@@ -37,6 +37,10 @@ module ScriptConstants
   CSP17_UNIT1_NAME = 'csp1'
   CSP17_UNIT2_NAME = 'csp2'
 
+  CSP_ASSESSMENT_NAME = 'cspassessment'
+  CSP_EXAM1_NAME = 'cspexam1-mWU7ilDYM9'
+  CSP_EXAM2_NAME = 'cspexam2-AKwgAh1ac5'
+
   MINECRAFT_TEACHER_DASHBOARD_NAME = 'minecraft'
   HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'
 
@@ -46,42 +50,47 @@ module ScriptConstants
   # on the teacher dashboard.
   CATEGORIES = {
     hoc: [
-        # Note that now multiple scripts can be an 'hour of code' script.
-        # If adding a script here,
-        # you must also update the Data_HocTutorials gsheet so the end of script API works
+      # Note that now multiple scripts can be an 'hour of code' script.
+      # If adding a script here,
+      # you must also update the Data_HocTutorials gsheet so the end of script API works
 
-        nil,
-        HOC_2013_NAME,
-        HOC_NAME,
-        FROZEN_NAME,
-        FLAPPY_NAME,
-        PLAYLAB_NAME,
-        GUMBALL_NAME,
-        ICEAGE_NAME,
-        STARWARS_NAME,
-        STARWARS_BLOCKS_NAME,
-        MINECRAFT_NAME,
-        INFINITY_NAME,
-        ARTIST_NAME
+      nil,
+      HOC_2013_NAME,
+      HOC_NAME,
+      FROZEN_NAME,
+      FLAPPY_NAME,
+      PLAYLAB_NAME,
+      GUMBALL_NAME,
+      ICEAGE_NAME,
+      STARWARS_NAME,
+      STARWARS_BLOCKS_NAME,
+      MINECRAFT_NAME,
+      INFINITY_NAME,
+      ARTIST_NAME
     ],
     csf: [
-        TWENTY_HOUR_NAME,
-        COURSE1_NAME,
-        COURSE2_NAME,
-        COURSE3_NAME,
-        COURSE4_NAME
+      TWENTY_HOUR_NAME,
+      COURSE1_NAME,
+      COURSE2_NAME,
+      COURSE3_NAME,
+      COURSE4_NAME
     ],
     csp: [
-        CSP_UNIT1_NAME,
-        CSP_UNIT2_NAME,
-        CSP_UNIT3_NAME,
-        CSP_UNIT4_NAME,
-        CSP_UNIT5_NAME,
-        CSP_UNIT6_NAME
+      CSP_UNIT1_NAME,
+      CSP_UNIT2_NAME,
+      CSP_UNIT3_NAME,
+      CSP_UNIT4_NAME,
+      CSP_UNIT5_NAME,
+      CSP_UNIT6_NAME
     ],
     csp17: [
       CSP17_UNIT1_NAME,
       CSP17_UNIT2_NAME
+    ],
+    cspexams: [
+      CSP_ASSESSMENT_NAME,
+      CSP_EXAM1_NAME,
+      CSP_EXAM2_NAME
     ],
     math: [
       ALGEBRA_NAME,
