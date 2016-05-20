@@ -258,9 +258,10 @@ body.embedded_iframe {
 }
 
 #divApplab, #designModeViz {
-  overflow: hidden;
+  overflow: visible;
   outline: none;
   -webkit-touch-callout: none;
+  z-index: 999;
 
   @include user-selects(none);
 }
