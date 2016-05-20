@@ -125,7 +125,7 @@ content-type: text/ng-template
       %th.manage-th
         %a{href: "", "ng-click" => "orderAnswers = 'question'"}= I18n.t('dashboard_question')
       %th.manage-th
-        %a{href: "", "ng-click" => "orderAnswers = 'studentResult'"}= I18n.t('dashboard_response')
+        %a{href: "", "ng-click" => "orderAnswers = ['!studentResult', 'studentResult']"}= I18n.t('dashboard_response')
       %th.manage-th
         %a{href: "", "ng-click" => "orderAnswers = 'correct'"}= I18n.t('dashboard_correctness')
 
