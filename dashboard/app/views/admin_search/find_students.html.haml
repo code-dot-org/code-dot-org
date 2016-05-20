@@ -1,19 +1,30 @@
 %center
-  %h1 Find (Deleted) Users
+  %h1 Find (Deleted) Students
 
 %br/
 
 %form{method: 'get'}
   %table.filters
-    %td
-      Name
-    %td
-      %input{name: "nameFilter", id: "nameFilter", value: params[:nameFilter]}
     %tr
       %td
-        Email
+        Student Name
       %td
-        %input{name: "emailFilter", id: "emailFilter", value: params[:emailFilter]}
+        %input{name: "studentNameFilter", id: "studentNameFilter", value: params[:studentNameFilter]}
+    %tr
+      %td
+        Student Email
+      %td
+        %input{name: "studentEmailFilter", id: "studentEmailFilter", value: params[:studentEmailFilter]}
+    %tr
+      %td
+        Teacher Name
+      %td
+        %input{name: "teacherNameFilter", id: "teacherNameFilter", value: params[:teacherNameFilter]}
+    %tr
+      %td
+        Teacher Email
+      %td
+        %input{name: "teacherEmailFilter", id: "teacherEmailFilter", value: params[:teacherEmailFilter]}
     %tr
       %td
         Section Code
