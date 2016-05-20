@@ -34,13 +34,13 @@ NUM_VOLUNTEERS_BY_STATE = {
 
 previously_contacted = Set.new
 OLD_TEMPLATE = '2016-05-05-teals-volunteers'
-old_email_query = %Q(
+old_email_recipients_query = %Q(
   SELECT DISTINCT contact_email
   FROM poste_deliveries
   JOIN poste_messages ON poste_messages.id = poste_deliveries.message_id
   WHERE poste_messages.name = '#{OLD_TEMPLATE}';
 )
-DB.fetch(old_email_query).each do |contact|
+DB.fetch(old_email_recipients_query).each do |contact|
   previously_contacted.add contact[:contact_email]
 end
 puts "#{previously_contacted.length} previous contacts loaded."
@@ -74,7 +74,7 @@ SOLR.query(q: volunteer_query).reverse_each do |result|
   num_volunteers = state ? NUM_VOLUNTEERS_BY_STATE[state] : nil
   name = result['name_s']
 
-  # Duplicate :name as :name_s because this email template uses :name as a greeting,
+  # Duplicate :name as :name_s because this email template uses :name_s as a greeting,
   # but :name is used for constructing the to line and stripped from params.
   results[email] = {
     email: email,
