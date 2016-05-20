@@ -100,11 +100,15 @@ module UsersHelper
     user_data
   end
 
+  PAGE_COMPLETED_NO = 0
+  PAGE_COMPLETED_PARTIAL = 1
+  PAGE_COMPLETED_YES = 2
+
   # Given a user and a script-level, returns a nil if there is only one page, or an array of
-  # boolean values if there are multiple pages.  The array contains true for each page that
-  # is considered complete.  Since this is currently just used for multi-page LevelGroup levels,
-  # true means that a valid (though not necessarily correct) answer has been given for each
-  # level embedded on the page.
+  # values if there are multiple pages.  The array contains whether each page is completed, partially
+  # completed, or not yet attempted.  Since this is currently just used for multi-page LevelGroup levels,
+  # we only check that a valid (though not necessarily correct) answer has been given for each
+  # level embedded on a given page.
   def get_pages_completed(user, sl)
     level = sl.level
 
@@ -137,7 +141,14 @@ module UsersHelper
 
         # The page is considered complete if there was a valid result for each
         # embedded level.
-        pages_completed << (page_valid_result_count == page["levels"].length)
+        if page_valid_result_count == 0
+          page_completed_value = PAGE_COMPLETED_NO
+        elsif page_valid_result_count == page["levels"].length
+          page_completed_value = PAGE_COMPLETED_YES
+        else
+          page_completed_value = PAGE_COMPLETED_PARTIAL
+        end
+        pages_completed << page_completed_value
       end
 
       pages_completed
