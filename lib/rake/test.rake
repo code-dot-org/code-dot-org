@@ -74,7 +74,7 @@ namespace :test do
 
     desc 'Runs shared tests if shared might have changed from staging.'
     task :shared do
-      run_tests_if_changed('shared', ['shared/**/*']) do
+      run_tests_if_changed('shared', ['shared/**/*', 'lib/**/*']) do
         TestRunUtils.run_shared_tests
       end
     end
@@ -92,8 +92,7 @@ def run_tests_if_changed(identifier, changed_globs)
   base_branch = GitUtils.current_branch_base
   if GitUtils.changed_in_branch_or_local?(base_branch, changed_globs)
     HipChat.log "Files affecting tests *modified* from #{base_branch}. Starting tests for: #{identifier} "
-    HipChat.log 'Changed files: '
-    HipChat.log GitUtils.files_changed_in_branch_or_local(base_branch, changed_globs).join("\n")
+    HipChat.log "Changed files:\n" + GitUtils.files_changed_in_branch_or_local(base_branch, changed_globs).join("\n")
     yield
   else
     HipChat.log "Files affecting tests unmodified from #{base_branch}. Skipping tests for: #{identifier} "

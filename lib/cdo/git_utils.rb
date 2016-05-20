@@ -8,7 +8,7 @@ module GitUtils
   def self.changed_in_branch_or_local?(base_branch, glob_patterns)
     files_changed_branch_or_local(base_branch).any? do |file_path|
       glob_patterns.any? do |glob|
-        glob_matches_file_path?(glob, file_path)
+        RakeUtils.glob_matches_file_path?(glob, file_path)
       end
     end
   end
