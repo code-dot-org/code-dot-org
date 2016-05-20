@@ -869,9 +869,9 @@
   (function () {
 
 /**
- * See @Gruntfile.js => after build, -2016-05-18-10-59 is replaced by the build version
+ * See @Gruntfile.js => after build, -2016-05-20-11-41 is replaced by the build version
  */
-var version = '-2016-05-18-10-59';
+var version = '-2016-05-20-11-41';
 var versionHasNotBeenReplaced = version.indexOf('@@') === 0;
 if (versionHasNotBeenReplaced)  {
   version = '';
@@ -945,5 +945,29 @@ if (window.location.href.indexOf('debug') != -1) {
   loadScript(script, 'onPiskelReady()');
 }
 })();
+  (function () {
+
+/**
+ * Main entry point for messages received from outside the iframe.  This method
+ * is effectively a router for incoming commands.
+ * @param event
+ */
+function receiveMessage(event) {
+  // Should validate origin and not receive commands if embedded on another
+  // domain.
+  // TODO (bbuchanan): Safer cross-domain check.
+  var origin = event.origin || event.originalEvent.origin; // For Chrome, the origin property is in the event.originalEvent object.
+  if (!/studio\.code\.org/i.test(origin))
+    return;
+
+  var message = event.data;
+  if (message.type === 'LOAD_IMAGE') {
+    alert('Received LOAD_IMAGE message. Metadata:\n' + JSON.stringify(message.animation));
+  }
+}
+window.addEventListener('message', receiveMessage);
+
+})();
+
 </script>
 {% endraw %}

@@ -235,6 +235,7 @@ GameLab.prototype.init = function (config) {
 GameLab.prototype.setupReduxSubscribers = function (store) {
   var state = {};
   var boundOnIsRunningChange = this.onIsRunningChange.bind(this);
+  var boundOnSelectedAnimationChange = this.onSelectedAnimationChange.bind(this);
   store.subscribe(function () {
     var lastState = state;
     state = store.getState();
@@ -242,11 +243,35 @@ GameLab.prototype.setupReduxSubscribers = function (store) {
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
       boundOnIsRunningChange(state.runState.isRunning);
     }
+
+    if (!lastState.animationTab || state.animationTab.selectedAnimation !== lastState.animationTab.selectedAnimation) {
+      boundOnSelectedAnimationChange(state.animationTab.selectedAnimation);
+    }
   });
 };
 
 GameLab.prototype.onIsRunningChange = function () {
   this.setCrosshairCursorForPlaySpace();
+};
+
+GameLab.prototype.onSelectedAnimationChange = function (selectedAnimation) {
+  if (!selectedAnimation) {
+    return;
+  }
+
+  const iframe = document.getElementById('piskel-frame');
+  if (!iframe) {
+    return;
+  }
+  const iframeWindow = iframe.contentWindow;
+  if (!iframeWindow) {
+    return;
+  }
+
+  iframeWindow.postMessage({
+    type: 'LOAD_IMAGE',
+    animation: this.getAnimationMetadataByKey(selectedAnimation)
+  }, '*');
 };
 
 /**
@@ -968,6 +993,13 @@ GameLab.prototype.displayFeedback_ = function () {
  */
 GameLab.prototype.getAnimationMetadata = function () {
   return this.studioApp_.reduxStore.getState().animations;
+};
+
+/**
+ * Get metadata for a particular animation.
+ */
+GameLab.prototype.getAnimationMetadataByKey = function (key) {
+  return this.getAnimationMetadata().filter(animation => animation.key === key)[0];
 };
 
 GameLab.prototype.getAnimationDropdown = function () {

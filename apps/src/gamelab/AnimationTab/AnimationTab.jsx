@@ -55,7 +55,7 @@ const AnimationTab = React.createClass({
             <GameLabVisualizationHeader />
             <AnimationList />
           </div>
-          <iframe style={styles.editorColumn} src="/assets/js/piskel/index.html" />
+          <iframe id="piskel-frame" style={styles.editorColumn} src="/assets/js/piskel/index.html" />
         </ResizablePanes>
         <AnimationPicker channelId={this.props.channelId}/>
       </div>
