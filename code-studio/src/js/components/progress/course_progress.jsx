@@ -1,6 +1,7 @@
 /* global React, dashboard */
 
-import {STAGE_TYPE} from './types';
+import { connect } from 'react-redux';
+import { STAGE_TYPE } from './types';
 import CourseProgressRow from './course_progress_row';
 import StageDetails from './stage_details';
 
@@ -55,4 +56,8 @@ var CourseProgress = React.createClass({
     );
   }
 });
-module.exports = CourseProgress;
+
+export default connect(state => ({
+  display: state.display,
+  stages: state.stages
+}))(CourseProgress);
