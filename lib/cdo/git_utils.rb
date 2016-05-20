@@ -6,11 +6,7 @@ module GitUtils
 
   # Returns whether any files in this branch or locally changed from base version
   def self.changed_in_branch_or_local?(base_branch, glob_patterns)
-    files_changed_branch_or_local(base_branch).any? do |file_path|
-      glob_patterns.any? do |glob|
-        RakeUtils.glob_matches_file_path?(glob, file_path)
-      end
-    end
+    files_changed_in_branch_or_local(base_branch, glob_patterns).empty?
   end
 
   def self.files_changed_in_branch_or_local(base_branch, glob_patterns)
@@ -26,8 +22,9 @@ module GitUtils
   end
 
   def self.files_changed_in_branch(base_branch)
-    branch_commit = `git merge-base HEAD refs/remotes/origin/#{base_branch}`.strip
-    `git diff-tree HEAD #{branch_commit} --name-only`.split("\n")
+    current_branch = self.current_branch
+    # via http://stackoverflow.com/a/25071749
+    `git --no-pager diff --name-only #{current_branch} $(git merge-base #{current_branch} #{base_branch})`.split("\n")
   end
 
   def self.files_changed_locally
