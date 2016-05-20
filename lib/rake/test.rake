@@ -88,13 +88,19 @@ namespace :test do
 end
 task test: ['test:changed']
 
-def run_tests_if_changed(identifier, changed_globs)
+def run_tests_if_changed(test_name, changed_globs)
   base_branch = GitUtils.current_branch_base
-  if GitUtils.changed_in_branch_or_local?(base_branch, changed_globs)
-    HipChat.log "Files affecting tests *modified* from #{base_branch}. Starting tests for: #{identifier} "
-    HipChat.log "Changed files:\n" + GitUtils.files_changed_in_branch_or_local(base_branch, changed_globs).join("\n")
-    yield
+  max_identifier_length = 12
+  justified_test_name = test_name.ljust(max_identifier_length)
+
+  relevant_changed_files = GitUtils.files_changed_in_branch_or_local(base_branch, changed_globs)
+  if relevant_changed_files.empty?
+    HipChat.log "Files affecting #{justified_test_name} tests unmodified from #{base_branch}. Skipping tests."
   else
-    HipChat.log "Files affecting tests unmodified from #{base_branch}. Skipping tests for: #{identifier} "
+    HipChat.log "Files affecting #{justified_test_name} tests *modified* from #{base_branch}. Starting tests. Changed files:"
+    padding = ' ' * 4
+    separator = "\n"
+    HipChat.log separator + padding + relevant_changed_files.join(separator + padding)
+    yield
   end
 end
