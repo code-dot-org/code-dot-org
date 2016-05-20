@@ -2,11 +2,9 @@
 require_relative '../config/environment'
 require 'csv'
 
-COL_FIRST_NAME = 'First'
-COL_LAST_NAME = 'Last'
 COL_USER_ID = 'Code Studio ID'
 COL_EMAIL = 'Email Address'
-COL_COURSE = 'Program'
+COL_COURSES = 'Program'
 
 facilitators_csv = ARGV[0]
 unless facilitators_csv
@@ -23,37 +21,39 @@ class CSV::Row
 end
 
 # First pass, validate the data.
-course_facilitator_params_list = []
+course_facilitator_list = []
 CSV.foreach(facilitators_csv, headers: true) do |row|
   user_id = row[COL_USER_ID]
-  first_name = row[COL_FIRST_NAME]
-  last_name = row[COL_LAST_NAME]
   email = row[COL_EMAIL]
-  course = row[COL_COURSE]
 
-  next unless email
-  next unless first_name || last_name
+  next unless email || user_id
 
-  raise "Unrecognized course #{course}" unless Pd::Workshop::COURSES.include? course
-
+  # Some facilitators don't have accounts yet and are marked with - followed by a comment in the id field.
+  next if user_id && user_id.start_with?('-')
   facilitator =
     if user_id.nil?
-      User.find_by!(email: email)
+      User.find_by!(email: email) rescue raise "Unable to find user email #{email}"
     else
-      User.find_by!(id: user_id)
+      User.find_by!(id: user_id) rescue raise "Unable to find user id #{user_id}"
     end
 
-  # validate other fields
-  unless facilitator.name == "#{first_name} #{last_name}" && facilitator.email.casecmp(email)
-    raise "Facilitator #{user_id} does not match name or email."
+  courses = row[COL_COURSES].split(',').map(&:strip)
+  courses.each do |course|
+    raise "Unrecognized course #{course}" unless Pd::Workshop::COURSES.include? course
+    course_facilitator_list << {facilitator: facilitator, course: course}
   end
-
-  course_facilitator_params_list << {facilitator_id: facilitator.id, course: course}
 end
 
 # Second pass, import the data.
-course_facilitator_params_list.each do |course_facilitator_params|
-  Pd::CourseFacilitator.find_or_create_by course_facilitator_params
+course_facilitator_list.each do |course_facilitator|
+  facilitator = course_facilitator[:facilitator]
+  Pd::CourseFacilitator.find_or_create_by id: facilitator.id, course: course_facilitator[:course]
+
+  # CSF facilitators are also workshop organizers
+  if course == Pd::Workshop::COURSE_CSF
+    facilitator.permission = UserPermission::WORKSHOP_ORGANIZER
+    facilitator.save!
+  end
 end
 
-puts "#{course_facilitator_params_list.length} Course Facilitators Imported."
+puts "#{course_facilitator_list.length} Course Facilitators Imported."
