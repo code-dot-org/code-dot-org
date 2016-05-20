@@ -15,13 +15,14 @@ var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
 var constants = require('../../constants');
 var msg = require('../../locale');
+import CollapserButton from './CollapserButton';
 
-var PADDING_HEIGHT = 30;
-var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
+const PADDING_HEIGHT = 30;
+const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
-var MIN_HEIGHT = RESIZER_HEIGHT + 60;
+const MIN_HEIGHT = RESIZER_HEIGHT + 60;
 
-var styles = {
+const styles = {
   main: {
     position: 'absolute',
     marginLeft: 15,
@@ -130,6 +131,9 @@ var TopInstructions = React.createClass({
             onResize={this.onHeightResize}/>
           }
         </div>
+        <CollapserButton
+            collapsed={this.props.collapsed}
+            onClick={this.props.toggleInstructionsCollapsed}/>
       </div>
     );
   }
