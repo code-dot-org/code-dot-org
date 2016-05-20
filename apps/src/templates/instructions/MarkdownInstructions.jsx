@@ -6,6 +6,8 @@ var styles = {
     paddingTop: 19
   },
   inTopPane: {
+    // TODO - do we always want this bottom margin in top pane? (looks kind of
+    // off in CSF imo)
     marginBottom: 35,
     paddingTop: 0
   },
