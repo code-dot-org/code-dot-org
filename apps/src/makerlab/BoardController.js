@@ -235,6 +235,7 @@ function initializeCircuitPlaygroundComponents(io, board) {
       on: () => pixels.forEach(p => p.on()),
       off: () => pixels.forEach(p => p.off()),
       toggle: () => pixels.forEach(p => p.toggle()),
+      intensity: i => pixels.forEach(p => p.intensity(i)),
       color: c => pixels.forEach(p => p.color(c))
     },
 
