@@ -49,8 +49,7 @@ volunteer_query = %q(
   (
     (
       kind_s: Petition &&
-      role_s: engineer &&
-      age_i:[20 TO *]
+      role_s: engineer
     ) || (
       kind_s: VolunteerEngineerSubmission &&
       experience_s: software_professional &&
