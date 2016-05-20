@@ -47,13 +47,13 @@ end
 # Second pass, import the data.
 course_facilitator_list.each do |course_facilitator|
   facilitator = course_facilitator[:facilitator]
-  Pd::CourseFacilitator.find_or_create_by id: facilitator.id, course: course_facilitator[:course]
+  Pd::CourseFacilitator.find_or_create_by facilitator_id: facilitator.id, course: course_facilitator[:course]
 
   # CSF facilitators are also workshop organizers
-  if course == Pd::Workshop::COURSE_CSF
-    facilitator.permission = UserPermission::WORKSHOP_ORGANIZER
-    facilitator.save!
-  end
+  facilitator.permission = UserPermission::WORKSHOP_ORGANIZER if course_facilitator[:course] == Pd::Workshop::COURSE_CSF
+
+  facilitator.permission = UserPermission::FACILITATOR
+  facilitator.save!
 end
 
 puts "#{course_facilitator_list.length} Course Facilitators Imported."
