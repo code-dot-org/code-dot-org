@@ -63,6 +63,16 @@ module ApplicationHelper
     end
   end
 
+  def page_complete_css_class(page_completed)
+    if page_completed == Game.PAGE_COMPLETED_PARTIAL
+      'attempted'
+    elsif page_completed == Game.PAGE_COMPLETED_PARTIAL
+      'perfect'
+    else
+      'not_tried'
+    end
+  end
+
   def show_flashes
     ret = ''
     if notice.present?

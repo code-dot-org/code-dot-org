@@ -25,6 +25,24 @@ progress.activityCssClass = function (result) {
 };
 
 /**
+ * See UsersHelper#activity_css_class.
+ * @param pageCompleted
+ * @return {string}
+ */
+progress.pageCompletedCssClass = function (pageCompleted) {
+  var PAGE_COMPLETED_PARTIAL = 1;
+  var PAGE_COMPLETED_YES = 2;
+
+  if (pageCompleted == PAGE_COMPLETED_PARTIAL) {
+    return "attempted";
+  } else if (pageCompleted == PAGE_COMPLETED_YES) {
+    return "perfect";
+  } else {
+    return "not_tried";
+  }
+};
+
+/**
  * Returns the "best" of the two results, as defined in apps/src/constants.js.
  * Note that there are negative results that count as an attempt, so we can't
  * just take the maximum.
@@ -66,9 +84,7 @@ progress.populateProgress = function (scriptName, puzzlePage) {
         // so we need to decorate each of them individually.
         var pagesCompleted = serverProgress[levelId].pages_completed;
         for (var page = 0; page < pagesCompleted.length; page++) {
-          // The dot is considered perfect if the page is considered complete.
-          var pageCompleted = pagesCompleted[page];
-          status = pageCompleted ? "perfect" : "attempted";
+          status = progress.pageCompletedCssClass(pagesCompleted[page]);
 
           // Clear the existing class and replace.
           $($('.user-stats-block .level-' + levelId)[page]).attr('class', 'level-' + levelId + ' level_link ' + status);
@@ -126,7 +142,7 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
     } else if (serverProgress && serverProgress[level.id] && serverProgress[level.id].pages_completed) {
       // The dot is considered perfect if the page is considered complete.
       var pageCompleted = serverProgress[level.id].pages_completed[levelRepeat];
-      status = pageCompleted ? "perfect" : "attempted";
+      status = progress.pageCompletedCssClass(pageCompleted);
     } else if (clientState.queryParams('user_id')) {
       // Show server progress only (the student's progress)
       status = progress.activityCssClass((serverProgress[level.id] || {}).result);
