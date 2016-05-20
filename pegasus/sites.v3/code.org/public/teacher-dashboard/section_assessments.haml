@@ -49,7 +49,7 @@ content-type: text/ng-template
 
     %tr
       %th.manage-th
-        %a{href: "", "ng-click" => "orderSummaries = 'name'"}= I18n.t('dashboard_students_name')
+        %a{href: "", "ng-click" => "orderSummaries = 'student.name'"}= I18n.t('dashboard_students_name')
       %th.manage-th
         %a{href: "", "ng-click" => "orderSummaries = 'stage'"}= I18n.t('dashboard_stage')
       %th.manage-th
@@ -117,7 +117,7 @@ content-type: text/ng-template
 
     %tr
       %th.manage-th
-        %a{href: "", "ng-click" => "orderAnswers = 'name'"}= I18n.t('dashboard_students_name')
+        %a{href: "", "ng-click" => "orderAnswers = 'student.name'"}= I18n.t('dashboard_students_name')
       %th.manage-th
         %a{href: "", "ng-click" => "orderAnswers = 'stage'"}= I18n.t('dashboard_stage')
       %th.manage-th
