@@ -4,8 +4,8 @@ import TopInstructionsCSF from './TopInstructionsCSF';
 import TopInstructionsCSP from './TopInstructionsCSP';
 
 const TopInstructions = React.createClass({
-  getContentHeight() {
-    return this.refs.topInstructions.getWrappedInstance().getContentHeight();
+  getRenderedHeight() {
+    return this.refs.topInstructions.getWrappedInstance().getRenderedHeight();
   },
 
   render() {

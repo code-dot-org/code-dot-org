@@ -16,7 +16,7 @@ var HeightResizer = require('./HeightResizer');
 var constants = require('../../constants');
 var msg = require('../../locale');
 
-var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
+var PADDING_HEIGHT = 30;
 var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 var MIN_HEIGHT = RESIZER_HEIGHT + 60;
@@ -29,17 +29,10 @@ var styles = {
     right: 0,
     // left handled by media queries for .editor-column
   },
-  header: {
-    height: HEADER_HEIGHT,
-    lineHeight: HEADER_HEIGHT + 'px',
-    fontFamily: '"Gotham 4r"',
-    backgroundColor: color.lighter_purple,
-    textAlign: 'center'
-  },
   body: {
     backgroundColor: 'white',
     overflowY: 'scroll',
-    padding: 30,
+    padding: PADDING_HEIGHT,
     position: 'absolute',
     top: 0,
     bottom: 0,
@@ -73,9 +66,10 @@ var TopInstructions = React.createClass({
    * Called externally
    * @returns {number} The height of the rendered contents in pixels
    */
-  getContentHeight: function () {
+  getRenderedHeight() {
+    // TODO - this is getting called a LOT - prob bc blockly?
     var instructionsContent = this.refs.instructions.refs.instructionsMarkdown;
-    return $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true);
+    return $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) + 2 * PADDING_HEIGHT;
   },
 
   /**

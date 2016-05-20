@@ -89,22 +89,21 @@ var InstructionsWithWorkspace = React.createClass({
 
     var topPaneHeight = this.props.instructionsHeight;
     var codeWorkspaceHeight = this.refs.codeWorkspaceContainer.getWrappedInstance()
-      .getContentHeight();
+      .getRenderedHeight();
     if (codeWorkspaceHeight === 0) {
       // We haven't initialized the codeWorkspace yet. Don't do any adjusting
       return;
     }
 
     var totalHeight = topPaneHeight + codeWorkspaceHeight;
-    var instructionsContentHeight = this.refs.topInstructions.getContentHeight();
+    var instructionsContentHeight = this.refs.topInstructions.getRenderedHeight();
 
     // The max space we could use for our top pane if editor/debugger used
     // only the reserved amount of space.
     var topSpaceAvailable = totalHeight - EDITOR_RESERVE - DEBUGGER_RESERVE;
 
     // Dont want topPaneHeight to extend past rendered length of content.
-    // TODO - this depends on CSF vs. CSP
-    var maxHeight = instructionsContentHeight + HEADER_HEIGHT + RESIZER_HEIGHT;
+    var maxHeight = instructionsContentHeight + RESIZER_HEIGHT;
     if (maxHeight < topPaneHeight) {
       topPaneHeight = maxHeight;
     }
