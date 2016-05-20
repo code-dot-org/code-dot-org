@@ -16,13 +16,9 @@ module GitUtils
   def self.files_changed_in_branch_or_local(base_branch, glob_patterns)
     files_changed_branch_or_local(base_branch).select do |file_path|
       glob_patterns.any? do |glob|
-        glob_matches_file_path?(glob, file_path)
+        RakeUtils.glob_matches_file_path?(glob, file_path)
       end
     end
-  end
-
-  def self.glob_matches_file_path?(glob, file_path)
-    File.fnmatch?(glob, file_path, File::FNM_PATHNAME | File::FNM_DOTMATCH)
   end
 
   def self.files_changed_branch_or_local(base_branch)

@@ -166,6 +166,10 @@ module RakeUtils
     end
   end
 
+  def self.glob_matches_file_path?(glob, file_path)
+    File.fnmatch?(glob, file_path, File::FNM_PATHNAME | File::FNM_DOTMATCH)
+  end
+
   # Updates list of global npm packages if outdated
   def self.npm_update_g(*args)
     output = `npm outdated --global --parseable --long --depth=0 #{args.join ' '}`.strip
