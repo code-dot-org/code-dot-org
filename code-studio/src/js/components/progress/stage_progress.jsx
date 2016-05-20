@@ -13,7 +13,6 @@ var StageProgress = React.createClass({
   },
 
   render() {
-    var lastIndex = this.props.levels.length - 1;
     var progressDots = this.props.levels.map((level, index) => {
 
       var innerClass = 'level_link ' + (level.status || 'not_tried');
@@ -23,9 +22,6 @@ var StageProgress = React.createClass({
 
       var outerClass = (level.kind === 'assessment') ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
       outerClass = (index === this.props.currentLevelIndex) ? 'puzzle_outer_current' : outerClass;
-      if (index === lastIndex) {
-        outerClass += ' last';
-      }
 
       var isUnplugged = isNaN(level.title);
       var dotStyle = {};
