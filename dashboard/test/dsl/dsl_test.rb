@@ -341,29 +341,42 @@ DSL
   end
 
   test 'test Evaluation Question' do
-    learning_module1 = create(:plc_learning_module, name: 'Module1')
-    learning_module2 = create(:plc_learning_module, name: 'Module2')
+    script = create :script
+    stage1 = create(:stage, name: 'Stage1', script: script)
+    stage2 = create(:stage, name: 'Stage2', script: script)
     input_dsl = <<DSL
 name 'Test question'
 question 'Question text'
 answer 'answer 1'
-answer 'answer 2', 1, '#{learning_module1.name}'
-answer 'answer 3', 2, '#{learning_module2.name}'
+answer 'answer 2', weight: 2, stage_name: '#{stage1.name}'
+answer 'answer 3', stage_name: '#{stage2.name}'
 DSL
 
-    output, _ = EvaluationQuestion.parse(input_dsl, 'test')
+    output, _ = EvaluationMulti.parse(input_dsl, 'test')
     expected = {
         name: 'Test question',
         properties: {
             options: {},
             questions: [{text: 'Question text'}],
             answers: [
-                {text: 'answer 1', weight: 1, learning_module: nil},
-                {text: 'answer 2', weight: 1, learning_module: learning_module1.name},
-                {text: 'answer 3', weight: 2, learning_module: learning_module2.name}
+                {text: 'answer 1', weight: 1, stage: nil},
+                {text: 'answer 2', weight: 2, stage: stage1},
+                {text: 'answer 3', weight: 1, stage: stage2},
             ]
         }
       }
     assert_equal expected, output
+  end
+
+  test 'test evaluation question unknown module' do
+    input_dsl = <<DSL
+name 'Test question'
+question 'Question text'
+answer 'answer 1'
+answer 'answer 2', weight: 1, stage_name: 'bogus stage'
+DSL
+    assert_raises 'Unknown learning module bogus module' do
+      EvaluationMulti.parse(input_dsl, 'test')
+    end
   end
 end
