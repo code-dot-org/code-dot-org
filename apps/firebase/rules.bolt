@@ -7,7 +7,8 @@ isLoggedIn() { auth.uid !== null }
 orZero(value) { valueOr(value, 0) }
 valueOr(value, defaultValue) { value == null ? defaultValue : value }
 isUnchanged(value) { value == prior(value) }
-isIncremented(value) { value > prior(value) }
+isIncreased(value) { orZero(value) > orZero(prior(value)) }
+isIncreasedBy(value, increment) { orZero(value) >= orZero(prior(value)) + increment}
 isNotRemoved(value) { value != null || prior(value) == null }
 
 // Row count helpers
@@ -48,14 +49,14 @@ isValidIncrement(limit, maxCount) {
   isUnchanged(limit.counters.last_reset_time) &&
   isUnchanged(limit.target_op_id) &&
   isNotRemoved(limit.used_ops) &&
-  isIncremented(limit.counters.last_op_count) &&
+  isIncreased(limit.counters.last_op_count) &&
   limit.counters.last_op_count <= maxCount 
 }
 
 isValidReset(limit, maxTime) {
   limit.used_ops == null &&
   limit.counters.last_reset_time == now && 
-  limit.counters.last_reset_time > prior(limit.counters.last_reset_time + maxTime) &&
+  isIncreasedBy(limit.counters.last_reset_time, maxTime) &&
   limit.counters.last_op_count == 0
 }
 

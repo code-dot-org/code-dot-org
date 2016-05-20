@@ -174,17 +174,19 @@ var RATE_LIMIT_INTERVALS = Object.keys(RATE_LIMITS).sort(function (a, b) {
   return Number(b) - Number(a);
 });
 
+const ROW_COUNT_BUCKETS = 10;
+
 /**
  * Increments each rate limit counter, calling the callback with map from
  * rate limit intervals to the corresponding token to use.
  */
 function getRateLimitTokens(onSuccess, onError) {
   // TODO(dave): combine the getRateLimitToken() results with Promise.all().
-  getRateLimitToken(15, function (counters15) {
-    getRateLimitToken(60, function (counters60) {
+  getRateLimitToken(15, function (token15) {
+    getRateLimitToken(60, function (token60) {
       onSuccess({
-        15: counters15.last_op_count,
-        60: counters60.last_op_count
+        15: token15,
+        60: token60
       });
     }, onError);
   }, onError);
@@ -204,14 +206,16 @@ function getRateLimitToken(interval, onSuccess, onError) {
   incrementOpCount(interval, onSuccess, function () {
     // The increment failed because the last_op_count reached its maximum, or because the
     // last_reset_time wasn't initialized. Try to reset the count.
-    resetRateLimit(interval, function () {
+    resetRateLimit(interval).then(function () {
       // The rate limit was reset. Try one more time to increment it.
       incrementOpCount(interval, onSuccess, function () {
         throw new Error('Rate limit exceeded immediately after it was reset.');
       });
-    }, onError);
+    });
   });
 }
+
+var lastReset = {};
 
 /**
  *
@@ -220,44 +224,51 @@ function getRateLimitToken(interval, onSuccess, onError) {
  * @param onSuccess
  * @param onError
  */
-function resetRateLimit(interval, onSuccess, onError) {
-  getLastResetTimeMs(interval, function(lastResetTimeMs) {
-    getCurrentTimeMs(function (currentTimeMs) {
-      var nextResetTimeMs = lastResetTimeMs + interval * 1000;
-      if (currentTimeMs < nextResetTimeMs) {
-        // It is too soon to reset this rate limit.
-        var timeRemaining = Math.ceil((nextResetTimeMs - currentTimeMs) / 1000);
-        onError('rate limit exceeded. please wait ' + timeRemaining + ' seconds before retrying.');
-      } else {
-        // Enough time has passed for this rate limit to be reset.
-        var limitRef = getDatabase(Applab.channelId).child('limits').child(interval);
-        var limitData = {
-          counters: {
-            last_reset_time: Firebase.ServerValue.TIMESTAMP,
-            last_op_count: 0
-          }
-        };
-        // 'set' will remove other children of limitRef including target_op_id and used_ops.
-        limitRef.set(limitData, function (error) {
-          if (error) {
-            limitRef.once('value', function (limitSnapshot) {
-              var newResetTimeMs = limitSnapshot.child('counters').child('last_reset_time').val() || 0;
-              if (newResetTimeMs <= lastResetTimeMs) {
-                throw new Error('Failed to reset rate limit: ' + error);
-              } else {
-                console.log('resetRateLimit onSuccess after error')
-                // Our reset request failed, but the timestamp was updated, so we assume
-                // that another client's reset attempt succeeded.
-                onSuccess();
-              }
-            });
-          } else {
-            console.log('resetRateLimit onSuccess without error')
-            onSuccess();
-          }
-        });
+function resetRateLimit(interval) {
+  var lastResetTimePromise = getLastResetTimePromise(interval);
+  var currentTimePromise = getCurrentTimePromise();
+  return Promise.all([lastResetTimePromise, currentTimePromise]).then(function (results) {
+    var lastResetTimeMs = results[0];
+    var currentTimeMs = results[1];
+    var nextResetTimeMs = lastResetTimeMs + interval * 1000;
+
+    if (currentTimeMs < nextResetTimeMs) {
+      // It is too soon to reset this rate limit.
+      var timeRemaining = Math.ceil((nextResetTimeMs - currentTimeMs) / 1000);
+      throw new Error('rate limit exceeded. please wait ' + timeRemaining + ' seconds before retrying.');
+    }
+
+    if (lastResetTimeMs === lastReset.time) {
+      // Another request from this client has already been made to reset this timestamp.
+      // Return the promise from that other request.
+      return lastReset.promise;
+    }
+
+    // Enough time has passed for this rate limit to be reset.
+    var limitRef = getDatabase(Applab.channelId).child('limits').child(interval);
+    // 'set' will remove other children of limitRef including target_op_id and used_ops.
+    var limitData = {
+      counters: {
+        last_reset_time: Firebase.ServerValue.TIMESTAMP,
+        last_op_count: 0
       }
+    };
+
+    lastReset.time = lastResetTimeMs;
+    lastReset.promise = limitRef.set(limitData).catch(function (error) {
+      // Our reset request failed. Check to see if another client's reset attempt succeeded.
+      return limitRef.once('value').then(function (limitSnapshot) {
+        var newResetTimeMs = limitSnapshot.child('counters').child('last_reset_time').val() || 0;
+        if (newResetTimeMs <= lastResetTimeMs) {
+          throw new Error('Failed to reset rate limit.  ' + error);
+        } else {
+          // Our reset request failed, but the timestamp was updated, so we assume
+          // that another client's reset attempt succeeded.
+        }
+      });
     });
+
+    return lastReset.promise;
   });
 }
 
@@ -275,11 +286,9 @@ function incrementOpCount(interval, onSuccess, onAbort) {
     if (error) {
       throw new Error('Unexpected error obtaining rate limit token: ' + error);
     } else if (!committed) {
-      console.log('incrementOpCount aborted: ' + opCountSnapshot && opCountSnapshot.val())
-      onAbort(countersSnapshot.val());
+      onAbort(opCountSnapshot.val());
     } else {
-      console.log('incrementOpCount success: ' + opCountSnapshot && opCountSnapshot.val())
-      onSuccess(countersSnapshot.val());
+      onSuccess(opCountSnapshot.val());
     }
   });
 }
@@ -294,14 +303,11 @@ function incrementOpCount(interval, onSuccess, onAbort) {
  * @returns {*} new value for countersData, or undefined if the transaction should be aborted.
  */
 function incrementOpCountData(interval, opCountData) {
-  console.log('incrementOpCountData interval '+ interval + ' opCountData ' + opCountData)
   opCountData = opCountData || 0;
   if (opCountData < RATE_LIMITS[interval]) {
     // Increment this rate limit.
-    console.log('incrementOpCountData interval ' + interval + ' incrementing')
     return opCountData + 1;
   } else {
-    console.log('incrementOpCountData interval ' + interval + ' aborting')
     // The rate limit cannot be incremented. Abort the transaction.
     return;
   }
@@ -326,33 +332,25 @@ function getServerData(tableName, onSuccess, onError) {
   }, onError);
  }
 
-
-
-
-function getCurrentTimeMs(onComplete) {
+function getCurrentTimePromise() {
   var serverTimeRef = getDatabase(Applab.channelId).child('server_time').child(firebaseUserId);
-  serverTimeRef.set(Firebase.ServerValue.TIMESTAMP, function (err) {
-    if (err) {
-      throw new Error('unexpected error getting current time from the server: ' + err);
-    } else {
-      serverTimeRef.onDisconnect().remove();
-      serverTimeRef.once('value', function (currentTimeSnapshot) {
-        onComplete(currentTimeSnapshot.val());
-      });
-    }
+  serverTimeRef.set(Firebase.ServerValue.TIMESTAMP).then(function () {
+    serverTimeRef.onDisconnect().remove();
+    return serverTimeRef.once('value').then(function (currentTimeSnapshot) {
+      return currentTimeSnapshot.val();
+    });
   });
 }
 
-function getLastResetTimeMs(interval, onComplete) {
+function getLastResetTimePromise(interval) {
   var lastResetTimeRef = getDatabase(Applab.channelId).child('limits').child(interval)
     .child('counters').child('last_reset_time');
-  lastResetTimeRef.once('value', function(lastResetTimeSnapshot) {
-    onComplete(lastResetTimeSnapshot.val() || 0);
+  return lastResetTimeRef.once('value').then(function (lastResetTimeSnapshot) {
+    return lastResetTimeSnapshot.val() || 0;
   });
 }
 
 
-const ROW_COUNT_BUCKETS = 2;
 function updateRowCount(recordId, rowCounts, channelData, tableName, delta) {
   var rowCountIndex = recordId % ROW_COUNT_BUCKETS;
   rowCounts = rowCounts || {};
