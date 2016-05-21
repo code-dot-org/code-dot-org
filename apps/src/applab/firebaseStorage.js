@@ -247,17 +247,15 @@ function resetRateLimitPromise(interval) {
     var limitRef = getDatabase(Applab.channelId).child('limits').child(interval);
     // 'set' will remove other children of limitRef including target_op_id and used_ops.
     var limitData = {
-      counters: {
-        last_reset_time: Firebase.ServerValue.TIMESTAMP,
-        last_op_count: 0
-      }
+      last_reset_time: Firebase.ServerValue.TIMESTAMP,
+      last_op_count: 0
     };
 
     lastReset.time = lastResetTimeMs;
     lastReset.promise = limitRef.set(limitData).catch(function (error) {
       // Our reset request failed. Check to see if another client's reset attempt succeeded.
       return limitRef.once('value').then(function (limitSnapshot) {
-        var newResetTimeMs = limitSnapshot.child('counters').child('last_reset_time').val() || 0;
+        var newResetTimeMs = limitSnapshot.child('last_reset_time').val() || 0;
         if (newResetTimeMs <= lastResetTimeMs) {
           throw new Error('Failed to reset rate limit.  ' + error);
         } else {
@@ -273,13 +271,10 @@ function resetRateLimitPromise(interval) {
 
 /**
  *
- * @param countersRef
  * @param interval
- * @param onSuccess
- * @param onAbort
  */
 function incrementOpCountPromise(interval) {
-  var opCountRef = getDatabase(Applab.channelId).child('limits').child(interval).child('counters').child('last_op_count');
+  var opCountRef = getDatabase(Applab.channelId).child('limits').child(interval).child('last_op_count');
   var increment = incrementOpCountData.bind(this, interval);
   return opCountRef.transaction(increment).then(function (transactionResult) {
     if (!transactionResult.committed) {
@@ -293,11 +288,9 @@ function incrementOpCountPromise(interval) {
 /**
  * Update function for a Firebase transaction to increment a rate limit counter.
  * @param {number} interval The rate limit interval.
- * @param {Object} countersData
- * @param {number} countersData.last_reset_time The last time this rate limit interval was reset.
- * @param {number} countersData.last_op_count The number of operations on this rate limit
+ * @param {number} opCountData The number of operations on this rate limit
  *     interval since the last reset.
- * @returns {*} new value for countersData, or undefined if the transaction should be aborted.
+ * @returns {*} new value for opCountData, or undefined if the transaction should be aborted.
  */
 function incrementOpCountData(interval, opCountData) {
   opCountData = opCountData || 0;
@@ -311,11 +304,8 @@ function incrementOpCountData(interval, opCountData) {
 }
 
 /**
- * @param {Firebase} channelRef
  * @param {String} tableName
- * @param {function (Object.<string, number>)} onSuccess Function which receives an object
- *     with the following properties which have been fetched from the server:
- *     rowCounts, tokenMap.
+
  */
 function getServerDataPromise(tableName) {
   var tokenMapPromise = getRateLimitTokenMapPromise();
@@ -343,7 +333,7 @@ function getCurrentTimePromise() {
 
 function getLastResetTimePromise(interval) {
   var lastResetTimeRef = getDatabase(Applab.channelId).child('limits').child(interval)
-    .child('counters').child('last_reset_time');
+    .child('last_reset_time');
   return lastResetTimeRef.once('value').then(function (lastResetTimeSnapshot) {
     return lastResetTimeSnapshot.val() || 0;
   });

@@ -39,25 +39,25 @@ prevTargetRecord(table) { prior(table)[table.target_record_id] }
 getRateLimit(channel, interval) { channel.limits[interval + ''] }
 
 isValidInit(limit) {
-  prior(limit.counters.last_reset_time) == null &&
-  limit.counters.last_reset_time == now &&
-  limit.counters.last_op_count == 1 &&
+  prior(limit.last_reset_time) == null &&
+  limit.last_reset_time == now &&
+  limit.last_op_count == 1 &&
   limit.used_ops == null
 }
 
 isValidIncrement(limit, maxCount) {
-  isUnchanged(limit.counters.last_reset_time) &&
+  isUnchanged(limit.last_reset_time) &&
   isUnchanged(limit.target_op_id) &&
   isNotRemoved(limit.used_ops) &&
-  isIncreased(limit.counters.last_op_count) &&
-  limit.counters.last_op_count <= maxCount 
+  isIncreased(limit.last_op_count) &&
+  limit.last_op_count <= maxCount 
 }
 
 isValidReset(limit, maxTime) {
   limit.used_ops == null &&
-  limit.counters.last_reset_time == now && 
-  isIncreasedBy(limit.counters.last_reset_time, maxTime) &&
-  limit.counters.last_op_count == 0
+  limit.last_reset_time == now && 
+  isIncreasedBy(limit.last_reset_time, maxTime) &&
+  limit.last_op_count == 0
 }
 
 // The NEW version of the NEW target op.
@@ -71,10 +71,10 @@ prevTargetOp(limit) {
 }
 
 isValidUsedOp(limit) {
-  isUnchanged(limit.counters.last_op_count) &&
-  isUnchanged(limit.counters.last_reset_time) &&
+  isUnchanged(limit.last_op_count) &&
+  isUnchanged(limit.last_reset_time) &&
   targetOpUsed(limit) &&
-  limit.target_op_id <= limit.counters.last_op_count
+  limit.target_op_id <= limit.last_op_count
 }
 
 isValidRateLimit(limit, maxTime, maxCount) {
@@ -151,14 +151,10 @@ type RateLimits {
 }
 
 type RateLimit {
-  counters: RateLimitCounters
-  target_op_id: Number | Null
-  used_ops: Boolean[]
-}
-
-type RateLimitCounters {
   last_reset_time: Number | Null
   last_op_count: Number
+  target_op_id: Number | Null
+  used_ops: Boolean[]
 }
 
 path /v3/shared-tables/{channel_id}/limits is RateLimits {
