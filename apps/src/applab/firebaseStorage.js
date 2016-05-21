@@ -180,16 +180,16 @@ const ROW_COUNT_BUCKETS = 10;
  * Increments each rate limit counter, calling the callback with map from
  * rate limit intervals to the corresponding token to use.
  */
-function getRateLimitTokens(onSuccess, onError) {
-  // TODO(dave): combine the getRateLimitToken() results with Promise.all().
-  getRateLimitToken(15, function (token15) {
-    getRateLimitToken(60, function (token60) {
-      onSuccess({
-        15: token15,
-        60: token60
-      });
-    }, onError);
-  }, onError);
+function getRateLimitTokenMapPromise() {
+  return Promise.all([
+    getRateLimitTokenPromise(15),
+    getRateLimitTokenPromise(60)
+  ]).then(function (results) {
+    return {
+      15: results[0],
+      60: results[1]
+    };
+  });
 }
 
 /**
@@ -201,15 +201,14 @@ function getRateLimitTokens(onSuccess, onError) {
  *     last_op_count is the next valid rate limit token for this client to use.
  * @param {function (string)} onError Callback to call with an error to show to the user.
  */
-function getRateLimitToken(interval, onSuccess, onError) {
+function getRateLimitTokenPromise(interval) {
   // Atomically increment the rate limit counter to obtain a rate limit token.
-  incrementOpCount(interval, onSuccess, function () {
-    // The increment failed because the last_op_count reached its maximum, or because the
-    // last_reset_time wasn't initialized. Try to reset the count.
-    resetRateLimit(interval).then(function () {
+  return incrementOpCountPromise(interval).catch(function (error) {
+    // The increment failed because last_op_count reached its maximum. Try to reset the count.
+    return resetRateLimitPromise(interval).then(function () {
       // The rate limit was reset. Try one more time to increment it.
-      incrementOpCount(interval, onSuccess, function () {
-        throw new Error('Rate limit exceeded immediately after it was reset.');
+      return incrementOpCountPromise(interval).catch(function (error) {
+        throw new Error('Rate limit exceeded immediately after it was reset: ' + error);
       });
     });
   });
@@ -224,7 +223,7 @@ var lastReset = {};
  * @param onSuccess
  * @param onError
  */
-function resetRateLimit(interval) {
+function resetRateLimitPromise(interval) {
   var lastResetTimePromise = getLastResetTimePromise(interval);
   var currentTimePromise = getCurrentTimePromise();
   return Promise.all([lastResetTimePromise, currentTimePromise]).then(function (results) {
@@ -279,16 +278,14 @@ function resetRateLimit(interval) {
  * @param onSuccess
  * @param onAbort
  */
-function incrementOpCount(interval, onSuccess, onAbort) {
+function incrementOpCountPromise(interval) {
   var opCountRef = getDatabase(Applab.channelId).child('limits').child(interval).child('counters').child('last_op_count');
   var increment = incrementOpCountData.bind(this, interval);
-  opCountRef.transaction(increment, function (error, committed, opCountSnapshot) {
-    if (error) {
-      throw new Error('Unexpected error obtaining rate limit token: ' + error);
-    } else if (!committed) {
-      onAbort(opCountSnapshot.val());
+  return opCountRef.transaction(increment).then(function (transactionResult) {
+    if (!transactionResult.committed) {
+      throw new Error('Aborting increment transaction because rate limit is exceeded.');
     } else {
-      onSuccess(opCountSnapshot.val());
+      return transactionResult.snapshot.val();
     }
   });
 }
@@ -320,21 +317,23 @@ function incrementOpCountData(interval, opCountData) {
  *     with the following properties which have been fetched from the server:
  *     rowCounts, tokenMap.
  */
-function getServerData(tableName, onSuccess, onError) {
-  getRateLimitTokens(function (tokenMap) {
-    var tableRef = getTable(Applab.channelId, tableName);
-    tableRef.child('row_count').once('value', function (rowCountsSnapshot) {
-      onSuccess({
-        rowCounts: rowCountsSnapshot.val(),
-        tokenMap: tokenMap
-      });
-    });
-  }, onError);
+function getServerDataPromise(tableName) {
+  var tokenMapPromise = getRateLimitTokenMapPromise();
+  var tableRef = getTable(Applab.channelId, tableName);
+  var rowCountsPromise = tableRef.child('row_count').once('value').then(function (snapshot) {
+    return snapshot.val();
+  });
+  return Promise.all([tokenMapPromise, rowCountsPromise]).then(function (results) {
+    return {
+      tokenMap: results[0],
+      rowCounts: results[1]
+    };
+  });
  }
 
 function getCurrentTimePromise() {
   var serverTimeRef = getDatabase(Applab.channelId).child('server_time').child(firebaseUserId);
-  serverTimeRef.set(Firebase.ServerValue.TIMESTAMP).then(function () {
+  return serverTimeRef.set(Firebase.ServerValue.TIMESTAMP).then(function () {
     serverTimeRef.onDisconnect().remove();
     return serverTimeRef.once('value').then(function (currentTimeSnapshot) {
       return currentTimeSnapshot.val();
@@ -373,7 +372,7 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
   getCounter(idCounter, function (counter) {
     record.id = counter;
 
-    getServerData(tableName, function (serverData) {
+    getServerDataPromise(tableName).then(function (serverData) {
       var channelData = {};
       channelData['tables/' + tableName + '/' + counter] = JSON.stringify(record);
       channelData['tables/' + tableName + '/target_record_id'] = String(counter);
@@ -473,7 +472,7 @@ FirebaseStorage.readRecords = function (tableName, searchParams, onSuccess, onEr
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError) {
-  getServerData(tableName, function (serverData) {
+  getServerDataPromise(tableName).then(function (serverData) {
     var channelData = {};
     channelData['tables/' + tableName + '/' + record.id] = JSON.stringify(record);
     channelData['tables/' + tableName + '/target_record_id'] = String(record.id);
@@ -503,7 +502,7 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError) {
-  getServerData(tableName, function (serverData) {
+  getServerDataPromise(tableName).then(function (serverData) {
     var channelData = {};
     channelData['tables/' + tableName + '/' + record.id] = null;
     channelData['tables/' + tableName + '/target_record_id'] = String(record.id);
