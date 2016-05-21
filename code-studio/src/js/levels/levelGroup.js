@@ -12,6 +12,15 @@ window.initLevelGroup = function (
   level,
   lastAttempt) {
 
+  // The external web page might tell us to save our progress and then navigate
+  // to a new URL when that's done.  This is done when the level dots are
+  // pressed.
+  window.saveProgressAndNavigate = function (url) {
+    saveAnswers(function () {
+      window.location.href = url;
+    });
+  };
+
   // Whenever an embedded level notifies us that the user has made a change,
   // check for any changes in the response set, and if so, attempt to save
   // these answers.  Saving is throttled to not occur more than once every 20
@@ -22,10 +31,8 @@ window.initLevelGroup = function (
 
   window.getResult = getResult;
 
-  // Temporarily reduce throttling to 2 seconds for small audience, until we
-  // implement saving on changing via dots at top of page.
   var throttledSaveAnswers =
-    window.dashboard.utils.throttle(saveAnswers, 2 * 1000, {'leading': true, 'trailing': true});
+    window.dashboard.utils.throttle(saveAnswers, 20 * 1000, {'leading': true, 'trailing': true});
 
   var lastResponse = window.getResult().response;
 
