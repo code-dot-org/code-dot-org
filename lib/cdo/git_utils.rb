@@ -53,11 +53,11 @@ module GitUtils
   def self.branch_to_base(branch_name)
     case branch_name
       when 'staging'
-        'test'
+        'origin/test'
       when 'test'
-        'production'
+        'origin/production'
       else # levelbuilder, feature branches, etc.
-        'staging'
+        'origin/staging'
     end
   end
 end
