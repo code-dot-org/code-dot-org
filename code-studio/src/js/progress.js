@@ -168,19 +168,25 @@ progress.renderCourseProgress = function (scriptData) {
   var mountPoint = document.createElement('div');
 
   let store = createStore((state = [], action) => {
-    if (action.type === 'INIT') {
-      return Object.assign({}, {
-        stages: action.stages,
-        display: action.display
-      });
+    if (action.type === 'MERGE_PROGRESS') {
+      return {
+        display: state.display,
+        stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
+          let best = clientState.mergeActivityResult(level.best_result, action.progress[level.id]);
+          let status = progress.activityCssClass(best);
+          return Object.assign({}, level, {best_result: best, status: status});
+        })}))
+      };
     }
     return state;
+  }, {
+    display: teacherCourse ? 'list' : 'dots',
+    stages: scriptData.stages
   });
 
   store.dispatch({
-    type: 'INIT',
-    stages: scriptData.stages,
-    display: teacherCourse ? 'list' : 'dots'
+    type: 'MERGE_PROGRESS',
+    progress: clientState.allLevelsProgress()[scriptData.name] || {}
   });
 
   store.dispatch({type: 'TEST'});
@@ -192,5 +198,5 @@ progress.renderCourseProgress = function (scriptData) {
     </Provider>,
     mountPoint
   );
-  progress.populateProgress(scriptData.name);
+  //progress.populateProgress(scriptData.name);
 };
