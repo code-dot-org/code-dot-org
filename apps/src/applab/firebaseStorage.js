@@ -234,7 +234,7 @@ function resetRateLimitPromise(interval) {
     if (currentTimeMs < nextResetTimeMs) {
       // It is too soon to reset this rate limit.
       var timeRemaining = Math.ceil((nextResetTimeMs - currentTimeMs) / 1000);
-      throw new Error('rate limit exceeded. please wait ' + timeRemaining + ' seconds before retrying.');
+      return Promise.reject('rate limit exceeded. please wait ' + timeRemaining + ' seconds before retrying.');
     }
 
     if (lastResetTimeMs === lastReset.time) {
@@ -257,7 +257,7 @@ function resetRateLimitPromise(interval) {
       return limitRef.once('value').then(function (limitSnapshot) {
         var newResetTimeMs = limitSnapshot.child('last_reset_time').val() || 0;
         if (newResetTimeMs <= lastResetTimeMs) {
-          throw new Error('Failed to reset rate limit.  ' + error);
+          return Promise.reject('Failed to reset rate limit.  ' + error);
         } else {
           // Our reset request failed, but the timestamp was updated, so we assume
           // that another client's reset attempt succeeded.
@@ -278,7 +278,7 @@ function incrementOpCountPromise(interval) {
   var increment = incrementOpCountData.bind(this, interval);
   return opCountRef.transaction(increment).then(function (transactionResult) {
     if (!transactionResult.committed) {
-      throw new Error('Aborting increment transaction because rate limit is exceeded.');
+      return Promise.reject('Aborting increment transaction because rate limit is exceeded.');
     } else {
       return transactionResult.snapshot.val();
     }
