@@ -142,7 +142,8 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
       status: status,
       kind: level.kind,
       url: href,
-      id: level.id
+      id: level.id,
+      saveFirst: !!puzzlePage
     };
   });
 

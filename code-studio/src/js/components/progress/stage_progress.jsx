@@ -2,6 +2,7 @@
 
 import {STAGE_PROGRESS_TYPE} from './types';
 
+
 /**
  * Stage progress component used in level header and course overview.
  */
@@ -10,6 +11,12 @@ var StageProgress = React.createClass({
     levels: STAGE_PROGRESS_TYPE,
     currentLevelIndex: React.PropTypes.number,
     largeDots: React.PropTypes.bool
+  },
+
+  dotClicked(url) {
+    if (window.saveProgressAndNavigate) {
+      window.saveProgressAndNavigate(url);
+    }
   },
 
   render() {
@@ -37,17 +44,32 @@ var StageProgress = React.createClass({
         }
       }
 
-      return ([
-        <div className={outerClass}>
-          <a
-            href={level.url}
-            className={innerClass + ' level-' + level.id}
-            style={dotStyle}>
-            {level.title}
-          </a>
-        </div>,
-        ' '
-      ]);
+      if (level.saveFirst) {
+        dotStyle.cursor = 'pointer';
+        return ([
+          <div className={outerClass}>
+            <span
+              onClick={()=>{this.dotClicked(level.url);}}
+              className={innerClass + ' level-' + level.id}
+              style={dotStyle}>
+                {level.title}
+            </span>
+          </div>,
+          ' '
+        ]);
+      } else {
+        return ([
+          <div className={outerClass}>
+            <a
+              href={level.url}
+              className={innerClass + ' level-' + level.id}
+              style={dotStyle}>
+                {level.title}
+            </a>
+          </div>,
+          ' '
+        ]);
+      }
     });
 
     return (
