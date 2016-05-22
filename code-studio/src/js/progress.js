@@ -20,6 +20,9 @@ progress.activityCssClass = function (result) {
   if (!result) {
     return 'not_tried';
   }
+  if (result === 1000) {
+    return 'submitted';
+  }
   if (result >= 30) {
     return 'perfect';
   }
@@ -202,7 +205,9 @@ progress.renderCourseProgress = function (scriptData) {
     if (data.levels) {
       store.dispatch({
         type: 'MERGE_PROGRESS',
-        progress: _.mapValues(data.levels, level => level.result)
+        progress: _.mapValues(data.levels, level => {
+          return level.submitted ? 1000 : level.result;
+        })
       });
     }
   });
