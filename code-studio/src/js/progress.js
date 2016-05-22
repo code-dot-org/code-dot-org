@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { combineReducers } from 'redux';
 import { render } from 'react-dom';
+import _ from 'lodash';
 import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress';
 import CourseProgress from './components/progress/course_progress';
@@ -189,7 +190,22 @@ progress.renderCourseProgress = function (scriptData) {
     progress: clientState.allLevelsProgress()[scriptData.name] || {}
   });
 
-  store.dispatch({type: 'TEST'});
+  $.ajax('/api/user_progress/' + scriptData.name).done(function (data) {
+    data = data || {};
+
+    // Show lesson plan links if teacher
+    if (data.isTeacher) {
+      $('.stage-lesson-plan-link').show();
+    }
+
+    // Merge progress from server (loaded via AJAX)
+    if (data.levels) {
+      store.dispatch({
+        type: 'MERGE_PROGRESS',
+        progress: _.mapValues(data.levels, level => level.result)
+      });
+    }
+  });
 
   $('.user-stats-block').prepend(mountPoint);
   render(
