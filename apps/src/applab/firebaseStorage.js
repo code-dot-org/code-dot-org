@@ -33,18 +33,18 @@ function getDatabase(channelId) {
     }
     databaseCache[channelId] = db;
   }
-  console.log(db);
+  //console.log(db);
   return db;
 }
 
 function getKeyValues(channelId) {
   var kv = getDatabase(channelId).child('keys');
-  console.log(kv);
+  //console.log(kv);
   return kv;
 }
 
 function getTable(channelId, tableName) {
-  return getDatabase(channelId).child('tables').child(tableName);
+  return getDatabase(channelId).child('data').child('tables').child(tableName);
 }
 
 /**
@@ -176,6 +176,18 @@ var RATE_LIMIT_INTERVALS = Object.keys(RATE_LIMITS).sort(function (a, b) {
 
 const ROW_COUNT_BUCKETS = 10;
 
+const TOKEN_BATCH_SIZE = 10;
+
+var rateLimitTokenMap = {
+  15: [],
+  60: []
+};
+
+var tokenFetchPromiseMap = {
+  15: null,
+  60: null
+};
+
 /**
  * Increments each rate limit counter, calling the callback with map from
  * rate limit intervals to the corresponding token to use.
@@ -194,24 +206,52 @@ function getRateLimitTokenMapPromise() {
 
 /**
  *
- * @param {number} currentTimeMs
  * @param {number} interval
- * @param {function (Object)} onSuccess Callback to call on success with an object
- *     containing the new counter data including last_reset_time and last_op_count.
- *     last_op_count is the next valid rate limit token for this client to use.
- * @param {function (string)} onError Callback to call with an error to show to the user.
  */
 function getRateLimitTokenPromise(interval) {
-  // Atomically increment the rate limit counter to obtain a rate limit token.
-  return incrementOpCountPromise(interval).catch(function (error) {
-    // The increment failed because last_op_count reached its maximum. Try to reset the count.
-    return resetRateLimitPromise(interval).then(function () {
-      // The rate limit was reset. Try one more time to increment it.
-      return incrementOpCountPromise(interval).catch(function (error) {
-        throw new Error('Rate limit exceeded immediately after it was reset: ' + error);
-      });
-    });
+  var tokens = rateLimitTokenMap[interval];
+  if (tokens.length > 0) {
+    return tokens.shift();
+  }
+  return getTokenFetchPromise(interval).then(function () {
+    if (tokens.length > 0) {
+      return tokens.shift();
+    } else {
+      // More than TOKEN_BATCH_SIZE requests were waiting for the token fetch
+      // to complete, so there weren't enough tokens to go around.
+      throw new Error('No tokens available after interval ' + interval + ' token fetch.');
+    }
   });
+}
+
+/**
+ *
+ * @param interval
+ * @returns {*}
+ */
+function getTokenFetchPromise(interval) {
+  if (!tokenFetchPromiseMap[interval]) {
+    // Atomically increment the rate limit counter to obtain a rate limit token.
+    tokenFetchPromiseMap[interval] = incrementOpCountPromise(interval).catch(function (error) {
+      // The increment failed because last_op_count reached its maximum. Try to reset the count.
+      return resetRateLimitPromise(interval).then(function () {
+        // The rate limit was reset. Try one more time to increment it.
+        return incrementOpCountPromise(interval).catch(function (error) {
+          throw new Error('Rate limit exceeded immediately after it was reset: ' + error);
+        });
+      });
+    }).then(function (newOpCount) {
+      tokenFetchPromiseMap[interval] = null;
+      for (var i = Number(newOpCount) - TOKEN_BATCH_SIZE + 1; i <= newOpCount; i++) {
+        rateLimitTokenMap[interval].push(i);
+      }
+    }, function (error) {
+      // The rate limit was exceeded and the reset failed. Do not reuse this promise.
+      tokenFetchPromiseMap[interval] = null;
+      return Promise.reject(error);
+    });
+  }
+  return tokenFetchPromiseMap[interval];
 }
 
 var lastReset = {};
@@ -244,16 +284,18 @@ function resetRateLimitPromise(interval) {
     }
 
     // Enough time has passed for this rate limit to be reset.
-    var limitRef = getDatabase(Applab.channelId).child('limits').child(interval);
-    // 'set' will remove other children of limitRef including target_op_id and used_ops.
+    var channelRef = getDatabase(Applab.channelId);
     var limitData = {
       last_reset_time: Firebase.ServerValue.TIMESTAMP,
       last_op_count: 0
     };
-
+    var channelData = {};
+    channelData['limits/' + interval] = limitData;
+    channelData['data/limits/' +  interval + '/used_ops'] = null;
     lastReset.time = lastResetTimeMs;
-    lastReset.promise = limitRef.set(limitData).catch(function (error) {
+    lastReset.promise = channelRef.update(channelData).catch(function (error) {
       // Our reset request failed. Check to see if another client's reset attempt succeeded.
+      var limitRef = channelRef.child('limits').child(interval);
       return limitRef.once('value').then(function (limitSnapshot) {
         var newResetTimeMs = limitSnapshot.child('last_reset_time').val() || 0;
         if (newResetTimeMs <= lastResetTimeMs) {
@@ -278,7 +320,7 @@ function incrementOpCountPromise(interval) {
   var increment = incrementOpCountData.bind(this, interval);
   return opCountRef.transaction(increment).then(function (transactionResult) {
     if (!transactionResult.committed) {
-      return Promise.reject('Aborting increment transaction because rate limit is exceeded.');
+      return Promise.reject('aborting increment transaction, max op count reached.');
     } else {
       return transactionResult.snapshot.val();
     }
@@ -295,10 +337,9 @@ function incrementOpCountPromise(interval) {
 function incrementOpCountData(interval, opCountData) {
   opCountData = opCountData || 0;
   if (opCountData < RATE_LIMITS[interval]) {
-    // Increment this rate limit.
-    return opCountData + 1;
+    return opCountData + TOKEN_BATCH_SIZE;
   } else {
-    // The rate limit cannot be incremented. Abort the transaction.
+    // The op count cannot be incremented. Abort the transaction.
     return;
   }
 }
@@ -340,11 +381,11 @@ function getLastResetTimePromise(interval) {
 }
 
 
-function updateRowCount(recordId, rowCounts, channelData, tableName, delta) {
+function updateRowCount(recordId, rowCounts, channelDataData, tableName, delta) {
   var rowCountIndex = recordId % ROW_COUNT_BUCKETS;
   rowCounts = rowCounts || {};
   var newRowCount = (rowCounts[rowCountIndex] || 0) + delta;
-  channelData['tables/' + tableName + '/row_count/' + rowCountIndex] = newRowCount;
+  channelDataData['tables/' + tableName + '/row_count/' + rowCountIndex] = newRowCount;
 }
 
 /**
@@ -363,14 +404,16 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
     record.id = counter;
 
     getServerDataPromise(tableName).then(function (serverData) {
-      var channelData = {};
-      channelData['tables/' + tableName + '/' + counter] = JSON.stringify(record);
-      channelData['tables/' + tableName + '/target_record_id'] = String(counter);
-      updateRowCount(record.id, serverData.rowCounts, channelData, tableName, 1);
-      addRateLimitTokens(channelData, serverData.tokenMap);
+      var channelDataData = {};
+      channelDataData['tables/' + tableName + '/' + counter] = JSON.stringify(record);
+      channelDataData['tables/' + tableName + '/target_record_id'] = String(counter);
+      updateRowCount(record.id, serverData.rowCounts, channelDataData, tableName, 1);
+      addRateLimitTokens(channelDataData, serverData.tokenMap);
+      console.log('FirebaseStorage.createRecord channelDataData:');
+      console.log(channelDataData);
 
-      var channelRef = getDatabase(Applab.channelId);
-      channelRef.update(channelData, function (error) {
+      var channelDataRef = getDatabase(Applab.channelId).child('data');
+      channelDataRef.update(channelDataData, function (error) {
         if (!error) {
           onSuccess(record);
         } else {
@@ -384,14 +427,14 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
 /**
  * Populate the rate limit metadata in channelData needed to make the
  * request succeed, using the rate limit info in limitsData.
- * @param channelData
- * @param limitsData
+ * @param channelDataData
+ * @param tokenMap
  */
-function addRateLimitTokens(channelData, tokenMap) {
+function addRateLimitTokens(channelDataData, tokenMap) {
   RATE_LIMIT_INTERVALS.forEach(function (interval) {
     var token = tokenMap[interval];
-    channelData['limits/' + interval + '/used_ops/' + token] = true;
-    channelData['limits/' + interval + '/target_op_id'] = token;
+    channelDataData['limits/' + interval + '/used_ops/' + token] = true;
+    channelDataData['limits/' + interval + '/target_op_id'] = token;
   });
 }
 

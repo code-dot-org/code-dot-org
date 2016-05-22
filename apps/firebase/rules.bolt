@@ -36,63 +36,59 @@ prevTargetRecord(table) { prior(table)[table.target_record_id] }
 
 // rate limit helpers
 
-getRateLimit(channel, interval) { channel.limits[interval + ''] }
+getRateLimitCounter(channel, interval) { channel.limits[interval + ''] }
+getRateLimitData(channel, interval) { channel.data.limits[interval + ''] }
 
-isValidInit(limit) {
-  prior(limit.last_reset_time) == null &&
-  limit.last_reset_time == now &&
-  limit.last_op_count == 1 &&
-  limit.used_ops == null
+isValidIncrement(limitCounter, maxCount) {
+  isUnchanged(limitCounter.last_reset_time) &&
+  isIncreased(limitCounter.last_op_count) &&
+  limitCounter.last_op_count <= maxCount 
 }
 
-isValidIncrement(limit, maxCount) {
-  isUnchanged(limit.last_reset_time) &&
-  isUnchanged(limit.target_op_id) &&
-  isNotRemoved(limit.used_ops) &&
-  isIncreased(limit.last_op_count) &&
-  limit.last_op_count <= maxCount 
-}
-
-isValidReset(limit, maxTime) {
-  limit.used_ops == null &&
-  limit.last_reset_time == now && 
-  isIncreasedBy(limit.last_reset_time, maxTime) &&
-  limit.last_op_count == 0
+isValidReset(channel, interval) {
+  channel.data.limits[interval + ''].used_ops == null &&
+  channel.limits[interval + ''].last_reset_time == now && 
+  isIncreasedBy(channel.limits[interval + ''].last_reset_time, interval * 1000) &&
+  channel.limits[interval + ''].last_op_count == 0
 }
 
 // The NEW version of the NEW target op.
-nextTargetOp(limit) {
-  limit.used_ops[limit.target_op_id + '']
+nextTargetOp(limitData) {
+  limitData.used_ops[limitData.target_op_id + '']
 }
 
 // The OLD version of the NEW target op.
-prevTargetOp(limit) { 
-  prior(limit).used_ops[limit.target_op_id + '']
+prevTargetOp(limitData) { 
+  prior(limitData).used_ops[limitData.target_op_id + '']
 }
 
-isValidUsedOp(limit) {
-  isUnchanged(limit.last_op_count) &&
-  isUnchanged(limit.last_reset_time) &&
-  targetOpUsed(limit) &&
-  limit.target_op_id <= limit.last_op_count
+isValidUsedOp(channel, interval) {
+  isUnchanged(channel.limits[interval + ''].last_op_count) &&
+  isUnchanged(channel.limits[interval + ''].last_reset_time) &&
+  targetOpUsed(channel.data.limits[interval + '']) &&
+  channel.data.limits[interval + ''].target_op_id <= channel.limits[interval + ''].last_op_count
 }
 
-isValidRateLimit(limit, maxTime, maxCount) {
-  isValidInit(limit) ||
-  isValidIncrement(limit, maxCount) || 
-  isValidReset(limit, maxTime) ||
-  isValidUsedOp(limit)
+isValidRateLimitData(channel, interval) {
+  isValidReset(channel, interval) ||
+  isValidUsedOp(channel, interval)
 }
 
-targetOpUsed(limit) {
-  prevTargetOp(limit) == null && nextTargetOp(limit) == true
+isValidRateLimitCounter(channel, interval, maxCount) {
+  isValidIncrement(channel.limits[interval + ''], maxCount) || 
+  isValidReset(channel, interval)
+}
+
+targetOpUsed(limitData) {
+  limitData.target_op_id != null &&
+  prevTargetOp(limitData) == null && nextTargetOp(limitData) == true
 }
 
 // Minimal check to ensure the client wrote to each rate limit,
 // which will trigger the more thorough validation checks there.
 allRateLimitsUpdated(channel) {
-  targetOpUsed(getRateLimit(channel, 15)) &&
-  targetOpUsed(getRateLimit(channel, 60))
+  targetOpUsed(getRateLimitData(channel, 15)) &&
+  targetOpUsed(getRateLimitData(channel, 60))
 }
 
 //
@@ -116,11 +112,11 @@ path /v3/shared-tables/{channel_id}/counters/{table_name} is Number {
   validate() { this > valueOr(prior(this), 0) }
 }
 
-path /v3/shared-tables/{channel_id}/tables/{table_name}/target_record_id is String {
+path /v3/shared-tables/{channel_id}/data/tables/{table_name}/target_record_id is String {
   write() { isLoggedIn() && this != null }
 }
 
-path /v3/shared-tables/{channel_id}/tables/{table_name}/row_count {
+path /v3/shared-tables/{channel_id}/data/tables/{table_name}/row_count {
   write() { isLoggedIn() && this != null }
   validate() { 
     // require that target record is modified appropriately when row count is modified
@@ -128,13 +124,13 @@ path /v3/shared-tables/{channel_id}/tables/{table_name}/row_count {
   }
 }
 
-path /v3/shared-tables/{channel_id}/tables/{table_name}/row_count/{bucket} is Number {
+path /v3/shared-tables/{channel_id}/data/tables/{table_name}/row_count/{bucket} is Number {
   //write() { isLoggedIn() && this != null }
 }
 
 // the key $record_id is the id of the record. Its value is the json-encoded
 // value of the record.
-path /v3/shared-tables/{channel_id}/tables/{table_name}/{record_id} is String {
+path /v3/shared-tables/{channel_id}/data/tables/{table_name}/{record_id} is String {
   write() {
     // Specify these rules in write(), because validate() is skipped when data is null
     // (e.g. records are removed).
@@ -143,33 +139,63 @@ path /v3/shared-tables/{channel_id}/tables/{table_name}/{record_id} is String {
   }
 }
 
-// rate limits
+// table data
 
-type RateLimits {
-  '15': RateLimit | Null
-  '60': RateLimit | Null
+path /v3/shared-tables/{channel_id}/data {
+  write() { isLoggedIn() }
 }
 
-type RateLimit {
+// rate limit counters
+
+type RateLimitCounters {
+  '15': RateLimitCounter | Null
+  '60': RateLimitCounter | Null
+}
+
+type RateLimitCounter {
   last_reset_time: Number | Null
   last_op_count: Number
-  target_op_id: Number | Null
-  used_ops: Boolean[]
 }
 
-path /v3/shared-tables/{channel_id}/limits is RateLimits {
+path /v3/shared-tables/{channel_id}/limits is RateLimitCounters {
   write() { isLoggedIn() && this != null }
 }
 
 path /v3/shared-tables/{channel_id}/limits/15 {
   validate() {
-    isValidRateLimit(this, 15000, 30)
+    isValidRateLimitCounter(this.parent().parent(), 15, 30)
   }
 }
 
 path /v3/shared-tables/{channel_id}/limits/60 {
   validate() {
-    isValidRateLimit(this, 60000, 60)
+    isValidRateLimitCounter(this.parent().parent(), 60, 60)
+  }
+}
+
+// rate limit data
+
+type RateLimitDatas {
+  '15': RateLimitData | Null
+  '60': RateLimitData | Null
+}
+
+type RateLimitData {
+  target_op_id: Number | Null
+  used_ops: Boolean[]
+}
+
+path /v3/shared-tables/{channel_id}/data/limits is RateLimitDatas;
+
+path /v3/shared-tables/{channel_id}/data/limits/15 {
+  validate() {
+    isValidRateLimitData(this.parent().parent().parent(), 15)
+  }
+}
+
+path /v3/shared-tables/{channel_id}/data/limits/60 {
+  validate() {
+    isValidRateLimitData(this.parent().parent().parent(), 60)
   }
 }
 
