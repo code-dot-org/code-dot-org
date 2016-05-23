@@ -2726,6 +2726,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
     pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
+    shortInstructions: level.instructions,
     instructionsMarkdown: level.markdownInstructions,
     instructionsInTopPane: config.showInstructionsInTopPane,
     puzzleNumber: level.puzzle_number,

@@ -83,6 +83,11 @@ var TopInstructions = React.createClass({
     return $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) + 2 * VERTICAL_PADDING;
   },
 
+  getCollapsedHeight() {
+    return 42 + 2 * 5 + 2 * VERTICAL_PADDING;
+    // return 72; // button (42) + 2 * marginTop on button (5) + 2 * padding
+  },
+
   /**
    * Given a prospective delta, determines how much we can actually change the
    * height (accounting for min/max) and changes height by that much.
@@ -120,10 +125,11 @@ var TopInstructions = React.createClass({
     if (!this.props.markdown) {
       return <div/>;
     }
-    var id = this.props.id;
+    const id = this.props.id;
+    const resizerHeight = (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
-    var mainStyle = [styles.main, {
-      height: this.props.height - RESIZER_HEIGHT
+    const mainStyle = [styles.main, {
+      height: this.props.height - resizerHeight
     }, this.props.isEmbedView && styles.embedView];
 
     return (
@@ -134,15 +140,22 @@ var TopInstructions = React.createClass({
                 style={styles.collapserButton}
                 collapsed={this.props.collapsed}
                 onClick={this.props.toggleInstructionsCollapsed}/>
-              <span style={[this.props.collapsed && commonStyles.hidden]}>
-              <Instructions
-                  ref="instructions"
-                  renderedMarkdown={processMarkdown(this.props.markdown)}
-                  inTopPane
-              />
-            </span>
+              {!this.props.collapsed &&
+                <Instructions
+                    ref="instructions"
+                    renderedMarkdown={processMarkdown(this.props.markdown)}
+                    inTopPane
+                />
+              }
+              {this.props.collapsed &&
+                <Instructions
+                    ref="instructions"
+                    renderedMarkdown={processMarkdown(this.props.shortInstructions)}
+                    inTopPane
+                />
+              }
           </div>
-          {!this.props.isEmbedView && <HeightResizer
+          {!this.props.collapsed && !this.props.isEmbedView && <HeightResizer
             position={this.props.height}
             onResize={this.onHeightResize}/>
           }
@@ -159,6 +172,7 @@ module.exports = connect(function propsFromStore(state) {
     maxHeight: state.instructions.maxHeight,
     markdown: state.pageConstants.instructionsMarkdown,
     collapsed: state.instructions.collapsed,
+    shortInstructions: state.pageConstants.shortInstructions
   };
 }, function propsFromDispatch(dispatch) {
   return {

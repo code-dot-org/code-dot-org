@@ -3,9 +3,17 @@
 import TopInstructionsCSF from './TopInstructionsCSF';
 import TopInstructionsCSP from './TopInstructionsCSP';
 
+/**
+ * Simple class allowing us to have differences between CSF and CSP top
+ * instructions. Ultimately those might be combined back into one.
+ */
 const TopInstructions = React.createClass({
   getRenderedHeight() {
     return this.refs.topInstructions.getWrappedInstance().getRenderedHeight();
+  },
+
+  getCollapsedHeight() {
+    return this.refs.topInstructions.getWrappedInstance().getCollapsedHeight();
   },
 
   render() {

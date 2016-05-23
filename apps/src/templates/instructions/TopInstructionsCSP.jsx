@@ -78,6 +78,10 @@ var TopInstructions = React.createClass({
     return $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) + HEADER_HEIGHT;
   },
 
+  getCollapsedHeight() {
+    return HEADER_HEIGHT;
+  },
+
   /**
    * Given a prospective delta, determines how much we can actually change the
    * height (accounting for min/max) and changes height by that much.
