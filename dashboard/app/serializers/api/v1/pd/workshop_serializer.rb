@@ -39,12 +39,12 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
   end
 
   def organizer
-    {name: object.organizer.name, email: object.organizer.email}
+    {id: object.organizer.id, name: object.organizer.name, email: object.organizer.email}
   end
 
   def facilitators
     object.facilitators.map do |facilitator|
-      {name: facilitator.name, email: facilitator.email}
+      {id: facilitator.id, name: facilitator.name, email: facilitator.email}
     end
   end
 

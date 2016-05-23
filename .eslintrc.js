@@ -49,6 +49,7 @@ module.exports = {
       "anonymous": "always",
       "named": "never"
     }],
-    "eqeqeq": "error"
+    // TODO (brent) - turn this back on
+    // "eqeqeq": "error"
   }
 };

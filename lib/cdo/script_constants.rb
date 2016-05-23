@@ -44,10 +44,9 @@ module ScriptConstants
   MINECRAFT_TEACHER_DASHBOARD_NAME = 'minecraft'
   HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'
 
-  # Note that calls to ScriptConstants.categories() will return categories in
-  # the same order specified here (for scripts that appear in multiple places).
-  # Changing the order here can change which category a script appears under
-  # on the teacher dashboard.
+  # The order here matters. The first category a script appears under will be
+  # the category it belongs to in course dropdowns. The order of scripts within
+  # a category will be the order in which they appear in the dropdown.
   CATEGORIES = {
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
@@ -109,6 +108,10 @@ module ScriptConstants
   def self.categories(script)
     CATEGORIES.select {|_, scripts| scripts.include? script}.
         map {|category, _| category.to_s}
+  end
+
+  def self.position_in_category(script, category)
+    CATEGORIES[category.to_sym] ? CATEGORIES[category.to_sym].find_index(script) : nil
   end
 
   def self.teacher_dashboard_name(script)

@@ -162,6 +162,12 @@ FactoryGirl.define do
     properties{{question: 'question text', answers: [{text: 'text1', correct: true}], questions: [{text: 'text2'}], options: {hide_submit: false}}}
   end
 
+  factory :external_link, parent: Level, class: ExternalLink do
+    game {Game.external_link}
+    url nil
+    link_title 'title'
+  end
+
   factory :level_source do
     level
     data '<xml/>'
@@ -462,11 +468,12 @@ FactoryGirl.define do
     workshop_type Pd::Workshop::TYPES.first
     course Pd::Workshop::COURSES.first
     capacity 10
+
   end
 
   factory :pd_session, class: 'Pd::Session' do
     association :workshop, factory: :pd_workshop
-    start {DateTime.now.utc}
+    start {Date.today + 9.hours}
     self.end {start + 6.hours}
   end
 
@@ -475,6 +482,9 @@ FactoryGirl.define do
     sequence(:name) { |n| "Workshop Participant #{n} " }
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
     school {'Example School'}
+    school_type {'public'}
+    school_state {'WA'}
+    school_district_id {create(:school_district).id}
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
@@ -498,4 +508,12 @@ FactoryGirl.define do
     sequence(:name) { |n| "PLP #{n}" }
     contact {create :teacher}
   end
+
+  factory :school_district do
+    name "A school district"
+    city "Seattle"
+    state "WA"
+    zip "98101"
+  end
+
 end
