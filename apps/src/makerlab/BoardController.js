@@ -3,9 +3,13 @@
  */
 /* global Promise */
 
-var five = require('johnny-five');
-var ChromeSerialPort = require('chrome-serialport');
-var PlaygroundIO = require('playground-io');
+try {
+  var five = require('johnny-five');
+  var ChromeSerialPort = require('chrome-serialport');
+  var PlaygroundIO = require('playground-io');
+} catch (e) {
+  console.info("Failed to load makerlab modules. I hope you don't need them!", e);
+}
 
 /** @const {string} */
 var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
