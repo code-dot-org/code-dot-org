@@ -72,6 +72,7 @@ var ApplabVisualizationColumn = React.createClass({
     isShareView: React.PropTypes.bool.isRequired,
     isResponsive: React.PropTypes.bool.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
+    hideSource: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes.string.isRequired,
     playspacePhoneFrame: React.PropTypes.bool,
     isIframeEmbed: React.PropTypes.bool.isRequired,
@@ -104,11 +105,10 @@ var ApplabVisualizationColumn = React.createClass({
         </PhoneFrame>
       );
     }
-
     const visualizationColumnClassNames = classNames({
       with_padding: this.props.visualizationHasPadding,
       responsive: this.props.isResponsive,
-      pin_bottom: this.props.pinWorkspaceToBottom
+      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom
     });
 
     return (
@@ -151,6 +151,7 @@ module.exports = connect(function propsFromStore(state) {
     isShareView: state.pageConstants.isShareView,
     isResponsive: isResponsiveFromState(state),
     isIframeEmbed: state.pageConstants.isIframeEmbed,
+    hideSource: state.pageConstants.hideSource,
     isRunning: state.runState.isRunning,
     isPaused: state.runState.isDebuggerPaused,
     interfaceMode: state.interfaceMode,
