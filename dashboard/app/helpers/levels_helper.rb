@@ -528,11 +528,11 @@ module LevelsHelper
       :uid => user_id,
       :is_dashboard_user => !!current_user
     }
-    options = {
-      # Provides additional debugging information to the browser when
-      # security rules are evaluated.
-      :debug => CDO.firebase_debug && CDO.rack_env?(:development)
-    }
+    options = {}
+    # Provides additional debugging information to the browser when
+    # security rules are evaluated.
+    options[:debug] = true if (CDO.firebase_debug && CDO.rack_env?(:development))
+
     # TODO(dave): cache token generator across requests
     generator = Firebase::FirebaseTokenGenerator.new(CDO.firebase_secret)
     generator.create_token(payload, options)
