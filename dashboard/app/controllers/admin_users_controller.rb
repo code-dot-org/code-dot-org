@@ -47,12 +47,14 @@ class AdminUsersController < ApplicationController
         user.restore
         user.save!
         flash[:alert] = 'User undeleted!'
+        redirect_to :undelete_user_form_path
       else
         flash[:alert] = 'User was never deleted!'
+        render :undelete_user_form
       end
     else
       flash[:alert] = 'User not found!'
+      render :undelete_user_form
     end
-    render :undelete_user_form
   end
 end
