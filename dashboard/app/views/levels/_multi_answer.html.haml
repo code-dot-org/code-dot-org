@@ -1,11 +1,10 @@
 / Show the correct answer to authorized teachers
 - multi_answer_characters = ("A".."Z").to_a
 - if current_user.try(:authorized_teacher?) && !@script.try(:pd?)
-  - correct_answers = []
-  - if data['answers']
-    - data['answers'].each_with_index do |answer, index|
-      - if answer['correct']
-        - correct_answers << {text: answer['text'], index: index}
+  - correct_answers = data['answers'].each_with_index.map do |answer, index|
+    - next unless answer['correct']
+    - {text: answer['text'], index: index}
+  - end.compact
   - unless correct_answers.empty?
     #markdown.teacher
       %h3= t('teacher.answer')
