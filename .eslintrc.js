@@ -48,6 +48,8 @@ module.exports = {
     "space-before-function-paren": ["error", {
       "anonymous": "always",
       "named": "never"
-    }]
+    }],
+    // TODO (brent) - turn this back on
+    // "eqeqeq": "error"
   }
 };

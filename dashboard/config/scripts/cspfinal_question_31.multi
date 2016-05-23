@@ -20,4 +20,6 @@ INSERT (data, 2, 1)
 INSERT (data, 3, 1)
 DISPLAY (data)
 </pre>
+
+*(Note: you may use the AP pseudocode quick reference guide to look up the behavior of INSERT)*
 MARKDOWN

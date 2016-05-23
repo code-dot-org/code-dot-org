@@ -49,6 +49,7 @@ var CodeWorkspace = React.createClass({
     readonlyWorkspace: React.PropTypes.bool.isRequired,
     showDebugger: React.PropTypes.bool.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
+    pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired
   },
 
@@ -168,20 +169,24 @@ var CodeWorkspace = React.createClass({
             </PaneSection>
           </div>
         </PaneHeader>
-        {props.editCode && <ProtectedStatefulDiv id="codeTextbox"/>}
+        {props.editCode &&
+          <ProtectedStatefulDiv
+              id="codeTextbox"
+              className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
+          />
+        }
         {props.showDebugger && <JsDebugger/>}
       </span>
     );
   }
 });
 
-module.exports = connect(function propsFromStore(state) {
-  return {
-    editCode: state.pageConstants.isDroplet,
-    localeDirection: state.pageConstants.localeDirection,
-    readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    isRunning: !!state.runState.isRunning,
-    showDebugger: !!(state.pageConstants.showDebugButtons || state.pageConstants.showDebugConsole),
-    isMinecraft: !!state.pageConstants.isMinecraft
-  };
-})(Radium(CodeWorkspace));
+module.exports = connect(state => ({
+  editCode: state.pageConstants.isDroplet,
+  localeDirection: state.pageConstants.localeDirection,
+  readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+  isRunning: !!state.runState.isRunning,
+  showDebugger: !!(state.pageConstants.showDebugButtons || state.pageConstants.showDebugConsole),
+  pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
+  isMinecraft: !!state.pageConstants.isMinecraft
+}))(Radium(CodeWorkspace));
