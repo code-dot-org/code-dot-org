@@ -2,8 +2,6 @@
 
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import { combineReducers } from 'redux';
-import { render } from 'react-dom';
 import _ from 'lodash';
 import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress';
@@ -168,8 +166,39 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
 };
 
 progress.renderCourseProgress = function (scriptData) {
-  var teacherCourse = $('#landingpage').hasClass('teacher-course');
+  var store = loadProgress(scriptData);
   var mountPoint = document.createElement('div');
+
+  $.ajax('/api/user_progress/' + scriptData.name).done(function (data) {
+    data = data || {};
+
+    // Show lesson plan links if teacher
+    if (data.isTeacher) {
+      $('.stage-lesson-plan-link').show();
+    }
+
+    // Merge progress from server (loaded via AJAX)
+    if (data.levels) {
+      store.dispatch({
+        type: 'MERGE_PROGRESS',
+        progress: _.mapValues(data.levels, level => {
+          return level.submitted ? 1000 : level.result;
+        })
+      });
+    }
+  });
+
+  $('.user-stats-block').prepend(mountPoint);
+  ReactDOM.render(
+    <Provider store={store}>
+      <CourseProgress/>
+    </Provider>,
+    mountPoint
+  );
+};
+
+function loadProgress(scriptData) {
+  var teacherCourse = $('#landingpage').hasClass('teacher-course');
 
   let store = createStore((state = [], action) => {
     if (action.type === 'MERGE_PROGRESS') {
@@ -193,31 +222,5 @@ progress.renderCourseProgress = function (scriptData) {
     progress: clientState.allLevelsProgress()[scriptData.name] || {}
   });
 
-  $.ajax('/api/user_progress/' + scriptData.name).done(function (data) {
-    data = data || {};
-
-    // Show lesson plan links if teacher
-    if (data.isTeacher) {
-      $('.stage-lesson-plan-link').show();
-    }
-
-    // Merge progress from server (loaded via AJAX)
-    if (data.levels) {
-      store.dispatch({
-        type: 'MERGE_PROGRESS',
-        progress: _.mapValues(data.levels, level => {
-          return level.submitted ? 1000 : level.result;
-        })
-      });
-    }
-  });
-
-  $('.user-stats-block').prepend(mountPoint);
-  render(
-    <Provider store={store}>
-      <CourseProgress/>
-    </Provider>,
-    mountPoint
-  );
-  //progress.populateProgress(scriptData.name);
-};
+  return store;
+}
