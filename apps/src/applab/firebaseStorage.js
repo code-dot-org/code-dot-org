@@ -418,8 +418,13 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
   getCounter(idCounter, function (counter) {
     record.id = counter;
 
-    var promise = getCreateRecordPromise(tableName, counter, record);
-    promise.then(function () {
+    getCreateRecordPromise(tableName, counter, record).catch(function (error) {
+      console.log('retrying getCreateRecordPromise once after error: ' + error);
+      return getCreateRecordPromise(tableName, counter, record);
+    }).catch(function (error) {
+      console.log('retrying getCreateRecordPromise twice after error: ' + error);
+      return getCreateRecordPromise(tableName, counter, record);
+    }).then(function () {
       onSuccess(record);
     }, function (error) {
       onError(error);
