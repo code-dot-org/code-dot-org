@@ -3,11 +3,24 @@ layout: none
 theme: none
 content-type: text/ng-template
 ---
+:ruby
+  def can_see_pd_workshop_dashboard?
+    dashboard_user[:admin] ||
+      have_permission?('workshop_organizer') ||
+      have_permission?('facilitator') ||
+      have_permission?('district_contact')
+  end
 
 .teacher-announcements
   = view :teacher_announcements
 
 .ops-workshops
+  -if can_see_pd_workshop_dashboard?
+    %h1
+      New Workshop Dashboard (beta)
+    %a{href:CDO.studio_url('/pd/workshop_dashboard')}
+      %h3
+        Manage PD Workshops
   -if dashboard_user[:admin]
     %h1
       Ops Dashboard

@@ -17,6 +17,11 @@ def us_state_abbr?(abbr, include_dc = false)
   return !get_us_state_from_abbr(abbr, include_dc).nil?
 end
 
+# Returns the entire list of states (including Washington DC)
+def get_all_states_with_dc()
+  return STATE_ABBR_WITH_DC_HASH.sort_by {|_code, name| name}
+end
+
 STATE_ABBR_HASH = {
   AL: 'Alabama',
   AK: 'Alaska',

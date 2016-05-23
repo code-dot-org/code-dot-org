@@ -198,6 +198,11 @@ class DashboardSection
 
     where_clause = Dashboard.admin?(user_id) ? "" : "hidden = 0"
 
+    # Cache the courses names in English for all users. After the
+    # facilitator summit (2016-5-23) we should change the cache to be
+    # per-language.
+    course_locale = 'en-US'
+
     # cache result if we have to actually run the query
     @@course_cache[course_cache_key] =
       Dashboard.db[:scripts].
@@ -207,11 +212,14 @@ class DashboardSection
         map do |course|
           name = ScriptConstants.teacher_dashboard_name(course[:name])
           first_category = ScriptConstants.categories(course[:name])[0] || 'other'
+          position = ScriptConstants.position_in_category(name, first_category)
+          name = I18n.t("#{name}_name", default: name, locale: course_locale)
           name += " *" if course[:hidden]
           {
             id: course[:id],
-            name: I18n.t("#{name}_name", default: name),
-            category: I18n.t("#{first_category}_category_name", default: first_category)
+            name: name,
+            category: I18n.t("#{first_category}_category_name", default: first_category, locale: course_locale),
+            position: position
           }
         end
   end
