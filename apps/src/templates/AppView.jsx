@@ -13,6 +13,7 @@ var CodeWorkspaceContainer = require('./CodeWorkspaceContainer');
  */
 var AppView = React.createClass({
   propTypes: {
+    hideSource: React.PropTypes.bool.isRequired,
     isResponsive: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
 
@@ -28,7 +29,7 @@ var AppView = React.createClass({
   render: function () {
     const visualizationColumnClassNames = classNames({
       responsive: this.props.isResponsive,
-      pin_bottom: this.props.pinWorkspaceToBottom
+      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom
     });
 
     return (
@@ -43,6 +44,7 @@ var AppView = React.createClass({
   }
 });
 module.exports = connect(state => ({
+  hideSource: state.pageConstants.hideSource,
   isResponsive: isResponsiveFromState(state),
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
 }))(AppView);
