@@ -4,6 +4,7 @@ import _ from '../lodash';
 import utils from '../utils';
 import {animations as animationsApi} from '../clientApi';
 import {reportError} from './errorDialogStackModule';
+import {validateAndShapeMetadata} from './animationMetadata';
 
 export const ADD_ANIMATION_AT = 'ADD_ANIMATION_AT';
 const DELETE_ANIMATION = 'DELETE_ANIMATION';
@@ -62,22 +63,21 @@ function animation(state, action) {
  * from the sources API.
  *
  * @param {Object} metadata
- * @returns {{type: ActionType, metadata: Object}}
+ * @returns {{type: ActionType, metadata: AnimationMetadata[]}}
  */
 export function setInitialAnimationMetadata(metadata) {
   return {
     type: SET_INITIAL_ANIMATION_METADATA,
-    metadata: metadata
+    metadata: metadata.map(validateAndShapeMetadata)
   };
 }
 
 export function addAnimation(animationProps) {
-  // TODO: Validate animationProps?
   return function (dispatch, getState) {
     dispatch({
       type: ADD_ANIMATION_AT,
       index: getState().animations.length,
-      animationProps: animationProps
+      animationProps: validateAndShapeMetadata(animationProps)
     });
     // TODO: Save project after adding an animation?
   };
@@ -101,28 +101,41 @@ export function cloneAnimation(animationKey) {
     var sourceAnimation = animations[sourceIndex];
     var newAnimationKey = utils.createUuid();
 
-    animationsApi.ajax(
-        'PUT',
-        newAnimationKey + '.png?src=' + animationKey + '.png',
-        function success(xhr) {
-          try {
-            var response = JSON.parse(xhr.responseText);
-            dispatch({
-              type: ADD_ANIMATION_AT,
-              index: sourceIndex + 1,
-              animationProps: _.assign({}, sourceAnimation, {
-                key: newAnimationKey,
-                name: sourceAnimation.name + '_copy', // TODO: better generated names
-                version: response.versionId
-              })
-            });
-          } catch (e) {
-            onCloneError(e.message);
-          }
-        },
-        function error(xhr) {
-          onCloneError(xhr.status + ' ' + xhr.statusText);
-        });
+    /**
+     * Once the cloned asset is ready, call this to add the appropriate metadata.
+     * @param {string} [versionId]
+     */
+    var addClonedAnimation = function (versionId) {
+      dispatch({
+        type: ADD_ANIMATION_AT,
+        index: sourceIndex + 1,
+        animationProps: _.assign({}, sourceAnimation, {
+          key: newAnimationKey,
+          name: sourceAnimation.name + '_copy', // TODO: better generated names
+          version: versionId
+        })
+      });
+    };
+
+    // If cloning a library animation, no need to perform a copy request
+    if (/^\/blockly\//.test(sourceAnimation.sourceUrl)) {
+      addClonedAnimation();
+    } else {
+      animationsApi.ajax(
+          'PUT',
+          newAnimationKey + '.png?src=' + animationKey + '.png',
+          function success(xhr) {
+            try {
+              var response = JSON.parse(xhr.responseText);
+              addClonedAnimation(response.versionId);
+            } catch (e) {
+              onCloneError(e.message);
+            }
+          },
+          function error(xhr) {
+            onCloneError(xhr.status + ' ' + xhr.statusText);
+          });
+    }
   };
 }
 

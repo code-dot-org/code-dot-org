@@ -94,7 +94,7 @@ module.exports.getResultsFromLog = function (logConditions, executionLog) {
 function matchLogEntry(logEntry, conditionEntry) {
   var logItems = logEntry.split(':');
   if (logItems.length < 2) {
-    return logEntry == conditionEntry;
+    return logEntry === conditionEntry;
   }
   var conditionItems = conditionEntry.split(':');
   var conditionMinArgs = Number(conditionItems[1]);

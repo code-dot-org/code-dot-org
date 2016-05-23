@@ -149,11 +149,11 @@ exports.populateTable = function (headers, data) {
       }
     ],
     cells: function (row, col, prop) {
-      if (col == 3) {
+      if (col === 3) {
         return {renderer: successRateRenderer};
-      } else if (col == 8) {
+      } else if (col === 8) {
         return {renderer: uniqueSuccessRateRenderer};
-      } else if (col == 9) {
+      } else if (col === 9) {
         return {renderer: timeOnSiteRenderer};
       }
       return {};
