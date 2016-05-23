@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
   setup do
-    @user = create :admin
+    @user = create :admin_teacher
     sign_in(@user)
     @plc_course = create :plc_course
     @user_course_enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @plc_course)

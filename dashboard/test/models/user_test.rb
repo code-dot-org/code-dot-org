@@ -355,12 +355,20 @@ class UserTest < ActiveSupport::TestCase
     user = create :user, birthday: Date.new(2010, 10, 4), email: 'will_be_hashed@email.xx'
 
     assert user.age < 13
-    assert !user.email.present?
+    assert user.email.blank?
     assert user.hashed_email.present?
   end
 
-  test 'users over 13 have plaintext email and hashed email' do
-    user = create :user, birthday: Date.new(1990, 10, 4), email: 'will_be_hashed@email.xx'
+  test 'students over 13 have hashed email not plaintext email' do
+    user = create :student, birthday: Date.new(1990, 10, 4), email: 'will_be_hashed@email.xx'
+
+    assert user.age.to_i > 13
+    assert user.email.blank?
+    assert user.hashed_email.present?
+  end
+
+  test 'teachers have hashed email and plaintext email' do
+    user = create :teacher, birthday: Date.new(1990, 10, 4), email: 'email@email.xx'
 
     assert user.age.to_i > 13
     assert user.email.present?
@@ -411,29 +419,29 @@ class UserTest < ActiveSupport::TestCase
 
   end
 
-  test 'changing user from over 13 to under 13 removes email and adds hashed_email' do
-    older_user = create :user
+  test 'changing user from teacher to student removes email' do
+    user = create :teacher
+    assert user.email.present?
+    assert user.hashed_email.present?
 
-    assert older_user.email
+    user.user_type = 'student'
+    user.save!
 
-    older_user.age = 10
-    older_user.save!
-
-    assert older_user.email.blank?
-    assert older_user.hashed_email
+    assert user.email.blank?
+    assert user.hashed_email.present?
   end
 
-  test 'changing user to teacher saves email' do
-    student = create :user, age: 10, email: 'email@old.xx'
+  test 'changing user from student to teacher saves email' do
+    user = create :student, email: 'email@old.xx'
 
-    assert student.email.blank?
-    assert student.hashed_email
+    assert user.email.blank?
+    assert user.hashed_email
 
-    student.update_attributes(user_type: 'teacher', email: 'email@old.xx')
-    student.save!
+    user.update_attributes(user_type: 'teacher', email: 'email@old.xx')
+    user.save!
 
-    assert_equal 'email@old.xx', student.email
-    assert_equal '21+', student.age
+    assert_equal 'email@old.xx', user.email
+    assert_equal '21+', user.age
   end
 
   test 'under 13' do
@@ -472,12 +480,13 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "send reset password for older user" do
-    user = create :user, age: 20, password: 'oldone'
+    email = 'email@email.xx'
+    user = create :user, age: 20, password: 'oldone', email: email
 
-    assert User.send_reset_password_instructions(email: user.email)
+    assert User.send_reset_password_instructions(email: email)
 
     mail = ActionMailer::Base.deliveries.first
-    assert_equal [user.email], mail.to
+    assert_equal [email], mail.to
     assert_equal 'Code.org reset password instructions', mail.subject
     user = User.find(user.id)
     old_password = user.encrypted_password
