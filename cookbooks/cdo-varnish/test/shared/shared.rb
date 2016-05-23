@@ -68,6 +68,7 @@ module Cdo
         request = {method: 'GET', url: url}.to_json
         JSON.parse(`curl -s -X POST #{LOCALHOST}:#{DASHBOARD_PORT}/__admin/requests/count -d '#{request}'`)['count']
       end
+      
       # Mocks a simple text/plain response body at the specified URL.
       def mock_response(url, body, request_headers={}, response_headers={}, method='GET')
         json = {
