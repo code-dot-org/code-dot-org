@@ -111,7 +111,19 @@ function logDevelopmentPiskelMessage() {
 
 // Use commander to parse command line arguments
 // https://github.com/tj/commander.js
-args.option('-v, --verbose', 'Show all logging messages', false)
+args.description(
+    'Utilities for working with (or without) a local development copy of piskel editor.' +
+    '\n' +
+    '\n  Normally, the apps build depends on a checked-in copy of the piskel library stored ' +
+    '\n  at [cdo]/apps/lib/piskel-package, via a symlink at [cdo]/apps/lib/piskel.  If you ' +
+    '\n  are doing local development work on code-dot-org/piskel, you can use that local repo ' +
+    '\n  as your apps dependency instead by setting the "' + DEVELOPMENT_PISKEL_PATH_KEY + '" option ' +
+    '\n  in your locals.yml file and running the "symlink" command in this script.' +
+    '\n' +
+    '\n  The "update" command is provided as a convenience for replacing the checked-in piskel ' +
+    '\n  library with the build output from your development copy.'
+    )
+    .option('-v, --verbose', 'See more output', false)
     .option('-q, --quiet', 'Suppress all output', false);
 
 args.command('symlink')
