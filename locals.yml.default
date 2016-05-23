@@ -66,3 +66,8 @@ callouts, hints, secret words, or secret pictures.
 # Credentials for new relic logging. Used to log apps build times.
 # Log in to https://rpm.newrelic.com/accounts/501463 to get the key
 #new_relic_license_key: ''
+
+# Absolute path to root of a development Piskel.js repo.  If omitted, checked-in
+# Piskel will be used.  If provided, symlink to the development repo for rapid
+# iteration in the context of dashboard.
+#development_piskel_path: ''

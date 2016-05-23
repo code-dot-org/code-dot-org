@@ -33,6 +33,7 @@ crowdin.yaml
 /apps/build
 /apps/build-times.log
 /apps/newrelic_agent.log
+/apps/lib/piskel
 /apps/node_modules/
 /apps/npm-debug.log
 /apps/src/color.js

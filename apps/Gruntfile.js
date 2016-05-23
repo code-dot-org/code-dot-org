@@ -338,6 +338,7 @@ module.exports = function (grunt) {
   config.exec = {
     browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
     convertScssVars: './script/convert-scss-variables.js',
+    symlinkPiskelPackage: './script/symlink-piskel-package.js',
     integrationTest: 'node test/runIntegrationTests.js --color' + (fastMochaTest ? ' --fast' : ''),
     unitTest: 'node test/runUnitTests.js --color',
     applabapi: 'echo "' + applabAPIExec + '" && ' + applabAPIExec,
@@ -508,6 +509,7 @@ module.exports = function (grunt) {
     'checkDropletSize',
     'pseudoloc',
     'newer:messages',
+    'exec:symlinkPiskelPackage',
     'exec:convertScssVars',
     'newer:copy:src',
     'newer:copy:lib',
