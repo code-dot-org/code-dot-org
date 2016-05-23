@@ -531,7 +531,7 @@ module LevelsHelper
     options = {}
     # Provides additional debugging information to the browser when
     # security rules are evaluated.
-    options[:debug] = true if (CDO.firebase_debug && CDO.rack_env?(:development))
+    options[:debug] = true if CDO.firebase_debug && CDO.rack_env?(:development)
 
     # TODO(dave): cache token generator across requests
     generator = Firebase::FirebaseTokenGenerator.new(CDO.firebase_secret)
