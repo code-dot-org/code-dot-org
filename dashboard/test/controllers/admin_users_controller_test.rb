@@ -8,9 +8,12 @@ class AdminUsersControllerTest < ActionController::TestCase
 
     @unconfirmed = create(:teacher, username: 'unconfirmed', confirmed_at: nil, email: 'unconfirmed@email.xx')
     @not_admin = create(:teacher, username: 'notadmin', email: 'not_admin@email.xx')
+    @student = create(:student, username: 'student', email: 'student@email.xx')
+    @deleted_student = create(:student, username: 'deletedstudent', email: 'deleted_student@email.xx')
   end
 
   generate_admin_only_tests_for :assume_identity_form
+  generate_admin_only_tests_for :undelete_user_form
 
   test "should assume_identity" do
     sign_in @admin
@@ -129,5 +132,23 @@ class AdminUsersControllerTest < ActionController::TestCase
     post :confirm_email, {email: 'asdasdasdasdasd'}
     assert_response :success
     assert_select '.container .alert-danger', 'User not found -- email not confirmed'
+  end
+
+  test "undelete_user undeletes deleted user" do
+    sign_in @admin
+
+    post :undelete_user, {user_id: @deleted_student.id}
+
+    assert @deleted_student.deleted_at.nil?
+  end
+
+  test "undelete_user noops for (non-deleted) user" do
+    sign_in @admin
+    existing_updated_at = @student.updated_at
+
+    post :undelete_user, {user_id: @student.id}
+
+    new_updated_at = @student.updated_at
+    assert_equal existing_updated_at, new_updated_at
   end
 end

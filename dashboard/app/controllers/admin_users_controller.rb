@@ -36,4 +36,23 @@ class AdminUsersController < ApplicationController
     end
   end
 
+  def undelete_user_form
+  end
+
+  def undelete_user
+    user = User.with_deleted.where(id: params[:user_id].to_i).first
+
+    if user
+      if user.deleted?
+        user.restore
+        user.save!
+        flash[:alert] = 'User undeleted!'
+      else
+        flash[:alert] = 'User was never deleted!'
+      end
+    else
+      flash[:alert] = 'User not found!'
+    end
+    render :undelete_user_form
+  end
 end
