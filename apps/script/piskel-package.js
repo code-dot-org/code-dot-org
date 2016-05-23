@@ -8,35 +8,34 @@ var path = require('path');
 var cdoConfig = require('./cdo-config');
 
 var DEVELOPMENT_PISKEL_PATH_KEY = 'development_piskel_path';
-
-var piskelLinkPath = path.resolve(__dirname, '../lib/piskel');
-var releasePiskelPath = path.resolve(__dirname, '../lib/piskel-package');
-var developmentPiskelPath = cdoConfig.get(DEVELOPMENT_PISKEL_PATH_KEY);
-var piskelPath = developmentPiskelPath ? developmentPiskelPath : releasePiskelPath;
+var PISKEL_LINK_PATH = path.resolve(__dirname, '../lib/piskel');
+var RELEASE_PISKEL_PATH = path.resolve(__dirname, '../lib/piskel-package');
+var DEVELOPMENT_PISKEL_PATH = cdoConfig.get(DEVELOPMENT_PISKEL_PATH_KEY);
+var piskelPath = DEVELOPMENT_PISKEL_PATH ? DEVELOPMENT_PISKEL_PATH : RELEASE_PISKEL_PATH;
 
 /**
  * Idempotent creation of symlink to checked-in piskel package or to local
  * repo's build output folder, depending on locals.yml settings.
  */
 function createOrUpdatePiskelLink() {
-  fs.readlink(piskelLinkPath, function (err, linkString) {
+  fs.readlink(PISKEL_LINK_PATH, function (err, linkString) {
     var linkExists = !err;
     var linkIsCorrect = (linkString === piskelPath);
     if (linkExists && linkIsCorrect) {
-      reportInfo('Piskel symlink is current.');
-      reportDevelopmentPiskel();
+      logIfVerbose('Piskel symlink is current.');
+      logDevelopmentPiskelMessage();
       return;
     }
 
     try {
       if (linkExists) {
-        fs.unlinkSync(piskelLinkPath);
+        fs.unlinkSync(PISKEL_LINK_PATH);
       }
-      fs.symlinkSync(piskelPath, piskelLinkPath);
-      reportInfo('Set piskel symlink to ' + piskelPath);
-      reportDevelopmentPiskel();
+      fs.symlinkSync(piskelPath, PISKEL_LINK_PATH);
+      logIfVerbose('Set piskel symlink to ' + piskelPath);
+      logDevelopmentPiskelMessage();
     } catch (err) {
-      reportError(err);
+      logError(err);
     }
   });
 }
@@ -46,7 +45,7 @@ function createOrUpdatePiskelLink() {
  * then commit it (and only it).
  */
 function updatePiskelPackage() {
-  if (piskelPath !== developmentPiskelPath) {
+  if (piskelPath !== DEVELOPMENT_PISKEL_PATH) {
     process.stderr.write(chalk.yellow('/*' +
         '\n * Unable to update piskel package' +
         '\n *' +
@@ -60,44 +59,44 @@ function updatePiskelPackage() {
 
   try {
     var stdioSetting = args.quiet ? 'ignore' : args.verbose ? 'inherit' : 'pipe';
-    childProcess.execSync('rm -rf ' + releasePiskelPath);
-    childProcess.execSync('cp -R ' + developmentPiskelPath + '/dest/prod ' + releasePiskelPath);
-    var changedFiles = childProcess.execSync('git status --porcelain ' + releasePiskelPath);
+    childProcess.execSync('rm -rf ' + RELEASE_PISKEL_PATH);
+    childProcess.execSync('cp -R ' + DEVELOPMENT_PISKEL_PATH + '/dest/prod ' + RELEASE_PISKEL_PATH);
+    var changedFiles = childProcess.execSync('git status --porcelain ' + RELEASE_PISKEL_PATH);
     if (changedFiles.length === 0) {
-      report('Nothing to update.');
+      logUnlessQuiet('Nothing to update.');
       return;
     }
 
-    var commitCmd = 'git commit -m "Update piskel package" -- ' + releasePiskelPath;
-    reportInfo(commitCmd);
+    var commitCmd = 'git commit -m "Update piskel package" -- ' + RELEASE_PISKEL_PATH;
+    logIfVerbose(commitCmd);
     childProcess.execSync(commitCmd, { stdio: stdioSetting });
-    report('Piskel package updated.');
+    logUnlessQuiet('Piskel package updated.');
   } catch (err) {
-    reportError(err);
+    logError(err);
   }
 }
 
-function report(message) {
+function logUnlessQuiet(message) {
   if (!args.quiet) {
     process.stdout.write(message + '\n');
   }
 }
 
-function reportInfo(message) {
+function logIfVerbose(message) {
   if (!args.quiet && args.verbose) {
     process.stdout.write(message + '\n');
   }
 }
 
-function reportError(err) {
+function logError(err) {
   if (!args.quiet) {
     process.stderr.write(chalk.red('Failed:\n') + err + '\n');
     process.exitCode = 1;
   }
 }
 
-function reportDevelopmentPiskel() {
-  if (piskelPath === developmentPiskelPath && !args.quiet) {
+function logDevelopmentPiskelMessage() {
+  if (piskelPath === DEVELOPMENT_PISKEL_PATH && !args.quiet) {
     process.stdout.write(chalk.yellow('/*' +
         '\n * PISKEL DEVELOPMENT MODE:' +
         '\n * You are building apps using the local piskel repository at' +
