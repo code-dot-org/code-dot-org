@@ -386,7 +386,7 @@ module.exports = function (grunt) {
       plugins: [
         new webpack.optimize.CommonsChunkPlugin({
           name:'common',
-          minChunks: 3,
+          minChunks: 2,
         }),
       ],
       watch: true,
