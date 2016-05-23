@@ -388,6 +388,21 @@ function updateRowCount(recordId, rowCounts, channelDataData, tableName, delta) 
   channelDataData['tables/' + tableName + '/row_count/' + rowCountIndex] = newRowCount;
 }
 
+function getCreateRecordPromise(tableName, counter, record) {
+  return getServerDataPromise(tableName).then(function (serverData) {
+    var channelDataData = {};
+    channelDataData['tables/' + tableName + '/' + counter] = JSON.stringify(record);
+    channelDataData['tables/' + tableName + '/target_record_id'] = String(counter);
+    updateRowCount(record.id, serverData.rowCounts, channelDataData, tableName, 1);
+    addRateLimitTokens(channelDataData, serverData.tokenMap);
+    console.log('FirebaseStorage.createRecord channelDataData:');
+    console.log(channelDataData);
+
+    var channelDataRef = getDatabase(Applab.channelId).child('data');
+    return channelDataRef.update(channelDataData);
+  });
+}
+
 /**
  * Creates a new record in the specified table, accessible to all users.
  * @param {string} tableName The name of the table to read from.
@@ -403,24 +418,12 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
   getCounter(idCounter, function (counter) {
     record.id = counter;
 
-    getServerDataPromise(tableName).then(function (serverData) {
-      var channelDataData = {};
-      channelDataData['tables/' + tableName + '/' + counter] = JSON.stringify(record);
-      channelDataData['tables/' + tableName + '/target_record_id'] = String(counter);
-      updateRowCount(record.id, serverData.rowCounts, channelDataData, tableName, 1);
-      addRateLimitTokens(channelDataData, serverData.tokenMap);
-      console.log('FirebaseStorage.createRecord channelDataData:');
-      console.log(channelDataData);
-
-      var channelDataRef = getDatabase(Applab.channelId).child('data');
-      channelDataRef.update(channelDataData, function (error) {
-        if (!error) {
-          onSuccess(record);
-        } else {
-          onError(error);
-        }
-      });
-    }, onError);
+    var promise = getCreateRecordPromise(tableName, counter, record);
+    promise.then(function () {
+      onSuccess(record);
+    }, function (error) {
+      onError(error);
+    });
   }, onError);
 };
 
