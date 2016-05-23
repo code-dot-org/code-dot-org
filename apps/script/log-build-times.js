@@ -133,7 +133,7 @@ function parseCollectedData(data) {
         logTimestamp: timestamp
       };
     }).filter(function (data) {
-      return /^exec/.test(data.task);
+      return /^(exec|webpack)/.test(data.task);
     });
     return collectedData.concat(formattedRecords);
   }, []);
