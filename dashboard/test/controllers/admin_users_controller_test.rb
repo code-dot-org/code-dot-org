@@ -9,7 +9,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     @unconfirmed = create(:teacher, username: 'unconfirmed', confirmed_at: nil, email: 'unconfirmed@email.xx')
     @not_admin = create(:teacher, username: 'notadmin', email: 'not_admin@email.xx')
     @student = create(:student, username: 'student', email: 'student@email.xx')
-    @deleted_student = create(:student, username: 'deletedstudent', email: 'deleted_student@email.xx')
+    @deleted_student = create(:student, username: 'deletedstudent', email: 'deleted_student@email.xx', deleted_at: '2000-01-01 12:00')
   end
 
   generate_admin_only_tests_for :assume_identity_form
@@ -139,16 +139,15 @@ class AdminUsersControllerTest < ActionController::TestCase
 
     post :undelete_user, {user_id: @deleted_student.id}
 
+    @deleted_student.reload
     assert @deleted_student.deleted_at.nil?
   end
 
   test "undelete_user noops for (non-deleted) user" do
     sign_in @admin
-    existing_updated_at = @student.updated_at
 
-    post :undelete_user, {user_id: @student.id}
-
-    new_updated_at = @student.updated_at
-    assert_equal existing_updated_at, new_updated_at
+    assert_no_difference(User.deleted_at) do
+      post :undelete_user, {user_id: @student.id}
+    end
   end
 end
