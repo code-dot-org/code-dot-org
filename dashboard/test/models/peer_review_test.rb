@@ -18,11 +18,16 @@ class PeerReviewTest < ActiveSupport::TestCase
     @user = create :user
   end
 
+  def track_progress(level_source_id)
+    User.track_level_progress_sync(user_id: @user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: level_source_id)
+  end
+
   test 'submitting a peer reviewed level should create PeerReview objects' do
     level_source = create :level_source, data: 'My submitted answer'
 
     initial = PeerReview.count
-    @user.track_level_progress_async(script_level: @script_level, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: level_source.id)
+
+    track_progress level_source.id
     assert_equal PeerReview::REVIEWS_PER_SUBMISSION, PeerReview.count - initial
   end
 
@@ -30,7 +35,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     level_source = create :level_source, data: 'My submitted answer'
 
     initial = PeerReview.count
-    @user.track_level_progress_async(script_level: @script_level, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: level_source.id)
+    track_progress level_source.id
     assert_equal PeerReview::REVIEWS_PER_SUBMISSION, PeerReview.count - initial
 
     # Assign one review
@@ -39,7 +44,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     updated_level_source = create :level_source, data: 'UPDATED: My submitted answer'
 
     initial = PeerReview.count
-    @user.track_level_progress_async(script_level: @script_level, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: updated_level_source.id)
+    track_progress updated_level_source.id
     assert_equal PeerReview::REVIEWS_PER_SUBMISSION - 1, PeerReview.count - initial
   end
 
@@ -47,7 +52,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     level_source = create :level_source, data: 'My submitted answer'
 
     Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source
-    @user.track_level_progress_async(script_level: @script_level, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: level_source.id)
+    track_progress level_source.id
     review1 = PeerReview.offset(1).last
     review2 = PeerReview.last
 
@@ -67,7 +72,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     level_source = create :level_source, data: 'My submitted answer'
 
     Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source
-    @user.track_level_progress_async(script_level: @script_level, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: level_source.id)
+    track_progress level_source.id
     review1 = PeerReview.offset(1).last
     review2 = PeerReview.last
 
