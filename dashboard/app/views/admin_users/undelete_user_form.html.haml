@@ -5,6 +5,6 @@
 = form_tag(undelete_user_path, method: :post) do
   Who do you want to undelete?
   %br/
-  = text_field_tag 'user_id', '', placeholder: 'id', size: 10
+  = number_field_tag 'user_id', '', placeholder: 'id', size: 10
   %br/
   = submit_tag 'Undelete', data: {confirm: 'You really should be undeleting this user, right?'}
