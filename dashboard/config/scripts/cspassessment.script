@@ -1,3 +1,5 @@
+hidden 'false'
+
 title 'CS Principles Culminating Assessment'
 description 'This 55-question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact. '
 description_short 'Culminating'
@@ -5,4 +7,5 @@ login_required 'true'
 hidden 'true'
 
 stage 'CS Principles Culminating Assessment'
+level 'CSP_Final_instructions'
 assessment 'CSP Culminating Assessment'
