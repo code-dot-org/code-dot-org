@@ -142,8 +142,7 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
       status: status,
       kind: level.kind,
       url: href,
-      id: level.id,
-      saveFirst: !!puzzlePage
+      id: level.id
     };
   });
 
@@ -156,7 +155,8 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
   $('.progress_container').replaceWith(mountPoint);
   ReactDOM.render(React.createElement(StageProgress, {
     levels: combinedProgress,
-    currentLevelIndex: currentLevelIndex
+    currentLevelIndex: currentLevelIndex,
+    saveAnswersFirst: puzzlePage !== -1
   }), mountPoint);
 };
 
@@ -166,7 +166,8 @@ progress.renderCourseProgress = function (scriptData) {
   $('.user-stats-block').prepend(mountPoint);
   ReactDOM.render(React.createElement(CourseProgress, {
     display: teacherCourse ? 'list' : 'dots',
-    stages: scriptData.stages
+    stages: scriptData.stages,
+    saveAnswersFirst: false
   }), mountPoint);
   progress.populateProgress(scriptData.name);
 };
