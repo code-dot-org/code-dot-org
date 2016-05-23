@@ -21,7 +21,7 @@ const VERTICAL_PADDING = 10;
 const HORIZONTAL_PADDING = 20;
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
-const MIN_HEIGHT = RESIZER_HEIGHT + 60;
+const MIN_HEIGHT = COLLAPSED_HEIGHT;
 
 const styles = {
   main: {
@@ -53,11 +53,19 @@ const styles = {
   },
   collapserButton: {
     float: 'right',
+    height: 42,
     marginLeft: 10,
     // don't want the right margin to apply to our button
-    marginRight: -10
+    marginRight: -10,
+    marginTop: 5,
+    marginBottom: 5
   }
 };
+
+const COLLAPSED_HEIGHT = styles.collapserButton.height +
+  styles.collapserButton.marginTop +
+  styles.collapserButton.marginBottom +
+  2 * VERTICAL_PADDING;
 
 var TopInstructions = React.createClass({
   propTypes: {
@@ -84,8 +92,7 @@ var TopInstructions = React.createClass({
   },
 
   getCollapsedHeight() {
-    return 42 + 2 * 5 + 2 * VERTICAL_PADDING;
-    // return 72; // button (42) + 2 * marginTop on button (5) + 2 * padding
+    return COLLAPSED_HEIGHT;
   },
 
   /**

@@ -12,6 +12,9 @@ const styles = {
   }
 };
 
+/**
+ * A button for toggling the collapse state of instructions in CSF
+ */
 const CollapserButton = props => (
   <button
       style={[styles.collapseButton, props.style]}

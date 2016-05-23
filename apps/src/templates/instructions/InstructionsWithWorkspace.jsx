@@ -23,7 +23,7 @@ var InstructionsWithWorkspace = React.createClass({
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsMaxHeight: React.PropTypes.func.isRequired,
 
-    // TODO
+    // TODO - properly pass these to top instructions
     isRtl: React.PropTypes.bool.isRequired,
     noVisualization: React.PropTypes.bool.isRequired
   },
@@ -40,7 +40,7 @@ var InstructionsWithWorkspace = React.createClass({
    * Called when the window resizes. Look to see if width/height changed, then
    * call adjustTopPaneHeight as our maxHeight may need adjusting.
    */
-  onResize: function () {
+  onResize() {
     // No need to resize anything if we're collapsed
     if (this.props.instructionsCollapsed) {
       return;
@@ -75,7 +75,7 @@ var InstructionsWithWorkspace = React.createClass({
    * At small enough window sizes where we can't shrink enough to meet all of
    * our minimum sizes, shrink the debugger, editor, and instructions pane equally
    */
-  adjustTopPaneHeight: function () {
+  adjustTopPaneHeight() {
     if (!this.props.showInstructions) {
       return;
     }
@@ -103,7 +103,7 @@ var InstructionsWithWorkspace = React.createClass({
     var topSpaceAvailable = totalHeight - EDITOR_RESERVE - DEBUGGER_RESERVE;
 
     // Dont want topPaneHeight to extend past rendered length of content.
-    var maxHeight = instructionsContentHeight + RESIZER_HEIGHT;
+    var maxHeight = instructionsContentHeight + HEADER_HEIGHT + RESIZER_HEIGHT;
     if (maxHeight < topPaneHeight) {
       topPaneHeight = maxHeight;
     }
@@ -124,9 +124,10 @@ var InstructionsWithWorkspace = React.createClass({
   },
 
   /**
-   * @returns {number} How much vertical space is consumed by the TopInstructions
+   * @returns {number} How much vertical space is consumed by the TopInstructions,
+   *   including space for any resizer
    */
-  topPaneHeight: function () {
+  topPaneHeight() {
     // We may not display the instructions pane at all
     if (!this.props.showInstructions) {
       return 0;
@@ -137,7 +138,6 @@ var InstructionsWithWorkspace = React.createClass({
     var height = this.props.instructionsHeight;
 
     // If collapsed, we only use display instructions header
-    // TODO - this depends on CSF vs. CSP
     if (this.props.instructionsCollapsed) {
       height = this.refs.topInstructions.getCollapsedHeight();
     }
@@ -145,22 +145,23 @@ var InstructionsWithWorkspace = React.createClass({
     return height;
   },
 
-  componentDidMount: function () {
-    if (this.props.showInstructions) {
-      this.adjustTopPaneHeight();
-
-      window.addEventListener('resize', this.onResize);
+  componentDidMount() {
+    if (!this.props.showInstructions) {
+      return;
     }
+
+    this.adjustTopPaneHeight();
+    window.addEventListener('resize', this.onResize);
   },
 
-  componentWillUnmount: function () {
+  componentWillUnmount() {
     if (this.props.showInstructions) {
       window.removeEventListener("resize", this.onResize);
     }
   },
 
-  render: function () {
-    var topPaneHeight = this.topPaneHeight();
+  render() {
+    const topPaneHeight = this.topPaneHeight();
 
     return (
       <span>

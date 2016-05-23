@@ -2727,7 +2727,8 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isShareView: !!config.share,
     pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
     shortInstructions: level.instructions,
-    instructionsMarkdown: level.markdownInstructions,
+    // TODO - better handle the case where we have only short
+    instructionsMarkdown: level.markdownInstructions || level.instructions,
     instructionsInTopPane: config.showInstructionsInTopPane,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
