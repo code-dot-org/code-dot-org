@@ -361,7 +361,7 @@ module.exports = function (grunt) {
         extensions: ["", ".js", ".jsx"],
       },
       externals: {
-        "johnny-five": "JohnnyFive",
+        "johnny-five": "var JohnnyFive",
         "playground-io": "var PlaygroundIO",
         "chrome-serialport": "var ChromeSerialport",
         "marked": "var marked",
