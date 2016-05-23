@@ -127,6 +127,11 @@ var InstructionsWithWorkspace = React.createClass({
    * @returns {number} How much vertical space is consumed by the TopInstructions
    */
   topPaneHeight: function () {
+    // We may not display the instructions pane at all
+    if (!this.props.showInstructions) {
+      return 0;
+    }
+
     // instructionsHeight represents the height of the TopInstructions if displayed
     // and not collapsed
     var height = this.props.instructionsHeight;
@@ -134,12 +139,7 @@ var InstructionsWithWorkspace = React.createClass({
     // If collapsed, we only use display instructions header
     // TODO - this depends on CSF vs. CSP
     if (this.props.instructionsCollapsed) {
-      height = HEADER_HEIGHT;
-    }
-
-    // Or we may not display the instructions pane at all
-    if (!this.props.showInstructions) {
-      height = 0;
+      height = this.refs.topInstructions.getCollapsedHeight();
     }
 
     return height;
