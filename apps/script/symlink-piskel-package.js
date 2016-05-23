@@ -1,16 +1,11 @@
 #!/usr/bin/env node
 
 var chalk = require('chalk');
+var childProcess = require('child_process');
 var args = require('commander');
 var fs = require('fs');
 var path = require('path');
 var cdoConfig = require('./cdo-config');
-
-// Use commander to parse command line arguments
-// https://github.com/tj/commander.js
-args.option('-v, --verbose', 'Show all logging messages', false)
-    .option('-q, --quiet', 'Suppress all output', false)
-    .parse(process.argv);
 
 var DEVELOPMENT_PISKEL_PATH_KEY = 'development_piskel_path';
 
@@ -46,15 +41,58 @@ function createOrUpdatePiskelLink() {
   });
 }
 
+/**
+ * Copy built piskel library from local piskel repository to apps/lib/piskel-package,
+ * then commit it (and only it).
+ */
+function updatePiskelPackage() {
+  if (piskelPath !== developmentPiskelPath) {
+    process.stderr.write(chalk.yellow('/*' +
+        '\n * Unable to update piskel package' +
+        '\n *' +
+        '\n * You must configure a local piskel repository to use this update command.' +
+        '\n * To do so, point the "' + DEVELOPMENT_PISKEL_PATH_KEY + '" option in your locals.yml' +
+        '\n * to the aboslute path of your piskel repostiory root.' +
+        '\n */\n'));
+    process.exitCode = 1;
+    return;
+  }
+
+  try {
+    var stdioSetting = args.quiet ? 'ignore' : args.verbose ? 'inherit' : 'pipe';
+    childProcess.execSync('rm -rf ' + releasePiskelPath);
+    childProcess.execSync('cp -R ' + developmentPiskelPath + '/dest/prod ' + releasePiskelPath);
+    var changedFiles = childProcess.execSync('git status --porcelain ' + releasePiskelPath);
+    if (changedFiles.length === 0) {
+      report('Nothing to update.');
+      return;
+    }
+
+    var commitCmd = 'git commit -m "Update piskel package" -- ' + releasePiskelPath;
+    reportInfo(commitCmd);
+    childProcess.execSync(commitCmd, { stdio: stdioSetting });
+    report('Piskel package updated.');
+  } catch (err) {
+    reportError(err);
+  }
+}
+
+function report(message) {
+  if (!args.quiet) {
+    process.stdout.write(message + '\n');
+  }
+}
+
 function reportInfo(message) {
-  if (args.verbose) {
+  if (!args.quiet && args.verbose) {
     process.stdout.write(message + '\n');
   }
 }
 
 function reportError(err) {
   if (!args.quiet) {
-    process.stderr.write(chalk.red('Failure while updating piskel symlink:\n') + err + '\n');
+    process.stderr.write(chalk.red('Failed:\n') + err + '\n');
+    process.exitCode = 1;
   }
 }
 
@@ -72,4 +110,21 @@ function reportDevelopmentPiskel() {
   }
 }
 
-createOrUpdatePiskelLink();
+// Use commander to parse command line arguments
+// https://github.com/tj/commander.js
+args.option('-v, --verbose', 'Show all logging messages', false)
+    .option('-q, --quiet', 'Suppress all output', false);
+
+args.command('symlink')
+    .description('Create or update symlink to piskel package')
+    .action(createOrUpdatePiskelLink);
+
+args.command('update')
+    .description('Copy built piskel package to code-dot-org repo and commit it')
+    .action(updatePiskelPackage);
+
+if (!process.argv.slice(2).length) {
+  args.help();
+}
+
+args.parse(process.argv);
