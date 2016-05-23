@@ -3,6 +3,7 @@ var path = require('path');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
 var webpack = require('webpack');
+var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
 
 module.exports = function (grunt) {
@@ -26,7 +27,11 @@ module.exports = function (grunt) {
   /** @const {string} */
   var APP_TO_BUILD = grunt.option('app') || process.env.MOOC_APP;
 
-  var WATCH_APPLAB_API = grunt.option('watch_applab_api');
+  /** @const {bool} */
+  var USE_WEBPACK = !!grunt.option('webpack') || !!process.env.MOOC_WEBPACK;
+  if (USE_WEBPACK) {
+    console.log("using webpack instead of browserify");
+  }
 
   /** @const {string[]} */
   var APPS = [
@@ -274,12 +279,67 @@ module.exports = function (grunt) {
     allFilesDest.push(outputDir + app + '.js');
   });
 
+  /**
+   * Generates a command line string to execute browserify with the specified options.
+   * Available options are:
+   *
+   * @param {!Object} options
+   * @param {boolean} [options.globalShim] - boolean for whether or not to turn on
+   *        the browserify-global-shim transform
+   * @param {!string} options.cacheFile - file name where the browserify cache should be stored
+   * @param {!string[]} options.srcFiles - list of src files to pass to browserify
+   * @param {!string[]} options.destFiles - list of destination file paths to pass to browserify
+   * @param {boolean} [options.factorBundle] - whether or not to use the factor-bundle plugin to
+   *        extract common code into a separate file.
+   */
+  function getBrowserifyCommand(options) {
+    // Use command-line tools to run browserify (faster/more stable this way)
+    var cmd = 'mkdir -p build/browserified &&' +
+          (envOptions.dev ? '' : ' NODE_ENV=production') + // Necessary for production Redux
+          ' `npm bin`/browserifyinc';
+    if (options.globalShim) {
+      cmd += ' -g [ browserify-global-shim ]';
+    }
+    if (options.cacheFile) {
+      cmd += ' --cachefile ' + outputDir + options.cacheFile;
+    }
+    cmd += ' --extension=.jsx' +
+      ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]' +
+      (envOptions.dev ? '' : ' -t loose-envify') +
+      ' -d ' + options.srcFiles.join(' ');
+    if (options.factorBundle) {
+      cmd += ' -p [ factor-bundle -o ' +
+        options.destFiles.join(' -o ') +
+        ' ] -o ' + outputDir + 'common.js';
+    } else {
+      cmd += ' -o ' + options.destFiles[0];
+    }
+    return cmd;
+  }
+
+  var browserifyExec = getBrowserifyCommand({
+    globalShim: true,
+    cacheFile: 'browserifyinc.cache.json',
+    srcFiles: allFilesSrc,
+    destFiles: allFilesDest,
+    factorBundle: APPS.length > 1,
+  });
+
+  var applabAPIExec = getBrowserifyCommand({
+    globalShim: false,
+    cacheFile: 'applab-api.cache.json',
+    srcFiles: ['build/js/applab/api-entry.js'],
+    destFiles: [outputDir + 'applab-api.js'],
+    factorBundle: false,
+  });
   var fastMochaTest = process.argv.indexOf('--fast') !== -1;
 
   config.exec = {
+    browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
     convertScssVars: './script/convert-scss-variables.js',
     integrationTest: 'node test/runIntegrationTests.js --color' + (fastMochaTest ? ' --fast' : ''),
     unitTest: 'node test/runUnitTests.js --color',
+    applabapi: 'echo "' + applabAPIExec + '" && ' + applabAPIExec,
   };
 
   var entries = {};
@@ -332,6 +392,18 @@ module.exports = function (grunt) {
       watch: true,
     }
   };
+  config.webpack.uglify = _.extend({}, config.webpack.build, {
+    output: _.extend({}, config.webpack.build.output, {
+      filename: "[name].min.js",
+    }),
+    plugins: config.webpack.build.plugins.concat([
+      new webpack.optimize.UglifyJsPlugin({
+        compressor: {
+          warnings: false
+        }
+      }),
+    ]),
+  });
 
   var ext = envOptions.dev ? 'uncompressed' : 'compressed';
   config.concat = {
@@ -392,7 +464,9 @@ module.exports = function (grunt) {
   config.watch = {
     js: {
       files: ['src/**/*.{js,jsx}'],
-      tasks: ['newer:copy:src', 'notify:browserify'],
+      tasks: ['newer:copy:src'].concat(
+        USE_WEBPACK ? [] : ['exec:browserify', 'exec:applabapi', 'notify:browserify']
+      ),
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true,
@@ -426,7 +500,7 @@ module.exports = function (grunt) {
     },
     ejs: {
       files: ['src/**/*.ejs'],
-      tasks: ['ejs', 'notify:ejs'],
+      tasks: USE_WEBPACK ? [] : ['ejs', 'exec:browserify', 'notify:ejs'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true
@@ -506,14 +580,21 @@ module.exports = function (grunt) {
     'newer:sass'
   ]);
 
-  grunt.registerTask('build', [
-    'prebuild',
-    'webpack:build',
-    'notify:browserify',
-    // Skip minification in development environment.
-    envOptions.dev ? 'noop' : ('concurrent:uglify'),
-    'postbuild'
-  ]);
+  grunt.registerTask(
+    'build',
+    ['prebuild'].concat(
+      USE_WEBPACK ? [
+        'webpack:build',
+      ] : [
+        'exec:browserify',
+        'exec:applabapi',
+      ]).concat([
+        'notify:browserify',
+        // Skip minification in development environment.
+        envOptions.dev ? 'noop' : (USE_WEBPACK ? 'webpack:uglify' : 'concurrent:uglify'),
+        'postbuild'
+      ])
+  );
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
