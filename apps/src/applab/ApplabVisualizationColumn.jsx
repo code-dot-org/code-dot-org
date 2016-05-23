@@ -75,6 +75,7 @@ var ApplabVisualizationColumn = React.createClass({
     interfaceMode: React.PropTypes.string.isRequired,
     playspacePhoneFrame: React.PropTypes.bool,
     isIframeEmbed: React.PropTypes.bool.isRequired,
+    pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
 
     // non redux backed
     isEditingProject: React.PropTypes.bool.isRequired,
@@ -106,7 +107,8 @@ var ApplabVisualizationColumn = React.createClass({
 
     const visualizationColumnClassNames = classNames({
       with_padding: this.props.visualizationHasPadding,
-      responsive: this.props.isResponsive
+      responsive: this.props.isResponsive,
+      pin_bottom: this.props.pinWorkspaceToBottom
     });
 
     return (
@@ -152,6 +154,7 @@ module.exports = connect(function propsFromStore(state) {
     isRunning: state.runState.isRunning,
     isPaused: state.runState.isDebuggerPaused,
     interfaceMode: state.interfaceMode,
-    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
+    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
+    pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
   };
 })(Radium(ApplabVisualizationColumn));

@@ -236,7 +236,7 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
   };
 
   // if (Maze.nectarCollected() > 0) { code }
-  // if (Maze.honeyCreated() == 1) { code }
+  // if (Maze.honeyCreated() === 1) { code }
   generator[name] = function () {
     // Generate JavaScript for 'if' conditional if we're at a flower/hive
     var argument1 = 'Maze.' + this.getTitleValue('ARG1') +

@@ -56,7 +56,8 @@ var GameLabView = React.createClass({
     };
 
     const visualizationColumnClassNames = classNames({
-      responsive: this.props.isResponsive
+      responsive: this.props.isResponsive,
+      pin_bottom: this.props.pinWorkspaceToBottom
     });
 
     return (
@@ -75,9 +76,7 @@ var GameLabView = React.createClass({
             id="visualizationResizeBar"
             className="fa fa-ellipsis-v"
         />
-        <InstructionsWithWorkspace
-          hideSource={this.props.hideSource}
-        />
+        <InstructionsWithWorkspace/>
       </div>
     );
   },
@@ -108,6 +107,7 @@ module.exports = connect(function propsFromStore(state) {
     interfaceMode: state.interfaceMode,
     isEmbedView: state.pageConstants.isEmbedView,
     isResponsive: isResponsiveFromState(state),
-    isShareView: state.pageConstants.isShareView
+    isShareView: state.pageConstants.isShareView,
+    pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
   };
 })(GameLabView);

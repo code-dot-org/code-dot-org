@@ -65,7 +65,7 @@ Multi.prototype.clickItem = function (index) {
   }
 
   // If single answer, and this button is already selected, do nothing more.
-  if (this.numAnswers == 1 && $.inArray(index, this.selectedAnswers) !== -1) {
+  if (this.numAnswers === 1 && $.inArray(index, this.selectedAnswers) !== -1) {
     return;
   }
 
@@ -168,7 +168,7 @@ Multi.prototype.ready = function () {
 Multi.prototype.getCurrentAnswer = function () {
   var answer;
 
-  if (this.numAnswers == 1) {
+  if (this.numAnswers === 1) {
     answer = this.lastSelectionIndex;
   } else {
     answer = this.selectedAnswers;
@@ -186,7 +186,7 @@ Multi.prototype.getResult = function () {
     errorType = "toofew";
   }
 
-  if (this.numAnswers == 1) {
+  if (this.numAnswers === 1) {
     answer = this.lastSelectionIndex;
   } else {
     answer = this.selectedAnswers;
@@ -221,8 +221,8 @@ Multi.prototype.submitButtonClick = function () {
 
   // If the solution only takes one answer, and it's wrong, and it's not
   // already crossed out, then mark it as answered wrong.
-  if (this.numAnswers == 1 &&
-      this.crossedAnswers.indexOf(this.lastSelectionIndex) == -1 &&
+  if (this.numAnswers === 1 &&
+      this.crossedAnswers.indexOf(this.lastSelectionIndex) === -1 &&
       ! this.validateAnswers()) {
     $("#" + this.id + " #checked_" + this.lastSelectionIndex).hide();
     $("#" + this.id + " #cross_" + this.lastSelectionIndex).show();
@@ -264,7 +264,7 @@ Multi.prototype.unsubmitButtonClick = function () {
 
 
 Multi.prototype.validateAnswers = function () {
-  if (this.selectedAnswers.length == this.numAnswers) {
+  if (this.selectedAnswers.length === this.numAnswers) {
     for (var i = 0; i < this.numAnswers; i++) {
       if (! this.answers[this.selectedAnswers[i]]) {
         return false;
