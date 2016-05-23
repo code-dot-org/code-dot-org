@@ -57,7 +57,7 @@ var GameLabView = React.createClass({
 
     const visualizationColumnClassNames = classNames({
       responsive: this.props.isResponsive,
-      pin_bottom: this.props.pinWorkspaceToBottom
+      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom
     });
 
     return (
