@@ -146,8 +146,8 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "undelete_user noops for (non-deleted) user" do
     sign_in @admin
 
-    assert_no_difference(User.deleted_at) do
-      post :undelete_user, {user_id: @student.id}
-    end
+    assert @student.deleted_at.nil?
+    post :undelete_user, {user_id: @student.id}
+    assert @student.reload.deleted_at.nil?
   end
 end
