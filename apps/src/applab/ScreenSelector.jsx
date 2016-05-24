@@ -1,6 +1,6 @@
 /** @file Dropdown for selecting design mode screens */
 /* global Applab */
-
+import experiments from '../experiments';
 var React = require('react');
 var Radium = require('radium');
 var color = require('../color');
@@ -34,16 +34,19 @@ var ScreenSelector = React.createClass({
     isDesignModeHidden: React.PropTypes.bool.isRequired,
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
     onScreenChange: React.PropTypes.func.isRequired,
+    onImport: React.PropTypes.func.isRequired,
 
     // passed explicitly
     screenIds: React.PropTypes.array.isRequired,
-    onCreate: React.PropTypes.func.isRequired
+    onCreate: React.PropTypes.func.isRequired,
   },
 
   handleChange: function (evt) {
     var screenId = evt.target.value;
     if (screenId === constants.NEW_SCREEN) {
       screenId = this.props.onCreate();
+    } else if (screenId === constants.IMPORT_SCREEN) {
+      this.props.onImport();
     }
     this.props.onScreenChange(screenId);
   },
@@ -79,7 +82,13 @@ var ScreenSelector = React.createClass({
           onChange={this.handleChange}
           disabled={Applab.isRunning()}>
         {options}
+<<<<<<< ea862d09d1af4fd7982442cea8d84bbf544b4592
         {canAddScreen && <option>{constants.NEW_SCREEN}</option>}
+=======
+        <option>{constants.NEW_SCREEN}</option>
+        {experiments.isEnabled('applab-import') &&
+         <option>{constants.IMPORT_SCREEN}</option>}
+>>>>>>> Add import screen option and corresponding reduce actions/reducers
       </select>
     );
   }
@@ -95,7 +104,10 @@ module.exports = connect(function propsFromStore(state) {
   return {
     onScreenChange: function (screenId) {
       dispatch(screens.changeScreen(screenId));
-    }
+    },
+    onImport() {
+      dispatch(screens.toggleImportScreen(true));
+    },
   };
 })(Radium(ScreenSelector));
 
