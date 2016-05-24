@@ -172,8 +172,7 @@
 "hy": "hy-AM"
 "hy-AM":
   english: "Armenian"
-  native: "Հայերեն"
-  debug: true
+  native: "հայերեն"
   webfonts: "false"  
 
 "id": "id-ID"

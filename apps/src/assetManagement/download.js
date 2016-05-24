@@ -12,7 +12,7 @@
 $.ajaxTransport("+binary", function (options, originalOptions, jqXHR) {
   // check for conditions and support for blob / arraybuffer response type
   if (window.FormData &&
-      ((options.dataType && (options.dataType == 'binary')) ||
+      ((options.dataType && (options.dataType === 'binary')) ||
        (options.data && ((window.ArrayBuffer && options.data instanceof window.ArrayBuffer) ||
                          (window.Blob && options.data instanceof Blob))))) {
     return {
