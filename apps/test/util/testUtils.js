@@ -3,11 +3,9 @@ import {assert} from './configuredChai';
 require('require-globify');
 
 var $ = require('jquery');
-var React = require('react');
 var Radium = require('radium');
 
 exports.setExternalGlobals = function () {
-  window.React = React;
   window.$ = $;
   window.jQuery = $;
   window.Radium = Radium;
