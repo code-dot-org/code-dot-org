@@ -64,7 +64,7 @@ var drawSnowman = function (height) {
       api.moveForward(distance);
       api.turnRight(2);
     }
-    if (i != 2) {
+    if (i !== 2) {
       api.turnRight(180);
     }
   }
@@ -91,7 +91,7 @@ var drawHouse = function (length) {
 exports.answer = function (page, level) {
   api.log = [];
   var count, sideIdx, len;
-  if (page == 1) {
+  if (page === 1) {
     switch (level) {
       case 1:
         // El.
@@ -148,7 +148,7 @@ exports.answer = function (page, level) {
         }
         break;
     }
-  } else if (page == 2) {
+  } else if (page === 2) {
     switch (level) {
       case 1:
         // Single square in some color.
@@ -215,7 +215,7 @@ exports.answer = function (page, level) {
         }
         break;
     }
-  } else if (page == 3) {
+  } else if (page === 3) {
     switch (level) {
       case 1:
         // Draw a square.
@@ -263,7 +263,7 @@ exports.answer = function (page, level) {
         }
         break;
     }
-  } else if (page == 4) {
+  } else if (page === 4) {
     switch (level) {
       case 1:
         // Draw an equilateral triangle.
