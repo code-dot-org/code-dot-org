@@ -690,6 +690,9 @@ en:
     escalated:
       name: 'Escalated'
       description: 'I would like an instructor to review this submission'
+    instructor_feedback: 'Instructor Feedback'
+    peer_feedback: 'Peer Feedback'
+    outdated: 'This feedback was added for a previously submitted version'
   components:
     icon_library:
       search_placeholder_text: 'Search for an icon...'

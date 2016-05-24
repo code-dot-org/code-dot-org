@@ -196,6 +196,16 @@ td.studentname {
     background-color: $level_submitted;
   }
 
+  &.review_accepted {
+    border: none;
+    background-color: $level_review_accepted;
+  }
+
+  &.review_rejected {
+    border: none;
+    background-color: $level_review_rejected;
+  }
+
   &:hover,
   &:link,
   &:visited {
