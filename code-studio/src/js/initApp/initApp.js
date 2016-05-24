@@ -11,6 +11,7 @@ var createCallouts = require('../callouts');
 var reporting = require('../reporting');
 var Dialog = require('../dialog');
 var showVideoDialog = require('../videos').showVideoDialog;
+var PlayZone = require('../components/playzone').PlayZone;
 
 window.dashboard = window.dashboard || {};
 window.dashboard.project = project;
@@ -93,6 +94,22 @@ window.apps = {
         var lastServerResponse = reporting.getLastServerResponse();
         if (lastServerResponse.videoInfo) {
           showVideoDialog(lastServerResponse.videoInfo);
+        } else if (lastServerResponse.endOfStageExperience) {
+          var body = document.createElement('div');
+          var props = {
+            stageName: `Stage ${lastServerResponse.previousStageInfo.position}: ${lastServerResponse.previousStageInfo.name}`,
+            onContinue: () => { dialog.hide(); },
+          };
+          ReactDOM.render(<PlayZone {...props} />, body);
+          var dialog = new Dialog({
+            body: body,
+            redirect : lastServerResponse.nextRedirect
+          });
+          dialog.div.css({
+            width: "800px",
+            marginLeft: "-400px"
+          });
+          dialog.show();
         } else if (lastServerResponse.nextRedirect) {
           window.location.href = lastServerResponse.nextRedirect;
         }
