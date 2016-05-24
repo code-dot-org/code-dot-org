@@ -1,4 +1,5 @@
 /* global ColorPicker */
+var React = require('react');
 var ReactDOM = require('react-dom');
 var rowStyle = require('./rowStyle');
 var ColorPicker = require('react-color').default;

@@ -1,5 +1,6 @@
 'use strict';
 
+var React = require('react');
 var ReactDOM = require('react-dom');
 var Radium = require('radium');
 var connect = require('react-redux').connect;

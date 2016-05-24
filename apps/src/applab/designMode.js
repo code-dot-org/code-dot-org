@@ -1,5 +1,6 @@
 /* global Applab, dashboard */
 
+var React = require('react');
 var ReactDOM = require('react-dom');
 var DesignWorkspace = require('./DesignWorkspace');
 var assetPrefix = require('../assetManagement/assetPrefix');

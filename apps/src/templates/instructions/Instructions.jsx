@@ -1,3 +1,4 @@
+var React = require('react');
 var MarkdownInstructions = require('./MarkdownInstructions');
 var NonMarkdownInstructions = require('./NonMarkdownInstructions');
 

@@ -1,4 +1,5 @@
 /* global $ */
+var React = require('react');
 var color = require('../../color');
 var commonStyles = require('../../commonStyles');
 var Radium = require('radium');
