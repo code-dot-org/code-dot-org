@@ -22,8 +22,6 @@ class UserScript < ActiveRecord::Base
   belongs_to :user
   belongs_to :script
 
-  after_update :mark_script_completion_levels
-
   def script
     Script.get_from_cache(script_id)
   end
