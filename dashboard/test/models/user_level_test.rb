@@ -109,4 +109,10 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, UserLevel.passing.count
     assert_equal 1, UserLevel.perfect.count
   end
+
+  test "unsubmitting should set best result back to attempted" do
+    ul = UserLevel.create(user: @user, level: @level, attempts: 0, submitted: true, best_result: Activity::REVIEW_REJECTED_RESULT)
+    ul.update! submitted: false
+    assert_equal Activity::UNSUBMITTED_RESULT, ul.best_result
+  end
 end
