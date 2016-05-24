@@ -234,14 +234,12 @@ function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAdd
     return;
   }
 
-  videos.onYouTubeBlocked(
-      function () {
-        if (!shouldStillAddCallback()) {
-          return;
-        }
-        addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
-      },
-      videoInfo);
+  videos.onYouTubeBlocked(function () {
+    if (!shouldStillAddCallback()) {
+      return;
+    }
+    addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
+  }, videoInfo);
 }
 
 // This is exported (and placed on window) because it gets accessed externally for our video test page.
