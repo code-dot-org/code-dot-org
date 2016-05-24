@@ -21,6 +21,7 @@ var Calc = module.exports;
 /**
  * Create a namespace for the application.
  */
+var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var jsnums = require('./js-numbers/js-numbers.js');
 var commonMsg = require('../locale');

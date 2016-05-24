@@ -21,6 +21,7 @@ var Eval = module.exports;
 /**
  * Create a namespace for the application.
  */
+var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var evalMsg = require('./locale');

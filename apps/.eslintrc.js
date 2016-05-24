@@ -13,7 +13,6 @@ module.exports = {
     "Applab": true,
     "Calc": true,
     "Jigsaw": true,
-    "React": true,
-    "ReactDOM": true
+    "React": true
   }
 };

@@ -1,5 +1,6 @@
 /* global $ */
 
+var ReactDOM = require('react-dom');
 var library = require('./designElements/library');
 
 module.exports = React.createClass({

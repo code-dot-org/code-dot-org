@@ -4,12 +4,10 @@ require('require-globify');
 
 var $ = require('jquery');
 var React = require('react');
-var ReactDOM = require('react-dom');
 var Radium = require('radium');
 
 exports.setExternalGlobals = function () {
   window.React = React;
-  window.ReactDOM = ReactDOM;
   window.$ = $;
   window.jQuery = $;
   window.Radium = Radium;

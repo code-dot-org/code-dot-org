@@ -1,5 +1,6 @@
 'use strict';
 
+var ReactDOM = require('react-dom');
 var commonMsg = require('../locale');
 var msg = require('./locale');
 var levels = require('./levels');

@@ -1,5 +1,6 @@
 'use strict';
 
+var ReactDOM = require('react-dom');
 var Radium = require('radium');
 var connect = require('react-redux').connect;
 var actions = require('../../applab/actions');
