@@ -675,9 +675,10 @@ Applab.init = function (config) {
   config.varsInGlobals = true;
 
   if (config.level.makerlabEnabled) {
-    utils.mergeConcatArrays(dropletConfig, makerDropletConfig);
+    config.dropletConfig = utils.deepMergeConcatArrays(dropletConfig, makerDropletConfig);
+  } else {
+    config.dropletConfig = dropletConfig;
   }
-  config.dropletConfig = dropletConfig;
 
   config.pinWorkspaceToBottom = true;
 
