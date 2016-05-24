@@ -301,8 +301,10 @@ function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
+    is13Plus: config.is13Plus,
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
+    onTooYoung: config.shareWarningInfo.onTooYoung,
   });
 }
 
@@ -486,7 +488,7 @@ StudioApp.prototype.init = function (config) {
   } else {
     // handleUsingBlockly_ already does an onResize. We still want that goodness
     // if we're not blockly
-    this.onResize();
+    utils.fireResizeEvent();
   }
 
   this.alertIfAbusiveProject('#codeWorkspace');
@@ -599,8 +601,9 @@ StudioApp.prototype.init = function (config) {
   }
 };
 
-StudioApp.prototype.startIFrameEmbeddedApp = function (config) {
+StudioApp.prototype.startIFrameEmbeddedApp = function (config, onTooYoung) {
   if (this.share && config.shareWarningInfo) {
+    config.shareWarningInfo.onTooYoung = onTooYoung;
     showWarnings(config);
   } else {
     this.runButtonClick();
@@ -1319,7 +1322,6 @@ function resizePinnedBelowVisualizationArea() {
   var playSpaceHeader = document.getElementById('playSpaceHeader');
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
-  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var top = 0;
   if (playSpaceHeader) {
@@ -1327,7 +1329,15 @@ function resizePinnedBelowVisualizationArea() {
   }
 
   if (visualization) {
-    top += $(visualization).outerHeight(true);
+    var parent = $(visualization).parent();
+    if (parent.attr('id') === 'phoneFrame') {
+      // Phone frame itself doesnt have height. Loop through children
+      parent.children().each(function () {
+        top += $(this).outerHeight(true);
+      });
+    } else {
+      top += $(visualization).outerHeight(true);
+    }
   }
 
   if (gameButtons) {
@@ -1335,6 +1345,7 @@ function resizePinnedBelowVisualizationArea() {
   }
 
   var bottom = 0;
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
   if (smallFooter) {
     var codeApp = $('#codeApp');
     bottom += $(smallFooter).outerHeight(true);
@@ -1853,7 +1864,7 @@ StudioApp.prototype.configureDom = function (config) {
       // If in level builder editing blocks, make workspace extra tall
       vizHeight = 3000;
       // Modify the arrangement of toolbox blocks so categories align left
-      if (config.level.edit_blocks == "toolbox_blocks") {
+      if (config.level.edit_blocks === "toolbox_blocks") {
         this.blockYCoordinateInterval = 80;
         config.blockArrangement = { category : { x: 20 } };
       }
@@ -1871,12 +1882,6 @@ StudioApp.prototype.configureDom = function (config) {
       bodyElement.style.overflow = "hidden";
       bodyElement.className = bodyElement.className + " pin_bottom";
       container.className = container.className + " pin_bottom";
-      visualizationColumn.className = visualizationColumn.className + " pin_bottom";
-      codeWorkspace.className = codeWorkspace.className + " pin_bottom";
-      if (this.editCode) {
-        var codeTextbox = document.getElementById('codeTextbox');
-        codeTextbox.className = codeTextbox.className + " pin_bottom";
-      }
     } else {
       visualizationColumn.style.minHeight = vizHeight + 'px';
       container.style.minHeight = vizHeight + 'px';
@@ -1937,9 +1942,9 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       } else {
         $(vizColumn).addClass('wireframeShare');
 
+        var div = document.createElement('div');
+        document.body.appendChild(div);
         if (!options.level.iframeEmbed) {
-          var div = document.createElement('div');
-          document.body.appendChild(div);
           ReactDOM.render(React.createElement(WireframeSendToPhone, {
             channelId: dashboard.project.getCurrentId(),
             appType: dashboard.project.getStandaloneApp()
@@ -2737,7 +2742,7 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
  */
 StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
-  const combined = Object.assign({
+  const combined = _.assign({
     localeDirection: this.localeDirection(),
     assetUrl: this.assetUrl,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
@@ -2745,10 +2750,12 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     hideSource: !!config.hideSource,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
+    pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
     instructionsMarkdown: level.markdownInstructions,
     instructionsInTopPane: config.showInstructionsInTopPane,
     puzzleNumber: level.puzzle_number,
-    stageTotal: level.stage_total
+    stageTotal: level.stage_total,
+    noVisualization: false
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));

@@ -191,30 +191,30 @@ Item.prototype.update = function () {
       if (this.activity === "roam") {
         candidate.score ++;
       } else if (this.activity === "chase") {
-        if (candidateY == this.gridY - 1 && spriteY < this.y - bufferDistance) {
+        if (candidateY === this.gridY - 1 && spriteY < this.y - bufferDistance) {
           candidate.score += 2;
-        } else if (candidateY == this.gridY + 1 && spriteY > this.y + bufferDistance) {
+        } else if (candidateY === this.gridY + 1 && spriteY > this.y + bufferDistance) {
           candidate.score += 2;
         } else {
           candidate.score += 1;
         }
 
-        if (candidateX == this.gridX - 1 && spriteX < this.x - bufferDistance) {
+        if (candidateX === this.gridX - 1 && spriteX < this.x - bufferDistance) {
           candidate.score ++;
-        } else if (candidateX == this.gridX + 1 && spriteX > this.x + bufferDistance) {
+        } else if (candidateX === this.gridX + 1 && spriteX > this.x + bufferDistance) {
           candidate.score ++;
         }
       } else if (this.activity === "flee") {
         candidate.score = 1;
-        if (candidateY == this.gridY - 1 && spriteY > this.y - bufferDistance) {
+        if (candidateY === this.gridY - 1 && spriteY > this.y - bufferDistance) {
           candidate.score ++;
-        } else if (candidateY == this.gridY + 1 && spriteY < this.y + bufferDistance) {
+        } else if (candidateY === this.gridY + 1 && spriteY < this.y + bufferDistance) {
           candidate.score ++;
         }
 
-        if (candidateX == this.gridX - 1 && spriteX > this.x - bufferDistance) {
+        if (candidateX === this.gridX - 1 && spriteX > this.x - bufferDistance) {
           candidate.score ++;
-        } else if (candidateX == this.gridX + 1 && spriteX < this.x + bufferDistance) {
+        } else if (candidateX === this.gridX + 1 && spriteX < this.x + bufferDistance) {
           candidate.score ++;
         }
       }

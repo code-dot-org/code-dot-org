@@ -31,7 +31,7 @@ At the root of all computer science is something called an algorithm.  The word 
 
 ### **Wrap-up** - 5  minutes
 
-4) [Flash Chat](#WrapUp) - What did we learn?
+4) [Flash Chat](#WrapUp) - What did we learn?  
 5) [Vocab Shmocab](#Shmocab)
 
 ### **Assessment** - 10  minutes

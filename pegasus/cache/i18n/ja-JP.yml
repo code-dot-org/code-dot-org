@@ -1398,3 +1398,11 @@
   infinity_shortcode: inf
   playlab_shortcode: "再生する"
   artist_shortcode: art
+  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.

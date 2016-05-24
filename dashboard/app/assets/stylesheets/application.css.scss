@@ -27,6 +27,9 @@
  *= require buttons
  *= require course-blocks
  *= require details-polyfill
+ *
+ *= require selectize
+ *= require selectize.default
  */
 
 // TODO: Move into code-studio.scss when it exists.
@@ -1678,6 +1681,9 @@ a.download-video {
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 1em;
+  &.outdated {
+    color: $light_gray;
+  }
   &:last-child {
     margin-bottom: 0;
   }

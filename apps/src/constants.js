@@ -54,6 +54,9 @@ exports.TestResults = {
   GENERIC_LINT_FAIL: -7,              // The program contains a lint error
   LOG_CONDITION_FAIL: -8,             // The program execution log did not pass a required condition
 
+  // Codes for unvalidated levels.
+  UNSUBMITTED_ATTEMPT: -50,           // Progress was saved without submitting for review, or was unsubmitted.
+
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,               // More than the ideal number of blocks were used.
   APP_SPECIFIC_ACCEPTABLE_FAIL: 21,       // Application-specific acceptable failure.

@@ -5,7 +5,9 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     view_options(no_footer: true)
     @workshop = ::Pd::Workshop.find_by_id params[:workshop_id]
 
-    if workshop_closed?
+    if @workshop.nil?
+      render_404
+    elsif workshop_closed?
       render :closed
     elsif workshop_full?
       render :full
@@ -24,8 +26,13 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   # POST /pd/workshops/1/enroll
   def create
     @workshop = ::Pd::Workshop.find_by_id params[:workshop_id]
+    if @workshop.nil?
+      render_404
+      return
+    end
+
     enrollment_email = enrollment_params[:email]
-    user = User.find_by_email enrollment_email
+    user = User.find_by_email_or_hashed_email enrollment_email
 
     # See if a previous enrollment exists for this email
     previous_enrollment = @workshop.enrollments.find_by(email: enrollment_email)
@@ -41,6 +48,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       if @enrollment.update enrollment_params
+        Pd::WorkshopMailer.teacher_enrollment_receipt(@enrollment).deliver_now
+        Pd::WorkshopMailer.organizer_enrollment_receipt(@enrollment).deliver_now
         redirect_to action: :show, code: @enrollment.code, controller: 'pd/workshop_enrollment'
       else
         render :new
@@ -66,6 +75,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     else
       @enroll_url = url_for action: :new, workshop_id: @enrollment.pd_workshop_id
       @enrollment.destroy!
+      Pd::WorkshopMailer.teacher_cancel_receipt(@enrollment).deliver_now
+      Pd::WorkshopMailer.organizer_cancel_receipt(@enrollment).deliver_now
     end
   end
 
@@ -89,7 +100,10 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       :name,
       :email,
       :email_confirmation,
-      :district_name,
+      :school_type,
+      :school_state,
+      :school_district_id,
+      :school_zip,
       :school
     )
   end
