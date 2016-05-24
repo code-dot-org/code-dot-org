@@ -59,6 +59,12 @@ level 'CSD U3 Variables random drawing exemplar'
 level 'CSD U3 Variables draw loop xy'
 level 'CSD U3 Variables draw loop rgb'
 
+stage 'Expressions'
+level 'CSD U3 Expressions STOP writing 10'
+level 'CSD U3 Expressions calculator'
+
+
+
 stage 'Counting with Variables'
 level 'CSD U3 Variables2 SFLP'
 level 'CSD U3 Counters expressions'

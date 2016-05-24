@@ -6,17 +6,6 @@
   "user_id": 155,
   "properties": {
     "skin": "gamelab",
-    "code_functions": {
-      "fill": null,
-      "noFill": null,
-      "stroke": null,
-      "strokeWeight": null,
-      "noStroke": null,
-      "ellipse": null,
-      "rect": null,
-      "comment": null,
-      "color": null
-    },
     "edit_code": true,
     "embed": "false",
     "is_k1": "false",
