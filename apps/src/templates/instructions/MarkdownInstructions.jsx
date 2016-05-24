@@ -23,25 +23,48 @@ const MarkdownInstructions = React.createClass({
   propTypes: {
     renderedMarkdown: React.PropTypes.string.isRequired,
     markdownClassicMargins: React.PropTypes.bool,
+    onResize: React.PropTypes.func,
     inTopPane: React.PropTypes.bool
   },
 
-  enableDetails_() {
+  /**
+   * Attach any necessary jQuery to our markdown
+   */
+  configuredMarkdown_() {
+    if (!this.props.onResize) {
+      return;
+    }
+
     // If we have the jQuery details plugin, enable its usage on any details
     // elements
     const detailsDOM = $(ReactDOM.findDOMNode(this)).find('details');
     if (detailsDOM.details) {
       detailsDOM.details();
+      detailsDOM.on({
+        'toggle.details.TopInstructions': () => {
+          this.props.onResize();
+        }
+      });
     }
+
+    // Parent needs to readjust some sizing after images have loaded
+    $(ReactDOM.findDOMNode(this)).find('img').load(this.props.onResize);
   },
 
   componentDidMount() {
-    this.enableDetails_();
+    this.configuredMarkdown_();
   },
 
   componentDidUpdate(prevProps) {
-    if (prevProps.renderedMardown !== this.props.renderedMarkdown) {
-      this.enableDetails_();
+    if (prevProps.renderedMarkdown !== this.props.renderedMarkdown) {
+      this.configuredMarkdown_();
+    }
+  },
+
+  componentWillUnmount() {
+    const detailsDOM = $(ReactDOM.findDOMNode(this)).find('details');
+    if (detailsDOM.details) {
+      detailsDOM.off('toggle.details.TopInstructions');
     }
   },
 
