@@ -335,13 +335,14 @@ FactoryGirl.define do
   end
 
   factory :peer_review do
-    user nil
+    submitter {create :user}
+    reviewer nil
     from_instructor false
-    script nil
-    level nil
-    level_source nil
+    script {create :script}
+    level {create :level}
+    level_source {create :level_source}
     data "MyText"
-    status 1
+    status nil
   end
 
   factory :plc_enrollment_unit_assignment, :class => 'Plc::EnrollmentUnitAssignment' do
@@ -364,10 +365,6 @@ FactoryGirl.define do
   factory :plc_learning_resource_task, parent: :plc_task, class: 'Plc::LearningResourceTask' do
     resource_url nil
     icon nil
-  end
-
-  factory :plc_script_completion_task, parent: :plc_task, class: 'Plc::ScriptCompletionTask' do
-    script_id nil
   end
 
   factory :plc_evaluation_answer, :class => 'Plc::EvaluationAnswer' do
