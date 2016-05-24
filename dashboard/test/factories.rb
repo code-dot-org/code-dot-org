@@ -367,10 +367,6 @@ FactoryGirl.define do
     icon nil
   end
 
-  factory :plc_script_completion_task, parent: :plc_task, class: 'Plc::ScriptCompletionTask' do
-    script_id nil
-  end
-
   factory :plc_evaluation_answer, :class => 'Plc::EvaluationAnswer' do
     answer "MyString"
     plc_evaluation_question nil

@@ -1,6 +1,0 @@
-.script-completion
-  %div= render(inline: @level.markdown_instructions, type: :md) if @level.markdown_instructions
-
-  = link_to Script.find_by_name(@level.script_name) do
-    Complete this Script to finish this level
-    %i.fa.fa-external-link
