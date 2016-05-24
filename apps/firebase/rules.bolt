@@ -124,9 +124,7 @@ path /v3/shared-tables/{channel_id}/data/tables/{table_name}/row_count {
   }
 }
 
-path /v3/shared-tables/{channel_id}/data/tables/{table_name}/row_count/{bucket} is Number {
-  //write() { isLoggedIn() && this != null }
-}
+path /v3/shared-tables/{channel_id}/data/tables/{table_name}/row_count/{bucket} is Number;
 
 // the key $record_id is the id of the record. Its value is the json-encoded
 // value of the record.
@@ -135,14 +133,8 @@ path /v3/shared-tables/{channel_id}/data/tables/{table_name}/{record_id} is Stri
     // Specify these rules in write(), because validate() is skipped when data is null
     // (e.g. records are removed).
     isLoggedIn() && isTargetId(this, record_id) && rowCountUpdated(this, prior(this)) &&
-    allRateLimitsUpdated(this.parent().parent().parent())
+    allRateLimitsUpdated(this.parent().parent().parent().parent())
   }
-}
-
-// table data
-
-path /v3/shared-tables/{channel_id}/data {
-  write() { isLoggedIn() }
 }
 
 // rate limit counters
@@ -185,7 +177,9 @@ type RateLimitData {
   used_ops: Boolean[]
 }
 
-path /v3/shared-tables/{channel_id}/data/limits is RateLimitDatas;
+path /v3/shared-tables/{channel_id}/data/limits is RateLimitDatas {
+  write() { isLoggedIn() && this != null }
+}
 
 path /v3/shared-tables/{channel_id}/data/limits/15 {
   validate() {
@@ -199,4 +193,4 @@ path /v3/shared-tables/{channel_id}/data/limits/60 {
   }
 }
 
-//path /v3/shared-tables/{channel_id}/limits/240 is RateLimit;
+//path /v3/shared-tables/{channel_id}/data/limits/240 { }
