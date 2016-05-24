@@ -140,21 +140,21 @@ var Grid = React.createClass({
    * save it to our parent.
    */
   endDrag: function (row, col) {
-    var from = this.state.dragStart;
+    var dragStart = this.state.dragStart;
     this.setState({
       dragging: false,
       dragStart: null,
       dragCurrent: null
     });
 
-    if (!from || from.row == row && from.col == col) {
+    if (!dragStart || dragStart.row === row && dragStart.col === col) {
       return;
     }
 
-    var top = Math.min(from.row, row),
-        left = Math.min(from.col, col),
-        bottom = Math.max(from.row, row),
-        right = Math.max(from.col, col);
+    var top = Math.min(dragStart.row, row),
+        left = Math.min(dragStart.col, col),
+        bottom = Math.max(dragStart.row, row),
+        right = Math.max(dragStart.col, col);
 
     var cells = this.props.cells.slice(top, bottom + 1).map((row) => {
       return row.slice(left, right + 1).map((cell) => {

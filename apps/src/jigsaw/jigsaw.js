@@ -166,12 +166,13 @@ Jigsaw.init = function (config) {
     }
   };
 
-  studioApp.setPageConstants(config);
+  studioApp.setPageConstants(config, {
+    noVisualization: true
+  });
 
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          noVisualization={true}
           visualizationColumn={<JigsawVisualizationColumn/>}
           onMount={onMount}
       />
@@ -228,7 +229,7 @@ Jigsaw.onPuzzleComplete = function () {
 
   // If we know they succeeded, mark levelComplete true
   // Note that we have not yet animated the succesful run
-  var levelComplete = (Jigsaw.result == ResultType.SUCCESS);
+  var levelComplete = (Jigsaw.result === ResultType.SUCCESS);
 
   Jigsaw.testResults = studioApp.getTestResults(levelComplete, {
     allowTopBlocks: true

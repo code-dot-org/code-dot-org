@@ -74,7 +74,7 @@ progress.populateProgress = function (scriptName, puzzlePage) {
           $($('.user-stats-block .level-' + levelId)[page]).attr('class', 'level-' + levelId + ' level_link ' + status);
 
           // If this is the current level, highlight it.
-          if (window.appOptions && appOptions.serverLevelId && levelId == appOptions.serverLevelId && puzzlePage-1 == page) {
+          if (window.appOptions && appOptions.serverLevelId && levelId === appOptions.serverLevelId && puzzlePage-1 === page) {
             $($('.user-stats-block .level-' + appOptions.serverLevelId)[puzzlePage-1]).parent().addClass('puzzle_outer_current');
           }
         }
@@ -91,7 +91,7 @@ progress.populateProgress = function (scriptName, puzzlePage) {
   });
 
   // Unless we already highlighted a specific page, highlight the current level.
-  if (puzzlePage == -1 && window.appOptions && appOptions.serverLevelId) {
+  if (puzzlePage === -1 && window.appOptions && appOptions.serverLevelId) {
     $('.level-' + appOptions.serverLevelId).parent().addClass('puzzle_outer_current');
   }
 };

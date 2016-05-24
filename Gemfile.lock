@@ -278,6 +278,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    mail_view (2.0.4)
+      tilt
     marked-rails (0.3.2.0)
     metaclass (0.0.4)
     mime-types (2.99.1)
@@ -453,6 +455,7 @@ GEM
     seamless_database_pool (1.0.14)
       activerecord (>= 3.0.20)
     securecompare (1.0.0)
+    selectize-rails (0.12.1)
     selenium-webdriver (2.45.0)
       childprocess (~> 0.5)
       multi_json (~> 1.0)
@@ -601,6 +604,7 @@ DEPENDENCIES
   konacha
   le (~> 2.2)
   lograge
+  mail_view
   marked-rails
   mini_magick
   minitest (~> 5.5)
@@ -645,6 +649,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   seamless_database_pool
+  selectize-rails
   selenium-webdriver (~> 2.45.0)
   sequel (~> 4.10.0)
   shotgun
