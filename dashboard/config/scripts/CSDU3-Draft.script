@@ -106,3 +106,11 @@ level 'U3 - Sprites and Mod - Free Play'
 stage 'Sprite Properties and Mod'
 stage 'Expressions and Reassignment'
 
+stage 'Conditionals and Keyboard Input'
+level 'CSD U3 Boolean Predict'
+level 'CSD U3 Boolean Modify'
+level 'CSD U3 Keypress Boolean'
+level 'CSD U3 Keypress Stop'
+level 'CSD U3 Keypress Watchers'
+level 'CSD U3 UP_ARROW'
+
