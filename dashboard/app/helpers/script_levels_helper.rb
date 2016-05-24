@@ -4,7 +4,9 @@ module ScriptLevelsHelper
 
     if has_another_level_to_go_to?(script_level)
       if script_level.end_of_stage?
-        response[:stage_changing] = {previous: {name: script_level.name}}
+        response[:stage_changing] = {previous: {name: script_level.name, position: script_level.stage.position}}
+        enabled = Gatekeeper.allows('endOfStageExperience', where: {script_name: script_level.script.name}, default: false)
+        response[:end_of_stage_experience] = enabled
       end
     else
       response[:message] = 'no more levels' # used by blockly to show a different feedback message on the last level
