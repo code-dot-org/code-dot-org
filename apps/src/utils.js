@@ -440,6 +440,8 @@ exports.ellipsify = function (inputText, maxLength) {
  *
  * Note: new properties in overrides are always added to end, not in-order.
  *
+ * TODO(bjordan): Replace with _.mergeWith when lodash upgraded to 4.x.
+ *
  * Note: may become default behavior of mergeDeep in future immutable versions.
  *   @see https://github.com/facebook/immutable-js/issues/406
  *
