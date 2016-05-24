@@ -27,6 +27,8 @@ module.exports = function (grunt) {
   /** @const {string} */
   var APP_TO_BUILD = grunt.option('app') || process.env.MOOC_APP;
 
+  var WATCH_APPLAB_API = grunt.option('watch_applab_api');
+
   /** @const {string[]} */
   var APPS = [
     'maze',
@@ -396,7 +398,13 @@ module.exports = function (grunt) {
   config.watch = {
     js: {
       files: ['src/**/*.{js,jsx}'],
-      tasks: ['newer:copy:src', 'exec:browserify', 'exec:applabapi', 'notify:browserify'],
+      tasks: [
+        'newer:copy:src',
+        'exec:browserify',
+        // only want to watch for applabapi if explicitly specified
+        WATCH_APPLAB_API ? 'exec:applabapi' : 'noop',
+        'notify:browserify'
+      ],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true,
