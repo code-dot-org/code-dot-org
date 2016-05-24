@@ -3,12 +3,10 @@ import {assert} from './configuredChai';
 require('require-globify');
 
 var $ = require('jquery');
-var Radium = require('radium');
 
 exports.setExternalGlobals = function () {
   window.$ = $;
   window.jQuery = $;
-  window.Radium = Radium;
 
   window.dashboard = $.extend(window.dashboard, {
     i18n: {
