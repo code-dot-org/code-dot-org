@@ -23,17 +23,10 @@ social:
 
   %div{:id=>'us_content'}
 
-    - if request.locale == 'en-US'
-      %div{style: "background-color:#f3f3f3; border-radius:4px; padding:20px; clear:both"}
-        %h3{style: "margin-top: 0px"} Every student in every school should have the opportunity to learn computer science. Join over 100,000 Americans&mdash;including CEOs, governors, and education leaders&mdash;to ask Congress to fund computer science in grades K-12.
-        %a{:href=>'http://bit.ly/computersciencepetition', target: '_blank'}
-          %button Sign the petition
-      %br/
-    - else
-      #petition-section.section.clear
-        = view :petition
-      :javascript
-        petitionIncluded = true;
+    #petition-section.section.clear
+      = view :petition
+    :javascript
+      petitionIncluded = true;
 
     #interactive-map.section.clear
       %h2{:style=>"margin-top: 0px"} Choose a State
