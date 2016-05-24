@@ -10,14 +10,16 @@ nav: about_nav
 - **Curriculum**
  	- [2016 Summer Curriculum Writing Cohort](#summercohort)
 - **Finance and Administration**
- 	- [Financial Analyst](#finance)
+ 	- [Controller](#controller)
 - **Fundraising**
- 	- [Grant Writer (Part time)](#grant)
+ 	- [Grant Writer](#grant)
+- **Marketing**
+ 	- [Marketing Associate](#market)
 - **Outreach**
  	- [District Manager - East Coast locations](#dcdm)
 - **Product**
 	- [Senior Backend Engineer / Infrastructure Lead](#backend)
-	- [UX / Visual Designer](#design)
+	- [UX / Visual Designer (Part time)](#design)
 - **Professional Learning & Community**
 	- [Training and Development Specialist](#train)
 
@@ -66,7 +68,7 @@ To apply, please email resume, cover letter, and/or LinkedIn profile to <a href=
 Please include lesson plan samples that are your original work, and highlight relevant experience designing, developing, or writing implement curricular materials. 
 
 
-## <a name="finance"href="#finance">Financial Analyst (Seattle, WA)</a>
+## <a name="Controller"href="#controller">Controller (Seattle, WA)</a>
 
 **Job Summary:**
 
@@ -110,7 +112,7 @@ To apply, please email resume, cover letter, and/or LinkedIn profile to <a href=
 
 The Grant Writer plays an important role in increasing revenue for Code.org, with a focus on grant writing, and stewardship of existing Foundation and Corporate partnerships. The candidate selected for this role will develop compelling proposals that will result in funding for the immediate and long-term goals of Code.org, and also help strengthen existing relationships with the corporate and foundation sector. 
 
-This is a part-time position. Responsibilities of the position include:
+Responsibilities of the position include:
 
 - Developing and writing letters of inquiry, grant proposals and reports to foundations, corporations, and other grant-making organizations; persuasively communicating the organization’s mission and programs to potential funders
 - Cultivating and growing support from existing Foundation and corporate donors, including managing the Code.org Employee Engagement program to build corporate pipeline
@@ -140,6 +142,37 @@ Please DO NOT apply for this position if you do not have experience in writing s
 
 Interested candidates should email a resume, cover letter, and grant writing sample (funded) outlining how your skills and experience meet the qualifications of the position, to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+
+## <a name="market"href="#market">Marketing Associate (Seattle, WA)</a>
+**Job Summary:**
+
+The Hour of Code initiative is a yearly campaign that encourages students to try computer science during Computer Science Education Week (Dec. 5-11). Since 2013, it has reached over 200M students worldwide in 180+ countries. Supporters of the campaign include President Obama, Sheryl Sandberg, Bill Gates, Susan Wojcicki, Ashton Kutcher and many more. Code.org is recruiting a temporary staff member to assist the Marketing team in the planning and execution of December’s Hour of Code campaign. The Marketing Associate will make essential contributions to a global and highly visible marketing effort, supporting social media and email outreach, live events, partnership cultivation, and more. 
+
+This is a full time, short term (June-December) contract based in our Seattle office. 
+
+Duties of this role include: 
+
+- Assisting overall marketing efforts for the Hour of Code campaign
+- Managing partner commitments
+- Helping plan special events and maintain a database of key Hour of Code events
+- Supporting our community and field questions about the Hour of Code in a timely manner
+- Tracking social media and press coverage related to the campaign 
+- Spearheading special projects (perform research, prepare documentation, develop templates, etc.)
+
+**Skills and Qualifications:**
+
+We are looking for a self-starter, experienced in communications and event planning, who can multi-task, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented, tech-savvy, and able to swiftly prioritize duties as needed on multiple ongoing projects. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
+
+The ideal candidate has the following qualifications:
+
+- Degree in Marketing, Journalism, Communications or related field 
+- Excellent writing skills, with an interest in social media platforms and trends
+- Demonstrated experience with Google Drive (spreadsheets), Google Hangouts, Skype 
+- Experience with customer service, administration, or event planning preferred
+- Passion for technology and inspiring new students to try computer science
+
+
+To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="dcdm"href="#dcdm"> District Manager - East Coast locations (Boston, New York, Washington, D.C., surrounding areas)</a>
@@ -212,6 +245,7 @@ The ideal candidate has the following qualifications:
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+
 ## <a name="design" href="#design">UX / Visual Designer (Seattle, WA)</a>
 **Job Summary:**
 
@@ -227,7 +261,7 @@ Areas of responsibility include:
 
 You will also need to be able to successfully communicate conceptual ideas, detailed design, and design rationale, both verbally and visually.
 
-**Skills and Qualifications:**
+ **Skills and Experience:**
 
 The ideal candidate has strong, flexible visual design skills and experience in app and/or web design. We are looking for a self-starter who is passionate about improving education.  
 
@@ -271,7 +305,7 @@ Duties of this role include:
 - Develop tactics on improving facilitator practice for adult learning 
 - Track and recommend facilitator program content issues to the Teacher Experience Program Manager
 
-**Skills and Qualifications:**
+ **Skills and Experience:**
 
 We are looking for a thought leader in the facilitation space who is highly respected by K-12 educators, and has expertise in coaching others to deliver high quality facilitation. 
 
@@ -296,15 +330,15 @@ Code.org is a non-profit organization dedicated to expanding participation in co
 
 We believe computer science and computer programming should be part of the core curriculum in education, alongside other science, technology, engineering, and mathematics (STEM) courses, such as biology, physics, chemistry and algebra.
 
-**Working for us**
+**Working for Code.org**
 
-Code.org offers a comprehensive employee benefits package that includes:
+We offer a comprehensive employee benefits package that includes:
 
 - Competitive Salary
 - Technology subsidy consistent with our Bring Your Own Device environment 
 - Flexible, engaging working environment
 - Monthly unlimited ORCA pass or equal value transit subsidy; located near public transit hub in Seattle, WA
-- Paid time off: 3 weeks annually, sick leave, and the 2 weeks that include Christmas and New Years.
+- Paid time off: 3 weeks vacation annually, sick leave, and 'winter break' office closure the two weeks that include Christmas and New Years.
 - Medical, dental and vision premiums paid at 100% for FT positions and their dependents
 - Option to participate in 403b retirement savings plan
 - The opportunity to help students learn better and change the face of computer science

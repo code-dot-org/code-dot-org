@@ -94,6 +94,10 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
         properType = (typeof varValue === 'string') ||
           (typeof varValue === 'number') || (typeof varValue === 'boolean');
         break;
+      case 'pinid':
+        properType = (typeof varValue === 'string') ||
+          (typeof varValue === 'number');
+        break;
       case 'number':
         properType = (typeof varValue === 'number' ||
           (typeof varValue === 'string' && !isNaN(varValue)));
@@ -178,7 +182,7 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
     };
     var existsOutsideApplab = !elementUtils.isIdAvailable(id, options);
 
-    var valid = !existsOutsideApplab && (shouldExist == existsInApplab);
+    var valid = !existsOutsideApplab && (shouldExist === existsInApplab);
 
     if (!valid) {
       var errorString = "";
@@ -202,7 +206,7 @@ applabCommands.setScreen = function (opts) {
   apiValidateDomIdExistence(opts, 'setScreen', 'screenId', opts.screenId, true);
   var element = document.getElementById(opts.screenId);
   var divApplab = document.getElementById('divApplab');
-  if (!element || (element.parentNode != divApplab)) {
+  if (!element || (element.parentNode !== divApplab)) {
     return;
   }
 
@@ -1108,7 +1112,7 @@ applabCommands.deleteElement = function (opts) {
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     // Special check to see if the active canvas is being deleted
-    if (div == Applab.activeCanvas || div.contains(Applab.activeCanvas)) {
+    if (div === Applab.activeCanvas || div.contains(Applab.activeCanvas)) {
       delete Applab.activeCanvas;
     }
     return Boolean(div.parentElement.removeChild(div));
@@ -1276,7 +1280,7 @@ applabCommands.getYPosition = function (opts) {
 
 applabCommands.onEventFired = function (opts, e) {
   var funcArgs = opts.extraArgs;
-  if (typeof e != 'undefined') {
+  if (typeof e !== 'undefined') {
     eventSandboxer.setTransformFromElement(document.getElementById('divApplab'));
     var applabEvent = eventSandboxer.sandboxEvent(e);
 
@@ -1793,6 +1797,47 @@ applabCommands.drawChartFromRecords = function (opts) {
       opts.columns,
       opts.options
   ).then(onSuccess, onError);
+};
+
+applabCommands.pinMode = function (opts) {
+  apiValidateType(opts, 'pinMode', 'pin', opts.pin, 'pinid');
+  apiValidateType(opts, 'pinMode', 'mode', opts.mode, 'string');
+
+  const modeStringToConstant = {
+    input: 0,
+    output: 1,
+    analog: 2,
+    pwm: 3,
+    servo: 4
+  };
+
+  Applab.makerlabController.pinMode(opts.pin, modeStringToConstant[opts.mode]);
+};
+
+applabCommands.digitalWrite = function (opts) {
+  apiValidateType(opts, 'digitalWrite', 'pin', opts.pin, 'pinid');
+  apiValidateTypeAndRange(opts, 'digitalWrite', 'value', opts.value, 'number', 0, 1);
+
+  Applab.makerlabController.digitalWrite(opts.pin, opts.value);
+};
+
+applabCommands.digitalRead = function (opts) {
+  apiValidateType(opts, 'digitalRead', 'pin', opts.pin, 'pinid');
+
+  return Applab.makerlabController.digitalRead(opts.pin, opts.callback);
+};
+
+applabCommands.analogWrite = function (opts) {
+  apiValidateType(opts, 'analogWrite', 'pin', opts.pin, 'pinid');
+  apiValidateTypeAndRange(opts, 'analogWrite', 'value', opts.value, 'number', 0, 255);
+
+  Applab.makerlabController.analogWrite(opts.pin, opts.value);
+};
+
+applabCommands.analogRead = function (opts) {
+  apiValidateType(opts, 'analogRead', 'pin', opts.pin, 'pinid');
+
+  return Applab.makerlabController.analogRead(opts.pin, opts.callback);
 };
 
 /**

@@ -7,6 +7,14 @@ var CourseProgress = require('./components/progress/course_progress');
 var progress = module.exports;
 
 /**
+ * See ActivityConstants.
+ */
+const MINIMUM_PASS_RESULT = 20;
+const MINIMUM_OPTIMAL_RESULT = 30;
+const REVIEW_REJECTED_RESULT = 1500;
+const REVIEW_ACCEPTED_RESULT = 2000;
+
+/**
  * See ApplicationHelper#activity_css_class.
  * @param result
  * @return {string}
@@ -15,10 +23,10 @@ progress.activityCssClass = function (result) {
   if (!result) {
     return 'not_tried';
   }
-  if (result >= 30) {
+  if (result >= MINIMUM_OPTIMAL_RESULT) {
     return 'perfect';
   }
-  if (result >= 20) {
+  if (result >= MINIMUM_PASS_RESULT) {
     return 'passed';
   }
   return 'attempted';
@@ -56,9 +64,19 @@ progress.populateProgress = function (scriptName, puzzlePage) {
     // Merge progress from server (loaded via AJAX)
     var serverProgress = data.levels || {};
     Object.keys(serverProgress).forEach(function (levelId) {
-      // Only the server can speak to whether a level is submitted.  If it is,
-      // we show the submitted styling.
-      if (serverProgress[levelId].submitted) {
+      // Only the server can speak to whether a level is submitted/accepted/rejected.  If it is,
+      // apply this styling but don't cache locally.
+      if (serverProgress[levelId].result > clientState.MAXIMUM_CACHABLE_RESULT) {
+        var status;
+        if (serverProgress[levelId].result === REVIEW_REJECTED_RESULT) {
+          status = 'review_rejected';
+        }
+        if (serverProgress[levelId].result === REVIEW_ACCEPTED_RESULT) {
+          status = 'review_accepted';
+        }
+        // Clear the existing class and replace
+        $('.level-' + levelId).attr('class', `level_link ${status}`);
+      } else if (serverProgress[levelId].submitted) {
         // Clear the existing class and replace
         $('.level-' + levelId).attr('class', 'level_link submitted');
       } else if (serverProgress[levelId].pages_completed) {
@@ -74,7 +92,7 @@ progress.populateProgress = function (scriptName, puzzlePage) {
           $($('.user-stats-block .level-' + levelId)[page]).attr('class', 'level-' + levelId + ' level_link ' + status);
 
           // If this is the current level, highlight it.
-          if (window.appOptions && appOptions.serverLevelId && levelId == appOptions.serverLevelId && puzzlePage-1 == page) {
+          if (window.appOptions && appOptions.serverLevelId && levelId === appOptions.serverLevelId && puzzlePage-1 === page) {
             $($('.user-stats-block .level-' + appOptions.serverLevelId)[puzzlePage-1]).parent().addClass('puzzle_outer_current');
           }
         }
@@ -91,7 +109,7 @@ progress.populateProgress = function (scriptName, puzzlePage) {
   });
 
   // Unless we already highlighted a specific page, highlight the current level.
-  if (puzzlePage == -1 && window.appOptions && appOptions.serverLevelId) {
+  if (puzzlePage === -1 && window.appOptions && appOptions.serverLevelId) {
     $('.level-' + appOptions.serverLevelId).parent().addClass('puzzle_outer_current');
   }
 };
@@ -121,7 +139,15 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
     }
 
     var status;
-    if (serverProgress && serverProgress[level.id] && serverProgress[level.id].submitted) {
+    var result = (serverProgress[level.id] || {}).result;
+    if (serverProgress && result > clientState.MAXIMUM_CACHABLE_RESULT) {
+      if (result === REVIEW_REJECTED_RESULT) {
+        status = 'review_rejected';
+      }
+      if (result === REVIEW_ACCEPTED_RESULT) {
+        status = 'review_accepted';
+      }
+    } else if (serverProgress && serverProgress[level.id] && serverProgress[level.id].submitted) {
       status = "submitted";
     } else if (serverProgress && serverProgress[level.id] && serverProgress[level.id].pages_completed) {
       // The dot is considered perfect if the page is considered complete.
@@ -129,10 +155,10 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
       status = pageCompleted ? "perfect" : "attempted";
     } else if (clientState.queryParams('user_id')) {
       // Show server progress only (the student's progress)
-      status = progress.activityCssClass((serverProgress[level.id] || {}).result);
+      status = progress.activityCssClass(result);
     } else {
       // Merge server progress with local progress
-      status = progress.mergedActivityCssClass((serverProgress[level.id] || {}).result, clientProgress[level.id]);
+      status = progress.mergedActivityCssClass(result, clientProgress[level.id]);
     }
 
     var href = level.url + location.search;

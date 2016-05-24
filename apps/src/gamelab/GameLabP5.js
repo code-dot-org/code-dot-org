@@ -515,6 +515,8 @@ GameLabP5.prototype.startExecution = function () {
           }
         });
 
+        p5obj.angleMode(p5obj.DEGREES);
+
         if (!this.onPreload()) {
           // If onPreload() returns false, it means that the preload phase has
           // not completed, so we need to grab increment p5's preloadCount by
@@ -631,7 +633,12 @@ GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
     'elt',
     'canvas',
     'parent',
-    'p5'
+    'p5',
+    'downloadFile',
+    'writeFile',
+    'httpGet',
+    'httpPost',
+    'httpDo',
   ];
 };
 
@@ -673,11 +680,14 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
 
   var propList = {};
   var blockedProps = this.getCustomMarshalBlockedProperties();
+  var globalCustomMarshalProps = this.getCustomMarshalGlobalProperties();
 
   // Include every property on the p5 instance in the global property list
-  // except those on the custom marshal blocked list:
+  // except those on the custom marshal lists:
   for (var prop in this.p5) {
-    if (-1 === blockedProps.indexOf(prop)) {
+    if (-1 === blockedProps.indexOf(prop) &&
+        -1 === this.p5specialFunctions.indexOf(prop) &&
+        !globalCustomMarshalProps[prop]) {
       propList[prop] = [this.p5[prop], this.p5];
     }
   }
@@ -711,7 +721,7 @@ GameLabP5.prototype.afterSetupComplete = function () {
  * Given a collection of animation metadata for the project, preload each
  * animation, loading it onto the p5 object for use by the setAnimation method
  * later.
- * @param {Object[]} animationMetadata
+ * @param {AnimationMetadata[]} animationMetadata
  */
 GameLabP5.prototype.preloadAnimations = function (animationMetadata) {
   // Preload project animations:

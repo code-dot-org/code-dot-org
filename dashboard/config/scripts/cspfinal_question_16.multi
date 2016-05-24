@@ -1,7 +1,7 @@
 name 'CSPFinal_Question_16'
-wrong 'It displays the sum of a and b (a + b)'
-right 'It displays the difference between a and b (a - b)'
-wrong 'It displays the product of a and b (a * b)'
+wrong 'It displays the sum of a and b '
+right 'It displays the difference between a and b'
+wrong 'It displays the product of a and b'
 wrong 'It runs in an infinite loop'
 
 markdown <<MARKDOWN
@@ -11,6 +11,8 @@ A flowchart is a way to visually represent an algorithm.  The flowchart below us
 
 ![](https://images.code.org/fafff85da964682ff46e922368fddeaf-image-1463328999262.png)
 
-Which of the following statements best describes the behavior of the algorithm depicted in the flowchart?  Assume `a` always begins greater than `b`.
+Which of the following statements best describes the behavior of the algorithm depicted in the flowchart?  
+
+*Assume `a` always starts greater than `b`.*
 
 MARKDOWN
