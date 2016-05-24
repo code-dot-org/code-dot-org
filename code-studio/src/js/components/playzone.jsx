@@ -7,24 +7,30 @@ var color = require('@cdo/apps/color');
 export class PlayZone extends React.Component {
   constructor(props) {
     super(props);
+
+    // requiring here because locale references window.blockly, which is
+    // defined during the pageload process but not necessarily before
+    // code-studio is.
+    this.locale = require('@cdo/apps/locale');
+
     this.links = [{
       href: "/projects/artist/new",
       img: "/shared/images/courses/logo_tall_artist.jpg",
-      title: "New Drawing",
+      title: this.locale.playzoneArtistTitle(),
       className: "artist",
-      description: "Draw cool pictures and designs with the Artist!"
+      description: this.locale.playzoneArtistDescription(),
     }, {
       href: "/projects/playlab/new",
       img: "/shared/images/courses/logo_tall_playlab.jpg",
-      title: "New App",
+      title: this.locale.playzonePlaylabTitle(),
       className: "playlab",
-      description: "Create a story or make a game with Play Lab!"
+      description: this.locale.playzonePlaylabDescription(),
     }, {
       href: "/projects",
       img: "/shared/images/courses/logo_tall_applab.jpg",
-      title: "Open a project",
+      title: this.locale.playzoneProjectsTitle(),
       className: "projects",
-      description: "Revisit one of your existing projects."
+      description: this.locale.playzoneProjectsDescription(),
     }];
 
     this.styles = {
@@ -39,8 +45,8 @@ export class PlayZone extends React.Component {
   render() {
     return (
       <div style={this.styles.container}>
-        <h1 style={this.styles.primaryHeader}>{`Congratulations! You finished ${this.props.stageName}!`}</h1>
-        <h4 style={this.styles.secondaryHeader}>Ask your teacher what to do next</h4>
+        <h1 style={this.styles.primaryHeader}>{this.locale.playzonePrimaryHeader({stageName: this.props.stageName})}</h1>
+        <h4 style={this.styles.secondaryHeader}>{this.locale.playzoneSecondaryHeader()}</h4>
         <div className="center" style={this.styles.courseblockContainer}>{this.links.map(link =>
           <div key={link.className} className="courseblock-noaction courseblock-span3 courseblock-tall">
             <a href={link.href}>
@@ -56,7 +62,7 @@ export class PlayZone extends React.Component {
         )}</div>
         <div className="farSide">
           <button id="ok-button" onClick={this.props.onContinue} style={this.styles.continueButton}>
-            Go on to the next Stage
+            {this.locale.playzoneContinueButton()}
           </button>
         </div>
       </div>
