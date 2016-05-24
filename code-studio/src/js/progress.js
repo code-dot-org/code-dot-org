@@ -228,24 +228,35 @@ function loadProgress(scriptData) {
 
   let store = createStore((state = [], action) => {
     if (action.type === 'MERGE_PROGRESS') {
+      let newProgress = {};
       return {
         display: state.display,
+        progress: newProgress,
         stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
-          let best = clientState.mergeActivityResult(level.best_result, action.progress[level.uid]);
-          let status = progress.activityCssClass(best);
-          return Object.assign({}, level, {best_result: best, status: status});
+          let id = level.uid || level.id;
+          let result = clientState.mergeActivityResult(state.progress[id], action.progress[id]);
+          if (result) {
+            newProgress[id] = result;
+          }
+
+          return Object.assign({}, level, {status: progress.activityCssClass(result)});
         })}))
       };
     }
     return state;
   }, {
     display: teacherCourse ? 'list' : 'dots',
+    progress: {},
     stages: scriptData.stages
   });
 
   store.dispatch({
     type: 'MERGE_PROGRESS',
     progress: clientState.allLevelsProgress()[scriptData.name] || {}
+  });
+
+  store.subscribe(() => {
+    clientState.batchTrackProgress(scriptData.name, store.getState().progress);
   });
 
   return store;
