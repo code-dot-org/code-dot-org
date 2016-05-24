@@ -1,3 +1,4 @@
+var React = require('react');
 var AssetManager = require('./AssetManager');
 var color = require('../color.js');
 var IconLibrary = require('./IconLibrary');

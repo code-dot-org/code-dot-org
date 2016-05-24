@@ -1,5 +1,6 @@
 /*jshint scripturl:true*/
 
+var React = require('react');
 window.dashboard = window.dashboard || {};
 
 var MenuState = {

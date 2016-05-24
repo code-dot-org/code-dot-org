@@ -1,9 +1,11 @@
-/* global React google */
+/* global google */
 
 /*
  Form for creating / editing workshop details.
  */
 
+var React = require('react');
+var ReactDOM = require('react-dom');
 var _ = require('lodash');
 var moment = require('moment');
 var SessionListFormPart = require('./session_list_form_part');

@@ -1,5 +1,7 @@
 /* globals dashboard, appOptions  */
 
+var React = require('react');
+var ReactDOM = require('react-dom');
 var clientState = require('./clientState');
 var StageProgress = require('./components/progress/stage_progress');
 var CourseProgress = require('./components/progress/course_progress');
