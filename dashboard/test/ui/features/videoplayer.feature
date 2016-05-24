@@ -19,10 +19,7 @@ Scenario: Flash fallback player gets injected in Chrome (assuming Flash is avail
 
 # no_ie because YouTube's recent change to their player is causing our
 #   fallback detection to get a false negative
-# skip because SauceLabs is currently blocking YouTube content, causing
-#   this to consistently fail. TODO @elijah: unskip when they update
 @no_ie
-@skip
 @no_mobile
 Scenario: Normal player
   Given I am on "http://learn.code.org/flappy/1"
