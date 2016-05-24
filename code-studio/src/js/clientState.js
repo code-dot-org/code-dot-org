@@ -139,7 +139,7 @@ clientState.trackProgress = function (result, lines, testResult, scriptName, lev
 clientState.batchTrackProgress = function (scriptName, progress) {
   var data = {};
   for (let level of Object.keys(progress)) {
-    if (progress[level] <= clientState.MAXIMUM_CACHABLE_RESULT) {
+    if (progress[level] && progress[level] <= clientState.MAXIMUM_CACHABLE_RESULT) {
       data[level] = progress[level];
     }
   }
