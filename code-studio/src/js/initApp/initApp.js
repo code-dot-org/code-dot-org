@@ -103,11 +103,8 @@ window.apps = {
           ReactDOM.render(<PlayZone {...props} />, body);
           var dialog = new Dialog({
             body: body,
+            width: 800,
             redirect : lastServerResponse.nextRedirect
-          });
-          dialog.div.css({
-            width: "800px",
-            marginLeft: "-400px"
           });
           dialog.show();
         } else if (lastServerResponse.nextRedirect) {
