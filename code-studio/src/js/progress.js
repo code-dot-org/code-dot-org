@@ -1,11 +1,12 @@
 /* globals dashboard, appOptions  */
 
+import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import _ from 'lodash';
 import clientState from './clientState';
-import StageProgress from './components/progress/stage_progress';
-import CourseProgress from './components/progress/course_progress';
+import StageProgress from './components/progress/stage_progress.jsx';
+import CourseProgress from './components/progress/course_progress.jsx';
 
 var progress = module.exports;
 
@@ -169,7 +170,7 @@ progress.renderCourseProgress = function (scriptData) {
   var store = loadProgress(scriptData);
   var mountPoint = document.createElement('div');
 
-  $.ajax('/api/user_progress/' + scriptData.name).done(function (data) {
+  $.ajax('/api/user_progress/' + scriptData.name).done(data => {
     data = data || {};
 
     // Show lesson plan links if teacher
@@ -181,9 +182,7 @@ progress.renderCourseProgress = function (scriptData) {
     if (data.levels) {
       store.dispatch({
         type: 'MERGE_PROGRESS',
-        progress: _.mapValues(data.levels, level => {
-          return level.submitted ? 1000 : level.result;
-        })
+        progress: _.mapValues(data.levels, level => level.submitted ? 1000 : level.result)
       });
     }
   });

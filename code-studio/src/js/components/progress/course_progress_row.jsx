@@ -1,7 +1,8 @@
-/* global React, dashboard */
+/* global dashboard */
 
-import {STAGE_TYPE} from './types';
-import StageProgress from './stage_progress';
+import React from 'react';
+import { STAGE_TYPE } from './types';
+import StageProgress from './stage_progress.jsx';
 
 /**
  * Stage progress component used in level header and course overview.
