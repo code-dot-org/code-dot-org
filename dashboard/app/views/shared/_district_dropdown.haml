@@ -9,7 +9,7 @@
     .form-group
       .question Select school type
       %select#school-type.form-control{name: "#{form_name}[school_type]", type: "select", required: true}
-        %option{value: "", selected: true}
+        %option{value: "", selected: true, disabled: true}
         %option{value: "charter"} Charter
         %option{value: "private"} Private
         %option{value: "public"} Public
@@ -22,7 +22,7 @@
     .form-group{style: "display: none; margin-top: 20px;"}
       .question Select state
       %select#school-state.form-control{name: "#{form_name}[school_state]", type: "select", required: false}
-        %option{value: "", selected: true}
+        %option{value: "", selected: true, disabled: true}
         - get_all_states_with_dc.each do |state_abbr, state_name|
           %option{value: state_abbr}= state_name
         %option{value: "other"} Other

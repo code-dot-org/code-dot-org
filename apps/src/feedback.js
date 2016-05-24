@@ -221,7 +221,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   // Update the background color if it is set to be in special design.
   if (this.useSpecialFeedbackDesign_(options)) {
-    if (options.response.design == "white_background") {
+    if (options.response.design === "white_background") {
       document.getElementById('feedback-dialog')
           .className += " white-background";
       document.getElementById('feedback-content')
@@ -381,7 +381,7 @@ FeedbackUtils.prototype.getNumBlocksUsed = function () {
     // quick and dirty method to count non-blank lines that don't start with //
     var lines = this.getGeneratedCodeString_().split("\n");
     for (i = 0; i < lines.length; i++) {
-      if ((lines[i].length > 1) && (lines[i][0] != '/' || lines[i][1] != '/')) {
+      if ((lines[i].length > 1) && (lines[i][0] !== '/' || lines[i][1] !== '/')) {
         codeLines++;
       }
     }
@@ -402,7 +402,7 @@ FeedbackUtils.prototype.getNumCountableBlocks = function () {
     // quick and dirty method to count non-blank lines that don't start with //
     var lines = this.getGeneratedCodeString_().split("\n");
     for (i = 0; i < lines.length; i++) {
-      if ((lines[i].length > 1) && (lines[i][0] != '/' || lines[i][1] != '/')) {
+      if ((lines[i].length > 1) && (lines[i][0] !== '/' || lines[i][1] !== '/')) {
         codeLines++;
       }
     }
@@ -1423,7 +1423,7 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
 
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function (e) {
-    if (e.keyCode == KeyCodes.ENTER || e.keyCode == KeyCodes.SPACE) {
+    if (e.keyCode === KeyCodes.ENTER || e.keyCode === KeyCodes.SPACE) {
       // Simulate a 'click':
       var event = new MouseEvent('click', {
         view: window,

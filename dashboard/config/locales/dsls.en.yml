@@ -96,6 +96,7 @@ en:
         description here: description here
       CSD U3 - Sprites - Stop: {}
       CSD U3 Counters match outputs: {}
+      CSD U3 Expressions STOP writing 10: {}
       CSD U3 Keypress Stop: {}
       CSD U3 Variables Reassign Predict No Response: {}
       CSD U3 Variables STOP misconceptions: {}
@@ -289,6 +290,9 @@ en:
       CSPPD3-u5 what is a challenge: {}
       CSPPD3-u5 what is data: {}
       CSPStudentLessonPlanTemplate:
+        description here: description here
+        title: title
+      CSP_Final_instructions:
         description here: description here
         title: title
       CSP_U4_rawMovieData:
@@ -1774,6 +1778,8 @@ en:
       name:
         CSP Culminating Assessment: {}
         PS U3 Assessment1 new: {}
+        Part 1 - CSP Culminating Assessment: {}
+        Part 2 - CSP Culminating Assessment: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
     match:

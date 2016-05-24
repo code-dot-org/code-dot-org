@@ -1,5 +1,5 @@
 /** @file Crosshair and guides over visualization */
-
+import React from 'react';
 export const CROSSHAIR_MARGIN = 6;
 
 /**
@@ -7,7 +7,7 @@ export const CROSSHAIR_MARGIN = 6;
  * Should be rendered inside a VisualizationOverlay.
  * @constructor
  */
-let CrosshairOverlay = React.createClass({
+const CrosshairOverlay = React.createClass({
   propTypes: {
     // width, height, mouseX and mouseY are given in app-space, not screen-space
     width: React.PropTypes.number,
