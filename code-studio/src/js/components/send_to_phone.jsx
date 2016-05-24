@@ -98,7 +98,7 @@ var SendToPhone = React.createClass({
   },
 
   render: function () {
-    var styles = $.extend({}, baseStyles, this.props.styles);
+    var styles = Object.assign({}, baseStyles, this.props.styles);
     return (
       <div>
         <label style={styles.label} htmlFor="phone">Enter a US phone number:</label>
