@@ -68,10 +68,10 @@ progress.populateProgress = function (scriptName, puzzlePage) {
       // apply this styling but don't cache locally.
       if (serverProgress[levelId].result > clientState.MAXIMUM_CACHABLE_RESULT) {
         var status;
-        if (serverProgress[levelId].result == REVIEW_REJECTED_RESULT) {
+        if (serverProgress[levelId].result === REVIEW_REJECTED_RESULT) {
           status = 'review_rejected';
         }
-        if (serverProgress[levelId].result == REVIEW_ACCEPTED_RESULT) {
+        if (serverProgress[levelId].result === REVIEW_ACCEPTED_RESULT) {
           status = 'review_accepted';
         }
         // Clear the existing class and replace
@@ -141,10 +141,10 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
     var status;
     var result = (serverProgress[level.id] || {}).result;
     if (serverProgress && result > clientState.MAXIMUM_CACHABLE_RESULT) {
-      if (result == REVIEW_REJECTED_RESULT) {
+      if (result === REVIEW_REJECTED_RESULT) {
         status = 'review_rejected';
       }
-      if (result == REVIEW_ACCEPTED_RESULT) {
+      if (result === REVIEW_ACCEPTED_RESULT) {
         status = 'review_accepted';
       }
     } else if (serverProgress && serverProgress[level.id] && serverProgress[level.id].submitted) {
