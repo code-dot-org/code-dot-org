@@ -56,6 +56,7 @@ levels.custom = utils.extend(levels.sandbox, {
     "camera.x": null,
     "camera.y": null,
     "camera.zoom": null,
+    "comment_GameLab": null,
 
     // Sprites
     "var sprite = createSprite": null,
@@ -94,6 +95,7 @@ levels.custom = utils.extend(levels.sandbox, {
     "velocityX": null,
     "velocityY": null,
     "visible": null,
+    "comment_Sprites": null,
 
     // Groups
     "var group = createGroup": null,
@@ -130,6 +132,7 @@ levels.custom = utils.extend(levels.sandbox, {
     "setVelocityYEach": null,
     "setVisibleEach": null,
     "setWidthEach": null,
+    "comment_Groups": null,
 
     // Drawing
     "background": null,
@@ -150,12 +153,14 @@ levels.custom = utils.extend(levels.sandbox, {
     "textAlign": null,
     "textFont": null,
     "textSize": null,
+    "comment_Drawing": null,
 
     // Control
     "forLoop_i_0_4": null,
     "ifBlock": null,
     "ifElseBlock": null,
     "whileBlock": null,
+    "comment_Control": null,
 
     // Math
     "addOperator": null,
@@ -177,11 +182,13 @@ levels.custom = utils.extend(levels.sandbox, {
     "mathMax": null,
     "mathMin": null,
     "mathRandom": null,
+    "comment_Math": null,
 
     // Variables
     "declareAssign_x": null,
     "declareNoAssign_x": null,
     "assign_x": null,
+    "console.log": null,
     "declareAssign_str_hello_world": null,
     "substring": null,
     "indexOf": null,
@@ -191,13 +198,15 @@ levels.custom = utils.extend(levels.sandbox, {
     "toLowerCase": null,
     "declareAssign_list_abd": null,
     "listLength": null,
+    "comment_Variables": null,
 
     // Functions
     "functionParams_none": null,
     "functionParams_n": null,
     "callMyFunction": null,
     "callMyFunction_n": null,
-    "return": null
+    "return": null,
+    "comment": null
   },
   startBlocks: null,
 });

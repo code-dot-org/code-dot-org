@@ -33,8 +33,7 @@ var AppLabView = React.createClass({
         <ProtectedStatefulDiv
             id="visualizationResizeBar"
             className="fa fa-ellipsis-v" />
-        <InstructionsWithWorkspace
-          hideSource={this.props.hideSource}/>
+        <InstructionsWithWorkspace/>
       </StudioAppWrapper>
     );
   }

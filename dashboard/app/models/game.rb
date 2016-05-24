@@ -113,10 +113,6 @@ class Game < ActiveRecord::Base
     @@game_free_response ||= find_by_name("FreeResponse")
   end
 
-  def self.script_completion
-    @@game_script_completion ||= find_by_name("ScriptCompletion")
-  end
-
   def self.standalone_video
     @@game_standalone_video ||= find_by_name("StandaloneVideo")
   end
@@ -224,7 +220,7 @@ class Game < ActiveRecord::Base
         Gamelab:gamelab
         LevelGroup:level_group
         FreeResponse:free_response
-        ScriptCompletion:script_completion
+        NotUsed:not_used
         StandaloneVideo:standalone_video
         ExternalLink:external_link
       ).each_with_index do |game, id|
