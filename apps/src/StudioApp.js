@@ -32,7 +32,7 @@ var experiments = require('./experiments');
 import { setPageConstants } from './redux/pageConstants';
 
 var redux = require('./redux');
-var runState = require('./redux/runState');
+import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
 var combineReducers = require('redux').combineReducers;
 
@@ -909,7 +909,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
     throw "Unexpected input";
   }
 
-  this.reduxStore.dispatch(runState.setIsRunning(!showRun));
+  this.reduxStore.dispatch(setIsRunning(!showRun));
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
