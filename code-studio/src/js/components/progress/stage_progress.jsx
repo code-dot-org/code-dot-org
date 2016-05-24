@@ -2,7 +2,7 @@
 
 import {STAGE_PROGRESS_TYPE} from './types';
 
-var saveAnswersAndNavigate = require('../../levels/saveAnswers.js').saveAnswersAndNavigate;
+import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 
 /**
  * Stage progress component used in level header and course overview.
@@ -51,7 +51,7 @@ var StageProgress = React.createClass({
         return ([
           <div className={outerClass}>
             <span
-              onClick={()=>{this.dotClicked(level.url);}}
+              onClick={() => this.dotClicked(level.url)}
               className={innerClass + ' level-' + level.id}
               style={dotStyle}>
                 {level.title}
