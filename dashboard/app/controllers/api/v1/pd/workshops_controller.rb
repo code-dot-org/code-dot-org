@@ -10,6 +10,15 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
   end
 
+  def k5_public_map_index
+    @workshops = @workshops.where(
+      course: Pd::Workshop::COURSE_CSF,
+      workshop_type: Pd::Workshop::TYPE_PUBLIC
+    )
+
+    render json: @workshops, each_serializer: Api::V1::Pd::WorkshopK5MapSerializer
+  end
+
   # GET /api/v1/pd/workshops/1
   def show
     render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer

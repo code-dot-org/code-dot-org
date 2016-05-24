@@ -79,13 +79,13 @@ module UsersHelper
       script_levels = script.script_levels
       user_data[:levels] = {}
       script_levels.each do |sl|
-        result = level_info(user, sl, uls)
-        submitted = level_submitted(user, sl, uls)
-        completion_status = activity_css_class(result, submitted)
+        ul = uls.try(:[], sl.level_id)
+        completion_status = activity_css_class(ul)
+        submitted = !!ul.try(:submitted)
         if completion_status != 'not_tried'
           user_data[:levels][sl.level_id] = {
               status: completion_status,
-              result: result,
+              result: ul.try(:best_result) || 0,
               submitted: submitted
           }
 
@@ -167,23 +167,4 @@ module UsersHelper
     completed = levels.count{|l| sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])}
     completed.to_f / levels.count
   end
-
-  private
-
-  def level_info(user, script_level, user_levels)
-    if user
-      user_levels[script_level.level_id].try(:best_result) || 0
-    else
-      0
-    end
-  end
-
-  def level_submitted(user, script_level, user_levels)
-    if user
-      user_levels[script_level.level_id].try(:submitted) || false
-    else
-      false
-    end
-  end
-
 end

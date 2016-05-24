@@ -6,7 +6,7 @@
 var five = require('johnny-five');
 var ChromeSerialPort = require('chrome-serialport');
 var PlaygroundIO = require('playground-io');
-require("babelify/polyfill"); // required for Promises in IE / Phantom
+require("babel-polyfill"); // required for Promises in IE / Phantom
 
 /** @const {string} */
 var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
@@ -235,6 +235,7 @@ function initializeCircuitPlaygroundComponents(io, board) {
       on: () => pixels.forEach(p => p.on()),
       off: () => pixels.forEach(p => p.off()),
       toggle: () => pixels.forEach(p => p.toggle()),
+      intensity: i => pixels.forEach(p => p.intensity(i)),
       color: c => pixels.forEach(p => p.color(c))
     },
 

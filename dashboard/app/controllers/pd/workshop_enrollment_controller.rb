@@ -32,7 +32,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     end
 
     enrollment_email = enrollment_params[:email]
-    user = User.find_by_email enrollment_email
+    user = User.find_by_email_or_hashed_email enrollment_email
 
     # See if a previous enrollment exists for this email
     previous_enrollment = @workshop.enrollments.find_by(email: enrollment_email)
@@ -48,6 +48,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       if @enrollment.update enrollment_params
+        Pd::WorkshopMailer.teacher_enrollment_receipt(@enrollment).deliver_now
+        Pd::WorkshopMailer.organizer_enrollment_receipt(@enrollment).deliver_now
         redirect_to action: :show, code: @enrollment.code, controller: 'pd/workshop_enrollment'
       else
         render :new
@@ -73,6 +75,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     else
       @enroll_url = url_for action: :new, workshop_id: @enrollment.pd_workshop_id
       @enrollment.destroy!
+      Pd::WorkshopMailer.teacher_cancel_receipt(@enrollment).deliver_now
+      Pd::WorkshopMailer.organizer_cancel_receipt(@enrollment).deliver_now
     end
   end
 
