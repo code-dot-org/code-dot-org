@@ -20,7 +20,7 @@ const playSongConfig = {
 
 const pixelType = '[Pixel]';
 const colorPixelVariables = ['pixels', 'pixel0', 'pixel1', 'pixel2', 'pixel3', 'pixel4', 'pixel5', 'pixel6', 'pixel7', 'pixel8', 'pixel9'];
-const simpleLedVariables = ['led'].concat(colorPixelVariables);
+const simpleLedVariables = ['led', ...colorPixelVariables];
 
 module.exports.blocks = [
   {func: 'pinMode', parent: api, category: 'Maker Lab', params: ['13', '"input"']},
