@@ -181,9 +181,7 @@ Slider.propTypes = {
  * The parent JsDebugger component.
  */
 var JsDebugger = function (props) {
-  // Initially, don't want to toggle PaneHeader unless runModeIndicators is on
-  var runModeIndicators = experiments.isEnabled('runModeIndicators');
-  var hasFocus = runModeIndicators && props.isDebuggerPaused;
+  var hasFocus = props.isDebuggerPaused;
 
   var sliderStyle = {
     marginLeft: props.debugButtons ? 0 : 40
