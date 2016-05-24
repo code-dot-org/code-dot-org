@@ -991,7 +991,7 @@ GameLab.prototype.getAnimationMetadata = function () {
  * Get metadata for a particular animation.
  */
 GameLab.prototype.getAnimationMetadataByKey = function (key) {
-  return this.getAnimationMetadata().filter(animation => animation.key === key)[0];
+  return this.getAnimationMetadata().find(animation => animation.key === key);
 };
 
 GameLab.prototype.getAnimationDropdown = function () {
