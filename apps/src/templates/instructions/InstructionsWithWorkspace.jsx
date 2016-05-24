@@ -15,8 +15,6 @@ var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
  */
 var InstructionsWithWorkspace = React.createClass({
   propTypes: {
-    hideSource: React.PropTypes.bool.isRequired,
-
     // props provided via connect
     showInstructions: React.PropTypes.bool.isRequired,
     instructionsCollapsed: React.PropTypes.bool.isRequired,
@@ -86,7 +84,14 @@ var InstructionsWithWorkspace = React.createClass({
     var INSTRUCTIONS_RESERVE = 150;
 
     var topPaneHeight = this.props.instructionsHeight;
-    var totalHeight = topPaneHeight + this.refs.codeWorkspace.getContentHeight();
+    var codeWorkspaceHeight = this.refs.codeWorkspaceContainer.getWrappedInstance()
+      .getContentHeight();
+    if (codeWorkspaceHeight === 0) {
+      // We haven't initialized the codeWorkspace yet. Don't do any adjusting
+      return;
+    }
+
+    var totalHeight = topPaneHeight + codeWorkspaceHeight;
     var topInstructions = this.refs.topInstructions.getWrappedInstance();
     var instructionsContentHeight = topInstructions.getContentHeight();
 
@@ -161,11 +166,8 @@ var InstructionsWithWorkspace = React.createClass({
             onLoadImage={this.adjustTopPaneHeight}/>
         }
         <CodeWorkspaceContainer
-            ref="codeWorkspace"
+            ref="codeWorkspaceContainer"
             topMargin={topPaneHeight}
-            hidden={this.props.hideSource}
-            noVisualization={false}
-            isRtl={false}
             onSizeChange={utils.fireResizeEvent}/>
       </span>
     );

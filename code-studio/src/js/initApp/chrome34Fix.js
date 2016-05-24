@@ -53,12 +53,12 @@ function handleClipPathChanges() {
     mutations.forEach(function (mutation) {
       for (i = 0; i < mutation.addedNodes.length; i++) {
         var newNode = mutation.addedNodes[i];
-        if (newNode.nodeName == 'image') { newImages[$(newNode).attr('id')] = newNode; }
-        if (newNode.nodeName == 'clipPath') { newClipPaths[$(newNode).attr('id')] = newNode; }
+        if (newNode.nodeName ===  'image') { newImages[$(newNode).attr('id')] = newNode; }
+        if (newNode.nodeName ===  'clipPath') { newClipPaths[$(newNode).attr('id')] = newNode; }
       }
       for (i = 0; i < mutation.removedNodes.length; i++) {
         var removedNode = mutation.removedNodes[i];
-        if (removedNode.nodeName == 'image' || removedNode.nodeName == 'clipPath') {
+        if (removedNode.nodeName ===  'image' || removedNode.nodeName === 'clipPath') {
           $('svg > svg:empty').remove();
         }
       }

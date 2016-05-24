@@ -16,7 +16,6 @@ var api = require('./api');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var FlappyVisualizationColumn = require('./FlappyVisualizationColumn');
-var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
@@ -584,21 +583,11 @@ Flappy.init = function (config) {
     dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
   };
 
-  // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setPageConstants({
-    localeDirection: studioApp.localeDirection(),
-    isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isDroplet: !!level.editCode
-  }));
+  studioApp.setPageConstants(config);
 
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          assetUrl={studioApp.assetUrl}
-          isEmbedView={!!config.embed}
-          isShareView={!!config.share}
-          hideSource={!!config.hideSource}
-          noVisualization={false}
           isRtl={studioApp.isRtl()}
           visualizationColumn={<FlappyVisualizationColumn/>}
           onMount={onMount}
@@ -827,7 +816,7 @@ Flappy.onPuzzleComplete = function () {
 
   // If we know they succeeded, mark levelComplete true
   // Note that we have not yet animated the succesful run
-  var levelComplete = (Flappy.result == ResultType.SUCCESS);
+  var levelComplete = (Flappy.result === ResultType.SUCCESS);
 
   // If the current level is a free play, always return the free play
   // result type

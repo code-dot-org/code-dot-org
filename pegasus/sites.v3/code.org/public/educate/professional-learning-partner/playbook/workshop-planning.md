@@ -68,9 +68,8 @@ These guidelines explain the type of space your facilitators need to run a succe
 
 	
 	
-**Supplies**<br/>
- 
-- How to Order Supplies - More details coming soon!
+**Ordering Supplies**<br/>
+[Click here](/educate/professional-learning-partner/playbook/ordering-supplies) to access the Marketplace and your supply ordering resources.
 
 **Catering** <br/>
 For multi-day events like summer workshops, provide a heartier breakfast to get teachers through the day, ideally breakfast sandwiches or a hot buffet, with juice and coffee service. In addition, the lunch option should vary from day to day.<br/>
@@ -108,9 +107,10 @@ These guidelines explain the type of space your facilitators need to run a succe
 
 	
 	
-**Supplies**<br/>
+[**Ordering Supplies**](/educate/professional-learning-partner/playbook/ordering-supplies)<br/>
+Click here to access the Marketplace and your supply ordering resources.
  
-- How to Order Supplies - More details coming soon!
+	
 
 **Catering** <br/>
 For multi-day events like summer workshops, provide a heartier breakfast to get teachers through the day, ideally breakfast sandwiches or a hot buffet, with juice and coffee service. In addition, the lunch option should vary from day to day.<br/>
@@ -147,9 +147,8 @@ These guidelines explain the type of space your facilitators need to run a succe
 	- [Session D](/files/ecs-p3d-agenda.pdf)<br/>
 - [Phase 4: Summer Wrap-Up](/files/ecs-p4-agenda.pdf)
  
-**Supplies**<br/>
-
-- How to Order Supplies - More details coming soon!
+**Ordering Supplies**<br/>
+[Click here](/educate/professional-learning-partner/playbook/ordering-supplies) to access the Marketplace and your supply ordering resources.
 
 
 **Catering** <br/>
@@ -187,9 +186,8 @@ These guidelines explain the type of space your facilitators need to run a succe
 	- Session C<br/>
 	- Session D<br/>
 
-**Supplies**<br/>
-
-- How to Order Supplies - Coming soon!
+**Ordering Supplies**<br/>
+[Click here](/educate/professional-learning-partner/playbook/ordering-supplies) to access the Marketplace and your supply ordering resources.
 
 
 **Catering** <br/>

@@ -140,9 +140,9 @@
   third_party_desc_10to12_kto5: "你持盾吗"
   third_party_desc_40_4to8: "你捡币吗"
   third_party_desc_dozens_kto8: "不，我撒币"
-  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
+  third_party_desc_10to15_3to12: "为 3-12 年级提供10到15节课"
   third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
+  third_party_desc_20_2to8: "大约有20节课时面向2到8年级的"
   third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
   third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
   enter_valid_age: "请选择一个有效的年龄"
@@ -280,6 +280,9 @@
   homepage_banner_privacy_link: "了解详情"
   homepage_banner_20k_teachers: "两万名老师经过训练后，正在课堂上传授计算机科学。"
   homepage_banner_20k_teachers_link: "了解详情"
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: "编程一小时"
   homepage_slot_text_blurb_hoc: "任何人都可学习。立即开始"
   homepage_slot_text_link_hoc: "来试试“编程一小时”项目！"
@@ -305,6 +308,7 @@
   homepage_slot_text_link_stats: "请看统计信息"
   homepage_slot_text_link_buy: "加入进来"
   homepage_slot_text_link_donate: "捐一笔钱"
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: "编程工作室 学生作品"
   homepage_header_donors: Code.org 感谢各位支持者
   homepage_donors_seall: "查看全部"
@@ -562,7 +566,7 @@
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
   dashboard_sections_other_section: Other Section
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_both_sections: "你想要学生两个部分都参加吗？"
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
     section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
@@ -681,6 +685,12 @@
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
   dashboard_announce_button_text: "了解详情"
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: "代码小时就在这里 — — 12 月 8-14 ！"
   code_sign_up: "注册以便在计算机科学教育周期间参加"
   learn_more: "现在就试试"
@@ -795,13 +805,31 @@
   course3_name: "课程 3"
   course4_name: "第4课"
   accelerated_name: "加速课程"
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: "加速课程"
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: "经典迷宫"
+  iceage_name: "冰河世纪"
+  minecraft_name: "我的世界"
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: "数学"
+  hoc_category_name: "编程一小时"
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
   applab_name: "应用实验室"
   applab_gradelevel: 13岁以上
   applab_shortdescription_congrats: App Lab is a programming environment where you
@@ -1255,12 +1283,11 @@
   infinity_shortcode: inf
   playlab_shortcode: "玩"
   artist_shortcode: art
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.

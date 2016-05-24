@@ -117,6 +117,9 @@ class User < ActiveRecord::Base
     class_name: 'District',
     foreign_key: 'contact_id'
 
+  has_many :districts_users, class_name: 'DistrictsUsers'
+  has_many :districts, through: :districts_users
+
   belongs_to :invited_by, :polymorphic => true
 
   # TODO: I think we actually want to do this.
@@ -465,9 +468,9 @@ class User < ActiveRecord::Base
     user_levels.where(script: stage.script, level: levels).pluck(:level_id, :best_result).to_h
   end
 
-  def user_level_for(script_level)
+  def user_level_for(script_level, level)
     user_levels.find_by(script_id: script_level.script_id,
-                        level_id: script_level.level_id)
+                        level_id: level.id)
   end
 
   def next_unpassed_progression_level(script)
@@ -516,6 +519,10 @@ SQL
 
   def last_attempt(level)
     Activity.where(user_id: self.id, level_id: level.id).order('id desc').first
+  end
+
+  def last_attempt_for_any(levels)
+    Activity.where(user_id: self.id, level_id: levels.map(&:id)).order('id desc').first
   end
 
   def average_student_trophies

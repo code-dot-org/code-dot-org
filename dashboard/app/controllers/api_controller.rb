@@ -96,7 +96,7 @@ class ApiController < ApplicationController
     script = Script.get_from_cache(params[:script_name])
     stage = script.stages[params[:stage_position].to_i - 1]
     script_level = stage.script_levels[params[:level_position].to_i - 1]
-    level = script_level.level
+    level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
     if current_user
       last_activity = current_user.last_attempt(level)
@@ -175,7 +175,7 @@ class ApiController < ApplicationController
 
         response_parsed = JSON.parse(response)
 
-        user_level = student.user_level_for(script_level)
+        user_level = student.user_level_for(script_level, script_level.level)
 
         # Summarize some key data.
         multi_count = 0
@@ -185,6 +185,11 @@ class ApiController < ApplicationController
         level_results = []
 
         script_level.level.levels.each do |level|
+
+          if level.is_a? Multi
+            multi_count += 1
+          end
+
           level_response = response_parsed[level.id.to_s]
 
           level_result = {}
@@ -198,7 +203,6 @@ class ApiController < ApplicationController
             when Multi
               answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes
               student_result = level_response["result"].split(",").sort.join(",")
-              multi_count += 1
 
               # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
               level_result[:student_result] = student_result.split(',').map{ |k| multi_answer_characters[k.to_i] }.join(', ')

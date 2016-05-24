@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class Pd::WorkshopTest < ActiveSupport::TestCase
+  freeze_time
+
   setup do
     @organizer = create(:workshop_organizer)
     @workshop = create(:pd_workshop, organizer: @organizer)
@@ -60,6 +62,30 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal workshops.first, @workshop
   end
 
+  test 'query by state' do
+    workshop_not_started = @workshop
+    workshop_in_progress = create :pd_workshop
+    workshop_in_progress.started_at = Time.now
+    workshop_in_progress.save!
+
+    workshop_ended = create :pd_workshop
+    workshop_ended.started_at = Time.now
+    workshop_ended.ended_at = Time.now + 1.hour
+    workshop_ended.save!
+
+    not_started = Pd::Workshop.in_state(Pd::Workshop::STATE_NOT_STARTED)
+    assert_equal 1, not_started.count
+    assert_equal workshop_not_started.id, not_started[0][:id]
+
+    in_progress = Pd::Workshop.in_state(Pd::Workshop::STATE_IN_PROGRESS)
+    assert_equal 1, in_progress.count
+    assert_equal workshop_in_progress.id, in_progress[0][:id]
+
+    ended = Pd::Workshop.in_state(Pd::Workshop::STATE_ENDED)
+    assert_equal 1, ended.count
+    assert_equal workshop_ended.id, ended[0][:id]
+  end
+
   test 'wont start without a session' do
     assert_equal 0, @workshop.sessions.length
     e = assert_raises Exception do
@@ -79,5 +105,95 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.end!
     @workshop.reload
     assert_equal 'Ended', @workshop.state
+  end
+
+  test 'sessions must start on separate days' do
+    @workshop.sessions << create(:pd_session)
+    @workshop.sessions << create(:pd_session)
+
+    refute @workshop.valid?
+    assert_equal 1, @workshop.errors.count
+    assert_equal 'Sessions must start on separate days.', @workshop.errors.full_messages.first
+  end
+
+  test 'sessions must start and end on the same day' do
+    session = build :pd_session, start: Time.zone.now, end: Time.zone.now + 1.day
+    @workshop.sessions << session
+
+    refute @workshop.valid?
+    assert_equal 1, @workshop.errors.count
+    assert_equal 'Sessions end must occur on the same day as the start.', @workshop.errors.full_messages.first
+  end
+
+  test 'sessions must start before they end' do
+    session = build :pd_session, start: Time.zone.now, end: Time.zone.now - 2.hours
+    @workshop.sessions << session
+
+    refute @workshop.valid?
+    assert_equal 1, @workshop.errors.count
+    assert_equal 'Sessions end must occur after the start.', @workshop.errors.full_messages.first
+  end
+
+  # Email queries
+  test 'single session start_in_days and end_in_days' do
+    workshop_in_10_days_early = create :pd_workshop, sessions: [session_on_day_early(10)]
+    workshop_in_10_days = create :pd_workshop, sessions: [session_on_day(10)]
+    workshop_in_10_days_late = create :pd_workshop, sessions: [session_on_day_late(10)]
+
+    # Noise
+    create :pd_workshop, sessions: [session_on_day_early(9)]
+    create :pd_workshop, sessions: [session_on_day(9)]
+    create :pd_workshop, sessions: [session_on_day_late(9)]
+    create :pd_workshop, sessions: [session_on_day_early(11)]
+    create :pd_workshop, sessions: [session_on_day(11)]
+    create :pd_workshop, sessions: [session_on_day_late(11)]
+
+    start_expected = [workshop_in_10_days_early, workshop_in_10_days, workshop_in_10_days_late].map(&:id)
+    assert_equal start_expected, Pd::Workshop.start_in_days(10).all.map(&:id)
+
+    end_expected = [workshop_in_10_days_early, workshop_in_10_days, workshop_in_10_days_late].map(&:id)
+    assert_equal end_expected, Pd::Workshop.end_in_days(10).all.map(&:id)
+  end
+
+  test 'multiple session start_in_days and end_in_days' do
+    workshop_starting_on_day_10 = create :pd_workshop, sessions: [session_on_day(10), session_on_day(11), session_on_day(12)]
+    workshop_ending_on_day_10 = create :pd_workshop, sessions: [session_on_day(8), session_on_day(9), session_on_day(10)]
+
+    # Noise
+    create :pd_workshop, sessions: [session_on_day(8), session_on_day(9)]
+    create :pd_workshop, sessions: [session_on_day(5), session_on_day(10), session_on_day(15)]
+    create :pd_workshop, sessions: [session_on_day(11), session_on_day(12)]
+
+    start_expected = [workshop_starting_on_day_10].map(&:id)
+    assert_equal start_expected, Pd::Workshop.start_in_days(10).all.map(&:id)
+
+    end_expected = [workshop_ending_on_day_10].map(&:id)
+    assert_equal end_expected, Pd::Workshop.end_in_days(10).all.map(&:id)
+  end
+
+  private
+
+  def session_on_day(day_offset)
+    # 9am-5pm
+    session_on(day_offset, 9.hours, 17.hours)
+  end
+
+  def session_on_day_late(day_offset)
+    # Ending at 11:59pm
+    session_on(day_offset, 12.hours, 23.hours + 59.minutes)
+  end
+
+  def session_on_day_early(day_offset)
+    # Starting at midnight
+    session_on(day_offset, 0, 9.hours)
+  end
+
+  def session_on(day_offset, start_offset, end_offset)
+    day = today + day_offset.days
+    create :pd_session, start: day + start_offset, end: day + end_offset
+  end
+
+  def today
+    Date.today.in_time_zone
   end
 end

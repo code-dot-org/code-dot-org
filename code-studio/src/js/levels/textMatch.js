@@ -47,7 +47,7 @@ TextMatch.prototype.getResult = function () {
   if (answers && answers.length > 0) {
     response = response.replace(/\s+/g, '');
     var result = answers.some(function (element) {
-      return response == element.replace(/\s+/g, '');
+      return response === element.replace(/\s+/g, '');
     });
     return {
       response: encodeURIComponent(response),

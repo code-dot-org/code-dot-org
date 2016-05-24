@@ -68,7 +68,7 @@ var Slider = function (x, y, width, svgParent, opt_changeFunc) {
   this.setValue(0.5);
 
   // Find the root SVG object.
-  while (svgParent && svgParent.nodeName.toLowerCase() != 'svg') {
+  while (svgParent && svgParent.nodeName.toLowerCase() !== 'svg') {
     svgParent = svgParent.parentNode;
   }
   this.SVG_ = svgParent;
@@ -178,7 +178,7 @@ Slider.mouseOver_ = function (e) {
   }
   // Find the root SVG object.
   for (var node = e.target; node; node = node.parentNode) {
-    if (node == Slider.activeSlider_.SVG_) {
+    if (node === Slider.activeSlider_.SVG_) {
       return;
     }
   }

@@ -22,8 +22,10 @@ window.initLevelGroup = function (
 
   window.getResult = getResult;
 
+  // Temporarily reduce throttling to 2 seconds for small audience, until we
+  // implement saving on changing via dots at top of page.
   var throttledSaveAnswers =
-    window.dashboard.utils.throttle(saveAnswers, 20 * 1000, {'leading': true, 'trailing': true});
+    window.dashboard.utils.throttle(saveAnswers, 2 * 1000, {'leading': true, 'trailing': true});
 
   var lastResponse = window.getResult().response;
 
@@ -62,7 +64,7 @@ window.initLevelGroup = function (
 
     var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
 
-    var completeString = (validCount == levelCount) ? "complete" : "incomplete";
+    var completeString = (validCount === levelCount) ? "complete" : "incomplete";
     var showConfirmationDialog = "levelgroup-submit-" + completeString;
 
     return {

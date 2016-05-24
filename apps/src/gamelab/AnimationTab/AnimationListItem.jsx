@@ -4,7 +4,7 @@
 import Radium from 'radium';
 import { connect } from 'react-redux';
 import color from '../../color';
-import actions from '../actions';
+import * as actions from '../animationModule';
 import { METADATA_SHAPE } from '../animationMetadata';
 import { selectAnimation } from './animationTabModule';
 import ListItemButtons from './ListItemButtons';

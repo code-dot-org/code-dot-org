@@ -19,7 +19,6 @@ var blocks = require('./blocks');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var StudioVisualizationColumn = require('./StudioVisualizationColumn');
-var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Sprite = require('./Sprite');
@@ -661,7 +660,7 @@ var cancelQueuedMovements = function (index, yAxis) {
 
 //
 // Return the next position for this sprite on a given coordinate axis
-// given the queued moves (yAxis == false means xAxis)
+// given the queued moves (yAxis === false means xAxis)
 // NOTE: position values returned are not clamped to playspace boundaries
 //
 
@@ -691,7 +690,7 @@ var performQueuedMoves = function (i) {
     // Clamp nextX to boundaries as newX:
     var newX = Math.min(playspaceBoundaries.right,
                         Math.max(playspaceBoundaries.left, nextX));
-    if (nextX != newX) {
+    if (nextX !== newX) {
       cancelQueuedMovements(i, false);
     }
     sprite.x = newX;
@@ -699,7 +698,7 @@ var performQueuedMoves = function (i) {
     // Clamp nextY to boundaries as newY:
     var newY = Math.min(playspaceBoundaries.bottom,
                         Math.max(playspaceBoundaries.top, nextY));
-    if (nextY != newY) {
+    if (nextY !== newY) {
       cancelQueuedMovements(i, true);
     }
     sprite.y = newY;
@@ -1369,7 +1368,7 @@ function checkForCollisions() {
     var iXCenter = iXPos + iHalfWidth;
     var iYCenter = iYPos + iHalfHeight;
     for (var j = 0; j < Studio.spriteCount; j++) {
-      if (i == j || !Studio.sprite[j].visible) {
+      if (i === j || !Studio.sprite[j].visible) {
         continue;
       }
       var jXCenter = getNextPosition(j, false, false) +
@@ -2001,12 +2000,7 @@ Studio.init = function (config) {
     }
   };
 
-  // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setPageConstants({
-    localeDirection: studioApp.localeDirection(),
-    isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isDroplet: !!level.editCode
-  }));
+  studioApp.setPageConstants(config);
 
   var visualizationColumn = <StudioVisualizationColumn
     finishButton={!level.isProjectLevel}
@@ -2015,12 +2009,6 @@ Studio.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          assetUrl={studioApp.assetUrl}
-          isEmbedView={!!config.embed}
-          isShareView={!!config.share}
-          hideSource={!!config.hideSource}
-          noVisualization={false}
-          isRtl={studioApp.isRtl()}
           visualizationColumn={visualizationColumn}
           onMount={onMount}
       />
@@ -2784,7 +2772,7 @@ Studio.hasUnexpectedFunction_ = function () {
     var funcNames = Studio.JSInterpreter.getGlobalFunctionNames();
     for (var name in AUTO_HANDLER_MAP) {
       var index = funcNames.indexOf(name);
-      if (index != -1) {
+      if (index !== -1) {
         funcNames.splice(index, 1);
       }
     }
@@ -2803,7 +2791,7 @@ Studio.hasUnexpectedLocalFunction_ = function () {
     var funcNames = Studio.JSInterpreter.getLocalFunctionNames();
     for (var name in AUTO_HANDLER_MAP) {
       var index = funcNames.indexOf(name);
-      if (index != -1) {
+      if (index !== -1) {
         return name;
       }
     }
@@ -3192,7 +3180,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   // We usually won't try jumbo size.
   var jumboSize = false;
 
-  if (wallVal == SquareType.WALL) {
+  if (wallVal === SquareType.WALL) {
     // use a random coordinate
     // TODO (cpirich): these should probably be chosen once at level load time
     // and we should allow the level/skin to set specific row/col max values
@@ -3916,7 +3904,7 @@ Studio.playSound = function (opts) {
     soundVal = allValues[Math.floor(Math.random() * allValues.length)].toLowerCase();
   } else {
     var isInAllValues = function (value) {
-      return allValues.indexOf(value) != -1;
+      return allValues.indexOf(value) !== -1;
     };
     for (var group in skin.soundGroups) {
       var groupData = skin.soundGroups[group];
@@ -4366,10 +4354,10 @@ Studio.endGame = function (opts) {
 
   var winValue = opts.value.toLowerCase().trim();
 
-  if (winValue == "win") {
+  if (winValue === "win") {
     Studio.trackedBehavior.hasWonGame = true;
     Studio.setVictoryText({text: studioMsg.winMessage()});
-  } else if (winValue== "lose") {
+  } else if (winValue === "lose") {
     Studio.trackedBehavior.hasLostGame = true;
     Studio.setVictoryText({text: studioMsg.loseMessage()});
   } else {
@@ -5522,7 +5510,7 @@ Studio.conditionSatisfied = function (required) {
     var valueName = valueNames[k];
     var value = required[valueName];
 
-    if (valueName === 'timedOut' && tracked.timedOut != value) {
+    if (valueName === 'timedOut' && tracked.timedOut !== value) {
       return false;
     }
 
@@ -5540,7 +5528,7 @@ Studio.conditionSatisfied = function (required) {
       return false;
     }
 
-    if (valueName == 'collectedSpecificItemsBelow' &&
+    if (valueName === 'collectedSpecificItemsBelow' &&
         tracked.removedItems[value.className] !== undefined &&
         tracked.removedItems[value.className] >= value.count) {
       return false;
@@ -5552,13 +5540,13 @@ Studio.conditionSatisfied = function (required) {
       return false;
     }
 
-    if (valueName == 'createdSpecificItemsBelow' &&
+    if (valueName === 'createdSpecificItemsBelow' &&
         tracked.createdItems[value.className] !== undefined &&
         tracked.createdItems[value.className] >= value.count) {
       return false;
     }
 
-    if (valueName == 'gotAllItems' && tracked.gotAllItems !== value) {
+    if (valueName === 'gotAllItems' && tracked.gotAllItems !== value) {
       return false;
     }
 

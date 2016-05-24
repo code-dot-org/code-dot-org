@@ -7,8 +7,6 @@
 var Pairing = require('./pairing.jsx'); /* all the interesting stuff is here btw */
 var Dialog = require('@cdo/apps/templates/DialogComponent');
 
-console.log(Pairing);
-
 var PairingDialog = React.createClass({
     getInitialState: function () {
       return { isOpen: this.props.initialIsOpen };
