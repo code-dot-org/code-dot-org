@@ -8,6 +8,9 @@ import TopInstructionsCSP from './TopInstructionsCSP';
  * instructions. Ultimately those might be combined back into one.
  */
 const TopInstructions = React.createClass({
+  propTypes: {
+    isCsf: React.PropTypes.bool.isRequired
+  },
   getRenderedHeight() {
     return this.refs.topInstructions.getWrappedInstance().getRenderedHeight();
   },
@@ -19,7 +22,7 @@ const TopInstructions = React.createClass({
   render() {
     const { props } = this;
 
-    const ChildClass = props.csf ? TopInstructionsCSF : TopInstructionsCSP;
+    const ChildClass = props.isCsf ? TopInstructionsCSF : TopInstructionsCSP;
 
     return <ChildClass ref="topInstructions" {...props}/>;
   }

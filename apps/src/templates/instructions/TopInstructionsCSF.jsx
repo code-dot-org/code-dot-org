@@ -21,8 +21,6 @@ const VERTICAL_PADDING = 10;
 const HORIZONTAL_PADDING = 20;
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
-const MIN_HEIGHT = COLLAPSED_HEIGHT;
-
 const styles = {
   main: {
     position: 'absolute',
@@ -66,6 +64,8 @@ const COLLAPSED_HEIGHT = styles.collapserButton.height +
   styles.collapserButton.marginTop +
   styles.collapserButton.marginBottom +
   2 * VERTICAL_PADDING;
+
+const MIN_HEIGHT = COLLAPSED_HEIGHT;
 
 var TopInstructions = React.createClass({
   propTypes: {

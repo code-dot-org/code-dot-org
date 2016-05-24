@@ -38,7 +38,7 @@ const AppView = React.createClass({
           {this.props.visualizationColumn}
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <InstructionsWithWorkspace csf={true}/>
+        <InstructionsWithWorkspace isCsf={true}/>
       </StudioAppWrapper>
     );
   }
