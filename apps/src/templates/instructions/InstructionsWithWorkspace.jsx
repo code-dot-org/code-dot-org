@@ -23,7 +23,7 @@ var InstructionsWithWorkspace = React.createClass({
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsMaxHeight: React.PropTypes.func.isRequired,
 
-    isCsf: React.PropTypes.bool,
+    shortInstructionsWhenCollapsed: React.PropTypes.bool,
     // TODO - properly pass these to top instructions
     isRtl: React.PropTypes.bool.isRequired,
     noVisualization: React.PropTypes.bool.isRequired
@@ -168,7 +168,7 @@ var InstructionsWithWorkspace = React.createClass({
       <span>
         {this.props.showInstructions && <TopInstructions
             ref="topInstructions"
-            isCsf={!!this.props.isCsf}
+            shortInstructionsWhenCollapsed={!!this.props.shortInstructionsWhenCollapsed}
             height={topPaneHeight}
             onResize={this.adjustTopPaneHeight}/>
         }

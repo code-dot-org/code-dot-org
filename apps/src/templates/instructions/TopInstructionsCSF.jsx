@@ -112,7 +112,6 @@ var TopInstructions = React.createClass({
     return newHeight - currentHeight;
   },
 
-  // TODO - could have some of this as a HOC?
   componentDidMount: function () {
     // Parent needs to readjust some sizing after images have loaded
     $(ReactDOM.findDOMNode(this)).find('img').load(this.props.onResize);
@@ -139,6 +138,9 @@ var TopInstructions = React.createClass({
       height: this.props.height - resizerHeight
     }, this.props.isEmbedView && styles.embedView];
 
+    const renderedMarkdown = processMarkdown(this.props.collapsed ?
+      this.props.shortInstructions : this.props.markdown);
+
     return (
       <div style={mainStyle} className="editor-column">
         <div>
@@ -147,19 +149,11 @@ var TopInstructions = React.createClass({
                 style={styles.collapserButton}
                 collapsed={this.props.collapsed}
                 onClick={this.props.toggleInstructionsCollapsed}/>
-              {!this.props.collapsed &&
-                <Instructions
-                    ref="instructions"
-                    renderedMarkdown={processMarkdown(this.props.markdown)}
-                    inTopPane
-                />
-              }
-              {this.props.collapsed &&
-                <Instructions
-                    ref="instructions"
-                    renderedMarkdown={processMarkdown(this.props.shortInstructions)}
-                    inTopPane
-                />
+              {<Instructions
+                  ref="instructions"
+                  renderedMarkdown={renderedMarkdown}
+                  inTopPane
+              />
               }
           </div>
           {!this.props.collapsed && !this.props.isEmbedView && <HeightResizer

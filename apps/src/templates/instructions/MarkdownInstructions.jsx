@@ -26,12 +26,22 @@ const MarkdownInstructions = React.createClass({
     inTopPane: React.PropTypes.bool
   },
 
-  componentDidMount() {
-    // If we have the jQuery details plugin, enable it's usage on any details
+  enableDetails_() {
+    // If we have the jQuery details plugin, enable its usage on any details
     // elements
     const detailsDOM = $(ReactDOM.findDOMNode(this)).find('details');
-    if (detailsDOM.length && detailsDOM.details) {
+    if (detailsDOM.details) {
       detailsDOM.details();
+    }
+  },
+
+  componentDidMount() {
+    this.enableDetails_();
+  },
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.renderedMardown !== this.props.renderedMarkdown) {
+      this.enableDetails_();
     }
   },
 

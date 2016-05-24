@@ -1,7 +1,7 @@
 /**
  * This duck module tracks whether the current app's run state.
  */
-import _ from 'lodash';
+import _ from '../lodash';
 
 const SET_IS_RUNNING = 'runState/SET_IS_RUNNING';
 const SET_IS_DEBUGGER_PAUSED = 'runState/SET_IS_DEBUGGER_PAUSED';
@@ -14,7 +14,7 @@ const initialState = {
 /**
  * Reducer for runState. It should be impossible to be debugging if not running.
  */
-export default function (state, action) {
+export default function reducer(state, action) {
   state = state || initialState;
 
   if (action.type === SET_IS_RUNNING) {
