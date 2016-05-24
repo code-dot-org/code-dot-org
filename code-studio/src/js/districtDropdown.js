@@ -94,7 +94,7 @@ $(function () {
   });
 
   $('#school-state').change(function () {
-    if ($(this).val() != 'other') {
+    if ($(this).val() !== 'other') {
       // Show districts.  (State is already showing, so ZIP is already clear.)
       $('#school-district').closest('.form-group').show();
       setupDistrictDropdown($('#school-state').val());
