@@ -109,7 +109,7 @@ var FacilitatorListFormPart = React.createClass({
     }
 
     var addButton = null;
-    if (i == facilitators.length-1 && facilitators.length < MAX_FACILITATORS &&
+    if (i === facilitators.length - 1 && facilitators.length < MAX_FACILITATORS &&
       this.props.facilitators[i].id > 0 && filteredAvailableFacilitators.length > 1 ) {
 
       addButton = (
