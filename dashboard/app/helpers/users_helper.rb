@@ -92,7 +92,15 @@ module UsersHelper
           # Just in case this level has multiple pages, in which case we add an additional
           # array of booleans indicating which pages have been completed.
           pages_completed = get_pages_completed(user, sl)
-          user_data[:levels][sl.level_id][:pages_completed] = pages_completed if pages_completed
+          if pages_completed
+            user_data[:levels][sl.level_id][:pages_completed] = pages_completed
+            pages_completed.each_with_index do |complete, index|
+              user_data[:levels]["#{sl.level_id}_#{index}"] = {
+                result: complete ? ActivityConstants::FREE_PLAY_RESULT : ActivityConstants::MINIMUM_FINISHED_RESULT,
+                submitted: submitted
+              }
+            end
+          end
         end
       end
     end
