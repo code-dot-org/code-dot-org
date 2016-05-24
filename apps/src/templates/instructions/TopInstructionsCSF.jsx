@@ -21,6 +21,10 @@ const VERTICAL_PADDING = 10;
 const HORIZONTAL_PADDING = 20;
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
+// Maximum size of images in our markdown. Number is derived from the size the
+// image renders at when shown in an instructions dialog.
+const MAX_IMAGE_WIDTH = 566;
+
 const styles = {
   main: {
     position: 'absolute',
@@ -138,6 +142,7 @@ var TopInstructions = React.createClass({
                   ref="instructions"
                   renderedMarkdown={renderedMarkdown}
                   onResize={this.props.onResize}
+                  maxImageWidth={MAX_IMAGE_WIDTH}
                   inTopPane
               />
               }

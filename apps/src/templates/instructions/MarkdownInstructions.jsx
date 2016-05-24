@@ -24,7 +24,8 @@ const MarkdownInstructions = React.createClass({
     renderedMarkdown: React.PropTypes.string.isRequired,
     markdownClassicMargins: React.PropTypes.bool,
     onResize: React.PropTypes.func,
-    inTopPane: React.PropTypes.bool
+    inTopPane: React.PropTypes.bool,
+    maxImageWidth: React.PropTypes.number
   },
 
   /**
@@ -48,7 +49,16 @@ const MarkdownInstructions = React.createClass({
     }
 
     // Parent needs to readjust some sizing after images have loaded
-    $(ReactDOM.findDOMNode(this)).find('img').load(this.props.onResize);
+    const images = $(ReactDOM.findDOMNode(this)).find('img');
+    images.load(this.props.onResize);
+
+    if (this.props.maxImageWidth) {
+      images.css({
+        'max-width': this.props.maxImageWidth,
+        display: 'block'
+      });
+    }
+
   },
 
   componentDidMount() {
