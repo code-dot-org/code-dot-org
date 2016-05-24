@@ -34,6 +34,8 @@ module Cdo
         `curl -s -i #{LOCALHOST}:#{DASHBOARD_PORT}/start`
         mock_started = $?.exitstatus == 0
       end
+      `curl -s -X POST #{LOCALHOST}:#{DASHBOARD_PORT}/__admin/mappings/new -d '#{{request: {method: 'GET', url: '/'}, response: {status: 200}}.to_json}'`
+      `sleep 1` until system("curl -sf #{LOCALHOST}:#{VARNISH_PORT}/health_check.dashboard")
       puts 'setup finished'
       [pid, ngrok_pid]
     end

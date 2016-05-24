@@ -33,7 +33,7 @@ function loadWorkshops() {
     var results = JSON.parse(response);
 
     $.each(results.response.docs, function (index, workshop) {
-      if (typeof workshop.location_p != 'undefined') {
+      if (typeof workshop.location_p !== 'undefined') {
         var location = workshop.location_p.split(',');
         var latLng = new google.maps.LatLng(location[0], location[1]);
 
@@ -72,7 +72,7 @@ function processPdWorkshops(workshops) {
 
     var geocoder = new google.maps.Geocoder();
     geocoder.geocode( { 'address' : address }, function (results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
+      if (status === google.maps.GeocoderStatus.OK) {
         var location = results[0].geometry.location;
         var lat = location.lat();
         var lng = location.lng();
@@ -173,7 +173,7 @@ function addGeocomplete() {
     country: 'us'
   };
 
-  if (html5_storage_supported() && typeof localStorage['geocomplete'] != 'undefined') {
+  if (html5_storage_supported() && typeof localStorage['geocomplete'] !== 'undefined') {
     geocomplete_options.location = localStorage['geocomplete'];
   }
 

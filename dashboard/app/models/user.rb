@@ -659,24 +659,12 @@ SQL
     raw
   end
 
-  # Secret word stuff
-
   def generate_secret_picture
     self.secret_picture = SecretPicture.random
   end
 
-  def reset_secret_picture
-    generate_secret_picture
-    save!
-  end
-
   def generate_secret_words
     self.secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
-  end
-
-  def reset_secret_words
-    generate_secret_words
-    save!
   end
 
   def advertised_scripts
