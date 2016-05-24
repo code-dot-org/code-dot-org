@@ -92,7 +92,7 @@ module.exports.blocks = [
   {func: 'camera.x', category: 'Game Lab', type: 'property', },
   {func: 'camera.y', category: 'Game Lab', type: 'property', },
   {func: 'camera.zoom', category: 'Game Lab', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Camera.html#prop-zoom" },
-  {func: 'console.log', parent: consoleApi, category: 'Game Lab', paletteParams: ['message'], params: ['"message"'] },
+  {func: 'comment_GameLab', block: '// Comment', expansion: '// ', category: 'Game Lab' },
 
   // Sprites
   {func: 'createSprite', category: 'Sprites', paramButtons: { minArgs: 2, maxArgs: 4}, paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], type: 'either', customDocURL: "http://p5play.molleindustria.org/docs/classes/p5.play.html#method-createSprite" },
@@ -165,6 +165,7 @@ module.exports.blocks = [
   {func: 'visible', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.visible', type: 'property', customDocURL: "http://p5play.molleindustria.org/docs/classes/Sprite.html#prop-visible" },
   {func: 'x', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.x', type: 'property' },
   {func: 'y', blockPrefix: spriteBlockPrefix, category: 'Sprites', tipPrefix: spriteMethodPrefix, modeOptionName: '*.y', type: 'property' },
+  {func: 'comment_Sprites', block: '// Comment', expansion: '// ', category: 'Sprites' },
 
 /* TODO: decide whether to expose these Sprite properties:
 camera
@@ -251,6 +252,7 @@ getWidth()
   {func: 'setVelocityYEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['velocityY'], params: ["3"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setVelocityYEach' },
   {func: 'setVisibleEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['bool'], params: ["false"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setVisibleEach' },
   {func: 'setWidthEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['width'], params: ["50"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setWidthEach' },
+  {func: 'comment_Groups', block: '// Comment', expansion: '// ', category: 'Groups' },
 /* TODO: decide whether to expose these Group methods:
 draw() - USEFUL?
 */
@@ -266,7 +268,7 @@ draw() - USEFUL?
   {func: 'strokeWeight', category: 'Drawing', paletteParams: ['size'], params: ["3"], customDocURL: "http://p5js.org/reference/#/p5/strokeWeight" },
   {func: 'color', category: 'Drawing', paramButtons: { minArgs: 1, maxArgs: 4}, paletteParams: ['r','g','b'], params: ["255", "255", "255"], type: 'value', customDocURL: "http://p5js.org/reference/#/p5/color" },
   {func: 'noStroke', category: 'Drawing', customDocURL: "http://p5js.org/reference/#/p5/noStroke" },
-  {func: 'arc', category: 'Drawing', paletteParams: ['x','y','w','h','start','stop'], params: ["0", "0", "800", "800", "0", "PI/2"], customDocURL: "http://p5js.org/reference/#/p5/arc" },
+  {func: 'arc', category: 'Drawing', paletteParams: ['x','y','w','h','start','stop'], params: ["0", "0", "800", "800", "0", "90"], customDocURL: "http://p5js.org/reference/#/p5/arc" },
   {func: 'ellipse', category: 'Drawing', paletteParams: ['x','y','w','h'], params: ["200", "200", "400", "400"], customDocURL: "http://p5js.org/reference/#/p5/ellipse" },
   {func: 'line', category: 'Drawing', paletteParams: ['x1','y1','x2','y2'], params: ["0", "0", "400", "400"], customDocURL: "http://p5js.org/reference/#/p5/line" },
   {func: 'point', category: 'Drawing', paletteParams: ['x','y'], params: ["200", "200"], customDocURL: "http://p5js.org/reference/#/p5/point" },
@@ -278,6 +280,10 @@ draw() - USEFUL?
   {func: 'textAlign', category: 'Drawing', paletteParams: ['horiz','vert'], params: ["CENTER", "TOP"], customDocURL: "http://p5js.org/reference/#/p5/textAlign" },
   {func: 'textFont', category: 'Drawing', paletteParams: ['font'], params: ['"Arial"'], customDocURL: "http://p5js.org/reference/#/p5/textFont" },
   {func: 'textSize', category: 'Drawing', paletteParams: ['pixels'], params: ["12"], customDocURL: "http://p5js.org/reference/#/p5/textSize" },
+  {func: 'comment_Drawing', block: '// Comment', expansion: '// ', category: 'Drawing' },
+
+  // Control
+  {func: 'comment_Control', block: '// Comment', expansion: '// ', category: 'Control' },
 
   // Math
   {func: 'sin', category: 'Math', paletteParams: ['angle'], params: ["0"], type: 'value' },
@@ -310,6 +316,11 @@ draw() - USEFUL?
   {func: 'round', category: 'Math', paletteParams: ['num'], params: ["0.9"], type: 'value' },
   {func: 'sq', category: 'Math', paletteParams: ['num'], params: ["2"], type: 'value' },
   {func: 'sqrt', category: 'Math', paletteParams: ['num'], params: ["9"], type: 'value' },
+  {func: 'comment_Math', block: '// Comment', expansion: '// ', category: 'Math' },
+
+  // Variables
+  {func: 'console.log', parent: consoleApi, category: 'Variables', paletteParams: ['message'], params: ['"message"'] },
+  {func: 'comment_Variables', block: '// Comment', expansion: '// ', category: 'Variables' },
 
   // Advanced
 ];

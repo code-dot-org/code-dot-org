@@ -10,6 +10,15 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
   end
 
+  def k5_public_map_index
+    @workshops = @workshops.where(
+      course: Pd::Workshop::COURSE_CSF,
+      workshop_type: Pd::Workshop::TYPE_PUBLIC
+    )
+
+    render json: @workshops, each_serializer: Api::V1::Pd::WorkshopK5MapSerializer
+  end
+
   # GET /api/v1/pd/workshops/1
   def show
     render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
@@ -70,7 +79,10 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
     new_facilitator_ids.each do |facilitator_id|
       facilitator = User.find_by(id: facilitator_id)
-      next unless facilitator.facilitator?
+
+      # Since these ids are supplied by the caller, make sure they each actually represent a real user
+      # and that the user is actually a facilitator before adding.
+      next unless facilitator && facilitator.facilitator?
       @workshop.facilitators << facilitator
     end
   end

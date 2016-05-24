@@ -50,8 +50,6 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
       school: enrollment.school
     }
     teacher = User.find_or_create_teacher(params, current_user)
-    district = District.find_by_name(enrollment.district_name)
-    DistrictsUsers.create!(district_id: district.id, user_id: teacher.id) if district
 
     teacher
   end
