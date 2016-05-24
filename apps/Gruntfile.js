@@ -365,6 +365,7 @@ module.exports = function (grunt) {
         "playground-io": "var PlaygroundIO",
         "chrome-serialport": "var ChromeSerialport",
         "marked": "var marked",
+        "react": "var React",
       },
       module: {
         loaders: [
