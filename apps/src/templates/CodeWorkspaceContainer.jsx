@@ -5,6 +5,7 @@
  * us to position it vertically. Causes resize events to fire when receiving new props
  */
 
+var ReactDOM = require('react-dom');
 var Radium = require('radium');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var utils = require('../utils');

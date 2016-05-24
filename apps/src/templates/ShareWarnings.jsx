@@ -1,3 +1,4 @@
+var ReactDOM = require('react-dom');
 var color = require('../color');
 var AgeDropdown = require('./AgeDropdown');
 

@@ -3,6 +3,7 @@
  * Used exclusively by StudioApp.
  */
 
+var ReactDOM = require('react-dom');
 var dom = require('./dom');
 var msg = require('./locale');
 var HintsDisplay = require('./templates/instructions/HintsDisplay');

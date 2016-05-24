@@ -7,6 +7,7 @@
 
 'use strict';
 
+var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var skins = require('../skins');
 var Provider = require('react-redux').Provider;

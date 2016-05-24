@@ -7,6 +7,7 @@
 /* global dashboard */
 
 'use strict';
+var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var applabMsg = require('./locale');

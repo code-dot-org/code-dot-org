@@ -6,6 +6,7 @@
  */
 'use strict';
 
+var ReactDOM = require('react-dom');
 var _ = require('../../lodash');
 
 /**
