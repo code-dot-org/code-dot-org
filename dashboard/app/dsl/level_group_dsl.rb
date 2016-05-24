@@ -62,7 +62,7 @@ class LevelGroupDSL < BaseDSL
     end
     level_class = level.class.to_s.underscore
     unless %w(multi text_match free_response evaluation_multi).include? level_class
-      raise "LevelGroup can only contain multi, text_match, evaluation_question, and free_response levels. (#{name} #{level_class})"
+      raise "LevelGroup cannot contain level type #{level_class}"
     end
 
     @current_page_level_names << name
