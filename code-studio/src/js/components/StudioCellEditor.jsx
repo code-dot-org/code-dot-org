@@ -3,7 +3,8 @@
  * Studio Cells
  * @see @cdo/apps/studio/cell
  */
-/* global React */
+var React = require('react');
+var ReactDOM = require('react-dom');
 var constants = require('@cdo/apps/studio/constants');
 
 // TODO elijah this list is pulled from
