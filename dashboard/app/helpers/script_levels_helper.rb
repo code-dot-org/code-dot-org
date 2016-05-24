@@ -5,7 +5,11 @@ module ScriptLevelsHelper
     if has_another_level_to_go_to?(script_level)
       if script_level.end_of_stage?
         response[:stage_changing] = {previous: {name: script_level.name, position: script_level.stage.position}}
-        enabled = Gatekeeper.allows('endOfStageExperience', where: {script_name: script_level.script.name}, default: false)
+
+        # End-of-Stage Experience is only for users in sections, and
+        # only for certain Scripts.
+        enabled = current_user && current_user.teachers.any? &&
+            Gatekeeper.allows('endOfStageExperience', where: {script_name: script_level.script.name}, default: false)
         response[:end_of_stage_experience] = enabled
       end
     else
