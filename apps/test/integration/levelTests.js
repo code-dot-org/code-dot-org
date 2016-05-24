@@ -87,16 +87,16 @@ describe('Level tests', function () {
 
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
-    loadSource('http://localhost:8001/apps/lib/jsinterpreter/acorn.js')
-    .then(function () { return loadSource('http://localhost:8001/apps/lib/jsinterpreter/interpreter.js'); })
-    .then(function () { return loadSource('http://localhost:8001/apps/lib/ace/src-noconflict/ace.js'); })
-    .then(function () { return loadSource('http://localhost:8001/apps/lib/ace/src-noconflict/mode-javascript.js'); })
-    .then(function () { return loadSource('http://localhost:8001/apps/lib/ace/src-noconflict/ext-language_tools.js'); })
-    .then(function () { return loadSource('http://localhost:8001/apps/lib/droplet/droplet-full.js'); })
-    .then(function () { return loadSource('http://localhost:8001/apps/lib/tooltipster/jquery.tooltipster.js'); })
-    .then(function () { return loadSource('http://localhost:8001/apps/lib/phaser/phaser.js'); })
-    .then(function () { return loadSource('http://localhost:8001/apps/lib/p5play/p5.js'); })
-    .then(function () { return loadSource('http://localhost:8001/apps/lib/p5play/p5.play.js'); })
+    loadSource('/lib/jsinterpreter/acorn.js')
+    .then(function () { return loadSource('/lib/jsinterpreter/interpreter.js'); })
+    .then(function () { return loadSource('/lib/ace/src-noconflict/ace.js'); })
+    .then(function () { return loadSource('/lib/ace/src-noconflict/mode-javascript.js'); })
+    .then(function () { return loadSource('/lib/ace/src-noconflict/ext-language_tools.js'); })
+    .then(function () { return loadSource('/lib/droplet/droplet-full.js'); })
+    .then(function () { return loadSource('/lib/tooltipster/jquery.tooltipster.js'); })
+    .then(function () { return loadSource('/lib/phaser/phaser.js'); })
+    .then(function () { return loadSource('/lib/p5play/p5.js'); })
+    .then(function () { return loadSource('/lib/p5play/p5.play.js'); })
     .then(function () {
       assert(window.droplet, 'droplet in global namespace');
       done();
