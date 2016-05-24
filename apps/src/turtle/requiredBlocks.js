@@ -27,7 +27,7 @@ var MOVE_FORWARD_INLINE = {test: 'moveForward', type: 'draw_move_by_constant'};
 // allow move forward or backward, but show forward block if they've done neither
 var MOVE_FORWARD_OR_BACKWARD_INLINE = {
   test: function (block) {
-    return block.type == 'draw_move_by_constant';
+    return block.type === 'draw_move_by_constant';
   },
   type: 'draw_move_by_constant'
 };
@@ -72,10 +72,10 @@ var turnLeftRestricted = function (degrees) {
 var turnRightByConstant = function (degrees) {
   return {
     test: function (block) {
-      return block.type == 'draw_turn_by_constant' &&
+      return block.type === 'draw_turn_by_constant' &&
           (degrees === '???' ||
            Blockly.JavaScript.valueToCode(
-             block, 'VALUE', Blockly.JavaScript.ORDER_NONE) == degrees);
+             block, 'VALUE', Blockly.JavaScript.ORDER_NONE) === degrees);
     },
     type: 'draw_turn_by_constant',
     titles: {'VALUE': degrees}};
@@ -87,8 +87,8 @@ var turnRightByConstant = function (degrees) {
 var turnRight = function (degrees) {
   return {
     test: function (block) {
-      return block.type == 'draw_turn' &&
-        block.getTitleValue('DIR') == 'turnRight';
+      return block.type === 'draw_turn' &&
+        block.getTitleValue('DIR') === 'turnRight';
       },
     type: 'draw_turn',
     titles: {'DIR': 'turnRight'},
@@ -102,8 +102,8 @@ var turnRight = function (degrees) {
 var turnLeft = function (degrees) {
   return {
     test: function (block) {
-      return block.type == 'draw_turn' &&
-        block.getTitleValue('DIR') == 'turnLeft';
+      return block.type === 'draw_turn' &&
+        block.getTitleValue('DIR') === 'turnLeft';
       },
     type: 'draw_turn',
     titles: {'DIR': 'turnLeft'},
@@ -114,7 +114,7 @@ var turnLeft = function (degrees) {
 // This tests for any draw_move block and, if not present, creates
 // one with the specified distance.
 var move = function (distance) {
-  return {test: function (block) {return block.type == 'draw_move'; },
+  return {test: function (block) {return block.type === 'draw_move'; },
           type: 'draw_move',
           values: {'VALUE': requiredBlockUtils.makeMathNumber(distance)}};
 };
@@ -123,7 +123,7 @@ var move = function (distance) {
 var drawTurnRestricted = function (degrees) {
   return {
     test: function (block) {
-      return block.type == 'draw_turn_by_constant_restricted';
+      return block.type === 'draw_turn_by_constant_restricted';
     },
     type: 'draw_turn_by_constant_restricted',
     titles: {'VALUE': degrees}
@@ -134,7 +134,7 @@ var drawTurnRestricted = function (degrees) {
 var drawTurn = function () {
   return {
     test: function (block) {
-      return block.type == 'draw_turn';
+      return block.type === 'draw_turn';
     },
     type: 'draw_turn',
     values: {'VALUE': requiredBlockUtils.makeMathNumber('???')}
@@ -167,10 +167,10 @@ var SET_COLOUR_RANDOM = {test: 'penColour(colour_random',
 var defineWithArg = function (func_name, arg_name) {
   return {
     test: function (block) {
-      return block.type == 'procedures_defnoreturn' &&
-          block.getTitleValue('NAME') == func_name &&
+      return block.type === 'procedures_defnoreturn' &&
+          block.getTitleValue('NAME') === func_name &&
           block.parameterNames_ && block.parameterNames_.length &&
-          block.parameterNames_[0] == arg_name;
+          block.parameterNames_[0] === arg_name;
     },
     type: 'procedures_defnoreturn',
     titles: {'NAME': func_name},

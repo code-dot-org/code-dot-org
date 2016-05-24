@@ -131,7 +131,7 @@ var levels = module.exports = {
       [{
         // allow turn right or left, but show turn right block if they've done neither
         test: function (block) {
-          return block.type == 'draw_turn_by_constant_restricted';
+          return block.type === 'draw_turn_by_constant_restricted';
         },
         type: 'draw_turn_by_constant',
         titles: {VALUE: '???'}
@@ -221,7 +221,7 @@ var levels = module.exports = {
       [{
         // allow turn right or left, but show turn right block if they've done neither
         test: function (block) {
-          return block.type == 'draw_turn';
+          return block.type === 'draw_turn';
         },
         type: 'draw_turn',
         titles: {'DIR': 'turnRight'},
@@ -230,7 +230,7 @@ var levels = module.exports = {
       [{
         // allow move forward or backward, but show forward block if they've done neither
         test: function (block) {
-          return block.type == 'draw_move';
+          return block.type === 'draw_move';
         },
         type: 'draw_move',
         values: {'VALUE': makeMathNumber(100)}
@@ -615,7 +615,7 @@ var levels = module.exports = {
       [{
         // allow turn right or left, but show turn right block if they've done neither
         test: function (block) {
-          return block.type == 'draw_turn_by_constant';
+          return block.type === 'draw_turn_by_constant';
         },
         type: 'draw_turn_by_constant',
         titles: {VALUE: '???'}
