@@ -260,15 +260,7 @@ GameLab.prototype.onSelectedAnimationChange = function (selectedAnimation) {
   }
 
   const iframe = document.getElementById('piskel-frame');
-  if (!iframe) {
-    return;
-  }
-  const iframeWindow = iframe.contentWindow;
-  if (!iframeWindow) {
-    return;
-  }
-
-  iframeWindow.postMessage({
+  iframe.contentWindow.postMessage({
     type: 'LOAD_IMAGE',
     animation: this.getAnimationMetadataByKey(selectedAnimation)
   }, '*');
