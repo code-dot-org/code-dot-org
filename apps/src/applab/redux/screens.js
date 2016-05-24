@@ -5,6 +5,7 @@ const TOGGLE_IMPORT_SCREEN = 'screens/TOGGLE_IMPORT_SCREEN';
 
 const ScreenState = Immutable.Record({
   currentScreenId: null,
+  isImportingScreen: false,
 });
 
 const initialState = new ScreenState();
@@ -13,7 +14,7 @@ export default function (state = initialState, action) {
   if (action.type === CHANGE_SCREEN) {
     return state.set('currentScreenId', action.screenId);
   } else if (action.type === TOGGLE_IMPORT_SCREEN) {
-    return state.set('importingScreen', action.importing);
+    return state.set('isImportingScreen', action.importing);
   }
   return state;
 }

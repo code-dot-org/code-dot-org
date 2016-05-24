@@ -1,6 +1,5 @@
 /** @file Top-level view for App Lab */
-'use strict';
-
+import ImportDialog from './ImportDialog';
 var React = require('react');
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
@@ -27,6 +26,7 @@ var AppLabView = React.createClass({
   render: function () {
     return (
       <StudioAppWrapper>
+        <ImportDialog />
         <ApplabVisualizationColumn
             isEditingProject={this.props.isEditingProject}
             screenIds={this.props.screenIds}
