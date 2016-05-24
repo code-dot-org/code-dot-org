@@ -202,9 +202,9 @@ module.exports = function (grunt) {
       'options': {
         'include': [
           'debounce', 'reject', 'map', 'value', 'range', 'without', 'sample',
-          'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind', 'contains',
+          'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind', 'includes',
           'last', 'clone', 'cloneDeep', 'isEqual', 'find', 'sortBy', 'throttle',
-          'uniq', 'assign', 'merge'
+          'uniq', 'assign', 'merge', 'mergeWith'
         ]
       }
     }
