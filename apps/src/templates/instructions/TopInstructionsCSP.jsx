@@ -99,21 +99,6 @@ var TopInstructions = React.createClass({
     return newHeight - currentHeight;
   },
 
-  componentDidMount: function () {
-    // Parent needs to readjust some sizing after images have loaded
-    $(ReactDOM.findDOMNode(this)).find('img').load(this.props.onResize);
-
-    $('details').on({
-      'toggle.details.TopInstructions': () => {
-        this.props.onResize();
-      }
-    });
-  },
-
-  componentWillUnmount() {
-    $('details').off('toggle.details.TopInstructions');
-  },
-
   render: function () {
     if (!this.props.markdown) {
       return <div/>;
@@ -141,6 +126,7 @@ var TopInstructions = React.createClass({
             <Instructions
               ref="instructions"
               renderedMarkdown={processMarkdown(this.props.markdown)}
+              onResize={this.props.onResize}
               inTopPane
               />
           </div>
