@@ -5,6 +5,7 @@ var mkdirp = require('mkdirp');
 var webpack = require('webpack');
 var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
+var webpackConfig = require('./webpack.config');
 
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
@@ -350,40 +351,13 @@ module.exports = function (grunt) {
     entries['applab-api'] = './src/applab/api-entry.js';
   }
   config.webpack = {
-    build: {
+    build: _.extend({}, webpackConfig, {
       output: {
         path: path.resolve(__dirname, outputDir),
         filename: "[name].js",
       },
       //    devtool: 'eval',
       entry: entries,
-      resolve: {
-        extensions: ["", ".js", ".jsx"],
-      },
-      externals: {
-        "johnny-five": "var JohnnyFive",
-        "playground-io": "var PlaygroundIO",
-        "chrome-serialport": "var ChromeSerialport",
-        "marked": "var marked",
-        "react": "var React",
-      },
-      module: {
-        loaders: [
-          {test: /\.json$/, loader: 'json'},
-          {test: /\.ejs$/, loader: 'ejs-compiled'},
-          {
-            test: /\.jsx?$/,
-            include: [
-              path.resolve(__dirname, 'src'),
-            ],
-            loader: "babel",
-            query: {
-              cacheDirectory: true,
-              sourceMaps: true,
-            }
-          },
-        ],
-      },
       plugins: [
         new webpack.optimize.CommonsChunkPlugin({
           name:'common',
@@ -391,7 +365,7 @@ module.exports = function (grunt) {
         }),
       ],
       watch: true,
-    }
+    })
   };
   config.webpack.uglify = _.extend({}, config.webpack.build, {
     output: _.extend({}, config.webpack.build.output, {
@@ -413,7 +387,7 @@ module.exports = function (grunt) {
       src: [
         'lib/blockly/blockly_' + ext + '.js',
         'lib/blockly/blocks_' + ext + '.js',
-        'lib/blockly/javascript_' + ext + '.js'
+        'lib/blockly/javascript_' + ext + '.js',
       ],
       dest: 'build/package/js/blockly.js'
     }
