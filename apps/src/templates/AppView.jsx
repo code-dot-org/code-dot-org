@@ -14,11 +14,10 @@ var CodeWorkspaceContainer = require('./CodeWorkspaceContainer');
 var AppView = React.createClass({
   propTypes: {
     hideSource: React.PropTypes.bool.isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
     isResponsive: React.PropTypes.bool.isRequired,
+    pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
 
     // not provided by redux
-    noVisualization: React.PropTypes.bool,
     visualizationColumn: React.PropTypes.element,
     onMount: React.PropTypes.func.isRequired,
   },
@@ -29,7 +28,8 @@ var AppView = React.createClass({
 
   render: function () {
     const visualizationColumnClassNames = classNames({
-      responsive: this.props.isResponsive
+      responsive: this.props.isResponsive,
+      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom
     });
 
     return (
@@ -38,21 +38,13 @@ var AppView = React.createClass({
           {this.props.visualizationColumn}
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <CodeWorkspaceContainer
-            topMargin={0}
-            hidden={this.props.hideSource}
-            noVisualization={!!this.props.noVisualization}
-            isRtl={this.props.isRtl}
-        />
+        <CodeWorkspaceContainer topMargin={0}/>
       </StudioAppWrapper>
     );
   }
 });
 module.exports = connect(state => ({
-  isResponsive: isResponsiveFromState(state),
-  assetUrl: state.pageConstants.assetUrl,
-  isEmbedView: state.pageConstants.isEmbedView,
-  isShareView: state.pageConstants.isShareView,
   hideSource: state.pageConstants.hideSource,
-  isRtl: state.pageConstants.localeDirection === 'rtl'
+  isResponsive: isResponsiveFromState(state),
+  pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
 }))(AppView);

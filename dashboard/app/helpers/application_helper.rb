@@ -48,9 +48,15 @@ module ApplicationHelper
     image_tag(image_url('white-checkmark.png'))
   end
 
-  def activity_css_class(result, submitted=false)
+  def activity_css_class(user_level)
     # For definitions of the result values, see /app/src/constants.js.
-    if submitted
+    result = user_level.try(:best_result)
+
+    if result == Activity::REVIEW_REJECTED_RESULT
+      'review_rejected'
+    elsif result == Activity::REVIEW_ACCEPTED_RESULT
+      'review_accepted'
+    elsif user_level.try(:submitted)
       'submitted'
     elsif result.nil? || result == 0
       'not_tried'

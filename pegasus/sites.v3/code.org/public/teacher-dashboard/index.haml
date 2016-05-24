@@ -5,8 +5,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 ---
 - authentication_required!
 - forbidden! unless dashboard_user[:user_type] == 'teacher'
-- error_string_none_selected = I18n.t('dashboard_error_none_selected')
-- error_string_other_section = I18n.t('dashboard_error_other_section')
+- error_string_none_selected = I18n.t('dashboard_error_none_selected').gsub(/"/,"\\\\\"")
+- error_string_other_section = I18n.t('dashboard_error_other_section').gsub(/"/,"\\\\\"")
 
 %link(rel='stylesheet' type='text/css' href='/css/learn_tabs.css')
 %link(rel='stylesheet' type='text/css' href='/style.css')
@@ -803,7 +803,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
           } else {
             assessment.multi_correct_percent = assessment.multi_correct / assessment.multi_count * 100;
           }
-          assessment.status = assessment.submitted ? submission_list["submitted"] : submission_list["in_progress"];
+          assessment.status = assessment.submitted ? submission_list.submitted : submission_list.in_progress;
 
           // Don't show a timestamp for non-submittted assessments.
           if (!assessment.submitted) {
