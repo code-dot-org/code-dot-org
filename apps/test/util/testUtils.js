@@ -1,7 +1,5 @@
 import {assert} from './configuredChai';
 
-require('require-globify');
-
 var $ = require('jquery');
 
 exports.setExternalGlobals = function () {
@@ -51,7 +49,8 @@ exports.setupLocale = setupLocale;
 function setupLocales() {
   // make sure Blockly is loaded
   require('./frame')();
-  require('../../build/package/js/en_us/*_locale*.js', { mode: 'expand'});
+  var context = require.context('../../build/package/js/en_us/', false, /.*_locale.*\.js$/);
+  context.keys().forEach(context);
   assert(window.blockly.applab_locale);
 }
 
