@@ -16,12 +16,12 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'build/package/js/blockly*js',
-      'test/integration-index.js',
-      'test/index.js',
-      {pattern:'lib/**/*.png', watched: false, included: false},
-      {pattern:'lib/**/*.cur', watched: false, included: false},
-      {pattern:'lib/**/*.js', watched: false, included: false},
+      {pattern: 'build/package/js/blockly*js', watched: false},
+//      'test/integration-index.js',
+      {pattern: 'test/index.js', watched: false},
+      {pattern: 'lib/**/*.png', watched: false, included: false},
+      {pattern: 'lib/**/*.cur', watched: false, included: false},
+      {pattern: 'lib/**/*.js', watched: false, included: false},
     ],
 
     proxies: {
@@ -43,9 +43,19 @@ module.exports = function (config) {
 
     webpack: _.extend({}, webpackConfig, {
       devtool: 'inline-source-map',
-      externals: {},
+      externals: {
+        "johnny-five": "var JohnnyFive",
+        "playground-io": "var PlaygroundIO",
+        "chrome-serialport": "var ChromeSerialport",
+        "marked": "var marked",
+        "blockly": "this Blockly",
+      },
       plugins: [
-        new webpack.ProvidePlugin({React: 'react'})
+        new webpack.ProvidePlugin({React: 'react'}),
+        new webpack.DefinePlugin({
+          IN_UNIT_TEST: true,
+        }),
+
       ]
     }),
     webpackMiddleware: {
@@ -82,8 +92,8 @@ module.exports = function (config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: [
-      'Chrome',
-//      'PhantomJS',
+//      'Chrome',
+      'PhantomJS',
     ],
 
 

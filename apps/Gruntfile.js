@@ -359,6 +359,9 @@ module.exports = function (grunt) {
       //    devtool: 'eval',
       entry: entries,
       plugins: [
+        new webpack.DefinePlugin({
+          IN_UNIT_TEST: false,
+        }),
         new webpack.optimize.CommonsChunkPlugin({
           name:'common',
           minChunks: 2,
