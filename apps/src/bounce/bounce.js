@@ -17,7 +17,6 @@ var api = require('./api');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var BounceVisualizationColumn = require('./BounceVisualizationColumn');
-var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
 var Hammer = require('../hammer');
 var utils = require('../utils');
@@ -276,7 +275,7 @@ var drawMap = function () {
         top = GOAL_TILE_SHAPES[tile][1];
         image = skin.goalTiles;
       }
-      if (tile != 'null0') {
+      if (tile !== 'null0') {
         // Tile's clipPath element.
         var tileClip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
         tileClip.setAttribute('id', 'tileClipPath' + tileId);
@@ -395,7 +394,7 @@ var drawMap = function () {
   var obsId = 0;
   for (y = 0; y < Bounce.ROWS; y++) {
     for (x = 0; x < Bounce.COLS; x++) {
-      if (Bounce.map[y][x] == SquareType.OBSTACLE) {
+      if (Bounce.map[y][x] === SquareType.OBSTACLE) {
         var obsIcon = document.createElementNS(Blockly.SVG_NS, 'image');
         obsIcon.setAttribute('id', 'obstacle' + obsId);
         obsIcon.setAttribute('height', Bounce.MARKER_HEIGHT * skin.obstacleScale);
@@ -478,7 +477,7 @@ Bounce.onTick = function () {
   // Run key event handlers for any keys that are down:
   for (var key in KeyCodes) {
     if (Bounce.keyState[KeyCodes[key]] &&
-        Bounce.keyState[KeyCodes[key]] == "keydown") {
+        Bounce.keyState[KeyCodes[key]] === "keydown") {
       switch (KeyCodes[key]) {
         case KeyCodes.LEFT:
           Bounce.callUserGeneratedCode(Bounce.whenLeft);
@@ -498,7 +497,7 @@ Bounce.onTick = function () {
 
   for (var btn in ArrowIds) {
     if (Bounce.btnState[ArrowIds[btn]] &&
-        Bounce.btnState[ArrowIds[btn]] == ButtonState.DOWN) {
+        Bounce.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
       switch (ArrowIds[btn]) {
         case ArrowIds.LEFT:
           Bounce.callUserGeneratedCode(Bounce.whenLeft);
@@ -779,22 +778,11 @@ Bounce.init = function (config) {
     dom.addClickTouchEvent(finishButton, Bounce.onPuzzleComplete);
   };
 
-  // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setPageConstants({
-    localeDirection: studioApp.localeDirection(),
-    isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isDroplet: !!level.editCode
-  }));
+  studioApp.setPageConstants(config);
 
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          assetUrl={studioApp.assetUrl}
-          isEmbedView={!!config.embed}
-          isShareView={!!config.share}
-          hideSource={!!config.hideSource}
-          noVisualization={false}
-          isRtl={studioApp.isRtl()}
           visualizationColumn={<BounceVisualizationColumn/>}
           onMount={onMount}
       />
@@ -863,7 +851,7 @@ Bounce.launchBall = function (i) {
 Bounce.resetBall = function (i, options) {
   //console.log("resetBall called for ball " + i);
   var randStart = options.randomPosition ||
-                  typeof Bounce.ballStart_[i] == 'undefined';
+                  typeof Bounce.ballStart_[i] === 'undefined';
   Bounce.ballX[i] =  randStart ? Math.floor(Math.random() * Bounce.COLS) :
                                  Bounce.ballStart_[i].x;
   Bounce.ballY[i] =  randStart ? tiles.DEFAULT_BALL_START_Y :
@@ -1180,7 +1168,7 @@ Bounce.onPuzzleComplete = function () {
 
   // If we know they succeeded, mark levelComplete true
   // Note that we have not yet animated the succesful run
-  var levelComplete = (Bounce.result == ResultType.SUCCESS);
+  var levelComplete = (Bounce.result === ResultType.SUCCESS);
 
   // If the current level is a free play, always return the free play
   // result type
@@ -1380,11 +1368,11 @@ Bounce.allFinishesComplete = function () {
         finished++;
       }
     }
-    if (playSound && finished != Bounce.paddleFinishCount) {
+    if (playSound && finished !== Bounce.paddleFinishCount) {
       // Play a sound unless we've hit the last flag
       studioApp.playAudio('flag');
     }
-    return (finished == Bounce.paddleFinishCount);
+    return (finished === Bounce.paddleFinishCount);
   }
   if (Bounce.ballFinish_) {
     for (i = 0; i < Bounce.ballCount; i++) {

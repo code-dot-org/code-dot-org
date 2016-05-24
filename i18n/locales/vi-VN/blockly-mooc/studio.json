@@ -2,6 +2,8 @@
   "actor":"nhân vật",
   "addCharacter":"thêm một",
   "addCharacterTooltip":"Thêm một nhân vật vào cảnh.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"thêm 10 điểm",
   "addPoints50":"thêm 50 điểm",
   "addPoints100":"thêm 100 điểm",

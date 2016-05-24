@@ -2,6 +2,8 @@
   "actor":"leikmaður",
   "addCharacter":"bæta við",
   "addCharacterTooltip":"Bæta leikveru í sviðsmyndina.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"bæta við 10 stigum",
   "addPoints50":"bæta við 50 stigum",
   "addPoints100":"bæta við 100 stigum",

@@ -375,7 +375,7 @@ levels.k1_3 = utils.extend(levels.dog_move_cat,  {
   'requiredBlocks': [
     [{
       test: function (block) {
-        return block.type == 'studio_moveEastDistance';
+        return block.type === 'studio_moveEastDistance';
       },
       type: 'studio_moveEastDistance'}]
   ],
@@ -471,7 +471,7 @@ levels.k1_4 = utils.extend(levels.dog_move_cat_hello,  {
   'requiredBlocks': [
     [{
       test: function (block) {
-        return block.type == 'studio_moveEastDistance';
+        return block.type === 'studio_moveEastDistance';
       },
       type: 'studio_moveEastDistance',
     }],
@@ -479,7 +479,7 @@ levels.k1_4 = utils.extend(levels.dog_move_cat_hello,  {
       test: function (block) {
         // Make sure they have the right block, and have changed the default
         // text
-        return block.type == 'studio_saySprite' &&
+        return block.type === 'studio_saySprite' &&
           block.getTitleValue("SPRITE") === '1' &&
           block.getTitleValue("TEXT") !== msg.defaultSayText();
       },

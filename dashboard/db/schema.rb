@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160512224559) do
+ActiveRecord::Schema.define(version: 20160517220519) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -334,6 +334,13 @@ ActiveRecord::Schema.define(version: 20160512224559) do
 
   add_index "pd_attendances", ["pd_session_id"], name: "index_pd_attendances_on_pd_session_id", using: :btree
 
+  create_table "pd_course_facilitators", force: :cascade do |t|
+    t.integer "facilitator_id", limit: 4,   null: false
+    t.string  "course",         limit: 255, null: false
+  end
+
+  add_index "pd_course_facilitators", ["course"], name: "index_pd_course_facilitators_on_course", using: :btree
+
   create_table "pd_district_payment_terms", force: :cascade do |t|
     t.integer "district_id", limit: 4
     t.string  "course",      limit: 255,                         null: false
@@ -344,17 +351,21 @@ ActiveRecord::Schema.define(version: 20160512224559) do
   add_index "pd_district_payment_terms", ["district_id", "course"], name: "index_pd_district_payment_terms_on_district_id_and_course", using: :btree
 
   create_table "pd_enrollments", force: :cascade do |t|
-    t.integer  "pd_workshop_id", limit: 4,   null: false
-    t.string   "name",           limit: 255, null: false
-    t.string   "email",          limit: 255, null: false
+    t.integer  "pd_workshop_id",     limit: 4,   null: false
+    t.string   "name",               limit: 255, null: false
+    t.string   "email",              limit: 255, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "district_name",  limit: 255
-    t.string   "school",         limit: 255
-    t.string   "code",           limit: 255
+    t.string   "school",             limit: 255
+    t.string   "code",               limit: 255
+    t.integer  "school_district_id", limit: 4
+    t.integer  "school_zip",         limit: 4
+    t.string   "school_type",        limit: 255
+    t.string   "school_state",       limit: 255
   end
 
   add_index "pd_enrollments", ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
+  add_index "pd_enrollments", ["school_district_id"], name: "index_pd_enrollments_on_school_district_id", using: :btree
 
   create_table "pd_sessions", force: :cascade do |t|
     t.integer  "pd_workshop_id", limit: 4
@@ -566,15 +577,25 @@ ActiveRecord::Schema.define(version: 20160512224559) do
   add_index "puzzle_ratings", ["script_id", "level_id"], name: "index_puzzle_ratings_on_script_id_and_level_id", using: :btree
   add_index "puzzle_ratings", ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
 
+  create_table "school_districts", force: :cascade do |t|
+    t.string   "name",       limit: 255, null: false
+    t.string   "city",       limit: 255, null: false
+    t.string   "state",      limit: 255, null: false
+    t.string   "zip",        limit: 255, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
   create_table "script_levels", force: :cascade do |t|
     t.integer  "level_id",   limit: 4
-    t.integer  "script_id",  limit: 4, null: false
+    t.integer  "script_id",  limit: 4,     null: false
     t.integer  "chapter",    limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "stage_id",   limit: 4
     t.integer  "position",   limit: 4
     t.boolean  "assessment"
+    t.text     "properties", limit: 65535
   end
 
   add_index "script_levels", ["level_id"], name: "index_script_levels_on_level_id", using: :btree
@@ -929,6 +950,7 @@ ActiveRecord::Schema.define(version: 20160512224559) do
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
+  add_foreign_key "pd_enrollments", "school_districts"
   add_foreign_key "peer_reviews", "level_sources"
   add_foreign_key "peer_reviews", "levels"
   add_foreign_key "peer_reviews", "scripts"

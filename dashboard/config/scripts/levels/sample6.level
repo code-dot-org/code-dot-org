@@ -6,8 +6,8 @@
   "user_id": 63,
   "properties": {
     "skin": "bee",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "instructions": "Challenge: Help bee make all of the honey.",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":2},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":1,\"range\":1}]]",
+    "instructions": "Challenge: Help bee get all of the nectar.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -23,12 +23,12 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "start_direction": "0",
+    "start_direction": "3",
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "ideal": "12",
-    "markdown_instructions": "**Challenge:** Help bee make all of the honey.\r\n\r\nThis puzzle is meant to be hard.  You may need to try lots of times.",
+    "markdown_instructions": "**Challenge:** Help bee get all of the nectar.\r\n\r\nThis puzzle is meant to be hard.  You may need to try lots of times.",
     "failure_message_override": "Not quite.  Keep trying!  [Move to Play Zone]",
     "nectar_goal": "6"
   },
@@ -71,13 +71,13 @@
                     <block type="maze_nectar">
                       <next>
                         <block type="maze_turn">
-                          <title name="DIR">turnRight</title>
+                          <title name="DIR">turnLeft</title>
                           <next>
                             <block type="maze_move">
                               <title name="DIR">moveForward</title>
                               <next>
                                 <block type="maze_turn">
-                                  <title name="DIR">turnLeft</title>
+                                  <title name="DIR">turnRight</title>
                                 </block>
                               </next>
                             </block>
@@ -89,14 +89,14 @@
                 </block>
               </statement>
               <next>
-                <block type="maze_move">
-                  <title name="DIR">moveForward</title>
+                <block type="maze_turn">
+                  <title name="DIR">turnLeft</title>
                   <next>
                     <block type="maze_turn">
                       <title name="DIR">turnLeft</title>
                       <next>
                         <block type="controls_repeat_dropdown">
-                          <title name="TIMES" config="3-10">5</title>
+                          <title name="TIMES" config="3-10">6</title>
                           <statement name="DO">
                             <block type="maze_move">
                               <title name="DIR">moveForward</title>

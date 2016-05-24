@@ -23,10 +23,12 @@
           future: "오늘 이전 날짜만 가능합니다."
   hello: Hello world
   welcome_back: "%{name} 님, 어서오세요. "
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: "제출하기"
   unsubmit: "제출 취소"
-  previous_page: Previous page
-  next_page: Next page
+  previous_page: "이전 페이지"
+  next_page: "다음 페이지"
   cancel: "취소"
   okay: "알겠어"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
@@ -159,8 +161,6 @@
         subject: "%{teacher_name} 선생님의 학급에 참여하세요. Code.org!"
       student_disassociated:
         subject: 'Code.org 알림: %{student_name} 학생은 더이상 등록되어있지 않습니다.'
-      teacher_disassociated:
-        subject: 'Code.org 알림: %{teacher_name} 선생님은 더이상 등록되어있지 않습니다.'
   reports:
     error:
       access_denied: "이 학생의 학습 상황에 접근할 수 없습니다"
@@ -352,6 +352,35 @@
     no_primary_course: Code Studio 과정들을 해보세요.
     choose_next_course: "아래의 Code Studio 과정을 해보세요."
     print_certificate: "인증서 인쇄"
+    announcement_title: "공시사항"
+    announcement_view_all: "모두 보기"
+    announcement_message: "<b>2016년 4월 22일</b> - 언플러그드 활동은 학습 과정의 필수적인 부분이지만 선생님들은
+      언플러그드 학습 자료를 찾는 것이 복잡하고 시간이 많이 소요된다고 얘기합니다. 우리는 귀 기울였습니다! 이제 여러분은 하나의 웹 페이지에서
+      모든 언플러그드 학습 자료를 찾을 수 있습니다. 어느 컴퓨터 과학(정보 과학) 수업과 연관 짓거나 또는 독립적인 학습 과정으로 사용해 보세요."
+    announcement_button: "더 알아보기"
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: Code Studio 배우기
     description: "누구든지 컴퓨터 과학을 배우고, 코드를 이용해서 게임, 앱, 예술을 만들 수 있습니다."
@@ -370,17 +399,24 @@
       지원에 감사 드립니다.
     help_from_html: "구글, 마이크로소프트, 페이스북, 트위터의 컴퓨터과학자들이 이 튜토리얼을 만들었습니다."
     help_from_html_old: "구글, 마이크로 소프트, 페이스북, 트위터의 엔지니어들이 이 자료들을 만드는데 도움을 주었습니다."
-    art_from_html: Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm.
-      All Rights Reserved.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney.
-      All Rights Reserved.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century
-      Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year}
-      Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
-      GNU LGPL 2.1</a>.
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br
+      />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br
+      />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice
+      Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br
+      />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
+      Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark
+      and &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights
+      Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All
+      Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.
+      Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.
+      Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
+      Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and
+      &copy; 2015 Cartoon Network.
+    code_from_html: Code.org p5.play, <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      GNU LGPL 2.1</a> 아래에 라이센스를 사용 합니다.
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org."
@@ -494,14 +530,11 @@
       title: "마인크래프트"
       body: "코드를 이용해 마인크래프트 월드를 탐험해보세요."
     unplugged:
-      title: Unplugged Lessons
-      audience: Ages 6+
-      body: We've compiled a list of unplugged lessons for you to use in your classroom.
-        Now you can teach the fundamentals of computer science, whether you have computers
-        in your classroom or not! Try using these lessons as a stand-alone course
-        or as complementary lessons for any computer science course.
-      body_short: If you don't have computers, try these unplugged lessons in your
-        classroom.
+      title: "언플러그드 레슨"
+      audience: 6세 이상
+      body: "수업에서 활용할 수 있는 언플러그드 활동을 준비했습니다. 교실에 컴퓨터들이 없어도 컴퓨터과학의 기초/개념/원리들을 교육할 수
+        있습니다! 이 언플러그드레슨들은 별도 과정 또는 다른 컴퓨터과학 과정의 추가 과정으로 사용해보세요."
+      body_short: "컴퓨터가 없다면, 이 언플러그드 수업을 시도해보세요!"
   gallery:
     students_drew_these_with_code: "학생들이 그린 작품!"
     students_made_these_with_code: "학생들이 만든 작품!"
@@ -549,15 +582,13 @@
     wrong_body: "답변 주셔서 감사 합니다."
     correct_title: "고마워"
     correct_body: "답변 주셔서 감사 합니다."
-    unsubmit-title: Unsubmit your assessment
-    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
-      date.  Are you sure?
-    submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
-      assessment after submitting it.  Are you sure?
-    submit-complete-title: Submit your assessment
-    submit-complete-body: You cannot edit your assessment after submitting it.  Are
-      you sure?
+    unsubmit-title: "평가 취소"
+    unsubmit-body: "평가를 취소하면, 제출시간과 날짜가 리셋됩니다."
+    submit-incomplete-title: "평가 제출"
+    submit-incomplete-body: "몇 가지 질문을 완료하지 않았습니다. 평가를 제출한 후에는 수정을 할 수 없습니다. 그래도 계속
+      하시겠습니까?"
+    submit-complete-title: "평가 제출"
+    submit-complete-body: "평가를 제출한 후에는 수정 할 수 없습니다. 계속 하시겠습니까?"
   match:
     wrong_title: "정답이 아닌 답안"
     wrong_body: "정답이 아닙니다. 다시 시도해 보세요."
@@ -651,6 +682,10 @@
     share: "공유하기"
     share_title: "프로젝트 공유"
     share_copy_link: "링크 복사"
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: "닫기"
     more: "더 많은"
     name: "이름"
@@ -693,9 +728,25 @@
           infringement: "저작권 침해"
           other: "기타"
         detail: "지금 신고하시는 내용에 관하여 가능한 상세하게 기술해주세요."
-        acknowledge: "이 내용을 제출하시면 당신이 신고한 내용이 %{link_start_privacy}개인보호정책link%{link_end}과
-          %{link_start_tos}서비스 규정%{link_end}에 따라 처리됨을 승인하게 됩니다."
+        acknowledge: "이 정보를 보내면, 보낸 정보를 %{link_start_privacy}개인정보보호정책link%{link_end}과
+          %{link_start_tos}서비스 규정%{link_end}에 따라 처리함을 승인하게 됩니다."
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
   components:
     icon_library:
       search_placeholder_text: "아이콘 검색..."
       no_icons_found: "아이콘이 발견되지 않음"
+  flex_category:
+    required: "개요"
+    content: Content
+    practice: Teacher Practices

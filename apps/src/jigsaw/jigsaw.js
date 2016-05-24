@@ -12,7 +12,6 @@ var skins = require('../skins');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');
-var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
 
 /**
@@ -167,22 +166,13 @@ Jigsaw.init = function (config) {
     }
   };
 
-  // Push initial level properties into the Redux store
-  studioApp.reduxStore.dispatch(setPageConstants({
-    localeDirection: studioApp.localeDirection(),
-    isReadOnlyWorkspace: !!config.readonlyWorkspace,
-    isDroplet: !!level.editCode
-  }));
+  studioApp.setPageConstants(config, {
+    noVisualization: true
+  });
 
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          assetUrl={studioApp.assetUrl}
-          isEmbedView={!!config.embed}
-          isShareView={!!config.share}
-          hideSource={!!config.hideSource}
-          noVisualization={true}
-          isRtl={studioApp.isRtl()}
           visualizationColumn={<JigsawVisualizationColumn/>}
           onMount={onMount}
       />
@@ -239,7 +229,7 @@ Jigsaw.onPuzzleComplete = function () {
 
   // If we know they succeeded, mark levelComplete true
   // Note that we have not yet animated the succesful run
-  var levelComplete = (Jigsaw.result == ResultType.SUCCESS);
+  var levelComplete = (Jigsaw.result === ResultType.SUCCESS);
 
   Jigsaw.testResults = studioApp.getTestResults(levelComplete, {
     allowTopBlocks: true

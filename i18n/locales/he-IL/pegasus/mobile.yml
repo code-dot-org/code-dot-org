@@ -270,6 +270,8 @@ he-IL:
   homepage_banner_privacy_link: למד עוד
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
   homepage_banner_20k_teachers_link: למד עוד
+  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: שעה של קוד
   homepage_slot_text_blurb_hoc: כל אחד יכול ללמוד. התחל היום
   homepage_slot_text_link_hoc: 'נסה את "שעת הקוד" (Hour of Code)'
@@ -295,6 +297,7 @@ he-IL:
   homepage_slot_text_link_stats: ראה סטטיסטיקה
   homepage_slot_text_link_buy: השתתף
   homepage_slot_text_link_donate: תרום
+  homepage_slot_text_link_shop: 'T-shirts, hats, & more'
   homepage_header_codestudio: יצירותיהם של תלמידי קוד סטודיו
   homepage_header_donors: code.org מודה לתומכיו
   homepage_donors_seall: ראה הכל
@@ -641,8 +644,10 @@ he-IL:
   dashboard_faq_k5: שאלות נפוצות למורי יסודי
   dashboard_announcements: הודעות
   dashboard_announce_view_all: הצג הכל
-  dashboard_announce_message: '<b>April 22, 2016</b> - Unplugged activities are a vital part of the learning process, but teachers tell us that finding all of the resources can be confusing and time-consuming. We listened! Now, you can find all of the unplugged resources on a single landing page. Associate the lessons with any computer science class, or use stand-alone as an independent course.'
+  dashboard_announce_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
   dashboard_announce_button_text: למד עוד
+  dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: 'שעה של הקוד הוא כאן - דצמבר 8-14!'
   code_sign_up: הירשם להשתתף במהלך שבוע חינוך מדעי המחשב
   learn_more: למד עוד
@@ -752,9 +757,27 @@ he-IL:
   course3_name: קורס 3
   course4_name: קורס 4
   accelerated_name: קורס מואץ
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  20-hour_name: קורס מואץ
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: מבוך קלאסי
+  iceage_name: עידן הקרח
+  minecraft_name: מיינקראפט
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: מתמטיקה
+  hoc_category_name: שעה של קוד
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
   applab_name: מעבדת היישומים
   applab_gradelevel: Ages 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds

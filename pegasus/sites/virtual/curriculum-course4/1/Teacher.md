@@ -33,7 +33,7 @@ This activity will show both options.
 
 ### **Wrap-up** - 10  minutes 
 
-5) [Flash Chat: What did we learn?](#FlashChat)<br/>
+5) [Flash Chat: What did we learn?](#FlashChat)  
 6) [Vocab-Shmocab](#Shmocab)
 
 ### **Assessment** - 10  minutes 

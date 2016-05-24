@@ -24,7 +24,7 @@ class ActivitiesController < ApplicationController
 
     if params[:script_level_id]
       @script_level = ScriptLevel.cache_find(params[:script_level_id].to_i)
-      @level = @script_level.level
+      @level = params[:level_id] ? Script.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
       script_name = @script_level.script.name
     elsif params[:level_id]
       # TODO: do we need a cache_find for Level like we have for ScriptLevel?
@@ -85,6 +85,7 @@ class ActivitiesController < ApplicationController
                   end
 
     render json: milestone_response(script_level: @script_level,
+                                    level: @level,
                                     total_lines: total_lines,
                                     trophy_updates: @trophy_updates,
                                     solved?: solved,

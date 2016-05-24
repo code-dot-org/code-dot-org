@@ -3,7 +3,7 @@
 
 var ApplabVisualizationColumn = require('./ApplabVisualizationColumn');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
-var ConnectedStudioAppWrapper = require('../templates/ConnectedStudioAppWrapper');
+var StudioAppWrapper = require('../templates/StudioAppWrapper');
 var InstructionsWithWorkspace = require('../templates/instructions/InstructionsWithWorkspace');
 
 /**
@@ -12,7 +12,6 @@ var InstructionsWithWorkspace = require('../templates/instructions/InstructionsW
 var AppLabView = React.createClass({
   propTypes: {
     isEditingProject: React.PropTypes.bool.isRequired,
-    hideSource: React.PropTypes.bool.isRequired,
 
     screenIds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     onScreenCreate: React.PropTypes.func.isRequired,
@@ -26,7 +25,7 @@ var AppLabView = React.createClass({
 
   render: function () {
     return (
-      <ConnectedStudioAppWrapper>
+      <StudioAppWrapper>
         <ApplabVisualizationColumn
             isEditingProject={this.props.isEditingProject}
             screenIds={this.props.screenIds}
@@ -34,9 +33,8 @@ var AppLabView = React.createClass({
         <ProtectedStatefulDiv
             id="visualizationResizeBar"
             className="fa fa-ellipsis-v" />
-        <InstructionsWithWorkspace
-          hideSource={this.props.hideSource}/>
-      </ConnectedStudioAppWrapper>
+        <InstructionsWithWorkspace/>
+      </StudioAppWrapper>
     );
   }
 });

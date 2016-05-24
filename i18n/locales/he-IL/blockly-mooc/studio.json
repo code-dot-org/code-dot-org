@@ -2,6 +2,8 @@
   "actor":"שחקן",
   "addCharacter":"להוסיף",
   "addCharacterTooltip":"הוסף דמות לסצנה.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"להוסיף 10 נקודות",
   "addPoints50":"להוסיף 50 נקודות",
   "addPoints100":"להוסיף 100 נקודות",

@@ -2,6 +2,8 @@
   "actor":"aktyor",
   "addCharacter":"qo‘shish",
   "addCharacterTooltip":"Sahnaga personaj qo‘shish.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"10 ta ball qo‘shing",
   "addPoints50":"50 ta ball qo‘shing",
   "addPoints100":"100 ta ball qo‘shing",
