@@ -13,6 +13,8 @@ module ApplicationHelper
 
   USER_AGENT_PARSER = UserAgentParser::Parser.new
 
+  PUZZLE_PAGE_NONE = -1
+
   def browser
     @browser ||= USER_AGENT_PARSER.parse request.headers["User-Agent"]
   end
