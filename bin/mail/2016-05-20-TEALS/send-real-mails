@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# 19626 contacts
+
+../send-to-mailing-list --limit 20000 2016-05-05-teals-volunteers ./volunteers.csv
