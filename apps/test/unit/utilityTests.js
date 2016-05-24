@@ -546,3 +546,18 @@ describe("ellipsify", function () {
     assert.equal("abcdefghi...", ellipsify("abcdefghijklm", 12));
   });
 });
+
+describe("mergeConcatArrays", function () {
+  const mergeConcatArrays = utils.mergeConcatArrays;
+  it("ellipsifies id strings that exceed max length", () => {
+    const objectAWithArray = {
+      items: [1,2,3]
+    };
+    const objectBWithArray = {
+      items: [4,5,6]
+    };
+    const expected = {items: [1, 2, 3, 4, 5, 6]};
+    assert.deepEqual(expected, mergeConcatArrays(objectAWithArray, objectBWithArray));
+    assert.deepEqual(expected, objectAWithArray);
+  });
+});

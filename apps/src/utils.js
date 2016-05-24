@@ -1,6 +1,8 @@
 /* global define */
 'use strict';
 
+import _ from './lodash';
+
 exports.shallowCopy = function (source) {
   var result = {};
   for (var prop in source) {
@@ -430,4 +432,23 @@ exports.ellipsify = function (inputText, maxLength) {
     return inputText.substr(0, maxLength - 3) + "...";
   }
   return inputText || '';
+};
+
+/**
+ * Extends _.merge to concat rather than overwrite values in arrays.
+ *
+ * @see https://lodash.com/docs#mergeWith
+ *
+ * @param {Object} object
+ * @param {Object} other
+ * @returns {Object} original object (now modified in-place)
+ */
+exports.mergeConcatArrays = (object, other) => {
+  const mergeCustomizer = (objValue, srcValue) => {
+    if (_.isArray(objValue)) {
+      return objValue.concat(srcValue);
+    }
+  };
+
+  return _.mergeWith(object, other, mergeCustomizer);
 };
