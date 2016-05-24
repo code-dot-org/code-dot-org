@@ -234,10 +234,7 @@ function loadProgress(scriptData) {
         progress: newProgress,
         stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
           let id = level.uid || level.id;
-          let result = clientState.mergeActivityResult(state.progress[id], action.progress[id]);
-          if (result) {
-            newProgress[id] = result;
-          }
+          let result = newProgress[id] = clientState.mergeActivityResult(state.progress[id], action.progress[id]);
 
           return Object.assign({}, level, {status: progress.activityCssClass(result)});
         })}))
