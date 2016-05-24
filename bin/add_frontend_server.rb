@@ -347,6 +347,11 @@ OptionParser.new do |opts|
     @options['role'] = role
   end
 
+  opts.on('-i', '--instance-type TYPE',
+          'AWS instance for new instance (e.g. c3.8xlarge), overrides environment default') do |instance_type|
+    @options['instance_type'] = instance_type
+  end
+
   opts.on('-h', '--help', 'Print this') do
     puts opts
     exit
@@ -369,7 +374,11 @@ raise OptionParser::MissingArgument, 'Prefix is required when creating multiple 
 role = @options['role'] || ROLE_MAP[environment]
 raise "Unsupported environment #{environment}" unless role
 
-puts "Creating new #{environment} instance using role #{role}"
+# Use either the instance type from the options (if specified) or a default instance type
+# based on the environment.
+instance_type = @options['instance_type'] || aws_instance_type(environment)
+
+puts "Creating new #{environment} instance using role #{role} and instance type #{instance_type}"
 
 @username = @options['username'] || Etc.getlogin
 
@@ -385,7 +394,6 @@ puts @options
 
 @ec2client = Aws::EC2::Client.new
 
-instance_type = aws_instance_type(environment)
 instances_to_create = []
 
 if @options['count'] == 1
