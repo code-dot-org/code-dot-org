@@ -15,13 +15,19 @@ module.exports = function (config) {
     frameworks: ['mocha'],
 
     // list of files / patterns to load in the browser
-    // handled in grunt-karma config
     files: [
+      'build/package/js/blockly*js',
+      'test/integration-index.js',
+      'test/index.js',
+      {pattern:'lib/**/*.png', watched: false, included: false},
+      {pattern:'lib/**/*.cur', watched: false, included: false},
+      {pattern:'lib/**/*.js', watched: false, included: false},
     ],
 
     proxies: {
-      '/blockly/media/': 'http://localhost:'+PORT+'/base/static/',
-      '/base/static/1x1.gif': 'http://localhost:'+PORT+'/base/lib/blockly/media/1x1.gif',
+      '/lib/': 'http://localhost:'+PORT+'/base/lib/',
+      '/apps/lib/': 'http://localhost:'+PORT+'/base/lib/',
+      '/blockly/': 'http://localhost:'+PORT+'/base/lib/blockly/',
     },
 
     // list of files to exclude
@@ -32,24 +38,14 @@ module.exports = function (config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       "test/index.js": ["webpack", "sourcemap"],
-      "test/integration-tests.js": ["webpack", "sourcemap"],
-      "test/unit-tests.js": ["webpack", "sourcemap"],
+      "test/integration-index.js": ["webpack", "sourcemap"],
     },
 
     webpack: _.extend({}, webpackConfig, {
       devtool: 'inline-source-map',
-      externals: {
-        "johnny-five": "var JohnnyFive",
-        "playground-io": "var PlaygroundIO",
-        "chrome-serialport": "var ChromeSerialport",
-        "blockly": "this Blockly",
-      },
+      externals: {},
       plugins: [
-        new webpack.ProvidePlugin({React: 'react'}),
-        new webpack.DefinePlugin({
-          IN_UNIT_TEST: true,
-        }),
-
+        new webpack.ProvidePlugin({React: 'react'})
       ]
     }),
     webpackMiddleware: {
@@ -86,8 +82,8 @@ module.exports = function (config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: [
-//      'Chrome',
-      'PhantomJS',
+      'Chrome',
+//      'PhantomJS',
     ],
 
 
