@@ -1388,7 +1388,7 @@ var HOC2015_MUSIC_METADATA = [
 
 function loadStudio(skin, assetUrl) {
   skin.defaultBackground = 'cave';
-  skin.projectileFrames = 8;
+  skin.projectileFrames = 10;
   skin.itemFrames = 8;
 
   skin.explosion = skin.assetUrl('explosion.png');
@@ -1539,6 +1539,16 @@ function loadStudio(skin, assetUrl) {
     [msg.projectileYellowHearts(), '"yellow_hearts"'],
     [msg.projectilePurpleHearts(), '"purple_hearts"'],
     [msg.projectileRedHearts(), '"red_hearts"'],
+
+    [msg.projectileAirplane(), '"airplane"'],
+    [msg.projectileBasketball(), '"basketball"'],
+    [msg.projectileDisc(), '"disc"'],
+    [msg.projectilePie(), '"pie"'],
+    [msg.projectilePumpkin(), '"pumpkin"'],
+    [msg.projectileRainbow(), '"rainbow"'],
+    [msg.projectileSandwich(), '"sandwich"'],
+    [msg.projectileSnowball(), '"snowball"'],
+
     [msg.projectileRandom(), RANDOM_VALUE]];
 
   skin.makeProjectileChoices = [
@@ -1547,7 +1557,19 @@ function loadStudio(skin, assetUrl) {
     [msg.makeProjectileRedFireball(), '"red_fireball"'],
     [msg.makeProjectileYellowHearts(), '"yellow_hearts"'],
     [msg.makeProjectilePurpleHearts(), '"purple_hearts"'],
-    [msg.makeProjectileRedHearts(), '"red_hearts"']];
+    [msg.makeProjectileRedHearts(), '"red_hearts"'],
+
+
+    [msg.makeProjectileAirplane(), '"airplane"'],
+    [msg.makeProjectileBasketball(), '"basketball"'],
+    [msg.makeProjectileDisc(), '"disc"'],
+    [msg.makeProjectilePie(), '"pie"'],
+    [msg.makeProjectilePumpkin(), '"pumpkin"'],
+    [msg.makeProjectileRainbow(), '"rainbow"'],
+    [msg.makeProjectileSandwich(), '"sandwich"'],
+    [msg.makeProjectileSnowball(), '"snowball"']
+
+    ];
 
   skin.whenProjectileCollidedChoices = [
     [msg.whenSpriteCollidedWithBlueFireball(), 'blue_fireball'],
@@ -1555,7 +1577,19 @@ function loadStudio(skin, assetUrl) {
     [msg.whenSpriteCollidedWithRedFireball(), 'red_fireball'],
     [msg.whenSpriteCollidedWithYellowHearts(), 'yellow_hearts'],
     [msg.whenSpriteCollidedWithPurpleHearts(), 'purple_hearts'],
-    [msg.whenSpriteCollidedWithRedHearts(), 'red_hearts']];
+    [msg.whenSpriteCollidedWithRedHearts(), 'red_hearts'],
+
+    [msg.whenSpriteCollidedWithAirplane(), 'airplane'],
+    [msg.whenSpriteCollidedWithBasketball(), 'basketball'],
+    [msg.whenSpriteCollidedWithDisc(), 'disc'],
+    [msg.whenSpriteCollidedWithPie(), 'pie'],
+    [msg.whenSpriteCollidedWithPumpkin(), 'pumpkin'],
+    [msg.whenSpriteCollidedWithRainbow(), 'rainbow'],
+    [msg.whenSpriteCollidedWithSandwich(), 'sandwich'],
+    [msg.whenSpriteCollidedWithSnowball(), 'snowball']
+    ];
+
+
 
   // TODO: Create actual item choices
   // NOTE: item names must have double quotes inside single quotes
@@ -1567,8 +1601,19 @@ function loadStudio(skin, assetUrl) {
     [msg.itemYellowHearts(), '"item_yellow_hearts"'],
     [msg.itemPurpleHearts(), '"item_purple_hearts"'],
     [msg.itemRedHearts(), '"item_red_hearts"'],
+
+    [msg.itemAirplane(), '"item_airplane"'],
+    [msg.itemBasketball(), '"item_basketball"'],
+    [msg.itemDisc(), '"item_disc"'],
+    [msg.itemPie(), '"item_pie"'],
+    [msg.itemPumpkin(), '"item_pumpkin"'],
+    [msg.itemRainbow(), '"item_rainbow"'],
+    [msg.itemSandwich(), '"item_sandwich"'],
+    [msg.itemSnowball(), '"item_snowball"'],
+
     [msg.itemRandom(), RANDOM_VALUE]];
 }
+
 
 
 exports.load = function (assetUrl, id) {
@@ -1583,7 +1628,20 @@ exports.load = function (assetUrl, id) {
     'purple_hearts',
     'red_hearts',
     'yellow_hearts',
+    'airplane',
+    'basketball',
+    'disc',
+    'pie',
+    'pumpkin',
+    'rainbow',
+    'sandwich',
+    'snowball',
+
   ];
+
+
+
+
   // TODO: proper item class names
   skin.ItemClassNames = [
     'item_blue_fireball',
@@ -1592,6 +1650,15 @@ exports.load = function (assetUrl, id) {
     'item_purple_hearts',
     'item_red_hearts',
     'item_yellow_hearts',
+    'item_airplane',
+    'item_basketball',
+    'item_disc',
+    'item_pie',
+    'item_pumpkin',
+    'item_rainbow',
+    'item_sandwich',
+    'item_snowball',
+
   ];
 
   // Images
@@ -1602,6 +1669,37 @@ exports.load = function (assetUrl, id) {
   skin.purple_fireball = skin.assetUrl('purple_fireball.png');
   skin.red_fireball = skin.assetUrl('red_fireball.png');
 
+
+
+  skin.airplane = skin.assetUrl('projectile_airplane.png');
+  skin.basketball = skin.assetUrl('projectile_basketball.png');
+  skin.disc = skin.assetUrl('projectile_disc.png');
+  skin.pie = skin.assetUrl('projectile_pie.png');
+  skin.pumpkin = skin.assetUrl('projectile_pumpkin.png');
+  skin.rainbow = skin.assetUrl('projectile_rainbow.png');
+  skin.sandwich = skin.assetUrl('projectile_sandwich.png');
+  skin.snowball = skin.assetUrl('projectile_snowball.png');
+
+/*
+    'item_airplane',
+    'item_basketball',
+    'item_disc',
+    'item_pie',
+    'item_pumpkin',
+    'item_rainbow',
+    'item_sandwich',
+    'item_snowball',
+
+Airplane airplane
+Basketball basketball
+Disc disc
+Pie pie
+Pumpkin pumpkin
+Rainbow rainbow
+Sandwich sandwich
+Snowball snowball
+*/
+
   // TODO: proper item class names
   skin.item_yellow_hearts = skin.assetUrl('yellow_hearts.gif');
   skin.item_purple_hearts = skin.assetUrl('purple_hearts.gif');
@@ -1609,6 +1707,16 @@ exports.load = function (assetUrl, id) {
   skin.item_blue_fireball = skin.assetUrl('blue_fireball.png');
   skin.item_purple_fireball = skin.assetUrl('purple_fireball.png');
   skin.item_red_fireball = skin.assetUrl('red_fireball.png');
+
+  skin.item_airplane = skin.assetUrl('projectile_airplane.png');
+  skin.item_basketball = skin.assetUrl('projectile_basketball.png');
+  skin.item_disc = skin.assetUrl('projectile_disc.png');
+  skin.item_pie = skin.assetUrl('projectile_pie.png');
+  skin.item_pumpkin = skin.assetUrl('projectile_pumpkin.png');
+  skin.item_rainbow = skin.assetUrl('projectile_rainbow.png');
+  skin.item_sandwich = skin.assetUrl('projectile_sandwich.png');
+  skin.item_snowball = skin.assetUrl('projectile_snowball.png');
+
 
   skin.whenUp = skin.assetUrl('when-up.png');
   skin.whenDown = skin.assetUrl('when-down.png');
