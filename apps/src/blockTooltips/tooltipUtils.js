@@ -114,10 +114,10 @@ exports.findFunctionAndParamNumber = function (editor, position) {
         break;
       case "punctuation.operator":
         if (seenCloserStack.length === 0) {
-          if (_.includes(token.value, ';')) {
+          if (_.contains(token.value, ';')) {
             return null;
           }
-          if (_.includes(token.value, ',')) {
+          if (_.contains(token.value, ',')) {
             sameDepthPrecedingCommaCount += countNumberOfCharacter(token.value, ',');
           }
         }
