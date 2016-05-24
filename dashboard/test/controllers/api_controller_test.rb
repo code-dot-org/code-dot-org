@@ -142,11 +142,12 @@ class ApiControllerTest < ActionController::TestCase
     sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
     sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
     sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
+    create :multi, name: 'level_multi_unattempted', type: 'Multi'
 
     # create 2 level_group levels
     level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
     level1.properties['title'] =  'Long assessment 1'
-    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
+    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}, {levels: ['level_multi_unattempted']}]
     level1.save!
     create :script_level, script: script, levels: [level1], assessment: true
 
@@ -175,14 +176,15 @@ class ApiControllerTest < ActionController::TestCase
         "question"=>"Long assessment 1",
         "url"=>"http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
         "multi_correct"=>1,
-        "multi_count"=>3,
+        "multi_count"=>4,
         "submitted"=>true,
         "timestamp"=>updated_at.utc.to_s,
         "level_results"=>[
           {"student_result"=>"This is a free response", "correct"=>"free_response"},
           {"student_result"=>"A", "correct"=>"correct"},
           {"student_result"=>"B", "correct"=>"incorrect"},
-          {"student_result"=>"", "correct"=>"unsubmitted"}]
+          {"student_result"=>"", "correct"=>"unsubmitted"},
+          {"correct"=>"unsubmitted"}]
         }
       ]
     assert_equal expected_response, JSON.parse(@response.body)

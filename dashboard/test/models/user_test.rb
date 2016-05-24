@@ -351,49 +351,6 @@ class UserTest < ActiveSupport::TestCase
     assert user.secret_words !~ /SecretWord/ # using the actual word not the object to_s
   end
 
-  test 'reset_secret_picture' do
-    user = create :user
-    user.secret_picture_id = nil
-    user.save!
-
-    # don't have one
-    assert !user.secret_picture
-
-    user.reset_secret_picture
-    # now you do
-    assert user.secret_picture
-
-    # there's only 22 of them and this is random, so it is possible to
-    # get the same password again
-
-    pictures = 1.upto(5).map do
-      user.reset_secret_picture
-      user.secret_picture
-    end
-
-    assert pictures.uniq.length > 1
-  end
-
-  test 'reset_secret_words' do
-    user = create :user
-    user.secret_words = nil
-    user.save!
-
-    # don't have one
-    assert !user.secret_words
-
-    user.reset_secret_words
-    # now you do
-    assert user.secret_words
-
-    words = 1.upto(5).map do
-      user.reset_secret_words
-      user.secret_words
-    end
-
-    assert words.uniq.length > 1
-  end
-
   test 'users under 13 have hashed email not plaintext email' do
     user = create :user, birthday: Date.new(2010, 10, 4), email: 'will_be_hashed@email.xx'
 
