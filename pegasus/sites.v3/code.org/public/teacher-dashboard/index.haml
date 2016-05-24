@@ -803,7 +803,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
           } else {
             assessment.multi_correct_percent = assessment.multi_correct / assessment.multi_count * 100;
           }
-          assessment.status = assessment.submitted ? submission_list["submitted"] : submission_list["in_progress"];
+          assessment.status = assessment.submitted ? submission_list.submitted : submission_list.in_progress;
 
           // Don't show a timestamp for non-submittted assessments.
           if (!assessment.submitted) {

@@ -69,18 +69,14 @@ var CodeWorkspace = React.createClass({
       }
     }.bind(this));
 
-    // Should be no need to update unless we have runModeIndicators enabled
-    return experiments.isEnabled('runModeIndicators');
+    return true;
   },
 
   render: function () {
     var props = this.props;
 
-    var runModeIndicators = experiments.isEnabled('runModeIndicators');
-    if (props.isMinecraft) {
-      // ignore runModeIndicators in MC
-      runModeIndicators = false;
-    }
+    // ignore runModeIndicators in MC
+    var runModeIndicators = !props.isMinecraft;
 
     var chevronStyle = [
       styles.chevron,
