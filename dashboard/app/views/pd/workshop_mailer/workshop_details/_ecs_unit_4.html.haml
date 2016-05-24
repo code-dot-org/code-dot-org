@@ -1,0 +1,25 @@
+%p
+  Check your online modules on Code Studio
+  = link_to @online_url, @online_url
+  to make sure you’re on track with your online professional learning.
+  You should complete each module before you implement the respective unit of ECS.
+
+%p
+  You'll be using Scratch for your upcoming workshop.
+  Follow these steps to create an account and download Scratch 2.0:
+  %ul
+    %li
+      = link_to('Create a Scratch account', 'https://scratch.mit.edu/') + '.'
+    %li
+      = link_to('Download Scratch 2.0', 'https://scratch.mit.edu/scratch2download/')
+      by following the instructions on the linked download page.
+    %li
+      = link_to('Download Scratch 1.4', 'https://scratch.mit.edu/scratch_1.4/')
+      for older computers that can't run Scratch 2.0.
+    %li
+      = link_to('Download these scratch files', 'http://www.exploringcs.org/wp-content/uploads/2010/08/Scratch-Files.zip')
+      from the
+      - files_url = 'http://www.exploringcs.org/curriculum website'
+      = link_to "#{files_url}.", files_url
+
+= render partial: 'ecs_tech_requirements'

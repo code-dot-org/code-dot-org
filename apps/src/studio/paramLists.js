@@ -22,7 +22,7 @@ exports.getPlaySoundValues = function (withRandom) {
     // Insert a random value for each sound group before the first sound in the group:
     for (var group in skin.soundGroups) {
       var insertIndex = names.indexOf(group + skin.soundGroups[group].minSuffix);
-      if (insertIndex != -1) {
+      if (insertIndex !== -1) {
         names.splice(insertIndex, 0, skin.soundGroups[group].randomValue);
       }
     }

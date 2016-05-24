@@ -264,7 +264,7 @@ class GameController {
       this.levelModel.moveForward();
       // TODO: check for Lava, Creeper, water => play approp animation & call commandQueueItem.failed()
 
-      jumpOff = wasOnBlock && wasOnBlock != player.isOnBlock;
+      jumpOff = wasOnBlock && wasOnBlock !== player.isOnBlock;
       if (player.isOnBlock || jumpOff) {
         groundType = this.levelModel.actionPlane[this.levelModel.yToIndex(player.position[1]) + player.position[0]].blockType;
       } else {
@@ -306,11 +306,11 @@ class GameController {
   }
 
   turn(commandQueueItem, direction) {
-    if (direction == -1) {
+    if (direction === -1) {
       this.levelModel.turnLeft();
     }
 
-    if (direction == 1) {
+    if (direction === 1) {
       this.levelModel.turnRight();
     }
     this.levelView.updatePlayerDirection(this.levelModel.player.position, this.levelModel.player.facing);
@@ -463,7 +463,7 @@ class GameController {
     var blockIndex = (this.levelModel.yToIndex(this.levelModel.player.position[1]) + this.levelModel.player.position[0]);
     var blockTypeAtPosition = this.levelModel.actionPlane[blockIndex].blockType;
     if (this.levelModel.canPlaceBlock()) {
-      if (this.checkMinecartLevelEndAnimation() && blockType == "rail") {
+      if (this.checkMinecartLevelEndAnimation() && blockType === "rail") {
         blockType = this.checkRailBlock(blockType);
       }
 

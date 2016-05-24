@@ -486,7 +486,7 @@ StudioApp.prototype.init = function (config) {
   } else {
     // handleUsingBlockly_ already does an onResize. We still want that goodness
     // if we're not blockly
-    this.onResize();
+    utils.fireResizeEvent();
   }
 
   this.alertIfAbusiveProject('#codeWorkspace');
@@ -1851,7 +1851,7 @@ StudioApp.prototype.configureDom = function (config) {
       // If in level builder editing blocks, make workspace extra tall
       vizHeight = 3000;
       // Modify the arrangement of toolbox blocks so categories align left
-      if (config.level.edit_blocks == "toolbox_blocks") {
+      if (config.level.edit_blocks === "toolbox_blocks") {
         this.blockYCoordinateInterval = 80;
         config.blockArrangement = { category : { x: 20 } };
       }
@@ -1869,12 +1869,6 @@ StudioApp.prototype.configureDom = function (config) {
       bodyElement.style.overflow = "hidden";
       bodyElement.className = bodyElement.className + " pin_bottom";
       container.className = container.className + " pin_bottom";
-      visualizationColumn.className = visualizationColumn.className + " pin_bottom";
-      codeWorkspace.className = codeWorkspace.className + " pin_bottom";
-      if (this.editCode) {
-        var codeTextbox = document.getElementById('codeTextbox');
-        codeTextbox.className = codeTextbox.className + " pin_bottom";
-      }
     } else {
       visualizationColumn.style.minHeight = vizHeight + 'px';
       container.style.minHeight = vizHeight + 'px';
@@ -2736,10 +2730,12 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     hideSource: !!config.hideSource,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
+    pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
     instructionsMarkdown: level.markdownInstructions,
     instructionsInTopPane: config.showInstructionsInTopPane,
     puzzleNumber: level.puzzle_number,
-    stageTotal: level.stage_total
+    stageTotal: level.stage_total,
+    noVisualization: false
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));

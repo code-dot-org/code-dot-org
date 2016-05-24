@@ -27,6 +27,8 @@ class UserLevel < ActiveRecord::Base
   belongs_to :level
   belongs_to :script
 
+  before_save :handle_unsubmit
+
   # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
   # word choice.
   scope :attempted, -> { where.not(best_result: nil) }
@@ -47,5 +49,11 @@ class UserLevel < ActiveRecord::Base
 
   def passing?
     Activity.passing? best_result
+  end
+
+  def handle_unsubmit
+    if submitted_changed? from: true, to: false
+      self.best_result = ActivityConstants::UNSUBMITTED_RESULT
+    end
   end
 end
