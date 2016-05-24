@@ -12,6 +12,8 @@ module.exports = {
     "Flappy": true,
     "Applab": true,
     "Calc": true,
-    "Jigsaw": true
+    "Jigsaw": true,
+    "React": true,
+    "ReactDOM": true
   }
 };
