@@ -138,7 +138,7 @@ var SmallFooter = React.createClass({
       smallFooter: {
         fontSize: this.props.fontSize
       },
-      base: $.extend({}, this.props.baseStyle, {
+      base: Object.assign({}, this.props.baseStyle, {
         paddingBottom: 3,
         paddingTop: 3,
         // subtract top/bottom padding from row height

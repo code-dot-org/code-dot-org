@@ -189,7 +189,7 @@ module.exports = {
    * @returns {ClientApi}
    */
   create: function (url) {
-    return $.extend({}, base, {
+    return Object.assign({}, base, {
       api_base_url: url
     });
   }

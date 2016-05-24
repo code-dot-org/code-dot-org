@@ -29,7 +29,7 @@ var AgeDropdown = React.createClass({
   },
 
   render: function () {
-    var style = $.extend({}, {width: DROPDOWN_WIDTH}, this.props.style);
+    var style = Object.assign({}, {width: DROPDOWN_WIDTH}, this.props.style);
 
     var age = this.props.age && this.props.age.toString();
     var ages = ['', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14',
