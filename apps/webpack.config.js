@@ -22,6 +22,9 @@ module.exports = {
           path.resolve(__dirname, 'src'),
           path.resolve(__dirname, 'test'),
         ],
+        exclude: [
+          path.resolve(__dirname, 'src', 'lodash.js'),
+        ],
         loader: "babel",
         query: {
           cacheDirectory: true,
