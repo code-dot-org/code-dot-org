@@ -59,7 +59,7 @@ window.initLevelGroup = function (
 
     var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
 
-    var completeString = (validCount == levelCount) ? "complete" : "incomplete";
+    var completeString = (validCount === levelCount) ? "complete" : "incomplete";
     var showConfirmationDialog = "levelgroup-submit-" + completeString;
 
     return {

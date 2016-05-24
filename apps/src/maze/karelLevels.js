@@ -32,7 +32,7 @@ var startBlocks = function (page, level) {
 // This tests for and creates the "move_forward" block.
 var MOVE_FORWARD = {
     'test': function (block) {
-      return block.type == 'maze_moveForward';
+      return block.type === 'maze_moveForward';
     },
     'type': 'maze_moveForward'
 };
@@ -46,7 +46,7 @@ var FILL = {'test': 'fill', 'type': 'maze_fill'};
 // This tests for and creates the "controls_repeat" block.
 var REPEAT = {
     'test': function (block) {
-      return block.type == 'controls_repeat';
+      return block.type === 'controls_repeat';
     },
     'type': 'controls_repeat',
     'titles': {'TIMES': '???'}
@@ -55,7 +55,7 @@ var REPEAT = {
 // This tests for and creates the "controls_repeat_ext" block.
 var REPEAT_EXT = {
     'test': function (block) {
-      return block.type == 'controls_repeat_ext';
+      return block.type === 'controls_repeat_ext';
     },
     'type': 'controls_repeat_ext'
 };
@@ -63,7 +63,7 @@ var REPEAT_EXT = {
 // This tests for and creates the "controls_for" block.
 var CONTROLS_FOR = {
     'test': function (block) {
-      return block.type == 'controls_for';
+      return block.type === 'controls_for';
     },
     'type': 'controls_for'
 };
@@ -71,7 +71,7 @@ var CONTROLS_FOR = {
 // This tests for and creates the "variables_get" block.
 var VARIABLES_GET = {
     'test': function (block) {
-      return block.type == 'variables_get';
+      return block.type === 'variables_get';
     },
     'type': 'variables_get',
     'titles': {'VAR': 'i'}
@@ -141,7 +141,7 @@ var IF_ELSE = {'test': '} else {', 'type': 'karel_ifElse'};
 // This tests for and creates the "fill num" block.
 var fill = function (num) {
   return {'test': function (block) {
-            return block.getTitleValue('NAME') == msg.fillN({shovelfuls: num});
+            return block.getTitleValue('NAME') === msg.fillN({shovelfuls: num});
           },
           'type': 'procedures_callnoreturn',
           'titles': {'NAME': msg.fillN({shovelfuls: num})}};
@@ -150,7 +150,7 @@ var fill = function (num) {
 // This tests for and creates the "remove num" blcok.
 var remove = function (num) {
   return {'test': function (block) {
-            return block.getTitleValue('NAME') ==
+            return block.getTitleValue('NAME') ===
                 msg.removeN({shovelfuls: num});
           },
           'type': 'procedures_callnoreturn',
@@ -160,7 +160,7 @@ var remove = function (num) {
 // This tests for and creates the "avoid the cow and remove 1" block.
 var AVOID_OBSTACLE_AND_REMOVE = {
   'test': function (block) {
-    return block.getTitleValue('NAME') == msg.avoidCowAndRemove();
+    return block.getTitleValue('NAME') === msg.avoidCowAndRemove();
   },
   'type': 'procedures_callnoreturn',
   'titles': {'NAME': msg.avoidCowAndRemove()}
@@ -169,7 +169,7 @@ var AVOID_OBSTACLE_AND_REMOVE = {
 // This tests for and creates the "remove 1 and avoid the cow" block.
 var REMOVE_AND_AVOID_OBSTACLE = {
   'test': function (block) {
-    return block.getTitleValue('NAME') == msg.removeAndAvoidTheCow();
+    return block.getTitleValue('NAME') === msg.removeAndAvoidTheCow();
   },
   'type': 'procedures_callnoreturn',
   'titles': {'NAME': msg.removeAndAvoidTheCow()}
@@ -178,7 +178,7 @@ var REMOVE_AND_AVOID_OBSTACLE = {
 // This tests for and creates the "remove piles" block.
 var REMOVE_PILES = {
   'test': function (block) {
-    return block.getTitleValue('NAME') == msg.removeStack({shovelfuls: 4});
+    return block.getTitleValue('NAME') === msg.removeStack({shovelfuls: 4});
   },
   'type': 'procedures_callnoreturn',
   'titles': {'NAME': msg.removeStack({shovelfuls: 4})}
@@ -187,7 +187,7 @@ var REMOVE_PILES = {
 // This tests for and creates the "fill holes" block.
 var FILL_HOLES = {
   'test': function (block) {
-    return block.getTitleValue('NAME') == msg.fillStack({shovelfuls: 2});
+    return block.getTitleValue('NAME') === msg.fillStack({shovelfuls: 2});
   },
   'type': 'procedures_callnoreturn',
   'titles': {'NAME': msg.fillStack({shovelfuls: 2})}

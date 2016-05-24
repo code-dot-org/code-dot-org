@@ -71,9 +71,9 @@ class SectionApiHelperTest < Minitest::Test
         assert !DashboardSection.valid_course_id?('invalid!!')
       end
 
-      it 'rewrites mc as minecraft, hourofcode as classicmaze' do
-        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'minecraft'
-        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'classicmaze'
+      it 'rewrites mc as Minecraft, hourofcode as "Classic Maze"' do
+        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Minecraft'
+        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Classic Maze'
         refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'mc'
         refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'hourofcode'
       end

@@ -1,4 +1,0 @@
-.field
-  = f.label :script
-  %p Which script to link to. Completing this script will mark this level as complete.
-  = f.select :script_name, options_for_select(Script.all.pluck(:name), @level.script_name)

@@ -24,7 +24,7 @@ export default class BaseCommand {
      * @returns {boolean}
      */
     isStarted() {
-        return this.state != CommandState.NOT_STARTED;
+        return this.state !== CommandState.NOT_STARTED;
     }
 
     /**
