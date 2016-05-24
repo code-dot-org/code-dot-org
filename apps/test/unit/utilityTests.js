@@ -160,14 +160,14 @@ describe("utils", function () {
   it("can debounce a repeated function call", function () {
     var counter = 0;
     var incrementCounter = function () { counter++; };
-    var debounced = _.debounce(incrementCounter, 2000, true);
+    var debounced = _.debounce(incrementCounter, 2000, { leading: true });
     debounced();
     debounced();
     debounced();
     debounced();
-    assert(counter === 1);
+    assert.equal(1, counter);
     incrementCounter();
-    assert(counter === 2);
+    assert.equal(2, counter);
   });
   it("can remove quotes from a string", function () {
     assert(utils.stripQuotes("t'e's't'") === "test");
