@@ -1,7 +1,7 @@
 /* global define */
 'use strict';
 
-import _ from './lodash';
+import Immutable from 'immutable';
 
 exports.shallowCopy = function (source) {
   var result = {};
@@ -435,20 +435,30 @@ exports.ellipsify = function (inputText, maxLength) {
 };
 
 /**
- * Extends _.merge to concat rather than overwrite values in arrays.
+ * Returns deep merge of two objects, concatenating rather than overwriting
+ * array properites. Does not mutate either object.
  *
- * @see https://lodash.com/docs#mergeWith
+ * Note: new properties in overrides are always added to end, not in-order.
  *
- * @param {Object} object
- * @param {Object} other
+ * Note: may become default behavior of mergeDeep in future immutable versions.
+ *   @see https://github.com/facebook/immutable-js/issues/406
+ *
+ * @param {Object} baseObject
+ * @param {Object} overrides
  * @returns {Object} original object (now modified in-place)
  */
-exports.mergeConcatArrays = (object, other) => {
-  const mergeCustomizer = (objValue, srcValue) => {
-    if (_.isArray(objValue)) {
-      return objValue.concat(srcValue);
+exports.deepMergeConcatArrays = (baseObject, overrides) => {
+  function deepConcatMerger(a, b) {
+    const isList = Immutable.List.isList;
+    if (isList(a) && isList(b)) {
+      return a.concat(b);
     }
-  };
+    if (a && a.mergeWith) {
+      return a.mergeWith(deepConcatMerger, b);
+    }
+    return b;
+  }
 
-  return _.mergeWith(object, other, mergeCustomizer);
+  var baseImmutable = Immutable.fromJS(baseObject);
+  return baseImmutable.mergeWith(deepConcatMerger, overrides).toJS();
 };
