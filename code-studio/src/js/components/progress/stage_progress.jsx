@@ -46,32 +46,24 @@ var StageProgress = React.createClass({
         }
       }
 
+      var onClick = null;
       if (this.props.saveAnswersFirst) {
         dotStyle.cursor = 'pointer';
-        return ([
-          <div className={outerClass}>
-            <span
-              onClick={() => this.dotClicked(level.url)}
-              className={innerClass + ' level-' + level.id}
-              style={dotStyle}>
-                {level.title}
-            </span>
-          </div>,
-          ' '
-        ]);
-      } else {
-        return ([
-          <div className={outerClass}>
-            <a
-              href={level.url}
-              className={innerClass + ' level-' + level.id}
-              style={dotStyle}>
-                {level.title}
-            </a>
-          </div>,
-          ' '
-        ]);
+        onClick = (e) => {this.dotClicked(level.url); e.preventDefault();};
       }
+
+      return ([
+        <div className={outerClass}>
+          <a
+            href={level.url}
+            onClick={onClick}
+            className={innerClass + ' level-' + level.id}
+            style={dotStyle}>
+              {level.title}
+          </a>
+        </div>,
+        ' '
+      ]);
     });
 
     return (
