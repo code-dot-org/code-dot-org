@@ -1,4 +1,5 @@
-/* global React, trackEvent */
+/* global trackEvent */
+import React from 'react';
 
 // TODO (brent) - could we also use this instead of what we have in sharing.html.ejs?
 

@@ -1,4 +1,4 @@
-/* globals dashboard, trackEvent, Dialog, React, appOptions */
+/* globals dashboard, trackEvent, Dialog, appOptions */
 
 var React = require('react');
 var ReactDOM = require('react-dom');

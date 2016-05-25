@@ -1,10 +1,9 @@
-/* global React */
-
 /*
   Dynamic list of facilitator select controls for creating & editing workshops.
  */
 
 var _ = require('lodash');
+import React from 'react';
 var Row = require('react-bootstrap').Row;
 var Col = require('react-bootstrap').Col;
 var Button = require('react-bootstrap').Button;

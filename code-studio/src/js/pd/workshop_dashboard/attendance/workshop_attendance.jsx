@@ -1,5 +1,3 @@
-/* global React */
-
 /*
   Display and edit attendance for a workshop.
   It has a tab for each session which lists all enrolled teachers and their status.
@@ -7,6 +5,7 @@
  */
 
 var _ = require('lodash');
+import React from 'react';
 var SessionTime = require('../components/session_time');
 var SessionAttendance = require('./session_attendance');
 var Row = require('react-bootstrap').Row;
