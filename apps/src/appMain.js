@@ -1,3 +1,6 @@
+// Require this first at the bundle entry point for full ES6 support.
+require("babel-polyfill");
+
 var utils = require('./utils');
 var _ = require('./lodash');
 var requiredBlockUtils = require('./required_block_utils');
