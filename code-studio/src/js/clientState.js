@@ -132,6 +132,24 @@ clientState.trackProgress = function (result, lines, testResult, scriptName, lev
 };
 
 /**
+ * Write down user progress for an entire script.
+ * @param {string} scriptName
+ * @param {Object<String, number>} progress
+ */
+clientState.batchTrackProgress = function (scriptName, progress) {
+  var data = {};
+  for (let level of Object.keys(progress)) {
+    if (progress[level] && progress[level] <= clientState.MAXIMUM_CACHABLE_RESULT) {
+      data[level] = progress[level];
+    }
+  }
+
+  var progressMap = clientState.allLevelsProgress();
+  progressMap[scriptName] = data;
+  safelySetItem('progress', JSON.stringify(progressMap));
+};
+
+/**
  * Sets the progress attained for the given level
  * @param {string} scriptName The script name
  * @param {number} levelId The level
