@@ -223,7 +223,7 @@ progress.renderCourseProgress = function (scriptData) {
   $('.user-stats-block').prepend(mountPoint);
   ReactDOM.render(
     <Provider store={store}>
-      <CourseProgress saveAnswersFirst={false} />
+      <CourseProgress />
     </Provider>,
     mountPoint
   );
