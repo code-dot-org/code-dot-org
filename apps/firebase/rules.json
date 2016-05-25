@@ -11,9 +11,13 @@
             }
           },
           "counters": {
-            "$table_name": {
-              ".validate": "newData.isNumber() && newData.val() > (data.val() == null ? 0 : data.val())",
-              ".write": "auth.uid != null && newData.val() != null"
+            "tables": {
+              "$table_name": {
+                "last_id": {
+                  ".validate": "newData.isNumber() && newData.val() > (data.val() == null ? 0 : data.val())",
+                  ".write": "auth.uid != null && newData.val() != null"
+                }
+              }
             }
           },
           "data": {

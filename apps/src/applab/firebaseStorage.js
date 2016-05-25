@@ -48,24 +48,16 @@ function getTable(channelId, tableName) {
 }
 
 /**
- * Increments the given counter, specified by channelId and counterName.
- * Calls onSuccess with the counter value, or onError with an error string
- * if it was not possible to determine the value of the counter.
+ * @param {string} tableName
+ * @returns {Promise<number>} next record id to assign.
  */
-function getCounter(counterName, onSuccess, onError) {
-  var counters = getDatabase(Applab.channelId).child('counters');
-  counters.child(counterName).transaction(function (currentValue) {
+function getNextIdPromise(tableName) {
+  var lastIdRef = getDatabase(Applab.channelId).child('counters').child('tables')
+      .child(tableName).child('last_id');
+  return lastIdRef.transaction(function (currentValue) {
     return (currentValue || 0) + 1;
-  }, function (err, committed, data) {
-    if (err) {
-      onError(err);
-    } else if (committed) {
-      // This should always be available if there was no error, since our
-      // update functions always returns a value.
-      onSuccess(data.val());
-    } else {
-      onError("Unexpected error");
-    }
+  }).then(function (transactionData) {
+    return transactionData.snapshot.val();
   });
 }
 
@@ -417,9 +409,8 @@ function getWriteRecordPromise(tableName, recordId, record, rowCountChange) {
  */
 FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) {
   // Assign a unique id for the new record.
-  var idCounter = tableName + '_id';
-  getCounter(idCounter, function (counter) {
-    record.id = counter;
+  getNextIdPromise(tableName).then(function (nextId) {
+    record.id = nextId;
     var rowCountChange = 1;
     getWriteRecordPromise(tableName, record.id, record, rowCountChange).catch(function (error) {
       // TODO(dave): throw an error instead of retrying if row_count/N or last_reset_time

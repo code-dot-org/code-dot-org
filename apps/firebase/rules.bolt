@@ -104,12 +104,11 @@ path /v3/shared-tables/{channel_id}/server_time/{user_id} is Number {
   validate() { this == now }
 }
 
-// TODO(dave): consolidate this "counter" with other per-table metadata,
-// including target_record_id and row_count.
-
-path /v3/shared-tables/{channel_id}/counters/{table_name} is Number {
+// The last record id previously assigned to a new record in this table.
+// Incremented transactionally. The new value belongs to the caller.
+path /v3/shared-tables/{channel_id}/counters/tables/{table_name}/last_id is Number {
   write() { isLoggedIn() && this != null }
-  validate() { this > valueOr(prior(this), 0) }
+  validate() { this > orZero(prior(this)) }
 }
 
 path /v3/shared-tables/{channel_id}/data/tables/{table_name}/target_record_id is String {
