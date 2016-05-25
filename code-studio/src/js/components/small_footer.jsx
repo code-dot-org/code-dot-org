@@ -1,5 +1,6 @@
 /*jshint scripturl:true*/
 
+import $ from 'jquery';
 var React = require('react');
 window.dashboard = window.dashboard || {};
 

@@ -7,6 +7,7 @@
     /Workshops/:workshopId/edit
  */
 
+import $ from 'jquery';
 var _ = require('lodash');
 import React from 'react';
 var moment = require('moment');
