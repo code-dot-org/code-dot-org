@@ -1,14 +1,13 @@
-import {assert} from './configuredChai';
-
+require("babel-polyfill"); // Provides Object.assign, among other things.
 require('require-globify');
-
 var $ = require('jquery');
+import {assert} from './configuredChai';
 
 exports.setExternalGlobals = function () {
   window.$ = $;
   window.jQuery = $;
 
-  window.dashboard = $.extend(window.dashboard, {
+  window.dashboard = Object.assign({}, window.dashboard, {
     i18n: {
       t: function (selector) { return selector; }
     },

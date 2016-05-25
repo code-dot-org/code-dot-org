@@ -197,7 +197,7 @@ module.exports = {
       xml: 'turnRight()',
       delayLoadLevelDefinition: function () {
         // override executePaletteApisOnly
-        return $.extend({}, levelDefinition, {
+        return Object.assign({}, levelDefinition, {
           executePaletteApisOnly: false
         });
       },
@@ -226,7 +226,7 @@ module.exports = {
         'setText("id", "end");\n',
       delayLoadLevelDefinition: function () {
         // override executePaletteApisOnly
-        return $.extend({}, levelDefinition, {
+        return Object.assign({}, levelDefinition, {
           executePaletteApisOnly: false
         });
       },

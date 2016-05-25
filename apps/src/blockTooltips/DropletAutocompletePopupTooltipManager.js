@@ -100,7 +100,7 @@ DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip 
 
 DropletAutocompletePopupTooltipManager.prototype.attachTooltipForFunction = function (funcName) {
   var tooltipDOM = this.getTooltipHTML(funcName);
-  var configuration = $.extend({}, DEFAULT_TOOLTIP_CONFIG, {
+  var configuration = Object.assign({}, DEFAULT_TOOLTIP_CONFIG, {
     content: tooltipDOM,
     functionReady: function (_, contents) {
       if (!this.showExamplesLink) {

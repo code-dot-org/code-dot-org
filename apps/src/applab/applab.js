@@ -834,7 +834,7 @@ Applab.reactMountPoint_ = null;
  * Trigger a top-level React render
  */
 Applab.render = function () {
-  var nextProps = $.extend({}, Applab.reactInitialProps_, {
+  var nextProps = Object.assign({}, Applab.reactInitialProps_, {
     isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
     onScreenCreate: designMode.createScreen

@@ -1612,7 +1612,7 @@ StudioApp.prototype.builderForm_ = function (onAttemptCallback) {
 */
 StudioApp.prototype.report = function (options) {
   // copy from options: app, level, result, testResult, program, onComplete
-  var report = $.extend({}, options, {
+  var report = Object.assign({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
     time: ((new Date().getTime()) - this.initTime),
     attempt: this.attempts,
