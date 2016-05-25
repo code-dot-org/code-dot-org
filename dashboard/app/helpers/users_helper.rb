@@ -81,17 +81,26 @@ module UsersHelper
       script_levels.each do |sl|
         ul = uls.try(:[], sl.level_id)
         completion_status = activity_css_class(ul)
+        submitted = !!ul.try(:submitted)
         if completion_status != 'not_tried'
           user_data[:levels][sl.level_id] = {
               status: completion_status,
               result: ul.try(:best_result) || 0,
-              submitted: !!ul.try(:submitted)
+              submitted: submitted
           }
 
           # Just in case this level has multiple pages, in which case we add an additional
           # array of booleans indicating which pages have been completed.
           pages_completed = get_pages_completed(user, sl)
-          user_data[:levels][sl.level_id][:pages_completed] = pages_completed if pages_completed
+          if pages_completed
+            user_data[:levels][sl.level_id][:pages_completed] = pages_completed
+            pages_completed.each_with_index do |complete, index|
+              user_data[:levels]["#{sl.level_id}_#{index}"] = {
+                result: complete ? ActivityConstants::FREE_PLAY_RESULT : ActivityConstants::MINIMUM_FINISHED_RESULT,
+                submitted: submitted
+              }
+            end
+          end
         end
       end
     end
