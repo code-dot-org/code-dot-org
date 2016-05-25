@@ -343,7 +343,7 @@ function incrementOpCountData(interval, opCountData) {
 function getServerDataPromise(tableName) {
   var tokenMapPromise = getRateLimitTokenMapPromise();
   var tableRef = getTable(Applab.channelId, tableName);
-  var rowCountsPromise = tableRef.child('row_count').once('value').then(function (snapshot) {
+  var rowCountsPromise = tableRef.child('row_counts').once('value').then(function (snapshot) {
     return snapshot.val();
   });
   return Promise.all([tokenMapPromise, rowCountsPromise]).then(function (results) {
@@ -377,7 +377,7 @@ function updateRowCount(recordId, rowCounts, channelDataData, tableName, delta) 
   var rowCountIndex = recordId % ROW_COUNT_BUCKETS;
   rowCounts = rowCounts || {};
   var newRowCount = (rowCounts[rowCountIndex] || 0) + delta;
-  channelDataData['tables/' + tableName + '/row_count/' + rowCountIndex] = newRowCount;
+  channelDataData['tables/' + tableName + '/row_counts/' + rowCountIndex] = newRowCount;
 }
 
 function getWriteRecordPromise(tableName, recordId, record, rowCountChange) {
@@ -413,7 +413,7 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
     record.id = nextId;
     var rowCountChange = 1;
     getWriteRecordPromise(tableName, record.id, record, rowCountChange).catch(function (error) {
-      // TODO(dave): throw an error instead of retrying if row_count/N or last_reset_time
+      // TODO(dave): throw an error instead of retrying if row_counts/N or last_reset_time
       // have not changed since the previous attempt.
       console.log('retrying createRecord once after error: ' + error);
       return getWriteRecordPromise(tableName, record.id, record, rowCountChange);

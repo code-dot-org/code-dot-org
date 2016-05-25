@@ -21,7 +21,7 @@ sumRowCounts(rowCount) {
   orZero(rowCount['6']) + orZero(rowCount['7']) + 
   orZero(rowCount['8']) + orZero(rowCount['9']) 
 }
-rowCount(record) { sumRowCounts(record.parent().parent().row_count) }
+rowCount(record) { sumRowCounts(record.parent().parent().row_counts) }
 rowCountUpdated(nextRecord, prevRecord) { getRecordAsInt(nextRecord) - getRecordAsInt(prevRecord) == rowCount(nextRecord) - rowCount(prevRecord) }
 
 // target record helpers
@@ -115,7 +115,7 @@ path /v3/channels/{channel_id}/data/tables/{table_name}/target_record_id is Stri
   write() { isLoggedIn() && this != null }
 }
 
-path /v3/channels/{channel_id}/data/tables/{table_name}/row_count {
+path /v3/channels/{channel_id}/data/tables/{table_name}/row_counts {
   write() { isLoggedIn() && this != null }
   validate() { 
     // require that target record is modified appropriately when row count is modified
@@ -123,7 +123,7 @@ path /v3/channels/{channel_id}/data/tables/{table_name}/row_count {
   }
 }
 
-path /v3/channels/{channel_id}/data/tables/{table_name}/row_count/{bucket} is Number;
+path /v3/channels/{channel_id}/data/tables/{table_name}/row_counts/{bucket} is Number;
 
 // the key $record_id is the id of the record. Its value is the json-encoded
 // value of the record.
