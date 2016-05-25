@@ -1,0 +1,23 @@
+- unless @level.contained_levels.empty?
+  - multi_script_added = false
+  #contained_levels
+    - @level.contained_levels.each_with_index do |cl, index|
+      %div{id: "containedLevel#{index}"}
+        - level_class = cl.class.to_s.underscore
+        - if level_class == "multi"
+          - unless multi_script_added
+            - content_for(:head) do
+              = javascript_include_tag 'js/levels/multi'
+            - multi_script_added = true
+          -# For students (or teachers doing PD), mark all answers incorrect, so we don't give anything away.
+          - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
+            - cl.properties['answers'].each { |answer| answer['correct'] = false }
+          = render partial: 'levels/single_multi', locals: {standalone: false, contained_mode: true, last_attempt: nil, level: cl, tight_layout: false}
+        - elsif level_class == "text_match"
+          -# For students (or teachers doing PD), clear out all answers.
+          - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
+            - cl.properties['answers'] = nil
+          = render partial: 'levels/single_text_match', locals: {standalone: true, level: cl }
+        - elsif level_class == "free_response"
+          = render partial: 'levels/free_response', locals: {in_level_group: true, level: cl }
+%div{style: 'clear: both;'}
