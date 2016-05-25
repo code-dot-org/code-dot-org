@@ -36,7 +36,7 @@ prevTargetRecord(table) { prior(table)[table.target_record_id] }
 
 // rate limit helpers
 
-getRateLimitCounter(channel, interval) { channel.limits[interval + ''] }
+getRateLimitCounter(channel, interval) { channel.counters.limits[interval + ''] }
 getRateLimitData(channel, interval) { channel.data.limits[interval + ''] }
 
 isValidIncrement(limitCounter, maxCount) {
@@ -47,9 +47,9 @@ isValidIncrement(limitCounter, maxCount) {
 
 isValidReset(channel, interval) {
   channel.data.limits[interval + ''].used_ops == null &&
-  channel.limits[interval + ''].last_reset_time == now && 
-  isIncreasedBy(channel.limits[interval + ''].last_reset_time, interval * 1000) &&
-  channel.limits[interval + ''].last_op_count == 0
+  channel.counters.limits[interval + ''].last_reset_time == now && 
+  isIncreasedBy(channel.counters.limits[interval + ''].last_reset_time, interval * 1000) &&
+  channel.counters.limits[interval + ''].last_op_count == 0
 }
 
 // The NEW version of the NEW target op.
@@ -63,10 +63,10 @@ prevTargetOp(limitData) {
 }
 
 isValidUsedOp(channel, interval) {
-  isUnchanged(channel.limits[interval + ''].last_op_count) &&
-  isUnchanged(channel.limits[interval + ''].last_reset_time) &&
+  isUnchanged(channel.counters.limits[interval + ''].last_op_count) &&
+  isUnchanged(channel.counters.limits[interval + ''].last_reset_time) &&
   targetOpUsed(channel.data.limits[interval + '']) &&
-  channel.data.limits[interval + ''].target_op_id <= channel.limits[interval + ''].last_op_count
+  channel.data.limits[interval + ''].target_op_id <= channel.counters.limits[interval + ''].last_op_count
 }
 
 isValidRateLimitData(channel, interval) {
@@ -75,7 +75,7 @@ isValidRateLimitData(channel, interval) {
 }
 
 isValidRateLimitCounter(channel, interval, maxCount) {
-  isValidIncrement(channel.limits[interval + ''], maxCount) || 
+  isValidIncrement(channel.counters.limits[interval + ''], maxCount) || 
   isValidReset(channel, interval)
 }
 
@@ -148,19 +148,19 @@ type RateLimitCounter {
   last_op_count: Number
 }
 
-path /v3/shared-tables/{channel_id}/limits is RateLimitCounters {
+path /v3/shared-tables/{channel_id}/counters/limits is RateLimitCounters {
   write() { isLoggedIn() && this != null }
 }
 
-path /v3/shared-tables/{channel_id}/limits/15 {
+path /v3/shared-tables/{channel_id}/counters/limits/15 {
   validate() {
-    isValidRateLimitCounter(this.parent().parent(), 15, 30)
+    isValidRateLimitCounter(this.parent().parent().parent(), 15, 30)
   }
 }
 
-path /v3/shared-tables/{channel_id}/limits/60 {
+path /v3/shared-tables/{channel_id}/counters/limits/60 {
   validate() {
-    isValidRateLimitCounter(this.parent().parent(), 60, 60)
+    isValidRateLimitCounter(this.parent().parent().parent(), 60, 60)
   }
 }
 

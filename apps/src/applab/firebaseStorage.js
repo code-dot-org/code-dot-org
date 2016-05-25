@@ -277,17 +277,17 @@ function resetRateLimitPromise(interval) {
 
     // Enough time has passed for this rate limit to be reset.
     var channelRef = getDatabase(Applab.channelId);
-    var limitData = {
+    var limitCounterData = {
       last_reset_time: Firebase.ServerValue.TIMESTAMP,
       last_op_count: 0
     };
     var channelData = {};
-    channelData['limits/' + interval] = limitData;
+    channelData['counters/limits/' + interval] = limitCounterData;
     channelData['data/limits/' +  interval + '/used_ops'] = null;
     lastReset.time = lastResetTimeMs;
     lastReset.promise = channelRef.update(channelData).catch(function (error) {
       // Our reset request failed. Check to see if another client's reset attempt succeeded.
-      var limitRef = channelRef.child('limits').child(interval);
+      var limitRef = channelRef.child('counters').child('limits').child(interval);
       return limitRef.once('value').then(function (limitSnapshot) {
         var newResetTimeMs = limitSnapshot.child('last_reset_time').val() || 0;
         if (newResetTimeMs <= lastResetTimeMs) {
@@ -308,7 +308,7 @@ function resetRateLimitPromise(interval) {
  * @param interval
  */
 function incrementOpCountPromise(interval) {
-  var opCountRef = getDatabase(Applab.channelId).child('limits').child(interval).child('last_op_count');
+  var opCountRef = getDatabase(Applab.channelId).child('counters').child('limits').child(interval).child('last_op_count');
   var increment = incrementOpCountData.bind(this, interval);
   return opCountRef.transaction(increment).then(function (transactionResult) {
     if (!transactionResult.committed) {
@@ -365,8 +365,8 @@ function getCurrentTimePromise() {
 }
 
 function getLastResetTimePromise(interval) {
-  var lastResetTimeRef = getDatabase(Applab.channelId).child('limits').child(interval)
-    .child('last_reset_time');
+  var lastResetTimeRef = getDatabase(Applab.channelId).child('counters').child('limits')
+    .child(interval).child('last_reset_time');
   return lastResetTimeRef.once('value').then(function (lastResetTimeSnapshot) {
     return lastResetTimeSnapshot.val() || 0;
   });

@@ -18,6 +18,37 @@
                   ".write": "auth.uid != null && newData.val() != null"
                 }
               }
+            },
+            "limits": {
+              "15": {
+                ".validate": "(newData.hasChildren() && newData.hasChildren(['last_op_count']) || newData.val() == null) && (newData.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_reset_time').val() == data.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_reset_time').val() && (newData.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_op_count').val() == null ? 0 : newData.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_op_count').val()) > (data.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_op_count').val() == null ? 0 : data.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_op_count').val()) && newData.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_op_count').val() <= 30 || newData.parent().parent().parent().child('data').child('limits').child(15 + '').child('used_ops').val() == null && newData.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_reset_time').val() == now && (newData.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_reset_time').val() == null ? 0 : newData.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_reset_time').val()) >= (data.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_reset_time').val() == null ? 0 : data.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_reset_time').val()) + 15 * 1000 && newData.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_op_count').val() == 0)",
+                "last_reset_time": {
+                  ".validate": "newData.isNumber() || newData.val() == null"
+                },
+                "last_op_count": {
+                  ".validate": "newData.isNumber()"
+                },
+                "$other": {
+                  ".validate": "false"
+                }
+              },
+              "60": {
+                ".validate": "(newData.hasChildren() && newData.hasChildren(['last_op_count']) || newData.val() == null) && (newData.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_reset_time').val() == data.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_reset_time').val() && (newData.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_op_count').val() == null ? 0 : newData.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_op_count').val()) > (data.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_op_count').val() == null ? 0 : data.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_op_count').val()) && newData.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_op_count').val() <= 60 || newData.parent().parent().parent().child('data').child('limits').child(60 + '').child('used_ops').val() == null && newData.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_reset_time').val() == now && (newData.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_reset_time').val() == null ? 0 : newData.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_reset_time').val()) >= (data.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_reset_time').val() == null ? 0 : data.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_reset_time').val()) + 60 * 1000 && newData.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_op_count').val() == 0)",
+                "last_reset_time": {
+                  ".validate": "newData.isNumber() || newData.val() == null"
+                },
+                "last_op_count": {
+                  ".validate": "newData.isNumber()"
+                },
+                "$other": {
+                  ".validate": "false"
+                }
+              },
+              ".validate": "newData.hasChildren()",
+              "$other": {
+                ".validate": "false"
+              },
+              ".write": "auth.uid != null && newData.val() != null"
             }
           },
           "data": {
@@ -44,7 +75,7 @@
             },
             "limits": {
               "15": {
-                ".validate": "(newData.hasChildren() || newData.val() == null) && (newData.parent().parent().parent().child('data').child('limits').child(15 + '').child('used_ops').val() == null && newData.parent().parent().parent().child('limits').child(15 + '').child('last_reset_time').val() == now && (newData.parent().parent().parent().child('limits').child(15 + '').child('last_reset_time').val() == null ? 0 : newData.parent().parent().parent().child('limits').child(15 + '').child('last_reset_time').val()) >= (data.parent().parent().parent().child('limits').child(15 + '').child('last_reset_time').val() == null ? 0 : data.parent().parent().parent().child('limits').child(15 + '').child('last_reset_time').val()) + 15 * 1000 && newData.parent().parent().parent().child('limits').child(15 + '').child('last_op_count').val() == 0 || newData.parent().parent().parent().child('limits').child(15 + '').child('last_op_count').val() == data.parent().parent().parent().child('limits').child(15 + '').child('last_op_count').val() && newData.parent().parent().parent().child('limits').child(15 + '').child('last_reset_time').val() == data.parent().parent().parent().child('limits').child(15 + '').child('last_reset_time').val() && (newData.parent().parent().parent().child('data').child('limits').child(15 + '').child('target_op_id').val() != null && data.parent().parent().parent().child('data').child('limits').child(15 + '').child('used_ops').child(newData.parent().parent().parent().child('data').child('limits').child(15 + '').child('target_op_id').val() + '').val() == null && newData.parent().parent().parent().child('data').child('limits').child(15 + '').child('used_ops').child(newData.parent().parent().parent().child('data').child('limits').child(15 + '').child('target_op_id').val() + '').val() == true) && newData.parent().parent().parent().child('data').child('limits').child(15 + '').child('target_op_id').val() <= newData.parent().parent().parent().child('limits').child(15 + '').child('last_op_count').val())",
+                ".validate": "(newData.hasChildren() || newData.val() == null) && (newData.parent().parent().parent().child('data').child('limits').child(15 + '').child('used_ops').val() == null && newData.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_reset_time').val() == now && (newData.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_reset_time').val() == null ? 0 : newData.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_reset_time').val()) >= (data.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_reset_time').val() == null ? 0 : data.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_reset_time').val()) + 15 * 1000 && newData.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_op_count').val() == 0 || newData.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_op_count').val() == data.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_op_count').val() && newData.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_reset_time').val() == data.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_reset_time').val() && (newData.parent().parent().parent().child('data').child('limits').child(15 + '').child('target_op_id').val() != null && data.parent().parent().parent().child('data').child('limits').child(15 + '').child('used_ops').child(newData.parent().parent().parent().child('data').child('limits').child(15 + '').child('target_op_id').val() + '').val() == null && newData.parent().parent().parent().child('data').child('limits').child(15 + '').child('used_ops').child(newData.parent().parent().parent().child('data').child('limits').child(15 + '').child('target_op_id').val() + '').val() == true) && newData.parent().parent().parent().child('data').child('limits').child(15 + '').child('target_op_id').val() <= newData.parent().parent().parent().child('counters').child('limits').child(15 + '').child('last_op_count').val())",
                 "target_op_id": {
                   ".validate": "newData.isNumber() || newData.val() == null"
                 },
@@ -58,7 +89,7 @@
                 }
               },
               "60": {
-                ".validate": "(newData.hasChildren() || newData.val() == null) && (newData.parent().parent().parent().child('data').child('limits').child(60 + '').child('used_ops').val() == null && newData.parent().parent().parent().child('limits').child(60 + '').child('last_reset_time').val() == now && (newData.parent().parent().parent().child('limits').child(60 + '').child('last_reset_time').val() == null ? 0 : newData.parent().parent().parent().child('limits').child(60 + '').child('last_reset_time').val()) >= (data.parent().parent().parent().child('limits').child(60 + '').child('last_reset_time').val() == null ? 0 : data.parent().parent().parent().child('limits').child(60 + '').child('last_reset_time').val()) + 60 * 1000 && newData.parent().parent().parent().child('limits').child(60 + '').child('last_op_count').val() == 0 || newData.parent().parent().parent().child('limits').child(60 + '').child('last_op_count').val() == data.parent().parent().parent().child('limits').child(60 + '').child('last_op_count').val() && newData.parent().parent().parent().child('limits').child(60 + '').child('last_reset_time').val() == data.parent().parent().parent().child('limits').child(60 + '').child('last_reset_time').val() && (newData.parent().parent().parent().child('data').child('limits').child(60 + '').child('target_op_id').val() != null && data.parent().parent().parent().child('data').child('limits').child(60 + '').child('used_ops').child(newData.parent().parent().parent().child('data').child('limits').child(60 + '').child('target_op_id').val() + '').val() == null && newData.parent().parent().parent().child('data').child('limits').child(60 + '').child('used_ops').child(newData.parent().parent().parent().child('data').child('limits').child(60 + '').child('target_op_id').val() + '').val() == true) && newData.parent().parent().parent().child('data').child('limits').child(60 + '').child('target_op_id').val() <= newData.parent().parent().parent().child('limits').child(60 + '').child('last_op_count').val())",
+                ".validate": "(newData.hasChildren() || newData.val() == null) && (newData.parent().parent().parent().child('data').child('limits').child(60 + '').child('used_ops').val() == null && newData.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_reset_time').val() == now && (newData.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_reset_time').val() == null ? 0 : newData.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_reset_time').val()) >= (data.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_reset_time').val() == null ? 0 : data.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_reset_time').val()) + 60 * 1000 && newData.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_op_count').val() == 0 || newData.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_op_count').val() == data.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_op_count').val() && newData.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_reset_time').val() == data.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_reset_time').val() && (newData.parent().parent().parent().child('data').child('limits').child(60 + '').child('target_op_id').val() != null && data.parent().parent().parent().child('data').child('limits').child(60 + '').child('used_ops').child(newData.parent().parent().parent().child('data').child('limits').child(60 + '').child('target_op_id').val() + '').val() == null && newData.parent().parent().parent().child('data').child('limits').child(60 + '').child('used_ops').child(newData.parent().parent().parent().child('data').child('limits').child(60 + '').child('target_op_id').val() + '').val() == true) && newData.parent().parent().parent().child('data').child('limits').child(60 + '').child('target_op_id').val() <= newData.parent().parent().parent().child('counters').child('limits').child(60 + '').child('last_op_count').val())",
                 "target_op_id": {
                   ".validate": "newData.isNumber() || newData.val() == null"
                 },
@@ -77,37 +108,6 @@
               },
               ".write": "auth.uid != null && newData.val() != null"
             }
-          },
-          "limits": {
-            "15": {
-              ".validate": "(newData.hasChildren() && newData.hasChildren(['last_op_count']) || newData.val() == null) && (newData.parent().parent().child('limits').child(15 + '').child('last_reset_time').val() == data.parent().parent().child('limits').child(15 + '').child('last_reset_time').val() && (newData.parent().parent().child('limits').child(15 + '').child('last_op_count').val() == null ? 0 : newData.parent().parent().child('limits').child(15 + '').child('last_op_count').val()) > (data.parent().parent().child('limits').child(15 + '').child('last_op_count').val() == null ? 0 : data.parent().parent().child('limits').child(15 + '').child('last_op_count').val()) && newData.parent().parent().child('limits').child(15 + '').child('last_op_count').val() <= 30 || newData.parent().parent().child('data').child('limits').child(15 + '').child('used_ops').val() == null && newData.parent().parent().child('limits').child(15 + '').child('last_reset_time').val() == now && (newData.parent().parent().child('limits').child(15 + '').child('last_reset_time').val() == null ? 0 : newData.parent().parent().child('limits').child(15 + '').child('last_reset_time').val()) >= (data.parent().parent().child('limits').child(15 + '').child('last_reset_time').val() == null ? 0 : data.parent().parent().child('limits').child(15 + '').child('last_reset_time').val()) + 15 * 1000 && newData.parent().parent().child('limits').child(15 + '').child('last_op_count').val() == 0)",
-              "last_reset_time": {
-                ".validate": "newData.isNumber() || newData.val() == null"
-              },
-              "last_op_count": {
-                ".validate": "newData.isNumber()"
-              },
-              "$other": {
-                ".validate": "false"
-              }
-            },
-            "60": {
-              ".validate": "(newData.hasChildren() && newData.hasChildren(['last_op_count']) || newData.val() == null) && (newData.parent().parent().child('limits').child(60 + '').child('last_reset_time').val() == data.parent().parent().child('limits').child(60 + '').child('last_reset_time').val() && (newData.parent().parent().child('limits').child(60 + '').child('last_op_count').val() == null ? 0 : newData.parent().parent().child('limits').child(60 + '').child('last_op_count').val()) > (data.parent().parent().child('limits').child(60 + '').child('last_op_count').val() == null ? 0 : data.parent().parent().child('limits').child(60 + '').child('last_op_count').val()) && newData.parent().parent().child('limits').child(60 + '').child('last_op_count').val() <= 60 || newData.parent().parent().child('data').child('limits').child(60 + '').child('used_ops').val() == null && newData.parent().parent().child('limits').child(60 + '').child('last_reset_time').val() == now && (newData.parent().parent().child('limits').child(60 + '').child('last_reset_time').val() == null ? 0 : newData.parent().parent().child('limits').child(60 + '').child('last_reset_time').val()) >= (data.parent().parent().child('limits').child(60 + '').child('last_reset_time').val() == null ? 0 : data.parent().parent().child('limits').child(60 + '').child('last_reset_time').val()) + 60 * 1000 && newData.parent().parent().child('limits').child(60 + '').child('last_op_count').val() == 0)",
-              "last_reset_time": {
-                ".validate": "newData.isNumber() || newData.val() == null"
-              },
-              "last_op_count": {
-                ".validate": "newData.isNumber()"
-              },
-              "$other": {
-                ".validate": "false"
-              }
-            },
-            ".validate": "newData.hasChildren()",
-            "$other": {
-              ".validate": "false"
-            },
-            ".write": "auth.uid != null && newData.val() != null"
           }
         }
       }
