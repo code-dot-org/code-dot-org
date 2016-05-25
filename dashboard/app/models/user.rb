@@ -419,7 +419,7 @@ class User < ActiveRecord::Base
     conditions = devise_parameter_filter.filter(tainted_conditions.dup)
     # we get either a login (username) or hashed_email
     login = conditions.delete(:login)
-    if login && login.present?
+    if login.present?
       return nil if login.utf8mb4?
       where(['username = :value OR email = :value OR hashed_email = :hashed_value',
              { value: login.downcase, hashed_value: hash_email(login.downcase) }]).first
