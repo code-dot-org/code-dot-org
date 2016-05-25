@@ -392,7 +392,7 @@ function getWriteRecordPromise(tableName, recordId, record, rowCountChange) {
   return getServerDataPromise(tableName).then(function (serverData) {
     var channelDataData = {};
     var recordString = record === null ? null : JSON.stringify(record);
-    channelDataData['tables/' + tableName + '/' + recordId] = recordString;
+    channelDataData['tables/' + tableName + '/records/' + recordId] = recordString;
     channelDataData['tables/' + tableName + '/target_record_id'] = (String(recordId));
     if (rowCountChange) {
       updateRowCount(recordId, serverData.rowCounts, channelDataData, tableName, rowCountChange);
