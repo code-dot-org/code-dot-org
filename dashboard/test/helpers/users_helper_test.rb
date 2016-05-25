@@ -128,7 +128,7 @@ class UsersHelperTest < ActionView::TestCase
           status: 'perfect',
           result: 100,
           submitted: false,
-          pages_completed: [UsersHelper::PAGE_COMPLETED_YES, UsersHelper::PAGE_COMPLETED_NO]}
+          pages_completed: [ActivityConstants::FREE_PLAY_RESULT, nil]}
       }
     }, summarize_user_progress(script, user))
   end
