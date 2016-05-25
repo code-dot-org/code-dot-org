@@ -5,6 +5,8 @@ login_required 'true'
 
 stage 'Intro to the Unit', 'required'
   level 'Sample Free Response'
+  level 'U1L5 How the Internet Works - Video'
+  level 'Sample External Resource'
 
 stage 'Chapter Overviews', 'required'
   level 'Empty Markdown Level'
