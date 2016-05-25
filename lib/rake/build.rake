@@ -94,7 +94,7 @@ namespace :build do
         schema_cache_file = dashboard_dir('db/schema_cache.dump')
         unless rack_env?(:production)
           RakeUtils.rake 'db:schema:cache:dump'
-          if RakeUtils.file_changed_from_git?(schema_cache_file)
+          if GitUtils.file_changed_from_git?(schema_cache_file)
             # Staging is responsible for committing the authoritative schema cache dump.
             if rack_env?(:staging)
               RakeUtils.system 'git', 'add', schema_cache_file
@@ -186,7 +186,7 @@ namespace :build do
   tasks << :pegasus if CDO.build_pegasus
   tasks << :start_varnish if CDO.build_dashboard || CDO.build_pegasus
   task :all => tasks
-
 end
+
 desc 'Builds everything.'
 task :build => ['build:all']

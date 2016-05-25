@@ -27,13 +27,6 @@ require 'mail'
 
 STARTED = 'build-started'
 
-def format_duration(total_seconds)
-  total_seconds = total_seconds.to_i
-  minutes = (total_seconds / 60).to_i
-  seconds = total_seconds - (minutes * 60)
-  "%.1d:%.2d minutes" % [minutes, seconds]
-end
-
 def capture_stdout
   old_stdout = $stdout
   $stdout = StringIO.new('', 'w')
@@ -94,7 +87,7 @@ def main()
     # Notify the HipChat channels about what happened.
     projects = ARGV.join(' ')
     projects = 'websites' if projects.empty?
-    time_message = " 🕐 #{format_duration(Time.now.to_i - start_time)}"
+    time_message = " 🕐 #{RakeUtils.format_duration(Time.now.to_i - start_time)}"
     if status == 0
       message = "<b>#{projects}</b> built." + time_message
 
