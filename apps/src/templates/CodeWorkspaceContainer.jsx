@@ -68,7 +68,7 @@ var CodeWorkspaceContainer = React.createClass({
    * Called externally
    * @returns {number} The height of the rendered contents in pixels
    */
-  getContentHeight: function () {
+  getRenderedHeight: function () {
     return $(ReactDOM.findDOMNode(this)).height();
   },
 
