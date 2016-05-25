@@ -1,6 +1,4 @@
 /** @file Button that can be active or inactive, for use inside ToggleGroup */
-/* global $ */
-
 var React = require('react');
 var styles = require('./ToggleButtonStyles');
 

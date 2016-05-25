@@ -1,5 +1,3 @@
-/* globals $ */
-
 var React = require('react');
 var msg = require('../locale');
 
