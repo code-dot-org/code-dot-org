@@ -6,7 +6,7 @@ var styles = {
     paddingTop: 19
   },
   inTopPane: {
-    marginBottom: 35,
+    marginBottom: 0,
     paddingTop: 0
   },
   // Optionally give markdown dialog wide left margin so it looks more like a
