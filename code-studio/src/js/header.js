@@ -1,5 +1,6 @@
 /* globals dashboard, trackEvent, Dialog, appOptions */
 
+import $ from 'jquery';
 var React = require('react');
 var ReactDOM = require('react-dom');
 var _ = require('lodash');

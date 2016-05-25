@@ -1,6 +1,7 @@
 /**
  * @file Helper API object that wraps asynchronous calls to our data APIs.
  */
+import $ from 'jquery';
 
 /**
  * Standard callback form for asynchronous operations, popularized by Node.
