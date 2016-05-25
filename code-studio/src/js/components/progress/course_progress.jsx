@@ -15,7 +15,7 @@ var CourseProgress = React.createClass({
 
   getRow(stage) {
     if (this.props.display === 'dots') {
-      return <CourseProgressRow stage={stage} key={stage.name} saveAnswersFirst={this.props.saveAnswersFirst} />;
+      return <CourseProgressRow stage={stage} key={stage.name} />;
     } else {
       return <StageDetails stage={stage} key={stage.name} />;
     }

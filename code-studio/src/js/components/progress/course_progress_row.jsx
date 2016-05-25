@@ -25,7 +25,7 @@ var CourseProgressRow = React.createClass({
             </a>
           </div>
         </div>
-        <StageProgress levels={stage.levels} largeDots={true} />
+        <StageProgress levels={stage.levels} largeDots={true} saveAnswersFirst={false} />
       </div>
     );
   }
