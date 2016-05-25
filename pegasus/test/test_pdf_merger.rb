@@ -1,31 +1,31 @@
 # See docs/pdf-lesson-plan-generation.md for more information on running and testing
 
-require_relative '../../../lib/cdo/pegasus'
+require_relative '../../lib/cdo/pegasus'
 require 'minitest/autorun'
 require 'rubygems'
 require 'pdf-reader'
-require_relative '../../src/env'
+require_relative '../src/env'
 require 'pdf/collate'
 
 class PDFMergerTest < Minitest::Test
   include PDF
 
   def setup
-    @output = File.expand_path('../../fixtures/output/out.pdf', __FILE__)
-    @remote_collate_output_file =  File.expand_path('../../fixtures/output/remote_files.pdf', __FILE__)
-    @local_collate_output_file =  File.expand_path('../../fixtures/output/local_files.pdf', __FILE__)
-    @numbered_collate_output_file =  File.expand_path('../../fixtures/output/numbered_files.pdf', __FILE__)
+    @output = File.expand_path('../fixtures/output/out.pdf', __FILE__)
+    @remote_collate_output_file =  File.expand_path('../fixtures/output/remote_files.pdf', __FILE__)
+    @local_collate_output_file =  File.expand_path('../fixtures/output/local_files.pdf', __FILE__)
+    @numbered_collate_output_file =  File.expand_path('../fixtures/output/numbered_files.pdf', __FILE__)
     @temp_generated_unnumbered_pdf = "#{@numbered_collate_output_file}.not_numbered.pdf"
     @output_files = [@output, @remote_collate_output_file, @local_collate_output_file, @numbered_collate_output_file, @temp_generated_unnumbered_pdf]
 
     delete_outfiles
-    @local_pdf1 = File.expand_path('../../fixtures/pdfs/1.pdf', __FILE__)
-    @local_pdf2 = File.expand_path('../../fixtures/pdfs/2.pdf', __FILE__)
+    @local_pdf1 = File.expand_path('../fixtures/pdfs/1.pdf', __FILE__)
+    @local_pdf2 = File.expand_path('../fixtures/pdfs/2.pdf', __FILE__)
     @remote_pdf1 = 'http://learn.code.org/unplugged/unplug3.pdf'
     @remote_pdf2 = 'http://learn.code.org/unplugged/unplug3-es-ES.pdf'
-    @remote_collate_file =  File.expand_path('../../fixtures/remote_files.collate', __FILE__)
-    @local_collate_file =  File.expand_path('../../fixtures/local_files.collate', __FILE__)
-    @numbered_collate_file = File.expand_path('../../fixtures/numbered_files.collate', __FILE__)
+    @remote_collate_file =  File.expand_path('../fixtures/remote_files.collate', __FILE__)
+    @local_collate_file =  File.expand_path('../fixtures/local_files.collate', __FILE__)
+    @numbered_collate_file = File.expand_path('../fixtures/numbered_files.collate', __FILE__)
   end
 
   def delete_outfiles
