@@ -229,6 +229,7 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Redis Security Group
+      VpcId: {'Fn::GetAtt': [VPC, VpcId]}
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 6379
