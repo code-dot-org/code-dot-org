@@ -1,4 +1,3 @@
-/* global $ */
 var React = require('react');
 var color = require('../../color');
 var rowStyle = require('./rowStyle');
