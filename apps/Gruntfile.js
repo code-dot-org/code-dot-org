@@ -446,12 +446,6 @@ module.exports = function (grunt) {
     },
   };
 
-  config.open = {
-    playground: {
-      path: 'http://localhost:' + PLAYGROUND_PORT
-    }
-  };
-
   config.strip_code = {
     options: {
       start_comment: 'start-test-block',
@@ -531,7 +525,6 @@ module.exports = function (grunt) {
   grunt.registerTask('dev', [
     'build',
     'express:playground',
-    'open:playground',
     'watch'
   ]);
 
