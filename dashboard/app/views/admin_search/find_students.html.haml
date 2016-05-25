@@ -53,5 +53,9 @@
         - user.each do |field|
           %td
             %span= field
+        - if user[3]
+          %td
+            =link_to 'Undelete User', undelete_user_path(user_id: user[0]), method: :post, class: "btn"
+
 - else
   No users met the specified search criteria.
