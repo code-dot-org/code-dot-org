@@ -234,9 +234,9 @@ function loadProgress(scriptData) {
         progress: newProgress,
         stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
           let id = level.uid || level.id;
-          let result = newProgress[id] = clientState.mergeActivityResult(state.progress[id], action.progress[id]);
+          newProgress[id] = clientState.mergeActivityResult(state.progress[id], action.progress[id]);
 
-          return Object.assign({}, level, {status: progress.activityCssClass(result)});
+          return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id])});
         })}))
       };
     }
@@ -247,11 +247,13 @@ function loadProgress(scriptData) {
     stages: scriptData.stages
   });
 
+  // Merge in progress saved on the client.
   store.dispatch({
     type: 'MERGE_PROGRESS',
     progress: clientState.allLevelsProgress()[scriptData.name] || {}
   });
 
+  // Progress from the server should be written down locally.
   store.subscribe(() => {
     clientState.batchTrackProgress(scriptData.name, store.getState().progress);
   });
