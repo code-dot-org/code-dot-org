@@ -11,6 +11,7 @@
 
 require_relative '../deployment'
 require 'cdo/rake_utils'
+require 'cdo/git_utils'
 require 'cdo/hip_chat'
 require 'cdo/only_one'
 require 'shellwords'
@@ -238,7 +239,7 @@ task :chef_update do
       # Automatically update Chef cookbook versions in staging environment.
       RakeUtils.bundle_exec './update_cookbook_versions' if rack_env?(:staging)
       RakeUtils.bundle_exec 'berks', 'install'
-      if rack_env?(:staging) && RakeUtils.file_changed_from_git?(cookbooks_dir)
+      if rack_env?(:staging) && GitUtils.file_changed_from_git?(cookbooks_dir)
         RakeUtils.system 'git', 'add', '.'
         RakeUtils.system 'git', 'commit', '-m', '"Updated cookbook versions"'
         RakeUtils.git_push
