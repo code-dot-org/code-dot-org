@@ -1,5 +1,3 @@
-/* global React */
-
 /*
   Individual Session input for creating and editing workshops.
   Sets date, startTime, and endTime for the session.

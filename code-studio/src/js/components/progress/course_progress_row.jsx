@@ -1,5 +1,5 @@
-/* global React, dashboard */
-
+/* global dashboard */
+import React from 'react';
 import {STAGE_TYPE} from './types';
 import StageProgress from './stage_progress';
 

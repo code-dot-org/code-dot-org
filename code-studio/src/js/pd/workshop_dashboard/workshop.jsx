@@ -1,4 +1,4 @@
-/* global React TEACHER_DASHBOARD_URL */
+/* global TEACHER_DASHBOARD_URL */
 
 /*
   Workshop view / edit. Displays and optionally edits details for a workshop.
@@ -8,6 +8,7 @@
  */
 
 var _ = require('lodash');
+import React from 'react';
 var moment = require('moment');
 var ConfirmationDialog = require('./components/confirmation_dialog');
 var WorkshopForm = require('./components/workshop_form');
