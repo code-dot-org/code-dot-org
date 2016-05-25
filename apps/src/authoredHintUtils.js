@@ -1,3 +1,4 @@
+import $ from 'jquery';
 var processMarkdown = require('marked');
 var parseXmlElement = require('./xml').parseElement;
 var msg = require('./locale');

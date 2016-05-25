@@ -1,4 +1,5 @@
 /* global dashboard */
+import $ from 'jquery';
 
 // TODO(pcardune): Stop using the already packaged/minified version of jszip in
 // favor just plain jszip. Due to a bug in (probably) browserify, we need to use

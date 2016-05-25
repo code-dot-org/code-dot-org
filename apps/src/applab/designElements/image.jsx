@@ -1,3 +1,4 @@
+import $ from 'jquery';
 var React = require('react');
 var PropertyRow = require('./PropertyRow');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');

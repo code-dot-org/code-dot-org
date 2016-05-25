@@ -1,5 +1,6 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var library = require('./designElements/library');
 
 module.exports = React.createClass({

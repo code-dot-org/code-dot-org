@@ -1,6 +1,5 @@
 'use strict';
-/* global describe, beforeEach, it */
-
+import $ from 'jquery';
 import {assert} from '../../util/configuredChai';
 var testUtils = require('../../util/testUtils');
 var NetSimTestUtils = require('../../util/netsimTestUtils');

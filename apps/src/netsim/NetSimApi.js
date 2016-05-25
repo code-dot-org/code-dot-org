@@ -4,6 +4,7 @@
  */
 'use strict';
 
+import $ from 'jquery';
 var NetSimApiError = require('./NetSimApiError');
 
 /**
