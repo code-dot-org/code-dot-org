@@ -21,7 +21,7 @@ function getDatabase(channelId) {
       throw new Error("Error connecting to Firebase: Firebase auth token not specified");
     }
     var base_url = 'https://' + Applab.firebaseName + '.firebaseio.com';
-    db = new Firebase(base_url + '/v3/shared-tables/' + channelId);
+    db = new Firebase(base_url + '/v3/channels/' + channelId);
     if (Applab.firebaseAuthToken) {
       db.authWithCustomToken(Applab.firebaseAuthToken, function (err, user) {
         if (err) {

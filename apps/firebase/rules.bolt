@@ -95,27 +95,27 @@ allRateLimitsUpdated(channel) {
 // path rules
 //
 
-path /v3/shared-tables {
+path /v3/channels {
   read() { true }
 }
 
-path /v3/shared-tables/{channel_id}/server_time/{user_id} is Number {
+path /v3/channels/{channel_id}/server_time/{user_id} is Number {
   write() { auth.uid == user_id }
   validate() { this == now }
 }
 
 // The last record id previously assigned to a new record in this table.
 // Incremented transactionally. The new value belongs to the caller.
-path /v3/shared-tables/{channel_id}/counters/tables/{table_name}/last_id is Number {
+path /v3/channels/{channel_id}/counters/tables/{table_name}/last_id is Number {
   write() { isLoggedIn() && this != null }
   validate() { this > orZero(prior(this)) }
 }
 
-path /v3/shared-tables/{channel_id}/data/tables/{table_name}/target_record_id is String {
+path /v3/channels/{channel_id}/data/tables/{table_name}/target_record_id is String {
   write() { isLoggedIn() && this != null }
 }
 
-path /v3/shared-tables/{channel_id}/data/tables/{table_name}/row_count {
+path /v3/channels/{channel_id}/data/tables/{table_name}/row_count {
   write() { isLoggedIn() && this != null }
   validate() { 
     // require that target record is modified appropriately when row count is modified
@@ -123,11 +123,11 @@ path /v3/shared-tables/{channel_id}/data/tables/{table_name}/row_count {
   }
 }
 
-path /v3/shared-tables/{channel_id}/data/tables/{table_name}/row_count/{bucket} is Number;
+path /v3/channels/{channel_id}/data/tables/{table_name}/row_count/{bucket} is Number;
 
 // the key $record_id is the id of the record. Its value is the json-encoded
 // value of the record.
-path /v3/shared-tables/{channel_id}/data/tables/{table_name}/records/{record_id} is String {
+path /v3/channels/{channel_id}/data/tables/{table_name}/records/{record_id} is String {
   write() {
     // Specify these rules in write(), because validate() is skipped when data is null
     // (e.g. records are removed).
@@ -148,17 +148,17 @@ type RateLimitCounter {
   last_op_count: Number
 }
 
-path /v3/shared-tables/{channel_id}/counters/limits is RateLimitCounters {
+path /v3/channels/{channel_id}/counters/limits is RateLimitCounters {
   write() { isLoggedIn() && this != null }
 }
 
-path /v3/shared-tables/{channel_id}/counters/limits/15 {
+path /v3/channels/{channel_id}/counters/limits/15 {
   validate() {
     isValidRateLimitCounter(this.parent().parent().parent(), 15, 30)
   }
 }
 
-path /v3/shared-tables/{channel_id}/counters/limits/60 {
+path /v3/channels/{channel_id}/counters/limits/60 {
   validate() {
     isValidRateLimitCounter(this.parent().parent().parent(), 60, 60)
   }
@@ -176,20 +176,20 @@ type RateLimitData {
   used_ops: Boolean[]
 }
 
-path /v3/shared-tables/{channel_id}/data/limits is RateLimitDatas {
+path /v3/channels/{channel_id}/data/limits is RateLimitDatas {
   write() { isLoggedIn() && this != null }
 }
 
-path /v3/shared-tables/{channel_id}/data/limits/15 {
+path /v3/channels/{channel_id}/data/limits/15 {
   validate() {
     isValidRateLimitData(this.parent().parent().parent(), 15)
   }
 }
 
-path /v3/shared-tables/{channel_id}/data/limits/60 {
+path /v3/channels/{channel_id}/data/limits/60 {
   validate() {
     isValidRateLimitData(this.parent().parent().parent(), 60)
   }
 }
 
-//path /v3/shared-tables/{channel_id}/data/limits/240 { }
+//path /v3/channels/{channel_id}/data/limits/240 { }

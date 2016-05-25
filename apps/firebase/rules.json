@@ -1,7 +1,7 @@
 {
   "rules": {
     "v3": {
-      "shared-tables": {
+      "channels": {
         ".read": "true",
         "$channel_id": {
           "server_time": {
