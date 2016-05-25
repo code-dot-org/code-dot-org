@@ -1,6 +1,4 @@
 'use strict';
-/* global describe, beforeEach, it */
-
 import {assert} from '../../util/configuredChai';
 var ArgumentUtils = require('@cdo/apps/netsim/ArgumentUtils');
 

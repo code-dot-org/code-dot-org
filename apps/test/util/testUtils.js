@@ -4,9 +4,6 @@ var $ = require('jquery');
 import {assert} from './configuredChai';
 
 exports.setExternalGlobals = function () {
-  window.$ = $;
-  window.jQuery = $;
-
   window.dashboard = Object.assign({}, window.dashboard, {
     i18n: {
       t: function (selector) { return selector; }

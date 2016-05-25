@@ -1,7 +1,8 @@
 /* global Blockly, ace:true, droplet, dashboard, addToHome */
 
-var React = require('react');
-var ReactDOM = require('react-dom');
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var color = require('./color');
 var parseXmlElement = require('./xml').parseElement;

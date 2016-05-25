@@ -2,11 +2,11 @@
  * @overview A helper class for all actions associated with Puzzle
  * Ratings, aka the Fun-O-Meter.
  */
-
 var puzzleRatingUtils = {};
 
 module.exports = puzzleRatingUtils;
 
+import $ from 'jquery';
 var dom = require('./dom');
 
 /**
