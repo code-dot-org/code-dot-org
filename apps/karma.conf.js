@@ -17,17 +17,16 @@ module.exports = function (config) {
     // list of files / patterns to load in the browser
     files: [
       {pattern: 'build/package/js/blockly*js', watched: false},
-//      'test/integration-index.js',
       {pattern: 'test/index.js', watched: false},
-      {pattern: 'lib/**/*.png', watched: false, included: false},
-      {pattern: 'lib/**/*.cur', watched: false, included: false},
-      {pattern: 'lib/**/*.js', watched: false, included: false},
+      {pattern: 'test/**/*.*', watched: false, included: false},
+      {pattern: 'lib/**/*.*', watched: false, included: false},
+      {pattern: 'build/**/*.*', watched: false, included: false},
+      {pattern: 'static/**/*.*', watched: false, included: false},
     ],
 
     proxies: {
-      '/lib/': 'http://localhost:'+PORT+'/base/lib/',
-      '/apps/lib/': 'http://localhost:'+PORT+'/base/lib/',
-      '/blockly/': 'http://localhost:'+PORT+'/base/lib/blockly/',
+      '/blockly/media/': 'http://localhost:'+PORT+'/base/static/',
+      '/base/static/1x1.gif': 'http://localhost:'+PORT+'/base/lib/blockly/media/1x1.gif',
     },
 
     // list of files to exclude
@@ -47,7 +46,6 @@ module.exports = function (config) {
         "johnny-five": "var JohnnyFive",
         "playground-io": "var PlaygroundIO",
         "chrome-serialport": "var ChromeSerialport",
-        "marked": "var marked",
         "blockly": "this Blockly",
       },
       plugins: [
