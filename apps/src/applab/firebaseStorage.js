@@ -388,12 +388,15 @@ function updateRowCount(recordId, rowCounts, channelDataData, tableName, delta) 
   channelDataData['tables/' + tableName + '/row_count/' + rowCountIndex] = newRowCount;
 }
 
-function getCreateRecordPromise(tableName, counter, record) {
+function getWriteRecordPromise(tableName, recordId, record, rowCountChange) {
   return getServerDataPromise(tableName).then(function (serverData) {
     var channelDataData = {};
-    channelDataData['tables/' + tableName + '/' + counter] = JSON.stringify(record);
-    channelDataData['tables/' + tableName + '/target_record_id'] = String(counter);
-    updateRowCount(record.id, serverData.rowCounts, channelDataData, tableName, 1);
+    var recordString = record === null ? null : JSON.stringify(record);
+    channelDataData['tables/' + tableName + '/' + recordId] = recordString;
+    channelDataData['tables/' + tableName + '/target_record_id'] = (String(recordId));
+    if (rowCountChange) {
+      updateRowCount(recordId, serverData.rowCounts, channelDataData, tableName, rowCountChange);
+    }
     addRateLimitTokens(channelDataData, serverData.tokenMap);
     console.log('FirebaseStorage.createRecord channelDataData:');
     console.log(channelDataData);
@@ -417,13 +420,15 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
   var idCounter = tableName + '_id';
   getCounter(idCounter, function (counter) {
     record.id = counter;
-
-    getCreateRecordPromise(tableName, counter, record).catch(function (error) {
-      console.log('retrying getCreateRecordPromise once after error: ' + error);
-      return getCreateRecordPromise(tableName, counter, record);
+    var rowCountChange = 1;
+    getWriteRecordPromise(tableName, record.id, record, rowCountChange).catch(function (error) {
+      // TODO(dave): throw an error instead of retrying if row_count/N or last_reset_time
+      // have not changed since the previous attempt.
+      console.log('retrying createRecord once after error: ' + error);
+      return getWriteRecordPromise(tableName, record.id, record, rowCountChange);
     }).catch(function (error) {
-      console.log('retrying getCreateRecordPromise twice after error: ' + error);
-      return getCreateRecordPromise(tableName, counter, record);
+      console.log('retrying createRecord twice after error: ' + error);
+      return getWriteRecordPromise(tableName, record.id, record, rowCountChange);
     }).then(function () {
       onSuccess(record);
     }, function (error) {
@@ -513,22 +518,18 @@ FirebaseStorage.readRecords = function (tableName, searchParams, onSuccess, onEr
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError) {
-  getServerDataPromise(tableName).then(function (serverData) {
-    var channelData = {};
-    channelData['tables/' + tableName + '/' + record.id] = JSON.stringify(record);
-    channelData['tables/' + tableName + '/target_record_id'] = String(record.id);
-
+  var rowCountChange = 0;
+  getWriteRecordPromise(tableName, record.id, record, rowCountChange).catch(function (error) {
+    console.log('retrying createRecord once after error: ' + error);
+    return getWriteRecordPromise(tableName, record.id, record, rowCountChange);
+  }).catch(function (error) {
+    console.log('retrying createRecord twice after error: ' + error);
+    return getWriteRecordPromise(tableName, record.id, record, rowCountChange);
+  }).then(function () {
     // TODO: We need to handle the 404 case, probably by attempting a read.
-    addRateLimitTokens(channelData, serverData.tokenMap);
-
-    var channelRef = getDatabase(Applab.channelId);
-    channelRef.update(channelData, function (error) {
-      if (!error) {
-        onComplete(record, true);
-      } else {
-        onError(error);
-      }
-    });
+    onComplete(record, true);
+  }, function (error) {
+    onError(error);
   });
 };
 
@@ -543,23 +544,18 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError) {
-  getServerDataPromise(tableName).then(function (serverData) {
-    var channelData = {};
-    channelData['tables/' + tableName + '/' + record.id] = null;
-    channelData['tables/' + tableName + '/target_record_id'] = String(record.id);
-
+  var rowCountChange = -1;
+  getWriteRecordPromise(tableName, record.id, null, rowCountChange).catch(function (error) {
+    console.log('retrying createRecord once after error: ' + error);
+    return getWriteRecordPromise(tableName, record.id, null, rowCountChange);
+  }).catch(function (error) {
+    console.log('retrying createRecord twice after error: ' + error);
+    return getWriteRecordPromise(tableName, record.id, null, rowCountChange);
+  }).then(function () {
     // TODO: We need to handle the 404 case, probably by attempting a read.
-    updateRowCount(record.id, serverData.rowCounts, channelData, tableName, -1);
-    addRateLimitTokens(channelData, serverData.tokenMap);
-
-    var channelRef = getDatabase(Applab.channelId);
-    channelRef.update(channelData, function (error) {
-      if (!error) {
-        onComplete(true);
-      } else {
-        onError(error);
-      }
-    });
+    onComplete(true);
+  }, function (error) {
+    onError(error);
   });
 };
 
