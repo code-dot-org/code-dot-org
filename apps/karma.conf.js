@@ -15,13 +15,8 @@ module.exports = function (config) {
     frameworks: ['mocha'],
 
     // list of files / patterns to load in the browser
+    // handled in grunt-karma config
     files: [
-      {pattern: 'build/package/js/blockly*js', watched: false},
-      {pattern: 'test/index.js', watched: false},
-      {pattern: 'test/**/*.*', watched: false, included: false},
-      {pattern: 'lib/**/*.*', watched: false, included: false},
-      {pattern: 'build/**/*.*', watched: false, included: false},
-      {pattern: 'static/**/*.*', watched: false, included: false},
     ],
 
     proxies: {
@@ -37,7 +32,8 @@ module.exports = function (config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       "test/index.js": ["webpack", "sourcemap"],
-      "test/integration-index.js": ["webpack", "sourcemap"],
+      "test/integration-tests.js": ["webpack", "sourcemap"],
+      "test/unit-tests.js": ["webpack", "sourcemap"],
     },
 
     webpack: _.extend({}, webpackConfig, {
