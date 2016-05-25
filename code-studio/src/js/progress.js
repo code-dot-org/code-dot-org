@@ -35,6 +35,11 @@ progress.activityCssClass = function (result) {
 };
 
 /**
+ * See ApplicationHelper::PUZZLE_PAGE_NONE.
+ */
+progress.PUZZLE_PAGE_NONE = -1;
+
+/**
  * Returns the "best" of the two results, as defined in apps/src/constants.js.
  * Note that there are negative results that count as an attempt, so we can't
  * just take the maximum.
@@ -111,7 +116,7 @@ progress.populateProgress = function (scriptName, puzzlePage) {
   });
 
   // Unless we already highlighted a specific page, highlight the current level.
-  if (puzzlePage === -1 && window.appOptions && appOptions.serverLevelId) {
+  if (puzzlePage === progress.PUZZLE_PAGE_NONE && window.appOptions && appOptions.serverLevelId) {
     $('.level-' + appOptions.serverLevelId).parent().addClass('puzzle_outer_current');
   }
 };
@@ -174,7 +179,7 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
     };
   });
 
-  if (currentLevelIndex !== null && puzzlePage !== -1) {
+  if (currentLevelIndex !== null && puzzlePage !== progress.PUZZLE_PAGE_NONE) {
     currentLevelIndex += puzzlePage - 1;
   }
 
@@ -183,7 +188,8 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
   $('.progress_container').replaceWith(mountPoint);
   ReactDOM.render(React.createElement(StageProgress, {
     levels: combinedProgress,
-    currentLevelIndex: currentLevelIndex
+    currentLevelIndex: currentLevelIndex,
+    saveAnswersFirst: puzzlePage !== progress.PUZZLE_PAGE_NONE
   }), mountPoint);
 };
 
@@ -193,7 +199,8 @@ progress.renderCourseProgress = function (scriptData) {
   $('.user-stats-block').prepend(mountPoint);
   ReactDOM.render(React.createElement(CourseProgress, {
     display: teacherCourse ? 'list' : 'dots',
-    stages: scriptData.stages
+    stages: scriptData.stages,
+    saveAnswersFirst: false
   }), mountPoint);
   progress.populateProgress(scriptData.name);
 };
