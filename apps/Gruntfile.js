@@ -338,9 +338,39 @@ module.exports = function (grunt) {
   config.exec = {
     browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
     convertScssVars: './script/convert-scss-variables.js',
-    integrationTest: 'node test/runIntegrationTests.js --color' + (fastMochaTest ? ' --fast' : ''),
-    unitTest: 'node test/runUnitTests.js --color',
     applabapi: 'echo "' + applabAPIExec + '" && ' + applabAPIExec,
+  };
+
+  config.karma = {
+    options: {
+      configFile: 'karma.conf.js',
+      singleRun: true,
+      files: [
+        {pattern: 'build/package/js/blockly*js', watched: false},
+        {pattern: 'test/audio/**/*.*', watched: false, included: false},
+        {pattern: 'test/integration/**/*.*', watched: false, included: false},
+        {pattern: 'test/unit/**/*.*', watched: false, included: false},
+        {pattern: 'test/util/**/*.*', watched: false, included: false},
+        {pattern: 'lib/**/*.*', watched: false, included: false},
+        {pattern: 'build/**/*.*', watched: false, included: false},
+        {pattern: 'static/**/*.*', watched: false, included: false},
+      ],
+    },
+    unit: {
+      files: [
+        {src: ['test/unit-tests.js'], watched: false},
+      ],
+    },
+    integration: {
+      files: [
+        {src: ['test/integration-tests.js'], watched: false},
+      ],
+    },
+    all: {
+      files: [
+        {src: ['test/index.js'], watched: false},
+      ],
+    },
   };
 
   var entries = {};
@@ -585,7 +615,7 @@ module.exports = function (grunt) {
     'newer:messages',
     'exec:convertScssVars',
     'concat',
-    'exec:unitTest'
+    'karma:unit'
   ]);
 
   grunt.registerTask('integrationTest', [
@@ -593,10 +623,16 @@ module.exports = function (grunt) {
     'exec:convertScssVars',
     'newer:copy:static',
     'concat',
-    'exec:integrationTest'
+    'karma:integration'
   ]);
 
-  grunt.registerTask('test', ['unitTest', 'integrationTest']);
+  grunt.registerTask('test', [
+    'newer:messages',
+    'exec:convertScssVars',
+    'newer:copy:static',
+    'concat',
+    'karma:all'
+  ]);
 
   // We used to use 'mochaTest' as our test command.  Alias to be friendly while
   // we transition away from it.  This can probably be removed in a month or two.
