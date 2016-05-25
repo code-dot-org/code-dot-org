@@ -1,5 +1,3 @@
-/* global $ */
-
 var clientState = require('./clientState');
 
 /**

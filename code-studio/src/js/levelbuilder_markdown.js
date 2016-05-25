@@ -2,7 +2,6 @@
  * @file Main entry point for scripts used only in levelbuilder when editing
  *       DSL-defined levels.
  */
-/* global $ */
 'use strict';
 var initializeEmbeddedMarkdownEditor = require('./initializeEmbeddedMarkdownEditor');
 

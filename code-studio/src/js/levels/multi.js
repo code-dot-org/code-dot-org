@@ -1,4 +1,4 @@
-/* global $, Dialog, appOptions, CDOSounds */
+/* global Dialog, appOptions, CDOSounds */
 
 window.levelGroup = window.levelGroup || {levels: {}};
 
