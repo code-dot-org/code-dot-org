@@ -23,7 +23,7 @@ var shardApi = {
    * @returns {NetSimShardApi}
    */
   create: function (shardID) {
-    return $.extend({}, shardApi, {
+    return Object.assign({}, shardApi, {
 
       /**
        * Shard identifier.
@@ -56,7 +56,7 @@ var tableApi = {
    * @returns {NetSimTableApi}
    */
   create: function (shardID, tableName) {
-    return $.extend({}, tableApi, {
+    return Object.assign({}, tableApi, {
 
       /**
        * Shard identifier.

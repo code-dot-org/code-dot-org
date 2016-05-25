@@ -14,7 +14,7 @@ var ViewDataButton = React.createClass({
   },
 
   render: function () {
-    var showDataButtonStyle = $.extend({},
+    var showDataButtonStyle = Object.assign({},
       styles.buttonStyle,
       styles.inactiveStyle,
       {
