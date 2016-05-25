@@ -31,6 +31,21 @@ module.exports = function createCallouts(callouts) {
     return;
   }
 
+  // Insert a hashchange handler to detect show_callout= hashes and fire
+  // appropriate events to open the callout
+  document.body.onhashchange = function () {
+    var loc = window.location;
+    var splitHash = loc.hash.split("#show_callout=");
+    if (splitHash.length > 1) {
+      $(window).trigger(splitHash[1]);
+      if (window.history.pushState) {
+        history.pushState("", document.title, loc.pathname + loc.search);
+      } else {
+        loc.hash = '';
+      }
+    }
+  };
+
   if (document.URL.indexOf('show_callouts=1') === -1) {
     callouts = callouts.filter(function (element, index, array) {
       if (clientState.hasSeenCallout(element.id)) {
@@ -114,9 +129,11 @@ module.exports = function createCallouts(callouts) {
 
     if (callout.on) {
       $(window).on(callout.on, function () {
-        if (!callout.seen && $(selector).length > 0) {
+        if ($(selector).length > 0) {
+          if (callout.canReappear || !callout.seen) {
+            $(selector).qtip(config).qtip('show');
+          }
           callout.seen = true;
-          $(selector).qtip(config).qtip('show');
         }
       });
     } else {
