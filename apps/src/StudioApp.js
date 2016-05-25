@@ -2733,6 +2733,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     // TODO - better handle the case where we have only short
     instructionsMarkdown: level.markdownInstructions || level.instructions,
     instructionsInTopPane: !!config.showInstructionsInTopPane,
+    hasContainedLevels: config.hasContainedLevels,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
     noVisualization: false

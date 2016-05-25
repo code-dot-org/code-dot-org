@@ -226,6 +226,8 @@ GameLab.prototype.init = function (config) {
       />
     </Provider>
   ), document.getElementById(config.containerId));
+
+  $('#containedLevel0').appendTo($('#containedLevelContainer'));
 };
 
 /**

@@ -31,6 +31,7 @@ class LevelsController < ApplicationController
     view_options(
         full_width: true,
         small_footer: @game.uses_small_footer? || enable_scrolling?,
+        has_contained_levels: @level.try(:contained_levels).present?,
         has_i18n: @game.has_i18n?
     )
   end
@@ -258,6 +259,7 @@ class LevelsController < ApplicationController
       {concept_ids: []},
       {level_concept_difficulty_attributes: [:id] + LevelConceptDifficulty::CONCEPTS},
       {soft_buttons: []},
+      {contained_level_names: []},
       {examples: []}
     ]
 

@@ -10,6 +10,7 @@ var commonStyles = require('../../commonStyles');
 
 var processMarkdown = require('marked');
 
+var ProtectedStatefulDiv = require('../ProtectedStatefulDiv');
 var Instructions = require('./Instructions');
 var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
@@ -58,6 +59,7 @@ var styles = {
 var TopInstructions = React.createClass({
   propTypes: {
     isEmbedView: React.PropTypes.bool.isRequired,
+    hasContainedLevels: React.PropTypes.bool.isRequired,
     puzzleNumber: React.PropTypes.number.isRequired,
     stageTotal: React.PropTypes.number.isRequired,
     height: React.PropTypes.number.isRequired,
@@ -74,8 +76,12 @@ var TopInstructions = React.createClass({
    * @returns {number} The height of the rendered contents in pixels
    */
   getRenderedHeight() {
-    var instructionsContent = this.refs.instructions.refs.instructionsMarkdown;
-    return $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) + HEADER_HEIGHT;
+    if (this.props.hasContainedLevels) {
+      return $(ReactDOM.findDOMNode(this)).find('#containedLevelContainer').outerHeight(true) + HEADER_HEIGHT;
+    } else {
+      var instructionsContent = this.refs.instructions.refs.instructionsMarkdown;
+      return $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) + HEADER_HEIGHT;
+    }
   },
 
   getCollapsedHeight() {
@@ -100,7 +106,7 @@ var TopInstructions = React.createClass({
   },
 
   render: function () {
-    if (!this.props.markdown) {
+    if (!this.props.hasContainedLevels && !this.props.markdown) {
       return <div/>;
     }
     var id = this.props.id;
@@ -123,12 +129,17 @@ var TopInstructions = React.createClass({
         </div>
         <div style={[this.props.collapsed && commonStyles.hidden]}>
           <div style={styles.body}>
-            <Instructions
+            {this.props.hasContainedLevels && <ProtectedStatefulDiv
+              id="containedLevelContainer"
+              className='contained-level-container'/>
+            }
+            {!this.props.hasContainedLevels && <Instructions
               ref="instructions"
               renderedMarkdown={processMarkdown(this.props.markdown)}
               onResize={this.props.onResize}
               inTopPane
               />
+            }
           </div>
           {!this.props.isEmbedView && <HeightResizer
             position={this.props.height}
@@ -142,6 +153,7 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isEmbedView: state.pageConstants.isEmbedView,
+    hasContainedLevels: state.pageConstants.hasContainedLevels,
     puzzleNumber: state.pageConstants.puzzleNumber,
     stageTotal: state.pageConstants.stageTotal,
     maxHeight: state.instructions.maxHeight,

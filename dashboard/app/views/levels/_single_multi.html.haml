@@ -1,4 +1,5 @@
 - data = level.properties
+- contained_mode = local_assigns.fetch :contained_mode, false
 - app = 'multi'
 - use_tight_layout = data['layout'] == "tight" || tight_layout
 - force_wrap_layout = data['layout'] == "wrap"
@@ -14,7 +15,7 @@
   - else
     - question_content_class = "question"
 
-  = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_class, source_level: level, hide_header: !standalone}
+  = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_class, source_level: level, hide_header: !standalone || contained_mode}
 
   - if data['questions']
     - question_text = multi_t(level, data['questions'][0]['text'])
@@ -34,7 +35,7 @@
     - unless use_tight_layout
       %br/
 
-    - if standalone && !data['options'].try(:[], 'hide_submit')
+    - if (standalone || contained_mode) && !data['options'].try(:[], 'hide_submit')
       .buttons
         %a.btn.btn-large.btn-primary.next-stage.submitButton
           =t('submit')
@@ -94,11 +95,11 @@
   .clear
 
 -# Don't operate if we're a LevelGroup with a /level/ URL.
-- if standalone || @script_level
+- if standalone || contained_mode || @script_level
   :javascript
     window.levelGroup.levels[#{level.id}] = new Multi(
       "level_#{level.id}",
-      #{standalone},
+      #{standalone || contained_mode},
       "#{data['type']}" == "multi2" ? 2 : 1,
       #{data['type'] == 'EvaluationMulti' ? [] : data['answers'].map {|answer| answer['correct'] || false}},
       #{last_attempt.to_json}
