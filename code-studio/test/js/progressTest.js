@@ -7,6 +7,7 @@ var progress = require('../../src/js/progress');
 
 describe('progress', function () {
   it ('returns the correct activity CSS class', function () {
+    assert(progress.activityCssClass(null), 'not_tried');
     assert(progress.activityCssClass(0), 'not_tried');
     assert(progress.activityCssClass(-5), 'attempted');
     assert(progress.activityCssClass(19), 'attempted');
