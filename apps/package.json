@@ -10,6 +10,7 @@
   "scripts": {
     "lint": "eslint . --ext .js,.jsx",
     "test": "npm run lint && grunt test",
+    "test-low-memory": "./test-low-memory.sh",
     "test:unit": "grunt unitTest",
     "test:integration": "grunt integrationTest",
     "clean": "grunt clean",
@@ -84,7 +85,7 @@
     "grunt-newer": "1.1.1",
     "grunt-notify": "0.4.1",
     "grunt-open": "^0.2.3",
-    "grunt-sass": "1.0.0",
+    "grunt-sass": "1.1.0",
     "grunt-strip-code": "0.1.2",
     "http-proxy": "1.11.1",
     "http-server": "^0.9.0",

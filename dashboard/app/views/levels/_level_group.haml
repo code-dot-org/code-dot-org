@@ -39,7 +39,7 @@
 
     .level-group-number= "#{page.offset + index + 1}. "
     .level-group-content
-      - if level_class == "multi"
+      - if ['multi', 'evaluation_multi'].include? level_class
         -# For students (or teachers doing PD), mark all answers incorrect, so we don't give anything away.
         - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
           - level.properties['answers'].each { |answer| answer['correct'] = false }
@@ -71,10 +71,6 @@
       initLevelGroup(
         levelCount,
         page,
-        fallbackResponse,
-        callback,
-        app,
-        level,
         lastAttempt
       );
     });
