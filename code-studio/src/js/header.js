@@ -77,12 +77,17 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
   var isHeaderPopupVisible = false;
 
   function showHeaderPopup(target) {
-    sizeHeaderPopupToViewport();
-    $('.header_popup').show();
-    $('.header_popup_link_glyph').html('&#x25B2;');
-    $('.header_popup_link_text').text(dashboard.i18n.t('less'));
-    $(document).on('click', hideHeaderPopup);
-    lazyLoadPopup($(target).closest('.header_trophy_link').length > 0);
+    if ($(target).closest('.header_trophy_link').length > 0) {
+      // Only the 20-hour course has trophies.
+      location.href = '/s/20-hour#trophies';
+    } else {
+      sizeHeaderPopupToViewport();
+      $('.header_popup').show();
+      $('.header_popup_link_glyph').html('&#x25B2;');
+      $('.header_popup_link_text').text(dashboard.i18n.t('less'));
+      $(document).on('click', hideHeaderPopup);
+      lazyLoadPopup();
+    }
     isHeaderPopupVisible = true;
   }
   function hideHeaderPopup() {
@@ -129,7 +134,7 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
   }
 
   var popupLoaded = false;
-  function lazyLoadPopup(trophiesClicked) {
+  function lazyLoadPopup() {
     if (!popupLoaded) {
       popupLoaded = true;
       $.ajax({
@@ -142,17 +147,9 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
           puzzle_page: puzzlePage
         }, success: function (result) {
           $('.header_popup_body').html(result);
-          if (trophiesClicked) {
-            jumpToTrophies();
-          }
         }
       });
-    } else if (trophiesClicked) {
-      jumpToTrophies();
     }
-  }
-  function jumpToTrophies() {
-    window.scrollTo(0, +$('#trophies').offset().top);
   }
 };
 
