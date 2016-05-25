@@ -39,7 +39,7 @@ class AdminSearchController < ApplicationController
         @users = @users.where(id: array_of_student_ids)
       end
 
-      @headers = ['ID', 'Name', 'Email', 'Deleted Timestamp']
+      @headers = ['ID', 'Name', 'Email', 'Deleted Timestamp', 'Undelete']
       @users = @users.limit(@max_users).pluck('id', 'name', 'email', 'deleted_at')
     end
   end
