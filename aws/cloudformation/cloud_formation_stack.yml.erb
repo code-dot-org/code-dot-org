@@ -225,6 +225,29 @@ Resources:
             HostedZoneId: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneNameID]}
             DNSName: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneName]}
 <% end -%>
+  RedisSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Redis Security Group
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 6379
+          ToPort: 6379
+          SourceSecurityGroupId: {'Fn::GetAtt': [VPC, FrontendSecurityGroup]}
+  GeocoderSubnetGroup:
+    Type: AWS::ElastiCache::SubnetGroup
+    Properties:
+      Description: Geocoder Cache Subnet Group
+      SubnetIds: <%=subnets%>
+  GeocoderGroup:
+    Type: AWS::ElastiCache::ReplicationGroup
+    Properties:
+      ReplicationGroupDescription: Geocoder Replication Group
+      NumCacheClusters: 3
+      Engine: redis
+      CacheNodeType: cache.r3.large
+      SecurityGroupIds: [{'Fn::GetAtt': [RedisSecurityGroup, GroupId]}]
+      CacheSubnetGroupName: {Ref: GeocoderSubnetGroup}
 Outputs:
   DashboardURL:
     Value: "https://dashboard-<%=subdomain%>"
