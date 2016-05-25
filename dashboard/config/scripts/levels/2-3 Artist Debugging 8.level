@@ -12,7 +12,7 @@
     "start_direction": "270",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "12",
+    "ideal": "10",
     "slider_speed": "0.5",
     "free_play": "false",
     "embed": "false",
@@ -32,7 +32,8 @@
     "impressive": "false",
     "disable_sharing": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"How many times did my shape repeat?\\n\\nHow many times *should* the shape repeat?\\n\\nWhere can you change that in the program?\",\r\n  \"hint_id\": \"2-3_Artist_Debugging_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"How many times did my shape repeat?\\n\\nHow many times *should* the shape repeat?\\n\\nWhere can you change that in the program?\",\r\n  \"hint_id\": \"2-3_Artist_Debugging_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "discard_background": "false"
   },
   "published": true,
   "notes": "",
