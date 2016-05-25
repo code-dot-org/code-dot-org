@@ -5,9 +5,9 @@ var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('@cdo/apps/lodash');
 
 // take advantage of the fact that we expose the filesystem via
-// localhost:8001
-var flappyImage = '//localhost:8001/apps/static/flappy_promo.png';
-var facebookImage = '//localhost:8001/apps/static/facebook_purple.png';
+// localhost
+var flappyImage = '/base/static/flappy_promo.png';
+var facebookImage = '/base/static/facebook_purple.png';
 
 module.exports = {
   app: "applab",
