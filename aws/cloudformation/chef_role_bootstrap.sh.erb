@@ -52,7 +52,7 @@ JSON
 
 # Bootstrap the first cdo-apps Rakefile build on a new instance.
 # TODO move this run-once notification somewhere more appropriate
-rm -f /etc/init.d/{dashboard pegasus}
+rm -f /etc/init.d/{dashboard,pegasus}
 
 OPTIONS="<%=local_mode ? '-z' : ''%> -n ${NODE_NAME} -r '${RUN_LIST}' -e ${ENVIRONMENT}"
 sudo -u ubuntu bash -c "aws s3 cp s3://${S3_BUCKET}/chef/bootstrap-${STACK}.sh - | sudo bash -s -- ${OPTIONS}"
