@@ -7,10 +7,13 @@ require 'digest'
 require 'sprockets-derailleur'
 
 module RakeUtils
-
   def self.system__(command)
     CDO.log.info command
-    output = `#{command} 2>&1`
+    system_status_output__ "#{command} 2>&1"
+  end
+
+  def self.system_status_output__(command)
+    output = `#{command}`
     status = $?.exitstatus
     [status, output]
   end
@@ -47,6 +50,31 @@ module RakeUtils
       raise error, error.message, CDO.filter_backtrace([output])
     end
     status
+  end
+
+  # Alternate version of RakeUtils.rake which always streams STDOUT to the shell
+  # during execution.
+  def self.rake_stream_output(*args)
+    system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rake', *args
+  end
+
+  # Alternate version of RakeUtils.system which always streams STDOUT to the
+  # shell during execution.
+  def self.system_stream_output(*args)
+    command = command_(*args)
+    CDO.log.info command
+    Kernel.system(command)
+    unless $?.success?
+      error = RuntimeError.new("'#{command}' returned #{$?.exitstatus}")
+      raise error, error.message
+    end
+  end
+
+  def self.exec_in_background(command)
+    puts "Running `#{command}` in background"
+    fork do
+      exec "#{command}"
+    end
   end
 
   # Changes the Bundler environment to the specified directory for the specified block.
@@ -138,6 +166,10 @@ module RakeUtils
     end
   end
 
+  def self.glob_matches_file_path?(glob, file_path)
+    File.fnmatch?(glob, file_path, File::FNM_PATHNAME | File::FNM_DOTMATCH)
+  end
+
   # Updates list of global npm packages if outdated
   def self.npm_update_g(*args)
     output = `npm outdated --global --parseable --long --depth=0 #{args.join ' '}`.strip
@@ -214,11 +246,6 @@ module RakeUtils
     new_fetchable_url
   end
 
-  # Returns true if file is different from the committed version in git.
-  def self.file_changed_from_git?(file)
-    !`git status --porcelain #{file}`.strip.empty?
-  end
-
   # Whether this is a local or adhoc environment where we should install npm and create
   # a local database.
   def self.local_environment?
@@ -227,5 +254,12 @@ module RakeUtils
 
   def self.wait_for_url(url)
     system_ "until $(curl --output /dev/null --silent --head --fail #{url}); do sleep 5; done"
+  end
+
+  def self.format_duration(total_seconds)
+    total_seconds = total_seconds.to_i
+    minutes = (total_seconds / 60).to_i
+    seconds = total_seconds - (minutes * 60)
+    "%.1d:%.2d minutes" % [minutes, seconds]
   end
 end

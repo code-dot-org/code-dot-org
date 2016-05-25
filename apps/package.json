@@ -10,6 +10,7 @@
   "scripts": {
     "lint": "eslint . --ext .js,.jsx",
     "test": "npm run lint && grunt test",
+    "test-low-memory": "./test-low-memory.sh",
     "test:unit": "grunt unitTest",
     "test:integration": "grunt integrationTest",
     "clean": "grunt clean",
