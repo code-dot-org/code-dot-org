@@ -2,6 +2,8 @@
 
 import {STAGE_PROGRESS_TYPE} from './types';
 
+import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
+
 /**
  * Stage progress component used in level header and course overview.
  */
@@ -9,7 +11,14 @@ var StageProgress = React.createClass({
   propTypes: {
     levels: STAGE_PROGRESS_TYPE,
     currentLevelIndex: React.PropTypes.number,
-    largeDots: React.PropTypes.bool
+    largeDots: React.PropTypes.bool,
+    saveAnswersFirst: React.PropTypes.bool.isRequired
+  },
+
+  dotClicked(url) {
+    if (saveAnswersAndNavigate) {
+      saveAnswersAndNavigate(url);
+    }
   },
 
   render() {
@@ -37,13 +46,20 @@ var StageProgress = React.createClass({
         }
       }
 
+      var onClick = null;
+      if (this.props.saveAnswersFirst) {
+        dotStyle.cursor = 'pointer';
+        onClick = (e) => {this.dotClicked(level.url); e.preventDefault();};
+      }
+
       return ([
         <div className={outerClass}>
           <a
             href={level.url}
+            onClick={onClick}
             className={innerClass + ' level-' + level.id}
             style={dotStyle}>
-            {level.title}
+              {level.title}
           </a>
         </div>,
         ' '
