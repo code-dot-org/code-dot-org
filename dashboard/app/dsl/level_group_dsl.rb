@@ -61,8 +61,8 @@ class LevelGroupDSL < BaseDSL
       raise "User uploads aren't supported in a LevelGroup (due to global channel) '#{name}'"
     end
     level_class = level.class.to_s.underscore
-    unless %w(multi text_match free_response).include? level_class
-      raise "LevelGroup can only contain multi, text_match and free_response levels. (#{name} #{level_class})"
+    unless %w(multi text_match free_response evaluation_multi).include? level_class
+      raise "LevelGroup cannot contain level type #{level_class}"
     end
 
     @current_page_level_names << name
