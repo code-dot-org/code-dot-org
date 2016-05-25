@@ -11,28 +11,22 @@
 
 require_relative '../deployment'
 require 'cdo/rake_utils'
+require 'cdo/git_utils'
 require 'cdo/hip_chat'
 require 'cdo/only_one'
 require 'shellwords'
 require 'cdo/aws/cloudfront'
 require 'cdo/aws/s3_packaging'
 
-def format_duration(total_seconds)
-  total_seconds = total_seconds.to_i
-  minutes = (total_seconds / 60).to_i
-  seconds = total_seconds - (minutes * 60)
-  "%.1d:%.2d minutes" % [minutes, seconds]
-end
-
 def with_hipchat_logging(name)
   start_time = Time.now
   HipChat.log "Running #{name}..."
   yield if block_given?
-  HipChat.log "#{name} succeeded in #{format_duration(Time.now - start_time)}"
+  HipChat.log "#{name} succeeded in #{RakeUtils.format_duration(Time.now - start_time)}"
 
 rescue => e
   # notify developers room and our own room
-  "<b>#{name}</b> failed in #{format_duration(Time.now - start_time)}".tap do |message|
+  "<b>#{name}</b> failed in #{RakeUtils.format_duration(Time.now - start_time)}".tap do |message|
     HipChat.log message, color: 'red', notify: 1
     HipChat.developers message, color: 'red', notify: 1
   end
@@ -245,7 +239,7 @@ task :chef_update do
       # Automatically update Chef cookbook versions in staging environment.
       RakeUtils.bundle_exec './update_cookbook_versions' if rack_env?(:staging)
       RakeUtils.bundle_exec 'berks', 'install'
-      if rack_env?(:staging) && RakeUtils.file_changed_from_git?(cookbooks_dir)
+      if rack_env?(:staging) && GitUtils.file_changed_from_git?(cookbooks_dir)
         RakeUtils.system 'git', 'add', '.'
         RakeUtils.system 'git', 'commit', '-m', '"Updated cookbook versions"'
         RakeUtils.git_push

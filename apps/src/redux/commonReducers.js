@@ -2,10 +2,18 @@
  * A set of reducers that are used across all of our apps
  */
 
-var runState = require('./runState');
-var pageConstants = require('./pageConstants');
+import runState from './runState';
+import pageConstants from './pageConstants';
+import instructions from './instructions';
 
 module.exports = {
-  runState: runState.default,
-  pageConstants: pageConstants.default
+  runState,
+  pageConstants,
+  instructions
+};
+
+module.exports = {
+  runState,
+  pageConstants,
+  instructions
 };

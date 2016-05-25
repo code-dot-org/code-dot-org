@@ -46,6 +46,7 @@ var _ = require('../lodash');
 var dropletConfig = require('./dropletConfig');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
+var experiments = require('../experiments');
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -193,6 +194,8 @@ Artist.prototype.init = function (config) {
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
+
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
 
   if (this.skin.id === "anna") {
     this.avatarWidth = 73;
