@@ -33,7 +33,7 @@
               - result = 0
             - elsif p.try(:[], :pages_completed)
               - pages_completed = p[:pages_completed]
-              - status = page_complete_css_class(pages_completed[level_repeat])
+              - status = activity_css_class(pages_completed[level_repeat])
             - else
               - status = p.try(:[], :status) || 'not_tried'
               - result = p.try(:[], :result) || 0
