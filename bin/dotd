@@ -23,14 +23,16 @@ def should_i(question)
   loop do
     print "Should I #{question}? [#{underline 'Y'}es]/#{underline 'S'}kip/#{underline 'Q'}uit: "
     response = gets.strip.downcase
-    if "yes".start_with? response # also catches blank/return ;)
+    if 'yes'.start_with?(response) # also catches blank/return ;)
       yield
       return
-    elsif "skip".start_with? response
+    elsif 'skip'.start_with?(response) || 'no'.start_with?(response)
       return
-    elsif "quit".start_with? response
+    elsif 'quit'.start_with?(response)
       puts "Something weird going on? Take a look at: http://wiki.code.org/display/PROD/Daily+Deployment"
       exit(-1)
+    else
+      puts "Sorry, I didn't understand that.\n\n"
     end
   end
 end
