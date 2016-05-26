@@ -9,7 +9,7 @@ export const TEXT_RECT_RADIUS = TEXT_RECT_HEIGHT / 3;
 export const BETWEEN_RECT_MARGIN = 4;
 const TEXT_Y_OFFSET = -7;
 
-const styles = {
+export const styles = {
   text: {
     textAnchor: 'middle'
   },
