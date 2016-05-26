@@ -10,7 +10,8 @@ const SET_CONSTANTS = 'instructions/SET_CONSTANTS';
 const TOGGLE_INSTRUCTIONS_COLLAPSED = 'instructions/TOGGLE_INSTRUCTIONS_COLLAPSED';
 const SET_INSTRUCTIONS_RENDERED_HEIGHT = 'instructions/SET_INSTRUCTIONS_RENDERED_HEIGHT';
 const SET_INSTRUCTIONS_HEIGHT = 'instructions/SET_INSTRUCTIONS_HEIGHT';
-const SET_INSTRUCTIONS_MAX_HEIGHT = 'instructions/SET_INSTRUCTIONS_MAX_HEIGHT';
+const SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED = 'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED';
+const SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE = 'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE';
 
 /**
  * Some scenarios:
@@ -25,10 +26,17 @@ const instructionsInitialState = {
   shortInstructions: undefined,
   longInstructions: undefined,
   collapsed: false,
-  renderedHeight: 0, // undefined?
-  // TODO - can i get height out of redux? should i?
+  // The amount of vertical space consumed by the TopInstructions component
+  renderedHeight: 0,
+  // The amount of vertical space consumed by the TopInstructions component
+  // when it is not collapsed
+  // TODO - could be stored as component state?
   expandedHeight: 0,
-  maxHeight: 0
+  // The maximum amount of vertical space needed by the TopInstructions component.
+  maxNeededHeight: Infinity,
+  // The maximum height we'll allow the resizer to drag to. This is based in
+  // part off of the size of the code workspace.
+  maxAvailableHeight: Infinity
 };
 
 export default function reducer(state = instructionsInitialState, action) {
@@ -64,24 +72,25 @@ export default function reducer(state = instructionsInitialState, action) {
   if (action.type === SET_INSTRUCTIONS_RENDERED_HEIGHT) {
     return _.assign({}, state, {
       renderedHeight: action.height,
-      expandedHeight: state.collapsed ? state.expandedHeight : action.height
+      expandedHeight: !state.collapsed ? action.height : state.expandedHeight
     });
   }
 
-  // TODO
-  // if (action.type === SET_INSTRUCTIONS_HEIGHT &&
-  //     action.height !== state.height) {
-  //   return _.assign({}, state, {
-  //     height: action.height
-  //   });
-  // }
-  //
-  // if (action.type === SET_INSTRUCTIONS_MAX_HEIGHT &&
-  //     action.maxHeight !== state.maxHeight) {
-  //   return _.assign({}, state, {
-  //     maxHeight: action.maxHeight
-  //   });
-  // }
+  if (action.type === SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED &&
+      action.maxNeededHeight !== state.maxNeededHeight) {
+    return _.assign({}, state, {
+      maxNeededHeight: action.maxNeededHeight
+    });
+  }
+
+  if (action.type === SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE &&
+      action.maxAvailableHeight !== state.maxAvailableHeight) {
+    return _.assign({}, state, {
+      maxAvailableHeight: action.maxAvailableHeight,
+      renderedHeight: Math.min(action.maxAvailableHeight, state.renderedHeight),
+      expandedHeight: Math.min(action.maxAvailableHeight, state.expandedHeight)
+    });
+  }
 
   return state;
 }
@@ -105,20 +114,20 @@ export const toggleInstructionsCollapsed = () => ({
 });
 
 /**
- * Set the height of the instructions panel
- * @param {number} height - Height of instructions pane
+ *
  */
-export const setInstructionsHeight = height => ({
-  type: SET_INSTRUCTIONS_HEIGHT,
-  height
+export const setInstructionsMaxHeightNeeded = height => ({
+  type: SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED,
+  maxNeededHeight: height
 });
+
 
 /**
  * Set the max height of the instructions panel
- * @param {number} maxHeight - Don't let user drag instructions pane to be
+ * @param {number} maxAvailableHeight - Don't let user drag instructions pane to be
  *   larger than this number.
  */
-export const setInstructionsMaxHeight = maxHeight => ({
-  type: SET_INSTRUCTIONS_MAX_HEIGHT,
-  maxHeight
+export const setInstructionsMaxHeightAvailable = height => ({
+  type: SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE,
+  maxAvailableHeight: height
 });

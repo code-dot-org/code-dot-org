@@ -41,14 +41,9 @@ var InstructionsWithWorkspace = React.createClass({
    * Called when the window resizes. Look to see if width/height changed, then
    * call adjustTopPaneHeight as our maxHeight may need adjusting.
    */
-  __onResize() {
-    // No need to resize anything if we're collapsed
-    if (this.props.instructionsCollapsed) {
-      return;
-    }
-
-    var windowWidth = $(window).width();
-    var windowHeight = $(window).height();
+  onResize() {
+    const windowWidth = $(window).width();
+    const windowHeight = $(window).height();
 
     // We fire window resize events when the grippy is dragged so that non-React
     // controlled components are able to rerender the editor. If width/height
@@ -63,7 +58,34 @@ var InstructionsWithWorkspace = React.createClass({
       windowHeight: $(window).height()
     });
 
-    this.adjustTopPaneHeight();
+    // Determine what the maximum size of our instructions is based off of the
+    // size of the code workspace.
+
+    // Have a preference for showing at least 150px of editor and 120px of
+    // debugger. Shrink instructions to make room. If that doesn't provide
+    // enough space, start also shrinking workspace
+    const EDITOR_RESERVE = 150;
+    const DEBUGGER_RESERVE = 120;
+    const INSTRUCTIONS_RESERVE = 150;
+
+    const instructionsHeight = this.props.instructionsHeight;
+    const codeWorkspaceHeight = this.refs.codeWorkspaceContainer
+      .getWrappedInstance().getRenderedHeight();
+    if (codeWorkspaceHeight === 0) {
+      // We haven't initialized the codeWorkspace yet. No need to change the
+      // max height of instructions
+      return;
+    }
+
+    const totalHeight = instructionsHeight + codeWorkspaceHeight;
+    let maxInstructionsHeight = totalHeight - DEBUGGER_RESERVE - EDITOR_RESERVE;
+
+    if (maxInstructionsHeight < INSTRUCTIONS_RESERVE) {
+      // We couldn't meet all of our reserves. Just give 1/3 of whatever space
+      // we have to instructions, and the other 2/3 to the workspace
+      maxInstructionsHeight = Math.round(totalHeight / 3);
+    }
+    this.props.setInstructionsMaxHeightAvailable(maxInstructionsHeight);
   },
 
   /**
@@ -121,7 +143,7 @@ var InstructionsWithWorkspace = React.createClass({
       maxHeight = topSpaceAvailable;
     }
     this.props.setInstructionsHeight(Math.min(topPaneHeight, maxHeight));
-    this.props.setInstructionsMaxHeight(maxHeight);
+    this.props.setInstructionsMaxHeightAvailable(maxHeight);
   },
 
   /**
@@ -146,22 +168,13 @@ var InstructionsWithWorkspace = React.createClass({
     return height;
   },
 
-  // TODO - inside TopInstructions?
-  // componentDidMount() {
-  //   if (!this.props.showInstructions) {
-  //     return;
-  //   }
-  //
-  //
-  //   this.adjustTopPaneHeight();
-  //   window.addEventListener('resize', this.onResize);
-  // },
+  componentDidMount() {
+    window.addEventListener('resize', this.onResize);
+  },
 
-  // componentWillUnmount() {
-  //   if (this.props.showInstructions) {
-  //     window.removeEventListener("resize", this.onResize);
-  //   }
-  // },
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+  },
 
   render() {
     return (
@@ -190,8 +203,8 @@ module.exports = connect(function propsFromStore(state) {
     setInstructionsHeight: function (height) {
       dispatch(instructions.setInstructionsHeight(height));
     },
-    setInstructionsMaxHeight: function (maxHeight) {
-      dispatch(instructions.setInstructionsMaxHeight(maxHeight));
+    setInstructionsMaxHeightAvailable: function (maxHeight) {
+      dispatch(instructions.setInstructionsMaxHeightAvailable(maxHeight));
     }
   };
 })(InstructionsWithWorkspace);
