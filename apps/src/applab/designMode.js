@@ -465,6 +465,10 @@ designMode.onDuplicate = function (element, event) {
 };
 
 designMode.onDeletePropertiesButton = function (element, event) {
+  deleteElement(element);
+};
+
+function deleteElement(element) {
   var isScreen = $(element).hasClass('screen');
   if ($(element.parentNode).is('.ui-resizable')) {
     element = element.parentNode;
@@ -478,7 +482,7 @@ designMode.onDeletePropertiesButton = function (element, event) {
         elementUtils.getPrefixedElementById(
             studioApp.reduxStore.getState().screens.currentScreenId));
   }
-};
+}
 
 designMode.onDepthChange = function (element, depthDirection) {
   // move to outer resizable div
@@ -742,35 +746,77 @@ function makeDraggable(jqueryElements) {
       }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
+      start: function () {
+        highlightElement(elm[0]);
+      },
       drag: function (event, ui) {
         // draggables are not compatible with CSS transform-scale,
         // so adjust the position in various ways here.
 
-        // dragging
+        // Scale position to express it relative to app-space (instead of screen-space)
         var scale = getVisualizationScale();
         var newLeft  = ui.position.left / scale;
         var newTop = ui.position.top / scale;
 
-        // snap top-left corner to nearest location in the grid
+        // Get positions that snap to the grid
         newLeft = gridUtils.snapToGridSize(newLeft);
         newTop = gridUtils.snapToGridSize(newTop);
 
-        // containment
-        //var position = enforceContainment(newLeft, newTop, ui.helper.outerWidth(true), ui.helper.outerHeight(true));
-        var position = { left: newLeft, top: newTop };
+        // Update the position of wrapper (.ui-draggable) div to snap to grid
+        ui.position.left = newLeft;
+        ui.position.top = newTop;
 
-        ui.position.left = position.left;
-        ui.position.top = position.top;
-
+        // Set original element properties to update values in Property tab
         elm.css({
-          top: position.top,
-          left: position.left
+          left: newLeft,
+          top: newTop,
         });
 
+        // Dim the element if it's dragged out of bounds
+        if (!isMouseInBounds(newLeft, newTop)) {
+          elm.addClass("toDelete");
+        } else {
+          elm.removeClass("toDelete");
+        }
+
+        // Render design work space for this element
         designMode.renderDesignWorkspace(elm[0]);
       },
-      start: function () {
-        highlightElement(elm[0]);
+      stop: function (event, ui) {
+        // Note: It looks like the ui.position values don't change between
+        // the last drag event and the stop event. Since we already performed
+        // the scale transformation on ui.position values in the drag handler,
+        // there's no need to transform ui.position coordinates again here.
+
+        // Check the drop location to determine whether we delete this element
+        if (!isMouseInBounds(ui.position.left, ui.position.top)) {
+
+          // It's dropped out of bounds, animate and delete
+          ui.helper.hide( "drop", { direction: "down" }, 200, function () {
+            deleteElement(elm[0]);
+          });
+
+        } else {
+
+          // Otherwise, make sure that the element is contained within the app space
+          var newContainedPos = enforceContainment(
+            ui.position.left, ui.position.top, ui.helper.outerWidth(), ui.helper.outerHeight());
+
+          // Slide animate the wrapper back into the app space
+          ui.helper.animate({
+            left: newContainedPos.left,
+            top: newContainedPos.top,
+          }, 200);
+
+          // Set original element properties to update values in Property tab
+          elm.css({
+            left: newContainedPos.left,
+            top: newContainedPos.top,
+          });
+
+          // Render design work space for this element
+          designMode.renderDesignWorkspace(elm[0]);
+        }
       },
     }).css({
       position: 'absolute',
@@ -780,7 +826,6 @@ function makeDraggable(jqueryElements) {
     wrapper.css({
       top: elm.css('top'),
       left: elm.css('left'),
-      "z-index": 9999,
     });
 
     // Chrome/Safari both have issues where they don't properly render the
@@ -815,6 +860,18 @@ function enforceContainment(left, top, width, height) {
   newTop = Math.max(newTop, 0);
 
   return {'left': newLeft, 'top': newTop};
+}
+
+/**
+ * Checks if a position (relative to app space) is within the app space bounds
+ * @param {number} x
+ * @param {number} y
+ * @returns {boolean} True if (x, y) is within the app space. False otherwise.
+ */
+function isMouseInBounds(x, y) {
+  var container = $('#designModeViz');
+
+  return gridUtils.isMouseInBounds(x, y, container.outerWidth(), container.outerHeight());
 }
 
 /**

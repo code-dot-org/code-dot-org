@@ -1,5 +1,7 @@
 /** @file Crosshair and guides over visualization */
 
+import { isMouseInBounds } from '../applab/gridUtils';
+
 export const CROSSHAIR_MARGIN = 6;
 
 /**
@@ -16,15 +18,9 @@ let CrosshairOverlay = React.createClass({
     mouseY: React.PropTypes.number
   },
 
-  isMouseInBounds() {
-    return (this.props.mouseX >= 0) &&
-        (this.props.mouseX <= this.props.width) &&
-        (this.props.mouseY >= 0) &&
-        (this.props.mouseY <= this.props.height);
-  },
-
   render() {
-    if (!this.isMouseInBounds()) {
+    if (!isMouseInBounds(this.props.mouseX, this.props.mouseY,
+      this.props.width, this.props.height)) {
       return null;
     }
 

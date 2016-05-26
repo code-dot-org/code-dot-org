@@ -261,7 +261,6 @@ body.embedded_iframe {
   overflow: visible;
   outline: none;
   -webkit-touch-callout: none;
-  z-index: 999;
 
   @include user-selects(none);
 }
@@ -270,6 +269,10 @@ body.embedded_iframe {
   position: relative;
   z-index: 1;
   background-color: white;
+}
+
+#designModeViz .screen {
+  overflow: visible;
 }
 
 #visualizationOverlay {
@@ -314,6 +317,9 @@ body.embedded_iframe {
       cursor: grabbing;
       cursor: -moz-grabbing;
       cursor: -webkit-grabbing;
+    }
+    &.toDelete {
+      opacity: $delete-opacity;
     }
   }
 
