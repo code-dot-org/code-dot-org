@@ -9,9 +9,6 @@
 'use strict';
 var _ = require('lodash');
 
-// Fix Object.assign
-require('babel-polyfill');
-
 // Shim window.console to be safe in IE
 require('./consoleShim')(window);
 
