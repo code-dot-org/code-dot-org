@@ -487,7 +487,7 @@ var Workshop = React.createClass({
       return this.renderSpinner();
     }
     return (
-      <Grid fluid={true}>
+      <Grid>
         {this.renderSignupPanel()}
         {this.renderIntroPanel()}
         {this.renderAttendancePanel()}
