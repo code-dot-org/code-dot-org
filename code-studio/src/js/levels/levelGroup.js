@@ -2,14 +2,11 @@
 
 require('./multi.js');
 require('./textMatch.js');
+var saveAnswers = require('./saveAnswers.js').saveAnswers;
 
 window.initLevelGroup = function (
   levelCount,
   currentPage,
-  fallbackResponse,
-  callback,
-  app,
-  level,
   lastAttempt) {
 
   // Whenever an embedded level notifies us that the user has made a change,
@@ -22,10 +19,8 @@ window.initLevelGroup = function (
 
   window.getResult = getResult;
 
-  // Temporarily reduce throttling to 2 seconds for small audience, until we
-  // implement saving on changing via dots at top of page.
   var throttledSaveAnswers =
-    window.dashboard.utils.throttle(saveAnswers, 2 * 1000, {'leading': true, 'trailing': true});
+    window.dashboard.utils.throttle(saveAnswers, 20 * 1000, {'leading': true, 'trailing': true});
 
   var lastResponse = window.getResult().response;
 
@@ -64,7 +59,7 @@ window.initLevelGroup = function (
 
     var forceSubmittable = window.location.search.indexOf("force_submittable") !== -1;
 
-    var completeString = (validCount == levelCount) ? "complete" : "incomplete";
+    var completeString = (validCount === levelCount) ? "complete" : "incomplete";
     var showConfirmationDialog = "levelgroup-submit-" + completeString;
 
     return {
@@ -74,28 +69,6 @@ window.initLevelGroup = function (
       "submitted": window.appOptions.level.submittable || forceSubmittable,
       "showConfirmationDialog": showConfirmationDialog
     };
-  }
-
-  // Called by gotoPage and checkForChanges to save current answers.
-  // Calls the completeFn function when transmission is complete.
-  function saveAnswers(completeFn) {
-    var results = window.getResult();
-    var response = results.response;
-    var result = results.result;
-    var submitted = appOptions.submitted;
-
-    window.dashboard.reporting.sendReport({
-      program: response,
-      fallbackResponse: fallbackResponse,
-      callback: callback,
-      app: app,
-      level: level,
-      result: result,
-      pass: result,
-      testResult: result ? 100 : 0,
-      submitted: submitted,
-      onComplete: completeFn
-    });
   }
 
   // Called by gotoPage when it's ready to actually change the page.

@@ -47,9 +47,8 @@ const AnimationPreview = React.createClass({
   },
 
   advanceFrame: function () {
-    const frameCount = this.props.animation.frameCount || 1;
     this.setState({
-      currentFrame: (this.state.currentFrame + 1) % frameCount
+      currentFrame: (this.state.currentFrame + 1) % this.props.animation.frameCount
     });
     clearTimeout(this.timeout_);
     this.timeout_ = setTimeout(this.advanceFrame, 1000 / this.props.animation.frameRate);
@@ -67,13 +66,12 @@ const AnimationPreview = React.createClass({
     const nextAnimation = nextProps.animation;
     const innerWidth = nextProps.width - 2 * MARGIN_PX;
     const innerHeight = nextProps.height - 2 * MARGIN_PX;
-    const frameSize = nextAnimation.frameSize || {x: innerWidth, y: innerHeight};
-    const xScale = innerWidth / frameSize.x;
-    const yScale = innerHeight / frameSize.y;
+    const xScale = innerWidth / nextAnimation.frameSize.x;
+    const yScale = innerHeight / nextAnimation.frameSize.y;
     const scale = Math.min(1, Math.min(xScale, yScale));
-    const scaledFrameSize = scaleVector2(frameSize, scale);
+    const scaledFrameSize = scaleVector2(nextAnimation.frameSize, scale);
     this.setState({
-      framesPerRow: Math.floor(nextAnimation.sourceSize.x / frameSize.x),
+      framesPerRow: Math.floor(nextAnimation.sourceSize.x / nextAnimation.frameSize.x),
       scaledSourceSize: scaleVector2(nextAnimation.sourceSize, scale),
       scaledFrameSize: scaledFrameSize,
       extraTopMargin: Math.ceil((innerHeight - scaledFrameSize.y) / 2),

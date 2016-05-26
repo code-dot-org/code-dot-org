@@ -8,7 +8,6 @@ import animationPicker from './AnimationPicker/animationPickerModule';
 import animationTab from './AnimationTab/animationTabModule';
 var errorDialogStack = require('./errorDialogStackModule').default;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
-var instructions = require('../redux/instructions').default;
 
 
 function interfaceMode(state, action) {
@@ -27,6 +26,5 @@ module.exports = {
   animationTab,
   animations,
   errorDialogStack,
-  interfaceMode,
-  instructions
+  interfaceMode
 };

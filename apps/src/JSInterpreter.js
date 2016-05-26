@@ -1,7 +1,7 @@
 var codegen = require('./codegen');
 var ObservableEvent = require('./ObservableEvent');
 var utils = require('./utils');
-var runState = require('./redux/runState');
+import { setIsDebuggerPaused } from './redux/runState';
 
 /**
  * Create a JSInterpreter object. This object wraps an Interpreter object and
@@ -1278,23 +1278,23 @@ JSInterpreter.prototype.handlePauseContinue = function () {
     this.paused = true;
     this.nextStep = StepType.RUN;
   }
-  this.studioApp.reduxStore.dispatch(runState.setIsDebuggerPaused(this.paused));
+  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(this.paused));
 };
 
 JSInterpreter.prototype.handleStepOver = function () {
   this.paused = true;
   this.nextStep = StepType.OVER;
-  this.studioApp.reduxStore.dispatch(runState.setIsDebuggerPaused(this.paused));
+  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(this.paused));
 };
 
 JSInterpreter.prototype.handleStepIn = function () {
   this.paused = true;
   this.nextStep = StepType.IN;
-  this.studioApp.reduxStore.dispatch(runState.setIsDebuggerPaused(this.paused));
+  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(this.paused));
 };
 
 JSInterpreter.prototype.handleStepOut = function () {
   this.paused = true;
   this.nextStep = StepType.OUT;
-  this.studioApp.reduxStore.dispatch(runState.setIsDebuggerPaused(this.paused));
+  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(this.paused));
 };
