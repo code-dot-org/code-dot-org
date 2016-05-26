@@ -1,6 +1,7 @@
 /** @file Button that opens the data browser */
 /* global $ */
 
+var React = require('react');
 var applabMsg = require('./locale');
 var styles = require('../templates/ToggleButtonStyles');
 var FontAwesome = require('../templates/FontAwesome');

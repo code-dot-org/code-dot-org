@@ -1,5 +1,7 @@
 /* globals dashboard */
 
+var React = require('react');
+var ReactDOM = require('react-dom');
 var IconLibrary = require('../components/IconLibrary');
 var initializeCodeMirror = require('../initializeCodeMirror');
 var marked = require ('marked');

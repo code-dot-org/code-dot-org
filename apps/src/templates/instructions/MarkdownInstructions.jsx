@@ -1,4 +1,6 @@
-var Radium = require('radium');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Radium from 'radium';
 
 var styles = {
   standard: {

@@ -1,3 +1,4 @@
+var React = require('react');
 var ShareDialogBody = require('./share_dialog_body');
 var Dialog = require('@cdo/apps/templates/DialogComponent');
 

@@ -1,3 +1,4 @@
+var React = require('react');
 var commonStyles = require('../../commonStyles');
 var Radium = require('radium');
 
