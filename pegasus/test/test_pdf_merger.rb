@@ -79,12 +79,11 @@ class PDFMergerTest < Minitest::Test
     assert(File.exist?(@numbered_collate_output_file))
     pages = PDF::Reader.new(@numbered_collate_output_file).pages
     assert_equal(28, pages.size, "Has #{pages.size} pages, should have 28.")
-    assert(pages[27].text.include?('28')) # failing on circle, why?
+    assert(pages[27].text.include?('28'))
   end
 
   def teardown
-    # TODO(bjordan): needs enscript
-    #delete_outfiles
+    delete_outfiles
   end
 
   private
