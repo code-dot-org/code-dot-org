@@ -78,7 +78,7 @@ class PDFMergerTest < Minitest::Test
     PDF.number_pdf(@temp_generated_unnumbered_pdf, @numbered_collate_output_file)
     assert(File.exist?(@numbered_collate_output_file))
     pages = PDF::Reader.new(@numbered_collate_output_file).pages
-    assert_equal(28, pages.size)
+    assert_equal(28, pages.size, "Has #{pages.size} pages, should have 28.")
     assert(pages[27].text.include?('28'))
   end
 
