@@ -11,7 +11,8 @@ var Instructions = React.createClass({
     markdownClassicMargins: React.PropTypes.bool,
     aniGifURL: React.PropTypes.string,
     authoredHints: React.PropTypes.element,
-    onResize: React.PropTypes.func
+    onResize: React.PropTypes.func,
+    maxImageWidth: React.PropTypes.number
   },
 
   render: function () {
@@ -34,6 +35,7 @@ var Instructions = React.createClass({
           markdownClassicMargins={this.props.markdownClassicMargins}
           onResize={this.props.onResize}
           inTopPane={this.props.inTopPane}
+          maxImageWidth={this.props.maxImageWidth}
         />
       );
     } else {
