@@ -64,6 +64,7 @@ var InstructionsWithWorkspace = React.createClass({
     // Have a preference for showing at least 150px of editor and 120px of
     // debugger. Shrink instructions to make room. If that doesn't provide
     // enough space, start also shrinking workspace
+    // TODO - no debugger in CSF
     const EDITOR_RESERVE = 150;
     const DEBUGGER_RESERVE = 120;
     const INSTRUCTIONS_RESERVE = 150;
@@ -86,86 +87,6 @@ var InstructionsWithWorkspace = React.createClass({
       maxInstructionsHeight = Math.round(totalHeight / 3);
     }
     this.props.setInstructionsMaxHeightAvailable(maxInstructionsHeight);
-  },
-
-  /**
-   * Adjust the height and maxHeight of our top pane based on the rendered size
-   * of the instructions, and the rendered size of the workspace.
-   * Our strategy in doing so is as follows:
-   * The top pane should never be longer than the rendered height of the instructions
-   * The workspace area has a minimum size, and we shouldn't allow the top pane
-   * to grow enough to exceed this.
-   * At small enough window sizes where we can't shrink enough to meet all of
-   * our minimum sizes, shrink the debugger, editor, and instructions pane equally
-   */
-  __adjustTopPaneHeight() {
-    if (!this.props.showInstructions) {
-      return;
-    }
-
-    // Have a preference for showing at least 150px of editor and 120px of
-    // debugger. Shrink instructions to make room. If that doesn't provide
-    // enough space, start also shrinking workspace
-    var EDITOR_RESERVE = 150;
-    var DEBUGGER_RESERVE = 120;
-    var INSTRUCTIONS_RESERVE = 150;
-
-    var topPaneHeight = this.props.instructionsHeight;
-    var codeWorkspaceHeight = this.refs.codeWorkspaceContainer.getWrappedInstance()
-      .getRenderedHeight();
-    if (codeWorkspaceHeight === 0) {
-      // We haven't initialized the codeWorkspace yet. Don't do any adjusting
-      return;
-    }
-
-    var totalHeight = topPaneHeight + codeWorkspaceHeight;
-    var instructionsContentHeight = this.refs.topInstructions.getRenderedHeight();
-
-    // The max space we could use for our top pane if editor/debugger used
-    // only the reserved amount of space.
-    var topSpaceAvailable = totalHeight - EDITOR_RESERVE - DEBUGGER_RESERVE;
-
-    // Dont want topPaneHeight to extend past rendered length of content.
-    var maxHeight = instructionsContentHeight + HEADER_HEIGHT + RESIZER_HEIGHT;
-    if (maxHeight < topPaneHeight) {
-      topPaneHeight = maxHeight;
-    }
-
-    if (topSpaceAvailable < topPaneHeight) {
-      // if we'll still be at least 150px, just make our topPaneHeight smaller
-      if (topSpaceAvailable > INSTRUCTIONS_RESERVE) {
-        topPaneHeight = topSpaceAvailable;
-      } else {
-        topPaneHeight = Math.round(totalHeight / 3);
-      }
-      maxHeight = topPaneHeight;
-    } else if (topSpaceAvailable < maxHeight) {
-      maxHeight = topSpaceAvailable;
-    }
-    this.props.setInstructionsHeight(Math.min(topPaneHeight, maxHeight));
-    this.props.setInstructionsMaxHeightAvailable(maxHeight);
-  },
-
-  /**
-   * @returns {number} How much vertical space is consumed by the TopInstructions,
-   *   including space for any resizer
-   */
-   __topPaneHeight() {
-    // We may not display the instructions pane at all
-    if (!this.props.showInstructions) {
-      return 0;
-    }
-
-    // instructionsHeight represents the height of the TopInstructions if displayed
-    // and not collapsed
-    var height = this.props.instructionsHeight;
-
-    // If collapsed, we only use display instructions header
-    if (this.props.instructionsCollapsed) {
-      height = this.refs.topInstructions.getCollapsedHeight();
-    }
-
-    return height;
   },
 
   componentDidMount() {
