@@ -37,7 +37,7 @@ prevTargetRecord(table) { prior(table)[table.target_record_id] }
 // rate limit helpers
 
 getRateLimitCounter(channel, interval) { channel.counters.limits[interval + ''] }
-getRateLimitData(channel, interval) { channel.data.limits[interval + ''] }
+getRateLimitStorage(channel, interval) { channel.storage.limits[interval + ''] }
 
 isValidIncrement(limitCounter, maxCount) {
   isUnchanged(limitCounter.last_reset_time) &&
@@ -46,7 +46,7 @@ isValidIncrement(limitCounter, maxCount) {
 }
 
 isValidReset(channel, interval) {
-  channel.data.limits[interval + ''].used_tokens == null &&
+  channel.storage.limits[interval + ''].used_tokens == null &&
   channel.counters.limits[interval + ''].last_reset_time == now && 
   isIncreasedBy(channel.counters.limits[interval + ''].last_reset_time, interval * 1000) &&
   channel.counters.limits[interval + ''].last_token == 0
@@ -65,11 +65,11 @@ prevTargetOp(limitData) {
 isValidUsedOp(channel, interval) {
   isUnchanged(channel.counters.limits[interval + ''].last_token) &&
   isUnchanged(channel.counters.limits[interval + ''].last_reset_time) &&
-  targetOpUsed(channel.data.limits[interval + '']) &&
-  channel.data.limits[interval + ''].target_token <= channel.counters.limits[interval + ''].last_token
+  targetOpUsed(channel.storage.limits[interval + '']) &&
+  channel.storage.limits[interval + ''].target_token <= channel.counters.limits[interval + ''].last_token
 }
 
-isValidRateLimitData(channel, interval) {
+isValidRateLimitStorage(channel, interval) {
   isValidReset(channel, interval) ||
   isValidUsedOp(channel, interval)
 }
@@ -87,8 +87,8 @@ targetOpUsed(limitData) {
 // Minimal check to ensure the client wrote to each rate limit,
 // which will trigger the more thorough validation checks there.
 allRateLimitsUpdated(channel) {
-  targetOpUsed(getRateLimitData(channel, 15)) &&
-  targetOpUsed(getRateLimitData(channel, 60))
+  targetOpUsed(getRateLimitStorage(channel, 15)) &&
+  targetOpUsed(getRateLimitStorage(channel, 60))
 }
 
 //
@@ -111,11 +111,11 @@ path /v3/channels/{channel_id}/counters/tables/{table_name}/last_id is Number {
   validate() { this > orZero(prior(this)) }
 }
 
-path /v3/channels/{channel_id}/data/tables/{table_name}/target_record_id is String {
+path /v3/channels/{channel_id}/storage/tables/{table_name}/target_record_id is String {
   write() { isLoggedIn() && this != null }
 }
 
-path /v3/channels/{channel_id}/data/tables/{table_name}/row_counts {
+path /v3/channels/{channel_id}/storage/tables/{table_name}/row_counts {
   write() { isLoggedIn() && this != null }
   validate() { 
     // require that target record is modified appropriately when row count is modified
@@ -123,11 +123,11 @@ path /v3/channels/{channel_id}/data/tables/{table_name}/row_counts {
   }
 }
 
-path /v3/channels/{channel_id}/data/tables/{table_name}/row_counts/{bucket} is Number;
+path /v3/channels/{channel_id}/storage/tables/{table_name}/row_counts/{bucket} is Number;
 
 // the key $record_id is the id of the record. Its value is the json-encoded
 // value of the record.
-path /v3/channels/{channel_id}/data/tables/{table_name}/records/{record_id} is String {
+path /v3/channels/{channel_id}/storage/tables/{table_name}/records/{record_id} is String {
   write() {
     // Specify these rules in write(), because validate() is skipped when data is null
     // (e.g. records are removed).
@@ -166,30 +166,30 @@ path /v3/channels/{channel_id}/counters/limits/60 {
 
 // rate limit data
 
-type RateLimitDatas {
-  '15': RateLimitData | Null
-  '60': RateLimitData | Null
+type RateLimitStorages {
+  '15': RateLimitStorage | Null
+  '60': RateLimitStorage | Null
 }
 
-type RateLimitData {
+type RateLimitStorage {
   target_token: Number | Null
   used_tokens: Boolean[]
 }
 
-path /v3/channels/{channel_id}/data/limits is RateLimitDatas {
+path /v3/channels/{channel_id}/storage/limits is RateLimitStorages {
   write() { isLoggedIn() && this != null }
 }
 
-path /v3/channels/{channel_id}/data/limits/15 {
+path /v3/channels/{channel_id}/storage/limits/15 {
   validate() {
-    isValidRateLimitData(this.parent().parent().parent(), 15)
+    isValidRateLimitStorage(this.parent().parent().parent(), 15)
   }
 }
 
-path /v3/channels/{channel_id}/data/limits/60 {
+path /v3/channels/{channel_id}/storage/limits/60 {
   validate() {
-    isValidRateLimitData(this.parent().parent().parent(), 60)
+    isValidRateLimitStorage(this.parent().parent().parent(), 60)
   }
 }
 
-//path /v3/channels/{channel_id}/data/limits/240 { }
+//path /v3/channels/{channel_id}/storage/limits/240 { }

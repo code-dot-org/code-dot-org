@@ -5,7 +5,7 @@
 var Firebase = require("firebase");
 
 /**
- * Namespace for app storage.
+ * Namespace for Firebase storage.
  */
 var FirebaseStorage = module.exports;
 
@@ -44,7 +44,7 @@ function getKeyValues(channelId) {
 }
 
 function getTable(channelId, tableName) {
-  return getDatabase(channelId).child('data').child('tables').child(tableName);
+  return getDatabase(channelId).child('storage').child('tables').child(tableName);
 }
 
 /**
@@ -291,7 +291,7 @@ function resetRateLimitPromise(interval) {
     };
     var channelData = {};
     channelData['counters/limits/' + interval] = limitCounterData;
-    channelData['data/limits/' +  interval + '/used_tokens'] = null;
+    channelData['storage/limits/' +  interval + '/used_tokens'] = null;
     lastReset.time = lastResetTimeMs;
     lastReset.promise = channelRef.update(channelData).catch(function (error) {
       // Our reset request failed. Check to see if another client's reset attempt succeeded.
@@ -381,28 +381,28 @@ function getLastResetTimePromise(interval) {
 }
 
 
-function updateRowCount(recordId, rowCounts, channelDataData, tableName, delta) {
+function updateRowCount(recordId, rowCounts, channelStorageData, tableName, delta) {
   var rowCountIndex = recordId % ROW_COUNT_SHARDS;
   rowCounts = rowCounts || {};
   var newRowCount = (rowCounts[rowCountIndex] || 0) + delta;
-  channelDataData['tables/' + tableName + '/row_counts/' + rowCountIndex] = newRowCount;
+  channelStorageData['tables/' + tableName + '/row_counts/' + rowCountIndex] = newRowCount;
 }
 
 function getWriteRecordPromise(tableName, recordId, record, rowCountChange) {
   return getServerDataPromise(tableName).then(function (serverData) {
-    var channelDataData = {};
+    var channelStorageData = {};
     var recordString = record === null ? null : JSON.stringify(record);
-    channelDataData['tables/' + tableName + '/records/' + recordId] = recordString;
-    channelDataData['tables/' + tableName + '/target_record_id'] = (String(recordId));
+    channelStorageData['tables/' + tableName + '/records/' + recordId] = recordString;
+    channelStorageData['tables/' + tableName + '/target_record_id'] = (String(recordId));
     if (rowCountChange) {
-      updateRowCount(recordId, serverData.rowCounts, channelDataData, tableName, rowCountChange);
+      updateRowCount(recordId, serverData.rowCounts, channelStorageData, tableName, rowCountChange);
     }
-    addRateLimitTokens(channelDataData, serverData.tokenMap);
-    console.log('FirebaseStorage.createRecord channelDataData:');
-    console.log(channelDataData);
+    addRateLimitTokens(channelStorageData, serverData.tokenMap);
+    console.log('FirebaseStorage.createRecord channelStorageData:');
+    console.log(channelStorageData);
 
-    var channelDataRef = getDatabase(Applab.channelId).child('data');
-    return channelDataRef.update(channelDataData);
+    var channelStorageRef = getDatabase(Applab.channelId).child('storage');
+    return channelStorageRef.update(channelStorageData);
   });
 }
 
@@ -437,16 +437,16 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
 };
 
 /**
- * Populate the rate limit metadata in channelData needed to make the
+ * Populate the rate limit metadata in channelStorageData needed to make the
  * request succeed, using the rate limit info in limitsData.
- * @param channelDataData
+ * @param channelStorageData
  * @param tokenMap
  */
-function addRateLimitTokens(channelDataData, tokenMap) {
+function addRateLimitTokens(channelStorageData, tokenMap) {
   RATE_LIMIT_INTERVALS.forEach(function (interval) {
     var token = tokenMap[interval];
-    channelDataData['limits/' + interval + '/used_tokens/' + token] = true;
-    channelDataData['limits/' + interval + '/target_token'] = token;
+    channelStorageData['limits/' + interval + '/used_tokens/' + token] = true;
+    channelStorageData['limits/' + interval + '/target_token'] = token;
   });
 }
 
