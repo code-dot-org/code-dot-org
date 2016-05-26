@@ -107,7 +107,7 @@ module LevelsHelper
   def select_and_remember_callouts(always_show = false)
     # Filter if already seen (unless always_show)
     callouts_to_show = @level.available_callouts(@script_level).
-      reject { |c| !always_show && client_state.callout_seen?(c.localization_key) }.
+      reject { |c| !always_show && client_state.callout_seen?(c.localization_key) && !JSON.parse(c.qtip_config || '{}').try(:[], 'codeStudio').try(:[], 'canReappear') }.
       each { |c| client_state.add_callout_seen(c.localization_key) }
     # Localize
     callouts_to_show.map do |callout|
