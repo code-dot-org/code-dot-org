@@ -749,6 +749,10 @@ function makeDraggable(jqueryElements) {
       cancel: false,  // allow buttons and inputs to be dragged
       start: function () {
         highlightElement(elm[0]);
+
+        // Turn off clipping in app space so we can drag the element
+        // out of it
+        setAppSpaceClipping(false);
       },
       drag: function (event, ui) {
         // draggables are not compatible with CSS transform-scale,
@@ -805,6 +809,10 @@ function makeDraggable(jqueryElements) {
           // Render design work space for this element
           designMode.renderDesignWorkspace(elm[0]);
         }
+
+        // Turn clipping back on so it's not possible for elements
+        // to bleed out of app space
+        setAppSpaceClipping(true);
       },
     }).css({
       position: 'absolute',
@@ -860,6 +868,15 @@ function isMouseInBounds(x, y) {
   var container = $('#designModeViz');
 
   return gridUtils.isMouseInBounds(x, y, container.outerWidth(), container.outerHeight());
+}
+
+function setAppSpaceClipping(clip) {
+  var container = $('#designModeViz');
+  if (clip) {
+    container.addClass('clip-content');
+  } else {
+    container.removeClass('clip-content');
+  }
 }
 
 /**
