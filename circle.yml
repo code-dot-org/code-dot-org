@@ -20,7 +20,7 @@ dependencies:
     - "code-studio/node_modules"
     - "~/.rvm/gems/ruby-2.2.3"
   override:
-    - sudo apt-get install libicu-dev
+    - sudo apt-get install libicu-dev enscript
     - bundle install --without ''
     - 'echo "bundler_use_sudo: false" >> locals.yml'
     - 'echo "npm_use_sudo: false" >> locals.yml'
