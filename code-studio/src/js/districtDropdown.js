@@ -56,10 +56,6 @@ $(function () {
     }
   }
 
-  function setDistrictUnknown() {
-    $("#school-district-id-form").val(0);
-  }
-
   function clearZip() {
     var zipElement = $('#school-zipcode');
     zipElement.val("");
@@ -100,8 +96,8 @@ $(function () {
       setupDistrictDropdown($('#school-state').val());
     } else {
       $('#school-district').closest('.form-group').hide();
-      // Set district to "unknown district".
-      setDistrictUnknown();
+      // Clear district.
+      clearDistrict();
     }
   });
 
@@ -110,8 +106,8 @@ $(function () {
       // Disable districts.
       enableDistricts(false);
 
-      // And set district to "unknown district".
-      setDistrictUnknown();
+      // And clear district.
+      clearDistrict();
     } else {
       // Enable districts.  (And clear "unknown district".)
       enableDistricts(true);

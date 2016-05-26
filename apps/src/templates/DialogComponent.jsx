@@ -1,3 +1,5 @@
+var React = require('react');
+
 /**
  * Dialog
  * A generic modal dialog that has an x-close in the upper right, and a

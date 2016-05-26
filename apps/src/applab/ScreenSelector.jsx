@@ -1,6 +1,7 @@
 /** @file Dropdown for selecting design mode screens */
 /* global Applab */
 
+var React = require('react');
 var color = require('../color');
 var constants = require('./constants');
 var connect = require('react-redux').connect;

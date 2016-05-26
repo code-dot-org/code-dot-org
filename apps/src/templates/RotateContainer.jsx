@@ -1,5 +1,6 @@
 'use strict';
 
+var React = require('react');
 var msg = require('../locale');
 
 /**

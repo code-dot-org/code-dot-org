@@ -1,4 +1,5 @@
 /** @file Crosshair and guides over visualization */
+var React = require('react');
 
 const TOOLTIP_MARGIN = 6;
 const EDGE_MARGIN = 5;
