@@ -168,7 +168,8 @@ class ActivitiesController < ApplicationController
         script_level: @script_level,
         new_result: test_result,
         submitted: params[:submitted],
-        level_source_id: @level_source.try(:id)
+        level_source_id: @level_source.try(:id),
+        level: @level
       )
     end
 
