@@ -680,6 +680,10 @@ Applab.init = function (config) {
     config.dropletConfig = dropletConfig;
   }
 
+  // Set the custom set of blocks (may have had makerlab blocks merged in) so
+  // we can later pass the custom set to the interpreter.
+  config.level.levelBlocks = config.dropletConfig.blocks;
+
   config.pinWorkspaceToBottom = true;
 
   config.vizAspectRatio = Applab.appWidth / Applab.footerlessAppHeight;
@@ -1149,7 +1153,7 @@ Applab.execute = function () {
       // Initialize the interpreter and parse the student code
       Applab.JSInterpreter.parse({
         code: codeWhenRun,
-        blocks: dropletConfig.blocks,
+        blocks: level.levelBlocks,
         blockFilter: level.executePaletteApisOnly && level.codeFunctions,
         enableEvents: true
       });
