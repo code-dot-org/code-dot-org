@@ -34,6 +34,7 @@ var experiments = require('./experiments');
 import { setPageConstants } from './redux/pageConstants';
 
 var redux = require('./redux');
+import { setInstructionsConstants } from './redux/instructions';
 import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
 var combineReducers = require('redux').combineReducers;
@@ -2731,9 +2732,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
     pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
-    shortInstructions: level.instructions,
-    // TODO - better handle the case where we have only short
-    instructionsMarkdown: level.markdownInstructions || level.instructions,
     instructionsInTopPane: !!config.showInstructionsInTopPane,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
@@ -2741,4 +2739,23 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));
+
+  // TODO - may need to rename this method
+  let longInstructions = level.markdownInstructions;
+  let shortInstructions = level.instructions;
+
+  // TODO - cleaner
+  if (config.skin.id === "gamelab" || config.skin.id === "applab") {
+    if (shortInstructions && !longInstructions) {
+      // use short instructions as long instructions if that's all we have
+      longInstructions = shortInstructions;
+    }
+    // Never use short instructions in CSP
+    shortInstructions = undefined;
+  }
+
+  this.reduxStore.dispatch(setInstructionsConstants({
+    shortInstructions,
+    longInstructions,
+  }));
 };
