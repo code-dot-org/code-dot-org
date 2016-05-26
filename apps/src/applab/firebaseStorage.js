@@ -2,49 +2,22 @@
 
 /* global Applab */
 
-var Firebase = require("firebase");
+var FirebaseRateLimits = require('./firebaseRateLimits');
+var FirebaseUtils = require('./firebaseUtils');
 
 /**
  * Namespace for Firebase storage.
  */
 var FirebaseStorage = module.exports;
 
-var databaseCache = {};
-var firebaseUserId;
-function getDatabase(channelId) {
-  var db = databaseCache[channelId];
-  if (db == null) {
-    if (!Applab.firebaseName) {
-      throw new Error("Error connecting to Firebase: Firebase name not specified");
-    }
-    if (!Applab.firebaseAuthToken) {
-      throw new Error("Error connecting to Firebase: Firebase auth token not specified");
-    }
-    var base_url = 'https://' + Applab.firebaseName + '.firebaseio.com';
-    db = new Firebase(base_url + '/v3/channels/' + channelId);
-    if (Applab.firebaseAuthToken) {
-      db.authWithCustomToken(Applab.firebaseAuthToken, function (err, user) {
-        if (err) {
-          throw new Error('error authenticating to Firebase: ' + err);
-        } else {
-          firebaseUserId = user.uid;
-        }
-      });
-    }
-    databaseCache[channelId] = db;
-  }
-  //console.log(db);
-  return db;
-}
-
 function getKeyValues(channelId) {
-  var kv = getDatabase(channelId).child('keys');
+  var kv = FirebaseUtils.getDatabase(channelId).child('keys');
   //console.log(kv);
   return kv;
 }
 
 function getTable(channelId, tableName) {
-  return getDatabase(channelId).child('storage').child('tables').child(tableName);
+  return FirebaseUtils.getDatabase(channelId).child('storage').child('tables').child(tableName);
 }
 
 /**
@@ -52,7 +25,7 @@ function getTable(channelId, tableName) {
  * @returns {Promise<number>} next record id to assign.
  */
 function getNextIdPromise(tableName) {
-  var lastIdRef = getDatabase(Applab.channelId).child('counters').child('tables')
+  var lastIdRef = FirebaseUtils.getDatabase(Applab.channelId).child('counters').child('tables')
       .child(tableName).child('last_id');
   return lastIdRef.transaction(function (currentValue) {
     return (currentValue || 0) + 1;
@@ -145,211 +118,18 @@ function createEntry(key, value) {
 }
 
 /**
- * Map representing the rate limit over each time interval.
- *
- * @type {Object.<string, number>} Map from rate limit interval in seconds
- *     to the maximum number of operations allowed during that interval.
- */
-var RATE_LIMITS = {
-  15: 30,
-  60: 60
-};
-
-/**
- * @type {Array.<string>} Array of rate limit intervals in seconds.
- */
-var RATE_LIMIT_INTERVALS = Object.keys(RATE_LIMITS);
-
-/**
  * The row count is separated into this many shards to reduce contention.
  * @type {number}
  */
 const ROW_COUNT_SHARDS = 10;
 
-/**
- * How many rate limit tokens to request at a time.
- * @type {number}
- */
-const TOKEN_BATCH_SIZE = 10;
-
-/**
- * A list of available rate limit tokens for each interval.
- */
-var rateLimitTokenMap = {
-  15: [],
-  60: []
-};
-
-/**
- * The pending request for more rate limit tokens for each interval, if one exists.
- */
-var tokenFetchPromiseMap = {
-  15: null,
-  60: null
-};
-
-/**
- * Increments each rate limit counter, calling the callback with a map from
- * rate limit intervals to the corresponding token to use.
- */
-function getRateLimitTokenMapPromise() {
-  return Promise.all([
-    getRateLimitTokenPromise(15),
-    getRateLimitTokenPromise(60)
-  ]).then(function (results) {
-    return {
-      15: results[0],
-      60: results[1]
-    };
-  });
-}
-
-/**
- *
- * @param {number} interval
- */
-function getRateLimitTokenPromise(interval) {
-  var tokens = rateLimitTokenMap[interval];
-  if (tokens.length > 0) {
-    return tokens.shift();
-  }
-  return getTokenFetchPromise(interval).then(function () {
-    if (tokens.length > 0) {
-      return tokens.shift();
-    } else {
-      // More than TOKEN_BATCH_SIZE requests were waiting for the token fetch
-      // to complete, so there weren't enough tokens to go around.
-      throw new Error('No tokens available after interval ' + interval + ' token fetch.');
-    }
-  });
-}
-
-/**
- *
- * @param interval
- * @returns {*}
- */
-function getTokenFetchPromise(interval) {
-  if (!tokenFetchPromiseMap[interval]) {
-    // Atomically increment the rate limit counter to obtain a rate limit token.
-    tokenFetchPromiseMap[interval] = incrementLastTokenPromise(interval).catch(function (error) {
-      // The increment failed because last_token reached its maximum. Try to reset the count.
-      return resetRateLimitPromise(interval).then(function () {
-        // The rate limit was reset. Try one more time to increment it.
-        return incrementLastTokenPromise(interval).catch(function (error) {
-          throw new Error('Rate limit exceeded immediately after it was reset: ' + error);
-        });
-      });
-    }).then(function (newToken) {
-      tokenFetchPromiseMap[interval] = null;
-      for (var i = Number(newToken) - TOKEN_BATCH_SIZE + 1; i <= newToken; i++) {
-        rateLimitTokenMap[interval].push(i);
-      }
-    }, function (error) {
-      // The rate limit was exceeded and the reset failed. Do not reuse this promise.
-      tokenFetchPromiseMap[interval] = null;
-      return Promise.reject(error);
-    });
-  }
-  return tokenFetchPromiseMap[interval];
-}
-
-var lastReset = {};
-
-/**
- *
- * @param {number} interval
- * @param lastResetTimeMs
- * @param onSuccess
- * @param onError
- */
-function resetRateLimitPromise(interval) {
-  var lastResetTimePromise = getLastResetTimePromise(interval);
-  var currentTimePromise = getCurrentTimePromise();
-  return Promise.all([lastResetTimePromise, currentTimePromise]).then(function (results) {
-    var lastResetTimeMs = results[0];
-    var currentTimeMs = results[1];
-    var nextResetTimeMs = lastResetTimeMs + interval * 1000;
-
-    if (currentTimeMs < nextResetTimeMs) {
-      // It is too soon to reset this rate limit.
-      var timeRemaining = Math.ceil((nextResetTimeMs - currentTimeMs) / 1000);
-      return Promise.reject('rate limit exceeded. please wait ' + timeRemaining + ' seconds before retrying.');
-    }
-
-    if (lastResetTimeMs === lastReset.time) {
-      // Another request from this client has already been made to reset this timestamp.
-      // Return the promise from that other request.
-      return lastReset.promise;
-    }
-
-    // Enough time has passed for this rate limit to be reset.
-    var channelRef = getDatabase(Applab.channelId);
-    var limitCounterData = {
-      last_reset_time: Firebase.ServerValue.TIMESTAMP,
-      last_token: 0
-    };
-    var channelData = {};
-    channelData['counters/limits/' + interval] = limitCounterData;
-    channelData['storage/limits/' +  interval + '/used_tokens'] = null;
-    lastReset.time = lastResetTimeMs;
-    lastReset.promise = channelRef.update(channelData).catch(function (error) {
-      // Our reset request failed. Check to see if another client's reset attempt succeeded.
-      var limitRef = channelRef.child('counters').child('limits').child(interval);
-      return limitRef.once('value').then(function (limitSnapshot) {
-        var newResetTimeMs = limitSnapshot.child('last_reset_time').val() || 0;
-        if (newResetTimeMs <= lastResetTimeMs) {
-          return Promise.reject('Failed to reset rate limit.  ' + error);
-        } else {
-          // Our reset request failed, but the timestamp was updated, so we assume
-          // that another client's reset attempt succeeded.
-        }
-      });
-    });
-
-    return lastReset.promise;
-  });
-}
-
-/**
- *
- * @param interval
- */
-function incrementLastTokenPromise(interval) {
-  var lastTokenRef = getDatabase(Applab.channelId).child('counters').child('limits').child(interval).child('last_token');
-  var increment = incrementLastTokenData.bind(this, interval);
-  return lastTokenRef.transaction(increment).then(function (transactionResult) {
-    if (!transactionResult.committed) {
-      return Promise.reject('aborting increment transaction, max token value reached.');
-    } else {
-      return transactionResult.snapshot.val();
-    }
-  });
-}
-
-/**
- * Update function for a Firebase transaction to increment a rate limit counter.
- * @param {number} interval The rate limit interval.
- * @param {number} lastTokenData The token issued for this rate limit
- *     interval since the last reset.
- * @returns {*} new value for lastTokenData, or undefined if the transaction should be aborted.
- */
-function incrementLastTokenData(interval, lastTokenData) {
-  lastTokenData = lastTokenData || 0;
-  if (lastTokenData < RATE_LIMITS[interval]) {
-    return lastTokenData + TOKEN_BATCH_SIZE;
-  } else {
-    // last_token cannot be incremented. Abort the transaction.
-    return;
-  }
-}
 
 /**
  * @param {String} tableName
 
  */
 function getServerDataPromise(tableName) {
-  var tokenMapPromise = getRateLimitTokenMapPromise();
+  var tokenMapPromise = FirebaseRateLimits.getTokenMapPromise();
   var tableRef = getTable(Applab.channelId, tableName);
   var rowCountsPromise = tableRef.child('row_counts').once('value').then(function (snapshot) {
     return snapshot.val();
@@ -361,25 +141,6 @@ function getServerDataPromise(tableName) {
     };
   });
  }
-
-function getCurrentTimePromise() {
-  var serverTimeRef = getDatabase(Applab.channelId).child('server_time').child(firebaseUserId);
-  return serverTimeRef.set(Firebase.ServerValue.TIMESTAMP).then(function () {
-    serverTimeRef.onDisconnect().remove();
-    return serverTimeRef.once('value').then(function (currentTimeSnapshot) {
-      return currentTimeSnapshot.val();
-    });
-  });
-}
-
-function getLastResetTimePromise(interval) {
-  var lastResetTimeRef = getDatabase(Applab.channelId).child('counters').child('limits')
-    .child(interval).child('last_reset_time');
-  return lastResetTimeRef.once('value').then(function (lastResetTimeSnapshot) {
-    return lastResetTimeSnapshot.val() || 0;
-  });
-}
-
 
 function updateRowCount(recordId, rowCounts, channelStorageData, tableName, delta) {
   var rowCountIndex = recordId % ROW_COUNT_SHARDS;
@@ -397,11 +158,11 @@ function getWriteRecordPromise(tableName, recordId, record, rowCountChange) {
     if (rowCountChange) {
       updateRowCount(recordId, serverData.rowCounts, channelStorageData, tableName, rowCountChange);
     }
-    addRateLimitTokens(channelStorageData, serverData.tokenMap);
+    FirebaseRateLimits.addTokens(channelStorageData, serverData.tokenMap);
     console.log('FirebaseStorage.createRecord channelStorageData:');
     console.log(channelStorageData);
 
-    var channelStorageRef = getDatabase(Applab.channelId).child('storage');
+    var channelStorageRef = FirebaseUtils.getDatabase(Applab.channelId).child('storage');
     return channelStorageRef.update(channelStorageData);
   });
 }
@@ -435,20 +196,6 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
     });
   }, onError);
 };
-
-/**
- * Populate the rate limit metadata in channelStorageData needed to make the
- * request succeed, using the rate limit info in limitsData.
- * @param channelStorageData
- * @param tokenMap
- */
-function addRateLimitTokens(channelStorageData, tokenMap) {
-  RATE_LIMIT_INTERVALS.forEach(function (interval) {
-    var token = tokenMap[interval];
-    channelStorageData['limits/' + interval + '/used_tokens/' + token] = true;
-    channelStorageData['limits/' + interval + '/target_token'] = token;
-  });
-}
 
 /**
  * Returns true if record matches the given search parameters, which are a map
@@ -596,7 +343,7 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError) {
 };
 
 FirebaseStorage.resetRecordListener = function () {
-  getDatabase(Applab.channelId).off();
+  FirebaseUtils.getDatabase(Applab.channelId).off();
 };
 
 /**
@@ -615,7 +362,7 @@ FirebaseStorage.populateTable = function (jsonData, overwrite, onSuccess, onErro
   if (!jsonData || !jsonData.length) {
     return;
   }
-  var tables = getDatabase(Applab.channelId).child('tables');
+  var tables = FirebaseUtils.getDatabase(Applab.channelId).child('tables');
 
   // TODO: Respect overwrite
   tables.set(jsonData, function (error) {
@@ -644,7 +391,7 @@ FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onE
     return;
   }
   // TODO: Test this; Implement overwrite.
-  var tables = getDatabase(Applab.channelId).child('tables');
+  var tables = FirebaseUtils.getDatabase(Applab.channelId).child('tables');
   var keyValues = getKeyValues(Applab.channelId);
   tables.set(jsonData, function (error) {
     if (!error) {
