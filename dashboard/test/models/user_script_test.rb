@@ -74,44 +74,4 @@ class UserScriptTest < ActiveSupport::TestCase
                               completed_at: Time.now,
                               last_progress_at: Time.now).empty?
   end
-
-  test "completing a pd script updates script completion levels" do
-    @script.update(pd: true)
-    level = ScriptCompletion.find_or_create_by!(
-      game: Game.script_completion,
-      name: 'Test',
-      level_num: 'custom',
-      user_id: 0
-    )
-    level.script_name = @script.name
-    level.save!
-    sl = create :script_level, levels: [level]
-
-    # Complete some levels
-    @script_levels[0...8].each do |script_level|
-      complete_level(script_level)
-    end
-
-    refute UserLevel.exists?(user: @user, level: sl.level, script: sl.script)
-
-    # Complete remaining levels
-    @script_levels[8..-1].each do |script_level|
-      complete_level(script_level)
-    end
-
-    assert UserLevel.find_by(user: @user, level: sl.level, script: sl.script).perfect?
-  end
-
-  test "completing a pd script scans ScriptCompletion" do
-    @script.update(pd: true)
-    ScriptCompletion.stubs(:all).throws('should not scan ScriptCompletion levels')
-    assert_raise do
-      complete_all_levels
-    end
-  end
-
-  test "completing a non-pd script does not scan ScriptCompletion" do
-    ScriptCompletion.stubs(:all).throws('should not scan ScriptCompletion levels')
-    complete_all_levels
-  end
 end
