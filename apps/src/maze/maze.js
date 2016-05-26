@@ -23,6 +23,8 @@
  */
 'use strict';
 
+var React = require('react');
+var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var tiles = require('./tiles');
@@ -263,7 +265,7 @@ function drawMap() {
   var obsId = 0;
   for (y = 0; y < Maze.map.ROWS; y++) {
     for (x = 0; x < Maze.map.COLS; x++) {
-      if (Maze.map.getTile(y, x) == SquareType.OBSTACLE) {
+      if (Maze.map.getTile(y, x) === SquareType.OBSTACLE) {
         var obsIcon = document.createElementNS(SVG_NS, 'image');
         obsIcon.setAttribute('id', 'obstacle' + obsId);
         obsIcon.setAttribute('height', Maze.MARKER_HEIGHT * skin.obstacleScale);
@@ -420,7 +422,7 @@ function drawMapTiles(svg) {
           }
 
           // For the first 3 levels in maze, only show the null0 image.
-          if (level.id == '2_1' || level.id == '2_2' || level.id == '2_3') {
+          if (level.id === '2_1' || level.id === '2_2' || level.id === '2_3') {
             Maze.wallMap[y][x] = 0;
             tile = 'null0';
           }
@@ -578,11 +580,11 @@ Maze.init = function (config) {
     for (var y = 0; y < Maze.map.ROWS; y++) {
       for (var x = 0; x < Maze.map.COLS; x++) {
         var cell = Maze.map.getTile(y, x);
-        if (cell == SquareType.START) {
+        if (cell === SquareType.START) {
           Maze.start_ = {x: x, y: y};
         } else if (cell === SquareType.FINISH) {
           Maze.finish_ = {x: x, y: y};
-        } else if (cell == SquareType.STARTANDFINISH) {
+        } else if (cell === SquareType.STARTANDFINISH) {
           Maze.start_ = {x: x, y: y};
           Maze.finish_ = {x: x, y: y};
         }
@@ -1590,7 +1592,7 @@ Maze.scheduleFail = function (forward) {
         });
       }, stepSpeed * 4);
     }
-  } else if (squareType == SquareType.OBSTACLE) {
+  } else if (squareType === SquareType.OBSTACLE) {
     // Play the sound
     studioApp.playAudio('obstacle');
 
@@ -1682,7 +1684,7 @@ function scheduleDance(victoryDance, timeAlloted) {
   var originalFrame = tiles.directionToFrame(Maze.pegmanD);
   Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, 16);
 
-  // If victoryDance == true, play the goal animation, else reset it
+  // If victoryDance === true, play the goal animation, else reset it
   var finishIcon = document.getElementById('finish');
   if (victoryDance && finishIcon) {
     studioApp.playAudio('winGoal');
@@ -1828,7 +1830,7 @@ Maze.scheduleLookStep = function (path, delay) {
 
 function atFinish() {
   return !Maze.finish_ ||
-      (Maze.pegmanX == Maze.finish_.x && Maze.pegmanY == Maze.finish_.y);
+      (Maze.pegmanX === Maze.finish_.x && Maze.pegmanY === Maze.finish_.y);
 }
 
 function isDirtCorrect() {

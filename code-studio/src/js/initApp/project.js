@@ -369,7 +369,7 @@ var projects = module.exports = {
       case 'studio':
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
-        } else if (NON_REMIXABLE_SKINS.indexOf(appOptions.skinId) != -1) {
+        } else if (NON_REMIXABLE_SKINS.indexOf(appOptions.skinId) !== -1) {
           return null;
         }
         return 'playlab';

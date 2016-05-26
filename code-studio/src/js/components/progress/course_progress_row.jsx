@@ -1,7 +1,7 @@
-/* global React, dashboard */
-
-import {STAGE_TYPE} from './types';
-import StageProgress from './stage_progress';
+/* global dashboard */
+import React from 'react';
+import { STAGE_TYPE } from './types';
+import StageProgress from './stage_progress.jsx';
 
 /**
  * Stage progress component used in level header and course overview.
@@ -24,7 +24,7 @@ var CourseProgressRow = React.createClass({
             </a>
           </div>
         </div>
-        <StageProgress levels={stage.levels} largeDots={true} />
+        <StageProgress levels={stage.levels} largeDots={true} saveAnswersFirst={false} />
       </div>
     );
   }

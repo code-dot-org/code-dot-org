@@ -9,7 +9,7 @@
 
 var utils = require('../utils');
 var GoogleChart = require('./GoogleChart');
-require("babelify/polyfill"); // required for Promises in IE / Phantom
+require("babel-polyfill"); // required for Promises in IE / Phantom
 
 /**
  * API for requesting/generating charts in Applab.

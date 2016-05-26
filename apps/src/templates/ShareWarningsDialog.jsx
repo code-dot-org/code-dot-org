@@ -1,3 +1,4 @@
+var React = require('react');
 var color = require('../color');
 var ShareWarnings = require('./ShareWarnings');
 
@@ -22,6 +23,11 @@ var SharingWarningsDialog = module.exports = React.createClass({
     if (!this.state.modalIsOpen) {
       this.handleClose();
     }
+  },
+
+  handleTooYoung() {
+    this.setState({modalIsOpen: false});
+    this.props.handleTooYoung();
   },
 
   handleClose: function () {
@@ -70,7 +76,7 @@ var SharingWarningsDialog = module.exports = React.createClass({
           <ShareWarnings
             is13Plus={this.props.is13Plus}
             showStoreDataAlert={this.props.showStoreDataAlert}
-            handleTooYoung={this.props.handleTooYoung}
+            handleTooYoung={this.handleTooYoung}
             handleClose={this.handleClose}/>
         </div>
       </div>

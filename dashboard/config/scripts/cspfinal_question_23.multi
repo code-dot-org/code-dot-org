@@ -1,5 +1,4 @@
 name 'CSPFinal_Question_23'
-question 'Which of the following is MOST likely to be answerable using only the collected data set?'
 wrong 'Which students are visiting social media sites from school'
 wrong 'Which classes are assigning the most homework using the computers'
 wrong 'Which programs students are running on the lab computers'
@@ -15,6 +14,9 @@ A school starts tracking which websites each computer in the school is visiting 
 |1.5.1.8|11:05:29.71|news.com
 |1.1.5.1|11:06:13.48|sports.com
 |1.5.1.8|11:08:09.95|example.com
+
+<br/>
+Which of the following is MOST likely to be answerable using all the data collected by this monitoring?
 
 
 MARKDOWN

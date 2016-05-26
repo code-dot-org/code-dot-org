@@ -1,5 +1,7 @@
 'use strict';
 
+var React = require('react');
+var ReactDOM = require('react-dom');
 var commonMsg = require('../locale');
 var msg = require('./locale');
 var levels = require('./levels');
@@ -26,7 +28,7 @@ var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
 var experiments = require('../experiments');
 
-var actions = require('./actions');
+import {setInitialAnimationMetadata} from './animationModule';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
@@ -215,7 +217,7 @@ GameLab.prototype.init = function (config) {
 
   // Push project-sourced animation metadata into store
   if (typeof config.initialAnimationMetadata !== 'undefined') {
-    this.studioApp_.reduxStore.dispatch(actions.setInitialAnimationMetadata(config.initialAnimationMetadata));
+    this.studioApp_.reduxStore.dispatch(setInitialAnimationMetadata(config.initialAnimationMetadata));
   }
 
   ReactDOM.render((

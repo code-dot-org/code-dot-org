@@ -17,4 +17,5 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     found_enrollment = Pd::Enrollment.find_by(code: enrollment.code)
     assert_equal enrollment, found_enrollment
   end
+
 end

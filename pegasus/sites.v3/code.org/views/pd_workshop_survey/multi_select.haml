@@ -1,0 +1,10 @@
+-# Expected params: name, label
+
+%label.control-label{for: name}
+  = label
+  %span.form-required-field *
+%select.form-control{name: name, type: 'select', multiple: true}
+  %option{selected: 'selected', value: ''} -- Select all that apply --
+  - PdWorkshopSurvey::options_for(name).map do |option|
+    %option{value: option}
+      = option

@@ -181,7 +181,7 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
     };
     var existsOutsideApplab = !elementUtils.isIdAvailable(id, options);
 
-    var valid = !existsOutsideApplab && (shouldExist == existsInApplab);
+    var valid = !existsOutsideApplab && (shouldExist === existsInApplab);
 
     if (!valid) {
       var errorString = "";
@@ -205,7 +205,7 @@ applabCommands.setScreen = function (opts) {
   apiValidateDomIdExistence(opts, 'setScreen', 'screenId', opts.screenId, true);
   var element = document.getElementById(opts.screenId);
   var divApplab = document.getElementById('divApplab');
-  if (!element || (element.parentNode != divApplab)) {
+  if (!element || (element.parentNode !== divApplab)) {
     return;
   }
 
@@ -1111,7 +1111,7 @@ applabCommands.deleteElement = function (opts) {
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     // Special check to see if the active canvas is being deleted
-    if (div == Applab.activeCanvas || div.contains(Applab.activeCanvas)) {
+    if (div === Applab.activeCanvas || div.contains(Applab.activeCanvas)) {
       delete Applab.activeCanvas;
     }
     return Boolean(div.parentElement.removeChild(div));
@@ -1279,7 +1279,7 @@ applabCommands.getYPosition = function (opts) {
 
 applabCommands.onEventFired = function (opts, e) {
   var funcArgs = opts.extraArgs;
-  if (typeof e != 'undefined') {
+  if (typeof e !== 'undefined') {
     eventSandboxer.setTransformFromElement(document.getElementById('divApplab'));
     var applabEvent = eventSandboxer.sandboxEvent(e);
 

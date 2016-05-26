@@ -27,7 +27,10 @@
     setupPopupWindows();
     window["playVideo_#{id}"](true);
 
-    ga('send', 'event', 'showvideo', 'click', {'id': "#{id}"});
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_#{id} video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, '#{id}');
   };
 
   $("#showVideo_#{id}").on('hidden.bs.modal', function ()

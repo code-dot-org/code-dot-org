@@ -4,7 +4,8 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
 
 ## Kinds of tests
 * Apps directory
-  * Mocha Tests - Used to test client-side functionality of some of our levels, applab, and applab controls
+  * Unit Tests - Used to test client-side functionality of some of our levels, applab, and applab controls
+  * Integration Tests - Used to test level solutions and some block behaviors
 * Dashboard directory
   * Ruby tests - All of the server side business logic testing is through here. 
   * Konacha Tests - Subset of client-side functionality testing is here, we use this to test storage of client state.
@@ -17,13 +18,18 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
 
 ## Running tests
 
-### Mocha Tests
-`grunt mochaTest` will run all mocha tests. Run this from the `apps` directory.
+### Apps Tests
+`npm test` will lint all of the apps code and run unit and integration tests. Run this from the `apps` directory.
+
+You can also run these steps individually with `npm run lint`, `npm run test:unit` and `npm run test:integration`.
 
 To run a subset of tests, you can run 
-`grunt exec:mochaTest --grep "Interesting Test Name"` - Run all tests with a given string in the description
-`grunt exec:mocahTest --grep filename` - Run all tests in a given filename. Filename doesn't have to be the full path to the file, just the filename is sufficient
-You can append `--fast` if you don't want to test turtle/maze levels and want the tests to go faster
+`grunt [test|unitTest|integrationTest] --grep "Interesting Test Name"` - Run all tests with a given string in the description
+`grunt [test|unitTest|integrationTest] --grep filename` - Run all tests in a given filename. Filename doesn't have to be the full path to the file, just the filename is sufficient
+You can append `--fast` if you don't want to test turtle/maze levels and want the tests to go faster (integration tests only)
+
+Use the `--entry` option for fastest iteration.
+`grunt unitTest --entry ./test/utilityTests.js` - Only bundle what's needed to run the tests in utilityTests.js; should take seconds.
 
 You can expect a full test run to take about 5-10 minutes.
 

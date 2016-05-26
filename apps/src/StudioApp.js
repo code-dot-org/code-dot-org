@@ -1,5 +1,7 @@
 /* global Blockly, ace:true, droplet, dashboard, addToHome */
 
+var React = require('react');
+var ReactDOM = require('react-dom');
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var color = require('./color');
 var parseXmlElement = require('./xml').parseElement;
@@ -32,7 +34,7 @@ var experiments = require('./experiments');
 import { setPageConstants } from './redux/pageConstants';
 
 var redux = require('./redux');
-var runState = require('./redux/runState');
+import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
 var combineReducers = require('redux').combineReducers;
 
@@ -301,8 +303,10 @@ function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
+    is13Plus: config.is13Plus,
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
+    onTooYoung: config.shareWarningInfo.onTooYoung,
   });
 }
 
@@ -486,7 +490,7 @@ StudioApp.prototype.init = function (config) {
   } else {
     // handleUsingBlockly_ already does an onResize. We still want that goodness
     // if we're not blockly
-    this.onResize();
+    utils.fireResizeEvent();
   }
 
   this.alertIfAbusiveProject('#codeWorkspace');
@@ -596,8 +600,9 @@ StudioApp.prototype.init = function (config) {
   }
 };
 
-StudioApp.prototype.startIFrameEmbeddedApp = function (config) {
+StudioApp.prototype.startIFrameEmbeddedApp = function (config, onTooYoung) {
   if (this.share && config.shareWarningInfo) {
+    config.shareWarningInfo.onTooYoung = onTooYoung;
     showWarnings(config);
   } else {
     this.runButtonClick();
@@ -909,7 +914,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
     throw "Unexpected input";
   }
 
-  this.reduxStore.dispatch(runState.setIsRunning(!showRun));
+  this.reduxStore.dispatch(setIsRunning(!showRun));
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
@@ -1265,11 +1270,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
   }
 
   this.instructionsDialog.show({hideOptions: hideOptions});
-
-  if (isMarkdownMode) {
-    // process <details> tags with polyfill jQuery plugin
-    $('details').details();
-  }
 
   // Fire a custom event on the document so that other code can respond
   // to instructions being shown.
@@ -1851,7 +1851,7 @@ StudioApp.prototype.configureDom = function (config) {
       // If in level builder editing blocks, make workspace extra tall
       vizHeight = 3000;
       // Modify the arrangement of toolbox blocks so categories align left
-      if (config.level.edit_blocks == "toolbox_blocks") {
+      if (config.level.edit_blocks === "toolbox_blocks") {
         this.blockYCoordinateInterval = 80;
         config.blockArrangement = { category : { x: 20 } };
       }
@@ -1869,12 +1869,6 @@ StudioApp.prototype.configureDom = function (config) {
       bodyElement.style.overflow = "hidden";
       bodyElement.className = bodyElement.className + " pin_bottom";
       container.className = container.className + " pin_bottom";
-      visualizationColumn.className = visualizationColumn.className + " pin_bottom";
-      codeWorkspace.className = codeWorkspace.className + " pin_bottom";
-      if (this.editCode) {
-        var codeTextbox = document.getElementById('codeTextbox');
-        codeTextbox.className = codeTextbox.className + " pin_bottom";
-      }
     } else {
       visualizationColumn.style.minHeight = vizHeight + 'px';
       container.style.minHeight = vizHeight + 'px';
@@ -2736,10 +2730,14 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     hideSource: !!config.hideSource,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
-    instructionsMarkdown: level.markdownInstructions,
-    instructionsInTopPane: config.showInstructionsInTopPane,
+    pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
+    shortInstructions: level.instructions,
+    // TODO - better handle the case where we have only short
+    instructionsMarkdown: level.markdownInstructions || level.instructions,
+    instructionsInTopPane: !!config.showInstructionsInTopPane,
     puzzleNumber: level.puzzle_number,
-    stageTotal: level.stage_total
+    stageTotal: level.stage_total,
+    noVisualization: false
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));

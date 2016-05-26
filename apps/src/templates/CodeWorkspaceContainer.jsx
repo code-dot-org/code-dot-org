@@ -5,11 +5,14 @@
  * us to position it vertically. Causes resize events to fire when receiving new props
  */
 
+var React = require('react');
+var ReactDOM = require('react-dom');
 var Radium = require('radium');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var utils = require('../utils');
 var commonStyles = require('../commonStyles');
 var CodeWorkspace = require('./CodeWorkspace');
+import { connect } from 'react-redux';
 
 var styles = {
   main: {
@@ -52,18 +55,22 @@ var styles = {
 
 var CodeWorkspaceContainer = React.createClass({
   propTypes: {
-    topMargin: React.PropTypes.number.isRequired,
-    hidden: React.PropTypes.bool,
+    // redux provided
+    hidden: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
+    pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
     noVisualization: React.PropTypes.bool.isRequired,
-    onSizeChange: React.PropTypes.func
+
+    // not in redux
+    topMargin: React.PropTypes.number.isRequired,
+    onSizeChange: React.PropTypes.func,
   },
 
   /**
    * Called externally
    * @returns {number} The height of the rendered contents in pixels
    */
-  getContentHeight: function () {
+  getRenderedHeight: function () {
     return $(ReactDOM.findDOMNode(this)).height();
   },
 
@@ -95,4 +102,10 @@ var CodeWorkspaceContainer = React.createClass({
     );
   }
 });
-module.exports = Radium(CodeWorkspaceContainer);
+module.exports = connect(state => ({
+  hidden: state.pageConstants.hideSource,
+  isRtl: state.pageConstants.localeDirection === 'rtl',
+  noVisualization: state.pageConstants.noVisualization,
+  pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
+}), undefined, null, { withRef: true }
+)(Radium(CodeWorkspaceContainer));
