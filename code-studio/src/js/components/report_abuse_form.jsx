@@ -1,4 +1,7 @@
-/* global dashboard, React */
+/* global dashboard */
+
+var React = require('react');
+var ReactDOM = require('react-dom');
 
 /**
  * A component containing some text/links for projects that have had abuse

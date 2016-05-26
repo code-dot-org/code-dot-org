@@ -1,4 +1,5 @@
 @no_mobile
+@no_circle
 @as_student
 Feature: Level Group
 

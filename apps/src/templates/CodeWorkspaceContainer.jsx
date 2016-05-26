@@ -5,6 +5,8 @@
  * us to position it vertically. Causes resize events to fire when receiving new props
  */
 
+var React = require('react');
+var ReactDOM = require('react-dom');
 var Radium = require('radium');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var utils = require('../utils');
@@ -68,7 +70,7 @@ var CodeWorkspaceContainer = React.createClass({
    * Called externally
    * @returns {number} The height of the rendered contents in pixels
    */
-  getContentHeight: function () {
+  getRenderedHeight: function () {
     return $(ReactDOM.findDOMNode(this)).height();
   },
 

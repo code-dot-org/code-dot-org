@@ -440,7 +440,7 @@ module LevelsHelper
   end
 
   def multi_t(level, text)
-    string_or_image('multi', text, level)
+    string_or_image(level.type.underscore, text, level)
   end
 
   def match_t(text)

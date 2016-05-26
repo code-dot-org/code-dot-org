@@ -1,3 +1,5 @@
+var React = require('react');
+
 /**
   * Many of our hints include Blockly blocks. Unfortunately, Blockly
   * BlockSpaces have a real problem with being created before they are

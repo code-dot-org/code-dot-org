@@ -1,3 +1,5 @@
+var React = require('react');
+var ReactDOM = require('react-dom');
 var utils = require('./utils');
 var ShareWarningsDialog = require('./templates/ShareWarningsDialog');
 
