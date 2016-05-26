@@ -14,6 +14,7 @@ const TopInstructions = React.createClass({
   propTypes: {
     shortInstructionsWhenCollapsed: React.PropTypes.bool.isRequired
   },
+
   // getRenderedHeight() {
   //   return this.refs.topInstructions.getWrappedInstance().getRenderedHeight();
   // },

@@ -72,26 +72,37 @@ var TopInstructions = React.createClass({
     // onResize: React.PropTypes.func.isRequired
   },
 
-  componentDidMount() {
-    const instructionsContent = this.refs.instructions.refs.instructionsMarkdown;
-    const renderedHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
-      HEADER_HEIGHT;
-    // TODO - more logic here
-    this.props.setInstructionsRenderedHeight(Math.min(renderedHeight, 300));
+  componentWillReceiveProps(nextProps) {
+    if (!this.props.markdown) {
+      return;
+    }
+
+    if (!nextProps.collapsed && nextProps.height < MIN_HEIGHT &&
+        nextProps.height < nextProps.maxHeight) {
+      // Height can get below min height iff we resize the window to be super
+      // small. If we then resize it to be larger again, we want to increase
+      // height.
+      this.props.setInstructionsRenderedHeight(Math.min(nextProps.maxHeight, MIN_HEIGHT));
+    }
   },
 
-  /**
-   * Called externally
-   * @returns {number} The height of the rendered contents in pixels
-   */
-  // getRenderedHeight() {
-  //   var instructionsContent = this.refs.instructions.refs.instructionsMarkdown;
-  //   return $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) + HEADER_HEIGHT;
-  // },
-  //
-  // getCollapsedHeight() {
-  //   return HEADER_HEIGHT;
-  // },
+  componentDidMount() {
+    if (!this.props.markdown) {
+      return;
+    }
+
+    window.addEventListener('resize', this.adjustMaxNeededHeight);
+
+    const maxNeededHeight = this.adjustMaxNeededHeight();
+
+    // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
+    // adjusts max height.
+    this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
+  },
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.adjustMaxNeededHeight);
+  },
 
   /**
    * Given a prospective delta, determines how much we can actually change the
@@ -99,18 +110,34 @@ var TopInstructions = React.createClass({
    * @param {number} delta
    * @returns {number} How much we actually changed
    */
-  onHeightResize: function (delta) {
+  handleHeightResize: function (delta) {
     var minHeight = MIN_HEIGHT;
     var currentHeight = this.props.height;
 
     var newHeight = Math.max(minHeight, currentHeight + delta);
     newHeight = Math.min(newHeight, this.props.maxHeight);
 
-    this.props.setInstructionsHeight(newHeight);
+    this.props.setInstructionsRenderedHeight(newHeight);
     return newHeight - currentHeight;
   },
 
-  handleClickCollapse() {
+  adjustMaxNeededHeight() {
+    if (!this.props.markdown) {
+      return;
+    }
+    const instructionsContent = this.refs.instructions;
+    const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
+      HEADER_HEIGHT + RESIZER_HEIGHT;
+
+    this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
+    return maxNeededHeight;
+  },
+
+  /**
+   * Handle a click of our collapser button by changing our collapse state, and
+   * updating our rendered height.
+   */
+  handleClickCollapser() {
     const collapsed = !this.props.collapsed;
     this.props.toggleInstructionsCollapsed();
 
@@ -136,7 +163,7 @@ var TopInstructions = React.createClass({
       <div style={mainStyle} className="editor-column">
         {!this.props.isEmbedView && <CollapserIcon
             collapsed={this.props.collapsed}
-            onClick={this.handleClickCollapse}/>
+            onClick={this.handleClickCollapser}/>
         }
         <div style={styles.header}>
           {msg.puzzleTitle({
@@ -149,13 +176,13 @@ var TopInstructions = React.createClass({
             <Instructions
               ref="instructions"
               renderedMarkdown={processMarkdown(this.props.markdown)}
-              onResize={this.props.onResize}
+              onResize={this.adjustMaxNeededHeight}
               inTopPane
               />
           </div>
           {!this.props.isEmbedView && <HeightResizer
             position={this.props.height}
-            onResize={this.onHeightResize}/>
+            onResize={this.handleHeightResize}/>
           }
         </div>
       </div>
@@ -169,20 +196,24 @@ module.exports = connect(function propsFromStore(state) {
     stageTotal: state.pageConstants.stageTotal,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,
-    maxHeight: state.instructions.maxHeight,
+    maxHeight: Math.min(state.instructions.maxAvailableHeight,
+      state.instructions.maxNeededHeight),
     markdown: state.instructions.longInstructions,
     collapsed: state.instructions.collapsed
   };
 }, function propsFromDispatch(dispatch) {
   return {
-    toggleInstructionsCollapsed: function () {
+    toggleInstructionsCollapsed() {
       dispatch(instructions.toggleInstructionsCollapsed());
     },
-    setInstructionsHeight: function (height) {
+    setInstructionsHeight(height) {
       dispatch(instructions.setInstructionsHeight(height));
     },
     setInstructionsRenderedHeight(height) {
       dispatch(instructions.setInstructionsRenderedHeight(height));
+    },
+    setInstructionsMaxHeightNeeded(height) {
+      dispatch(instructions.setInstructionsMaxHeightNeeded(height));
     }
   };
 }, null, { withRef: true }
