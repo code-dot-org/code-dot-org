@@ -9,17 +9,17 @@ subject: "CS education for every school in Idaho—with your help"
 
 Congress is about to determine the budget that will guide federal funding for education. This budget has the potential to support computer science in schools across the US and in your state, but we need your help to make it happen.
 
-<strong>[Go here now](http://www.congressweb.com/code/21) to ask your district representative to support funding for computer science education.</strong>
+<strong>[Go here now](http://www.congressweb.com/code/21) to ask your representative to support funding for computer science education.</strong>
 
 Computing jobs are now <strong>the #1 source of all new wages in the US</strong>. There are 1,238 computing jobs open in Idaho right now, and the average salary for these jobs is over $67,000—nearly double the average for all other occupations. 
 
-But most schools don’t offer computer science courses. Other schools that do offer it don’t have the resources they truly need to teach computer science. 
+But most schools don’t offer computer science courses. Other schools that do offer them don’t have the resources they truly need to teach computer science. 
 
 <strong>This funding could help change all of that,</strong> and amplify the local momentum already transforming numerous states.
 
 Every student should have the opportunity to learn how technology works, and every school should have the tools necessary to teach this critical skill.
 
-We ask that you contact your Member of Congress today and help us keep leading this historic movement of bringing computer science to every student!
+We ask that you contact your Member of Congress today and help us keep leading this historic movement to bring computer science to every student!
 
 <br/>
 Hadi Partovi<br />
