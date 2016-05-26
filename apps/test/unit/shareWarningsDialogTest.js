@@ -2,6 +2,7 @@ import {assert} from '../util/configuredChai';
 var testUtils = require('./../util/testUtils');
 testUtils.setupLocales('Applab');
 testUtils.setExternalGlobals();
+var React = require('react');
 var ReactTestUtils = require('react-addons-test-utils');
 var ShareWarningsDialog = require('@cdo/apps/templates/ShareWarningsDialog');
 var ShareWarnings = require('@cdo/apps/templates/ShareWarnings');

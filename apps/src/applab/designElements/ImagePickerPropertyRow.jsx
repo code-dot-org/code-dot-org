@@ -1,5 +1,6 @@
 /* global dashboard */
 
+var React = require('react');
 var rowStyle = require('./rowStyle');
 
 // We'd prefer not to make GET requests every time someone types a character.

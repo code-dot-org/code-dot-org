@@ -27,15 +27,6 @@ class Pd::Enrollment < ActiveRecord::Base
 
   validates :name, :email, :school, :school_type, presence: true
   validates_confirmation_of :email
-  validate :school_district_or_zip
-
-  def school_district_or_zip
-    # We need either a school district & state pair, or a ZIP, but not both.
-    unless (!school_district_id.blank? && !school_state.blank?) ^ !school_zip.blank?
-      # "School district " will appear at the beginning of this error string.
-      errors.add(:school_district, "(and state) or school ZIP is required")
-    end
-  end
 
   before_create :assign_code
   def assign_code

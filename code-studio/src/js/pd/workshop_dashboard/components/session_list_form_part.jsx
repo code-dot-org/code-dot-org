@@ -1,9 +1,7 @@
-/* global React */
-
 /*
   Dynamic list of session inputs for creating and editing workshops.
  */
-
+import React from 'react';
 var moment = require('moment');
 var SessionFormPart = require('./session_form_part');
 var Row = require('react-bootstrap').Row;

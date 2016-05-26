@@ -1,17 +1,18 @@
 'use strict';
 
+import React from 'react';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
-var _ = require('../lodash');
-var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
-var StudioAppWrapper = require('./StudioAppWrapper');
-var CodeWorkspaceContainer = require('./CodeWorkspaceContainer');
+import _ from '../lodash';
+import ProtectedStatefulDiv from './ProtectedStatefulDiv';
+import StudioAppWrapper from './StudioAppWrapper';
+import InstructionsWithWorkspace from './instructions/InstructionsWithWorkspace';
 
 /**
  * Top-level React wrapper for our standard blockly apps.
  */
-var AppView = React.createClass({
+const AppView = React.createClass({
   propTypes: {
     hideSource: React.PropTypes.bool.isRequired,
     isResponsive: React.PropTypes.bool.isRequired,
@@ -38,7 +39,7 @@ var AppView = React.createClass({
           {this.props.visualizationColumn}
         </div>
         <ProtectedStatefulDiv id="visualizationResizeBar" className="fa fa-ellipsis-v" />
-        <CodeWorkspaceContainer topMargin={0}/>
+        <InstructionsWithWorkspace shortInstructionsWhenCollapsed={true}/>
       </StudioAppWrapper>
     );
   }
