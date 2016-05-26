@@ -25,6 +25,8 @@ var clipboardElement = null;
 
 var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
 
+var ANIMATION_LENGTH_MS = applabConstants.ANIMATION_LENGTH_MS;
+
 /**
  * Subscribe to state changes on the store.
  * @param {!Store} store
@@ -797,7 +799,7 @@ function makeDraggable(jqueryElements) {
         if (!isMouseInBounds(ui.position.left, ui.position.top)) {
 
           // It's dropped out of bounds, animate and delete
-          ui.helper.hide( "drop", { direction: "down" }, 200, function () {
+          ui.helper.hide( "drop", { direction: "down" }, ANIMATION_LENGTH_MS, function () {
             deleteElement(elm[0]);
           });
 
@@ -872,8 +874,9 @@ function isMouseInBounds(x, y) {
 
 function setAppSpaceClipping(clip) {
   var container = $('#designModeViz');
+
   if (clip) {
-    container.addClass('clip-content');
+    container.delay(ANIMATION_LENGTH_MS).addClass('clip-content', ANIMATION_LENGTH_MS);
   } else {
     container.removeClass('clip-content');
   }
@@ -946,6 +949,16 @@ designMode.configureDragAndDrop = function () {
   // element tray to the play space.
   $('#visualization').droppable({
     accept: '.new-design-element',
+    activate: function (event, ui) {
+      // Turn off clipping in app space so we can drag the element
+      // into and out of it
+      setAppSpaceClipping(false);
+    },
+    deactivate: function (event, ui) {
+      // Turn clipping back on so it's not possible for elements
+      // to bleed out of app space
+      setAppSpaceClipping(true);
+    },
     drop: function (event, ui) {
       var elementType = ui.draggable[0].getAttribute('data-element-type');
 
@@ -1007,7 +1020,7 @@ function moveElementIntoBounds(element) {
   elm.animate({
     left: newContainedPos.left,
     top: newContainedPos.top,
-  }, 200);
+  }, ANIMATION_LENGTH_MS);
 
   // Update position on original element to update values in Property tab
   $(element).css({
