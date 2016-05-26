@@ -32,7 +32,7 @@ var experiments = require('./experiments');
 import { setPageConstants } from './redux/pageConstants';
 
 var redux = require('./redux');
-var runState = require('./redux/runState');
+import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
 var combineReducers = require('redux').combineReducers;
 
@@ -912,7 +912,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
     throw "Unexpected input";
   }
 
-  this.reduxStore.dispatch(runState.setIsRunning(!showRun));
+  this.reduxStore.dispatch(setIsRunning(!showRun));
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
@@ -1268,11 +1268,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
   }
 
   this.instructionsDialog.show({hideOptions: hideOptions});
-
-  if (isMarkdownMode) {
-    // process <details> tags with polyfill jQuery plugin
-    $('details').details();
-  }
 
   // Fire a custom event on the document so that other code can respond
   // to instructions being shown.
@@ -2734,8 +2729,10 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
     pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
-    instructionsMarkdown: level.markdownInstructions,
-    instructionsInTopPane: config.showInstructionsInTopPane,
+    shortInstructions: level.instructions,
+    // TODO - better handle the case where we have only short
+    instructionsMarkdown: level.markdownInstructions || level.instructions,
+    instructionsInTopPane: !!config.showInstructionsInTopPane,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
     noVisualization: false

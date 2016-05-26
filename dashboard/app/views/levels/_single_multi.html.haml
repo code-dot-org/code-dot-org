@@ -100,6 +100,6 @@
       "level_#{level.id}",
       #{standalone},
       "#{data['type']}" == "multi2" ? 2 : 1,
-      #{data['answers'].map {|answer| answer['correct']}},
+      #{data['type'] == 'EvaluationMulti' ? [] : data['answers'].map {|answer| answer['correct'] || false}},
       #{last_attempt.to_json}
     );

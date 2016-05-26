@@ -27,17 +27,18 @@ Milestone Complete!
 
 Milestone Complete!
 
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
+### Repeated Phase 2: Summer Study (5 days in-person - Summer 2016) ###
 
-Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
-will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
+This summer, in lieu of providing a separate Phase 4 training for your Code.org ECS cohort, we'd like to extend an invitation to revisit ECS PD content and re-attend the Phase 2: Summer Study
+
+The goal of this is to experience the workshop with a new perspective and prepare for the school year ahead. Attending this 5-day workshop for a second time will allow you to make more connections, see how the curriculum spirals, reflect on your first year teaching the curriculum, and prepare to improve and adapt for the next year. You will receive a stipend for this workshop.
+
+Rice University School Mathematics Project will be running logistics for your summer workshop as an official Code.org Professional Learning Partner in Houston, TX. If you have any questions about your workshop, reach out to your local contact at Rice University: rusmpcoding@rice.edu
 
 
 **Save the Dates**
 
-TBD
-
-*More information coming soon*
+Monday, July 11th - Friday, July 15th
 
 **Location**
 
