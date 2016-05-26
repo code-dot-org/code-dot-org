@@ -142,11 +142,12 @@ class ApiControllerTest < ActionController::TestCase
     sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
     sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
     sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
+    create :multi, name: 'level_multi_unattempted', type: 'Multi'
 
     # create 2 level_group levels
     level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
     level1.properties['title'] =  'Long assessment 1'
-    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
+    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}, {levels: ['level_multi_unattempted']}]
     level1.save!
     create :script_level, script: script, levels: [level1], assessment: true
 
@@ -175,14 +176,15 @@ class ApiControllerTest < ActionController::TestCase
         "question"=>"Long assessment 1",
         "url"=>"http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
         "multi_correct"=>1,
-        "multi_count"=>3,
+        "multi_count"=>4,
         "submitted"=>true,
         "timestamp"=>updated_at.utc.to_s,
         "level_results"=>[
           {"student_result"=>"This is a free response", "correct"=>"free_response"},
           {"student_result"=>"A", "correct"=>"correct"},
           {"student_result"=>"B", "correct"=>"incorrect"},
-          {"student_result"=>"", "correct"=>"unsubmitted"}]
+          {"student_result"=>"", "correct"=>"unsubmitted"},
+          {"correct"=>"unsubmitted"}]
         }
       ]
     assert_equal expected_response, JSON.parse(@response.body)
@@ -315,6 +317,21 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal true, body['disablePostMilestone']
+  end
+
+  test "should get user progress for stage with swapped level" do
+    sign_in @student_1
+    script = create :script
+    stage = create :stage, script: script
+    level1a = create :maze, name: 'maze 1'
+    level1b = create :maze, name: 'maze 1 new'
+    create :script_level, script: script, stage: stage, levels: [level1a, level1b], properties: "{'maze 1': {active: false}}"
+    create(:activity, user: @student_1, level: level1a,
+           level_source: create(:level_source, level: level1a, data: 'level source'))
+
+    get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1, level: level1a.id
+    body = JSON.parse(response.body)
+    assert_equal('level source', body['lastAttempt']['source'])
   end
 
   test "should get progress for section with section script" do

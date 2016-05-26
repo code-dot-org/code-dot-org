@@ -25,35 +25,41 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
 
   UNIT_STATUS_STATES = [
     START_BLOCKED = 'start_blocked',
-    PENDING_EVALUATION = 'pending_evaluation',
     IN_PROGRESS = 'in_progress',
     COMPLETED = 'completed'
   ]
 
+  after_create :enroll_user_in_required_modules
+
   validates :status, inclusion: {in: UNIT_STATUS_STATES}
+
+  def module_assignment_for_type(module_type)
+    plc_module_assignments.joins(:plc_learning_module).find_by('plc_learning_modules.module_type': module_type)
+  end
+
+  def enroll_user_in_required_modules
+    transaction do
+      plc_course_unit.plc_learning_modules.required.each do |required_module|
+        enroll_in_module required_module
+      end
+    end
+  end
+
+  def unlock_unit
+    update(status: IN_PROGRESS)
+  end
 
   def enroll_user_in_unit_with_learning_modules(learning_modules)
     transaction do
-      plc_module_assignments.destroy_all
-
-      # Make sure the required learning modules are included here
-      learning_modules |=  self.plc_course_unit.plc_learning_modules.required
+      Plc::LearningModule::NONREQUIRED_MODULE_TYPES.each do |module_type|
+        module_assignment_for_type(module_type).try(:destroy)
+      end
 
       learning_modules.each do |learning_module|
-        # Ensure that the learning module is associated with this course unit
-        next unless learning_module.plc_course_unit == self.plc_course_unit
-
-        module_assignment = Plc::EnrollmentModuleAssignment.find_or_create_by(plc_enrollment_unit_assignment: self, plc_learning_module: learning_module)
-        learning_module.plc_tasks.each do |task|
-          Plc::EnrollmentTaskAssignment.find_or_create_by(
-            plc_enrollment_module_assignment: module_assignment,
-            plc_task: task,
-            status: Plc::EnrollmentTaskAssignment::NOT_STARTED
-          )
-
-        end
+        enroll_in_module learning_module
       end
-      self.update(status: IN_PROGRESS)
+
+      update!(status: IN_PROGRESS)
     end
   end
 
@@ -62,6 +68,20 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
         where.not('plc_tasks.type': Plc::LearningResourceTask.name).
         exists?(['status != ?', 'completed'])
       update!(status: COMPLETED)
+    end
+  end
+
+  private
+  def enroll_in_module(learning_module)
+    return unless learning_module.plc_course_unit == plc_course_unit
+
+    module_assignment = Plc::EnrollmentModuleAssignment.find_or_create_by(plc_enrollment_unit_assignment: self, plc_learning_module: learning_module)
+    learning_module.plc_tasks.each do |task|
+      Plc::EnrollmentTaskAssignment.find_or_create_by(
+          plc_enrollment_module_assignment: module_assignment,
+          plc_task: task,
+          status: Plc::EnrollmentTaskAssignment::NOT_STARTED
+      )
     end
   end
 end

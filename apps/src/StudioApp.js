@@ -28,8 +28,14 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
+var experiments = require('./experiments');
+import { setPageConstants } from './redux/pageConstants';
+
 var redux = require('./redux');
-var runState = require('./redux/runState');
+import { setIsRunning } from './redux/runState';
+var commonReducers = require('./redux/commonReducers');
+var combineReducers = require('redux').combineReducers;
+
 var copyrightStrings;
 
 /**
@@ -196,10 +202,10 @@ var StudioApp = function () {
   this.wireframeShare = false;
 
   /**
-   * Redux store that might be provided by the app. Initially give it an empty
-   * interface so that we can assume existence.
+   * Redux store that will be created during configureRedux, based on a common
+   * set of reducers and a set of reducers (potentially) supplied by the app
    */
-  this.reduxStore_ = null;
+  this.reduxStore = null;
 
   this.onAttempt = undefined;
   this.onContinue = undefined;
@@ -246,6 +252,34 @@ StudioApp.prototype.configure = function (options) {
 };
 
 /**
+ * Creates a redux store for this app, while caching the set of app specific
+ * reducers, so that we can recreate the store from scratch at any point if need
+ * be
+ * @param {object} reducers - App specific reducers, or null if the app is not
+ *   providing any.
+ */
+StudioApp.prototype.configureRedux = function (reducers) {
+  this.reducers_ = reducers;
+  this.createReduxStore_();
+};
+
+/**
+ * Creates our redux store by combining the set of app specific reducers that
+ * we stored along with a set of common reducers used by every app. Creation
+ * should happen once on app load (tests will also recreate our store between
+ * runs).
+ */
+StudioApp.prototype.createReduxStore_ = function () {
+  var combined = combineReducers(_.assign({}, commonReducers, this.reducers_));
+  this.reduxStore = redux.createStore(combined);
+
+  if (experiments.isEnabled('reduxGlobalStore')) {
+    // Expose our store globally, to make debugging easier
+    window.reduxStore = this.reduxStore;
+  }
+};
+
+/**
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
@@ -261,6 +295,20 @@ StudioApp.prototype.localeIsEnglish = function () {
 };
 
 /**
+ * Given the studio app config object, show shared app warnings.
+ */
+function showWarnings(config) {
+  shareWarnings.checkSharedAppWarnings({
+    channelId: config.channel,
+    isSignedIn: config.isSignedIn,
+    is13Plus: config.is13Plus,
+    hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
+    onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
+    onTooYoung: config.shareWarningInfo.onTooYoung,
+  });
+}
+
+/**
  * Common startup tasks for all apps. Happens after configure.
  * @param {AppOptionsConfig}
  */
@@ -268,8 +316,6 @@ StudioApp.prototype.init = function (config) {
   if (!config) {
     config = {};
   }
-
-  this.reduxStore_ = config.reduxStore || redux.createFakeStore();
 
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
@@ -310,7 +356,7 @@ StudioApp.prototype.init = function (config) {
       twitter: config.twitter,
       app: config.app,
       noHowItWorks: config.noHowItWorks,
-      isLegacyShare: config.isLegacyShare
+      isLegacyShare: config.isLegacyShare,
     });
   }
 
@@ -442,18 +488,22 @@ StudioApp.prototype.init = function (config) {
   } else {
     // handleUsingBlockly_ already does an onResize. We still want that goodness
     // if we're not blockly
-    this.onResize();
+    utils.fireResizeEvent();
   }
 
   this.alertIfAbusiveProject('#codeWorkspace');
 
+  // make sure startIFrameEmbeddedApp has access to the config object
+  // so it can decide whether or not to show a warning.
+  this.startIFrameEmbeddedApp = this.startIFrameEmbeddedApp.bind(this, config);
+
   if (this.share && config.shareWarningInfo) {
-    shareWarnings.checkSharedAppWarnings({
-      channelId: config.channel,
-      isSignedIn: config.isSignedIn,
-      hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
-      onWarningsComplete: config.shareWarningInfo.onWarningsComplete
-    });
+    if (!config.level.iframeEmbed) {
+      // shared apps that are embedded in an iframe handle warnings in
+      // startIFrameEmbeddedApp since they don't become "active" until the user
+      // clicks on them.
+      showWarnings(config);
+    }
   }
 
   if (!!config.level.projectTemplateLevelName) {
@@ -545,6 +595,15 @@ StudioApp.prototype.init = function (config) {
 
   if (config.isLegacyShare && config.hideSource) {
     this.setupLegacyShareView();
+  }
+};
+
+StudioApp.prototype.startIFrameEmbeddedApp = function (config, onTooYoung) {
+  if (this.share && config.shareWarningInfo) {
+    config.shareWarningInfo.onTooYoung = onTooYoung;
+    showWarnings(config);
+  } else {
+    this.runButtonClick();
   }
 };
 
@@ -853,7 +912,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
     throw "Unexpected input";
   }
 
-  this.reduxStore_.dispatch(runState.setIsRunning(!showRun));
+  this.reduxStore.dispatch(setIsRunning(!showRun));
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
@@ -867,7 +926,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
 };
 
 StudioApp.prototype.isRunning = function () {
-  return this.reduxStore_.getState().isRunning;
+  return this.reduxStore.getState().runState.isRunning;
 };
 
 /**
@@ -1210,11 +1269,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
 
   this.instructionsDialog.show({hideOptions: hideOptions});
 
-  if (isMarkdownMode) {
-    // process <details> tags with polyfill jQuery plugin
-    $('details').details();
-  }
-
   // Fire a custom event on the document so that other code can respond
   // to instructions being shown.
   var event = document.createEvent('Event');
@@ -1260,7 +1314,6 @@ function resizePinnedBelowVisualizationArea() {
   var playSpaceHeader = document.getElementById('playSpaceHeader');
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
-  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var top = 0;
   if (playSpaceHeader) {
@@ -1268,7 +1321,15 @@ function resizePinnedBelowVisualizationArea() {
   }
 
   if (visualization) {
-    top += $(visualization).outerHeight(true);
+    var parent = $(visualization).parent();
+    if (parent.attr('id') === 'phoneFrame') {
+      // Phone frame itself doesnt have height. Loop through children
+      parent.children().each(function () {
+        top += $(this).outerHeight(true);
+      });
+    } else {
+      top += $(visualization).outerHeight(true);
+    }
   }
 
   if (gameButtons) {
@@ -1276,6 +1337,7 @@ function resizePinnedBelowVisualizationArea() {
   }
 
   var bottom = 0;
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
   if (smallFooter) {
     var codeApp = $('#codeApp');
     bottom += $(smallFooter).outerHeight(true);
@@ -1361,7 +1423,6 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var visualization = document.getElementById('visualization');
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
   var visualizationColumn = document.getElementById('visualizationColumn');
-  var visualizationEditor = document.getElementById('visualizationEditor');
 
   var oldVizWidth = $(visualizationColumn).width();
   var newVizWidth = Math.max(this.minVisualizationWidth,
@@ -1392,9 +1453,6 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var scale = (newVizWidth / this.nativeVizWidth);
 
   applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
-  if (visualizationEditor) {
-    visualizationEditor.style.marginLeft = newVizWidthString;
-  }
 
   if (oldVizWidth < 230 && newVizWidth >= 230) {
     $('#soft-buttons').removeClass('soft-buttons-compact');
@@ -1716,6 +1774,11 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
 
+  if (config.level.initializationBlocks) {
+    var xml = parseXmlElement(config.level.initializationBlocks);
+    this.initializationCode = Blockly.Generator.xmlToCode('JavaScript', xml);
+  }
+
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
   this.enableShowLinesCount = (config.enableShowLinesCount !== false);
@@ -1741,13 +1804,13 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 };
 
 // Overwritten by applab.
-StudioApp.prototype.runButtonClickWrapper = function (callback) {
+function runButtonClickWrapper(callback) {
   if (window.$) {
     $(window).trigger('run_button_pressed');
     $(window).trigger('appModeChanged');
   }
   callback();
-};
+}
 
 /**
  * Begin modifying the DOM based on config.
@@ -1764,7 +1827,8 @@ StudioApp.prototype.configureDom = function (config) {
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var runClick = this.runButtonClick.bind(this);
-  var throttledRunClick = _.debounce(this.runButtonClickWrapper.bind(this, runClick), 250, true);
+  var clickWrapper = (config.runButtonClickWrapper || runButtonClickWrapper);
+  var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, true);
   dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
   dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
 
@@ -1776,9 +1840,8 @@ StudioApp.prototype.configureDom = function (config) {
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
-  var visualization = document.getElementById('visualization');
 
-  if (!config.hideSource || config.embed) {
+  if (!config.hideSource || config.embed || config.level.iframeEmbed) {
     var vizHeight = this.MIN_WORKSPACE_HEIGHT;
     if (this.isUsingBlockly() && config.level.edit_blocks) {
       // Set a class on the main blockly div so CSS can style blocks differently
@@ -1786,7 +1849,7 @@ StudioApp.prototype.configureDom = function (config) {
       // If in level builder editing blocks, make workspace extra tall
       vizHeight = 3000;
       // Modify the arrangement of toolbox blocks so categories align left
-      if (config.level.edit_blocks == "toolbox_blocks") {
+      if (config.level.edit_blocks === "toolbox_blocks") {
         this.blockYCoordinateInterval = 80;
         config.blockArrangement = { category : { x: 20 } };
       }
@@ -1795,17 +1858,15 @@ StudioApp.prototype.configureDom = function (config) {
       config.level.disableVariableEditing = false;
     }
 
+    if (config.level.iframeEmbed) {
+      document.body.className += ' embedded_iframe';
+    }
+
     if (config.pinWorkspaceToBottom) {
       var bodyElement = document.body;
       bodyElement.style.overflow = "hidden";
       bodyElement.className = bodyElement.className + " pin_bottom";
       container.className = container.className + " pin_bottom";
-      visualizationColumn.className = visualizationColumn.className + " pin_bottom";
-      codeWorkspace.className = codeWorkspace.className + " pin_bottom";
-      if (this.editCode) {
-        var codeTextbox = document.getElementById('codeTextbox');
-        codeTextbox.className = codeTextbox.className + " pin_bottom";
-      }
     } else {
       visualizationColumn.style.minHeight = vizHeight + 'px';
       container.style.minHeight = vizHeight + 'px';
@@ -1824,16 +1885,13 @@ StudioApp.prototype.configureDom = function (config) {
   }
 
   var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
-  if (config.noPadding && smallFooter) {
-    // The small footer's padding should not increase its size when not part
-    // of a larger page.
-    smallFooter.style.boxSizing = "border-box";
-  }
-  if (!config.embed && !config.hideSource) {
-    // Make the visualization responsive to screen size, except on share page.
-    visualization.className += " responsive";
-    visualizationColumn.className += " responsive";
-    if (smallFooter) {
+  if (smallFooter) {
+    if (config.noPadding) {
+      // The small footer's padding should not increase its size when not part
+      // of a larger page.
+      smallFooter.style.boxSizing = "border-box";
+    }
+    if (!config.embed && !config.hideSource) {
       smallFooter.className += " responsive";
     }
   }
@@ -1856,6 +1914,11 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   if (this.share) {
     if (options.isLegacyShare || this.wireframeShare) {
       document.body.style.backgroundColor = '#202B34';
+      if (options.level.iframeEmbed) {
+        // so help me god.
+        document.body.style.backgroundColor = "transparent";
+      }
+
 
       $('.header-wrapper').hide();
       var vizColumn = document.getElementById('visualizationColumn');
@@ -1866,10 +1929,12 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
         var div = document.createElement('div');
         document.body.appendChild(div);
-        ReactDOM.render(React.createElement(WireframeSendToPhone, {
-          channelId: dashboard.project.getCurrentId(),
-          appType: dashboard.project.getStandaloneApp()
-        }), div);
+        if (!options.level.iframeEmbed) {
+          ReactDOM.render(React.createElement(WireframeSendToPhone, {
+            channelId: dashboard.project.getCurrentId(),
+            appType: dashboard.project.getStandaloneApp()
+          }), div);
+        }
       }
 
       if (!options.embed && !options.noHowItWorks) {
@@ -2644,4 +2709,34 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
   } else {
     return code;
   }
+};
+
+/**
+ * Sets a bunch of common page constants used by all of our apps in our redux
+ * store based on our app options config.
+ * @param {AppOptionsConfig}
+ * @param {object} appSpecificConstants - Optional additional constants that
+ *   are app specific.
+ */
+StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
+  const level = config.level;
+  const combined = _.assign({
+    localeDirection: this.localeDirection(),
+    assetUrl: this.assetUrl,
+    isReadOnlyWorkspace: !!config.readonlyWorkspace,
+    isDroplet: !!level.editCode,
+    hideSource: !!config.hideSource,
+    isEmbedView: !!config.embed,
+    isShareView: !!config.share,
+    pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
+    shortInstructions: level.instructions,
+    // TODO - better handle the case where we have only short
+    instructionsMarkdown: level.markdownInstructions || level.instructions,
+    instructionsInTopPane: !!config.showInstructionsInTopPane,
+    puzzleNumber: level.puzzle_number,
+    stageTotal: level.stage_total,
+    noVisualization: false
+  }, appSpecificConstants);
+
+  this.reduxStore.dispatch(setPageConstants(combined));
 };

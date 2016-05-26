@@ -6,7 +6,7 @@
 'use strict';
 /* global google, Promise */
 
-require("babelify/polyfill"); // required for Promises in IE / Phantom
+require("babel-polyfill"); // required for Promises in IE / Phantom
 require('../utils'); // Provides Function.prototype.inherits
 
 /**

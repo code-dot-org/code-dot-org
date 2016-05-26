@@ -1,0 +1,8 @@
+name 'CSPFinal_Question_26'
+wrong 'Access to digital content via peer to peer networks.'
+wrong 'Commercial and governmental censorship.'
+wrong 'Authenticating credit card numbers across the web.'
+right 'Anonymous access to digital content.'
+markdown <<MARKDOWN
+Computing has global effects that are both beneficial and harmful effects on people and society.  Which of the following is LEAST likely to raise legal and ethical concerns?
+MARKDOWN

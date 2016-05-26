@@ -7,11 +7,39 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
+      "draw": null,
       "drawSprites": null,
-      "var sprite = createSprite": null,
+      "frameRate": null,
+      "var sprite = createSprite": {
+        "params": [
+          "200",
+          "200"
+        ],
+        "paletteParams": [
+          "x",
+          "y"
+        ]
+      },
       "randomNumber_min_max": null,
       "shapeColor": null,
-      "color": null
+      "background": null,
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "strokeWeight": null,
+      "noStroke": null,
+      "color": null,
+      "arc": null,
+      "ellipse": null,
+      "line": null,
+      "point": null,
+      "rect": null,
+      "regularPolygon": null,
+      "shape": null,
+      "text": null,
+      "textAlign": null,
+      "textFont": null,
+      "textSize": null
     },
     "edit_code": true,
     "embed": "false",
@@ -37,10 +65,9 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "instructions": "Do This",
-    "markdown_instructions": "# Debug\r\n\r\nThis program isn't working. Can you figure out why the sprites aren't drawing?\r\n\r\n# Do This\r\n\r\n* Run the program to see what is happening\r\n* Debug the program",
+    "markdown_instructions": "# Random Shape Color\r\n\r\n** Video on Properties**\r\n\r\nThe built in variables for sprites are called properties. Properties can be updated with in the draw loop to create animations just like variables.\r\n\r\nOne thing you need to be careful of as you write programs with sprites is that you keep `drawSprites` as the last line inside the draw loop. You don't want to draw the sprties until after all the updates in the loop have happened.\r\n\r\n# Do This\r\nCreate a sprite that is set to a new random color every loop of the draw loop.\r\n\r\n* Create a new sprite and make sure it draws on the game area\r\n* Set the `shapeColor` of the sprite to a random color inside the draw loop\r\n* Run the program and test that it works",
     "show_d_pad": "false",
-    "start_blocks": "var blob = createSprite( 30, 30, 40, 50);\r\n\r\nvar thing = createSprite(100, 300, 20, 100);\r\nthing.shapeColor =  color(randomNumber(100,200),randomNumber(100,200),10);\r\n\r\nfunction draw(){\r\n  blob.shapeColor = color(255,randomNumber(100,200),10);\r\n}"
+    "start_blocks": "function draw(){\r\n \r\n}"
   },
   "published": true,
   "notes": "",

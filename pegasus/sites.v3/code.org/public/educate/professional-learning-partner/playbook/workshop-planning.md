@@ -2,7 +2,7 @@
 title: Workshop Planning
 nav: plp_playbook_nav
 ---
----
+
 <a id="top"></a>
 
 # Workshop Planning
@@ -21,6 +21,14 @@ Click on the program name below to find out more about the workshop requirements
 - **[CS in Science](#science)**<Br/>
 - **[Exploring CS](#ecs)**<br/>
 - **[CS Principles](#csp)**<br/>
+
+
+
+<br/><br/>
+
+
+#### [Click here](https://docs.google.com/presentation/d/1zFiNhlHqk6Gldzpbyc_MbgA0ovTswa4cns0AfT8jdAc/edit#slide=id.gdebb9aea3_0_101) to review the slides from the 'Planning Code.org Summer Workshops' webinar. 
+
 
 
 ________________
@@ -60,9 +68,8 @@ These guidelines explain the type of space your facilitators need to run a succe
 
 	
 	
-**Supplies**<br/>
- 
-- How to Order Supplies - More details coming soon!
+**Ordering Supplies**<br/>
+[Click here](/educate/professional-learning-partner/playbook/ordering-supplies) to access the Marketplace and your supply ordering resources.
 
 **Catering** <br/>
 For multi-day events like summer workshops, provide a heartier breakfast to get teachers through the day, ideally breakfast sandwiches or a hot buffet, with juice and coffee service. In addition, the lunch option should vary from day to day.<br/>
@@ -100,9 +107,10 @@ These guidelines explain the type of space your facilitators need to run a succe
 
 	
 	
-**Supplies**<br/>
+[**Ordering Supplies**](/educate/professional-learning-partner/playbook/ordering-supplies)<br/>
+Click here to access the Marketplace and your supply ordering resources.
  
-- How to Order Supplies - More details coming soon!
+	
 
 **Catering** <br/>
 For multi-day events like summer workshops, provide a heartier breakfast to get teachers through the day, ideally breakfast sandwiches or a hot buffet, with juice and coffee service. In addition, the lunch option should vary from day to day.<br/>
@@ -125,7 +133,7 @@ These guidelines explain the type of space your facilitators need to run a succe
 | |Requirements and Suggestions| 
 |:-----|:-----------|
 |**Location**|**Ask yourself these questions when searching for the the ideal location for your workshop.**<br/> - Central location: Is the location central to the spread of teachers attending? <br/>- Catering: Are there several options to order from within 20 miles? Is there an internal or preferred caterer for the venue?<br/> - Parking: Does parking cost anything? Will teachers need parking passes? Is the lot close to an entrance? *Tip: teachers are more likely to show up to the workshop when parking is free.* <br/> - Access: Will there be someone from the venue there to open the building, help with getting supplies to your room(s), and be available to help with technology as needed during the workshop?| 
-|**Rooms and <br/>Set Up**|Reservation time: <br/>8:00am to 4:00pm.<Br/> Facilitators will arrive at 8:00am to set up, teachers will arrive at 8:30am for breakfast. Teachers will leave at 3:30pm, and facilitators will leave after cleaning up at 4:00pm.<br/><br/>Rooms Needed:<br/>- One room for entire group<br/>- Breakout room to set up catering and for eating. Hallway space also works. We want to avoid interrupting the session by setting up food in the room.<br/>- Wall space for hanging poster sized paper with Blue painter's tape<br/><br/>Seating<br/>- Pods of 4 people for the size of the group. We recommend 8 pods.|  
+|**Rooms and <br/>Set Up**|Reservation time: <br/>8:00am to 4:00pm.<Br/> <br/> General itinerary:<br/> 8:00 am - 8:30 am - facilitators arrive and set up room<br/>8:30 am - 9:00 am - teachers arrive, register & eat breakfast</br> 9:00 am - 12:00 pm - workshop time<br/> 12:00 pm - 1:00 pm - break for lunch<br/>1:00 pm - 3:30 pm - workshop time<br/>3:30 pm - 4:00 pm - facilitators clean up for the night <br/><br/>Rooms Needed:<br/>- One room for entire group<br/>- Breakout room to set up catering and for eating. Hallway space also works. We want to avoid interrupting the session by setting up food in the room.<br/>- Wall space for hanging poster sized paper with Blue painter's tape<br/><br/>Seating<br/>- Pods of 4 people for the size of the group. We recommend 8 pods.|  
 |**Technology <br/>Requirements**| - Projector and screen<br/> - Power outlets and extension cords<br/> - Wifi that can support access by all participants<br/> |
 |**Logistical and Facilitator One Pager Information**|- Physical Address of Workshop<br/>- Address to ship supplies (If needed)<br/> - Map of the Campus and/or building to help teachers find the room. Driving instructions should be provded to teachers. This can be done via Google Maps or Bing Maps.<br/> - Wifi strength, name and password. All participants will need to be on the network at the same time with no lag.<br/> - Arrangments for Access: You should make arrangements with your venue contact to give you access to the building and help you locate supplies.| 
 
@@ -139,9 +147,8 @@ These guidelines explain the type of space your facilitators need to run a succe
 	- [Session D](/files/ecs-p3d-agenda.pdf)<br/>
 - [Phase 4: Summer Wrap-Up](/files/ecs-p4-agenda.pdf)
  
-**Supplies**<br/>
-
-- How to Order Supplies - More details coming soon!
+**Ordering Supplies**<br/>
+[Click here](/educate/professional-learning-partner/playbook/ordering-supplies) to access the Marketplace and your supply ordering resources.
 
 
 **Catering** <br/>
@@ -165,7 +172,7 @@ These guidelines explain the type of space your facilitators need to run a succe
 | |Requirements and Suggestions| 
 |:-----|:-----------|
 |**Location**|**Ask yourself these questions when searching for the the ideal location for your workshop.**<br/> - Central location: Is the location central to the spread of teachers attending? <br/>- Catering: Are there several options to order from within 20 miles? Is there an internal or preferred caterer for the venue?<br/> - Parking: Does parking cost anything? Will teachers need parking passes? Is the lot close to an entrance? *Tip: teachers are more likely to show up to the workshop when parking is free.* <br/> - Access: Will there be someone from the venue there to open the building, help with getting supplies to your room(s), and be available to help with technology as needed during the workshop?| 
-|**Rooms and <br/>Set Up**|Reservation time: <br/>8:00am to 4:00pm.<Br/> Facilitators will arrive at 8:00am to set up, teachers will arrive at 8:30am for breakfast. Teachers will leave at 3:30pm, and facilitators will leave after cleaning up at 4:00pm.<br/><br/>Rooms Needed:<br/>- One room for entire group<br/>- Breakout room to set up catering and for eating. Hallway space also works. We want to avoid interrupting the session by setting up food in the room.<br/>- Wall space for hanging poster sized paper with Blue painter's tape<br/><br/>Seating<br/>- Pods of 4 people for the size of the group. We recommend 8 pods.|  
+|**Rooms and <br/>Set Up**|Reservation time: <br/>8:00am to 4:00pm.<Br/> General itinerary:<br/> 8:00 am - 8:30 am - facilitators arrive and set up room<br/>8:30 am - 9:00 am - teachers arrive, register & eat breakfast</br> 9:00 am - 12:00 pm - workshop time<br/> 12:00 pm - 1:00 pm - break for lunch<br/>1:00 pm - 3:30 pm - workshop time<br/>3:30 pm - 4:00 pm - facilitators clean up for the night <br/><br/>Rooms Needed:<br/>- One room for entire group<br/>- Breakout room to set up catering and for eating. Hallway space also works. We want to avoid interrupting the session by setting up food in the room.<br/>- Wall space for hanging poster sized paper with Blue painter's tape<br/><br/>Seating<br/>- Pods of 4 people for the size of the group. We recommend 8 pods.|  
 |**Technology <br/>Requirements**| - Projector and screen<br/> - Power outlets and extension cords<br/> - Wifi that can support access by all participants<br/> |
 |**Logistical and Facilitator One Pager Information**|- Physical Address of Workshop<br/>- Address to ship supplies (If needed)<br/> - Map of the Campus and/or building to help teachers find the room. Driving instructions should be provded to teachers. This can be done via Google Maps or Bing Maps.<br/> - Wifi strength, name and password. All participants will need to be on the network at the same time with no lag.<br/> - Arrangments for Access: You should make arrangements with your venue contact to give you access to the building and help you locate supplies.| 
 
@@ -179,9 +186,8 @@ These guidelines explain the type of space your facilitators need to run a succe
 	- Session C<br/>
 	- Session D<br/>
 
-**Supplies**<br/>
-
-- How to Order Supplies - Coming soon!
+**Ordering Supplies**<br/>
+[Click here](/educate/professional-learning-partner/playbook/ordering-supplies) to access the Marketplace and your supply ordering resources.
 
 
 **Catering** <br/>

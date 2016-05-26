@@ -8,6 +8,7 @@ if state.present?
   cta = "In #{state}, TEALS is looking for #{num_volunteers} more volunteers."
 else
   cta = "I hope you’ll consider joining the 1,500 CS professionals who have made an impact in local schools by volunteering."
+end
 %>
 
 Hello <%= name_s %>,
@@ -27,7 +28,7 @@ To date, TEALS has taught over 17,000 students – over 6,000 of which are AP CS
 The TEALS time commitment is several hours a week, and offers a unique opportunity to give back and make a difference in the lives of hundreds of students by working with teachers, all while keeping your day job. <%= cta %> Please visit [http://c.tealsk12.org/l/667](http://c.tealsk12.org/l/667) to learn more and apply to volunteer!
  
 Hadi Partovi
-CEO, Code.org
+<br />CEO, Code.org
 
 <br />
 <br />

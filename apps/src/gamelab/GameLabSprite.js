@@ -58,10 +58,6 @@ module.exports.createSprite = function (x, y, width, height) {
     return s.animation ? s.animation.frameChanged : false;
   };
 
-  s.setColor = function (colorString) {
-    s.shapeColor = colorString;
-  };
-
   s.destroy = function () {
     s.remove();
   };
@@ -214,7 +210,7 @@ var AABBops = function (p5Inst, type, target, callback) {
 
     }
     else
-      throw('Error: overlap can only be checked between sprites or groups');
+      throw new Error('Error: overlap can only be checked between sprites or groups');
 
   } else {
     state.__i++;
@@ -239,7 +235,7 @@ var AABBops = function (p5Inst, type, target, callback) {
         print("busted");
         return false;
       }*/
-      if(this.collider != undefined && other.collider != undefined)
+      if(typeof this.collider !== undefined && typeof other.collider !== undefined)
       {
       if(type === 'overlap')  {
           var over;
@@ -255,11 +251,11 @@ var AABBops = function (p5Inst, type, target, callback) {
 
             result = true;
 
-            if(callback !== undefined && typeof callback == 'function')
+            if(typeof callback === 'function')
               callback.call(this, this, other);
           }
         }
-      else if(type === 'collide' || type === 'bounce' || type == 'bounceOff')
+      else if(type === 'collide' || type === 'bounce' || type === 'bounceOff')
         {
           displacement = createVector(0, 0);
 
@@ -422,7 +418,7 @@ var AABBops = function (p5Inst, type, target, callback) {
                 }
               }
             }
-            //else if(type == "collide")
+            //else if(type === "collide")
               //this.velocity = createVector(0,0);
 
             if(callback !== undefined && typeof callback === 'function')
@@ -457,7 +453,7 @@ var AABBops = function (p5Inst, type, target, callback) {
             if(displacement.y > 0)
               this.touching.top = true;
 
-            if(callback != undefined && typeof callback == "function")
+            if(callback !== undefined && typeof callback === "function")
               callback.call(this, this, other);
 
             result = true;
@@ -524,7 +520,7 @@ var isTouching = function (p5Inst, target) {
 
   }
   else
-    throw('Error: isTouching can only be checked between sprites or groups');
+    throw new Error('Error: isTouching can only be checked between sprites or groups');
 
     for(var i=0; i<others.length; i++)
       if(this !== others[i] && !this.removed) //you can check collisions within the same group but not on itself
@@ -631,10 +627,9 @@ var isTouching = function (p5Inst, target) {
               this.touching.top = true;
           }
         }//end collider exists
-      }//end this != others[i] && !this.removed
+      }//end this !== others[i] && !this.removed
 
   return result;
 };
 
 /* eslint-enable */
-

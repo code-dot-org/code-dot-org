@@ -29,6 +29,19 @@ var arrayMethodPrefix = '[list].';
 
 var stringBlockPrefix = 'str.';
 
+const playSongConfig = {
+  song: [
+    ["A", 500], [null, 50], ["A", 500], [null, 50], ["A", 500], [null, 50],
+    ["F", 350], [null, 50], ["C5", 150], [null, 50], ["A", 500], [null, 50],
+    ["F", 350], [null, 50], ["C5", 150], [null, 50], ["A", 650], [null, 50],
+    [null, 500], ["E5", 500], [null, 50], ["E5", 500], [null, 50], ["E5", 500],
+    [null, 50], ["F5", 350], [null, 50], ["C5", 150], [null, 50], ["G4", 500],
+    [null, 50], ["F", 350], [null, 50], ["C5", 150], [null, 50], ["A", 650],
+    [null, 50], [null, 500],
+  ],
+  tempo: 100000
+};
+
 /**
  * Generate a list of screen ids for our setScreen dropdown
  */
@@ -64,13 +77,13 @@ module.exports.blocks = [
   {func: 'button', parent: api, category: 'UI controls', paletteParams: ['id','text'], params: ['"id"', '"text"'] },
   {func: 'textInput', parent: api, category: 'UI controls', paletteParams: ['id','text'], params: ['"id"', '"text"'] },
   {func: 'textLabel', parent: api, category: 'UI controls', paletteParams: ['id','text'], params: ['"id"', '"text"'] },
-  {func: 'dropdown', parent: api, category: 'UI controls', paletteParams: ['id','option1','etc'], params: ['"id"', '"option1"', '"etc"'] },
+  {func: 'dropdown', parent: api, category: 'UI controls', paramButtons: { minArgs: 1 }, paletteParams: ['id','option1','etc'], params: ['"id"', '"option1"', '"etc"'] },
   {func: 'getText', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
   {func: 'setText', parent: api, category: 'UI controls', paletteParams: ['id','text'], params: ['"id"', '"text"'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'getNumber', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
   {func: 'setNumber', parent: api, category: 'UI controls', paletteParams: ['id','number'], params: ['"id"', '0'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'checkbox', parent: api, category: 'UI controls', paletteParams: ['id','checked'], params: ['"id"', "false"], dropdown: { 1: ["true", "false"] } },
-  {func: 'radioButton', parent: api, category: 'UI controls', paletteParams: ['id','checked'], params: ['"id"', "false", '"group"'], dropdown: { 1: ["true", "false"] } },
+  {func: 'radioButton', parent: api, category: 'UI controls', paramButtons: { minArgs: 2, maxArgs: 3 }, paletteParams: ['id','checked'], params: ['"id"', "false", '"group"'], dropdown: { 1: ["true", "false"] } },
   {func: 'getChecked', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], type: 'value' },
   {func: 'setChecked', parent: api, category: 'UI controls', paletteParams: ['id','checked'], params: ['"id"', "true"], dropdown: { 1: ["true", "false"] } },
   {func: 'image', parent: api, category: 'UI controls', paletteParams: ['id','url'], params: ['"id"', '"https://code.org/images/logo.png"'], dropdown: { 1: function () { return getAssetDropdown('image'); } }, 'assetTooltip': { 1: chooseAsset.bind(null, 'image') } },
@@ -80,7 +93,7 @@ module.exports.blocks = [
   {func: 'showElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'hideElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'deleteElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
-  {func: 'setPosition', parent: api, category: 'UI controls', paletteParams: ['id','x','y','width','height'], params: ['"id"', "0", "0", "100", "100"], dropdown: ID_DROPDOWN_PARAM_0 },
+  {func: 'setPosition', parent: api, category: 'UI controls', paramButtons: { minArgs: 3, maxArgs: 5 }, paletteParams: ['id','x','y','width','height'], params: ['"id"', "0", "0", "100", "100"], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setSize', parent: api, category: 'UI controls', paletteParams: ['id','width','height'], params: ['"id"', "100", "100"], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setProperty', parent: api, category: 'UI controls', paletteParams: ['id','property','value'], params: ['"id"', '"width"', "100"], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown() } },
   {func: 'write', parent: api, category: 'UI controls', paletteParams: ['text'], params: ['"text"'] },
@@ -88,7 +101,7 @@ module.exports.blocks = [
   {func: 'getYPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
   {func: 'setScreen', parent: api, category: 'UI controls', paletteParams: ['screenId'], params: ['"screen1"'], dropdown: { 0: getScreenIds }},
 
-  {func: 'createCanvas', parent: api, category: 'Canvas', paletteParams: ['id','width','height'], params: ['"id"', DEFAULT_WIDTH, DEFAULT_HEIGHT] },
+  {func: 'createCanvas', parent: api, category: 'Canvas', paramButtons: { minArgs: 1, maxArgs: 3 }, paletteParams: ['id','width','height'], params: ['"id"', DEFAULT_WIDTH, DEFAULT_HEIGHT] },
   {func: 'setActiveCanvas', parent: api, category: 'Canvas', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: idDropdownWithSelector("canvas") } },
   {func: 'line', parent: api, category: 'Canvas', paletteParams: ['x1','y1','x2','y2'], params: ["0", "0", "160", "240"] },
   {func: 'circle', parent: api, category: 'Canvas', paletteParams: ['x','y','radius'], params: ["160", "240", "100"] },
@@ -98,7 +111,7 @@ module.exports.blocks = [
   {func: 'setFillColor', parent: api, category: 'Canvas', paletteParams: ['color'], params: ['"yellow"'], dropdown: { 0: ['"yellow"', '"rgb(255,255,0)"', '"rgba(255,255,0,0.5)"', '"#FFFF00"'] } },
   // drawImage has been deprecated in favor of drawImageURL
   {func: 'drawImage', parent: api, category: 'Canvas', paletteParams: ['id','x','y'], params: ['"id"', "0", "0"], dropdown: { 0: idDropdownWithSelector("img") }, noAutocomplete: true },
-  {func: 'drawImageURL', parent: api, category: 'Canvas', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'] },
+  {func: 'drawImageURL', parent: api, category: 'Canvas', paramButtons: { minArgs: 1, maxArgs: 6 }, paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'] },
   {func: 'getImageData', parent: api, category: 'Canvas', paletteParams: ['x','y','width','height'], params: ["0", "0", DEFAULT_WIDTH, DEFAULT_HEIGHT], type: 'value' },
   {func: 'putImageData', parent: api, category: 'Canvas', paletteParams: ['imgData','x','y'], params: ["imgData", "0", "0"] },
   {func: 'clearCanvas', parent: api, category: 'Canvas', },
@@ -110,7 +123,7 @@ module.exports.blocks = [
   {func: 'setGreen', parent: dontMarshalApi, category: 'Canvas', paletteParams: ['imgData','x','y','g'], params: ["imgData", "0", "0", "255"], dontMarshal: true },
   {func: 'setBlue', parent: dontMarshalApi, category: 'Canvas', paletteParams: ['imgData','x','y','b'], params: ["imgData", "0", "0", "255"], dontMarshal: true },
   {func: 'setAlpha', parent: dontMarshalApi, category: 'Canvas', paletteParams: ['imgData','x','y','a'], params: ["imgData", "0", "0", "255"], dontMarshal: true },
-  {func: 'setRGB', parent: dontMarshalApi, category: 'Canvas', paletteParams: ['imgData','x','y','r','g','b'], params: ["imgData", "0", "0", "255", "255", "255"], dontMarshal: true },
+  {func: 'setRGB', parent: dontMarshalApi, category: 'Canvas', paramButtons: { minArgs: 6, maxArgs: 7 }, paletteParams: ['imgData','x','y','r','g','b'], params: ["imgData", "0", "0", "255", "255", "255"], dontMarshal: true },
 
   {func: 'startWebRequest', parent: api, category: 'Data', paletteParams: ['url','callback'], params: ['"https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&page=computer&section=1&disablelimitreport=true"', "function(status, type, content) {\n  \n}"] },
   {func: 'setKeyValue', parent: api, category: 'Data', paletteParams: ['key','value','callback'], params: ['"key"', '"value"', "function () {\n  \n}"] },
@@ -123,16 +136,16 @@ module.exports.blocks = [
   {func: 'deleteRecord', parent: api, category: 'Data', paletteParams: ['table','record','callback'], params: ['"mytable"', "{id:1}", "function(success) {\n  \n}"] },
   {func: 'onRecordEvent', parent: api, category: 'Data', paletteParams: ['table','callback'], params: ['"mytable"', "function(record, eventType) {\n  if (eventType === 'create') {\n    textLabel('id', 'record with id ' + record.id + ' was created');\n  } \n}"], noAutocomplete: true },
   {func: 'getUserId', parent: api, category: 'Data', type: 'value' },
-  {func: 'drawChart', parent: api, category: 'Data', paletteParams: ['chartId', 'chartType', 'chartData'], params: ['"chartId"', '"bar"', '[\n\t{ label: "Row 1", value: 1 },\n\t{ label: "Row 2", value: 2 }\n]'], dropdown: { 0: idDropdownWithSelector(".chart"), 1: ChartApi.getChartTypeDropdown } },
-  {func: 'drawChartFromRecords', parent: api, category: 'Data', paletteParams: ['chartId', 'chartType', 'tableName', 'columns'], params: ['"chartId"', '"bar"', '"mytable"', '["columnOne", "columnTwo"]'], dropdown: { 0: idDropdownWithSelector(".chart"), 1: ChartApi.getChartTypeDropdown } },
+  {func: 'drawChart', parent: api, category: 'Data', paramButtons: { minArgs: 3, maxArgs: 5 }, paletteParams: ['chartId', 'chartType', 'chartData'], params: ['"chartId"', '"bar"', '[\n\t{ label: "Row 1", value: 1 },\n\t{ label: "Row 2", value: 2 }\n]'], dropdown: { 0: idDropdownWithSelector(".chart"), 1: ChartApi.getChartTypeDropdown } },
+  {func: 'drawChartFromRecords', parent: api, category: 'Data', paramButtons: { minArgs: 4, maxArgs: 6 }, paletteParams: ['chartId', 'chartType', 'tableName', 'columns'], params: ['"chartId"', '"bar"', '"mytable"', '["columnOne", "columnTwo"]'], dropdown: { 0: idDropdownWithSelector(".chart"), 1: ChartApi.getChartTypeDropdown } },
 
   {func: 'moveForward', parent: api, category: 'Turtle', paletteParams: ['pixels'], params: ["25"], dropdown: { 0: ["25", "50", "100", "200"] } },
   {func: 'moveBackward', parent: api, category: 'Turtle', paletteParams: ['pixels'], params: ["25"], dropdown: { 0: ["25", "50", "100", "200"] } },
   {func: 'move', parent: api, category: 'Turtle', paletteParams: ['x','y'], params: ["25", "25"], dropdown: { 0: ["25", "50", "100", "200"], 1: ["25", "50", "100", "200"] } },
   {func: 'moveTo', parent: api, category: 'Turtle', paletteParams: ['x','y'], params: ["0", "0"] },
   {func: 'dot', parent: api, category: 'Turtle', paletteParams: ['radius'], params: ["5"], dropdown: { 0: ["1", "5", "10"] } },
-  {func: 'turnRight', parent: api, category: 'Turtle', paletteParams: ['angle'], params: ["90"], dropdown: { 0: ["30", "45", "60", "90"] } },
-  {func: 'turnLeft', parent: api, category: 'Turtle', paletteParams: ['angle'], params: ["90"], dropdown: { 0: ["30", "45", "60", "90"] } },
+  {func: 'turnRight', parent: api, category: 'Turtle', paramButtons: { minArgs: 0, maxArgs: 1 }, paletteParams: ['angle'], params: ["90"], dropdown: { 0: ["30", "45", "60", "90"] } },
+  {func: 'turnLeft', parent: api, category: 'Turtle', paramButtons: { minArgs: 0, maxArgs: 1 }, paletteParams: ['angle'], params: ["90"], dropdown: { 0: ["30", "45", "60", "90"] } },
   {func: 'turnTo', parent: api, category: 'Turtle', paletteParams: ['angle'], params: ["0"], dropdown: { 0: ["0", "90", "180", "270"] } },
   {func: 'arcRight', parent: api, category: 'Turtle', paletteParams: ['angle','radius'], params: ["90", "25"], dropdown: { 0: ["30", "45", "60", "90"], 1: ["25", "50", "100", "200"] } },
   {func: 'arcLeft', parent: api, category: 'Turtle', paletteParams: ['angle','radius'], params: ["90", "25"], dropdown: { 0: ["30", "45", "60", "90"], 1: ["25", "50", "100", "200"] } },
@@ -143,7 +156,7 @@ module.exports.blocks = [
   {func: 'penDown', parent: api, category: 'Turtle' },
   {func: 'penWidth', parent: api, category: 'Turtle', paletteParams: ['width'], params: ["3"], dropdown: { 0: ["1", "3", "5"] } },
   {func: 'penColor', parent: api, category: 'Turtle', paletteParams: ['color'], params: ['"red"'], dropdown: { 0: ['"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"'] } },
-  {func: 'penRGB', parent: api, category: 'Turtle', paletteParams: ['r','g','b'], params: ["120", "180", "200"] },
+  {func: 'penRGB', parent: api, category: 'Turtle', paramButtons: { minArgs: 3, maxArgs: 4 }, paletteParams: ['r','g','b'], params: ["120", "180", "200"] },
   {func: 'show', parent: api, category: 'Turtle' },
   {func: 'hide', parent: api, category: 'Turtle' },
   {func: 'speed', parent: api, category: 'Turtle', paletteParams: ['value'], params: ["50"], dropdown: { 0: ["25", "50", "75", "100"] } },
@@ -174,6 +187,48 @@ module.exports.blocks = [
   {func: 'setStyle', parent: api, category: 'Advanced', params: ['"id"', '"color:red;"'] },
   {func: 'getAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"'], type: 'value' },
   {func: 'setAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"', "200"]},
+
+  {func: 'pinMode', parent: api, category: 'Maker Lab', params: ['13', '"input"']},
+  {func: 'digitalWrite', parent: api, category: 'Maker Lab', params: ['13', '1']},
+  {func: 'digitalRead', parent: api, category: 'Maker Lab', type: 'value', nativeIsAsync: true, params: ['"D4"']},
+  {func: 'analogWrite', parent: api, category: 'Maker Lab', params: ['5', '150']},
+  {func: 'analogRead', parent: api, category: 'Maker Lab', type: 'value', nativeIsAsync: true, params: ['5']},
+
+  {func: 'led', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  {func: 'led.on', category: 'Circuit'},
+  {func: 'led.off', category: 'Circuit'},
+  {func: 'led.toggle', category: 'Circuit'},
+  {func: 'led.blink', category: 'Circuit', params: ['50']},
+  {func: 'led.stop', category: 'Circuit'},
+
+  {func: 'on', blockPrefix: 'pixel0.', category: 'Circuit', tipPrefix: '[pixelN]' },
+  {func: 'off', blockPrefix: 'pixel0.', category: 'Circuit', tipPrefix: '[pixelN]' },
+  {func: 'toggle', blockPrefix: 'pixel0.', category: 'Circuit', tipPrefix: '[pixelN]' },
+  {func: 'blink', blockPrefix: 'pixel0.', category: 'Circuit', paletteParams: ['period'], params: ['50'], tipPrefix: '[pixelN]' },
+  {func: 'stop', blockPrefix: 'pixel0.', category: 'Circuit', tipPrefix: '[pixelN]' },
+  {func: 'intensity', blockPrefix: 'pixel0.', category: 'Circuit', params: ['25'], tipPrefix: '[pixelN]' },
+  {func: 'color', blockPrefix: 'pixel0.', category: 'Circuit', paletteParams: ['color'], params: ['"#FF00FF"'], tipPrefix: '[pixelN]' },
+
+  {func: 'pixels', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  {func: 'pixels.on', category: 'Circuit'},
+  {func: 'pixels.off', category: 'Circuit'},
+  {func: 'pixels.toggle', category: 'Circuit'},
+  {func: 'pixels.blink', category: 'Circuit', params: ['50']},
+  {func: 'pixels.stop', category: 'Circuit'},
+  {func: 'pixels.intensity', category: 'Circuit', params: ['50']},
+  {func: 'pixels.color', category: 'Circuit'},
+
+  {func: 'piezo', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  {func: 'piezo.frequency', category: 'Circuit', params: ['500', '100']},
+  {func: 'piezo.note', category: 'Circuit', params: ['"A4"', '100']},
+  {func: 'piezo.stop', category: 'Circuit'},
+  {func: 'piezo.play', category: 'Circuit', paletteParams: ['song'], params: [JSON.stringify(playSongConfig)]},
+
+  {func: 'isPressed', blockPrefix: 'buttonL.', category: 'Circuit', type: 'readonlyproperty', tipPrefix: 'button[L/R]' },
+  {func: 'holdtime', blockPrefix: 'buttonL.', category: 'Circuit', type: 'property', tipPrefix: 'button[L/R]' },
+
+  {func: 'toggleSwitch', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
+  {func: 'toggleSwitch.isOpen', category: 'Circuit', type: 'readonlyproperty' },
 ];
 
 module.exports.categories = {
@@ -200,6 +255,16 @@ module.exports.categories = {
   Advanced: {
     color: 'blue',
     rgb: COLOR_BLUE,
+    blocks: []
+  },
+  'Maker Lab': {
+    color: 'cyan',
+    rgb: COLOR_CYAN,
+    blocks: []
+  },
+  'Circuit': {
+    color: 'lightgreen',
+    rgb: COLOR_LIGHT_GREEN,
     blocks: []
   },
 };

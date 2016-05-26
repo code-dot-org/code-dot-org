@@ -23,9 +23,11 @@
           future: nie może być w przyszłości
   hello: Witaj świecie
   welcome_back: Witaj z powrotem, %{name}
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Wyślij
   unsubmit: Nieprzesłane
-  previous_page: Previous page
+  previous_page: Poprzednia strona
   next_page: Następna strona
   cancel: Anuluj
   okay: OK
@@ -170,9 +172,6 @@
       student_disassociated:
         subject: 'Powiadomienie Code.org: %{student_name} nie jest już powiązany z
           Tobą jako Twój uczeń.'
-      teacher_disassociated:
-        subject: 'Powiadomienie Code.org: %{teacher_name} nie jest już powiązany z
-          Tobą, jako Twój nauczycielem.'
   reports:
     error:
       access_denied: Nie masz dostępu do statystyk tej osoby
@@ -390,6 +389,37 @@
     no_primary_course: Wypróbuj kurs w Code Studio
     choose_next_course: Wypróbuj jeden z poniższych kursów w Code Studio
     print_certificate: Drukuj Certyfikat
+    announcement_title: Ogłoszenia
+    announcement_view_all: Zobacz wszystko
+    announcement_message: 'We''ve started to measure student learning in Courses 1-4
+      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
+      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
+      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
+      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_button: Ucz się więcej
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: Ucz się z Code Studio
     description: Każdy może nauczyć się informatyki. Zakoduj gry, aplikacje i sztukę.
@@ -557,14 +587,13 @@
       title: Minecraft
       body: Odkrywaj świat Minecraft poprzez kodowanie.
     unplugged:
-      title: Unplugged Lessons
-      audience: Ages 6+
-      body: We've compiled a list of unplugged lessons for you to use in your classroom.
-        Now you can teach the fundamentals of computer science, whether you have computers
-        in your classroom or not! Try using these lessons as a stand-alone course
-        or as complementary lessons for any computer science course.
-      body_short: If you don't have computers, try these unplugged lessons in your
-        classroom.
+      title: Lekcje niewymagające komputera
+      audience: Wiek 6+
+      body: Przygotowaliśmy zestaw lekcji niewymagających użycia komputera, teraz
+        jesteś w stanie uczyć podstaw informatyki wszędzie! Możesz użyć tych lekcji
+        w roli dodatku do zajęć lub jako osobnego kursu.
+      body_short: Jeżeli nie masz dostępu do komputera w pracowni, wypróbuj te specjalnie
+        przygotowane lekcje.
   gallery:
     students_drew_these_with_code: Uczniowie narysowali to z pomocą kodu!
     students_made_these_with_code: Uczniowie wykonali to z pomocą kodu!
@@ -615,15 +644,15 @@
     wrong_body: Dziękujemy za wysłanie odpowiedzi.
     correct_title: Dziękujemy
     correct_body: Dziękujemy za wysłanie odpowiedzi.
-    unsubmit-title: Unsubmit your assessment
-    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
-      date.  Are you sure?
-    submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
-      assessment after submitting it.  Are you sure?
-    submit-complete-title: Submit your assessment
-    submit-complete-body: You cannot edit your assessment after submitting it.  Are
-      you sure?
+    unsubmit-title: Wycofaj arkusz z oceny
+    unsubmit-body: Wycofanie arkusza spowoduje zresetowanie daty wysłania. Czy chcesz
+      kontynuować?
+    submit-incomplete-title: Prześlij do oceny
+    submit-incomplete-body: Brak odpowiedzi na niektóre pytania. Po przesłaniu arkusza
+      nie można już dokonać wyboru. Czy chcesz kontynuować?
+    submit-complete-title: Prześlij do oceny
+    submit-complete-body: Po przesłaniu arkusza nie można już dokonać wyboru. Czy
+      chcesz kontynuować?
   match:
     wrong_title: Niepoprawne rozwiązanie
     wrong_body: Wprowadzone przez Ciebie rozwiązanie nie jest poprawne. Spróbuj ponownie!
@@ -728,6 +757,10 @@
     share: Udostępnij
     share_title: Udostępnij swój projekt
     share_copy_link: 'Skopiuj odnośnik/link:'
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Zamknij
     more: Więcej
     name: Imię/Nazwisko
@@ -779,7 +812,23 @@
         acknowledge: Przesyłając te informacje, potwierdzasz, że będą one wykorzystane
           zgodnie z warunkami %{link_start_privacy}Privacy Policy%{link_end} i %{link_start_tos}Terms
           of Service%{link_end}
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
   components:
     icon_library:
       search_placeholder_text: Szukaj ikony...
       no_icons_found: Nie odnaleziono ikon
+  flex_category:
+    required: Streszczenie
+    content: Content
+    practice: Teacher Practices

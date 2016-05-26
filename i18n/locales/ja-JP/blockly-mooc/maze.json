@@ -1,10 +1,10 @@
 {
   "atHoneycomb":"はちのす",
-  "atFlower":"はな",
+  "atFlower":"花で",
   "avoidCowAndRemove":"うしにぶつからないように つちをかたづけよう",
   "continue":"続行",
   "dig":"つちをかたづける",
-  "digTooltip":"つちをかたづける",
+  "digTooltip":"泥を1つ取り除きます。",
   "dirE":"みぎ",
   "dirN":"うえ",
   "dirS":"した",

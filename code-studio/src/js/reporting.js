@@ -43,7 +43,7 @@ reporting.sendReport = function (report) {
   // shows the result dialog immediately
   var queryItems = [];
   for (var key in report) {
-    if (report.hasOwnProperty(key) && key != 'onComplete') {
+    if (report.hasOwnProperty(key) && key !== 'onComplete') {
       queryItems.push(key + '=' + report[key]);
     }
   }
@@ -63,6 +63,7 @@ reporting.sendReport = function (report) {
       timeout: 15000,
       data: queryString,
       dataType: 'json',
+      jsonp: false,
       beforeSend: function (xhr) {
         xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
       },

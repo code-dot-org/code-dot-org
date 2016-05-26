@@ -60,7 +60,47 @@ Resources:
                 Action: ["logs:CreateLogGroup","logs:CreateLogStream","logs:PutLogEvents"]
                 Resource: "arn:aws:logs:*:*:*"
               - Effect: Allow
-                Action: ["ec2:CreateImage", "ec2:DeregisterImage", "ec2:DescribeImages", "ec2:CreateTags"]
+                Action:
+                  - "ec2:CreateImage"
+                  - "ec2:DeregisterImage"
+                  - "ec2:DescribeImages"
+                  - "ec2:CreateTags"
+                  - "ec2:DescribeSnapshots"
+                  - "ec2:DeleteSnapshot"
+                Resource: "*"
+  VpcClassicLink:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: 'Enables a VPC for ClassicLink through the EnableVpcClassicLink API.'
+      FunctionName: VpcClassicLink
+      Code:
+        ZipFile: <%=js.call('vpcClassicLink.js')%>
+      Handler: index.handler
+      Runtime: nodejs
+      Timeout: 300
+      Role: {'Fn::GetAtt': [VpcClassicLinkRole, Arn]}
+  VpcClassicLinkRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: ['sts:AssumeRole']
+            Effect: Allow
+            Principal: {Service: [lambda.amazonaws.com]}
+      Path: '/'
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: ["logs:CreateLogGroup","logs:CreateLogStream","logs:PutLogEvents"]
+                Resource: "arn:aws:logs:*:*:*"
+              - Effect: Allow
+                Action:
+                  - "ec2:DisableVpcClassicLink"
+                  - "ec2:EnableVpcClassicLink"
+                  - "ec2:EnableVpcClassicLinkDnsSupport"
+                  - "ec2:DisableVpcClassicLinkDnsSupport"
                 Resource: "*"
 Outputs:
   LookupStackOutputs:
@@ -69,3 +109,6 @@ Outputs:
   AMIManager:
     Value: {'Fn::GetAtt': [AMIManager, Arn]}
     Description: ServiceToken for AMIManager Lambda function
+  VpcClassicLink:
+    Value: {'Fn::GetAtt': [VpcClassicLink, Arn]}
+    Description: ServiceToken for VpcClassicLink Lambda function

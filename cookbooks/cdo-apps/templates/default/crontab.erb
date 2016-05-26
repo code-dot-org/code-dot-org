@@ -64,6 +64,7 @@
       cronjob at:'20 */2 * * *', do:deploy_dir('bin', 'cron', 'activity-monitor')
       cronjob at:'5 6 * * *', do:deploy_dir('bin', 'send_workshop_reminder_emails')
       cronjob at:'15 16 * * *', do:dashboard_dir('bin','scheduled_ops_emails')
+      cronjob at:'30 16 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'index-users-in-solr')
       cronjob at:'25 7 * * *', do:deploy_dir('bin', 'update-hoc-map')
     end
@@ -90,8 +91,6 @@
   cronjob at:"#{rand(20)} */8 * * *", do:'service dashboard upgrade && service pegasus upgrade'
 
   cronjob at:"#{rand(60)} * * * *", do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
-
-  cronjob at:'@reboot', do:'chef-client'
 %>
 #
 # node: <%= node.name %>

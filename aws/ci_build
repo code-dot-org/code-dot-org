@@ -27,13 +27,6 @@ require 'mail'
 
 STARTED = 'build-started'
 
-def format_duration(total_seconds)
-  total_seconds = total_seconds.to_i
-  minutes = (total_seconds / 60).to_i
-  seconds = total_seconds - (minutes * 60)
-  "%.1d:%.2d minutes" % [minutes, seconds]
-end
-
 def capture_stdout
   old_stdout = $stdout
   $stdout = StringIO.new('', 'w')
@@ -60,14 +53,6 @@ def build()
 
     # Ensure updated Gemfile.lock dependencies are installed.
     RakeUtils.bundle_install
-
-    # Run `sudo chef-client` to ensure that the deploy respect updates to the Chef config
-    # (e.g. the cdo-servers attribute describing which servers to deploy).
-    Dir.chdir(aws_dir) do
-      # Ensure the chef cookbooks are up to date.
-      RakeUtils.rake '--rakefile', 'ci_build.rake', 'chef_update'
-      RakeUtils.system 'sudo', 'chef-client'
-    end
 
     status = 0
     Dir.chdir(aws_dir) do
@@ -102,7 +87,7 @@ def main()
     # Notify the HipChat channels about what happened.
     projects = ARGV.join(' ')
     projects = 'websites' if projects.empty?
-    time_message = " 🕐 #{format_duration(Time.now.to_i - start_time)}"
+    time_message = " 🕐 #{RakeUtils.format_duration(Time.now.to_i - start_time)}"
     if status == 0
       message = "<b>#{projects}</b> built." + time_message
 

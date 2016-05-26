@@ -16,8 +16,8 @@ var sharedConstants = require('../constants');
 var codegen = require('../codegen');
 var api = require('./api');
 var blocks = require('./blocks');
+var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
 var StudioVisualizationColumn = require('./StudioVisualizationColumn');
 var dom = require('../dom');
 var Collidable = require('./collidable');
@@ -27,7 +27,6 @@ var Item = require('./Item');
 var BigGameLogic = require('./bigGameLogic');
 var RocketHeightLogic = require('./rocketHeightLogic');
 var SamBatLogic = require('./samBatLogic');
-var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = require('../lodash');
@@ -41,6 +40,8 @@ var ImageFilterFactory = require('./ImageFilterFactory');
 var ThreeSliceAudio = require('./ThreeSliceAudio');
 var MusicController = require('../MusicController');
 var paramLists = require('./paramLists.js');
+
+var studioCell = require('./cell');
 
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
@@ -187,7 +188,14 @@ var consoleLogger = null;
 
 function loadLevel() {
   // Load maps.
-  Studio.map = level.map;
+  Studio.map = level.map.map(row => row.map(cell => (
+    // Each cell should be either an integer (in which case we are
+    // dealing with the legacy format and should treat that value as
+    // the tileType for the cell) or an object (in which case we are
+    // dealing with the new format and should treat that value as a
+    // serialization of the cell).
+    isNaN(parseInt(cell)) ? studioCell.deserialize(cell) : new studioCell(cell)
+  )));
   Studio.wallMap = null;  // The map name actually being used.
   Studio.wallMapRequested = null; // The map name requested by the caller.
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
@@ -652,7 +660,7 @@ var cancelQueuedMovements = function (index, yAxis) {
 
 //
 // Return the next position for this sprite on a given coordinate axis
-// given the queued moves (yAxis == false means xAxis)
+// given the queued moves (yAxis === false means xAxis)
 // NOTE: position values returned are not clamped to playspace boundaries
 //
 
@@ -682,7 +690,7 @@ var performQueuedMoves = function (i) {
     // Clamp nextX to boundaries as newX:
     var newX = Math.min(playspaceBoundaries.right,
                         Math.max(playspaceBoundaries.left, nextX));
-    if (nextX != newX) {
+    if (nextX !== newX) {
       cancelQueuedMovements(i, false);
     }
     sprite.x = newX;
@@ -690,7 +698,7 @@ var performQueuedMoves = function (i) {
     // Clamp nextY to boundaries as newY:
     var newY = Math.min(playspaceBoundaries.bottom,
                         Math.max(playspaceBoundaries.top, nextY));
-    if (nextY != newY) {
+    if (nextY !== newY) {
       cancelQueuedMovements(i, true);
     }
     sprite.y = newY;
@@ -1360,7 +1368,7 @@ function checkForCollisions() {
     var iXCenter = iXPos + iHalfWidth;
     var iYCenter = iYPos + iHalfHeight;
     for (var j = 0; j < Studio.spriteCount; j++) {
-      if (i == j || !Studio.sprite[j].visible) {
+      if (i === j || !Studio.sprite[j].visible) {
         continue;
       }
       var jXCenter = getNextPosition(j, false, false) +
@@ -1543,7 +1551,7 @@ Studio.getWallValue = function (row, col) {
   if (Studio.wallMap) {
     return skin[Studio.wallMap] ? (skin[Studio.wallMap][row][col] << constants.WallCoordsShift): 0;
   } else {
-    return Studio.map[row][col] & constants.WallAnyMask;
+    return Studio.map[row][col].getTileType() & constants.WallAnyMask;
   }
 };
 
@@ -1700,16 +1708,19 @@ Studio.initSprites = function () {
   // Locate the start and finish positions.
   for (var row = 0; row < Studio.ROWS; row++) {
     for (var col = 0; col < Studio.COLS; col++) {
-      if (Studio.map[row][col] & SquareType.SPRITEFINISH) {
+      if (Studio.map[row][col].getTileType() & SquareType.SPRITEFINISH) {
         Studio.spriteGoals_.push({x: col * Studio.SQUARE_SIZE,
                                   y: row * Studio.SQUARE_SIZE,
                                   finished: false});
-      } else if (Studio.map[row][col] & SquareType.SPRITESTART) {
+      } else if (Studio.map[row][col].getTileType() & SquareType.SPRITESTART) {
         if (0 === Studio.spriteCount) {
           Studio.spriteStart_ = [];
         }
-        Studio.spriteStart_[Studio.spriteCount] = {x: col * Studio.SQUARE_SIZE,
-                                                   y: row * Studio.SQUARE_SIZE};
+        Studio.spriteStart_[Studio.spriteCount] = $.extend({},
+            Studio.map[row][col].serialize(), {
+              x: col * Studio.SQUARE_SIZE,
+              y: row * Studio.SQUARE_SIZE
+            });
         Studio.spriteCount++;
       }
     }
@@ -1971,10 +1982,6 @@ Studio.init = function (config) {
 
   Studio.makeThrottledSpriteWallCollisionHelpers();
 
-  var visualizationColumn = <StudioVisualizationColumn
-    finishButton={!level.isProjectLevel}
-    inputOutputTable={level.inputOutputTable}/>;
-
   var onMount = function () {
     studioApp.init(config);
 
@@ -1993,25 +2000,21 @@ Studio.init = function (config) {
     }
   };
 
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={studioApp.localeDirection()}
-      editCode={!!level.editCode}
-      readonlyWorkspace={!!config.readonlyWorkspace}
-    />
-  );
+  studioApp.setPageConstants(config);
 
-  ReactDOM.render(React.createElement(AppView, {
-    assetUrl: studioApp.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    hideSource: !!config.hideSource,
-    noVisualization: false,
-    isRtl: studioApp.isRtl(),
-    codeWorkspace: codeWorkspace,
-    visualizationColumn: visualizationColumn,
-    onMount: onMount
-  }), document.getElementById(config.containerId));
+  var visualizationColumn = <StudioVisualizationColumn
+    finishButton={!level.isProjectLevel}
+    inputOutputTable={level.inputOutputTable}/>;
+
+  ReactDOM.render(
+    <Provider store={studioApp.reduxStore}>
+      <AppView
+          visualizationColumn={visualizationColumn}
+          onMount={onMount}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
+  );
 };
 
 /**
@@ -2269,17 +2272,18 @@ Studio.reset = function (first) {
     if (Studio.sprite[i]) {
       Studio.sprite[i].removeElement();
     }
+    var spriteStart = Studio.spriteStart_[i];
     Studio.sprite[i] = new Sprite({
-      x: Studio.spriteStart_[i].x,
-      y: Studio.spriteStart_[i].y,
-      displayX: Studio.spriteStart_[i].x,
-      displayY: Studio.spriteStart_[i].y,
+      x: spriteStart.x,
+      y: spriteStart.y,
+      displayX: spriteStart.x,
+      displayY: spriteStart.y,
       loop: true,
-      speed: constants.DEFAULT_SPRITE_SPEED,
-      size: constants.DEFAULT_SPRITE_SIZE,
-      dir: Direction.NONE,
-      displayDir: Direction.SOUTH,
-      emotion: level.defaultEmotion || Emotions.NORMAL,
+      speed: spriteStart.speed || constants.DEFAULT_SPRITE_SPEED,
+      size: spriteStart.size || constants.DEFAULT_SPRITE_SIZE,
+      dir: spriteStart.direction || Direction.NONE,
+      displayDir: spriteStart.direction || Direction.NONE,
+      emotion: spriteStart.emotion || level.defaultEmotion || Emotions.NORMAL,
       renderOffset: renderOffset,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
@@ -2287,9 +2291,10 @@ Studio.reset = function (first) {
       visible: !level.spritesHiddenToStart
     });
 
+    var sprite = spriteStart.sprite || (i % Studio.startAvatars.length);
     var opts = {
       spriteIndex: i,
-      value: Studio.startAvatars[i % Studio.startAvatars.length],
+      value: Studio.startAvatars[sprite],
       forceHidden: level.spritesHiddenToStart
     };
     Studio.setSprite(opts);
@@ -2535,6 +2540,15 @@ var registerEventHandler = function (handlers, name, func) {
     cmdQueue: []});
 };
 
+var registerHandlersForCode = function (handlers, blockName, code) {
+  var func = codegen.functionFromCode(code, {
+    StudioApp: studioApp,
+    Studio: api,
+    Globals: Studio.Globals
+  });
+  registerEventHandler(handlers, blockName, func);
+};
+
 var registerHandlers =
       function (handlers, blockName, eventNameBase,
                 nameParam1, matchParam1Val,
@@ -2553,10 +2567,6 @@ var registerHandlers =
          matchParam2Val === titleVal2)) {
       var code = Blockly.Generator.blocksToCode('JavaScript', [block]);
       if (code) {
-        var func = codegen.functionFromCode(code, {
-                                            StudioApp: studioApp,
-                                            Studio: api,
-                                            Globals: Studio.Globals } );
         var eventName = eventNameBase;
         if (nameParam1) {
           eventName += '-' + matchParam1Val;
@@ -2564,7 +2574,7 @@ var registerHandlers =
         if (nameParam2) {
           eventName += '-' + matchParam2Val;
         }
-        registerEventHandler(handlers, eventName, func);
+        registerHandlersForCode(handlers, eventName, code);
       }
     }
   }
@@ -2762,7 +2772,7 @@ Studio.hasUnexpectedFunction_ = function () {
     var funcNames = Studio.JSInterpreter.getGlobalFunctionNames();
     for (var name in AUTO_HANDLER_MAP) {
       var index = funcNames.indexOf(name);
-      if (index != -1) {
+      if (index !== -1) {
         funcNames.splice(index, 1);
       }
     }
@@ -2781,7 +2791,7 @@ Studio.hasUnexpectedLocalFunction_ = function () {
     var funcNames = Studio.JSInterpreter.getLocalFunctionNames();
     for (var name in AUTO_HANDLER_MAP) {
       var index = funcNames.indexOf(name);
-      if (index != -1) {
+      if (index !== -1) {
         return name;
       }
     }
@@ -2843,6 +2853,10 @@ Studio.execute = function () {
   if (studioApp.isUsingBlockly()) {
     if (Studio.checkForBlocklyPreExecutionFailure()) {
       return Studio.onPuzzleComplete();
+    }
+
+    if (studioApp.initializationCode) {
+      registerHandlersForCode(handlers, 'whenGameStarts', studioApp.initializationCode);
     }
 
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
@@ -3166,7 +3180,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
   // We usually won't try jumbo size.
   var jumboSize = false;
 
-  if (wallVal == SquareType.WALL) {
+  if (wallVal === SquareType.WALL) {
     // use a random coordinate
     // TODO (cpirich): these should probably be chosen once at level load time
     // and we should allow the level/skin to set specific row/col max values
@@ -3239,7 +3253,7 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
 Studio.createLevelItems = function (svg) {
   for (var row = 0; row < Studio.ROWS; row++) {
     for (var col = 0; col < Studio.COLS; col++) {
-      var mapVal = Studio.map[row][col];
+      var mapVal = Studio.map[row][col].getTileType();
       for (var index = 0; index < skin.ItemClassNames.length; index++) {
         if (constants.squareHasItemClass(index, mapVal)) {
           // Create item:
@@ -3890,7 +3904,7 @@ Studio.playSound = function (opts) {
     soundVal = allValues[Math.floor(Math.random() * allValues.length)].toLowerCase();
   } else {
     var isInAllValues = function (value) {
-      return allValues.indexOf(value) != -1;
+      return allValues.indexOf(value) !== -1;
     };
     for (var group in skin.soundGroups) {
       var groupData = skin.soundGroups[group];
@@ -4340,10 +4354,10 @@ Studio.endGame = function (opts) {
 
   var winValue = opts.value.toLowerCase().trim();
 
-  if (winValue == "win") {
+  if (winValue === "win") {
     Studio.trackedBehavior.hasWonGame = true;
     Studio.setVictoryText({text: studioMsg.winMessage()});
-  } else if (winValue== "lose") {
+  } else if (winValue === "lose") {
     Studio.trackedBehavior.hasLostGame = true;
     Studio.setVictoryText({text: studioMsg.loseMessage()});
   } else {
@@ -5496,7 +5510,7 @@ Studio.conditionSatisfied = function (required) {
     var valueName = valueNames[k];
     var value = required[valueName];
 
-    if (valueName === 'timedOut' && tracked.timedOut != value) {
+    if (valueName === 'timedOut' && tracked.timedOut !== value) {
       return false;
     }
 
@@ -5514,7 +5528,7 @@ Studio.conditionSatisfied = function (required) {
       return false;
     }
 
-    if (valueName == 'collectedSpecificItemsBelow' &&
+    if (valueName === 'collectedSpecificItemsBelow' &&
         tracked.removedItems[value.className] !== undefined &&
         tracked.removedItems[value.className] >= value.count) {
       return false;
@@ -5526,13 +5540,13 @@ Studio.conditionSatisfied = function (required) {
       return false;
     }
 
-    if (valueName == 'createdSpecificItemsBelow' &&
+    if (valueName === 'createdSpecificItemsBelow' &&
         tracked.createdItems[value.className] !== undefined &&
         tracked.createdItems[value.className] >= value.count) {
       return false;
     }
 
-    if (valueName == 'gotAllItems' && tracked.gotAllItems !== value) {
+    if (valueName === 'gotAllItems' && tracked.gotAllItems !== value) {
       return false;
     }
 

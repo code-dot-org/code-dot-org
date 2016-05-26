@@ -34,22 +34,17 @@ class Plc::CourseUnit < ActiveRecord::Base
     plc_learning_modules.required.pluck(:id)
   end
 
-  def get_top_modules_of_each_type_from_user_selections(learning_module_ids)
+  def get_top_modules_of_each_type_from_user_selections(learning_module_ids_and_weights)
     # Preload all of the learning modules, that way we don't have to hit the DB multiple times
-    learning_module_ids.compact!
-
-    return [] if learning_module_ids.nil? || learning_module_ids.empty?
-    learning_module_map = Hash[*Plc::LearningModule.find(learning_module_ids).flat_map {|learning_module| [learning_module.id, learning_module]}]
-
-    #This will make a hash map of learning_module => number of times the user picked it in the evaluation, sorted with the
-    #most frequently selected ones first
-    searching_map = Hash[*learning_module_ids.group_by{ |v| v }.map{ |k, v| [learning_module_map[k.to_i], v.size] }.sort_by { |x| x[1] }.reverse.flatten]
+    return [] if learning_module_ids_and_weights.blank?
+    learning_module_map = {}
+    learning_module_ids_and_weights.each {|k, v| learning_module_map[Plc::LearningModule.find(k)] = v}
 
     selected_learning_modules = []
 
     (Plc::LearningModule::MODULE_TYPES - [Plc::LearningModule::REQUIRED_MODULE]).each do |module_type|
       #Find the first element in the ordered map that is of this type
-      learning_module, _ = searching_map.find { |k, _| k.module_type == module_type}.try(:first)
+      learning_module, _ = learning_module_map.select {|learning_module, _| learning_module.module_type == module_type}.max_by {|_, v| v}
       selected_learning_modules << learning_module unless learning_module.nil?
     end
 

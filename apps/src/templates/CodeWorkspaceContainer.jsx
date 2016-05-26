@@ -9,6 +9,8 @@ var Radium = require('radium');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var utils = require('../utils');
 var commonStyles = require('../commonStyles');
+var CodeWorkspace = require('./CodeWorkspace');
+import { connect } from 'react-redux';
 
 var styles = {
   main: {
@@ -51,19 +53,22 @@ var styles = {
 
 var CodeWorkspaceContainer = React.createClass({
   propTypes: {
-    topMargin: React.PropTypes.number.isRequired,
-    hidden: React.PropTypes.bool,
+    // redux provided
+    hidden: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
+    pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
     noVisualization: React.PropTypes.bool.isRequired,
-    codeWorkspace: React.PropTypes.element.isRequired,
-    onSizeChange: React.PropTypes.func
+
+    // not in redux
+    topMargin: React.PropTypes.number.isRequired,
+    onSizeChange: React.PropTypes.func,
   },
 
   /**
    * Called externally
    * @returns {number} The height of the rendered contents in pixels
    */
-  getContentHeight: function () {
+  getRenderedHeight: function () {
     return $(ReactDOM.findDOMNode(this)).height();
   },
 
@@ -85,14 +90,20 @@ var CodeWorkspaceContainer = React.createClass({
 
     return (
       <div style={mainStyle} className="editor-column">
-        <ProtectedStatefulDiv
+        <div
             id="codeWorkspace"
             style={styles.codeWorkspace}>
-          {this.props.codeWorkspace}
+          <CodeWorkspace/>
           <ProtectedStatefulDiv id="designWorkspace" style={styles.hidden}/>
-        </ProtectedStatefulDiv>
+        </div>
       </div>
     );
   }
 });
-module.exports = Radium(CodeWorkspaceContainer);
+module.exports = connect(state => ({
+  hidden: state.pageConstants.hideSource,
+  isRtl: state.pageConstants.localeDirection === 'rtl',
+  noVisualization: state.pageConstants.noVisualization,
+  pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
+}), undefined, null, { withRef: true }
+)(Radium(CodeWorkspaceContainer));

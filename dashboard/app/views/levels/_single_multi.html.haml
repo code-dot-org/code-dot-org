@@ -83,7 +83,7 @@
         = render partial: 'levels/dialog', locals: {app: app, data: data}
 
   .clear
-  = render partial: 'levels/multi_answer', locals: {data: level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class, level: level}
+  = render partial: 'levels/multi_answer', locals: {data: level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class, level: level, standalone: standalone}
   = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
 
   %br/
@@ -100,6 +100,6 @@
       "level_#{level.id}",
       #{standalone},
       "#{data['type']}" == "multi2" ? 2 : 1,
-      #{data['answers'].map {|answer| answer['correct']}},
+      #{data['type'] == 'EvaluationMulti' ? [] : data['answers'].map {|answer| answer['correct'] || false}},
       #{last_attempt.to_json}
     );

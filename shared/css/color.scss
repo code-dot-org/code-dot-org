@@ -33,6 +33,7 @@ $orange: #ffa400;
 $light_orange: #ffc459;
 $lighter_orange: #ffe0a6;
 $lightest_orange: #fff2d9;
+$dark_orange: #ff8600;
 
 $green: #b9bf15;
 $light_green: #d1d567;
@@ -43,6 +44,8 @@ $yellow: #ffb81d;
 $light_yellow: #ffdb74;
 $lighter_yellow: #ffebb5;
 $lightest_yellow: #fff7df;
+
+$goldenrod: #daa520;
 
 $header_text: $white;
 $bkgnd_color: $teal;
@@ -61,6 +64,8 @@ $level_passed: rgb(159, 212, 159);
 $level_attempted: $realyellow;
 $level_not_tried: #fefefe;
 $level_current: $orange;
+$level_review_rejected: $red;
+$level_review_accepted: rgb(11, 142, 11); // TODO: $level_passed;
 $assessment: $cyan;
 
 // links

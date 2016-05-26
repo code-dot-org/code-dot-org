@@ -3,7 +3,7 @@ title: Standards Alignment
 view: page_curriculum
 theme: none
 ---
-
+ 
 <%= partial('doc_header', :title => 'Standards Alignment', :disclaimer => 'Code.org K–5 Curriculum Course 4') %>
 
 [content]
@@ -1271,7 +1271,7 @@ L.5.6 - Acquire and use accurately grade-appropriate general academic and domain
                 <tr>
             <td colspan="2">
                 <h2>
-                    16. Bee: Functions with Parameters/h2>
+                    16. Bee: Functions with Parameters</h2>
             </td>
         </tr>
         <tr>

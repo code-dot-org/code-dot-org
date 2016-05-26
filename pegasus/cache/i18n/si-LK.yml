@@ -365,6 +365,9 @@
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
     science in classrooms.
   homepage_banner_20k_teachers_link: Learn more
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: "පැයේ කේතය"
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Hour of Code උත්සාහ කරන්න
@@ -390,6 +393,7 @@
   homepage_slot_text_link_stats: See the stats
   homepage_slot_text_link_buy: Get involved
   homepage_slot_text_link_donate: Make a donation
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org thanks its supporters
   homepage_donors_seall: See all
@@ -850,6 +854,12 @@
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
   dashboard_announce_button_text: Learn more
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: "දැන් අත්හදා බලන්න"
@@ -972,13 +982,31 @@
   course3_name: Course 3
   course4_name: Course 4
   accelerated_name: Accelerated Course
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: Accelerated Course
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Classic Maze
+  iceage_name: Ice Age
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: "ගණිත"
+  hoc_category_name: "පැයේ කේතය"
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
   applab_name: "මෘදුකාංග විද්‍යාගාරය"
   applab_gradelevel: Ages 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
@@ -1663,12 +1691,11 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.

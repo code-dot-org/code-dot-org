@@ -813,10 +813,10 @@ function loadHoc2015(skin, assetUrl) {
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: name == 'r2-d2' ? 14 : 16,
+        normal: name === 'r2-d2' ? 14 : 16,
         turns: 8,
         emotions: 0,
-        walk: name == 'r2-d2' ? 14 : 8
+        walk: name === 'r2-d2' ? 14 : 8
       },
       animations: {
         turns: 8
@@ -895,7 +895,7 @@ function loadHoc2015(skin, assetUrl) {
   // return a special version of the map that just uses regular tile pieces.
 
   skin.getMap = function (background, map) {
-    if (background == "hoth" && (map == "circle" || map == "horizontal")) {
+    if (background === "hoth" && (map === "circle" || map === "horizontal")) {
       return map + "_nonjumbo";
     } else {
       return map;

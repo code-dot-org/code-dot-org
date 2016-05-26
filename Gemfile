@@ -157,7 +157,7 @@ gem 'marked-rails' # js-based md renderer used for levelbuilder md preview
 
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
-gem 'font-awesome-rails'
+gem 'font-awesome-rails', '~> 4.6.3'
 gem 'sequel', '~> 4.10.0'
 gem 'user_agent_parser'
 
@@ -197,3 +197,6 @@ gem 'rack-attack', '~> 4.4'
 
 # Generate SSL certificates
 gem 'acmesmith'
+
+gem "selectize-rails"
+gem 'mail_view'

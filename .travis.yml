@@ -14,9 +14,9 @@ bundler_args: --without development --deployment
 
 before_script:
   - cd dashboard
-  - bundle exec rake db:create db:schema:load
+  - bundle exec rake --trace db:create db:test:prepare
 
-script: bundle exec rake test
+script: bundle exec rake --trace test
 
 env:
   - DB=mysql

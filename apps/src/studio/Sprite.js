@@ -27,7 +27,7 @@ var Sprite = function (options) {
 
   this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED;
   this.setNormalFrameDuration(options.animationFrameDuration);
-  this.displayDir = Direction.NONE;
+  this.displayDir = options.displayDir || Direction.NONE;
   this.startFadeTime = null;
   this.fadeTime = 0;
 

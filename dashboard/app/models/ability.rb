@@ -26,6 +26,7 @@ class Ability
         :reports,
         User,
         Follower,
+        PeerReview,
         # Ops models
         District,
         Workshop,
@@ -39,9 +40,12 @@ class Ability
         Plc::CourseUnit,
         # PD models
         Pd::Workshop,
-        Pd::Enrollment,
         Pd::Attendance,
-        Pd::DistrictPaymentTerm
+        Pd::DistrictPaymentTerm,
+        Pd::DistrictReport,
+        Pd::WorkshopOrganizerReport,
+        Pd::TeacherProgressReport,
+        Pd::CourseFacilitator
       ]
     end
 
@@ -97,16 +101,21 @@ class Ability
             district.contact_id == user.id
           end
         end
+        can :read, Pd::TeacherProgressReport
         can :group_view, Plc::UserCourseEnrollment
         can :manager_view, Plc::UserCourseEnrollment do |enrollment|
           DistrictsUsers.exists?(user: enrollment.user, district: District.where(contact: user.id).pluck(:id))
         end
+        can :read, Pd::DistrictReport
       end
 
       if user.workshop_organizer?
         can :create, Pd::Workshop
         can :manage, Pd::Workshop, organizer_id: user.id
         can :manage, Pd::Attendance, workshop: {organizer_id: user.id}
+        can :read, Pd::WorkshopOrganizerReport
+        can :read, Pd::TeacherProgressReport
+        can :read, Pd::CourseFacilitator
       end
     end
 

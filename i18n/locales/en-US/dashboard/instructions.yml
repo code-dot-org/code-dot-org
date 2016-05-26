@@ -342,6 +342,7 @@ en:
       allthethings_moviebot_instruction: crwdns54665:0crwdne54665:0
       allthethings_template_backed1_instruction: crwdns51027:0crwdne51027:0
       allthethings_template_backed2_instruction: crwdns51028:0crwdne51028:0
+      allthethings_U3 - Simple Drawing - Rectangle Width and Height_instruction: crwdns56549:0crwdne56549:0
       App Lab test_instruction: crwdns45301:0crwdne45301:0
       Applab allthethings onRecordEvent_instruction: crwdns56135:0crwdne56135:0
       Applab test_instruction: crwdns49692:0crwdne49692:0
@@ -675,6 +676,10 @@ en:
       Course 4 Play Labs For Loops 7a_instruction: crwdns48369:0crwdne48369:0
       Course 4 Play Labs For Loops 8_instruction: crwdns34444:0crwdne34444:0
       Course 4 Play Labs For Loops 8a_instruction: crwdns48370:0crwdne48370:0
+      Course 4 Playlab For Loop Freeplay_instruction: crwdns56550:0crwdne56550:0
+      Course 4 Playlab For Loops 4b_instruction: crwdns56551:0crwdne56551:0
+      Course 4 Playlab For Loops 5b_instruction: crwdns56552:0crwdne56552:0
+      Course 4 Playlab For Loops 6b_instruction: crwdns56553:0crwdne56553:0
       Course 4 SCF 1_instruction: crwdns51038:0crwdne51038:0
       Course 4 SCF 1a_instruction: crwdns51039:0crwdne51039:0
       Course 4 SCF 1b_instruction: crwdns51040:0crwdne51040:0
@@ -709,9 +714,13 @@ en:
       CSD Hackathon Week 2_instruction: crwdns56230:0crwdne56230:0
       CSD U3 Background Discuss_instruction: crwdns56277:0crwdne56277:0
       CSD U3 Background Experiment_instruction: crwdns56278:0crwdne56278:0
+      CSD U3 Boolean Modify_instruction: crwdns56554:0crwdne56554:0
+      CSD U3 Boolean Predict_instruction: crwdns56555:0crwdne56555:0
       CSD U3 Draw Loop Discuss_instruction: crwdns56279:0crwdne56279:0
       CSD U3 Draw Loop Experiment_instruction: crwdns56280:0crwdne56280:0
       CSD U3 Frame Rate_instruction: crwdns56281:0crwdne56281:0
+      CSD U3 Keypress Boolean_instruction: crwdns56556:0crwdne56556:0
+      CSD U3 Keypress Watchers_instruction: crwdns56557:0crwdne56557:0
       CSD U3 Random Animation_instruction: crwdns56282:0crwdne56282:0
       CSD U3 Random Choice_instruction: crwdns56456:0crwdne56456:0
       CSD U3 Random Color_instruction: crwdns56283:0crwdne56283:0
@@ -727,11 +736,18 @@ en:
       CSD U3 Variable Incrementation pt2_instruction: crwdns56291:0crwdne56291:0
       CSD U3 Variable Incrementation_instruction: crwdns56292:0crwdne56292:0
       CSD U3 Variables CHALLENGE gamelab gary_instruction: crwdns56459:0crwdne56459:0
+      CSD U3 Variables create and assign_instruction: crwdns56558:0crwdne56558:0
       CSD U3 Variables draw loop newVars_instruction: crwdns56460:0crwdne56460:0
       CSD U3 Variables draw loop rgb_instruction: crwdns56461:0crwdne56461:0
       CSD U3 Variables draw loop xy_instruction: crwdns56462:0crwdne56462:0
+      CSD U3 Variables eyeBrows_instruction: crwdns56559:0crwdne56559:0
       CSD U3 Variables Initialize_instruction: crwdns56293:0crwdne56293:0
       CSD U3 Variables Intro_instruction: crwdns56294:0crwdne56294:0
+      CSD U3 Variables make a square_instruction: crwdns56560:0crwdne56560:0
+      CSD U3 Variables multiple assignments_instruction: crwdns56561:0crwdne56561:0
+      CSD U3 Variables naming rules_instruction: crwdns56562:0crwdne56562:0
+      CSD U3 Variables random assignment_instruction: crwdns56563:0crwdne56563:0
+      CSD U3 Variables random draw loop_instruction: crwdns56564:0crwdne56564:0
       CSD U3 Variables random drawing exemplar_instruction: crwdns56463:0crwdne56463:0
       CSD U3 Variables Random_instruction: crwdns56295:0crwdne56295:0
       CSD U3 Variables Reassign pt2_instruction: crwdns56296:0crwdne56296:0
@@ -739,7 +755,12 @@ en:
       CSD U3 Variables Square Random Loop_instruction: crwdns56298:0crwdne56298:0
       CSD U3 Variables Square Random_instruction: crwdns56299:0crwdne56299:0
       CSD U3 Variables Square_instruction: crwdns56300:0crwdne56300:0
+      CSD U3 Variables TEMPLATE square_instruction: crwdns56565:0crwdne56565:0
       CSD U3 Variables use value rect_instruction: crwdns56464:0crwdne56464:0
+      CSD U3 Variables write_instruction: crwdns56566:0crwdne56566:0
+      CSD U3 Variables2 expressions in commands_instruction: crwdns56567:0crwdne56567:0
+      CSD U3 Variables2 expressions in variables_instruction: crwdns56568:0crwdne56568:0
+      CSD U3 Variables2 expressions_instruction: crwdns56569:0crwdne56569:0
       CSP Data Unit - Counting Multiple Things_instruction: crwdns49703:0crwdne49703:0
       CSP Data Unit -Counting Records - Easy Way_instruction: crwdns49704:0crwdne49704:0
       CSP Data Unit -Counting Records - Hard Way_instruction: crwdns49705:0crwdne49705:0
@@ -1144,6 +1165,7 @@ en:
       PS Log test - Define and use turnAround_instruction: crwdns56269:0crwdne56269:0
       Quantum Bee - Ryan_instruction: crwdns56113:0crwdne56113:0
       Quantum Bee_instruction: crwdns56001:0crwdne56001:0
+      Rocket Height Course A_instruction: crwdns56570:0crwdne56570:0
       Ryan - 4-5 Bee Conditionals 2_instruction: crwdns50295:0crwdne50295:0
       Ryan - Bee Conditionals_instruction: crwdns55791:0crwdne55791:0
       Ryan Doily Step 1_instruction: crwdns56252:0crwdne56252:0
@@ -1160,6 +1182,12 @@ en:
       Sam the Butterfly 6_instruction: crwdns34671:0crwdne34671:0
       Sam the Butterfly 7_instruction: crwdns34672:0crwdne34672:0
       Sam the Butterfly Complete_instruction: crwdns35012:0crwdne35012:0
+      sample1_instruction: crwdns56571:0crwdne56571:0
+      sample2_instruction: crwdns56572:0crwdne56572:0
+      sample3_instruction: crwdns56573:0crwdne56573:0
+      sample4_instruction: crwdns56574:0crwdne56574:0
+      sample5_instruction: crwdns56575:0crwdne56575:0
+      sample6_instruction: crwdns56576:0crwdne56576:0
       scrat 16 (copy 1)_instruction: crwdns34673:0crwdne34673:0
       scrat 16_instruction: crwdns34674:0crwdne34674:0
       scrat 17 (copy 1)_instruction: crwdns34675:0crwdne34675:0
@@ -1366,13 +1394,17 @@ en:
       U3 - Search Terms - 6_instruction: crwdns55807:0crwdne55807:0
       U3 - Simple Drawing - Comments_instruction: crwdns56302:0crwdne56302:0
       U3 - Simple Drawing - Ellipse and No Fill_instruction: crwdns56303:0crwdne56303:0
+      U3 - Simple Drawing - Fill_instruction: crwdns56577:0crwdne56577:0
       U3 - Simple Drawing - No Fill_instruction: crwdns56304:0crwdne56304:0
       U3 - Simple Drawing - Order of Blocks_instruction: crwdns56305:0crwdne56305:0
+      U3 - Simple Drawing - Oval_instruction: crwdns56578:0crwdne56578:0
       U3 - Simple Drawing - Personal Drawing_instruction: crwdns56306:0crwdne56306:0
+      U3 - Simple Drawing - Rectangle Width and Height_instruction: crwdns56579:0crwdne56579:0
       U3 - Simple Drawing - Rectangle_instruction: crwdns56307:0crwdne56307:0
       U3 - Simple Drawing - regular polygon_instruction: crwdns56308:0crwdne56308:0
       U3 - Simple Drawing - Road Ellipse_instruction: crwdns56309:0crwdne56309:0
       U3 - Simple Drawing - Road Rects and Color_instruction: crwdns56310:0crwdne56310:0
+      U3 - Simple Drawing - Simple Shape Drawing_instruction: crwdns56580:0crwdne56580:0
       U3 - Simple Drawing - Stroke and Stroke Weight_instruction: crwdns56311:0crwdne56311:0
       U3 - Simple Drawing - text_instruction: crwdns56312:0crwdne56312:0
       U3 - Simple Drawing - X and Y values_instruction: crwdns56313:0crwdne56313:0
@@ -1386,6 +1418,16 @@ en:
       U3 - Simulation - 6_instruction: crwdns51162:0crwdne51162:0
       U3 - Simulation - App_instruction: crwdns51163:0crwdne51163:0
       U3 - Simulation - Template_instruction: crwdns51164:0crwdne51164:0
+      U3 - Sprites - Intro Sprites_instruction: crwdns56581:0crwdne56581:0
+      U3 - Sprites and Mod - Create  and Draw Sprite_instruction: crwdns56582:0crwdne56582:0
+      U3 - Sprites and Mod - Mouse Width and Height_instruction: crwdns56583:0crwdne56583:0
+      U3 - Sprites and Mod - Mouse X and Y_instruction: crwdns56584:0crwdne56584:0
+      U3 - Sprites and Mod - Rand Around Mouse_instruction: crwdns56585:0crwdne56585:0
+      U3 - Sprites and Mod - Rand Shape Color_instruction: crwdns56586:0crwdne56586:0
+      U3 - Sprites and Mod - Shape Color_instruction: crwdns56587:0crwdne56587:0
+      U3 - Sprites and Mod - two sprites_instruction: crwdns56588:0crwdne56588:0
+      U3 - Sprites and Mod - Wrap Many Squares_instruction: crwdns56589:0crwdne56589:0
+      U3 - Sprites and Mod - X and Y Prop_instruction: crwdns56590:0crwdne56590:0
       U3 - User Input - Save getText To Variable_instruction: crwdns51165:0crwdne51165:0
       U3 - User Input - Saving After Input_instruction: crwdns51166:0crwdne51166:0
       U3 - User Input and String -  Concat_instruction: crwdns51167:0crwdne51167:0
@@ -1411,7 +1453,11 @@ en:
       U3 full clicker demo_instruction: crwdns51173:0crwdne51173:0
       U3 mehal's clone_instruction: crwdns54294:0crwdne54294:0
       U3 Variables consolelog_instruction: crwdns56466:0crwdne56466:0
+      U3 Variables flower example_instruction: crwdns56591:0crwdne56591:0
+      U3 Variables gray square_instruction: crwdns56592:0crwdne56592:0
+      U3 Variables make a square_instruction: crwdns56593:0crwdne56593:0
       U3 Variables misconceptions try it_instruction: crwdns56467:0crwdne56467:0
+      U3 Variables randomize your square_instruction: crwdns56594:0crwdne56594:0
       U3 Variables write_instruction: crwdns56468:0crwdne56468:0
       U3- Variables - Assign Random For Turtle Draw_instruction: crwdns50689:0crwdne50689:0
       U3- Variables - Changing the Value_instruction: crwdns50690:0crwdne50690:0

@@ -30,7 +30,8 @@
   twentyhours_text: Hai terminato la tua prima Ora del Codice? Impara un altro po'
     di concetti di informatica e di programmazione in quest'altro corso.
   og_title: Ogni bambino merita un'opportunità
-  og_description: Ogni alunno in ogni scuola merita l'opportunità di studiare informatica.
+  og_description: Ogni stupende in ogni scuola merita l'opportunità di studiare l'informatica.
+    Essa sta cambiando tutto.
   hoc2014_heading: Iscriviti alla <a href="http://hourofcode.com/it">Ora del Codice</a>
     <br/>8-14 dicembre 2014 <br/>
   hoc2014_students: Studenti
@@ -193,16 +194,18 @@
     tra quarta elementare e terza media
   third_party_desc_10to12_kto3: Circa 10-12 lezioni, per gli studenti di asilo fino
     alla terza elementare
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
-    K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
+  third_party_desc_11_kto5: Circa 11 lezioni, per ragazzi di 10-11 anni
+  third_party_desc_10to12_kto5: Circa10-12 lezioni, per ragazzi di 10-11 anni
+  third_party_desc_40_4to8: Più di 40 lezioni, per ragazzi dai 9 ai 14 anni
   third_party_desc_dozens_kto8: Decine di lezioni per tutte le classi K-8
-  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
-  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
-  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
-  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
+  third_party_desc_10to15_3to12: Tra le 10 e le 15 lezioni, per ragazzi dagli 8 ai
+    18 anni
+  third_party_desc_25to40_3to12: Dalle 25 alle 40 lezioni, per ragazzi dagli 8 ai
+    18 anni
+  third_party_desc_20_2to8: Circa 20 lezioni, per ragazzi dai 7 ai 14 anni
+  third_party_desc_7to22_5to12: Tra le 7 e le 22 lezioni, per ragazzi dai 10 ai 18
+    anni
+  third_party_desc_20_4to12: Più di 20 lezioni, per ragazzi dai 9 ai 18 anni
   enter_valid_age: Si prega di indicare una età valida
   enter_valid_email: Per favore inserisci un indirizzo valido di posta elettronica
   get_a_certificate_message: Ti manderemo un certificato e le informazioni su come
@@ -255,8 +258,7 @@
   learn_next_level: Prova un altro corso di Code Studio
   learn_online: Prova altri corsi on-line
   learn_classes: Trova le scuole locali
-  hoc_is_here: Questa è l'ultima settimana di informatica, l'Ora del Codice (#HourOfCode)
-    ha raggiunto i 50 milioni di studenti.  https://youtu.be/Ofze6CWUCx8.
+  hoc_is_here: Impara l'informatica. Essa sta cambiando tutto. https://youtu.be/xJqSu1IbcHg.
   just_did_hoc: 'Ho appena completato la mia prima Ora del Codice #HourOfCode - provala!
     @codeorg @programmafuturo'
   just_did_course1: Ho appena finito il corso 1 - verificalo su @codeorg
@@ -385,6 +387,9 @@
   homepage_banner_20k_teachers: 20.000 insegnanti addestrati che ora insegnamento
     informatica nelle loro classi.
   homepage_banner_20k_teachers_link: Ulteriori informazioni
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: L'Ora del Codice
   homepage_slot_text_blurb_hoc: Chiunque può imparare. Inizia oggi
   homepage_slot_text_link_hoc: Prova l'Ora del Codice
@@ -410,6 +415,7 @@
   homepage_slot_text_link_stats: Guarda le statistiche
   homepage_slot_text_link_buy: Fatti coinvolgere
   homepage_slot_text_link_donate: Fai una donazione
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Creazioni degli studenti di Code Studio
   homepage_header_donors: Code.org ringrazia i suoi sostenitori
   homepage_donors_seall: Mostra tutto
@@ -686,11 +692,11 @@
   dashboard_action_remove_confirm: Eliminare?
   dashboard_action_done: Fatto
   dashboard_action_required: obbligatorio
-  dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
-  dashboard_download_csv: Download CSV
+  dashboard_assessments_view: 'Mostra valutazioni in:'
+  dashboard_assessments_none: Nessuna valutazione
+  dashboard_filter_by_stage: 'Filtra per fase:'
+  dashboard_filter_all: Tutti
+  dashboard_download_csv: Scarica CSV
   dashboard_navigation_home_page: Cruscotto di Controllo dell'insegnante
   dashboard_navigation_section_student_progress: Gestione delle classi e degli studenti
   dashboard_navigation_section_teacher_progress: I tuoi progressi
@@ -701,7 +707,7 @@
   dashboard_navigation_all_sections: Gestione delle classi e degli studenti
   dashboard_navigation_view_progress: Controlla i progressi
   dashboard_navigation_view_text_responses: Visualizza il testo delle risposte
-  dashboard_navigation_view_assessments: Assessments
+  dashboard_navigation_view_assessments: Valutazioni
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
   dashboard_navigation_manage_students: Gestisci i tuoi studenti
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -716,11 +722,11 @@
   dashboard_progress_furthest_level_attempted: esercizio più avanzato che è stato
     provato
   dashboard_progress_submitted: inviato
-  dashboard_progress_view: 'View progress in:'
-  dashboard_progress_student_in_script: Progress information for %{student_name} in
-    %{script_name}
-  dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_progress_view: 'Mostra i progressi in:'
+  dashboard_progress_student_in_script: Informazioni sui progressi di %{student_name}
+    in %{script_name}
+  dashboard_responses_view: 'Visualizza il testo delle risposte in:'
+  dashboard_responses_none: Nessuna risposta
   dashboard_sections_new_section: Nuova classe
   dashboard_sections_jumbotron_instruction: Crea nuove classi e aggiungici studenti.
     Le classi ti aiutano a organizzare gli studenti in gruppi più piccoli, così è
@@ -745,25 +751,27 @@
     le informazioni degli account di ognuno dei tuoi studenti.
   dashboard_sections_switch_section: 'Cambia classe:'
   dashboard_sections_close: Chiudi
-  dashboard_sections_move_students_desc: Select students to move to a new section.
-    Moving students will not clear their progress.
-  dashboard_sections_one_per_teacher: Students can only be in one section for each
-    teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
-  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
-    section AND the new section
-  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
-    only.
-  dashboard_sections_move_students: Move Students
-  dashboard_error_none_selected: You didn't select any students to move. Please select
-    at least one student.
-  dashboard_error_other_section: If you're moving students between your own sections,
-    select your section from the dropdown. Only select 'Other Section' to move your
-    students to a different teacher's section.
+  dashboard_sections_move_students_desc: Seleziona gli studenti da spostare in una
+    nuova sezione. Spostare gli studenti non eliminerà i loro progressi.
+  dashboard_sections_one_per_teacher: Gli studenti possono trovarsi solo in una sezione
+    per ogni insegnante. I tuoi studenti verranno assegnati a questa nuova sezione
+    e lasceranno la precedente.
+  dashboard_sections_move_to_section: 'Spostati alla sezione:'
+  dashboard_sections_enter_code: 'Inserisci il codice di sezione:'
+  dashboard_sections_code_placeholder: Codice di 6 caratteri (ABCDEF)
+  dashboard_sections_other_section: Altra Sezione
+  dashboard_sections_both_sections: Vorresti che lo/gli studente/i si trovi/trovino
+    in entrambe le sezioni?
+  dashboard_sections_yes_both: Sì, vorrei che lo/gli studente/i si trovasse/trovassero
+    sia in questa sezione, sia in quella nuova
+  dashboard_sections_no_move: No, vorrei che lo/gli studente/i si trovasse/trovassero
+    solo nella nuova sezione.
+  dashboard_sections_move_students: Sposta gli studenti
+  dashboard_error_none_selected: Non hai selezionato nessuno studente. Per favore,
+    scegli almeno uno studente.
+  dashboard_error_other_section: Se stai spostando degli studenti tra le tue stesse
+    sezioni, selezionane una dal menù a tendina. Scegli 'Altra Sezione' solo se devi
+    spostare degli studenti nella sezione di un altro insegnante.
   dashboard_students_add_student: Aggiungi uno studente
   dashboard_students_add_students: Aggiungi più studenti
   dashboard_students_add_multiple: 'Scrivi o incolla i nomi dei tuoi studenti, uno
@@ -857,18 +865,18 @@
   dashboard_puzzle: Esercizio
   dashboard_question: Domanda
   dashboard_response: Risposta
-  dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness: Correttezza
+  dashboard_correctness_free_response: Risposta aperta
+  dashboard_correctness_unsubmitted: Non Inviato
   dashboard_correctness_correct: Molto bene!
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
-  dashboard_status: Status
-  dashboard_multi_correct: "# multiple choice correct"
-  dashboard_multi_count: "# multiple choice"
-  dashboard_multi_correct_percent: "% multiple choice correct"
-  dashboard_submission_timestamp: Submission timestamp
+  dashboard_correctness_incorrect: Errato
+  dashboard_submission_submitted: Inviato
+  dashboard_submission_in_progress: In corso
+  dashboard_status: Stato
+  dashboard_multi_correct: "# risposta multipla corrette"
+  dashboard_multi_count: "# risposta multipla"
+  dashboard_multi_correct_percent: "% risposta multipla corrette"
+  dashboard_submission_timestamp: Marca temporale della presentazione
   stats_hoc_2013_heading: 'incredibili statistiche dell''Ora del Codice dello scorso
     anno. In una settimana soltanto:'
   stats_hoc_2013_image_alt: Statistiche dell'Ora del Codice per il 2013
@@ -891,11 +899,18 @@
   dashboard_faq_k5: Domande frequenti FAQ K-5
   dashboard_announcements: Annunci
   dashboard_announce_view_all: Visualizza tutto
-  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
-    problem in computer science. Code Studio teachers are leading the way in educating
-    underrepresented minorities. Our annual survey shows record diversity in your
-    classrooms! Check out the numbers."
+  dashboard_announce_message: "<b>22 aprile 2016</b>- Le lezioni senza computer sono
+    una parte fondamentale dell'apprendimento, ma gli insegnanti ci hanno comunicato
+    che trovare tutto il materiale non è sempre semplice e si spreca un sacco di tempo.
+    Vi abbiamo dato ascolto! Adesso troverete tutte le lezioni all'interno della stessa
+    pagina. Utilizzatele con una classe d'informatica oppure come corso a sé stante."
   dashboard_announce_button_text: Ulteriori informazioni
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: 'L''Ora del Codice è qui: 8-14 Dicembre!'
   code_sign_up: Iscriviti per partecipare durante la Settimana di Educazione all'Informatica
   learn_more: Ulteriori informazioni
@@ -1021,13 +1036,31 @@
   course3_name: Corso 3
   course4_name: Corso 4
   accelerated_name: Corso rapido
-  cspunit3_name: CS Principles Unit 3
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
+  cspunit3_name: I principi dell'informatica - Unità 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
   cspunit3_gradelevel: Classi 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: Corso rapido
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Labirinto Classico
+  iceage_name: L'Era Glaciale
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Matematica
+  hoc_category_name: L'Ora del Codice
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
   applab_name: Laboratorio per le App
   applab_gradelevel: Eta' 13+
   applab_shortdescription_congrats: App Lab è un programma ambientale con cui puoi
@@ -1775,12 +1808,11 @@
   infinity_shortcode: inf
   playlab_shortcode: inizia
   artist_shortcode: art
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.

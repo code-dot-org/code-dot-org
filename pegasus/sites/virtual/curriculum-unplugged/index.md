@@ -19,7 +19,7 @@ video_player: true
         <h1 class="jumbo-h1-second-box">CS Fundamentals Unplugged</h1
         <p class="jumbo-tutorial-description">We've compiled a list of all of our unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand alone course or as complementary lessons for any computer science course.</p>
         <p>
-        <p class="jumbo-tutorial-specs">Ages 6+, English only</p>
+        <p class="jumbo-tutorial-specs">Ages 4+, English only</p>
       </div>
     </div>
   </div>
@@ -66,14 +66,14 @@ end
   <td style="background-color: #00ADBC; color: #FFFFFF; font-size: 20px; font-weight: bold;">Looking for lessons that don't require computers?</td>
 </tr>
 <tr>
-  <td> 
-  
+  <td>
+
   If this is your first time programming, you may want to go through one of the following online courses before teaching this material:
 <li> <a href="https://www.codecademy.com/learn/javascript" target="_blank">Codecademy</a>
 <li> <a href="https://www.khanacademy.org/computing/computer-programming/programming" target="_blank">Khan Academy</a>
 <li> <a href="https://codehs.com/library/course/1/module/1" target="_blank">CodeHS</a>
 
-  
+
   </td>
 </tr>
 </table> -->
@@ -101,44 +101,44 @@ Each of these activities can either be used alone or with other computer science
       <th style="text-align: center;">Additional Resources</th>
     </tr>
   </thead>
-  
+
    <% lessons.each_with_index do |lesson, index|
     	# Get the course number formatted well
-     
+
      theCourse = lesson[:courseNum_s]
- 
+
 	case theCourse
 	when "course1"
-	    theCourse = "Course 1, Lesson "
+	    theCourse = "Course 1: Stage "
 	when "course2"
-	    theCourse = "Course 2, Lesson "
+	    theCourse = "Course 2: Stage "
 	when "course3"
-	    theCourse = "Course 3, Lesson "
+	    theCourse = "Course 3: Stage "
 	when "course4"
-	    theCourse = "Course 4, Lesson "
+	    theCourse = "Course 4: Stage "
 	when "20-hour"
-	    theCourse = "Accelerated Course, Lesson "
+	    theCourse = "Accelerated Course: Stage "
 	else
 	    theCourse = ""
 	end
   %>
-  
+
   <tbody>
     <tr>
       <td rowspan="2" style="color: white; border:1px solid white; text-align: center;"><%= lesson[:mainConcept_s] %></td>
       <td style="border:1px solid #999999;"> <h3><a href="<%= lesson[:lessonURL_t] %>" target="_new"><%= lesson[:name_t] %></a></h3>
       	<div style="font-size: 11px; line-height: 120%;"><%= "<b>" + theCourse + lesson[:lessonNum_s] + "<br/> (age " + lesson[:age_s] +") </b>" %><br/><br/></div>
      	<div style="font-size: 12px; line-height: 110%;"><%= lesson[:overview_t] %><br/><br/></div>
-        <a href="<%= lesson[:lessonPlan_t] %>" target="_new">Lesson Plan</a> 
+        <a href="<%= lesson[:lessonPlan_t] %>" target="_new">Lesson Plan</a>
         <%	if lesson[:teacherVid_t].present? %>
 		  | <a href="<%= lesson[:teacherVid_t] %>">Teacher Video</a><br/>
 		<% end %>
-        
+
       </td>
       <td style="border:1px solid #999999;">
       <%= youtube_embed(lesson[:lessonVid_t])%>
    		<a href="<%= lesson[:lessonVid_t] %>"><%= lesson[:lessonVid_t] %></a>
-      
+
       </td>
       <td style="border:1px solid #999999;">
           <%	if lesson[:sampleTeachingVid_t].present? %>
@@ -148,7 +148,7 @@ Each of these activities can either be used alone or with other computer science
       <%= lesson[:additional_t] %></td>
     </tr>
     <% end %>
-</table> 
+</table>
 
 
 
@@ -156,7 +156,6 @@ Each of these activities can either be used alone or with other computer science
 
 
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
 [/content]
 
