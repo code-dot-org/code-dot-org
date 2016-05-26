@@ -72,20 +72,6 @@ var TopInstructions = React.createClass({
     // onResize: React.PropTypes.func.isRequired
   },
 
-  componentWillReceiveProps(nextProps) {
-    if (!this.props.markdown) {
-      return;
-    }
-
-    if (!nextProps.collapsed && nextProps.height < MIN_HEIGHT &&
-        nextProps.height < nextProps.maxHeight) {
-      // Height can get below min height iff we resize the window to be super
-      // small. If we then resize it to be larger again, we want to increase
-      // height.
-      this.props.setInstructionsRenderedHeight(Math.min(nextProps.maxHeight, MIN_HEIGHT));
-    }
-  },
-
   componentDidMount() {
     if (!this.props.markdown) {
       return;
@@ -105,6 +91,23 @@ var TopInstructions = React.createClass({
   },
 
   /**
+   * TODO - comment me
+   */
+  componentWillReceiveProps(nextProps) {
+    if (!this.props.markdown) {
+      return;
+    }
+
+    if (!nextProps.collapsed && nextProps.height < MIN_HEIGHT &&
+        nextProps.height < nextProps.maxHeight) {
+      // Height can get below min height iff we resize the window to be super
+      // small. If we then resize it to be larger again, we want to increase
+      // height.
+      this.props.setInstructionsRenderedHeight(Math.min(nextProps.maxHeight, MIN_HEIGHT));
+    }
+  },
+
+  /**
    * Given a prospective delta, determines how much we can actually change the
    * height (accounting for min/max) and changes height by that much.
    * @param {number} delta
@@ -121,6 +124,9 @@ var TopInstructions = React.createClass({
     return newHeight - currentHeight;
   },
 
+  /**
+   * TODO - comment me
+   */
   adjustMaxNeededHeight() {
     if (!this.props.markdown) {
       return;
@@ -150,6 +156,7 @@ var TopInstructions = React.createClass({
   },
 
   render: function () {
+    // TODO - might it make more sense to put the same DOM there, but hide it?
     if (!this.props.markdown) {
       return <div/>;
     }

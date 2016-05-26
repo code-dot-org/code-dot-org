@@ -177,6 +177,7 @@ var InstructionsWithWorkspace = React.createClass({
   },
 
   render() {
+    // TODO - might be able to get rid of refs
     return (
       <span>
         {this.props.showInstructions &&
