@@ -31,7 +31,7 @@ class PDFMergerTest < Minitest::Test
 
   def delete_outfiles
     @output_files.each do |output_filename|
-      File.delete(output_filename) if File.exists?(output_filename)
+      File.delete(output_filename) if File.exist?(output_filename)
     end
   end
 
@@ -41,42 +41,42 @@ class PDFMergerTest < Minitest::Test
   end
 
   def test_merge_two_local_pdfs
-    assert(!File.exists?(@output))
+    assert(!File.exist?(@output))
     PDF.merge_pdfs(@output, @local_pdf1, @local_pdf2)
-    assert(File.exists?(@output))
+    assert(File.exist?(@output))
     assert_equal(28, PDF::Reader.new(@output).pages.size)
   end
 
   def test_merge_two_remote_pdfs
     VCR.use_cassette('pdf/merge_remote') do
-      assert(!File.exists?(@output))
+      assert(!File.exist?(@output))
       PDF.merge_pdfs(@output, @remote_pdf1, @remote_pdf2)
-      assert(File.exists?(@output))
+      assert(File.exist?(@output))
       assert_equal(12, PDF::Reader.new(@output).pages.size)
     end
   end
 
   def test_merge_from_file
     VCR.use_cassette('pdf/merge_remote') do
-      assert(!File.exists?(@remote_collate_output_file))
+      assert(!File.exist?(@remote_collate_output_file))
       merge_file_pdfs(@remote_collate_file, @remote_collate_output_file)
-      assert(File.exists?(@remote_collate_output_file))
+      assert(File.exist?(@remote_collate_output_file))
       assert_equal(12, PDF::Reader.new(@remote_collate_output_file).pages.size)
     end
   end
 
   def test_merge_local_from_file
-    assert(!File.exists?(@local_collate_output_file))
+    assert(!File.exist?(@local_collate_output_file))
     merge_file_pdfs(@local_collate_file, @local_collate_output_file)
-    assert(File.exists?(@local_collate_output_file))
+    assert(File.exist?(@local_collate_output_file))
     assert_equal(28, PDF::Reader.new(@local_collate_output_file).pages.size)
   end
 
   def test_merge_with_numbers
-    assert(!File.exists?(@numbered_collate_output_file))
+    assert(!File.exist?(@numbered_collate_output_file))
     merge_file_pdfs(@numbered_collate_file, @temp_generated_unnumbered_pdf)
     PDF.number_pdf(@temp_generated_unnumbered_pdf, @numbered_collate_output_file)
-    assert(File.exists?(@numbered_collate_output_file))
+    assert(File.exist?(@numbered_collate_output_file))
     pages = PDF::Reader.new(@numbered_collate_output_file).pages
     assert_equal(28, pages.size)
     assert(pages[27].text.include?('28'))
