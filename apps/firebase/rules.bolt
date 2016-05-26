@@ -110,6 +110,12 @@ path /v3/channels/{channel_id}/server_time/{user_id} is Number {
 
 // STORAGE
 
+// key-value storage
+
+path /v3/channels/{channel_id}/storage/keys {
+  write() { isLoggedIn() }
+}
+
 // table storage
 
 // Children of {table_name} must specify their own write() rule.

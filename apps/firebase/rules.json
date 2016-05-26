@@ -11,6 +11,9 @@
             }
           },
           "storage": {
+            "keys": {
+              ".write": "auth.uid != null"
+            },
             "tables": {
               "$table_name": {
                 ".validate": "newData.hasChildren(['target_record_id'])",

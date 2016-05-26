@@ -11,7 +11,7 @@ var FirebaseUtils = require('./firebaseUtils');
 var FirebaseStorage = module.exports;
 
 function getKeyValues(channelId) {
-  var kv = FirebaseUtils.getDatabase(channelId).child('keys');
+  var kv = FirebaseUtils.getDatabase(channelId).child('storage').child('keys');
   //console.log(kv);
   return kv;
 }
@@ -362,7 +362,7 @@ FirebaseStorage.populateTable = function (jsonData, overwrite, onSuccess, onErro
   if (!jsonData || !jsonData.length) {
     return;
   }
-  var tables = FirebaseUtils.getDatabase(Applab.channelId).child('tables');
+  var tables = FirebaseUtils.getDatabase(Applab.channelId).child('storage').child('tables');
 
   // TODO: Respect overwrite
   tables.set(jsonData, function (error) {
@@ -391,7 +391,7 @@ FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onE
     return;
   }
   // TODO: Test this; Implement overwrite.
-  var tables = FirebaseUtils.getDatabase(Applab.channelId).child('tables');
+  var tables = FirebaseUtils.getDatabase(Applab.channelId).child('storage').child('tables');
   var keyValues = getKeyValues(Applab.channelId);
   tables.set(jsonData, function (error) {
     if (!error) {
