@@ -1,3 +1,8 @@
+general:
+  artifacts:
+    - pegasus/test/fixtures/output
+    - dashboard/log
+    - pegasus/log
 machine:
   ruby:
     version: 2.2.3
