@@ -137,7 +137,7 @@ path /v3/channels/{channel_id}/storage/tables/{table_name}/row_counts {
   write() { isLoggedIn() && this != null }
   validate() { 
     // require that target record is modified appropriately when row count is modified
-    sumRowCounts(this) < 1000 && rowCountUpdated(nextTargetRecord(this.parent()), prevTargetRecord(this.parent()))
+    sumRowCounts(this) < 50 && rowCountUpdated(nextTargetRecord(this.parent()), prevTargetRecord(this.parent()))
   }
 }
 
