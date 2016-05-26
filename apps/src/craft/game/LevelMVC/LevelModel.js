@@ -135,7 +135,7 @@ export default class LevelModel {
         i;
 
     for (i = 0; i < this.planeArea(); ++i) {
-      if (blockType == this.actionPlane[i].blockType) {
+      if (blockType === this.actionPlane[i].blockType) {
         ++count;
       }
     }
@@ -189,7 +189,7 @@ export default class LevelModel {
       for (var y = 0; y < this.planeHeight; ++y) {
         var index = this.coordinatesToIndex([x,y]);
         var block = this.actionPlane[index];
-        if (block.blockType.substring(0,7) == "railsUn") {
+        if (block.blockType.substring(0,7) === "railsUn") {
           unpoweredRails.push([x,y], "railsPowered" + this.actionPlane[index].blockType.substring(14));
         }
       }
@@ -247,12 +247,12 @@ export default class LevelModel {
       let blockIndex = this.yToIndex(position[1]) + position[0];
       if (blockIndex >= 0 && blockIndex < this.planeArea()) {
 
-          if (blockType == "empty") {
+          if (blockType === "empty") {
               result =  plane[blockIndex].isEmpty;
-          } else if (blockType == "tree") {
+          } else if (blockType === "tree") {
               result = plane[blockIndex].getIsTree();
           } else {
-              result = (blockType == plane[blockIndex].blockType);
+              result = (blockType === plane[blockIndex].blockType);
           }
       }
 
@@ -348,7 +348,7 @@ export default class LevelModel {
   getAllBorderingPositionNotOfType(position, blockType) {
     var surroundingBlocks = this.getAllBorderingPosition(position, null);
     for (var b = 1; b < surroundingBlocks.length; ++b) {
-      if (surroundingBlocks[b][0] && this.actionPlane[this.coordinatesToIndex(surroundingBlocks[b][1])].blockType == blockType) {
+      if (surroundingBlocks[b][0] && this.actionPlane[this.coordinatesToIndex(surroundingBlocks[b][1])].blockType === blockType) {
         surroundingBlocks[b][0] = false;
       }
     }

@@ -208,7 +208,8 @@ Dashboard::Application.routes.draw do
   get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_funometer#funometer_by_script_level', as: 'funometer_by_script_level'
 
   # internal search tools
-  get 'admin/search_for_teachers', to: 'admin_search#search_for_teachers', as: 'search_for_teachers'
+  get '/admin/find_students', to: 'admin_search#find_students', as: 'find_students'
+  get '/admin/search_for_teachers', to: 'admin_search#search_for_teachers', as: 'search_for_teachers'
   get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'admin_search#lookup_section'
 

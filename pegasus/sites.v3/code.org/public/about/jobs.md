@@ -10,16 +10,16 @@ nav: about_nav
 - **Curriculum**
  	- [2016 Summer Curriculum Writing Cohort](#summercohort)
 - **Finance and Administration**
- 	- [Financial Analyst](#finance)
+ 	- [Controller](#controller)
 - **Fundraising**
- 	- [Grant Writer (Part time)](#grant)
+ 	- [Grant Writer](#grant)
 - **Marketing**
  	- [Marketing Associate](#market)
 - **Outreach**
  	- [District Manager - East Coast locations](#dcdm)
 - **Product**
 	- [Senior Backend Engineer / Infrastructure Lead](#backend)
-	- [UX / Visual Designer](#design)
+	- [UX / Visual Designer (Part time)](#design)
 - **Professional Learning & Community**
 	- [Training and Development Specialist](#train)
 
@@ -68,7 +68,7 @@ To apply, please email resume, cover letter, and/or LinkedIn profile to <a href=
 Please include lesson plan samples that are your original work, and highlight relevant experience designing, developing, or writing implement curricular materials. 
 
 
-## <a name="finance"href="#finance">Financial Analyst (Seattle, WA)</a>
+## <a name="Controller"href="#controller">Controller (Seattle, WA)</a>
 
 **Job Summary:**
 
@@ -112,7 +112,7 @@ To apply, please email resume, cover letter, and/or LinkedIn profile to <a href=
 
 The Grant Writer plays an important role in increasing revenue for Code.org, with a focus on grant writing, and stewardship of existing Foundation and Corporate partnerships. The candidate selected for this role will develop compelling proposals that will result in funding for the immediate and long-term goals of Code.org, and also help strengthen existing relationships with the corporate and foundation sector. 
 
-This is a part-time position. Responsibilities of the position include:
+Responsibilities of the position include:
 
 - Developing and writing letters of inquiry, grant proposals and reports to foundations, corporations, and other grant-making organizations; persuasively communicating the organization’s mission and programs to potential funders
 - Cultivating and growing support from existing Foundation and corporate donors, including managing the Code.org Employee Engagement program to build corporate pipeline

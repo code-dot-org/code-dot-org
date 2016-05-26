@@ -582,7 +582,7 @@ export default class LevelView {
         oreString === "ore" || groundType === "bricks") {
       this.audioPlayer.play("stepStone");
     } else if (groundType === "grass" || groundType === "dirt" || groundType === "dirtCoarse" ||
-        groundType == "wool_orange" || groundType == "wool") {
+        groundType === "wool_orange" || groundType === "wool") {
       this.audioPlayer.play("stepGrass");
     } else if (groundType === "gravel") {
       this.audioPlayer.play("stepGravel");
