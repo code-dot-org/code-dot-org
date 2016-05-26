@@ -1,6 +1,7 @@
 /** @file Root of the animation editor interface mode for GameLab */
 'use strict';
 
+import React from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 import color from '../../color';

@@ -1,3 +1,4 @@
+import React from 'react';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 
 var Visualization = function () {

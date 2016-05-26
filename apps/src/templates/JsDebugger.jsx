@@ -3,6 +3,7 @@
  * so this can only be used in cases where we have a redux store.
  */
 
+var React = require('react');
 var connect = require('react-redux').connect;
 
 var i18n = require('../locale');
