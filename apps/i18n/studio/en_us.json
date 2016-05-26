@@ -207,7 +207,7 @@
   "itemDisc": "disc",
   "itemPie": "pie",
   "itemPumpkin": "pumpkin",
-  "itemRainbow": "rainbow",
+  "itemStar": "star",
   "itemSandwich": "sandwich",
   "itemSnowball": "snowball",
   "itemRandom": "random",
@@ -251,7 +251,7 @@
   "makeProjectileDisc": "make disc",
   "makeProjectilePie": "make pie",
   "makeProjectilePumpkin": "make pumpkin",
-  "makeProjectileRainbow": "make rainbow",
+  "makeProjectileStar": "make star",
   "makeProjectileSandwich": "make sandwich",
   "makeProjectileSnowball": "make snowball",
 
@@ -391,7 +391,7 @@
   "projectileDisc": "disc",
   "projectilePie": "pie",
   "projectilePumpkin": "pumpkin",
-  "projectileRainbow": "rainbow",
+  "projectileStar": "star",
   "projectileSandwich": "sandwich",
   "projectileSnowball": "snowball",
 
@@ -752,7 +752,7 @@
   "whenSpriteCollidedWithDisc": "touches disc",
   "whenSpriteCollidedWithPie": "touches pie",
   "whenSpriteCollidedWithPumpkin": "touches pumpkin",
-  "whenSpriteCollidedWithRainbow": "touches rainbow",
+  "whenSpriteCollidedWithStar": "touches star",
   "whenSpriteCollidedWithSandwich": "touches sandwich",
   "whenSpriteCollidedWithSnowball": "touches snowball",
 
