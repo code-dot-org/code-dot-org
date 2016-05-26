@@ -1,3 +1,4 @@
+var React = require('react');
 var connect = require('react-redux').connect;
 var utils = require('../../utils');
 var styleConstants = require('../../styleConstants');

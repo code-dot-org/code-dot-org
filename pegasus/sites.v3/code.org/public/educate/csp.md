@@ -74,10 +74,6 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 
 <div style="clear: both;"></div>
 
-### <a name="acknowledgements"></a>Acknowledgements
-
-The Code.org CS Principles curriculum would not have been possible without inspiration from a number of leaders and projects in the CS education community, the incredible work of the many curriculum writers, engineers, teachers and volunteers who helped develop the course, and the generosity of a number of our donors. Thank you!
-
 ## <a name="overview"></a>Overview
 
 Several documents describe the overarching themes and direction of the course.

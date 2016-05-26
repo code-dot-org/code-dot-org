@@ -1,3 +1,5 @@
+var React = require('react');
+
 /**
  * A dropdown with the set of ages we use across our site (4-20, 21+)
  * NOTE: this is pretty similarly to a component in dashboard's

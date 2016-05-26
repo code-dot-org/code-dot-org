@@ -1,3 +1,4 @@
+var React = require('react');
 var assetsApi = require('@cdo/apps/clientApi').assets;
 var AssetThumbnail = require('./AssetThumbnail');
 

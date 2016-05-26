@@ -1,5 +1,6 @@
 'use strict';
 
+import React from 'react';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';

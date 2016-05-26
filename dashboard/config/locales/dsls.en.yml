@@ -1451,6 +1451,9 @@ en:
       introduction to events: {}
       introduction to turtle: {}
       k5 what next 1: {}
+      newCSFsample:
+        Intro: Intro
+        description here: description here
       plc csp1 chapter overviews: {}
       plc csp1 intro to tools: {}
       plc csp1 introduction to unit: {}
@@ -2427,9 +2430,9 @@ en:
         A chunk of information that gets sent on the internet: A chunk of information that gets sent on the internet
         A packet of data that uses 32-bit addresses: A packet of data that uses 32-bit addresses
         A well-known set of rules and standards used to communicate: A well-known set of rules and standards used to communicate
+        IP addresses, Packets and Protocols: IP addresses, Packets and Protocols
         IPv4 packet: IPv4 packet
-        Internet Protocol: Internet Protocol
-        'Invent an Addressing Protocol: Question 1': 'Invent an Addressing Protocol: Question 1'
+        The Internet Protocol (IP): The Internet Protocol (IP)
         The required structure of a packet to be sent on the internet: The required structure of a packet to be sent on the internet
         packet: packet
         protocol: protocol
@@ -3945,7 +3948,7 @@ en:
         'make informed choices to support or oppose decisions my government makes about access to the internet. ': 'make informed choices to support or oppose decisions my government makes about access to the internet. '
         speed up my downloads of movies I purchase.: speed up my downloads of movies I purchase.
       U2L02 Assessment 3:
-        'The Need For Addressing: Assessment 1': 'The Need For Addressing: Assessment 1'
+        The Need For Addressing: The Need For Addressing
         'To improve communication in playing battleship on the Internet Simulator your group invented a(n):': 'To improve communication in playing battleship on the Internet Simulator your group invented a(n):'
         algorithm: algorithm
         encoding: encoding
@@ -3954,8 +3957,8 @@ en:
       U2L02 Assessment 4:
         From: From
         Grid Coordinates: Grid Coordinates
-        'The Need For Addressing: Assessment 2': 'The Need For Addressing: Assessment 2'
-        Time: Time
+        The Need For Addressing: The Need For Addressing
+        Time of Day: Time of Day
         To: To
         Which of the following information is not necessary in your protocol to play battleship?: Which of the following information is not necessary in your protocol to play battleship?
       U2L04 Assessment1:
@@ -4165,11 +4168,11 @@ en:
         6 users: 6 users
         64 users: 64 users
         How many users would a fixed-length IP address system using 6 bits support?: How many users would a fixed-length IP address system using 6 bits support?
-        'Invent an Addressing Protocol: Question 1': 'Invent an Addressing Protocol: Question 1'
+        IP Addresses and Bits: IP Addresses and Bits
       U2L3 Assessment 3:
         ? 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
         : 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
-        'Invent an Addressing Protocol: Question 2': 'Invent an Addressing Protocol: Question 2'
+        Invent an Addressing Protocol: Invent an Addressing Protocol
         abstraction: abstraction
         hierarchy: hierarchy
         packet: packet

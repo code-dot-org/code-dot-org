@@ -1,4 +1,6 @@
-var Radium = require('radium');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Radium from 'radium';
 
 var styles = {
   standard: {
@@ -6,7 +8,7 @@ var styles = {
     paddingTop: 19
   },
   inTopPane: {
-    marginBottom: 35,
+    marginBottom: 0,
     paddingTop: 0
   },
   // Optionally give markdown dialog wide left margin so it looks more like a
