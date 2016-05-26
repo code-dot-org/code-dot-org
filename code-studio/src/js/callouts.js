@@ -35,9 +35,9 @@ module.exports = function createCallouts(callouts) {
   // appropriate events to open the callout
   document.body.onhashchange = function () {
     var loc = window.location;
-    var splitHash = loc.hash.split("#show_callout=");
+    var splitHash = loc.hash.split("#callouton=");
     if (splitHash.length > 1) {
-      $(window).trigger(splitHash[1]);
+      $(window).trigger(splitHash[1], ['reAppear']);
       if (window.history.pushState) {
         history.pushState("", document.title, loc.pathname + loc.search);
       } else {
@@ -81,6 +81,8 @@ module.exports = function createCallouts(callouts) {
     }
 
     var defaultConfig = {
+      codeStudio: {
+      },
       content: {
         text: callout.localized_text,
         title: {
@@ -128,9 +130,9 @@ module.exports = function createCallouts(callouts) {
     }
 
     if (callout.on) {
-      $(window).on(callout.on, function () {
+      $(window).on(callout.on, function (e, action) {
         if ($(selector).length > 0) {
-          if (callout.canReappear || !callout.seen) {
+          if (action === "reAppear" || !callout.seen) {
             $(selector).qtip(config).qtip('show');
           }
           callout.seen = true;
