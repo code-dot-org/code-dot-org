@@ -715,22 +715,21 @@ function makeDraggable(jqueryElements) {
         var newWidth = ui.originalSize.width + (deltaWidth / scale);
         var newHeight = ui.originalSize.height + (deltaHeight / scale);
 
-        // snap width/height to nearest grid increment
+        // Get positions that snap to the grid
         newWidth = gridUtils.snapToGridSize(newWidth);
         newHeight = gridUtils.snapToGridSize(newHeight);
 
-        // Bound at app edges
+        // Get positions that are bounded within app space
         var dimensions = boundedResize(ui.position.left, ui.position.top, newWidth, newHeight, false);
 
-        ui.size.width = newWidth;
-        ui.size.height = newHeight;
-        wrapper.css({
-          width: dimensions.width,
-          height: dimensions.height
-        });
+        // Update the position of wrapper (.ui-resizable) div
+        ui.size.width = dimensions.width;
+        ui.size.height = dimensions.height;
 
-        elm.outerWidth(wrapper.width());
-        elm.outerHeight(wrapper.height());
+        // Set original element properties to update values in Property tab
+        elm.outerWidth(dimensions.width);
+        elm.outerHeight(dimensions.width);
+
         var element = elm[0];
         // canvas uses width/height. other elements use style.width/style.height
         var widthProperty = 'style-width';
