@@ -12,14 +12,6 @@
     "node": ">=0.12.0",
     "npm": "^2.9.1"
   },
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
-  },
-  "browserify-shim": {
-    "jquery-shim": "global:$"
-  },
   "scripts": {
     "postinstall": "linklocal",
     "lint": "npm run lint-js && npm run lint-css",

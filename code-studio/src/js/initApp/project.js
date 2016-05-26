@@ -1,4 +1,5 @@
 /* global dashboard, appOptions, trackEvent */
+import $ from 'jquery';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
