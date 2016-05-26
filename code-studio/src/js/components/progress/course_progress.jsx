@@ -1,8 +1,8 @@
-/* global React, dashboard */
-
-import {STAGE_TYPE} from './types';
-import CourseProgressRow from './course_progress_row';
-import StageDetails from './stage_details';
+import React from 'react';
+import { connect } from 'react-redux';
+import { STAGE_TYPE } from './types';
+import CourseProgressRow from './course_progress_row.jsx';
+import StageDetails from './stage_details.jsx';
 
 /**
  * Stage progress component used in level header and course overview.
@@ -55,4 +55,8 @@ var CourseProgress = React.createClass({
     );
   }
 });
-module.exports = CourseProgress;
+
+export default connect(state => ({
+  display: state.display,
+  stages: state.stages
+}))(CourseProgress);

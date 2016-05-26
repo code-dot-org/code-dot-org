@@ -36,6 +36,29 @@
   }
 }]]></config>
   <blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">245</title>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">90</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
     <predraw_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
@@ -78,28 +101,23 @@
             <block type="draw_width" inline="false">
               <value name="WIDTH">
                 <block type="math_number">
-                  <title name="NUM">12</title>
+                  <title name="NUM">30</title>
                 </block>
               </value>
               <next>
-                <block type="controls_repeat">
-                  <title name="TIMES">90</title>
-                  <statement name="DO">
+                <block type="draw_pen">
+                  <title name="PEN">penDown</title>
+                  <next>
                     <block type="draw_move_by_constant">
                       <title name="DIR">moveForward</title>
-                      <title name="VALUE">0.5</title>
+                      <title name="VALUE">1</title>
                       <next>
-                        <block type="draw_turn" inline="true">
-                          <title name="DIR">turnRight</title>
-                          <value name="VALUE">
-                            <block type="math_number">
-                              <title name="NUM">4</title>
-                            </block>
-                          </value>
+                        <block type="draw_pen">
+                          <title name="PEN">penUp</title>
                         </block>
                       </next>
                     </block>
-                  </statement>
+                  </next>
                 </block>
               </next>
             </block>

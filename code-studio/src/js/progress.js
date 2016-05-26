@@ -1,8 +1,12 @@
 /* globals dashboard, appOptions  */
 
-var clientState = require('./clientState');
-var StageProgress = require('./components/progress/stage_progress');
-var CourseProgress = require('./components/progress/course_progress');
+import React from 'react';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import _ from 'lodash';
+import clientState from './clientState';
+import StageProgress from './components/progress/stage_progress.jsx';
+import CourseProgress from './components/progress/course_progress.jsx';
 
 var progress = module.exports;
 
@@ -11,6 +15,7 @@ var progress = module.exports;
  */
 const MINIMUM_PASS_RESULT = 20;
 const MINIMUM_OPTIMAL_RESULT = 30;
+const SUBMITTED_RESULT = 1000;
 const REVIEW_REJECTED_RESULT = 1500;
 const REVIEW_ACCEPTED_RESULT = 2000;
 
@@ -23,6 +28,9 @@ progress.activityCssClass = function (result) {
   if (!result) {
     return 'not_tried';
   }
+  if (result === SUBMITTED_RESULT) {
+    return 'submitted';
+  }
   if (result >= MINIMUM_OPTIMAL_RESULT) {
     return 'perfect';
   }
@@ -31,6 +39,11 @@ progress.activityCssClass = function (result) {
   }
   return 'attempted';
 };
+
+/**
+ * See ApplicationHelper::PUZZLE_PAGE_NONE.
+ */
+progress.PUZZLE_PAGE_NONE = -1;
 
 /**
  * Returns the "best" of the two results, as defined in apps/src/constants.js.
@@ -107,7 +120,7 @@ progress.populateProgress = function (scriptName, puzzlePage) {
   });
 
   // Unless we already highlighted a specific page, highlight the current level.
-  if (puzzlePage === -1 && window.appOptions && appOptions.serverLevelId) {
+  if (puzzlePage === progress.PUZZLE_PAGE_NONE && window.appOptions && appOptions.serverLevelId) {
     $('.level-' + appOptions.serverLevelId).parent().addClass('puzzle_outer_current');
   }
 };
@@ -170,7 +183,7 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
     };
   });
 
-  if (currentLevelIndex !== null && puzzlePage !== -1) {
+  if (currentLevelIndex !== null && puzzlePage !== progress.PUZZLE_PAGE_NONE) {
     currentLevelIndex += puzzlePage - 1;
   }
 
@@ -179,17 +192,75 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
   $('.progress_container').replaceWith(mountPoint);
   ReactDOM.render(React.createElement(StageProgress, {
     levels: combinedProgress,
-    currentLevelIndex: currentLevelIndex
+    currentLevelIndex: currentLevelIndex,
+    saveAnswersFirst: puzzlePage !== progress.PUZZLE_PAGE_NONE
   }), mountPoint);
 };
 
 progress.renderCourseProgress = function (scriptData) {
-  var teacherCourse = $('#landingpage').hasClass('teacher-course');
+  var store = loadProgress(scriptData);
   var mountPoint = document.createElement('div');
+
+  $.ajax('/api/user_progress/' + scriptData.name).done(data => {
+    data = data || {};
+
+    // Show lesson plan links if teacher
+    if (data.isTeacher) {
+      $('.stage-lesson-plan-link').show();
+    }
+
+    // Merge progress from server (loaded via AJAX)
+    if (data.levels) {
+      store.dispatch({
+        type: 'MERGE_PROGRESS',
+        progress: _.mapValues(data.levels, level => level.submitted ? SUBMITTED_RESULT : level.result)
+      });
+    }
+  });
+
   $('.user-stats-block').prepend(mountPoint);
-  ReactDOM.render(React.createElement(CourseProgress, {
-    display: teacherCourse ? 'list' : 'dots',
-    stages: scriptData.stages
-  }), mountPoint);
-  progress.populateProgress(scriptData.name);
+  ReactDOM.render(
+    <Provider store={store}>
+      <CourseProgress />
+    </Provider>,
+    mountPoint
+  );
 };
+
+function loadProgress(scriptData) {
+  var teacherCourse = $('#landingpage').hasClass('teacher-course');
+
+  let store = createStore((state = [], action) => {
+    if (action.type === 'MERGE_PROGRESS') {
+      let newProgress = {};
+      return {
+        display: state.display,
+        progress: newProgress,
+        stages: state.stages.map(stage => _.assign({}, stage, {levels: stage.levels.map(level => {
+          let id = level.uid || level.id;
+          newProgress[id] = clientState.mergeActivityResult(state.progress[id], action.progress[id]);
+
+          return _.assign({}, level, {status: progress.activityCssClass(newProgress[id])});
+        })}))
+      };
+    }
+    return state;
+  }, {
+    display: teacherCourse ? 'list' : 'dots',
+    progress: {},
+    stages: scriptData.stages
+  });
+
+  // Merge in progress saved on the client.
+  store.dispatch({
+    type: 'MERGE_PROGRESS',
+    progress: clientState.allLevelsProgress()[scriptData.name] || {}
+  });
+
+  // Progress from the server should be written down locally.
+  store.subscribe(() => {
+    clientState.batchTrackProgress(scriptData.name, store.getState().progress);
+  });
+
+  return store;
+}
