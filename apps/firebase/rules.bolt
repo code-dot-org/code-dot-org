@@ -41,32 +41,32 @@ getRateLimitData(channel, interval) { channel.data.limits[interval + ''] }
 
 isValidIncrement(limitCounter, maxCount) {
   isUnchanged(limitCounter.last_reset_time) &&
-  isIncreased(limitCounter.last_op_count) &&
-  limitCounter.last_op_count <= maxCount 
+  isIncreased(limitCounter.last_token) &&
+  limitCounter.last_token <= maxCount 
 }
 
 isValidReset(channel, interval) {
-  channel.data.limits[interval + ''].used_ops == null &&
+  channel.data.limits[interval + ''].used_tokens == null &&
   channel.counters.limits[interval + ''].last_reset_time == now && 
   isIncreasedBy(channel.counters.limits[interval + ''].last_reset_time, interval * 1000) &&
-  channel.counters.limits[interval + ''].last_op_count == 0
+  channel.counters.limits[interval + ''].last_token == 0
 }
 
 // The NEW version of the NEW target op.
 nextTargetOp(limitData) {
-  limitData.used_ops[limitData.target_op_id + '']
+  limitData.used_tokens[limitData.target_token + '']
 }
 
 // The OLD version of the NEW target op.
 prevTargetOp(limitData) { 
-  prior(limitData).used_ops[limitData.target_op_id + '']
+  prior(limitData).used_tokens[limitData.target_token + '']
 }
 
 isValidUsedOp(channel, interval) {
-  isUnchanged(channel.counters.limits[interval + ''].last_op_count) &&
+  isUnchanged(channel.counters.limits[interval + ''].last_token) &&
   isUnchanged(channel.counters.limits[interval + ''].last_reset_time) &&
   targetOpUsed(channel.data.limits[interval + '']) &&
-  channel.data.limits[interval + ''].target_op_id <= channel.counters.limits[interval + ''].last_op_count
+  channel.data.limits[interval + ''].target_token <= channel.counters.limits[interval + ''].last_token
 }
 
 isValidRateLimitData(channel, interval) {
@@ -80,7 +80,7 @@ isValidRateLimitCounter(channel, interval, maxCount) {
 }
 
 targetOpUsed(limitData) {
-  limitData.target_op_id != null &&
+  limitData.target_token != null &&
   prevTargetOp(limitData) == null && nextTargetOp(limitData) == true
 }
 
@@ -145,7 +145,7 @@ type RateLimitCounters {
 
 type RateLimitCounter {
   last_reset_time: Number | Null
-  last_op_count: Number
+  last_token: Number
 }
 
 path /v3/channels/{channel_id}/counters/limits is RateLimitCounters {
@@ -172,8 +172,8 @@ type RateLimitDatas {
 }
 
 type RateLimitData {
-  target_op_id: Number | Null
-  used_ops: Boolean[]
+  target_token: Number | Null
+  used_tokens: Boolean[]
 }
 
 path /v3/channels/{channel_id}/data/limits is RateLimitDatas {
