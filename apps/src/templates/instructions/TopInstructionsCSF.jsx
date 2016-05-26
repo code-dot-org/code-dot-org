@@ -167,17 +167,18 @@ var TopInstructions = React.createClass({
       <div style={mainStyle} className="editor-column">
         <div>
           <div style={styles.body}>
-            <CollapserButton
+            {this.props.longInstructions && <CollapserButton
                 style={styles.collapserButton}
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}/>
-              {<Instructions
-                  ref="instructions"
-                  renderedMarkdown={renderedMarkdown}
-                  onResize={this.props.onResize}
-                  inTopPane
-              />
-              }
+            }
+            {<Instructions
+                ref="instructions"
+                renderedMarkdown={renderedMarkdown}
+                onResize={this.props.onResize}
+                inTopPane
+            />
+            }
           </div>
           {!this.props.collapsed && !this.props.isEmbedView && <HeightResizer
             position={this.props.height}
