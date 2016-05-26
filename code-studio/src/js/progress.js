@@ -238,11 +238,11 @@ function loadProgress(scriptData) {
       return {
         display: state.display,
         progress: newProgress,
-        stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
+        stages: state.stages.map(stage => _.assign({}, stage, {levels: stage.levels.map(level => {
           let id = level.uid || level.id;
           newProgress[id] = clientState.mergeActivityResult(state.progress[id], action.progress[id]);
 
-          return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id])});
+          return _.assign({}, level, {status: progress.activityCssClass(newProgress[id])});
         })}))
       };
     }
