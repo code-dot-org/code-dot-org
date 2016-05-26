@@ -206,7 +206,7 @@ class Documents < Sinatra::Base
   # Documents
   get_head_or_post '*' do |uri|
     pass unless path = resolve_document(uri)
-    NewRelic::Agent.set_transaction_name(path) if defined? NewRelic
+    NewRelic::Agent.set_transaction_name(uri) if defined? NewRelic
     not_found! if settings.not_found_extnames.include?(File.extname(path))
     document path
   end
