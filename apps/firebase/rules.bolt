@@ -1,3 +1,7 @@
+///////////////////////////////////////////////////////////////////////////
+// HELPER FUNCTIONS
+///////////////////////////////////////////////////////////////////////////
+
 // auth helpers
 
 isLoggedIn() { auth.uid !== null }
@@ -91,9 +95,9 @@ allRateLimitsUpdated(channel) {
   targetOpUsed(getRateLimitStorage(channel, 60))
 }
 
-//
-// path rules
-//
+///////////////////////////////////////////////////////////////////////////
+// PATH RULES
+///////////////////////////////////////////////////////////////////////////
 
 path /v3/channels {
   read() { true }
@@ -111,6 +115,8 @@ path /v3/channels/{channel_id}/counters/tables/{table_name}/last_id is Number {
   validate() { this > orZero(prior(this)) }
 }
 
+// table storage
+
 path /v3/channels/{channel_id}/storage/tables/{table_name}/target_record_id is String {
   write() { isLoggedIn() && this != null }
 }
@@ -125,7 +131,7 @@ path /v3/channels/{channel_id}/storage/tables/{table_name}/row_counts {
 
 path /v3/channels/{channel_id}/storage/tables/{table_name}/row_counts/{bucket} is Number;
 
-// the key $record_id is the id of the record. Its value is the json-encoded
+// the {record_id} is the id of the record. Its value is the json-encoded
 // value of the record.
 path /v3/channels/{channel_id}/storage/tables/{table_name}/records/{record_id} is String {
   write() {
