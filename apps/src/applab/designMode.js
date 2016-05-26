@@ -705,6 +705,9 @@ function makeDraggable(jqueryElements) {
         // resizable sets z-index to 90, which we don't want
         $(this).children().css('z-index', '');
       },
+      start: function () {
+        highlightElement(elm[0]);
+      },
       resize: function (event, ui) {
         // Wishing for a vector maths library...
 
@@ -738,10 +741,9 @@ function makeDraggable(jqueryElements) {
           widthProperty = 'width';
           heightProperty = 'height';
         }
-        designMode.onPropertyChange(element, widthProperty, element.style.width);
-        designMode.onPropertyChange(element, heightProperty, element.style.height);
 
-        highlightElement(elm[0]);
+        // Re-render design work space for this element
+        designMode.renderDesignWorkspace(elm[0]);
       }
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
@@ -778,7 +780,7 @@ function makeDraggable(jqueryElements) {
           elm.removeClass("toDelete");
         }
 
-        // Render design work space for this element
+        // Re-render design work space for this element
         designMode.renderDesignWorkspace(elm[0]);
       },
       stop: function (event, ui) {
@@ -798,20 +800,7 @@ function makeDraggable(jqueryElements) {
         } else {
 
           // Otherwise, make sure that the element is contained within the app space
-          var newContainedPos = enforceContainment(
-            ui.position.left, ui.position.top, ui.helper.outerWidth(), ui.helper.outerHeight());
-
-          // Slide animate the wrapper back into the app space
-          ui.helper.animate({
-            left: newContainedPos.left,
-            top: newContainedPos.top,
-          }, 200);
-
-          // Set original element properties to update values in Property tab
-          elm.css({
-            left: newContainedPos.left,
-            top: newContainedPos.top,
-          });
+          moveElementIntoBounds(elm);
 
           // Render design work space for this element
           designMode.renderDesignWorkspace(elm[0]);
@@ -965,9 +954,50 @@ designMode.configureDragAndDrop = function () {
           }, 1);
         }
       }
+
+      // Move the element into the app space bounds
+      moveElementIntoBounds(element);
+
+      // Re-render design work space for this element
+      designMode.renderDesignWorkspace(element);
     }
   });
 };
+
+/**
+ * Given a design element, move and animate it into the bounds of app space.
+ * Assumption: The design element is wrapped in a .ui-draggable wrapper already.
+ * @param {HTMLElement} The HTMLElement representing the design element.
+ */
+function moveElementIntoBounds(element) {
+  // Get the element's wrapper.
+  // If it doesn't exist (e.g. for a SCREEN element), return.
+  if ($(element).parent('.ui-draggable').length === 0) {
+    return;
+  }
+  var elm = $(element).parent('.ui-draggable');
+
+  // Get the CSS position and dimensions of the element/wrapper
+  var left = parseFloat(elm.css('left'));
+  var top = parseFloat(elm.css('top'));
+  var width = parseFloat(elm.css('width'));
+  var height = parseFloat(elm.css('height'));
+
+  // Get new contained position
+  var newContainedPos = enforceContainment(left, top, width, height);
+
+  // Slide animate the wrapper back into the app space
+  elm.animate({
+    left: newContainedPos.left,
+    top: newContainedPos.top,
+  }, 200);
+
+  // Update position on original element to update values in Property tab
+  $(element).css({
+    left: newContainedPos.left,
+    top: newContainedPos.top,
+  });
+}
 
 /**
  * Create a new screen
