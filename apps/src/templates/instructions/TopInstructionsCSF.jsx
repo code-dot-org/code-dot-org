@@ -104,18 +104,18 @@ var TopInstructions = React.createClass({
   /**
    * TODO - comment me
    */
-  adjustMaxNeededHeight() {
+  componentWillReceiveProps(nextProps) {
     if (!this.props.shortInstructions && !this.props.longInstructions) {
       return;
     }
-    const instructionsContent = this.refs.instructions;
-    const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
-      RESIZER_HEIGHT;
 
-    this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
-    return maxNeededHeight;
+    if (nextProps.height < MIN_HEIGHT && nextProps.height < nextProps.maxHeight) {
+      // Height can get below min height iff we resize the window to be super
+      // small. If we then resize it to be larger again, we want to increase
+      // height.
+      this.props.setInstructionsRenderedHeight(Math.min(nextProps.maxHeight, MIN_HEIGHT));
+    }
   },
-
 
   /**
    * Given a prospective delta, determines how much we can actually change the
@@ -132,6 +132,21 @@ var TopInstructions = React.createClass({
 
     this.props.setInstructionsRenderedHeight(newHeight);
     return newHeight - currentHeight;
+  },
+
+  /**
+   * TODO - comment me
+   */
+  adjustMaxNeededHeight() {
+    if (!this.props.shortInstructions && !this.props.longInstructions) {
+      return;
+    }
+    const instructionsContent = this.refs.instructions;
+    const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
+      RESIZER_HEIGHT;
+
+    this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
+    return maxNeededHeight;
   },
 
   /**
@@ -195,7 +210,8 @@ module.exports = connect(function propsFromStore(state) {
     stageTotal: state.pageConstants.stageTotal,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,
-    maxHeight: state.instructions.maxHeight,
+    maxHeight: Math.min(state.instructions.maxAvailableHeight,
+      state.instructions.maxNeededHeight),
     collapsed: state.instructions.collapsed,
     shortInstructions: state.instructions.shortInstructions,
     longInstructions: state.instructions.longInstructions
