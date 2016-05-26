@@ -44,7 +44,8 @@ class Ability
         Pd::DistrictPaymentTerm,
         Pd::DistrictReport,
         Pd::WorkshopOrganizerReport,
-        Pd::TeacherProgressReport
+        Pd::TeacherProgressReport,
+        Pd::CourseFacilitator
       ]
     end
 

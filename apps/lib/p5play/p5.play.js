@@ -1193,7 +1193,12 @@ function Sprite(pInst, _x, _y, _w, _h) {
         if(this.collider instanceof AABB)
         {
         //scale / rotate collider
-        var t = radians(this.rotation);
+        var t;
+        if (pInst._angleMode === pInst.RADIANS) {
+          t = radians(this.rotation);
+        } else {
+          t = this.rotation;
+        }
 
         if(this.colliderType === 'custom')
           {
@@ -1491,7 +1496,11 @@ function Sprite(pInst, _x, _y, _w, _h) {
 
       translate(this.position.x, this.position.y);
       scale(this.scale*dirX, this.scale*dirY);
-      rotate(radians(this.rotation));
+      if (pInst._angleMode === pInst.RADIANS) {
+        rotate(radians(this.rotation));
+      } else {
+        rotate(this.rotation);
+      }
       this.draw();
       //draw debug info
       pop();
@@ -1656,12 +1665,20 @@ function Sprite(pInst, _x, _y, _w, _h) {
     var a;
     if (typeof angle === 'undefined') {
       if (this.velocity.x !== 0 || this.velocity.y !== 0) {
-        a = Math.atan2(this.velocity.y, this.velocity.x);
+        a = pInst.atan2(this.velocity.y, this.velocity.x);
       } else {
-        a = radians(this._rotation);
+        if (pInst._angleMode === pInst.RADIANS) {
+          a = radians(this._rotation);
+        } else {
+          a = this._rotation;
+        }
       }
     } else {
-      a = radians(angle);
+      if (pInst._angleMode === pInst.RADIANS) {
+        a = radians(angle);
+      } else {
+        a = angle;
+      }
     }
     this.velocity.x = cos(a)*speed;
     this.velocity.y = sin(a)*speed;
@@ -1676,7 +1693,12 @@ function Sprite(pInst, _x, _y, _w, _h) {
   * @param {Number}  angle Direction in degrees
   */
   this.addSpeed = function(speed, angle) {
-    var a = radians(angle);
+    var a;
+    if (pInst._angleMode === pInst.RADIANS) {
+      a = radians(angle);
+    } else {
+      a = angle;
+    }
     this.velocity.x += cos(a) * speed;
     this.velocity.y += sin(a) * speed;
   };
@@ -2966,7 +2988,12 @@ function AABB(pInst, _center, _extents, _offset) {
   this.rotate = function(r)
   {
     //rotate the bbox
-    var t = radians(r);
+    var t;
+    if (pInst._angleMode === pInst.RADIANS) {
+      t = radians(r);
+    } else {
+      t = r;
+    }
 
     var w2 = this.extents.x * abs(pInst.cos(t)) + this.extents.y * abs(pInst.sin(t));
     var h2 = this.extents.x * abs(pInst.sin(t)) + this.extents.y * abs(pInst.cos(t));
@@ -3450,7 +3477,11 @@ function Animation(pInst) {
       pInst.imageMode(CENTER);
 
       pInst.translate(this.xpos, this.ypos);
-      pInst.rotate(radians(this.rotation));
+      if (pInst._angleMode === pInst.RADIANS) {
+        pInst.rotate(radians(this.rotation));
+      } else {
+        pInst.rotate(this.rotation);
+      }
 
       if(this.images[frame] !== undefined)
       {

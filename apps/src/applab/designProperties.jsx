@@ -1,5 +1,6 @@
 /* global $*/
 
+var React = require('react');
 var applabMsg = require('./locale');
 var color = require('../color');
 var elementLibrary = require('./designElements/library');
@@ -54,7 +55,7 @@ var DesignProperties = React.createClass({
     var PropertyComponent = elementLibrary.getElementPropertyTab(elementType);
     var EventComponent = elementLibrary.getElementEventTab(elementType);
 
-    var isScreen = (elementType == elementLibrary.ElementType.SCREEN);
+    var isScreen = (elementType === elementLibrary.ElementType.SCREEN);
     // For now, limit duplication to just non-screen elements
 
     // First screen is not deletable

@@ -36,11 +36,8 @@ social:
 
   #petitionexpand{style: "display: none"}
     %script{:src=>"/js/jquery.placeholder.js"}
-    - if request.locale == 'en-US'
-      = view :congress_link
-    - else
-      - if DB[:cdo_homepage].where(type_s: "petition")
-        = view :petition_expand
+    - if DB[:cdo_homepage].where(type_s: "petition")
+      = view :petition_expand
 
   #user_hero
     .container_responsive

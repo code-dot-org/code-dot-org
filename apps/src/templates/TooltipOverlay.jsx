@@ -1,4 +1,5 @@
 /** @file Crosshair and guides over visualization */
+var React = require('react');
 
 import { isMouseInBounds } from '../applab/gridUtils';
 

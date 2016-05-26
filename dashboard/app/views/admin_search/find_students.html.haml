@@ -1,0 +1,60 @@
+%center
+  %h1 Find (Deleted) Students
+
+%br/
+
+%form{method: 'get'}
+  %table.filters
+    %tr
+      %td
+        Student Name
+      %td
+        %input{name: "studentNameFilter", id: "studentNameFilter", value: params[:studentNameFilter]}
+    %tr
+      %td
+        Student Email
+      %td
+        %input{name: "studentEmailFilter", id: "studentEmailFilter", value: params[:studentEmailFilter]}
+    %tr
+      %td
+        Teacher Name
+      %td
+        %input{name: "teacherNameFilter", id: "teacherNameFilter", value: params[:teacherNameFilter]}
+    %tr
+      %td
+        Teacher Email
+      %td
+        %input{name: "teacherEmailFilter", id: "teacherEmailFilter", value: params[:teacherEmailFilter]}
+    %tr
+      %td
+        Section Code
+      %td
+        %input{name: "sectionFilter", id: "sectionFilter", value: params[:sectionFilter]}
+
+  %br/
+
+  %center
+    %input{type: "submit", name: "submit"}
+
+%br/
+
+%h2 Users
+- if @users.size >= @max_users
+  WARNING: There were too many users, only some of them are included.
+- if @users.size > 0
+  %table.users
+    %tr
+      - ['ID', 'Name', 'Email', 'Deleted At', 'Undelete'].each do |field|
+        %th
+          %span= field
+    - @users.each do |user|
+      %tr
+        - [:id, :name, :email, :deleted_at].each do |field|
+          %td
+            %span= user[field]
+        - if user[:deleted_at]
+          %td
+            =link_to 'Undelete User', undelete_user_path(user_id: user[:id]), method: :post, class: "btn", data: {confirm: "Are you sure?"}
+
+- else
+  No users met the specified search criteria.

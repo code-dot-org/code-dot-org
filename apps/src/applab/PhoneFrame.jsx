@@ -1,3 +1,4 @@
+import React from 'react';
 import Radium from 'radium';
 import color from '../color';
 import applabConstants from './constants';
@@ -71,7 +72,7 @@ const PhoneFrame = React.createClass({
   render: function () {
     const { isDark, screenIds, showSelector, isPaused, onScreenCreate } = this.props;
     return (
-      <span>
+      <span id="phoneFrame">
         <div
             style={[
               styles.phoneFrame,

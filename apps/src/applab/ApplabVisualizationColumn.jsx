@@ -1,7 +1,9 @@
 import GameButtons, {ResetButton} from '../templates/GameButtons';
+import IFrameEmbedOverlay from './IFrameEmbedOverlay';
+import * as color from '../color';
 
+var React = require('react');
 var Radium = require('radium');
-var studioApp = require('../StudioApp').singleton;
 var Visualization = require('./Visualization');
 var CompletionButton = require('./CompletionButton');
 var PlaySpaceHeader = require('./PlaySpaceHeader');
@@ -12,7 +14,6 @@ import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 var applabConstants = require('./constants');
 var connect = require('react-redux').connect;
 var classNames = require('classnames');
-var experiments = require('../experiments');
 
 var styles = {
   nonResponsive: {
@@ -28,37 +29,30 @@ var styles = {
     marginRight: 'auto',
     textAlign: 'center'
   },
-  overlay: {
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    position: 'absolute',
-    top: 68,
-    left: 16,
-    width: applabConstants.APP_WIDTH,
-    height: applabConstants.APP_HEIGHT,
-    zIndex: 5,
-    textAlign: 'center',
-    cursor: 'pointer',
-  },
-  playButton: {
-    color: 'white',
-    fontSize: 200,
-    lineHeight: applabConstants.APP_HEIGHT+'px',
-  },
   resetButtonWrapper: {
     position: 'absolute',
     bottom: 5,
     textAlign: 'center',
     width: '100%',
   },
+  resetButton: {
+    display: 'inline-block',
+    width: 42,
+    minWidth: 0,
+    backgroundColor: color.dark_charcoal,
+    borderColor: color.dark_charcoal,
+    padding: 7,
+    height: 42,
+    marginLeft: 5,
+    position: 'relative',
+    left: 2,
+    bottom: 2,
+  },
+  resetButtonImage: {
+    marginLeft: 2,
+    marginTop: -2,
+  },
 };
-
-var IframeOverlay = Radium(function (props) {
-  return (
-    <div style={[styles.overlay]} onClick={() => studioApp.startIFrameEmbeddedApp()}>
-      <span className="fa fa-play" style={[styles.playButton]} />
-    </div>
-  );
-});
 
 /**
  * Equivalent of visualizationColumn.html.ejs. Initially only supporting
@@ -72,9 +66,11 @@ var ApplabVisualizationColumn = React.createClass({
     isShareView: React.PropTypes.bool.isRequired,
     isResponsive: React.PropTypes.bool.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
+    hideSource: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes.string.isRequired,
     playspacePhoneFrame: React.PropTypes.bool,
     isIframeEmbed: React.PropTypes.bool.isRequired,
+    pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
 
     // non redux backed
     isEditingProject: React.PropTypes.bool.isRequired,
@@ -85,8 +81,10 @@ var ApplabVisualizationColumn = React.createClass({
   render: function () {
     let visualization = [
       <Visualization key="1"/>,
-      this.props.isIframeEmbed && !this.props.isRunning && <IframeOverlay key="2"/>
+      this.props.isIframeEmbed && !this.props.isRunning && <IFrameEmbedOverlay key="2"/>
     ];
+    // Share view still uses image for phone frame. Would eventually like it to
+    // use same code
     if (this.props.playspacePhoneFrame) {
       // wrap our visualization in a phone frame
       visualization = (
@@ -101,10 +99,10 @@ var ApplabVisualizationColumn = React.createClass({
         </PhoneFrame>
       );
     }
-
     const visualizationColumnClassNames = classNames({
       with_padding: this.props.visualizationHasPadding,
-      responsive: this.props.isResponsive
+      responsive: this.props.isResponsive,
+      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom
     });
 
     return (
@@ -119,9 +117,11 @@ var ApplabVisualizationColumn = React.createClass({
             onScreenCreate={this.props.onScreenCreate} />
         }
         {visualization}
-        {this.props.isIframeEmbed &&
+        {this.props.isIframeEmbed && this.props.isRunning &&
          <div style={styles.resetButtonWrapper}>
-           <ResetButton/>
+           <ResetButton hideText={true}
+                        style={styles.resetButton}
+                        imageStyle={styles.resetButtonImage} />
          </div>
         }
         <GameButtons>
@@ -147,9 +147,11 @@ module.exports = connect(function propsFromStore(state) {
     isShareView: state.pageConstants.isShareView,
     isResponsive: isResponsiveFromState(state),
     isIframeEmbed: state.pageConstants.isIframeEmbed,
+    hideSource: state.pageConstants.hideSource,
     isRunning: state.runState.isRunning,
     isPaused: state.runState.isDebuggerPaused,
     interfaceMode: state.interfaceMode,
-    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
+    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
+    pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
   };
 })(Radium(ApplabVisualizationColumn));
