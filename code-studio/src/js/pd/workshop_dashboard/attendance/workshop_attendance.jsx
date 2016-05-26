@@ -4,6 +4,7 @@
   Route: /workshops/:workshopId/attendance(/:sessionIndex)
  */
 
+import $ from 'jquery';
 var _ = require('lodash');
 import React from 'react';
 var SessionTime = require('../components/session_time');
