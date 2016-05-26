@@ -1,0 +1,28 @@
+:css
+  body {
+    font-family: Gotham, sans-serif;
+  }
+
+%p
+  You have canceled your registration for the Code.org
+  = @workshop.course
+  = @workshop.subject
+  workshop with
+  = @workshop.organizer.name
+  on
+  = @workshop.sessions.first.formatted_date
+
+- if @workshop.course == Pd::Workshop::COURSE_CSF
+  We’re sorry to hear you can no longer attend.
+  You can sign up for a different workshop
+  = link_to('here', 'https://code.org/professional-development-workshops') + '.'
+  Or check out our free, self-paced
+  = link_to 'online workshop', 'https://code.org/educate/professional-development-online'
+  to get started.
+
+%p
+  If this is a mistake and you did not mean to cancel your workshop registration,
+  contact your workshop organizer
+  = @workshop.organizer.name
+  at
+  = mail_to(@workshop.organizer.email) + '.'

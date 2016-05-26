@@ -43,7 +43,7 @@ reporting.sendReport = function (report) {
   // shows the result dialog immediately
   var queryItems = [];
   for (var key in report) {
-    if (report.hasOwnProperty(key) && key != 'onComplete') {
+    if (report.hasOwnProperty(key) && key !== 'onComplete') {
       queryItems.push(key + '=' + report[key]);
     }
   }

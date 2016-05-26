@@ -6,7 +6,7 @@
 var five = require('johnny-five');
 var ChromeSerialPort = require('chrome-serialport');
 var PlaygroundIO = require('playground-io');
-require("babelify/polyfill"); // required for Promises in IE / Phantom
+require("babel-polyfill"); // required for Promises in IE / Phantom
 
 /** @const {string} */
 var CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
@@ -117,6 +117,26 @@ BoardController.prototype.reset = function () {
   });
 };
 
+BoardController.prototype.pinMode = function (pin, modeConstant) {
+  this.board_.pinMode(pin, modeConstant);
+};
+
+BoardController.prototype.digitalWrite = function (pin, value) {
+  this.board_.digitalWrite(pin, value);
+};
+
+BoardController.prototype.digitalRead = function (pin, callback) {
+  return this.board_.digitalRead(pin, callback);
+};
+
+BoardController.prototype.analogWrite = function (pin, value) {
+  this.board_.analogWrite(pin, value);
+};
+
+BoardController.prototype.analogRead = function (pin, callback) {
+  return this.board_.analogRead(pin, callback);
+};
+
 function connect() {
   return getDevicePort().then(connectToBoard);
 }
@@ -177,17 +197,51 @@ function deviceOnPortAppearsUsable(port) {
  * @returns {Object.<String, Object>} board components
  */
 function initializeCircuitPlaygroundComponents(io, board) {
+  const pixels = Array.from({length: 10}, (_, index) => new five.Led.RGB({
+    controller: PlaygroundIO.Pixel,
+    pin: index
+  }));
+
+  /**
+   * Must initialize sound sensor BEFORE left button, otherwise left button
+   * will not respond to input.
+   */
+  const sound = new five.Sensor({
+    pin: "A4",
+    freq: 100
+  });
+  const buttonL = new five.Button('4');
+  const buttonR = new five.Button('19');
+  [buttonL, buttonR].forEach((button) => {
+    Object.defineProperty(button, "isPressed", {
+      get: () => this.value === 1
+    });
+  });
+
   return {
-    pixels: Array.from({length: 10}, function (_, index) {
-      return new five.Led.RGB({
-        controller: PlaygroundIO.Pixel,
-        pin: index
-      });
-    }),
+    pixel0: pixels[0],
+    pixel1: pixels[1],
+    pixel2: pixels[2],
+    pixel3: pixels[3],
+    pixel4: pixels[4],
+    pixel5: pixels[5],
+    pixel6: pixels[6],
+    pixel7: pixels[7],
+    pixel8: pixels[8],
+    pixel9: pixels[9],
+    pixels: {
+      blink: () => pixels.forEach(p => p.blink()),
+      stop: () => pixels.forEach(p => p.stop()),
+      on: () => pixels.forEach(p => p.on()),
+      off: () => pixels.forEach(p => p.off()),
+      toggle: () => pixels.forEach(p => p.toggle()),
+      intensity: i => pixels.forEach(p => p.intensity(i)),
+      color: c => pixels.forEach(p => p.color(c))
+    },
 
     led: new five.Led(13),
 
-    toggle: new five.Switch('21'),
+    toggleSwitch: new five.Switch('21'),
 
     piezo: new five.Piezo({
       pin: '5',
@@ -213,18 +267,11 @@ function initializeCircuitPlaygroundComponents(io, board) {
 
     touch: new PlaygroundIO.CapTouch(io),
 
-    /**
-     * Must initialize sound sensor BEFORE left button, otherwise left button
-     * will not respond to input.
-     */
-    sound: new five.Sensor({
-      pin: "A4",
-      freq: 100
-    }),
+    sound: sound,
 
-    buttonL: new five.Button('4'),
+    buttonL: buttonL,
 
-    buttonR: new five.Button('19'),
+    buttonR: buttonR,
 
     board: board,
 

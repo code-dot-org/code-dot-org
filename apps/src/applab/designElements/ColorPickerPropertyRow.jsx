@@ -1,4 +1,6 @@
 /* global ColorPicker */
+var React = require('react');
+var ReactDOM = require('react-dom');
 var rowStyle = require('./rowStyle');
 var ColorPicker = require('react-color').default;
 
@@ -38,7 +40,7 @@ var ColorPickerPropertyRow = React.createClass({
   },
 
   handleColorChange: function (color) {
-    if (color.rgb.a == 1) {
+    if (color.rgb.a === 1) {
       // no transparency set
       this.changeColor(color.hex);
     } else {

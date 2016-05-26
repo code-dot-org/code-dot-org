@@ -418,7 +418,8 @@ class User < ActiveRecord::Base
   def self.find_for_authentication(tainted_conditions)
     conditions = devise_parameter_filter.filter(tainted_conditions.dup)
     # we get either a login (username) or hashed_email
-    if login = conditions.delete(:login)
+    login = conditions.delete(:login)
+    if login.present?
       return nil if login.utf8mb4?
       where(['username = :value OR email = :value OR hashed_email = :hashed_value',
              { value: login.downcase, hashed_value: hash_email(login.downcase) }]).first
@@ -441,9 +442,9 @@ class User < ActiveRecord::Base
     user_levels.where(script: stage.script, level: levels).pluck(:level_id, :best_result).to_h
   end
 
-  def user_level_for(script_level)
+  def user_level_for(script_level, level)
     user_levels.find_by(script_id: script_level.script_id,
-                        level_id: script_level.level_id)
+                        level_id: level.id)
   end
 
   def next_unpassed_progression_level(script)
@@ -492,6 +493,10 @@ SQL
 
   def last_attempt(level)
     Activity.where(user_id: self.id, level_id: level.id).order('id desc').first
+  end
+
+  def last_attempt_for_any(levels)
+    Activity.where(user_id: self.id, level_id: levels.map(&:id)).order('id desc').first
   end
 
   def average_student_trophies
@@ -655,24 +660,12 @@ SQL
     raw
   end
 
-  # Secret word stuff
-
   def generate_secret_picture
     self.secret_picture = SecretPicture.random
   end
 
-  def reset_secret_picture
-    generate_secret_picture
-    save!
-  end
-
   def generate_secret_words
     self.secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
-  end
-
-  def reset_secret_words
-    generate_secret_words
-    save!
   end
 
   def advertised_scripts

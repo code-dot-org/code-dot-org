@@ -4,6 +4,7 @@
 
 import classNames from 'classnames';
 import {connect} from 'react-redux';
+import React from 'react';
 var _ = require('../lodash');
 var AnimationTab = require('./AnimationTab/AnimationTab');
 var StudioAppWrapper = require('../templates/StudioAppWrapper');
@@ -56,7 +57,8 @@ var GameLabView = React.createClass({
     };
 
     const visualizationColumnClassNames = classNames({
-      responsive: this.props.isResponsive
+      responsive: this.props.isResponsive,
+      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom
     });
 
     return (
@@ -75,9 +77,7 @@ var GameLabView = React.createClass({
             id="visualizationResizeBar"
             className="fa fa-ellipsis-v"
         />
-        <InstructionsWithWorkspace
-          hideSource={this.props.hideSource}
-        />
+        <InstructionsWithWorkspace/>
       </div>
     );
   },
@@ -108,6 +108,7 @@ module.exports = connect(function propsFromStore(state) {
     interfaceMode: state.interfaceMode,
     isEmbedView: state.pageConstants.isEmbedView,
     isResponsive: isResponsiveFromState(state),
-    isShareView: state.pageConstants.isShareView
+    isShareView: state.pageConstants.isShareView,
+    pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
   };
 })(GameLabView);

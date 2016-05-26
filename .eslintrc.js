@@ -20,9 +20,7 @@ module.exports = {
   },
   "globals": {
     "$": true,
-    "jQuery": true,
-    "React": true,
-    "ReactDOM": true
+    "jQuery": true
   },
   "rules": {
     "array-bracket-spacing": ["error", "never"],
@@ -48,6 +46,7 @@ module.exports = {
     "space-before-function-paren": ["error", {
       "anonymous": "always",
       "named": "never"
-    }]
+    }],
+    "eqeqeq": "error"
   }
 };
