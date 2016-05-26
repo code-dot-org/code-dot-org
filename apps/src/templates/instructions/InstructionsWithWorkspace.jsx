@@ -1,6 +1,5 @@
 var React = require('react');
 var connect = require('react-redux').connect;
-var utils = require('../../utils');
 var styleConstants = require('../../styleConstants');
 var CodeWorkspaceContainer = require('../CodeWorkspaceContainer');
 var TopInstructions = require('./TopInstructions');
@@ -18,16 +17,16 @@ var InstructionsWithWorkspace = React.createClass({
   propTypes: {
     // props provided via connect
     showInstructions: React.PropTypes.bool.isRequired,
-    instructionsCollapsed: React.PropTypes.bool.isRequired,
+    // instructionsCollapsed: React.PropTypes.bool.isRequired,
     instructionsHeight: React.PropTypes.number.isRequired,
-    instructionsMaxHeight: React.PropTypes.number.isRequired,
-    setInstructionsHeight: React.PropTypes.func.isRequired,
-    setInstructionsMaxHeight: React.PropTypes.func.isRequired,
+    // instructionsMaxHeight: React.PropTypes.number.isRequired,
+    // setInstructionsHeight: React.PropTypes.func.isRequired,
+    // setInstructionsMaxHeight: React.PropTypes.func.isRequired,
 
-    shortInstructionsWhenCollapsed: React.PropTypes.bool,
+    // shortInstructionsWhenCollapsed: React.PropTypes.bool,
     // TODO - properly pass these to top instructions
-    isRtl: React.PropTypes.bool.isRequired,
-    noVisualization: React.PropTypes.bool.isRequired
+    // isRtl: React.PropTypes.bool.isRequired,
+    // noVisualization: React.PropTypes.bool.isRequired
   },
 
   getInitialState() {
@@ -42,7 +41,7 @@ var InstructionsWithWorkspace = React.createClass({
    * Called when the window resizes. Look to see if width/height changed, then
    * call adjustTopPaneHeight as our maxHeight may need adjusting.
    */
-  onResize() {
+  __onResize() {
     // No need to resize anything if we're collapsed
     if (this.props.instructionsCollapsed) {
       return;
@@ -77,7 +76,7 @@ var InstructionsWithWorkspace = React.createClass({
    * At small enough window sizes where we can't shrink enough to meet all of
    * our minimum sizes, shrink the debugger, editor, and instructions pane equally
    */
-  adjustTopPaneHeight() {
+  __adjustTopPaneHeight() {
     if (!this.props.showInstructions) {
       return;
     }
@@ -129,7 +128,7 @@ var InstructionsWithWorkspace = React.createClass({
    * @returns {number} How much vertical space is consumed by the TopInstructions,
    *   including space for any resizer
    */
-  topPaneHeight() {
+   __topPaneHeight() {
     // We may not display the instructions pane at all
     if (!this.props.showInstructions) {
       return 0;
@@ -147,36 +146,35 @@ var InstructionsWithWorkspace = React.createClass({
     return height;
   },
 
-  componentDidMount() {
-    if (!this.props.showInstructions) {
-      return;
-    }
+  // TODO - inside TopInstructions?
+  // componentDidMount() {
+  //   if (!this.props.showInstructions) {
+  //     return;
+  //   }
+  //
+  //
+  //   this.adjustTopPaneHeight();
+  //   window.addEventListener('resize', this.onResize);
+  // },
 
-    this.adjustTopPaneHeight();
-    window.addEventListener('resize', this.onResize);
-  },
-
-  componentWillUnmount() {
-    if (this.props.showInstructions) {
-      window.removeEventListener("resize", this.onResize);
-    }
-  },
+  // componentWillUnmount() {
+  //   if (this.props.showInstructions) {
+  //     window.removeEventListener("resize", this.onResize);
+  //   }
+  // },
 
   render() {
-    const topPaneHeight = this.topPaneHeight();
-
     return (
       <span>
-        {this.props.showInstructions && <TopInstructions
-            ref="topInstructions"
-            shortInstructionsWhenCollapsed={!!this.props.shortInstructionsWhenCollapsed}
-            height={topPaneHeight}
-            onResize={this.adjustTopPaneHeight}/>
+        {this.props.showInstructions &&
+          <TopInstructions
+              ref="topInstructions"
+          />
         }
         <CodeWorkspaceContainer
             ref="codeWorkspaceContainer"
-            topMargin={topPaneHeight}
-            onSizeChange={utils.fireResizeEvent}/>
+            topMargin={this.props.instructionsHeight}
+        />
       </span>
     );
   }
@@ -184,12 +182,8 @@ var InstructionsWithWorkspace = React.createClass({
 
 module.exports = connect(function propsFromStore(state) {
   return {
-    showInstructions: state.pageConstants.instructionsInTopPane && !!state.pageConstants.instructionsMarkdown,
-    instructionsCollapsed: state.instructions.collapsed || !state.pageConstants.instructionsInTopPane,
-    instructionsHeight: state.instructions.height,
-    instructionsMaxHeight: state.instructions.maxHeight,
-    isRtl: state.pageConstants.localeDirection === 'rtl',
-    noVisualization: !!state.pageConstants.noVisualization
+    showInstructions: state.pageConstants.instructionsInTopPane,
+    instructionsHeight: state.instructions.renderedHeight
   };
 }, function propsFromDispatch(dispatch) {
   return {

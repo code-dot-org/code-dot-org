@@ -1,6 +1,8 @@
 'use strict';
 
 import React from 'react';
+import { connect } from 'react-redux';
+
 import TopInstructionsCSF from './TopInstructionsCSF';
 import TopInstructionsCSP from './TopInstructionsCSP';
 
@@ -12,13 +14,13 @@ const TopInstructions = React.createClass({
   propTypes: {
     shortInstructionsWhenCollapsed: React.PropTypes.bool.isRequired
   },
-  getRenderedHeight() {
-    return this.refs.topInstructions.getWrappedInstance().getRenderedHeight();
-  },
-
-  getCollapsedHeight() {
-    return this.refs.topInstructions.getWrappedInstance().getCollapsedHeight();
-  },
+  // getRenderedHeight() {
+  //   return this.refs.topInstructions.getWrappedInstance().getRenderedHeight();
+  // },
+  //
+  // getCollapsedHeight() {
+  //   return this.refs.topInstructions.getWrappedInstance().getCollapsedHeight();
+  // },
 
   render() {
     const props = this.props;
@@ -32,4 +34,6 @@ const TopInstructions = React.createClass({
   }
 });
 
-export default TopInstructions;
+export default connect(state => ({
+  shortInstructionsWhenCollapsed: !!state.instructions.shortInstructions
+}))(TopInstructions);

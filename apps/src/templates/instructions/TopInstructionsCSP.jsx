@@ -59,30 +59,39 @@ var styles = {
 
 var TopInstructions = React.createClass({
   propTypes: {
-    isEmbedView: React.PropTypes.bool.isRequired,
-    puzzleNumber: React.PropTypes.number.isRequired,
-    stageTotal: React.PropTypes.number.isRequired,
-    height: React.PropTypes.number.isRequired,
-    maxHeight: React.PropTypes.number.isRequired,
-    markdown: React.PropTypes.string,
-    collapsed: React.PropTypes.bool.isRequired,
-    toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
-    setInstructionsHeight: React.PropTypes.func.isRequired,
-    onResize: React.PropTypes.func.isRequired
+    // TODO - figure out
+    // isEmbedView: React.PropTypes.bool.isRequired,
+    // puzzleNumber: React.PropTypes.number.isRequired,
+    // stageTotal: React.PropTypes.number.isRequired,
+    // height: React.PropTypes.number.isRequired,
+    // maxHeight: React.PropTypes.number.isRequired,
+    // markdown: React.PropTypes.string,
+    // collapsed: React.PropTypes.bool.isRequired,
+    // toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
+    // setInstructionsHeight: React.PropTypes.func.isRequired,
+    // onResize: React.PropTypes.func.isRequired
+  },
+
+  componentDidMount() {
+    const instructionsContent = this.refs.instructions.refs.instructionsMarkdown;
+    const renderedHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
+      HEADER_HEIGHT;
+    // TODO - more logic here
+    this.props.setInstructionsRenderedHeight(Math.min(renderedHeight, 300));
   },
 
   /**
    * Called externally
    * @returns {number} The height of the rendered contents in pixels
    */
-  getRenderedHeight() {
-    var instructionsContent = this.refs.instructions.refs.instructionsMarkdown;
-    return $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) + HEADER_HEIGHT;
-  },
-
-  getCollapsedHeight() {
-    return HEADER_HEIGHT;
-  },
+  // getRenderedHeight() {
+  //   var instructionsContent = this.refs.instructions.refs.instructionsMarkdown;
+  //   return $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) + HEADER_HEIGHT;
+  // },
+  //
+  // getCollapsedHeight() {
+  //   return HEADER_HEIGHT;
+  // },
 
   /**
    * Given a prospective delta, determines how much we can actually change the
@@ -101,6 +110,18 @@ var TopInstructions = React.createClass({
     return newHeight - currentHeight;
   },
 
+  handleClickCollapse() {
+    const collapsed = !this.props.collapsed;
+    this.props.toggleInstructionsCollapsed();
+
+    // adjust rendered height based on next collapsed state
+    if (collapsed) {
+      this.props.setInstructionsRenderedHeight(HEADER_HEIGHT);
+    } else {
+      this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
+    }
+  },
+
   render: function () {
     if (!this.props.markdown) {
       return <div/>;
@@ -115,7 +136,7 @@ var TopInstructions = React.createClass({
       <div style={mainStyle} className="editor-column">
         {!this.props.isEmbedView && <CollapserIcon
             collapsed={this.props.collapsed}
-            onClick={this.props.toggleInstructionsCollapsed}/>
+            onClick={this.handleClickCollapse}/>
         }
         <div style={styles.header}>
           {msg.puzzleTitle({
@@ -146,9 +167,11 @@ module.exports = connect(function propsFromStore(state) {
     isEmbedView: state.pageConstants.isEmbedView,
     puzzleNumber: state.pageConstants.puzzleNumber,
     stageTotal: state.pageConstants.stageTotal,
+    height: state.instructions.renderedHeight,
+    expandedHeight: state.instructions.expandedHeight,
     maxHeight: state.instructions.maxHeight,
-    markdown: state.pageConstants.instructionsMarkdown,
-    collapsed: state.instructions.collapsed,
+    markdown: state.instructions.longInstructions,
+    collapsed: state.instructions.collapsed
   };
 }, function propsFromDispatch(dispatch) {
   return {
@@ -157,6 +180,9 @@ module.exports = connect(function propsFromStore(state) {
     },
     setInstructionsHeight: function (height) {
       dispatch(instructions.setInstructionsHeight(height));
+    },
+    setInstructionsRenderedHeight(height) {
+      dispatch(instructions.setInstructionsRenderedHeight(height));
     }
   };
 }, null, { withRef: true }
