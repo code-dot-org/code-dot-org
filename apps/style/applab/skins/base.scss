@@ -2,7 +2,7 @@
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
 
 #divApplab, #designModeViz, .draggingParent {
-  overflow: visible;
+  overflow: hidden;
   outline: none;
   position: relative;
   z-index: 1;
@@ -29,6 +29,10 @@ $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
 
   label {
     display: inline-block;
+  }
+
+  div {
+    overflow: hidden;
   }
 
   div.textArea {
