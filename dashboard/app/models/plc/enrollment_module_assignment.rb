@@ -7,6 +7,7 @@
 #  plc_learning_module_id            :integer
 #  created_at                        :datetime         not null
 #  updated_at                        :datetime         not null
+#  user_id                           :integer          not null
 #
 # Indexes
 #
@@ -18,7 +19,7 @@
 class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
   belongs_to :plc_enrollment_unit_assignment, class_name: '::Plc::EnrollmentUnitAssignment'
   belongs_to :plc_learning_module, class_name: '::Plc::LearningModule'
-  belongs_to :user, class_name: 'User'
+  belongs_to :user
 
   validates :plc_enrollment_unit_assignment, presence: true
   validates :plc_learning_module, presence: true
