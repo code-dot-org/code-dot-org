@@ -1545,7 +1545,7 @@ function loadStudio(skin, assetUrl) {
     [msg.projectileDisc(), '"disc"'],
     [msg.projectilePie(), '"pie"'],
     [msg.projectilePumpkin(), '"pumpkin"'],
-    [msg.projectileRainbow(), '"rainbow"'],
+    [msg.projectileStar(), '"star"'],
     [msg.projectileSandwich(), '"sandwich"'],
     [msg.projectileSnowball(), '"snowball"'],
 
@@ -1565,7 +1565,7 @@ function loadStudio(skin, assetUrl) {
     [msg.makeProjectileDisc(), '"disc"'],
     [msg.makeProjectilePie(), '"pie"'],
     [msg.makeProjectilePumpkin(), '"pumpkin"'],
-    [msg.makeProjectileRainbow(), '"rainbow"'],
+    [msg.makeProjectileStar(), '"star"'],
     [msg.makeProjectileSandwich(), '"sandwich"'],
     [msg.makeProjectileSnowball(), '"snowball"']
 
@@ -1584,7 +1584,7 @@ function loadStudio(skin, assetUrl) {
     [msg.whenSpriteCollidedWithDisc(), 'disc'],
     [msg.whenSpriteCollidedWithPie(), 'pie'],
     [msg.whenSpriteCollidedWithPumpkin(), 'pumpkin'],
-    [msg.whenSpriteCollidedWithRainbow(), 'rainbow'],
+    [msg.whenSpriteCollidedWithStar(), 'star'],
     [msg.whenSpriteCollidedWithSandwich(), 'sandwich'],
     [msg.whenSpriteCollidedWithSnowball(), 'snowball']
     ];
@@ -1607,7 +1607,7 @@ function loadStudio(skin, assetUrl) {
     [msg.itemDisc(), '"item_disc"'],
     [msg.itemPie(), '"item_pie"'],
     [msg.itemPumpkin(), '"item_pumpkin"'],
-    [msg.itemRainbow(), '"item_rainbow"'],
+    [msg.itemStar(), '"item_star"'],
     [msg.itemSandwich(), '"item_sandwich"'],
     [msg.itemSnowball(), '"item_snowball"'],
 
@@ -1633,7 +1633,7 @@ exports.load = function (assetUrl, id) {
     'disc',
     'pie',
     'pumpkin',
-    'rainbow',
+    'star',
     'sandwich',
     'snowball',
 
@@ -1655,7 +1655,7 @@ exports.load = function (assetUrl, id) {
     'item_disc',
     'item_pie',
     'item_pumpkin',
-    'item_rainbow',
+    'item_star',
     'item_sandwich',
     'item_snowball',
 
@@ -1676,7 +1676,7 @@ exports.load = function (assetUrl, id) {
   skin.disc = skin.assetUrl('projectile_disc.png');
   skin.pie = skin.assetUrl('projectile_pie.png');
   skin.pumpkin = skin.assetUrl('projectile_pumpkin.png');
-  skin.rainbow = skin.assetUrl('projectile_rainbow.png');
+  skin.star = skin.assetUrl('projectile_star.png');
   skin.sandwich = skin.assetUrl('projectile_sandwich.png');
   skin.snowball = skin.assetUrl('projectile_snowball.png');
 
@@ -1686,7 +1686,7 @@ exports.load = function (assetUrl, id) {
     'item_disc',
     'item_pie',
     'item_pumpkin',
-    'item_rainbow',
+    'item_star',
     'item_sandwich',
     'item_snowball',
 
@@ -1695,7 +1695,7 @@ Basketball basketball
 Disc disc
 Pie pie
 Pumpkin pumpkin
-Rainbow rainbow
+Star star
 Sandwich sandwich
 Snowball snowball
 */
@@ -1713,7 +1713,7 @@ Snowball snowball
   skin.item_disc = skin.assetUrl('projectile_disc.png');
   skin.item_pie = skin.assetUrl('projectile_pie.png');
   skin.item_pumpkin = skin.assetUrl('projectile_pumpkin.png');
-  skin.item_rainbow = skin.assetUrl('projectile_rainbow.png');
+  skin.item_star = skin.assetUrl('projectile_star.png');
   skin.item_sandwich = skin.assetUrl('projectile_sandwich.png');
   skin.item_snowball = skin.assetUrl('projectile_snowball.png');
 
