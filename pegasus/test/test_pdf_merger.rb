@@ -83,6 +83,7 @@ class PDFMergerTest < Minitest::Test
   end
 
   def teardown
+    # TODO(bjordan): needs enscript
     #delete_outfiles
   end
 
