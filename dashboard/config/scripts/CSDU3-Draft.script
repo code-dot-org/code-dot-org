@@ -113,4 +113,5 @@ level 'CSD U3 Keypress Boolean'
 level 'CSD U3 Keypress Stop'
 level 'CSD U3 Keypress Watchers'
 level 'CSD U3 UP_ARROW'
+level 'CSD U3 Direction Arrows'
 

@@ -1,5 +1,8 @@
 /* global trackEvent, appOptions */
 
+var React = require('react');
+var ReactDOM = require('react-dom');
+
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
   NONE: 0,  // This value must not be changed.
