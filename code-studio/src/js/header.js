@@ -77,17 +77,12 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
   var isHeaderPopupVisible = false;
 
   function showHeaderPopup(target) {
-    if ($(target).closest('.header_trophy_link').length > 0) {
-      // Only the 20-hour course has trophies.
-      location.href = '/s/20-hour#trophies';
-    } else {
-      sizeHeaderPopupToViewport();
-      $('.header_popup').show();
-      $('.header_popup_link_glyph').html('&#x25B2;');
-      $('.header_popup_link_text').text(dashboard.i18n.t('less'));
-      $(document).on('click', hideHeaderPopup);
-      lazyLoadPopup();
-    }
+    sizeHeaderPopupToViewport();
+    $('.header_popup').show();
+    $('.header_popup_link_glyph').html('&#x25B2;');
+    $('.header_popup_link_text').text(dashboard.i18n.t('less'));
+    $(document).on('click', hideHeaderPopup);
+    lazyLoadPopup();
     isHeaderPopupVisible = true;
   }
   function hideHeaderPopup() {
@@ -98,13 +93,13 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
     isHeaderPopupVisible = false;
   }
 
-  $('.header_popup_link, .header_trophy_link').click(function (e) {
+  $('.header_popup_link').click(function (e) {
     e.stopPropagation();
-    if ($('.header_popup').is(':visible')) {
-      hideHeaderPopup();
-    } else {
-      showHeaderPopup(e.target);
-    }
+    $('.header_popup').is(':visible') ? hideHeaderPopup() : showHeaderPopup();
+  });
+  $('.header_trophy_link').click(function () {
+    // Only the 20-hour course has trophies.
+    location.href = '/s/20-hour#trophies';
   });
   $('.header_popup').click(function (e) {
     e.stopPropagation(); // Clicks inside the popup shouldn't close it
