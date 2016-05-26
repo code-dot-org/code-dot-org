@@ -44,7 +44,7 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 | Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(fetch_hoc_metrics['started']) %> served. 49% female) |
 | Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org). |
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled. |
-| Prep new CS teachers | We've prepared 27,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate).|
+| Prep new CS teachers | We've prepared 31,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate).|
 | Change school district curriculum | We've partnered with [100 of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a district partner](/educate/districts).|
 | Set up policies to support CS | Policy changed in [17 states](/action) including CA, NY, FL, IL, OH.|
 | Go global | Our courses are available in 45+ languages, used in all 180+ countries. |
@@ -68,7 +68,7 @@ Our work builds upon [decades of effort, by countless organizations and individu
 - [TEDx talk by our founder Hadi Partovi about why computer science is for all (VIDEO)](https://www.youtube.com/watch?v=m-U9wzC9xLk)
 - [A letter from our founder addressing misconceptions about our motivations](http://codeorg.tumblr.com/post/73963049605/the-secret-agenda-of-code-org)
 
-All curriculum resources and tutorials we author are free to use under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, and our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
+All curriculum resources and tutorials we author will forever be free to use and openly licensed under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, allowing others to make derivative education resources for noncommercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). Our courses are translated for worldwide use or by English language learners. Our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
 
 <hr/>
 

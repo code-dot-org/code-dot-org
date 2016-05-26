@@ -11,6 +11,7 @@
 #  position   :integer
 #  assessment :boolean
 #  level_id   :integer
+#  properties :text(65535)
 #
 # Indexes
 #
@@ -54,6 +55,15 @@ class ScriptLevel < ActiveRecord::Base
 
   def level_id=(new_level_id)
     levels[0] = Level.find(new_level_id)
+  end
+
+  def oldest_active_level
+    return levels[0] if levels.length == 1
+    return levels.min_by(&:created_at) unless properties
+    properties_hash = JSON.parse(properties)
+    levels.sort_by(&:created_at).find do |level|
+      !properties_hash[level.name] || properties_hash[level.name]['active'] != false
+    end
   end
 
   def next_level
@@ -131,9 +141,12 @@ class ScriptLevel < ActiveRecord::Base
         id: level.id,
         position: position,
         kind: kind,
+        icon: level.icon,
         title: level_display_text,
         url: build_script_level_url(self)
     }
+
+    summary[:name] = level.name if script.professional_learning_course?
 
     # Add a previous pointer if it's not the obvious (level-1)
     if previous_level
@@ -170,6 +183,7 @@ class ScriptLevel < ActiveRecord::Base
     extra_level_count = level.properties["pages"].length - 1
     (1..extra_level_count).each do |page_index|
       new_level = last_level_summary.deep_dup
+      new_level[:uid] = "#{level.id}_#{page_index}"
       new_level[:url] << "/page/#{page_index + 1}"
       new_level[:position] = last_level_summary[:position] + page_index
       new_level[:title] = last_level_summary[:position] + page_index

@@ -1,5 +1,5 @@
 /** @file Row of controls above the visualization. */
-var actions = require('./actions');
+import {changeInterfaceMode} from './actions';
 var connect = require('react-redux').connect;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 var msg = require('../locale');
@@ -43,13 +43,13 @@ var GameLabVisualizationHeader = React.createClass({
 });
 module.exports = connect(function propsFromStore(state) {
   return {
-    isShareView: state.level.isShareView,
+    isShareView: state.pageConstants.isShareView,
     interfaceMode: state.interfaceMode
   };
 }, function propsFromDispatch(dispatch) {
   return {
     onInterfaceModeChange: function (mode) {
-      dispatch(actions.changeInterfaceMode(mode));
+      dispatch(changeInterfaceMode(mode));
     }
   };
 })(GameLabVisualizationHeader);

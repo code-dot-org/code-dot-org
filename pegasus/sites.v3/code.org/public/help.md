@@ -58,7 +58,7 @@ If you're a software engineer, there are many opportunities to get involved loca
 
 [col-66]
 
-- [TEALS](http://www.tealsk12.org) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. Join the more than 1,500 CS professionals who have made an impact in local high schools by volunteering 2 days a week to teacher Intro and AP CS classes.
+- [TEALS](http://c.tealsk12.org/l/667) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. Join the more than 1,500 CS professionals who have made an impact in local high schools by volunteering 2 days a week to teacher Intro and AP CS classes.
 - [CoderDojo](http://www.coderdojo.com) - Start a Dojo in your neighborhood, mentor children to learn to code.
 - [Citizen Schools](http://www.citizenschools.org/curriculum-category/science-technology/) - Volunteer to teach computer programming in extended-day programs at schools.
 
@@ -70,14 +70,3 @@ If you're a software engineer, there are many opportunities to get involved loca
 Code.org's online platform [Code Studio](https://studio.code.org) enables students to learn the basic concepts of computer science as early as kindergarten. Try [Play Lab](/playlab), a tool developed for elementary students to create games and stories. Or try [App Lab](/educate/applab), a JavaScript programming environment for high school students to create apps.
 
 [<button>Learn more</button>](https://studio.code.org)
-
-<!--
-## Spend 10 minutes adding "hints" to our tutorials
-
-With millions of students trying the Hour of Code, and hundreds of thousands doing the Code.org introductory online courses, we could use your help adding helpful hints for students who make mistakes. In just 10 minutes you can help improve our courses.
-
-[<button>Learn more</button>](http://code.org/hints)
-
--->
-
-

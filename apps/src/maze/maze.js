@@ -28,9 +28,11 @@ var commonMsg = require('../locale');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
+var redux = require ('../redux');
+var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
 var MazeVisualizationColumn = require('./MazeVisualizationColumn');
+var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
@@ -261,7 +263,7 @@ function drawMap() {
   var obsId = 0;
   for (y = 0; y < Maze.map.ROWS; y++) {
     for (x = 0; x < Maze.map.COLS; x++) {
-      if (Maze.map.getTile(y, x) == SquareType.OBSTACLE) {
+      if (Maze.map.getTile(y, x) === SquareType.OBSTACLE) {
         var obsIcon = document.createElementNS(SVG_NS, 'image');
         obsIcon.setAttribute('id', 'obstacle' + obsId);
         obsIcon.setAttribute('height', Maze.MARKER_HEIGHT * skin.obstacleScale);
@@ -418,7 +420,7 @@ function drawMapTiles(svg) {
           }
 
           // For the first 3 levels in maze, only show the null0 image.
-          if (level.id == '2_1' || level.id == '2_2' || level.id == '2_3') {
+          if (level.id === '2_1' || level.id === '2_2' || level.id === '2_3') {
             Maze.wallMap[y][x] = 0;
             tile = 'null0';
           }
@@ -576,11 +578,11 @@ Maze.init = function (config) {
     for (var y = 0; y < Maze.map.ROWS; y++) {
       for (var x = 0; x < Maze.map.COLS; x++) {
         var cell = Maze.map.getTile(y, x);
-        if (cell == SquareType.START) {
+        if (cell === SquareType.START) {
           Maze.start_ = {x: x, y: y};
         } else if (cell === SquareType.FINISH) {
           Maze.finish_ = {x: x, y: y};
-        } else if (cell == SquareType.STARTANDFINISH) {
+        } else if (cell === SquareType.STARTANDFINISH) {
           Maze.start_ = {x: x, y: y};
           Maze.finish_ = {x: x, y: y};
         }
@@ -609,33 +611,27 @@ Maze.init = function (config) {
     }
   };
 
+  // Push initial level properties into the Redux store
+  studioApp.setPageConstants(config, {
+    hideRunButton: !!(level.stepOnly && !level.edit_blocks)
+  });
+
   var visualizationColumn = (
     <MazeVisualizationColumn
-      hideRunButton={!!(level.stepOnly && !level.edit_blocks)}
       showStepButton={!!(level.step && !level.edit_blocks)}
       searchWord={level.searchWord}
     />
   );
 
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={studioApp.localeDirection()}
-      editCode={!!level.editCode}
-      readonlyWorkspace={!!config.readonlyWorkspace}
-    />
+  ReactDOM.render(
+    <Provider store={studioApp.reduxStore}>
+      <AppView
+          visualizationColumn={visualizationColumn}
+          onMount={studioApp.init.bind(studioApp, config)}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
   );
-
-  ReactDOM.render(React.createElement(AppView, {
-    assetUrl: studioApp.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    hideSource: !!config.hideSource,
-    noVisualization: false,
-    isRtl: studioApp.isRtl(),
-    codeWorkspace: codeWorkspace,
-    visualizationColumn: visualizationColumn,
-    onMount: studioApp.init.bind(studioApp, config)
-  }), document.getElementById(config.containerId));
 };
 
 /**
@@ -982,10 +978,13 @@ Maze.execute = function (stepMode) {
   beginAttempt();
   Maze.prepareForExecution();
 
-
-  var code;
+  var code = '';
   if (studioApp.isUsingBlockly()) {
-    code = Blockly.Generator.blockSpaceToCode('JavaScript');
+    if (studioApp.initializationCode) {
+      code += studioApp.initializationCode;
+    }
+
+    code += Blockly.Generator.blockSpaceToCode('JavaScript');
   } else {
     code = dropletUtils.generateCodeAliases(dropletConfig, 'Maze');
     code += studioApp.editor.getValue();
@@ -1591,7 +1590,7 @@ Maze.scheduleFail = function (forward) {
         });
       }, stepSpeed * 4);
     }
-  } else if (squareType == SquareType.OBSTACLE) {
+  } else if (squareType === SquareType.OBSTACLE) {
     // Play the sound
     studioApp.playAudio('obstacle');
 
@@ -1683,7 +1682,7 @@ function scheduleDance(victoryDance, timeAlloted) {
   var originalFrame = tiles.directionToFrame(Maze.pegmanD);
   Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, 16);
 
-  // If victoryDance == true, play the goal animation, else reset it
+  // If victoryDance === true, play the goal animation, else reset it
   var finishIcon = document.getElementById('finish');
   if (victoryDance && finishIcon) {
     studioApp.playAudio('winGoal');
@@ -1829,7 +1828,7 @@ Maze.scheduleLookStep = function (path, delay) {
 
 function atFinish() {
   return !Maze.finish_ ||
-      (Maze.pegmanX == Maze.finish_.x && Maze.pegmanY == Maze.finish_.y);
+      (Maze.pegmanX === Maze.finish_.x && Maze.pegmanY === Maze.finish_.y);
 }
 
 function isDirtCorrect() {

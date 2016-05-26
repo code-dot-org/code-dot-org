@@ -5,6 +5,7 @@ inherit_from:
 AllCops:
   Exclude:
     - 'apps/**/*'
+    - 'code-studio/**/*'
     - 'dashboard/db/**/*'
     - 'dashboard/db/*'
   DisplayCopNames: true
@@ -28,7 +29,7 @@ Style/DotPosition:
   EnforcedStyle: trailing
 
 Style/EmptyLineBetweenDefs:
-  AllowAdjacentOneLineDefs: true 
+  AllowAdjacentOneLineDefs: true
 
 Style/ExtraSpacing:
   Enabled: false

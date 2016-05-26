@@ -17,7 +17,7 @@ theme: none
 - This worksheet helps teach students how to think ahead in order to plan a short route from the Flurb’s start location to the final location, just one square away.
 
 ### [Move the Flurbs](Key-Assessment1-HappyMaps.pdf)
-- Hand out the worksheet titled "Move the Flurbs" and allow students to complete the activity independently after the instructions have been well explained. 
+- Hand out the worksheet titled "Move the Flurbs" and allow students to complete the activity independently after the instructions have been well explained.
 
 [/together]
 
@@ -27,7 +27,6 @@ theme: none
 
 <br/><br/><br/>
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
 
 

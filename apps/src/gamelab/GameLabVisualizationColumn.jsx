@@ -1,11 +1,14 @@
 var msg = require('../locale');
 var connect = require('react-redux').connect;
 
-var GameButtons = require('../templates/GameButtons');
+var GameButtons = require('../templates/GameButtons').default;
 var ArrowButtons = require('../templates/ArrowButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
 var gameLabConstants = require('./constants');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
+import VisualizationOverlay from '../templates/VisualizationOverlay';
+import CrosshairOverlay from '../templates/CrosshairOverlay';
+import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 
 var GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 var GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -17,21 +20,15 @@ var GameLabVisualizationColumn = function (props) {
   };
   return (
     <span>
-      <ProtectedStatefulDiv id="visualization">
+      <ProtectedVisualizationDiv>
         <div id="divGameLab" style={divGameLabStyle} tabIndex="1">
         </div>
-        <svg version="1.1"
-             baseProfile="full"
-             xmlns="http://www.w3.org/2000/svg"
-             id="visualizationOverlay"
-             width={GAME_WIDTH}
-             height={GAME_HEIGHT}
-             viewBox={"0 0 " + GAME_WIDTH + " " + GAME_HEIGHT}
-             pointerEvents="none"/>
-      </ProtectedStatefulDiv>
-      <GameButtons
-          hideRunButton={false}
-          instructionsInTopPane={props.instructionsInTopPane}>
+        <VisualizationOverlay width={GAME_WIDTH} height={GAME_HEIGHT}>
+          <CrosshairOverlay/>
+          <TooltipOverlay providers={[coordinatesProvider()]}/>
+        </VisualizationOverlay>
+      </ProtectedVisualizationDiv>
+      <GameButtons>
         <div id="studio-dpad" className="studio-dpad-none">
           <button id="studio-dpad-button" className="arrow">
             <img src="/blockly/media/1x1.gif" className="dpad-btn icon21"/>
@@ -58,6 +55,6 @@ GameLabVisualizationColumn.propTypes = {
 
 module.exports = connect(function propsFromStore(state) {
   return {
-    instructionsInTopPane: state.level.instructionsInTopPane
+    instructionsInTopPane: state.pageConstants.instructionsInTopPane
   };
 })(GameLabVisualizationColumn);

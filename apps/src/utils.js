@@ -400,8 +400,8 @@ exports.trySetLocalStorage = function (item, value) {
  * Generates a simple enum object
  * @example
  *   var Seasons = enum('SPRING', 'SUMMER', 'FALL', 'WINTER');
- *   Seasons.SPRING == 'SPRING';
- *   Seasons.SUMMER == 'SUMMER';
+ *   Seasons.SPRING === 'SPRING';
+ *   Seasons.SUMMER === 'SUMMER';
  *   // etc...
  */
 exports.makeEnum = function () {
@@ -417,4 +417,17 @@ exports.makeEnum = function () {
     Object.freeze(result);
   }
   return result;
+};
+
+/**
+ * If the string is too long, truncate it and append an ellipsis.
+ * @param {string} inputText
+ * @param {number} maxLength
+ * @returns {string}
+ */
+exports.ellipsify = function (inputText, maxLength) {
+  if (inputText && inputText.length > maxLength) {
+    return inputText.substr(0, maxLength - 3) + "...";
+  }
+  return inputText || '';
 };

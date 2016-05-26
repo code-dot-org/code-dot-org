@@ -12,28 +12,48 @@ class ScriptConstantsTest < Minitest::Test
   end
 
   def test_minecraft?
-    assert ScriptConstants.minecraft?(ScriptConstants::MINECRAFT_NAME)
-    assert !ScriptConstants.minecraft?(ScriptConstants::FROZEN_NAME)
+    assert ScriptConstants.script_in_category?(:minecraft, ScriptConstants::MINECRAFT_NAME)
+    assert !ScriptConstants.script_in_category?(:minecraft, ScriptConstants::FROZEN_NAME)
   end
 
   def test_flappy?
-    assert ScriptConstants.flappy?(ScriptConstants::FLAPPY_NAME)
-    assert !ScriptConstants.flappy?(ScriptConstants::FROZEN_NAME)
+    assert ScriptConstants.script_in_category?(:flappy, ScriptConstants::FLAPPY_NAME)
+    assert !ScriptConstants.script_in_category?(:flappy, ScriptConstants::FROZEN_NAME)
   end
 
   def test_hoc?
-    assert ScriptConstants.hoc?(ScriptConstants::HOC_2013_NAME)
-    assert ScriptConstants.hoc?(ScriptConstants::HOC_NAME)
-    assert ScriptConstants.hoc?(ScriptConstants::FROZEN_NAME)
-    assert ScriptConstants.hoc?(ScriptConstants::FLAPPY_NAME)
-    assert ScriptConstants.hoc?(ScriptConstants::PLAYLAB_NAME)
-    assert ScriptConstants.hoc?(ScriptConstants::STARWARS_NAME)
-    assert ScriptConstants.hoc?(ScriptConstants::STARWARS_BLOCKS_NAME)
-    assert ScriptConstants.hoc?(ScriptConstants::MINECRAFT_NAME)
-    assert ScriptConstants.hoc?(ScriptConstants::INFINITY_NAME)
-    assert ScriptConstants.hoc?(ScriptConstants::ARTIST_NAME)
-    assert ScriptConstants.hoc?(ScriptConstants::GUMBALL_NAME)
-    assert ScriptConstants.hoc?(ScriptConstants::ICEAGE_NAME)
-    assert !ScriptConstants.hoc?(ScriptConstants::COURSE4_NAME)
+    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::HOC_2013_NAME)
+    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::HOC_NAME)
+    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::FROZEN_NAME)
+    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::FLAPPY_NAME)
+    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::PLAYLAB_NAME)
+    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::STARWARS_NAME)
+    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::STARWARS_BLOCKS_NAME)
+    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::MINECRAFT_NAME)
+    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::INFINITY_NAME)
+    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::ARTIST_NAME)
+    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::GUMBALL_NAME)
+    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::ICEAGE_NAME)
+    assert !ScriptConstants.script_in_category?(:hoc, ScriptConstants::COURSE4_NAME)
+  end
+
+  def test_category
+    assert_equal ['hoc'], ScriptConstants.categories(ScriptConstants::HOC_NAME)
+    assert_equal ['hoc'], ScriptConstants.categories(ScriptConstants::STARWARS_NAME)
+    assert_equal ['hoc', 'flappy'], ScriptConstants.categories(ScriptConstants::FLAPPY_NAME)
+    assert_equal ['csf'], ScriptConstants.categories(ScriptConstants::COURSE1_NAME)
+    assert_equal ['csp'], ScriptConstants.categories(ScriptConstants::CSP_UNIT1_NAME)
+  end
+
+  def test_category_index
+    assert_equal 0, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT1_NAME, :csp)
+    assert_equal 1, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT2_NAME, :csp)
+    assert_equal 2, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT3_NAME, :csp)
+    assert_equal 3, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT4_NAME, :csp)
+    assert_equal 4, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT5_NAME, :csp)
+    assert_equal 5, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT6_NAME, :csp)
+
+    assert_nil ScriptConstants.position_in_category('script', :not_a_category)
+    assert_nil ScriptConstants.position_in_category('not a script', :csp)
   end
 end

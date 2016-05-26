@@ -33,53 +33,46 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 <img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge"> Starting in the 2016-17 school year Code.org is recognized by the College Board as an endorsed provider of curriculum and professional development for AP® Computer Science Principles (AP CSP). This endorsement affirms that all components of Code.org CSP’s offerings are aligned to the AP Curriculum Framework standards and the AP CSP assessment. Using an endorsed provider affords schools access to resources including an AP CSP syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach AP CSP.
 
  * [Code.org 2016-17 AP CSP Endorsed Syllabus ID #1648108v1](/files/CSPSyllabusApril2016.pdf)
- <br>
- 
- *Note: The course materials on this page (see below) still reflect the sequence of 2015-16 pilot course syllabus. Though largely the same, the new sequence and other small changes will be updated to reflect the 2016 AP Endorsed syllabus soon.*
+ * [Instructions: How to add our authorized syllabus to your AP Course Audit](https://docs.google.com/document/export?format=pdf&id=12VOTkJv9R_Db-YDvNjNYkhZ5nnAw8eqFkmwscM8W16M)
 
-The resources are distributed under a Creative Commons Attribution NonCommerical ShareAlike License see our [Terms of Service](https://code.org/tos).
+ [<button>View Curriculum</button>](#lessons)
+
 
 ### <a name="features"></a>Features
 
-- Access the world of web applications using [App Lab](/educate/applab): Code.org's online, block to text, JavaScript programming environment
-- Build problem solving skills through the use of [computational widgets](/educate/applab)
+- Access to daily lesson plans, covering roughly 150 hours of material with linked activity guides and assessment support
+- Build problem solving skills through the use of computational widgets such as the [pixelation](/pixelation) and [text compression](/textcompression) widgets
+- Rapidly develop shareable web applications using [App Lab](/educate/applab): Code.org's online, block to text, JavaScript programming environment
 - Experience a blend of online, guided tutorials and open-ended, project-based learning
 - Learn from a diverse cast of role models, from well-known tech celebrities to social innovators who are using CS to tackle society's problems
 - Engage all students in constructing their own understanding of computer science concepts through equitable teaching practices and inquiry-based instructional strategies
 - Prepare for the AP® CS Principles exam through a curriculum intentionally designed around the latest developments in the College Board framework, including built-in preparation for the performance tasks  
-- Use, share, and customize the resources, as they are distributed under a Creative Commons Attribution NonCommerical ShareAlike License see our [Terms of Service](https://code.org/tos).
+- Use, share, and customize the resources, as they are distributed under a Creative Commons Attribution NonCommerical ShareAlike License see our [Terms of Service](https://code.org/tos). If you are interested in licensing Code.org materials for commercial purposes, [contact us](https://code.org/contact).
+
 
 [<button>See App Lab in action</button>](/educate/applab) &nbsp;&nbsp; [<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
 
 ### Watch a video from the [CS Principles Video Library](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB)
-Check back often.  The video library is growing every week!
 
-<div style="width: 300px; float: left; margin-right: 10px;">
+<div style="width: 30%; float: left; margin-right: 10px;">
 
 	<%=view :display_video_thumbnail, id: "images_pixels", video_code: "15aqFQQVBWU", play_button: 'center' %>
 
 </div>
 
-<div style="width: 300px; float: left; margin-right: 10px;">
+<div style="width: 30%; float: left; margin-right: 10px;">
 
 	<%=view :display_video_thumbnail, id: "digital_compression", video_code: "By30SCp-Tsw", play_button: 'center' %>
 
 </div>
 
-<div style="width: 300px; float: left; margin-right: 10px;">
+<div style="width: 30%; float: left; margin-right: 10px;">
 
 	<%=view :display_video_thumbnail, id: "the_internet", video_code: "ZhEf7e4kopM", play_button: 'center' %>
 
 </div>
 
-<div style="width: 300px; float: left; margin-right: 10px;">
-
-	<%=view :display_video_thumbnail, id: "ip_addresses", video_code: "5o8CwafCxnU", play_button: 'center' %>
-
-</div>
-
 <div style="clear: both;"></div>
-
 
 ## <a name="overview"></a>Overview
 
@@ -87,27 +80,27 @@ Several documents describe the overarching themes and direction of the course.
 
 - [One-pager](/files/programs/CSP_1-pager_final.pdf)
 - **New** [2016 AP Endorsed Syllabus and Overview](/files/CSPSyllabusApril2016.pdf)
-  - *Note: The course materials on this page still reflect the sequence of 2015-16 pilot course syllabus. The sequence and other small changes will be updated to reflect the 2016 AP Endorsed syllabus soon. Reference: [2015-16 Pilot Syllabus and Overview](/files/CSPSyllabusJan2016.pdf) (rev. Jan. 2016)*
 - [Professional development overview](/files/CSPPDoverview.pdf)
-
-
-
-
-
-
-
 
 ## <a name="lessons"></a>Lessons
 
 
+### Archive of the '15-'16 version of the curriculum
+*All of the '15-'16 units are still available to use from the [2015-2016 version of the course](/educate/csp/archive/summary). Learn more about the updates [here](https://docs.google.com/document/export?format=pdf&id=1ElvZenQSCigqBXKEHnXYRruck7umCJd699aippGCfLQ).*
+
+### 2016 - 2017 Lessons
+*In response to feedback from our 2015-2016 pilot teachers, we are reordering, condensing, and clarifying lesson content. We will be re-releasing each unit here as soon as it is ready.*
+
+
 | Link | Unit Description |
 | :------------------:|-----------|
-|  [![binary magic](csp/images/thumb_binaryMagic.png "Unit 1")](/educate/csp/unit1) [Unit 1](/educate/csp/unit1) | **Digital Information:** What can be represented with a single bit and how do we get a single bit of information from one place to another? This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. Topics include: the digital representation of information - numbers, text, images, and communication protocols |
-|  [![Internet Simulator](csp/images/thumb_netsim.png "Unit 2")](/educate/csp/unit2) [Unit 2](/educate/csp/unit2)  | **The Internet:** Students continue to work together to invent solutions and protocols to many of the problems that arise in the structure and function of the Internet. Topics include the Internet Protocol, DNS, TCP/IP, cryptography, computationally hard problems, and other security and hacking concerns.
-| [![App Lab](csp/images/thumb_applab.png "Unit 3")](/educate/csp/unit3) [Unit 3](/educate/csp/unit3) | **Programming:** Students learn the fundamentals programming constructs of JavaScript by solving problems with “turtle graphics.”  Then move on to programming simple event driven apps.  An emphasis is placed on enabling students to solve problems and write code in teams. |
-| [![binary magic](csp/images/thumb_graph.png "Unit 4")](/educate/csp/unit4) [Unit 4](/educate/csp/unit4)| **Data:** Being able to digitally manipulate data, visualize it, identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.|
-|[![binary magic](csp/images/thumb_app.png "Unit 5")](/educate/csp/unit5) [Unit 5](/educate/csp/unit5)| **Explore and Create:** Class time devoted to preparation and execution of the AP® Performance Tasks: Explore and Create.|
-|[![binary magic](csp/images/thumb_survey.png "Post-AP")](/educate/csp/postap) [Post-AP](/educate/csp/postap)| **Databases in Apps:** This loosely-structured material includes new content which students can work through after the AP® test. The content includes skill-building levels about remote data storage and how to use App Lab's Data Tools to create data-backed apps.|
+|  [![Internet Simulator](csp/images/thumb_netsim.png "Unit 1")](https://curriculum.code.org/csp/unit1/) [Unit 1](https://curriculum.code.org/csp/unit1/)  | **The Internet:** This unit begins exploring the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. In the second half of the unit, students solve problems similar ones that had to be solved to build the real Internet. Students design their own versions of protocols, each one layered on the previous one, in a process that mimics the layered sets of protocols on the real Internet. Topics include: the digital representation of numbers and text, Internet Protocol, DNS, and TCP/IP. |
+|   [![binary magic](csp/images/thumb_binaryMagic.png "Unit 2")](https://curriculum.code.org/csp/unit2/) [Unit 2](https://curriculum.code.org/csp/unit2/)   | **Digital Information:** This unit further explores the ways that digital information is encoded, represented and manipulated. In this unit students will look at and generate data, clean it, manipulate it, and create and use visualizations to identify patterns and trends.|
+| ![App Lab](csp/images/thumb_applab.png "Unit 3") Unit 3 - Coming Soon| **Algorithms and Programming:** This unit introduces students to programming in the JavaScript language and creating small applications (apps) that live on the web. This introduction places a heavy emphasis on understanding general principles of computer programming and revealing those things that are universally applicable to any programming language. <br><br> *'16-'17 content coming soon:* Unit 3 will be comprised primarily of content from Lessons 1 - 8 from the '15 - '16 version of the [Programming Unit](/educate/csp/archive/unit3) |
+| ![App Lab](csp/images/thumb_graph.png "Unit 4") Unit 4 - Coming Soon| **Big Data and Privacy:** The data rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. In many ways this unit acts as a unit on current events. It is highly likely that there will be something related to big data, privacy and security going on in the news at any point in time. The major goals of the unit are 1) for students to develop a well­rounded and balanced view about data in the world around them and both the positive and negative effects of it and 2) to understand the basics of how and why modern encryption works. <br><br>*'16-'17 content coming soon:* Unit 4 will be comprised primarily of content from lessons 10 - 14 from the '15 - '16 version of the [Data Unit](/educate/csp/archive/unit4), which cover the implications of big data, and lessons 13 - 19 from the '15 - '16 version of the [Internet Unit](/educate/csp/archive/unit2), which build up to how modern asymmetric encryption works. |
+| ![App Lab](csp/images/thumb_app.png "Unit 5") Unit 5 - Coming Soon| **Building Apps:** This unit continues to develop students’ ability to program in the JavaScript language, using Code.org’s App Lab environment to create a series of small applications (apps) that live on the web, each highlighting a core concept of programming. In this unit students transition to creating event­-driven apps. The unit assumes that students have learned the concepts and skills from Unit 3, namely: writing and using functions, using simple repeat loops, being able to read documentation, collaborating, and using the Code Studio environment with App Lab. <br><br>*'16-'17 content coming soon:* Unit 5 will be comprised primarily of content from Lessons 9 - 29 from the '15 - '16 version of the [Programming Unit](/educate/csp/archive/unit3) |
+| ![binary magic](csp/images/thumb_survey.png "Unit 6") Unit 6 - Coming Soon| **Create and Explore PT:** Class time devoted to preparation and execution of the AP® Performance Tasks: Explore and Create. <br><br>*'16-'17 content coming soon:* Unit 6 will be the same content as '15 - '16 version of the [Performance Task Unit](/educate/csp/archive/unit5), with the suggested modification to complete the Create Performance Task before the Explore Performance Tasks.  |
+
 
 ### Chat about CSP in the CSP forum
 We have forums for educators to discuss and trade ideas about CSP and talk about the curriculum.  Code.org forums are used for all of our courses K-12 and can be found at [forum.code.org](http://forum.code.org).  For CSP there are two forums that are most useful:
@@ -119,6 +112,8 @@ We have forums for educators to discuss and trade ideas about CSP and talk about
 * [Unit 4 Lesson-Specific Forums](http://forum.code.org/c/csp-unit4)
 * [Unit 5 Lesson-Specific Forums](http://forum.code.org/c/csp-unit5)
 * [Post-AP Stage-Specific Forums](http://forum.code.org/c/csp-post-ap)
+
+**_Note_** _that the forums still correspond to the '15-'16 curriculum, as our pilot group is still actively working through the materials_
 
 ## Frequently Asked Questions
 
@@ -132,15 +127,13 @@ Check out our forum at <a href ="forum.code.org" target=_blank>http://forum.code
 
 <br />
 
-#### When will lessons be published?
-
-All lessons are now published! See the table above.
+#### Where did all the lessons go?
+For the '16-'17 school year, we are revising the '15-'16 version of the curriculum (see a summary of the changes [here.](https://docs.google.com/document/export?format=pdf&id=1ElvZenQSCigqBXKEHnXYRruck7umCJd699aippGCfLQ)) We will re-release each unit as soon as it is ready. You can still access all of the ['15-'16 archived materials](/educate/csp/archive/summary). 
 
 <br />
+#### Can I give feedback on the lessons?
 
-#### Can I test lessons and give feedback?
-
-Yes, please!  As lessons are published on the website we invite anyone to try them out - both the lessons and any new tools or software - and let us know how it went.  Our desire is that the curriculum will be a living document and not something set in stone. We are open to changes or alternatives to lessons so please send us your feedback by using the CSP forum.
+Yes, please! Our desire is that the curriculum will be a living document and not something set in stone. We are open to changes or alternatives to lessons so please send us your feedback by using the CSP forum.
 
 <br />
 
@@ -150,9 +143,9 @@ In-person professional development for the Code.org CSP course will be available
 
 <br />
 
-#### How can I learn more about the progress of the curriculum?
+#### How can I learn about what's new or changing with the curriculum?
 
-We're now sending out a monthly status email for members of the computer science education community who are interested in peeking under the hood as we actively work to develop the curriculum and tools for the course. [Sign up for future emails](http://code.org/educate/csp/CSPStatus_Signup).
+We send out monthly updates! [Sign up for future emails](http://code.org/educate/csp/CSPStatus_Signup).
 
 <br />
 

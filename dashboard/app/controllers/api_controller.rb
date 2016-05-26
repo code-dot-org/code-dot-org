@@ -25,11 +25,7 @@ class ApiController < ApplicationController
       level_map = student.user_levels_by_level(@script)
       student_levels = @script.script_levels.map do |script_level|
         user_level = level_map[script_level.level_id]
-        if user_level.try(:submitted)
-          level_class = "submitted"
-        else
-          level_class = activity_css_class(user_level.try(:best_result))
-        end
+        level_class = activity_css_class(user_level)
         {class: level_class, title: script_level.position, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
       end
       {id: student.id, levels: student_levels}
@@ -99,7 +95,7 @@ class ApiController < ApplicationController
     script = Script.get_from_cache(params[:script_name])
     stage = script.stages[params[:stage_position].to_i - 1]
     script_level = stage.script_levels[params[:level_position].to_i - 1]
-    level = script_level.level
+    level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
     if current_user
       last_activity = current_user.last_attempt(level)
@@ -163,8 +159,6 @@ class ApiController < ApplicationController
 
     level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => LevelGroup)
 
-    multi_answer_characters = ("A".."Z").to_a
-
     data = @section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
 
@@ -178,7 +172,7 @@ class ApiController < ApplicationController
 
         response_parsed = JSON.parse(response)
 
-        user_level = student.user_level_for(script_level)
+        user_level = student.user_level_for(script_level, script_level.level)
 
         # Summarize some key data.
         multi_count = 0
@@ -188,23 +182,27 @@ class ApiController < ApplicationController
         level_results = []
 
         script_level.level.levels.each do |level|
+
+          if level.is_a? Multi
+            multi_count += 1
+          end
+
           level_response = response_parsed[level.id.to_s]
 
-          if level_response
-            level_result = {}
+          level_result = {}
 
+          if level_response
             case level
-            when TextMatch
+            when TextMatch, FreeResponse
               student_result = level_response["result"]
               level_result[:student_result] = student_result
               level_result[:correct] = "free_response"
             when Multi
               answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes
               student_result = level_response["result"].split(",").sort.join(",")
-              multi_count += 1
 
               # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
-              level_result[:student_result] = student_result.split(',').map{ |k| multi_answer_characters[k.to_i] }.join(', ')
+              level_result[:student_result] = student_result.split(',').map{ |k| Multi.value_to_letter(k.to_i) }.join(', ')
 
               if student_result == "-1"
                 level_result[:student_result] = ""
@@ -216,9 +214,11 @@ class ApiController < ApplicationController
                 level_result[:correct] = "incorrect"
               end
             end
-
-            level_results << level_result
+          else
+            level_result[:correct] = "unsubmitted"
           end
+
+          level_results << level_result
         end
 
         submitted = user_level.try(:submitted)

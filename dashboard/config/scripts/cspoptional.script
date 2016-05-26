@@ -1,0 +1,36 @@
+title 'CS Principles Optional Lessons'
+description 'Optional lessons and content across all of the CS Principles units are listed here'
+description_short "Optional"
+login_required 'true'
+hidden 'true'
+
+stage 'Unit 1 - Sending Bits in the Real World'
+level 'Sending Bits Real World Student Lesson Introduction'
+level 'U1L5 How the Internet Works - Video'
+assessment 'U1L5 Matching Assessment'
+
+stage 'Unit 1 - Encoding Numbers in the Real World'
+level 'Encoding Numbers Real World Student Lesson Introduction'
+assessment 'U1L9 Free Response Assessment'
+
+stage 'Algorithms Detour - Minimum Spanning Tree'
+level 'Algo MST Student Lesson Introduction'
+assessment 'U2L06 - Matching: Label the Diagram'
+assessment 'U2L06- MC: what is an MST?'
+assessment 'U2L06 - MC: Which is an MST?'
+
+stage 'Algorithms Detour - Shortest Path'
+level 'Algo Shortest Path Student Lesson Introduction'
+assessment 'U1L07 Assessment 1'
+assessment 'U2L07 Assessment2'
+assessment 'U2L07 Assessment3'
+assessment 'U2L07 Assessment4'
+assessment 'U2L07 Assessment5'
+
+stage 'Algorithms Detour - How Routers Learn'
+level 'Algo How Routers Learn Student Lesson Introduction'
+assessment 'U2L08 Free Response 3'
+assessment 'U2L08 Free Response 1'
+assessment 'U2L08 Free Response 2'
+assessment 'U2L08 Assessment 0'
+assessment 'U2L08 Assessment 1'

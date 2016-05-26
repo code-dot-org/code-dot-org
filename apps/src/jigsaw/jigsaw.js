@@ -9,8 +9,8 @@
 
 var studioApp = require('../StudioApp').singleton;
 var skins = require('../skins');
+var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
 var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');
 var dom = require('../dom');
 
@@ -149,14 +149,6 @@ Jigsaw.init = function (config) {
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={studioApp.localeDirection()}
-      editCode={!!level.editCode}
-      readonlyWorkspace={!!config.readonlyWorkspace}
-    />
-  );
-
   var onMount = function () {
     studioApp.init(config);
 
@@ -174,17 +166,19 @@ Jigsaw.init = function (config) {
     }
   };
 
-  ReactDOM.render(React.createElement(AppView, {
-    assetUrl: studioApp.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    hideSource: !!config.hideSource,
-    noVisualization: true,
-    isRtl: studioApp.isRtl(),
-    codeWorkspace: codeWorkspace,
-    visualizationColumn: <JigsawVisualizationColumn/>,
-    onMount: onMount
-  }), document.getElementById(config.containerId));
+  studioApp.setPageConstants(config, {
+    noVisualization: true
+  });
+
+  ReactDOM.render(
+    <Provider store={studioApp.reduxStore}>
+      <AppView
+          visualizationColumn={<JigsawVisualizationColumn/>}
+          onMount={onMount}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
+  );
 };
 
 function checkForSuccess() {
@@ -235,7 +229,7 @@ Jigsaw.onPuzzleComplete = function () {
 
   // If we know they succeeded, mark levelComplete true
   // Note that we have not yet animated the succesful run
-  var levelComplete = (Jigsaw.result == ResultType.SUCCESS);
+  var levelComplete = (Jigsaw.result === ResultType.SUCCESS);
 
   Jigsaw.testResults = studioApp.getTestResults(levelComplete, {
     allowTopBlocks: true

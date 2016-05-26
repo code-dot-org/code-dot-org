@@ -3,23 +3,9 @@
 'use strict';
 
 var ActionType = require('./actions').ActionType;
-var combineReducers = require('redux').combineReducers;
 var constants = require('./constants');
 var ApplabInterfaceMode = constants.ApplabInterfaceMode;
-var instructions = require('../redux/instructions');
-var levelProperties = require('../redux/levelProperties');
-var runState = require('../redux/runState');
-
-function currentScreenId(state, action) {
-  state = state || null;
-
-  switch (action.type) {
-    case ActionType.CHANGE_SCREEN:
-      return action.screenId;
-    default:
-      return state;
-  }
-}
+var screens = require('./redux/screens');
 
 var levelInitialState = {
   assetUrl: function () {},
@@ -41,12 +27,7 @@ function interfaceMode(state, action) {
   }
 }
 
-var rootReducer = combineReducers({
-  currentScreenId: currentScreenId,
-  level: levelProperties.default,
+module.exports = {
   interfaceMode: interfaceMode,
-  instructions: instructions.default,
-  runState: runState.default
-});
-
-module.exports = { rootReducer: rootReducer };
+  screens: screens.default
+};

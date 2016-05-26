@@ -2,5 +2,5 @@ professional_learning_course 'true'
 title 'PLC Test'
 description 'PLC test fixture script'
 
-stage 'Sample Module'
+stage 'Sample Module', 'content'
 level 'Level 1'

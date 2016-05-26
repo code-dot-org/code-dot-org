@@ -28,8 +28,8 @@ var skins = require('../skins');
 var levels = require('./levels');
 var codegen = require('../codegen');
 var api = require('./api');
+var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
-var CodeWorkspace = require('../templates/CodeWorkspace');
 var EvalVisualizationColumn = require('./EvalVisualizationColumn');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
@@ -146,25 +146,17 @@ Eval.init = function (config) {
     }
   };
 
-  var codeWorkspace = (
-    <CodeWorkspace
-      localeDirection={studioApp.localeDirection()}
-      editCode={!!level.editCode}
-      readonlyWorkspace={!!config.readonlyWorkspace}
-    />
-  );
+  studioApp.setPageConstants(config);
 
-  ReactDOM.render(React.createElement(AppView, {
-    assetUrl: studioApp.assetUrl,
-    isEmbedView: !!config.embed,
-    isShareView: !!config.share,
-    hideSource: !!config.hideSource,
-    noVisualization: false,
-    isRtl: studioApp.isRtl(),
-    codeWorkspace: codeWorkspace,
-    visualizationColumn: <EvalVisualizationColumn/>,
-    onMount: studioApp.init.bind(studioApp, config)
-  }), document.getElementById(config.containerId));
+  ReactDOM.render(
+    <Provider store={studioApp.reduxStore}>
+      <AppView
+          visualizationColumn={<EvalVisualizationColumn/>}
+          onMount={studioApp.init.bind(studioApp, config)}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
+  );
 };
 
 /**

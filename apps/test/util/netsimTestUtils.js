@@ -1,7 +1,6 @@
 'use strict';
 
-var testUtils = require('../util/testUtils');
-var assert = testUtils.assert;
+import {assert} from './configuredChai';
 
 var utils = require('@cdo/apps/utils');
 var _ = require('@cdo/apps/lodash');

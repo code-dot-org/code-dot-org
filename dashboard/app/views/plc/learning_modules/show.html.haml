@@ -13,7 +13,10 @@
   .outlined_section
     %h4 #{task_grouping[:name]}
     - task_grouping[:tasks].each do |task|
-      = link_to task.name, plc_task_path(task)
+      - sl = task.script_level
+      = link_to task.name, script_stage_script_level_path(sl.script, sl.stage, sl)
+      = surround '(', ')' do
+        = link_to 'Edit', edit_level_path(sl.level)
       %br
   %br
 

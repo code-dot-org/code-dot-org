@@ -389,6 +389,9 @@
   homepage_banner_20k_teachers: 20.000 δάσκαλοι εχουν εκπαιδευτεί και τώρα διδάσκουν
     επιστήμη υπολογιστών σε τάξεις.
   homepage_banner_20k_teachers_link: "Μάθετε περισσότερα"
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: "Η Ώρα του Κώδικα"
   homepage_slot_text_blurb_hoc: "Οποιοσδήποτε μπορεί να μάθει. Ξεκινήστε σήμερα"
   homepage_slot_text_link_hoc: "Δοκίμασε την Ώρα του Κώδικα"
@@ -414,6 +417,7 @@
   homepage_slot_text_link_stats: "Δείτε τα στατιστικά"
   homepage_slot_text_link_buy: "Εμπλακείτε"
   homepage_slot_text_link_donate: "Κάντε μια δωρεά"
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Studio Κώδικα δημιουργίες σπουδαστών
   homepage_header_donors: "Το Code.org ευχαριστεί τους υποστηρικτές του"
   homepage_donors_seall: "Εμφάνιση όλων"
@@ -699,11 +703,11 @@
   dashboard_action_remove_confirm: "Κατάργηση;"
   dashboard_action_done: "Ολοκληρώθηκε"
   dashboard_action_required: "απαιτείται"
-  dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
-  dashboard_download_csv: Download CSV
+  dashboard_assessments_view: "Δείτε τις αξιολογήσεις σε:"
+  dashboard_assessments_none: "Δεν υπάρχουν αξιολογήσεις"
+  dashboard_filter_by_stage: "Φίλτρο κατά στάδιο:"
+  dashboard_filter_all: "Ολα"
+  dashboard_download_csv: "Κατεβάστε το CSV"
   dashboard_navigation_home_page: "Αρχική Σελίδα Εκπαιδευτή"
   dashboard_navigation_section_student_progress: "Λογαριασμοί μαθητών και Πρόοδος"
   dashboard_navigation_section_teacher_progress: "Πρόοδος του τμήματός σας"
@@ -728,11 +732,11 @@
   dashboard_progress_completed_perfect: "ολοκληρώθηκε, τέλειο"
   dashboard_progress_furthest_level_attempted: "τελευταίο επίπεδο επιχειρήθηκε"
   dashboard_progress_submitted: "Υποβλήθηκε"
-  dashboard_progress_view: 'View progress in:'
-  dashboard_progress_student_in_script: Progress information for %{student_name} in
-    %{script_name}
-  dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_progress_view: "Προβολή προόδου σε:"
+  dashboard_progress_student_in_script: "Πληροφορίες προόδου για τον/την %{student_name}
+    στο %{script_name}"
+  dashboard_responses_view: "Δείτε τις απαντήσεις κειμένου σε:"
+  dashboard_responses_none: "Δεν υπάρχουν απαντήσεις κειμένου"
   dashboard_sections_new_section: "Νέα ενότητα"
   dashboard_sections_jumbotron_instruction: "Δημιουργήστε νέες ενότητες και προσθέστε
     σε αυτές μαθητές. Οι ενότητες σας βοηθήσουν να οργανώσετε τους μαθητές σε μικρότερες
@@ -761,25 +765,25 @@
     σας χωριστά."
   dashboard_sections_switch_section: "Αλλαγή ενότητας:"
   dashboard_sections_close: "Κλείσιμο"
-  dashboard_sections_move_students_desc: Select students to move to a new section.
-    Moving students will not clear their progress.
-  dashboard_sections_one_per_teacher: Students can only be in one section for each
-    teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
-  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
-    section AND the new section
-  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
-    only.
-  dashboard_sections_move_students: Move Students
-  dashboard_error_none_selected: You didn't select any students to move. Please select
-    at least one student.
-  dashboard_error_other_section: If you're moving students between your own sections,
-    select your section from the dropdown. Only select 'Other Section' to move your
-    students to a different teacher's section.
+  dashboard_sections_move_students_desc: "Επιλέξτε τους μαθητές που θα προχωρήσουν
+    σε μια νέα ενότητα. Η μετακίνηση των μαθητών δεν θα διαγράψει την πρόοδό τους."
+  dashboard_sections_one_per_teacher: "Οι μαθητές μπορεί να είναι μόνο σε μια ενότητα
+    για κάθε δάσκαλο. Οι μαθητές σας θα προστεθούν σε αυτό το νέο τμήμα και θα αποχωρήσουν
+    από το παλιό τμήμα."
+  dashboard_sections_move_to_section: "Μετακίνηση στο τμήμα:"
+  dashboard_sections_enter_code: "Δώστε τον κωδικό του τμήματος:"
+  dashboard_sections_code_placeholder: "κωδικός 6 χαρακτήρων (ABCDEF)"
+  dashboard_sections_other_section: "Αλλο τμήμα"
+  dashboard_sections_both_sections: "Θέλετε οι μαθητές να υπάρχουν και στα δύο τμήματα;"
+  dashboard_sections_yes_both: "Ναι, θέλω να αντιγραφούν οι μαθητές σε αυτό το τρέχον
+    τμήμα ΚΑΙ στο νέο τμήμα"
+  dashboard_sections_no_move: "Όχι, θέλω να μεταφέρω τους μαθητές μόνο στο νέο τμήμα."
+  dashboard_sections_move_students: "Μετακίνησε τους μαθητές"
+  dashboard_error_none_selected: "Δεν επιλέξατε κανένα μαθητή για να μετακινήσετε.
+    Παρακαλώ επιλέξτε τουλάχιστον ενα μαθητή."
+  dashboard_error_other_section: Αν μετακινείτε μαθητές μεταξύτων δικών σας τμημάτων,
+    επιλέξτε το τμήμα σας από το αναπτυσσόμενο μενού. Επιλέξτε "Αλλη ενότητα" για
+    να μετακινήσετε τους μαθητές σας σε τμήμα ενός διαφορετικού δασκάλου.
   dashboard_students_add_student: "Προσθήκη μαθητή"
   dashboard_students_add_students: "Προσθήκη πολλών μαθητών"
   dashboard_students_add_multiple: "Πληκτρολογήστε ή επικολλήστε τα ονόματα των μαθητών
@@ -878,8 +882,8 @@
   dashboard_correctness_unsubmitted: "Ανακλήθηκε"
   dashboard_correctness_correct: "Σωστό"
   dashboard_correctness_incorrect: "Εσφαλμένο"
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
+  dashboard_submission_submitted: "Υποβλήθηκε"
+  dashboard_submission_in_progress: "Σε εξέλιξη"
   dashboard_status: "Κατάσταση"
   dashboard_multi_correct: "# η πολλαπλή επιλογή είναι σωστή"
   dashboard_multi_count: "# πολλαπλή επιλογή"
@@ -915,6 +919,12 @@
     underrepresented minorities. Our annual survey shows record diversity in your
     classrooms! Check out the numbers."
   dashboard_announce_button_text: "Μάθετε περισσότερα"
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: "Η ώρα του κώδικα έφτασε  - 8-14 Δεκεμβρίου!"
   code_sign_up: "Εγγραφείτε για να συμμετάσχετε κατά τη διάρκεια της εκπαιδευτικής
     εβδομάδας για την Επιστήμη της Πληροφορικής"
@@ -1042,13 +1052,31 @@
   course3_name: "Μάθημα 3"
   course4_name: "Μάθημα 4"
   accelerated_name: "Επιταχυνόμενη πορεία μάθησης"
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
   cspunit3_name: "Αρχές CS - Ενότητα 3"
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
   cspunit3_gradelevel: "Τάξεις Γ΄ Γυμνασίου - Γ΄ Λυκείου"
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
+  20-hour_name: "Επιταχυνόμενη πορεία μάθησης"
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: "Κλασικός λαβύρινθος"
+  iceage_name: "Εποχή των Παγετώνων"
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: "Μαθηματικά"
+  hoc_category_name: "Η Ώρα του Κώδικα"
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
   applab_name: "Εργαστήριο εφαρμογών"
   applab_gradelevel: "Ηλικίες 13+"
   applab_shortdescription_congrats: "Το App Lab (Εργαστήριο εφαρμογών) είναι ένα περιβάλλον
@@ -1835,12 +1863,11 @@
   infinity_shortcode: inf
   playlab_shortcode: "παίξε"
   artist_shortcode: art
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.

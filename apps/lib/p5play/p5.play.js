@@ -139,6 +139,10 @@ p5.prototype.spriteUpdate = true;
    * A Sprite can have a collider that defines the active area to detect
    * collisions or overlappings with other sprites and mouse interactions.
    *
+   * Sprites created using createSprite (the preferred way) are added to the
+   * allSprites group and given a depth value that puts it in front of all
+   * other sprites.
+   *
    * @method createSprite
    * @param {Number} x Initial x coordinate
    * @param {Number} y Initial y coordinate
@@ -948,7 +952,9 @@ function Sprite(pInst, _x, _y, _w, _h) {
   *
   * @property depth
   * @type {Number}
-  * @default 0
+  * @default One more than the greatest existing sprite depth, when calling
+  *          createSprite().  When calling new Sprite() directly, depth will
+  *          initialize to 0 (not recommended).
   */
   this.depth = 0;
 
@@ -1187,7 +1193,12 @@ function Sprite(pInst, _x, _y, _w, _h) {
         if(this.collider instanceof AABB)
         {
         //scale / rotate collider
-        var t = radians(this.rotation);
+        var t;
+        if (pInst._angleMode === pInst.RADIANS) {
+          t = radians(this.rotation);
+        } else {
+          t = this.rotation;
+        }
 
         if(this.colliderType === 'custom')
           {
@@ -1485,7 +1496,11 @@ function Sprite(pInst, _x, _y, _w, _h) {
 
       translate(this.position.x, this.position.y);
       scale(this.scale*dirX, this.scale*dirY);
-      rotate(radians(this.rotation));
+      if (pInst._angleMode === pInst.RADIANS) {
+        rotate(radians(this.rotation));
+      } else {
+        rotate(this.rotation);
+      }
       this.draw();
       //draw debug info
       pop();
@@ -1650,12 +1665,20 @@ function Sprite(pInst, _x, _y, _w, _h) {
     var a;
     if (typeof angle === 'undefined') {
       if (this.velocity.x !== 0 || this.velocity.y !== 0) {
-        a = Math.atan2(this.velocity.y, this.velocity.x);
+        a = pInst.atan2(this.velocity.y, this.velocity.x);
       } else {
-        a = radians(this._rotation);
+        if (pInst._angleMode === pInst.RADIANS) {
+          a = radians(this._rotation);
+        } else {
+          a = this._rotation;
+        }
       }
     } else {
-      a = radians(angle);
+      if (pInst._angleMode === pInst.RADIANS) {
+        a = radians(angle);
+      } else {
+        a = angle;
+      }
     }
     this.velocity.x = cos(a)*speed;
     this.velocity.y = sin(a)*speed;
@@ -1670,7 +1693,12 @@ function Sprite(pInst, _x, _y, _w, _h) {
   * @param {Number}  angle Direction in degrees
   */
   this.addSpeed = function(speed, angle) {
-    var a = radians(angle);
+    var a;
+    if (pInst._angleMode === pInst.RADIANS) {
+      a = radians(angle);
+    } else {
+      a = angle;
+    }
     this.velocity.x += cos(a) * speed;
     this.velocity.y += sin(a) * speed;
   };
@@ -2614,18 +2642,13 @@ function Group() {
   * @return {Number} The depth of the sprite drawn on the top
   */
   array.maxDepth = function() {
-    var max;
+    if (array.length === 0) {
+      return 0;
+    }
 
-    if(array.length === 0)
-      max = 0;
-    else
-      max = array[0].depth;
-
-    for(var i = 0; i<array.length; i++)
-      if(array[i].depth>max)
-        max = array[i].depth;
-
-    return max;
+    return array.reduce(function(maxDepth, sprite) {
+      return Math.max(maxDepth, sprite.depth);
+    }, -Infinity);
   };
 
   /**
@@ -2635,18 +2658,13 @@ function Group() {
   * @return {Number} The depth of the sprite drawn on the bottom
   */
   array.minDepth = function() {
-    var min;
+    if (array.length === 0) {
+      return 99999;
+    }
 
-    if(array.length === 0)
-      min = 99999;
-    else
-      min = array[0].depth;
-
-    for(var i = 0; i<array.length; i++)
-      if(array[i].depth<min)
-        min = array[i].depth;
-
-    return min;
+    return array.reduce(function(minDepth, sprite) {
+      return Math.min(minDepth, sprite.depth);
+    }, Infinity);
   };
 
   /**
@@ -2970,7 +2988,12 @@ function AABB(pInst, _center, _extents, _offset) {
   this.rotate = function(r)
   {
     //rotate the bbox
-    var t = radians(r);
+    var t;
+    if (pInst._angleMode === pInst.RADIANS) {
+      t = radians(r);
+    } else {
+      t = r;
+    }
 
     var w2 = this.extents.x * abs(pInst.cos(t)) + this.extents.y * abs(pInst.sin(t));
     var h2 = this.extents.x * abs(pInst.sin(t)) + this.extents.y * abs(pInst.cos(t));
@@ -3454,7 +3477,11 @@ function Animation(pInst) {
       pInst.imageMode(CENTER);
 
       pInst.translate(this.xpos, this.ypos);
-      pInst.rotate(radians(this.rotation));
+      if (pInst._angleMode === pInst.RADIANS) {
+        pInst.rotate(radians(this.rotation));
+      } else {
+        pInst.rotate(this.rotation);
+      }
 
       if(this.images[frame] !== undefined)
       {

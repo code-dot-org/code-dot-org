@@ -31,7 +31,7 @@ module.exports = function (grunt) {
       mf = new MessageFormat(locale, false, namespace);
     } catch (e) {
       // Fallback to en if locale is not found
-      if (locale != 'en') {
+      if (locale !== 'en') {
         return process('en', namespace, json);
       } else {
         throw e;
