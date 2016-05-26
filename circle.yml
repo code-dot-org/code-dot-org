@@ -16,7 +16,7 @@ dependencies:
     - "apps/node_modules"
     - "~/.rvm/gems/ruby-2.2.3"
   override:
-    - sudo apt-get install libicu-dev
+    - sudo apt-get install libicu-dev enscript
     - bundle install
     - "printf \"bundler_use_sudo: false\n\" > locals.yml"
     - bundle exec rake install:pegasus
