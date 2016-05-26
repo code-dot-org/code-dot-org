@@ -1,6 +1,7 @@
 /** @file Upload button wrapping a hidden uploader component. */
 'use strict';
 
+var React = require('react');
 var HiddenUploader = require('./HiddenUploader.jsx');
 
 /**

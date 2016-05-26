@@ -1,9 +1,7 @@
-/* global React */
-
 /*
   Modal confirmation (OK/Cancel) dialog with custom text and events.
  */
-
+import React from 'react';
 var Modal = require('react-bootstrap').Modal;
 var Button = require('react-bootstrap').Button;
 

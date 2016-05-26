@@ -1,4 +1,5 @@
 import {expect} from '../../util/configuredChai';
+import React from 'react';
 import ReactTestUtils from 'react-addons-test-utils';
 import { VisualizationOverlay } from '@cdo/apps/templates/VisualizationOverlay';
 import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';
