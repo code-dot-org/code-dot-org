@@ -108,17 +108,23 @@ path /v3/channels/{channel_id}/server_time/{user_id} is Number {
   validate() { this == now }
 }
 
-// The last record id previously assigned to a new record in this table.
-// Incremented transactionally. The new value belongs to the caller.
-path /v3/channels/{channel_id}/counters/tables/{table_name}/last_id is Number {
-  write() { isLoggedIn() && this != null }
-  validate() { this > orZero(prior(this)) }
-}
+// STORAGE
 
 // table storage
 
-path /v3/channels/{channel_id}/storage/tables/{table_name}/target_record_id is String {
-  write() { isLoggedIn() && this != null }
+// Children of {table_name} must specify their own write() rule.
+path /v3/channels/{channel_id}/storage/tables/{table_name} is Table;
+
+type Table {
+  target_record_id: String
+  row_counts: Number[]
+  // Don't specify type String[] here, or bolt will generate a wildcard which
+  // conflicts with our own {record_id} wildcard below.
+  records: Any | Null 
+}
+
+path /v3/channels/{channel_id}/storage/tables/{table_name}/target_record_id {
+  write() { isLoggedIn() }
 }
 
 path /v3/channels/{channel_id}/storage/tables/{table_name}/row_counts {
@@ -129,48 +135,19 @@ path /v3/channels/{channel_id}/storage/tables/{table_name}/row_counts {
   }
 }
 
-path /v3/channels/{channel_id}/storage/tables/{table_name}/row_counts/{bucket} is Number;
-
 // the {record_id} is the id of the record. Its value is the json-encoded
 // value of the record.
 path /v3/channels/{channel_id}/storage/tables/{table_name}/records/{record_id} is String {
   write() {
     // Specify these rules in write(), because validate() is skipped when data is null
-    // (e.g. records are removed).
+    // (e.g. records are removed). Ancestors of this node must not specify a write() rule,
+    // to ensure this node's write() rule is evaluated.
     isLoggedIn() && isTargetId(this, record_id) && rowCountUpdated(this, prior(this)) &&
     allRateLimitsUpdated(this.parent().parent().parent().parent().parent())
   }
 }
 
-// rate limit counters
-
-type RateLimitCounters {
-  '15': RateLimitCounter | Null
-  '60': RateLimitCounter | Null
-}
-
-type RateLimitCounter {
-  last_reset_time: Number | Null
-  last_token: Number
-}
-
-path /v3/channels/{channel_id}/counters/limits is RateLimitCounters {
-  write() { isLoggedIn() && this != null }
-}
-
-path /v3/channels/{channel_id}/counters/limits/15 {
-  validate() {
-    isValidRateLimitCounter(this.parent().parent().parent(), 15, 30)
-  }
-}
-
-path /v3/channels/{channel_id}/counters/limits/60 {
-  validate() {
-    isValidRateLimitCounter(this.parent().parent().parent(), 60, 60)
-  }
-}
-
-// rate limit data
+// rate limit storage
 
 type RateLimitStorages {
   '15': RateLimitStorage | Null
@@ -198,4 +175,44 @@ path /v3/channels/{channel_id}/storage/limits/60 {
   }
 }
 
-//path /v3/channels/{channel_id}/storage/limits/240 { }
+// COUNTERS
+
+// last id counter
+
+// The last record id previously assigned to a new record in this table.
+// Incremented transactionally. The new value belongs to the caller.
+path /v3/channels/{channel_id}/counters/tables/{table_name}/last_id is LastIdCounter {
+  write() { isLoggedIn() && this != null }
+}
+
+type LastIdCounter extends Number {
+  validate() { this > orZero(prior(this)) }
+}
+
+// rate limit counters
+
+path /v3/channels/{channel_id}/counters/limits is RateLimitCounters {
+  write() { isLoggedIn() && this != null }
+}
+
+type RateLimitCounters {
+  '15': RateLimitCounter | Null
+  '60': RateLimitCounter | Null
+}
+
+type RateLimitCounter {
+  last_reset_time: Number | Null
+  last_token: Number
+}
+
+path /v3/channels/{channel_id}/counters/limits/15 {
+  validate() {
+    isValidRateLimitCounter(this.parent().parent().parent(), 15, 30)
+  }
+}
+
+path /v3/channels/{channel_id}/counters/limits/60 {
+  validate() {
+    isValidRateLimitCounter(this.parent().parent().parent(), 60, 60)
+  }
+}
