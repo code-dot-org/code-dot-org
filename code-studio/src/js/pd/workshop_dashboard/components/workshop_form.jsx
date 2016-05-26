@@ -547,7 +547,7 @@ var WorkshopForm = React.createClass({
                 information like building location, lunch options or pre-work."
                 value={this.state.notes || ''}
                 onChange={(event) => {this.handleFieldChange('notes', event.target.value);}}
-                maxLength={4096}
+                maxLength={65535}
                 rows={Math.max(5, this.state.notes.split("\n").length + 1)}
                 style={this.props.readOnly && styles.readOnlyInput}
                 disabled={this.props.readOnly}
