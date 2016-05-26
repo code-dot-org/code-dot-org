@@ -63,6 +63,12 @@ callouts, hints, secret words, or secret pictures.
 #pusher_application_key: ''
 #pusher_application_secret: ''
 
+# Configuration options for Acapela-Group.com integration
+#use_acapela: true
+#acapela_login: ''
+#acapela_app: ''
+#acapela_password: ''
+
 # Credentials for new relic logging. Used to log apps build times.
 # Log in to https://rpm.newrelic.com/accounts/501463 to get the key
 #new_relic_license_key: ''

@@ -369,6 +369,13 @@ StudioApp.prototype.init = function (config) {
     });
   }
 
+  if (config.acapelaEnabled) {
+    this.acapelaEnabled = config.acapelaEnabled;
+    this.acapelaLogin = config.acapelaLogin;
+    this.acapelaApp = config.acapelaApp;
+    this.acapelaPassword = config.acapelaPassword;
+  }
+
   this.authoredHintsController_.init(config.level.authoredHints, config.scriptId, config.serverLevelId);
   if (config.authoredHintViewRequestsUrl) {
     this.authoredHintsController_.submitHints(config.authoredHintViewRequestsUrl);
@@ -1147,6 +1154,15 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
     authoredHints = this.authoredHintsController_.getHintsDisplay();
   }
 
+  var acapelaSettings;
+  if (this.acapelaEnabled) {
+    acapelaSettings = {
+      login: this.acapelaLogin,
+      app: this.acapelaApp,
+      password: this.acapelaPassword,
+    };
+  }
+
   return (
     <Instructions
       puzzleTitle={puzzleTitle}
@@ -1157,6 +1173,7 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
       renderedMarkdown={renderedMarkdown}
       markdownClassicMargins={level.markdownInstructionsWithClassicMargins}
       aniGifURL={level.aniGifURL}
+      acapelaSettings={acapelaSettings}
       authoredHints={authoredHints}/>
   );
 };

@@ -302,6 +302,13 @@ module LevelsHelper
       app_options['pusherApplicationKey'] = CDO.pusher_application_key
     end
 
+    if CDO.use_acapela
+      app_options['acapelaEnabled'] = CDO.use_acapela
+      app_options['acapelaLogin'] = CDO.acapela_login
+      app_options['acapelaApp'] = CDO.acapela_app
+      app_options['acapelaPassword'] = CDO.acapela_password
+    end
+
     if @level.is_a? NetSim
       app_options['netsimMaxRouters'] = CDO.netsim_max_routers
     end
