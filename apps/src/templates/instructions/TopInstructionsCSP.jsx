@@ -59,24 +59,24 @@ var styles = {
 
 var TopInstructions = React.createClass({
   propTypes: {
-    // TODO - figure out
-    // isEmbedView: React.PropTypes.bool.isRequired,
-    // puzzleNumber: React.PropTypes.number.isRequired,
-    // stageTotal: React.PropTypes.number.isRequired,
-    // height: React.PropTypes.number.isRequired,
-    // maxHeight: React.PropTypes.number.isRequired,
-    // markdown: React.PropTypes.string,
-    // collapsed: React.PropTypes.bool.isRequired,
-    // toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
-    // setInstructionsHeight: React.PropTypes.func.isRequired,
-    // onResize: React.PropTypes.func.isRequired
+    isEmbedView: React.PropTypes.bool.isRequired,
+    puzzleNumber: React.PropTypes.number.isRequired,
+    stageTotal: React.PropTypes.number.isRequired,
+    height: React.PropTypes.number.isRequired,
+    expandedHeight: React.PropTypes.number.isRequired,
+    maxHeight: React.PropTypes.number.isRequired,
+    markdown: React.PropTypes.string,
+    collapsed: React.PropTypes.bool.isRequired,
+    toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
+    setInstructionsHeight: React.PropTypes.func.isRequired,
+    setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
+    setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired
   },
 
+  /**
+   *
+   */
   componentDidMount() {
-    if (!this.props.markdown) {
-      return;
-    }
-
     window.addEventListener('resize', this.adjustMaxNeededHeight);
 
     const maxNeededHeight = this.adjustMaxNeededHeight();
@@ -94,10 +94,6 @@ var TopInstructions = React.createClass({
    * TODO - comment me
    */
   componentWillReceiveProps(nextProps) {
-    if (!this.props.markdown) {
-      return;
-    }
-
     if (!nextProps.collapsed && nextProps.height < MIN_HEIGHT &&
         nextProps.height < nextProps.maxHeight) {
       // Height can get below min height iff we resize the window to be super
@@ -128,9 +124,6 @@ var TopInstructions = React.createClass({
    * TODO - comment me
    */
   adjustMaxNeededHeight() {
-    if (!this.props.markdown) {
-      return;
-    }
     const instructionsContent = this.refs.instructions;
     const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
       HEADER_HEIGHT + RESIZER_HEIGHT;
@@ -155,14 +148,9 @@ var TopInstructions = React.createClass({
     }
   },
 
-  render: function () {
+  render() {
     // TODO - might it make more sense to put the same DOM there, but hide it?
-    if (!this.props.markdown) {
-      return <div/>;
-    }
-    var id = this.props.id;
-
-    var mainStyle = [styles.main, {
+    const mainStyle = [styles.main, {
       height: this.props.height - RESIZER_HEIGHT
     }, this.props.isEmbedView && styles.embedView];
 

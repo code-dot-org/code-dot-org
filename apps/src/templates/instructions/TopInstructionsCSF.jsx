@@ -88,10 +88,6 @@ var TopInstructions = React.createClass({
    * TODO - comment me
    */
   componentDidMount() {
-    if (!this.props.shortInstructions && !this.props.longInstructions) {
-      return;
-    }
-
     window.addEventListener('resize', this.adjustMaxNeededHeight);
 
     const maxNeededHeight = this.adjustMaxNeededHeight();
@@ -105,10 +101,6 @@ var TopInstructions = React.createClass({
    * TODO - comment me
    */
   componentWillReceiveProps(nextProps) {
-    if (!this.props.shortInstructions && !this.props.longInstructions) {
-      return;
-    }
-
     if (nextProps.height < MIN_HEIGHT && nextProps.height < nextProps.maxHeight) {
       // Height can get below min height iff we resize the window to be super
       // small. If we then resize it to be larger again, we want to increase
@@ -138,14 +130,11 @@ var TopInstructions = React.createClass({
    * TODO - comment me
    */
   adjustMaxNeededHeight() {
-    if (!this.props.shortInstructions && !this.props.longInstructions) {
-      return;
-    }
     const instructionsContent = this.refs.instructions;
     const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
       RESIZER_HEIGHT;
 
-    this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
+    this.props.setInstructionsMaxHeightNeeded(Math.max(MIN_HEIGHT, maxNeededHeight));
     return maxNeededHeight;
   },
 
@@ -165,10 +154,6 @@ var TopInstructions = React.createClass({
   },
 
   render: function () {
-    // TODO - might it make more sense to put the same DOM there, but hide it?
-    if (!this.props.shortInstructions && !this.props.longInstructions) {
-      return <div/>;
-    }
     const resizerHeight = (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
     const mainStyle = [styles.main, {

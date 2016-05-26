@@ -11,22 +11,17 @@ var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 /**
  * A component representing the right side of the screen in our app. In particular
  * it has instructions in the top pane (unless disabled), a resizer, and then
- * our code workspace component
+ * our code workspace component.
+ * Owns maxHeightAvailable for instructions, updating as appropriate on window
+ * resize events
  */
 var InstructionsWithWorkspace = React.createClass({
   propTypes: {
     // props provided via connect
     showInstructions: React.PropTypes.bool.isRequired,
-    // instructionsCollapsed: React.PropTypes.bool.isRequired,
     instructionsHeight: React.PropTypes.number.isRequired,
-    // instructionsMaxHeight: React.PropTypes.number.isRequired,
-    // setInstructionsHeight: React.PropTypes.func.isRequired,
-    // setInstructionsMaxHeight: React.PropTypes.func.isRequired,
 
-    // shortInstructionsWhenCollapsed: React.PropTypes.bool,
-    // TODO - properly pass these to top instructions
-    // isRtl: React.PropTypes.bool.isRequired,
-    // noVisualization: React.PropTypes.bool.isRequired
+    setInstructionsMaxHeightAvailable: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -64,7 +59,8 @@ var InstructionsWithWorkspace = React.createClass({
     // Have a preference for showing at least 150px of editor and 120px of
     // debugger. Shrink instructions to make room. If that doesn't provide
     // enough space, start also shrinking workspace
-    // TODO - no debugger in CSF
+    // CSF doesn't have a debugger, but reserving 270 pixels for the workspace
+    // there still seems reasonable.
     const EDITOR_RESERVE = 150;
     const DEBUGGER_RESERVE = 120;
     const INSTRUCTIONS_RESERVE = 150;
@@ -98,14 +94,9 @@ var InstructionsWithWorkspace = React.createClass({
   },
 
   render() {
-    // TODO - might be able to get rid of refs
     return (
       <span>
-        {this.props.showInstructions &&
-          <TopInstructions
-              ref="topInstructions"
-          />
-        }
+        {this.props.showInstructions && <TopInstructions/>}
         <CodeWorkspaceContainer
             ref="codeWorkspaceContainer"
             topMargin={this.props.instructionsHeight}
@@ -122,10 +113,7 @@ module.exports = connect(function propsFromStore(state) {
   };
 }, function propsFromDispatch(dispatch) {
   return {
-    setInstructionsHeight: function (height) {
-      dispatch(instructions.setInstructionsHeight(height));
-    },
-    setInstructionsMaxHeightAvailable: function (maxHeight) {
+    setInstructionsMaxHeightAvailable(maxHeight) {
       dispatch(instructions.setInstructionsMaxHeightAvailable(maxHeight));
     }
   };
