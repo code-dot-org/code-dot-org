@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require 'cgi'
+
 # Utility to strip consistent leading whitespace from heredoc strings, allowing
 # you to format your code more readably.
 #
@@ -45,13 +47,14 @@ def bold(text); stylize(text, 1); end
 def dim(text); stylize(text, 2); end
 def underline(text); stylize(text, 4); end
 
-def wait_for(thing)
-  puts <<-EOS.unindent
-
-    Wait for #{thing}
-    #{dim 'Press enter to continue...'}
-  EOS
+def press_enter_to_continue
+  puts dim 'Press enter to continue...'
   gets
+end
+
+def wait_for(thing)
+  puts "\nWait for #{thing}"
+  press_enter_to_continue
 end
 
 def open_url(url)
@@ -67,6 +70,19 @@ def open_in_default_browser(url)
   else
     system "open \"#{url}\""
   end
+end
+
+def content_push(server_name, environment_name)
+  puts <<-EOS.unindent
+    Follow the prompts given by the content-push script.
+      If you need to do something fancier (or if the changed files do not
+      "look ok" when it asks you), log in to staging and hand-craft the commit.
+  EOS
+  system "ssh -t gateway.code.org ssh -t #{server_name} #{environment_name}/bin/content-push"
+end
+
+def open_pull_request(base, compare, title)
+  open_url "https://github.com/code-dot-org/code-dot-org/compare/#{base}...#{compare}?expand=1&title=#{CGI.escape title}"
 end
 
 puts <<-EOS.unindent
@@ -88,33 +104,22 @@ EOS
 wait_for "between 10AM and 11:30AM (Pacific) to morning DTT"
 
 should_i "morning DTT" do
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/test...staging?expand=1&title=DTT%20%28Staging%20%3E%20Test%29'
+  open_pull_request 'test', 'staging', 'DTT (Staging > Test)'
   wait_for "morning DTT to complete, re-run/investigate failures, and update test room topic to that commit # green"
 end
 
 should_i "commit content changes from staging" do
-  puts <<-EOS.unindent
-    Follow the prompts given by the content-push script.
-      If you need to do something fancier (or if the changed files do not
-      "look ok" when it asks you), log in to staging and hand-craft the commit.
-  EOS
-  system "ssh -t gateway.code.org ssh -t staging staging/bin/content-push"
+  content_push 'staging', 'staging'
 end
 
 should_i "commit content changes from levelbuilder" do
-  puts <<-EOS.unindent
-    Follow the prompts given by the content-push script. If you need to do something fancier (or if the changed files do not "look ok" when it asks you), log in to staging and hand-craft the commit.
-  EOS
-  system "ssh -t gateway.code.org ssh -t levelbuilder-staging levelbuilder/bin/content-push"
+  content_push 'levelbuilder-staging', 'levelbuilder'
 
   should_i "merge from levelbuilder to staging" do
-    open_url 'https://github.com/code-dot-org/code-dot-org/compare/staging...levelbuilder?expand=1&title=Levelbuilder%20%3E%20Staging'
+    open_pull_request 'staging', 'levelbuilder', 'Levelbuilder > Staging'
     wait_for "staging to finish building. if a staging build was already running, wait for a second build which will include the levelbuilder content"
     should_i "commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD" do
-      puts <<-EOS.unindent
-        Follow the prompts given by the content-push script. If you need to do something fancier (or if the changed files do not "look ok" when it asks you), log in to staging and hand-craft the commit.
-      EOS
-      system "ssh -t gateway.code.org ssh -t staging staging/bin/content-push"
+      content_push 'staging', 'staging'
     end
   end
 end
@@ -123,7 +128,7 @@ should_i "DTT" do
   puts <<-EOS.unindent
     Update Developer room status with "DTT: NO (@yourname DTP candidate)"
   EOS
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/test...staging?expand=1&title=DTT%20%28Staging%20%3E%20Test%29'
+  open_pull_request 'test', 'staging', 'DTT (Staging > Test)'
   wait_for "a green test run"
   puts <<-EOS.unindent
     Restore Developer room status to "DTT: yes"
@@ -132,13 +137,13 @@ end
 
 wait_for "between 1:30PM and 3:30PM (Pacific) to DTP"
 should_i "DTP" do
-  open_url 'https://github.com/code-dot-org/code-dot-org/compare/production...test?expand=1&title=DTP%20%28Test%20%3E%20Production%29'
+  open_pull_request 'production', 'test', 'DTP (Test > Production)'
 
   should_i "deploy Levelbuilder while the deploy to production is happening" do
     puts <<-EOS.unindent
       Go to the Levelbuilder room on Slack and ask everyone @here if they are ready for a deploy (They need to save their changes, otherwise they may lose some work when you complete the next step).
     EOS
-    open_url 'https://github.com/code-dot-org/code-dot-org/compare/levelbuilder...test?expand=1&title=Test%20%3E%20Levelbuilder'
+    open_pull_request 'levelbuilder', 'test', 'Test > Levelbuilder'
   end
 
   wait_for "DTP to finish"
@@ -152,6 +157,11 @@ should_i "DTP" do
     * Watch HoneyBadger and New Relic for new errors popping up after the deploy.
   EOS
 end
+
+puts <<-EOS.unindent
+  * Send your DOTD Report to dev@code.org
+EOS
+press_enter_to_continue
 
 puts <<-EOS.unindent
 
