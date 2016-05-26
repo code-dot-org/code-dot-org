@@ -1,6 +1,6 @@
 ---
 from: 'Hadi Partovi <hadi_partovi@code.org>'
-subject: "CS education for every school in Idaho—with your help"
+subject: "CS education for every school in Illinois—with your help"
 ---
 
 <img width="80%" src="https://s3.amazonaws.com/cdo-email-images/girloncomp_WA_email.jpg"/>
@@ -11,7 +11,7 @@ Congress is about to determine the budget that will guide federal funding for ed
 
 <strong>[Go here now](http://www.congressweb.com/code/21) to ask your representative to support funding for computer science education.</strong>
 
-Computing jobs are now <strong>the #1 source of all new wages in the US</strong>. There are 1,238 computing jobs open in Idaho right now, and the average salary for these jobs is over $67,000—nearly double the average for all other occupations. 
+Computing jobs are now <strong>the #1 source of all new wages in the US</strong>. There are 23,523 computing jobs open in Illinois right now, and the average salary for these jobs is nearly $83,000—significantly higher the average for all other occupations. 
 
 But most schools don’t offer computer science courses. Other schools that do offer them don’t have the resources they truly need to teach computer science. 
 
