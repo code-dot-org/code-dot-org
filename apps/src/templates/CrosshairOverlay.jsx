@@ -2,7 +2,7 @@
 import React from 'react';
 export const CROSSHAIR_MARGIN = 6;
 
-const styles = {
+export const styles = {
   line: {
     stroke: '#aaa',
     strokeWidth: 1.8,
