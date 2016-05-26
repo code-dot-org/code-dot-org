@@ -10,7 +10,8 @@ var Instructions = React.createClass({
     renderedMarkdown: React.PropTypes.string,
     markdownClassicMargins: React.PropTypes.bool,
     aniGifURL: React.PropTypes.string,
-    authoredHints: React.PropTypes.element
+    authoredHints: React.PropTypes.element,
+    onResize: React.PropTypes.func
   },
 
   render: function () {
@@ -31,6 +32,7 @@ var Instructions = React.createClass({
           ref="instructionsMarkdown"
           renderedMarkdown={this.props.renderedMarkdown}
           markdownClassicMargins={this.props.markdownClassicMargins}
+          onResize={this.props.onResize}
           inTopPane={this.props.inTopPane}
         />
       );

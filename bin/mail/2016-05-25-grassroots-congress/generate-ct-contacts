@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+require_relative '../mailing-common/mailing-list-utils'
+
+# CT code studio teachers and petition signers
+query = %q(
+  (
+    (kind_s:user && role_s:teacher) ||
+    kind_s:Petition
+  ) && (
+    state_code_s:ct ||
+    create_ip_state_s:"Connecticut"
+  )
+)
+
+results = query_subscribed_contacts(q: query)
+puts "#{results.count} CT contacts"
+
+export_contacts_to_csv results, 'ct-contacts.csv'

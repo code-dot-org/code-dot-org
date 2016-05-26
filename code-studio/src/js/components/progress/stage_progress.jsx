@@ -1,6 +1,6 @@
-/* global React, dashboard */
-
-import {STAGE_PROGRESS_TYPE} from './types';
+import React from 'react';
+import { STAGE_PROGRESS_TYPE } from './types';
+import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 
 /**
  * Stage progress component used in level header and course overview.
@@ -9,11 +9,17 @@ var StageProgress = React.createClass({
   propTypes: {
     levels: STAGE_PROGRESS_TYPE,
     currentLevelIndex: React.PropTypes.number,
-    largeDots: React.PropTypes.bool
+    largeDots: React.PropTypes.bool,
+    saveAnswersFirst: React.PropTypes.bool.isRequired
+  },
+
+  dotClicked(url) {
+    if (saveAnswersAndNavigate) {
+      saveAnswersAndNavigate(url);
+    }
   },
 
   render() {
-    var lastIndex = this.props.levels.length - 1;
     var progressDots = this.props.levels.map((level, index) => {
 
       var innerClass = 'level_link ' + (level.status || 'not_tried');
@@ -23,9 +29,6 @@ var StageProgress = React.createClass({
 
       var outerClass = (level.kind === 'assessment') ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
       outerClass = (index === this.props.currentLevelIndex) ? 'puzzle_outer_current' : outerClass;
-      if (index === lastIndex) {
-        outerClass += ' last';
-      }
 
       var isUnplugged = isNaN(level.title);
       var dotStyle = {};
@@ -37,13 +40,20 @@ var StageProgress = React.createClass({
         }
       }
 
+      var onClick = null;
+      if (this.props.saveAnswersFirst) {
+        dotStyle.cursor = 'pointer';
+        onClick = (e) => {this.dotClicked(level.url); e.preventDefault();};
+      }
+
       return ([
         <div className={outerClass}>
           <a
             href={level.url}
+            onClick={onClick}
             className={innerClass + ' level-' + level.id}
             style={dotStyle}>
-            {level.title}
+              {level.title}
           </a>
         </div>,
         ' '

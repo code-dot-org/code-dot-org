@@ -26,7 +26,7 @@ class AdminSearchController < ApplicationController
           # matched.
         end
         if teachers.first
-          array_of_student_ids = Followers.
+          array_of_student_ids = Follower.
             where(user_id: teachers.first[:id]).pluck('student_user_id').to_a
           @users = @users.where(id: array_of_student_ids)
         end
@@ -39,8 +39,7 @@ class AdminSearchController < ApplicationController
         @users = @users.where(id: array_of_student_ids)
       end
 
-      @headers = ['ID', 'Name', 'Email', 'Deleted Timestamp']
-      @users = @users.limit(@max_users).pluck('id', 'name', 'email', 'deleted_at')
+      @users = @users.limit(@max_users)
     end
   end
 

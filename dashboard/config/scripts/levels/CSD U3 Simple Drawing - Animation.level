@@ -36,7 +36,30 @@
     "start_blocks": "// Background\r\n\r\n// Grass\r\n\r\n// Road\r\n\r\n",
     "show_d_pad": "false",
     "code_functions": {
-      "consolelog": null
+      "color": null,
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "strokeWeight": null,
+      "noStroke": null,
+      "ellipse": null,
+      "rect": null,
+      "regularPolygon": null,
+      "line": null,
+      "arc": null,
+      "shape": null,
+      "point": null,
+      "text": null,
+      "textAlign": null,
+      "textFont": null,
+      "textSize": null,
+      "comment": {
+        "category": "Drawing"
+      },
+      "draw": null,
+      "randomNumber_min_max": null,
+      "background": null,
+      "console.log": null
     }
   },
   "published": true,

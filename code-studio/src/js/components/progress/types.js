@@ -1,4 +1,4 @@
-/* global React */
+import React from 'react';
 
 var STAGE_PROGRESS_TYPE = React.PropTypes.arrayOf(React.PropTypes.shape({
   title: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number]),
