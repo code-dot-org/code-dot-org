@@ -825,8 +825,8 @@ SQL
 
   # returns whether a new level has been completed and asynchronously enqueues an operation
   # to update the level progress.
-  def track_level_progress_async(script_level:, new_result:, submitted:, level_source_id:)
-    level_id = script_level.level_id
+  def track_level_progress_async(script_level:, new_result:, submitted:, level_source_id:, level:)
+    level_id = level.try(:id) || script_level.level_id
     script_id = script_level.script_id
     old_user_level = UserLevel.where(user_id: self.id,
                                  level_id: level_id,

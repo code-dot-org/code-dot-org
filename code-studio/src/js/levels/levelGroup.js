@@ -19,8 +19,49 @@ window.initLevelGroup = function (
 
   window.getResult = getResult;
 
+  function submitSublevelResults(completion) {
+    var levels = window.levelGroup.levels;
+    var sendReportCompleteCount = 0;
+    var subLevelCount = Object.keys(levels).length;
+    if (subLevelCount === 0) {
+      return completion();
+    }
+    for (var subLevelId in levels) {
+      var subLevelResult = levels[subLevelId].getResult();
+      var response = subLevelResult.response;
+      var result = subLevelResult.result;
+      var errorType = subLevelResult.errorType;
+      var testResult = subLevelResult.testResult ? subLevelResult.testResult : (result ? 100 : 0);
+      var submitted = subLevelResult.submitted || false;
+
+      var callback = appOptions.dialog.callback;
+      // Replace level id at the end of the callback URL with the sublevel level id
+      var levelIdPosition = callback.substring(callback.lastIndexOf('/') + 1);
+      callback = callback.replace(levelIdPosition, subLevelId);
+
+      window.dashboard.reporting.sendReport({
+        program: response,
+        fallbackResponse: appOptions.dialog.fallbackResponse,
+        callback: callback,
+        app: appOptions.dialog.app,
+        allowMultipleSends: true,
+        level: subLevelId,
+        result: subLevelResult,
+        pass: subLevelResult,
+        testResult: testResult,
+        submitted: submitted,
+        onComplete: function () {
+          sendReportCompleteCount++;
+          if (sendReportCompleteCount === subLevelCount) {
+            completion();
+          }
+        }
+      });
+    }
+  }
+
   var throttledSaveAnswers =
-    window.dashboard.utils.throttle(saveAnswers, 20 * 1000, {'leading': true, 'trailing': true});
+    window.dashboard.utils.throttle(saveAnswers.bind(this, null, submitSublevelResults), 20 * 1000, {'leading': true, 'trailing': true});
 
   var lastResponse = window.getResult().response;
 
@@ -67,7 +108,8 @@ window.initLevelGroup = function (
       "result": true,
       "errorType": null,
       "submitted": window.appOptions.level.submittable || forceSubmittable,
-      "showConfirmationDialog": showConfirmationDialog
+      "showConfirmationDialog": showConfirmationDialog,
+      "beforeProcessResultsHook": submitSublevelResults
     };
   }
 
@@ -89,8 +131,9 @@ window.initLevelGroup = function (
       // long assessment.  Cancel any pending throttled attempts at saving state.
       throttledSaveAnswers.cancel();
       saveAnswers(function () {
-        changePage(targetPage);
-      });
+            changePage(targetPage);
+          },
+          submitSublevelResults);
     }
   }
 
