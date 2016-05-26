@@ -872,10 +872,15 @@ function isMouseInBounds(x, y) {
   return gridUtils.isMouseInBounds(x, y, container.outerWidth(), container.outerHeight());
 }
 
+/**
+ * Sets app space clipping behavior. App space is clipped if clip == true.
+ * @param {boolean} clip
+ */
 function setAppSpaceClipping(clip) {
   var container = $('#designModeViz');
 
   if (clip) {
+    // Delay the clipping until we're done the delete/pushback animation
     container.delay(ANIMATION_LENGTH_MS).addClass('clip-content', ANIMATION_LENGTH_MS);
   } else {
     container.removeClass('clip-content');
