@@ -18,7 +18,6 @@
 class Plc::Task < ActiveRecord::Base
   belongs_to :script_level
   has_and_belongs_to_many :plc_learning_modules, class_name: '::Plc::LearningModule', foreign_key: 'plc_task_id', association_foreign_key: 'plc_learning_module_id'
-  has_many :plc_task_assignments, class_name: '::Plc::EnrollmentTaskAssignment', foreign_key: 'plc_task_id', dependent: :destroy
 
   include SerializedProperties
   include StiFactory
