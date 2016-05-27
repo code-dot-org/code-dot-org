@@ -28,7 +28,7 @@
         response: $('.response').val(),
         submitted: appOptions.level.submittable || forceSubmittable,
         result: true,
-        testResult: #{level.submittable? ? ActivityConstants::UNSUBMITTED_RESULT : true}
+        testResult: #{level.submittable? ? ActivityConstants::UNSUBMITTED_RESULT : ActivityConstants::FREE_PLAY_RESULT}
       };
     }
 
