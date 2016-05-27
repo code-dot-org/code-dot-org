@@ -2755,7 +2755,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   }
 
   this.reduxStore.dispatch(setInstructionsConstants({
-    shortInstructionsWhenCollapsed: !!config.shortInstructionsWhenCollapsed,
+    shortInstructionsWhenCollapsed,
     shortInstructions,
     longInstructions,
   }));
