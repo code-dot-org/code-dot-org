@@ -2740,12 +2740,12 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
 
   this.reduxStore.dispatch(setPageConstants(combined));
 
-  // TODO - may need to rename this method
+  // also set some instructions specific constants
   let longInstructions = level.markdownInstructions;
   let shortInstructions = level.instructions;
+  const shortInstructionsWhenCollapsed = !!config.shortInstructionsWhenCollapsed;
 
-  // TODO - cleaner
-  if (config.skin.id === "gamelab" || config.skin.id === "applab") {
+  if (!shortInstructionsWhenCollapsed) {
     if (shortInstructions && !longInstructions) {
       // use short instructions as long instructions if that's all we have
       longInstructions = shortInstructions;
@@ -2755,6 +2755,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   }
 
   this.reduxStore.dispatch(setInstructionsConstants({
+    shortInstructionsWhenCollapsed: !!config.shortInstructionsWhenCollapsed,
     shortInstructions,
     longInstructions,
   }));

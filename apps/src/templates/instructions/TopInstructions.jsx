@@ -32,7 +32,7 @@ const TopInstructions = React.createClass({
 });
 
 export default connect(state => ({
-  shortInstructionsWhenCollapsed: !!state.instructions.shortInstructions,
+  shortInstructionsWhenCollapsed: state.instructions.shortInstructionsWhenCollapsed,
   shortInstructions: state.instructions.shortInstructions,
   longInstructions: state.instructions.longInstructions,
 }))(TopInstructions);
