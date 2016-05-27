@@ -8,6 +8,9 @@ module Plc::EvaluationsHelper
     responses.each do |level_id, response|
       level = EvaluationMulti.find(level_id)
       selected_answer = level.answers[response['result'].to_i]
+
+      next if selected_answer['stage'].nil?
+
       stage = Stage.find_by(name: selected_answer['stage']['name'], script_id: script.id)
       learning_module = stage.try(:plc_learning_module)
 
