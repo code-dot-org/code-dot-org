@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 /**
  * Note: We have similar code in pegasus:
  * pegasus/sites/all/views/popup_window.js.haml

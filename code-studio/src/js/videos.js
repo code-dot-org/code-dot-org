@@ -1,6 +1,7 @@
 'use strict';
 /* global dashboard, Dialog, YT, YTConfig, trackEvent */
 
+import $ from 'jquery';
 var videojs = require('video.js');
 var testImageAccess = require('./url_test');
 var clientState = require('./clientState');
