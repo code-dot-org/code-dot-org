@@ -31,13 +31,14 @@ module.exports = function createCallouts(callouts) {
     return;
   }
 
-  // Insert a hashchange handler to detect show_callout= hashes and fire
+  // Insert a hashchange handler to detect calloutevent= hashes and fire
   // appropriate events to open the callout
-  document.body.onhashchange = function () {
+  window.onhashchange = function () {
     var loc = window.location;
-    var splitHash = loc.hash.split("#callouton=");
+    var splitHash = loc.hash.split("#calloutevent=");
     if (splitHash.length > 1) {
-      $(window).trigger(splitHash[1], ['reAppear']);
+      var eventName = splitHash[1];
+      $(window).trigger(eventName, ['hashchange']);
       if (window.history.pushState) {
         history.pushState("", document.title, loc.pathname + loc.search);
       } else {
@@ -45,17 +46,6 @@ module.exports = function createCallouts(callouts) {
       }
     }
   };
-
-  if (document.URL.indexOf('show_callouts=1') === -1) {
-    callouts = callouts.filter(function (element, index, array) {
-      if (clientState.hasSeenCallout(element.id)) {
-        return false;
-      } else {
-        clientState.recordCalloutSeen(element.id);
-        return true;
-      }
-    });
-  }
 
   if (!callouts || callouts.length === 0) {
     return;
@@ -72,6 +62,8 @@ module.exports = function createCallouts(callouts) {
     snapCalloutsToTargets();
     showOrHideCalloutsByTargetVisibility();
   });
+
+  var showCalloutsMode = document.URL.indexOf('show_callouts=1') !== -1;
 
   $.fn.qtip.zindex = 500;
   callouts.forEach(function (callout) {
@@ -111,6 +103,18 @@ module.exports = function createCallouts(callouts) {
     var config = $.extend(true, {}, defaultConfig, customConfig);
     config.style.classes = config.style.classes.concat(" cdo-qtips");
 
+    callout.seen = clientState.hasSeenCallout(callout.id);
+    if (showCalloutsMode) {
+      callout.seen = false;
+    } else {
+      if (callout.seen && !config.codeStudio.canReappear) {
+        return;
+      }
+      if (!callout.seen) {
+        clientState.recordCalloutSeen(callout.id);
+      }
+    }
+
     if (callout.hide_target_selector) {
       config.hide.target = $(callout.hide_target_selector);
     }
@@ -132,13 +136,14 @@ module.exports = function createCallouts(callouts) {
     if (callout.on) {
       $(window).on(callout.on, function (e, action) {
         if ($(selector).length > 0) {
-          if (action === "reAppear" || !callout.seen) {
+          if (action === "hashchange" || !callout.seen) {
+            $(window).trigger('prepare_for_callout', [callout.qtip_config.codeStudio]);
             $(selector).qtip(config).qtip('show');
           }
           callout.seen = true;
         }
       });
-    } else {
+    } else if (!callout.seen) {
       $(selector).qtip(config).qtip('show');
     }
   });
