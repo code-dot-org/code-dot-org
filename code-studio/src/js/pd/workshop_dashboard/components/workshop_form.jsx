@@ -1,9 +1,12 @@
-/* global React google */
+/* global google */
 
 /*
  Form for creating / editing workshop details.
  */
 
+import $ from 'jquery';
+var React = require('react');
+var ReactDOM = require('react-dom');
 var _ = require('lodash');
 var moment = require('moment');
 var SessionListFormPart = require('./session_list_form_part');
@@ -469,7 +472,7 @@ var WorkshopForm = React.createClass({
   renderForm: function () {
     let validation = this.validate(this.state.shouldValidate);
     return (
-      <Grid fluid={true}>
+      <Grid>
         <form>
           <Row>
             <Col sm={4}>
@@ -537,7 +540,7 @@ var WorkshopForm = React.createClass({
             </Col>
           </Row>
           <Row>
-            <Col sm={8}>
+            <Col sm={10}>
               <Input
                 type="textarea"
                 label="Notes (optional)"
@@ -545,7 +548,8 @@ var WorkshopForm = React.createClass({
                 information like building location, lunch options or pre-work."
                 value={this.state.notes || ''}
                 onChange={(event) => {this.handleFieldChange('notes', event.target.value);}}
-                rows="5"
+                maxLength={65535}
+                rows={Math.max(5, this.state.notes.split("\n").length + 1)}
                 style={this.props.readOnly && styles.readOnlyInput}
                 disabled={this.props.readOnly}
               />

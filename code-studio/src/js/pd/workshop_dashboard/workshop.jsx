@@ -1,4 +1,4 @@
-/* global React TEACHER_DASHBOARD_URL */
+/* global TEACHER_DASHBOARD_URL */
 
 /*
   Workshop view / edit. Displays and optionally edits details for a workshop.
@@ -7,7 +7,9 @@
     /Workshops/:workshopId/edit
  */
 
+import $ from 'jquery';
 var _ = require('lodash');
+import React from 'react';
 var moment = require('moment');
 var ConfirmationDialog = require('./components/confirmation_dialog');
 var WorkshopForm = require('./components/workshop_form');
@@ -486,7 +488,7 @@ var Workshop = React.createClass({
       return this.renderSpinner();
     }
     return (
-      <Grid fluid={true}>
+      <Grid>
         {this.renderSignupPanel()}
         {this.renderIntroPanel()}
         {this.renderAttendancePanel()}

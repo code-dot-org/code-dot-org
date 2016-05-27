@@ -1451,6 +1451,9 @@ en:
       introduction to events: {}
       introduction to turtle: {}
       k5 what next 1: {}
+      newCSFsample:
+        Intro: Intro
+        description here: description here
       plc csp1 chapter overviews: {}
       plc csp1 intro to tools: {}
       plc csp1 introduction to unit: {}

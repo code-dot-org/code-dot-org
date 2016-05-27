@@ -11,8 +11,6 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       render :closed
     elsif workshop_full?
       render :full
-    elsif workshop_owned_by? current_user
-      render :own
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       if current_user

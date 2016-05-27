@@ -1,7 +1,9 @@
 'use strict';
 
-var Radium = require('radium');
-var connect = require('react-redux').connect;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Radium from 'radium';
+import {connect} from 'react-redux';
 var actions = require('../../applab/actions');
 var instructions = require('../../redux/instructions');
 var color = require('../../color');

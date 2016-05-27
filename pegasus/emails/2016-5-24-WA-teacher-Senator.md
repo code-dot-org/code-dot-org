@@ -1,6 +1,6 @@
 ---
 from: 'Nimisha Ghosh Roy (Code.org) <nimisha@code.org>'
-subject: "Sign the letter. Help secure federal funding for CS education"
+subject: "Sign the letter. Help secure federal funding for CS education."
 ---
 
 <img width="80%" src="https://s3.amazonaws.com/cdo-email-images/girloncomp_WA_email.jpg"/>
@@ -15,8 +15,10 @@ U.S. Senator Patty Murray has the power to help secure this funding. We are send
 
 Thank you! Please contact me if I can answer any questions.
 
-Warmly,
+Warmly,<br>
 Nimisha
+
+--
 
 Nimisha Ghosh Roy<br>Northwest District Manager<br>[Code.org](http://code.org)<br>[nimisha@code.org](mailto:nimisha@code.org)<br>@nimighosh
 
