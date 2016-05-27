@@ -60,7 +60,10 @@ For Dropbox folder access, ask Brendan or anyone with Dropbox `Pegasus Staging` 
 
 ## To run PDF collation tests
 
-1. In `/Gemfile`, un-comment the line with `gem 'pdf-reader'`
+The PDF collation tests should now be run during the pegasus test cycle.
+
+To run the individual test manually:
+
 1. `bundle install`
-1. `cd code-dot-org/pegasus/test/disabled`
+1. `cd code-dot-org/pegasus/test`
 1. `bundle exec ruby -Itest test_pdf_merger.rb`
