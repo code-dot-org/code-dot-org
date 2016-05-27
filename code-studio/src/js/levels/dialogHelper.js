@@ -1,4 +1,5 @@
 /* globals appOptions, Dialog, getResult, CDOSounds, showVideoDialog, dashboard */
+import $ from 'jquery';
 
 /*
  * This file contains general logic for displaying modal dialogs and handling
