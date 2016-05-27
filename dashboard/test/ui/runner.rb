@@ -218,6 +218,8 @@ if test_type == 'eyes tests'
   print "Batching eyes tests as #{ENV['BATCH_NAME']}"
 end
 
+# How many flaky test reruns occurred across all tests (ignoring the initial attempt).
+total_flaky_reruns = 0
 Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
   feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
   browser_name = browser['name'] || 'UnknownBrowser'
@@ -360,6 +362,8 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   reruns = 0
   while !succeeded && (reruns < max_reruns)
     reruns += 1
+    total_flaky_reruns += 1
+
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     # Since output_stderr is empty, we do not log it to HipChat.
     HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}), retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || "?"})..."
@@ -449,7 +453,6 @@ end.each do |succeeded, message|
     $failures << message
   end
 end
-
 $logfile.close
 $errfile.close
 $errbrowserfile.close
@@ -458,7 +461,8 @@ $suite_duration = Time.now - $suite_start_time
 
 HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " +
   "Test count: #{($suite_success_count + $suite_fail_count)}. " +
-  "Total duration: #{RakeUtils.format_duration($suite_duration)}."
+  "Total duration: #{RakeUtils.format_duration($suite_duration)}. " +
+  "Total reruns of flaky tests: #{total_flaky_reruns}."
 
 if $suite_fail_count > 0
   HipChat.log "Failed tests: \n #{$failures.join("\n")}"
