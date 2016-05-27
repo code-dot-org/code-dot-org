@@ -23,13 +23,13 @@
       if user[:user_type] == permission_name
         return "#{email} already has 'teacher'"
       end
-      USERS.where(email: email).update(user_type: permission_name)
+      user.update(user_type: permission_name)
       return "#{email} granted 'teacher'"
     elsif permission_name == 'admin'
       if user[:admin]
         return "#{email} already has 'admin'"
       end
-      USERS.where(email: email).update(admin: 1)
+      user.update(admin: 1)
       return "#{email} granted 'admin'"
     end
 
