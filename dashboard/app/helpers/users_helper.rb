@@ -94,9 +94,9 @@ module UsersHelper
           pages_completed = get_pages_completed(user, sl)
           if pages_completed
             user_data[:levels][sl.level_id][:pages_completed] = pages_completed
-            pages_completed.each_with_index do |complete, index|
+            pages_completed.each_with_index do |result, index|
               user_data[:levels]["#{sl.level_id}_#{index}"] = {
-                result: complete ? ActivityConstants::FREE_PLAY_RESULT : ActivityConstants::MINIMUM_FINISHED_RESULT,
+                result: result,
                 submitted: submitted
               }
             end
