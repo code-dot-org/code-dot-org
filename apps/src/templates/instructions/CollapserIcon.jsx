@@ -1,5 +1,6 @@
 'use strict';
 
+var React = require('react');
 var Radium = require('radium');
 var _ = require('../../lodash');
 var color = require('../../color');

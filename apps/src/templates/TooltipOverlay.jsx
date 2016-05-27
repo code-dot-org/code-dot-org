@@ -1,4 +1,5 @@
 /** @file Crosshair and guides over visualization */
+var React = require('react');
 
 const TOOLTIP_MARGIN = 6;
 const EDGE_MARGIN = 5;
@@ -7,6 +8,17 @@ export const TEXT_RECT_HEIGHT = 21;
 export const TEXT_RECT_RADIUS = TEXT_RECT_HEIGHT / 3;
 export const BETWEEN_RECT_MARGIN = 4;
 const TEXT_Y_OFFSET = -7;
+
+export const styles = {
+  text: {
+    textAnchor: 'middle'
+  },
+  rect: {
+    stroke: '#bdc3c7',
+    strokeWidth: 2,
+    fill: 'rgba(255,255,255,0.8)'
+  }
+};
 
 /**
  * Renders a set of tooltips layered over the play space.
@@ -100,8 +112,9 @@ let TooltipOverlay = React.createClass({
               height={TEXT_RECT_HEIGHT}
               rx={TEXT_RECT_RADIUS}
               ry={TEXT_RECT_RADIUS}
+              style={styles.rect}
           />
-          <text x={textX} y={textY}>
+          <text x={textX} y={textY} style={styles.text}>
             {string}
           </text>
         </g>

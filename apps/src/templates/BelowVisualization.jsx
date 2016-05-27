@@ -1,3 +1,4 @@
+var React = require('react');
 var commonStyles = require('../commonStyles');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var InputOutputTable = require('./InputOutputTable');

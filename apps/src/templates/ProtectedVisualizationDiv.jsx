@@ -1,5 +1,6 @@
 'use strict';
 
+import React from 'react';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';

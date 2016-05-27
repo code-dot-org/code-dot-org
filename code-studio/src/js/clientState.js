@@ -4,7 +4,7 @@
  */
 'use strict';
 
-var $ = require('jquery-shim');
+var $ = require('jquery');
 var sessionStorage = window.sessionStorage;
 
 var clientState = module.exports = {};
