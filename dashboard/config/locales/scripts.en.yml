@@ -1795,6 +1795,7 @@ en:
           " Sprite Properties and Mod": " Sprite Properties and Mod"
           Expressions: Expressions
           Conditionals and Keyboard Input: Conditionals and Keyboard Input
+          " Sprites and Images": " Sprites and Images"
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -1968,6 +1969,8 @@ en:
           APIs and Function Parameters: APIs and Function Parameters
           Creating functions with Parameters: Creating functions with Parameters
           Looping and Random Numbers: Looping and Random Numbers
+          App Lab: App Lab
+          Design Mode: Design Mode
         CSDU1-Draft:
           title: " TEMP CSD Unit 1"
           description_short: Problem Solving
@@ -1984,3 +1987,9 @@ en:
           title: " TEMP CSD Unit 6 "
           description_short: Makerlab
           description: Temp place to work on U6 of Disco
+        CSF_Secret_Sample_Story:
+          title: Secret Sample with Story
+          description_short: This is a secret...shhhh
+          description: Test of new educational philosophy with guiding storyline
+          description_audience: Ages 8-18+
+          Sample Stage: Sample Stage
