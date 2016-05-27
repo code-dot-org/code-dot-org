@@ -1,5 +1,5 @@
 /* globals appOptions  */
-
+import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -56,76 +56,6 @@ progress.PUZZLE_PAGE_NONE = -1;
  */
 progress.mergedActivityCssClass = function (a, b) {
   return progress.activityCssClass(clientState.mergeActivityResult(a, b));
-};
-
-progress.populateProgress = function (scriptName, puzzlePage) {
-  var status;
-
-  // Render the progress the client knows about (from sessionStorage)
-  var clientProgress = clientState.allLevelsProgress()[scriptName] || {};
-  Object.keys(clientProgress).forEach(function (levelId) {
-    $('.user-stats-block .level-' + levelId).addClass(progress.activityCssClass(clientProgress[levelId]));
-  });
-
-  $.ajax('/api/user_progress/' + scriptName).done(function (data) {
-    data = data || {};
-
-    // Show lesson plan links if teacher
-    if (data.isTeacher) {
-      $('.stage-lesson-plan-link').show();
-    }
-
-    // Merge progress from server (loaded via AJAX)
-    var serverProgress = data.levels || {};
-    Object.keys(serverProgress).forEach(function (levelId) {
-      // Only the server can speak to whether a level is submitted/accepted/rejected.  If it is,
-      // apply this styling but don't cache locally.
-      if (serverProgress[levelId].result > clientState.MAXIMUM_CACHABLE_RESULT) {
-        var status;
-        if (serverProgress[levelId].result === REVIEW_REJECTED_RESULT) {
-          status = 'review_rejected';
-        }
-        if (serverProgress[levelId].result === REVIEW_ACCEPTED_RESULT) {
-          status = 'review_accepted';
-        }
-        // Clear the existing class and replace
-        $('.level-' + levelId).attr('class', `level_link ${status}`);
-      } else if (serverProgress[levelId].submitted) {
-        // Clear the existing class and replace
-        $('.level-' + levelId).attr('class', 'level_link submitted');
-      } else if (serverProgress[levelId].pages_completed) {
-        // This is a multi-page level.  There will be multiple dots for the same level ID,
-        // so we need to decorate each of them individually.
-        var pagesCompleted = serverProgress[levelId].pages_completed;
-        for (var page = 0; page < pagesCompleted.length; page++) {
-          // The dot is considered perfect if the page is considered complete.
-          var pageCompleted = pagesCompleted[page];
-          status = pageCompleted ? "perfect" : "attempted";
-
-          // Clear the existing class and replace.
-          $($('.user-stats-block .level-' + levelId)[page]).attr('class', 'level-' + levelId + ' level_link ' + status);
-
-          // If this is the current level, highlight it.
-          if (window.appOptions && appOptions.serverLevelId && levelId === appOptions.serverLevelId && puzzlePage-1 === page) {
-            $($('.user-stats-block .level-' + appOptions.serverLevelId)[puzzlePage-1]).parent().addClass('puzzle_outer_current');
-          }
-        }
-      } else if (serverProgress[levelId].result !== clientProgress[levelId]) {
-        status = progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId].result);
-
-        // Clear the existing class and replace
-        $('.level-' + levelId).attr('class', 'level_link ' + status);
-
-        // Write down new progress in sessionStorage
-        clientState.trackProgress(null, null, serverProgress[levelId].result, scriptName, levelId);
-      }
-    });
-  });
-
-  // Unless we already highlighted a specific page, highlight the current level.
-  if (puzzlePage === progress.PUZZLE_PAGE_NONE && window.appOptions && appOptions.serverLevelId) {
-    $('.level-' + appOptions.serverLevelId).parent().addClass('puzzle_outer_current');
-  }
 };
 
 progress.renderStageProgress = function (stageData, progressData, clientProgress, currentLevelId, puzzlePage) {

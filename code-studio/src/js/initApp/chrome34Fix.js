@@ -1,4 +1,5 @@
 /* global WebKitMutationObserver */
+import $ from 'jquery';
 
 /**
  * Workaround for Chrome 34 SVG bug #349701

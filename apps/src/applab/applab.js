@@ -26,6 +26,7 @@ var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var dropletConfig = require('./dropletConfig');
+var makerDropletConfig = require('../makerlab/dropletConfig');
 var AppStorage = require('./appStorage');
 var constants = require('../constants');
 var experiments = require('../experiments');
@@ -675,7 +676,15 @@ Applab.init = function (config) {
 
   config.varsInGlobals = true;
 
-  config.dropletConfig = dropletConfig;
+  if (config.level.makerlabEnabled) {
+    config.dropletConfig = utils.deepMergeConcatArrays(dropletConfig, makerDropletConfig);
+  } else {
+    config.dropletConfig = dropletConfig;
+  }
+
+  // Set the custom set of blocks (may have had makerlab blocks merged in) so
+  // we can later pass the custom set to the interpreter.
+  config.level.levelBlocks = config.dropletConfig.blocks;
 
   config.pinWorkspaceToBottom = true;
 
@@ -1146,7 +1155,7 @@ Applab.execute = function () {
       // Initialize the interpreter and parse the student code
       Applab.JSInterpreter.parse({
         code: codeWhenRun,
-        blocks: dropletConfig.blocks,
+        blocks: level.levelBlocks,
         blockFilter: level.executePaletteApisOnly && level.codeFunctions,
         enableEvents: true
       });
