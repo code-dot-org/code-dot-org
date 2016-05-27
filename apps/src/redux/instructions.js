@@ -96,8 +96,10 @@ export default function reducer(state = instructionsInitialState, action) {
   return state;
 }
 
-export const setInstructionsConstants = ({shortInstructions, longInstructions}) => ({
+export const setInstructionsConstants = ({shortInstructionsWhenCollapsed,
+    shortInstructions, longInstructions}) => ({
   type: SET_CONSTANTS,
+  shortInstructionsWhenCollapsed,
   shortInstructions,
   longInstructions
 });
@@ -115,7 +117,8 @@ export const toggleInstructionsCollapsed = () => ({
 });
 
 /**
- *
+ * Sets the maximum amount of height need by our instructions component if it
+ * were to render itself with no scrollbars
  */
 export const setInstructionsMaxHeightNeeded = height => ({
   type: SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED,
