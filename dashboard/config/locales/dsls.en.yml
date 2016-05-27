@@ -95,6 +95,7 @@ en:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
       CSD U3 - Sprites - Stop: {}
+      CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
       CSD U3 Expressions STOP writing 10: {}
       CSD U3 Keypress Stop: {}
@@ -1678,6 +1679,17 @@ en:
         Thanks for your time: Thanks for your time
       sciencePD2b remixing:
         Remixing in StarLogo Nova: Remixing in StarLogo Nova
+      storyline1:
+        The Adventurer Meets the Wizard: The Adventurer Meets the Wizard
+        The Wizards Potions: The Wizards Potions
+      storyline2:
+        Second Page: Second Page
+      storyline3:
+        page 3: page 3
+      storyline4:
+        bee leaves: bee leaves
+      storyline5:
+        wrapup: wrapup
       test demo level:
         demo description: demo description
         demo title: demo title
