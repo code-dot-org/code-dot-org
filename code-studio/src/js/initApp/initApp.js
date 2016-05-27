@@ -1,11 +1,19 @@
 // TODO (brent) - way too many globals
-/* global script_path, Dialog, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
+/* global script_path, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, ga*/
 
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
 var loadApp = require('./loadApp');
 var project = require('./project');
 var userAgentParser = require('./userAgentParser');
+var clientState = require('../clientState');
+var createCallouts = require('../callouts');
+var reporting = require('../reporting');
+var Dialog = require('../dialog');
+var showVideoDialog = require('../videos').showVideoDialog;
+
+window.dashboard = window.dashboard || {};
+window.dashboard.project = project;
 
 window.apps = {
   // Loads the dependencies for the current app based on values in `appOptions`.
@@ -19,8 +27,6 @@ window.apps = {
     if (!window.dashboard) {
       throw new Error('Assume existence of window.dashboard');
     }
-    dashboard.project = project;
-
     timing.startTiming('Puzzle', script_path, '');
 
     var lastSavedProgram;
@@ -31,26 +37,27 @@ window.apps = {
       Dialog: Dialog,
       cdoSounds: CDOSounds,
       position: {blockYCoordinateInterval: 25},
-      onInitialize: function() {
-        dashboard.createCallouts(this.level.callouts || this.callouts);
+      onInitialize: function () {
+        createCallouts(this.level.callouts || this.callouts);
         if (userAgentParser.isChrome34()) {
           chrome34Fix.fixup();
         }
         if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab' || appOptions.app === 'gamelab') {
           $('#clear-puzzle-header').hide();
           // Only show Version History button if the user owns this project
-          if (dashboard.project.isOwner()) {
+          if (project.isEditable()) {
             $('#versions-header').show();
           }
         }
         $(document).trigger('appInitialized');
       },
-      onAttempt: function(report) {
+      onAttempt: function (report) {
         if (appOptions.level.isProjectLevel) {
           return;
         }
-        if (appOptions.channel) {
-          // Don't send the levelSource or image to Dashboard for channel-backed levels.
+        if (appOptions.channel && !appOptions.level.edit_blocks) {
+          // Don't send the levelSource or image to Dashboard for channel-backed levels,
+          // unless we are actually editing blocks and not really completing a level
           // (The levelSource is already stored in the channels API.)
           delete report.program;
           delete report.image;
@@ -59,7 +66,7 @@ window.apps = {
           // timestamp initially (it will be updated with a timestamp from the server
           // if we get a response.
           lastSavedProgram = decodeURIComponent(report.program);
-          dashboard.clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, +new Date(), lastSavedProgram);
+          clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, +new Date(), lastSavedProgram);
         }
         report.scriptName = appOptions.scriptName;
         report.fallbackResponse = appOptions.report.fallback_response;
@@ -71,30 +78,32 @@ window.apps = {
           timing.stopTiming('Puzzle', script_path, '');
         }
         trackEvent('Activity', 'Lines of Code', script_path, report.lines);
-        sendReport(report);
+        reporting.sendReport(report);
       },
       onComplete: function (response) {
         if (!appOptions.channel) {
           // Update the cache timestamp with the (more accurate) value from the server.
-          dashboard.clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, response.timestamp, lastSavedProgram);
+          clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, response.timestamp, lastSavedProgram);
         }
       },
-      onResetPressed: function() {
-        cancelReport();
+      onResetPressed: function () {
+        reporting.cancelReport();
       },
-      onContinue: function() {
+      onContinue: function () {
+        var lastServerResponse = reporting.getLastServerResponse();
         if (lastServerResponse.videoInfo) {
           showVideoDialog(lastServerResponse.videoInfo);
         } else if (lastServerResponse.nextRedirect) {
           window.location.href = lastServerResponse.nextRedirect;
         }
       },
-      backToPreviousLevel: function() {
+      backToPreviousLevel: function () {
+        var lastServerResponse = reporting.getLastServerResponse();
         if (lastServerResponse.previousLevelRedirect) {
           window.location.href = lastServerResponse.previousLevelRedirect;
         }
       },
-      showInstructionsWrapper: function(showInstructions) {
+      showInstructionsWrapper: function (showInstructions) {
         // Always skip all pre-level popups on share levels or when configured thus
         if (this.share || appOptions.level.skipInstructionsPopup) {
           return;
@@ -132,9 +141,8 @@ window.apps = {
       for (var i in node) {
         if (/^fn_/.test(i)) {
           try {
-            /* jshint ignore:start */
+            // eslint-disable-next-line no-eval
             node[i.replace(/^fn_/, '')] = eval('(' + node[i] + ')');
-            /* jshint ignore:end */
           } catch (e) {
           }
         } else {
@@ -151,12 +159,10 @@ window.apps = {
 
   // Set up projects, skipping blockly-specific steps. Designed for use
   // by levels of type "external".
-  setupProjectsExternal: function() {
+  setupProjectsExternal: function () {
     if (!window.dashboard) {
       throw new Error('Assume existence of window.dashboard');
     }
-
-    dashboard.project = project;
   },
 
   // Define blockly/droplet-specific callbacks for projects to access
@@ -183,11 +189,18 @@ window.apps = {
       }
       return source;
     },
+    setInitialAnimationMetadata: function (animationMetadata) {
+      appOptions.initialAnimationMetadata = animationMetadata;
+    },
+    getAnimationMetadata: function () {
+      return appOptions.getAnimationMetadata &&
+          appOptions.getAnimationMetadata();
+    }
   },
 
   // Initialize the Blockly or Droplet app.
   init: function () {
-    dashboard.project.init(window.apps.sourceHandler);
+    project.init(window.apps.sourceHandler);
     window[appOptions.app + 'Main'](appOptions);
   }
 };

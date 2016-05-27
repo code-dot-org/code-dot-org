@@ -10,7 +10,7 @@ Scenario:
   When I rotate to landscape
   And I see no difference for "initial load"
   And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I see no difference for "closed dialog"
   And I drag block "1" to block "3"
   Then block "4" is child of block "3"
@@ -27,8 +27,7 @@ Scenario:
   And I am on "http://studio.code.org/s/course3/stage/21/puzzle/15?noautoplay=true"
   When I rotate to landscape
   And I see no difference for "initial load"
-  And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I see no difference for "closed dialog"
   And I press "runButton"
   And I hold key "LEFT"
@@ -43,8 +42,7 @@ Scenario:
   And I am on "http://studio.code.org/s/playlab/stage/1/puzzle/10?noautoplay=true"
   When I rotate to landscape
   And I see no difference for "initial load"
-  And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I see no difference for "closed dialog"
   And I press "runButton"
   And I press "finishButton"
@@ -98,15 +96,32 @@ Scenario:
   When I open my eyes to test "maze"
   Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/1?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#x-close"
-  And I press "x-close"
-  # Let close animation finish
-  And I wait for 2 seconds
+  And I close the dialog
   And I wait to see "#runButton"
   And I press "runButton"
   And I wait to see ".congrats"
   And element ".congrats" is visible
   And I see no difference for "maze feedback with blocks"
+
+  Then I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/1/lang/ar-sa"
+  And I rotate to landscape
+  And I close the dialog
+  And I wait to see "#runButton"
+  And I see no difference for "maze RTL"
+  Given I am on "http://learn.code.org/reset_session/lang/en"
+  And I wait for 2 seconds
+  And I close my eyes
+
+Scenario:
+  When I open my eyes to test "star wars RTL"
+  Given I am on "http://learn.code.org/s/starwars/stage/1/puzzle/15/lang/ar-sa"
+  And I rotate to landscape
+  And I close the dialog
+  And I close the dialog
+  And I wait to see "#runButton"
+  And I see no difference for "star wars RTL"
+  And I press "show-code-header"
+  And I see no difference for "star wars RTL text mode"
   And I close my eyes
 
 @dashboard_db_access
@@ -117,8 +132,7 @@ Scenario:
   And I rotate to landscape
   Then element "#runButton" is visible
   And I see no difference for "level load"
-  And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I see no difference for "closed dialog"
 
   Then I press "runButton"
@@ -134,8 +148,7 @@ Scenario:
   And I open my eyes to test "calc expression evaluation"
   When I am on "http://learn.code.org/s/algebra/stage/2/puzzle/6?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I press ".tooltip-x-close" using jQuery
   And I've initialized the workspace with the solution blocks
   Then I see no difference for "level load, closed dialog"
@@ -152,8 +165,7 @@ Scenario:
   And I open my eyes to test "calc variable"
   When I am on "http://learn.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I press "modalEditorClose"
   And I've initialized the workspace with the solution blocks
   Then I see no difference for "level load, closed dialog"
@@ -173,7 +185,7 @@ Scenario Outline: Simple blockly level page view
   When I rotate to landscape
   And I see no difference for "initial load"
   And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I see no difference for "closed dialog"
   And I close my eyes
   And I sign out
@@ -187,6 +199,9 @@ Examples:
   | http://learn.code.org/s/allthethings/stage/3/puzzle/6?noautoplay=true | auto open function editor |
   | http://learn.code.org/s/algebra/stage/10/puzzle/6?noautoplay=true     | auto open contract editor |
   | http://learn.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true      | auto open variable editor |
+  | http://learn.code.org/s/allthethings/stage/23/puzzle/1?noautoplay=true | star wars |
+  | http://learn.code.org/s/allthethings/stage/23/puzzle/2?noautoplay=true | star wars blocks |
+  | http://learn.code.org/s/allthethings/stage/24/puzzle/1?noautoplay=true | minecraft |
 
 @dashboard_db_access
 Scenario Outline: Logged in simple page view without instructions dialog
@@ -206,6 +221,9 @@ Examples:
   | http://code.org/                                                  | code.org homepage          |
   | http://studio.code.org/                                           | logged in studio homepage  |
   | http://studio.code.org/s/allthethings                             | logged in script progress  |
+  | https://studio.code.org/s/allthethings/stage/13/puzzle/3?noautoplay=true | embedded blocks     |
+  | http://learn.code.org/s/course4/stage/1/puzzle/1                  | unplugged video level |
+  | http://learn.code.org/s/allthethings/stage/18/puzzle/14           | embed video |
 
 Scenario Outline: Logged out simple page view without instructions dialog
   Given I am on "http://learn.code.org/"

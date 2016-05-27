@@ -1,0 +1,79 @@
+---
+title: App Lab
+theme: responsive
+video_player: true
+---
+
+%link{href: "/css/jumbotron-banner.css", rel: "stylesheet"}
+%link{href: "/shared/css/course-blocks.css", rel: "stylesheet"}
+%link{href: "/css/highlights.css", rel: "stylesheet"}
+
+= view :jumbotron_banner, img: CDO.code_org_url("/images/app-lab/girl-cropped.jpg"), title: "App Lab", desc: "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.", specs: "Ages 13+, All modern browsers, English only", url: CDO.studio_url('/p/applab'), cta: "Make an app", nav_bar: [{text: 'Resources', url: '#resources'}, {text: 'Challenges', url: '#challenges'}, {text: 'Video Library', url: '#videos'}]
+
+#resources.responsive-body
+  .col-50
+    %h2 Try the course that introduces App Lab
+    - img_src =  CDO.code_org_url("/shared/images/courses/logo_cspunit3.jpg")
+    .courseblock-span6.courseblock-wide-large{style: "height: 363px;"}
+      %a{:href=>CDO.code_org_url("/educate/curriculum/cs-principles-unit3")}
+        %img{src: img_src, style: "width: 100%"}
+        .courseblock-span5{style: "margin-left: 20px; margin-top: 20px;"}
+          %h3= I18n.t("cspunit3_name")
+          %h4= I18n.t("cspunit3_gradelevel")
+          .smalltext= I18n.t("cspunit3_shortdescription_congrats")
+          %button{style: "margin-left: 10px; margin-top: 20px;"}= I18n.t(:view_unit)
+    .clear
+
+  .col-50
+    %h2 Watch this video introduction to App Lab
+    = view :display_video_thumbnail, id: "app_lab_in_classroom", video_code: "e1St8LB4VJA", play_button: 'center', download_path: "//videos.code.org/applab/in-the-classroom.mp4"
+  .clear
+  %h2 See how to use App Lab and build your own app with these 10 minute demos
+  .col-25{style: "padding-right: 10px;"}
+    = view :display_video_thumbnail, id: "app_lab_intro", video_code: "xlbRL5eOgkI", play_button: 'center', download_path: "//videos.code.org/applab/how-to-introduction.mp4"
+  .col-25{style: "padding-right: 10px;"}
+    = view :display_video_thumbnail, id: "how_to_make_an_app", video_code: "tDnoxkOSfQw", play_button: 'center', download_path: "//videos.code.org/applab/how-to-make-an-app.mp4"
+  .col-25{style: "padding-right: 10px;"}
+    = view :display_video_thumbnail, id: "choose_adventure", video_code: "ZhgBSYKWL2A", play_button: 'center', download_path: "//videos.code.org/applab/how-to-choose-your-own-adventure.mp4"
+  .col-25
+    = view :display_video_thumbnail, id: "whack_e_moji", video_code: "WZVAA3ajZxc", play_button: 'center', download_path: "//videos.code.org/applab/whack-e-moji.mp4"
+  .clear
+
+#challenges.responsive-body
+  %h2 Explore these sample apps and take the challenge to make them even better
+  .highlights-content
+    - cta = "Remix the project"
+    = view :highlight_item, item: {image: "slider-sketch", title: "Slider sketch", desc: "Use the sliders to draw cool patterns and designs. Challenge: Add another slider to change the thickness of the line.", cta: cta, url: 'https://studio.code.org/projects/applab/JNbplBXMisx2aMefUkh39g/remix'}
+    = view :highlight_item, item: {image: "landmark-flashcards", title: "Landmark flaschards", desc: "Want to learn more about a new subject or practice for a test? Use this app to create flashcards. Challenge: add more cards to the deck or create a whole new deck for your favorite subject.", cta: cta, url: 'https://studio.code.org/projects/applab/sNZOTB_PiXAHt3Q5h_aRgQ/remix'}
+    = view :highlight_item, item: {image: "milk-adventure", title: "Choose your own adventure", desc: "Choose carefully as you go through this short adventure. Challenge: continue the story by adding in more scenarios and choices. Or create a totally different story!", cta: cta, url: 'https://studio.code.org/projects/applab/nI9iumSHbTn5mHBXl-wxMw/remix'}
+    = view :highlight_item, item: {image: "poke-pig", title: "Poke the pig", desc: "How many times you can poke the pig before time runs out? Challenge: Add a button and event to be able to play again and again, so you can improve your score.", cta: cta, url: 'https://studio.code.org/projects/applab/r469vc1FFSOxOlUruTFlUA/remix'}
+    = view :highlight_item, item: {image: "pet-data", title: "Pet poll", desc: "Vote for your favorite pet in this fun app. Challenge: Add more animals so you can vote for more favorites.", cta: cta, url: 'https://studio.code.org/projects/applab/TjHfwdUd3ENlyImb7VX5Cg/remix'}
+    = view :highlight_item, item: {image: "pensive-painter", title: "Pensive painter", desc: "Take a deep breath, relax, and paint whatever you desire. Challenge: Add a click event to clear the screen so you can start painting a new masterpiece.", cta: cta, url: 'https://studio.code.org/projects/applab/IAK_Qyc23QrkAB61KGvn1g/remix'}
+  .clear
+
+#videos
+  %h1.responsive-body Video library
+  Some of these videos appear in the CS Principles programming unit and are displayed here as a quick introduction to each of the main concepts from the unit. Check out each video to see how you can add new features to your app.
+  - DB[:cdo_cspunit3_videos].each do |item|
+    // Show the chapter title at the 
+    // beginning of each video chapter
+    - unless item[:category_title_s].nil_or_empty?
+      .clear
+      %h2= item[:category_title_s]
+    %div{style: "float:left; padding:10px; width: 275px;"}
+      = view :display_video_thumbnail, id: item[:id_s],  video_code:item[:code_s], caption: item[:caption_s], play_button: 'center', download_path: item[:download_path_s]
+      - unless item[:studio_stage_s].nil_or_empty?
+        %a{href: CDO.studio_url(item[:studio_stage_s])} Try it now
+
+:javascript
+  $(function() {
+    $('.highlight-item').mouseover(function() {
+      var caption = $(this).find('.highlight-caption');
+      caption.fadeIn();
+    });
+
+    $('.highlight-item').mouseleave(function() {
+      var caption = $(this).find('.highlight-caption');
+      caption.fadeOut();
+    });
+  });

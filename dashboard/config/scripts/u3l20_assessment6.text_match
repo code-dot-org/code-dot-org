@@ -1,6 +1,0 @@
-name 'U3L20 Assessment6'
-title 'Conditional Basics Question 6'
-
-markdown <<MARKDOWN
-When using an “if” statement, what line of code is executed if the condition is false?
-MARKDOWN

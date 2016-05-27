@@ -27,6 +27,12 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "markdown_instructions": "Get me to the pig!  \r\nBe sure to use `repeat` loops."
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 3
   }
 }]]></config>
   <blocks>
@@ -41,7 +47,7 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-6">4</title>
@@ -49,14 +55,40 @@
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-6">3</title>
         </block>
-      </xml>
-    </required_blocks>
-    <recommended_blocks>
-      <xml>
         <block type="maze_moveSouth"/>
         <block type="maze_moveEast"/>
         <block type="maze_moveNorth"/>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-6">4</title>
+              <statement name="DO">
+                <block type="maze_moveSouth"/>
+              </statement>
+              <next>
+                <block type="controls_repeat_simplified_dropdown">
+                  <title name="TIMES" config="2-6">3</title>
+                  <statement name="DO">
+                    <block type="maze_moveEast"/>
+                  </statement>
+                  <next>
+                    <block type="controls_repeat_simplified_dropdown">
+                      <title name="TIMES" config="2-6">4</title>
+                      <statement name="DO">
+                        <block type="maze_moveNorth"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

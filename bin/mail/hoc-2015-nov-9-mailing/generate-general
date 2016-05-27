@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+require_relative '../mailing-common/mailing-list-utils'
+
+# all else petition (petition non-teachers)
+query_subscribed_contacts(q: "kind_s:Petition && -role_s:educator")
+
+# VolunteerEngineerSubmission
+query_subscribed_contacts(q: "kind_s:VolunteerEngineerSubmission")
+
+# HelpUs2013
+query_subscribed_contacts(q: "kind_s:HelpUs2013")
+
+general_contacts = ALL
+
+include_mailchimp_engineers general_contacts
+puts "#{general_contacts.count} including mailchimp engineers"
+
+include_indiegogo_donors general_contacts
+puts "#{general_contacts.count} including indiegogo donors"
+
+export_contacts_to_csv general_contacts, "general.csv"

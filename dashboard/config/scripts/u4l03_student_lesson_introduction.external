@@ -4,7 +4,7 @@ description 'description here'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 4: Lesson 03 - Permanent Data Storage
+## Unit 4: Lesson 02 - Permanent Data Storage
 
 # Background
 In this lesson you are introduced to the concept of “remote databases” as a way to store data from your apps that will persist over time.  Up to now, all of the data in the apps you’ve made disappears every time the program is stopped and restarted.  App Lab has a suite of commands and tools for storing JavaScript objects in a database.  
@@ -20,15 +20,18 @@ In this lesson you'll use the `createRecord` command to programmatically add dat
 
 # Lesson
 
-* Video: Tutorial - Databases: part 1 - Creating and Storing
-* Introduction to App Lab’s data tools: createRecord and the Data Viewer
-* Modify the contacts app to store new contacts in a database
+* Introduction to App Lab’s data tools: `createRecord` and the Data Viewer.
+* Modify the contacts app to store new contacts in a database.
 
 
 # Resources
 
-* Video: Tutorial - Databases: part 1 - Creating and Storing
+* Tutorial Video: Databases - Part 1 - Creating and Storing
+* Tutorial Video: Databases - Part 2 - Data Viewer
 
+<iframe width="480" height="270" src="https://www.youtube.com/embed/d8ByCh-BouQ?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="480" height="270" src="https://www.youtube.com/embed/RZlHfbtO2C4?rel=0" frameborder="0" allowfullscreen></iframe>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

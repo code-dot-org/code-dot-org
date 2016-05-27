@@ -6,12 +6,6 @@
  *           Access to environment-specific asset URLs.
  *           Reproducible random number functions for easy testing.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var seedrandom = require('seedrandom');

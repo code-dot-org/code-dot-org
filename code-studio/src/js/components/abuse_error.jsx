@@ -1,15 +1,11 @@
 /* global React */
 
-// AbuseError is placed on the dashboard namespace so that it can be accessed
-// by apps
-window.dashboard = window.dashboard || {};
-
 /**
  * A component containing some text/links for projects that have had abuse
  * reported. This is used in our blocking AbuseBox, in the share dialog, and
  * in our smaller alert in apps.
  */
-module.exports = window.dashboard.AbuseError = React.createClass({
+var AbuseError = React.createClass({
   propTypes: {
     i18n: React.PropTypes.shape({
       tos: React.PropTypes.string.isRequired,
@@ -35,3 +31,9 @@ module.exports = window.dashboard.AbuseError = React.createClass({
     );
   }
 });
+module.exports = AbuseError;
+
+// AbuseError is placed on the dashboard namespace so that it can be accessed
+// by apps
+window.dashboard = window.dashboard || {};
+window.dashboard.AbuseError = AbuseError;

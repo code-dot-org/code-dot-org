@@ -45,6 +45,15 @@
     "examples_required": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"Course_4_Play_Lab_Vars_9_1\",\r\n  \"callout_text\": \"All of your blocks are now organized behind categories! Click on a label to see the pieces inside.\",\r\n  \"element_id\": \"[id=\\\":1\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "never_autoplay_video": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "repeat_until_while": 1,
+    "events": 1,
+    "variables": 1,
+    "conditionals": 1
   }
 }]]></config>
   <blocks>

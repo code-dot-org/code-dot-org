@@ -1,0 +1,66 @@
+- content_for :head do
+  %script{src:'https://www.google.com/jsapi'}
+  %script{src:'https://www.gstatic.com/charts/loader.js'}
+
+%h1
+  = "Retention for Stages #{@stage_ids.join(', ')}"
+The data is restricted to users whose last script progress was between eight
+weeks and six weeks ago.
+
+%br
+%br
+
+%form{method: 'get'}
+  Stage IDs:
+  %input{name: "stage_ids", id: "stage_ids", value: @stage_ids.join(", ")}
+  %input{type: "submit", name: "submit"}
+
+%br
+
+#chart-stage-level-counts
+#table-stage-level-counts
+
+%br
+
+- content_for :body_scripts do
+  :javascript
+    stages = #{@stage_ids};
+    stats = #{@retention_stats};
+    // Load the Visualization API and the appropriate packages, setting a
+    // callback to run when the API is loaded.
+    google.load('visualization', '1.0', {'packages':['corechart', 'table']});
+    google.setOnLoadCallback(drawChartsAndTables);
+
+    // The callback that creates and populates the data tables, instantiates the
+    // charts and tables, and draws them.
+    function drawChartsAndTables() {
+      drawChartAndTable(
+        'stage-level-counts', 'Stage Level Counts', 'Stages', stages, stats);
+    }
+
+    // domElementSuffix: The suffix of the DOM ID for the chart and table.
+    // chartTitle: The title of the chart to be made.
+    // columnCount: A string describing the counts, e.g., 'Stages' or 'Levels'.
+    // ids: An array of IDs.
+    // stats: The data to insert into the chart.
+    function drawChartAndTable(
+        domElementSuffix, chartTitle, columnCount, ids, stats) {
+      // Transfer stats into a Google DataTable.
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Number of ' + columnCount);
+      for (var i = 0; i < ids.length; i++) {
+        data.addColumn('number', 'Stage ID: ' + ids[i]);
+      }
+      data.addRows(stats);
+
+      // Push the Google DataTable into the chart.
+      var options = {'title': chartTitle, 'width': 800, 'height': 500};
+      var chart = new google.visualization.LineChart(
+          document.getElementById('chart-' + domElementSuffix));
+      chart.draw(data, options);
+
+      // Push the Google DataTable into the table.
+      var table = new google.visualization.Table(
+        document.getElementById('table-' + domElementSuffix));
+      table.draw(data);
+    }

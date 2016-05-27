@@ -1,10 +1,4 @@
 /** @file Wrapper for an SVG filter definition with animation capabilities */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var SVG_NS = require('../constants').SVG_NS;
@@ -82,7 +76,6 @@ ImageFilter.prototype.removeFrom = function (svgElement) {
   }
 };
 
-/* jshint unused: false */
 /**
  * Update this effect's animation for the current time.
  * Called by effect's own interval (not Studio.onTick) so that we can run
@@ -93,7 +86,6 @@ ImageFilter.prototype.update = function (timeMs) {
   // No default operation here.  Subclasses may override this to implement
   // animation.
 };
-/* jshint unused: true */
 
 /**
  * Generates the necessary elements and adds this filter to the parent SVG

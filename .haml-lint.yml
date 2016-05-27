@@ -8,13 +8,7 @@ linters:
   ClassesBeforeIds:
     enabled: false
 
-  ConsecutiveComments:
-    enabled: false
-
   ConsecutiveSilentScripts:
-    enabled: false
-
-  FinalNewline:
     enabled: false
 
   HtmlAttributes:
@@ -23,16 +17,10 @@ linters:
   ImplicitDiv:
     enabled: false
 
-  LeadingCommentSpace:
-    enabled: false
-
   LineLength:
     enabled: false
 
   RuboCop:
-    enabled: false
-
-  RubyComments:
     enabled: false
 
   SpaceBeforeScript:

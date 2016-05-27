@@ -5,6 +5,12 @@ exports.injectGameLab = function (gamelab) {
   GameLab = gamelab;
 };
 
+exports.playSound = function (url) {
+  return GameLab.executeCmd(null,
+      'playSound',
+      {'url': url});
+};
+
 exports.foo = function () {
   GameLab.executeCmd(null, 'foo');
 };

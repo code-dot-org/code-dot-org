@@ -468,7 +468,7 @@ hu:
         text: "Create your algorithm by gluing arrows next to the map that you're trying to solve. The second one it's the same but it's going down."
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: "It's like programming with paper. And that's it!"
+        text: Mintha papíron programoznál. Ennyi az egész!
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
@@ -481,11 +481,11 @@ hu:
         text: "To learn about debugging, we start with a set of blocks already on the stage. You'll notice that these blocks won't get you to the goal. We need to debug the solution and fix it. What went wrong? You'll notice that you needed to keep going west one more block."
       4:
         image: notes/C1_maze_debugging_4.png
-        text: "Let's fix this by adding another west block and hitting run to see if you got it right. Yay, you got it!"
+        text: Javítsuk ki ezt egy új nyugat blokk hozzáadásával és indítsuk el újra. Hurrá! Megcsináltad!
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: For this puzzle, you need to get the bird to the pig. Look at the puzzle and see what directions it needs to take.
+        text: Segíts a madárnak a malachoz jutni. Nézd meg a labirintust és döntsd el merre menjen.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
         text: |-

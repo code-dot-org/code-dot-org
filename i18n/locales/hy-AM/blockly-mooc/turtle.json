@@ -1,7 +1,7 @@
 {
   "blocksUsed":"Blocks used: %1",
   "branches":"branches",
-  "catColour":"Color",
+  "catColour":"Գույնը",
   "catControl":"Loops",
   "catMath":"Math",
   "catProcedures":"Functions",
@@ -37,7 +37,7 @@
   "drawATriangle":"draw a triangle",
   "drawUpperWave":"draw upper wave",
   "drawLowerWave":"draw lower wave",
-  "drawStamp":"draw stamp",
+  "drawSticker":"draw sticker",
   "heightParameter":"height",
   "hideTurtle":"hide artist",
   "jump":"jump",

@@ -18,14 +18,14 @@ class Callout < ActiveRecord::Base
   belongs_to :script_level, inverse_of: :callouts
 
   CSV_HEADERS =
-  {
-      :element_id => 'element_id',
-      :localization_key => 'localization_key',
-      :script_id => 'script_id',
-      :level_num => 'level_num',
-      :game_name => 'game_name',
-      :qtip_config => 'qtip_config'
-  }
+    {
+        :element_id => 'element_id',
+        :localization_key => 'localization_key',
+        :script_id => 'script_id',
+        :level_num => 'level_num',
+        :game_name => 'game_name',
+        :qtip_config => 'qtip_config'
+    }
 
   # Use the zero byte as the quote character to allow importing double quotes
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts
@@ -58,7 +58,7 @@ class Callout < ActiveRecord::Base
       'levels.level_num' => row_data[CSV_HEADERS[:level_num]],
       'games.name' => row_data[CSV_HEADERS[:game_name]]
     }
-    script_level = ScriptLevel.joins(level: :game).joins(:script).where(script_level_search_conditions)
+    script_level = ScriptLevel.joins(levels: :game).joins(:script).where(script_level_search_conditions)
 
     unless script_level && script_level.count > 0
       puts "Error finding script level with search conditions: #{script_level_search_conditions}"

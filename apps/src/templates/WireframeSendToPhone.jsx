@@ -59,7 +59,7 @@ module.exports = React.createClass({
     );
   },
 
-  renderSendToPhone: function() {
+  renderSendToPhone: function () {
     if (this.state.clicked) {
       return (
         <SendToPhone

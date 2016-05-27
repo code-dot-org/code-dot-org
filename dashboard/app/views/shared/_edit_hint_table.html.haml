@@ -1,13 +1,15 @@
--# Display an editable table of hints.
--# The hint field is editable if the user is an admin or if the user created the hint.
--# The status field is editable if the user is an admin.
 -#
--# Required parameters:
--# - columns: an array of columns to display, a subset of ordered_columns
--# - user: a User object
--# - hints: an enumeration of LevelSourceHint
--# - add: boolean indicating whether a hint can be added on this page
--# If add is true, redirect_url must be defined.
+  Display an editable table of hints.
+  The hint field is editable if the user is an admin or if the user created the
+  hint. The status field is editable if the user is an admin.
+
+  Required parameters:
+  - columns: an array of columns to display, a subset of ordered_columns
+  - user: a User object
+  - hints: an enumeration of LevelSourceHint
+  - add: boolean indicating whether a hint can be added on this page
+  If add is true, redirect_url must be defined.
+
 -ordered_columns = [:user_id, :hint, :puzzle, :status]
 -sorted_columns = columns.sort { |x,y| ordered_columns.index(x) <=> ordered_columns.index(y) }
 %table{id: 'hint-table'}

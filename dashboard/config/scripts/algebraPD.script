@@ -55,6 +55,6 @@ level 'PDAlg Teacher Dashboard'
 
 stage 'Preparing for in-person PD'
 level 'PDAlg Facilitators'
-level 'PDAlg Details'
+#level 'PDAlg Details'
 level 'PDAlg End of P1'
 level 'PDAlg Post Survey'

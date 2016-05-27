@@ -15,6 +15,7 @@
 #  type                     :string(255)
 #  md5                      :string(255)
 #  published                :boolean          default(FALSE), not null
+#  notes                    :text(65535)
 #
 # Indexes
 #
@@ -24,20 +25,24 @@
 class Level < ActiveRecord::Base
   belongs_to :game
   has_and_belongs_to_many :concepts
-  has_many :script_levels, dependent: :destroy
-  belongs_to :solution_level_source, :class_name => "LevelSource" # TODO do we even use this
+  has_and_belongs_to_many :script_levels
+  belongs_to :solution_level_source, :class_name => "LevelSource" # TODO: Do we even use this?
   belongs_to :ideal_level_source, :class_name => "LevelSource" # "see the solution" link uses this
   belongs_to :user
+  has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
   has_many :hint_view_requests
 
   before_validation :strip_name
+  before_destroy :remove_empty_script_levels
 
   validates_length_of :name, within: 1..70
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> { where.not(user_id: nil) }
 
   after_save :write_custom_level_file
   after_destroy :delete_custom_level_file
+
+  accepts_nested_attributes_for :level_concept_difficulty, update_only: true
 
   include StiFactory
   include SerializedProperties
@@ -60,6 +65,17 @@ class Level < ActiveRecord::Base
   # Include type in serialization.
   def serializable_hash(options=nil)
     super.merge 'type' => type
+  end
+
+  # Rails won't natively assign one-to-one association attributes for
+  # us, even though we've specified accepts_nested_attributes_for above.
+  # So, we must do it manually.
+  def assign_attributes(new_attributes)
+    attributes = new_attributes.stringify_keys
+    concept_difficulty_attributes = attributes.delete('level_concept_difficulty')
+    assign_nested_attributes_for_one_to_one_association(:level_concept_difficulty,
+        concept_difficulty_attributes) if concept_difficulty_attributes
+    super(attributes)
   end
 
   def related_videos
@@ -97,6 +113,10 @@ class Level < ActiveRecord::Base
 
   # Overriden by different level types.
   def self.flower_types
+  end
+
+  # Overriden by different level types.
+  def self.palette_categories
   end
 
   def self.custom_levels
@@ -141,8 +161,13 @@ class Level < ActiveRecord::Base
     (level_paths - written_level_paths).each { |path| File.delete path }
   end
 
+  def should_write_custom_level_file?
+    changed = changed? || (level_concept_difficulty && level_concept_difficulty.changed?)
+    changed && write_to_file? && self.published
+  end
+
   def write_custom_level_file
-    if changed? && write_to_file? && self.published
+    if should_write_custom_level_file?
       file_path = LevelLoader.level_file_path(name)
       File.write(file_path, self.to_xml)
       file_path
@@ -153,7 +178,8 @@ class Level < ActiveRecord::Base
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.send(self.type) do
         xml.config do
-          config_attributes = filter_level_attributes(self.serializable_hash.deep_dup)
+          hash = self.serializable_hash(:include => :level_concept_difficulty).deep_dup
+          config_attributes = filter_level_attributes(hash)
           xml.cdata(JSON.pretty_generate(config_attributes.as_json))
         end
       end
@@ -163,7 +189,7 @@ class Level < ActiveRecord::Base
 
   PRETTY_PRINT = {save_with: Nokogiri::XML::Node::SaveOptions::NO_DECLARATION | Nokogiri::XML::Node::SaveOptions::FORMAT}
 
-  def self.pretty_print(xml_string)
+  def self.pretty_print_xml(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
     xml.serialize(PRETTY_PRINT).strip
   end
@@ -188,7 +214,7 @@ class Level < ActiveRecord::Base
 
   TYPES_WITHOUT_IDEAL_LEVEL_SOURCE =
     ['Unplugged', # no solutions
-     'TextMatch', 'Multi', 'External', 'Match', 'ContractMatch', # dsl defined, covered in dsl
+     'TextMatch', 'Multi', 'External', 'Match', 'ContractMatch', 'LevelGroup', # dsl defined, covered in dsl
      'Applab', 'Gamelab', # all applab and gamelab are freeplay
      'NetSim', 'Odometer', 'Vigenere', 'FrequencyAnalysis', 'TextCompression', 'Pixelation'] # widgets
   # level types with ILS: ["Craft", "Studio", "Karel", "Eval", "Maze", "Calc", "Blockly", "StudioEC", "Artist"]
@@ -232,7 +258,8 @@ class Level < ActiveRecord::Base
   # on that level.
   def channel_backed?
     return false if self.try(:is_project_level)
-    self.project_template_level || self.game == Game.applab || self.game == Game.gamelab || self.game == Game.pixelation
+    free_response_upload = is_a?(FreeResponse) && allow_user_uploads
+    self.project_template_level || self.game == Game.applab || self.game == Game.gamelab || self.game == Game.pixelation || free_response_upload
   end
 
   def key
@@ -255,8 +282,20 @@ class Level < ActiveRecord::Base
     self.name = name.to_s.strip unless name.nil?
   end
 
+  def remove_empty_script_levels
+    script_levels.each do |script_level|
+      if script_level.levels.length == 1 && script_level.levels[0] == self
+        script_level.destroy
+      end
+    end
+  end
+
   def self.cache_find(id)
     Script.cache_find_level(id)
+  end
+
+  def icon
+    'fa-puzzle-piece'
   end
 
   private

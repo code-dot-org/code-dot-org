@@ -1,0 +1,29 @@
+name 'ECSPD3-u6 day 8-9'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+## Unit 6 Lessons > Days 8-9 
+ 
+#### Concepts Covered  
+Mindstorms NXT software interface including common palette, complete palette, software and hardware errors, logical and syntax errors.
+ 
+#### Lesson Overview 
+In this lesson you are going to be helping students become familiar with the NXT Program interface, via the tutorials in the Robot Educator section.  You’ll help them open a new program  (User Guide pp. 48-49), use the common palette to build a small program, save the program, modify it, download it again, open a new program, switch to the complete palette, practice problem solving, make comparisons using the NXT or EV3 software and using Scratch.
+<br><br> 
+ 
+#### Lesson Resources 
+##### <a href="https://web.archive.org/web/20150423124112/http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=280" target=_blank>Lesson Plan Link>> </a> 
+
+- LEGO Mindstorms NXT or EV3 Educator Section
+
+>#### Hints from an ECS Teacher: 
+ It would be a great time to use a KWL Chart or some other guide to have students make comparisons of the software and predict how they think the LEGO Mindstorms software will work.
+
+<br>
+Click “Continue” below to learn about the next lesson.  
+ 
+<br/><br/> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

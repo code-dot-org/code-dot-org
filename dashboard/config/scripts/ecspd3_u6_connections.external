@@ -1,0 +1,20 @@
+name 'ECSPD3-u6 connections'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+### Unit 6 Overview > Connections 
+ 
+The ECS curriculum can be broken down into three parts --Foundation (units 1 and 2, which focus on developing habits of the mind and approaches to understanding and tackling problems), Application (units 3 and 4, where students begin using these skills to develop computational artifacts), and Extension (units 5 and 6, where students extend their knowledge and skills to new situations).  
+ 
+#### Connection to Past Units 
+Now we’ve come to Unit 6, Robotics where students will apply and extend their knowledge of computer science from what they’ve been learning all year to yet another new situation.  They’ll use skills from unit 1 to consider how humans and computers interact with each other, unit 2 to decompose problems that will enable them to program robots to perform particular tasks, units 3 and 4 to apply code to their robot and unit 5 to collect and interpret data from the robot.   
+<br><br>
+Check out the video below for an overview of how Artificial Intelligence and Robots are typically portrayed in media: 
+<br><br>
+<iframe src="https://drive.google.com/a/nicolescourse.com/file/d/0ByEMUaw5Z_pNWXBRTkVyQzNvLTA/preview" width="640" height="480"></iframe>
+
+<br><br> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

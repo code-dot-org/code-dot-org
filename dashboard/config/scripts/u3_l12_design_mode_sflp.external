@@ -1,7 +1,6 @@
 name 'U3- L12 -Design Mode SFLP'
 css 'unplugged'
 
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 3: Lesson 12 - Introducing Design Mode
 

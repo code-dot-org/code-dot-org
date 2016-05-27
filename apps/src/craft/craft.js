@@ -1,9 +1,5 @@
 /* global trackEvent */
 
-/*jshint -W061 */
-// We use eval in our code, this allows it.
-// @see https://jslinterrors.com/eval-is-evil
-
 'use strict';
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
@@ -16,6 +12,9 @@ var dom = require('../dom');
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
 var MusicController = require('../MusicController');
+var Provider = require('react-redux').Provider;
+var AppView = require('../templates/AppView');
+var CraftVisualizationColumn = require('./CraftVisualizationColumn');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -129,7 +128,7 @@ Craft.init = function (config) {
   config.level.disableFinalStageMessage = true;
 
   // Return the version of Internet Explorer (8+) or undefined if not IE.
-  var getIEVersion = function() {
+  var getIEVersion = function () {
     return document.documentMode;
   };
 
@@ -157,7 +156,7 @@ Craft.init = function (config) {
           showInstructions();
         });
       } else if (config.level.showPopupOnLoad === 'houseLayoutSelection') {
-        Craft.showHouseSelectionPopup(function(selectedHouse) {
+        Craft.showHouseSelectionPopup(function (selectedHouse) {
           trackEvent('Minecraft', 'ChoseHouse', selectedHouse);
           if (!levelConfig.edit_blocks) {
             $.extend(config.level, houseLevels[selectedHouse]);
@@ -186,7 +185,7 @@ Craft.init = function (config) {
 
   var levelTracks = [];
   if (Craft.level.songs && MUSIC_METADATA) {
-    levelTracks = MUSIC_METADATA.filter(function(trackMetadata) {
+    levelTracks = MUSIC_METADATA.filter(function (trackMetadata) {
       return Craft.level.songs.indexOf(trackMetadata.name) !== -1;
     });
   }
@@ -238,89 +237,91 @@ Craft.init = function (config) {
       break;
   }
 
-  studioApp.init($.extend({}, config, {
-    forceInsertTopBlock: 'when_run',
-    html: require('../templates/page.html.ejs')({
-      assetUrl: studioApp.assetUrl,
-      data: {
-        localeDirection: studioApp.localeDirection(),
-        visualization: require('./visualization.html.ejs')(),
-        controls: require('./controls.html.ejs')({
-          assetUrl: studioApp.assetUrl,
-          shareable: config.level.shareable
-        }),
-        editCode: config.level.editCode,
-        blockCounterClass: 'block-counter-default',
-        readonlyWorkspace: config.readonlyWorkspace
-      }
-    }),
-    appStrings: {
-      generatedCodeDescription: craftMsg.generatedCodeDescription(),
-    },
-    loadAudio: function () {
-    },
-    afterInject: function () {
-      var slowMotionURLParam = parseFloat((location.search.split('customSlowMotion=')[1] || '').split('&')[0]);
-      Craft.gameController = new GameController({
-        Phaser: window.Phaser,
-        containerId: 'phaser-game',
-        assetRoot: Craft.skin.assetUrl(''),
-        audioPlayer: {
-          register: studioApp.registerAudio.bind(studioApp),
-          play: studioApp.playAudio.bind(studioApp)
-        },
-        debug: false,
-        customSlowMotion: slowMotionURLParam, // NaN if not set
-        /**
-         * First asset packs to load while video playing, etc.
-         * Won't matter for levels without delayed level initialization
-         * (due to e.g. character / house select popups).
-         */
-        earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(levelConfig.puzzle_number),
-        afterAssetsLoaded: function () {
-          // preload music after essential game asset downloads completely finished
-          Craft.musicController.preload();
-        },
-        earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(levelConfig.puzzle_number),
-      });
+  var onMount = function () {
+    studioApp.init($.extend({}, config, {
+      forceInsertTopBlock: 'when_run',
+      appStrings: {
+        generatedCodeDescription: craftMsg.generatedCodeDescription(),
+      },
+      loadAudio: function () {},
+      afterInject: function () {
+        var slowMotionURLParam = parseFloat((location.search.split('customSlowMotion=')[1] || '').split('&')[0]);
+        Craft.gameController = new GameController({
+          Phaser: window.Phaser,
+          containerId: 'phaser-game',
+          assetRoot: Craft.skin.assetUrl(''),
+          audioPlayer: {
+            register: studioApp.registerAudio.bind(studioApp),
+            play: studioApp.playAudio.bind(studioApp)
+          },
+          debug: false,
+          customSlowMotion: slowMotionURLParam, // NaN if not set
+          /**
+           * First asset packs to load while video playing, etc.
+           * Won't matter for levels without delayed level initialization
+           * (due to e.g. character / house select popups).
+           */
+          earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(levelConfig.puzzle_number),
+          afterAssetsLoaded: function () {
+            // preload music after essential game asset downloads completely finished
+            Craft.musicController.preload();
+          },
+          earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(levelConfig.puzzle_number),
+        });
 
-      if (!config.level.showPopupOnLoad) {
-        Craft.initializeAppLevel(config.level);
-      }
+        if (!config.level.showPopupOnLoad) {
+          Craft.initializeAppLevel(config.level);
+        }
 
-      if (studioApp.hideSource) {
-        // Set visualizationColumn width in share mode so it can be centered
-        var visualizationColumn = document.getElementById('visualizationColumn');
-        visualizationColumn.style.width = this.nativeVizWidth + 'px';
+        if (studioApp.hideSource) {
+          // Set visualizationColumn width in share mode so it can be centered
+          var visualizationColumn = document.getElementById('visualizationColumn');
+          visualizationColumn.style.width = this.nativeVizWidth + 'px';
+        }
+      },
+      twitter: {
+        text: "Share on Twitter",
+        hashtag: "Craft"
       }
-    },
-    twitter: {
-      text: "Share on Twitter",
-      hashtag: "Craft"
+    }));
+
+    var interfaceImagesToLoad = [];
+    interfaceImagesToLoad = interfaceImagesToLoad.concat(interfaceImages.DEFAULT);
+
+    if (config.level.puzzle_number && interfaceImages[config.level.puzzle_number]) {
+      interfaceImagesToLoad =
+          interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
     }
-  }));
 
-  var interfaceImagesToLoad = [];
-  interfaceImagesToLoad = interfaceImagesToLoad.concat(interfaceImages.DEFAULT);
+    interfaceImagesToLoad.forEach(function (url) {
+      preloadImage(url);
+    });
 
-  if (config.level.puzzle_number && interfaceImages[config.level.puzzle_number]) {
-    interfaceImagesToLoad =
-        interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
-  }
+    var shareButton = $('.mc-share-button');
+    if (shareButton.length) {
+      dom.addClickTouchEvent(shareButton[0], function () {
+        Craft.reportResult(true);
+      });
+    }
+  };
 
-  interfaceImagesToLoad.forEach(function(url) {
-    preloadImage(url);
+  // Push initial level properties into the Redux store
+  studioApp.setPageConstants(config, {
+    isMinecraft: true
   });
 
-  var shareButton = $('.mc-share-button');
-  if (shareButton.length) {
-    dom.addClickTouchEvent(shareButton[0], function () {
-      Craft.reportResult(true);
-    });
-  }
+  ReactDOM.render(
+    <Provider store={studioApp.reduxStore}>
+      <AppView
+          visualizationColumn={<CraftVisualizationColumn/>}
+          onMount={onMount}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
+  );
 };
 
-var preloadImage = function(url) {
+var preloadImage = function (url) {
   var img = new Image();
   img.src = url;
 };
@@ -452,6 +453,7 @@ Craft.initializeAppLevel = function (levelConfig) {
     gridDimensions: levelConfig.gridWidth && levelConfig.gridHeight ?
         [levelConfig.gridWidth, levelConfig.gridHeight] :
         null,
+    // eslint-disable-next-line no-eval
     verificationFunction: eval('[' + levelConfig.verificationFunction + ']')[0] // TODO(bjordan): add to utils
   });
 };
@@ -517,7 +519,7 @@ Craft.foldInArray = function (arrayA, arrayB) {
 
 Craft.foldInCustomHouseBlocks = function (houseBlockMap, levelConfig) {
   var planesToCustomize = [levelConfig.groundPlane, levelConfig.actionPlane];
-  planesToCustomize.forEach(function(plane) {
+  planesToCustomize.forEach(function (plane) {
     for (var i = 0; i < plane.length; i++) {
       var item = plane[i];
       if (item.match(/house/)) {
@@ -603,7 +605,11 @@ Craft.executeUserCode = function () {
   var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
   appCodeOrgAPI.startCommandCollection();
   // Run user generated code, calling appCodeOrgAPI
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
+  var code = '';
+  if (studioApp.initializationCode) {
+    code += studioApp.initializationCode;
+  }
+  code += Blockly.Generator.blockSpaceToCode('JavaScript');
   codegen.evalWith(code, {
     moveForward: function (blockID) {
       appCodeOrgAPI.moveForward(studioApp.highlight.bind(studioApp, blockID));
@@ -684,7 +690,7 @@ Craft.executeUserCode = function () {
     var playerInventoryTypes = JSON.parse(window.localStorage.getItem('craftPlayerInventory')) || [];
 
     var newInventorySet = {};
-    attemptInventoryTypes.concat(playerInventoryTypes).forEach(function(type) {
+    attemptInventoryTypes.concat(playerInventoryTypes).forEach(function (type) {
       newInventorySet[type] = true;
     });
 
@@ -729,6 +735,7 @@ Craft.reportResult = function (success) {
         feedbackType: testResultType,
         response: response,
         level: Craft.initialConfig.level,
+        defaultToContinue: Craft.shouldDefaultToContinue(testResultType),
         appStrings: {
           reinfFeedbackMsg: craftMsg.reinfFeedbackMsg(),
           nextLevelMsg: craftMsg.nextLevelMsg({
@@ -744,6 +751,18 @@ Craft.reportResult = function (success) {
   });
 };
 
+/**
+ * Whether pressing "x" or pressing the backdrop of the "level completed" dialog
+ * should default to auto-advancing to the next level.
+ * @param {string} testResultType TestResults type of this level completion
+ * @returns {boolean} whether to continue
+ */
+Craft.shouldDefaultToContinue = function (testResultType) {
+  var isFreePlay = testResultType === TestResults.FREE_PLAY;
+  var isSuccess = testResultType > TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
+  return isSuccess && !isFreePlay;
+};
+
 Craft.replayTextForResult = function (testResultType) {
   if (testResultType === TestResults.FREE_PLAY) {
     return craftMsg.keepPlayingButton();
@@ -753,4 +772,3 @@ Craft.replayTextForResult = function (testResultType) {
     return craftMsg.replayButton();
   }
 };
-

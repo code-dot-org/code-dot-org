@@ -1,0 +1,98 @@
+%h1
+  March 2016 Diversity Survey Results
+
+.download
+  #{link_to 'Download CSV of Raw Responses', {:format => :csv}}
+
+.response-rates
+  %h2 Response Rates
+  Number of Participants:
+  = number_with_delimiter(@participants)
+  %br
+  Number of Respondents:
+  = number_with_delimiter(@respondents)
+  %br
+  Percentage Responding:
+  = number_to_percentage(100.0 * @respondents / [@participants, 1].max, precision: 2)
+  %br
+  Number of Associated Students:
+  = number_with_delimiter(@student_count)
+
+.free-and-reduced-meals
+  %h2 Free and Reduced Meals Responses
+  FARM Student Count (*):
+  = number_with_delimiter(@foodstamps_count)
+  %br
+  Student Count (*):
+  = number_with_delimiter(@foodstamps_all)
+  %br
+  Percentage FARM (*):
+  = number_to_percentage(100.0 * @foodstamps_count / [@foodstamps_all, 1].max, precision: 2)
+  %br
+  (*) Computed using the minimum percentage for those choosing a percentage range.
+
+  %table
+    %tr
+      %th
+        %span Min Percentage
+      %th
+        %span Max Percentage
+      %th
+        %span Count
+    - (0..6).each do |index|
+      %tr
+        %td
+          %span= (index * 10).to_s + '%'
+        %td
+          %span= ((index + 1) * 10).to_s + '%'
+        %td
+          %span= number_with_delimiter(@foodstamps[index])
+    %tr
+      %td
+        %span 70%
+      %td
+        %span 100%
+      %td
+        %span= number_with_delimiter(@foodstamps[7])
+    %tr
+      %td
+        Title I Designation
+      %td
+      %td
+        %span= number_with_delimiter(@foodstamps[8])
+    %tr
+      %td
+        %span Other
+      %td
+      %td
+        %span= number_with_delimiter(@foodstamps[9])
+
+.ethnicities
+  %h2 Ethnicity Responses
+  All Ethnicities (**):
+  = number_with_delimiter(@ethnic_count)
+  %br
+  Student Count (**):
+  = number_with_delimiter(@ethnic_all)
+  %br
+  Percentage Reported (**):
+  = number_to_percentage(100.0 * @ethnic_count / [@ethnic_all, 1].max, precision: 2)
+  %br
+  (**) Computed from those teachers reporting at least some ethnicity numbers.
+
+  %table
+    %tr
+      %th
+        %span Ethnicity
+      %th
+        %span Count
+      %th
+        %span Percentage
+    - ['american_indian', 'asian', 'black', 'hispanic', 'native', 'white', 'other'].each do |ethnicity|
+      %tr
+        %td
+          %span= ethnicity
+        %td
+          %span= number_with_delimiter(@ethnicities[('survey2016_ethnicity_' + ethnicity).to_sym])
+        %td
+          %span= number_to_percentage(100.0 * @ethnicities[('survey2016_ethnicity_' + ethnicity).to_sym] / @ethnic_count, precision: 2)

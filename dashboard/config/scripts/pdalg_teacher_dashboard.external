@@ -1,7 +1,6 @@
 name 'PDAlg Teacher Dashboard'
 title 'Course Progress'
 css 'unplugged'
-skip_dialogue true
 markdown <<MARKDOWN
 
 ### Other tiles in the Teacher Dashboard

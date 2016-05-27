@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:19.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Router Table: Reflection",
+    "markdown_instructions": "Why does a router keep track of the cost to a destination through multiple routers instead of only the fastest one?\n\n",
+    "encrypted_solution": "p9hVaeXaDIR25AAmSYD2mjvfK6obpeS9NwPdx6RWQnDqUKBdGrVTTFhS0Qn/\n59sRc+WFpBzC1ixgciF6e+c/GndY/lT6UUSrP52lmPaH1gn9giI8AiwR1RYt\nQPWOw+L2iQwhuXfFMJi5XmrUaM3eM4Jv7IJV+ANeZS8lRPAFW1dIFdE+Kwsb\nbFhnsQUi7cmlxriGLluqx6qgYDOqCvS1sRi6RDsnOqWuwyDTQY6qieWqrb9C\ntX6w4g81JYoOeNd3LKCez0pSBGhPaZvAdQyyUouuKHecOXn1h076VJVSnXWg\nG6C4MCptZwa0/8nTb8d4\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

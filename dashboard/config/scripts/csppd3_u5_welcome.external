@@ -1,0 +1,22 @@
+name ’CSPPD3-u5 Welcome'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Getting Started > Welcome
+
+#### Welcome to the Next Installment of your Ongoing Academic Year Support! 
+Congratulations on completing the Unit 4 online PD experience for Computer Science Principles! We hope the <a href="https://studio.code.org/s/CSPPD3-Unit4" target=_blank>online PD for Unit 4</a> helped you better understand the lessons in the unit, and that you're ready to spend some time here on **Unit 5**!
+<br><br>
+Throughout the 2015-16 school year you will have access to in-person and online PD, designed to work together and to help you get more comfortable with the CSP curriculum. This module will introduce Unit 5.
+
+<br>
+> #### Blended PD model: 
+>- Four in-person sessions throughout the school year, which are designed to provide support with teaching practice, content, and community building. For details on when your in-person sessions are scheduled, check out the [PD website](https://www.code.org/pd).
+>- Four self-paced online PD modules, broken down by unit, which are designed to get you into the curriculum and help you plan. 
+
+This is the fourth out of the four online PD modules focused on each of the remaining units of the curriculum (continuing here with Unit 5). Click “Continue” below to get started! 
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

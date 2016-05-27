@@ -1,7 +1,0 @@
-name 'U4L18 Free Response'
-title 'Free Response: Short description here'
-
-markdown <<MARKDOWN
-Free response prompt here.
-
-MARKDOWN

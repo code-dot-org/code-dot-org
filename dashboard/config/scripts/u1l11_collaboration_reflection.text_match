@@ -1,7 +1,0 @@
-name 'U1L11 Collaboration Reflection'
-title 'Reflection: Sending Formatted Text'
-content1 'What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?'
-
-markdown <<MARKDOWN
-Describe one instance in which collaboration with a partner influenced the final protocol your team produced.
-MARKDOWN

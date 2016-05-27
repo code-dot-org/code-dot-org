@@ -20,8 +20,8 @@ fa-IR:
   submit: ارسال کنید
   twentyhours_heading: دوره‌ی مقدماتی علوم کامپیوتر ما را شروع کنید
   twentyhours_text: اولین ساعت کدنویسی را به پایان رساندید؟ علوم کامپیوتر و مفاهیم برنامه نویسی را در درس بعدی، بیشتر یاد بگیرید.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_title: هر کودک فرصت سزاوار
+  og_description: هر دانش آموز در هر مدرسه فرصت مطالعه علوم کامپیوتر سزاوار. آن همه چیز در حال تغییر است.
   hoc2014_heading: 'به <a href="http://hourofcode.com">ساعتِ کدنویسی</a> بپیوندید <br/>از 8 تا 14 دسامبر  2014<br/>'
   hoc2014_students: دانش آموزان
   hoc2014_try: آن را امتحان کنید
@@ -57,11 +57,82 @@ fa-IR:
   thank_you_: با سپاس!
   congratulations: آفرین!
   congratulations_on_completing_hoc: تبریک برای کامل کردن یک ساعت کد نویسی
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code, <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and help students learn an Hour of Code!'
-  congratulations_on_completing_course: 'تبریک به خاطر تکمیل %{course}'
+  congratulations_volunteer: 'تبریک: حالا که یک ساعت کد را امتحان کردید <a href="https://code.org/volunteer"> برای شرکت در یک کلاس داوطلب شوید </a> و به دانش آموزان کمک کنید که یک ساعت کد بیاموزند!'
+  congratulations_on_completing_course1: تبریک برای اتمام درس 1
+  congratulations_on_completing_course2: تبریم برای اتمام درس 2
+  congratulations_on_completing_course3: تبریک برای اتمام درس 3
+  congratulations_on_completing_course4: تبریک برای اتمام درس 4
+  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated Course
   congrats_next_tutorials_title: این آموزش های بعدی را سعی کنید
   congrats_next_tutorials_desc: 'این کوتاه تر را انجام دهید، ۱ ساعت آموزش یا <a href="%{current_path}/next">شریک آموزش</a> را امتحان کنید.'
   get_a_certificate_of_achievement: دریافت گواهی موفقیت
+  view_course: View course
+  view_unit: View unit
+  make_app: یک نرم افزار درست کن
+  congrats_guest_speaker_title: برای کلاست یک سخنران مهمان پیدا کن
+  congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
+  congrats_guest_speaker_cta: یک سنخنران مهمان پیدا کن
+  congrats_third_party_title: مهارتهای جدیدت را با این نرم افزارها و وب سایتها استفاده کن
+  third_party_gradelevel_kto8: Grades K-8
+  third_party_gradelevel_kto2: Grades K-2
+  third_party_gradelevel_2to8: Grades 2-8
+  third_party_gradelevel_4to12: Grades 4-12
+  third_party_gradelevel_5to12: Grades 5-12
+  third_party_gradelevel_6plus: Grades 6+
+  third_party_gradelevel_8plus: Grade 8+
+  third_party_platform_all: 'Platform: Web, iPad & Android'
+  third_party_platform_mobile: 'Platform: iPad & Android'
+  third_party_platform_web: 'Platform: Web'
+  third_party_price_varies: 'قیمت: برنامه ها متفاوت هستند'
+  third_party_price_free: 'قیمت: مجانی'
+  third_party_price_299: 'قیمت: 2.99 دلار/دانلود'
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
+  third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
+  third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
+  third_party_tynker_btn_site: Visit Tynker
+  third_party_scratchjr_desc: 'Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.'
+  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
+  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratch_desc: With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
+  third_party_scratch_btn_curriculum: Download Scratch Curriculum
+  third_party_scratch_btn_forum: Scratch Educator Forum
+  third_party_scratch_btn_site: Visit Scratch
+  third_party_lightbot_desc: In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written.
+  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
+  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_khan_desc: 'Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!'
+  third_party_khan_btn_learn: Learn CS with Khan Academy
+  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that allows everyone, even novices, to start programming and build fully functional apps for Android devices. Newcomers to App Inventor can have their first app up and running in an hour or less, and can program more complex apps in significantly less time than with more traditional, text-based languages.
+  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
+  third_party_appinv_btn_forum: App Inventor 2 Forum
+  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
+  third_party_codehs_btn_try: Intro CS Learn More for Schools
+  third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
+  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
+  third_party_codecademy_btn_site: Visit Codecademy
+  third_party_organization: Organization
+  third_party_curriculum: برنامه آموزشی
+  third_party_pricing: Pricing
+  third_party_cost_free: Free for students and teachers
+  third_party_cost_5permonth: $5/month per class
+  third_party_cost_299: $2.99/download
+  third_party_cost_free_399: Free to try, $399/classroom
+  third_party_cost_free_2: Free to try, $2/student
+  third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
+  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
+  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
+  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
+  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
+  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
+  third_party_desc_10to15_3to12: 'Between 10 & 15 lessons, geared toward grades 3-12'
+  third_party_desc_25to40_3to12: 'From 25 - 40 lessons, intended for grades 3-12'
+  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
+  third_party_desc_7to22_5to12: 'Between 7 & 22 lessons, geared toward grades 5-12'
+  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
   enter_valid_age: لطفا یک سن معتبر انتخاب کنید
   enter_valid_email: لطفا یک آدرس ایمیل معتبر را وارد کنید
   get_a_certificate_message: "ما گواهی تحصیل و اطلاعات در مورد چگونگی <a/> یادگیری فراتراز یک ساعت <'a href='/learn/beyond> را برای شما ارسال خواهیم کرد"
@@ -108,8 +179,13 @@ fa-IR:
   learn_next_level: به مرحله بعدی برو
   learn_online: درس های آنلاین دیگری را امتحان کن
   learn_classes: پیدا کردن کلاس های محلی
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'من HourOfCode# رو تموم کردم - امتحانش کنید! codeorg@'
+  just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
+  just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
+  just_did_course3: 'I just finished Course 3 - check it out! @codeorg'
+  just_did_course4: 'I just finished Course 4 - check it out! @codeorg'
+  just_did_accelerated: 'I just finished the Accelerated Course - check it out! @codeorg'
   twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: یک ساعت کدنویسی یاد بگیرید
   beyond_hoc: فراتر از یک ساعت
@@ -214,6 +290,8 @@ fa-IR:
   homepage_banner_privacy_link: بیشتر بیاموزید
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
   homepage_banner_20k_teachers_link: بیشتر بیاموزید
+  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: ساعتی با کد
   homepage_slot_text_blurb_hoc: هرکسی می تواند بیاموزد. امروز شروع کنید
   homepage_slot_text_link_hoc: ساعتِ کد نویسی را امتحان کنید
@@ -228,6 +306,9 @@ fa-IR:
   homepage_slot_text_link_othercourses: دوره های آنلاین دیگر
   homepage_slot_text_title_educators: آموزگاران
   homepage_slot_text_blurb_educators: به دانش آموزانتان درس بدهید
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: راهنمایی
+  homepage_slot_text_link_high: دبیرستان
   homepage_slot_text_link_k5: دوره هایی برای بچه های ابتدایی
   homepage_slot_text_link_fullcurriculum: تمام برنامه درسی ما را ببینید
   homepage_slot_text_link_pd: توسعه ی حرفه ای
@@ -236,6 +317,7 @@ fa-IR:
   homepage_slot_text_link_stats: آمار ها را ببینید
   homepage_slot_text_link_buy: شرکت کنید
   homepage_slot_text_link_donate: پولی اهدا کنید
+  homepage_slot_text_link_shop: 'T-shirts, hats, & more'
   homepage_header_codestudio: ابداعات دانش آموزان استودیو ی کد
   homepage_header_donors: Code.org از حامیانش سپاسگزاری می کند
   homepage_donors_seall: تمامش را ببینید
@@ -421,6 +503,11 @@ fa-IR:
   dashboard_action_remove_confirm: حذف شود؟
   dashboard_action_done: انجام شد
   dashboard_action_required: اجباری
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: صفحه اصلی معلم
   dashboard_navigation_section_student_progress: حساب کاربری دانش‌ آموزان و پیشرفت آنها
   dashboard_navigation_section_teacher_progress: پیشرفت دوره ی شما
@@ -431,12 +518,24 @@ fa-IR:
   dashboard_navigation_all_sections: حساب کاربری دانش‌ آموزان و پیشرفت آنها
   dashboard_navigation_view_progress: نمایش پیشرفت
   dashboard_navigation_view_text_responses: مشاهده متن پاسخ
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: افزودن دانش آموز
   dashboard_navigation_manage_students: مدیریت دانش آموزان
   dashboard_navigation_lesson_plans_resources: برنامه‌ها و منابع درس
   dashboard_navigation_view_stats: مشاهده وضعیت
   dashboard_navigation_section: 'بخش: %{section_name}'
   dashboard_navigation_student: 'دانش آموز: %{student_name}'
+  dashboard_progress_not_started: شروع نشده
+  dashboard_progress_in_progress: در حال اجرا
+  dashboard_progress_not_completed: تکمیل نشده است
+  dashboard_progress_completed_too_many_blocks: تکمیل شده ، با بلوک های زیادی
+  dashboard_progress_completed_perfect: تکمیل, کامل
+  dashboard_progress_furthest_level_attempted: 'تلاش برای دسترسی به سطح دسترسی خارج از محدوده '
+  dashboard_progress_submitted: ثبت شده
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: بخش تازه
   dashboard_sections_jumbotron_instruction: ایجاد بخش های جدید و افزودن دانش آموزان به آنها. بخش ها به شما کمک میکنند دانش آموزان را در گروه های کوچکتر سازماندهی کنید تا شما بتوانید پیشرفت آنهای را پیگیری و حساب کاربری آنها را مدیریت نمایید.
   dashboard_sections_table_section: بخش
@@ -452,6 +551,19 @@ fa-IR:
   dashboard_sections_secret_none: 'اگر می خواهید دانش آموزان شما توانایی مدیریت حساب کاربری خود، از جمله انتخاب کلمه عبور خود را داشته باشند، گزینه سرّی <b>هیچ کدام</b> را انتخاب کنید.'
   dashboard_sections_print_secrets: سپس شما میتوانید یک ورق از کارت های حاوی اطلاعات حساب کاربری را چاپ کنید و به صورت جداگانه بین دانش آموزان خود توزیع نمایید.
   dashboard_sections_switch_section: بخش تعویض
+  dashboard_sections_close: ببند
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: افزودن دانش آموز
   dashboard_students_add_students: اضافه کردن چند دانش آموز
   dashboard_students_add_multiple: 'نامهای دانش آموزان خود را تایپ یا جای گذاری نمایید، فقط یک نام در هر خط:'
@@ -518,16 +630,22 @@ fa-IR:
   dashboard_login_picture: عکس
   dashboard_login_none: ایمیل
   dashboard_new_password: گذرواژه‌ی تازه
-  dashboard_progress_not_started: شروع نشده
-  dashboard_progress_in_progress: در حال اجرا
-  dashboard_progress_not_completed: تکمیل نشده است
-  dashboard_progress_completed_too_many_blocks: تکمیل شده ، با بلوک های زیادی
-  dashboard_progress_completed_perfect: تکمیل, کامل
-  dashboard_progress_furthest_level_attempted: 'تلاش برای دسترسی به سطح دسترسی خارج از محدوده '
   dashboard_stage: مرحله
   dashboard_puzzle: پازل
   dashboard_question: سوال
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: صحیح است
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'آمار باور نکردنی از سال گذشته ساعت کدنويسي. تنها در یک هفته:'
   stats_hoc_2013_image_alt: وضعیت کد نویسی در سال 2013
   dashboard_teacher: دبیر
@@ -546,10 +664,10 @@ fa-IR:
   dashboard_faq_k5: پرسش های متداول پیش از دبستان
   dashboard_announcements: اطلاعیه‌ها
   dashboard_announce_view_all: مشاهده همه
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
   dashboard_announce_button_text: بیشتر بیاموزید
-  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
-  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
+  dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: 'ساعت کد نویسی اینجاست - 8 تا 14 دسامبر!'
   code_sign_up: ثبت نام کنید برای شرکت کردن تو هفته ی آموزش علوم کامپیوتر
   learn_more: بیشتر یاد بگیرید
@@ -654,6 +772,35 @@ fa-IR:
   codesters_name: Codesters
   texasinstruments_name: 10 Minutes of Code
   teacherled_name: Teacher Led Lesson Plans
+  course1_name: دوره 1
+  course2_name: دوره 2
+  course3_name: دورۀ 3
+  course4_name: دوره 4
+  accelerated_name: دوره های سریع
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
+  cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  20-hour_name: دوره های سریع
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: هزارتوی کلاسیک
+  iceage_name: عصر یخبندان
+  minecraft_name: ماینکرفت
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: ریاضی
+  hoc_category_name: ساعتی با کد
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
+  applab_name: آزمایشگاه نرم افزار
+  applab_gradelevel: سنین سیزده به بالا
+  applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: سنین 4 تا 104
   codeintl_gradelevel: سنین 4 تا 104
   thinkersmithspanish_gradelevel: Por todos
@@ -704,6 +851,11 @@ fa-IR:
   codesters_gradelevel: سنین 12-14
   texasinstruments_gradelevel: سنین 13-16
   teacherled_gradelevel: سنین 5 +
+  course1_gradelevel: سنین 4 به بالا (کسانیکه سواد خواندن ندارند)
+  course2_gradelevel: سنین 6 به بالا (خواندن لازم است)
+  course3_gradelevel: سنین 8 به بالا (پس از دوره 2)
+  course4_gradelevel: سنین 10 به بالا (پس از دوره 3)
+  accelerated_gradelevel: سنین 10 به بالا (پس از دوره 3)
   codeorg_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   codeintl_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   thinkersmithspanish_platformtext: آنپلاگد
@@ -802,6 +954,9 @@ fa-IR:
   codesters_shortdescription: Create your own games, animations, and artwork using Python.
   texasinstruments_shortdescription: 'Learn basic coding using the TI-84&#8482; Plus calculator.'
   teacherled_shortdescription: Be inspired to design your own Hour of Code event with these lesson plans.
+  course2_shortdescription_congrats: For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+  course3_shortdescription_congrats: Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+  course4_shortdescription_congrats: Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
   codeorg_longdescription: با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری، شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس است.
   codeintl_longdescription: با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری، شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس است.
   thinkersmithspanish_longdescription: 'با استفاده از "واژگان رباتی" از پیش تعیین شده دانش آموزان خواهند آموخت چگونه برای انجام کارهای مشخص یکدیگر را هدایت کنند بدون این که ابتدا راجع به آن ها بحث کنند. این درس به بچه ها ارتباط بین نماد ها و کار ها را می آموزد، همان طور که مهارت خیلی با ارزش رفع عیب را می آموزد.'
@@ -974,7 +1129,7 @@ fa-IR:
   groklearning_beyond_shortdescription: مقدمه اساسی به برنامه نویسی پایتون
   hacketyhack_beyond_shortdescription: روبی را از پایه یاد بگیرید
   robomind_beyond_shortdescription: کدنویسی برای ربات مجازی
-  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
+  makeschool_beyond_shortdescription: یاد بگیرید تا بازی آیفون را در یک ساعت بسازید
   appinventor_beyond_shortdescription: برنامه خودت را بساز( فقط آندروید)
   touchdevelop_beyond_shortdescription: 'برنامه های موبایل را مستقیمآ روی موبایل و  تبلت و کامپیوتر برنامه نویسی کنید'
   codehs_beyond_shortdescription: یادگیری برنامه نویسی جاوا اسکریپت با یک محیط بصری سرگرم کننده
@@ -1011,7 +1166,7 @@ fa-IR:
   groklearning_beyond_longdescription: یک دوره مقدماتی با استفاده از زبان برنامه نویسی پیتون برای افراد بدون هیچ تجربه ی برنامه نویسی. ترکیب بی نظیر محتوای آموزش مقدماتی و چالش ها ی ما شما را به درک کاملی از پیتون و خود برنامه نویسی می رساند. ما این محتوا را به دانش آموزان با سنین متفاوت با پیش زمینه های متفاوت تدریس کرده ایم و مطمئنیم که برای شما هم مناسب خواهد بود.
   hacketyhack_beyond_longdescription: 'Hackety Hack اصول اساسی برنامه نویسی را از ابتدا به شما آموزش خواهد داد. هیچ تجربه ی برنامه نویسی نیاز نیست! با Hackety Hack، شما زبان برنامه نویسی روبی را خواهید آموخت. روبی برای تمام انواع برنامه ها، از جمله برنامه ها ی desktop و وب سایت ها استفاده می شود. [نکته: نصب Desktop لازم است]'
   robomind_beyond_longdescription: 'دانش آموزان اصول اولیه ی برنامه نویسی را با کنترل ربات مجازی خودشان می آموزند. دوره ی آنلاین با ارائه های کوتاه، فیلم ها، امتحانات و هدایت/راهنمایی های اتوماتیک برای کمک در تمرینات برنامه نویسی بسیار کامل است. '
-  makeschool_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
+  makeschool_beyond_longdescription: کمی C شیئ گرا می دانید؟ در یک ساعت یاد بگیرید که یک بازی آی فون بسازید! ما شما را در این فرآیند هدایت خواهیم کرد تا ،کد بنویسید، تست کنید، و بازیتان را تماما در مرورگر بازی کنید و سپس آن را در فیس بوک به اشتراک بگذارید تا دوستان امتحانش کنند! نیاز به هیچ تجربه ی توسعه ی آی فون نیست. شما باید بفهمید که متغیر ها، روشها، و اشیا چه هستند.
   appinventor_beyond_longdescription: ویدئو های آموزشی سریع، و سرگرم کننده شما را در مسیر ساخت سه برنامه ی ساده برای تلفن اندروید یا تبلتتان هدایت می کنند. این ساعت کد نویسی، طراحی شده برای مبتدیان و کارشناسان شما را قبل از این که بدانید برای ساختن برنامه های خودتان آماده خواهد کرد. تصور کنید برنامه های ساخته شده توسط خودتان را با دوستانتان به اشتراک بگذارید! این فعالیت ها برای افراد و همچنین معلمانی که کلاس را هدایت می کنند مناسب هستند.
   touchdevelop_beyond_longdescription: TouchDeveop به شما اجازه می دهد برنامه ها را روی آی پد، آی فون، اندروید، کامپیوتر شخصی، مک، ویندوز فون ایجاد کنید. ویرایشگر سازگار با لمس ما کد نویسی را حتی روی تلفن همراه یا تبلتتان، جالب می کند!
   codehs_beyond_longdescription: 'اصول اولیه ی برنامه نویسی را با کارل سگه بیاموزید، مقدمه ای جالب، قابل دسترسی و بصری بر کد نویسی، که در آن دادن دستورات به یک کامپیوتر درست شبیه دادن دستورات به یک سگ است. این آموزش اگر توسط یک معلم هدایت شود عالی است، اما می تواند به طور مستقل هم انجام شود. [توجه: نیاز به پرداخت پول دارد]'

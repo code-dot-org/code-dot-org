@@ -1,0 +1,22 @@
+name 'CSPPD3-u5 unit overview checkin'
+skip_sound true
+answer_line true
+success_title "Got it!"
+success_body "Thanks for your response"
+
+right 'I feel like I could run this unit right now'
+right 'I feel like I need to do SOME review of the tasks before I run this unit'
+right 'I feel like I need to do A LOT of review of the tasks before I run this unit'  
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Unit 5 Overview > Checking In
+
+<br/>
+#### Initial Feelings about Unit 5
+
+Before we break down Unit 5 and talk more about what happens in the lessons shown here, how are you feeling about what you see? 
+<br><br>
+*There's no right or wrong answer, and absolutely no judgement here-- we're just trying to get a feel for where you are starting off with this material!* 
+MARKDOWN

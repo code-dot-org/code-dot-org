@@ -46,7 +46,7 @@ module Solr
       def each(&block)
         while(@start < @count)
           @start, @count, @docs = fetch(@start) if @docs.empty?
-          block.call(@docs.shift)
+          yield(@docs.shift)
           @start += 1
         end
       end

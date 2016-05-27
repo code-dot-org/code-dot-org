@@ -76,6 +76,10 @@ function initProjects() {
       getLevelHtml: function () {
         return '';
       },
+      setInitialAnimationMetadata: function () {},
+      getAnimationMetadata: function () {
+        return [];
+      },
       setInitialLevelSource: function (levelSource) {
         options.projectData = levelSource;
       },

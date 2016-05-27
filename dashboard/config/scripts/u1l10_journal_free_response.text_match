@@ -1,7 +1,0 @@
-name 'U1L10 Journal Free Response'
-title 'Free Response: Encoding Text'
-content1 'Respond to this prompt or to another as directed by your teacher.'
-
-markdown <<MARKDOWN
-Describe the steps involved in getting a text message from an idea in your head to your friend's computer screen.
-MARKDOWN

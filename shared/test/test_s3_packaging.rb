@@ -53,7 +53,9 @@ class S3PackagingTest < Minitest::Test
   end
 
   def test_create_and_decompress_package
-    package = @packager.send(:create_package, 'build')
+    package = RakeUtils.stub(:git_folder_hash, ORIGINAL_HASH) do
+      @packager.send(:create_package, 'build')
+    end
     assert package.is_a?(Tempfile)
 
     `rm -rf #{@target_location}/*`
@@ -62,7 +64,7 @@ class S3PackagingTest < Minitest::Test
     # package contains a commit_hash
     commit_hash_file = @target_location + '/commit_hash'
     assert File.exist?(commit_hash_file)
-    assert_equal IO.read(commit_hash_file), ORIGINAL_HASH
+    assert_equal ORIGINAL_HASH, IO.read(commit_hash_file)
 
     assert File.exist?(@target_location + '/output.js')
   end
@@ -93,14 +95,19 @@ class S3PackagingTest < Minitest::Test
   end
 
   def test_ensure_updated_package
-    alt_source_loc, alt_target_loc, alt_packager = create_packager('alternate-hash')
+    alt_hash = 'alternate-hash'
+    alt_source_loc, alt_target_loc, alt_packager = create_packager(alt_hash)
     begin
       # upload package for ORIGINAL_HASH
-      original_package = @packager.send(:create_package, 'build')
+      original_package = RakeUtils.stub(:git_folder_hash, ORIGINAL_HASH) do
+        @packager.send(:create_package, 'build')
+      end
       @packager.send(:upload_package, original_package)
 
       # upload package for "alternate-hash"
-      alt_package = alt_packager.send(:create_package, 'build')
+      alt_package = RakeUtils.stub(:git_folder_hash, alt_hash) do
+        alt_packager.send(:create_package, 'build')
+      end
       alt_packager.send(:upload_package, alt_package)
 
       # we have no package, so we download one
@@ -120,7 +127,7 @@ class S3PackagingTest < Minitest::Test
       FileUtils.cp(@target_location + '/commit_hash', alt_target_loc)
       assert_equal alt_packager.send(:target_commit_hash, alt_target_loc), ORIGINAL_HASH
       alt_packager.send(:ensure_updated_package)
-      assert_equal alt_packager.send(:target_commit_hash, alt_target_loc), 'alternate-hash'
+      assert_equal alt_packager.send(:target_commit_hash, alt_target_loc), alt_hash
       assert File.exist?(alt_target_loc + '/output.js')
 
       # if there is no package to download, we throw
@@ -164,7 +171,9 @@ class S3PackagingTest < Minitest::Test
   end
 
   def test_download_anonymous
-    package = @packager.send(:create_package, 'build')
+    package = RakeUtils.stub(:git_folder_hash, ORIGINAL_HASH) do
+      @packager.send(:create_package, 'build')
+    end
     @packager.send(:upload_package, package)
     # Stub blank AWS credentials in packager's S3 client
     @packager.instance_variable_set(:@client, Aws::S3::Client.new(credentials: Aws::Credentials.new(nil,nil)))

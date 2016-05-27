@@ -1,9 +1,0 @@
-name 'U2L9 Free Response Getting Started'
-title 'The Need for DNS: Getting Started'
-
-
-markdown <<MARKDOWN
-On the Internet, computers can only communicate with each other through IP addresses. Typically, you will know the name (or URL) of a computer you wish to talk to, but not its IP address. 
-
-List two impacts that would result if you HAD TO KNOW IP addresses to get to websites?
-MARKDOWN

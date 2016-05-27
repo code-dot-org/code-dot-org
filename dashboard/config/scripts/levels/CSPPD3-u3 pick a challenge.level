@@ -1,0 +1,14 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:07:59.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "markdown_instructions": "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://staging.code.org/curriculum/docs/web/k5online.css\">\n\n### Challenge Overview > What's your Challenge? \n\n<br/>\n#### Enter the lesson you selected for your challenge in the text box below.\n\n- 2 - 5: Turtle Drawing\n- 6 - 7: Functions and Simple Loops\n- 14-15: Variables \n- 16: Strings\n- 18: Programming Flow and Conditionals\n\n>Now that you've selected a lesson, head to the forum and **share which lesson you plan to complete** for your challenge. \n<br><br>\n<a href=\"http://forum.code.org/t/unit-3-challenge-selection/2470\" target=_blank>forums >> </a>\n\n<br>\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

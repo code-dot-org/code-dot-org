@@ -1,7 +1,6 @@
 name 'challenges sample 4'
 title 'Life Science Challenges'
 description 'Give these a try'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/challenges.css">
 

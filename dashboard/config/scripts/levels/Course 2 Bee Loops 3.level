@@ -41,5 +41,35 @@
       <xml>
 </xml>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="maze_nectar"/>
+                  </statement>
+                  <next>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="controls_repeat">
+                          <title name="TIMES">4</title>
+                          <statement name="DO">
+                            <block type="maze_honey"/>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

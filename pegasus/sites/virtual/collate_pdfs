@@ -2,10 +2,12 @@
 require_relative '../../../deployment'
 require 'cdo/rack/rackup'
 require 'cdo/only_one'
+require 'cdo/rake_utils'
+CDO.log.level = Logger::WARN
 
 def main()
   Rack.with_rackup(pegasus_dir, port: CDO.pdf_port_collate) do |params|
-    system 'rake', '--rakefile', pegasus_dir('sites/virtual/collate_pdfs.rake'), "base_url=http://localhost.code.org:#{params[:port]}/"
+    RakeUtils.rake '--rakefile', pegasus_dir('sites/virtual/collate_pdfs.rake'), "base_url=http://localhost.code.org:#{params[:port]}/"
     exit $?.exitstatus
   end
 end

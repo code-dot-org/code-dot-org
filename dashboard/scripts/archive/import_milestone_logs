@@ -10,10 +10,9 @@ DB_PASSWORD = ''
 
 DIR = '/mnt/backups/'
 
-c = DBI.connect("DBI:Mysql:#{DB_NAME}:#{DB_HOST}", DB_USER, DB_PASSWORD)
-#c = DBI.connect('DBI:Mysql:dashboard_development:localhost', 'root', '')
-
-#raise c.execute("select now()").inspect
+# c = DBI.connect("DBI:Mysql:#{DB_NAME}:#{DB_HOST}", DB_USER, DB_PASSWORD)
+# c = DBI.connect('DBI:Mysql:dashboard_development:localhost', 'root', '')
+# raise c.execute("select now()").inspect
 
 Dir.glob(DIR + 'dash*/log/milestone.log-20131211.gz') do |i|
   puts "gunzip -c #{i} > /tmp/milestone.log"

@@ -1,15 +1,9 @@
 /**
  * @overview Wires in the visualization that map to simulation entities.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
-require('../utils');
+require('../utils'); // Provides Function.prototype.inherits
 var NetSimGlobals = require('./NetSimGlobals');
 var NetSimVizNode = require('./NetSimVizNode');
 var NetSimVizWire = require('./NetSimVizWire');

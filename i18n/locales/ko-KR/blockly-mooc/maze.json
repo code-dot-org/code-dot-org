@@ -18,6 +18,7 @@
   "fillTooltip":"메우기 1번",
   "finalLevel":"짝짝짝 축하합니다! 마지막 퍼즐을 해결했습니다.",
   "flowerEmptyError":"이 꽃에는 꽃꿀이 없습니다.",
+  "didNotCollectEverything":"꽃꿀이나 꿀이 남아 있지 않은지 확실히 확인해주세요!",
   "get":"아이템 가져오기",
   "heightParameter":"높이",
   "holePresent":"구덩이가 있으면",

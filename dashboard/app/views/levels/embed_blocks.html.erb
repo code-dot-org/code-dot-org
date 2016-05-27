@@ -9,6 +9,8 @@
   <meta charset="utf-8">
   <title>Blockly</title>
   <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'js/react-only' %>
+  <%= javascript_include_tag 'js/code-studio-common' %>
   <%= render partial: 'levels/apps_dependencies', locals: { app: app, use_blockly: true } %>
 </head>
 <body class="readonly embed-block">

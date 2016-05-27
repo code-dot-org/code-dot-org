@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:18.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Router Table: Reflection",
+    "markdown_instructions": "How is creating a router table similar to finding the shortest path in a graph?  How is it different?\n",
+    "encrypted_solution": "kb2wc/shMfZCh34r6SZA30Y0w0xHxen6/R1ejtVhXPkZDrCIwbibdETydkEr\nrt4TFonHDNAn3d4hWydx7eAlLRKkyBdARbciRfe+JnBmsnTImVbChFanUBGG\nvDjITvYAhagGwo7QxOwiSPx0qAWtuC7f2MQHhfgq8sOY3lLouHQZ2peR34nC\n1CKPqM/TRzoN5S7JGmXlxMxIZdTcU9WUNWb0TyzoaMiQEgU3K5Y2vbKJGafS\nIubBWR2n3B+4PfiD3ttn/u4NoK3i/y+/uAlDHBfwisLUt5RkCEY70+U50SSX\nMCcW3dPD3FsNIfD1xQbTjyM/0GIextDhAT0+sttxKZvDo3G1dRva4LkQJzVP\ngOOkpByalzJBxY6cmRpgs++sSiDu6n4NV7Q63odYWCpE7pCfs49MJfPnAnjI\n8XkL4MCgbospuyI8/RFZgvnJi1917cm8exvRyf0Bd+6zUtyTl3OuO+a1XTRL\nqa7ATZCCiZheqfhTSspL3qjtqKXRg5wBEe1GQYTUN+2bJbEQxvuIQVn7ft4k\n2cUqsN/ON4fNBcpozL3656S3aX4fevOk7783h823hN63mD6z27ibYTSY/edF\n0fziGwyvcoSTkelH0GTaEGSQYRLzSLsg7nvxbY9aXTPOqKw+j+ayGOJLArB/\npFIIXHUfsiSNbCLcQuTHr++WYDG+xN5RYKF5gSt1EX2DnMFxAe1GLq4OZjHh\n8EhPKS347evMrHQJwu/iq0sjayo=\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

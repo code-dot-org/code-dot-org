@@ -11,6 +11,9 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
+<%
+  stats = Properties.get_user_metrics
+%>
 
 # Code.org and Diversity in Computer Science
 
@@ -37,15 +40,25 @@ Across all the [video tutorials](/educate/videos) we produce, we've recruited a 
 
 The results speak for themselves:
 
-<center><img src="/images/ourdiversity.png" /></center>
+|Code.org program | Scale (students) | % Female | % Underrepresented minorities <br/>(Black, Hispanic, Pacific Islander, Native American)|
+|------------ | ------------- | ------------ | ------------|
+|Hour of Code | Tens of millions | 49% | 38.7% (U.S.)|
+|CS Fundamentals for K-8  | Millions | 45% | 48% (U.S.)|
+|Exploring CS - high school intro class | Tens of thousands | 37% (U.S.) | 56% (U.S.)|
+|CS Principles - high school AP class | Thousands | 30% (U.S.) | 57% (U.S.)|
+
+<center><font size="1">Source: Code.org surveys of participating educators</font></center>
+<br/>
 
 ## Incentives for teachers, designed to motivate and reward results
 
-In 2014 we offered incentives to teachers (via [DonorsChoose.org](http://www.donorschoose.org/)) tied directly to recruitment of more girls in K-8 CS classes they establish with us. (we offered $250 per teacher for recruiting more than 10 girls into a K-8 course), with additional rewards for course completion. However, we found that we can achieve a 43% female ratio without using these incentives, so we discontinued this program.
+In 2014 we offered incentives to teachers (via [DonorsChoose.org](http://www.donorschoose.org/)) tied directly to recruitment of more girls in K-8 CS classes they establish with us. (we offered $250 per teacher for recruiting more than 10 girls into a K-8 course), with additional rewards for course completion. However, we found that we can achieve a 45% female ratio without using these incentives, so we discontinued this program.
 
 Instead, all of our professional development workshops include a session on equity and access, to help teachers build awareness of their own stereotypes, and to give them tools to recruit or retain a diverse CS student population.  In particular, we host professional development workshops with district administrators and counselors, who play a critical role in helping high school students choose their fields of study, in order to guide them to help recruit diverse students to the new computer sciences we help them establish in their schools. 
 
 **The results:** among our school district partnerships, the students in our high school computer science classes are 37% female, and 56% black or Hispanic.  
+
+<center><img width="70%" src="/images/2015AR/diversity.jpg" /></center>
 
 ## Changing state level policies to increase participation in CS
 

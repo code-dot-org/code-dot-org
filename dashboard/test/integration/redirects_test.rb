@@ -102,4 +102,11 @@ class RedirectsTest < ActionDispatch::IntegrationTest
       assert_redirected_to "/s/#{after}"
     end
   end
+
+  test 'plc objects redirect to content creator dashboard' do
+    %w(tasks learning_modules course_units courses evaluation_questions).each do |plc_object|
+      get "/plc/#{plc_object}"
+      assert_redirected_to plc_content_creator_show_courses_and_modules_path
+    end
+  end
 end

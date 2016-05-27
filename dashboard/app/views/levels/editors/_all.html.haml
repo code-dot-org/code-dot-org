@@ -4,6 +4,13 @@
   = javascript_include_tag 'js/levelbuilder'
   = javascript_include_tag 'jquery.handsontable.full'
 
+- unless @level.is_a? DSLDefined
+  .field
+    = f.label 'notes'
+    %p
+      Notes for yourself or other Levelbuilders. Viewable here and here alone.
+    = f.text_area :notes, rows: 6, class: "input-block-level"
+
 .field
   = f.label 'concepts'
   %p
@@ -13,6 +20,27 @@
     %a.select_none{href: '#'} none
     (shift-click or cmd-click to select multiple).
   = f.collection_select :concept_ids, Concept.cached, :id, :name, { :selected => @level.concept_ids }, { :multiple => true, :name => 'level[concept_ids][]', :size => Concept.cached.length }
+
+-# We can only save a related LevelConceptDifficulty object for a level that's already been created, not for a new level about to be created
+- if @level && @level.id
+  .field
+    = f.label 'concept difficulties'
+    %a{href: "https://docs.google.com/spreadsheets/d/1jPVTIqsIH6qLUd_WlKtzE7CEiaQG-hqM9n_A1hY-rL0"} Concept Difficulty Tagging guidelines
+    %table{style: 'width: 80%'}
+      %thead
+        %tr
+          %th Concept
+          %th Difficulty
+      %tbody
+        - concept_difficulty = @level.level_concept_difficulty || LevelConceptDifficulty.new(level:@level)
+        %input{type: 'hidden', name: "level[level_concept_difficulty_attributes][id]", value: concept_difficulty.id}
+        - LevelConceptDifficulty::CONCEPTS.each do |concept|
+          - difficulty = concept_difficulty.send(concept)
+          %tr
+            %td
+              = concept
+            %td
+              = select_tag "level[level_concept_difficulty_attributes][#{concept}]", options_for_select((1..LevelConceptDifficulty::MAXIMUM_CONCEPT_DIFFICULTY).to_a, difficulty), include_blank: true
 
 .field
   = f.label :video_key, 'Level Video'
@@ -138,7 +166,7 @@
         var selectionValue = $('.video-dropdown')[0].value;
         if (selectionValue) {
           var videoInfo = videoInfos[selectionValue];
-          $('.video-preview').html(createVideoWithFallback(null, videoInfo, 400, 400));
+          $('.video-preview').html(window.dashboard.videos.createVideoWithFallback(null, videoInfo, 400, 400));
           $('.video-preview').show();
         } else {
           $('.video-preview').hide();

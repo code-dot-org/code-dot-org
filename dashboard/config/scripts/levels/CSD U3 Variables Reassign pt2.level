@@ -1,0 +1,48 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-11T13:23:21.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Creating and assigning in one line\r\n\r\nYou can use `var` and `=` in a single line to **assign a value to a variable as soon as it is created**, for example: `var size = 10;`\r\n\r\n# Do This\r\n\r\n* **Create a new variable and assign it a value** in a single line.",
+    "start_blocks": "var bestTemperature = 72;\r\n//Create your own variable and give it a value in a single line.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "instructions": "Create and assign a new variable in a single line."
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

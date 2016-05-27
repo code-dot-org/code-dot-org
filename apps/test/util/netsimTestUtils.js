@@ -1,16 +1,9 @@
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
-var testUtils = require('../util/testUtils');
-var assert = testUtils.assert;
+import {assert} from './configuredChai';
 
 var utils = require('@cdo/apps/utils');
-var _ = utils.getLodash();
+var _ = require('@cdo/apps/lodash');
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
@@ -229,13 +222,11 @@ var fakeStorageTable = function () {
  * Fake set of storage tables for use in tests.
  */
 exports.fakeShard = function () {
-  /* jshint unused:false */
   /** @implements {PubSubChannel} */
   var fakeChannel = {
     subscribe: function (eventName, callback) {},
     unsubscribe: function (eventName, callback) {}
   };
-  /* jshint unused:true */
 
   // In tests we normally disable delays, coalescing and jitter so that they
   // run fast and predictably.  See specific NetSimTable tests covering the

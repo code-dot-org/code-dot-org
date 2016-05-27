@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../pegasus/src/env'
+require_relative 'mailing-list-utils'
+
+QUERY = <<EOS
+(kind_s:"Petition" && role_s:"educator") || (kind_s:"BringToSchool2013")
+EOS
+
+TEACHERS = query_subscribed_contacts(q: QUERY)
+
+export_contacts_to_csv TEACHERS, "petition-teachers.csv"

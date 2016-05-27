@@ -23,12 +23,20 @@ kk:
           future: болашақта болуы мүмкін емес
   hello: Сәлем, әлем
   welcome_back: 'Қайта оралуыңызбен, %{name}'
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Жіберу
+  unsubmit: Жібермеу
+  previous_page: Previous page
+  next_page: Келесі бет
+  cancel: Болдырмау
+  okay: Жақсы
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Мұғалімді қосу:'
       placeholder: Бөлім Коды (ABCDEF)
-      instructions: 'Сізбен бөліскен сіздін мұғаліміңіз деген код жазыңыз. 6 әріптен тұратын код сияқты яғни "ABCDEF".'
+      instructions: 'Мұғалімің бөліскен кодты жаз. Ол "ABCDEF" сияқты 6 әріптен тұратын код.'
     submit: Мұғалімді қосу
   add_hint_form:
     placeholder: Өтінеміз, мұнда көмек сөзін қосыңыз
@@ -148,8 +156,6 @@ kk:
         subject: 'Code.org сайтындағы %{teacher_name} оқытушының сыныбына қосылу!'
       student_disassociated:
         subject: 'Code.org хабарландыруы: енді %{student_name} сіздің оқушыңыз емес.'
-      teacher_disassociated:
-        subject: 'Code.org хабарландыруы: енді  %{teacher_name} сіздің оқытушыңыз емес.'
   reports:
     error:
       access_denied: Сіз бұл қолданушының статистикасын оқи алмайсыз
@@ -222,7 +228,7 @@ kk:
       free_play:
         playlab: Қосымша бағдарлама жасау
         artist: Кез келген нәрсе салу
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Қосымша бағдарлама жасау
     user:
       classroom: Оқытушының жеке парақшасы
@@ -320,11 +326,29 @@ kk:
     heading_hoc2014: '<h2>Код Жазу Сағаты</h2><h1>Барлық жастағылар үшін</h1>'
     heading_elementary: '<h2>20 сағаттық курс</h2><h1>Информатика пәні негіздерінен (барлық жастағылар үшін)</h1>'
     heading_apps: '<h1>Барлығына</h1><h2>қызықты</h2>'
+    heading_tools: '<h2>Келесі қадамға дайынсын ба?</h2><h1>Жоғары сынып үшін құралдар</h1>'
     heading_legacy: '<h2>Біздің жеделдетілген курстарымыз</h2><h1>Барлық жастағыларға арналған</h1>'
     your_gallery: Галерея
     no_primary_course: Код Студиясы курсын байқап көру
     choose_next_course: Төмендегі Код Студиясы курсының біреуін байқап көріңіз
     print_certificate: Сертификатты басып шығару
+    announcement_title: Хабарландыру
+    announcement_view_all: Барлығын көру
+    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+    announcement_button: толығырақ білу
+    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: Код Студиясында үйрену
     description: Информатика пәнін барлығы үйрене алады. Ойындар, қосымшалар және сурет салыңыз.
@@ -342,6 +366,7 @@ kk:
     help_from_html_old: Google, Microsoft, Facebook, және Twitter инженерлері бұл материалдарды жасауға көмектесті.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Барлық құқықтар қорғалған.<br />Жұлдызды Соғыстар&#8482; &copy; %{current_year} Disney және Lucasfilm. Барлық құқықтар қорғалған.<br />Frozen&#8482; &copy; %{current_year} Disney. Барлық құқықтар қорғалған.<br />Мұзды Дәуір&#8482; &copy; %{current_year} 20th Century Fox. Барлық құқықтар қорғалған.<br />Ашулы Құстар&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Барлық құқықтар қорғалған.<br />Өсімдіктер Зомбилерге қарсы&#8482; &copy; %{current_year} Electronic Arts Inc. Барлық құқықтар қорғалған.<br />Гамболаның таңғажайып әлемі сауда белгісі болып табылады және &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Барлық құқықтар қорғалған.<br />Жұлдызды Соғыстар&#8482; &copy; %{current_year} Disney және Lucasfilm. Барлық құқықтар қорғалған.<br />Frozen&#8482; &copy; %{current_year} Disney. Барлық құқықтар қорғалған.<br />Мұзды Дәуір&#8482; &copy; %{current_year} 20th Century Fox. Барлық құқықтар қорғалған.<br />Ашулы Құстар&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Барлық құқықтар қорғалған.<br />Өсімдіктер Зомбилерге қарсы&#8482; &copy; %{current_year} Electronic Arts Inc. Барлық құқықтар қорғалған.<br />Гамболаның таңғажайып әлемі сауда белгісі болып табылады және &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org, <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a> лицензияланған p5.play қолданады.'
     powered_by_aws: Amazon Web Services серверінде жұмыс істейді
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE логотипі және Код Жазу Сағаты&reg; Code.org сауда белгісі болып табылады.'
     copyright: Авторлық құқық
@@ -414,6 +439,12 @@ kk:
       current: Ағымдағы деңгей
       unused: Пайдаланылмаған деңгей
   upsell:
+    applab:
+      title: Қосымшалар Лабораториясы
+      body: App Lab онай қосымшалар жасау үшін бағдарламалау ортасы. Код блоктары немесе JavaScript арқылы бір қосымша жаса да бөлес.
+      body_short: Код блоктары немесе JavaScript арқылы бір қосымша жаса да бөлес.
+      audience: 13+ жастағылар үшін
+      cta: Қалай жасауды үйрең
     hoc:
       title: Классикалық лабиринт
       body: Информатика пәні негіздерін оқыңыз. Миллиондаған адам байқап көрді.
@@ -440,6 +471,11 @@ kk:
     minecraft:
       title: Minecraft
       body: Код арқылы Minecraft әлемінде саяхаттаңыз.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 4+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Оқушылар кодпен бірге суретін салады!
     students_made_these_with_code: Оқушылар кодын жазады!
@@ -455,10 +491,10 @@ kk:
   landing:
     prerelease: "Бұл курс <span class='betatext'>бета нұсқада</span>. Бұл деген курстың әлі толық жасалып бітпегенін көрсетеді және кері байланыс кезінде өзгертулер еңгізіледі."
     prerelease_hoc2014: "Бұл сабақ <span class='betatext'>бета нұсқада</span>. Бұл сабаққа кері байланыс кезінде өзгертулер еңгізіледі.."
-    feedback: Кері байланыс
     report_bug: Қате туралы хабарлау
     support: Көмек Сұрау
     support_url: //support.code.org
+    help_resources: Көмек және ресурстар
   multi:
     wrong_title: Дұрыс емес жауап
     wrong_body: Сіз еңгізген жауап дұрыс емес. Қайталап көріңіз!
@@ -466,6 +502,29 @@ kk:
     correct_body: Бұл дұрыс жауап.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Рахмет
+    wrong_body: Жауабың үшін рақмет.
+    correct_title: Рахмет
+    correct_body: Жауабың үшін рақмет.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Рахмет
+    wrong_body: Жауаптарың үшін рақмет.
+    correct_title: Рахмет
+    correct_body: Жауаптарың үшін рақмет.
+  level_group-submittable:
+    wrong_title: Рахмет
+    wrong_body: Жауаптарың үшін рақмет.
+    correct_title: Рахмет
+    correct_body: Жауаптарың үшін рақмет.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Дұрыс емес шешім
     wrong_body: Сіз еңгізген жауап дұрыс емес. Қайталап көріңіз!
@@ -483,6 +542,8 @@ kk:
     placeholder: Жауабыңызды мұнда еңгізіңіз
     open_response_title: Рахмет
     open_response_body: Жауап бергеніңіз үшін рахмет!
+    correct_title: Дұрыс
+    correct_body: Бұл дұрыс жауап.
   dialog:
     ok: OK
     startover_title: Сіз басынан бастауға сенімдісіз бе?
@@ -536,6 +597,7 @@ kk:
     completed_perfect: аяқталды, тамаша
     furthest_level_attempted: жетілген ең жоғарғы деңгей
     assessment: баға
+    submitted: жіберілді
   studio:
     courses_working_on: Сіз жұмыс жасап жатқан курстар
     completed_courses: Аяқталған курстар
@@ -553,13 +615,16 @@ kk:
     share: Бөлісу
     share_title: Жобаңызбен бөлісіңіз
     share_copy_link: 'Сілтемені көшіру:'
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Жабу
     more: Тағы да
     name: Атыңыз
     updated: Жаңартылды
     project_type: Жобаның Түрі
     help_text: 'Жаңа Ойын Лабораториясын немесе Кейіпкер жобасын құру үшін <strong>Қосымша Жасау</strong> немесе <strong>Кез келген нәрсе Салуға</strong> шертіңіз!<br/>Сіз кез келген уақытта жобаңызға қайта оралып, жұмысыңызды жалғастыра аласыз.'
-    need_help: Жұмыс жасауды бастау жайында сұрағыңыз бар ма?
+    need_help: Жаңа жобаңды бастау үшін, осы курстарды қарап шық
     really_delete: Өшіру?
     delete_yes: Иә
     delete_no: Жоқ
@@ -592,3 +657,21 @@ kk:
           other: Басқасы
         detail: Өтінеміз, хабарламаны барынша түсінікті және толық жазыңыз.
         acknowledge: 'Сіз бұл хабарламаны жіберу арқылы %{link_start_privacy}Құпиялылық Саясаты%{link_end} және %{link_start_tos}Қызмет көрсету шарттары%{link_end} аясында қаралатынына келісесіз бе?'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+  components:
+    icon_library:
+      search_placeholder_text: Белгі іздеу...
+      no_icons_found: Белгі табылмады
+  flex_category:
+    required: Қысқаша шолу
+    content: Content
+    practice: Teacher Practices

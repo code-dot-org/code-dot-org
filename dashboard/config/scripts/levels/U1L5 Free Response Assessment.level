@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:15.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Free Response Assessment",
+    "markdown_instructions": "Complete the rubric for Lesson 5. Then respond to this prompt using approximately 100 words.\n\nReflect on the progress of communication innovations. \n\nWhat do you notice across the variety of systems? \n\nSpeculate on the next phase of communication innovations.\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

@@ -4,12 +4,6 @@
  *           hex, decimal, ASCII.  "A and B" is a special encoding that is
  *           just binary with "A" sub'd for 0 and "B" sub'd for 1.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 /* global window, require, exports */
 
@@ -166,7 +160,7 @@ exports.alignDecimal = function (decimalString) {
   var numbers = exports.minifyDecimal(decimalString).split(/\s+/);
 
   // Find the length of the longest number
-  var mostDigits = numbers.reduce(function(prev, cur) {
+  var mostDigits = numbers.reduce(function (prev, cur) {
     if (cur.length > prev) {
       return cur.length;
     }
@@ -488,7 +482,7 @@ exports.addressStringToBinary = function (addressString, addressFormat) {
   });
 
   // Format, converted to a number[] where the numbers are bit-widths
-  var partWidths = addressFormat.split(/\D+/).map(function(stringPart) {
+  var partWidths = addressFormat.split(/\D+/).map(function (stringPart) {
     return parseInt(stringPart, 10);
   }).filter(function (numberPart) {
     return !isNaN(numberPart);
@@ -512,7 +506,7 @@ exports.addressStringToBinary = function (addressString, addressFormat) {
 exports.formatBinaryForAddressHeader = function (binaryString, addressFormat) {
   var binary = exports.minifyBinary(binaryString);
 
-  var partWidths = addressFormat.split(/\D+/).map(function(stringPart) {
+  var partWidths = addressFormat.split(/\D+/).map(function (stringPart) {
     return parseInt(stringPart, 10);
   }).filter(function (numberPart) {
     return !isNaN(numberPart);

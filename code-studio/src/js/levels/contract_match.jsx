@@ -54,7 +54,7 @@ $(window).load(function () {
    * @returns {Function} new function with the given arguments pre-set as the
    *                     defaults (curried)
    */
-  var curry = function(fn) {
+  var curry = function (fn) {
     var args = Array.prototype.slice.call(arguments, 1);
 
     return function () {
@@ -99,7 +99,7 @@ $(window).load(function () {
       return this.state.domainTypes;
     },
     nextUniqueID_: 0,
-    grabUniqueID: function() {
+    grabUniqueID: function () {
       return (this.nextUniqueID_++);
     },
     getInitialState: function () {
@@ -188,7 +188,7 @@ $(window).load(function () {
       });
       var typeChoiceNodes = sortedDomains.map(function (object) {
         return (
-          <div className="clear">
+          <div className="clear" key={object.key}>
             <TypeChooser
               order={object.order}
               type={object.type}
@@ -208,7 +208,7 @@ $(window).load(function () {
   });
 
   var TypeChooser = React.createClass({
-    selectmenuChange: function(selectChange) {
+    selectmenuChange: function (selectChange) {
       this.props.onTypeChange(selectChange.target.value);
     },
     render: function () {
@@ -216,7 +216,7 @@ $(window).load(function () {
         backgroundColor: typesToColors[this.props.type]
       };
       return (
-        <select value={this.props.type} style={divStyle}>
+        <select defaultValue={this.props.type} style={divStyle}>
           <option data-color={typesToColors[blockValueType.NUMBER]} value={blockValueType.NUMBER}>{blockValueType.NUMBER}</option>
           <option data-color={typesToColors[blockValueType.STRING]} value={blockValueType.STRING}>{blockValueType.STRING}</option>
           <option data-color={typesToColors[blockValueType.IMAGE]} value={blockValueType.IMAGE}>{blockValueType.IMAGE}</option>
@@ -225,20 +225,20 @@ $(window).load(function () {
       );
     },
     componentDidMount: function () {
-      $(React.findDOMNode(this)).coloriconselectmenu({
+      $(ReactDOM.findDOMNode(this)).coloriconselectmenu({
         select: function () {
           addSquareIconToButton(this);
         },
         change: this.selectmenuChange
       });
-      $(React.findDOMNode(this)).coloriconselectmenu("styleCurrentValue");
+      $(ReactDOM.findDOMNode(this)).coloriconselectmenu("styleCurrentValue");
     },
     componentWillUnmount: function () {
-      $(React.findDOMNode(this)).coloriconselectmenu('destroy');
+      $(ReactDOM.findDOMNode(this)).coloriconselectmenu('destroy');
     }
   });
 
-  var contractForm = React.render(<ContractForm />, document.getElementById('contractForm'));
+  var contractForm = ReactDOM.render(<ContractForm />, document.getElementById('contractForm'));
 
   /**
    * Creates a getResult function compatible with _dialog.html.haml's getResult call

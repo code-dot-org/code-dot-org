@@ -1,14 +1,16 @@
 /* global $ */
 
 
-var PropertyRow = require('./PropertyRow.jsx');
-var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
-var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
-var ZOrderRow = require('./ZOrderRow.jsx');
-var EventHeaderRow = require('./EventHeaderRow.jsx');
-var EventRow = require('./EventRow.jsx');
-var colors = require('../../sharedJsxStyles').colors;
+var PropertyRow = require('./PropertyRow');
+var BooleanPropertyRow = require('./BooleanPropertyRow');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
+var ImagePickerPropertyRow = require('./ImagePickerPropertyRow');
+var ZOrderRow = require('./ZOrderRow');
+var EventHeaderRow = require('./EventHeaderRow');
+var EventRow = require('./EventRow');
+var EnumPropertyRow = require('./EnumPropertyRow');
+var color = require('../../color');
+var ICON_PREFIX_REGEX = require('../constants').ICON_PREFIX_REGEX;
 
 var elementUtils = require('./elementUtils');
 
@@ -19,8 +21,25 @@ var ButtonProperties = React.createClass({
     onDepthChange: React.PropTypes.func.isRequired
   },
 
+  handleIconColorChange: function (value) {
+    this.props.handleChange('icon-color', value);
+    this.props.handleChange('image',
+      this.props.element.getAttribute('data-canonical-image-url'));
+  },
+
   render: function () {
     var element = this.props.element;
+
+    var iconColorPicker;
+    var canonicalImage = element.getAttribute('data-canonical-image-url');
+    if (ICON_PREFIX_REGEX.test(canonicalImage)) {
+      iconColorPicker = (
+        <ColorPickerPropertyRow
+          desc={'icon color'}
+          initialValue={elementUtils.rgb2hex(element.getAttribute('data-icon-color') || '#000000')}
+          handleChange={this.handleIconColorChange} />
+      );
+    }
 
     return (
       <div id='propertyRowContainer'>
@@ -66,10 +85,16 @@ var ButtonProperties = React.createClass({
           isNumber={true}
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
+        <EnumPropertyRow
+          desc={'text alignment'}
+          initialValue={element.style.textAlign || 'center'}
+          options={['left','right','center','justify']}
+          handleChange={this.props.handleChange.bind(this, 'textAlign')} />
         <ImagePickerPropertyRow
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'image')} />
+        {iconColorPicker}
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
@@ -94,7 +119,7 @@ var ButtonEvents = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getClickEventCode: function() {
+  getClickEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
@@ -103,7 +128,7 @@ var ButtonEvents = React.createClass({
     return code;
   },
 
-  insertClick: function() {
+  insertClick: function () {
     this.props.onInsertEvent(this.getClickEventCode());
   },
 
@@ -140,8 +165,8 @@ module.exports = {
     element.style.height = '30px';
     element.style.width = '80px';
     element.style.fontSize = '14px';
-    element.style.color = colors.white;
-    element.style.backgroundColor = colors.teal;
+    element.style.color = color.white;
+    element.style.backgroundColor = color.applab_button_teal;
 
     return element;
   },

@@ -1,0 +1,36 @@
+name 'ECSPD3-u6 day 2-3'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+## Unit 6 Lessons > Days 2-3 
+ 
+<br><br> 
+#### Concepts Covered  
+Robot design evaluations and creating algorithms to control robot behavior.
+
+ 
+#### Lesson Overview 
+This lesson continues what the students were working on in day one.  They will do some inquiry on what happens if you change the design of a robot and what limitations robots have because of their bodies.  They then get to give verbal commands to one of their peers to move from a starting point in the class room to another point in the room.  
+<br>
+It is a chance for students to use their skills in writing an algorithm from Unit 1 (peanut butter and jelly activity), and Unit 4 using loops to repeat a command, to perform a specific task.  It is a fun time to bring in connections to choreographed dances like the “Macarena," "whip/nae nae," or other popular dances to connect students to where they see such things in the world around them.
+<br><br> 
+  
+#### Lesson Resources 
+##### <a href="https://web.archive.org/web/20150423124112/http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=272" target=_blank>Lesson Plan Link>> </a>
+ 
+- <a href="http://www.thetech.org/robotics/activities/page05.html "target=_blank>Activity: Can a Robot Tie Your Shoes?</a>
+- Materials: shoes that tie, tongue depressors, masking tape, heavy gloves, pairs of pliers, blind folds.
+- <a href="http://www.cs.colorado.edu/~lizb/chaotic-­‐dance/macarena-­‐orig.mpeg.gz"target=_blank>Video: Walk like a Robot Activity from LEGO Materials.</a>
+- <a href="http://www.cs.colorado.edu/~lizb/chaotic-­‐dance.html"target=_blank>Explanation of video</a>
+
+
+ >#### Hints from an ECS Teacher: 
+As you make connections back to previous units and writing algorithms, have fun with the students so they feel like exploring and self-discovery with new concepts is safe and encouraged.  This is where we can apply the computer science skills of: creativity, persistence, problem solving and critical thinking that we want all of our students to have.  
+ 
+Click “Continue” below to learn about the next lesson.  
+ 
+<br/><br/> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

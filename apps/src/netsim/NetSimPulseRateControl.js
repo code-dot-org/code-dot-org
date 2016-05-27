@@ -3,12 +3,6 @@
  *           Differs from the bitrate slider in its scale and units.
  * @see NetSimBitRateControl
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 // Utils required only for Function.prototype.inherits()

@@ -67,7 +67,7 @@
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
-        Artist Loops Matching One: "حلقه های هنرمند منطبق شده با یک"
+        Artist Loops Matching One: Artist Loops Matching One
         Match the loop to the shape: "حلقه را با شکل منطبق سازید"
       2-3 artist match 1:
         "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
@@ -376,7 +376,7 @@
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
           500"
         Maze Multiple Choice: "چندگزینه ای هزارتو"
-        Which blocks work?: "کدام بلوک ها کارمیکنند؟"
+        Which blocks work?: Which blocks work?
       2-3 Relay Programming Multi 1:
         "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
@@ -399,8 +399,9 @@
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700"
-        Artist Debugging Multiple Choice One: "چندگزینه ای اشکال زدایی هنرمند یک"
-        Why won't this circle go all the way around?: "چرا این دایره دور تا دور نرود؟"
+        Artist Debugging Multiple Choice One: Artist Debugging Multiple Choice One
+        Why won't this circle go all the way around?: Why won't this circle go all
+          the way around?
       2-3 artist functions multi 1:
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
@@ -434,7 +435,7 @@
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
-        Bee Conditionals Multiple Choice One: "چندگزینه ای شرطی های زنبور عسل یک"
+        Bee Conditionals Multiple Choice One: Bee Conditionals Multiple Choice One
         Which comparison below is true?: "کدام مقایسه ی زیر درست است؟"
       2-3 bee conditionals multi 2:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png"
@@ -452,7 +453,7 @@
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
           500"
-        Bee Conditionals Multiple Choice Two: "چندگزینه ای شرطی های زنبور عسل دو"
+        Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
         Choose the best blocks.: "بهترین بلوک ها را انتخاب کنید"
       2-3 bee loops multi 1:
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"

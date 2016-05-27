@@ -23,7 +23,15 @@ pt-BR:
           future: não pode estar no futuro
   hello: Olá, mundo
   welcome_back: 'Bem-vindo de volta, %{name}'
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Enviar
+  unsubmit: Cancelar envio
+  previous_page: Página anterior
+  next_page: Próxima página
+  cancel: Cancelar
+  okay: Ok
+  heading_x_of_y: '%{heading} (página %{y} de %{x})'
   add_teacher_form:
     code:
       label: 'Adicionar professor:'
@@ -148,8 +156,6 @@ pt-BR:
         subject: 'Entre na turma de %{teacher_name} na Code.org!'
       student_disassociated:
         subject: 'Notificação Code.org: %{student_name} não é mais seu aluno.'
-      teacher_disassociated:
-        subject: 'Notificação Code.org: %{teacher_name} não é mais seu professor.'
   reports:
     error:
       access_denied: Você não tem acesso ao status dessa pessoa
@@ -220,10 +226,10 @@ pt-BR:
       finished_hoc: Terminei minha Hora do Código
       sign_in_to_save: Entre para salvar o progresso
       free_play:
-        playlab: Crie um aplicativo
+        playlab: Crie um aplicativo Play Lab
         artist: Desenhe alguma coisa
-        calculate: Calculate Something
-        applab: Crie um aplicativo
+        calculate: Calculate something
+        applab: Crie um aplicativo Play Lab
     user:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
@@ -320,11 +326,29 @@ pt-BR:
     heading_hoc2014: '<h2>A Hora do Código para</h2><h1>Todas as idades</h1>'
     heading_elementary: '<h2>Cursos de 20 horas sobre</h2><h1>Fundamentos de Ciência da Computação (todas as idades)</h1>'
     heading_apps: '<h2>Diversão para</h2><h1>todos</h1>'
+    heading_tools: '<h2>Pronto para o próximo passo?</h2> <h1>Ferramentas JavaScript para o Ensino Médio</h1>'
     heading_legacy: '<h2>Nosso curso acelerado para</h2><h1>todas as idades</h1>'
     your_gallery: Galeria
     no_primary_course: Faça um curso no Code Studio
     choose_next_course: Experimente um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
+    announcement_title: Anúncios
+    announcement_view_all: Ver todos
+    announcement_message: '<b>22 de abril de 2016</b> - Atividades offline são partes vitais do processo de aprendizagem, mas os professores nos disseram que encontrar todos os recursos pode ser confuso e demorado. Nós ouvimos! Agora, você pode encontrar todos os recursos offline numa página só. Associar as lições com qualquer aula de ciência da computação, ou usar a vídeo-aula como um curso independente.'
+    announcement_button: Saiba mais
+    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: Aprenda no Code Studio
     description: Qualquer pessoa pode aprender ciência da computação. Crie jogos, aplicativos e arte com a programação.
@@ -342,6 +366,7 @@ pt-BR:
     help_from_html_old: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram a criar esses materiais.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Todos os direitos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney. Todos os direitos reservados.<br />A Era do Gelo&#8482; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados.<br />O Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos reservados. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Todos os direitos reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos os direitos reservados. A Era do Gelo&#8482; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados. O Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org usa p5.play, que é licenciado sob <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> a GNU LGPL 2.1</a>.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE e Hora do Código&reg; são marcas registradas da Code.org.'
     copyright: Direitos Autorais
@@ -414,6 +439,12 @@ pt-BR:
       current: Níveis Atuais
       unused: Níveis não Utilizados
   upsell:
+    applab:
+      title: Laboratório de Aplicativo
+      body: App Lab é um ambiente de programação onde você pode fazer simples aplicativos. Projetar uma aplicação, codificar com blocos ou JavaScript para fazê-los funcionar, compartilhar seu aplicativo em minutos.
+      body_short: Projetar uma aplicação, codificar com blocks ou JavaScript para fazê-lo funcionar, e compartilhar seu aplicativo em segundos.
+      audience: A partir de 13 anos
+      cta: Aprenda como
     hoc:
       title: Labirinto clássico
       body: Experimente as noções básicas de ciência da computação. Milhões de pessoas já experimentaram.
@@ -440,6 +471,11 @@ pt-BR:
     minecraft:
       title: Minecraft
       body: Explore o mundo de Minecraft usando códigos.
+    unplugged:
+      title: Aulas offline
+      audience: A partir de 6 anos
+      body: Nós compilamos uma lista de lições offline para você usar em sua sala de aula. Agora você pode ensinar os fundamentos da ciência da computação, se você tiver computadores em sua sala de aula ou não! Tente usar essas lições como vídeo-aulas ou como aulas complementares para qualquer curso de ciência da computação.
+      body_short: Se você não tem computadores, tente essas lições offline em sua sala de aula.
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!
@@ -455,10 +491,10 @@ pt-BR:
   landing:
     prerelease: "Este curso está em sua versão <span class='betatext'>beta</span>. Isso significa que esta não é a versão final do curso, e ele está sujeito a revisões conforme os feedbacks são recebidos e as melhorias são feitas."
     prerelease_hoc2014: "Este tutorial está na versão <span class='betatext'>beta</span>. Ele está sujeito a revisões, conforme são recebidos feedbacks e melhorias são feitas."
-    feedback: Dar feedback
     report_bug: Reportar erro
     support: Obter ajuda
     support_url: //support.code.org
+    help_resources: Ajuda e recursos
   multi:
     wrong_title: Resposta incorreta
     wrong_body: A resposta que você digitou não está correta. Tente novamente!
@@ -466,6 +502,29 @@ pt-BR:
     correct_body: Essa é a resposta correta.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Obrigado
+    wrong_body: Obrigado por enviar uma resposta.
+    correct_title: Obrigado
+    correct_body: Obrigado por enviar uma resposta.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Obrigado
+    wrong_body: Obrigado por enviar uma resposta
+    correct_title: Obrigado
+    correct_body: Obrigado por enviar uma resposta
+  level_group-submittable:
+    wrong_title: Obrigado
+    wrong_body: Obrigado por enviar uma resposta
+    correct_title: Obrigado
+    correct_body: Obrigado por enviar uma resposta
+    unsubmit-title: Cancelar o envio de sua avaliação
+    unsubmit-body: 'Cancelando o envio de sua avaliação irá redefinir a data e enviado.  Tem certeza?'
+    submit-incomplete-title: Envie sua avaliação
+    submit-incomplete-body: 'Você deixou algumas perguntas incompletas.  Você não pode modificar a sua avaliação depois de enviar.  Tem certeza?'
+    submit-complete-title: Envie sua avaliação
+    submit-complete-body: 'Você não pode modificar a sua avaliação depois de que enviar.  Tem certeza?'
   match:
     wrong_title: Solução incorreta
     wrong_body: Sua solução não está correta. Tente novamente!
@@ -483,6 +542,8 @@ pt-BR:
     placeholder: Insira sua resposta aqui
     open_response_title: Obrigado
     open_response_body: Obrigado pela sua resposta!
+    correct_title: Correto
+    correct_body: Essa é a resposta correta.
   dialog:
     ok: OK
     startover_title: Tem certeza de que deseja começar do início?
@@ -536,6 +597,7 @@ pt-BR:
     completed_perfect: concluído, perfeito
     furthest_level_attempted: tentativa para o nível mais avançado
     assessment: avaliação
+    submitted: enviado
   studio:
     courses_working_on: Cursos que você está fazendo
     completed_courses: Cursos concluídos
@@ -553,6 +615,9 @@ pt-BR:
     share: Compartilhar
     share_title: Compartilhar seu projeto
     share_copy_link: 'Copie o link:'
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Fechar
     more: Mais
     name: Nome
@@ -592,3 +657,21 @@ pt-BR:
           other: Outros
         detail: Forneça o maior número de detalhes possível sobre o conteúdo que você está reportando.
         acknowledge: 'Ao enviar essas informações você reconhece que elas serão tratadas de acordo com a %{link_start_privacy}Política de Privacidade%{link_end} e os %{link_start_tos}Termos de Serviço%{link_end}'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+  components:
+    icon_library:
+      search_placeholder_text: Procure por um ícone...
+      no_icons_found: Nenhum ícone foi encontrado
+  flex_category:
+    required: Visão geral
+    content: Content
+    practice: Teacher Practices

@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: Introduction to Computer Science
+        title: Buntús na Ríomheolaíochta
         desc: This lesson will introduce the concept of Computer Science and explain
           what a Computer Scientist does.  It will also give students an opportunity
           to assume the role of a computer scientist.  By the end of the activity,
@@ -15,7 +15,7 @@
         - unplug1
         video: Unplug1
       Unplug2:
-        title: Computational Thinking
+        title: Smaointeoireacht Ríomhaireachtúil
         desc: With nothing but paper and markers, students will learn the four steps
           of computational thinking. After a brief introduction, students should be
           split into groups where they will have to create directions for other students
@@ -30,7 +30,7 @@
         - unplug2
         video: Unplug2
       Unplug3:
-        title: Graph Paper Programming
+        title: Ríomhchlárú ar Ghrafpháipéar
         desc: By programming one another to draw pictures, students will begin to
           understand what programming is really about. The class will begin by students
           instructing each other to color squares in on graph paper in an effort to
@@ -40,7 +40,7 @@
         - unplug3
         video: Unplug3
       Unplug4:
-        title: Algorithms
+        title: Algartaim
         desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
           the first exercise will show how important it is to make each instruction
           as clear and unambiguous as possible.  Afterward, the class will explore
@@ -50,7 +50,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: Functions
+        title: Feidhmeanna
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several
@@ -73,7 +73,7 @@
         - unplug6
         video: Unplug6
       Unplug7:
-        title: Song Writing
+        title: Cumadh Ceoil
         desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
           take an activity that's already common knowledge and shift it into a solid
           education on defining and calling functions. Once students are familiar
@@ -83,7 +83,7 @@
         - unplug7
         video: Unplug7
       Unplug8:
-        title: Abstraction
+        title: Teibíocht
         desc: This activity combines your students' everyday routine and a Mad-Lib
           style thinking game to help your class learn about the effectiveness of
           abstraction.
@@ -91,7 +91,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: Relay Programming
+        title: Códáil Sealaíochta
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".
@@ -99,7 +99,7 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: The Internet
+        title: An tIdirlíon
         desc: In this lesson, students will pretend to flow through the Internet,
           all the while learning about web addresses, IPs and the DNS.
         pdfs:
@@ -115,88 +115,88 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: Mapaí Meidhreacha
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
+        title: Bog é, Bog é
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Real-life Algorithms: Plant a Seed'
+        title: 'Algartaim Fhíorshaoil: Síol a Chur'
         desc: This lesson calls out ways we use algorithms in our daily lives, using
           the act of planting a seed as an example. It also focuses on the bigger
           picture of computer science and how algorithms play an essential part.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation
+        title: Dúshraith a Leagan
         desc: Students build a structure using only provided supplies. Structures
           must complete a task (reach a certain height or bear a certain weight),
           and students discuss the idea of being persistent when things get complicated.
         video: C1_building_foundation
       GettingLoopy:
-        title: Getting Loopy
+        title: Bí Lúbach
         desc: This lesson introduces the programming concept of loops (repeated instructions)
           through a dance activity. Students will learn simple choreography, then
           be instructed to repeat it.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Relay programming
+        title: Códáil sealaíochta
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
           erase everything back to that point.
         video: C2_relay_programming
       Conditionals:
-        title: Conditionals
+        title: Coinníollacha
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
+        title: An Teagmhas Mór
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button
           is pressed.
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Going Places Safely
+        title: Ag Taisteal Slán Sábháilte
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers
           introduce how to stay safe while navigating the Internet.
         video: C1_going_places_safely
       GraphPaperProgramming:
-        title: Graph Paper Programming
+        title: Ríomhchlárú ar Ghrafpháipéar
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Real-life Algorithms: Paper Planes'
+        title: 'Algartaim Fhíorshaoil: Eitleáin Pháipéir'
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically
           making paper airplanes. This lesson also focuses on the bigger picture of
           computer science and how algorithms play an essential part.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binary Bracelets
+        title: Bráisléid Dhénártha
         desc: Students create bracelets as a binary representations of the first letter
           of their name. Students learn that data can be represented and stored in
           more than one way.
         video: C2_binary_bracelets
       DigitalFootprint:
-        title: Your Digital Footprint
+        title: Do Lorg Digiteach
         desc: Teachers introduce to students the idea that putting information about
           themselves online creates a digital footprint or "trail" that has consequences.
         video: C2_digital_footprint
       ComputationalThinking:
-        title: Computational Thinking
+        title: Smaointeoireacht Ríomhaireachtúil
         desc: Students use the steps of computational thinking (decompose, pattern
           match, abstract, algorithm) to figure out how to play a game that comes
           with no instructions.
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Functional Suncatchers
+        title: Móibílí Gréine
         desc: Students create an algorithm with variables and functions (pieces of
           code that you want to use over and over again) to create suncatchers using
           string and beads.
@@ -214,18 +214,18 @@
           dice race game.
         video: C3_dice_race
       Internet:
-        title: Internet
+        title: An tIdirlíon
         desc: Students send messages representing various Internet transmission methods
           using pieces of paper.
         video: C3_internet
       Crowdsourcing:
-        title: Crowdsourcing
+        title: Sluafhoinsiú
         desc: Students use crowdsourcing, a problem-solving technique common in computer
           science, to complete a task together as a classroom more efficiently than
           if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
+        title: Saoránacht Dhigiteach
         desc: Students explore the difference between private information and personal
           information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:

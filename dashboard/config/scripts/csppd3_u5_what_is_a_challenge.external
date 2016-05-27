@@ -1,0 +1,33 @@
+name 'CSPPD3-u5 what is a challenge'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Challenge Overview > What’s a Challenge? 
+
+<br/>
+
+#### What is a “challenge”? 
+A challenge is a focused activity in which you explore a lesson from the Code.org Computer Science Principles (CSP) curriculum and prepare to teach it. You will complete the core activities from the lesson, read through the lesson plan, consider how you'll teach the lesson, and share that plan and your suggestions for how to use the lesson with other teachers through the <a href = "http://forum.code.org/c/csp-unit4" target=_blank>forum</a>.
+<br><br>
+
+>#### Why should I complete the challenge?
+The goals of a challenge are to offer you the opportunity to:
+
+>- **Prepare for teaching** - These challenges allow you to work through lessons with activities that might be tricky to teach without first going through them. You will also have time to look for outside resources that might help you teach the lesson, and then develop a plan for teaching it. You have the freedom to choose which lesson you will prepare, based on your personal teaching plan.
+- **Give and get feedback from other CSP piloters** - There itsn't time in PD to have everyone do every lesson, but if everyone does some of the lessons in PD and then share experiences and ideas, you can all can learn from one another.
+- **Find great resources and support** - As you work together to share our plans and give feedback, you’ll be creating a library of ideas that will help everyone reach their goals with CSP.
+
+#### What’s in the challenge? 
+
+1. **Do:** Complete the activities and levels from the lesson
+2. **Share:** On the forum, post: 
+ - the artifact(s) that you created by doing the lesson
+ - an extension activity OR assessment question that could be used with the lesson
+ - your thoughts and ideas related to implementing the lesson 
+
+<br>
+*Click continue to see details about how to complete the challenge!* 
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

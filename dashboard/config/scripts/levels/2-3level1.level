@@ -20,5 +20,14 @@
         </block>
       </xml>
     </start_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="maze_moveForward">
+          <next>
+            <block type="maze_moveForward"/>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

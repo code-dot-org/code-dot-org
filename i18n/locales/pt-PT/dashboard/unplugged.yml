@@ -72,7 +72,7 @@ pt:
         desc: Estudantes criam um algoritmo simples (conjunto de instruções) para mover a personagem através de um labirinto usando um único comando.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Criando caminhos
+        title: Move it, Move it
         desc: Estudantes criam um algoritmo simples (conjunto de instruções) para mover a personagem através de um labirinto usando um único comando.
         video: C1_moveitmoveit_unplugged
       PlantASeed:

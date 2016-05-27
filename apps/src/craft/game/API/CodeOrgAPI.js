@@ -14,7 +14,7 @@ export function get(controller) {
     /**
      * Called before a list of user commands will be issued.
      */
-    startCommandCollection: function() {
+    startCommandCollection: function () {
       if (controller.DEBUG) {
         console.log("Collecting commands.");
       }
@@ -28,7 +28,7 @@ export function get(controller) {
      * "success", i.e., true if attempt was successful (level completed),
      * false if unsuccessful (level not completed), and the current level model.
      */
-    startAttempt: function(onAttemptComplete) {
+    startAttempt: function (onAttemptComplete) {
         controller.OnCompleteCallback = onAttemptComplete;
         controller.queue.addCommand(new CheckSolutionCommand(controller));
 
@@ -37,53 +37,53 @@ export function get(controller) {
         controller.queue.begin();
     },
 
-    resetAttempt: function() {
+    resetAttempt: function () {
         controller.reset();
         controller.queue.reset();
         controller.OnCompleteCallback = null;
     },
 
-    moveForward: function(highlightCallback) {
+    moveForward: function (highlightCallback) {
         controller.queue.addCommand(new MoveForwardCommand(controller, highlightCallback));
     },
 
-    turn: function(highlightCallback, direction) {
+    turn: function (highlightCallback, direction) {
         controller.queue.addCommand(new TurnCommand(controller, highlightCallback, direction === 'right' ? 1 : -1));
     },
 
-    turnRight: function(highlightCallback) {
+    turnRight: function (highlightCallback) {
         controller.queue.addCommand(new TurnCommand(controller, highlightCallback, 1));
     },
 
-    turnLeft: function(highlightCallback) {
+    turnLeft: function (highlightCallback) {
         controller.queue.addCommand(new TurnCommand(controller, highlightCallback, -1));
     },
 
-    destroyBlock: function(highlightCallback) {
+    destroyBlock: function (highlightCallback) {
         controller.queue.addCommand(new DestroyBlockCommand(controller, highlightCallback));
     },
 
-    placeBlock: function(highlightCallback, blockType) {
+    placeBlock: function (highlightCallback, blockType) {
         controller.queue.addCommand(new PlaceBlockCommand(controller, highlightCallback, blockType));
     },
 
-    placeInFront: function(highlightCallback, blockType) {
+    placeInFront: function (highlightCallback, blockType) {
         controller.queue.addCommand(new PlaceInFrontCommand(controller, highlightCallback, blockType));
     },
 
-    tillSoil: function(highlightCallback) {
+    tillSoil: function (highlightCallback) {
         controller.queue.addCommand(new PlaceInFrontCommand(controller, highlightCallback, 'watering'));
     },
 
-    whilePathAhead: function(highlightCallback, blockType, codeBlock) {
+    whilePathAhead: function (highlightCallback, blockType, codeBlock) {
         controller.queue.addCommand(new WhileCommand(controller, highlightCallback, blockType, codeBlock));
     },
 
-    ifBlockAhead: function(highlightCallback, blockType, codeBlock) {
+    ifBlockAhead: function (highlightCallback, blockType, codeBlock) {
         controller.queue.addCommand(new IfBlockAheadCommand(controller, highlightCallback, blockType, codeBlock));
     },
 
-    getScreenshot: function() {
+    getScreenshot: function () {
         return controller.getScreenshot();
     }
   };

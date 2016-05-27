@@ -114,7 +114,7 @@ class LevelSource < ActiveRecord::Base
         experiment_hints.push(hint)
       end
     end
-    if result.nil? && experiment_hints.length > 0
+    if result.nil? && !experiment_hints.empty?
       result = experiment_hints.sample
     end
 
@@ -146,7 +146,7 @@ class LevelSource < ActiveRecord::Base
   # Old flappy levels used a different block type as their when run. Migrate
   # these as we try to access them
   def replace_old_when_run_blocks()
-    if level.game.name == 'Flappy' and data.include?('flappy_whenRunButtonClick')
+    if level.game.name == 'Flappy' && data.include?('flappy_whenRunButtonClick')
       self.data = data.gsub('flappy_whenRunButtonClick', 'when_run')
       self.md5 = Digest::MD5.hexdigest(data)
       self.save!

@@ -34,6 +34,8 @@ module Cdo
         `curl -s -i #{LOCALHOST}:#{DASHBOARD_PORT}/start`
         mock_started = $?.exitstatus == 0
       end
+      `curl -s -X POST #{LOCALHOST}:#{DASHBOARD_PORT}/__admin/mappings/new -d '#{{request: {method: 'GET', url: '/'}, response: {status: 200}}.to_json}'`
+      `sleep 1` until system("curl -sf #{LOCALHOST}:#{VARNISH_PORT}/health_check.dashboard")
       puts 'setup finished'
       [pid, ngrok_pid]
     end
@@ -73,7 +75,7 @@ module Cdo
           request: {
             method: method,
             url: url,
-            headers: Hash[*request_headers.map{|k, v|[k,{equalTo: v}]}.flatten]
+            headers: Hash[*request_headers.map{|k, v| [k,{equalTo: v}]}.flatten]
           },
           response: {
             status: 200,
@@ -94,7 +96,7 @@ module Cdo
 
       def _request(url, headers={}, cookies={}, method='GET')
         header_string = headers.map { |key, value| "-H \"#{key}: #{value}\"" }.join(' ')
-        cookie_string = cookies.empty? ? '' : "--cookie \"#{cookies.map{|k,v|"#{escape(k)}=#{escape(v)}"}.join('; ')}\""
+        cookie_string = cookies.empty? ? '' : "--cookie \"#{cookies.map{|k,v| "#{escape(k)}=#{escape(v)}"}.join('; ')}\""
         `curl -X #{method} -s #{cookie_string} #{header_string} -i #{url}`.tap{assert_equal 0, $?.exitstatus, "bad url:#{url}"}
       end
 
@@ -106,8 +108,8 @@ module Cdo
       # Send an HTTP request through the current proxy-cache configuration.
       # The proxy-cache configuration is CloudFront+Varnish or Varnish-only.
       def proxy_request(url, headers={}, cookies={}, method='GET')
-        headers.merge!(host: @proxy_host)
-        headers.merge!('X-Forwarded-Proto' => 'https'){|_, v1, _|v1}
+        headers[:host] = @proxy_host
+        headers.merge!('X-Forwarded-Proto' => 'https'){|_, v1, _| v1}
         _request("#{@proxy_address}#{url}", headers, cookies, method)
       end
 
@@ -148,6 +150,7 @@ module Cdo
       def assert_miss(response)
         assert_cache response, false
       end
+
       def assert_hit(response)
         assert_cache response, true
       end
@@ -400,7 +403,19 @@ module HttpCacheTest
       end
 
       it 'Does not strip cookies from assets in higher-priority whitelisted path' do
-        url = build_url 'api', 'image.png'
+        does_not_strip_cookies_from_png_in_path 'api'
+      end
+
+      it 'Does not strip cookies from assets in v3/assets path' do
+        does_not_strip_cookies_from_png_in_path 'v3/assets'
+      end
+
+      it 'Does not strip cookies from assets in v3/animations path' do
+        does_not_strip_cookies_from_png_in_path 'v3/animations'
+      end
+
+      def does_not_strip_cookies_from_png_in_path(path)
+        url = build_url path, 'image.png'
         cookie = 'hour_of_code' # whitelisted for this path
         text = 'Hello World!'
         text_cookie = 'Hello Cookie!'

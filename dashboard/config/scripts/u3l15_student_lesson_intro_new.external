@@ -1,7 +1,6 @@
 name 'U3L15 Student Lesson Intro - new'
 title 'title'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
 ## Unit 3: Lesson 15

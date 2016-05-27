@@ -15,6 +15,7 @@ Scenario: Loading the first level
   Then I see "#pegman"
   Then there's 1 dirt at (4, 4)
 
+@no_circle
 Scenario: Winning the first level
   And I drag block "1" to block "6"
   And I drag block "1" to block "7"

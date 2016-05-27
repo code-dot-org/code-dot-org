@@ -1,15 +1,9 @@
 /**
  * @overview Base implementation of NetSim UI sliders.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
-var utils = require('../utils');
+var utils = require('../utils'); // Provides Function.prototype.inherits
 var markup = require('./NetSimSlider.html.ejs');
 var i18n = require('./locale');
 

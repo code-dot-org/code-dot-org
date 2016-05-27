@@ -1,12 +1,6 @@
 /**
  * @overview Controller for creating growl-style Bootstrap alerts
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 /* global setTimeout */
 'use strict';
 
@@ -32,7 +26,7 @@ NetSimAlert.getOrCreateAlertContainer_ = function () {
     alertContainer = $('<div>').addClass("netsim-alert-container");
     $('#netsim').append(alertContainer);
 
-    alertContainer.on('closed', function() {
+    alertContainer.on('closed', function () {
       if ($(this).children().length === 1) {
         $(this).remove();
       }

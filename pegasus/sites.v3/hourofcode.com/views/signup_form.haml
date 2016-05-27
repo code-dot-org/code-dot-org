@@ -1,5 +1,6 @@
--#Disabled so the Google Maps API doesn't get included twice, which can cause unexpected errors.
--#%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
+-#
+  Disabled so the Google Maps API doesn't get included twice, which can cause unexpected errors.
+  %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
 
 #signupform
   %h2= hoc_s(:signup_header).gsub(/%{campaign_date}/, campaign_date("full"))

@@ -2,7 +2,7 @@
  * Copyright (c) 2016 Anthony Bau.
  * MIT License.
  *
- * Date: 2016-02-10
+ * Date: 2016-05-13
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
@@ -4130,6 +4130,7 @@ function objectToString(o) {
 module.exports = require("./lib/_stream_passthrough.js")
 
 },{"./lib/_stream_passthrough.js":14}],20:[function(require,module,exports){
+(function (process){
 exports = module.exports = require('./lib/_stream_readable.js');
 exports.Stream = require('stream');
 exports.Readable = exports;
@@ -4137,8 +4138,12 @@ exports.Writable = require('./lib/_stream_writable.js');
 exports.Duplex = require('./lib/_stream_duplex.js');
 exports.Transform = require('./lib/_stream_transform.js');
 exports.PassThrough = require('./lib/_stream_passthrough.js');
+if (!process.browser && process.env.READABLE_STREAM === 'disable') {
+  module.exports = require('stream');
+}
 
-},{"./lib/_stream_duplex.js":13,"./lib/_stream_passthrough.js":14,"./lib/_stream_readable.js":15,"./lib/_stream_transform.js":16,"./lib/_stream_writable.js":17,"stream":23}],21:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./lib/_stream_duplex.js":13,"./lib/_stream_passthrough.js":14,"./lib/_stream_readable.js":15,"./lib/_stream_transform.js":16,"./lib/_stream_writable.js":17,"_process":11,"stream":23}],21:[function(require,module,exports){
 module.exports = require("./lib/_stream_transform.js")
 
 },{"./lib/_stream_transform.js":16}],22:[function(require,module,exports){
@@ -4527,6 +4532,7 @@ function base64DetectIncompleteChar(buffer) {
     'sgmldeclaration',
     'doctype',
     'comment',
+    'opentagstart',
     'attribute',
     'opentag',
     'closetag',
@@ -5203,6 +5209,7 @@ function base64DetectIncompleteChar(buffer) {
       tag.ns = parent.ns
     }
     parser.attribList.length = 0
+    emitNode(parser, 'onopentagstart', tag)
   }
 
   function qname (name, attribute) {
@@ -5487,6 +5494,9 @@ function base64DetectIncompleteChar(buffer) {
     }
     if (chunk === null) {
       return end(parser)
+    }
+    if (typeof chunk === 'object') {
+      chunk = chunk.toString()
     }
     var i = 0
     var c = ''
@@ -6630,7 +6640,6 @@ Editor.prototype.redrawHighlights = function() {
     });
     this.maskFloatingPaths(this.draggingBlock.getDocument());
   }
-  this.redrawCursors();
   return this.redrawLassoHighlight();
 };
 
@@ -7260,11 +7269,17 @@ hook('mousedown', 4, function(point, event, state) {
     str = hitTestResult.stringifyInPlace();
     if ((hitTestBlock.addButtonRect != null) && hitTestBlock.addButtonRect.contains(mainPoint)) {
       line = this.mode.handleButton(str, 'add-button', hitTestResult.getReader());
-      this.populateBlock(hitTestResult, line);
+      if ((line != null ? line.length : void 0) >= 0) {
+        this.populateBlock(hitTestResult, line);
+        this.redrawMain();
+      }
       return state.consumedHitTest = true;
     } else if ((hitTestBlock.subtractButtonRect != null) && hitTestBlock.subtractButtonRect.contains(mainPoint)) {
       line = this.mode.handleButton(str, 'subtract-button', hitTestResult.getReader());
-      this.populateBlock(hitTestResult, line);
+      if ((line != null ? line.length : void 0) >= 0) {
+        this.populateBlock(hitTestResult, line);
+        this.redrawMain();
+      }
       return state.consumedHitTest = true;
     }
   }
@@ -7277,6 +7292,17 @@ hook('mouseup', 0, function(point, event, state) {
   }
 });
 
+Editor.prototype.drawDraggingBlock = function() {
+  var draggingBlockView;
+  this.dragView.clearCache();
+  draggingBlockView = this.dragView.getViewNodeFor(this.draggingBlock);
+  draggingBlockView.layout(1, 1);
+  this.dragCanvas.width = Math.min(draggingBlockView.totalBounds.width + 10, window.screen.width);
+  this.dragCanvas.height = Math.min(draggingBlockView.totalBounds.height + 10, window.screen.height);
+  draggingBlockView.drawShadow(this.dragCtx, 5, 5);
+  return draggingBlockView.draw(this.dragCtx, new this.draw.Rectangle(0, 0, this.dragCanvas.width, this.dragCanvas.height));
+};
+
 Editor.prototype.wouldDelete = function(position) {
   var mainPoint, palettePoint, ref1, ref2, ref3, ref4;
   mainPoint = this.trackerPointToMain(position);
@@ -7285,7 +7311,7 @@ Editor.prototype.wouldDelete = function(position) {
 };
 
 hook('mousemove', 1, function(point, event, state) {
-  var acceptLevel, allowed, bound, draggingBlockView, dropPoint, dropletDocument, expansion, head, i, j, k, l, len, len1, line, mainPoint, position, record, ref1, ref2, ref3, viewNode;
+  var acceptLevel, allowed, bound, dropPoint, dropletDocument, expansion, head, i, j, k, l, len, len1, line, mainPoint, position, record, ref1, ref2, ref3, viewNode;
   if (!state.capturedPickup && (this.clickedBlock != null) && point.from(this.clickedPoint).magnitude() > MIN_DRAG_DISTANCE) {
     this.draggingBlock = this.clickedBlock;
     this.dragReplacing = false;
@@ -7299,6 +7325,13 @@ hook('mousemove', 1, function(point, event, state) {
         expansion = parseBlock(this.mode, expansion);
       }
       this.draggingBlock = (expansion || this.draggingBlock).clone();
+      if ('function' === typeof this.clickedBlockPaletteEntry.expansion) {
+        if (indexOf.call(this.draggingBlock.classes, 'mostly-value') >= 0) {
+          this.draggingBlock.classes.push('any-drop');
+        }
+        this.draggingBlock.lastExpansionText = expansion;
+        this.draggingBlock.expansion = this.clickedBlockPaletteEntry.expansion;
+      }
     } else {
       mainPoint = this.trackerPointToMain(this.clickedPoint);
       viewNode = this.view.getViewNodeFor(this.draggingBlock);
@@ -7316,13 +7349,7 @@ hook('mousemove', 1, function(point, event, state) {
         this.draggingOffset = viewNode.bounds[0].upperLeftCorner().from(mainPoint);
       }
     }
-    this.dragView.clearCache();
-    draggingBlockView = this.dragView.getViewNodeFor(this.draggingBlock);
-    draggingBlockView.layout(1, 1);
-    this.dragCanvas.width = Math.min(draggingBlockView.totalBounds.width + 10, window.screen.width);
-    this.dragCanvas.height = Math.min(draggingBlockView.totalBounds.height + 10, window.screen.height);
-    draggingBlockView.drawShadow(this.dragCtx, 5, 5);
-    draggingBlockView.draw(this.dragCtx, new this.draw.Rectangle(0, 0, this.dragCanvas.width, this.dragCanvas.height));
+    this.drawDraggingBlock();
     position = new this.draw.Point(point.x + this.draggingOffset.x, point.y + this.draggingOffset.y);
     this.dropPointQuadTree = QUAD.init({
       x: this.scrollOffsets.main.x,
@@ -7382,6 +7409,44 @@ hook('mousemove', 1, function(point, event, state) {
   }
 });
 
+Editor.prototype.getClosestDroppableBlock = function(mainPoint, isDebugMode) {
+  var best, min, testPoints;
+  best = null;
+  min = Infinity;
+  if (!this.dropPointQuadTree) {
+    return null;
+  }
+  testPoints = this.dropPointQuadTree.retrieve({
+    x: mainPoint.x - MAX_DROP_DISTANCE,
+    y: mainPoint.y - MAX_DROP_DISTANCE,
+    w: MAX_DROP_DISTANCE * 2,
+    h: MAX_DROP_DISTANCE * 2
+  }, (function(_this) {
+    return function(point) {
+      var distance;
+      if (!((point.acceptLevel === helper.DISCOURAGE) && !isDebugMode)) {
+        distance = mainPoint.from(point);
+        distance.y *= 2;
+        distance = distance.magnitude();
+        if (distance < min && mainPoint.from(point).magnitude() < MAX_DROP_DISTANCE && (_this.view.getViewNodeFor(point._droplet_node).highlightArea != null)) {
+          best = point._droplet_node;
+          return min = distance;
+        }
+      }
+    };
+  })(this));
+  return best;
+};
+
+Editor.prototype.getClosestDroppableBlockFromPosition = function(position, isDebugMode) {
+  var mainPoint;
+  if (!this.currentlyUsingBlocks) {
+    return null;
+  }
+  mainPoint = this.trackerPointToMain(position);
+  return this.getClosestDroppableBlock(mainPoint, isDebugMode);
+};
+
 Editor.prototype.getAcceptLevel = function(drag, drop) {
   var next;
   if (drop.type === 'socket') {
@@ -7404,9 +7469,22 @@ Editor.prototype.getAcceptLevel = function(drag, drop) {
 };
 
 hook('mousemove', 0, function(point, event, state) {
-  var best, head, mainPoint, min, palettePoint, pos, position, rect, ref1, ref2, ref3, testPoints;
+  var dropBlock, expansionText, head, mainPoint, newBlock, palettePoint, pos, position, rect, ref1, ref2, ref3;
   if (this.draggingBlock != null) {
     position = new this.draw.Point(point.x + this.draggingOffset.x, point.y + this.draggingOffset.y);
+    if (this.draggingBlock.expansion) {
+      expansionText = this.draggingBlock.expansion(this.getClosestDroppableBlockFromPosition(position, event.shiftKey));
+      if (expansionText !== this.draggingBlock.lastExpansionText) {
+        newBlock = parseBlock(this.mode, expansionText);
+        newBlock.lastExpansionText = expansionText;
+        newBlock.expansion = this.draggingBlock.expansion;
+        if (indexOf.call(this.draggingBlock.classes, 'any-drop') >= 0) {
+          newBlock.classes.push('any-drop');
+        }
+        this.draggingBlock = newBlock;
+        this.drawDraggingBlock();
+      }
+    }
     if (!this.currentlyUsingBlocks) {
       if (this.trackerPointIsInAce(position)) {
         pos = this.aceEditor.renderer.screenToTextCoordinates(position.x, position.y);
@@ -7423,8 +7501,6 @@ hook('mousemove', 0, function(point, event, state) {
     this.dragCanvas.style.top = (position.y - rect.top) + "px";
     this.dragCanvas.style.left = (position.x - rect.left) + "px";
     mainPoint = this.trackerPointToMain(position);
-    best = null;
-    min = Infinity;
     head = this.tree.start.next;
     while (((ref1 = head.type) === 'newline' || ref1 === 'cursor') || head.type === 'text' && head.value === '') {
       head = head.next;
@@ -7434,37 +7510,19 @@ hook('mousemove', 0, function(point, event, state) {
       this.lastHighlight = this.tree;
     } else {
       if (this.hitTest(mainPoint, this.draggingBlock)) {
-        best = null;
+        dropBlock = null;
         this.dragReplacing = true;
       } else {
         this.dragReplacing = false;
-        testPoints = this.dropPointQuadTree.retrieve({
-          x: mainPoint.x - MAX_DROP_DISTANCE,
-          y: mainPoint.y - MAX_DROP_DISTANCE,
-          w: MAX_DROP_DISTANCE * 2,
-          h: MAX_DROP_DISTANCE * 2
-        }, (function(_this) {
-          return function(point) {
-            var distance;
-            if (!((point.acceptLevel === helper.DISCOURAGE) && !event.shiftKey)) {
-              distance = mainPoint.from(point);
-              distance.y *= 2;
-              distance = distance.magnitude();
-              if (distance < min && mainPoint.from(point).magnitude() < MAX_DROP_DISTANCE && (_this.view.getViewNodeFor(point._droplet_node).highlightArea != null)) {
-                best = point._droplet_node;
-                return min = distance;
-              }
-            }
-          };
-        })(this));
+        dropBlock = this.getClosestDroppableBlock(mainPoint, event.shiftKey);
       }
-      if (best !== this.lastHighlight) {
+      if (dropBlock !== this.lastHighlight) {
         this.redrawHighlights();
-        if (best != null) {
-          this.view.getViewNodeFor(best).highlightArea.draw(this.highlightCtx);
-          this.maskFloatingPaths(best.getDocument());
+        if (dropBlock != null) {
+          this.view.getViewNodeFor(dropBlock).highlightArea.draw(this.highlightCtx);
+          this.maskFloatingPaths(dropBlock.getDocument());
         }
-        this.lastHighlight = best;
+        this.lastHighlight = dropBlock;
       }
     }
     palettePoint = this.trackerPointToPalette(position);
@@ -7679,8 +7737,7 @@ hook('mouseup', 0, function(point, event, state) {
     this.draggingOffset = null;
     this.lastHighlight = null;
     this.clearDrag();
-    this.redrawMain();
-    return this.redrawHighlights();
+    return this.redrawMain();
   }
 });
 
@@ -7747,7 +7804,7 @@ Editor.prototype.setPalette = function(paletteGroups) {
   ref1 = this.paletteGroups;
   fn1 = (function(_this) {
     return function(paletteGroup, i) {
-      var clickHandler, data, expansion, k, len1, newBlock, newPaletteBlocks, paletteGroupBlocks, paletteGroupHeader, ref2, updatePalette;
+      var clickHandler, data, expansion, k, len1, newBlock, newPaletteBlocks, paletteGroupHeader, ref2, updatePalette;
       if (i % 2 === 0) {
         paletteHeaderRow = document.createElement('div');
         paletteHeaderRow.className = 'droplet-palette-header-row';
@@ -7756,8 +7813,11 @@ Editor.prototype.setPalette = function(paletteGroups) {
           paletteHeaderRow.style.height = 0;
         }
       }
-      paletteGroupHeader = document.createElement('div');
+      paletteGroupHeader = paletteGroup.header = document.createElement('div');
       paletteGroupHeader.className = 'droplet-palette-group-header';
+      if (paletteGroup.id) {
+        paletteGroupHeader.id = 'droplet-palette-group-header-' + paletteGroup.id;
+      }
       paletteGroupHeader.innerText = paletteGroupHeader.textContent = paletteGroupHeader.textContent = paletteGroup.name;
       if (paletteGroup.color) {
         paletteGroupHeader.className += ' ' + paletteGroup.color;
@@ -7776,20 +7836,9 @@ Editor.prototype.setPalette = function(paletteGroups) {
           id: data.id
         });
       }
-      paletteGroupBlocks = newPaletteBlocks;
+      paletteGroup.parsedBlocks = newPaletteBlocks;
       updatePalette = function() {
-        var ref3;
-        _this.currentPaletteGroup = paletteGroup.name;
-        _this.currentPaletteBlocks = paletteGroupBlocks;
-        _this.currentPaletteMetadata = paletteGroupBlocks;
-        if ((ref3 = _this.currentPaletteGroupHeader) != null) {
-          ref3.className = _this.currentPaletteGroupHeader.className.replace(/\s[-\w]*-selected\b/, '');
-        }
-        _this.currentPaletteGroupHeader = paletteGroupHeader;
-        _this.currentPaletteIndex = i;
-        _this.currentPaletteGroupHeader.className += ' droplet-palette-group-header-selected';
-        _this.rebuildPalette();
-        return _this.fireEvent('selectpalette', [paletteGroup.name]);
+        return _this.changePaletteGroup(paletteGroup);
       };
       clickHandler = function() {
         return updatePalette();
@@ -7807,6 +7856,32 @@ Editor.prototype.setPalette = function(paletteGroups) {
   }
   this.resizePalette();
   return this.resizePaletteHighlight();
+};
+
+Editor.prototype.changePaletteGroup = function(group) {
+  var curGroup, i, j, len, paletteGroup, ref1, ref2;
+  ref1 = this.paletteGroups;
+  for (i = j = 0, len = ref1.length; j < len; i = ++j) {
+    curGroup = ref1[i];
+    if (group === curGroup || group === curGroup.id || group === curGroup.name) {
+      paletteGroup = curGroup;
+      break;
+    }
+  }
+  if (!paletteGroup) {
+    return;
+  }
+  this.currentPaletteGroup = paletteGroup.name;
+  this.currentPaletteBlocks = paletteGroup.parsedBlocks;
+  this.currentPaletteMetadata = paletteGroup.parsedBlocks;
+  if ((ref2 = this.currentPaletteGroupHeader) != null) {
+    ref2.className = this.currentPaletteGroupHeader.className.replace(/\s[-\w]*-selected\b/, '');
+  }
+  this.currentPaletteGroupHeader = paletteGroup.header;
+  this.currentPaletteIndex = i;
+  this.currentPaletteGroupHeader.className += ' droplet-palette-group-header-selected';
+  this.rebuildPalette();
+  return this.fireEvent('selectpalette', [paletteGroup.name]);
 };
 
 hook('mousedown', 6, function(point, event, state) {
@@ -8377,6 +8452,9 @@ Editor.prototype.showDropdown = function(socket, inPalette) {
         if (inPalette) {
           _this.populateSocket(socket, text);
           _this.redrawPalette();
+        } else if (!socket.editable()) {
+          _this.populateSocket(socket, text);
+          _this.redrawMain();
         } else {
           if (!_this.cursorAtSocket()) {
             return;
@@ -8519,7 +8597,7 @@ Editor.prototype.resizeLassoCanvas = function() {
 
 Editor.prototype.clearLassoSelection = function() {
   this.lassoSelection = null;
-  return this.redrawMain();
+  return this.redrawHighlights();
 };
 
 hook('mousedown', 0, function(point, event, state) {
@@ -8662,7 +8740,7 @@ hook('mouseup', 0, function(point, event, state) {
     }
     this.lassoSelectAnchor = null;
     this.clearLassoSelectCanvas();
-    this.redrawMain();
+    this.redrawHighlights();
   }
   return this.lassoSelectionDocument = null;
 });
@@ -8708,7 +8786,7 @@ Editor.prototype.validCursorPosition = function(destination) {
 };
 
 Editor.prototype.setCursor = function(destination, validate, direction) {
-  var end, ref1, ref2, start;
+  var end, ref1, ref2, socket, start;
   if (validate == null) {
     validate = (function() {
       return true;
@@ -8734,15 +8812,17 @@ Editor.prototype.setCursor = function(destination, validate, direction) {
   }
   destination = this.toCrossDocumentLocation(destination);
   if (this.cursorAtSocket() && !this.cursor.is(destination)) {
-    this.reparse(this.getCursor(), null, (destination.document === this.cursor.document ? [destination.location] : []));
-    this.hiddenInput.blur();
-    this.dropletElement.focus();
+    socket = this.getCursor();
+    if (indexOf.call(socket.classes, '__comment__') < 0) {
+      this.reparse(socket, null, (destination.document === this.cursor.document ? [destination.location] : []));
+      this.hiddenInput.blur();
+      this.dropletElement.focus();
+    }
   }
   this.cursor = destination;
   this.correctCursor();
   this.redrawMain();
   this.highlightFlashShow();
-  this.redrawHighlights();
   if (this.cursorAtSocket()) {
     if (((ref1 = this.getCursor()) != null ? ref1.id : void 0) in this.extraMarks) {
       delete this.extraMarks[typeof focus !== "undefined" && focus !== null ? focus.id : void 0];
@@ -8792,6 +8872,20 @@ Editor.prototype.scrollCursorIntoPosition = function() {
     this.mainScroller.scrollTop = axis - this.mainCanvas.height;
   }
   return this.mainScroller.scrollLeft = 0;
+};
+
+Editor.prototype.scrollCursorToEndOfDocument = function() {
+  var pos;
+  if (this.currentlyUsingBlocks) {
+    pos = this.tree.end;
+    while (pos && !this.validCursorPosition(pos)) {
+      pos = pos.prev;
+    }
+    this.setCursor(pos);
+    return this.scrollCursorIntoPosition();
+  } else {
+    return this.aceEditor.scrollToLine(this.aceEditor.session.getLength());
+  }
 };
 
 hook('keydown', 0, function(event, state) {
@@ -8902,15 +8996,14 @@ hook('populate', 0, function() {
 });
 
 hook('keydown', 0, function(event, state) {
-  var head, newBlock, newSocket;
+  var head, newBlock, newSocket, newTextMarker, socket;
   if (this.readOnly) {
     return;
   }
   if (event.which === ENTER_KEY) {
     if (!this.cursorAtSocket() && !event.shiftKey && !event.ctrlKey && !event.metaKey) {
       newBlock = new model.Block();
-      newSocket = new model.Socket(this.mode.empty, Infinity);
-      newSocket.handwritten = true;
+      newSocket = new model.Socket(this.mode.empty, Infinity, true);
       newSocket.setParent(newBlock);
       helper.connect(newBlock.start, newSocket.start);
       helper.connect(newSocket.end, newBlock.end);
@@ -8922,12 +9015,33 @@ hook('keydown', 0, function(event, state) {
       this.redrawMain();
       return this.newHandwrittenSocket = newSocket;
     } else if (this.cursorAtSocket() && !event.shiftKey) {
+      socket = this.getCursor();
       this.hiddenInput.blur();
       this.dropletElement.focus();
       this.setCursor(this.cursor, function(token) {
         return token.type !== 'socketStart';
       });
-      return this.redrawMain();
+      this.redrawMain();
+      if (indexOf.call(socket.classes, '__comment__') >= 0 && this.mode.startSingleLineComment) {
+        newBlock = new model.Block(0, 'blank', helper.ANY_DROP);
+        newBlock.classes = ['__comment__', 'block-only'];
+        newBlock.socketLevel = helper.BLOCK_ONLY;
+        newTextMarker = new model.TextToken(this.mode.startSingleLineComment);
+        newTextMarker.setParent(newBlock);
+        newSocket = new model.Socket('', 0, true);
+        newSocket.classes = ['__comment__'];
+        newSocket.setParent(newBlock);
+        helper.connect(newBlock.start, newTextMarker);
+        helper.connect(newTextMarker, newSocket.start);
+        helper.connect(newSocket.end, newBlock.end);
+        head = this.getCursor();
+        while (head.type === 'newline') {
+          head = head.prev;
+        }
+        this.spliceIn(newBlock, head);
+        this.redrawMain();
+        return this.newHandwrittenSocket = newSocket;
+      }
     }
   }
 });
@@ -11754,8 +11868,88 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
     return text.match(/^\s*\/\/.*$/);
   };
 
+  JavaScriptParser.prototype.indentAndCommentMarker = function(text) {
+    return text.match(/^\s*\/\//)[0];
+  };
+
+  JavaScriptParser.prototype.handleButton = function(text, button, oldBlock) {
+    var argCount, currentElif, elseLocation, known, lastArgPosition, lines, maxArgs, minArgs, newLastArgPosition, node;
+    if (button === 'add-button' && indexOf.call(oldBlock.classes, 'IfStatement') >= 0) {
+      node = acorn.parse(text, {
+        locations: true,
+        line: 0,
+        allowReturnOutsideFunction: true
+      }).body[0];
+      currentElif = node;
+      elseLocation = null;
+      while (true) {
+        if (currentElif.type === 'IfStatement') {
+          if (currentElif.alternate != null) {
+            elseLocation = {
+              line: currentElif.alternate.loc.start.line,
+              column: currentElif.alternate.loc.start.column
+            };
+            currentElif = currentElif.alternate;
+          } else {
+            elseLocation = null;
+            break;
+          }
+        } else {
+          break;
+        }
+      }
+      if (elseLocation != null) {
+        lines = text.split('\n');
+        elseLocation = lines.slice(0, elseLocation.line).join('\n').length + elseLocation.column + 1;
+        return text.slice(0, elseLocation).trimRight() + ' if (__) ' + text.slice(elseLocation).trimLeft() + ' else {\n  __\n}';
+      } else {
+        return text + ' else {\n  __\n}';
+      }
+    } else if (indexOf.call(oldBlock.classes, 'CallExpression') >= 0) {
+      node = acorn.parse(text, {
+        line: 0,
+        allowReturnOutsideFunction: true
+      }).body[0];
+      known = this.lookupKnownName(node.expression);
+      argCount = node.expression["arguments"].length;
+      if (button === 'add-button') {
+        maxArgs = known != null ? known.fn.maxArgs : void 0;
+        if (maxArgs == null) {
+          maxArgs = Infinity;
+        }
+        if (argCount >= maxArgs) {
+          return;
+        }
+        if (argCount) {
+          lastArgPosition = node.expression["arguments"][argCount - 1].end;
+          return text.slice(0, lastArgPosition).trimRight() + ', __' + text.slice(lastArgPosition).trimLeft();
+        } else {
+          lastArgPosition = node.expression.end - 1;
+          return text.slice(0, lastArgPosition).trimRight() + '__' + text.slice(lastArgPosition).trimLeft();
+        }
+      } else if (button === 'subtract-button') {
+        minArgs = known != null ? known.fn.minArgs : void 0;
+        if (minArgs == null) {
+          minArgs = 0;
+        }
+        if (argCount <= minArgs) {
+          return;
+        }
+        if (argCount > 0) {
+          lastArgPosition = node.expression["arguments"][argCount - 1].end;
+          if (argCount === 1) {
+            newLastArgPosition = node.expression["arguments"][0].start;
+          } else {
+            newLastArgPosition = node.expression["arguments"][argCount - 2].end;
+          }
+          return text.slice(0, newLastArgPosition).trimRight() + text.slice(lastArgPosition).trimLeft();
+        }
+      }
+    }
+  };
+
   JavaScriptParser.prototype.mark = function(indentDepth, node, depth, bounds) {
-    var argument, block, currentElif, declaration, element, endPosition, expression, i, j, k, known, l, len, len1, len2, len3, len4, len5, len6, len7, len8, m, match, n, nodeBoundsStart, o, p, position, prefix, property, q, r, ref, ref1, ref10, ref11, ref12, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, results, results1, results2, results3, results4, results5, results6, results7, results8, space, statement, string, switchCase;
+    var argCount, argument, block, blockOpts, currentElif, declaration, element, endPosition, expression, i, j, k, known, l, len, len1, len2, len3, len4, len5, len6, len7, len8, m, match, maxArgs, minArgs, n, nodeBoundsStart, o, p, position, prefix, property, q, r, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref15, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, results, results1, results2, results3, results4, results5, results6, results7, results8, showButtons, space, statement, string, switchCase;
     switch (node.type) {
       case 'Program':
         ref = node.body;
@@ -11868,8 +12062,8 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         break;
       case 'AssignmentExpression':
         this.jsBlock(node, depth, bounds);
-        this.jsSocketAndMark(indentDepth, node.left, depth + 1, null);
-        return this.jsSocketAndMark(indentDepth, node.right, depth + 1, null);
+        this.jsSocketAndMark(indentDepth, node.left, depth + 1, NEVER_PAREN);
+        return this.jsSocketAndMark(indentDepth, node.right, depth + 1, NEVER_PAREN);
       case 'ReturnStatement':
         this.jsBlock(node, depth, bounds);
         if (node.argument != null) {
@@ -11879,7 +12073,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
       case 'IfStatement':
       case 'ConditionalExpression':
         this.jsBlock(node, depth, bounds, {
-          addButton: true
+          addButton: '+'
         });
         this.jsSocketAndMark(indentDepth, node.test, depth + 1, NEVER_PAREN);
         this.jsSocketAndMark(indentDepth, node.consequent, depth + 1, null);
@@ -11970,19 +12164,38 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         break;
       case 'CallExpression':
       case 'NewExpression':
-        this.jsBlock(node, depth, bounds);
         known = this.lookupKnownName(node);
+        blockOpts = {};
+        argCount = node["arguments"].length;
+        if (known != null ? known.fn : void 0) {
+          showButtons = (known.fn.minArgs != null) || (known.fn.maxArgs != null);
+          minArgs = (ref5 = known.fn.minArgs) != null ? ref5 : 0;
+          maxArgs = (ref6 = known.fn.maxArgs) != null ? ref6 : Infinity;
+        } else {
+          showButtons = this.opts.paramButtonsForUnknownFunctions && (argCount !== 0 || !this.opts.lockZeroParamFunctions);
+          minArgs = 0;
+          maxArgs = Infinity;
+        }
+        if (showButtons) {
+          if (argCount < maxArgs) {
+            blockOpts.addButton = '\u21A0';
+          }
+          if (argCount > minArgs) {
+            blockOpts.subtractButton = '\u219E';
+          }
+        }
+        this.jsBlock(node, depth, bounds, blockOpts);
         if (!known) {
           this.jsSocketAndMark(indentDepth, node.callee, depth + 1, NEVER_PAREN);
         } else if (known.anyobj && node.callee.type === 'MemberExpression') {
-          this.jsSocketAndMark(indentDepth, node.callee.object, depth + 1, NEVER_PAREN);
+          this.jsSocketAndMark(indentDepth, node.callee.object, depth + 1, NEVER_PAREN, null, null, known != null ? (ref7 = known.fn) != null ? ref7.objectDropdown : void 0 : void 0);
         }
-        ref5 = node["arguments"];
-        for (i = m = 0, len3 = ref5.length; m < len3; i = ++m) {
-          argument = ref5[i];
-          this.jsSocketAndMark(indentDepth, argument, depth + 1, NEVER_PAREN, null, null, known != null ? (ref6 = known.fn) != null ? (ref7 = ref6.dropdown) != null ? ref7[i] : void 0 : void 0 : void 0, (i === 0 && node["arguments"].length === 1 ? '' : void 0));
+        ref8 = node["arguments"];
+        for (i = m = 0, len3 = ref8.length; m < len3; i = ++m) {
+          argument = ref8[i];
+          this.jsSocketAndMark(indentDepth, argument, depth + 1, NEVER_PAREN, null, null, known != null ? (ref9 = known.fn) != null ? (ref10 = ref9.dropdown) != null ? ref10[i] : void 0 : void 0 : void 0);
         }
-        if (!known && node["arguments"].length === 0 && !this.opts.lockZeroParamFunctions) {
+        if (!known && argCount === 0 && !this.opts.lockZeroParamFunctions) {
           position = {
             line: node.callee.loc.end.line,
             column: node.callee.loc.end.column
@@ -12025,10 +12238,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         return this.jsSocketAndMark(indentDepth, node.argument, depth + 1);
       case 'VariableDeclaration':
         this.jsBlock(node, depth, bounds);
-        ref8 = node.declarations;
+        ref11 = node.declarations;
         results4 = [];
-        for (n = 0, len4 = ref8.length; n < len4; n++) {
-          declaration = ref8[n];
+        for (n = 0, len4 = ref11.length; n < len4; n++) {
+          declaration = ref11[n];
           results4.push(this.mark(indentDepth, declaration, depth + 1));
         }
         return results4;
@@ -12050,10 +12263,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         return this.jsSocketAndMark(indentDepth, node.test, depth + 1);
       case 'ObjectExpression':
         this.jsBlock(node, depth, bounds);
-        ref9 = node.properties;
+        ref12 = node.properties;
         results5 = [];
-        for (o = 0, len5 = ref9.length; o < len5; o++) {
-          property = ref9[o];
+        for (o = 0, len5 = ref12.length; o < len5; o++) {
+          property = ref12[o];
           this.jsSocketAndMark(indentDepth, property.key, depth + 1);
           results5.push(this.jsSocketAndMark(indentDepth, property.value, depth + 1));
         }
@@ -12062,10 +12275,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
       case 'SwitchStatement':
         this.jsBlock(node, depth, bounds);
         this.jsSocketAndMark(indentDepth, node.discriminant, depth + 1);
-        ref10 = node.cases;
+        ref13 = node.cases;
         results6 = [];
-        for (p = 0, len6 = ref10.length; p < len6; p++) {
-          switchCase = ref10[p];
+        for (p = 0, len6 = ref13.length; p < len6; p++) {
+          switchCase = ref13[p];
           results6.push(this.mark(indentDepth, switchCase, depth + 1, null));
         }
         return results6;
@@ -12083,10 +12296,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
             depth: depth + 1,
             prefix: prefix
           });
-          ref11 = node.consequent;
+          ref14 = node.consequent;
           results7 = [];
-          for (q = 0, len7 = ref11.length; q < len7; q++) {
-            statement = ref11[q];
+          for (q = 0, len7 = ref14.length; q < len7; q++) {
+            statement = ref14[q];
             results7.push(this.mark(indentDepth, statement, depth + 2));
           }
           return results7;
@@ -12110,10 +12323,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         break;
       case 'ArrayExpression':
         this.jsBlock(node, depth, bounds);
-        ref12 = node.elements;
+        ref15 = node.elements;
         results8 = [];
-        for (r = 0, len8 = ref12.length; r < len8; r++) {
-          element = ref12[r];
+        for (r = 0, len8 = ref15.length; r < len8; r++) {
+          element = ref15[r];
           if (element != null) {
             results8.push(this.jsSocketAndMark(indentDepth, element, depth + 1, null));
           } else {
@@ -12237,41 +12450,7 @@ JavaScriptParser.startComment = '/*';
 
 JavaScriptParser.endComment = '*/';
 
-JavaScriptParser.handleButton = function(text, button, oldBlock) {
-  var currentElif, elseLocation, lines, node;
-  if (button === 'add-button' && indexOf.call(oldBlock.classes, 'IfStatement') >= 0) {
-    node = acorn.parse(text, {
-      locations: true,
-      line: 0,
-      allowReturnOutsideFunction: true
-    }).body[0];
-    currentElif = node;
-    elseLocation = null;
-    while (true) {
-      if (currentElif.type === 'IfStatement') {
-        if (currentElif.alternate != null) {
-          elseLocation = {
-            line: currentElif.alternate.loc.start.line,
-            column: currentElif.alternate.loc.start.column
-          };
-          currentElif = currentElif.alternate;
-        } else {
-          elseLocation = null;
-          break;
-        }
-      } else {
-        break;
-      }
-    }
-    if (elseLocation != null) {
-      lines = text.split('\n');
-      elseLocation = lines.slice(0, elseLocation.line).join('\n').length + elseLocation.column + 1;
-      return text.slice(0, elseLocation).trimRight() + ' if (__) ' + text.slice(elseLocation).trimLeft() + ' else {\n  __\n}';
-    } else {
-      return text + ' else {\n  __\n}';
-    }
-  }
-};
+JavaScriptParser.startSingleLineComment = '//';
 
 JavaScriptParser.getDefaultSelectionRange = function(string) {
   var end, ref, start;
@@ -13939,7 +14118,15 @@ exports.Parser = Parser = (function() {
     return this.addMarkup(indent, opts.bounds, opts.depth);
   };
 
+  Parser.prototype.checkBounds = function(bounds) {
+    var ref, ref1, ref2, ref3;
+    if (!(((bounds != null ? (ref = bounds.start) != null ? ref.line : void 0 : void 0) != null) && ((bounds != null ? (ref1 = bounds.start) != null ? ref1.column : void 0 : void 0) != null) && ((bounds != null ? (ref2 = bounds.end) != null ? ref2.line : void 0 : void 0) != null) && ((bounds != null ? (ref3 = bounds.end) != null ? ref3.column : void 0 : void 0) != null))) {
+      throw new IllegalArgumentException('bad bounds object');
+    }
+  };
+
   Parser.prototype.addMarkup = function(container, bounds, depth) {
+    this.checkBounds(bounds);
     this.markup.push({
       token: container.start,
       location: bounds.start,
@@ -13998,21 +14185,40 @@ exports.Parser = Parser = (function() {
   };
 
   Parser.prototype.constructHandwrittenBlock = function(text) {
-    var block, socket, textToken;
+    var block, posAfterIndentAndCommentMarker, socket, textPrefix, textPrefixToken, textToken;
     block = new model.Block(0, 'blank', helper.ANY_DROP);
-    socket = new model.Socket(this.empty, 0, true);
-    textToken = new model.TextToken(text);
-    helper.connect(block.start, socket.start);
-    helper.connect(socket.start, textToken);
-    helper.connect(textToken, socket.end);
-    helper.connect(socket.end, block.end);
+    socket = new model.Socket('', 0, true);
+    socket.setParent(block);
     if (this.isComment(text)) {
+      posAfterIndentAndCommentMarker = this.indentAndCommentMarker(text).length;
+      if (posAfterIndentAndCommentMarker) {
+        textPrefix = text.slice(0, posAfterIndentAndCommentMarker);
+        text = text.slice(posAfterIndentAndCommentMarker);
+      }
       block.socketLevel = helper.BLOCK_ONLY;
       block.classes = ['__comment__', 'block-only'];
+      socket.classes = ['__comment__'];
     } else {
       block.classes = ['__handwritten__', 'block-only'];
     }
+    textToken = new model.TextToken(text);
+    textToken.setParent(block);
+    if (textPrefix) {
+      textPrefixToken = new model.TextToken(textPrefix);
+      textPrefixToken.setParent(block);
+      helper.connect(block.start, textPrefixToken);
+      helper.connect(textPrefixToken, socket.start);
+    } else {
+      helper.connect(block.start, socket.start);
+    }
+    helper.connect(socket.start, textToken);
+    helper.connect(textToken, socket.end);
+    helper.connect(socket.end, block.end);
     return block;
+  };
+
+  Parser.prototype.handleButton = function(text, command, oldblock) {
+    return text;
   };
 
   Parser.prototype.applyMarkup = function(opts) {
@@ -14261,10 +14467,6 @@ Parser.drop = function(block, context, pred, next) {
   }
 };
 
-Parser.handleButton = function(text, command, oldblock) {
-  return text;
-};
-
 Parser.empty = '';
 
 Parser.emptyIndent = '';
@@ -14288,6 +14490,7 @@ exports.wrapParser = function(CustomParser) {
       this.emptyIndent = CustomParser.emptyIndent;
       this.startComment = (ref = CustomParser.startComment) != null ? ref : '/*';
       this.endComment = (ref1 = CustomParser.endComment) != null ? ref1 : '*/';
+      this.startSingleLineComment = CustomParser.startSingleLineComment;
       this.getDefaultSelectionRange = (ref2 = CustomParser.getDefaultSelectionRange) != null ? ref2 : getDefaultSelectionRange;
     }
 
@@ -14336,7 +14539,9 @@ exports.wrapParser = function(CustomParser) {
     };
 
     CustomParserFactory.prototype.handleButton = function(text, command, oldblock) {
-      return CustomParser.handleButton(text, command, oldblock);
+      var parser;
+      parser = this.createParser(text);
+      return parser.handleButton(text, command, oldblock);
     };
 
     return CustomParserFactory;
@@ -15719,10 +15924,10 @@ exports.View = View = (function() {
         };
       })(this);
       if (this.model.buttons.addButton) {
-        drawButton('+', this.addButtonRect, ctx);
+        drawButton(this.model.buttons.addButton, this.addButtonRect, ctx);
       }
       if (this.model.buttons.subtractButton) {
-        return drawButton('-', this.subtractButtonRect, ctx);
+        return drawButton(this.model.buttons.subtractButton, this.subtractButtonRect, ctx);
       }
     };
 
@@ -15753,12 +15958,12 @@ exports.View = View = (function() {
           top = multilineBounds.bottom() + height / 2 - this.view.opts.buttonHeight / 2;
         }
       }
-      if (this.model.buttons.addButton) {
-        this.addButtonRect = new this.view.draw.Rectangle(start, top, this.view.opts.buttonWidth, this.view.opts.buttonHeight);
+      if (this.model.buttons.subtractButton) {
+        this.subtractButtonRect = new this.view.draw.Rectangle(start, top, this.view.opts.buttonWidth, this.view.opts.buttonHeight);
         start += this.view.opts.buttonWidth + this.view.opts.buttonPadding;
       }
-      if (this.model.buttons.subtractButton) {
-        return this.subtractButtonRect = new this.view.draw.Rectangle(start, top, this.view.opts.buttonWidth, this.view.opts.buttonHeight);
+      if (this.model.buttons.addButton) {
+        return this.addButtonRect = new this.view.draw.Rectangle(start, top, this.view.opts.buttonWidth, this.view.opts.buttonHeight);
       }
     };
 

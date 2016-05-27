@@ -1,0 +1,16 @@
+#about_nav
+  %span.about_list
+    -current_url = request.path_info
+    -{'PLAYBOOK HOME'=>'/educate/professional-learning-partner/playbook',
+      'Communications and branding'=>'/educate/professional-learning-partner/playbook/communications',
+      'Facilitator support'=>'/educate/professional-learning-partner/playbook/facilitator-support',
+      'Fundraising Resources'=>'/educate/professional-learning-partner/playbook/funding',
+      'Ordering Supplies'=>'/educate/professional-learning-partner/playbook/ordering-supplies',
+      'Teacher support'=>'/educate/professional-learning-partner/playbook/teacher-support',
+      'Workshop planning'=>'/educate/professional-learning-partner/playbook/workshop-planning',
+      'FAQ'=>'/educate/professional-learning-partner/playbook/faq'}.each_pair do |label,url|
+      - if current_url == url
+        %span.about_list_item_selected= label
+      -else
+        %a.about_list_item{:href=>url}= label
+      %hr.narrow_hr

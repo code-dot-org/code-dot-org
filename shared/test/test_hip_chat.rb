@@ -56,6 +56,23 @@ class HipchatTest < Minitest::Test
     assert_in_delta BACKOFF + (2 * BACKOFF), HipChat.total_backoff_for_test
   end
 
+  # Verify that we retry with exponential backoff on a HipChat failure.
+  def test_post_to_hipchat_with_net_timeout
+    stub_request(:post, 'http://api.hipchat.com/v1/rooms/message').
+        to_timeout.
+        to_return({body: 'OK'})
+
+    # This should not throw.
+    HipChat.post_to_hipchat('fake_room', 'my_message2')
+    HipChat.await_retries_for_test
+    assert_requested :post, 'http://api.hipchat.com/v1/rooms/message', times: 2 do |req|
+      req.body.match /message=my_message2/
+    end
+
+    assert_equal 1, HipChat.retries_for_test
+    assert_in_delta BACKOFF, HipChat.total_backoff_for_test
+  end
+
   # Verify that we give up if there are too many HipChat failures.
   def test_post_to_hipchat_with_repeated_failure
     stub_request(:post, 'http://api.hipchat.com/v1/rooms/message').to_return(
@@ -86,6 +103,15 @@ class HipchatTest < Minitest::Test
 
     assert_equal 0, HipChat.retries_for_test
     assert_equal 0.0, HipChat.total_backoff_for_test
+  end
+
+  def test_slackify
+    assert_equal 'this should be *bold*', HipChat.slackify('this should be <b>bold</b>')
+    assert_equal 'this should be _italic_', HipChat.slackify('this should be <i>italic</i>')
+    assert_equal "this should be\n```\na block of code\n```", HipChat.slackify("this should be\n<pre>\na block of code\n</pre>")
+
+    assert_equal "*dashboard* tests failed <https://a-link.to/somewhere|html output>\n_rerun: bundle exec ./runner.rb -c iPhone -f features/applab/sharedApps.feature --html_",
+      HipChat.slackify('<b>dashboard</b> tests failed <a href="https://a-link.to/somewhere">html output</a><br/><i>rerun: bundle exec ./runner.rb -c iPhone -f features/applab/sharedApps.feature --html</i>')
   end
 
 end

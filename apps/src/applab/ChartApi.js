@@ -4,18 +4,13 @@
  * For now, uses Google charts.
  * @see {GoogleChart}
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
+ /* global Promise */
 'use strict';
 
 var utils = require('../utils');
 var AppStorage = require('./appStorage');
 var GoogleChart = require('./GoogleChart');
-require("babelify/polyfill"); // required for Promises in IE / Phantom
+require("babel-polyfill"); // required for Promises in IE / Phantom
 
 /**
  * API for requesting/generating charts in Applab.

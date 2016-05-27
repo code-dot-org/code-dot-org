@@ -5,6 +5,17 @@ require 'json'
 
 class PropertiesApi < Sinatra::Base
 
+  # DynamoDB charges 1 read capacity unit and at most 4 write capacity units for
+  # items sized 4K and under. Due to the other metadata we store, the
+  # largest observed property size (key.length + value.to_json.length) which stays under
+  # this limit was 4024 bytes.
+  DEFAULT_MAX_PROPERTY_SIZE = 4000
+
+  # Maximum allowable property size (key.length + value.to_json.length)
+  def max_property_size
+    DEFAULT_MAX_PROPERTY_SIZE
+  end
+
   helpers do
     [
       'core.rb',
@@ -59,7 +70,7 @@ class PropertiesApi < Sinatra::Base
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)/delete$} do |endpoint, channel_id, name|
+  post %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)/delete$} do |_endpoint, _channel_id, _name|
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 
@@ -73,12 +84,21 @@ class PropertiesApi < Sinatra::Base
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
     _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
-    parsed_value = PropertyBag.parse_value(request.body.read)
+    body = request.body.read
+    property_size = name.length + body.length
+    property_too_large(property_size) if property_size > max_property_size
+    parsed_value = PropertyBag.parse_value(body)
     value = PropertyType.new(decrypted_channel_id, storage_id(endpoint)).set(name, parsed_value, request.ip)
+
+    too_large if value.is_a?(Hash) && value[:status] == 'TOO_LARGE'
 
     dont_cache
     content_type :json
     value.to_json
+  end
+
+  def property_too_large(property_size)
+    too_large("The key-value pair is too large (#{property_size} bytes). The maximum size is #{max_property_size} bytes.")
   end
 
   #
@@ -118,10 +138,10 @@ class PropertiesApi < Sinatra::Base
   # to differentiate between create and update so we map all three verbs to "create or update"
   # behavior via the POST handler.
   #
-  patch %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
+  patch %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |_endpoint, _channel_id, _name|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
-  put %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
+  put %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |_endpoint, _channel_id, _name|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
 end

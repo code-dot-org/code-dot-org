@@ -29,5 +29,34 @@
         <block type="maze_moveEast"/>
       </xml>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="maze_moveSouth">
+          <next>
+            <block type="maze_moveSouth">
+              <next>
+                <block type="maze_moveSouth">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveEast">
+                          <next>
+                            <block type="maze_moveEast">
+                              <next>
+                                <block type="maze_moveEast"/>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

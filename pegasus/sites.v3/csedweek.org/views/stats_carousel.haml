@@ -1,0 +1,47 @@
+-statistics = DB[:cdo_cs_statistics].all.to_a
+
+#stats-carousel-wrapper.carousel-wrapper
+  #stats-carousel.carousel
+    .slides
+      -statistics.each do |statistic|
+        .slide
+          .slide-img{style: "width: 100%; height: auto;"}<
+            %img{:src=>"/images/cs-stats/#{statistic[:code_s]}.png"}
+    %a.slide-prev{:href=>'#'}<
+      %span<
+        %span.label Previous
+    %a.slide-next{:href=>'#'}<
+      %span<
+        %span.label Next
+  .pagination
+    %div{:id=>"stats-carousel-pagination"}
+
+.stats-sources-link
+  %a{:href=>'https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub'}<
+    Source data
+
+%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
+%script{:src=>'/js/jquery.touchSwipe.min.js'}
+:javascript
+  $(document).ready(function() {
+    var statistics = #{JSON.pretty_generate(statistics)};
+    var id = '#stats-carousel';
+
+    // Define the carousel using the ID.
+    $(id + ' .slides').carouFredSel({
+      items :  {
+        height : 'variable'
+      },
+      auto  : false,
+      responsive : true,
+      width : '100%',
+      height : 'variable',
+      prev  : id + ' .slide-prev',
+      next  : id + ' .slide-next',
+      pagination : '#stats-carousel-pagination',
+      swipe : {
+        onTouch : true,
+        onMouse : false
+      }
+    }).trigger(resize);
+  });

@@ -59,13 +59,15 @@ class Video < ActiveRecord::Base
 
     language = I18n.locale.to_s.downcase.split('-').first
     if language != 'en'
-      defaults.merge!(
-          cc_lang_pref: language,
-          cc_load_policy: 1
-      )
+      defaults[:cc_lang_pref] = language
+      defaults[:cc_load_policy] = 1
     end
     defaults.merge!(args)
     "#{Video.youtube_base_url}/embed/#{youtube_code}/?#{defaults.to_query}"
+  end
+
+  def embed_url
+    Video.embed_url youtube_code
   end
 
   def self.embed_url(id)
@@ -88,12 +90,16 @@ class Video < ActiveRecord::Base
     self.thumbnail_url
   end
 
+  def localized_name
+    I18n.t("data.video.name.#{key}")
+  end
+
   def summarize(autoplay = true)
     # Note: similar video info is also set in javascript at levels/_blockly.html.haml
     {
         src: youtube_url(autoplay: autoplay ? 1 : 0),
         key: key,
-        name: I18n.t("data.video.name.#{key}"),
+        name: localized_name,
         download: download,
         thumbnail: thumbnail_path,
         enable_fallback: true,

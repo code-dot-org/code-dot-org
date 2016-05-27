@@ -33,6 +33,10 @@
     "disable_sharing": "false",
     "permitted_errors": "0",
     "impressive": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3
   }
 }]]></config>
   <blocks>

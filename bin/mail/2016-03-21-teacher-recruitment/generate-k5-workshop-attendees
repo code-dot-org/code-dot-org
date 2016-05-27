@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+require_relative '../mailing-common/mailing-list-utils'
+
+SECTION_IDS = Set.new
+SOLR_PARAMS = {
+  q: 'kind_s:ProfessionalDevelopmentWorkshop',
+  fl: 'section_id_s',
+  rows: 10000
+}
+SOLR.query(SOLR_PARAMS).each do |record|
+  next if record['section_id_s'].to_s == ''
+  SECTION_IDS << record['section_id_s']
+end
+puts "#{SECTION_IDS.count} K5 workshop section Ids loaded from solr"
+
+query = <<eos
+  SELECT DISTINCT users.email, users.name
+  FROM (
+    SELECT * FROM sections WHERE sections.id in (#{SECTION_IDS.to_a.join(',')})
+  ) AS culled_sections
+  JOIN followers ON (followers.section_id = culled_sections.id)
+  JOIN users ON (users.id = followers.student_user_id)
+eos
+
+results = {}
+DASHBOARD_DB.fetch(query).each do |teacher|
+  email = teacher[:email]
+  results[email] = {email: email, name: teacher[:name]}
+end
+
+export_contacts_to_csv results, "k5-workshop-attendees.csv"

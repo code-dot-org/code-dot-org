@@ -11,7 +11,7 @@ var utils = require('../utils');
 var LEVELBUILDER_LEVEL = 7;
 
 //TODO: Fix hacky level-number-dependent toolbox.
-var toolbox = function(page, level) {
+var toolbox = function (page, level) {
   return require('./toolbox.xml.ejs')({
     page: page,
     level: level
@@ -19,7 +19,7 @@ var toolbox = function(page, level) {
 };
 
 //TODO: Fix hacky level-number-dependent startBlocks.
-var startBlocks = function(page, level) {
+var startBlocks = function (page, level) {
   return require('./startBlocks.xml.ejs')({
     page: page,
     level: level
@@ -61,19 +61,19 @@ var blocks = {
   SIMPLE_MOVE_DOWN_LENGTH: blockUtils.blockOfType('simple_move_down_length'),
   SIMPLE_MOVE_LEFT_LENGTH: blockUtils.blockOfType('simple_move_left_length'),
   SIMPLE_MOVE_RIGHT_LENGTH: blockUtils.blockOfType('simple_move_right_length'),
-  simpleMoveBlocks: function() {
+  simpleMoveBlocks: function () {
     return this.SIMPLE_MOVE_UP +
       this.SIMPLE_MOVE_DOWN +
       this.SIMPLE_MOVE_LEFT +
       this.SIMPLE_MOVE_RIGHT;
   },
-  simpleJumpBlocks: function() {
+  simpleJumpBlocks: function () {
     return this.SIMPLE_JUMP_UP +
       this.SIMPLE_JUMP_DOWN +
       this.SIMPLE_JUMP_LEFT +
       this.SIMPLE_JUMP_RIGHT;
   },
-  simpleMoveLengthBlocks: function() {
+  simpleMoveLengthBlocks: function () {
     return this.SIMPLE_MOVE_UP_LENGTH +
       this.SIMPLE_MOVE_DOWN_LENGTH +
       this.SIMPLE_MOVE_LEFT_LENGTH +
@@ -130,8 +130,8 @@ var levels = module.exports = {
       [repeat(3)],
       [{
         // allow turn right or left, but show turn right block if they've done neither
-        test: function(block) {
-          return block.type == 'draw_turn_by_constant_restricted';
+        test: function (block) {
+          return block.type === 'draw_turn_by_constant_restricted';
         },
         type: 'draw_turn_by_constant',
         titles: {VALUE: '???'}
@@ -168,7 +168,7 @@ var levels = module.exports = {
   // Level 7: glasses.
   '1_7': {
     answer: answer(1, 7),
-    ideal: 13,
+    ideal: 11,
     toolbox: toolbox(1, 7),
     startBlocks: startBlocks(1, 7),
     requiredBlocks: [
@@ -183,7 +183,7 @@ var levels = module.exports = {
   // Level 8: spikes.
   '1_8': {
     answer: answer(1, 8),
-    ideal: 7,
+    ideal: 5,
     toolbox: toolbox(1, 8),
     startBlocks: startBlocks(1, 8),
     requiredBlocks: [[repeat(8)]],
@@ -220,8 +220,8 @@ var levels = module.exports = {
       [repeat(4)],
       [{
         // allow turn right or left, but show turn right block if they've done neither
-        test: function(block) {
-          return block.type == 'draw_turn';
+        test: function (block) {
+          return block.type === 'draw_turn';
         },
         type: 'draw_turn',
         titles: {'DIR': 'turnRight'},
@@ -229,8 +229,8 @@ var levels = module.exports = {
       }],
       [{
         // allow move forward or backward, but show forward block if they've done neither
-        test: function(block) {
-          return block.type == 'draw_move';
+        test: function (block) {
+          return block.type === 'draw_move';
         },
         type: 'draw_move',
         values: {'VALUE': makeMathNumber(100)}
@@ -241,7 +241,7 @@ var levels = module.exports = {
   // Level 2: Small green square.
   '2_2': {
     answer: answer(2, 2),
-    ideal: 5,
+    ideal: 3,
     toolbox: toolbox(2, 2),
     startBlocks: startBlocks(2, 2),
     requiredBlocks: [
@@ -252,7 +252,7 @@ var levels = module.exports = {
   // Level 3: Three squares.
   '2_3': {
     answer: answer(2, 3),
-    ideal: 8,
+    ideal: 6,
     toolbox: toolbox(2, 3),
     startBlocks: startBlocks(2, 3),
     requiredBlocks: [
@@ -265,7 +265,7 @@ var levels = module.exports = {
   // Level 4: 36 squares.
   '2_4': {
     answer: answer(2, 4),
-    ideal: 8,
+    ideal: 6,
     toolbox: toolbox(2, 4),
     startBlocks: startBlocks(2, 4),
     freePlay: false,
@@ -326,7 +326,7 @@ var levels = module.exports = {
   '2_8': {
     answer: answer(2, 8),
     initialX: 100,
-    ideal: 12,
+    ideal: 10,
     toolbox: toolbox(2, 8),
     startBlocks: startBlocks(2, 8),
     requiredBlocks: [
@@ -349,7 +349,7 @@ var levels = module.exports = {
   '2_9': {
     answer: answer(2, 9),
     initialX: 100,
-    ideal: 15,
+    ideal: 13,
     toolbox: toolbox(2, 9),
     startBlocks: startBlocks(2, 9),
     requiredBlocks: [
@@ -482,7 +482,7 @@ var levels = module.exports = {
   '3_6': {
     answer: answer(3, 6),
     initialY: 350,
-    ideal: 23,
+    ideal: 19,
     toolbox: toolbox(3, 6),
     startBlocks: startBlocks(3, 6),
     requiredBlocks: [
@@ -565,7 +565,7 @@ var levels = module.exports = {
     answer: answer(3, 9),
     initialX: 20,
     initialY: 350,
-    ideal: 40,
+    ideal: 38,
     toolbox: toolbox(3, 9),
     startBlocks: startBlocks(3, 9),
     requiredBlocks: [
@@ -614,8 +614,8 @@ var levels = module.exports = {
       [repeat(3)],
       [{
         // allow turn right or left, but show turn right block if they've done neither
-        test: function(block) {
-          return block.type == 'draw_turn_by_constant';
+        test: function (block) {
+          return block.type === 'draw_turn_by_constant';
         },
         type: 'draw_turn_by_constant',
         titles: {VALUE: '???'}
@@ -625,7 +625,7 @@ var levels = module.exports = {
   // Level 2: Two triangles.
   '4_2': {
     answer: answer(4, 2),
-    ideal: 12,
+    ideal: 10,
     toolbox: toolbox(4, 2),
     startBlocks: startBlocks(4, 2),
     requiredBlocks: [
@@ -636,7 +636,7 @@ var levels = module.exports = {
   // Level 3: Four triangles using repeat.
   '4_3': {
     answer: answer(4, 3),
-    ideal: 8,
+    ideal: 6,
     toolbox: toolbox(4, 3),
     startBlocks: startBlocks(4, 3),
     requiredBlocks: [
@@ -648,7 +648,7 @@ var levels = module.exports = {
   // Level 4: Ten triangles with missing repeat number.
   '4_4': {
     answer: answer(4, 4),
-    ideal: 8,
+    ideal: 6,
     toolbox: toolbox(4, 4),
     startBlocks: startBlocks(4, 4),
     requiredBlocks: [
@@ -660,7 +660,7 @@ var levels = module.exports = {
   // Level 5: 36 triangles with missing angle number.
   '4_5': {
     answer: answer(4, 5),
-    ideal: 8,
+    ideal: 6,
     toolbox: toolbox(4, 5),
     startBlocks: startBlocks(4, 5),
     requiredBlocks: [
@@ -691,7 +691,7 @@ var levels = module.exports = {
   '4_7': {
     answer: answer(4, 7),
     initialY: 300,
-    ideal: 8,
+    ideal: 6,
     toolbox: toolbox(4, 7),
     startBlocks: startBlocks(4, 7),
     requiredBlocks: [
@@ -706,7 +706,7 @@ var levels = module.exports = {
     answer: answer(4, 8),
     initialX: 100,
     initialY: 300,
-    ideal: 10,
+    ideal: 8,
     toolbox: toolbox(4, 8),
     startBlocks: startBlocks(4, 8),
     requiredBlocks: [
@@ -721,7 +721,7 @@ var levels = module.exports = {
     answer: answer(4, 9),
     initialX: 150,
     initialY: 350,
-    ideal: 10,
+    ideal: 8,
     toolbox: toolbox(4, 9),
     startBlocks: startBlocks(4, 9),
     requiredBlocks: [
@@ -735,7 +735,7 @@ var levels = module.exports = {
     answer: answer(4, 10),
     initialX: 75,
     initialY: 300,
-    ideal: 10,
+    ideal: 8,
     toolbox: toolbox(4, 10),
     startBlocks: startBlocks(4, 10),
     requiredBlocks: [

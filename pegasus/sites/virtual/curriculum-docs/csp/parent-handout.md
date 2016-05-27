@@ -13,16 +13,16 @@ Software and technology are everywhere - in our computers, in our pockets, in ou
 ### What is Code Studio?
 Code Studio is a fun, creative platform for learning basic coding and computer science! Using a blended learning model, your children are learning with a mix of online activities (on the computer) and “unplugged” classroom activities that use no computer at all.
 
-This format helps nurture creativity, problem solving, collaboration, and logic through interactive tutorials, featuring short video lectures and game-like puzzles. 
+This format helps nurture creativity, problem solving, collaboration, and logic through interactive tutorials, featuring short video lectures and game-like puzzles.
 
 ### What is Computer Science Principles?
-Code.org's year-long, high school Computer Science Principles course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course that explores many of the big, foundational ideas of computing so that all students understand how these concepts are transforming the world we live in. 
+Code.org's year-long, high school Computer Science Principles course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course that explores many of the big, foundational ideas of computing so that all students understand how these concepts are transforming the world we live in.
 
 <center>
 <img src="sendingbits.png" style="width: 20%; margin: 20px;"/>
 <img src="flappy.png" style="width: 20%; margin: 20px;"/>
 <img src="applab.png" style="width: 20%; margin: 20px;"/>
-</center>      
+</center>
 #### Students will study many "Big Ideas" of computing:
 <center>
 <img src="units.png" style="width: 80%;"/>
@@ -34,16 +34,16 @@ Code.org's year-long, high school Computer Science Principles course is designed
 * Use smart hints to guide students with custom answers to common mistakes
 
 ### Student login - for access outside the classroom
-Because this is an online course, students can log in from outside the classroom - from a computer or tablet at home, or in the library.  For our classroom to participate in this course, students have created Code Studio accounts. 
+Because this is an online course, students can log in from outside the classroom - from a computer or tablet at home, or in the library.  For our classroom to participate in this course, students have created Code Studio accounts.
 
 ## Protecting student privacy
-Code.org assigns the utmost importance to student safety and security and has designed Code Studio to maximize student privacy. The list below summarizes what student data is stored and protected by Code.org, and how it is used.  
+Code.org assigns the utmost importance to student safety and security and has designed Code Studio to maximize student privacy. The list below summarizes what student data is stored and protected by Code.org, and how it is used.
 <br>
 You can find further details at [https://code.org/privacy](https://code.org/privacy).
 
 ### Data that is required for participation in the course:
 * Student display name (e.g. “John S” or “Cool coder”)
-* Student email (to allow password-reset) 
+* Student email (to allow password-reset)
 * Age (to protect the privacy of the youngest learners)
 * Login date/time and other technical information (for debugging purposes)
 * Progress in the course, including code written to solve programming activities, and written responses to educational prompts (to display reports for students and teachers)
@@ -58,7 +58,6 @@ the classroom section.
 For more information on Code.org and Code Studio, visit [https://code.org](https://code.org).
 
 <hr>
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
 [/content]
 

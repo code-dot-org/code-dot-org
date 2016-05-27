@@ -2,22 +2,18 @@
  * @overview Internet Simulator app for Code.org.
  *           This file is the main entry point for the Internet Simulator.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
-*/
 /* global -Blockly */
-/* global sendReport */
+/* global dashboard */
 /* global confirm */
 'use strict';
 
 var utils = require('../utils');
-var _ = utils.getLodash();
+var _ = require('../lodash');
 var i18n = require('./locale');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
+var Provider = require('react-redux').Provider;
+var NetSimView = require('./NetSimView');
 var page = require('./page.html.ejs');
 var NetSimAlert = require('./NetSimAlert');
 var NetSimConstants = require('./NetSimConstants');
@@ -164,9 +160,8 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
  * @param {string} config.rackEnv - development/production/etc.
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
- * @param {string} config.html - rendered markup to be created inside this method
  */
-NetSim.prototype.init = function(config) {
+NetSim.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error("NetSim requires a StudioApp");
   }
@@ -224,35 +219,50 @@ NetSim.prototype.init = function(config) {
    */
   this.reportingInfo_ = config.report;
 
-  config.html = page({
-    assetUrl: this.studioApp_.assetUrl,
-    data: {
-      visualization: '',
-      localeDirection: this.studioApp_.localeDirection(),
-      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl})
-    },
-    hideRunButton: true
-  });
+  var generateCodeAppHtmlFromEjs = function () {
+    return page({
+      data: {
+        visualization: '',
+        localeDirection: this.studioApp_.localeDirection(),
+        controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl})
+      },
+      hideRunButton: true
+    });
+  }.bind(this);
 
   config.enableShowCode = false;
   config.pinWorkspaceToBottom = true;
   config.loadAudio = this.loadAudio_.bind(this);
 
-  // Override certain StudioApp methods - netsim does a lot of configuration
-  // itself, because of its nonstandard layout.
-  this.studioApp_.configureDom = NetSim.configureDomOverride_.bind(this.studioApp_);
-  this.studioApp_.onResize = NetSim.onResizeOverride_.bind(this.studioApp_);
+  var onMount = function () {
+    // Override certain StudioApp methods - netsim does a lot of configuration
+    // itself, because of its nonstandard layout.
+    this.studioApp_.configureDom = NetSim.configureDomOverride_.bind(this.studioApp_);
+    this.studioApp_.onResize = NetSim.onResizeOverride_.bind(this.studioApp_);
 
-  this.studioApp_.init(config);
+    this.studioApp_.init(config);
 
-  // Create netsim lobby widget in page
-  this.currentUser_.whenReady(function () {
-    this.initWithUser_(this.currentUser_);
-  }.bind(this));
+    // Create netsim lobby widget in page
+    this.currentUser_.whenReady(function () {
+      this.initWithUser_(this.currentUser_);
+    }.bind(this));
 
-  // Begin the main simulation loop
-  this.runLoop_.tick.register(this.tick.bind(this));
-  this.runLoop_.begin();
+    // Begin the main simulation loop
+    this.runLoop_.tick.register(this.tick.bind(this));
+    this.runLoop_.begin();
+  }.bind(this);
+
+  // Push initial level properties into the Redux store
+  this.studioApp_.setPageConstants(config);
+
+  ReactDOM.render(
+    <Provider store={this.studioApp_.reduxStore}>
+      <NetSimView
+          generateCodeAppHtml={generateCodeAppHtmlFromEjs}
+          onMount={onMount}
+      />
+    </Provider>
+  , document.getElementById(config.containerId));
 };
 
 /**
@@ -915,14 +925,12 @@ NetSim.prototype.loadAudio_ = function () {
 /**
  * Replaces StudioApp.configureDom.
  * Should be bound against StudioApp instance.
- * @param {Object} config Should at least contain
- *   containerId: ID of a parent DOM element for app content
- *   html: Content to put inside #containerId
+ * @param {!Object} config Should at least contain
+ * @param {!string} config.containerId: ID of a parent DOM element for app content
  * @private
  */
 NetSim.configureDomOverride_ = function (config) {
   var container = document.getElementById(config.containerId);
-  container.innerHTML = config.html;
 
   var vizHeight = this.MIN_WORKSPACE_HEIGHT;
   var visualizationColumn = document.getElementById('netsim-leftcol');
@@ -991,7 +999,7 @@ var netsimDebouncedResizeFooter = _.debounce(function () {
  * Should be bound against StudioApp instance.
  * @private
  */
-NetSim.onResizeOverride_ = function() {
+NetSim.onResizeOverride_ = function () {
   var div = document.getElementById('appcontainer');
   var divParent = div.parentNode;
   var parentStyle = window.getComputedStyle(divParent);
@@ -1288,7 +1296,7 @@ NetSim.prototype.completeLevelAndContinue = function () {
   // Avoid multiple simultaneous submissions.
   $('.submitButton').attr('disabled', true);
 
-  sendReport({
+  window.dashboard.reporting.sendReport({
     fallbackResponse: this.reportingInfo_.fallback_response,
     callback: this.reportingInfo_.callback,
     app: 'netsim',

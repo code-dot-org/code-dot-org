@@ -1,0 +1,60 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-12T22:26:33.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "color": null,
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "strokeWeight": null,
+      "noStroke": null,
+      "ellipse": null,
+      "rect": null,
+      "regularPolygon": null,
+      "text": null,
+      "comment": {
+        "category": "Drawing"
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "project_template_level_name": "U3 - Simple Drawing - Road Template",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"element_id\": \"#droplet_palette_block_text\",\r\n  \"callout_text\": \"Use this block to add text on your drawing\",\r\n  \"qtip_config\": {\r\n   \t\"position\": {\r\n      \"my\": \"top right\",\r\n      \"at\": \"bottom left\",\r\n      \"adjust\": {\r\n       \"x\": 0,\r\n       \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n  ]",
+    "instructions": "Do This",
+    "markdown_instructions": "# Text\r\n\r\nThe last step is to add text to our stop sign. We can add text with the <img src=\"https://images.code.org/f308f3bd5eb50cd027efbec82e2d165b-image-1461101973380.38.48 PM.png\" style=\"width:150px\"> block. `text` has 3 parameters. Two of them are x and y coordinates of the center of the text. The 3rd is the string of text you want to print on th screen. This text needs to go inside `' '` so that the computer knows its a string.  \r\n\r\nAlso as a reminder if you haven't been doing this all along make sure to comment your code and use white space to block out connected lines. \r\n\r\n# Do This\r\n* Add text to the center of the sign\r\n* Make sure the text has no stroke and the fill is white\r\n\r\n<img src=\"https://images.code.org/86a9f34aadf57bb8e3b897b8c6ddf52e-image-1460646615062.09.59 AM.png\" width=200>\r\n\r\n![]()",
+    "show_d_pad": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

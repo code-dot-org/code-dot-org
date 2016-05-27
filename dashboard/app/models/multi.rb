@@ -15,6 +15,7 @@
 #  type                     :string(255)
 #  md5                      :string(255)
 #  published                :boolean          default(FALSE), not null
+#  notes                    :text(65535)
 #
 # Indexes
 #
@@ -35,4 +36,14 @@ right 'right answer'
 ruby
   end
 
+  # Return a string containing the correct indexes.  e.g. "3" or "0,1"
+  def correct_answer_indexes
+    # We use variable name _index so that the linter ignores the fact that it's not explicitly used.
+    properties["answers"].each_with_index.select {|a, _index| a["correct"] == true}.map(&:last).join(",")
+  end
+
+  # Converts a value (e.g. 0 or 1) to its displayed letter (e.g. "A" or "B")
+  def self.value_to_letter(value)
+    ("A".ord + value).chr
+  end
 end

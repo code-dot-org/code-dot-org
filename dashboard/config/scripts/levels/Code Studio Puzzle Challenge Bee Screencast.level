@@ -40,5 +40,34 @@
         <block type="maze_honey"/>
       </xml>
     </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="maze_nectar">
+                          <next>
+                            <block type="maze_moveForward">
+                              <next>
+                                <block type="maze_nectar"/>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

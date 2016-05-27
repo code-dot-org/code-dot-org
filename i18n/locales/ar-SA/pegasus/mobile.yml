@@ -21,7 +21,7 @@ ar-SA:
   twentyhours_heading: 'جرب  لدينا دورة العلوم مقدمة إلى الكمبيوتر'
   twentyhours_text: 'أتممت أول "ساعة من البرمجة" الخاصة بك؟ تعلم المزيد عن علوم الحاسوب ومفاهيم البرمجة الأساسية في الدورة التالية.'
   og_title: كل طفل يستحق فرصة
-  og_description: كل طالب في المدرسة يستحق الفرصة لدراسة علوم الحاسوب.
+  og_description: كل طالب في كل مدرسة يستحق الفرصة ليدرس علوم الحاسب . إنها تغير كل شيء.
   hoc2014_heading: 'انضم<a href="http://hourofcode.com"> الى ساعة البرمجة</a> <br/> 8-14 كانون الأول/ديسمبر، عام 2014 <br/>'
   hoc2014_students: الطلاب
   hoc2014_try: جربها
@@ -58,10 +58,81 @@ ar-SA:
   congratulations: تهانينا!
   congratulations_on_completing_hoc: تهانينا على اكمالك ساعة واحدة من البرمجة
   congratulations_volunteer: 'تهاني: الآن بعد أن جربت "ساعة من البرمجة"، <a href="https://code.org/volunteer"> قم بالتسجيل للتطوع في الفصول دراسية</a> ومساعدة الطلاب تعلم "ساعة البرمجة"!'
-  congratulations_on_completing_course: 'تهانينا على إكمال %{course}'
+  congratulations_on_completing_course1: تهانينا على إكمال دورة 1
+  congratulations_on_completing_course2: تهانينا على إكمال دورة 2
+  congratulations_on_completing_course3: تهانينا على إكمال دورة 3
+  congratulations_on_completing_course4: تهانينا على إكمال دورة 4
+  congratulations_on_completing_accelerated: تهانينا على إكمال دورة المعجل
   congrats_next_tutorials_title: جرب هذه الدروس بعد ذلك
   congrats_next_tutorials_desc: 'جرب هذه الدروس الأقصر و التي تدوم ساعة واحدة ، أو جرب <a href="%{current_path}/next"> دروس شركائنا</a>.'
   get_a_certificate_of_achievement: أحصل على شهادة الانجاز
+  view_course: عرض الدرس
+  view_unit: وحدة العرض
+  make_app: أنشِئْ تطبيقًا
+  congrats_guest_speaker_title: اعثور على المتحدث الضيف لفصلك
+  congrats_guest_speaker_desc: والآن بعد أن الطلاب أنهوا دورة علوم الكمبيوتر ، والنظر في الاحتفال و توصيله إلى الأشياء التي يمكن أن نبني في العالم الحقيقي من خلال دعوة ضيف الشرف ل فصلك. يمكنك استخدام خريطتنا من المتطوعين في الاتصال المتطوعين المحليين لزيارة الفصول الدراسية الخاصة بك ، أو البحث في أي مدينة للعثور على طلاب علوم الكمبيوتر أو المهنيين الفنيين الذين هم على استعداد ل إلهام الطلاب عن بعد ، عبر دردشة الفيديو.
+  congrats_guest_speaker_cta: البحث عن ضيف متكلم
+  congrats_third_party_title: استخدام المهارات الجديدة الخاصة بك مع هذه التطبيقات و المواقع
+  third_party_gradelevel_kto8: الصفوف من الروضة -8
+  third_party_gradelevel_kto2: الصفوف من الروضة -٢
+  third_party_gradelevel_2to8: الصفوف 2-8
+  third_party_gradelevel_4to12: الصفوف 4-12
+  third_party_gradelevel_5to12: الصفوف 5-12
+  third_party_gradelevel_6plus: الصفوف 6+
+  third_party_gradelevel_8plus: الصفوف 8+
+  third_party_platform_all: 'البرنامج: شبكة الإنترنت، آي باد ونظام الأندرويد'
+  third_party_platform_mobile: 'البرنامج: آي باد ونظام الأندرويد'
+  third_party_platform_web: 'البرنامج: شبكة الإنترنت'
+  third_party_price_varies: 'السعر: تختلف البرامج'
+  third_party_price_free: 'السعر: مجانًا'
+  third_party_price_299: 'السعر: 2.99$/تحميل'
+  third_party_price_individual: 'السعر الفردي : تجربة مجانية  و25$ بالشهر'
+  third_party_price_school: 'سعر المدرسة: خطط حرة & واحترافية في 2500 دولار +'
+  third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
+  third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
+  third_party_tynker_btn_site: زر تينكر
+  third_party_scratchjr_desc: 'Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.'
+  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
+  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratch_desc: With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
+  third_party_scratch_btn_curriculum: Download Scratch Curriculum
+  third_party_scratch_btn_forum: Scratch Educator Forum
+  third_party_scratch_btn_site: Visit Scratch
+  third_party_lightbot_desc: In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written.
+  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
+  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_khan_desc: 'Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!'
+  third_party_khan_btn_learn: Learn CS with Khan Academy
+  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that allows everyone, even novices, to start programming and build fully functional apps for Android devices. Newcomers to App Inventor can have their first app up and running in an hour or less, and can program more complex apps in significantly less time than with more traditional, text-based languages.
+  third_party_appinv_btn_curriculum: تحميل منهج مخترع التطبيق 2
+  third_party_appinv_btn_forum: منتدى مخترع التطبيق 2
+  third_party_appinv_btn_site: زر مخترع التطبيق 2
+  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors.
+  third_party_codehs_btn_try: مقدمة علوم الحاسب تعلم المزيد للمدارس
+  third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
+  third_party_codecademy_btn_curriculum: تحميل مناهج اكاديمية كود
+  third_party_codecademy_btn_site: زر اكاديمية كود
+  third_party_organization: منظمة
+  third_party_curriculum: المناهج
+  third_party_pricing: التسعير
+  third_party_cost_free: 'مجاني للطلبة  والمدرسين'
+  third_party_cost_5permonth: $5/month per class
+  third_party_cost_299: 2.99$ / تحميل
+  third_party_cost_free_399: Free to try, $399/classroom
+  third_party_cost_free_2: 'مجاني للتجربة : 2$ للطالب'
+  third_party_cost_free_10: 'مجاني للتجربة : 9.99$ بالشهر'
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
+  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
+  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
+  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
+  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
+  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
+  third_party_desc_10to15_3to12: 'Between 10 & 15 lessons, geared toward grades 3-12'
+  third_party_desc_25to40_3to12: 'From 25 - 40 lessons, intended for grades 3-12'
+  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
+  third_party_desc_7to22_5to12: 'Between 7 & 22 lessons, geared toward grades 5-12'
+  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
   enter_valid_age: يرجى إختيار عمر صحيح
   enter_valid_email: الرجاء ادخال عنوان بريد الكتروني صالح
   get_a_certificate_message: "نحن سوف نرسل لك شهادة ومعلومات حول كيفية <a href='/learn/beyond'> تعلم بعد ساعة واحدة من البرمجة</a>"
@@ -110,8 +181,13 @@ ar-SA:
   learn_next_level: إستمر إلى المستوى التالي
   learn_online: جرب دورات أخرى على الإنترنت
   learn_classes: ابحث عن الفئات المحلية
-  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
+  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: 'انا عملت هاش تاك #ساعة_من_البرمجة - تحقق من ذلك! @codeorg'
+  just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
+  just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
+  just_did_course3: 'I just finished Course 3 - check it out! @codeorg'
+  just_did_course4: 'I just finished Course 4 - check it out! @codeorg'
+  just_did_accelerated: 'I just finished the Accelerated Course - check it out! @codeorg'
   twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: تعلم ساعة من البرمجة
   beyond_hoc: بعد تعلم ساعة من البرمجة
@@ -190,6 +266,8 @@ ar-SA:
   homepage_banner_privacy_link: اعرف المزيد
   homepage_banner_20k_teachers: 20,000 معلم دربوا, والآن يعلمون علم الكمبيوتر في الصفوف الدراسية.
   homepage_banner_20k_teachers_link: اعرف المزيد
+  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: ساعة البرمجة
   homepage_slot_text_blurb_hoc: بإمكان أي شخص أن يتعلم. ابدأ اليوم
   homepage_slot_text_link_hoc: 'جرب ساعة من البرمجة - "Hour of Code"'
@@ -204,6 +282,9 @@ ar-SA:
   homepage_slot_text_link_othercourses: دورات أخرى على الإنترنت
   homepage_slot_text_title_educators: المتعلمون
   homepage_slot_text_blurb_educators: علم طلّابك
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: المدرسة الإعدادية
+  homepage_slot_text_link_high: المدرسة الثانوية
   homepage_slot_text_link_k5: دورات للروضة حتى الصف الخامس
   homepage_slot_text_link_fullcurriculum: انظر المنهاج الكامل
   homepage_slot_text_link_pd: التنمية المهنية
@@ -212,6 +293,7 @@ ar-SA:
   homepage_slot_text_link_stats: انظر إلى الإحصائيات
   homepage_slot_text_link_buy: إنضم
   homepage_slot_text_link_donate: تبرع
+  homepage_slot_text_link_shop: 'T-shirts, hats, & more'
   homepage_header_codestudio: انجازات الطالب بستوديو البرمجة
   homepage_header_donors: 'موقع code.org  يشكر الداعمين له'
   homepage_donors_seall: عرض الكل
@@ -397,6 +479,11 @@ ar-SA:
   dashboard_action_remove_confirm: حذف؟
   dashboard_action_done: ‏‏تم
   dashboard_action_required: متطلب
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: الصفحة الرئيسية للمعلم
   dashboard_navigation_section_student_progress: حسابات و سير الطلاب
   dashboard_navigation_section_teacher_progress: تقدمك فى الدورة
@@ -407,12 +494,24 @@ ar-SA:
   dashboard_navigation_all_sections: حسابات و سير الطلاب
   dashboard_navigation_view_progress: عرض عملية التقدم
   dashboard_navigation_view_text_responses: اظهار الردود النصيّة
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: إضافة طلاب
   dashboard_navigation_manage_students: إدارة الطلاب
   dashboard_navigation_lesson_plans_resources: خطط الدرس والموارد
   dashboard_navigation_view_stats: عرض الإحصائيات
   dashboard_navigation_section: 'القسم: %{section_name}'
   dashboard_navigation_student: 'الطالب: %{student_name}'
+  dashboard_progress_not_started: لم تبدأ
+  dashboard_progress_in_progress: في طور التقدم
+  dashboard_progress_not_completed: غير مكتمل
+  dashboard_progress_completed_too_many_blocks: أكملت، استخدمت مربعات برمجية كثيرة جداً
+  dashboard_progress_completed_perfect: مكتمل, ممتاز
+  dashboard_progress_furthest_level_attempted: المستوى الأبعد الذي تمت محاولته
+  dashboard_progress_submitted: تم تقديمه
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: القسم جديد
   dashboard_sections_jumbotron_instruction: انشئ أقسام جديدة وأضف الطلاب إليها، هذة الطريقة تساعد في توزيع الطلاب إلى مجموعات صغيرة يسهل متابعة عملية تقدمهم وإدارة حسابتهم.
   dashboard_sections_table_section: القسم
@@ -428,6 +527,19 @@ ar-SA:
   dashboard_sections_secret_none: 'إذا كنت تريد أن يتمكن طلابك من إدارة الحسابات الخاصة بهم، بما في ذلك اختيار كلمات المرور الخاصة بهم، اختر نوع الحماية <b>بدون</b>.'
   dashboard_sections_print_secrets: كما يمكنك بعد ذلك طباعة بطاقات ورقية تحوي معلومات الحساب وتعطى لكل طالب من طلابك بشكل فردي.
   dashboard_sections_switch_section: 'قسم التبديل:'
+  dashboard_sections_close: إغلاق
+  dashboard_sections_move_students_desc: Select students to move to a new section. Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section only.
+  dashboard_sections_move_students: Move students
+  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
+  dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
   dashboard_students_add_student: إضافة طالب
   dashboard_students_add_students: إضافة العديد من الطلاب
   dashboard_students_add_multiple: 'اكتب أو إلصق أسماء الطلاب. واحداً في كل سطر:'
@@ -494,16 +606,22 @@ ar-SA:
   dashboard_login_picture: الصورة
   dashboard_login_none: البريد الإلكتروني
   dashboard_new_password: كلمة مرور جديدة
-  dashboard_progress_not_started: لم تبدأ
-  dashboard_progress_in_progress: في طور التقدم
-  dashboard_progress_not_completed: غير مكتمل
-  dashboard_progress_completed_too_many_blocks: أكملت، استخدمت مربعات برمجية كثيرة جداً
-  dashboard_progress_completed_perfect: مكتمل, ممتاز
-  dashboard_progress_furthest_level_attempted: المستوى الأبعد الذي تمت محاولته
   dashboard_stage: المرحلة
   dashboard_puzzle: لغز
   dashboard_question: سؤال
   dashboard_response: رد
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: صحيح
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: '# multiple choice correct'
+  dashboard_multi_count: '# multiple choice'
+  dashboard_multi_correct_percent: '% multiple choice correct'
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'إحصائيات لا تصدق عن حدث "ساعة من الكود "  للسنة الماضية. في أسبوع واحد فقط:'
   stats_hoc_2013_image_alt: إحصائيات سنة 2013 لساعة من البرمجة
   dashboard_teacher: المدرس
@@ -524,10 +642,10 @@ ar-SA:
   dashboard_faq_k5: الأسئلة المتاوترة الطرح في المستوى الخامس K-5
   dashboard_announcements: إعلانات
   dashboard_announce_view_all: عرض الكل
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
   dashboard_announce_button_text: اعرف المزيد
-  dashboard_announce_hoc: '<b>23 نوفمبر 2015</b>--هل تريد متطوع متحمساً لتعليم علوم الكمبيوتر للمساعدة أثناء الحدث "مدار للتعليمات البرمجية" الخاصة بك؟ المتطوعين ما يزيد على 7,000 يتطلعون إلى الهام الخاص بك الطلاب بزيارة الفصول الدراسية الخاصة بك أو الفيديو الدردشة عن بعد. تحقق من الخريطة المتطوعين للاتصال بالمتطوعين في المجال الخاص بك.'
-  dashboard_announce_playlab: '<b>4 ديسمبر 2015</b>-"ساعة من التعليمات البرمجية" هنا! حاول 50 الدروس لكل عصر وكل جهاز. جديد هذا الأسبوع: رمز القصص والألعاب في مختبرات اللعب الجديدة والعصر الجليدي و Gumball الخاصة بك.'
+  dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: إرسال رسالة إلكترونية
   code_sign_up: قم بالتسجيل للمشاركة خلال أسبوع تعليم علوم الحاسوب
   learn_more: جرب الآن
@@ -632,6 +750,35 @@ ar-SA:
   codesters_name: Codesters
   texasinstruments_name: 10 دقائق من التعليمات البرمجية
   teacherled_name: المعلم قيادة خطط الدرس
+  course1_name: الدرس الأول
+  course2_name: الدورة الثانية
+  course3_name: الدورة الثالثة
+  course4_name: الدورة 4
+  accelerated_name: دورة تدريبية مسرّعة
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
+  cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+  20-hour_name: دورة تدريبية مسرّعة
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: المتاهة الكلاسيكية
+  iceage_name: العصر الجليدي
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: العمليات الحسابية
+  hoc_category_name: ساعة من البرمجة
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
+  applab_name: مختبر التطبيق
+  applab_gradelevel: أعمارهم 13 +
+  applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
   codeorg_gradelevel: الأعمار 4-104
   codeintl_gradelevel: الأعمار 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -682,6 +829,11 @@ ar-SA:
   codesters_gradelevel: الأعمار من 12-14
   texasinstruments_gradelevel: الأعمار من 13-16
   teacherled_gradelevel: الأعمار من 5+
+  course1_gradelevel: الأعمار 4-6
+  course2_gradelevel: الأعمار 6-18
+  course3_gradelevel: الأعمار 8-18
+  course4_gradelevel: Ages 10-18
+  accelerated_gradelevel: Ages 10-18
   codeorg_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
   codeintl_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
   thinkersmithspanish_platformtext: غير مربوطة
@@ -780,6 +932,9 @@ ar-SA:
   codesters_shortdescription: قم بإنشاء الخاصة بك الألعاب والرسوم المتحركة والعمل الفني باستخدام بيثون.
   texasinstruments_shortdescription: 'تعلم الأساسية الترميز باستخدام تي-84 &#8482; بالإضافة إلى آلة حاسبة.'
   teacherled_shortdescription: 'أن تكون مصدر الهام لتصميم الحدث "مدار للتعليمات البرمجية" الخاصة بك مع هذه الخطط الدرس.'
+  course2_shortdescription_congrats: For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+  course3_shortdescription_congrats: Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+  course4_shortdescription_congrats: Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
   codeorg_longdescription: 'تعرف على المفاهيم الأساسية "لعلم الحاسوب" مع سحب وإسقاط البرمجة. هذا البرنامج التعليمي موجه ذاتيا شبيه بلعبة، ومن خلال محاضرات الفيديو من بيل جيتس ومارك زوكربيرج، لعبة الأنجري بيردز ولعبة بلانتس والزومبي. تعلم تكرار الحلقات، والشرطية، والخوارزميات الأساسية. متاح ب 34 لغة.'
   codeintl_longdescription: 'تعرف على المفاهيم الأساسية "لعلم الحاسوب" مع سحب وإسقاط البرمجة. هذا البرنامج التعليمي موجه ذاتيا شبيه بلعبة، ومن خلال محاضرات الفيديو من بيل جيتس ومارك زوكربيرج، لعبة الأنجري بيردز ولعبة بلانتس والزومبي. تعلم تكرار الحلقات، والشرطية، والخوارزميات الأساسية. متاح ب 34 لغة.'
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'

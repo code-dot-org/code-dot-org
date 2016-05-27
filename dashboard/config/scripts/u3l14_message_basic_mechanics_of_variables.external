@@ -2,7 +2,6 @@ name 'U3L14 - Message - basic mechanics of variables'
 title 'title'
 css 'unplugged'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # What's happening in this lesson and next
 

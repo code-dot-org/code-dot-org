@@ -6,7 +6,7 @@ Feature: Callouts
   Scenario Outline: Callouts having correct content and being dismissable via the target element
     Given I am on "<url>"
     And I rotate to landscape
-    And I press "x-close"
+    And I close the dialog
     And callout "<callout_id>" is visible
     And callout "<callout_id>" has text: <text>
     And I send click events to selector "<close_target>"
@@ -44,7 +44,7 @@ Feature: Callouts
     And I rotate to landscape
     And callout "0" is visible
     And ".modal-backdrop" should be in front of "#qtip-0"
-    And I press "x-close"
+    And I close the dialog
 
   Scenario: Closing using "x" button
     Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
@@ -62,11 +62,11 @@ Feature: Callouts
   Scenario: Only showing seen callouts once
     Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
     And I rotate to landscape
-    And I press "x-close"
+    And I close the dialog
     And callout "0" exists
     Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
     And I rotate to landscape
-    And I press "x-close"
+    And I close the dialog
     And callout "0" does not exist
 
   # Show Code button is hidden on small screens.

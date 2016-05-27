@@ -17,7 +17,7 @@
   - data['answers'].each_with_index do |answer, i|
     - answer['index'] = i
 
-  - # Shuffle answers until they are different to real answers.
+  -# Shuffle answers until they are different to real answers.
   - if data['answers'].length > 1   # avoid infinite loop
     - begin shuffled_answers = data['answers'].shuffle end until (shuffled_answers && shuffled_answers != data['answers'])
   - else

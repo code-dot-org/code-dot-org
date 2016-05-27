@@ -31,6 +31,11 @@
     "disable_examples": "false",
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2
   }
 }]]></config>
   <blocks>

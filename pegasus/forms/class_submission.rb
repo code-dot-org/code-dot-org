@@ -14,7 +14,7 @@ class ClassSubmission
 
     # School fields
     result[:school_name_s] = required stripped data[:school_name_s]
-    result[:school_address_s] = result[:class_format_s] =~ /^online_/ ? nil_if_empty(stripped data[:school_address_s]) : required(stripped data[:school_address_s])
+    result[:school_address_s] = result[:class_format_s] =~ /^online_/ ? nil_if_empty(stripped(data[:school_address_s])) : required(stripped(data[:school_address_s]))
     result[:school_website_s] = required stripped data[:school_website_s]
     result[:school_level_ss] = required downcased stripped data[:school_level_ss]
     result[:school_gender_s] = required enum(data[:school_gender_s].to_s.strip.downcase, ['both', 'girls', 'boys'])
@@ -36,28 +36,28 @@ class ClassSubmission
 
   def self.formats()
     (@formats ||= {})[I18n.locale] ||= formats_with_i18n_labels({
-      'in_school'=>[
-        'daily_programming_course',
-        'ap_computer_science',
-        'full_university_cs_curriculum',
-        'robotics_club',
-        'programming_integrated_in_other_classes',
-        'summer_school_cs_program',
-        'exploring_computer_science',
-        'other',
-      ],
-      'out_of_school'=>[
-        'summer_camp',
-        'afterschool_program',
-        'all-day_workshop',
-        'multi-week_workshop',
-        'other',
-      ],
-      'online'=>[
-        'programming_class',
-        'teacher_resource',
-        'other',
-      ]
+      'in_school' => %w(
+        daily_programming_course
+        ap_computer_science
+        full_university_cs_curriculum
+        robotics_club
+        programming_integrated_in_other_classes
+        summer_school_cs_program
+        exploring_computer_science
+        other
+      ),
+      'out_of_school' => %w(
+        summer_camp
+        afterschool_program
+        all-day_workshop
+        multi-week_workshop
+        other
+      ),
+      'online' => %w(
+        programming_class
+        teacher_resource
+        other
+      )
     })
   end
 
@@ -122,11 +122,11 @@ class ClassSubmission
   end
 
   def self.published_states()
-    [
-      'approved',
-      'rejected',
-      'undecided',
-    ]
+    %w(
+      approved
+      rejected
+      undecided
+    )
   end
 
   def self.process(data)
@@ -177,9 +177,11 @@ class ClassSubmission
       fq.push("school_level_ss:#{level}")
     } unless params['school_level_ss'].nil_or_empty?
 
+    fl = 'location_p,school_name_s,school_address_s,class_format_s,class_format_category_s,school_tuition_s,school_level_ss,class_languages_all_ss,school_website_s,class_description_s'
     {
       q: query,
       fq: fq,
+      fl: fl,
       facet: true,
       'facet.field'=>['class_format_category_s', 'class_languages_all_ss', 'school_level_ss', 'school_tuition_s'],
       rows: rows,

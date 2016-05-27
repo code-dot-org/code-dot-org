@@ -11,7 +11,7 @@ theme: none
 [together]
 
 ## Lesson Overview
-In collaboration with [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence), 
+In collaboration with [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence),
 this lesson helps students learn about the similarities of staying safe in the real world and when visiting websites. Students will also learn that the information they put online leaves a digital footprint or “trail.” This trail can be big or small, helpful or hurtful, depending on how they manage it.
 
 [summary]
@@ -19,24 +19,24 @@ this lesson helps students learn about the similarities of staying safe in the r
 ## Teaching Summary
 ### **Getting Started** - 20 minutes
 
-1) [Review](#Review)  
+1) [Review](#Review)
 2) [Vocabulary](#Vocab) <br/>
-3) [Pause and Think](#GetStarted)  
+3) [Pause and Think](#GetStarted)
 
-### **Activity: Follow the Digital Trail** - 30  minutes  
+### **Activity: Follow the Digital Trail** - 30  minutes
 
-4) [Follow the Digital Trail](#Activity1)  
+4) [Follow the Digital Trail](#Activity1)
 
-### **Wrap-up** - 10  minutes 
-5) [Flash Chat](#WrapUp) - What did we learn?  
+### **Wrap-up** - 10  minutes
+5) [Flash Chat](#WrapUp) - What did we learn?
 6) [Vocab Shmocab](#Shmocab)
 
-### **Assessment** - 5  minutes 
+### **Assessment** - 5  minutes
 7) [Digital Footprint Assessment](#Assessment)
 
 [/summary]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 - Understand that being safe when they visit websites is similar to staying safe in real life
 - Learn to recognize websites that are alright for them to visit
@@ -59,7 +59,7 @@ this lesson helps students learn about the similarities of staying safe in the r
 - [Lesson Video](http://youtu.be/qjusxfefJdM?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
 - This Teacher Lesson Guide
 - [Download](http://d1pmarobgdhgjx.cloudfront.net/education/pause-think-online-2.mp4) or [prepare](https://www.commonsensemedia.org/videos/pause-think-online) the "Pause and Think" video
-- Common Sense Media's [Follow the Digital Trail](followthedigitaltrail.pdf) game 
+- Common Sense Media's [Follow the Digital Trail](followthedigitaltrail.pdf) game
 - Print one set of [Animal Tracks](followthedigitaltrail.pdf) from this PDF
 - Print one [Animal Tracks](followthedigitaltrail.pdf) chart (page 7) for each student
 - Print one [Digital Footprint Assessment](/curriculum/course2/18/Assessment18-DigitalFootprint.pdf) for each student
@@ -127,11 +127,11 @@ Play [Pause and Think Online](https://www.commonsensemedia.org/videos/pause-thin
 
 [tip]
 
-# Lesson Tip  
+# Lesson Tip
 If you have access to a computer, feel free to navigate to sites that might showcase each of these types (using extreme caution with your RED selection).
 
 [/tip]
-  
+
 Now, let's see what we can do to keep ourselves safe.
 
 
@@ -164,7 +164,7 @@ Now, let's see what we can do to keep ourselves safe.
 
 [tip]
 
-# Lesson Tip  
+# Lesson Tip
 For more in-depth modules, you can find additions to this curriculum at the [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) page on Scope and Sequence.
 
 [/tip]
@@ -185,7 +185,7 @@ Take the time to discuss what is appropriate information to share on the Interne
 
 [tip]
 
-# Lesson Tip  
+# Lesson Tip
 Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future.  Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow-partner.
 
 [/tip]
@@ -205,7 +205,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 ## Assessment (5 min)
 ### <a name="Assessment"></a>7) [Digital Footprint Assessment](/curriculum/course2/18/Assessment18-DigitalFootprint.pdf)
-- Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
+- Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained.
 - This should feel familiar, thanks to the previous activities.
 
 [/together]
@@ -217,13 +217,13 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 [together]
 
-## Extended Learning 
+## Extended Learning
 Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### Common Sense Media
 
 - Visit [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) to learn more about how you can keep your students safe in this digital age.
- 
+
 
 [/together]
 
@@ -232,14 +232,14 @@ Use these activities to enhance student learning. They can be used as outside of
 
 ## Connections and Background Information
 
-### ISTE Standards (formerly NETS) 
+### ISTE Standards (formerly NETS)
 
 - 5.a - Advocate and practice safe, legal, and responsible use of information and technology.
 - 5.b - Exhibit a positive attitude toward using technology that supports collaboration, learning, and productivity.
 - 6.a - Understand and use technology systems.
 
 ### CSTA K-12 Computer Science Standards
- 
+
 - CI.L1:3-01 - Practice responsible digital citizenship (legal and ethical behaviors) in the use of technology systems and software.
 - CPP.L2-06 - Demonstrate good practices in personal information security: using passwords, encryption, secure transactions.
 
@@ -257,9 +257,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 <a href="https://www.commonsensemedia.org/"><img src="https://code.org/curriculum/docs/k-5/commonSense.png" border="0"></a><br/>
 

@@ -61,8 +61,8 @@ class RedisTable
   # @return [Array<Hash>]
   def to_a_from_min_id(min_id)
     @props.to_hash.
-        select { |k, v| belongs_to_this_table_with_min_id(k, min_id)}.
-        collect { |k, v| make_row(v) }.
+        select { |k, _v| belongs_to_this_table_with_min_id(k, min_id)}.
+        collect { |_k, v| make_row(v) }.
         sort_by { |row| row['id'] }
   end
 
@@ -72,7 +72,6 @@ class RedisTable
   def to_a
     to_a_from_min_id(nil)
   end
-
 
   # Fetch the rows multiple tables all at once.
   # The parameters are a shard_id and and a table map. The keys of the map
@@ -98,7 +97,7 @@ class RedisTable
       props.to_hash.select do |k, v|
         # Skip internal keys and rows for non-requested tables
         table_name = table_from_row_key(k)
-        next if is_internal_key(k) || !table_map.include?(table_name)
+        next if internal_key?(k) || !table_map.include?(table_name)
 
         # Add or get the rows entry for the table from the result map.
         value = (result[table_name] ||= {'rows' => []})
@@ -173,6 +172,7 @@ class RedisTable
   def self.table_from_row_key(key)
     key.split('_')[0]
   end
+
   def table_from_row_key(key)
     self.class.table_from_row_key(key)
   end
@@ -183,6 +183,7 @@ class RedisTable
   def self.id_from_row_key(key)
     key.split('_')[1].to_i
   end
+
   def id_from_row_key(key)
     self.class.id_from_row_key(key)
   end
@@ -211,6 +212,7 @@ class RedisTable
   def self.make_row(value)
     value.nil? ? nil : JSON.parse(value)
   end
+
   def make_row(value)
     self.class.make_row(value)
   end
@@ -236,11 +238,12 @@ class RedisTable
 
   # Return true if k is special internal key (e.g. the row id key) that should
   # not be returned to callers.
-  def self.is_internal_key(k)
+  def self.internal_key?(k)
     k.end_with?(ROW_ID_SUFFIX)
   end
-  def is_internal_key(k)
-    self.class.is_internal_key(k)
+
+  def internal_key?(k)
+    self.class.internal_key?(k)
   end
 
 end

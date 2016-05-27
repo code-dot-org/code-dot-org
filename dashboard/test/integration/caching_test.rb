@@ -70,7 +70,6 @@ class CachingTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-
   test "should get show of frozen level 1 and then level 10" do
     get '/s/frozen/stage/1/puzzle/1'
     assert_response :success
@@ -109,7 +108,6 @@ class CachingTest < ActionDispatch::IntegrationTest
   #   post "milestone/0/#{sl.id}", params
   #   assert_response 200
   # end
-
 
   # course1 is not caching yet
   test "should get show of course1 level 1 twice" do

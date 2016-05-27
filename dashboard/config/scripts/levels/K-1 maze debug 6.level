@@ -26,6 +26,11 @@
     "disable_examples": "false",
     "never_autoplay_video": "false",
     "examples_required": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "debugging": 2
   }
 }]]></config>
   <blocks>
@@ -69,5 +74,30 @@
         <block type="maze_moveSouth"/>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveEast">
+              <next>
+                <block type="maze_moveNorth">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveEast">
+                          <next>
+                            <block type="maze_moveSouth"/>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

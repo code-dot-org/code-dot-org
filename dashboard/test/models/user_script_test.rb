@@ -11,6 +11,16 @@ class UserScriptTest < ActiveSupport::TestCase
     @user_script = create :user_script, user: @user, script: @script
   end
 
+  def complete_level(script_level, result = 100)
+    @user.track_level_progress_async(script_level: script_level, new_result: result, submitted: false, level_source_id: nil)
+  end
+
+  def complete_all_levels
+    @script_levels.each do |script_level|
+      complete_level(script_level)
+    end
+  end
+
   test "check completed for script with no levels completed" do
     assert !@user_script.check_completed?
   end
@@ -26,29 +36,19 @@ class UserScriptTest < ActiveSupport::TestCase
   test "check completed for script with all levels completed but some not passed" do
     # complete some levels
     @script_levels[0...8].each do |script_level|
-      user_level = UserLevel.where(user: @user, level: script_level.level).create
-      user_level.best_result = 100
-      user_level.save
+      complete_level(script_level)
     end
 
     # attempt some levels
     @script_levels[8..-1].each do |script_level|
-      user_level = UserLevel.where(user: @user, level: script_level.level).create
-      user_level.best_result = 10
-      user_level.save
+      complete_level(script_level, 10)
     end
 
     assert !@user_script.check_completed?
   end
 
   test "check completed for script with all levels completed" do
-    # complete all levels
-    @script_levels.each do |script_level|
-      user_level = UserLevel.where(user: @user, level: script_level.level, script: @script).create
-      user_level.best_result = 100
-      user_level.save
-    end
-
+    complete_all_levels
     assert @user_script.check_completed?
   end
 

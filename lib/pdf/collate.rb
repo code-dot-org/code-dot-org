@@ -25,7 +25,7 @@ module PDF
   end
 
   def self.get_local_markdown_paths(collate_file)
-    existing_files get_local_pdf_paths(collate_file).map{|f|f.sub('.pdf', '.md')}
+    existing_files get_local_pdf_paths(collate_file).map{|f| f.sub('.pdf', '.md')}
   end
 
   # Reads collate file, outputs array of fully qualified PDF paths and URLs

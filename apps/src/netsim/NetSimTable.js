@@ -1,15 +1,9 @@
 /**
  * @overview Wraps remote storage interface and polling behavior.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
-var _ = require('../utils').getLodash();
+var _ = require('../lodash');
 var ObservableEvent = require('../ObservableEvent');
 var NetSimApi = require('./NetSimApi');
 var NetSimGlobals = require('./NetSimGlobals');

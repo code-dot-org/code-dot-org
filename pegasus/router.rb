@@ -8,6 +8,7 @@ require 'cdo/pegasus/graphics'
 require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
 require 'cdo/properties'
+require 'cdo/languages'
 require 'dynamic_config/page_mode'
 require 'active_support'
 require 'base64'
@@ -21,6 +22,7 @@ require 'dynamic_config/dcdo'
 if rack_env?(:production)
   require 'newrelic_rpm'
   NewRelic::Agent.after_fork(force_reconnect: true)
+  require 'newrelic_ignore_downlevel_browsers'
   require 'honeybadger'
 end
 
@@ -53,7 +55,7 @@ class Documents < Sinatra::Base
 
     Dir.entries(dir).each do |site|
       site_dir = File.join(dir, site)
-      next if site == '.' or site == '..' or !File.directory?(site_dir)
+      next if site == '.' || site == '..' || !File.directory?(site_dir)
       configs[site] = load_config_in(site_dir)
     end
 
@@ -251,7 +253,7 @@ class Documents < Sinatra::Base
     #
     # TODO: Switch to using `dashboard_user_helper` everywhere and remove this
     def dashboard_user
-      @dashboard_user ||= Dashboard::db[:users][id: dashboard_user_id]
+      @dashboard_user ||= Dashboard.db[:users][id: dashboard_user_id]
     end
 
     # Get the current dashboard user wrapped in a helper
@@ -267,7 +269,6 @@ class Documents < Sinatra::Base
     def dashboard_user_id
       request.user_id
     end
-
 
     def document(path)
       content = IO.read(path)
@@ -289,6 +290,11 @@ class Documents < Sinatra::Base
         cache_for @header['max_age']
       else
         cache :document
+      end
+
+      if request.post? && !@header['allow_post']
+        response.headers['Allow'] = 'GET, HEAD'
+        error 405
       end
 
       response.headers['X-Pegasus-Version'] = '3'
@@ -464,7 +470,7 @@ class Documents < Sinatra::Base
         end
       end
 
-      if not metadata['og:image']
+      if !metadata['og:image']
         if request.site != 'csedweek.org'
           metadata['og:image'] = CDO.code_org_url('/images/default-og-image.png', 'https:')
           metadata['og:image:width'] = 1220

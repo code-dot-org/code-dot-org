@@ -7,7 +7,7 @@ var blocks = require('./blocks');
 var levels = require('./levels');
 var skins = require('./skins');
 
-window.craftMain = function(options) {
+window.craftMain = function (options) {
   options.skinsModule = skins;
 
   options.blocksModule = blocks;

@@ -89,7 +89,7 @@ class LevelsHelperTest < ActionView::TestCase
   test "blockly options converts 'impressive' => 'false' to 'impressive => false'" do
     @level = create :artist
     @stage = create :stage
-    @script_level = create :script_level, level: @level, stage: @stage
+    @script_level = create :script_level, levels: [@level], stage: @stage
     @level.impressive = "false"
     @level.free_play = "false"
 
@@ -116,7 +116,7 @@ class LevelsHelperTest < ActionView::TestCase
     script = create(:script)
     @level = create(:level, :blockly, user_id: nil)
     stage = create(:stage, script: script)
-    @script_level = create(:script_level, script: script, level: @level, stage: stage)
+    @script_level = create(:script_level, script: script, levels: [@level], stage: stage)
 
     callout1 = create(:callout, script_level: @script_level)
     callout2 = create(:callout, script_level: @script_level)
@@ -133,7 +133,7 @@ class LevelsHelperTest < ActionView::TestCase
     script = create(:script)
     @level = create(:level, :blockly, user_id: nil)
     stage = create(:stage, script: script)
-    @script_level = create(:script_level, script: script, level: @level, stage: stage)
+    @script_level = create(:script_level, script: script, levels: [@level], stage: stage)
 
     create(:callout, script_level: @script_level, localization_key: 'run')
 
@@ -259,11 +259,38 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal false, app_options[:level]['submittable']
   end
 
-
   test 'submittable level is not submittable for non-logged in user' do
     @level = create(:applab, submittable: true)
 
     app_options = self.app_options # ha
+    assert_equal false, app_options[:level]['submittable']
+  end
+
+  test 'submittable multi level is submittable for student with teacher' do
+    @level = create(:multi, submittable: true)
+
+    user = create(:follower).student_user
+    sign_in user
+
+    app_options = self.app_options # ha ha
+
+    assert_equal true, app_options[:level]['submittable']
+  end
+
+  test 'submittable multi level is not submittable for student without teacher' do
+    @level = create(:multi, submittable: true)
+
+    user = create :student
+    sign_in user
+
+    app_options = self.app_options # ha ha
+    assert_equal false, app_options[:level]['submittable']
+  end
+
+  test 'submittable multi level is not submittable for non-logged in user' do
+    @level = create(:multi, submittable: true)
+
+    app_options = self.app_options # ha ha
     assert_equal false, app_options[:level]['submittable']
   end
 

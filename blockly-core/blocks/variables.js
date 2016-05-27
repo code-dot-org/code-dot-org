@@ -119,7 +119,7 @@ Blockly.Blocks.parameters_get = {
   },
   renameVar: function(oldName, newName) {
     // Params should only be used in the FunctionEditor but better to be safe
-    if (Blockly.functionEditor) {
+    if (Blockly.functionEditor && Blockly.functionEditor.isOpen()) {
       Blockly.functionEditor.renameParameter(oldName, newName);
       Blockly.functionEditor.refreshParamsEverywhere();
     }

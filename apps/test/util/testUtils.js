@@ -1,24 +1,52 @@
-var chai = require('chai');
-var chaiSubset = require('chai-subset');
-require("babelify/polyfill"); // required for Promises in IE / Phantom
-chai.use(chaiSubset);
-chai.config.includeStack = true;
-var assert = chai.assert;
-exports.assert = assert;
+import {assert} from './configuredChai';
 
 require('require-globify');
 
 var $ = require('jquery');
+var React = require('react');
+var ReactDOM = require('react-dom');
+var Radium = require('radium');
 
-exports.buildPath = function (path) {
-  return __dirname + '/../../build/js/' + path;
+exports.setExternalGlobals = function () {
+  window.React = React;
+  window.ReactDOM = ReactDOM;
+  window.$ = $;
+  window.jQuery = $;
+  window.Radium = Radium;
+
+  window.dashboard = $.extend(window.dashboard, {
+    i18n: {
+      t: function (selector) { return selector; }
+    },
+    // Right now we're just faking some of our dashboard project interactions.
+    // If this becomes insufficient, we might be able to require the project.js
+    // file from shared here.
+    project: {
+      clearHtml: function () {},
+      exceedsAbuseThreshold: function () { return false; },
+      getCurrentId: function () { return 'fake_id'; },
+      isEditing: function () { return true; }
+    },
+    assets: {
+      showAssetManager: function () {},
+      listStore: {
+        reset() {},
+        add() {
+          return [];
+        },
+        remove() {
+          return [];
+        },
+        list() {
+          return [];
+        },
+      },
+    }
+  });
+  window.marked = function (str) {
+    return str;
+  };
 };
-
-var _ = require('lodash');
-
-var studioApp;
-
-var testBlockFactory = require('./testBlockFactory');
 
 function setupLocale(app) {
   setupLocales();
@@ -34,63 +62,6 @@ function setupLocales() {
 }
 
 exports.setupLocales = setupLocales;
-
-exports.setupBlocklyFrame = function () {
-  require('./frame')();
-  assert(global.Blockly, 'Frame loaded Blockly into global namespace');
-  assert(Object.keys(global.Blockly).length > 0);
-  Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
-
-  setupLocales();
-
-  // c, n, v, p, s get added to global namespace by messageformat module, which
-  // is loaded when we require our locale msg files
-  studioApp = require('@cdo/apps/StudioApp').singleton;
-  studioApp.reset = function(){};
-
-  var blocklyAppDiv = document.getElementById('app');
-  assert(blocklyAppDiv, 'blocklyAppDiv exists');
-
-
-  studioApp.assetUrl = function (path) {
-    return '../lib/blockly/' + path;
-  };
-};
-
-/**
- * Initializes an instance of blockly for testing
- */
-exports.setupTestBlockly = function() {
-  exports.setupBlocklyFrame();
-  var options = {
-    assetUrl: studioApp.assetUrl
-  };
-  var blocklyAppDiv = document.getElementById('app');
-  Blockly.inject(blocklyAppDiv, options);
-  // TODO (brent)
-  // studioApp.removeEventListeners();
-  testBlockFactory.installTestBlocks(Blockly);
-
-  assert(Blockly.Blocks.text_print, "text_print block exists");
-  assert(Blockly.Blocks.text, "text block exists");
-  assert(Blockly.Blocks.math_number, "math_number block exists");
-  assert(studioApp, "studioApp exists");
-  assert(Blockly.mainBlockSpace, "Blockly workspace exists");
-
-  Blockly.mainBlockSpace.clear();
-  assert(Blockly.mainBlockSpace.getBlockCount() === 0, "Blockly workspace is empty");
-};
-
-/**
- * Gets the singleton loaded by setupTestBlockly. Throws if setupTestBlockly
- * was not used (this will be true in the case of level tests).
- */
-exports.getStudioAppSingleton = function () {
-  if (!studioApp) {
-    throw new Error("Expect singleton to exist");
-  }
-  return studioApp;
-};
 
 /**
  * Generates an artist answer (which is just an ordered list of artist commands)
@@ -108,64 +79,6 @@ exports.generateArtistAnswer = function (generatedCode) {
   api.log = [];
   generatedCode(api);
   return api.log;
-};
-
-/**
- * Runs the given function at the provided tick count. For Studio.
- */
-exports.runOnStudioTick = function (tick, fn) {
-  exports.runOnAppTick(Studio, tick, fn);
-};
-
-/**
- * Generic function allowing us to hook into onTick. Only tested for Studio/Applab
- */
-exports.runOnAppTick = function (app, tick, fn) {
-  if (!app) {
-    throw new Error('not supported outside of studio/applab');
-  }
-  var ran = false;
-  app.onTick = _.wrap(app.onTick, function (originalOnTick) {
-    if (app.tickCount === tick && !ran) {
-      ran = true;
-      fn();
-    }
-    originalOnTick();
-  });
-};
-
-/**
- * Check a given predicate every tick, returning a promise that will resolve
- * when the predicate first evaluates TRUE.  This provides an easy way to
- * wait for certain asynchronous test setup to complete before checking
- * assertions.
- *
- * @param {Studio|Applab|GameLab} app - actually, any object with an onTick method.
- * @param {function} predicate
- * @returns {Promise} to resolve when predicate is true
- *
- * @example
- *   tickAppUntil(Applab, function () {
- *     return document.getElementById('slow-element');
- *   }).then(function () {
- *     assert(document.getElementById('slow-element').textContent === 'pass');
- *   });
- */
-exports.tickAppUntil = function (app, predicate) {
-  if (!app || !app.onTick) {
-    throw new Error('Supplied app (' + app + ') does not have an onTick method');
-  }
-
-  var resolved = false;
-  return new Promise(function (resolve) {
-    app.onTick = _.wrap(app.onTick, function (originalOnTick) {
-      if (!resolved && predicate()) {
-        resolve();
-        resolved = true;
-      }
-      originalOnTick();
-    });
-  });
 };
 
 /**
@@ -242,7 +155,7 @@ exports.createMouseEvent = function mouseEvent(type, clientX, clientY) {
   var evt;
   var e = {
     bubbles: true,
-    cancelable: (type != "mousemove"),
+    cancelable: (type !== "mousemove"),
     view: window,
     detail: 0,
     screenX: undefined,
@@ -256,7 +169,7 @@ exports.createMouseEvent = function mouseEvent(type, clientX, clientY) {
     button: 0,
     relatedTarget: undefined
   };
-  if (typeof( document.createEvent ) == "function") {
+  if (typeof( document.createEvent ) === "function") {
     evt = document.createEvent("MouseEvents");
     evt.initMouseEvent(type,
       e.bubbles, e.cancelable, e.view, e.detail,
@@ -271,6 +184,25 @@ exports.createMouseEvent = function mouseEvent(type, clientX, clientY) {
     evt.button = { 0:1, 1:4, 2:2 }[evt.button] || evt.button;
   }
   return evt;
+};
+
+/**
+ * Creates a key event of the given type with the additional parameters
+ * @param {string} type (keydown, keyup, keypress)
+ * @param {obj} keyConfig
+ */
+exports.createKeyEvent = function keyEvent(type, keyConfig) {
+  // Need to use generic "Event" instead of "KeyboardEvent" because of
+  // http://stackoverflow.com/questions/961532/firing-a-keyboard-event-in-javascript#comment-44022523
+  var keyboardEvent = new Event(type);
+  keyboardEvent.which = keyConfig.which;
+  keyboardEvent.keyCode = keyConfig.keyCode;
+  keyboardEvent.altKey = keyConfig.altKey;
+  keyboardEvent.metaKey = keyConfig.metaKey;
+  keyboardEvent.ctrlKey = keyConfig.ctrlKey;
+  keyboardEvent.shiftKey = keyConfig.shiftKey;
+
+  return keyboardEvent;
 };
 
 /**

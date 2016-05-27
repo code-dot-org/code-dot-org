@@ -7,12 +7,12 @@ Scenario: Testing the contract variable editor
   When I open my eyes to test "contract variable editor"
   Given I am on "http://learn.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I see no difference for "blank game screen"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  When I open the topmost blockly category "Variables"
+  When I close the React alert
+  And I open the topmost blockly category "Variables"
   And I see no difference for "category view"
   And I press the SVG text "Create a Variable"
   And I wait to see "#modalEditorClose"
@@ -29,12 +29,12 @@ Scenario: Creating and modifying a new contract
   When I open my eyes to test "creating a new contract"
   Given I am on "http://learn.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I see no difference for "blank game screen"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  When I open the topmost blockly category "Functions"
+  When I close the React alert
+  And I open the topmost blockly category "Functions"
   And I see no difference for "category view"
   And I press the SVG text "Create a Function"
   And I wait to see "#modalEditorClose"

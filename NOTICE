@@ -55,3 +55,12 @@ sole property of Cartoon Network (http://www.cartoonnetwork.com). Any
 distribution of the software in this repository outside of Code.org's own
 web site may not include any use of this proprietary IP without a separate
 agreement with Cartoon Network.
+
+Code.org uses keywords for its icon library from Font Awesome, which are
+licensed under CC BY 3.0 (https://fortawesome.github.io/Font-Awesome/license/).
+
+Code.org uses clip art from openclipart.org, which are provided under
+the following license (https://openclipart.org/share).
+
+Code.org uses p5.play, which is licensed under the GNU Lesser General Public
+License 2.1 (https://github.com/molleindustria/p5.play/blob/master/license.txt).

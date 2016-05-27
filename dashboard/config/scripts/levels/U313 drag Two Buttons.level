@@ -41,7 +41,8 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -59,7 +60,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "markdown_instructions": "# Buttons and Unique IDs\r\nYou may have noticed that the button command has two parameters: `button(id, text)`.  The `text` is the text that actually shows up on the button display, and the `id` (we'll typically write **ID**) is a **unique identifier** for that element in the app.\r\n\r\nEach element that appears in the app must have a **unique ID**. In fact, if you try to run a program that has two buttons with same ID you will get a warning message in the console. Watch:\r\n<img src=\"https://images.code.org/47ec46e0563f63641cc10ef152e9f86e-image-1444074330713.gif\" style=\"border: solid 1px black; width:500px\">\r\n\r\nNotice that even though the text on the buttons was different, the IDs were the same, which caused the error message to show up. To get rid of that error message you will have to change the ID of the buttom from the default `id` to something else.\r\n\r\n**Error messages happen to everyone and they are helpful!**: getting an error or warning message when you run your program is *not a big deal*. Programmers actually rely on error messages to tell them where and how to fix their code.\r\nSometimes error messages are bit cryptic: `WARNING: Line: 2: button() id parameter refers to an id (id) which already exists.` But a warning like this contains helpful information and clues such as the line the error occured on, or some word or command it didn't recognize. \r\n\r\n# Do This:\r\nThe goal here is to experience an error message in a program, study it, and fix it.\r\n* **Drag** two buttons into the workspace (same as shown above) with the default IDs.\r\n* **Run** the program to see the warning message in the console.\r\n* **Read** the warning message to see what it says.\r\n* **Change** the IDs of the buttons to make them unique. An ID must be specified in quotes. You can use double-quotes: `\"myId\"`, or single quotes: `'myId'`\r\n* **Re-run the program** to make sure you don't get the error.\r\n\r\nOnce you've got two buttons on the screen with different IDs and the program can run without generating the warning, move on to the next level.\r\n",
+    "markdown_instructions": "# Buttons and Unique IDs\r\nYou may have noticed that the button command has two parameters: `button(id, text)`.  The `text` is the text that actually shows up on the button display, and the `id` (we'll typically write **ID**) is a **unique identifier** for that element in the app.\r\n\r\nEach element that appears in the app must have a **unique ID**. In fact, if you try to run a program that has two buttons with same ID you will get a warning message in the console. Watch:\r\n<img src=\"https://images.code.org/47ec46e0563f63641cc10ef152e9f86e-image-1444074330713.gif\" style=\"border: solid 1px black; width:500px\">\r\n\r\nNotice that even though the text on the buttons was different, the IDs were the same, which caused the error message to show up. To get rid of that error message you will have to change the ID of the button from the default `id` to something else.\r\n\r\n**Error messages happen to everyone and they are helpful!**: getting an error or warning message when you run your program is *not a big deal*. Programmers actually rely on error messages to tell them where and how to fix their code.\r\nSometimes error messages are bit cryptic: `WARNING: Line: 2: button() id parameter refers to an id (id) which already exists.` But a warning like this contains helpful information and clues such as the line the error occured on, or some word or command it didn't recognize. \r\n\r\n# Do This:\r\nThe goal here is to experience an error message in a program, study it, and fix it.\r\n* **Drag** two buttons into the workspace (same as shown above) with the default IDs.\r\n* **Run** the program to see the warning message in the console.\r\n* **Read** the warning message to see what it says.\r\n* **Change** the IDs of the buttons to make them unique. An ID must be specified in quotes. You can use double-quotes: `\"myId\"`, or single quotes: `'myId'`\r\n* **Re-run the program** to make sure you don't get the error.\r\n\r\nOnce you've got two buttons on the screen with different IDs and the program can run without generating the warning, move on to the next level.\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "show_turtle_before_run": "false",
@@ -76,7 +77,8 @@
     "encrypted_examples": "Ts7qaI/ENrm1bVLXEqB8TYiwaOxkdnoOvRBRR88uIothW2VqjPODgB+jX8EB\nRQPrJnTnO6UnYdVL1E5tV2aYUg==\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks/>
 </Applab>

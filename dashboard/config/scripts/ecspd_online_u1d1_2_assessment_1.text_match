@@ -1,8 +1,0 @@
-name 'ECSPD Online U1D1-2 Assessment 1'
-title 'What is a Computer?'
-skip_sound true
-hide_submit true
-
-markdown <<MARKDOWN
-Did you have coffee this morning? If you did, odds are you used a computer. If you made the coffee yourself, your coffee maker probably had a digital clock or a programmable timer. If you bought it, the barista likely used a card reader with an electronic cash register to take your payment. Think through your day and record how many computers you used before sitting down in front of a desktop or a laptop (or whatever device you are using right now). Don't forget the computers in your car, your refrigerator, your alarm clock...
-MARKDOWN

@@ -15,7 +15,7 @@ module Rack
     #           'skip_if' - a lambda which, if evaluates to true, skips processing
     #           'include' - a lambda (Ruby 1.9+) or string denoting paths to be included in processing
     #           'exclude' - a lambda (Ruby 1.9+) or string denoting paths to be excluded in processing
-    # [block] Array of captured nodes passed as argument to block
+    # [block] Execute a block containing captured nodes with 2 arguments: (captured_nodes, env)
     def initialize(app, options = {}, &block)
       @app = app
 
@@ -37,10 +37,10 @@ module Rack
       end
 
       content = ''
-      body.each{|x|content += x}
+      body.each{|x| content += x}
       body.close if body.respond_to? :close
       doc = ::Nokogiri::HTML(content)
-      process_doc(doc)
+      process_doc(doc, env)
       content = doc.to_html
       # Update content-length after transform
       headers['content-length'] = content.bytesize.to_s
@@ -51,10 +51,10 @@ module Rack
 
     private
 
-    def process_doc(doc)
+    def process_doc(doc, env)
       nodes = ::Nokogiri::XML::NodeSet.new(doc)
       nodes += doc.xpath(@xpath) unless @xpath.nil?
-      @block.call(nodes) unless nodes.empty?
+      @block.call(nodes, env) unless nodes.empty?
     end
 
     def should_process?(env, status, headers, body)

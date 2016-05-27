@@ -58,5 +58,15 @@
         </block>
       </xml>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+          <statement name="DO">
+            <block type="maze_moveForward"/>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

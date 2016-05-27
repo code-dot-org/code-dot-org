@@ -23,7 +23,6 @@
 #  name                       :string(255)
 #  locale                     :string(10)       default("en-US"), not null
 #  birthday                   :date
-#  parent_email               :string(255)
 #  user_type                  :string(16)
 #  school                     :string(255)
 #  full_address               :string(1024)
@@ -77,7 +76,7 @@ require 'cdo/user_helpers'
 
 class User < ActiveRecord::Base
   include SerializedProperties
-  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender survey2015_value survey2015_comment)
+  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender)
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -118,14 +117,21 @@ class User < ActiveRecord::Base
     class_name: 'District',
     foreign_key: 'contact_id'
 
+  has_many :districts_users, class_name: 'DistrictsUsers'
+  has_many :districts, through: :districts_users
+
   belongs_to :invited_by, :polymorphic => true
 
-  # TODO: I think we actually want to do this
+  # TODO: I think we actually want to do this.
   # you can be associated with distrits through cohorts
 #   has_many :districts, through: :cohorts
 
   def facilitator?
     permission? UserPermission::FACILITATOR
+  end
+
+  def workshop_organizer?
+    permission? UserPermission::WORKSHOP_ORGANIZER
   end
 
   def delete_permission(permission)
@@ -193,10 +199,10 @@ class User < ActiveRecord::Base
 
   GENDER_OPTIONS = [[nil, ''], ['gender.male', 'm'], ['gender.female', 'f'], ['gender.none', '-']]
 
-  STUDENTS_COMPLETED_FOR_PRIZE = 15
-  STUDENTS_FEMALE_FOR_BONUS = 7
-
   attr_accessor :login
+
+  has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
+  has_many :plc_task_assignments, class_name: '::Plc::EnrollmentTaskAssignment', through: :plc_enrollments
 
   has_many :user_levels, -> {order 'id desc'}
   has_many :activities
@@ -234,8 +240,6 @@ class User < ActiveRecord::Base
   validates :age, presence: true, on: :create # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
-
-  validates_length_of :parent_email, maximum: 255
 
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
@@ -286,8 +290,16 @@ class User < ActiveRecord::Base
   end
 
   def User.find_by_email_or_hashed_email(email)
+    return nil if email.blank?
+
     User.find_by_email(email.downcase) ||
       User.find_by(email: '', hashed_email: User.hash_email(email.downcase))
+  end
+
+  def User.find_channel_owner(encrypted_channel_id)
+    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
+    User.find(user_id)
   end
 
   validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
@@ -323,7 +335,6 @@ class User < ActiveRecord::Base
       nil
     end
   end
-
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin']
   def self.from_omniauth(auth, params)
@@ -407,7 +418,8 @@ class User < ActiveRecord::Base
   def self.find_for_authentication(tainted_conditions)
     conditions = devise_parameter_filter.filter(tainted_conditions.dup)
     # we get either a login (username) or hashed_email
-    if login = conditions.delete(:login)
+    login = conditions.delete(:login)
+    if login.present?
       return nil if login.utf8mb4?
       where(['username = :value OR email = :value OR hashed_email = :hashed_value',
              { value: login.downcase, hashed_value: hash_email(login.downcase) }]).first
@@ -430,9 +442,9 @@ class User < ActiveRecord::Base
     user_levels.where(script: stage.script, level: levels).pluck(:level_id, :best_result).to_h
   end
 
-  def user_level_for(script_level)
+  def user_level_for(script_level, level)
     user_levels.find_by(script_id: script_level.script_id,
-                        level_id: script_level.level_id)
+                        level_id: level.id)
   end
 
   def next_unpassed_progression_level(script)
@@ -457,13 +469,14 @@ select
   (select coalesce(sum(trophy_id), 0) from user_trophies where user_id = #{self.id}) as current_trophies,
   (select count(*) * 3 from concepts) as max_trophies
 from script_levels sl
-left outer join user_levels ul on ul.level_id = sl.level_id and ul.user_id = #{self.id}
+left outer join levels_script_levels lsl on lsl.script_level_id = sl.id
+left outer join user_levels ul on ul.level_id = lsl.level_id and ul.user_id = #{self.id}
 where sl.script_id = #{script.id}
 SQL
   end
 
   def concept_progress(script = Script.twenty_hour_script)
-    # todo: cache everything but the user's progress
+    # TODO: Cache everything but the user's progress.
     user_levels_map = self.user_levels.includes([{level: :concepts}]).index_by(&:level_id)
     user_trophy_map = self.user_trophies.includes(:trophy).index_by(&:concept_id)
     result = Hash.new{|h,k| h[k] = {obj: k, current: 0, max: 0}}
@@ -480,6 +493,10 @@ SQL
 
   def last_attempt(level)
     Activity.where(user_id: self.id, level_id: level.id).order('id desc').first
+  end
+
+  def last_attempt_for_any(levels)
+    Activity.where(user_id: self.id, level_id: levels.map(&:id)).order('id desc').first
   end
 
   def average_student_trophies
@@ -509,6 +526,10 @@ SQL
 
   def teacher?
     self.user_type == TYPE_TEACHER
+  end
+
+  def student_of_admin?
+    teachers.any? &:admin?
   end
 
   def authorized_teacher?
@@ -582,7 +603,6 @@ SQL
     return name.strip[0].upcase
   end
 
-
   # override the default devise password to support old and new style hashed passwords
   # based on Devise::Models::DatabaseAuthenticatable#valid_password?
   # https://github.com/plataformatec/devise/blob/master/lib/devise/models/database_authenticatable.rb#L46
@@ -640,24 +660,12 @@ SQL
     raw
   end
 
-  # Secret word stuff
-
   def generate_secret_picture
     self.secret_picture = SecretPicture.random
   end
 
-  def reset_secret_picture
-    generate_secret_picture
-    save!
-  end
-
   def generate_secret_words
     self.secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
-  end
-
-  def reset_secret_words
-    generate_secret_words
-    save!
   end
 
   def advertised_scripts
@@ -787,9 +795,38 @@ SQL
     end
   end
 
+  # Increases the level counts for the concept-difficulties associated with the
+  # completed level.
+  def User.track_proficiency(user_id, script_id, level_id)
+    level_concept_difficulty = LevelConceptDifficulty.where(level_id: level_id).first
+    if !level_concept_difficulty
+      return
+    end
+
+    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      user_proficiency = UserProficiency.where(user_id: user_id).first_or_create!
+      time_now = Time.now
+      user_proficiency.last_progress_at = time_now
+
+      ConceptDifficulties::CONCEPTS.each do |concept|
+        difficulty_number = level_concept_difficulty.send(concept)
+        if !difficulty_number.nil?
+          user_proficiency.increment_level_count(concept, difficulty_number)
+        end
+      end
+
+      if user_proficiency.basic_proficiency_at.nil? &&
+          user_proficiency.basic_proficiency?
+        user_proficiency.basic_proficiency_at = time_now
+      end
+
+      user_proficiency.save!
+    end
+  end
+
   # returns whether a new level has been completed and asynchronously enqueues an operation
   # to update the level progress.
-  def track_level_progress_async(script_level, new_result)
+  def track_level_progress_async(script_level:, new_result:, submitted:, level_source_id:)
     level_id = script_level.level_id
     script_id = script_level.script_id
     old_user_level = UserLevel.where(user_id: self.id,
@@ -801,7 +838,9 @@ SQL
                 'user_id' => self.id,
                 'level_id' => level_id,
                 'script_id' => script_id,
-                'new_result' => new_result}
+                'new_result' => new_result,
+                'level_source_id' => level_source_id,
+                'submitted' => submitted}
     if Gatekeeper.allows('async_activity_writes', where: {hostname: Socket.gethostname})
       User.progress_queue.enqueue(async_op.to_json)
     else
@@ -813,24 +852,48 @@ SQL
   end
 
   # The synchronous handler for the track_level_progress helper.
-  def User.track_level_progress_sync(user_id, level_id, script_id, new_result)
+  def User.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:)
     new_level_completed = false
+    new_level_perfected = false
+
+    user_level = nil
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_level = UserLevel.where(user_id: user_id,
-                                   level_id: level_id,
-                                   script_id: script_id).first_or_create!
+      user_level = UserLevel.
+        where(user_id: user_id, level_id: level_id, script_id: script_id).
+        first_or_create!
 
-      new_level_completed = true if !user_level.passing? && Activity.passing?(new_result) # user_level is the old result
+      new_level_completed = true if !user_level.passing? &&
+        Activity.passing?(new_result)
+      new_level_perfected = true if !user_level.perfect? &&
+        new_result == 100 &&
+        HintViewRequest.
+          where(user_id: user_id, script_id: script_id, level_id: level_id).
+          empty? &&
+        AuthoredHintViewRequest.
+          where(user_id: user_id, script_id: script_id, level_id: level_id).
+          empty?
 
-      # update the user_level with the new attempt
+      # Update user_level with the new attempt.
       user_level.attempts += 1 unless user_level.best?
-      user_level.best_result = new_result if new_result > (user_level.best_result || -1)
+      user_level.best_result = new_result if user_level.best_result.nil? ||
+        new_result > user_level.best_result
+      user_level.submitted = submitted
+      user_level.level_source_id = level_source_id
 
       user_level.save!
     end
 
+    # Create peer reviews after submitting a peer_reviewable solution
+    if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable)
+      PeerReview.create_for_submission(user_level, level_source_id)
+    end
+
     if new_level_completed && script_id
       User.track_script_progress(user_id, script_id)
+    end
+
+    if new_level_perfected
+      User.track_proficiency(user_id, script_id, level_id)
     end
   end
 
@@ -838,7 +901,14 @@ SQL
     raise 'Model must be User' if op['model'] != 'User'
     case op['action']
       when 'track_level_progress'
-        User.track_level_progress_sync(op['user_id'], op['level_id'], op['script_id'], op['new_result'])
+        User.track_level_progress_sync(
+          user_id: op['user_id'],
+          level_id: op['level_id'],
+          script_id: op['script_id'],
+          new_result: op['new_result'],
+          submitted: op['submitted'],
+          level_source_id: op['level_source_id']
+        )
       else
         raise "Unknown action in #{op}"
     end

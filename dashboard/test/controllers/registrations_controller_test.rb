@@ -162,7 +162,6 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal ["Age is required"], assigns(:user).errors.full_messages
   end
 
-
   test "create as student requires email" do
     student_params = {name: "A name",
                       password: "apassword",
@@ -282,7 +281,6 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal Digest::MD5.hexdigest('hashed@email.com'), assigns(:user).hashed_email
   end
 
-
   test "sign up with devise.user_attributes in session" do
     # when someone logs in with oauth and we need additional
     # information, devise saves the user attributes in the session and
@@ -339,7 +337,6 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_select '.alert input[value="my_email@test.xx"]'
     assert_select '.alert .btn[value="Resend confirmation instructions"]'
   end
-
 
   test 'edit does not show alert for unconfirmed email for students' do
     user = create :student, email: 'my_email@test.xx', confirmed_at: nil

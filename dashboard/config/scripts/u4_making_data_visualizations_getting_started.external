@@ -2,7 +2,6 @@ name 'U4 - Making Data Visualizations - Getting Started'
 title 'title'
 css 'unplugged'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Making Data Visualizations
 

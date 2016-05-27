@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+template_name = ARGV[0]
+region_name = ARGV[1]
+unless template_name && region_name
+  puts 'Usage: send-real-mails region_name template_name'
+  puts '  where region_name has an associated Teachers_region_name.csv in the working dir'
+  puts '  and template_name has an associated template_name.md in pegasus/emails'
+  exit
+end
+
+teacher_csv = "Teachers_#{region_name}.csv"
+raise "Missing teacher csv #{teacher_csv}" unless File.exist? teacher_csv
+
+template_file = File.join('../../../pegasus/emails', "#{template_name}.md")
+raise "Missing email template #{template_file}" unless File.exist? template_file
+
+count = `wc -l < '#{teacher_csv}'`.strip.to_i - 1 # -1 to account for the header
+puts "Send bulk email '#{template_name}' to #{count} teachers in '#{teacher_csv}'? [y/N]"
+response = STDIN.gets
+exit unless response.strip.downcase == 'y'
+
+puts 'Sending emails:'
+puts `../send-to-mailing-list '#{template_name}' '#{teacher_csv}'`

@@ -1,6 +1,5 @@
 name 'ECSPD U3 D 5 Intro'
 
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 3 Day 5: Basic HTML -- Strong and Em Tags
 

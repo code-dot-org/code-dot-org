@@ -23,7 +23,15 @@ eu:
           future: ezin du izan etorkizunean
   hello: Kaixo mundua
   welcome_back: 'Ongi etorria berriro, %{name}'
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Bidali
+  unsubmit: Bidalketa ezeztatu
+  previous_page: Previous page
+  next_page: Next page
+  cancel: Ezeztatu
+  okay: Ongi da
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Irakaslea gehitu:'
@@ -148,8 +156,6 @@ eu:
         subject: 'Har ezazu parte klase batean %{teacher_name}-rekin Code.org-n!'
       student_disassociated:
         subject: 'Code.org abisua: %{student_name} dagoeneko ez da zure ikaslea.'
-      teacher_disassociated:
-        subject: 'Code.org abisua: %{teacher_name} dagoeneko ez da zure irakaslea.'
   reports:
     error:
       access_denied: Ez daukazu pertsona honen estatistikak ikusteko baimena
@@ -222,7 +228,7 @@ eu:
       free_play:
         playlab: Aplikazio bat sortu
         artist: Marraztu zerbait
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Aplikazio bat sortu
     user:
       classroom: Irakasleen sarrera orria
@@ -320,11 +326,29 @@ eu:
     heading_hoc2014: '<h2>Kode Ordua</h2><h1>Adin guztietarako</h1>'
     heading_elementary: '<h2>20 orduko ikastaroak</h2><h1>informatikaren oinarriei buruz (adin guztiak)</h1>'
     heading_apps: '<h2>Dibertsioa</h2><h1>Guztiontzat</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Gure kurtso azkarra</h2><h1>adin guztietarako</h1>'
     your_gallery: Galeria
     no_primary_course: Probatu Code Studioko ikastaro bat
     choose_next_course: Probatu Code Studioko ikastaro bat hauetako bat aukeratuta
     print_certificate: Inprimatu ziurtagiria
+    announcement_title: Berriak
+    announcement_view_all: Guztiak ikusi
+    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+    announcement_button: Ikasi gehiago
+    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: Ezagutu Code Studio
     description: Edonork ikas dezake informatika. Jokoak, aplikazioak eta artea sortu programazioaren bidez.
@@ -342,6 +366,7 @@ eu:
     help_from_html_old: Google, Microsoft, Facebook eta Twitterreko ingeniariek material hau sortzen lagundu dute.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Eskubide guztiak erreserbatuta.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Eskubide guztiak erreserbatuta.<br />Frozen&#8482; &copy; %{current_year} Disney. Eskubide guztiak erreserbatuta.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Eskubide guztiak erreserbatuta.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Eskubide guztiak erreserbatuta.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Eskubide guztiak erreserbatuta.<br />The Amazing World of Gumball marka erregistratua da eta &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Eskubide guztiak erreserbatuta. Star Wars&#8482; &copy; %{current_year} Disney eta Lucasfilm. Eskubide guztiak erreserbatuta. Frozen&#8482; &copy; %{current_year} Disney. Eskubide guztiak erreserbatuta. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Eskubide guztiak erreserbatuta. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Eskubide guztiak erreserbatuta. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Eskubide guztiak erreserbatuta. The Amazing World of Gumball marka erregistratua da eta &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Amazon Web Servicesek sostengatua
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg; CODE logoa eta Kode Ordua&reg; Code.org-ren marka bereziak dira.'
     copyright: Egile-eskubideak
@@ -414,6 +439,12 @@ eu:
       current: Uneko mailak
       unused: Erabili gabeko mailak
   upsell:
+    applab:
+      title: App laborategia
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Labirinto klasikoa
       body: Oinarrizko informatikarekin saiatu. Miliokak egin du proba.
@@ -442,6 +473,11 @@ eu:
     minecraft:
       title: Minecraft
       body: Esploratu Minecraft mundu bat kodearen bitartez.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 4+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Ikasleek hauek irudikatu dituzte kodea erabiliz!
     students_made_these_with_code: Ikasleek hauek egin dituzte kodearekin!
@@ -457,10 +493,10 @@ eu:
   landing:
     prerelease: "Kurtso hau <span class='betatext'>beta</span> bertsioa da. Horrek esan nahi du ez dela azken bertsioa eta iruzkinak iritsi ahala berrikusi eta hobekuntzak egingo direla."
     prerelease_hoc2014: "Tutorial hau <span class='betatext'>beta</span> bertsioa da. Iruzkinak iritsi ahala berrikusi eta hobekuntzak egingo dira."
-    feedback: Bidali iruzkina
     report_bug: Akatsa jakinarazi
     support: Lortu laguntza
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Erantzun okerra
     wrong_body: Erantzuna ez da zuzena. Saiatu berriro!
@@ -468,6 +504,29 @@ eu:
     correct_body: Erantzun zuzena.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Mila esker
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Mila esker
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Mila esker
+    wrong_body: Thank you for submitting answers.
+    correct_title: Mila esker
+    correct_body: Thank you for submitting answers.
+  level_group-submittable:
+    wrong_title: Mila esker
+    wrong_body: Thank you for submitting answers.
+    correct_title: Mila esker
+    correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Soluzio okerra
     wrong_body: Soluzioa ez da zuzena. Saiatu berriro!
@@ -485,6 +544,8 @@ eu:
     placeholder: Idatzi hemen zure erantzuna
     open_response_title: Eskerrik asko
     open_response_body: Eskerrik asko zure erantzunagatik!
+    correct_title: Zuzena
+    correct_body: Erantzun zuzena.
   dialog:
     ok: Ongi
     startover_title: Ziur al zaude berriro hasi nahi duzula?
@@ -538,6 +599,7 @@ eu:
     completed_perfect: burutua, bikain
     furthest_level_attempted: saiatutako maila altuena
     assessment: ebaluazioa
+    submitted: submitted
   studio:
     courses_working_on: Parte hartzen ari zaren kurtsoak
     completed_courses: Bukatutako kurtsoak
@@ -555,6 +617,9 @@ eu:
     share: Partekatu
     share_title: Partekatu zure proiektuak
     share_copy_link: 'Esteka kopiatu:'
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Itxi
     more: Gehiago
     name: Izena
@@ -594,3 +659,21 @@ eu:
           other: Beste bat
         detail: Mesedez, salatzen ari zaren edukiaren inguruko ahalik eta xehetasun gehien eman.
         acknowledge: 'Informazio hau bidaliz, %{link_start_privacy}Pibatutasun Politika%{link_end} eta %{link_start_tos}Zerbitzuaren Baldintzak%{link_end} adierazitako terminoetan erabiliko dela onartzen duzu'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found
+  flex_category:
+    required: Bista orokorra
+    content: Content
+    practice: Teacher Practices

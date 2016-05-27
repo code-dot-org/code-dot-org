@@ -72,6 +72,7 @@ module Rack
         @app = app
         @config = config
       end
+
       def call(env)
         request = Rack::Request.new(env)
         path     = request.path

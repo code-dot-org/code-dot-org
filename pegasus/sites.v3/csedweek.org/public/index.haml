@@ -4,11 +4,11 @@ banner: null
 social:
   "og:title": "<%= I18n.t(:og_title) %>"
   "og:description": "<%= I18n.t(:og_description)%>"
-  "og:image": "https://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg"
+  "og:image": "https://csedweek.org/images/cs-is-everything-thumbnail.png"
   "og:image:width": "1200"
   "og:image:height": "627"
-  "og:video:url": "http://youtube.com/v/Ofze6CWUCx8"
-  "og:video:secure_url": "https://youtube.com/v/Ofze6CWUCx8"
+  "og:video:url": "http://youtube.com/v/xJqSu1IbcHg"
+  "og:video:secure_url": "https://youtube.com/v/xJqSu1IbcHg"
   "og:video:type": "application/x-shockwave-flash"
   "og:video:width": "640"
   "og:video:height": "360"
@@ -17,17 +17,15 @@ social:
   "twitter:url": "https://code.org/"
   "twitter:title": "<%= I18n.t(:og_title) %>"
   "twitter:description": "<%= I18n.t(:og_description)%>"
-  "twitter:image:src": "https://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg"
-  "twitter:player": "https://youtube.com/v/Ofze6CWUCx8"
+  "twitter:image:src": "https://csedweek.org/images/cs-is-everything-thumbnail.png"
+  "twitter:player": "https://youtube.com/v/xJqSu1IbcHg"
   "twitter:player:width": "640"
   "twitter:player:height": "360"
+video_player: true
 ---
-- if request.site == 'csedweek.org'
-  %div
-    = view :index_hoc
-- elsif request.site == 'code.org'
-  %div.desktop-feature
-    = view :index_loc
+
+%div
+  = view :index_hoc
 
 -facebook = {:u=>"https://#{request.site}/"}
 -twitter = {:related=>'codeorg', :hashtags=>'CSforAll', :text=>I18n.t(:hoc_is_here)}
@@ -36,15 +34,12 @@ social:
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 
-- if request.site == 'code.org'
-  #user_hero
-
 #index
   #gap.feature-codeorg
 
   #top
     #video.col-63.desktop-pad-right
-      = view :index_video
+      = view :display_video_thumbnail, id: "cs_is_everything", video_code: "xJqSu1IbcHg", play_button: 'center', download_path: "//videos.code.org/social/cs-is-everything.mp4"
 
     #start.col-36
       %div.desktop-feature{:style=>'height: 25px;'}
@@ -67,64 +62,9 @@ social:
         %a{:href=>'/learn/beyond', :style=>'font-size: 16px; color: white'}
           =I18n.t :homepage_action_text_volunteers
 
-    -download_filename = 'hourofcode-2015-thankyou.mp4'
+    -download_filename = 'cs-is-everything.mp4'
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
       = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://videos.code.org/social/#{download_filename}"
-
-  -if request.site != 'csedweek.org'
-    #header-social-links.desktop-feature{style: "margin: 15px 0 0 0; float: right;"}
-      %a{:href=>"http://facebook.com/Code.org", :title=>'Facebook', :target=>"_blank", :style=>"text-decoration:none"}
-        %img{:src=>"/images/facebook_purple.png"}
-      %a{:href=>"http://twitter.com/codeorg", :title=>'Twitter', :target=>"_blank", :style=>"text-decoration:none"}
-        %img{:src=>"/images/twitter_purple.png"}
-      %a{:href=>"http://codeorg.tumblr.com/", :title=>'Tumblr', :target=>"_blank", :style=>"text-decoration:none"}
-        %img{:src=>"/images/tumblr_purple.png"}
-      %a{:href=>"/shop", :title=>'Zazzle', :target=>"_blank", :style=>"text-decoration:none"}
-        %img{:src=>"/images/zazzle_purple.png"}
-      %a{:href=>"/donate", :title=>'Donate', :style=>"text-decoration:none"}
-        %img{:src=>"/images/donate_normal.png"}
-
-  .studiobar.feature-codeorg.tablet-feature
-    %h1.mobile-center
-      =I18n.t :studiobar_title
-    #body.mobile-pad-left64
-      - studiobar_items = [ {id: "elementary", url: CDO.studio_url}, {id: "frozen", url: CDO.studio_url('/s/frozen/reset')}, {id: "teacher", url: "/educate/k5"}]
-      - # Temporarily disable shop by adding the "false &&" below
-      - if false && request.language == "en"
-        - studiobar_items << {id: "shop", url: "/shop"}
-      - else
-        - studiobar_items << {id: "flappy", url: "/flappy"}
-      - studiobar_items.each_with_index do |item, index|
-        - if index < studiobar_items.length-1
-          - other_style = "margin-right: 26px"
-        - else
-          - other_style = ""
-
-        -# Ensure we properly wrap to a new line when in 2 column mobile mode.  Some translations
-        -# with a longer first item caused layout problems otherwise.
-        - if index % 2 == 0
-          %div.mobile-feature{style: "clear:both"}
-
-        %a{href: item[:url]}
-          .col-25.outerblock{style: "float:left; #{other_style}"}
-            .innerblock
-              %img{:src=>CDO.shared_image_url("courses/logo_tall_#{item[:id]}.jpg"), style: "width:100%; height:120px"}
-              .title=I18n.t "studiobar_#{item[:id]}_title"
-              .body=I18n.t "studiobar_#{item[:id]}_body"
-
-  -# A special shop block for English mobile phone (<= 600px width) viewers
-  -# Temporarily disable shop by adding the "false &&" below
-  - if false && request.language == "en"
-    %br/
-    .studiobar.feature-codeorg.phone-feature{style: "width:100%"}
-      %div{style: "display: table; margin: 0 auto;"}
-        %a{href: "/shop"}
-          .outerblock{style: "width:223px; margin-bottom:0px"}
-            .innerblock
-              %img{:src=>CDO.shared_image_url("courses/logo_tall_shop.jpg"), style: "width:100%; height:120px"}
-              .title=I18n.t "studiobar_shop_title"
-              .body=I18n.t "studiobar_shop_body"
-    %br/
 
   %br
   %div{:style=>'clear:both;'}
@@ -175,17 +115,3 @@ social:
   #gap
 
 = view 'popup_window.js'
-
-- if request.site == 'code.org'
-  :javascript
-    $(document).ready(function() {
-      $.ajax({
-        type: "GET",
-        url: '/dashboardapi/user_hero',
-        //data: "id=" + id, // appears as $_GET['id'] @ ur backend side
-        success: function(data) {
-          // data is ur summary
-          $('#user_hero').html(data);
-        }
-      });
-    });

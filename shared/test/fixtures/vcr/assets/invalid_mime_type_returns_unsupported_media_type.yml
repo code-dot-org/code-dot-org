@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/1
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Date:
+      - Tue, 22 Mar 2016 22:38:58 GMT
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Mar 2016 22:39:00 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 22 Mar 2016 22:38:59 GMT
+recorded_with: VCR 3.0.0

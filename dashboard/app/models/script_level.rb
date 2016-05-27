@@ -3,7 +3,6 @@
 # Table name: script_levels
 #
 #  id         :integer          not null, primary key
-#  level_id   :integer          not null
 #  script_id  :integer          not null
 #  chapter    :integer
 #  created_at :datetime
@@ -11,6 +10,8 @@
 #  stage_id   :integer
 #  position   :integer
 #  assessment :boolean
+#  level_id   :integer
+#  properties :text(65535)
 #
 # Indexes
 #
@@ -25,16 +26,44 @@ class ScriptLevel < ActiveRecord::Base
   include LevelsHelper
   include Rails.application.routes.url_helpers
 
-  belongs_to :level
+  has_and_belongs_to_many :levels
   belongs_to :script, inverse_of: :script_levels
   belongs_to :stage, inverse_of: :script_levels
   acts_as_list scope: :stage
   has_many :callouts, inverse_of: :script_level
+  has_one :plc_task, class_name: 'Plc::Task', inverse_of: :script_level, dependent: :destroy
 
   NEXT = 'next'
 
   def script
-    Script.get_from_cache(script_id)
+    return Script.get_from_cache(script_id) if Script.should_cache?
+    super
+  end
+
+  # TODO(ram): stop using and delete these four convenience methods
+  def level
+    levels[0]
+  end
+
+  def level=(l)
+    levels[0] = l
+  end
+
+  def level_id
+    levels[0].id
+  end
+
+  def level_id=(new_level_id)
+    levels[0] = Level.find(new_level_id)
+  end
+
+  def oldest_active_level
+    return levels[0] if levels.length == 1
+    return levels.min_by(&:created_at) unless properties
+    properties_hash = JSON.parse(properties)
+    levels.sort_by(&:created_at).find do |level|
+      !properties_hash[level.name] || properties_hash[level.name]['active'] != false
+    end
   end
 
   def next_level
@@ -67,6 +96,15 @@ class ScriptLevel < ActiveRecord::Base
     stage.script_levels.to_a.last == self
   end
 
+  def long_assessment?
+    if assessment
+      if level.properties["pages"] && level.properties["pages"].length > 1
+        return true
+      end
+    end
+    false
+  end
+
   def name
     I18n.t("data.script.name.#{script.name}.#{stage.name}")
   end
@@ -87,7 +125,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def stage_total
-    stage.script_levels.to_a.count
+    stage.script_levels.to_a.size
   end
 
   def summarize
@@ -103,9 +141,12 @@ class ScriptLevel < ActiveRecord::Base
         id: level.id,
         position: position,
         kind: kind,
+        icon: level.icon,
         title: level_display_text,
-        url: build_script_level_path(self)
+        url: build_script_level_url(self)
     }
+
+    summary[:name] = level.name if script.professional_learning_course?
 
     # Add a previous pointer if it's not the obvious (level-1)
     if previous_level
@@ -131,6 +172,24 @@ class ScriptLevel < ActiveRecord::Base
     end
 
     summary
+  end
+
+  # Given a script level summary for the last level in a stage that has already
+  # been determined to be a long assessment, returns an array of additional
+  # level summaries.
+  def self.summarize_extra_puzzle_pages(last_level_summary)
+    extra_levels = []
+    level = Script.cache_find_level(last_level_summary[:id])
+    extra_level_count = level.properties["pages"].length - 1
+    (1..extra_level_count).each do |page_index|
+      new_level = last_level_summary.deep_dup
+      new_level[:uid] = "#{level.id}_#{page_index}"
+      new_level[:url] << "/page/#{page_index + 1}"
+      new_level[:position] = last_level_summary[:position] + page_index
+      new_level[:title] = last_level_summary[:position] + page_index
+      extra_levels << new_level
+    end
+    extra_levels
   end
 
   def self.cache_find(id)

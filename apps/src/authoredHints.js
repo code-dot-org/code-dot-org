@@ -5,11 +5,10 @@
 
 var dom = require('./dom');
 var msg = require('./locale');
-var HintSelect = require('./templates/HintSelect.jsx');
-var HintsDisplay = require('./templates/HintsDisplay.jsx');
+var HintsDisplay = require('./templates/instructions/HintsDisplay');
+var HintDialogContent = require('./templates/instructions/HintDialogContent');
 var authoredHintUtils = require('./authoredHintUtils');
-var lightbulbSVG = require('./templates/lightbulb.svg.ejs')();
-var lightbulbDimSVG = require('./templates/lightbulb_dim.svg.ejs')();
+var Lightbulb = require('./templates/Lightbulb');
 
 var AuthoredHints = function (studioApp) {
   this.studioApp_ = studioApp;
@@ -120,26 +119,14 @@ AuthoredHints.prototype.init = function (hints, scriptId, levelId) {
 
 /**
  * Sets up the Authored Hints UI; decorates the specified element with a
- * lightbulb image and hint counter, and adds a click handler to show
- * a qtip for the next unseen hint.
+ * lightbulb image and hint counter
  *
  * @param {Element} promptIcon - the page element to "decorate" with the
  *        lightbulb
- * @param {Element} clickTarget
- * @param {function} callback - a StudioApp function to be treated as
- *        the "default" action when there are no unseen hints. 
  */
-AuthoredHints.prototype.display = function (promptIcon, clickTarget, callback) {
+AuthoredHints.prototype.display = function (promptIcon) {
   this.promptIcon = promptIcon;
   this.updateLightbulbDisplay_();
-  clickTarget.addEventListener('click', function () {
-    var hintsToShow = this.getUnseenHints();
-    if (hintsToShow.length > 0) {
-      this.showHint_(hintsToShow[0], callback);
-    } else {
-      callback();
-    }
-  }.bind(this));
 };
 
 /**
@@ -167,12 +154,12 @@ AuthoredHints.prototype.recordUserViewedHint_ = function (hint) {
  * Adjusts the displayed number of unseen hints. Dims the lightbulb
  * image if there are no hints. Optionally plays a simple CSS animation
  * to highlight the update.
- * @param {boolean} animate defaults to false
+ * @param {boolean} shouldAnimate defaults to false
  */
-AuthoredHints.prototype.updateLightbulbDisplay_ = function (animate) {
-  animate = animate || false;
+AuthoredHints.prototype.updateLightbulbDisplay_ = function (shouldAnimate) {
+  shouldAnimate = shouldAnimate || false;
 
-  var hintCount = this.getUnseenHints().length; 
+  var hintCount = this.getUnseenHints().length;
 
   // If we have hints to show, but are not in the DOM, insert ourselves
   // into the DOM. This can happen when contextual hints appear in a
@@ -183,34 +170,29 @@ AuthoredHints.prototype.updateLightbulbDisplay_ = function (animate) {
     this.promptIcon.parentNode.insertBefore(this.lightbulb, this.promptIcon);
   }
 
-  // If there are more than nine hints, simply display "9+"
-  var hintText = (hintCount > 9) ? "9+" : hintCount;
-  if (hintCount === 0) {
-    this.lightbulb.innerHTML = lightbulbDimSVG;
-  } else {
-    this.lightbulb.innerHTML = lightbulbSVG;
-    this.lightbulb.querySelector('#hintCount').textContent = hintText;
-  }
-
-  var bulb = document.getElementById("bulb");
-  if (animate && bulb) {
-    bulb.setAttribute('class', 'animate-hint');
-  }
+  ReactDOM.render(
+    <Lightbulb
+        count={hintCount}
+        lit={hintCount > 0}
+        shouldAnimate={shouldAnimate}/>,
+    this.lightbulb);
 };
 
+/**
+ * @returns {React.Element}
+ */
 AuthoredHints.prototype.getHintsDisplay = function () {
-  var hintsDisplay = React.createElement(HintsDisplay, {
-    hintReviewTitle: msg.hintReviewTitle(),
-    seenHints: this.getSeenHints(),
-    unseenHints: this.getUnseenHints(),
-    lightbulbSVG: lightbulbSVG,
-    onUserViewedHint: function () {
-      var nextHint = this.getUnseenHints()[0];
-      this.recordUserViewedHint_(nextHint);
-    }.bind(this)
-  });
+  return (
+    <HintsDisplay
+      hintReviewTitle={msg.hintReviewTitle()}
+      seenHints={this.getSeenHints()}
+      unseenHints={this.getUnseenHints()}
+      viewHint={this.showNextHint_.bind(this)}/>
+  );
+};
 
-  return hintsDisplay;
+AuthoredHints.prototype.showNextHint_ = function () {
+  this.showHint_(this.getUnseenHints()[0]);
 };
 
 /**
@@ -221,46 +203,33 @@ AuthoredHints.prototype.getHintsDisplay = function () {
  * @param {function} callback
  */
 AuthoredHints.prototype.showHint_ = function (hint, callback) {
+  $('.modal').modal('hide');
   $('#prompt-icon').qtip({
-    content: {
-      text: function(html, api) {
-        var container = document.createElement('div');
+    events: {
+      visible: function (event, api) {
+        var container = api.get("content.text");
 
-        var element = React.createElement(HintSelect, {
-          showInstructions: function () {
-            api.destroy();
-            callback();
-          }.bind(this),
-          showHint: function () {
-            if (hint.block) {
-              var content = document.createElement('div');
-              content.innerHTML = hint.content;
-              var blockContainer = document.createElement('div');
-              blockContainer.style.height = '100px';
-              content.appendChild(blockContainer);
-              api.set('content.text', content);
-
-              Blockly.BlockSpace.createReadOnlyBlockSpace(blockContainer, hint.block);
-            } else {
-              api.set('content.text', hint.content);
-            }
-            $(api.elements.content).find('img').on('load', function (e) {
-              api.reposition(e);
-            });
-            this.recordUserViewedHint_(hint);
-          }.bind(this),
+        ReactDOM.render(<HintDialogContent
+          content={hint.content}
+          block={hint.block}
+        />, container, function () {
+          api.reposition();
         });
 
-        React.render(element, container);
-
-        return container;
-      }.bind(this),
+        $(container).find('img').on('load', function (e) {
+          api.reposition(e);
+        });
+        this.recordUserViewedHint_(hint);
+      }.bind(this)
+    },
+    content: {
+      text: document.createElement('div'),
       title: {
         button: $('<div class="tooltip-x-close"/>')
       }
     },
     style: {
-      classes: "cdo-qtips",
+      classes: "cdo-qtips qtip-authored-hint",
       tip: {
         width: 20,
         height: 20
@@ -276,4 +245,3 @@ AuthoredHints.prototype.showHint_ = function (hint, callback) {
     show: false // don't show on mouseover
   }).qtip('show');
 };
-

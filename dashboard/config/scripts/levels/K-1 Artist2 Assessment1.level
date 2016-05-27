@@ -32,7 +32,10 @@
     "impressive": "false",
     "disable_sharing": "false"
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

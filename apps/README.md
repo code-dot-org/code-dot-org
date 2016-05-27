@@ -1,16 +1,16 @@
-# Blockly 20 Hour Curriculum
+# The Apps Package
+
+The **Apps Package** contains most of our client-side JavaScript, particularly the source code for the [Blockly](https://code.google.com/p/blockly/) based 20 hour curriculum, Hour of Code, and our Droplet-based levels (including App Lab). Information about Blockly can be found in the [wiki](https://code.google.com/p/blockly/w/list).
 
 Blockly is a web-based, graphical programming editor. Users can drag blocks together to build an application. No typing required. Credit goes to these awesome [developers](https://code.google.com/p/blockly/wiki/Credits#Engineers)
 and a small army of [translators](https://code.google.com/p/blockly/wiki/Credits#Translators).
-
-This repository contains the source code for the apps [Blockly](https://code.google.com/p/blockly/) based 20 hour curriculum and Hour of Code. Information about Blockly can be found in the [wiki](https://code.google.com/p/blockly/w/list).
 
 - [Quick Start](#quick-start)
 - [Contributing](#contributing)
 
 ## Quick Start
 
-### Installing Blockly
+### Installing Apps
 
 ```
 cd apps
@@ -21,19 +21,17 @@ npm install -g grunt-cli
 
 # Perform first full build
 npm install
-MOOC_DEV=1 grunt build
+npm run build
 ```
 
-### Seeing your development version of Blockly in Dashboard
+### Seeing your development version of Apps in Dashboard
 
-1. To make your changes show up in dashboard, run the following after the first time you build blockly: [has this been replaced with locals.yml?]
-  ```
-  cd ../dashboard
-  bundle exec rake 'blockly:dev[../apps]'
-  cd ../apps
-  ```
+1. To make your changes show up in dashboard, do the following after the first time you build apps:
+  - Set `use_my_apps: true` to your locals.yml config file.
+  - Run `rake package:apps:symlink` to pick up the configuration change.
+  - If you are currently running dashboard, stop and restart dashboard-server.
 
-1. If you find your changes are not showing up within dashboard, you may have accidentally reverted your symlink to point to the pre-built version of blockly (e.g. when switching branches or stashing changes). To check your symlink, run:
+1. If you find your changes are not showing up within dashboard, you may have accidentally reverted your symlink to point to the pre-built version of apps (e.g. when switching branches or stashing changes). To check your symlink, run:
 ```
 > ls -l dashboard/public/blockly
 ```
@@ -41,65 +39,78 @@ and look for something like:
 ```
 lrwxr-xr-x  1 laurel  501  12 Apr 27 13:00 dashboard/public/blockly -> apps/build/package
 ```
-If the symlink is in place, then when you run later builds of blockly, your results should show up in Dashboard.
+If the symlink is in place, then as you rebuild apps, your results should show up in Dashboard.  If not, run through step 1 again.
 
 ### Building during development
 
 #### Full build
 
-To run a full build (minus localization):
+To run a full development build (minus localization):
 
 ```
-MOOC_DEV=1 grunt build
+npm run build
 ```
 
-* `MOOC_DEV=1` builds a 'debug' version with more readable javascript
-* `grunt rebuild` does a `clean` before a `build`
+* `npm run build` builds a 'debug' version with more readable javascript
+* `npm run build -- --app=maze` builds a 'debug' version of only the maze app
+* `npm run build:dist` builds a minified version suitable for production
+* `npm run clean` will clean the build directory
 
 See also: [Full build with blockly-core](#full-build-with-blockly-core-changes)
 
 #### Running with live-reload server
 
 ```
-grunt dev
-open http://localhost:8000
+npm start
 ```
 
-This will serve a few sample blockly apps at [http://localhost:8000](http://localhost:8000) and live-reload changes to blockly.  Caveats:
-* This does not update asset files. For that, use a full `grunt build`.
+This will perform an initial build, then serve and open a playground with a few sample blockly apps at [http://localhost:8000](http://localhost:8000) and live-reload changes to apps.  If you followed the steps above for seeing your development version in Dashboard, the rebuilt apps code will be immediately available to Dashboard too. 
+
+Caveats:
 * The live-reload server does not pick up changes to blockly-core.  For that, see [Full build with blockly-core](#full-build-with-blockly-core-changes).
 * If you get `Error: EMFILE, too many open files` while running the live-reload server (common on OSX) try increasing the OS open file limit by running `ulimit -n 1024` (and adding it to your `.bashrc`).
 
 ##### Rebuild only a single app
 
-To have grunt rebuild only a single app, use the MOOC_APP parameter:
+To have grunt rebuild only a single app, use the `--app` parameter:
 
 ```
-MOOC_APP=studio grunt dev
+npm start -- --app=maze
 ```
 
-##### Build a single foreign language
+##### Rebuild with custom polling interval
 
-To have grunt build a single foreign language, use the MOOC_LOCALE parameter. This will build en_us, en_loc, and the specified locale
+The `grunt watch` task when run with a low filesystem polling interval is [known to cause high CPU usage](https://github.com/gruntjs/grunt-contrib-watch/issues/145) on OS X.
+
+To set a custom polling interval, use the `--delay` parameter:
 
 ```
-MOOC_LOCALE=ar_sa grunt build
+npm start -- --delay=5000
+```
+
+Since the longer the polling is, the longer the delay before builds can be, we'll try to keep the polling interval a happy medium. The default polling interval is set to 700ms which as of 2/24/2016 uses roughly 10% CPU on a Macbook Pro.
+
+##### Rebuild without live reload
+
+To have grunt rebuild on changes but not run an express server, you can use the constituent commands:
+
+```
+MOOC_DEV=1 grunt build watch
 ```
 
 #### Running tests
 
 ```
-grunt build # run a non-debug build before testing
-grunt test
+npm test
 ```
 * If you see an error like `ReferenceError: Blockly is not defined` or notes about missing npm packages, double check that you've run `grunt build` before `grunt test`
 * Right now, the tests require a full/production build to pass.  Failures like `Cannot set property 'imageDimensions_' of undefined` in setup steps may indicate that you are testing against a debug build.
-* `grunt test` will also be run via Travis CI when you create a pull request
+* These tests will also be run via Travis CI when you create a pull request
 
 To run an individual test, use the `--grep` option to target a file or Mocha `describe` identifier:
 
 ```
-grunt mochaTest --grep myTestName # e.g., 2_11, or requiredBlockUtils
+npm test -- --grep myTestName # e.g., 2_11, or requiredBlockUtils
 ```
 
 To debug tests using the webkit inspector, just add a `--debug` flag. This will launch a new browser window with a debugger attached.
@@ -108,16 +119,21 @@ thus far are to add debugger; statements in your code, or to have your debugger 
 it breaking in some jquery code before running tests (at which point you can go set your breakpoints).
 
 ```
-grunt mochaTest --grep='testname' --debug
+npm test -- --grep='testname' --debug
 ```
 
 We also have the ability to run a faster subset of tests without using grep. In particular, this will run without maze and turtle level tests.
 ```
-grunt mochaTest --fast
+npm test -- --fast
 ```
 
 - You can add new test files as /test/*Tests.js, see `/test/feedbackTests.js` as an example of adding a mock Blockly instance
 
+If you are iterating on a particular test file that doesn't require phantomjs, install global mocha and run your individual test.  It will go way faster since it doesn't need to bundle everything before each run.
+```
+npm install -g mocha
+mocha test/ObserverTest.js
+```
 
 #### Full build with blockly-core changes
 
@@ -131,12 +147,7 @@ grunt mochaTest --fast
 It's especially important to test your changes with localization when modifying layouts. We support
 right-to-left languages and have some special layout tweaks embedded in the CSS to support that.
 
-Running a full localization build can take several minutes. Since localization re-builds javascript files for many languages, the default build target locales are `en_us` and `en_ploc` (pseudolocalized). To build
-all available locales, specify `MOOC_LOCALIZE=1` in your environment when running a task:
-
-```bash
-MOOC_LOCALIZE=1 grunt rebuild
-```
+Running a full localization build can take several minutes. Since localization re-builds javascript files for many languages, the default build target locales are `en_us` and `en_ploc` (pseudolocalized).
 
 Note: Using the live-reload server with localization builds is prone to the `Error: EMFILE, too many open files` problem.  See the `ulimit` fix [under the live-reload server heading](#running-with-live-reload-server).
 
@@ -163,5 +174,5 @@ For notes on our pull process, where to find tasks to work on, etc., see the [Co
 - 80 character line length.
 - 2 space indent.
 - 4 space indent on long line breaks.
-- `grunt jshint` should report 0 warnings or errors.
+- `npm run lint` should report 0 warnings or errors.
 - See our [project style guide](../STYLEGUIDE.md) for details.

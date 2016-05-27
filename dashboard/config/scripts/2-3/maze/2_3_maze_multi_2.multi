@@ -5,7 +5,7 @@ content1 '/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500'
 
 height '200'
 
-question 'Which blocks work?'
+question 'Which set of blocks will get me to the pig?'
 
 wrong '/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png'
 right '/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png'

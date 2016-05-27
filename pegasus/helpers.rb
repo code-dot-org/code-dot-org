@@ -1,11 +1,14 @@
 require 'cdo/aws/s3'
+require 'rack/csrf'
 require_relative '../shared/middleware/helpers/storage_id'
 
-def avatar_image(name,width=320)
+def avatar_image(name,width=320,square_photo=false)
   basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')
   path = resolve_image("images/avatars/#{basename}")
   return nil unless path
-  "/images/fit-#{width}/avatars/#{File.basename(path)}"
+  dimensions = "fit-#{width}"
+  dimensions = "fill-#{width}x#{width}" if square_photo == true
+  "/images/#{dimensions}/avatars/#{File.basename(path)}"
 end
 
 def authentication_required!(url=request.url)
@@ -63,7 +66,7 @@ def not_found!()
 end
 
 def only_for(site)
-  if site.kind_of?(Array)
+  if site.is_a?(Array)
     pass unless site.include?(request.site)
   else
     pass unless request.site == site
@@ -76,6 +79,14 @@ end
 
 def unsupported_media_type!()
   halt(415, "Unsupported Media Type\n")
+end
+
+def csrf_token
+  Rack::Csrf.csrf_token(env)
+end
+
+def csrf_tag
+  Rack::Csrf.csrf_tag(env)
 end
 
 Dir.glob(pegasus_dir('helpers/*.rb')).sort.each{|path| load path}

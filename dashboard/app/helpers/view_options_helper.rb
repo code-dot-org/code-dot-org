@@ -13,6 +13,7 @@ module ViewOptionsHelper
     readonly_workspace
     is_external_project_level
     is_channel_backed
+    is_legacy_share
     post_milestone
     puzzle_ratings_url
     authored_hint_view_requests_url
@@ -22,12 +23,13 @@ module ViewOptionsHelper
     stage_position
     level_position
     public_caching
+    is_13_plus
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)
     @view_options ||= AppViewOptions.new
     if opts.blank?
-      @view_options.freeze.to_h.delete_if { |k, v| v.nil? }
+      @view_options.freeze.to_h.delete_if { |_k, v| v.nil? }
     else
       opts.each{|k, v| @view_options[k] = v}
     end

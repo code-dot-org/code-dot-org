@@ -23,7 +23,15 @@ fi:
           future: ei voi olla tulevaisuudessa
   hello: Hei maailma
   welcome_back: 'Tervetuloa takaisin, %{name}'
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Jatka
+  unsubmit: Peruuta lähetys
+  previous_page: Previous page
+  next_page: Seuraava sivu
+  cancel: Peru
+  okay: Selvä
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Lisää opettaja:'
@@ -148,8 +156,6 @@ fi:
         subject: 'Liity opettajan %{teacher_name} luokkaan Code.org:ssa!'
       student_disassociated:
         subject: 'Code.org ilmoitus: oppilasta %{student_name} ei ole enää yhdistetty sinuun.'
-      teacher_disassociated:
-        subject: 'Code.org ilmoitus: %{teacher_name} ei ole enää liitetty opettajaksesi.'
   reports:
     error:
       access_denied: Sinulla ei ole oikeutta katsella tämän henkilön tietoja
@@ -225,7 +231,7 @@ fi:
       free_play:
         playlab: Tee sovellus
         artist: Piirrä jotakin
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Tee sovellus
     user:
       classroom: Opettajan kotisivu
@@ -329,11 +335,29 @@ fi:
     heading_hoc2014: '<h2>Koodaustunti</h2><h1>kaikille ikäryhmille</h1>'
     heading_elementary: '<h2>20 tunnin kurssit</h2><h1>aloittelijoille (kaikki ikäryhmät)</h1>'
     heading_apps: '<h2>Hauskaa</h2><h1>kaikille</h1>'
+    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
     heading_legacy: '<h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>'
     your_gallery: Galleria
     no_primary_course: Kokeile kurssia Code Studiossa
     choose_next_course: Kokeile jotakin allaolevista Code Studion kursseista
     print_certificate: Tulosta todistus
+    announcement_title: Ilmoituksia
+    announcement_view_all: Näytä kaikki
+    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+    announcement_button: Lue lisää
+    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: Opiskele Code Studio:ssa
     description: Kuka tahansa voi oppia tietojenkäsittelyä. Rakenna koodaamalla pelejä, sovelluksia ja taidetta.
@@ -349,8 +373,9 @@ fi:
     thank_you: 'Kiitämme <a href="https://code.org/about/donors">lahjoittajia</a>, <a href="https://code.org/about/partners">yhteistyökumppaneita</a>, <a href="https://code.org/about/team">laajennettua tiimiämme</a>, videoiden esiintyjiä, ja <a href="https://code.org/about/advisors">koulutusneuvonantajia</a> heidän tuestaan Code Studion luomisessa.'
     help_from_html: Insinöörit Googlelta, Microsoftilta, Facebookilta ja Twitterilta auttoivat luomaan tämän opetusohjelman.
     help_from_html_old: Insinöörit Googlelta, Microsoftilta, Facebookilta ja Twitteriltä auttoivat luomaan nämä materiaalit.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: Toimii Amazon Web Services -palvelun päällä
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: Copyright
@@ -423,6 +448,12 @@ fi:
       current: Nykyiset tasot
       unused: Käyttämättömät tasot
   upsell:
+    applab:
+      title: Sovelluksien laboratorio
+      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
+      audience: Ikäryhmille 13+
+      cta: Learn how
     hoc:
       title: Klassinen sokkelo
       body: Kokeile tietojenkäsittelytieteen perusteita. Jo miljoonat ovat kokeilleet.
@@ -449,6 +480,11 @@ fi:
     minecraft:
       title: Minecraft
       body: Tutki Minecraft-maailmaa koodin kautta.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 4+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Oppilaat piirsivät nämä koodilla!
     students_made_these_with_code: Oppilaat tekivät nämä koodilla!
@@ -464,10 +500,10 @@ fi:
   landing:
     prerelease: "Tämä kurssi on <span class='betatext'>beta</span>.  Tämä tarkoittaa, että kurssin verso ei ole lopullinen ja siitä saattaa tulla uusia paranneltuja versioita reaktiona saatuun palautteeseen."
     prerelease_hoc2014: "Tämä opetusohjelma on <span class='betatext'>beta</span>. Sitä muutetaan palautteen mukaisesti sen parantamiseksi."
-    feedback: Anna palautetta
     report_bug: Raportoi ongelma
     support: Katso ohjeet
     support_url: //support.code.org
+    help_resources: Help and Resources
   multi:
     wrong_title: Väärä vastaus
     wrong_body: Antamasi vastaus ei ole oikein. Yritä uudelleen!
@@ -475,6 +511,29 @@ fi:
     correct_body: Tämä on oikea vastaus.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Kiitos
+    wrong_body: Kiitos vastauksestasi.
+    correct_title: Kiitos
+    correct_body: Kiitos vastauksestasi.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Kiitos
+    wrong_body: Kiitos vastauksistasi.
+    correct_title: Kiitos
+    correct_body: Kiitos vastauksistasi.
+  level_group-submittable:
+    wrong_title: Kiitos
+    wrong_body: Kiitos vastauksistasi.
+    correct_title: Kiitos
+    correct_body: Kiitos vastauksistasi.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Väärä vastaus
     wrong_body: Antamasi ratkaisu ei ole oikea. Yritä uudestaan!
@@ -492,6 +551,8 @@ fi:
     placeholder: Kirjoita vastauksesi tähän
     open_response_title: Kiitos
     open_response_body: Kiitos vastauksestasi!
+    correct_title: Oikein
+    correct_body: Tämä on oikea vastaus.
   dialog:
     ok: OK
     startover_title: Oletko varma, että haluat aloittaa alusta?
@@ -545,6 +606,7 @@ fi:
     completed_perfect: valmis, täydellinen
     furthest_level_attempted: vaikein taso jota yritetty
     assessment: arviointi
+    submitted: lähetetty
   studio:
     courses_working_on: Kurssit, joita työstät
     completed_courses: Valmiit kurssit
@@ -562,6 +624,9 @@ fi:
     share: Jaa
     share_title: Jaa projektisi
     share_copy_link: 'Kopioi linkki:'
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Sulje
     more: Lisää
     name: Nimi
@@ -601,3 +666,21 @@ fi:
           other: Muut
         detail: Anna mahdollisimman paljon yksityiskohtaista tietoa koskien sisältöä josta raportoit.
         acknowledge: 'Toimittamalla nämä tiedot huomioit, että niitä käsitellään %{link_start_privacy}Yksityisyyskäytännön%{link_end} ja %{link_end}Palvelukuvauksen%{link_start_tos} mukaisesti'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+  components:
+    icon_library:
+      search_placeholder_text: Etsitään kuvaketta...
+      no_icons_found: Kuvakkeita ei löytynyt
+  flex_category:
+    required: Yleiskatsaus
+    content: Content
+    practice: Teacher Practices

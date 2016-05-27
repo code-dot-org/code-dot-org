@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+# Downloads all translations from Crowdin Code.org
+# project to i18n/locales.
+# https://crowdin.com/project/codeorg
+
+exec "crowdin-cli download"

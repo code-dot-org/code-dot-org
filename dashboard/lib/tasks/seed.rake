@@ -63,8 +63,9 @@ namespace :seed do
   end
 
   # detect changes to dsldefined level files
-  DSL_TYPES = %w(TextMatch ContractMatch External Match Multi)
-  DSLS_GLOB = DSL_TYPES.map{|x|Dir.glob("config/scripts/**/*.#{x.underscore}*")}.sort.flatten
+  # LevelGroup must be last here so that LevelGroups are seeded after all levels that they can contain
+  DSL_TYPES = %w(TextMatch ContractMatch External Match Multi LevelGroup)
+  DSLS_GLOB = DSL_TYPES.map{|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort }.flatten
   file 'config/scripts/.dsls_seeded' => DSLS_GLOB do |t|
     Rake::Task['seed:dsls'].invoke
     touch t.name
@@ -76,7 +77,7 @@ namespace :seed do
       i18n_strings = {}
       # Parse each .[dsl] file and setup its model.
       DSLS_GLOB.each do |filename|
-        dsl_class = DSL_TYPES.detect{|type|filename.include?(".#{type.underscore}") }.try(:constantize)
+        dsl_class = DSL_TYPES.detect{|type| filename.include?(".#{type.underscore}") }.try(:constantize)
         begin
           data, i18n = dsl_class.parse_file(filename)
           dsl_class.setup data
@@ -104,9 +105,17 @@ namespace :seed do
   task callouts: :environment do
     Callout.transaction do
       Callout.reset_db
-      # TODO if the id of the callout is important, specify it in the tsv
+      # TODO: If the id of the callout is important, specify it in the tsv
       # preferably the id of the callout is not important ;)
       Callout.find_or_create_all_from_tsv!('config/callouts.tsv')
+    end
+  end
+
+  task school_districts: :environment do
+    SchoolDistrict.transaction do
+      # Since other models (e.g. Pd::Enrollment) have a foreign key dependency
+      # on SchoolDistrict, don't reset_db first.  (Callout, above, does that.)
+      SchoolDistrict.find_or_create_all_from_tsv!('config/school_districts.tsv')
     end
   end
 
@@ -156,12 +165,6 @@ namespace :seed do
     end
   end
 
-  desc "calculate most common unsuccessful solutions for the crowdsourced hints UI"
-  task :frequent_level_sources, [:freq_cutoff, :game_name] => :environment do |t, args|
-    freq_cutoff = 1
-    FrequentUnsuccessfulLevelSource.populate(freq_cutoff, args[:game_name])
-  end
-
   task dummy_prizes: :environment do
     # placeholder data
     Prize.connection.execute('truncate table prizes')
@@ -182,7 +185,7 @@ namespace :seed do
     end
   end
 
-  task :import_users, [:file] => :environment do |t, args|
+  task :import_users, [:file] => :environment do |_t, args|
     CSV.read(args[:file], { col_sep: "\t", headers: true }).each do |row|
       User.create!(
           provider: User::PROVIDER_MANUAL,
@@ -203,39 +206,39 @@ namespace :seed do
     end
   end
 
-  task :import_itunes, [:file] => :environment do |t, args|
+  task :import_itunes, [:file] => :environment do |_t, args|
     import_prize_from_text(args[:file], 1, "\t")
   end
 
-  task :import_dropbox, [:file] => :environment do |t, args|
+  task :import_dropbox, [:file] => :environment do |_t, args|
     import_prize_from_text(args[:file], 2, "\t")
   end
 
-  task :import_valve, [:file] => :environment do |t, args|
+  task :import_valve, [:file] => :environment do |_t, args|
     import_prize_from_text(args[:file], 3, "\t")
   end
 
-  task :import_ea_bejeweled, [:file] => :environment do |t, args|
+  task :import_ea_bejeweled, [:file] => :environment do |_t, args|
     import_prize_from_text(args[:file], 4, "\t")
   end
 
-  task :import_ea_fifa, [:file] => :environment do |t, args|
+  task :import_ea_fifa, [:file] => :environment do |_t, args|
     import_prize_from_text(args[:file], 5, "\t")
   end
 
-  task :import_ea_simcity, [:file] => :environment do |t, args|
+  task :import_ea_simcity, [:file] => :environment do |_t, args|
     import_prize_from_text(args[:file], 6, "\t")
   end
 
-  task :import_ea_pvz, [:file] => :environment do |t, args|
+  task :import_ea_pvz, [:file] => :environment do |_t, args|
     import_prize_from_text(args[:file], 7, "\t")
   end
 
-  task :import_skype, [:file] => :environment do |t, args|
+  task :import_skype, [:file] => :environment do |_t, args|
     import_prize_from_text(args[:file], 10, ",")
   end
 
-  task :import_donorschoose_750, [:file] => :environment do |t, args|
+  task :import_donorschoose_750, [:file] => :environment do |_t, args|
     Rails.logger.info "Importing teacher prize codes from: " + args[:file] + " for provider id 8"
     CSV.read(args[:file], { col_sep: ",", headers: true }).each do |row|
       if row['Gift Code'].present?
@@ -244,7 +247,7 @@ namespace :seed do
     end
   end
 
-  task :import_donorschoose_250, [:file] => :environment do |t, args|
+  task :import_donorschoose_250, [:file] => :environment do |_t, args|
     Rails.logger.info "Importing teacher bonus prize codes from: " + args[:file] + " for provider id 9"
     CSV.read(args[:file], { col_sep: ",", headers: true }).each do |row|
       if row['Gift Code'].present?
@@ -252,8 +255,6 @@ namespace :seed do
       end
     end
   end
-
-  task analyze_data: [:ideal_solutions, :frequent_level_sources]
 
   task secret_words: :environment do
     SecretWord.setup
@@ -264,9 +265,9 @@ namespace :seed do
   end
 
   desc "seed all dashboard data"
-  task all: [:videos, :concepts, :scripts, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task all: [:videos, :concepts, :scripts, :trophies, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
   desc "seed all dashboard data that has changed since last seed"
-  task incremental: [:videos, :concepts, :scripts_incremental, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task incremental: [:videos, :concepts, :scripts_incremental, :trophies, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
 
   desc "seed only dashboard data required for tests"
   task test: [:videos, :games, :concepts, :trophies, :prize_providers, :secret_words, :secret_pictures]

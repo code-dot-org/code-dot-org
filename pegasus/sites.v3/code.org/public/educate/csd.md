@@ -8,7 +8,7 @@ nav: educate_nav
 ## <a name="what"></a>What is CS Discoveries?
 CS Discoveries is our newest curriculum-in-development - an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun.
 
-<img src="/educate/csd/ms.jpg" height="280px" style="float:right; margin:20px 0px 0px 0px;">
+<img src="/images/fit-500/csd/ms.jpg" height="280px" style="float:right; margin:20px 0px 0px 0px;">
 
 ### <a name="equity"></a>A CS course for everyone, designed with equity in mind
 CS Discoveries is designed from the ground up to be an accessible and engaging course for all students, regardless of background or prior experience. By providing students opportunities to engage with culturally and personally relevant topics in a wide variety of CS related fields we hope to show all students that CS can be for them.
@@ -23,7 +23,7 @@ Our new course, CS Discoveries, is being designed to fit naturally between our [
 CS Discoveries aims to introduce students to tools and programming languages that are accessible for beginners, but which offer plenty of room to grow and create sophisticated projects. Using our App Lab programming environment, students will be able to transition from blocks to typed code at their own pace while learning JavaScript. New improvements to this tool will enable students to build simple animations, stories, or games as well as apps. Students will also develop Maker skills through the study of physical computing on the Arduino platform  at a very accessible cost. 
 
 ### <a name="flexible"></a>Designed for flexible implementation options
-CS Discoveries will be designed primarily for students in grades 6-9, so it can be used in middle school or high school. The two semesters spiral upon each other, allowing the course to be taught as a single semester, two sequential semesters, a full-year course, or even integrated into existing technology classes.
+CS Discoveries will be designed primarily for students in grades 7-9, so it can be used in middle school or high school. The two semesters spiral upon each other, allowing the course to be taught as a single semester, two sequential semesters, a full-year course, or even integrated into existing technology classes.
 
 ## <a name="content"></a>Course Overview
 Computer Science encompases far more than just coding, and CS Discoveries will provide students with opportunities to explore the many facets of CS, both in terms of how they are personally relevant as well as how they impact society.
@@ -105,7 +105,7 @@ We're looking to assemble a summer writing cohort from June 27 - Aug 19, 2016 to
 
 <h4> Pilot the curriculum in your classroom </h4>
 
-If you're in one of Code.org's partner districts and are teaching a CS or technology class in Spring 2017, consider applying to be a pilot teacher! We're looking for a small but dedicated group of teachers to give our team ongoing feedback on the curriculum and tools. Applications will be accepted on a rolling basis through the beginning of the summer.
+If you're in one of Code.org's partner districts and are teaching a CS or technology class in Spring 2017, consider applying to be a pilot teacher! We're looking for a small but dedicated group of teachers to give our team ongoing feedback on the curriculum and tools. Applications will be accepted on a rolling basis through April 2016.
 
 <br><br>
 

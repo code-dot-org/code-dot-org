@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:23.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Assessment 3",
+    "markdown_instructions": "Given that the Travelling Salesman Problem and the Wireless Hotspot Problem are computationally hard to solve, why might the Wireless Hotspot Problem be a more ideal candidate for using an encryption method? Make reference to properties of the two problems in your answer.\n",
+    "encrypted_solution": "bYT2azSYpUpwYz5QzjLGhNecx+5WDn6XaGsjHKZ5h3U4Z25Hs3w1/tQujs8K\nRSR0l1VPHAbSDpzdUY3DaNJ/tiqN/EJAe86WT3rbnQBDifCk0VZ9eamTuDu6\n3IxWmvhqJDtvn0KMMde6NZ1YJsVBhpJYJ9VFCSYtVa3+xR7jAOBSkK/ATKun\nds9tBxZ9XYXZbJ3JPA3B1GebOfVlB2IQCF7Dnwu9AG+AXNTxizwtYSW/RdIw\nHB3Ue8tPh5mMhY/fswoKk64xZhAzCrLFHFAGKyZzE1uFmoqRiqW7yw46yCtB\n3AYG35jaYQhEpERom+7c6oDdvViPxMdojNgfcpyIwYs18iqxG7ePQLnbsdyP\n/0UXxHYHo12lc5UWFUBOET1Y008nrmzMxWjkzXkuE4a9gCI9tOr4dvCr4jIW\nozA0IzaXMlyHd2OxnKad3S9cgqMsmn8gGR0q/IeGXvHQJTMTOxyK57uG/hr0\nlmMCSlVi8rXZY8hzIqLo03VFPyNGb/wV6pYiiPVoJl4APNvz0ewro8PJG4SG\nVpTITf1BgQ2eB9WNsQaDj0p3BiRXUw5EIlx78Nsvwe9bpcF5/u9bR3WDM4eU\n+M8h1yqkLr6DGZyDwnDLvfZsgmK6r6U7aXtupx2MB9wNiNo8qRCozGVSHmy+\nmEx1UVJLnf5KWdOqDDE38+d7rs5yUKANx7n/zRZ+6MCgvhsVKAXbkLaZYjl9\nTce+uce3cw7j03aggChJ559AhGi0A4sMbR3b6ROpSmxaxg7deQcz4KxyI9Rj\nkERWELAgh0dX7PJ7nnr5C7b0LypfY+QeOSf6qjllEWkL3lUsPu2L5oE4hwXR\nBYz/X1XkNHOzy1DGVaVt1pRzrG9BZPohH3sXYpjcTtgPqXNBkUdSagUKBzXM\nupfhnE7BmG1zJ7zjNNooYqW2fOP5wf/+zq7hy5muC0uXscs+g0VBJle8ubD0\nl1ufGXk4kO/skS3ly+VaFVQUluomFGoIhHi7u76zTwSTbkCj0hSQmAD/GhkT\nDbP6EoBhfVQgW4HI5RricDfKKTMqlv+gpTTmFAb+BjD34OhbS9UN4tIQX7SO\nLzJZskUUysRBR240mD5UlSobfeOHu3jN0KQbn92jOOX8nTURSDwVHodiu0dt\nrUpdACMzSxR6\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

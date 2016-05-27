@@ -1,0 +1,11 @@
+name 'PS U3 Q1-3'
+right 'Line 3 and Line 4'
+wrong 'Line 5, 6, 7, 8 and 9'
+wrong 'Line 8 and Line 9'
+wrong 'Line 9'
+
+markdown <<MARKDOWN
+Consider the following incorrect program, which is intended to move the robot around the perimeter of a grid, as indicated by the drawing below.  Note that you should still be referring to the pseudocode described in the question above.
+
+![](https://images.code.org/a442a51dc20d85327f74693a0e03a876-image-1459378505362.png)
+MARKDOWN

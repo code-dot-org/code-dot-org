@@ -1,0 +1,72 @@
+name 'ECSPD3-u6 about'
+css 'unplugged'
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+## Getting Started > About this Online PD 
+ 
+This online professional development is designed to support you in delivering content from Unit 6 of the ECS Version 5 curriculum. The best way we can help you prepare for Unit 6 is to provide space and time to get into the lessons, to see how they tie together, and to consider how you will use the materials provided in the lessons when you teach these concepts.  
+<br><br> 
+ 
+#### PD Goals 
+
+- Develop a deeper understanding of the core concepts covered in the ECS version 5 curriculum, specifically Unit 6 
+- Prepare, plan and share ideas from at least one lesson from Unit 6, tailored to your classroom and your needs 
+- Connect with the community of ECS teachers working with Code.org to get additional support throughout Unit 6 
+ 
+#### PD Outline 
+##### Stage 1: Getting Started  
+
+* Learn about the goals of the PD. 
+* Tips for prepping for Unit 6. 
+* Make a plan for completing the PD. 
+ 
+##### Stage 2: Unit 6 Overview 
+
+- Overview of what's covered in Unit 6. 
+- Connections between Unit 6 and the previous units. 
+- Overview of why we study robotics in Unit 6. 
+ 
+##### Stage 3: Unit 6 Lessons With Robots
+
+- Lessons covered in this Unit With LEGO Mindstorms robots. 
+- Overview of resources for teaching LEGO Mindstorms robots. 
+- Links to resources to explore. 
+- Hints and ideas from other ECS teachers. 
+
+##### Stage 4: Unit 6 Alternate Lessons 
+
+- Lessons ideas if you have other robots. 
+- Links to online simulations using robots and tangibles.
+- Ideas for culminating projects, portfolios, etc.
+
+##### Stage 5: Unit 6 Challenge 
+
+- Learn about the challenge structure we’ll be using in PD. 
+- Learn about the specific Unit 6 challenge activities in this PD. 
+- Select your challenge and complete it!  
+ 
+##### Stage 6: Share out and Submit 
+
+- Once you’re finished with your challenge, share it on the forum and review the work others have done.  
+ 
+#### Pre-requisites 
+For success in this online PD, we assume that you have participated in a five-day face-to-face ECS workshop this summer, and the on-going support workshops during the fall. The fourth Saturday workshop during the school year is dedicated to planning and experiencing lessons from Unit 6. In this online PD, we're going to spend time looking over those lessons that weren't explored during the workshop and consider the resources and materials that will be helpful in planning and delivering Unit 6. 
+ 
+#### Course Duration 
+Completing this online PD should take about 2 hours, depending on your prior knowledge and how deeply you want to dive into the resources provided. Remember, the goal here is to help you prepare to teach Unit 6, so we recommend you complete it before you start teaching that unit. 
+ 
+#### Completion 
+You will be marked as having completed this online module once you have earned a “green dot” for each level in this online PD. This means that you are required to click the orange “Continue” button at the bottom of each level. You can check your progress at any time by clicking the “more” arrow at the top of the screen. 
+ 
+>##### Payment 
+* In order to receive credit for completing this PD, you will need to go through all of the levels here in Code Studio, which includes posting to the Code.org forum for ECS teachers. **In order to receive payment, plan to finish all the stages and levels in this online PD prior to June 30th to receive your stipend.**  
+* Payment for your Phase 3 online work will be pulled twice during the academic year - once in the winter and once in the spring. You will be paid for whatever you've completed up to the day the payments are pulled.  
+ 
+Click the “Continue” button below to review tips for using this online learning space. 
+<br><br> 
+ 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

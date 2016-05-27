@@ -37,6 +37,9 @@ Dashboard::Application.routes.draw do
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
 
+  # XHR proxying
+  get 'xhr', to: 'xhr_proxy#get', format: false
+
   get 'sections/new', to: redirect_to_teacher_dashboard
   get 'sections/:id/edit', to: redirect_to_teacher_dashboard
 
@@ -45,6 +48,9 @@ Dashboard::Application.routes.draw do
       post 'log_in'
     end
   end
+
+  post '/dashboardapi/sections/transfers', to: 'transfers#create'
+  post '/api/sections/transfers', to: 'transfers#create'
 
   get '/sh/:id', to: redirect('/c/%{id}')
   get '/sh/:id/:action', to: redirect('/c/%{id}/%{action}')
@@ -63,17 +69,6 @@ Dashboard::Application.routes.draw do
   get '/s/k-1(/*all)', to: redirect('/s/course1')
   get '/s/2-3(/*all)', to: redirect('/s/course2')
   get '/s/4-5(/*all)', to: redirect('/s/course3')
-
-  resources :level_source_hints
-  get '/add_hint/:level_source_id', :to => 'level_source_hints#add_hint', as: 'add_hint'
-  get '/show_hints/:level_source_id', :to => 'level_source_hints#show_hints', as: 'show_hints'
-  get '/add_pop_hint/:idx', :to => 'level_source_hints#add_pop_hint', as: 'add_pop_hint'
-  get '/show_pop_hints/:idx(/:restriction)', :to => 'level_source_hints#show_pop_hints', as: 'show_pop_hints'
-  get '/add_pop_hint_per_level/:level_id/:idx', :to => 'level_source_hints#add_pop_hint_per_level', as: 'add_pop_hint_per_level'
-  get '/show_pop_hints_per_level/:level_id/:idx(/:restriction)', :to => 'level_source_hints#show_pop_hints_per_level', as: 'show_pop_hints_per_level'
-  get '/add_hint_access', :to => 'level_source_hints#add_hint_access', as: 'add_hint_access'
-
-  resources :frequent_unsuccessful_level_sources, only: [:index]
 
   devise_scope :user do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
@@ -109,6 +104,7 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id", to: 'projects#show', key: key.to_s, as: "#{key}_project_share", share: true
         get "/#{key}/:channel_id/edit", to: 'projects#edit', key: key.to_s, as: "#{key}_project_edit"
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
+        get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
       end
       get '/angular', to: 'projects#angular'
@@ -141,7 +137,6 @@ Dashboard::Application.routes.draw do
     get 'reset', to: 'script_levels#reset'
     get 'next', to: 'script_levels#next'
 
-
     # /s/xxx/level/yyy
     resources :script_levels, as: :levels, only: [:show], path: "/level", format: false
 
@@ -150,7 +145,12 @@ Dashboard::Application.routes.draw do
 
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", format: false do
-      resources :script_levels, only: [:show], path: "/puzzle", format: false
+      resources :script_levels, only: [:show], path: "/puzzle", format: false do
+        member do
+          # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
+          get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
+        end
+      end
     end
   end
 
@@ -179,25 +179,37 @@ Dashboard::Application.routes.draw do
 
   post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
+  post '/milestone/:user_id/:script_level_id/:level_id', :to => 'activities#milestone', :as => 'milestone_script_level'
+
+  get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
 
   # one-off internal reports
-  get '/admin/temp/hoc_signups', to: 'admin_reports#hoc_signups', as: 'hoc_signups'
+  get '/admin/temp/diversity_survey', to: 'admin_reports#diversity_survey', as: 'diversity_survey'
+
+  # HOC dashboards.
+  get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
+  get '/admin/hoc/event_signups', to: 'admin_hoc#event_signups', as: 'hoc_event_signups'
 
   # internal report dashboards
-  get '/admin/concepts', to: 'admin_reports#admin_concepts', as: 'admin_concepts'
-  get '/admin/funometer', to: 'admin_reports#funometer', as: 'funometer'
-  get '/admin/funometer/script/:script_id', to: 'admin_reports#funometer_by_script', as: 'funometer_by_script'
-  get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_reports#funometer_by_script_level', as: 'funometer_by_script_level'
-  get '/admin/levels(/:start_date)(/:end_date)(/filter/:filter)', to: 'admin_reports#level_completions', as: 'level_completions'
+  get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
   get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
   get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
   get '/admin/progress', to: 'admin_reports#admin_progress', as: 'admin_progress'
+  get '/admin/retention', to: 'admin_reports#retention', as: 'retention'
+  get '/admin/retention/stages', to: 'admin_reports#retention_stages', as: 'retention_stages'
   get '/admin/stats', to: 'admin_reports#admin_stats', as: 'admin_stats'
   get '/admin/usage', to: 'admin_reports#all_usage', as: 'all_usage'
   get '/admin/debug', to: 'admin_reports#debug'
 
+  # Fun-O-Meter dashboards.
+  get '/admin/funometer', to: 'admin_funometer#funometer', as: 'funometer'
+  get '/admin/funometer/script/:script_id', to: 'admin_funometer#funometer_by_script', as: 'funometer_by_script'
+  get '/admin/funometer/stage/:stage_id', to: 'admin_funometer#funometer_by_stage', as: 'funometer_by_stage'
+  get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_funometer#funometer_by_script_level', as: 'funometer_by_script_level'
+
   # internal search tools
-  get 'admin/search_for_teachers', to: 'admin_search#search_for_teachers', as: 'search_for_teachers'
+  get '/admin/find_students', to: 'admin_search#find_students', as: 'find_students'
+  get '/admin/search_for_teachers', to: 'admin_search#search_for_teachers', as: 'search_for_teachers'
   get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'admin_search#lookup_section'
 
@@ -206,8 +218,11 @@ Dashboard::Application.routes.draw do
   get '/admin/feature_mode', :to => 'feature_mode#show', as: 'feature_mode'
   post '/admin/feature_mode', :to => 'feature_mode#update', as: 'feature_mode_update'
 
-  get '/admin/assume_identity', to: 'reports#assume_identity_form', as: 'assume_identity_form'
-  post '/admin/assume_identity', to: 'reports#assume_identity', as: 'assume_identity'
+  get '/admin/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
+  post '/admin/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
+  get '/admin/confirm_email', to: 'admin_users#confirm_email_form', as: 'confirm_email_form'
+  post '/admin/confirm_email', to: 'admin_users#confirm_email', as: 'confirm_email'
+
   get '/admin/gatekeeper', :to => 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', :to => 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
@@ -223,13 +238,14 @@ Dashboard::Application.routes.draw do
 
   resources :zendesk_session, only: [:index]
 
-
   post '/report_abuse', :to => 'report_abuse#report_abuse'
   get '/report_abuse', :to => 'report_abuse#report_abuse_form'
 
-  get '/too_young', :to => redirect { |p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/' }
+  get '/too_young', :to => redirect { |_p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/' }
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
+
+  resources :peer_reviews
 
   concern :ops_routes do
     # /ops/district/:id
@@ -269,15 +285,92 @@ Dashboard::Application.routes.draw do
     concerns :ops_routes
   end
 
+  get '/plc/content_creator/show_courses_and_modules', to: 'plc/content_creator#show_courses_and_modules'
+  %w(courses learning_modules tasks course_units evaluation_questions).each do |object|
+    get '/plc/' + object, to: redirect('plc/content_creator/show_courses_and_modules')
+  end
+
+  get '/plc/user_course_enrollments/group_view', to: 'plc/user_course_enrollments#group_view'
+  get '/plc/user_course_enrollments/manager_view/:id', to: 'plc/user_course_enrollments#manager_view', as: 'plc_user_course_enrollment_manager_view'
+
+  namespace :plc do
+    root to: 'plc#index'
+    resources :courses
+    resources :learning_modules
+    resources :user_course_enrollments
+    resources :course_units
+    resources :enrollment_unit_assignments
+    resources :evaluation_questions
+  end
+
+  get '/plc/enrollment_evaluations/:unit_assignment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
+  post '/plc/enrollment_evaluations/:unit_assignment_id/submit_evaluation', to: 'plc/enrollment_evaluations#submit_evaluation'
+  get '/plc/enrollment_evaluations/:unit_assignment_id/preview_assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
+  post '/plc/enrollment_evaluations/:unit_assignment_id/confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments'
+
+  post '/plc/course_units/:id/submit_new_questions_and_answers', to: 'plc/course_units#submit_new_questions_and_answers'
+
+  concern :api_v1_pd_routes do
+    namespace :pd do
+      resources :workshops do
+        member do # See http://guides.rubyonrails.org/routing.html#adding-more-restful-actions
+          post :start
+          post :end
+        end
+        get :enrollments, action: 'index', controller: 'workshop_enrollments'
+        get :attendance, action: 'show', controller: 'workshop_attendance'
+        patch :attendance, action: 'update', controller: 'workshop_attendance'
+      end
+      resources :district_report, only: :index
+      resources :workshop_organizer_report, only: :index
+      resources :teacher_progress_report, only: :index
+      resources :course_facilitators, only: :index
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      concerns :api_v1_pd_routes
+    end
+  end
+
+  namespace :pd do
+    # React-router will handle sub-routes on the client.
+    get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
+    get 'workshop_dashboard', to: 'workshop_dashboard#index'
+
+    get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
+    post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
+    get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
+    get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
+
+    # This is a developer aid that allows previewing rendered mail views with fixed test data.
+    # The route is restricted so it only exists in development mode.
+    if Rails.env.development?
+      mount Pd::MailPreviewController => 'mail_preview'
+    end
+  end
+
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
+  get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   get '/dashboardapi/:action', controller: 'api'
+  get '/dashboardapi/v1/pd/k5workshops', to: 'api/v1/pd/workshops#k5_public_map_index'
 
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
   get '/api/user_progress/:script_name', to: 'api#user_progress', as: 'user_progress'
   get '/api/user_progress/:script_name/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
+  get '/api/user_progress/:script_name/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
   get '/api/user_progress', to: 'api#user_progress_for_all_scripts', as: 'user_progress_for_all_scripts'
   get '/api/:action', controller: 'api'
+
+  namespace :api do
+    namespace :v1 do
+      get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
+    end
+  end
+
+  get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: { format: 'json' }
 end

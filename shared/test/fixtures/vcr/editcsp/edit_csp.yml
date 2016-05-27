@@ -17,7 +17,7 @@ http_interactions:
       message: OK
     headers:
       X-Amzn-Requestid:
-      - CD8JHJPDCO0NKUKI2DAU26QLUBVV4KQNSO5AEMVJF66Q9ASUAAJG
+      - OLGN7OQK610IMDS9HQLBM5N82BVV4KQNSO5AEMVJF66Q9ASUAAJG
       X-Amz-Crc32:
       - '8729940'
       Content-Type:
@@ -25,10 +25,41 @@ http_interactions:
       Content-Length:
       - '226'
       Date:
-      - Tue, 19 Jan 2016 00:10:38 GMT
+      - Fri, 26 Feb 2016 19:21:36 GMT
     body:
       encoding: UTF-8
       string: '{"Count":6,"Items":[{"table_name":{"S":"_testTable"}},{"table_name":{"S":"_testTable"}},{"table_name":{"S":"table1"}},{"table_name":{"S":"table1"}},{"table_name":{"S":"table2"}},{"table_name":{"S":"table2"}}],"ScannedCount":6}'
     http_version: 
-  recorded_at: Tue, 19 Jan 2016 00:10:39 GMT
+  recorded_at: Fri, 26 Feb 2016 19:21:37 GMT
+- request:
+    method: post
+    uri: https://dynamodb.us-east-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: '{"TableName":"test_table_metadata","IndexName":"channel_id-table_name-index","KeyConditions":{"channel_id":{"AttributeValueList":[{"N":"1"}],"ComparisonOperator":"EQ"}},"AttributesToGet":["table_name"]}'
+    headers:
+      X-Amz-Target:
+      - DynamoDB_20120810.Query
+      Content-Length:
+      - '202'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amzn-Requestid:
+      - UFROUAMDUKN8CK0NFFGUCTCUSJVV4KQNSO5AEMVJF66Q9ASUAAJG
+      X-Amz-Crc32:
+      - '1028033629'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Content-Length:
+      - '165'
+      Date:
+      - Fri, 26 Feb 2016 19:21:37 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Count":4,"Items":[{"table_name":{"S":"_testTable"}},{"table_name":{"S":"new_table"}},{"table_name":{"S":"table1"}},{"table_name":{"S":"table2"}}],"ScannedCount":4}'
+    http_version: 
+  recorded_at: Fri, 26 Feb 2016 19:21:37 GMT
 recorded_with: VCR 3.0.0

@@ -1,3 +1,6 @@
+- content_for(:head) do
+  = javascript_include_tag 'js/levelbuilder'
+
 %h1 Levels
 %table
   %thead
@@ -26,7 +29,7 @@
   = link_to t('crud.new_model', model: Level.model_name.human), new_level_path
 #validation-error.validation-error{style: 'background-color: yellow'}
 :javascript
-  #{render partial: 'shared/ajax_submit', formats: [:js],  locals: {form_selector: '.clone_level'}}
+  window.levelbuilder.ajaxSubmit('.clone_level');
   $('.clone_level').on('ajax:beforeSend', function (e, xhr) {
     var validation_error = $('#validation-error').detach();
     $(e.target).parent().append(validation_error);

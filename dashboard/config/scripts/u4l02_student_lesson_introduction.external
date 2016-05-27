@@ -4,7 +4,7 @@ description 'description here'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 4: Lesson 02 - JavaScript Objects
+## Unit 4: Lesson 01 - JavaScript Objects
 
 # Background
 
@@ -30,14 +30,16 @@ person.age = 16;      // age is a <strong>named</strong> property with the <stro
 
 # Lesson
 
-* Video: Tutorial - JavaScript Objects
+* Tutorial Video: JavaScript Objects
 * Introduction to creating and manipulating objects in App Lab.
 * Develop an app for storing contacts using an array of objects.
 
 
 # Resources
 
-* Video: <a href="https://google.com" target="_blank"> Tutorial - JavaScript Objects</a>
+* Tutorial Video: JavaScript Objects
+
+<iframe width="480" height="270" src="https://www.youtube.com/embed/ZunUF_WGMb4?rel=0" frameborder="0" allowfullscreen></iframe>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

@@ -26,6 +26,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3
   }
 }]]></config>
   <blocks>
@@ -51,5 +55,48 @@
         </block>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
+                      <next>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="maze_moveForward">
+                              <next>
+                                <block type="maze_moveForward">
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnLeft</title>
+                                      <next>
+                                        <block type="maze_moveForward">
+                                          <next>
+                                            <block type="maze_moveForward"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

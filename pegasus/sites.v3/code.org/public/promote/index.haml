@@ -13,22 +13,16 @@ social:
 ---
 :javascript
   var petitionIncluded = false;
-  var promoteIncluded = false;
 
 -state ||= nil
 
 %script{:src=>"/js/jquery.placeholder.js"}
 
 #promote-page
-  %h1 Promote Computer Science
-
-  %div{style: "background-color:#f3f3f3; border-radius:4px; padding:20px; clear:both"}
-    %h2{style: "margin-top: 0px"} Action of the month: Do you live in California?
-    Currently, students who take computer science in California only get elective credit. Help make computer science count toward high school graduation in California.
-    %a{href: 'https://www.change.org/p/make-computer-science-count-in-california-csinca-makecscount', target: '_blank'} Sign Claire's petition on Change.org.
-  %br/
+  %h1{:style=>'margin-bottom:15px;'} Promote Computer Science
 
   %div{:id=>'us_content'}
+
     #petition-section.section.clear
       = view :petition
     :javascript
@@ -62,9 +56,10 @@ social:
 
 :javascript
   var petition;
-  var promote;
 
   $(document).ready()
   {
-    petition = new Petition();
+    if (petitionIncluded) {
+      petition = new Petition();
+    }
   }

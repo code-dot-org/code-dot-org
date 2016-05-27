@@ -23,7 +23,15 @@ zh:
           future: 不能在未來
   hello: 世界您好
   welcome_back: '歡迎回來，%{name}'
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: 送出
+  unsubmit: 不提交
+  previous_page: Previous page
+  next_page: Next page
+  cancel: 取消
+  okay: OK！
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 增加一位老師：
@@ -148,8 +156,6 @@ zh:
         subject: '加入%{teacher_name}老師在Code.org的班級。'
       student_disassociated:
         subject: 'Code.org 通知： %{student_name} 已不再是你的學生。'
-      teacher_disassociated:
-        subject: 'Code.org 通知： %{teacher_name} 已不再是你的老師。'
   reports:
     error:
       access_denied: 您不能讀取此人的統計資訊
@@ -225,7 +231,7 @@ zh:
       free_play:
         playlab: 製作一個App
         artist: 畫些什麼東西
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: 製作一個App
     user:
       classroom: 教師主頁
@@ -323,11 +329,29 @@ zh:
     heading_hoc2014: '<h2>一小時的程式設計課程</h2><h1>對所有年齡</h1>'
     heading_elementary: '<h2>20 小時課程</h2><h1>初學者(所有年齡)</h1>'
     heading_apps: '<h2>樂趣</h2><h1>每個人</h1>'
+    heading_tools: '<h2>為下一步的準備好了嗎？</h2><h1>高中的 JavaScript 工具</h1>'
     heading_legacy: '<h2>我們的一般課程</h2>適合<h1>所有年齡</h1>'
     your_gallery: 相片圖庫
     no_primary_course: 試試在 Code Studio 參加一個課程
     choose_next_course: 從下方課程中選擇一個進行體驗
     print_certificate: 列印證書
+    announcement_title: 公告
+    announcement_view_all: 全部查看
+    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+    announcement_button: 瞭解更多資訊
+    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: 在程式碼工作室中學習
     description: 任何人都可以學習電腦科學並透過程式碼來設計遊戲、app及藝術創作。
@@ -345,6 +369,7 @@ zh:
     help_from_html_old: 來自google 微軟 Fb及推特的工程師的協助創造了這些元素
     art_from_html: '當個創世神 Minecraft &#8482; &copy; %{current_year} Microsoft 著作權所有，並保留一切權利。<br />星際大戰 Star Wars &#8482; &copy; %{current_year} 迪士尼和盧卡斯影業著作權所有，並保留一切權利。<br />冰雪奇緣 Frozen &#8482; &copy; %{current_year} 迪士尼著作權所有，並保留一切權利。<br />冰原歷險記 Ice Age &#8482; &copy; %{current_year} 二十世紀福斯影片公司著作權所有，並保留一切權利。<br />憤怒鳥 Angry Birds &#8482; &copy; 2009年 %{current_year} Rovio 娛樂有限公司著作權所有，並保留一切權利。<br />植物大戰僵屍 Plants vs. Zombies &#8482; &copy; %{current_year} 美商藝電著作權所有，並保留一切權利。<br />阿甘妙世界 The Amazing World of Gumball 商標是 &copy; 2015年卡通頻道著作權所有，並保留一切權利。'
     art_from_html_old: '當個創世神 Minecraft &#8482; &copy; %{current_year} Microsoft 著作權所有，並保留一切權利。星際大戰 Star Wars &#8482; &copy; %{current_year} 迪士尼和盧卡斯影業著作權所有，並保留一切權利。冰雪奇緣 Frozen &#8482; &copy; %{current_year} 迪士尼著作權所有，並保留一切權利。冰原歷險記 Ice Age &#8482; &copy; %{current_year} 二十世紀福斯影片公司著作權所有，並保留一切權利。憤怒鳥 Angry Birds &#8482; &copy; 2009年 %{current_year} Rovio 娛樂有限公司著作權所有，並保留一切權利。植物大戰僵屍 Plants vs. Zombies &#8482; &copy; %{current_year} 美商藝電著作權所有，並保留一切權利。阿甘妙世界 The Amazing World of Gumball 商標是 &copy; 2015年卡通頻道著作權所有，並保留一切權利。'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: 由亞馬遜網路服務系統提供服務
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE 標誌以及 Hour of Code&reg; 都是 Code.org.的注冊商標。'
     copyright: 版權所有
@@ -417,6 +442,12 @@ zh:
       current: 目前的關卡
       unused: 未使用的關卡
   upsell:
+    applab:
+      title: App Lab
+      body: 應用程序實驗室是一個可以讓你簡單在編寫應用程式的程式設計環境。設計應用程式，代碼塊或 JavaScript 使它運作，然後在幾秒鐘內分享您的應用程式。
+      body_short: 設計應用程式，編寫代碼塊或 JavaScript 使它運作，然後在幾秒鐘內分享您的應用程式。
+      audience: 13歲以上
+      cta: 學習怎樣做
     hoc:
       title: 經典迷宮
       body: 請試試數百萬人已經體驗過的電腦科學基礎課程。
@@ -443,6 +474,11 @@ zh:
     minecraft:
       title: 當個創世神
       body: 使用程式來探索創世神的世界
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 4+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: 學生用程式畫出這些圖案 ！
     students_made_these_with_code: 學生們使用程式碼做了這些內容！
@@ -458,10 +494,10 @@ zh:
   landing:
     prerelease: "本課程還在 <span class='betatext'>beta</span>階段。這表示它不是本課程的最後版本，它會依據收到的回饋，作出修訂與改善。"
     prerelease_hoc2014: "本教程還在 <span class='betatext'>beta</span>階段。它會依據收到的回饋，作出修訂與改善。"
-    feedback: 提供意見
     report_bug: 報告錯誤
     support: 請求幫助
     support_url: //support.code.org
+    help_resources: 説明和資源
   multi:
     wrong_title: 不正確的答案
     wrong_body: 你的答案不正確。請再試一次 ！
@@ -469,6 +505,29 @@ zh:
     correct_body: 這是正確的答案。
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: 謝謝
+    wrong_body: 感謝您提交的答案。
+    correct_title: 謝謝
+    correct_body: 感謝您提交的答案。
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: 謝謝
+    wrong_body: 感謝您提交的答案
+    correct_title: 謝謝
+    correct_body: 感謝您提交的答案
+  level_group-submittable:
+    wrong_title: 謝謝
+    wrong_body: 感謝您提交的答案
+    correct_title: 謝謝
+    correct_body: 感謝您提交的答案
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: 不正確的解決方案
     wrong_body: 您的解決方案不正確。請再試一次 ！
@@ -486,6 +545,8 @@ zh:
     placeholder: 在這裡輸入你的答案
     open_response_title: 謝謝
     open_response_body: 感謝您的回應！
+    correct_title: 正確
+    correct_body: 這是正確的答案。
   dialog:
     ok: 確定
     startover_title: 你確定要重新開始嗎？
@@ -539,6 +600,7 @@ zh:
     completed_perfect: 完美完成
     furthest_level_attempted: 嘗試到的最遠關卡
     assessment: 習題
+    submitted: 已提交
   studio:
     courses_working_on: 您正在進行的課程
     completed_courses: 已完成的課程
@@ -556,6 +618,9 @@ zh:
     share: 分享
     share_title: 分享專案
     share_copy_link: 複製連結：
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: 退出
     more: 更多
     name: 你的名字
@@ -595,3 +660,21 @@ zh:
           other: 其他
         detail: 依據您所回報的內容，請盡可能提供更詳盡的細節。
         acknowledge: '送出這些資訊，代表你已經了解它將依照 %{link_start_privacy}隱私權政策%{link_end} 以及 %{link_start_tos}服務條款%{link_end}進行處理及保管。'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+  components:
+    icon_library:
+      search_placeholder_text: 搜索圖示...
+      no_icons_found: 沒有圖示
+  flex_category:
+    required: 概觀
+    content: Content
+    practice: Teacher Practices

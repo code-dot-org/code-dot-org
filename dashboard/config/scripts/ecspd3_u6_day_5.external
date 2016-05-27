@@ -1,0 +1,32 @@
+name 'ECSPD3-u6 day 5'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+## Unit 6 Lessons > Days 5 
+ 
+#### Concepts Covered  
+Build the base of the robot.
+ 
+#### Lesson Overview 
+Groups of students will get their box/kit and pull out the manual start going through the steps on p. 8-21 with your students to make sure they understand the format of the manual, be able to follow the instructions in order to build the base of the robot.
+<br><br> 
+ 
+#### Lesson Resources 
+##### <a href="https://web.archive.org/web/20150423124112/http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=276" target=_blank>Lesson Plan Link>> </a>
+ 
+- LEGO Mindstorms NXT or EV3 User Guide/Manual
+
+>#### Hints from an ECS Teacher: 
+In order to keep the manuals in one piece, consider laminating or puttting them in protective sleeves to keep them safe. 
+ 
+#### Things to keep in mind 
+Make sure to have the batteries charged so that your students will be able to use their robots. 
+<br><br> 
+
+Click “Continue” below to learn about the next lesson.  
+ 
+<br/><br/> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

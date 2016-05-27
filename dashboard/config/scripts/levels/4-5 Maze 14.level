@@ -12,5 +12,23 @@
     "step_mode": 1
   }
 }]]></config>
-  <blocks/>
+  <blocks>
+    <solution_blocks>
+      <xml>
+        <block type="maze_moveForward">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_moveForward"/>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
 </Maze>

@@ -124,6 +124,8 @@ DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
   var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
   return DropletFunctionTooltipMarkup({
     functionName: tooltipInfo.functionName,
+    isProperty: tooltipInfo.isProperty,
+    tipPrefix: tooltipInfo.tipPrefix,
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,

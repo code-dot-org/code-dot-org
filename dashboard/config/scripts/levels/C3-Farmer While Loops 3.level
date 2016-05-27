@@ -42,5 +42,45 @@
     <required_blocks>
       <xml/>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
+                  <next>
+                    <block type="maze_untilBlockedOrNotClear">
+                      <title name="DIR">pilePresent</title>
+                      <statement name="DO">
+                        <block type="maze_dig"/>
+                      </statement>
+                      <next>
+                        <block type="maze_untilBlockedOrNotClear">
+                          <title name="DIR">holePresent</title>
+                          <statement name="DO">
+                            <block type="maze_fill"/>
+                          </statement>
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnLeft</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

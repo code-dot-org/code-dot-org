@@ -3,7 +3,7 @@ $VERBOSE = true
 
 def there_can_be_only_one_pid(name)
   pidfile = "/tmp/#{name}.pid"
-  if File.exists?(pidfile)
+  if File.exist?(pidfile)
     oldpid = File.read(pidfile).to_i
     # does that process exist?
     exists = true
@@ -34,7 +34,7 @@ servers.each do |m|
   current_log = "#{DIR}/#{m}/log/milestone.log"
 
   append = ''
-  if not recent_log.nil? and File.exists?(current_log) and (File.mtime(recent_log) < File.mtime(current_log))
+  if !recent_log.nil? && File.exist?(current_log) && (File.mtime(recent_log) < File.mtime(current_log))
     append = '--append'
   end
 

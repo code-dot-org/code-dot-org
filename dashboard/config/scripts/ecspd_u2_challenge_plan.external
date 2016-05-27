@@ -1,7 +1,6 @@
 name 'ECSPD U2 Challenge Plan'
 title 'title'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Planning a Timeline for the Challenge
 

@@ -526,10 +526,9 @@
           run button to see what you've programmed.
       6:
         image: notes/playlab_intro_6.png
-        text: Get started and by the end, you'll be able to create your own game with
-          all kinds of players that can interact, turn happy or sad, score points,
-          or throw fireballs, or even vanish each other. It's all up to you and the
-          game you want to make.
+        text: Pradėk mokytis, o po to galėsi sukurti savo žaidimą su įvairiais veikėjais,
+          kurie gali bendrauti, keisti savo nuotaiką, pelnyti taškus, mėtyti ugnies
+          kamuolius ir panašiai. Viskas priklauso nuo tavo fantazijos.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
@@ -2214,9 +2213,9 @@
           see what you've programmed.
       7:
         image: notes/infinity_playlab_intro_7.png
-        text: Get started and by the end you'll be able to create your own game with
-          these amazing actors that can interact, score points, throw microbots, cherries,
-          saucepans, sparkles, and ice.. and vanish each other. It's all up to you!
+        text: Pradėk mokytis, o po to galėsi sukurti savo žaidimą su įvairiais veikėjais,
+          kurie gali bendrauti, pelnyti taškus, mėtyti robotus, vyšnias, žiežirbas,
+          ledus ir panašiai. Viskas priklauso nuo tavo fantazijos!
     infinity_playlab_repeat_forever:
       1:
         image: notes/infinity_playlab_repeat_forever_1.png
@@ -3008,9 +3007,9 @@
           have your blocks in place, hit the run button to see what you programmed.
       9:
         image: notes/gumball_intro_9.JPG
-        text: Get started and by the end you'll be able to create your own game with
-          all kinds of players that can interact, score points, throw things, and
-          vanish each other. It's all up to you!
+        text: Pradėk mokytis, o po to galėsi sukurti savo žaidimą su įvairiais veikėjais,
+          kurie gali bendrauti, pelnyti taškus, mėtyti daiktus ir panašiai. Viskas
+          priklauso nuo tavo fantazijos!
     gumball_events:
       1:
         image: notes/gumball_events_1.JPG
@@ -3092,9 +3091,9 @@
           have your blocks in place, hit the run button to see what you programmed.
       9:
         image: notes/iceage_intro_9.JPG
-        text: Get started and by the end you'll be able to create your own game with
-          all kinds of players that can interact, score points, throw things, and
-          vanish each other. It's all up to you!
+        text: Pradėk mokytis, o po to galėsi sukurti savo žaidimą su įvairiais veikėjais,
+          kurie gali bendrauti, keisti savo nuotaiką, pelnyti taškus, mėtyti daiktus
+          ir panašiai. Viskas priklauso nuo tavo fantazijos!
     iceage_events:
       1:
         image: notes/iceage_events_1.JPG

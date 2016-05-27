@@ -18,6 +18,10 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,-1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "7"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3
   }
 }]]></config>
   <blocks>
@@ -39,5 +43,34 @@
         <block type="maze_honey"/>
       </xml>
     </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveWest">
+              <next>
+                <block type="maze_nectar">
+                  <next>
+                    <block type="maze_moveNorth">
+                      <next>
+                        <block type="maze_moveNorth">
+                          <next>
+                            <block type="maze_moveNorth">
+                              <next>
+                                <block type="maze_honey"/>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

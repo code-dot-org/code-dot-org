@@ -4,9 +4,12 @@
  */
 'use strict';
 
-module.exports = function (sessionStorage, $) {
+var $ = require('jquery-shim');
+var sessionStorage = window.sessionStorage;
 
-var clientState = {};
+var clientState = module.exports = {};
+
+clientState.queryParams = require('./utils').queryParams;
 
 /**
  * Number of days before client state cookie expires.
@@ -22,34 +25,19 @@ clientState.EXPIRY_DAYS = 365;
  */
 var MAX_LINES_TO_SAVE = 1000;
 
+/**
+ * Values larger than this result are server-dependent and shouldn't be cached
+ * in client storage.
+ */
+clientState.MAXIMUM_CACHABLE_RESULT = 999;
+
 var COOKIE_OPTIONS = {expires: clientState.EXPIRY_DAYS, path: '/'};
 
-clientState.reset = function() {
+clientState.reset = function () {
   try {
     $.removeCookie('lines', {path: '/'});
     sessionStorage.clear();
   } catch (e) {}
-};
-
-/**
- * Get the URL querystring params
- * @param name {string=} Optionally pull a specific param.
- * @return {object|string} Hash of params, or param string if `name` is specified.
- */
-clientState.queryParams = function (name) {
-  var pairs = location.search.substr(1).split('&');
-  var params = {};
-  pairs.forEach(function (pair) {
-    var split = pair.split('=');
-    if (split.length === 2) {
-      params[split[0]] = split[1];
-    }
-  });
-
-  if (name) {
-    return params[name];
-  }
-  return params;
 };
 
 /**
@@ -98,7 +86,7 @@ clientState.writeSourceForLevel = function (scriptName, levelId, timestamp, sour
  * @param {number} levelId The level
  * @returns {number}
  */
-clientState.levelProgress = function(scriptName, levelId) {
+clientState.levelProgress = function (scriptName, levelId) {
   var progressMap = clientState.allLevelsProgress();
   return (progressMap[scriptName] || {})[levelId] || 0;
 };
@@ -111,7 +99,7 @@ clientState.levelProgress = function(scriptName, levelId) {
  * @param {Number} b
  * @return {Number} The better result.
  */
-clientState.mergeActivityResult = function(a, b) {
+clientState.mergeActivityResult = function (a, b) {
   a = a || 0;
   b = b || 0;
   if (a === 0) {
@@ -124,22 +112,41 @@ clientState.mergeActivityResult = function(a, b) {
 };
 
 /**
- * Tracks the users progress after they click run
+ * Tracks the users progress after they click run. Results larger than 999 are
+ * reserved for server-dependent changes and can't be cached locally.
  * @param {boolean} result - Whether the user's solution is successful
  * @param {number} lines - Number of lines of code user wrote in this solution
  * @param {number} testResult - Indicates pass, fail, perfect
  * @param {string} scriptName - Which script this is for
  * @param {number} levelId - Which level this is for
  */
-clientState.trackProgress = function(result, lines, testResult, scriptName, levelId) {
+clientState.trackProgress = function (result, lines, testResult, scriptName, levelId) {
   if (result && isFinite(lines)) {
     addLines(lines);
   }
 
   var savedResult = clientState.levelProgress(scriptName, levelId);
-  if (savedResult !== clientState.mergeActivityResult(savedResult, testResult)) {
+  if (testResult <= clientState.MAXIMUM_CACHABLE_RESULT && savedResult !== clientState.mergeActivityResult(savedResult, testResult)) {
     setLevelProgress(scriptName, levelId, testResult);
   }
+};
+
+/**
+ * Write down user progress for an entire script.
+ * @param {string} scriptName
+ * @param {Object<String, number>} progress
+ */
+clientState.batchTrackProgress = function (scriptName, progress) {
+  var data = {};
+  for (let level of Object.keys(progress)) {
+    if (progress[level] && progress[level] <= clientState.MAXIMUM_CACHABLE_RESULT) {
+      data[level] = progress[level];
+    }
+  }
+
+  var progressMap = clientState.allLevelsProgress();
+  progressMap[scriptName] = data;
+  safelySetItem('progress', JSON.stringify(progressMap));
 };
 
 /**
@@ -162,11 +169,11 @@ function setLevelProgress(scriptName, levelId, progress) {
  * Returns a map from (string) level id to progress value.
  * @return {Object<String, number>}
  */
-clientState.allLevelsProgress = function() {
+clientState.allLevelsProgress = function () {
   var progressJson = sessionStorage.getItem('progress');
   try {
     return progressJson ? JSON.parse(progressJson) : {};
-  } catch(e) {
+  } catch (e) {
     // Recover from malformed data.
     return {};
   }
@@ -176,7 +183,7 @@ clientState.allLevelsProgress = function() {
  * Returns the number of lines completed from the cookie.
  * @returns {number}
  */
-clientState.lines = function() {
+clientState.lines = function () {
   var linesStr = $.cookie('lines');
   return isFinite(linesStr) ? Number(linesStr) : 0;
 };
@@ -196,7 +203,7 @@ function addLines(addedLines) {
  * @param videoId
  * @returns {*}
  */
-clientState.hasSeenVideo = function(videoId) {
+clientState.hasSeenVideo = function (videoId) {
   return hasSeenVisualElement('video', videoId);
 };
 
@@ -213,7 +220,7 @@ clientState.recordVideoSeen = function (videoId) {
  * @param calloutId
  * @returns {boolean}
  */
-clientState.hasSeenCallout = function(calloutId) {
+clientState.hasSeenCallout = function (calloutId) {
   return hasSeenVisualElement('callout', calloutId);
 };
 
@@ -283,7 +290,3 @@ function safelySetItem(key, value) {
     }
   }
 }
-
-return clientState;
-
-};

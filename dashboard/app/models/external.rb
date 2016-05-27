@@ -15,6 +15,7 @@
 #  type                     :string(255)
 #  md5                      :string(255)
 #  published                :boolean          default(FALSE), not null
+#  notes                    :text(65535)
 #
 # Indexes
 #
@@ -29,5 +30,9 @@ class External < DSLDefined
     description 'description here'
     href 'path/to/html/in/asset/folder'
     TEXT
+  end
+
+  def icon
+    'fa-file-text-o'
   end
 end

@@ -95,7 +95,7 @@ class NetSimApi < Sinatra::Base
   get %r{/v3/netsim/([^/]+)$} do |shard_id|
     dont_cache
     content_type :json
-    table_map = parse_table_map_from_query_string(CGI::unescape(request.query_string))
+    table_map = parse_table_map_from_query_string(CGI.unescape(request.query_string))
     RedisTable.get_tables(get_redis_client, shard_id, table_map).to_json
   end
 
@@ -116,7 +116,7 @@ class NetSimApi < Sinatra::Base
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)/delete$} do |shard_id, table_name, id|
+  post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)/delete$} do |_shard_id, _table_name, _id|
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 
@@ -128,7 +128,7 @@ class NetSimApi < Sinatra::Base
   delete %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
     content_type :json
-    ids = parse_ids_from_query_string(CGI::unescape(request.query_string))
+    ids = parse_ids_from_query_string(CGI.unescape(request.query_string))
     delete_many(shard_id, table_name, ids)
     no_content
   end
@@ -138,7 +138,7 @@ class NetSimApi < Sinatra::Base
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/netsim/([^/]+)/(\w+)/delete$} do |shard_id, table_name|
+  post %r{/v3/netsim/([^/]+)/(\w+)/delete$} do |_shard_id, _table_name|
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 
@@ -159,7 +159,7 @@ class NetSimApi < Sinatra::Base
   #         current user is the teacher who owns the shard indicated by the
   #         shard_id parameter.
   def allowed_to_delete_shard?(shard_id)
-    admin? or owns_shard? shard_id
+    admin? || owns_shard?(shard_id)
   end
 
   # @param [String] shard_id - The shard we're checking ownership for.
@@ -182,7 +182,7 @@ class NetSimApi < Sinatra::Base
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/netsim/([^/]+)/delete$} do |shard_id|
+  post %r{/v3/netsim/([^/]+)/delete$} do |_shard_id|
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 
@@ -203,7 +203,7 @@ class NetSimApi < Sinatra::Base
   #
   post %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
-    unsupported_media_type unless has_json_utf8_headers(request)
+    unsupported_media_type unless has_json_utf8_headers?(request)
 
     # Parse JSON
     begin
@@ -291,8 +291,8 @@ class NetSimApi < Sinatra::Base
   # @param [Hash] message - The message we're validating
   # @return [String] a validation error, or nil if no problems were found
   def validate_message(shard_id, message)
-    # TODO validate the base64
-    # TODO this is wildly inefficient, particularly when validating
+    # TODO: Validate the base64.
+    # TODO: This is wildly inefficient, particularly when validating.
     # multi-insert messages
     node_exists = get_table(shard_id, TABLE_NAMES[:node]).to_a.any? do |node|
       node['id'] == message['simulatedBy']
@@ -309,7 +309,7 @@ class NetSimApi < Sinatra::Base
   def validate_wire(shard_id, wire)
     # Check for another wire between the same nodes in the same direction.
     wire_already_exists = get_table(shard_id, TABLE_NAMES[:wire]).to_a.any? do |stored_wire|
-      stored_wire['localNodeID'] == wire['localNodeID'] and stored_wire['remoteNodeID'] == wire['remoteNodeID']
+      stored_wire['localNodeID'] == wire['localNodeID'] && stored_wire['remoteNodeID'] == wire['remoteNodeID']
     end
     return VALIDATION_ERRORS[:conflict] if wire_already_exists
     nil
@@ -322,7 +322,7 @@ class NetSimApi < Sinatra::Base
   #
   post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
-    unsupported_media_type unless has_json_utf8_headers(request)
+    unsupported_media_type unless has_json_utf8_headers?(request)
 
     begin
       table = get_table(shard_id, table_name)
@@ -336,10 +336,10 @@ class NetSimApi < Sinatra::Base
     content_type :json
     value.to_json
   end
-  patch %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
+  patch %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |_shard_id, _table_name, _id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
-  put %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
+  put %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |_shard_id, _table_name, _id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
 
@@ -390,8 +390,8 @@ class NetSimApi < Sinatra::Base
   #
   # @param [Request] request
   # @return [Boolean]
-  def has_json_utf8_headers(request)
-    request.content_type.to_s.split(';').first == 'application/json' and
+  def has_json_utf8_headers?(request)
+    request.content_type.to_s.split(';').first == 'application/json' &&
         request.content_charset.to_s.downcase == 'utf-8'
   end
 
@@ -422,7 +422,7 @@ class NetSimApi < Sinatra::Base
     wire_table = get_table(shard_id, TABLE_NAMES[:wire])
     wire_ids = wire_table.to_a.select {|wire|
       node_ids.any? { |node_id|
-        wire['localNodeID'] == node_id or wire['remoteNodeID'] == node_id
+        wire['localNodeID'] == node_id || wire['remoteNodeID'] == node_id
       }
     }.map {|wire|
       wire['id']
@@ -456,7 +456,7 @@ end
 # @private
 def parse_table_map_from_query_string(query_string)
   {}.tap do |result|
-    CGI::parse(query_string)['t[]'].each do |tv|
+    CGI.parse(query_string)['t[]'].each do |tv|
       table, min_id = tv.split('@')
       result[table] = min_id.to_i  # defaults to 0 for invalid ints.
     end
@@ -468,7 +468,7 @@ end
 # are simply omitted from the result.
 def parse_ids_from_query_string(query_string)
   [].tap do |ids|
-    CGI::parse(query_string)['id[]'].each do |id|
+    CGI.parse(query_string)['id[]'].each do |id|
       ids << Integer(id, 10) rescue ArgumentError
     end
   end

@@ -14,17 +14,17 @@ def puzzles(has_teacher)
     where("id #{has_teacher} AND users.birthday is not null").
     where("users.user_type = 'student'").
     count
-  
+
   levels / users.to_f
 end
 
 puts 'all users without teachers'
-puts puzzles(false) 
+puts puzzles(false)
 puts 'all users with teachers'
 puts puzzles(true)
 
 # count average number of puzzles completed
-def puzzles(has_teacher)
+def courses_1_2_3_puzzles(has_teacher)
   script_ids = %w(course1 course2 course3).map do |name|
     Script.find_by_name(name).id
   end
@@ -43,14 +43,13 @@ def puzzles(has_teacher)
     where("users.user_type = 'student'").
     where("users.id in (select distinct user_id from user_scripts where script_id in (#{script_ids.join(',')}))").
     count.to_f
-  
-  levels / users
-  users
+
+  # WARNING: The division by levels was added as part of a cleanup PR, not as
+  # part of the original script.
+  users / levels
 end
 
-
 puts 'course1-3 users without teachers'
-puts puzzles(false) 
+puts courses_1_2_3_puzzles(false)
 puts 'course1-3 users with teachers'
-puts puzzles(true)
- 
+puts courses_1_2_3_puzzles(true)

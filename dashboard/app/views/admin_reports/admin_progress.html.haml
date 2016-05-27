@@ -1,37 +1,40 @@
 %h1 Admin progress
 
-%table
-  %tr
-    %td{style: 'padding: 0px; vertical-align: top;'}
-      %table{style: 'width: 150px; table-layout: fixed;'}
-        %tr.report_row
-          %th{style: 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 5px;'}= 'Signed In Users'
-        %tr.report_row{class: 'report_tall_row'}
-          %td.fixed_width_cell
-            Levels attempted
-        %tr.report_row{class: 'report_tall_row'}
-          %td.fixed_width_cell
-            Levels passed
-        %tr.report_row
-    %td{style: 'padding: 0px;'}
-      %div{style: 'overflow-x: scroll; width: 800px; margin: 0px; padding: 0px;'}
-        %table{style:"width: #{@all_script_levels.length * 35}px; table-layout: fixed;"}
-          %col{width: '35px'}
+- if @user_count
+  %table
+    %tr
+      %td{style: 'padding: 0px; vertical-align: top;'}
+        %table{style: 'width: 150px; table-layout: fixed;'}
           %tr.report_row
-            - @stage_map.each_pair do |game, levels|
-              %th{colspan: levels.length, style: 'overflow: hidden;'}= game.name
+            %th{style: 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 5px;'}= 'Signed In Users'
           %tr.report_row{class: 'report_tall_row'}
-            - @all_script_levels.each do |sl|
-              - attempt_pct = @levels_attempted[sl.level_id] * 100 / @user_count
-
-              %td{class: 'report_cell', style: "background-color: hsl(#{attempt_pct}, 100%, 40%);"}
-                #{attempt_pct}%
+            %td.fixed_width_cell
+              Levels attempted
           %tr.report_row{class: 'report_tall_row'}
-            - @all_script_levels.each do |sl|
-              - passed_pct = @levels_passed[sl.level_id] * 100 / @user_count
-
-              %td{class: 'report_cell', style: "background-color: hsl(#{passed_pct}, 100%, 40%);"}
-                #{passed_pct}%
+            %td.fixed_width_cell
+              Levels passed
           %tr.report_row
+      %td{style: 'padding: 0px;'}
+        %div{style: 'overflow-x: scroll; width: 800px; margin: 0px; padding: 0px;'}
+          %table{style:"width: #{@all_script_levels.length * 35}px; table-layout: fixed;"}
+            %col{width: '35px'}
+            %tr.report_row
+              - @stage_map.each_pair do |game, levels|
+                %th{colspan: levels.length, style: 'overflow: hidden;'}= game.name
+            %tr.report_row{class: 'report_tall_row'}
+              - @all_script_levels.each do |sl|
+                - attempt_pct = @levels_attempted[sl.level_id] * 100 / @user_count
+
+                %td{class: 'report_cell', style: "background-color: hsl(#{attempt_pct}, 100%, 40%);"}
+                  #{attempt_pct}%
+            %tr.report_row{class: 'report_tall_row'}
+              - @all_script_levels.each do |sl|
+                - passed_pct = @levels_passed[sl.level_id] * 100 / @user_count
+
+                %td{class: 'report_cell', style: "background-color: hsl(#{passed_pct}, 100%, 40%);"}
+                  #{passed_pct}%
+            %tr.report_row
+- else
+  %h2 Error: @user_count does not exist.
 
 %h3= link_to '<< Back to admin stats', admin_stats_path

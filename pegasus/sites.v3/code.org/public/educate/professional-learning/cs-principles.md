@@ -7,7 +7,7 @@ nav: plc_csp_nav
 <iframe width="600" height="337" src="https://www.youtube.com/embed/HoKRZRI9IDk" frameborder="0" allowfullscreen></iframe>
 <br />
 
-The Code.org Computer Science Principles (CSP) Professional Learning Program is an intensive professional learning program for high school educators who are interested in teaching Code.org’s CSP course. This program is designed to prepare educators to provide high quality instruction, based on the CSP curriculum, tools and approach to students in their classrooms. 
+The Code.org Computer Science Principles (CSP) Professional Learning Program is an intensive professional learning program for high school educators who are interested in teaching Code.org’s CSP course. This program is designed to prepare educators to provide high quality instruction, based on the [CSP curriculum](/educate/csp), tools and approach to students in their classrooms. 
 
 ## What does a Code.org CSP Educator do?
 If accepted into the Code.org CSP Professional Learning Program, you will:

@@ -9,7 +9,7 @@ var commonMsg = require('./locale');
  * Install extensions to Blockly's language and JavaScript generator
  * @param blockly instance of Blockly
  */
-exports.install = function(blockly, blockInstallOptions) {
+exports.install = function (blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
 
@@ -64,7 +64,7 @@ function installControlsRepeatDropdown(blockly) {
 
   blockly.Blocks.controls_repeat_dropdown = {
     // Repeat n times (internal number) with a customizable dropdown of # choices.
-    init: function() {
+    init: function () {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
       this.setHSV(322, 0.90, 0.95);
       this.appendDummyInput()
@@ -85,7 +85,7 @@ function installNumberDropdown(blockly) {
 
   blockly.Blocks.math_number_dropdown = {
     // Numeric value with a customizable dropdown.
-    init: function() {
+    init: function () {
       this.setHelpUrl(blockly.Msg.MATH_NUMBER_HELPURL);
       this.setHSV(258, 0.35, 0.62);
       this.appendDummyInput()
@@ -101,7 +101,7 @@ function installNumberDropdown(blockly) {
 function installPickOne(blockly) {
   blockly.Blocks.pick_one = {
     // Repeat n times (internal number).
-    init: function() {
+    init: function () {
       this.setHSV(322, 0.90, 0.95);
 
       // Not localized as this is only used by level builders
@@ -120,7 +120,7 @@ function installPickOne(blockly) {
 function installCategory(blockly) {
   blockly.Blocks.category = {
     // Repeat n times (internal number).
-    init: function() {
+    init: function () {
       this.setHSV(322, 0.90, 0.95);
       this.setInputsInline(true);
 

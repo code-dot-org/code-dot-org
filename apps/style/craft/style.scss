@@ -1,5 +1,6 @@
 $root: '/blockly/media/craft/'; //TODO: Parameterize for asset pipeline
 
+@import 'color';
 @import '../common';
 @import 'font';
 
@@ -11,8 +12,6 @@ $footer-background: #4E4E4E;
 $footer-text–and-arrow: #969292;
 $grabber-dots: #4F4F4F;
 $main-blockspace-background: rgb(161, 161, 161);// #8B8B8B;
-$start-over-show-code-button-background: #606060;
-$start-over-show-code-text: #BFBFBF;
 $callout-fallback-border-color: $very-dark-gray;
 
 $original-background-color: #F2F2F2;
@@ -71,15 +70,6 @@ body {
 
 #headers {
   background-color: $blockly-header !important;
-}
-
-.workspace-header-button {
-  background-color: $start-over-show-code-button-background !important;
-  color: $start-over-show-code-text;
-  border: none;
-  &:hover {
-    color: white;
-  }
 }
 
 .blocklySvg {
@@ -303,7 +293,7 @@ $height-to-width: 434 / 477;
   #select-character-text {
     line-height: 50px;
     font-size: 22px;
-    color: #e7e8ea;
+    color: $lightest_gray;
   }
 
   .minecraft-character {
@@ -432,7 +422,7 @@ $height-to-width: 434 / 477;
   #select-house-text {
     line-height: 50px;
     font-size: 22px;
-    color: #e7e8ea;
+    color: $lightest_gray;
   }
 
 
@@ -721,7 +711,7 @@ $height-to-width: 434 / 477;
   width: 100%;
 }
 
-.dash_modal {
+.minecraft .dash_modal {
   top: 80px;
   margin-left: -340px;
 
@@ -745,7 +735,7 @@ $height-to-width: 434 / 477;
       margin-right: -32px;
     }
 
-    margin-top: -100px;
+    margin-top: -115px;
     width: auto;
   }
 
@@ -753,7 +743,7 @@ $height-to-width: 434 / 477;
     @include mc-x-close-button();
   }
 
-  .modal-content .lines-of-code-message {
+  .modal-content .lines-of-code-message, .show-code summary {
     color: $lighter_gray;
   }
 
@@ -761,6 +751,10 @@ $height-to-width: 434 / 477;
     margin-left: -100px;
     html[dir=rtl] & {
       margin-right: -100px;
+      margin-left: 0;
+    }
+
+    .generated-code-container {
       margin-left: 0;
     }
   }
@@ -827,10 +821,6 @@ $height-to-width: 434 / 477;
   #feedbackButtons:after {
     display: none;
   }
-
-  .after-feedback-buttons {
-    clear: both;
-  }
 }
 
 // callout styling
@@ -888,6 +878,10 @@ $height-to-width: 434 / 477;
   }
 }
 
+.ieVersion9 #open-workspace {
+  background-color: $very-dark-gray;
+}
+
 .cdo-qtips .qtip-tip {
   background: url("#{$root}Sliced_Parts/Callout_Tail.png") no-repeat center center;
   width: 66px !important;
@@ -933,4 +927,3 @@ $height-to-width: 434 / 477;
   bottom: -66px !important;
   margin-left: -33px !important;
 }
-

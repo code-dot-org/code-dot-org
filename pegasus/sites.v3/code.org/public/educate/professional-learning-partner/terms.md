@@ -11,15 +11,16 @@ nav: plc_plp_nav
 - Provide a dedicated Professional Learning Partner Program Manager who will participate fully in the Program Manager onboarding & on-going program management responsibilities. (this is a 0.15 FTE time commitment at first, but will grow with time)
 - Attend our Facilitation Summit, May 20-22, 2016 in New Orleans, LA.
 - Attend our 5-day Code.org TeacherCon with teachers from your state
-	- June 20-24 in Atlanta, GA - states attending (AL, FL, GA, KY, IN, NC, OH)
-	- July 18-22 in Salt Lake City, UT - states attending (AZ, CA, ID, MD, NV, TX, UT)
-	- August 8-12 in Chicago, IL - states attending (IL, MA, MI, NJ, NY, WA)
+	- June 20-24 in Atlanta, GA - states attending (AL, FL, GA, KY, IN, MD, NC, OH, TX)
+	- July 18-22 in Salt Lake City, UT - states attending (AZ, CA, ID, NV, UT, WA)
+	- August 8-12 in Chicago, IL - states attending (IL, MA, MI, NJ, NY)
 - Attend our Professional Learning Partner Program Manager Summit, September 26-27, 2016.
 - Organize and host quality, local workshops for Code.org’s District Partners implementing Code.org’s high school and middle school programs, with Code.org-accredited facilitators
 	- In Year 1 (2016-17) this is for the (AP) Computer Science Principles course. 
 	- In Year 2 (2017-18) this is for <a href="/educate/plc/csp" target=_blank>CS Principles</a> AND <a href="/educate/csd" target=_blank>CS Discoveries</a>.	
 	- In initial years, this is for four 1-day professional learning workshops during the school year per course, to provide teachers who have attended our summer conferences with continuing professional learning during the school year. Timing of workshops could be adjusted to local needs.
 	- In future years we hope your commitment can eventually include taking full responsibility of all of Code.org’s professional learning programs in the region.
+- Organize and host a 1-day workshop for counselors and administrators of teachers participanting in Code.org's professional learning programs.
 - Contract with and compensate local Code.org-accredited facilitators to lead the professional learning workshops.
 - Build, grow and sustain a local community of computer science educators (or join an existing community)
 	- In Year 1 (2016-17): 

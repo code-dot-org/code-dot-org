@@ -41,6 +41,7 @@ class HttpCache
       'videos_seen',
       'callouts_seen',
       'pm',
+      'rack.session',
       session_key,
       storage_id,
     ]
@@ -66,7 +67,7 @@ class HttpCache
               /v3/*
               /private*
             ) +
-            # Todo: Collapse these paths into /private to simplify Pegasus caching config
+            # TODO: Collapse these paths into /private to simplify Pegasus caching config.
             %w(
               /create-company-profile*
               /edit-company-profile*
@@ -107,8 +108,23 @@ class HttpCache
       dashboard: {
         behaviors: [
           {
-            path: '/v3/assets/*',
+            path: %w(
+              /v3/assets/*
+              /v3/animations/*
+            ),
             headers: LANGUAGE_HEADER,
+            cookies: whitelisted_cookies
+          },
+          {
+            # Pass through the user agent to the /api/user_progress and
+            # /milestone actions so the activity monitor can track script
+            # completion by user agent. These responses are never cached so this
+            # won't hurt cachability.
+            path: %w(
+              /api/user_progress/*
+              /milestone/*
+            ),
+            headers: LANGUAGE_HEADER + ['User-Agent'],
             cookies: whitelisted_cookies
           },
           {

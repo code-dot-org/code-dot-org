@@ -1,8 +1,12 @@
+/* global dashboard */
+
 // For proxying non-https assets
 var MEDIA_PROXY = '//' + location.host + '/media?u=';
 
 // starts with http or https
 var ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
+
+var ICON_PREFIX = require('../applab/constants').ICON_PREFIX;
 
 var assetPathPrefix = "/v3/assets/";
 var channelId;
@@ -25,8 +29,10 @@ module.exports.init = function (config) {
  * @returns {string}
  */
 module.exports.fixPath = function (filename) {
-
-  if (ABSOLUTE_REGEXP.test(filename)) {
+  // Rewrite urls to pass through our media proxy. Unless of course we are in an
+  // exported app, in which case our media proxy won't be good for anything
+  // anyway.
+  if (ABSOLUTE_REGEXP.test(filename) && window.location.protocol !== 'file:') {
     // We want to be able to handle the case where our filename contains a
     // space, i.e. "www.example.com/images/foo bar.png", even though this is a
     // technically invalid URL. encodeURIComponent will replace space with %20
@@ -46,4 +52,25 @@ module.exports.fixPath = function (filename) {
   }
 
   return assetPathPrefix + channelId + '/' + filename;
+};
+
+
+/**
+ * Create a data-URI with the image data of the given icon glyph.
+ * @param value {string} An icon identifier of the format "icon://fa-icon-name".
+ * @param element {Element}
+ * @return {string}
+ */
+module.exports.renderIconToString = function (value, element) {
+  var canvas = document.createElement('canvas');
+  canvas.width = canvas.height = 400;
+  var ctx = canvas.getContext('2d');
+  ctx.font = '300px FontAwesome, serif';
+  ctx.textBaseline = 'middle';
+  ctx.textAlign = 'center';
+  ctx.fillStyle = element.getAttribute('data-icon-color') || '#000';
+  var regex = new RegExp('^' + ICON_PREFIX + 'fa-');
+  var unicode = '0x' + dashboard.iconsUnicode[value.replace(regex, '')];
+  ctx.fillText(String.fromCharCode(unicode), 200, 200);
+  return canvas.toDataURL();
 };

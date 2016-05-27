@@ -23,7 +23,7 @@ puzzleRatingUtils.buildPuzzleRatingButtons = function () {
   var buttons = buttonContainer.querySelectorAll('.puzzle-rating-btn');
   var buttonClickHandler = function () {
     for (var i = 0, button; (button = buttons[i]); i++) {
-      if (button != this) {
+      if (button !== this) {
         $(button).removeClass('enabled');
       }
     }
@@ -100,7 +100,7 @@ puzzleRatingUtils.cachePuzzleRating = function (container, options) {
 
 /**
  * POST the cached ratings to the given URL and clear the cache
- * @param {string} url 
+ * @param {string} url
  */
 puzzleRatingUtils.submitCachedPuzzleRatings = function (url) {
   var ratings = puzzleRatingUtils.getPuzzleRatings_();

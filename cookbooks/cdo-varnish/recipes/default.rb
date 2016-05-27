@@ -3,26 +3,6 @@
 # Recipe:: default
 #
 
-# TODO: remove 'varnish' and 'varnish-3.0-vmods' repositories after all servers are updated.
-
-# From https://www.varnish-cache.org/installation/ubuntu
-apt_package 'apt-transport-https'
-apt_repository 'varnish' do
-  repo_name 'varnish-4.0'
-  uri 'https://repo.varnish-cache.org/ubuntu/'
-  distribution 'trusty'
-  components ['varnish-4.0']
-  key 'https://repo.varnish-cache.org/GPG-key.txt'
-  action :remove
-end
-
-# Old Varnish 3.0 vmods from PPA.
-apt_repository 'varnish-3.0-vmods' do
-  uri          'ppa:cmcdermottroe/varnish-3.0-vmods'
-  distribution 'trusty'
-  action :remove
-end
-
 # Varnish 4.0 vmods from PPA.
 apt_repository 'varnish-4.0-vmods' do
   uri          'ppa:wjordan/varnish-vmods'
@@ -60,6 +40,7 @@ ruby_block 'update_service' do
     end
     file.write_file
   end
+  subscribes :run, "service[varnish]", :before
 end
 
 template '/etc/default/varnish' do
@@ -75,7 +56,7 @@ template '/etc/varnish/accept-language.vcl' do
   user 'root'
   group 'root'
   mode '0644'
-  notifies :restart, 'service[varnish]', :delayed
+  notifies :reload, 'service[varnish]', :delayed
 end
 
 template '/etc/varnish/default.vcl' do
@@ -83,7 +64,7 @@ template '/etc/varnish/default.vcl' do
   user 'root'
   group 'root'
   mode '0644'
-  notifies :restart, 'service[varnish]', :delayed
+  notifies :reload, 'service[varnish]', :delayed
 end
 
 template '/etc/varnish/secret' do
@@ -91,9 +72,10 @@ template '/etc/varnish/secret' do
   user 'root'
   group 'root'
   mode '0600'
-  notifies :restart, 'service[varnish]', :delayed
+  notifies :reload, 'service[varnish]', :delayed
 end
 
 service "varnish" do
+  supports restart: true, reload: true, status: true
   action [:enable, :start]
 end

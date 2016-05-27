@@ -1,0 +1,98 @@
+#!/usr/bin/env ruby
+
+ALL_FILES = []
+
+# naming convention:
+# script to generate the csv:
+#  generate-whoever
+# csv
+#  whoever.csv
+# deduped csv
+#  whoever-deduped.csv
+#
+# returns the deduped csv filename
+def generate(name)
+  puts "\n---" + name
+  csv = name + '.csv'
+  script = 'generate-' + name
+  raise "Could not find #{script}" unless File.exist?(script)
+  puts `time ./#{script}`
+  raise "#{script} did not generate #{csv}" unless File.exist?(csv)
+  puts `wc #{csv}`
+
+  puts "deduping"
+  deduped_csv = name + '-deduped.csv'
+  if ALL_FILES.empty?
+    puts `cp #{csv} #{deduped_csv}`
+  else
+    puts `./subtract #{csv} #{ALL_FILES.join(' ')} #{deduped_csv}`
+  end
+  puts `wc #{deduped_csv}`
+
+  puts 'international:'
+  puts `grep true #{deduped_csv} | wc`
+
+  ALL_FILES << deduped_csv # list of csvs for deduping future csvs
+
+  deduped_csv
+end
+
+# https://docs.google.com/document/d/1QlgCA9jxOVx3zhMrnZC4SZh8uMZnNn1R9C9mn83JkNU/edit
+
+# Latam organizers
+generate('2015-latam-organizers')
+
+# Organizers # andrew
+# 2015 organizers (kind_s:HocSignup2015)
+generate('2015-organizers')
+
+# Past Organizers (received email #1 in Sept) # done
+# 2013 organizers
+# 2014 organizers
+# Code Studio teachers
+generate('past-organizers')
+
+# Teachers (A/B test 4 variations) # done
+# BringToSchool2013
+# petition teachers
+teachers_csv = generate('petition-teachers')
+puts "splitting #{teachers_csv}"
+puts `./split #{teachers_csv} 3 3 3 3`
+
+# Engineers:
+# kind_s:VolunteerEngineerSubmission
+# kind_s:HelpUs2013
+# MailChimp engineers list # mailchimp_engineers.csv, don't check in
+# engineers from petition # kind_s:Petition && role_s:....
+generate('engineers')
+
+# General: Announcing HOC 2015. Get involved. (A/B test 4 variations)
+# all else petition # kind_s:Petition && role_s not teacher or engineer
+# Indiegogo contributors? # indiegogo.csv, don't check in
+general_csv = generate('general')
+puts "splitting #{general_csv}"
+puts `./split #{general_csv} 3 3 3 3`
+
+# from the old script
+
+# puts "General"
+# puts `./generate-mailing-list-hoc-2015-general`
+# puts `ls -l hoc-2015-general.csv`
+
+# puts "Mexico"
+# puts `./generate-mailing-list-hoc-2015-mexico`
+# puts `ls -l hoc-2015-mexico.csv`
+
+# puts "Brazil"
+# puts `./generate-mailing-list-hoc-2015-brazil`
+# puts `ls -l hoc-2015-brazil.csv`
+
+# puts "LatAm"
+# puts `./generate-mailing-list-hoc-2015-latam`
+# puts `ls -l hoc-2015-latam.csv`
+
+# puts "deduping general list"
+# puts `./subtract hoc-2015-general.csv hoc-2015-latam.csv hoc-2015-mexico.csv hoc-2015-mexico.csv hoc-2015-general-deduped.csv`
+
+# puts "splitting deduped general list"
+# puts `./split hoc-2015-general-deduped.csv 5 5 5`

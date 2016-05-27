@@ -1,7 +1,6 @@
 name 'CSP_U4_rawMovieData'
 title 'title'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Raw Data
 

@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:00.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Documenting Your Course Goals",
+    "height": "100",
+    "markdown_instructions": "***Now that you've learned more about the CSP curriculum, let's consider your goals***\n<br>\n<br>\n\n__What are your goals for your CSP class?__ *These goals will change over time, and we'll revisit this your response as we go through the course so we can check in on how we're progressing towards those goals.*\n\n*NOTE: remember you can change the size of the text box by clicking and dragging the bottom-right corner of the box.*\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

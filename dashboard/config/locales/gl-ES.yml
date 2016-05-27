@@ -24,7 +24,15 @@
           future: non pode estar no futuro
   hello: Olá mundo
   welcome_back: Ola outra vez, %{name}
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Enviar
+  unsubmit: Cancelar envío
+  previous_page: Previous page
+  next_page: Next page
+  cancel: Cancelar
+  okay: De acordo
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Agrega un profesor:'
@@ -165,8 +173,6 @@
         subject: Xúntate a unha aula con %{teacher_name} en Code.org!
       student_disassociated:
         subject: 'Notificación de Code.org: %{student_name} deixou de ser o seu alumno.'
-      teacher_disassociated:
-        subject: 'Notificación de Code.org: %{teacher_name} deixou de ser o teu profesor.'
   reports:
     error:
       access_denied: Non ten acceso ás estatísticas desta persoa
@@ -378,11 +384,44 @@
     heading_elementary: "<h2>Cursos de 20 horas para</h2><h1>Principiantes (todas
       as idades)</h1>"
     heading_apps: "<h2>Diversión para</h2><h1>todos</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>O noso curso acelerado para</h2><h1>Todas as idades</h1>"
     your_gallery: Galería
     no_primary_course: Faga un curso no Code Studio
     choose_next_course: Experimenta un dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
+    announcement_title: Anuncios
+    announcement_view_all: Ver todos
+    announcement_message: 'We''ve started to measure student learning in Courses 1-4
+      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
+      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
+      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
+      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_button: Aprende máis
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: Aprende no Code Studio
     description: Todos poden aprender a programar. Constrúe xogos, aplicacións e deseños
@@ -420,6 +459,8 @@
       Ltd. Todos os dereitos reservados. Plants vs. Zombies&#8482; &copy; %{current_year}
       Electronic Arts Inc. Todos os dereitos reservados. The Amazing World of Gumball
       é marca rexistrada e &copy; 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Sostido por Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE
       e Hora do Código&reg; son marcas rexistradas da Code.org."
@@ -504,6 +545,15 @@
       current: Niveis actuais
       unused: Niveis non utilizados
   upsell:
+    applab:
+      title: Laboratorio de aplicacións
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Labirinto clásico
       body: Experimente as nocións básicas da informática. Millóns de persoas xa as
@@ -538,6 +588,15 @@
     minecraft:
       title: Minecraft
       body: Explora un mundo Minecraft através do código.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: Os alumnos crearon isto con programación!
     students_made_these_with_code: Os alumnos crearon isto con programación!
@@ -560,10 +619,10 @@
       segundo imos recibindo comentarios e se fan melloras.
     prerelease_hoc2014: Este titorial está na versión <span class='betatext'>beta</span>.
       Está suxeito a revisións segundo imos recibindo comentarios e se fan melloras.
-    feedback: Enviar comentarios
     report_bug: Comunicar erro
     support: Obter axuda
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Resposta incorrecta
     wrong_body: A resposta que vostede tecleou non é correcta. Tente novamente!
@@ -571,6 +630,32 @@
     correct_body: A túa resposta é correcta.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Graciñas
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Graciñas
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Graciñas
+    wrong_body: Thank you for submitting answers.
+    correct_title: Graciñas
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Graciñas
+    wrong_body: Thank you for submitting answers.
+    correct_title: Graciñas
+    correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Solución incorrecta
     wrong_body: A súa solución non é correcta. Tente novamente!
@@ -590,6 +675,8 @@
     placeholder: Insira a súa resposta aquí
     open_response_title: Graciñas
     open_response_body: Graciñas por responderes!
+    correct_title: Certo
+    correct_body: A túa resposta é correcta.
   dialog:
     ok: OK
     startover_title: Estás seguro de que queres empezar de novo?
@@ -653,6 +740,7 @@
     completed_perfect: concluído, perfecto
     furthest_level_attempted: tentativa para o nivel máis avanzado
     assessment: avaliación
+    submitted: submitted
   studio:
     courses_working_on: Cursos que vostede está a facer
     completed_courses: Cursos concluídos
@@ -670,6 +758,10 @@
     share: Compartir
     share_title: Comparte o teu proxecto
     share_copy_link: 'Copia a ligazón:'
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Pechar
     more: Máis
     name: Nome
@@ -723,3 +815,23 @@
         acknowledge: Ao enviar esta información, acepta que esta será tratada de acordo
           cos termos da nosa %{link_start_privacy}Política de Privacidade%{link_end}
           e dos %{link_start_tos}Termos de Utilización%{link_end}
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found
+  flex_category:
+    required: Visión xeral
+    content: Content
+    practice: Teacher Practices

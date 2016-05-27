@@ -24,7 +24,15 @@
           future: ei saa olla tulevikus
   hello: Tere maailm
   welcome_back: Tere tulemast tagasi, %{name}
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Esita
+  unsubmit: Võta vastus tagasi
+  previous_page: Previous page
+  next_page: Next page
+  cancel: Tühista
+  okay: Olgu
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Lisa õpetaja:'
@@ -159,8 +167,6 @@
       student_disassociated:
         subject: 'Code.org teade: %{student_name} pole enam seotud teiega kui teie
           õpilane.'
-      teacher_disassociated:
-        subject: 'Code.org teade: %{teacher_name} pole enam teiega seotud õpetaja.'
   reports:
     error:
       access_denied: Teil pole juurdepääsu selle isiku andmetele
@@ -366,11 +372,44 @@
     heading_elementary: "<h2>20-tunnised kursused </h2><h1> Arvutiteaduse Põhialused
       (kõik vanused)</h1>"
     heading_apps: "<h2>Lõbu</h2> <h1>Kõigile</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Meie kiirendatud kursus</h2> <h1>Igas vanuses</h1>"
     your_gallery: Galerii
     no_primary_course: Proovige Code Studio kursust
     choose_next_course: Proovige Code Studio kursuseid. Selleks valige üks altpoolt
     print_certificate: Prindi tunnistus
+    announcement_title: Teated
+    announcement_view_all: Vaata kõiki
+    announcement_message: 'We''ve started to measure student learning in Courses 1-4
+      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
+      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
+      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
+      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_button: Lisateave
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: "Õpi Code stuudios"
     description: Igaüks saab õppida arvutiteadust. Tee mänge, äppe ja kunsti koodimisega.
@@ -407,6 +446,8 @@
       Ltd. Kõik õigused kaitstud. Plants vs. Zombies&#8482; &copy; %{current_year}
       Electronic Arts Inc. Kõik õigused kaitstud. The Amazing World of Gumball on
       kaubamärk ja &copy; 2015 Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Amazoni poolt toetatud
     trademark: "&copy;Code.org,%{current_year}. Code.org&reg;, CODE-i logo ja KoodiTund&reg;
       on Code.org kaubamärgid."
@@ -491,6 +532,15 @@
       current: Olemasolevad tasemed
       unused: Kasutamata tasemed
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klassikaline labürint
       body: Proovige arvutiteaduse alused. Miljonid on proovinud.
@@ -522,6 +572,15 @@
     minecraft:
       title: Minecraft
       body: Uuri Minecrafti maailma koodi kaudu.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: "Õpilased joonistasid need koodi kasutades!"
     students_made_these_with_code: "Õpilased tegid need koodiga!"
@@ -544,10 +603,10 @@
       ja parandused on tehtud.
     prerelease_hoc2014: See õpetus on <span class='betatext'> Beta</span>.  Tuleb
       läbi vaadata, kui on saabunud tagasiside ja parandused on tehtud.
-    feedback: Anna tagasisidet
     report_bug: Raporteeri veast
     support: Abi saamine
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Vale vastus
     wrong_body: Sinu poolt sisestatud vastus ei ole õige. Palun proovi uuesti!
@@ -555,6 +614,32 @@
     correct_body: See on õige vastus.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Aitäh
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Aitäh
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Aitäh
+    wrong_body: Thank you for submitting answers.
+    correct_title: Aitäh
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Aitäh
+    wrong_body: Thank you for submitting answers.
+    correct_title: Aitäh
+    correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Vale lahendus
     wrong_body: Sinu poolt sisestatud lahendus ei ole õige. Palun proovi uuesti!
@@ -574,6 +659,8 @@
     placeholder: Sisesta siia oma vastus
     open_response_title: Tänud
     open_response_body: Täname vastuse eest!
+    correct_title: "Õige"
+    correct_body: See on õige vastus.
   dialog:
     ok: Olgu
     startover_title: Oled sa kindel et tahad uuesti alustada?
@@ -636,6 +723,7 @@
     completed_perfect: tehtud, suurepärane
     furthest_level_attempted: kõige viimane tase proovitud
     assessment: hinnang
+    submitted: submitted
   studio:
     courses_working_on: Kursused, millega töötate
     completed_courses: Lõpetatud kursused
@@ -653,6 +741,10 @@
     share: Jaga
     share_title: Jaga oma projekti
     share_copy_link: 'Kopeeri link:'
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Sulge
     more: Veel
     name: Nimi
@@ -661,7 +753,7 @@
     help_text: Klõpsake <strong>teha App</strong> või <strong>Joonista midagi</strong>
       allpool, et teha uus Play Lab või kunstniku projekt<br/> Sa võid tagasi tulla
       oma projekti juurde ja jätkata nendega tööd igal ajal.
-    need_help: Vajad abi kuidas alustada?
+    need_help: Vajad abi, kuidas alustada?
     really_delete: Kas kustutan?
     delete_yes: Jah
     delete_no: Ei
@@ -704,3 +796,23 @@
         acknowledge: Selle informatsiooni esitamisel nõustute, et seda käsitletakse
           vastavalt %{link_start_privacy} privaatsuse tingimustele %{link_end}ja %{link_start_tos}
           kasutajatingimustele %{link_end}
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found
+  flex_category:
+    required: "Ülevaade"
+    content: Content
+    practice: Teacher Practices

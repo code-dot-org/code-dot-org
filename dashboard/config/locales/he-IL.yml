@@ -23,7 +23,15 @@
           future: "לא יכול להיות בעתיד"
   hello: "שלום עולם"
   welcome_back: "ברוך שובך, %{name}"
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: "שלח"
+  unsubmit: "בטל הגשה"
+  previous_page: Previous page
+  next_page: Next page
+  cancel: "בטל"
+  okay: "בסדר"
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: "הוסף מורה:"
@@ -161,8 +169,6 @@
         subject: "הצטרף לכיתה עם %{teacher_name} ב-Code.org!"
       student_disassociated:
         subject: "הודעה מCode.org: %{student_name} כבר לא רשום כתלמיד שלך."
-      teacher_disassociated:
-        subject: "הודעת מערכת: {teacher_name}%לא משויך עוד כמורה שלך. "
   reports:
     error:
       access_denied: "אין לך גישה לסטטיסטיקות של האדם הזה"
@@ -360,11 +366,44 @@
     heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals
       (all ages)</h1>"
     heading_apps: "<h2>כיף</h1><h2>לכולם</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Our general course for</h2><h1>All Ages</h1>"
     your_gallery: "גלריה"
     no_primary_course: "נסה קורס קוד סטודיו"
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: "הדפס תעודה"
+    announcement_title: "הודעות"
+    announcement_view_all: "הצג הכל"
+    announcement_message: 'We''ve started to measure student learning in Courses 1-4
+      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
+      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
+      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
+      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_button: "למד עוד"
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: Learn on Code Studio
     description: "כל אחד יכול ללמוד מדעי המחשב. ליצור משחקים, אפליקציות ואמנות בעזרת
@@ -392,6 +431,8 @@
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org."
@@ -475,6 +516,15 @@
       current: "שלבים נוכחיים"
       unused: "שלבים שלא נוצלו"
   upsell:
+    applab:
+      title: "מעבדת היישומים"
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: "מבוך קלאסי"
       body: "נסה את הבסיס של מדעי המחשב.מיליונים כבר ניסו."
@@ -503,6 +553,15 @@
     minecraft:
       title: "מיינקראפט"
       body: "גלה את העולם של מיינקראפט באמצעות קוד."
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: "תלמידים ציירו את אלה בעזרת קוד!"
     students_made_these_with_code: "סטודנטים יצרו את זה עם קוד!"
@@ -524,10 +583,10 @@
       is received and improvements are made.
     prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
       is subject to revision as feedback is received and improvements are made.
-    feedback: "תן משוב"
     report_bug: "דווח על באג"
     support: "קבל עזרה"
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: "תשובה לא נכונה"
     wrong_body: "התשובה שענית אינה נכונה. נא נסה שנית!"
@@ -535,6 +594,32 @@
     correct_body: "זאת התשובה הנכונה."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: "תודה רבה"
+    wrong_body: Thank you for submitting an answer.
+    correct_title: "תודה רבה"
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: "תודה רבה"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "תודה רבה"
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: "תודה רבה"
+    wrong_body: Thank you for submitting answers.
+    correct_title: "תודה רבה"
+    correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: "פתרון לא נכון"
     wrong_body: "הפתרון שענית אינו נכון.נא נסה שנית!"
@@ -554,6 +639,8 @@
     placeholder: "הכנס את התשובה שלך כאן"
     open_response_title: "תודה"
     open_response_body: "תודה על תגובתך!"
+    correct_title: "נכון"
+    correct_body: "זאת התשובה הנכונה."
   dialog:
     ok: "אישור"
     startover_title: "האם אתה בטוח שאתה רוצה להתחיל מחדש?"
@@ -616,6 +703,7 @@
     completed_perfect: "הושלם, מושלם"
     furthest_level_attempted: "רמת הרחוקה ניסיון"
     assessment: "הערכה"
+    submitted: submitted
   studio:
     courses_working_on: Courses you're working on
     completed_courses: "קורסים שהושלמו"
@@ -633,6 +721,10 @@
     share: "שתף"
     share_title: "שתף את הפרויקט שלך"
     share_copy_link: "העתק קישור:"
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: "סגור"
     more: "יותר"
     name: "שם"
@@ -684,3 +776,23 @@
         acknowledge: By submitting this information, you acknowledge it will be handled
           in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
           and the %{link_start_tos}Terms of Service%{link_end}
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found
+  flex_category:
+    required: "סקירה"
+    content: Content
+    practice: Teacher Practices

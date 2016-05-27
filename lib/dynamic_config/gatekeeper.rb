@@ -163,8 +163,8 @@ class GatekeeperBase
   # the property named `condition_property`.
   def property_values(condition_property)
     Set.new.tap do |result|
-      @datastore_cache.all.each do |feature, rules|
-        rules.each do |conditions, value|
+      @datastore_cache.all.each do |_feature, rules|
+        rules.each do |conditions, _value|
           JSON.load(conditions).each do |property, value|
             result << value if property == condition_property
           end

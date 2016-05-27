@@ -1,12 +1,17 @@
+require 'mocha/mini_test'
 require_relative 'test_helper'
 require 'channels_api'
 require 'properties_api'
 
 class PropertiesTest < Minitest::Test
+  include Rack::Test::Methods
   include SetupTest
 
+  def build_rack_mock_session
+    @session = Rack::MockSession.new(ChannelsApi.new(PropertiesApi), "studio.code.org")
+  end
+
   def setup
-    init_apis
     create_channel
   end
 
@@ -32,14 +37,22 @@ class PropertiesTest < Minitest::Test
     delete_key_value(key)
 
     get_key_value(key)
-    assert @properties.last_response.not_found?
+    assert last_response.not_found?
+  end
+
+  def test_set_too_large
+    key = '_testKey'
+    value_string = ("a" * 500000).to_json
+
+    set_key_value(key, value_string)
+    assert_equal 413, last_response.status
   end
 
   def test_auth
     set_key_value('k', 'v'.to_json)
-    assert JSON.parse(list(@properties, @channel_id)).length == 1, "Owner can list all properties."
+    assert JSON.parse(list(self, @channel_id)).length == 1, "Owner can list all properties."
 
-    # This mock of the PropertiesApi does not share cookies with @channels.
+    # This mock of the PropertiesApi does not share cookies with @session.
     other_properties = Rack::Test::Session.new(Rack::MockSession.new(PropertiesApi, "studio.code.org"))
 
     list(other_properties, @channel_id)
@@ -78,42 +91,53 @@ class PropertiesTest < Minitest::Test
     end
   end
 
+  def test_size_limit
+    PropertiesApi.any_instance.stubs(:max_property_size).returns(20)
+    key_length_10 = 'ABCDEFGHIJ'
+    value_json_length_10 = '"abcdefgh"'
+    value_json_length_11 = '"abcdefghi"'
+
+    assert_equal(10, key_length_10.length)
+    assert_equal(10, value_json_length_10.length)
+    assert_equal(11, value_json_length_11.length)
+
+    set_key_value(key_length_10, value_json_length_10)
+    assert last_response.successful?, 'max-size property returns 200 OK'
+
+    set_key_value(key_length_10, value_json_length_11)
+    assert_equal 413, last_response.status, 'oversize property returns 413 Too Large'
+
+    actual_value_json = get_key_value(key_length_10)
+    assert_equal value_json_length_10, actual_value_json, 'oversized property is not written to storage'
+
+    PropertiesApi.any_instance.unstub(:max_property_size)
+  end
+
   # Methods below this line are test utilities, not actual tests
   private
 
-  def init_apis
-    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
-
-    # Make sure the properties api has the same storage id cookie used by the channels api.
-    @channels.get '/v3/channels'
-    cookies = @channels.last_response.headers['Set-Cookie']
-    properties_mock_session = Rack::MockSession.new(PropertiesApi, "studio.code.org")
-    properties_mock_session.cookie_jar.merge(cookies)
-    @properties = Rack::Test::Session.new(properties_mock_session)
-  end
-
   def create_channel
-    @channels.post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    @channel_id = @channels.last_response.location.split('/').last
+    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    @channel_id = last_response.location.split('/').last
   end
 
   def delete_channel
-    @channels.delete "/v3/channels/#{@channel_id}"
-    assert @channels.last_response.successful?
+    delete "/v3/channels/#{@channel_id}"
+    assert last_response.successful?
   end
 
   def set_key_value(key, value)
-    @properties.post "/v3/shared-properties/#{@channel_id}/#{key}", value, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    post "/v3/shared-properties/#{@channel_id}/#{key}", value, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
   end
 
   def get_key_value(key)
-    @properties.get "/v3/shared-properties/#{@channel_id}/#{key}"
-    @properties.last_response.body
+    get "/v3/shared-properties/#{@channel_id}/#{key}"
+    last_response.body
   end
 
   def delete_key_value(key)
-    @properties.delete "/v3/shared-properties/#{@channel_id}/#{key}"
-    assert @properties.last_response.successful?
+    delete "/v3/shared-properties/#{@channel_id}/#{key}"
+    assert last_response.successful?
   end
 
   def list(properties, channel_id)
@@ -124,6 +148,6 @@ class PropertiesTest < Minitest::Test
     url = "/v3/shared-properties/#{@channel_id}"
     url += "?overwrite=1" if overwrite
 
-    @properties.post url, JSON.generate(values), 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    post url, JSON.generate(values), 'CONTENT_TYPE' => 'application/json;charset=utf-8'
   end
 end

@@ -1,0 +1,17 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:10.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Code Studio: Kid Tested, Teacher Approved!",
+    "height": "200",
+    "placeholder": "My first impressions of Code Studio are...",
+    "markdown_instructions": "<iframe width=\"640\" height=\"390\" src=\"https://youtubeeducation.com/embed/rNIM1fzJ8u0\" frameborder=\"0\" allowfullscreen></iframe>\n\n<br>\n\n**[Can't see the video? Click here.](https://www.dropbox.com/s/q85v0y83rws4yd1/k5-affiliate-video-09032014.mp4?dl=0)**\n\n<br>\n\n\n#### What are your first impressions of Code Studio?\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

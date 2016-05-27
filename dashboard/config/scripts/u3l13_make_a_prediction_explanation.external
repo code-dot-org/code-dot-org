@@ -1,7 +1,6 @@
 name 'U3L13 - Make a Prediction Explanation'
 title 'title'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Make a prediction - Learning to Code Better, Faster
 Research has shown that when you encounter a new piece of code or new situation, you learn faster by simply making a prediction about what will happen before you run the program.  

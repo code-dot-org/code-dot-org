@@ -44,8 +44,9 @@
           "Proqramı icra et"i bassanız, quş labirintdə bir xana irəliləyər.
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace
-          and attach them together. The bird will do the commands from top to bottom.
+        text: Birdən çox əməliyyatı yerinə yetirmək üçün siz bir neçə bloku öz iş
+          sahənizə sürükləyə və bir-birinə qoşa bilərsiniz. Quş bu əmrləri yuxarıdan
+          aşağıya ardıcıllıqla yerinə yetirəcək.
       12:
         image: notes/hoc1_12.jpg
         text: Əgər bir proqramı icra edirsinizsə və onu düzəldib yenidən cəhd etmək

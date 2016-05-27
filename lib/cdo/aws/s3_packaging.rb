@@ -1,3 +1,4 @@
+require 'active_support/core_ext/string' # Get String#underscore
 require 'aws-sdk'
 require 'logger'
 
@@ -17,15 +18,20 @@ class S3Packaging
   def initialize(package_name, source_location, target_location)
     throw "Missing argument" if package_name.nil? || source_location.nil? || target_location.nil?
     @client = Aws::S3::Client.new
-    @commit_hash = RakeUtils.git_folder_hash source_location
     @package_name = package_name
     @source_location = source_location
     @target_location = target_location
     @logger = Logger.new(STDOUT)
+    regenerate_commit_hash
   end
 
   def commit_hash
     @commit_hash
+  end
+
+  # Recreates our commit hash (for cases where we may have updated our git tree)
+  def regenerate_commit_hash
+    @commit_hash = RakeUtils.git_folder_hash @source_location
   end
 
   # Tries to get an up to date package without building
@@ -34,7 +40,7 @@ class S3Packaging
     begin
       ensure_updated_package
     rescue Aws::S3::Errors::NoSuchKey
-      @logger.info 'Package does not exist on S3. If you have made local changes to code-studio, you need to set build_code_studio and use_my_code_studio to true in locals.yml'
+      @logger.info "Package does not exist on S3. If you have made local changes to #{@package_name}, you need to set build_#{@package_name.underscore} and use_my_#{@package_name.underscore} to true in locals.yml"
       return false
     rescue Exception => e
       @logger.info "update_from_s3 failed: #{e.message}"
@@ -79,19 +85,22 @@ class S3Packaging
   # @param sub_path [String] Path to built assets, relative to source_location
   # @return tempfile object of package
   def create_package(sub_path)
+    # make sure commit hash is up to date
+    regenerate_commit_hash
+
     package = Tempfile.new(@commit_hash)
     @logger.info "Creating #{package.path}"
     Dir.chdir(@source_location + '/' + sub_path) do
       # add a commit_hash file whose contents represent the key for this package
       IO.write('commit_hash', @commit_hash)
-      RakeUtils.system "tar -zcf #{package.path} *"
+      RakeUtils.system "tar -cz --exclude='*.cache.json' --file #{package.path} *"
     end
     @logger.info 'Created'
     package
   end
 
   private def ensure_updated_package
-    if @commit_hash == target_commit_hash(@target_location)
+    if commit_hash == target_commit_hash(@target_location)
       @logger.info "Package is current: #{@commit_hash}"
     else
       decompress_package(download_package)
@@ -142,19 +151,26 @@ class S3Packaging
     diff.empty?
   end
 
-  # Downloads package from S3 using public URL.
+  # Downloads package from S3.
   # Throws a NoSuchKey error if given package doesn't exist on s3, or if the object is private.
   # @return tempfile for the downloaded package
   private def download_package
     package = Tempfile.new(@commit_hash)
 
     @logger.info "Attempting to download: #{s3_key}\nto #{package.path}"
-    url = Aws::S3::Bucket.new(BUCKET_NAME).object(s3_key).public_url
-    File.open(package, 'wb') do |file|
-      begin
-        IO.copy_stream open(url), file
-      rescue OpenURI::HTTPError
-        raise Aws::S3::Errors::NoSuchKey.new(nil, file)
+    begin
+      @client.get_object({bucket: BUCKET_NAME, key: s3_key}, target: package)
+    rescue Aws::Errors::MissingCredentialsError, Aws::S3::Errors::ServiceError
+      # Fallback to public-URL download over HTTP if credentials are not provided or invalid.
+      # TODO use aws-sdk to leverage aws-client optimizations once unsigned requests are supported:
+      # https://github.com/aws/aws-sdk-ruby/issues/1149
+      url = Aws::S3::Bucket.new(BUCKET_NAME).object(s3_key).public_url
+      File.open(package, 'wb') do |file|
+        begin
+          IO.copy_stream open(url), file
+        rescue OpenURI::HTTPError
+          raise Aws::S3::Errors::NoSuchKey.new(nil, file)
+        end
       end
     end
     @logger.info "Downloaded"

@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+require_relative '../mailing-common/mailing-list-utils'
+require 'set'
+
+# Inactive Code Studio teacher accounts  US only
+# - not teaching a course, haven't added students, or no students logged in
+
+US_TEACHERS = Set.new
+SOLR_PARAMS = {
+  q: 'kind_s:user && role_s:teacher',
+  fq: 'create_ip_country_s:"United States"',
+  fl: 'email_s',
+  rows: 10000
+}
+SOLR.query(SOLR_PARAMS).each do |record|
+  US_TEACHERS << record['email_s']
+end
+puts "#{US_TEACHERS.count} US teachers loaded from solr"
+
+query = <<eos
+  SELECT DISTINCT users.email, users.name FROM users
+    LEFT JOIN sections ON (sections.user_id = users.id)
+    LEFT JOIN followers ON (followers.section_id = sections.id)
+    LEFT JOIN users AS signed_in_students ON (students.id = followers.student_user_id
+      AND students.current_sign_in_at IS NOT NULL)
+    WHERE users.user_type = 'teacher'
+      AND (sections.id IS NULL OR followers.id IS NULL OR signed_in_students.id IS NULL)
+eos
+
+results = {}
+DASHBOARD_DB.fetch(query).each do |teacher|
+  email = teacher[:email]
+
+  # US only
+  next unless US_TEACHERS.include? email
+  results[email] = {email: email, name: teacher[:name]} unless results[email]
+end
+
+export_contacts_to_csv results, 'inactive-teachers.csv'

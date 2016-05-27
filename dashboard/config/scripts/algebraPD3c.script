@@ -1,0 +1,25 @@
+title 'Computer Science in Algebra PD'
+description "CS in Algebra end of year reflection"
+description_short "CS in Algebra end of year reflection"
+login_required 'true'
+pd 'true'
+
+stage 'Getting Started'
+level 'PDAlg 3CWelcome'
+level 'PDAlg 3CAbout'
+level 'OPD-K5 CS Tips'
+level 'PDAlg 3CPlanning'
+level 'PDAlg 3CGo'
+
+stage 'Sharing Student Work'
+level 'PDAlg 3CGathering'
+level 'PDAlg 3CSharing'
+level 'PDAlg 3CShare Forum'
+
+stage 'Planning For the Future'
+level 'PDAlg 3CFuture'
+level 'PDAlg 3CCourseAB'
+level 'PDAlg 3CBootstrap'
+level 'PDAlg 3CElective'
+level 'PDAlg 3CSharePlan'
+level 'PDAlg 3CCongrats'

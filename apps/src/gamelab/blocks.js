@@ -12,7 +12,7 @@ var commonMsg = require('../locale');
 var GameLab = require('./GameLab');
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function(blockly, blockInstallOptions) {
+exports.install = function (blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
 
   var generator = blockly.Generator.get('JavaScript');
@@ -22,7 +22,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.gamelab_foo = {
     // Block for foo.
     helpUrl: '',
-    init: function() {
+    init: function () {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
           .appendTitle(msg.foo());

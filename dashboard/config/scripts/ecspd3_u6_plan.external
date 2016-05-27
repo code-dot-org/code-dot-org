@@ -1,0 +1,41 @@
+name 'ECSPD3-u6 plan'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+### Getting Started > Planning your Experience 
+ 
+<br/> 
+Before you begin, let's take a few minutes to consider your learning needs, your goals, and the unique experience of learning in an online, self-paced environment.  
+ 
+<br/> 
+#### You're the Boss 
+ 
+This self-paced online course is designed to put you in the driver's seat, and give you control over your own learning. Self-directed learning is a core <a href="https://code.org/educate/professional-development-philosophy" target="_new">principle of Code.org's Professional Development philosophy</a>, and you should feel free to complete this PD however works best for you - be that in a couple of sessions, or one hour a day until you finish, or anything in between!  
+ 
+<br/> 
+#### Stay Connected 
+ 
+One way to help stay motivated and focused throughout your learning is to get active in our <a href="http://forum.code.org/c/ecs" target="_blank">ECS teacher forum</a>.  
+<br><br> 
+Many people are active in the forum, so please consider it as your first resource when you have questions or stories to share about the curriculum. The whole ECS team at Code.org reads the forums, and we’d love to hear from you!  
+  
+<br/> 
+#### Finding Help When You Need It 
+ 
+If you get stuck at any time during the course and you can’t find the help you need on the forums,  you can email [pd@code.org](mailto:pd@code.org) and someone will get back to you ASAP. 
+ 
+<br/> 
+#### Buddy up! 
+ 
+Keep in mind that Code.org is a small team and due to the scale of our efforts, we can't respond to all requests for support in the same way an instructor could for a face-to-face course. For that reason, we encourage you to ***work through this online course with a partner or group of colleagues***. Don't forget that you can always reach out to your colleagues from the in-person workshop this summer!   
+<br><br> 
+>#### What's your plan? 
+Now that you know more about the goals and format of this PD, take some time to consider how and when you will complete this in a way that ensures you get the most benefit from the experience. When you've got a plan, click continue below to get started!  
+ 
+<br/><br/> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+
+MARKDOWN

@@ -29,6 +29,12 @@
     "markdown_instructions": "Try the `repeat` block to use fewer blocks when solving this puzzle...",
     "examples_required": "false",
     "never_autoplay_video": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2
   }
 }]]></config>
   <blocks>
@@ -46,12 +52,26 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_repeat">
           <title name="TIMES">5</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat" id="repeat_qtip">
+              <title name="TIMES">5</title>
+              <statement name="DO">
+                <block type="maze_moveForward"/>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

@@ -1,0 +1,10 @@
+name 'CSPFinal_Question_19'
+right 'Lossless compression'
+wrong 'Lossy compression'
+wrong 'Steganography'
+wrong 'Asymmetric encryption'
+
+markdown <<MARKDOWN
+A certain cartoon image is known to have only 4 colors in it.  Currently the image is stored in full 24-bit RGB color and the total size of the file is quite large. The designer proposes reducing the number of bits the image by: Making a small table of the 4 colors and numbering them 0, 1, 2 and 3, which requires only 2 bits; then representing the image as a list of these smaller, 2-bit numbers.  What is this technique an example of?'
+
+MARKDOWN

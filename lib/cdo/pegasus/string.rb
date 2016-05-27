@@ -54,4 +54,15 @@ class String
     self
   end
 
+  # Given a string with ISO_8859_1 encoded characters, converts to UTF-8.
+  # Will not modify string if all characters are already valid UTF-8.
+  # Roughly based off of approach: http://stackoverflow.com/a/15329916
+  #
+  # Returns converted string.
+  def force_8859_to_utf8
+    self.force_encoding('utf-8')
+    return self if self.valid_encoding?
+    self.force_encoding('ISO-8859-1')
+    self.encode!('utf-8')
+  end
 end

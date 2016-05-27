@@ -60,23 +60,21 @@
         other: "%{count} ข้อผิดพลาดที่ต้องห้ามนี้ %{resource} จากการถูกบันทึกไว้:"
     invitations:
       send_instructions: "จดหมายเชิญได้ส่งไปที่%{email}"
-      invitation_token_invalid: The invitation token provided is not valid!
+      invitation_token_invalid: "โทเค็นการเชิญที่ระบุไม่ถูกต้อง"
       updated: "รหัสผ่านของคุณถูกตั้งค่าเรียบร้อยแล้ว ขณะนี้คุณลงชื่อใน"
       no_invitations_remaining: "ไม่มีการเชิญใดอีก"
-      invitation_removed: Your invitation was removed.
+      invitation_removed: "คำเชิญของคุณถูกเอาออก"
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: "ส่งคำเชิญ"
+        submit_button: "ส่ง การเชิญ"
       edit:
         header: "ตั้งค่ารหัสผ่านของคุณ"
         submit_button: "ตั้งค่ารหัสผ่านของฉัน"
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
+        subject: "คำแนะนำการเชิญผู้อื่น"
         hello: "สวัสดี %{email}"
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
+        someone_invited_you: "มีบางคนได้เชิญคุณไป %{url} คุณสามารถยอมรับผ่านการเชื่อมโยงด้านล่าง"
         accept: "ยอมรับคำเชิญ"
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        ignore: "ถ้าคุณไม่ต้องการยอมรับคำเชิญ โปรดละเว้นนี้อีเมล์นี้ < br / > บัญชีของคุณจะไม่สามารถสร้างได้จนกว่าคุณเข้าไปลิงค์ด้านบน
+          และตั้งค่ารหัสผ่านของคุณ"

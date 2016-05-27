@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:17.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "The Need for Addressing: Security Concerns",
+    "markdown_instructions": "\nIf the messaging scheme your group designed was really used on the internet, what could go wrong in terms of security and privacy?\n\n*In your response, think about what a malicious person could do. What if the messages sent weren't about a game but about something more personal like a conversation with a friend, or communicating with a bank?*\n\n\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

@@ -1,7 +1,13 @@
-var PageAction = {
-  DropletTransitionError: 'DropletTransitionError',
-  SanitizedLevelHtml: 'SanitizedLevelHtml'
-};
+var utils = require('./utils');
+
+var PageAction = utils.makeEnum(
+  'DropletTransitionError',
+  'SanitizedLevelHtml',
+  'UserJavaScriptError',
+  'RunButtonClick',
+  'StartWebRequest',
+  'StaticResourceFetchError'
+);
 
 var MAX_FIELD_LENGTH = 4095;
 
@@ -12,7 +18,17 @@ var MAX_FIELD_LENGTH = 4095;
 module.exports = {
   PageAction: PageAction,
 
-  addPageAction: function (actionName, value) {
+  /**
+   * @param {string} actionName - Must be one of the keys from PageAction
+   * @param {object} value - Object literal representing columns we want to
+   *   add for this action
+   * @param {number} [sampleRate] - Optional sample rate. Default is 1.0
+   */
+  addPageAction: function (actionName, value, sampleRate) {
+    if (sampleRate === undefined) {
+      sampleRate = 1.0;
+    }
+
     if (!window.newrelic) {
       return;
     }
@@ -22,7 +38,22 @@ module.exports = {
       return;
     }
 
+    if (typeof(value) !== "object") {
+      console.log('Expected value to be an object');
+      return;
+    }
+
+    if (Math.random() > sampleRate) {
+      // Ignore this instance
+      return;
+    }
+
     for (var prop in value) {
+      // New relic doesnt handle booleans. Make them strings.
+      if (typeof value[prop] === 'boolean') {
+        value[prop] = value[prop].toString();
+      }
+
       if (typeof value[prop] === 'string') {
         value[prop] = value[prop].substring(0, MAX_FIELD_LENGTH);
       }

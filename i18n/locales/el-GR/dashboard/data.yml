@@ -28,7 +28,7 @@ el:
           desc: Η Ώρα του Κώδικα
           Maze: Στάδιο 1
         Edit Code:
-          desc: Επεξεργαστείτε τον κώδικα (beta)
+          desc: Επεξεργασία κώδικα (beta)
           MazeEC: Στάδιο 1
         2014 Levels:
           desc: Αναπήδηση (beta)
@@ -46,7 +46,7 @@ el:
           desc: Λαβύρινθος (beta)
           MazeStep: Βήμα Σταδίου
         edit-code:
-          desc: Επεξεργαστείτε τον κώδικα (beta)
+          desc: Επεξεργασία κώδικα (beta)
           MazeEC: Στάδιο 1
           Applab: Στάδιο 2
           ArtistEC: Στάδιο 3
@@ -464,8 +464,10 @@ el:
         infinity_playlab_intro: 'Εργαστηριακό παιχνίδι - Εισαγωγή'
         infinity_playlab_events: 'Εργαστηριακό παιχνίδι - Γεγονότα'
         infinity_playlab_repeat_forever: 'Εργαστηριακό παιχνίδι - Επανάλαβε Για πάντα'
+        csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: 'Introduction to Databases - Part 1'
         csp_applab_databases_2: 'Introduction to Databases - Part 2'
+        csp_applab_processing_lists: Processing Lists with Loops
         csp_applab_lists_1: 'Introduction to Lists - Part 1'
         csp_applab_lists_2: 'Introduction to Lists - Part 2'
         csp_applab_lists_3: 'Introduction to Lists - Part 3'
@@ -480,7 +482,15 @@ el:
         csp_applab_functions_parameters: Συναρτήσεις με παραμέτρους
         csp_applab_loops: Βρόχοι
         csp_applab_turtle: Turtle Programming
+        csp_concept_bigdata_medicine: 'Data & Medicine'
+        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
+        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
+        csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
+        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
+        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: Λίγα για τα Εικονοστοιχεία
+        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: 'Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 1'
         csp_pixelation_color_2: 'Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 2'
         csp_pixelation_color_3: 'Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 3'
@@ -526,9 +536,9 @@ el:
         gumball_intro: 'Τσιχλόμπαλα Ώρα του Κώδικα - Εισαγωγή'
         gumball_events: 'Τσιχλόμπαλα Ώρα του Κώδικα - Γεγονότα'
         gumball_repeat: 'Τσιχλόμπαλα Ώρα του Κώδικα - Δηλώσεις επανάληψης'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        iceage_intro: 'Ωρα του Κώδικα, Εποχή των Παγετώνων - Εισαγωγή'
+        iceage_events: 'Ωρα του Κώδικα, Εποχή των Παγετώνων - Γεγονότα'
+        iceage_repeat: 'Ωρα του Κώδικα, Εποχή των Παγετώνων - Εντολές επανάληψης'
     callout:
       text:
         drag_blocks: |-

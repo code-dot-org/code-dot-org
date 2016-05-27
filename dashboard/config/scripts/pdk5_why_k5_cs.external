@@ -1,7 +1,6 @@
 name 'PDK5 Why K5 CS'
 title 'Why teach computer science in elementary school?'
 css 'unplugged'
-skip_dialogue true
 
 markdown <<MARKDOWN
 ## Why should you teach computer science in elementary school?

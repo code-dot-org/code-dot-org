@@ -1,5 +1,4 @@
 name 'CSP U4 - Basic Terms'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 Point out terms: table name, field name, record, data table, etc.
 MARKDOWN

@@ -1,6 +1,0 @@
-name 'U1L10 Assessment Free Response'
-title 'Assessment: Encoding Text'
-content1 ''
-markdown <<MARKDOWN
-Many languages do not use the characters of U.S. English. Suppose you wanted to be able to encode the characters of every language on earth within a single protocol. Guess how many characters would need to be encoded and calculate the number of bits that would be required per character. Then discuss the benefits and drawbacks of using this single unified system.
-MARKDOWN

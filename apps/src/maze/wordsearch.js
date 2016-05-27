@@ -1,5 +1,5 @@
-var utils = require('../utils');
-var _ = utils.getLodash();
+var color = require('../color');
+var _ = require('../lodash');
 var cellId = require('./mazeUtils').cellId;
 
 var SquareType = require('./tiles').SquareType;
@@ -160,7 +160,7 @@ WordSearch.prototype.resetTiles = function () {
  */
 WordSearch.prototype.updateTileHighlight_ = function (row, col, highlighted) {
   var backColor = (row + col) % 2 === 0 ? '#dae3f3' : '#ffffff';
-  var textColor = highlighted ? 'white' : 'black';
+  var textColor = highlighted ? color.white : color.black;
   if (highlighted) {
     backColor = '#00b050';
   }
@@ -224,7 +224,7 @@ function letterValue(val) {
 /**
  * Return a random uppercase letter that isn't in the list of restrictions
  */
-function randomLetter (restrictions) {
+function randomLetter(restrictions) {
   var letterPool;
   if (restrictions) {
     // args consists of ALL_CHARS followed by the set of restricted letters

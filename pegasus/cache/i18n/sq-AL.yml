@@ -78,11 +78,120 @@
   congratulations_volunteer: 'Përgëzime: Tani pasiqë keni provuar Orën e Kodimit,
     <a href="https://code.org/volunteer">regjistrohu të bëhesh vullnetarë në një klasë</a>
     dhe ndihmo nxënësit të mësojnë një Orë të Kodimit!'
-  congratulations_on_completing_course: Përgëzime në plotësimin e %{course}
+  congratulations_on_completing_course1: Congratulations on completing Course 1
+  congratulations_on_completing_course2: Congratulations on completing Course 2
+  congratulations_on_completing_course3: Congratulations on completing Course 3
+  congratulations_on_completing_course4: Congratulations on completing Course 4
+  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
+    Course
   congrats_next_tutorials_title: Më pas provoni këto tutoriale
   congrats_next_tutorials_desc: Provoni këto tutoriale 1 orëshe, më të shkurtrat ose
     provoni <a href="%{current_path}/next">/next"> tutorialin partner</a>.
   get_a_certificate_of_achievement: Merr një certifikatë të arritjes
+  view_course: View course
+  view_unit: View unit
+  make_app: Make an app
+  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  congrats_guest_speaker_desc: Now that your students have finished a computer science
+    course, consider celebrating and connecting it to things they can build in the
+    real world by inviting a guest speaker to your classroom. You can use our map
+    of volunteers to contact local volunteers to visit your classroom, or search in
+    any city to find computer science students or technical professionals who are
+    ready to inspire your students remotely, via video chat.
+  congrats_guest_speaker_cta: Find a guest speaker
+  congrats_third_party_title: Use your new skills with these apps and websites
+  third_party_gradelevel_kto8: Grades K-8
+  third_party_gradelevel_kto2: Grades K-2
+  third_party_gradelevel_2to8: Grades 2-8
+  third_party_gradelevel_4to12: Grades 4-12
+  third_party_gradelevel_5to12: Grades 5-12
+  third_party_gradelevel_6plus: Grades 6+
+  third_party_gradelevel_8plus: Grade 8+
+  third_party_platform_all: 'Platform: Web, iPad & Android'
+  third_party_platform_mobile: 'Platform: iPad & Android'
+  third_party_platform_web: 'Platform: Web'
+  third_party_price_varies: 'Price: Plans vary'
+  third_party_price_free: 'Price: Free'
+  third_party_price_299: 'Price: $2.99/download'
+  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
+  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
+  third_party_tynker_desc: Tynker's creative computing platform helps children develop
+    computational thinking and programming skills in a fun, intuitive and imaginative
+    way. Our innovative visual programming language, interactive self-paced courses,
+    and game-based programming activities provide an easy introduction to programming,
+    and empower children to innovate and create.
+  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
+  third_party_tynker_btn_site: Visit Tynker
+  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
+    that enables young children (ages 5-7) to create their own interactive stories
+    and games. Children snap together graphical programming blocks to make characters
+    move, jump, dance, and sing. Children can modify characters in the paint editor,
+    add their own voices and sounds, even insert photos of themselves - then use the
+    programming blocks to make their characters come to life.
+  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
+  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
+    games, and animations and share your creations with others in the online community.
+    Scratch helps young people learn to think creatively, reason systematically, and
+    work collaboratively — essential skills for life in the 21st century.
+  third_party_scratch_btn_curriculum: Download Scratch Curriculum
+  third_party_scratch_btn_forum: Scratch Educator Forum
+  third_party_scratch_btn_site: Visit Scratch
+  third_party_lightbot_desc: In Lightbot, students must program a robot with commands
+    to solve puzzles. Students may play the game in the Browser (requires Flash Player),
+    or on Android or iOS devices. Students play the initial set of “Basic” levels
+    in Lightbot. They will learn how to tell a computer what to do with a series of
+    basic commands and gain the general process by which computer programs are written.
+  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
+  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_khan_desc: Learn how to program drawings, animations, and games using
+    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
+    can share whatever you create, explore what others have created and learn from
+    each other!
+  third_party_khan_btn_learn: Learn CS with Khan Academy
+  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
+    allows everyone, even novices, to start programming and build fully functional
+    apps for Android devices. Newcomers to App Inventor can have their first app up
+    and running in an hour or less, and can program more complex apps in significantly
+    less time than with more traditional, text-based languages.
+  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
+  third_party_appinv_btn_forum: App Inventor 2 Forum
+  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_codehs_desc: CodeHS introduces the building blocks of programming with
+    short videos, example code, and lots of programming exercises that make coding
+    fun and accessible for beginners. With CodeHS, you can get the help that every
+    new programmer needs to work through problems and keep learning. Our tutors are
+    everywhere!
+  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
+  third_party_codecademy_desc: We are rethinking education from the bottom up. The
+    web has rethought nearly everything - commerce, social networking, healthcare,
+    and more. We are building the education the world needs - the first truly net
+    native education.
+  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
+  third_party_codecademy_btn_site: Visit Codecademy
+  third_party_organization: Organization
+  third_party_curriculum: Plani mësimor
+  third_party_pricing: Pricing
+  third_party_cost_free: Free
+  third_party_cost_5permonth: "$5/month per class"
+  third_party_cost_299: "$2.99/download"
+  third_party_cost_free_399: Free to try, $399/classroom
+  third_party_cost_free_2: Free to try, $2/student
+  third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
+  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
+    K-3
+  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
+  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
+    K-5
+  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
+  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
+  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
+  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
+  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
+  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
+  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
   enter_valid_age: Të lutem zgjidh një moshë të vlefshme
   enter_valid_email: Ju lutem shkruani një adresë email-i të vlefshme
   get_a_certificate_message: Ne do tu dergojmë një certifikate dhe informacione se
@@ -137,6 +246,11 @@
   learn_classes: Gjej klasa lokale
   hoc_is_here: "#OraPërKodim është ketu - provoje! @codeorg"
   just_did_hoc: 'Unë sapo mbarova #OrënPërKodim - provoje! @codeorg'
+  just_did_course1: I just finished Course 1 - check it out! @codeorg
+  just_did_course2: I just finished Course 2 - check it out! @codeorg
+  just_did_course3: I just finished Course 3 - check it out! @codeorg
+  just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   twitter_teach_cs: Përse nuk mësohen shkencat kompjuterike në më shumë shkolla? Gjë
     që rregullohet http://youtu.be/nKIu9yen5nc. Vizito http://code.org/ për të mësuar
     më shumë.
@@ -249,6 +363,9 @@
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
     science in classrooms.
   homepage_banner_20k_teachers_link: Mëso më shumë
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_slot_text_title_hoc: Ora e Kodimit
   homepage_slot_text_blurb_hoc: "Çdokush mund të mësojë. Fillo sot"
   homepage_slot_text_link_hoc: Provo Orën e Kodimit
@@ -263,6 +380,9 @@
   homepage_slot_text_link_othercourses: Kurse të tjera online
   homepage_slot_text_title_educators: Mësuesit
   homepage_slot_text_blurb_educators: Mëso studentët e tu
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: Shkolla fillore
+  homepage_slot_text_link_high: Shkolla mesme
   homepage_slot_text_link_k5: Kurse për klasat K-5
   homepage_slot_text_link_fullcurriculum: Shiko planin tonë të plotë mësimor
   homepage_slot_text_link_pd: Zhvillim profesional
@@ -271,6 +391,7 @@
   homepage_slot_text_link_stats: Shiko statistikat
   homepage_slot_text_link_buy: Përfshihu
   homepage_slot_text_link_donate: Bëj një donacion
+  homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_header_codestudio: Krijimet e studentëve në Code Studio
   homepage_header_donors: Code.org falenderon të gjithë mbështetësit
   homepage_donors_seall: Shiko të gjitha
@@ -531,6 +652,11 @@
   dashboard_action_remove_confirm: Heqje?
   dashboard_action_done: Përfunduar
   dashboard_action_required: e domosdoshme
+  dashboard_assessments_view: 'View assessments in:'
+  dashboard_assessments_none: No assessments
+  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_all: All
+  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Faqja kryesore e mësuesit
   dashboard_navigation_section_student_progress: Llogaritë dhe Ecuria e Studentit
   dashboard_navigation_section_teacher_progress: Ecuria e Kursit Tënd
@@ -541,12 +667,25 @@
   dashboard_navigation_all_sections: Llogaritë dhe Ecuritë e Studentëve
   dashboard_navigation_view_progress: Shiko Ecurinë
   dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_add_students: Shto Studentë
   dashboard_navigation_manage_students: Menaxho Studentët
   dashboard_navigation_lesson_plans_resources: Planet Mësimore dhe Burimet
   dashboard_navigation_view_stats: Shiko Statistikat
   dashboard_navigation_section: 'Seksioni: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
+  dashboard_progress_not_started: nuk është nisur
+  dashboard_progress_in_progress: Në punë e sipër
+  dashboard_progress_not_completed: e papërfunduar
+  dashboard_progress_completed_too_many_blocks: i përfunduar, me shumë blloqe
+  dashboard_progress_completed_perfect: i përfunduar, në mënyrë perfekte
+  dashboard_progress_furthest_level_attempted: përpjekja e nivelit më të largët
+  dashboard_progress_submitted: submitted
+  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_student_in_script: Progress information for %{student_name} in
+    %{script_name}
+  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Seksion i ri
   dashboard_sections_jumbotron_instruction: Krijo seksione të reja dhe shto studentë
     në to. Seksionet të ndihmojnë për të organizuar studentët në grupe më të vogla
@@ -573,6 +712,26 @@
     informacione të llogarive të studenteve te tu dhe t'ua shpërndash atyre në menyrë
     individuale.
   dashboard_sections_switch_section: 'Ndrysho seksionin:'
+  dashboard_sections_close: Mbyll
+  dashboard_sections_move_students_desc: Select students to move to a new section.
+    Moving students will not clear their progress.
+  dashboard_sections_one_per_teacher: Students can only be in one section for each
+    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_to_section: 'Move to section:'
+  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_other_section: Other Section
+  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
+    section AND the new section
+  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
+    only.
+  dashboard_sections_move_students: Move Students
+  dashboard_error_none_selected: You didn't select any students to move. Please select
+    at least one student.
+  dashboard_error_other_section: If you're moving students between your own sections,
+    select your section from the dropdown. Only select 'Other Section' to move your
+    students to a different teacher's section.
   dashboard_students_add_student: Shto studentë
   dashboard_students_add_students: Shto studentë të shumëfishtë
   dashboard_students_add_multiple: 'Shkruaj emrat e studentëve të tu, një për çdo
@@ -658,16 +817,22 @@
   dashboard_login_picture: Figurë
   dashboard_login_none: Email
   dashboard_new_password: fjalëkalim i ri
-  dashboard_progress_not_started: nuk është nisur
-  dashboard_progress_in_progress: Në punë e sipër
-  dashboard_progress_not_completed: e papërfunduar
-  dashboard_progress_completed_too_many_blocks: i përfunduar, me shumë blloqe
-  dashboard_progress_completed_perfect: i përfunduar, në mënyrë perfekte
-  dashboard_progress_furthest_level_attempted: përpjekja e nivelit më të largët
   dashboard_stage: Fazë
   dashboard_puzzle: Enigmë
   dashboard_question: Question
   dashboard_response: Response
+  dashboard_correctness: Correctness
+  dashboard_correctness_free_response: Free response
+  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_correct: E saktë
+  dashboard_correctness_incorrect: Incorrect
+  dashboard_submission_submitted: Submitted
+  dashboard_submission_in_progress: In progress
+  dashboard_status: Status
+  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Statistika mahnitëse nga Ora e Kodimit e vitit të kaluar.
     Në vetëm një javë:'
   stats_hoc_2013_image_alt: Statistikat nga Ora e Kodimit 2013
@@ -691,17 +856,17 @@
   dashboard_faq_k5: Pyetje e shtruar shpesh të K-5
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_message: "<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4."
+  dashboard_announce_message: "<b>April 4, 2016</b> - We all know there is a diversity
+    problem in computer science. Code Studio teachers are leading the way in educating
+    underrepresented minorities. Our annual survey shows record diversity in your
+    classrooms! Check out the numbers."
   dashboard_announce_button_text: Mëso më shumë
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
-  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
+  dashboard_announce_petition: As a teacher, you're leading the way in a movement
+    to give every student in every school the opportunity to learn computer science.
+    Now, it's time to let your representatives hear from you. This week, education
+    leaders, 28 governors, and CEOs of America's largest companies joined together
+    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_petition_button: Add your name
   code_hoc_coming: Ora e Kodimit është këtu - Dhjetor 8-14!
   code_sign_up: Rregjistrohu për të marrë pjesë në Javën Edukative për SHK
   learn_more: Mëso më Shumë
@@ -820,6 +985,41 @@
   codesters_name: Codesters
   texasinstruments_name: 10 Minutes of Code
   teacherled_name: Teacher Led Lesson Plans
+  course1_name: Kursi 1
+  course2_name: Kursi 2
+  course3_name: Kursi 3
+  course4_name: Kursi 4
+  accelerated_name: Kurs i Avancuar
+  cspunit1_name: CS Principles Unit 1
+  cspunit2_name: CS Principles Unit 2
+  cspunit3_name: CS Principles Unit 3
+  cspunit4_name: CS Principles Unit 4
+  cspunit5_name: CS Principles Unit 5
+  cspunit6_name: CS Principles Unit 6
+  cspunit3_gradelevel: Grades 9-12
+  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
+    of computer programming, which unlocks the ability to make rich, interactive apps.
+    This course uses JavaScript as the programming language, and App Lab as the programming
+    environment to build apps, but the concepts learned in these lessons span all
+    programming languages and tools.
+  20-hour_name: Kurs i Avancuar
+  algebra_name: CS in Algebra
+  AlgebraA_name: CS in Algebra Course A
+  AlgebraB_name: CS in Algebra Course B
+  gumball_name: Gumball
+  classicmaze_name: Classic Maze
+  iceage_name: Epoka e Akullnajave
+  minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  math_category_name: Matematikë
+  hoc_category_name: Ora e Kodit
+  csf_category_name: CS Fundamentals
+  csp_category_name: CS Principles
+  applab_name: Laboratori i Aplikacioneve
+  applab_gradelevel: Ages 13+
+  applab_shortdescription_congrats: App Lab is a programming environment where you
+    can make simple apps. Design an app, code with blocks or JavaScript to make it
+    work, then share your app in seconds
   codeorg_gradelevel: Moshat 4-104
   codeintl_gradelevel: Moshat 4-104
   thinkersmithspanish_gradelevel: Për të gjithë
@@ -870,6 +1070,11 @@
   codesters_gradelevel: Ages 12-14
   texasinstruments_gradelevel: Ages 13-16
   teacherled_gradelevel: Ages 5+
+  course1_gradelevel: Moshat 4-6
+  course2_gradelevel: Moshat 6-18
+  course3_gradelevel: Moshat 8-18
+  course4_gradelevel: Moshat 10-18
+  accelerated_gradelevel: Moshat 10-18
   codeorg_platformtext: Shfletuesit modern, telefonat e mençur, tabletat
   codeintl_platformtext: Browserat e kohës, smartphones, tableta
   thinkersmithspanish_platformtext: Unplugged
@@ -990,6 +1195,18 @@
     calculator.
   teacherled_shortdescription: Be inspired to design your own Hour of Code event with
     these lesson plans.
+  course2_shortdescription_congrats: For students with basic reading skills, this
+    course builds on Course 1. Students will create programs to solve problems and
+    develop interactive games or stories they can share. Recommended for grades 2-5.
+  course3_shortdescription_congrats: Ready for the next level? Students will delve
+    deeper into programming topics introduced in previous courses to find flexible
+    solutions to more complex problems. By the end of this course, students create
+    interactive stories and games they can share with anyone. Recommended for grades
+    4-5.
+  course4_shortdescription_congrats: Ready to go further? Students will delve deeper
+    into programming topics introduced in previous courses to find flexible solutions
+    to more complex problems. By the end of this course, students create interactive
+    stories and games they can share with anyone. Recommended for grades 4-8.
   codeorg_longdescription: Mëso konceptet bazë të Shkencës Kompjuterike me programimin
     drag dhe drop. Kjo është një lojë, tutorial i vetë drejtuar që paraqet leksione
     në video nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies.
@@ -1504,141 +1721,11 @@
   infinity_shortcode: inf
   playlab_shortcode: luaj
   artist_shortcode: art
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
-  view_course: View course
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_2500: 'Price: Free plans & $2,500+'
-  third_party_tynker_desc: Tynker's creative computing platform helps children develop
-    computational thinking and programming skills in a fun, intuitive and imaginative
-    way. Our innovative visual programming language, interactive self-paced courses,
-    and game-based programming activities provide an easy introduction to programming,
-    and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
-    games, and animations and share your creations with others in the online community.
-    Scratch helps young people learn to think creatively, reason systematically, and
-    work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
-  third_party_lightbot_desc: In Lightbot, students must program a robot with commands
-    to solve puzzles. Students may play the game in the Browser (requires Flash Player),
-    or on Android or iOS devices. Students play the initial set of “Basic” levels
-    in Lightbot. They will learn how to tell a computer what to do with a series of
-    basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
-  third_party_khan_desc: Learn how to program drawings, animations, and games using
-    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
-    can share whatever you create, explore what others have created and learn from
-    each other!
-  third_party_khan_btn_learn: Learn CS with Khan Academy
-  third_party_khan_btn_forum: Khan Academy CS Forum
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
-    allows everyone, even novices, to start programming and build fully functional
-    apps for Android devices. Newcomers to App Inventor can have their first app up
-    and running in an hour or less, and can program more complex apps in significantly
-    less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with
-    short videos, example code, and lots of programming exercises that make coding
-    fun and accessible for beginners. With CodeHS, you can get the help that every
-    new programmer needs to work through problems and keep learning. Our tutors are
-    everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codehs_btn_demos: Visit the CodeHS Demos
-  third_party_codecademy_desc: We are rethinking education from the bottom up. The
-    web has rethought nearly everything - commerce, social networking, healthcare,
-    and more. We are building the education the world needs - the first truly net
-    native education.
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
-  third_party_curriculum: Curriculum
-  third_party_pricing: Pricing
-  third_party_cost_free: Free
-  third_party_cost_5permonth: "$5/month per class"
-  third_party_cost_299: "$2.99/download"
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
-    K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
-    K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
-  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
-  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
-  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
-  just_did_course1: I just finished Course 1 - check it out! @codeorg
-  just_did_course2: I just finished Course 2 - check it out! @codeorg
-  just_did_course3: I just finished Course 3 - check it out! @codeorg
-  just_did_course4: I just finished Course 4 - check it out! @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
-  course1_name: Course 1
-  course2_name: Course 2
-  course3_name: Course 3
-  course4_name: Course 4
-  accelerated_name: Accelerated Course
-  course1_gradelevel: Ages 4-6
-  course2_gradelevel: Ages 6-18
-  course3_gradelevel: Ages 8-18
-  course4_gradelevel: Ages 10-18
-  accelerated_gradelevel: Ages 10-18
-  course2_shortdescription_congrats: For students with basic reading skills, this
-    course builds on Course 1. Students will create programs to solve problems and
-    develop interactive games or stories they can share. Recommended for grades 2-5.
-  course3_shortdescription_congrats: Ready for the next level? Students will delve
-    deeper into programming topics introduced in previous courses to find flexible
-    solutions to more complex problems. By the end of this course, students create
-    interactive stories and games they can share with anyone. Recommended for grades
-    4-5.
-  course4_shortdescription_congrats: Ready to go further? Students will delve deeper
-    into programming topics introduced in previous courses to find flexible solutions
-    to more complex problems. By the end of this course, students create interactive
-    stories and games they can share with anyone. Recommended for grades 4-8.
+  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.

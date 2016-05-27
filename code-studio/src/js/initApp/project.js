@@ -5,11 +5,17 @@ var AUTOSAVE_INTERVAL = 30 * 1000;
 
 var ABUSE_THRESHOLD = 10;
 
+var NON_REMIXABLE_SKINS = ['hoc2015', 'infinity', 'gumball', 'iceage'];
+
 var hasProjectChanged = false;
 
 var assets = require('./clientApi').create('/v3/assets');
 var sources = require('./clientApi').create('/v3/sources');
 var channels = require('./clientApi').create('/v3/channels');
+
+var showProjectAdmin = require('../showProjectAdmin');
+var header = require('../header');
+var queryParams = require('../utils').queryParams;
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -60,7 +66,8 @@ var isEditing = false;
  */
 var currentSources = {
   source: null,
-  html: null
+  html: null,
+  animations: null
 };
 
 /**
@@ -78,7 +85,8 @@ function packSources() {
 function unpackSources(data) {
   currentSources = {
     source: data.source,
-    html: data.html
+    html: data.html,
+    animations: data.animations
   };
 }
 
@@ -139,6 +147,11 @@ var projects = module.exports = {
       });
     });
   },
+
+  /**
+   * Is the current project (if any) editable by the logged in user (if any)?
+   */
+  isEditable: isEditable,
 
   /**
    * @returns {boolean} true if we're frozen
@@ -210,47 +223,39 @@ var projects = module.exports = {
   },
 
   // Whether the current level is a project level (i.e. at the /projects url).
-  isProjectLevel: function() {
+  isProjectLevel: function () {
     return (appOptions.level && appOptions.level.isProjectLevel);
   },
 
-  shouldUpdateHeaders: function() {
+  shouldUpdateHeaders: function () {
     return !appOptions.isExternalProjectLevel;
   },
 
-  showProjectHeader: function() {
+  showProjectHeader: function () {
     if (this.shouldUpdateHeaders()) {
-      dashboard.header.showProjectHeader();
+      header.showProjectHeader();
     }
   },
 
-  /**
-   * Updates the contents of the admin box for admins. We have no knowledge
-   * here whether we're an admin, and depend on dashboard getting this right.
-   */
-  showAdmin: function() {
-    dashboard.admin.showProjectAdmin();
-  },
-
-  showMinimalProjectHeader: function() {
+  showMinimalProjectHeader: function () {
     if (this.shouldUpdateHeaders()) {
-      dashboard.header.showMinimalProjectHeader();
+      header.showMinimalProjectHeader();
     }
   },
 
-  showShareRemixHeader: function() {
+  showHeaderForProjectBacked: function () {
     if (this.shouldUpdateHeaders()) {
-      dashboard.header.showShareRemixHeader();
+      header.showHeaderForProjectBacked();
     }
   },
-  setName: function(newName) {
+  setName: function (newName) {
     current = current || {};
     if (newName) {
       current.name = newName;
       this.setTitle(newName);
     }
   },
-  setTitle: function(newName) {
+  setTitle: function (newName) {
     if (newName && appOptions.gameDisplayName) {
       document.title = newName + ' - ' + appOptions.gameDisplayName;
     }
@@ -279,6 +284,10 @@ var projects = module.exports = {
         sourceHandler.setInitialLevelHtml(currentSources.html);
       }
 
+      if (currentSources.animations) {
+        sourceHandler.setInitialAnimationMetadata(currentSources.animations);
+      }
+
       if (isEditing) {
         if (current) {
           if (currentSources.source) {
@@ -288,7 +297,7 @@ var projects = module.exports = {
           this.setName('My Project');
         }
 
-        $(window).on(events.appModeChanged, function(event, callback) {
+        $(window).on(events.appModeChanged, function (event, callback) {
           this.save(callback);
         }.bind(this));
 
@@ -304,7 +313,7 @@ var projects = module.exports = {
 
         if (current.hidden) {
           if (!this.isFrozen()) {
-            this.showShareRemixHeader();
+            this.showHeaderForProjectBacked();
           }
         } else {
           if (current.isOwner || !parsePath().channelId) {
@@ -326,9 +335,12 @@ var projects = module.exports = {
       $(".full_container").css({"padding":"0px"});
     }
 
-    this.showAdmin();
+
+    // Updates the contents of the admin box for admins. We have no knowledge
+    // here whether we're an admin, and depend on dashboard getting this right.
+    showProjectAdmin();
   },
-  projectChanged: function() {
+  projectChanged: function () {
     hasProjectChanged = true;
   },
   /**
@@ -338,7 +350,7 @@ var projects = module.exports = {
   getStandaloneApp: function () {
     switch (appOptions.app) {
       case 'applab':
-        return 'applab';
+        return appOptions.level.makerlabEnabled ? 'makerlab' : 'applab';
       case 'gamelab':
         return 'gamelab';
       case 'turtle':
@@ -350,7 +362,7 @@ var projects = module.exports = {
       case 'studio':
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
-        } else if (appOptions.skinId === 'hoc2015' || appOptions.skinId === 'infinity') {
+        } else if (NON_REMIXABLE_SKINS.indexOf(appOptions.skinId) !== -1) {
           return null;
         }
         return 'playlab';
@@ -374,7 +386,7 @@ var projects = module.exports = {
    * Explicitly clear the HTML, circumventing safety measures which prevent it from
    * being accidentally deleted.
    */
-  clearHtml: function() {
+  clearHtml: function () {
     currentSources.html = '';
   },
   /**
@@ -385,7 +397,7 @@ var projects = module.exports = {
    * @param {function} callback Function to be called after saving.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    */
-  save: function(sourceAndHtml, callback, forceNewVersion) {
+  save: function (sourceAndHtml, callback, forceNewVersion) {
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
@@ -400,7 +412,8 @@ var projects = module.exports = {
 
       sourceAndHtml = {
         source: this.sourceHandler.getLevelSource(),
-        html: this.sourceHandler.getLevelHtml()
+        html: this.sourceHandler.getLevelHtml(),
+        animations: this.sourceHandler.getAnimationMetadata()
       };
     }
 
@@ -452,7 +465,7 @@ var projects = module.exports = {
         location.href = this.getPathName('edit');
       }
     }
-    dashboard.header.updateTimestamp();
+    header.updateTimestamp();
   },
   /**
    * Autosave the code if things have changed
@@ -474,30 +487,33 @@ var projects = module.exports = {
 
     var source = this.sourceHandler.getLevelSource();
     var html = this.sourceHandler.getLevelHtml();
+    var animations = this.sourceHandler.getAnimationMetadata();
 
-    if (currentSources.source === source && currentSources.html === html) {
+    if (currentSources.source === source &&
+        currentSources.html === html &&
+        currentSources.animations === animations) {
       hasProjectChanged = false;
       return;
     }
 
-    this.save({source: source, html: html}, function () {
+    this.save({source: source, html: html, animations: animations}, function () {
       hasProjectChanged = false;
     });
   },
   /**
    * Renames and saves the project.
    */
-  rename: function(newName, callback) {
+  rename: function (newName, callback) {
     this.setName(newName);
     this.save(callback);
   },
   /**
    * Freezes and saves the project. Also hides so that it's not available for deleting/renaming in the user's project list.
    */
-  freeze: function(callback) {
+  freeze: function (callback) {
     current.frozen = true;
     current.hidden = true;
-    this.save(function(data) {
+    this.save(function (data) {
       executeCallback(callback, data);
       redirectEditView();
     });
@@ -506,9 +522,10 @@ var projects = module.exports = {
    * Creates a copy of the project, gives it the provided name, and sets the
    * copy as the current project.
    */
-  copy: function(newName, callback) {
+  copy: function (newName, callback) {
     var srcChannel = current.id;
-    var wrappedCallback = this.copyAssets.bind(this, srcChannel, callback);
+    var wrappedCallback = this.copyAssets.bind(this, srcChannel,
+        this.copyAnimations.bind(this, srcChannel, callback));
     delete current.id;
     delete current.hidden;
     this.setName(newName);
@@ -523,7 +540,7 @@ var projects = module.exports = {
       return;
     }
     var destChannel = current.id;
-    assets.copyAll(srcChannel, destChannel, function(err) {
+    assets.copyAll(srcChannel, destChannel, function (err) {
       if (err) {
         $('.project_updated_at').text('Error copying files');  // TODO i18n
         return;
@@ -531,12 +548,23 @@ var projects = module.exports = {
       executeCallback(callback);
     });
   },
-  serverSideRemix: function() {
+  copyAnimations: function (srcChannel, callback) {
+    if (!srcChannel) {
+      executeCallback(callback);
+      return;
+    }
+    var destChannel = current.id;
+    // TODO: Copy animation assets to new channel
+    executeCallback(callback);
+  },
+  serverSideRemix: function () {
     if (current && !current.name) {
       var url = projects.appToProjectUrl();
       if (url === '/projects/algebra_game') {
         this.setName('Big Game Template');
-      } else if (url === '/projects/applab' || url === '/projects/gamelab') {
+      } else if (url === '/projects/applab' ||
+          url === '/projects/makerlab' ||
+          url === '/projects/gamelab') {
         this.setName('My Project');
       }
     }
@@ -550,14 +578,14 @@ var projects = module.exports = {
       redirectToRemix();
     }
   },
-  createNew: function() {
+  createNew: function () {
     projects.save(function () {
       location.href = projects.appToProjectUrl() + '/new';
     });
   },
-  delete: function(callback) {
+  delete: function (callback) {
     var channelId = current.id;
-    channels.delete(channelId, function(err, data) {
+    channels.delete(channelId, function (err, data) {
       executeCallback(callback, data);
     });
   },
@@ -594,7 +622,7 @@ var projects = module.exports = {
               fetchAbuseScore(function () {
                 deferred.resolve();
               });
-            });
+            }, queryParams('version'));
           }
         });
       } else {
@@ -603,16 +631,16 @@ var projects = module.exports = {
       }
     } else if (appOptions.isChannelBacked) {
       isEditing = true;
-      channels.fetch(appOptions.channel, function(err, data) {
+      channels.fetch(appOptions.channel, function (err, data) {
         if (err) {
           deferred.reject();
         } else {
           fetchSource(data, function () {
-            projects.showShareRemixHeader();
+            projects.showHeaderForProjectBacked();
             fetchAbuseScore(function () {
               deferred.resolve();
             });
-          });
+          }, queryParams('version'));
         }
       });
     } else {
@@ -641,8 +669,9 @@ var projects = module.exports = {
  * sources api
  * @param {object} channelData Data we fetched from channels api
  * @param {function} callback
+ * @param {string?} version Optional version to load
  */
-function fetchSource(channelData, callback) {
+function fetchSource(channelData, callback, version) {
   // Explicitly remove levelSource/levelHtml from channels
   delete channelData.levelSource;
   delete channelData.levelHtml;
@@ -654,7 +683,19 @@ function fetchSource(channelData, callback) {
 
   projects.setTitle(current.name);
   if (channelData.migratedToS3) {
-    sources.fetch(current.id + '/' + SOURCE_FILE, function (err, data) {
+    var url = current.id + '/' + SOURCE_FILE;
+    if (version) {
+      url += '?version=' + version;
+    }
+    sources.fetch(url, function (err, data) {
+      if (err) {
+        console.warn('unable to fetch project source file', err);
+        data = {
+          source: '',
+          html: '',
+          animations: ''
+        };
+      }
       unpackSources(data);
       callback();
     });
@@ -691,7 +732,7 @@ function executeCallback(callback, data) {
  * is the current project (if any) editable by the logged in user (if any)?
  */
 function isEditable() {
-  return (current && current.isOwner && !current.frozen);
+  return current && current.isOwner && !current.frozen && !queryParams('version');
 }
 
 /**
@@ -740,7 +781,6 @@ function redirectFromHashUrl() {
     return false;
   }
 
-  var pathInfo = parsePath();
   location.href = newUrl;
   return true;
 }
@@ -758,18 +798,20 @@ function parsePath() {
     pathname += location.hash.replace('#', '/');
   }
 
-  if (pathname.split('/')[PathPart.PROJECTS] !== 'p' &&
-      pathname.split('/')[PathPart.PROJECTS] !== 'projects') {
+  var tokens = pathname.split('/');
+
+  if (tokens[PathPart.PROJECTS] !== 'p' &&
+    tokens[PathPart.PROJECTS] !== 'projects') {
     return {
       appName: null,
       channelId: null,
-      action: null,
+      action: null
     };
   }
 
   return {
-    appName: pathname.split('/')[PathPart.APP],
-    channelId: pathname.split('/')[PathPart.CHANNEL_ID],
-    action: pathname.split('/')[PathPart.ACTION]
+    appName: tokens[PathPart.APP],
+    channelId: tokens[PathPart.CHANNEL_ID],
+    action: tokens[PathPart.ACTION]
   };
 }

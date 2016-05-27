@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:09.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Goals for using Code.org in your Classroom",
+    "height": "200",
+    "markdown_instructions": "What are your goals or intentions for integrating Code.org in your classroom?\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

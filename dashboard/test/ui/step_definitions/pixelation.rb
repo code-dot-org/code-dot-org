@@ -28,7 +28,7 @@ When /^I finish pixelation level and reload$/ do
   }
 end
 
-Then /^pixelation data has text "([^"]*)"$/ do |inputText|
+Then /^pixelation data has text "([^"]*)"$/ do |input_text|
   pixel_data = @browser.execute_script("return $('#pixel_data').val()")
-  pixel_data.gsub(/[ \n]/, '').should eq inputText.gsub(/[ \n]/, '')
+  pixel_data.gsub(/[ \n]/, '').should eq input_text.gsub(/[ \n]/, '')
 end

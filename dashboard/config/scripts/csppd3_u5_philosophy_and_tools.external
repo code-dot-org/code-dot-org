@@ -1,0 +1,39 @@
+name 'CSPPD3-u5 philosophy and tools'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Unit 5 Overview > Unit 5 Tools and Philosophy
+#### Tool Talk
+
+The potentially-new tools students will need for the performance task will be tools to:
+
+ * Create (or save) a PDF from a word processing document
+ * Highlight and modify elements in a PDF
+ * Make a video screen capture
+
+Some time might need to be spent with small practice tasks to make sure students can do this BEFORE starting the task.  Students shouldn't have to spend time during the administration of the actual task to learn how to do these things.<br><br>
+
+**Students do not need to be experts** in using whatever PDF and Video tools you use in your classroom.  A suggestion is to prepare a simple document that lays out a procedure students can use.
+
+#### Philosophy of this Unit
+
+This unit does not have much new learning or teaching involved.  It's mostly just preparing for and doing the Performance Tasks.  <br><br>
+
+The teacher should approach these tasks in a way that gets students excited and motivated to do them.  If students have been excited or interested in any particular part of the course then there should be an **opportunity to express that interest** through the performance tasks.
+
+<br>
+##### Motivation
+
+You can interpret the **Explore PT as an opportunity** to ask a student: “What do you think is cool/fun/interesting about computing in the world?  It really could be anything! Go find out more about it and why you think it’s impactful”.  
+<br><br>
+You can interpret the **Create PT as an opportunity** for a student to write a program to do almost anything!  Anything they want!  It can be something completely new, an improvement on another program, a collaboration with a friend, or even just an investigation into a relatively small bit of code that interests them.
+<br><br>
+
+#### Learn more about the Performance Tasks
+
+Click continue to move on.  The subsequent stages will have a bit deeper breakdown of each of the Performance tasks and your role as the teacher.<br><br>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

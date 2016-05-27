@@ -30,7 +30,7 @@ module.exports = function (name, mode, callback, attachments) {
     htmlMode = true;
   }
 
-  var editor = CodeMirror.fromTextArea(document.getElementById('level_' + name), {
+  var editor = CodeMirror.fromTextArea(document.getElementById(name), {
     mode: mode,
     htmlMode: htmlMode,
     viewportMargin: Infinity,

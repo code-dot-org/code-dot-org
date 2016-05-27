@@ -25,5 +25,14 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="maze_forever">
+          <statement name="DO">
+            <block type="maze_moveForward"/>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

@@ -1,6 +1,6 @@
 saw_failure = false
 
-Before('@stop_after_failure') do |scenario|
+Before('@stop_after_failure') do
   if saw_failure
     fail 'skipping due to seen failure'
   end
@@ -13,7 +13,7 @@ After('@stop_after_failure') do |scenario|
 end
 
 Before('@as_student') do
-  steps 'Given I manually sign in as "TestStudent"'
+  steps 'Given I create a student named "TestStudent"'
 end
 
 After('@as_student') do

@@ -40,8 +40,11 @@
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
     "min_workspace_height": "600",
-    "examples_required": "false",
-    "maze_data": null
+    "examples_required": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 1
   }
 }]]></config>
   <blocks>

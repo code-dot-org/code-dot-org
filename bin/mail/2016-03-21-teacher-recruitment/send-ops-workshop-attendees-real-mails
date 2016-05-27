@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# 1427 contacts
+../send-to-mailing-list 3-17-recruit-6-12 ./ops-workshop-attendees-deduped.csv

@@ -11,7 +11,8 @@ Please note that this application is for teachers from districts that have partn
 
 **Some of our district partners have their own application process.**  If you do not see your district on the application [click on your district's pin on the map](/educate/professional-learning/cs-principles-apply) to find the appropriate form.
 ## What is the application period? 
-Applications will be accepted until the end of February. They will be reviewed between January 15 and February 28, 2016. You should expect to hear back from us 10 - 14 business days from submission, once the review period begins. If you are accepted, you will receive additional information about travel, logistics, and registration for your designated summer in-person summit dates.
+Our Priority 1 deadline closed at the end of February. Our Priority 2 deadline is the end of March. Applications from partner districts recieved before March 31st will be considered before we start opening up spots to our waitlist in April. Applications will be reviewed on a rolling basis, and you can expect to hear back from us with 10 - 14 business days. If you are accepted, you will receive additional information about travel, logistics, and registration for your designated summer in-person summit date.
+
 
 ## What should you review before you apply?
 [Review this PDF](/educate/plc/2016-17_CSP_Teacher_Application.pdf) of the application questions to ensure you have the information needed to complete the form. 

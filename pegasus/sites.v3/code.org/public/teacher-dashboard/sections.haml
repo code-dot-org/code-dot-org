@@ -61,9 +61,9 @@ content-type: text/ng-template
         %span{"ng-show" => "section.editing"}
           %select{"ng-model" => "section.grade", "ng-options"=>"value for value in #{DashboardSection::valid_grades.inspect}"}
       %td
-        %span{"ng-hide" => "section.editing"} {{course_list[section.course.id]}}
+        %span{"ng-hide" => "section.editing"} {{course_list | getNameById:section.course.id}}
         %span{"ng-show" => "section.editing"}
-          %select{"ng-model" => "section.course.id", "ng-options"=>"k*1 as v for (k, v) in course_list"}
+          %select{"ng-model" => "section.course.id", "ng-options"=>"course.id as course.name group by course.category for course in course_list | orderBy:['category', 'position', 'name']"}
             %option{value: ''}
       %td {{section.students.length}}
       %td

@@ -24,7 +24,15 @@
           future: gelecekte olması mümkün değil
   hello: Merhaba dünya
   welcome_back: Hoş geldiniz %{name}
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Gönder
+  unsubmit: Gönderme
+  previous_page: "Önceki Sayfa"
+  next_page: Sonraki Sayfa
+  cancel: "İptal"
+  okay: Tamam
+  heading_x_of_y: "%{heading} (sayfa %{x}, %{y})"
   add_teacher_form:
     code:
       label: "Öğretmen ekleyin:"
@@ -160,8 +168,6 @@
         subject: Code.org'ta %{teacher_name} ile bir sınıfa katıl!
       student_disassociated:
         subject: 'Code.org bildirim: %{student_name} artık senin öğrencin değil.'
-      teacher_disassociated:
-        subject: 'Code.org bildirimi: %{teacher_name} artık öğretmeniniz değil.'
   reports:
     error:
       access_denied: Bu kişinin istatistiklerine erişemezsiniz
@@ -368,11 +374,42 @@
     heading_elementary: "<h2>20 saat ders</h2><h1> yeni başlayanlar (bütün yaşlar)
       için </h1>"
     heading_apps: "<h1>Herkes</h1> için <h2>eğlence</h2>"
+    heading_tools: "<h2>Bir sonraki adım için hazır mısın?</h2> <h1>Lise için JavaScript
+      araçları</h1>"
     heading_legacy: "<h1>Tüm yaş</h1> grupları için <h2>genel kurslarımız</h2>"
     your_gallery: Galeri
     no_primary_course: Code Studio'daki kurslardan birisini deneyin
     choose_next_course: Aşağıdaki Code Studio derslerinden birini seçerek deneyin
     print_certificate: Sertifikayı Yazdır
+    announcement_title: Bildirimler
+    announcement_view_all: Tümünü Gör
+    announcement_message: "<b>4 Nisan 2016</b> - hepimiz Bilgisayar Biliminde bir
+      çeşitlilik sorun olduğunu biliyorum. Kod Studio azınlıklara kod eğitmek için
+      öncülük edecek. Bizim yıllık araştırmamız çeşitliği göstermektedir."
+    announcement_button: Daha fazlasını öğren
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: Code Studio'da Öğrenin
     description: Herkes bilgisayar bilimi öğrenebilir. Kod kullanarak oyunlar, uygulamalar
@@ -404,6 +441,8 @@
       Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.
     art_from_html_old: |
       Minecraft&#8482; &copy; %{current_year} Microsoft. Tüm hakları saklıdır. Star Wars&#8482; &copy; %{current_year} Disney ve Lucasfilm. Tüm hakları saklıdır. Dondurulmuş&#8482; &copy; %{current_year} Disney. Tüm hakları saklıdır. Buz çağı&#8482; &copy; %{current_year} 20th Century Fox. Tüm hakları saklıdır. Kızgın kuşlar&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tüm hakları saklıdır. Mutant vs. Zombiler&#8482; &copy; %{current_year} Electronic Arts Inc. Tüm hakları saklıdır. The Amazing World of Gumball is trademark ve &copy; 2015 Cartoon Network.
+    code_from_html: Code.org p5.play, <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      GNU LGPL 2.1</a> altında lisanslı kullanır.
     powered_by_aws: Amazon Web Services tarafından desteklenmektedir
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo ve Kod
       Saati&reg; Code.org'un ticari markalarıdır."
@@ -488,6 +527,13 @@
       current: "Şu anki Seviyeler"
       unused: Kullanılmamış Seviyeler
   upsell:
+    applab:
+      title: Uygulama Laboratuvarı
+      body: App Lab basit uygulamalar yapabileceğiniz bir uygulama geliştirme ortamıdır.
+        Kod blokları yada JavaScript ile bir uygulama yapın ve paylaşın.
+      body_short: " Kod blokları yada JavaScript ile bir uygulama yapın ve paylaşın."
+      audience: 13 + Yaş grubu
+      cta: Nasıl olduğunu öğren
     hoc:
       title: Klasik Labirent
       body: Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.
@@ -520,6 +566,14 @@
     minecraft:
       title: Minecraft
       body: Kod aracılığıyla Minecraft dünyasını keşfedin.
+    unplugged:
+      title: Bağımsız dersler
+      audience: 6 yaş ve üzeri
+      body: Sınıfınızda kullanmanız için bağımsız dersler listesi toparladık. Sınıfınızda
+        bilgisayar olsa da olmasa da bilgisayar bilimlerin temellerini öğretebilirsiniz.
+        Bu ders konularını tek başına bir ders olarak kullanabileceğiniz gibi başka
+        bir bilgisayar dersini destekleyecek şekilde kullanabilirsiniz.
+      body_short: Bilgisayarınız yok ise bu bağımsız dersleri derste kullanın.
   gallery:
     students_drew_these_with_code: "Öğrenciler kod ile bunu çizdiler!"
     students_made_these_with_code: "Öğrenciler bunları kod ile yaptı!"
@@ -541,10 +595,10 @@
       son hali değildir, geribildirimlerin alındığı ve geliştirmelerin yapıldığı versiyonudur.
     prerelease_hoc2014: Bu öğretici <span class='betatext'>beta</span>dır. Geri dönüşler
       aldıkça ve geliştirildikçe düzenlenmeye açıktır.
-    feedback: Geri bildirimde bulun
     report_bug: Hata bildir
     support: Yardım Al
     support_url: "//support.code.org"
+    help_resources: Yardım ve kaynaklar
   multi:
     wrong_title: Yanlış cevap
     wrong_body: Girdiğiniz cevap doğru değil.  Lütfen tekrar deneyin!
@@ -552,6 +606,32 @@
     correct_body: "İşte bu doğru cevap."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Teşekkür ederiz
+    wrong_body: Cevabınızı gönderdiğiniz için teşekkür ederiz.
+    correct_title: Teşekkür ederiz
+    correct_body: Cevabınızı gönderdiğiniz için teşekkür ederiz.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Teşekkür ederiz
+    wrong_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
+    correct_title: Teşekkür ederiz
+    correct_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
+  level_group-submittable:
+    wrong_title: Teşekkür ederiz
+    wrong_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
+    correct_title: Teşekkür ederiz
+    correct_body: Cevaplarınızı gönderdiğiniz için teşekkürler.
+    unsubmit-title: Değerlendirmeni geri al
+    unsubmit-body: Değerlendirmeni geri almak gönderme zamanını sıfırlayacaktır? Emin
+      misin?
+    submit-incomplete-title: Değerlendirmeni gönder.
+    submit-incomplete-body: Bazı soruları boş bıraktın. Değerlendirmeyi gönderdikten
+      sonra değişiklik yapamazsın. Emin misin?
+    submit-complete-title: Değerlendirmeni gönder.
+    submit-complete-body: Değerlendirmenizi gönderdikten sonra düzenleyemezsiniz,
+      gerçekten göndermek istiyor musunuz?
   match:
     wrong_title: Yanlış çözüm
     wrong_body: Girdiğiniz çözüm doğru değil.  Lütfen tekrar deneyin!
@@ -571,6 +651,8 @@
     placeholder: Cevabınızı buraya girin
     open_response_title: teşekkürler
     open_response_body: cevabınız için teşekkürler!
+    correct_title: Doğru
+    correct_body: "İşte bu doğru cevap."
   dialog:
     ok: TAMAM
     startover_title: Baştan başlamak istediğinizden emin misiniz?
@@ -634,6 +716,7 @@
     completed_perfect: tamamlandı, harika
     furthest_level_attempted: denenen en yüksek seviye
     assessment: değerlendirme
+    submitted: gönderildi
   studio:
     courses_working_on: "Üzerinde çalışmakta olduğunuz dersler"
     completed_courses: Tamamladığınız dersler
@@ -651,6 +734,10 @@
     share: Paylaş
     share_title: Projenizi paylaşın
     share_copy_link: 'Bağlantıyı kopyala:'
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Kapat
     more: Daha Fazla
     name: "İsim"
@@ -700,3 +787,23 @@
           veriniz.
         acknowledge: Bu bilgileri göndererek, %{link_start_privacy}Gizlilik Sözleşmesini%{link_end}
           ve %{link_start_tos}Hizmet Sözleşmesini%{link_end} kabul etmiş olursunuz
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+  components:
+    icon_library:
+      search_placeholder_text: "Öğe ara..."
+      no_icons_found: "Öğe Bulunamadı"
+  flex_category:
+    required: Genel Bakış
+    content: Content
+    practice: Teacher Practices

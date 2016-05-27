@@ -1,0 +1,80 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-28T19:37:25.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "draw": null,
+      "drawSprites": null,
+      "var sprite = createSprite": {
+        "params": [
+          "200",
+          "200"
+        ],
+        "paletteParams": [
+          "x",
+          "y"
+        ]
+      },
+      "frameRate": null,
+      "randomNumber_min_max": null,
+      "shapeColor": null,
+      "sprite.width": null,
+      "sprite.height": null,
+      "background": null,
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "strokeWeight": null,
+      "noStroke": null,
+      "color": null,
+      "arc": null,
+      "ellipse": null,
+      "line": null,
+      "point": null,
+      "rect": null,
+      "regularPolygon": null,
+      "shape": null,
+      "text": null,
+      "textAlign": null,
+      "textFont": null,
+      "textSize": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "show_d_pad": "false",
+    "markdown_instructions": "# Debug\r\n\r\nThis program is supposed to create a sprite that changes to a random color, width and height. It's not working. Can you figure out why its not working?\r\n\r\n# Do This\r\n\r\n* Run the program to see what is happening\r\n* Debug the program. Hint: You do not need to add any new commands to make this work.",
+    "start_blocks": "var sprite = createSprite(randomNumber(0, 400), randomNumber(0, 400));\r\nframeRate(5);\r\n\r\nfunction draw() {\r\n  Sprite.width = randomNumber(0,400);\r\n  thing.height = randomNumber(0,400);\r\n  sprite.shapeColor = color(randomNumber(0,255), randomNumber(0,255),randomNumber(0,255));\r\n  background('white');\r\n  drawSprites();\r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

@@ -13,6 +13,8 @@ module ApplicationHelper
 
   USER_AGENT_PARSER = UserAgentParser::Parser.new
 
+  PUZZLE_PAGE_NONE = -1
+
   def browser
     @browser ||= USER_AGENT_PARSER.parse request.headers["User-Agent"]
   end
@@ -48,12 +50,18 @@ module ApplicationHelper
     image_tag(image_url('white-checkmark.png'))
   end
 
-  def activity_css_class(result)
+  def activity_css_class(user_level)
     # For definitions of the result values, see /app/src/constants.js.
-    if result.nil? || result == 0
-      'not_tried'
-    elsif result >= Activity::SUBMITTED_RESULT
+    result = user_level.try(:best_result)
+
+    if result == Activity::REVIEW_REJECTED_RESULT
+      'review_rejected'
+    elsif result == Activity::REVIEW_ACCEPTED_RESULT
+      'review_accepted'
+    elsif user_level.try(:submitted)
       'submitted'
+    elsif result.nil? || result == 0
+      'not_tried'
     elsif result >= Activity::FREE_PLAY_RESULT
       'perfect'
     elsif result >= Activity::MINIMUM_PASS_RESULT
@@ -137,7 +145,7 @@ module ApplicationHelper
           level_source.level_source_image.s3_url
         end
       end
-    elsif [Game::FLAPPY, Game::BOUNCE, Game::STUDIO, Game::CRAFT].include? app
+    elsif [Game::FLAPPY, Game::BOUNCE, Game::STUDIO, Game::CRAFT, Game::APPLAB].include? app
       asset_url "#{app}_sharing_drawing.png"
     else
       asset_url 'sharing_drawing.png'

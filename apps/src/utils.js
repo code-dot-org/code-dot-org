@@ -1,40 +1,7 @@
 /* global define */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
-var savedAmd;
-
-// Do some hackery to make it so that lodash doesn't think it's being loaded
-// via require js
-if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
-  savedAmd = define.amd;
-  define.amd = false;
-}
-
-// get lodash
-var _ = require('./lodash');
-var Hammer = require('./hammer');
-
-// undo hackery
-if (typeof define === 'function' && savedAmd) {
-  define.amd = savedAmd;
-  savedAmd = null;
-}
-
-exports.getLodash = function () {
-  return _;
-};
-
-exports.getHammer = function () {
-  return Hammer;
-};
-
-exports.shallowCopy = function(source) {
+exports.shallowCopy = function (source) {
   var result = {};
   for (var prop in source) {
     result[prop] = source[prop];
@@ -46,14 +13,14 @@ exports.shallowCopy = function(source) {
 /**
  * Returns a clone of the object, stripping any functions on it.
  */
-exports.cloneWithoutFunctions = function(object) {
+exports.cloneWithoutFunctions = function (object) {
   return JSON.parse(JSON.stringify(object));
 };
 
 /**
  * Returns a string with a double quote before and after.
  */
-exports.quote = function(str) {
+exports.quote = function (str) {
   return '"' + str + '"';
 };
 
@@ -62,7 +29,7 @@ exports.quote = function(str) {
  * properties in options. Leaves defaults and options unchanged.
  * NOTE: For new code, use $.extend({}, defaults, options) instead
  */
-exports.extend = function(defaults, options) {
+exports.extend = function (defaults, options) {
   var finalOptions = exports.shallowCopy(defaults);
   for (var prop in options) {
     finalOptions[prop] = options[prop];
@@ -71,7 +38,7 @@ exports.extend = function(defaults, options) {
   return finalOptions;
 };
 
-exports.escapeHtml = function(unsafe) {
+exports.escapeHtml = function (unsafe) {
   return unsafe
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -86,14 +53,14 @@ exports.escapeHtml = function(unsafe) {
  * @param number
  * @param mod
  */
-exports.mod = function(number, mod) {
+exports.mod = function (number, mod) {
   return ((number % mod) + mod) % mod;
 };
 
 /**
  * Generates an array of integers from start to end inclusive
  */
-exports.range = function(start, end) {
+exports.range = function (start, end) {
   var ints = [];
   for (var i = start; i <= end; i++) {
     ints.push(i);
@@ -118,7 +85,7 @@ exports.executeIfConditional = function (conditional, fn) {
  * @param inputString
  * @returns {string} string without quotes
  */
-exports.stripQuotes = function(inputString) {
+exports.stripQuotes = function (inputString) {
   return inputString.replace(/["']/g, "");
 };
 
@@ -176,7 +143,7 @@ exports.randomKey = function (obj) {
  * @returns {string} RFC4122-compliant UUID
  */
 exports.createUuid = function () {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
     var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
     return v.toString(16);
   });
@@ -200,7 +167,7 @@ if (!String.prototype.repeat) {
    * @param {number} count
    * @returns {string}
    */
-  String.prototype.repeat = function(count) {
+  String.prototype.repeat = function (count) {
     if (this === null) {
       throw new TypeError('can\'t convert ' + this + ' to object');
     }
@@ -265,14 +232,14 @@ exports.isInfiniteRecursionError = function (err) {
   }
 
   // Firefox
-  /* jshint ignore:start */
+  /*eslint-disable */
   // Linter doesn't like our use of InternalError, even though we gate on its
   // existence.
   if (typeof(InternalError) !== 'undefined' && err instanceof InternalError &&
       err.message === 'too much recursion') {
     return true;
   }
-  /* jshint ignore:end */
+  /*eslint-enable */
 
   // IE
   if (err instanceof Error &&
@@ -284,14 +251,14 @@ exports.isInfiniteRecursionError = function (err) {
 };
 
 // TODO(dave): move this logic to dashboard.
-exports.getPegasusHost = function() {
+exports.getPegasusHost = function () {
   switch (window.location.hostname) {
     case 'studio.code.org':
     case 'learn.code.org':
       return 'code.org';
     default:
       var name = window.location.hostname.split('.')[0];
-      switch(name) {
+      switch (name) {
         case 'localhost':
           return 'localhost.code.org:3000';
         case 'development':
@@ -321,7 +288,7 @@ exports.browserSupportsCssMedia = function () {
     try {
       if (rules.length > 0) {
         // see if we can access media
-        var media = rules[0].media; // jshint ignore:line
+        var media = rules[0].media;
       }
     } catch (e) {
       return false;
@@ -335,30 +302,40 @@ exports.browserSupportsCssMedia = function () {
  * @param text
  * @returns String that has no more escape characters and multiple divs converted to newlines
  */
-exports.unescapeText = function(text) {
+exports.unescapeText = function (text) {
   var cleanedText = text;
-  cleanedText = cleanedText.replace(/<div>/gi, '\n'); // Divs generate newlines
-  cleanedText = cleanedText.replace(/<[^>]+>/gi, ''); // Strip all other tags
 
-  // This next step requires some explanation
+  // Handling of line breaks:
   // In multiline text it's possible for the first line to render wrapped or unwrapped.
   //     Line 1
   //     Line 2
-  //   Can render as either of:
+  //   Can render as any of:
   //     Line 1<div>Line 2</div>
+  //     Line 1<br><div>Line 2</div>
   //     <div>Line 1</div><div>Line 2</div>
   //
-  // But leading blank lines will always render wrapped and should be preserved
+  // Most blank lines are rendered as <div><br></div>
+  //     Line 1
+  //
+  //     Line 3
+  //   Can render as any of:
+  //     Line 1<div><br></div><div>Line 3</div>
+  //     Line 1<br><div><br></div><div>Line 3</div>
+  //     <div>Line 1</div><div><br></div><div>Line 3</div>
+  //
+  // Leading blank lines render wrapped or as placeholder breaks and should be preserved
   //
   //     Line 2
-  //     Line 3
-  //   Renders as
-  //    <div><br></div><div>Line 2</div><div>Line 3</div>
-  //
-  // To handle this behavior we strip leading newlines UNLESS they are followed
-  // by another newline, using a negative lookahead (?!)
-  cleanedText = cleanedText.replace(/^\n(?!\n)/, ''); // Strip leading nondoubled newline
+  //   Renders as any of:
+  //    <br><div>Line 2</div>
+  //    <div><br></div><div>Line 2</div>
 
+  // First, convert every <div> tag that isn't at the very beginning of the string
+  // to a newline.  This avoids generating an incorrect blank line at the start
+  // if the first line is wrapped in a <div>.
+  cleanedText = cleanedText.replace(/(?!^)<div[^>]*>/gi, '\n');
+
+  cleanedText = cleanedText.replace(/<[^>]+>/gi, ''); // Strip all other tags
   cleanedText = cleanedText.replace(/&nbsp;/gi, ' '); // Unescape nonbreaking spaces
   cleanedText = cleanedText.replace(/&gt;/gi, '>');   // Unescape >
   cleanedText = cleanedText.replace(/&lt;/gi, '<');   // Unescape <
@@ -376,14 +353,81 @@ exports.escapeText = function (text) {
   escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
   escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
   escapedText = escapedText.replace(/>/g, '&gt;');    // Escape >
-  escapedText = escapedText.replace(/  /g,' &nbsp;'); // Escape doubled spaces
+  escapedText = escapedText.replace(/ {2}/g,' &nbsp;'); // Escape doubled spaces
 
   // Now wrap each line except the first line in a <div>,
   // replacing blank lines with <div><br><div>
   var lines = escapedText.split('\n');
-  var returnValue = lines[0] + lines.slice(1).map(function (line) {
-      return '<div>' + (line.length ? line : '<br>') + '</div>';
-    }).join('');
+  var first = lines[0];
+  var rest = lines.slice(1);
 
-  return returnValue;
+  // If first line is blank and not the only line, convert it to a <br> tag:
+  if (first.length === 0 && lines.length > 1) {
+    first = '<br>';
+  }
+
+  // Wrap the rest of the lines
+  return first + rest.map(function (line) {
+    return '<div>' + (line.length ? line : '<br>') + '</div>';
+  }).join('');
+};
+
+/**
+ * Converts degrees into radians.
+ *
+ * @param degrees - The degrees to convert to radians
+ * @return `degrees` converted to radians
+ */
+exports.degreesToRadians = function (degrees) {
+    return degrees * (Math.PI / 180);
+};
+
+/**
+ * Simple wrapper around localStorage.setItem that catches any exceptions (for
+ * example when we call setItem in Safari's private mode)
+ * @return {boolean} True if we set successfully
+ */
+exports.trySetLocalStorage = function (item, value) {
+  try {
+    localStorage.setItem(item, value);
+    return true;
+  } catch (e) {
+    return false;
+  }
+};
+
+/**
+ * Generates a simple enum object
+ * @example
+ *   var Seasons = enum('SPRING', 'SUMMER', 'FALL', 'WINTER');
+ *   Seasons.SPRING === 'SPRING';
+ *   Seasons.SUMMER === 'SUMMER';
+ *   // etc...
+ */
+exports.makeEnum = function () {
+  var result = {}, key;
+  for (var i = 0; i < arguments.length; i++) {
+    key = String(arguments[i]);
+    if (result[key]) {
+      throw new Error('Key "' + key + '" occurred twice while constructing enum');
+    }
+    result[key] = key;
+  }
+  if (Object.freeze) {
+    Object.freeze(result);
+  }
+  return result;
+};
+
+/**
+ * If the string is too long, truncate it and append an ellipsis.
+ * @param {string} inputText
+ * @param {number} maxLength
+ * @returns {string}
+ */
+exports.ellipsify = function (inputText, maxLength) {
+  if (inputText && inputText.length > maxLength) {
+    return inputText.substr(0, maxLength - 3) + "...";
+  }
+  return inputText || '';
 };

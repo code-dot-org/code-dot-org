@@ -4,8 +4,10 @@ class ContentDSL < BaseDSL
     super
     @hash.merge! options: {}
   end
+
   def title(text) @hash[:title] = text end
   def type(text) @hash[:type] = text end
+  def submittable(text) @hash[:submittable] = text end
 
   # legacy
   def description(text) @hash[:content1] = text end
@@ -18,9 +20,7 @@ class ContentDSL < BaseDSL
 
   # Markdown (i18n not yet supported)
   def markdown(md) @hash[:markdown] = md end
-
   def teacher_markdown(md) @hash[:teacher_markdown] = md end
-
   def pre_title(text) @hash[:pre_title] = text end
   def pre_body(text) @hash[:pre_body] = text end
   def pre_ani(text) @hash[:pre_ani] = text end

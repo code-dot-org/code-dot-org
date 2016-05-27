@@ -1,11 +1,5 @@
 /** @file An animated image, which handles frame counts, rates and offsets
  * internally and exposes simple methods for rendering at the desired position. */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var utils = require('../utils');
@@ -122,7 +116,7 @@ StudioAnimation.prototype.createElement = function (parentElement) {
 /**
  * Remove our element/clipPath/animator
  */
-StudioAnimation.prototype.removeElement = function() {
+StudioAnimation.prototype.removeElement = function () {
 
   if (this.element_) {
     this.element_.parentNode.removeChild(this.element_);

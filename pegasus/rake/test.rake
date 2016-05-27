@@ -1,3 +1,5 @@
+ENV['RACK_ENV'] = 'test'
+
 require 'rake/testtask'
 require_relative '../test/fixtures/fake_dashboard.rb'
 Rake::TestTask.new

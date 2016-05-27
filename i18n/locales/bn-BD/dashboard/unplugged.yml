@@ -45,7 +45,7 @@ bn:
           - unplug7
         video: Unplug7
       Unplug8:
-        title: Abstraction
+        title: অপসারণ
         desc: "This activity combines your students' everyday routine and a Mad-Lib style thinking game to help your class learn about the effectiveness of abstraction."
         pdfs:
           - unplug8
@@ -63,13 +63,13 @@ bn:
           - unplug10
         video: Unplug10
       Unplug11:
-        title: Wrap-Up
+        title: গুটিয়ে ফেলা
         desc: The final wrap-up in the first 20-hour series will help the class relive all of their favorite moments, while giving them next steps that they can take on their own if they are interested in continuing their computer science journey.
         pdfs:
           - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: আনন্দের মানচিত্র
         desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
         video: C1_happy_maps_unplugged
       MoveIt:
@@ -89,7 +89,7 @@ bn:
         desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Relay programming
+        title: রিলে-স্যুইচ প্রোগ্রামিং
         desc: |-
           Students run a relay race, where they dash across the yard to write an algorithm based on a "Graph Paper Programming" image. They can only write one instruction at a time and if there's an error somewhere, they have to erase everything back to that point.
         video: C2_relay_programming
@@ -98,7 +98,7 @@ bn:
         desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
+        title: বড় ঘটনা
         desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
@@ -138,7 +138,7 @@ bn:
         desc: This lesson calls out ways we use algorithms in our daily lives. As part of that, students will identify and write down the algorithm for a dice race game.
         video: C3_dice_race
       Internet:
-        title: Internet
+        title: ইন্টারনেট
         desc: Students send messages representing various Internet transmission methods using pieces of paper.
         video: C3_internet
       Crowdsourcing:
@@ -169,7 +169,7 @@ bn:
         desc: 'One of the most magnificent structures in the computer science world is the function.  Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice.  '
         video: C4_unplugged_parameters
       BinaryImages:
-        title: Binary Images
+        title: দ্বিমিক ছবি
         desc: 'Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.'
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:

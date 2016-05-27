@@ -1,12 +1,6 @@
 /**
  * @overview UI component: An animated SVG metronome.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var markup = require('./NetSimMetronome.html.ejs');

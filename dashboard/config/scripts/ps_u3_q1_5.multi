@@ -1,0 +1,7 @@
+name 'PS U3 Q1-5'
+question 'What is one important naming convention of functions?'
+wrong 'A function name should indicate how long the function takes to run.'
+wrong 'Two functions with similar behavior should be given identical names to indicate the relationship between them.'
+right 'A function name should be as descriptive as possible to indicate what the function does.'
+wrong 'Function names should be organized alphabetically.'
+wrong 'The function name should begin with a number that indicates the order in which it should be executed.'

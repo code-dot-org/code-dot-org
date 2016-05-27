@@ -22,17 +22,18 @@ var Calc = module.exports;
  * Create a namespace for the application.
  */
 var studioApp = require('../StudioApp').singleton;
-var Calc = module.exports;
 var jsnums = require('./js-numbers/js-numbers.js');
 var commonMsg = require('../locale');
 var calcMsg = require('./locale');
 var skins = require('../skins');
 var levels = require('./levels');
-var page = require('../templates/page.html.ejs');
+var Provider = require('react-redux').Provider;
+var AppView = require('../templates/AppView');
+var CalcVisualizationColumn = require('./CalcVisualizationColumn');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
-var _ = require('lodash');
+var _ = require('../lodash');
 var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
@@ -127,7 +128,7 @@ function asExpressionNode(val) {
 /**
  * Initialize Blockly and the Calc.  Called on page load.
  */
-Calc.init = function(config) {
+Calc.init = function (config) {
   // replace studioApp methods with our own
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
@@ -148,30 +149,13 @@ Calc.init = function(config) {
   config.skin.failureAvatar = null;
   config.skin.winAvatar = null;
 
-  config.html = page({
-    assetUrl: studioApp.assetUrl,
-    data: {
-      localeDirection: studioApp.localeDirection(),
-      visualization: require('./visualization.html.ejs')(),
-      controls: require('./controls.html.ejs')({
-        assetUrl: studioApp.assetUrl
-      }),
-      blockUsed : undefined,
-      idealBlockNumber : undefined,
-      editCode: level.editCode,
-      blockCounterClass : 'block-counter-default',
-      inputOutputTable: level.inputOutputTable,
-      readonlyWorkspace: config.readonlyWorkspace
-    }
-  });
-
-  config.loadAudio = function() {
+  config.loadAudio = function () {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
     studioApp.loadAudio(skin.failureSound, 'failure');
   };
 
-  config.afterInject = function() {
+  config.afterInject = function () {
     var svg = document.getElementById('svgCalc');
     svg.setAttribute('width', CANVAS_WIDTH);
     svg.setAttribute('height', CANVAS_HEIGHT);
@@ -215,7 +199,19 @@ Calc.init = function(config) {
     }
   };
 
-  studioApp.init(config);
+  studioApp.setPageConstants(config);
+
+  var visualizationColumn = <CalcVisualizationColumn inputOutputTable={level.inputOutputTable}/>;
+
+  ReactDOM.render(
+    <Provider store={studioApp.reduxStore}>
+      <AppView
+          visualizationColumn={visualizationColumn}
+          onMount={studioApp.init.bind(studioApp, config)}
+      />
+    </Provider>,
+    document.getElementById(config.containerId)
+  );
 };
 
 /**
@@ -318,7 +314,7 @@ function displayGoal(targetSet) {
 /**
  * Click the run button.  Start the program.
  */
-Calc.runButtonClick = function() {
+Calc.runButtonClick = function () {
   studioApp.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   studioApp.attempts++;
@@ -673,7 +669,7 @@ Calc.evaluateResults_ = function (targetSet, userSet) {
 /**
  * Execute the user's code.
  */
-Calc.execute = function() {
+Calc.execute = function () {
   Calc.generateResults_();
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -1017,7 +1013,7 @@ function clearSvgExpression(id) {
  * Draws a user expression and each step collapsing it, up to given depth.
  * @returns True if it couldn't collapse any further at this depth.
  */
-function animateUserExpression (maxNumSteps) {
+function animateUserExpression(maxNumSteps) {
   var userEquation = appState.userSet.computeEquation();
   if (!userEquation) {
     throw new Error('require user expression');
@@ -1120,7 +1116,7 @@ function displayEquation(parentId, name, tokenList, line, markClass, leftAlign) 
     var transform = Blockly.getRelativeXY(parent.childNodes[0]);
     xPadding = parseFloat(transform.x) - firstTokenLen;
   } else {
-    xPadding = (CANVAS_WIDTH - g.getBoundingClientRect().width) / 2;
+    xPadding = (CANVAS_WIDTH - g.getBBox().width) / 2;
   }
   var yPos = (line * LINE_HEIGHT);
   g.setAttribute('transform', 'translate(' + xPadding + ', ' + yPos + ')');

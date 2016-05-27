@@ -1,0 +1,23 @@
+.jumbo-container
+  .img-container
+    %img.jumbo-img{src: img}
+
+  .jumbo-tutorial
+    %h1.jumbo-h1= title
+    .jumbo-tutorial-box
+      .jumbo-tutorial-info
+        %h1.jumbo-h1-second-box= title
+        %p.jumbo-tutorial-description= desc
+        %p.jumbo-tutorial-specs= specs
+      %a{:href=>url, :target=>'_self'}
+        %button= cta
+
+  #secondary-nav
+    .secondary-nav
+      - nav_bar.each_with_index do |nav, index|
+        %a.navlink{:href=>nav[:url]}
+          = nav[:text]
+        - unless nav == nav_bar.last
+          &nbsp; &nbsp; | &nbsp; &nbsp;
+
+.clear

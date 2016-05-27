@@ -1,44 +1,62 @@
-/* global React, dashboard */
-
-window.dashboard = window.dashboard || {};
-
-var STAGE_PROGRESS_TYPE = require('./stage_progress_type');
+import React from 'react';
+import { connect } from 'react-redux';
+import { STAGE_TYPE } from './types';
+import CourseProgressRow from './course_progress_row.jsx';
+import StageDetails from './stage_details.jsx';
 
 /**
  * Stage progress component used in level header and course overview.
  */
-window.dashboard.CourseProgress = (function (React) {
-  return React.createClass({
-    propTypes: {
-      stages: React.PropTypes.arrayOf(React.PropTypes.shape({
-        name: React.PropTypes.string,
-        lesson_plan_html_url: React.PropTypes.string,
-        levels: STAGE_PROGRESS_TYPE
-      }))
-    },
+var CourseProgress = React.createClass({
+  propTypes: {
+    display: React.PropTypes.oneOf(['dots', 'list']).isRequired,
+    stages: React.PropTypes.arrayOf(STAGE_TYPE)
+  },
 
-    render: function () {
-      var rows = this.props.stages.map(function (stage) {
-        return (
-          <div className='game-group' key={stage.name}>
-            <div className='stage'>
-              {stage.title}
-              <div className='stage-lesson-plan-link' style={{display: 'none'}}>
-                <a target='_blank' href={stage.lesson_plan_html_url}>
-                  {dashboard.i18n.t('view_lesson_plan')}
-                </a>
-              </div>
+  getRow(stage) {
+    if (this.props.display === 'dots') {
+      return <CourseProgressRow stage={stage} key={stage.name} />;
+    } else {
+      return <StageDetails stage={stage} key={stage.name} />;
+    }
+  },
+
+  render() {
+    var rows = [], stages = this.props.stages;
+
+    // Iterate through each stage. When a stage with a flex_category is found,
+    // greedily add stages with the same flex_category until finding a stage
+    // with a different (or no) flex_category.
+    for (var i = 0; i < stages.length; ) {
+
+      if (stages[i].flex_category) {
+        var flexRows = [], previous = stages[i].flex_category;
+        for ( ; i < stages.length && stages[i].flex_category === previous; i++) {
+          flexRows.push(this.getRow(stages[i]));
+        }
+        rows.push(
+          <div className="flex-wrapper" key={i}>
+            <div className="flex-category">
+              <h4>{previous}</h4>
+              {flexRows}
             </div>
-            <window.dashboard.StageProgress levels={stage.levels} largeDots={true} />
           </div>
         );
-      });
-
-      return (
-        <div className='user-stats-block'>
-          {rows}
-        </div>
-      );
+      } else {
+        rows.push(this.getRow(stages[i]));
+        i++;
+      }
     }
-  });
-})(React);
+
+    return (
+      <div className='user-stats-block'>
+        {rows}
+      </div>
+    );
+  }
+});
+
+export default connect(state => ({
+  display: state.display,
+  stages: state.stages
+}))(CourseProgress);

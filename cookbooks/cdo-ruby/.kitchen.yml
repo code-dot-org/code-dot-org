@@ -2,33 +2,17 @@
 driver:
   name: docker
   use_sudo: false
-  privileged: true
-
 provisioner:
   name: chef_zero
   data_path: test/shared
-  require_chef_omnibus: 11.18.12
+  require_chef_omnibus: 12.6.0
 
 platforms:
   - name: ubuntu-14.04
     run_list:
       - recipe[apt]
+      - recipe[sudo-user]
 suites:
   - name: default
     run_list:
       - recipe[cdo-ruby]
-  - name: new
-    run_list:
-      - recipe[cdo-ruby]
-    attributes:
-      cdo-ruby:
-        version: '2.2'
-        bundler_version: '1.10.6'
-  - name: upgrade
-    run_list:
-      - recipe[cdo-ruby::2.0]
-      - recipe[cdo-ruby]
-    attributes:
-      cdo-ruby:
-        version: '2.2'
-        bundler_version: '1.10.6'

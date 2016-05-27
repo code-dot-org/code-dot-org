@@ -1,0 +1,28 @@
+name 'ECSPD3-u6 day 4'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+## Unit 6 Lessons > Days 4 
+ 
+<br><br> 
+#### Concepts Covered  
+Group roles and responsibilities, distribution and separation of the LEGO Mindstorms. 
+ 
+#### Lesson Overview 
+This lesson gives students the opportunity of working in groups, where they will be given LEGO kits that they will need to separate the LEGO parts into the appropriate compartments of the trays so they will have everything set up to build the robots. 
+<br><br> 
+ 
+#### Lesson Resources 
+##### <a href="https://web.archive.org/web/20150423124112/http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=275" target=_blank>Lesson Plan link >> </a> 
+- LEGO Mindstorms NXT or EV3 Kit
+
+#### Things to keep in mind 
+Label the robots and kits so that you know what goes together.  It may be helpful to laminate the cardboard board picture that shows where the LEGO pieces go.
+<br><br>
+
+Click “Continue” below to learn about the next lesson.  
+<br/><br/> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

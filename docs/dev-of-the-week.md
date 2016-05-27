@@ -1,2 +1,0 @@
-# Dev of the Week Overview
-This document has been replaced by the [new dev of the day doc in the wiki](http://wiki.code.org/display/PROD/Dev+of+the+Day+Checklist).  For full info on DotD responsibilities, please look there.  If needed, you can [view the last pre-wiki revision of this document](https://github.com/code-dot-org/code-dot-org/blob/759f3379b2f585f6ebfac9a6beef2bec5b8a3f32/docs/dev-of-the-week.md).

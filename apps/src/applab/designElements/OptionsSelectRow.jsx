@@ -19,7 +19,7 @@ var OptionsSelectRow = React.createClass({
     };
   },
 
-  handleChangeInternal: function(event) {
+  handleChangeInternal: function (event) {
     var value = event.target.value;
     // Extract an array of text values, 1 per line
     var optionList = value.split('\n').filter(function (val) {
@@ -29,7 +29,7 @@ var OptionsSelectRow = React.createClass({
     this.setState({value: value});
   },
 
-  render: function() {
+  render: function () {
     var textAreaStyle = $.extend({}, rowStyle.input, {
       height: 40
     });

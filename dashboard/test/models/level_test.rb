@@ -157,7 +157,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'update custom level from file' do
-    level = LevelLoader.load_custom_level(LevelLoader.level_file_path 'K-1 Bee 2')
+    level = LevelLoader.load_custom_level(LevelLoader.level_file_path('K-1 Bee 2'))
     assert_equal 'bee', level.skin
     assert_equal '[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,-1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]',
       level.properties['initial_dirt']
@@ -371,7 +371,6 @@ EOS
     assert_equal(level3, Level.cache_find(level3.id))
   end
 
-
   test 'where we want to calculate ideal level source' do
     match_level = Match.create(name: 'a match level')
     level_with_ideal_level_source_already = Artist.create(name: 'an artist level with a solution', solution_blocks: '<xml></xml>')
@@ -397,7 +396,6 @@ EOS
   test 'calculate_ideal_level_source_id sets ideal_level_source_id to best solution' do
     level = Maze.create(name: 'maze level with level sources')
     assert_equal nil, level.ideal_level_source_id
-
 
     right = create(:level_source, level: level, data: "<xml><right/></xml>")
     6.times do

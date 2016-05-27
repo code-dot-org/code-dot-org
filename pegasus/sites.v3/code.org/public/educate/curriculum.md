@@ -13,9 +13,9 @@ For teachers in the United States, Code.org offers high quality, 1-day professio
 
 # Middle School #
 
-Code.org has two interdisciplinary modules at the middle school level. Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to create [CS in Science](http://code.org/curriculum/science), and Code.org has partnered with Bootstrap to develop [CS in Algebra](http://code.org/curriculum/algebra). Each module exists as multiple sets of topical lessons that are able to be integrated into pre-existing Science and Math classes.
+Code.org has two interdisciplinary modules at the middle school level. Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to create [CS in Science](http://code.org/curriculum/science), and Code.org has partnered with Bootstrap to develop [CS in Algebra](http://code.org/educate/algebra). Each module exists as multiple sets of topical lessons that are able to be integrated into pre-existing Science and Math classes.
 
-[<button>CS in Science</button>](/curriculum/science) &nbsp;&nbsp;[<button>CS in Algebra</button>](/curriculum/algebra)
+[<button>CS in Science</button>](/curriculum/science) &nbsp;&nbsp;[<button>CS in Algebra</button>](/educate/algebra)
 
 <br/>
 In addition, the online courses in our [Code Studio](http://studio.code.org) platform may be used at all grade levels, and could be worked into a middle school after-school program or as a semester-long computer-programming course. [Free, self-paced online professional development](/educate/professional-development-online) is available to help teachers get started.

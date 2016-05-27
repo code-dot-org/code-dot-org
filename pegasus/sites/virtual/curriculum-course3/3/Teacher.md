@@ -10,7 +10,7 @@ theme: none
 
 [together]
 
-## Lesson Overview 
+## Lesson Overview
 This course is a review of artist concepts from Course 2. Students will draw images with the artist using a combination of sequences and loops.
 
 [summary]
@@ -31,7 +31,7 @@ This course is a review of artist concepts from Course 2. Students will draw ima
 
 [/summary]
 
-## Lesson Objectives 
+## Lesson Objectives
 ### Students will:
 
 - Count the number of times an action should be repeated and represent it as a loop
@@ -73,7 +73,7 @@ In the Artist levels students are not constrained to 90 degree angles. Having pr
 
 [together]
 
-## Extended Learning 
+## Extended Learning
 <a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### The Copy Machine
@@ -103,11 +103,11 @@ In the Artist levels students are not constrained to 90 degree angles. Having pr
 - 4.b - Plan and manage activities to develop a solution or complete a project.
 - 6.a - Understand and use technology systems.
 - 6.c - Troubleshoot systems and applications.
-- 6.d - Transfer current knowledge to learning of new technologies.  
+- 6.d - Transfer current knowledge to learning of new technologies.
 
 
 ### CSTA K-12 Computer Science Standards
- 
+
 - CT.L1:3-01. Use technology resources (e.g., puzzles, logical thinking programs) to solve age appropriate problems.
 - CL.L1:3-02. Work cooperatively and collaboratively with peers teachers, and others using technology.
 - CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
@@ -115,14 +115,14 @@ In the Artist levels students are not constrained to 90 degree angles. Having pr
 - CT.L2-01. Use the basic steps in algorithmic problem solving to design solutions.
 - CT.L2-06. Describe and analyze a sequence of instructions being followed.
 - CT.L2-08. Use visual representations of problem states, structures, and data.
-- CT.L2-12. Use abstraction to decompose a problem into sub problems. 
+- CT.L2-12. Use abstraction to decompose a problem into sub problems.
 
 ### Next-Gen Science Standards
 
 - 3-5-ETS1-2. Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem.
 
 ### Common Core Mathematical Practices
- 
+
 - 1. Make sense of problems and persevere in solving them.
 - 2. Reason abstractly and quantitatively.
 - 4. Model with mathematics
@@ -154,9 +154,7 @@ In the Artist levels students are not constrained to 90 degree angles. Having pr
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

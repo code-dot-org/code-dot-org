@@ -1,0 +1,37 @@
+name 'CSD U3 Variables STOP misconceptions'
+css 'unplugged'
+markdown <<MARKDOWN
+# Misconceptions: Make a Prediction
+
+At this point you know how to create variables with `var`, update its value with `=`, and display its value using `write` and `console.log`. To get more comfortable with using these tools together let's look at 4 programs that **highlight common misconceptions about variables**.
+
+**For each program below, predict what values will be displayed in the Debug Console. Be prepared to share your answers**
+
+**Program 1:**
+	var age;
+	console.log(age);
+
+**Program 2:**
+```
+var items = 20;
+items = 10;
+console.log(items);
+```
+
+**Program 3:**
+```
+var items = 20;
+console.log(items);
+items = 10;
+console.log(items);
+```
+
+**Program 4:**
+```
+var score = randomNumber(10,20);
+console.log(score);
+console.log(score);
+```
+
+**Once you've shared your predictions, move on to the next level to try out the code for yourself.**
+MARKDOWN

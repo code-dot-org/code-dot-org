@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:11.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Sending Numbers Free Response",
+    "placeholder": "Enter your reflection here",
+    "markdown_instructions": "Imagine that you have to send a list of 10 numbers to friend in binary using the bit-sending widget. The numbers are all between 0 and 100. Describe the issues or problems that you and your friend would encounter in trying to do this. How would you address these problem?\n\n### Hello!\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

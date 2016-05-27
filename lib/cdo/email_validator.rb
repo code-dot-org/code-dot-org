@@ -1,4 +1,5 @@
 require 'mail'
+require 'active_support/core_ext/object/blank'
 
 # A module for checking email addresses for validity.
 module EmailValidator

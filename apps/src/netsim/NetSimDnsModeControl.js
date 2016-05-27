@@ -1,12 +1,6 @@
 /**
  * @overview UI component used to select a DNS mode at runtime.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var markup = require('./NetSimDnsModeControl.html.ejs');

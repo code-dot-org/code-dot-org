@@ -1,0 +1,49 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-11T13:27:25.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "rect": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Using a Variable's Value\r\n\r\nThis program creates a variable called `size`. You will need to **assign it a value**. It will then be used to set the size of a square on the screen.\r\n\r\n# Do This\r\n\r\n* **Assign the variable `size` a value** and run the program to see how its value is used\r\n* **Change the value** and rerun the program to see how it affects the output of your program.",
+    "start_blocks": "var size;\r\n//Assign the value of size below\r\n\r\nrect(200, 200, size, size);",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "instructions": "Predict: What will get displayed in the console?"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

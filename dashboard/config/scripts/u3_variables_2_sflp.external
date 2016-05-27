@@ -1,7 +1,6 @@
 name 'U3-Variables 2 - SFLP'
 css 'unplugged'
 
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 3 Lesson 15
 

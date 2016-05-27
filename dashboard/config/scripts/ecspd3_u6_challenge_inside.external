@@ -1,0 +1,21 @@
+name 'ECSPD3-u6 challenge inside'
+css 'unplugged'
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+### Unit 6 Challenge  > What’s Inside 
+ 
+<br/> 
+#### What’s in the Challenge Overview?  
+ 
+>- Explanation of the process - what is a challenge?  
+- Topics and options for your challenge
+- Space to **pick** a challenge 
+- Space to **do** the challenge
+ 
+Click “Continue” below to get started with the Unit 6 challenge overview!  
+<br/><br/> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a> 
+
+MARKDOWN

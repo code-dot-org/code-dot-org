@@ -6,17 +6,10 @@
   "user_id": 155,
   "properties": {
     "skin": "applab",
-    "code_functions": {
-      "createRecord": null,
-      "declareAssign_x": null,
-      "declareNoAssign_x": null,
-      "assign_x": null,
-      "console.log": null
-    },
     "edit_code": true,
     "embed": "false",
     "instructions": "Add a new record to your table in the Data Viewer. (Click to see full instructions)",
-    "markdown_instructions": "# Add a record by hand\r\n\r\nYou can also add new records in the data table itself by clicking the \"Add row\" button.\r\n\r\n# Do This\r\n * Go to the \"mySongs\" data table\r\n * Click <img src=\"https://images.code.org/403521f908a9055f4597f649deb3cfab-image-1449260729474.png\" style=\"width: 70px\">\r\n * Enter the information for a song of your choosing.\r\n \t* If you can't think of a song use: **Don't Stop Believin'** by *Journey*.  It's 250 seconds long.\r\n * Once you've added a record in the data table come back here and continue to the next level.\r\n\r\n",
+    "markdown_instructions": "# Add a Record by Hand\r\n\r\nYou can also add new records in the data table itself by clicking the \"Add row\" button.\r\n\r\n# Do This:\r\n * Go to the \"mySongs\" data table.\r\n * Click the \"Add row\" button. <img src=\"https://images.code.org/403521f908a9055f4597f649deb3cfab-image-1449260729474.png\" style=\"width: 70px\">\r\n * Enter the information for a song of your choosing.\r\n \t* If you can't think of a song use: **Don't Stop Believin'** by *Journey*.  It's 250 seconds long.\r\n * Once you've added a record in the data table come back here and continue to the next level.\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -46,7 +39,8 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "project_template_level_name": "U4 - Exploring Data Tools - Template"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks/>
 </Applab>

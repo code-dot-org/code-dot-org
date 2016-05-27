@@ -1,5 +1,5 @@
-$:.unshift File.expand_path('../lib', __FILE__)
-$:.unshift File.expand_path('../shared/middleware', __FILE__)
+$LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift File.expand_path('../shared/middleware', __FILE__)
 
 # Set up gems listed in the Gemfile.
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __FILE__)
@@ -44,7 +44,7 @@ def load_configuration()
     'build_blockly_core'          => false,
     'build_dashboard'             => true,
     'build_pegasus'               => true,
-    'build_code_studio'           => [:development].include?(rack_env),
+    'build_code_studio'           => false,
     'dcdo_table_name'             => "dcdo_#{rack_env}",
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
@@ -70,7 +70,7 @@ def load_configuration()
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
     'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
-    'partners'                    => %w(al ar br eu italia ro sg uk za),
+    'partners'                    => %w(ar br italia ro sg tr uk za),
     'pdf_port_collate'            => 8081,
     'pdf_port_markdown'           => 8081,
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
@@ -89,9 +89,16 @@ def load_configuration()
     'use_dynamo_tables'           => [:staging, :adhoc, :test, :production].include?(rack_env),
     'use_dynamo_properties'       => [:staging, :adhoc, :test, :production].include?(rack_env),
     'dynamo_tables_table'         => "#{rack_env}_tables",
-    'dynamo_tables_index'         => "channel_id-table_name-index",
     'dynamo_properties_table'     => "#{rack_env}_properties",
+    'dynamo_table_metadata_table'         => "#{rack_env}_table_metadata",
+    'throttle_data_apis'          => [:staging, :adhoc, :test, :production].include?(rack_env),
+    'max_table_reads_per_sec'     => 20,
+    'max_table_writes_per_sec'    => 40,
+    'max_property_reads_per_sec'  => 40,
+    'max_property_writes_per_sec' => 40,
     'lint'                        => rack_env == :adhoc || rack_env == :staging || rack_env == :development,
+    'animations_s3_bucket'        => 'cdo-v3-animations',
+    'animations_s3_directory'     => rack_env == :production ? 'animations' : "animations_#{rack_env}",
     'assets_s3_bucket'            => 'cdo-v3-assets',
     'assets_s3_directory'         => rack_env == :production ? 'assets' : "assets_#{rack_env}",
     'sources_s3_bucket'           => 'cdo-v3-sources',
@@ -123,13 +130,12 @@ def load_configuration()
     config['pegasus_reporting_db_reader'] ||= config['reporting_db_reader'] + config['pegasus_db_name']
     config['pegasus_reporting_db_writer'] ||= config['reporting_db_writer'] + config['pegasus_db_name']
 
-    # Set AWS SDK environment variables from provided config.
-    ENV['AWS_ACCESS_KEY_ID'] ||= config['aws_access_key'] || config['s3_access_key_id']
-    ENV['AWS_SECRET_ACCESS_KEY'] ||= config['aws_secret_key'] || config['s3_secret_access_key']
+    # Set AWS SDK environment variables from provided config and standardize on aws_* attributres
+    ENV['AWS_ACCESS_KEY_ID'] ||= config['aws_access_key'] ||= config['s3_access_key_id']
+    ENV['AWS_SECRET_ACCESS_KEY'] ||= config['aws_secret_key'] ||= config['s3_secret_access_key']
     ENV['AWS_DEFAULT_REGION'] ||= config['aws_region']
   end
 end
-
 
 ####################################################################################################
 ##
@@ -146,6 +152,10 @@ class CDOImpl < OpenStruct
   end
 
   def canonical_hostname(domain)
+    # Allow hostname overrides
+    return CDO.override_dashboard if CDO.override_dashboard && domain == 'studio.code.org'
+    return CDO.override_pegasus if CDO.override_pegasus && domain == 'code.org'
+
     return "#{self.name}.#{domain}" if ['console', 'hoc-levels'].include?(self.name)
     return domain if rack_env?(:production)
 
@@ -194,7 +204,7 @@ class CDOImpl < OpenStruct
 
   def hosts_by_env(env)
     hosts = []
-    GlobalConfig['hosts'].each_pair do |key, i|
+    GlobalConfig['hosts'].each_pair do |_key, i|
       hosts << i if i['env'] == env.to_s
     end
     hosts
@@ -208,8 +218,17 @@ class CDOImpl < OpenStruct
     rack_env == env
   end
 
+  # Sets the slogger to use in a test.
+  # slogger must support a `write` method.
+  def set_slogger_for_test(slogger)
+    @slog = slogger
+    # Set a fake slog token so that the slog method will actually call
+    # the test slogger.
+    CDO.slog_token = 'fake_slog_token'
+  end
+
   def slog(params)
-    return unless slog_token
+    return unless slog_token && Gatekeeper.allows('slogging', default: true)
     @slog ||= Slog::Writer.new(secret: slog_token)
     @slog.write params
   end
@@ -266,10 +285,23 @@ class CDOImpl < OpenStruct
   def with_default(default_value)
     DelegateWithDefault.new(self, default_value)
   end
+
+  # When running on Chef Server, use Search via knife CLI to fetch a dynamic list of app-server front-ends,
+  # appending to the static list already provided by configuration files.
+  def app_servers
+    return super unless CDO.chef_managed
+    require 'cdo/rake_utils'
+    servers = RakeUtils.with_bundle_dir(cookbooks_dir) do
+      knife_cmd = "knife search node 'roles:front-end AND chef_environment:#{rack_env}' --format json --attribute cloud_v2"
+      JSON.parse(`#{knife_cmd}`)['rows'].map do |key|
+        [key.keys.first, key.values.first['cloud_v2']['local_hostname']]
+      end.to_h
+    end
+    servers.merge(super)
+  end
 end
 
 CDO ||= CDOImpl.new
-
 
 ####################################################################################################
 ##

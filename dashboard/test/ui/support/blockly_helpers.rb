@@ -1,6 +1,5 @@
 module BlocklyHelpers
-  class Point < Struct.new(:x, :y)
-  end
+  Point = Struct.new(:x, :y)
 
   def drag_block_relative(block_id, dx, dy)
     @browser.execute_script("$(\"[block-id='#{block_id}']\").simulate( 'drag', {handle: 'corner', dx: #{dx}, dy: #{dy}, moves: 5});")
@@ -68,7 +67,7 @@ module BlocklyHelpers
   end
 
   def modal_dialog_visible
-    @browser.execute_script("return $('#modalEditorClose :visible').length != 0;")
+    @browser.execute_script("return $('#modalContainer').is(':visible');")
   end
 end
 

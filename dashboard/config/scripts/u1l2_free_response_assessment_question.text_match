@@ -1,9 +1,0 @@
-name 'U1L2 Free response assessment question'
-title 'Assessment: Sending Binary Messages'
-placeholder 'Enter your response here.'
-
-markdown <<MARKDOWN
-Provide an example of a question that could NOT be answered with a binary message. Explain why this is the case making reference to the definition of a binary message. 
-
-
-MARKDOWN

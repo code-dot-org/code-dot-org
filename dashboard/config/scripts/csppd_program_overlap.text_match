@@ -1,8 +1,0 @@
-name 'CSPPD program overlap'
-title 'Relationship between Curriculum and PD'
-height '100'
-skip_sound true
-
-markdown <<MARKDOWN
-#### Now that you've read more about the CSP program, what relationship do you see between the curriculum and Professional Development? What aspects of the two pieces of the program seem most important or interesting to you?
-MARKDOWN

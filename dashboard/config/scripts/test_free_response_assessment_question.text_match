@@ -1,7 +1,0 @@
-name 'Test Free Response Assessment Question'
-title 'Sending Numbers Free Response'
-content1 'Imagine that you have to send a list of 10 numbers to friend in binary using the bit-sending widget. The numbers are all between 0 and 100. Describe the issues or problems that you and your friend would encounter in trying to do this. How would you address these problem?'
-placeholder 'Enter your reflection here'
-markdown <<MARKDOWN
-### Hello!
-MARKDOWN

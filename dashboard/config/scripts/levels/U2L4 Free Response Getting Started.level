@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:25.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Routers and Addresses: Getting Started",
+    "markdown_instructions": "Imagine that you want to send a postcard to a friend in a city on the far side of the country. After you write a message, you address it, add a return address, put a stamp on it, and drop it in the mail.\n\nThen what happens? What is the route that postcard takes to get to your friend? \n\nList the steps that you think it takes for a postcard gets from you to your friend. Include each of the potential stops along the way and how it gets transported from one place to another.\n\n\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

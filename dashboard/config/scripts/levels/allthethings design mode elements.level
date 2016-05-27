@@ -6,7 +6,7 @@
   "user_id": 18,
   "properties": {
     "skin": "applab",
-    "markdown_instructions": "Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).",
+    "markdown_instructions": "Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).\r\n\r\n.\r\n\r\n.\r\n\r\n.\r\n\r\n.\r\n\r\n.\r\n\r\n.\r\n\r\n.\r\n\r\n.\r\n\r\n.\r\n\r\n.\r\n\r\n.\r\n\r\n.\r\n\r\n.\r\n\r\n.\r\n\r\n.\r\n\r\n.\r\n\r\n.\r\n\r\n.\r\n\r\nEnd of instructions that are long.",
     "instructions": "Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).",
     "code_functions": {
       "onEvent": null,
@@ -132,7 +132,8 @@
       "callMyFunction": null,
       "callMyFunction_n": null,
       "return": null,
-      "drawImageURL": null
+      "drawImageURL": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -163,8 +164,13 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "start_blocks": "// make sure dynamically generated elements appear on\r\n// a different screen from design mode elements\r\nsetScreen(\"screen2\");\r\n\r\nbutton(\"buttonid\", \"button text\");\r\ntextInput(\"inputid\", \"input text\");\r\ntextLabel(\"labelid\", \"label text\");\r\ndropdown(\"dropdownid\", \"option1\", \"option2\", \"option3\");\r\ncheckbox(\"checkboxid\", false);\r\nradioButton(\"radioid\", false, \"group\");\r\n"
-  }
+    "start_blocks": "// make sure dynamically generated elements appear on\r\n// a different screen from design mode elements\r\nsetScreen(\"screen2\");\r\n\r\nbutton(\"buttonid\", \"button text\");\r\ntextInput(\"inputid\", \"input text\");\r\ntextLabel(\"labelid\", \"label text\");\r\ndropdown(\"dropdownid\", \"option1\", \"option2\", \"option3\");\r\ncheckbox(\"checkboxid\", false);\r\nradioButton(\"radioid\", false, \"group\");\r\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false"
+  },
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# ubuntu@production-console:~/production/bin/mail/hoc-2015-nov-16-mailing$ wc -l 11-16-hoc-organizers.csv
+# 306279 11-16-hoc-organizers.csv
+
+./send-to-mailing-list --start      0 --limit 100000 11-16-hoc-organizers hoc-2015-nov-16-mailing/11-16-hoc-organizers.csv
+./send-to-mailing-list --start 100000 --limit 100000 11-16-hoc-organizers hoc-2015-nov-16-mailing/11-16-hoc-organizers.csv
+./send-to-mailing-list --start 200000 --limit 100000 11-16-hoc-organizers hoc-2015-nov-16-mailing/11-16-hoc-organizers.csv
+./send-to-mailing-list --start 300000 --limit 100000 11-16-hoc-organizers hoc-2015-nov-16-mailing/11-16-hoc-organizers.csv

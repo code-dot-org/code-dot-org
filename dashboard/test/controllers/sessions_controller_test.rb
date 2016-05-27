@@ -24,7 +24,6 @@ class SessionsControllerTest < ActionController::TestCase
     assert_redirected_to '//test.code.org/teacher-dashboard'
   end
 
-
   test "students go to learn. homepage after signing in" do
     student = create(:student)
 
@@ -99,7 +98,6 @@ class SessionsControllerTest < ActionController::TestCase
     assert_redirected_to '/oauth_sign_out/facebook'
   end
 
-
   test "google account users go to oauth sign out page after logging out" do
     student = create(:student, provider: :google_oauth2)
     sign_in student
@@ -153,7 +151,6 @@ class SessionsControllerTest < ActionController::TestCase
 
     assert_nil @response.cookies["remember_user_token"]
   end
-
 
   test "persistent cookie set if remember me is checked" do
     teacher = create(:teacher)

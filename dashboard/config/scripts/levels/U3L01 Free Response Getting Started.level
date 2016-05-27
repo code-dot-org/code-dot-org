@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:26.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Why Programming and Programming Languages?",
+    "markdown_instructions": "Complete the \"thinking\" portion of a Think-Pair-Share activity here. \n\nPlay the part of a \"lazy worker.\" \n\n* What task do you dislike doing that you can imagine a computer program could take over for you? \n* List a few important steps that a computer program would have to complete. \n* Do you think this would be an easy or hard task to program? Why?\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

@@ -9,5 +9,10 @@
       "browserify-shim"
     ]
   },
-  "browserify-shim": "./util/browserifyShim.config.js"
+  "browserify-shim": {
+    "blockly": {
+      "exports": "Blockly"
+    },
+    "marked": "global:marked"
+  }
 }

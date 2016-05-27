@@ -2,6 +2,8 @@
   "actor":"නළුවා",
   "addCharacter":"ඒක් කරන්න",
   "addCharacterTooltip":"සිද්ධිය වෙත චරිතය ඒක් කරන්න",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"ලකුණු 10 ක් එකතු කරන්න",
   "addPoints50":"ලකුණු 50 ක් එකතු කරන්න",
   "addPoints100":"ලකුණු 100 ක් එකතු කරන්න",

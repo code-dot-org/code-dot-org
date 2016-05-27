@@ -2,7 +2,7 @@ title 'CSP Unit 4 - Data'
 description 'Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data-rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.'
 description_short 'Data'
 login_required 'true'
-hidden 'true'
+hidden 'false'
 
 #1
 stage 'Intro to Data'
@@ -61,16 +61,21 @@ level 'U4L10 Student Lesson Introduction'
 #11
 stage 'Rapid Research - Data Innovations'
 level 'U4L11 Student Lesson Introduction'
+level 'U4L11 Data and Medicine - Video'
+level 'U1L1 Innovation - Video'
 
 #12
 stage 'Identifying People with Data'
 level 'U4L12 Student Lesson Introduction'
 
 #13
-stage 'Privacy Abandoned'
+stage 'The Cost of Free'
 level 'U4L13 Student Lesson Introduction'
 level 'U4 - Privacy Abandoned - Hot On Your Trail Video'
 
 #14
 stage 'Practice PT - Propose an Innovation'
 level 'U4L14 Student Lesson Introduction'
+
+#TURDS
+stage 'Privacy Abandoned'

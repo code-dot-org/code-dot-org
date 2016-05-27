@@ -4,6 +4,46 @@ class AdminSearchController < ApplicationController
   before_action :require_admin
   check_authorization
 
+  def find_students
+    SeamlessDatabasePool.use_persistent_read_connection do
+      @max_users = 50
+      @users = User.with_deleted
+
+      # If requested, filter...
+      if params[:studentNameFilter].present?
+        @users = @users.where("name LIKE ?", "%#{params[:studentNameFilter]}%")
+      end
+      if params[:studentEmailFilter].present?
+        @users = @users.where("email LIKE ?", "%#{params[:studentEmailFilter]}%")
+      end
+      if params[:teacherNameFilter].present? || params[:teacherEmailFilter].present?
+        teachers = User.
+          where("name LIKE ?", "%#{params[:teacherNameFilter]}%").
+          where("email LIKE ?", "%#{params[:teacherEmailFilter]}%").
+          all
+        if teachers.count > 1
+          # TODO(asher): Display a warning to the admin that multiple teachers
+          # matched.
+        end
+        if teachers.first
+          array_of_student_ids = Follower.
+            where(user_id: teachers.first[:id]).pluck('student_user_id').to_a
+          @users = @users.where(id: array_of_student_ids)
+        end
+      end
+      if params[:sectionFilter].present?
+        array_of_student_ids = Section.where(code: "#{params[:sectionFilter]}").
+          joins("INNER JOIN followers ON followers.section_id = sections.id").
+          pluck('student_user_id').
+          to_a
+        @users = @users.where(id: array_of_student_ids)
+      end
+
+      @headers = ['ID', 'Name', 'Email', 'Deleted Timestamp']
+      @users = @users.limit(@max_users).pluck('id', 'name', 'email', 'deleted_at')
+    end
+  end
+
   def lookup_section
     @section = Section.find_by_code params[:section_code]
     if params[:section_code] && @section.nil?
@@ -44,7 +84,6 @@ class AdminSearchController < ApplicationController
       # outer join.
       @teachers = @teachers.joins(:followers).group('followers.user_id')
 
-
       # Prune the set of fields to those that will be displayed.
       @teacher_limit = 500
       @headers = ['ID', 'Name', 'Email', 'Address', 'Num Students']
@@ -52,8 +91,10 @@ class AdminSearchController < ApplicationController
 
       # Remove newlines from the full_address field, replacing them with spaces.
       @teachers.each do |teacher|
-        teacher[3].gsub!("\r", ' ')
-        teacher[3].gsub!("\n", ' ')
+        if teacher[3].present?
+          teacher[3].gsub!("\r", ' ')
+          teacher[3].gsub!("\n", ' ')
+        end
       end
     end
   end

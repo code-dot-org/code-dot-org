@@ -1,10 +1,4 @@
 /** @file Debugger controls and debug console used in our rich JavaScript IDEs */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var CommandHistory = require('./CommandHistory');
@@ -23,6 +17,14 @@ var StepType = JSInterpreter.StepType;
 var MIN_DEBUG_AREA_HEIGHT = 120;
 /** @const {number} */
 var MAX_DEBUG_AREA_HEIGHT = 400;
+/** @const {number} (in milliseconds) */
+var WATCH_TIMER_PERIOD = 500;
+/** @const {string} */
+var WATCH_COMMAND_PREFIX = "$watch ";
+/** @const {string} */
+var UNWATCH_COMMAND_PREFIX = "$unwatch ";
+/** @const {string} */
+var WATCH_VALUE_NOT_RUNNING = "undefined";
 
 /**
  * Debugger controls and debug console used in our rich JavaScript IDEs, like
@@ -55,6 +57,18 @@ var JsDebuggerUi = module.exports = function (runApp) {
   this.history_ = new CommandHistory();
 
   /**
+   * Collection of watch expressions.
+   * @private {object}
+   */
+  this.watchExpressions_ = {};
+
+  /**
+   * Id for watch timer setInterval.
+   * @private {number}
+   */
+  this.watchIntervalId_ = 0;
+
+  /**
    * Helper that handles open/shut actions for debugger UI
    * @private {DebugArea}
    */
@@ -65,22 +79,6 @@ var JsDebuggerUi = module.exports = function (runApp) {
    * @private {HTMLDivElement}
    */
   this.rootDiv_ = null;
-};
-
-/**
- * Generate DOM element markup from an ejs file for the debug area.
- * @param {!function} assetUrl - Helper for getting asset URLs.
- * @param {!Object} options
- * @param {!boolean} options.showButtons - Whether to show the debug buttons
- * @param {!boolean} options.showConsole - Whether to show the debug console
- * @returns {string} of HTML markup to be embedded in page.html.ejs
- */
-JsDebuggerUi.prototype.getMarkup = function (assetUrl, options) {
-  return require('./JsDebuggerUi.html.ejs')({
-    assetUrl: assetUrl,
-    debugButtons: options.showButtons,
-    debugConsole: options.showConsole
-  });
 };
 
 /**
@@ -97,6 +95,9 @@ JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
   this.observer_.observe(jsInterpreter.onExecutionWarning,
       this.log.bind(this));
 
+  this.watchIntervalId_ = setInterval(this.updateWatchView_.bind(this),
+      WATCH_TIMER_PERIOD);
+
   this.updatePauseUiState();
   this.clearDebugOutput();
   this.clearDebugInput();
@@ -111,6 +112,10 @@ JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
 JsDebuggerUi.prototype.detach = function () {
   this.observer_.unobserveAll();
   this.jsInterpreter_ = null;
+
+  clearInterval(this.watchIntervalId_);
+  this.watchIntervalId_ = 0;
+  this.updateWatchView_();
 
   this.resetDebugControls_();
 };
@@ -283,7 +288,20 @@ JsDebuggerUi.prototype.onDebugInputKeyDown = function (e) {
     e.target.textContent = '';
     this.log('> ' + input);
     var jsInterpreter = this.jsInterpreter_;
-    if (jsInterpreter) {
+    var watchExpression;
+    if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
+      watchExpression = input.substring(WATCH_COMMAND_PREFIX.length);
+      this.watchExpressions_[watchExpression] = {};
+      // Update immediately. When not running, this will confirm that the watch
+      // was added, since no timer will refresh automatically:
+      this.updateWatchView_();
+    } else if (0 === input.indexOf(UNWATCH_COMMAND_PREFIX)) {
+      watchExpression = input.substring(UNWATCH_COMMAND_PREFIX.length);
+      delete this.watchExpressions_[watchExpression];
+      // Update immediately. When not running, this will confirm that the watch
+      // was removed, since no timer will refresh automatically:
+      this.updateWatchView_();
+    } else if (jsInterpreter) {
       try {
         var result = jsInterpreter.evalInCurrentScope(input);
         this.log('< ' + String(result));
@@ -295,10 +313,34 @@ JsDebuggerUi.prototype.onDebugInputKeyDown = function (e) {
     }
   } else if (e.keyCode === KeyCodes.UP) {
     e.target.textContent = this.history_.goBack(input);
+    moveCaretToEndOfDiv(e.target);
+    e.preventDefault(); // Block default Home/End-like behavior in Chrome
   } else if (e.keyCode === KeyCodes.DOWN) {
     e.target.textContent = this.history_.goForward(input);
+    moveCaretToEndOfDiv(e.target);
+    e.preventDefault(); // Block default Home/End-like behavior in Chrome
   }
 };
+
+/**
+ * Set the cursor position to the end of the text content in a div element.
+ * @see http://stackoverflow.com/a/6249440/5000129
+ * @param {!HTMLDivElement} element
+ */
+function moveCaretToEndOfDiv(element) {
+  var range = document.createRange();
+  if (element.childNodes.length === 0) {
+    return;
+  }
+
+  range.setStart(element.lastChild, element.lastChild.nodeValue.length);
+  range.collapse(true);
+
+  // Change window selection to new range to set cursor position
+  var selection = window.getSelection();
+  selection.removeAllRanges();
+  selection.addRange(range);
+}
 
 /**
  * On mouseup over the console output, if the user hasn't just selected some
@@ -397,23 +439,16 @@ JsDebuggerUi.prototype.clearDebugInput = function () {
   }
 };
 
-JsDebuggerUi.prototype.onPauseContinueButton = function() {
+JsDebuggerUi.prototype.onPauseContinueButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
-    // We have code and are either running or paused
-    if (jsInterpreter.paused &&
-        jsInterpreter.nextStep === StepType.RUN) {
-      jsInterpreter.paused = false;
-    } else {
-      jsInterpreter.paused = true;
-      jsInterpreter.nextStep = StepType.RUN;
-    }
+    jsInterpreter.handlePauseContinue();
 
     this.updatePauseUiState();
   }
 };
 
-JsDebuggerUi.prototype.updatePauseUiState = function() {
+JsDebuggerUi.prototype.updatePauseUiState = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (!jsInterpreter) {
     return;
@@ -480,32 +515,66 @@ JsDebuggerUi.prototype.resetDebugControls_ = function () {
   }
 };
 
-JsDebuggerUi.prototype.onStepOverButton = function() {
+JsDebuggerUi.prototype.onStepOverButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
-    jsInterpreter.paused = true;
-    jsInterpreter.nextStep = StepType.OVER;
+    jsInterpreter.handleStepOver();
     this.updatePauseUiState();
   }
 };
 
-JsDebuggerUi.prototype.onStepInButton = function() {
+JsDebuggerUi.prototype.onStepInButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (!jsInterpreter) {
     this.runApp_();
     this.onPauseContinueButton();
     jsInterpreter = this.jsInterpreter_;
   }
-  jsInterpreter.paused = true;
-  jsInterpreter.nextStep = StepType.IN;
+  jsInterpreter.handleStepIn();
   this.updatePauseUiState();
 };
 
-JsDebuggerUi.prototype.onStepOutButton = function() {
+JsDebuggerUi.prototype.onStepOutButton = function () {
   var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
-    jsInterpreter.paused = true;
-    jsInterpreter.nextStep = StepType.OUT;
+    jsInterpreter.handleStepOut();
     this.updatePauseUiState();
+  }
+};
+
+function clearAllChildElements(element) {
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+}
+
+/**
+ * Refresh the watch expressions.
+ * @private
+ */
+JsDebuggerUi.prototype.updateWatchView_ = function () {
+  var jsInterpreter = this.jsInterpreter_;
+  var debugWatchDiv = this.getElement_('#debug-watch');
+  if (debugWatchDiv) {
+    clearAllChildElements(debugWatchDiv);
+    for (var watchExpression in this.watchExpressions_) {
+      var currentValue;
+      if (jsInterpreter) {
+        currentValue = jsInterpreter.evaluateWatchExpression(watchExpression);
+      } else {
+        currentValue = WATCH_VALUE_NOT_RUNNING;
+      }
+      if (this.watchExpressions_[watchExpression].lastValue !== currentValue) {
+        // Store new value
+        this.watchExpressions_[watchExpression].lastValue = currentValue;
+      }
+      var watchItem = document.createElement('div');
+      watchItem.className = 'debug-watch-item';
+      watchItem.innerHTML = require('./JsDebuggerWatchItem.html.ejs')({
+        varName: watchExpression,
+        varValue: currentValue
+      });
+      debugWatchDiv.appendChild(watchItem);
+    }
   }
 };

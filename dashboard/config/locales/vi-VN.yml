@@ -23,13 +23,21 @@
           future: không thể trong tương lai
   hello: Xin chào thế giới
   welcome_back: Chào mừng trở lại, %{name}
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Chấp nhận
+  unsubmit: Ngưng gửi
+  previous_page: Previous page
+  next_page: Trang tiếp theo
+  cancel: Huỷ
+  okay: "Đồng ý"
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Thêm một giáo viên:'
       placeholder: Phần mã (ABCDEF)
-      instructions: Vui lòng nhập mã được chia sẻ với bạn bởi giáo viên của bạn. Nó
-        là một mã 6 chữ như "ABCDEF".
+      instructions: Vui lòng nhập mã được chia sẻ bởi giáo viên của bạn. Nó là một
+        mã gồm 6 chữ cái như "ABCDEF".
     submit: Thêm giáo viên
   add_hint_form:
     placeholder: Hãy nhập gợi ý mật khẩu của bạn ở đây
@@ -163,9 +171,6 @@
       student_disassociated:
         subject: 'Thông báo từ Code.org: %{student_name} không còn trong danh sách
           là học viên của bạn.'
-      teacher_disassociated:
-        subject: 'Thông báo từ Code.org: %{teacher_name} không còn trong danh sách
-          giáo viên của bạn.'
   reports:
     error:
       access_denied: Bạn không có quyền truy cập vào tình trạng pháp nhân của người
@@ -383,11 +388,44 @@
     heading_elementary: "<h2>các khóa học 20 giờ cho</h2> <h1>Người nhập môn (mọi
       lứa tuổi)</h1>"
     heading_apps: "<h2>Thú vị cho</h2><h1>Tất cả mọi người</h1>"
+    heading_tools: "<h2>Sẵn sàng cho bước tiếp theo?</h2> <h1>Công cụ JavaScript cho
+      học sinh trung học</h1>"
     heading_legacy: "<h2>Khóa học cơ bản của chúng tôi</h2><h1>Mọi lứa tuổi</h1>"
     your_gallery: Bộ sưu tập
     no_primary_course: Hãy thử một khóa học ở Code Studio
     choose_next_course: Thử một khóa Xưởng Mã bằng cách chọn một khóa bên dưới
     print_certificate: In giấy chứng nhận
+    announcement_title: Announcements
+    announcement_view_all: Tất cả
+    announcement_message: 'We''ve started to measure student learning in Courses 1-4
+      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
+      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
+      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
+      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_button: Tìm hiểu thêm
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: Học về Xưởng Code
     description: Ai cũng có thẻ học khoa học máy tính. Làm trò chơi, ứng dụng và nghệ
@@ -426,6 +464,8 @@
       Ltd. Bản Quyền Đã Được Bảo Hộ. Plants vs. Zombies&#8482; &copy; %{current_year}
       Electronic Arts Inc. Bản Quyền Đã Được Bảo Hộ. The Amazing World of Gumball
       là thương hiệu và &copy; 2015 Cartoon Network.
+    code_from_html: Code.org sử dụng p5.play, được cấp phép theo <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      GNU LGPL 2.1</a>.
     powered_by_aws: "Được tài trợ bởi Amazon Web Services"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, biểu tượng CODE và
       Giờ Lập Trình &reg; là nhãn hiệu của Code.org."
@@ -513,6 +553,15 @@
       current: Mức hiện tại
       unused: Không sử dụng cấp độ
   upsell:
+    applab:
+      title: Phòng thí nghiệm ứng dụng
+      body: App Lab là một môi trường lập trình mà bạn có thể tạo ra các ứng dụng
+        đơn giản. Thiết kế một ứng dụng, lập trình bằng các khối hoặc JavaScript,
+        và chia sẻ ứng dụng của bạn trong vài giây.
+      body_short: Thiết kế một ứng dụng, lập trình bằng các khối hoặc JavaScript,
+        và chia sẻ ứng dụng của bạn trong vài giây.
+      audience: Lứa tuổi 13 +
+      cta: Học cách làm
     hoc:
       title: Mê cung cổ điển
       body: Hãy thử những lớp khoa học máy tính că bản. Hàng triệu người đã thử học
@@ -546,6 +595,15 @@
     minecraft:
       title: Minecraft
       body: Khám phá thế giới Minecraft thông qua mã.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: Các học sinh/sinh viên đã vẽ chúng bằng cách lập
       trình!
@@ -571,10 +629,10 @@
     prerelease_hoc2014: Lớp học này là  <span class='betatext'>phiên bản beta</span>.
       Nó có thể được sửa đổi từ việc thu nhận thông tin phản hồi và thực hiện các
       cải tiến.
-    feedback: Gửi ý kiến phản hồi
     report_bug: Báo cáo lỗi
     support: Nhận trợ giúp
     support_url: "//support.code.org"
+    help_resources: Trợ giúp và tài nguyên
   multi:
     wrong_title: Câu trả lời không chính xác
     wrong_body: Câu trả lời mà bạn đã nhập không chính xác.  Xin vui lòng thử lại!
@@ -582,6 +640,32 @@
     correct_body: "Đó là câu trả lời chính xác."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Cảm ơn bạn
+    wrong_body: Cảm ơn bạn đã gửi câu trả lời.
+    correct_title: Cảm ơn bạn
+    correct_body: Cảm ơn bạn đã gửi câu trả lời.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Cảm ơn bạn
+    wrong_body: Cảm ơn bạn đã gửi câu trả lời.
+    correct_title: Cảm ơn bạn
+    correct_body: Cảm ơn bạn đã gửi câu trả lời.
+  level_group-submittable:
+    wrong_title: Cảm ơn bạn
+    wrong_body: Cảm ơn bạn đã gửi câu trả lời.
+    correct_title: Cảm ơn bạn
+    correct_body: Cảm ơn bạn đã gửi câu trả lời.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Cách giải chưa chính xác
     wrong_body: Cách giải bạn đã nhập chưa chính xác. Xin vui lòng thử lại!
@@ -602,6 +686,8 @@
     placeholder: Nhập câu trả lời của bạn ở đây
     open_response_title: Xin cảm ơn
     open_response_body: Cảm ơn câu trả lời của bạn!
+    correct_title: Chính xác
+    correct_body: "Đó là câu trả lời chính xác."
   dialog:
     ok: "Đồng ý"
     startover_title: Bạn có chắc bạn muốn bắt đầu lại?
@@ -667,6 +753,7 @@
     completed_perfect: hoàn thành, hoàn hảo
     furthest_level_attempted: "đã cố gắng ở mức độ cao nhất"
     assessment: "đánh giá"
+    submitted: "đã gửi"
   studio:
     courses_working_on: Các khóa học bạn đang tiến hành
     completed_courses: Hoàn thành khóa học
@@ -684,6 +771,10 @@
     share: Chia sẻ
     share_title: Chia sẻ chương trình của tôi
     share_copy_link: 'Sao chép liên kết:'
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: "Đóng"
     more: Nhiều hơn
     name: Tên
@@ -740,3 +831,23 @@
         acknowledge: Bằng việc gửi thông tin này, bạn xác nhận nó sẽ bị xử lý theo
           quy định của các điều khoản của %{link_start_privacy}Privacy Policy%{link_end}
           và %{link_start_tos}Terms Service%{link_end}
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+  components:
+    icon_library:
+      search_placeholder_text: Tìm kiếm một biểu tượng...
+      no_icons_found: Không tìm thấy biểu tượng nào
+  flex_category:
+    required: Tổng quan
+    content: Content
+    practice: Teacher Practices

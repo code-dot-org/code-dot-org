@@ -20,7 +20,7 @@ Feature: Checking the footer appearance
     And I press the first ".copyright-link" element
     And I wait for 0.25 seconds
 
-    When I drag the grippy by -400 pixels
+    When I drag the visualization grippy by -400 pixels
     Then I see no difference for "smaller small footer"
     And I wait for 0.25 seconds
 
@@ -41,7 +41,7 @@ Feature: Checking the footer appearance
     When I open the small footer menu
     And I wait for 0.25 seconds
     Then I see no difference for "menu resize before"
-    When I drag the grippy by 400 pixels
+    When I drag the visualization grippy by 400 pixels
     Then I see no difference for "menu resize after"
     And I close the small footer menu
     And I wait for 0.25 seconds
@@ -49,7 +49,7 @@ Feature: Checking the footer appearance
     When I press the first ".copyright-link" element
     And I wait for 0.25 seconds
     Then I see no difference for "copyright resize before"
-    When I drag the grippy by -400 pixels
+    When I drag the visualization grippy by -400 pixels
     Then I see no difference for "copyright resize after"
 
     Then I close my eyes
@@ -172,7 +172,7 @@ Feature: Checking the footer appearance
 
     Then I close my eyes
 
-  @eyes_mobile
+  @eyes_mobile @skip
   Scenario: Mobile Star Wars share small footer
     Given I am on "http://learn.code.org/s/starwars/stage/1/puzzle/15?noautoplay=true"
     And I rotate to landscape

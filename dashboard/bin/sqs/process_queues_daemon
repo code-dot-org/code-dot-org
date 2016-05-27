@@ -49,7 +49,7 @@ options =  {
 
 if command == 'start'
   # Make sure the config file exists.
-  raise "#{config_file} does not exist" unless File.exists?(config_file)
+  raise "#{config_file} does not exist" unless File.exist?(config_file)
   raise "#{config_file} is not readable" unless File.readable?(config_file)
 
   puts " * Using config #{config_file}"

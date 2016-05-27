@@ -11,15 +11,15 @@
   #markdown-instructions-preview
 
 :javascript
-  var mdEditor = levelbuilder.initializeCodeMirror('markdown_instructions', 'markdown', function (editor, change) {
-    localStorage.setItem('markdown_' + #{@level.id}, editor.getValue());
+  var mdEditor = levelbuilder.initializeCodeMirror('level_markdown_instructions', 'markdown', function (editor, change) {
+    localStorage.setItem('markdown_' + '#{@level.id || params[:type]}', editor.getValue());
 
     $('#markdown-instructions-preview')
       .html(marked(editor.getValue()))
       .children('details').details();
   }, true);
 
-  var locallyStoredMarkdown = localStorage.getItem('markdown_' + #{@level.id});
+  var locallyStoredMarkdown = localStorage.getItem('markdown_' + '#{@level.id || params[:type]}');
   if (locallyStoredMarkdown) {
     mdEditor.setValue(locallyStoredMarkdown);
   }

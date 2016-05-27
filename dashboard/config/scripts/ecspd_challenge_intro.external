@@ -1,6 +1,5 @@
 name 'ECSPD Challenge Intro'
 
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # What is a Challenge?
 ## what do we do?

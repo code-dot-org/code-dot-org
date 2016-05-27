@@ -23,7 +23,15 @@ ro:
           future: nu poate fi în viitor
   hello: Salutare lume
   welcome_back: 'Bine ai revenit, %{name}'
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Trimite
+  unsubmit: Retrage
+  previous_page: Previous page
+  next_page: Pagina următoare
+  cancel: Anulează
+  okay: Bine
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'Adaugă un profesor:'
@@ -148,8 +156,6 @@ ro:
         subject: 'Alătură-te clasei cu %{teacher_name} la Code.org!'
       student_disassociated:
         subject: 'Notificare Code.org: %{student_name} nu mai este asociat ca student al tău.'
-      teacher_disassociated:
-        subject: 'Notificare Code.org: %{teacher_name} nu mai este asociat ca profesorul tău.'
   reports:
     error:
       access_denied: Nu ai acces la statisticile de progress ale acestei persoane
@@ -220,10 +226,10 @@ ro:
       finished_hoc: Am terminat Ora mea de Programare
       sign_in_to_save: Loghează-te pentru a salva progresul
       free_play:
-        playlab: Creează o aplicație
+        playlab: Creare aplicație
         artist: Desenează ceva
-        calculate: Calculate Something
-        applab: Creează o aplicație
+        calculate: Calculate something
+        applab: Creare aplicație
     user:
       classroom: Pagina de Start a Profesorilor
       district_dashboard: Tabel de instrumente pe zonă districtuală
@@ -320,11 +326,29 @@ ro:
     heading_hoc2014: '<h2>Ora de Programare pentru</h2><h1>toate vârstele</h1>'
     heading_elementary: '<h2>cursuri de 20 ore pentru</h2><h1>începători(toate vârstele)</h1>'
     heading_apps: '<h2>Distracţie pentru</h2><h1>Toată lumea</h1>'
+    heading_tools: '<h2>Gata pentru următorul pas?</h2> <h1>Instrumente JavaScript pentru liceu</h1>'
     heading_legacy: '<h2>Cursul nostru intensiv pentru</h2><h1>Toate vârstele</h1>'
     your_gallery: Galerie
     no_primary_course: Încearcă un curs cu Atelierul de programare
     choose_next_course: Încearcă un curs cu Atelierul de programare alegând unul de mai jos
     print_certificate: Tipărește certificatul
+    announcement_title: Anunțuri
+    announcement_view_all: Vizualizare toate
+    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+    announcement_button: Află mai mult
+    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: Învață in Atelierul de programare
     description: Oricine poate învăţa programare. Face jocuri, aplicaţii şi artă cu programare.
@@ -340,8 +364,9 @@ ro:
     thank_you: 'Mulțumim la <a href="https://code.org/about/donors">donatorii</a>,<a href="https://code.org/about/partners">partenerii</a>,<a href="https://code.org/about/team">echipa extinsă</a>,producătorilor de imagine, și<a href="https://code.org/about/advisors">consilierii educaționali</a>Pentru sprijinul lor în creearea Atelierului de programare.'
     help_from_html: Inginerii de la Google, Microsoft, Facebook şi Twitter au ajutat la crearea acestui tutorial.
     help_from_html_old: Inginerii de la Google, Microsoft, Facebook şi Twitter au ajutat la crearea acestor materiale.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft &#8482; &copy;%{current_year} Microsoft. Toate drepturile rezervate.< br / >Star Wars &#8482; &copy;%{current_year} Disney şi Lucasfilm. Toate drepturile rezervate.< br / >Frozen&#8482; &copy; %{current_year} Disney. Toate drepturile rezervate.< br / >Ice Age &#8482; &copy; %{current_year} 20th Century Fox. Toate drepturile rezervate.< br / >Angry Birds &#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Toate drepturile rezervate.< br / >Plants vs. Zombies &#8482; &copy; %{current_year} Electronic Arts Inc Toate drepturile rezervate. < br / >The Amazing World of Gumball este marca înregistrată &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft &#8482; &copy; %{current_year} Microsoft. Toate drepturile rezervate. Star Wars &#8482; &copy; %{current_year} Disney şi Lucasfilm. Toate drepturile rezervate. Congelate &#8482; &copy; %{current_year} Disney. Toate drepturile rezervate. Ice Age &#8482; &copy; %{current_year} 20th Century Fox. Toate drepturile rezervate. Supărat de păsări &#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Toate drepturile rezervate. Plante vs zombi &#8482; &copy; %{current_year} Electronic Arts Inc Toate drepturile rezervate. The Amazing World of Gumball este marca înregistrată &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org foloseşte p5.play, care este licenţiat sub <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: Susținut de Amazon Web Services
     trademark: '&copy;Code.org, %{current_year}. Code.org&reg;, logo-ul CODE şi Hour of Code&reg; sunt mărci comerciale ale Code.org.'
     copyright: Drept de autor
@@ -414,6 +439,12 @@ ro:
       current: Niveluri curente
       unused: Niveluri neutilizate
   upsell:
+    applab:
+      title: Laboratului Aplicației
+      body: App Lab este un mediu de programare în care poți creea aplicații simple. Proiectează o aplicație, programează cu blocuri sau JavaScript pentru a o face să funcționeze, apoi partajează aplicația în doar câteva secunde.
+      body_short: Proiectează o aplicație, programează cu blocuri sau JavaScript pentru a o face să funcționeze, apoi partajează aplicația în doar câteva secunde.
+      audience: Vârste 13 +
+      cta: Află cum
     hoc:
       title: Labirint Clasic
       body: Încearcă bazele programarii. Milioane de oameni au încercat.
@@ -440,6 +471,11 @@ ro:
     minecraft:
       title: Minecraft
       body: Exploreaza o lume Minecraft prin cod.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 4+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
     students_made_these_with_code: Elevii au creat acestea cu secvențe de cod!
@@ -455,10 +491,10 @@ ro:
   landing:
     prerelease: "Acest curs este în <span class='betatext'>versiune beta</span>. Asta înseamnă că aceasta nu este versiunea finală a cursului şi el poate fi revizuit în momentul în care se primește feedback şi se fac îmbunătățiri."
     prerelease_hoc2014: "Acest tutorial este în <span class='betatext'> versiune beta</span>.  Acesta face obiectul revizuirii pe măsură ce se primește feedback şi sunt făcute îmbunătăţiri."
-    feedback: Trimite feedback
     report_bug: Raporteazã eroare
     support: Obţine ajutor
     support_url: //support.code.org
+    help_resources: Ajutor şi resurse
   multi:
     wrong_title: Răspuns incorect
     wrong_body: 'Răspunsul introdus nu este corect.  Te rugăm să încerci din nou!'
@@ -466,6 +502,29 @@ ro:
     correct_body: Acela este răspunsul corect.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Mulţumesc
+    wrong_body: Îți mulțumim pentru trimiterea răspunsului tău.
+    correct_title: Mulţumesc
+    correct_body: Îți mulțumim pentru trimiterea răspunsului tău.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Mulţumesc
+    wrong_body: Îți mulțumim pentru trimiterea răspunsului tău.
+    correct_title: Mulţumesc
+    correct_body: Îți mulțumim pentru trimiterea răspunsului tău.
+  level_group-submittable:
+    wrong_title: Mulţumesc
+    wrong_body: Îți mulțumim pentru trimiterea răspunsului tău.
+    correct_title: Mulţumesc
+    correct_body: Îți mulțumim pentru trimiterea răspunsului tău.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: Soluţie incorectă
     wrong_body: 'Soluţia introdusă nu este corectă.  Te rugăm să încerci din nou!'
@@ -483,6 +542,8 @@ ro:
     placeholder: Completează răspunsul tău aici
     open_response_title: Mulţumim
     open_response_body: Îți mulţumim pentru răspuns!
+    correct_title: Corect
+    correct_body: Acela este răspunsul corect.
   dialog:
     ok: OK
     startover_title: Ești sigur că dorești să reîncepi?
@@ -536,6 +597,7 @@ ro:
     completed_perfect: finalizat, perfect
     furthest_level_attempted: cel mai îndepărtat nivel încercat
     assessment: evaluare
+    submitted: transmise
   studio:
     courses_working_on: Cursurile pe care le studiezi
     completed_courses: Cursuri terminate
@@ -553,6 +615,9 @@ ro:
     share: Distribuie
     share_title: Ditribuie proiectul tău
     share_copy_link: 'Copiază link-ul:'
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Închide
     more: Mai mult
     name: Nume
@@ -592,3 +657,21 @@ ro:
           other: Alte
         detail: Vă rugăm să oferiți cât mai multe detalii posibil cu privire la conţinutul pe care îl raportați.
         acknowledge: 'Prin trimiterea acestor informaţii, sunteţi de acord că acesta vor fi gestionate în conformitate cu termenii %{link_start_privacy}Politicii de confidențialitate%{link_end} și %{link_start_tos}Termenii și condițiile de utilizare a serviciilor%{link_end}'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+  components:
+    icon_library:
+      search_placeholder_text: Cauta o icoana...
+      no_icons_found: Nu s-au găsit icoane
+  flex_category:
+    required: Prezentare generală
+    content: Content
+    practice: Teacher Practices

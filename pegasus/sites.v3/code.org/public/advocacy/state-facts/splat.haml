@@ -26,13 +26,17 @@ theme: pdf
 
   .intro
     .intro-text
-      Computer science drives job growth and innovation throughout our economy and society. Computing occupations make up two-thirds of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. 75 percent of U.S. schools don’t even offer computer science and only 8% of STEM graduates study it. We need to improve access for all students, including groups who have traditionally been underrepresented.
+      Computer science drives job growth and innovation throughout our economy and society. Computing occupations are the 
+      %b
+        number 1 source of all new wages in the U.S. 
+      and make up two-thirds of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. 75 percent of U.S. schools don’t even offer computer science and only 8% of STEM graduates study it. We need to improve access for all students, including groups who have traditionally been underrepresented.
 
     %img.chart{src: "/images/charts/jobs_degrees.png"}
 
-  .call-out
+  .clear
+  #top-stats{style: "margin-top: 20px;"}
     %center
-      %h3 9 in 10 parents want their students to learn computer science, but only 1 in 4 schools teach it.
+      %img{src: "/images/charts/facts-sheet-top-stats.png", width: "100%"}
 
   %div
     %h2
@@ -69,7 +73,7 @@ theme: pdf
             computer science graduate
           - else
             computer science graduates
-        in 2013;
+        in 2014;
         - if state_info[:percent_female_cs_grad_i] == 0
           %b none
         - else
@@ -125,7 +129,7 @@ theme: pdf
           = surround "(", "% of" do
             = state_info[:percent_schools_ap_cs_i]
           = state_info[:state_code_s]
-          schools with AP programs) offered the AP Computer Science course in 2013-2014.
+          schools with AP programs) offered the AP Computer Science course in 2014-2015.
         - else
           No schools in
           = state_info[:state_code_s]
@@ -143,12 +147,16 @@ theme: pdf
         %li Ask your local school district to allow computer science courses to satisfy a core math or science requirement.
         %li 
           Visit
-          %a{href: "https://code.org/educate/3rdparty"} https://code.org/educate/3rdparty
+          %a{href: "www.code.org/educate/3rdparty"} www.code.org/educate/3rdparty
           to find out about courses and curriculum from a variety of third parties, including Code.org.
         %li
           Visit
           %a{href: state_info[:website_url_s]}= state_info[:website_url_s]
           to learn more about supporting computer science in your state.
+        %li
+          Sign the petition at
+          %a{href: "www.change.org/computerscience"} www.change.org/computerscience
+          to join 100,000 Americans asking Congress to support computer science.
 
   %div.clear-both
     %h2.no-margin-bottom
@@ -225,6 +233,12 @@ theme: pdf
     %p — Steve Jobs
 
   %div
+    %h2 What can the federal government do to support computer science in grades K-12?
+    Access to computer science courses is a bipartisan issue that can be addressed without adding to the Federal budget. Tell your representatives in Washington, D.C. that you support funding to expand access to this foundational 21st-century subject in your community that will America remain secure and globally competitive. Over 100,000 Americans, CEOs of the largest companies in every major industry, 29 governors, and major K-12 education leaders have all joined forces to call on Congress to support this idea. You can see their open letter (and add your name in support) at 
+    = succeed "." do
+      %a{href: "www.change.org/computerscience"} www.change.org/computerscience
+
+  %div
     %p
       %h2 What can your state do to improve computer science education?
       States and local school districts need to adopt a broad policy framework to provide all students with access to computer science. The following eight recommendations are a menu of best practices that states can choose from to support and expand computer science. Not all states will be in a position to adopt all of the policies, and no state has accomplished all 8 yet. Read more about these 8 policy ideas at
@@ -243,7 +257,7 @@ theme: pdf
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            have rigorous computer science standards. Computer science has often been confused with broader technology education in schools. States should adopt discrete standards for computer science focused on both the creation and use of software and computing technologies at all levels of K-12 education. The Computer Science Teachers Association has model K-12 CS standards.
+            have rigorous computer science standards publicly available across K-12. Computer science has often been confused with broader technology education in schools. States could strengthen their computer science programs by publicly adopting discrete standards for computer science focused on both the creation and use of software and computing technologies at all levels of K-12 education. The Computer Science Teachers Association has model K-12 CS standards.
         - elsif state_info[:cs_standards_s] == 'Other'
           %div
             %i.fa.fa-square-o
@@ -261,7 +275,7 @@ theme: pdf
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            provide funding for rigorous computer science professional development and course support. States should provide professional development resources by creating matching fund opportunities to bring computer science to school districts.
+            provide dedicated funding for rigorous computer science professional development and course support. Although funds may be available via broader programs, the state can strengthen its computer science programs by creating specific opportunities to bring computer science to school districts, such as matching fund programs.
         - elsif state_info[:pd_funding_s] == 'Other'
           %div
             %i.fa.fa-square-o
@@ -333,7 +347,7 @@ theme: pdf
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            require that all secondary schools offer computer science. States should adopt policies that require schools to offer a computer science course based on rigorous standards, with appropriate implementation timelines and allowing for remote and/or in-person courses.
+            require that all secondary schools offer computer science. The state can support the expansion of computer science courses by adopting policies that require schools to offer a computer science course based on rigorous standards, with appropriate implementation timelines and allowing for remote and/or in-person courses.
         - elsif state_info[:require_hs_s] == 'Other'
           %div
             %i.fa.fa-square-o
@@ -378,7 +392,7 @@ theme: pdf
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            allow computer science to count as a mathematics or science admission requirement at institutions of higher education.  Admission policies that do not include rigorous computer science courses as meeting the mathematics or science entrance requirements discourage students from taking such courses in secondary education. State leaders can work with institutions of higher education to ensure credit and articulation policies align with secondary school graduation requirements.
+            allow computer science to count as a mathematics or science admission requirement at institutions of higher education. Admission policies that do not include rigorous computer science courses as meeting the mathematics or science entrance requirements discourage students from taking such courses in secondary education. State leaders can work with institutions of higher education to ensure credit and articulation policies align with secondary school graduation requirements.
         - elsif state_info[:higher_ed_entrance_s] == 'Other'
           %div
             %i.fa.fa-square-o

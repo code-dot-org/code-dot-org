@@ -3,9 +3,9 @@ Unit = Struct.new(:number, :title, :description)
 Lesson = Struct.new(:number, :url, :title, :description, :path)
 
 class Course
-  PRODUCTION_COURSES = %w(course1 course2 course3 course4 msm science misc algebra)
+  PRODUCTION_COURSES = %w(course1 course2 course3 course4 msm algebra misc unplugged science)
   COURSES_WITHOUT_UNIT_NUMBERS = %w(course1 course2 course3 course4 msm algebra misc)
-  COURSES_WITH_PDF_GENERATION = %w(course1 course2 course3 course4 msm csp algebra misc)
+  COURSES_WITH_PDF_GENERATION = %w(course1 course2 course3 course4 msm algebra misc csp)
 
   def initialize(kind)
     @kind = kind
@@ -82,7 +82,6 @@ class Course
     lessons
   end
 
-
   def lesson_number(lesson_id)
     lesson_id.scan(/\d+/).last.to_s
   end
@@ -92,7 +91,7 @@ class Course
   end
 
   def valid_lesson_directory?(lesson_id)
-    File.directory?(File.join(@dir, lesson_id)) and valid_lesson_directory_name(lesson_id)
+    File.directory?(File.join(@dir, lesson_id)) && valid_lesson_directory_name(lesson_id)
   end
 
   def valid_lesson_directory_name(lesson_dirname)

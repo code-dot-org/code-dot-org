@@ -23,7 +23,15 @@ ka:
           future: არ შეიძლება იყოს მომავალში
   hello: ჰეი, სამყარო
   welcome_back: 'კარგია, რომ დაბრუნდით, %{name}'
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: გაგზავნა
+  unsubmit: ჩაბარების გაუქმება
+  previous_page: Previous page
+  next_page: Next page
+  cancel: გაუქმება
+  okay: კარგი
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: 'მასწავლებლის დამატება:'
@@ -148,8 +156,6 @@ ka:
         subject: 'შეურთდით %{teacher_name}-ს კლასს  Code.org-ზე!'
       student_disassociated:
         subject: 'Code.org-ის შეტყობინება: %{student_name} აღარ არის თქვენი მოსწავლე.'
-      teacher_disassociated:
-        subject: 'Code.org-ის შეტყობინება: %{teacher_name} აღარ არის თქვენი მასწავლებელი.'
   reports:
     error:
       access_denied: თქვენ არ გაქვთ წვდომა ამ მომხმარებლის სტატისტიკაზე
@@ -220,10 +226,10 @@ ka:
       finished_hoc: 'მე დავასრულე ჩემი "კოდის ერთი საათი"'
       sign_in_to_save: დარეგისტრირება და პროგრესის შენახვა
       free_play:
-        playlab: აპლიკაციის შექმნა
+        playlab: აპლიკაციის შექმნა თამაშების ლაბორატორიაში
         artist: დახატეთ რამე
-        calculate: Calculate Something
-        applab: აპლიკაციის შექმნა
+        calculate: Calculate something
+        applab: აპლიკაციის შექმნა აპლიკაციების ლაბორატორიაში
     user:
       classroom: მასწავლებლის მთავარი გვერდი
       district_dashboard: განყოფილების მართვის პანელი
@@ -320,11 +326,29 @@ ka:
     heading_hoc2014: '<h2>კოდის ერთი საათი</h2><h1>ნებისმიერი ასაკისთვის</h1>'
     heading_elementary: '<h2>ოცსაათიანი კურსები</h2><h1>დამწყებთათვის (ასაკი: ნებისმიერი)</h1>'
     heading_apps: '<h2>გასართობი</h2><h1>ყველასთვის</h1>'
+    heading_tools: '<h2>მზად ხართ შემდეგი ნაბიჯისთვის?</h2><h1>JavaScript დამამთავრებელი კლასებისთვის</h1>'
     heading_legacy: '<h2>ჩვენი დაჩქარებული კურსი</h2><h1>ნებისმიერი ასაკისთვის</h1>'
     your_gallery: გალერეა
     no_primary_course: ნახეთ კურსი კოდის სტუდიაში
     choose_next_course: სცადეთ კოდის სტუდიის კურსი, აირჩიეთ რომელიმე ვარიანტი
     print_certificate: სერტიფიკატის ამობეჭდვა
+    announcement_title: განცხადებები
+    announcement_view_all: ყველას ნახვა
+    announcement_message: '<b>2016 წლის 29 თებერვალი</b> - ვორქშოპის მონაწილეთა 90% ჩვენს პროგრამას აფასებს, როგორც საუკეთესოს პროფესიონალური ზრდისთვის. მოთხოვნის გამო, კომპიუტერული მეცნიერების პროფესიული შესწავლის პროგრამას რამდენიმე ადგილი დავამატეთ. დარეგისტრირდით <u>31 მარტამდე</u> და დაიკავეთ თქვენი ადგილი.'
+    announcement_button: გაიგეთ მეტი
+    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: ისწავლეთ კოდის სტუდიაში
     description: ნებისმიერს შეუძლია კომპიუტერული მეცნერების სწავლა. შექმენით თამაშები, აპლიკაციები და ხელოვნების ნიმუშები კოდით.
@@ -342,6 +366,7 @@ ka:
     help_from_html_old: ამ რესურსების შექმნაში გვეხმარებოდნენ Google, Microsoft, Facebook, დაTwitter-ის პროგრამისტები.
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. ყველა უფლება დაცულია.<br /> Star Warss&#8482; &copy; %{current_year} Disney and Lucasfilm. ყველა უფლება დაცულია. <br/>Frozen&#8482; &copy; %{current_year} Disney. ყველა უფლება დაცულია.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. ყველა უფლება დაცულია.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. ყველა უფლება დაცულია.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. ყველა უფლება დაცულია.<br />The Amazing World of Gumball არის სავაჭრო ნიშანი &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. ყველა უფლება დაცულია. Star Warss&#8482; &copy; %{current_year} Disney and Lucasfilm. ყველა უფლება დაცულია. Frozen&#8482; &copy; %{current_year} Disney. ყველა უფლება დაცულია. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. ყველა უფლება დაცულია. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. ყველა უფლება დაცულია. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. ყველა უფლება დაცულია. The Amazing World of Gumball არის სავაჭრო ნიშანი &copy; 2015 Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: შექმნილია Amazon Web Services დახმარებით
     trademark: '&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, CODE ლოგო და Hour of Code&reg; Code.org-ის სავაჭრო ნიშნებია.'
     copyright: საავტორო უფლება
@@ -414,12 +439,18 @@ ka:
       current: მიმდინარე დონეები
       unused: გამოუყენებელი დონეები
   upsell:
+    applab:
+      title: App Lab
+      body: აპლიკაციების ლაბორატორია არის პროგრამირების გარემო, სადაც მარტივი აპლიკაციების შექმნა შეგიძლიათ. შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით შემდეგ კი გაუზიარეთ იგი სხვებს.
+      body_short: შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით, შემდეგ კი გაუზიარეთ იგი მეგობრებს.
+      audience: ასაკი 13+
+      cta: ისწავლეთ, როგორ
     hoc:
-      title: კლასიკური ლაბირინთი
+      title: ლაბირინთი
       body: სცადეთ პროგრამირების საფუძვლების სწავლა. ეს შანსი უკვე მილიონებმა გამოიყენეს.
     flappy:
       title: Flappy კოდი
-      body: 'გინდათ, თქვენი საკუთარი თამაში დაწეროთ 10 წუთში? ნახეთ ჩვენი ტუტორიალი "Flappy Code"!'
+      body: 'გინდათ, თქვენი საკუთარი თამაში დაწეროთ 10 წუთში? ნახეთ ჩვენი ტუტორიალი "Flappy კოდი"!'
     20-hour:
       title: დაჩქარებული კურსი
       body: ეს ოცსაათიანი კურსი შეიცავს კომპიუტერული მეცნიერებისა და პროგრამირების ძირითად ნაწილებს კურსებიდან 2-4. კურსი შექმნილია 10-18 წლის მოსწავლეებისთვის. სრული გამოცდილების მისაღებად გაეცანით კურსებს 2-4!
@@ -431,7 +462,7 @@ ka:
       title: გალერეა
       body: ნახეთ ჩვენი მომხმარებლების მეირ შექნილი აპლიკაციებისა და სურათების გალერეა
     frozen:
-      title: '"გაყინული"'
+      title: გაყინული
     starwars:
       title: ვარსკვლავური ომები
     infinity:
@@ -440,6 +471,11 @@ ka:
     minecraft:
       title: მაინკრაფტი
       body: შეისწავლეთ მაინკრაფტის სამყარო კოდით.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 4+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: მოსწავლეებმა ეს კოდით დახატეს!
     students_made_these_with_code: მოსწავლეებმა ეს კოდის მეშვეობით შექმნეს!
@@ -455,10 +491,10 @@ ka:
   landing:
     prerelease: "ეს არის კურსის <span class='betatext'>ბეტა-ვერსია</span>. ანუ, ეს არ არის საბოლოო ვარიანტი, კურსი გაუმჯობესდება მიღებული უკუკავშირის საფუძველზე."
     prerelease_hoc2014: "ეს არის ტუტორიალის <span class='betatext'>ბეტა-ვერსია</span>. რაც იმას ნიშნავს, რომ ჩვენ მას გავაუმჯობესებთ მიღებული უკუკავშირის საფუძველზე."
-    feedback: უკუკავშირი
     report_bug: შეცდომის შესახებ შეტყობინება
-    support: დახმარების მიღება
+    support: დახმარება მჭირდება
     support_url: //support.code.org
+    help_resources: დახმარება და რესურსები
   multi:
     wrong_title: პასუხი არასწორია
     wrong_body: ეს პასუხი არასწორია. სცადეთ კიდევ ერთხელ!
@@ -466,6 +502,29 @@ ka:
     correct_body: ეს პასუხი სწორია.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: მადლობა
+    wrong_body: მადლობა პასუხისთვის.
+    correct_title: მადლობა
+    correct_body: მადლობა პასუხისთვის.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: მადლობა
+    wrong_body: მადლობა პასუხისთვის
+    correct_title: მადლობა
+    correct_body: მადლობა პასუხისთვის
+  level_group-submittable:
+    wrong_title: მადლობა
+    wrong_body: მადლობა პასუხისთვის
+    correct_title: მადლობა
+    correct_body: მადლობა პასუხისთვის
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: არასწორი გადაწყვეტაა
     wrong_body: პასუხი, რომელიც თქვენ შეიყვანეთ, არასწორია. სცადეთ თავიდან!
@@ -483,6 +542,8 @@ ka:
     placeholder: შეიყვანეთ პასუხი აქ
     open_response_title: მადლობა
     open_response_body: მადლობა პასუხისთვის!
+    correct_title: სწორია
+    correct_body: ეს პასუხი სწორია.
   dialog:
     ok: OK
     startover_title: დარწმუნებული ხართ, რომ ხელახლა დაწყება გსურთ?
@@ -513,7 +574,7 @@ ka:
           description: ""
         flappy:
           title: Flappy კოდი
-          description: 'გინდათ, თქვენი საკუთარი თამაში დაწეროთ 10 წუთში? ნახეთ ჩვენი ტუტორიალი "Flappy Code"!'
+          description: 'გინდათ, თქვენი საკუთარი თამაში დაწეროთ 10 წუთში? ნახეთ ჩვენი ტუტორიალი "Flappy კოდი"!'
         jigsaw:
           title: ფაზლი
           description: ""
@@ -535,7 +596,8 @@ ka:
     completed_too_many_blocks: დასრულებულია, ბლოკი ძალიან ბევრია
     completed_perfect: დასრულებულია, იდეალურად
     furthest_level_attempted: ეს დონე ძალიან მაღალია
-    assessment: შეფასება
+    assessment: ტესტი
+    submitted: ჩაბარებულია
   studio:
     courses_working_on: მიმდინარე კურსები
     completed_courses: დასრულებული კურსები
@@ -553,13 +615,16 @@ ka:
     share: გაზიარება
     share_title: თქვენი პროექტის გაზიარება
     share_copy_link: 'დააკოპირეთ ლინკი:'
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: დახურვა
     more: მეტი
     name: სახელი
     updated: განახლებულია
     project_type: პროექტის ტიპი
     help_text: 'აირჩიეთ <strong>აპლიკაციის გაკეთება</strong> ან <strong>დახატეთ რამე</strong> და შექმენით ახალი პროექტი აპლიკაციების ლაბორატორიაში ან სამხატვროში!<br/> დაბრუნება და პროექტებზე მუშაობა ნებისმიერ დროს შეგეძლებათ.'
-    need_help: გჭირდებათ დახმარება დასაწყებად?
+    need_help: თქვენი ახალი პროექტის დასაწყებად სცადეთ ეს კურსები – გამოგადგებათ
     really_delete: წავშალოთ?
     delete_yes: დიახ
     delete_no: არა
@@ -592,3 +657,21 @@ ka:
           other: სხვა
         detail: თუ შეიძლება შეგვატყობინეთ რაც შეიძლება მეტი დეტალი იმ კონტენტის შესახებ, რომელსაც უჩივით.
         acknowledge: 'ამ ინფორმაციის გამოგზავნისას თქვენ აცნობიერებთ, რომ ის დამუშავდება %{link_start_privacy}კონფიდენციალურობის პოლიტიკისა%{link_end} და %{link_start_tos}სერვისის პირობების%{link_end} თანახმად'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: No icons found
+  flex_category:
+    required: მიმოხილვა
+    content: Content
+    practice: Teacher Practices

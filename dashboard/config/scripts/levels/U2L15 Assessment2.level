@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:21.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Assessment: Question 2",
+    "markdown_instructions": "What problems exist with encryption schemes such as the Vigenere cipher even when strong encryption keys are used?\n",
+    "encrypted_solution": "pc4mlaXrwP/9Werg09oZJ48slX8MwF5uve88kx4oL2hhDWlQZ4x8RCdo5IbN\n4lc86VWsqjJrSix0gRfaBlLVprB/gDxMBXzhLqyuGqZZnQVAbveuDjbSBBG9\n9VfWiep7dIfhnxCC/nq5/77cWJdo4cWLsZnTz+nrFK7tMhzCwMZYizROOzuA\ngyy6CzsOlt5amGAZqj3vf1o5eRXmoCgwF0zuw1oQINY6rjRxGqj6mQa6jhPK\n7VRDMVQsetvmao+ep2mX+LPHQnQBGqOVmXGybR5vx/u+9+3IS7nGBJ+FpMng\nYaQ9W+3GXaQih7QWDX176WUWz68S9Xe8eNevuO9F0rXfHiwtBOkELzveW3gE\ny2mfUUKnaX343ikzK5jwcWaPvhuLD/EM/+uC2RU4H9q+LJsM3TKTcIo+ovqw\nUmyqOPS3kB0EFZwgJL/nTGXkvGVXfX1t5HcZWiqqhB2Gpq+sM9YTrTDOhv1N\nRmOshun6+z/uZ216xcAb625LZLV9Pt/R\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,57 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-13T14:03:09.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "color": null,
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "strokeWeight": null,
+      "noStroke": null,
+      "ellipse": null,
+      "rect": null,
+      "comment": {
+        "category": "Drawing"
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "U3 - Simple Drawing - Road Template",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "instructions": "Do This",
+    "markdown_instructions": "# Clouds and Sun\r\n\r\nNext we are going to add the clouds and sun to our picture. Here is an example of what your work could look like at the end of level but use some creativity as you create your sun and clouds.\r\n\r\n<img src=\"https://images.code.org/c3a26070e316d0fda19caba59af710ba-image-1460644884454.41.10 AM.png\" width=200>\r\n\r\n# Do This\r\n* Add ellipses for clouds and the sun.\r\n* Make sure there is no outline on the clouds and sun\r\n* Set the colors of the clouds and sun. ",
+    "show_d_pad": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

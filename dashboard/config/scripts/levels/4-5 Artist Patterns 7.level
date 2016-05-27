@@ -30,6 +30,11 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "disable_sharing": "false"
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 2,
+    "repeat_loops": 1
   }
 }]]></config>
   <blocks>

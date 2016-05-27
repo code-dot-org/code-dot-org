@@ -6,17 +6,10 @@
   "user_id": 155,
   "properties": {
     "skin": "applab",
-    "code_functions": {
-      "createRecord": null,
-      "declareAssign_x": null,
-      "declareNoAssign_x": null,
-      "assign_x": null,
-      "console.log": null
-    },
     "edit_code": true,
     "embed": "false",
     "instructions": "Change song.title to song.Title (capital T).  And run the program.  Check the data table  (Click to see full instructions)",
-    "markdown_instructions": "# Are properties case sensitive?\r\n\r\nYou saw that if you add a property to an Object and then store it in the database, the database will add a column to accommodate the new data value.  \r\n\r\nIf you end up with columns in your table that you don't want, you can delete them\r\n![](https://images.code.org/baecadc168954c794212b419d441679b-image-1449262524542.gif)\r\n\r\nLet's do another quick experiment to test the behavior of the data table -- **What if you change how a property is spelled?**\r\n\r\n# Do This\r\n\r\n**Your code from the previous exercise** is provided.\r\n\r\n* Change `song.title` to `song.Title` (capital T) where you create your song object.\r\n* **Run the program**, then go to the Data Viewer to see what happened.\r\n* If there are problems created by the change in spelling **delete unnecessary columns and change your code back**.",
+    "markdown_instructions": "# Are Properties Case-Sensitive?\r\n\r\nYou saw that if you add a property to an object and then store it in the database, the database will add a column to accommodate the new data value.  \r\n\r\nIf you end up with columns in your table that you don't want, you can delete them\r\n![](https://images.code.org/baecadc168954c794212b419d441679b-image-1449262524542.gif)\r\n\r\nLet's do another quick experiment to test the behavior of the data table. **What happens if you change how a property is spelled?**\r\n\r\n# Do This:\r\n\r\n**Your code from the previous exercise** is provided.\r\n\r\n* Change `song.title` to `song.Title` (capital T) where you create your song object.\r\n* **Run the program**, then go to the Data Viewer to see what happened.\r\n* If there are problems created by the change in spelling, **delete unnecessary columns and change your code back**.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -46,9 +39,11 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "project_template_level_name": "U4 - Exploring Data Tools - Template",
-    "slider_speed": "1.0"
+    "slider_speed": "1.0",
+    "encrypted_examples": "oDnRblNA77BtwOZI8PLXlOUgpG8twrI88MRA2j7A2EEL9jixC+X4WFD8AJjb\nYFBo\n"
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

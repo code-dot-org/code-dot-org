@@ -1,2 +1,5 @@
 require 'rake/testtask'
-Rake::TestTask.new
+task :test do
+  ENV['RACK_ENV'] = 'test' if rack_env?(:development)
+  Rake::TestTask.new
+end

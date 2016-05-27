@@ -51,6 +51,11 @@ exports.TestResults = {
   MISSING_RECOMMENDED_BLOCK_UNFINISHED: -4, // The level was attempted but not solved without a recommended block
   EXTRA_FUNCTION_FAIL: -5,            // The program contains a JavaScript function when it should not
   LOCAL_FUNCTION_FAIL: -6,            // The program contains an unexpected JavaScript local function
+  GENERIC_LINT_FAIL: -7,              // The program contains a lint error
+  LOG_CONDITION_FAIL: -8,             // The program execution log did not pass a required condition
+
+  // Codes for unvalidated levels.
+  UNSUBMITTED_ATTEMPT: -50,           // Progress was saved without submitting for review, or was unsubmitted.
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,               // More than the ideal number of blocks were used.
@@ -62,10 +67,7 @@ exports.TestResults = {
   EDIT_BLOCKS: 70, // The user is creating/editing a new level.
 
   // The level was solved in the ideal manner.
-  ALL_PASS: 100,
-
-  // submitted for grading
-  SUBMITTED: 1000
+  ALL_PASS: 100
 };
 
 exports.BeeTerminationValue = {
@@ -79,7 +81,8 @@ exports.BeeTerminationValue = {
   UNCHECKED_CLOUD: 5,    // Finished puzzle, but didn't check every clouded item
   UNCHECKED_PURPLE: 6,   // Finished puzzle, but didn't check every purple flower
   INSUFFICIENT_NECTAR: 7,// Didn't collect all nectar by finish
-  INSUFFICIENT_HONEY: 8  // Didn't make all honey by finish
+  INSUFFICIENT_HONEY: 8, // Didn't make all honey by finish
+  DID_NOT_COLLECT_EVERYTHING: 9 // For quantum levels, didn't try to collect all available honey/nectar
 };
 
 exports.KeyCodes = {
@@ -90,6 +93,8 @@ exports.KeyCodes = {
   UP: 38,
   RIGHT: 39,
   DOWN: 40,
+  COPY: 67,
+  PASTE: 86,
   DELETE: 127
 };
 

@@ -1,0 +1,16 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:14.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Assessment: Sending Binary Messages",
+    "placeholder": "Enter your response here.",
+    "markdown_instructions": "Provide an example of a question that could NOT be answered with a binary message. Explain why this is the case making reference to the definition of a binary message. \n\n\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

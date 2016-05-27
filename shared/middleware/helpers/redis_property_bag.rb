@@ -59,7 +59,7 @@ class RedisPropertyBag
   # @param [String, Array<String>] names
   # @return [Boolean] true if any of the values was present before deletion.
   def delete(names)
-    return false if names.is_a?(Array) and names.empty?
+    return false if names.is_a?(Array) && names.empty?
     replies = @redis.multi do |multi|
       multi.hdel(@key, names)
       multi.expire(@key, @expire_in) if @expire_in

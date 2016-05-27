@@ -24,7 +24,7 @@ class ActivitiesController < ApplicationController
 
     if params[:script_level_id]
       @script_level = ScriptLevel.cache_find(params[:script_level_id].to_i)
-      @level = @script_level.level
+      @level = params[:level_id] ? Script.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
       script_name = @script_level.script.name
     elsif params[:level_id]
       # TODO: do we need a cache_find for Level like we have for ScriptLevel?
@@ -85,6 +85,7 @@ class ActivitiesController < ApplicationController
                   end
 
     render json: milestone_response(script_level: @script_level,
+                                    level: @level,
                                     total_lines: total_lines,
                                     trophy_updates: @trophy_updates,
                                     solved?: solved,
@@ -107,7 +108,7 @@ class ActivitiesController < ApplicationController
   private
 
   def find_share_failure(program)
-    return nil unless program.match /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
+    return nil unless program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
 
     xml_tag_regexp = /<[^>]*>/
     program_tags_removed = program.gsub(xml_tag_regexp, "\n")
@@ -143,7 +144,7 @@ class ActivitiesController < ApplicationController
     attributes = {
         user: current_user,
         level: @level,
-        action: solved, # TODO I think we don't actually use this. (maybe in a report?)
+        action: solved, # TODO: I think we don't actually use this. (maybe in a report?)
         test_result: test_result,
         attempt: params[:attempt].to_i,
         lines: lines,
@@ -163,7 +164,12 @@ class ActivitiesController < ApplicationController
     end
 
     if @script_level
-      @new_level_completed = current_user.track_level_progress_async(@script_level, test_result)
+      @new_level_completed = current_user.track_level_progress_async(
+        script_level: @script_level,
+        new_result: test_result,
+        submitted: params[:submitted],
+        level_source_id: @level_source.try(:id)
+      )
     end
 
     passed = Activity.passing?(test_result)

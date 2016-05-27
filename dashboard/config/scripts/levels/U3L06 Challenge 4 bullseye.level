@@ -41,7 +41,7 @@
     "app_height": "480",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "markdown_instructions": "#Hexadecimal Colors\r\n\r\nIn reading the documentation may have noticed that `penColor()` can accept colors in the **hexadecimal format (e.g. \"#AC9100\")**. Colors on websites will often be represented in this format. It's useful to know how to interpret and use this format when trying  to duplicate colors in your own images.\r\n\r\n**Read the documentation:** Review the documentation for `penColor()` and pay particular attention to how to define colors in hexadecimal.\r\n\r\n**Draw the bullseye: ** Draw the bullseye below using a combination of `penColor()` and `dot()`.\r\n\r\n***Hint:*** *The sample image was created using three of the following hexadecimal colors: #00ABDC, #CC4400, #1188CC, #006699, #11CC00. Can you recall how hexadecimal color works to select the correct colors on your first try?*\r\n\r\n<img src=\"https://images.code.org/d53ae656d6eeae3611449b65db669242-image-1441981098736.png\" style=\"height: 250px\">",
+    "markdown_instructions": "#Hexadecimal Colors\r\n\r\nIn reading the documentation, you may have noticed that `penColor()` can accept colors in the **hexadecimal format (e.g. \"#AC9100\")**. Colors on websites will often be represented in this format. It's useful to know how to interpret and use this format when trying  to duplicate colors in your own images.\r\n\r\n**Read the documentation:** Review the documentation for `penColor()` and pay particular attention to how to define colors in hexadecimal.\r\n\r\n**Draw the bullseye: ** Draw the bullseye below using a combination of `penColor()` and `dot()`.\r\n\r\n***Hint:*** *The sample image was created using three of the following hexadecimal colors: #00ABDC, #CC4400, #1188CC, #006699, #11CC00. Can you recall how hexadecimal color works to select the correct colors on your first try?*\r\n\r\n<img src=\"https://images.code.org/d53ae656d6eeae3611449b65db669242-image-1441981098736.png\" style=\"height: 250px\">",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "text_mode_at_start": "false",
@@ -56,7 +56,8 @@
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false"
   },
-  "published": true
+  "published": true,
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>

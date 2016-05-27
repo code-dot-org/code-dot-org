@@ -1,0 +1,67 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-04-13T14:04:03.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "color": null,
+      "fill": null,
+      "noFill": null,
+      "stroke": null,
+      "strokeWeight": null,
+      "noStroke": null,
+      "ellipse": null,
+      "rect": null,
+      "regularPolygon": null,
+      "line": null,
+      "arc": null,
+      "shape": null,
+      "point": null,
+      "text": null,
+      "textAlign": null,
+      "textFont": null,
+      "textSize": null,
+      "comment": {
+        "category": "Drawing"
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "U3 - Simple Drawing - Personal Drawing Template",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "instructions": "DO This",
+    "markdown_instructions": "# Your Own Drawing\r\n\r\nIt is your turn to create your own drawing. You should have drawn out your plan on paper first\r\n\r\n# Do This\r\nAs a reminder make sure you hit the objectives:\r\n\r\n* Creates an identifiable and named object or design (i.e. no random splatters of shapes)\r\n* Uses at least 10 shapes or text items (rect, ellipse, regularPolygon, text)\r\n* Uses at least 4 different color fills\r\n* Uses at least 2 different color outlines\r\n* Contains at least 3 different logical blocks of code with comments\r\n",
+    "start_blocks": "// Create your drawing here",
+    "show_d_pad": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

@@ -3,9 +3,7 @@ sr:
     unplugged:
       Unplug1:
         title: Увод у Компјутерске Науке
-        desc: |
-          Ова лекција ће увести идеју компјутерске науке и објаснити шта компјутерски научници раде.Такође ће дати ученицима прилику да накратко постану компјутерски научници.На крају сваке активности сваки ученик ће добити подсетник онога што је он или она научио.Можда вас привуче могућност да не научите малу децу непознате речи које су повезане са лекцијом,али њихово објашњавање на забаван и лак начин је пуно пута продуктивније него чекање напреднијих прилика. 
-          
+        desc: 'Ова лекција ће објаснити основне идеје рачунарских наука. Поред тога, она ће дати ученицима прилику да накратко постану програмери. На крају сваке активности сваки ученик ће добити подсетник ствари које је научио. Можда вас привуче могућност да научите децу непознате речи које су повезане са лекцијом, али њихово објашњавање на забаван и лак начин је  продуктивније него чекање напреднијих прилика.'
         pdfs:
           - unplug1
         video: Unplug1
@@ -35,7 +33,7 @@ sr:
           - unplug5
         video: Unplug5
       Unplug6:
-        title: Uslovi
+        title: Услови
         desc: 'This is a class game.  After introducing the idea of conditionals, if-statements, and loops, the class can practice together using a pre-written program, a deck of cards, and luck of the draw.'
         pdfs:
           - unplug6
@@ -71,23 +69,23 @@ sr:
           - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: Веселе мапе
         desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
+        title: Помери га, помери
         desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Real-life Algorithms: Plant a Seed'
+        title: 'Прави алгоритми: Засади семе'
         desc: This lesson calls out ways we use algorithms in our daily lives, using the act of planting a seed as an example. It also focuses on the bigger picture of computer science and how algorithms play an essential part.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation
+        title: Изградња темеља
         desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
         video: C1_building_foundation
       GettingLoopy:
-        title: Getting Loopy
+        title: Запетљанције
         desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
         video: C1_getting_loopy
       RelayProgramming:
@@ -100,11 +98,11 @@ sr:
         desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
+        title: Велики догађај
         desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Going Places Safely
+        title: Сигурна путања
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers introduce how to stay safe while navigating the Internet.
         video: C1_going_places_safely
       GraphPaperProgramming:
@@ -112,15 +110,15 @@ sr:
         desc: Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Real-life Algorithms: Paper Planes'
+        title: 'Стварни алгоритми: Папирни авиони'
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically making paper airplanes. This lesson also focuses on the bigger picture of computer science and how algorithms play an essential part.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binary Bracelets
+        title: Бинарне наруквице
         desc: Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
         video: C2_binary_bracelets
       DigitalFootprint:
-        title: Your Digital Footprint
+        title: Твој дигитални траг
         desc: 'Teachers introduce to students the idea that putting information about themselves online creates a digital footprint or "trail" that has consequences.'
         video: C2_digital_footprint
       ComputationalThinking:
@@ -140,7 +138,7 @@ sr:
         desc: This lesson calls out ways we use algorithms in our daily lives. As part of that, students will identify and write down the algorithm for a dice race game.
         video: C3_dice_race
       Internet:
-        title: Internet
+        title: Интернет
         desc: Students send messages representing various Internet transmission methods using pieces of paper.
         video: C3_internet
       Crowdsourcing:
@@ -148,7 +146,7 @@ sr:
         desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
+        title: Дигитално држављанство
         desc: Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
         title: Tangram Algorithms

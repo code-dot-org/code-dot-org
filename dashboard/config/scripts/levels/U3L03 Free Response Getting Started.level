@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:27.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Creating Procedures Part 1: Getting Started",
+    "markdown_instructions": "In the previous lesson we created simple turtle drawings using only four commands. At some point you probably wished that more commands were available to you. Describe a command you wanted to be able to use and explain why you wanted to use it. If you have time try to brainstorm additional commands as well.\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

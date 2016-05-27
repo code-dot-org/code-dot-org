@@ -1,0 +1,24 @@
+name 'ECSPD1 cs is about'
+title 'ECSPD1 cs is about'
+Description 'CS Is About'
+css 'unplugged'
+href 'path/to/html/in/asset/folder'
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+
+
+# Computer Science is changing everything
+<br><br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xJqSu1IbcHg" frameborder="0" allowfullscreen></iframe>
+<br>
+
+<em>NOTE: you can speed up the video by first clicking play, and then clicking the settings menu, which is the gear icon at the bottom of the video player. The speed setting is the second from the top.</em>
+<br>
+<br>
+
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

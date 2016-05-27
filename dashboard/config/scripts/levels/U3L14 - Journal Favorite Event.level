@@ -1,0 +1,15 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:32.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: Events",
+    "markdown_instructions": "Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.\n\n**Pick one:**\n\n* Think back a few lessons to the \"Mission: Unsortable\" card sorting activity. Relate something that happened in that activity to something you found with event-driven programming in this lesson. Were there any \"unfortunate events\" in the card sorting activity that were similar to \"unfortunate events\" while programming in this lesson?  \n\n* What was your favorite event type? Explain what the event type is and how you might use it in an app that you want to write.  \n\nWrite your response below in 100 words or less.\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

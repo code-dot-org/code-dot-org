@@ -23,7 +23,15 @@
           future: kan niet in de toekomst
   hello: Hallo wereld
   welcome_back: Welkom terug, %{name}
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Insturen
+  unsubmit: Intrekken
+  previous_page: Vorige pagina
+  next_page: Volgende pagina
+  cancel: Annuleren
+  okay: Oké
+  heading_x_of_y: "%{heading} (pagina %{x} van %{y})"
   add_teacher_form:
     code:
       label: 'Voeg een leraar toe:'
@@ -133,7 +141,7 @@
       email: Email-adres
       submit: Stuur me uitleg over wachtwoord resetten
     change_form:
-      title: Verander je wachtwoord
+      title: Wijzig je wachtwoord
       new_password: Nieuw wachtwoord
       confirm_password: Bevestig je nieuwe wachtwoord
       submit: Wijzig mijn wachtwoord
@@ -165,9 +173,6 @@
         subject: Doe mee met een klas met %{teacher_name} op Code.org!
       student_disassociated:
         subject: 'Code.org melding: %{student_name} is niet langer ale student aan
-          jou gekoppeld.'
-      teacher_disassociated:
-        subject: 'Code.org melding: %{teacher_name} is niet langer als leraar aan
           jou gekoppeld.'
   reports:
     error:
@@ -382,11 +387,44 @@
     heading_hoc2014: "<h2>Uur Code voor</h2><h1>Alle leeftijden</h1>"
     heading_elementary: "<h2>20 uur cursussen voor</h2><h1>Beginners (alle leeftijden)</h1>"
     heading_apps: "<h2>Leuk voor</h2><h1>Iedereen</h1>"
+    heading_tools: "<h2>Klaar voor de volgende stap?</h2><h1>JavaScript Tools voor
+      de Middelbare School</h1>"
     heading_legacy: "<h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>"
     your_gallery: Galerij
     no_primary_course: Probeer een cursus bij Code Studio
     choose_next_course: Probeer een Code Studio cursus door er hier onder één te kiezen
     print_certificate: print certificaat
+    announcement_title: Aankondigingen
+    announcement_view_all: Alles weergeven
+    announcement_message: 'We''ve started to measure student learning in Courses 1-4
+      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
+      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
+      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
+      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_button: Leer meer
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: Leer meer op Code Studio
     description: Iedereen kan informatica leren. Maak games, apps en kunst met code.
@@ -423,6 +461,8 @@
       Entertainment Ltd. Alle rechten voorbehouden. Plants vs. Zombies&#8482; &copy;
       %{current_year} Electronic Arts Inc. Alle rechten voorbehouden. The Amazing
       World of Gumball is handelsmerk en &copy; 2015 Cartoon Network.
+    code_from_html: Code.org maakt gebruik van p5.play, onder de licentie <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
+      LGPL 2.1</a>.
     powered_by_aws: Aangedreven door Amazon webservices
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, het CODE logo en
       Hour of Code&reg; zijn handelsmerken van Code.org."
@@ -508,6 +548,15 @@
       current: Huidige niveaus
       unused: Ongebruikte niveaus
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is een programmeer omgeving waar jij simpele apps kan maken. Ontwerp
+        een app, codeer met blokken of JavaScript om het te laten werken, en deel
+        je app dan in een par seconden.
+      body_short: Ontwerp een app, codeer met blokken of JavaScript om het te laten
+        werken, en deel je app dan in een paar seconden.
+      audience: Leeftijd 13+
+      cta: Leer om
     hoc:
       title: Klassiek doolhof
       body: Probeer de beginselen van de informatica. Miljoenen gingen je voor!
@@ -539,6 +588,15 @@
     minecraft:
       title: Minecraft
       body: Ontdek een Minecraft-wereld met code.
+    unplugged:
+      title: "'Unplugged' lessen"
+      audience: Leeftijden 6+
+      body: We hebben een lijst van offline lessen gemaakt om te gebruiken in het
+        klaslokaal. Vanaf nu kun je de beginselen van informatie onderwijzen, met
+        of zonder computers! Probeer deze lessen als een aparte cursus of als aanvulling
+        voor een informatica-vak.
+      body_short: Als je geen computers hebt, probeer dan deze 'unplugged' lessen
+        in je klaslokaal.
   gallery:
     students_drew_these_with_code: Leerlingen wonnen deze met programmeren!
     students_made_these_with_code: Leerlingen hebben dit gemaakt met code!
@@ -562,10 +620,10 @@
     prerelease_hoc2014: Deze handleiding is in <span class='betatext'>beta</span>.
       Deze handleiding wordt bijgewerkt afhankelijk van ontvangen feedback en er worden
       verbeteringen aan aangebracht.
-    feedback: Geef Feedback
     report_bug: Meld Bug
     support: Help
     support_url: "//support.code.org"
+    help_resources: Hulp en Ondersteuning
   multi:
     wrong_title: Onjuist antwoord
     wrong_body: Het antwoord dat je hebt ingevoerd is niet correct.  Probeer het opnieuw!
@@ -573,6 +631,32 @@
     correct_body: Dat is het juiste antwoord.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Bedankt
+    wrong_body: Bedankt voor het insturen van een antwoord.
+    correct_title: Bedankt
+    correct_body: Bedankt voor het insturen van een antwoord.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Bedankt
+    wrong_body: Dank je voor het insturen van antwoorden.
+    correct_title: Bedankt
+    correct_body: Dank je voor het insturen van antwoorden.
+  level_group-submittable:
+    wrong_title: Bedankt
+    wrong_body: Dank je voor het insturen van antwoorden.
+    correct_title: Bedankt
+    correct_body: Dank je voor het insturen van antwoorden.
+    unsubmit-title: Trek je beoordeling terug
+    unsubmit-body: Terugtrekken van je beoordeling stelt de ingevulde tijd en datum
+      opnieuw in. Weet je het zeker?
+    submit-incomplete-title: Stuur je beoordeling in
+    submit-incomplete-body: Enkele vragen zijn nog onvolledig ingevuld. Je kunt je
+      beoordeling na de indiening daarvan niet meer veranderen.  Weet je het zeker?
+    submit-complete-title: Stuur je beoordeling in
+    submit-complete-body: Je kunt je beoordeling na de indiening niet meer veranderen.
+      Weet je het zeker?
   match:
     wrong_title: Onjuist antwoord
     wrong_body: De oplossing die je hebt ingevoerd is niet juist.  Probeer het opnieuw!
@@ -592,6 +676,8 @@
     placeholder: Voer uw antwoord hier in
     open_response_title: Bedankt
     open_response_body: Bedankt voor uw reactie!
+    correct_title: Juist
+    correct_body: Dat is het juiste antwoord.
   dialog:
     ok: OK
     startover_title: Weet je zeker dat je opnieuw wilt beginnen?
@@ -655,6 +741,7 @@
     completed_perfect: voltooid, perfect
     furthest_level_attempted: verste niveau geprobeerd
     assessment: beoordeling
+    submitted: verstuurd
   studio:
     courses_working_on: Cursussen die u bezig bent
     completed_courses: Voltooide cursussen
@@ -672,6 +759,10 @@
     share: Delen
     share_title: Deel je project
     share_copy_link: 'Kopieer de link:'
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Afsluiten
     more: Meer
     name: naam
@@ -725,3 +816,23 @@
         acknowledge: Door het indienen van deze informatie, erkent u dat het zal worden
           behandeld in overeenstemming met de voorwaarden van de %{link_start_privacy}Privacy
           Policy%{link_end} en de %{link_start_tos}Terms van Service%{link_end}
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+  components:
+    icon_library:
+      search_placeholder_text: Zoek voor een icoon...
+      no_icons_found: Geen iconen gevonden
+  flex_category:
+    required: Overzicht
+    content: Content
+    practice: Teacher Practices

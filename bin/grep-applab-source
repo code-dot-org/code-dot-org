@@ -1,0 +1,90 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+require_relative '../lib/cdo/aws/s3'
+require_relative '../shared/middleware/helpers/storage_id'
+require 'cdo/db'
+
+MAX_THREADS = 200
+# Log to the command line every time this many source files are processed.
+# Must be a multiple of MAX_THREADS.
+LOG_INCREMENT = 1000
+
+if ARGV.length < 2 || ARGV.length.odd?
+  $stderr.puts "usage: #{$0} <regex1> <output1>.tsv [<regex2> <output2>.tsv] ..."
+  exit(1)
+end
+
+# Searches all applab source code for each regex and prints results to a corresponding tsv file.
+# This is useful for seeing if we will break anyone's program if we change how a block works.
+# Multiple regex-filename pairs can be specified to avoid having to run the script multiple times.
+#
+# The 'match' field is either the entire matched string, or an array of capture groups if any capture
+# groups are specified (see String.scan docs for details).
+#
+# With 200 threads on production-console, this script takes approximately 1 hour to
+# find and process 500K applab projects.
+#
+# To avoid losing your work when your ssh session times out, this script can be run using nohup:
+# nohup bin/grep-applab-source regex1 file1 regex2 file2 &
+
+# a list of pairs of regexes and filenames, e.g. [[regex1, filename1], [regex2, filename2]]
+commands = ARGV.map(&:to_s).map(&:strip).each_slice(2).to_a.map do |regex, filename|
+  # print tsv headers
+  File.open(filename, 'w') do |file|
+    file << %w{owner_storage_id match project_url}.join("\t") + "\n"
+  end
+
+  # construct regex
+  [Regexp.new(regex), filename]
+end
+
+s3 = Aws::S3::Client.new
+bucket = CDO.sources_s3_bucket
+base_dir = CDO.sources_s3_directory
+count = 0
+key_not_found = 0
+
+puts "Fetching a list of applab apps from Pegasus DB. This step may take approximately 10 minutes"
+puts "to run over ~3M rows in storage_apps in production..."
+
+# An array of pairs of storage_owner_ids and channel_ids, each representing an applab app.
+applab_channels = PEGASUS_DB[:storage_apps].grep(:value, '%applab%').map do |row|
+  [row[:storage_id], row[:id]]
+end
+
+puts "Scanning #{applab_channels.length} source files in S3 using #{MAX_THREADS} threads..."
+
+applab_channels.each_slice(MAX_THREADS) do |chunk|
+  threads = []
+  chunk.each do |owner_storage_id, channel_id|
+    threads << Thread.new do
+      s3_filename = "#{base_dir}/#{owner_storage_id}/#{channel_id}/main.json"
+      begin
+        body = s3.get_object(bucket: bucket, key: s3_filename)[:body].read
+      rescue Aws::S3::Errors::NoSuchKey
+        key_not_found += 1
+        next
+      end
+
+      source = JSON.parse(body)['source'] if body
+      commands.each do |regex, filename|
+        source.scan(regex).each do |match|
+          channel = storage_encrypt_channel_id(owner_storage_id, channel_id)
+          project_url = "https://#{CDO.dashboard_hostname}/projects/applab/#{channel}/view"
+
+          File.open(filename, 'a') do |file|
+            file.flock(File::LOCK_EX)
+            file << "#{owner_storage_id}\t#{match}\t#{project_url}\n"
+            file.flock(File::LOCK_UN)
+          end
+        end
+      end if source
+    end
+  end
+  threads.each &:join
+
+  count += chunk.length
+  puts "#{count} files scanned..." if count % LOG_INCREMENT == 0
+end
+puts "#{count} files scanned total"
+puts "#{key_not_found} keys were not found in S3 (possibly from deleted projects)" if key_not_found

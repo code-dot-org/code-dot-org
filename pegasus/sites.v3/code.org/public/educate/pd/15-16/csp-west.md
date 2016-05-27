@@ -31,15 +31,20 @@ Wednesday, July 27th - Friday, July 29th<br/>
 
 **Location**
 
-Seattle, WA<br/>
-
-More Details Coming Soon!
+[Courtyard Marriott Southcenter<br/>
+400 Andover Park West<br/>
+Tukwila, WA 98188](https://www.google.com/maps/place/Courtyard+Seattle+Southcenter/@47.45377,-122.253993,15z/data=!4m2!3m1!1s0x0:0x63b7ebb79d35ed90)
 
 **Travel Information**
 
 Teachers will travel to Seattle on Tuesday, July 26th and will depart on Friday, July 29th after the workshop.<br/>
 
-More Details Coming Soon!<br/>
+Hotel:<br/>
+[Courtyard Marriott Southcenter<br/>
+400 Andover Park West<br/>
+Tukwila, WA 98188](https://www.google.com/maps/place/Courtyard+Seattle+Southcenter/@47.45377,-122.253993,15z/data=!4m2!3m1!1s0x0:0x63b7ebb79d35ed90)
+
+More details about booking travel are coming soon!<br/>
 
 **What to bring to Phase 4:**
 

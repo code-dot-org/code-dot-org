@@ -27,6 +27,9 @@
  *= require buttons
  *= require course-blocks
  *= require details-polyfill
+ *
+ *= require selectize
+ *= require selectize.default
  */
 
 // TODO: Move into code-studio.scss when it exists.
@@ -459,6 +462,13 @@ $small-footer-standard-width: 400px;
 .full_container {
   padding: 0px 25px 25px 25px;
 }
+body.embedded_iframe {
+  .full_container {
+    padding-left: 0px;
+  }
+}
+
+
 
 $default-modal-width: 640px;
 
@@ -475,6 +485,8 @@ $default-modal-width: 640px;
   .markdown {
     .modal-image {
       margin-top: -100px;
+      float: left;
+      position: relative;
     }
   }
 }
@@ -583,7 +595,7 @@ $default-modal-width: 640px;
     float: left;
     clear: left;
   }
-  // TODO: Remove when applab is no longer in beta
+  // TODO: Remove when Game Lab is no longer in beta
   .beta-notice {
     float: left;
     margin-left: 10px;
@@ -612,23 +624,46 @@ $default-modal-width: 640px;
   background: $light_gray;
 }
 
-#project-share .social-buttons a {
-  display: inline-block;
-  &:hover, & {
-    text-decoration: none;
+#project-share {
+
+  .export-button {
+    color: $dark_color;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
   }
-  i {
-    display: table-cell;
-    width: 45px;
-    height: 45px;
-    border-radius: 5px;
+
+  .social-buttons a {
+    display: inline-block;
     background: $purple;
     color: white;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 24pt;
-    &:hover {
-      box-shadow: 2px 2px 5px $light_gray;
+    border-radius: 5px;
+    margin-right: 8px;
+    font-size: larger;
+    &:hover, & {
+      text-decoration: none;
+    }
+    i {
+      border-radius: 5px;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 24pt;
+      &:hover {
+        box-shadow: 2px 2px 5px $light_gray;
+      }
+
+      &.fa-facebook {
+        background-color: #3b5998;
+      }
+      &.fa-twitter {
+        background-color: #00aced;
+      }
+    }
+    span {
+      padding-right: 10px;
     }
   }
 }
@@ -1079,7 +1114,7 @@ html[dir=rtl] .qtip-content {
 }
 
 .tooltip-x-close.qtip-icon {
-  @include close-button($cornerOffset: -35px);
+  @include close-button($cornerOffset: -20px);
 }
 
 a.download-video {
@@ -1215,14 +1250,18 @@ a.download-video {
     font-size: 18px;
   }
 
+  #teacher_announcement {
+    margin-top: 10px;
+  }
+
   .teacher-announce {
     position: relative;
     font-size: 14px;
   }
   .teacher-announce .announce-heading {
-    background-color: #7665a0;
+    background-color: $purple;
     border-radius: 4px;
-    color: #fff;
+    color: white;
     height: 20px;
     overflow: hidden;
     padding: 10px;
@@ -1232,7 +1271,7 @@ a.download-video {
     float: right;
   }
   .teacher-announce .announce-content {
-    background-color: #ebe8f1;
+    background-color: $lightest_purple;
     border-radius: 4px;
     margin-top: 3px;
     overflow: hidden;
@@ -1246,7 +1285,7 @@ a.download-video {
     height: 108px;
   }
   .teacher-announce .announce-content .content-text {
-    color: #4d575f;
+    color: $charcoal;
     float: left;
     max-height: 90px;
     overflow: hidden;
@@ -1258,9 +1297,11 @@ a.download-video {
     font-family: 'Gotham 5r', sans-serif;
   }
   .teacher-announce .announce-learn-more {
-    bottom: 10px;
-    position: absolute;
-    right: 10px;
+    float: right;
+    margin-top: 25px;
+  }
+  .teacher-announce a {
+    text-decoration: none;
   }
 
   .gallery {
@@ -1604,7 +1645,23 @@ a.download-video {
   }
 }
 
-.text-match {
+.level-group-number {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  float: left;
+  width: 30px;
+}
+
+.level-group-content {
+  overflow: hidden;
+}
+
+.text-match, .free-response, .peer-review {
+  p, label {
+    font-size: 16px;
+    line-height: 24px;
+  }
   #markdown {
     // By default, nothing in the page body is selectable.
     // On text-match levels there may be a reason to paste part of the
@@ -1614,8 +1671,37 @@ a.download-video {
   }
 }
 
+.peer-review input[type=radio] {
+  margin: 0 3px 3px 5px;
+}
+
+.peer-review-content {
+  background: #fff;
+  border: 1px solid $light_gray;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 1em;
+  &.outdated {
+    color: $light_gray;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .peer-review-title {
+    margin: 0;
+  }
+  .peer-review-status {
+    font-size: 1em;
+    & > strong {
+      font-family: inherit;
+    }
+  }
+}
+
 .external,
 .text-match,
+.free-response,
+.standalone-video,
 .multi,
 .match {
   #markdown.teacher {
@@ -1638,15 +1724,24 @@ a.download-video {
   }
 }
 
+.standalone-video {
+  width: 853px;
+  margin: auto;
+}
+
 .multi #markdown.teacher {
   margin-left: 50px;
   margin-right: 50px;
   max-width: 100%;
 }
 
-.text-match #markdown.teacher {
+.text-match #markdown.teacher, .free-response #markdown.teacher {
   margin-left: 0;
   margin-right: 0;
+}
+
+#free-response-upload {
+  overflow: hidden;
 }
 
 #current-script-levels, #all-levels {
@@ -1742,6 +1837,30 @@ div.mini_gallery_activity {
   padding: 10px;
 }
 
+.previousPageButton {
+  margin-right: 5px;
+}
+
+.buttons.submittable {
+  .submitButton {
+    border-color: $purple;
+    background-color: $purple;
+    color: white;
+    background-image: none;
+  }
+
+  .unsubmitButton {
+    border-color: $light_purple;
+    background-color: $light_purple;
+    color: white;
+    background-image: none;
+  }
+}
+
+.submitted_readonly {
+  background-color: $lightest_gray;
+}
+
 /* multiple choice */
 
 $information-phone-narrow: "only screen and  (max-width: 320px)";
@@ -1750,48 +1869,125 @@ $information-tablet-tall: "only screen and (min-width: 768px) and (max-width: 10
 $information-desktop: "only screen and (min-width: 1024px)";
 
 .multi {
-
   margin: auto;
-
   h2 {
     text-align: center;
   }
-
-  .question {
-    float: left;
-    @media #{$information-phone-narrow} {
-    }
-    @media #{$information-phone-wide} {
-    }
-    @media #{$information-tablet-tall} {
-      width: 35%;
-    }
-    @media #{$information-desktop} {
-      width: 35%;
-    }
+  p {
+    font-size: 16px;
+    line-height: 24px;
   }
   $multi-left-margin: 50px;
-  .answers {
-    float: left;
-    margin-left: $multi-left-margin;
-    @media #{$information-phone-narrow} {
+
+  // The tight layout is designed for a full-width layout that tends to
+  // vertically stack every element, rather than going for side-by-side elements.
+  &.tight {
+
+    // A piece of instructional content (image, text, markdown)
+    .question .content {
+      float: left;
+      clear: both;
+      @media #{$information-phone-narrow} {
+      }
+      @media #{$information-phone-wide} {
+      }
+      @media #{$information-tablet-tall} {
+        width: 55%;
+      }
+      @media #{$information-desktop} {
+        width: 55%;
+      }
     }
-    @media #{$information-phone-wide} {
-    }
-    @media #{$information-tablet-tall} {
-      width: 55%;
-    }
-    @media #{$information-desktop} {
-      width: 55%;
-    }
-    &.question-content-blank {
-      width: calc(100% - #{$multi-left-margin});
-    }
+
+    // A plain-text question.
     .multi-question {
-      width: 90%;
-      font-size: 17px;
+      float: left;
+      width: calc(100% - #{$multi-left-margin});
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    // The block of answers.
+    .answers {
+      float: left;
+      clear: both;
+      width: calc(100% - #{$multi-left-margin});
+      &.question-content-blank {
+        width: calc(100% - #{$multi-left-margin});
+      }
+    }
+
+    // A single answer button.
+    .answerbutton {
+      clear: both;
+      margin-left: $multi-left-margin;
     }
   }
+
+  // The default layout is designed to fit a single multi with a side-by-side
+  // layout when the screen is wide, and then stacking vertically for narrow
+  // devices.
+  &.default {
+
+    // The block containing all instructional content (image, text, markdown).
+    .question {
+      float: left;
+      @media #{$information-phone-narrow} {
+      }
+      @media #{$information-phone-wide} {
+      }
+      @media #{$information-tablet-tall} {
+        width: 35%;
+      }
+      @media #{$information-desktop} {
+        width: 35%;
+      }
+    }
+
+    // A plain-text question.
+    .multi-question {
+      float: left;
+      font-size: 16px;
+      line-height: 24px;
+
+      @media #{$information-tablet-tall} {
+        margin-left: $multi-left-margin;
+      }
+      @media #{$information-desktop} {
+        margin-left: $multi-left-margin;
+      }
+    }
+
+    // The block of answers.
+    .answers {
+      float: left;
+      margin-left: $multi-left-margin;
+      @media #{$information-phone-narrow} {
+      }
+      @media #{$information-phone-wide} {
+      }
+      @media #{$information-tablet-tall} {
+        width: 55%;
+      }
+      @media #{$information-desktop} {
+        width: 55%;
+      }
+      &.question-content-blank {
+        width: calc(100% - #{$multi-left-margin});
+      }
+    }
+
+    // A single answer button.
+    .answerbutton {
+      margin-top: 15px;
+      margin-right: 15px;
+      padding-left: 10px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
   .mainblock {
     margin-left: 0px;
     img {
@@ -1805,6 +2001,9 @@ $information-desktop: "only screen and (min-width: 1024px)";
   input {
     margin-top: 12px;
   }
+  .answerbutton {
+    white-space: nowrap;
+  }
   .item-radio {
     display: inline-block;
     float: left;
@@ -1816,27 +2015,23 @@ $information-desktop: "only screen and (min-width: 1024px)";
   }
   .item-mark {
     display: inline-block;
-    float: left;
-    text-align: right;
+    text-align: left;
     padding-right: 10px;
     box-sizing: border-box;
     font-size: 21px;
+    width: 30px;
   }
   .item-label {
     display: inline-block;
     text-align: left;
-    float: left;
+    vertical-align: top;
+    white-space: normal;
     label {
-      font-size: 15px;
+      font-size: 14px;
     }
   }
-  .answerbutton {
-    margin-top: 15px;
-    margin-right: 15px;
-    padding-left: 10px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  .item-answer-letter {
+    font-family: $gotham-bold;
   }
 }
 
@@ -1859,6 +2054,7 @@ $modal-no-icon-gap: 22px;
     font-size: 24px;
     color: $purple;
   }
+
   .congrats {
     font-size: 27px;
     line-height: 30px;
@@ -1949,16 +2145,16 @@ $modal-no-icon-gap: 22px;
 }
 
 .lightbulb-button {
-  background-color: $lightest_gray;
-  border: 1px solid $light_gray;
-  color: black;
-
-  svg {
-    margin: -12px -6px;
-  }
+  background-color: white;
+  font-family: $gotham-bold;
+  border: 1px solid $charcoal;
+  color: $charcoal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
 }
 
-#again-button {
+#again-button, #cancel-button {
   background-color: $green;
   color: white;
   margin-left: 0px;
@@ -1975,8 +2171,8 @@ $modal-no-icon-gap: 22px;
 .modal-image {
   width: $modal-image-width;
   height: auto;
-  margin-top: -60px;
-  float: left;
+  margin-top: -75px;
+  position: absolute;
   html[dir=rtl] & {
     float: right;
     -webkit-transform: scaleX(-1);
@@ -1996,13 +2192,21 @@ $modal-no-icon-gap: 22px;
 .modal-content.markdown-instructions-container {
   margin-left: $modal-no-icon-gap;
   margin-right: $modal-no-icon-gap;
-  margin-top: 10px;
+  /*margin-top: 10px;*/
   margin-bottom: 15px;
   float: left;
   padding: 0 0 15px;
   background-color: white;
   $outside-margin-side: 15px;
   width: $default-modal-width - ($modal-no-icon-gap * 2) - ($outside-margin-side * 2);
+}
+
+.modal-content.instructions-container {
+  margin: 15px 10px 20px 20px;
+
+  button {
+    margin: 0;
+  }
 }
 
 .instructions-markdown {
@@ -2020,6 +2224,7 @@ $modal-no-icon-gap: 22px;
 
 .markdown-level-header-text {
   margin-left: $modal-image-width + $modal-image-margin-gap;
+  margin-top: 15px;
   font-weight: normal;
   line-height: 27px;
   font-size: 24px;
@@ -2028,6 +2233,12 @@ $modal-no-icon-gap: 22px;
   &.no-modal-icon {
     margin-left: $modal-no-icon-gap;
   }
+}
+
+#levelgroup-submit-incomplete-dialogcontent,
+#levelgroup-submit-complete-dialogcontent,
+#unsubmit-dialogcontent {
+  overflow: hidden;
 }
 
 #feedbackBlocks {
@@ -2119,6 +2330,7 @@ button.notext {
 
 @mixin rounded-border {
   border: 2px solid $light_gray;
+  box-sizing: border-box;
   border-radius: 25px;
 }
 
@@ -2129,7 +2341,7 @@ button.notext {
 
 /*
  * The following responsive styles are designed to match behavior
- * with the vizualizationColumn and visualizationEditor styles
+ * with the vizualizationColumn styles
  * defined in apps/style/common.scss, so that the columns in the
  * header line up with the columns below them.
  */
@@ -2144,12 +2356,20 @@ $width: 400px;
   padding-left: 15px;
 }
 
+#visualizationEditor.responsive {
+  margin-left: $width;
+  padding-left: 15px;
+}
+
 @media screen and (min-width: 1101px) and (max-width: 1150px) {
   $width: 350px;
   #visualizationColumnHeader.responsive {
     max-width: $width;
   }
   #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+  #visualizationEditor.responsive {
     margin-left: $width;
   }
 }
@@ -2162,6 +2382,9 @@ $width: 400px;
   #visualizationEditorHeader.responsive {
     margin-left: $width;
   }
+  #visualizationEditor.responsive {
+    margin-left: $width;
+  }
 }
 
 @media screen and (min-width: 1001px) and (max-width: 1050px) {
@@ -2172,6 +2395,9 @@ $width: 400px;
   #visualizationEditorHeader.responsive {
     margin-left: $width;
   }
+  #visualizationEditor.responsive {
+    margin-left: $width;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -2180,6 +2406,9 @@ $width: 400px;
     max-width: $width;
   }
   #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+  #visualizationEditor.responsive {
     margin-left: $width;
   }
 }

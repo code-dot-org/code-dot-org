@@ -2,7 +2,6 @@ name 'U4L02v2 - Finding Trends'
 title 'title'
 css 'unplugged'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 4: Lesson 02 - Finding Trends with Visualizations
 

@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="In this lesson, students learn about the relationship between cryptographic keys and passwords. Students first read about how the Vigenère cipher was cracked, and about what makes for strong keys. Then, students use a tool that shows them about how long it would take to crack a given password using a standard desktop computer. Students experiment with what makes a good password and answer questions about the “human components” of cybersecurity.">
+    <title>Keys and Passwords</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/lightbox.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-drawer.min.css">
+
+    
+
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.12.3.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/drawer.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+</head>
+
+<body id="body" class="has-drawer">
+
+
+    <div id="admin_edit" class="drawer drawer-right dw-xs-9 dw-sm-5 dw-md-3 fold" aria-labelledby="admin_edit">
+        <div class="drawer-controls">
+            <a href="#admin_edit" data-toggle="drawer" aria-foldedopen="false" aria-controls="admin_edit" class="btn btn-default btn-md"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Settings</h2>
+            </div>
+            <div class="drawer-body">
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="say">
+                    Show "Say" Prompts
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="tip">
+                    Show Teaching Tips
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="discussion">
+                    Show Discussion Goals
+                  </label>
+                </div>
+                <div class="checkbox settings">
+                  <label>
+                    <input type="checkbox" name="content">
+                    Show Content Corners
+                  </label>
+                </div>
+            </div>
+            <ul class="drawer-nav">
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber"><a href="/educate/csp_test/unit4/"><span class="h2">Unit</span><span class="h1">4</span></a></div>
+
+    
+    <div class="lessons">
+    
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/1" data-pdf-link="#unit4lesson1">
+            1
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/2" data-pdf-link="#unit4lesson2">
+            2
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/3" data-pdf-link="#unit4lesson3">
+            3
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/4" data-pdf-link="#unit4lesson4">
+            4
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/5" data-pdf-link="#unit4lesson5">
+            5
+        </a>
+        </div>
+        
+            
+                <div class="lesson finished">
+            
+        <a href="/educate/csp_test/unit4/6" data-pdf-link="#unit4lesson6">
+            6
+        </a>
+        </div>
+        
+            
+                
+                    <div class="lesson current">
+                
+            
+        <a href="/educate/csp_test/unit4/7" data-pdf-link="#unit4lesson7">
+            7
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/8" data-pdf-link="#unit4lesson8">
+            8
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/9" data-pdf-link="#unit4lesson9">
+            9
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/10" data-pdf-link="#unit4lesson10">
+            10
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/11" data-pdf-link="#unit4lesson11">
+            11
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/12" data-pdf-link="#unit4lesson12">
+            12
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/13" data-pdf-link="#unit4lesson13">
+            13
+        </a>
+        </div>
+        
+            
+                <div class="lesson unfinished">
+            
+        <a href="/educate/csp_test/unit4/14" data-pdf-link="#unit4lesson14">
+            14
+        </a>
+        </div>
+        
+    
+</div>
+    
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+    <div class="together" id="unit4lesson7">
+        
+            
+                <h1>Lesson 7: Keys and Passwords</h1>
+            
+        
+
+        <div class="keywords">
+        <h4>
+            
+        </div>
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>In this lesson, students learn about the relationship between cryptographic keys and passwords.  Students first read about how the Vigenère cipher was cracked, and about what makes for strong keys. Then, students use a tool that shows them about how long it would take to crack a given password using a standard desktop computer. Students experiment with what makes a good password and answer questions about the “human components” of cybersecurity.</p>
+            
+
+            
+                <h2>Purpose</h2>
+                
+                    <p>Cryptography and encryption are important and far-reaching fields within computer science. This lesson begins to get students’ feet wet with the human side of cybersecurity: choosing good passwords. We also learn that the Vigenère cipher is actually susceptible to frequency analysis and that better methods are used today. In this lesson we focus on making a good key, while in subsequent lessons we learn more about problems and algorithms that are “computationally hard.”  Guessing a random sequence of 200 characters, for example, is computationally hard, because there is no known way to approach the problem besides trying the trillions and trillions of possible character combinations. But encryption can’t just be totally random.  You need to make an algorithm that uses a key to generate cipher text that is both computationally hard to crack and still decryptable, if you have the key.</p>
+                
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tockeys-and-passwords">
+                
+                    <h3>Getting Started</h3>
+                
+                    <h3>Activity</h3>
+                
+                    <h3>Wrap-up</h3>
+                
+                    <h3>Extended Learning</h3>
+                
+                    <h3>Assessment</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Explain the relationship between cryptographic keys and passwords.</li>
+                    
+                        <li>Explain in broad terms what makes a key difficult to “crack.”</li>
+                    
+                        <li>Reason about strong vs. weak passwords using a tool that shows password strength.</li>
+                    
+                        <li>Understand that exponential growth is related to an encryption algorithm’s strength.	</li>
+                    
+                </ul>
+            
+
+            
+                <h2>Preparation</h2>
+                <div class="prep">
+                
+                    <p><em><a href="http://forum.code.org/c/csp-unit2/lesson15" target="_blank">Forum</a>
+</em> (Optional) Print out worksheet (links in Code Studio)
+<em> (Optional) Print out </em>Blown to Bits* reading (links in Code Studio)</p>
+                
+                </div>
+            
+
+            
+                <h2>Links</h2>
+                
+                    
+                    
+                        <h3>For the Teacher</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2/stage/15/puzzle/1' target='_blank' class='print_link'>Worksheet KEY - Reading Guide for Keys and Passwords</a> - Answer Key
+                                </li>
+                            
+                        </ul>
+                    
+                        <h3>For the Students</h3>
+                        <ul>
+                            
+                                <li>
+                                    <a href='http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf' target='_blank' class='print_link'>Blown to Bits, Chapter 5</a> - Reading
+                                </li>
+                            
+                                <li>
+                                    <a href='https://studio.code.org/s/cspunit2' target='_blank' class='print_link'>CSP Unit 2</a> - Code Studio
+                                </li>
+                            
+                                <li>
+                                    <a href='https://code.org/educate/csp_test/docs/hownottogethacked' target='_blank' class='print_link'>How Not to Get Hacked (optional)</a> - Resource
+                                </li>
+                            
+                                <li>
+                                    <a href='https://howsecureismypassword.net/' target='_blank' class='print_link'>How Secure Is My Password?</a> - Resource
+                                </li>
+                            
+                                <li>
+                                    <a href='https://docs.google.com/document/d/11ZCb8XHSWwMrzx10ADLdfcYlB7hSSfv_RjF0JD9v420/edit' target='_blank' class='print_link'>Reading Guide for Keys and Passwords</a> - Worksheet (<a href='https://docs.google.com/document/d/11ZCb8XHSWwMrzx10ADLdfcYlB7hSSfv_RjF0JD9v420/export?format=pdf' class='print_link'>download</a>)
+                                </li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+
+        </div>
+    </div>
+
+    <div id="keys-and-passwordscontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+            <div class="activity">
+                
+                    <h2>Getting Started</h2>
+                    <p><strong>Goal:</strong> quickly review what a “key” is in a cryptographic method</p>
+<p><strong>Review:</strong> </p>
+<ul>
+<li>Algorithms vs. Keys.  <ul>
+<li>Call out that there is a difference between the algorithm (how to execute the encryption and decryption) and key (the secret piece of information).</li>
+<li>What makes encryption algorithms strong is how hard it is to guess the “key,” since you might assume that the “enemy” knows your algorithm.</li>
+</ul>
+</li>
+<li>Keys we’ve seen so far:<ul>
+<li>In a Caesar cipher the key is how many letters to shift.</li>
+<li>In a random substitution cipher, the key is the list of which letters should be swapped with which.</li>
+<li>In the Vigenère cipher, the key is the list of characters used to define which row and column are used to lookup the ciphertext character.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Transition:</strong> In the previous lesson we learned how much stronger the Vigenère cipher is at encrypting things. Today we’ll learn a little more about it and about keys and their relationship to passwords you use every day.</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Activity</h2>
+                    <h3 id="guided-reading-of-blown-to-bits-about-vigeneres-weakness-and-making-good-passwords">Guided reading of Blown to Bits about Vigenère’s weakness and making good passwords.</h3>
+<p><a data-lightbox="all_images" data-title="" href="https://code.org/educate/docs/csp/code-studio-icon.png"><img alt="" src="https://code.org/educate/docs/csp/code-studio-icon.png"></a> Distribute the <a href="Reading Guide for Keys and Passwords" target="_blank">Worksheet - Reading Guide for Keys and Passwords</a>.</p>
+<p>The activity has students:</p>
+<ul>
+<li>Answer guided questions related to three pages in Blown to Bits </li>
+<li>Read a little bit about the relationship between passwords they used every day and keys in cryptography</li>
+<li>Use a web tool that shows how “strong” a password is</li>
+<li>Answer some questions, based on the tool, about what makes passwords strong (or not)</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title" id="tip_None"><i class="fa fa-lightbulb-o"></i>Teaching Tips</p>
+<div></div>
+<div>
+<p>Make sure you leave enough time for the wrap up.</p>
+</div>
+<div>
+<p>Students may have a lot of questions about passwords and security that you feel like you might not be able to answer.  That’s OK!</p>
+</div>
+<div>
+<p>a) You don’t have to be an expert on this subject </p>
+</div>
+<div>
+<p>b) The reality is that the world of cybersecurity changes every day </p>
+</div>
+<div>
+<p>c) Some of the details can get very complicated, even for professionals. </p>
+</div>
+<div>
+<p>So, encourage the students’ curiosity and perhaps say, “I don’t know, but I bet you could look it up.”  Cybersecurity is an enormous topic.  If students get interested, they could dedicate their whole life to this field.</p>
+</div>
+</div>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Wrap-up</h2>
+                    <p><strong>Review:</strong> In wrapping-up, make sure students:</p>
+<ul>
+<li>Understand the relationship between cryptographic keys and passwords.</li>
+<li>Understand why using longer passwords makes them harder to guess.<ul>
+<li>This may seem intuitive and it is, but we haven’t yet explained the other side of it, the algorithm that’s used with the password that makes it hard to crack.  The reading explained that Vigenère was cracked.  In upcoming lessons we’ll learn how algorithms can be used to ensure that keys are hard to guess.</li>
+</ul>
+</li>
+<li><em>Say:</em> Recall that the reason we want to have encrypted transactions is for our own security.  We should feel good that anyone can conduct secure transactions on the web; without this possibility, commerce would be impossible.</li>
+</ul>
+<p><strong>Remarks:</strong> <em>Say:</em> We’re circling in on some powerful ideas of how secure communication works on the Internet these days.  But we need to learn two more things: </p>
+<ol>
+<li>
+<p>We’ve seen how keys relate to the strength of encryption, but we haven’t seen the other side of it – how modern encryption algorithms actually work.  Vigenère was cracked, so what are we using now?  In order to do this, we need to understand what kinds of problems are “hard” for computers to solve.</p>
+</li>
+<li>
+<p>Right now, our encryption requires a secret password.  If I wanted to send you some encrypted message over the Internet, in order for you to see it, you’d have to know the key.  How would you know the key?  Is it possible for you and me to have a secure, private, encrypted exchange without meeting ahead of time and agreeing on a secret password?  </p>
+</li>
+</ol>
+<p>The answer is “yes,” but you’ll have to stick around to find out.</p>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Extended Learning</h2>
+                    <ul>
+<li>Read this quick overview that Code.org put together about <a href="https://code.org/educate/csp_test/docs/hownottogethacked" target="_blank">How Not to Get Hacked</a>, which summarizes some basic cybersecurity issues and how to prevent them.</li>
+<li>Read <a href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf" target="_blank">Blown to Bits (www.bitsbook.com), Chapter 5</a>, Secret Bits, pages 161-165, then answer the following questions:<ul>
+<li>The opening pages of Blown to Bits, Chapter 5, discuss a move the government made to try to control encryption in the aftermath of the terrorist attacks of September 11, 2001, but then dropped. Additionally, during the 1990s, the US Government was pressuring the computer industry to be allowed to have a “back door” to decryption. Why do you think they stopped urging for this?
+http://www.nytimes.com/2013/09/06/us/nsa-foils-much-internet-encryption.html?pagewanted=all&amp;_r=0  (Teacher notes: This would weaken the public’s trust in the Internet as an e-commerce vehicle. Any back door could probably be exploited by others. The government believed they could eventually break cryptography without a back door.)</li>
+<li>Encryption is clearly seen as essential to Internet commercial activity. That it will not be outlawed seems like a settled matter. But conversely, should it be required by government regulation? What about for other non-web media, such as mobile phone traffic and television?</li>
+</ul>
+</li>
+<li>Vigenère cipher cracker tool on Simon Singh’s website. It’s a lot of fun and fairly similar to the frequency analysis tool used in class http://www.simonsingh.net/The_Black_Chamber/vigenere_cracking_tool.html</li>
+<li>Have students find videos demonstrating these or other advanced encryption methods; ask them to describe each algorithm and what causes it to be “hard.”</li>
+</ul>
+                
+            </div>
+        
+            <div class="activity">
+                
+                    <h2>Assessment</h2>
+                    <p>The worksheet contains several questions for assessment. Here are some additional questions (also included on Code Studio):</p>
+<ol>
+<li>
+<p>(Choose two.) Why is the Vigenère cipher hard to crack?</p>
+<p>a) One cannot solve using frequency analysis directly.</p>
+<p>b) Long keys create exponential growth possibilities.</p>
+<p>c) The key is always secret to both the sender and receiver of the message.</p>
+<p>d) A Vigenère cipher relies upon an “alphabet shift” algorithm.</p>
+</li>
+<li>
+<p>What problems exist with encryption schemes such as the Vigenère cipher, even when strong encryption keys are used?</p>
+</li>
+<li>
+<p>Why are computers better than humans at breaking encryptions such as the Vigenère?</p>
+<p>a) Computers are smarter than humans.</p>
+<p>b) Computers are faster than humans.</p>
+<p>c) The Vigenère was originally designed by a computer.</p>
+<p>d) They are not; humans are better as breaking Vigenère encryptions than computers.</p>
+</li>
+<li>
+<p>Which makes for a password that is harder to crack?</p>
+<p>a) A word from the dictionary</p>
+<p>b) 8 random characters that include numbers and punctuation</p>
+<p>c) A 16-character password that is all letters of the alphabet</p>
+<p>d) A 32-character password that is all letters of the alphabet</p>
+<p>e) A 150-character password that is all the same character.
+ANSWER: E</p>
+</li>
+<li>
+<p>Companies and organizations commonly require users to change their passwords frequently. Websites have password length and complexity requirements. Is it better to change your password frequently or to have a longer password? What level of security is appropriate to require of end users? Does this change, depending on the context (for example, employee or customer)? </p>
+</li>
+</ol>
+                
+            </div>
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>CSTA K-12 Computer Science Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>CPP</strong> - Computing Practice &amp; Programming</summary>
+                    <ul>
+                        
+                            <li><strong>CPP.L3A:9</strong> - Explain the principles of security by examining encryption, cryptography, and authentication techniques.</li>
+                        
+                            <li><strong>CPP.L3B:5</strong> - Deploy principles of security by implementing encryption and authentication strategies.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>CT</strong> - Computational Thinking</summary>
+                    <ul>
+                        
+                            <li><strong>CT.L3B:2</strong> - Explain the value of heuristic algorithms to approximate solutions for intractable problems.</li>
+                        
+                            <li><strong>CT.L3B:4</strong> - Evaluate algorithms by their efficiency, correctness, and clarity.</li>
+                        
+                            <li><strong>CT.L3B:5</strong> - Use data analysis to enhance understanding of complex natural and human systems.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    <div class="framework">
+        <h4>Computer Science Principles</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>2.3</strong> - Models and simulations use abstraction to generate new understanding and knowledge.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>2.3.2</strong> - Use models and simulations to formulate, refine, and test hypotheses. [P3]</summary>
+                            <ul>
+                                
+                                    <li><strong>2.3.2A</strong> - Models and simulations facilitate the formulation and refinement of hypotheses related to the objects or phenomena under consideration.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>3.1</strong> - People use computer programs to process information to gain insight and knowledge.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>3.1.1</strong> - Use computers to process information, find patterns, and test hypotheses about digitally processed information to gain insight and knowledge. [P4]</summary>
+                            <ul>
+                                
+                                    <li><strong>3.1.1A</strong> - Computers are used in an iterative and interactive way when processing digital information to gain insight and knowledge.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>4.2</strong> - Algorithms can solve many but not all computational problems.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>4.2.1</strong> - Explain the difference between algorithms that run in a reasonable time and those that do not run in a reasonable time. [P1]</summary>
+                            <ul>
+                                
+                                    <li><strong>4.2.1A</strong> - Many problems can be solved in a reasonable time.</li>
+                                
+                                    <li><strong>4.2.1D</strong> - Some problems can be solved but not in a reasonable time. In these cases, heuristic approaches may be helpful to find solutions in reasonable time.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>6.3</strong> - Cybersecurity is an important concern for the Internet and the systems built on it.</summary>
+                    
+                    
+                        <details class="standard">
+                            <summary><strong>6.3.1</strong> - Identify existing cybersecurity concerns and potential options to address these issues with the Internet and the systems built on it. [P1]</summary>
+                            <ul>
+                                
+                                    <li><strong>6.3.1C</strong> - Implementing cybersecurity has software, hardware, and human components.</li>
+                                
+                                    <li><strong>6.3.1H</strong> - Cryptography is essential to many models of cybersecurity.</li>
+                                
+                                    <li><strong>6.3.1I</strong> - Cryptography has a mathematical foundation.</li>
+                                
+                                    <li><strong>6.3.1J</strong> - Open standards help ensure cryptography is secure.</li>
+                                
+                                    <li><strong>6.3.1K</strong> - Symmetric encryption is a method of encryption involving one key for encryption and decryption.</li>
+                                
+                            </ul>
+                        </details>
+                    
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        $('#tockeys-and-passwords').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#keys-and-passwordscontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'keys-and-passwords', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+
+            // read the current/previous setting
+            var $todos = $(".todo");
+            $todos.each(function() {
+                var todo = localStorage.getItem($(this).attr('name') + window.location.pathname);
+                if (todo && todo == "true") {
+                    $(this).prop('checked', todo);
+                }
+            });
+            $todos.change(function() {
+                localStorage.setItem($(this).attr("name") + window.location.pathname, $(this).prop('checked'));
+            });
+
+            // Settings toggles
+
+            // read the current/previous setting
+            $settings = $('.settings input');
+            $settings.each(function() {
+                var setting = localStorage.getItem($(this).attr('name'));
+                if (setting == undefined) {
+                    $(this).prop('checked', true);
+                } else if (setting == "true"){
+                    $(this).prop('checked', setting);
+                } else {
+                    $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                }
+            });
+            $settings.change(function() {
+                $('.admonition.' + $(this).attr('name')).toggle($(this).prop('checked'));
+                localStorage.setItem($(this).attr("name"), $(this).prop('checked'));
+            });
+
+            $('.tiplink i').click(function(){
+                var $the_tip = $($(this).parent().attr('href'));
+                $the_tip.parent().toggle(true);
+            });
+
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+
+<script type="text/javascript" src="https://cdo-curriculum.s3.amazonaws.com/static/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>

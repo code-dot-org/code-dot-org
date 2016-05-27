@@ -1,0 +1,44 @@
+name 'ECSPD3-u6 day 24-33'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+## Unit 6 Lessons > Days 24-33
+ 
+#### Concepts Covered  
+Rubric for Challenge Final Project, Design, Build, Write a Program for the Final Challenge.
+
+#### Lesson Overview 
+For this lesson, students will be working in groups of four.  You will need to  hand out the Design Challenge Planning papers to groups that include: Step #1 - Task Definition, Step #2 - Task Break-Down, Step #3 - Brainstorming of possible solutions to the challenge, Step #4 - Robot Design, Step #5 - Program Flow Chart, Step #6 - Robot Building and Program.
+<br><br> 
+As they work, you will need to approve their planning documents, circulate around the room to make sure students are on task, that they are filing out the paperwork, doing the daily group evaluation, and that you’re answering questions as needed.  
+<br>
+Remind students of the problem solving process, when deciding on the solution, programming, construction, documentation, and creativity of their challenge.  They will need to print out their program and hand it in at the time they compete.  Each group/team will be graded on their ability to cooperate on the challenge as a whole while playing fair.
+<br><br>
+You will want to fill out each groups rubric as you observe the robots during the design challenge and videotape the running of each robot so that you can discuss the features of the various robots and their designs when planned.
+<br><br>
+On the last day, you will also need to set aside time to have students dissemble the robots and organize the pieces appropriately so not pieces are lost.
+<br><br>
+
+#### Lesson Resources 
+##### <a href="https://web.archive.org/web/20150423124112/http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=298" target=_blank>Lesson Plan Link>> </a>
+ 
+- <a href="https://web.archive.org/web/20150423124112/http:/www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=300" target=_blank>Design Challenge Sample Rubric</a>
+- <a href="https://web.archive.org/web/20150423124112/http:/www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=306" target=_blank>Information Specialist Report</a>
+- <a href="https://web.archive.org/web/20150423124112/http:/www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=305" target=_blank>Daily Group Evaluation</a>
+- Challenges:
+	- Option 1: Challenges from Design Challenges for computer-controlled LEGO products by Len Litowitz. (Litowitz-challenges.doc) Some of these challenges are more appropriate  than others.
+	- Option: 2: <a href="http://www.stager.org/LEGO/challenges.pdf" target=_blank> Gary Stager’s LEGO Challenges. Not all of these challenges are appropriate.</a>
+	- Option 3: Webquest
+
+#### Things to keep in mind 
+As mentioned in the Challenge for Option 2 - not all challenges will be appropriate, so be sure to preview those before sharing them with students or letting them select their own.
+
+<br>
+ 
+Click “Continue” below to learn about the next lesson.  
+ 
+<br><br> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

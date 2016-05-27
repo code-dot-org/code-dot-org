@@ -1,10 +1,4 @@
 /** @file Provide browsable command history to a textbox with limited depth. */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var CommandHistory = module.exports = function () {

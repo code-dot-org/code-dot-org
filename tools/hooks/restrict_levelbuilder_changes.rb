@@ -2,7 +2,7 @@ require_relative 'hooks_utils.rb'
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
 LEVELS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/scripts', __FILE__)
-WHITELISTED_FILES = %w[dashboard/config/locales/dsls.en.yml dashboard/config/locales/scripts.en.yml].map{|f|File.join(REPO_DIR, f)}
+WHITELISTED_FILES = %w[dashboard/config/locales/dsls.en.yml dashboard/config/locales/scripts.en.yml].map{|f| File.join(REPO_DIR, f)}
 ERROR_MESSAGE = "Levelbuilder branch should only commit files in levels directory and specific whitelisted files. See #{__FILE__} for details."
 
 Dir.chdir REPO_DIR

@@ -2,6 +2,7 @@ require 'active_support/core_ext/hash/indifferent_access'
 
 class ProjectsController < ApplicationController
   before_filter :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy]
+  before_filter :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix]
   include LevelsHelper
 
@@ -20,6 +21,12 @@ class ProjectsController < ApplicationController
     },
     gamelab: {
       name: 'New Game Lab Project',
+      login_required: true,
+      student_of_admin_required: true
+    },
+    makerlab: {
+      name: 'New Maker Lab Project',
+      admin_required: true,
       login_required: true
     },
     algebra_game: {
@@ -48,9 +55,6 @@ class ProjectsController < ApplicationController
   end
 
   def load
-    if STANDALONE_PROJECTS[params[:key]][:login_required]
-      authenticate_user!
-    end
     return if redirect_applab_under_13(@level)
     if current_user
       channel = StorageApps.new(storage_id_for_user).most_recent(params[:key])
@@ -72,21 +76,34 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    return if redirect_applab_under_13(@level)
-    sharing = params[:share] == true
+    iframe_embed = params[:iframe_embed] == true
+    sharing = iframe_embed || params[:share] == true
     readonly = params[:readonly] == true
+    if iframe_embed
+      response.headers['X-Frame-Options'] = 'ALLOWALL'
+    else
+      # the age restriction is handled in the front-end for iframe embeds.
+      return if redirect_applab_under_13(@level)
+    end
     level_view_options(
         hide_source: sharing,
         share: sharing,
+        iframe_embed: iframe_embed,
     )
     # for sharing pages, the app will display the footer inside the playspace instead
-    no_footer = sharing && @game.owns_footer_for_share?
+    no_footer = sharing
+    # if the game doesn't own the sharing footer, treat it as a legacy share
+    @is_legacy_share = sharing && !@game.owns_footer_for_share?
     view_options(
+      is_13_plus: current_user && !current_user.under_13?,
       readonly_workspace: sharing || readonly,
       full_width: true,
       callouts: [],
       channel: params[:channel_id],
       no_footer: no_footer,
+      code_studio_logo: @is_legacy_share,
+      no_header: sharing,
+      is_legacy_share: @is_legacy_share,
       small_footer: !no_footer && (@game.uses_small_footer? || enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name)
@@ -95,16 +112,10 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    if STANDALONE_PROJECTS[params[:key]][:login_required]
-      authenticate_user!
-    end
     show
   end
 
   def remix
-    if STANDALONE_PROJECTS[params[:key]][:login_required]
-      authenticate_user!
-    end
     src_channel_id = params[:channel_id]
     new_channel_id = create_channel nil, src_channel_id
     AssetBucket.new.copy_files src_channel_id, new_channel_id
@@ -121,5 +132,24 @@ class ProjectsController < ApplicationController
 
   def get_from_cache(key)
     @@project_level_cache[key] ||= Level.find_by_key(key)
+  end
+
+  # For certain actions, check a special permission before proceeding.
+  def authorize_load_project!
+    authorize! :load_project, params[:key]
+  end
+
+  # Automatically catch authorization exceptions on any methods in this controller
+  # Overrides handler defined in application_controller.rb.
+  # Special for projects controller - when forbidden, redirect to home instead
+  # of returning a 403.
+  rescue_from CanCan::AccessDenied do
+    if current_user
+      # Logged in and trying to reach a forbidden page - redirect to home.
+      redirect_to '/'
+    else
+      # Not logged in and trying to reach a forbidden page - redirect to sign in.
+      authenticate_user!
+    end
   end
 end

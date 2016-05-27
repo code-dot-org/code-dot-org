@@ -2,6 +2,8 @@
   "actor":"tegelaskuju",
   "addCharacter":"lisa",
   "addCharacterTooltip":"Lisa tegelaskuju.",
+  "addGoal":"add goal",
+  "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"lisa 10 punkti",
   "addPoints50":"lisa 50 punkti",
   "addPoints100":"lisa 100 punkti",

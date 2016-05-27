@@ -1,5 +1,4 @@
 name 'U4 Inspirational Data Video'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Inspirational Data Video Here
 MARKDOWN

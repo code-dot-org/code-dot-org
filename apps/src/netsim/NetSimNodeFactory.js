@@ -2,12 +2,6 @@
  * @overview Utility methods for generating the right kinds of node controllers
  *           from raw node table rows.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var NetSimConstants = require('./NetSimConstants');

@@ -1,4 +1,4 @@
-"pt-PT":
+"pt":
   errors:
     messages:
       not_saved: 'Por favor, corrige os seguintes erros:'
@@ -19,12 +19,20 @@
         locale: Idioma
         age: Idade
         gender: Género
-        edit_header: Edita os detalhes da conta
+        edit_header: Edita os detalhes da tua conta
         error:
           future: não pode estar no futuro
   hello: Olá mundo
-  welcome_back: Olá outra vez, %{name}
+  welcome_back: Olá mais uma vez, %{name}
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: OK
+  unsubmit: Remover submissão
+  previous_page: Previous page
+  next_page: Next page
+  cancel: Cancelar
+  okay: Ok
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Adiciona um professor:'
@@ -41,14 +49,14 @@
   puzzle: Desafio
   trophies: Troféus
   courses: Cursos
-  unplugged_activity: Atividade off-line
+  unplugged_activity: Atividade offline
   of: de
   more: MAIS
   less: MENOS
   beta: beta
   try_hoc: 'Experimenta a Hora de Código >> '
-  try_k8intro: Experimente o nosso curso de Introdução às Ciências da Computação para
-    o Ensino Básico (15-25 horas)
+  try_k8intro: Experimenta o nosso curso de introdução à Ciência da Computação para
+    o Ensino Básico (15 a 25 horas)
   k8intro: Curso de Introdução às Ciências da Computação para Ensino Básico (15-25
     horas)
   already_started: 'Já começaste? Retoma >> '
@@ -60,7 +68,7 @@
     sign_in_with: Iniciar sessão com o %{provider}
     signed_in: Sessão iniciada!
     signed_out: Acabaste de terminar sessão no <a href="%{url}">Code.org</a>.
-    sign_out_of: Usaste o %{provider} para iniciares sessão. <a href="%{url}">Clica
+    sign_out_of: Usaste o %{provider} para iniciar sessão. <a href="%{url}">Clica
       aqui</a> para terminares sessão no %{provider}.
     already_signedup: Já criaste uma conta?
     notyet_signedup: Ainda não criaste uma conta?
@@ -103,25 +111,26 @@
     valid_password: Palavra-passe válida!
     invalid_password: A palavra-passe tem de ter, pelo menos, 6 caracteres
     mismatch_password: As duas palavras-passe que digitaste não correspondem
-    student_terms: Concordo com os<a href='http://code.org/tos'>Termos de utilização</a>
+    student_terms: Concordo com os <a href='http://code.org/tos'>Termos de utilização</a>
       do Code.org. Se tiver menos de 13 anos, declaro, ao submeter este formulário,
       que tenho autorização dos meus pais para usar os serviços do Code.org.<br/>No
-      caso dos alunos com menos de 13 anos, os respetivos endereços de e-mail são
-      registados de forma a que não possamos entrar em contacto com eles.
-    teacher_terms: Concordo com os<a href='http://code.org/tos'>Termos de utilização</a>
+      caso dos alunos com menos de 13 anos, os respetivos endereços de e-mail não
+      são registados, o que nos impede de entrar em contacto com eles.
+    teacher_terms: Concordo com os <a href='http://code.org/tos'>Termos de utilização</a>
       do Code.org.
     additional_information: Precisamos de mais informações para continuarmos o processo
       de criação da conta.
   signin_form:
-    title: Já tem conta? Inicie a sessão
+    title: Já tens uma conta? Inicia sessão
     login: E-mail ou utilizador
     password: Palavra-passe
     remember: Manter sessão iniciada
     submit: Iniciar sessão
   signin:
-    try_heading: Queres programar sem criares uma conta?
-    try_hoc: Primeiro, experimente a Hora de Código
-    try_20hours: Experimente introdução de 20 horas às Ciências da Computação
+    try_heading: Queres programar sem teres de criar uma conta?
+    try_hoc: Primeiro, experimenta a Hora de Código
+    try_20hours: Experimenta o nosso curso de introdução à Ciência da Computação (20
+      horas)
   signinsection:
     welcome: "%{section_name} dá-te as boas-vindas"
     name: Escolha o nome de utilizador
@@ -166,8 +175,6 @@
         subject: Junta-te a uma aula com %{teacher_name} em Code.org!
       student_disassociated:
         subject: 'Notificação de Code.org: %{student_name} deixou de ser seu aluno.'
-      teacher_disassociated:
-        subject: 'Notificação de Code.org: %{teacher_name} deixou de ser seu professor.'
   reports:
     error:
       access_denied: Não tem acesso às estatísticas desta pessoa
@@ -254,9 +261,9 @@
     show: Mostrar
     edit: Editar
     edit_model: Editar %{model}
-    update: Actualizar
+    update: Atualizar
     destroy: Eliminar
-    back: Voltar
+    back: Anterior
     confirm: Tens a certeza?
     created: "% {modelo} foi criado com êxito."
     updated: "% {modelo} foi actualizado com sucesso."
@@ -267,10 +274,10 @@
       finished_hoc: Terminei a minha Hora de Código
       sign_in_to_save: Inicia sessão para guardares o teu progresso
       free_play:
-        playlab: Desenvolver uma aplicação
+        playlab: Desenvolver uma aplicação Play Lab
         artist: Desenhar alguma coisa
         calculate: Calculate Something
-        applab: Desenvolver uma aplicação
+        applab: Desenvolver uma aplicação App Lab
     user:
       classroom: Página inicial do Professor
       district_dashboard: Painel do distrito
@@ -285,7 +292,7 @@
     popup:
       progress_for_user: progresso de %{name}'s
       progress: O teu progresso
-      lines: 'Total de linhas de código: % {linhas}'
+      lines: 'Total de linhas de código: %{lines}'
       close: FECHAR
       mastery: Conceitos
       puzzle_map: Etapas
@@ -305,8 +312,7 @@
     students:
       dashboard: Vá para o painel de controle do professor
     user_not_found: O professor não foi encontrado.
-    student_teacher_disassociated: "%{teacher_name} foi removido como professor de
-      %{student_name}"
+    student_teacher_disassociated: Você removeu %{teacher_name} como seu professor.
     panel:
       answer_viewer: Resposta
       student: Aluno
@@ -337,7 +343,7 @@
     title: O meu progresso
     description: No Code Studio podes encontrar os cursos online do Code.org
     lines_of_code: "%{lines_count} LINHAS DE CÓDIGO ESCRITAS POR ALUNOS"
-    lines_of_code_linebreak: "%{lines_count} LINHAS DE CÓDIGO<br/>ESCRITAS %{students_count}
+    lines_of_code_linebreak: "%{lines_count} LINHAS DE CÓDIGO<br/>ESCRITAS POR %{students_count}
       MILHÕES DE ALUNOS"
     all_courses: Visão geral dos cursos 1, 2 e 3
     lesson_plans: Planos das aulas
@@ -382,16 +388,49 @@
     heading_elementary: "<h2>Cursos de 20 horas para</h2><h1>Iniciantes (todas as
       idades)</h1>"
     heading_apps: "<h2>Diversão para</h2><h1>todos</h1>"
+    heading_tools: "<h2>Pronto para o próximo passo?</h2> <h1>Ferramentas de JavaScript
+      para o ensino</h1>"
     heading_legacy: "<h2>O nosso curso acelerado para</h2><h1>Todas as idades</h1>"
     your_gallery: Galeria
     no_primary_course: Faça um curso no Code Studio
     choose_next_course: Experimenta um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
+    announcement_title: Anúncios
+    announcement_view_all: Ver Todos
+    announcement_message: 'We''ve started to measure student learning in Courses 1-4
+      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
+      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
+      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
+      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_button: Saber mais
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: Aprende no Code Studio
     description: Todos podem aprender a programar. Constrói jogos, aplicações e desenhos
       com código.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Exprimenta uma Hora de Código!
   gender:
     male: Masculino
     female: Feminino
@@ -406,21 +445,28 @@
       pelo apoio na criação do Code Studio.
     help_from_html: Agradecemos aos engenheiros da Google, da Microsoft, do Facebook
       e do Twitter que nos ajudaram a criar estes materiais.
-    help_from_html_old: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram
-      a criar estes materiais.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Todos os direitos reservados.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. Todos os direitos reservados.
+    help_from_html_old: Os engenheiros da Google, da Microsoft, do Facebook e do Twitter
+      ajudaram a criar estes materiais.
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos
+      reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm.
+      Todos os direitos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney.
+      Todos os direitos reservados.<br />Ice Age&#8482; &copy; %{current_year} 20th
+      Century Fox. Todos os direitos reservados.<br />Angry Birds&#8482; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482;
+      &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados.<br
+      />The Amazing World of Gumball é uma marca registada. &copy; 2015 Cartoon Network.
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482;
       &amp; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, o logótipo do CODE
       e a Hora de Código&reg; são marcas registadas do Code.org."
     copyright: Copyright
     more: Mais
     feedback: Fornecer feedback
-    translate: Ajuda-nos a traduzir para o teu idioma
+    translate: Traduções
     support: Suporte
     support_url: http://support.code.org
     tos_short: Termos
@@ -431,7 +477,7 @@
     built_on_code_studio: Construído no "Code Studio"
     make_my_own_app: Fazer a minha própria "app"
     how_it_works: Como funciona
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Exprimenta uma Hora de Código!
   reference_area:
     title: Precisas de ajuda?
     subtitle: Vê estes vídeos e sugestões
@@ -498,9 +544,18 @@
       current: Níveis atuais
       unused: Níveis por utilizar
   upsell:
+    applab:
+      title: Laboratório de aplicações
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Maiores de 13 anos
+      cta: Learn how
     hoc:
       title: Labirinto clássico
-      body: Experimente as noções básicas de ciência da computação. Milhões de pessoas
+      body: Explora as noções básicas da Ciência da Computação. Milhões de pessoas
         já experimentaram.
     flappy:
       title: Flappy Bird
@@ -511,7 +566,7 @@
       body: Este curso de 20 horas apresenta o informática de núcleo e conceitos de
         programação. O curso é projetado para uso em salas de aula para os graus K-8,
         mas é divertido de aprender em todos os tempos.
-      body_short: Aprenda os fundamentos da ciência da computação em uma versão acelerada
+      body_short: Aprende as bases da Ciência da Computação com a versão acelerada
         dos cursos 2 a 4.
     hoc2014:
       try_new_tutorial: Experimente nosso novo tutorial da Hora do Código na versão
@@ -532,6 +587,15 @@
     minecraft:
       title: Minecraft
       body: Explora um mundo Minecraft através do código.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!
@@ -555,10 +619,10 @@
     prerelease_hoc2014: Este tutorial está na versão <span class='betatext'>beta</span>.
       Ele está sujeito a revisões, conforme são recebidos feedbacks e melhorias são
       feitas.
-    feedback: Enviar comentários
     report_bug: Comunicar erro
     support: Obter ajuda
     support_url: "//support.code.org"
+    help_resources: Ajuda e recursos
   multi:
     wrong_title: Resposta incorreta
     wrong_body: A resposta que você digitou não está correta. Tente novamente!
@@ -566,6 +630,32 @@
     correct_body: A tua resposta está correta.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Obrigado
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Obrigado
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Obrigado
+    wrong_body: Thank you for submitting answers.
+    correct_title: Obrigado
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Obrigado
+    wrong_body: Thank you for submitting answers.
+    correct_title: Obrigado
+    correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Solução incorreta
     wrong_body: Sua solução não está correta. Tente novamente!
@@ -585,6 +675,8 @@
     placeholder: Insira sua resposta aqui
     open_response_title: Obrigado
     open_response_body: Obrigado por responderes!
+    correct_title: Certo
+    correct_body: A tua resposta está correta.
   dialog:
     ok: OK
     startover_title: Tens a certeza de que pretendes recomeçar?
@@ -622,7 +714,7 @@
           description: Quer criar seu próprio jogo em menos de 10 minutos? Experimente
             nosso tutorial sobre o Código do Flappy bird!
         jigsaw:
-          title: Quebra-cabeça
+          title: Quebra-cabeças
           description: ''
         step:
           title: Avançar
@@ -645,10 +737,11 @@
   progress:
     not_started: por iniciar
     in_progress: em progresso
-    completed_too_many_blocks: concluído, muitos blocos
-    completed_perfect: concluído, perfeito
+    completed_too_many_blocks: concluído, mas com muitos blocos
+    completed_perfect: concluído, na perfeição
     furthest_level_attempted: tentativa para o nível mais avançado
     assessment: avaliação
+    submitted: submitted
   studio:
     courses_working_on: Cursos que estás a frequentar
     completed_courses: Cursos concluídos
@@ -666,6 +759,10 @@
     share: Partilhar
     share_title: Partilha o teu projeto
     share_copy_link: 'Copia a ligação:'
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Fechar
     more: Mais
     name: Nome
@@ -720,3 +817,23 @@
         acknowledge: Ao submeter esta informação, aceita que esta será tratada de
           acordo com os termos da nossa %{link_start_privacy}Política de Privacidade%{link_end}
           e dos %{link_start_tos}Termos de Utilização%{link_end}
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+  components:
+    icon_library:
+      search_placeholder_text: Procura por um ícone...
+      no_icons_found: Não foram encontrados ícones
+  flex_category:
+    required: Visão geral
+    content: Content
+    practice: Teacher Practices

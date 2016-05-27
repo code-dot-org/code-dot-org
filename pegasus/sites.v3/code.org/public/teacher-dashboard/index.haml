@@ -5,6 +5,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 ---
 - authentication_required!
 - forbidden! unless dashboard_user[:user_type] == 'teacher'
+- error_string_none_selected = I18n.t('dashboard_error_none_selected').gsub(/"/,"\\\\\"")
+- error_string_other_section = I18n.t('dashboard_error_other_section').gsub(/"/,"\\\\\"")
 
 %link(rel='stylesheet' type='text/css' href='/css/learn_tabs.css')
 %link(rel='stylesheet' type='text/css' href='/style.css')
@@ -48,6 +50,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionProgressController', tab: 'progress'});
     $routeProvider.when('/sections/:id/responses',
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionResponsesController', tab: 'responses'});
+    $routeProvider.when('/sections/:id/assessments',
+        {templateUrl: '/teacher-dashboard/section', controller: 'SectionAssessmentsController', tab: 'assessments'});
     $routeProvider.when('/sections/:id/:tab',
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionDetailController'});
     $routeProvider.when('/sections/:sectionid/student/:studentid',
@@ -90,6 +94,15 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     };
   });
 
+  // This is probably not the best way to do this, but this fix is time-sensitive
+  // TODO(ram): make this better (or migrate to React)
+  filters.filter('getNameById', function() {
+    return function(input, id) {
+        var matching = input.filter(function(val) { return val.id == id; });
+        return matching.length > 0 ? matching[0].name : null;
+    };
+  });
+
   // SERVICES
 
   var services = angular.module('teacherDashboard.services', []).
@@ -106,11 +119,14 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
       //  'remove': {method:'DELETE'},
       //  'delete': {method:'DELETE'}
          update: {method:'POST', url: 'v2/sections/:id/update'},
+         allStudents: {method:'GET', url:'v2/sections/:id/students', isArray: true},
          addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
+         moveStudents: {method:'POST', url:'/dashboardapi/sections/transfers'},
          removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
          progress: {method:'GET', url:'/dashboardapi/section_progress/:id'},
          studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId'},
          responses: {method:'GET', url:'/dashboardapi/section_text_responses/:id', isArray: true},
+         assessments: {method:'GET', url:'/dashboardapi/section_assessments/:id', isArray: true},
       });
     }]).config(['$httpProvider', function($httpProvider) {
       // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
@@ -140,13 +156,15 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
                                        function($scope, $window, sectionsService){
     $scope.sectionsLoaded = false;
 
-    $scope.course_list = #{DashboardSection::valid_courses.to_json};
+    $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
 
     $scope.sections = sectionsService.query();
 
     $scope.sections.$promise.then(function( sections ){
       $scope.sectionsLoaded = true;
     });
+
+    $scope.moving_students = {editing: true};
 
     $scope.edit = function(section) {
       section.editing = true;
@@ -205,7 +223,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.section = sectionsService.get({id: $routeParams.sectionid});
 
     $scope.course_id = parseInt($routeParams.courseid);
-    $scope.course_list = #{DashboardSection::valid_courses.to_json};
+    $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
 
     $scope.progress = sectionsService.studentProgress({id: $routeParams.sectionid, studentId: $routeParams.studentid});
 
@@ -341,6 +359,10 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
       $scope.section.students.unshift({editing: true});
     };
 
+    $scope.showMoveStudentsModal = function() {
+      $('#move-students').modal('show');
+    }
+
     $scope.clear_bulk_import = function() {
       $scope.bulk_import.editing = false;
       $scope.bulk_import.students = '';
@@ -386,6 +408,94 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
       $window.print();
     };
 
+  }]);
+
+  app.controller('MovingStudentsController', ['$route', '$scope', '$routeParams', '$q', '$window', '$http', 'sectionsService', function($route, $scope, $routeParams, $q, $window, $http, sectionsService) {
+    var self = this;
+
+    // 'Other Section' selected
+    $scope.otherSection = 'Other Section';
+    $scope.stayEnrolledInCurrentSection = 'true';
+
+    // Query
+    $scope.currentSection = sectionsService.get({id: $routeParams.id});
+    $scope.sections = sectionsService.query();
+    $scope.students = sectionsService.allStudents({id: $routeParams.id});
+
+    $scope.moveStudents = function() {
+      function isOwnSection(sectionCode) {
+        return $scope.sections.map(function(section) {return section.code}).includes(sectionCode);
+      }
+
+      function displayError(errorMessage) {
+        $('.move-students-error').text(errorMessage);
+      }
+
+      var params = {};
+      params['new_section_code'] = $scope.getNewSectionCode();
+      params['current_section_code'] = $scope.getCurrentSectionCode();
+      params['student_ids'] = $scope.getSelectedStudentIds().join(',');
+      params['stay_enrolled_in_current_section'] = $scope.getStayEnrolledInCurrentSection();
+
+      if (!params['student_ids']) {
+        displayError("#{error_string_none_selected}");
+      } else if (isOwnSection($scope.manuallySelectedSectionCode)) {
+        displayError("#{error_string_other_section}");
+      } else {
+        sectionsService.moveStudents(params, {}).$promise.then(
+          function success(response) {
+            $('#move-students').modal('hide');
+            $route.reload();
+          },
+          function error(response) {
+            $('.move-students-error').text(response.data["error"]);
+          });
+      }
+    };
+
+    $scope.showModal = function() {
+      $q.all([$scope.currentSection.$promise, $scope.students.$promise]).then(function() {
+        $('#move-students').modal('show');
+      })
+    };
+
+    $scope.checkAll = function() {
+      $scope.selectedAll = !$scope.selectedAll;
+      angular.forEach($scope.students, function(student) {
+        student.selected = $scope.selectedAll;
+      });
+    };
+
+    $scope.getCurrentSectionCode = function() {
+      return $scope.section.code;
+    };
+
+    $scope.getSelectedStudentIds = function() {
+      var student_ids = [];
+      angular.forEach($scope.students, function(student) {
+        if (student.selected) {
+          student_ids.push(student.id);
+        }
+      });
+
+      return student_ids;
+    };
+
+    $scope.getNewSectionCode = function() {
+      if ($scope.selectedSectionCode !== $scope.otherSection) {
+        return $scope.selectedSectionCode;
+      } else {
+        return $scope.manuallySelectedSectionCode;
+      }
+    };
+
+    $scope.getStayEnrolledInCurrentSection = function() {
+      if ($scope.selectedSectionCode == $scope.manuallySelectedSectionCode) {
+        return $scope.stayEnrolledInCurrentSection;
+      } else {
+        return false;
+      }
+    };
   }]);
 
   app.controller('SectionSigninCardsController', ['$scope', '$routeParams', '$window', '$q', 'sectionsService',
@@ -444,7 +554,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.progressLoadedFirst = false;
     $scope.progressLoaded = false;
 
-    $scope.course_list = #{DashboardSection::valid_courses.to_json};
+    $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
 
     // wait until we have both the students and the student progress
     $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(){
@@ -591,7 +701,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.responsesLoaded = false;
     $scope.stages = [];
 
-    $scope.course_list = #{DashboardSection::valid_courses.to_json};
+    $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
 
     // wait until we have both the students and the student progress
     $q.all([$scope.section.$promise, $scope.responses.$promise]).then(function(){
@@ -613,6 +723,113 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
     $scope.findStages = function() {
       $scope.stages = $.map($scope.responses, function(row) {
+        return row.stage;
+      }).filter(function(item, i, array) { // uniquify
+        return array.indexOf(item) == i;
+      });
+    }
+  }]);
+
+
+  app.controller('SectionAssessmentsController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
+                                             function($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
+    $scope.section = sectionsService.get({id: $routeParams.id});
+    $scope.sections = sectionsService.query();
+    $scope.tab = 'assessments';
+
+    $scope.assessments = sectionsService.assessments({id: $routeParams.id});
+    // error handling
+    $scope.genericError = function(result) {
+      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
+    };
+    $scope.section.$promise.catch($scope.genericError);
+    $scope.sections.$promise.catch($scope.genericError);
+    $scope.assessments.$promise.catch($scope.genericError);
+
+    // fill in the course dropdown with the section's default course
+    $scope.section.$promise.then(
+      function(section) {
+        $scope.course_id = section.course.id;
+      }
+    );
+
+    // the ng-select in the nav compares by reference not by value, so we can't just set
+    // selectedSection to section, we have to find it in sections.
+    $scope.sections.$promise.then(
+      function( sections ){
+        $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
+      }
+    );
+
+    $scope.assessmentsLoaded = false;
+    $scope.stages = [];
+
+    $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
+
+    // wait until we have both the students and the student progress
+    $q.all([$scope.section.$promise, $scope.assessments.$promise]).then(function(){
+      $scope.assessmentsLoaded = true;
+      $scope.findStages();
+    });
+
+    var submission_list = {
+      submitted:   '#{I18n.t('dashboard_submission_submitted')}',
+      in_progress: '#{I18n.t('dashboard_submission_in_progress')}',
+    };
+
+    var correctness_list = {
+      free_response: '#{I18n.t('dashboard_correctness_free_response')}',
+      unsubmitted:   '#{I18n.t('dashboard_correctness_unsubmitted')}',
+      correct:       '#{I18n.t('dashboard_correctness_correct')}',
+      incorrect:     '#{I18n.t('dashboard_correctness_incorrect')}'
+    };
+
+    $scope.changeScript = function(scriptId) {
+      $scope.assessmentsLoaded = false;
+      $scope.stages = [];
+
+      $scope.assessments = sectionsService.assessments({id: $routeParams.id, script_id: scriptId});
+
+      $scope.levels = [];
+
+      $scope.assessments.$promise.then(function(){
+        $scope.assessmentsLoaded = true;
+        $scope.findStages();
+
+        $.each($scope.assessments, function(index, assessment) {
+
+          if (assessment.multi_count === 0) {
+            assessment.multi_correct_percent = 0;
+          } else {
+            assessment.multi_correct_percent = assessment.multi_correct / assessment.multi_count * 100;
+          }
+          assessment.status = assessment.submitted ? submission_list.submitted : submission_list.in_progress;
+
+          // Don't show a timestamp for non-submittted assessments.
+          if (!assessment.submitted) {
+            assessment.timestamp = null;
+          }
+
+          // Each LevelGroup's result has a list of the results for the levels in that order.
+          // Because angular's nested iterators are kind of funky when trying to generate a table,
+          // let's just generate a flat list of the level results to go into $scope.
+          $.each(assessment.level_results, function(index, level_result) {
+            var levelResult = {
+              stage: assessment.stage,
+              puzzle: assessment.puzzle,
+              question: index + 1,
+              student: assessment.student,
+              studentResult: level_result.student_result,
+              correct: correctness_list[level_result.correct]
+            };
+            $scope.levels.push(levelResult);
+          });
+        });
+      });
+    };
+
+    $scope.findStages = function() {
+      $scope.stages = $.map($scope.assessments, function(row) {
         return row.stage;
       }).filter(function(item, i, array) { // uniquify
         return array.indexOf(item) == i;

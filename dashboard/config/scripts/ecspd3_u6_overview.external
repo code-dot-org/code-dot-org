@@ -1,0 +1,23 @@
+name 'ECSPD3-u6 overview'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"> 
+ 
+### Unit 6 Overview > What’s Inside 
+ 
+<br/> 
+#### What’s in the Unit 6 Overview?  
+ 
+##### We are currently on stage 2 of this module. Here in stage 2 you will explore:  
+ 
+- Overview of what's covered in Unit 6 
+- Connections between Units 1-5 and Unit 6 
+- Overview of the goals of Unit 6 
+- Overview of lessons that refer to using the Lego Mindstorms Robots
+- Overview of alternate activities or lessons if you don't have Lego Mindstorms Robots 
+
+Click “Continue” below to get started learning more about Unit 6!   
+<br/><br/> 
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

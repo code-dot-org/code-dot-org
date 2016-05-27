@@ -48,7 +48,7 @@ module SQS
     end
 
     def self.create_configs_from_json(json)
-      processors_options = JSON::parse(json)['queues']
+      processors_options = JSON.parse(json)['queues']
       processors_options.map do |options|
         define_proc_for_dcdo_max_rate_key(options)
         SQS::QueueProcessorConfig.create(options)

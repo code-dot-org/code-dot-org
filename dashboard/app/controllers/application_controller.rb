@@ -72,7 +72,7 @@ class ApplicationController < ActionController::Base
 
   # missing templates are usually a result of the user agent
   # requesting a file in the wrong format, send a 404 instead of a 500
-  rescue_from ActionView::MissingTemplate do |exception|
+  rescue_from ActionView::MissingTemplate do |_exception|
     render_404
   end
 
@@ -120,10 +120,11 @@ class ApplicationController < ActionController::Base
       timestamp: DateTime.now.to_milliseconds
     }
     script_level = options[:script_level]
+    level = options[:level]
 
     if script_level
       response[:script_id] = script_level.script.id
-      response[:level_id] = script_level.level.id
+      response[:level_id] = level.id
 
       previous_level = script_level.previous_level
       if previous_level
@@ -156,13 +157,13 @@ class ApplicationController < ActionController::Base
 
     if HintViewRequest.enabled?
       if script_level && current_user
-        response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, script_level.level, current_user)
+        response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, level, current_user)
         response[:hint_view_request_url] = hint_view_requests_path
       end
     end
 
     if PuzzleRating.enabled?
-      response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, script_level.level, current_user)
+      response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, level, current_user)
     end
 
     # logged in users can:
@@ -180,7 +181,7 @@ class ApplicationController < ActionController::Base
 
     unless options[:solved?]
       # Call method to generate hint and related attributes, copying results into response.
-      hint_details = ExperimentActivity::determine_hint({
+      hint_details = ExperimentActivity.determine_hint({
                                                          level_source: options[:level_source],
                                                          current_user: current_user,
                                                          enable_external_hints: Rails.env.production?,

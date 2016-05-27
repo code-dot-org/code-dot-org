@@ -26,7 +26,7 @@
 var ArtistAPI = require('./api');
 var api = new ArtistAPI();
 
-var setRandomVisibleColour = function() {
+var setRandomVisibleColour = function () {
   var num = Math.floor(Math.random() * Math.pow(2, 24));
   // Make sure at least one component is below 0x80 and the rest
   // below 0xA0, to prevent too light of colours.
@@ -35,7 +35,7 @@ var setRandomVisibleColour = function() {
   api.penColour(colour);
 };
 
-var drawSquare = function(length, random_colour) {
+var drawSquare = function (length, random_colour) {
   for (var count = 0; count < 4; count++) {
     if (random_colour) {
       setRandomVisibleColour();
@@ -45,7 +45,7 @@ var drawSquare = function(length, random_colour) {
   }
 };
 
-var drawTriangle = function(length, random_colour) {
+var drawTriangle = function (length, random_colour) {
   for (var count = 0; count < 3; count++) {
     if (random_colour) {
       setRandomVisibleColour();
@@ -55,7 +55,7 @@ var drawTriangle = function(length, random_colour) {
   }
 };
 
-var drawSnowman = function(height) {
+var drawSnowman = function (height) {
   api.turnLeft(90);
   var distances = [height * 0.5, height * 0.3, height * 0.2];
   for (var i = 0; i < 6; i++) {
@@ -64,14 +64,14 @@ var drawSnowman = function(height) {
       api.moveForward(distance);
       api.turnRight(2);
     }
-    if (i != 2) {
+    if (i !== 2) {
       api.turnRight(180);
     }
   }
   api.turnLeft(90);
 };
 
-var drawHouse = function(length) {
+var drawHouse = function (length) {
   drawSquare(length);
   api.moveForward(length);
   api.turnRight(30);
@@ -88,10 +88,10 @@ var drawHouse = function(length) {
  * resulting JavaScript here, moving any functions to the beginning of
  * this function.
  */
-exports.answer = function(page, level) {
+exports.answer = function (page, level) {
   api.log = [];
   var count, sideIdx, len;
-  if (page == 1) {
+  if (page === 1) {
     switch (level) {
       case 1:
         // El.
@@ -148,7 +148,7 @@ exports.answer = function(page, level) {
         }
         break;
     }
-  } else if (page == 2) {
+  } else if (page === 2) {
     switch (level) {
       case 1:
         // Single square in some color.
@@ -215,7 +215,7 @@ exports.answer = function(page, level) {
         }
         break;
     }
-  } else if (page == 3) {
+  } else if (page === 3) {
     switch (level) {
       case 1:
         // Draw a square.
@@ -263,7 +263,7 @@ exports.answer = function(page, level) {
         }
         break;
     }
-  } else if (page == 4) {
+  } else if (page === 4) {
     switch (level) {
       case 1:
         // Draw an equilateral triangle.

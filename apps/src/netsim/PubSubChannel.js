@@ -1,12 +1,6 @@
 /**
  * @overview Wrapped pub/sub service channel APIs (like Pusher's Channel)
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 /**
@@ -24,9 +18,6 @@ var PubSubChannel = exports;
  * @param {function} callback - A function to be called whenever the event is
  *        triggered.
  */
-
-// Disable "unused variable" errors for null implementation declarations
-/* jshint unused:false */
 
 /**
  * @constructor
@@ -47,9 +38,6 @@ PubSubChannel.NullChannel.prototype.subscribe = function (eventName, callback) {
  * @param {string} eventName
  */
 PubSubChannel.NullChannel.prototype.unsubscribe = function (eventName) { };
-
-// Re-enable "unused variable" error
-/* jshint unused:true */
 
 /**
  * @constructor

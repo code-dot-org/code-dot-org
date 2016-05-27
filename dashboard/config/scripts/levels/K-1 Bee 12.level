@@ -39,5 +39,38 @@
         <block type="maze_honey"/>
       </xml>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="maze_moveNorth">
+          <next>
+            <block type="maze_moveWest">
+              <next>
+                <block type="maze_nectar">
+                  <next>
+                    <block type="maze_nectar">
+                      <next>
+                        <block type="maze_moveWest">
+                          <next>
+                            <block type="maze_nectar">
+                              <next>
+                                <block type="maze_nectar">
+                                  <next>
+                                    <block type="maze_nectar"/>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

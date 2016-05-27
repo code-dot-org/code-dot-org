@@ -1,0 +1,66 @@
+name 'CSPPD3-u5 completing the challenge'
+css 'unplugged'
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Challenge Overview > Understanding the Challenge 
+
+#### What is a “challenge”? 
+A challenge is a focused activity in which you explore a lesson from the Code.org Computer Science Principles (CSP) curriculum and prepare to teach it. You will complete the core activities from the lesson, read through the lesson plan, consider how you'll teach the lesson, and share that plan and your suggestions for how to use the lesson with other teachers through the <a href = "http://forum.code.org/c/csp-unit4" target=_blank>forum</a>.
+<br><br>
+
+>#### Why should I complete the challenge?
+The goals of a challenge are to offer you the opportunity to:
+
+>- **Prepare for teaching** - These challenges allow you to work through lessons with activities that might be tricky to teach without first going through them. You will also have time to look for outside resources that might help you teach the lesson, and then develop a plan for teaching it. You have the freedom to choose which lesson you will prepare, based on your personal teaching plan.
+- **Give and get feedback from other CSP piloters** - There itsn't time in PD to have everyone do every lesson, but if everyone does some of the lessons in PD and then share experiences and ideas, you can all can learn from one another.
+- **Find great resources and support** - As you work together to share our plans and give feedback, you’ll be creating a library of ideas that will help everyone reach their goals with CSP.
+
+<hr>
+
+#### 1. Challenge Prep: 
+
+##### Pick a Performance Task
+
+The challenge for Unit 5 is to try your hand at (starting) one of the Performance Tasks.  You probably won't finish in the two hours of PD time, but you should start one in earnest in order to anticipate the student experience and prepare for it.
+
+##### Get into the Performance Task and associated lesson 
+
+- **Read through** the entire Performance Task.
+- **Understand the Performance Task** and be prepared to start working on it 
+
+<hr>
+
+#### 2. Do the Performance Task: 
+##### While you're working... 
+
+- **Save the artifact(s)** you create along the way. 
+ - For the **Explore** Task your artifacts might be research, a visual or infographic you made, or some written thoughts.
+ - For the **Create** Task your artifacts might be a program (obviously) or you might try your hand at making a video of a program you wrote, or a PDF with certain sections highlighted, etc.
+ 
+- **Jot down your thoughts** about: 
+    - realizations about the nature of the performance tasks that you will take with you into teaching this course next year.
+    - what was difficult about these activities? (for you and/or your students).
+    - what did you enjoy about the performance task?
+   
+<hr>
+#### 3. Share: 
+##### Share your Artifacts and Advice
+
+**Head to the forum** and share: 
+
+- The **artifact** you created in doing the activity from the lesson. 
+- Condensed **notes** from doing the task, providing some pointers for others delivering the performance task.
+ 
+##### Examine and Provide Feedback to Others
+
+- Check out the **work others produced** for in this Challenge.
+- **Leave feedback!** Let people know when your find their suggestions helpful, or provide your own ideas when you come across questions. 
+<img src="https://images.code.org/fedcfc12d5ddcc4d923044d204a8421c-image-1448289442785.gif" style="float:right; margin-left:30px">
+- Use the “Heart” feature in the forum to vote for posts and resources that you find helpful! 
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

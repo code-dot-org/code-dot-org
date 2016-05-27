@@ -20,7 +20,7 @@ class TestFlakiness
     NUM_REQUESTS.times do
       # docs for this API: https://wiki.saucelabs.com/display/DOCS/Job+Methods
       url =  "https://saucelabs.com/rest/v1/#{TEST_ACCOUNT_USERNAME}/jobs"
-      url += "?" + URI::encode_www_form(limit: PER_REQUEST, full: 'true', skip: jobs.count)
+      url += "?" + URI.encode_www_form(limit: PER_REQUEST, full: 'true', skip: jobs.count)
 
       response = RestClient::Request.execute(method: :get,
                                              url: url,

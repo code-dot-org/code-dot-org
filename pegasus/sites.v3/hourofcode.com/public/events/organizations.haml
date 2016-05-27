@@ -11,7 +11,7 @@ nav: events_nav
 -events.each do |event|
   -company = event['hoc_company_s'].to_s
   -by_company[company] = [] unless by_company.has_key?(company)
-  -by_company[company] << event
+  -by_company[company] << nil
 
 %h1= hoc_s(:events_orgs_title)
 

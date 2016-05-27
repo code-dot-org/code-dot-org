@@ -23,7 +23,15 @@ zh:
           future: 不能选择将来的时间
   hello: 你好，世界！
   welcome_back: '欢迎回来，%{name}'
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: 提交
+  unsubmit: 未提交
+  previous_page: 上一页
+  next_page: 下一页
+  cancel: 取消
+  okay: 好吧
+  heading_x_of_y: '%{heading} (page %{x} of %{y})'
   add_teacher_form:
     code:
       label: '添加一个老师:'
@@ -145,8 +153,6 @@ zh:
         subject: '加入 %{teacher_name} 老师的班级吧！'
       student_disassociated:
         subject: 'Code.org 提醒: %{student_name} 已不再是您的学生。'
-      teacher_disassociated:
-        subject: 'Code.org 提醒: %{teacher_name} 已不再是您的老师。'
   reports:
     error:
       access_denied: 您没有权限访问此人的信息。
@@ -219,7 +225,7 @@ zh:
       free_play:
         playlab: 构建一个应用程序
         artist: 绘画一些东西
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: 构建一个应用程序
     user:
       classroom: 教师主页
@@ -317,11 +323,29 @@ zh:
     heading_hoc2014: '<h2>编程一小时</h2>适合<h1>所有年龄</h1>'
     heading_elementary: '<h2>20 小时课程</h2><h1>初学者 （所有年龄）</h1>'
     heading_apps: '<h1>为每个人</h1><h2>的乐趣</h2>'
+    heading_tools: '<h2>准备好进行下一步了吗？</h2><h1>高中的JavaScript工具</h1>'
     heading_legacy: '<h1>为所有年龄</h1><h2>的加速课程</h2>'
     your_gallery: 作品
     no_primary_course: 试试代码工作室的课程
     choose_next_course: 从下面代码工作室的课程中选一个体验
     print_certificate: 打印证书
+    announcement_title: 公告
+    announcement_view_all: 查看全部
+    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+    announcement_button: 了解详情
+    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as the new section.
+    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
+    students_not_yours: You cannot move students from a section that does not belong to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
   share:
     title: 在代码工作室学习
     description: 任何人都可以学习计算机科学。用代码制作游戏、 应用程序和艺术作品。
@@ -339,6 +363,7 @@ zh:
     help_from_html_old: 来自谷歌、 微软、 Facebook 和 Twitter 的工程师们帮助创建了本教程。
     art_from_html: '《我的世界》&#8482; &copy; %{current_year} 微软. 保留所有权利.<br />星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利.<br />冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼. 保留所有权利.<br />冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利.<br />愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司. 保留所有权利.<br />植物大战僵尸&#8482; &copy; %{current_year} 电子艺界. 保留所有权利.<br />阿甘妙世界是商标 &copy; 2015 卡通网络.'
     art_from_html_old: '《我的世界》&#8482; &copy; %{current_year} 微软. 保留所有权利. 星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利. 冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼. 保留所有权利. 冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利. 愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司. 保留所有权利. 植物大战僵尸&#8482; &copy; %{current_year} 电子艺界. 保留所有权利. 阿甘妙世界是商标 &copy; 2015 卡通网络.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: 由亚马逊网络服务
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE标识和Hour of Code标识&reg; 是Code.org的注册商标。'
     copyright: 版权
@@ -411,6 +436,12 @@ zh:
       current: 目前的关卡
       unused: 未使用的关卡
   upsell:
+    applab:
+      title: 应用实验室
+      body: 应用实验室是一个可以让你使用简单的应用程序的编程环境。设计应用程序，代码块或 JavaScript 使它工作，然后马上分享您的应用程序。
+      body_short: 设计一个应用，用代码块或者JavaScript 来写出这个程序，然后马上分享你的应用吧。
+      audience: 13岁以上
+      cta: 知其然
     hoc:
       title: 经典迷宫
       body: 请尝试计算机科学的基本知识。数百万人尝试了它。
@@ -437,6 +468,11 @@ zh:
     minecraft:
       title: 我的世界
       body: 用代码来探索《我的世界》。
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 4+
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
     students_drew_these_with_code: 学生使用代码画了这些图案!
     students_made_these_with_code: 学生使用代码做了这些内容!
@@ -452,10 +488,10 @@ zh:
   landing:
     prerelease: "本课程是在 <span class='betatext'> beta 版</span> 中. 这表示它不是最终版本. 它会根据反馈而被修订和改善."
     prerelease_hoc2014: "本教程是在 <span class='betatext'> beta 版</span> 中. 它会根据反馈而被修订和改善."
-    feedback: 提供反馈。
     report_bug: 报告错误
     support: 获取帮助
     support_url: //support.code.org
+    help_resources: 帮助以及资源
   multi:
     wrong_title: 不正确的答案
     wrong_body: 你已输入的答案不正确。请再试一次 ！
@@ -463,6 +499,29 @@ zh:
     correct_body: 这是正确的答案。
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: 谢谢你
+    wrong_body: 感谢您提交这份答案。
+    correct_title: 谢谢你
+    correct_body: 感谢您提交这份答案。
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: 谢谢你
+    wrong_body: 感谢您提交答案。
+    correct_title: 谢谢你
+    correct_body: 感谢您提交答案。
+  level_group-submittable:
+    wrong_title: 谢谢你
+    wrong_body: 感谢您提交答案。
+    correct_title: 谢谢你
+    correct_body: 感谢您提交答案。
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
+    submit-complete-title: Submit your assessment
+    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
   match:
     wrong_title: 不正确的解决方案
     wrong_body: 您输入的解决方案不正确。请再试一次 ！
@@ -480,6 +539,8 @@ zh:
     placeholder: 在这里输入你的答案
     open_response_title: 感谢
     open_response_body: 感谢您的回复！
+    correct_title: 正确。
+    correct_body: 这是正确的答案。
   dialog:
     ok: 确定
     startover_title: 你确定要重新开始吗？
@@ -533,6 +594,7 @@ zh:
     completed_perfect: 完美完成
     furthest_level_attempted: 尝试过最远的关卡
     assessment: 评估
+    submitted: 已提交
   studio:
     courses_working_on: 您正在进行的课程
     completed_courses: 已完成的课程
@@ -550,6 +612,9 @@ zh:
     share: 分享
     share_title: 分享您的项目
     share_copy_link: 复制链接：
+    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: 关闭
     more: 更多
     name: 姓名
@@ -589,3 +654,21 @@ zh:
           other: 其他
         detail: 请提供尽可能详细的信息，尽可能关于您所报告的内容。
         acknowledge: '提交的信息将会根据%{link_start_privacy}隐藏策略%{link_end} 和 %{link_start_tos}服务条款%{link_end}的职权范围进行处理。'
+  peer_review:
+    accepted:
+      name: Accepted
+      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+    rejected:
+      name: Rejected
+      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+  components:
+    icon_library:
+      search_placeholder_text: 查询图标
+      no_icons_found: 找不到图标
+  flex_category:
+    required: 概览
+    content: Content
+    practice: Teacher Practices

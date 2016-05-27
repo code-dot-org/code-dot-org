@@ -91,7 +91,6 @@ class ActiveSupport::TestCase
     AWS::S3.expects(:upload_to_bucket).never
   end
 
-
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   #
   # Note: You'll currently still have to declare fixtures explicitly in integration tests
@@ -162,8 +161,44 @@ class ActiveSupport::TestCase
       assert_equal(before[i], e.call, error)
     end
   end
-end
 
+  # Given two hashes, ensure that they have the same set of keys in both
+  # directions, collecting up errors so we can pretty-print them all in one go
+  # if any errors are found.
+  def assert_same_keys(a, b, a_name = 'A', b_name = 'B', message = "Keys don't match")
+    assert_equal a.keys, b.keys, %(#{message}
+  Found in #{a_name} but not #{b_name}: #{(a.keys - b.keys).join(', ')}
+  Found in #{b_name} but not #{a_name}: #{(b.keys - a.keys).join(', ')})
+  end
+
+  # Given a regular expression and a block, ensure that the block raises an
+  # exception with a message matching the regular expression.
+  def assert_raises_matching(matcher)
+    assert_raises do
+      begin
+        yield
+      rescue => err
+        assert_match matcher, err.to_s
+        raise err
+      end
+    end
+  end
+
+  # Freeze time for the each test case to 9am, or the specified time
+  # To use, declare anywhere in the test class:
+  #   class MyTest < ActiveSupport::TestCase
+  #     freeze_time
+  #     #...
+  def self.freeze_time(time=nil)
+    time ||= Date.today + 9.hours
+    setup do
+      Timecop.freeze time
+    end
+    teardown do
+      Timecop.return
+    end
+  end
+end
 
 # Helpers for all controller test cases
 class ActionController::TestCase
@@ -178,9 +213,9 @@ class ActionController::TestCase
   # override default html document to ask it to raise errors on invalid html
   def html_document
     @html_document ||= if @response.content_type === Mime::XML
-                         Nokogiri::XML::Document.parse(@response.body) { |config| config.strict }
+                         Nokogiri::XML::Document.parse(@response.body, &:strict)
                        else
-                         Nokogiri::HTML::Document.parse(@response.body) { |config| config.strict }
+                         Nokogiri::HTML::Document.parse(@response.body, &:strict)
                        end
   end
 
@@ -188,7 +223,6 @@ class ActionController::TestCase
     assert_response :redirect
     assert_redirected_to "http://test.host/users/sign_in"
   end
-
 
   def self.generate_admin_only_tests_for(action, params = {})
     test "should get #{action}" do
@@ -245,7 +279,6 @@ class ActionController::TestCase
     # <meta content="500" name="twitter:image:width" />
     # <meta content="261" name="twitter:image:height" />
 
-
     # if this test is breaking and you don't know what's going on, you
     # can print the meta tags like this:
 
@@ -301,9 +334,11 @@ end
 # Mock StorageApps to generate random tokens
 class StorageApps
   def initialize(_); end
+
   def create(_, _)
     SecureRandom.base64 18
   end
+
   def most_recent(_)
     create(nil, nil)
   end
@@ -312,4 +347,36 @@ end
 # Mock storage_id to generate random IDs
 def storage_id(_)
   SecureRandom.hex
+end
+
+$stub_encrypted_channel_id = 'STUB_CHANNEL_ID-1234'
+def storage_encrypt_channel_id(_)
+  $stub_encrypted_channel_id
+end
+
+$stub_channel_owner = 33
+$stub_channel_id = 44
+# stubbing storage_decrypt is inappropriate access, but
+# allows storage_decrypt_channel_id to throw the right
+# errors if the input is malformed and keeps us from
+# having to access the Pegasus DB from Dashboard tests.
+def storage_decrypt(encrypted)
+  "#{$stub_channel_owner}:#{$stub_channel_id}"
+end
+
+# A fake slogger implementation that captures the records written to it.
+class FakeSlogger
+  attr_reader :records
+
+  def initialize
+    @records = []
+  end
+
+  def write(json)
+    @records << json
+  end
+end
+
+def json_response
+  JSON.parse @response.body
 end

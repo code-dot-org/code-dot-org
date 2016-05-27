@@ -25,5 +25,28 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="maze_forever">
+          <statement name="DO">
+            <block type="maze_turn">
+              <title name="DIR">turnRight</title>
+              <next>
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
+                      <next>
+                        <block type="maze_moveForward"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Maze>

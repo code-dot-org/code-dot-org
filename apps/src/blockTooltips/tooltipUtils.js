@@ -1,8 +1,7 @@
 /* global ace */
 'use strict';
 
-var utils = require('../utils');
-var _ = utils.getLodash();
+var _ = require('../lodash');
 
 /**
  * @typedef {Object} parameterSlotInfo
@@ -90,15 +89,19 @@ exports.findFunctionAndParamNumber = function (editor, position) {
           var isBeginningOfFunctionCall =
             seenCloserStack.length === 0 && currentOpener === '(';
           if (isBeginningOfFunctionCall) {
-            // if we have text "foo.bar(", funcName is foo.bar rather than just bar
             var funcName = iterator.stepBackward().value;
+            // if we have text "foo.bar(", store "foo.bar" as fullFuncName and
+            // "*.bar" as funcName:
+            var fullFuncName;
             var previousToken = iterator.stepBackward();
             if (previousToken && previousToken.value === '.') {
-              funcName = iterator.stepBackward().value + '.' + funcName;
+              fullFuncName = iterator.stepBackward().value + '.' + funcName;
+              funcName = '*.' + funcName;
             }
 
             return {
               funcName: funcName,
+              fullFuncName: fullFuncName,
               currentParameterIndex: sameDepthPrecedingCommaCount
             };
           }

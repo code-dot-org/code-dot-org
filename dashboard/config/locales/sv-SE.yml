@@ -24,13 +24,21 @@
           future: kan inte vara i framtiden
   hello: Hej världen
   welcome_back: Välkommen tillbaka, %{name}
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Skicka in
+  unsubmit: "Ångra Inlämnad"
+  previous_page: Previous page
+  next_page: Next page
+  cancel: Avbryt
+  okay: Okej
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Lägg till lärare:'
       placeholder: Avsnitt kod (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Var snäll och skriv in koden som du har fått av din lärare. Det
+        är en 6 bokstäver lång kod som "ABCDEF".
     submit: Lägg till lärare
   add_hint_form:
     placeholder: Skriv in ditt tips här
@@ -143,7 +151,7 @@
 
       %{link}
 
-      Kurserna är roliga, visuellt engagerande, och lär ut grundläggande koncepten inom datavetenskap med en enkel, guidad, spel-liknande upplevelse. Lär dig att programmera från Bill Gates, Mark Zuckerberg, Angry Birds, och Plants vs Zombies! :)
+      Kurserna är roliga och visuellt engagerande, och lär ut de grundläggande koncepten inom datavetenskap med en enkel, guidad, spel-liknande upplevelse. Lär dig att programmera med Bill Gates, Mark Zuckerberg, Angry Birds och Plants vs Zombies! :)
 
       %{name}
   follower:
@@ -165,17 +173,14 @@
       student_disassociated:
         subject: 'Code.org anmälan: %{student_name} är inte längre associerat som
           din student.'
-      teacher_disassociated:
-        subject: 'Code.org anmälan: %{teacher_name} är inte längre associerat som
-          din lärare.'
   reports:
     error:
-      access_denied: Du har inte tillgång till denna personens uppgifter
+      access_denied: Du har inte tillgång till denna persons uppgifter
   redeem_prizes:
     title: 'Lös in priser: %{name}'
     provider: 'Leverantör:'
     code: 'Kod:'
-    redeem_header: 'Att lösa in:'
+    redeem_header: 'För att lösa in:'
     donorschoose_register: Registrera dig som lärare på DonorsChoose.org
     donorschoose_project: Skicka ett projekt
     donorschoose_how_to: Hur du ska använda din kod
@@ -261,7 +266,7 @@
         applab: Skapa en App
     user:
       classroom: Lärare hemsida
-      district_dashboard: Distrikt Dashboard
+      district_dashboard: Distriktets kontrollpanel
       label: Hej %{username}
       stats: Mina framsteg
       settings: Mitt konto
@@ -271,7 +276,7 @@
       signup: Registrera dig
       already_registered: Redan registrerad?
     popup:
-      progress_for_user: "%{name}'s framsteg"
+      progress_for_user: "%{name}s framsteg"
       progress: Dina framsteg
       lines: 'Totalt antal rader kod: %{lines}'
       close: STÄNG
@@ -367,11 +372,44 @@
     heading_hoc2014: "<h2>Timmen med kod för</h2><h1>Alla åldrar</h1>"
     heading_elementary: "<h2>20 timmars kurser för</h2><h1>Nybörjare (alla åldrar)</h1>"
     heading_apps: "<h2>Kul för</h2><h1>Alla</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+      School</h1>"
     heading_legacy: "<h2>Vår allmänna kurs för</h2><h1>Alla åldrar</h1>"
     your_gallery: Galleri
     no_primary_course: Prova en kurs på Code Studio
     choose_next_course: Prova en Code Studio kurs genom att välja en nedan
     print_certificate: Skriv ut intyg
+    announcement_title: Anslagstavla
+    announcement_view_all: Visa alla
+    announcement_message: 'We''ve started to measure student learning in Courses 1-4
+      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
+      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
+      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
+      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_button: Lär dig mer
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: Lär med Code Studio
     description: Alla kan lära sig datavetenskap. Gör spel, apps och konst med kod.
@@ -384,10 +422,10 @@
     student: Student
     teacher: Lärare
   footer:
-    thank_you: Vi tackar våra <a href="https://code.org/about/donors"> givare</a>,
-      <a href="https://code.org/about/partners"> partners</a>, vårt <a href="https://code.org/about/team">
-      utökade team</a>, vårt video team och våra <a href="https://code.org/about/advisors">
-      utbildningsrådgivare</a> för deras stöd i att skapa Code Studio.
+    thank_you: Vi tackar våra <a href="https://code.org/about/donors">givare</a>,
+      <a href="https://code.org/about/partners">partners</a>, vårt <a href="https://code.org/about/team">utökade
+      team</a>, vårt videoteam och våra <a href="https://code.org/about/advisors">utbildningsrådgivare</a>
+      för deras stöd med att skapa Code Studio.
     help_from_html: Ingenjörer från Google, Microsoft, Facebook, och Twitter hjälpte
       till med att skapa denna övning.
     help_from_html_old: Ingenjörer från Google, Microsoft, Facebook, och Twitter hjälpte
@@ -398,6 +436,8 @@
     art_from_html_old: Angry Birds &#8482; &amp; © 2009-%{current_year} Rovio Entertainment
       Ltd. Alla rättigheter reserverade. < br / > Plants vs Zombies &#8482; &amp;
       © %{current_year} Electronic Arts Inc. Alla rättigheter reserverade
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: Drivs av Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotypen och
       Hour of Code&reg; är varumärken som tillhör Code.org."
@@ -461,7 +501,7 @@
   share_code:
     title: Klicka på 'Kör' för att testa mitt program
     bounce_og_title: Kolla in mitt Studsa Spel
-    flappy_og_title: Kolla in mitt Flappy Spel
+    flappy_og_title: Kolla in mitt Flappy-spel
     studio_og_title: Kolla in min Play Lab App
     check_out_what_i_made: Kolla vad jag gjorde
     og_description: Jag skrev koden själv med Code.org
@@ -485,11 +525,20 @@
       current: Nuvarande nivåer
       unused: Oanvända nivåer
   upsell:
+    applab:
+      title: App Lab
+      body: App Lab is a programming environment where you can make simple apps. Design
+        an app, code with blocks or JavaScript to make it work, then share your app
+        in seconds.
+      body_short: Design an app, code with blocks or JavaScript to make it work, then
+        share your app in seconds.
+      audience: Ages 13+
+      cta: Learn how
     hoc:
       title: Klassisk labyrint
       body: Lär dig grunderna i programmering. Miljoner har provat denna.
     flappy:
-      title: Flappy kod
+      title: Flappy-kod
       body: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy
         Code övning!
     20-hour:
@@ -516,6 +565,15 @@
     minecraft:
       title: Minecraft
       body: Utforska en Minecraft värld med kod.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: Elever ritade dessa med kod!
     students_made_these_with_code: Elever gjorde dessa med kod!
@@ -538,10 +596,10 @@
       allt eftersom feedback tas emot och förbättringar görs.
     prerelease_hoc2014: Den här övningen är en <span class='betatext'>betaversion</span>.  Den
       revideras allteftersom synpunkter kommer in och förbättringar görs.
-    feedback: Ge feedback
     report_bug: Rapportera bugg
     support: Få hjälp
     support_url: "//support.code.org"
+    help_resources: Help and Resources
   multi:
     wrong_title: Felaktigt svar
     wrong_body: Svaret du angett är inte korrekt.  Försök igen!
@@ -549,6 +607,32 @@
     correct_body: Det är det rätta svaret.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Tack
+    wrong_body: Thank you for submitting an answer.
+    correct_title: Tack
+    correct_body: Thank you for submitting an answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Tack
+    wrong_body: Thank you for submitting answers.
+    correct_title: Tack
+    correct_body: Thank you for submitting an answer
+  level_group-submittable:
+    wrong_title: Tack
+    wrong_body: Thank you for submitting answers.
+    correct_title: Tack
+    correct_body: Thank you for submitting answers.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Fel lösning
     wrong_body: Din lösning är inte rätt.  Försök pånytt!
@@ -567,6 +651,8 @@
     placeholder: Skriv in ditt svar här
     open_response_title: Tack
     open_response_body: Tack för ditt svar!
+    correct_title: Rätt
+    correct_body: Det är det rätta svaret.
   dialog:
     ok: Ok
     startover_title: "Är du säker på att du vill börja om?"
@@ -600,7 +686,7 @@
           title: Byggare
           description: ''
         flappy:
-          title: Flappy kod
+          title: Flappy-kod
           description: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova
             vår Flappy Code övning!
         jigsaw:
@@ -630,6 +716,7 @@
     completed_perfect: Avklarad perfekt
     furthest_level_attempted: försökt nå bortersta nivån
     assessment: Test
+    submitted: submitted
   studio:
     courses_working_on: Kurser du påbörjat
     completed_courses: Avslutade kurser
@@ -647,6 +734,10 @@
     share: Dela
     share_title: Dela ditt projekt
     share_copy_link: 'Kopiera länken:'
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Avsluta
     more: Mer
     name: Namn
@@ -697,3 +788,23 @@
         acknowledge: Genom att skicka denna information, erkänner du att det kommer
           att hanteras i enlighet med villkoren i den %{link_start_privacy}Privacy
           Policy%{link_end} och %{link_start_tos}Terms av Service%{link_end}
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+  components:
+    icon_library:
+      search_placeholder_text: Search for an icon...
+      no_icons_found: Inga ikoner hittades
+  flex_category:
+    required: "Översikt"
+    content: Content
+    practice: Teacher Practices

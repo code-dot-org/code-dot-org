@@ -122,7 +122,7 @@ get '/v2/forms/:parent_kind/:parent_secret/children/:kind' do |parent_kind, pare
   JSON.pretty_generate(results)
 end
 
-get '/v2/forms/:parent_kind/:parent_secret/children/:kind/:secret' do |parent_kind, parent_secret, kind, secret|
+get '/v2/forms/:parent_kind/:parent_secret/children/:kind/:secret' do |_parent_kind, _parent_secret, kind, secret|
   dont_cache
   forbidden! unless form = DB[:forms].where(kind: kind, secret: secret).first
   content_type :json

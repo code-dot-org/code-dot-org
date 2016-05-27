@@ -2,12 +2,6 @@
  * @overview Represents a collection of tables that map to a particular
  *           class section's simulation, isolated from other class sections.
  */
-// Strict linting: Absorb into global config when possible
-/* jshint
- unused: true,
- eqeqeq: true,
- maxlen: 120
- */
 'use strict';
 
 var NetSimTable = require('./NetSimTable');
@@ -157,9 +151,9 @@ NetSimShard.prototype.resetEverything = function (onComplete) {
     type: 'delete',
     contentType: 'application/json; charset=utf-8',
     dataType: "json"
-  }).done(function() {
+  }).done(function () {
     onComplete(null, true);
-  }).fail(function(request, status, error) {
+  }).fail(function (request, status, error) {
     var err = new Error('status: ' + status + '; error: ' + error);
     onComplete(err, false);
   });

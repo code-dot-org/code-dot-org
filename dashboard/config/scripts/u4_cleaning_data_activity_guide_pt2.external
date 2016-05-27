@@ -2,7 +2,6 @@ name 'U4 Cleaning Data Activity Guide Pt2'
 title 'title'
 css 'unplugged'
 description 'description here'
-href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Cleaning Data
 

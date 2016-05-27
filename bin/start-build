@@ -2,8 +2,8 @@
 require_relative '../deployment.rb'
 require 'cdo/hip_chat'
 
-# restarts the build on chef-managed servers by touching build-started,
-# which a cron job looks for every minute as a signal to restart the build.
+# restarts the build on daemon servers by touching build-started,
+# where a cron job looks for every minute as a signal to restart the build.
 
 raise "#{$0} does not work in development mode" if rack_env?(:development)
 

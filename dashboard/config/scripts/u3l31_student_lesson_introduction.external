@@ -21,3 +21,14 @@ When designing programs, you will often discover new pieces of functionality you
   
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Cumulative Assessment**
+
+*covers: Unit 3 Lessons 22-25 - while loops, intro to arrays*
+
+* [U3 Assessment 4: Lessons 22-25](https://docs.google.com/document/d/1F7IQaVPKid7G7j3rZtxkcZyj7majwOFMtdAvSGWaCGM)
+
+* [KEY U3 Assessment 4: Lessons 22-25](https://docs.google.com/document/d/1uz38IkRiwKpk9tAB3bPoA0nT7Z4WZC497KHLA5t-9So)
+MARKDOWN

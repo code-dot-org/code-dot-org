@@ -1,0 +1,8 @@
+%h1 Confirm Email
+
+= form_tag(confirm_email_path, method: :post) do
+  Email address to confirm:
+  %br/
+  = text_field_tag 'email', '', placeholder: 'email', size: 80
+  %br/
+  = submit_tag 'Go!'

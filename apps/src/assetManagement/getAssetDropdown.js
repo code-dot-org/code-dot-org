@@ -1,8 +1,5 @@
-/* global Dialog, dashboard, Applab */
-// TODO (josh) - don't pass `Dialog` into `createModalDialog`.
+/* global dashboard */
 
-var assetListStore = require('./assetListStore');
-var showAssetManager = require('./show');
 var commonMsg = require('../locale');
 var utils = require('../utils');
 
@@ -11,14 +8,14 @@ var utils = require('../utils');
  * asset dropdowns.
  */
 module.exports = function (typeFilter) {
-  var options = assetListStore.list(typeFilter).map(function (asset) {
+  var options = dashboard.assets.listStore.list(typeFilter).map(function (asset) {
     return {
       text: utils.quote(asset.filename),
       display: utils.quote(asset.filename)
     };
   });
   var handleChooseClick = function (callback) {
-    showAssetManager(function (filename) {
+    dashboard.assets.showAssetManager(function (filename) {
       callback(utils.quote(filename));
     }, typeFilter);
   };

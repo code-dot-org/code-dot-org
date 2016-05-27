@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require_relative '../mailing-common/mailing-list-utils'
+
+organizers = query_subscribed_contacts(q: 'kind_s:"HocSignup2015"')
+export_contacts_to_csv organizers, "hoc2015-organizers.csv"

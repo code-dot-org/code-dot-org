@@ -1,0 +1,48 @@
+%h1
+  Hour of Code Data
+
+- if @data.present?
+  #summary
+    Starts:
+    %span= number_with_delimiter(@data['started'])
+    %br
+    Finishes:
+    %span= number_with_delimiter(@data['finished'])
+    %br
+    Code.org Starts:
+    %span= number_with_delimiter(@data['total_codedotorg_count'])
+
+  %br
+
+  #tutorials
+    %table
+      %tr
+        %th
+          %span Tutorial
+        %th
+          %span Count
+      - @data['tutorials'].each do |tutorial, count|
+        %tr
+          %td
+            %span= tutorial
+          %td
+            %span= number_with_delimiter(count)
+
+  %br
+
+  #countries
+    %table
+      %tr
+        %th
+          %span Country
+        %th
+          %span Count
+      - @data['countries'].each do |country, count|
+        %tr
+          %td
+            %span= country
+          %td
+            %span= number_with_delimiter(count)
+- else
+  Error, @data.present? (e.g., Properties.get(:hoc_metrics).present?) is false.
+  Please contact an engineer for assistance.

@@ -85,5 +85,29 @@
         </block>
       </xml>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_dropdown">
+              <title name="TIMES" config="3-10">3</title>
+              <statement name="DO">
+                <block type="maze_moveForward"/>
+              </statement>
+              <next>
+                <block type="bee_ifNectarAmount">
+                  <title name="ARG1">nectarRemaining</title>
+                  <title name="OP">==</title>
+                  <title name="ARG2">1</title>
+                  <statement name="DO">
+                    <block type="maze_nectar"/>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

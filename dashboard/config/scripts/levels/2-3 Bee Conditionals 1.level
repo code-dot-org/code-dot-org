@@ -39,5 +39,35 @@
         <block type="maze_nectar"/>
       </xml>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
+                      <next>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="maze_moveForward">
+                              <next>
+                                <block type="maze_nectar"/>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

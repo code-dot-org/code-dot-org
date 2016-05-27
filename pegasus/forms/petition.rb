@@ -24,7 +24,7 @@ class Petition
     result[:country_s] = nil_if_empty downcased location
 
     role = default_if_empty downcased(stripped(data[:role_s])), 'other'
-    result[:role_s] = enum role, ['student', 'parent', 'educator', 'engineer', 'other']
+    result[:role_s] = enum role, %w(student parent educator engineer other)
 
     result
   end

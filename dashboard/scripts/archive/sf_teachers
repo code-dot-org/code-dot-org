@@ -21,7 +21,7 @@ data = sf_teachers.collect do |u|
     average_completed_levels = completed_levels.inject(&:+).to_f / completed_levels.size
     average_completed_levels = average_completed_levels.round(2)
   end
-  
+
   [u.email, u.name, u.followers.count, average_completed_levels].join(', ')
 end
 

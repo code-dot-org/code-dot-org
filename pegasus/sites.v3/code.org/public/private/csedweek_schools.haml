@@ -1,3 +1,6 @@
+---
+allow_post: true
+---
 -require 'cdo/solr'
 -zip_codes = request.post? ? (CSV.parse_line(params[:zip_codes_s].to_s)||[]).map{|i| i.strip} : []
 -roles = request.post? ? (params[:roles_ss]||[]) : []

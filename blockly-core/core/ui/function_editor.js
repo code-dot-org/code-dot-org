@@ -107,12 +107,6 @@ Blockly.FunctionEditor.prototype.definitionBlockType = 'procedures_defnoreturn';
 Blockly.FunctionEditor.prototype.parameterBlockType = 'parameters_get';
 
 /**
- * Whether to display a button that deletes this function
- * @type {boolean}
- */
-Blockly.FunctionEditor.prototype.hasDeleteButton = false;
-
-/**
  * @param {String} autoOpenFunction - name of function to auto-open
  */
 Blockly.FunctionEditor.prototype.autoOpenFunction = function(autoOpenFunction) {
@@ -162,6 +156,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   goog.dom.getElement('functionNameText').value = functionName;
   goog.dom.getElement('functionDescriptionText').value =
       this.functionDefinitionBlock.description_ || '';
+  this.deleteButton_.setVisible(targetFunctionDefinitionBlock.userCreated);
 
   Blockly.fireUiEvent(window, 'function_editor_opened');
 };
@@ -261,6 +256,9 @@ Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
       block.firstElementChild.textContent = newName;
     }
   });
+  this.forEachParameterGetBlock(oldName, function(block) {
+    block.setTitleValue(newName, 'VAR');
+  });
 };
 
 Blockly.FunctionEditor.prototype.changeParameterTypeInFlyoutXML = function(name, newType) {
@@ -287,6 +285,9 @@ Blockly.FunctionEditor.prototype.removeParameter = function(nameToRemove) {
     }
   });
   keysToDelete.forEach(function(key) { this.orderedParamIDsToBlocks_.remove(key); }, this);
+  this.forEachParameterGetBlock(nameToRemove, function(block) {
+    block.dispose(true, false);
+  });
   this.refreshParamsEverywhere();
 };
 
@@ -332,6 +333,18 @@ Blockly.FunctionEditor.prototype.paramsAsParallelArrays_ = function() {
   }, this);
   return {paramNames: paramNames, paramIDs: paramIDs, paramTypes: paramTypes};
 };
+
+Blockly.FunctionEditor.prototype.forEachParameterGetBlock = function(paramName, callback) {
+  if (!this.functionDefinitionBlock) {
+    return;
+  }
+  this.functionDefinitionBlock.getDescendants().forEach(function(block) {
+    if (block.type == 'parameters_get' &&
+        Blockly.Names.equals(paramName, block.getTitleValue('VAR'))) {
+      callback(block);
+    }
+  });
+}
 
 Blockly.FunctionEditor.prototype.show = function() {
   this.ensureCreated_();
@@ -669,9 +682,6 @@ Blockly.FunctionEditor.prototype.positionCloseButton_ = function (absoluteLeft,
  */
 Blockly.FunctionEditor.prototype.positionDeleteButton_ = function (absoluteLeft,
     viewWidth) {
-  if (!this.hasDeleteButton) {
-    return;
-  }
   var closeButtonWidth = this.closeButton_.firstElementChild.getAttribute('width');
   var deleteButtonWidth = this.deleteButton_.getButtonWidth();
   var rightEdge = absoluteLeft + viewWidth;
@@ -790,9 +800,6 @@ Blockly.FunctionEditor.prototype.addCloseButton_ = function () {
  * @private
  */
 Blockly.FunctionEditor.prototype.addDeleteButton_ = function () {
-  if (!this.hasDeleteButton) {
-    return;
-  }
   this.deleteButton_ = new Blockly.SvgTextButton(
       this.modalBlockSpaceEditor.getSVGElement(), Blockly.Msg.DELETE,
       this.onDeletePressed.bind(this));

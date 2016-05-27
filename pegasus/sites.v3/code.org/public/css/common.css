@@ -383,11 +383,6 @@
   float: left;
   width: 800px;
 }
-#promote-page .promote-state-jump-form {
-  float: left;
-  width: 170px;
-  margin: 50px 0 0 0;
-}
 #promote-page .section {
   clear: both;
   margin: 0 0 20px 0;
@@ -629,5 +624,37 @@
 @media screen and (min-width: 513px) and (max-width: 970px) {
   .starwars-container .img-container {
     min-height: 202px;
+  }
+}
+
+/* Tables */
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  .responsive-table {
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 969px) {
+  .responsive-table {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 970px) {
+  .responsive-table {
+    width: 945px;
+  }
+}
+
+/* Responsive body */
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  .responsive-body {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .responsive-body {
+    margin-left: 5px;
   }
 }

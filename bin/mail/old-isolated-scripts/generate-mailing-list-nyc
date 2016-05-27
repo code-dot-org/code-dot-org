@@ -1,0 +1,116 @@
+#!/usr/bin/env ruby
+require_relative '../../../pegasus/src/env'
+require 'cdo/solr'
+require src_dir 'database'
+
+SOLR = Solr::Server.new(host: CDO.solr_server)
+
+def csv_contacts(path, params={})
+  fields = params[:fields] if params[:fields]
+
+  [].tap do |results|
+    CSV.foreach(path, headers: true) do |i|
+      i = yield(i) if block_given?
+      results << {email: i['email'].downcase.strip, name: i['name']}.merge(i.to_hash.slice(*fields)) if i
+    end
+  end
+end
+
+def dashboard_teachers(params={})
+  fields = params[:fields] if params[:fields]
+
+  [].tap do |results|
+    DASHBOARD_DB[:users].where(user_type: 'teacher').each do |i|
+      i = yield(i) if block_given?
+      results << {email: i[:email].downcase.strip, name: i[:name]}.merge(i.to_hash.slice(*fields)) if i
+    end
+  end
+end
+
+def export_contacts_to_csv(contacts, path)
+  columns = nil
+
+  CSV.open(path, 'wb') do |results|
+    contacts.values.each do |contact|
+      unless columns
+        columns = contact.keys
+        results << columns
+      end
+      results << columns.map{|column| contact[column]}
+    end
+  end
+end
+
+def query_contacts(params)
+  fields = params[:fields] if params[:fields]
+
+  [].tap do |results|
+    SOLR.query(params.merge(rows: 10000)).each do |i|
+      i = yield(i) if block_given?
+      results << {
+        id: i['id'],
+        email: i['email_s'].downcase.strip,
+        name: i['name_s'],
+        city: i['location_city_s'],
+        state: i['location_state_code_s'] || i['state_code_s'],
+        country: 'united_states',
+        address: i['school_address_s'],
+      }.merge(i.slice(*fields)) if i
+    end
+  end
+end
+
+UNSUBSCRIBERS = {}.tap do |results|
+  DB[:contacts].where('unsubscribed_at IS NOT NULL').each do |i|
+    email = i[:email].downcase.strip
+    results[email] = true
+  end
+end
+puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
+
+NYC_INACTIVE = {}.tap do |results|
+  csv_contacts('inactive-nyc.csv').each do |i|
+    email = i[:email].downcase.strip
+    results[email] = i unless UNSUBSCRIBERS[email]
+  end
+end
+puts "#{NYC_INACTIVE.count} inactives loaded."
+
+NYC_TEACHERS = {}.tap do |results|
+  (
+    query_contacts(q: 'kind_s:"HocSignup2014" && (location_city_s:"Bronx" || location_city_s:"Brooklyn" || location_city_s:"Manhattan" || location_city_s:"Queens" || location_city_s:"New York") && location_state_code_s:"NY"') +
+    query_contacts(q: 'kind_s:"Petition" && role_s:"educator" && country_s:"united states"') +
+    query_contacts(q: 'kind_s:"BringToSchool2013" && role_s:"teacher" && state_code_s:"ny" && country_s:"united states"') +
+    query_contacts(q: 'kind_s:"CSEdWeekEvent2013" && role_s:"teacher" && state_code_s:"ny" && country_s:"united states"') +
+    query_contacts(q: 'kind_s:"ClassSubmission"')
+  ).each do |i|
+    email = i[:email].downcase.strip
+    results[email] = i unless UNSUBSCRIBERS[email] || NYC_INACTIVE[email]
+  end
+end
+puts "#{NYC_TEACHERS.count} NYC teachers loaded."
+
+NYC_PARENTS = {}.tap do |results|
+  (
+    query_contacts(q: 'kind_s:"Petition" && role_s:"parent" && country_s:"united states"')
+  ).each do |i|
+    email = i[:email].downcase.strip
+    results[email] = i unless UNSUBSCRIBERS[email] || NYC_INACTIVE[email]
+  end
+end
+puts "#{NYC_PARENTS.count} NYC parents loaded."
+
+NYC_ADMINS = {}.tap do |results|
+  (
+    query_contacts(q: 'kind_s:"BringToSchool2013" && (role_s:"principal" || role_s:"superintendent" || role_s:"district_admin") && state_code_s:"ny" && country_s:"united states"') +
+    query_contacts(q: 'kind_s:"CSEdWeekEvent2013" && (role_s:"principal" || role_s:"superintendent" || role_s:"district_admin") && state_code_s:"ny" && country_s:"united states"')
+  ).each do |i|
+    email = i[:email].downcase.strip
+    results[email] = i unless UNSUBSCRIBERS[email] || NYC_INACTIVE[email]
+  end
+end
+puts "#{NYC_ADMINS.count} NYC teachers loaded."
+
+export_contacts_to_csv NYC_TEACHERS, 'nyc-teachers.csv'
+export_contacts_to_csv NYC_PARENTS, 'nyc-parents.csv'
+export_contacts_to_csv NYC_ADMINS, 'nyc-admins.csv'

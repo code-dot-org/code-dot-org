@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.2.4'
+gem 'rails', '~> 4.2.6'
 
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
@@ -21,6 +21,12 @@ gem 'dalli' # memcached
 gem 'parallel'
 
 gem 'google-api-client'
+gem 'sprockets-derailleur' # Multi-cpu assets precompile
+
+gem 'crowdin-cli'
+
+# CSRF protection for Sinatra.
+gem 'rack_csrf'
 
 group :development do
   gem 'annotate', '~> 2.6.6'
@@ -55,10 +61,11 @@ group :development, :test do
   gem 'sqlite3'
   gem 'timecop'
   gem 'fake_sqs'
+  gem 'fakeredis', require: false
 
   # for ui testing
   gem 'cucumber'
-  gem 'selenium-webdriver', '~> 2.41.0'
+  gem 'selenium-webdriver', '~> 2.45.0'
   gem 'rspec'
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
@@ -67,7 +74,7 @@ group :development, :test do
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
   gem 'minitest-around'
-  gem 'eyes_selenium', '~> 2.5.0'
+  gem 'eyes_selenium', '~> 2.28.0'
 end
 
 group :doc do
@@ -144,7 +151,7 @@ gem 'marked-rails' # js-based md renderer used for levelbuilder md preview
 
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
-gem 'font-awesome-rails'
+gem 'font-awesome-rails', '~> 4.6.3'
 gem 'sequel', '~> 4.10.0'
 gem 'user_agent_parser'
 
@@ -157,7 +164,7 @@ gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at 
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
 gem 'aws-sdk', '~> 2'
 
-gem 'rubocop', '0.34.2', require: false, group: [:development, :staging]
+gem 'rubocop', '0.37.2', require: false, group: [:development, :staging]
 gem 'haml_lint', require: false, group: [:development, :staging]
 
 # Reduce volume of production logs
@@ -179,3 +186,11 @@ gem 'oj'
 gem 'daemons'
 
 gem 'rest-client', '~> 1.8'
+
+gem 'rack-attack', '~> 4.4'
+
+# Generate SSL certificates
+gem 'acmesmith'
+
+gem "selectize-rails"
+gem 'mail_view'

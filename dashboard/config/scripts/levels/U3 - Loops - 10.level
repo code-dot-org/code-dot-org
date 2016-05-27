@@ -54,8 +54,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "instructions": "Write a program that simulates the rolling of two dice. If the sum of the dice is a 7 or 11 then roll again until the sum is something other than 7 or 11. (Click to see full instructions)",
-    "markdown_instructions": "# Writing Loop From English\r\n\r\nAlright it’s your turn. Can you translate the English into code? Hint: In English we often say \"if\" when we mean \"while.\"\r\n\r\n# Do This:\r\n\r\nTake this statement in English and translate it into code: \r\n\r\n**“Write a program that simulates the rolling of two dice. If the sum of the dice is a 7 or 11 then roll again until the sum is something other than 7 or 11.\"**\r\n\r\nYour program should display the results of each roll.",
+    "instructions": "Write a program that simulates the rolling of two dice. Roll the dice repeatedly until the sum of the dice is either 7 or 11.",
+    "markdown_instructions": "# Writing a Loop From English\r\n\r\nAlright it’s your turn. Can you translate the English into code? This problem also involves an \"until loop\" problem.\r\n# Do This:\r\n\r\nTake this statement in English and translate it into code: \r\n\r\n**“Write a program that simulates the rolling of two dice. Keep rolling the dice UNTIL the sum of the dice is either a 7 OR an 11.\"**  Your program should display the results of each roll.  \r\n\r\n**NOTE**: this one is a *little* tricky.  Hint: In English we sometimes say \"or\" when in cold hard logic we mean \"and\".\r\n\r\nHere is a sample output:\r\n\r\n![](https://images.code.org/706279a3c167d8c76068a7ded5146eed-image-1456434365077.png)",
     "start_blocks": "var die1 = randomNumber(1, 6);\r\nvar die2 = randomNumber(1, 6);",
     "encrypted_examples": "Dh5FHE2D++/BGa5M7/GUNtI+ielCmZEgzodhHeQ7/jNIOtfl6iW/F6ARYuln\nWPfF\n"
   },

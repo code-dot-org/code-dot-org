@@ -5,7 +5,7 @@ require 'rmagick'
 require_relative '../script_constants'
 
 def create_certificate_image2(image_path, name, params={})
-  name = name.to_s.gsub(/@/,'\@').strip
+  name = name.to_s.force_8859_to_utf8.gsub(/@/, '\@').strip
   name = ' ' if name.empty?
 
   background = Magick::Image.read(image_path).first
@@ -31,7 +31,7 @@ end
 # This method returns a newly-allocated Magick::Image object.
 # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
 def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=nil)
-  name = name.gsub(/@/,'\@')
+  name = name.force_8859_to_utf8.gsub(/@/, '\@')
   name = ' ' if name.empty?
 
   course ||= ScriptConstants::HOC_NAME
@@ -88,7 +88,8 @@ def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=
 end
 
 def prefilled_title_course?(course)
-  ScriptConstants.hoc?(course) || ScriptConstants.twenty_hour?(course)
+  ScriptConstants.script_in_category?(:hoc, course) ||
+      ScriptConstants.script_in_category?(:twenty_hour, course)
 end
 
 # Specify a fallback certificate title for a given non-HoC course ID. As of HoC
@@ -111,13 +112,13 @@ def fallback_course_title_for(course)
 end
 
 def certificate_template_for(course)
-  if ScriptConstants.hoc?(course)
-    if ScriptConstants.minecraft?(course)
+  if ScriptConstants.script_in_category?(:hoc, course)
+    if ScriptConstants.script_in_category?(:minecraft, course)
       'MC_Hour_Of_Code_Certificate.jpg'
     else
       'hour_of_code_certificate.jpg'
     end
-  elsif ScriptConstants.twenty_hour?(course)
+  elsif ScriptConstants.script_in_category?(:twenty_hour, course)
     '20hours_certificate.jpg'
   else
     'blank_certificate.png'

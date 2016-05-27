@@ -18,50 +18,7 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-Teachers from Seattle, Denver and Utah will travel to Spokane for PD and virtually connect with the Los Angeles PD.
-
-Teachers from San Francisco will travel to Los Angeles for PD and can find more details about their workshop on the [LAUSD page](/educate/pd/15-16/lausd).
-
-
-**Save the dates:**
-
-Quarter 1: Saturday, October 3, 2015
-
-Quarter 2: Saturday, November 21, 2015
-
-Quarter 3: Saturday, January 30, 2016
-
-Quarter 4: Saturday, April 16, 2016
-
-**Please note the time change for future PD's*<br/>
-8:00am - 2:30pm
-<br/>
-Breakfast and lunch will be served.
-
-**Location**
-
-[Gonzaga University<br/>
-PACCAR 107<br/>
-502 E. Boone Avenue<br/>
-Spokane WA 99258](https://www.google.com/maps/place/Gonzaga+University/@47.6681035,-117.4112584,14z/data=!4m2!3m1!1s0x0:0xdb160d1679b907e7)
-
-Free parking is located on level 3 and 4 of the BARC parking garage on Hamilton and Boone Ave. See a [campus map here](/files/GU-campus-fall-2015-16.pdf).
-<br/>
-<br/>
-_Agendas_ for our frist Phase 3 in-person workshop can be found [here](/files/CSPFirstQuarterWorkshop-teachers.pdf). 
-
-
-
-**What to bring to Phase 3 quarterly sessions:**
-
-Laptop and Charger
-<br/>
-Green journal <br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
+Milestone Complete!
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 

@@ -17,13 +17,7 @@
     response.set_cookie('company', {value: company, domain: ".code.org", path: '/', expires: Time.now + (365 * 24 * 3600)})
   end
 
-#banner-slideshow
-  %a#banner-mc-link{href: "/api/hour/begin/mc"}
-    %img.banner#banner-mc{src: "/images/mc/MC_Wide_Learn_s_V4.jpg", style: "display: none;"}
-  %a#banner-starwars-link{href: launch_path}
-    %img.banner#banner-starwars{src: "/images/starwars_banner.jpg", style: "display: none;"}
-
-#learnCodeStudio.container.col-md-12
+#learnCodeStudio.container.col-md-12{style: "margin-top: 20px;"}
   #codeStudioCarousel.carousel.slide.multi-item-carousel
     .carousel-inner
       .item.active
@@ -62,13 +56,6 @@
 :javascript
   $(document).ready()
   {
-    if ("#{page_mode}" == "feature-starwars") {
-      $("#banner-starwars").fadeIn(1000);
-    }
-    else {
-      $("#banner-mc").fadeIn(1000);
-    }
-
     if ("#{request.locale}" != "en-US") {
       $("#codeStudioCarousel").removeClass('slide');
     }
@@ -83,22 +70,6 @@
       excludedElements: "button, .noSwipe",
       threshold: 25
     });
-  }
-
-  $.ready()
-  {
-    timerId = setInterval(cycleBanner, 13000);
-  }
-
-  function cycleBanner() {
-    if ($("#banner-starwars").is(':visible')) {
-      $("#banner-starwars").fadeOut(1000);
-      $("#banner-mc").delay(1000).fadeIn(4000);
-    }
-    else {
-      $("#banner-mc").fadeOut(1000);
-      $("#banner-starwars").delay(1000).fadeIn(4000);
-    }
   }
 
   $('#codeStudioCarousel').carousel({
@@ -121,9 +92,8 @@
     }
   });
 
-  // If mobile Star Wars block & banner go to blockly version
+  // If mobile Star Wars block go to blockly version
   if (window.mobilecheck()) {
-    $('#banner-starwars-link').attr("href", "/api/hour/begin/starwarsblocks");
     $('#miniblock-starwars a').attr("href", "/api/hour/begin/starwarsblocks");
     $('#gobutton-starwars a').attr("href", "/api/hour/begin/starwarsblocks");
   }

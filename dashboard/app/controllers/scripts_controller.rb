@@ -46,6 +46,7 @@ class ScriptsController < ApplicationController
   end
 
   def edit
+    @show_all_instructions = params[:show_all_instructions]
   end
 
   def update
@@ -69,8 +70,6 @@ class ScriptsController < ApplicationController
       @script_file = File.exist?(filename) && File.read(filename)
     end
   end
-
-  private
 
   def rake
     @errors = []

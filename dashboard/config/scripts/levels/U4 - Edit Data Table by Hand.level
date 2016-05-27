@@ -16,7 +16,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "View the data table and click edit next to each row.  Add the artists names for each song by hand. (Click to see full instructions)",
-    "markdown_instructions": "# Editing the data table by hand\r\n\r\nFrom the previous level you noticed that **a new column was added to the table** when you added an object that had a new property called \"artist\". This property is empty for the other objects in the table since they were created without it.\r\n\r\n![](https://images.code.org/c9bdf5a4b44f5824d083376b011b43e2-image-1449249071321.png)\r\n\r\n\r\n# Do This\r\n\r\n**Your code from the previous exercise** is provided.\r\n\r\n* Go to the \"mySongs\" data table\r\n* Click the **Edit** button next to each row and add the artist for each song already in the database.  \r\n* For reference:\r\n\t* Thriller - Michael Jackson\r\n    * Wonderwall - Oasis\r\n    * I Will Survive - Gloria Gaynor\r\n* Since you re-added \"Single Ladies\" you can **Delete** the earlier, incomplete one.\r\n* Move on where your database has **4 songs, each with a title, seconds, and artist**",
+    "markdown_instructions": "# Editing the Data Table by Hand\r\n\r\nIn the previous level, you noticed that **a new column was added to the table** when you added an object that had a new property called \"artist\". This property is empty for the other objects in the table, since they were created without it.\r\n\r\n![](https://images.code.org/c9bdf5a4b44f5824d083376b011b43e2-image-1449249071321.png)\r\n\r\n\r\n# Do This:\r\n\r\n**Your code from the previous exercise** is provided.\r\n\r\n* Go to the \"mySongs\" data table.\r\n* Click the **Edit** button next to each row and add the artist for each song already in the database.  \r\n* For reference:\r\n\t* Thriller - Michael Jackson\r\n    * Wonderwall - Oasis\r\n    * I Will Survive - Gloria Gaynor\r\n* Since you re-added \"Single Ladies\" you can **Delete** the earlier, incomplete one.\r\n* Move on where your database has **4 songs, each with a title, seconds, and artist**.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -47,7 +47,8 @@
     "debugger_disabled": "false",
     "project_template_level_name": "U4 - Exploring Data Tools - Template",
     "slider_speed": "1.0"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks/>
 </Applab>

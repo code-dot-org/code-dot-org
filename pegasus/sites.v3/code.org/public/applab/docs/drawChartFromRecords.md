@@ -27,15 +27,15 @@ Data drives the functionality of modern apps, and being able to analyze and lear
 
 **First time using App Lab table data storage?** Read a short overview of what it is and how to use it [here](/applab/docs/tabledatastorage).
 
-A chart screen element with the element ID of *chartId* must be added to your app in design mode. The available chart types are "bar", "line", "pie" and "scatter". *columns" is an array of strings for the column names from the *tableName* to use in the chart.
+A chart screen element with the element ID of *chartId* must be added to your app in design mode. The available chart types are "bar", "line", "pie" and "scatter". *columns* is an array of strings for the column names from the *tableName* to use in the chart.
 
-Bar Chart - The first element in the columns array needs to be the name of a table column containing strings (or unique numbers like years), which specify the names of the bars on the x-axis. The second element (and subsequent elements) in the columns array need to be the name of a table column containing numbers, which determines the height if each bar with a certain color.
+**Bar Chart** - The first element in the columns array needs to be the name of a table column containing strings (or unique numbers like years), which specify the names of the bars on the x-axis. The second element (and subsequent elements) in the columns array need to be the name of a table column containing numbers, which determines the height if each bar with a certain color.
 
-Line Chart - The first element in the columns array needs to be the name of a table column containing strings (or unique numbers like years), which specify the names of the values on the x-axis. The second element (and subsequent elements) in the columns array need to be the name of a table column containing numbers, which determines the y-axis values for each dot to connect with a certain color.
+**Line Chart** - The first element in the columns array needs to be the name of a table column containing strings (or unique numbers like years), which specify the names of the values on the x-axis. The second element (and subsequent elements) in the columns array need to be the name of a table column containing numbers, which determines the y-axis values for each dot to connect with a certain color.
 
-Pie Chart - The first element in the columns array needs to be the name of a table column containing strings, which specify the names of the sections of the pie chart. The second element in the columns array needs to be the name of a table column containing numbers, which determines the percentage amount of the pie chart it gets.
+**Pie Chart** - The first element in the columns array needs to be the name of a table column containing strings, which specify the names of the sections of the pie chart. The second element in the columns array needs to be the name of a table column containing numbers, which determines the percentage amount of the pie chart it gets.
 
-Scatter Chart - The first element in the columns array needs to be the name of a table column containing strings (or unique numbers like years), which specify the names of the values on the x-axis. The second element (and subsequent elements) in the columns array need to be the name of a table column containing numbers, which determines the y-axis values for each dot with a certain color.
+**Scatter Chart** - The first element in the columns array needs to be the name of a table column containing strings (or unique numbers like years), which specify the names of the values on the x-axis. The second element (and subsequent elements) in the columns array need to be the name of a table column containing numbers, which determines the y-axis values for each dot with a certain color.
 
 To View your app's table data, click 'View data' in App Lab and click the table name you want to view.
 
@@ -80,10 +80,10 @@ ____________________________________________________
 
 [example]
 
-**Example: Sales and Price** Display both the count sold and price to see if a relationship exists. Includes use of 'options' paraemter on chart.
+**Example: Sales and Price** Display both the count sold and price to see if a relationship exists. Includes use of 'options' parameter on chart.
 
 ```
-// Display both the count sold and price to see if a relationship exists. Includes use of 'options' paraemter on chart.
+// Display both the count sold and price to see if a relationship exists. Includes use of 'options' parameter on chart.
 textLabel("foodChoiceLabel", "Vote for your favorite food:");
 dropdown("foodChoices", "","hotdogs $1.50", "pasta $2.00", "pizza $4.50", "tacos $3.00");
 var prices = [1.50, 2.00, 4.50, 3.00];
@@ -145,8 +145,8 @@ drawChartFromRecords(chartId, chartType, tableName, columns, options, callback);
 | chartId | string | Yes | The unique identifier for the chart screen element. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _. |
 | chartType | string | Yes | "bar" or "line" or "pie" or "scatter" |
 | tableName | string | Yes | The name of the table to retrieve records from. |
-| columns | array of strings | Yes | The name of the columns from the table to retrieve records from and display on the cahrt. |
-| options | object | No | Display options for the chart. Either a javascript object variable or a javascript object defined using curly brace and colon notation (see example above). |
+| columns | array of strings | Yes | The name of the columns from the table to retrieve records from and display on the chart. |
+| options | object | No | Display options for the chart. Either a JavaScript object variable or a JavaScript object defined using curly brace and colon notation (see example above). |
 | callback | function | No | The callback function that is asynchronously called when the call to drawChartFromRecords() is finished. |
 
 [/parameters]

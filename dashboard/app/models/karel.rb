@@ -15,6 +15,7 @@
 #  type                     :string(255)
 #  md5                      :string(255)
 #  published                :boolean          default(FALSE), not null
+#  notes                    :text(65535)
 #
 # Indexes
 #
@@ -26,12 +27,12 @@ class Karel < Maze
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    ['farmer', 'farmer_night', 'bee', 'bee_night']
+    %w(farmer farmer_night bee bee_night)
   end
 
   # List of possible flower types
   def self.flower_types
-    ['redWithNectar', 'purpleNectarHidden']
+    %w(redWithNectar purpleNectarHidden)
   end
 
   def self.load_maze(maze_file, size)

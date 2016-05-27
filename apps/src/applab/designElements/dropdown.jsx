@@ -1,13 +1,14 @@
 /* global $ */
 
-var PropertyRow = require('./PropertyRow.jsx');
-var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
-var OptionsSelectRow = require('./OptionsSelectRow.jsx');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
-var ZOrderRow = require('./ZOrderRow.jsx');
-var EventHeaderRow = require('./EventHeaderRow.jsx');
-var EventRow = require('./EventRow.jsx');
-var colors = require('../../sharedJsxStyles').colors;
+var PropertyRow = require('./PropertyRow');
+var BooleanPropertyRow = require('./BooleanPropertyRow');
+var OptionsSelectRow = require('./OptionsSelectRow');
+var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
+var ZOrderRow = require('./ZOrderRow');
+var EventHeaderRow = require('./EventHeaderRow');
+var EventRow = require('./EventRow');
+var color = require('../../color');
+var EnumPropertyRow = require('./EnumPropertyRow');
 
 var elementUtils = require('./elementUtils');
 
@@ -65,6 +66,11 @@ var DropdownProperties = React.createClass({
           isNumber={true}
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
+        <EnumPropertyRow
+          desc={'text alignment'}
+          initialValue={element.style.textAlign || 'center'}
+          options={['left','right','center','justify']}
+          handleChange={this.props.handleChange.bind(this, 'textAlign')} />
         <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
@@ -88,7 +94,7 @@ var DropdownEvents = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
-  getChangeEventCode: function() {
+  getChangeEventCode: function () {
     var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
@@ -97,7 +103,7 @@ var DropdownEvents = React.createClass({
     return code;
   },
 
-  insertChange: function() {
+  insertChange: function () {
     this.props.onInsertEvent(this.getChangeEventCode());
   },
 
@@ -127,14 +133,14 @@ module.exports = {
   PropertyTab: DropdownProperties,
   EventTab: DropdownEvents,
 
-  create: function() {
+  create: function () {
     var element = document.createElement('select');
     element.style.width = '200px';
     element.style.height = '30px';
     element.style.fontSize = '14px';
     element.style.margin = '0';
-    element.style.color = colors.white;
-    element.style.backgroundColor = colors.teal;
+    element.style.color = color.white;
+    element.style.backgroundColor = color.applab_button_teal;
 
     var option1 = document.createElement('option');
     option1.innerHTML = 'Option 1';

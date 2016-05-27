@@ -13,16 +13,14 @@
         video: Unplug1
       Unplug2:
         title: "חשיבה חישובית"
-        desc: With nothing but paper and markers, students will learn the four steps
-          of computational thinking. After a brief introduction, students should be
-          split into groups where they will have to create directions for other students
-          to draw a specific monster (from a catalog of pre-selected monsters). The
-          entire task must be decomposed, then teams will analyze all monsters in
-          the catalog for patterns, abstract different details from the monsters,
-          then use that information to create an algorithm (directions) for another
-          team to draw a certain monster. Teams will then switch algorithms with another
-          group and draw the monster based on what that algorithm indicates. Is the
-          drawing what the original team intended?
+        desc: "ללא שום דבר מלבד נייר וטושים, התלמידים ילמדו ארבעת השלבים של חשיבה
+          חישובית. לאחר הקדמה קצרה, סטודנטים צריכים להתחלק לקבוצות היכן הם יהיו חייבים
+          ליצור הנחיות לסטודנטים אחרים לצייר מפלצת מסוים (מתוך קטלוג של מפלצות שנבחרו
+          מראש). הפעילות כולה חייבת להיות מפורקת, ולאחר מכן צוותי לנתח את כל המפלצות
+          בקטלוג לחידושים, מופשט פרטים שונים מפני המפלצות ולאחר מכן משתמשים במידע
+          זה כדי ליצור אלגוריתם (הכוונה) עבור קבוצה אחרת לצייר מפלצת מסוימים. צוותי
+          יהיה ואז מתג עם עוד קבוצה והאלגוריתמים לצייר את המפלצת בהתבסס על מה מצביע
+          על אלגוריתם זה. ? האם הציור מיועד לצוות המקורי?"
         pdfs:
         - unplug2
         video: Unplug2

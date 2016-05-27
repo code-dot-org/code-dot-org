@@ -24,7 +24,15 @@
           future: nem lehet a jövőben
   hello: Helló világ
   welcome_back: "Üdv újra, %{name}"
+  your_professional_learning_plan: Your Professional Learning Plan
+  see_your_learning_plan: See your learning plan
   submit: Elküldés
+  unsubmit: Visszavon
+  previous_page: Previous page
+  next_page: Következő oldal
+  cancel: Mégsem
+  okay: Oké
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Tanár hozzáadása:'
@@ -161,8 +169,6 @@
         subject: Csatlakozz %{teacher_name} osztályához a Code.org-on!
       student_disassociated:
         subject: 'Code.org figyelmeztetés: %{student_name} már nem a diákod a rendszerben.'
-      teacher_disassociated:
-        subject: 'Code.org figyelmeztetés: %{teacher_name} már nem a tanárod a rendszerben.'
   reports:
     error:
       access_denied: Nincs jogosultságod megtekinteni ennek a személynek a statisztikáit
@@ -370,12 +376,45 @@
     heading_elementary: "<h2>20 órás tanfolyamok</h2><h1>Számítástechnika alapjai
       (minden korosztálynak)</h1>"
     heading_apps: "<h2>Vidámság </h2><h1>Mindenkinek</h1>"
+    heading_tools: "<h2>Kész vagy a következő képésre?</h2><h1>JavaScript Eszközök
+      középiskoláknak</h1>"
     heading_legacy: "<h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>"
     your_gallery: Galéria
     no_primary_course: Próbálj ki egy tanfolyamot a Kód stúdióban
     choose_next_course: Próbáld ki a Kód Stúdiót, válassz egyet az alábbi tanfolyamok
       közül
     print_certificate: Igazolás kinyomtatása
+    announcement_title: Közlemények
+    announcement_view_all: "Összes megtekintése"
+    announcement_message: 'We''ve started to measure student learning in Courses 1-4
+      and our Accelerated Course on Code Studio. There''s a lot that goes into it,
+      so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging
+      concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed
+      the user experience</a> to answer the big question: <i>What can students do?</i>'
+    announcement_button: Tudj meg többet
+    announcement_petition: As a teacher, you're leading the way in a movement to give
+      every student in every school the opportunity to learn computer science. Now,
+      it's time to let your representatives hear from you. This week, education leaders,
+      28 governors, and CEOs of America's largest companies joined together in an
+      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_petition_button: Add your name
+  move_students:
+    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
+      enter a different section code.
+    section_code_not_entered: Please provide current_section_code.
+    section_code_cant_be_current_section: The current section cannot be the same as
+      the new section.
+    current_section_dne: Sorry, but section %{current_section_code} does not exist.
+      Please enter a different section code.
+    students_not_yours: You cannot move students from a section that does not belong
+      to you.
+    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
+    student_ids_not_entered: Please provide student_ids.
+    student_not_found: One or more students could not be found.
+    all_students_must_be_in_current_section: All the students must currently be enrolled
+      in your section.
+    already_enrolled_in_new_section: You cannot move these students because this teacher
+      already has them in another section.
   share:
     title: Tanulj a Kód Stúdióban
     description: Mindenki megismerkedhet a számítógép-tudománnyal. Készíts játékokat,
@@ -414,6 +453,8 @@
       Entertainment Ltd. Minden jog fenntartva.<br />Plants vs. Zombies&#8482; &copy;
       %{current_year} Electronic Arts Inc. Minden jog fenntartva.<br /> a Gumball
       csodálatos világa a Cartoon Network bejegyzett védjegye.
+    code_from_html: A Code.org p5.play-t használ, amelyet <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      a GNU LGPL 2.1</a> licenc véd.
     powered_by_aws: Az Amazon Web Services működteti
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, a CODE logó és az
       Hour of Code&reg; a Code.org védjegyei."
@@ -499,6 +540,15 @@
       current: Aktuális szintek
       unused: Nem használt szintek
   upsell:
+    applab:
+      title: App Lab
+      body: Az App Lab egy programozási környezet egyszerű alkalmazásokra. Tervezd
+        meg, kódolj blokkokkal vagy JavaScript-el hogy működjön, majd oszd meg másodpercek
+        alatt.
+      body_short: Tervezz egy alkalmazást, kódolj elemekből vagy JavaScript-ben, majd
+        oszd meg néhány másodperc alatt.
+      audience: Kor 13+
+      cta: Ismerd meg hogyan
     hoc:
       title: Hagyományos Útvesztö
       body: Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.
@@ -530,6 +580,15 @@
     minecraft:
       title: Minecraft
       body: Fedezd fel a Minecraft világát kódokkal.
+    unplugged:
+      title: Unplugged Lessons
+      audience: Ages 6+
+      body: We've compiled a list of unplugged lessons for you to use in your classroom.
+        Now you can teach the fundamentals of computer science, whether you have computers
+        in your classroom or not! Try using these lessons as a stand-alone course
+        or as complementary lessons for any computer science course.
+      body_short: If you don't have computers, try these unplugged lessons in your
+        classroom.
   gallery:
     students_drew_these_with_code: Diákok rajzolták ezeket a kódot.
     students_made_these_with_code: Ezeket diákok készítették kódolással!
@@ -553,10 +612,10 @@
     prerelease_hoc2014: Ez a tananyag <span class='betatext'> béta állapotban van</span>.
       A visszajelzések beérkezése után felülvizsgálat alá kerül, és további fejlesztés
       várható.
-    feedback: Visszajelzés küldése
     report_bug: Hiba bejelentése
     support: Segítség kérés
     support_url: "//support.code.org"
+    help_resources: Súgó és erőforrások
   multi:
     wrong_title: Helytelen válasz
     wrong_body: A megadott válasz nem megfelelő.  Próbáld újra!
@@ -564,6 +623,32 @@
     correct_body: Ez a helyes válasz.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
+  multi-submittable:
+    wrong_title: Köszönöm
+    wrong_body: Köszönjük hogy elküldtél egy választ.
+    correct_title: Köszönöm
+    correct_body: Köszönjük hogy elküldtél egy választ.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  level_group:
+    wrong_title: Köszönöm
+    wrong_body: Köszönjük az elküldött válaszokat.
+    correct_title: Köszönöm
+    correct_body: Köszönjük az elküldött válaszokat.
+  level_group-submittable:
+    wrong_title: Köszönöm
+    wrong_body: Köszönjük az elküldött válaszokat.
+    correct_title: Köszönöm
+    correct_body: Köszönjük az elküldött válaszokat.
+    unsubmit-title: Unsubmit your assessment
+    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
+      date.  Are you sure?
+    submit-incomplete-title: Submit your assessment
+    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
+      assessment after submitting it.  Are you sure?
+    submit-complete-title: Submit your assessment
+    submit-complete-body: You cannot edit your assessment after submitting it.  Are
+      you sure?
   match:
     wrong_title: Helytelen megoldás
     wrong_body: A megadott megoldás nem megfelelő.  Próbáld újra.
@@ -583,6 +668,8 @@
     placeholder: Itt add meg a válaszod
     open_response_title: Köszönjük
     open_response_body: Köszönjük a választ!
+    correct_title: Helyes
+    correct_body: Ez a helyes válasz.
   dialog:
     ok: OK
     startover_title: Biztosan újra szeretnéd kezdeni?
@@ -647,6 +734,7 @@
     completed_perfect: elkészült, tökéletes
     furthest_level_attempted: a legmagasabb szint megpróbálva
     assessment: "értékelés"
+    submitted: elküldve
   studio:
     courses_working_on: Tanfolyamok, amelyeken dolgozol
     completed_courses: Teljesített tanfolyamok
@@ -664,6 +752,10 @@
     share: Megosztás
     share_title: A projekt megosztása
     share_copy_link: 'A hivatkozás másolása:'
+    share_embed_description: You can paste the embed code into an HTML page to display
+      the project on a webpage.
+    embed: Embed
+    advanced_share: Show advanced options
     close: Bezár
     more: Mégtöbb
     name: Név
@@ -717,3 +809,23 @@
         acknowledge: Az alábbi információk megadásával tudomásul veszed, hogy azokat
           az %{link_start_privacy}Adatvédelmi szabályzatnak%{link_end} és a %{link_start_tos}Felhasználói
           szabályoknak%{link_end} megfelelően kezeljük
+  peer_review:
+    accepted:
+      name: Accepted
+      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
+        requirements"
+    rejected:
+      name: Rejected
+      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
+        the requirements"
+    escalated:
+      name: Escalated
+      description: I would like an instructor to review this submission
+  components:
+    icon_library:
+      search_placeholder_text: Keress egy ikont...
+      no_icons_found: Nem találhatók ikonok
+  flex_category:
+    required: "Összefoglaló"
+    content: Content
+    practice: Teacher Practices
