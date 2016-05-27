@@ -24,6 +24,12 @@ title: "Professional Development Workshop Survey"
     view "pd_workshop_survey/#{name.to_s}", *params
   end
 
+:javascript
+  window.pdWorkshopSurvey = {
+    enrollmentCode: "#{enrollment_code}",
+    course: "#{course}"
+  };
+
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
@@ -63,7 +69,7 @@ title: "Professional Development Workshop Survey"
           name: 'will_teach_b',
           label: "Will you be teaching/are you teaching #{course} #{subject} in the 2016-17 school year?"
         %div{id: 'will-teach-no-explain-wrapper', style: 'display: none;'}
-          %label.control-label{for: 'will_not_teach_explanation_s'}<
+          %label.control-label{for: 'will_not_teach_explanation_s'}
             %em{style: 'font-weight: normal;'} Please explain why not.
           %div
             %input.form-control{name: 'will_not_teach_explanation_s', placeholder: 'Why not?', type: 'text'}
@@ -73,7 +79,7 @@ title: "Professional Development Workshop Survey"
           name: 'reason_for_attending_ss[]',
           label: 'Reason for attending? (select all that apply)'
         %div{id: 'reason-for-attending-other-wrapper', style: 'display: none;'}
-          %label.control-label{for: 'reason_for_attending_other_s'}<
+          %label.control-label{for: 'reason_for_attending_other_s'}
             %em{style: 'font-weight: normal;'} Other reason?
           %div
             %input.form-control{name: 'reason_for_attending_other_s', placeholder: 'Other', type: 'text'}
@@ -273,5 +279,5 @@ title: "Professional Development Workshop Survey"
         %button#btn-submit.btn.btn-primary{type: "submit"} Submit
 
   #thanks{style: 'display: none;'}
-    %h1 Thank you
-    %h3 Your submission was received.
+    %h1 Thank you for your submission
+
