@@ -1,4 +1,5 @@
 /* global dashboard */
+import $ from 'jquery';
 
 $(window).load(function () {
   $('#evaluationTable .new_question').click(function (event) {

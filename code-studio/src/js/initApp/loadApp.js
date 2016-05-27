@@ -1,5 +1,5 @@
 /* global dashboard, appOptions, addToHome */
-
+import $ from 'jquery';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
 var progress = require('../progress');
