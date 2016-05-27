@@ -54,8 +54,11 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     sign_in(@user)
 
     @enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @course)
-    @unit_assignment = create(:plc_enrollment_unit_assignment, plc_user_course_enrollment: @enrollment,
-                              plc_course_unit: @course_unit, status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
+    @unit_assignment = create(:plc_enrollment_unit_assignment,
+                              plc_user_course_enrollment: @enrollment,
+                              plc_course_unit: @course_unit,
+                              status: Plc::EnrollmentUnitAssignment::IN_PROGRESS,
+                              user: @user)
   end
 
   test "perform_evaluation retrieves all questions and answers" do
