@@ -733,7 +733,7 @@ function makeDraggable(jqueryElements) {
 
         // Set original element properties to update values in Property tab
         elm.outerWidth(dimensions.width);
-        elm.outerHeight(dimensions.width);
+        elm.outerHeight(dimensions.height);
 
         var element = elm[0];
         // canvas uses width/height. other elements use style.width/style.height
