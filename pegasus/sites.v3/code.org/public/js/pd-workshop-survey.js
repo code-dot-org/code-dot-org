@@ -23,24 +23,24 @@ $(document).ready(function () {
     }
   });
 
-  $("select[name='reason_for_attending_ss[]']").change(function () {
-    if ($.inArray('Other', $(this).val()) > -1) {
+  $("input[name='reason_for_attending_ss[]']:checkbox").change(function () {
+    if ($("input[name='reason_for_attending_ss[]'][value='Other']").is(":checked")) {
       $('#reason-for-attending-other-wrapper').show();
     } else {
       $('#reason-for-attending-other-wrapper').hide();
     }
   });
 
-  $("select[name='how_heard_ss[]']").change(function () {
-    if ($.inArray('Other', $(this).val()) > -1) {
+  $("input[name='how_heard_ss[]']:checkbox").change(function () {
+    if ($("input[name='how_heard_ss[]'][value='Other']").is(":checked")) {
       $('#how-heard-other-wrapper').show();
     } else {
       $('#how-heard-other-wrapper').hide();
     }
   });
 
-  $("select[name='subjects_taught_ss[]']").change(function () {
-    if ($.inArray('Computer Science', $(this).val()) > -1) {
+  $("input[name='subjects_taught_ss[]']").change(function () {
+    if ($("input[name='subjects_taught_ss[]'][value='Computer Science']").is(":checked")) {
       $('#years-taught-cs-wrapper').show();
     } else {
       $('#years-taught-cs-wrapper').hide();
@@ -51,10 +51,14 @@ $(document).ready(function () {
 });
 
 function processResponse() {
-  $("#btn-submit").removeAttr('disabled');
-  $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
-  $('#pd-workshop-survey-form').hide();
-  $('#thanks').show();
+  if (window.pdWorkshopSurvey.course === "CS Fundamentals") {
+    window.location.href = "/pd-workshop-survey/materials/" + window.pdWorkshopSurvey.enrollmentCode;
+  } else {
+    $("#btn-submit").removeAttr('disabled');
+    $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
+    $('#pd-workshop-survey-form').hide();
+    $('#thanks').show();
+  }
 }
 
 function processError(data) {
