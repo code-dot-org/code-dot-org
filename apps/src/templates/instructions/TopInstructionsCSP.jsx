@@ -65,7 +65,7 @@ var TopInstructions = React.createClass({
     height: React.PropTypes.number.isRequired,
     expandedHeight: React.PropTypes.number.isRequired,
     maxHeight: React.PropTypes.number.isRequired,
-    markdown: React.PropTypes.string,
+    markdown: React.PropTypes.string.isRequired,
     collapsed: React.PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
@@ -74,7 +74,7 @@ var TopInstructions = React.createClass({
   },
 
   /**
-   *
+   * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
     window.addEventListener('resize', this.adjustMaxNeededHeight);
@@ -91,14 +91,12 @@ var TopInstructions = React.createClass({
   },
 
   /**
-   * TODO - comment me
+   * Height can get below min height iff we resize the window to be super small.
+   * If we then resize it to be larger again, we want to increase height.
    */
   componentWillReceiveProps(nextProps) {
     if (!nextProps.collapsed && nextProps.height < MIN_HEIGHT &&
         nextProps.height < nextProps.maxHeight) {
-      // Height can get below min height iff we resize the window to be super
-      // small. If we then resize it to be larger again, we want to increase
-      // height.
       this.props.setInstructionsRenderedHeight(Math.min(nextProps.maxHeight, MIN_HEIGHT));
     }
   },
@@ -121,7 +119,9 @@ var TopInstructions = React.createClass({
   },
 
   /**
-   * TODO - comment me
+   * Calculate how much height it would take to show top instructions with our
+   * entire instructions visible and update store with this value.
+   * @returns {number}
    */
   adjustMaxNeededHeight() {
     const instructionsContent = this.refs.instructions;
@@ -149,7 +149,6 @@ var TopInstructions = React.createClass({
   },
 
   render() {
-    // TODO - might it make more sense to put the same DOM there, but hide it?
     const mainStyle = [styles.main, {
       height: this.props.height - RESIZER_HEIGHT
     }, this.props.isEmbedView && styles.embedView];
