@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160526000000) do
+ActiveRecord::Schema.define(version: 20160527181440) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -436,7 +436,7 @@ ActiveRecord::Schema.define(version: 20160526000000) do
     t.integer  "plc_learning_module_id",            limit: 4
     t.datetime "created_at",                                  null: false
     t.datetime "updated_at",                                  null: false
-    t.integer  "user_id",                           limit: 4, null: false
+    t.integer  "user_id",                           limit: 4
   end
 
   add_index "plc_enrollment_module_assignments", ["plc_enrollment_unit_assignment_id"], name: "module_assignment_enrollment_index", using: :btree
@@ -449,7 +449,7 @@ ActiveRecord::Schema.define(version: 20160526000000) do
     t.string   "status",                        limit: 255
     t.datetime "created_at",                                null: false
     t.datetime "updated_at",                                null: false
-    t.integer  "user_id",                       limit: 4,   null: false
+    t.integer  "user_id",                       limit: 4
   end
 
   add_index "plc_enrollment_unit_assignments", ["plc_course_unit_id"], name: "enrollment_unit_assignment_course_unit_index", using: :btree

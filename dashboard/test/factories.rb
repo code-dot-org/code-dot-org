@@ -349,7 +349,7 @@ FactoryGirl.define do
     plc_user_course_enrollment nil
     plc_course_unit nil
     status Plc::EnrollmentUnitAssignment::START_BLOCKED
-    user {self.plc_user_course_enrollment.try(:user)}
+    user nil
   end
 
   factory :plc_course_unit, :class => 'Plc::CourseUnit' do
@@ -383,6 +383,7 @@ FactoryGirl.define do
   factory :plc_enrollment_module_assignment, :class => 'Plc::EnrollmentModuleAssignment' do
     plc_enrollment_unit_assignment nil
     plc_learning_module nil
+    user nil
   end
 
   factory :plc_user_course_enrollment, :class => 'Plc::UserCourseEnrollment' do
