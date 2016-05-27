@@ -1,0 +1,51 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2016-05-26T21:57:01.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Using `if` to Display Images\r\n\r\nWe are going to set up a dice game. We want to show a picture of a single die for each random number generated 1 to 6. We've already set up the screen in Design Mode, with a button to generate the roll and an image to show a picture of the die.\r\n\r\n**Note:** The flowchart for the desired behavior is below.\r\n\r\n# Do This:\r\n\r\n* Add an event handler for the Roll! button so that when the button is clicked it generates a random number from 1 to 6. \r\n\r\n* Add conditionals (`if`, `else if`, and `else`) to change the picture of the image (ID: `dice_image`) to display the correct side of the die depending on the random number generated. You will need to use <img src=\"https://images.code.org/89f2c13ef4ead590475c863a087597f8-image-1446535826599.30.16.png\" style=\"width:150px\"> with the URLs below to set the images for the die.\r\n\t* <img src=\"https://code.org/images/dice/1.png\" style=\"width: 50px\"> Dice 1 Image URL -  https://code.org/images/dice/1.png\r\n    * <img src=\"https://code.org/images/dice/2.png\" style=\"width: 50px\"> Dice 2 Image URL -  https://code.org/images/dice/2.png\r\n    * <img src=\"https://code.org/images/dice/3.png\" style=\"width: 50px\"> Dice 3 Image URL - https://code.org/images/dice/3.png\r\n    * <img src=\"https://code.org/images/dice/4.png\" style=\"width: 50px\"> Dice 4 Image URL - https://code.org/images/dice/4.png\r\n    * <img src=\"https://code.org/images/dice/5.png\" style=\"width: 50px\"> Dice 5 Image URL - https://code.org/images/dice/5.png\r\n    * <img src=\"https://code.org/images/dice/6.png\" style=\"width: 50px\"> Dice 6 Image URL -  https://code.org/images/dice/6.png\r\n\r\n<img src=\"https://images.code.org/392c125a2620ac4949091fc075864f4c-image-1446174585241.png\" style=\"width: 100%\">\r\n<a href=\"https://images.code.org/392c125a2620ac4949091fc075864f4c-image-1446174585241.png\" target=\"_blank\">Open diagram in a new tab</a>\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "U3 - Dice - Template",
+    "droplet_tooltips_disabled": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "instructions": "Show different die images for the random number generated. (Click to see full instructions)",
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "RdR6BYVv7pwWYBSvzEiALHodSKLHUc5BvP8ahauVZT0OqU/TPUn44dnkTC2H\nfnFG\n",
+    "fail_on_lint_errors": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>
