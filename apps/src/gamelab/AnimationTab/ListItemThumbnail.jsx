@@ -1,6 +1,7 @@
 /** Animation or Frame thumbnail */
 'use strict';
 
+import React from 'react';
 import _ from '../../lodash';
 import color from '../../color';
 import { getSourceUrl, METADATA_SHAPE } from '../animationMetadata';

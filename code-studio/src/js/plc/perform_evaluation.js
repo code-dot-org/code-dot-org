@@ -1,4 +1,5 @@
 /* global dashboard */
+import $ from 'jquery';
 
 $(window).load(function () {
   $('#submit_evaluation').click(function () {

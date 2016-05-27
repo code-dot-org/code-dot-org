@@ -1,5 +1,6 @@
 'use strict';
 
+import React from 'react';
 import TopInstructionsCSF from './TopInstructionsCSF';
 import TopInstructionsCSP from './TopInstructionsCSP';
 
