@@ -71,21 +71,22 @@ const MIN_HEIGHT = COLLAPSED_HEIGHT;
 
 var TopInstructions = React.createClass({
   propTypes: {
-    // TODO
-    // isEmbedView: React.PropTypes.bool.isRequired,
-    // puzzleNumber: React.PropTypes.number.isRequired,
-    // stageTotal: React.PropTypes.number.isRequired,
-    // height: React.PropTypes.number.isRequired,
-    // maxHeight: React.PropTypes.number.isRequired,
-    // markdown: React.PropTypes.string,
-    // collapsed: React.PropTypes.bool.isRequired,
-    // toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
-    // setInstructionsHeight: React.PropTypes.func.isRequired,
-    // onResize: React.PropTypes.func.isRequired
+    isEmbedView: React.PropTypes.bool.isRequired,
+    height: React.PropTypes.number.isRequired,
+    expandedHeight: React.PropTypes.number.isRequired,
+    maxHeight: React.PropTypes.number.isRequired,
+    collapsed: React.PropTypes.bool.isRequired,
+    shortInstructions: React.PropTypes.string.isRequired,
+    longInstructions: React.PropTypes.string,
+
+    toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
+    setInstructionsHeight: React.PropTypes.func.isRequired,
+    setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
+    setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired
   },
 
   /**
-   * TODO - comment me
+   * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
     window.addEventListener('resize', this.adjustMaxNeededHeight);
@@ -98,13 +99,11 @@ var TopInstructions = React.createClass({
   },
 
   /**
-   * TODO - comment me
+   * Height can get below min height iff we resize the window to be super small.
+   * If we then resize it to be larger again, we want to increase height.
    */
   componentWillReceiveProps(nextProps) {
     if (nextProps.height < MIN_HEIGHT && nextProps.height < nextProps.maxHeight) {
-      // Height can get below min height iff we resize the window to be super
-      // small. If we then resize it to be larger again, we want to increase
-      // height.
       this.props.setInstructionsRenderedHeight(Math.min(nextProps.maxHeight, MIN_HEIGHT));
     }
   },
@@ -127,7 +126,9 @@ var TopInstructions = React.createClass({
   },
 
   /**
-   * TODO - comment me
+   * Calculate how much height it would take to show top instructions with our
+   * entire instructions visible and update store with this value.
+   * @returns {number}
    */
   adjustMaxNeededHeight() {
     const instructionsContent = this.refs.instructions;
@@ -139,14 +140,15 @@ var TopInstructions = React.createClass({
   },
 
   /**
-   * TODO - comment me
+   * Handle a click to our collapser icon by changing our collapse state, and
+   * updating our rendered height.
    */
   handleClickCollapser() {
     const collapsed = !this.props.collapsed;
     this.props.toggleInstructionsCollapsed();
 
+    // adjust rendered height based on next collapsed state
     if (collapsed) {
-      // TODO - i think if we wanted this to be more dynamic it could be now
       this.props.setInstructionsRenderedHeight(COLLAPSED_HEIGHT);
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
@@ -192,8 +194,6 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isEmbedView: state.pageConstants.isEmbedView,
-    puzzleNumber: state.pageConstants.puzzleNumber,
-    stageTotal: state.pageConstants.stageTotal,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,
     maxHeight: Math.min(state.instructions.maxAvailableHeight,

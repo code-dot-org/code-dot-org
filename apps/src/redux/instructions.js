@@ -30,7 +30,6 @@ const instructionsInitialState = {
   renderedHeight: 0,
   // The amount of vertical space consumed by the TopInstructions component
   // when it is not collapsed
-  // TODO - could be stored as component state?
   expandedHeight: 0,
   // The maximum amount of vertical space needed by the TopInstructions component.
   maxNeededHeight: Infinity,
