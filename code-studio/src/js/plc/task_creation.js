@@ -1,5 +1,6 @@
 /* globals dashboard */
 
+import $ from 'jquery';
 var React = require('react');
 var ReactDOM = require('react-dom');
 var IconLibrary = require('../components/IconLibrary');
