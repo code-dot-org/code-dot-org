@@ -3,6 +3,7 @@
   Sets date, startTime, and endTime for the session.
  */
 
+import $ from 'jquery';
 var React = require('react');
 var ReactDOM = require('react-dom');
 var moment = require('moment');

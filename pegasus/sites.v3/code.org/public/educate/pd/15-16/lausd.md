@@ -67,7 +67,9 @@ Breakfast and lunch will be served.
 
 **Location**
 
-More Details Coming Soon!
+[Columbia Memorial Space Center<br/>
+12400 Columbia Way<br/>
+Downey, CA 90242<br/>](https://goo.gl/maps/6YNNhyHzPy32)
 
 **What do I bring to Phase 4 PD?**
 

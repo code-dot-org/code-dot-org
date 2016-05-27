@@ -29,7 +29,8 @@
     "x": "100",
     "y": "100",
     "start_direction": "90",
-    "instructions": "Use loops to help the artist connect all of the dots. "
+    "instructions": "Use loops to help the artist connect all of the dots. ",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"sample9_1\",\r\n  \"callout_text\": \"This should be something other than artist, but it's here to connect the previous levels to freeplay\",\r\n  \"element_id\": \"#tileElement22\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
   },
   "published": true,
   "notes": "Linking the previous levels to freeplay",

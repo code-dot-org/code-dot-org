@@ -1,4 +1,6 @@
 /* global trackEvent */
+import $ from 'jquery';
+import _ from 'lodash';
 import React from 'react';
 
 // TODO (brent) - could we also use this instead of what we have in sharing.html.ejs?
@@ -98,7 +100,7 @@ var SendToPhone = React.createClass({
   },
 
   render: function () {
-    var styles = $.extend({}, baseStyles, this.props.styles);
+    var styles = _.assign({}, baseStyles, this.props.styles);
     return (
       <div>
         <label style={styles.label} htmlFor="phone">Enter a US phone number:</label>
