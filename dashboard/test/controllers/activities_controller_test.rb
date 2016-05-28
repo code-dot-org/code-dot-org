@@ -472,7 +472,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(LevelSource, Activity, UserLevel) do
+    assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
         assert_no_difference('@user.reload.total_lines') do # don't update total lines
           post :milestone, @milestone_params.merge(result: 'false', testResult: 10)

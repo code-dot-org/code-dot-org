@@ -781,14 +781,20 @@ SQL
     end
   end
 
-  def User.track_script_progress(user_id, script_id)
+  def User.track_script_progress(user_id, script_id, new_level_completed)
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user_id: user_id, script_id: script_id).first_or_create!
       time_now = Time.now
 
-      user_script.started_at = time_now unless user_script.started_at
-      user_script.last_progress_at = time_now
-      user_script.completed_at = time_now if !user_script.completed_at && user_script.check_completed?
+      unless user_script.started_at
+        user_script.started_at = time_now
+        user_script.last_progress_at = time_now
+      end
+
+      if new_level_completed
+        user_script.last_progress_at = time_now
+        user_script.completed_at = time_now && !user_script.completed_at && user_script.check_completed?
+      end
 
       user_script.save!
     end
@@ -887,8 +893,8 @@ SQL
       PeerReview.create_for_submission(user_level, level_source_id)
     end
 
-    if new_level_completed && script_id
-      User.track_script_progress(user_id, script_id)
+    if script_id
+      User.track_script_progress(user_id, script_id, new_level_completed)
     end
 
     if new_level_perfected
@@ -951,7 +957,7 @@ SQL
         end
       end
     end
-    User.track_script_progress(self.id, script.id)
+    User.track_script_progress(self.id, script.id, true)
   end
 
   def User.csv_attributes
