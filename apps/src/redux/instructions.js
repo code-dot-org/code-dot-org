@@ -6,40 +6,108 @@ import _ from '../lodash';
  * that are required for this feature, and the reducer that sets state based
  * off of those actions.
  */
+const SET_CONSTANTS = 'instructions/SET_CONSTANTS';
 const TOGGLE_INSTRUCTIONS_COLLAPSED = 'instructions/TOGGLE_INSTRUCTIONS_COLLAPSED';
+const SET_INSTRUCTIONS_RENDERED_HEIGHT = 'instructions/SET_INSTRUCTIONS_RENDERED_HEIGHT';
 const SET_INSTRUCTIONS_HEIGHT = 'instructions/SET_INSTRUCTIONS_HEIGHT';
-const SET_INSTRUCTIONS_MAX_HEIGHT = 'instructions/SET_INSTRUCTIONS_MAX_HEIGHT';
+const SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED = 'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED';
+const SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE = 'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE';
 
+/**
+ * Some scenarios:
+ * (1) Projects level w/o instructions: shortInstructions and longInstructions
+ *     will both be undefined
+ * (2) CSP level: Just longInstructions
+ * (3) CSF level with only one set of instructions: Just shortInstructions
+ * (4) CSF level with two sets of instructions: shortInstructiosn and
+ *     longInstructions will both be set.
+ */
 const instructionsInitialState = {
+  shortInstructionsWhenCollapsed: false,
+  shortInstructions: undefined,
+  longInstructions: undefined,
   collapsed: false,
-  // represents the uncollapsed height
-  height: 300,
-  maxHeight: 0
+  // The amount of vertical space consumed by the TopInstructions component
+  renderedHeight: 0,
+  // The amount of vertical space consumed by the TopInstructions component
+  // when it is not collapsed
+  expandedHeight: 0,
+  // The maximum amount of vertical space needed by the TopInstructions component.
+  maxNeededHeight: Infinity,
+  // The maximum height we'll allow the resizer to drag to. This is based in
+  // part off of the size of the code workspace.
+  maxAvailableHeight: Infinity
 };
 
 export default function reducer(state = instructionsInitialState, action) {
+  if (action.type === SET_CONSTANTS) {
+    if (state.shortInstructions || state.longInstructions) {
+      throw new Error('instructions constants already set');
+    }
+    const { shortInstructionsWhenCollapsed, shortInstructions, longInstructions } = action;
+    let collapsed = state.collapsed;
+    if (!longInstructions) {
+      // If we only have short instructions, we want to be in collapsed mode
+      collapsed = true;
+    }
+    return _.assign({}, state, {
+      shortInstructionsWhenCollapsed,
+      shortInstructions,
+      longInstructions,
+      collapsed
+    });
+  }
+
   if (action.type === TOGGLE_INSTRUCTIONS_COLLAPSED) {
+    const longInstructions = state.longInstructions;
+    if (!longInstructions) {
+      // No longInstructions implies either (a) no instructions or (b) we only
+      // have short instructions. In both cases, we should be collapsed.
+      throw new Error('Can not toggle instructions collapsed without longInstructions');
+    }
     return _.assign({}, state, {
       collapsed: !state.collapsed
     });
   }
 
-  if (action.type === SET_INSTRUCTIONS_HEIGHT &&
-      action.height !== state.height) {
+  if (action.type === SET_INSTRUCTIONS_RENDERED_HEIGHT) {
     return _.assign({}, state, {
-      height: action.height
+      renderedHeight: action.height,
+      expandedHeight: !state.collapsed ? action.height : state.expandedHeight
     });
   }
 
-  if (action.type === SET_INSTRUCTIONS_MAX_HEIGHT &&
-      action.maxHeight !== state.maxHeight) {
+  if (action.type === SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED &&
+      action.maxNeededHeight !== state.maxNeededHeight) {
     return _.assign({}, state, {
-      maxHeight: action.maxHeight
+      maxNeededHeight: action.maxNeededHeight
+    });
+  }
+
+  if (action.type === SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE &&
+      action.maxAvailableHeight !== state.maxAvailableHeight) {
+    return _.assign({}, state, {
+      maxAvailableHeight: action.maxAvailableHeight,
+      renderedHeight: Math.min(action.maxAvailableHeight, state.renderedHeight),
+      expandedHeight: Math.min(action.maxAvailableHeight, state.expandedHeight)
     });
   }
 
   return state;
 }
+
+export const setInstructionsConstants = ({shortInstructionsWhenCollapsed,
+    shortInstructions, longInstructions}) => ({
+  type: SET_CONSTANTS,
+  shortInstructionsWhenCollapsed,
+  shortInstructions,
+  longInstructions
+});
+
+export const setInstructionsRenderedHeight = height => ({
+  type: SET_INSTRUCTIONS_RENDERED_HEIGHT,
+  height
+});
 
 /**
  * Toggles whether instructions are currently collapsed.
@@ -49,20 +117,21 @@ export const toggleInstructionsCollapsed = () => ({
 });
 
 /**
- * Set the height of the instructions panel
- * @param {number} height - Height of instructions pane
+ * Sets the maximum amount of height need by our instructions component if it
+ * were to render itself with no scrollbars
  */
-export const setInstructionsHeight = height => ({
-  type: SET_INSTRUCTIONS_HEIGHT,
-  height
+export const setInstructionsMaxHeightNeeded = height => ({
+  type: SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED,
+  maxNeededHeight: height
 });
+
 
 /**
  * Set the max height of the instructions panel
- * @param {number} maxHeight - Don't let user drag instructions pane to be
+ * @param {number} maxAvailableHeight - Don't let user drag instructions pane to be
  *   larger than this number.
  */
-export const setInstructionsMaxHeight = maxHeight => ({
-  type: SET_INSTRUCTIONS_MAX_HEIGHT,
-  maxHeight
+export const setInstructionsMaxHeightAvailable = height => ({
+  type: SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE,
+  maxAvailableHeight: height
 });

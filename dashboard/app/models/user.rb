@@ -266,10 +266,14 @@ class User < ActiveRecord::Base
     end
   end
 
-  before_save :make_teachers_21, :dont_reconfirm_emails_that_match_hashed_email, :hash_email, :hide_email_for_younger_users # order is important here ;)
+  # NOTE: Order is important here.
+  before_save :make_teachers_21,
+    :dont_reconfirm_emails_that_match_hashed_email,
+    :hash_email,
+    :hide_email_for_students
 
   def make_teachers_21
-    return unless user_type == TYPE_TEACHER
+    return unless teacher?
     self.age = 21
   end
 
@@ -282,8 +286,8 @@ class User < ActiveRecord::Base
     self.hashed_email = User.hash_email(email)
   end
 
-  def hide_email_for_younger_users
-    if age && under_13?
+  def hide_email_for_students
+    if student?
       self.email = ''
     end
   end
