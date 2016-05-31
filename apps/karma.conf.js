@@ -21,7 +21,9 @@ module.exports = function (config) {
 
     proxies: {
       '/blockly/media/': 'http://localhost:'+PORT+'/base/static/',
+      '/lib/blockly/media/': 'http://localhost:'+PORT+'/base/static/',
       '/base/static/1x1.gif': 'http://localhost:'+PORT+'/base/lib/blockly/media/1x1.gif',
+      '/v3/assets/fake_id': 'http://localhost:'+PORT+'/base/test/integration/assets/fake_id',
     },
 
     // list of files to exclude

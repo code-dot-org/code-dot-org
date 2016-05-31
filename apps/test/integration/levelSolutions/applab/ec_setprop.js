@@ -351,7 +351,8 @@ module.exports = {
 
           // we set the width/height attributes instead of style.width/height
           console.log(screen.style.backgroundImage);
-          assert(/url\(.*flappy_promo.png\)$/.test(screen.style.backgroundImage));
+          assert(/url\(.*flappy_promo.png['"]?\)$/.test(screen.style.backgroundImage),
+                 'screen background image should be flappy_promo.png. Instead: '+screen.style.backgroundImage);
           Applab.onPuzzleComplete();
         });
       },
