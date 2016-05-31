@@ -1,0 +1,224 @@
+///////////////////////////////////////////////////////////////////////////
+// HELPER FUNCTIONS
+///////////////////////////////////////////////////////////////////////////
+
+// auth helpers
+
+isLoggedIn() { auth.uid !== null }
+
+// general helpers
+
+orZero(value) { valueOr(value, 0) }
+valueOr(value, defaultValue) { value == null ? defaultValue : value }
+isUnchanged(value) { value == prior(value) }
+isIncreased(value) { orZero(value) > orZero(prior(value)) }
+isIncreasedBy(value, increment) { orZero(value) >= orZero(prior(value)) + increment}
+isNotRemoved(value) { value != null || prior(value) == null }
+
+// Row count helpers
+
+getRecordAsInt(record) { record == null ? 0 : 1 }
+sumRowCounts(rowCount) { 
+  orZero(rowCount['0']) + orZero(rowCount['1']) + 
+  orZero(rowCount['2']) + orZero(rowCount['3']) + 
+  orZero(rowCount['4']) + orZero(rowCount['5']) + 
+  orZero(rowCount['6']) + orZero(rowCount['7']) + 
+  orZero(rowCount['8']) + orZero(rowCount['9']) 
+}
+rowCount(record) { sumRowCounts(record.parent().parent().row_counts) }
+rowCountUpdated(nextRecord, prevRecord) { getRecordAsInt(nextRecord) - getRecordAsInt(prevRecord) == rowCount(nextRecord) - rowCount(prevRecord) }
+
+// target record helpers
+
+isTargetId(record, record_id) { record_id == record.parent().parent().target_record_id }
+// The NEW version of the NEW target record. Note: calling prior() on
+// the result of nextTargetRecord will get the OLD version of the OLD
+// target record, which is probably not what you want.
+nextTargetRecord(table) { table[table.target_record_id] }
+// The OLD version of the NEW target record.
+prevTargetRecord(table) { prior(table)[table.target_record_id] }
+
+// rate limit helpers
+
+getRateLimitCounter(channel, interval) { channel.counters.limits[interval + ''] }
+getRateLimitStorage(channel, interval) { channel.storage.limits[interval + ''] }
+
+isValidIncrement(limitCounter, maxCount) {
+  isUnchanged(limitCounter.last_reset_time) &&
+  isIncreased(limitCounter.last_token) &&
+  limitCounter.last_token <= maxCount 
+}
+
+isValidReset(channel, interval) {
+  channel.storage.limits[interval + ''].used_tokens == null &&
+  channel.counters.limits[interval + ''].last_reset_time == now && 
+  isIncreasedBy(channel.counters.limits[interval + ''].last_reset_time, interval * 1000) &&
+  channel.counters.limits[interval + ''].last_token == 0
+}
+
+// The NEW version of the NEW target op.
+nextTargetOp(limitData) {
+  limitData.used_tokens[limitData.target_token + '']
+}
+
+// The OLD version of the NEW target op.
+prevTargetOp(limitData) { 
+  prior(limitData).used_tokens[limitData.target_token + '']
+}
+
+isValidUsedOp(channel, interval) {
+  isUnchanged(channel.counters.limits[interval + ''].last_token) &&
+  isUnchanged(channel.counters.limits[interval + ''].last_reset_time) &&
+  targetOpUsed(channel.storage.limits[interval + '']) &&
+  channel.storage.limits[interval + ''].target_token <= channel.counters.limits[interval + ''].last_token
+}
+
+isValidRateLimitStorage(channel, interval) {
+  isValidReset(channel, interval) ||
+  isValidUsedOp(channel, interval)
+}
+
+isValidRateLimitCounter(channel, interval, maxCount) {
+  isValidIncrement(channel.counters.limits[interval + ''], maxCount) || 
+  isValidReset(channel, interval)
+}
+
+targetOpUsed(limitData) {
+  limitData.target_token != null &&
+  prevTargetOp(limitData) == null && nextTargetOp(limitData) == true
+}
+
+// Minimal check to ensure the client wrote to each rate limit,
+// which will trigger the more thorough validation checks there.
+allRateLimitsUpdated(channel) {
+  targetOpUsed(getRateLimitStorage(channel, 15)) &&
+  targetOpUsed(getRateLimitStorage(channel, 60))
+}
+
+///////////////////////////////////////////////////////////////////////////
+// PATH RULES
+///////////////////////////////////////////////////////////////////////////
+
+path /v3/channels {
+  read() { true }
+}
+
+path /v3/channels/{channel_id}/server_time/{user_id} is Number {
+  write() { auth.uid == user_id }
+  validate() { this == now }
+}
+
+// STORAGE
+
+// key-value storage
+
+path /v3/channels/{channel_id}/storage/keys {
+  write() { isLoggedIn() }
+}
+
+// table storage
+
+// Children of {table_name} must specify their own write() rule.
+path /v3/channels/{channel_id}/storage/tables/{table_name} is Table;
+
+type Table {
+  target_record_id: String
+  row_counts: Number[]
+  // Don't specify type String[] here, or bolt will generate a wildcard which
+  // conflicts with our own {record_id} wildcard below.
+  records: Any | Null 
+}
+
+path /v3/channels/{channel_id}/storage/tables/{table_name}/target_record_id {
+  write() { isLoggedIn() }
+}
+
+path /v3/channels/{channel_id}/storage/tables/{table_name}/row_counts {
+  write() { isLoggedIn() && this != null }
+  validate() { 
+    // require that target record is modified appropriately when row count is modified
+    sumRowCounts(this) < 50 && rowCountUpdated(nextTargetRecord(this.parent()), prevTargetRecord(this.parent()))
+  }
+}
+
+// the {record_id} is the id of the record. Its value is the json-encoded
+// value of the record.
+path /v3/channels/{channel_id}/storage/tables/{table_name}/records/{record_id} is String {
+  write() {
+    // Specify these rules in write(), because validate() is skipped when data is null
+    // (e.g. records are removed). Ancestors of this node must not specify a write() rule,
+    // to ensure this node's write() rule is evaluated.
+    isLoggedIn() && isTargetId(this, record_id) && rowCountUpdated(this, prior(this)) &&
+    allRateLimitsUpdated(this.parent().parent().parent().parent().parent())
+  }
+}
+
+// rate limit storage
+
+type RateLimitStorages {
+  '15': RateLimitStorage | Null
+  '60': RateLimitStorage | Null
+}
+
+type RateLimitStorage {
+  target_token: Number | Null
+  used_tokens: Boolean[]
+}
+
+path /v3/channels/{channel_id}/storage/limits is RateLimitStorages {
+  write() { isLoggedIn() && this != null }
+}
+
+path /v3/channels/{channel_id}/storage/limits/15 {
+  validate() {
+    isValidRateLimitStorage(this.parent().parent().parent(), 15)
+  }
+}
+
+path /v3/channels/{channel_id}/storage/limits/60 {
+  validate() {
+    isValidRateLimitStorage(this.parent().parent().parent(), 60)
+  }
+}
+
+// COUNTERS
+
+// last id counter
+
+// The last record id previously assigned to a new record in this table.
+// Incremented transactionally. The new value belongs to the caller.
+path /v3/channels/{channel_id}/counters/tables/{table_name}/last_id is LastIdCounter {
+  write() { isLoggedIn() && this != null }
+}
+
+type LastIdCounter extends Number {
+  validate() { this > orZero(prior(this)) }
+}
+
+// rate limit counters
+
+path /v3/channels/{channel_id}/counters/limits is RateLimitCounters {
+  write() { isLoggedIn() && this != null }
+}
+
+type RateLimitCounters {
+  '15': RateLimitCounter | Null
+  '60': RateLimitCounter | Null
+}
+
+type RateLimitCounter {
+  last_reset_time: Number | Null
+  last_token: Number
+}
+
+path /v3/channels/{channel_id}/counters/limits/15 {
+  validate() {
+    isValidRateLimitCounter(this.parent().parent().parent(), 15, 30)
+  }
+}
+
+path /v3/channels/{channel_id}/counters/limits/60 {
+  validate() {
+    isValidRateLimitCounter(this.parent().parent().parent(), 60, 60)
+  }
+}

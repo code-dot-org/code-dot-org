@@ -71,6 +71,7 @@ class ProjectsController < ApplicationController
     return if redirect_applab_under_13(@level)
     redirect_to action: 'edit', channel_id: create_channel({
       name: 'Untitled Project',
+      useFirebase: use_firebase_for_new_project?,
       level: polymorphic_url([params[:key], 'project_projects'])
     })
   end
