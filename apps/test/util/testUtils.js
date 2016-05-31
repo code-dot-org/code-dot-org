@@ -3,10 +3,12 @@ import {assert} from './configuredChai';
 require('require-globify');
 
 var $ = require('jquery');
+var React = require('react');
 
 exports.setExternalGlobals = function () {
   window.$ = $;
   window.jQuery = $;
+  window.React = React;
 
   window.dashboard = $.extend(window.dashboard, {
     i18n: {
