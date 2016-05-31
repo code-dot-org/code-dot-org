@@ -12,7 +12,9 @@ var path = require('path');
 var timeGrunt = require('time-grunt-nowatch');
 
 var LOG_FILE_NAME = 'build-times.log';
+var UPLOAD_LOG_FILE_NAME = 'build-times-to-upload.log';
 var LOG_FILE_PATH = path.join(__dirname, '../', LOG_FILE_NAME);
+var UPLOAD_LOG_FILE_PATH = path.join(__dirname, '../', UPLOAD_LOG_FILE_NAME);
 
 /**
  * Decorate the given grunt module to record and report build durations.
@@ -27,8 +29,10 @@ module.exports = function logBuildTimes(grunt) {
   timeGrunt(grunt, false, function (stats, log) {
     log(chalk.underline('New Relic Logging'));
     writeStatsToLogFile(stats, log);
-    uploadLoggedStatsToNewRelic(log);
   });
+  return {
+    upload: uploadLoggedStatsToNewRelic
+  };
 };
 
 /**
@@ -38,11 +42,13 @@ module.exports = function logBuildTimes(grunt) {
  */
 function writeStatsToLogFile(stats, consoleLog) {
   try {
-    fs.appendFileSync(LOG_FILE_PATH, JSON.stringify([
+    var logLine = JSON.stringify([
       new Date().toString(),
       getUserEmail(),
       stats
-    ])+'\n');
+    ])+'\n';
+    fs.appendFileSync(LOG_FILE_PATH, logLine);
+    fs.appendFileSync(UPLOAD_LOG_FILE_PATH, logLine);
     consoleLog('Build statistics added to ' + LOG_FILE_NAME);
   } catch (e) {
     consoleLog(chalk.red("Failed to write to " + LOG_FILE_NAME + " file: " + e));
@@ -54,7 +60,7 @@ function writeStatsToLogFile(stats, consoleLog) {
  * truncates the log file.
  * @param {function} consoleLog
  */
-function uploadLoggedStatsToNewRelic(consoleLog) {
+function uploadLoggedStatsToNewRelic(consoleLog, callback) {
   if (!isNewRelicConfigured()) {
     // we will skip logging to new relic.
     consoleLog(chalk.yellow(
@@ -66,7 +72,7 @@ function uploadLoggedStatsToNewRelic(consoleLog) {
   }
 
   try {
-    var rawData = fs.readFileSync(LOG_FILE_PATH, 'utf-8');
+    var rawData = fs.readFileSync(UPLOAD_LOG_FILE_PATH, 'utf-8');
     var dataToLog = parseCollectedData(rawData);
   } catch (e) {
     consoleLog(chalk.yellow("Unable to parse " + LOG_FILE_NAME + ". Skipping New Relic upload"));
@@ -77,6 +83,7 @@ function uploadLoggedStatsToNewRelic(consoleLog) {
     consoleLog("Sending " + dataToLog.length + " build time events to new relic ");
     var failed = false;
     dataToLog.forEach(function (data) {
+      newrelic.agent.config.no_immediate_harvest = true;
       try {
         newrelic.recordCustomEvent("apps_build", data);
       } catch (e) {
@@ -85,8 +92,14 @@ function uploadLoggedStatsToNewRelic(consoleLog) {
       }
     });
     if (!failed) {
-      consoleLog(chalk.green('OK'));
-      fs.truncateSync(LOG_FILE_PATH);
+      consoleLog("You should see a green OK if this works.");
+      newrelic.shutdown({collectPendingData: true}, function (error) {
+        fs.truncateSync(UPLOAD_LOG_FILE_PATH);
+        consoleLog(chalk.green('OK'));
+        if (callback) {
+          callback();
+        }
+      });
     }
   }
 }
