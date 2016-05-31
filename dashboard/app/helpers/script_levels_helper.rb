@@ -40,10 +40,14 @@ module ScriptLevelsHelper
 
     if script_level.level.try(:is_plc_evaluation?)
       last_result = UserLevel.where(user: current_user, level: script_level.levels[0]).last
-      level_source = LevelSource.where(id: last_result.level_source_id).last
+      level_source = last_result ? LevelSource.where(id: last_result.level_source_id).last : nil
       enrolled_modules = determine_preferred_learning_modules level_source, script_level.script
       enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: current_user, plc_course_unit: script_level.script.plc_course_unit)
-      preview_assignments_path(unit_assignment_id: enrollment_unit_assignment, params: {enrolled_modules: enrolled_modules})
+      if enrollment_unit_assignment
+        preview_assignments_path(unit_assignment_id: enrollment_unit_assignment, params: {enrolled_modules: enrolled_modules})
+      else
+        build_script_level_path(next_level)
+      end
     else
       next_level ?
           build_script_level_path(next_level) :
