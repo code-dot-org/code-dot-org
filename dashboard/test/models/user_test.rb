@@ -762,6 +762,16 @@ class UserTest < ActiveSupport::TestCase
     assert !user.needs_to_backfill_user_scripts?
   end
 
+  test "needs_to_backfill_user_scripts? is false for recent users" do
+    user = create :student, created_at: Date.new(2015, 9, 10)
+    assert !user.needs_to_backfill_user_scripts?
+
+    script = Script.find_by_name("course2")
+    # In normal usage, UserScript will be created alongside UserLevel.
+    create :user_level, user: user, level: script.script_levels.first.level, script: script
+    assert !user.needs_to_backfill_user_scripts?
+  end
+
   test 'update_with_password does not require current password for users without passwords' do
     student = create(:student)
     student.update_attribute(:encrypted_password, '')

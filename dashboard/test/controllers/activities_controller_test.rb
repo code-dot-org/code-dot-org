@@ -313,7 +313,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     test_logged_in_milestone
   end
 
-  test "logged in milestone should backfill userscript" do
+  test "logged in milestone should backfill userscript for old users" do
+    @user.update(created_at: Date.new(2014, 9, 10))
+
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog

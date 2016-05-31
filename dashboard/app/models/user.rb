@@ -733,10 +733,10 @@ SQL
   end
 
   def needs_to_backfill_user_scripts?
-    user_scripts.empty? &&
-      !user_levels.empty? &&
-      # Backfill only applies to users created before UserScript model was introduced.
-      created_at < Date.new(2014, 9, 11)
+    # Backfill only applies to users created before UserScript model was introduced.
+    created_at < Date.new(2014, 9, 15) &&
+      user_scripts.empty? &&
+      !user_levels.empty?
   end
 
   # Creates UserScript information based on data contained in UserLevels.
