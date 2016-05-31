@@ -1084,4 +1084,23 @@ class ActivitiesControllerTest < ActionController::TestCase
     post :milestone, @milestone_params.merge(script_level_id: script_level_with_trophies.id)
     assert_response :success
   end
+
+  test 'does not backfill new users who submit unsuccessful first attempt' do
+    assert !@user.needs_to_backfill_user_scripts?
+
+    # do all the logging
+    @controller.expects :log_milestone
+
+    assert_creates(LevelSource, Activity, UserLevel) do
+      assert_does_not_create(GalleryActivity) do
+        assert_no_difference('@user.reload.total_lines') do # don't update total lines
+          post :milestone, @milestone_params.merge(result: 'false', testResult: 10)
+        end
+      end
+    end
+
+    assert_response :success
+    assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
+    assert !@user.needs_to_backfill_user_scripts?
+  end
 end

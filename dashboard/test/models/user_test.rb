@@ -744,7 +744,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "needs_to_backfill_user_scripts?" do
-    user = create :student
+    user = create :student, created_at: Date.new(2014, 9, 10)
     assert !user.needs_to_backfill_user_scripts?
 
     script = Script.find_by_name("course2")
