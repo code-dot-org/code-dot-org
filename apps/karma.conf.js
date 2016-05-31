@@ -59,7 +59,10 @@ module.exports = function (config) {
     },
     client: {
       // log console output in our test console
-      captureConsole: true
+      captureConsole: true,
+      mocha: {
+        timeout: 14000,
+      },
     },
 
     // test results reporter to use

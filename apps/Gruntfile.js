@@ -354,6 +354,11 @@ module.exports = function (grunt) {
         {pattern: 'build/**/*', watched: false, included: false},
         {pattern: 'static/**/*', watched: false, included: false},
       ],
+      client: {
+        mocha: {
+          timeout: 14000,
+        },
+      },
     },
     unit: {
       files: [
