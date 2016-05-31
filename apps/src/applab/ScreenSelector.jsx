@@ -2,7 +2,9 @@
 /* global Applab */
 
 var React = require('react');
+var Radium = require('radium');
 var color = require('../color');
+var commonStyles = require('../commonStyles');
 var constants = require('./constants');
 var connect = require('react-redux').connect;
 var elementUtils = require('./designElements/elementUtils');
@@ -28,6 +30,8 @@ var ScreenSelector = React.createClass({
   propTypes: {
     // from connect
     currentScreenId: React.PropTypes.string,
+    interfaceMode: React.PropTypes.string.isRequired,
+    isDesignModeHidden: React.PropTypes.bool.isRequired,
     onScreenChange: React.PropTypes.func.isRequired,
 
     // passed explicitly
@@ -60,15 +64,20 @@ var ScreenSelector = React.createClass({
       }
     });
 
+    const canAddScreen = this.props.interfaceMode === constants.ApplabInterfaceMode.DESIGN;
+
     return (
       <select
           id="screenSelector"
-          style={styles.dropdown}
+          style={[
+            styles.dropdown,
+            this.props.isDesignModeHidden && commonStyles.hidden
+          ]}
           value={this.props.currentScreenId || ''}
           onChange={this.handleChange}
           disabled={Applab.isRunning()}>
         {options}
-        <option>{constants.NEW_SCREEN}</option>
+        {canAddScreen && <option>{constants.NEW_SCREEN}</option>}
       </select>
     );
   }
@@ -76,7 +85,9 @@ var ScreenSelector = React.createClass({
 module.exports = ScreenSelector;
 module.exports = connect(function propsFromStore(state) {
   return {
-    currentScreenId: state.screens.currentScreenId
+    currentScreenId: state.screens.currentScreenId,
+    interfaceMode: state.interfaceMode,
+    isDesignModeHidden: state.pageConstants.isDesignModeHidden,
   };
 }, function propsFromDispatch(dispatch) {
   return {
@@ -84,6 +95,6 @@ module.exports = connect(function propsFromStore(state) {
       dispatch(screens.changeScreen(screenId));
     }
   };
-})(ScreenSelector);
+})(Radium(ScreenSelector));
 
 module.exports.styles = styles;
