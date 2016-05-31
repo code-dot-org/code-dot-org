@@ -344,16 +344,15 @@ module.exports = function (grunt) {
   config.karma = {
     options: {
       configFile: 'karma.conf.js',
-      singleRun: true,
+      singleRun: process.env.MOOC_WATCH !== '1',
       files: [
-        {pattern: 'build/package/js/blockly*js', watched: false},
-        {pattern: 'test/audio/**/*.*', watched: false, included: false},
-        {pattern: 'test/integration/**/*.*', watched: false, included: false},
-        {pattern: 'test/unit/**/*.*', watched: false, included: false},
-        {pattern: 'test/util/**/*.*', watched: false, included: false},
-        {pattern: 'lib/**/*.*', watched: false, included: false},
-        {pattern: 'build/**/*.*', watched: false, included: false},
-        {pattern: 'static/**/*.*', watched: false, included: false},
+        {pattern: 'test/audio/**/*', watched: false, included: false},
+        {pattern: 'test/integration/**/*', watched: false, included: false},
+        {pattern: 'test/unit/**/*', watched: false, included: false},
+        {pattern: 'test/util/**/*', watched: false, included: false},
+        {pattern: 'lib/**/*', watched: false, included: false},
+        {pattern: 'build/**/*', watched: false, included: false},
+        {pattern: 'static/**/*', watched: false, included: false},
       ],
     },
     unit: {
