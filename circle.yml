@@ -39,13 +39,6 @@ dependencies:
     - 'echo "localize_apps: true" >> locals.yml'
     # Run rake install
     - bundle exec rake install
-    # temporarily set hoc flags to green, currently required for dev enlistments
-    - ./set_hoc_flags.rb green:
-        pwd:
-            bin/dynamic_config
-    - bundle exec rake assets:precompile:
-        pwd:
-            dashboard
     # Run rake build (twice in case of intermittent test failures within rake build)
     - for i in 1 2; do bundle exec rake build && break; done
 database:
