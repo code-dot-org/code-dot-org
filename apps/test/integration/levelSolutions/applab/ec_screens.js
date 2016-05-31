@@ -547,7 +547,7 @@ module.exports = {
         });
 
         var screenElement = document.getElementById('design_screen1');
-        assert.equal(screenElement.style.backgroundImage, 'url(http:' + assetUrl + ')');
+        assert.include(screenElement.style.backgroundImage, assetUrl);
 
         assert.equal(screenElement.style.backgroundSize, '320px 450px', 'image stretched');
 
