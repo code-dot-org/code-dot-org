@@ -52,7 +52,7 @@ function handleShareWarningsTooYoung(onTooYoung) {
   utils.trySetLocalStorage('is13Plus', 'false');
   if (onTooYoung) {
     onTooYoung();
-  } else if (!IN_UNIT_TEST) {
+  } else {
     window.location.href = '/too_young';
   }
 }

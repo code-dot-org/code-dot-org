@@ -116,7 +116,7 @@ function parseCollectedData(data) {
         logTimestamp: timestamp
       };
     }).filter(function (data) {
-      return /^(exec|webpack|karma)/.test(data.task);
+      return /^exec/.test(data.task);
     });
     return collectedData.concat(formattedRecords);
   }, []);
