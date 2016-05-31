@@ -57,6 +57,8 @@ class ActiveSupport::TestCase
 
     Gatekeeper.clear
     DCDO.clear
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
   teardown do
