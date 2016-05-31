@@ -737,9 +737,16 @@ SQL
   end
 
   def needs_to_backfill_user_scripts?
-    user_scripts.empty? && !user_levels.empty?
+    # Backfill only applies to users created before UserScript model was introduced.
+    created_at < Date.new(2014, 9, 15) &&
+      user_scripts.empty? &&
+      !user_levels.empty?
   end
 
+  # Creates UserScript information based on data contained in UserLevels.
+  # Provides backwards compatibility with users created before the UserScript model
+  # was introduced (cf. code-dot-org/website-ci#194).
+  # TODO apply this migration to all users in database, then remove.
   def backfill_user_scripts
     # backfill assigned scripts
     followeds.each do |follower|
