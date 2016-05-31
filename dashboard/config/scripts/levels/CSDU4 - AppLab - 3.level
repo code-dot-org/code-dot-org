@@ -38,10 +38,7 @@
     "debugger_disabled": "true",
     "markdown_instructions": "# Debug Console: Variable Values\r\n\r\nUp until now, if we wanted to find out the value of a variable at some point in the execution of a program, we've used `console.log`. That is still going to be a great strategy but **the Debug Console can do even more for us!**\r\n\r\n**Check this out:** We can check the value of a variable in real time (as our program executes) by typing its name into the prompt within the Debug Console and hitting \"enter\". **This is another powerful tool for debugging your programs.** \r\n\r\n![](https://images.code.org/7e7ff7aa041814cfcd69a1c9a028c439-image-1446826780896.gif)",
     "instructions": "Use console to check the ending value of num. (Click to see full instructions)",
-    "fail_on_lint_errors": "false",
-    "encrypted_examples": [
-
-    ]
+    "fail_on_lint_errors": "false"
   },
   "published": true,
   "notes": "",

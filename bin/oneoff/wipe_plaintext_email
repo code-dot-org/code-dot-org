@@ -11,7 +11,6 @@
 # environments incorporate this.
 
 require_relative '../../dashboard/config/environment'
-require src_dir 'database'
 
 if ARGV.length != 2
   puts 'Usage: ./bin/oneoff/wipe_plaintext_email start_index end_index'
