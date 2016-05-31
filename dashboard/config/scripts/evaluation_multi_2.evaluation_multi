@@ -1,8 +1,0 @@
-
-    name 'evaluation_multi_2'
-    title 'evaluation multi 2'
-    question 'Some Question'
-    answer 'Answer 1', weight: 3, stage_name: 'Bogus Stage 283'
-    answer 'Answer 2', weight: 2, stage_name: 'Bogus Stage 284'
-    answer 'Answer 3'
-    
