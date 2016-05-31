@@ -87,5 +87,5 @@ ruby
   def is_plc_evaluation?
     levels.map(&:class).uniq == [EvaluationMulti]
   end
-
+  
 end

@@ -23,45 +23,45 @@ class PlcEvaluationHelperTest < ActionView::TestCase
     @module_honesty = create(:plc_learning_module, name: 'Answering questions honestly', plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE, stage: @stage_honesty)
     @module_no_nickname = create(:plc_learning_module, name: 'Not revealing your nickname', plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE, stage: @stage_no_nickname)
 
-    q1_dsl = <<DSL
+    q1_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 1'
-    question 'What is your name?'
-    answer 'Sir Lancelot', weight: 1, stage_name: '#{@stage_honesty.name}'
-    answer 'Sir Robin', weight: 1, stage_name: '#{@stage_no_nickname.name}'
-    answer 'Sir Galahad', weight: 1, stage_name: '#{@stage_honesty.name}'
-    answer 'King Arthur', weight: 1, stage_name: '#{@stage_honesty.name}'
-    answer 'Mr Edgecase'
-DSL
+      question 'What is your name?'
+      answer 'Sir Lancelot', weight: 1, stage_name: '#{@stage_honesty.name}'
+      answer 'Sir Robin', weight: 1, stage_name: '#{@stage_no_nickname.name}'
+      answer 'Sir Galahad', weight: 1, stage_name: '#{@stage_honesty.name}'
+      answer 'King Arthur', weight: 1, stage_name: '#{@stage_honesty.name}'
+      answer 'Mr Edgecase'
+    DSL
 
-    q2_dsl = <<DSL
+    q2_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 2'
-    question 'What is your quest?'
-    answer 'I seek the grail', weight: 1, stage_name: '#{@stage_honesty.name}'
-    answer 'Yes, yes, I seek the Grail', weight: 1, stage_name: '#{@stage_no_nickname.name}'
-    answer 'I seek something else'
-DSL
+      question 'What is your quest?'
+      answer 'I seek the grail', weight: 1, stage_name: '#{@stage_honesty.name}'
+      answer 'Yes, yes, I seek the Grail', weight: 1, stage_name: '#{@stage_no_nickname.name}'
+      answer 'I seek something else'
+    DSL
 
-    q3_dsl = <<DSL
+    q3_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 3'
-    question 'What is your favorite color?'
-    answer 'Blue', weight: 1, stage_name: '#{@stage_blue.name}'
-    answer 'Yellow - no, blue', weight: 1, stage_name: '#{@stage_cliffs.name}'
-    answer 'No preference'
-DSL
+      question 'What is your favorite color?'
+      answer 'Blue', weight: 1, stage_name: '#{@stage_blue.name}'
+      answer 'Yellow - no, blue', weight: 1, stage_name: '#{@stage_cliffs.name}'
+      answer 'No preference'
+    DSL
 
-    q4_dsl = <<DSL
+    q4_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 4'
-    question 'What is the capital of Assyria?'
-    answer 'I dont know that!', weight: 1, stage_name: '#{@stage_ignorance.name}'
-    answer 'Nineveh'
-DSL
+      question 'What is the capital of Assyria?'
+      answer 'I dont know that!', weight: 1, stage_name: '#{@stage_ignorance.name}'
+      answer 'Nineveh'
+    DSL
 
-    q5_dsl = <<DSL
+    q5_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 5'
-    question 'What is the airspeed velocity of an unladen swallow?'
-    answer 'What do you mean, an African or European Swallow?', weight: 1, stage_name: '#{@stage_ornithology.name}'
-    answer '15 m/s'
-DSL
+      question 'What is the airspeed velocity of an unladen swallow?'
+      answer 'What do you mean, an African or European Swallow?', weight: 1, stage_name: '#{@stage_ornithology.name}'
+      answer '15 m/s'
+    DSL
 
     @evaluation_multi1 = EvaluationMulti.create_from_level_builder({name: 'Question 1'}, {dsl_text: q1_dsl})
     @evaluation_multi2 = EvaluationMulti.create_from_level_builder({name: 'Question 2'}, {dsl_text: q2_dsl})
@@ -107,14 +107,14 @@ DSL
                                                                                            [@evaluation_multi5, '15 m/s']])
   end
 
-  def get_preferred_modules_for_answers answers_map
+  def get_preferred_modules_for_answers (answers_map)
     answers_data = Hash.new()
 
     answers_map.each do |evaluation_multi, answer|
       answers_data[evaluation_multi.id] = {'result': evaluation_multi.answers.find_index {|x| x['text'] == answer}.to_s}
     end
 
-    level_source = LevelSource.create(level: @evaluation, data: answers_data.to_json, md5: Digest::MD5.hexdigest(answers_data.to_json))
+    level_source = create(:level_source, level: @evaluation, data: answers_data.to_json)
     determine_preferred_learning_modules level_source, @course_unit.script
   end
 end

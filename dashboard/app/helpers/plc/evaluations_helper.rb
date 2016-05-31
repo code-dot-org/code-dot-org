@@ -29,6 +29,6 @@ module Plc::EvaluationsHelper
       default_module_assignments << module_to_assign.id
     end
 
-    return default_module_assignments
+    default_module_assignments
   end
 end
