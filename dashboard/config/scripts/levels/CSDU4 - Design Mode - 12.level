@@ -27,9 +27,6 @@
     "autocomplete_palette_apis_only": "true",
     "app_width": "320",
     "app_height": "480",
-    "encrypted_examples": [
-
-    ],
     "markdown_instructions": "# New Elements and Events: Text Labels\r\n<img src=\"https://images.code.org/20d50fd324908fc48633e1325cc37603-image-1444662791509.png\" style=\"float: right\">\r\nThe UI controls toolbox contains an element called `textLabel`. A text label is what it sounds like: plain text that you can put in your app. Even though it's just plain text you can still move and resize it using `setPosition`, and you can attach event handlers to it as well.\r\n\r\n**NOTE:** resizing a text label does not change the font size of the text.  We'll learn how to do that later.  ",
     "never_autoplay_video": "false",
     "slider_speed": "1",
