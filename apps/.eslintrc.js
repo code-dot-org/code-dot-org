@@ -14,7 +14,6 @@ module.exports = {
     "Calc": true,
     "Jigsaw": true,
     "$": true,
-    "jQuery": true,
-    "IN_UNIT_TEST": true,
+    "jQuery": true
   }
 };

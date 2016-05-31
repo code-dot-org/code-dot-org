@@ -2,10 +2,9 @@ var chalk = require('chalk');
 var path = require('path');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
-var webpack = require('webpack');
-var _ = require('lodash');
+var glob = require('glob');
+var readline = require('readline');
 var logBuildTimes = require('./script/log-build-times');
-var webpackConfig = require('./webpack.config');
 
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
@@ -28,11 +27,7 @@ module.exports = function (grunt) {
   /** @const {string} */
   var APP_TO_BUILD = grunt.option('app') || process.env.MOOC_APP;
 
-  /** @const {bool} */
-  var USE_WEBPACK = !!grunt.option('webpack') || !!process.env.MOOC_WEBPACK;
-  if (USE_WEBPACK) {
-    console.log("using webpack instead of browserify");
-  }
+  var WATCH_APPLAB_API = grunt.option('watch_applab_api');
 
   /** @const {string[]} */
   var APPS = [
@@ -305,7 +300,7 @@ module.exports = function (grunt) {
       cmd += ' --cachefile ' + outputDir + options.cacheFile;
     }
     cmd += ' --extension=.jsx' +
-      ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]' +
+      ' -t [ babelify --compact=false --sourceMap ]' +
       (envOptions.dev ? '' : ' -t loose-envify') +
       ' -d ' + options.srcFiles.join(' ');
     if (options.factorBundle) {
@@ -333,85 +328,16 @@ module.exports = function (grunt) {
     destFiles: [outputDir + 'applab-api.js'],
     factorBundle: false,
   });
+
   var fastMochaTest = process.argv.indexOf('--fast') !== -1;
 
   config.exec = {
     browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
     convertScssVars: './script/convert-scss-variables.js',
+    integrationTest: 'node test/runIntegrationTests.js --color' + (fastMochaTest ? ' --fast' : ''),
+    unitTest: 'node test/runUnitTests.js --color',
     applabapi: 'echo "' + applabAPIExec + '" && ' + applabAPIExec,
   };
-
-  config.karma = {
-    options: {
-      configFile: 'karma.conf.js',
-      singleRun: true,
-      files: [
-        {pattern: 'build/package/js/blockly*js', watched: false},
-        {pattern: 'test/audio/**/*.*', watched: false, included: false},
-        {pattern: 'test/integration/**/*.*', watched: false, included: false},
-        {pattern: 'test/unit/**/*.*', watched: false, included: false},
-        {pattern: 'test/util/**/*.*', watched: false, included: false},
-        {pattern: 'lib/**/*.*', watched: false, included: false},
-        {pattern: 'build/**/*.*', watched: false, included: false},
-        {pattern: 'static/**/*.*', watched: false, included: false},
-      ],
-    },
-    unit: {
-      files: [
-        {src: ['test/unit-tests.js'], watched: false},
-      ],
-    },
-    integration: {
-      files: [
-        {src: ['test/integration-tests.js'], watched: false},
-      ],
-    },
-    all: {
-      files: [
-        {src: ['test/index.js'], watched: false},
-      ],
-    },
-  };
-
-  var entries = {};
-  APPS.forEach(function (app) {
-    entries[app] = './src/'+app+'/main.js';
-  });
-  if (entries.applab) {
-    entries['applab-api'] = './src/applab/api-entry.js';
-  }
-  config.webpack = {
-    build: _.extend({}, webpackConfig, {
-      output: {
-        path: path.resolve(__dirname, outputDir),
-        filename: "[name].js",
-      },
-      //    devtool: 'eval',
-      entry: entries,
-      plugins: [
-        new webpack.DefinePlugin({
-          IN_UNIT_TEST: false,
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-          name:'common',
-          minChunks: 2,
-        }),
-      ],
-      watch: true,
-    })
-  };
-  config.webpack.uglify = _.extend({}, config.webpack.build, {
-    output: _.extend({}, config.webpack.build.output, {
-      filename: "[name].min.js",
-    }),
-    plugins: config.webpack.build.plugins.concat([
-      new webpack.optimize.UglifyJsPlugin({
-        compressor: {
-          warnings: false
-        }
-      }),
-    ]),
-  });
 
   var ext = envOptions.dev ? 'uncompressed' : 'compressed';
   config.concat = {
@@ -420,7 +346,7 @@ module.exports = function (grunt) {
       src: [
         'lib/blockly/blockly_' + ext + '.js',
         'lib/blockly/blocks_' + ext + '.js',
-        'lib/blockly/javascript_' + ext + '.js',
+        'lib/blockly/javascript_' + ext + '.js'
       ],
       dest: 'build/package/js/blockly.js'
     }
@@ -472,9 +398,13 @@ module.exports = function (grunt) {
   config.watch = {
     js: {
       files: ['src/**/*.{js,jsx}'],
-      tasks: ['newer:copy:src'].concat(
-        USE_WEBPACK ? [] : ['exec:browserify', 'exec:applabapi', 'notify:browserify']
-      ),
+      tasks: [
+        'newer:copy:src',
+        'exec:browserify',
+        // only want to watch for applabapi if explicitly specified
+        WATCH_APPLAB_API ? 'exec:applabapi' : 'noop',
+        'notify:browserify'
+      ],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true,
@@ -508,7 +438,7 @@ module.exports = function (grunt) {
     },
     ejs: {
       files: ['src/**/*.ejs'],
-      tasks: USE_WEBPACK ? [] : ['ejs', 'exec:browserify', 'notify:ejs'],
+      tasks: ['ejs', 'exec:browserify', 'notify:ejs'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true
@@ -588,34 +518,29 @@ module.exports = function (grunt) {
     'newer:sass'
   ]);
 
-  grunt.registerTask(
-    'build',
-    ['prebuild'].concat(
-      USE_WEBPACK ? [
-        'webpack:build',
-      ] : [
-        'exec:browserify',
-        'exec:applabapi',
-      ]).concat([
-        'notify:browserify',
-        // Skip minification in development environment.
-        envOptions.dev ? 'noop' : (USE_WEBPACK ? 'webpack:uglify' : 'concurrent:uglify'),
-        'postbuild'
-      ])
-  );
+  grunt.registerTask('build', [
+    'prebuild',
+    'exec:browserify',
+    'exec:applabapi',
+    'notify:browserify',
+    // Skip minification in development environment.
+    envOptions.dev ? 'noop' : ('concurrent:uglify'),
+    'postbuild'
+  ]);
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
   grunt.registerTask('dev', [
     'build',
     'express:playground',
+    'watch'
   ]);
 
   grunt.registerTask('unitTest', [
     'newer:messages',
     'exec:convertScssVars',
     'concat',
-    'karma:unit'
+    'exec:unitTest'
   ]);
 
   grunt.registerTask('integrationTest', [
@@ -623,16 +548,10 @@ module.exports = function (grunt) {
     'exec:convertScssVars',
     'newer:copy:static',
     'concat',
-    'karma:integration'
+    'exec:integrationTest'
   ]);
 
-  grunt.registerTask('test', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'newer:copy:static',
-    'concat',
-    'karma:all'
-  ]);
+  grunt.registerTask('test', ['unitTest', 'integrationTest']);
 
   // We used to use 'mochaTest' as our test command.  Alias to be friendly while
   // we transition away from it.  This can probably be removed in a month or two.

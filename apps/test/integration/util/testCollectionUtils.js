@@ -1,18 +1,19 @@
 var _ = require('@cdo/apps/lodash');
+require('require-globify');
 
 module.exports = {
   // Get all json files under directory path
   getCollections: function () {
-    var context = require.context('../levelSolutions/', true, /.*\.js$/);
-    var files = context.keys();
+    // require-globify transform
+    var files = require('../levelSolutions/**/*.js', {hash: 'path'});
     var testCollections = [];
-    files.forEach(function (file) {
+    Object.keys(files).forEach(function (file) {
       // Setting that allows us to ignore particular level files
       if (window.__ignoreSolutionsRegex &&
           window.__ignoreSolutionsRegex.test(file)) {
         return;
       }
-      testCollections.push({path: file, data: context(file)});
+      testCollections.push({path: file, data: files[file]});
     });
 
     return testCollections;

@@ -1,6 +1,10 @@
 /* global dashboard */
 
-var JSZip = require('jszip');
+// TODO(pcardune): Stop using the already packaged/minified version of jszip in
+// favor just plain jszip. Due to a bug in (probably) browserify, we need to use
+// the minified version. See this comment for more details:
+// https://github.com/code-dot-org/code-dot-org/pull/8071#issuecomment-214931393
+var JSZip = require('jszip/dist/jszip.min');
 var saveAs = require('filesaver.js').saveAs;
 
 var assetPrefix = require('../assetManagement/assetPrefix');
