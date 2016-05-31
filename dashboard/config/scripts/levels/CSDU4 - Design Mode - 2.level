@@ -36,9 +36,6 @@
     "instructions": "Run a program with two buttons that have the same id to see the warning message in the console. Change the ids to make the program run without getting a warning message.",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
-    "encrypted_examples": [
-
-    ],
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false"
