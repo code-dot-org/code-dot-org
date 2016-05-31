@@ -24,9 +24,6 @@
     "free_play": "true",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "encrypted_examples": [
-
-    ],
     "markdown_instructions": "# How to Organize the Code\r\nAs your apps get more complex you'll have to think about how to organize your code so it remains readable and easy for you to locate things when debugging any problems.  We suggest the following convention which breaks the code into 3 major sections:\r\n* **Top**:   code for event handlers.\r\n* **Bottom**: code for any other other functions you've written. (We don't have any of these yet.)",
     "never_autoplay_video": "false",
     "slider_speed": "1",
