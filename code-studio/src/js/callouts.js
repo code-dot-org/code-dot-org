@@ -31,22 +31,6 @@ module.exports = function createCallouts(callouts) {
     return;
   }
 
-  // Insert a hashchange handler to detect calloutevent= hashes and fire
-  // appropriate events to open the callout
-  window.onhashchange = function () {
-    var loc = window.location;
-    var splitHash = loc.hash.split("#calloutevent=");
-    if (splitHash.length > 1) {
-      var eventName = splitHash[1];
-      $(window).trigger(eventName, ['hashchange']);
-      if (window.history.pushState) {
-        history.pushState("", document.title, loc.pathname + loc.search);
-      } else {
-        loc.hash = '';
-      }
-    }
-  };
-
   if (!callouts || callouts.length === 0) {
     return;
   }
@@ -60,7 +44,13 @@ module.exports = function createCallouts(callouts) {
   // Update callout positions when an editor is scrolled.
   $(window).on('block_space_metrics_set', function () {
     snapCalloutsToTargets();
-    showOrHideCalloutsByTargetVisibility();
+    showOrHideCalloutsByTargetVisibility('#codeWorkspace');
+  });
+
+  $(window).on('droplet_change', function (e, dropletEvent) {
+    if (dropletEvent === 'selectpalette') {
+      showOrHideCalloutsByTargetVisibility('#codeWorkspace');
+    }
   });
 
   var showCalloutsMode = document.URL.indexOf('show_callouts=1') !== -1;
@@ -135,10 +125,15 @@ module.exports = function createCallouts(callouts) {
 
     if (callout.on) {
       $(window).on(callout.on, function (e, action) {
-        if ($(selector).length > 0) {
-          if (action === "hashchange" || !callout.seen) {
-            $(window).trigger('prepare_for_callout', [callout.qtip_config.codeStudio]);
-            $(selector).qtip(config).qtip('show');
+        var lastSelector = config.codeStudio.selector || selector;
+        $(window).trigger('prepareforcallout', [config.codeStudio]);
+        var currentSelector = config.codeStudio.selector || selector;
+        if (lastSelector !== currentSelector && $(lastSelector).length > 0) {
+          $(lastSelector).qtip(config).qtip('hide');
+        }
+        if ($(currentSelector).length > 0) {
+          if (action === 'hashchange' || action === 'hashinit' || !callout.seen) {
+            $(currentSelector).qtip(config).qtip('show');
           }
           callout.seen = true;
         }
@@ -147,6 +142,29 @@ module.exports = function createCallouts(callouts) {
       $(selector).qtip(config).qtip('show');
     }
   });
+
+  // Insert a hashchange handler to detect triggercallout= hashes and fire
+  // appropriate events to open the callout
+  function detectTriggerCalloutOnHash(event) {
+    var loc = window.location;
+    var splitHash = loc.hash.split('#triggercallout=');
+    if (splitHash.length > 1) {
+      var eventName = splitHash[1];
+      var eventType = (event && event.type) || 'hashinit';
+      $(window).trigger(eventName, [eventType]);
+      // NOTE: normally we go back to avoid populating history, but don't for the init case
+      if (window.history.go && eventType === 'hashchange') {
+        history.go(-1);
+      } else {
+        loc.hash = '';
+      }
+    }
+  }
+
+  // Call once during init to detect the hash from the initial page load
+  detectTriggerCalloutOnHash();
+  // Call again when the hash changes:
+  $(window).on('hashchange', detectTriggerCalloutOnHash);
 };
 
 /**
@@ -166,7 +184,7 @@ function snapCalloutsToTargets() {
  * to view.
  * @function
  */
-var showOrHideCalloutsByTargetVisibility = (function () {
+var showOrHideCalloutsByTargetVisibility = (function (containerSelector) {
   // Close around this object, which we use to remember which callouts
   // were hidden by scrolling and should be shown again when they scroll
   // back in.
@@ -176,17 +194,22 @@ var showOrHideCalloutsByTargetVisibility = (function () {
    */
   var calloutsHiddenByScrolling = {};
   return function () {
-    var codeWorkspace = $('#codeWorkspace');
+    var container = $(containerSelector);
     $('.cdo-qtips').each(function () {
       var api = $(this).qtip('api');
       var target = $(api.elements.target);
 
-      var isTargetInCodeWorkspace = codeWorkspace.has(target).length > 0;
-      if (!isTargetInCodeWorkspace) {
+      if ($(window).has(target).length === 0) {
+        calloutsHiddenByScrolling[api.id] = true;
+        api.hide();
+      }
+
+      var isTargetInContainer = container.has(target).length > 0;
+      if (!isTargetInContainer) {
         return;
       }
 
-      if (target && target.overlaps('#codeWorkspace').length > 0) {
+      if (target && target.overlaps(containerSelector).length > 0) {
         if (calloutsHiddenByScrolling[api.id]) {
           api.show();
           delete calloutsHiddenByScrolling[api.id];

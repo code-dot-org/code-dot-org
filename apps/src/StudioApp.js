@@ -2120,6 +2120,17 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     $('.cdo-qtips').qtip('reposition', null, false);
   });
 
+  this.editor.on('selectpalette', function (e) {
+    $(window).trigger('droplet_change', ['selectpalette']);
+  });
+
+  $(window).on('prepareforcallout', function (e, options) {
+    // qtip_config's codeStudio options block is available in options
+    if (options.dropletPaletteCategory) {
+      this.editor.changePaletteGroup(options.dropletPaletteCategory);
+    }
+  }.bind(this));
+
   // Prevent the backspace key from navigating back. Make sure it's still
   // allowed on other elements.
   // Based on http://stackoverflow.com/a/2768256/2506748
