@@ -39,10 +39,7 @@
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "fail_on_lint_errors": "false",
-    "encrypted_examples": [
-
-    ]
+    "fail_on_lint_errors": "false"
   },
   "published": true,
   "notes": "",
