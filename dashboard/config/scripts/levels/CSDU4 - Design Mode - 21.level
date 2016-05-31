@@ -38,9 +38,6 @@
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "encrypted_examples": [
-
-    ],
     "project_template_level_name": "U3L12 Chaser Template",
     "fail_on_lint_errors": "false"
   },

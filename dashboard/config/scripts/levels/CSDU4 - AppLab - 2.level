@@ -38,9 +38,6 @@
     "instructions": "Write a program that acts as a simple calculator. (click to see full instructions)",
     "execute_palette_apis_only": "false",
     "lock_zero_param_functions": "false",
-    "encrypted_examples": [
-
-    ],
     "fail_on_lint_errors": "false"
   },
   "published": true,

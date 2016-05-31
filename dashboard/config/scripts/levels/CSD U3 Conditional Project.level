@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-05-27T17:50:52.000Z",
+  "created_at": "2016-05-31T18:20:24.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -66,8 +66,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Get Creative\r\n\r\nNow that you've seen how we can use conditionals both to take input from the keyboard and to react to changes is sprite properties, it's time to come up with a cool use of conditionals on your own. You'll want to brainstorm with a partner to come up with the sprite properties you want to change, and the conditions that will decide when they get changed.\r\n\r\n# Do This\r\n- Decide which sprite properties will be controlled by conditionals eg:\r\n\t- Position (x and y)\r\n    - Rotation\r\n    - Color\r\n    - Size (width, height, or scale)\r\n    - etc\r\n- For each sprite property, decide on a conditional that will impact it:\r\n\t- Keyboard input (`keyDown()`, `keyWentDown()`, etc)\r\n    - Sprite position\r\n    - Mouse position\r\n    - Other variables or properties\r\n- One at a time, write and test each conditional\r\n\r\n**Challenge** - Can you make a single conditional impact multiple properties?\r\n",
-    "start_blocks": "function draw() {\r\n  \r\n}",
+    "markdown_instructions": "# Get Creative\r\n\r\nAt this point you have all of the tools necessary to make an interactive animation or simple game of your own design! This is your chance practice using all of the blocks you've seen so far, and to experiment with blocks you haven't used yet.\r\n\r\n# Do This\r\n\r\nDesign an interactive animation of your own. Your program should -\r\n\r\n- Use conditionals to get keyboard input\r\n- Use conditionals to react to a sprite's properties\r\n- Allow a user to move one or more sprites around the screen\r\n- Change multiple sprite properties through conditionals\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
