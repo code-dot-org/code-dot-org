@@ -37,7 +37,7 @@
       return "Cannot grant #{email} 'affiliate' because #{email} is not a teacher"
     end
 
-    if !PERMISSIONS.where(user_id: user[:id], permission: permission_name).empty?
+    if PERMISSIONS.where(user_id: user[:id], permission: permission_name).any?
       return "#{email} already has '#{permission_name}'"
     end
 
