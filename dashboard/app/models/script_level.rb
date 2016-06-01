@@ -132,6 +132,8 @@ class ScriptLevel < ActiveRecord::Base
   def summarize
     if level.unplugged?
       kind = 'unplugged'
+    elsif named_level
+      kind = 'named_level'
     elsif assessment
       kind = 'assessment'
     else
