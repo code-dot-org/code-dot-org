@@ -277,13 +277,13 @@ module.exports = function (grunt) {
       configFile: 'karma.conf.js',
       singleRun: process.env.MOOC_WATCH !== '1',
       files: [
-        {pattern: 'test/audio/**/*', watched: false, included: false},
-        {pattern: 'test/integration/**/*', watched: false, included: false},
-        {pattern: 'test/unit/**/*', watched: false, included: false},
-        {pattern: 'test/util/**/*', watched: false, included: false},
-        {pattern: 'lib/**/*', watched: false, included: false},
-        {pattern: 'build/**/*', watched: false, included: false},
-        {pattern: 'static/**/*', watched: false, included: false},
+        {pattern: 'test/audio/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'test/integration/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'test/unit/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'test/util/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'lib/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'build/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'static/**/*', watched: false, included: false, nocache: true},
       ],
       client: {
         mocha: {
