@@ -2,16 +2,17 @@
 #
 # Table name: script_levels
 #
-#  id         :integer          not null, primary key
-#  script_id  :integer          not null
-#  chapter    :integer
-#  created_at :datetime
-#  updated_at :datetime
-#  stage_id   :integer
-#  position   :integer
-#  assessment :boolean
-#  level_id   :integer
-#  properties :text(65535)
+#  id          :integer          not null, primary key
+#  level_id    :integer
+#  script_id   :integer          not null
+#  chapter     :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#  stage_id    :integer
+#  position    :integer
+#  assessment  :boolean
+#  properties  :text(65535)
+#  named_level :boolean
 #
 # Indexes
 #
