@@ -49,7 +49,8 @@ module.exports = function (config) {
       plugins: [
         new webpack.ProvidePlugin({React: 'react'}),
         new webpack.DefinePlugin({
-          IN_UNIT_TEST: true,
+          IN_UNIT_TEST: JSON.stringify(true),
+          'process.env.TEST_FILE': JSON.stringify(process.env.TEST_FILE),
         }),
 
       ]
