@@ -41,12 +41,17 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "markdown_instructions": "# Importantance of Double Quotes\r\n\r\nYou may have noticed that the strings we've seen are **wrapped in double quotes**. These double quotes **are not part of the string**. Instead this is how you indicate that a sequence of characters **is a string and not the name of a variable**.\r\n\r\nAs you start writing programs with strings **it is common to generate errors from forgetting to place them in double quotes**. We're going to generate some of those errors now so that we can recognize them more easily later.\r\n\r\n![](https://images.code.org/89235457b9b9bf76ac4f8221cae5a62e-image-1445987270682.07.24 PM.png)\r\n\r\n# Do This:\r\n\r\n* **This program generates many errors** because strings were not placed in quotes.\r\n* **Run the program** before you change it to see the errors that are generated.\r\n* **Add double quotes** around all the strings so that the program runs without errors.\r\n\r\n",
+    "markdown_instructions": "# Importance of Double Quotes\r\n\r\nYou may have noticed that the strings we've seen are **wrapped in double quotes**. These double quotes **are not part of the string**. Instead this is how you indicate that a sequence of characters **is a string and not the name of a variable**.\r\n\r\nAs you start writing programs with strings **it is common to generate errors from forgetting to place them in double quotes**. We're going to generate some of those errors now so that we can recognize them more easily later.\r\n\r\n![](https://images.code.org/89235457b9b9bf76ac4f8221cae5a62e-image-1445987270682.07.24 PM.png)\r\n\r\n# Do This:\r\n\r\n* **This program generates many errors** because strings were not placed in quotes.\r\n* **Run the program** before you change it to see the errors that are generated.\r\n* **Add double quotes** around all the strings so that the program runs without errors.\r\n\r\n",
     "instructions": "Save a string inside a variable and log it to the console. (Click to see full instructions)",
     "start_blocks": "console.log(Reminders);\r\nconsole.log(\"1. Finish project for Monday\");\r\nconsole.log(2. Practice script for presentation);\r\nconsole.log(\"3. Tryouts after school);",
     "encrypted_examples": "dteKRSmcNLqhN7Va+a6+NyPNztScnxm+rwqAx/87F4W+xnmQx2L1MH+W5L3e\n8oUJ\n",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>
