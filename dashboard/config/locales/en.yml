@@ -357,7 +357,7 @@ en:
     print_certificate: "Print Certificate"
     announcement_title: "Announcements"
     announcement_view_all: "View all"
-    announcement_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (aka testing mode) and ready for your classroom! One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
+    announcement_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
     announcement_button: "Learn more"
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: "Add your name"
