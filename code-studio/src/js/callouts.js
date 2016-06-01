@@ -132,7 +132,7 @@ module.exports = function createCallouts(callouts) {
         var lastSelector = config.codeStudio.selector;
         $(window).trigger('prepareforcallout', [config.codeStudio]);
         if (lastSelector !== config.codeStudio.selector && $(lastSelector).length > 0) {
-          $(lastSelector).qtip(config).qtip('hide');
+          $(lastSelector).qtip(config).qtip('destroy');
         }
         if ($(config.codeStudio.selector).length > 0) {
           if (action === 'hashchange' || action === 'hashinit' || !callout.seen) {
@@ -207,8 +207,8 @@ function showOrHideCalloutsByTargetVisibility(containerSelector) {
       var target = $(api.elements.target);
 
       if ($(document).has(target).length === 0) {
-        calloutsHiddenByScrolling[api.id] = true;
-        api.hide();
+        api.destroy(true);
+        return;
       }
 
       var isTargetInContainer = container.has(target).length > 0;
