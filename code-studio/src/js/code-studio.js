@@ -7,6 +7,10 @@
  * so when moving things preserve the include order as much as possible.
  */
 'use strict';
+
+// Require this first at each bundle entry point for full ES6 support.
+require("babel-polyfill");
+
 import $ from 'jquery';
 var _ = require('lodash');
 

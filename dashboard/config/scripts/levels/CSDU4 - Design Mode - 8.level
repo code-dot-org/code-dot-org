@@ -1,0 +1,50 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2016-05-26T21:49:16.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Move the button to the middle of the screen. (Click to see full instructions)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "markdown_instructions": "# Moving and Sizing Buttons\r\n\r\nAn important component of designing intuitive and visually appealing user interfaces is the location of the elements on the screen. Using the `setPosition` command (now added to the Toolbox) you can move and set the size of user interface elements.\r\n\r\n![](https://images.code.org/c3e42223cbcb096f992d758973d09f63-image-1444664597665.42.48 AM.png)\r\n\r\n**NOTE:**\r\n * If you only want to set the size you can use the `setSize` function which looks like this:\r\n\r\n ![](https://images.code.org/cb742ecf96c04477db0f8361ad5dcdaf-image-1448924017288.png)\r\n\r\n * If you *only* want to set the position *without* changing the size of the element, you can omit the *width* and *height* parameters from the `setPosition` function.  To do that, you need to switch into text mode, like this:\r\n\r\n <img src='https://images.code.org/5b565ef5b74b5cd657ba15c67be92b0d-image-1448924356253.gif' style=\"width: 400px\">\r\n\r\n* **Remember:** in an app screen 0,0 is the top left corner and you specify a location by how many pixels from the left and how many down from the top of the screen it is.  The screen is **320 by 450 pixels**.",
+    "never_autoplay_video": "false",
+    "slider_speed": "1",
+    "examples_required": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>
