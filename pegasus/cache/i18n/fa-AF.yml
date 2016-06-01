@@ -801,11 +801,11 @@
   dashboard_curriculum_middle_title: "منابع آموزشی دوره راهنمایی"
   dashboard_curriculum_high_title: "منابع آموزشی دوره دبیرستان"
   dashboard_lesson_plans: "برنامه های درسی"
-  dashboard_view_all_lesson_plans: "مشاهده تمام برنامه های درسی"
+  dashboard_view_all_lesson_plans: Download complete curriculum for Courses 1-3
   dashboard_course1: "دوره 1:"
   dashboard_course2: "دوره 2:"
   dashboard_course3: "دوره 3:"
-  dashboard_course4: "درس 4 (بتا): "
+  dashboard_course4: 'Course 4 (beta): '
   dashboard_curriculum: "برنامه آموزشی"
   dashboard_curriculum_overview: "بررسی اجمالی برنامه کلاس پنجمی ها"
   dashboard_overview: "بررسی اجمالی"
@@ -1751,3 +1751,11 @@
   infinity_shortcode: inf
   playlab_shortcode: "بازی کن"
   artist_shortcode: art
+  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.

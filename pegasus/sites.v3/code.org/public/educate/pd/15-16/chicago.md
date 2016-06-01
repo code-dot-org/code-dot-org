@@ -65,10 +65,11 @@ Breakfast and lunch will be served.
 
 **Location**
 
-[DePaul University<br/> 
-CDM Room 924<br/>
-243 S. Wabash Ave<br/> 
-Chicago, IL 60604](https://www.google.com/maps/place/DePaul+University+Computing+and+Digital+Media+Center/@41.8785145,-87.6257265,15z/data=!4m2!3m1!1s0x0:0xbdb1039244587c09?sa=X&ved=0CHAQ_BIwCmoVChMI5Nv1joKYyQIVDutjCh1-XQOC)
+[DePaul University<br/>
+Daley Building<br/>
+Room 213<br/>
+247 S. State Street<br/>
+Chicago, IL 60604<br/>
 
 **What do I bring to Phase 4 PD?**
 
@@ -99,7 +100,11 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
-Milestone complete!
+In person workshop complete!
+
+Deadline for Online Coursework is June 30th.
+
+Phase 3 Part 3: Refection - This final online course will launch in early May on your Code Studio Teacher Dashboard. If you need support while finishing your work or teaching the course, check out the CS in Algebra forum here.
 
 
 [**Back to the top**](#top)

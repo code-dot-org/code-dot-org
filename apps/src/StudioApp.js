@@ -1,5 +1,7 @@
 /* global Blockly, ace:true, droplet, dashboard, addToHome */
 
+var React = require('react');
+var ReactDOM = require('react-dom');
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var color = require('./color');
 var parseXmlElement = require('./xml').parseElement;
@@ -8,6 +10,7 @@ var dropletUtils = require('./dropletUtils');
 var _ = require('./lodash');
 var dom = require('./dom');
 var constants = require('./constants.js');
+var experiments = require('./experiments');
 var KeyCodes = constants.KeyCodes;
 var msg = require('./locale');
 var blockUtils = require('./block_utils');
@@ -28,11 +31,11 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
-var experiments = require('./experiments');
 import { setPageConstants } from './redux/pageConstants';
 
 var redux = require('./redux');
-var runState = require('./redux/runState');
+import { setInstructionsConstants } from './redux/instructions';
+import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
 var combineReducers = require('redux').combineReducers;
 
@@ -301,8 +304,10 @@ function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
+    is13Plus: config.is13Plus,
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
+    onTooYoung: config.shareWarningInfo.onTooYoung,
   });
 }
 
@@ -486,7 +491,7 @@ StudioApp.prototype.init = function (config) {
   } else {
     // handleUsingBlockly_ already does an onResize. We still want that goodness
     // if we're not blockly
-    this.onResize();
+    utils.fireResizeEvent();
   }
 
   this.alertIfAbusiveProject('#codeWorkspace');
@@ -533,6 +538,9 @@ StudioApp.prototype.init = function (config) {
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
   if (this.isUsingBlockly()) {
+    Blockly.mainBlockSpaceEditor.addUnusedBlocksHelpListener(function (e) {
+      utils.showUnusedBlockQtip(e.srcElement);
+    });
     Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function () {
       this.updateBlockCount();
     }, this));
@@ -596,8 +604,9 @@ StudioApp.prototype.init = function (config) {
   }
 };
 
-StudioApp.prototype.startIFrameEmbeddedApp = function (config) {
+StudioApp.prototype.startIFrameEmbeddedApp = function (config, onTooYoung) {
   if (this.share && config.shareWarningInfo) {
+    config.shareWarningInfo.onTooYoung = onTooYoung;
     showWarnings(config);
   } else {
     this.runButtonClick();
@@ -909,7 +918,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
     throw "Unexpected input";
   }
 
-  this.reduxStore.dispatch(runState.setIsRunning(!showRun));
+  this.reduxStore.dispatch(setIsRunning(!showRun));
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
@@ -1266,11 +1275,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
 
   this.instructionsDialog.show({hideOptions: hideOptions});
 
-  if (isMarkdownMode) {
-    // process <details> tags with polyfill jQuery plugin
-    $('details').details();
-  }
-
   // Fire a custom event on the document so that other code can respond
   // to instructions being shown.
   var event = document.createEvent('Event');
@@ -1316,7 +1320,6 @@ function resizePinnedBelowVisualizationArea() {
   var playSpaceHeader = document.getElementById('playSpaceHeader');
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
-  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var top = 0;
   if (playSpaceHeader) {
@@ -1324,7 +1327,15 @@ function resizePinnedBelowVisualizationArea() {
   }
 
   if (visualization) {
-    top += $(visualization).outerHeight(true);
+    var parent = $(visualization).parent();
+    if (parent.attr('id') === 'phoneFrame') {
+      // Phone frame itself doesnt have height. Loop through children
+      parent.children().each(function () {
+        top += $(this).outerHeight(true);
+      });
+    } else {
+      top += $(visualization).outerHeight(true);
+    }
   }
 
   if (gameButtons) {
@@ -1332,6 +1343,7 @@ function resizePinnedBelowVisualizationArea() {
   }
 
   var bottom = 0;
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
   if (smallFooter) {
     var codeApp = $('#codeApp');
     bottom += $(smallFooter).outerHeight(true);
@@ -1803,6 +1815,13 @@ function runButtonClickWrapper(callback) {
     $(window).trigger('run_button_pressed');
     $(window).trigger('appModeChanged');
   }
+
+  // inform Blockly that the run button has been pressed
+  if (window.Blockly && Blockly.mainBlockSpace) {
+    Blockly.mainBlockSpace.getCanvas()
+        .dispatchEvent(new Event(Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED));
+  }
+
   callback();
 }
 
@@ -1843,7 +1862,7 @@ StudioApp.prototype.configureDom = function (config) {
       // If in level builder editing blocks, make workspace extra tall
       vizHeight = 3000;
       // Modify the arrangement of toolbox blocks so categories align left
-      if (config.level.edit_blocks == "toolbox_blocks") {
+      if (config.level.edit_blocks === "toolbox_blocks") {
         this.blockYCoordinateInterval = 80;
         config.blockArrangement = { category : { x: 20 } };
       }
@@ -1861,12 +1880,6 @@ StudioApp.prototype.configureDom = function (config) {
       bodyElement.style.overflow = "hidden";
       bodyElement.className = bodyElement.className + " pin_bottom";
       container.className = container.className + " pin_bottom";
-      visualizationColumn.className = visualizationColumn.className + " pin_bottom";
-      codeWorkspace.className = codeWorkspace.className + " pin_bottom";
-      if (this.editCode) {
-        var codeTextbox = document.getElementById('codeTextbox');
-        codeTextbox.className = codeTextbox.className + " pin_bottom";
-      }
     } else {
       visualizationColumn.style.minHeight = vizHeight + 'px';
       container.style.minHeight = vizHeight + 'px';
@@ -1927,9 +1940,9 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       } else {
         $(vizColumn).addClass('wireframeShare');
 
+        var div = document.createElement('div');
+        document.body.appendChild(div);
         if (!options.level.iframeEmbed) {
-          var div = document.createElement('div');
-          document.body.appendChild(div);
           ReactDOM.render(React.createElement(WireframeSendToPhone, {
             channelId: dashboard.project.getCurrentId(),
             appType: dashboard.project.getStandaloneApp()
@@ -2282,9 +2295,16 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     hasVerticalScrollbars: config.hasVerticalScrollbars,
     hasHorizontalScrollbars: config.hasHorizontalScrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false),
+    showUnusedBlocks: experiments.isEnabled('unusedBlocks') && utils.valueOr(config.showUnusedBlocks, true),
     readOnly: utils.valueOr(config.readonlyWorkspace, false),
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false)
   };
+
+  // Never show unused blocks in edit mode
+  if (options.editBlocks) {
+    options.showUnusedBlocks = false;
+  }
+
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
     'disableParamEditing'].forEach(
     function (prop) {
@@ -2401,7 +2421,7 @@ StudioApp.prototype.getUnfilledFunctionalExample = function () {
  */
 StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
   var unfilledBlock;
-  Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
+  Blockly.mainBlockSpace.getAllUsedBlocks().some(function (block) {
     // Get the root block in the chain
     var rootBlock = block.getRootBlock();
     if (!filter(rootBlock)) {
@@ -2669,7 +2689,7 @@ StudioApp.prototype.hasDuplicateVariablesInForLoops = function () {
   if (this.editCode) {
     return false;
   }
-  return Blockly.mainBlockSpace.getAllBlocks().some(this.forLoopHasDuplicatedNestedVariables_);
+  return Blockly.mainBlockSpace.getAllUsedBlocks().some(this.forLoopHasDuplicatedNestedVariables_);
 };
 
 /**
@@ -2720,7 +2740,7 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
  */
 StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
-  const combined = Object.assign({
+  const combined = _.assign({
     localeDirection: this.localeDirection(),
     assetUrl: this.assetUrl,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
@@ -2728,11 +2748,32 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     hideSource: !!config.hideSource,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
-    instructionsMarkdown: level.markdownInstructions,
-    instructionsInTopPane: config.showInstructionsInTopPane,
+    pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
+    instructionsInTopPane: !!config.showInstructionsInTopPane,
     puzzleNumber: level.puzzle_number,
-    stageTotal: level.stage_total
+    stageTotal: level.stage_total,
+    noVisualization: false
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));
+
+  // also set some instructions specific constants
+  let longInstructions = level.markdownInstructions;
+  let shortInstructions = level.instructions;
+  const shortInstructionsWhenCollapsed = !!config.shortInstructionsWhenCollapsed;
+
+  if (!shortInstructionsWhenCollapsed) {
+    if (shortInstructions && !longInstructions) {
+      // use short instructions as long instructions if that's all we have
+      longInstructions = shortInstructions;
+    }
+    // Never use short instructions in CSP
+    shortInstructions = undefined;
+  }
+
+  this.reduxStore.dispatch(setInstructionsConstants({
+    shortInstructionsWhenCollapsed,
+    shortInstructions,
+    longInstructions,
+  }));
 };

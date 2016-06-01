@@ -1,5 +1,6 @@
 require 'test_helper'
 class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
+  freeze_time
 
   setup do
     @organizer = create :workshop_organizer
@@ -30,16 +31,20 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_template :new
   end
 
-  test 'new action for organizer renders own view' do
+  test 'workshop organizers can see enrollment form' do
+    # Note - organizers can see the form, but cannot enroll in their own workshops.
+    # This is tested in 'creating an enrollment with email match from organizer renders own view'
     sign_in @organizer
     get :new, workshop_id: @workshop.id
-    assert_template :own
+    assert_template :new
   end
 
-  test 'new action for facilitator renders own view' do
+  test 'facilitators can see enrollment form' do
+    # Note - facilitators can see the form, but cannot enroll in their own workshops.
+    # This is tested in 'creating an enrollment with email match from facilitator renders own view'
     sign_in @facilitator
     get :new, workshop_id: @workshop.id
-    assert_template :own
+    assert_template :new
   end
 
   test 'unrelated organizers and facilitators can enroll' do
@@ -66,13 +71,9 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_template :full
   end
 
-  test 'enrollments can be created' do
-    assert_creates(Pd::Enrollment) do
-      post :create, workshop_id: @workshop.id, pd_enrollment: enrollment_test_params
-    end
-    enrollment = Pd::Enrollment.last
-    refute_nil enrollment.code
-    assert_redirected_to action: :show, code: enrollment.code
+  test 'unknown workshop id responds with 404' do
+    get :new, workshop_id: 'nonsense'
+    assert_response 404
   end
 
   test 'enroll post route' do
@@ -80,6 +81,15 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
       {path: "/pd/workshops/#{@workshop.id}/enroll", method: :post},
       {controller: 'pd/workshop_enrollment', action: 'create', workshop_id: @workshop.id.to_s}
     )
+  end
+
+  test 'enrollments can be created' do
+    assert_creates(Pd::Enrollment) do
+      post :create, workshop_id: @workshop.id, pd_enrollment: enrollment_test_params
+    end
+    enrollment = Pd::Enrollment.last
+    refute_nil enrollment.code
+    assert_redirected_to action: :show, code: enrollment.code
   end
 
   test 'creating a duplicate enrollment renders duplicate view' do
@@ -135,6 +145,11 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_template :new
   end
 
+  test 'creating an enrollment on an unknown workshop id returns 404' do
+    post :create, workshop_id: 'nonsense', pd_enrollment: enrollment_test_params
+    assert_response 404
+  end
+
   test 'show route' do
     assert_routing(
       {path: "/pd/workshop_enrollment/#{@existing_enrollment.code}", method: :get},
@@ -181,7 +196,9 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
       email: email,
       email_confirmation: email,
       school: 'test enrollment school',
-      district: 'test enrollment district'
+      school_type: 'public',
+      school_state: 'WA',
+      school_district_id: create(:school_district).id
     }
   end
 

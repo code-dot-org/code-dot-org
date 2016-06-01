@@ -581,7 +581,7 @@ it-IT:
   dashboard_sections_no_move: No, vorrei che lo/gli studente/i si trovasse/trovassero solo nella nuova sezione.
   dashboard_sections_move_students: Sposta gli studenti
   dashboard_error_none_selected: Non hai selezionato nessuno studente. Per favore, scegli almeno uno studente.
-  dashboard_error_other_section: 'Se stai spostando degli studenti tra le tue stesse sezioni, selezionane una dal menù a tendina. Scegli "Altra Sezione" solo se devi spostare degli studenti nella sezione di un altro insegnante.'
+  dashboard_error_other_section: "Se stai spostando degli studenti tra le tue stesse sezioni, selezionane una dal menù a tendina. Scegli 'Altra Sezione' solo se devi spostare degli studenti nella sezione di un altro insegnante."
   dashboard_students_add_student: Aggiungi uno studente
   dashboard_students_add_students: Aggiungi più studenti
   dashboard_students_add_multiple: 'Scrivi o incolla i nomi dei tuoi studenti, uno per riga:'

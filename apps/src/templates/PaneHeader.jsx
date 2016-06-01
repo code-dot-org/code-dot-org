@@ -4,6 +4,7 @@
  * as focused or not. We then have child components of PaneSection and PaneButton.
  */
 
+var React = require('react');
 var Radium = require('radium');
 
 var commonStyles = require('../commonStyles');

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160512224559) do
+ActiveRecord::Schema.define(version: 20160527181440) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -341,17 +341,21 @@ ActiveRecord::Schema.define(version: 20160512224559) do
   add_index "pd_district_payment_terms", ["district_id", "course"], name: "index_pd_district_payment_terms_on_district_id_and_course", using: :btree
 
   create_table "pd_enrollments", force: :cascade do |t|
-    t.integer  "pd_workshop_id", limit: 4,   null: false
-    t.string   "name",           limit: 255, null: false
-    t.string   "email",          limit: 255, null: false
+    t.integer  "pd_workshop_id",     limit: 4,   null: false
+    t.string   "name",               limit: 255, null: false
+    t.string   "email",              limit: 255, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "district_name",  limit: 255
-    t.string   "school",         limit: 255
-    t.string   "code",           limit: 255
+    t.string   "school",             limit: 255
+    t.string   "code",               limit: 255
+    t.integer  "school_district_id", limit: 4
+    t.integer  "school_zip",         limit: 4
+    t.string   "school_type",        limit: 255
+    t.string   "school_state",       limit: 255
   end
 
   add_index "pd_enrollments", ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
+  add_index "pd_enrollments", ["school_district_id"], name: "index_pd_enrollments_on_school_district_id", using: :btree
 
   create_table "pd_sessions", force: :cascade do |t|
     t.integer  "pd_workshop_id", limit: 4
@@ -364,14 +368,14 @@ ActiveRecord::Schema.define(version: 20160512224559) do
   add_index "pd_sessions", ["pd_workshop_id"], name: "index_pd_sessions_on_pd_workshop_id", using: :btree
 
   create_table "pd_workshops", force: :cascade do |t|
-    t.string   "workshop_type",    limit: 255, null: false
-    t.integer  "organizer_id",     limit: 4,   null: false
+    t.string   "workshop_type",    limit: 255,   null: false
+    t.integer  "organizer_id",     limit: 4,     null: false
     t.string   "location_name",    limit: 255
     t.string   "location_address", limit: 255
-    t.string   "course",           limit: 255, null: false
+    t.string   "course",           limit: 255,   null: false
     t.string   "subject",          limit: 255
-    t.integer  "capacity",         limit: 4,   null: false
-    t.string   "notes",            limit: 255
+    t.integer  "capacity",         limit: 4,     null: false
+    t.text     "notes",            limit: 65535
     t.integer  "section_id",       limit: 4
     t.datetime "started_at"
     t.datetime "ended_at"
@@ -432,22 +436,12 @@ ActiveRecord::Schema.define(version: 20160512224559) do
     t.integer  "plc_learning_module_id",            limit: 4
     t.datetime "created_at",                                  null: false
     t.datetime "updated_at",                                  null: false
+    t.integer  "user_id",                           limit: 4
   end
 
   add_index "plc_enrollment_module_assignments", ["plc_enrollment_unit_assignment_id"], name: "module_assignment_enrollment_index", using: :btree
   add_index "plc_enrollment_module_assignments", ["plc_learning_module_id"], name: "module_assignment_lm_index", using: :btree
-
-  create_table "plc_enrollment_task_assignments", force: :cascade do |t|
-    t.string   "status",                              limit: 255
-    t.integer  "plc_enrollment_module_assignment_id", limit: 4
-    t.integer  "plc_task_id",                         limit: 4
-    t.datetime "created_at",                                        null: false
-    t.datetime "updated_at",                                        null: false
-    t.text     "properties",                          limit: 65535
-  end
-
-  add_index "plc_enrollment_task_assignments", ["plc_enrollment_module_assignment_id"], name: "task_assignment_module_assignment_index", using: :btree
-  add_index "plc_enrollment_task_assignments", ["plc_task_id"], name: "task_assignment_task_index", using: :btree
+  add_index "plc_enrollment_module_assignments", ["user_id"], name: "index_plc_enrollment_module_assignments_on_user_id", using: :btree
 
   create_table "plc_enrollment_unit_assignments", force: :cascade do |t|
     t.integer  "plc_user_course_enrollment_id", limit: 4
@@ -455,10 +449,12 @@ ActiveRecord::Schema.define(version: 20160512224559) do
     t.string   "status",                        limit: 255
     t.datetime "created_at",                                null: false
     t.datetime "updated_at",                                null: false
+    t.integer  "user_id",                       limit: 4
   end
 
   add_index "plc_enrollment_unit_assignments", ["plc_course_unit_id"], name: "enrollment_unit_assignment_course_unit_index", using: :btree
   add_index "plc_enrollment_unit_assignments", ["plc_user_course_enrollment_id"], name: "enrollment_unit_assignment_course_enrollment_index", using: :btree
+  add_index "plc_enrollment_unit_assignments", ["user_id"], name: "index_plc_enrollment_unit_assignments_on_user_id", using: :btree
 
   create_table "plc_evaluation_answers", force: :cascade do |t|
     t.string   "answer",                     limit: 255
@@ -563,15 +559,25 @@ ActiveRecord::Schema.define(version: 20160512224559) do
   add_index "puzzle_ratings", ["script_id", "level_id"], name: "index_puzzle_ratings_on_script_id_and_level_id", using: :btree
   add_index "puzzle_ratings", ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
 
+  create_table "school_districts", force: :cascade do |t|
+    t.string   "name",       limit: 255, null: false
+    t.string   "city",       limit: 255, null: false
+    t.string   "state",      limit: 255, null: false
+    t.string   "zip",        limit: 255, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
   create_table "script_levels", force: :cascade do |t|
     t.integer  "level_id",   limit: 4
-    t.integer  "script_id",  limit: 4, null: false
+    t.integer  "script_id",  limit: 4,     null: false
     t.integer  "chapter",    limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "stage_id",   limit: 4
     t.integer  "position",   limit: 4
     t.boolean  "assessment"
+    t.text     "properties", limit: 65535
   end
 
   add_index "script_levels", ["level_id"], name: "index_script_levels_on_level_id", using: :btree
@@ -926,6 +932,7 @@ ActiveRecord::Schema.define(version: 20160512224559) do
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
+  add_foreign_key "pd_enrollments", "school_districts"
   add_foreign_key "peer_reviews", "level_sources"
   add_foreign_key "peer_reviews", "levels"
   add_foreign_key "peer_reviews", "scripts"

@@ -15,7 +15,6 @@ var ALLOWED_KEYS = utils.makeEnum(
   'isSubmittable',
   'isSubmitted',
   'isViewDataButtonHidden',
-  'instructionsMarkdown',
   'instructionsInTopPane',
   'puzzleNumber',
   'stageTotal',
@@ -28,7 +27,9 @@ var ALLOWED_KEYS = utils.makeEnum(
   'visualizationHasPadding',
   'hideSource',
   'hideRunButton',
-  'playspacePhoneFrame'
+  'playspacePhoneFrame',
+  'noVisualization',
+  'pinWorkspaceToBottom'
 );
 
 const initialState = {
@@ -36,7 +37,7 @@ const initialState = {
   }
 };
 
-module.exports.default = function reducer(state = initialState, action) {
+export default function reducer(state = initialState, action) {
   if (action.type === SET_PAGE_CONSTANTS) {
     Object.keys(action.props).forEach(function (key) {
       if (ALLOWED_KEYS[key] === undefined) {
@@ -50,7 +51,7 @@ module.exports.default = function reducer(state = initialState, action) {
   }
 
   return state;
-};
+}
 
 /**
  * Push lots of page constants into the store.
@@ -74,9 +75,9 @@ module.exports.default = function reducer(state = initialState, action) {
  * ...
  * @returns {{type: ActionType, props: Object}}
  */
-module.exports.setPageConstants = function (props) {
+export function setPageConstants(props) {
   return {
     type: SET_PAGE_CONSTANTS,
     props: props
   };
-};
+}

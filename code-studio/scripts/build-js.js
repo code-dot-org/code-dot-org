@@ -38,6 +38,7 @@ Promise.all([
       'levelbuilder.js',
       'levelbuilder_markdown.js',
       'levelbuilder_studio.js',
+      'districtDropdown.js',
       'levels/contract_match.jsx',
       'levels/widget.js',
       'levels/external.js',
@@ -48,6 +49,9 @@ Promise.all([
       'initApp/initApp.js'
     ],
     commonFile: 'code-studio-common',
+    browserifyGlobalShim: {
+      "jquery": "$"
+    },
     shouldFactor: true
   })),
 
@@ -80,7 +84,10 @@ Promise.all([
       'plc/perform_evaluation.js',
       'plc/task_creation.js'
     ],
-    commonFile: 'plc'
+    commonFile: 'plc',
+    browserifyGlobalShim: {
+      "jquery": "$"
+    }
   })),
 
   // makerlab-only dependencies for app lab
@@ -88,7 +95,22 @@ Promise.all([
     filenames: [
       'makerlab/makerlabDependencies.js'
     ],
-    commonFile: 'makerlab'
+    commonFile: 'makerlab',
+    browserifyGlobalShim: {
+      "jquery": "$"
+    }
+  })),
+
+  build_commands.bundle(_.extend({}, defaultOptions, {
+    filenames: [
+      'pd/workshop_dashboard/workshop_dashboard.jsx'
+    ],
+    commonFile: 'pd',
+    browserifyGlobalShim: {
+      "jquery": "$",
+      "react": "React",
+      "react-dom": "ReactDOM"
+    }
   }))
 ]).then(function (results) {
   var allStepsSucceeded = !results.some(function (result) {
@@ -106,7 +128,7 @@ Promise.all([
     console.log("Watching for .js file changes...");
 
     // Use gaze to set a watcher for scss file changes
-    gaze('src/css/*.scss', function (err, watcher) {
+    gaze('src/css/**/*.scss', function (err, watcher) {
 
       console.log("Watching for .scss file changes...");
 

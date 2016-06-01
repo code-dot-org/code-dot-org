@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 module.exports = function ajaxSubmit(form_selector) {
   $(document).ready(function () {
     $(form_selector).on('ajax:beforeSend', function (e, xhr) {
@@ -6,7 +8,7 @@ module.exports = function ajaxSubmit(form_selector) {
       xhr.setRequestHeader('X-CSRF-TOKEN', token);
     });
     $(form_selector).on('ajax:complete', function (e, data) {
-      if (data.status == "200") {
+      if (parseInt(data.status, 10) === 200) {
         localStorage.removeItem('markdown_' + window.location.pathname.split('/').reverse()[1]);
         window.location.href = JSON.parse(data.responseText).redirect;
       }

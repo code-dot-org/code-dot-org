@@ -1,5 +1,12 @@
+var React = require('react');
 var MarkdownInstructions = require('./MarkdownInstructions');
 var NonMarkdownInstructions = require('./NonMarkdownInstructions');
+
+const styles = {
+  main: {
+    overflow: 'auto'
+  }
+};
 
 var Instructions = React.createClass({
 
@@ -10,7 +17,8 @@ var Instructions = React.createClass({
     renderedMarkdown: React.PropTypes.string,
     markdownClassicMargins: React.PropTypes.bool,
     aniGifURL: React.PropTypes.string,
-    authoredHints: React.PropTypes.element
+    authoredHints: React.PropTypes.element,
+    onResize: React.PropTypes.func
   },
 
   render: function () {
@@ -31,6 +39,7 @@ var Instructions = React.createClass({
           ref="instructionsMarkdown"
           renderedMarkdown={this.props.renderedMarkdown}
           markdownClassicMargins={this.props.markdownClassicMargins}
+          onResize={this.props.onResize}
           inTopPane={this.props.inTopPane}
         />
       );
@@ -44,7 +53,7 @@ var Instructions = React.createClass({
       );
     }
     return (
-      <div>
+      <div style={styles.main}>
         {instructions}
         {this.props.aniGifURL &&
           <img className="aniGif example-image" src={ this.props.aniGifURL }/>

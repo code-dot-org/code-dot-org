@@ -198,29 +198,34 @@ class DashboardSection
 
     where_clause = Dashboard.admin?(user_id) ? "" : "hidden = 0"
 
+    # Cache the courses names in English for all users. After the
+    # facilitator summit (2016-5-23) we should change the cache to be
+    # per-language.
+    course_locale = 'en-US'
+
     # cache result if we have to actually run the query
-    @@course_cache[course_cache_key] = Hash[
-         Dashboard.db[:scripts].
-           where(where_clause).
-           select(:id, :name, :hidden).
-           all.
-           map do |course|
-             name = ScriptConstants.teacher_dashboard_name(course[:name])
-             first_category = ScriptConstants.categories(course[:name])[0] || 'other'
-             name += " *" if course[:hidden]
-             [
-               course[:id],
-               [
-                 I18n.t("#{name}_name", default: name),
-                 I18n.t("#{first_category}_category_name".to_sym, default: first_category)
-               ]
-             ]
-           end
-        ]
+    @@course_cache[course_cache_key] =
+      Dashboard.db[:scripts].
+        where(where_clause).
+        select(:id, :name, :hidden).
+        all.
+        map do |course|
+          name = ScriptConstants.teacher_dashboard_name(course[:name])
+          first_category = ScriptConstants.categories(course[:name])[0] || 'other'
+          position = ScriptConstants.position_in_category(name, first_category)
+          name = I18n.t("#{name}_name", default: name, locale: course_locale)
+          name += " *" if course[:hidden]
+          {
+            id: course[:id],
+            name: name,
+            category: I18n.t("#{first_category}_category_name", default: first_category, locale: course_locale),
+            position: position
+          }
+        end
   end
 
   def self.valid_course_id?(course_id)
-    valid_courses[course_id.to_i]
+    valid_courses.find{|course| course[:id] == course_id.to_i}
   end
 
   def self.create(params)

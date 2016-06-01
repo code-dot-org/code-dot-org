@@ -1,4 +1,5 @@
 /* global dashboard, appOptions, trackEvent */
+import $ from 'jquery';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -362,7 +363,7 @@ var projects = module.exports = {
       case 'studio':
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
-        } else if (NON_REMIXABLE_SKINS.indexOf(appOptions.skinId) != -1) {
+        } else if (NON_REMIXABLE_SKINS.indexOf(appOptions.skinId) !== -1) {
           return null;
         }
         return 'playlab';

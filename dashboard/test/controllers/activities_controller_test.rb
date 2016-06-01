@@ -313,7 +313,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     test_logged_in_milestone
   end
 
-  test "logged in milestone should backfill userscript" do
+  test "logged in milestone should backfill userscript for old users" do
+    @user.update(created_at: Date.new(2014, 9, 10))
+
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
@@ -1034,7 +1036,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       "stage 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; stage 'Milestone Stage 2'; level 'Level 3'",
       "a filename"
     )
-    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:stages].map{|stage| stage[:levels]}.flatten)
+    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:stages].map{|stage| stage[:scriptlevels]}.flatten)
 
     last_level_in_first_stage = script.stages.first.script_levels.last
     post :milestone, @milestone_params.merge(script_level_id: last_level_in_first_stage.id)
@@ -1044,6 +1046,19 @@ class ActivitiesControllerTest < ActionController::TestCase
     # find localized test strings for custom stage names in script
     assert response.has_key?('stage_changing'), "No key 'stage_changing' in response #{response.inspect}"
     assert_equal('milestone-stage-1', response['stage_changing']['previous']['name'])
+  end
+
+  test 'milestone post respects level_id for active level' do
+    script = create :script
+    stage = create :stage, script: script
+    level1a = create :maze, name: 'maze 1'
+    level1b = create :maze, name: 'maze 1 new'
+    script_level = create :script_level, script: script, stage: stage, levels: [level1a, level1b], properties: "{'maze 1': {active: false}}"
+
+    post :milestone, @milestone_params.merge(script_level_id: script_level.id, level_id: level1a.id)
+    response = JSON.parse(@response.body)
+
+    assert_equal response['level_id'], level1a.id
   end
 
   test 'New level completed response' do
@@ -1070,5 +1085,24 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects(:trophy_check).with(@user)
     post :milestone, @milestone_params.merge(script_level_id: script_level_with_trophies.id)
     assert_response :success
+  end
+
+  test 'does not backfill new users who submit unsuccessful first attempt' do
+    assert !@user.needs_to_backfill_user_scripts?
+
+    # do all the logging
+    @controller.expects :log_milestone
+
+    assert_creates(LevelSource, Activity, UserLevel) do
+      assert_does_not_create(GalleryActivity) do
+        assert_no_difference('@user.reload.total_lines') do # don't update total lines
+          post :milestone, @milestone_params.merge(result: 'false', testResult: 10)
+        end
+      end
+    end
+
+    assert_response :success
+    assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
+    assert !@user.needs_to_backfill_user_scripts?
   end
 end

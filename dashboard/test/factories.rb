@@ -162,6 +162,12 @@ FactoryGirl.define do
     properties{{question: 'question text', answers: [{text: 'text1', correct: true}], questions: [{text: 'text2'}], options: {hide_submit: false}}}
   end
 
+  factory :external_link, parent: Level, class: ExternalLink do
+    game {Game.external_link}
+    url nil
+    link_title 'title'
+  end
+
   factory :level_source do
     level
     data '<xml/>'
@@ -329,23 +335,26 @@ FactoryGirl.define do
   end
 
   factory :peer_review do
-    user nil
+    submitter {create :user}
+    reviewer nil
     from_instructor false
-    script nil
-    level nil
-    level_source nil
+    script {create :script}
+    level {create :level}
+    level_source {create :level_source}
     data "MyText"
-    status 1
+    status nil
   end
 
   factory :plc_enrollment_unit_assignment, :class => 'Plc::EnrollmentUnitAssignment' do
     plc_user_course_enrollment nil
     plc_course_unit nil
     status Plc::EnrollmentUnitAssignment::START_BLOCKED
+    user nil
   end
 
   factory :plc_course_unit, :class => 'Plc::CourseUnit' do
     plc_course {create(:plc_course)}
+    script {create(:script)}
     unit_name "MyString"
     unit_description "MyString"
     unit_order 1
@@ -360,10 +369,6 @@ FactoryGirl.define do
     icon nil
   end
 
-  factory :plc_script_completion_task, parent: :plc_task, class: 'Plc::ScriptCompletionTask' do
-    script_id nil
-  end
-
   factory :plc_evaluation_answer, :class => 'Plc::EvaluationAnswer' do
     answer "MyString"
     plc_evaluation_question nil
@@ -375,15 +380,10 @@ FactoryGirl.define do
     plc_course_unit nil
   end
 
-  factory :plc_enrollment_task_assignment, :class => 'Plc::EnrollmentTaskAssignment' do
-    status "MyString"
-    plc_enrollment_module_assignment nil
-    plc_task nil
-  end
-
   factory :plc_enrollment_module_assignment, :class => 'Plc::EnrollmentModuleAssignment' do
     plc_enrollment_unit_assignment nil
     plc_learning_module nil
+    user nil
   end
 
   factory :plc_user_course_enrollment, :class => 'Plc::UserCourseEnrollment' do
@@ -395,11 +395,17 @@ FactoryGirl.define do
   factory :plc_task, :class => 'Plc::Task' do
     name "MyString"
     plc_learning_modules []
+    after(:create) do |plc_task|
+      plc_task.plc_learning_modules.each do |learning_module|
+        plc_task.script_level = create(:script_level, stage: learning_module.stage, script: learning_module.plc_course_unit.script, level: create(:level))
+      end
+    end
   end
 
   factory :plc_learning_module, :class => 'Plc::LearningModule' do
     name "MyString"
     plc_course_unit {create(:plc_course_unit)}
+    stage {create(:stage)}
     module_type Plc::LearningModule::CONTENT_MODULE
   end
   factory :plc_course, :class => 'Plc::Course' do
@@ -462,11 +468,12 @@ FactoryGirl.define do
     workshop_type Pd::Workshop::TYPES.first
     course Pd::Workshop::COURSES.first
     capacity 10
+
   end
 
   factory :pd_session, class: 'Pd::Session' do
     association :workshop, factory: :pd_workshop
-    start {DateTime.now.utc}
+    start {Date.today + 9.hours}
     self.end {start + 6.hours}
   end
 
@@ -475,6 +482,9 @@ FactoryGirl.define do
     sequence(:name) { |n| "Workshop Participant #{n} " }
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
     school {'Example School'}
+    school_type {'public'}
+    school_state {'WA'}
+    school_district_id {create(:school_district).id}
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
@@ -498,4 +508,12 @@ FactoryGirl.define do
     sequence(:name) { |n| "PLP #{n}" }
     contact {create :teacher}
   end
+
+  factory :school_district do
+    name "A school district"
+    city "Seattle"
+    state "WA"
+    zip "98101"
+  end
+
 end

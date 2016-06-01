@@ -154,7 +154,7 @@ function installNumberEquals(blockly, generator, gensym) {
   generator.functional_number_equals = function () {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return '(' + arg1 + " == " + arg2 + ')';
+    return '(' + arg1 + " === " + arg2 + ')';
   };
 }
 
@@ -172,7 +172,7 @@ function installStringEquals(blockly, generator, gensym) {
   generator.functional_string_equals = function () {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || '';
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || '';
-    return '(' + arg1 + " == " + arg2 + ')';
+    return '(' + arg1 + " === " + arg2 + ')';
   };
 }
 

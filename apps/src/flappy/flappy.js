@@ -7,6 +7,8 @@
 
 'use strict';
 
+var React = require('react');
+var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var flappyMsg = require('./locale');
@@ -816,7 +818,7 @@ Flappy.onPuzzleComplete = function () {
 
   // If we know they succeeded, mark levelComplete true
   // Note that we have not yet animated the succesful run
-  var levelComplete = (Flappy.result == ResultType.SUCCESS);
+  var levelComplete = (Flappy.result === ResultType.SUCCESS);
 
   // If the current level is a free play, always return the free play
   // result type

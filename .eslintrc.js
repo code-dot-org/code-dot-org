@@ -18,12 +18,6 @@ module.exports = {
       "ecmaVersion": 6
     }
   },
-  "globals": {
-    "$": true,
-    "jQuery": true,
-    "React": true,
-    "ReactDOM": true
-  },
   "rules": {
     "array-bracket-spacing": ["error", "never"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
@@ -48,6 +42,7 @@ module.exports = {
     "space-before-function-paren": ["error", {
       "anonymous": "always",
       "named": "never"
-    }]
+    }],
+    "eqeqeq": "error"
   }
 };

@@ -1,13 +1,21 @@
 /** @file Crosshair and guides over visualization */
-
+import React from 'react';
 export const CROSSHAIR_MARGIN = 6;
+
+export const styles = {
+  line: {
+    stroke: '#aaa',
+    strokeWidth: 1.8,
+    strokeDasharray: 6.5
+  }
+};
 
 /**
  * Crosshair and Guides layered over the play space.
  * Should be rendered inside a VisualizationOverlay.
  * @constructor
  */
-let CrosshairOverlay = React.createClass({
+const CrosshairOverlay = React.createClass({
   propTypes: {
     // width, height, mouseX and mouseY are given in app-space, not screen-space
     width: React.PropTypes.number,
@@ -35,12 +43,14 @@ let CrosshairOverlay = React.createClass({
             y1={this.props.mouseY - CROSSHAIR_MARGIN}
             x2={this.props.mouseX}
             y2={0}
+            style={styles.line}
         />
         <line
             x1={this.props.mouseX - CROSSHAIR_MARGIN}
             y1={this.props.mouseY}
             x2={0}
             y2={this.props.mouseY}
+            style={styles.line}
         />
       </g>
     );

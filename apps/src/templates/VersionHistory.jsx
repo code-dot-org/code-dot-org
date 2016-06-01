@@ -1,4 +1,5 @@
 /* global dashboard */
+var React = require('react');
 var VersionRow = require('./VersionRow');
 var sourcesApi = require('../clientApi').sources;
 
