@@ -60,17 +60,10 @@ progress.mergedActivityCssClass = function (a, b) {
 
 progress.renderStageProgress = function (stageData, progressData, clientProgress, currentLevelId, puzzlePage) {
   var serverProgress = progressData.levels || {};
-  var currentLevelIndex = null;
   var lastLevelId = null;
   var levelRepeat = 0;
 
-  var combinedProgress = stageData.levels.map(function (level, index) {
-    // Determine the current level index.
-    // However, because long assessments can have the same level appearing
-    // multiple times, just set this the first time it's determined.
-    if (level.id === currentLevelId && currentLevelIndex === null) {
-      currentLevelIndex = index;
-    }
+  var combinedProgress = stageData.levels.map(function (level) {
 
     // If we have a multi-page level, then we will encounter the same level ID
     // multiple times in a row.  Keep track of how many times we've seen it
@@ -112,26 +105,23 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
       status: status,
       kind: level.kind,
       url: href,
+      uid: level.uid,
       id: level.id
     };
   });
-
-  if (currentLevelIndex !== null && puzzlePage !== progress.PUZZLE_PAGE_NONE) {
-    currentLevelIndex += puzzlePage - 1;
-  }
 
   var mountPoint = document.createElement('div');
   mountPoint.style.display = 'inline-block';
   $('.progress_container').replaceWith(mountPoint);
   ReactDOM.render(React.createElement(StageProgress, {
     levels: combinedProgress,
-    currentLevelIndex: currentLevelIndex,
+    currentLevelId: currentLevelId,
     saveAnswersFirst: puzzlePage !== progress.PUZZLE_PAGE_NONE
   }), mountPoint);
 };
 
-progress.renderCourseProgress = function (scriptData) {
-  var store = loadProgress(scriptData);
+progress.renderCourseProgress = function (scriptData, currentLevelId) {
+  var store = loadProgress(scriptData, currentLevelId);
   var mountPoint = document.createElement('div');
 
   $.ajax('/api/user_progress/' + scriptData.name).done(data => {
@@ -160,13 +150,14 @@ progress.renderCourseProgress = function (scriptData) {
   );
 };
 
-function loadProgress(scriptData) {
+function loadProgress(scriptData, currentLevelId) {
   var teacherCourse = $('#landingpage').hasClass('teacher-course');
 
   let store = createStore((state = [], action) => {
     if (action.type === 'MERGE_PROGRESS') {
       let newProgress = {};
       return {
+        currentLevelId: state.currentLevelId,
         display: state.display,
         progress: newProgress,
         stages: state.stages.map(stage => _.assign({}, stage, {levels: stage.levels.map(level => {
@@ -179,6 +170,7 @@ function loadProgress(scriptData) {
     }
     return state;
   }, {
+    currentLevelId: currentLevelId,
     display: teacherCourse ? 'list' : 'dots',
     progress: {},
     stages: scriptData.stages
