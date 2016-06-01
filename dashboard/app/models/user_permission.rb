@@ -16,6 +16,7 @@
 class UserPermission < ActiveRecord::Base
   DISTRICT_CONTACT = 'district_contact'
   FACILITATOR = 'facilitator'
+  HINT_ACCESS = 'hint_access'
   LEVELBUILDER = 'levelbuilder'
   WORKSHOP_ORGANIZER = 'workshop_organizer'
 end
