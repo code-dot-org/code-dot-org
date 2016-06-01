@@ -231,7 +231,6 @@ Blockly.Block.prototype.initSvg = function() {
   }
   this.setCurrentlyHidden(this.currentlyHidden_);
   this.moveToFrontOfMainCanvas_();
-  this.setIsUnused();
 };
 
 /**
@@ -676,7 +675,6 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
   } else {
     // Left-click (or middle click)
     Blockly.removeAllRanges();
-    this.setIsUnused(false);
     this.blockSpace.blockSpaceEditor.setCursor(Blockly.Css.Cursor.CLOSED);
     // Look up the current translation and record it.
     var xy = this.getRelativeToSurfaceXY();
@@ -759,11 +757,6 @@ Blockly.Block.prototype.onMouseUp_ = function(e) {
     // that the block has been deleted.
     Blockly.fireUiEvent(window, 'resize');
   }
-
-  if (Blockly.selected) {
-    Blockly.selected.setIsUnused();
-  }
-
   if (Blockly.highlightedConnection_) {
     Blockly.highlightedConnection_.unhighlight();
     Blockly.highlightedConnection_ = null;
@@ -1357,7 +1350,6 @@ Blockly.Block.prototype.setParent = function(newParent) {
   } else {
     // Remove this block from the blockSpace's list of top-most blocks.
     this.blockSpace.removeTopBlock(this);
-    this.setIsUnused();
   }
 
   this.parentBlock_ = newParent;
@@ -1678,27 +1670,6 @@ Blockly.Block.prototype.setFillPattern = function(pattern) {
  */
 Blockly.Block.prototype.setFramed = function(isFramed) {
   this.blockSvgClass_ = isFramed ? Blockly.BlockSvgFramed : Blockly.BlockSvg;
-};
-
-Blockly.Block.prototype.isUnused = function() {
-  return this.svg_.isUnused();
-};
-
-Blockly.Block.prototype.setIsUnused = function(isUnused) {
-  if (isUnused === undefined) {
-    isUnused = this.previousConnection !== null &&
-        this.isUserVisible() &&
-        this.type !== 'functional_definition' &&
-        Blockly.mainBlockSpace &&
-        Blockly.mainBlockSpace.isReadOnly() === false &&
-        Blockly.mainBlockSpace.isTopBlock(this);
-  }
-  if (Blockly.showUnusedBlocks) {
-    this.svg_.setIsUnused(isUnused);
-  }
-  this.childBlocks_.forEach(function (block) {
-    block.setIsUnused(false);
-  });
 };
 
 /**

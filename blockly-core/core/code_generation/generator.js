@@ -83,10 +83,6 @@ Blockly.Generator.blocksToCode = function(name, blocks, opt_showHidden) {
         // it wants to append a semicolon, or something.
         line = generator.scrubNakedValue(line);
       }
-
-      if (block.isUnused()) {
-        line = "/*\n" + line + "*/\n";
-      }
       code.push(line);
     }
   }
@@ -210,7 +206,6 @@ Blockly.CodeGenerator.prototype.blockToCode = function(block, opt_showHidden) {
         'for block type "' + block.type + '".';
   }
   var code = func.call(block);
-
   if (code instanceof Array) {
     // Value blocks return tuples of code and operator order.
     return [this.scrub_(block, code[0], opt_showHidden), code[1]];
