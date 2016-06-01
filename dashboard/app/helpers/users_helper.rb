@@ -33,6 +33,23 @@ module UsersHelper
     user_data
   end
 
+  def summarize_trophies(script, user = current_user)
+    return {} unless user
+
+    progress = user.progress(script)
+    trophies = {
+      current: progress['current_trophies'],
+      of: I18n.t(:of),
+      max: progress['max_trophies'],
+    }
+
+    user.concept_progress(script).each_pair do |concept, counts|
+      trophies[concept.name] = counts[:current].to_f / counts[:max]
+    end
+
+    trophies
+  end
+
   # Merge the user summary into the specified result hash.
   private def merge_user_summary(user_data, user)
     if user
@@ -62,16 +79,7 @@ module UsersHelper
     return user_data unless user
 
     if script.trophies
-      progress = user.progress(script)
-      user_data[:trophies] = {
-          current: progress['current_trophies'],
-          of: I18n.t(:of),
-          max: progress['max_trophies'],
-      }
-
-      user.concept_progress(script).each_pair do |concept, counts|
-        user_data[:trophies][concept.name] = counts[:current].to_f / counts[:max]
-      end
+      user_data[:trophies] = summarize_trophies(script, user)
     end
 
     unless exclude_level_progress

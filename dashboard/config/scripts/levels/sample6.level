@@ -30,7 +30,9 @@
     "ideal": "12",
     "markdown_instructions": "**Challenge:** Help bee get all of the nectar.\r\n\r\nThis puzzle is meant to be hard.  You may need to try lots of times.",
     "failure_message_override": "Not quite.  Keep trying!  [Move to Play Zone]",
-    "nectar_goal": "6"
+    "nectar_goal": "6",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Did you know that you can use more than one repeat loop in a puzzle?\",\r\n  \"hint_id\": \"sample6_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Sometimes repeat loops have lots of blocks inside, and sometimes they might only have one!\",\r\n  \"hint_id\": \"sample6_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"sample6_1\",\r\n  \"callout_text\": \"One less of these than needed to do the puzzle with just one set of loops.\",\r\n  \"element_id\": \"#callThis\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
   },
   "published": true,
   "notes": "Upping the complexity to a bona fide challenge",
@@ -40,7 +42,7 @@
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_move">
+        <block type="maze_move" id="callThis">
           <title name="DIR">moveForward</title>
         </block>
         <block type="maze_move">

@@ -1,4 +1,5 @@
 /* globals Handsontable */
+import $ from 'jquery';
 
 /**
  * Shows the samplingMessage and completionTable DOM elements depending on the

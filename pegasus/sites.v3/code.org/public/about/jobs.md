@@ -15,8 +15,8 @@ nav: about_nav
  	- [Grant Writer](#grant)
 - **Marketing**
  	- [Marketing Associate](#market)
-- **Outreach**
- 	- [District Manager - East Coast locations](#dcdm)
+- **Partnerships & Outreach**
+ 	- [Regional Manager - Northeast, MidAtlantic, Southeast locations](#dcdm)
 - **Product**
 	- [Senior Backend Engineer / Infrastructure Lead](#backend)
 	- [UX / Visual Designer (Part time)](#design)
@@ -175,40 +175,40 @@ The ideal candidate has the following qualifications:
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="dcdm"href="#dcdm"> District Manager - East Coast locations (Boston, New York, Washington, D.C., surrounding areas)</a>
+## <a name="dcdm"href="#dcdm"> Regional Manager - Northeast, MidAtlantic, Southeast locations (Boston, New York, Washington, D.C., Florida/Georgia)</a>
 
 **Job Summary:**
 
-Code.org is looking for a District Manager to support Code.org’s education efforts through the development, implementation, and maintenance of Code.org’s partnership model with school districts. This position is highly on focused on developing relationships and building sustainability of Computer Science in a region.
+Code.org is looking for a Regional Manager to support Code.org’s education efforts through the development, implementation, and maintenance of Code.org’s partnership model with Professional Learning Partners. This position is highly on focused on developing relationships and building sustainability of Computer Science in a region.
 
 Responsibilities of the position include:
 
-Outreach in Northeast or Mid-Atlantic Region
+Outreach
 
-- Recruit school districts (including schools and teachers)
+- Recruit Professional Learning Partners to partner with Code.org and school districts to teach Computer Science in K-12 schools.
 - Present Code.org partnership model
-- Negotiate Code.org agreement
-- Track district relationship status
-- Liaise with district supervisory personnel
+- Negotiate Code.org agreements
+- Track partnership status
 
-Manage implementation for all partner district/cities at K-12 grade levels
+Manage and support implementation for all partners in region at K-12 grade levels
 
+- Evaluate and support regional partners in becoming a sustainable CS Hub in their area
 - Implement partnership model
-- Assist district in school and teacher recruitment/selection/retention
-- Manage district partnership budget
-- Build district leadership capacity
-- Troubleshoot district issues
-- Work with Professional Learning & Community team to coordinate regional professional development workshops for teachers
-- Market and support the program in the region
-- Represent Code.org and present the partnership model at conferences and other venues, as needed
+- Assist regional partners in district, school, and teacher recruitment/selection/retention
+- Troubleshoot regional partnership issues
+- Work with Professional Learning & Community team to coordinate regional professional learning workshops for teachers
 
-Ability and willingness to travel up to 30% of the time is required.
+Market and support the program in the region
+
+Represent Code.org and present the partnership model at conferences and other venues, as needed
+
+Ability and willingness to travel up to 25% of the time is required.
 
 **Skills and Qualifications:**
 
 The ideal candidate has at least a Bachelor’s degree, experience collaborating with the K-12 public school system, and possesses the following skills:
 
-- Demonstrated ability to pitch the Code.org educational model to individuals across the full school district spectrum (superintendent to teacher) and close the agreement
+- Demonstrated ability to pitch the Code.org educational model to potential partners
 - Experience and aptitude for managing complex projects and relationships to realize successful project outcomes throughout the pitching and implementation life cycle
 - Advanced organizational and problem solving skills
 - Understanding of and passion for equity in computer science and K-12 education

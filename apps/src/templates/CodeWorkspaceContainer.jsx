@@ -63,7 +63,6 @@ var CodeWorkspaceContainer = React.createClass({
 
     // not in redux
     topMargin: React.PropTypes.number.isRequired,
-    onSizeChange: React.PropTypes.func,
   },
 
   /**
@@ -75,8 +74,8 @@ var CodeWorkspaceContainer = React.createClass({
   },
 
   componentDidUpdate: function (prevProps) {
-    if (this.props.onSizeChange && this.props.topMargin !== prevProps.topMargin) {
-      this.props.onSizeChange();
+    if (this.props.topMargin !== prevProps.topMargin) {
+      utils.fireResizeEvent();
     }
   },
 

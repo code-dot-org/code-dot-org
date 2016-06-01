@@ -1,5 +1,7 @@
-/* global define */
+/* global define, $ */
 'use strict';
+
+import Immutable from 'immutable';
 
 exports.shallowCopy = function (source) {
   var result = {};
@@ -372,6 +374,33 @@ exports.escapeText = function (text) {
   }).join('');
 };
 
+exports.showUnusedBlockQtip = function (targetElement) {
+  var msg = require('./locale');
+  $(targetElement).qtip({
+    content: {
+      text: '<h4>' + msg.unattachedBlockTipTitle() +'</h4><p>' + msg.unattachedBlockTipBody() + '</p>',
+      title: {
+        button: $('<div class="tooltip-x-close"/>')
+      }
+    },
+    position: {
+      my: "bottom left",
+      at: "top right"
+    },
+    style: {
+      classes: "cdo-qtips",
+      tip: {
+        width: 20,
+        height: 20
+      }
+    },
+    hide: {
+      event: 'unfocus'
+    },
+    show: false // don't show on mouseover
+  }).qtip('show');
+};
+
 /**
  * Converts degrees into radians.
  *
@@ -394,6 +423,7 @@ exports.trySetLocalStorage = function (item, value) {
   } catch (e) {
     return false;
   }
+
 };
 
 /**
@@ -430,4 +460,35 @@ exports.ellipsify = function (inputText, maxLength) {
     return inputText.substr(0, maxLength - 3) + "...";
   }
   return inputText || '';
+};
+
+/**
+ * Returns deep merge of two objects, concatenating rather than overwriting
+ * array properites. Does not mutate either object.
+ *
+ * Note: new properties in overrides are always added to end, not in-order.
+ *
+ * TODO(bjordan): Replace with _.mergeWith when lodash upgraded to 4.x.
+ *
+ * Note: may become default behavior of mergeDeep in future immutable versions.
+ *   @see https://github.com/facebook/immutable-js/issues/406
+ *
+ * @param {Object} baseObject
+ * @param {Object} overrides
+ * @returns {Object} original object (now modified in-place)
+ */
+exports.deepMergeConcatArrays = (baseObject, overrides) => {
+  function deepConcatMerger(a, b) {
+    const isList = Immutable.List.isList;
+    if (isList(a) && isList(b)) {
+      return a.concat(b);
+    }
+    if (a && a.mergeWith) {
+      return a.mergeWith(deepConcatMerger, b);
+    }
+    return b;
+  }
+
+  var baseImmutable = Immutable.fromJS(baseObject);
+  return baseImmutable.mergeWith(deepConcatMerger, overrides).toJS();
 };
