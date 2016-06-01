@@ -237,7 +237,5 @@
   "watchVideo": "Guarda il video",
   "when": "quando",
   "whenRun": "quando si clicca su \"Esegui\"",
-  "workspaceHeaderShort": "Area di lavoro: ",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
+  "workspaceHeaderShort": "Area di lavoro: "
 }

@@ -237,7 +237,5 @@
   "watchVideo": "비디오 보기",
   "when": "~할 때",
   "whenRun": "실행하면",
-  "workspaceHeaderShort": "작업 영역: ",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
+  "workspaceHeaderShort": "작업 영역: "
 }
