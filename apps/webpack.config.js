@@ -3,6 +3,9 @@ var path = require('path');
 module.exports = {
   resolve: {
     extensions: ["", ".js", ".jsx"],
+    alias: {
+      '@cdo/apps': path.resolve(__dirname, 'src'),
+    }
   },
   externals: {
     "johnny-five": "var JohnnyFive",
