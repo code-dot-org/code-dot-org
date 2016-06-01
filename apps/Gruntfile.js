@@ -267,73 +267,9 @@ module.exports = function (grunt) {
     }
   };
 
-  var allFilesSrc = [];
-  var allFilesDest = [];
   var outputDir = 'build/package/js/';
-  APPS.forEach(function (app) {
-    allFilesSrc.push('build/js/' + app + '/main.js');
-    allFilesDest.push(outputDir + app + '.js');
-  });
-
-  /**
-   * Generates a command line string to execute browserify with the specified options.
-   * Available options are:
-   *
-   * @param {!Object} options
-   * @param {boolean} [options.globalShim] - boolean for whether or not to turn on
-   *        the browserify-global-shim transform
-   * @param {!string} options.cacheFile - file name where the browserify cache should be stored
-   * @param {!string[]} options.srcFiles - list of src files to pass to browserify
-   * @param {!string[]} options.destFiles - list of destination file paths to pass to browserify
-   * @param {boolean} [options.factorBundle] - whether or not to use the factor-bundle plugin to
-   *        extract common code into a separate file.
-   */
-  function getBrowserifyCommand(options) {
-    // Use command-line tools to run browserify (faster/more stable this way)
-    var cmd = 'mkdir -p build/browserified &&' +
-          (envOptions.dev ? '' : ' NODE_ENV=production') + // Necessary for production Redux
-          ' `npm bin`/browserifyinc';
-    if (options.globalShim) {
-      cmd += ' -g [ browserify-global-shim ]';
-    }
-    if (options.cacheFile) {
-      cmd += ' --cachefile ' + outputDir + options.cacheFile;
-    }
-    cmd += ' --extension=.jsx' +
-      ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]' +
-      (envOptions.dev ? '' : ' -t loose-envify') +
-      ' -d ' + options.srcFiles.join(' ');
-    if (options.factorBundle) {
-      cmd += ' -p [ factor-bundle -o ' +
-        options.destFiles.join(' -o ') +
-        ' ] -o ' + outputDir + 'common.js';
-    } else {
-      cmd += ' -o ' + options.destFiles[0];
-    }
-    return cmd;
-  }
-
-  var browserifyExec = getBrowserifyCommand({
-    globalShim: true,
-    cacheFile: 'browserifyinc.cache.json',
-    srcFiles: allFilesSrc,
-    destFiles: allFilesDest,
-    factorBundle: APPS.length > 1,
-  });
-
-  var applabAPIExec = getBrowserifyCommand({
-    globalShim: false,
-    cacheFile: 'applab-api.cache.json',
-    srcFiles: ['build/js/applab/api-entry.js'],
-    destFiles: [outputDir + 'applab-api.js'],
-    factorBundle: false,
-  });
-  var fastMochaTest = process.argv.indexOf('--fast') !== -1;
-
   config.exec = {
-    browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
     convertScssVars: './script/convert-scss-variables.js',
-    applabapi: 'echo "' + applabAPIExec + '" && ' + applabAPIExec,
   };
 
   config.karma = {
@@ -442,39 +378,6 @@ module.exports = function (grunt) {
         server: path.resolve(__dirname, './src/dev/server.js')
       }
     }
-  };
-
-  var uglifiedFiles = {};
-  config.uglify = {
-    browserified: {
-      files: uglifiedFiles
-    }
-  };
-
-  ['common'].concat(APPS).forEach(function (app) {
-    var src = outputDir + app + '.js';
-    var dest = outputDir + app + '.min.js';
-    uglifiedFiles[dest] = [src];
-    var appUglifiedFiles = {};
-    appUglifiedFiles[dest] = [src];
-    config.uglify[app] = {files: appUglifiedFiles};
-  });
-
-  config.uglify.lib = {files: {}};
-  config.uglify.lib.files[outputDir + 'jsinterpreter/interpreter.min.js'] =
-      outputDir + 'jsinterpreter/interpreter.js';
-  config.uglify.lib.files[outputDir + 'jsinterpreter/acorn.min.js'] =
-      outputDir + 'jsinterpreter/acorn.js';
-  config.uglify.lib.files[outputDir + 'p5play/p5.play.min.js'] =
-      outputDir + 'p5play/p5.play.js';
-  config.uglify.lib.files[outputDir + 'p5play/p5.min.js'] =
-      outputDir + 'p5play/p5.js';
-
-  // Run uglify task across all apps in parallel
-  config.concurrent = {
-    uglify: APPS.concat('common', 'lib').map(function (x) {
-      return 'uglify:' + x;
-    })
   };
 
   config.watch = {
