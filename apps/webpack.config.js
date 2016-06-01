@@ -11,6 +11,7 @@ module.exports = {
     "marked": "var marked",
     "blockly": "this Blockly",
     "react": "var React",
+    "react-dom": "var ReactDOM",
   },
   module: {
     loaders: [
