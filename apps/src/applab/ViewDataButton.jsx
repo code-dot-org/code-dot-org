@@ -1,6 +1,4 @@
 /** @file Button that opens the data browser */
-/* global $ */
-
 var React = require('react');
 var applabMsg = require('./locale');
 var styles = require('../templates/ToggleButtonStyles');
@@ -16,7 +14,7 @@ var ViewDataButton = React.createClass({
   },
 
   render: function () {
-    var showDataButtonStyle = $.extend({},
+    var showDataButtonStyle = Object.assign({},
       styles.buttonStyle,
       styles.inactiveStyle,
       {

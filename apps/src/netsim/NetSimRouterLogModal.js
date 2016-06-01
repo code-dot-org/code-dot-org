@@ -4,6 +4,7 @@
  */
 'use strict';
 
+import $ from 'jquery';
 var i18n = require('./locale');
 var NetSimLogEntry = require('./NetSimLogEntry');
 var Packet = require('./Packet');
