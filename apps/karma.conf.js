@@ -50,7 +50,7 @@ module.exports = function (config) {
         new webpack.ProvidePlugin({React: 'react'}),
         new webpack.DefinePlugin({
           IN_UNIT_TEST: JSON.stringify(true),
-          'process.env.TEST_FILE': JSON.stringify(process.env.TEST_FILE),
+          'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
         }),
 
       ]
