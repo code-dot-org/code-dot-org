@@ -3,6 +3,7 @@
  */
 'use strict';
 
+import $ from 'jquery';
 var markup = require('./NetSimMyDeviceTab.html.ejs');
 var NetSimBitRateControl = require('./NetSimBitRateControl');
 var NetSimPulseRateControl = require('./NetSimPulseRateControl');

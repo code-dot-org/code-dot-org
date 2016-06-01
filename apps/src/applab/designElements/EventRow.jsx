@@ -1,4 +1,3 @@
-/* global $ */
 var React = require('react');
 var color = require('../../color');
 var rowStyle = require('./rowStyle');
@@ -12,7 +11,7 @@ var EventRow = module.exports = React.createClass({
 
   render: function () {
     var style = {
-      container: $.extend({}, rowStyle.container, rowStyle.maxWidth),
+      container: Object.assign({}, rowStyle.container, rowStyle.maxWidth),
       name: {
         color: color.dark_charcoal,
         fontWeight: 'bold',
