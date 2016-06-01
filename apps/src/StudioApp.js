@@ -2133,8 +2133,10 @@ StudioApp.prototype.handleEditCode_ = function (config) {
       this.editor.changePaletteGroup(options.dropletPaletteCategory);
       var scrollContainer = $('.droplet-palette-scroller');
       var scrollTo = $(options.selector);
-      scrollContainer.scrollTop(scrollTo.offset().top - scrollContainer.offset().top +
-          scrollContainer.scrollTop());
+      if (scrollTo.length > 0) {
+        scrollContainer.scrollTop(scrollTo.offset().top - scrollContainer.offset().top +
+            scrollContainer.scrollTop());
+      }
     }
 
   }.bind(this));
