@@ -29,8 +29,6 @@ var style = {
       borderStyle: 'solid',
       borderColor: color.lighter_gray,
       margin: '0 -1px',
-      color: color.charcoal,
-      backgroundColor: color.level_not_tried,
       transition: 'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
       ':hover': {
         textDecoration: 'none',
@@ -59,6 +57,36 @@ var style = {
       margin: '2px',
       fontSize: '16px',
       lineHeight: '32px'
+    }
+  },
+  status: {
+    submitted: {
+      color: color.white,
+      backgroundColor: color.level_submitted
+    },
+    perfect: {
+      color: color.white,
+      backgroundColor: color.level_perfect
+    },
+    passed: {
+      color: color.white,
+      backgroundColor: color.level_passed
+    },
+    attempted: {
+      color: color.charcoal,
+      backgroundColor: color.level_attempted
+    },
+    not_tried: {
+      color: color.charcoal,
+      backgroundColor: color.level_not_tried
+    },
+    review_rejected: {
+      color: color.white,
+      backgroundColor: color.level_review_rejected
+    },
+    review_accepted: {
+      color: color.white,
+      backgroundColor: color.level_review_accepted
     }
   }
 };
@@ -110,7 +138,7 @@ var StageProgress = React.createClass({
           key={index}
           href={level.url}
           onClick={onClick}
-          style={dotStyle}>
+          style={[dotStyle, style.status[level.status || 'not_tried']]}>
             {level.title}
         </a>,
         ' '
