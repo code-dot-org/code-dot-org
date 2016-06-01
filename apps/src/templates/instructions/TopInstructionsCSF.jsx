@@ -31,6 +31,13 @@ const styles = {
     right: 0,
     // left handled by media queries for .editor-column
   },
+  mainRtl: {
+    position: 'absolute',
+    marginRight: 15,
+    top: 0,
+    left: 0,
+    // right handled by media queries for .editor-column
+  },
   body: {
     backgroundColor: 'white',
     overflowY: 'scroll',
@@ -59,6 +66,11 @@ const styles = {
     marginRight: -10,
     marginTop: 5,
     marginBottom: 5
+  },
+  collapserButtonRtl: {
+    float: 'left',
+    marginLeft: -10,
+    marginRight: 10,
   }
 };
 
@@ -78,6 +90,7 @@ var TopInstructions = React.createClass({
     collapsed: React.PropTypes.bool.isRequired,
     shortInstructions: React.PropTypes.string.isRequired,
     longInstructions: React.PropTypes.string,
+    isRtl: React.PropTypes.bool.isRequired,
 
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
@@ -158,9 +171,13 @@ var TopInstructions = React.createClass({
   render: function () {
     const resizerHeight = (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
-    const mainStyle = [styles.main, {
-      height: this.props.height
-    }, this.props.isEmbedView && styles.embedView];
+    const mainStyle = [
+      this.props.isRtl ? styles.mainRtl : styles.main,
+      {
+        height: this.props.height - resizerHeight
+      },
+      this.props.isEmbedView && styles.embedView
+    ];
 
     const renderedMarkdown = processMarkdown(this.props.collapsed ?
       this.props.shortInstructions : this.props.longInstructions);
@@ -170,7 +187,8 @@ var TopInstructions = React.createClass({
         <div>
           <div style={styles.body}>
             {this.props.longInstructions && <CollapserButton
-                style={styles.collapserButton}
+                style={[styles.collapserButton, this.props.isRtl && styles.collapserButtonRtl]}
+                isRtl={this.props.isRtl}
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}/>
             }
@@ -200,7 +218,8 @@ module.exports = connect(function propsFromStore(state) {
       state.instructions.maxNeededHeight),
     collapsed: state.instructions.collapsed,
     shortInstructions: state.instructions.shortInstructions,
-    longInstructions: state.instructions.longInstructions
+    longInstructions: state.instructions.longInstructions,
+    isRtl: state.pageConstants.localeDirection === 'rtl'
   };
 }, function propsFromDispatch(dispatch) {
   return {

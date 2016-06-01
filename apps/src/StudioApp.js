@@ -71,11 +71,6 @@ var StudioApp = function () {
   */
   this.BASE_URL = undefined;
 
-  /**
-  * The current locale code.
-  */
-  this.LOCALE = ENGLISH_LOCALE;
-
   this.enableShowCode = true;
   this.editCode = false;
   this.usingBlockly_ = true;
@@ -230,7 +225,6 @@ StudioApp.singleton = new StudioApp();
  */
 StudioApp.prototype.configure = function (options) {
   this.BASE_URL = options.baseUrl;
-  this.LOCALE = options.locale || this.LOCALE;
   // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
@@ -287,14 +281,6 @@ StudioApp.prototype.createReduxStore_ = function () {
  */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
   return !!(config.level.instructions || config.level.aniGifURL);
-};
-
-/**
- * Some functionality - most notably markdown instructions - is only
- * supported when running in English. This helper exposes that check.
- */
-StudioApp.prototype.localeIsEnglish = function () {
-  return this.LOCALE === ENGLISH_LOCALE;
 };
 
 /**
@@ -1124,15 +1110,6 @@ StudioApp.prototype.onReportComplete = function (response) {
 };
 
 /**
- * Given a level definition, do we want to show instructions in markdown form.
- * @param {object} level
- * @returns {boolean}
- */
-StudioApp.prototype.isMarkdownMode = function (level) {
-  return level.markdownInstructions && this.localeIsEnglish();
-};
-
-/**
  * @param {string} [puzzleTitle] - Optional param that only gets used if we dont
  *   have markdown instructions
  * @param {object} level
@@ -1142,9 +1119,12 @@ StudioApp.prototype.isMarkdownMode = function (level) {
 StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, showHints) {
   var renderedMarkdown;
 
-  if (this.isMarkdownMode(level)) {
-    var markdownWithImages = this.substituteInstructionImages(
-      level.markdownInstructions, this.skin.instructions2ImageSubstitutions);
+  var longInstructions = this.reduxStore.getState().pageConstants.longInstructions;
+
+  // longInstructions will be undefined if non-english
+  if (longInstructions) {
+    var markdownWithImages = this.substituteInstructionImages(longInstructions,
+      this.skin.instructions2ImageSubstitutions);
     renderedMarkdown = processMarkdown(markdownWithImages);
   }
 
@@ -1173,7 +1153,7 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
  * @param {boolean} showHints
  */
 StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHints) {
-  var isMarkdownMode = this.isMarkdownMode(level);
+  var isMarkdownMode = !!this.reduxStore.getState().pageConstants.longInstructions;
 
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?
@@ -2758,10 +2738,13 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   this.reduxStore.dispatch(setPageConstants(combined));
 
   // also set some instructions specific constants
-  let longInstructions = level.markdownInstructions;
+  // If non-English, dont use level.markdownInstructions since they haven't been
+  // translated
+  const locale = config.locale || ENGLISH_LOCALE;
+  let longInstructions = locale === ENGLISH_LOCALE ? level.markdownInstructions : undefined;
   let shortInstructions = level.instructions;
-  const shortInstructionsWhenCollapsed = !!config.shortInstructionsWhenCollapsed;
 
+  const shortInstructionsWhenCollapsed = !!config.shortInstructionsWhenCollapsed;
   if (!shortInstructionsWhenCollapsed) {
     if (shortInstructions && !longInstructions) {
       // use short instructions as long instructions if that's all we have
