@@ -341,7 +341,7 @@ Vagrant.configure("2") do |config|
       s.inline = <<-SCRIPT
         echo "Found docker-compose.yml in the root folder. Starting containers..."
         cd $1
-        docker-compose up -d
+        docker-compose up
       SCRIPT
       s.args = "#{vagrant_mount_point}"
     end
