@@ -30,6 +30,6 @@ title: Professional Learning Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'Training Materials', description_t: "Resources from the Facilitation Summit", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/training-materials"), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Workshop Dashboard', description_t: "Coming soon!"} %>
+<%= view :educate_box, item: {title_s: 'Workshop Dashboard', description_t: "Information on how to use the workshop organizer dashboard.", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/workshop-dashboard"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Workshop Planning', description_t: "A guide to everything you'll need to take care of to make sure your summer workshops are a success", url_s: CDO.code_org_url('/educate/professional-learning-partner/playbook/workshop-planning'), button_s: "Learn more"} %>
