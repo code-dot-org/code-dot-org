@@ -24,6 +24,7 @@
 'use strict';
 
 goog.provide('Blockly.BlockSvg');
+goog.require('Blockly.BlockSvgUnused');
 
 goog.require('goog.userAgent');
 
@@ -313,6 +314,9 @@ BS.INNER_BOTTOM_LEFT_CORNER_HIGHLIGHT_LTR =
  * @return {Object} object with padding values for top, bottom, left, and right
  */
 Blockly.BlockSvg.prototype.getPadding = function() {
+  if (this.isUnused()) {
+    return this.unusedSvg_.getPadding();
+  }
   return {
     top: 0,
     right: 0,
@@ -347,6 +351,10 @@ Blockly.BlockSvg.prototype.dispose = function() {
   this.svgPath_ = null;
   this.svgPathLight_ = null;
   this.svgPathDark_ = null;
+  // dispose of children
+  if (this.isUnused()) {
+    this.unusedSvg_.dispose();
+  }
   // Break circular references.
   this.block_ = null;
 };
@@ -594,6 +602,10 @@ Blockly.BlockSvg.prototype.render = function(selfOnly) {
       // Top-most block.  Fire an event to allow scrollbars to resize.
       Blockly.fireUiEvent(window, 'resize');
     }
+  }
+
+  if (this.isUnused()) {
+    this.unusedSvg_.render(this.svgGroup_);
   }
 };
 
@@ -1352,4 +1364,24 @@ Blockly.BlockSvg.prototype.innerTopLeftCorner = function (notchPathRight) {
       BS.CORNER_RADIUS + ' 0 0,0 -' +
       BS.CORNER_RADIUS + ',' +
       BS.CORNER_RADIUS;
+};
+
+Blockly.BlockSvg.prototype.isUnused = function () {
+  return !!this.unusedSvg_;
+};
+
+Blockly.BlockSvg.prototype.setIsUnused = function (isUnused) {
+  if (isUnused) {
+    Blockly.addClass_(this.svgGroup_, 'blocklyUnused');
+  } else {
+    Blockly.removeClass_(this.svgGroup_, 'blocklyUnused');
+  }
+  if (!isUnused && this.unusedSvg_) {
+    this.unusedSvg_.dispose();
+    this.unusedSvg_ = null;
+  } else if (isUnused && !this.unusedSvg_) {
+    this.unusedSvg_ = new Blockly.BlockSvgUnused(this.block_);
+  }
+
+  this.render();
 };

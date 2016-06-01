@@ -7,6 +7,7 @@ namespace :install do
   task :hooks do
     files = [
       'pre-commit',
+      'post-commit',
       'post-checkout',
       'post-merge',
     ]
