@@ -29,7 +29,9 @@ var ALLOWED_KEYS = utils.makeEnum(
   'hideRunButton',
   'playspacePhoneFrame',
   'noVisualization',
-  'pinWorkspaceToBottom'
+  'pinWorkspaceToBottom',
+  'smallStaticAvatar',
+  'aniGifURL'
 );
 
 const initialState = {
