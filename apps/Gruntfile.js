@@ -28,12 +28,6 @@ module.exports = function (grunt) {
   /** @const {string} */
   var APP_TO_BUILD = grunt.option('app') || process.env.MOOC_APP;
 
-  /** @const {bool} */
-  var USE_WEBPACK = !!grunt.option('webpack') || !!process.env.MOOC_WEBPACK;
-  if (USE_WEBPACK) {
-    console.log("using webpack instead of browserify");
-  }
-
   /** @const {string[]} */
   var APPS = [
     'maze',
@@ -390,7 +384,6 @@ module.exports = function (grunt) {
         path: path.resolve(__dirname, outputDir),
         filename: "[name].js",
       },
-      //    devtool: 'eval',
       entry: entries,
       plugins: [
         new webpack.DefinePlugin({
@@ -415,6 +408,9 @@ module.exports = function (grunt) {
         }
       }),
     ]),
+  });
+  config.webpack.watch = _.extend({}, config.webpack.build, {
+    keepalive: true,
   });
 
   var ext = envOptions.dev ? 'uncompressed' : 'compressed';
@@ -476,9 +472,7 @@ module.exports = function (grunt) {
   config.watch = {
     js: {
       files: ['src/**/*.{js,jsx}'],
-      tasks: ['newer:copy:src'].concat(
-        USE_WEBPACK ? [] : ['exec:browserify', 'exec:applabapi', 'notify:browserify']
-      ),
+      tasks: ['newer:copy:src'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true,
@@ -505,14 +499,6 @@ module.exports = function (grunt) {
     vendor_js: {
       files: ['lib/**/*.js'],
       tasks: ['newer:concat', 'newer:copy:lib', 'notify:vendor_js'],
-      options: {
-        interval: DEV_WATCH_INTERVAL,
-        livereload: true
-      }
-    },
-    ejs: {
-      files: ['src/**/*.ejs'],
-      tasks: USE_WEBPACK ? [] : ['ejs', 'exec:browserify', 'notify:ejs'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: true
@@ -592,27 +578,22 @@ module.exports = function (grunt) {
     'newer:sass'
   ]);
 
-  grunt.registerTask(
-    'build',
-    ['prebuild'].concat(
-      USE_WEBPACK ? [
-        'webpack:build',
-      ] : [
-        'exec:browserify',
-        'exec:applabapi',
-      ]).concat([
-        'notify:browserify',
-        // Skip minification in development environment.
-        envOptions.dev ? 'noop' : (USE_WEBPACK ? 'webpack:uglify' : 'concurrent:uglify'),
-        'postbuild'
-      ])
-  );
+  grunt.registerTask('build', [
+    'prebuild',
+    'webpack:build'
+  ].concat([
+    'notify:browserify',
+    // Skip minification in development environment.
+    envOptions.dev ? 'noop' : 'webpack:uglify',
+    'postbuild'
+  ]));
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
   grunt.registerTask('dev', [
-    'build',
-    'express:playground',
+    'prebuild',
+    'webpack:watch',
+    'postbuild',
   ]);
 
   grunt.registerTask('unitTest', [
