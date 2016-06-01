@@ -27,6 +27,7 @@
   // Parameter player is either "youtube" or "fallback".
   function setupVideos(player) {
 
+
     $(".insert_video_player").each(function() {
       var downloadPath = $(this).data("download-path");
 
@@ -35,16 +36,7 @@
       // it relies upon a missing addEventListener.
       if (player == "fallback" && downloadPath && window.addEventListener)
       {
-        $(this).parent().append(
-          '<video ' +
-          'data-setup=\'{"techOrder": ["flash", "html5"]}\' ' +
-          'style="position:absolute; top: 0; left: 0; width: 100%; height: 100%" ' +
-          'width="100%" height="100%" ' +
-          'class="video-js" ' +
-          'preload="none" ' +
-          'controls>' +
-          '  <source src="' + downloadPath + '" type="video/mp4"/>' +
-          '</video>');
+        // The modal will take care of adding/disposing the fallback player.
       }
       // Always default to YouTube player.
       else
