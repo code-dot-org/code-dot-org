@@ -237,7 +237,5 @@
   "watchVideo": "காணொளியை பார்க்கவும்",
   "when": "எப்போது",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: ",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
+  "workspaceHeaderShort": "Workspace: "
 }
