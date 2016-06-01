@@ -118,6 +118,7 @@ level 'CSD U3 If Else'
 level 'CSD U3 Compound Nested Stop'
 level 'CSD U3 Compound Nested Challenge'
 level 'CSD U3 Property Conditional Multi'
+level 'CSD U3 Conditional Predict'
 level 'CSD U3 Conditional Project'
 
 stage ' Sprites and Images'
