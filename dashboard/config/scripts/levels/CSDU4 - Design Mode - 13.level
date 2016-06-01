@@ -26,9 +26,6 @@
     "autocomplete_palette_apis_only": "true",
     "app_width": "320",
     "app_height": "480",
-    "encrypted_examples": [
-
-    ],
     "markdown_instructions": "# New Elements and Events: Images\r\n\r\n<img src=\"https://images.code.org/a84297658be45dc78bc401d387d10436-image-1444663322356.21.25 AM.png\" style=\"float: right; width: 120px\">\r\nImages make applications more visually pleasing and interactive. You can add images to your application using the `image` command. For now, just add an `image` element to your app (the default image link is the Code.org logo) and don't worry about choosing a unique image just yet. We'll do that in the very next exercise!",
     "never_autoplay_video": "false",
     "slider_speed": "1",

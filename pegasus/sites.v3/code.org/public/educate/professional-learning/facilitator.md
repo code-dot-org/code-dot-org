@@ -5,7 +5,7 @@ nav: educate_nav
 
 # Become a Code.org Facilitator
 
-**2016 Application Update: The application process closed March 15th. We are reviewing applications and accepting facilitators on a rolling basis through April 22nd. We will update everyone of their acceptance status by April 22nd.**
+**For updates on the 2017 application period please complete this [interest form](https://docs.google.com/a/code.org/forms/d/1C2oECZ04B1406j4x_7sKcRHGdPLmxILVFm463M5MigU/viewform). This program is currently only operated in the US.**
 
 Code.org is looking to partner with individuals interested in developing facilitation capacity in computer science education to deliver high-quality professional development to teachers to teach computer science in a format that's fun and accessible.
 
@@ -15,7 +15,7 @@ The ideal facilitator is an enthusiastic supporter of computer science education
 
 Code.org's Facilitator Development Program is a highly-selective professional learning program designed to prepare and support facilitators to deliver high-quality professional development on Code.org's curriculum.
 
-Accepted participants will attend an all expense paid trip to Code.org's Facilitator Summit May 20-22, 2016 in New Orleans, LA. During the Summit, Code.org will provide instruction to prepare facilitators to deliver professional development to teachers on the Code.org curriculum. **Applicants who meet the facilitator criteria who live in a region where Code.org has Professional Learning or District Partners will be prioritized for acceptance.** Please see individual program details for more information.
+Accepted participants will attend an all expense paid trip to Code.org's Facilitator Summit. Date and location of 2017 Summit to be determined. During the Summit, Code.org will provide instruction to prepare facilitators to deliver professional development to teachers on the Code.org curriculum. **Applicants who meet the facilitator criteria who live in a region where Code.org has Professional Learning or District Partners will be prioritized for acceptance.** Please see individual program details for more information.
 
 The Summit is designed to be a fabulous experience to welcome you to the extended Code.org family.
 
@@ -30,7 +30,7 @@ All focus areas share a basic framework and approach, drawn from adult learning 
 
 Please carefully review the criteria, requirements and commitments for the curriculum focus area of your choice before applying. 
 
-We will review applications on a rolling basis until March 15, 2016. After that we will review applications once every 12 months. **This program is currently only operated in the US.** 
+**For updates on the 2017 application period please complete this [interest form](https://docs.google.com/a/code.org/forms/d/1C2oECZ04B1406j4x_7sKcRHGdPLmxILVFm463M5MigU/viewform). This program is currently only operated in the US.**
 
 If you have additional questions regarding the Facilitator program or application contact [facilitators@code.org](facilitators@code.org).
 
