@@ -24,6 +24,7 @@
 
 goog.provide('Blockly.BlockSpaceEditor');
 goog.require('Blockly.BlockSpace');
+goog.require('Blockly.BlockSvgUnused');
 goog.require('goog.array');
 goog.require('goog.style');
 
@@ -912,6 +913,10 @@ Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetricsNoScroll_ = function() {
 Blockly.BlockSpaceEditor.prototype.addChangeListener = function(func) {
   return Blockly.bindEvent_(this.blockSpace.getCanvas(),
     'blocklyBlockSpaceChange', this, func);
+};
+Blockly.BlockSpaceEditor.prototype.addUnusedBlocksHelpListener = function(func) {
+  return Blockly.bindEvent_(this.blockSpace.getCanvas(),
+    Blockly.BlockSvgUnused.UNUSED_BLOCK_HELP_EVENT, this, func);
 };
 
 /**

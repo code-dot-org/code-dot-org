@@ -284,6 +284,42 @@ module LevelsHelper
     level_options['puzzle_number'] = script_level ? script_level.position : 1
     level_options['stage_total'] = script_level ? script_level.stage_total : 1
 
+    # Unused Blocks option
+    ## TODO (elijah) replace this with more-permanent level configuration
+    ## options once the experimental period is over.
+
+    ## allow unused blocks for all levels except Jigsaw
+    app_options[:showUnusedBlocks] = @game ? @game.name != 'Jigsaw' : true
+
+    ## Allow gatekeeper to disable otherwise-enabled unused blocks in a
+    ## cascading way; more specific options take priority over
+    ## less-specific options.
+    if script && script_level && app_options[:showUnusedBlocks] != false
+
+      # puzzle-specific
+      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
+        script_name: script.name,
+        stage: script_level.stage.position,
+        puzzle: script_level.position
+      }, default: nil)
+
+      # stage-specific
+      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
+        script_name: script.name,
+        stage: script_level.stage.position,
+      }, default: nil) if enabled.nil?
+
+      # script-specific
+      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
+        script_name: script.name,
+      }, default: nil) if enabled.nil?
+
+      # global
+      enabled = Gatekeeper.allows('showUnusedBlocks', default: true) if enabled.nil?
+
+      app_options[:showUnusedBlocks] = enabled
+    end
+
     # LevelSource-dependent options
     app_options[:level_source_id] = @level_source.id if @level_source
 
