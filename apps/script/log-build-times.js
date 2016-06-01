@@ -58,7 +58,8 @@ function writeStatsToLogFile(stats, consoleLog) {
 /**
  * Reads the log file and attempts to upload it to New Relic.  If successful,
  * truncates the log file.
- * @param {function} consoleLog
+ * @param {function} consoleLog - function that accepts strings to log to the console
+ * @param {function} [callback] - optional callback to call when finished
  */
 function uploadLoggedStatsToNewRelic(consoleLog, callback) {
   if (!isNewRelicConfigured()) {
@@ -83,7 +84,6 @@ function uploadLoggedStatsToNewRelic(consoleLog, callback) {
     consoleLog("Sending " + dataToLog.length + " build time events to new relic ");
     var failed = false;
     dataToLog.forEach(function (data) {
-      newrelic.agent.config.no_immediate_harvest = true;
       try {
         newrelic.recordCustomEvent("apps_build", data);
       } catch (e) {
@@ -94,8 +94,12 @@ function uploadLoggedStatsToNewRelic(consoleLog, callback) {
     if (!failed) {
       consoleLog("You should see a green OK if this works.");
       newrelic.shutdown({collectPendingData: true}, function (error) {
-        fs.truncateSync(UPLOAD_LOG_FILE_PATH);
-        consoleLog(chalk.green('OK'));
+        if (error) {
+          consoleLog(chalk.red('Something went wrong: '+error));
+        } else {
+          fs.truncateSync(UPLOAD_LOG_FILE_PATH);
+          consoleLog(chalk.green('OK'));
+        }
         if (callback) {
           callback();
         }
