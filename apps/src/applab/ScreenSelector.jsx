@@ -32,6 +32,7 @@ var ScreenSelector = React.createClass({
     currentScreenId: React.PropTypes.string,
     interfaceMode: React.PropTypes.string.isRequired,
     isDesignModeHidden: React.PropTypes.bool.isRequired,
+    isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
     onScreenChange: React.PropTypes.func.isRequired,
 
     // passed explicitly
@@ -71,7 +72,8 @@ var ScreenSelector = React.createClass({
           id="screenSelector"
           style={[
             styles.dropdown,
-            this.props.isDesignModeHidden && commonStyles.hidden
+            (this.props.isDesignModeHidden || this.props.isReadOnlyWorkspace) &&
+              commonStyles.hidden
           ]}
           value={this.props.currentScreenId || ''}
           onChange={this.handleChange}
@@ -82,12 +84,12 @@ var ScreenSelector = React.createClass({
     );
   }
 });
-module.exports = ScreenSelector;
 module.exports = connect(function propsFromStore(state) {
   return {
     currentScreenId: state.screens.currentScreenId,
     interfaceMode: state.interfaceMode,
     isDesignModeHidden: state.pageConstants.isDesignModeHidden,
+    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
   };
 }, function propsFromDispatch(dispatch) {
   return {

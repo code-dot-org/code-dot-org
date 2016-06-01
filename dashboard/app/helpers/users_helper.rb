@@ -102,9 +102,9 @@ module UsersHelper
           pages_completed = get_pages_completed(user, sl)
           if pages_completed
             user_data[:levels][sl.level_id][:pages_completed] = pages_completed
-            pages_completed.each_with_index do |complete, index|
+            pages_completed.each_with_index do |result, index|
               user_data[:levels]["#{sl.level_id}_#{index}"] = {
-                result: complete ? ActivityConstants::FREE_PLAY_RESULT : ActivityConstants::MINIMUM_FINISHED_RESULT,
+                result: result,
                 submitted: submitted
               }
             end
@@ -117,10 +117,12 @@ module UsersHelper
   end
 
   # Given a user and a script-level, returns a nil if there is only one page, or an array of
-  # boolean values if there are multiple pages.  The array contains true for each page that
-  # is considered complete.  Since this is currently just used for multi-page LevelGroup levels,
-  # true means that a valid (though not necessarily correct) answer has been given for each
-  # level embedded on the page.
+  # values if there are multiple pages.  The array contains whether each page is completed, partially
+  # completed, or not yet attempted.  These values are ActivityConstants::FREE_PLAY_RESULT,
+  # ActivityConstants::UNSUBMITTED_RESULT, and nil, respectively.
+  #
+  # Since this is currently just used for multi-page LevelGroup levels, we only check that a valid
+  # (though not necessarily correct) answer has been given for each level embedded on a given page.
   def get_pages_completed(user, sl)
     level = sl.level
 
@@ -153,7 +155,14 @@ module UsersHelper
 
         # The page is considered complete if there was a valid result for each
         # embedded level.
-        pages_completed << (page_valid_result_count == page["levels"].length)
+        if page_valid_result_count == 0
+          page_completed_value = nil
+        elsif page_valid_result_count == page["levels"].length
+          page_completed_value = ActivityConstants::FREE_PLAY_RESULT
+        else
+          page_completed_value = ActivityConstants::UNSUBMITTED_RESULT
+        end
+        pages_completed << page_completed_value
       end
 
       pages_completed

@@ -19,6 +19,10 @@ describe("checkForEmptyContainerBlockFailure_", function () {
   // create our environment
   beforeEach(function () {
     setupTestBlockly();
+    var blockInstallOptions = { isK1: false };
+    var blocksCommon = require('@cdo/apps/blocksCommon');
+    blocksCommon.install(Blockly, blockInstallOptions);
+
     studioApp = getStudioAppSingleton();
     TestResults = studioApp.TestResults;
   });
@@ -40,14 +44,14 @@ describe("checkForEmptyContainerBlockFailure_", function () {
   it("returns ALL_PASS when no blocks are present", function () {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
-      blockXml: ''
+      blockXml: '<xml><block type="when_run"><next></next></block></xml>'
     });
   });
 
   it ("returns ALL_PASS when no container blocks are present", function () {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
-      blockXml: '<xml><block type="text_print"></block></xml>'
+      blockXml: '<xml><block type="when_run"><next><block type="text_print"></block></next></block></xml>'
     });
   });
 
@@ -55,9 +59,11 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     checkResultForBlocks({
       result: TestResults.EMPTY_BLOCK_FAIL,
       blockXml: '<xml>' +
-                  '<block type="controls_repeat">' +
-                    '<title name="TIMES">4</title>' +
-                  '</block>' +
+                  '<block type="when_run"><next>' +
+                    '<block type="controls_repeat">' +
+                      '<title name="TIMES">4</title>' +
+                    '</block>' +
+                  '</next></block>' +
                 '</xml>'
     });
   });
@@ -66,12 +72,14 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
       blockXml: '<xml>' +
-                  '<block type="controls_repeat">' +
-                    '<title name="TIMES">4</title>' +
-                    '<statement name="DO">' +
-                      '<block type="text_print"></block>' +
-                    '</statement>' +
-                  '</block>' +
+                  '<block type="when_run"><next>' +
+                    '<block type="controls_repeat">' +
+                      '<title name="TIMES">4</title>' +
+                      '<statement name="DO">' +
+                        '<block type="text_print"></block>' +
+                      '</statement>' +
+                    '</block>' +
+                  '</next></block>' +
                 '</xml>'
     });
   });
@@ -80,6 +88,7 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     checkResultForBlocks({
       result: TestResults.EMPTY_FUNCTION_BLOCK_FAIL,
       blockXml: '<xml>' +
+                  '<block type="when_run"><next></next></block>' +
                   '<block type="procedures_defnoreturn">' +
                     '<mutation/>' +
                     '<title name="NAME">do something</title>' +
@@ -92,6 +101,7 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
       blockXml: '<xml>' +
+                  '<block type="when_run"><next></next></block>' +
                   '<block type="procedures_defnoreturn">' +
                     '<mutation/>' +
                     '<title name="NAME">do something</title>' +
@@ -360,8 +370,8 @@ describe("getMissingBlocks_ tests", function () {
   describe("required blocks look for existence of string in code", function () {
     var testBlocks = [
       {
-        'test': 'window.alert',
-        'type': 'text_print'
+        'test': 'someAwesomeVariable',
+        'type': 'variables_get'
       },
       {
         'test': 'TextContent',
@@ -374,7 +384,7 @@ describe("getMissingBlocks_ tests", function () {
     ];
 
     var testBlockXml = [
-      '<block type="text_print"></block>',
+      '<block type="variables_get"><title name="VAR">someAwesomeVariable</title></block>',
       '<block type="text"><title name="TEXT">TextContent</title></block>',
       '<block type="math_number"><title name="NUM">10</title></block>'
     ];
@@ -385,9 +395,9 @@ describe("getMissingBlocks_ tests", function () {
     var testBlocks = [
       {
         'test': function (block) {
-          return block.type === 'text_print';
+          return block.type === 'variables_get';
         },
-        'type': 'text_print'
+        'type': 'variables_get'
       },
       {
         'test': function (block) {
@@ -404,7 +414,7 @@ describe("getMissingBlocks_ tests", function () {
     ];
 
     var testBlockXml = [
-      '<block type="text_print"></block>',
+      '<block type="variables_get"><title name="VAR">someAwesomeVariable</title></block>',
       '<block type="text"><title name="TEXT">TextContent</title></block>',
       '<block type="math_number"><title name="NUM">10</title></block>'
     ];
@@ -753,4 +763,48 @@ describe("getCountableBlocks_", function () {
       '</xml>');
     assert.equal(17, count);
   });
+});
+
+describe("unusedBlocks", function () {
+  var studioApp;
+  var TestResults;
+  var blockXml= '<xml><block type="text_print"></block></xml>';
+
+  // create our environment
+  beforeEach(function () {
+    setupTestBlockly();
+    var blockInstallOptions = { isK1: false };
+    var blocksCommon = require('@cdo/apps/blocksCommon');
+    blocksCommon.install(Blockly, blockInstallOptions);
+
+    studioApp = getStudioAppSingleton();
+    TestResults = studioApp.TestResults;
+  });
+
+  afterEach(function () {
+    Blockly.showUnusedBlocks = false;
+  });
+
+  var checkResultForBlocks = function (args) {
+    studioApp.loadBlocks(blockXml);
+    Blockly.showUnusedBlocks = args.unusedBlocksEnabled;
+
+    assert.equal(args.result,
+        studioApp.feedback_.getTestResults(true, [], [], true, {}));
+  };
+
+  it ("fails when unused blocks are disabled", function () {
+    checkResultForBlocks({
+      result: TestResults.EXTRA_TOP_BLOCKS_FAIL,
+      unusedBlocksEnabled: false
+    });
+  });
+
+  it ("passes when unused blocks are enabled", function () {
+    checkResultForBlocks({
+      result: TestResults.PASS_WITH_EXTRA_TOP_BLOCKS,
+      unusedBlocksEnabled: true
+    });
+  });
+
 });
