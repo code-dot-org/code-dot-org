@@ -206,8 +206,21 @@ AuthoredHints.prototype.showNextHint_ = function () {
  * @param {function} callback
  */
 AuthoredHints.prototype.showHint_ = function (hint, callback) {
+  let position = {
+    my: "bottom left",
+    at: "top right"
+  };
+
+  if (this.studioApp_.reduxStore.getState().pageConstants.instructionsInTopPane) {
+    // adjust position when hints are on top
+    position = {
+      my: "top left",
+      at: "bottom right"
+    };
+  }
+
   $('.modal').modal('hide');
-  $('#prompt-icon').qtip({
+  $(this.promptIcon).qtip({
     events: {
       visible: function (event, api) {
         var container = api.get("content.text");
@@ -238,10 +251,7 @@ AuthoredHints.prototype.showHint_ = function (hint, callback) {
         height: 20
       }
     },
-    position: {
-      my: "bottom left",
-      at: "top right"
-    },
+    position: position,
     hide: {
       event: 'unfocus'
     },
