@@ -1,6 +1,65 @@
+import Radium from 'radium';
 import React from 'react';
 import { STAGE_PROGRESS_TYPE } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
+import color from '../../color';
+
+var style = {
+  overviewContainer: {
+    display: 'table-cell',
+    verticalAlign: 'middle',
+    paddingRight: '10px'
+  },
+  headerContainer: {
+    padding: '5px 8px',
+    backgroundColor: color.lightest_gray,
+    border: `1px solid ${color.lighter_gray}`,
+    borderRadius: '5px'
+  },
+  dot: {
+    puzzle: {
+      display: 'inline-block',
+      width: '24px',
+      height: '24px',
+      fontSize: '14px',
+      textAlign: 'center',
+      lineHeight: '24px',
+      borderRadius: '24px',
+      border: `2px solid ${color.lighter_gray}`,
+      margin: '0 -1px',
+      color: color.charcoal,
+      backgroundColor: color.level_not_tried,
+      transition: 'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
+      ':hover': {
+        textDecoration: 'none',
+        color: color.white,
+        backgroundColor: color.level_current
+      }
+    },
+    unplugged: {
+      width: 'auto',
+      fontSize: '13px',
+      padding: '0 10px'
+    },
+    assessment: {
+      borderColor: color.assessment
+    },
+    small: {
+      width: '7px',
+      height: '7px',
+      borderRadius: '7px',
+      lineHeight: 'inherit',
+      fontSize: 0
+    },
+    overview: {
+      height: '30px',
+      width: '30px',
+      margin: '2px',
+      fontSize: '16px',
+      lineHeight: '32px'
+    }
+  }
+};
 
 /**
  * Stage progress component used in level header and course overview.
@@ -22,22 +81,20 @@ var StageProgress = React.createClass({
   render() {
     var progressDots = this.props.levels.map((level, index) => {
 
-      var innerClass = 'level_link ' + (level.status || 'not_tried');
-      if (level.kind === 'unplugged') {
-        innerClass += ' unplugged_level';
+      var dotStyle = Object.assign({}, style.dot.puzzle);
+      if (this.props.largeDots) {
+        Object.assign(dotStyle, style.dot.overview);
+      } else if (index !== this.props.currentLevelIndex) {
+        Object.assign(dotStyle, style.dot.small);
       }
 
-      var outerClass = (level.kind === 'assessment') ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
-      outerClass = (index === this.props.currentLevelIndex) ? 'puzzle_outer_current' : outerClass;
-
       var isUnplugged = isNaN(level.title);
-      var dotStyle = {};
-      if (this.props.largeDots) {
-        if (isUnplugged) {
-          dotStyle = {fontSize: '13px', padding: '4px 10px', margin: '1px'};
-        } else {
-          dotStyle = {padding: '5px 4px 3px 4px', margin: '1px'};
-        }
+      if (isUnplugged) {
+        Object.assign(dotStyle, style.dot.unplugged);
+      }
+
+      if (level.kind === 'assessment') {
+        Object.assign(dotStyle, style.dot.assessment);
       }
 
       var onClick = null;
@@ -47,24 +104,22 @@ var StageProgress = React.createClass({
       }
 
       return ([
-        <div className={outerClass}>
-          <a
-            href={level.url}
-            onClick={onClick}
-            className={innerClass + ' level-' + level.id}
-            style={dotStyle}>
-              {level.title}
-          </a>
-        </div>,
+        <a
+          key={index}
+          href={level.url}
+          onClick={onClick}
+          style={dotStyle}>
+            {level.title}
+        </a>,
         ' '
       ]);
     });
 
     return (
-      <div className={this.props.largeDots ? 'games' : 'progress_container'}>
+      <div style={this.props.largeDots ? style.overviewContainer : style.headerContainer}>
         {progressDots}
       </div>
     );
   }
 });
-module.exports = StageProgress;
+module.exports = Radium(StageProgress);
