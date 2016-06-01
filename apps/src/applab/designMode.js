@@ -1010,15 +1010,16 @@ function moveElementIntoBounds(element) {
   if ($(element).parent('.ui-draggable').length === 0) {
     return;
   }
-  var elm = $(element).parent('.ui-draggable');
 
-  // Get the CSS position and dimensions of the element/wrapper
+  // Get the element's dimensions
+  var width = parseFloat($(element).css('width'));
+  var height = parseFloat($(element).css('height'));
+
+  // Get the wrapper's position within the app space
+  var elm = $(element).parent('.ui-draggable');
   var left = parseFloat(elm.css('left'));
   var top = parseFloat(elm.css('top'));
-  var width = parseFloat(elm.css('width'));
-  var height = parseFloat(elm.css('height'));
 
-  // Get new contained position
   var newContainedPos = enforceContainment(left, top, width, height);
 
   // Slide animate the wrapper back into the app space
