@@ -7,8 +7,9 @@
 
 'use strict';
 
-var React = require('react');
-var ReactDOM = require('react-dom');
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var studioMsg = require('./locale');
@@ -1718,7 +1719,7 @@ Studio.initSprites = function () {
         if (0 === Studio.spriteCount) {
           Studio.spriteStart_ = [];
         }
-        Studio.spriteStart_[Studio.spriteCount] = $.extend({},
+        Studio.spriteStart_[Studio.spriteCount] = Object.assign({},
             Studio.map[row][col].serialize(), {
               x: col * Studio.SQUARE_SIZE,
               y: row * Studio.SQUARE_SIZE
@@ -2490,7 +2491,7 @@ var displayFeedback = function () {
   }
 
   // Let the level override feedback dialog strings.
-  var stringFunctions = $.extend({
+  var stringFunctions = Object.assign({
     continueText: level.freePlay ? commonMsg.nextPuzzle : function () {},
     reinfFeedbackMsg: studioMsg.reinfFeedbackMsg,
     sharingText: studioMsg.shareGame
@@ -2685,7 +2686,7 @@ Studio.checkForBlocklyPreExecutionFailure = function () {
 
   var outcome = Studio.checkExamples_();
   if (outcome.result !== undefined) {
-    $.extend(Studio, outcome);
+    Object.assign(Studio, outcome);
     Studio.preExecutionFailure = true;
     return true;
   }
@@ -3260,7 +3261,7 @@ Studio.createLevelItems = function (svg) {
         if (constants.squareHasItemClass(index, mapVal)) {
           // Create item:
           var classOptions = Studio.getItemOptionsForItemClass(skin.ItemClassNames[index]);
-          var itemOptions = $.extend({}, classOptions, {
+          var itemOptions = Object.assign({}, classOptions, {
             x: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col,
             y: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row
           });
@@ -3929,7 +3930,7 @@ Studio.playSound = function (opts) {
   }
 
   var skinSoundMetadata = utils.valueOr(skin.soundMetadata, []);
-  var playbackOptions = $.extend({
+  var playbackOptions = Object.assign({
     volume: 1.0
   }, _.find(skinSoundMetadata, function (metadata) {
     return metadata.name.toLowerCase().trim() === soundVal;
@@ -4024,7 +4025,7 @@ Studio.addItem = function (opts) {
   var pos = generateRandomItemPosition();
   var dir = level.itemGridAlignedMovement ? Direction.NONE :
       directions[Math.floor(Math.random() * directions.length)];
-  var itemOptions = $.extend({}, Studio.getItemOptionsForItemClass(itemClass), {
+  var itemOptions = Object.assign({}, Studio.getItemOptionsForItemClass(itemClass), {
     x: pos.x,
     y: pos.y,
     dir: dir

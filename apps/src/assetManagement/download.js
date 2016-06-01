@@ -8,6 +8,8 @@
  *
  */
 
+import $ from 'jquery';
+
 // use this transport for "binary" data type
 $.ajaxTransport("+binary", function (options, originalOptions, jqXHR) {
   // check for conditions and support for blob / arraybuffer response type

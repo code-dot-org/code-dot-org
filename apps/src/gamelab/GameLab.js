@@ -1,7 +1,8 @@
 'use strict';
 
-var React = require('react');
-var ReactDOM = require('react-dom');
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var commonMsg = require('../locale');
 var msg = require('./locale');
 var levels = require('./levels');
