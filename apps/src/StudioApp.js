@@ -2116,19 +2116,27 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
 
   this.editor.on('palettetoggledone', function (e) {
-    // Reposition callouts after block/text toggle (in case they need to move)
-    $('.cdo-qtips').qtip('reposition', null, false);
+    $(window).trigger('droplet_change', ['togglepalette']);
   });
 
   this.editor.on('selectpalette', function (e) {
     $(window).trigger('droplet_change', ['selectpalette']);
   });
 
+  $('.droplet-palette-scroller').on('scroll', function (e) {
+    $(window).trigger('droplet_change', ['scrollpalette']);
+  });
+
   $(window).on('prepareforcallout', function (e, options) {
     // qtip_config's codeStudio options block is available in options
     if (options.dropletPaletteCategory) {
       this.editor.changePaletteGroup(options.dropletPaletteCategory);
+      var scrollContainer = $('.droplet-palette-scroller');
+      var scrollTo = $(options.selector);
+      scrollContainer.scrollTop(scrollTo.offset().top - scrollContainer.offset().top +
+          scrollContainer.scrollTop());
     }
+
   }.bind(this));
 
   // Prevent the backspace key from navigating back. Make sure it's still

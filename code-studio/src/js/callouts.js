@@ -44,13 +44,14 @@ module.exports = function createCallouts(callouts) {
   // Update callout positions when an editor is scrolled.
   $(window).on('block_space_metrics_set', function () {
     snapCalloutsToTargets();
-    showOrHideCalloutsByTargetVisibility('#codeWorkspace');
+    showHideWorkspaceCallouts();
   });
 
   $(window).on('droplet_change', function (e, dropletEvent) {
-    if (dropletEvent === 'selectpalette') {
-      showOrHideCalloutsByTargetVisibility('#codeWorkspace');
+    if (dropletEvent === 'scrollpalette') {
+      snapCalloutsToTargets();
     }
+    showHidePaletteCallouts();
   });
 
   var showCalloutsMode = document.URL.indexOf('show_callouts=1') !== -1;
@@ -125,15 +126,17 @@ module.exports = function createCallouts(callouts) {
 
     if (callout.on) {
       $(window).on(callout.on, function (e, action) {
-        var lastSelector = config.codeStudio.selector || selector;
+        if (!config.codeStudio.selector) {
+          config.codeStudio.selector = selector;
+        }
+        var lastSelector = config.codeStudio.selector;
         $(window).trigger('prepareforcallout', [config.codeStudio]);
-        var currentSelector = config.codeStudio.selector || selector;
-        if (lastSelector !== currentSelector && $(lastSelector).length > 0) {
+        if (lastSelector !== config.codeStudio.selector && $(lastSelector).length > 0) {
           $(lastSelector).qtip(config).qtip('hide');
         }
-        if ($(currentSelector).length > 0) {
+        if ($(config.codeStudio.selector).length > 0) {
           if (action === 'hashchange' || action === 'hashinit' || !callout.seen) {
-            $(currentSelector).qtip(config).qtip('show');
+            $(config.codeStudio.selector).qtip(config).qtip('show');
           }
           callout.seen = true;
         }
@@ -152,7 +155,7 @@ module.exports = function createCallouts(callouts) {
       var eventName = splitHash[1];
       var eventType = (event && event.type) || 'hashinit';
       $(window).trigger(eventName, [eventType]);
-      // NOTE: normally we go back to avoid populating history, but don't for the init case
+      // NOTE: normally we go back to avoid populating history, but not during init
       if (window.history.go && eventType === 'hashchange') {
         history.go(-1);
       } else {
@@ -177,14 +180,18 @@ function snapCalloutsToTargets() {
   $('.cdo-qtips').qtip('reposition', triggerEvent, animate);
 }
 
+var showHideWorkspaceCallouts = showOrHideCalloutsByTargetVisibility('#codeWorkspace');
+var showHidePaletteCallouts =
+    showOrHideCalloutsByTargetVisibility('.droplet-palette-scroller');
+
 /**
- * For callouts with targets in the codeWorkspace (blockly, flyout elements,
+ * For callouts with targets in the containerSelector (blockly, flyout elements,
  * function editor elements, etc) hides callouts with targets that are
  * scrolled out of view, and shows them again when they are scrolled back in
  * to view.
  * @function
  */
-var showOrHideCalloutsByTargetVisibility = (function (containerSelector) {
+function showOrHideCalloutsByTargetVisibility(containerSelector) {
   // Close around this object, which we use to remember which callouts
   // were hidden by scrolling and should be shown again when they scroll
   // back in.
@@ -199,7 +206,7 @@ var showOrHideCalloutsByTargetVisibility = (function (containerSelector) {
       var api = $(this).qtip('api');
       var target = $(api.elements.target);
 
-      if ($(window).has(target).length === 0) {
+      if ($(document).has(target).length === 0) {
         calloutsHiddenByScrolling[api.id] = true;
         api.hide();
       }
@@ -209,7 +216,7 @@ var showOrHideCalloutsByTargetVisibility = (function (containerSelector) {
         return;
       }
 
-      if (target && target.overlaps(containerSelector).length > 0) {
+      if (target && target.overlaps(container).length > 0) {
         if (calloutsHiddenByScrolling[api.id]) {
           api.show();
           delete calloutsHiddenByScrolling[api.id];
@@ -222,7 +229,7 @@ var showOrHideCalloutsByTargetVisibility = (function (containerSelector) {
       }
     });
   };
-})();
+}
 
 function reverseCallout(position) {
   position = position.split(/\s+/);
