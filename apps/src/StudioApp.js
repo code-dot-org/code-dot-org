@@ -11,7 +11,6 @@ var dropletUtils = require('./dropletUtils');
 var _ = require('./lodash');
 var dom = require('./dom');
 var constants = require('./constants.js');
-var experiments = require('./experiments');
 var KeyCodes = constants.KeyCodes;
 var msg = require('./locale');
 var blockUtils = require('./block_utils');
@@ -32,6 +31,7 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
+var experiments = require('./experiments');
 import { setPageConstants } from './redux/pageConstants';
 
 var redux = require('./redux');
@@ -525,9 +525,6 @@ StudioApp.prototype.init = function (config) {
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
   if (this.isUsingBlockly()) {
-    Blockly.mainBlockSpaceEditor.addUnusedBlocksHelpListener(function (e) {
-      utils.showUnusedBlockQtip(e.srcElement);
-    });
     Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function () {
       this.updateBlockCount();
     }, this));
@@ -1796,13 +1793,6 @@ function runButtonClickWrapper(callback) {
     $(window).trigger('run_button_pressed');
     $(window).trigger('appModeChanged');
   }
-
-  // inform Blockly that the run button has been pressed
-  if (window.Blockly && Blockly.mainBlockSpace) {
-    Blockly.mainBlockSpace.getCanvas()
-        .dispatchEvent(new Event(Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED));
-  }
-
   callback();
 }
 
@@ -2276,16 +2266,9 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     hasVerticalScrollbars: config.hasVerticalScrollbars,
     hasHorizontalScrollbars: config.hasHorizontalScrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false),
-    showUnusedBlocks: experiments.isEnabled('unusedBlocks') && utils.valueOr(config.showUnusedBlocks, true),
     readOnly: utils.valueOr(config.readonlyWorkspace, false),
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false)
   };
-
-  // Never show unused blocks in edit mode
-  if (options.editBlocks) {
-    options.showUnusedBlocks = false;
-  }
-
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
     'disableParamEditing'].forEach(
     function (prop) {
@@ -2402,7 +2385,7 @@ StudioApp.prototype.getUnfilledFunctionalExample = function () {
  */
 StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
   var unfilledBlock;
-  Blockly.mainBlockSpace.getAllUsedBlocks().some(function (block) {
+  Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
     // Get the root block in the chain
     var rootBlock = block.getRootBlock();
     if (!filter(rootBlock)) {
@@ -2670,7 +2653,7 @@ StudioApp.prototype.hasDuplicateVariablesInForLoops = function () {
   if (this.editCode) {
     return false;
   }
-  return Blockly.mainBlockSpace.getAllUsedBlocks().some(this.forLoopHasDuplicatedNestedVariables_);
+  return Blockly.mainBlockSpace.getAllBlocks().some(this.forLoopHasDuplicatedNestedVariables_);
 };
 
 /**
