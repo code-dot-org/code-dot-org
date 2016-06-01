@@ -384,6 +384,7 @@ module.exports = function (grunt) {
         path: path.resolve(__dirname, outputDir),
         filename: "[name].js",
       },
+      devtool: 'cheap-module-eval-source-map',
       entry: entries,
       plugins: [
         new webpack.DefinePlugin({
@@ -398,6 +399,7 @@ module.exports = function (grunt) {
     })
   };
   config.webpack.uglify = _.extend({}, config.webpack.build, {
+    devtool: 'source-map',
     output: _.extend({}, config.webpack.build.output, {
       filename: "[name].min.js",
     }),
