@@ -12,11 +12,20 @@ const BelowVisualization = React.createClass({
     inputOutputTable: React.PropTypes.arrayOf(
       React.PropTypes.arrayOf(React.PropTypes.number)
     ),
-    instructionsInTopPane: React.PropTypes.bool.isRequired
+    shortInstructions: React.PropTypes.string,
+    aniGifURL: React.PropTypes.string,
+    instructionsInTopPane: React.PropTypes.bool.isRequired,
+    smallStaticAvatar: React.PropTypes.string
   },
 
   render() {
-    const { inputOutputTable, instructionsInTopPane } = this.props;
+    const {
+      inputOutputTable,
+      instructionsInTopPane,
+      smallStaticAvatar,
+      shortInstructions,
+      aniGifURL
+    } = this.props;
     return (
       <ProtectedStatefulDiv id="belowVisualization">
         {!instructionsInTopPane &&
@@ -27,9 +36,11 @@ const BelowVisualization = React.createClass({
             <table id="prompt-table">
               <tbody>
                 <tr>
-                  <td id="prompt-icon-cell" style={commonStyles.hidden}>
-                    <img id="prompt-icon"/>
-                  </td>
+                  {smallStaticAvatar && (shortInstructions || aniGifURL) &&
+                    <td id="prompt-icon-cell">
+                      <img id="prompt-icon" src={smallStaticAvatar}/>
+                    </td>
+                  }
                   <td id="prompt-cell">
                     <p id="prompt"/>
                     <p id="prompt2" style={commonStyles.hidden}/>
@@ -52,5 +63,8 @@ const BelowVisualization = React.createClass({
 });
 
 export default connect(state => ({
-  instructionsInTopPane: state.pageConstants.instructionsInTopPane
+  instructionsInTopPane: state.pageConstants.instructionsInTopPane,
+  aniGifURL: state.pageConstants.aniGifURL,
+  shortInstructions: state.instructions.shortInstructions,
+  smallStaticAvatar: state.pageConstants.smallStaticAvatar
 }))(BelowVisualization);

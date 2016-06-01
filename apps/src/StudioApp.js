@@ -92,7 +92,6 @@ var StudioApp = function () {
 
   // @type {string} for all of these
   this.icon = undefined;
-  this.smallIcon = undefined;
   this.winIcon = undefined;
   this.failureIcon = undefined;
 
@@ -469,6 +468,18 @@ StudioApp.prototype.init = function (config) {
     this.configureAndShowInstructions_(config);
   }
 
+  // TODO - extract?
+  // if (this.hasInstructionsToShow(config)) {
+  //   var bubble = document.getElementById('bubble');
+  //   dom.addClickTouchEvent(bubble, function () {
+  //     this.showInstructionsDialog_(config.level, false, true);
+  //   }.bind(this));
+  //
+  //   var promptIcon = document.getElementById('prompt-icon');
+  //   this.authoredHintsController_.display(promptIcon);
+  // }
+
+
   if (this.editCode) {
     this.handleEditCode_(config);
   }
@@ -616,20 +627,6 @@ StudioApp.prototype.configureAndShowInstructions_ = function (config) {
     $(prompt2Div).show();
   }
 
-  if (this.hasInstructionsToShow(config)) {
-    var promptIcon = document.getElementById('prompt-icon');
-    if (this.smallIcon) {
-      promptIcon.src = this.smallIcon;
-      $('#prompt-icon-cell').show();
-    }
-
-    var bubble = document.getElementById('bubble');
-    dom.addClickTouchEvent(bubble, function () {
-      this.showInstructionsDialog_(config.level, false, true);
-    }.bind(this));
-    this.authoredHintsController_.display(promptIcon);
-  }
-
   var aniGifPreview = document.getElementById('ani-gif-preview');
   if (config.level.aniGifURL) {
     aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
@@ -720,7 +717,6 @@ StudioApp.prototype.getCode = function () {
 
 StudioApp.prototype.setIconsFromSkin = function (skin) {
   this.icon = skin.staticAvatar;
-  this.smallIcon = skin.smallStaticAvatar;
   this.winIcon = skin.winAvatar;
   this.failureIcon = skin.failureAvatar;
 };
@@ -2715,7 +2711,9 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     instructionsInTopPane: !!config.showInstructionsInTopPane,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
-    noVisualization: false
+    noVisualization: false,
+    smallStaticAvatar: config.skin.smallStaticAvatar,
+    aniGifURL: config.level.aniGifURL
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));
