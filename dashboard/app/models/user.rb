@@ -169,7 +169,7 @@ class User < ActiveRecord::Base
       params[:school] ||= params[:ops_school]
 
       user = User.invite!(email: params[:email],
-                          user_type: TYPE_TEACHER, age: 21)
+                          user_type: TYPE_TEACHER, age: '21+')
       user.invited_by = invited_by_user
     end
 
