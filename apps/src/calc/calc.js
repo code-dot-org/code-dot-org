@@ -726,7 +726,7 @@ Calc.generateResults_ = function () {
   appState.message = undefined;
 
   // Check for pre-execution errors
-  if (studioApp.hasExtraTopBlocks() && !Blockly.showUnusedBlocks) {
+  if (studioApp.hasExtraTopBlocks()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
     return;
@@ -752,7 +752,7 @@ Calc.generateResults_ = function () {
     return;
   }
 
-  appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopUsedBlocks());
+  appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
   appState.failedInput = null;
 
   // Note: This will take precedence over free play, so you can "fail" a free
@@ -776,12 +776,6 @@ Calc.generateResults_ = function () {
       appState = Object.assign(appState,
         Calc.evaluateResults_(appState.targetSet, appState.userSet));
     }
-  }
-
-  if (appState.result === ResultType.SUCCESS &&
-      studioApp.hasExtraTopBlocks() &&
-      Blockly.showUnusedBlocks) {
-    appState.testResults = TestResults.PASS_WITH_EXTRA_TOP_BLOCKS;
   }
 
   // Override default message for LEVEL_INCOMPLETE_FAIL

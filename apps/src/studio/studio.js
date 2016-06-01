@@ -2669,7 +2669,7 @@ Studio.checkForBlocklyPreExecutionFailure = function () {
     return true;
   }
 
-  if (studioApp.hasExtraTopBlocks() && !Blockly.showUnusedBlocks) {
+  if (studioApp.hasExtraTopBlocks()) {
     Studio.result = false;
     Studio.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
     Studio.preExecutionFailure = true;
