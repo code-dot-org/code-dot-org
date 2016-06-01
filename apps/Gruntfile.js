@@ -6,6 +6,7 @@ var webpack = require('webpack');
 var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
 var webpackConfig = require('./webpack.config');
+var LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
@@ -413,6 +414,11 @@ module.exports = function (grunt) {
   });
   config.webpack.watch = _.extend({}, config.webpack.build, {
     keepalive: true,
+    plugins: config.webpack.build.plugins.concat([
+      new LiveReloadPlugin({
+        appendScriptTag: true,
+      }),
+    ]),
   });
 
   var ext = envOptions.dev ? 'uncompressed' : 'compressed';
