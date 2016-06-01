@@ -8,10 +8,6 @@ end
 Dashboard::Application.routes.draw do
   resources :survey_results, only: [:create], defaults: { format: 'json' }
 
-  def redirect_to_teacher_dashboard
-    redirect CDO.code_org_url('/teacher-dashboard')
-  end
-
   resources :user_levels, only: [:update]
 
   resources :gallery_activities, path: '/gallery' do
@@ -39,9 +35,6 @@ Dashboard::Application.routes.draw do
 
   # XHR proxying
   get 'xhr', to: 'xhr_proxy#get', format: false
-
-  get 'sections/new', to: redirect_to_teacher_dashboard
-  get 'sections/:id/edit', to: redirect_to_teacher_dashboard
 
   resources :sections, only: [:show] do
     member do
