@@ -121,7 +121,7 @@ var Projectile = function (options) {
   });
 
   /** @private {StudioAnimation} */
-  this.animation_ = new StudioAnimation($.extend({}, options, {
+  this.animation_ = new StudioAnimation(Object.assign({}, options, {
     spriteSheet: this.spriteSheet_,
     animationFrameDuration: this.getAnimationFrameDuration()
   }));
