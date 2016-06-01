@@ -237,5 +237,7 @@
   "watchVideo": "צפה בסרטון",
   "when": "מתי",
   "whenRun": "התחל ריצה",
-  "workspaceHeaderShort": "סביבת העבודה: "
+  "workspaceHeaderShort": "סביבת העבודה: ",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
 }

@@ -1,4 +1,5 @@
 /* globals dashboard  */
+import $ from 'jquery';
 
 /**
  * Adjust the maximum size of the popup's inner scroll area so that the whole popup

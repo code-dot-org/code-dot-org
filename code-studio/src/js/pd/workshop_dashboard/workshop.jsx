@@ -7,6 +7,7 @@
     /Workshops/:workshopId/edit
  */
 
+import $ from 'jquery';
 var _ = require('lodash');
 import React from 'react';
 var moment = require('moment');
@@ -487,7 +488,7 @@ var Workshop = React.createClass({
       return this.renderSpinner();
     }
     return (
-      <Grid fluid={true}>
+      <Grid>
         {this.renderSignupPanel()}
         {this.renderIntroPanel()}
         {this.renderAttendancePanel()}

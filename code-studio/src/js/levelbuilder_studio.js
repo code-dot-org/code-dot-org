@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 /**
  * @file Main entry point for scripts used only in levelbuilder on when editing
  *       studio-type levels.

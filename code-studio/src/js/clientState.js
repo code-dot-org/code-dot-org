@@ -4,7 +4,7 @@
  */
 'use strict';
 
-var $ = require('jquery-shim');
+var $ = require('jquery');
 var sessionStorage = window.sessionStorage;
 
 var clientState = module.exports = {};
@@ -138,7 +138,9 @@ clientState.trackProgress = function (result, lines, testResult, scriptName, lev
  */
 clientState.batchTrackProgress = function (scriptName, progress) {
   var data = {};
-  for (let level of Object.keys(progress)) {
+  var keys = Object.keys(progress);
+  for (let i = 0; i < keys.length; i++) {
+    let level = keys[i];
     if (progress[level] && progress[level] <= clientState.MAXIMUM_CACHABLE_RESULT) {
       data[level] = progress[level];
     }
