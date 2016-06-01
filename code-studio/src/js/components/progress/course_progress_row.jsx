@@ -25,6 +25,7 @@ var style = {
  */
 var CourseProgressRow = React.createClass({
   propTypes: {
+    currentLevelId: React.PropTypes.string,
     stage: STAGE_TYPE
   },
 
@@ -41,7 +42,7 @@ var CourseProgressRow = React.createClass({
             </a>
           </div>
         </div>
-        <StageProgress levels={stage.levels} largeDots={true} saveAnswersFirst={false} />
+        <StageProgress levels={stage.levels} currentLevelId={this.props.currentLevelId} largeDots={true} saveAnswersFirst={false} />
       </div>
     );
   }

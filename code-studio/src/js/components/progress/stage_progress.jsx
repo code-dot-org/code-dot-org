@@ -97,7 +97,7 @@ var style = {
 var StageProgress = React.createClass({
   propTypes: {
     levels: STAGE_PROGRESS_TYPE,
-    currentLevelIndex: React.PropTypes.number,
+    currentLevelId: React.PropTypes.string,
     largeDots: React.PropTypes.bool,
     saveAnswersFirst: React.PropTypes.bool.isRequired
   },
@@ -109,22 +109,26 @@ var StageProgress = React.createClass({
   },
 
   render() {
-    var progressDots = this.props.levels.map((level, index) => {
+    var progressDots = this.props.levels.map(level => {
+      var uid = level.uid || level.id.toString();
 
       var dotStyle = Object.assign({}, style.dot.puzzle);
+      if (level.kind === 'assessment') {
+        Object.assign(dotStyle, style.dot.assessment);
+      }
+
       if (this.props.largeDots) {
         Object.assign(dotStyle, style.dot.overview);
-      } else if (index !== this.props.currentLevelIndex) {
+        if (uid === this.props.currentLevelId) {
+          Object.assign(dotStyle, {borderColor: color.level_current});
+        }
+      } else if (uid !== this.props.currentLevelId) {
         Object.assign(dotStyle, style.dot.small);
       }
 
       var isUnplugged = isNaN(level.title);
       if (isUnplugged) {
         Object.assign(dotStyle, style.dot.unplugged);
-      }
-
-      if (level.kind === 'assessment') {
-        Object.assign(dotStyle, style.dot.assessment);
       }
 
       var onClick = null;
@@ -135,7 +139,7 @@ var StageProgress = React.createClass({
 
       return ([
         <a
-          key={index}
+          key={uid}
           href={level.url}
           onClick={onClick}
           style={[dotStyle, style.status[level.status || 'not_tried']]}>

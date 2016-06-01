@@ -10,13 +10,14 @@ import StageDetails from './stage_details.jsx';
  */
 var CourseProgress = React.createClass({
   propTypes: {
+    currentLevelId: React.PropTypes.string,
     display: React.PropTypes.oneOf(['dots', 'list']).isRequired,
     stages: React.PropTypes.arrayOf(STAGE_TYPE)
   },
 
   getRow(stage) {
     if (this.props.display === 'dots') {
-      return <CourseProgressRow stage={stage} key={stage.name} />;
+      return <CourseProgressRow stage={stage} key={stage.name} currentLevelId={this.props.currentLevelId} />;
     } else {
       return <StageDetails stage={stage} key={stage.name} />;
     }
@@ -43,6 +44,7 @@ var CourseProgress = React.createClass({
 });
 
 export default connect(state => ({
+  currentLevelId: state.currentLevelId,
   display: state.display,
   stages: state.stages
 }))(CourseProgress);
