@@ -468,16 +468,18 @@ StudioApp.prototype.init = function (config) {
     this.configureAndShowInstructions_(config);
   }
 
-  // TODO - extract?
-  // if (this.hasInstructionsToShow(config)) {
-  //   var bubble = document.getElementById('bubble');
-  //   dom.addClickTouchEvent(bubble, function () {
-  //     this.showInstructionsDialog_(config.level, false, true);
-  //   }.bind(this));
-  //
-  //   var promptIcon = document.getElementById('prompt-icon');
-  //   this.authoredHintsController_.display(promptIcon);
-  // }
+  // Configure hints. Depends on the existence of DOM elements with particular ids..
+  if (this.hasInstructionsToShow(config)) {
+    var bubble = document.getElementById('bubble');
+    if (bubble) {
+      dom.addClickTouchEvent(bubble, function () {
+        this.showInstructionsDialog_(config.level, false, true);
+      }.bind(this));
+    }
+
+    var promptIcon = document.getElementById('prompt-icon');
+    this.authoredHintsController_.display(promptIcon);
+  }
 
 
   if (this.editCode) {

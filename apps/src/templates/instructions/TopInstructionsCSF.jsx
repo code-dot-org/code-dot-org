@@ -20,6 +20,7 @@ var constants = require('../../constants');
 var msg = require('../../locale');
 import CollapserButton from './CollapserButton';
 import ThreeColumns from './ThreeColumns';
+import PromptIconCell from './PromptIconCell';
 
 const VERTICAL_PADDING = 10;
 const HORIZONTAL_PADDING = 20;
@@ -59,9 +60,9 @@ const styles = {
   }
 };
 
-const INSTRUCTIONS_IMAGE_HEIGHT = 84;
-
-const COLLAPSED_HEIGHT = INSTRUCTIONS_IMAGE_HEIGHT;
+// TODO - currently height of icon with authored hints. might be this can be
+// somewhat more dynamic
+const COLLAPSED_HEIGHT = 90;
 
 // Math.max(INSTRUCTIONS_IMAGE_HEIGHT,
 //   styles.collapserButton.height +
@@ -178,11 +179,13 @@ var TopInstructions = React.createClass({
       <div style={mainStyle} className="editor-column">
         <ThreeColumns
             style={styles.body}
-            leftColWidth={80}
+            leftColWidth={90}
             rightColWidth={90}
             height={this.props.height - resizerHeight}
         >
-          <img src={this.props.smallStaticAvatar}/>
+          <span id="bubble">
+            <PromptIconCell src={this.props.smallStaticAvatar}/>
+          </span>
           <Instructions
               ref="instructions"
               renderedMarkdown={renderedMarkdown}
