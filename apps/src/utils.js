@@ -1,4 +1,4 @@
-/* global define */
+/* global define, $ */
 'use strict';
 
 import Immutable from 'immutable';
@@ -374,6 +374,33 @@ exports.escapeText = function (text) {
   }).join('');
 };
 
+exports.showUnusedBlockQtip = function (targetElement) {
+  var msg = require('./locale');
+  $(targetElement).qtip({
+    content: {
+      text: '<h4>' + msg.unattachedBlockTipTitle() +'</h4><p>' + msg.unattachedBlockTipBody() + '</p>',
+      title: {
+        button: $('<div class="tooltip-x-close"/>')
+      }
+    },
+    position: {
+      my: "bottom left",
+      at: "top right"
+    },
+    style: {
+      classes: "cdo-qtips",
+      tip: {
+        width: 20,
+        height: 20
+      }
+    },
+    hide: {
+      event: 'unfocus'
+    },
+    show: false // don't show on mouseover
+  }).qtip('show');
+};
+
 /**
  * Converts degrees into radians.
  *
@@ -396,6 +423,7 @@ exports.trySetLocalStorage = function (item, value) {
   } catch (e) {
     return false;
   }
+
 };
 
 /**
