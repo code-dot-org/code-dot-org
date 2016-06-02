@@ -154,4 +154,26 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:manage, LevelSourceHint)
     assert ability.cannot?(:manage, FrequentUnsuccessfulLevelSource)
   end
+
+  test 'non-admins can read only own UserPermission' do
+    user = create :user
+    user_permission = UserPermission.create(
+      user_id: user.id, permission: UserPermission::DISTRICT_CONTACT)
+    ability = Ability.new user
+
+    ability.cannot?(:create, UserPermission)
+    ability.cannot?(:read, UserPermission)
+    ability.cannot?(:update, UserPermission)
+    ability.cannot?(:delete, UserPermission)
+
+    ability.can?(:read, user_permission)
+    ability.cannot?(:create, user_permission)
+    ability.cannot?(:update, user_permission)
+    ability.cannot?(:delete, user_permission)
+  end
+
+  test 'admins can manage UserPermission' do
+    admin_ability = Ability.new(create(:admin))
+    assert admin_ability.can?(:manage, UserPermission)
+  end
 end
