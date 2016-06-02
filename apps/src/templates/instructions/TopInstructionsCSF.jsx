@@ -60,15 +60,9 @@ const styles = {
   }
 };
 
-// TODO - currently height of icon with authored hints. might be this can be
-// somewhat more dynamic
-const COLLAPSED_HEIGHT = 90;
-
-// Math.max(INSTRUCTIONS_IMAGE_HEIGHT,
-//   styles.collapserButton.height +
-//   styles.collapserButton.marginTop +
-//   styles.collapserButton.marginBottom +
-//   2 * VERTICAL_PADDING);
+// Ultimately we want this number to be more dynamic. Right now it's the height
+// needed to display Anna at the same dimensions we do for bottom instructions.
+const COLLAPSED_HEIGHT = 119;
 
 const MIN_HEIGHT = COLLAPSED_HEIGHT;
 
@@ -174,7 +168,9 @@ var TopInstructions = React.createClass({
     const renderedMarkdown = processMarkdown(this.props.collapsed ?
       this.props.shortInstructions : this.props.longInstructions);
 
-    // TODO - can colWidth's be less of magic numbers?
+    // TODO - the colWidth numbers are kind of magic/arbitrary right now (it's the
+    // amount needed for the collapser button and the hint icon), and could likely
+    // become more dynamic - or at least more well documented - in the future
     return (
       <div style={mainStyle} className="editor-column">
         <ThreeColumns
@@ -189,7 +185,7 @@ var TopInstructions = React.createClass({
           <Instructions
               ref="instructions"
               renderedMarkdown={renderedMarkdown}
-              onResize={this.props.onResize}
+              onResize={this.adjustMaxNeededHeight}
               inTopPane
           />
           {this.props.longInstructions && <CollapserButton
