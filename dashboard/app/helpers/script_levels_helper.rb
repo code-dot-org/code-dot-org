@@ -36,9 +36,18 @@ module ScriptLevelsHelper
         script_level.next_progression_level
       end
 
-    next_level ?
-        build_script_level_path(next_level) :
-        script_completion_redirect(script_level.script)
+    if script_level.level.try(:plc_evaluation?)
+      enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: current_user, plc_course_unit: script_level.script.plc_course_unit)
+      if enrollment_unit_assignment
+        preview_assignments_path(unit_assignment_id: enrollment_unit_assignment)
+      else
+        build_script_level_path(next_level)
+      end
+    else
+      next_level ?
+          build_script_level_path(next_level) :
+          script_completion_redirect(script_level.script)
+    end
   end
 
   def wrapup_video_then_redirect_response(wrapup_video, redirect)

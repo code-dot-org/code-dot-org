@@ -77,6 +77,19 @@ en:
         : A rocket blasts off, traveling at 15 meters per second. Write a contract for the function rocket-height that takes in the number of seconds that have passed since the rocket took off, and which produces the height of the rocket at that time.
         Contract for rocket-height: Contract for rocket-height
         rocket-height|Number|Number: rocket-height|Number|Number
+    evaluation_multi:
+      CSP PD Example Question 1:
+        The encoding numbers unit: The encoding numbers unit
+        The sending binary messages unit: The sending binary messages unit
+        Which unit will you teach first: Which unit will you teach first
+      CSP PD Example Question 2:
+        How will you teach students?: How will you teach students?
+        I will make them learn from peers: I will make them learn from peers
+        I will make them write: I will make them write
+      CSP PD Q2:
+        How will you teach students?: How will you teach students?
+        I will make them learn from peers: I will make them learn from peers
+        I will make them write: I will make them write
     external:
       AlgPD Break:
         Before you move on...: Before you move on...
@@ -1795,6 +1808,7 @@ en:
         PS U3 Assessment1 new: {}
         Part 1 - CSP Culminating Assessment: {}
         Part 2 - CSP Culminating Assessment: {}
+        Sample CSP Assessment: {}
         Test longassessment levelgroup new: {}
         Test longassessment levelgroup split new: {}
     match:
