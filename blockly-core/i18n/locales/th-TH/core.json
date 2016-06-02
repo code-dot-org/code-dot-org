@@ -26,7 +26,7 @@
   "COLOUR_RGB_TITLE": "ลงสีด้วย",
   "COLOUR_RGB_TOOLTIP": "สร้างสีด้วยจำนวนสีแดง เขียว และน้ำเงินตามปริมาณที่กำหนด ค่าทั้งหมดจะต้องอยู่ในช่วง 0 ถึง 100",
   "CONFIRM_CREATE_VARIABLE": "สร้าง",
-  "CONFIRM_DELETE_FUNCTION_MESSAGE": "คำเตือน คุณแน่ใจว่าต้องการลบ %1",
+  "CONFIRM_DELETE_FUNCTION_MESSAGE": "คำเตือน! แน่ใจนะว่าต้องการลบ %1",
   "CONFIRM_RENAME_VARIABLE": "Rename",
   "CONTRACT_EDITOR_HEADER": "Thfj",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
