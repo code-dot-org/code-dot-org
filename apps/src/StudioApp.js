@@ -1117,7 +1117,7 @@ StudioApp.prototype.onReportComplete = function (response) {
 StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, showHints) {
   var renderedMarkdown;
 
-  var longInstructions = this.reduxStore.getState().pageConstants.longInstructions;
+  var longInstructions = this.reduxStore.getState().instructions.longInstructions;
 
   // longInstructions will be undefined if non-english
   if (longInstructions) {
@@ -1151,7 +1151,7 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
  * @param {boolean} showHints
  */
 StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHints) {
-  var isMarkdownMode = !!this.reduxStore.getState().pageConstants.longInstructions;
+  var isMarkdownMode = !!this.reduxStore.getState().instructions.longInstructions;
 
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?
