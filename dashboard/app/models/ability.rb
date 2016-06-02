@@ -42,7 +42,7 @@ class Ability
       Pd::CourseFacilitator
     ]
 
-    if user.id
+    if user.persisted?
       can :manage, user
 
       can :create, Activity, user_id: user.id
@@ -113,17 +113,17 @@ class Ability
     end
 
     # Override Script and ScriptLevel.
-    if user.id && user.admin?
+    if user.persisted? && user.admin?
       can :read, Script
       can :read, ScriptLevel
-    elsif user.id && user.student_of_admin? # logged in, not admin, is student of admin
+    elsif user.persisted? && user.student_of_admin? # logged in, not admin, is student of admin
       can :read, Script do |script|
         !script.admin_required?
       end
       can :read, ScriptLevel do |script_level|
         !script_level.script.admin_required?
       end
-    elsif user.id # logged in, not admin, not student of admin
+    elsif user.persisted? # logged in, not admin, not student of admin
       can :read, Script do |script|
         !script.admin_required? &&
             !script.student_of_admin_required?
@@ -161,7 +161,7 @@ class Ability
       end
     end
 
-    if user.admin
+    if user.admin?
       can :manage, :all
 
       # Only custom levels are editable
