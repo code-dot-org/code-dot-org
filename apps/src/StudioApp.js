@@ -1783,7 +1783,6 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
   this.skin = config.skin;
-  this.showInstructions = this.showInstructionsDialog_.bind(this, config.level, false);
   this.polishCodeHook = config.polishCodeHook;
 };
 
@@ -2728,10 +2727,16 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   let longInstructions = locale === ENGLISH_LOCALE ? level.markdownInstructions : undefined;
   let shortInstructions = level.instructions;
 
-  const shortInstructionsWhenCollapsed = !!config.shortInstructionsWhenCollapsed;
-  if (!shortInstructionsWhenCollapsed) {
+  const noInstructionsWhenCollapsed = config.noInstructionsWhenCollapsed;
+  // Our TopInstructions operate in two modes.
+  // In CSF we show short instructions when collapsed. In this mode, we assume
+  // that we have at least shortInstructions.
+  // In CSP we show no instructions  when collapsed. In this mode, we assume
+  // that we have at least longInstructions. In the case that we arent
+  // provided (markdown) longInstructions, treat our shortInstructiosn as our
+  // longInstructions
+  if (noInstructionsWhenCollapsed) {
     if (shortInstructions && !longInstructions) {
-      // use short instructions as long instructions if that's all we have
       longInstructions = shortInstructions;
     }
     // Never use short instructions in CSP
@@ -2739,7 +2744,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   }
 
   this.reduxStore.dispatch(setInstructionsConstants({
-    shortInstructionsWhenCollapsed,
+    noInstructionsWhenCollapsed,
     shortInstructions,
     longInstructions,
   }));
