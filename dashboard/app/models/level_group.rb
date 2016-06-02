@@ -84,4 +84,7 @@ ruby
     end
   end
 
+  def plc_evaluation?
+    levels.map(&:class).uniq == [EvaluationMulti]
+  end
 end
