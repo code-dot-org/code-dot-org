@@ -61,7 +61,9 @@ class Plc::CourseUnit < ActiveRecord::Base
     learning_module_weights = Hash.new(0)
 
     responses.each do |level_id, response|
-      level = EvaluationMulti.find(level_id)
+      next if response.nil? || response['result'].nil?
+
+      level = EvaluationMulti.cache_find(level_id)
       selected_answer = level.answers[response['result'].to_i]
 
       next if selected_answer['stage'].nil?
@@ -75,11 +77,12 @@ class Plc::CourseUnit < ActiveRecord::Base
     end
 
     learning_module_weights = learning_module_weights.sort_by{|_, weight| weight}
+    sorted_learning_modules = learning_module_weights.map(&:first)
 
     default_module_assignments = []
 
     Plc::LearningModule::NONREQUIRED_MODULE_TYPES.each do |module_type|
-      module_to_assign = learning_module_weights.find {|learning_module| learning_module[0].module_type == module_type}.try(:[], 0)
+      module_to_assign = sorted_learning_modules.find{|learning_module| learning_module.module_type == module_type}
       next if module_to_assign.nil?
       default_module_assignments << module_to_assign.id
     end
