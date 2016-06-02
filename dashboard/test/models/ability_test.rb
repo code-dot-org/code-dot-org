@@ -126,4 +126,32 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @admin_script_level)
   end
 
+  test 'with hint_access manage LevelSourceHint and FrequentUnsuccessfulLevelSource' do
+    time_now = DateTime.now
+    hint_access_student = create :student
+    UserPermission.create!(
+      user_id: hint_access_student.id,
+      permission: UserPermission::HINT_ACCESS,
+      created_at: time_now,
+      updated_at: time_now
+    )
+    ability = Ability.new(hint_access_student)
+
+    assert ability.can?(:manage, LevelSourceHint)
+    assert ability.can?(:manage, FrequentUnsuccessfulLevelSource)
+  end
+
+  test 'teachers manage LevelSourceHint and FrequentUnsuccessfulLevelSource' do
+    ability = Ability.new(create(:teacher))
+
+    assert ability.can?(:manage, LevelSourceHint)
+    assert ability.can?(:manage, FrequentUnsuccessfulLevelSource)
+  end
+
+  test 'students do not manage LevelSourceHint and FrequentUnsuccessfulLevelSource' do
+    ability = Ability.new(create(:student))
+
+    assert ability.cannot?(:manage, LevelSourceHint)
+    assert ability.cannot?(:manage, FrequentUnsuccessfulLevelSource)
+  end
 end

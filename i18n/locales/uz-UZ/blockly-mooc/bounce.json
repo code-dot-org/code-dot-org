@@ -19,7 +19,7 @@
   "incrementPlayerScore":"ball qo‘shish",
   "incrementPlayerScoreTooltip":"Shu o'yinchi hisobiga bir ball qo'sh.",
   "isWall":"Bu devormi?",
-  "isWallTooltip":"Qaytishlar haqqoniy agar bu yerda to'siq yoki decor bor bo'lsa",
+  "isWallTooltip":"Rost qaytaradi, agar devor bo'lsa",
   "launchBall":"yangi koptok tushirish",
   "launchBallTooltip":"Koptokni o‘yinga tushirish.",
   "makeYourOwn":"Make Your Own Bounce Game",
