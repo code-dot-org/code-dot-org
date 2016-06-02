@@ -510,6 +510,8 @@
   dashboard_action_required: "required"
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: "No assessments"
+  dashboard_assessments_summaries: "Summaries"
+  dashboard_assessments_answers: "All answers"
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: "All"
   dashboard_download_csv: "Download CSV"
@@ -517,7 +519,7 @@
   dashboard_navigation_section_student_progress: "Student Accounts and Progress"
   dashboard_navigation_section_teacher_progress: "Your Course Progress"
   dashboard_navigation_section_lesson_plans: "Lesson Plans and Resources"
-  dashboard_navigation_section_community: "Help and Community"
+  dashboard_navigation_section_community: "Support"
   dashboard_navigation_section_pd: "Professional Development"
   dashboard_navigation_section_speakers: "Computer Science <br/> Guest Speakers"
   dashboard_navigation_all_sections: "Student Accounts and Progress"
@@ -660,7 +662,7 @@
   dashboard_sections_account_creation_question: "Who creates the student's account?"
   dashboard_sections_password_question: "What do students use as a \"password\"?"
   dashboard_sections_picture_account_creation: "A picture assigned by Code.org"
-  dashboard_sections_word_account_creation: "A simple word assigned by Code.org"
+  dashboard_sections_word_account_creation: "A pair of simple words assigned by Code.org"
   dashboard_sections_sign_in_question: "Where do students sign-in?"
   dashboard_sections_sign_in_unique: "Unique web-page listed on \"Manage Students\" tab"
   dashboard_sections_sign_in_main: "http://code.org and click \"Sign in\""
@@ -670,7 +672,7 @@
   dashboard_faq_k5: "K-5 Frequently Asked Questions"
   dashboard_announcements: "Announcements"
   dashboard_announce_view_all: "View all"
-  dashboard_announce_message: 'We''ve started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There''s a lot that goes into it, so we''re releasing a blog series in 3 parts. See how we''re <a href=''%{tagging_url}''>tagging concepts and difficulty in puzzles</a> and how we''ve <a href=''%{ux_url}''>changed the user experience</a> to answer the big question: <i>What can students do?</i>'
+  dashboard_announce_message: "Our Computer Science Fundamentals Course 4 is out of \"beta\" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!"
   dashboard_announce_button_text: "Learn more"
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: "Add your name"
@@ -783,12 +785,17 @@
   course3_name: "Course 3"
   course4_name: "Course 4"
   accelerated_name: "Accelerated Course"
-  cspunit1_name: "CS Principles Unit 1"
-  cspunit2_name: "CS Principles Unit 2"
-  cspunit3_name: "CS Principles Unit 3"
-  cspunit4_name: "CS Principles Unit 4"
-  cspunit5_name: "CS Principles Unit 5"
-  cspunit6_name: "CS Principles Unit 6"
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
+  cspunit3_name: 'Unit 3: Programming'
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: "Full Test - 50 questions"
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: "Grades 9-12"
   cspunit3_shortdescription_congrats: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools."
   20-hour_name: Accelerated Course
@@ -803,7 +810,9 @@
   math_category_name: "Math"
   hoc_category_name: "Hour of Code"
   csf_category_name: "CS Fundamentals"
-  csp_category_name: "CS Principles"
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: "CS Principles Practice Test"
   applab_name: "App Lab"
   applab_gradelevel: "Ages 13+"
   applab_shortdescription_congrats: "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds"

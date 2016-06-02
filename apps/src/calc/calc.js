@@ -770,10 +770,10 @@ Calc.generateResults_ = function () {
     appState.result = ResultType.SUCCESS;
     appState.testResults = TestResults.FREE_PLAY;
   } else {
-    appState = $.extend(appState, Calc.checkExamples_());
+    appState = Object.assign(appState, Calc.checkExamples_());
 
     if (appState.result === null) {
-      appState = $.extend(appState,
+      appState = Object.assign(appState,
         Calc.evaluateResults_(appState.targetSet, appState.userSet));
     }
   }

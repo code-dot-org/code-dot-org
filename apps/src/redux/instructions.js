@@ -23,7 +23,7 @@ const SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE = 'instructions/SET_INSTRUCTIONS_MAX
  *     longInstructions will both be set.
  */
 const instructionsInitialState = {
-  shortInstructionsWhenCollapsed: false,
+  noInstructionsWhenCollapsed: false,
   shortInstructions: undefined,
   longInstructions: undefined,
   collapsed: false,
@@ -44,14 +44,14 @@ export default function reducer(state = instructionsInitialState, action) {
     if (state.shortInstructions || state.longInstructions) {
       throw new Error('instructions constants already set');
     }
-    const { shortInstructionsWhenCollapsed, shortInstructions, longInstructions } = action;
+    const { noInstructionsWhenCollapsed, shortInstructions, longInstructions } = action;
     let collapsed = state.collapsed;
     if (!longInstructions) {
       // If we only have short instructions, we want to be in collapsed mode
       collapsed = true;
     }
     return _.assign({}, state, {
-      shortInstructionsWhenCollapsed,
+      noInstructionsWhenCollapsed,
       shortInstructions,
       longInstructions,
       collapsed
@@ -96,10 +96,10 @@ export default function reducer(state = instructionsInitialState, action) {
   return state;
 }
 
-export const setInstructionsConstants = ({shortInstructionsWhenCollapsed,
+export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
     shortInstructions, longInstructions}) => ({
   type: SET_CONSTANTS,
-  shortInstructionsWhenCollapsed,
+  noInstructionsWhenCollapsed,
   shortInstructions,
   longInstructions
 });

@@ -131,3 +131,6 @@ assessment 'PS U3 Assessment1 new'
 
 stage 'Free Response'
 level 'Sample Free Response'
+
+stage 'Sample PLC Assessment'
+assessment 'Sample CSP Assessment'
