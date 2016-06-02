@@ -4,18 +4,6 @@ require 'pdf/collate'
 require 'cdo/rake_utils'
 require 'cdo/yaml'
 
-all_output_files = []
-
-Dir.glob(pegasus_dir('sites/**/*.collate')).each do |collate_file|
-  begin
-    all_output_files << collate_to_pdf_to_fetch_file(collate_file)
-  rescue Exception => e
-    HipChat.log "PDF generation failure for #{collate_file}"
-    HipChat.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
-    raise
-  end
-end
-
 # Given a .collate file with lines representing
 def collate_to_pdf_to_fetch_file(collate_file)
   source_paths = PDF.get_local_markdown_paths(collate_file) +
@@ -44,4 +32,17 @@ def collate_to_pdf_to_fetch_file(collate_file)
   end
   fetchfile_path
 end
+
+all_output_files = []
+
+Dir.glob(pegasus_dir('sites/**/*.collate')).each do |collate_file|
+  begin
+    all_output_files << collate_to_pdf_to_fetch_file(collate_file)
+  rescue Exception => e
+    HipChat.log "PDF generation failure for #{collate_file}"
+    HipChat.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
+    raise
+  end
+end
+
 task :default => all_output_files
