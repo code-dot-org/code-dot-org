@@ -76,7 +76,6 @@ group :development, :test do
   gem 'minitest-around'
   gem 'eyes_selenium', '~> 2.28.0'
 
-
   # for pegasus PDF generation / merging testing
   gem 'pdf-reader', require: false
 end
