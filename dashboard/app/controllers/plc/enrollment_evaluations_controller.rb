@@ -21,7 +21,6 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
     @enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find(params[:unit_assignment_id])
     @content_learning_modules = @enrollment_unit_assignment.plc_course_unit.plc_learning_modules.content
     @practice_learning_modules = @enrollment_unit_assignment.plc_course_unit.plc_learning_modules.practice
-    @enrolled_module_ids = params[:enrolled_modules]
   end
 
   def confirm_assignments

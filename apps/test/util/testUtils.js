@@ -1,14 +1,14 @@
+require("babel-polyfill"); // Provides Object.assign, among other things.
+require('require-globify');
+var $ = require('jquery');
+var React = require('react');
 import {assert} from './configuredChai';
 
-require('require-globify');
-
-var $ = require('jquery');
-
 exports.setExternalGlobals = function () {
-  window.$ = $;
-  window.jQuery = $;
-
-  window.dashboard = $.extend(window.dashboard, {
+  // Temporary: Provide React on window while we still have a direct dependency
+  // on the global due to a bad code-studio/apps interaction.
+  window.React = React;
+  window.dashboard = Object.assign({}, window.dashboard, {
     i18n: {
       t: function (selector) { return selector; }
     },

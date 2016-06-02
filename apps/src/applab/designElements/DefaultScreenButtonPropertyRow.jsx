@@ -19,7 +19,7 @@ var DefaultScreenButtonPropertyRow = React.createClass({
       fontSize: '14px',
     };
 
-    var defaultButtonStyle = $.extend({}, buttonStyle, {
+    var defaultButtonStyle = Object.assign({}, buttonStyle, {
       backgroundColor: '#0aa',
       color: color.white
     });

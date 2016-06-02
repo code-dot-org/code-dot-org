@@ -349,10 +349,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                    {controller: "script_levels", action: "show", script_id: Script::HOC_NAME, chapter: "1"})
     assert_equal '/hoc/1', build_script_level_path(hoc_level)
 
-    # we don't actually use this
-    assert_routing({method: "get", path: '/k8intro/5'},
-                   {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, chapter: "5"})
-
     flappy_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::FLAPPY_NAME).id, chapter: 5)
     assert_routing({method: "get", path: '/flappy/5'},
                    {controller: "script_levels", action: "show", script_id: Script::FLAPPY_NAME, chapter: "5"})
