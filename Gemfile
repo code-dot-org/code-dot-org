@@ -75,6 +75,10 @@ group :development, :test do
   gem 'minitest-reporters'
   gem 'minitest-around'
   gem 'eyes_selenium', '~> 2.28.0'
+
+
+  # for pegasus PDF generation / merging testing
+  gem 'pdf-reader', require: false
 end
 
 group :doc do
@@ -84,9 +88,6 @@ end
 
 # for pegasus PDF generation
 gem 'open_uri_redirections', require: false, group: [:development, :staging, :test]
-
-# for pegasus PDF merger testing
-gem 'pdf-reader', require: false, group: [:development, :staging, :test]
 
 gem 'unicorn', '~> 4.8.2'
 
