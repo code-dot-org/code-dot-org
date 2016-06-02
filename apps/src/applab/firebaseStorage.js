@@ -2,6 +2,7 @@
 
 /* global Applab */
 
+var FirebaseRateLimits = require('./firebaseRateLimits');
 var FirebaseUtils = require('./firebaseUtils');
 
 /**
@@ -9,14 +10,14 @@ var FirebaseUtils = require('./firebaseUtils');
  */
 var FirebaseStorage = module.exports;
 
-function getKeysRef(channelId) {
+function getKeyValues(channelId) {
   var kv = FirebaseUtils.getDatabase(channelId).child('storage').child('keys');
+  //console.log(kv);
   return kv;
 }
 
-function getRecordsRef(channelId, tableName) {
-  return FirebaseUtils.getDatabase(channelId).child('storage').child('tables')
-    .child(tableName).child('records');
+function getTable(channelId, tableName) {
+  return FirebaseUtils.getDatabase(channelId).child('storage').child('tables').child(tableName);
 }
 
 /**
@@ -82,8 +83,8 @@ function onErrorStatus(onError, commandName, status, detailedErrorMessage) {
  * @param {function (string, number)} onError Function to call on error with error msg and http status.
  */
 FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
-  var keyRef = getKeysRef(Applab.channelId).child(key);
-  keyRef.once("value", function (object) {
+  var entry = getKeyValues(Applab.channelId).child(key);
+  entry.once("value", function (object) {
     onSuccess(object.val());
   }, onError);
 };
@@ -97,15 +98,73 @@ FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
  *    http status.
  */
 FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
-  var keyRef = getKeysRef(Applab.channelId).child(key);
-  keyRef.set(value).then(onSuccess, onError);
+  var entries = getKeyValues(Applab.channelId);
+  entries.update(createEntry(key, value), function (error) {
+    if (error) {
+      onError();
+    } else {
+      onSuccess();
+    }
+  });
 };
 
-function getWriteRecordPromise(tableName, recordId, record) {
-  var recordString = record === null ? null : JSON.stringify(record);
-  var recordRef = FirebaseUtils.getDatabase(Applab.channelId).child('storage')
-    .child('tables').child(tableName).child('records').child(recordId);
-  return recordRef.set(recordString);
+/**
+ * Creates a hash with given key and value.
+ */
+function createEntry(key, value) {
+  var result = {};
+  result[key] = value;
+  return result;
+}
+
+/**
+ * The row count is separated into this many shards to reduce contention.
+ * @type {number}
+ */
+const ROW_COUNT_SHARDS = 10;
+
+
+/**
+ * @param {String} tableName
+
+ */
+function getServerDataPromise(tableName) {
+  var tokenMapPromise = FirebaseRateLimits.getTokenMapPromise();
+  var tableRef = getTable(Applab.channelId, tableName);
+  var rowCountsPromise = tableRef.child('row_counts').once('value').then(function (snapshot) {
+    return snapshot.val();
+  });
+  return Promise.all([tokenMapPromise, rowCountsPromise]).then(function (results) {
+    return {
+      tokenMap: results[0],
+      rowCounts: results[1]
+    };
+  });
+ }
+
+function updateRowCount(recordId, rowCounts, channelStorageData, tableName, delta) {
+  var rowCountIndex = recordId % ROW_COUNT_SHARDS;
+  rowCounts = rowCounts || {};
+  var newRowCount = (rowCounts[rowCountIndex] || 0) + delta;
+  channelStorageData['tables/' + tableName + '/row_counts/' + rowCountIndex] = newRowCount;
+}
+
+function getWriteRecordPromise(tableName, recordId, record, rowCountChange) {
+  return getServerDataPromise(tableName).then(function (serverData) {
+    var channelStorageData = {};
+    var recordString = record === null ? null : JSON.stringify(record);
+    channelStorageData['tables/' + tableName + '/records/' + recordId] = recordString;
+    channelStorageData['tables/' + tableName + '/target_record_id'] = (String(recordId));
+    if (rowCountChange) {
+      updateRowCount(recordId, serverData.rowCounts, channelStorageData, tableName, rowCountChange);
+    }
+    FirebaseRateLimits.addTokens(channelStorageData, serverData.tokenMap);
+    console.log('FirebaseStorage.createRecord channelStorageData:');
+    console.log(channelStorageData);
+
+    var channelStorageRef = FirebaseUtils.getDatabase(Applab.channelId).child('storage');
+    return channelStorageRef.update(channelStorageData);
+  });
 }
 
 /**
@@ -121,9 +180,20 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
   // Assign a unique id for the new record.
   getNextIdPromise(tableName).then(function (nextId) {
     record.id = nextId;
-    return getWriteRecordPromise(tableName, record.id, record);
-  }).then(function () {
-    onSuccess(record);
+    var rowCountChange = 1;
+    getWriteRecordPromise(tableName, record.id, record, rowCountChange).catch(function (error) {
+      // TODO(dave): throw an error instead of retrying if row_counts/N or last_reset_time
+      // have not changed since the previous attempt.
+      console.log('retrying createRecord once after error: ' + error);
+      return getWriteRecordPromise(tableName, record.id, record, rowCountChange);
+    }).catch(function (error) {
+      console.log('retrying createRecord twice after error: ' + error);
+      return getWriteRecordPromise(tableName, record.id, record, rowCountChange);
+    }).then(function () {
+      onSuccess(record);
+    }, function (error) {
+      onError(error);
+    });
   }, onError);
 };
 
@@ -152,21 +222,34 @@ function matchesSearch(record, searchParams) {
  *     and http status in case of failure.
  */
 FirebaseStorage.readRecords = function (tableName, searchParams, onSuccess, onError) {
-  var recordsRef = getRecordsRef(Applab.channelId, tableName);
+  var table = getTable(Applab.channelId, tableName);
+  var searchKeys = searchParams ? Object.keys(searchParams) : [];
 
-  // Get all records in the table and filter them on the client.
-  recordsRef.once('value', function (recordsSnapshot) {
-    var recordMap = recordsSnapshot.val() || {};
-    var records = [];
-    // Collect all of the records matching the searchParams.
-    Object.keys(recordMap).forEach(function (id) {
-      var record = JSON.parse(recordMap[id]);
-      if (matchesSearch(record, searchParams)) {
-        records.push(record);
-      }
-    });
-    onSuccess(records);
-  }, onError);
+  if (searchKeys.length === 1) {
+     // If there is only a single search parameter, use the firebase equalTo
+     // query to return only the records matching that parameter from the server.
+     var key = searchKeys[0];
+     table.orderByChild(key).equalTo(searchParams[key]).once('value', function (recordsRef) {
+       var recordMap = recordsRef.val() || {};
+       var records = Object.keys(recordMap).map(function (id) { return recordMap[id]; });
+       onSuccess(records);
+     }, onError);
+   } else {
+    // If there is more than one search parameters, Get all records in the table
+    // and filter them on the client.
+    table.once('value', function (recordsRef) {
+      var recordMap = recordsRef.val() || {};
+      var records = [];
+      // Collect all of the records matching the searchParams.
+      Object.keys(recordMap).forEach(function (id) {
+        var record = recordMap[id];
+        if (matchesSearch(record, searchParams)) {
+          records.push(record);
+        }
+      });
+      onSuccess(records);
+    }, onError);
+  }
 };
 
 /**
@@ -181,10 +264,19 @@ FirebaseStorage.readRecords = function (tableName, searchParams, onSuccess, onEr
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError) {
-  getWriteRecordPromise(tableName, record.id, record).then(function () {
+  var rowCountChange = 0;
+  getWriteRecordPromise(tableName, record.id, record, rowCountChange).catch(function (error) {
+    console.log('retrying createRecord once after error: ' + error);
+    return getWriteRecordPromise(tableName, record.id, record, rowCountChange);
+  }).catch(function (error) {
+    console.log('retrying createRecord twice after error: ' + error);
+    return getWriteRecordPromise(tableName, record.id, record, rowCountChange);
+  }).then(function () {
     // TODO: We need to handle the 404 case, probably by attempting a read.
     onComplete(record, true);
-  }, onError);
+  }, function (error) {
+    onError(error);
+  });
 };
 
 /**
@@ -198,10 +290,19 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError) {
-  getWriteRecordPromise(tableName, record.id, null).then(function () {
+  var rowCountChange = -1;
+  getWriteRecordPromise(tableName, record.id, null, rowCountChange).catch(function (error) {
+    console.log('retrying createRecord once after error: ' + error);
+    return getWriteRecordPromise(tableName, record.id, null, rowCountChange);
+  }).catch(function (error) {
+    console.log('retrying createRecord twice after error: ' + error);
+    return getWriteRecordPromise(tableName, record.id, null, rowCountChange);
+  }).then(function () {
     // TODO: We need to handle the 404 case, probably by attempting a read.
     onComplete(true);
-  }, onError);
+  }, function (error) {
+    onError(error);
+  });
 };
 
 /**
@@ -225,18 +326,18 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError) {
     return;
   }
 
-  var recordsRef = getRecordsRef(Applab.channelId, tableName);
+  var table = getTable(Applab.channelId, tableName);
   // CONSIDER: Do we need to make sure a client doesn't hear about updates that it triggered?
 
-  recordsRef.on('child_added', function (childSnapshot) {
+  table.on('child_added', function (childSnapshot, prevChildKey) {
     onRecord(childSnapshot.val(), 'create');
   });
 
-  recordsRef.on('child_changed', function (childSnapshot) {
-    onRecord(childSnapshot.val(), 'update');
+  table.on('value', function (dataSnapshot) {
+    onRecord(dataSnapshot.val(), 'update');
   });
 
-  recordsRef.on('child_removed', function (oldChildSnapshot) {
+  table.on('child_removed', function (oldChildSnapshot) {
     onRecord(oldChildSnapshot.val(), 'delete');
   });
 };
@@ -261,14 +362,15 @@ FirebaseStorage.populateTable = function (jsonData, overwrite, onSuccess, onErro
   if (!jsonData || !jsonData.length) {
     return;
   }
-  var tablesRef = FirebaseUtils.getDatabase(Applab.channelId).child('storage').child('tables');
-  var tablesMap = JSON.parse(jsonData);
-  Object.keys(tablesMap).forEach(function (tableName) {
-    var tableData = tablesMap[tableName];
-    var recordsRef = tablesRef.child(tableName).child('records');
+  var tables = FirebaseUtils.getDatabase(Applab.channelId).child('storage').child('tables');
 
-    // TODO(dave): Respect overwrite
-    recordsRef.set(JSON.stringify(tableData)).then(onSuccess, onError);
+  // TODO: Respect overwrite
+  tables.set(jsonData, function (error) {
+    if (error) {
+      onError(error);
+    } else {
+      onSuccess();
+    }
   });
 };
 
@@ -288,7 +390,14 @@ FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onE
   if (!jsonData || !jsonData.length) {
     return;
   }
-  // TODO(dave): Test this; Implement overwrite.
-  var keysRef = getKeysRef(Applab.channelId);
-  keysRef.set(jsonData).then(onSuccess, onError);
+  // TODO: Test this; Implement overwrite.
+  var tables = FirebaseUtils.getDatabase(Applab.channelId).child('storage').child('tables');
+  var keyValues = getKeyValues(Applab.channelId);
+  tables.set(jsonData, function (error) {
+    if (!error) {
+      onSuccess();
+    } else {
+      onError(error);
+    }
+  });
 };

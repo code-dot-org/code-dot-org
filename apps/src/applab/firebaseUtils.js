@@ -12,7 +12,7 @@ var FirebaseUtils = module.exports;
 var databaseCache = {};
 FirebaseUtils.getDatabase = function (channelId) {
   var db = databaseCache[channelId];
-  if (!db) {
+  if (db === null) {
     if (!Applab.firebaseName) {
       throw new Error("Error connecting to Firebase: Firebase name not specified");
     }
