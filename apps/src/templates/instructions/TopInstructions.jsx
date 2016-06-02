@@ -12,13 +12,13 @@ import TopInstructionsCSP from './TopInstructionsCSP';
  */
 const TopInstructions = React.createClass({
   propTypes: {
-    shortInstructionsWhenCollapsed: React.PropTypes.bool.isRequired,
+    noInstructionsWhenCollapsed: React.PropTypes.bool.isRequired,
     shortInstructions: React.PropTypes.string,
     longInstructions: React.PropTypes.string,
   },
 
   render() {
-    const { shortInstructionsWhenCollapsed, shortInstructions, longInstructions } = this.props;
+    const { noInstructionsWhenCollapsed, shortInstructions, longInstructions } = this.props;
 
     // TODO - if we dont end up being able to recombine these two classes, it might
     // be better to come up with more description names (like maybe
@@ -27,12 +27,12 @@ const TopInstructions = React.createClass({
       return <div/>;
     }
 
-    return shortInstructionsWhenCollapsed ? <TopInstructionsCSF/> : <TopInstructionsCSP/>;
+    return noInstructionsWhenCollapsed ? <TopInstructionsCSP/> : <TopInstructionsCSF/>;
   }
 });
 
 export default connect(state => ({
-  shortInstructionsWhenCollapsed: state.instructions.shortInstructionsWhenCollapsed,
+  noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
   shortInstructions: state.instructions.shortInstructions,
   longInstructions: state.instructions.longInstructions,
 }))(TopInstructions);

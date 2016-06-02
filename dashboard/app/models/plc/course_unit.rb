@@ -50,4 +50,43 @@ class Plc::CourseUnit < ActiveRecord::Base
 
     selected_learning_modules
   end
+
+  def determine_preferred_learning_modules(user)
+    evaluation_level = script.levels.reverse.find {|level| level.class == LevelGroup}
+
+    level_source = UserLevel.find_by(user: user, level: evaluation_level, script: script).try(:level_source)
+    return [] if level_source.nil?
+
+    responses = JSON.parse(level_source.data)
+    learning_module_weights = Hash.new(0)
+
+    responses.each do |level_id, response|
+      next if response.nil? || response['result'].nil?
+
+      level = EvaluationMulti.cache_find(level_id)
+      selected_answer = level.answers[response['result'].to_i]
+
+      next if selected_answer['stage'].nil?
+
+      stage = Stage.find_by(name: selected_answer['stage'], script: script)
+      learning_module = stage.try(:plc_learning_module)
+
+      next if learning_module.nil?
+
+      learning_module_weights[learning_module] += selected_answer['weight']
+    end
+
+    learning_module_weights = learning_module_weights.sort_by{|_, weight| weight}
+    sorted_learning_modules = learning_module_weights.map(&:first)
+
+    default_module_assignments = []
+
+    Plc::LearningModule::NONREQUIRED_MODULE_TYPES.each do |module_type|
+      module_to_assign = sorted_learning_modules.find{|learning_module| learning_module.module_type == module_type}
+      next if module_to_assign.nil?
+      default_module_assignments << module_to_assign.id
+    end
+
+    default_module_assignments
+  end
 end
