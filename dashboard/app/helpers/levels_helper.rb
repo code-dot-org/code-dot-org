@@ -1,6 +1,7 @@
 require 'cdo/script_config'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
+require "firebase_token_generator"
 
 module LevelsHelper
   include ApplicationHelper
@@ -332,6 +333,8 @@ module LevelsHelper
     app_options[:isLegacyShare] = true if @is_legacy_share
     app_options[:isMobile] = true if browser.mobile?
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
+    app_options[:firebaseName] = CDO.firebase_name if @game == Game.applab
+    app_options[:firebaseAuthToken] = firebase_auth_token if @game == Game.applab
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:pinWorkspaceToBottom] = true if enable_scrolling?
@@ -508,6 +511,35 @@ module LevelsHelper
     channel_id = "1337" # Stub value, until storage for channel_id's is available.
     user_id = current_user ? current_user.id.to_s : session.id
     Digest::SHA1.base64digest("#{channel_id}:#{user_id}").tr('=', '')
+  end
+
+  # Assign a firebase authentication token based on the firebase secret,
+  # plus either the dashboard user id or the rails session id. This is
+  # sufficient for rate limiting, since it uniquely identifies users.
+  #
+  # TODO(dave): include the storage_id associated with the user id
+  # (if one exists), so auth can be used to assign appropriate privileges
+  # to channel owners.
+  def firebase_auth_token
+    return nil unless CDO.firebase_secret
+
+    user_id = current_user ? current_user.id.to_s : session.id
+    payload = {
+      :uid => user_id,
+      :is_dashboard_user => !!current_user
+    }
+    options = {}
+    # Provides additional debugging information to the browser when
+    # security rules are evaluated.
+    options[:debug] = true if CDO.firebase_debug && CDO.rack_env?(:development)
+
+    # TODO(dave): cache token generator across requests
+    generator = Firebase::FirebaseTokenGenerator.new(CDO.firebase_secret)
+    generator.create_token(payload, options)
+  end
+
+  def use_firebase_for_new_project?
+    @game == Game.applab && CDO.use_firebase_for_new_applab_projects
   end
 
   def enable_scrolling?
