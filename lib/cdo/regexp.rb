@@ -25,7 +25,7 @@ module RegexpUtils
   end
 
   def self.find_potential_phone_number(text)
-    phone_numbers = text.scan US_PHONE_NUMBER_REGEXP
-    return phone_numbers.empty? ? nil : phone_numbers.first.first
+    match = US_PHONE_NUMBER_REGEXP.match(text)
+    return match.nil? ? nil : match.to_s
   end
 end
