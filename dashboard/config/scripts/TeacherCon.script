@@ -1,0 +1,50 @@
+professional_learning_course 'true'
+title 'TeacherCon Supports'
+description 'We will use this during TeacherCon to deliver supports and materials for sessions'
+login_required 'true'
+
+stage 'Introduction to Teachercon', 'required'
+ level 'Welcome to TeacherCon!'
+ level 'TeacherCon Agenda' 
+
+stage 'Lesson 1,4: number systems - circle triangle square', 'content' 				
+ level 'U1L4 Lesson Overview'
+ level 'U1L4 Lesson Plan' 
+ level 'Sample Free Response'
+
+stage 'Lesson 1,6: sending numbers', 'content'
+ level 'U1L6 Lesson Plan' 
+
+stage 'Lesson 1,9: internet addressing (battleship)', 'content'
+ level 'U1L9 Lesson Plan' 
+
+stage 'Lesson 1,10: routers and redundancy', 'content'
+ level 'U1L10 Lesson Plan' 
+
+stage 'Lesson 1,11: Packets and Making a Reliable Internet', 'content'
+ level 'U1L11 Lesson Plan' 
+
+stage 'Lesson 2,2: text compression', 'content'
+ level 'U2L2 Lesson Plan' 
+
+stage 'Lesson 2,3: black and white pixelation', 'content'
+ level 'U2L3 Lesson Plan' 
+
+stage 'Lesson 2,10: good and bad data visualizations', 'content'
+ level 'U2L10 Lesson Plan' 
+
+stage 'Group Work and Peer Learning', 'practice'
+ level 'Exploring Practices and Strategies during TeacherCon'
+ level 'Overview: Group Work and Peer Learning'
+
+stage 'Balancing Teachers and Tools', 'practice'
+ level 'Exploring Practices and Strategies during TeacherCon'
+ level  'Overview: Balancing Teachers and Tools'
+
+stage 'Discovery Learning', 'practice'
+ level 'Exploring Practices and Strategies during TeacherCon'
+ level  'Overview: Discovery Learning'
+
+stage 'Capturing Student Learning', 'practice'
+ level 'Exploring Practices and Strategies during TeacherCon'
+ level  'Overview: Capturing Student Learning'
