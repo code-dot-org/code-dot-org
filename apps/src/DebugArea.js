@@ -1,3 +1,4 @@
+import $ from 'jquery';
 var i18n = require('./locale');
 var dom = require('./dom');
 var utils = require('./utils');

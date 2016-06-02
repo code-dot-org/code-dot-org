@@ -1,4 +1,3 @@
-/* global $ */
 var React = require('react');
 var rowStyle = require('./rowStyle');
 
@@ -31,7 +30,7 @@ var OptionsSelectRow = React.createClass({
   },
 
   render: function () {
-    var textAreaStyle = $.extend({}, rowStyle.input, {
+    var textAreaStyle = Object.assign({}, rowStyle.input, {
       height: 40
     });
     return (
