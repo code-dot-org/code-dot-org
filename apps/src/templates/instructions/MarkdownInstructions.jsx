@@ -34,7 +34,7 @@ const MarkdownInstructions = React.createClass({
   /**
    * Attach any necessary jQuery to our markdown
    */
-  configuredMarkdown_() {
+  configureMarkdown_() {
     if (!this.props.onResize) {
       return;
     }
@@ -56,12 +56,12 @@ const MarkdownInstructions = React.createClass({
   },
 
   componentDidMount() {
-    this.configuredMarkdown_();
+    this.configureMarkdown_();
   },
 
   componentDidUpdate(prevProps) {
     if (prevProps.renderedMarkdown !== this.props.renderedMarkdown) {
-      this.configuredMarkdown_();
+      this.configureMarkdown_();
     }
   },
 

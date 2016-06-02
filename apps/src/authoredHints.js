@@ -214,8 +214,8 @@ AuthoredHints.prototype.showHint_ = function (hint, callback) {
   if (this.studioApp_.reduxStore.getState().pageConstants.instructionsInTopPane) {
     // adjust position when hints are on top
     position = {
-      my: "top left",
-      at: "bottom right"
+      my: "middle left",
+      at: "middle right"
     };
   }
 

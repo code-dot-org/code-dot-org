@@ -481,7 +481,6 @@ StudioApp.prototype.init = function (config) {
     this.authoredHintsController_.display(promptIcon);
   }
 
-
   if (this.editCode) {
     this.handleEditCode_(config);
   }
@@ -2727,7 +2726,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   let longInstructions = locale === ENGLISH_LOCALE ? level.markdownInstructions : undefined;
   let shortInstructions = level.instructions;
 
-  const noInstructionsWhenCollapsed = config.noInstructionsWhenCollapsed;
+  const noInstructionsWhenCollapsed = !!config.noInstructionsWhenCollapsed;
   // Our TopInstructions operate in two modes.
   // In CSF we show short instructions when collapsed. In this mode, we assume
   // that we have at least shortInstructions.
