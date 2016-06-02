@@ -41,4 +41,13 @@ class RegexpUtilsTest < Minitest::Test
       assert e.message.include? 'Not a US phone number'
     end
   end
+
+  def test_find_potential_phone_number
+    VALID_US_PHONE_NUMBERS.each do |number|
+      assert number, RegexpUtils.find_potential_phone_number(number)
+    end
+
+    assert '123-456-7890', RegexpUtils.find_potential_phone_number('noise 123-456-7890 noise')
+    assert_nil RegexpUtils.find_potential_phone_number('abc')
+  end
 end
