@@ -76,17 +76,17 @@ group :development, :test do
   gem 'minitest-around'
   gem 'eyes_selenium', '~> 2.28.0'
 
-  # for pegasus PDF generation
-  gem 'open_uri_redirections', require: false
-
-  # for pegasus testing
-  gem 'pdf-reader', require: false # enable for PDF merger tests
+  # for pegasus PDF generation / merging testing
+  gem 'pdf-reader', require: false
 end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+# for pegasus PDF generation
+gem 'open_uri_redirections', require: false, group: [:development, :staging, :test]
 
 gem 'unicorn', '~> 4.8.2'
 
@@ -101,7 +101,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '~> 3.1.0'
 
-gem 'phantomjs', '~> 2.1.1.0'
+gem 'phantomjs', '~> 1.9.7.1'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
