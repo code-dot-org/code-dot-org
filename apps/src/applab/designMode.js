@@ -973,6 +973,10 @@ designMode.configureDragAndDrop = function () {
       if (elementType === elementLibrary.ElementType.SCREEN) {
         designMode.changeScreen(elementUtils.getId(element));
       }
+
+      // Move the element into the app space bounds
+      moveElementIntoBounds(element);
+
       if (elementType === elementLibrary.ElementType.IMAGE) {
         var parent = $(element).parent();
         // Safari has some weird bug where it doesn't end up rendering our dropped
@@ -989,9 +993,6 @@ designMode.configureDragAndDrop = function () {
           }, 1);
         }
       }
-
-      // Move the element into the app space bounds
-      moveElementIntoBounds(element);
 
       // Re-render design work space for this element
       designMode.renderDesignWorkspace(element);
