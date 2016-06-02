@@ -14,7 +14,7 @@ title: "Professional Development Workshop Survey"
   # Have they ever taken any pd-workshop-survey?
   is_first_survey = DB[:forms].where(kind: 'PdWorkshopSurvey').count == 0
 
-  # Have they take this particular survey?
+  # Have they taken this particular survey?
   previous_response = DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: enrollment[:id]).first
 
   course = workshop[:course]
@@ -95,26 +95,25 @@ title: "Professional Development Workshop Survey"
             %input.form-control{name: 'how_heard_other_s', placeholder: 'Other', type: 'text'}
 
       .form-group
-        = local_view :agree_scale_select,
+        = local_view :single_select,
           name: 'received_clear_communication_s',
           label: 'I received clear communication about when and where the workshop would take place.'
 
-      - unless plp.nil?
-        .form-group
-          :ruby
-            school_has_tech_label = %q(
-              Do you believe your school has the technology requirements modern web browsers/sufficient
-              internet access/1:1 computing environment necessary to effectively teach the course?'
-            )
-          = local_view :yes_no_select,
-            name: 'school_has_tech_b',
-            label: school_has_tech_label
+      .form-group
+        :ruby
+          school_has_tech_label = %q(
+            Do you believe your school has the technology requirements modern web browsers/sufficient
+            internet access/1:1 computing environment necessary to effectively teach the course?'
+          )
+        = local_view :yes_no_select,
+          name: 'school_has_tech_b',
+          label: school_has_tech_label
 
-        .form-group
-          %label.control-label{for: 'venue_feedback_s'}
-            Do you have feedback about the venue and the way logistics were run for this workshop?
-            Please be specific and provide suggestions for improvement.
-          %textarea.form-control{name: 'venue_feedback_s', rows: 4, type: 'text'}
+      .form-group
+        %label.control-label{for: 'venue_feedback_s'}
+          Do you have feedback about the venue and the way logistics were run for this workshop?
+          Please be specific and provide suggestions for improvement.
+        %textarea.form-control{name: 'venue_feedback_s', rows: 4, type: 'text'}
 
       .form-group
         = local_view :single_select,
@@ -214,7 +213,7 @@ title: "Professional Development Workshop Survey"
           label: 'I feel like I am a part of a community of teachers.'
         }]
 
-      = local_view :agree_scale_select_multi_row, items: agree_scale_questions
+      = local_view :agree_scale_select_table, items: agree_scale_questions
 
       .form-group
         %label.control-label{for: 'things_you_liked_s'}
