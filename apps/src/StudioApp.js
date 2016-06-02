@@ -72,11 +72,6 @@ var StudioApp = function () {
   */
   this.BASE_URL = undefined;
 
-  /**
-  * The current locale code.
-  */
-  this.LOCALE = ENGLISH_LOCALE;
-
   this.enableShowCode = true;
   this.editCode = false;
   this.usingBlockly_ = true;
@@ -231,7 +226,6 @@ StudioApp.singleton = new StudioApp();
  */
 StudioApp.prototype.configure = function (options) {
   this.BASE_URL = options.baseUrl;
-  this.LOCALE = options.locale || this.LOCALE;
   // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
@@ -288,14 +282,6 @@ StudioApp.prototype.createReduxStore_ = function () {
  */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
   return !!(config.level.instructions || config.level.aniGifURL);
-};
-
-/**
- * Some functionality - most notably markdown instructions - is only
- * supported when running in English. This helper exposes that check.
- */
-StudioApp.prototype.localeIsEnglish = function () {
-  return this.LOCALE === ENGLISH_LOCALE;
 };
 
 /**
@@ -1122,15 +1108,6 @@ StudioApp.prototype.onReportComplete = function (response) {
 };
 
 /**
- * Given a level definition, do we want to show instructions in markdown form.
- * @param {object} level
- * @returns {boolean}
- */
-StudioApp.prototype.isMarkdownMode = function (level) {
-  return level.markdownInstructions && this.localeIsEnglish();
-};
-
-/**
  * @param {string} [puzzleTitle] - Optional param that only gets used if we dont
  *   have markdown instructions
  * @param {object} level
@@ -1140,9 +1117,12 @@ StudioApp.prototype.isMarkdownMode = function (level) {
 StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, showHints) {
   var renderedMarkdown;
 
-  if (this.isMarkdownMode(level)) {
-    var markdownWithImages = this.substituteInstructionImages(
-      level.markdownInstructions, this.skin.instructions2ImageSubstitutions);
+  var longInstructions = this.reduxStore.getState().instructions.longInstructions;
+
+  // longInstructions will be undefined if non-english
+  if (longInstructions) {
+    var markdownWithImages = this.substituteInstructionImages(longInstructions,
+      this.skin.instructions2ImageSubstitutions);
     renderedMarkdown = processMarkdown(markdownWithImages);
   }
 
@@ -1171,7 +1151,7 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
  * @param {boolean} showHints
  */
 StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHints) {
-  var isMarkdownMode = this.isMarkdownMode(level);
+  var isMarkdownMode = !!this.reduxStore.getState().instructions.longInstructions;
 
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?
@@ -1803,7 +1783,6 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
   this.skin = config.skin;
-  this.showInstructions = this.showInstructionsDialog_.bind(this, config.level, false);
   this.polishCodeHook = config.polishCodeHook;
 };
 
@@ -2742,13 +2721,22 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   this.reduxStore.dispatch(setPageConstants(combined));
 
   // also set some instructions specific constants
-  let longInstructions = level.markdownInstructions;
+  // If non-English, dont use level.markdownInstructions since they haven't been
+  // translated
+  const locale = config.locale || ENGLISH_LOCALE;
+  let longInstructions = locale === ENGLISH_LOCALE ? level.markdownInstructions : undefined;
   let shortInstructions = level.instructions;
-  const shortInstructionsWhenCollapsed = !!config.shortInstructionsWhenCollapsed;
 
-  if (!shortInstructionsWhenCollapsed) {
+  const noInstructionsWhenCollapsed = config.noInstructionsWhenCollapsed;
+  // Our TopInstructions operate in two modes.
+  // In CSF we show short instructions when collapsed. In this mode, we assume
+  // that we have at least shortInstructions.
+  // In CSP we show no instructions  when collapsed. In this mode, we assume
+  // that we have at least longInstructions. In the case that we arent
+  // provided (markdown) longInstructions, treat our shortInstructiosn as our
+  // longInstructions
+  if (noInstructionsWhenCollapsed) {
     if (shortInstructions && !longInstructions) {
-      // use short instructions as long instructions if that's all we have
       longInstructions = shortInstructions;
     }
     // Never use short instructions in CSP
@@ -2756,7 +2744,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   }
 
   this.reduxStore.dispatch(setInstructionsConstants({
-    shortInstructionsWhenCollapsed,
+    noInstructionsWhenCollapsed,
     shortInstructions,
     longInstructions,
   }));
