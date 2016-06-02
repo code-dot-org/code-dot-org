@@ -1819,8 +1819,18 @@ function runButtonClickWrapper(callback) {
 
   // inform Blockly that the run button has been pressed
   if (window.Blockly && Blockly.mainBlockSpace) {
-    Blockly.mainBlockSpace.getCanvas()
-        .dispatchEvent(new Event(Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED));
+    var customEvent;
+    // createEvent functionality is officially deprecated in favor of
+    // the event constructor, but some older browsers do not yet support
+    // event constructors. Attempt to use the new functionality, fall
+    // back to the old if it fails.
+    try {
+      customEvent = new Event(Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED);
+    } catch (e) {
+      customEvent = document.createEvent('Event');
+      customEvent.initEvent(Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED, true, false);
+    }
+    Blockly.mainBlockSpace.getCanvas().dispatchEvent(customEvent);
   }
 
   callback();
