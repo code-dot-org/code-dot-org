@@ -61,7 +61,7 @@ class Ability
       can :create, Follower, student_user_id: user.id
       can :destroy, Follower, student_user_id: user.id
 
-      if user.hint_access? || user.teacher?
+      if user.permission?(UserPermission::HINT_ACCESS) || user.teacher?
         can :manage, [LevelSourceHint, FrequentUnsuccessfulLevelSource]
       end
 
