@@ -19,6 +19,7 @@ class Ability
       FrequentUnsuccessfulLevelSource,
       :reports,
       User,
+      UserPermission,
       Follower,
       PeerReview,
       # Ops models
@@ -53,6 +54,7 @@ class Ability
       can :update, UserLevel, user_id: user.id
       can :create, Follower, student_user_id: user.id
       can :destroy, Follower, student_user_id: user.id
+      can :read, UserPermission, user_id: user.id
 
       if user.permission?(UserPermission::HINT_ACCESS) || user.teacher?
         can :manage, [LevelSourceHint, FrequentUnsuccessfulLevelSource]
