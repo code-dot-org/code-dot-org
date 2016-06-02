@@ -121,7 +121,7 @@ level 'CSD U3 Property Conditional Multi'
 level 'CSD U3 Conditional Predict'
 level 'CSD U3 Conditional Project'
 
-stage ' Sprites and Images'
+stage 'Sprites and Images'
 level 'CSD U3 - images - review'
 level 'CSD U3 - images - Embed Project'
 level 'CSD U3 - images - first image'
