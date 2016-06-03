@@ -32,7 +32,11 @@ Controlling tests:
 * Tests can be re-run with the "Rebuild" button on CircleCI.
 * Tests can be debugged by running "Rebuild with SSH", which enables SSH for the duration of the test and keeps it open for 30 minutes after tests are complete.
 
+If you’d like to make an empty commit to force run tests with a flag, you can use git’s --allow-empty command: `git commit --allow-empty -m "Run UI tests [test ui]"`
+
 Contributor pull requests do not build by default, but can be triggered to build by a GitHub organization team member. Note that the given PR should be scanned to ensure there is no malicious code and that no secrets would be displayed in test output.
+
+If you have a personal email address additionally added to GitHub, you can re-set code-dot-org build notifications to go to your @code.org email address at: https://circleci.com/account/notifications
 
 ### Top-level Test Helpers
 
