@@ -1,7 +1,5 @@
 import React from 'react';
 
-import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-
 /**
  * Simple component for our icon for hints.
  */
