@@ -12,6 +12,7 @@ const SET_INSTRUCTIONS_RENDERED_HEIGHT = 'instructions/SET_INSTRUCTIONS_RENDERED
 const SET_INSTRUCTIONS_HEIGHT = 'instructions/SET_INSTRUCTIONS_HEIGHT';
 const SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED = 'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED';
 const SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE = 'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE';
+const SET_HAS_AUTHORED_HINTS = 'instructions/SET_HAS_AUTHORED_HINTS';
 
 /**
  * Some scenarios:
@@ -37,7 +38,10 @@ const instructionsInitialState = {
   maxNeededHeight: Infinity,
   // The maximum height we'll allow the resizer to drag to. This is based in
   // part off of the size of the code workspace.
-  maxAvailableHeight: Infinity
+  maxAvailableHeight: Infinity,
+
+  // TODO - may eventually belong in its own module
+  hasAuthoredHints: false,
 };
 
 export default function reducer(state = instructionsInitialState, action) {
@@ -94,6 +98,12 @@ export default function reducer(state = instructionsInitialState, action) {
     });
   }
 
+  if (action.type === SET_HAS_AUTHORED_HINTS) {
+    return _.assign({}, state, {
+      hasAuthoredHints: action.hasAuthoredHints
+    });
+  }
+
   return state;
 }
 
@@ -135,4 +145,9 @@ export const setInstructionsMaxHeightNeeded = height => ({
 export const setInstructionsMaxHeightAvailable = height => ({
   type: SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE,
   maxAvailableHeight: height
+});
+
+export const setHasAuthoredHints = hasAuthoredHints => ({
+  type: SET_HAS_AUTHORED_HINTS,
+  hasAuthoredHints
 });
