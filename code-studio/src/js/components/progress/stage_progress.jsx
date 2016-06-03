@@ -140,6 +140,7 @@ var StageProgress = React.createClass({
       return ([
         <a
           key={uid}
+          className={`level-${level.id}`}
           href={level.url}
           onClick={onClick}
           style={[dotStyle, style.status[level.status || 'not_tried']]}>
