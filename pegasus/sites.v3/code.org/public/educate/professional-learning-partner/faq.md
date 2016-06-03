@@ -14,6 +14,8 @@ Still have questions? See below for answers to commonly asked questions or email
 - [My region is already served by another organization, can I stil apply to be a Professional Learning Partner?](#map)
 - [Do you have an example job description for the professional learning partner Program Manager?](#pm)
 - [If we are selected as the Code.org professional learning partner in our region, can we publish a press release?](#press)
+- [If we become a Professional Learning Partner can we run other CS education workshops in addition to the Code.org programs?](#cs)
+- [Can several organizations submit a joint application to be a Professional Learning Partner in a region?](#joint)
 
 
 **Questions about in-person workshops:**<br/>
@@ -58,6 +60,19 @@ ________________
 ### **If we are selected as the Code.org professional learning partner in our region, can we publish a press release?**
 
 Of course! Anyone accepted to be a partner can publish a press release. We ask that your organization take the lead on the content and that Code.org is provided the opportunity to review it prior to print.
+</br>
+
+[**Back to the top**](#top)
+<br/>
+________________
+<a id="joint"></a>
+<br/>
+<br/>
+
+### **Can several organizations submit a joint application to be a Professional Learning Partner in a region?**
+
+Yes, some of our current partners have a joint partnership where one organization is the funding arm and the other focuses on professional learning and outreach. 
+<br/>
 
 [**Back to the top**](#top)
 <br/>
@@ -65,6 +80,19 @@ ________________
 <a id="facilitators"></a>
 <br/>
 <br/>
+
+### **If we become a Professional Learning Partner can we run other CS education workshops in addition to the Code.org programs?**
+
+We encourage your organization can run other CS education workshosp in addition to the Code.org programs! 
+<br/>
+
+[**Back to the top**](#top)
+<br/>
+________________
+<a id="facilitators"></a>
+<br/>
+<br/>
+
 ### **Does my organization need to provide facilitators for the programs?**
 
 Your organization does not need to have its own facilitators. Code.org Professional Learning Partners can  opt to contract with local Code.org approved facilitators instead.

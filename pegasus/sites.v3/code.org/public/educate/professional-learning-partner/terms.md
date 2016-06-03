@@ -12,12 +12,12 @@ nav: plc_plp_nav
 * Provide a dedicated Professional Learning Partner Program Manager who will participate fully in the Program Manager onboarding & on-going program management responsibilities. (up to 0.5 of an FTE’s time - this can be shared across one or more staff members of your organization).</br>
 * Attend our Professional Learning Partner Program Manager Summit in September 2016.</br>
 * Attend our 2.5-day Facilitation Summit in May 2017.</br>
-* Attend our 5-day Code.org TeacherCon with teachers from your state in Summer 2017.
+* Attend our 5-day Code.org TeacherCon with teachers from your region in Summer 2017.
 
 ### Workshops ###
 - Organize and host quality, local workshops for Code.org’s District Partners implementing Code.org’s high school and middle school programs, with Code.org-accredited facilitators</br>
-	- In year 1, this is for four 1-day professional learning workshops during the school year per course, to provide teachers who have attended our summer conferences with continuing professional learning during the school year. Timing of workshops could be adjusted to local needs.</br>
-	- In year 2, this includes the 5-day summer experience.
+	- In year 1, this includes four 1-day workshops, typically held on Saturdays, during the school year. These sessions are for teachers who have attended our summer conferences and support them in the implementation of the course they are teaching.</br>
+	- In year 2, this includes the 5-day summer institute.
 Organize and host a 1-day workshop for counselors and administrators of teachers participating in Code.org's professional learning programs.</br>
 - Contract with and compensate local Code.org-accredited facilitators to lead the professional learning workshops.</br>
 - Comply with the Code.org <a href="/privacy" target=_blank>privacy policy</a>.
@@ -76,7 +76,7 @@ We view this to be a long-term partnership. We see your organization as joining 
 
 This is not a binding document. This is a new program, so Code.org may change some of these terms in subsequent years.
 
-**Next Steps:** If your organization agrees to these terms, please <a href="educate/professional-learning-partner/application" target=_blank>complete an application</a> to become a Code.org Professional Learning Partner.
+**Next Steps:** If your organization agrees to these terms, please click the Apply Now button below to become a Code.org Professional Learning Partner.
 
 
-[<button>Apply now</button>](educate/professional-learning-partner/application)
+[<button>Apply now</button>](/educate/professional-learning-partner/application)
