@@ -4,8 +4,12 @@ require 'json'
 
 module RegexpUtils
   EMAIL_REGEXP = /([^@\s]+@(?:[-a-z0-9]+\.)+[a-z]{2,})/
-  US_PHONE_NUMBER_REGEXP = /[\(]?(\d{3})[\)]?[-\s\.\_]?(\d{3})[-\s\.\_]?(\d{4})/
-  US_PHONE_NUMBER_ONLY_REGEXP = Regexp.new('^' + US_PHONE_NUMBER_REGEXP.source + '$')
+
+  # Matches obvious phone number formats, but ignores large numbers with no additional symbols.
+  US_PHONE_NUMBER_REGEXP = /([\(]?[0-9]{3}[\)]?[-\s\.\_]?[0-9]{3}[-\s\.\_][0-9]{4})/
+
+  # Matches a string that is a likely phone number, including a string of 10 digits
+  US_PHONE_NUMBER_ONLY_REGEXP = /^[\(]?(\d{3})[\)]?[-\s\.\_]?(\d{3})[-\s\.\_]?(\d{4})$/
 
   # returns true if the entire text matches a US phone number
   def self.us_phone_number?(text)
