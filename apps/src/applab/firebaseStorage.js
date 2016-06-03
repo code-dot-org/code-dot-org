@@ -33,46 +33,7 @@ function getNextIdPromise(tableName) {
   });
 }
 
-/**
- * @param {number} status Http status code.
- * @returns {string} An error message corresponding to the http status code.
- */
-function getStatusDescription(status) {
-  if (status === 429) {
-    return 'Rate limit exceeded.';
-  } else if (status === 413) {
-    return 'Storage item size exceeded';
-  } else {
-    return 'Unexpected http status ' + status;
-  }
-}
 
-/**
- * Calls onError with a message generated from commandName and status and the status code
- * @param {function (string, number)} onError Function to call with error message and http status.
- * @param {string} commandName App Lab command name to include in error message.
- * @param {number} status Http status code.
- * @param {string?} detailedErrorMessage Optional detailed error message.
- */
-function onErrorStatus(onError, commandName, status, detailedErrorMessage) {
-  if (onError) {
-    var errorMessage;
-    // If a detailed error message is provided and its not too long, display that to
-    // the user. (The long message heuristic is intended to prevent us from displaying
-    // e.g. stack traces from server errors.)
-    if (detailedErrorMessage && detailedErrorMessage.length < 256) {
-      errorMessage = detailedErrorMessage;
-    } else {
-      // Otherwise display a generic description based on the HTTP status.
-      errorMessage = getStatusDescription(status);
-    }
-    onError('Error in ' + commandName + ': http status ' + status + ' - ' + errorMessage, status);
-  }
-  // HTTP 429 - Too many requests. We hit this when our data APis are throttled
-  if (status === 429) {
-    Applab.showRateLimitAlert();
-  }
-}
 
 /**
  * Reads the value associated with the key, accessible to all users of the app.
