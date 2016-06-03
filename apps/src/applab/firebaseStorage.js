@@ -222,6 +222,7 @@ FirebaseStorage.populateTable = function (jsonData, overwrite, onSuccess, onErro
   if (!jsonData || !jsonData.length) {
     return;
   }
+  // TODO(dave): Respect overwrite
   var promises = [];
   var tablesRef = FirebaseUtils.getDatabase(Applab.channelId).child('storage').child('tables');
   var tablesMap = JSON.parse(jsonData);
