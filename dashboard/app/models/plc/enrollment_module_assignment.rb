@@ -36,10 +36,10 @@ class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
     user_progress_on_tracked_levels = UserLevel.where(user: user, level: levels_tracked)
     passed_levels = user_progress_on_tracked_levels.passing
 
-    if user_progress_on_tracked_levels.empty?
-      NOT_STARTED
-    elsif levels_tracked.size == passed_levels.size
+    if levels_tracked.size == passed_levels.size
       COMPLETED
+    elsif user_progress_on_tracked_levels.empty?
+      NOT_STARTED
     else
       IN_PROGRESS
     end
