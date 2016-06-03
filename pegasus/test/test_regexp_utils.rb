@@ -16,9 +16,9 @@ class RegexpUtilsTest < Minitest::Test
     assert_nil(RegexpUtils.find_potential_phone_number('this is just some text'))
     assert_nil(RegexpUtils.find_potential_phone_number('12345 is a cool number'))
     assert_nil(RegexpUtils.find_potential_phone_number('353 and 44448 is a cool number'))
-    assert_nil(RegexpUtils.find_potential_phone_number('5555555555'))
-    assert_nil(RegexpUtils.find_potential_phone_number('15555555555'))
 
+    assert(RegexpUtils.find_potential_phone_number('5555555555'))
+    assert(RegexpUtils.find_potential_phone_number('15555555555'))
     assert(RegexpUtils.find_potential_phone_number('1-555-555-5555'))
     assert(RegexpUtils.find_potential_phone_number('555-555-5555'))
     assert_equal('555-555-5555', RegexpUtils.find_potential_phone_number('555-555-5555'))
