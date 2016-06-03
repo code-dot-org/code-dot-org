@@ -20,7 +20,7 @@ var constants = require('../../constants');
 var msg = require('../../locale');
 import CollapserButton from './CollapserButton';
 import ThreeColumns from './ThreeColumns';
-import PromptIconCell from './PromptIconCell';
+import PromptIcon from './PromptIcon';
 
 const VERTICAL_PADDING = 10;
 const HORIZONTAL_PADDING = 20;
@@ -61,8 +61,9 @@ const styles = {
 };
 
 // Ultimately we want this number to be more dynamic. Right now it's the height
-// needed to display Anna at the same dimensions we do for bottom instructions.
-const COLLAPSED_HEIGHT = 119;
+// needed to display the artist with a lightbulb at the same dimensions as the
+// bottom instructions scenario
+const COLLAPSED_HEIGHT = 104;
 
 const MIN_HEIGHT = COLLAPSED_HEIGHT;
 
@@ -179,9 +180,9 @@ var TopInstructions = React.createClass({
             rightColWidth={90}
             height={this.props.height - resizerHeight}
         >
-          <span id="bubble">
-            <PromptIconCell src={this.props.smallStaticAvatar}/>
-          </span>
+          <div id="bubble" id="prompt-icon-cell">
+            <PromptIcon src={this.props.smallStaticAvatar}/>
+          </div>
           <Instructions
               ref="instructions"
               renderedMarkdown={renderedMarkdown}
