@@ -31,12 +31,14 @@ class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
   ]
 
   def status
-    levels_tracked = UserLevel.where(user: user, level: plc_learning_module.stage.script_levels.map(&:levels).flatten)
-    passed_levels = levels_tracked.passing
+    levels_tracked = plc_learning_module.stage.script_levels.map(&:levels).flatten
+    levels_tracked.delete_if {|level| [External, ExternalLink].include? level.class}
+    user_progress_on_tracked_levels = UserLevel.where(user: user, level: levels_tracked)
+    passed_levels = user_progress_on_tracked_levels.passing
 
-    if levels_tracked.empty?
+    if user_progress_on_tracked_levels.empty?
       NOT_STARTED
-    elsif plc_learning_module.stage.script_levels.size == passed_levels.size
+    elsif levels_tracked.size == passed_levels.size
       COMPLETED
     else
       IN_PROGRESS
