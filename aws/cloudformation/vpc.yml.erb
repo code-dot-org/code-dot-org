@@ -132,6 +132,53 @@ Resources:
           FromPort: 22
           ToPort: 22
           SourceSecurityGroupId: {Ref: GatewaySecurityGroup}
+  RedisSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Redis access from frontends.
+      VpcId: {Ref: VPC}
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 6379
+          ToPort: 6379
+          SourceSecurityGroupId: {Ref: FrontendSecurityGroup}
+  DBSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: MySQL access to/from frontends, gateway, or other DB instances.
+      VpcId: {Ref: VPC}
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 3306
+          ToPort: 3306
+          SourceSecurityGroupId: {Ref: GatewaySecurityGroup}
+        - IpProtocol: tcp
+          FromPort: 3306
+          ToPort: 3306
+          SourceSecurityGroupId: {Ref: FrontendSecurityGroup}
+      SecurityGroupEgress:
+        - IpProtocol: tcp
+          FromPort: 3306
+          ToPort: 3306
+          DestinationSecurityGroupId: {Ref: GatewaySecurityGroup}
+        - IpProtocol: tcp
+          FromPort: 3306
+          ToPort: 3306
+          DestinationSecurityGroupId: {Ref: FrontendSecurityGroup}
+  DBSecurityGroupEgress:
+    Type: AWS::EC2::SecurityGroupEgress
+    Properties:
+      DestinationSecurityGroupId: {Ref: DBSecurityGroup}
+      FromPort: 3306
+      ToPort: 3306
+      IpProtocol: tcp
+  DBSecurityGroupIngress:
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      SourceSecurityGroupId: {Ref: DBSecurityGroup}
+      FromPort: 3306
+      ToPort: 3306
+      IpProtocol: tcp
 Outputs:
   VpcId:
     Description: VPC ID
