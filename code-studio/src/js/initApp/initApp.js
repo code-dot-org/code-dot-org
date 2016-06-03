@@ -19,6 +19,13 @@ window.apps = {
   // Loads the dependencies for the current app based on values in `appOptions`.
   // This function takes a callback which is called once dependencies are ready.
   load: loadApp,
+  chooseApp: function (selectorProperties, appOptionsList) {
+    if (appOptionsList.size === 1) {
+      return appOptionsList[0];
+    }
+    // TODO(ram): implement nice UI to select level
+    return appOptionsList[0];
+  },
   // Legacy Blockly initialization that was moved here from _blockly.html.haml.
   // Modifies `appOptions` with some default values in `baseOptions`.
   // TODO(dave): Move blockly-specific setup function out of shared and back into dashboard.

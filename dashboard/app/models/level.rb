@@ -278,6 +278,14 @@ class Level < ActiveRecord::Base
     Level.find_by_key(project_template_level_name)
   end
 
+  def enable_scrolling?
+    is_a?(Blockly)
+  end
+
+  def enable_examples?
+    is_a?(Blockly)
+  end
+
   def strip_name
     self.name = name.to_s.strip unless name.nil?
   end
