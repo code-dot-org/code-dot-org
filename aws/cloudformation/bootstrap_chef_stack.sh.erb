@@ -26,25 +26,14 @@ RUN_LIST='<%=run_list.to_json%>'
 INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 NODE_NAME=<%=node_name%>
 RESOURCE_ID=<%=resource_id%>
-GEOCODER_HOST='%{"Fn::GetAtt": ["GeocoderGroup","PrimaryEndPoint.Address"]}'
-GEOCODER_PORT='%{"Fn::GetAtt": ["GeocoderGroup","PrimaryEndPoint.Port"]}'
-GEOCODER_URL="redis://${GEOCODER_HOST}:${GEOCODER_PORT}"
 
 FIRST_BOOT=/etc/chef/first-boot.json
 mkdir -p $(dirname ${FIRST_BOOT})
 cat <<JSON > ${FIRST_BOOT}
 {
-  "cdo-secrets": {
-    "hip_chat_log_room": "test-logs",
-    "geocoder_redis_url": "${GEOCODER_URL}"
-  },
   "cdo-repository": {
     "revision": "<%=commit%>",
     "sync": true
-  },
-  "cdo-newrelic": {
-    "enabled_alert_policy_id": 374172,
-    "disabled_alert_policy_id": 374173
   },
   "run_list": ${RUN_LIST}
 }

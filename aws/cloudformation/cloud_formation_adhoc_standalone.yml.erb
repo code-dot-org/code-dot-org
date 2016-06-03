@@ -51,7 +51,7 @@ Resources:
             VolumeSize: 64
             VolumeType: gp2
       UserData:
-        Fn::Base64: <%=file.call('bootstrap.sh.erb')%>
+        Fn::Base64: <%=file.call('bootstrap_standalone.sh.erb')%>
       NetworkInterfaces:
         - AssociatePublicIpAddress: true
           DeviceIndex: 0
