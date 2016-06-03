@@ -74,7 +74,10 @@ module LevelsHelper
         # your own channel
         ChannelToken.find_or_create_by!(level: host_level, user: current_user) do |ct|
           # Get a new channel_id.
-          ct.channel = create_channel(hidden: true)
+          ct.channel = create_channel({
+            hidden: true,
+            useFirebase: use_firebase_for_new_project?
+          })
         end
       end
     end
