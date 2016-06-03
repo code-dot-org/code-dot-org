@@ -362,6 +362,10 @@ Blockly.Xml.domToBlock = function(blockSpace, xmlBlock) {
   if (userCreated) {
     block.userCreated = (userCreated === 'true');
   }
+  var limit = xmlBlock.getAttribute('limit');
+  if (limit) {
+    block.setLimit(parseInt(limit));
+  }
 
   var blockChild = null;
   for (var x = 0, xmlChild; x < xmlBlock.childNodes.length; x++) {

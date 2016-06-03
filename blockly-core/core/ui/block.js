@@ -17,6 +17,8 @@
  * limitations under the License.
  */
 
+/* global Blockly, goog */
+
 /**
  * @fileoverview The class representing one block.
  * @author fraser@google.com (Neil Fraser)
@@ -79,6 +81,12 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.nextConnectionDisabled_ = false;
   this.collapsed_ = false;
   this.dragging_ = false;
+
+  // Used for toolbox blocks to allow only a limited number of blocks to
+  // be used in the workspace.
+  this.limit_ = undefined;
+  this.total_ = undefined;
+
   // Used to hide function blocks when not in modal workspace. This property
   // is not serialized/deserialized.
   this.currentlyHidden_ = false;
@@ -1443,6 +1451,37 @@ Blockly.Block.prototype.isMovable = function() {
 Blockly.Block.prototype.setMovable = function(movable) {
   this.movable_ = movable;
   this.svg_ && this.svg_.updateMovable();
+};
+
+Blockly.Block.prototype.hasLimit = function() {
+  return this.isInFlyout && this.limit_ !== undefined;
+};
+
+Blockly.Block.prototype.setLimit = function(limit) {
+  if (this.isInFlyout) {
+    this.limit_ = limit;
+    this.total_ = 0;
+    this.svg_.updateLimit(limit);
+  }
+};
+
+Blockly.Block.prototype.resetTotal = function() {
+  this.addTotal(-this.total_);
+};
+
+Blockly.Block.prototype.addTotal = function(inc) {
+  if (!this.isInFlyout) {
+    goog.asserts.fail('only toolbox blocks have a total');
+  }
+  if (this.total_ + inc > this.limit_) {
+    goog.asserts.fail('cannot create more than %s blocks', this.limit_);
+  }
+  if (this.total_ + inc < 0) {
+    goog.asserts.fail('that just doesn\'t make sense');
+  }
+  this.total_ += inc;
+  this.setDisabled(this.total_ === this.limit_);
+  this.svg_.updateLimit(this.limit_ - this.total_);
 };
 
 /**
