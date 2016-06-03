@@ -58,6 +58,12 @@ const styles = {
     right: 0,
     marginTop: 5,
     marginRight: 5
+  },
+  authoredHints: {
+    // raise by 20 so that the lightbulb "floats" without causing the original
+    // icon to move. This strangeness happens in part because prompt-icon-cell
+    // is managed outside of React
+    marginTop: -20
   }
 };
 
@@ -77,6 +83,7 @@ var TopInstructions = React.createClass({
     collapsed: React.PropTypes.bool.isRequired,
     shortInstructions: React.PropTypes.string.isRequired,
     longInstructions: React.PropTypes.string,
+    hasAuthoredHints: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     smallStaticAvatar: React.PropTypes.string.isRequired,
 
@@ -181,20 +188,22 @@ var TopInstructions = React.createClass({
             rightColWidth={90}
             height={this.props.height - resizerHeight}
         >
-          <ProtectedStatefulDiv id="bubble" className="prompt-icon-cell">
-            <PromptIcon src={this.props.smallStaticAvatar}/>
-          </ProtectedStatefulDiv>
+          <div style={this.props.hasAuthoredHints ? styles.authoredHints : undefined}>
+            <ProtectedStatefulDiv id="bubble" className="prompt-icon-cell">
+              <PromptIcon src={this.props.smallStaticAvatar}/>
+            </ProtectedStatefulDiv>
+          </div>
           <Instructions
               ref="instructions"
               renderedMarkdown={renderedMarkdown}
               onResize={this.adjustMaxNeededHeight}
               inTopPane
           />
-          {this.props.longInstructions && <CollapserButton
-              style={styles.collapserButton}
+          <CollapserButton
+              style={[styles.collapserButton, !this.props.longInstructions && commonStyles.hidden]}
               collapsed={this.props.collapsed}
-              onClick={this.handleClickCollapser}/>
-          }
+              onClick={this.handleClickCollapser}
+          />
         </ThreeColumns>
         {!this.props.collapsed && !this.props.isEmbedView && <HeightResizer
           position={this.props.height}
@@ -214,6 +223,7 @@ module.exports = connect(function propsFromStore(state) {
     collapsed: state.instructions.collapsed,
     shortInstructions: state.instructions.shortInstructions,
     longInstructions: state.instructions.longInstructions,
+    hasAuthoredHints: state.instructions.hasAuthoredHints,
     isRtl: state.pageConstants.localeDirection === 'rtl',
     smallStaticAvatar: state.pageConstants.smallStaticAvatar
   };
