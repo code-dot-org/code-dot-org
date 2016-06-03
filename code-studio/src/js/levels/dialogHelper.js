@@ -159,8 +159,8 @@ window.dashboard.dialog = (function () {
    *     the browser will redirect to a new location after it is called.
    */
   // TODO(dave): move this logic into appOptions.onAttempt for levels of type
-  // external (including pixelation), multi, match, and any others
-  // which render 'levels/dialog'.
+  // external (including pixelation), multi, match, free_response, level_group,
+  // and any others which render 'levels/dialog'.
   var processResults = function (onComplete) {
     var results = getResult();
     var response = results.response;
