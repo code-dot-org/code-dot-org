@@ -291,7 +291,8 @@ FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onE
   if (!jsonData || !jsonData.length) {
     return;
   }
-  // TODO(dave): Test this; Implement overwrite.
+  // TODO(dave): Respect overwrite
   var keysRef = getKeysRef(Applab.channelId);
-  keysRef.set(jsonData).then(onSuccess, onError);
+  var keyValueMap = JSON.parse(jsonData);
+  keysRef.update(keyValueMap).then(onSuccess, onError);
 };
