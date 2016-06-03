@@ -143,6 +143,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get '/pl/:course', to: 'plc/user_course_enrollments#index'
+
   get '/beta', to: redirect('/')
 
   get 'reset_session', to: 'application#reset_session_endpoint'
