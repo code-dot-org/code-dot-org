@@ -14,7 +14,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       missingBlocks: [],
-      xml: '<xml><block type="maze_moveForward" x="70" y="70"><next><block type="maze_moveForward"></block></next></block></xml>'
+      xml: '<xml><block type="when_run"><next><block type="maze_moveForward" x="70" y="70"><next><block type="maze_moveForward"></block></next></block></next></block></xml>'
     }
   ]
 };
