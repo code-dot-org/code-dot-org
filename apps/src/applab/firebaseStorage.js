@@ -2,7 +2,7 @@
 
 /* global Applab */
 
-import FirebaseUtils from './firebaseUtils';
+import { getDatabase } from './firebaseUtils';
 
 /**
  * Namespace for Firebase storage.
@@ -10,12 +10,12 @@ import FirebaseUtils from './firebaseUtils';
 let FirebaseStorage = {};
 
 function getKeysRef(channelId) {
-  let kv = FirebaseUtils.getDatabase(channelId).child('storage/keys');
+  let kv = getDatabase(channelId).child('storage/keys');
   return kv;
 }
 
 function getRecordsRef(channelId, tableName) {
-  return FirebaseUtils.getDatabase(channelId).child(`storage/tables/${tableName}/records`);
+  return getDatabase(channelId).child(`storage/tables/${tableName}/records`);
 }
 
 /**
@@ -23,7 +23,7 @@ function getRecordsRef(channelId, tableName) {
  * @returns {Promise<number>} next record id to assign.
  */
 function getNextIdPromise(tableName) {
-  let lastIdRef = FirebaseUtils.getDatabase(Applab.channelId)
+  let lastIdRef = getDatabase(Applab.channelId)
     .child(`counters/tables/${tableName}/last_id`);
   return lastIdRef.transaction(currentValue => (currentValue || 0) + 1)
     .then(transactionData => transactionData.snapshot.val());
@@ -56,7 +56,7 @@ FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
 
 function getWriteRecordPromise(tableName, recordId, record) {
   let recordString = record === null ? null : JSON.stringify(record);
-  let recordRef = FirebaseUtils.getDatabase(Applab.channelId)
+  let recordRef = getDatabase(Applab.channelId)
     .child(`storage/tables/${tableName}/records/${recordId}`);
   return recordRef.set(recordString);
 }
@@ -190,7 +190,7 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError) {
 };
 
 FirebaseStorage.resetRecordListener = function () {
-  FirebaseUtils.getDatabase(Applab.channelId).off();
+  getDatabase(Applab.channelId).off();
 };
 
 /**
@@ -211,7 +211,7 @@ FirebaseStorage.populateTable = function (jsonData, overwrite, onSuccess, onErro
   }
   // TODO(dave): Respect overwrite
   let promises = [];
-  let tablesRef = FirebaseUtils.getDatabase(Applab.channelId).child('storage/tables');
+  let tablesRef = getDatabase(Applab.channelId).child('storage/tables');
   let tablesMap = JSON.parse(jsonData);
   Object.keys(tablesMap).forEach(tableName => {
     let recordsMap = tablesMap[tableName];
