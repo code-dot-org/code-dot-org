@@ -10,7 +10,7 @@ var FirebaseUtils = require('./firebaseUtils');
 var FirebaseStorage = module.exports;
 
 function getKeysRef(channelId) {
-  var kv = FirebaseUtils.getDatabase(channelId).child('storage/keys');
+  let kv = FirebaseUtils.getDatabase(channelId).child('storage/keys');
   return kv;
 }
 
@@ -23,7 +23,7 @@ function getRecordsRef(channelId, tableName) {
  * @returns {Promise<number>} next record id to assign.
  */
 function getNextIdPromise(tableName) {
-  var lastIdRef = FirebaseUtils.getDatabase(Applab.channelId)
+  let lastIdRef = FirebaseUtils.getDatabase(Applab.channelId)
     .child(`counters/tables/${tableName}/last_id`);
   return lastIdRef.transaction(currentValue => (currentValue || 0) + 1)
     .then(transactionData => transactionData.snapshot.val());
@@ -37,7 +37,7 @@ function getNextIdPromise(tableName) {
  * @param {function (string, number)} onError Function to call on error with error msg and http status.
  */
 FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
-  var keyRef = getKeysRef(Applab.channelId).child(key);
+  let keyRef = getKeysRef(Applab.channelId).child(key);
   keyRef.once("value", object => onSuccess(object.val()), onError);
 };
 
@@ -50,13 +50,13 @@ FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
  *    http status.
  */
 FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
-  var keyRef = getKeysRef(Applab.channelId).child(key);
+  let keyRef = getKeysRef(Applab.channelId).child(key);
   keyRef.set(value).then(onSuccess, onError);
 };
 
 function getWriteRecordPromise(tableName, recordId, record) {
-  var recordString = record === null ? null : JSON.stringify(record);
-  var recordRef = FirebaseUtils.getDatabase(Applab.channelId)
+  let recordString = record === null ? null : JSON.stringify(record);
+  let recordRef = FirebaseUtils.getDatabase(Applab.channelId)
     .child(`storage/tables/${tableName}/records/${recordId}`);
   return recordRef.set(recordString);
 }
@@ -83,7 +83,7 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
  * from key name to expected value.
  */
 function matchesSearch(record, searchParams) {
-  var matches = true;
+  let matches = true;
   Object.keys(searchParams || {}).forEach(key => {
     matches = matches && (record[key] === searchParams[key]);
   });
@@ -103,15 +103,15 @@ function matchesSearch(record, searchParams) {
  *     and http status in case of failure.
  */
 FirebaseStorage.readRecords = function (tableName, searchParams, onSuccess, onError) {
-  var recordsRef = getRecordsRef(Applab.channelId, tableName);
+  let recordsRef = getRecordsRef(Applab.channelId, tableName);
 
   // Get all records in the table and filter them on the client.
   recordsRef.once('value', recordsSnapshot => {
-    var recordMap = recordsSnapshot.val() || {};
-    var records = [];
+    let recordMap = recordsSnapshot.val() || {};
+    let records = [];
     // Collect all of the records matching the searchParams.
     Object.keys(recordMap).forEach(id => {
-      var record = JSON.parse(recordMap[id]);
+      let record = JSON.parse(recordMap[id]);
       if (matchesSearch(record, searchParams)) {
         records.push(record);
       }
@@ -173,7 +173,7 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError) {
     return;
   }
 
-  var recordsRef = getRecordsRef(Applab.channelId, tableName);
+  let recordsRef = getRecordsRef(Applab.channelId, tableName);
   // CONSIDER: Do we need to make sure a client doesn't hear about updates that it triggered?
 
   recordsRef.on('child_added', childSnapshot => {
@@ -210,14 +210,14 @@ FirebaseStorage.populateTable = function (jsonData, overwrite, onSuccess, onErro
     return;
   }
   // TODO(dave): Respect overwrite
-  var promises = [];
-  var tablesRef = FirebaseUtils.getDatabase(Applab.channelId).child('storage/tables');
-  var tablesMap = JSON.parse(jsonData);
+  let promises = [];
+  let tablesRef = FirebaseUtils.getDatabase(Applab.channelId).child('storage/tables');
+  let tablesMap = JSON.parse(jsonData);
   Object.keys(tablesMap).forEach(tableName => {
-    var recordsMap = tablesMap[tableName];
-    var recordsRef = tablesRef.child(`${tableName}/records`);
+    let recordsMap = tablesMap[tableName];
+    let recordsRef = tablesRef.child(`${tableName}/records`);
     Object.keys(recordsMap).forEach(recordId => {
-      var recordString = JSON.stringify(recordsMap[recordId]);
+      let recordString = JSON.stringify(recordsMap[recordId]);
       promises.push(recordsRef.child(recordId).set(recordString));
     });
   });
@@ -241,7 +241,7 @@ FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onE
     return;
   }
   // TODO(dave): Respect overwrite
-  var keysRef = getKeysRef(Applab.channelId);
-  var keyValueMap = JSON.parse(jsonData);
+  let keysRef = getKeysRef(Applab.channelId);
+  let keyValueMap = JSON.parse(jsonData);
   keysRef.update(keyValueMap).then(onSuccess, onError);
 };
