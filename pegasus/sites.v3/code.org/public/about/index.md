@@ -11,6 +11,7 @@ nav: about_nav
 
 Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science should be part of core curriculum, alongside other courses such as biology, chemistry or algebra.
 
+## Diversity of students in our courses
 ![image](/images/infographics/fit-800/diversity-courses.png)
 
 Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Read  about [our efforts to increase diversity in computer science](/diversity).
