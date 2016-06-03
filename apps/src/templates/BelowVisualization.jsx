@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 var commonStyles = require('../commonStyles');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var InputOutputTable = require('./InputOutputTable');
-import PromptIconCell from './instructions/PromptIconCell';
+import PromptIcon from './instructions/PromptIcon';
 
 /**
  * The area below our visualization that is share dby all apps.
@@ -38,8 +38,8 @@ const BelowVisualization = React.createClass({
               <tbody>
                 <tr>
                   {smallStaticAvatar && (shortInstructions || aniGifURL) &&
-                    <td>
-                      <PromptIconCell src={smallStaticAvatar}/>
+                    <td id="prompt-icon-cell">
+                      <PromptIcon src={smallStaticAvatar}/>
                     </td>
                   }
                   <td id="prompt-cell">

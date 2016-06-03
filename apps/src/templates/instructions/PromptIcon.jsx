@@ -5,13 +5,11 @@ import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 /**
  * Simple component for our icon for hints. May be modified by authoredHints.js.
  */
-const PromptIconCell = (props) => (
-  <ProtectedStatefulDiv id="prompt-icon-cell">
-    <img src={props.src} id="prompt-icon"/>
-  </ProtectedStatefulDiv>
+const PromptIcon = (props) => (
+  <img src={props.src} id="prompt-icon"/>
 );
-PromptIconCell.propTypes = {
+PromptIcon.propTypes = {
   src: React.PropTypes.string.isRequired
 };
 
-export default PromptIconCell;
+export default PromptIcon;
