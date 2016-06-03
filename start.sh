@@ -17,6 +17,10 @@ sudo bundle exec rake db:migrate
 cd /home/ubuntu/adhoc/pegasus
 sudo bundle exec rake db:migrate
 
+cd /home/ubuntu/adhoc
+sudo bundle exec rake build:dashboard
+sudo bundle exec rake build:pegasus
+
 [ -d "/tmp/chef/cookbooks" ] && rm -rf /tmp/chef/cookbooks
 [ -d "/tmp/chef/local-mode-cache" ] && sudo rm -rf /tmp/chef/local-mode-cache
 mkdir /tmp/chef/cookbooks
