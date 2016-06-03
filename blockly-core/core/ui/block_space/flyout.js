@@ -17,6 +17,8 @@
  * limitations under the License.
  */
 
+/* global Blockly, goog */
+
 /**
  * @fileoverview Flyout tray containing blocks which may be created.
  * @author fraser@google.com (Neil Fraser)
@@ -87,6 +89,14 @@ Blockly.Flyout = function(blockSpaceEditor, opt_static) {
    * @private
    */
   this.buttons_ = [];
+
+  /**
+   * Set of blocks with limits, keyed by block type. Used to enfoce
+   * limited quantities of blocks in workspace.
+   * @type {Object}
+   * @private
+   */
+  this.limits_ = {};
 
   /**
    * List of event listeners.
@@ -273,7 +283,7 @@ Blockly.Flyout.prototype.init = function(blockSpace, withScrollbars) {
       goog.events.EventType.RESIZE, this, this.position_);
   this.position_();
   this.changeWrapper_ = Blockly.bindEvent_(this.targetBlockSpace_.getCanvas(),
-      'blocklyBlockSpaceChange', this, this.filterForCapacity_);
+      'blocklyBlockSpaceChange', this, this.onBlockSpaceChange_);
 };
 
 /**
@@ -468,6 +478,11 @@ Blockly.Flyout.prototype.show = function(xmlList) {
       // try this, I'm sure.  Kill the comment.
       child.setCommentText(null);
     }
+
+    if (block.hasLimit()) {
+      this.limits_[block.type] = block;
+    }
+
     block.render();
     this.layoutBlock_(block, cursor, gaps[i], initialX);
     // Create an invisible rectangle under the block to act as a button.  Just
@@ -681,6 +696,10 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
       // Right-click.  Don't create a block, let the context menu show.
       return;
     }
+    if (originBlock.limit_ === originBlock.total_) {
+      // at capacity.
+      return;
+    }
     if (originBlock.disabled) {
       // Beyond capacity.
       return;
@@ -722,6 +741,22 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
     // Start a dragging operation on the new block.
     block.onMouseDown_(e);
   };
+};
+
+Blockly.Flyout.prototype.onBlockSpaceChange_ = function() {
+  this.filterForCapacity_();
+  this.updateBlockLimits_();
+};
+
+Blockly.Flyout.prototype.updateBlockLimits_ = function() {
+  Object.keys(this.limits_)
+      .forEach(type => this.limits_[type].resetTotal());
+
+  this.blockSpace_.getAllBlocks()
+      .forEach(block => {
+        var limit = this.limits_[block.type];
+        limit && limit.addTotal(1);
+      });
 };
 
 /**

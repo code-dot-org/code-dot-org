@@ -17,6 +17,8 @@
  * limitations under the License.
  */
 
+/* global Blockly, goog */
+
 /**
  * @fileoverview Methods for graphically rendering a block as SVG.
  * @author fraser@google.com (Neil Fraser)
@@ -506,6 +508,50 @@ Blockly.BlockSvg.prototype.updateDisabled = function() {
   for (var x = 0, child; child = children[x]; x++) {
     child.svg_.updateDisabled();
   }
+};
+
+/**
+ */
+Blockly.BlockSvg.prototype.updateLimit = function (limit) {
+  if (!this.block_.hasLimit()) {
+    return;
+  }
+
+  const BUBBLE_SIZE = 18;
+  const HALF_BUBBLE_SIZE = BUBBLE_SIZE / 2;
+
+  if (!this.limitGroup_) {
+    this.limitGroup_ = Blockly.createSvgElement('g', {
+      'class': 'blocklyLimit',
+      y: -3
+    }, this.svgGroup_);
+
+    this.limitRect_ = Blockly.createSvgElement('rect', {
+      stroke: '#ffffff',
+      fill: '#59b9dc',
+      height: BUBBLE_SIZE,
+      width: BUBBLE_SIZE,
+      x: -HALF_BUBBLE_SIZE,
+      y: -HALF_BUBBLE_SIZE,
+      rx: HALF_BUBBLE_SIZE,
+      ry: HALF_BUBBLE_SIZE
+    }, this.limitGroup_);
+
+    this.limitText_ = Blockly.createSvgElement('text', {
+      'class': 'blocklyText',
+      'style': 'font-size: 10pt',
+      'dominant-baseline': 'central',
+      'text-anchor': 'middle',
+    }, this.limitGroup_);
+
+    this.limitText_.appendChild(document.createTextNode(limit));
+  }
+
+  this.limitText_.nodeValue = limit;
+  var textWidth = this.limitText_.getBBox ? Math.ceil(this.limitText_.getBBox().width) : HALF_BUBBLE_SIZE;
+  var rectWidth = Math.max(textWidth + HALF_BUBBLE_SIZE, BUBBLE_SIZE);
+  this.limitRect_.setAttribute('width', rectWidth);
+  this.limitText_.setAttribute('x', Math.round(rectWidth * 0.5) - HALF_BUBBLE_SIZE);
 };
 
 /**
