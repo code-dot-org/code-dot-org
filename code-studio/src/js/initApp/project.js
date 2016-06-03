@@ -131,7 +131,7 @@ var projects = module.exports = {
   /**
    * Whether this project uses Firebase for data storage.
    */
-  getUseFirebase: function () {
+  useFirebase: function () {
     return current.useFirebase;
   },
 

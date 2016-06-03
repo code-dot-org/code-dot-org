@@ -25,14 +25,9 @@ function getRecordsRef(channelId, tableName) {
 function getNextIdPromise(tableName) {
   var lastIdRef = FirebaseUtils.getDatabase(Applab.channelId)
     .child(`counters/tables/${tableName}/last_id`);
-  return lastIdRef.transaction(function (currentValue) {
-    return (currentValue || 0) + 1;
-  }).then(function (transactionData) {
-    return transactionData.snapshot.val();
-  });
+  return lastIdRef.transaction(currentValue => (currentValue || 0) + 1)
+    .then(transactionData => transactionData.snapshot.val());
 }
-
-
 
 /**
  * Reads the value associated with the key, accessible to all users of the app.
@@ -43,9 +38,7 @@ function getNextIdPromise(tableName) {
  */
 FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
   var keyRef = getKeysRef(Applab.channelId).child(key);
-  keyRef.once("value", function (object) {
-    onSuccess(object.val());
-  }, onError);
+  keyRef.once("value", object => onSuccess(object.val()), onError);
 };
 
 /**
@@ -79,12 +72,10 @@ function getWriteRecordPromise(tableName, recordId, record) {
  */
 FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) {
   // Assign a unique id for the new record.
-  getNextIdPromise(tableName).then(function (nextId) {
+  getNextIdPromise(tableName).then(nextId => {
     record.id = nextId;
     return getWriteRecordPromise(tableName, record.id, record);
-  }).then(function () {
-    onSuccess(record);
-  }, onError);
+  }).then(() => onSuccess(record), onError);
 };
 
 /**
@@ -93,7 +84,7 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
  */
 function matchesSearch(record, searchParams) {
   var matches = true;
-  Object.keys(searchParams || {}).forEach(function (key) {
+  Object.keys(searchParams || {}).forEach(key => {
     matches = matches && (record[key] === searchParams[key]);
   });
   return matches;
@@ -115,11 +106,11 @@ FirebaseStorage.readRecords = function (tableName, searchParams, onSuccess, onEr
   var recordsRef = getRecordsRef(Applab.channelId, tableName);
 
   // Get all records in the table and filter them on the client.
-  recordsRef.once('value', function (recordsSnapshot) {
+  recordsRef.once('value', recordsSnapshot => {
     var recordMap = recordsSnapshot.val() || {};
     var records = [];
     // Collect all of the records matching the searchParams.
-    Object.keys(recordMap).forEach(function (id) {
+    Object.keys(recordMap).forEach(id => {
       var record = JSON.parse(recordMap[id]);
       if (matchesSearch(record, searchParams)) {
         records.push(record);
@@ -141,10 +132,9 @@ FirebaseStorage.readRecords = function (tableName, searchParams, onSuccess, onEr
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError) {
-  getWriteRecordPromise(tableName, record.id, record).then(function () {
-    // TODO: We need to handle the 404 case, probably by attempting a read.
-    onComplete(record, true);
-  }, onError);
+  // TODO: We need to handle the 404 case, probably by attempting a read.
+  getWriteRecordPromise(tableName, record.id, record)
+    .then(() => onComplete(record, true), onError);
 };
 
 /**
@@ -158,10 +148,8 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError) {
-  getWriteRecordPromise(tableName, record.id, null).then(function () {
-    // TODO: We need to handle the 404 case, probably by attempting a read.
-    onComplete(true);
-  }, onError);
+  // TODO: We need to handle the 404 case, probably by attempting a read.
+  getWriteRecordPromise(tableName, record.id, null).then(() => onComplete(true), onError);
 };
 
 /**
@@ -177,7 +165,7 @@ FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError)
  *   http status code.
  */
 FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError) {
-  if (!onError || typeof onError !== 'function') {
+  if (typeof onError !== 'function') {
     throw new Error('onError is a required parameter to FirebaseStorage.onRecordEvent');
   }
   if (!tableName) {
@@ -188,15 +176,15 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError) {
   var recordsRef = getRecordsRef(Applab.channelId, tableName);
   // CONSIDER: Do we need to make sure a client doesn't hear about updates that it triggered?
 
-  recordsRef.on('child_added', function (childSnapshot) {
+  recordsRef.on('child_added', childSnapshot => {
     onRecord(JSON.parse(childSnapshot.val()), 'create');
   });
 
-  recordsRef.on('child_changed', function (childSnapshot) {
+  recordsRef.on('child_changed', childSnapshot => {
     onRecord(JSON.parse(childSnapshot.val()), 'update');
   });
 
-  recordsRef.on('child_removed', function (oldChildSnapshot) {
+  recordsRef.on('child_removed', oldChildSnapshot => {
     onRecord(JSON.parse(oldChildSnapshot.val()), 'delete');
   });
 };
@@ -225,10 +213,10 @@ FirebaseStorage.populateTable = function (jsonData, overwrite, onSuccess, onErro
   var promises = [];
   var tablesRef = FirebaseUtils.getDatabase(Applab.channelId).child('storage/tables');
   var tablesMap = JSON.parse(jsonData);
-  Object.keys(tablesMap).forEach(function (tableName) {
+  Object.keys(tablesMap).forEach(tableName => {
     var recordsMap = tablesMap[tableName];
     var recordsRef = tablesRef.child(`${tableName}/records`);
-    Object.keys(recordsMap).forEach(function (recordId) {
+    Object.keys(recordsMap).forEach(recordId => {
       var recordString = JSON.stringify(recordsMap[recordId]);
       promises.push(recordsRef.child(recordId).set(recordString));
     });
