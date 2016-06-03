@@ -244,6 +244,21 @@ Resources:
       CacheNodeType: cache.r3.large
       SecurityGroupIds: ['Fn::GetAtt': [VPC, RedisSecurityGroup]]
       CacheSubnetGroupName: {Ref: GeocoderSubnetGroup}
+  ActivitiesQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      ReceiveMessageWaitTimeSeconds: 20
+      VisibilityTimeout: 15
+      QueueName: <%="activities-#{environment}"%>
+      RedrivePolicy:
+        maxReceiveCount: 3
+        deadLetterTargetArn: {'Fn::GetAtt': [ActivitiesDeadQueue,Arn]}
+  ActivitiesDeadQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      ReceiveMessageWaitTimeSeconds: 20
+      VisibilityTimeout: 15
+      QueueName: <%="activities_dead-#{environment}"%>
 Outputs:
   DashboardURL:
     Value: "https://dashboard-<%=subdomain%>"
