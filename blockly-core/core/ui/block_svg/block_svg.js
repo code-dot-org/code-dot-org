@@ -517,8 +517,8 @@ Blockly.BlockSvg.prototype.updateLimit = function (limit) {
     return;
   }
 
-  const BUBBLE_SIZE = 18;
-  const HALF_BUBBLE_SIZE = BUBBLE_SIZE / 2;
+  var BUBBLE_SIZE = 18;
+  var HALF_BUBBLE_SIZE = BUBBLE_SIZE / 2;
 
   if (!this.limitGroup_) {
     this.limitGroup_ = Blockly.createSvgElement('g', {
@@ -541,13 +541,13 @@ Blockly.BlockSvg.prototype.updateLimit = function (limit) {
       'class': 'blocklyText',
       'style': 'font-size: 10pt',
       'dominant-baseline': 'central',
-      'text-anchor': 'middle',
+      'text-anchor': 'middle'
     }, this.limitGroup_);
 
     this.limitText_.appendChild(document.createTextNode(limit));
   }
 
-  this.limitText_.nodeValue = limit;
+  this.limitText_.textContent = limit;
   var textWidth = this.limitText_.getBBox ? Math.ceil(this.limitText_.getBBox().width) : HALF_BUBBLE_SIZE;
   var rectWidth = Math.max(textWidth + HALF_BUBBLE_SIZE, BUBBLE_SIZE);
   this.limitRect_.setAttribute('width', rectWidth);

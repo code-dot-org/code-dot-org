@@ -696,7 +696,7 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
       // Right-click.  Don't create a block, let the context menu show.
       return;
     }
-    if (originBlock.limit_ === originBlock.total_) {
+    if (originBlock.hasLimit() && originBlock.limit_ === originBlock.total_) {
       // at capacity.
       return;
     }
@@ -750,13 +750,15 @@ Blockly.Flyout.prototype.onBlockSpaceChange_ = function() {
 
 Blockly.Flyout.prototype.updateBlockLimits_ = function() {
   Object.keys(this.limits_)
-      .forEach(type => this.limits_[type].resetTotal());
+      .forEach(function (type) {
+        this.limits_[type].resetTotal();
+      }, this);
 
-  this.blockSpace_.getAllBlocks()
-      .forEach(block => {
+  this.blockSpaceEditor_.blockSpace.getAllBlocks()
+      .forEach(function (block) {
         var limit = this.limits_[block.type];
         limit && limit.addTotal(1);
-      });
+      }, this);
 };
 
 /**
