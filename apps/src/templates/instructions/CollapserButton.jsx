@@ -7,6 +7,7 @@ const styles = {
   collapseButton: {
     backgroundColor: color.cyan,
     color: color.white,
+    whiteSpace: 'nowrap'
   },
   collapseIcon: {
     marginRight: 5

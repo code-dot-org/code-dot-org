@@ -9,7 +9,8 @@ var styles = {
     paddingTop: 19
   },
   inTopPane: {
-    marginBottom: 0,
+    marginTop: 10,
+    marginBottom: 10,
     paddingTop: 0
   },
   // Optionally give markdown dialog wide left margin so it looks more like a
@@ -33,7 +34,7 @@ const MarkdownInstructions = React.createClass({
   /**
    * Attach any necessary jQuery to our markdown
    */
-  configuredMarkdown_() {
+  configureMarkdown_() {
     if (!this.props.onResize) {
       return;
     }
@@ -55,12 +56,12 @@ const MarkdownInstructions = React.createClass({
   },
 
   componentDidMount() {
-    this.configuredMarkdown_();
+    this.configureMarkdown_();
   },
 
   componentDidUpdate(prevProps) {
     if (prevProps.renderedMarkdown !== this.props.renderedMarkdown) {
-      this.configuredMarkdown_();
+      this.configureMarkdown_();
     }
   },
 
