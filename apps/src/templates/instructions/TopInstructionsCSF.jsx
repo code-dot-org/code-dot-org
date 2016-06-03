@@ -21,6 +21,7 @@ var msg = require('../../locale');
 import CollapserButton from './CollapserButton';
 import ThreeColumns from './ThreeColumns';
 import PromptIcon from './PromptIcon';
+import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 
 const VERTICAL_PADDING = 10;
 const HORIZONTAL_PADDING = 20;
@@ -180,9 +181,9 @@ var TopInstructions = React.createClass({
             rightColWidth={90}
             height={this.props.height - resizerHeight}
         >
-          <div id="bubble" id="prompt-icon-cell">
+          <ProtectedStatefulDiv id="bubble" className="prompt-icon-cell">
             <PromptIcon src={this.props.smallStaticAvatar}/>
-          </div>
+          </ProtectedStatefulDiv>
           <Instructions
               ref="instructions"
               renderedMarkdown={renderedMarkdown}

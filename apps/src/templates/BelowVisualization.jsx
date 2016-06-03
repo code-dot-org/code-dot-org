@@ -38,7 +38,7 @@ const BelowVisualization = React.createClass({
               <tbody>
                 <tr>
                   {smallStaticAvatar && (shortInstructions || aniGifURL) &&
-                    <td id="prompt-icon-cell">
+                    <td className="prompt-icon-cell">
                       <PromptIcon src={smallStaticAvatar}/>
                     </td>
                   }
