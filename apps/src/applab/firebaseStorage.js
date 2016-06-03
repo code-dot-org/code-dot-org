@@ -229,15 +229,15 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError) {
   // CONSIDER: Do we need to make sure a client doesn't hear about updates that it triggered?
 
   recordsRef.on('child_added', function (childSnapshot) {
-    onRecord(childSnapshot.val(), 'create');
+    onRecord(JSON.parse(childSnapshot.val()), 'create');
   });
 
   recordsRef.on('child_changed', function (childSnapshot) {
-    onRecord(childSnapshot.val(), 'update');
+    onRecord(JSON.parse(childSnapshot.val()), 'update');
   });
 
   recordsRef.on('child_removed', function (oldChildSnapshot) {
-    onRecord(oldChildSnapshot.val(), 'delete');
+    onRecord(JSON.parse(oldChildSnapshot.val()), 'delete');
   });
 };
 
