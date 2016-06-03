@@ -10,13 +10,12 @@ var FirebaseUtils = require('./firebaseUtils');
 var FirebaseStorage = module.exports;
 
 function getKeysRef(channelId) {
-  var kv = FirebaseUtils.getDatabase(channelId).child('storage').child('keys');
+  var kv = FirebaseUtils.getDatabase(channelId).child('storage/keys');
   return kv;
 }
 
 function getRecordsRef(channelId, tableName) {
-  return FirebaseUtils.getDatabase(channelId).child('storage').child('tables')
-    .child(tableName).child('records');
+  return FirebaseUtils.getDatabase(channelId).child(`storage/tables/${tableName}/records`);
 }
 
 /**
@@ -24,8 +23,8 @@ function getRecordsRef(channelId, tableName) {
  * @returns {Promise<number>} next record id to assign.
  */
 function getNextIdPromise(tableName) {
-  var lastIdRef = FirebaseUtils.getDatabase(Applab.channelId).child('counters').child('tables')
-      .child(tableName).child('last_id');
+  var lastIdRef = FirebaseUtils.getDatabase(Applab.channelId)
+    .child(`counters/tables/${tableName}/last_id`);
   return lastIdRef.transaction(function (currentValue) {
     return (currentValue || 0) + 1;
   }).then(function (transactionData) {
@@ -64,8 +63,8 @@ FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
 
 function getWriteRecordPromise(tableName, recordId, record) {
   var recordString = record === null ? null : JSON.stringify(record);
-  var recordRef = FirebaseUtils.getDatabase(Applab.channelId).child('storage')
-    .child('tables').child(tableName).child('records').child(recordId);
+  var recordRef = FirebaseUtils.getDatabase(Applab.channelId)
+    .child(`storage/tables/${tableName}/records/${recordId}`);
   return recordRef.set(recordString);
 }
 
@@ -224,11 +223,11 @@ FirebaseStorage.populateTable = function (jsonData, overwrite, onSuccess, onErro
   }
   // TODO(dave): Respect overwrite
   var promises = [];
-  var tablesRef = FirebaseUtils.getDatabase(Applab.channelId).child('storage').child('tables');
+  var tablesRef = FirebaseUtils.getDatabase(Applab.channelId).child('storage/tables');
   var tablesMap = JSON.parse(jsonData);
   Object.keys(tablesMap).forEach(function (tableName) {
     var recordsMap = tablesMap[tableName];
-    var recordsRef = tablesRef.child(tableName).child('records');
+    var recordsRef = tablesRef.child(`${tableName}/records`);
     Object.keys(recordsMap).forEach(function (recordId) {
       var recordString = JSON.stringify(recordsMap[recordId]);
       promises.push(recordsRef.child(recordId).set(recordString));
