@@ -1851,3 +1851,8 @@
   infinity_shortcode: inf
   playlab_shortcode: jouer
   artist_shortcode: art
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.
