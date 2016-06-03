@@ -8,8 +8,9 @@ class Plc::EnrollmentModuleAssignmentTest < ActiveSupport::TestCase
     @level1 = create(:external_link, url: 'some url')
     @level2 = create :maze
     @level3 = create :applab
+    @level4 = create :external
 
-    [@level1, @level2, @level3].each do |level|
+    [@level1, @level2, @level3, @level4].each do |level|
       create(:script_level, script: @course_unit.script, stage: learning_module.stage, levels: [level])
     end
 
