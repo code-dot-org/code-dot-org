@@ -1,4 +1,5 @@
 require 'cdo/poste'
+require 'cdo/regexp'
 require src_dir 'database'
 
 class FormError < ArgumentError
