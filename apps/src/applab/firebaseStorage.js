@@ -185,7 +185,8 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError) {
   });
 
   recordsRef.on('child_removed', oldChildSnapshot => {
-    onRecord(JSON.parse(oldChildSnapshot.val()), 'delete');
+    var record = JSON.parse(oldChildSnapshot.val());
+    onRecord({id: record.id}, 'delete');
   });
 };
 
