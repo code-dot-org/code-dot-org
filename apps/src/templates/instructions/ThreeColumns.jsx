@@ -50,7 +50,7 @@ const ThreeColumns = (props) => {
 
 ThreeColumns.propTypes = {
   customProp: (props) => {
-    if (props.children.length !== 2) {
+    if (props.children.length !== 3) {
       throw new Error('ThreeColumns expects exactly 3 children, got ' +
         props.children.length);
     }
