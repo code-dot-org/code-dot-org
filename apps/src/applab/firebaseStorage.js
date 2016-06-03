@@ -2,12 +2,12 @@
 
 /* global Applab */
 
-var FirebaseUtils = require('./firebaseUtils');
+import FirebaseUtils from './firebaseUtils';
 
 /**
  * Namespace for Firebase storage.
  */
-var FirebaseStorage = module.exports;
+let FirebaseStorage = {};
 
 function getKeysRef(channelId) {
   let kv = FirebaseUtils.getDatabase(channelId).child('storage/keys');
@@ -245,3 +245,4 @@ FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onE
   let keyValueMap = JSON.parse(jsonData);
   keysRef.update(keyValueMap).then(onSuccess, onError);
 };
+export default FirebaseStorage;
