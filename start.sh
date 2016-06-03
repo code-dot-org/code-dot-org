@@ -18,6 +18,10 @@ cd /home/ubuntu/adhoc/pegasus
 sudo bundle exec rake db:migrate
 
 cd /home/ubuntu/adhoc
+# These build commands are commented out because they haven't been tested yet
+#sudo bundle exec rake build:blockly_core
+#sudo bundle exec rake build:apps
+#sudo bundle exec rake build:code_studio
 sudo bundle exec rake build:dashboard
 sudo bundle exec rake build:pegasus
 
