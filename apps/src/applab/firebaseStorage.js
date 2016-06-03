@@ -261,15 +261,18 @@ FirebaseStorage.populateTable = function (jsonData, overwrite, onSuccess, onErro
   if (!jsonData || !jsonData.length) {
     return;
   }
+  var promises = [];
   var tablesRef = FirebaseUtils.getDatabase(Applab.channelId).child('storage').child('tables');
   var tablesMap = JSON.parse(jsonData);
   Object.keys(tablesMap).forEach(function (tableName) {
-    var tableData = tablesMap[tableName];
+    var recordsMap = tablesMap[tableName];
     var recordsRef = tablesRef.child(tableName).child('records');
-
-    // TODO(dave): Respect overwrite
-    recordsRef.set(JSON.stringify(tableData)).then(onSuccess, onError);
+    Object.keys(recordsMap).forEach(function (recordId) {
+      var recordString = JSON.stringify(recordsMap[recordId]);
+      promises.push(recordsRef.child(recordId).set(recordString));
+    });
   });
+  Promise.all(promises).then(onSuccess, onError);
 };
 
 /**
