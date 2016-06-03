@@ -468,18 +468,7 @@ StudioApp.prototype.init = function (config) {
     this.configureAndShowInstructions_(config);
   }
 
-  // Configure hints. Depends on the existence of DOM elements with particular ids..
-  if (this.hasInstructionsToShow(config)) {
-    var bubble = document.getElementById('bubble');
-    if (bubble) {
-      dom.addClickTouchEvent(bubble, function () {
-        this.showInstructionsDialog_(config.level, false, true);
-      }.bind(this));
-    }
-
-    var promptIcon = document.getElementById('prompt-icon');
-    this.authoredHintsController_.display(promptIcon);
-  }
+  this.configureHints_(config);
 
   if (this.editCode) {
     this.handleEditCode_(config);
@@ -636,6 +625,27 @@ StudioApp.prototype.configureAndShowInstructions_ = function (config) {
     var wrapper = document.getElementById('ani-gif-preview-wrapper');
     wrapper.style.display = 'inline-block';
   }
+};
+
+/**
+ * If we have hints, add a click handler to them and add the lightbulb above the
+ * icon. Depends on the existence of DOM elements with particular ids, which
+ * might be located below the playspace or in the top pane.
+ */
+StudioApp.prototype.configureHints_ = function (config) {
+  if (!this.hasInstructionsToShow(config)) {
+    return;
+  }
+
+  var bubble = document.getElementById('bubble');
+  if (bubble) {
+    dom.addClickTouchEvent(bubble, function () {
+      this.showInstructionsDialog_(config.level, false, true);
+    }.bind(this));
+  }
+
+  var promptIcon = document.getElementById('prompt-icon');
+  this.authoredHintsController_.display(promptIcon);
 };
 
 /**
