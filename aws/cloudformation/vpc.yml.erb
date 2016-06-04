@@ -168,6 +168,7 @@ Resources:
   DBSecurityGroupEgress:
     Type: AWS::EC2::SecurityGroupEgress
     Properties:
+      GroupId: {Ref: DBSecurityGroup}
       DestinationSecurityGroupId: {Ref: DBSecurityGroup}
       FromPort: 3306
       ToPort: 3306
@@ -175,6 +176,7 @@ Resources:
   DBSecurityGroupIngress:
     Type: AWS::EC2::SecurityGroupIngress
     Properties:
+      GroupId: {Ref: DBSecurityGroup}
       SourceSecurityGroupId: {Ref: DBSecurityGroup}
       FromPort: 3306
       ToPort: 3306
