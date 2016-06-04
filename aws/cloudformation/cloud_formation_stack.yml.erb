@@ -15,6 +15,7 @@ Resources:
   LoadBalancer:
     Type: AWS::ElasticLoadBalancing::LoadBalancer
     Properties:
+      LoadBalancerName: <%=environment%>
       CrossZone: true
       SecurityGroups: ['Fn::GetAtt': [VPC, ELBSecurityGroup]]
       Subnets: <%=public_subnets%>
