@@ -9,13 +9,13 @@ end
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
 Resources:
-  VPC: <%= lambda.call 'LookupStackOutputs', StackName: 'VPC' %>
+  VPC: <%= lambda.call 'LookupStackOutputs', StackName: 'VPC', Nonce: 0 %>
   IAM: <%= lambda.call 'LookupStackOutputs', StackName: 'IAM', Nonce: 0 %>
   AMI: <%= lambda.call 'LookupStackOutputs', StackName: "AMI-#{environment}" %>
   LoadBalancer:
     Type: AWS::ElasticLoadBalancing::LoadBalancer
     Properties:
-      LoadBalancerName: <%=environment%>
+      LoadBalancerName: <%=stack_name%>
       CrossZone: true
       SecurityGroups: ['Fn::GetAtt': [VPC, ELBSecurityGroup]]
       Subnets: <%=public_subnets%>
@@ -33,7 +33,7 @@ Resources:
           SSLCertificateId: <%=certificate_arn%>
           PolicyNames: [CookieBasedPolicy]
       HealthCheck:
-        Target: HTTP:80/health_check.php
+        Target: HTTP:80/health_check
         HealthyThreshold: 2
         UnhealthyThreshold: 5
         Interval: 10
@@ -226,11 +226,6 @@ Resources:
             HostedZoneId: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneNameID]}
             DNSName: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneName]}
 <% end -%>
-  DBSubnetGroup:
-    Type: AWS::RDS::DBSubnetGroup
-    Properties:
-      DBSubnetGroupDescription: Public Database Subnet Group
-      SubnetIds: <%=public_subnets%>
   GeocoderSubnetGroup:
     Type: AWS::ElastiCache::SubnetGroup
     Properties:
@@ -250,7 +245,7 @@ Resources:
     Properties:
       ReceiveMessageWaitTimeSeconds: 20
       VisibilityTimeout: 15
-      QueueName: <%="activities-#{environment}"%>
+      QueueName: <%="activities-#{stack_name}"%>
       RedrivePolicy:
         maxReceiveCount: 3
         deadLetterTargetArn: {'Fn::GetAtt': [ActivitiesDeadQueue,Arn]}
@@ -259,7 +254,7 @@ Resources:
     Properties:
       ReceiveMessageWaitTimeSeconds: 20
       VisibilityTimeout: 15
-      QueueName: <%="activities_dead-#{environment}"%>
+      QueueName: <%="activities_dead-#{stack_name}"%>
 Outputs:
   DashboardURL:
     Value: "https://dashboard-<%=subdomain%>"

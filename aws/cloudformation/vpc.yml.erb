@@ -135,7 +135,7 @@ Resources:
   RedisSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Redis access from frontends.
+      GroupDescription: Redis access from frontends
       VpcId: {Ref: VPC}
       SecurityGroupIngress:
         - IpProtocol: tcp
@@ -181,6 +181,11 @@ Resources:
       FromPort: 3306
       ToPort: 3306
       IpProtocol: tcp
+  DBSubnetGroup:
+    Type: AWS::RDS::DBSubnetGroup
+    Properties:
+      DBSubnetGroupDescription: Public Database Subnet Group
+      SubnetIds: <%=azs.map{|az| {Ref: "PublicSubnet#{az}"}}.to_json%>
 Outputs:
   VpcId:
     Description: VPC ID
@@ -194,6 +199,12 @@ Outputs:
   FrontendSecurityGroup:
     Description: Security group for Frontend server
     Value: {'Fn::GetAtt': [FrontendSecurityGroup, GroupId]}
+  RedisSecurityGroup:
+    Description: Security group for Redis cache
+    Value: {'Fn::GetAtt': [RedisSecurityGroup, GroupId]}
+  DBSecurityGroup:
+    Description: Security group for DB
+    Value: {'Fn::GetAtt': [DBSecurityGroup, GroupId]}
 <%
   availability_zones.each_with_index do |zone, i|
     az = zone[-1].upcase
