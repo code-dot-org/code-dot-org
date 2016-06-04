@@ -33,6 +33,7 @@
     ]
   },
   "browserify-global-shim": {
+    "jquery": "$",
     "react": "React",
     "react-dom": "ReactDOM",
     "radium": "Radium"

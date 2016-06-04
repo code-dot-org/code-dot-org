@@ -133,7 +133,7 @@
   "end": "fim",
   "errorEmptyFunctionBlockModal": "Deve haver blocos dentro de sua definição de função. Clique em \"editar\" e arraste os blocos para dentro do bloco verde.",
   "errorIncompleteBlockInFunction": "Clique em \"editar\" para verificar se não faltam blocos em sua definição de função.",
-  "errorGenericLintError": "O programa contém um editor avisando que precisa ser corrigido. Passe o mouse sobre os ícones perto dos números das linhas no editor para aprender mais.",
+  "errorGenericLintError": "Seu programa contém um aviso de editor que precisa ser corrigido. Passe o mouse sobre os ícones perto dos números das linhas no editor para saber mais.",
   "errorParamInputUnattached": "Lembre-se de associar um bloco a cada parâmetro de entrada no bloco de função em sua área de trabalho.",
   "errorQuestionMarksInNumberField": "Tente substituir \"???\" por um valor.",
   "errorRequiredParamsMissing": "Crie um parâmetro para sua função clicando em \"editar\" e adicionando os parâmetros necessários. Arraste os novos blocos de parâmetro em sua definição de função.",

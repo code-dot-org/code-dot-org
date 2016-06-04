@@ -57,3 +57,13 @@ For Dropbox folder access, ask Brendan or anyone with Dropbox `Pegasus Staging` 
   brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb
   brew install enscript
   ```
+
+## To run PDF collation tests
+
+The PDF collation tests should now be run during the pegasus test cycle.
+
+To run the individual test manually:
+
+1. `bundle install`
+1. `cd code-dot-org/pegasus/test`
+1. `bundle exec ruby -Itest test_pdf_merger.rb`

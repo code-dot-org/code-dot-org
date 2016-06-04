@@ -196,7 +196,6 @@ Artist.prototype.init = function (config) {
   config.dropletConfig = dropletConfig;
 
   config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
-  config.shortInstructionsWhenCollapsed = true;
 
   if (this.skin.id === "anna") {
     this.avatarWidth = 73;

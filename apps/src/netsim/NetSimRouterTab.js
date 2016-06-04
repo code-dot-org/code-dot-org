@@ -3,6 +3,7 @@
  */
 'use strict';
 
+import $ from 'jquery';
 var markup = require('./NetSimRouterTab.html.ejs');
 var NetSimBandwidthControl = require('./NetSimBandwidthControl');
 var NetSimMemoryControl = require('./NetSimMemoryControl');

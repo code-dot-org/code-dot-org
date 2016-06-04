@@ -3,8 +3,9 @@
  * Used exclusively by StudioApp.
  */
 
-var React = require('react');
-var ReactDOM = require('react-dom');
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var dom = require('./dom');
 var msg = require('./locale');
 var HintsDisplay = require('./templates/instructions/HintsDisplay');
@@ -205,8 +206,21 @@ AuthoredHints.prototype.showNextHint_ = function () {
  * @param {function} callback
  */
 AuthoredHints.prototype.showHint_ = function (hint, callback) {
+  let position = {
+    my: "bottom left",
+    at: "top right"
+  };
+
+  if (this.studioApp_.reduxStore.getState().pageConstants.instructionsInTopPane) {
+    // adjust position when hints are on top
+    position = {
+      my: "middle left",
+      at: "middle right"
+    };
+  }
+
   $('.modal').modal('hide');
-  $('#prompt-icon').qtip({
+  $(this.promptIcon).qtip({
     events: {
       visible: function (event, api) {
         var container = api.get("content.text");
@@ -237,10 +251,7 @@ AuthoredHints.prototype.showHint_ = function (hint, callback) {
         height: 20
       }
     },
-    position: {
-      my: "bottom left",
-      at: "top right"
-    },
+    position: position,
     hide: {
       event: 'unfocus'
     },
