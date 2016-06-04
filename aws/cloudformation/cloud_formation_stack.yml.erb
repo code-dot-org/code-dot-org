@@ -175,7 +175,7 @@ Resources:
       AutoScalingGroupName: {Ref: WebServer}
       LifecycleTransition: 'autoscaling:EC2_INSTANCE_LAUNCHING'
       DefaultResult: ABANDON
-      HeartbeatTimeout: 1200 # seconds = 20 minutes
+      HeartbeatTimeout: 1800 # seconds = 30 minutes
       NotificationTargetARN: {Ref: WebServerHookTopic}
       RoleARN: {'Fn::GetAtt': [IAM, LifecycleHookRoleARN]}
   WebServerHookTopic: {Type: 'AWS::SNS::Topic'}

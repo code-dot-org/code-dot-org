@@ -2,6 +2,7 @@ namespace :stack do
   task :environment do
     require_relative '../../deployment'
     CDO.chef_local_mode = false
+    ENV['INSTANCE_TYPE'] ||= 'c4.8xlarge'
     ENV['TEMPLATE'] ||= 'cloud_formation_stack.yml.erb'
     ENV['CDN_ENABLED'] ||= '1'
     ENV['DOMAIN'] ||= 'code.org'
