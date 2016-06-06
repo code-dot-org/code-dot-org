@@ -1,5 +1,15 @@
 import React from 'react';
 
+var LEVEL_PROGRESS_TYPE = React.PropTypes.shape({
+  id: React.PropTypes.number.isRequired,
+  uid: React.PropTypes.string,
+  kind: React.PropTypes.string,
+  title: React.PropTypes.string,
+  url: React.PropTypes.string,
+  status: React.PropTypes.string
+});
+module.exports.LEVEL_PROGRESS_TYPE = LEVEL_PROGRESS_TYPE;
+
 var STAGE_PROGRESS_TYPE = React.PropTypes.arrayOf(React.PropTypes.shape({
   title: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number]),
   name: React.PropTypes.string,
