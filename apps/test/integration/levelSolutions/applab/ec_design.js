@@ -1125,6 +1125,74 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
-    }
+    },
+
+    {
+      description: "dragging out of bounds to delete",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        // Turn off animations so we don't have to wait for them
+        $.fx.off = true;
+
+        // Switch to design mode
+        $('#designModeButton').click();
+        var designModeViz = $('#designModeViz');
+
+        // Add a bunch of elements
+        testUtils.dragToVisualization('BUTTON', 0, 0);
+        testUtils.dragToVisualization('IMAGE', 50, 100);
+        testUtils.dragToVisualization('LABEL', 200, 150);
+        testUtils.dragToVisualization('TEXT_INPUT', 100, 200);
+
+        // Verify the elements are there
+        var button = designModeViz.find('#design_button1');
+        var image = designModeViz.find('#design_image1');
+        var label = designModeViz.find('#design_label1');
+        var text_input = designModeViz.find('#design_text_input1');
+        assert.equal(button.length, 1, "button was dragged on screen");
+        assert.equal(image.length, 1), "image was dragged on screen";
+        assert.equal(label.length, 1, "label was dragged on screen");
+        assert.equal(text_input.length, 1, "text input was dragged on screen");
+
+        // Drag button out of the app towards the right and verify element got deleted
+        dragElement(button[0], 350, 0);
+        assert.equal(designModeViz.find('#design_button1').length, 0, "button was deleted");
+
+        // Drag image out of the app towards the bottom and verify element got deleted
+        dragElement(image[0], 0, 500);
+        assert.equal(designModeViz.find('#design_image1').length, 0, "image was deleted");
+
+        // Drag label out of the app towards the right and bottom and verify element got deleted
+        dragElement(label[0], 200, 350);
+        assert.equal(designModeViz.find('#design_label1').length, 0, "label was deleted");
+
+        // Drag the text input within the app and verify element did not get deleted
+        dragElement(text_input[0], 10, 10);
+        text_input = designModeViz.find('#design_text_input1');
+        assert.equal(text_input.length, 1, "text input was not deleted");
+
+         // Drag the text input slightly outside of the app and verify element is pushed back in
+        dragElement(text_input[0], 50, 230);
+        text_input = designModeViz.find('#design_text_input1');
+        assert.equal(text_input.length, 1, "text input was not deleted");
+        assert.equal(text_input.parent().position().left, 120, "text input element left position is 120");
+        assert.equal(text_input.parent().position().top, 420, "text input element top position is 210");
+        assertPropertyRowValue(4, 'x position (px)', 120, assert, "text input x pos property value is 120");
+        assertPropertyRowValue(5, 'y position (px)', 420, assert, "text input y pos property value is 420");
+
+        // Drag the text input outside of the app and verify it got deleted
+        dragElement(text_input[0], 210, 50);
+        text_input = designModeViz.find('#design_text_input1');
+        assert.equal(text_input.length, 0, "text input was deleted");
+
+        Applab.onPuzzleComplete();
+
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
   ]
 };
