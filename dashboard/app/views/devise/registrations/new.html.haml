@@ -20,60 +20,78 @@
 
   .row
     .span8.signupblock
-      = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => 'signupform' }) do |f|
+
+      = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => 'signupform', onsubmit: "return submitForm();" }) do |f|
         = signup_error_messages!
 
-        = f.hidden_field :user_type
+        #usertype-block.itemblock
+          .labelblock
+            = "User type"
+          = f.select :user_type, User::USER_TYPE_OPTIONS, {}, { class: "fieldblock", onchange: "changeRole($(this).val());" }
+
         = f.hidden_field :locale, value: locale
         = f.hidden_field :hashed_email
 
-        .itemblock
+        #name-block.itemblock
           .labelblock
             = t('activerecord.attributes.user.name')
           = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
-        %br/
-        .itemblock
+          .error_in_field
+            = "Name is required"
+
+        #email-block.itemblock
           .labelblock
             = t('activerecord.attributes.user.email')
           = f.email_field :email, class: 'input-xlarge fieldblock', maxlength: 255
-        %br/
+          .error_in_field
+            = "Email is required"
+
         - if f.object.password_required?
-          .itemblock
+          #password-block.itemblock
             .labelblock
               = t('activerecord.attributes.user.password')
             = f.password_field :password, class: 'input-xlarge fieldblock', maxlength: 255
             %span#password_message
-          %br/
+            .error_in_field
+              = "Password is required"
+
           .itemblock
             .labelblock
               = t('activerecord.attributes.user.password_confirmation')
             = f.password_field :password_confirmation, class: 'input-xlarge fieldblock', maxlength: 255
           %span#password_message_confirmation
-        %br/
-        - if resource.teacher?
-          .itemblock
-            .labelblock
-              = t('signup_form.school_name')
-            = f.text_field :school, class: 'input-xlarge fieldblock', maxlength: 255
-          %br/
-          .itemblock
-            .labelblock
-              = t('signup_form.school_address')
-            = f.text_area :full_address, class: 'input-xxlarge fieldblock', placeholder: t('signup_form.address_placeholder'), rows: 4, maxlength: 1024
-          %br/
 
-          = f.hidden_field :age, value: '21'
-        - if resource.student?
-          .itemblock
-            .labelblock
-              = t('signup_form.age')
-            = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
-          %br/
-          .itemblock
-            .labelblock
-              = t('signup_form.gender')
-            = f.select :gender, gender_options
-          %br/
+        #schoolname-block.itemblock{style: "display: none"}
+          .labelblock
+            = t('signup_form.school_name')
+          = f.text_field :school, class: 'input-xlarge fieldblock', maxlength: 255
+          .error_in_field
+            = "School name is required"
+
+        = f.hidden_field :age, value: '21'
+
+        #age-block.itemblock
+          .labelblock
+            = t('signup_form.age')
+          = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
+          .error_in_field
+            = "Age is required"
+
+        #gender-block.itemblock
+          .labelblock
+            = t('signup_form.gender')
+          = f.select :gender, gender_options
+          .error_in_field
+            = "Gender is required"
+
+        #district-block.itemblock{style: "display: none"}
+          .labelblock
+            = "District"
+          = render partial: 'shared/district_dropdown', locals: {form_name: "user"}
+          .error_in_field
+            = "Enter something here"
+
+        %br/
         = f.submit t('signup_form.submit'), class: "btn btn-primary btn-large"
         %br/
         %br/
@@ -82,10 +100,6 @@
 
     .span4
       %div{ style: 'padding-left: 20px;  border-left: 1px solid black;' }
-        - if !resource.teacher?
-          = link_to t('signup_form.teacher'), new_user_registration_path('user[user_type]' =>  User::TYPE_TEACHER)
-          %br/
-          %br/
         = render "devise/shared/links"
 
     %div{style: "clear:both"}
@@ -94,6 +108,80 @@
     %br/
 
 :javascript
+
+  function formSuccess() {
+    console.log('form success');
+  }
+
+  function formError(err) {
+    console.log('form error', err);
+
+    var fields = ["name", "email", "password", "schoolname", "age", "gender"];
+
+    for (var i = 0; i < fields.length; i++) {
+      var field = fields[i];
+      if (err.responseJSON.errors[field] == "is required") {
+        $("#" + field + "-block .error_in_field").show();
+      }
+    }
+  }
+
+  function changeRole(value) {
+    if (value == "student") {
+      showStudent();
+    } else if (value == "teacher") {
+      showTeacher();
+    }
+  }
+
+  function showStudent() {
+    // full list: name, email, password, password-confirmation, age, gender-optional
+
+    // show age (and reset to blank)
+    $("#age-block").fadeIn();
+
+    // show gender-optional
+    $("#gender-block").fadeIn();
+
+    // hide school-name-optional
+    $("#schoolname-block").hide();
+
+    // hide district
+    $("#district-block").hide();
+
+  }
+
+  function showTeacher() {
+    // full list: name, email, password, password-confirmation, school-name-optional, school-address-optional
+
+    // hide age (and set to 21)
+    $("#age-block").hide();
+
+    // hide gender-optional
+    $("#gender-block").hide();
+
+    // show school-name-optional
+    $("#schoolname-block").fadeIn();
+
+    // show district
+    $("#district-block").fadeIn();
+
+    // later: Country, State, School Type, School District, School Name
+
+  }
+
+
+  function submitForm() {
+    $.ajax({
+      url: "/users.json",
+      type: "post",
+      dataType: "json",
+      data: JSON.stringify($('#new_user').serializeArray())
+    }).done(formSuccess).fail(formError);
+
+    return false;
+  }
+
   $( "#user_password" ).on('input',function(e){
     var password = $(this).val();
     var password_message = $('#password_message');
