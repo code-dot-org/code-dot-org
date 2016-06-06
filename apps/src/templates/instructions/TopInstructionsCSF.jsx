@@ -27,6 +27,9 @@ const VERTICAL_PADDING = 10;
 const HORIZONTAL_PADDING = 20;
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
+const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
+const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
+
 const styles = {
   main: {
     position: 'absolute',
@@ -86,6 +89,10 @@ var TopInstructions = React.createClass({
     setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired
   },
 
+  getInitialState() {
+    return { rightColWidth: 90 };
+  },
+
   /**
    * Calculate our initial height (based off of rendered height of instructions)
    */
@@ -93,6 +100,15 @@ var TopInstructions = React.createClass({
     window.addEventListener('resize', this.adjustMaxNeededHeight);
 
     const maxNeededHeight = this.adjustMaxNeededHeight();
+
+    // Update right col width now that we know how much space it needs. One thing
+    // to note is that if we end up resizing our column significantly, it can
+    // result in our maxNeededHeight being inaccurate. This isn't that big a deal
+    // except that it means when we set instructionsRenderedHeight below, it might
+    // not be as large as we want.
+    this.setState({
+      rightColWidth: $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth()
+    });
 
     // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
     // adjusts max height.
@@ -104,7 +120,7 @@ var TopInstructions = React.createClass({
    * If we then resize it to be larger again, we want to increase height.
    */
   componentWillReceiveProps(nextProps) {
-    const minHeight = this.getMinHeight();
+    const minHeight = this.getMinHeight() + RESIZER_HEIGHT;
     if (nextProps.height < minHeight && nextProps.height < nextProps.maxHeight) {
       this.props.setInstructionsRenderedHeight(Math.min(nextProps.maxHeight, minHeight));
     }
@@ -125,7 +141,7 @@ var TopInstructions = React.createClass({
    * @returns {number} How much we actually changed
    */
   handleHeightResize: function (delta) {
-    const minHeight = this.getMinHeight();
+    const minHeight = this.getMinHeight() + RESIZER_HEIGHT;
     const currentHeight = this.props.height;
 
     let newHeight = Math.max(minHeight, currentHeight + delta);
@@ -141,7 +157,7 @@ var TopInstructions = React.createClass({
    * @returns {number}
    */
   adjustMaxNeededHeight() {
-    const minHeight = this.getMinHeight();
+    const minHeight = this.getMinHeight() + RESIZER_HEIGHT;
 
     const instructionsContent = this.refs.instructions;
     const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
@@ -181,6 +197,9 @@ var TopInstructions = React.createClass({
     const renderedMarkdown = processMarkdown(this.props.collapsed ?
       this.props.shortInstructions : this.props.longInstructions);
 
+    const leftColWidth = PROMPT_ICON_WIDTH +
+      (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
+
     // TODO - the colWidth numbers are kind of magic/arbitrary right now (it's the
     // amount needed for the collapser button and the hint icon), and could likely
     // become more dynamic - or at least more well documented - in the future
@@ -188,8 +207,8 @@ var TopInstructions = React.createClass({
       <div style={mainStyle} className="editor-column">
         <ThreeColumns
             style={styles.body}
-            leftColWidth={90}
-            rightColWidth={90}
+            leftColWidth={leftColWidth}
+            rightColWidth={this.state.rightColWidth}
             height={this.props.height - resizerHeight}
         >
           <div style={this.props.hasAuthoredHints ? styles.authoredHints : undefined}>
@@ -204,6 +223,7 @@ var TopInstructions = React.createClass({
               inTopPane
           />
           <CollapserButton
+              ref='collapser'
               style={[styles.collapserButton, !this.props.longInstructions && commonStyles.hidden]}
               collapsed={this.props.collapsed}
               onClick={this.handleClickCollapser}
