@@ -325,7 +325,7 @@ module.exports = function (grunt) {
       entry: entries,
       plugins: [
         new webpack.DefinePlugin({
-          IN_UNIT_TEST: false,
+          IN_UNIT_TEST: JSON.stringify(false),
         }),
         new webpack.optimize.CommonsChunkPlugin({
           name:'common',
