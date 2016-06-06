@@ -1,8 +1,9 @@
 /* global trackEvent */
 
 'use strict';
-var React = require('react');
-var ReactDOM = require('react-dom');
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var craftMsg = require('./locale');
@@ -161,7 +162,7 @@ Craft.init = function (config) {
         Craft.showHouseSelectionPopup(function (selectedHouse) {
           trackEvent('Minecraft', 'ChoseHouse', selectedHouse);
           if (!levelConfig.edit_blocks) {
-            $.extend(config.level, houseLevels[selectedHouse]);
+            Object.assign(config.level, houseLevels[selectedHouse]);
 
             Blockly.mainBlockSpace.clear();
             studioApp.setStartBlocks_(config, true);
@@ -174,7 +175,7 @@ Craft.init = function (config) {
   }
 
   if (config.level.puzzle_number && levelbuilderOverrides[config.level.puzzle_number]) {
-    $.extend(config.level, levelbuilderOverrides[config.level.puzzle_number]);
+    Object.assign(config.level, levelbuilderOverrides[config.level.puzzle_number]);
   }
   Craft.initialConfig = config;
 
@@ -240,7 +241,7 @@ Craft.init = function (config) {
   }
 
   var onMount = function () {
-    studioApp.init($.extend({}, config, {
+    studioApp.init(Object.assign({}, config, {
       forceInsertTopBlock: 'when_run',
       appStrings: {
         generatedCodeDescription: craftMsg.generatedCodeDescription(),

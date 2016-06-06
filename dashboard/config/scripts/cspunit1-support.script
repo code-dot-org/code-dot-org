@@ -13,6 +13,7 @@ stage 'Chapter Overviews', 'required'
 
 stage 'Tool Talk: Intro to Netsim', 'required'
   level 'Empty Markdown Level'
+  level 'Sample CSP Assessment'
 
 stage 'Sending Binary Messages', 'content'
   level 'Empty Markdown Level'

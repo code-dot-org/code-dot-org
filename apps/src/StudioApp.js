@@ -1,7 +1,8 @@
 /* global Blockly, ace:true, droplet, dashboard, addToHome */
 
-var React = require('react');
-var ReactDOM = require('react-dom');
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var color = require('./color');
 var parseXmlElement = require('./xml').parseElement;
@@ -91,7 +92,6 @@ var StudioApp = function () {
 
   // @type {string} for all of these
   this.icon = undefined;
-  this.smallIcon = undefined;
   this.winIcon = undefined;
   this.failureIcon = undefined;
 
@@ -468,6 +468,8 @@ StudioApp.prototype.init = function (config) {
     this.configureAndShowInstructions_(config);
   }
 
+  this.configureHints_(config);
+
   if (this.editCode) {
     this.handleEditCode_(config);
   }
@@ -618,20 +620,6 @@ StudioApp.prototype.configureAndShowInstructions_ = function (config) {
     $(prompt2Div).show();
   }
 
-  if (this.hasInstructionsToShow(config)) {
-    var promptIcon = document.getElementById('prompt-icon');
-    if (this.smallIcon) {
-      promptIcon.src = this.smallIcon;
-      $('#prompt-icon-cell').show();
-    }
-
-    var bubble = document.getElementById('bubble');
-    dom.addClickTouchEvent(bubble, function () {
-      this.showInstructionsDialog_(config.level, false, true);
-    }.bind(this));
-    this.authoredHintsController_.display(promptIcon);
-  }
-
   var aniGifPreview = document.getElementById('ani-gif-preview');
   if (config.level.aniGifURL) {
     aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
@@ -640,6 +628,27 @@ StudioApp.prototype.configureAndShowInstructions_ = function (config) {
     var wrapper = document.getElementById('ani-gif-preview-wrapper');
     wrapper.style.display = 'inline-block';
   }
+};
+
+/**
+ * If we have hints, add a click handler to them and add the lightbulb above the
+ * icon. Depends on the existence of DOM elements with particular ids, which
+ * might be located below the playspace or in the top pane.
+ */
+StudioApp.prototype.configureHints_ = function (config) {
+  if (!this.hasInstructionsToShow(config)) {
+    return;
+  }
+
+  var bubble = document.getElementById('bubble');
+  if (bubble) {
+    dom.addClickTouchEvent(bubble, function () {
+      this.showInstructionsDialog_(config.level, false, true);
+    }.bind(this));
+  }
+
+  var promptIcon = document.getElementById('prompt-icon');
+  this.authoredHintsController_.display(promptIcon);
 };
 
 /**
@@ -722,7 +731,6 @@ StudioApp.prototype.getCode = function () {
 
 StudioApp.prototype.setIconsFromSkin = function (skin) {
   this.icon = skin.staticAvatar;
-  this.smallIcon = skin.smallStaticAvatar;
   this.winIcon = skin.winAvatar;
   this.failureIcon = skin.failureAvatar;
 };
@@ -1119,7 +1127,7 @@ StudioApp.prototype.onReportComplete = function (response) {
 StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, showHints) {
   var renderedMarkdown;
 
-  var longInstructions = this.reduxStore.getState().pageConstants.longInstructions;
+  var longInstructions = this.reduxStore.getState().instructions.longInstructions;
 
   // longInstructions will be undefined if non-english
   if (longInstructions) {
@@ -1153,7 +1161,7 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
  * @param {boolean} showHints
  */
 StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHints) {
-  var isMarkdownMode = !!this.reduxStore.getState().pageConstants.longInstructions;
+  var isMarkdownMode = !!this.reduxStore.getState().instructions.longInstructions;
 
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?
@@ -1595,7 +1603,7 @@ StudioApp.prototype.builderForm_ = function (onAttemptCallback) {
 */
 StudioApp.prototype.report = function (options) {
   // copy from options: app, level, result, testResult, program, onComplete
-  var report = $.extend({}, options, {
+  var report = Object.assign({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
     time: ((new Date().getTime()) - this.initTime),
     attempt: this.attempts,
@@ -1785,7 +1793,6 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
   this.skin = config.skin;
-  this.showInstructions = this.showInstructionsDialog_.bind(this, config.level, false);
   this.polishCodeHook = config.polishCodeHook;
 };
 
@@ -1798,8 +1805,8 @@ function runButtonClickWrapper(callback) {
 
   // inform Blockly that the run button has been pressed
   if (window.Blockly && Blockly.mainBlockSpace) {
-    Blockly.mainBlockSpace.getCanvas()
-        .dispatchEvent(new Event(Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED));
+    var customEvent = utils.createEvent(Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED);
+    Blockly.mainBlockSpace.getCanvas().dispatchEvent(customEvent);
   }
 
   callback();
@@ -2732,7 +2739,9 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     instructionsInTopPane: !!config.showInstructionsInTopPane,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
-    noVisualization: false
+    noVisualization: false,
+    smallStaticAvatar: config.skin.smallStaticAvatar,
+    aniGifURL: config.level.aniGifURL
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));
@@ -2744,10 +2753,16 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   let longInstructions = locale === ENGLISH_LOCALE ? level.markdownInstructions : undefined;
   let shortInstructions = level.instructions;
 
-  const shortInstructionsWhenCollapsed = !!config.shortInstructionsWhenCollapsed;
-  if (!shortInstructionsWhenCollapsed) {
+  const noInstructionsWhenCollapsed = !!config.noInstructionsWhenCollapsed;
+  // Our TopInstructions operate in two modes.
+  // In CSF we show short instructions when collapsed. In this mode, we assume
+  // that we have at least shortInstructions.
+  // In CSP we show no instructions  when collapsed. In this mode, we assume
+  // that we have at least longInstructions. In the case that we arent
+  // provided (markdown) longInstructions, treat our shortInstructiosn as our
+  // longInstructions
+  if (noInstructionsWhenCollapsed) {
     if (shortInstructions && !longInstructions) {
-      // use short instructions as long instructions if that's all we have
       longInstructions = shortInstructions;
     }
     // Never use short instructions in CSP
@@ -2755,7 +2770,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   }
 
   this.reduxStore.dispatch(setInstructionsConstants({
-    shortInstructionsWhenCollapsed,
+    noInstructionsWhenCollapsed,
     shortInstructions,
     longInstructions,
   }));

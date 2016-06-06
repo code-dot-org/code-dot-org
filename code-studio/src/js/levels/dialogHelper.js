@@ -74,7 +74,7 @@ window.dashboard.dialog = (function () {
     var dialog = new window.Dialog({
       body: content,
       onHidden: dialogHidden,
-      autoResizeScrollableElement: appOptions.dialog.autoResizeScrollableElement
+      autoResizeScrollableElement: '.scrollable-element'
     });
 
     // Clicking the okay button in the dialog box dismisses it, and calls the callback.
@@ -159,8 +159,8 @@ window.dashboard.dialog = (function () {
    *     the browser will redirect to a new location after it is called.
    */
   // TODO(dave): move this logic into appOptions.onAttempt for levels of type
-  // external (including pixelation), multi, match, and any others
-  // which render 'levels/dialog'.
+  // external (including pixelation), multi, match, free_response, level_group,
+  // and any others which render 'levels/dialog'.
   var processResults = function (onComplete) {
     var results = getResult();
     var response = results.response;

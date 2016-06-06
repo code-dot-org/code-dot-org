@@ -1,5 +1,6 @@
 'use strict';
 
+import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
@@ -18,6 +19,9 @@ var HeightResizer = require('./HeightResizer');
 var constants = require('../../constants');
 var msg = require('../../locale');
 import CollapserButton from './CollapserButton';
+import ThreeColumns from './ThreeColumns';
+import PromptIcon from './PromptIcon';
+import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 
 const VERTICAL_PADDING = 10;
 const HORIZONTAL_PADDING = 20;
@@ -40,17 +44,8 @@ const styles = {
   },
   body: {
     backgroundColor: 'white',
-    overflowY: 'scroll',
-    paddingTop: VERTICAL_PADDING,
-    paddingBottom: VERTICAL_PADDING,
-    paddingLeft: HORIZONTAL_PADDING,
-    paddingRight: HORIZONTAL_PADDING,
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    borderRadius: 10
+    borderRadius: 10,
+    width: '100%',
   },
   embedView: {
     height: undefined,
@@ -59,25 +54,17 @@ const styles = {
     left: 340
   },
   collapserButton: {
-    float: 'right',
-    height: 42,
-    marginLeft: 10,
-    // don't want the right margin to apply to our button
-    marginRight: -10,
+    position: 'absolute',
+    right: 0,
     marginTop: 5,
-    marginBottom: 5
-  },
-  collapserButtonRtl: {
-    float: 'left',
-    marginLeft: -10,
-    marginRight: 10,
+    marginRight: 5
   }
 };
 
-const COLLAPSED_HEIGHT = styles.collapserButton.height +
-  styles.collapserButton.marginTop +
-  styles.collapserButton.marginBottom +
-  2 * VERTICAL_PADDING;
+// Ultimately we want this number to be more dynamic. Right now it's the height
+// needed to display the artist with a lightbulb at the same dimensions as the
+// bottom instructions scenario
+const COLLAPSED_HEIGHT = 104;
 
 const MIN_HEIGHT = COLLAPSED_HEIGHT;
 
@@ -91,6 +78,7 @@ var TopInstructions = React.createClass({
     shortInstructions: React.PropTypes.string.isRequired,
     longInstructions: React.PropTypes.string,
     isRtl: React.PropTypes.bool.isRequired,
+    smallStaticAvatar: React.PropTypes.string.isRequired,
 
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
@@ -157,11 +145,11 @@ var TopInstructions = React.createClass({
    * updating our rendered height.
    */
   handleClickCollapser() {
-    const collapsed = !this.props.collapsed;
+    const nextCollapsed = !this.props.collapsed;
     this.props.toggleInstructionsCollapsed();
 
     // adjust rendered height based on next collapsed state
-    if (collapsed) {
+    if (nextCollapsed) {
       this.props.setInstructionsRenderedHeight(COLLAPSED_HEIGHT);
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
@@ -182,29 +170,36 @@ var TopInstructions = React.createClass({
     const renderedMarkdown = processMarkdown(this.props.collapsed ?
       this.props.shortInstructions : this.props.longInstructions);
 
+    // TODO - the colWidth numbers are kind of magic/arbitrary right now (it's the
+    // amount needed for the collapser button and the hint icon), and could likely
+    // become more dynamic - or at least more well documented - in the future
     return (
       <div style={mainStyle} className="editor-column">
-        <div>
-          <div style={styles.body}>
-            {this.props.longInstructions && <CollapserButton
-                style={[styles.collapserButton, this.props.isRtl && styles.collapserButtonRtl]}
-                isRtl={this.props.isRtl}
-                collapsed={this.props.collapsed}
-                onClick={this.handleClickCollapser}/>
-            }
-            {<Instructions
-                ref="instructions"
-                renderedMarkdown={renderedMarkdown}
-                onResize={this.props.onResize}
-                inTopPane
-            />
-            }
-          </div>
-          {!this.props.collapsed && !this.props.isEmbedView && <HeightResizer
-            position={this.props.height}
-            onResize={this.handleHeightResize}/>
+        <ThreeColumns
+            style={styles.body}
+            leftColWidth={90}
+            rightColWidth={90}
+            height={this.props.height - resizerHeight}
+        >
+          <ProtectedStatefulDiv id="bubble" className="prompt-icon-cell">
+            <PromptIcon src={this.props.smallStaticAvatar}/>
+          </ProtectedStatefulDiv>
+          <Instructions
+              ref="instructions"
+              renderedMarkdown={renderedMarkdown}
+              onResize={this.adjustMaxNeededHeight}
+              inTopPane
+          />
+          {this.props.longInstructions && <CollapserButton
+              style={styles.collapserButton}
+              collapsed={this.props.collapsed}
+              onClick={this.handleClickCollapser}/>
           }
-        </div>
+        </ThreeColumns>
+        {!this.props.collapsed && !this.props.isEmbedView && <HeightResizer
+          position={this.props.height}
+          onResize={this.handleHeightResize}/>
+        }
       </div>
     );
   }
@@ -219,7 +214,8 @@ module.exports = connect(function propsFromStore(state) {
     collapsed: state.instructions.collapsed,
     shortInstructions: state.instructions.shortInstructions,
     longInstructions: state.instructions.longInstructions,
-    isRtl: state.pageConstants.localeDirection === 'rtl'
+    isRtl: state.pageConstants.localeDirection === 'rtl',
+    smallStaticAvatar: state.pageConstants.smallStaticAvatar
   };
 }, function propsFromDispatch(dispatch) {
   return {

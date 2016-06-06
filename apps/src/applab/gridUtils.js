@@ -2,6 +2,8 @@
  * A couple of utility functions for dealing with our design mode grid.
  */
 
+import $ from 'jquery';
+
 const GRID_SIZE = 5;
 
 /**

@@ -1,7 +1,7 @@
 /* global Applab, dashboard */
-
-var React = require('react');
-var ReactDOM = require('react-dom');
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var DesignWorkspace = require('./DesignWorkspace');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var elementLibrary = require('./designElements/library');

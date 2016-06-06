@@ -4,6 +4,7 @@
 /* global setTimeout */
 'use strict';
 
+import $ from 'jquery';
 var markup = require('./NetSimAlert.html.ejs');
 var ArgumentUtils = require('./ArgumentUtils');
 var NetSimLogger = require('./NetSimLogger');

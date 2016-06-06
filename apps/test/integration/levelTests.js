@@ -10,8 +10,8 @@
 // feedback when a user gets the puzzle wrong?
 
 import {assert} from '../util/configuredChai';
-import $ from 'jquery';
 import sinon from 'sinon';
+let $ = window.$ = window.jQuery = require('jquery');
 require('jquery-ui');
 var tickWrapper = require('./util/tickWrapper');
 

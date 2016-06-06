@@ -56,16 +56,6 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/s/course1/stage/1/puzzle/1'
   end
 
-  test "old teacher dashboard redirects to new teacher dashboard" do
-    urls = %w{/sections/new /sections/1/edit}
-
-    urls.each do |url|
-      get url
-      assert_response :redirect#, "for url #{url}"
-      assert_redirected_to 'https://test.code.org/teacher-dashboard', "for url #{url}"
-    end
-  end
-
   test 'old script id paths redirect to named paths' do
     %w(2:Hour%20of%20Code 4:events 7:jigsaw).map{ |s| s.split ':' }.each do |before, after|
       get "/s/#{before}"

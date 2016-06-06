@@ -32,7 +32,13 @@ def generate_pdf_file(base_url, pdf_conversion_info, fetchfile_for_pdf)
   require 'pdf/conversion'
   url = "#{base_url}#{pdf_conversion_info.url_path}"
 
-  PDF.generate_from_url(url, pdf_conversion_info.output_pdf_path, verbose: true)
+  begin
+    PDF.generate_from_url(url, pdf_conversion_info.output_pdf_path, verbose: true)
+  rescue Exception => e
+    HipChat.log "PDF generation failure for #{url}"
+    HipChat.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
+    raise
+  end
 
   # Since these pdfs take about 10 minutes to generate, the server might not be available the whole time. For example,
   # "CA.pdf" does not exist has appeared on staging if it's between builds. This check prevents these errors.

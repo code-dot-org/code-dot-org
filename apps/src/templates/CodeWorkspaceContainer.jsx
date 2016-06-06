@@ -5,6 +5,7 @@
  * us to position it vertically. Causes resize events to fire when receiving new props
  */
 
+import $ from 'jquery';
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Radium = require('radium');
