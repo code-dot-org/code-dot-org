@@ -841,7 +841,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select '.teacher-panel', 0
   end
 
-  test 'teacher can view solution' do
+  test 'teacher can view solution to non plc script' do
     sl = ScriptLevel.joins(:script, :levels).find_by(
       scripts: {name: 'allthethings'},
       levels:  Level.key_to_params('K-1 Artist1 1'))
@@ -874,8 +874,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @student
 
     get :show, script_id: sl.script, stage_id: sl.stage, id: sl, solution: true
-
-    assert_response :forbidden
+    assert_select '.teacher-panel', 0
   end
 
   test 'under 13 gets redirected when trying to access applab' do

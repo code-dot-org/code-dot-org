@@ -143,9 +143,8 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_level_source
-    if params[:solution] && @ideal_level_source = @level.ideal_level_source
+    if params[:solution] && @ideal_level_source = @level.ideal_level_source && can_view_solution?
       # load the solution for teachers clicking "See the Solution"
-      authorize! :manage, :teacher
       level_source = @ideal_level_source
       readonly_view_options
     elsif @user && current_user && @user != current_user
