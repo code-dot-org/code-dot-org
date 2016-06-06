@@ -12,15 +12,20 @@ const styles = {
 /**
  * Simple component for our icon for hints.
  */
-const PromptIcon = (props) => (
-  <img
-      src={props.src}
-      id="prompt-icon"
-      style={styles.main}
-  />
-);
-PromptIcon.propTypes = {
-  src: React.PropTypes.string.isRequired
-};
+const PromptIcon = React.createClass({
+  propTypes: {
+    src: React.PropTypes.string.isRequired
+  },
+
+  render() {
+    return (
+      <img
+          src={this.props.src}
+          id="prompt-icon"
+          style={styles.main}
+      />
+    );
+  }
+});
 
 export default PromptIcon;

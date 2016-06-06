@@ -40,7 +40,6 @@ const instructionsInitialState = {
   // part off of the size of the code workspace.
   maxAvailableHeight: Infinity,
 
-  // TODO - may eventually belong in its own module
   hasAuthoredHints: false,
 };
 
