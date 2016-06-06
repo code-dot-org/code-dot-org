@@ -15,6 +15,7 @@ module.exports = {
     "blockly": "this Blockly",
     "react": "var React",
     "react-dom": "var ReactDOM",
+    "jquery": "var $"
   },
   module: {
     loaders: [
