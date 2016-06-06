@@ -4,37 +4,37 @@ import { STAGE_TYPE } from './types';
 import StageProgress from './stage_progress.jsx';
 import color from '../../color';
 
-var style = {
+const STYLES = {
   row: {
     borderBottom: `2px solid ${color.lighter_gray}`,
     display: 'table',
     tableLayout: 'fixed',
-    padding: '10px',
+    padding: 10,
     width: '100%'
   },
   stageName: {
     display: 'table-cell',
-    width: '200px',
+    width: 200,
     verticalAlign: 'middle',
-    paddingRight: '10px'
+    paddingRight: 10
   }
 };
 
 /**
  * Stage progress component used in level header and course overview.
  */
-var CourseProgressRow = React.createClass({
+let CourseProgressRow = React.createClass({
   propTypes: {
     currentLevelId: React.PropTypes.string,
     stage: STAGE_TYPE
   },
 
   render() {
-    var stage = this.props.stage;
+    let stage = this.props.stage;
 
     return (
-      <div style={style.row}>
-        <div style={style.stageName}>
+      <div style={STYLES.row}>
+        <div style={STYLES.stageName}>
           {stage.title}
           <div className='stage-lesson-plan-link' style={{display: 'none'}}>
             <a target='_blank' href={stage.lesson_plan_html_url}>

@@ -28,15 +28,16 @@ def replace_hostname(url)
   url.gsub(/(\w+)\.(\w+)\.code\.org/,'\1-\2.code.org')
 end
 
+# Get the SCSS color constant for a given status.
 def color_for_status(status)
   {
-    submitted: 'rgb(118, 101, 160)',
-    perfect: 'rgb(14, 190, 14)',
-    passed: 'rgb(159, 212, 159)',
-    attempted: 'rgb(255, 255, 0)',
-    not_tried: 'rgb(254, 254, 254)',
-    review_rejected: 'rgb(204, 0, 0)',
-    review_accepted: 'rgb(11, 142, 11)'
+    submitted: 'rgb(118, 101, 160)',    # $level_submitted
+    perfect: 'rgb(14, 190, 14)',        # $level_perfect
+    passed: 'rgb(159, 212, 159)',       # $level_passed
+    attempted: 'rgb(255, 255, 0)',      # $level_attempted
+    not_tried: 'rgb(254, 254, 254)',    # $level_not_tried
+    review_rejected: 'rgb(204, 0, 0)',  # $level_review_rejected
+    review_accepted: 'rgb(11, 142, 11)' # level_review_accepted
   }[status.to_sym]
 end
 
