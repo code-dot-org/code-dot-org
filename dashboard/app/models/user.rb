@@ -254,7 +254,6 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
 
-  before_save :dont_reconfirm_emails_that_match_hashed_email
   def dont_reconfirm_emails_that_match_hashed_email
     # we make users "reconfirm" when they change their email
     # addresses. Skip reconfirmation when the user is using the same
@@ -269,7 +268,7 @@ class User < ActiveRecord::Base
   before_save :make_teachers_21,
     :dont_reconfirm_emails_that_match_hashed_email,
     :hash_email,
-    :hide_email_for_students
+    :hide_email_and_full_address_for_students
 
   def make_teachers_21
     return unless teacher?
@@ -285,9 +284,10 @@ class User < ActiveRecord::Base
     self.hashed_email = User.hash_email(email)
   end
 
-  def hide_email_for_students
+  def hide_email_and_full_address_for_students
     if student?
       self.email = ''
+      self.full_address = nil
     end
   end
 
