@@ -4,6 +4,8 @@
 
 import { getDatabase } from './firebaseUtils';
 
+// TODO(dave): convert FirebaseStorage to an ES6 class, so that we can pass in
+// firebaseName and firebaseAuthToken rather than access them as globals.
 /**
  * Namespace for Firebase storage.
  */
