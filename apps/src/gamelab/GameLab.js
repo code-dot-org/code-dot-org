@@ -238,19 +238,41 @@ GameLab.prototype.init = function (config) {
  */
 GameLab.prototype.setupReduxSubscribers = function (store) {
   var state = {};
-  var boundOnIsRunningChange = this.onIsRunningChange.bind(this);
-  store.subscribe(function () {
+  store.subscribe(() => {
     var lastState = state;
     state = store.getState();
 
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
-      boundOnIsRunningChange(state.runState.isRunning);
+      this.onIsRunningChange(state.runState.isRunning);
+    }
+
+    if (!lastState.animationTab || state.animationTab.selectedAnimation !== lastState.animationTab.selectedAnimation) {
+      this.onSelectedAnimationChange(state.animationTab.selectedAnimation);
     }
   });
 };
 
 GameLab.prototype.onIsRunningChange = function () {
   this.setCrosshairCursorForPlaySpace();
+};
+
+/**
+ * The currently selected animation has been changed in the Redux store.
+ * @param {AnimationKey} selectedAnimation - an animation key, or undefined if we've
+ *        entered a state where no animation is selected.
+ */
+GameLab.prototype.onSelectedAnimationChange = function (selectedAnimation) {
+  if (!selectedAnimation) {
+    // TODO (bbuchanan): Some action to tell Piskel to go into a "nothing selected" state
+    return;
+  }
+
+  const iframe = document.getElementById('piskel-frame');
+  const targetOrigin = '*'; // TODO (bbuchanan): Work out more precise target origin.
+  iframe.contentWindow.postMessage({
+    type: 'LOAD_IMAGE', // TODO (bbuchanan): Use a (shared?) constant for this.
+    animation: this.getAnimationMetadataByKey(selectedAnimation)
+  }, targetOrigin);
 };
 
 /**
@@ -969,9 +991,19 @@ GameLab.prototype.displayFeedback_ = function () {
 /**
  * Get the project's animation metadata for upload to the sources API.
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
+ * @return {AnimationMetadata[]}
  */
 GameLab.prototype.getAnimationMetadata = function () {
   return this.studioApp_.reduxStore.getState().animations;
+};
+
+/**
+ * Get metadata for a particular animation.
+ * @param {!AnimationKey} key
+ * @returns {AnimationMetadata}
+ */
+GameLab.prototype.getAnimationMetadataByKey = function (key) {
+  return this.getAnimationMetadata().find(animation => animation.key === key);
 };
 
 GameLab.prototype.getAnimationDropdown = function () {
