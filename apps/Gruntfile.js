@@ -12,6 +12,8 @@ module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
   var buildTimeLogger = logBuildTimes(grunt);
 
+  process.env.mocha_entry = grunt.option('entry') || '';
+
   var config = {};
 
   /**
@@ -547,9 +549,4 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('default', ['rebuild', 'test']);
-
-  process.env.mocha_grep = grunt.option('grep') || '';
-  process.env.mocha_debug = grunt.option('debug') || '';
-  process.env.mocha_entry = grunt.option('entry') || '';
-  process.env.mocha_invert = grunt.option('invert') || '';
 };
