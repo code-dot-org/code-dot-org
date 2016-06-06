@@ -54,11 +54,16 @@ FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
   keyRef.set(value).then(onSuccess, onError);
 };
 
-function getWriteRecordPromise(tableName, recordId, record) {
-  let recordString = record === null ? null : JSON.stringify(record);
+/**
+ * Reads the record to determine whether it exists.
+ * @param {string} tableName
+ * @param {string} recordId
+ * @returns {Promise<boolean>} whether the record exists
+ */
+function getRecordExistsPromise(tableName, recordId) {
   let recordRef = getDatabase(Applab.channelId)
     .child(`storage/tables/${tableName}/records/${recordId}`);
-  return recordRef.set(recordString);
+  return recordRef.once('value').then(snapshot => snapshot.val() !== null);
 }
 
 /**
@@ -74,7 +79,9 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
   // Assign a unique id for the new record.
   getNextIdPromise(tableName).then(nextId => {
     record.id = nextId;
-    return getWriteRecordPromise(tableName, record.id, record);
+    let recordRef = getDatabase(Applab.channelId)
+      .child(`storage/tables/${tableName}/records/${record.id}`);
+    return recordRef.set(JSON.stringify(record));
   }).then(() => onSuccess(record), onError);
 };
 
@@ -132,9 +139,18 @@ FirebaseStorage.readRecords = function (tableName, searchParams, onSuccess, onEr
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError) {
-  // TODO: We need to handle the 404 case, probably by attempting a read.
-  getWriteRecordPromise(tableName, record.id, record)
-    .then(() => onComplete(record, true), onError);
+  // There is a race condition in which we might inaccurately report whether the operation
+  // was successful or not. The alternative is a transaction, however this is not reliable
+  // since transactions sometimes return null on their first attempt to read the data.
+  getRecordExistsPromise(tableName, record.id).then(recordExists => {
+    if (!recordExists) {
+      onComplete(null, false);
+    } else {
+      let recordRef = getDatabase(Applab.channelId)
+        .child(`storage/tables/${tableName}/records/${record.id}`);
+      recordRef.set(JSON.stringify(record)).then(() => onComplete(record, true), onError);
+    }
+  });
 };
 
 /**
@@ -148,8 +164,18 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
  *     and http status in case of other types of failures.
  */
 FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError) {
-  // TODO: We need to handle the 404 case, probably by attempting a read.
-  getWriteRecordPromise(tableName, record.id, null).then(() => onComplete(true), onError);
+  // There is a race condition in which we might inaccurately report whether the operation
+  // was successful or not. The alternative is a transaction, however this is not reliable
+  // since transactions sometimes return null on their first attempt to read the data.
+  getRecordExistsPromise(tableName, record.id).then(recordExists => {
+    if (!recordExists) {
+      onComplete(false);
+    } else {
+      let recordRef = getDatabase(Applab.channelId)
+        .child(`storage/tables/${tableName}/records/${record.id}`);
+      recordRef.set(null).then(() => onComplete(true), onError);
+    }
+  });
 };
 
 /**
