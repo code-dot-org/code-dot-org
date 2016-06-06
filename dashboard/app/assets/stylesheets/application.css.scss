@@ -1524,6 +1524,11 @@ a.download-video {
     color:$charcoal;
     margin-top:15px;
   }
+
+  .error_in_field {
+    color:red;
+    display:none;
+  }
 }
 
 @mixin yTranslation($offset) {
