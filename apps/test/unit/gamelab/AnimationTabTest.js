@@ -6,7 +6,7 @@ describe('AnimationTab', function () {
   describe('reducer', function () {
     var reducer = animationTabModule.default;
     var initialState = {
-      columnSizes: [150, 250, undefined],
+      columnSizes: [150, undefined],
       selectedAnimation: ''
     };
 
