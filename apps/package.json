@@ -49,6 +49,7 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
+    "@code-dot-org/piskel": "0.1.1",
     "Base64": "0.3.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-es2015-classes": "^6.9.0",
