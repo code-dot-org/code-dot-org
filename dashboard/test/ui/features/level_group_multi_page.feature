@@ -21,7 +21,7 @@ Scenario: Submit three pages.
   And I press ".level-group-content:nth(2) .answerbutton[index=0]" using jQuery
 
   And I press ".nextPageButton" using jQuery
-  And I wait for 1 second
+  And I wait for 3 seconds
   And I wait to see ".level-group-content"
   And check that the URL contains "/page/2"
   And element ".level-group-content:nth(0) .multi-question" contains text "Which step should go"
@@ -32,7 +32,7 @@ Scenario: Submit three pages.
   And I press ".level-group-content:nth(2) .answerbutton[index=1]" using jQuery
 
   And I press ".nextPageButton" using jQuery
-  And I wait for 1 second
+  And I wait for 3 seconds
   And I wait to see ".level-group-content"
   And check that the URL contains "/page/3"
   And element ".level-group-content:nth(0) .multi-question" contains text "Which repeat block"
@@ -45,7 +45,7 @@ Scenario: Submit three pages.
   And I press ".submitButton:first" using jQuery
   And I wait to see ".modal"
   And I press ".modal #ok-button" using jQuery
-  And I wait for 5 seconds
+  And I wait for 3 seconds
 
   # Go back to the first page to see that correct options are selected.
   Then I am on "http://learn.code.org/s/allthethings/stage/22/puzzle/2/page/1?noautoplay=true&force_submittable=true"
