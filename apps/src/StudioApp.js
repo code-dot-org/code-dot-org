@@ -11,6 +11,7 @@ var dropletUtils = require('./dropletUtils');
 var _ = require('./lodash');
 var dom = require('./dom');
 var constants = require('./constants.js');
+var experiments = require('./experiments');
 var KeyCodes = constants.KeyCodes;
 var msg = require('./locale');
 var blockUtils = require('./block_utils');
@@ -31,7 +32,6 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
-var experiments = require('./experiments');
 import { setPageConstants } from './redux/pageConstants';
 
 var redux = require('./redux');
@@ -92,7 +92,6 @@ var StudioApp = function () {
 
   // @type {string} for all of these
   this.icon = undefined;
-  this.smallIcon = undefined;
   this.winIcon = undefined;
   this.failureIcon = undefined;
 
@@ -469,6 +468,8 @@ StudioApp.prototype.init = function (config) {
     this.configureAndShowInstructions_(config);
   }
 
+  this.configureHints_(config);
+
   if (this.editCode) {
     this.handleEditCode_(config);
   }
@@ -525,6 +526,9 @@ StudioApp.prototype.init = function (config) {
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
   if (this.isUsingBlockly()) {
+    Blockly.mainBlockSpaceEditor.addUnusedBlocksHelpListener(function (e) {
+      utils.showUnusedBlockQtip(e.srcElement);
+    });
     Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function () {
       this.updateBlockCount();
     }, this));
@@ -616,20 +620,6 @@ StudioApp.prototype.configureAndShowInstructions_ = function (config) {
     $(prompt2Div).show();
   }
 
-  if (this.hasInstructionsToShow(config)) {
-    var promptIcon = document.getElementById('prompt-icon');
-    if (this.smallIcon) {
-      promptIcon.src = this.smallIcon;
-      $('#prompt-icon-cell').show();
-    }
-
-    var bubble = document.getElementById('bubble');
-    dom.addClickTouchEvent(bubble, function () {
-      this.showInstructionsDialog_(config.level, false, true);
-    }.bind(this));
-    this.authoredHintsController_.display(promptIcon);
-  }
-
   var aniGifPreview = document.getElementById('ani-gif-preview');
   if (config.level.aniGifURL) {
     aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
@@ -638,6 +628,27 @@ StudioApp.prototype.configureAndShowInstructions_ = function (config) {
     var wrapper = document.getElementById('ani-gif-preview-wrapper');
     wrapper.style.display = 'inline-block';
   }
+};
+
+/**
+ * If we have hints, add a click handler to them and add the lightbulb above the
+ * icon. Depends on the existence of DOM elements with particular ids, which
+ * might be located below the playspace or in the top pane.
+ */
+StudioApp.prototype.configureHints_ = function (config) {
+  if (!this.hasInstructionsToShow(config)) {
+    return;
+  }
+
+  var bubble = document.getElementById('bubble');
+  if (bubble) {
+    dom.addClickTouchEvent(bubble, function () {
+      this.showInstructionsDialog_(config.level, false, true);
+    }.bind(this));
+  }
+
+  var promptIcon = document.getElementById('prompt-icon');
+  this.authoredHintsController_.display(promptIcon);
 };
 
 /**
@@ -720,7 +731,6 @@ StudioApp.prototype.getCode = function () {
 
 StudioApp.prototype.setIconsFromSkin = function (skin) {
   this.icon = skin.staticAvatar;
-  this.smallIcon = skin.smallStaticAvatar;
   this.winIcon = skin.winAvatar;
   this.failureIcon = skin.failureAvatar;
 };
@@ -1792,6 +1802,13 @@ function runButtonClickWrapper(callback) {
     $(window).trigger('run_button_pressed');
     $(window).trigger('appModeChanged');
   }
+
+  // inform Blockly that the run button has been pressed
+  if (window.Blockly && Blockly.mainBlockSpace) {
+    var customEvent = utils.createEvent(Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED);
+    Blockly.mainBlockSpace.getCanvas().dispatchEvent(customEvent);
+  }
+
   callback();
 }
 
@@ -2265,9 +2282,16 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     hasVerticalScrollbars: config.hasVerticalScrollbars,
     hasHorizontalScrollbars: config.hasHorizontalScrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false),
+    showUnusedBlocks: experiments.isEnabled('unusedBlocks') && utils.valueOr(config.showUnusedBlocks, true),
     readOnly: utils.valueOr(config.readonlyWorkspace, false),
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false)
   };
+
+  // Never show unused blocks in edit mode
+  if (options.editBlocks) {
+    options.showUnusedBlocks = false;
+  }
+
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
     'disableParamEditing'].forEach(
     function (prop) {
@@ -2384,7 +2408,7 @@ StudioApp.prototype.getUnfilledFunctionalExample = function () {
  */
 StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
   var unfilledBlock;
-  Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
+  Blockly.mainBlockSpace.getAllUsedBlocks().some(function (block) {
     // Get the root block in the chain
     var rootBlock = block.getRootBlock();
     if (!filter(rootBlock)) {
@@ -2652,7 +2676,7 @@ StudioApp.prototype.hasDuplicateVariablesInForLoops = function () {
   if (this.editCode) {
     return false;
   }
-  return Blockly.mainBlockSpace.getAllBlocks().some(this.forLoopHasDuplicatedNestedVariables_);
+  return Blockly.mainBlockSpace.getAllUsedBlocks().some(this.forLoopHasDuplicatedNestedVariables_);
 };
 
 /**
@@ -2715,7 +2739,9 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     instructionsInTopPane: !!config.showInstructionsInTopPane,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
-    noVisualization: false
+    noVisualization: false,
+    smallStaticAvatar: config.skin.smallStaticAvatar,
+    aniGifURL: config.level.aniGifURL
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));
@@ -2727,7 +2753,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   let longInstructions = locale === ENGLISH_LOCALE ? level.markdownInstructions : undefined;
   let shortInstructions = level.instructions;
 
-  const noInstructionsWhenCollapsed = config.noInstructionsWhenCollapsed;
+  const noInstructionsWhenCollapsed = !!config.noInstructionsWhenCollapsed;
   // Our TopInstructions operate in two modes.
   // In CSF we show short instructions when collapsed. In this mode, we assume
   // that we have at least shortInstructions.

@@ -19,8 +19,9 @@ const SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE = 'instructions/SET_INSTRUCTIONS_MAX
  *     will both be undefined
  * (2) CSP level: Just longInstructions
  * (3) CSF level with only one set of instructions: Just shortInstructions
- * (4) CSF level with two sets of instructions: shortInstructiosn and
+ * (4) CSF level with two sets of instructions: shortInstructions and
  *     longInstructions will both be set.
+ * (5) CSF level with just long instructions
  */
 const instructionsInitialState = {
   noInstructionsWhenCollapsed: false,
