@@ -4,28 +4,29 @@ import { STAGE_PROGRESS_TYPE } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from '../../color';
 
-var style = {
-  overviewContainer: {
+const DOT_SIZE = 24;
+const STYLES = {
+  courseOverviewContainer: {
     display: 'table-cell',
     verticalAlign: 'middle',
-    paddingRight: '10px'
+    paddingRight: 10
   },
   headerContainer: {
     padding: '5px 8px',
     backgroundColor: color.lightest_gray,
     border: `1px solid ${color.lighter_gray}`,
-    borderRadius: '5px'
+    borderRadius: 5
   },
   dot: {
     puzzle: {
       display: 'inline-block',
-      width: '24px',
-      height: '24px',
-      fontSize: '14px',
+      width: DOT_SIZE,
+      height: DOT_SIZE,
+      fontSize: 14,
       textAlign: 'center',
-      lineHeight: '24px',
-      borderRadius: '24px',
-      borderWidth: '2px',
+      lineHeight: DOT_SIZE + 'px',
+      borderRadius: DOT_SIZE,
+      borderWidth: 2,
       borderStyle: 'solid',
       borderColor: color.lighter_gray,
       margin: '0 -1px',
@@ -38,25 +39,25 @@ var style = {
     },
     unplugged: {
       width: 'auto',
-      fontSize: '13px',
+      fontSize: 13,
       padding: '0 10px'
     },
     assessment: {
       borderColor: color.assessment
     },
     small: {
-      width: '7px',
-      height: '7px',
-      borderRadius: '7px',
+      width: 7,
+      height: 7,
+      borderRadius: 7,
       lineHeight: 'inherit',
       fontSize: 0
     },
     overview: {
-      height: '30px',
-      width: '30px',
-      margin: '2px',
-      fontSize: '16px',
-      lineHeight: '32px'
+      height: 30,
+      width: 30,
+      margin: 2,
+      fontSize: 16,
+      lineHeight: 32
     }
   },
   status: {
@@ -94,7 +95,7 @@ var style = {
 /**
  * Stage progress component used in level header and course overview.
  */
-var StageProgress = React.createClass({
+let StageProgress = React.createClass({
   propTypes: {
     levels: STAGE_PROGRESS_TYPE,
     currentLevelId: React.PropTypes.string,
@@ -109,29 +110,29 @@ var StageProgress = React.createClass({
   },
 
   render() {
-    var progressDots = this.props.levels.map(level => {
-      var uid = level.uid || level.id.toString();
+    let progressDots = this.props.levels.map(level => {
+      let uid = level.uid || level.id.toString();
 
-      var dotStyle = Object.assign({}, style.dot.puzzle);
+      let dotStyle = Object.assign({}, STYLES.dot.puzzle);
       if (level.kind === 'assessment') {
-        Object.assign(dotStyle, style.dot.assessment);
+        Object.assign(dotStyle, STYLES.dot.assessment);
       }
 
       if (this.props.largeDots) {
-        Object.assign(dotStyle, style.dot.overview);
+        Object.assign(dotStyle, STYLES.dot.overview);
         if (uid === this.props.currentLevelId) {
           Object.assign(dotStyle, {borderColor: color.level_current});
         }
       } else if (uid !== this.props.currentLevelId) {
-        Object.assign(dotStyle, style.dot.small);
+        Object.assign(dotStyle, STYLES.dot.small);
       }
 
-      var isUnplugged = isNaN(level.title);
+      let isUnplugged = isNaN(level.title);
       if (isUnplugged) {
-        Object.assign(dotStyle, style.dot.unplugged);
+        Object.assign(dotStyle, STYLES.dot.unplugged);
       }
 
-      var onClick = null;
+      let onClick = null;
       if (this.props.saveAnswersFirst) {
         dotStyle.cursor = 'pointer';
         onClick = (e) => {this.dotClicked(level.url); e.preventDefault();};
@@ -143,7 +144,7 @@ var StageProgress = React.createClass({
           className={`level-${level.id}`}
           href={level.url}
           onClick={onClick}
-          style={[dotStyle, style.status[level.status || 'not_tried']]}>
+          style={[dotStyle, STYLES.status[level.status || 'not_tried']]}>
             {level.title}
         </a>,
         ' '
@@ -151,7 +152,7 @@ var StageProgress = React.createClass({
     });
 
     return (
-      <div className='react_stage' style={this.props.largeDots ? style.overviewContainer : style.headerContainer}>
+      <div className='react_stage' style={this.props.largeDots ? STYLES.courseOverviewContainer : STYLES.headerContainer}>
         {progressDots}
       </div>
     );
