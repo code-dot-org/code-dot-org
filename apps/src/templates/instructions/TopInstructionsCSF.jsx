@@ -67,13 +67,6 @@ const styles = {
   }
 };
 
-// Ultimately we want this number to be more dynamic. Right now it's the height
-// needed to display the artist with a lightbulb at the same dimensions as the
-// bottom instructions scenario
-const COLLAPSED_HEIGHT = 104;
-
-const MIN_HEIGHT = COLLAPSED_HEIGHT;
-
 var TopInstructions = React.createClass({
   propTypes: {
     isEmbedView: React.PropTypes.bool.isRequired,
@@ -111,9 +104,18 @@ var TopInstructions = React.createClass({
    * If we then resize it to be larger again, we want to increase height.
    */
   componentWillReceiveProps(nextProps) {
-    if (nextProps.height < MIN_HEIGHT && nextProps.height < nextProps.maxHeight) {
-      this.props.setInstructionsRenderedHeight(Math.min(nextProps.maxHeight, MIN_HEIGHT));
+    const minHeight = this.getMinHeight();
+    if (nextProps.height < minHeight && nextProps.height < nextProps.maxHeight) {
+      this.props.setInstructionsRenderedHeight(Math.min(nextProps.maxHeight, minHeight));
     }
+  },
+
+  /**
+   * @returns {number} The minimum height of the top instructions (which is just
+   * the height of the little icon.
+   */
+  getMinHeight() {
+    return $(ReactDOM.findDOMNode(this.refs.icon)).outerHeight(true);
   },
 
   /**
@@ -123,10 +125,10 @@ var TopInstructions = React.createClass({
    * @returns {number} How much we actually changed
    */
   handleHeightResize: function (delta) {
-    var minHeight = MIN_HEIGHT;
-    var currentHeight = this.props.height;
+    const minHeight = this.getMinHeight();
+    const currentHeight = this.props.height;
 
-    var newHeight = Math.max(minHeight, currentHeight + delta);
+    let newHeight = Math.max(minHeight, currentHeight + delta);
     newHeight = Math.min(newHeight, this.props.maxHeight);
 
     this.props.setInstructionsRenderedHeight(newHeight);
@@ -139,11 +141,13 @@ var TopInstructions = React.createClass({
    * @returns {number}
    */
   adjustMaxNeededHeight() {
+    const minHeight = this.getMinHeight();
+
     const instructionsContent = this.refs.instructions;
     const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
       RESIZER_HEIGHT;
 
-    this.props.setInstructionsMaxHeightNeeded(Math.max(MIN_HEIGHT, maxNeededHeight));
+    this.props.setInstructionsMaxHeightNeeded(Math.max(minHeight, maxNeededHeight));
     return maxNeededHeight;
   },
 
@@ -157,7 +161,7 @@ var TopInstructions = React.createClass({
 
     // adjust rendered height based on next collapsed state
     if (nextCollapsed) {
-      this.props.setInstructionsRenderedHeight(COLLAPSED_HEIGHT);
+      this.props.setInstructionsRenderedHeight(this.getMinHeight());
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
     }
@@ -190,7 +194,7 @@ var TopInstructions = React.createClass({
         >
           <div style={this.props.hasAuthoredHints ? styles.authoredHints : undefined}>
             <ProtectedStatefulDiv id="bubble" className="prompt-icon-cell">
-              <PromptIcon src={this.props.smallStaticAvatar}/>
+              <PromptIcon src={this.props.smallStaticAvatar} ref='icon'/>
             </ProtectedStatefulDiv>
           </div>
           <Instructions
