@@ -1,4 +1,4 @@
-/* globals $, dashboard */
+/* global dashboard */
 
 var React = require('react');
 

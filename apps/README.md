@@ -105,7 +105,7 @@ npm test
 ```
 * If you see an error like `ReferenceError: Blockly is not defined` or notes about missing npm packages, double check that you've run `grunt build` before `grunt test`
 * Right now, the tests require a full/production build to pass.  Failures like `Cannot set property 'imageDimensions_' of undefined` in setup steps may indicate that you are testing against a debug build.
-* These tests will also be run via Travis CI when you create a pull request
+* These tests will also be run via Circle CI when you create a pull request
 
 To run an individual test, use the `--grep` option to target a file or Mocha `describe` identifier:
 

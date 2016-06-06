@@ -1,3 +1,4 @@
+import $ from 'jquery';
 var utils = require('../../utils');
 var elementUtils = require('./elementUtils');
 

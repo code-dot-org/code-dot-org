@@ -1,5 +1,3 @@
-/* global $ */
-
 /**
  * @file Mapping to inject more properties into levelbuilder levels.
  * Keyed by "puzzle_number", which is the order of a given level in its script.
