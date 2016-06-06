@@ -31,4 +31,8 @@ answer 'Answer1', weight: 1, stage_name: 'stage_name'
 answer 'Answer2', weight: 1, stage_name: 'stage_name'
 ruby
   end
+
+  def answers
+    properties['answers']
+  end
 end

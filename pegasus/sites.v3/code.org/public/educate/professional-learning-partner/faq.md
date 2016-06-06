@@ -11,22 +11,23 @@ Still have questions? See below for answers to commonly asked questions or email
 <br/><br/>
 **General questions:**<br/>
 
-- [My city isn't on the map, can I stil apply to be a Professional Learning Partner?](#map)
+- [My region is already served by another organization, can I stil apply to be a Professional Learning Partner?](#map)
 - [Do you have an example job description for the professional learning partner Program Manager?](#pm)
 - [If we are selected as the Code.org professional learning partner in our region, can we publish a press release?](#press)
+- [If we become a Professional Learning Partner can we run other CS education workshops in addition to the Code.org programs?](#cs)
+- [Can several organizations submit a joint application to be a Professional Learning Partner in a region?](#joint)
 
 
 **Questions about in-person workshops:**<br/>
 
-- [Does my organization need to provide facilitators for CS Principles?](#facilitators)
-- [Can I recruit teachers from local districts to become a part of the 2016-17 CS Principles professional learning program?](#recruit)
+- [Does my organization need to provide facilitators for the programs?](#facilitators)
+- [Can I recruit teachers from local districts to become a part of the 2017-18  professional learning programs in my area?](#recruit)
 - [What is counselor/administrator professional development?](#ca)
 
 **Questions about the budget:**<br/>
 
 - [Where can I find a breakdown of what Code.org provides?](#pay)
-- [I don't see any funding in the budget to run Exploring CS, CS in Science or CS in Algebra. What does Code.org provide for these programs?](#add)
-- [How do I know if my organization is located in an urban area?](#urban)	
+	
 
 <br/>
 ________________
@@ -34,9 +35,9 @@ ________________
 <br/>
 <br/>
 
-### **My city isn't on the map, can I stil apply to be a Professional Learning Partner?**
+### **My region is already served by another organization, can I stil apply to be a Professional Learning Partner?**
 
-For this year, we are only looking for professional learning partners in the cities where Code.org has a district partnership and has teachers enrolled in the Code.org Computer Science Principles Professional Learning Program. If you are interested in becoming a Professional Learning Partner for the 2017-18 school year and are willing to help recruit school districts in your area, please email partner@code.org and we will connect you with the District Outreach Manager for your state.
+For this year, we are only looking for professional learning partners in regions where Code.org is not already working with another organization. If you are interested in participating in local Professional Learning for the 2017-18 school year, please email partner@code.org and we will connect you with the Professional Learning Partner for your area.
 
 [**Back to the top**](#top)
 <br/>
@@ -47,7 +48,7 @@ ________________
 
 ### **Do you have an example job description for the Professional Learning Partner Program Manager?**
 
-See <a href="https://docs.google.com/document/d/1T31f3oA0Adns7ts4T_FdUHT8wCZMKHohNzBRcCl8Bck/edit" target=_blank>this document</a> for an example professional learning partner program manager job description. This position will require <a href="https://docs.google.com/spreadsheets/d/1GuyAGGwFrtGB6l2hHLFc-N6thuMs6BcQzTp_XjaU454/edit#gid=1420208407" target=_blank>0.15 of a FTE</a> in the first year. Please note this time requirement will increase if your organization chooses to run more than one program in the first year.
+See <a href="https://docs.google.com/document/d/1RTNpMGhGRdeeqB47vmEOw6xBy-UOFMigqt-pGKRHrZI/view" target=_blank>this document</a> for an example professional learning partner program manager job description. This position will require up to 0.5 of an FTE’s time - this can be shared across one or more staff members of your organization.
 
 [**Back to the top**](#top)
 <br/>
@@ -59,6 +60,19 @@ ________________
 ### **If we are selected as the Code.org professional learning partner in our region, can we publish a press release?**
 
 Of course! Anyone accepted to be a partner can publish a press release. We ask that your organization take the lead on the content and that Code.org is provided the opportunity to review it prior to print.
+</br>
+
+[**Back to the top**](#top)
+<br/>
+________________
+<a id="joint"></a>
+<br/>
+<br/>
+
+### **Can several organizations submit a joint application to be a Professional Learning Partner in a region?**
+
+Yes, some of our current partners have a joint partnership where one organization is the funding arm and the other focuses on professional learning and outreach. 
+<br/>
 
 [**Back to the top**](#top)
 <br/>
@@ -66,7 +80,20 @@ ________________
 <a id="facilitators"></a>
 <br/>
 <br/>
-### **Does my organization need to provide facilitators for CS Principles?**
+
+### **If we become a Professional Learning Partner can we run other CS education workshops in addition to the Code.org programs?**
+
+We encourage your organization can run other CS education workshosp in addition to the Code.org programs! 
+<br/>
+
+[**Back to the top**](#top)
+<br/>
+________________
+<a id="facilitators"></a>
+<br/>
+<br/>
+
+### **Does my organization need to provide facilitators for the programs?**
 
 Your organization does not need to have its own facilitators. Code.org Professional Learning Partners can  opt to contract with local Code.org approved facilitators instead.
 <br/>
@@ -79,9 +106,9 @@ ______________________________
 <br/>
 <br/>
 
-### **Can I recruit teachers from local districts to become a part of the 2016-17 CS Principles professional learning program?**
+### **Can I recruit teachers from local districts to become a part of the 2017-18  professional learning programs in my area?**
 
-Our general rule: a teacher must be from a district that Code.org has a district partnership with to apply for the CS Principles professional learning program. However, you are welcome to encourage local teachers who have a spot on their master schedule to teach AP Computer Science Principles in the Fall to join our program's wait list. 
+Yes, we will be asking each partner to recruit districts and schools for the Computer Science Principles and Computer Science Discoveries programs as part of this partnership.
 
 [**Back to the top**](#top)
 <br/>
@@ -101,30 +128,10 @@ ___________________________________________
 <br/>
 <a id="pay"></a>
 ### **Where can I find a breakdown of what Code.org provides?**
-<a href="https://docs.google.com/spreadsheets/d/1GuyAGGwFrtGB6l2hHLFc-N6thuMs6BcQzTp_XjaU454/edit?usp=sharing" target=_blank>Click here</a> to see an example budget. 
+<a href="https://docs.google.com/spreadsheets/d/1zuxMqmkhVOzAu22YgOEX61dG4xfgnw_jG0Z0-E-DMzY/view#gid=0" target=_blank>Click here</a> to see an example budget. 
 
 [**Back to the top**](#top)
 <br/>
 ___________________
 <br/>
-<br/>
 
-<a id="add"></a>
-### **I don't see any funding in the budget to run Exploring CS, CS in Science or CS in Algebra. What does Code.org provide for these programs?**
-
-The professional learning partner program is designed around CS Principles and CS Discoveries. If your organization is selected to offer Exploring CS, CS in Science and CS in Algebra to teachers in their region, we will discuss additional funding options separately.
-
-[**Back to the top**](#top)
-<br/>
-________________________
-<br/>
-<br/>
-
-<a id="urban"></a>
-### **How do I know if my organization is located in an urban area?**
-
-Code.org uses the United States Census Bureau's metropolitan and micropolitan statistical areas to determine whether or not a partner is located in an urban area. The Census Bureau defines a metro area as "a core urban area of 50,000 or more in population". <a href="http://www2.census.gov/geo/maps/metroarea/us_wall/Feb2013/cbsa_us_0213_large.gif" target=_blank>View this map</a> to determine if your organization is in an urban area.
-
-[**Back to the top**](#top)
-<br/>
-________________________

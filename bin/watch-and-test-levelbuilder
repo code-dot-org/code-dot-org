@@ -1,22 +1,18 @@
 #!/usr/bin/env ruby
 require_relative '../deployment.rb'
 require_relative '../tools/hooks/hooks_utils.rb'
+require 'cdo/only_one'
 require 'time'
 
 REPO_DIR = File.expand_path('../../', __FILE__)
 LEVELS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/scripts', __FILE__)
-
-#This file indicates whether the script is running
-LEVELBUILDER_CI_LOCK_FILENAME = 'levelbuilder_ci_lock'
 
 #This file contains the time of the last completed test run, successful or unsuccessful
 LEVELBUILDER_CI_LAST_RUN_FILENAME = 'levelbuilder_ci_last_run'
 
 Dir.chdir(REPO_DIR)
 
-exit if File.exist? LEVELBUILDER_CI_LOCK_FILENAME
-
-system "touch #{LEVELBUILDER_CI_LOCK_FILENAME}"
+exit unless only_one_running?(__FILE__)
 
 last_modified_time = File.exist?(LEVELBUILDER_CI_LAST_RUN_FILENAME) ?
     DateTime.parse(File.read(LEVELBUILDER_CI_LAST_RUN_FILENAME)).to_time : Time.at(0)
@@ -36,7 +32,6 @@ end
 
 unless level_file_modified
   puts 'No new changes, cleaning up'
-  File.delete LEVELBUILDER_CI_LOCK_FILENAME
   exit 0
 end
 
@@ -56,5 +51,3 @@ puts "Ran tests, result was #{test_result}"
 if test_result
   puts `./bin/content-push -n "Levelbuilder autocommits" -f`
 end
-
-File.delete LEVELBUILDER_CI_LOCK_FILENAME

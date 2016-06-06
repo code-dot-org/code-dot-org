@@ -1,7 +1,7 @@
 if ENV['COVERAGE'] # set this environment variable when running tests if you want to see test coverage
   require 'simplecov'
   SimpleCov.start :rails
-elsif ENV['CI'] # this is set by travis and circle
+elsif ENV['CI'] # this is set by circle
   require 'coveralls'
   Coveralls.wear!('rails')
 end
@@ -57,6 +57,8 @@ class ActiveSupport::TestCase
 
     Gatekeeper.clear
     DCDO.clear
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
   teardown do

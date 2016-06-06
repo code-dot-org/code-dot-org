@@ -162,6 +162,10 @@ FactoryGirl.define do
     properties{{question: 'question text', answers: [{text: 'text1', correct: true}], questions: [{text: 'text2'}], options: {hide_submit: false}}}
   end
 
+  factory :external, parent: Level, class: External do
+
+  end
+
   factory :external_link, parent: Level, class: ExternalLink do
     game {Game.external_link}
     url nil

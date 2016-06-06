@@ -5,6 +5,7 @@
 'use strict';
 
 require('../utils'); // Provides Function.prototype.inherits
+import $ from 'jquery';
 var _ = require('../lodash');
 var i18n = require('./locale');
 var NetSimPanel = require('./NetSimPanel');

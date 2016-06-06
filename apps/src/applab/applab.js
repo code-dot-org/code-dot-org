@@ -7,6 +7,7 @@
 /* global dashboard */
 
 'use strict';
+import $ from 'jquery';
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
@@ -705,6 +706,7 @@ Applab.init = function (config) {
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
   config.showInstructionsInTopPane = true;
+  config.noInstructionsWhenCollapsed = true;
 
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
@@ -834,7 +836,7 @@ Applab.reactMountPoint_ = null;
  * Trigger a top-level React render
  */
 Applab.render = function () {
-  var nextProps = $.extend({}, Applab.reactInitialProps_, {
+  var nextProps = Object.assign({}, Applab.reactInitialProps_, {
     isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
     onScreenCreate: designMode.createScreen
