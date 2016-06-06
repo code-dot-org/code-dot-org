@@ -1,0 +1,16 @@
+#warning-banner{style: 'display: none;'}
+  %i.fa.fa-warning.warning-sign
+  &nbsp;
+  = t('compatability.upgrade.ie_message')
+  &nbsp;
+  %a{href: 'https://support.code.org/hc/en-us/articles/219557867', target: '_blank'}
+    = t('compatability.upgrade.link')
+  %i.fa.fa-times#hide-warning{style: 'float: right; font-size: 20px;'}
+  :javascript
+    if (document.cookie.indexOf('hide-ie-warning') < 0) {
+      $("#warning-banner").show();
+    }
+    $("#warning-banner #hide-warning").click(function () {
+      document.cookie = "hide-ie-warning=1; path=/";
+      $("#warning-banner").slideUp('fast');
+    });

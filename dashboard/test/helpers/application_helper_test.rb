@@ -71,7 +71,6 @@ class ApplicationHelperTest < ActionView::TestCase
       'AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537'))
     end
     assert(!browser.cdo_unsupported?)
-    assert(!browser.cdo_partially_supported?)
   end
 
   test "chrome 34 detected" do
