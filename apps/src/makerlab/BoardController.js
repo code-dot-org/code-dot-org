@@ -4,14 +4,15 @@
 /* global Promise */
 
 try {
+  var five = require('johnny-five');
+  var ChromeSerialPort = require('chrome-serialport');
+  var PlaygroundIO = require('playground-io');
+} catch (e) {
   /**
    * These packages should currently only be downloaded and available on
    * /p/makerlab levels, not vanilla App Lab ones, so we ignore any require
    * failures here.
    */
-  var five = require('johnny-five');
-  var ChromeSerialPort = require('chrome-serialport');
-  var PlaygroundIO = require('playground-io');
 }
 
 /** @const {string} */
