@@ -1,3 +1,4 @@
+import $ from 'jquery';
 var constants = require('../constants');
 var utils = require('../../utils');
 

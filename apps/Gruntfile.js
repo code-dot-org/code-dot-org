@@ -8,7 +8,7 @@ var logBuildTimes = require('./script/log-build-times');
 
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
-  logBuildTimes(grunt);
+  var buildTimeLogger = logBuildTimes(grunt);
 
   var config = {};
 
@@ -563,6 +563,11 @@ module.exports = function (grunt) {
         chalk.italic('integrationTest') + '.');
   });
   grunt.registerTask('mochaTest', ['showMochaTestWarning', 'test']);
+
+  grunt.registerTask('logBuildTimes', function () {
+    var done = this.async();
+    buildTimeLogger.upload(console.log, done);
+  });
 
   grunt.registerTask('default', ['rebuild', 'test']);
 
