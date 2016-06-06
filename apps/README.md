@@ -136,7 +136,18 @@ click on the Debug button to open a new tab where you can then open the
 developer console to see everything that is happening. If you don't see the new
 chrome browser window, it may have opened *behind* your other windows.
 
-- You can add new test files as /test/*Tests.js, see `/test/feedbackTests.js` as an example of adding a mock Blockly instance
+- You can add new test files as /test/*Tests.js, see `/test/feedbackTests.js` as
+  an example of adding a mock Blockly instance
+
+##### Coverage Reports #####
+
+Coverage reports can be generated for any collection of tests by specifying the
+`COVERAGE=1` environment variable. Results will be placed in the `coverage`
+folder. For example, to see what code gets executed by unit tests, run:
+
+```
+COVERAGE=1 npm run test:unit
+```
 
 #### Full build with blockly-core changes
 
