@@ -258,7 +258,7 @@ body.embedded_iframe {
 }
 
 #divApplab, #designModeViz {
-  overflow: hidden;
+  overflow: visible;
   outline: none;
   -webkit-touch-callout: none;
 
@@ -269,6 +269,14 @@ body.embedded_iframe {
   position: relative;
   z-index: 1;
   background-color: white;
+}
+
+#designModeViz.clip-content {
+  overflow: hidden;
+}
+
+#designModeViz .screen {
+  overflow: visible;
 }
 
 #visualizationOverlay {
@@ -313,6 +321,9 @@ body.embedded_iframe {
       cursor: grabbing;
       cursor: -moz-grabbing;
       cursor: -webkit-grabbing;
+    }
+    &.toDelete {
+      opacity: $delete-opacity;
     }
   }
 
