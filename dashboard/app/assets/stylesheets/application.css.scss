@@ -177,6 +177,7 @@ img.video_thumbnail {
 .header-wrapper {
   padding-top: 15px;
   min-height: 70px;
+  position: relative;
 
   #progresswarning {
     position: absolute;
@@ -1139,40 +1140,27 @@ a.download-video {
   }
 }
 
-@mixin warning-banner {
-  padding: 5px 20px;
-  font-size: 28px;
-  line-height: 32px;
-  background-color: $orange;
+#warning-banner {
+  padding: 10px 20px 5px 20px;
+  font-size: 13px;
+  line-height: 16px;
+  background-color: $purple;
   text-align: center;
   color: white;
+  min-height: 30px;
   a, a:visited {
-    color: $cyan;
+    font-family: "Gotham 7r", sans-serif;
+    color: white;
+    text-decoration: underline;
   }
   a:hover {
     background: transparent;
   }
-  p {
-    padding: 7px 0;
-    margin-bottom: 0;
-  }
 }
 
-#warning-banner {
-  @include warning-banner;
-}
-
-#warning-banner-https {
-  @include warning-banner;
-}
-
-#warning-banner-chrome {
-  @include warning-banner;
-  color: white;
-  font-size: 22px;
-  line-height: 22px;
-  margin-bottom: 5px;
-  padding: 5px;
+.warning-sign {
+  font-size: 16px;
+  color: $mustardyellow;
 }
 
 .quiet_links {

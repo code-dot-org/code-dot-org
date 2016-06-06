@@ -25,25 +25,17 @@ class UserAgentParser::UserAgent
     name == 'Opera'
   end
 
+  # https://support.code.org/hc/en-us/articles/202591743
+  # has the list of browsers we support
   def cdo_unsupported?
-    return ie? && version && version.major.to_i < 8
-  end
-
-  def cdo_partially_supported?
     return false if version.nil?
     ver = version.major.to_i
 
-    # IE 9+
-    return true if ie? && ver < 9
-
-    # Firefox 10+
-    return true if firefox? && ver < 10
-
-    # Opera 12+
+    return true if ie? && ver < 8
+    return true if firefox? && ver < 24
     return true if opera? && ver < 12
-
-    # Safari 5.1.x+
-    return true if safari? && (ver < 5 || version.to_s =~ /^5\.0/)
+    return true if safari? && (ver < 6 || version.to_s =~ /^6\.0/)
+    return true if chrome? && ver < 32
 
     # Default: no browser support warning
     false

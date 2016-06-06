@@ -4,10 +4,17 @@
 - level = local_assigns[:level]
 - full_width = local_assigns[:full_width]
 
+// TODO: ie_unsupported banner will be shown in IE 8-10
+// until Sep 1, then those browsers will be unsupported
+<!--[if (IE 8)|(IE 9)]>
+= render partial: 'layouts/ie_unsupported'
+<![endif]-->
+
+#showIE10{style: 'display: none;'}
+  = render partial: 'layouts/ie_unsupported'
+
 - if browser.cdo_unsupported?
   = render partial: 'layouts/unsupported_browser'
-- elsif browser.cdo_partially_supported?
-  = render partial: 'layouts/partially_supported_browser'
 
 - show_bug_links = (script_level && script.show_report_bug_link?) || (level && level.try(:is_project_level))
 
@@ -57,6 +64,11 @@
                 %i.fa.fa-mobile
             - if params[:controller] !~ /^sessions/ and signin_button_enabled
               = render partial: 'shared/user_header_ajax'
+
+:javascript
+  if (navigator.userAgent.match('MSIE 10.0;')) {
+    $('#showIE10').show();
+  }
 
 - if script_level
   - view_as = @user || current_user
