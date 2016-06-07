@@ -1,6 +1,6 @@
 /* global dashboard */
 import React from 'react';
-import { STAGE_TYPE } from './types';
+import { stageShape } from './types';
 import StageProgress from './stage_progress.jsx';
 import color from '../../color';
 
@@ -23,14 +23,14 @@ const STYLES = {
 /**
  * Stage progress component used in level header and course overview.
  */
-let CourseProgressRow = React.createClass({
+const CourseProgressRow = React.createClass({
   propTypes: {
     currentLevelId: React.PropTypes.string,
-    stage: STAGE_TYPE
+    stage: stageShape
   },
 
   render() {
-    let stage = this.props.stage;
+    const stage = this.props.stage;
 
     return (
       <div style={STYLES.row}>
