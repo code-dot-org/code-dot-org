@@ -82,13 +82,9 @@ var ScreenSelector = React.createClass({
           onChange={this.handleChange}
           disabled={Applab.isRunning()}>
         {options}
-<<<<<<< ea862d09d1af4fd7982442cea8d84bbf544b4592
         {canAddScreen && <option>{constants.NEW_SCREEN}</option>}
-=======
-        <option>{constants.NEW_SCREEN}</option>
         {experiments.isEnabled('applab-import') &&
          <option>{constants.IMPORT_SCREEN}</option>}
->>>>>>> Add import screen option and corresponding reduce actions/reducers
       </select>
     );
   }

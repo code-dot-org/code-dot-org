@@ -49,7 +49,7 @@ const ImportDialog = React.createClass({
 
 export default connect(
   state => ({
-    isOpen: state.screens.get('isImportingScreen'),
+    isOpen: state.screens.isImportingScreen,
   }),
   dispatch => ({
     handleClose() {
