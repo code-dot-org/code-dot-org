@@ -10,7 +10,7 @@ const STYLES = {
     paddingRight: 10
   },
   headerContainer: {
-    padding: '5px 8px',
+    padding: 5,
     backgroundColor: color.lightest_gray,
     border: `1px solid ${color.lighter_gray}`,
     borderRadius: 5
@@ -29,14 +29,14 @@ let StageProgress = React.createClass({
   },
 
   render() {
-    let progressDots = this.props.levels.map(level => ([
+    let progressDots = this.props.levels.map(level =>
       <ProgressDot
         level={level}
         currentLevelId={this.props.currentLevelId}
         largeDots={this.props.largeDots}
         saveAnswersFirst={this.props.saveAnswersFirst}
-      />, ' '
-    ]));
+      />
+    );
 
     return (
       <div className='react_stage' style={this.props.largeDots ? STYLES.courseOverviewContainer : STYLES.headerContainer}>
