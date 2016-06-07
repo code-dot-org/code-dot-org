@@ -1,9 +1,9 @@
 import React from 'react';
-import { STAGE_PROGRESS_TYPE } from './types';
+import { stageProgressShape } from './types';
 import ProgressDot from './progress_dot.jsx';
 import color from '../../color';
 
-const STYLES = {
+const styles = {
   courseOverviewContainer: {
     display: 'table-cell',
     verticalAlign: 'middle',
@@ -20,17 +20,18 @@ const STYLES = {
 /**
  * Stage progress component used in level header and course overview.
  */
-let StageProgress = React.createClass({
+const StageProgress = React.createClass({
   propTypes: {
-    levels: STAGE_PROGRESS_TYPE,
+    levels: stageProgressShape,
     currentLevelId: React.PropTypes.string,
     largeDots: React.PropTypes.bool,
     saveAnswersFirst: React.PropTypes.bool.isRequired
   },
 
   render() {
-    let progressDots = this.props.levels.map(level =>
+    const progressDots = this.props.levels.map(level =>
       <ProgressDot
+        key={level.uid || level.id}
         level={level}
         currentLevelId={this.props.currentLevelId}
         largeDots={this.props.largeDots}
@@ -39,7 +40,7 @@ let StageProgress = React.createClass({
     );
 
     return (
-      <div className='react_stage' style={this.props.largeDots ? STYLES.courseOverviewContainer : STYLES.headerContainer}>
+      <div className='react_stage' style={this.props.largeDots ? styles.courseOverviewContainer : styles.headerContainer}>
         {progressDots}
       </div>
     );

@@ -1,20 +1,20 @@
 import Radium from 'radium';
 import React from 'react';
-import { LEVEL_PROGRESS_TYPE } from './types';
+import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from '../../color';
 
-const DOT_SIZE = 24;
-const STYLES = {
+const dotSize = 24;
+const styles = {
   dot: {
     puzzle: {
       display: 'inline-block',
-      width: DOT_SIZE,
-      height: DOT_SIZE,
+      width: dotSize,
+      height: dotSize,
       fontSize: 14,
       textAlign: 'center',
-      lineHeight: DOT_SIZE + 'px',
-      borderRadius: DOT_SIZE,
+      lineHeight: dotSize + 'px',
+      borderRadius: dotSize,
       borderWidth: 2,
       borderStyle: 'solid',
       borderColor: color.lighter_gray,
@@ -44,7 +44,7 @@ const STYLES = {
     overview: {
       height: 30,
       width: 30,
-      margin: 2,
+      margin: '2px 4px',
       fontSize: 16,
       lineHeight: '32px'
     }
@@ -84,9 +84,9 @@ const STYLES = {
 /**
  * Stage progress component used in level header and course overview.
  */
-let ProgressDot = React.createClass({
+const ProgressDot = React.createClass({
   propTypes: {
-    levels: LEVEL_PROGRESS_TYPE,
+    levels: levelProgressShape,
     currentLevelId: React.PropTypes.string,
     largeDots: React.PropTypes.bool,
     saveAnswersFirst: React.PropTypes.bool.isRequired
@@ -99,26 +99,26 @@ let ProgressDot = React.createClass({
   },
 
   render() {
-    let level = this.props.level;
-    let uid = level.uid || level.id.toString();
+    const level = this.props.level;
+    const uid = level.uid || level.id.toString();
 
-    let dotStyle = Object.assign({}, STYLES.dot.puzzle);
+    let dotStyle = Object.assign({}, styles.dot.puzzle);
     if (level.kind === 'assessment') {
-      Object.assign(dotStyle, STYLES.dot.assessment);
+      Object.assign(dotStyle, styles.dot.assessment);
     }
 
     if (this.props.largeDots) {
-      Object.assign(dotStyle, STYLES.dot.overview);
+      Object.assign(dotStyle, styles.dot.overview);
       if (uid === this.props.currentLevelId) {
         Object.assign(dotStyle, {borderColor: color.level_current});
       }
     } else if (uid !== this.props.currentLevelId) {
-      Object.assign(dotStyle, STYLES.dot.small);
+      Object.assign(dotStyle, styles.dot.small);
     }
 
-    let isUnplugged = isNaN(level.title);
+    const isUnplugged = isNaN(level.title);
     if (isUnplugged) {
-      Object.assign(dotStyle, STYLES.dot.unplugged);
+      Object.assign(dotStyle, styles.dot.unplugged);
     }
 
     let onClick = null;
@@ -129,11 +129,10 @@ let ProgressDot = React.createClass({
 
     return (
       <a
-        key={uid}
         className={`level-${level.id}`}
         href={level.url}
         onClick={onClick}
-        style={[dotStyle, STYLES.status[level.status || 'not_tried']]}>
+        style={[dotStyle, styles.status[level.status || 'not_tried']]}>
           {level.title}
       </a>
     );
