@@ -8,6 +8,7 @@
 'use strict';
 
 var utils = require('../utils');
+var AppStorage = require('./appStorage');
 var GoogleChart = require('./GoogleChart');
 
 /**
@@ -19,7 +20,7 @@ var GoogleChart = require('./GoogleChart');
  */
 var ChartApi = module.exports = function (docContext, appStorage) {
   this.document_ = docContext || document;
-  this.appStorage_ = appStorage || Applab.storage;
+  this.appStorage_ = appStorage || AppStorage;
 
   /**
    * List of all warnings generated while performing operations through this
