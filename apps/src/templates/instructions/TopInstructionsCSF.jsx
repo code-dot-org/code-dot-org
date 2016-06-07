@@ -200,9 +200,6 @@ var TopInstructions = React.createClass({
     const leftColWidth = PROMPT_ICON_WIDTH +
       (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
 
-    // TODO - the colWidth numbers are kind of magic/arbitrary right now (it's the
-    // amount needed for the collapser button and the hint icon), and could likely
-    // become more dynamic - or at least more well documented - in the future
     return (
       <div style={mainStyle} className="editor-column">
         <ThreeColumns
