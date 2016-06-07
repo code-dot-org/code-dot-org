@@ -330,6 +330,10 @@ class Script < ActiveRecord::Base
     k5_course? || twenty_hour?
   end
 
+  def cs_in_a?
+    name.match(Regexp.union('algebra', 'Algebra'))
+  end
+
   def show_report_bug_link?
     beta? || k5_course?
   end
@@ -343,7 +347,7 @@ class Script < ActiveRecord::Base
   end
 
   def freeplay_links
-    if name.include?('algebra')
+    if cs_in_a?
       ['calc', 'eval']
     elsif name.start_with?('csp')
       ['applab']
