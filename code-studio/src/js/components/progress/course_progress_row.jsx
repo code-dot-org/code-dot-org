@@ -4,7 +4,7 @@ import { stageShape } from './types';
 import StageProgress from './stage_progress.jsx';
 import color from '../../color';
 
-const STYLES = {
+const styles = {
   row: {
     borderBottom: `2px solid ${color.lighter_gray}`,
     display: 'table',
@@ -33,8 +33,8 @@ const CourseProgressRow = React.createClass({
     const stage = this.props.stage;
 
     return (
-      <div style={STYLES.row}>
-        <div style={STYLES.stageName}>
+      <div style={styles.row}>
+        <div style={styles.stageName}>
           {stage.title}
           <div className='stage-lesson-plan-link' style={{display: 'none'}}>
             <a target='_blank' href={stage.lesson_plan_html_url}>
