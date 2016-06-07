@@ -1,4 +1,5 @@
 var chalk = require('chalk');
+var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
@@ -65,6 +66,7 @@ module.exports = function (grunt) {
 
   var ace_suffix = envOptions.dev ? '' : '-min';
   var dotMinIfNotDev = envOptions.dev ? '' : '.min';
+  var piskelRoot = String(child_process.execSync('`npm bin`/piskel-root')).replace(/\s+$/g,'');
 
   config.copy = {
     src: {
@@ -124,6 +126,12 @@ module.exports = function (grunt) {
           cwd: 'lib/p5play',
           src: ['*.js'],
           dest: 'build/package/js/p5play/'
+        },
+        {
+          expand: true,
+          cwd: piskelRoot,
+          src: '**',
+          dest: 'build/package/js/piskel/'
         },
         {
           expand: true,
