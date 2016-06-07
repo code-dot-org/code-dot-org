@@ -43,3 +43,4 @@ crowdin.yaml
 /.ruby-version
 /levelbuilder_ci_last_run
 /coverage
+/apps/coverage
