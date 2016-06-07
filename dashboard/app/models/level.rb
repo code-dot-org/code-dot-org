@@ -137,7 +137,7 @@ class Level < ActiveRecord::Base
               element_id: callout_definition['element_id'],
               localization_key: callout_definition['localization_key'],
               callout_text: callout_definition['callout_text'],
-              qtip_config: callout_definition['qtip_config'].to_json,
+              qtip_config: callout_definition['qtip_config'].try(:to_json),
               on: callout_definition['on']
           )
         end
