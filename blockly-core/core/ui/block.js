@@ -1461,10 +1461,20 @@ Blockly.Block.prototype.setMovable = function(movable) {
   this.svg_ && this.svg_.updateMovable();
 };
 
+/**
+ * Get whether this block represents a toolbox block that can only be
+ * used a limited number of times
+ * @return {boolean}
+ */
 Blockly.Block.prototype.hasLimit = function() {
   return this.isInFlyout && this.limit_ !== undefined;
 };
 
+/**
+ * If this block is a toolbox block, mark it as being able to "produce"
+ * a limited number of workspace blocks
+ * @param {number} limit
+ */
 Blockly.Block.prototype.setLimit = function(limit) {
   if (this.isInFlyout) {
     this.limit_ = limit;
@@ -1473,22 +1483,38 @@ Blockly.Block.prototype.setLimit = function(limit) {
   }
 };
 
+/**
+ * How many more blocks this block is allowed to create
+ * @return {number}
+ */
+Blockly.Block.prototype.totalRemaining = function() {
+  if (this.hasLimit()) {
+    return this.limit_ - this.total_;
+  }
+};
+
+/**
+ * Resets the count of blocks "produced" by this block to zero
+ */
 Blockly.Block.prototype.resetTotal = function() {
   this.addTotal(-this.total_);
 };
 
+/**
+ * Adjust the number of blocks that have been "produced" by this block
+ * @param {number} inc - the amount to increment (or decrement) by
+ */
 Blockly.Block.prototype.addTotal = function(inc) {
   if (!this.isInFlyout) {
-    goog.asserts.fail('only toolbox blocks have a total');
+    goog.asserts.fail('only toolbox blocks may have a total');
   }
   if (this.total_ + inc > this.limit_) {
-    goog.asserts.fail('cannot create more than %s blocks', this.limit_);
+    goog.asserts.fail('this toolbox block cannot create more than %s workspace blocks', this.limit_);
   }
   if (this.total_ + inc < 0) {
-    goog.asserts.fail('that just doesn\'t make sense');
+    goog.asserts.fail('cannot have a total of fewer than zero blocks');
   }
   this.total_ += inc;
-  this.setDisabled(this.total_ === this.limit_);
   this.svg_.updateLimit(this.limit_ - this.total_);
 };
 

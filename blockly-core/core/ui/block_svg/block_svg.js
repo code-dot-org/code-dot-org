@@ -535,8 +535,6 @@ Blockly.BlockSvg.prototype.updateLimit = function (limit) {
     }, this.svgGroup_);
 
     this.limitRect_ = Blockly.createSvgElement('rect', {
-      stroke: '#ffffff',
-      fill: '#59b9dc',
       height: BUBBLE_SIZE,
       width: BUBBLE_SIZE,
       x: -HALF_BUBBLE_SIZE,
@@ -547,12 +545,15 @@ Blockly.BlockSvg.prototype.updateLimit = function (limit) {
 
     this.limitText_ = Blockly.createSvgElement('text', {
       'class': 'blocklyText',
-      'style': 'font-size: 10pt',
       'dominant-baseline': 'central',
       'text-anchor': 'middle'
     }, this.limitGroup_);
+  }
 
-    this.limitText_.appendChild(document.createTextNode(limit));
+  if (limit === 0) {
+    Blockly.addClass_(this.svgGroup_, 'blocklyUnused');
+  } else {
+    Blockly.removeClass_(this.svgGroup_, 'blocklyUnused');
   }
 
   this.limitText_.textContent = limit;

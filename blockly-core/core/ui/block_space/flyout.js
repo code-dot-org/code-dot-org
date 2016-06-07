@@ -96,7 +96,7 @@ Blockly.Flyout = function(blockSpaceEditor, opt_static) {
    * @type {Object}
    * @private
    */
-  this.limits_ = {};
+  this.blockLimits_ = {};
 
   /**
    * List of event listeners.
@@ -480,7 +480,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
     }
 
     if (block.hasLimit()) {
-      this.limits_[block.type] = block;
+      this.blockLimits_[block.type] = block;
     }
 
     block.render();
@@ -696,7 +696,7 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
       // Right-click.  Don't create a block, let the context menu show.
       return;
     }
-    if (originBlock.hasLimit() && originBlock.limit_ === originBlock.total_) {
+    if (originBlock.hasLimit() && originBlock.totalRemaining() === 0) {
       // at capacity.
       return;
     }
@@ -743,22 +743,13 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
   };
 };
 
+/**
+ * All updates to be performed every time the block space changes
+ * @private
+ */
 Blockly.Flyout.prototype.onBlockSpaceChange_ = function() {
   this.filterForCapacity_();
   this.updateBlockLimits_();
-};
-
-Blockly.Flyout.prototype.updateBlockLimits_ = function() {
-  Object.keys(this.limits_)
-      .forEach(function (type) {
-        this.limits_[type].resetTotal();
-      }, this);
-
-  this.blockSpaceEditor_.blockSpace.getAllBlocks()
-      .forEach(function (block) {
-        var limit = this.limits_[block.type];
-        limit && limit.addTotal(1);
-      }, this);
 };
 
 /**
@@ -774,6 +765,23 @@ Blockly.Flyout.prototype.filterForCapacity_ = function() {
     var disabled = allBlocks.length > remainingCapacity;
     block.setDisabled(disabled);
   }
+};
+
+/**
+ * Update the block counts for limited-quantity workspace blocks
+ * @private
+ */
+Blockly.Flyout.prototype.updateBlockLimits_ = function() {
+  Object.keys(this.blockLimits_)
+      .forEach(function (type) {
+        this.blockLimits_[type].resetTotal();
+      }, this);
+
+  this.blockSpaceEditor_.blockSpace.getAllVisibleBlocks()
+      .forEach(function (block) {
+        var limit = this.blockLimits_[block.type];
+        limit && limit.addTotal(1);
+      }, this);
 };
 
 /**
