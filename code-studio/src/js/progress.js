@@ -124,7 +124,10 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
   var store = loadProgress(scriptData, currentLevelId);
   var mountPoint = document.createElement('div');
 
-  $.ajax('/api/user_progress/' + scriptData.name).done(data => {
+  $.ajax(
+    '/api/user_progress/' + scriptData.name,
+    { data: { user_id: clientState.queryParams('user_id') } }
+  ).done(data => {
     data = data || {};
 
     // Show lesson plan links if teacher

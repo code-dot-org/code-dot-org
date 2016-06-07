@@ -46,8 +46,8 @@ module TestRunUtils
   def self.run_dashboard_tests
     Dir.chdir(dashboard_dir) do
       with_hipchat_logging('dashboard tests') do
-        RakeUtils.rake 'test'
-        RakeUtils.rake 'konacha:run'
+        RakeUtils.rake_stream_output 'test'
+        RakeUtils.rake_stream_output 'konacha:run'
       end
     end
   end
@@ -55,7 +55,7 @@ module TestRunUtils
   def self.run_pegasus_tests
     Dir.chdir(pegasus_dir) do
       with_hipchat_logging('pegasus tests') do
-        RakeUtils.rake 'test'
+        RakeUtils.rake_stream_output 'test'
       end
     end
   end
@@ -63,7 +63,7 @@ module TestRunUtils
   def self.run_shared_tests
     Dir.chdir(shared_dir) do
       with_hipchat_logging('shared tests') do
-        RakeUtils.rake 'test'
+        RakeUtils.rake_stream_output 'test'
       end
     end
   end

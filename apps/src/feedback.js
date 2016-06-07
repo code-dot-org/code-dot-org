@@ -1,7 +1,8 @@
 /* global trackEvent, appOptions */
 
-var React = require('react');
-var ReactDOM = require('react-dom');
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
@@ -760,7 +761,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
         phone.focus();
         dom.addClickTouchEvent(submitButton, function () {
           var phone = $(sharingDiv.querySelector("#phone"));
-          var params = jQuery.param({
+          var params = $.param({
             level_source: options.response.level_source_id,
             phone: phone.val()
           });
@@ -768,7 +769,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
           phone.prop('readonly', true);
           submitButton.disabled = true;
           submitted = true;
-          jQuery.post(options.response.phone_share_url, params)
+          $.post(options.response.phone_share_url, params)
             .done(function (response) {
               $(submitButton).text("Sent!");
               trackEvent("SendToPhone", "success");

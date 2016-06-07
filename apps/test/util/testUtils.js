@@ -1,16 +1,13 @@
-import {assert} from './configuredChai';
-
-require('require-globify');
-
+require('babel-polyfill');
 var $ = require('jquery');
 var React = require('react');
+import {assert} from './configuredChai';
 
 exports.setExternalGlobals = function () {
-  window.$ = $;
-  window.jQuery = $;
+  // Temporary: Provide React on window while we still have a direct dependency
+  // on the global due to a bad code-studio/apps interaction.
   window.React = React;
-
-  window.dashboard = $.extend(window.dashboard, {
+  window.dashboard = Object.assign({}, window.dashboard, {
     i18n: {
       t: function (selector) { return selector; }
     },
@@ -53,7 +50,8 @@ exports.setupLocale = setupLocale;
 function setupLocales() {
   // make sure Blockly is loaded
   require('./frame')();
-  require('../../build/package/js/en_us/*_locale*.js', { mode: 'expand'});
+  var context = require.context('../../build/package/js/en_us/', false, /.*_locale.*\.js$/);
+  context.keys().forEach(context);
   assert(window.blockly.applab_locale);
 }
 

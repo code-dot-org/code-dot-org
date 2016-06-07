@@ -8,6 +8,7 @@
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
+import $ from 'jquery';
 var i18n = require('./locale');
 var markup = require('./NetSimBitLogPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel');

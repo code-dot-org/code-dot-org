@@ -8,10 +8,6 @@ end
 Dashboard::Application.routes.draw do
   resources :survey_results, only: [:create], defaults: { format: 'json' }
 
-  def redirect_to_teacher_dashboard
-    redirect CDO.code_org_url('/teacher-dashboard')
-  end
-
   resources :user_levels, only: [:update]
 
   resources :gallery_activities, path: '/gallery' do
@@ -40,9 +36,6 @@ Dashboard::Application.routes.draw do
   # XHR proxying
   get 'xhr', to: 'xhr_proxy#get', format: false
 
-  get 'sections/new', to: redirect_to_teacher_dashboard
-  get 'sections/:id/edit', to: redirect_to_teacher_dashboard
-
   resources :sections, only: [:show] do
     member do
       post 'log_in'
@@ -65,10 +58,6 @@ Dashboard::Application.routes.draw do
     end
   end
   get '/share/:id', to: redirect('/c/%{id}')
-
-  get '/s/k-1(/*all)', to: redirect('/s/course1')
-  get '/s/2-3(/*all)', to: redirect('/s/course2')
-  get '/s/4-5(/*all)', to: redirect('/s/course3')
 
   devise_scope :user do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
@@ -152,7 +141,12 @@ Dashboard::Application.routes.draw do
         end
       end
     end
+
+    get 'preview_assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
+    post 'confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments', as: 'confirm_assignments'
   end
+
+  get '/pl/:course', to: 'plc/user_course_enrollments#index'
 
   get '/beta', to: redirect('/')
 
@@ -161,18 +155,11 @@ Dashboard::Application.routes.draw do
   get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
   get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false
 
-  get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_NAME, as: 'k8intro_chapter', format: false
-  get '/editcode/:chapter', to: 'script_levels#show', script_id: Script::EDIT_CODE_NAME, as: 'editcode_chapter', format: false
-  get '/2014/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_FOURTEEN_NAME, as: 'twenty_fourteen_chapter', format: false
   get '/flappy/:chapter', to: 'script_levels#show', script_id: Script::FLAPPY_NAME, as: 'flappy_chapter', format: false
   get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
   resources :followers, only: [:create]
   post '/followers/remove', to: 'followers#remove', as: 'remove_follower'
-
-  # old teacher dashboard should redirect to new teacher dashboard
-  get '/followers', to: redirect_to_teacher_dashboard
-  get '/followers/:action', to: redirect_to_teacher_dashboard
 
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
@@ -229,9 +216,6 @@ Dashboard::Application.routes.draw do
   post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
   get '/admin/:action', controller: 'reports', as: 'reports'
 
-  get '/stats/usage/:user_id', to: redirect_to_teacher_dashboard
-  get '/stats/students', to: redirect_to_teacher_dashboard
-  get '/stats/:user_id', to: redirect_to_teacher_dashboard
   get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
 
   get '/notes/:key', to: 'notes#index'
@@ -302,11 +286,6 @@ Dashboard::Application.routes.draw do
     resources :enrollment_unit_assignments
     resources :evaluation_questions
   end
-
-  get '/plc/enrollment_evaluations/:unit_assignment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
-  post '/plc/enrollment_evaluations/:unit_assignment_id/submit_evaluation', to: 'plc/enrollment_evaluations#submit_evaluation'
-  get '/plc/enrollment_evaluations/:unit_assignment_id/preview_assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
-  post '/plc/enrollment_evaluations/:unit_assignment_id/confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments'
 
   post '/plc/course_units/:id/submit_new_questions_and_answers', to: 'plc/course_units#submit_new_questions_and_answers'
 
