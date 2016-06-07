@@ -29,9 +29,9 @@ const StageProgress = React.createClass({
   },
 
   render() {
-    const progressDots = this.props.levels.map(level =>
+    const progressDots = this.props.levels.map((level, index) =>
       <ProgressDot
-        key={level.uid || level.id}
+        key={index}
         level={level}
         currentLevelId={this.props.currentLevelId}
         largeDots={this.props.largeDots}

@@ -10,9 +10,9 @@ const StageDetails = React.createClass({
   },
 
   render() {
-    const items = this.props.stage.levels.map(level => {
+    const items = this.props.stage.levels.map((level, index) => {
       return (
-        <div key={level.id}>
+        <div key={index}>
           <a href={level.url}>
             <div className={`level-${level.id} level_link ${level.status || 'not_tried'}`}>
               <i className={`fa ${level.icon}`} />
