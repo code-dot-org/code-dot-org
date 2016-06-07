@@ -132,8 +132,7 @@ module.exports = {
         assertPropertyRowValue(4, 'x position (px)', 10, assert);
 
         // take advantage of the fact that we expose the filesystem via
-        // localhost:8001
-        var assetUrl = '//localhost:8001/apps/static/flappy_promo.png';
+        var assetUrl = '/base/static/flappy_promo.png';
         var imageInput = $("#propertyRowContainer input").last()[0];
 
         var buttonElement = $("#design_button1")[0];
@@ -154,7 +153,11 @@ module.exports = {
 
           // add a completion on timeout since this is a freeplay level
           setTimeout(function () {
-            assert.equal(buttonElement.style.backgroundImage, 'url(http:' + assetUrl + ')');
+            assert.include(
+              buttonElement.style.backgroundImage,
+              assetUrl,
+              'Button background image should be flappy_promo'
+            );
 
             // Validate that the button wasn't resized
             assert.equal(buttonElement.style.width, originalButtonWidth);
@@ -766,10 +769,10 @@ module.exports = {
         assert.equal($('#image1').attr('src'), redImage, 'after init, code mode img src prefixed with new channel id');
 
         // a remixed button with a previous channel id in its background image url.
-        var yellowImageRegex = new RegExp("^url\\(http://localhost:[0-9]+/v3/assets/applab-channel-id/yellow\\.png\\)$");
-        assert.isTrue(yellowImageRegex.test($('#design_button1').css('background-image')),
+        var yellowImageUrl = '/v3/assets/applab-channel-id/yellow.png';
+        assert.include($('#design_button1').css('background-image'), yellowImageUrl,
           'after init, design mode button image prefixed with new channel id: ' + $('#design_button1').css('background-image'));
-        assert.isTrue(yellowImageRegex.test($('#button1').css('background-image')),
+        assert.include($('#button1').css('background-image'), yellowImageUrl,
           'after init, code mode button image prefixed with new channel id: ' + $('#button1').css('background-image'));
 
         // a legacy image element whose image url was never set.
@@ -795,8 +798,8 @@ module.exports = {
           assert.equal($('#design_image1').attr('src'), redImage, 'after run, design mode img src prefixed with new channel id');
           assert.equal($('#image1').attr('src'), redImage, 'after run, code mode img src prefixed with new channel id');
 
-          assert.isTrue(yellowImageRegex.test($('#design_button1').css('background-image')), 'after run, design mode button image prefixed with new channel id');
-          assert.isTrue(yellowImageRegex.test($('#button1').css('background-image')), 'after run, code mode button image prefixed with new channel id');
+          assert.include($('#design_button1').css('background-image'), yellowImageUrl, 'after run, design mode button image prefixed with new channel id');
+          assert.include($('#button1').css('background-image'), yellowImageUrl, 'after run, code mode button image prefixed with new channel id');
 
           assert.equal($('#image2').attr('src'), '/blockly/media/1x1.gif', 'after run, empty image has placeholder image src');
           assert.equal($('#image3').attr('src'), '/blockly/media/1x1.gif', 'after run, erased image has placeholder image src');
@@ -817,7 +820,7 @@ module.exports = {
       editCode: true,
       xml: '',
       // Use an asset path which we can access so that image loading will succeed
-      assetPathPrefix: '//localhost:8001/apps/test/integration/assets/',
+      assetPathPrefix: '/base/test/integration/assets/',
       levelHtml: '' +
       '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern" style="width: 320px; height: 450px; display: block;">' +
         '<div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
@@ -825,7 +828,7 @@ module.exports = {
         '</div>' +
       '</div>',
       runBeforeClick: function (assert) {
-        var flappyUrl = '//localhost:8001/apps/test/integration/assets/applab-channel-id/flappy_promo.png';
+        var flappyUrl = '/base/test/integration/assets/applab-channel-id/flappy_promo.png';
         assert.equal($('#design_image1').attr('src'), flappyUrl, 'after init, design mode img src prefixed with new prefix');
         assert.equal($('#image1').attr('src'), flappyUrl, 'after init, code mode img src prefixed with new prefix');
 
@@ -863,7 +866,7 @@ module.exports = {
       editCode: true,
       xml: '',
       // Use an asset path which we can access so that image loading will succeed
-      assetPathPrefix: '//localhost:8001/apps/test/integration/assets/',
+      assetPathPrefix: '/base/test/integration/assets/',
       levelHtml: '' +
       '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern" style="width: 320px; height: 450px; display: block;">' +
         '<div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
@@ -873,14 +876,18 @@ module.exports = {
         '</div>' +
       '</div>',
       runBeforeClick: function (assert) {
-        var flappyUrl = '//localhost:8001/apps/test/integration/assets/applab-channel-id/flappy_promo.png';
+        var flappyUrl = '/base/test/integration/assets/applab-channel-id/flappy_promo.png';
         assert.equal($('#design_image1').attr('src'), flappyUrl, 'after init, design mode img src prefixed with new prefix');
         assert.equal($('#image1').attr('src'), flappyUrl, 'after init, code mode img src prefixed with new prefix');
 
-        var phoneUrl = 'http://localhost:8001/apps/test/integration/assets/applab-channel-id/phone_purple.png';
-        var phoneBg = 'url(' + phoneUrl + ')';
-        assert.equal(phoneBg, $('#design_button1').css('background-image'), 'after init, design mode button image url has new prefix');
-        assert.equal(phoneBg, $('#button1').css('background-image'), 'after init, code mode button image url has new prefix');
+        var phoneUrl = '/base/test/integration/assets/applab-channel-id/phone_purple.png';
+        var designButtonBg = $('#design_button1').css('background-image');
+        assert.include(
+          designButtonBg,
+          phoneUrl,
+          'after init, design mode button image url has new prefix: '+phoneUrl+' vs '+designButtonBg
+        );
+        assert.include($('#button1').css('background-image'), phoneUrl, 'after init, code mode button image url has new prefix');
 
         var img = new Image();
         img.src = flappyUrl;
@@ -892,24 +899,24 @@ module.exports = {
           // add a completion on timeout since this is a freeplay level
           setTimeout(function () {
             var buttonElement = $('#design_button1')[0];
-            assert.equal(buttonElement.style.backgroundImage, phoneBg, 'on load, design mode button image is unchanged');
+            assert.include(buttonElement.style.backgroundImage, phoneUrl, 'on load, design mode button image is unchanged');
             assert.equal(buttonElement.style.width, '120px', 'on load, design mode button width is unchanged');
             assert.equal(buttonElement.style.height, '130px', 'on load, design mode button height is unchanged');
             assert.equal(buttonElement.style.backgroundSize, '120px 130px', 'on load, design mode background size is unchanged');
 
             buttonElement = $('#button1')[0];
-            assert.equal(buttonElement.style.backgroundImage, phoneBg, 'on load, code mode button image is unchanged');
+            assert.include(buttonElement.style.backgroundImage, phoneUrl, 'on load, code mode button image is unchanged');
             assert.equal(buttonElement.style.width, '120px', 'on load, code mode button width is unchanged');
             assert.equal(buttonElement.style.height, '130px', 'on load, code mode button height is unchanged');
             assert.equal(buttonElement.style.backgroundSize, '120px 130px', 'on load, code mode background size is unchanged');
 
             var imageElement = $('#design_image1')[0];
-            assert.equal(imageElement.src, 'http:' + flappyUrl, 'on load, design mode image source is unchanged');
+            assert.include(imageElement.src, flappyUrl, 'on load, design mode image source is unchanged');
             assert.equal(imageElement.style.width, '100px', 'on load, design mode image width is unchanged');
             assert.equal(imageElement.style.height, '105px', 'on load, design mode image height is unchanged');
 
             imageElement = $('#image1')[0];
-            assert.equal(imageElement.src, 'http:' + flappyUrl, 'on load, code mode image source is unchanged');
+            assert.include(imageElement.src, flappyUrl, 'on load, code mode image source is unchanged');
             assert.equal(imageElement.style.width, '100px', 'on load, code mode image width is unchanged');
             assert.equal(imageElement.style.height, '105px', 'on load, code mode image height is unchanged');
 
@@ -1125,6 +1132,74 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
-    }
+    },
+
+    {
+      description: "dragging out of bounds to delete",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        // Turn off animations so we don't have to wait for them
+        $.fx.off = true;
+
+        // Switch to design mode
+        $('#designModeButton').click();
+        var designModeViz = $('#designModeViz');
+
+        // Add a bunch of elements
+        testUtils.dragToVisualization('BUTTON', 0, 0);
+        testUtils.dragToVisualization('IMAGE', 50, 100);
+        testUtils.dragToVisualization('LABEL', 200, 150);
+        testUtils.dragToVisualization('TEXT_INPUT', 100, 200);
+
+        // Verify the elements are there
+        var button = designModeViz.find('#design_button1');
+        var image = designModeViz.find('#design_image1');
+        var label = designModeViz.find('#design_label1');
+        var text_input = designModeViz.find('#design_text_input1');
+        assert.equal(button.length, 1, "button was dragged on screen");
+        assert.equal(image.length, 1), "image was dragged on screen";
+        assert.equal(label.length, 1, "label was dragged on screen");
+        assert.equal(text_input.length, 1, "text input was dragged on screen");
+
+        // Drag button out of the app towards the right and verify element got deleted
+        dragElement(button[0], 350, 0);
+        assert.equal(designModeViz.find('#design_button1').length, 0, "button was deleted");
+
+        // Drag image out of the app towards the bottom and verify element got deleted
+        dragElement(image[0], 0, 500);
+        assert.equal(designModeViz.find('#design_image1').length, 0, "image was deleted");
+
+        // Drag label out of the app towards the right and bottom and verify element got deleted
+        dragElement(label[0], 200, 350);
+        assert.equal(designModeViz.find('#design_label1').length, 0, "label was deleted");
+
+        // Drag the text input within the app and verify element did not get deleted
+        dragElement(text_input[0], 10, 10);
+        text_input = designModeViz.find('#design_text_input1');
+        assert.equal(text_input.length, 1, "text input was not deleted");
+
+         // Drag the text input slightly outside of the app and verify element is pushed back in
+        dragElement(text_input[0], 50, 230);
+        text_input = designModeViz.find('#design_text_input1');
+        assert.equal(text_input.length, 1, "text input was not deleted");
+        assert.equal(text_input.parent().position().left, 120, "text input element left position is 120");
+        assert.equal(text_input.parent().position().top, 420, "text input element top position is 210");
+        assertPropertyRowValue(4, 'x position (px)', 120, assert, "text input x pos property value is 120");
+        assertPropertyRowValue(5, 'y position (px)', 420, assert, "text input y pos property value is 420");
+
+        // Drag the text input outside of the app and verify it got deleted
+        dragElement(text_input[0], 210, 50);
+        text_input = designModeViz.find('#design_text_input1');
+        assert.equal(text_input.length, 0, "text input was deleted");
+
+        Applab.onPuzzleComplete();
+
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
   ]
 };

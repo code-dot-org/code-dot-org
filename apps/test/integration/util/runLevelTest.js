@@ -120,7 +120,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
   main({
     skinId: skinId,
     level: level,
-    baseUrl: 'http://localhost:8001/apps/build/package/',
+    baseUrl: '/base/build/package/',
     channel: 'applab-channel-id',
     assetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
