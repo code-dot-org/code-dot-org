@@ -18,7 +18,7 @@ const STYLES = {
       borderWidth: 2,
       borderStyle: 'solid',
       borderColor: color.lighter_gray,
-      margin: '0 -1px',
+      margin: '0 2px',
       transition: 'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
       ':hover': {
         textDecoration: 'none',
