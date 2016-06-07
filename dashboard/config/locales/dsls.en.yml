@@ -107,9 +107,12 @@ en:
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
+      CSD - Headers and Lists - Hobbies Project: {}
+      CSD - Headers and Lists - Recipe Project: {}
       CSD U3 - Sprites - Stop: {}
       CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
+      CSD U3 Draw Loop Stop: {}
       CSD U3 Expressions STOP writing 10: {}
       CSD U3 Keypress Stop: {}
       CSD U3 Variables Reassign Predict No Response: {}
@@ -980,10 +983,12 @@ en:
       U1L1 Student Lesson Introduction:
         Impact of Innovation: Impact of Innovation
         description here: description here
+      U1L10 Lesson Overview: {}
       U1L10 Lesson Plan: {}
       U1L10 Student Lesson Introduction:
         description here: description here
         title: title
+      U1L11 Lesson Overview: {}
       U1L11 Lesson Plan: {}
       U1L11 Student Lesson Introduction:
         description here: description here
@@ -1023,6 +1028,7 @@ en:
       U1L5 Student Lesson Introduction:
         description here: description here
         title: title
+      U1L6 Lesson Overview: {}
       U1L6 Lesson Plan: {}
       U1L6 Student Lesson Introduction:
         description here: description here
@@ -1033,6 +1039,7 @@ en:
       U1L8 Student Lesson Introduction:
         description here: description here
         title: title
+      U1L9 Lesson Overview: {}
       U1L9 Lesson Plan: {}
       U1L9 Student Lesson Introduction:
         description here: description here
@@ -1040,6 +1047,7 @@ en:
       U2L1 Student Lesson Introduction:
         description here: description here
         title: title
+      U2L10 Lesson Overview: {}
       U2L10 Lesson Plan: {}
       U2L10 Student Lesson Introduction:
         'DNS in the Real World ': 'DNS in the Real World '
@@ -1063,11 +1071,13 @@ en:
         One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
       U2L19 Student Lesson Introduction:
         Public Key Encryption: Public Key Encryption
+      U2L2 Lesson Overview: {}
       U2L2 Lesson Plan: {}
       U2L2 Student Lesson Introduction:
         The Need for Addressing: The Need for Addressing
       U2L20 Student Lesson Introduction:
         Security and Hacking in the Real World: Security and Hacking in the Real World
+      U2L3 Lesson Overview: {}
       U2L3 Lesson Plan: {}
       U2L3 Student Lesson Introduction:
         Lesson 3 - Invent an addressing protocol: Lesson 3 - Invent an addressing protocol
