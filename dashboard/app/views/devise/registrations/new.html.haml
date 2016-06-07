@@ -1,4 +1,11 @@
+-require 'country_codes'
+
 - resource.user_type ||= params[:user].try(:fetch, :user_type) || User::TYPE_STUDENT
+
+:css
+  .form-group {
+    margin-top: 0px !important
+  }
 
 #signup
   .row
@@ -73,21 +80,33 @@
         #age-block.itemblock
           .labelblock
             = t('signup_form.age')
-          = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
+          = f.select :age, User::AGE_DROPDOWN_OPTIONS, { include_blank: true, disabled: '', selected: '' }
           .error_in_field
             = "Age is required"
 
         #gender-block.itemblock
           .labelblock
             = t('signup_form.gender')
-          = f.select :gender, gender_options
+          = f.select :gender, gender_options, { disabled: '', selected: '' }
           .error_in_field
             = "Gender is required"
 
-        #district-block.itemblock{style: "display: none"}
+        #schoolcountry-block.itemblock{style: "display: none"}
           .labelblock
+            = "Country"
+          %select#schoolcountry.form-control{name: "user[school_country]", type: "select", required: false}
+            %option{value: "", selected: true, disabled: true}
+            - get_all_countries.each do |country_abbr, country_name|
+              %option{value: country_abbr}= country_name
+            %option{value: "other"} Other
+          .error_in_field
+            = "Country is required"
+
+        #district-block.itemblock{style: "display: none"}
+          .labelblock{style: "vertical-align: top"}
             = "District"
-          = render partial: 'shared/district_dropdown', locals: {form_name: "user"}
+          .district-dropdown{style: "display: inline-block; background-color: rgba(0,0,0,0.1); padding: 10px; border-radius: 5px; width: 400px"}
+            = render partial: 'shared/district_dropdown', locals: {form_name: "user"}
           .error_in_field
             = "Enter something here"
 
@@ -135,8 +154,6 @@
   }
 
   function showStudent() {
-    // full list: name, email, password, password-confirmation, age, gender-optional
-
     // show age (and reset to blank)
     $("#age-block").fadeIn();
 
@@ -146,14 +163,17 @@
     // hide school-name-optional
     $("#schoolname-block").hide();
 
+    // hide school-country
+    $("#schoolcountry-block").hide();
+
     // hide district
     $("#district-block").hide();
 
+    // Clear country.  It can be reentered again to make district dropdown appear.
+    $("#schoolcountry").val("");
   }
 
   function showTeacher() {
-    // full list: name, email, password, password-confirmation, school-name-optional, school-address-optional
-
     // hide age (and set to 21)
     $("#age-block").hide();
 
@@ -163,11 +183,8 @@
     // show school-name-optional
     $("#schoolname-block").fadeIn();
 
-    // show district
-    $("#district-block").fadeIn();
-
-    // later: Country, State, School Type, School District, School Name
-
+    // show school-country
+    $("#schoolcountry-block").fadeIn();
   }
 
 
@@ -205,6 +222,14 @@
       password_message_confirmation.text("");
     }
     password_message.text("");
+  });
+
+  $('#schoolcountry').change(function () {
+    if ($(this).val() == 'US') {
+      $("#district-block").fadeIn();
+    } else {
+      $("#district-block").fadeOut();
+    }
   });
 
   $( "#user_name" ).placeholder();

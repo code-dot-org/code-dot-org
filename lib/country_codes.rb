@@ -250,3 +250,8 @@ COUNTRY_CODE_TO_COUNTRY_NAME = {
 def country_name_from_code(code)
   return COUNTRY_CODE_TO_COUNTRY_NAME[code.to_s.strip.upcase] || code
 end
+
+# Returns the entire list of countries
+def get_all_countries()
+  return COUNTRY_CODE_TO_COUNTRY_NAME.sort_by {|_code, name| name}
+end
