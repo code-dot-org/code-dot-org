@@ -182,6 +182,17 @@ module LevelsHelper
       # currently, all levels are Blockly or DSLDefined except for Unplugged
       @app_options = view_options.camelize_keys
     end
+
+    @app_options[:dialog] = {
+      skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
+      preTitle: @level.properties['pre_title'],
+      fallbackResponse: @fallback_response.to_json,
+      callback: @callback,
+      app: @level.type.underscore,
+      level: @level.level_num,
+      shouldShowDialog: @level.properties['skip_dialog'].blank? && @level.properties['options'].try(:[], 'skip_dialog').blank?
+    }
+
     @app_options
   end
 

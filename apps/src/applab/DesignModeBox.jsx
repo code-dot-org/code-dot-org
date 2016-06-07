@@ -1,5 +1,3 @@
-/* global $ */
-
 var React = require('react');
 var color = require('../color');
 var DesignToolbox = require('./DesignToolbox');

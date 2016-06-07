@@ -1,5 +1,4 @@
 require 'phantomjs'
-require 'open-uri'
 require 'cdo/tempfile'
 require 'cdo/hip_chat'
 require 'cdo/yaml'
@@ -17,7 +16,7 @@ module PDF
   end
 
   def self.remove_urls(array)
-    array.reject{|f| URI.parse(f).scheme == 'http'}
+    array.reject{|string| string_is_url(string)}
   end
 
   def self.existing_files(paths)
@@ -28,13 +27,17 @@ module PDF
     existing_files get_local_pdf_paths(collate_file).map{|f| f.sub('.pdf', '.md')}
   end
 
+  def self.string_is_url(filename)
+    ['http', 'https'].include?(URI.parse(filename).scheme)
+  end
+
   # Reads collate file, outputs array of fully qualified PDF paths and URLs
   def self.parse_collate_file(collate_file)
     options, body = YAML.parse_yaml_header(IO.read(collate_file))
     all_paths = body.each_line.map(&:strip).
       reject { |s| s.nil? || s == '' }.
       map do |filename|
-        next filename if URI.parse(filename).scheme == 'http'
+        next filename if string_is_url(filename)
         File.expand_path(filename, File.dirname(collate_file))
       end
     return [options, all_paths]
@@ -44,13 +47,13 @@ module PDF
     temp_file_handles = []
 
     filenames.map! do |filename|
-      next filename unless URI.parse(filename).scheme == 'http'
+      next filename unless string_is_url(filename)
       begin
         local_file = Tempfile.from_url(filename)
       rescue Exception => msg
         puts "Error downloading PDF file #{filename} for output file #{output_file}. Aborting"
         puts "Error message: #{msg}"
-        exit 1
+        raise
       end
       temp_file_handles << local_file
       local_file.path
