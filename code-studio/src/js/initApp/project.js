@@ -129,13 +129,6 @@ var projects = module.exports = {
   },
 
   /**
-   * Whether this project uses Firebase for data storage.
-   */
-  useFirebase: function () {
-    return current.useFirebase;
-  },
-
-  /**
    * Sets abuse score to zero, saves the project, and reloads the page
    */
   adminResetAbuseScore: function () {
