@@ -117,7 +117,7 @@ const ProgressDot = React.createClass({
     }
 
     const isUnplugged = isNaN(level.title);
-    if (isUnplugged && uid === this.props.currentLevelId) {
+    if (isUnplugged && (this.props.largeDots || uid === this.props.currentLevelId)) {
       Object.assign(dotStyle, styles.dot.unplugged);
     }
 
