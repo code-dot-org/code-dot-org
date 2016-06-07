@@ -6,7 +6,6 @@ allow_post: true
   authentication_required!
   forbidden! unless dashboard_user[:admin]
 
-  DASHBOARD_DB = Sequel.connect(CDO.dashboard_db_writer.sub('mysql:', 'mysql2:'))
   USERS = DASHBOARD_DB[:users]
   PERMISSIONS = DASHBOARD_DB[:user_permissions]
 
@@ -27,13 +26,13 @@ allow_post: true
       if user[:user_type] == permission_name
         return "#{email} already has 'teacher'"
       end
-      user.update(user_type: permission_name)
+      USERS.where(email: email).update(user_type: permission_name)
       return "#{email} granted 'teacher'"
     elsif permission_name == 'admin'
       if user[:admin]
         return "#{email} already has 'admin'"
       end
-      user.update(admin: 1)
+      USERS.where(email: email).update(admin: true)
       return "#{email} granted 'admin'"
     end
 
