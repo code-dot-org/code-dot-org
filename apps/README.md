@@ -64,7 +64,7 @@ See also: [Full build with blockly-core](#full-build-with-blockly-core-changes)
 npm start
 ```
 
-This will perform an initial build, then serve and open a playground with a few sample blockly apps at [http://localhost:8000](http://localhost:8000) and live-reload changes to apps.  If you followed the steps above for seeing your development version in Dashboard, the rebuilt apps code will be immediately available to Dashboard too. 
+This will perform an initial build, then serve and open a playground with a few sample blockly apps at [http://localhost:8000](http://localhost:8000) and live-reload changes to apps.  If you followed the steps above for seeing your development version in Dashboard, the rebuilt apps code will be immediately available to Dashboard too.
 
 Caveats:
 * The live-reload server does not pick up changes to blockly-core.  For that, see [Full build with blockly-core](#full-build-with-blockly-core-changes).
@@ -107,33 +107,36 @@ npm test
 * Right now, the tests require a full/production build to pass.  Failures like `Cannot set property 'imageDimensions_' of undefined` in setup steps may indicate that you are testing against a debug build.
 * These tests will also be run via Circle CI when you create a pull request
 
-To run an individual test, use the `--grep` option to target a file or Mocha `describe` identifier:
+To run an individual test, use the `--entry` option with `npm run test:entry` to target a file:
 
 ```
-npm test -- --grep myTestName # e.g., 2_11, or requiredBlockUtils
+npm run test:entry -- --entry ./test/unit/gridUtilsTest.js
 ```
 
-To debug tests using the webkit inspector, just add a `--debug` flag. This will launch a new browser window with a debugger attached.
-Unfortunately, this is also before bundle.js has been loaded, making it difficult to set breakpoints. The best solutions I've found
-thus far are to add debugger; statements in your code, or to have your debugger break on caught exceptions, which will generally result
-it breaking in some jquery code before running tests (at which point you can go set your breakpoints).
+To rerun tests automatically on every file change, set the environment variable
+`MOOC_WATCH=1`:
 
 ```
-npm test -- --grep='testname' --debug
+MOOC_WATCH=1 npm run test:unit
 ```
 
-We also have the ability to run a faster subset of tests without using grep. In particular, this will run without maze and turtle level tests.
+This will work on any of the test commands.
+
+To debug tests, your best bet is to run them in Chrome. Keep in mind that there
+can be subtle differences between Chrome and PhantomJS, so after fixing your
+test in Chrome, make sure it still works in PhantomJS. To run the tests in
+Chrome, use the `MOOC_BROWSER` environment variable in conjunction with `MOOC_WATCH`:
+
 ```
-npm test -- --fast
+MOOC_BROWSER=Chrome MOOC_WATCH=1 npm run test:unit
 ```
+
+A new chrome browser window will open where the tests will be running. You can
+click on the Debug button to open a new tab where you can then open the
+developer console to see everything that is happening. If you don't see the new
+chrome browser window, it may have opened *behind* your other windows.
 
 - You can add new test files as /test/*Tests.js, see `/test/feedbackTests.js` as an example of adding a mock Blockly instance
-
-If you are iterating on a particular test file that doesn't require phantomjs, install global mocha and run your individual test.  It will go way faster since it doesn't need to bundle everything before each run.
-```
-npm install -g mocha
-mocha test/ObserverTest.js
-```
 
 #### Full build with blockly-core changes
 
