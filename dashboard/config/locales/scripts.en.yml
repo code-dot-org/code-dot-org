@@ -1979,6 +1979,8 @@ en:
           title: " TEMP CSD Unit 2"
           description_short: Web Development
           description: Temp place to work on U2 of Disco
+          Headers and Lists: Headers and Lists
+          Introduction to HTML: Introduction to HTML
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description_short: Data
@@ -2021,6 +2023,12 @@ en:
           'Lesson 2,2: text compression': 'Lesson 2,2: text compression'
           'Lesson 2,3: black and white pixelation': 'Lesson 2,3: black and white pixelation'
           'Lesson 2,10: good and bad data visualizations': 'Lesson 2,10: good and bad data visualizations'
+          'Lesson 1,4: Number Systems - circle triangle square': 'Lesson 1,4: Number Systems - circle triangle square'
+          'Lesson 1,6: Sending Numbers': 'Lesson 1,6: Sending Numbers'
+          'Lesson 1,10: Routers and Redundancy': 'Lesson 1,10: Routers and Redundancy'
+          'Lesson 2,2: Text Compression': 'Lesson 2,2: Text Compression'
+          'Lesson 2,3: Black and White Pixelation': 'Lesson 2,3: Black and White Pixelation'
+          'Lesson 2,10: Good and Bad Data Visualizations': 'Lesson 2,10: Good and Bad Data Visualizations'
         MikeTest:
           title: MikeTest
           description_short: Just a script for playing around
