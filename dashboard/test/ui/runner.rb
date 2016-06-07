@@ -9,6 +9,7 @@ ENV['BUNDLE_GEMFILE'] ||= "#{ROOT}//Gemfile"
 require 'bundler'
 require 'bundler/setup'
 
+require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
 require 'cdo/hip_chat'
@@ -27,7 +28,7 @@ require 'active_support/core_ext/object/blank'
 ENV['BUILD'] = `git rev-parse --short HEAD`
 
 S3_LOGS_BUCKET = 'cucumber-logs'
-S3_LOGS_PREFIX = rack_env?(:test) ? 'test' : 'development'
+S3_LOGS_PREFIX = GitUtils.current_branch
 
 #
 # Upload the given filename (of a cucumber log) to the logs s3 bucket.
