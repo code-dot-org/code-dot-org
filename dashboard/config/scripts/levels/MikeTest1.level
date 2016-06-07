@@ -27,7 +27,6 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "maze_data": null,
     "markdown_instructions": "Markdown"
   },
   "published": true,
