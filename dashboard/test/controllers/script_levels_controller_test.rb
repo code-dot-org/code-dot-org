@@ -866,6 +866,18 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal [], assigns(:view_options)[:callouts]
   end
 
+  test 'teacher cannot view solution to plc script' do
+    sign_in @teacher
+    script = create :script
+    script.update(professional_learning_course: true)
+    stage = create(:stage, script: script)
+    level = Artist.first
+    script_level = create(:script_level, script: script, stage: stage, levels: [level])
+
+    get :show, script_id: script, stage_id: stage, id: script_level, solution: true
+    assert_response :forbidden
+  end
+
   test 'student cannot view solution' do
     sl = ScriptLevel.joins(:script, :levels).find_by(
       scripts: {name: 'allthethings'},
@@ -874,7 +886,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @student
 
     get :show, script_id: sl.script, stage_id: sl.stage, id: sl, solution: true
-    assert_select '.teacher-panel', 0
+    assert_response :forbidden
   end
 
   test 'under 13 gets redirected when trying to access applab' do
