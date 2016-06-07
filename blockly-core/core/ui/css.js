@@ -99,6 +99,19 @@ Blockly.Css.setCursor = function(cursor, opt_svg) {
  * Array making up the CSS content for Blockly.
  */
 Blockly.Css.CONTENT = [
+  '.blocklyLimit rect {',
+  ' fill: #a69bc1;',
+  '}',
+  '.blocklyLimit .blocklyText {',
+  ' font-size: 10pt;',
+  ' fill: #fff;',
+  '}',
+  '.blocklyUnused .blocklyLimit rect {',
+  ' fill: #c6cacd;',
+  '}',
+  '.blocklyUnused .blocklyLimit .blocklyText {',
+  ' fill: #5b6770',
+  '}',
   '.blocklyUnused .blocklyPath, .blocklyUnused .blocklyPathDark, .blocklyUnused .blocklyPathLight, .blocklyUnused .blocklyEditableText {',
   ' opacity: 0.25;',
   '}',
