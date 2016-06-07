@@ -3,6 +3,7 @@
 /* global Applab */
 
 import { getDatabase } from './firebaseUtils';
+import { updateTableCounters } from './firebaseCounters';
 
 // TODO(dave): convert FirebaseStorage to an ES6 class, so that we can pass in
 // firebaseName and firebaseAuthToken rather than access them as globals.
@@ -18,17 +19,6 @@ function getKeysRef(channelId) {
 
 function getRecordsRef(channelId, tableName) {
   return getDatabase(channelId).child(`storage/tables/${tableName}/records`);
-}
-
-/**
- * @param {string} tableName
- * @returns {Promise<number>} next record id to assign.
- */
-function getNextIdPromise(tableName) {
-  let lastIdRef = getDatabase(Applab.channelId)
-    .child(`counters/tables/${tableName}/last_id`);
-  return lastIdRef.transaction(currentValue => (currentValue || 0) + 1)
-    .then(transactionData => transactionData.snapshot.val());
 }
 
 /**
@@ -79,9 +69,9 @@ function getRecordExistsPromise(tableName, recordId) {
  */
 FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) {
   // Assign a unique id for the new record.
-  getNextIdPromise(tableName).then(nextId => {
+  updateTableCounters(tableName, 1, true).then(nextId => {
     record.id = nextId;
-    let recordRef = getDatabase(Applab.channelId)
+    const recordRef = getDatabase(Applab.channelId)
       .child(`storage/tables/${tableName}/records/${record.id}`);
     return recordRef.set(JSON.stringify(record));
   }).then(() => onSuccess(record), onError);
@@ -148,9 +138,11 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
     if (!recordExists) {
       onComplete(null, false);
     } else {
-      let recordRef = getDatabase(Applab.channelId)
-        .child(`storage/tables/${tableName}/records/${record.id}`);
-      recordRef.set(JSON.stringify(record)).then(() => onComplete(record, true), onError);
+      updateTableCounters(tableName, 0).then(() => {
+        const recordRef = getDatabase(Applab.channelId)
+          .child(`storage/tables/${tableName}/records/${record.id}`);
+        return recordRef.set(JSON.stringify(record));
+      }).then(() => onComplete(record, true), onError);
     }
   });
 };
@@ -173,9 +165,11 @@ FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError)
     if (!recordExists) {
       onComplete(false);
     } else {
-      let recordRef = getDatabase(Applab.channelId)
-        .child(`storage/tables/${tableName}/records/${record.id}`);
-      recordRef.set(null).then(() => onComplete(true), onError);
+      updateTableCounters(tableName, -1).then(() => {
+        const recordRef = getDatabase(Applab.channelId)
+          .child(`storage/tables/${tableName}/records/${record.id}`);
+        return recordRef.set(null);
+      }).then(() => onComplete(true), onError);
     }
   });
 };
