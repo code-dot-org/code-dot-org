@@ -13,12 +13,12 @@
       %p.smallwhitetext
         = data_t_suffix('script.name', @script.name, 'description')
 
-
-    .span3#trynow
-      = button_to t('home.trynow'), script_next_path(@script, 'next'), method: 'get', class: 'btn btn-primary biggerbutton'
-      %p.lightgreytext
-        = link_to t('landing.support'), t('landing.support_url')
-        %br/
+    - if !@script.professional_course?
+      .span3#trynow
+        = button_to t('home.trynow'), script_next_path(@script, 'next'), method: 'get', class: 'btn btn-primary biggerbutton'
+        %p.lightgreytext
+          = link_to t('landing.support'), t('landing.support_url')
+          %br/
 
     - if @script.banner_image
       .span12
