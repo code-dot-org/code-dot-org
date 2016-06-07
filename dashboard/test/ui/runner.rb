@@ -9,12 +9,12 @@ ENV['BUNDLE_GEMFILE'] ||= "#{ROOT}//Gemfile"
 require 'bundler'
 require 'bundler/setup'
 
+require 'cdo/aws/s3'
 require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
 require 'cdo/hip_chat'
 
-require 'aws-sdk'
 require 'json'
 require 'yaml'
 require 'optparse'
@@ -29,26 +29,17 @@ ENV['BUILD'] = `git rev-parse --short HEAD`
 
 S3_LOGS_BUCKET = 'cucumber-logs'
 S3_LOGS_PREFIX = GitUtils.current_branch
+log_uploader = AWS::S3::PublicVersionedLogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX)
 
 #
 # Upload the given filename (of a cucumber log) to the logs s3 bucket.
 # Returns a public URL to the uploaded log.
 #
-def upload_log_to_s3(filename, s3_client)
+def upload_log_and_get_public_url(log_uploader, filename)
   return nil unless $options.html
-  File.open(filename, 'rb') do |file|
-    result = s3_client.put_object(
-        bucket: S3_LOGS_BUCKET,
-        key: "#{S3_LOGS_PREFIX}/#{filename}",
-        body: file,
-        acl: 'public-read'
-    )
-    log_url = "https://s3.amazonaws.com/#{S3_LOGS_BUCKET}/#{S3_LOGS_PREFIX}/#{filename}"
-    log_url += "?versionId=#{result[:version_id]}" unless result[:version_id].nil?
-    return log_url
-  end
+  log_uploader.upload_log(filename)
 rescue Exception => msg
-  HipChat.log msg.to_s
+  HipChat.log "Uploading log to S3 failed: #{msg}"
   return nil
 end
 
@@ -252,7 +243,6 @@ if test_type == 'eyes tests'
 end
 
 Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes => $options.parallel_limit) do |browser, feature|
-  s3_client = Aws::S3::Client.new
   feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
   browser_name = browser['name'] || 'UnknownBrowser'
   test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
@@ -396,7 +386,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     reruns += 1
 
     # Upload the failure log to S3, so we can examine it at our leisure.
-    log_url = upload_log_to_s3(html_output_filename, s3_client)
+    log_url = upload_log_and_get_public_url(log_uploader, html_output_filename)
 
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     # Since output_stderr is empty, we do not log it to HipChat.
@@ -440,7 +430,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     # HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
     # Upload the failure log to S3, so we can examine it at our leisure.
-    log_url = upload_log_to_s3(html_output_filename, s3_client)
+    log_url = upload_log_and_get_public_url(log_uploader, html_output_filename)
 
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     HipChat.log "<pre>#{output_stderr}</pre>"
