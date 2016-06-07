@@ -29,7 +29,6 @@ var dropletUtils = require('../dropletUtils');
 var dropletConfig = require('./dropletConfig');
 var makerDropletConfig = require('../makerlab/dropletConfig');
 var AppStorage = require('./appStorage');
-var FirebaseStorage = require('./firebaseStorage');
 var constants = require('../constants');
 var experiments = require('../experiments');
 var _ = require('../lodash');
@@ -558,9 +557,6 @@ Applab.init = function (config) {
   config.runButtonClickWrapper = runButtonClickWrapper;
 
   Applab.channelId = config.channel;
-  Applab.firebaseName = config.firebaseName;
-  Applab.firebaseAuthToken = config.firebaseAuthToken;
-  Applab.storage = window.dashboard.project.useFirebase() ? FirebaseStorage : AppStorage;
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
 
@@ -667,8 +663,8 @@ Applab.init = function (config) {
   config.afterClearPuzzle = function () {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
-    Applab.storage.populateTable(level.dataTables, true); // overwrite = true
-    Applab.storage.populateKeyValue(level.dataProperties, true); // overwrite = true
+    AppStorage.populateTable(level.dataTables, true); // overwrite = true
+    AppStorage.populateKeyValue(level.dataProperties, true); // overwrite = true
     studioApp.resetButtonClick();
   };
 
@@ -712,8 +708,8 @@ Applab.init = function (config) {
   config.showInstructionsInTopPane = true;
   config.noInstructionsWhenCollapsed = true;
 
-  Applab.storage.populateTable(level.dataTables, false); // overwrite = false
-  Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
+  AppStorage.populateTable(level.dataTables, false); // overwrite = false
+  AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
 
   var onMount = function () {
     studioApp.init(config);
@@ -972,7 +968,7 @@ Applab.reset = function (first) {
     jsInterpreterLogger.detach();
   }
 
-  Applab.storage.resetRecordListener();
+  AppStorage.resetRecordListener();
 
   // Reset the Globals object used to contain program variables:
   Applab.Globals = {};
