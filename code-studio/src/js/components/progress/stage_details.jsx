@@ -1,18 +1,18 @@
 import React from 'react';
-import { STAGE_TYPE } from './types';
+import { stageShape } from './types';
 
 /**
  * Stage progress component used in level header and course overview.
  */
-var StageDetails = React.createClass({
+const StageDetails = React.createClass({
   propTypes: {
-    stage: STAGE_TYPE
+    stage: stageShape
   },
 
   render() {
-    var items = this.props.stage.levels.map(level => {
+    const items = this.props.stage.levels.map((level, index) => {
       return (
-        <div key={level.id}>
+        <div key={index}>
           <a href={level.url}>
             <div className={`level-${level.id} level_link ${level.status || 'not_tried'}`}>
               <i className={`fa ${level.icon}`} />
