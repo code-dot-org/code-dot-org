@@ -1,4 +1,4 @@
-/* global define */
+/* global define, $ */
 'use strict';
 
 import Immutable from 'immutable';
@@ -374,6 +374,33 @@ exports.escapeText = function (text) {
   }).join('');
 };
 
+exports.showUnusedBlockQtip = function (targetElement) {
+  var msg = require('./locale');
+  $(targetElement).qtip({
+    content: {
+      text: '<h4>' + msg.unattachedBlockTipTitle() +'</h4><p>' + msg.unattachedBlockTipBody() + '</p>',
+      title: {
+        button: $('<div class="tooltip-x-close"/>')
+      }
+    },
+    position: {
+      my: "bottom left",
+      at: "top right"
+    },
+    style: {
+      classes: "cdo-qtips",
+      tip: {
+        width: 20,
+        height: 20
+      }
+    },
+    hide: {
+      event: 'unfocus'
+    },
+    show: false // don't show on mouseover
+  }).qtip('show');
+};
+
 /**
  * Converts degrees into radians.
  *
@@ -396,6 +423,7 @@ exports.trySetLocalStorage = function (item, value) {
   } catch (e) {
     return false;
   }
+
 };
 
 /**
@@ -463,4 +491,27 @@ exports.deepMergeConcatArrays = (baseObject, overrides) => {
 
   var baseImmutable = Immutable.fromJS(baseObject);
   return baseImmutable.mergeWith(deepConcatMerger, overrides).toJS();
+};
+
+/**
+ * Creates a new event in a cross-browswer-compatible way.
+ *
+ * createEvent functionality is officially deprecated in favor of
+ * the Event constructor, but some older browsers do not yet support
+ * event constructors. Attempt to use the new functionality, fall
+ * back to the old if it fails.
+ *
+ * @param {String} type
+ * @param {boolean} [bubbles=false]
+ * @param {boolean} [cancelable=false]
+ */
+exports.createEvent = function (type, bubbles = false, cancelable = false) {
+  var customEvent;
+  try {
+    customEvent = new Event(type, { bubbles, cancelable });
+  } catch (e) {
+    customEvent = document.createEvent('Event');
+    customEvent.initEvent(type, bubbles, cancelable);
+  }
+  return customEvent;
 };

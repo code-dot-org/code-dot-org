@@ -1,6 +1,6 @@
 import React from 'react';
 
-var STAGE_PROGRESS_TYPE = React.PropTypes.arrayOf(React.PropTypes.shape({
+const levelProgressShape = React.PropTypes.shape({
   title: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number]),
   name: React.PropTypes.string,
   status: React.PropTypes.string,
@@ -8,13 +8,16 @@ var STAGE_PROGRESS_TYPE = React.PropTypes.arrayOf(React.PropTypes.shape({
   icon: React.PropTypes.string,
   url: React.PropTypes.string,
   id: React.PropTypes.number
-}));
-module.exports.STAGE_PROGRESS_TYPE = STAGE_PROGRESS_TYPE;
+});
+module.exports.levelProgressShape = levelProgressShape;
 
-var STAGE_TYPE = React.PropTypes.shape({
+const stageProgressShape = React.PropTypes.arrayOf(levelProgressShape);
+module.exports.stageProgressShape = stageProgressShape;
+
+const stageShape = React.PropTypes.shape({
   name: React.PropTypes.string,
   lesson_plan_html_url: React.PropTypes.string,
   flex_category: React.PropTypes.string,
-  levels: STAGE_PROGRESS_TYPE
+  levels: stageProgressShape
 });
-module.exports.STAGE_TYPE = STAGE_TYPE;
+module.exports.stageShape = stageShape;

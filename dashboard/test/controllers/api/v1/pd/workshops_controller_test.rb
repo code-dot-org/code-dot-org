@@ -317,6 +317,11 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     all_forbidden
   end
 
+  test 'anyone can see the K5 public map index' do
+    get :k5_public_map_index
+    assert_response :success
+  end
+
   private
 
   def all_forbidden
