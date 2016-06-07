@@ -383,6 +383,23 @@ module.exports = function (grunt) {
     }
   };
 
+  var uglifiedFiles = {};
+  config.uglify = {
+    browserified: {
+      files: uglifiedFiles
+    }
+  };
+
+  config.uglify.lib = {files: {}};
+  config.uglify.lib.files[outputDir + 'jsinterpreter/interpreter.min.js'] =
+    outputDir + 'jsinterpreter/interpreter.js';
+  config.uglify.lib.files[outputDir + 'jsinterpreter/acorn.min.js'] =
+    outputDir + 'jsinterpreter/acorn.js';
+  config.uglify.lib.files[outputDir + 'p5play/p5.play.min.js'] =
+    outputDir + 'p5play/p5.play.js';
+  config.uglify.lib.files[outputDir + 'p5play/p5.min.js'] =
+    outputDir + 'p5play/p5.js';
+
   config.watch = {
     js: {
       files: ['src/**/*.{js,jsx}'],
@@ -499,6 +516,8 @@ module.exports = function (grunt) {
     'notify:browserify',
     // Skip minification in development environment.
     envOptions.dev ? 'noop' : 'webpack:uglify',
+    // Skip minification in development environment.
+    envOptions.dev ? 'noop' : 'uglify:lib',
     'postbuild'
   ]));
 
