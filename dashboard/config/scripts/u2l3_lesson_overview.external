@@ -1,0 +1,33 @@
+name 'U2L3 Lesson Overview'
+css 'unplugged'
+markdown <<MARKDOWN
+## Lesson 2.3: Black and White Pixelation 
+
+### Overview
+<img src = "https://images.code.org/3468c2b921740a13dae513eb4a43cb14-image-1465277617751.png" width ="200" style="float:right; margin-left:30px">
+
+**Pacing: Unit 2, Week 1**
+<br>
+**Lesson Type: Pixelation , Concept Invention , Individual Creation**
+
+In this lesson, students will begin to explore the way digital images are encoded in binary. The class begins by asking students to invent their own image encoding protocol in order to familiarize themselves with some of the subtle complications of encoding images, namely the need for other data, called metadata, that describes properties of the image necessary for rendering it. Students will learn about pixels, raster images, and what an image file format is. Students will encode binary image data using a widget in Code Studio.
+
+<br>
+
+### Things to keep in mind while planning this lesson at TeacherCon
+
+- While you can keep it tight, don’t discard the warmup activity as it’s the primary concept invention in the lesson, and motivates the idea of metadata - you should be able to appeal to places where we’ve used/seen metadata previously in the Internet Simulator lessons inventing protocols.
+- Decide whether you want to show the tutorial video to the whole group or even at all - you might be able to demonstrate it more effectively - but do be conscious of how much time it will take.
+- Make sure to review the levels in code studio that have learners practice using the tool before getting to the free-play area.  
+- The primary goal of this lesson during TeacherCon is to allow learners time to create something of their own design - the puzzle-levels leading up to the free-play one are merely meant for practice and to gain familiarity with the image format.
+
+
+### U2L3 Lesson Plan
+
+<br>
+Head over to curriculum.code.org to see this lesson and all associated resources (like videos and worksheets). 
+<br><br>
+<a href="https://curriculum.code.org/csp/unit2/3/" target="blank"><button class="plc">U2L3 Lesson Plan >></button></a><br>
+
+
+MARKDOWN
