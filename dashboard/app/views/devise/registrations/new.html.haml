@@ -132,6 +132,7 @@
 
   function formSuccess() {
     console.log('form success');
+    window.location.href = '/';
   }
 
   function formError(err) {
@@ -198,7 +199,7 @@
     var userType = $.grep(formData, function(e) { return e.name == "user[user_type]"; });
     if (userType.length == 1 && userType[0].value == "teacher")
     {
-      formData.push({name: 'user["age"]', value: 21});
+      formData.push({name: 'user[age]', value: 21});
     }
 
     // Hide all errors that might be showing from a previous attempt.
@@ -212,7 +213,7 @@
       url: "/users.json",
       type: "post",
       dataType: "json",
-      data: JSON.stringify(formData)
+      data: formData
     }).done(formSuccess).fail(formError);
 
     return false;
