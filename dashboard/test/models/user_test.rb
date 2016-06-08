@@ -433,6 +433,16 @@ class UserTest < ActiveSupport::TestCase
     assert user.hashed_email.present?
   end
 
+  test 'changing user from teacher to student removes full_address' do
+    user = create :teacher
+    user.update(full_address: 'fake address')
+
+    user.user_type = 'student'
+    user.save!
+
+    assert user.full_address.nil?
+  end
+
   test 'changing user from student to teacher saves email' do
     user = create :student, email: 'email@old.xx'
 
