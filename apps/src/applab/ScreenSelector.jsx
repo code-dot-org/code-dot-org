@@ -47,6 +47,7 @@ var ScreenSelector = React.createClass({
       screenId = this.props.onCreate();
     } else if (screenId === constants.IMPORT_SCREEN) {
       this.props.onImport();
+      return;
     }
     this.props.onScreenChange(screenId);
   },
