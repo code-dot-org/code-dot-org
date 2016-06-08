@@ -27,14 +27,20 @@ window.initLevelGroup = function (
     if (subLevelCount === 0) {
       return completion();
     }
+    function handleSublevelComplete() {
+      sendReportCompleteCount++;
+      if (sendReportCompleteCount === subLevelCount) {
+        completion();
+      }
+    }
     for (var subLevelId in levels) {
       if (typeof subLevelIdChanged !== 'undefined' && subLevelIdChanged !== parseInt(subLevelId)) {
         // Only one sublevel changed and this is not the one, so skip the post and
         // call the completion function immediately
-        completion();
+        handleSublevelComplete();
         continue;
       }
-      var subLevelResult = levels[subLevelId].getResult();
+      var subLevelResult = levels[subLevelId].getResult(true);
       var response = subLevelResult.response;
       var result = subLevelResult.result;
       var errorType = subLevelResult.errorType;
@@ -52,12 +58,7 @@ window.initLevelGroup = function (
         pass: subLevelResult,
         testResult: testResult,
         submitted: submitted,
-        onComplete: function () {
-          sendReportCompleteCount++;
-          if (sendReportCompleteCount === subLevelCount) {
-            completion();
-          }
-        }
+        onComplete: handleSublevelComplete
       });
     }
   }
@@ -87,7 +88,7 @@ window.initLevelGroup = function (
     // Add any new results to the existing lastAttempt results.
     var levels = window.levelGroup.levels;
     Object.keys(levels).forEach(function (levelId) {
-      var currentAnswer = levels[levelId].getCurrentAnswer();
+      var currentAnswer = levels[levelId].getResult(true);
       var levelResult = currentAnswer.response.toString();
       var valid = currentAnswer.valid;
       lastAttempt[levelId] = {result: levelResult, valid: valid};

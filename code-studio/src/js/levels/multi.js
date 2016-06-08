@@ -170,20 +170,8 @@ Multi.prototype.ready = function () {
   }
 };
 
-Multi.prototype.getCurrentAnswer = function () {
-  var answer;
-
-  if (this.numAnswers === 1) {
-    answer = this.lastSelectionIndex;
-  } else {
-    answer = this.selectedAnswers;
-  }
-
-  return { response: answer, valid: answer !== -1 };
-};
-
 // called by external result-posting code
-Multi.prototype.getResult = function () {
+Multi.prototype.getResult = function (dontAllowSubmit) {
   var answer;
   var errorType = null;
 
@@ -201,7 +189,7 @@ Multi.prototype.getResult = function () {
   var result;
   var submitted;
 
-  if (window.appOptions.level.submittable || this.forceSubmittable) {
+  if (!dontAllowSubmit && (window.appOptions.level.submittable || this.forceSubmittable)) {
     result = true;
     submitted = true;
   } else {
@@ -213,7 +201,8 @@ Multi.prototype.getResult = function () {
     "response": answer,
     "result": result,
     "errorType": errorType,
-    "submitted": submitted
+    "submitted": submitted,
+    "valid": answer !== -1
   };
 };
 
