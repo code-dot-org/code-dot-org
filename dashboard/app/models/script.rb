@@ -357,6 +357,10 @@ class Script < ActiveRecord::Base
 
   end
 
+  def professional_course?
+    pd? || professional_learning_course?
+  end
+
   SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)
   SCRIPT_MAP = Hash[SCRIPT_CSV_MAPPING.map { |x| x.include?(':') ? x.split(':') : [x, x.downcase] }]
 
