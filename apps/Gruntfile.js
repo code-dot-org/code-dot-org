@@ -308,6 +308,7 @@ module.exports = function (grunt) {
       client: {
         mocha: {
           timeout: 14000,
+          grep: grunt.option('grep'),
         },
       },
     },
