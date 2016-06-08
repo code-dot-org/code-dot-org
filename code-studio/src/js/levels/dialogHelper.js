@@ -1,4 +1,6 @@
 /* globals appOptions, Dialog, getResult, CDOSounds, showVideoDialog, dashboard */
+import $ from 'jquery';
+
 
 /*
  * This file contains general logic for displaying modal dialogs and handling
@@ -73,7 +75,7 @@ window.dashboard.dialog = (function () {
     var dialog = new window.Dialog({
       body: content,
       onHidden: dialogHidden,
-      autoResizeScrollableElement: appOptions.dialog.autoResizeScrollableElement
+      autoResizeScrollableElement: '.scrollable-element'
     });
 
     // Clicking the okay button in the dialog box dismisses it, and calls the callback.

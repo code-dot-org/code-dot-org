@@ -1,4 +1,5 @@
-/* global $, Dialog, appOptions, CDOSounds */
+/* global Dialog, appOptions, CDOSounds */
+import $ from 'jquery';
 
 window.levelGroup = window.levelGroup || {levels: {}};
 

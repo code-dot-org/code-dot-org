@@ -1,6 +1,5 @@
 /** @file Button that can be active or inactive, for use inside ToggleGroup */
-/* global $ */
-
+var React = require('react');
 var styles = require('./ToggleButtonStyles');
 
 var ToggleButton = React.createClass({
@@ -25,7 +24,7 @@ var ToggleButton = React.createClass({
   },
 
   getStyle: function () {
-    return $.extend({},
+    return Object.assign({},
       styles.buttonStyle,
       styles.toggleButtonStyle,
       this.props.active ? styles.activeStyle : styles.inactiveStyle,

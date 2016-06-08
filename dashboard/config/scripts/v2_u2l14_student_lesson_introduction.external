@@ -12,8 +12,12 @@ A summary table is a table used to compute summary statistics of a larger datase
 # Vocabulary
 
 * **Summary Table** - a table that summarizes information about some larger dataset.  It typically consists of performing computations like sums, averages, and counts on higher level groupings of information.  The intent is to summarize lots of data into a form that is more useful, and easier to "see".
+
 * **Pivot Table** - the tool used by most spreadsheet programs to create a summary table.
-* **Aggregation** - a grouping of similiar data within a dataset for the purposes of performing a calculation on items within each group.  For example, if some dataset contained information about how many hours of television people watched and included their age, you could "aggregate the data by age" and compute the average hours watched for each age group.  You could also "aggregate by hours of TV watched" and compute the average age for each number of hours.
+
+* **Aggregation** - a computation in which rows from a data set are grouped together and used to compute a single value of more significant meaning or measurement.  Common aggregations include: Average, Count, Sum, Max, Median, etc. 
+
+    * For example, if some dataset contained information about how many hours of television people watched and included their age, you could "aggregate the data by age" and compute the average hours watched for each age group.  You could also "aggregate by hours of TV watched" and compute the average age for each number of hours.
 
 # Lesson
 

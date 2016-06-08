@@ -1,5 +1,6 @@
 /* global dashboard */
 
+var React = require('react');
 var IconListEntry = require('./IconListEntry');
 var icons = require('./icons').aliases;
 dashboard.iconsUnicode = require('./icons').unicode;

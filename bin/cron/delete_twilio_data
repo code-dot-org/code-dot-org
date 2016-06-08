@@ -1,0 +1,50 @@
+#!/usr/bin/env ruby
+
+# This script instructs Twilio to delete data related to SMS messages we send
+# through their service. Doing so both protects our users (reducing PII data)
+# and reduces our costs (reducing media storage costs).
+
+# NOTE: As ListResource.list(), by default, returns the most recent fifty
+# instances, we wrap list() methods in while loops to assure all appropriate
+# records are processed.
+
+require 'cdo/hip_chat'
+require 'cdo/only_one'
+require 'twilio-ruby'
+
+# For operational, troubleshooting, and security purposes, we keep the most
+# recent messages.
+DATE_TO_DELETE = '2000-01-01'
+
+def main()
+  @client = Twilio::REST::Client.new CDO.twilio_sid, CDO.twilio_auth
+
+  begin
+    loop do
+      messages_to_delete = @client.account.messages.list(
+        date_sent: DATE_TO_DELETE
+      )
+      if messages_to_delete.empty?
+        break
+      end
+
+      # Note that the media associated with a message is deleted independently
+      # of the message itself.
+      messages_to_delete.each do |message|
+        loop do
+          media_to_delete = message.media.list
+          if media_to_delete.empty?
+            break
+          end
+          media_to_delete.each(&:delete)
+        end
+
+        message.delete
+      end
+    end
+  rescue Twilio::REST::RequestError => e
+    HipChat.log(e.message)
+  end
+end
+
+main if only_one_running?(__FILE__)

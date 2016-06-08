@@ -28,14 +28,15 @@
         response: $('.response').val(),
         submitted: appOptions.level.submittable || forceSubmittable,
         result: true,
-        testResult: #{level.submittable? ? ActivityConstants::UNSUBMITTED_RESULT : true}
+        testResult: #{level.submittable? ? ActivityConstants::UNSUBMITTED_RESULT : ActivityConstants::FREE_PLAY_RESULT}
       };
     }
 
 .free-response
   - if level.title.present? && !in_level_group
     %h2= level.title
-  %div= render(inline: level.markdown_instructions, type: :md)
+  - if level.markdown_instructions
+    %div= render(inline: level.markdown_instructions, type: :md)
 
   - if level.allow_user_uploads?
     %script{src: asset_path('js/fileupload/jquery.iframe-transport.js')}

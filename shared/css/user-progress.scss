@@ -169,23 +169,8 @@ a.level_link.submitted:hover
   }
 }
 
-.flex-wrapper {
-  border-bottom: 2px solid #c6cacd;
-}
-
-.flex-category {
-  border-left: 8px solid $cyan;
-  padding-left: 15px;
-  margin: 10px 0 10px 10px;
-  h4 {
-    margin: 0.25em 0;
-  }
-  .game-group:last-child {
-    border-bottom: 0;
-  }
-  .stage {
-    width: 167px;
-  }
+.flex-category h4 {
+  display: none;
 }
 
 #landingpage.teacher-course {
@@ -212,10 +197,8 @@ a.level_link.submitted:hover
     margin-right: 10px;
   }
   .flex-category {
-    border: 0;
-    padding: 0;
-    margin: 0;
     h4 {
+      display: block;
       padding: 5px 10px;
       background: $cyan;
       color: #fff;

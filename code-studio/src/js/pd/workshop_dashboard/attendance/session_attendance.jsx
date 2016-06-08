@@ -1,9 +1,7 @@
-/* global React */
-
 /*
   Display and edit attendance for a workshop session, for display in a WorkshopAttendance tab.
  */
-
+import React from 'react';
 var SessionAttendanceRow = require('./session_attendance_row');
 var Table = require('react-bootstrap').Table;
 

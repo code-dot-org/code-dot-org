@@ -182,6 +182,18 @@ module LevelsHelper
       # currently, all levels are Blockly or DSLDefined except for Unplugged
       @app_options = view_options.camelize_keys
     end
+
+    @app_options[:dialog] = {
+      skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
+      preTitle: @level.properties['pre_title'],
+      fallbackResponse: @fallback_response.to_json,
+      callback: @callback,
+      sublevelCallback: @sublevel_callback,
+      app: @level.type.underscore,
+      level: @level.level_num,
+      shouldShowDialog: @level.properties['skip_dialog'].blank? && @level.properties['options'].try(:[], 'skip_dialog').blank?
+    }
+
     @app_options
   end
 
@@ -283,6 +295,42 @@ module LevelsHelper
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
     level_options['stage_total'] = script_level ? script_level.stage_total : 1
+
+    # Unused Blocks option
+    ## TODO (elijah) replace this with more-permanent level configuration
+    ## options once the experimental period is over.
+
+    ## allow unused blocks for all levels except Jigsaw
+    app_options[:showUnusedBlocks] = @game ? @game.name != 'Jigsaw' : true
+
+    ## Allow gatekeeper to disable otherwise-enabled unused blocks in a
+    ## cascading way; more specific options take priority over
+    ## less-specific options.
+    if script && script_level && app_options[:showUnusedBlocks] != false
+
+      # puzzle-specific
+      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
+        script_name: script.name,
+        stage: script_level.stage.position,
+        puzzle: script_level.position
+      }, default: nil)
+
+      # stage-specific
+      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
+        script_name: script.name,
+        stage: script_level.stage.position,
+      }, default: nil) if enabled.nil?
+
+      # script-specific
+      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
+        script_name: script.name,
+      }, default: nil) if enabled.nil?
+
+      # global
+      enabled = Gatekeeper.allows('showUnusedBlocks', default: true) if enabled.nil?
+
+      app_options[:showUnusedBlocks] = enabled
+    end
 
     # LevelSource-dependent options
     app_options[:level_source_id] = @level_source.id if @level_source
@@ -525,6 +573,12 @@ module LevelsHelper
     if current_user && current_user.under_13?
       redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
       return true
+    end
+  end
+
+  def can_view_solution?
+    if current_user && @level.try(:ideal_level_source_id) && @script_level && !@script.hide_solutions?
+      Ability.new(current_user).can? :view_level_solutions, @script
     end
   end
 end

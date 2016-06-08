@@ -1,3 +1,4 @@
+var React = require('react');
 var assetsApi = require('@cdo/apps/clientApi').assets;
 var AssetThumbnail = require('./AssetThumbnail');
 
@@ -7,7 +8,7 @@ var AssetThumbnail = require('./AssetThumbnail');
 var AssetRow = React.createClass({
   propTypes: {
     name: React.PropTypes.string.isRequired,
-    type: React.PropTypes.oneOf(['image', 'audio', 'video', 'pdf']).isRequired,
+    type: React.PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
     size: React.PropTypes.number,
     onChoose: React.PropTypes.func,
     onDelete: React.PropTypes.func.isRequired
