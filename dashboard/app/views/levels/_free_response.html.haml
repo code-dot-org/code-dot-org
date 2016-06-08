@@ -35,7 +35,8 @@
 .free-response
   - if level.title.present? && !in_level_group
     %h2= level.title
-  %div= render(inline: level.markdown_instructions, type: :md)
+  - if level.markdown_instructions
+    %div= render(inline: level.markdown_instructions, type: :md)
 
   - if level.allow_user_uploads?
     %script{src: asset_path('js/fileupload/jquery.iframe-transport.js')}
