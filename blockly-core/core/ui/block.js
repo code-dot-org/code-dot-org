@@ -1516,6 +1516,10 @@ Blockly.Block.prototype.isNextConnectionDisabled = function() {
   return this.nextConnectionDisabled_;
 };
 
+Blockly.Block.prototype.isFunctionDefinition = function() {
+  return !!this.getProcedureInfo;
+};
+
 /**
  * Set whether this block should allow for succeeding connections.
  * Called by Xml.domToBlock, primarily used as a passthrough to
