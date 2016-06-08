@@ -65,8 +65,6 @@ module AWS
       # @param [Bool] make_public will cause the uploaded files to be given
       #        public_read permission, and public URLs to be returned.  Otherwise,
       #        files will be private and short-term presigned URLs will be returned.
-      # @param [Hash] options applied to all uploads - can be overwritten by
-      #        options in individual upload calls.
       def initialize(bucket, prefix, make_public=false)
         @bucket = bucket
         @prefix = prefix
