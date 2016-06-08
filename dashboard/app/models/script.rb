@@ -620,6 +620,7 @@ class Script < ActiveRecord::Base
     summary = {
       id: id,
       name: name,
+      plc: professional_learning_course,
       stages: stages.map(&:summarize),
     }
 

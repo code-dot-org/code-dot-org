@@ -3,6 +3,17 @@ import { connect } from 'react-redux';
 import { stageShape } from './types';
 import _ from 'lodash';
 import CourseProgressRow from './course_progress_row.jsx';
+import color from '../../color';
+
+const styles = {
+  flexHeader: {
+    padding: '5px 10px',
+    margin: '10px 0 0 0',
+    borderRadius: 5,
+    background: color.cyan,
+    color: color.white
+  }
+};
 
 /**
  * Stage progress component used in level header and course overview.
@@ -10,7 +21,7 @@ import CourseProgressRow from './course_progress_row.jsx';
 const CourseProgress = React.createClass({
   propTypes: {
     currentLevelId: React.PropTypes.string,
-    display: React.PropTypes.oneOf(['dots', 'list']).isRequired,
+    teacherCourse: React.PropTypes.boolean,
     stages: React.PropTypes.arrayOf(stageShape)
   },
 
@@ -18,11 +29,9 @@ const CourseProgress = React.createClass({
     const groups = _.groupBy(this.props.stages, stage => (stage.flex_category || 'Content'));
 
     const rows = _.map(groups, (stages, group) =>
-      <div className="flex-wrapper" key={group}>
-        <div className="flex-category">
-          <h4>{group}</h4>
-          {stages.map(stage => <CourseProgressRow stage={stage} key={stage.name} currentLevelId={this.props.currentLevelId} />)}
-        </div>
+      <div key={group}>
+        <h4 style={this.props.teacherCourse ? styles.flexHeader : {display: 'none'}}>{group}</h4>
+        {stages.map(stage => <CourseProgressRow stage={stage} key={stage.name} currentLevelId={this.props.currentLevelId} teacherCourse={this.props.teacherCourse} />)}
       </div>
     );
 
@@ -36,6 +45,6 @@ const CourseProgress = React.createClass({
 
 export default connect(state => ({
   currentLevelId: state.currentLevelId,
-  display: state.display,
+  teacherCourse: state.teacherCourse,
   stages: state.stages
 }))(CourseProgress);
