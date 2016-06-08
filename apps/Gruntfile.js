@@ -67,7 +67,8 @@ module.exports = function (grunt) {
 
   // Parse options from environment.
   var envOptions = {
-    dev: (process.env.MOOC_DEV === '1')
+    dev: (process.env.MOOC_DEV === '1'),
+    autoReload: ['true', '1'].indexOf(process.env.AUTO_RELOAD) !== -1
   };
 
   config.clean = {
@@ -412,9 +413,9 @@ module.exports = function (grunt) {
     keepalive: true,
     plugins: config.webpack.build.plugins.concat([
       new LiveReloadPlugin({
-        appendScriptTag: true,
+        appendScriptTag: envOptions.autoReload
       }),
-    ]),
+    ])
   });
 
   var ext = envOptions.dev ? 'uncompressed' : 'compressed';
