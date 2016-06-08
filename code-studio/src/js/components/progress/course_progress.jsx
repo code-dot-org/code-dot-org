@@ -21,7 +21,7 @@ const styles = {
 const CourseProgress = React.createClass({
   propTypes: {
     currentLevelId: React.PropTypes.string,
-    professionalLearningCourse: React.PropTypes.boolean,
+    professionalLearningCourse: React.PropTypes.bool,
     stages: React.PropTypes.arrayOf(stageShape)
   },
 

@@ -4,9 +4,9 @@ const levelProgressShape = React.PropTypes.shape({
   title: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number]),
   name: React.PropTypes.string,
   status: React.PropTypes.string,
-  kind: React.PropTypes.oneOf(['unplugged', 'assessment', 'puzzle']),
+  kind: React.PropTypes.oneOf(['unplugged', 'assessment', 'puzzle', 'named_level']),
   icon: React.PropTypes.string,
-  show_progress: React.PropTypes.boolean,
+  show_progress: React.PropTypes.bool,
   url: React.PropTypes.string,
   id: React.PropTypes.number
 });
