@@ -71,6 +71,7 @@ class ApiController < ApplicationController
 
   def script_structure
     script = Script.get_from_cache(params[:script_name])
+    configure_caching
     render json: script.summarize
   end
 
@@ -255,6 +256,15 @@ class ApiController < ApplicationController
   end
 
   private
+
+  ONE_HOUR = 3600
+
+  def configure_caching
+    return unless Script.should_cache?
+    max_age = DCDO.get('pegasus_document_max_age', ONE_HOUR * 4)
+    proxy_max_age = DCDO.get('pegasus_document_proxy_max_age', ONE_HOUR * 2)
+    response.headers['Cache-Control'] = "public,max-age=#{max_age},s-maxage=#{proxy_max_age}"
+  end
 
   def load_student
     @student = User.find(params[:student_id])
