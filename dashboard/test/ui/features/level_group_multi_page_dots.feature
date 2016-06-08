@@ -48,23 +48,16 @@ Scenario: Submit three pages as... 1. some, 2. none, 3. all questions answered.
   And element ".level-group-content:nth(2) #checked_0" is visible
 
   # Verify the three dots in the header are 1. some, 2. none, 3. all questions answered.
-  Then element ".progress_container a:nth(1)" has class "level_link perfect"
-  And element ".progress_container a:nth(2)" has class "level_link not_tried"
-  And element ".progress_container a:nth(3)" has class "level_link attempted"
+  And I verify progress in the header of the current page is "perfect" for level 2
+  And I verify progress in the header of the current page is "not_tried" for level 3
+  And I verify progress in the header of the current page is "attempted" for level 4
 
   # Open the dropdown and verify the same three dots.
-  Then I click selector ".header_popup_link"
-  And I wait for 2 seconds
-  And I wait to see ".game-group"
-  And element ".user-stats-block .game-group:nth(21) .level_link:nth(1)" has class "level_link perfect"
-  And element ".user-stats-block .game-group:nth(21) .level_link:nth(2)" has class "level_link not_tried"
-  And element ".user-stats-block .game-group:nth(21) .level_link:nth(3)" has class "level_link attempted"
+  And I verify progress in the drop down of the current page is "perfect" for stage 22 level 2
+  And I verify progress in the drop down of the current page is "not_tried" for stage 22 level 3
+  And I verify progress in the drop down of the current page is "attempted" for stage 22 level 4
 
   # Go to the course page and verify the same three dots.
-  Given I am on "http://learn.code.org/s/allthethings"
-  Then I rotate to landscape
-  And I wait for 2 seconds
-  And I wait to see ".user-stats-block"
-  And element ".user-stats-block .games:nth(21) .level_link:nth(1)" has class "level_link perfect"
-  And element ".user-stats-block .games:nth(21) .level_link:nth(2)" has class "level_link not_tried"
-  And element ".user-stats-block .games:nth(21) .level_link:nth(3)" has class "level_link attempted"
+  And I navigate to the course page and verify progress for course "allthethings" stage 22 level 2 is "perfect"
+  And I navigate to the course page and verify progress for course "allthethings" stage 22 level 3 is "not_tried"
+  And I navigate to the course page and verify progress for course "allthethings" stage 22 level 4 is "attempted"
