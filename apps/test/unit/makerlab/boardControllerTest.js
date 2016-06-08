@@ -1,5 +1,5 @@
 import {assert} from '../../util/configuredChai';
-import {REDBOARD_PORTS, FLORA_PORTS, OSX_DEFAULT_PORTS} from './sampleSerialPorts'
+import {REDBOARD_PORTS, FLORA_PORTS, OSX_DEFAULT_PORTS} from './sampleSerialPorts';
 
 var BoardController = require('@cdo/apps/makerlab/BoardController');
 
