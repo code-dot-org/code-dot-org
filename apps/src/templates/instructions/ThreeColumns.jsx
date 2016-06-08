@@ -1,4 +1,5 @@
 import React from 'react';
+import Radium from 'radium';
 
 /**
  * A component that lays out children in three columns (left, center, right),
@@ -57,4 +58,4 @@ ThreeColumns.propTypes = {
   }
 };
 
-export default ThreeColumns;
+export default Radium(ThreeColumns);
