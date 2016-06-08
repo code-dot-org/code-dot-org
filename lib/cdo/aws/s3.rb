@@ -56,28 +56,50 @@ module AWS
       Aws::S3::Object.new(bucket, filename, region: CDO.aws_region).public_url
     end
 
-    class PublicVersionedLogUploader
-      def initialize(bucket, prefix)
+    class LogUploader
+      # A LogUploader is constructed with some preconfigured settings that will
+      # apply to all log uploads - presumably you may be uploading many similar
+      # logs.
+      # @param [String] bucket name on S3
+      # @param [String] prefix to prepend to all log keys/filenames
+      # @param [Hash] options applied to all uploads - can be overwritten by
+      #        options in individual upload calls.
+      def initialize(bucket, prefix, options = {})
         @bucket = bucket
         @prefix = prefix
+        @global_options = options
       end
 
-      #
-      # Uploads the file with the given filename to S3 in the preconfigured
-      # bucket and prefix, and returns a public URL to the uploaded log file.
-      # May raise an exception if the file cannot be opened or the S3 upload fails.
-      #
-      def upload_log(filename)
-        File.open(filename, 'rb') do |file|
-          result = AWS::S3.create_client.put_object(
+      # Uploads a log to S3 at the given key (appended to the configured prefix),
+      # returning a URL to the uploaded file.
+      # @param [String] key where the log will be placed under the configured prefix
+      # @param [String] body of the log to be uploaded
+      # @param [Hash] options
+      # @return [String] public URL of uploaded log
+      # @raise [Exception] if the S3 upload fails
+      # @see http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html#put_object-instance_method for supported options
+      def upload_log(key, body, options={})
+        result = AWS::S3.create_client.put_object(
+          @global_options.merge(options).merge(
             bucket: @bucket,
-            key: "#{@prefix}/#{filename}",
-            body: file,
-            acl: 'public-read'
+            key: "#{@prefix}/#{key}",
+            body: body
           )
-          log_url = "https://s3.amazonaws.com/#{S3_LOGS_BUCKET}/#{S3_LOGS_PREFIX}/#{filename}"
-          log_url += "?versionId=#{result[:version_id]}" unless result[:version_id].nil?
-          return log_url
+        )
+        log_url = "https://s3.amazonaws.com/#{@bucket}/#{@prefix}/#{key}"
+        log_url += "?versionId=#{result[:version_id]}" unless result[:version_id].nil?
+        log_url
+      end
+
+      # Uploads the given file to S3, returning a URL to the uploaded file.
+      # @param [String] filename to upload to S3
+      # @param [Hash] options
+      # @return [String] public URL of uploaded file
+      # @raise [Exception] if the file cannot be opened or the S3 upload fails
+      # @see http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html#put_object-instance_method for supported options
+      def upload_file(filename, options={})
+        File.open(filename, 'rb') do |file|
+          return upload_log(filename, file, options)
         end
       end
     end
