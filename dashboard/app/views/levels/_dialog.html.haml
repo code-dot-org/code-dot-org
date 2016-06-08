@@ -132,6 +132,7 @@
     preTitle: data['pre_title'],
     fallbackResponse: @fallback_response.to_json,
     callback: @callback,
+    sublevelCallback: @sublevel_callback,
     app: app,
     level: @level.level_num,
     shouldShowDialog: data['skip_dialog'].blank? && data['options'].try(:[], 'skip_dialog').blank?
