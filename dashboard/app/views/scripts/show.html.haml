@@ -1,11 +1,12 @@
 = render partial: 'shared/check_admin'
 #landingpage{class: @script.professional_learning_course ? 'teacher-course' : nil}
   #lesson
-    #trynow
-      = button_to t('home.trynow'), script_next_path(@script, 'next'), method: 'get', class: 'btn btn-primary biggerbutton'
-      %p
-        = link_to t('landing.support'), t('landing.support_url')
-        %br/
+    - if !@script.professional_course?
+      #trynow
+        = button_to t('home.trynow'), script_next_path(@script, 'next'), method: 'get', class: 'btn btn-primary biggerbutton'
+        %p
+          = link_to t('landing.support'), t('landing.support_url')
+          %br/
 
     #heading
       %h2
