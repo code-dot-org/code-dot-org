@@ -71,6 +71,9 @@ class Ability
         end
         can :read, Plc::UserCourseEnrollment, user_id: user.id
         can :manage, Pd::Enrollment, teacher_id: user.id
+        can :view_level_solutions, Script do |script|
+          !script.professional_learning_course?
+        end
       end
 
       if user.facilitator?

@@ -37,7 +37,7 @@ class Plc::CourseUnit < ActiveRecord::Base
   def determine_preferred_learning_modules(user)
     evaluation_level = script.levels.reverse.find {|level| level.class == LevelGroup}
 
-    level_source = UserLevel.find_by(user: user, level: evaluation_level, script: script).try(:level_source)
+    level_source = user.last_attempt(evaluation_level).try(:level_source)
     return [] if level_source.nil?
 
     responses = JSON.parse(level_source.data)
