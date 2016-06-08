@@ -18,11 +18,12 @@ function saveAnswersAndNavigate(url) {
 // Calls the completeFn function when transmission is complete.
 // @param {function(function)} beforeHook Optional callback function to call
 //    before saveAnswers gets underway. This function must call the completion
-//    function passed as the parameter to complete the saveAnswers call.
+//    function passed as the first parameter to complete the saveAnswers call.
+// @param {Number} levelId Optional specific subLevelId that should be changed
 
-function saveAnswers(completeFn, beforeHook) {
+function saveAnswers(completeFn, beforeHook, subLevelId) {
   if (beforeHook) {
-    beforeHook(sendResultsCompletion);
+    beforeHook(sendResultsCompletion, subLevelId);
   } else {
     sendResultsCompletion();
   }

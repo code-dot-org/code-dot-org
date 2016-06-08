@@ -2,8 +2,12 @@
 
 window.levelGroup = window.levelGroup || {levels: {}};
 
-var Multi = window.Multi = function (id, standalone, numAnswers, answers, lastAttemptString) {
+var Multi = window.Multi = function (levelId, id, standalone, numAnswers, answers, lastAttemptString) {
 
+  // The dashboard levelId.
+  this.levelId = levelId;
+
+  // The DOM id.
   this.id = id;
 
   // Whether this multi is the only puzzle on a page, or part of a group of them.
@@ -53,7 +57,7 @@ Multi.prototype.choiceClicked = function (button) {
   this.clickItem(index);
 
   if (window.levelGroup && window.levelGroup.answerChangedFn) {
-    window.levelGroup.answerChangedFn();
+    window.levelGroup.answerChangedFn(this.levelId);
   }
 };
 
