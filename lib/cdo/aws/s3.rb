@@ -62,33 +62,46 @@ module AWS
       # logs.
       # @param [String] bucket name on S3
       # @param [String] prefix to prepend to all log keys/filenames
+      # @param [Bool] make_public will cause the uploaded files to be given
+      #        public_read permission, and public URLs to be returned.  Otherwise,
+      #        files will be private and short-term presigned URLs will be returned.
       # @param [Hash] options applied to all uploads - can be overwritten by
       #        options in individual upload calls.
-      def initialize(bucket, prefix, options = {})
+      def initialize(bucket, prefix, make_public=false)
         @bucket = bucket
         @prefix = prefix
-        @global_options = options
+        @make_public = make_public
       end
 
       # Uploads a log to S3 at the given key (appended to the configured prefix),
       # returning a URL to the uploaded file.
-      # @param [String] key where the log will be placed under the configured prefix
+      # @param [String] name where the log will be placed under the configured prefix
       # @param [String] body of the log to be uploaded
       # @param [Hash] options
       # @return [String] public URL of uploaded log
       # @raise [Exception] if the S3 upload fails
       # @see http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html#put_object-instance_method for supported options
-      def upload_log(key, body, options={})
+      def upload_log(name, body, options={})
+        key = "#{@prefix}/#{name}"
+        puts "The key is #{key}"
+
+        options[:acl] = 'public-read' if @make_public
         result = AWS::S3.create_client.put_object(
-          @global_options.merge(options).merge(
+          options.merge(
             bucket: @bucket,
-            key: "#{@prefix}/#{key}",
+            key: key,
             body: body
           )
         )
-        log_url = "https://s3.amazonaws.com/#{@bucket}/#{@prefix}/#{key}"
-        log_url += "?versionId=#{result[:version_id]}" unless result[:version_id].nil?
-        log_url
+        if @make_public
+          log_url = AWS::S3.public_url(@bucket, key)
+          log_url += "?versionId=#{result[:version_id]}" unless result[:version_id].nil?
+          log_url
+        else
+          options = {bucket: @bucket, key: key, expires_in: 60.minutes}
+          options[:version_id] = result[:version_id] unless result[:version_id].nil?
+          Aws::S3::Presigner.new.presigned_url(:get_object, options)
+        end
       end
 
       # Uploads the given file to S3, returning a URL to the uploaded file.
