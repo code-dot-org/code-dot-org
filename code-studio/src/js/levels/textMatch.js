@@ -1,6 +1,11 @@
 window.levelGroup = window.levelGroup || {levels: {}};
 
-var TextMatch = window.TextMatch = function (id, standalone, answers, lastAttempt) {
+var TextMatch = window.TextMatch = function (levelId, id, standalone, answers, lastAttempt) {
+
+  // The dashboard levelId.
+  this.levelId = levelId;
+
+  // The DOM id.
   this.id = id;
 
   this.standalone = standalone;
@@ -28,7 +33,7 @@ TextMatch.prototype.ready = function () {
 
   $("#" + this.id + " textarea.response").blur(function () {
     if (window.levelGroup && window.levelGroup.answerChangedFn) {
-      window.levelGroup.answerChangedFn();
+      window.levelGroup.answerChangedFn(this.levelId);
     }
   });
 };

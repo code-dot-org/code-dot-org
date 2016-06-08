@@ -19,7 +19,7 @@ window.initLevelGroup = function (
 
   window.getResult = getResult;
 
-  function submitSublevelResults(completion) {
+  function submitSublevelResults(completion, subLevelIdChanged) {
     var levels = window.levelGroup.levels;
     var sendReportCompleteCount = 0;
     var subLevelCount = Object.keys(levels).length;
@@ -27,6 +27,12 @@ window.initLevelGroup = function (
       return completion();
     }
     for (var subLevelId in levels) {
+      if (typeof subLevelIdChanged !== 'undefined' && subLevelIdChanged !== parseInt(subLevelId)) {
+        // Only one sublevel changed and this is not the one, so skip the post and
+        // call the completion function immediately
+        completion();
+        continue;
+      }
       var subLevelResult = levels[subLevelId].getResult();
       var response = subLevelResult.response;
       var result = subLevelResult.result;
@@ -65,10 +71,10 @@ window.initLevelGroup = function (
 
   var lastResponse = window.getResult().response;
 
-  window.levelGroup.answerChangedFn = function () {
+  window.levelGroup.answerChangedFn = function (levelId) {
     var currentResponse = window.getResult().response;
     if (lastResponse !== currentResponse) {
-      throttledSaveAnswers();
+      throttledSaveAnswers(levelId);
     }
     lastResponse = currentResponse;
   };
