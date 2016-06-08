@@ -6,15 +6,18 @@
 
 # NOTE: As ListResource.list(), by default, returns the most recent fifty
 # instances, we wrap list() methods in while loops to assure all appropriate
-# records are processed.
+# records are processed. This is unnecessary for media, as a message may contain
+# at most ten media.
 
+require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/hip_chat'
 require 'cdo/only_one'
+require 'date'
 require 'twilio-ruby'
 
 # For operational, troubleshooting, and security purposes, we keep the most
-# recent messages.
-DATE_TO_DELETE = '2000-01-01'
+# recent messages. Thus, we delete data from thirty days ago.
+DATE_TO_DELETE = DateTime.now - 3000
 
 def main()
   @client = Twilio::REST::Client.new CDO.twilio_sid, CDO.twilio_auth
@@ -28,14 +31,11 @@ def main()
         break
       end
 
-      # Note that the media associated with a message is deleted independently
-      # of the message itself.
       messages_to_delete.each do |message|
-        loop do
+        # Note that any media associated with a message is deleted independently
+        # of the message itself.
+        if message.num_media != '0'
           media_to_delete = message.media.list
-          if media_to_delete.empty?
-            break
-          end
           media_to_delete.each(&:delete)
         end
 
@@ -43,7 +43,10 @@ def main()
       end
     end
   rescue Twilio::REST::RequestError => e
-    HipChat.log(e.message)
+    # TODO(asher): Consider whether we should log the exception and continue to
+    # attempt to delete further messages rather than stopping deletion.
+    HipChat.log(
+      "Exception in delete_twilio_data processing data from #{DATE_TO_DELETE}: #{e.message}")
   end
 end
 
