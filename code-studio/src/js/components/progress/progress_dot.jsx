@@ -127,12 +127,29 @@ const ProgressDot = React.createClass({
       onClick = (e) => {this.dotClicked(level.url); e.preventDefault();};
     }
 
+    const combinedStyle = [dotStyle, styles.status[level.status || 'not_tried']];
+
+    if (level.kind === 'named_level') {
+      return (
+        <a
+          className={`level-${level.id}`}
+          href={level.url}
+          onClick={onClick}>
+          <div>
+            <i className={`fa ${level.icon}`} style={combinedStyle} />
+            &nbsp;
+            {level.name}
+          </div>
+        </a>
+      );
+    }
+
     return (
       <a
         className={`level-${level.id}`}
         href={level.url}
         onClick={onClick}
-        style={[dotStyle, styles.status[level.status || 'not_tried']]}>
+        style={combinedStyle}>
           {level.title}
       </a>
     );
