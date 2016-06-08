@@ -89,6 +89,7 @@
     "@cdo/apps": "file:../apps/src",
     "@cdo/code-studio-vendor": "file:./vendor",
     "codemirror": "5.5",
+    "firebase": "^2.4.1",
     "jquery": "^2.2.0",
     "jquery.cookie": "^1.4.1",
     "linklocal": "^2.5.2",
