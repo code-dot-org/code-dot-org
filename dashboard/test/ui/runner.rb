@@ -9,6 +9,8 @@ ENV['BUNDLE_GEMFILE'] ||= "#{ROOT}//Gemfile"
 require 'bundler'
 require 'bundler/setup'
 
+require 'cdo/aws/s3'
+require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
 require 'cdo/hip_chat'
@@ -24,6 +26,26 @@ require 'parallel'
 require 'active_support/core_ext/object/blank'
 
 ENV['BUILD'] = `git rev-parse --short HEAD`
+
+S3_LOGS_BUCKET = 'cucumber-logs'
+S3_LOGS_PREFIX = GitUtils.current_branch
+log_uploader = AWS::S3::PublicVersionedLogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX)
+
+#
+# Upload the given filename (of a cucumber log) to the logs s3 bucket.
+# Returns a public URL to the uploaded log.
+#
+def upload_log_and_get_public_url(log_uploader, filename)
+  return nil unless $options.html
+  log_uploader.upload_log(filename)
+rescue Exception => msg
+  HipChat.log "Uploading log to S3 failed: #{msg}"
+  return nil
+end
+
+def log_link_from_url(url)
+  url ? " <a href='#{url}'>☁ Log on S3</a>" : ''
+end
 
 $options = OpenStruct.new
 $options.config = nil
@@ -363,9 +385,12 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   while !succeeded && (reruns < max_reruns)
     reruns += 1
 
+    # Upload the failure log to S3, so we can examine it at our leisure.
+    log_url = upload_log_and_get_public_url(log_uploader, html_output_filename)
+
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     # Since output_stderr is empty, we do not log it to HipChat.
-    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}), retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || "?"})..."
+    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link_from_url log_url}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || "?"})..."
 
     rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
@@ -404,14 +429,12 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     # Don't log individual successes because we hit HipChat rate limits
     # HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
+    # Upload the failure log to S3, so we can examine it at our leisure.
+    log_url = upload_log_and_get_public_url(log_uploader, html_output_filename)
+
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     HipChat.log "<pre>#{output_stderr}</pre>"
-    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})"
-
-    if $options.html
-      link = "https://#{CDO.dashboard_hostname}/ui_test/" + html_output_filename
-      message += " <a href='#{link}'>☁ html output</a>"
-    end
+    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link_from_url log_url}"
     short_message = message
 
     message += "<br/><i>rerun: bundle exec ./runner.rb -c #{browser_name} -f #{feature} #{'--eyes' if $options.run_eyes_tests} --html</i>"

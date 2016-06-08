@@ -6075,7 +6075,7 @@ Blockly.Xml.blockToDom = function(block, ignoreChildBlocks) {
   if(block.isNextConnectionDisabled()) {
     element.setAttribute("next_connection_disabled", true)
   }
-  if(/^procedures_def/.test(block.type) && block.userCreated) {
+  if(block.isFunctionDefinition() && block.userCreated) {
     element.setAttribute("usercreated", true)
   }
   if(block.htmlId) {
@@ -15673,6 +15673,9 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
 };
 Blockly.Block.prototype.isNextConnectionDisabled = function() {
   return this.nextConnectionDisabled_
+};
+Blockly.Block.prototype.isFunctionDefinition = function() {
+  return!!this.getProcedureInfo
 };
 Blockly.Block.prototype.setNextConnectionDisabled = function(disabled) {
   this.nextConnectionDisabled_ = disabled;
