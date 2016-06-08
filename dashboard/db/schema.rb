@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160527181440) do
+ActiveRecord::Schema.define(version: 20160606183120) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -569,15 +569,16 @@ ActiveRecord::Schema.define(version: 20160527181440) do
   end
 
   create_table "script_levels", force: :cascade do |t|
-    t.integer  "level_id",   limit: 4
-    t.integer  "script_id",  limit: 4,     null: false
-    t.integer  "chapter",    limit: 4
+    t.integer  "level_id",    limit: 4
+    t.integer  "script_id",   limit: 4,     null: false
+    t.integer  "chapter",     limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "stage_id",   limit: 4
-    t.integer  "position",   limit: 4
+    t.integer  "stage_id",    limit: 4
+    t.integer  "position",    limit: 4
     t.boolean  "assessment"
-    t.text     "properties", limit: 65535
+    t.text     "properties",  limit: 65535
+    t.boolean  "named_level"
   end
 
   add_index "script_levels", ["level_id"], name: "index_script_levels_on_level_id", using: :btree
@@ -856,7 +857,6 @@ ActiveRecord::Schema.define(version: 20160527181440) do
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email",          limit: 255
     t.integer  "prize_teacher_id",           limit: 4
-    t.boolean  "hint_access"
     t.integer  "secret_picture_id",          limit: 4
     t.boolean  "active",                                   default: true,    null: false
     t.string   "hashed_email",               limit: 255

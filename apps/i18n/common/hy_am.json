@@ -237,5 +237,9 @@
   "watchVideo": "Դիտեք տեսանյութը",
   "when": "երբ",
   "whenRun": "երբ վազում",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "hide": "Hide",
+  "more": "More",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
 }

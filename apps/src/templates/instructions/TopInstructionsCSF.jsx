@@ -19,10 +19,16 @@ var HeightResizer = require('./HeightResizer');
 var constants = require('../../constants');
 var msg = require('../../locale');
 import CollapserButton from './CollapserButton';
+import ThreeColumns from './ThreeColumns';
+import PromptIcon from './PromptIcon';
+import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 
 const VERTICAL_PADDING = 10;
 const HORIZONTAL_PADDING = 20;
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
+
+const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
+const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
 
 const styles = {
   main: {
@@ -41,17 +47,8 @@ const styles = {
   },
   body: {
     backgroundColor: 'white',
-    overflowY: 'scroll',
-    paddingTop: VERTICAL_PADDING,
-    paddingBottom: VERTICAL_PADDING,
-    paddingLeft: HORIZONTAL_PADDING,
-    paddingRight: HORIZONTAL_PADDING,
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    borderRadius: 10
+    borderRadius: 10,
+    width: '100%',
   },
   embedView: {
     height: undefined,
@@ -60,27 +57,18 @@ const styles = {
     left: 340
   },
   collapserButton: {
-    float: 'right',
-    height: 42,
-    marginLeft: 10,
-    // don't want the right margin to apply to our button
-    marginRight: -10,
+    position: 'absolute',
+    right: 0,
     marginTop: 5,
-    marginBottom: 5
+    marginRight: 5
   },
-  collapserButtonRtl: {
-    float: 'left',
-    marginLeft: -10,
-    marginRight: 10,
+  authoredHints: {
+    // raise by 20 so that the lightbulb "floats" without causing the original
+    // icon to move. This strangeness happens in part because prompt-icon-cell
+    // is managed outside of React
+    marginTop: -20
   }
 };
-
-const COLLAPSED_HEIGHT = styles.collapserButton.height +
-  styles.collapserButton.marginTop +
-  styles.collapserButton.marginBottom +
-  2 * VERTICAL_PADDING;
-
-const MIN_HEIGHT = COLLAPSED_HEIGHT;
 
 var TopInstructions = React.createClass({
   propTypes: {
@@ -91,12 +79,18 @@ var TopInstructions = React.createClass({
     collapsed: React.PropTypes.bool.isRequired,
     shortInstructions: React.PropTypes.string.isRequired,
     longInstructions: React.PropTypes.string,
+    hasAuthoredHints: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
+    smallStaticAvatar: React.PropTypes.string.isRequired,
 
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired
+  },
+
+  getInitialState() {
+    return { rightColWidth: 90 };
   },
 
   /**
@@ -106,6 +100,15 @@ var TopInstructions = React.createClass({
     window.addEventListener('resize', this.adjustMaxNeededHeight);
 
     const maxNeededHeight = this.adjustMaxNeededHeight();
+
+    // Update right col width now that we know how much space it needs. One thing
+    // to note is that if we end up resizing our column significantly, it can
+    // result in our maxNeededHeight being inaccurate. This isn't that big a deal
+    // except that it means when we set instructionsRenderedHeight below, it might
+    // not be as large as we want.
+    this.setState({
+      rightColWidth: $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true)
+    });
 
     // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
     // adjusts max height.
@@ -117,9 +120,18 @@ var TopInstructions = React.createClass({
    * If we then resize it to be larger again, we want to increase height.
    */
   componentWillReceiveProps(nextProps) {
-    if (nextProps.height < MIN_HEIGHT && nextProps.height < nextProps.maxHeight) {
-      this.props.setInstructionsRenderedHeight(Math.min(nextProps.maxHeight, MIN_HEIGHT));
+    const minHeight = this.getMinHeight() + RESIZER_HEIGHT;
+    if (nextProps.height < minHeight && nextProps.height < nextProps.maxHeight) {
+      this.props.setInstructionsRenderedHeight(Math.min(nextProps.maxHeight, minHeight));
     }
+  },
+
+  /**
+   * @returns {number} The minimum height of the top instructions (which is just
+   * the height of the little icon.
+   */
+  getMinHeight() {
+    return $(ReactDOM.findDOMNode(this.refs.icon)).outerHeight(true);
   },
 
   /**
@@ -129,10 +141,10 @@ var TopInstructions = React.createClass({
    * @returns {number} How much we actually changed
    */
   handleHeightResize: function (delta) {
-    var minHeight = MIN_HEIGHT;
-    var currentHeight = this.props.height;
+    const minHeight = this.getMinHeight() + RESIZER_HEIGHT;
+    const currentHeight = this.props.height;
 
-    var newHeight = Math.max(minHeight, currentHeight + delta);
+    let newHeight = Math.max(minHeight, currentHeight + delta);
     newHeight = Math.min(newHeight, this.props.maxHeight);
 
     this.props.setInstructionsRenderedHeight(newHeight);
@@ -145,11 +157,13 @@ var TopInstructions = React.createClass({
    * @returns {number}
    */
   adjustMaxNeededHeight() {
+    const minHeight = this.getMinHeight() + RESIZER_HEIGHT;
+
     const instructionsContent = this.refs.instructions;
     const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
       RESIZER_HEIGHT;
 
-    this.props.setInstructionsMaxHeightNeeded(Math.max(MIN_HEIGHT, maxNeededHeight));
+    this.props.setInstructionsMaxHeightNeeded(Math.max(minHeight, maxNeededHeight));
     return maxNeededHeight;
   },
 
@@ -158,12 +172,12 @@ var TopInstructions = React.createClass({
    * updating our rendered height.
    */
   handleClickCollapser() {
-    const collapsed = !this.props.collapsed;
+    const nextCollapsed = !this.props.collapsed;
     this.props.toggleInstructionsCollapsed();
 
     // adjust rendered height based on next collapsed state
-    if (collapsed) {
-      this.props.setInstructionsRenderedHeight(COLLAPSED_HEIGHT);
+    if (nextCollapsed) {
+      this.props.setInstructionsRenderedHeight(this.getMinHeight());
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
     }
@@ -183,29 +197,39 @@ var TopInstructions = React.createClass({
     const renderedMarkdown = processMarkdown(this.props.collapsed ?
       this.props.shortInstructions : this.props.longInstructions);
 
+    const leftColWidth = PROMPT_ICON_WIDTH +
+      (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
+
     return (
       <div style={mainStyle} className="editor-column">
-        <div>
-          <div style={styles.body}>
-            {this.props.longInstructions && <CollapserButton
-                style={[styles.collapserButton, this.props.isRtl && styles.collapserButtonRtl]}
-                isRtl={this.props.isRtl}
-                collapsed={this.props.collapsed}
-                onClick={this.handleClickCollapser}/>
-            }
-            {<Instructions
-                ref="instructions"
-                renderedMarkdown={renderedMarkdown}
-                onResize={this.props.onResize}
-                inTopPane
-            />
-            }
+        <ThreeColumns
+            style={styles.body}
+            leftColWidth={leftColWidth}
+            rightColWidth={this.state.rightColWidth}
+            height={this.props.height - resizerHeight}
+        >
+          <div style={this.props.hasAuthoredHints ? styles.authoredHints : undefined}>
+            <ProtectedStatefulDiv id="bubble" className="prompt-icon-cell">
+              <PromptIcon src={this.props.smallStaticAvatar} ref='icon'/>
+            </ProtectedStatefulDiv>
           </div>
-          {!this.props.collapsed && !this.props.isEmbedView && <HeightResizer
-            position={this.props.height}
-            onResize={this.handleHeightResize}/>
-          }
-        </div>
+          <Instructions
+              ref="instructions"
+              renderedMarkdown={renderedMarkdown}
+              onResize={this.adjustMaxNeededHeight}
+              inTopPane
+          />
+          <CollapserButton
+              ref='collapser'
+              style={[styles.collapserButton, !this.props.longInstructions && commonStyles.hidden]}
+              collapsed={this.props.collapsed}
+              onClick={this.handleClickCollapser}
+          />
+        </ThreeColumns>
+        {!this.props.collapsed && !this.props.isEmbedView && <HeightResizer
+          position={this.props.height}
+          onResize={this.handleHeightResize}/>
+        }
       </div>
     );
   }
@@ -220,7 +244,9 @@ module.exports = connect(function propsFromStore(state) {
     collapsed: state.instructions.collapsed,
     shortInstructions: state.instructions.shortInstructions,
     longInstructions: state.instructions.longInstructions,
-    isRtl: state.pageConstants.localeDirection === 'rtl'
+    hasAuthoredHints: state.instructions.hasAuthoredHints,
+    isRtl: state.pageConstants.localeDirection === 'rtl',
+    smallStaticAvatar: state.pageConstants.smallStaticAvatar
   };
 }, function propsFromDispatch(dispatch) {
   return {

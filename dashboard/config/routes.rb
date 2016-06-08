@@ -141,7 +141,12 @@ Dashboard::Application.routes.draw do
         end
       end
     end
+
+    get 'preview_assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
+    post 'confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments', as: 'confirm_assignments'
   end
+
+  get '/pl/:course', to: 'plc/user_course_enrollments#index'
 
   get '/beta', to: redirect('/')
 
@@ -281,11 +286,6 @@ Dashboard::Application.routes.draw do
     resources :enrollment_unit_assignments
     resources :evaluation_questions
   end
-
-  get '/plc/enrollment_evaluations/:unit_assignment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
-  post '/plc/enrollment_evaluations/:unit_assignment_id/submit_evaluation', to: 'plc/enrollment_evaluations#submit_evaluation'
-  get '/plc/enrollment_evaluations/:unit_assignment_id/preview_assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
-  post '/plc/enrollment_evaluations/:unit_assignment_id/confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments'
 
   post '/plc/course_units/:id/submit_new_questions_and_answers', to: 'plc/course_units#submit_new_questions_and_answers'
 

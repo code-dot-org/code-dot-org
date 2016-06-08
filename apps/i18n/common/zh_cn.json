@@ -237,5 +237,9 @@
   "watchVideo": "观看视频",
   "when": "当",
   "whenRun": "当运行时",
-  "workspaceHeaderShort": "工作区域"
+  "workspaceHeaderShort": "工作区域",
+  "hide": "Hide",
+  "more": "More",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
 }

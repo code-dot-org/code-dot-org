@@ -4,6 +4,14 @@ var _ = require('lodash');
 
 var PORT = 9876;
 
+var reporters = ['mocha'];
+if (process.env.CIRCLECI) {
+  reporters.push('junit');
+}
+if (process.env.COVERAGE === '1') {
+  reporters.push('coverage');
+}
+
 module.exports = function (config) {
   config.set({
 
@@ -21,7 +29,9 @@ module.exports = function (config) {
 
     proxies: {
       '/blockly/media/': 'http://localhost:'+PORT+'/base/static/',
+      '/lib/blockly/media/': 'http://localhost:'+PORT+'/base/static/',
       '/base/static/1x1.gif': 'http://localhost:'+PORT+'/base/lib/blockly/media/1x1.gif',
+      '/v3/assets/fake_id': 'http://localhost:'+PORT+'/base/test/integration/assets/fake_id',
     },
 
     // list of files to exclude
@@ -47,9 +57,11 @@ module.exports = function (config) {
       plugins: [
         new webpack.ProvidePlugin({React: 'react'}),
         new webpack.DefinePlugin({
-          IN_UNIT_TEST: true,
+          IN_UNIT_TEST: JSON.stringify(true),
+          'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
+          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+          PISKEL_DEVELOPMENT_MODE: false
         }),
-
       ]
     }),
     webpackMiddleware: {
@@ -57,13 +69,27 @@ module.exports = function (config) {
     },
     client: {
       // log console output in our test console
-      captureConsole: true
+      captureConsole: true,
+      mocha: {
+        timeout: 14000,
+      },
     },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['mocha'],
+    reporters: reporters,
+
+    junitReporter: {
+      outputDir: process.env.CIRCLECI ? process.env.CIRCLE_TEST_REPORTS : '',
+    },
+    coverageReporter: {
+      dir: 'coverage',
+      reporters: [
+        { type: 'html' },
+        { type: 'lcovonly' }
+      ]
+    },
 
 
     // web server port
@@ -86,8 +112,7 @@ module.exports = function (config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: [
-//      'Chrome',
-      'PhantomJS',
+      process.env.MOOC_BROWSER || 'PhantomJS'
     ],
 
 

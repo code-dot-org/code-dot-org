@@ -24,6 +24,7 @@ When /^I view the next authored hint$/ do
     And I wait to see "#hint-button"
     And I press "hint-button"
     And I wait to see ".qtip"
+    And I wait for 1 seconds
   STEPS
 end
 

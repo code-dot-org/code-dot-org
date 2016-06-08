@@ -99,6 +99,23 @@ Blockly.Css.setCursor = function(cursor, opt_svg) {
  * Array making up the CSS content for Blockly.
  */
 Blockly.Css.CONTENT = [
+  '.blocklyUnused .blocklyPath, .blocklyUnused .blocklyPathDark, .blocklyUnused .blocklyPathLight, .blocklyUnused .blocklyEditableText {',
+  ' opacity: 0.25;',
+  '}',
+  '.blocklyUnused .blocklyUnusedFrame {',
+  ' transition: opacity 2s;',
+  ' opacity: 0.8;',
+  '}',
+  '.blocklyUnused .blocklyUnusedFrame .blocklyText {',
+  '  fill: #000;',
+  '}',
+  '.blocklyUnused .blocklyUnusedFrame.hidden {',
+  ' opacity: 0;',
+  ' visibility: hidden',
+  '}',
+  '.blocklyUnused .blocklyHelp {',
+  ' cursor: pointer;',
+  '}',
   '.blocklyDraggable {',
   '  cursor: url(%CURSOR_OPEN_PATH%) 8 5, auto;',
   '}',

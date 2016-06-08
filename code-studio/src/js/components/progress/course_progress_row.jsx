@@ -1,22 +1,46 @@
 /* global dashboard */
 import React from 'react';
-import { STAGE_TYPE } from './types';
+import { stageShape } from './types';
 import StageProgress from './stage_progress.jsx';
+import color from '../../color';
+
+const styles = {
+  row: {
+    boxSizing: 'border-box',
+    margin: '2px 0',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.lighter_gray,
+    borderRadius: 5,
+    background: color.lightest_gray,
+    display: 'table',
+    tableLayout: 'fixed',
+    padding: 10,
+    width: '100%'
+  },
+  stageName: {
+    display: 'table-cell',
+    width: 200,
+    verticalAlign: 'middle',
+    paddingRight: 10
+  }
+};
 
 /**
  * Stage progress component used in level header and course overview.
  */
-var CourseProgressRow = React.createClass({
+const CourseProgressRow = React.createClass({
   propTypes: {
-    stage: STAGE_TYPE
+    currentLevelId: React.PropTypes.string,
+    stage: stageShape
   },
 
   render() {
-    var stage = this.props.stage;
+    const stage = this.props.stage;
 
     return (
-      <div className='game-group'>
-        <div className='stage'>
+      <div style={styles.row}>
+        <div style={styles.stageName}>
           {stage.title}
           <div className='stage-lesson-plan-link' style={{display: 'none'}}>
             <a target='_blank' href={stage.lesson_plan_html_url}>
@@ -24,7 +48,7 @@ var CourseProgressRow = React.createClass({
             </a>
           </div>
         </div>
-        <StageProgress levels={stage.levels} largeDots={true} saveAnswersFirst={false} />
+        <StageProgress levels={stage.levels} currentLevelId={this.props.currentLevelId} largeDots={true} saveAnswersFirst={false} />
       </div>
     );
   }
