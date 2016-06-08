@@ -58,9 +58,10 @@
             .labelblock
               = t('activerecord.attributes.user.password')
             = f.password_field :password, class: 'input-xlarge fieldblock', maxlength: 255
-            %span#password_message
-            .error_in_field
-              = "Password is required"
+            %div{style: "position: relative; width: 180px; height: 20px; display: inline-block;"}
+              %span#password_message{style: "position: absolute"}
+              .error_in_field{style: "position: absolute"}
+                = "Password is required"
 
           .itemblock
             .labelblock
@@ -75,12 +76,13 @@
           .error_in_field
             = "School name is required"
 
-        = f.hidden_field :age, value: '21'
-
         #age-block.itemblock
           .labelblock
             = t('signup_form.age')
-          = f.select :age, User::AGE_DROPDOWN_OPTIONS, { include_blank: true, disabled: '', selected: '' }
+          %select{name: "user[age]", type: "select"}
+            %option{value: "", selected: true, disabled: true}
+            - User::AGE_DROPDOWN_OPTIONS.each do |age_option|
+              %option{value: age_option}= age_option
           .error_in_field
             = "Age is required"
 
@@ -94,7 +96,7 @@
         #schoolcountry-block.itemblock{style: "display: none"}
           .labelblock
             = "Country"
-          %select#schoolcountry.form-control{name: "user[school_country]", type: "select", required: false}
+          %select#schoolcountry.form-control{name: "user[school_country]", type: "select"}
             %option{value: "", selected: true, disabled: true}
             - get_all_countries.each do |country_abbr, country_name|
               %option{value: country_abbr}= country_name
@@ -140,7 +142,7 @@
     for (var i = 0; i < fields.length; i++) {
       var field = fields[i];
       if (err.responseJSON.errors[field] == "is required") {
-        $("#" + field + "-block .error_in_field").show();
+        $("#" + field + "-block .error_in_field").fadeTo("normal", 1);
       }
     }
   }
@@ -189,11 +191,28 @@
 
 
   function submitForm() {
+
+    var formData = $('#new_user').serializeArray();
+
+    // Teachers get age 21.
+    var userType = $.grep(formData, function(e) { return e.name == "user[user_type]"; });
+    if (userType.length == 1 && userType[0].value == "teacher")
+    {
+      formData.push({name: 'user["age"]', value: 21});
+    }
+
+    // Hide all errors that might be showing from a previous attempt.
+    $(".error_in_field").css("opacity", 0);
+
+    // Hide any other hint messages that might be showing based on input.
+    $('#password_message').text("");
+    $('#password_message_confirmation').text("");
+
     $.ajax({
       url: "/users.json",
       type: "post",
       dataType: "json",
-      data: JSON.stringify($('#new_user').serializeArray())
+      data: JSON.stringify(formData)
     }).done(formSuccess).fail(formError);
 
     return false;
@@ -204,9 +223,10 @@
     var password_message = $('#password_message');
     var password_message_confirmation = $('#password_message_confirmation');
     if (!password || password.length < 6) {
+      $("#password-block .error_in_field").fadeTo("fast", 0);
       password_message.text("#{t('signup_form.invalid_password')}");
     } else {
-      password_message.text("#{t('signup_form.valid_password')}");
+      password_message.text("");
     }
     password_message_confirmation.text("");
   });
