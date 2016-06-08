@@ -40,15 +40,10 @@ window.initLevelGroup = function (
       var testResult = subLevelResult.testResult ? subLevelResult.testResult : (result ? 100 : 0);
       var submitted = subLevelResult.submitted || false;
 
-      var callback = appOptions.dialog.callback;
-      // Replace level id at the end of the callback URL with the sublevel level id
-      var levelIdPosition = callback.substring(callback.lastIndexOf('/') + 1);
-      callback = callback.replace(levelIdPosition, subLevelId);
-
       window.dashboard.reporting.sendReport({
         program: response,
         fallbackResponse: appOptions.dialog.fallbackResponse,
-        callback: callback,
+        callback: appOptions.dialog.sublevelCallback + subLevelId,
         app: appOptions.dialog.app,
         allowMultipleSends: true,
         level: subLevelId,

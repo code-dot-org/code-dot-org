@@ -52,7 +52,6 @@
         - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
           - level.properties['answers'].each { |answer| answer['correct'] = false }
         = render partial: 'levels/single_multi', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt, tight_layout: true}
-        %h2="last_attempt=#{sublevel_last_attempt}"
       - elsif level_class == "text_match"
         -# For students (or teachers doing PD), clear out all answers.
         - unless current_user.try(:authorized_teacher?) && !@script.try(:pd?)
