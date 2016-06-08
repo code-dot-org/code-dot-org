@@ -23,7 +23,6 @@ require_relative '../deployment'
 require 'cdo/rake_utils'
 require 'cdo/hip_chat'
 require 'cdo/only_one'
-require 'mail'
 
 STARTED = 'build-started'
 
