@@ -1,11 +1,11 @@
+import $ from 'jquery';
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('@cdo/apps/lodash');
 
 // take advantage of the fact that we expose the filesystem via
-// localhost:8001
-var imageUrl = '//localhost:8001/apps/static/flappy_promo.png';
+var imageUrl = '/base/static/flappy_promo.png';
 
 module.exports = {
   app: "applab",

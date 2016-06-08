@@ -1,4 +1,5 @@
 /** @file Row of controls above the visualization. */
+import React from 'react';
 import {changeInterfaceMode} from './actions';
 var connect = require('react-redux').connect;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;

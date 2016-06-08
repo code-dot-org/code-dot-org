@@ -586,6 +586,7 @@
   dashboard_landing_new_k5courses: "Ново! Опитайте нашите курсове за ученици в предучилищна
     и училищна възраст до 5 клас"
   dashboard_landing_useful_links: "Други полезни връзки (само на английски език)"
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: "Задайте въпрос лично! Посетете ни в работно време."
   dashboard_landing_print_certificates: "Печат на сертификати за ученици, които завършват
     този курс"
@@ -606,6 +607,11 @@
     предлагани от нашите партньори.</a> Научете се да програмирате с роботи, да правите
     уеб страници, да направете свое собствено  приложение или разгледайте уроци с
     други езици като C++, Ruby или Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: "Часът на кода за всички възрасти"
   dashboard_hoc_courses_desc: "Опитайте някои от тези кратки едночасови уроци с учениците
     си!"
@@ -662,6 +668,8 @@
   dashboard_action_required: "изисквания"
   dashboard_assessments_view: "Виж оценките в:"
   dashboard_assessments_none: "Няма оценки"
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: "Филтрирай по етикети:"
   dashboard_filter_all: "Всичи"
   dashboard_download_csv: "Сваляне на CSV"
@@ -795,11 +803,13 @@
   dashboard_curriculum_middle_title: "Ресурси за средни училища"
   dashboard_curriculum_high_title: "Ресурси за гимназии"
   dashboard_lesson_plans: "Планове на уроци"
-  dashboard_view_all_lesson_plans: "Изтегли пълна програма за курсовете 1-3"
+  dashboard_view_all_lesson_plans: "Разгледай всички урочни планове"
   dashboard_course1: "Курс 1:"
   dashboard_course2: "Курс 2:"
   dashboard_course3: "Курс 3:"
   dashboard_course4: "Курс 4 (бета): "
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
   dashboard_curriculum: "Учебна програма"
   dashboard_curriculum_overview: K-5 преглед на програмата
   dashboard_overview: "Общ преглед"
@@ -873,7 +883,7 @@
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition_button: "Добавете името си"
   code_hoc_coming: "Часът на кода е тук - декември 8-14!"
   code_sign_up: "Регистрирайте се за участие по време на CS седмицата на образованието"
   learn_more: "Научете повече"
@@ -1003,6 +1013,11 @@
   cspunit4_name: CS Principles Unit 4
   cspunit5_name: CS Principles Unit 5
   cspunit6_name: CS Principles Unit 6
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: Full Test - 50 questions
+  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
+  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: "Класове 9-12"
   cspunit3_shortdescription_congrats: "Тази част въвежда фундаменталните концепции
     за компютърно програмиране, което отключва възможността да се правят богати, интерактивни
@@ -1022,6 +1037,8 @@
   hoc_category_name: "Час на Кодирането"
   csf_category_name: CS Fundamentals
   csp_category_name: CS Principles
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: "Лаборатория за приложения"
   applab_gradelevel: "Възраст 13 +"
   applab_shortdescription_congrats: App Lab е програмна среда, в която създавате прости
@@ -1727,11 +1744,8 @@
   infinity_shortcode: inf
   playlab_shortcode: "играй"
   artist_shortcode: art
-  dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.
+  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
+    course, we have assessment questions available as part of Code Studio to help
+    your students prepare for the AP test. To use these assessments, first assign
+    the assessment to your class and then pick it from the drop down above and you'll
+    see your students' answers here.

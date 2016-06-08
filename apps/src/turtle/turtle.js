@@ -26,6 +26,8 @@
  */
 'use strict';
 
+var React = require('react');
+var ReactDOM = require('react-dom');
 var color = require('../color');
 var commonMsg = require('../locale');
 var turtleMsg = require('./locale');

@@ -2,6 +2,7 @@ import {assert} from '../util/configuredChai';
 var testUtils = require('./../util/testUtils');
 testUtils.setupLocales('applab');
 testUtils.setExternalGlobals();
+import React from 'react';
 var ReactTestUtils = require('react-addons-test-utils');
 
 var MarkdownInstructions = require('@cdo/apps/templates/instructions/MarkdownInstructions');
@@ -91,75 +92,117 @@ describe('NonMarkdownInstructions', function () {
   });
 });
 
-describe('instructions reducer', function () {
+describe('instructions reducer', () => {
   var reducer = instructions.default;
 
-  it('starts out uncollapsed', function () {
+  it('starts out uncollapsed', () => {
     var state = reducer(undefined, {});
-    assert.deepEqual(state, {
-      collapsed: false,
-      height: 300,
-      maxHeight: 0
-    });
+    assert.strictEqual(state.collapsed, false);
   });
 
-  it('toggles collapsed', function () {
+  it('toggles collapsed', () => {
     var initialState, newState;
 
     // start collapsed
     initialState = {
       collapsed: false,
-      height: 300,
-      maxHeight: 0
+      longInstructions: 'foo'
     };
     newState = reducer(initialState, instructions.toggleInstructionsCollapsed());
-    assert.deepEqual(newState, {
-      collapsed: true,
-      height: 300,
-      maxHeight: 0
-    });
+    assert.strictEqual(newState.collapsed, true);
 
     // start uncollapsed
     initialState = {
       collapsed: true,
-      height: 300,
-      maxHeight: 0
+      longInstructions: 'foo'
     };
     newState = reducer(initialState, instructions.toggleInstructionsCollapsed());
-    assert.deepEqual(newState, {
+    assert.strictEqual(newState.collapsed, false);
+  });
+
+  it('fails to collapse if no long instructions', () => {
+    var initialState, newState;
+
+    // start collapsed
+    initialState = {
       collapsed: false,
-      height: 300,
-      maxHeight: 0
+      shortInstructions: 'short',
+      longInstructions: undefined
+    };
+    assert.throws(() => {
+      newState = reducer(initialState, instructions.toggleInstructionsCollapsed());
     });
   });
 
-  it('modifies height', function () {
+  it('setInstructionsRenderedHeight updates rendered and expanded height if not collapsed', () => {
     var initialState, newState;
     initialState = {
       collapsed: false,
-      height: 300,
-      maxHeight: 0
+      renderedHeight: 0,
+      expandedHeight: 0
     };
-    newState = reducer(initialState, instructions.setInstructionsHeight(200));
+    newState = reducer(initialState, instructions.setInstructionsRenderedHeight(200));
     assert.deepEqual(newState, {
       collapsed: false,
-      height: 200,
-      maxHeight: 0
+      renderedHeight: 200,
+      expandedHeight: 200
     });
   });
 
-  it('modifies maxHeight', function () {
+  it('setInstructionsRenderedHeight updates only rendered height if collapsed', () => {
     var initialState, newState;
     initialState = {
-      collapsed: false,
-      height: 300,
-      maxHeight: 0
+      collapsed: true,
+      renderedHeight: 0,
+      expandedHeight: 0
     };
-    newState = reducer(initialState, instructions.setInstructionsMaxHeight(400));
+    newState = reducer(initialState, instructions.setInstructionsRenderedHeight(200));
     assert.deepEqual(newState, {
-      collapsed: false,
-      height: 300,
-      maxHeight: 400
+      collapsed: true,
+      renderedHeight: 200,
+      expandedHeight: 0
+    });
+  });
+
+
+  it('setInstructionsMaxHeightNeeded sets maxNeededHeight', () => {
+    var initialState, newState;
+    initialState = {
+      maxNeededHeight: 0
+    };
+    newState = reducer(initialState, instructions.setInstructionsMaxHeightNeeded(200));
+    assert.deepEqual(newState, {
+      maxNeededHeight: 200,
+    });
+  });
+
+  it('setInstructionsMaxHeightAvailable updates maxAvailableHeight', () => {
+    var initialState, newState;
+    initialState = {
+      maxAvailableHeight: Infinity,
+      renderedHeight: 0,
+      expandedHeight: 0
+    };
+    newState = reducer(initialState, instructions.setInstructionsMaxHeightAvailable(300));
+    assert.deepEqual(newState, {
+      maxAvailableHeight: 300,
+      renderedHeight: 0,
+      expandedHeight: 0
+    });
+  });
+
+  it('setInstructionsMaxHeightAvailable adjusts rendered/expanded height if necessary', () => {
+    var initialState, newState;
+    initialState = {
+      maxAvailableHeight: Infinity,
+      renderedHeight: 400,
+      expandedHeight: 400
+    };
+    newState = reducer(initialState, instructions.setInstructionsMaxHeightAvailable(300));
+    assert.deepEqual(newState, {
+      maxAvailableHeight: 300,
+      renderedHeight: 300,
+      expandedHeight: 300
     });
   });
 });

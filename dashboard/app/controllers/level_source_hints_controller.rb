@@ -199,17 +199,6 @@ class LevelSourceHintsController < ApplicationController
     redirect_to redirect_url, notice: I18n.t('add_hint_form.submit')
   end
 
-  def add_hint_access
-    redirect_url = params[:redirect]
-    user = User.find_by_email_or_hashed_email(params[:user_email])
-    if user
-      user.update_attribute(:hint_access, true)
-      redirect_to redirect_url, notice: "User hint access added to #{params[:user_email]}"
-    else
-      redirect_to redirect_url, notice: "Failed: cannot find user with email #{params[:user_email]}."
-    end
-  end
-
   protected
   def common(level_source_id)
     @level_source = LevelSource.find(level_source_id)

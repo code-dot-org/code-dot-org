@@ -237,5 +237,9 @@
   "watchVideo": "Pogledaj filmić",
   "when": "kada",
   "whenRun": "pri pokretanju",
-  "workspaceHeaderShort": "Radna površina: "
+  "workspaceHeaderShort": "Radna površina: ",
+  "hide": "Hide",
+  "more": "More",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
 }

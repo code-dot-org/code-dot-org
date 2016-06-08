@@ -1,31 +1,20 @@
-- cta_url = "http://teacherblog.code.org/post/143850631049/how-the-hints-system-on-code-studio-helps-measure"
-- petition_url = "http://bit.ly/computersciencepetition"
-- tagging_url = "http://teacherblog.code.org/post/143765455379/were-tagging-puzzles-in-code-studio-with-their"
+- cta_url = 'http://teacherblog.code.org/post/144920298729/course-4-officially-out-of-beta'
 
 %div.teacher-announce
-  %a.announce-heading-link{:href=>"http://teacherblog.code.org/"}
+  %a.announce-heading-link{href: 'http://teacherblog.code.org/'}
     %div.announce-heading
       = t('home.announcement_title')
       %div.heading-view-all
         = t('home.announcement_view_all')
         >>
   %div.announce-content
-    %a{:href=>cta_url}
+    %a{href: cta_url}
       %div.content-img-container
-        = image_tag(CDO.shared_image_url("/teacher-announcement/tagging-puzzles.jpg"), width: '200px')
+        = image_tag(CDO.shared_image_url('/teacher-announcement/course4-out-of-beta.png'), width: '200px')
     %div.content-text
-      != t('home.announcement_message', tagging_url: tagging_url, ux_url: cta_url)
+      != t('home.announcement_message')
     %div.announce-learn-more
-      %a{:href=>cta_url}
+      %a{href: cta_url}
         %button.primary= t('home.announcement_button')
-  %div.announce-content
-    %a{:href=>petition_url}
-      %div.content-img-container
-        = image_tag(CDO.shared_image_url("/teacher-announcement/petition-faces.png"), width: '200px')
-    %div.content-text
-      = t('home.announcement_petition')
-    %div.announce-learn-more
-      %a{:href=>petition_url}
-        %button.primary= t('home.announcement_petition_button')
 
-#clearboth{:style=>"clear:both;"}
+#clearboth{style: 'clear: both;'}

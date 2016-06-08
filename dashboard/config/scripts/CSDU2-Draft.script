@@ -1,0 +1,11 @@
+title 'TEMP CSD Unit 2'
+description 'Temp place to work on U2 of Disco'
+description_short 'Web Development'
+login_required 'true'
+hidden 'true'
+
+stage 'Introduction to HTML'
+level 'CSD - Headers and Lists - Hobbies Project'
+level 'CSD - Headers and Lists - Recipe Project'
+
+stage 'Headers and Lists'

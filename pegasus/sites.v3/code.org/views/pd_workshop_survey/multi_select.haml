@@ -1,10 +1,11 @@
 -# Expected params: name, label
 
-%label.control-label{for: name}
-  = label
+%div.form-group{for: name}
+  %label.control-label{for: name}
+    = label
   %span.form-required-field *
-%select.form-control{name: name, type: 'select', multiple: true}
-  %option{selected: 'selected', value: ''} -- Select all that apply --
   - PdWorkshopSurvey::options_for(name).map do |option|
-    %option{value: option}
-      = option
+    .checkbox
+      %label{style: 'font-family: inherit'}
+        %input{name: name, type: 'checkbox', value: option}
+        = option

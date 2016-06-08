@@ -1,5 +1,8 @@
 /*jshint scripturl:true*/
 
+import $ from 'jquery';
+import _ from 'lodash';
+var React = require('react');
 window.dashboard = window.dashboard || {};
 
 var MenuState = {
@@ -137,7 +140,7 @@ var SmallFooter = React.createClass({
       smallFooter: {
         fontSize: this.props.fontSize
       },
-      base: $.extend({}, this.props.baseStyle, {
+      base: _.assign({}, this.props.baseStyle, {
         paddingBottom: 3,
         paddingTop: 3,
         // subtract top/bottom padding from row height

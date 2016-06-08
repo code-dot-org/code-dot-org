@@ -3,7 +3,7 @@ Feature: HOC reset resets client state
 Scenario: hoc/reset resets videos, callouts, level progress
   Given I am on "http://studio.code.org/hoc/reset"
   And I rotate to landscape
-  Then I wait until element ".video-modal" is visible
+  Then I wait to see ".video-modal"
   Then I close the dialog
   Then I wait to see a dialog titled "Puzzle 1 of 20"
   Then I close the dialog
