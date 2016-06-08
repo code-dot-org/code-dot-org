@@ -585,6 +585,30 @@ function getUnsafeHtmlReporter(sanitizationTarget) {
   };
 }
 
+designMode.parseScreenFromLevelHtml = function (screenEl, allowDragging, prefix) {
+  var children = $(screenEl);
+  children.each(function () {
+    elementUtils.addIdPrefix(this, prefix);
+  });
+  children.children().each(function () {
+    elementUtils.addIdPrefix(this, prefix);
+  });
+
+  if (allowDragging) {
+    // children are screens. make grandchildren draggable
+    makeDraggable(children.children());
+  }
+
+  children.each(function () {
+    elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
+  });
+  children.children().each(function () {
+    var element = $(this).hasClass('ui-draggable') ? this.firstChild : this;
+    elementLibrary.onDeserialize(element, designMode.updateProperty.bind(element));
+  });
+  return children[0];
+};
+
 /**
  * Replace the contents of rootEl with the children of the DOM node obtained by
  * parsing Applab.levelHtml (the root node in the levelHtml is ignored).
@@ -608,27 +632,8 @@ designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
   var reportUnsafeHtml = getUnsafeHtmlReporter(rootEl.id);
   var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml));
   var children = $(levelDom).children();
-
-  children.each(function () {
-    elementUtils.addIdPrefix(this, prefix);
-  });
-  children.children().each(function () {
-    elementUtils.addIdPrefix(this, prefix);
-  });
-
+  children.each(function () { designMode.parseScreenFromLevelHtml(this, allowDragging, prefix); });
   children.appendTo(rootEl);
-  if (allowDragging) {
-    // children are screens. make grandchildren draggable
-    makeDraggable(children.children());
-  }
-
-  children.each(function () {
-    elementLibrary.onDeserialize(this, designMode.updateProperty.bind(this));
-  });
-  children.children().each(function () {
-    var element = $(this).hasClass('ui-draggable') ? this.firstChild : this;
-    elementLibrary.onDeserialize(element, designMode.updateProperty.bind(element));
-  });
 };
 
 /**

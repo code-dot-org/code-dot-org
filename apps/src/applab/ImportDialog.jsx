@@ -26,7 +26,8 @@ export const ImportDialog = React.createClass({
       <Dialog {...this.props}>
         {
           this.state.project ?
-          <ImportScreensForm project={this.state.project} />
+          <ImportScreensForm project={this.state.project}
+                             onImport={this.props.handleClose}/>
           :
           <ImportProjectForm onProjectFetched={this.handleProjectFetched} />
         }
