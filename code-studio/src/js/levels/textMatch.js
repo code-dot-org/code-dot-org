@@ -40,14 +40,6 @@ TextMatch.prototype.ready = function () {
   });
 };
 
-
-TextMatch.prototype.getCurrentAnswer = function () {
-  var response = $("#" + this.id + " textarea.response").val();
-  var valid = response.length > 1;
-
-  return { response: response, valid: valid };
-};
-
 TextMatch.prototype.getResult = function () {
   var response = $("#" + this.id + " textarea.response").val();
   var answers = this.answers;
@@ -58,13 +50,15 @@ TextMatch.prototype.getResult = function () {
     });
     return {
       response: encodeURIComponent(response),
-      result: result
+      result: result,
+      valid: response.length > 0
     };
   } else {
     // Always succeed for any non-empty response to open-ended question without answer(s)
     return {
       response: encodeURIComponent(response),
-      result: response.length > 0
+      result: response.length > 0,
+      valid: response.length > 0
     };
   }
 };
