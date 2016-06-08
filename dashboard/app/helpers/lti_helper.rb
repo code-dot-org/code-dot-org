@@ -10,7 +10,7 @@ module LtiHelper
   def lti_role_to_user_type(roles)
     return User::TYPE_STUDENT if roles.blank?
 
-    arr = roles.downcase.split(',').uniq.compact
+    arr = roles.downcase.split(/\s*,\s*/).uniq.compact
     if arr.length == 1 && arr.include?('learner')
       User::TYPE_STUDENT
     else
@@ -72,7 +72,6 @@ module LtiHelper
 
         user = User.find_by_email_or_hashed_email(email)
         if user.nil?
-          password = SecureRandom.uuid  # password will never be seen by user...
           user_type = lti_role_to_user_type(params[:roles])
 
           # Age is not part of the LTI basic launch data.  Use similar
@@ -81,7 +80,7 @@ module LtiHelper
           age = ((user_type == User::TYPE_TEACHER) ? 21 : 8)
 
           user = User.new(email: email,
-                          password: password, password_confirmation: password,
+                          provider: "lti_#{consumer_key}",
                           name: full_name, age: age, user_type: user_type)
 
           user.skip_confirmation!

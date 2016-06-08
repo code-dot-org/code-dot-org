@@ -127,6 +127,27 @@ class LtiProviderControllerTest < ActionController::TestCase
     assert_equal User::TYPE_STUDENT, user.user_type
   end
 
+  test "LTI sign-in creates new User with no password and provider set" do
+    consumer_key = 'f10ee9fc082219227976f2c1603a3d77'
+
+    params = lti_consumer_params(
+      consumer_key,
+      'dc3872a4b605f1f36242a837172ce2c0', method_name,
+      lis_person_contact_email_primary: 'cat@hat.com',
+      lis_person_name_full: 'Cat Hat',
+      roles: 'Learner,Learner')
+
+    assert_creates(User) do
+      lti_post :sso, params
+    end
+
+    user = User.last
+    assert_equal "lti_#{consumer_key}", user.provider
+    assert_nil user.password
+  end
+
+
+
   test "LTI sign-in with no email does not sign in" do
     params = lti_consumer_params(
       'f10ee9fc082219227976f2c1603a3d77',
