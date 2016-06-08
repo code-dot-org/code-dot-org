@@ -1161,7 +1161,9 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
  * @param {boolean} showHints
  */
 StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHints) {
-  var isMarkdownMode = !!this.reduxStore.getState().instructions.longInstructions;
+  const reduxState = this.reduxStore.getState();
+  const isMarkdownMode = !!reduxState.instructions.longInstructions;
+  const instructionsInTopPane = reduxState.pageConstants.instructionsInTopPane;
 
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?
@@ -1212,7 +1214,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
 
   var hideFn = _.bind(function () {
     // Momentarily flash the instruction block white then back to regular.
-    if ($(endTargetSelector).length) {
+    if (!instructionsInTopPane) {
       $(endTargetSelector).css({"background-color":"rgba(255,255,255,1)"})
         .delay(500)
         .animate({"background-color":"rgba(0,0,0,0)"},1000);
