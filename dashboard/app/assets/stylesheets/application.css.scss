@@ -1526,13 +1526,11 @@ a.download-video {
   }
 }
 
-#hoc_download {
-  h2 {
-    color: $teal;
-    font-size: 26px;
-    margin-top:48px;
-    margin-bottom:48px;
-  }
+.hoc_download_subtitle {
+  color: $teal;
+  font-size: 26px;
+  margin-top: 48px;
+  margin-bottom: 48px;
 }
 
 @mixin yTranslation($offset) {
