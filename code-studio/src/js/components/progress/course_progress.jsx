@@ -21,7 +21,7 @@ const styles = {
 const CourseProgress = React.createClass({
   propTypes: {
     currentLevelId: React.PropTypes.string,
-    teacherCourse: React.PropTypes.boolean,
+    professionalLearningCourse: React.PropTypes.boolean,
     stages: React.PropTypes.arrayOf(stageShape)
   },
 
@@ -30,8 +30,8 @@ const CourseProgress = React.createClass({
 
     const rows = _.map(groups, (stages, group) =>
       <div key={group}>
-        <h4 style={this.props.teacherCourse ? styles.flexHeader : {display: 'none'}}>{group}</h4>
-        {stages.map(stage => <CourseProgressRow stage={stage} key={stage.name} currentLevelId={this.props.currentLevelId} teacherCourse={this.props.teacherCourse} />)}
+        <h4 style={this.props.professionalLearningCourse ? styles.flexHeader : {display: 'none'}}>{group}</h4>
+        {stages.map(stage => <CourseProgressRow stage={stage} key={stage.name} currentLevelId={this.props.currentLevelId} professionalLearningCourse={this.props.professionalLearningCourse} />)}
       </div>
     );
 
@@ -45,6 +45,6 @@ const CourseProgress = React.createClass({
 
 export default connect(state => ({
   currentLevelId: state.currentLevelId,
-  teacherCourse: state.teacherCourse,
+  professionalLearningCourse: state.professionalLearningCourse,
   stages: state.stages
 }))(CourseProgress);
