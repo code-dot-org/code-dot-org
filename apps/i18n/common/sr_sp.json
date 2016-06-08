@@ -237,5 +237,9 @@
   "watchVideo": "Погледај видео",
   "when": "када",
   "whenRun": "Када кренеш",
-  "workspaceHeaderShort": "Радни простор: "
+  "workspaceHeaderShort": "Радни простор: ",
+  "hide": "Hide",
+  "more": "More",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
 }

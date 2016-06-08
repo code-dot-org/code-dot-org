@@ -1,4 +1,17 @@
 #!/usr/bin/env ruby
+
+# This script adds or updates documents in SOLR of kind 'user' using the
+# information in the dashboard users table. The pegasus properties table,
+# specifically the key 'solr-user-last-id', is used to track where indexing
+# should resume.
+#
+# To reindex the users table, eliminate the 'solr-user-last-id' key from the
+# properties table by running
+#   DELETE FROM properties WHERE `key` = 'solr-user-last-id';
+# via pegasus-sql-writer OR by running
+#   PEGASUS_DB[:properties].where(key: 'solr-user-last-id').delete
+# via pegasus-console.
+
 require File.expand_path('../../deployment', __FILE__)
 require 'json'
 require 'cdo/only_one'

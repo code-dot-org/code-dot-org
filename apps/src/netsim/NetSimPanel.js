@@ -4,6 +4,7 @@
  */
 'use strict';
 
+import $ from 'jquery';
 var utils = require('../utils');
 var markup = require('./NetSimPanel.html.ejs');
 var ArgumentUtils = require('./ArgumentUtils');

@@ -91,6 +91,14 @@ def validate_form(kind, data)
     value
   end
 
+  def us_phone_number(value)
+    return value if value.class == FieldError
+    value = stripped value
+    return nil if value.nil_or_empty?
+    return FieldError.new(value, :invalid) unless RegexpUtils.us_phone_number?(value)
+    RegexpUtils.extract_us_phone_number_digits(value)
+  end
+
   data = Object.const_get(kind).normalize(data)
 
   errors = {}

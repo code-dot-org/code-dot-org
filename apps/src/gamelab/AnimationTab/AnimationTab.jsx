@@ -1,6 +1,7 @@
 /** @file Root of the animation editor interface mode for GameLab */
 'use strict';
 
+import React from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 import color from '../../color';
@@ -26,26 +27,10 @@ const styles = {
     minWidth: 150,
     maxWidth: 300
   },
-  framesColumn: {
-    display: 'flex',
-    flexDirection: 'column',
-    minWidth: 150,
-    maxWidth: 300,
-    borderTop: 'solid thin ' + color.light_purple,
-    borderBottom: 'solid thin ' + color.light_purple,
-    borderLeft: 'solid thin ' + color.light_purple,
-    borderRight: 'none'
-  },
   editorColumn: {
     display: 'flex',
     flexDirection: 'column',
     border: 'solid thin ' + color.light_purple
-  },
-  editorRegion: {
-    flex: '1 0',
-    backgroundColor: 'white',
-    textAlign: 'center',
-    paddingTop:'48%'
   }
 };
 
@@ -71,20 +56,7 @@ const AnimationTab = React.createClass({
             <GameLabVisualizationHeader />
             <AnimationList />
           </div>
-          <div style={styles.framesColumn}>
-            <div className="purple-header workspace-header" style={commonStyles.purpleHeader}>
-              <span>Frames</span>
-            </div>
-            <FrameList />
-          </div>
-          <div style={styles.editorColumn}>
-            <div className="purple-header workspace-header" style={commonStyles.purpleHeader}>
-              <span>Workspace</span>
-            </div>
-            <div style={styles.editorRegion}>
-              TODO: Piskel editor goes here!
-            </div>
-          </div>
+          <iframe id="piskel-frame" style={styles.editorColumn} src="/blockly/js/piskel/index.html" />
         </ResizablePanes>
         <AnimationPicker channelId={this.props.channelId}/>
       </div>

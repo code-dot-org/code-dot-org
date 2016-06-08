@@ -1,5 +1,12 @@
+var React = require('react');
 var MarkdownInstructions = require('./MarkdownInstructions');
 var NonMarkdownInstructions = require('./NonMarkdownInstructions');
+
+const styles = {
+  main: {
+    overflow: 'auto'
+  }
+};
 
 var Instructions = React.createClass({
 
@@ -46,7 +53,7 @@ var Instructions = React.createClass({
       );
     }
     return (
-      <div>
+      <div style={styles.main}>
         {instructions}
         {this.props.aniGifURL &&
           <img className="aniGif example-image" src={ this.props.aniGifURL }/>

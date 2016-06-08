@@ -223,7 +223,7 @@ function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, opt
     return !options.paletteOnly || block.func in codeFunctions || block.func in docFunctions;
   }).map(function (block) {
     // We found this particular block, now override the defaults with extend
-    return $.extend({}, block, codeFunctions[block.func]);
+    return Object.assign({}, block, codeFunctions[block.func]);
   });
 }
 
@@ -238,7 +238,7 @@ function mergeCategoriesWithConfig(dropletConfig) {
   var dropletCategories = dropletConfig && dropletConfig.categories;
   // We include dropletCategories twice so that (a) it's ordering of categories
   // gets preference and (b) it's value override anything in standardConfig
-  return _.cloneDeep($.extend({}, dropletCategories, standardConfig.categories,
+  return _.cloneDeep(Object.assign({}, dropletCategories, standardConfig.categories,
     dropletCategories));
 }
 
@@ -574,7 +574,7 @@ exports.generateDropletModeOptions = function (config) {
     paramButtonsForUnknownFunctions: true
   };
 
-  $.extend(modeOptions.functions,
+  Object.assign(modeOptions.functions,
     getModeOptionFunctionsFromConfig({ blocks: exports.dropletGlobalConfigBlocks }),
     getModeOptionFunctionsFromConfig({ blocks: exports.dropletBuiltinConfigBlocks }),
     getModeOptionFunctionsFromConfig(config.dropletConfig)

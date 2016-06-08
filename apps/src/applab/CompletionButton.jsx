@@ -1,5 +1,6 @@
 var msg = require('../locale');
 
+var React = require('react');
 var connect = require('react-redux').connect;
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
 var experiments = require('../experiments');

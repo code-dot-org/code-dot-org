@@ -2,6 +2,7 @@ import GameButtons, {ResetButton} from '../templates/GameButtons';
 import IFrameEmbedOverlay from './IFrameEmbedOverlay';
 import * as color from '../color';
 
+var React = require('react');
 var Radium = require('radium');
 var Visualization = require('./Visualization');
 var CompletionButton = require('./CompletionButton');

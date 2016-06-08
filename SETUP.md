@@ -57,7 +57,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ### Ubuntu 14.04
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk libsqlite3-dev phantomjs build-essential`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential`
   * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
 1. Upgrade npm to 2.0. If `npm -v` says less than 2.0 then
   * `sudo add-apt-repository ppa:chris-lea/node.js`

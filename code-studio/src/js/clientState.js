@@ -4,7 +4,7 @@
  */
 'use strict';
 
-var $ = require('jquery-shim');
+var $ = require('jquery');
 var sessionStorage = window.sessionStorage;
 
 var clientState = module.exports = {};
@@ -129,6 +129,26 @@ clientState.trackProgress = function (result, lines, testResult, scriptName, lev
   if (testResult <= clientState.MAXIMUM_CACHABLE_RESULT && savedResult !== clientState.mergeActivityResult(savedResult, testResult)) {
     setLevelProgress(scriptName, levelId, testResult);
   }
+};
+
+/**
+ * Write down user progress for an entire script.
+ * @param {string} scriptName
+ * @param {Object<String, number>} progress
+ */
+clientState.batchTrackProgress = function (scriptName, progress) {
+  var data = {};
+  var keys = Object.keys(progress);
+  for (let i = 0; i < keys.length; i++) {
+    let level = keys[i];
+    if (progress[level] && progress[level] <= clientState.MAXIMUM_CACHABLE_RESULT) {
+      data[level] = progress[level];
+    }
+  }
+
+  var progressMap = clientState.allLevelsProgress();
+  progressMap[scriptName] = data;
+  safelySetItem('progress', JSON.stringify(progressMap));
 };
 
 /**

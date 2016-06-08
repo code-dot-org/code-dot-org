@@ -237,5 +237,9 @@
   "watchVideo": "ভিডিও দেখুন",
   "when": "যখন",
   "whenRun": "চালানোর সময়",
-  "workspaceHeaderShort": "কর্মপরিসর:"
+  "workspaceHeaderShort": "কর্মপরিসর:",
+  "hide": "Hide",
+  "more": "More",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
 }
