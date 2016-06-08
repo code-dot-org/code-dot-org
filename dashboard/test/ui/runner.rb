@@ -29,7 +29,7 @@ ENV['BUILD'] = `git rev-parse --short HEAD`
 
 S3_LOGS_BUCKET = 'cucumber-logs'
 S3_LOGS_PREFIX = GitUtils.current_branch
-LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, {acl: 'public-read'})
+LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
 
 # Upload the given log to the cucumber-logs s3 bucket.
 # @param [String] filename of log file to be uploaded.

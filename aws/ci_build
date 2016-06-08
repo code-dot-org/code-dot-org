@@ -29,7 +29,7 @@ require 'cdo/only_one'
 STARTED = 'build-started'
 CHAT_LOG_TAIL_LENGTH = 40
 S3_LOGS_BUCKET = 'cdo-build-logs'
-S3_LOGS_PREFIX = "#{CDO.name}/"
+S3_LOGS_PREFIX = CDO.name
 
 # Upload the given log to the logs s3 bucket.
 # @param [String] key where uploaded log should be located
@@ -141,7 +141,7 @@ def main()
       message = "<b>#{projects}</b> failed to build!" + time_message + log_link
       truncated_log = <<-LOG
 Showing last #{CHAT_LOG_TAIL_LENGTH} lines of build log:
-#{log.lines.slice(-CHAT_LOG_TAIL_LENGTH).join('\n')}
+#{log.lines.last(CHAT_LOG_TAIL_LENGTH).join('\n')}
       LOG
       HipChat.log message, color: 'red'
       HipChat.log "/quote #{truncated_log}", color: 'gray', message_format: 'text' unless log.empty?
