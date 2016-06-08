@@ -830,14 +830,26 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal nil, assigns(:user)
   end
 
-  test 'does not show teacher panel for pd scripts' do
+  test 'teacher tray is not visible for pd and plc scripts' do
     sign_in @teacher
 
     script = Script.find_by_name('ECSPD')
     assert script.pd?
+    assert script.professional_course?
 
     get :show, script_id: script, stage_id: 1, id: 1
+    assert_select '.teacher-panel', 0
 
+    script = create(:script)
+    stage = create(:stage, script: script)
+    level = create(:maze)
+    create(:script_level, script: script, stage: stage, level: level)
+
+    script.update(professional_learning_course: true)
+    assert script.professional_learning_course?
+    assert script.professional_course?
+
+    get :show, script_id: script, stage_id: 1, id: 1
     assert_select '.teacher-panel', 0
   end
 
