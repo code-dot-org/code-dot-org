@@ -113,6 +113,8 @@ To run an individual test, use the `--entry` option with `npm run test:entry` to
 npm run test:entry -- --entry ./test/unit/gridUtilsTest.js
 ```
 
+##### Rerun Tests Automatically #####
+
 To rerun tests automatically on every file change, set the environment variable
 `MOOC_WATCH=1`:
 
@@ -121,6 +123,8 @@ MOOC_WATCH=1 npm run test:unit
 ```
 
 This will work on any of the test commands.
+
+##### Debugging Tests #####
 
 To debug tests, your best bet is to run them in Chrome. Keep in mind that there
 can be subtle differences between Chrome and PhantomJS, so after fixing your
@@ -136,7 +140,54 @@ click on the Debug button to open a new tab where you can then open the
 developer console to see everything that is happening. If you don't see the new
 chrome browser window, it may have opened *behind* your other windows.
 
-- You can add new test files as /test/*Tests.js, see `/test/feedbackTests.js` as an example of adding a mock Blockly instance
+##### Coverage Reports #####
+
+Coverage reports can be generated for any collection of tests by specifying the
+`COVERAGE=1` environment variable. Results will be placed in the `coverage`
+folder. For example, to see what code gets executed by unit tests, run:
+
+```
+COVERAGE=1 npm run test:unit
+```
+
+Then you can open up the html report with (note that the exact file path may be
+different):
+
+```
+open coverage/PhantomJS\ 2.1.1\ \(Mac\ OS\ X\ 0.0.0\)/index.html
+```
+
+##### Writing Tests #####
+
+You can add new test files as /test/unit/*Tests.js; see
+`/test/unit/feedbackTests.js` as an example of adding a mock Blockly
+instance. Note that each test file in `/test/unit/**` should include tests for
+exactly one file in `src/**` and the test file should have the same file name as
+the file it tests (with `Tests` appended to it): i.e. don't create new unit test
+files that test lots and lots of different stuff.
+
+In the event you need certain code to only be available when tests are running,
+you can use the `IN_UNIT_TEST` global, which will be set to `true` only when
+tests are running. For example:
+
+```
+if (IN_UNIT_TEST) {
+  console.log("this log line will only show up when tests are run");
+}
+```
+
+These if statements will be removed from production source files at build time.
+
+The test runner starts a server which can serve files in the apps directory to
+your test code. Only whitelisted files and directories are available. See the
+`config.karma.options.files` array in `Gruntfile.js` for the whitelist. When
+fetching files served by the test runner, prefix the file path with
+`/base/`. For example, to load the `test/audio/assets/win.mp3` file in an
+`<audio>` tag inside your test, you could write:
+
+```
+document.write('<audio src="/base/test/audio/assets/win.mp3"/>');
+```
 
 #### Full build with blockly-core changes
 

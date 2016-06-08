@@ -4,6 +4,14 @@ var _ = require('lodash');
 
 var PORT = 9876;
 
+var reporters = ['mocha'];
+if (process.env.CIRCLECI) {
+  reporters.push('junit');
+}
+if (process.env.COVERAGE === '1') {
+  reporters.push('coverage');
+}
+
 module.exports = function (config) {
   config.set({
 
@@ -52,6 +60,7 @@ module.exports = function (config) {
           IN_UNIT_TEST: JSON.stringify(true),
           'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
           'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+          PISKEL_DEVELOPMENT_MODE: false
         }),
       ]
     }),
@@ -69,13 +78,17 @@ module.exports = function (config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: process.env.CIRCLECI ? [
-      'junit',
-      'mocha',
-    ] : ['mocha'],
+    reporters: reporters,
 
     junitReporter: {
       outputDir: process.env.CIRCLECI ? process.env.CIRCLE_TEST_REPORTS : '',
+    },
+    coverageReporter: {
+      dir: 'coverage',
+      reporters: [
+        { type: 'html' },
+        { type: 'lcovonly' }
+      ]
     },
 
 
