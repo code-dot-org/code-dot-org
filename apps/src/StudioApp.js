@@ -2769,6 +2769,10 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     }
     // Never use short instructions in CSP
     shortInstructions = undefined;
+  } else {
+    if (config.showInstructionsInTopPane && shortInstructions === longInstructions) {
+      longInstructions = null;
+    }
   }
 
   this.reduxStore.dispatch(setInstructionsConstants({
