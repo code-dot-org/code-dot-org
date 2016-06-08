@@ -6,7 +6,13 @@ import color from '../../color';
 
 const styles = {
   row: {
-    borderBottom: `2px solid ${color.lighter_gray}`,
+    boxSizing: 'border-box',
+    margin: '2px 0',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.lighter_gray,
+    borderRadius: 5,
+    background: color.lightest_gray,
     display: 'table',
     tableLayout: 'fixed',
     padding: 10,
