@@ -55,5 +55,31 @@ module AWS
     def self.public_url(bucket, filename)
       Aws::S3::Object.new(bucket, filename, region: CDO.aws_region).public_url
     end
+
+    class PublicVersionedLogUploader
+      def initialize(bucket, prefix)
+        @bucket = bucket
+        @prefix = prefix
+      end
+
+      #
+      # Uploads the file with the given filename to S3 in the preconfigured
+      # bucket and prefix, and returns a public URL to the uploaded log file.
+      # May raise an exception if the file cannot be opened or the S3 upload fails.
+      #
+      def upload_log(filename)
+        File.open(filename, 'rb') do |file|
+          result = AWS::S3.create_client.put_object(
+            bucket: @bucket,
+            key: "#{@prefix}/#{filename}",
+            body: file,
+            acl: 'public-read'
+          )
+          log_url = "https://s3.amazonaws.com/#{S3_LOGS_BUCKET}/#{S3_LOGS_PREFIX}/#{filename}"
+          log_url += "?versionId=#{result[:version_id]}" unless result[:version_id].nil?
+          return log_url
+        end
+      end
+    end
   end
 end

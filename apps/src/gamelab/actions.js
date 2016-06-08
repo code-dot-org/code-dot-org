@@ -1,8 +1,7 @@
 /** @file Redux action-creators for Game Lab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
 'use strict';
-
-import utils from '../utils';
+import $ from 'jquery';
 
 /** @enum {string} */
 export const CHANGE_INTERFACE_MODE = 'CHANGE_INTERFACE_MODE';

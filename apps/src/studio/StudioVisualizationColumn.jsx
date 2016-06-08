@@ -1,3 +1,4 @@
+var React = require('react');
 var msg = require('../locale');
 
 var GameButtons = require('../templates/GameButtons').default;

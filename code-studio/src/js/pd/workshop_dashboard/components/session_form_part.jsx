@@ -1,10 +1,11 @@
-/* global React */
-
 /*
   Individual Session input for creating and editing workshops.
   Sets date, startTime, and endTime for the session.
  */
 
+import $ from 'jquery';
+var React = require('react');
+var ReactDOM = require('react-dom');
 var moment = require('moment');
 var Row = require('react-bootstrap').Row;
 var Col = require('react-bootstrap').Col;

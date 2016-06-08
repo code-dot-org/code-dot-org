@@ -216,7 +216,9 @@ class Level < ActiveRecord::Base
     ['Unplugged', # no solutions
      'TextMatch', 'Multi', 'External', 'Match', 'ContractMatch', 'LevelGroup', # dsl defined, covered in dsl
      'Applab', 'Gamelab', # all applab and gamelab are freeplay
-     'NetSim', 'Odometer', 'Vigenere', 'FrequencyAnalysis', 'TextCompression', 'Pixelation'] # widgets
+     'EvaluationQuestion', # plc evaluation
+     'NetSim', 'Odometer', 'Vigenere', 'FrequencyAnalysis', 'TextCompression', 'Pixelation',
+    ] # widgets
   # level types with ILS: ["Craft", "Studio", "Karel", "Eval", "Maze", "Calc", "Blockly", "StudioEC", "Artist"]
 
   def self.where_we_want_to_calculate_ideal_level_source

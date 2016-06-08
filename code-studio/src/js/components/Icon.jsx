@@ -1,3 +1,5 @@
+var React = require('react');
+
 /**
  * A single icon.
  */

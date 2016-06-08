@@ -7,6 +7,9 @@
 /* global confirm */
 'use strict';
 
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var utils = require('../utils');
 var _ = require('../lodash');
 var i18n = require('./locale');

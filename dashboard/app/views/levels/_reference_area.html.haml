@@ -1,5 +1,5 @@
 #reference_area.reference_area
-  - if current_user && (current_user.teacher? || current_user.admin?) && @level.ideal_level_source_id && @script && @level && @script_level && !@script.hide_solutions?
+  - if can_view_solution?
     .solution_link
       = link_to t('reference_area.teacher'), build_script_level_path(@script_level, solution: true)
 

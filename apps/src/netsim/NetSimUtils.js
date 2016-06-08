@@ -3,6 +3,7 @@
  */
 'use strict';
 
+import $ from 'jquery';
 var utils = require('../utils'); // Provides String.prototype.repeat
 var _ = require('../lodash');
 var i18n = require('./locale');

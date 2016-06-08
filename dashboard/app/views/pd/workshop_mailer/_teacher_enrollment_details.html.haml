@@ -60,7 +60,7 @@
 %p
   If you are unable to attend the workshop, please
   = link_to 'cancel your registration', @cancel_url
-  , in advance so the facilitator can plan accordingly.
+  in advance so the facilitator can plan accordingly.
 
 %p
   Thank you,
@@ -68,4 +68,6 @@
   = @workshop.organizer.name
 
 %p
-  P.S. Connect with other computer science teachers on Twitter @TeachCode for inspiration and great tips on bringing #CSforAll.
+  P.S. Connect with other computer science teachers on Twitter
+  = link_to '@TeachCode', 'https://twitter.com/teachcode'
+  for inspiration and great tips on bringing #CSforAll.
