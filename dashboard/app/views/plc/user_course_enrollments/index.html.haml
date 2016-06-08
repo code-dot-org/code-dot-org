@@ -1,9 +1,7 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/plc', media: 'all'
 
-- if @user_course_enrollments.nil? || @user_course_enrollments.empty?
-  %p Hello #{current_user.name}, your future course progress will go here
-- else
+- if @user_course_enrollments.try(:any?)
   - @user_course_enrollments.each do |user_course_enrollment|
     %h3.course_title
       = user_course_enrollment.plc_course.name
@@ -13,7 +11,7 @@
         - unit_group.each do |unit_enrollment|
           .course_unit_section
             .course_unit_title
-              = unit_enrollment.plc_course_unit.unit_name
+              = link_to unit_enrollment.plc_course_unit.unit_name, unit_enrollment.plc_course_unit.script
             - if unit_enrollment.status == Plc::EnrollmentUnitAssignment::START_BLOCKED
               .coming_soon
                 Coming soon!
@@ -38,3 +36,5 @@
                   Teaching Practice
                   .ribbon-wrapper
                     .ribbon{class: practice_module_assignment.try(:status) || 'not_started'}
+- else
+  %p Hello #{current_user.name}, your future course progress will go here
