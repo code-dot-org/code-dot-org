@@ -69,7 +69,8 @@ class Stage < ActiveRecord::Base
   end
 
   def summarize
-    stage_summary = Rails.cache.fetch("#{cache_key}/stage_summary/#{I18n.locale}") do
+    summary_cache_key = "#{script.cache_key}/#{cache_key}/stage_summary/#{I18n.backend.cache_key}"
+    Rails.cache.fetch(summary_cache_key) do
       stage_data = {
           script_id: script.id,
           script_name: script.name,
@@ -111,7 +112,6 @@ class Stage < ActiveRecord::Base
       end
 
       stage_data
-    end
-    stage_summary.freeze
+    end.freeze
   end
 end

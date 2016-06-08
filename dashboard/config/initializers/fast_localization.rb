@@ -13,3 +13,11 @@ Dashboard::Application.config.after_initialize do |_|
   I18n.backend.init_translations if I18n.backend.respond_to? :init_translations
   I18n.t 'hello'
 end
+
+# Provides a cache key based on the current locale and contents of all localized strings.
+module I18n::Backend::CacheKey
+  def cache_key
+    "#{I18n.locale}-#{translations.hash}"
+  end
+end
+I18n::Backend::Simple.include(I18n::Backend::CacheKey)
