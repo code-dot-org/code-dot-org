@@ -35,4 +35,8 @@ class External < DSLDefined
   def icon
     'fa-file-text-o'
   end
+
+  def show_progress?
+    false
+  end
 end

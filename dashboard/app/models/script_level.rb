@@ -145,6 +145,7 @@ class ScriptLevel < ActiveRecord::Base
         position: position,
         kind: kind,
         icon: level.icon,
+        show_progress: level.show_progress?,
         title: level_display_text,
         url: build_script_level_url(self)
     }

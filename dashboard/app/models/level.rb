@@ -300,6 +300,10 @@ class Level < ActiveRecord::Base
     'fa-puzzle-piece'
   end
 
+  def show_progress?
+    true
+  end
+
   private
 
   def write_to_file?

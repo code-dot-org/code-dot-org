@@ -47,6 +47,11 @@ const styles = {
       margin: '2px 4px',
       fontSize: 16,
       lineHeight: '32px'
+    },
+    without_progress: {
+      borderColor: 'transparent',
+      fontSize: 20,
+      color: color.charcoal
     }
   },
   status: {
@@ -127,29 +132,35 @@ const ProgressDot = React.createClass({
       onClick = (e) => {this.dotClicked(level.url); e.preventDefault();};
     }
 
-    const combinedStyle = [dotStyle, styles.status[level.status || 'not_tried']];
-
     if (level.kind === 'named_level') {
+      let icon = <i className={`fa ${level.icon}`} style={dotStyle} />;
+      if (level.show_progress) {
+        icon = <span style={dotStyle}>&nbsp;</span>;
+        Object.assign(dotStyle, styles.status[level.status || 'not_tried']);
+      } else {
+        Object.assign(dotStyle, styles.dot.without_progress);
+      }
+
       return (
         <a
           className={`level-${level.id}`}
           href={level.url}
           onClick={onClick}>
           <div>
-            <i className={`fa ${level.icon}`} style={combinedStyle} />
-            &nbsp;
-            {level.name}
+            {icon}
+            <span style={{marginLeft: 5}}>{level.name}</span>
           </div>
         </a>
       );
     }
 
+    Object.assign(dotStyle, styles.status[level.status || 'not_tried']);
     return (
       <a
         className={`level-${level.id}`}
         href={level.url}
         onClick={onClick}
-        style={combinedStyle}>
+        style={dotStyle}>
           {level.title}
       </a>
     );
