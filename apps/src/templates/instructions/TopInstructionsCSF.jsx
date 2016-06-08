@@ -107,7 +107,7 @@ var TopInstructions = React.createClass({
     // except that it means when we set instructionsRenderedHeight below, it might
     // not be as large as we want.
     this.setState({
-      rightColWidth: $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth()
+      rightColWidth: $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true)
     });
 
     // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
