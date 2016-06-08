@@ -1504,7 +1504,7 @@ a.download-video {
   }
   #usernamemessage, #password_message, #password_message_confirmation {
     display:inline-block;
-    width:180px;
+    max-width:180px;
     vertical-align:top
   }
 
@@ -1526,8 +1526,9 @@ a.download-video {
   }
 
   .error_in_field {
-    color:red;
-    display:none;
+    color: red;
+    opacity: 0;
+    display: inline-block;
   }
 }
 
