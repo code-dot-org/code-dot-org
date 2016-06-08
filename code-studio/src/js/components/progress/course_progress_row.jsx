@@ -26,7 +26,7 @@ const styles = {
 const CourseProgressRow = React.createClass({
   propTypes: {
     currentLevelId: React.PropTypes.string,
-    professionalLearningCourse: React.PropTypes.boolean,
+    professionalLearningCourse: React.PropTypes.bool,
     stage: stageShape
   },
 
