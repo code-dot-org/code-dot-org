@@ -119,7 +119,7 @@ module LevelsHelper
     callouts_to_show.map do |callout|
       callout_hash = callout.attributes
       callout_hash.delete('localization_key')
-      callout_hash['seen'] = callouts_seen[callout.localization_key]
+      callout_hash['seen'] = always_show ? nil : callouts_seen[callout.localization_key]
       callout_text = data_t('callout.text', callout.localization_key)
       if callout_text.nil?
         callout_hash['localized_text'] = callout.callout_text
