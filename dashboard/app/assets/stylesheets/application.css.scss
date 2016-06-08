@@ -1384,40 +1384,28 @@ a.download-video {
   }
 
   #lesson {
-    background-color: $charcoal;
     #heading {
-      -moz-box-sizing:border-box; box-sizing:border-box; padding: 10px 20px 10px 0px;
-      .whitetext {
-        color:white;
+      width: 700px;
+      h2 {
+        margin-top: 0;
       }
     }
     #trynow {
-      text-align:right; -moz-box-sizing:border-box; box-sizing:border-box; padding-top:20px; padding-right:40px;
+      float: right;
+      text-align: right;
       .biggerbutton {
-        font-size:20px; height:40px;
+        font-size: 20px;
+        height: 40px;
       }
       .button_to {
-        margin-bottom:5px;
-      }
-      a {
-        color: $lightest_gray;
-        font-family: $gotham-regular; font-weight: normal;
-      }
-      .white {
-        color:white;
+        margin-bottom: 5px;
       }
     }
-    .smallwhitetext {
-      color:white; font-size:15px;
-    }
-    .lightgreytext {
-      color: $lightest_gray;
-    }
-  }
-  #stats {
-    background-color:$lightest_gray;
-    #rightside {
-      -moz-box-sizing:border-box; box-sizing:border-box; padding:10px;
+    .betatext {
+      background: $white;
+      color: $cyan;
+      padding: 2px 4px;
+      border: 1px solid $cyan;
     }
   }
 
