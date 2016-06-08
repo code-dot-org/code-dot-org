@@ -41,6 +41,7 @@ var dropletUtils = require('../dropletUtils');
 var mazeUtils = require('./mazeUtils');
 var _ = require('../lodash');
 var dropletConfig = require('./dropletConfig');
+var experiments = require('../experiments');
 
 var MazeMap = require('./mazeMap');
 var Bee = require('./bee');
@@ -514,6 +515,8 @@ Maze.init = function (config) {
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
 
+  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
+
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.bee = new Bee(Maze, studioApp, config);
     // Override default stepSpeed
@@ -608,7 +611,9 @@ Maze.init = function (config) {
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Maze.resetButtonClick);
 
-    if (skin.hideInstructions) {
+    const instructionsInTopPane = studioApp.reduxStore.getState()
+      .pageConstants.instructionsInTopPane;
+    if (skin.hideInstructions && !instructionsInTopPane) {
       document.getElementById("bubble").style.display = "none";
     }
   };
