@@ -12,6 +12,7 @@ var HintsDisplay = require('./templates/instructions/HintsDisplay');
 var HintDialogContent = require('./templates/instructions/HintDialogContent');
 var authoredHintUtils = require('./authoredHintUtils');
 var Lightbulb = require('./templates/Lightbulb');
+import { setHasAuthoredHints } from './redux/instructions';
 
 var AuthoredHints = function (studioApp) {
   this.studioApp_ = studioApp;
@@ -87,6 +88,10 @@ AuthoredHints.prototype.displayMissingBlockHints = function (blocks) {
 
   this.contextualHints_ = newContextualHints;
   this.updateLightbulbDisplay_(animateLightbulb);
+
+  if (newContextualHints.length > 0) {
+    this.studioApp_.reduxStore.dispatch(setHasAuthoredHints(true));
+  }
 };
 
 /**
@@ -118,6 +123,10 @@ AuthoredHints.prototype.init = function (hints, scriptId, levelId) {
   this.hints_ = hints;
   this.scriptId_ = scriptId;
   this.levelId_ = levelId;
+
+  if (hints && hints.length > 0) {
+    this.studioApp_.reduxStore.dispatch(setHasAuthoredHints(true));
+  }
 };
 
 /**

@@ -69,7 +69,7 @@ module Rack
           headers['X-Frame-Options'] = ''
         end
 
-        unless policies.empty?
+        unless policies.empty? || headers.key?('Content-Security-Policy')
           headers['Content-Security-Policy'] = policies.join('; ')
         end
       end
