@@ -25,17 +25,17 @@ class LevelsHelperTest < ActionView::TestCase
   test "blockly_options refuses to generate options for non-blockly levels" do
     @level = create(:match)
     assert_raises(ArgumentError) do
-      blockly_options
+      blockly_options @level
     end
   end
 
   test "should parse maze level with non string array" do
     @level.properties["maze"] = [[0, 0], [2, 3]]
-    options = blockly_options
+    options = blockly_options @level
     assert options[:level]["map"].is_a?(Array), "Maze is not an array"
 
     @level.properties["maze"] = @level.properties["maze"].to_s
-    options = blockly_options
+    options = blockly_options @level
     assert options[:level]["map"].is_a?(Array), "Maze is not an array"
   end
 
@@ -47,11 +47,11 @@ class LevelsHelperTest < ActionView::TestCase
     @level.level_num = '2_2'
 
     I18n.locale = default_locale
-    options = blockly_options
+    options = blockly_options @level
     assert_equal I18n.t('data.level.instructions.maze_2_2', locale: default_locale), options[:level]['instructions']
 
     I18n.locale = new_locale
-    options = blockly_options
+    options = blockly_options @level
     assert_equal I18n.t('data.level.instructions.maze_2_2', locale: new_locale), options[:level]['instructions']
     I18n.locale = default_locale
   end
@@ -61,7 +61,7 @@ class LevelsHelperTest < ActionView::TestCase
     @level.name = 'frozen line'
 
     I18n.locale = default_locale
-    options = blockly_options
+    options = blockly_options @level
     assert_equal @level.instructions, options[:level]['instructions']
   end
 
@@ -71,11 +71,11 @@ class LevelsHelperTest < ActionView::TestCase
 
     I18n.locale = new_locale
     @level.name = 'frozen line'
-    options = blockly_options
+    options = blockly_options @level
     assert_equal I18n.t("data.instructions.#{@level.name}_instruction", locale: new_locale), options[:level]['instructions']
 
     @level.name = 'this_level_doesnt_exist'
-    options = blockly_options
+    options = blockly_options @level
     assert_equal @level.instructions, options[:level]['instructions']
     I18n.locale = default_locale
   end
@@ -93,7 +93,7 @@ class LevelsHelperTest < ActionView::TestCase
     @level.impressive = "false"
     @level.free_play = "false"
 
-    options = blockly_options
+    options = blockly_options @level
 
     assert_equal false, options[:level]['impressive']
     assert_equal false, options[:level]['freePlay']
@@ -103,12 +103,12 @@ class LevelsHelperTest < ActionView::TestCase
     @level.level_num = 'custom'
     @level.callout_json = '[{"localization_key": "run", "element_id": "#runButton"}]'
 
-    callouts = select_and_remember_callouts
+    callouts = select_and_remember_callouts @level
     assert_equal 1, callouts.count
     assert_equal '#runButton', callouts[0]['element_id']
     assert_equal 'Hit "Run" to try your program', callouts[0]['localized_text']
 
-    callouts = select_and_remember_callouts
+    callouts = select_and_remember_callouts @level
     assert_equal 0, callouts.count
   end
 
@@ -122,7 +122,7 @@ class LevelsHelperTest < ActionView::TestCase
     callout2 = create(:callout, script_level: @script_level)
     irrelevant_callout = create(:callout)
 
-    callouts = select_and_remember_callouts
+    callouts = select_and_remember_callouts @level
 
     assert callouts.any? { |callout| callout['id'] == callout1.id }
     assert callouts.any? { |callout| callout['id'] == callout2.id }
@@ -137,7 +137,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     create(:callout, script_level: @script_level, localization_key: 'run')
 
-    callouts = select_and_remember_callouts
+    callouts = select_and_remember_callouts @level
 
     assert callouts.any?{ |c| c['localized_text'] == 'Hit "Run" to try your program'}
   end
@@ -169,15 +169,15 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :user
     sign_in user
 
-    set_channel
+    set_channel @level
     channel = @view_options[:channel]
     # Request it again, should get the same channel
-    set_channel
+    set_channel @level
     assert_equal channel, @view_options[:channel]
 
     # Request it for a different level, should get a different channel
     @level = create :level, :blockly
-    set_channel
+    set_channel @level
     assert_not_equal channel, @view_options[:channel]
   end
 
@@ -187,7 +187,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     @level = create :applab
 
-    set_channel
+    set_channel @level
 
     assert_not_nil app_options['channel']
   end
@@ -200,7 +200,7 @@ class LevelsHelperTest < ActionView::TestCase
     @level = create :applab
 
     # channel does not exist
-    set_channel
+    set_channel @level
     assert_nil app_options['channel']
   end
 
@@ -213,7 +213,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     # channel exists
     ChannelToken.create!(level: @level, user: @user, channel: 'whatever')
-    set_channel
+    set_channel @level
     assert_equal 'whatever', app_options['channel']
   end
 

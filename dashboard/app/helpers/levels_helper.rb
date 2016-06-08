@@ -50,14 +50,14 @@ module LevelsHelper
     view_options callouts: []
   end
 
-  def set_channel
+  def set_channel(level)
     # This only works for logged-in users because the storage_id cookie is not
     # sent back to the client if it is modified by ChannelsApi.
     return unless current_user
 
     # The channel should be associated with the template level, if present.
     # Otherwise the current level.
-    host_level = @level.project_template_level || @level
+    host_level = level.project_template_level || level
 
     if @user
       # "answers" are in the channel so instead of doing
@@ -83,18 +83,18 @@ module LevelsHelper
     end
   end
 
-  def select_and_track_autoplay_video
-    return if @level.try(:autoplay_blocked_by_level?)
+  def select_and_track_autoplay_video(level)
+    return if level.try(:autoplay_blocked_by_level?)
 
     autoplay_video = nil
 
     is_legacy_level = @script_level && @script_level.script.legacy_curriculum?
 
     if is_legacy_level
-      autoplay_video = @level.related_videos.find { |video| !client_state.video_seen?(video.key) }
-    elsif @level.specified_autoplay_video
-      unless client_state.video_seen?(@level.specified_autoplay_video.key)
-        autoplay_video = @level.specified_autoplay_video
+      autoplay_video = level.related_videos.find { |video| !client_state.video_seen?(video.key) }
+    elsif level.specified_autoplay_video
+      unless client_state.video_seen?(level.specified_autoplay_video.key)
+        autoplay_video = level.specified_autoplay_video
       end
     end
 
@@ -104,9 +104,9 @@ module LevelsHelper
     autoplay_video.summarize unless params[:noautoplay]
   end
 
-  def select_and_remember_callouts(always_show = false)
+  def select_and_remember_callouts(level, always_show = false)
     # Filter if already seen (unless always_show)
-    callouts_to_show = @level.available_callouts(@script_level).
+    callouts_to_show = level.available_callouts(@script_level).
       reject { |c| !always_show && client_state.callout_seen?(c.localization_key) }.
       each { |c| client_state.add_callout_seen(c.localization_key) }
     # Localize
@@ -124,13 +124,14 @@ module LevelsHelper
   end
 
   # Options hash for all level types
-  def app_options
+  def app_options(level = @level)
+    @app_options ||= {}
     # Unsafe to generate these twice, so use the cached version if it exists.
-    return @app_options unless @app_options.nil?
+    return @app_options[level.id] unless @app_options[level.id].nil?
 
-    set_channel if @level.channel_backed?
+    set_channel(level) if level.channel_backed?
 
-    view_options server_level_id: @level.id
+    view_options server_level_id: level.id
     if @script_level
       view_options(
         stage_position: @script_level.stage.position,
@@ -145,16 +146,16 @@ module LevelsHelper
     unless params[:share]
       # Set videos and callouts.
       view_options(
-        autoplay_video: select_and_track_autoplay_video,
-        callouts: select_and_remember_callouts(params[:show_callouts])
+        autoplay_video: select_and_track_autoplay_video(level),
+        callouts: select_and_remember_callouts(level, params[:show_callouts])
       )
     end
 
     # External project levels are any levels of type 'external' which use
     # the projects code to save and load the user's progress on that level.
-    view_options(is_external_project_level: true) if @level.is_a? Pixelation
+    view_options(is_external_project_level: true) if level.is_a? Pixelation
 
-    view_options(is_channel_backed: true) if @level.channel_backed?
+    view_options(is_channel_backed: true) if level.channel_backed?
 
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone: post_milestone)
@@ -170,30 +171,32 @@ module LevelsHelper
       view_options(authored_hint_view_requests_url: authored_hint_view_requests_path(format: :json))
     end
 
-    if @level.is_a? Blockly
-      @app_options = blockly_options
-    elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse)
-      @app_options = question_options
-    elsif @level.is_a? Widget
-      @app_options = widget_options
-    elsif @level.unplugged?
-      @app_options = unplugged_options
+    if level.is_a? Blockly
+      @app_options[level.id] = blockly_options level
+    elsif level.is_a?(DSLDefined) || level.is_a?(FreeResponse)
+      @app_options[level.id] = question_options level
+    elsif level.is_a? Widget
+      @app_options[level.id] = widget_options level
+    elsif level.unplugged?
+      @app_options[level.id] = unplugged_options
     else
       # currently, all levels are Blockly or DSLDefined except for Unplugged
-      @app_options = view_options.camelize_keys
+      @app_options[level.id] = view_options.camelize_keys
     end
+    reset_view_options
 
-    @app_options[:dialog] = {
-      skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
-      preTitle: @level.properties['pre_title'],
+    @app_options[level.id][:dialog] = {
+      skipSound: !!(level.properties['options'].try(:[], 'skip_sound')),
+      preTitle: level.properties['pre_title'],
       fallbackResponse: @fallback_response.to_json,
       callback: @callback,
-      app: @level.type.underscore,
-      level: @level.level_num,
-      shouldShowDialog: @level.properties['skip_dialog'].blank? && @level.properties['options'].try(:[], 'skip_dialog').blank?
+      app: level.type.underscore,
+      level: level.level_num,
+      shouldShowDialog: level.properties['skip_dialog'].blank? && level.properties['options'].try(:[], 'skip_dialog').blank?
     }
+    @app_options[level.id][:locale] = js_locale
 
-    @app_options
+    @app_options[level.id]
   end
 
   # Helper that renders the _apps_dependencies partial with a configuration
@@ -223,10 +226,10 @@ module LevelsHelper
   end
 
   # Options hash for Widget
-  def widget_options
+  def widget_options(level)
     app_options = {}
     app_options[:level] ||= {}
-    app_options[:level].merge! @level.properties.camelize_keys
+    app_options[:level].merge! level.properties.camelize_keys
     app_options.merge! view_options.camelize_keys
     app_options
   end
@@ -240,13 +243,13 @@ module LevelsHelper
   end
 
   # Options hash for Multi/Match/FreeResponse/TextMatch/ContractMatch/External/LevelGroup levels
-  def question_options
+  def question_options(level)
     app_options = {}
 
     level_options = app_options[:level] ||= Hash.new
 
     level_options[:lastAttempt] = @last_attempt
-    level_options.merge! @level.properties.camelize_keys
+    level_options.merge! level.properties.camelize_keys
 
     if current_user.nil? || current_user.teachers.empty?
       # only students with teachers should be able to submit
@@ -262,24 +265,23 @@ module LevelsHelper
   end
 
   # Options hash for Blockly
-  def blockly_options
-    l = @level
-    raise ArgumentError.new("#{l} is not a Blockly object") unless l.is_a? Blockly
+  def blockly_options(level)
+    raise ArgumentError.new("#{level} is not a Blockly object") unless level.is_a? Blockly
     # Level-dependent options
-    app_options = l.blockly_options.dup
+    app_options = level.blockly_options.dup
     level_options = app_options[:level] = app_options[:level].dup
 
     # Locale-dependent option
     # Fetch localized strings
-    if l.custom?
-      loc_val = data_t("instructions", "#{l.name}_instruction")
+    if level.custom?
+      loc_val = data_t("instructions", "#{level.name}_instruction")
       unless I18n.en? || loc_val.nil?
         level_options['instructions'] = loc_val
       end
     else
       %w(instructions).each do |label|
-        val = [l.game.app, l.game.name].map { |name|
-          data_t("level.#{label}", "#{name}_#{l.level_num}")
+        val = [level.game.app, level.game.name].map { |name|
+          data_t("level.#{label}", "#{name}_#{level.level_num}")
         }.compact.first
         level_options[label] ||= val unless val.nil?
       end
@@ -344,12 +346,12 @@ module LevelsHelper
       level_options['hideSource'] = false
     end
 
-    if @level.game.uses_pusher?
+    if level.game.uses_pusher?
       app_options['usePusher'] = CDO.use_pusher
       app_options['pusherApplicationKey'] = CDO.pusher_application_key
     end
 
-    if @level.is_a? NetSim
+    if level.is_a? NetSim
       app_options['netsimMaxRouters'] = CDO.netsim_max_routers
     end
 
@@ -381,9 +383,9 @@ module LevelsHelper
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:isSignedIn] = !current_user.nil?
-    app_options[:pinWorkspaceToBottom] = true if enable_scrolling?
-    app_options[:hasVerticalScrollbars] = true if enable_scrolling?
-    app_options[:showExampleTestButtons] = true if enable_examples?
+    app_options[:pinWorkspaceToBottom] = true if level.enable_scrolling?
+    app_options[:hasVerticalScrollbars] = true if level.enable_scrolling?
+    app_options[:showExampleTestButtons] = true if level.enable_examples?
     app_options[:rackEnv] = CDO.rack_env
     app_options[:report] = {
         fallback_response: @fallback_response,
@@ -425,29 +427,6 @@ module LevelsHelper
         :powered_by_aws => I18n.t('footer.powered_by_aws'),
         :trademark => URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
     }
-  end
-
-  LevelViewOptions = Struct.new(*%i(
-    success_condition
-    start_blocks
-    toolbox_blocks
-    edit_blocks
-    skip_instructions_popup
-    embed
-    share
-    hide_source
-    submitted
-    unsubmit_url
-    iframe_embed
-  ))
-  # Sets custom level options to be used by the view layer. The option hash is frozen once read.
-  def level_view_options(opts = nil)
-    @level_view_options ||= LevelViewOptions.new
-    if opts.blank?
-      @level_view_options.freeze.to_h.delete_if { |_k, v| v.nil? }
-    else
-      opts.each{|k, v| @level_view_options[k] = v}
-    end
   end
 
   def string_or_image(prefix, text, source_level = nil)
@@ -555,14 +534,6 @@ module LevelsHelper
     channel_id = "1337" # Stub value, until storage for channel_id's is available.
     user_id = current_user ? current_user.id.to_s : session.id
     Digest::SHA1.base64digest("#{channel_id}:#{user_id}").tr('=', '')
-  end
-
-  def enable_scrolling?
-    @level.is_a?(Blockly)
-  end
-
-  def enable_examples?
-    @level.is_a?(Blockly)
   end
 
   # If this is a restricted level (i.e. applab) and user is under 13, redirect with a flash alert

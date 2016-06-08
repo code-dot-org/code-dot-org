@@ -199,32 +199,34 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
-  def select_level
+  def select_levels
     # If there's only one level in this scriptlevel, use that
-    return @script_level.levels[0] if @script_level.levels.length == 1
+    return @script_level.levels if @script_level.levels.length == 1
 
-    # For teachers, load the student's most recent attempt
-    if @user && current_user != @user
-      last_attempt = @user.last_attempt_for_any(@script_level.levels)
-      return last_attempt.level if last_attempt
-    end
-
-    # If they've tried at least one variant before, use the most recently attempted
-    # (unless overridden by a force_reload query string param)
+    # If their most recent attempt was on a now-inactive level, show that.
     if current_user && !params[:force_reload]
       last_attempt = current_user.last_attempt_for_any(@script_level.levels)
-      return last_attempt.level if last_attempt
+      properties_hash = JSON.parse(@script_level.properties)
+      if last_attempt && properties_hash[last_attempt.level.name]['active'] == false
+        return [last_attempt.level]
+      end
     end
 
-    # Otherwise return the oldest active level
-    oldest_active = @script_level.oldest_active_level
-    raise "No active levels found for scriptlevel #{@script_level.id}" unless oldest_active
-    oldest_active
+    # Otherwise return all the active levels, given that they have the same game type
+    active_levels = @script_level.active_levels
+    raise "No active levels found for scriptlevel #{@script_level.id}" if active_levels.empty?
+    game = active_levels.first.game
+    active_levels.each do |level|
+      raise "Found #{game.app} and #{level.game.app} in the same scriptlevel." if game.app != level.game.app
+    end
+
+    active_levels
   end
 
   def present_level
     # All database look-ups should have already been cached by Script::script_cache_from_db
-    @level = select_level
+    @levels = select_levels
+    @level = @levels.first
     @game = @level.game
     @stage = @script_level.stage
 

@@ -19,8 +19,9 @@
   :javascript
     //<![CDATA[
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
-    var appOptions = #{app_options.to_json};
-    appOptions.locale = '#{js_locale}';
+    var appOptionsList = #{@levels ? @levels.map{|level| app_options(level)}.to_json : [app_options].to_json};
+    var selectorProperties = #{(@script_level && @script_level.properties) || "{}"};
+    var appOptions = apps.chooseApp(selectorProperties, appOptionsList);
     apps.setupApp(appOptions);
     apps.load(apps.init);
     //]]>
