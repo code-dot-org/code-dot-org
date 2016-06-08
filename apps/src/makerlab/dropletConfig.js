@@ -23,18 +23,18 @@ const colorPixelVariables = Array.from({length: 10}, (_, index) => `colorLeds[${
 const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
 
 module.exports.blocks = [
-  { func: 'pinMode', parent: api, category: 'Maker Lab', paletteParams: ['pin', 'mode'], params: ['13', '"output"'], dropdown: { 1: ['"output"', '"input"', '"analog"'] }},
-  { func: 'digitalWrite', parent: api, category: 'Maker Lab', paletteParams: ['pin', 'value'], params: ['13', '1'], dropdown: { 1: ['1', '0'] }},
-  { func: 'digitalRead', parent: api, category: 'Maker Lab', type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['"D4"']},
-  { func: 'analogWrite', parent: api, category: 'Maker Lab', paletteParams: ['pin', 'value'], params: ['5', '150']},
-  { func: 'analogRead', parent: api, category: 'Maker Lab', type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['5']},
+  {func: 'pinMode', parent: api, category: 'Maker Lab', paletteParams: ['pin', 'mode'], params: ['13', '"output"'], dropdown: { 1: ['"output"', '"input"', '"analog"'] }},
+  {func: 'digitalWrite', parent: api, category: 'Maker Lab', paletteParams: ['pin', 'value'], params: ['13', '1'], dropdown: { 1: ['1', '0'] }},
+  {func: 'digitalRead', parent: api, category: 'Maker Lab', type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['"D4"']},
+  {func: 'analogWrite', parent: api, category: 'Maker Lab', paletteParams: ['pin', 'value'], params: ['5', '150']},
+  {func: 'analogRead', parent: api, category: 'Maker Lab', type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['5']},
 
   {func: 'led', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'led.on', category: 'Circuit'},
   {func: 'led.off', category: 'Circuit'},
 
-  { func: 'on', blockPrefix: colorLedBlockPrefix, category: 'Circuit', tipPrefix: pixelType, modeOptionName: '*.on', objectDropdown: {options: colorPixelVariables}},
-  { func: 'off', blockPrefix: colorLedBlockPrefix, category: 'Circuit', tipPrefix: pixelType, modeOptionName: '*.off', objectDropdown: {options: colorPixelVariables}},
+  {func: 'on', blockPrefix: colorLedBlockPrefix, category: 'Circuit', tipPrefix: pixelType, modeOptionName: '*.on', objectDropdown: {options: colorPixelVariables}},
+  {func: 'off', blockPrefix: colorLedBlockPrefix, category: 'Circuit', tipPrefix: pixelType, modeOptionName: '*.off', objectDropdown: {options: colorPixelVariables}},
 
   {func: 'toggle', blockPrefix: colorLedBlockPrefix, category: 'Circuit', tipPrefix: pixelType, modeOptionName: "*.toggle", objectDropdown: { options: colorPixelVariables }  },
   {func: 'blink', blockPrefix: colorLedBlockPrefix, category: 'Circuit', paletteParams: ['interval'], params: ['100'], tipPrefix: pixelType, modeOptionName: "*.blink", objectDropdown: { options: colorPixelVariables }  },
