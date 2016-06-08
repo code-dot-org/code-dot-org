@@ -164,8 +164,8 @@ window.dashboard.dialog = (function () {
    *     function passed as the parameter to complete the processResults call.
    */
   // TODO(dave): move this logic into appOptions.onAttempt for levels of type
-  // external (including pixelation), multi, match, and any others
-  // which render 'levels/dialog'.
+  // external (including pixelation), multi, match, free_response, level_group,
+  // and any others which render 'levels/dialog'.
   var processResults = function (onComplete, beforeHook) {
     if (beforeHook) {
       beforeHook(sendResultsCompletion);
@@ -179,7 +179,6 @@ window.dashboard.dialog = (function () {
       var errorType = results.errorType;
       var testResult = results.testResult ? results.testResult : (result ? 100 : 0);
       var submitted = results.submitted || false;
-
 
       if (!result) {
         showDialog(errorType || "error");
