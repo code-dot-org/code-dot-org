@@ -18,6 +18,11 @@ const styles = {
     padding: 10,
     width: '100%'
   },
+  focusAreaRow: {
+    borderWidth: 3,
+    borderColor: color.cyan,
+    padding: 8
+  },
   stageName: {
     display: 'table-cell',
     width: 200,
@@ -33,15 +38,19 @@ const CourseProgressRow = React.createClass({
   propTypes: {
     currentLevelId: React.PropTypes.string,
     professionalLearningCourse: React.PropTypes.bool,
+    isFocusArea: React.PropTypes.bool,
     stage: stageShape
   },
 
   render() {
     const stage = this.props.stage;
 
-    let rowStyle = styles.row;
+    let rowStyle = Object.assign({}, styles.row);
     if (this.props.professionalLearningCourse) {
       Object.assign(rowStyle, {background: color.white});
+    }
+    if (this.props.isFocusArea) {
+      Object.assign(rowStyle, styles.focusAreaRow);
     }
 
     return (
