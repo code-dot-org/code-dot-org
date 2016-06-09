@@ -552,8 +552,10 @@ Blockly.BlockSvg.prototype.updateLimit = function (limit) {
 
   if (limit === 0) {
     Blockly.addClass_(this.svgGroup_, 'blocklyUnused');
+    Blockly.removeClass_(this.svgGroup_, 'blocklyDraggable');
   } else {
     Blockly.removeClass_(this.svgGroup_, 'blocklyUnused');
+    Blockly.addClass_(this.svgGroup_, 'blocklyDraggable');
   }
 
   this.limitText_.textContent = limit;
