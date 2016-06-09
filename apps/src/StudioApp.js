@@ -643,6 +643,14 @@ StudioApp.prototype.configureHints_ = function (config) {
   var bubble = document.getElementById('bubble');
   if (bubble) {
     dom.addClickTouchEvent(bubble, function () {
+      const reduxState = this.reduxStore.getState();
+      const instructionsInTopPane = reduxState.pageConstants.instructionsInTopPane;
+      const hasAuthoredHints = reduxState.instructions.hasAuthoredHints;
+
+      // Don't show dialog on click in top pane unless we have hints
+      if (instructionsInTopPane && !hasAuthoredHints) {
+        return;
+      }
       this.showInstructionsDialog_(config.level, false, true);
     }.bind(this));
   }
@@ -2769,6 +2777,10 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     }
     // Never use short instructions in CSP
     shortInstructions = undefined;
+  } else {
+    if (config.showInstructionsInTopPane && shortInstructions === longInstructions) {
+      longInstructions = null;
+    }
   }
 
   this.reduxStore.dispatch(setInstructionsConstants({
