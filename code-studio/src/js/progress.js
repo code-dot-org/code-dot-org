@@ -163,14 +163,14 @@ progress.bestResultLevelId = function (levelIds, progress) {
   }
 
   // Return the level with the highest result
-  var attemptedIds = levelIds.filter(function (id) { progress[id] !== 0; });
+  var attemptedIds = levelIds.filter(id => progress[id] !== 0);
   if (attemptedIds.length === 0) {
     // None of them have been attempted, just return the first
     return levelIds[0];
   }
   var bestId = levelIds[0];
   var bestResult = progress[bestId];
-  levelIds.each(function (id) {
+  levelIds.forEach(function (id) {
     if (progress[id] > bestResult) {
       bestId = id;
       bestResult = progress[id];

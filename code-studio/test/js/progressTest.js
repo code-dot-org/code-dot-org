@@ -4,7 +4,6 @@
 
 var assert = require('assert');
 var progress = require('../../src/js/progress');
-var serverProgress;
 
 describe('progress', function () {
   it ('returns the correct activity CSS class', function () {
@@ -20,6 +19,7 @@ describe('progress', function () {
 });
 
 describe('bestResultLevelId', function() {
+  var serverProgress;
   before(function() {
     serverProgress = {
       1: 0,

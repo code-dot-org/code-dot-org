@@ -168,7 +168,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "successful milestone updates first userlevel when scriptlevel has multiple levels" do
+  test "milestone creates userlevel with specified level when scriptlevel has multiple levels" do
     params = @milestone_params
     level1 = create :maze, name: 'level 1'
     level2 = create :maze, name: 'level 2'
@@ -182,7 +182,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level1, UserLevel.last.level
   end
 
-  test "successful milestone updates second userlevel when scriptlevel has multiple levels" do
+  test "milestone creates userlevel with specified level when scriptlevel has multiple levels for second level" do
     params = @milestone_params
     level1 = create :maze, name: 'level 1'
     level2 = create :maze, name: 'level 2'
