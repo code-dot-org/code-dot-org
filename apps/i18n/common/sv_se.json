@@ -233,13 +233,11 @@
   "tryBlocksBelowFeedback": "Prova att använda något av blocken nedan:",
   "tryHOC": "Prova Kodtimmen",
   "unnamedFunction": "Du har en variabel eller en funktion som inte har ett namn. Glöm inte att ange beskrivande namn för allt.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Vill du lära dig att programmera?",
   "watchVideo": "Titta på videon",
   "when": "när",
   "whenRun": "vid start",
-  "workspaceHeaderShort": "Arbetsyta: ",
-  "hide": "Hide",
-  "more": "More",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
+  "workspaceHeaderShort": "Arbetsyta: "
 }

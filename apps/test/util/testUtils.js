@@ -18,7 +18,8 @@ exports.setExternalGlobals = function () {
       clearHtml: function () {},
       exceedsAbuseThreshold: function () { return false; },
       getCurrentId: function () { return 'fake_id'; },
-      isEditing: function () { return true; }
+      isEditing: function () { return true; },
+      useFirebase: function () { return false; }
     },
     assets: {
       showAssetManager: function () {},

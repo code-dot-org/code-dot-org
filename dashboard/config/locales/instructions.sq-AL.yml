@@ -92,6 +92,10 @@
         Ne e kemi riemëruar funksionin "vizato një katror"
         për të "vizatuar një gjashtëkëndësh," por akoma vizaton vetëm katrorë! A mund ta modifikosh
         funksionin "vizato një gjashtëkëndësh" për të vizatuar një gjashtëkëndësh me brinjë 50 piksela, dhe vizaton figurën duke përdorur funksionin?
+      2-3 Artist Functions 12 Mike_instruction: "Funskionet janë vërtet të mrekulleshme
+        për të vizatuar\ngjëra komplekse disa herë. A mund ta përdorësh funksionin
+        \"vizato një lule\"\npër të mbushur pjesën e mbetur të kutisë së ujitjes?
+        (Ndihmë: Lulet janë të gjitha të ndara me nga\n100 piksela gjatësi)  \n"
       2-3 Artist Functions 12_instruction: "Funskionet janë vërtet të mrekulleshme
         për të vizatuar\ngjëra komplekse disa herë. A mund ta përdorësh funksionin
         \"vizato një lule\"\npër të mbushur pjesën e mbetur të kutisë së ujitjes?
@@ -824,6 +828,12 @@
       4-5 Maze Conditionals 1_instruction: |
         Përdor bllokun repeat until për të
         çuar zombien tek luledielli.
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: |
         Përdor bllokun repeat until për të
         çuar zombien tek luledielli.
@@ -1987,8 +1997,8 @@
       Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut
         most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe
         function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe
-        variable `player_score` should increase each time Dog tags Cat\nwith hearts,
-        and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen
+        variable `player_score` should increase each time Dog tags Cat\nwith pie,
+        and decrease each time that Cat tags Dog with a sandwich.\\r\n\\r\nNote:\nWhen
         you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
         on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: "Kësaj here nuk ke pse të shkruash ndonjë\nkod,
@@ -3072,6 +3082,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

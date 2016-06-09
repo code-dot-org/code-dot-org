@@ -34,6 +34,7 @@
       2-3 Artist Functions 10_instruction: Her er ti funksjoner, en til å tegne en stor del og en til å tegne en liten del. Bruk den til å tegne innsiden av en maskin!
       2-3 Artist Functions 11.5_instruction: 'Her er den samme "Tegn en sekskant" funksjonen. Hva skjer hvis du bare snur 60 grader hver gang du gjentar?'
       2-3 Artist Functions 11_instruction: 'Vi har omdøpt funksjonen "tegn en firkant" til "tegn en sekskant", men den tegner fortsatt bare firkanter! Kan du endre funksjonen "tegn en sekskant" til å tegne en sekskant med sider som er 50 piksler lange, og tegner bildet ved hjelp av funksjonen?'
+      2-3 Artist Functions 12 Mike_instruction: 'Funksjoner er virkelig flott for å tegne komplekse ting flere ganger. Kan du bruke funksjonen "tegne en blomst" til å fylle resten av planteboksen? (Hint: planter er atskilt med 100 pikslers avstand)  '
       2-3 Artist Functions 12_instruction: 'Funksjoner er virkelig flott for å tegne komplekse ting flere ganger. Kan du bruke funksjonen "tegne en blomst" til å fylle resten av planteboksen? (Hint: planter er atskilt med 100 pikslers avstand)  '
       2-3 Artist Functions 13_instruction: Vi har gitt deg fire funksjoner. Bruk dem slik du vil i ett eller flere ledd for å lage bilder som du kan dele med vennene dine. Trykk Kjør for å se et eksempel.
       2-3 Artist Functions 2_instruction: 'Funksjoner lar deg definere nye blokker! Vi har flyttet blokker for å tegne et kvadrat i en funksjon kalt "tegne en firkant". Kan du bruke funksjonen "tegne en firkant" for å opprette vinduer? kvadratene er 75 piksler fra hverandre.'
@@ -344,6 +345,7 @@
       4-5 Maze 9_instruction: 'Lag en løkke med "gjenta til" blokk.'
       4-5 Maze Assessment 1_instruction: 'Lekse: Få meg til solsikken.'
       4-5 Maze Conditionals 1_instruction: 'Bruk "gjenta til" blokk for å få zombien til solsikken.'
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: 'Bruk "gjenta til" blokk for å få zombien til solsikken.'
       4-5 Maze Conditionals 3_instruction: 'Bruk "Hvis" blokken for å la meg bestemme jeg skal snu. Tips: du trenger bare en til blokk, men lær hvordan vi sette den opp slik at du kan gjøre det på din egenhånd neste gang.'
       4-5 Maze Conditionals 4_instruction: 'Ok, denne er helt lik den forrige oppgaven men du må huske hvordan du brukte "hvis"-blokken og deretter "Gjenta"-blokken sammen.'
@@ -1821,6 +1823,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

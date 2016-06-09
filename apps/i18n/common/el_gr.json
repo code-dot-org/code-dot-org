@@ -233,13 +233,11 @@
   "tryBlocksBelowFeedback": "Δοκίμασε να χρησιμοποιήσεις κάποιο από τα παρακάτω μπλοκ:",
   "tryHOC": "Δοκίμασε την Ώρα του Κώδικα",
   "unnamedFunction": "Έχεις μια μεταβλητή ή συνάρτηση που δεν έχει όνομα. Μην ξεχνάς να δείνεις πάντα ένα περιγραφικό όνομα.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Θέλετε να μάθετε προγραμματισμό;",
   "watchVideo": "Δείτε το βίντεο",
   "when": "όταν",
   "whenRun": "όταν εκτελείται",
-  "workspaceHeaderShort": "Χώρος εργασίας: ",
-  "hide": "Hide",
-  "more": "More",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
+  "workspaceHeaderShort": "Χώρος εργασίας: "
 }

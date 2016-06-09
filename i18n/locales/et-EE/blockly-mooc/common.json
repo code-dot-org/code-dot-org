@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback":"Proovi kasutada mõnda järgmistest plokkidest:",
   "tryHOC":"Proovi KoodiTundi",
   "unnamedFunction":"Sul on muutuja või funktsioon, millel ei ole nime. Ärge unustage kõigile kirjeldav nimi anda.",
+  "unattachedBlockTipTitle":"Unattached blocks",
+  "unattachedBlockTipBody":"Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn":"Tahad programmeerimist õppida?",
   "watchVideo":"Vaata videot",
   "when":"kui",

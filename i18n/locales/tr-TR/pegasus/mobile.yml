@@ -509,6 +509,7 @@ tr-TR:
   dashboard_action_required: gerekli
   dashboard_assessments_view: 'Değerlendirmeleri gör:'
   dashboard_assessments_none: Değerlendirme yok
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Aşamaya göre filtrele:'
@@ -540,6 +541,7 @@ tr-TR:
   dashboard_progress_submitted: gönderildi
   dashboard_progress_view: İlerlemeyi Görüntüle
   dashboard_progress_student_in_script: 'İlerleme bilgilerini %{script_name} %{student_name} için'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: Yanıtları Görüntüle
   dashboard_responses_none: Cevap yok
   dashboard_sections_new_section: Yeni bölüm

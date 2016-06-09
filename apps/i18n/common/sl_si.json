@@ -233,13 +233,11 @@
   "tryBlocksBelowFeedback": "Poskusite uporabiti enega od spodnjih blokov:",
   "tryHOC": "Poizkusi Uro za programiranje (Hour to Code)",
   "unnamedFunction": "Imate spremenljivko ali funkcijo, ki nima imena. Ne pozabite vsega opisno poimenovati.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Se želiš naučiti programirati?",
   "watchVideo": "Glej video",
   "when": "ko",
   "whenRun": "ob zagonu",
-  "workspaceHeaderShort": "Delovni prostor: ",
-  "hide": "Hide",
-  "more": "More",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
+  "workspaceHeaderShort": "Delovni prostor: "
 }

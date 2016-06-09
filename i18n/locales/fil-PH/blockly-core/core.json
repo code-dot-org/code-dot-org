@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT":"i-trim ang mga space mula sa kaliwang tabi",
   "TEXT_TRIM_OPERATOR_RIGHT":"i-trim ang mga space mula sa kanang tabi",
   "TEXT_TRIM_TOOLTIP":"I-return ang kopya ng text na may inalis na space mula sa isa o magkabilang tabi.",
+  "UNUSED_CODE":"Unused code",
   "VARIABLES_DEFAULT_NAME":"item",
   "VARIABLES_GET_CREATE_SET":"Gumawa ng 'set %1'",
   "VARIABLES_GET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Get",

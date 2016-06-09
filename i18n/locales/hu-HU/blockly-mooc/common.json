@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback":"Próbáld inkább ezeket a blokkokat:",
   "tryHOC":"Próbáld ki a Kódolás Óráját",
   "unnamedFunction":"Az egyik változónak vagy függvénynek nem adtál nevet. Ne felejts el mindennek beszédes elnevezést adni!",
+  "unattachedBlockTipTitle":"Unattached blocks",
+  "unattachedBlockTipBody":"Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn":"Szeretnél megtanulni programozni?",
   "watchVideo":"Nézd meg a videót",
   "when":"amikor",
