@@ -68,7 +68,7 @@ The ideal candidate has the following qualifications:
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="Controller"href="#controller">Controller (Seattle, WA)</a>
+## <a name="controller"href="#controller">Controller (Seattle, WA)</a>
 
 **Job Summary:**
 
