@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT": "ukloni razmake s lijeve strane",
   "TEXT_TRIM_OPERATOR_RIGHT": "ukloni razmake s desne strane",
   "TEXT_TRIM_TOOLTIP": "Vraća kopiju teksta bez razmaka s jedne ili obje strane.",
+  "UNUSED_CODE": "Unused code",
   "VARIABLES_DEFAULT_NAME": "var",
   "VARIABLES_GET_CREATE_SET": "Napravi 'postavi %1'",
   "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",

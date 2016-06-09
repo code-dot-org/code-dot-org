@@ -314,7 +314,7 @@ class Script < ActiveRecord::Base
 
   def banner_image
     if has_banner?
-      "banner_#{name}.png"
+      "banner_#{name}.jpg"
     end
   end
 
@@ -620,6 +620,7 @@ class Script < ActiveRecord::Base
     summary = {
       id: id,
       name: name,
+      plc: professional_learning_course,
       stages: stages.map(&:summarize),
     }
 
