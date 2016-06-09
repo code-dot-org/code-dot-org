@@ -8,5 +8,5 @@ if `which firebase-bolt`.empty?
   puts "Cannot find firebase-bolt. Please run `npm install` from the apps/ directory."
   exit(1)
 end
-
-`firebase-bolt < rules.bolt > rules.json`
+`mkdir -p ../build/package/firebase`
+`firebase-bolt < rules.bolt > ../build/package/firebase/rules.json`

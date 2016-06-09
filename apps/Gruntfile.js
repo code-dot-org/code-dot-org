@@ -320,6 +320,10 @@ module.exports = function (grunt) {
   var outputDir = 'build/package/js/';
   config.exec = {
     convertScssVars: './script/convert-scss-variables.js',
+    compileFirebaseRules: {
+      cwd: './firebase',
+      cmd: './compile_rules.rb'
+    }
   };
 
   config.karma = {
@@ -570,7 +574,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'prebuild',
-    'webpack:build'
+    'webpack:build',
+    'exec:compileFirebaseRules'
   ].concat([
     'notify:browserify',
     // Skip minification in development environment.

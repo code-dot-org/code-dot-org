@@ -6,5 +6,5 @@ require_relative '../../deployment'
 # CDO.firebase_name, using CDO.firebase_secret for authentication.
 
 url = "https://#{CDO.firebase_name}.firebaseio.com/.settings/rules.json?auth=#{CDO.firebase_secret}"
-system("curl -X PUT -T rules.json '#{url}'")
+system("curl -X PUT -T ../build/package/firebase/rules.json '#{url}'")
 puts ''
