@@ -64,7 +64,7 @@
       cronjob at:'20 */2 * * *', do:deploy_dir('bin', 'cron', 'activity-monitor')
       cronjob at:'5 6 * * *', do:deploy_dir('bin', 'send_workshop_reminder_emails')
       cronjob at:'15 16 * * *', do:dashboard_dir('bin','scheduled_ops_emails')
-      cronjob at:'30 16 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
+      cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'index-users-in-solr')
       cronjob at:'25 7 * * *', do:deploy_dir('bin', 'update-hoc-map')
     end

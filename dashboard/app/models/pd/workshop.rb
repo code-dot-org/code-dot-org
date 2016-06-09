@@ -48,7 +48,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   SUBJECTS = {
     COURSE_ECS => [
-      SUBJECT_ECS_PHASE_2 = 'Phase 2: in-person',
+      SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person',
       SUBJECT_ECS_UNIT_3 = 'Unit 3 - HTML',
       SUBJECT_ECS_UNIT_4 = 'Unit 4 - Scratch',
       SUBJECT_ECS_UNIT_5 = 'Unit 5 - Data',
@@ -56,7 +56,7 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_ECS_PHASE_4 = 'Phase 4: Summer wrap-up'
     ],
     COURSE_CS_IN_A => [
-      SUBJECT_CS_IN_A_PHASE_2 = 'Phase 2: in-person',
+      SUBJECT_CS_IN_A_PHASE_2 = 'Phase 2 in-person',
       SUBJECT_CS_IN_A_PHASE_3 = 'Phase 3: Academic Year Development'
     ],
     COURSE_CS_IN_S => [
