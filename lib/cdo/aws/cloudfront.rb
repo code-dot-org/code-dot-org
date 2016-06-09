@@ -78,7 +78,7 @@ module AWS
         name[:items].sort! if name
       end
       config[:aliases][:items].sort!
-      config[:origins][:items].sort_by!{|o|o[:id]}
+      config[:origins][:items].sort_by!{|o| o[:id]}
       config[:custom_error_responses][:items].sort_by!{|e| e[:error_code]}
     end
 
