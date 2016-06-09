@@ -1,5 +1,3 @@
-'use strict';
-
 /* global Applab */
 
 import { getDatabase } from './firebaseUtils';

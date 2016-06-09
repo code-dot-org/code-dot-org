@@ -1,8 +1,6 @@
-'use strict';
-
 /* global Applab */
 
-const Firebase = require("firebase");
+import Firebase from 'firebase';
 import { getDatabase } from './firebaseUtils';
 
 const TABLE_ROW_COUNT_LIMIT = 10;
@@ -20,6 +18,7 @@ const RATE_LIMITS = {
 
 /**
  * Updates per-table counters associated with a table write.
+ * @param {string} tableName Name of the table to update.
  * @param {number} rowCountChange How much to increment or decrement the row count by.
  * @param {boolean} [updateNextId=false] Whether to obtain a next record id to assign.
  * @returns {Promise<number>} Promise which fails if the row count is exceeded,
