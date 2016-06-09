@@ -145,7 +145,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal nil, attributes['email']
   end
 
-  test "authorizing with unknown clever student account" do
+  test "authorizing with unknown clever student account creates student" do
     auth = stub('auth',
                 uid: '111133',
                 provider: 'clever',
@@ -170,4 +170,28 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 'f', user.gender
   end
 
+  # NOTE: Though this test really tests the User model, specifically the
+  # before_save action hide_email_and_full_address_for_students, we include this
+  # test here as there was concern authentication through clever could be a
+  # workflow where we persist student email addresses.
+  test "authorizing with unknown clever student account does not save email" do
+    auth = stub('auth',
+                uid: '111133',
+                provider: 'clever',
+                info: stub('info', nickname: '',
+                           name: {'first' => 'Hat', 'last' => 'Cat'},
+                           email: 'hat.cat@example.com',
+                           user_type: 'student',
+                           dob: Date.today - 10.years,
+                           gender: 'f'))
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_creates(User) do
+      get :clever
+    end
+
+    user = User.last
+    assert_equal '', user.email
+  end
 end
