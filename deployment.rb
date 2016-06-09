@@ -39,6 +39,7 @@ def load_configuration()
 
   {
     'app_servers'                 => {},
+    'assets_bucket'               => 'cdo-dist',
     'aws_region'                  => 'us-east-1',
     'build_apps'                  => false,
     'build_blockly_core'          => false,
