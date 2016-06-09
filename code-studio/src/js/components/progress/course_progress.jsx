@@ -8,7 +8,7 @@ import color from '../../color';
 const styles = {
   flexHeader: {
     padding: '5px 10px',
-    margin: '10px 0 0 0',
+    margin: '20px 0 0 0',
     borderRadius: 5,
     background: color.cyan,
     color: color.white
