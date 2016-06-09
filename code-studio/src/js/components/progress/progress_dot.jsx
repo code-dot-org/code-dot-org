@@ -52,10 +52,19 @@ const styles = {
       borderColor: 'transparent',
       fontSize: 24,
       verticalAlign: -4,
-      color: color.charcoal,
-      textShadow: 'none',
+      color: color.white,
+      textShadow: `
+        ${color.lighter_gray} 0 1px,
+        ${color.lighter_gray} 1px 1px,
+        ${color.lighter_gray} 1px 0px,
+        ${color.lighter_gray} 1px -1px,
+        ${color.lighter_gray} 0 -1px,
+        ${color.lighter_gray} -1px -1px,
+        ${color.lighter_gray} -1px 0,
+        ${color.lighter_gray} -1px 1px`,
       ':hover': {
-        color: color.charcoal
+        color: color.white,
+        backgroundColor: 'transparent'
       }
     },
     icon_small: {
@@ -64,6 +73,21 @@ const styles = {
       borderWidth: 0,
       fontSize: 10,
       verticalAlign: 2
+    },
+    icon_complete: {
+      color: color.light_gray,
+      textShadow: `
+        ${color.white} 0 1px,
+        ${color.white} 1px 1px,
+        ${color.white} 1px 0px,
+        ${color.white} 1px -1px,
+        ${color.white} 0 -1px,
+        ${color.white} -1px -1px,
+        ${color.white} -1px 0,
+        ${color.white} -1px 1px`,
+      ':hover': {
+        color: color.light_gray
+      }
     }
   },
   status: {
@@ -145,14 +169,20 @@ const ProgressDot = React.createClass({
     }
 
     let dot, name, outerStyle;
-    if (level.show_progress) {
+    if (!level.icon) {
       Object.assign(dotStyle, styles.status[level.status || 'not_tried']);
-      dot = <div style={dotStyle} className={`level-${level.id}`}>{level.title}</div>;
+      let dotText = level.title;
+      if (level.kind === 'named_level') {
+        // Non-breaking space (&nbsp;)
+        dotText = '\u00a0';
+      }
+      dot = <div style={dotStyle} className={`level-${level.id}`}>{dotText}</div>;
     } else {
       Object.assign(dotStyle, styles.dot.icon);
       if (!this.props.largeDots && uid !== this.props.currentLevelId) {
         Object.assign(dotStyle, styles.dot.icon_small);
       }
+      Object.assign(dotStyle, (!level.status || level.status === 'not_tried') ? {} : styles.dot.icon_complete);
       dot = <i className={`fa ${level.icon}`} style={dotStyle} />;
     }
 
