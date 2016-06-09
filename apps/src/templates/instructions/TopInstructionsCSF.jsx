@@ -66,7 +66,8 @@ const styles = {
     // raise by 20 so that the lightbulb "floats" without causing the original
     // icon to move. This strangeness happens in part because prompt-icon-cell
     // is managed outside of React
-    marginTop: -20
+    marginTop: -20,
+    cursor: 'pointer'
   }
 };
 
@@ -220,7 +221,7 @@ var TopInstructions = React.createClass({
             rightColWidth={this.state.rightColWidth}
             height={this.props.height - resizerHeight}
         >
-          <div style={this.props.hasAuthoredHints ? styles.authoredHints : undefined}>
+          <div style={[styles.bubble, this.props.hasAuthoredHints && styles.authoredHints]}>
             <ProtectedStatefulDiv id="bubble" className="prompt-icon-cell">
               <PromptIcon src={this.props.smallStaticAvatar} ref='icon'/>
             </ProtectedStatefulDiv>
