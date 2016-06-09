@@ -20,7 +20,11 @@ module ScriptLevelsHelper
   end
 
   def has_another_level_to_go_to?(script_level)
-    script_level.next_progression_level
+    if script_level.script.professional_learning_course?
+      !script_level.end_of_stage?
+    else
+      script_level.next_progression_level
+    end
   end
 
   def next_progression_level_or_redirect_path(script_level)
@@ -36,12 +40,19 @@ module ScriptLevelsHelper
         script_level.next_progression_level
       end
 
-    if script_level.level.try(:plc_evaluation?)
-      enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: current_user, plc_course_unit: script_level.script.plc_course_unit)
-      if enrollment_unit_assignment
-        script_preview_assignments_path(script_level.script)
+    if script_level.script.professional_learning_course?
+      if script_level.level.try(:plc_evaluation?)
+        if Plc::EnrollmentUnitAssignment.exists?(user: current_user, plc_course_unit: script_level.script.plc_course_unit)
+          script_preview_assignments_path(script_level.script)
+        else
+          build_script_level_path(next_level)
+        end
       else
-        build_script_level_path(next_level)
+        if has_another_level_to_go_to?(script_level)
+          build_script_level_path(next_level)
+        else
+          script_path(script_level.script)
+        end
       end
     else
       next_level ?
