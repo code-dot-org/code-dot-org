@@ -1,7 +1,18 @@
+- content_for(:head) do
+  =javascript_include_tag 'js/plc'
+
 = render partial: 'shared/check_admin'
 #landingpage{class: @script.professional_learning_course ? 'teacher-course' : nil}
   #lesson
-    - if !@script.professional_course?
+    - if @script.professional_learning_course?
+      #breadcrumb
+      - react_props = {unit_name: @script.plc_course_unit.unit_name, course_view_path: professional_learning_path(@script.plc_course_unit.plc_course.name)}
+      :javascript
+        ReactDOM.render(
+          React.createElement(window.dashboard.plcHeader, #{react_props.to_json}),
+          document.getElementById('breadcrumb')
+        );
+    - else
       #trynow
         = button_to t('home.trynow'), script_next_path(@script, 'next'), method: 'get', class: 'btn btn-primary biggerbutton'
         %p
