@@ -1,7 +1,5 @@
 -require 'country_codes'
 
-- resource.user_type ||= params[:user].try(:fetch, :user_type) || User::TYPE_STUDENT
-
 :css
   .form-group {
     margin-top: 0px !important
@@ -10,20 +8,11 @@
 #signup
   .row
     .span9
-      %h1= resource.student? ? t('signup_form.student_pitch') : t('signup_form.teacher_pitch')
-      - if resource.student?
-        %p
-          = t('signup_form.overview_student').html_safe
-        %p
-          = sanitize(t('signup_form.no_signup_message').html_safe, tags: %w(a), attributes: %w(href target))
-
-      - else
-        %p
-          = t('signup_form.overview_teacher').html_safe
-
-      - teacher_count = number_with_delimiter(fetch_user_metrics['number_teachers'], :delimiter => ',')
-      - student_count = number_with_delimiter(fetch_user_metrics['number_students'], :delimiter => ',')
-      %p= resource.student? ? t('signup_form.student_count', count: student_count) : t('signup_form.teacher_count', count: teacher_count)
+      %h1= t('signup_form.signup_title')
+      %p
+        = t('signup_form.overview_student').html_safe
+      %p
+        = sanitize(t('signup_form.no_signup_message').html_safe, tags: %w(a), attributes: %w(href target))
 
   .row
     .span8.signupblock
@@ -33,8 +22,8 @@
 
         #usertype-block.itemblock
           .labelblock
-            = "User type"
-          = f.select :user_type, User::USER_TYPE_OPTIONS, {}, { class: "fieldblock", onchange: "changeRole($(this).val());" }
+            = "User Type"
+          = f.select :user_type, User::USER_TYPE_OPTIONS, {}, { class: "fieldblock", onchange: "changeRole($(this).val());", style: "width: 234px" }
 
         = f.hidden_field :locale, value: locale
         = f.hidden_field :hashed_email
@@ -58,23 +47,19 @@
             .labelblock
               = t('activerecord.attributes.user.password')
             = f.password_field :password, class: 'input-xlarge fieldblock', maxlength: 255
-            %div{style: "position: relative; width: 180px; height: 20px; display: inline-block;"}
-              %span#password_message{style: "position: absolute"}
-              .error_in_field{style: "position: absolute"}
-                = "Password is required"
+            .error_in_field
 
-          .itemblock
+          #password_confirmation-block.itemblock
             .labelblock
               = t('activerecord.attributes.user.password_confirmation')
             = f.password_field :password_confirmation, class: 'input-xlarge fieldblock', maxlength: 255
-          %span#password_message_confirmation
+            .error_in_field
 
         #schoolname-block.itemblock{style: "display: none"}
           .labelblock
             = t('signup_form.school_name')
           = f.text_field :school, class: 'input-xlarge fieldblock', maxlength: 255
           .error_in_field
-            = "School name is required"
 
         #age-block.itemblock
           .labelblock
@@ -84,16 +69,15 @@
             - User::AGE_DROPDOWN_OPTIONS.each do |age_option|
               %option{value: age_option}= age_option
           .error_in_field
-            = "Age is required"
 
         #gender-block.itemblock
           .labelblock
             = t('signup_form.gender')
           = f.select :gender, gender_options, { disabled: '', selected: '' }
           .error_in_field
-            = "Gender is required"
 
-        #schoolcountry-block.itemblock{style: "display: none"}
+        -# Not yet ready to turn this on.
+        -# schoolcountry-block.itemblock{style: "display: none"}
           .labelblock
             = "Country"
           %select#schoolcountry.form-control{name: "user[school_country]", type: "select"}
@@ -102,7 +86,6 @@
               %option{value: country_abbr}= country_name
             %option{value: "other"} Other
           .error_in_field
-            = "Country is required"
 
         #district-block.itemblock{style: "display: none"}
           .labelblock{style: "vertical-align: top"}
@@ -117,7 +100,8 @@
         %br/
         %br/
         %br/
-        != resource.student? ? t('signup_form.student_terms') : t('signup_form.teacher_terms')
+        #student-terms!= t('signup_form.student_terms')
+        #teacher-terms{style: "display: none"}!= t('signup_form.teacher_terms')
 
     .span4
       %div{ style: 'padding-left: 20px;  border-left: 1px solid black;' }
@@ -130,20 +114,30 @@
 
 :javascript
 
+  $(document).ready(function() {
+    // Check for URL having: /users/sign_up?user%5Buser_type%5D=teacher
+    if ("#{resource.teacher?}" == "true") {
+      showTeacher();
+    }
+  });
+
   function formSuccess() {
     console.log('form success');
     window.location.href = '/';
   }
 
   function formError(err) {
-    console.log('form error', err);
+    //console.log('form error', err);
 
-    var fields = ["name", "email", "password", "schoolname", "age", "gender"];
+    // Define the fields that can have specific errors attached to them.
+    var fields = ["name", "email", "password", "password_confirmation", "schoolname", "age", "gender"];
 
     for (var i = 0; i < fields.length; i++) {
       var field = fields[i];
-      if (err.responseJSON.errors[field] == "is required") {
-        $("#" + field + "-block .error_in_field").fadeTo("normal", 1);
+      if (err.responseJSON.errors[field]) {
+        var errorField = $("#" + field + "-block .error_in_field");
+        errorField.text(err.responseJSON.errors[field]);
+        errorField.fadeTo("normal", 1);
       }
     }
   }
@@ -174,6 +168,10 @@
 
     // Clear country.  It can be reentered again to make district dropdown appear.
     $("#schoolcountry").val("");
+
+    // hide teacher terms
+    $("#teacher-terms").hide();
+    $("#student-terms").fadeIn();
   }
 
   function showTeacher() {
@@ -188,6 +186,10 @@
 
     // show school-country
     $("#schoolcountry-block").fadeIn();
+
+    // show teacher terms
+    $("#student-terms").hide();
+    $("#teacher-terms").fadeIn();
   }
 
 
@@ -221,10 +223,9 @@
 
   $( "#user_password" ).on('input',function(e){
     var password = $(this).val();
-    var password_message = $('#password_message');
-    var password_message_confirmation = $('#password_message_confirmation');
+    var password_message = $("#password-block .error_in_field");
+    var password_message_confirmation = $("#password_confirmation-block .error_in_field")
     if (!password || password.length < 6) {
-      $("#password-block .error_in_field").fadeTo("fast", 0);
       password_message.text("#{t('signup_form.invalid_password')}");
     } else {
       password_message.text("");
@@ -235,8 +236,8 @@
   $( "#user_password_confirmation" ).on('input',function(e){
     var conf_password = $(this).val();
     var origin_password = $('#user_password').val();
-    var password_message = $('#password_message');
-    var password_message_confirmation = $('#password_message_confirmation');
+    var password_message = $("#password-block .error_in_field")
+    var password_message_confirmation = $("#password_confirmation-block .error_in_field")
     if (conf_password !== origin_password) {
       password_message_confirmation.text("#{t('signup_form.mismatch_password')}");
     } else {
