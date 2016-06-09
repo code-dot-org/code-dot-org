@@ -49,9 +49,14 @@ end
 
 def install_js_error_recorder
   @browser.execute_script(<<-JS
+  // Wrap existing window onerror handler with a script error recorder.
+  var windowOnError = window.onerror;
   window.onerror = function (msg) {
     window.detectedJSErrors = window.detectedJSErrors || [];
     window.detectedJSErrors.push(msg);
+    if (windowOnError) {
+      return windowOnError.apply(this, arguments);
+    }
   };
   JS
 )
