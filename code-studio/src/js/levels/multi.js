@@ -174,6 +174,7 @@ Multi.prototype.ready = function () {
 Multi.prototype.getResult = function (dontAllowSubmit) {
   var answer;
   var errorType = null;
+  var valid;
 
   if (this.numAnswers > 1 && this.selectedAnswers.length !== this.numAnswers) {
     errorType = "toofew";
@@ -181,8 +182,10 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
 
   if (this.numAnswers === 1) {
     answer = this.lastSelectionIndex;
+    valid = answer !== -1;
   } else {
     answer = this.selectedAnswers;
+    valid = this.selectedAnswers.length === this.numAnswers;
   }
 
 
@@ -202,7 +205,7 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
     "result": result,
     "errorType": errorType,
     "submitted": submitted,
-    "valid": answer !== -1
+    "valid": valid
   };
 };
 
