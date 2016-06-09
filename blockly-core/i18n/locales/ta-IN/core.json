@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT": "இடப்பக்கத்திலிருந்து வெற்றுக்களை அகற்று",
   "TEXT_TRIM_OPERATOR_RIGHT": "வலப்பக்கத்திலிருந்து வெற்றுக்களை அகற்று",
   "TEXT_TRIM_TOOLTIP": "பனுவலின் நகலிலிருந்து ஒன்று அல்லது இரு பக்கத்திலிருந்தும் வெற்றுக்கள் அகற்றியபின்னர் அதனை திருப்பியனுப்பு.",
+  "UNUSED_CODE": "Unused code",
   "VARIABLES_DEFAULT_NAME": "உருப்படி",
   "VARIABLES_GET_CREATE_SET": "'இடல் %1' ஐ உருவாக்கு",
   "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",
