@@ -7,14 +7,14 @@ var progress = require('../../src/js/progress');
 
 describe('progress', function () {
   it ('returns the correct activity CSS class', function () {
-    assert(progress.activityCssClass(null), 'not_tried');
-    assert(progress.activityCssClass(0), 'not_tried');
-    assert(progress.activityCssClass(-5), 'attempted');
-    assert(progress.activityCssClass(19), 'attempted');
-    assert(progress.activityCssClass(20), 'passed');
-    assert(progress.activityCssClass(29), 'passed');
-    assert(progress.activityCssClass(30), 'perfect');
-    assert(progress.activityCssClass(101), 'perfect');
+    assert.strictEqual(progress.activityCssClass(null), 'not_tried');
+    assert.strictEqual(progress.activityCssClass(0), 'not_tried');
+    assert.strictEqual(progress.activityCssClass(-5), 'attempted');
+    assert.strictEqual(progress.activityCssClass(19), 'attempted');
+    assert.strictEqual(progress.activityCssClass(20), 'passed');
+    assert.strictEqual(progress.activityCssClass(29), 'passed');
+    assert.strictEqual(progress.activityCssClass(30), 'perfect');
+    assert.strictEqual(progress.activityCssClass(101), 'perfect');
   });
 });
 
@@ -30,18 +30,18 @@ describe('bestResultLevelId', function() {
     };
   });
   it('returns the level when there\'s only one', function () {
-    assert(progress.bestResultLevelId([1], serverProgress), 1);
+    assert.strictEqual(progress.bestResultLevelId([1], serverProgress), 1);
   });
   it('returns the first level when none have progress', function () {
-    assert(progress.bestResultLevelId([1, 2], serverProgress), 1);
+    assert.strictEqual(progress.bestResultLevelId([1, 2], serverProgress), 1);
   });
   it('returns the passed level', function () {
-    assert(progress.bestResultLevelId([1, 4], serverProgress), 4);
+    assert.strictEqual(progress.bestResultLevelId([1, 4], serverProgress), 4);
   });
   it('returns the unsubmitted level', function () {
-    assert(progress.bestResultLevelId([1, 3], serverProgress), 3);
+    assert.strictEqual(progress.bestResultLevelId([1, 3], serverProgress), 3);
   });
   it('returns the perfect level over the passed level', function () {
-    assert(progress.bestResultLevelId([5, 4], serverProgress), 5);
+    assert.strictEqual(progress.bestResultLevelId([5, 4], serverProgress), 5);
   });
 });
