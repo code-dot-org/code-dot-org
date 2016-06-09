@@ -34,18 +34,38 @@ class PosteTest < Minitest::Test
       TO_EMAIL,
       name: TO_NAME,
       ip_address: IP
-    ).returns(mock_recipient)
+    ).returns(mock_recipient).times(2)
 
+    # With Reply-to
     Poste2.expects(:send_message).with(
       'dashboard',
       mock_recipient,
       body: BODY,
       subject: SUBJECT,
       from: "#{FROM_NAME} <#{FROM_EMAIL}>",
-      'Reply-To': "#{REPLY_TO_NAME} <#{REPLY_TO_EMAIL}>"
+      reply_to: "#{REPLY_TO_NAME} <#{REPLY_TO_EMAIL}>"
     )
-
     @delivery_method.deliver!(@mail)
+
+    # Without Reply-to
+    @mail.reply_to = nil
+    Poste2.expects(:send_message).with(
+      'dashboard',
+      mock_recipient,
+      body: BODY,
+      subject: SUBJECT,
+      from: "#{FROM_NAME} <#{FROM_EMAIL}>"
+    )
+    @delivery_method.deliver!(@mail)
+  end
+
+  def test_no_recipient
+    @mail.to = nil
+
+    e = assert_raises ArgumentError do
+      @delivery_method.deliver!(@mail)
+    end
+    assert e.message.include? 'Recipient (to field) is required.'
   end
 
   def test_unsupported_sender

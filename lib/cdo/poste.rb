@@ -213,18 +213,19 @@ module Poste2
       raise ArgumentError, "Unsupported message type: #{content_type}" unless content_type =~ /^text\/html;/ && content_type =~ /charset=UTF-8/
       sender_email = mail.from.first
       raise ArgumentError, "Unsupported sender: #{sender_email}" unless ALLOWED_SENDERS.include?(sender_email)
+      raise ArgumentError, 'Recipient (to field) is required.' unless mail[:to]
 
       sender = mail[:from].formatted.first
-      reply_to = mail[:reply_to].formatted.first
-      subject = mail.subject.to_s
-      body = mail.body.to_s
       to_address = mail[:to].addresses.first
       to_name = mail[:to].display_names.first
-
+      mail_params = {
+        body: mail.body.to_s,
+        subject: mail.subject.to_s,
+        from: sender
+      }
+      mail_params[:reply_to] = mail[:reply_to].formatted.first if mail[:reply_to]
       recipient = Poste2.ensure_recipient(to_address, name: to_name, ip_address: '127.0.0.1')
-      Poste2.send_message('dashboard', recipient, body: body, subject: subject, from: sender, 'Reply-To': reply_to)
+      Poste2.send_message('dashboard', recipient, mail_params)
     end
-
   end
-
 end
