@@ -4,15 +4,18 @@ var testUtils = require('../../util/testUtils');
 testUtils.setupLocales('applab');
 testUtils.setExternalGlobals();
 
-// used in design mode
-window.Applab = {
-  appWidth: 320,
-  appHeight: 480
-};
-
 var Applab = require('@cdo/apps/applab/applab');
 var applabCommands = require('@cdo/apps/applab/commands');
 var errorHandler = require('@cdo/apps/errorHandler');
+var AppStorage = require('@cdo/apps/applab/appStorage');
+
+// used in design mode
+window.Applab = {
+  appWidth: 320,
+  appHeight: 480,
+  storage: AppStorage
+};
+
 
 describe('createRecord callbacks', function () {
   var xhr;
