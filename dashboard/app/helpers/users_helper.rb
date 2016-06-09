@@ -85,7 +85,7 @@ module UsersHelper
     if script.professional_learning_course
       unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: script.plc_course_unit)
       if unit_assignment
-        user_data[:focusAreas] = unit_assignment.focus_areas
+        user_data[:focusAreaPositions] = unit_assignment.focus_area_positions
       end
     end
 
