@@ -73,6 +73,10 @@
         nytt namn, no heiter den "teikn ein seksskant", men den teiknar framleis berre
         kvadrat! Kan du endre "teikn ein sekskant"-funksjonen slik at den teiknar
         ein sekskant med 50 pikslar lange sider, og så teikne bildet ferdig med funksjonen?
+      2-3 Artist Functions 12 Mike_instruction: 'Funksjonar er verkeleg gode for å
+        teikne komplekse ting fleire gonger. Kan du bruka ein «teikn ein blome» til
+        å fylla resten av plankteboksen? (Hint: Planter er åtskilde med 100 pikslars
+        avstand)  '
       2-3 Artist Functions 12_instruction: 'Funksjonar er verkeleg gode for å teikne
         komplekse ting fleire gonger. Kan du bruka ein «teikn ein blome» til å fylla
         resten av plankteboksen? (Hint: Planter er åtskilde med 100 pikslars avstand)  '
@@ -642,6 +646,12 @@
       4-5 Maze Assessment 1_instruction: Oppgåve - Få meg til solsikka.
       4-5 Maze Conditionals 1_instruction: Bruk "Gjenta-til" blokken for å få zombien
         til solsikka.
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: Bruk "Gjenta-til" blokken for å få zombien
         til solsikka.
       4-5 Maze Conditionals 3_instruction: 'Bruk "Viss" blokken for å la meg bestemme
@@ -2758,6 +2768,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

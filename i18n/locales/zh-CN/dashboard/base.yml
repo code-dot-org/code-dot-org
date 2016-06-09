@@ -481,12 +481,14 @@ zh:
     picture_count: '在过去的 <b>%{days}</b> 天，学生们用程序画了 <b>%{count}</b> 幅图片。点击图片来查看每个程序如何运行。'
     activity_count: '在过去的 <b>%{days}</b> 天中，学生用程序完成了 <b>%{count}</b> 个应用程序和图片。单击图片和屏幕截图来查看每个程序如何运行。'
     want_to_make_your_own: 想要做你自己的作品？
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: '更多 &rarr;'
     caption_by_name_age: '%{name}，%{age} 岁'
     caption_time_ago: '%{time_ago}之前'
     header: 作品
     header_playlab: 游戏实验室
     header_artist: 艺术家
+    report_abuse: 报告滥用
   landing:
     prerelease: "本课程是在 <span class='betatext'> beta 版</span> 中. 这表示它不是最终版本. 它会根据反馈而被修订和改善."
     prerelease_hoc2014: "本教程是在 <span class='betatext'> beta 版</span> 中. 它会根据反馈而被修订和改善."

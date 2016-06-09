@@ -501,14 +501,16 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
  * @param {object} config
  * @param {object[]} config.blocks
  * @param {object[]} config.categories
+ * @param {codeFunctions|null} codeFunctions with block overrides, may be null
  */
-function getModeOptionFunctionsFromConfig(config) {
+function getModeOptionFunctionsFromConfig(config, codeFunctions) {
   var mergedCategories = mergeCategoriesWithConfig(config);
+  var mergedFuncs = filteredBlocksFromConfig(codeFunctions, config, null, null);
 
   var modeOptionFunctions = {};
 
-  for (var i = 0; i < config.blocks.length; i++) {
-    var block = config.blocks[i];
+  for (var i = 0; i < mergedFuncs.length; i++) {
+    var block = mergedFuncs[i];
     var newFunc = {};
 
     switch (block.type) {
@@ -575,9 +577,12 @@ exports.generateDropletModeOptions = function (config) {
   };
 
   Object.assign(modeOptions.functions,
-    getModeOptionFunctionsFromConfig({ blocks: exports.dropletGlobalConfigBlocks }),
-    getModeOptionFunctionsFromConfig({ blocks: exports.dropletBuiltinConfigBlocks }),
-    getModeOptionFunctionsFromConfig(config.dropletConfig)
+    getModeOptionFunctionsFromConfig({ blocks: exports.dropletGlobalConfigBlocks },
+      config.level.codeFunctions),
+    getModeOptionFunctionsFromConfig({ blocks: exports.dropletBuiltinConfigBlocks },
+      config.level.codeFunctions),
+    getModeOptionFunctionsFromConfig(config.dropletConfig,
+      config.level.codeFunctions)
   );
 
   return modeOptions;

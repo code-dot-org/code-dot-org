@@ -434,7 +434,7 @@ ko-KR:
   dashboard_landing_new_beta: 초등학교 5학년을 위한 코스(beta) 살펴보기!
   dashboard_landing_new_k5courses: 초등학교 5학년을 위한 코스(beta) 살펴보기!
   dashboard_landing_useful_links: 유용한 링크(영어)
-  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_classroom_resources: 교실 수업을 위한 자원
   dashboard_landing_office_hours: 직접 물어보세요! monthly video office hours 를 방문해 보세요.
   dashboard_landing_print_certificates: 이 코스를 완료한 학생들을 위해 인증서 출력하기
   dashboard_landing_educator_blog: 교육 블로그를 통해 관련 뉴스와 최신정보 확인하기
@@ -448,10 +448,10 @@ ko-KR:
   dashboard_landing_available_courses: 선생님과 학생들에게 현재 가능한 코스
   dashboard_landing_more_tutorials: 더 많은 튜토리얼을 보고 싶습니까?
   dashboard_landing_more_tutorials_desc: '더 많은 튜토리얼은 <a href="/learn/beyond">우리의 파트너에 의해 제공</a>됩니다. 로봇과 함께 프로그램을 배우고, 웹 페이지를 만들고, 당신만의 어플리케이션을 만들고, C++, 루비 혹은 파이선 같은 언어를 탐험할 수 있습니다.'
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_landing_inspire: 포스터, 비디오 등의 자료로 학생들에게 영감을 주세요.
+  dashboard_landing_video_library: 컴퓨터 과학의 개념에 대한 비디오 라이브러리를 이용하세요.
+  dashboard_landing_report_bug: 기능 요청 또는 오류 신고
+  dashboard_landing_teacher_forum: 전문적 학습 커뮤니티에 가입하세요.
   dashboard_hoc_courses: 모든 연령대를 위한 Hour of Code
   dashboard_hoc_courses_desc: 당신의 학생과 1시간 이내로 끝낼 수 있는 튜토리얼을 해보세요.
   dashboard_hoc_courses_desc_and_cta: '이 한 시간 짜리 짧은 튜토리얼들을 여러분의 학생들과 함께 해보세요. 컴퓨터과학교육주간동안 <a href="https://hourofcode.com">Hour of Code 운동</a>에 함께 참여해 주세요.'
@@ -484,8 +484,9 @@ ko-KR:
   dashboard_action_required: 필수 항목
   dashboard_assessments_view: '평가 결과 보기:'
   dashboard_assessments_none: 평가 결과 없음
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: 요약
+  dashboard_assessments_answers: 모든 답변
   dashboard_filter_by_stage: '단계에 따라 필터링하기:'
   dashboard_filter_all: 모두
   dashboard_download_csv: CSV 다운로드
@@ -515,6 +516,7 @@ ko-KR:
   dashboard_progress_submitted: 제출됨
   dashboard_progress_view: '진도 보기:'
   dashboard_progress_student_in_script: '%{script_name} 에서 %{student_name} 에 대한 진도 정보'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: '텍스트 응답 보기:'
   dashboard_responses_none: 텍스트 응답 없음
   dashboard_sections_new_section: 새 섹션
@@ -588,7 +590,7 @@ ko-KR:
   dashboard_course2: '코스2:'
   dashboard_course3: '코스3:'
   dashboard_course4: '코스 4(베타):'
-  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_unplugged: "컴퓨터가 없다면, 수업에 <a href='%{unplugged_url}'>이러한 언플러그드 활동을 시도해보세요.</a>"
   dashboard_curriculum: 교과 과정
   dashboard_curriculum_overview: K-5(초등 5학년) 교육과정 살펴보기
   dashboard_overview: 개요
@@ -765,11 +767,11 @@ ko-KR:
   cspunit4_name: CS 원리 4단원
   cspunit5_name: CS 원리 5단원
   cspunit6_name: CS 원리 6단원
-  csp1_name: 'Unit 1: The Internet'
-  csp2_name: 'Unit 2: Digital Information'
-  cspassessment_name: 'Full Test - 50 questions'
-  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
-  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
+  csp1_name: '유닛 1: 인터넷'
+  csp2_name: '유닛 2: 디지털 정보'
+  cspassessment_name: '전체 테스트 - 50 문항'
+  cspexam1-mWU7ilDYM9_name: '테스트 part 1 - 25문항'
+  cspexam2-AKwgAh1ac5_name: '테스트 part 2 - 25문항'
   cspunit3_gradelevel: 9-12 학년
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   20-hour_name: 빠른 과정
@@ -785,8 +787,8 @@ ko-KR:
   hoc_category_name: Hour of Code
   csf_category_name: CS 기초
   csp_category_name: CS의 원리
-  csp17_category_name: "'16-'17 CS Principles"
-  cspexams_category_name: CS Principles Practice Test
+  csp17_category_name: "'16 - '17 CS 원리"
+  cspexams_category_name: CS 원리 연습 테스트
   applab_name: 앱 연구실
   applab_gradelevel: 13세 이상
   applab_shortdescription_congrats: App Lab 은 간단한 앱들을 만들 수 있는 프로그래밍 환경입니다. 아주 짧은 시간에 앱을 디자인하고, 블록이나 자바스크립트로 만들고, 공유할 수 있습니다.

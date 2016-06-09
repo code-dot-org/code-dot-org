@@ -24,15 +24,15 @@
           future: kan ikke være i fremtiden
   hello: Hej verden
   welcome_back: Velkommen tilbage %{name}
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: Din professionelle læringsplan
+  see_your_learning_plan: Se din læringsplan
   submit: Indsend
   unsubmit: Fortryd indsendelse
-  previous_page: Previous page
-  next_page: Next page
+  previous_page: Forrige side
+  next_page: Næste side
   cancel: Annuller
   okay: Okay
-  heading_x_of_y: "%{heading} (page %{x} of %{y})"
+  heading_x_of_y: "%{heading} (side %{x} af %{y})"
   add_teacher_form:
     code:
       label: 'Tilføje en lærer:'
@@ -381,8 +381,7 @@
     heading_hoc2014: "<h2>Hour of Code for</h2><h1>Alle - uanset alder</h1>"
     heading_elementary: "<h2>20 timers kurser for</h2><h1>Begyndere (alle aldre)</h1>"
     heading_apps: "<h2>Sjov for</h2><h1>Alle</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<h2>Klar til det næste trin?</h2> <h1>JavaScript-værktøj til gymnasiet</h1>"
     heading_legacy: "<h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>"
     your_gallery: Galleri
     no_primary_course: Prøv et kursusforløb på Code Studio
@@ -401,7 +400,7 @@
       it's time to let your representatives hear from you. This week, education leaders,
       28 governors, and CEOs of America's largest companies joined together in an
       open letter asking the U.S. Congress to fund K-12 computer science education.
-    announcement_petition_button: Add your name
+    announcement_petition_button: Tilføj dit navn
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
@@ -599,12 +598,15 @@
       apps og billeder ved at skrive deres egne computerprogrammer. Klik på billeder
       og skærmklip for at prøve programmerne.
     want_to_make_your_own: Vil du lave dit eget?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Mere &rarr;
     caption_by_name_age: af %{name}, alder %{age}
     caption_time_ago: "%{time_ago} siden"
     header: Galleri
     header_playlab: Play Lab
     header_artist: Kunstner
+    report_abuse: Rapporter misbrug
   landing:
     prerelease: Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder,
       at det ikke er den endelige version af kurset, men at ændringer vil forekomme
@@ -821,8 +823,8 @@
     outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: Søg efter et ikon...
+      no_icons_found: Ingen ikoner fundet
   flex_category:
     required: Oversigt
     content: Content

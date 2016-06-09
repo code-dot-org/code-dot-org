@@ -77,6 +77,10 @@
         Kas te saaksite muuta "joonista kuusnurk" funktsiooni nõnda, et see teeks
         kuusnurga, mille ühe külje pikkus on 50 pikslit, ning seejärel joonistada
         kujutis funktsiooni abil?
+      2-3 Artist Functions 12 Mike_instruction: 'Funktsioonid hõlbustavad oluliselt
+        keeruliste kujutiste mitmekordset joonistamist. Kas te saate kasutada "joonista
+        lill" funktsiooni, et täita kogu ülejäänud istutuskast? (Vihje: taimed on
+        kõik üksteisest 100 piksli kaugusel)  '
       2-3 Artist Functions 12_instruction: 'Funktsioonid hõlbustavad oluliselt keeruliste
         kujutiste mitmekordset joonistamist. Kas te saate kasutada "joonista lill"
         funktsiooni, et täita kogu ülejäänud istutuskast? (Vihje: taimed on kõik üksteisest
@@ -643,6 +647,12 @@
       4-5 Maze Assessment 1_instruction: "Ülesanne: Mine päevalilleni."
       4-5 Maze Conditionals 1_instruction: Kasuta plokki „korda kuni“, et aidata zombi
         päevalille juurde.
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: Kasuta plokki „korda kuni“, et aidata zombi
         päevalille juurde.
       4-5 Maze Conditionals 3_instruction: 'Kasuta uut „kui“ plokki, et lasta mul
@@ -2759,6 +2769,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
