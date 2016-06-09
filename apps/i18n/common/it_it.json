@@ -233,13 +233,11 @@
   "tryBlocksBelowFeedback": "Prova ad usare uno dei blocchi qua sotto:",
   "tryHOC": "Prova l'Ora del Codice",
   "unnamedFunction": "C'è una variabile o una funzione che non ha un nome. Non dimenticare di dare ad ogni oggetto un nome descrittivo.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Vuoi imparare a programmare?",
   "watchVideo": "Guarda il video",
   "when": "quando",
   "whenRun": "quando si clicca su \"Esegui\"",
-  "workspaceHeaderShort": "Area di lavoro: ",
-  "hide": "Hide",
-  "more": "More",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
+  "workspaceHeaderShort": "Area di lavoro: "
 }

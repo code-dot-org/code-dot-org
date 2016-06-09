@@ -485,12 +485,14 @@ zh:
     picture_count: '在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式畫了 <b>%{count}</b> 張圖片。點擊圖片觀看每個程式是如何運作。'
     activity_count: '在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式完成了<b>%{count}</b> 個app以及圖畫。點擊圖片及螢幕截圖來觀看每個程式是如何運作。'
     want_to_make_your_own: 想要做您自已的嗎？
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: '更多 &rarr;'
     caption_by_name_age: '%{name}, %{age} 歲'
     caption_time_ago: '%{time_ago} 前'
     header: 相片圖庫
     header_playlab: 播放實驗室
     header_artist: 畫家
+    report_abuse: 濫用回報
   landing:
     prerelease: "本課程還在 <span class='betatext'>beta</span>階段。這表示它不是本課程的最後版本，它會依據收到的回饋，作出修訂與改善。"
     prerelease_hoc2014: "本教程還在 <span class='betatext'>beta</span>階段。它會依據收到的回饋，作出修訂與改善。"

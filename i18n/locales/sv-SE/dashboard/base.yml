@@ -487,12 +487,14 @@ sv:
     picture_count: 'Under de senaste <b>%{days}</b> dagarna, har elever ritat <b>%{count}</b> bilder genom att skriva egna datorprogram. Klicka på bilderna för att se varje program i aktion.'
     activity_count: 'Under de senaste <b>%{days}</b> dagarna, har selever gjort <b>%{count}</b> appar och bilder genom att skriva egna datorprogram. Klicka på bilderna och skärmdumparna för att se varje program i aktion.'
     want_to_make_your_own: Vill du göra din egen?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Mer &rarr;'
     caption_by_name_age: 'av %{name}, ålder %{age}'
     caption_time_ago: '%{time_ago} tid sedan'
     header: Galleri
     header_playlab: Spel-labb
     header_artist: Konstnären
+    report_abuse: Rapportera missbruk
   landing:
     prerelease: "Denna kurs är i <span class='betatext'> beta</span>.  Detta innebär att det inte är den slutliga versionen av kursen, och är föremål för översyn allt eftersom feedback tas emot och förbättringar görs."
     prerelease_hoc2014: "Den här övningen är en <span class='betatext'>betaversion</span>.  Den revideras allteftersom synpunkter kommer in och förbättringar görs."

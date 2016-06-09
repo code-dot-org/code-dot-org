@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback":"Попробуй добавить один из блоков внизу:",
   "tryHOC":"Попробуй час кода",
   "unnamedFunction":"Ты забыл задать имя переменной или функции. Не забывай давать им описательные имена.",
+  "unattachedBlockTipTitle":"Unattached blocks",
+  "unattachedBlockTipBody":"Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn":"Хочешь научиться программировать?",
   "watchVideo":"Посмотреть видео",
   "when":"когда",

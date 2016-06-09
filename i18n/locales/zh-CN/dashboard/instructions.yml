@@ -38,6 +38,7 @@ zh:
       2-3 Artist Functions 10_instruction: 这里有两个函数，一个是绘制一个大齿轮，另一个是画一个小齿轮。使用它们来绘制一个机器的内部结构！
       2-3 Artist Functions 11.5_instruction: '这里同样是"画一个六边形"的功能。如果在循环中每次只转 60 度会发生什么呢？'
       2-3 Artist Functions 11_instruction: 我们将“画一个正方形”的函数改成了“画一个六边形”，但它实际上还是只能画正方形！能把“画一个六边形”的函数改成能画边长50像素的六边形，然后用它画一个六边形吗？
+      2-3 Artist Functions 12 Mike_instruction: '函数对于多次画一个复杂的事物非常有帮助。能用“画一朵花”的函数来填满整个花盆吗？（提示：植物应该相隔100像素。）  '
       2-3 Artist Functions 12_instruction: '函数对于多次画一个复杂的事物非常有帮助。能用“画一朵花”的函数来填满整个花盆吗？（提示：植物应该相隔100像素。）  '
       2-3 Artist Functions 13_instruction: 我们提供了4个函数。你可以随意把它们放在一个或者多个循环中来画图，然后分享给你的朋友们。点击“运行”来看示例。
       2-3 Artist Functions 2_instruction: 函数能让你定义新的模块。我们将画正方形的模块挪到了一个叫做“画一个正方形”的函数里。能用“画一个正方形”函数来画个眼镜吗？正方形间隔75像素。
@@ -328,6 +329,7 @@ zh:
       4-5 Maze 9_instruction: 用“重复直到”模块创建一个循环。
       4-5 Maze Assessment 1_instruction: 评估：到达太阳花。
       4-5 Maze Conditionals 1_instruction: 用“重复直到”模块让僵尸到达太阳花。
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: 用“重复直到”模块让僵尸到达太阳花。
       4-5 Maze Conditionals 3_instruction: '用新的"如果"模块让我来决定什么时候转弯。提示： 你只需要加一个模块，但记住其它模块是怎么排列的，这样下次你就会自己写了。'
       4-5 Maze Conditionals 4_instruction: '好啦，这是最后一个谜题了，但你需要记住如何一起使用"如果"模块和"重复"模块。'
@@ -1803,6 +1805,10 @@ zh:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

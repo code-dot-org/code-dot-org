@@ -233,13 +233,11 @@
   "tryBlocksBelowFeedback": "Prøv å bruke ein av blokkene under:",
   "tryHOC": "Prøv Kodetimen",
   "unnamedFunction": "Du har ein variabel eller funksjon som ikkje har fått navn. Ikkje gløym å gje alt eit beskrivande navn.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Vil du lære å kode?",
   "watchVideo": "Sjå videoen",
   "when": "når",
   "whenRun": "når den køyrer",
-  "workspaceHeaderShort": "Arbeidsområde: ",
-  "hide": "Hide",
-  "more": "More",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
+  "workspaceHeaderShort": "Arbeidsområde: "
 }

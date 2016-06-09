@@ -27,7 +27,7 @@
   see_your_learning_plan: See your learning plan
   submit: Odeslat
   unsubmit: Neodesláno
-  previous_page: Previous page
+  previous_page: Předchozí stránka
   next_page: Next page
   cancel: Storno
   okay: Dobře
@@ -589,12 +589,15 @@
       aplikace a obrázky napsáním vlastních počítačových programů. Klepněte na obrázky
       a snímky, abys si viděl každý program v akci.
     want_to_make_your_own: Chcete si vyrobit vlastní?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Více &rarr;
     caption_by_name_age: podle %{name}, věk %{age}
     caption_time_ago: před %{time_ago}
     header: Galerie
     header_playlab: Play Lab
     header_artist: Umělec
+    report_abuse: Ohlásit urážlivý příspěvek
   landing:
     prerelease: Tento kurz je v <span class='betatext'> beta verzi</span>.  To znamená,
       že to není finální verze kurzu a je předmětem úprav podle zpětné vazby a vylepšeních.
@@ -812,7 +815,7 @@
       no_icons_found: "Žádné ikony nebyly nalezeny"
   flex_category:
     required: Přehled
-    content: Content
+    content: Obsah
     practice: Teacher Practices
   external_links:
     disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to

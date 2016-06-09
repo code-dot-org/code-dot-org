@@ -436,7 +436,7 @@ fr-FR:
   dashboard_landing_new_beta: Nouveau ! Essayez nos cours bêta pour les élèves de CM2
   dashboard_landing_new_k5courses: Nouveau ! Essayez nos cours pour les élèves de primaire.
   dashboard_landing_useful_links: Autres liens utiles
-  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_classroom_resources: Ressources pour votre classe
   dashboard_landing_office_hours: Posez une question en personne ! Regardez notre vidéo mensuelle durant les heures de bureau.
   dashboard_landing_print_certificates: Imprimer les certificats pour les élèves ayant terminé ce cours
   dashboard_landing_educator_blog: "Lisez l'actualité et les mises à jour de notre matériel sur notre Blog Enseignant"
@@ -490,8 +490,9 @@ fr-FR:
   dashboard_action_required: obligatoire
   dashboard_assessments_view: 'Afficher les évaluations dans :'
   dashboard_assessments_none: "Pas d'évaluation"
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: Résumés
+  dashboard_assessments_answers: Toutes les réponses
   dashboard_filter_by_stage: 'Filtrer par étape :'
   dashboard_filter_all: Tout
   dashboard_download_csv: Télécharger en CSV
@@ -521,6 +522,7 @@ fr-FR:
   dashboard_progress_submitted: envoyé
   dashboard_progress_view: 'Afficher la progression dans :'
   dashboard_progress_student_in_script: 'Informations de progression pour %{student_name} dans %{script_name}'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'Afficher les réponses écrites dans :'
   dashboard_responses_none: Pas de réponses écrites
   dashboard_sections_new_section: Nouvelle section

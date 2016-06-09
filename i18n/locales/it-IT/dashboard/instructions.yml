@@ -39,6 +39,8 @@ it:
       2-3 Artist Functions 11.5_instruction: |-
         Qui abbiamo sempre la funzione "disegna un esagono". Cosa succede se nel ripetere l'esecuzione della funzione come nell'esercizio precedente adesso giri ogni volta solo di 60 gradi?
       2-3 Artist Functions 11_instruction: 'Abbiamo rinominato la funzione "disegna un quadrato" in "disegna un esagono", ma realizza ancora quadrati! Puoi modificare la funzione "disegna un esagono" in modo che produca un esagono con i lati lunghi 50 pixel, e riprodurre poi tutta la figura usando la nuova funzione?'
+      2-3 Artist Functions 12 Mike_instruction: |-
+        Le funzioni sono davvero utili per disegnare più volte oggetti complessi. Puoi usare la funzione "disegna un fiore" per riempire il resto della fioriera? (Suggerimento: le piante sono tutte distanti 100 pixel l'una dall'altra)  
       2-3 Artist Functions 12_instruction: |-
         Le funzioni sono davvero utili per disegnare più volte oggetti complessi. Puoi usare la funzione "disegna un fiore" per riempire il resto della fioriera? (Suggerimento: le piante sono tutte distanti 100 pixel l'una dall'altra)  
       2-3 Artist Functions 13_instruction: |-
@@ -379,6 +381,7 @@ it:
         Esso mi farà "ripetere" le azioni "fino a che" raggiungo il girasole.
       4-5 Maze Assessment 1_instruction: 'Questo è un esercizio di riepilogo -- Fammi arrivare al girasole.'
       4-5 Maze Conditionals 1_instruction: 'Usa il blocco "ripeti fino a che" per far arrivare lo zombie fino al girasole.'
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: 'Usa il blocco "ripeti fino a che" per far arrivare lo zombie fino al girasole.'
       4-5 Maze Conditionals 3_instruction: |-
         Usa il blocco "se c'è strada" per decidere quando farmi svoltare. Attenzione: in questo caso devi aggiungere solo un blocco! Osserva, però, il modo in cui abbiamo impostato questo programma in modo tale che, la prossima volta, tu riesca a farlo tutto da solo.
@@ -2049,6 +2052,10 @@ it:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
