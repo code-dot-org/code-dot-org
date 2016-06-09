@@ -32,14 +32,20 @@ const styles = {
 const CourseProgressRow = React.createClass({
   propTypes: {
     currentLevelId: React.PropTypes.string,
+    professionalLearningCourse: React.PropTypes.bool,
     stage: stageShape
   },
 
   render() {
     const stage = this.props.stage;
 
+    let rowStyle = styles.row;
+    if (this.props.professionalLearningCourse) {
+      Object.assign(rowStyle, {background: color.white});
+    }
+
     return (
-      <div style={styles.row}>
+      <div style={rowStyle}>
         <div style={styles.stageName}>
           {stage.title}
           <div className='stage-lesson-plan-link' style={{display: 'none'}}>
