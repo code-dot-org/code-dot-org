@@ -96,7 +96,7 @@ module AWS
           log_url += "?versionId=#{result[:version_id]}" unless result[:version_id].nil?
           log_url
         else
-          options = {bucket: @bucket, key: key, expires_in: 60.minutes}
+          options = {bucket: @bucket, key: key, expires_in: 3600}
           options[:version_id] = result[:version_id] unless result[:version_id].nil?
           Aws::S3::Presigner.new.presigned_url(:get_object, options)
         end
