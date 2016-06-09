@@ -52,7 +52,7 @@ var ImagePicker = React.createClass({
         cursor: 'pointer'
       },
       iconModeToggle: {
-        margin: '0',
+        margin: 0,
         fontSize: '16px',
         fontFamily: isFileMode ? null : '"Gotham 5r"',
         color: isFileMode ? '#999' : null,
