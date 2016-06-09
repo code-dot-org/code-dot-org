@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160606183120) do
+ActiveRecord::Schema.define(version: 20160609211248) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -619,16 +619,17 @@ ActiveRecord::Schema.define(version: 20160606183120) do
   add_index "secret_words", ["word"], name: "index_secret_words_on_word", unique: true, using: :btree
 
   create_table "sections", force: :cascade do |t|
-    t.integer  "user_id",    limit: 4,                     null: false
-    t.string   "name",       limit: 255
+    t.integer  "user_id",      limit: 4,                     null: false
+    t.string   "name",         limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "code",       limit: 255
-    t.integer  "script_id",  limit: 4
-    t.string   "grade",      limit: 255
-    t.string   "admin_code", limit: 255
-    t.string   "login_type", limit: 255, default: "email", null: false
+    t.string   "code",         limit: 255
+    t.integer  "script_id",    limit: 4
+    t.string   "grade",        limit: 255
+    t.string   "admin_code",   limit: 255
+    t.string   "login_type",   limit: 255, default: "email", null: false
     t.datetime "deleted_at"
+    t.boolean  "stage_extras",             default: false,   null: false
   end
 
   add_index "sections", ["code"], name: "index_sections_on_code", unique: true, using: :btree
