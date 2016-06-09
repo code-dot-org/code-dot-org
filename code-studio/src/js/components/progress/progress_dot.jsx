@@ -171,12 +171,8 @@ const ProgressDot = React.createClass({
     let dot, name, outerStyle;
     if (!level.icon) {
       Object.assign(dotStyle, styles.status[level.status || 'not_tried']);
-      let dotText = level.title;
-      if (level.kind === 'named_level') {
-        // Non-breaking space (&nbsp;)
-        dotText = '\u00a0';
-      }
-      dot = <div style={dotStyle} className={`level-${level.id}`}>{dotText}</div>;
+      // '\u00a0' is &nbsp;
+      dot = <div style={dotStyle} className={`level-${level.id}`}>{level.kind === 'named_level' ? '\u00a0' : level.title}</div>;
     } else {
       Object.assign(dotStyle, styles.dot.icon);
       if (!this.props.largeDots && uid !== this.props.currentLevelId) {
