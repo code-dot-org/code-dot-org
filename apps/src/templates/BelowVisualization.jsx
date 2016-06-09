@@ -1,6 +1,7 @@
 var React = require('react');
 import { connect } from 'react-redux';
 var commonStyles = require('../commonStyles');
+var color = require('../color');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var InputOutputTable = require('./InputOutputTable');
 import PromptIcon from './instructions/PromptIcon';
@@ -33,6 +34,7 @@ const BelowVisualization = React.createClass({
           <div
               id="bubble"
               className="clearfix"
+              style={commonStyles.bubble}
           >
             <table id="prompt-table">
               <tbody>

@@ -20,12 +20,33 @@
 # is an easy way to force a rebuild without needing to make a commit.
 #
 require_relative '../deployment'
+require 'cdo/aws/s3'
+require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/hip_chat'
 require 'cdo/only_one'
-require 'mail'
 
 STARTED = 'build-started'
+CHAT_LOG_TAIL_LENGTH = 40
+S3_LOGS_BUCKET = 'cdo-build-logs'
+S3_LOGS_PREFIX = CDO.name
+
+# Upload the given log to the logs s3 bucket.
+# @param [String] key where uploaded log should be located
+# @param [String] body of log to upload
+# @param [Hash] metadata to be attached to uploaded log
+# @return [String] Hyperlink to uploaded log, or empty string
+def upload_log_and_get_link(key, body, metadata)
+  log_url = AWS::S3::LogUploader.
+      new(S3_LOGS_BUCKET, S3_LOGS_PREFIX).
+      upload_log(key, body, {
+          metadata: metadata
+      })
+  " <a href='#{log_url}'>☁ Log on S3</a>"
+rescue Exception => msg
+  HipChat.log "Uploading log to S3 failed: #{msg}"
+  return ''
+end
 
 def capture_stdout
   old_stdout = $stdout
@@ -70,7 +91,7 @@ def build()
 end
 
 def main()
-  start_time = Time.now.to_i
+  start_time = Time.now
   # Run the build command and exit if it didn't do anything.
   status = 0
   log = capture_stdout do
@@ -83,23 +104,47 @@ def main()
   return status if status == 0 && log.empty?
 
   Dir.chdir(deploy_dir) do
-    commit_url = "https://github.com/code-dot-org/code-dot-org/commit/#{RakeUtils.git_revision}"
-    # Notify the HipChat channels about what happened.
     projects = ARGV.join(' ')
     projects = 'websites' if projects.empty?
-    time_message = " 🕐 #{RakeUtils.format_duration(Time.now.to_i - start_time)}"
+
+    commit_hash = RakeUtils.git_revision
+    commit_url = "https://github.com/code-dot-org/code-dot-org/commit/#{commit_hash}"
+
+    duration = Time.now.to_i - start_time.to_i
+    formatted_duration = RakeUtils.format_duration(duration)
+    time_message = " 🕐 #{formatted_duration}"
+
+    # Upload build log to S3
+    log_link = upload_log_and_get_link(
+      start_time.strftime('%Y%m%dT%H%M%S%z'),
+      <<-LOG,
+#{log}
+#{status}
+#{projects} #{status == 0 ? 'built' : 'failed'} in #{formatted_duration}
+      LOG
+      {
+        commit: commit_hash,
+        duration: duration.to_s,
+        success: (status == 0).to_s
+      }
+    )
+
+    # Notify the HipChat channels about what happened.
     if status == 0
-      message = "<b>#{projects}</b> built." + time_message
+      message = "<b>#{projects}</b> built." + time_message + log_link
 
       HipChat.log message, color: 'green'
 
       HipChat.developers message, color: 'green'
       HipChat.developers commit_url, color: 'gray', message_format: 'text'
     else
-      message = "<b>#{projects}</b> failed to build!" + time_message
-
+      message = "<b>#{projects}</b> failed to build!" + time_message + log_link
+      truncated_log = <<-LOG
+Showing last #{CHAT_LOG_TAIL_LENGTH} lines of build log:
+#{log.lines.last(CHAT_LOG_TAIL_LENGTH).join('\n')}
+      LOG
       HipChat.log message, color: 'red'
-      HipChat.log "/quote #{log}", color: 'gray', message_format: 'text' unless log.empty?
+      HipChat.log "/quote #{truncated_log}", color: 'gray', message_format: 'text' unless log.empty?
       HipChat.log "/quote #{status}", color: 'gray', message_format: 'text' unless status.is_a?(String) && status.empty?
 
       HipChat.developers message, color: 'red', notify: 1
