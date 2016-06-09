@@ -84,7 +84,7 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
 
     @evaluation = LevelGroup.create_from_level_builder({name: 'evaluation'}, {dsl_text: levelgroup_dsl})
     create(:script_level, script: @course_unit.script, levels: [@evaluation])
-    @user_level = create(:user_level, user: @user, level: @evaluation, script: @course_unit.script)
+    @activity = create(:activity, user: @user, level: @evaluation)
   end
 
   test 'submit evaluation enrolls user in appropriate modules' do
@@ -127,8 +127,7 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
     end
 
     level_source = create(:level_source, level: @evaluation, data: answers_data.to_json)
-    @user_level.update(level_source: level_source)
-
+    @activity.update(level_source: level_source)
     @course_unit.determine_preferred_learning_modules @user
   end
 end

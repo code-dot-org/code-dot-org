@@ -105,6 +105,7 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
       status: status,
       kind: level.kind,
       url: href,
+      icon: level.icon,
       uid: level.uid,
       id: level.id
     };
@@ -154,14 +155,13 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 };
 
 function loadProgress(scriptData, currentLevelId) {
-  var teacherCourse = $('#landingpage').hasClass('teacher-course');
 
   let store = createStore((state = [], action) => {
     if (action.type === 'MERGE_PROGRESS') {
       let newProgress = {};
       return {
         currentLevelId: state.currentLevelId,
-        display: state.display,
+        professionalLearningCourse: state.professionalLearningCourse,
         progress: newProgress,
         stages: state.stages.map(stage => _.assign({}, stage, {levels: stage.levels.map(level => {
           let id = level.uid || level.id;
@@ -174,7 +174,7 @@ function loadProgress(scriptData, currentLevelId) {
     return state;
   }, {
     currentLevelId: currentLevelId,
-    display: teacherCourse ? 'list' : 'dots',
+    professionalLearningCourse: scriptData.plc,
     progress: {},
     stages: scriptData.stages
   });

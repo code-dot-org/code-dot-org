@@ -487,6 +487,7 @@ el-GR:
   dashboard_action_required: απαιτείται
   dashboard_assessments_view: 'Δείτε τις αξιολογήσεις σε:'
   dashboard_assessments_none: Δεν υπάρχουν αξιολογήσεις
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Φίλτρο κατά στάδιο:'
@@ -518,6 +519,7 @@ el-GR:
   dashboard_progress_submitted: Υποβλήθηκε
   dashboard_progress_view: 'Προβολή προόδου σε:'
   dashboard_progress_student_in_script: 'Πληροφορίες προόδου για τον/την %{student_name} στο %{script_name}'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'Δείτε τις απαντήσεις κειμένου σε:'
   dashboard_responses_none: Δεν υπάρχουν απαντήσεις κειμένου
   dashboard_sections_new_section: Νέα ενότητα

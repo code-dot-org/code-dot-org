@@ -84,6 +84,10 @@
       2-3 Artist Functions 11_instruction: |-
         Преименувахме "начертай квадрат" функцията на "начертай шестоъгълник", но тя все още чертае квадрати! Може ли да я модифицирате, за да нарисувате шестоъгълник с 50 пиксела страни?!\r
         \r Начертаете изображението с помощта на новата функция!
+      2-3 Artist Functions 12 Mike_instruction: |-
+        Функциите са наистина страхотни за няколкократно изчертаване на сложни неща.\r
+        \r Може ли да използвате функцията "рисува цвете", за да запълните останалата част от лехата?!\r
+        \r Растенията са разделени на 100 пиксела едно от друго.
       2-3 Artist Functions 12_instruction: |-
         Функциите са наистина страхотни за няколкократно изчертаване на сложни неща.\r
         \r Може ли да използвате функцията "рисува цвете", за да запълните останалата част от лехата?!\r
@@ -739,6 +743,12 @@
       4-5 Maze Assessment 1_instruction: "Оценяване: Стигни до слънчогледа."
       4-5 Maze Conditionals 1_instruction: Използвайте "повтаря докато" блока, за
         да заведете зомбито до слънчогледа.
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: Използвайте "повтаря докато" блока, за
         да заведете зомбито до слънчогледа.
       4-5 Maze Conditionals 3_instruction: |
@@ -1832,10 +1842,11 @@
         на резултата когато ударите котката с огнено кълбо. Можете да увеличавате
         резултата като зададете резултат+резултат+1. Достигнете до 10 ( увеличавайки
         с 1), за да преминете нивото.
-      Course 4 Play Lab Vars 6_instruction: |-
-        Използвайте дясната стрелка, за да стреляте сърца. \r
-        \r
-        Как да печелим точки в нашата игра? Прибавете 1 към променливата "точки" всеки път когато Кучето удари котката с огнено кълбо. Използвайте събитието "когато актьор 2 докосне нещо" да задейства актуализация на резултата. Можете да увеличавате променливите като зададете "точки=точки+1." Достигнете до резултат 10 ( точка по точка), за да преминете нивото.
+      Course 4 Play Lab Vars 6_instruction: Как да печелим точки в нашата игра? Прибавете
+        1 към променливата "точки" всеки път когато Кучето удари котката с огнено
+        кълбо. Използвайте събитието "когато актьор 2 докосне нещо" да задейства актуализация
+        на резултата. Можете да увеличавате променливите като зададете "точки=точки+1."
+        Достигнете до резултат 10 ( точка по точка), за да преминете нивото.
       Course 4 Play Lab Vars 7_instruction: "Хубаво, нека сме сигурни че играта не
         е много лесна - всеки път щом Кучето ( актьор 1) е ударено  с огнено кълбо,
         ще губите точка. Нека започнем с 10 точки за по-лесно. За да преминете нивото,
@@ -1918,15 +1929,10 @@
       Course 4 Playlab For Loop Freeplay_instruction: 'Свободна игра: Използвайте
         всичко, което сте научили досега, за да направите игра, която включва цикъл
         "за"!'
-      Course 4 Playlab For Loops 4b_instruction: |-
-        Now, these two characters are going
-        to race!  \r
-        \r
-        Each of them will move `counter` steps at a time, but their
-        counters will have different values because of the `for` loops.  \r
-        \r
-        Can
-        you change the increment in one of the loops so that the race is a tie?
+      Course 4 Playlab For Loops 4b_instruction: Сега тези два героя  ще се състезават!  \r
+        \r Всеки от тях ще се движи, "брояч" стъпки за време, но техните броячи ще
+        имат различни стойности поради "за" циклите.  \r \r Можете ли да промените
+        нарастването в някой от циклите, така че състезанието завърши с равенство?
       Course 4 Playlab For Loops 5b_instruction: Настроите интервала на тези "за"
         цикли, така че двата героя да спират накрая на едно и също място.
       Course 4 Playlab For Loops 6b_instruction: 'Редактирай на този "за" цикъл, за
@@ -2868,6 +2874,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

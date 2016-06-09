@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT":"eyða bilum af vinstri enda",
   "TEXT_TRIM_OPERATOR_RIGHT":"eyða bilum af hægri enda",
   "TEXT_TRIM_TOOLTIP":"Skila afriti af textanum þar sem möguleg bil við báða enda hafa verið fjarlægð.",
+  "UNUSED_CODE":"Unused code",
   "VARIABLES_DEFAULT_NAME":"atriði",
   "VARIABLES_GET_CREATE_SET":"Búa til 'stilla %1'",
   "VARIABLES_GET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Get",

@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT":"отстрани ги празните места од левата страна",
   "TEXT_TRIM_OPERATOR_RIGHT":"отстрани ги празните места од десната страна",
   "TEXT_TRIM_TOOLTIP":"Враќа копија на текстот со отстранети празни места на едната од двете страни.",
+  "UNUSED_CODE":"Unused code",
   "VARIABLES_DEFAULT_NAME":"елемент",
   "VARIABLES_GET_CREATE_SET":"Креирај 'постави %1'",
   "VARIABLES_GET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Get",

@@ -482,12 +482,14 @@ sk:
     picture_count: 'V posledných <b>%{days}</b> dňoch, študenti nakreslil <b>%{count}</b> obrázkov napísaním vlastného počítačového programu. Kliknutím na obrázok uvidíte program v akcii.'
     activity_count: 'V posledných dňoch <b>%{days}</b>, študenti vytvorili<b>%{count}</b> aplikacií a fotiek napísaním vlastného počítačového programu. Kliknutím na obrázok a screenshot uvidíte program v akcii.'
     want_to_make_your_own: Chceš vytvoriť svoj vlastný?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Viac &rarr;'
     caption_by_name_age: 'podľa %{name}, vek %{age}'
     caption_time_ago: '%{time_ago} ago'
     header: Galéria
     header_playlab: Príbehy a hry
     header_artist: Kód art
+    report_abuse: Nahlásenie zneužitia
   landing:
     prerelease: "Tento kurz je v <span class='betatext'> beta verzii</span>.  To znamená, že to nie je Finálna verzia kurzu a je predmetom revízie na základe pripomienok a vylepšení, ktoré sú vykonané."
     prerelease_hoc2014: "Tento tutoriál je v <span class='betatext'> beta verzii</span> a je predmetom revízie na základe pripomienok a vylepšení, ktoré sú vykonané."

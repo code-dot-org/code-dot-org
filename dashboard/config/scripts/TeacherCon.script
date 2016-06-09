@@ -5,11 +5,11 @@ login_required 'true'
 
 stage 'Introduction to Teachercon', 'required'
  level 'Welcome to TeacherCon!'
- level 'TeacherCon Agenda' 
+ level 'TeacherCon Agenda'
+ level 'TeacherCon Unit 1 Assessment' 
 
 stage 'Lesson 1,4: Number Systems - circle triangle square', 'content' 				
  level 'U1L4 Lesson Overview'
-
 
 stage 'Lesson 1,6: Sending Numbers', 'content'
  level 'U1L6 Lesson Overview'
@@ -35,6 +35,8 @@ stage 'Lesson 2,10: Good and Bad Data Visualizations', 'content'
 stage 'Group Work and Peer Learning', 'practice'
  level 'Exploring Practices and Strategies during TeacherCon'
  level 'Overview: Group Work and Peer Learning'
+ level 'Tuesday Report: group work and peer learning in unit 1'
+ level 'Wednesday Report: group work and peer learning in unit 1'
 
 stage 'Balancing Teachers and Tools', 'practice'
  level 'Exploring Practices and Strategies during TeacherCon'
@@ -44,7 +46,7 @@ stage 'Discovery Learning', 'practice'
  level 'Exploring Practices and Strategies during TeacherCon'
  level  'Overview: Discovery Learning'
 
-stage 'Capturing Student Learning', 'practice'
+stage 'Measuring Student Learning', 'practice'
  level 'Exploring Practices and Strategies during TeacherCon'
  level  'Overview: Capturing Student Learning'
  level '2-3 Maze 3'

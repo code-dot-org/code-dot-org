@@ -38,6 +38,7 @@ eu:
       2-3 Artist Functions 10_instruction: Hemen bi funtzio daude, batekin engranaje handi bat margotu dezakezu bestearekin ordea txiki bat. Erabili itzazu biak makina baten barrualdea marrazteko!
       2-3 Artist Functions 11.5_instruction: '"Marraztu hexagono bat" funtzio bera dago hemen. Zer gertatuko da errepikapen bakoitzean 60 gradutan baino ez bazara biratzen?'
       2-3 Artist Functions 11_instruction: '"Marraztu karratua" funtzioa berrizendatu dugu "Marraztu hexagonoa" izenarekin, baina oraiandik karratuak marrazten ditu! Aldatu dezakezu "Marraztu hexagonoa" funtzioa 50 pixeleko aldea duen hexagono bat marraz dezan, eta irudi hori marraztu funtzioa erabiliz?'
+      2-3 Artist Functions 12 Mike_instruction: 'Funtzioak oso baliagarriak dira gauza konplexuak hainbat aldiz marrazteko. "Marraztu lore bat" funtzioa erabiliko duzu lorezainaren kutxako gainontzekoa betetzeko? (Aholkua: Loreen arteko distantzia 100 pixelekoa da)  '
       2-3 Artist Functions 12_instruction: 'Funtzioak oso baliagarriak dira gauza konplexuak hainbat aldiz marrazteko. "Marraztu lore bat" funtzioa erabiliko duzu lorezainaren kutxako gainontzekoa betetzeko? (Aholkua: Loreen arteko distantzia 100 pixelekoa da)  '
       2-3 Artist Functions 13_instruction: 'Bi funtzio dituzu. Nahi duzun moduan erabili funtzio horiek, begizta bat edo gehiagotan, geroago lagunekin partekatu ditzakezun marrazkiak egiteko. Sakatu "hasi" adibide bat ikusteko.'
       2-3 Artist Functions 2_instruction: 'Funtzioak ahalbidetzen zaitu bloke berriak definitzen. Karratu bat definitzeko blokeak "marraztu karratua" izeneko funtzio bat definitzeko mugitu ditugu. Erabiliko duzu "marraztu karratua" funtzioa erabiliz betaurrekoak sortuko dituzu? Karratuen arteko distantzia 75 pixelekoa da.'
@@ -342,6 +343,7 @@ eu:
       4-5 Maze 9_instruction: 'Sor ezazu begizta bat "errepikatu arte" blokearekin.'
       4-5 Maze Assessment 1_instruction: 'Ebaluazioa: iritsi ekilorera.'
       4-5 Maze Conditionals 1_instruction: 'Zonbia ekiloreraino eramateko "errepikatu arte" blokea erabi ezazu.'
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: 'Zonbia ekiloreraino eramateko "errepikatu arte" blokea erabi ezazu.'
       4-5 Maze Conditionals 3_instruction: '"baldin" blokea erabil ezazu, noiz biratu niri erabakitzen uzteko. Iradokizuna: bloke bat gehiago soilik behar duzu, baina ikasi nola konfiguratzen dugun hurrengoan zure kasa egiteko gai izan zaitezen.'
       4-5 Maze Conditionals 4_instruction: 'Ongi, hau azkeneko ariketa bezalakoa da, baina "baldin" blokea eta "errepikatu" blokea batera nola erabili zenituen gogoratu behar duzu.'
@@ -1835,6 +1837,10 @@ eu:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

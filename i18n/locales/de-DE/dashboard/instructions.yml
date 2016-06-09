@@ -34,6 +34,7 @@ de:
       2-3 Artist Functions 10_instruction: Hier sind zwei Funktionen, um ein großes und ein kleines Zahnrad zu zeichnen. Verwende sie, um das Innere einer Maschine zu zeichnen!
       2-3 Artist Functions 11.5_instruction: Hier ist die gleiche „Zeichne ein Sechseck“-Funktion. Was passiert, wenn du bei jeder Wiederholung nur um 60 Grad drehst?
       2-3 Artist Functions 11_instruction: Wir haben die Funktion „zeichne ein Quadrat“ in „zeichne ein Sechseck“ umbenannt, aber sie zeichnet immer noch nur Quadrate! Kannst du die Funktion „zeichne ein Sechseck“ so ändern, dass sie ein Sechseck mit 50 Pixel Seiten zeichnet, und das Bild mithilfe dieser Funktion zeichnen?
+      2-3 Artist Functions 12 Mike_instruction: 'Funktionen sind für das mehrfache Zeichnen von komplexen Dingen wirklich toll. Kannst du die Funktion „zeichne eine Blume“ benutzen, um das restliche Feld mit Pflanzen zu füllen? (Hinweis: Die Pflanzen haben alle 100 Pixel Abstand zueinander.)  '
       2-3 Artist Functions 12_instruction: 'Funktionen sind für das mehrfache Zeichnen von komplexen Dingen wirklich toll. Kannst du die Funktion „zeichne eine Blume“ benutzen, um das restliche Feld mit Pflanzen zu füllen? (Hinweis: Die Pflanzen haben alle 100 Pixel Abstand zueinander.)  '
       2-3 Artist Functions 13_instruction: Wir haben dir vier Funktionen zur Verfügung gestellt. Verwende sie beliebig innerhalb von einer oder mehreren Schleifen, um Bilder zu zeichnen, die du mit deinen Freunden teilen kannst. Klicke ausführen, um ein Beispiel zu sehen.
       2-3 Artist Functions 2_instruction: Funktionen erlauben dir, neue Blöcke zu definieren! Wir haben die Blöcke in eine Funktion namens „zeichne ein Quadrat“ verschoben, um ein Quadrat zu zeichnen. Kannst du die Funktion „zeichne ein Quadrat“ benutzen, um die Gläser zu erstellen? Die Quadrate haben einen Abstand von 75 Pixel.
@@ -335,6 +336,7 @@ de:
       4-5 Maze 9_instruction: 'Erzeuge eine Schleife mit dem „Wiederholen bis"-Baustein.'
       4-5 Maze Assessment 1_instruction: 'Prüfung: Gehe zur Sonnenblume.'
       4-5 Maze Conditionals 1_instruction: 'Benutze den „Wiederholen"-Baustein, um den Zombie zur Sonnenblume zu bringen.'
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: 'Benutze den „Wiederholen"-Baustein, um den Zombie zur Sonnenblume zu bringen.'
       4-5 Maze Conditionals 3_instruction: 'Benutze den „Wenn"-Baustein, damit ich entscheiden kann, wann ich mich drehe. Hinweis: Du brauchst nur einen weiteren Baustein, aber sieh dir an, wie wir das machen, damit du es beim nächsten Mal alleine hinbekommst.'
       4-5 Maze Conditionals 4_instruction: 'Ok, das ist wie die letzte Aufgabe, aber erinnere dich daran, wie du den „Wenn"-Baustein und den „Wiederholen"-Baustein zusammen verwendet hast.'
@@ -1917,6 +1919,10 @@ de:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

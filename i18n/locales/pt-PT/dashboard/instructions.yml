@@ -82,6 +82,11 @@ pt:
         como "desenhe um hexágono", mas ela ainda desenha apenas quadrados! Você consegue
         modificar a função "desenhe um hexágono" para desenhar um hexágono com lados de 50 pixels, e
         desenhar a imagem usando a função?
+      2-3 Artist Functions 12 Mike_instruction: |
+        Funções são ótimas para desenhar
+        coisas complexas várias vezes. Você consegue usar a função "desenhe uma flor"
+        para preencher o resto do canteiro de plantas? (Dica: as plantas estão todas separadas
+        por um comprimento de 100 pixels)
       2-3 Artist Functions 12_instruction: |
         Funções são ótimas para desenhar
         coisas complexas várias vezes. Você consegue usar a função "desenhe uma flor"
@@ -825,6 +830,7 @@ pt:
       4-5 Maze Conditionals 1_instruction: |
         Use o bloco repita até para levar o
         zumbi até o girassol.
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: |
         Use o bloco repita até para levar o
         zumbi até o girassol.
@@ -2006,7 +2012,7 @@ pt:
       Course 4 Play Lab Params 8_instruction: |
         Use um bloco "quando tocar" para enviar
         o cão de volta para a parte superior esquerda se ele tocar em qualquer outro personagem.
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith hearts, and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith pie, and decrease each time that Cat tags Dog with a sandwich.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: |
         Você não precisa escrever código algum, apenas
         clique em "Executar" para jogar! Nesse jogo, você é o cão que está tentando
@@ -3012,6 +3018,10 @@ pt:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

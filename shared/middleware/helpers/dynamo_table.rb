@@ -176,7 +176,7 @@ class DynamoTable
       scan_index_forward: false,
     ).first
 
-    return 1 unless page
+    return 1 unless page && page[:items]
     return 1 unless item = page[:items].first
 
     item['row_id'].to_i + 1

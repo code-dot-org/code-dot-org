@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback":"次のブロックのいずれかを使用（しよう）してください。",
   "tryHOC":"「コードの時間」に挑戦する",
   "unnamedFunction":"名前のない変数または関数があります。全てにわかりやすい名前をつけるのを忘れないでください。",
+  "unattachedBlockTipTitle":"Unattached blocks",
+  "unattachedBlockTipBody":"Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn":"プログラムを覚えてみたいですか？",
   "watchVideo":"ビデオを見る",
   "when":"とき",

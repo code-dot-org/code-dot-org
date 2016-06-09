@@ -151,7 +151,7 @@ Blockly.Xml.blockToDom = function(block, ignoreChildBlocks) {
   if (block.isNextConnectionDisabled()) {
     element.setAttribute('next_connection_disabled', true);
   }
-  if (/^procedures_def/.test(block.type) && block.userCreated) {
+  if (block.isFunctionDefinition() && block.userCreated) {
     element.setAttribute('usercreated', true);
   }
   if (block.htmlId) {

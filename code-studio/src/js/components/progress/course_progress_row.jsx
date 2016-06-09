@@ -6,7 +6,13 @@ import color from '../../color';
 
 const styles = {
   row: {
-    borderBottom: `2px solid ${color.lighter_gray}`,
+    boxSizing: 'border-box',
+    margin: '2px 0',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.lighter_gray,
+    borderRadius: 5,
+    background: color.lightest_gray,
     display: 'table',
     tableLayout: 'fixed',
     padding: 10,
@@ -26,14 +32,20 @@ const styles = {
 const CourseProgressRow = React.createClass({
   propTypes: {
     currentLevelId: React.PropTypes.string,
+    professionalLearningCourse: React.PropTypes.bool,
     stage: stageShape
   },
 
   render() {
     const stage = this.props.stage;
 
+    let rowStyle = styles.row;
+    if (this.props.professionalLearningCourse) {
+      Object.assign(rowStyle, {background: color.white});
+    }
+
     return (
-      <div style={styles.row}>
+      <div style={rowStyle}>
         <div style={styles.stageName}>
           {stage.title}
           <div className='stage-lesson-plan-link' style={{display: 'none'}}>

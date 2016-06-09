@@ -34,6 +34,7 @@ es-MX:
       2-3 Artist Functions 10_instruction: Aquí hay dos funciones, una para dibujar un engranaje grande y otra para dibujar un engranaje pequeño. ¡Utilízalos para dibujar el interior de una máquina!
       2-3 Artist Functions 11.5_instruction: 'Aquí está la misma función "Dibuja un hexágono". ¿Qué pasa si sólo giras 60 grados en cada iteración?'
       2-3 Artist Functions 11_instruction: 'Hemos renombrado la función "dibuja un cuadrado" a "dibuja un hexágono", ¡pero sigue dibujando cuadrados! ¿Puedes modificar la función "dibuja un hexágono" para que dibuje un hexágono con 50 píxeles de cada lado y que dibuje la imagen usando la función?'
+      2-3 Artist Functions 12 Mike_instruction: 'Las funciones son geniales para dibujar las cosas complejas varias veces. Puedes utilizar la función "dibujar una flor" para llenar el resto de la caja del jardinero. (Pista: las plantas están separadas por una longitud de 100 píxeles)  '
       2-3 Artist Functions 12_instruction: 'Las funciones son geniales para dibujar las cosas complejas varias veces. Puedes utilizar la función "dibujar una flor" para llenar el resto de la caja del jardinero. (Pista: las plantas están separadas por una longitud de 100 píxeles)  '
       2-3 Artist Functions 13_instruction: 'Tienes cuatro funciones. Utilízalas como quieras dentro de uno o varios bucles para hacer dibujos que puedes compartir con tus amigos. Pulsa "run" para ver un ejemplo.'
       2-3 Artist Functions 2_instruction: '¡Las funciones permiten definir nuevos bloques! Hemos movido los bloques para dibujar un cuadrado en la función llamada "dibuja un cuadrado". ¿Puedes utilizar la función "dibuja un cuadrado" para crear los lentes? Los cuadrados están separados por 75 píxeles.'
@@ -325,6 +326,7 @@ es-MX:
       4-5 Maze 9_instruction: 'Crear un lazo en el bloque "repetir hasta".'
       4-5 Maze Assessment 1_instruction: 'Evaluación: Llega hasta el girasol.'
       4-5 Maze Conditionals 1_instruction: Utiliza el bloque repetir hasta para llevar al zombie hasta el girasol.
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: Utiliza el bloque repetir hasta para llevar al zombie hasta el girasol.
       4-5 Maze Conditionals 3_instruction: 'Utiliza el bloque "if" para dejarme decidir cuando voltear. Sugerencia: Sólo necesitas un bloque más, pero aprende cómo se configura, con eso lo puedes hacer por ti mismo la próxima vez.'
       4-5 Maze Conditionals 4_instruction: 'Ok, esto es como con el rompecabezas pasado, pero recuerda como utilizaste el bloque "if" y el bloque "repeat" juntos.'
@@ -1799,6 +1801,10 @@ es-MX:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
