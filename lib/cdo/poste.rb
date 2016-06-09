@@ -203,21 +203,26 @@ module Poste2
 
   class DeliveryMethod
 
-    ALLOWED_SENDERS = Set.new ['pd@code.org', 'noreply@code.org']
-    def initialize(settings)
+    ALLOWED_SENDERS = Set.new ['pd@code.org', 'noreply@code.org', 'teacher@code.org']
+    def initialize(settings = nil)
     end
 
     def deliver!(mail)
       content_type = mail.header['Content-Type'].to_s
-      raise ArgumentError, "Unsupported message type: #{content_type}" unless content_type =~ /^text\/html;/ && content_type =~ /charset=UTF-8/
-      sender = mail.from.first
-      raise ArgumentError, "Unsupported sender: #{sender}" unless ALLOWED_SENDERS.include?(sender)
 
+      raise ArgumentError, "Unsupported message type: #{content_type}" unless content_type =~ /^text\/html;/ && content_type =~ /charset=UTF-8/
+      sender_email = mail.from.first
+      raise ArgumentError, "Unsupported sender: #{sender_email}" unless ALLOWED_SENDERS.include?(sender_email)
+
+      sender = mail[:from].formatted.first
+      reply_to = mail[:reply_to].formatted.first
       subject = mail.subject.to_s
       body = mail.body.to_s
+      to_address = mail[:to].addresses.first
+      to_name = mail[:to].display_names.first
 
-      recipient = Poste2.ensure_recipient(mail.to.first, ip_address: '127.0.0.1')
-      Poste2.send_message('dashboard', recipient, body: body, subject: subject, from: sender)
+      recipient = Poste2.ensure_recipient(to_address, name: to_name, ip_address: '127.0.0.1')
+      Poste2.send_message('dashboard', recipient, body: body, subject: subject, from: sender, 'Reply-To': reply_to)
     end
 
   end
