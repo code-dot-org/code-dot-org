@@ -136,10 +136,10 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
       $('.stage-lesson-plan-link').show();
     }
 
-    if (data.focusAreas) {
+    if (data.focusAreaPositions) {
       store.dispatch({
         type: 'UPDATE_FOCUS_AREAS',
-        focusAreas: data.focusAreas
+        focusAreaPositions: data.focusAreaPositions
       });
     }
 
@@ -170,7 +170,7 @@ function loadProgress(scriptData, currentLevelId) {
         currentLevelId: state.currentLevelId,
         professionalLearningCourse: state.professionalLearningCourse,
         progress: newProgress,
-        focusAreas: state.focusAreas,
+        focusAreaPositions: state.focusAreaPositions,
         stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
           let id = level.uid || level.id;
           newProgress[id] = clientState.mergeActivityResult(state.progress[id], action.progress[id]);
@@ -179,14 +179,14 @@ function loadProgress(scriptData, currentLevelId) {
         })}))
       };
     } else if (action.type === 'UPDATE_FOCUS_AREAS') {
-      return Object.assign(state, {focusAreas: action.focusAreas});
+      return Object.assign(state, {focusAreaPositions: action.focusAreaPositions});
     }
     return state;
   }, {
     currentLevelId: currentLevelId,
     professionalLearningCourse: scriptData.plc,
     progress: {},
-    focusAreas: [],
+    focusAreaPositions: [],
     stages: scriptData.stages
   });
 
