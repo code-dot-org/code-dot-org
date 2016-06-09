@@ -2,7 +2,11 @@
 <%
 formatted_from = "Code.org <noreply@code.org>"
 if defined? from && from != nil
-  formatted_from = "Code.org <#{from}>"
+  if from.include? '<'
+    formatted_from = from
+  else
+    formatted_from = "Code.org <#{from}>"
+  end
 end
 %>
 from: <%= formatted_from.inspect %>

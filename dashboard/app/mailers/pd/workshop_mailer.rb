@@ -96,7 +96,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @survey_url = CDO.code_org_url "/pd-workshop-survey/#{enrollment.code}"
 
     mail content_type: 'text/html',
-      from: email_address('Hadi Partovi', 'hadi_partovi@code.org'),
+      from: from_hadi,
       subject: 'How was your Code.org workshop?',
       to: email_address(@teacher.name, @teacher.email)
   end
@@ -115,6 +115,10 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
   def from_no_reply
     email_address('Code.org', 'noreply@code.org')
+  end
+
+  def from_hadi
+    email_address('Hadi Partovi', 'hadi_partovi@code.org')
   end
 
   def get_details_partial(course, subject)
