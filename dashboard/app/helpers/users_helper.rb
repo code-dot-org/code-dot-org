@@ -87,26 +87,28 @@ module UsersHelper
       script_levels = script.script_levels
       user_data[:levels] = {}
       script_levels.each do |sl|
-        ul = uls.try(:[], sl.level_id)
-        completion_status = activity_css_class(ul)
-        submitted = !!ul.try(:submitted)
-        if completion_status != 'not_tried'
-          user_data[:levels][sl.level_id] = {
-              status: completion_status,
-              result: ul.try(:best_result) || 0,
-              submitted: submitted
-          }
-
-          # Just in case this level has multiple pages, in which case we add an additional
-          # array of booleans indicating which pages have been completed.
-          pages_completed = get_pages_completed(user, sl)
-          if pages_completed
-            user_data[:levels][sl.level_id][:pages_completed] = pages_completed
-            pages_completed.each_with_index do |result, index|
-              user_data[:levels]["#{sl.level_id}_#{index}"] = {
-                result: result,
+        sl.level_ids.each do |level_id|
+          ul = uls.try(:[], level_id)
+          completion_status = activity_css_class(ul)
+          submitted = !!ul.try(:submitted)
+          if completion_status != 'not_tried'
+            user_data[:levels][level_id] = {
+                status: completion_status,
+                result: ul.try(:best_result) || 0,
                 submitted: submitted
-              }
+            }
+
+            # Just in case this level has multiple pages, in which case we add an additional
+            # array of booleans indicating which pages have been completed.
+            pages_completed = get_pages_completed(user, sl)
+            if pages_completed
+              user_data[:levels][level_id][:pages_completed] = pages_completed
+              pages_completed.each_with_index do |result, index|
+                user_data[:levels]["#{level_id}_#{index}"] = {
+                  result: result,
+                  submitted: submitted
+                }
+              end
             end
           end
         end

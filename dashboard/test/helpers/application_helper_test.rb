@@ -217,6 +217,41 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal 'http://code.org/images/logo.png', meta_image_url(level_source: create(:level_source_image).level_source)
   end
 
+  test 'best_activity_css_class returns "not started" for no activity' do
+    user_level = create :user_level, best_result: 0
+    assert_equal 'not_tried',  best_activity_css_class([user_level])
+  end
+
+  test 'best_activity_css_class returns "not started" for multiple user_levels with no activity' do
+    user_level1 = create :user_level, best_result: 0
+    user_level2 = create :user_level, best_result: 0
+    assert_equal 'not_tried',  best_activity_css_class([user_level1, user_level2])
+  end
+
+  test 'best_activity_css_class returns "attempted" for one attempted' do
+    user_level1 = create :user_level, best_result: 1
+    user_level2 = create :user_level, best_result: 0
+    assert_equal 'attempted',  best_activity_css_class([user_level1, user_level2])
+  end
+
+  test 'best_activity_css_class returns "passed" for one passed' do
+    user_level1 = create :user_level
+    user_level2 = create :user_level, best_result: 20
+    assert_equal 'passed',  best_activity_css_class([user_level1, user_level2])
+  end
+
+  test 'best_activity_css_class returns "perfect" for one passed and one perfect' do
+    user_level1 = create :user_level, best_result: 100
+    user_level2 = create :user_level, best_result: 20
+    assert_equal 'perfect',  best_activity_css_class([user_level1, user_level2])
+  end
+
+  test 'best_activity_css_class returns "attempted" for one unsubmitted' do
+    user_level1 = create :user_level, best_result: 0
+    user_level2 = create :user_level, best_result: -50
+    assert_equal 'attempted',  best_activity_css_class([user_level1, user_level2])
+  end
+
   private
   def assert_equal_unordered(array1, array2)
     Set.new(array1) == Set.new(array2)

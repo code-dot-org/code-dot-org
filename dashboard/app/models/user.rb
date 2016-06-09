@@ -38,6 +38,7 @@
 #  confirmation_sent_at       :datetime
 #  unconfirmed_email          :string(255)
 #  prize_teacher_id           :integer
+#  hint_access                :boolean
 #  secret_picture_id          :integer
 #  active                     :boolean          default(TRUE), not null
 #  hashed_email               :string(255)
@@ -440,7 +441,7 @@ class User < ActiveRecord::Base
   end
 
   def user_progress_by_stage(stage)
-    levels = stage.script_levels.map(&:level_id)
+    levels = stage.script_levels.map(&:level_ids).flatten
     user_levels.where(script: stage.script, level: levels).pluck(:level_id, :best_result).to_h
   end
 
@@ -835,8 +836,8 @@ SQL
 
   # returns whether a new level has been completed and asynchronously enqueues an operation
   # to update the level progress.
-  def track_level_progress_async(script_level:, new_result:, submitted:, level_source_id:)
-    level_id = script_level.level_id
+  def track_level_progress_async(script_level:, level:, new_result:, submitted:, level_source_id:)
+    level_id = level.id
     script_id = script_level.script_id
     old_user_level = UserLevel.where(user_id: self.id,
                                  level_id: level_id,
