@@ -79,6 +79,10 @@
         в «нарисовать шестиугольник», только она все еще рисует только квадраты! Можешь
         изменить функцию «нарисовать шестиугольник», чтобы она рисовала шестиугольник
         со сторонами 50 пикселей, и нарисовать рисунок с ее помощью?"
+      2-3 Artist Functions 12 Mike_instruction: "Функции прекрасно подходят для того,
+        чтобы рисовать сложные фигуры несколько раз. Можешь заполнить оставшуюся часть
+        ящика для цветов с помощью функции «нарисовать цветок»? (Подсказка: цветы
+        находятся на расстоянии 100 пикселей друг от друга)  "
       2-3 Artist Functions 12_instruction: "Функции прекрасно подходят для того, чтобы
         рисовать сложные фигуры несколько раз. Можешь заполнить оставшуюся часть ящика
         для цветов с помощью функции «нарисовать цветок»? (Подсказка: цветы находятся
@@ -692,6 +696,12 @@
       4-5 Maze Assessment 1_instruction: "Тест: Доведи меня до подсолнуха."
       4-5 Maze Conditionals 1_instruction: "Используй блок «повторять, пока не», чтобы
         доставить зомби к подсолнуху."
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: "Используй блок «повторять, пока не», чтобы
         доставить зомби к подсолнуху."
       4-5 Maze Conditionals 3_instruction: "Используй блок «если», чтобы я мог решать,
@@ -2872,6 +2882,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

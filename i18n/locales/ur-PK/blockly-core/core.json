@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT":"لیفٹ سائڈ سے اسپیسز ٹرم کریں",
   "TEXT_TRIM_OPERATOR_RIGHT":"رائٹ سائڈ سے اسپیسز ٹزم کریں",
   "TEXT_TRIM_TOOLTIP":"ایک یا دونوں جانب سے اسپیسز نکال کر ٹیسکٹ کی ایک کاپی ریٹرن کریں۔",
+  "UNUSED_CODE":"Unused code",
   "VARIABLES_DEFAULT_NAME":"آئیٹم",
   "VARIABLES_GET_CREATE_SET":"'set %1' کری-ایٹ کریں",
   "VARIABLES_GET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Get",

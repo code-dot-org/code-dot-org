@@ -73,6 +73,9 @@
         na "nakreslit šestiúhelník", ale stále to kreslí jen čtverce! Umíš upravit
         funkci "nakreslit šestiúhelníku", aby se nakreslil šestiúhelník se stran 50
         pixelů a nakresli obrázek pomocí této funkce?
+      2-3 Artist Functions 12 Mike_instruction: 'Funkce jsou opravdu skvělé ke vícenásobnému
+        kreslení složitých věci. Můžeš použít funkci "nakreslit květinu" vyplnit ve
+        zbytku pole květináč? (Rada: rostliny jsou oddělené délkou 100 pixelů)  '
       2-3 Artist Functions 12_instruction: 'Funkce jsou opravdu skvělé ke vícenásobnému
         kreslení složitých věci. Můžeš použít funkci "nakreslit květinu" vyplnit ve
         zbytku pole květináč? (Rada: rostliny jsou oddělené délkou 100 pixelů)  '
@@ -631,6 +634,12 @@
       4-5 Maze Assessment 1_instruction: 'Zhodnocení: Dostaň se ke slunečnici.'
       4-5 Maze Conditionals 1_instruction: Použij bloku opakování až do dostat zombie
         ke slunečnici.
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: Použij bloku opakování až do dostat zombie
         ke slunečnici.
       4-5 Maze Conditionals 3_instruction: 'Použij blok "if" abych se rozhodoval,
@@ -2734,6 +2743,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

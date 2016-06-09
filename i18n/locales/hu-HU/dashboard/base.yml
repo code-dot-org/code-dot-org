@@ -478,12 +478,14 @@ hu:
     picture_count: 'Az elmúlt  <b>% {napok}</b> napon, diákok <b>% {count}</b>képet rajzoltak saját számítógépes programuk írásakor. Kattints a képekre, hogy minden egyes programot láthass működés közben.'
     activity_count: 'Az elmúlt <b>%{days}</b> nap a diákok <b>%{count}</b> alkalmazást és a képet készítettek saját maguk, számítógépprogram írással. Kattints a képekre illetve képernyőmentésekre, hogy megnézesd az egyes programokat működés közben.'
     want_to_make_your_own: Szeretnéd elkészíteni a sajátodat?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Több &rarr;'
     caption_by_name_age: 'készítette %{name}, %{age} éves'
     caption_time_ago: 'ennyi ideje: %{time_ago}'
     header: Galéria
     header_playlab: Játéklabor
     header_artist: Művész
+    report_abuse: Visszaélés jelentése
   landing:
     prerelease: "Ez a tananyag <span class='betatext'> béta állapotban van</span>.  Ez azt jelenti, hogy ez nem a tananyag végleges változata, és a visszajelzések beérkezése után felülvizsgálat alá kerül, és további fejlesztés várható."
     prerelease_hoc2014: "Ez a tananyag <span class='betatext'> béta állapotban van</span>. A visszajelzések beérkezése után felülvizsgálat alá kerül, és további fejlesztés várható."

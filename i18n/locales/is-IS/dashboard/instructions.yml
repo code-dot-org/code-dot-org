@@ -34,6 +34,7 @@ is:
       2-3 Artist Functions 10_instruction: Hér eru tvö föll, eitt til að teikna stórt tannhjól og annað fyrir lítið tannhjól. Notaðu þau til að teikna innviði vélar!
       2-3 Artist Functions 11.5_instruction: 'Hér er sama "teikna sexhyrning" fallið. Hvað gerist ef þú snýrð um 60 gráður í hverri umferð lykkjunnar?'
       2-3 Artist Functions 11_instruction: 'Við höfum breytt heiti "teikna ferning" fallsins í "teikna sexhyrning", en það teiknar samt bara ferninga! Getur þú breytt "teikna sexhyrning" fallinu svo það teikni sexhyrning með 50 díla hliðar og notað það svo til að teikna myndina?'
+      2-3 Artist Functions 12 Mike_instruction: 'Föll er mjög hentug ef teikna þarf flókna hluti mörgum sinnum. Getur þú notað fallið "teikna blóm" til að fylla blómabeðið? (Vísbending: Það eru 100 dílar á milli plantna)  '
       2-3 Artist Functions 12_instruction: 'Föll er mjög hentug ef teikna þarf flókna hluti mörgum sinnum. Getur þú notað fallið "teikna blóm" til að fylla blómabeðið? (Vísbending: Það eru 100 dílar á milli plantna)  '
       2-3 Artist Functions 13_instruction: 'Hér færðu fjögur föll. Notaðu þau eins og þú vilt í einni eða fleiri lykkjum til að búa til myndir sem þú getur deilt með vinum þínum. Ýttu á "keyra" til að sjá dæmi.'
       2-3 Artist Functions 2_instruction: 'Með föllum getur þú búið til nýja kubba! Við höfum fært kubbana, sem teikna ferning, inn í fall, sem heitir "teikna ferning". Getur þú notað "teikna ferning" fallið til að búa til gleraugun? Það eru 75 dílar á milli ferninganna.'
@@ -310,6 +311,7 @@ is:
       4-5 Maze 9_instruction: 'Búðu til lykkju með "endurtaka þar til" kubbnum.'
       4-5 Maze Assessment 1_instruction: 'Mat: Náðu til sólblómsins.'
       4-5 Maze Conditionals 1_instruction: 'Notaðu "endurtaka þar til" kubb til að koma uppvakningnum til sólblómsins.'
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: 'Notaðu "endurtaka þar til" kubb til að koma uppvakningnum til sólblómsins.'
       4-5 Maze Conditionals 3_instruction: 'Notaðu "ef" kubbinn til að láta mig ákveða hvenær á að snúa. Vísbending: Þú þarft aðeins einn kubb í viðbót, en taktu eftir hvernig hann er svo þú getir gert þetta án hjálpar í næstu þraut.'
       4-5 Maze Conditionals 4_instruction: 'Jæja, þetta er alveg eins og síðasta þraut, en þú þarft að muna hvernig "ef" og "endurtaka" kubbarnir voru notaðir saman.'
@@ -1297,6 +1299,10 @@ is:
       Luigi's Pizza 4_instruction: 'Frjáls æfing: Hvernig væri hægt að gera kostnaðarfall Luigi enn gagnlegra?'
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: Allar breytur og föll byrja hér sem innantómir stúfar. Hver þraut mun fást við að skilgreina nokkra í einu og þannig smám saman auka við virknina.
       MSM Big Game Vars 1 (copy 1)_instruction: Í flokknum Breytur í verkfærakassanum eru nokkrar breytur sem skilgreina útlit, hreyfingar og samskipti veranna í leiknum
       MSM Big Game Vars 1_instruction: Í flokknum Breytur í verkfærakassanum eru nokkrar breytur sem skilgreina útlit, hreyfingar og samskipti veranna í leiknum

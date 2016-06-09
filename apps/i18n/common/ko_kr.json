@@ -233,13 +233,11 @@
   "tryBlocksBelowFeedback": "아래 블록들 중 하나를 사용해보세요:",
   "tryHOC": "Hour of Code 해보기",
   "unnamedFunction": "이름이 없는 변수나 함수가 있습니다. 모든 것에 적당한 표현의 이름을 주는 것을 잊지 마세요.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "코드(code)를 배워볼까요?",
   "watchVideo": "비디오 보기",
   "when": "~할 때",
   "whenRun": "실행하면",
-  "workspaceHeaderShort": "작업 영역: ",
-  "hide": "Hide",
-  "more": "More",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
+  "workspaceHeaderShort": "작업 영역: "
 }

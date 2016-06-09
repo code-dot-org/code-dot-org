@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT": "বা দিক থেকে ফাকা স্থানগুলো সরাও",
   "TEXT_TRIM_OPERATOR_RIGHT": "ডান দিক থেকে ফাঁকা স্থানগুলো সরাও।",
   "TEXT_TRIM_TOOLTIP": "এক বা উভয় প্রান্ত থেকে স্পেসগুলো সরিয়ে লেখাটির কপি দেখাও।",
+  "UNUSED_CODE": "Unused code",
   "VARIABLES_DEFAULT_NAME": "জিনিষ",
   "VARIABLES_GET_CREATE_SET": "'%1 ধার্য করো' তৈরি করো",
   "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",

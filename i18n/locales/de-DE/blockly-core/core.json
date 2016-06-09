@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT":"entferne Leerzeichen von der linken Seite",
   "TEXT_TRIM_OPERATOR_RIGHT":"entferne Leerzeichen von der rechten Seite",
   "TEXT_TRIM_TOOLTIP":"Gib eine Kopie des Textes nach dem Entfernen der Leerzeichen links oder\/und rechts zurück.",
+  "UNUSED_CODE":"Unused code",
   "VARIABLES_DEFAULT_NAME":"Element",
   "VARIABLES_GET_CREATE_SET":"Erstelle \"setze auf %1\"",
   "VARIABLES_GET_HELPURL":"http:\/\/de.wikipedia.org\/wiki\/Variable_%28Programmierung%29",

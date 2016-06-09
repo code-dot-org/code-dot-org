@@ -484,12 +484,14 @@ eu:
     picture_count: 'Iragan <b>%{days}</b> egunetan, ikasleek <b>%{count}</b> irudi egin dituzte konputagailu programak idatziz. Egin klik irudietan programak martxan ikusteko.'
     activity_count: 'Iragan <b>%{days}</b> egunetan, ikasleek <b>%{count}</b> app eta irudi egin dituzte konputagailu programak idatziz. Egin klik irudietan eta pantaila-argazkietan programa bakoitza martxan ikusteko.'
     want_to_make_your_own: Zurea egin nahi duzu?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Gehiago &rarr;'
     caption_by_name_age: '%{name}, adina %{age}'
     caption_time_ago: 'orain dela %{time_ago}'
     header: Galeria
     header_playlab: Istorio eta jokoak
     header_artist: Arte kodea
+    report_abuse: Erabilera okerra jakinarazi
   landing:
     prerelease: "Kurtso hau <span class='betatext'>beta</span> bertsioa da. Horrek esan nahi du ez dela azken bertsioa eta iruzkinak iritsi ahala berrikusi eta hobekuntzak egingo direla."
     prerelease_hoc2014: "Tutorial hau <span class='betatext'>beta</span> bertsioa da. Iruzkinak iritsi ahala berrikusi eta hobekuntzak egingo dira."
