@@ -43,7 +43,9 @@ FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
  */
 FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
   let keyRef = getKeysRef(Applab.channelId).child(key);
-  keyRef.set(value).then(onSuccess, onError);
+  incrementRateLimitCounters()
+    .then(() => keyRef.set(value))
+    .then(onSuccess, onError);
 };
 
 /**
