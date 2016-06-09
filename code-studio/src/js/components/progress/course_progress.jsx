@@ -22,16 +22,18 @@ const CourseProgress = React.createClass({
   propTypes: {
     currentLevelId: React.PropTypes.string,
     professionalLearningCourse: React.PropTypes.bool,
+    focusAreas: React.PropTypes.arrayOf(React.PropTypes.number),
     stages: React.PropTypes.arrayOf(stageShape)
   },
 
   render() {
     const groups = _.groupBy(this.props.stages, stage => (stage.flex_category || 'Content'));
 
+    let count = 1;
     const rows = _.map(groups, (stages, group) =>
       <div key={group}>
         <h4 style={this.props.professionalLearningCourse ? styles.flexHeader : {display: 'none'}}>{group}</h4>
-        {stages.map(stage => <CourseProgressRow stage={stage} key={stage.name} currentLevelId={this.props.currentLevelId} professionalLearningCourse={this.props.professionalLearningCourse} />)}
+        {stages.map(stage => <CourseProgressRow stage={stage} key={stage.name} currentLevelId={this.props.currentLevelId} isFocusArea={this.props.focusAreas.indexOf(count++) > -1} professionalLearningCourse={this.props.professionalLearningCourse} />)}
       </div>
     );
 
@@ -46,5 +48,6 @@ const CourseProgress = React.createClass({
 export default connect(state => ({
   currentLevelId: state.currentLevelId,
   professionalLearningCourse: state.professionalLearningCourse,
+  focusAreas: state.focusAreas,
   stages: state.stages
 }))(CourseProgress);
