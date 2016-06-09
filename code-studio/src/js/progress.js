@@ -156,28 +156,28 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 
 // Return the level with the highest progress, or the first level if none have
 // been attempted
-progress.bestResultLevelId = function(levelIds, progress) {
+progress.bestResultLevelId = function (levelIds, progress) {
   // The usual case
-  if (levelIds.length == 1) {
+  if (levelIds.length === 1) {
     return levelIds[0];
   }
 
   // Return the level with the highest result
-  var attemptedIds = levelIds.filter(function(id) { progress[id] != 0 });
-  if (attemptedIds.length == 0) {
+  var attemptedIds = levelIds.filter(function (id) { progress[id] !== 0; });
+  if (attemptedIds.length === 0) {
     // None of them have been attempted, just return the first
     return levelIds[0];
   }
   var bestId = levelIds[0];
   var bestResult = progress[bestId];
-  levelIds.each(function(id) {
+  levelIds.each(function (id) {
     if (progress[id] > bestResult) {
       bestId = id;
       bestResult = progress[id];
     }
   });
   return bestId;
-}
+};
 
 function loadProgress(scriptData, currentLevelId) {
   var teacherCourse = $('#landingpage').hasClass('teacher-course');
