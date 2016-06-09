@@ -84,6 +84,7 @@
     "express": "4.11.2",
     "factor-bundle": "2.5.0",
     "file-loader": "^0.8.5",
+    "firebase-bolt": "^0.8.0",
     "glob": "5.0.14",
     "grunt": "0.4.5",
     "grunt-cli": "0.1.13",
