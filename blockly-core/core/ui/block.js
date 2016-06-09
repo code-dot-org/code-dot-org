@@ -1479,7 +1479,7 @@ Blockly.Block.prototype.setLimit = function(limit) {
   if (this.isInFlyout) {
     this.limit_ = limit;
     this.total_ = 0;
-    this.svg_.updateLimit(limit);
+    this.svg_ && this.svg_.updateLimit(limit);
   }
 };
 
@@ -1515,7 +1515,7 @@ Blockly.Block.prototype.addTotal = function(inc) {
     goog.asserts.fail('cannot have a total of fewer than zero blocks');
   }
   this.total_ += inc;
-  this.svg_.updateLimit(this.limit_ - this.total_);
+  this.svg_ && this.svg_.updateLimit(this.limit_ - this.total_);
 };
 
 /**

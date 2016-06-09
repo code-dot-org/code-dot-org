@@ -516,6 +516,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   this.reflow();
 
   this.filterForCapacity_();
+  this.updateBlockLimits_();
 
   // Fire a resize event to update the flyout's scrollbar.
   Blockly.fireUiEvent(window, 'resize');
