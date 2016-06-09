@@ -136,6 +136,13 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
       $('.stage-lesson-plan-link').show();
     }
 
+    if (data.focusAreaPositions) {
+      store.dispatch({
+        type: 'UPDATE_FOCUS_AREAS',
+        focusAreaPositions: data.focusAreaPositions
+      });
+    }
+
     // Merge progress from server (loaded via AJAX)
     if (data.levels) {
       store.dispatch({
@@ -163,19 +170,23 @@ function loadProgress(scriptData, currentLevelId) {
         currentLevelId: state.currentLevelId,
         professionalLearningCourse: state.professionalLearningCourse,
         progress: newProgress,
-        stages: state.stages.map(stage => _.assign({}, stage, {levels: stage.levels.map(level => {
+        focusAreaPositions: state.focusAreaPositions,
+        stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
           let id = level.uid || level.id;
           newProgress[id] = clientState.mergeActivityResult(state.progress[id], action.progress[id]);
 
-          return _.assign({}, level, {status: progress.activityCssClass(newProgress[id])});
+          return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id])});
         })}))
       };
+    } else if (action.type === 'UPDATE_FOCUS_AREAS') {
+      return Object.assign(state, {focusAreaPositions: action.focusAreaPositions});
     }
     return state;
   }, {
     currentLevelId: currentLevelId,
     professionalLearningCourse: scriptData.plc,
     progress: {},
+    focusAreaPositions: [],
     stages: scriptData.stages
   });
 
