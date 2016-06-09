@@ -40,7 +40,7 @@ goog.require('goog.math.Rect');
  */
 Blockly.addClass_ = function(element, className) {
   var classes = element.getAttribute('class') || '';
-  if (Blockly.stringContainsClass_(classes, className)) {
+  if (!Blockly.stringContainsClass_(classes, className)) {
     if (classes) {
       classes += ' ';
     }
@@ -53,7 +53,7 @@ Blockly.elementHasClass_ = function (element, className) {
 };
 
 Blockly.stringContainsClass_ = function (classes, className) {
-  return (' ' + classes + ' ').indexOf(' ' + className + ' ') == -1;
+  return (' ' + classes + ' ').indexOf(' ' + className + ' ') !== -1;
 };
 
 /**
