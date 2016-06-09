@@ -133,12 +133,16 @@ module.exports = function createCallouts(callouts) {
         if (lastSelector !== config.codeStudio.selector && $(lastSelector).length > 0) {
           $(lastSelector).qtip(config).qtip('destroy');
         }
-        if ($(config.codeStudio.selector).length > 0) {
-          if (action === 'hashchange' || action === 'hashinit' || !callout.seen) {
-            $(config.codeStudio.selector).qtip(config).qtip('show');
+        // 'show' after async delay so that DOM changes that may have taken
+        // place inside the 'prepareforcallout' event can complete first
+        setTimeout(function () {
+          if ($(config.codeStudio.selector).length > 0) {
+            if (action === 'hashchange' || action === 'hashinit' || !callout.seen) {
+              $(config.codeStudio.selector).qtip(config).qtip('show');
+            }
+            callout.seen = true;
           }
-          callout.seen = true;
-        }
+        }, 0);
       });
     } else if (!callout.seen) {
       $(selector).qtip(config).qtip('show');
