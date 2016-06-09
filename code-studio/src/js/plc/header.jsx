@@ -14,7 +14,7 @@ var PlcHeader = React.createClass({
   render: function () {
     let breadcrumbStyle = {
       container: {
-        marginBottom: '20'
+        marginBottom: 20
       },
       icon: {
         margin: 5,
