@@ -78,7 +78,7 @@ module AWS
         name[:items].sort! if name
       end
       config[:aliases][:items].sort!
-      config[:origins][:items].sort!
+      config[:origins][:items].sort_by!{|o|o[:id]}
       config[:custom_error_responses][:items].sort_by!{|e| e[:error_code]}
     end
 
@@ -348,9 +348,9 @@ module AWS
       # Include Host header in CloudFront's cache key to match Varnish for custom origins.
       # Include S3 forward headers for s3 origins.
       headers = behavior_config[:headers] +
-        s3 ? S3_FORWARD_HEADERS : ['Host']
+        (s3 ? S3_FORWARD_HEADERS : ['Host'])
       behavior = {# required
-        target_origin_id: s3 ? s3 : 'cdo', # required
+        target_origin_id: (s3 ? behavior_config[:proxy] : 'cdo'), # required
         forwarded_values: {# required
           query_string: true, # required
           cookies: cookie_config,
