@@ -105,6 +105,8 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
       status: status,
       kind: level.kind,
       url: href,
+      icon: level.icon,
+      show_progress: level.show_progress,
       uid: level.uid,
       id: level.id
     };
