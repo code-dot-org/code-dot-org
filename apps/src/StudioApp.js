@@ -2757,27 +2757,28 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   this.reduxStore.dispatch(setPageConstants(combined));
 
   // also set some instructions specific constants
-  // If non-English, dont use level.markdownInstructions since they haven't been
-  // translated
-  const locale = config.locale || ENGLISH_LOCALE;
-  let longInstructions = locale === ENGLISH_LOCALE ? level.markdownInstructions : undefined;
-  let shortInstructions = level.instructions;
-
   const noInstructionsWhenCollapsed = !!config.noInstructionsWhenCollapsed;
-  // Our TopInstructions operate in two modes.
-  // In CSF we show short instructions when collapsed. In this mode, we assume
-  // that we have at least shortInstructions.
-  // In CSP we show no instructions  when collapsed. In this mode, we assume
-  // that we have at least longInstructions. In the case that we arent
-  // provided (markdown) longInstructions, treat our shortInstructiosn as our
-  // longInstructions
+  const locale = config.locale || ENGLISH_LOCALE;
+  let longInstructions, shortInstructions;
   if (noInstructionsWhenCollapsed) {
+    // CSP mode - We dont care about locale, and always want to show English
+    longInstructions = level.markdownInstructions;
+    shortInstructions = level.instructions;
+
+    // Never use short instructions in CSP. If that's all we have, make them
+    // our longInstructions instead
     if (shortInstructions && !longInstructions) {
       longInstructions = shortInstructions;
     }
-    // Never use short instructions in CSP
     shortInstructions = undefined;
   } else {
+    // CSF mode - For non-English folks, only use the non-markdown instructions
+    longInstructions = locale === ENGLISH_LOCALE ? level.markdownInstructions : undefined;
+    shortInstructions = level.instructions;
+
+    // In the case that we're in the top pane, if the two sets of instructions
+    // are identical, only use the short version (such that we dont end up
+    // minimizing/expanding between two identical sets).
     if (config.showInstructionsInTopPane && shortInstructions === longInstructions) {
       longInstructions = null;
     }
