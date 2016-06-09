@@ -1,9 +1,6 @@
-'use strict';
-
 /* global Applab */
 
-let Firebase = require("firebase");
-
+import Firebase from 'firebase';
 let databaseCache = {};
 
 export function getDatabase(channelId) {
