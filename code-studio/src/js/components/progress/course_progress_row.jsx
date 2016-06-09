@@ -94,7 +94,7 @@ const CourseProgressRow = React.createClass({
         {ribbon}
         {editFocusArea}
         <div style={styles.stageName}>
-          {stage.title}
+          {this.props.professionalLearningCourse ? stage.name : stage.title}
           <div className='stage-lesson-plan-link' style={{display: 'none'}}>
             <a target='_blank' href={stage.lesson_plan_html_url}>
               {dashboard.i18n.t('view_lesson_plan')}
