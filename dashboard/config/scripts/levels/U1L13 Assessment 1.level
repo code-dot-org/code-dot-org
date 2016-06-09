@@ -6,10 +6,17 @@
   "user_id": 0,
   "properties": {
     "title": "Why Compress?",
-    "markdown_instructions": "Why do you want to compress anything? What's the point?\n",
+    "markdown_instructions": "Why do you want to compress anything? What's the point?\r\n",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "encrypted_solution": "HgjXbJuH92SRs2W0PFgKYJbT0lQWchhUrG1VNsdgk/EfuhvjIfyNA5k2iNqd\nYal31/jl08dvuhG5B7G/Xx45b9hNYA/oM/2fcc6qQRlwdD55oiKpWKA4XP3x\nmREmVpklrwcfzcl9YKPS4WoPBIohXzDTkg5GU5lsOcnvn387ur9/htEQcERc\n+QcCndkrY3f0/sKDUASY+1t5KNQKXcera7roxqQkSG3GprQQzUEINzw=\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

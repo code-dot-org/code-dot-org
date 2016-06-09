@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+
+# This script instructs Twilio to delete data related to SMS messages we send
+# through their service. Doing so both protects our users (reducing PII data)
+# and reduces our costs (reducing media storage costs).
+
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'cdo/hip_chat'
+require 'cdo/only_one'
+require 'twilio-ruby'
+
+def main()
+  @client = Twilio::REST::Client.new CDO.twilio_sid, CDO.twilio_auth
+
+  begin
+    messages_to_delete = @client.account.messages.list(page_size: 1000)
+    until messages_to_delete.empty?
+      messages_to_delete.each do |message|
+        # As it is an error to delete a message being processed, we pass them
+        # by, allowing them to be deleted after being processed, as part of
+        # another execution of this script.
+        if ['sending', 'receiving'].include? message.status
+          next
+        end
+
+        # Note that any media associated with a message is deleted independently
+        # of the message itself. As there is a maximum limit of ten media per
+        # message, we do not need to worry about iterating through pages.
+        if message.num_media != '0'
+          media_to_delete = message.media.list
+          media_to_delete.each(&:delete)
+        end
+
+        message.delete
+      end
+
+      messages_to_delete = messages_to_delete.next_page
+    end
+  rescue Twilio::REST::RequestError => e
+    # TODO(asher): Consider whether we should log the exception and continue to
+    # attempt to delete further messages rather than stopping deletion.
+    sanitized_error_message = e.message.sub CDO.twilio_sid, 'CDO.twilio_sid'
+    raise "Twilio::REST::RequestError: #{sanitized_error_message}"
+  end
+end
+
+main if only_one_running?(__FILE__)

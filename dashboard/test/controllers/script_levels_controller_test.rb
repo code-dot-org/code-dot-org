@@ -349,10 +349,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                    {controller: "script_levels", action: "show", script_id: Script::HOC_NAME, chapter: "1"})
     assert_equal '/hoc/1', build_script_level_path(hoc_level)
 
-    # we don't actually use this
-    assert_routing({method: "get", path: '/k8intro/5'},
-                   {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, chapter: "5"})
-
     flappy_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::FLAPPY_NAME).id, chapter: 5)
     assert_routing({method: "get", path: '/flappy/5'},
                    {controller: "script_levels", action: "show", script_id: Script::FLAPPY_NAME, chapter: "5"})
@@ -834,18 +830,30 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal nil, assigns(:user)
   end
 
-  test 'does not show teacher panel for pd scripts' do
+  test 'teacher tray is not visible for pd and plc scripts' do
     sign_in @teacher
 
     script = Script.find_by_name('ECSPD')
     assert script.pd?
+    assert script.professional_course?
 
     get :show, script_id: script, stage_id: 1, id: 1
+    assert_select '.teacher-panel', 0
 
+    script = create(:script)
+    stage = create(:stage, script: script)
+    level = create(:maze)
+    create(:script_level, script: script, stage: stage, level: level)
+
+    script.update(professional_learning_course: true)
+    assert script.professional_learning_course?
+    assert script.professional_course?
+
+    get :show, script_id: script, stage_id: 1, id: 1
     assert_select '.teacher-panel', 0
   end
 
-  test 'teacher can view solution' do
+  test 'teacher can view solution to non plc script' do
     sl = ScriptLevel.joins(:script, :levels).find_by(
       scripts: {name: 'allthethings'},
       levels:  Level.key_to_params('K-1 Artist1 1'))
@@ -870,6 +878,18 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal [], assigns(:view_options)[:callouts]
   end
 
+  test 'teacher cannot view solution to plc script' do
+    sign_in @teacher
+    script = create :script
+    script.update(professional_learning_course: true)
+    stage = create(:stage, script: script)
+    level = Artist.first
+    script_level = create(:script_level, script: script, stage: stage, levels: [level])
+
+    get :show, script_id: script, stage_id: stage, id: script_level, solution: true
+    assert_response :forbidden
+  end
+
   test 'student cannot view solution' do
     sl = ScriptLevel.joins(:script, :levels).find_by(
       scripts: {name: 'allthethings'},
@@ -878,7 +898,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @student
 
     get :show, script_id: sl.script, stage_id: sl.stage, id: sl, solution: true
-
     assert_response :forbidden
   end
 

@@ -11,6 +11,7 @@ nav: about_nav
 
 Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science should be part of core curriculum, alongside other courses such as biology, chemistry or algebra.
 
+## Diversity of students in our courses
 ![image](/images/infographics/fit-800/diversity-courses.png)
 
 Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Read  about [our efforts to increase diversity in computer science](/diversity).
@@ -44,7 +45,7 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 | Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(fetch_hoc_metrics['started']) %> served. 49% female) |
 | Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org). |
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled. |
-| Prep new CS teachers | We've prepared 27,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate).|
+| Prep new CS teachers | We've prepared 31,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate).|
 | Change school district curriculum | We've partnered with [100 of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a district partner](/educate/districts).|
 | Set up policies to support CS | Policy changed in [17 states](/action) including CA, NY, FL, IL, OH.|
 | Go global | Our courses are available in 45+ languages, used in all 180+ countries. |

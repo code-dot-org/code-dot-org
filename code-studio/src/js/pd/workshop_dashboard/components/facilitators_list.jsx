@@ -1,8 +1,7 @@
-/* global React */
-
 /*
   List of facilitators for display in the workshop summary.
  */
+import React from 'react';
 
 var FacilitatorsList = React.createClass({
   propTypes: {

@@ -102,5 +102,4 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     script_level_solved_response(response, script_level)
     assert_nil response[:end_of_stage_experience]
   end
-
 end

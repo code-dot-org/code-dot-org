@@ -1,3 +1,5 @@
+require 'active_support/key_generator'
+
 module CookieHelpers
   def debug_cookies(cookies)
     puts "DEBUG: cookies = #{CGI.escapeHTML cookies.inspect}"

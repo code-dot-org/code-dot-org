@@ -9,19 +9,20 @@
 #  status                        :string(255)
 #  created_at                    :datetime         not null
 #  updated_at                    :datetime         not null
+#  user_id                       :integer
 #
 # Indexes
 #
 #  enrollment_unit_assignment_course_enrollment_index  (plc_user_course_enrollment_id)
 #  enrollment_unit_assignment_course_unit_index        (plc_course_unit_id)
+#  index_plc_enrollment_unit_assignments_on_user_id    (user_id)
 #
 
 class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
   belongs_to :plc_user_course_enrollment, class_name: '::Plc::UserCourseEnrollment'
   belongs_to :plc_course_unit, class_name: '::Plc::CourseUnit'
-
   has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_enrollment_unit_assignment_id', dependent: :destroy
-  has_many :plc_task_assignments, through: :plc_module_assignments, class_name: '::Plc::EnrollmentTaskAssignment', dependent: :destroy
+  belongs_to :user, class_name: 'User'
 
   UNIT_STATUS_STATES = [
     START_BLOCKED = 'start_blocked',
@@ -71,17 +72,16 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     end
   end
 
+  def focus_area_positions
+    plc_module_assignments.map{ |a| a.plc_learning_module.stage.position unless a.plc_learning_module.is_required? }.compact
+  end
+
   private
   def enroll_in_module(learning_module)
     return unless learning_module.plc_course_unit == plc_course_unit
 
-    module_assignment = Plc::EnrollmentModuleAssignment.find_or_create_by(plc_enrollment_unit_assignment: self, plc_learning_module: learning_module)
-    learning_module.plc_tasks.each do |task|
-      Plc::EnrollmentTaskAssignment.find_or_create_by(
-          plc_enrollment_module_assignment: module_assignment,
-          plc_task: task,
-          status: Plc::EnrollmentTaskAssignment::NOT_STARTED
-      )
-    end
+    Plc::EnrollmentModuleAssignment.find_or_create_by(plc_enrollment_unit_assignment: self,
+                                                      plc_learning_module: learning_module,
+                                                      user: user)
   end
 end

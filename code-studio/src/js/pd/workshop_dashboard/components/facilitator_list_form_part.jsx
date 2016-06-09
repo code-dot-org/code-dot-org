@@ -1,10 +1,9 @@
-/* global React */
-
 /*
   Dynamic list of facilitator select controls for creating & editing workshops.
  */
 
 var _ = require('lodash');
+import React from 'react';
 var Row = require('react-bootstrap').Row;
 var Col = require('react-bootstrap').Col;
 var Button = require('react-bootstrap').Button;
@@ -109,7 +108,7 @@ var FacilitatorListFormPart = React.createClass({
     }
 
     var addButton = null;
-    if (i == facilitators.length-1 && facilitators.length < MAX_FACILITATORS &&
+    if (i === facilitators.length - 1 && facilitators.length < MAX_FACILITATORS &&
       this.props.facilitators[i].id > 0 && filteredAvailableFacilitators.length > 1 ) {
 
       addButton = (

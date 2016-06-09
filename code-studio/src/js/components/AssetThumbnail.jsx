@@ -1,3 +1,4 @@
+var React = require('react');
 var assetsApi = require('@cdo/apps/clientApi').assets;
 
 var defaultIcons = {
@@ -5,6 +6,7 @@ var defaultIcons = {
   audio: 'fa fa-music',
   video: 'fa fa-video-camera',
   pdf: 'fa fa-file-pdf-o',
+  doc: 'fa fa-file-text-o',
   unknown: 'fa fa-question'
 };
 
@@ -27,7 +29,7 @@ var assetIconStyle = {
 var AssetThumbnail = React.createClass({
   propTypes: {
     name: React.PropTypes.string.isRequired,
-    type: React.PropTypes.oneOf(['image', 'audio', 'video', 'pdf']).isRequired
+    type: React.PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired
   },
 
   render: function () {

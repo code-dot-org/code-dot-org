@@ -71,17 +71,23 @@ class ProjectsController < ApplicationController
     return if redirect_applab_under_13(@level)
     redirect_to action: 'edit', channel_id: create_channel({
       name: 'Untitled Project',
+      useFirebase: use_firebase_for_new_project?,
       level: polymorphic_url([params[:key], 'project_projects'])
     })
   end
 
   def show
-    return if redirect_applab_under_13(@level)
     iframe_embed = params[:iframe_embed] == true
     sharing = iframe_embed || params[:share] == true
     readonly = params[:readonly] == true
     if iframe_embed
+      # explicitly set security related headers so that this page can actually
+      # be embedded.
       response.headers['X-Frame-Options'] = 'ALLOWALL'
+      response.headers['Content-Security-Policy'] = ''
+    else
+      # the age restriction is handled in the front-end for iframe embeds.
+      return if redirect_applab_under_13(@level)
     end
     level_view_options(
         hide_source: sharing,
@@ -93,6 +99,7 @@ class ProjectsController < ApplicationController
     # if the game doesn't own the sharing footer, treat it as a legacy share
     @is_legacy_share = sharing && !@game.owns_footer_for_share?
     view_options(
+      is_13_plus: current_user && !current_user.under_13?,
       readonly_workspace: sharing || readonly,
       full_width: true,
       callouts: [],

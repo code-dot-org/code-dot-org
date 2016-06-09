@@ -5,6 +5,9 @@
  * us to position it vertically. Causes resize events to fire when receiving new props
  */
 
+import $ from 'jquery';
+var React = require('react');
+var ReactDOM = require('react-dom');
 var Radium = require('radium');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
 var utils = require('../utils');
@@ -24,6 +27,7 @@ var styles = {
   mainRtl: {
     right: undefined,
     left: 0,
+    marginLeft: 0,
     marginRight: 15
   },
   codeWorkspace: {
@@ -61,20 +65,19 @@ var CodeWorkspaceContainer = React.createClass({
 
     // not in redux
     topMargin: React.PropTypes.number.isRequired,
-    onSizeChange: React.PropTypes.func,
   },
 
   /**
    * Called externally
    * @returns {number} The height of the rendered contents in pixels
    */
-  getContentHeight: function () {
+  getRenderedHeight: function () {
     return $(ReactDOM.findDOMNode(this)).height();
   },
 
   componentDidUpdate: function (prevProps) {
-    if (this.props.onSizeChange && this.props.topMargin !== prevProps.topMargin) {
-      this.props.onSizeChange();
+    if (this.props.topMargin !== prevProps.topMargin) {
+      utils.fireResizeEvent();
     }
   },
 

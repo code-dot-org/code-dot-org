@@ -4,7 +4,7 @@
  */
 'use strict';
 
-var $ = require('jquery-shim');
+var $ = require('jquery');
 var sessionStorage = window.sessionStorage;
 
 var clientState = module.exports = {};
@@ -24,6 +24,12 @@ clientState.EXPIRY_DAYS = 365;
  * @private
  */
 var MAX_LINES_TO_SAVE = 1000;
+
+/**
+ * Values larger than this result are server-dependent and shouldn't be cached
+ * in client storage.
+ */
+clientState.MAXIMUM_CACHABLE_RESULT = 999;
 
 var COOKIE_OPTIONS = {expires: clientState.EXPIRY_DAYS, path: '/'};
 
@@ -106,7 +112,8 @@ clientState.mergeActivityResult = function (a, b) {
 };
 
 /**
- * Tracks the users progress after they click run
+ * Tracks the users progress after they click run. Results larger than 999 are
+ * reserved for server-dependent changes and can't be cached locally.
  * @param {boolean} result - Whether the user's solution is successful
  * @param {number} lines - Number of lines of code user wrote in this solution
  * @param {number} testResult - Indicates pass, fail, perfect
@@ -119,9 +126,29 @@ clientState.trackProgress = function (result, lines, testResult, scriptName, lev
   }
 
   var savedResult = clientState.levelProgress(scriptName, levelId);
-  if (savedResult !== clientState.mergeActivityResult(savedResult, testResult)) {
+  if (testResult <= clientState.MAXIMUM_CACHABLE_RESULT && savedResult !== clientState.mergeActivityResult(savedResult, testResult)) {
     setLevelProgress(scriptName, levelId, testResult);
   }
+};
+
+/**
+ * Write down user progress for an entire script.
+ * @param {string} scriptName
+ * @param {Object<String, number>} progress
+ */
+clientState.batchTrackProgress = function (scriptName, progress) {
+  var data = {};
+  var keys = Object.keys(progress);
+  for (let i = 0; i < keys.length; i++) {
+    let level = keys[i];
+    if (progress[level] && progress[level] <= clientState.MAXIMUM_CACHABLE_RESULT) {
+      data[level] = progress[level];
+    }
+  }
+
+  var progressMap = clientState.allLevelsProgress();
+  progressMap[scriptName] = data;
+  safelySetItem('progress', JSON.stringify(progressMap));
 };
 
 /**

@@ -1,3 +1,4 @@
+import React from 'react';
 import msg from '../locale';
 
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
@@ -56,11 +57,11 @@ export const ResetButton = Radium(props => (
       style={[commonStyles.hidden, props.style]}
   >
     <div>
-      {msg.resetProgram()}
+      {!props.hideText && msg.resetProgram()}
     </div>
     <img
         src="/blockly/media/1x1.gif"
-        style={[!props.isMinecraft && styles.resetImage]}
+        style={[!props.isMinecraft && styles.resetImage, props.imageStyle]}
         className={classNames([props.isMinecraft && "reset26"])}
     />
   </button>

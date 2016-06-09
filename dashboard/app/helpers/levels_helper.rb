@@ -1,6 +1,7 @@
 require 'cdo/script_config'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
+require "firebase_token_generator"
 
 module LevelsHelper
   include ApplicationHelper
@@ -73,7 +74,10 @@ module LevelsHelper
         # your own channel
         ChannelToken.find_or_create_by!(level: host_level, user: current_user) do |ct|
           # Get a new channel_id.
-          ct.channel = create_channel(hidden: true)
+          ct.channel = create_channel({
+            hidden: true,
+            useFirebase: use_firebase_for_new_project?
+          })
         end
       end
     end
@@ -182,6 +186,17 @@ module LevelsHelper
       # currently, all levels are Blockly or DSLDefined except for Unplugged
       @app_options = view_options.camelize_keys
     end
+
+    @app_options[:dialog] = {
+      skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
+      preTitle: @level.properties['pre_title'],
+      fallbackResponse: @fallback_response.to_json,
+      callback: @callback,
+      app: @level.type.underscore,
+      level: @level.level_num,
+      shouldShowDialog: @level.properties['skip_dialog'].blank? && @level.properties['options'].try(:[], 'skip_dialog').blank?
+    }
+
     @app_options
   end
 
@@ -284,6 +299,42 @@ module LevelsHelper
     level_options['puzzle_number'] = script_level ? script_level.position : 1
     level_options['stage_total'] = script_level ? script_level.stage_total : 1
 
+    # Unused Blocks option
+    ## TODO (elijah) replace this with more-permanent level configuration
+    ## options once the experimental period is over.
+
+    ## allow unused blocks for all levels except Jigsaw
+    app_options[:showUnusedBlocks] = @game ? @game.name != 'Jigsaw' : true
+
+    ## Allow gatekeeper to disable otherwise-enabled unused blocks in a
+    ## cascading way; more specific options take priority over
+    ## less-specific options.
+    if script && script_level && app_options[:showUnusedBlocks] != false
+
+      # puzzle-specific
+      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
+        script_name: script.name,
+        stage: script_level.stage.position,
+        puzzle: script_level.position
+      }, default: nil)
+
+      # stage-specific
+      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
+        script_name: script.name,
+        stage: script_level.stage.position,
+      }, default: nil) if enabled.nil?
+
+      # script-specific
+      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
+        script_name: script.name,
+      }, default: nil) if enabled.nil?
+
+      # global
+      enabled = Gatekeeper.allows('showUnusedBlocks', default: true) if enabled.nil?
+
+      app_options[:showUnusedBlocks] = enabled
+    end
+
     # LevelSource-dependent options
     app_options[:level_source_id] = @level_source.id if @level_source
 
@@ -332,6 +383,8 @@ module LevelsHelper
     app_options[:isLegacyShare] = true if @is_legacy_share
     app_options[:isMobile] = true if browser.mobile?
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
+    app_options[:firebaseName] = CDO.firebase_name if @game == Game.applab
+    app_options[:firebaseAuthToken] = firebase_auth_token if @game == Game.applab
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:pinWorkspaceToBottom] = true if enable_scrolling?
@@ -440,7 +493,7 @@ module LevelsHelper
   end
 
   def multi_t(level, text)
-    string_or_image('multi', text, level)
+    string_or_image(level.type.underscore, text, level)
   end
 
   def match_t(text)
@@ -510,6 +563,35 @@ module LevelsHelper
     Digest::SHA1.base64digest("#{channel_id}:#{user_id}").tr('=', '')
   end
 
+  # Assign a firebase authentication token based on the firebase secret,
+  # plus either the dashboard user id or the rails session id. This is
+  # sufficient for rate limiting, since it uniquely identifies users.
+  #
+  # TODO(dave): include the storage_id associated with the user id
+  # (if one exists), so auth can be used to assign appropriate privileges
+  # to channel owners.
+  def firebase_auth_token
+    return nil unless CDO.firebase_secret
+
+    user_id = current_user ? current_user.id.to_s : session.id
+    payload = {
+      :uid => user_id,
+      :is_dashboard_user => !!current_user
+    }
+    options = {}
+    # Provides additional debugging information to the browser when
+    # security rules are evaluated.
+    options[:debug] = true if CDO.firebase_debug && CDO.rack_env?(:development)
+
+    # TODO(dave): cache token generator across requests
+    generator = Firebase::FirebaseTokenGenerator.new(CDO.firebase_secret)
+    generator.create_token(payload, options)
+  end
+
+  def use_firebase_for_new_project?
+    @game == Game.applab && CDO.use_firebase_for_new_applab_projects
+  end
+
   def enable_scrolling?
     @level.is_a?(Blockly)
   end
@@ -525,6 +607,12 @@ module LevelsHelper
     if current_user && current_user.under_13?
       redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
       return true
+    end
+  end
+
+  def can_view_solution?
+    if current_user && @level.try(:ideal_level_source_id) && @script_level && !@script.hide_solutions?
+      Ability.new(current_user).can? :view_level_solutions, @script
     end
   end
 end

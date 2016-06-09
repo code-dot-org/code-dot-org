@@ -1,5 +1,6 @@
 @no_mobile
 @as_student
+@no_circle
 Feature: Submittable multi
 
 Background:

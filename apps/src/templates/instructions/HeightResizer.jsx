@@ -4,6 +4,7 @@
  * which handles any movement.
  */
 
+var React = require('react');
 var Radium = require('radium');
 var color = require('../../color');
 var styleConstants = require('../../styleConstants');
@@ -24,7 +25,8 @@ var styles = {
     textAlign: 'center',
     cursor: 'ns-resize',
     whiteSpace: 'nowrap',
-    lineHeight: RESIZER_HEIGHT + 'px'
+    lineHeight: RESIZER_HEIGHT + 'px',
+    paddingTop: 1 // results in a slightly better centering
   }
 };
 

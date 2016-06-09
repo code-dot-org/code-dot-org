@@ -1,3 +1,4 @@
+var React = require('react');
 var Radium = require('radium');
 var connect = require('react-redux').connect;
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
@@ -69,18 +70,14 @@ var CodeWorkspace = React.createClass({
       }
     }.bind(this));
 
-    // Should be no need to update unless we have runModeIndicators enabled
-    return experiments.isEnabled('runModeIndicators');
+    return true;
   },
 
   render: function () {
     var props = this.props;
 
-    var runModeIndicators = experiments.isEnabled('runModeIndicators');
-    if (props.isMinecraft) {
-      // ignore runModeIndicators in MC
-      runModeIndicators = false;
-    }
+    // ignore runModeIndicators in MC
+    var runModeIndicators = !props.isMinecraft;
 
     var chevronStyle = [
       styles.chevron,

@@ -1,5 +1,8 @@
 /* global Blockly, ace:true, droplet, dashboard, addToHome */
 
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var color = require('./color');
 var parseXmlElement = require('./xml').parseElement;
@@ -8,6 +11,7 @@ var dropletUtils = require('./dropletUtils');
 var _ = require('./lodash');
 var dom = require('./dom');
 var constants = require('./constants.js');
+var experiments = require('./experiments');
 var KeyCodes = constants.KeyCodes;
 var msg = require('./locale');
 var blockUtils = require('./block_utils');
@@ -28,11 +32,11 @@ var assetPrefix = require('./assetManagement/assetPrefix');
 var annotationList = require('./acemode/annotationList');
 var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
-var experiments = require('./experiments');
 import { setPageConstants } from './redux/pageConstants';
 
 var redux = require('./redux');
-var runState = require('./redux/runState');
+import { setInstructionsConstants } from './redux/instructions';
+import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
 var combineReducers = require('redux').combineReducers;
 
@@ -68,11 +72,6 @@ var StudioApp = function () {
   */
   this.BASE_URL = undefined;
 
-  /**
-  * The current locale code.
-  */
-  this.LOCALE = ENGLISH_LOCALE;
-
   this.enableShowCode = true;
   this.editCode = false;
   this.usingBlockly_ = true;
@@ -93,7 +92,6 @@ var StudioApp = function () {
 
   // @type {string} for all of these
   this.icon = undefined;
-  this.smallIcon = undefined;
   this.winIcon = undefined;
   this.failureIcon = undefined;
 
@@ -227,7 +225,6 @@ StudioApp.singleton = new StudioApp();
  */
 StudioApp.prototype.configure = function (options) {
   this.BASE_URL = options.baseUrl;
-  this.LOCALE = options.locale || this.LOCALE;
   // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
@@ -287,22 +284,16 @@ StudioApp.prototype.hasInstructionsToShow = function (config) {
 };
 
 /**
- * Some functionality - most notably markdown instructions - is only
- * supported when running in English. This helper exposes that check.
- */
-StudioApp.prototype.localeIsEnglish = function () {
-  return this.LOCALE === ENGLISH_LOCALE;
-};
-
-/**
  * Given the studio app config object, show shared app warnings.
  */
 function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
+    is13Plus: config.is13Plus,
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
+    onTooYoung: config.shareWarningInfo.onTooYoung,
   });
 }
 
@@ -477,6 +468,8 @@ StudioApp.prototype.init = function (config) {
     this.configureAndShowInstructions_(config);
   }
 
+  this.configureHints_(config);
+
   if (this.editCode) {
     this.handleEditCode_(config);
   }
@@ -533,6 +526,9 @@ StudioApp.prototype.init = function (config) {
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
   if (this.isUsingBlockly()) {
+    Blockly.mainBlockSpaceEditor.addUnusedBlocksHelpListener(function (e) {
+      utils.showUnusedBlockQtip(e.srcElement);
+    });
     Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function () {
       this.updateBlockCount();
     }, this));
@@ -596,8 +592,9 @@ StudioApp.prototype.init = function (config) {
   }
 };
 
-StudioApp.prototype.startIFrameEmbeddedApp = function (config) {
+StudioApp.prototype.startIFrameEmbeddedApp = function (config, onTooYoung) {
   if (this.share && config.shareWarningInfo) {
+    config.shareWarningInfo.onTooYoung = onTooYoung;
     showWarnings(config);
   } else {
     this.runButtonClick();
@@ -623,20 +620,6 @@ StudioApp.prototype.configureAndShowInstructions_ = function (config) {
     $(prompt2Div).show();
   }
 
-  if (this.hasInstructionsToShow(config)) {
-    var promptIcon = document.getElementById('prompt-icon');
-    if (this.smallIcon) {
-      promptIcon.src = this.smallIcon;
-      $('#prompt-icon-cell').show();
-    }
-
-    var bubble = document.getElementById('bubble');
-    dom.addClickTouchEvent(bubble, function () {
-      this.showInstructionsDialog_(config.level, false, true);
-    }.bind(this));
-    this.authoredHintsController_.display(promptIcon);
-  }
-
   var aniGifPreview = document.getElementById('ani-gif-preview');
   if (config.level.aniGifURL) {
     aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
@@ -645,6 +628,35 @@ StudioApp.prototype.configureAndShowInstructions_ = function (config) {
     var wrapper = document.getElementById('ani-gif-preview-wrapper');
     wrapper.style.display = 'inline-block';
   }
+};
+
+/**
+ * If we have hints, add a click handler to them and add the lightbulb above the
+ * icon. Depends on the existence of DOM elements with particular ids, which
+ * might be located below the playspace or in the top pane.
+ */
+StudioApp.prototype.configureHints_ = function (config) {
+  if (!this.hasInstructionsToShow(config)) {
+    return;
+  }
+
+  var bubble = document.getElementById('bubble');
+  if (bubble) {
+    dom.addClickTouchEvent(bubble, function () {
+      const reduxState = this.reduxStore.getState();
+      const instructionsInTopPane = reduxState.pageConstants.instructionsInTopPane;
+      const hasAuthoredHints = reduxState.instructions.hasAuthoredHints;
+
+      // Don't show dialog on click in top pane unless we have hints
+      if (instructionsInTopPane && !hasAuthoredHints) {
+        return;
+      }
+      this.showInstructionsDialog_(config.level, false, true);
+    }.bind(this));
+  }
+
+  var promptIcon = document.getElementById('prompt-icon');
+  this.authoredHintsController_.display(promptIcon);
 };
 
 /**
@@ -727,7 +739,6 @@ StudioApp.prototype.getCode = function () {
 
 StudioApp.prototype.setIconsFromSkin = function (skin) {
   this.icon = skin.staticAvatar;
-  this.smallIcon = skin.smallStaticAvatar;
   this.winIcon = skin.winAvatar;
   this.failureIcon = skin.failureAvatar;
 };
@@ -909,7 +920,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
     throw "Unexpected input";
   }
 
-  this.reduxStore.dispatch(runState.setIsRunning(!showRun));
+  this.reduxStore.dispatch(setIsRunning(!showRun));
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
@@ -1115,15 +1126,6 @@ StudioApp.prototype.onReportComplete = function (response) {
 };
 
 /**
- * Given a level definition, do we want to show instructions in markdown form.
- * @param {object} level
- * @returns {boolean}
- */
-StudioApp.prototype.isMarkdownMode = function (level) {
-  return level.markdownInstructions && this.localeIsEnglish();
-};
-
-/**
  * @param {string} [puzzleTitle] - Optional param that only gets used if we dont
  *   have markdown instructions
  * @param {object} level
@@ -1133,9 +1135,12 @@ StudioApp.prototype.isMarkdownMode = function (level) {
 StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, showHints) {
   var renderedMarkdown;
 
-  if (this.isMarkdownMode(level)) {
-    var markdownWithImages = this.substituteInstructionImages(
-      level.markdownInstructions, this.skin.instructions2ImageSubstitutions);
+  var longInstructions = this.reduxStore.getState().instructions.longInstructions;
+
+  // longInstructions will be undefined if non-english
+  if (longInstructions) {
+    var markdownWithImages = this.substituteInstructionImages(longInstructions,
+      this.skin.instructions2ImageSubstitutions);
     renderedMarkdown = processMarkdown(markdownWithImages);
   }
 
@@ -1164,7 +1169,9 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
  * @param {boolean} showHints
  */
 StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHints) {
-  var isMarkdownMode = this.isMarkdownMode(level);
+  const reduxState = this.reduxStore.getState();
+  const isMarkdownMode = !!reduxState.instructions.longInstructions;
+  const instructionsInTopPane = reduxState.pageConstants.instructionsInTopPane;
 
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?
@@ -1215,7 +1222,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
 
   var hideFn = _.bind(function () {
     // Momentarily flash the instruction block white then back to regular.
-    if ($(endTargetSelector).length) {
+    if (!instructionsInTopPane) {
       $(endTargetSelector).css({"background-color":"rgba(255,255,255,1)"})
         .delay(500)
         .animate({"background-color":"rgba(0,0,0,0)"},1000);
@@ -1265,11 +1272,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
   }
 
   this.instructionsDialog.show({hideOptions: hideOptions});
-
-  if (isMarkdownMode) {
-    // process <details> tags with polyfill jQuery plugin
-    $('details').details();
-  }
 
   // Fire a custom event on the document so that other code can respond
   // to instructions being shown.
@@ -1611,7 +1613,7 @@ StudioApp.prototype.builderForm_ = function (onAttemptCallback) {
 */
 StudioApp.prototype.report = function (options) {
   // copy from options: app, level, result, testResult, program, onComplete
-  var report = $.extend({}, options, {
+  var report = Object.assign({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
     time: ((new Date().getTime()) - this.initTime),
     attempt: this.attempts,
@@ -1801,7 +1803,6 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
   this.skin = config.skin;
-  this.showInstructions = this.showInstructionsDialog_.bind(this, config.level, false);
   this.polishCodeHook = config.polishCodeHook;
 };
 
@@ -1811,6 +1812,13 @@ function runButtonClickWrapper(callback) {
     $(window).trigger('run_button_pressed');
     $(window).trigger('appModeChanged');
   }
+
+  // inform Blockly that the run button has been pressed
+  if (window.Blockly && Blockly.mainBlockSpace) {
+    var customEvent = utils.createEvent(Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED);
+    Blockly.mainBlockSpace.getCanvas().dispatchEvent(customEvent);
+  }
+
   callback();
 }
 
@@ -2284,9 +2292,16 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     hasVerticalScrollbars: config.hasVerticalScrollbars,
     hasHorizontalScrollbars: config.hasHorizontalScrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false),
+    showUnusedBlocks: experiments.isEnabled('unusedBlocks') && utils.valueOr(config.showUnusedBlocks, true),
     readOnly: utils.valueOr(config.readonlyWorkspace, false),
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false)
   };
+
+  // Never show unused blocks in edit mode
+  if (options.editBlocks) {
+    options.showUnusedBlocks = false;
+  }
+
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
     'disableParamEditing'].forEach(
     function (prop) {
@@ -2403,7 +2418,7 @@ StudioApp.prototype.getUnfilledFunctionalExample = function () {
  */
 StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
   var unfilledBlock;
-  Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
+  Blockly.mainBlockSpace.getAllUsedBlocks().some(function (block) {
     // Get the root block in the chain
     var rootBlock = block.getRootBlock();
     if (!filter(rootBlock)) {
@@ -2671,7 +2686,7 @@ StudioApp.prototype.hasDuplicateVariablesInForLoops = function () {
   if (this.editCode) {
     return false;
   }
-  return Blockly.mainBlockSpace.getAllBlocks().some(this.forLoopHasDuplicatedNestedVariables_);
+  return Blockly.mainBlockSpace.getAllUsedBlocks().some(this.forLoopHasDuplicatedNestedVariables_);
 };
 
 /**
@@ -2731,12 +2746,46 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
     pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
-    instructionsMarkdown: level.markdownInstructions,
-    instructionsInTopPane: config.showInstructionsInTopPane,
+    instructionsInTopPane: !!config.showInstructionsInTopPane,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
-    noVisualization: false
+    noVisualization: false,
+    smallStaticAvatar: config.skin.smallStaticAvatar,
+    aniGifURL: config.level.aniGifURL
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));
+
+  // also set some instructions specific constants
+  // If non-English, dont use level.markdownInstructions since they haven't been
+  // translated
+  const locale = config.locale || ENGLISH_LOCALE;
+  let longInstructions = locale === ENGLISH_LOCALE ? level.markdownInstructions : undefined;
+  let shortInstructions = level.instructions;
+
+  const noInstructionsWhenCollapsed = !!config.noInstructionsWhenCollapsed;
+  // Our TopInstructions operate in two modes.
+  // In CSF we show short instructions when collapsed. In this mode, we assume
+  // that we have at least shortInstructions.
+  // In CSP we show no instructions  when collapsed. In this mode, we assume
+  // that we have at least longInstructions. In the case that we arent
+  // provided (markdown) longInstructions, treat our shortInstructiosn as our
+  // longInstructions
+  if (noInstructionsWhenCollapsed) {
+    if (shortInstructions && !longInstructions) {
+      longInstructions = shortInstructions;
+    }
+    // Never use short instructions in CSP
+    shortInstructions = undefined;
+  } else {
+    if (config.showInstructionsInTopPane && shortInstructions === longInstructions) {
+      longInstructions = null;
+    }
+  }
+
+  this.reduxStore.dispatch(setInstructionsConstants({
+    noInstructionsWhenCollapsed,
+    shortInstructions,
+    longInstructions,
+  }));
 };

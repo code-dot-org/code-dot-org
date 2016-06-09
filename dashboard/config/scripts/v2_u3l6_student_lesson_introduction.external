@@ -1,0 +1,30 @@
+name 'v2 U3L6 Student Lesson Introduction'
+title 'Functions and Top-Down Design'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 06 - Functions and Top-Down Design
+
+# Background
+
+Top-Down design is a problem solving strategy in which you break down a large problem by naming its sub-tasks and then breaking down the sub-tasks further and so on until you're down to primitive operations.
+
+Large problems can be “abstracted” into sub-problems. Sometimes even the sub-problems can be abstracted into even more basic sub-sub-problems. This is referred to as “levels of abstraction.” In programming, writing functions allows us to write code to solve these sub-problems and use them as building blocks toward a larger solution. There is not necessarily only one way to abstract a problem. Different approaches can be equally valid.
+
+
+
+# Lesson
+
+* Learn about top-down design.
+* Practice top-down design on a small problem.
+* Program a solution to that problem.
+* Revisit the 3x3 grid problem and consider using functions to solve it more efficiently.
+  
+
+
+# Resources
+* <a href='https://docs.google.com/document/d/1kfcdyJsC-I1Pl-TPWLv-BB7ffMxtw5B6XtegmVwzo7o/edit?usp=sharing' target='_blank' class='print_link'>Top-Down Design</a> - Worksheet (<a href='https://docs.google.com/document/d/1kfcdyJsC-I1Pl-TPWLv-BB7ffMxtw5B6XtegmVwzo7o/export?format=pdf' class='print_link'>PDF</a> | <a href='https://docs.google.com/document/d/1kfcdyJsC-I1Pl-TPWLv-BB7ffMxtw5B6XtegmVwzo7o/export?format=doc' class='print_link'>DOCX</a>)
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

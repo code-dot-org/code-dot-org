@@ -1,3 +1,4 @@
+var React = require('react');
 var applabMsg = require('./locale');
 var msg = require('../locale');
 var FontAwesome = require('../templates/FontAwesome');

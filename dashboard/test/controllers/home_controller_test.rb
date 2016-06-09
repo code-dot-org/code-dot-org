@@ -124,6 +124,22 @@ class HomeControllerTest < ActionController::TestCase
     assert_select 'a[href="/admin"]'
   end
 
+  test 'do not show levelbuilder links when not levelbuilder' do
+    sign_in create(:user)
+
+    get :index
+    assert_select 'a[href="/levels/new"]', 0
+  end
+
+  test 'do show levelbuilder links when levelbuilder' do
+    user = create(:user)
+    UserPermission.create(user_id: user.id, permission: 'levelbuilder')
+    sign_in user
+
+    get :index
+    assert_select 'a[href="/levels/new"]'
+  end
+
   test 'logged in user without primary course does not see resume info' do
     user = create(:user)
     sign_in(user)
@@ -135,6 +151,7 @@ class HomeControllerTest < ActionController::TestCase
   Script.all.where("name IN (?)", ['hourofcode', 'artist', 'flappy', 'course1']).each do |script|
     next if script.hidden? # only test public facing scripts
     test "logged in user sees resume info and progress for course #{script.name}" do
+      skip "Script does not exist with ID #{script.id}" unless Script.exists?(script.id)
       user = create(:user)
       UserScript.create!(user_id: user.id, script_id: script.id, started_at: Time.now)
       sign_in(user)

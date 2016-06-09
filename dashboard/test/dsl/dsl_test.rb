@@ -340,4 +340,31 @@ DSL
     assert_equal i18n_expected, i18n
   end
 
+  test 'test Evaluation Question' do
+    script = create :script
+    stage1 = create(:stage, name: 'Stage1', script: script)
+    stage2 = create(:stage, name: 'Stage2', script: script)
+    input_dsl = <<DSL
+name 'Test question'
+question 'Question text'
+answer 'answer 1'
+answer 'answer 2', weight: 2, stage_name: '#{stage1.name}'
+answer 'answer 3', stage_name: '#{stage2.name}'
+DSL
+
+    output, _ = EvaluationMulti.parse(input_dsl, 'test')
+    expected = {
+        name: 'Test question',
+        properties: {
+            options: {},
+            questions: [{text: 'Question text'}],
+            answers: [
+                {text: 'answer 1', weight: 1, stage: nil},
+                {text: 'answer 2', weight: 2, stage: stage1.name},
+                {text: 'answer 3', weight: 1, stage: stage2.name},
+            ]
+        }
+      }
+    assert_equal expected, output
+  end
 end

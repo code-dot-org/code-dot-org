@@ -147,7 +147,7 @@ module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
 
   var allowedTags = sanitize.defaults.allowedTags.concat(tagsWithStandardAttributes)
     .concat(tagsWithCustomAttributes);
-  var allowedAttributes = $.extend({}, sanitize.defaults.allowedAttributes,
+  var allowedAttributes = Object.assign({}, sanitize.defaults.allowedAttributes,
     defaultAttributesMap, customAttributesMap);
   var safe = sanitize(unsafe, {
     allowedTags: allowedTags,

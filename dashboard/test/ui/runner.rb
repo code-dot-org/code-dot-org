@@ -9,6 +9,8 @@ ENV['BUNDLE_GEMFILE'] ||= "#{ROOT}//Gemfile"
 require 'bundler'
 require 'bundler/setup'
 
+require 'cdo/aws/s3'
+require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
 require 'cdo/hip_chat'
@@ -25,6 +27,22 @@ require 'active_support/core_ext/object/blank'
 
 ENV['BUILD'] = `git rev-parse --short HEAD`
 
+S3_LOGS_BUCKET = 'cucumber-logs'
+S3_LOGS_PREFIX = GitUtils.current_branch
+LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
+
+# Upload the given log to the cucumber-logs s3 bucket.
+# @param [String] filename of log file to be uploaded.
+# @return [String] a public hyperlink to the uploaded log, or empty string.
+def upload_log_and_get_public_link(filename)
+  return '' unless $options.html
+  log_url = LOG_UPLOADER.upload_file(filename)
+  " <a href='#{log_url}'>☁ Log on S3</a>"
+rescue Exception => msg
+  HipChat.log "Uploading log to S3 failed: #{msg}"
+  return ''
+end
+
 $options = OpenStruct.new
 $options.config = nil
 $options.browser = nil
@@ -36,6 +54,7 @@ $options.dashboard_domain = 'test-studio.code.org'
 $options.hourofcode_domain = 'test.hourofcode.com'
 $options.local = nil
 $options.html = nil
+$options.out = nil
 $options.maximize = nil
 $options.auto_retry = false
 $options.magic_retry = false
@@ -90,14 +109,23 @@ opt_parser = OptionParser.new do |opts|
   opts.on("-m", "--maximize", "Maximize local webdriver window on startup") do
     $options.maximize = true
   end
+  opts.on("--circle", "Whether is CircleCI (skip failing Circle tests)") do
+    $options.is_circle = true
+  end
   opts.on("--html", "Use html reporter") do
     $options.html = true
+  end
+  opts.on("--out filename", String, "Output filename") do |f|
+    $options.out = f
   end
   opts.on("-e", "--eyes", "Run only Applitools eyes tests") do
     $options.run_eyes_tests = true
   end
   opts.on("-a", "--auto_retry", "Retry tests that fail once") do
     $options.auto_retry = true
+  end
+  opts.on("--retry_count TimesToRetry", String, "Retry tests that fail a given # of times") do |times_to_retry|
+    $options.retry_count = times_to_retry.to_i
   end
   opts.on("--magic_retry", "Magically retry tests based on how flaky they are") do
     $options.magic_retry = true
@@ -125,6 +153,7 @@ opt_parser = OptionParser.new do |opts|
 end
 
 opt_parser.parse!(ARGV)
+passed_features = ARGV + ($options.feature || [])
 
 $browsers = JSON.load(open("browsers.json"))
 
@@ -132,10 +161,12 @@ $lock = Mutex.new
 $suite_start_time = Time.now
 $suite_success_count = 0
 $suite_fail_count = 0
+# How many flaky test reruns occurred across all tests (ignoring the initial attempt).
+$total_flaky_reruns = 0
 $failures = []
 
 if $options.local
-  #Verify that chromedriver is actually running
+  # Verify that chromedriver is actually running
   unless `ps`.include?('chromedriver')
     puts "You cannot run with the --local flag unless you are running chromedriver. Automatically running
 chromedriver found at #{`which chromedriver`}"
@@ -186,13 +217,6 @@ def run_tests(arguments)
   end
 end
 
-def format_duration(total_seconds)
-  total_seconds = total_seconds.to_i
-  minutes = (total_seconds / 60).to_i
-  seconds = total_seconds - (minutes * 60)
-  "%.1d:%.2d minutes" % [minutes, seconds]
-end
-
 if $options.force_db_access
   $options.pegasus_db_access = true
   $options.dashboard_db_access = true
@@ -204,14 +228,15 @@ elsif rack_env?(:test)
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /test/
 end
 
-features = $options.feature || Dir.glob('features/**/*.feature')
-browser_features = $browsers.product features
+all_features = Dir.glob('features/**/*.feature')
+features_to_run = passed_features.empty? ? all_features : passed_features
+browser_features = $browsers.product features_to_run
 
 git_branch = `git rev-parse --abbrev-ref HEAD`.strip
 ENV['BATCH_NAME'] =  "#{git_branch} | #{Time.now}"
 
 test_type = $options.run_eyes_tests ? 'eyes tests' : 'UI tests'
-HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} in #{$options.parallel_limit} threads</b>..."
+HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} in #{$options.parallel_limit} threads..."
 if test_type == 'eyes tests'
   HipChat.log "Batching eyes tests as #{ENV['BATCH_NAME']}"
   print "Batching eyes tests as #{ENV['BATCH_NAME']}"
@@ -259,7 +284,11 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   ENV['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
 
   if $options.html
-    html_output_filename = test_run_string + "_output.html"
+    if $options.out
+      html_output_filename = $options.out
+    else
+      html_output_filename = test_run_string + "_output.html"
+    end
   end
 
   arguments = ''
@@ -269,6 +298,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   arguments += " -t #{$options.run_eyes_tests && browser['mobile'] ? '' : '~'}@eyes_mobile"
   arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
+  arguments += " -t ~@no_circle" if $options.is_circle
   arguments += " -t ~@no_ie" if browser['browserName'] == 'Internet Explorer'
   arguments += " -t ~@no_ie9" if browser['browserName'] == 'Internet Explorer' && browser['version'] == '9.0'
   arguments += " -t ~@no_ie10" if browser['browserName'] == 'Internet Explorer' && browser['version'] == '10.0'
@@ -307,7 +337,10 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   end
 
   def how_many_reruns?(test_run_string)
-    if $options.auto_retry
+    if $options.retry_count
+      puts "Retrying #{$options.retry_count} times"
+      return $options.retry_count
+    elsif $options.auto_retry
       return 1
     elsif $options.magic_retry
       # ask saucelabs how flaky the test is
@@ -355,9 +388,13 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   reruns = 0
   while !succeeded && (reruns < max_reruns)
     reruns += 1
+
+    # Upload the failure log to S3, so we can examine it at our leisure.
+    log_link = upload_log_and_get_public_link(html_output_filename)
+
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     # Since output_stderr is empty, we do not log it to HipChat.
-    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}), retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || "?"})..."
+    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || "?"})..."
 
     rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
@@ -391,19 +428,17 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
 
   if !parsed_output.nil? && scenario_count == 0 && succeeded
     # Don't log individual skips because we hit HipChat rate limits
-    # HipChat.log "<b>dashboard</b> UI tests skipped with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
+    # HipChat.log "<b>dashboard</b> UI tests skipped with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   elsif succeeded
     # Don't log individual successes because we hit HipChat rate limits
-    # HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
+    # HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
+    # Upload the failure log to S3, so we can examine it at our leisure.
+    log_link = upload_log_and_get_public_link(html_output_filename)
+
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     HipChat.log "<pre>#{output_stderr}</pre>"
-    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info}#{rerun_info})"
-
-    if $options.html
-      link = "https://#{CDO.dashboard_hostname}/ui_test/" + html_output_filename
-      message += " <a href='#{link}'>☁ html output</a>"
-    end
+    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
     short_message = message
 
     message += "<br/><i>rerun: bundle exec ./runner.rb -c #{browser_name} -f #{feature} #{'--eyes' if $options.run_eyes_tests} --html</i>"
@@ -418,7 +453,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     else
       'failed'.red
     end
-  print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)}#{scenario_info}#{rerun_info})\n"
+  print "UI tests for #{test_run_string} #{result_string} (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})\n"
 
   if scenario_count == 0
     skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
@@ -435,8 +470,9 @@ EOS
     print skip_warning
   end
 
-  [succeeded, message]
-end.each do |succeeded, message|
+  [succeeded, message, reruns]
+end.each do |succeeded, message, reruns|
+  $total_flaky_reruns += reruns
   if succeeded
     $suite_success_count += 1
   else
@@ -444,7 +480,6 @@ end.each do |succeeded, message|
     $failures << message
   end
 end
-
 $logfile.close
 $errfile.close
 $errbrowserfile.close
@@ -453,7 +488,8 @@ $suite_duration = Time.now - $suite_start_time
 
 HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " +
   "Test count: #{($suite_success_count + $suite_fail_count)}. " +
-  "Total duration: #{format_duration($suite_duration)}. "
+  "Total duration: #{RakeUtils.format_duration($suite_duration)}. " +
+  "Total reruns of flaky tests: #{$total_flaky_reruns}."
 
 if $suite_fail_count > 0
   HipChat.log "Failed tests: \n #{$failures.join("\n")}"

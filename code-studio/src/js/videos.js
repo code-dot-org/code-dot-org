@@ -1,6 +1,7 @@
 'use strict';
-/* global dashboard, Dialog, YT, YTConfig */
+/* global dashboard, Dialog, YT, YTConfig, trackEvent */
 
+import $ from 'jquery';
 var videojs = require('video.js');
 var testImageAccess = require('./url_test');
 var clientState = require('./clientState');
@@ -148,7 +149,13 @@ videos.showVideoDialog = function (options, forceShowVideo) {
 
   var download = $('<a/>').append($('<img src="/shared/images/download_button.png"/>'))
       .addClass('download-video')
-      .attr('href', options.download);
+      .attr('href', options.download)
+      .click(function () {
+          // track download in Google Analytics
+          trackEvent('downloadvideo', 'startdownloadvideo', options.key);
+          return true;
+        }
+      );
   var nav = $div.find('.ui-tabs-nav');
   nav.append(download);
 
@@ -233,12 +240,26 @@ function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAdd
       return;
     }
     addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
-  });
+  }, videoInfo);
 }
 
 // This is exported (and placed on window) because it gets accessed externally for our video test page.
-videos.onYouTubeBlocked = function (callback) {
-  testImageAccess(youTubeAvailabilityEndpointURL() + '?' + Math.random(), function (){}, callback);
+videos.onYouTubeBlocked = function (youTubeBlockedCallback, videoInfo) {
+  var key = (videoInfo ? videoInfo.key : undefined);
+  testImageAccess(youTubeAvailabilityEndpointURL() + '?' + Math.random(),
+      // Called when YouTube availability check succeeds.
+      function () {
+        // Track event in Google Analytics.
+        trackEvent('showvideo', 'startVideoYouTube', key);
+      },
+
+      // Called when YouTube availability check fails.
+      function () {
+        // Track event in Google Analytics.
+        trackEvent('showvideo', 'startVideoFallback', key);
+        youTubeBlockedCallback();
+      }
+  );
 };
 
 function youTubeAvailabilityEndpointURL() {

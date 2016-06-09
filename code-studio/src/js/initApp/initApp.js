@@ -1,6 +1,6 @@
 // TODO (brent) - way too many globals
 /* global script_path, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, ga*/
-
+import $ from 'jquery';
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
 var loadApp = require('./loadApp');

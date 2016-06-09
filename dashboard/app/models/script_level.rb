@@ -2,16 +2,17 @@
 #
 # Table name: script_levels
 #
-#  id         :integer          not null, primary key
-#  script_id  :integer          not null
-#  chapter    :integer
-#  created_at :datetime
-#  updated_at :datetime
-#  stage_id   :integer
-#  position   :integer
-#  assessment :boolean
-#  level_id   :integer
-#  properties :text(65535)
+#  id          :integer          not null, primary key
+#  level_id    :integer
+#  script_id   :integer          not null
+#  chapter     :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#  stage_id    :integer
+#  position    :integer
+#  assessment  :boolean
+#  properties  :text(65535)
+#  named_level :boolean
 #
 # Indexes
 #
@@ -135,6 +136,8 @@ class ScriptLevel < ActiveRecord::Base
   def summarize
     if level.unplugged?
       kind = 'unplugged'
+    elsif named_level
+      kind = 'named_level'
     elsif assessment
       kind = 'assessment'
     else
@@ -187,6 +190,7 @@ class ScriptLevel < ActiveRecord::Base
     extra_level_count = level.properties["pages"].length - 1
     (1..extra_level_count).each do |page_index|
       new_level = last_level_summary.deep_dup
+      new_level[:uid] = "#{level.id}_#{page_index}"
       new_level[:url] << "/page/#{page_index + 1}"
       new_level[:position] = last_level_summary[:position] + page_index
       new_level[:title] = last_level_summary[:position] + page_index

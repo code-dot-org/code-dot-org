@@ -1,3 +1,4 @@
+var React = require('react');
 var rowStyle = require('./rowStyle');
 
 var EnumPropertyRow = React.createClass({
