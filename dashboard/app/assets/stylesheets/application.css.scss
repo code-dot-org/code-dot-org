@@ -27,6 +27,7 @@
  *= require buttons
  *= require course-blocks
  *= require details-polyfill
+ *= require warning-banner
  *
  *= require selectize
  *= require selectize.default
@@ -1138,29 +1139,6 @@ a.download-video {
     height: 42px;
     margin-bottom: -3px;
   }
-}
-
-#warning-banner {
-  padding: 10px 20px 5px 20px;
-  font-size: 13px;
-  line-height: 16px;
-  background-color: $purple;
-  text-align: center;
-  color: white;
-  min-height: 30px;
-  a, a:visited {
-    font-family: "Gotham 7r", sans-serif;
-    color: white;
-    text-decoration: underline;
-  }
-  a:hover {
-    background: transparent;
-  }
-}
-
-.warning-sign {
-  font-size: 16px;
-  color: $mustardyellow;
 }
 
 .quiet_links {
