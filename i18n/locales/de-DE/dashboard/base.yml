@@ -482,12 +482,14 @@ de:
     picture_count: 'In den vergangenen <b>%{days}</b> Tagen haben Schüler durch das Schreiben eigener Computerprogramme <b>%{count}</b> Bilder gezeichnet. Klicke auf die Bilder, um das jeweilige Programm in Aktion zu sehen.'
     activity_count: 'In den vergangenen <b>%{days}</b> Tage haben Schüler durch das Schreiben eigener Computerprogramme <b>%{count}</b> Apps und Bilder gemacht. Klicke auf die Bilder und Screenshots der Programme, um sie in Aktion zu sehen.'
     want_to_make_your_own: Möchtest du dein eigenes Programm machen?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Mehr &rarr;'
     caption_by_name_age: 'Von %{name}, Alter %{age}'
     caption_time_ago: 'vor %{time_ago}'
     header: Galerie
     header_playlab: Geschichten und Spiele
     header_artist: Code-Kunst
+    report_abuse: Missbrauch melden
   landing:
     prerelease: "Dieser Kurs ist in der <span class='betatext'>Beta-Version</span>.  Das bedeutet, dass dies nicht die endgültige Fassung des Kurses ist und noch Änderungen vorgenommen werden, nachdem wir Feedback empfangen und Verbesserungen vorgenommen haben."
     prerelease_hoc2014: "Diese Anleitung ist in der <span class='betatext'>Beta-Version</span>.  Sie wird nach Rückmeldungen noch überarbeitet und verbessert."
@@ -667,8 +669,8 @@ de:
     escalated:
       name: Eskaliert
       description: Ich möchte, dass ein Instrukteur die Einreichung überprüft
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
+    instructor_feedback: Rückmeldung von der Lehrperson
+    peer_feedback: Rückmeldung von Mitschülern
     outdated: This feedback was added for a previously submitted version
   components:
     icon_library:

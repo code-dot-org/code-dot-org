@@ -23764,7 +23764,7 @@ goog.require("goog.events");
 goog.require("goog.math.Rect");
 Blockly.addClass_ = function(element, className) {
   var classes = element.getAttribute("class") || "";
-  if(Blockly.stringContainsClass_(classes, className)) {
+  if(!Blockly.stringContainsClass_(classes, className)) {
     if(classes) {
       classes += " "
     }
@@ -23775,7 +23775,7 @@ Blockly.elementHasClass_ = function(element, className) {
   return Blockly.stringContainsClass_(element.getAttribute("class") || "", className)
 };
 Blockly.stringContainsClass_ = function(classes, className) {
-  return(" " + classes + " ").indexOf(" " + className + " ") == -1
+  return(" " + classes + " ").indexOf(" " + className + " ") !== -1
 };
 Blockly.removeClass_ = function(element, className) {
   var classes = element.getAttribute("class");

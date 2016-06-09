@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback":"Aşağıdakı bloklardan birini istifadə etməyə çalışın:",
   "tryHOC":"Kod Saatında özünüzü sınayın",
   "unnamedFunction":"Adı olmayan dəyişən və ya funksiyanız var. Hər şeyə bir təsviri ad verməyi unutmayın.",
+  "unattachedBlockTipTitle":"Unattached blocks",
+  "unattachedBlockTipBody":"Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn":"Proqramlaşdırmağı öyrənmək istəyirsiniz?",
   "watchVideo":"Videoya baxın",
   "when":"nə zaman",

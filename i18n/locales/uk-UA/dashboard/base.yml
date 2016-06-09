@@ -482,12 +482,14 @@ uk:
     picture_count: "За попередні  <b>%{days}</b> днів, учні намалювали <b>%{count}</b> картинок, пишучи свої власні комп'ютерні програми. Клацніть зображення, щоб переглянути кожну програму в дії."
     activity_count: 'За попередні <b>%{days}</b> днів, учні створили <b>%{count}</b> програм та малюнків, за допомогою власноручно написаних програм. Клацайте на зображення та скріншоти, щоб запустити ці програми.'
     want_to_make_your_own: Хочете створити власний?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Більш &rarr;'
     caption_by_name_age: 'від %{name}, віком %{age}'
     caption_time_ago: '%{time_ago} тому'
     header: Галерея
     header_playlab: Ігрова студія
     header_artist: Художник
+    report_abuse: Повідомити про порушення
   landing:
     prerelease: "Це <span class='betatext'>бета</span>-курс. Це означає, що перед Вами не остаточна версія цього курсу і він підлягає змінам та покращенням відповідно до отриманих відгуків."
     prerelease_hoc2014: "Цей підручник є <span class='betatext'>бета-версією</span>.  Він підлягає редагуванню відповідно до отриманих відгуків."

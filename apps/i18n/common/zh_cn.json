@@ -233,13 +233,11 @@
   "tryBlocksBelowFeedback": "试着使用以下模块之一：",
   "tryHOC": "来试试“编程一小时”项目！",
   "unnamedFunction": "你有一个变量或函数没有命名。记得给任何东西都起一个有描述意义的名字。",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "想要学习如何写代码吗？",
   "watchVideo": "观看视频",
   "when": "当",
   "whenRun": "当运行时",
-  "workspaceHeaderShort": "工作区域",
-  "hide": "Hide",
-  "more": "More",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
+  "workspaceHeaderShort": "工作区域"
 }

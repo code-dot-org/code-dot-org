@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT":"chap tomondan bo‘sh joylarni olib tashlash",
   "TEXT_TRIM_OPERATOR_RIGHT":"o‘ng tomondan bo‘sh joylarni olib tashlash",
   "TEXT_TRIM_TOOLTIP":"Biror yoki ikkala tomonidan bo‘sh joylar olib tashlangan matn nusxasini qaytarish.",
+  "UNUSED_CODE":"Unused code",
   "VARIABLES_DEFAULT_NAME":"element",
   "VARIABLES_GET_CREATE_SET":"Yaratish: \"%1ni joylash\"",
   "VARIABLES_GET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Get",

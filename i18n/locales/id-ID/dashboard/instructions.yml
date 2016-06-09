@@ -78,6 +78,7 @@ id:
         Berikut fungsi "Menggambar segi enam"  yang sama
         . Apa yang terjadi jika Anda hanya mengubah 60 derajat setiap kali putaran Anda?
       2-3 Artist Functions 11_instruction: 'Kita telah mengganti nama fungsi "menggambar persegi" menjadi "menggambar segienam", tetapi ia masih hanya menggambar persegi! Dapat Anda memodifikasi/mengubah fungsi "menggambar segienam" untuk menggambar segi enam dengan sisi 50 piksel, dan digambar dengan menggunakan fungsi?'
+      2-3 Artist Functions 12 Mike_instruction: 'Fungsi sangat baik untuk menggambar hal yang rumit berulang kali. Dapatkah Anda menggunakan fungsi "menggambar bunga" untuk mengisi seluruh kotak perkebunan? (Petunjuk: semua tanaman dipisahkan dengan jarak 100 piksel)  '
       2-3 Artist Functions 12_instruction: 'Fungsi sangat baik untuk menggambar hal yang rumit berulang kali. Dapatkah Anda menggunakan fungsi "menggambar bunga" untuk mengisi seluruh kotak perkebunan? (Petunjuk: semua tanaman dipisahkan dengan jarak 100 piksel)  '
       2-3 Artist Functions 13_instruction: Kami menyediakan Anda empat fungsi. Gunakan dengan cara apapun yang Anda suka dalam satu atau lebih pengulangan untuk membuat gambar yang dapat Anda bagikan dengan teman-teman Anda. Tekan Jalankan untuk melihat contoh.
       2-3 Artist Functions 2_instruction: |
@@ -283,11 +284,7 @@ id:
       4-5 Artist For Loops 13_instruction: 'Desain ini dimulai tanpa "untuk" putaran dan menggunakan terlalu banyak blok!  Gunakan "untuk" blok menyelesaikan spiral.  Petunjuk: panjang baris terakhir adalah 250 piksel.'
       4-5 Artist For Loops 14_instruction: 'Seseorang memulai kode, namun kemudian mesti ingat bahwa harus ada cara yang lebih cepat! Gunakan "untuk" blok agar mengganti blok-blok lainnya dan menyelesaikan spiral segitiga. (Petunjuk: panjang baris terakhir adalah 300-an pixels.)'
       4-5 Artist For Loops 15_instruction: 'Seseorang memulai kode, namun kemudian mesti ingat bahwa harus ada cara yang lebih cepat! Gunakan "untuk" blok agar mengganti blok-blok lainnya dan menyelesaikan spiral bersegi enam. (Petunjuk: panjang baris terakhir adalah 200-an pixels.)'
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+      4-5 Artist For Loops 2_instruction: 'Ini adalah fungsi "for". Tanpa susah-susah mengetik 1,2,3...10, fungsi "for" dapat mengulang instruksi di dalamnya dan menghitung jumlahnya sendiri. Tulis angka 10 ke bagian "to" dalam fungsi "for".'
       4-5 Artist For Loops 3_instruction: 'Bagaimanakah kita dapat menghitung dari 1 sampai 50? Suntinglah blok "untuk".'
       4-5 Artist For Loops 4_instruction: 'Lengkapilah blok "untuk" hingga dapat menghitung dari 1 sampai 10 oleh 1.'
       4-5 Artist For Loops 6_instruction: 'Gambarlah kotak dengan sisi 50, 60, 70, 80, dan 90 pixel.  Anda akan perlu menggunakan fungsi "gambar persegi" sebanyak lima kali.'
@@ -378,24 +375,16 @@ id:
       4-5 Bee Nested Loops 6_instruction: Kumpulkan semua nektarnya.
       4-5 Bee Nested Loops 7_instruction: Letakkan putaran ini di dalam putaran lainnya untuk membuat sebuah putaran bersarang dan kumpulkan semua nektar dari bunga-bunga tersebut.
       4-5 Bee Nested Loops 8_instruction: 'Kumpulkan semua nektar dari bunga-bunga ini dengan menyarangkan sebuah while loop. Gantikan pengulangan dalam blok dengan sebuah block selagi. '
-      4-5 Bee Nested Loops 9_instruction: |
-        Collect all of the nectar from these flowers
-        by nesting a while loop inside a repeat.
-      4-5 Bee Nested Loops Assessment 1_instruction: |
-        **Assessment:** Collect all
-        of the nectar and make all of the honey using loops.
+      4-5 Bee Nested Loops 9_instruction: Kumpulkan semua nektar dari bunga-bunga tersebut dengan membuat perulangan while bersarang di dalam pengulangannya.
+      4-5 Bee Nested Loops Assessment 1_instruction: '**Latihan:** Kumpulkan semua nektar dan buat semua madunya menggunakan perulangan.'
       4-5 Bee Nested Loops Rows_instruction: |
-        Gather nectar from the rows of flowers!
-        Use a nested loop.
-      4-5 Maze 1 (copy 1)_instruction: |
-        Dear person. Me zombie. Must... get... to
-        sunflower.
+        Kumpulkan nektar dari barisan bunga tersebut!
+        Gunakan perulangan bersarang.
+      4-5 Maze 1 (copy 1)_instruction: Halo seseorang disana. Saya zombie. Haru.. mendapatkan.. bunga matahari.
       4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
       4-5 Maze 10_instruction: Bisakah kamu bergerak ke bunga matahari dengan menggunakan hanya empat blok?
-      4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
-      4-5 Maze 12_instruction: |
-        Ok, this is slightly different. Can you do it in
-        only six blocks?
+      4-5 Maze 11_instruction: Bisakah Anda mendapatkan bunga matahari dengan hanya menggunakan enam blok?
+      4-5 Maze 12_instruction: Oke, yang ini agak sedikit berbeda. Bisakah Anda melakukannya hanya dalam enam blok?
       4-5 Maze 13_instruction: Bawa aku ke si babi!
       4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
       4-5 Maze 2 (copy 1)_instruction: |
@@ -429,6 +418,7 @@ id:
       4-5 Maze Conditionals 1_instruction: |
         Use the `repeat until` block to get the
         zombie to the sunflower.
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: |
         Use the `repeat until` block to get the
         zombie to the sunflower.
@@ -1566,7 +1556,7 @@ id:
       Course 4 Play Lab Params 8_instruction: |
         Use the `when actor touches` block
         to send Dog back to the top-left ONLY if Dog touches any of the other actors.
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith hearts, and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith pie, and decrease each time that Cat tags Dog with a sandwich.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: |
         This time you don't have to write any
         code, just hit "Run" to play the game! In this game, you're the dog who
@@ -1594,12 +1584,12 @@ id:
         actor 2 touches anything" event to trigger an update to your score when your
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 6_instruction: "Use the right arrow to shoot hearts.\\r\n\\r\nIn\nour game, how should we score points? Add 1 to your \"points\" variable each\ntime Dog hits Cat with a heart. Use the \"when actor 2 touches anything\"\nevent to trigger an update to your score. You can increment your variable\nby setting \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to pass the level."
+      Course 4 Play Lab Vars 6_instruction: "Use the right arrow to throw pie.\\r\n\\r\nIn\nour game, how should we score points? Add 1 to your \"points\" variable each\ntime Dog hits Cat with a piece of pie. Use the \"when actor 2 touches anything\"\nevent to trigger an update to your score. You can increment your variable\nby setting \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to pass the level."
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
-        isn't too easy to play. Any time Dog (actor 1) gets hit by yellow hearts
-        from Cat (actor 2), you should lose a point. Start with 10 points so it's
-        not too hard. Let your score drop down from 10 to 0 to pass the level.
+        isn't too easy to play. Any time Dog (actor 1) gets hit by a sandwich from
+        Cat (actor 2), you should lose a point. Start with 10 points so it's not
+        too hard. Let your score drop down from 10 to 0 to pass the level.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: |
         Alright, one last thing for
         this game - let's set it up so the player can win (or lose). Use a forever
@@ -2555,6 +2545,10 @@ id:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

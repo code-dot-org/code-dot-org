@@ -233,13 +233,11 @@
   "tryBlocksBelowFeedback": "Saiatu azpiko blokeetako bat erabiltzen:",
   "tryHOC": "Probatu Kode Ordua",
   "unnamedFunction": "Izenik gabeko aldagai edo funtzio bat daukazu. Ez ahaztu guztiei esanguratsua den izen bat jartzeaz.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Programatzen ikasi nahi?",
   "watchVideo": "Ikusi Bideoa",
   "when": "-enean",
   "whenRun": "martxan dagoenean",
-  "workspaceHeaderShort": "Lan eremua: ",
-  "hide": "Hide",
-  "more": "More",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
+  "workspaceHeaderShort": "Lan eremua: "
 }

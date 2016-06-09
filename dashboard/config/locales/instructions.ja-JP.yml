@@ -58,6 +58,8 @@
       2-3 Artist Functions 11_instruction: '"draw a square" という関数の名前を "draw a hexagon"
         に変えました。hexagon は六角形という意味ですが、この関数が描くのは正方形のままです。"draw a hexagon" という関数を一辺が 50
         ピクセルの六角形を描くように直して、その関数を使って絵を描いてください。'
+      2-3 Artist Functions 12 Mike_instruction: 関数は、複雑なものを何回も描くのにうってつけです。"draw a flower"
+        という関数を使って、花壇の残りの花を描いてください。（ヒント：植物は 100 ビクセルずつ離れています）
       2-3 Artist Functions 12_instruction: 関数は、複雑なものを何回も描くのにうってつけです。"draw a flower"
         という関数を使って、花壇の残りの花を描いてください。（ヒント：植物は 100 ビクセルずつ離れています）
       2-3 Artist Functions 13_instruction: "ここに関数が 4 つあります。この関数をループと一緒に使って、友だちとシェアするための絵を作りましょう。[実行]
@@ -414,6 +416,12 @@
       4-5 Maze 9_instruction: "「までを繰り返します」ブロックを使ってループを作ってください。"
       4-5 Maze Assessment 1_instruction: "課題：ヒマワリまで辿り着く。"
       4-5 Maze Conditionals 1_instruction: "「までを繰り返します」ブロックを使ってゾンビをヒマワリまで連れて行く。"
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: "「までを繰り返します」ブロックを使ってゾンビをヒマワリまで連れて行く。"
       4-5 Maze Conditionals 3_instruction: "「もし」ブロックを使って、いつ曲がるかを決めてください。ヒント：あともう１つのブロックが必要です、どう設定しているかを学べば、次はひとりでできるようになります。"
       4-5 Maze Conditionals 4_instruction: Ok。さっきのパズルと同じです、でもどうやって"もし"ブロックと"繰り返し"ブロックを一緒に使ったかをもう一度思い出してみましょう。
@@ -1573,8 +1581,8 @@
       Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut
         most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe
         function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe
-        variable `player_score` should increase each time Dog tags Cat\nwith hearts,
-        and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen
+        variable `player_score` should increase each time Dog tags Cat\nwith pie,
+        and decrease each time that Cat tags Dog with a sandwich.\\r\n\\r\nNote:\nWhen
         you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
         on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: |
@@ -1604,19 +1612,19 @@
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
       Course 4 Play Lab Vars 6_instruction: |-
-        Use the right arrow to shoot hearts.\r
+        Use the right arrow to throw pie.\r
         \r
         In
         our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a heart. Use the "when actor 2 touches anything"
+        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
         event to trigger an update to your score. You can increment your variable
         by setting "points = points + 1." Get your score up to 10 (going one at
         a time!) to pass the level.
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
-        isn't too easy to play. Any time Dog (actor 1) gets hit by yellow hearts
-        from Cat (actor 2), you should lose a point. Start with 10 points so it's
-        not too hard. Let your score drop down from 10 to 0 to pass the level.
+        isn't too easy to play. Any time Dog (actor 1) gets hit by a sandwich from
+        Cat (actor 2), you should lose a point. Start with 10 points so it's not
+        too hard. Let your score drop down from 10 to 0 to pass the level.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: |
         Alright, one last thing for
         this game - let's set it up so the player can win (or lose). Use a forever
@@ -2599,6 +2607,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

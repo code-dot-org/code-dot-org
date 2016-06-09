@@ -233,13 +233,11 @@
   "tryBlocksBelowFeedback": "Tente usar um dos blocos abaixo:",
   "tryHOC": "Tente a Hora do Código",
   "unnamedFunction": "Você tem uma variável ou função que não tem nome. Não se esqueça de sempre usar nomes descritivos.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Quer aprender a programar?",
   "watchVideo": "Assista ao vídeo",
   "when": "quando",
   "whenRun": "quando executar",
-  "workspaceHeaderShort": "Área de trabalho: ",
-  "hide": "Hide",
-  "more": "More",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
+  "workspaceHeaderShort": "Área de trabalho: "
 }

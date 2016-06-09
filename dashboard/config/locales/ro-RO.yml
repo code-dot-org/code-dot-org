@@ -613,12 +613,15 @@
       aplicații şi imagini scriindu-și propriile programe pentru calculator. Fă clic
       pe imagini și capturi de ecran pentru a vedea fiecare program în acţiune."
     want_to_make_your_own: Vrei să realizezi propriul tău program?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Mai mult &rarr;
     caption_by_name_age: de %{name}, vârsta %{age}
     caption_time_ago: cu %{time_ago} în urmă
     header: Galerie
     header_playlab: Laborator de Joacă
     header_artist: Artist
+    report_abuse: Raportează abuz
   landing:
     prerelease: Acest curs este în <span class='betatext'>versiune beta</span>. Asta
       înseamnă că aceasta nu este versiunea finală a cursului şi el poate fi revizuit
