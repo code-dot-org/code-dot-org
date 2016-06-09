@@ -48,10 +48,22 @@ const styles = {
       fontSize: 16,
       lineHeight: '32px'
     },
-    without_progress: {
+    icon: {
       borderColor: 'transparent',
-      fontSize: 20,
-      color: color.charcoal
+      fontSize: 24,
+      verticalAlign: -4,
+      color: color.charcoal,
+      textShadow: 'none',
+      ':hover': {
+        color: color.charcoal
+      }
+    },
+    icon_small: {
+      width: 9,
+      height: 9,
+      borderWidth: 0,
+      fontSize: 10,
+      verticalAlign: 2
     }
   },
   status: {
@@ -132,36 +144,26 @@ const ProgressDot = React.createClass({
       onClick = (e) => {this.dotClicked(level.url); e.preventDefault();};
     }
 
-    if (level.kind === 'named_level') {
-      let icon = <i className={`fa ${level.icon}`} style={dotStyle} />;
-      if (level.show_progress) {
-        icon = <span style={dotStyle}>&nbsp;</span>;
-        Object.assign(dotStyle, styles.status[level.status || 'not_tried']);
-      } else {
-        Object.assign(dotStyle, styles.dot.without_progress);
+    let dot, name, outerStyle;
+    if (level.show_progress) {
+      Object.assign(dotStyle, styles.status[level.status || 'not_tried']);
+      dot = <div style={dotStyle} className={`level-${level.id}`}>{level.title}</div>;
+    } else {
+      Object.assign(dotStyle, styles.dot.icon);
+      if (!this.props.largeDots && uid !== this.props.currentLevelId) {
+        Object.assign(dotStyle, styles.dot.icon_small);
       }
-
-      return (
-        <a
-          className={`level-${level.id}`}
-          href={level.url}
-          onClick={onClick}>
-          <div>
-            {icon}
-            <span style={{marginLeft: 5}}>{level.name}</span>
-          </div>
-        </a>
-      );
+      dot = <i className={`fa ${level.icon}`} style={dotStyle} />;
     }
 
-    Object.assign(dotStyle, styles.status[level.status || 'not_tried']);
+    if (level.kind === 'named_level' && this.props.largeDots) {
+      outerStyle = {display: 'block'};
+      name = <span style={{marginLeft: 5, color: color.purple}}>{level.name}</span>;
+    }
+
     return (
-      <a
-        className={`level-${level.id}`}
-        href={level.url}
-        onClick={onClick}
-        style={dotStyle}>
-          {level.title}
+      <a href={level.url} onClick={onClick} style={outerStyle}>
+        {dot}{name}
       </a>
     );
   }
