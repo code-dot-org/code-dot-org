@@ -1960,6 +1960,24 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   }
 };
 
+/**
+ * Move the droplet cursor to the first token at a specific line number.
+ * @param {Number} line zero-based line index
+ */
+StudioApp.prototype.setDropletCursorToLine_ = function (line) {
+  var dropletDocument = this.editor.getCursor().getDocument();
+  var docToken = dropletDocument.start;
+  var curLine = 0;
+  while (docToken && curLine < line) {
+    docToken = docToken.next;
+    if (docToken.type === 'newline') {
+      curLine++;
+    }
+  }
+  if (docToken) {
+    this.editor.setCursor(docToken);
+  }
+};
 
 StudioApp.prototype.handleEditCode_ = function (config) {
   if (this.hideSource) {
@@ -2127,6 +2145,12 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     $(window).trigger('droplet_change', ['scrollpalette']);
   });
 
+  $.expr[':'].textEquals = function (el, i, m) {
+      var searchText = m[3];
+      var match = $(el).text().trim().match("^" + searchText + "$");
+      return match && match.length > 0;
+  };
+
   $(window).on('prepareforcallout', function (e, options) {
     // qtip_config's codeStudio options block is available in options
     if (options.dropletPaletteCategory) {
@@ -2137,8 +2161,27 @@ StudioApp.prototype.handleEditCode_ = function (config) {
         scrollContainer.scrollTop(scrollTo.offset().top - scrollContainer.offset().top +
             scrollContainer.scrollTop());
       }
+    } else if (options.codeString) {
+      var range = this.editor.aceEditor.find(options.codeString, {
+        caseSensitive: true,
+        range: null,
+        preventScroll: true
+      });
+      if (range) {
+        var lineIndex = range.start.row;
+        var line = lineIndex + 1; // 1-based line number
+        if (this.editor.currentlyUsingBlocks) {
+          options.selector = '.droplet-gutter-line:textEquals("' + line + '")';
+          this.setDropletCursorToLine_(lineIndex);
+          this.editor.scrollCursorIntoPosition();
+          this.editor.redrawGutter();
+        } else {
+          options.selector = '.ace_gutter-cell:textEquals("' + line + '")';
+          this.editor.aceEditor.scrollToLine(lineIndex);
+          this.editor.aceEditor.renderer.updateFull(true);
+        }
+      }
     }
-
   }.bind(this));
 
   // Prevent the backspace key from navigating back. Make sure it's still
