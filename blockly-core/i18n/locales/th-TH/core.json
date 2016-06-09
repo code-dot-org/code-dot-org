@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT": "กำจัดช่องว่างด้านซ้าย",
   "TEXT_TRIM_OPERATOR_RIGHT": "กำจัดช่องว่างด้านขวา",
   "TEXT_TRIM_TOOLTIP": "คืนสำเนาของข้อความโดยลบช่องว่างออกข้างใดข้างหนึ่ง หรือทั้งสองข้าง",
+  "UNUSED_CODE": "Unused code",
   "VARIABLES_DEFAULT_NAME": "วัตถุ",
   "VARIABLES_GET_CREATE_SET": "สร้าง 'ตั้งค่า %1'",
   "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",
