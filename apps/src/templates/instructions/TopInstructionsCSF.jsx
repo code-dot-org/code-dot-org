@@ -99,6 +99,15 @@ var TopInstructions = React.createClass({
   componentDidMount() {
     window.addEventListener('resize', this.adjustMaxNeededHeight);
 
+    // Might want to increase the size of our instructions after our icon image
+    // has loaded, to make sure the image fits
+    $(ReactDOM.findDOMNode(this.refs.icon)).load(function () {
+      const minHeight = this.getMinHeight();
+      if (this.props.height < minHeight) {
+        this.props.setInstructionsRenderedHeight(minHeight);
+      }
+    }.bind(this));
+
     const maxNeededHeight = this.adjustMaxNeededHeight();
 
     // Update right col width now that we know how much space it needs. One thing
@@ -120,7 +129,7 @@ var TopInstructions = React.createClass({
    * If we then resize it to be larger again, we want to increase height.
    */
   componentWillReceiveProps(nextProps) {
-    const minHeight = this.getMinHeight() + RESIZER_HEIGHT;
+    const minHeight = this.getMinHeight();
     if (nextProps.height < minHeight && nextProps.height < nextProps.maxHeight) {
       this.props.setInstructionsRenderedHeight(Math.min(nextProps.maxHeight, minHeight));
     }
@@ -128,10 +137,13 @@ var TopInstructions = React.createClass({
 
   /**
    * @returns {number} The minimum height of the top instructions (which is just
-   * the height of the little icon.
+   * the height of the little icon and the height of the resizer if we're not
+   * collapsed
+
    */
   getMinHeight() {
-    return $(ReactDOM.findDOMNode(this.refs.icon)).outerHeight(true);
+    return $(ReactDOM.findDOMNode(this.refs.icon)).outerHeight(true) +
+      (this.props.collapsed ? 0 : RESIZER_HEIGHT);
   },
 
   /**
@@ -141,7 +153,7 @@ var TopInstructions = React.createClass({
    * @returns {number} How much we actually changed
    */
   handleHeightResize: function (delta) {
-    const minHeight = this.getMinHeight() + RESIZER_HEIGHT;
+    const minHeight = this.getMinHeight();
     const currentHeight = this.props.height;
 
     let newHeight = Math.max(minHeight, currentHeight + delta);
@@ -157,7 +169,7 @@ var TopInstructions = React.createClass({
    * @returns {number}
    */
   adjustMaxNeededHeight() {
-    const minHeight = this.getMinHeight() + RESIZER_HEIGHT;
+    const minHeight = this.getMinHeight();
 
     const instructionsContent = this.refs.instructions;
     const maxNeededHeight = $(ReactDOM.findDOMNode(instructionsContent)).outerHeight(true) +
