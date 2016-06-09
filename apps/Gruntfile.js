@@ -423,6 +423,7 @@ module.exports = function (grunt) {
     vendor: {
       nonull: true,
       src: [
+        'lib/blockly/preamble_' + ext + '.js',
         'lib/blockly/blockly_' + ext + '.js',
         'lib/blockly/blocks_' + ext + '.js',
         'lib/blockly/javascript_' + ext + '.js',
