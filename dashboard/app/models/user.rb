@@ -304,10 +304,17 @@ class User < ActiveRecord::Base
     User.find(user_id)
   end
 
+  validate :presence_of_email, if: :teacher?
   validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
   validates_format_of :email, with: Devise.email_regexp, allow_blank: true, if: :email_changed?
   validates :email, no_utf8mb4: true
   validate :email_and_hashed_email_must_be_unique, if: 'email_changed? || hashed_email_changed?'
+
+  def presence_of_email
+    if email.blank?
+      errors.add :email, I18n.t('activerecord.errors.messages.blank')
+    end
+  end
 
   def presence_of_email_or_hashed_email
     if email.blank? && hashed_email.blank?
