@@ -44,6 +44,17 @@ end
 Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   @browser.navigate.to "#{url}"
+  install_js_error_recorder
+end
+
+def install_js_error_recorder
+  @browser.execute_script(<<-JS
+  window.onerror = function (msg) {
+    window.detectedJSErrors = window.detectedJSErrors || [];
+    window.detectedJSErrors.push(msg);
+  };
+  JS
+)
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
