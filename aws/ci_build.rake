@@ -138,6 +138,12 @@ task :apps_task do
   packager.decompress_package(package)
 end
 
+task :firebase_task do
+  if CDO.firebase_name
+    Dir.chdir(apps_dir) { RakeUtils.system 'grunt exec:uploadFirebaseRules' }
+  end
+end
+
 #
 # Define the CODE STUDIO BUILD task.
 #
@@ -302,6 +308,7 @@ $websites = build_task('websites', [
   deploy_dir('rebuild'),
   BLOCKLY_CORE_TASK,
   :apps_task,
+  :firebase_task,
   :code_studio_task,
   :build_with_cloudfront,
   :deploy
