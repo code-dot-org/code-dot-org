@@ -297,11 +297,6 @@ class Level < ActiveRecord::Base
   end
 
   def icon
-    'fa-puzzle-piece'
-  end
-
-  def show_progress?
-    true
   end
 
   private

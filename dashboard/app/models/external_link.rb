@@ -32,17 +32,13 @@ class ExternalLink < Level
   validates_presence_of :link_title
 
   def icon
-    'fa-anchor'
+    'fa-bookmark'
   end
 
   before_validation do
     unless url.try(:match, /https?:\/\//)
       url.prepend 'http://'
     end
-  end
-
-  def show_progress?
-    false
   end
 
   def self.create_from_level_builder(params, level_params)
