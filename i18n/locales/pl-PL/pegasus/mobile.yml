@@ -464,6 +464,7 @@ pl-PL:
   dashboard_landing_new_beta: Nowość! Wypróbuj nasze beta kursy dla uczniów w K-5.
   dashboard_landing_new_k5courses: Nowość! Wypróbuj nasze kursy dla uczniów w K-5.
   dashboard_landing_useful_links: Inne przydatne linki
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Zapytaj osobiście! Odwiedź nasze co miesięczne wideo godziny.
   dashboard_landing_print_certificates: Drukowanie certyfikatów dla uczniów, którzy ukończyli ten kurs
   dashboard_landing_educator_blog: Przeczytaj o nowościach i aktualizacjach materiałów na naszym blogu pedagogicznym
@@ -477,6 +478,10 @@ pl-PL:
   dashboard_landing_available_courses: 'Tutaj są kursy dostępne obecnie dla Ciebie i dla  Twoich uczniów.'
   dashboard_landing_more_tutorials: Chcesz zobaczyć jeszcze więcej poradników/samouczków?
   dashboard_landing_more_tutorials_desc: 'Dostępnych jest więcej poradników <a href="/learn/beyond"> oferowanych przez naszych partnerów.</a> Naucz się programować z robotami, twórz strony w sieci, utwórz własną aplikację, poznaj inne języki programowania, jak C++, Ruby i Python!'
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Godzina Kodowania dla wszystkich grup wiekowych
   dashboard_hoc_courses_desc: Wypróbuj ze swoimi uczniami którykolwiek z jednogodzinnych samouczków!
   dashboard_hoc_courses_desc_and_cta: 'Wypróbuj te krótkie, jednogodzinne samouczki ze swoimi uczniami. <a href="https://hourofcode.com">Przyłącz się do inicjatywy Godzina Kodowania</a> w czasie Tygodnia Nauczania Informatyki.'
@@ -508,7 +513,11 @@ pl-PL:
   dashboard_action_done: Wykonane
   dashboard_action_required: wymagane
   dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
+  dashboard_assessments_none: |-
+    Most teachers measure their students' progress using the "View Progress" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio.
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -538,8 +547,9 @@ pl-PL:
   dashboard_progress_submitted: Wysłano
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_responses_none: Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above.
   dashboard_sections_new_section: Nowa sekcja
   dashboard_sections_jumbotron_instruction: Utwórz nowe sekcje i dodaj do nich uczniów. Sekcje umożliwiają podział uczniów na mniejsze grupy, dzięki czemu łatwiej jest śledzić ich postępy i zarządzać ich kontami.
   dashboard_sections_table_section: Sekcja
@@ -611,6 +621,7 @@ pl-PL:
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
   dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: Program nauczania
   dashboard_curriculum_overview: Streszczenie programu (curriculum) dla K-5
   dashboard_overview: Streszczenie
@@ -668,7 +679,7 @@ pl-PL:
   dashboard_faq_k5: K-5 Najczęściej Zadawane Pytania
   dashboard_announcements: Ogłoszenia
   dashboard_announce_view_all: Zobacz wszystko
-  dashboard_announce_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+  dashboard_announce_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
   dashboard_announce_button_text: Naucz się więcej
   dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
   dashboard_announce_petition_button: Add your name
@@ -781,12 +792,17 @@ pl-PL:
   course3_name: Kurs 3
   course4_name: Kurs 4
   accelerated_name: Przyspieszony Kurs
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
-  cspunit3_name: CS Principles Unit 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
+  cspunit3_name: 'Unit 3: Programming'
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: 'Full Test - 50 questions'
+  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
+  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   20-hour_name: Przyspieszony Kurs
@@ -801,7 +817,9 @@ pl-PL:
   math_category_name: Matematyka
   hoc_category_name: Godzina Kodowania
   csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: App Lab
   applab_gradelevel: Wiek 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds

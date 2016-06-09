@@ -24,6 +24,8 @@ class BucketHelper
     mime_type = Sinatra::Base.mime_type(extension)
     if mime_type == 'application/pdf'
       'pdf'
+    elsif ['.doc', '.docx'].include? extension
+      'doc'
     else
       mime_type.split('/').first
     end

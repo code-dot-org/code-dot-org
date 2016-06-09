@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback": "Try using one of the blocks below:",
   "tryHOC": "एक घंटे कोडिंग की कोशिश करें ",
   "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "क्या आप कोड लिखना जानना चाहते हैं।",
   "watchVideo": "ये वीडियो देखें",
   "when": "कब",

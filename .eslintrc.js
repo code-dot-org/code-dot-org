@@ -18,12 +18,6 @@ module.exports = {
       "ecmaVersion": 6
     }
   },
-  "globals": {
-    "$": true,
-    "jQuery": true,
-    "React": true,
-    "ReactDOM": true
-  },
   "rules": {
     "array-bracket-spacing": ["error", "never"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
@@ -49,7 +43,6 @@ module.exports = {
       "anonymous": "always",
       "named": "never"
     }],
-    // TODO (brent) - turn this back on
-    // "eqeqeq": "error"
+    "eqeqeq": "error"
   }
 };

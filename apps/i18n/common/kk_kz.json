@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback": "Төмендегі блоктардың бірін пайдаланып көріңіз:",
   "tryHOC": "Код Сағатын қолданып көріңіз",
   "unnamedFunction": "Сіз аты көрстілмеген айнымалы немесе функция бар. Атын анықтауға мүмкіндік беретін барлық заттарды көрсетуді ұмытпаңыз.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Бағдарламалуды үйренгіңіз келеді ме?",
   "watchVideo": "Бейнематериалды көру",
   "when": "кезде",

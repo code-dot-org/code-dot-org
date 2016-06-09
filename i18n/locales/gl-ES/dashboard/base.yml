@@ -335,7 +335,7 @@ gl:
     print_certificate: Imprimir certificado
     announcement_title: Anuncios
     announcement_view_all: Ver todos
-    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+    announcement_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
     announcement_button: Aprende máis
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add your name
@@ -483,12 +483,14 @@ gl:
     picture_count: 'Nos <b>%{days}</b> días anteriores, os alumnos crearon <b>%{count}</b> imaxes desenvolvendo os seus proprios programas de computador. Clique nas imaxes para ver cada programa em execución.'
     activity_count: 'Nos últimos <b>%{days}</b> días, os alumnos crearon <b>%{count}</b> aplicacións e figuras escribindo os seus proprios programas de computador. Clique nas figuras e capturas de pantalla para ver cada programa en funcionamento.'
     want_to_make_your_own: Queres crear o teu propio programa?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Máis &rarr;'
     caption_by_name_age: 'feito por %{name}, anos %{age}'
     caption_time_ago: 'hai %{time_ago}'
     header: Galería
     header_playlab: Laboratorio de xogos
     header_artist: Artista
+    report_abuse: Reportar abuso
   landing:
     prerelease: "Este curso está na súa versión <span class='betatext'>beta</span>. Isto significa que esta non é a versión final do curso, e está suxeito a revisións segundo imos recibindo comentarios e se fan melloras."
     prerelease_hoc2014: "Este titorial está na versión <span class='betatext'>beta</span>. Está suxeito a revisións segundo imos recibindo comentarios e se fan melloras."
@@ -668,6 +670,9 @@ gl:
     escalated:
       name: Escalated
       description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
       search_placeholder_text: Search for an icon...
@@ -676,3 +681,5 @@ gl:
     required: Visión xeral
     content: Content
     practice: Teacher Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."

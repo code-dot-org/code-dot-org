@@ -23,15 +23,15 @@ de:
           future: darf nicht in der Zukunft liegen
   hello: Hallo Welt
   welcome_back: 'Willkommen zurück, %{name}'
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: Ihr persönlicher Lernplan
+  see_your_learning_plan: Persönlichen Lernplan anschauen
   submit: Absenden
   unsubmit: Zurücknehmen
-  previous_page: Previous page
+  previous_page: Vorherige Seite
   next_page: Nächste Seite
   cancel: Abbrechen
   okay: Okay
-  heading_x_of_y: '%{heading} (page %{x} of %{y})'
+  heading_x_of_y: '%{heading} (page %{x} von %{y})'
   add_teacher_form:
     code:
       label: 'Lehrer hinzufügen:'
@@ -336,19 +336,19 @@ de:
     announcement_view_all: Alle anzeigen
     announcement_message: '<b>16. Dezember 2015</b> - Vielen Dank für Ihre Teilnahme an der Hour of Code 2015! In allen Code-Studio-Anleitungen und Kursen werden Fortschritte nun wieder aufgezeichnet und gespeichert. Hinweis: Die Code.org-Büros sind vom 19. Dezember bis zum 3. Januar geschlossen. Fragen, die bis zum 4. Januar eingesendet werden, werden voraussichtlich verspätet beantwortet.'
     announcement_button: Mehr erfahren
-    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-    announcement_petition_button: Add your name
+    announcement_petition: 'Als Lehrer ist es deine Aufgabe, jedem Schüler an jeder Schule den Weg zu computerwissenschaftlicher Bildung zu ebnen. Jetzt ist es an der Zeit, deine Repräsentanten von dir hören zu machen. In dieser Woche vereinten führende Köpfe der Bildung, 28 Gouverneure und CEOs von Amerikas größten Firmen ihre Stimmen in einem offenen Brief an den U.S. Kongress, um die Finanzierung von "K-12 computer science education" zu erbitten.'
+    announcement_petition_button: Fügen Sie Ihren Namen ein
   move_students:
-    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
-    section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as the new section.
-    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
-    students_not_yours: You cannot move students from a section that does not belong to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
+    new_section_dne: 'Entschuldigung, aber die Sektion %{new_section_code} existiert nicht. Bitte geben Sie einen anderen Sektionscode ein.'
+    section_code_not_entered: Bitte current_section_code angeben.
+    section_code_cant_be_current_section: Die derzeitige Sektion kann nicht gleich mit der neuen Sektion sein.
+    current_section_dne: 'Entschuldigung, aber die Sektion %{current_section_code} existiert nicht. Bitte geben Sie einen anderen Sektionscode ein.'
+    students_not_yours: Sie können keine Schüler aus einer Sektion bewegen, die Ihnen nicht gehört.
+    stay_enrolled_not_entered: Bitte stay_enrolled_in_current_section angeben.
+    student_ids_not_entered: Bitte student_ids angeben.
+    student_not_found: Einer oder mehr Schüler konnte nicht gefunden werden.
+    all_students_must_be_in_current_section: Alle Schüler müssen zur Zeit in Ihrer Sektion eingeschrieben sein.
+    already_enrolled_in_new_section: Sie können diese Schüler nicht bewegen, weil dieser Lehrer sie bereits in einer anderen Sektion hat.
   share:
     title: Mit Code Studio lernen
     description: Jeder kann Informatik lernen. Mache Spiele, Apps und Kunst mit Code.
@@ -472,22 +472,24 @@ de:
       title: Minecraft
       body: Erkunde eine Minecraft-Welt mit Hilfe von Code.
     unplugged:
-      title: Unplugged Lessons
-      audience: Ages 4+
-      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
-      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
+      title: Offline Lektionen
+      audience: Alter 4+
+      body: Wir haben eine Liste von Offline Lektionen für Sie zur Nutzung im Klassenzimmer zusammengestellt. Jetzt können Sie die Grundlagen der Computerwissenschaften lehren, egal ob Sie Computer im Klassenzimmer haben, oder nicht! Versuchen Sie diese Lektionen als eigenständige Einheit, oder als Komplementärinhalt für beliebige Computerwissenschaftskurse zu verwenden.
+      body_short: Wenn Sie keine Computer zur Verfügung haben, probieren Sie diese Offline Lektionen in Ihrem Klassenzimmer.
   gallery:
     students_drew_these_with_code: Schüler haben diese Bilder mit Code gezeichnet!
     students_made_these_with_code: Schüler haben diesen Code gemacht!
     picture_count: 'In den vergangenen <b>%{days}</b> Tagen haben Schüler durch das Schreiben eigener Computerprogramme <b>%{count}</b> Bilder gezeichnet. Klicke auf die Bilder, um das jeweilige Programm in Aktion zu sehen.'
     activity_count: 'In den vergangenen <b>%{days}</b> Tage haben Schüler durch das Schreiben eigener Computerprogramme <b>%{count}</b> Apps und Bilder gemacht. Klicke auf die Bilder und Screenshots der Programme, um sie in Aktion zu sehen.'
     want_to_make_your_own: Möchtest du dein eigenes Programm machen?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Mehr &rarr;'
     caption_by_name_age: 'Von %{name}, Alter %{age}'
     caption_time_ago: 'vor %{time_ago}'
     header: Galerie
     header_playlab: Geschichten und Spiele
     header_artist: Code-Kunst
+    report_abuse: Missbrauch melden
   landing:
     prerelease: "Dieser Kurs ist in der <span class='betatext'>Beta-Version</span>.  Das bedeutet, dass dies nicht die endgültige Fassung des Kurses ist und noch Änderungen vorgenommen werden, nachdem wir Feedback empfangen und Verbesserungen vorgenommen haben."
     prerelease_hoc2014: "Diese Anleitung ist in der <span class='betatext'>Beta-Version</span>.  Sie wird nach Rückmeldungen noch überarbeitet und verbessert."
@@ -519,12 +521,12 @@ de:
     wrong_body: Vielen Dank für das Einsenden Ihrer Fragen.
     correct_title: Vielen Dank
     correct_body: Vielen Dank für das Einsenden Ihrer Fragen.
-    unsubmit-title: Unsubmit your assessment
-    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
-    submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
-    submit-complete-title: Submit your assessment
-    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
+    unsubmit-title: Ihre Bewertung zurückziehen
+    unsubmit-body: Das Zurückziehen Ihrer Bewertung wird den Zeitpunkt der Einreichung zurücksetzen. Sind Sie sicher?
+    submit-incomplete-title: Ihre Bewertung einreichen
+    submit-incomplete-body: Sie haben ein paar Fragen unbeantwortet gelassen. Sie können Ihre Bewertung später nach der Einreichung nicht mehr bearbeiten. Sind Sie sicher?
+    submit-complete-title: Ihre Bewertung einreichen
+    submit-complete-body: Sie können Ihre Bewertung nach dem Einreichen nicht mehr Bearbeiten. Sind Sie sicher?
   match:
     wrong_title: Falsche Lösung
     wrong_body: 'Die Lösung ist nicht richtig.  Versuche es noch einmal!'
@@ -615,9 +617,9 @@ de:
     share: Teilen
     share_title: Teile Dein Projekt
     share_copy_link: 'Kopiere den Link:'
-    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
-    embed: Embed
-    advanced_share: Show advanced options
+    share_embed_description: Sie können den embed code in eine HTML Seite einfügen, um das Projekt auf einer anderen Webseite darzustellen.
+    embed: Einbetten
+    advanced_share: Erweiterte Optionen anzeigen
     close: Schließen
     more: Mehr
     name: Name
@@ -659,19 +661,24 @@ de:
         acknowledge: 'Durch die Übermittlung dieser Daten akzeptieren Sie, dass diese gemäß den Bedingungen der %{link_start_privacy}Datenschutzerklärung%{link_end} und der %{link_start_tos}Nutzungsbedingungen%{link_end} behandelt werden'
   peer_review:
     accepted:
-      name: Accepted
-      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+      name: Akzeptiert
+      description: '<strong>Ja</strong>, die Einreichung <strong>entspricht</strong> den Anforderungen'
     rejected:
-      name: Rejected
-      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+      name: Abgelehnt
+      description: '<strong>Nein</strong>, die Einreichung <strong>entspricht nicht</strong> den Anforderungen'
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
+      name: Eskaliert
+      description: Ich möchte, dass ein Instrukteur die Einreichung überprüft
+    instructor_feedback: Rückmeldung von der Lehrperson
+    peer_feedback: Rückmeldung von Mitschülern
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
       search_placeholder_text: Suche für ein Symbol...
       no_icons_found: Keine Symbole gefunden
   flex_category:
     required: Übersicht
-    content: Content
-    practice: Teacher Practices
+    content: Inhalt
+    practice: Lehrer Übungen
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."

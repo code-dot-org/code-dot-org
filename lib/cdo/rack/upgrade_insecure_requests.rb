@@ -48,7 +48,7 @@ module Rack
               "style-src 'self' https: 'unsafe-inline'",
               "img-src 'self' https: data: blob:",
               "font-src 'self' https: data:",
-              "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com",
+              "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com wss://*.firebaseio.com",
               "report-uri #{CDO.code_org_url('https/mixed-content')}"
           ]
         end
@@ -69,7 +69,7 @@ module Rack
           headers['X-Frame-Options'] = ''
         end
 
-        unless policies.empty?
+        unless policies.empty? || headers.key?('Content-Security-Policy')
           headers['Content-Security-Policy'] = policies.join('; ')
         end
       end

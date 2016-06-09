@@ -1,9 +1,7 @@
-/* global React */
-
 /*
   Displays a list of nicely-formatted session times for a workshop.
  */
-
+import React from 'react';
 var SessionTime = require('./session_time');
 
 var SessionTimesList = React.createClass({

@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback": "ذیل کے بلاکس میں سے ایک کو استعمال کرنے کی کوشش کریں:",
   "tryHOC": "آور-آف-کوڈ پر کوشش کریں۔",
   "unnamedFunction": "آپ کا ایک ویری-ایبل یا فنکشن ہے جس کا کوئی نام نہیں ہے۔ ہر چیز کو مخصوص وضاحتی نام دینا نہ بھولیں۔",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "کوڈ کرنا سیکھنا چاہتے ہیں؟",
   "watchVideo": "ویڈیو دیکھیں",
   "when": "کب",

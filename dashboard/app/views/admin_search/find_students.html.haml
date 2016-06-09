@@ -43,15 +43,18 @@
   WARNING: There were too many users, only some of them are included.
 - if @users.size > 0
   %table.users
-    - if @headers
-      %tr
-        - @headers.each do |field|
-          %th
-            %span= field
+    %tr
+      - ['ID', 'Name', 'Email', 'Deleted At', 'Undelete'].each do |field|
+        %th
+          %span= field
     - @users.each do |user|
       %tr
-        - user.each do |field|
+        - [:id, :name, :email, :deleted_at].each do |field|
           %td
-            %span= field
+            %span= user[field]
+        - if user[:deleted_at]
+          %td
+            =link_to 'Undelete User', undelete_user_path(user_id: user[:id]), method: :post, class: "btn", data: {confirm: "Are you sure?"}
+
 - else
   No users met the specified search criteria.

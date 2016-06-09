@@ -24,8 +24,8 @@
           future: ne peut pas être dans le futur
   hello: Bonjour tout le monde
   welcome_back: Bienvenue %{name}
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: Votre Plan d’apprentissage professionnel
+  see_your_learning_plan: Consultez votre plan d’apprentissage
   submit: Envoyer
   unsubmit: Ne pas envoyer
   previous_page: Page précédente
@@ -410,29 +410,31 @@
       : Les bureaux de Code.org seront fermés du 19 décembre au 3 janvier. Veuillez
       prévoir un retard des réponses aux questions que vous poserez jusqu'au 4 janvier."
     announcement_button: Pour en savoir plus
-    announcement_petition: As a teacher, you're leading the way in a movement to give
-      every student in every school the opportunity to learn computer science. Now,
-      it's time to let your representatives hear from you. This week, education leaders,
-      28 governors, and CEOs of America's largest companies joined together in an
-      open letter asking the U.S. Congress to fund K-12 computer science education.
-    announcement_petition_button: Add your name
+    announcement_petition: Comme enseignant, vous ouvrez la voie à un mouvement visant
+      à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique.
+      Maintenant, il est temps de vous faire entendre par vos représentants. Cette
+      semaine, les responsables de l’éducation, 28 gouverneurs et les PDG des plus
+      grandes entreprises d'Amérique se sont réunis pour rédiger une lettre ouverte
+      demandant au Congrès américain de financer l’enseignement de l'informatiques
+      du K-12.
+    announcement_petition_button: Ajoutez votre nom
   move_students:
-    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
-      enter a different section code.
-    section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as
-      the new section.
-    current_section_dne: Sorry, but section %{current_section_code} does not exist.
-      Please enter a different section code.
-    students_not_yours: You cannot move students from a section that does not belong
-      to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled
-      in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    new_section_dne: Désolé, la section %{new_section_code} n’existe pas. Veuillez
+      saisir un nom de section différent.
+    section_code_not_entered: Entrez les informations sous la forme courant_section_code.
+    section_code_cant_be_current_section: La présente section ne peut pas être identique
+      à la nouvelle section.
+    current_section_dne: Désolé, la section %{current_section_code} n’existe pas.
+      Veuillez saisir un nom de section différent.
+    students_not_yours: Vous ne pouvez pas déplacer d'élèves depuis une section qui
+      ne vous appartient pas.
+    stay_enrolled_not_entered: Veuillez fournir stay_enrolled_in_current_section.
+    student_ids_not_entered: Veuillez fournir élève_ids.
+    student_not_found: Un ou plusieurs élèves n'ont pas étés trouvés.
+    all_students_must_be_in_current_section: Tous les étudiants doivent être actuellement
+      inscrits dans votre section.
+    already_enrolled_in_new_section: Vous ne pouvez pas déplacer ces élèves car ce
+      professeur les a déjà dans une autre section.
   share:
     title: Apprends avec Code Studio
     description: N'importe qui peut apprendre l’informatique. Crée des jeux, des applications
@@ -625,12 +627,15 @@
       Clique sur les images et les captures d'écran pour voir chaque programme en
       action.
     want_to_make_your_own: Tu veux faire le tien\_?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Plus &rarr\_;
     caption_by_name_age: par %{name}, %{age} ans
     caption_time_ago: il y a %{time_ago} heures/jours
     header: Galerie
     header_playlab: Histoires et jeux
     header_artist: L’art du code
+    report_abuse: Signaler un abus
   landing:
     prerelease: Ce cours est en <span class= « betatext » >bêta</span>.  Il ne s'agit
       pas de la version finale du cours qui est susceptible d'être modifié tant que
@@ -779,10 +784,10 @@
     share: Partager
     share_title: Partage ton projet
     share_copy_link: 'Copie le lien :'
-    share_embed_description: You can paste the embed code into an HTML page to display
-      the project on a webpage.
-    embed: Embed
-    advanced_share: Show advanced options
+    share_embed_description: Vous pouvez copier le code intégré dans une page HTML
+      pour afficher le projet sur une page web.
+    embed: Intégré
+    advanced_share: Afficher les options avancées
     close: Fermer
     more: Plus
     name: Nom
@@ -842,21 +847,32 @@
           vigueur.
   peer_review:
     accepted:
-      name: Accepted
-      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
-        requirements"
+      name: Accepté
+      description: "<strong>Oui</strong>, cette proposition <strong>répond</strong>
+        aux exigences"
     rejected:
-      name: Rejected
-      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
-        the requirements"
+      name: Rejeté
+      description: "<strong>Non</strong>, cette proposition <strong>ne répond pas</strong>
+        aux exigences"
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
+      name: Augmenté
+      description: Je voudrais un instructeur pour examiner cette proposition
+    instructor_feedback: Commentaires de l’instructeur
+    peer_feedback: "Évaluation par les pairs"
+    outdated: Ce commentaire a été émis pour une version précédente
   components:
     icon_library:
       search_placeholder_text: Chercher pour une icône...
       no_icons_found: Aucune icône trouvée
   flex_category:
     required: Aperçu
-    content: Content
-    practice: Teacher Practices
+    content: Contenu
+    practice: Pratiques de l’enseignant
+  external_links:
+    disclaimer_md: "<strong>Avertissement: Vous quittez le site Code.org vers un site
+      qui n'est pas géré par Code.org.</strong> Ce site peut avoir une politique de
+      confidentialité différente de celle de Code.org.<br/><br/>Nous avons sélectionné
+      ces ressources de tiers car nous pensons qu'elles vous seront utiles. Même si
+      nous ne sommes pas directement responsables du contenu de ce site, veuillez
+      <a href='mailto:support@code.org'>contacter le support</a> si vous trouvez le
+      contenu répréhensible, ou si le site n'est plus disponible."

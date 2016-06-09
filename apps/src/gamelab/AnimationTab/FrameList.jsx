@@ -1,6 +1,7 @@
 /** @file Vertical scrolling list of animation frames. */
 'use strict';
 
+var React = require('react');
 var color = require('../../color');
 var FrameListItem = require('./FrameListItem');
 var NewListItem = require('./NewListItem');

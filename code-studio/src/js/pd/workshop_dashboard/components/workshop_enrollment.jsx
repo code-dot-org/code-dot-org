@@ -1,9 +1,7 @@
-/* global React */
-
 /*
   Displays nicely-formatted session time for a workshop.
 */
-
+import React from 'react';
 const Table = require('react-bootstrap').Table;
 
 let styles = {

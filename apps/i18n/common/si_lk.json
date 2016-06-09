@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback": "පහත ඇති බ්ලොක්ස් වලින් එකකක් භාවිතා කරන්න:",
   "tryHOC": "Hour of Code උත්සාහ කරන්න",
   "unnamedFunction": "ඔබේ යම්කිසි විචල්‍යයක් හෝ ශ්‍රිතයක් සඳහා නාමයක් ලබාදී නොමැත. සෑම එකකටම නාමයක් ලබාදීමට අමතක නොකරන්න.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Code කරන්න ඉගෙනගන්න කැමතිද?",
   "watchVideo": "වීඩියෝව නරඹන්න",
   "when": "විට",

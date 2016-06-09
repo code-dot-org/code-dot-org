@@ -50,9 +50,8 @@ Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as att
   Then I wait to see ".modal"
   And I close the dialog
   When element "#runButton" is visible
-  Then element ".header_middle a.level_link:first" has class "attempted"
-  And I am on "http://studio.code.org/s/hourofcode"
-  And element ".user-stats-block a.level_link:first" has class "attempted"
+  And I verify progress in the header of the current page is "attempted" for level 1
+  And I navigate to the course page and verify progress for course "hourofcode" stage 1 level 1 is "attempted"
 
 @no_mobile
 Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, should not see video, comes back on link

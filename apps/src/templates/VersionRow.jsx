@@ -1,5 +1,5 @@
-/* globals $ */
-
+import $ from 'jquery';
+var React = require('react');
 var msg = require('../locale');
 
 /**

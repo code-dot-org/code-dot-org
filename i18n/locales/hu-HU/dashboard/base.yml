@@ -330,7 +330,7 @@ hu:
     print_certificate: Igazolás kinyomtatása
     announcement_title: Közlemények
     announcement_view_all: Összes megtekintése
-    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+    announcement_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
     announcement_button: Tudj meg többet
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: Add your name
@@ -478,12 +478,14 @@ hu:
     picture_count: 'Az elmúlt  <b>% {napok}</b> napon, diákok <b>% {count}</b>képet rajzoltak saját számítógépes programuk írásakor. Kattints a képekre, hogy minden egyes programot láthass működés közben.'
     activity_count: 'Az elmúlt <b>%{days}</b> nap a diákok <b>%{count}</b> alkalmazást és a képet készítettek saját maguk, számítógépprogram írással. Kattints a képekre illetve képernyőmentésekre, hogy megnézesd az egyes programokat működés közben.'
     want_to_make_your_own: Szeretnéd elkészíteni a sajátodat?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Több &rarr;'
     caption_by_name_age: 'készítette %{name}, %{age} éves'
     caption_time_ago: 'ennyi ideje: %{time_ago}'
     header: Galéria
     header_playlab: Játéklabor
     header_artist: Művész
+    report_abuse: Visszaélés jelentése
   landing:
     prerelease: "Ez a tananyag <span class='betatext'> béta állapotban van</span>.  Ez azt jelenti, hogy ez nem a tananyag végleges változata, és a visszajelzések beérkezése után felülvizsgálat alá kerül, és további fejlesztés várható."
     prerelease_hoc2014: "Ez a tananyag <span class='betatext'> béta állapotban van</span>. A visszajelzések beérkezése után felülvizsgálat alá kerül, és további fejlesztés várható."
@@ -663,6 +665,9 @@ hu:
     escalated:
       name: Escalated
       description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
       search_placeholder_text: Keress egy ikont...
@@ -671,3 +676,5 @@ hu:
     required: Összefoglaló
     content: Content
     practice: Teacher Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."

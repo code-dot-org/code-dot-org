@@ -13,6 +13,10 @@ Scenario: Button shows up on top of canvas
   Then I see no difference for "button should be visible"
   And I click selector ".project_share"
   And I wait to see a dialog titled "Share your project"
+  Then I close the dialog
+  And I see no difference for "closed share dialog"
+  Then I click selector ".project_share"
+  And I wait to see a dialog titled "Share your project"
   And I navigate to the share URL
   And I wait until element "#divApplab" is visible
   Then I see no difference for "app lab share"
@@ -150,3 +154,23 @@ Scenario: Applab debugging
   Then I press "stepInButton"
   And I see no difference for "stepped in thrice"
   Then I close my eyes
+
+Scenario: Drag to delete
+  Given I start a new Applab project
+  And I switch to design mode
+  And I open my eyes to test "Drag to delete"
+
+  When I drag a BUTTON into the app
+  And I set groupable input "xpos" to "0"
+  And I set groupable input "ypos" to "0"
+  And I drag element "#design_button1" 50 horizontally and 50 vertically
+  Then I see no difference for "dragging in app doesn't delete button"
+
+  When I drag element "#design_button1" 250 horizontally and 100 vertically
+  Then I see no difference for "dragging slightly out of app pushes button back into bounds"
+
+  When I drag element "#design_button1" 100 horizontally and 100 vertically
+  And I wait until element "#design_button1" is gone
+  Then I see no difference for "dragging out of app deletes button"
+
+  And I close my eyes

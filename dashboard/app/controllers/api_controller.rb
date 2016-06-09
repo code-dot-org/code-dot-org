@@ -25,7 +25,7 @@ class ApiController < ApplicationController
       level_map = student.user_levels_by_level(@script)
       student_levels = @script.script_levels.map do |script_level|
         user_level = level_map[script_level.level_id]
-        level_class = activity_css_class(user_level.try(:best_result), user_level.try(:submitted))
+        level_class = activity_css_class(user_level)
         {class: level_class, title: script_level.position, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
       end
       {id: student.id, levels: student_levels}
@@ -49,6 +49,11 @@ class ApiController < ApplicationController
     load_section
     load_script
 
+    progress_html = render_to_string(partial: 'shared/user_stats', locals: {user: @student})
+    if @script.trophies
+      progress_html += render_to_string(partial: 'shared/concept_trophy_block', locals: {concept_progress: summarize_trophies(@script, @student), added_style: 'overflow: visible'})
+    end
+
     data = {
       student: {
         id: @student.id,
@@ -58,10 +63,15 @@ class ApiController < ApplicationController
         id: @script.id,
         name: @script.localized_title
       },
-      progressHtml: render_to_string(partial: 'shared/user_stats', locals: { user: @student})
+      progressHtml: progress_html
     }
 
     render json: data
+  end
+
+  def script_structure
+    script = Script.get_from_cache(params[:script_name])
+    render json: script.summarize
   end
 
   # Return a JSON summary of the user's progress across all scripts.
@@ -78,7 +88,8 @@ class ApiController < ApplicationController
   def user_progress
     if current_user
       script = Script.get_from_cache(params[:script_name])
-      render json: summarize_user_progress(script)
+      user = params[:user_id] ? User.find(params[:user_id]) : current_user
+      render json: summarize_user_progress(script, user)
     else
       render json: {}
     end
@@ -159,8 +170,6 @@ class ApiController < ApplicationController
 
     level_group_script_levels = @script.script_levels.includes(:levels).where('levels.type' => LevelGroup)
 
-    multi_answer_characters = ("A".."Z").to_a
-
     data = @section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
 
@@ -204,7 +213,7 @@ class ApiController < ApplicationController
               student_result = level_response["result"].split(",").sort.join(",")
 
               # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
-              level_result[:student_result] = student_result.split(',').map{ |k| multi_answer_characters[k.to_i] }.join(', ')
+              level_result[:student_result] = student_result.split(',').map{ |k| Multi.value_to_letter(k.to_i) }.join(', ')
 
               if student_result == "-1"
                 level_result[:student_result] = ""

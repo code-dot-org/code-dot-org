@@ -929,6 +929,7 @@ en:
           Rich long assessment: crwdns56314:0crwdne56314:0
           Free Response: crwdns56595:0crwdne56595:0
           Game Lab: crwdns56596:0crwdne56596:0
+          Sample PLC Assessment: crwdns56889:0crwdne56889:0
         algebraPD2b:
           title: crwdns38830:0crwdne38830:0
           description: crwdns38831:0crwdne38831:0
@@ -1766,10 +1767,13 @@ en:
           Animation: crwdns56435:0crwdne56435:0
           Draw Loop and Random: crwdns56436:0crwdne56436:0
           Variables: crwdns56437:0crwdne56437:0
-          Sprite Properties and Mod: crwdns56469:0crwdne56469:0
+          Sprite Properties and Mod: crwdns56775:0crwdne56775:0
           Expressions and Reassignment: crwdns56600:0crwdne56600:0
           Sprites and Properties: crwdns56601:0crwdne56601:0
           Counting with Variables: crwdns56602:0crwdne56602:0
+          Expressions: crwdns56776:0crwdne56776:0
+          Conditionals and Keyboard Input: crwdns56777:0crwdne56777:0
+          Sprites and Images: crwdns56890:0crwdne56890:0
         2016_sciencePD_phase1:
           title: crwdns56470:0crwdne56470:0
           description_short: crwdns56471:0crwdne56471:0
@@ -1904,3 +1908,101 @@ en:
           description_short: crwdns56699:0crwdne56699:0
           description: crwdns56700:0crwdne56700:0
           CS Principles Culminating Assessment: crwdns56701:0crwdne56701:0
+        cspexam1-mWU7ilDYM9:
+          title: crwdns56779:0crwdne56779:0
+          description_short: crwdns56780:0crwdne56780:0
+          description: crwdns56781:0crwdne56781:0
+          CS Principles Culminating Assessment Part 1: crwdns56782:0crwdne56782:0
+        cspexam2-AKwgAh1ac5:
+          title: crwdns56783:0crwdne56783:0
+          description_short: crwdns56784:0crwdne56784:0
+          description: crwdns56785:0crwdne56785:0
+          CS Principles Culminating Assessment Part 2: crwdns56786:0crwdne56786:0
+        CSDU4-Draft:
+          title: crwdns56787:0crwdne56787:0
+          description_short: crwdns56788:0crwdne56788:0
+          description: crwdns56789:0crwdne56789:0
+          Event-Driven Programming and Debugging: crwdns56790:0crwdne56790:0
+          Beyond Buttons Toward Apps: crwdns56791:0crwdne56791:0
+          Introducing Design Mode: crwdns56792:0crwdne56792:0
+          Multi-screen Apps: crwdns56793:0crwdne56793:0
+          Controlling Memory with Variables: crwdns56794:0crwdne56794:0
+          Using Variables in Apps: crwdns56795:0crwdne56795:0
+          User Input and Strings: crwdns56796:0crwdne56796:0
+          Introduction to Digital Assistants: crwdns56797:0crwdne56797:0
+          Understanding Program Flow and Logic: crwdns56798:0crwdne56798:0
+          Introduction to Conditional Logic: crwdns56799:0crwdne56799:0
+          Compound Conditional Logic: crwdns56800:0crwdne56800:0
+          Digital Assistant Project: crwdns56801:0crwdne56801:0
+          While Loops: crwdns56802:0crwdne56802:0
+          Loops and Simulations: crwdns56803:0crwdne56803:0
+          Introduction to Arrays: crwdns56804:0crwdne56804:0
+          Image Scroller with Key Events: crwdns56805:0crwdne56805:0
+          Processing Arrays: crwdns56806:0crwdne56806:0
+          Functions with Return Values: crwdns56807:0crwdne56807:0
+          The Need For Programming Languages: crwdns56808:0crwdne56808:0
+          Using Simple Commands: crwdns56809:0crwdne56809:0
+          Creating Functions: crwdns56810:0crwdne56810:0
+          Functions and Top-Down Design: crwdns56811:0crwdne56811:0
+          APIs and Function Parameters: crwdns56812:0crwdne56812:0
+          Creating functions with Parameters: crwdns56813:0crwdne56813:0
+          Looping and Random Numbers: crwdns56814:0crwdne56814:0
+          App Lab: crwdns56815:0crwdne56815:0
+          Design Mode: crwdns56816:0crwdne56816:0
+        CSDU1-Draft:
+          title: crwdns56817:0crwdne56817:0
+          description_short: crwdns56818:0crwdne56818:0
+          description: crwdns56819:0crwdne56819:0
+        CSDU2-Draft:
+          title: crwdns56820:0crwdne56820:0
+          description_short: crwdns56821:0crwdne56821:0
+          description: crwdns56822:0crwdne56822:0
+        CSDU5-Draft:
+          title: crwdns56823:0crwdne56823:0
+          description_short: crwdns56824:0crwdne56824:0
+          description: crwdns56825:0crwdne56825:0
+        CSDU6-Draft:
+          title: crwdns56826:0crwdne56826:0
+          description_short: crwdns56827:0crwdne56827:0
+          description: crwdns56828:0crwdne56828:0
+        CSF_Secret_Sample_Story:
+          title: crwdns56829:0crwdne56829:0
+          description_short: crwdns56830:0crwdne56830:0
+          description: crwdns56831:0crwdne56831:0
+          description_audience: crwdns56832:0crwdne56832:0
+          Sample Stage: crwdns56833:0crwdne56833:0
+        TeacherCon:
+          title: crwdns56891:0crwdne56891:0
+          description: crwdns56892:0crwdne56892:0
+          Introduction to Teachercon: crwdns56893:0crwdne56893:0
+          "Lesson 1.4: number systems - circle triangle square": crwdns56894:0crwdne56894:0
+          "Lesson 1.6: sending numbers": crwdns56895:0crwdne56895:0
+          "Lesson 1.9: internet addressing (battleship)": crwdns56896:0crwdne56896:0
+          "Lesson 1.10: routers and redundancy": crwdns56897:0crwdne56897:0
+          "Lesson 1.11: Packets and Making a Reliable Internet": crwdns56898:0crwdne56898:0
+          "Lesson 2.2: text compression": crwdns56899:0crwdne56899:0
+          "Lesson 2.3: black and white pixelation": crwdns56900:0crwdne56900:0
+          "Lesson 2.10: good and bad data visualizations": crwdns56901:0crwdne56901:0
+          Group Work and Peer Learning: crwdns56902:0crwdne56902:0
+          Balancing Teachers and Tools: crwdns56903:0crwdne56903:0
+          Discovery Learning: crwdns56904:0crwdne56904:0
+          Capturing Student Learning: crwdns56905:0crwdne56905:0
+          Lesson 14 number systems - circle triangle square: crwdns56906:0crwdne56906:0
+          "Lesson 1.4 &#58;\t number systems - circle triangle square": crwdns56907:0crwdne56907:0
+          "Lesson 1&#46;4: number systems - circle triangle square": crwdns56908:0crwdne56908:0
+          "Lesson 1\.4: number systems - circle triangle square": crwdns56909:0crwdne56909:0
+          "Lesson 1,4: number systems - circle triangle square": crwdns56910:0crwdne56910:0
+          "Lesson 1,6: sending numbers": crwdns56911:0crwdne56911:0
+          "Lesson 1,9: internet addressing (battleship)": crwdns56912:0crwdne56912:0
+          "Lesson 1,10: routers and redundancy": crwdns56913:0crwdne56913:0
+          "Lesson 1,11: Packets and Making a Reliable Internet": crwdns56914:0crwdne56914:0
+          "Lesson 2,2: text compression": crwdns56915:0crwdne56915:0
+          "Lesson 2,3: black and white pixelation": crwdns56916:0crwdne56916:0
+          "Lesson 2,10: good and bad data visualizations": crwdns56917:0crwdne56917:0
+        MikeTest:
+          title: crwdns56918:0crwdne56918:0
+          description_short: crwdns56919:0crwdne56919:0
+          description: crwdns56920:0crwdne56920:0
+          description_audience: crwdns56921:0crwdne56921:0
+          Sample Stage: crwdns56922:0crwdne56922:0
+          Artist Functions: crwdns56923:0crwdne56923:0

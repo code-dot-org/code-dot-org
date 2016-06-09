@@ -26,12 +26,8 @@ class PdWorkshopSurvey
       end
 
       result[:received_clear_communication_s] = required enum data[:received_clear_communication_s], AGREE_SCALE_OPTIONS
-
-      if result[:plp_b] == '1'
-        result[:school_has_tech_b] = required_enum data, :school_has_tech_b
-        result[:venue_feedback_s] = required stripped data[:venue_feedback_s]
-      end
-
+      result[:school_has_tech_b] = required_enum data, :school_has_tech_b
+      result[:venue_feedback_s] = required stripped data[:venue_feedback_s]
       result[:how_much_learned_s] = required_enum data, :how_much_learned_s
       result[:how_motivating_s] = required_enum data, :how_motivating_s
       result[:how_clearly_presented_s] = required_enum data, :how_clearly_presented_s
@@ -136,6 +132,8 @@ class PdWorkshopSurvey
       'Education event/conference',
       OTHER
     ],
+
+    received_clear_communication_s: AGREE_SCALE_OPTIONS,
 
     how_much_learned_s: [
       'Almost nothing',

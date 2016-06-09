@@ -4,6 +4,7 @@
 
 import classNames from 'classnames';
 import {connect} from 'react-redux';
+import React from 'react';
 var _ = require('../lodash');
 var AnimationTab = require('./AnimationTab/AnimationTab');
 var StudioAppWrapper = require('../templates/StudioAppWrapper');
@@ -57,7 +58,7 @@ var GameLabView = React.createClass({
 
     const visualizationColumnClassNames = classNames({
       responsive: this.props.isResponsive,
-      pin_bottom: this.props.pinWorkspaceToBottom
+      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom
     });
 
     return (

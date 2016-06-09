@@ -4,11 +4,11 @@ var i18n = require('./locale');
 <div class="netsim-router-tab">
   <h1><%= i18n.routerTab_stats() %></h1>
   <div class="router-stats"></div>
-  <% if (level.showRouterBandwidthControl) { %>
+  <% if (locals.level.showRouterBandwidthControl) { %>
     <h1><%= i18n.routerTab_bandwidth() %></h1>
     <div class="bandwidth-control"></div>
   <% } %>
-  <% if (level.showRouterMemoryControl) { %>
+  <% if (locals.level.showRouterMemoryControl) { %>
     <h1><%= i18n.routerTab_memory() %></h1>
     <div class="memory-control"></div>
   <% } %>

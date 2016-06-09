@@ -223,7 +223,7 @@ function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, opt
     return !options.paletteOnly || block.func in codeFunctions || block.func in docFunctions;
   }).map(function (block) {
     // We found this particular block, now override the defaults with extend
-    return $.extend({}, block, codeFunctions[block.func]);
+    return Object.assign({}, block, codeFunctions[block.func]);
   });
 }
 
@@ -238,7 +238,7 @@ function mergeCategoriesWithConfig(dropletConfig) {
   var dropletCategories = dropletConfig && dropletConfig.categories;
   // We include dropletCategories twice so that (a) it's ordering of categories
   // gets preference and (b) it's value override anything in standardConfig
-  return _.cloneDeep($.extend({}, dropletCategories, standardConfig.categories,
+  return _.cloneDeep(Object.assign({}, dropletCategories, standardConfig.categories,
     dropletCategories));
 }
 
@@ -501,14 +501,16 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
  * @param {object} config
  * @param {object[]} config.blocks
  * @param {object[]} config.categories
+ * @param {codeFunctions|null} codeFunctions with block overrides, may be null
  */
-function getModeOptionFunctionsFromConfig(config) {
+function getModeOptionFunctionsFromConfig(config, codeFunctions) {
   var mergedCategories = mergeCategoriesWithConfig(config);
+  var mergedFuncs = filteredBlocksFromConfig(codeFunctions, config, null, null);
 
   var modeOptionFunctions = {};
 
-  for (var i = 0; i < config.blocks.length; i++) {
-    var block = config.blocks[i];
+  for (var i = 0; i < mergedFuncs.length; i++) {
+    var block = mergedFuncs[i];
     var newFunc = {};
 
     switch (block.type) {
@@ -574,10 +576,13 @@ exports.generateDropletModeOptions = function (config) {
     paramButtonsForUnknownFunctions: true
   };
 
-  $.extend(modeOptions.functions,
-    getModeOptionFunctionsFromConfig({ blocks: exports.dropletGlobalConfigBlocks }),
-    getModeOptionFunctionsFromConfig({ blocks: exports.dropletBuiltinConfigBlocks }),
-    getModeOptionFunctionsFromConfig(config.dropletConfig)
+  Object.assign(modeOptions.functions,
+    getModeOptionFunctionsFromConfig({ blocks: exports.dropletGlobalConfigBlocks },
+      config.level.codeFunctions),
+    getModeOptionFunctionsFromConfig({ blocks: exports.dropletBuiltinConfigBlocks },
+      config.level.codeFunctions),
+    getModeOptionFunctionsFromConfig(config.dropletConfig,
+      config.level.codeFunctions)
   );
 
   return modeOptions;

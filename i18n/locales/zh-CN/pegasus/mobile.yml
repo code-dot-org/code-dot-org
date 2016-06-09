@@ -129,10 +129,10 @@ zh-CN:
   third_party_desc_40_4to8: 你捡币吗
   third_party_desc_dozens_kto8: 不，我撒币
   third_party_desc_10to15_3to12: 为 3-12 年级提供10到15节课
-  third_party_desc_25to40_3to12: 'From 25 - 40 lessons, intended for grades 3-12'
+  third_party_desc_25to40_3to12: 从25-40的课程，专门给3-12年级
   third_party_desc_20_2to8: 大约有20节课时面向2到8年级的
-  third_party_desc_7to22_5to12: 'Between 7 & 22 lessons, geared toward grades 5-12'
-  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
+  third_party_desc_7to22_5to12: 课程7-22之间，倾向5-12年级
+  third_party_desc_20_4to12: 超过20个课程， 倾向4-12年级
   enter_valid_age: 请选择一个有效的年龄
   enter_valid_email: 请输入一个有效的电子邮件地址
   get_a_certificate_message: "我们会向您发送证书和有关的信息 关于如何<a href='/learn/beyond'> 学习 1小时 以外 </a> "
@@ -179,13 +179,13 @@ zh-CN:
   learn_next_level: 继续到下一级别
   learn_online: 请尝试其他在线课程
   learn_classes: 查找本地的课程
-  hoc_is_here: "Learn computer science. It's changing everything.  https://youtu.be/xJqSu1IbcHg."
+  hoc_is_here: 学习计算机科学。计算机科学改变一切。 https://youtu.be/xJqSu1IbcHg.
   just_did_hoc: '我刚刚完成了 #HourOfCode —— 大家也来看看吧！@codeorg'
-  just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
-  just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
-  just_did_course3: 'I just finished Course 3 - check it out! @codeorg'
-  just_did_course4: 'I just finished Course 4 - check it out! @codeorg'
-  just_did_accelerated: 'I just finished the Accelerated Course - check it out! @codeorg'
+  just_did_course1: 我刚完成课程1-请查看！@codeorg
+  just_did_course2: 我刚完成课程2-请查看！@codeorg
+  just_did_course3: 我刚完成课程3-请查看！@codeorg
+  just_did_course4: 我刚完成课程4-请查看！@codeorg
+  just_did_accelerated: '我刚完成加速课程- 请查看！@codeorg'
   twitter_teach_cs: '90%的人认为，学校应该开展计算机科学教学活动。http://youtu.be/nKIu9yen5nc。访问 https://code.org/。'
   learn_hoc: 学习编程一小时
   beyond_hoc: 一小时之后
@@ -264,8 +264,8 @@ zh-CN:
   homepage_banner_privacy_link: 了解详情
   homepage_banner_20k_teachers: 两万名老师经过训练后，正在课堂上传授计算机科学。
   homepage_banner_20k_teachers_link: 了解详情
-  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress: 美国领导人正在呼吁国会拨款给 幼儿园-12年级 的计算机科学课程。
+  homepage_banner_congress_link: 添加您的支持
   homepage_slot_text_title_hoc: 编程一小时
   homepage_slot_text_blurb_hoc: 任何人都可学习。立即开始
   homepage_slot_text_link_hoc: 来试试“编程一小时”项目！
@@ -291,7 +291,7 @@ zh-CN:
   homepage_slot_text_link_stats: 请看统计信息
   homepage_slot_text_link_buy: 加入进来
   homepage_slot_text_link_donate: 捐一笔钱
-  homepage_slot_text_link_shop: 'T-shirts, hats, & more'
+  homepage_slot_text_link_shop: T 恤、 帽子，与更多
   homepage_header_codestudio: 编程工作室 学生作品
   homepage_header_donors: Code.org 感谢各位支持者
   homepage_donors_seall: 查看全部
@@ -434,6 +434,7 @@ zh-CN:
   dashboard_landing_new_beta: 新功能！K-5 学生可以尝试我们的 beta 实验版课程。
   dashboard_landing_new_k5courses: 新功能！K-5 学生可以尝试我们的课程。
   dashboard_landing_useful_links: 其他有用的链接
+  dashboard_landing_classroom_resources: 你的教室的资源
   dashboard_landing_office_hours: 面对面问问题！请访问我们每月的视频办公时间。
   dashboard_landing_print_certificates: 为完成此课程的学生打印证书
   dashboard_landing_educator_blog: 阅读有关新闻和我们在教育家博客的材料的更新
@@ -447,6 +448,10 @@ zh-CN:
   dashboard_landing_available_courses: 这些是目前可供您和您的学生使用的课程。
   dashboard_landing_more_tutorials: 想看更多教程吗？
   dashboard_landing_more_tutorials_desc: '<a href="/learn/beyond">我们的合作伙伴提供了更多的教程</a>。可以通过机器人，制作网页，制作你自己的应用程序学习编程，或探索其他语言如C++，Ruby，Python！'
+  dashboard_landing_inspire: 用海报、 视频和更多来激励你的学生。
+  dashboard_landing_video_library: 使用从计算机科学概念的视频库里的视频。
+  dashboard_landing_report_bug: 请求一个特性或报告一个漏洞。
+  dashboard_landing_teacher_forum: 加入一个专业学习的团体。
   dashboard_hoc_courses: 《代码一小时》适合所有年龄的人。
   dashboard_hoc_courses_desc: 和你的学生一同尝试任何这些不到 1 小时的辅导！
   dashboard_hoc_courses_desc_and_cta: '与你的学生一起尝试这些简短的一个小时的辅导。在计算机科学教育周期间 <a href="https://hourofcode.com"> 加入编程一小时活动</a>。'
@@ -477,11 +482,14 @@ zh-CN:
   dashboard_action_remove_confirm: 移除？
   dashboard_action_done: 完成
   dashboard_action_required: 必填
-  dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
-  dashboard_download_csv: Download CSV
+  dashboard_assessments_view: 查看评价：
+  dashboard_assessments_none: 没有评价
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: 总结
+  dashboard_assessments_answers: 全部答案
+  dashboard_filter_by_stage: 按阶段筛选 ︰
+  dashboard_filter_all: 全部
+  dashboard_download_csv: 下载 CSV
   dashboard_navigation_home_page: 教师主页
   dashboard_navigation_section_student_progress: 学生账户和进度
   dashboard_navigation_section_teacher_progress: 您的课程进度
@@ -506,10 +514,11 @@ zh-CN:
   dashboard_progress_completed_perfect: 完美完成
   dashboard_progress_furthest_level_attempted: 尝试过最远的关卡
   dashboard_progress_submitted: 已提交
-  dashboard_progress_view: 'View progress in:'
-  dashboard_progress_student_in_script: 'Progress information for %{student_name} in %{script_name}'
-  dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_progress_view: 查看进度 ︰
+  dashboard_progress_student_in_script: '%{student_name} 的进度信息在 %{script_name}'
+  dashboard_progress_pair_programming: pair programming
+  dashboard_responses_view: 查看文本响应 ︰
+  dashboard_responses_none: 没有文本响应
   dashboard_sections_new_section: 新的学习小组
   dashboard_sections_jumbotron_instruction: 创建新的学习小组并为其添加学生。学习小组可以帮助您以小组为单位来管理学生，以便您跟踪他们的进度和管理他们的帐户。
   dashboard_sections_table_section: 单元
@@ -581,6 +590,7 @@ zh-CN:
   dashboard_course2: 课程 2：
   dashboard_course3: 课程 3：
   dashboard_course4: '课程 4 (测试版)： '
+  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: 课程
   dashboard_curriculum_overview: K-5课程概述
   dashboard_overview: 概览
@@ -638,10 +648,10 @@ zh-CN:
   dashboard_faq_k5: K-5 组的常见问题
   dashboard_announcements: 公告
   dashboard_announce_view_all: 查看全部
-  dashboard_announce_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+  dashboard_announce_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
   dashboard_announce_button_text: 了解详情
-  dashboard_announce_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition: 作为一名教师，你在这项活动中以领先的方式给在每一个学校的每个学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、 28 州长和美国地球观测卫星委员会大公司一起在一封公开信要求美国国会资助 K-12 计算机科学教育。
+  dashboard_announce_petition_button: 添加您的姓名
   code_hoc_coming: 代码小时就在这里 — — 12 月 8-14 ！
   code_sign_up: 注册以便在计算机科学教育周期间参加
   learn_more: 现在就试试
@@ -751,30 +761,37 @@ zh-CN:
   course3_name: 课程 3
   course4_name: 第4课
   accelerated_name: 加速课程
-  cspunit1_name: CS Principles Unit 1
-  cspunit2_name: CS Principles Unit 2
-  cspunit3_name: CS Principles Unit 3
-  cspunit4_name: CS Principles Unit 4
-  cspunit5_name: CS Principles Unit 5
-  cspunit6_name: CS Principles Unit 6
+  cspunit1_name: 'Unit 1: Digital Information'
+  cspunit2_name: 'Unit 2: The Internet'
+  cspunit3_name: 'Unit 3: Programming'
+  cspunit4_name: 'Unit 4: Data'
+  cspunit5_name: 'Unit 5: Explore and Create PT'
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csp1_name: 'Unit 1: The Internet'
+  csp2_name: 'Unit 2: Digital Information'
+  cspassessment_name: 'Full Test - 50 questions'
+  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
+  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
   cspunit3_gradelevel: Grades 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   20-hour_name: 加速课程
   algebra_name: CS in Algebra
   AlgebraA_name: CS in Algebra Course A
   AlgebraB_name: CS in Algebra Course B
-  gumball_name: Gumball
+  gumball_name: 口香糖
   classicmaze_name: 经典迷宫
   iceage_name: 冰河世纪
   minecraft_name: 我的世界
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: 星球大战(块)
   math_category_name: 数学
   hoc_category_name: 编程一小时
-  csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
+  csf_category_name: 电脑科学基本原理
+  csp_category_name: 电脑科学法则
+  csp17_category_name: "'16-'17 CS Principles"
+  cspexams_category_name: CS Principles Practice Test
   applab_name: 应用实验室
   applab_gradelevel: 13岁以上
-  applab_shortdescription_congrats: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds
+  applab_shortdescription_congrats: 应用实验室是一个可以让你制造简单的应用程序的编程环境。设计应用程序，代码块或 JavaScript 来使它有作用，然后马上分享您的应用程序。
   codeorg_gradelevel: 适合年龄 4 岁以上
   codeintl_gradelevel: 适合年龄 4 岁以上
   thinkersmithspanish_gradelevel: Por todos
@@ -928,9 +945,9 @@ zh-CN:
   codesters_shortdescription: 开发您自己的游戏、 动画并使用 Python 进行艺术编程。
   texasinstruments_shortdescription: '使用 TI-84&#8482; +计算器。'
   teacherled_shortdescription: 从这些课件中得到启发，设计您自己的编程一小时活动。
-  course2_shortdescription_congrats: For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
-  course3_shortdescription_congrats: Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
-  course4_shortdescription_congrats: Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
+  course2_shortdescription_congrats: 对于具有基本阅读能力的学生来说，本课程是基于课程1。 学生将创造程序来解决问题和开发他们可以分享的互动式游戏或者故事。建议 2-5年级。
+  course3_shortdescription_congrats: 准备好到下一个级别了吗？学生将会更深入的探究前面课程介绍的编程主题来灵活解决更为复杂的问题。这门课程结束时， 学生将创造可以与任何人分享的的交互式故事和游戏。 建议给 4-5年级。
+  course4_shortdescription_congrats: 准备好继续了吗？学生将会更深入的探究前面课程介绍的编程主题来灵活解决更为复杂的问题。这门课程结束时， 学生将创造可以与任何人分享的的交互式故事和游戏。 建议给 4-8年级。
   codeorg_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这是一个游戏一样的自学教程，并由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座。通过学习，会了解到重复，循环，条件和基本算法。
   codeintl_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'

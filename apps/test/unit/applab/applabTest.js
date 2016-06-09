@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import {assert} from '../../util/configuredChai';
 var testUtils = require('../../util/testUtils');
 testUtils.setupLocales('applab');
@@ -340,10 +341,11 @@ describe('startSharedAppAfterWarnings', function () {
   });
 
   describe('is13plus', function () {
-    it('is true if user is signed in', function () {
+    it('is true if user is signed in and the server says so', function () {
       var component = shareWarnings.checkSharedAppWarnings({
         channelId: 'current_channel',
-        isSignedIn: true
+        isSignedIn: true,
+        is13Plus: true,
       });
       assert.equal(component.props.is13Plus, true);
     });

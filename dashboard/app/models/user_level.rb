@@ -26,6 +26,9 @@ class UserLevel < ActiveRecord::Base
   belongs_to :user
   belongs_to :level
   belongs_to :script
+  belongs_to :level_source
+
+  before_save :handle_unsubmit
 
   # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
   # word choice.
@@ -47,5 +50,11 @@ class UserLevel < ActiveRecord::Base
 
   def passing?
     Activity.passing? best_result
+  end
+
+  def handle_unsubmit
+    if submitted_changed? from: true, to: false
+      self.best_result = ActivityConstants::UNSUBMITTED_RESULT
+    end
   end
 end

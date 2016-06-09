@@ -23,15 +23,15 @@
           future: ikke mulig å være i framtiden
   hello: Hei, verden
   welcome_back: 'Velkommen tilbake, %{name}'
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: Læringsplanen din
+  see_your_learning_plan: Se læringsplanen din
   submit: Send
   unsubmit: Trekk tilbake
-  previous_page: Previous page
+  previous_page: Forrige side
   next_page: Neste side
   cancel: Avbryt
   okay: OK
-  heading_x_of_y: '%{heading} (page %{x} of %{y})'
+  heading_x_of_y: '%{heading} (side %{x} av %{y})'
   add_teacher_form:
     code:
       label: 'Legg til en lærer:'
@@ -326,7 +326,7 @@
     heading_hoc2014: '<h2>Kodetimen for</h2><h1>Alle aldre</h1>'
     heading_elementary: '<h2>20-timers kurs for</h2><h1>Nybegynnere (alle aldre)</h1>'
     heading_apps: '<h2>Moro for</h2><h1>Alle</h1>'
-    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
+    heading_tools: '<h2>Klar for neste trinn?</h2><h1>JavaScript-verktøy for videregående skole</h1>'
     heading_legacy: '<h2>Våre generelle kurs for</h2><h1>Alle aldre</h1>'
     your_gallery: Galleri
     no_primary_course: Prøv et kurs på Code Studio
@@ -334,16 +334,16 @@
     print_certificate: Skriv ut diplom
     announcement_title: Kunngjøringer
     announcement_view_all: Vis alle
-    announcement_message: "We've started to measure student learning in Courses 1-4 and our Accelerated Course on Code Studio. There's a lot that goes into it, so we're releasing a blog series in 3 parts. See how we're <a href='%{tagging_url}'>tagging concepts and difficulty in puzzles</a> and how we've <a href='%{ux_url}'>changed the user experience</a> to answer the big question: <i>What can students do?</i>"
+    announcement_message: 'Our Computer Science Fundamentals Course 4 is out of "beta" (a.k.a. test phase) and ready for your classroom. One of the top pieces of teacher feedback is that some students would like more difficult puzzles. Course 4 is a way for students to take their computer science skills to the next level!'
     announcement_button: Lær mer
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-    announcement_petition_button: Add your name
+    announcement_petition_button: Legg til navnet ditt
   move_students:
-    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
-    section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as the new section.
-    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
-    students_not_yours: You cannot move students from a section that does not belong to you.
+    new_section_dne: 'Beklager, men seksjon %{new_section_code} finnes ikke. Legg inn en annen seksjonskode.'
+    section_code_not_entered: Legg inn gjeldende_seksjons_kode.
+    section_code_cant_be_current_section: Gjeldende seksjon kan ikke være den samme som den nye seksjonen.
+    current_section_dne: 'Beklager, men seksjon %{current_section_code} finnes ikke. Legg inn en annen seksjonskode.'
+    students_not_yours: Du kan ikke flytte studenter fra en seksjon som ikke tilhører deg.
     stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
     student_ids_not_entered: Please provide student_ids.
     student_not_found: One or more students could not be found.
@@ -482,12 +482,14 @@
     picture_count: 'I løpet av de siste <b>%{days}</b> dager har elvever tegnet  <b>%{count}</b> bilder ved å skrive sine egne dataprogram. Klikk på bildene for å se hvert program kjøre!'
     activity_count: 'De siste <b>%{days}</b> dagene har elever laget <b>%{count}</b> apps og bilder ved å skrive sine egne programmer. Klikk på bildene og skjermbilder for å se hvert program i aksjon.'
     want_to_make_your_own: Vil du lage din egen?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Flere &rarr;'
     caption_by_name_age: 'av %{name}, %{age} år'
     caption_time_ago: '%{time_ago} siden'
     header: Galleri
     header_playlab: Spill-lab
     header_artist: Kunstner
+    report_abuse: Rapporter misbruk
   landing:
     prerelease: "Dette kurset er i <span class='betatext'> beta</span>.  Det betyr at det ikke er den endelige versjonen av kurset, men at det blir endret når vi får tilbakemeldinger og forbedringer er laget."
     prerelease_hoc2014: "Denne veiledningen er i <span class='betatext'> beta</span>.  Den vil kunne endres ettersom vi mottar tilbakemeldinger og gjør forbedringer."
@@ -667,6 +669,9 @@
     escalated:
       name: Escalated
       description: I would like an instructor to review this submission
+    instructor_feedback: Instructor Feedback
+    peer_feedback: Peer Feedback
+    outdated: This feedback was added for a previously submitted version
   components:
     icon_library:
       search_placeholder_text: Søk etter et ikon...
@@ -675,3 +680,5 @@
     required: Oversikt
     content: Content
     practice: Teacher Practices
+  external_links:
+    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
