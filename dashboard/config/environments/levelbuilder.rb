@@ -10,4 +10,7 @@ Dashboard::Application.configure do
 
   # Set to :debug to see everything in the log.
   config.log_level = :info
+
+  # Disable Rails.cache on levelbuilder (until code-dot-org/code-dot-org#8844 is merged)
+  config.cache_store = :null_store
 end

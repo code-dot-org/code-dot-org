@@ -643,6 +643,14 @@ StudioApp.prototype.configureHints_ = function (config) {
   var bubble = document.getElementById('bubble');
   if (bubble) {
     dom.addClickTouchEvent(bubble, function () {
+      const reduxState = this.reduxStore.getState();
+      const instructionsInTopPane = reduxState.pageConstants.instructionsInTopPane;
+      const hasAuthoredHints = reduxState.instructions.hasAuthoredHints;
+
+      // Don't show dialog on click in top pane unless we have hints
+      if (instructionsInTopPane && !hasAuthoredHints) {
+        return;
+      }
       this.showInstructionsDialog_(config.level, false, true);
     }.bind(this));
   }
@@ -1161,7 +1169,9 @@ StudioApp.prototype.getInstructionsContent_ = function (puzzleTitle, level, show
  * @param {boolean} showHints
  */
 StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHints) {
-  var isMarkdownMode = !!this.reduxStore.getState().instructions.longInstructions;
+  const reduxState = this.reduxStore.getState();
+  const isMarkdownMode = !!reduxState.instructions.longInstructions;
+  const instructionsInTopPane = reduxState.pageConstants.instructionsInTopPane;
 
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?
@@ -1212,7 +1222,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
 
   var hideFn = _.bind(function () {
     // Momentarily flash the instruction block white then back to regular.
-    if ($(endTargetSelector).length) {
+    if (!instructionsInTopPane) {
       $(endTargetSelector).css({"background-color":"rgba(255,255,255,1)"})
         .delay(500)
         .animate({"background-color":"rgba(0,0,0,0)"},1000);
@@ -2767,6 +2777,10 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     }
     // Never use short instructions in CSP
     shortInstructions = undefined;
+  } else {
+    if (config.showInstructionsInTopPane && shortInstructions === longInstructions) {
+      longInstructions = null;
+    }
   }
 
   this.reduxStore.dispatch(setInstructionsConstants({
