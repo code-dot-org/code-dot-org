@@ -19,7 +19,7 @@ module.exports = {
 
   list: function (allowedExtensions) {
     return allowedExtensions ? assets.filter(function (asset) {
-      var match = asset.filename.match(/\.[^.]+$/);
+      var match = asset.filename.toLowerCase().match(/\.[^.]+$/);
       if (match) {
         var extension = match[0];
         return allowedExtensions.split(', ').indexOf(extension) > -1;

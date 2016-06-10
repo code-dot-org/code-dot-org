@@ -204,7 +204,7 @@ function deviceOnPortAppearsUsable(port) {
  * @returns {Object.<String, Object>} board components
  */
 function initializeCircuitPlaygroundComponents(io, board) {
-  const pixels = Array.from({length: 10}, (_, index) => new five.Led.RGB({
+  const colorLeds = Array.from({length: 10}, (_, index) => new five.Led.RGB({
     controller: PlaygroundIO.Pixel,
     pin: index
   }));
@@ -226,31 +226,13 @@ function initializeCircuitPlaygroundComponents(io, board) {
   });
 
   return {
-    pixel0: pixels[0],
-    pixel1: pixels[1],
-    pixel2: pixels[2],
-    pixel3: pixels[3],
-    pixel4: pixels[4],
-    pixel5: pixels[5],
-    pixel6: pixels[6],
-    pixel7: pixels[7],
-    pixel8: pixels[8],
-    pixel9: pixels[9],
-    pixels: {
-      blink: () => pixels.forEach(p => p.blink()),
-      stop: () => pixels.forEach(p => p.stop()),
-      on: () => pixels.forEach(p => p.on()),
-      off: () => pixels.forEach(p => p.off()),
-      toggle: () => pixels.forEach(p => p.toggle()),
-      intensity: i => pixels.forEach(p => p.intensity(i)),
-      color: c => pixels.forEach(p => p.color(c))
-    },
+    colorLeds: colorLeds,
 
     led: new five.Led(13),
 
     toggleSwitch: new five.Switch('21'),
 
-    piezo: new five.Piezo({
+    buzzer: new five.Piezo({
       pin: '5',
       controller: PlaygroundIO.Piezo
     }),
