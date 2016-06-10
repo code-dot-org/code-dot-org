@@ -182,8 +182,7 @@
       "led.off": null,
       "buzzer.frequency": null,
       "buzzer.note": null,
-      "buzzer.stop": null,
-      "buzzer.play": null,
+      "buzzer.off": null,
       "isPressed": null,
       "holdTime": null,
       "toggleSwitch.isOpen": null
