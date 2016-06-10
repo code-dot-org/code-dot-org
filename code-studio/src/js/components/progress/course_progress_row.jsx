@@ -21,7 +21,7 @@ const styles = {
   focusAreaRow: {
     minHeight: 105,
     borderWidth: 3,
-    background: '#f5fcff',
+    background: color.almost_white_cyan,
     borderColor: color.cyan,
     padding: 8
   },
@@ -51,7 +51,7 @@ const styles = {
     padding: '5px 25px',
     transform: 'rotate(45deg)'
   },
-  editFocusArea: {
+  changeFocusArea: {
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.black,
     position: 'absolute',
@@ -75,16 +75,16 @@ const CourseProgressRow = React.createClass({
     const stage = this.props.stage;
 
     let rowStyle = Object.assign({}, styles.row);
-    let ribbon, editFocusArea;
+    let ribbon, changeFocusArea;
     if (this.props.professionalLearningCourse) {
       Object.assign(rowStyle, {background: color.white});
     }
     if (this.props.isFocusArea) {
       Object.assign(rowStyle, styles.focusAreaRow);
       ribbon = <div style={styles.ribbonWrapper}><div style={styles.ribbon}>Focus Area</div></div>;
-      editFocusArea = (
-        <a href={`${location.href}/preview_assignments`} style={styles.editFocusArea}>
-          <i className='fa fa-pencil' /> Edit your focus area
+      changeFocusArea = (
+        <a href={`${location.href}/preview_assignments`} style={styles.changeFocusArea}>
+          <i className='fa fa-pencil' /> Change your focus area
         </a>
       );
     }
@@ -92,7 +92,7 @@ const CourseProgressRow = React.createClass({
     return (
       <div style={rowStyle}>
         {ribbon}
-        {editFocusArea}
+        {changeFocusArea}
         <div style={styles.stageName}>
           {this.props.professionalLearningCourse ? stage.name : stage.title}
           <div className='stage-lesson-plan-link' style={{display: 'none'}}>
