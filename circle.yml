@@ -37,7 +37,6 @@ dependencies:
     - 'echo "build_pegasus: true" >> locals.yml'
     - 'echo "build_apps: true" >> locals.yml'
     - 'echo "localize_apps: true" >> locals.yml'
-    - 'echo "sync_assets: false" >> locals.yml'
     # Run rake install
     - bundle exec rake install
     # Run rake build (twice in case of intermittent test failures within rake build)
