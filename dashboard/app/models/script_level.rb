@@ -67,6 +67,36 @@ class ScriptLevel < ActiveRecord::Base
     end
   end
 
+  def has_another_level_to_go_to?
+    if script.professional_learning_course?
+      !end_of_stage?
+    else
+      next_progression_level
+    end
+  end
+
+  def next_level_or_redirect_path_for_user user
+    level_to_follow = (level.unplugged? || stage.try(:unplugged?)) ? next_level : next_progression_level
+
+    if script.professional_learning_course?
+      if levels[0].try(:plc_evaluation?)
+        if Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
+          script_preview_assignments_path(script)
+        else
+          build_script_level_path(level_to_follow)
+        end
+      else
+        if has_another_level_to_go_to?
+          build_script_level_path(level_to_follow)
+        else
+          script_path(script)
+        end
+      end
+    else
+      level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
+    end
+  end
+
   def next_level
     i = script.script_levels.index(self)
     return nil if i.nil? || i == script.script_levels.length

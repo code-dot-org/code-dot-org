@@ -162,6 +162,10 @@ FactoryGirl.define do
     properties{{question: 'question text', answers: [{text: 'text1', correct: true}], questions: [{text: 'text2'}], options: {hide_submit: false}}}
   end
 
+  factory :evaluation_multi, :parent => Level, :class => EvaluationMulti do
+    game {create(:game, app: 'evaluation_multi')}
+  end
+
   factory :external, parent: Level, class: External do
 
   end
