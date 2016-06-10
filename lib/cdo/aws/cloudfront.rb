@@ -305,15 +305,24 @@ module AWS
           IncludeCookies: false,
           Prefix: cloudfront[:log][:prefix]
         },
-        Origins: [{
-          Id: 'cdo',
-          CustomOriginConfig: {
-            OriginProtocolPolicy: 'match-viewer'
+        Origins: [
+          {
+            Id: 'cdo',
+            CustomOriginConfig: {
+              OriginProtocolPolicy: 'match-viewer'
+            },
+            DomainName: origin,
+            OriginPath: '',
           },
-          DomainName: origin,
-          OriginPath: '',
-
-        }],
+          {
+            id: 'cdo-assets',
+            DomainName: "#{CDO.assets_bucket}.s3.amazonaws.com",
+            OriginPath: "/#{rack_env}",
+            S3OriginConfig: {
+              OriginAccessIdentity: ''
+            },
+          },
+        ],
         PriceClass: 'PriceClass_All',
         Restrictions: {
           GeoRestriction: {
@@ -384,6 +393,11 @@ module AWS
 
     # Returns a CloudFront CacheBehavior Hash compatible with AWS CloudFormation.
     def self.cache_behavior_cloudformation(behavior_config, path=nil)
+      s3 = behavior_config[:proxy] == 'cdo-assets'
+      # Include Host header in CloudFront's cache key to match Varnish for custom origins.
+      # Include S3 forward headers for s3 origins.
+      headers = behavior_config[:headers] +
+        (s3 ? S3_FORWARD_HEADERS : %w(Host CloudFront-Forwarded-Proto))
       cookie_config = behavior_config[:cookies].is_a?(Array) ?
         {
           Forward: 'whitelist',
@@ -396,18 +410,18 @@ module AWS
       {
         AllowedMethods: ALLOWED_METHODS,
         CachedMethods: CACHED_METHODS,
-        Compress: false,
+        Compress: s3,
         DefaultTTL: 0,
         ForwardedValues: {
           Cookies: cookie_config,
           # Always explicitly include Host and CloudFront-Forwarded-Proto headers in CloudFront's cache key, to match Varnish defaults.
-          Headers: behavior_config[:headers] + %w(Host CloudFront-Forwarded-Proto),
+          Headers: headers,
           QueryString: true
         },
         MaxTTL: 31_536_000, # =1 year,
         MinTTL: 0,
         SmoothStreaming: false,
-        TargetOriginId: 'cdo',
+        TargetOriginId: (s3 ? behavior_config[:proxy] : 'cdo'),
         TrustedSigners: [],
         ViewerProtocolPolicy: 'redirect-to-https'
       }.tap do |behavior|
