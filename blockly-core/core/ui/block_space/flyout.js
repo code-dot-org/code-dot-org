@@ -786,6 +786,31 @@ Blockly.Flyout.prototype.updateBlockLimits_ = function() {
 };
 
 /**
+ * Returns true iff any of the blocks in this flyout are limited in quantity
+ * @return {boolean}
+ */
+Blockly.Flyout.prototype.hasBlockLimits = function() {
+  return Object.keys(this.blockLimits_).length > 0;
+};
+
+/**
+ * Returns true if the specified count of the specified block type can
+ * be added to this space without exceeding any block limits
+ * @param {string} type
+ * @param {number} count
+ * @return {boolean}
+ */
+Blockly.Flyout.prototype.blockTypeWithinLimits = function(type, count) {
+  if (count === undefined) {
+    count = 1;
+  }
+  if (this.blockLimits_[type]) {
+    return this.blockLimits_[type].totalRemaining() >= count;
+  }
+  return true;
+};
+
+/**
  * Stop binding to the global mouseup and mousemove events.
  * @private
  */
