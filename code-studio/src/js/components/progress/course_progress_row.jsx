@@ -1,11 +1,17 @@
 /* global dashboard */
 import React from 'react';
+import Radium from 'radium';
 import { connect } from 'react-redux';
 import { stageShape } from './types';
 import StageProgress from './stage_progress.jsx';
 import color from '../../color';
 
 const styles = {
+  lessonPlanLink: {
+    display: 'block',
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 10
+  },
   row: {
     position: 'relative',
     boxSizing: 'border-box',
@@ -67,6 +73,7 @@ const styles = {
 const CourseProgressRow = React.createClass({
   propTypes: {
     currentLevelId: React.PropTypes.string,
+    showLessonPlanLinks: React.PropTypes.bool,
     professionalLearningCourse: React.PropTypes.bool,
     isFocusArea: React.PropTypes.bool,
     stage: stageShape
@@ -75,39 +82,48 @@ const CourseProgressRow = React.createClass({
   render() {
     const stage = this.props.stage;
 
-    let rowStyle = Object.assign({}, styles.row);
-    let ribbon, changeFocusArea;
-    if (this.props.professionalLearningCourse) {
-      Object.assign(rowStyle, {background: color.white});
-    }
-    if (this.props.isFocusArea) {
-      Object.assign(rowStyle, styles.focusAreaRow);
-      ribbon = <div style={styles.ribbonWrapper}><div style={styles.ribbon}>Focus Area</div></div>;
-      changeFocusArea = (
-        <a href={this.props.changeFocusAreaPath} style={styles.changeFocusArea}>
-          <i className='fa fa-pencil' /> Change your focus area
-        </a>
-      );
-    }
-
     return (
-      <div style={rowStyle}>
-        {ribbon}
-        {changeFocusArea}
+      <div style={[
+        styles.row,
+        this.props.professionalLearningCourse && {background: color.white},
+        this.props.isFocusArea && styles.focusAreaRow
+      ]}>
+        {this.props.isFocusArea && [
+          <div style={styles.ribbonWrapper} key='ribbon'>
+            <div style={styles.ribbon}>Focus Area</div>
+          </div>,
+          <a
+            href={this.props.changeFocusAreaPath}
+            style={styles.changeFocusArea}
+            key='changeFocusArea'
+          >
+            <i className='fa fa-pencil' /> Change your focus area
+          </a>
+        ]}
         <div style={styles.stageName}>
           {this.props.professionalLearningCourse ? stage.name : stage.title}
-          <div className='stage-lesson-plan-link' style={{display: 'none'}}>
-            <a target='_blank' href={stage.lesson_plan_html_url}>
+          {this.props.showLessonPlanLinks && stage.lesson_plan_html_url &&
+            <a
+              target='_blank'
+              href={stage.lesson_plan_html_url}
+              style={styles.lessonPlanLink}
+            >
               {dashboard.i18n.t('view_lesson_plan')}
             </a>
-          </div>
+          }
         </div>
-        <StageProgress levels={stage.levels} currentLevelId={this.props.currentLevelId} largeDots={true} saveAnswersFirst={false} />
+        <StageProgress
+          levels={stage.levels}
+          currentLevelId={this.props.currentLevelId}
+          largeDots={true}
+          saveAnswersFirst={false}
+        />
       </div>
     );
   }
 });
 
 export default connect(state => ({
+  showLessonPlanLinks: state.showLessonPlanLinks,
   changeFocusAreaPath: state.changeFocusAreaPath
-}))(CourseProgressRow);
+}))(Radium(CourseProgressRow));
