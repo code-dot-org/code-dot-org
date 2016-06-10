@@ -196,20 +196,15 @@ function loadProgress(scriptData, currentLevelId) {
   let store = createStore((state = [], action) => {
     if (action.type === 'MERGE_PROGRESS') {
       let newProgress = {};
-      return {
-        currentLevelId: state.currentLevelId,
-        professionalLearningCourse: state.professionalLearningCourse,
+      return Object.assign(state, {
         progress: newProgress,
-        changeFocusAreaPath: state.changeFocusAreaPath,
-        focusAreaPositions: state.focusAreaPositions,
-        showLessonPlanLinks: state.showLessonPlanLinks,
         stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
           let id = level.uid || progress.bestResultLevelId(level.ids, state.progress, action.progress);
           newProgress[id] = clientState.mergeActivityResult(state.progress[id], action.progress[id]);
 
           return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id]), id: id});
         })}))
-      };
+      });
     } else if (action.type === 'UPDATE_FOCUS_AREAS') {
       return Object.assign(state, {
         changeFocusAreaPath: action.changeFocusAreaPath,
@@ -225,9 +220,7 @@ function loadProgress(scriptData, currentLevelId) {
     currentLevelId: currentLevelId,
     professionalLearningCourse: scriptData.plc,
     progress: {},
-    changeFocusAreaPath: null,
     focusAreaPositions: [],
-    showLessonPlanLinks: false,
     stages: scriptData.stages
   });
 
