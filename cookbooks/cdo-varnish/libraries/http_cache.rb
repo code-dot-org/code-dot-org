@@ -111,7 +111,7 @@ class HttpCache
             # Serve Sprockets-bundled assets directly from the S3 bucket synced via `assets:precompile`.
             #
             path: '/assets/*',
-            proxy: 'cdo-assets',
+            proxy: rack_env?(:test) ? 'dashboard' : 'cdo-assets',
             headers: [],
             cookies: 'none'
           },
