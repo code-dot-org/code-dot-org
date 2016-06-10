@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-06-10T17:40:07.000Z",
+  "created_at": "2016-06-10T18:02:17.530Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -201,9 +201,7 @@
     "debugger_disabled": "false"
   },
   "published": true,
-  "notes": "",
-  "level_concept_difficulty": {
-  }
+  "notes": ""
 }]]></config>
   <blocks/>
 </Gamelab>
