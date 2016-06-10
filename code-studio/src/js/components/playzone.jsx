@@ -2,7 +2,27 @@
  * @overview React for the End-of-Stage Experience
  */
 /* global React */
-var color = require('@cdo/apps/color');
+import color from '@cdo/apps/color';
+
+const styles = {
+  container: {
+    margin: 20
+  },
+  primaryHeader: {
+    fontSize: '200%'
+  },
+  secondaryHeader: {
+    color: color.charcoal
+  },
+  courseblockContainer: {
+    width: 720,
+    paddingTop: 20
+  },
+  continueButton: {
+    marginTop: 20,
+    marginRight: 0
+  }
+};
 
 export class PlayZone extends React.Component {
   constructor(props) {
@@ -27,22 +47,18 @@ export class PlayZone extends React.Component {
       className: "projects",
       description: this.props.i18n.t('components.playzone.projects_description'),
     }];
-
-    this.styles = {
-      container: {margin: '20px'},
-      primaryHeader: {fontSize: '200%'},
-      secondaryHeader: {color: color.charcoal},
-      courseblockContainer: {width: '720px', paddingTop: '20px'},
-      continueButton: {marginTop: '20px', marginRight: 0}
-    };
   }
 
   render() {
     return (
-      <div style={this.styles.container}>
-        <h1 style={this.styles.primaryHeader}>{this.props.i18n.t('components.playzone.primary_header', {stageName: this.props.stageName})}</h1>
-        <h4 style={this.styles.secondaryHeader}>{this.props.i18n.t('components.playzone.secondary_header')}</h4>
-        <div className="center" style={this.styles.courseblockContainer}>{this.links.map(link =>
+      <div style={styles.container}>
+        <h1 style={styles.primaryHeader}>
+          {this.props.i18n.t('components.playzone.primary_header', {stageName: this.props.stageName})}
+        </h1>
+        <h4 style={styles.secondaryHeader}>
+          {this.props.i18n.t('components.playzone.secondary_header')}
+        </h4>
+        <div className="center" style={styles.courseblockContainer}>{this.links.map(link =>
           <div key={link.className} className="courseblock-noaction courseblock-span3 courseblock-tall">
             <a href={link.href}>
               <div className="imgspan">
@@ -56,7 +72,9 @@ export class PlayZone extends React.Component {
           </div>
         )}</div>
         <div className="farSide">
-          <button id="ok-button" onClick={this.props.onContinue} style={this.styles.continueButton}>
+          <button id="ok-button"
+              onClick={this.props.onContinue}
+              style={styles.continueButton}>
             {this.props.i18n.t('components.playzone.continue_button')}
           </button>
         </div>

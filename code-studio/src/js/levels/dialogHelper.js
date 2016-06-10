@@ -1,7 +1,7 @@
 /* globals appOptions, Dialog, getResult, CDOSounds, showVideoDialog, dashboard */
 import $ from 'jquery';
-var PlayZone = require('../components/playzone').PlayZone;
-var ReactDOM = require('react-dom');
+import { PlayZone } from '../components/playzone';
+import ReactDOM from 'react-dom';
 
 /*
  * This file contains general logic for displaying modal dialogs and handling
@@ -203,17 +203,20 @@ window.dashboard.dialog = (function () {
         if (lastServerResponse.videoInfo) {
           window.dashboard.videos.showVideoDialog(lastServerResponse.videoInfo);
         } else if (lastServerResponse.endOfStageExperience) {
-          var body = document.createElement('div');
-          var props = {
-            stageName: `Stage ${lastServerResponse.previousStageInfo.position}: ${lastServerResponse.previousStageInfo.name}`,
-            onContinue: () => { dialog.hide(); },
-            i18n: window.dashboard.i18n
-          };
-          ReactDOM.render(<PlayZone {...props} />, body);
-          var dialog = new Dialog({
+          let body = document.createElement('div');
+          let stageInfo = lastServerResponse.previousStageInfo;
+          let stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
+          ReactDOM.render(
+            <PlayZone
+              stageName={stageName}
+              onContinue={() => { dialog.hide(); }}
+              i18n={window.dashboard.i18n}/>,
+            body
+          );
+          const dialog = new Dialog({
             body: body,
             width: 800,
-            redirect : lastServerResponse.nextRedirect
+            redirect: lastServerResponse.nextRedirect
           });
           dialog.show();
         } else if (lastServerResponse.nextRedirect) {
