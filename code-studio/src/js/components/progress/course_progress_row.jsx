@@ -1,5 +1,6 @@
 /* global dashboard */
 import React from 'react';
+import { connect } from 'react-redux';
 import { stageShape } from './types';
 import StageProgress from './stage_progress.jsx';
 import color from '../../color';
@@ -102,4 +103,6 @@ const CourseProgressRow = React.createClass({
     );
   }
 });
-module.exports = CourseProgressRow;
+export default connect(state => ({
+  showLessonPlanLinks: state.showLessonPlanLinks
+}))(CourseProgressRow);
