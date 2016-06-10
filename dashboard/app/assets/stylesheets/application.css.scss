@@ -1526,11 +1526,19 @@ a.download-video {
   }
 }
 
-.hoc_download_subtitle {
-  color: $teal;
-  font-size: 26px;
-  margin-top: 48px;
-  margin-bottom: 48px;
+#hoc_download {
+  color: $charcoal;
+  .capsule {
+    background-color: $lightest_gray;
+    border-radius: 10px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-top: 20px;
+    padding-bottom: 28px;
+  }
+  .indent {
+    margin-left: 20px;
+  }
 }
 
 @mixin yTranslation($offset) {
