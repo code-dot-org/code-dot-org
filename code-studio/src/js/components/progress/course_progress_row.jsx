@@ -25,8 +25,9 @@ const styles = {
     width: '100%'
   },
   focusAreaRow: {
-    minHeight: 90,
+    minHeight: 105,
     borderWidth: 3,
+    background: color.almost_white_cyan,
     borderColor: color.cyan,
     padding: 8
   },
@@ -45,6 +46,7 @@ const styles = {
     overflow: 'hidden'
   },
   ribbon: {
+    fontFamily: '"Gotham 5r", sans-serif',
     position: 'absolute',
     top: 16,
     right: -32,
@@ -54,6 +56,13 @@ const styles = {
     color: color.white,
     padding: '5px 25px',
     transform: 'rotate(45deg)'
+  },
+  changeFocusArea: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.black,
+    position: 'absolute',
+    right: 5,
+    bottom: 5
   }
 };
 
@@ -82,20 +91,26 @@ const CourseProgressRow = React.createClass({
     }
 
     let rowStyle = Object.assign({}, styles.row);
-    let ribbon;
+    let ribbon, changeFocusArea;
     if (this.props.professionalLearningCourse) {
       Object.assign(rowStyle, {background: color.white});
     }
     if (this.props.isFocusArea) {
       Object.assign(rowStyle, styles.focusAreaRow);
       ribbon = <div style={styles.ribbonWrapper}><div style={styles.ribbon}>Focus Area</div></div>;
+      changeFocusArea = (
+        <a href={this.props.changeFocusAreaPath} style={styles.changeFocusArea}>
+          <i className='fa fa-pencil' /> Change your focus area
+        </a>
+      );
     }
 
     return (
       <div style={rowStyle}>
         {ribbon}
+        {changeFocusArea}
         <div style={styles.stageName}>
-          {stage.title}
+          {this.props.professionalLearningCourse ? stage.name : stage.title}
           {lessonPlanLink}
         </div>
         <StageProgress levels={stage.levels} currentLevelId={this.props.currentLevelId} largeDots={true} saveAnswersFirst={false} />
@@ -103,6 +118,8 @@ const CourseProgressRow = React.createClass({
     );
   }
 });
+
 export default connect(state => ({
-  showLessonPlanLinks: state.showLessonPlanLinks
+  showLessonPlanLinks: state.showLessonPlanLinks,
+  changeFocusAreaPath: state.changeFocusAreaPath
 }))(CourseProgressRow);
