@@ -64,7 +64,7 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
   var levelRepeat = 0;
 
   var combinedProgress = stageData.levels.map(function (scriptlevel, index) {
-    var levelId = progress.bestResultLevelId(scriptlevel.ids, serverProgress);
+    var levelId = progress.bestResultLevelId(scriptlevel.ids, serverProgress, clientProgress);
 
     // If we have a multi-page level, then we will encounter the same level ID
     // multiple times in a row.  Keep track of how many times we've seen it
@@ -156,24 +156,25 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 
 // Return the level with the highest progress, or the first level if none have
 // been attempted
-progress.bestResultLevelId = function (levelIds, progress) {
+progress.bestResultLevelId = function (levelIds, serverProgress, clientProgress) {
   // The usual case
   if (levelIds.length === 1) {
     return levelIds[0];
   }
 
   // Return the level with the highest result
-  var attemptedIds = levelIds.filter(id => progress[id]);
+  var attemptedIds = levelIds.filter(id => serverProgress[id] || clientProgress[id]);
   if (attemptedIds.length === 0) {
     // None of them have been attempted, just return the first
     return levelIds[0];
   }
   var bestId = attemptedIds[0];
-  var bestResult = progress[bestId];
+  var bestResult = clientState.mergeActivityResult(serverProgress[bestId], clientProgress[bestId]);
   attemptedIds.forEach(function (id) {
-    if (progress[id] > bestResult) {
+    var result = clientState.mergeActivityResult(serverProgress[id], clientProgress[id]);
+    if (result > bestResult) {
       bestId = id;
-      bestResult = progress[id];
+      bestResult = result;
     }
   });
   return bestId;
@@ -190,10 +191,10 @@ function loadProgress(scriptData, currentLevelId) {
         display: state.display,
         progress: newProgress,
         stages: state.stages.map(stage => _.assign({}, stage, {levels: stage.levels.map(level => {
-          let id = level.uid || level.id;
+          let id = level.uid || progress.bestResultLevelId(level.ids, state.progress, action.progress);
           newProgress[id] = clientState.mergeActivityResult(state.progress[id], action.progress[id]);
 
-          return _.assign({}, level, {status: progress.activityCssClass(newProgress[id])});
+          return _.assign({}, level, {status: progress.activityCssClass(newProgress[id]), id: id});
         })}))
       };
     }
