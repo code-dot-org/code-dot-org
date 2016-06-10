@@ -5,6 +5,11 @@ import StageProgress from './stage_progress.jsx';
 import color from '../../color';
 
 const styles = {
+  lessonPlanLink: {
+    display: 'block',
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 10
+  },
   row: {
     position: 'relative',
     boxSizing: 'border-box',
@@ -57,6 +62,7 @@ const styles = {
 const CourseProgressRow = React.createClass({
   propTypes: {
     currentLevelId: React.PropTypes.string,
+    showLessonPlanLinks: React.PropTypes.bool,
     professionalLearningCourse: React.PropTypes.bool,
     isFocusArea: React.PropTypes.bool,
     stage: stageShape
@@ -64,6 +70,15 @@ const CourseProgressRow = React.createClass({
 
   render() {
     const stage = this.props.stage;
+
+    let lessonPlanLink;
+    if (this.props.showLessonPlanLinks && stage.lesson_plan_html_url) {
+      lessonPlanLink = (
+        <a target='_blank' href={stage.lesson_plan_html_url} style={styles.lessonPlanLink}>
+          {dashboard.i18n.t('view_lesson_plan')}
+        </a>
+      );
+    }
 
     let rowStyle = Object.assign({}, styles.row);
     let ribbon;
@@ -80,11 +95,7 @@ const CourseProgressRow = React.createClass({
         {ribbon}
         <div style={styles.stageName}>
           {stage.title}
-          <div className='stage-lesson-plan-link' style={{display: 'none'}}>
-            <a target='_blank' href={stage.lesson_plan_html_url}>
-              {dashboard.i18n.t('view_lesson_plan')}
-            </a>
-          </div>
+          {lessonPlanLink}
         </div>
         <StageProgress levels={stage.levels} currentLevelId={this.props.currentLevelId} largeDots={true} saveAnswersFirst={false} />
       </div>
