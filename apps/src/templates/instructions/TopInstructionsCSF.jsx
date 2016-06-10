@@ -83,6 +83,9 @@ var TopInstructions = React.createClass({
     hasAuthoredHints: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     smallStaticAvatar: React.PropTypes.string,
+    inputOutputTable: React.PropTypes.arrayOf(
+      React.PropTypes.arrayOf(React.PropTypes.number)
+    ),
 
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
@@ -237,6 +240,7 @@ var TopInstructions = React.createClass({
               ref="instructions"
               renderedMarkdown={renderedMarkdown}
               onResize={this.adjustMaxNeededHeight}
+              inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
               inTopPane
           />
           <CollapserButton
@@ -266,7 +270,8 @@ module.exports = connect(function propsFromStore(state) {
     longInstructions: state.instructions.longInstructions,
     hasAuthoredHints: state.instructions.hasAuthoredHints,
     isRtl: state.pageConstants.localeDirection === 'rtl',
-    smallStaticAvatar: state.pageConstants.smallStaticAvatar
+    smallStaticAvatar: state.pageConstants.smallStaticAvatar,
+    inputOutputTable: state.pageConstants.inputOutputTable
   };
 }, function propsFromDispatch(dispatch) {
   return {

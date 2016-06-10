@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 var commonStyles = require('../commonStyles');
 var color = require('../color');
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
-var InputOutputTable = require('./InputOutputTable');
+import InputOutputTable from './instructions/InputOutputTable';
 import PromptIcon from './instructions/PromptIcon';
 
 /**
