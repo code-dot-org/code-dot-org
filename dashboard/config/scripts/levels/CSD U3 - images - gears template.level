@@ -1,0 +1,42 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-06-09T23:55:04.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "show_d_pad": "true",
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "start_blocks": "var blueGear = createSprite(100, 220);\r\nblueGear.setAnimation(\"blueGear.png\");\r\n\r\nvar greenGear = createSprite(183, 298);\r\ngreenGear.setAnimation(\"greenGear.png\");\r\n\r\nvar redGear = createSprite(185, 145);\r\nredGear.setAnimation(\"redGear.png\");\r\n\r\nfunction draw() {\r\n  redGear.rotation = redGear.rotation + 1;\r\n  blueGear.rotation = blueGear.rotation - 1;\r\n  greenGear.rotation = greenGear.rotation + 1;\r\n  background(\"white\");\r\n  drawSprites();\r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

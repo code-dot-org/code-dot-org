@@ -47,7 +47,11 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "comment": null,
+      "comment_GameLab": null,
+      "comment_Variables": null,
+      "comment_Math": null,
+      "comment_Drawing": null,
+      "comment_Sprites": null,
       "console.log": null
     },
     "edit_code": true,
@@ -76,8 +80,9 @@
     "debugger_disabled": "false",
     "instructions": "Do this",
     "show_d_pad": "false",
-    "markdown_instructions": "# Random Around Point\r\n\r\nNow that you can make something follow the mouse lets make a swarm of things that float around the mouse.\r\n\r\n# Do This\r\n\r\n* Create 2 sprites and get them to draw on the screen\r\n* Make the 2 sprites follow the mouse location\r\n* Update the x and y location of the sprites to be the mouse position plus a random number ranging from -10 to 10\r\n\t* This will make the position of the sprite be around the mouse but not always at the exact x and y position\r\n* Mess with the `frameRate` to see how the swarm changes with different frame rates",
-    "start_blocks": "function draw() {\r\n\r\n}"
+    "markdown_instructions": "# Random Around Point\r\n\r\n<img src=\"https://images.code.org/706cbbc5faf6f956493202564104e11e-image-1465511519743.gif\" style=\"width:250px; float:right\">\r\n\r\nNow that you can make the bee follow the mouse lets make a bunch of bees fly near the mouse like shown in the visual on the right.  In order to do this you will need to add a random amount between -10 and 10 to the mouseX or mouseY.  \r\n\r\n# Do This\r\n* You already have one bee sprite that follows the mouse.\r\n* Add 3 more bee sprites that follow the mouse\r\n* Update the x and y location to be randomly close to the mouse\r\n\t* Add a random number between -10 and 10 to the mouseX and mouseY \r\n* Mess with the `frameRate` to find the best frame rate",
+    "start_blocks": "function draw() {\r\n\r\n}",
+    "project_template_level_name": "CSD U3 - images - bee template"
   },
   "published": true,
   "notes": "",
