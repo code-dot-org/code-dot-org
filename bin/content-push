@@ -15,7 +15,12 @@ def ask_for_name
 end
 
 def check_changes
-  system("git status -uall #{CONTENT_PATHS}")
+  if `git status --porcelain --untracked-files=all #{CONTENT_PATHS}`.empty?
+    puts "There are no unstaged or untracked files to commit."
+    return false
+  end
+
+  system("git status --untracked-files=all #{CONTENT_PATHS}")
   print "Should I commit and push all of these unstaged and untracked files in pegasus and dashboard? [Y/n] "
   input = gets.chomp
   if input == '' || input[0].downcase == 'y'
@@ -29,9 +34,9 @@ end
 
 def commit_changes(name)
   branchname = `git rev-parse --abbrev-ref HEAD`.strip
-  system("git add -A #{CONTENT_PATHS}")
-  system("git commit #{CONTENT_PATHS} -m '#{branchname} content changes (-#{name})'")
-  puts `git push`
+  exit 1 unless system("git add -A #{CONTENT_PATHS}")
+  exit 1 unless system("git commit #{CONTENT_PATHS} -m '#{branchname} content changes (-#{name})'")
+  exit 1 unless system("git push")
 end
 
 options = {}
