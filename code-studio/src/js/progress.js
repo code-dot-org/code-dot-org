@@ -140,6 +140,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     if (data.focusAreaPositions) {
       store.dispatch({
         type: 'UPDATE_FOCUS_AREAS',
+        changeFocusAreaPath: data.changeFocusAreaPath,
         focusAreaPositions: data.focusAreaPositions
       });
     }
@@ -197,6 +198,7 @@ function loadProgress(scriptData, currentLevelId) {
         currentLevelId: state.currentLevelId,
         professionalLearningCourse: state.professionalLearningCourse,
         progress: newProgress,
+        changeFocusAreaPath: state.changeFocusAreaPath,
         focusAreaPositions: state.focusAreaPositions,
         stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
           let id = level.uid || progress.bestResultLevelId(level.ids, state.progress, action.progress);
@@ -206,13 +208,17 @@ function loadProgress(scriptData, currentLevelId) {
         })}))
       };
     } else if (action.type === 'UPDATE_FOCUS_AREAS') {
-      return Object.assign(state, {focusAreaPositions: action.focusAreaPositions});
+      return Object.assign(state, {
+        changeFocusAreaPath: action.changeFocusAreaPath,
+        focusAreaPositions: action.focusAreaPositions
+      });
     }
     return state;
   }, {
     currentLevelId: currentLevelId,
     professionalLearningCourse: scriptData.plc,
     progress: {},
+    changeFocusAreaPath: null,
     focusAreaPositions: [],
     stages: scriptData.stages
   });
