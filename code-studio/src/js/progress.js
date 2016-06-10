@@ -106,6 +106,7 @@ progress.renderStageProgress = function (stageData, progressData, clientProgress
       status: status,
       kind: scriptlevel.kind,
       url: href,
+      icon: scriptlevel.icon,
       uid: scriptlevel.uid,
       id: levelId
     };
@@ -134,6 +135,13 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     // Show lesson plan links if teacher
     if (data.isTeacher) {
       $('.stage-lesson-plan-link').show();
+    }
+
+    if (data.focusAreaPositions) {
+      store.dispatch({
+        type: 'UPDATE_FOCUS_AREAS',
+        focusAreaPositions: data.focusAreaPositions
+      });
     }
 
     // Merge progress from server (loaded via AJAX)
@@ -181,28 +189,31 @@ progress.bestResultLevelId = function (levelIds, serverProgress, clientProgress)
 };
 
 function loadProgress(scriptData, currentLevelId) {
-  var teacherCourse = $('#landingpage').hasClass('teacher-course');
 
   let store = createStore((state = [], action) => {
     if (action.type === 'MERGE_PROGRESS') {
       let newProgress = {};
       return {
         currentLevelId: state.currentLevelId,
-        display: state.display,
+        professionalLearningCourse: state.professionalLearningCourse,
         progress: newProgress,
-        stages: state.stages.map(stage => _.assign({}, stage, {levels: stage.levels.map(level => {
+        focusAreaPositions: state.focusAreaPositions,
+        stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map(level => {
           let id = level.uid || progress.bestResultLevelId(level.ids, state.progress, action.progress);
           newProgress[id] = clientState.mergeActivityResult(state.progress[id], action.progress[id]);
 
-          return _.assign({}, level, {status: progress.activityCssClass(newProgress[id]), id: id});
+          return Object.assign({}, level, {status: progress.activityCssClass(newProgress[id]), id: id});
         })}))
       };
+    } else if (action.type === 'UPDATE_FOCUS_AREAS') {
+      return Object.assign(state, {focusAreaPositions: action.focusAreaPositions});
     }
     return state;
   }, {
     currentLevelId: currentLevelId,
-    display: teacherCourse ? 'list' : 'dots',
+    professionalLearningCourse: scriptData.plc,
     progress: {},
+    focusAreaPositions: [],
     stages: scriptData.stages
   });
 

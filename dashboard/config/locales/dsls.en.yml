@@ -1863,6 +1863,22 @@ en:
       v2 U2L9 Student Lesson Introduction:
         description here: description here
         title: title
+      v2 U3L01 Student Lesson Introduction:
+        Why Programming and Programming Languages?: Why Programming and Programming Languages?
+      v2 U3L04 Student Lesson Introduction:
+        Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: Creating Functions
+      v2 U3L07 Student Lesson Introduction:
+        APIs and Function Parameters: APIs and Function Parameters
+      v2 U3L08 Student Lesson Introduction:
+        Creating Functions with Parameters: Creating Functions with Parameters
+      v2 U3L09 Student Lesson Introduction:
+        Looping and Random Numbers: Looping and Random Numbers
+      v2 U3L10 Student Lesson Introduction:
+        Design a Digital Scene: Design a Digital Scene
+      v2 U3L6 Student Lesson Introduction:
+        Functions and Top-Down Design: Functions and Top-Down Design
       wn scratchjr 1:
         Scratch Jr: Scratch Jr
     level_group:
