@@ -46,6 +46,7 @@ module.exports.blocks = [
   {func: 'buzzer', category: 'Circuit', type: 'readonlyproperty', noAutocomplete: true},
   {func: 'buzzer.frequency', category: 'Circuit', paletteParams: ['frequency', 'duration'], params: ['500', '100']},
   {func: 'buzzer.note', category: 'Circuit', paletteParams: ['note', 'duration'], params: ['"A4"', '100']},
+  {func: 'buzzer.off', category: 'Circuit'},
   {func: 'buzzer.stop', category: 'Circuit'},
   {func: 'buzzer.play', category: 'Circuit', paletteParams: ['song'], params: [JSON.stringify(playSongConfig)]},
 
