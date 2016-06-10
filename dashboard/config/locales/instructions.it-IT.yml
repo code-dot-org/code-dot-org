@@ -84,6 +84,10 @@
         un quadrato" in "disegna un esagono", ma realizza ancora quadrati! Puoi modificare
         la funzione "disegna un esagono" in modo che produca un esagono con i lati
         lunghi 50 pixel, e riprodurre poi tutta la figura usando la nuova funzione?
+      2-3 Artist Functions 12 Mike_instruction: 'Le funzioni sono davvero utili per
+        disegnare più volte oggetti complessi. Puoi usare la funzione "disegna un
+        fiore" per riempire il resto della fioriera? (Suggerimento: le piante sono
+        tutte distanti 100 pixel l''una dall''altra)  '
       2-3 Artist Functions 12_instruction: 'Le funzioni sono davvero utili per disegnare
         più volte oggetti complessi. Puoi usare la funzione "disegna un fiore" per
         riempire il resto della fioriera? (Suggerimento: le piante sono tutte distanti
@@ -737,6 +741,12 @@
         arrivare al girasole.
       4-5 Maze Conditionals 1_instruction: Usa il blocco "ripeti fino a che" per far
         arrivare lo zombie fino al girasole.
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: Usa il blocco "ripeti fino a che" per far
         arrivare lo zombie fino al girasole.
       4-5 Maze Conditionals 3_instruction: 'Usa il blocco "se c''è strada" per decidere
@@ -3027,6 +3037,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

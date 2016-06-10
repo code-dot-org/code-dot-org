@@ -491,12 +491,14 @@ fi:
     picture_count: 'Viimeisen <b>%{days}</b> päivän aikana oppilaat ovat piirtäneet <b>%{count}</b> kuvaa kirjoittamalla omia tietokoneohjelmiaan. Napsauta kuvia nähdäksesi kunkin ohjelman toiminnassa.'
     activity_count: 'Viimeisen <b>%{days}</b> päivän aikana oppilaat ovat tehneet <b>%{count}</b> sovellusta ja kuvaa kirjoittamalla omia tietokoneohjelmiaan. Napsauta kuvia ja kuvaruutukaappauksia nähdäksesi kunkin ohjelman toiminnassa.'
     want_to_make_your_own: Haluatko tehdä omasi?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Lisää &rarr;'
     caption_by_name_age: '%{name} tekemä, ikä %{age}'
     caption_time_ago: '%{time_ago} sitten'
     header: Galleria
     header_playlab: Pelilabra
     header_artist: Taiteilija
+    report_abuse: Ilmoita väärinkäytöksestä
   landing:
     prerelease: "Tämä kurssi on <span class='betatext'>beta</span>.  Tämä tarkoittaa, että kurssin verso ei ole lopullinen ja siitä saattaa tulla uusia paranneltuja versioita reaktiona saatuun palautteeseen."
     prerelease_hoc2014: "Tämä opetusohjelma on <span class='betatext'>beta</span>. Sitä muutetaan palautteen mukaisesti sen parantamiseksi."

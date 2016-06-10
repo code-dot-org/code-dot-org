@@ -74,6 +74,9 @@
         fallsins í "teikna sexhyrning", en það teiknar samt bara ferninga! Getur þú
         breytt "teikna sexhyrning" fallinu svo það teikni sexhyrning með 50 díla hliðar
         og notað það svo til að teikna myndina?
+      2-3 Artist Functions 12 Mike_instruction: 'Föll er mjög hentug ef teikna þarf
+        flókna hluti mörgum sinnum. Getur þú notað fallið "teikna blóm" til að fylla
+        blómabeðið? (Vísbending: Það eru 100 dílar á milli plantna)  '
       2-3 Artist Functions 12_instruction: 'Föll er mjög hentug ef teikna þarf flókna
         hluti mörgum sinnum. Getur þú notað fallið "teikna blóm" til að fylla blómabeðið?
         (Vísbending: Það eru 100 dílar á milli plantna)  '
@@ -640,6 +643,12 @@
       4-5 Maze Assessment 1_instruction: 'Mat: Náðu til sólblómsins.'
       4-5 Maze Conditionals 1_instruction: Notaðu "endurtaka þar til" kubb til að
         koma uppvakningnum til sólblómsins.
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: Notaðu "endurtaka þar til" kubb til að
         koma uppvakningnum til sólblómsins.
       4-5 Maze Conditionals 3_instruction: 'Notaðu "ef" kubbinn til að láta mig ákveða
@@ -2547,6 +2556,10 @@
         Luigi enn gagnlegra?'
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: Allar breytur og föll byrja hér sem innantómir
         stúfar. Hver þraut mun fást við að skilgreina nokkra í einu og þannig smám
         saman auka við virknina.

@@ -45,6 +45,7 @@ ar:
       2-3 Artist Functions 10_instruction: هنا معادلتين، إحداهما لرسم دولاب كبير والأخرى لرسم آخر صغير. استخدمهم للرسم داخل الآلة!
       2-3 Artist Functions 11.5_instruction: 'هذه نفس معادلة "رسم مسدس"، ترى ما الذي سوف يتغير لو قمت بتكرار الدوران 60 درجة في كل مرة؟'
       2-3 Artist Functions 11_instruction: 'لقد تمت إعادة تسمية المعادلة من "رسم المربع" إلي مسمى "رسم المسدس"، لكنه لا يزال يرسم مربعًا! هل تستطيع تعديل المعادلة لترسم مسدسا مع جانبين بطول 50 بكسل؟'
+      2-3 Artist Functions 12 Mike_instruction: 'الدوال البرمجية حقاً رائعة لرسم أشياء معقدة عدة مرات. يمكنك استخدام الدالة "رسم زهرة" لملء بقية المربع المزروع؟ (تلميح:  جميع النباتات مفصولة بطول 100 بكسل)  '
       2-3 Artist Functions 12_instruction: 'الدوال البرمجية حقاً رائعة لرسم أشياء معقدة عدة مرات. يمكنك استخدام الدالة "رسم زهرة" لملء بقية المربع المزروع؟ (تلميح:  جميع النباتات مفصولة بطول 100 بكسل)  '
       2-3 Artist Functions 13_instruction: لقد قدمنا لك أربع وظائف. استخدمهم بالطريقة التي تريدها داخل الدائرة البرمجية أو أكثر لصنع الصور التي يمكنك مشاركتها مع أصدقائك. اضغط تشغيل لمشاهدة مثال.
       2-3 Artist Functions 2_instruction: 'الدوال البرمجية تمكنك من تحديد كتل جديدة! لقد قمنا بنقل كتل لرسم مربع في دالة تسمى "رسم مربع". هل يمكنك استخدام الدالة "رسم مربع" لإنشاء النظارات؟ المربعات 75 بكسل عن بعضها البعض.'
@@ -477,6 +478,7 @@ ar:
       4-5 Maze Conditionals 1_instruction: |
         Use the `repeat until` block to get the
         zombie to the sunflower.
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: |
         Use the `repeat until` block to get the
         zombie to the sunflower.
@@ -1614,7 +1616,7 @@ ar:
       Course 4 Play Lab Params 8_instruction: |
         Use the `when actor touches` block
         to send Dog back to the top-left ONLY if Dog touches any of the other actors.
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith hearts, and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith pie, and decrease each time that Cat tags Dog with a sandwich.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: |
         This time you don't have to write any
         code, just hit "Run" to play the game! In this game, you're the dog who
@@ -1642,12 +1644,12 @@ ar:
         actor 2 touches anything" event to trigger an update to your score when your
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 6_instruction: "Use the right arrow to shoot hearts.\\r\n\\r\nIn\nour game, how should we score points? Add 1 to your \"points\" variable each\ntime Dog hits Cat with a heart. Use the \"when actor 2 touches anything\"\nevent to trigger an update to your score. You can increment your variable\nby setting \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to pass the level."
+      Course 4 Play Lab Vars 6_instruction: "Use the right arrow to throw pie.\\r\n\\r\nIn\nour game, how should we score points? Add 1 to your \"points\" variable each\ntime Dog hits Cat with a piece of pie. Use the \"when actor 2 touches anything\"\nevent to trigger an update to your score. You can increment your variable\nby setting \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to pass the level."
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
-        isn't too easy to play. Any time Dog (actor 1) gets hit by yellow hearts
-        from Cat (actor 2), you should lose a point. Start with 10 points so it's
-        not too hard. Let your score drop down from 10 to 0 to pass the level.
+        isn't too easy to play. Any time Dog (actor 1) gets hit by a sandwich from
+        Cat (actor 2), you should lose a point. Start with 10 points so it's not
+        too hard. Let your score drop down from 10 to 0 to pass the level.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: |
         Alright, one last thing for
         this game - let's set it up so the player can win (or lose). Use a forever
@@ -2570,6 +2572,10 @@ ar:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

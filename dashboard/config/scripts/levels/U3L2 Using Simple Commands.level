@@ -16,7 +16,9 @@
         ]
       },
       "turnLeft": {
-        "paramButtons": null,
+        "paramButtons": {
+          "maxArgs": 0
+        },
         "params": [
           ""
         ],

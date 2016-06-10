@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT": "刪除左邊空格",
   "TEXT_TRIM_OPERATOR_RIGHT": " 刪除右邊空格",
   "TEXT_TRIM_TOOLTIP": "複製這段文字的同時刪除兩端多餘的空格。",
+  "UNUSED_CODE": "Unused code",
   "VARIABLES_DEFAULT_NAME": "項目",
   "VARIABLES_GET_CREATE_SET": "建立 '設定 %1' 的積木",
   "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",

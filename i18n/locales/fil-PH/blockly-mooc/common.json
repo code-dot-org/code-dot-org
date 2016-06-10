@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback":"Subukang gumamit ng isa sa mga blocks sa ibaba:",
   "tryHOC":"Subukan ang Hour of Code",
   "unnamedFunction":"You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
+  "unattachedBlockTipTitle":"Unattached blocks",
+  "unattachedBlockTipBody":"Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn":"Gusto mo matuto mag-code?",
   "watchVideo":"Panoorin ang Video",
   "when":"kelan",

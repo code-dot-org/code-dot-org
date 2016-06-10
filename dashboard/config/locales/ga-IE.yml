@@ -612,12 +612,15 @@
       aip agus pictiúr trína ríomhchláir féin a scríobh. Cliceáil na pictiúir le gach
       ceann acu a fheiceáil i ngníomh.
     want_to_make_your_own: Ar mhaith leat do cheann féin a dhéanamh?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Tuilleadh &rarr;
     caption_by_name_age: le %{name}, aois %{age}
     caption_time_ago: "%{time_ago} ó shin"
     header: Gailearaí
     header_playlab: Scéalta agus cluichí
     header_artist: Ealaín chódála
+    report_abuse: Déan Tuairisc ar Mhí-Úsáid
   landing:
     prerelease: Is cúrsa <span class='betatext'>béite</span> é seo.  Ciallaíonn sé
       sin nach bhfuil sé go hiomlán snasta fós, agus seans go bhfeabhsófar é amach

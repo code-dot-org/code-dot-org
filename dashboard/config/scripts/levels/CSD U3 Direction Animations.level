@@ -1,0 +1,82 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-06-09T20:32:05.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "drawSprites": {
+        "category": ""
+      },
+      "keyDown": {
+        "category": ""
+      },
+      "var sprite = createSprite": {
+        "category": ""
+      },
+      "x": {
+        "category": ""
+      },
+      "y": {
+        "category": ""
+      },
+      "background": {
+        "category": ""
+      },
+      "addOperator": {
+        "category": ""
+      },
+      "subtractOperator": {
+        "category": ""
+      },
+      "ifBlock": {
+        "category": ""
+      },
+      "comment": {
+        "category": ""
+      },
+      "console.log": {
+        "category": ""
+      },
+      "setAnimation": {
+        "category": ""
+      }
+    },
+    "show_d_pad": "true",
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Changing Images as you Move\r\nRight now your conditionals only do one thing (change your sprite's x or y), but you can actually put as much code as you want inside a conditional. A common thing to do in games is to change your character's image depending on which direction they're walking.\r\n\r\nWe've pre-loaded the Animations tab with these four images for you to use.\r\n\r\n# Do This\r\nUsing the provided program and images, change to the correct image when the corresponding key is pressed.\r\n\r\n- The up arrow should switch to \"player_up.png\"\r\n- The down arrow should switch to \"player_down.png\"\r\n- The left arrow should switch to \"player_left.png\"\r\n- The right arrow should switch to \"player_right.png\"\r\n\r\n**Challenge** Can you make your program default to \"player_down.png\" if none of the arrow keys are pressed?",
+    "start_blocks": "var sprite = createSprite(200, 200, 30, 30);\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  \r\n  // Change the sprite's image to match the direction it's moving\r\n  if (keyDown(\"up\")) {\r\n    sprite.y = sprite.y - 1;\r\n  }\r\n  if (keyDown(\"down\")) {\r\n    sprite.y = sprite.y + 1;\r\n  }\r\n  if (keyDown(\"left\")) {\r\n    sprite.x = sprite.x - 1;\r\n  }\r\n  if (keyDown(\"right\")) {\r\n    sprite.x = sprite.x + 1;\r\n  }\r\n  \r\n  drawSprites();\r\n}\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "callout_json": "[]"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

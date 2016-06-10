@@ -483,12 +483,14 @@ sl:
     picture_count: 'V zadnjih <b>%{days}</b> dneh so učenci narisali veliko (<b>%{count}</b>) slik s programe, ki so jih sami ustvarili. Kliknite sličice za prikaz delovanja posameznega programa.'
     activity_count: 'V zadnjih <b>%{days}</b> dneh so učenci izdelali veliko (<b>%{count}</b>) aplikacij s programi, ki so jih sami ustvarili. Kliknite sličice za prikaz delovanja posameznega programa.'
     want_to_make_your_own: Bi poskusil/a še sam/a?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Več &rarr;'
     caption_by_name_age: 'po %{name}, %{age} starosti'
     caption_time_ago: 'pred %{time_ago}'
     header: Galerija
     header_playlab: Zgodbe in igre
     header_artist: Code art
+    report_abuse: Prijavi zlorabo
   landing:
     prerelease: "Ta tečaj je <span class='betatext'>beta</span>.  To pomeni, da ni končna različica in ga bomo z vašo pomočjo še izboljševali."
     prerelease_hoc2014: "Ta priročnik je <span class='betatext'>beta</span>.  To pomeni, da ni končna različica in ga bomo z vašo pomočjo še izboljševali."

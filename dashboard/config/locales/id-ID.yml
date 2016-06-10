@@ -609,12 +609,15 @@
       app dan gambar dengan menulis sendiri program komputer mereka. Klik pada gambar
       dan tangkapan layar untuk melihat jalannya tiap program.
     want_to_make_your_own: Mau membuat sendiri ?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: lebih &rarr;
     caption_by_name_age: oleh %{name}, usia %{age}
     caption_time_ago: "%{time_ago} yang lalu"
     header: Galeri
     header_playlab: Play Lab/Lab Permainan
     header_artist: Artis
+    report_abuse: Laporkan penyalahgunaan
   landing:
     prerelease: Kursus ini dalam <span class='betatext'>beta</span>.  Ini bukan berarti
       sebuah kursus final dan ditujukan untuk revisi saat usulan diterima dan pengembangan

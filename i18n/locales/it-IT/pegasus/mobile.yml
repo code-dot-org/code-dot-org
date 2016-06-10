@@ -474,7 +474,7 @@ it-IT:
   dashboard_landing_new_beta: Novità! Prova i nostri corsi specifici per studenti delle scuole elementari (in versione provvisoria).
   dashboard_landing_new_k5courses: Nuovo! Prova i nostri corsi per gli studenti della scuola primaria.
   dashboard_landing_useful_links: Altre pagine utili (alcune solo in lingua inglese)
-  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_classroom_resources: Risorse per la tua classe
   dashboard_landing_office_hours: "Fai una domanda di persona! Visita il nostro ufficio di assistenza. L'assistenza viene fornita in inglese dal personale di code.org."
   dashboard_landing_print_certificates: Stampa il certificato per gli studenti che completano questo corso
   dashboard_landing_educator_blog: 'Leggi notizie e aggiornamenti relativi al nostro materiale didattico su <a href="http://programmailfuturo.it">programmailfuturo.it</a>'
@@ -488,10 +488,10 @@ it-IT:
   dashboard_landing_available_courses: Ecco i corsi attualmente disponibili per te e i tuoi studenti.
   dashboard_landing_more_tutorials: Vuoi vedere ulteriori corsi?
   dashboard_landing_more_tutorials_desc: 'Sono disponibili altri corsi <a href="/learn/beyond"> messi a disposizione dai nostri partner.</a> Impara a programmare con i robot, crea pagine web, costruisci una tua app o esplora altri linguaggi di programmazione come C++, Ruby o Python!'
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_landing_inspire: Ispira i tuoi studenti con poster, video e molto altro.
+  dashboard_landing_video_library: "Usa un video dalla libreria video dei concetti d'informatica."
+  dashboard_landing_report_bug: Richiedere una funzionalità o segnalare un bug.
+  dashboard_landing_teacher_forum: Unisciti alla comunità di apprendimento professionale.
   dashboard_hoc_courses: "L'ora del codice per tutte le età"
   dashboard_hoc_courses_desc: "Prova con i tuoi studenti una qualsiasi di questi corsi da un'ora!"
   dashboard_hoc_courses_desc_and_cta: |-
@@ -528,8 +528,9 @@ it-IT:
   dashboard_action_required: obbligatorio
   dashboard_assessments_view: 'Mostra valutazioni in:'
   dashboard_assessments_none: Nessuna valutazione
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_summaries: Riassunti
+  dashboard_assessments_answers: Tutte le risposte
   dashboard_filter_by_stage: 'Filtra per fase:'
   dashboard_filter_all: Tutti
   dashboard_download_csv: Scarica CSV
@@ -559,6 +560,7 @@ it-IT:
   dashboard_progress_submitted: inviato
   dashboard_progress_view: 'Mostra i progressi in:'
   dashboard_progress_student_in_script: 'Informazioni sui progressi di %{student_name} in %{script_name}'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'Visualizza il testo delle risposte in:'
   dashboard_responses_none: Nessuna risposta
   dashboard_sections_new_section: Nuova classe
@@ -632,7 +634,7 @@ it-IT:
   dashboard_course2: 'Corso 2:'
   dashboard_course3: 'Corso 3:'
   dashboard_course4: 'Corso 4 (beta): '
-  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_unplugged: "Se non hai dei computers, <a href='%{unplugged_url}'>prova queste lezioni</a> nella tua classe."
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: K-5 Curriculum Overview
   dashboard_overview: Panoramica
@@ -818,11 +820,11 @@ it-IT:
   cspunit4_name: "I principi dell'informatica - Unità 4"
   cspunit5_name: "I principi dell'informatica - Unità 5"
   cspunit6_name: "I principi dell'informatica - Unità 6"
-  csp1_name: 'Unit 1: The Internet'
-  csp2_name: 'Unit 2: Digital Information'
-  cspassessment_name: 'Full Test - 50 questions'
-  cspexam1-mWU7ilDYM9_name: 'Test Part 1 - 25 questions'
-  cspexam2-AKwgAh1ac5_name: 'Test Part 2 - 25 questions'
+  csp1_name: 'Unità 1: Internet'
+  csp2_name: 'Unità 2: Informazioni digitali'
+  cspassessment_name: 'Test completo - 50 domande'
+  cspexam1-mWU7ilDYM9_name: Prova parte 1-25 domande
+  cspexam2-AKwgAh1ac5_name: Prova parte 2-25 domande
   cspunit3_gradelevel: Classi 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
   20-hour_name: Corso rapido
@@ -838,8 +840,8 @@ it-IT:
   hoc_category_name: "L'Ora del Codice"
   csf_category_name: "Fondamenti d'informatica"
   csp_category_name: "I principi dell'informatica"
-  csp17_category_name: "'16-'17 CS Principles"
-  cspexams_category_name: CS Principles Practice Test
+  csp17_category_name: "'16-'17 principi d'informatica"
+  cspexams_category_name: "Prova pratica di principi d'informatica"
   applab_name: Laboratorio per le App
   applab_gradelevel: "Eta' 13+"
   applab_shortdescription_congrats: App Lab è un programma ambientale con cui puoi fare semplici app. Fare il design, scrivere il codice con blocchi o JavaScript per farla funzionare, quindi condividi la tua app in pochi secondi

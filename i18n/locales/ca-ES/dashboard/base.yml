@@ -490,12 +490,14 @@ ca:
     picture_count: 'En els darrers <b>%{days}</b> dies, els alumnes han elaborat <b>%{count}</b> imatges escrivint els seus propis programes informàtics. Fes clic a les fotos per veure el programa en acció.'
     activity_count: 'En els darrers <b>%{days}</b> dies, els estudiants han fet <b>%{count}</b> aplicacions i imatges escrivint els seus propis programes informàtics. Fes clic a les fotos i captures de pantalla per veure el programa en acció.'
     want_to_make_your_own: Vols fer el teu propi?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Més &rarr;'
     caption_by_name_age: 'per %{name}, %{age} anys'
     caption_time_ago: 'fa %{time_ago}'
     header: Galeria
     header_playlab: Play Lab
     header_artist: Artista
+    report_abuse: Report Abuse
   landing:
     prerelease: "Aquest curs és en <span class='betatext'> beta</span>.  Això significa que no és la versió final del curs i està subjecte a revisió a mida que es reben comentaris i es fan millores."
     prerelease_hoc2014: "Aquest tutorial està en <span class='betatext'> beta</span>.  És subjecte a revisió a mida que es reben comentaris i es fan millores."

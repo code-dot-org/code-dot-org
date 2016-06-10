@@ -484,12 +484,14 @@ it:
     picture_count: 'Nei <b>%{days}</b> giorni passati, gli studenti hanno realizzato <b>%{count}</b> disegni scrivendo da soli i programmi per disegnarli. Clicca sulle immagini per vedere ogni programma in azione.'
     activity_count: 'Negli ultimi <b>%{days}</b> giorni,  gli studenti hanno realizzato <b>%{count}</b> applicazioni e immagini scrivendo i loro programmi. Clicca sulle immagini per vedere ogni programma in azione.'
     want_to_make_your_own: Vuoi farne uno tuo?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Di più &rarr;'
     caption_by_name_age: 'da %{name}, età %{age}'
     caption_time_ago: '%{time_ago} fa'
     header: La tua collezione
     header_playlab: Laboratorio
     header_artist: 'Artista: Sequenze e Cicli'
+    report_abuse: Segnala un abuso
   landing:
     prerelease: "Questo corso è in <span class='betatext'>versione provvisoria</span>.  Significa che non è la versione finale ed è soggetto a revisioni man mano che arrivano osservazioni e vengono fatti miglioramenti."
     prerelease_hoc2014: "Questo corso è in <span class='betatext'>versione provvisoria</span>. È soggetto a revisione man mano che arrivano osservazioni in modo da migliorarlo."
@@ -670,9 +672,9 @@ it:
     escalated:
       name: Aumentato
       description: Vorrei che un istruttore esaminasse questa presentazione
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
+    instructor_feedback: "Feedback dell'istruttore"
+    peer_feedback: Feedback di un collega
+    outdated: Questo commento è stato aggiunto per una versione precedentemente inviata
   components:
     icon_library:
       search_placeholder_text: "Cerca un'icona..."
@@ -682,4 +684,4 @@ it:
     content: Contenuto
     practice: "Pratiche d'insegnante"
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to a site that is not operated by Code.org.</strong> This site may have privacy policies that differ from Code.org's.<br/><br/>We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer_md: "<strong>Avviso: stai per lasciare il dominio Code.org per collegarti ad un sito non controllato da noi.</strong>Questo sito potrebbe avere una politica della privacy diversa da quella di Code.org<br/><br/>Abbiamo selezionato delle fonti fornite da terzi poiché pensiamo che queste possano tornarti utili. Dal momento che non siamo direttamente responsabili riguardo il contenuto di questo sito, per favore<a href='mailto:support@code.org'> contatta il supporto</a>se trovi qualcosa che ti turba oppure se il sito non è più disponibile."

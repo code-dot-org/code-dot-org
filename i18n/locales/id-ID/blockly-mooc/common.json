@@ -233,6 +233,8 @@
   "tryBlocksBelowFeedback":"Coba gunakan salah satu blok di bawah ini:",
   "tryHOC":"Cobalah \"Hour of Code\"",
   "unnamedFunction":"Anda memiliki variabel atau fungsi yang belum memiliki nama. Jangan lupa untuk menamai semuanya secara deskriptif.",
+  "unattachedBlockTipTitle":"Unattached blocks",
+  "unattachedBlockTipBody":"Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn":"Ingin belajar untuk mengkode?",
   "watchVideo":"Tonton Videonya",
   "when":"ketika",

@@ -34,6 +34,7 @@ fr:
       2-3 Artist Functions 10_instruction: "Voici deux fonctions, une pour dessiner un grand engrenage et l'autre pour dessiner un petit engrenage. Utilise les pour dessiner l'intérieur d'une machine\\_!"
       2-3 Artist Functions 11.5_instruction: "Voici la même fonction «\\_Dessine un hexagone\\_». Que se passe-t-il si tu tournes de seulement 60 degrés chaque fois que tu fais une boucle ?"
       2-3 Artist Functions 11_instruction: "Nous avons renommé la fonction «\\_Dessiner un carré\\_» en «\\_Dessiner un hexagone\\_», mais elle ne dessine encore que des carrés ! Peux-tu modifier la fonction «\\_Dessine un hexagone\\_» pour dessiner un hexagone avec des côtés de 50 pixels et dessiner l'image en utilisant la fonction ?"
+      2-3 Artist Functions 12 Mike_instruction: "Les fonctions sont vraiment très biens pour dessiner des choses complexes plusieurs fois. Peux-tu utiliser la fonction «\\_Dessiner une fleur\\_» pour remplir le reste de la jardinière ? (Indice : les plantes sont séparées les unes des autres d’une longueur de 100 pixels)  "
       2-3 Artist Functions 12_instruction: "Les fonctions sont vraiment très biens pour dessiner des choses complexes plusieurs fois. Peux-tu utiliser la fonction «\\_Dessiner une fleur\\_» pour remplir le reste de la jardinière ? (Indice : les plantes sont séparées les unes des autres d’une longueur de 100 pixels)  "
       2-3 Artist Functions 13_instruction: "Nous t’avons fourni quatre fonctions. Utilise les comme bon te semble à l'intérieur d'une ou de plusieurs boucles pour faire des images que tu pourras partager avec tes amis. Appuie sur « Exécuter » pour voir un exemple."
       2-3 Artist Functions 2_instruction: "Les fonctions te permettent de définir de nouveaux blocs ! Nous avons déplacé les blocs pour dessiner un carré dans une fonction appelée «\\_Dessiner un carré\\_». Peut-tu utiliser la fonction «\\_Dessiner un carré\\_» pour créer les lunettes ? Les carrés sont à 75 pixels les uns des autres."
@@ -330,6 +331,7 @@ fr:
       4-5 Maze 9_instruction: Crée une boucle avec le bloc « Répéter jusqu’à ».
       4-5 Maze Assessment 1_instruction: "Évaluation : Va jusqu'au tournesol !"
       4-5 Maze Conditionals 1_instruction: "Utilise le bloc « Répéter jusqu'à » pour amener le zombie au tournesol."
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: "Utilise le bloc « Répéter jusqu'à » pour amener le zombie au tournesol."
       4-5 Maze Conditionals 3_instruction: "Utilise le bloc « Si » pour me laisser décider quand tourner. Indice\\_: tu n’as besoin que d'un bloc supplémentaire, mais regarde bien comment nous avons fait ici afin de pouvoir le faire toi-même la prochaine fois."
       4-5 Maze Conditionals 4_instruction: "OK, c'est la même chose que le puzzle précédent, mais tu dois te rappeler comment tu as utilisé le bloc «\\_Si\\_» et le bloc « Répéter » ensemble."
@@ -1911,6 +1913,10 @@ fr:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

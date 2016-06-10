@@ -82,6 +82,10 @@
         olarak yeniden adlandırdık, fakat kareler çizmeye devam ediyor! "Altıgen çiz"
         fonksiyonunu 50 piksel kenarlı altıgen çizmek için düzenleyebilir ve fonksiyonu
         kullanarak resmi çizebilir misin?'
+      2-3 Artist Functions 12 Mike_instruction: 'Fonksiyonlar karmaşık şeyleri birçok
+        kez çizmek için mükemmeldir. "Çiçek çiz" fonksiyonunu kullanarak saksının
+        geri kalanını doldurabilir misin? (İpucu: Tüm bitkiler birbirinden 100 piksel
+        uzaktadır)  '
       2-3 Artist Functions 12_instruction: 'Fonksiyonlar karmaşık şeyleri birçok kez
         çizmek için mükemmeldir. "Çiçek çiz" fonksiyonunu kullanarak saksının geri
         kalanını doldurabilir misin? (İpucu: Tüm bitkiler birbirinden 100 piksel uzaktadır)  '
@@ -643,6 +647,12 @@
       4-5 Maze Assessment 1_instruction: 'Değerlendirme: Ayçiçeğine ulaş.'
       4-5 Maze Conditionals 1_instruction: Zombi ayçiçeğine ulaşana kadar tekrarla
         bloğunu kullan.
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: Zombi ayçiçeğine ulaşana kadar tekrarla
         bloğunu kullan.
       4-5 Maze Conditionals 3_instruction: "Eğer bloğunu kullanarak ne zaman döneceğime
@@ -2677,6 +2687,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

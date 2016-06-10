@@ -1,5 +1,7 @@
 /** @file Root of the animation editor interface mode for GameLab */
 'use strict';
+// PISKEL_DEVELOPMENT_MODE is a build flag.  See Gruntfile.js for how to enable it.
+/* global PISKEL_DEVELOPMENT_MODE */
 
 import React from 'react';
 import Radium from 'radium';
@@ -12,6 +14,13 @@ import { setColumnSizes } from './animationTabModule';
 import AnimationList from './AnimationList';
 import FrameList from './FrameList';
 import ResizablePanes from './ResizablePanes';
+
+/**
+ * @const {string} domain-relative URL to Piskel index.html
+ * In special environment builds, append ?debug flag to get Piskel to load its own debug mode.
+ */
+const PISKEL_PATH = '/blockly/js/piskel/index.html' +
+    (PISKEL_DEVELOPMENT_MODE ? '?debug' : '');
 
 const styles = {
   root: {
@@ -56,7 +65,7 @@ const AnimationTab = React.createClass({
             <GameLabVisualizationHeader />
             <AnimationList />
           </div>
-          <iframe id="piskel-frame" style={styles.editorColumn} src="/blockly/js/piskel/index.html" />
+          <iframe id="piskel-frame" style={styles.editorColumn} src={PISKEL_PATH} />
         </ResizablePanes>
         <AnimationPicker channelId={this.props.channelId}/>
       </div>

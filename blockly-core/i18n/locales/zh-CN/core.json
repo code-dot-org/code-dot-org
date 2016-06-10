@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT": "去掉左边的空格",
   "TEXT_TRIM_OPERATOR_RIGHT": "去掉右边的空格",
   "TEXT_TRIM_TOOLTIP": "返回文本的一份拷贝，其中从一端或两端同时删除了空格。",
+  "UNUSED_CODE": "Unused code",
   "VARIABLES_DEFAULT_NAME": "项",
   "VARIABLES_GET_CREATE_SET": "创建'设置%1'",
   "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",

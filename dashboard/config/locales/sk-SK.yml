@@ -590,12 +590,15 @@
       aplikacií a fotiek napísaním vlastného počítačového programu. Kliknutím na obrázok
       a screenshot uvidíte program v akcii.
     want_to_make_your_own: Chceš vytvoriť svoj vlastný?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Viac &rarr;
     caption_by_name_age: podľa %{name}, vek %{age}
     caption_time_ago: "%{time_ago} ago"
     header: Galéria
     header_playlab: Príbehy a hry
     header_artist: Kód art
+    report_abuse: Nahlásenie zneužitia
   landing:
     prerelease: Tento kurz je v <span class='betatext'> beta verzii</span>.  To znamená,
       že to nie je Finálna verzia kurzu a je predmetom revízie na základe pripomienok

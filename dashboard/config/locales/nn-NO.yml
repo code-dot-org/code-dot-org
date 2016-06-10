@@ -596,12 +596,15 @@
       apps og bilder ved å skrive sine egne programmer. Klikk på bildene og skjermbilder
       for å se hvert program i aksjon.
     want_to_make_your_own: Vil du lage din egen?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Flere &rarr;
     caption_by_name_age: av %{name}, %{age} år
     caption_time_ago: "%{time_ago} siden"
     header: Galleri
     header_playlab: Spill-lab
     header_artist: Kunstner
+    report_abuse: Rapporter misbruk
   landing:
     prerelease: Dette kurset er i <span class='betatext'> beta</span>.  Det betyr
       at det ikke er den endelige versjonen av kurset, men at det blir endret når

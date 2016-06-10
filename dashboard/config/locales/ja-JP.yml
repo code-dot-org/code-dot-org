@@ -538,12 +538,15 @@
     activity_count: "コンピュータ・プログラムを用いて生徒たちが作ったアプリは、これまでの <b>%{days}</b> 日間に <b>%{count}</b>
       作品です。それぞれのスクリーンショットをクリックすると、そのアプリのプログラムを見ることができます。"
     want_to_make_your_own: "自分でも創ってみたいですか？"
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: "つづきを読む &rarr;"
     caption_by_name_age: "作成者： %{name} ( %{age} 歳)"
     caption_time_ago: "%{time_ago} 前"
     header: "ギャラリー"
     header_playlab: "プレイラボ"
     header_artist: "アーティスト"
+    report_abuse: "不正を報告"
   landing:
     prerelease: "このコースはまだ<span class='betatext'>ベータ版</span>です。今後改善と変更が行われる可能性があります。"
     prerelease_hoc2014: "このチュートリアルは<span class='betatext'>ベータ版</span>です。フィードバックによって改善と変更が行われることが想定されます。"

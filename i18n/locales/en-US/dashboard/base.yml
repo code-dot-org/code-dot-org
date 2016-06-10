@@ -475,12 +475,14 @@ en:
     picture_count: 'crwdns5092:0%{days}crwdnd5092:0%{count}crwdne5092:0'
     activity_count: 'crwdns20427:0%{days}crwdnd20427:0%{count}crwdne20427:0'
     want_to_make_your_own: crwdns5093:0crwdne5093:0
+    how_to_save: crwdns56881:0crwdne56881:0
     more: crwdns5094:0crwdne5094:0
     caption_by_name_age: 'crwdns20428:0%{name}crwdnd20428:0%{age}crwdne20428:0'
     caption_time_ago: 'crwdns20429:0%{time_ago}crwdne20429:0'
     header: crwdns23628:0crwdne23628:0
     header_playlab: crwdns23629:0crwdne23629:0
     header_artist: crwdns23630:0crwdne23630:0
+    report_abuse: crwdns56882:0crwdne56882:0
   landing:
     prerelease: crwdns6265:0crwdne6265:0
     prerelease_hoc2014: crwdns23502:0crwdne23502:0

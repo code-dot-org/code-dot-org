@@ -38,6 +38,7 @@ ro:
       2-3 Artist Functions 10_instruction: 'Iată doua funcții: una pentru a desena o roată dințată mare și una pentru a desena o roată dințată mică. Folosește-le pentru a desena interiorul unei mașinării!'
       2-3 Artist Functions 11.5_instruction: 'Aici este aceeși funcție "Desenează un hexagon". Ce se întâmplă dacă întorci cu doar 60 de grade de fiecare dată când buclezi?'
       2-3 Artist Functions 11_instruction: 'Am redenumit funcția "desenează un pătrat" în "desenează un hexagon", dar încă desenează pătrate! Poți să modifici funcția "desenează un hexagon" astfel încât să deseneze un hexagon cu laturile de 50 de pixeli și apoi să desenezi imaginea folosind această funcție?'
+      2-3 Artist Functions 12 Mike_instruction: 'Funcţiile sunt foarte utile pentru a desena de mai multe ori lucruri complicate. Puteţi utiliza funcţia "desenează o floare" pentru a completa restul jardinierei? (Sugestie: distanța dintre plante este de 100 de pixeli)  '
       2-3 Artist Functions 12_instruction: 'Funcţiile sunt foarte utile pentru a desena de mai multe ori lucruri complicate. Puteţi utiliza funcţia "desenează o floare" pentru a completa restul jardinierei? (Sugestie: distanța dintre plante este de 100 de pixeli)  '
       2-3 Artist Functions 13_instruction: 'Aveți la dispoziție patru functii. Folositi-le orice mod doriţi, în interiorul uneia sau mai multor bucle, pentru a face fotografii care aveţi posibilitatea să partajaţi cu prietenii dvs. Apăsaţi "rulează" pentru a vedea un exemplu.'
       2-3 Artist Functions 2_instruction: 'Funcțiile îțî permit să construiești blocuri noi! Am mutat blocurile ce deseneaza un pătrat într-o funcție numită "desenează un pătrat". Poți folosi această funcție pentru a crea ochelarii? Pătratele au 75 de pixeli între ele.'
@@ -522,6 +523,7 @@ ro:
       4-5 Maze 9_instruction: 'Creează o buclă cu blocul "repetă până când".'
       4-5 Maze Assessment 1_instruction: 'Evaluare: Du-te la floarea-soarelui.'
       4-5 Maze Conditionals 1_instruction: 'Utilizează blocul "repetă până când" pentru a-l duce pe zombie la floarea-soarelui.'
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: 'Utilizează blocul "repetă până când" pentru a-l duce pe zombie la floarea-soarelui.'
       4-5 Maze Conditionals 3_instruction: 'Folosește blocul "dacă" pentru a mă lăsa pe mine să decid când să virez. Sugestie: ai nevoie numai de un bloc în plus, dar învață cum le aranjăm noi ca să poți proceda și tu la fel data viitoare.'
       4-5 Maze Conditionals 4_instruction: 'Ok, acesta este la fel cu ultimul puzzle dar trebuie să-ți amintești cum ai folosit blocul "dacă" și blocul "repetă" împreună.'
@@ -2023,6 +2025,10 @@ ro:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

@@ -600,12 +600,15 @@
       forrit og myndir með því að skrifa eigin tölvuforrit. Smelltu á myndirnar og
       skjásýnin til að sjá forritin virka.
     want_to_make_your_own: Viltu búa til þitt eigið?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Meira &rarr;
     caption_by_name_age: höfundur %{name}, %{age} ára
     caption_time_ago: fyrir %{time_ago}
     header: Safn
     header_playlab: Leikjasmiðja
     header_artist: Listamaður
+    report_abuse: Tilkynna misnotkun
   landing:
     prerelease: "Þetta námskeið er á <span class='betatext'>beta stigi</span>.  Það
       þýðir að þetta er ekki endanleg útgáfa af námskeiðinu og það getur breyst þegar

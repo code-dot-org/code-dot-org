@@ -475,12 +475,14 @@ et:
     picture_count: 'Viimastel <b>%{days}</b> päevadel on õpilased joonistanud <b>%{count}</b> pilte oma enda kirjutatud arvutiprogrammidega. Klikka piltidel, et nende programmide tööd ise näha.'
     activity_count: 'Viimastel <b>%{days}</b> päevadel on õpilased joonistanud <b>%{count}</b> pilte oma enda kirjutatud arvutiprogrammidega. Klikka piltidel ja ekraanipiltidel, et näha nende programmide tööd.'
     want_to_make_your_own: Tahad teha enda oma?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Rohkem &rarr;'
     caption_by_name_age: 'Nimi: %{name}, Vanus: %{age}'
     caption_time_ago: '%{time_ago} tagasi'
     header: Galerii
     header_playlab: Play Lab
     header_artist: Kunstnik
+    report_abuse: Teata rikkumisest
   landing:
     prerelease: "See kursus on <span class='betatext'> beeta</span>.  See tähendab, et see ei ole  lõplik versioon ja  tuleb läbi vaadata, kui saadakse tagasisidet ja parandused on tehtud."
     prerelease_hoc2014: "See õpetus on <span class='betatext'> Beta</span>.  Tuleb läbi vaadata, kui on saabunud tagasiside ja parandused on tehtud."

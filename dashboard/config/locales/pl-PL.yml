@@ -604,12 +604,15 @@
       aplikacje i obrazki pisząc własne programy komputerowe. Klikaj na obrazkach
       i zrzutach z ekranu, aby zobaczyć każdy program w akcji.
     want_to_make_your_own: Chcesz zrobić własną?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Więcej &rarr;
     caption_by_name_age: przez %{name}, w wieku %{age}
     caption_time_ago: "%{time_ago} temu"
     header: Galeria
     header_playlab: Opowiadania i gry
     header_artist: Sztuka kodu
+    report_abuse: Zgłoś nadużycie
   landing:
     prerelease: Ten kurs jest w <span class='betatext'> wersji beta</span>.  Oznacza
       to, że to nie jest ostateczna jego wersja, podlega on rewizji na podstawie otrzymanych

@@ -934,6 +934,7 @@ es:
           Rich long assessment: Rich long assessment
           Free Response: Free Response
           Game Lab: Game Lab
+          Sample PLC Assessment: Sample PLC Assessment
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
           description: Enseñar programación funcional a través de álgebra
@@ -1792,6 +1793,7 @@ es:
           Counting with Variables: Counting with Variables
           Expressions: Expressions
           Conditionals and Keyboard Input: Conditionals and Keyboard Input
+          Sprites and Images: Sprites and Images
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description_short: In Partnership with Project GUTS
@@ -1989,3 +1991,35 @@ es:
           description: Test of new educational philosophy with guiding storyline
           description_audience: Ages 8-18+
           Sample Stage: Sample Stage
+        TeacherCon:
+          title: TeacherCon Supports
+          description: We will use this during TeacherCon to deliver supports and materials for sessions
+          Introduction to Teachercon: Introduction to Teachercon
+          "Lesson 1.4: number systems - circle triangle square": 'Lesson 1.4: number systems - circle triangle square'
+          "Lesson 1.6: sending numbers": 'Lesson 1.6: sending numbers'
+          "Lesson 1.9: internet addressing (battleship)": 'Lesson 1.9: internet addressing (battleship)'
+          "Lesson 1.10: routers and redundancy": 'Lesson 1.10: routers and redundancy'
+          "Lesson 1.11: Packets and Making a Reliable Internet": 'Lesson 1.11: Packets and Making a Reliable Internet'
+          "Lesson 2.2: text compression": 'Lesson 2.2: text compression'
+          "Lesson 2.3: black and white pixelation": 'Lesson 2.3: black and white pixelation'
+          "Lesson 2.10: good and bad data visualizations": 'Lesson 2.10: good and bad data visualizations'
+          Group Work and Peer Learning: Group Work and Peer Learning
+          Balancing Teachers and Tools: Balancing Teachers and Tools
+          Discovery Learning: Discovery Learning
+          Capturing Student Learning: Capturing Student Learning
+          Lesson 14 number systems - circle triangle square: 'Lesson 14 number systems - circle triangle square'
+          "Lesson 1,4: number systems - circle triangle square": 'Lesson 1,4: number systems - circle triangle square'
+          "Lesson 1,6: sending numbers": 'Lesson 1,6: sending numbers'
+          "Lesson 1,9: internet addressing (battleship)": 'Lesson 1,9: internet addressing (battleship)'
+          "Lesson 1,10: routers and redundancy": 'Lesson 1,10: routers and redundancy'
+          "Lesson 1,11: Packets and Making a Reliable Internet": 'Lesson 1,11: Packets and Making a Reliable Internet'
+          "Lesson 2,2: text compression": 'Lesson 2,2: text compression'
+          "Lesson 2,3: black and white pixelation": 'Lesson 2,3: black and white pixelation'
+          "Lesson 2,10: good and bad data visualizations": 'Lesson 2,10: good and bad data visualizations'
+        MikeTest:
+          title: MikeTest
+          description_short: Just a script for playing around
+          description: Trying not to break anything
+          description_audience: Ages 8-98
+          Sample Stage: Sample Stage
+          Artist Functions: Funciones de artista

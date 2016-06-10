@@ -627,12 +627,15 @@
       Clique sur les images et les captures d'écran pour voir chaque programme en
       action.
     want_to_make_your_own: Tu veux faire le tien\_?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Plus &rarr\_;
     caption_by_name_age: par %{name}, %{age} ans
     caption_time_ago: il y a %{time_ago} heures/jours
     header: Galerie
     header_playlab: Histoires et jeux
     header_artist: L’art du code
+    report_abuse: Signaler un abus
   landing:
     prerelease: Ce cours est en <span class= « betatext » >bêta</span>.  Il ne s'agit
       pas de la version finale du cours qui est susceptible d'être modifié tant que
@@ -854,9 +857,9 @@
     escalated:
       name: Augmenté
       description: Je voudrais un instructeur pour examiner cette proposition
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
+    instructor_feedback: Commentaires de l’instructeur
+    peer_feedback: "Évaluation par les pairs"
+    outdated: Ce commentaire a été émis pour une version précédente
   components:
     icon_library:
       search_placeholder_text: Chercher pour une icône...
@@ -866,10 +869,10 @@
     content: Contenu
     practice: Pratiques de l’enseignant
   external_links:
-    disclaimer_md: "<strong>Disclaimer: You are now leaving the Code.org domain, to
-      a site that is not operated by Code.org.</strong> This site may have privacy
-      policies that differ from Code.org's.<br/><br/>We have selected these third
-      party resources because we think they will be useful to you. While we are not
-      directly responsible for the content of this website, please <a href='mailto:support@code.org'>contact
-      support</a> if you find the content objectionable, or if the linked site is
-      no longer available."
+    disclaimer_md: "<strong>Avertissement: Vous quittez le site Code.org vers un site
+      qui n'est pas géré par Code.org.</strong> Ce site peut avoir une politique de
+      confidentialité différente de celle de Code.org.<br/><br/>Nous avons sélectionné
+      ces ressources de tiers car nous pensons qu'elles vous seront utiles. Même si
+      nous ne sommes pas directement responsables du contenu de ce site, veuillez
+      <a href='mailto:support@code.org'>contacter le support</a> si vous trouvez le
+      contenu répréhensible, ou si le site n'est plus disponible."

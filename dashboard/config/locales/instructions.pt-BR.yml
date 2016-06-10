@@ -93,6 +93,10 @@
         como "desenhe um hexágono", mas ela ainda desenha apenas quadrados! Você consegue
         modificar a função "desenhe um hexágono" para desenhar um hexágono com lados de 50 pixels, e
         desenhar a imagem usando a função?
+      2-3 Artist Functions 12 Mike_instruction: "Funções são ótimas para desenhar\ncoisas
+        complexas várias vezes. Você consegue usar a função \"desenhe uma flor\"\npara
+        preencher o resto do canteiro de plantas? (Dica: as plantas estão todas separadas\npor
+        um comprimento de 100 pixels)  \n"
       2-3 Artist Functions 12_instruction: "Funções são ótimas para desenhar\ncoisas
         complexas várias vezes. Você consegue usar a função \"desenhe uma flor\"\npara
         preencher o resto do canteiro de plantas? (Dica: as plantas estão todas separadas\npor
@@ -859,6 +863,12 @@
       4-5 Maze Conditionals 1_instruction: |
         Use o bloco repita até para levar o
         zumbi até o girassol.
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: |
         Use o bloco repita até para levar o
         zumbi até o girassol.
@@ -3369,6 +3379,10 @@
         - Adicionar um cupom com código para um desconto de 50%
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         Todas as variáveis e funções atualmente são
         campos vazios. A progressão de cada desafio será concentrada na definição e em vários

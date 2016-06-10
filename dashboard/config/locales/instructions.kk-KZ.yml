@@ -93,6 +93,9 @@
         Біз "шаршыны сал" фунциясын "алтыбұрышты сал" функциясы деп атын өзгерттік, бірақ ол әлі шаршылардын суретін салады!
         "Алтыбұрышты сал" фунциясын қабырғасы 50 пиксель болатын алтыбұрыш салуға өзгерте аласын ба?
         Осы функцияны қолданып алтыбұрыш сал.
+      2-3 Artist Functions 12 Mike_instruction: |
+        Функциялар күрделі заттарды бірнеше рет салуға өте жақсы көмектеседі. "Гүлді сал" функциясын қолданып
+        гүлдер қорабын гүлдермен толтыра аласын ба?(Кеңес: гүлдер арасында 100 пиксель)
       2-3 Artist Functions 12_instruction: |
         Функциялар күрделі заттарды бірнеше рет салуға өте жақсы көмектеседі. "Гүлді сал" функциясын қолданып
         гүлдер қорабын гүлдермен толтыра аласын ба?(Кеңес: гүлдер арасында 100 пиксель)
@@ -640,6 +643,12 @@
       4-5 Maze 9_instruction: "Мені доңызға апар! Дейін қайтала блогымен цикл қолдан."
       4-5 Maze Assessment 1_instruction: "Бағалау: күнбағысға жет."
       4-5 Maze Conditionals 1_instruction: "Дейін қайтала блогымен күнбағысқа жет."
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: "Дейін қайтала блогымен күнбағысқа жет."
       4-5 Maze Conditionals 3_instruction: '"Егер" блогын қолданып қашан бұрылатынын
         айт. Кеңес: саған тағы бір блок қажет, бірақ біз келесі жолы оны қалай орнатқанымызды
@@ -2719,6 +2728,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

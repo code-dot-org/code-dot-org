@@ -483,6 +483,7 @@ en-US:
   dashboard_action_required: crwdns7794:0crwdne7794:0
   dashboard_assessments_view: crwdns56489:0crwdne56489:0
   dashboard_assessments_none: crwdns56490:0crwdne56490:0
+  dashboard_assessments_none_part2: crwdns56924:0crwdne56924:0
   dashboard_assessments_summaries: crwdns56839:0crwdne56839:0
   dashboard_assessments_answers: crwdns56840:0crwdne56840:0
   dashboard_filter_by_stage: crwdns56491:0crwdne56491:0
@@ -514,6 +515,7 @@ en-US:
   dashboard_progress_submitted: crwdns56220:0crwdne56220:0
   dashboard_progress_view: crwdns56494:0crwdne56494:0
   dashboard_progress_student_in_script: 'crwdns56495:0%{student_name}crwdnd56495:0%{script_name}crwdne56495:0'
+  dashboard_progress_pair_programming: crwdns56925:0crwdne56925:0
   dashboard_responses_view: crwdns56496:0crwdne56496:0
   dashboard_responses_none: crwdns56497:0crwdne56497:0
   dashboard_sections_new_section: crwdns7802:0crwdne7802:0

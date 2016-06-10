@@ -479,12 +479,14 @@ mt:
     picture_count: 'Fil-passat<b>%{days}</b>, l-istudenti pingew <b>%{count}</b> stampi billi kitbu programmi tal-kompjuter taghhom. Ikklikkja fuq l-istampi biex tara kull programm jahdem.'
     activity_count: 'Fil-passat <b>%{days}</b> il-gurnata, l-istudenti għamlu <b>%{count}</b> app u stampi biilli kitbu il-programmi tal-kompjuter taghhom stess. Ikklikkja fuq l-istampi u screenshots biex tara kull programm jahdem.'
     want_to_make_your_own: Tixtieq tikteb il-porgramm tieghek stess?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Aktar &rarr;'
     caption_by_name_age: 'by %{name}, age %{age}'
     caption_time_ago: '%{time_ago} ilu'
     header: Gallery
     header_playlab: Stories and games
     header_artist: Code art
+    report_abuse: Irrapporta l-Abbuż
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."

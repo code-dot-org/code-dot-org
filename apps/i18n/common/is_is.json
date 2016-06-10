@@ -233,13 +233,11 @@
   "tryBlocksBelowFeedback": "Reyndu að nota einn af þessum kubbum:",
   "tryHOC": "Prófa Klukkustund kóðunar",
   "unnamedFunction": "Þú ert með breytu eða fall sem hefur ekkert heiti. Ekki gleyma að gefa öllu lýsandi heiti.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Viltu læra að kóða?",
   "watchVideo": "Horfa á videóið",
   "when": "þegar",
   "whenRun": "þegar keyrt",
-  "workspaceHeaderShort": "Vinnusvæði: ",
-  "hide": "Hide",
-  "more": "More",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
+  "workspaceHeaderShort": "Vinnusvæði: "
 }

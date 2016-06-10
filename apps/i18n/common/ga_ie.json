@@ -233,13 +233,11 @@
   "tryBlocksBelowFeedback": "Bain triail as ceann de na blocanna thíos:",
   "tryHOC": "Bain triail as an Uair Chódála",
   "unnamedFunction": "Tá athróg nó feidhm gan ainm agat. Ná déan dearmad ainm intuigthe a chur ar gach uile rud.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Ar mhaith leat códú a fhoghlaim?",
   "watchVideo": "Féach ar an bhfíseán",
   "when": "nuair",
   "whenRun": "nuair a ritear é",
-  "workspaceHeaderShort": "Spás oibre: ",
-  "hide": "Hide",
-  "more": "More",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
+  "workspaceHeaderShort": "Spás oibre: "
 }

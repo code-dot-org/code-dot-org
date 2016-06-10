@@ -98,6 +98,11 @@ sq:
         Ne e kemi riemëruar funksionin "vizato një katror"
         për të "vizatuar një gjashtëkëndësh," por akoma vizaton vetëm katrorë! A mund ta modifikosh
         funksionin "vizato një gjashtëkëndësh" për të vizatuar një gjashtëkëndësh me brinjë 50 piksela, dhe vizaton figurën duke përdorur funksionin?
+      2-3 Artist Functions 12 Mike_instruction: |
+        Funskionet janë vërtet të mrekulleshme për të vizatuar
+        gjëra komplekse disa herë. A mund ta përdorësh funksionin "vizato një lule"
+        për të mbushur pjesën e mbetur të kutisë së ujitjes? (Ndihmë: Lulet janë të gjitha të ndara me nga
+        100 piksela gjatësi)  
       2-3 Artist Functions 12_instruction: |
         Funskionet janë vërtet të mrekulleshme për të vizatuar
         gjëra komplekse disa herë. A mund ta përdorësh funksionin "vizato një lule"
@@ -826,6 +831,7 @@ sq:
       4-5 Maze Conditionals 1_instruction: |
         Përdor bllokun repeat until për të
         çuar zombien tek luledielli.
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: |
         Përdor bllokun repeat until për të
         çuar zombien tek luledielli.
@@ -1689,7 +1695,7 @@ sq:
         one.
       Course 4 Play Lab Params 7_instruction: "Shiko në kodin që të është dhënë për të parë nëse \nmund të zbulosh çfarë bënë secili bllok. \\r\n\\r\nKur të mbarosh, përdor\nshigjetat për të kontrolluar Qenin dhe për të mledhur të gjithë flamujt."
       Course 4 Play Lab Params 8_instruction: 'Përdor një bllok "kur preket" për të dërguar Qenin pas në pjesën e sipërme-majtas VETËM NËSE Qeni prek ndonjë nga aktorët.'
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith hearts, and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith pie, and decrease each time that Cat tags Dog with a sandwich.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: |
         Kësaj here nuk ke pse të shkruash ndonjë
         kod, thjesht shtyp "Lesho" për të luajtur lojën! Në këtë lojë, ti je Qeni i cili 
@@ -2524,6 +2530,10 @@ sq:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

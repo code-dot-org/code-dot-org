@@ -72,6 +72,10 @@
         fyrkant" till "Rita en hexagon", men den ritar fortfarande bara rutor! Kan
         du ändra funktionen "Rita en hexagon" så att den ritar en hexagon med sidor
         på 50 pixlar och rita bilden med hjälp av funktionen?
+      2-3 Artist Functions 12 Mike_instruction: 'Funktioner är riktigt bra för att
+        rita komplexa saker flera gånger. Kan du använda funktionen "Rita en blomma"
+        för att fylla resten av planteringslådan? (Ledtråd: växterna är alla åtskilda
+        med 100 pixlar)  '
       2-3 Artist Functions 12_instruction: 'Funktioner är riktigt bra för att rita
         komplexa saker flera gånger. Kan du använda funktionen "Rita en blomma" för
         att fylla resten av planteringslådan? (Ledtråd: växterna är alla åtskilda
@@ -638,6 +642,12 @@
       4-5 Maze Assessment 1_instruction: 'Uppgift: Ta dig till solrosen.'
       4-5 Maze Conditionals 1_instruction: Använd blocket "upprepa tills" för att
         ta zombien till solrosen.
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: Använd blocket "upprepa tills" för att
         ta zombien till solrosen.
       4-5 Maze Conditionals 3_instruction: 'Använd "om"-blocket för att låta mig välja
@@ -2759,6 +2769,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

@@ -101,6 +101,11 @@
         "육각형 그리기" 함수를 수정해서, 한 변의 길이가 50 픽셀인 육각형을 그려보세요. \r
         \r
         새로운 함수를 사용하여 그림을 그려보세요.
+      2-3 Artist Functions 12 Mike_instruction: |-
+        함수를 사용하면 복잡한 모양을 가진 그림을 그리기에 아주 좋습니다. \r
+        \r
+        "꽃 그리기" 함수를 사용해서 나머지 꽃 묘목 상자를 채워주세요.\r
+        꽃들은 100 픽셀 간격으로 놓여져 있습니다.
       2-3 Artist Functions 12_instruction: |-
         함수를 사용하면 복잡한 모양을 가진 그림을 그리기에 아주 좋습니다. \r
         \r
@@ -722,6 +727,12 @@
       4-5 Maze Conditionals 1_instruction: |
         "~할 때까지 반복" 블록을 이용해서,
         좀비를 해바라기로 이동시켜주세요.
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: |
         "~할 때까지 반복" 블록을 이용해서,
         좀비를 해바라기로 이동시켜주세요.
@@ -2712,6 +2723,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2873,23 +2888,19 @@
       NEW Course 4 Artist Functions 11_instruction: |
         한 줄에 6개의 사각형을 그리는 "사각형 한 줄 그리기" 함수를 만들어 보세요.
         이전에 만들어 보았던 "20 크기 사각형 그리기" 함수를 이용해서 만들면 됩니다.
-        참고: 펜의 굵기가 더 두껍게 바뀌었습니다. "20 크기 사각형 그리기" 함수를 "수정"해서
-        어떻게 되나 살펴보세요!\r
       NEW Course 4 Artist Functions 12_instruction: |
         이 패턴을 그리기 위해서, 마지막 퍼즐에서 사용했던
         "사각형 한 줄 그리기" 함수를 사용해보세요.
-      NEW Course 4 Artist Functions 13_instruction: |
-        "사각형 한 줄 그리기" 함수를 이용해서 별 모양을 그려보세요.
-        힌트: "사각형 한 줄 그리기" 함수를 수정하면 두 번 실행시킬 필요가 없습니다.
-        그리고, 일정 픽셀 만큼 이동시킨 다음에 144도를 회전해야 합니다.
+      NEW Course 4 Artist Functions 13_instruction: '"사각형 한 줄 그리기" 함수를 이용해서 별 모양을
+        그려보세요.  '
       NEW Course 4 Artist Functions 14_instruction: "자유 시간입니다! "
       NEW Course 4 Artist Functions 2_instruction: '20 픽셀 만큼 씩 떨어져 있는 3개의 사각형을 그려보세요.
         힌트: 각 사각형의 크기는 100 픽셀입니다.'
-      NEW Course 4 Artist Functions 3_instruction: |
-        여기에 "함수"라는 새로운 블록이 있습니다. "수정하기"를 눌러 한 변의 길이가 100 픽셀인 사각형을 그릴 수 있도록 코드를 채워보세요.
+      NEW Course 4 Artist Functions 3_instruction: |-
+        여기에 "함수"라는 새로운 블록이 있습니다. "수정하기"를 눌러 한 변의 길이가 100 픽셀인 사각형을 그릴 수 있도록 코드를 채워보세요. \r
+        \r
         함수를 모두 수정하면 "닫기"를 누른 후 프로그램을 실행시켜보세요.
-      NEW Course 4 Artist Functions 4_instruction: '"사각형 그리기" 함수를 사용해서 이 패턴을 그려보세요.
-        힌트: 각 사각형을 그린 후 "오른쪽으로 120도 회전" 을 사용하면 됩니다.'
+      NEW Course 4 Artist Functions 4_instruction: '"사각형 그리기" 함수를 사용해서 이 패턴을 그려보세요.'
       NEW Course 4 Artist Functions 5_instruction: |
         "사각형 그리기" 블록은 어떻게 실행되는 것일까요? "사각형 그리기" 함수에서 "수정하기"를 눌러보세요.
         수정하기를 눌렀을 때 보이는 것은 "사각형 그리기"를 정의한 것입니다.
@@ -2897,8 +2908,8 @@
       NEW Course 4 Artist Functions 6_instruction: |
         "사각형 그리기" 함수 블록을 이용해서 이 그림을 만들어보세요. 힌트: 각 사각형들은 120 픽셀 만큼 씩 떨어져 있습니다.\r
       NEW Course 4 Artist Functions 7_instruction: "함수 블록들을 사용하는 것이 어려운가요? 이 함수를 수정해서
-        200 픽셀 크기가 되도록 바꿔보세요.\n힌트: \"사각형 그리기\" 함수에서 \"수정하기\"를 눌러서 고치면 됩니다.\n함수 수정을
-        끝내려면 \"닫기\"를 누르면 됩니다. \n"
+        200 픽셀 크기가 되도록 바꿔보세요.\n\"사각형 그리기\" 함수에서 \"수정하기\"를 눌러서 고치면 됩니다.\n함수 수정을 끝내려면
+        \"닫기\"를 누르면 됩니다. \n"
       NEW Course 4 Artist Functions 8_instruction: |
         "삼각형 그리기"라는 새로운 함수를 만들었습니다.
         한 변의 길이가 100 픽셀인 삼각형을 그릴 수 있도록 함수 정의를 수정해보세요.
@@ -2912,8 +2923,8 @@
       NEW Course 4 Artist Params 1_instruction: |
         한 변의 길이가 50 픽셀 크기인 사각형을 만들 수 있도록
         이 함수를 만들어 보세요. "수정"을 눌러 시작하세요.
-      NEW Course 4 Artist Params 10_instruction: "\"육각형 그리기\" 함수 블록을\n길이 변수값을 바꿀 수
-        있도록 만들어보세요. 힌트: 이 정육각형의 한 변의 길이는 100 픽셀입니다. \n"
+      NEW Course 4 Artist Params 10_instruction: '"육각형 그리기" 함수 블록을 길이 변수값을 바꿀 수 있도록
+        만들어보세요. 이 정육각형의 한 변의 길이는 100 픽셀입니다. '
       NEW Course 4 Artist Params 11_instruction: |
         이 모양을 어떻게 그릴지 생각할 수 있나요?
         "한 변의 길이" 변수를 사용하기 위해 함수를 수정하세요.
@@ -2925,7 +2936,7 @@
         함수에 "~동안 반복" 을 이용해 이 디자인을 만들어보세요.
       NEW Course 4 Artist Params 13_instruction: |-
         "다각형 그리기" 함수를 수정해 보세요. "변의 길이" 매개 변수가 있습니다. 이제 "길이"를 매개 변수로 추가해 보세요. \r
-        힌트: 각 모양의 둘레의 길이는 200 픽셀입니다. 다각형에서 면의 개수가 달라질 때, 같은 크기로 만드는 공식 기억하고 있으시죠?
+        각 모양의 둘레의 길이는 200 픽셀입니다. 다각형에서 면의 개수가 달라질 때, 같은 크기로 만드는 공식 기억하고 있으시죠?
       NEW Course 4 Artist Params 14_instruction: |
         "나선 그리기"를
         "길이"와 "한 변의 길이" 변수를 이용할 수 있도록 수정하고, 이 모양을 다시 만들어보세요.
@@ -2935,19 +2946,18 @@
       NEW Course 4 Artist Params 2_instruction: 한 변의 길이가 50 픽셀인 삼각형을 그리는 "삼각형 그리기"
         함수를 만들어보세요.
       NEW Course 4 Artist Params 3_instruction: |
-        이제 5개의 삼각형이 한 줄로 그리기 위한 함수를 사용해보세요.
-        힌트: 각 삼각형들은 30 픽셀씩 떨어져 있습니다.\r
+        이제 한 줄에 5개의 삼각형을 그리는 함수를 사용해보세요.
+        각 삼각형들은 30 픽셀씩 떨어져 있습니다.\r
       NEW Course 4 Artist Params 4_instruction: |
         이 함수 블록들이 뭔가 다르다는 것을 알아차리셨나요?
         "실행"을 눌러 어떤 일이 일어나나 살펴보세요.
-      NEW Course 4 Artist Params 5_instruction: "입력 블록의 길이 매개변수에 입력 되어있는 ??? 를 채워보세요.\n힌트:
-        육각형의 한 변의 길이는 100 픽셀입니다. \n"
+      NEW Course 4 Artist Params 5_instruction: "입력 블록의 길이 매개변수에 입력 되어있는??? 를 채워보세요.\n육각형의
+        한 변의 길이는 100 픽셀입니다. \n"
       NEW Course 4 Artist Params 6_instruction: |
         이런 모양들을 그려내기 위해서, "???" 로 입력되어있는 "길이" 매개 변수의 정확한 값을 채워보세요.
         사각형과 삼각형의 각 변의 길이는 100 픽셀이고 육각형의 한 변의 길이는 75 픽셀입니다.
-      NEW Course 4 Artist Params 7_instruction: |
-        이 그림을 완성시켜보세요. 힌트:
-        각 선의 길이는 바로 이전 선보다 25 픽셀만큼 더 큽니다. 첫 번째 삼각형의 한 변의 길이는 25 픽셀입니다.
+      NEW Course 4 Artist Params 7_instruction: "이 그림을 완성시켜보세요. 각 삼각형의 변의 길이는 바로 이전
+        것보다 25 픽셀만큼 더 깁니다. 첫 번째 삼각형의 한 변의 길이는 25 픽셀입니다."
       NEW Course 4 Artist Params 8_instruction: |
         이 삼각형 함수의 코드는 문제가 있습니다.
         함수를 고쳐서 25, 50, 75 길이의 삼각형을 그려보세요.
@@ -2963,31 +2973,29 @@
         어떻게 함께 사용될 수 있는지\n이해할 수 있나요? \"실행\"을 눌러 어떻게 실행되는지 살펴보세요. \n"
       NEW Course 4 Artist Vars 12_instruction: |
         자 이제, 이전 레벨에서의 알고리즘을 다시 만든 후,
-        한 변의 길이가 150 인 5각형을 만들어보세요.
+        한 변의 길이가 150인 오각형을 만들어보세요.
       NEW Course 4 Artist Vars 2.5_instruction: "코드를 살펴보세요. \"길이 설정\" 블록과 \"길이\" 블록이
         어떻게 함께 사용될 수 있는지\n이해할 수 있나요? \"실행\"을 눌러 어떻게 실행되는지 살펴보세요. \n"
-      NEW Course 4 Artist Vars 2_instruction: '"길이 설정" 블록에 수 블록을 넣어, 50 픽셀 크기의 삼각형들을
-        만들어보세요. '
+      NEW Course 4 Artist Vars 2_instruction: |
+        "길이 설정" 블록과 "_번 반복하기" 블록에 숫자 블록을 넣어, 50 픽셀 크기의 삼각형들을 만들어보세요.
       NEW Course 4 Artist Vars 4 5_instruction: |
         이전 퍼즐을 멋지게 해결했으니, 이번에는 60 픽셀 크기의 육각형으로 멋진
         디자인을 만들어보세요.
-      NEW Course 4 Artist Vars 4_instruction: |
-        다시 한 번 해보세요. 육각형들로 이런 멋진 디자인을 만들려면 길이 변수의 값을 어떻게 해야할까요?
-        힌트: 10의 배수 입니다.
-      NEW Course 4 Artist Vars 6_instruction: |
-        길이 변수를 정확한 위치에 넣어서 이 패턴을 그려보세요. 그 다음에 정확한 길이를 입력하면 됩니다.
-        (힌트: 10의 배수입니다). \r
+      NEW Course 4 Artist Vars 4_instruction: |-
+        다시 한 번 해보세요. \r
         \r
-        길이 변수의 값을 한 번만 입력하면, 그 값을 계속 사용할 수 있다는 것을 알 수 있습니다.\r
+        육각형들로 이런 멋진 디자인을 만들기 위해 "길이" 변수값을 60으로 설정해 보세요.
+      NEW Course 4 Artist Vars 6_instruction: |-
+        "길이" 변수의 값을 정확히 입력하고 이 변수를 모든 알맞은 위치에 넣어서 100 픽셀짜리 오각형 패턴을 그려보세요. \r
         \r
-        \r
+        길이 변수의 값을 한 번만 입력하면, 그 값을 계속 사용할 수 있다는 것을 알 수 있습니다.
       NEW Course 4 Bee For Loops 1_instruction: "각 꽃에서 꽃꿀을 모으기 위해서 반복 구조를 사용하세요."
       NEW Course 4 Bee For Loops 10_instruction: |
         수평 방향으로 얼마나 멀리 가야하는지
         제어할 수 있도록 "카운터" 변수를 반복 구조에 사용하세요.
       NEW Course 4 Bee For Loops 10a_instruction: |
-        자 이제 도전해보세요! 이전 반복들에 배웠던 것들을 이용해서, 이 문제를 풀어보세요.
-        기억하시죠?: 어떤 단계들로 진행되는지 이해하기 위해서, 여러 번 실행시켜 볼 수 있습니다.
+        자 이제 도전해보세요! 반복에 대해 배웠던 것들을 이용해서, 이 문제를 풀어보세요.
+        기억하세요: 어떤 단계들로 진행되는지 이해하기 위해서, 여러 번 실행시켜 봐야 할 거예요.
       NEW Course 4 Bee For Loops 11_instruction: "이동하고 꽃꿀을 모으는데 반복 변수를 사용해보세요."
       NEW Course 4 Bee For Loops 2_instruction: |
         꿀벌이 모든 꽃꿀을 모울 수 있도록 할 수 있는 코드를 추가해보세요.
@@ -3017,9 +3025,8 @@
         \r
         기억하시죠?: 반복 구조가 실행되면, 한 번 실행 하고 난 후에 "카운터"
         변수의 값에 그 만큼 더합니다.
-      NEW Course 4 Bee For Loops 8_instruction: |-
-        잘 했어요! 꽃 꿀을 3, 6, 9, 12, 15 로 증가시키려면 어떻게 해야 할까요?\r
-        힌트: 이전의 각 값에 얼마를 더하면 될까요?
+      NEW Course 4 Bee For Loops 8_instruction: "잘 했어요! 꽃꿀 모으기를 3, 6, 9, 12, 15 로
+        증가시키려면 어떻게 해야 할까요?"
       NEW Course 4 Bee For Loops 9_instruction: |
         반복 카운팅이 줄어드는 과정에서는 반복이 한 번씩 끝날 때마다 카운터 변수의 값이 줄어듭니다.
         15, 12, 9, 6, 3의 꽃꿀을 모으기 위해서는 카운터 변수에 더할 값이 어떻게 되어야 할까요?

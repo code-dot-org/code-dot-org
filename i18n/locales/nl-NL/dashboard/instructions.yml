@@ -51,6 +51,7 @@ nl:
       2-3 Artist Functions 10_instruction: Hier zijn twee functies, één om een grote tandwiel te tekenen, één voor een kleine. Gebruik ze in een machine!
       2-3 Artist Functions 11.5_instruction: 'Hier is dezelfde "Teken een zeskant" functie. Wat gebeurt er als je slechts 60 graden draait in elke lus?'
       2-3 Artist Functions 11_instruction: 'We hebben de "teken een vierkant" functie hernoemd naar "teken een zeskant", maar het tekent nog steeds vierkanten! Kun je de "teken een zeskant" functie aanpassen zodat deze een zeskant met zijdes van 50 pixels maakt en daarmee de tekening maken?'
+      2-3 Artist Functions 12 Mike_instruction: 'Functies zijn echt geweldig om complexe dingen meerdere keren te tekenen. Kun je de functie "tekenen een bloem" gebruiken om de rest van de bloembak te vullen? (Tip: Tussen de bloemen zit een afstand van 100 pixels) '
       2-3 Artist Functions 12_instruction: 'Functies zijn echt geweldig om complexe dingen meerdere keren te tekenen. Kun je de functie "tekenen een bloem" gebruiken om de rest van de bloembak te vullen? (Tip: Tussen de bloemen zit een afstand van 100 pixels) '
       2-3 Artist Functions 13_instruction: |
         We hebben je voorzien van vier functies.
@@ -367,6 +368,7 @@ nl:
       4-5 Maze 9_instruction: 'Maak een lus met het "herhaal tot" blok.'
       4-5 Maze Assessment 1_instruction: 'Test: Ga naar de zonnebloem.'
       4-5 Maze Conditionals 1_instruction: Gebruik het herhaal tot blok om de zombie bij de zonnebloem te brengen.
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: Gebruik het herhaal tot blok om de zombie bij de zonnebloem te brengen.
       4-5 Maze Conditionals 3_instruction: 'Gebruik het "als" blok om me te laten beslissen wanneer te draaien. Tip: je hebt nog slechts een blok nodig, maar leer hoe wij het instelden zodat je het de volgende keer zelf kunt.'
       4-5 Maze Conditionals 4_instruction: 'OK, dit is net als de vorige puzzel, maar je moet onthouden hoe je het "als" blok en het "herhaal" blok samen gebruikte.'
@@ -1904,6 +1906,10 @@ nl:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

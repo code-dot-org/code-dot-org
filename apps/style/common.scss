@@ -848,8 +848,8 @@ input[type="radio"] {
 
 }
 
-/* Instructions. */
-#bubble {
+/* Instructions. Not netsim-bubbles are styled in JSX */
+#bubble.netsim-bubble {
   color: $black;
   margin-bottom: 10px;
   position: relative;

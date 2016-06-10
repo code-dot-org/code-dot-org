@@ -36,6 +36,10 @@ vi:
       2-3 Artist Functions 10_instruction: Đây là hai hàm, một để vẽ một chiếc bánh răng to và một vẽ bánh răng nhỏ. Hãy dùng chúng để vẽ bên trong một cỗ máy!
       2-3 Artist Functions 11.5_instruction: 'Đây cũng là hàm "vẽ hình lục giác". Nếu sau mỗi vòng lặp cho xoay thêm 60 độ thì sẽ như thế nào?'
       2-3 Artist Functions 11_instruction: 'Chúng ta đã đổi tên hàm "vẽ hình vuông" thành "vẽ hình lục giác", nhưng nó vẫn vẽ hình vuông. Bạn có thể sửa hàm "vẽ hình lục giác sao cho nó vẽ ra lục giác với cạnh là 50 pixel không? Hãy vẽ bằng hàm này!'
+      2-3 Artist Functions 12 Mike_instruction: |
+        Sử dụng hàm để vẽ nhiều vật giống nhau cùng một lúc là cựu kỳ tiện lợi.
+        Bạn có thể cùng hàm "vẽ bông hoa" để vẽ hết những cây còn lại trong chậu cây không?
+        (Gợi ý: các bông hoa cách nhau 100 pixel)
       2-3 Artist Functions 12_instruction: |
         Sử dụng hàm để vẽ nhiều vật giống nhau cùng một lúc là cựu kỳ tiện lợi.
         Bạn có thể cùng hàm "vẽ bông hoa" để vẽ hết những cây còn lại trong chậu cây không?
@@ -593,6 +597,7 @@ vi:
       4-5 Maze Conditionals 1_instruction: |
         Use the `repeat until` block to get the
         zombie to the sunflower.
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: |
         Use the `repeat until` block to get the
         zombie to the sunflower.
@@ -1698,7 +1703,7 @@ vi:
       Course 4 Play Lab Params 8_instruction: |
         Use the `when actor touches` block
         to send Dog back to the top-left ONLY if Dog touches any of the other actors.
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith hearts, and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith pie, and decrease each time that Cat tags Dog with a sandwich.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: |
         This time you don't have to write any
         code, just hit "Run" to play the game! In this game, you're the dog who
@@ -1726,12 +1731,12 @@ vi:
         actor 2 touches anything" event to trigger an update to your score when your
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 6_instruction: "Use the right arrow to shoot hearts.\\r\n\\r\nIn\nour game, how should we score points? Add 1 to your \"points\" variable each\ntime Dog hits Cat with a heart. Use the \"when actor 2 touches anything\"\nevent to trigger an update to your score. You can increment your variable\nby setting \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to pass the level."
+      Course 4 Play Lab Vars 6_instruction: "Use the right arrow to throw pie.\\r\n\\r\nIn\nour game, how should we score points? Add 1 to your \"points\" variable each\ntime Dog hits Cat with a piece of pie. Use the \"when actor 2 touches anything\"\nevent to trigger an update to your score. You can increment your variable\nby setting \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to pass the level."
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
-        isn't too easy to play. Any time Dog (actor 1) gets hit by yellow hearts
-        from Cat (actor 2), you should lose a point. Start with 10 points so it's
-        not too hard. Let your score drop down from 10 to 0 to pass the level.
+        isn't too easy to play. Any time Dog (actor 1) gets hit by a sandwich from
+        Cat (actor 2), you should lose a point. Start with 10 points so it's not
+        too hard. Let your score drop down from 10 to 0 to pass the level.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: |
         Alright, one last thing for
         this game - let's set it up so the player can win (or lose). Use a forever
@@ -2604,6 +2609,10 @@ vi:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -2972,12 +2981,12 @@ vi:
       Overworld Chop Trees_instruction: Chúng ta cần phải xây một ngôi nhà trước khi mặt trời lặn. Cần có nhiều gỗ để xây nhà. Hãy đốn cả 3 cây.
       Overworld Free Play 20x20_instruction: Xin chúc mừng! Bạn đã hoàn thành tất cả các câu đố của chúng tôi! Bây giờ hãy đào, xây và tạo ra điều đặc biệt bằng cách sử dụng tất cả những gì bạn đã học được.
       Overworld Free Play_instruction: Cảnh này là của bạn để chơi trò chơi. Xây gì là lựa chọn của bạn.
-      Overworld House Frame - A_instruction: Hãy xây ngôi nhà của riêng chúng ta! Nơi này trông tốt đấy. Hãy xây khung nhà trên các khối đất.
-      Overworld House Frame - C_instruction: Hãy xây ngôi nhà của riêng chúng ta! Nơi này trông tốt đấy. Hãy xây khung nhà trên các khối đất.
-      Overworld House Frame B_instruction: Một bức tường được hoàn tất, hãy xây dựng phần còn lại của ngôi nhà bằng cách làm theo các kế hoạch sàn nhà của bạn! Bạn sẽ phải lặp lại bản thân khá nhiều ở đây.
-      Overworld House Frame B2_instruction: Một bức tường được hoàn tất, hãy xây dựng phần còn lại của ngôi nhà bằng cách làm theo các kế hoạch sàn nhà của bạn! Bạn sẽ phải lặp lại bản thân khá nhiều ở đây.
-      Overworld House Frame C_instruction: Một bức tường được hoàn tất, hãy xây dựng phần còn lại của ngôi nhà bằng cách làm theo các kế hoạch sàn nhà của bạn! Bạn sẽ phải lặp lại bản thân khá nhiều ở đây.
-      Overworld House Frame Chosen_instruction: 'Xây dựng phần còn lại của căn nhà của bạn từ bất kỳ tài liệu nào bạn muốn. Bộ chỉ huy "lặp lại" sẽ có ích.'
+      Overworld House Frame - A_instruction: Hãy cùng nhau xây ngôi nhà của riêng mình nào! Khu đất này đẹp đấy. Phải dựng khung nhà trên các khối đất này.
+      Overworld House Frame - C_instruction: Hãy cùng nhau xây ngôi nhà của riêng mình nào! Khu đất này đẹp đấy. Phải dựng khung nhà trên các khối đất này.
+      Overworld House Frame B_instruction: Thế là đã xây xong một bức tường, tiếp tục xây dựng nốt căn nhà theo bản vẽ thôi! Bạn sẽ phải lập đi lập lại một thao tác khác nhiều lần đấy.
+      Overworld House Frame B2_instruction: Thế là đã xây xong một bức tường, tiếp tục xây dựng nốt căn nhà theo bản vẽ thôi! Bạn sẽ phải lập đi lập lại một thao tác khác nhiều lần đấy.
+      Overworld House Frame C_instruction: Thế là đã xây xong một bức tường, tiếp tục xây dựng nốt căn nhà theo bản vẽ thôi! Bạn sẽ phải lập đi lập lại một thao tác khác nhiều lần đấy.
+      Overworld House Frame Chosen_instruction: 'Xây nốt các phần còn lại của ngôi nhà với bất cứ vật liệu nào mà bạn thích nhé. Hãy sử dụng câu lệnh "repeat" để thực hiện nhanh hơn.'
       Overworld House Frame_instruction: Hãy xây ngôi nhà của riêng chúng ta! Nơi này trông tốt đấy. Hãy xây khung nhà trên các khối đất.
       Overworld Minecart Track_instruction: Bạn đã quay trở lại mặt đất với rất nhiều tài nguyên ngầm. Bây giờ, chúng ta sẽ xây một con đường dọc theo đường đất từ ngôi nhà của bạn. Bước đầu tiên là phát quang con đường này. Hãy đi theo con đường và đốn hết cây.
       Overworld Move to Sheep_instruction: 'Hãy thêm một lệnh "move forward" thứ hai để đi đến con cừu.'

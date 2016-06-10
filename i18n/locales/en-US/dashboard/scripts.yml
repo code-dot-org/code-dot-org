@@ -929,6 +929,7 @@ en:
           Rich long assessment: crwdns56314:0crwdne56314:0
           Free Response: crwdns56595:0crwdne56595:0
           Game Lab: crwdns56596:0crwdne56596:0
+          Sample PLC Assessment: crwdns56889:0crwdne56889:0
         algebraPD2b:
           title: crwdns38830:0crwdne38830:0
           description: crwdns38831:0crwdne38831:0
@@ -1770,10 +1771,9 @@ en:
           Expressions and Reassignment: crwdns56600:0crwdne56600:0
           Sprites and Properties: crwdns56601:0crwdne56601:0
           Counting with Variables: crwdns56602:0crwdne56602:0
-           Sprite Properties and Mod: crwdns56469:0crwdne56469:0
           Expressions: crwdns56776:0crwdne56776:0
           Conditionals and Keyboard Input: crwdns56777:0crwdne56777:0
-           Sprites and Images: crwdns56778:0crwdne56778:0
+          Sprites and Images: crwdns56890:0crwdne56890:0
         2016_sciencePD_phase1:
           title: crwdns56470:0crwdne56470:0
           description_short: crwdns56471:0crwdne56471:0
@@ -1971,3 +1971,38 @@ en:
           description: crwdns56831:0crwdne56831:0
           description_audience: crwdns56832:0crwdne56832:0
           Sample Stage: crwdns56833:0crwdne56833:0
+        TeacherCon:
+          title: crwdns56891:0crwdne56891:0
+          description: crwdns56892:0crwdne56892:0
+          Introduction to Teachercon: crwdns56893:0crwdne56893:0
+          "Lesson 1.4: number systems - circle triangle square": crwdns56894:0crwdne56894:0
+          "Lesson 1.6: sending numbers": crwdns56895:0crwdne56895:0
+          "Lesson 1.9: internet addressing (battleship)": crwdns56896:0crwdne56896:0
+          "Lesson 1.10: routers and redundancy": crwdns56897:0crwdne56897:0
+          "Lesson 1.11: Packets and Making a Reliable Internet": crwdns56898:0crwdne56898:0
+          "Lesson 2.2: text compression": crwdns56899:0crwdne56899:0
+          "Lesson 2.3: black and white pixelation": crwdns56900:0crwdne56900:0
+          "Lesson 2.10: good and bad data visualizations": crwdns56901:0crwdne56901:0
+          Group Work and Peer Learning: crwdns56902:0crwdne56902:0
+          Balancing Teachers and Tools: crwdns56903:0crwdne56903:0
+          Discovery Learning: crwdns56904:0crwdne56904:0
+          Capturing Student Learning: crwdns56905:0crwdne56905:0
+          Lesson 14 number systems - circle triangle square: crwdns56906:0crwdne56906:0
+          "Lesson 1.4 &#58;\t number systems - circle triangle square": crwdns56907:0crwdne56907:0
+          "Lesson 1&#46;4: number systems - circle triangle square": crwdns56908:0crwdne56908:0
+          "Lesson 1\.4: number systems - circle triangle square": crwdns56909:0crwdne56909:0
+          "Lesson 1,4: number systems - circle triangle square": crwdns56910:0crwdne56910:0
+          "Lesson 1,6: sending numbers": crwdns56911:0crwdne56911:0
+          "Lesson 1,9: internet addressing (battleship)": crwdns56912:0crwdne56912:0
+          "Lesson 1,10: routers and redundancy": crwdns56913:0crwdne56913:0
+          "Lesson 1,11: Packets and Making a Reliable Internet": crwdns56914:0crwdne56914:0
+          "Lesson 2,2: text compression": crwdns56915:0crwdne56915:0
+          "Lesson 2,3: black and white pixelation": crwdns56916:0crwdne56916:0
+          "Lesson 2,10: good and bad data visualizations": crwdns56917:0crwdne56917:0
+        MikeTest:
+          title: crwdns56918:0crwdne56918:0
+          description_short: crwdns56919:0crwdne56919:0
+          description: crwdns56920:0crwdne56920:0
+          description_audience: crwdns56921:0crwdne56921:0
+          Sample Stage: crwdns56922:0crwdne56922:0
+          Artist Functions: crwdns56923:0crwdne56923:0

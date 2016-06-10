@@ -482,12 +482,14 @@ hy:
     picture_count: 'Ի անցյալում <b>% {օր} </ b> օր, ուսանողները պետք է կազմված <b>% {count} </ b> նկարներ գրելով սեփական համակարգչային ծրագրերը: Սեղմիր նկարները տեսնել, յուրաքանչյուր ծրագրի գործողությունների:'
     activity_count: 'Ի անցյալում <b>% {օր} </ b> օր, ուսանողները հանդես են եկել <b>% {count} </ b> հավելվածներ եւ նկարներ գրելով սեփական համակարգչային ծրագրերը: Սեղմիր նկարները եւ screenshots է տեսնել յուրաքանչյուր ծրագրի գործողությունների:'
     want_to_make_your_own: Ցանկանում եք, որպեսզի ձեր սեփական.
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'More & rarr;'
     caption_by_name_age: 'ըստ% {name}, տարիքը% {տարիքը}'
     caption_time_ago: '% {Time_ago} առաջ'
     header: սրահ
     header_playlab: Պատմություններ եւ խաղեր
     header_artist: ՕՐԵՆՍԳԻՐՔ, հոդված
+    report_abuse: Զեկուցել չարաշահման մասին
   landing:
     prerelease: 'Այս դասընթացը է <span class = betatext> բետա </ span>. Սա նշանակում է, որ դա ոչ թե վերջնական տարբերակը, իհարկե, եւ ենթակա է վերանայման, ինչպես նաեւ հետադարձ ստացել եւ բարելավումներ են կատարվում:'
     prerelease_hoc2014: 'Սա Tutorial է <span class = betatext> բետա </ span>. Այն ենթակա է վերանայման, ինչպես նաեւ հետադարձ ստացել եւ բարելավումներ են կատարվում:'

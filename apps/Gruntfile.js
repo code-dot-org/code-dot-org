@@ -67,7 +67,8 @@ module.exports = function (grunt) {
 
   // Parse options from environment.
   var envOptions = {
-    dev: (process.env.MOOC_DEV === '1')
+    dev: (process.env.MOOC_DEV === '1'),
+    autoReload: ['true', '1'].indexOf(process.env.AUTO_RELOAD) !== -1
   };
 
   config.clean = {
@@ -77,6 +78,35 @@ module.exports = function (grunt) {
   var ace_suffix = envOptions.dev ? '' : '-min';
   var dotMinIfNotDev = envOptions.dev ? '' : '.min';
   var piskelRoot = String(child_process.execSync('`npm bin`/piskel-root')).replace(/\s+$/g,'');
+  var PISKEL_DEVELOPMENT_MODE = grunt.option('piskel-dev');
+  if (PISKEL_DEVELOPMENT_MODE) {
+    var localNodeModulesRoot = String(child_process.execSync('npm prefix')).replace(/\s+$/g,'');
+    if (piskelRoot.indexOf(localNodeModulesRoot) === -1) {
+      // Piskel has been linked to a local development repo, we're good to go.
+      piskelRoot = path.resolve(piskelRoot, '..', 'dev');
+      console.log(chalk.bold.yellow('-- PISKEL DEVELOPMENT MODE --'));
+      console.log(chalk.yellow('Make sure you have a local development build of piskel'));
+      console.log(chalk.yellow('Inlining PISKEL_DEVELOPMENT_MODE=true'));
+      console.log(chalk.yellow('Copying development build of Piskel instead of release build'));
+
+    } else {
+      console.log(chalk.bold.red('Unable to enable Piskel development mode.'));
+      console.log(chalk.red('In order to use Piskel development mode, your apps ' +
+          'package must be linked to a local development copy of the Piskel ' +
+          'repository with a complete dev build.' +
+          '\n' +
+          '\n  1. git clone https://github.com/code-dot-org/piskel.git <new-directory>' +
+          '\n  2. cd <new-directory>' +
+          '\n  3. npm install && grunt build-dev' +
+          '\n  4. npm link' +
+          '\n  5. cd -' +
+          '\n  6. npm link @code-dot-org/piskel' +
+          '\n  7. rerun your previous command' +
+          '\n'));
+      process.exitCode = 1; // Failure!
+      return;
+    }
+  }
 
   config.copy = {
     src: {
@@ -308,6 +338,7 @@ module.exports = function (grunt) {
       client: {
         mocha: {
           timeout: 14000,
+          grep: grunt.option('grep'),
         },
       },
     },
@@ -355,6 +386,7 @@ module.exports = function (grunt) {
         new webpack.DefinePlugin({
           IN_UNIT_TEST: JSON.stringify(false),
           'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+          PISKEL_DEVELOPMENT_MODE: PISKEL_DEVELOPMENT_MODE
         }),
         new webpack.optimize.CommonsChunkPlugin({
           name:'common',
@@ -381,9 +413,9 @@ module.exports = function (grunt) {
     keepalive: true,
     plugins: config.webpack.build.plugins.concat([
       new LiveReloadPlugin({
-        appendScriptTag: true,
+        appendScriptTag: envOptions.autoReload
       }),
-    ]),
+    ])
   });
 
   var ext = envOptions.dev ? 'uncompressed' : 'compressed';
@@ -391,6 +423,7 @@ module.exports = function (grunt) {
     vendor: {
       nonull: true,
       src: [
+        'lib/blockly/preamble_' + ext + '.js',
         'lib/blockly/blockly_' + ext + '.js',
         'lib/blockly/blocks_' + ext + '.js',
         'lib/blockly/javascript_' + ext + '.js',

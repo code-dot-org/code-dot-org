@@ -60,6 +60,7 @@ module.exports = function (config) {
           IN_UNIT_TEST: JSON.stringify(true),
           'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
           'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+          PISKEL_DEVELOPMENT_MODE: false
         }),
       ]
     }),

@@ -36,6 +36,7 @@ sv:
       2-3 Artist Functions 10_instruction: Här är två funktioner, en för att rita ett stort kugghjul och en för att rita ett litet kugghjul. Använd dem för att rita insidan av en maskin!
       2-3 Artist Functions 11.5_instruction: 'Här är samma "Rita en hexagon"-funktion. Vad händer om du bara vrider 60 grader varje gång du upprepar?'
       2-3 Artist Functions 11_instruction: 'Vi har bytt namn på funktionen "Rita en fyrkant" till "Rita en hexagon", men den ritar fortfarande bara rutor! Kan du ändra funktionen "Rita en hexagon" så att den ritar en hexagon med sidor på 50 pixlar och rita bilden med hjälp av funktionen?'
+      2-3 Artist Functions 12 Mike_instruction: 'Funktioner är riktigt bra för att rita komplexa saker flera gånger. Kan du använda funktionen "Rita en blomma" för att fylla resten av planteringslådan? (Ledtråd: växterna är alla åtskilda med 100 pixlar)  '
       2-3 Artist Functions 12_instruction: 'Funktioner är riktigt bra för att rita komplexa saker flera gånger. Kan du använda funktionen "Rita en blomma" för att fylla resten av planteringslådan? (Ledtråd: växterna är alla åtskilda med 100 pixlar)  '
       2-3 Artist Functions 13_instruction: Vi har försett dig med fyra funktioner. Använd dem hur du vill i en eller flera slingor för att göra bilder du kan dela med dina vänner. Tryck kör för att se ett exempel.
       2-3 Artist Functions 2_instruction: 'Med funktioner kan du definiera nya block! Vi har flyttat blocken för att rita en kvadrat till en funktion som kallas "Rita en kvadrat". Kan du använda funktionen "Rita en kvadrat" för att skapa glasögonen? kvadraterna är 75 pixlar isär.'
@@ -333,6 +334,7 @@ sv:
       4-5 Maze 9_instruction: 'Skapa en slinga med blocket "upprepa tills".'
       4-5 Maze Assessment 1_instruction: 'Uppgift: Ta dig till solrosen.'
       4-5 Maze Conditionals 1_instruction: 'Använd blocket "upprepa tills" för att ta zombien till solrosen.'
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: 'Använd blocket "upprepa tills" för att ta zombien till solrosen.'
       4-5 Maze Conditionals 3_instruction: 'Använd "om"-blocket för att låta mig välja när jag ska svänga. Tips: du behöver bara ett block till, men lär dig hur man gör det så att du kan göra det själv nästa gång.'
       4-5 Maze Conditionals 4_instruction: 'Ok, det här är precis som förra pusslet, men du behöver kunna använda "om"-blocket och "upprepa"-blocket tillsammans.'
@@ -1835,6 +1837,10 @@ sv:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

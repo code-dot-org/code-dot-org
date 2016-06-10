@@ -89,6 +89,10 @@
         Renomeamos a función "debuxa un cadrado"
         como "debuxa un hexágono", pero aínda debuxa só cadrados! Podes
         modificar a función "debuxa un hexágono" para debuxar un hexágono con lados de 50 pixels, e debuxar a imaxe usando a función?
+      2-3 Artist Functions 12 Mike_instruction: "As funcións son óptimas para debuxar\ncousas
+        complexas varias veces. Podes usar a función \"debuxa unha flor\"\npara cubrir
+        o resto de plantas? (Pista: as plantas están todas separadas\npor unha lonxitude
+        de 100 pixels)  \n"
       2-3 Artist Functions 12_instruction: "As funcións son óptimas para debuxar\ncousas
         complexas varias veces. Podes usar a función \"debuxa unha flor\"\npara cubrir
         o resto de plantas? (Pista: as plantas están todas separadas\npor unha lonxitude
@@ -818,6 +822,12 @@
       4-5 Maze Conditionals 1_instruction: |
         Usa o bloque "repita até" para levar o
         zumbi até o xirasol.
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: |
         Usa o bloque "repita até" para levar o
         zumbi até o xirasol.
@@ -3199,6 +3209,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

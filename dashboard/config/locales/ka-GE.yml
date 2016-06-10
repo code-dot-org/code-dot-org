@@ -595,12 +595,15 @@
       აპლიკაცია და ნახატი საკუთარი კომპიუტერული პროგრამების შექმნით. დააჭირეთ ნახატებს
       და სქრინშოტებს და ნახეთ, როგორ მოქმედებს თითოეული პროგრამა."
     want_to_make_your_own: "გინდათ, თქვენი შექმნათ?"
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: "მეტი &rarr;"
     caption_by_name_age: "შემქმნელი: %{name}, ასაკი %{age}"
     caption_time_ago: "%{time_ago}ს წინ"
     header: "გალერეა"
     header_playlab: "თამაშების ლაბორატორია"
     header_artist: "მხატვარი"
+    report_abuse: "შეგვატყობინეთ დარღვევა"
   landing:
     prerelease: "ეს არის კურსის <span class='betatext'>ბეტა-ვერსია</span>. ანუ, ეს
       არ არის საბოლოო ვარიანტი, კურსი გაუმჯობესდება მიღებული უკუკავშირის საფუძველზე."

@@ -233,13 +233,11 @@
   "tryBlocksBelowFeedback": "Опитайте да използвате един от блоковете по-долу:",
   "tryHOC": "Опитайте Часа на Кодирането",
   "unnamedFunction": "Имате променлива или функция, която няма име. Не забравяйте да дадете подробно описателно име.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "Искате ли да се научите да пишете код?",
   "watchVideo": "Гледайте видеото",
   "when": "когато",
   "whenRun": "при стартиране",
-  "workspaceHeaderShort": "Работна област: ",
-  "hide": "Hide",
-  "more": "More",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
+  "workspaceHeaderShort": "Работна област: "
 }

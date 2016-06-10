@@ -36,6 +36,7 @@ bs:
       2-3 Artist Functions 11_instruction: |
         Promijenili smo ime "nacrtaj kvadrat" funkcije i sada se zove "nacrtaj šestougaonik", ali još uvijek crta kvadrate. Možeš li promijeniti funkciju
         "nacrtaj šestougaonik" da bi se nacrtao šestougaonik sa stranicama od 50 piksela?
+      2-3 Artist Functions 12 Mike_instruction: 'Funkcije su stvarno super ako želiš nacrtati komplikovane stvari više puta. Možeš li iskorisititi "nacrtaj cvijet" funkciju da bi napunio ostatak kutije plantažera?(Savjet: Sve su biljke odvojene za 100 piksela dužine)  '
       2-3 Artist Functions 12_instruction: 'Funkcije su stvarno super ako želiš nacrtati komplikovane stvari više puta. Možeš li iskorisititi "nacrtaj cvijet" funkciju da bi napunio ostatak kutije plantažera?(Savjet: Sve su biljke odvojene za 100 piksela dužine)  '
       2-3 Artist Functions 13_instruction: Pružili smo ti 4 funkcije. Iskoristi ih kako god želiš unutar jedne ili više petlji da bi se nacrtale slike koje možeš podijeliti sa svojim prijateljima. Pokreni da bi vidjeo/la primjer.
       2-3 Artist Functions 2_instruction: 'Funkcije ti omogućuju da definiraš nove blokove! Premjestili smo blokove za crtanje kvadrata u funkciju sa nazivom "nacrtaj kvadrat". Možeš li iskoristiti funkciju "nacrtaj kvadrat" da bi napravio/la naočale? Kvadrati su odvojeni jedan od drugog za 75 piksela.'
@@ -329,6 +330,7 @@ bs:
       4-5 Maze 9_instruction: 'Napravi petlju sa "ponavljaj dok" blokom.'
       4-5 Maze Assessment 1_instruction: 'Procjena: Dođi do suncokreta.'
       4-5 Maze Conditionals 1_instruction: 'Upotrijebi "ponavljaj dok" blok da bi doveo/la zombija do suncokreta.'
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: 'Upotrijebi "ponavljaj dok" blok da bi doveo/la zombija do suncokreta.'
       4-5 Maze Conditionals 3_instruction: 'Upotrijebi "ako" blok da bi odredio kada trebam skrenuti. Savjet: trebaš samo još jedan blok, ali nauči kako da ga postaviš tako da to možeš odraditi samostalno slijedeći put.'
       4-5 Maze Conditionals 4_instruction: 'Ok, ovo je isto kao i posljednji zadatak, ali se moraš sjetiti kako si koristio/la "ako" i "ponavljaj" blokove zajedno.'
@@ -937,7 +939,7 @@ bs:
         one.
       Course 4 Play Lab Params 7_instruction: Upotrijebi tipke sa strelicama da kontrolišeš Psa i za skupljanje svih zastava.
       Course 4 Play Lab Params 8_instruction: 'Upotrijebi "pri dodiru" blok da bi poslao/la Psa nazad u gornji lijevi ugao u slučaju kada Pas dodirne neki od likova.'
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith hearts, and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe variable `player_score` should increase each time Dog tags Cat\nwith pie, and decrease each time that Cat tags Dog with a sandwich.\\r\n\\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: 'Ne moraš pisati nikakav kod, samo pritisni na "pokreni" i igraj igricu! U ovoj igrici, ti si Pas koji pokušava da sakupi više zastava od Mačke. Upotrijebi strelicu prema dole za kontrolisanje Psa. Pritisni na "Završi" kada želiš prestati igrati.'
       Course 4 Play Lab Vars 2_instruction: 'Utrka nije baš bila pravedna! Promijeni "brzina_psa" varijablu da bi osigurao/la da ćeš sakupiti više zastava od Mačke. Prvi koji prikupi 10 zastava je pobjednik!'
       Course 4 Play Lab Vars 3_instruction: Evo nova vrsta igrice! Koristi strelicu za lijevo i desno za kretanje, i strelicu na gore za skakanje. Vidi ako možeš prikupiti sve zastave.
@@ -1629,6 +1631,10 @@ bs:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: Sve varijable i funkcije su trenutno prazne. Svaki nivo predstavlja napredak i definisanje funkcija, što će povećati funkcionalnost.
       MSM Big Game Vars 1 (copy 1)_instruction: U alatnoj traci za Varijable ćeš vidjeti nekoliko varijabli koje definišu kako će karakteri u tvojoj igrici izgledati, kako će se kretati i kakvu će imati interakciju sa drugim likovima
       MSM Big Game Vars 1_instruction: U alatnoj traci za Varijable ćeš vidjeti nekoliko varijabli koje definišu kako će karakteri u tvojoj igrici izgledati, kako će se kretati i kakvu će imati interakciju sa drugim likovima

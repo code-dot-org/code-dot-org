@@ -91,6 +91,10 @@
         μόνο τετράγωνα! Μπορείτε να τροποποιήσετε τη συνάρτηση "σχεδιάστε ένα εξάγωνο"
         ώστε να σχεδιάζει ένα εξάγωνο πλευράς 50 εικονοστοιχείων, και να σχεδιάσετε
         την εικόνα χρησιμοποιώντας τη συνάρτηση;
+      2-3 Artist Functions 12 Mike_instruction: 'Οι συναρτήσεις είναι πραγματικά εξαιρετικές
+        για να σχεδιάζουμε σύνθετα πράγματα πολλές φορές. Μπορείτε να χρησιμοποιήσετε
+        τη συνάρτηση "σχεδίασε ένα λουλούδι" για να συμπληρώσετε το υπόλοιπο της γλάστρας;
+        (Υπόδειξη: όλα τα φυτά απέχουν μήκος 100 εικονστοιχείων)  '
       2-3 Artist Functions 12_instruction: 'Οι συναρτήσεις είναι πραγματικά εξαιρετικές
         για να σχεδιάζουμε σύνθετα πράγματα πολλές φορές. Μπορείτε να χρησιμοποιήσετε
         τη συνάρτηση "σχεδίασε ένα λουλούδι" για να συμπληρώσετε το υπόλοιπο της γλάστρας;
@@ -724,6 +728,12 @@
       4-5 Maze Assessment 1_instruction: "Αξιολόγηση: Πήγαινε στον ηλίανθο."
       4-5 Maze Conditionals 1_instruction: Χρησιμοποίησε το μπλοκ "Επανάλαβε μέχρι"
         για να οδηγηθεί το Ζόμπι στον Ηλίανθο.
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: Χρησιμοποίησε το μπλοκ "Επανάλαβε μέχρι"
         για να οδηγηθεί το Ζόμπι στον Ηλίανθο.
       4-5 Maze Conditionals 3_instruction: 'Χρησιμοποίησε το μπλοκ "εαν" ωστε να μπορώ
@@ -2970,6 +2980,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

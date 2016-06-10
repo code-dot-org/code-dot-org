@@ -23,7 +23,7 @@
           future: "오늘 이전 날짜만 가능합니다."
   hello: Hello world
   welcome_back: "%{name} 님, 어서오세요. "
-  your_professional_learning_plan: Your Professional Learning Plan
+  your_professional_learning_plan: "전문적인 학습 계획"
   see_your_learning_plan: "학습 계획을 참조 하십시오"
   submit: "제출하기"
   unsubmit: "제출 취소"
@@ -369,8 +369,7 @@
     section_code_not_entered: Current_section_code를 입력 하십시오.
     section_code_cant_be_current_section: "현재 섹션과 새로운 섹션은 동일할 수 없습니다."
     current_section_dne: "죄송합니다. %{current_section_code}는 존재하지 않습니다. 다른 섹션 코드를 입력하세요."
-    students_not_yours: You cannot move students from a section that does not belong
-      to you.
+    students_not_yours: "여러분에게 속해 있지 않은 학생들을 섹션에서 이동시킬 수 없습니다."
     stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
     student_ids_not_entered: "학생의 ID를 입력하세요."
     student_not_found: "한명 또는 그 이상의 학생을 찾을 수 없습니다."
@@ -538,12 +537,15 @@
     activity_count: "지난  <b>%{days}</b>일 동안 학생들이 <b>%{count}</b>개의 앱과 그림을 자기 자신의 힘으로
       만들었습니다. 그림이나 스크린샷을 누르면 각각의 프로그램을 실행시켜볼 수 있습니다."
     want_to_make_your_own: "자기 코드를 만들겠습니까?"
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: "더 살펴보기"
     caption_by_name_age: "%{age}살, %{name}가"
     caption_time_ago: "%{time_ago} 전에"
     header: "갤러리"
     header_playlab: "스토리 및 게임"
     header_artist: "화가"
+    report_abuse: "악용 사례 신고"
   landing:
     prerelease: "이 코스는 <span class='betatext'>beta</span> 테스트 중입니다. 이 코스는 최종 완성 버전의
       코스가 아니며, 여러가지 피드백과 개선작업이 이루어집니다."

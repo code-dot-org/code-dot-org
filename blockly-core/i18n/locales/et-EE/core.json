@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT": "eemalda tühikud vasakult poolt",
   "TEXT_TRIM_OPERATOR_RIGHT": "eemalda tühikud paremalt poolt",
   "TEXT_TRIM_TOOLTIP": "Tagastab tekstist koopia ilma eelnevate või järgnevate tühikuteta.",
+  "UNUSED_CODE": "Unused code",
   "VARIABLES_DEFAULT_NAME": "element",
   "VARIABLES_GET_CREATE_SET": "Loo 'väärtusta %1'",
   "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",

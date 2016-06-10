@@ -34,6 +34,7 @@ ru:
       2-3 Artist Functions 10_instruction: Вот две функции, одна для рисования большой шестерни, а другая — шестерни поменьше. Используй их, чтобы нарисовать рисунок внутри машины!
       2-3 Artist Functions 11.5_instruction: Это та же функция «нарисовать шестиугольник». Что произойдет, если при каждом выполнении цикла поворачивать только на 60 градусов?
       2-3 Artist Functions 11_instruction: Мы переименовали функцию «нарисовать квадрат» в «нарисовать шестиугольник», только она все еще рисует только квадраты! Можешь изменить функцию «нарисовать шестиугольник», чтобы она рисовала шестиугольник со сторонами 50 пикселей, и нарисовать рисунок с ее помощью?
+      2-3 Artist Functions 12 Mike_instruction: 'Функции прекрасно подходят для того, чтобы рисовать сложные фигуры несколько раз. Можешь заполнить оставшуюся часть ящика для цветов с помощью функции «нарисовать цветок»? (Подсказка: цветы находятся на расстоянии 100 пикселей друг от друга)  '
       2-3 Artist Functions 12_instruction: 'Функции прекрасно подходят для того, чтобы рисовать сложные фигуры несколько раз. Можешь заполнить оставшуюся часть ящика для цветов с помощью функции «нарисовать цветок»? (Подсказка: цветы находятся на расстоянии 100 пикселей друг от друга)  '
       2-3 Artist Functions 13_instruction: Мы дали тебе четыре функции. Используй их внутри одного или нескольких циклов, как тебе хочется, чтобы рисовать рисунки, которыми ты можешь поделиться с друзьями. Нажми «Выполнить», чтобы увидеть пример.
       2-3 Artist Functions 2_instruction: Функции позволяют создавать новые блоки! Мы переместили блоки для рисования квадрата внутрь функции «нарисовать квадрат». Можешь использовать функцию «нарисовать квадрат», чтобы нарисовать очки? Расстояние между квадратами — 75 пикселей.
@@ -330,6 +331,7 @@ ru:
       4-5 Maze 9_instruction: Создай цикл с помощью блока «повторять, пока не».
       4-5 Maze Assessment 1_instruction: 'Тест: Доведи меня до подсолнуха.'
       4-5 Maze Conditionals 1_instruction: Используй блок «повторять, пока не», чтобы доставить зомби к подсолнуху.
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: Используй блок «повторять, пока не», чтобы доставить зомби к подсолнуху.
       4-5 Maze Conditionals 3_instruction: 'Используй блок «если», чтобы я мог решать, когда поворачивать. Подсказка: тебе понадобится еще один блок, но запомни, как мы его разместили, чтобы в следующий раз ты мог сделать это сам.'
       4-5 Maze Conditionals 4_instruction: Хорошо, это похоже на предыдущую головоломку, но тебе надо помнить, как ты использовал блоки «если» и «повторить» вместе.
@@ -1919,6 +1921,10 @@ ru:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

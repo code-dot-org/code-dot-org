@@ -233,13 +233,11 @@
   "tryBlocksBelowFeedback": "სცადეთ ამ ბლოკებიდან რომელიმეს გამოყენება:",
   "tryHOC": "სცადეთ კოდის ერთი საათი",
   "unnamedFunction": "თქვენს ცვლადს ან ფუნქციას სახელი არ აქვს. არ დაგავიწყდეთ ყველაფრისთვის დამახასიათებელი სახელის დარქმევა.",
+  "unattachedBlockTipTitle": "Unattached blocks",
+  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "wantToLearn": "გინდათ პროგრამირების სწავლა?",
   "watchVideo": "უყურეთ ვიდეოს",
   "when": "როდის",
   "whenRun": "გაშვებისას",
-  "workspaceHeaderShort": "სამუშაო სივრცე: ",
-  "hide": "Hide",
-  "more": "More",
-  "unattachedBlockTipTitle": "Unattached blocks",
-  "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks."
+  "workspaceHeaderShort": "სამუშაო სივრცე: "
 }

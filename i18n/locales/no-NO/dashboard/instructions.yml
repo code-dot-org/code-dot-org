@@ -34,6 +34,7 @@ nn:
       2-3 Artist Functions 10_instruction: Her er to funksjonar, ein som teiknar eit stort tannhjul og ein som teiknar eit lite tannhjul. Bruk dei til å teikne innsida av ei maskin!
       2-3 Artist Functions 11.5_instruction: 'Her er den samme "Tegn ein sekskant"-funksjonen. Kva skjer om du bare snur 60 grader kvar gong du repeterer?'
       2-3 Artist Functions 11_instruction: 'Me har gitt funksjonen "teikn eit kvadrat" nytt namn, no heiter den "teikn ein seksskant", men den teiknar framleis berre kvadrat! Kan du endre "teikn ein sekskant"-funksjonen slik at den teiknar ein sekskant med 50 pikslar lange sider, og så teikne bildet ferdig med funksjonen?'
+      2-3 Artist Functions 12 Mike_instruction: 'Funksjonar er verkeleg gode for å teikne komplekse ting fleire gonger. Kan du bruka ein «teikn ein blome» til å fylla resten av plankteboksen? (Hint: Planter er åtskilde med 100 pikslars avstand)  '
       2-3 Artist Functions 12_instruction: 'Funksjonar er verkeleg gode for å teikne komplekse ting fleire gonger. Kan du bruka ein «teikn ein blome» til å fylla resten av plankteboksen? (Hint: Planter er åtskilde med 100 pikslars avstand)  '
       2-3 Artist Functions 13_instruction: Vi har gitt deg fire funksjonar, Bruk dei slik du vil i ein eller fleire løkker for å lage bilete du kan dele med vennane dine. Trykk kjør for å sjå eit døme.
       2-3 Artist Functions 2_instruction: 'Funksjonar lar deg definere nye blokkar! Vi har flytta blokkar som teiknar eit kvadrat inn i ein funksjon som heiter "teikn eit kvadrat". Kan du bruke funksjonen "teikn eit kvadrat" til å lage vindaugsglasa? Kvadrata er 75 pikslar frå kvarandre.'
@@ -334,6 +335,7 @@ nn:
       4-5 Maze 9_instruction: 'Lag ei løkke med "Gjenta-til" blokk.'
       4-5 Maze Assessment 1_instruction: 'Oppgåve - Få meg til solsikka.'
       4-5 Maze Conditionals 1_instruction: 'Bruk "Gjenta-til" blokken for å få zombien til solsikka.'
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: 'Bruk "Gjenta-til" blokken for å få zombien til solsikka.'
       4-5 Maze Conditionals 3_instruction: 'Bruk "Viss" blokken for å la meg bestemme når eg skal snu. Tips: du trenger berre ein blokk til, men lær korleis vi sett den opp slik at du kan gjere det på eigenhand neste gong.'
       4-5 Maze Conditionals 4_instruction: 'Ok, denne er heilt lik den forrige oppgåva, men du må hugse på korleis du brukte "viss"-blokken og deretter "Gjenta"-blokken saman.'
@@ -1813,6 +1815,10 @@ nn:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

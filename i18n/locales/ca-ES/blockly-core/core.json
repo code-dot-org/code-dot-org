@@ -377,6 +377,7 @@
   "TEXT_TRIM_OPERATOR_LEFT":"elimina els espais al principi",
   "TEXT_TRIM_OPERATOR_RIGHT":"elimina els espais al final",
   "TEXT_TRIM_TOOLTIP":"Retorna una còpia del text on els espais en blanc s'han eliminat en un o els dos extrems.",
+  "UNUSED_CODE":"Unused code",
   "VARIABLES_DEFAULT_NAME":"element",
   "VARIABLES_GET_CREATE_SET":"Crea 'estableix %1'",
   "VARIABLES_GET_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/Variables#Get",

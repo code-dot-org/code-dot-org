@@ -36,6 +36,7 @@ ka:
       2-3 Artist Functions 10_instruction: 'აქ ორი ფუნქციაა, ერთი დიდი მექანიზმების დასახატად, მეორე კი - პატარა. გამოიყენეთ ისინი მანქანის შიდა ნაწილის დასახატად!'
       2-3 Artist Functions 11.5_instruction: 'აქაც მოცემულია იგივე "დახატე ექვსკუთხედი" ფუნქცია. რა მოხდება თუ მხოლოდ 60 გრადუსით შემოვბრუნდებით ყოველი ციკლისას?'
       2-3 Artist Functions 11_instruction: '"დახატე კვადრატი" ფუნქციას დავარქვით "დახატე ექვსკუთხედი", მაგრამ ის მაინც კვადრატებს ხატავს! შეგიძლიათ "დახატე ექვსკუთხედი" ფუნქცია ისე შეცვალოთ, რომ დახატოს ექვსკუთხედი, 50 პიქსელიანი გვერდებით და სურათის დახატვაში ფუნქცია გამოიყენოთ?'
+      2-3 Artist Functions 12 Mike_instruction: 'ფუნქციებით მარტივია რთული რაღაცების მრავალჯერ დახატვა. შეგიძლიათ გამოიყენოთ "დახატე ყვავილი" ფუნქცია, რათა მებაღის ყუთი ბოლომდე შეავსოთ?(მინიშნება: მცენარეები 100 პიქსელით არიან დაშორებული)  '
       2-3 Artist Functions 12_instruction: 'ფუნქციებით მარტივია რთული რაღაცების მრავალჯერ დახატვა. შეგიძლიათ გამოიყენოთ "დახატე ყვავილი" ფუნქცია, რათა მებაღის ყუთი ბოლომდე შეავსოთ?(მინიშნება: მცენარეები 100 პიქსელით არიან დაშორებული)  '
       2-3 Artist Functions 13_instruction: ჩვენ მოგაწოდეთ ფუნქციები. გამოიყენეთ ისინი როგორც მოგესურვებათ ერთ ან რამდენიმე ციკლში, დახატეთ სურათები და გაუზიარეთ ისინი მეგობრებს. მაგალითის სანახავად დააჭირეთ გაშვებას.
       2-3 Artist Functions 2_instruction: 'ფუნქციები ახალი ბლოკების განსაზღვრის საშუალებას გაძლევთ! კვადრატის დამხატავი ბლოკები გადავიტანეთ ფუნქციაში "დახატე კვადრატი". შეგიძლიათ გამოიყენოთ "დახატე კვადრატი" სათვალეების შესაქმნელად? კვადრატები 75 პიქსელითაა დაშორებული.'
@@ -328,6 +329,7 @@ ka:
       4-5 Maze 9_instruction: 'შექმენით ციკლით, რომელშიც "გაიმეორე სანამ" ბლოკი იქნება.'
       4-5 Maze Assessment 1_instruction: 'შეჯამება: მიდით მზესუმზირამდე ბლოკების მინიმალური რაოდენობის გამოყენებით.'
       4-5 Maze Conditionals 1_instruction: 'გამოიყენეთ "გაიმეორე სანამ" ბლოკი, რათა მიიყვანოთ ზომბი მზესუმზირამდე.'
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: 'გამოიყენეთ "გაიმეორე სანამ" ბლოკი, რათა მიიყვანოთ ზომბი მზესუმზირამდე.'
       4-5 Maze Conditionals 3_instruction: "გამოიყენეთ \"თუ\" ბლოკი, რათა გადამაწყვეტინოთ როდის მოვბრუნდე. \\r\n"
       4-5 Maze Conditionals 4_instruction: 'ეს წინა თავსატეხივითაა, მაგრამ დაგჭირდებათ იმის გახსენება, თუ როგორ გამოიყენება "თუ" ბლოკი და "გამეორების" ბლოკი ერთად.'
@@ -1815,6 +1817,10 @@ ka:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

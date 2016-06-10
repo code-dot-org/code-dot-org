@@ -39,7 +39,7 @@ module ScriptLevelsHelper
     if script_level.level.try(:plc_evaluation?)
       enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: current_user, plc_course_unit: script_level.script.plc_course_unit)
       if enrollment_unit_assignment
-        script_preview_assignments_path
+        script_preview_assignments_path(script_level.script)
       else
         build_script_level_path(next_level)
       end

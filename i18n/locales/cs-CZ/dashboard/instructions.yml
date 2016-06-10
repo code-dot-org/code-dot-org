@@ -36,6 +36,7 @@ cs:
       2-3 Artist Functions 10_instruction: Jsou zde dvě funkce, jedna kreslí velké ozubené kolo a druhá malé ozubené kolo. Používej je k nakreslení dovnitř stroje!
       2-3 Artist Functions 11.5_instruction: 'Tady je to stejné, funkce "Nakreslit šestiúhelníku". Co se stane, když se otočí jen o 60 stupňů při každém opakování?'
       2-3 Artist Functions 11_instruction: 'Přejmenovali jsme funkci "nakreslit čtverec" na "nakreslit šestiúhelník", ale stále to kreslí jen čtverce! Umíš upravit funkci "nakreslit šestiúhelníku", aby se nakreslil šestiúhelník se stran 50 pixelů a nakresli obrázek pomocí této funkce?'
+      2-3 Artist Functions 12 Mike_instruction: 'Funkce jsou opravdu skvělé ke vícenásobnému kreslení složitých věci. Můžeš použít funkci "nakreslit květinu" vyplnit ve zbytku pole květináč? (Rada: rostliny jsou oddělené délkou 100 pixelů)  '
       2-3 Artist Functions 12_instruction: 'Funkce jsou opravdu skvělé ke vícenásobnému kreslení složitých věci. Můžeš použít funkci "nakreslit květinu" vyplnit ve zbytku pole květináč? (Rada: rostliny jsou oddělené délkou 100 pixelů)  '
       2-3 Artist Functions 13_instruction: Poskytli jsme ti čtyři funkce. Používej je jakýmkoli způsobem uvnitř jednoho nebo více cyklů k tvorbě obrázků, které můžeš sdílet se svými přáteli. Stisknutím tlačítka run uvidíš příklad.
       2-3 Artist Functions 2_instruction: 'Funkce ti umožňují definovat nové bloky! Přemístili jsme bloky k nakreslení čtverce do funkce nazvané "nakreslit čtverec". Můžeš použít funkci "nakreslit čtverec" k vytvoření brýlí? Čtverce jsou od sebe 75 pixelů.'
@@ -366,6 +367,7 @@ cs:
       4-5 Maze 9_instruction: 'Vytvoř smyčku s blokem "opakovat do".'
       4-5 Maze Assessment 1_instruction: 'Zhodnocení: Dostaň se ke slunečnici.'
       4-5 Maze Conditionals 1_instruction: Použij bloku opakování až do dostat zombie ke slunečnici.
+      4-5 Maze Conditionals 10_instruction: "Can you add just 3 blocks to help the\nzombie solve a more complex maze? \\r\n\\r\nIf you do it right, he can walk\nany curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: Použij bloku opakování až do dostat zombie ke slunečnici.
       4-5 Maze Conditionals 3_instruction: 'Použij blok "if" abych se rozhodoval, kdy se otočit. Rada: stačí ti pouze jeden další blok, ale naučit se, jak jsme ti to nachystali, aby si to příště dokázal sám.'
       4-5 Maze Conditionals 4_instruction: 'Dobře, tohle je stejné jako předchozí puzzle, ale musíš si pamatovat, jak jsi použil dohromady bloky "if" a "opakovat".'
@@ -1892,6 +1894,10 @@ cs:
         function even more useful?
       Middle School Hackathon Pt 1_instruction: (Click to see full instructions)
       Middle School Hackathon Pt 2_instruction: (Click to see full instructions)
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

@@ -480,12 +480,14 @@ hr:
     picture_count: 'U proteklih <b>%{days}</b> dana, učenici su nacrtali <b>%{count}</b> slika pisanjem vlastitih računalnih programa. Kliknite na slike da biste vidjeli svaki program na djelu.'
     activity_count: 'U proteklih <b>%{days}</b> dana, učenici su napravili <b>%{count}</b> aplikacija i slika pisanjem vlastitih računalnih programa. Kliknite na slike i snimke ekrana da biste vidjeli svaki program na djelu.'
     want_to_make_your_own: Želite li napraviti svoj vlastiti?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'Više &rarr;'
     caption_by_name_age: 'od %{name}, dob %{age}'
     caption_time_ago: 'prije %{time_ago}'
     header: Galerija
     header_playlab: Laboratorij igara
     header_artist: Umjetnik
+    report_abuse: Prijava zloupotrebe
   landing:
     prerelease: "Ovaj tečaj je u <span class='betatext'> beta fazi</span>. To znači da ovo nije konačna verzija tečaja, te da podliježe izmjenama u skladu s primljenim povratnim informacijama i napravljenim poboljšanjima."
     prerelease_hoc2014: "Ovaj tutorial je u <span class='betatext'> beta fazi</span>.  Podliježe izmjenama u skladu s primljenim povratnim informacijama i napravljenim poboljšanjima."

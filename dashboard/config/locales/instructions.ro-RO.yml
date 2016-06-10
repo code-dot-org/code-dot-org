@@ -82,6 +82,10 @@
         în "desenează un hexagon", dar încă desenează pătrate! Poți să modifici funcția
         "desenează un hexagon" astfel încât să deseneze un hexagon cu laturile de
         50 de pixeli și apoi să desenezi imaginea folosind această funcție?
+      2-3 Artist Functions 12 Mike_instruction: 'Funcţiile sunt foarte utile pentru
+        a desena de mai multe ori lucruri complicate. Puteţi utiliza funcţia "desenează
+        o floare" pentru a completa restul jardinierei? (Sugestie: distanța dintre
+        plante este de 100 de pixeli)  '
       2-3 Artist Functions 12_instruction: 'Funcţiile sunt foarte utile pentru a desena
         de mai multe ori lucruri complicate. Puteţi utiliza funcţia "desenează o floare"
         pentru a completa restul jardinierei? (Sugestie: distanța dintre plante este
@@ -703,6 +707,12 @@
       4-5 Maze Assessment 1_instruction: 'Evaluare: Du-te la floarea-soarelui.'
       4-5 Maze Conditionals 1_instruction: Utilizează blocul "repetă până când" pentru
         a-l duce pe zombie la floarea-soarelui.
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: Utilizează blocul "repetă până când" pentru
         a-l duce pe zombie la floarea-soarelui.
       4-5 Maze Conditionals 3_instruction: 'Folosește blocul "dacă" pentru a mă lăsa
@@ -2873,6 +2883,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

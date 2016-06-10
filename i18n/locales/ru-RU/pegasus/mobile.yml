@@ -484,6 +484,7 @@ ru-RU:
   dashboard_action_required: необходимо
   dashboard_assessments_view: 'Просмотреть оценки в:'
   dashboard_assessments_none: Нет отценок
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
   dashboard_filter_by_stage: 'Фильтр по ступеням:'
@@ -515,6 +516,7 @@ ru-RU:
   dashboard_progress_submitted: Представленный
   dashboard_progress_view: 'Просмотр прогресса в:'
   dashboard_progress_student_in_script: 'Информация о прогрессе для %{student_name} в %{script_name}'
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'Просмотр текстовых ответов в:'
   dashboard_responses_none: Нет текстовых ответов
   dashboard_sections_new_section: Новый раздел

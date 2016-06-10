@@ -475,12 +475,14 @@ es:
     picture_count: 'En los últimos <b>%{days}</b> días, los estudiantes han dibujado <b>%{count}</b> imágenes con programas escritos por ellos mismos. Haz clic en las imágenes para ver cada programa en acción.'
     activity_count: 'En los últimos <b>%{days}</b> días, los estudiantes han hecho <b>%{count}</b> aplicaciones y fotos escribiendo sus propios programas informáticos. Haz clic en las fotos y capturas de pantalla para ver cada programa en acción.'
     want_to_make_your_own: ¿Quieres hacer el tuyo?
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: Más →
     caption_by_name_age: 'por %{name}, edad %{age}'
     caption_time_ago: 'hace %{time_ago}'
     header: Galería
     header_playlab: Laboratorio de Juegos
     header_artist: Artista
+    report_abuse: Reportar Abuso
   landing:
     prerelease: "Este curso está en fase <span class='betatext'>beta</span>. Esto significa que no es la versión final del curso y está sujeta a revisión conforme recibimos comentarios y hacemos mejoras."
     prerelease_hoc2014: "Este tutorial está en <span class='betatext'> beta</span>. Es objeto de revisión a medida que se reciben comentarios y se hacen mejoras."

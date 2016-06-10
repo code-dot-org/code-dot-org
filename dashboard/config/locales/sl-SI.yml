@@ -580,12 +580,15 @@
       aplikacij s programi, ki so jih sami ustvarili. Kliknite sličice za prikaz delovanja
       posameznega programa.
     want_to_make_your_own: Bi poskusil/a še sam/a?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Več &rarr;
     caption_by_name_age: po %{name}, %{age} starosti
     caption_time_ago: pred %{time_ago}
     header: Galerija
     header_playlab: Zgodbe in igre
     header_artist: Artist
+    report_abuse: Prijavi zlorabo
   landing:
     prerelease: Ta tečaj je <span class='betatext'>beta</span>.  To pomeni, da ni
       končna različica in ga bomo z vašo pomočjo še izboljševali.

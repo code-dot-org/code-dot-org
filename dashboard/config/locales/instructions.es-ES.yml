@@ -82,6 +82,10 @@
         cuadrado" a "dibuja un hexágono", ¡pero sigue dibujando cuadrados! ¿Puedes
         modificar la función "dibuja un hexágono" para que dibuje un hexágono con
         50 píxeles de cada lado y que dibuje la imagen usando la función?
+      2-3 Artist Functions 12 Mike_instruction: 'Las funciones son geniales para dibujar
+        las cosas complejas varias veces. Puedes utilizar la función "dibujar una
+        flor" para llenar el resto de la caja del jardinero. (Pista: las plantas están
+        separadas por una longitud de 100 píxeles)  '
       2-3 Artist Functions 12_instruction: 'Las funciones son geniales para dibujar
         las cosas complejas varias veces. Puedes utilizar la función "dibujar una
         flor" para llenar el resto de la caja del jardinero. (Pista: las plantas están
@@ -709,6 +713,12 @@
         Evaluzción: LLega hasta el girasol.
       4-5 Maze Conditionals 1_instruction: Utiliza el bloque repetir hasta para llevar
         al zombie hasta el girasol.
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: Utiliza el bloque repetir hasta para llevar
         al zombie hasta el girasol.
       4-5 Maze Conditionals 3_instruction: 'Utiliza el bloque "if" para dejarme decidir
@@ -2908,6 +2918,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful

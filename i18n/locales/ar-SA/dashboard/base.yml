@@ -490,12 +490,14 @@ ar:
     picture_count: 'في الأيام الـ <b>%{days}</b> الماضية، قام الطلبة برسم <b>%{count}</b> لوحات من خلال كتابة برامج الكمبيوتر الخاصة بهم. انقر على الصورة لترى البرنامج وهو يعمل.'
     activity_count: 'في الأيام الـ <b>%{days}</b> الماضية، قام الطلبة بإنتاج <b>%{count}</b> تطبيقات ولوحات من خلال كتابة برامج الكمبيوتر الخاصة بهم. انقر على الصورة لترى البرنامج وهو يعمل.'
     want_to_make_your_own: هل ترغب في إنجاز مشروعك الخاص؟
+    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
     more: 'المزيد من &rarr;'
     caption_by_name_age: 'من قِبل %{name}، العمر %{age}'
     caption_time_ago: 'من قبل %{time_ago}'
     header: معرض
     header_playlab: مختبر اللعب
     header_artist: الرسام
+    report_abuse: الابلاغ عن سوء استخدام
   landing:
     prerelease: "هذا الدرس لا يزال بنسختة التجريبية <span class='betatext'> Beta </span>. مما يعني أن هذة النسخة ليست النسخة النهائية من هذا الدرس وهي عرضة للمراجعة عند الحصول على الآراء وإجراء التغييرات بناء عليها."
     prerelease_hoc2014: "هذا الدرس التعليمي لا يزال بنسختة التجريبية <span class='betatext'> Beta </span>. فهو عرضة للمراجعة عند الحصول على الآراء وإجراء التغييرات بناء عليها."

@@ -584,12 +584,15 @@
       yazarak <b>%{count}</b> kadar uygulama ve resimler oluşturdu. Ekran görüntülerine
       tıklayıp her bir programın nasıl çalıştığını görün.
     want_to_make_your_own: Kendininkini yapmak ister misin?
+    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
+      save your work to the gallery.
     more: Daha fazla &rarr;
     caption_by_name_age: "%{name} tarafından, %{age} yaşında"
     caption_time_ago: "%{time_ago} zaman önce"
     header: Galeri
     header_playlab: Oyun Laboratuvarı
     header_artist: Aktör
+    report_abuse: Hata Rapor Et
   landing:
     prerelease: Bu ders, <span class='betatext'> beta</span> olduğunu.  Bu dersin
       son hali değildir, geribildirimlerin alındığı ve geliştirmelerin yapıldığı versiyonudur.

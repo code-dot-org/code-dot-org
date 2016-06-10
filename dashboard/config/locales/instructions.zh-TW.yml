@@ -74,6 +74,8 @@
         如果每次回圈只轉六十度會發生什麼事？
       2-3 Artist Functions 11_instruction: 我們已把"畫一個正方形"函數改名為"繪製一個六邊形，"但它仍然只能繪製正方形!
         你可以修改"畫一個六邊形"這個函數，並使用函數來繪製一個邊長 50 像素的六邊形嗎?
+      2-3 Artist Functions 12 Mike_instruction: "函數很適合用來重覆繪製複雜圖樣。\n你可以使用\"畫一朵花\"函數將播種盒中的剩餘圖形填滿嗎?\n(提示:
+        植物間的間隔是100個像素長)  \n"
       2-3 Artist Functions 12_instruction: "函數很適合用來重覆繪製複雜圖樣。\n你可以使用\"畫一朵花\"函數將播種盒中的剩餘圖形填滿嗎?\n(提示:
         植物間的間隔是100個像素長)  \n"
       2-3 Artist Functions 13_instruction: |
@@ -453,6 +455,12 @@
       4-5 Maze 9_instruction: 使用 "重覆...直到" 程式積木來建立迴圈。
       4-5 Maze Assessment 1_instruction: "評量 : 取得向日葵"
       4-5 Maze Conditionals 1_instruction: 使用"repeat until"的方塊來讓殭屍到向日葵那。
+      4-5 Maze Conditionals 10_instruction: |-
+        Can you add just 3 blocks to help the
+        zombie solve a more complex maze? \r
+        \r
+        If you do it right, he can walk
+        any curvy path no matter the length!
       4-5 Maze Conditionals 2_instruction: 使用"repeat until"的方塊來讓殭屍到向日葵那。
       4-5 Maze Conditionals 3_instruction: '使用"如果"程式積木來讓我決定什麼時候要轉彎。提示: 你只需要再多加一個程式積木就好了，但請學習我們是如何使用"如果"程式積木，這樣下次你就可以自己做了。'
       4-5 Maze Conditionals 4_instruction: 好的，這和上一題很像，但是你需要記得如何同時用"如果"和"重複"程式積木。
@@ -1670,8 +1678,8 @@
       Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut
         most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe
         function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe
-        variable `player_score` should increase each time Dog tags Cat\nwith hearts,
-        and decrease each time that Cat tags Dog with hearts.\\r\n\\r\nNote:\nWhen
+        variable `player_score` should increase each time Dog tags Cat\nwith pie,
+        and decrease each time that Cat tags Dog with a sandwich.\\r\n\\r\nNote:\nWhen
         you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
         on to the next puzzle. "
       Course 4 Play Lab Vars 1_instruction: |
@@ -1702,19 +1710,19 @@
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
       Course 4 Play Lab Vars 6_instruction: |-
-        Use the right arrow to shoot hearts.\r
+        Use the right arrow to throw pie.\r
         \r
         In
         our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a heart. Use the "when actor 2 touches anything"
+        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
         event to trigger an update to your score. You can increment your variable
         by setting "points = points + 1." Get your score up to 10 (going one at
         a time!) to pass the level.
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
-        isn't too easy to play. Any time Dog (actor 1) gets hit by yellow hearts
-        from Cat (actor 2), you should lose a point. Start with 10 points so it's
-        not too hard. Let your score drop down from 10 to 0 to pass the level.
+        isn't too easy to play. Any time Dog (actor 1) gets hit by a sandwich from
+        Cat (actor 2), you should lose a point. Start with 10 points so it's not
+        too hard. Let your score drop down from 10 to 0 to pass the level.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: |
         Alright, one last thing for
         this game - let's set it up so the player can win (or lose). Use a forever
@@ -2706,6 +2714,10 @@
         function even more useful?
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
+      MikeAssessment1_instruction: Now do it right!
+      MikeTest1_instruction: Who knows what you should do?!?!
+      MikeTest2_instruction: Draw something!
+      MikeTest3_instruction: Build Something
       MSM Big Game Empty_instruction: |
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
