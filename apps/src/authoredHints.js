@@ -24,7 +24,7 @@ import { setHasAuthoredHints } from './redux/instructions';
 function shouldDisplayTips(skin) {
   /*eslint-disable no-fallthrough*/
   switch (skin) {
-    case 'inifinity':
+    case 'infinity':
     case 'anna':
     case 'elsa':
     case 'craft':
