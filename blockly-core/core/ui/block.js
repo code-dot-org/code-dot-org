@@ -933,6 +933,16 @@ Blockly.Block.prototype.showContextMenu_ = function(e) {
       }
     };
     options.push(editableOption);
+
+    // limit
+    var limitOption = {
+      text: "Set limit (current: " + (this.limit_ === undefined ? 'none' : this.limit_) + ")",
+      enabled: true,
+      callback: function () {
+        block.setLimit(prompt("New Limit", block.limit_));
+      }
+    };
+    options.push(limitOption);
   }
 
   // Allow the block to add or modify options.
@@ -1467,7 +1477,7 @@ Blockly.Block.prototype.setMovable = function(movable) {
  * @return {boolean}
  */
 Blockly.Block.prototype.hasLimit = function() {
-  return this.isInFlyout && this.limit_ !== undefined;
+  return (this.isInFlyout || Blockly.editBlocks) && this.limit_ !== undefined;
 };
 
 /**
@@ -1476,7 +1486,13 @@ Blockly.Block.prototype.hasLimit = function() {
  * @param {number} limit
  */
 Blockly.Block.prototype.setLimit = function(limit) {
-  if (this.isInFlyout) {
+  limit = parseInt(limit);
+  if (isNaN(limit)) {
+    limit = undefined;
+  }
+  // only allow limits for toolbox blocks or when editing blocks (so
+  // that we can edit toolbox blocks)
+  if (this.isInFlyout || Blockly.editBlocks) {
     this.limit_ = limit;
     this.total_ = 0;
     this.svg_ && this.svg_.updateLimit(limit);

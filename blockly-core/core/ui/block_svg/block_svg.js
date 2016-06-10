@@ -580,7 +580,9 @@ Blockly.BlockSvg.prototype.addSelect = function() {
  * case.
  */
 Blockly.BlockSvg.prototype.addSelectNoMove = function() {
-  Blockly.addClass_(this.svgGroup_, 'blocklySelected');
+  if (Blockly.elementHasClass_(this.svgGroup_, 'blocklyDraggable')) {
+    Blockly.addClass_(this.svgGroup_, 'blocklySelected');
+  }
 };
 
 /**

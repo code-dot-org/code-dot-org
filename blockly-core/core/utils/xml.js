@@ -154,6 +154,9 @@ Blockly.Xml.blockToDom = function(block, ignoreChildBlocks) {
   if (block.isFunctionDefinition() && block.userCreated) {
     element.setAttribute('usercreated', true);
   }
+  if (block.hasLimit()) {
+    element.setAttribute('limit', block.totalRemaining());
+  }
   if (block.htmlId) {
     element.setAttribute('id', block.htmlId);
   }
