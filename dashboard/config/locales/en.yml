@@ -424,6 +424,7 @@ en:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
       ie_message: "Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser."
+      ie_message_csedweek: "CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser."
       link: "Learn more"
   slow_loading: 'This is taking longer than usual...'
   try_reloading: 'Try reloading the page'
