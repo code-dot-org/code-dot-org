@@ -352,6 +352,7 @@ ActiveRecord::Schema.define(version: 20160609211248) do
     t.integer  "school_zip",         limit: 4
     t.string   "school_type",        limit: 255
     t.string   "school_state",       limit: 255
+    t.integer  "user_id",            limit: 4
   end
 
   add_index "pd_enrollments", ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
