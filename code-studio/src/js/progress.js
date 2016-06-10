@@ -211,10 +211,12 @@ function loadProgress(scriptData, currentLevelId) {
         })}))
       };
     } else if (action.type === 'UPDATE_FOCUS_AREAS') {
-      return Object.assign(state, {focusAreaPositions: action.focusAreaPositions});
-    } else if (action.type === 'SHOW_LESSON_PLAN_LINKS') {
       return Object.assign(state, {
         changeFocusAreaPath: action.changeFocusAreaPath,
+        focusAreaPositions: action.focusAreaPositions
+      });
+    } else if (action.type === 'SHOW_LESSON_PLAN_LINKS') {
+      return Object.assign(state, {
         focusAreaPositions: action.focusAreaPositions
       });
     }
