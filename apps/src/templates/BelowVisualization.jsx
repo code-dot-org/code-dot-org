@@ -69,5 +69,6 @@ export default connect(state => ({
   instructionsInTopPane: state.pageConstants.instructionsInTopPane,
   aniGifURL: state.pageConstants.aniGifURL,
   shortInstructions: state.instructions.shortInstructions,
-  smallStaticAvatar: state.pageConstants.smallStaticAvatar
+  smallStaticAvatar: state.pageConstants.smallStaticAvatar,
+  inputOutputTable: state.pageConstants.inputOutputTable
 }))(BelowVisualization);

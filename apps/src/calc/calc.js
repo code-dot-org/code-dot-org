@@ -206,12 +206,10 @@ Calc.init = function (config) {
 
   studioApp.setPageConstants(config);
 
-  var visualizationColumn = <CalcVisualizationColumn inputOutputTable={level.inputOutputTable}/>;
-
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-          visualizationColumn={visualizationColumn}
+          visualizationColumn={<CalcVisualizationColumn/>}
           onMount={studioApp.init.bind(studioApp, config)}
       />
     </Provider>,
