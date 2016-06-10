@@ -14,7 +14,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     def request
       OpenStruct.new(
-        env: {},
+        env: {'cdo.locale' => 'en-US'},
         headers: OpenStruct.new('User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36')
       )
     end

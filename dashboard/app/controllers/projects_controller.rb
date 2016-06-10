@@ -104,7 +104,7 @@ class ProjectsController < ApplicationController
       code_studio_logo: @is_legacy_share,
       no_header: sharing,
       is_legacy_share: @is_legacy_share,
-      small_footer: !no_footer && (@game.uses_small_footer? || enable_scrolling?),
+      small_footer: !no_footer && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name)
     )
