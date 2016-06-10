@@ -592,7 +592,7 @@ en:
         cspunit3:
           title: CSP Unit 3 - Programming
           title_short: CSP Unit 3
-          description_short: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps.
+          description_short: This unit introduces the foundational concepts of computer programming.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
           Functions: Functions
@@ -2032,6 +2032,7 @@ en:
           'Lesson 2,3: Black and White Pixelation': 'Lesson 2,3: Black and White Pixelation'
           'Lesson 2,10: Good and Bad Data Visualizations': 'Lesson 2,10: Good and Bad Data Visualizations'
           Measuring Student Learning: Measuring Student Learning
+          description_short: We will use this during TeacherCon to deliver supports and materials for sessions
         MikeTest:
           title: MikeTest
           description_short: Just a script for playing around
@@ -2039,3 +2040,9 @@ en:
           description_audience: Ages 8-98
           Sample Stage: Sample Stage
           Artist Functions: Artist Functions
+        artistExemplar:
+          title: Artist Exemplar
+          description_short: How can we make the artist levels really hum?
+          description: These artist levels will knock the socks off of third graders
+          description_audience: Ages 8-18
+          Artist Exemplar: Artist Exemplar

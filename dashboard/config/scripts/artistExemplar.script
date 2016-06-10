@@ -1,0 +1,10 @@
+title 'Artist Exemplar'
+description_short "How can we make the artist levels really hum?"
+description "These artist levels will knock the socks off of third graders"
+description_audience "Ages 8-18"
+hidden 'true'
+
+stage 'Artist Exemplar'
+level 'aE1'
+level 'aE2'
+
