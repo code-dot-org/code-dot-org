@@ -68,7 +68,7 @@ content-type: text/ng-template
           %select{"ng-model" => "section.course.id", "ng-options"=>"course.id as course.name group by course.category for course in course_list | orderBy:['category', 'position', 'name']"}
             %option{value: ''}
       %td
-        %span{"ng-hide" => "section.editing"} {{section.stage_extras ? "Yes" : "No"}}
+        %span{"ng-hide" => "section.editing"} {{section.stage_extras ? "#{I18n.t('yes')}" : "#{I18n.t('no')}"}}
         %span{"ng-show" => "section.editing"}
           %input{"ng-model" => "section.stage_extras", type: "checkbox"}/
       %td {{section.students.length}}

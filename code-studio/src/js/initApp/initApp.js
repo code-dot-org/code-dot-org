@@ -1,6 +1,8 @@
 // TODO (brent) - way too many globals
 /* global script_path, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, ga*/
 import $ from 'jquery';
+import { PlayZone } from '../components/playzone';
+import ReactDOM from 'react-dom';
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
 var loadApp = require('./loadApp');
@@ -11,8 +13,6 @@ var createCallouts = require('../callouts');
 var reporting = require('../reporting');
 var Dialog = require('../dialog');
 var showVideoDialog = require('../videos').showVideoDialog;
-var PlayZone = require('../components/playzone').PlayZone;
-var ReactDOM = require('react-dom');
 
 window.dashboard = window.dashboard || {};
 window.dashboard.project = project;
@@ -96,17 +96,20 @@ window.apps = {
         if (lastServerResponse.videoInfo) {
           showVideoDialog(lastServerResponse.videoInfo);
         } else if (lastServerResponse.endOfStageExperience) {
-          var body = document.createElement('div');
-          var props = {
-            stageName: `Stage ${lastServerResponse.previousStageInfo.position}: ${lastServerResponse.previousStageInfo.name}`,
-            onContinue: () => { dialog.hide(); },
-            i18n: window.dashboard.i18n
-          };
-          ReactDOM.render(<PlayZone {...props} />, body);
-          var dialog = new Dialog({
+          let body = document.createElement('div');
+          let stageInfo = lastServerResponse.previousStageInfo;
+          let stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
+          ReactDOM.render(
+            <PlayZone
+              stageName={stageName}
+              onContinue={() => { dialog.hide(); }}
+              i18n={window.dashboard.i18n}/>,
+            body
+          );
+          const dialog = new Dialog({
             body: body,
             width: 800,
-            redirect : lastServerResponse.nextRedirect
+            redirect: lastServerResponse.nextRedirect
           });
           dialog.show();
         } else if (lastServerResponse.nextRedirect) {
